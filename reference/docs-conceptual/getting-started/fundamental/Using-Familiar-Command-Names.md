@@ -22,12 +22,12 @@ PowerShell은 대체 이름으로 명령을 참조하도록 별칭을 지원합�
 
 |||||
 |-|-|-|-|
-|cat|dir|탑재|rm|
+|cat|dir|mount|rm|
 |cd|echo|move|rmdir|
 |chdir|erase|popd|sleep|
 |clear|h|ps|sort|
 |cls|history|pushd|tee|
-|copy|kill|pwd|형식|
+|copy|kill|pwd|type|
 |del|lp|r|write|
 |diff|ls|ren||
 
