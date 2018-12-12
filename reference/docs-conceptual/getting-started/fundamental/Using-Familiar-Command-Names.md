@@ -5,7 +5,7 @@ title: 친숙한 명령 이름 사용
 ms.assetid: 021e2424-c64e-4fa5-aa98-aa6405758d5d
 ms.openlocfilehash: c5665f64fd832eb9c807f413a8e879f63db7f8c6
 ms.sourcegitcommit: c170a1608d20d3c925d79c35fa208f650d014146
-ms.translationtype: HT
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/31/2018
 ms.locfileid: "43353252"
