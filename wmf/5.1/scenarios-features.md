@@ -5,7 +5,7 @@ keywords: wmf,powershell,setup
 title: WMF 5.1의 새로운 시나리오 및 기능
 ms.openlocfilehash: b00069aad7422f86d1462a62a6c4bc8a91e46705
 ms.sourcegitcommit: 50b66cada6943784b8d3c103cebc3c1e3e286a16
-ms.translationtype: HT
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/28/2018
 ms.locfileid: "37090366"
@@ -92,7 +92,7 @@ PowerShell이 파일을 만들고 쓸 수 있는 전체 경로(파일 이름 포
 $env:PSModuleAnalysisCachePath = 'nul'
 ```
 
-이렇게 하면 잘못된 장치에 대한 경로가 설정됩니다.
+이렇게 하면 잘못된 디바이스에 대한 경로가 설정됩니다.
 PowerShell에서 경로에 쓸 수 없는 경우 오류가 반환되지 않지만 추적 프로그램을 사용하여 오류 보고를 확인할 수 있습니다.
 
 ```powershell

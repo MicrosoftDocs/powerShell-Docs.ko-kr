@@ -144,7 +144,7 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 ### <a name="new-features-in-windows-powershell-desired-state-configuration"></a>Windows PowerShell 필요한 상태 구성의 새로운 기능
 
 - Windows PowerShell의 향상된 언어 기능을 사용하면 클래스를 통해 Windows PowerShell DSC(필요한 상태 구성) 리소스를 정의할 수 있습니다. 이제 Import-DscResource가 진정한 동적 키워드입니다. Windows PowerShell이 지정된 모듈의 루트 모듈을 구문 분석하여 DscResource 특성이 포함된 클래스를 검색합니다. 이제 클래스를 사용하여 모듈 폴더의 MOF 파일 또는 DSCResource 하위 폴더가 필요하지 않은 DSC 리소스를 정의할 수 있습니다. Windows PowerShell 모듈 파일에 여러 가지 DSC 리소스 클래스가 포함될 수 있습니다.
-- 새 ThrottleLimit 매개 변수가 PSDesiredStateConfiguration 모듈의 다음 cmdlet에 추가되었습니다. 동시에 명령을 실행할 대상 컴퓨터 또는 장치 수를 지정하려면 ThrottleLimit 매개 변수를 추가합니다.
+- 새 ThrottleLimit 매개 변수가 PSDesiredStateConfiguration 모듈의 다음 cmdlet에 추가되었습니다. 동시에 명령을 실행할 대상 컴퓨터 또는 디바이스 수를 지정하려면 ThrottleLimit 매개 변수를 추가합니다.
   - Get-DscConfiguration
   - Get-DscConfigurationStatus
   - Get DscLocalConfigurationManager
@@ -335,7 +335,7 @@ Windows PowerShell 워크플로를 통해 Windows PowerShell에서 Windows Workf
 
 ### <a name="windows-powershell-web-access"></a>Windows PowerShell 웹 액세스
 
-Windows PowerShell 웹 액세스는 웹 기반 콘솔에서 Windows PowerShell 명령 및 스크립트를 실행할 수 있는 Windows Server 2012 기능입니다. 웹 기반 콘솔을 사용하는 장치에서는 Windows PowerShell, 원격 관리 소프트웨어 또는 브라우저 플러그 인 설치가 필요하지 않습니다. 올바르게 구성된 Windows PowerShell 웹 액세스 게이트웨이와 JavaScript를 지원하고 쿠키를 적용하는 클라이언트 장치 브라우저만 있으면 됩니다.
+Windows PowerShell 웹 액세스는 웹 기반 콘솔에서 Windows PowerShell 명령 및 스크립트를 실행할 수 있는 Windows Server 2012 기능입니다. 웹 기반 콘솔을 사용하는 디바이스에서는 Windows PowerShell, 원격 관리 소프트웨어 또는 브라우저 플러그 인 설치가 필요하지 않습니다. 올바르게 구성된 Windows PowerShell 웹 액세스 게이트웨이와 JavaScript를 지원하고 쿠키를 적용하는 클라이언트 디바이스 브라우저만 있으면 됩니다.
 
 자세한 내용은 [Windows PowerShell 웹 액세스 배포](https://go.microsoft.com/fwlink/p/?LinkID=221050)를 참조하세요.
 
