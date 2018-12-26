@@ -4,7 +4,7 @@ description: PowerShell Core 6.1에서 릴리스된 새로운 기능 및 변경 
 ms.date: 09/13/2018
 ms.openlocfilehash: 4e39780a0ff446993005bba6284741f3b4b02549
 ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
-ms.translationtype: HT
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/08/2018
 ms.locfileid: "48851310"
@@ -35,10 +35,10 @@ Windows 호환 기능 팩을 PowerShell Core 6.1 릴리스에 추가하였으므
 
 Windows 호환 기능 책을 통해 PowerShell Core는 **Windows 10 2018년 10월 업데이트 및 Windows Server 2019와 제공되는 1900개 이상의 cmdlet**을 사용할 수 있습니다.
 
-## <a name="support-for-application-whitelisting"></a>응용 프로그램 허용 목록에 대한 지원
+## <a name="support-for-application-whitelisting"></a>애플리케이션 허용 목록에 대한 지원
 
-PowerShell Core 6.1에는 [AppLocker](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) 및 [Device Guard](https://docs.microsoft.com/en-us/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) 응용 프로그램 허용 목록을 지원하는 Windows PowerShell 5.1을 사용한 패리티가 있습니다.
-응용 프로그램 허용 목록은 PowerShell [제한된 언어 모드](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/)와 함께 사용되어 실행할 수 있도록 허용된 바이너리의 세부적 제어를 허용합니다.
+PowerShell Core 6.1에는 [AppLocker](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) 및 [Device Guard](https://docs.microsoft.com/en-us/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) 애플리케이션 허용 목록을 지원하는 Windows PowerShell 5.1을 사용한 패리티가 있습니다.
+애플리케이션 허용 목록은 PowerShell [제한된 언어 모드](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/)와 함께 사용되어 실행할 수 있도록 허용된 바이너리의 세부적 제어를 허용합니다.
 
 ## <a name="performance-improvements"></a>성능 향상
 

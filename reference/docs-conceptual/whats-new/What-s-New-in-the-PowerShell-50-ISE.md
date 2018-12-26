@@ -14,7 +14,7 @@ ms.locfileid: "52320587"
 이 항목에서는 Windows PowerShell  ISE(통합 스크립팅 환경) 버전에서 도입된 새로운 기능과 업데이트된 기능에 대해 설명합니다.
 
 ## <a name="feature-description"></a>기능 설명
-Windows PowerShell ISE는 그래픽 환경 및 직관적인 환경에서 스크립트 및 모듈을 작성, 실행 및 테스트할 수 있는 호스트 응용 프로그램입니다. 구문 색 지정, 탭 완성, 시각적 디버깅, 유니코드 규정 준수 및 상황에 맞는 도움말과 같은 주요 기능을 통해 풍부한 스크립팅 환경을 제공합니다.
+Windows PowerShell ISE는 그래픽 환경 및 직관적인 환경에서 스크립트 및 모듈을 작성, 실행 및 테스트할 수 있는 호스트 애플리케이션입니다. 구문 색 지정, 탭 완성, 시각적 디버깅, 유니코드 규정 준수 및 상황에 맞는 도움말과 같은 주요 기능을 통해 풍부한 스크립팅 환경을 제공합니다.
 
 Windows PowerShell ISE의 개요는 [Windows PowerShell 통합 스크립팅 환경 개요](https://technet.microsoft.com/library/3c1892c2-bf84-4cb6-af26-1f453be9e671)를 참조하세요.
 

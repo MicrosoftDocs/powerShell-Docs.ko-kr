@@ -4,7 +4,7 @@ keywords: jea,powershell,security
 title: JEA 보안 고려 사항
 ms.openlocfilehash: 46ea5cc3e9bc7b6759524aa466e900950a6dee26
 ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/16/2018
 ms.locfileid: "34190182"
@@ -53,7 +53,7 @@ JEA를 통해 사용자는 직접 관리자 액세스 권한을 갖지 않고도
 구성원 서버 또는 워크스테이션 | Default                             | 로컬 사용자, '*BUILTIN*\Administrators'의 구성원        | 컴퓨터 계정
 구성원 서버 또는 워크스테이션 | 로컬 그룹 C 및 D                | 로컬 사용자, '*COMPUTER*\C' 및 '*COMPUTER*\D'의 구성원 | 컴퓨터 계정
 
-보안 감사 이벤트 및 응용 프로그램 이벤트 로그를 보면 각 JEA 사용자 세션에 고유 가상 계정이 있는 것을 알 수 있습니다.
+보안 감사 이벤트 및 애플리케이션 이벤트 로그를 보면 각 JEA 사용자 세션에 고유 가상 계정이 있는 것을 알 수 있습니다.
 이는 JEA 끝점에서 사용자 작업을 추적할 때 명령을 실행한 원래 사용자까지 거슬러 올라가 추적하는 데 도움이 됩니다.
 가상 계정 이름은 "WinRM Virtual Users\\WinRM\_VA\_*ACCOUNTNUMBER*\_*DOMAIN*\_*sAMAccountName*" 형식을 따릅니다. 예를 들어 도메인 "Contoso"의 사용자 "Alice"가 JEA 끝점에서 서비스를 다시 시작하면 모든 서비스 제어 관리자 이벤트와 연결된 사용자 이름은 "WinRM Virtual Users\\WinRM\_VA\_1\_contoso\_alice"가 됩니다.
 
@@ -115,7 +115,7 @@ JEA 끝점에서 사용자가 액세스할 수 있는 명령 감사에 대한 �
 ## <a name="least-privilege-roles"></a>최소 권한 역할
 
 JEA 역할을 디자인할 때는 백그라운드에서 실행되는 가상 또는 그룹 관리 서비스 계정이 흔히 로컬 컴퓨터를 관리할 수 있는 무제한 액세스 권한을 가진다는 사실을 기억해야 합니다.
-JEA 역할 기능은 해당 권한 있는 컨텍스트를 사용하여 실행될 수 있는 명령 및 응용 프로그램을 제한하여 사용될 수 있는 계정을 제한하는 데 도움이 됩니다.
+JEA 역할 기능은 해당 권한 있는 컨텍스트를 사용하여 실행될 수 있는 명령 및 애플리케이션을 제한하여 사용될 수 있는 계정을 제한하는 데 도움이 됩니다.
 잘못 디자인된 역할은 사용자가 JEA 경계를 벗어나거나 중요 정보에 대한 액세스 권한을 획득할 수 있는 위험한 명령이 실행되게 할 수 있습니다.
 
 예를 들어 다음과 같은 역할 기능 항목을 생각해 봅니다.
@@ -127,7 +127,7 @@ JEA 역할 기능은 해당 권한 있는 컨텍스트를 사용하여 실행될
 ```
 
 이 역할 기능을 통해 사용자는 Microsoft.PowerShell.Management 모듈에서 명사 "Process"를 사용하여 모든 PowerShell cmdlet을 실행할 수 있습니다.
-사용자는 `Get-Process`와 같은 cmdlet에 액세스하여 시스템에서 실행되고 있는 응용 프로그램을 파악하고 `Stop-Process`에 액세스하여 응답 없는 응용 프로그램을 종료해야 할 수 있습니다.
+사용자는 `Get-Process`와 같은 cmdlet에 액세스하여 시스템에서 실행되고 있는 애플리케이션을 파악하고 `Stop-Process`에 액세스하여 응답 없는 애플리케이션을 종료해야 할 수 있습니다.
 그러나 이 항목은 전체 관리자 권한으로 임의 프로그램을 시작하는 데 사용될 수 있는 `Start-Process`도 허용합니다.
 프로그램이 시스템에 로컬로 설치될 필요가 없으므로 악의적 사용자가 연결하는 사용자에게 로컬 관리자 권한을 부여하고 맬웨어를 실행하는 등의 작업을 수행하는 프로그램을 파일 공유에서 손쉽게 시작할 수 있습니다.
 

@@ -114,7 +114,7 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 - New-Item, Remove-Item 및 Get-ChildItem이 [바로 가기 링크](https://en.wikipedia.org/wiki/Symbolic_link) 만들기 및 관리를 지원하도록 향상되었습니다. New-Item의 **ItemType** 매개 변수가 새 값인 **SymbolicLink**를 허용합니다. 이제 New-Item cmdlet을 실행하여 한 줄에 바로 가기 링크를 만들 수 있습니다.
 - Get-ChildItem에 있는 새 –Depth 매개 변수를 –Recurse 매개 변수와 함께 사용하면 재귀를 제한할 수 있습니다. 예를 들어 Get-ChildItem –Recurse –Depth 2는 현재 폴더, 현재 폴더 내의 모든 자식 폴더 및 자식 폴더 내의 모든 폴더에서 결과를 반환합니다.
 - 이제 Copy-Item을 사용하여 Windows PowerShell 세션 간에 파일이나 폴더를 복사할 수 있으므로 원격 컴퓨터([Nano Server](https://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx)를 실행하며 다른 인터페이스가 없는 컴퓨터 포함)에 연결된 세션에 파일을 복사할 수 있습니다. 파일을 복사하려면 PSSession ID를 새 -FromSession 및 -ToSession 매개 변수의 값으로 지정하고 –Path 및 –Destination을 추가하여 각각 원래 경로와 대상을 지정합니다. 예를 들면 Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder와 같습니다.
-- Windows PowerShell 기록이 콘솔 호스트(**powershell.exe**)뿐 아니라 모든 호스팅 응용 프로그램(예: Windows PowerShell ISE)에 적용되도록 향상되었습니다. 시스템 차원의 기록 사용을 포함한 기록 옵션은 관리 템플릿\Windows 구성 요소\Windows PowerShell에 있는 **PowerShell 기록 켜기** 그룹 정책 설정을 사용하도록 설정하여 구성할 수 있습니다.
+- Windows PowerShell 기록이 콘솔 호스트(**powershell.exe**)뿐 아니라 모든 호스팅 애플리케이션(예: Windows PowerShell ISE)에 적용되도록 향상되었습니다. 시스템 차원의 기록 사용을 포함한 기록 옵션은 관리 템플릿\Windows 구성 요소\Windows PowerShell에 있는 **PowerShell 기록 켜기** 그룹 정책 설정을 사용하도록 설정하여 구성할 수 있습니다.
 - 새로운 세부 스크립트 추적 기능을 사용하면 시스템에서 Windows PowerShell 스크립트 사용을 자세히 추적하고 분석할 수 있습니다. 세부 스크립트 추적을 사용하도록 설정하면 Windows PowerShell에서 모든 스크립트 블록을 ETW(Windows용 이벤트 추적) 이벤트 로그 **Microsoft-Windows-PowerShell/Operational**에 로깅합니다.
 - Windows PowerShell 5.0 이상에서는 새 암호화 메시지 구문 cmdlet이 [RFC5652](https://tools.ietf.org/html/rfc5652) 문서에 기록된 대로 메시지를 암호로 보호하기 위해 IETF 표준 형식을 사용하는 콘텐츠의 암호화 및 암호 해독을 지원합니다. Get-CmsMessage, Protect-CmsMessage 및 Unprotect-CmsMessage cmdlet이 [Microsoft.PowerShell.Security](https://technet.microsoft.com/library/hh849807.aspx) 모듈에 추가되었습니다.
 - [Microsoft.PowerShell.Utility](https://technet.microsoft.com/library/hh849958.aspx) 모듈의 새 cmdlet인 Get-Runspace, Debug-Runspace, Get-RunspaceDebug, Enable-RunspaceDebug 및 Disable-RunspaceDebug를 사용하면 Runspace에 디버그 옵션을 설정하고 Runspace에서 디버깅을 시작 및 중지할 수 있습니다. 임의의 Runspace, 즉 Windows PowerShell 콘솔 또는 Windows PowerShell ISE 세션의 기본 Runspace가 아닌 Runspace의 디버그를 위해 Windows PowerShell에서는 스크립트에 중단점을 설정하고 디버거를 연결하여 Runspace 스크립트를 디버그할 수 있을 때까지 추가된 중단점이 스크립트 실행을 중지하도록 할 수 있습니다. 임의의 Runspace에 대한 중첩된 디버깅 지원이 Runspace에 대한 Windows PowerShell 스크립트 디버거에 추가되었습니다.
@@ -345,7 +345,7 @@ Windows PowerShell 3.0의 경우 Windows PowerShell ISE(통합 스크립팅 환�
 
 ### <a name="support-for-microsoft-net-framework-4"></a>Microsoft .NET Framework 4 지원
 
-Windows PowerShell은 Common Language Runtime 4.0을 기반으로 합니다. Cmdlet, 스크립트 및 워크플로 작성자는 Windows PowerShell의 새로운 Microsoft .NET Framework 4 클래스를 응용 프로그램 호환성 및 배포, 관리되는 확장 프레임워크, 병렬 계산, 네트워킹, Windows Communication Foundation, Windows Workflow Foundation 등과 같은 기능과 함께 사용할 수 있습니다.
+Windows PowerShell은 Common Language Runtime 4.0을 기반으로 합니다. Cmdlet, 스크립트 및 워크플로 작성자는 Windows PowerShell의 새로운 Microsoft .NET Framework 4 클래스를 애플리케이션 호환성 및 배포, 관리되는 확장 프레임워크, 병렬 계산, 네트워킹, Windows Communication Foundation, Windows Workflow Foundation 등과 같은 기능과 함께 사용할 수 있습니다.
 
 ### <a name="support-for-windows-preinstallation-environment"></a>Windows 사전 설치 환경 지원
 
@@ -414,7 +414,7 @@ XML 기반 cmdlet 도움말 파일의 첫 번째 관련 링크 또는 함수의 
 
 ### <a name="cim-integration"></a>CIM 통합
 
-Windows PowerShell 3.0에서는 이기종 시스템 간에 관리 정보를 교환할 수 있도록 시스템, 네트워크, 응용 프로그램 및 서비스에 대한 관리 정보의 일반 정의를 제공하는 CIM(Common Information Model)을 지원합니다. Windows PowerShell 3.0에서는 새 CIM 클래스 또는 기존 CIM 클래스를 기반으로 Windows PowerShell cmdlet 작성, cmdlet 정의 XML 파일 기반 명령, CIM .NET Framework 지원을 비롯한 CIM을 지원합니다. API, CIM 관리 cmdlet 및 WMI 2.0 공급자.
+Windows PowerShell 3.0에서는 이기종 시스템 간에 관리 정보를 교환할 수 있도록 시스템, 네트워크, 애플리케이션 및 서비스에 대한 관리 정보의 일반 정의를 제공하는 CIM(Common Information Model)을 지원합니다. Windows PowerShell 3.0에서는 새 CIM 클래스 또는 기존 CIM 클래스를 기반으로 Windows PowerShell cmdlet 작성, cmdlet 정의 XML 파일 기반 명령, CIM .NET Framework 지원을 비롯한 CIM을 지원합니다. API, CIM 관리 cmdlet 및 WMI 2.0 공급자.
 
 ### <a name="session-configuration-files"></a>세션 구성 파일
 

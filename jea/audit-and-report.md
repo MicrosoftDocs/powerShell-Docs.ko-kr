@@ -4,7 +4,7 @@ keywords: jea,powershell,security
 title: JEA에 대한 감사 및 보고
 ms.openlocfilehash: 2388c735840d8d3683aa8bc9869b9fb0371e5902
 ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
-ms.translationtype: HT
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/08/2018
 ms.locfileid: "48851223"
@@ -93,15 +93,15 @@ Get-PSSessionCapability -ConfigurationName 'JEAMaintenance' -Username 'CONTOSO\A
 
 각 이벤트 로그 항목에는 명령이 실행된 세션에 대한 정보가 포함됩니다.
 JEA 세션의 경우 이러한 정보로는 JEA 세션을 만든 실제 사용자인 **ConnectedUser**와 명령을 실행하는 데 사용된 계정 JEA를 식별하는 **RunAsUser**에 대한 중요 정보가 있습니다.
-응용 프로그램 이벤트 로그에는 RunAsUser가 수행한 변경 내용이 표시되므로, 기록 또는 모듈/스크립트 로깅을 사용하도록 설정해야 사용자까지 거슬러 올라가 특정 명령 호출을 추적할 수 있습니다.
+애플리케이션 이벤트 로그에는 RunAsUser가 수행한 변경 내용이 표시되므로, 기록 또는 모듈/스크립트 로깅을 사용하도록 설정해야 사용자까지 거슬러 올라가 특정 명령 호출을 추적할 수 있습니다.
 
-## <a name="application-event-logs"></a>응용 프로그램 이벤트 로그
+## <a name="application-event-logs"></a>애플리케이션 이벤트 로그
 
-외부 응용 프로그램 또는 서비스와 상호 작용하는 JEA 세션에서 명령을 실행하는 경우 해당 응용 프로그램이 자체 이벤트 로그에 이벤트를 기록할 수 있습니다.
+외부 애플리케이션 또는 서비스와 상호 작용하는 JEA 세션에서 명령을 실행하는 경우 해당 애플리케이션이 자체 이벤트 로그에 이벤트를 기록할 수 있습니다.
 PowerShell 로그 및 기록과 달리, 다른 로깅 메커니즘은 JEA 세션의 연결된 사용자를 캡처하지 않으며 대신 가상 실행 사용자 또는 그룹 관리 서비스 계정만 기록합니다.
-명령을 실행한 사용자를 확인하려면 [세션 기록](#session-transcripts)을 확인하거나 PowerShell 이벤트 로그를 응용 프로그램 이벤트 로그에 표시된 시간 및 사용자와 상관 관계를 지정해야 합니다.
+명령을 실행한 사용자를 확인하려면 [세션 기록](#session-transcripts)을 확인하거나 PowerShell 이벤트 로그를 애플리케이션 이벤트 로그에 표시된 시간 및 사용자와 상관 관계를 지정해야 합니다.
 
-WinRM도 응용 프로그램 이벤트 로그의 실행 사용자와 연결하는 사용자의 상관 관계를 지정하는 데 도움이 될 수 있습니다.
+WinRM도 애플리케이션 이벤트 로그의 실행 사용자와 연결하는 사용자의 상관 관계를 지정하는 데 도움이 될 수 있습니다.
 **Microsoft-Windows-Windows Remote Management/Operational** 로그의 이벤트 ID **193**은 JEA 세션이 만들어질 때마다 연결하는 사용자와 실행 사용자의 SID(보안 식별자) 및 계정 이름을 기록합니다.
 
 ## <a name="session-transcripts"></a>세션 기록

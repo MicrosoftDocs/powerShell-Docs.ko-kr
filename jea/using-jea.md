@@ -4,7 +4,7 @@ keywords: jea,powershell,security
 title: JEA 사용
 ms.openlocfilehash: 539d280aff0b2656a5e9c710acfa468057753027
 ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
-ms.translationtype: HT
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/13/2018
 ms.locfileid: "45522993"
@@ -110,7 +110,7 @@ Import-PSSession -Session $jeasession -Prefix 'JEA' -CommandName $filteredComman
 
 ## <a name="using-jea-programatically"></a>프로그래밍 방식으로 JEA 사용
 
-사내 기술 지원팀 앱 및 웹 사이트와 같은 자동화 시스템 및 사용자 응용 프로그램에서 JEA를 사용할 수도 있습니다.
+사내 기술 지원팀 앱 및 웹 사이트와 같은 자동화 시스템 및 사용자 애플리케이션에서 JEA를 사용할 수도 있습니다.
 접근 방식은 비제한 PowerShell 엔드포인트와 통신하는 앱을 빌드하는 것과 같지만, 프로그램이 JEA가 원격 세션에서 실행될 수 있는 명령을 제한하고 있음을 인식해야 한다는 주의 사항이 있습니다.
 
 간단한 일회성 작업의 경우 [Invoke-Command](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/invoke-command)를 사용하여 JEA를 사용하는 명령 집합을 실행할 수 있습니다.

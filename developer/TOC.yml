@@ -341,7 +341,7 @@ items:
         href: ./provider/accessdbprovidersample05.md
       - name: AccessDBProviderSample06
         href: ./provider/accessdbprovidersample06.md
-  - name: Windows PowerShell 호스트 응용 프로그램 작성
+  - name: Windows PowerShell 호스트 애플리케이션 작성
     href: ./hosting/writing-a-windows-powershell-host-application.md
     items:
     - name: Windows PowerShell 호스트 빠른 시작
@@ -361,7 +361,7 @@ items:
       href: ./hosting/creating-remote-runspaces.md
     - name: 사용자 지정 사용자 인터페이스 만들기
       href: ./hosting/creating-a-custom-user-interface.md
-    - name: 호스트 응용 프로그램 샘플
+    - name: 호스트 애플리케이션 샘플
       href: ./hosting/host-application-samples.md
       items:
       - name: Windows PowerShell API 샘플

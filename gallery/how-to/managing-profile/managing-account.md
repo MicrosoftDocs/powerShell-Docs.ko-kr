@@ -5,7 +5,7 @@ keywords: gallery,powershell,cmdlet,psgallery
 title: PowerShell 갤러리 계정 설정
 ms.openlocfilehash: ebe784ec5aae5ff3a4d444d12a168ef38aaef65f
 ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
-ms.translationtype: HT
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50002789"
@@ -72,7 +72,7 @@ PowerShell 갤러리에서 제공하는 알림 옵션은 다음과 같습니다.
 2단계 인증은 PowerShell 갤러리에 수동으로 게시하는 모든 사용자에게 권장됩니다. 2단계 인증을 사용하려면 로그인 계정에 둘 이상의 인증 양식이 등록되어 있어야 합니다. 한 양식은 암호이고, 그 밖의 다른 양식은 다음과 같습니다.
 
 - 문자 메시지를 받을 수 있는 전화 번호
-- 휴대폰용 등록된 인증자 응용 프로그램(예: Microsoft Authenticator)
+- 휴대폰용 등록된 인증자 애플리케이션(예: Microsoft Authenticator)
 
 이러한 인증 양식은 AAD 계정 정보 또는 Microsoft ID 계정 보안 설정에서 구성해야 합니다.
 

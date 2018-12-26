@@ -6,7 +6,7 @@ contributor: keithb
 title: WMF 5.1 설치 및 구성
 ms.openlocfilehash: e5c7968744a442b4be9f1e43a45e91429a6d6165
 ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/16/2018
 ms.locfileid: "34189349"
@@ -57,7 +57,7 @@ Install-WMF5.1.ps1은 다음 매개 변수를 사용하여 Windows Server 2008 R
 
 Windows Server 2008 R2 SP1 또는 Windows 7 SP1에서 WMF 5.1을 설치하려면 다음이 필요합니다.
 - 최신 서비스 팩이 설치되어 있어야 합니다.
-- WMF 3.0이 설치되어 있어서는 **안 됩니다**. WMF 3.0 위에 WMF 5.1을 설치하면 PSModulePath가 손실되어 다른 응용 프로그램이 작동하지 않을 수 있습니다. WMF 5.1을 설치하기 전에 WMF 3.0을 제거하거나, PSModulePath를 저장한 다음 WMF 5.1 설치가 완료된 후에 수동으로 복원해야 합니다.
+- WMF 3.0이 설치되어 있어서는 **안 됩니다**. WMF 3.0 위에 WMF 5.1을 설치하면 PSModulePath가 손실되어 다른 애플리케이션이 작동하지 않을 수 있습니다. WMF 5.1을 설치하기 전에 WMF 3.0을 제거하거나, PSModulePath를 저장한 다음 WMF 5.1 설치가 완료된 후에 수동으로 복원해야 합니다.
 - WMF 5.1을 사용 하려면 적어도 [.NET Framework 4.5.2](https://www.microsoft.com/en-ca/download/details.aspx?id=42642)합니다.
 다운로드 위치에 있는 지침에 따라 Microsoft .NET Framework 4.5.2을 설치할 수 있습니다.
 

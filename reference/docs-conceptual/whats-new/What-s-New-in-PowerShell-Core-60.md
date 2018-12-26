@@ -4,7 +4,7 @@ description: PowerShell Core 6.0에서 릴리스된 새로운 기능 및 변경 
 ms.date: 08/06/2018
 ms.openlocfilehash: 83c104d838db9d86fe1d485e92245a9c8f2d2057
 ms.sourcegitcommit: 59e568ac9fa8ba28e2c96932b7c84d4a855fed2f
-ms.translationtype: HT
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/18/2018
 ms.locfileid: "46289245"
@@ -96,7 +96,7 @@ Linux와 macOS는 대/소문자를 구분하지만 Windows는 대/소문자를 �
 
 PowerShell Core는 Windows PowerShell과 별도로 설치, 구성 및 실행됩니다.
 PowerShell Core에는 "휴대용" ZIP 패키지가 있습니다.
-ZIP 패키지를 사용하면 PowerShell을 종속 요소로 사용하는 응용 프로그램에 로컬로 설치하는 등 디스크의 어느 위치에나 원하는 버전을 설치할 수 있습니다.
+ZIP 패키지를 사용하면 PowerShell을 종속 요소로 사용하는 애플리케이션에 로컬로 설치하는 등 디스크의 어느 위치에나 원하는 버전을 설치할 수 있습니다.
 병렬 설치를 통해 새로운 버전의 PowerShell을 쉽게 테스트하고 기존 스크립트를 시간에 따라 마이그레이션할 수 있습니다
 병렬 설치는 또한 스크립트가 필요로 하는 특정 버전에 고정될 수 있으므로 이전 버전과의 호환될 수 있습니다.
 
@@ -177,7 +177,7 @@ SSH 기반 원격 구성 및 사용에 대한 자세한 내용은 [SSH를 통한
 인코딩 기본값을 변경하면 인코딩을 지정하지 않고 cmdlet을 혼합할 때 문제가 발생했습니다.
 
 Windows 이외의 플랫폼에서는 텍스트 파일의 기본 인코딩으로 BOM(Byte Order Mark)이 없는 UTF-8을 일반적으로 사용합니다.
-점점 많은 Windows 응용 프로그램과 도구가 UTF-16에서 BOM 없는 UTF-8 인코딩으로 이동하고 있습니다.
+점점 많은 Windows 애플리케이션과 도구가 UTF-16에서 BOM 없는 UTF-8 인코딩으로 이동하고 있습니다.
 PowerShell Core는 보다 넓은 에코시스템을 준수하도록 기본 인코딩을 변경합니다.
 
 즉, `-Encoding` 매개 변수를 사용하는 모든 기본 제공 cmdlet은 기본적으로 `UTF8NoBOM` 값을 사용합니다.
