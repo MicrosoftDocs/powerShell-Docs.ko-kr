@@ -1,252 +1,256 @@
 items:
 - name: 개요
-  href: PowerShell-Scripting.md
+  href: overview.md
+- name: 설치
+  href: install/installing-powershell.md
   items:
-  - name: 설치
-    href: setup/Installing-PowerShell.md
-    items:
-    - name: PowerShell Core
-      href: ''
-      items:
-      - name: Windows에서 PowerShell Core 설치
-        href: setup/Installing-PowerShell-Core-on-Windows.md
-      - name: Linux에서 PowerShell Core 설치
-        href: setup/Installing-PowerShell-Core-on-Linux.md
-      - name: macOS에서 PowerShell Core 설치
-        href: setup/Installing-PowerShell-Core-on-macOS.md
-      - name: ARM에서 PowerShell Core 설치
-        href: setup/PowerShell-Core-on-ARM.md
-    - name: Windows PowerShell
-      href: ''
-      items:
-      - name: Windows PowerShell 설치
-        href: setup/installing-windows-powershell.md
-      - name: Windows PowerShell 2.0 엔진 설치
-        href: setup/installing-the-windows-powershell-2.0-engine.md
-      - name: Windows PowerShell 시스템 요구 사항
-        href: setup/windows-powershell-system-requirements.md
-  - name: 시작
-    href: getting-started/getting-started-with-windows-powershell.md
-    items:
-    - name: Windows PowerShell 시작
-      href: setup/starting-windows-powershell.md
-    - name: Windows PowerShell 2.0 엔진 시작
-      href: setup/starting-the-windows-powershell-2.0-engine.md
-  - name: 개념
-    href: getting-started/fundamental/understanding-important-powershell-concepts.md
-    items:
-    - name: PowerShell 이름 학습
-      href: getting-started/fundamental/learning-powershell-names.md
-    - name: 친숙한 명령 이름 사용
-      href: getting-started/fundamental/using-familiar-command-names.md
-    - name: 자세한 도움말 정보 보기
-      href: getting-started/fundamental/getting-detailed-help-information.md
-    - name: 명령에 대한 정보 가져오기
-      href: getting-started/fundamental/getting-information-about-commands.md
-    - name: 변수를 사용하여 개체 저장
-      href: getting-started/fundamental/using-variables-to-store-objects.md
-    - name: PowerShell 파이프라인 이해
-      href: getting-started/fundamental/understanding-the-powershell-pipeline.md
-    - name: 원격 명령 실행
-      href: core-powershell/running-remote-commands.md
-      items:
-      - name: SSH를 통한 PowerShell 원격
-        href: core-powershell/SSH-Remoting-in-PowerShell-Core.md
-      - name: PowerShell Core에서 WSMan(WS-Management) 원격
-        href: core-powershell/WSMan-Remoting-in-PowerShell-Core.md
-      - name: WinRM 보안
-        href: setup/winrmsecurity.md
-      - name: PS 원격 두 번째 홉
-        href: setup/ps-remoting-second-hop.md
-  - name: 구성 요소
+  - name: PowerShell Core
     href: ''
     items:
-    - name: 콘솔
-      href: ''
-      items:
-      - name: PowerShell.exe 명령줄 도움말
-        href: core-powershell/console/powershell.exe-command-line-help.md
-      - name: 탭 확장 사용
-        href: core-powershell/console/using-tab-expansion.md
-    - name: ISE
-      href: core-powershell/ise/introducing-the-windows-powershell-ise.md
-      items:
-      - name: Windows PowerShell ISE(통합 스크립팅 환경)
-        href: getting-started/fundamental/windows-powershell-integrated-scripting-environment--ise-.md
-      - name: Windows PowerShell ISE 사용
-        href: ''
-        items:
-        - name: Windows PowerShell ISE 탐색
-          href: getting-started/fundamental/exploring-the-windows-powershell-ise.md
-        - name: Windows PowerShell ISE에서 PowerShell 탭을 만드는 방법
-          href: core-powershell/ise/how-to-create-a-powershell-tab-in-windows-powershell-ise.md
-        - name: Windows PowerShell ISE에서 스크립트를 디버깅하는 방법
-          href: core-powershell/ise/how-to-debug-scripts-in-windows-powershell-ise.md
-        - name: Windows PowerShell ISE에서 프로필을 사용하는 방법
-          href: core-powershell/ise/how-to-use-profiles-in-windows-powershell-ise.md
-        - name: 스크립트 및 콘솔 창에서 탭 완성 기능을 사용하는 방법
-          href: core-powershell/ise/how-to-use-tab-completion-in-the-script-pane-and-console-pane.md
-        - name: Windows PowerShell ISE에서 콘솔 창을 사용하는 방법
-          href: core-powershell/ise/how-to-use-the-console-pane-in-the-windows-powershell-ise.md
-        - name: Windows PowerShell ISE에서 스크립트를 작성 및 실행하는 방법
-          href: core-powershell/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise.md
-        - name: Windows PowerShell ISE 바로 가기 키
-          href: core-powershell/ise/keyboard-shortcuts-for-the-windows-powershell-ise.md
-        - name: Windows PowerShell ISE의 접근성
-          href: setup/accessibility-in-windows-powershell-ise.md
-      - name: Windows PowerShell ISE 스크립팅 개체 모델
-        href: ''
-        items:
-        - name: Windows PowerShell ISE 스크립팅 개체 모델의 용도
-          href: core-powershell/ise/purpose-of-the-windows-powershell-ise-scripting-object-model.md
-        - name: ISE 개체 모델 계층 구조
-          href: core-powershell/ise/the-ise-object-model-hierarchy.md
-        - name: ObjectModelRoot 개체
-          href: core-powershell/ise/the-objectmodelroot-object.md
-        - name: ISEAddOnToolCollection 개체
-          href: core-powershell/ise/the-iseaddontoolcollection-object.md
-        - name: ISEAddOnTool 개체
-          href: core-powershell/ise/the-iseaddontool-object.md
-        - name: ISEEditor 개체
-          href: core-powershell/ise/the-iseeditor-object.md
-        - name: ISEFileCollection 개체
-          href: core-powershell/ise/the-isefilecollection-object.md
-        - name: ISEFile 개체
-          href: core-powershell/ise/the-isefile-object.md
-        - name: ISEMenuItemCollection 개체
-          href: core-powershell/ise/the-isemenuitemcollection-object.md
-        - name: ISEMenuItem 개체
-          href: core-powershell/ise/the-isemenuitem-object.md
-        - name: ISEOptions 개체
-          href: core-powershell/ise/the-iseoptions-object.md
-        - name: ISESnippetCollection 개체
-          href: core-powershell/ise/the-isesnippetcollection-object.md
-        - name: ISESnippet 개체
-          href: core-powershell/ise/the-isesnippetobject.md
-        - name: PowerShellTabCollection 개체
-          href: core-powershell/ise/the-powershelltabcollection-object.md
-        - name: PowerShellTab 개체
-          href: core-powershell/ise/the-powershelltab-object.md
-    - name: Visual Studio Code
-      items:
-      - name: Visual Studio Code 사용
-        href: core-powershell/vscode/using-vscode.md
-    - name: 웹 액세스
-      href: ''
-      items:
-      - name: 권한 부여 규칙 및 보안 기능
-        href: core-powershell/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md
-      - name: 설치
-        href: core-powershell/web-access/install-and-use-windows-powershell-web-access.md
-      - name: 액세스 문제 해결
-        href: core-powershell/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md
-      - name: Windows PowerShell 웹 액세스 제거
-        href: core-powershell/web-access/uninstall-windows-powershell-web-access.md
-      - name: 웹 기반 PowerShell 콘솔 사용
-        href: core-powershell/web-access/use-the-web-based-windows-powershell-console.md
-    - name: 워크플로 가이드
-      href: core-powershell/workflows-guide.md
-  - name: 새로운 기능
+    - name: Windows에서 PowerShell Core 설치
+      href: install/installing-powershell-core-on-windows.md
+    - name: Linux에서 PowerShell Core 설치
+      href: install/installing-powershell-core-on-linux.md
+    - name: macOS에서 PowerShell Core 설치
+      href: install/installing-powershell-core-on-macos.md
+    - name: ARM에서 PowerShell Core 설치
+      href: install/powershell-core-on-arm.md
+  - name: Windows PowerShell
     href: ''
     items:
-    - name: PowerShell Core 6.1의 새로운 기능
-      href: whats-new/what-s-new-in-powershell-core-61.md
-    - name: PowerShell Core 6.0의 새로운 기능
-      href: whats-new/what-s-new-in-powershell-core-60.md
-      items:
-      - name: PowerShell Core 6.0의 주요 변경 내용
-        href: whats-new/breaking-changes-ps6.md
-      - name: PowerShell Core 6.0의 알려진 문제
-        href: whats-new/known-issues-ps6.md
-    - name: PowerShell 5.0의 새로운 기능
-      href: whats-new/what-s-new-with-powershell.md
-      items:
-      - name: Windows PowerShell 5.0의 새로운 기능
-        href: whats-new/what-s-new-in-windows-powershell-50.md
-      - name: PowerShell 5.0 ISE의 새로운 기능
-        href: whats-new/what-s-new-in-the-powershell-50-ise.md
-  - name: PowerShell Core 지원 수명 주기
-    href: PowerShell-Core-Support.md
-  - name: 자세한 정보
+    - name: Windows PowerShell 설치
+      href: install/installing-windows-powershell.md
+    - name: Windows PowerShell 2.0 엔진 설치
+      href: install/installing-the-windows-powershell-2.0-engine.md
+    - name: Windows PowerShell 시스템 요구 사항
+      href: install/windows-powershell-system-requirements.md
+- name: 시작
+  href: getting-started/getting-started-with-windows-powershell.md
+  items:
+  - name: Windows PowerShell 시작
+    href: getting-started/starting-windows-powershell.md
+  - name: Windows PowerShell 2.0 엔진 시작
+    href: getting-started/starting-the-windows-powershell-2.0-engine.md
+- name: PowerShell 학습
+  href: learn/understanding-important-powershell-concepts.md
+  items:
+  - name: PowerShell 이름 학습
+    href: learn/learning-powershell-names.md
+  - name: 친숙한 명령 이름 사용
+    href: learn/using-familiar-command-names.md
+  - name: 자세한 도움말 정보 보기
+    href: learn/getting-detailed-help-information.md
+  - name: 명령에 대한 정보 가져오기
+    href: learn/getting-information-about-commands.md
+  - name: 변수를 사용하여 개체 저장
+    href: learn/using-variables-to-store-objects.md
+  - name: PowerShell 파이프라인 이해
+    href: learn/understanding-the-powershell-pipeline.md
+  - name: 추가 PowerShell 학습
+    href: learn/more-powershell-learning.md
+  - name: 이식 가능한 모듈 작성
+    href: learn/writing-portable-modules.md
+  - name: 원격 명령 실행
+    href: learn/remoting/running-remote-commands.md
+    items:
+    - name: SSH를 통한 PowerShell 원격
+      href: learn/remoting/ssh-remoting-in-powershell-core.md
+    - name: PowerShell Core에서 WSMan(WS-Management) 원격
+      href: learn/remoting/wsman-remoting-in-powershell-core.md
+    - name: WinRM 보안
+      href: learn/remoting/winrmsecurity.md
+    - name: PowerShell 원격에서 두 번째 홉 만들기
+      href: learn/remoting/ps-remoting-second-hop.md
+  - name: 용어집
+    href: learn/windows-powershell-glossary.md
+- name: 구성 요소
+  href: ''
+  items:
+  - name: 콘솔
     href: ''
     items:
-    - name: 추가 PowerShell 학습
-      href: getting-started/more-powershell-learning.md
-    - name: 용어집
-      href: windows-powershell-glossary.md
+    - name: PowerShell.exe 명령줄 도움말
+      href: components/console/powershell.exe-command-line-help.md
+    - name: 탭 확장 사용
+      href: components/console/using-tab-expansion.md
+  - name: ISE
+    href: components/ise/introducing-the-windows-powershell-ise.md
+    items:
+    - name: Windows PowerShell ISE(통합 스크립팅 환경)
+      href: components/ise/windows-powershell-integrated-scripting-environment--ise-.md
+    - name: Windows PowerShell ISE 사용
+      href: ''
+      items:
+      - name: Windows PowerShell ISE 탐색
+        href: components/ise/exploring-the-windows-powershell-ise.md
+      - name: Windows PowerShell ISE에서 PowerShell 탭을 만드는 방법
+        href: components/ise/how-to-create-a-powershell-tab-in-windows-powershell-ise.md
+      - name: Windows PowerShell ISE에서 스크립트를 디버깅하는 방법
+        href: components/ise/how-to-debug-scripts-in-windows-powershell-ise.md
+      - name: Windows PowerShell ISE에서 프로필을 사용하는 방법
+        href: components/ise/how-to-use-profiles-in-windows-powershell-ise.md
+      - name: 스크립트 및 콘솔 창에서 탭 완성 기능을 사용하는 방법
+        href: components/ise/how-to-use-tab-completion-in-the-script-pane-and-console-pane.md
+      - name: Windows PowerShell ISE에서 콘솔 창을 사용하는 방법
+        href: components/ise/how-to-use-the-console-pane-in-the-windows-powershell-ise.md
+      - name: Windows PowerShell ISE에서 스크립트를 작성 및 실행하는 방법
+        href: components/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise.md
+      - name: Windows PowerShell ISE 바로 가기 키
+        href: components/ise/keyboard-shortcuts-for-the-windows-powershell-ise.md
+      - name: Windows PowerShell ISE의 접근성
+        href: components/ise/accessibility-in-windows-powershell-ise.md
+    - name: ISE 스크립팅 개체 모델
+      href: ''
+      items:
+      - name: Windows PowerShell ISE 스크립팅 개체 모델의 용도
+        href: components/ise/object-model/purpose-of-the-windows-powershell-ise-scripting-object-model.md
+      - name: ISE 개체 모델 계층 구조
+        href: components/ise/object-model/the-ise-object-model-hierarchy.md
+      - name: ObjectModelRoot 개체
+        href: components/ise/object-model/the-objectmodelroot-object.md
+      - name: ISEAddOnToolCollection 개체
+        href: components/ise/object-model/the-iseaddontoolcollection-object.md
+      - name: ISEAddOnTool 개체
+        href: components/ise/object-model/the-iseaddontool-object.md
+      - name: ISEEditor 개체
+        href: components/ise/object-model/the-iseeditor-object.md
+      - name: ISEFileCollection 개체
+        href: components/ise/object-model/the-isefilecollection-object.md
+      - name: ISEFile 개체
+        href: components/ise/object-model/the-isefile-object.md
+      - name: ISEMenuItemCollection 개체
+        href: components/ise/object-model/the-isemenuitemcollection-object.md
+      - name: ISEMenuItem 개체
+        href: components/ise/object-model/the-isemenuitem-object.md
+      - name: ISEOptions 개체
+        href: components/ise/object-model/the-iseoptions-object.md
+      - name: ISESnippetCollection 개체
+        href: components/ise/object-model/the-isesnippetcollection-object.md
+      - name: ISESnippet 개체
+        href: components/ise/object-model/the-isesnippetobject.md
+      - name: PowerShellTabCollection 개체
+        href: components/ise/object-model/the-powershelltabcollection-object.md
+      - name: PowerShellTab 개체
+        href: components/ise/object-model/the-powershelltab-object.md
+  - name: Visual Studio Code
+    href: components/vscode/using-vscode.md
+    items:
+    - name: Visual Studio Code에서 ISE 환경을 복제하는 방법
+      href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
+    - name: Visual Studio Code를 사용하여 원격 편집 및 디버깅
+      href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
+  - name: 웹 액세스
+    href: ''
+    items:
+    - name: 권한 부여 규칙 및 보안 기능
+      href: components/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md
+    - name: 설치
+      href: components/web-access/install-and-use-windows-powershell-web-access.md
+    - name: 액세스 문제 해결
+      href: components/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md
+    - name: Windows PowerShell 웹 액세스 제거
+      href: components/web-access/uninstall-windows-powershell-web-access.md
+    - name: 웹 기반 PowerShell 콘솔 사용
+      href: components/web-access/use-the-web-based-windows-powershell-console.md
+  - name: 워크플로 가이드
+    href: components/workflows-guide.md
+- name: 새로운 기능
+  href: ''
+  items:
+  - name: PowerShell Core 6.1의 새로운 기능
+    href: whats-new/what-s-new-in-powershell-core-61.md
+  - name: PowerShell Core 6.0의 새로운 기능
+    href: whats-new/what-s-new-in-powershell-core-60.md
+    items:
+    - name: PowerShell Core 6.0의 주요 변경 내용
+      href: whats-new/breaking-changes-ps6.md
+    - name: PowerShell Core 6.0의 알려진 문제
+      href: whats-new/known-issues-ps6.md
+  - name: PowerShell 5.0의 새로운 기능
+    href: whats-new/what-s-new-with-powershell.md
+    items:
+    - name: Windows PowerShell 5.0의 새로운 기능
+      href: whats-new/what-s-new-in-windows-powershell-50.md
+    - name: PowerShell 5.0 ISE의 새로운 기능
+      href: whats-new/what-s-new-in-the-powershell-50-ise.md
+- name: PowerShell Core 지원 수명 주기
+  href: powershell-support-lifecycle.md
 - name: 샘플 스크립트
-  href: getting-started/fundamental/sample-scripts-for-administration.md
+  href: samples/sample-scripts-for-administration.md
   items:
   - name: 컴퓨터 상태 변경
-    href: getting-started/cookbooks/changing-computer-state.md
+    href: samples/changing-computer-state.md
   - name: 컴퓨터에 대한 정보 수집
-    href: getting-started/cookbooks/collecting-information-about-computers.md
+    href: samples/collecting-information-about-computers.md
+  - name: UI 요소 만들기
+    href: ''
+    items:
+    - name: 사용자 지정 입력란 만들기
+      href: samples/creating-a-custom-input-box.md
+    - name: 그래픽 날짜 선택 만들기
+      href: samples/creating-a-graphical-date-picker.md
+    - name: 다중 선택 목록 상자
+      href: samples/multiple-selection-list-boxes.md
+    - name: 목록 상자에서 항목 선택
+      href: samples/selecting-items-from-a-list-box.md
   - name: 실행 중인 프로세스에서 PowerShell 명령 디코딩
-    href: getting-started/cookbooks/Decode-PowerShell-Command-from-a-Running-Process.md
+    href: samples/decode-powershell-command-from-a-running-process.md
   - name: 현재 위치 관리
-    href: getting-started/cookbooks/managing-current-location.md
+    href: samples/managing-current-location.md
   - name: 프로세스 cmdlet으로 프로세스 관리
-    href: getting-started/cookbooks/managing-processes-with-process-cmdlets.md
+    href: samples/managing-processes-with-process-cmdlets.md
   - name: 서비스 관리
-    href: getting-started/cookbooks/managing-services.md
+    href: samples/managing-services.md
   - name: Windows PowerShell 드라이브 관리
-    href: getting-started/cookbooks/managing-windows-powershell-drives.md
+    href: samples/managing-windows-powershell-drives.md
   - name: 직접 항목 조작
-    href: getting-started/cookbooks/manipulating-items-directly.md
-  - name: 사용자 지정 입력란 만들기
-    href: getting-started/cookbooks/creating-a-custom-input-box.md
-  - name: 그래픽 날짜 선택 만들기
-    href: getting-started/cookbooks/creating-a-graphical-date-picker.md
-  - name: 다중 선택 목록 상자
-    href: getting-started/cookbooks/multiple-selection-list-boxes.md
-  - name: 목록 상자에서 항목 선택
-    href: getting-started/cookbooks/selecting-items-from-a-list-box.md
+    href: samples/manipulating-items-directly.md
   - name: 네트워킹 작업 수행
-    href: getting-started/cookbooks/performing-networking-tasks.md
-  - name: Out cmdlet을 사용하여 데이터 리디렉션
-    href: getting-started/cookbooks/redirecting-data-with-out---cmdlets.md
+    href: samples/performing-networking-tasks.md
+  - name: Out-* cmdlet을 사용하여 데이터 리디렉션
+    href: samples/redirecting-data-with-out---cmdlets.md
   - name: 형식 명령을 사용하여 출력 보기 변경
-    href: getting-started/cookbooks/using-format-commands-to-change-output-view.md
-  - name: 개체 구조 보기 - Get-Member
-    href: getting-started/cookbooks/viewing-object-structure--get-member-.md
+    href: samples/using-format-commands-to-change-output-view.md
   - name: 파일 및 폴더 작업
-    href: getting-started/cookbooks/working-with-files-and-folders.md
+    href: samples/working-with-files-and-folders.md
   - name: 파일, 폴더 및 레지스트리 키 작업
-    href: getting-started/cookbooks/working-with-files-folders-and-registry-keys.md
+    href: samples/working-with-files-folders-and-registry-keys.md
   - name: 개체 작업
-    href: getting-started/cookbooks/working-with-objects.md
+    href: samples/working-with-objects.md
     items:
     - name: WMI 개체 가져오기 - Get-WmiObject
-      href: getting-started/cookbooks/getting-wmi-objects--get-wmiobject-.md
+      href: samples/getting-wmi-objects--get-wmiobject-.md
     - name: .NET 및 COM 개체 만들기 - New-Object
-      href: getting-started/cookbooks/creating-.net-and-com-objects--new-object-.md
+      href: samples/creating-.net-and-com-objects--new-object-.md
     - name: 파이프라인에서 개체 제거 - Where-Object
-      href: getting-started/cookbooks/removing-objects-from-the-pipeline--where-object-.md
+      href: samples/removing-objects-from-the-pipeline--where-object-.md
     - name: 개체의 일부 선택 - Select-Object
-      href: getting-started/cookbooks/selecting-parts-of-objects--select-object-.md
+      href: samples/selecting-parts-of-objects--select-object-.md
     - name: 개체 정렬
-      href: getting-started/cookbooks/sorting-objects.md
+      href: samples/sorting-objects.md
     - name: 여러 개체에 대해 작업 반복 - ForEach-Object
-      href: getting-started/cookbooks/repeating-a-task-for-multiple-objects--foreach-object-.md
+      href: samples/repeating-a-task-for-multiple-objects--foreach-object-.md
     - name: 정적 클래스 및 메서드 사용
-      href: getting-started/cookbooks/using-static-classes-and-methods.md
+      href: samples/using-static-classes-and-methods.md
+    - name: 개체 구조 보기 - Get-Member
+      href: samples/viewing-object-structure--get-member-.md
   - name: 프린터 작업
-    href: getting-started/cookbooks/working-with-printers.md
+    href: samples/working-with-printers.md
   - name: 레지스트리 항목 작업
-    href: getting-started/cookbooks/working-with-registry-entries.md
+    href: samples/working-with-registry-entries.md
   - name: 레지스트리 키 작업
-    href: getting-started/cookbooks/working-with-registry-keys.md
+    href: samples/working-with-registry-keys.md
   - name: 소프트웨어 설치 작업
-    href: getting-started/cookbooks/working-with-software-installations.md
+    href: samples/working-with-software-installations.md
   - name: 기타 유용한 스크립팅 개체
-    href: getting-started/cookbooks/other-useful-scripting-objects.md
+    href: samples/other-useful-scripting-objects.md
   - name: 부록 1 호환성 별칭
-    href: getting-started/cookbooks/appendix-1---compatibility-aliases.md
+    href: samples/appendix-1---compatibility-aliases.md
   - name: 부록 2 사용자 지정 PowerShell 바로 가기 만들기
-    href: getting-started/cookbooks/appendix-2---creating-a-custom-powershell-shortcut.md
-ms.openlocfilehash: 4a1d2db118f9f26da16a57208d801305087b58f2
-ms.sourcegitcommit: 91786b03704fbd2d185f674df0bc67faddfb6288
+    href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
+ms.openlocfilehash: 934498dd6e2e2158d1ef2a83dbf38e3a2f51dfd0
+ms.sourcegitcommit: d396d0e4cfe3d279f399c17e7337380a31d373ac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51619146"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53747741"

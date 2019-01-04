@@ -11,8 +11,8 @@ items:
     items:
     - name: 패키지 검색
       href: how-to/finding-packages/search-syntax.md
-    - name: PSEdition으로 검색
-      href: how-to/finding-packages/searching-by-psedition.md
+    - name: 호환성 기준 검색
+      href: how-to/finding-packages/searching-by-compatibility.md
     - name: 검색 결과 필터링
       href: how-to/finding-packages/filtering-packages.md
   - name: 갤러리로 게시
@@ -93,9 +93,9 @@ items:
   href: faqs.md
 - name: PowerShellGet cmdlet
   href: https://docs.microsoft.com/powershell/module/powershellget/
-ms.openlocfilehash: 3b414bb44e3f278457277791cf3b1a3d767ecb68
-ms.sourcegitcommit: 1082b13115c5c5be4b76574ba55307b3e567983f
+ms.openlocfilehash: 8b3d2d121c167f3677d3691c8bc481644b95b204
+ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52576875"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655313"
