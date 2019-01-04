@@ -1,232 +1,215 @@
 items:
 - name: 개요
-  href: overview.md
   items:
+  - name: 개발자를 위한 필요한 상태 구성 개요
+    href: overview/overview.md
   - name: 의사 결정자를 위한 필요한 상태 구성 개요
-    href: decisionMaker.md
+    href: overview/decisionMaker.md
   - name: 엔지니어를 위한 필요한 상태 구성 개요
-    href: DscForEngineers.md
-  - name: DSC 빠른 시작
-    href: quickStart.md
+    href: overview/DscForEngineers.md
+  - name: CI/CD 파이프라인에서 DSC의 역할 이해
+    href: overview/authoringAdvanced.md
+- name: 시작하기
+  items:
+  - name: Linux용 DSC 시작하기
+    href: getting-started/lnxGettingStarted.md
+  - name: Nano에서 DSC 시작하기
+    href: getting-started/nanoDSC.md
+  - name: Azure Automation에서 DSC 시작하기
+    href: getting-started/azureDSC.md
+  - name: Azure Virtual Machines에서 DSC 시작하기
+    href: getting-started/azureDSCexthistory.md
+- name: 빠른 시작
+  items:
+  - name: DSC를 사용하여 웹 사이트 만들기
+    href: quickstarts/website-quickStart.md
 - name: 구성
-  href: configurations.md
   items:
-  - name: 구성 시행
-    href: enactingConfigurations.md
-  - name: 구성 및 환경 데이터 분리
-    href: separatingEnvData.md
-  - name: 여러 버전의 리소스 사용
-    href: sxsResource.md
-  - name: 사용자 자격 증명을 사용하여 DSC 실행
-    href: runAsUser.md
-  - name: 노드 간 종속성 지정
-    href: crossNodeDependencies.md
-  - name: 구성 데이터
-    href: configData.md
+  - name: 개념
     items:
-    - name: 구성 데이터의 자격 증명 옵션
-      href: configDataCredentials.md
-  - name: 구성 중첩
-    href: compositeConfigs.md
-  - name: 구성 MOF 파일 보안
-    href: secureMOF.md
-  - name: 부분 구성
-    href: partialConfigs.md
-  - name: DSC 구성에 대한 도움말 작성
-    href: configHelp.md
-  - name: 초기 부팅 시 DSC를 사용하여 가상 머신 구성
-    href: bootstrapDsc.md
+    - name: 구성이란?
+      href: configurations/configurations.md
+  - name: 방법 가이드
     items:
-    - name: DSCAutomationHostEnabled 레지스트리 키
-      href: DSCAutomationHostEnabled.md
-- name: 리소스
-  href: resources.md
-  items:
-  - name: 기본 제공 리소스
-    href: builtInResource.md
-    items:
-    - name: 보관 리소스
-      href: archiveResource.md
-    - name: 환경 리소스
-      href: environmentResource.md
-    - name: 파일 리소스
-      href: fileResource.md
-    - name: 그룹 리소스
-      href: groupResource.md
-    - name: GroupSet 리소스
-      href: groupSetResource.md
-    - name: 로그 리소스
-      href: logResource.md
-    - name: 패키지 리소스
-      href: packageResource.md
-    - name: ProcessSet 리소스
-      href: processSetResource.md
-    - name: 레지스트리 리소스
-      href: registryResource.md
-    - name: 스크립트 리소스
-      href: scriptResource.md
-    - name: 서비스 리소스
-      href: serviceResource.md
-    - name: ServiceSet 리소스
-      href: serviceSetResource.md
-    - name: 사용자 리소스
-      href: userResource.md
-    - name: WaitForAllResource
-      href: waitForAllResource.md
-    - name: WaitForAnyResource
-      href: waitForAnyResource.md
-    - name: WaitForSomeResource
-      href: waitForSomeResource.md
-    - name: WindowsFeature 리소스
-      href: windowsfeatureResource.md
-    - name: WindowsFeatureSet 리소스
-      href: windowsFeatureSetResource.md
-    - name: WindowsOptionalFeature 리소스
-      href: windowsOptionalFeatureResource.md
-    - name: WindowsOptionalFeatureSet 리소스
-      href: windowsOptionalFeatureSetResource.md
-    - name: WindowsPackageCab 리소스
-      href: windowsPackageCabResource.md
-    - name: WindowsProcess 리소스
-      href: windowsProcessResource.md
-  - name: 사용자 지정 리소스 작성
-    href: authoringResource.md
-    items:
-    - name: MOF 기반 사용자 지정 리소스
-      href: authoringResourceMOF.md
+    - name: 구성 작성, 컴파일 및 적용
+      href: configurations/write-compile-apply-configuration.md
+    - name: 구성에서 리소스 작업
       items:
-      - name: C#의 MOF 기반 리소스
-        href: authoringResourceMofCS.md
-    - name: 클래스 기반 사용자 지정 리소스
-      href: authoringResourceClass.md
-    - name: 복합 리소스
-      href: authoringResourceComposite.md
-    - name: 컴퍼지션 및 공동 작업에 대한 고급 DSC 작성
-      href: authoringAdvanced.md
-    - name: 단일 인스턴스 DSC 리소스 작성(모범 사례)
-      href: singleInstance.md
-    - name: 리소스 작성 검사 목록
-      href: resourceAuthoringChecklist.md
-  - name: DSC 리소스 디버그
-    href: debugResource.md
-  - name: DSC 리소스 메서드를 직접 호출
-    href: directCallResource.md
-- name: 로컬 구성 관리자
+      - name: Import-DSCResource 사용
+        href: configurations/import-dscresource.md
+      - name: 추가 DSC 리소스 설치
+        href: configurations/install-additional-dsc-resources.md
+      - name: 특정 버전의 설치된 리소스 가져오기
+        href: configurations/sxsResource.md
+      - name: DSC 리소스와 함께 자격 증명 사용
+        href: configurations/runAsUser.md
+    - name: 동적 구성 작성
+      items:
+      - name: 구성에 매개 변수 추가
+        href: configurations/add-parameters-to-a-configuration.md
+      - name: 구성의 조건문 및 루프
+        href: configurations/flow-control-in-configurations.md
+      - name: DSC 구성에 대한 도움말 작성
+        href: configurations/configHelp.md
+      - name: 구성 중첩
+        href: configurations/compositeconfigs.md
+    - name: 구성 데이터
+      items:
+      - name: 구성과 구성 데이터 분리
+        href: configurations/configData.md
+      - name: 구성 및 환경 데이터 분리(psd1)
+        href: configurations/separatingEnvData.md
+      - name: 구성 데이터의 자격 증명 옵션
+        href: configurations/configDataCredentials.md
+    - name: 구성의 종속성
+      items:
+      - name: DependsOn을 사용하는 리소스 종속성
+        href: configurations/resource-depends-on.md
+      - name: 노드 간 종속성
+        href: configurations/crossNodeDependencies.md
+- name: 리소스
   items:
-  - name: LCM(로컬 구성 관리자) 구성
-    href: metaConfig.md
-  - name: PowerShell 4.0에서 LCM 구성
-    href: metaConfig4.md
-- name: DSC 끌어오기 모델
-  items:
-  - name: DSC 끌어오기 서비스
-    href: pullServer.md
-  - name: DSC SMB 끌어오기 서버 설정
-    href: pullServerSMB.md
-  - name: 끌어오기 클라이언트 설정
-    href: pullClient.md
+  - name: 개념
     items:
-    - name: 구성 이름을 사용하여 끌어오기 클라이언트 설정
-      href: pullClientConfigNames.md
-    - name: 구성 ID를 사용하여 끌어오기 클라이언트 설정
-      href: pullClientConfigID.md
-  - name: DSC 보고서 서버 사용
-    href: reportServer.md
-  - name: 끌어오기 서버 모범 사례
-    href: secureServer.md
-- name: DSC 예제
-  href: dscExamples.md
+    - name: 리소스란?
+      href: resources/resources.md
+    - name: 가져오기, 테스트 및 설정
+      href: resources/get-test-set.md
+    - name: 사용자 지정 리소스
+      href: resources/authoringresource.md
+    - name: 단일 인스턴스 DSC 리소스 작성(모범 사례)
+      href: resources/singleInstance.md
+    - name: 리소스 작성 검사 목록
+      href: resources/resourceAuthoringChecklist.md
+  - name: 방법 가이드
+    items:
+    - name: PowerShell에서 MOF 기반 리소스 작성
+      href: resources/authoringResourceMOF.md
+    - name: PowerShell에서 클래스 기반 리소스 작성
+      href: resources/authoringResourceClass.md
+    - name: PowerShell에서 복합 리소스 작성
+      href: resources/authoringResourceComposite.md
+    - name: C#에서 MOF 기반 리소스 작성
+      href: resources/authoringResourceMofCS.md
+    - name: 리소스 디자이너 도구 사용
+      href: resources/authoringResourceMofDesigner.md
+- name: 노드 관리
+  items:
+  - name: 방법 가이드
+    items:
+    - name: 노드에서 구성 적용, 가져오기 및 테스트
+      href: managing-nodes/apply-get-test.md
+    - name: 로컬 Configuration Manager 구성(v5)
+      href: managing-nodes/metaConfig.md
+    - name: 로컬 Configuration Manager 구성(v4)
+      href: managing-nodes/metaConfig4.md
+    - name: DSC 리소스 메서드 직접 호출
+      href: managing-nodes/directCallResource.md
+- name: 끌어오기 서버
+  items:
+  - name: 개념
+    items:
+    - name: 밀어넣기/끌어오기 모델
+      href: pull-server/enactingConfigurations.md
+  - name: 방법 가이드
+    items:
+    - name: 끌어오기 서버 설정
+      items:
+      - name: DSC SMB 끌어오기 서버 설정
+        href: pull-server/pullServerSMB.md
+      - name: DSC HTTP 끌어오기 서버 설정
+        href: pull-server/pullServer.md
+    - name: 끌어오기 서버에서 노드 등록
+      href: pull-server/pullClient.md
+      items:
+      - name: 구성 이름을 사용하여 끌어오기 클라이언트 설정(v5)
+        href: pull-server/pullClientConfigNames.md
+      - name: 구성 ID를 사용하여 끌어오기 클라이언트 설정(v5)
+        href: pull-server/pullClientConfigID.md
+      - name: 구성 ID를 사용하여 끌어오기 클라이언트 설정(v4)
+        href: pull-server/pullClientConfigID4.md
+      - name: 부분 구성
+        href: pull-server/partialconfigs.md
+    - name: 끌어오기 서버를 사용하여 구성 배포
+      items:
+      - name: 끌어오기 서버에 구성 게시(v4/v5)
+        href: pull-server/publishConfigs.md
+      - name: 리소스 패키지 및 끌어오기 서버에 업로드(v4)
+        href: pull-server/package-upload-resources.md
+      - name: 끌어오기 서버에서 노드 업데이트
+        href: pull-server/update-nodes-manually.md
+      - name: DSC 보고서 서버 사용
+        href: pull-server/reportServer.md
+    - name: 끌어오기 서버 보호
+      items:
+      - name: 끌어오기 서버 보안
+        href: pull-server/secureServer.md
+      - name: 인증서를 사용하여 MOF 파일 보호
+        href: pull-server/secureMOF.md
+- name: 자습서
   items:
   - name: DSC, Pester 및 Visual Studio Team Services를 사용하여 CI/CD 파이프라인 빌드
-    href: dscCiCd.md
-  - name: 구성 및 환경 데이터 분리
-    href: separatingEnvData.md
-- name: DSC 문제 해결
-  href: troubleshooting.md
-- name: DSC on Nano Server 사용
-  href: nanoDsc.md
-- name: Linux의 DSC
+    href: tutorials/dscCiCd.md
+  - name: 초기 부팅 시 DSC를 사용하여 가상 머신 구성
+    href: tutorials/bootstrapDsc.md
+  - name: DSCAutomationHostEnabled 레지스트리 키 구성
+    href: tutorials/DSCAutomationHostEnabled.md
+- name: 문제 해결
   items:
-  - name: Linux용 DSC 시작
-    href: lnxGettingStarted.md
-  - name: Linux용 기본 제공 리소스
-    href: lnxBuiltInResources.md
-    items:
-    - name: nxArchive 리소스
-      href: lnxArchiveResource.md
-    - name: nxEnvironment 리소스
-      href: lnxEnvironmentResource.md
-    - name: nxFile 리소스
-      href: lnxFileResource.md
-    - name: nxFileLine 리소스
-      href: lnxFileLineResource.md
-    - name: nxGroup 리소스
-      href: lnxGroupResource.md
-    - name: nxPackage 리소스
-      href: lnxPackageResource.md
-    - name: nxScript 리소스
-      href: lnxScriptResource.md
-    - name: nxService 리소스
-      href: lnxServiceResource.md
-    - name: nxSshAuthorizedKeys 리소스
-      href: lnxSshAuthorizedKeysResource.md
-    - name: nxUser 리소스
-      href: lnxUserResource.md
-- name: Microsoft Azure에서 DSC 사용
-  href: azureDsc.md
-  items:
-  - name: DSC 확장 기록
-    href: azureDscexthistory.md
-- name: DSC MOF 참조
+  - name: 알려진 문제
+    href: troubleshooting/troubleshooting.md
+  - name: DSC 리소스 디버그
+    href: troubleshooting/debugResource.md
+- name: 참조
   items:
   - name: MSFT_DSCLocalConfigurationManager 클래스
-    href: msft-dsclocalconfigurationmanager.md
+    href: reference/msft-dsclocalconfigurationmanager.md
     items:
     - name: MSFT_DSCLocalConfigurationManager 클래스의 ApplyConfiguration 메서드
-      href: msft-dsclocalconfigurationmanager-applyconfiguration.md
+      href: reference/msft-dsclocalconfigurationmanager-applyconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 DisableDebugConfiguration 메서드
-      href: msft-dsclocalconfigurationmanager-disabledebugconfiguration.md
+      href: reference/msft-dsclocalconfigurationmanager-disabledebugconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 EnableDebugConfiguration 메서드
-      href: msft-dsclocalconfigurationmanager-enabledebugconfiguration.md
+      href: reference/msft-dsclocalconfigurationmanager-enabledebugconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 GetConfiguration 메서드
-      href: msft-dsclocalconfigurationmanager-getconfiguration.md
+      href: reference/msft-dsclocalconfigurationmanager-getconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 GetConfigurationResultOutput 메서드
-      href: msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md
+      href: reference/msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 GetConfigurationStatus 메서드
-      href: msft-dsclocalconfigurationmanager-getconfigurationstatus.md
+      href: reference/msft-dsclocalconfigurationmanager-getconfigurationstatus.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 GetMetaConfiguration 메서드
-      href: msft-dsclocalconfigurationmanager-getmetaconfiguration.md
+      href: reference/msft-dsclocalconfigurationmanager-getmetaconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 PerformRequiredConfigurationChecks 메서드
-      href: msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md
+      href: reference/msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 RemoveConfiguration 메서드
-      href: msft-dsclocalconfigurationmanager-removeconfiguration.md
+      href: reference/msft-dsclocalconfigurationmanager-removeconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 ResourceGet 메서드
-      href: msft-dsclocalconfigurationmanager-resourceget.md
+      href: reference/msft-dsclocalconfigurationmanager-resourceget.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 ResourceSet 메서드
-      href: msft-dsclocalconfigurationmanager-resourceset.md
+      href: reference/msft-dsclocalconfigurationmanager-resourceset.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 ResourceTest 메서드
-      href: msft-dsclocalconfigurationmanager-resourcetest.md
+      href: reference/msft-dsclocalconfigurationmanager-resourcetest.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 RollBack 메서드
-      href: msft-dsclocalconfigurationmanager-rollback.md
+      href: reference/msft-dsclocalconfigurationmanager-rollback.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 SendConfiguration 메서드
-      href: msft-dsclocalconfigurationmanager-sendconfiguration.md
+      href: reference/msft-dsclocalconfigurationmanager-sendconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 SendConfigurationApply 메서드
-      href: msft-dsclocalconfigurationmanager-sendconfigurationapply.md
+      href: reference/msft-dsclocalconfigurationmanager-sendconfigurationapply.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 SendConfigurationApplyAsync 메서드
-      href: msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md
+      href: reference/msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 SendMetaConfigurationApply 메서드
-      href: msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md
+      href: reference/msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 StopConfiguration 메서드
-      href: msft-dsclocalconfigurationmanager-stopconfiguration.md
+      href: reference/msft-dsclocalconfigurationmanager-stopconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 TestConfiguration 메서드
-      href: msft-dsclocalconfigurationmanager-testconfiguration.md
-- name: 기타 참고 자료
+      href: reference/msft-dsclocalconfigurationmanager-testconfiguration.md
+- name: 추가 정보
   items:
   - name: 백서
-    href: whitepapers.md
-ms.openlocfilehash: d8c8af17c36b543dccda07172a04f253e533abe1
-ms.sourcegitcommit: aa41249f153bbc6e11667ade60c878980c15abc6
+    href: further-reading/whitepapers.md
+ms.openlocfilehash: 454267feeae7a9ec108f910a510cd40848744a51
+ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45611508"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53400097"
