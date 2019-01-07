@@ -162,54 +162,130 @@ items:
     href: troubleshooting/debugResource.md
 - name: 참조
   items:
+  - name: Windows 기본 제공 리소스
+    href: reference/resources/windows/builtInResource.md
+    items:
+    - name: 보관 리소스
+      href: reference/resources/windows/archiveResource.md
+    - name: 환경 리소스
+      href: reference/resources/windows/environmentResource.md
+    - name: 파일 리소스
+      href: reference/resources/windows/fileResource.md
+    - name: 그룹 리소스
+      href: reference/resources/windows/groupResource.md
+    - name: GroupSet 리소스
+      href: reference/resources/windows/groupSetResource.md
+    - name: 로그 리소스
+      href: reference/resources/windows/logResource.md
+    - name: 패키지 리소스
+      href: reference/resources/windows/packageResource.md
+    - name: ProcessSet 리소스
+      href: reference/resources/windows/processSetResource.md
+    - name: 레지스트리 리소스
+      href: reference/resources/windows/registryResource.md
+    - name: 스크립트 리소스
+      href: reference/resources/windows/scriptResource.md
+    - name: 서비스 리소스
+      href: reference/resources/windows/serviceResource.md
+    - name: ServiceSet 리소스
+      href: reference/resources/windows/serviceSetResource.md
+    - name: 사용자 리소스
+      href: reference/resources/windows/userResource.md
+    - name: WaitForAllResource
+      href: reference/resources/windows/waitForAllResource.md
+    - name: WaitForAnyResource
+      href: reference/resources/windows/waitForAnyResource.md
+    - name: WaitForSomeResource
+      href: reference/resources/windows/waitForSomeResource.md
+    - name: WindowsFeature 리소스
+      href: reference/resources/windows/windowsfeatureResource.md
+    - name: WindowsFeatureSet 리소스
+      href: reference/resources/windows/windowsFeatureSetResource.md
+    - name: WindowsOptionalFeature 리소스
+      href: reference/resources/windows/windowsOptionalFeatureResource.md
+    - name: WindowsOptionalFeatureSet 리소스
+      href: reference/resources/windows/windowsOptionalFeatureSetResource.md
+    - name: WindowsPackageCab 리소스
+      href: reference/resources/windows/windowsPackageCabResource.md
+    - name: WindowsProcess 리소스
+      href: reference/resources/windows/windowsProcessResource.md
+  - name: 기본 제공 리소스
+    href: reference/resources/linux/lnxBuiltInResources.md
+    items:
+    - name: nxArchive 리소스
+      href: reference/resources/linux/lnxArchiveResource.md
+    - name: nxEnvironment 리소스
+      href: reference/resources/linux/lnxEnvironmentResource.md
+    - name: nxFile 리소스
+      href: reference/resources/linux/lnxFileResource.md
+    - name: nxFileLine 리소스
+      href: reference/resources/linux/lnxFileLineResource.md
+    - name: nxGroup 리소스
+      href: reference/resources/linux/lnxGroupResource.md
+    - name: nxPackage 리소스
+      href: reference/resources/linux/lnxPackageResource.md
+    - name: nxScript 리소스
+      href: reference/resources/linux/lnxScriptResource.md
+    - name: nxService 리소스
+      href: reference/resources/linux/lnxServiceResource.md
+    - name: nxSshAuthorizedKeys 리소스
+      href: reference/resources/linux/lnxSshAuthorizedKeysResource.md
+    - name: nxUser 리소스
+      href: reference/resources/linux/lnxUserResource.md
+  - name: PackageManagement 기본 제공 리소스
+    items:
+    - name: PackageManagementDsc 리소스
+      href: reference/resources/packagemanagement/PackageManagementDscResource.md
+    - name: PackageManagementSourceDsc 리소스
+      href: reference/resources/packagemanagement/PackageManagementSourceDscResource.md
   - name: MSFT_DSCLocalConfigurationManager 클래스
-    href: reference/msft-dsclocalconfigurationmanager.md
+    href: reference/mof-classes/msft-dsclocalconfigurationmanager.md
     items:
     - name: MSFT_DSCLocalConfigurationManager 클래스의 ApplyConfiguration 메서드
-      href: reference/msft-dsclocalconfigurationmanager-applyconfiguration.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-applyconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 DisableDebugConfiguration 메서드
-      href: reference/msft-dsclocalconfigurationmanager-disabledebugconfiguration.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-disabledebugconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 EnableDebugConfiguration 메서드
-      href: reference/msft-dsclocalconfigurationmanager-enabledebugconfiguration.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-enabledebugconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 GetConfiguration 메서드
-      href: reference/msft-dsclocalconfigurationmanager-getconfiguration.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-getconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 GetConfigurationResultOutput 메서드
-      href: reference/msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 GetConfigurationStatus 메서드
-      href: reference/msft-dsclocalconfigurationmanager-getconfigurationstatus.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-getconfigurationstatus.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 GetMetaConfiguration 메서드
-      href: reference/msft-dsclocalconfigurationmanager-getmetaconfiguration.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-getmetaconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 PerformRequiredConfigurationChecks 메서드
-      href: reference/msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 RemoveConfiguration 메서드
-      href: reference/msft-dsclocalconfigurationmanager-removeconfiguration.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-removeconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 ResourceGet 메서드
-      href: reference/msft-dsclocalconfigurationmanager-resourceget.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-resourceget.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 ResourceSet 메서드
-      href: reference/msft-dsclocalconfigurationmanager-resourceset.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-resourceset.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 ResourceTest 메서드
-      href: reference/msft-dsclocalconfigurationmanager-resourcetest.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-resourcetest.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 RollBack 메서드
-      href: reference/msft-dsclocalconfigurationmanager-rollback.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-rollback.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 SendConfiguration 메서드
-      href: reference/msft-dsclocalconfigurationmanager-sendconfiguration.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 SendConfigurationApply 메서드
-      href: reference/msft-dsclocalconfigurationmanager-sendconfigurationapply.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendconfigurationapply.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 SendConfigurationApplyAsync 메서드
-      href: reference/msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 SendMetaConfigurationApply 메서드
-      href: reference/msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 StopConfiguration 메서드
-      href: reference/msft-dsclocalconfigurationmanager-stopconfiguration.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-stopconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 TestConfiguration 메서드
-      href: reference/msft-dsclocalconfigurationmanager-testconfiguration.md
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager-testconfiguration.md
 - name: 추가 정보
   items:
   - name: 백서
     href: further-reading/whitepapers.md
-ms.openlocfilehash: 454267feeae7a9ec108f910a510cd40848744a51
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: f2288226880ac36f24dd9c8a6b6ad84f47671d26
+ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400097"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046711"
