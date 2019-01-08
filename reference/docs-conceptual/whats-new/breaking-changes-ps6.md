@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: PowerShell 6.0의 주요 변경 내용
-ms.openlocfilehash: 60ce7a1676403bb08b57bf852ba725acde86a30c
-ms.sourcegitcommit: 2d9cf1ccb9a653db7726a408ebcb65530dcb1522
-ms.translationtype: HT
+ms.openlocfilehash: d477a9b27e8d5df6653ee40f8b606879b60a80c7
+ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34309615"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655449"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>PowerShell 6.0의 주요 변경 내용
 
@@ -271,3 +271,4 @@ Unix에서는 셸이 대화형 셸을 나타내는 `-i`를 허용하는 것이 �
 - `System.Net.ServicePointManager` 설정이 더 이상 적용되지 않습니다.
 - 현재 macOS에서 사용할 수 있는 인증서 기반 인증은 없습니다.
 - `http://` URI를 통해 `-Credential`을 사용하면 오류가 발생합니다. 오류를 표시하지 않으려면 `https://` URI를 사용하거나 `-AllowUnencryptedAuthentication` 매개 변수를 제공합니다.
+- `-MaximumRedirection` 이제 리디렉션을 시도 마지막 리디렉션 결과 반환 하는 대신 제공 된 제한을 초과 하면 종료 오류를 생성 합니다.
