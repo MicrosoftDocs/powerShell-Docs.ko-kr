@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,security
 title: JEA 세션 구성
-ms.openlocfilehash: bdf3659357045203d90e8083613e51cce657da1a
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
-ms.translationtype: HT
+ms.openlocfilehash: 1b598522d43b2c1a26a739a67cee5181b21a7c32
+ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45522965"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655466"
 ---
 # <a name="jea-session-configurations"></a>JEA 세션 구성
 
-> 적용 대상: Windows PowerShell 5.0
+> 적용 대상: Windows Powershell 5.0
 
 JEA 엔드포인트는 특정한 방법으로 PowerShell 세션 구성 파일을 만들고 등록하여 시스템에 등록합니다.
 세션 구성은 JEA 엔드포인트를 사용할 수 있는 *사용자* 및 해당 사용자가 액세스할 수 있는 역할을 결정합니다.
@@ -80,6 +80,8 @@ RunAsVirtualAccount = $true
 RunAsVirtualAccount = $true
 RunAsVirtualAccountGroups = 'NetworkOperator', 'NetworkAuditor'
 ```
+> [!NOTE]
+> 일시적으로 가상 계정은 로컬 서버 보안 정책에서 서비스 권한 로그온을 부여 됩니다.  지정한 VirtualAccountGroups 중 하나가 이미 부여 된 경우 정책에서이 권한을, 개별 가상 계정은 더 이상 추가 되며 정책에서 제거 합니다.  이 도메인 컨트롤러 보안 정책에 대 한 수정 버전 감사 밀접 하 게 되는 도메인 컨트롤러와 같은 시나리오에서 유용할 수 있습니다.  2018 년 11 월을 사용 하 여 Windows Server 2016 또는 이후 롤업 및 Windows Server 2019 년 1 월 2019를 사용 하 여 최신 롤업을 제공만 됩니다.
 
 #### <a name="group-managed-service-account"></a>그룹 관리 서비스 계정
 

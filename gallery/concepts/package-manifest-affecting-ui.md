@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: PowerShell
 title: PowerShell 갤러리 UI에 영향을 주는 패키지 매니페스트 값
-ms.openlocfilehash: 63f5055dff6de404343f80be81a1c786147c0e33
-ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
-ms.translationtype: HT
+ms.openlocfilehash: dcba56d9f7edf0c08a3b9e3f2326b39a6b3be3fa
+ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50225831"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655348"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>PowerShell 갤러리 UI에 영향을 주는 패키지 매니페스트 값
 
@@ -51,7 +51,7 @@ ms.locfileid: "50225831"
 
 PowerShell 갤러리 편집 패키지 페이지에서는 게시자가 패키지에 대해 표시되는 여러 필드를 변경할 수 있습니다.
 
-- 직함
+- Title
 - 설명
 - 요약
 - 아이콘 URL
@@ -101,7 +101,7 @@ PowerShell 갤러리 및 PowerShellGet cmdlet이 고유하게 처리하는 태�
 | VersionControl | Version은 더 자주 사용되지만 덜 정확합니다.  |
 | 로깅 | 동작인 경우 Logging을 사용하는 것이 좋습니다. |
 | 로그 | 사물인 경우 Log를 사용하는 것이 좋습니다. |
-| 예비 |  |
+| 백업 |  |
 | IaaS |  |
 | Linux |  |
 | IIS |  |
@@ -137,5 +137,5 @@ PowerShell 갤러리 및 PowerShellGet cmdlet이 고유하게 처리하는 태�
 | AzureRm | 주로 AzureRM 모듈에 대해 사용됩니다. |
 | Zip |  |
 | MSI |  |
-| Mac |  |
+| MacOS |  |
 | PoshBot |  |
