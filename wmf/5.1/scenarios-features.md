@@ -126,4 +126,4 @@ WMF 5.1에서는 다음과 같습니다.
 
 WMF 5.1에서는 PowerShell과 함께 제공되는 Pester 버전이 3.3.5에서 3.4.0으로 업데이트되었고, Nano Server에서 Pester가 더 잘 동작할 수 있도록 커밋 https://github.com/pester/Pester/pull/484/commits/3854ae8a1f215b39697ac6c2607baf42257b102e가 추가되었습니다.
 
-https://github.com/pester/Pester/blob/master/CHANGELOG.md에서 ChangeLog.md 파일을 검사하여 버전 3.3.5~3.4.0의 변경 내용을 검토할 수 있습니다.
+[https://github.com/pester/Pester/blob/master/CHANGELOG.md](https://github.com/pester/Pester/blob/master/CHANGELOG.md)에서 ChangeLog.md 파일을 검사하여 버전 3.3.5~3.4.0의 변경 내용을 검토할 수 있습니다.
