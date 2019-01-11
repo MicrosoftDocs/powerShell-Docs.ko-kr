@@ -106,7 +106,7 @@ PowerShell 갤러리 및 PowerShellGet cmdlet이 고유하게 처리하는 태�
 | Linux |  |
 | IIS |  |
 | AzureAutomation |  |
-| 저장소 |  |
+| 스토리지 |  |
 | GitHub |  |
 | Json |  |
 | Exchange |  |
