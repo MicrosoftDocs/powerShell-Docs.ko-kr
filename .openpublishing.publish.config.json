@@ -106,7 +106,7 @@
     },
     {
       "path_to_root": "_repo.en-us",
-      "url": "https://github.com/PowerShell/PowerShell-Docs",
+      "url": "https://github.com/MicrosoftDocs/PowerShell-Docs",
       "branch": "live",
       "branch_mapping": {
         "live": "live",
@@ -114,7 +114,7 @@
       }
     }
   ],
-   "git_repository_url_open_to_public_contributors": "https://github.com/PowerShell/powerShell-Docs.ko-kr", 
+   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/powerShell-Docs.ko-kr", 
  "git_repository_branch_open_to_public_contributors": "live", 
   "branch_target_mapping": {},
   "need_generate_pdf_url_template": false,
