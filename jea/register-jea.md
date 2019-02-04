@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: jea,powershell,security
 title: JEA 구성 등록
 ms.openlocfilehash: 160aa95283da57a10aad5fdd4043adb1354a5db5
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
-ms.translationtype: HT
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002909"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55683153"
 ---
 # <a name="registering-jea-configurations"></a>JEA 구성 등록
 
-> 적용 대상: Windows PowerShell 5.0
+> 적용 대상: Windows Powershell 5.0
 
 [역할 기능](role-capabilities.md) 및 [세션 구성 파일](session-configurations.md)을 만든 후 JEA를 사용하기 위한 마지막 단계는 JEA 엔드포인트를 등록하는 것입니다.
 시스템에 JEA 엔드포인트를 등록하면 사용자 및 자동화 엔진에서 엔드포인트를 사용할 수 있게 됩니다.

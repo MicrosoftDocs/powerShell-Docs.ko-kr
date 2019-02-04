@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: d4168640f67cb1dd44e91d1867e87fd7a6b7f549
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.openlocfilehash: 0a481fb9d4f2aab89bc448c71b01f1d541cf24bc
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34218353"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682388"
 ---
 # <a name="side-by-side-version-support-on-powershell-50-or-newer"></a>PowerShell 5.0 이상의 Side-by-Side 버전 지원
 

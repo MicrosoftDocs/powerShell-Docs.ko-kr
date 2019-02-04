@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: d7aec1a2ba8964e877ddd7406609fe135b1eb462
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.openlocfilehash: 0e79127faf3f9bf6fe7d525db5bb946daf3b93e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219745"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682133"
 ---
 # <a name="call-base-class-method"></a>기본 클래스 메서드 호출
 

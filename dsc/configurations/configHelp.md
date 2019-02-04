@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: DSC 구성에 대한 도움말 작성
 ms.openlocfilehash: 498ec0f594ed3229e097903c4ea2ae34d3da03a2
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402892"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55683003"
 ---
 # <a name="writing-help-for-dsc-configurations"></a>DSC 구성에 대한 도움말 작성
 

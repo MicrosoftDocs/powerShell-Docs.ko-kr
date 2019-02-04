@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: c51b583658ec82f39e4117e4266fa2e645b5012a
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.openlocfilehash: dcba906695acc44c313a401b2c9a50355ec84383
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34187209"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680778"
 ---
 # <a name="specifying-cross-node-dependencies"></a>노든 간 종속성 지정
 

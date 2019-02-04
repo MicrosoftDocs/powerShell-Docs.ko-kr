@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 4338364c64eff2a7a59c5ae9fe80f75760cade42
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.openlocfilehash: dc72debe0dc7e56c9e59e6903c7d6cf3025e622c
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34218079"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680898"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc"></a>DSC(원하는 상태 구성)의 향상된 기능
 

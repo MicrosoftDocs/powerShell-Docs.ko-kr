@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Windows PowerShell ISE에서 콘솔 창을 사용하는 방법
 ms.assetid: 44d67705-87c7-4a69-a53e-6471fdebb757
 ms.openlocfilehash: 5bbbdd3b1f0324ff1a4f2298459f58640c4dc9a6
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403127"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682908"
 ---
 # <a name="how-to-use-the-console-pane-in-the-windows-powershell-ise"></a>Windows PowerShell ISE에서 콘솔 창을 사용하는 방법
 

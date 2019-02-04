@@ -2,17 +2,17 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: 4eb2f0bac4f2169a9a06d80cb4fa214a09cdfa86
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
-ms.translationtype: HT
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892987"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681698"
 ---
 # <a name="known-issues-and-limitations"></a>알려진 문제 및 제한 사항
 
 ## <a name="powershell-shortcuts-are-broken-when-used-for-the-first-time"></a>처음으로 사용할 때 PowerShell 바로 가기가 끊어짐
 
-**해결 방법:** 다음 작업 중 하나를 수행하세요.
+**해결 방법:** 다음 작업 중 하나를 수행 합니다.
 
 1. PowerShell 바로 가기를 마우스 오른쪽 단추로 클릭합니다. "Windows PowerShell"을 선택하여 일반 권한 모드로 시작합니다.
 2. PowerShell 바로 가기를 마우스 오른쪽 단추로 클릭합니다. "Windows PowerShell"을 마우스 오른쪽 단추로 클릭하고 "관리자 권한으로 실행"을 선택하여 관리자 권한 모드로 시작합니다.
@@ -23,29 +23,29 @@ ms.locfileid: "37892987"
 
 Windows 7에서 PowerShell 모듈 및 DSC 리소스를 사용하면 ExecutionPolicy에 대해 오류가 보고될 수 있습니다.
 
-**해결 방법:** 다음 명령을 관리자 권한 PowerShell 세션에서 실행(관리자 권한으로 실행)하여 ExecutionPolicy를 RemoteSigned로 설정하세요.
+**해결 방법:** ExecutionPolicy를 관리자 권한 PowerShell 세션 (관리자 권한으로 실행)에서 다음 명령을 실행 하 여 RemoteSigned로 설정 합니다.
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned
 ```
 
-## <a name="connecting-to-an-old-remote-exchange-endpoint-causes-a-crash"></a>이전 원격 Exchange 끝점에 연결하면 충돌이 발생함
+## <a name="connecting-to-an-old-remote-exchange-endpoint-causes-a-crash"></a>이전 원격 Exchange 엔드포인트에 연결하면 충돌이 발생함
 
-이전 Exchange 끝점은 새 끝점으로 리디렉션됩니다. 충돌을 발생시키는 리디렉션 논리에 버그가 있습니다.
+이전 Exchange 엔드포인트는 새 엔드포인트로 리디렉션됩니다. 충돌을 발생시키는 리디렉션 논리에 버그가 있습니다.
 
-**해결 방법:** 새 끝점에 직접 연결하세요.
+**해결 방법:** 새 끝점에 직접 연결 합니다.
 
 ## <a name="software-inventory-logging-feature-is-erroneously-stopped-after-wmf-50-installation-on-windows-server-2012-r2"></a>Windows Server 2012 R2에 WMF 5.0 설치 후 소프트웨어 인벤토리 로깅 기능이 잘못 중지됨
 
 SIL이 이미 실행되고 있는 Windows Server 2012 R2에 WMF 5.0을 설치하면 소프트웨어 인벤토리 로깅 기능이 설치 후 잘못 중지됩니다.
 
-**해결 방법:** 설치 프로세스에서 소프트웨어 인벤토리 로깅 기능을 잘못 중지할 수 있으므로 WMF 설치 후 Start-SilLogging cmdlet을 한 번 실행하세요.
+**해결 방법:** 설치 프로세스에서 소프트웨어 인벤토리 로깅 기능을 잘못 중지 하므로 WMF 설치 후 한 번 Start-sillogging cmdlet을 실행 합니다.
 
 ## <a name="get-childitem-does-not-work-if--literalpath-and--recurse-are-used-together"></a>-LiteralPath 및 -Recurse가 함께 사용되는 경우 `Get-ChildItem`이 작동하지 않음
 
 디렉터리 이름에 잘못된 와일드카드 문자가 포함된 경우 -LiteralPath와 -Recurse를 함께 사용하면 `Get-ChildItem`에서 예상된 결과를 생성하지 않습니다.
 
-**해결 방법:** 적합하지는 않지만 현재 해결 방법은 cmdlet을 사용하지 않고 스크립트에서 재귀를 구현하는 것입니다.
+**해결 방법:** 적합 하지는 않지만 현재 해결 방법은 cmdlet을 사용 하는 것이 아니라 스크립트에서 재귀를 구현 하는 것입니다.
 
 ## <a name="sysprep-fails-after-wmf-50-installation"></a>WMF 5.0 설치 후 Sysprep 실패
 

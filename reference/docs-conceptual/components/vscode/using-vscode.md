@@ -2,12 +2,12 @@
 title: PowerShell 개발에 Visual Studio 코드 사용
 description: PowerShell 개발에 Visual Studio 코드 사용
 ms.date: 08/06/2018
-ms.openlocfilehash: 3101fa57896996a696385801303333e4a6406d20
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 03f370d0906790b573ea42290b9ccdec2cf84f2e
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402252"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681463"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>PowerShell 개발에 Visual Studio 코드 사용
 
@@ -63,6 +63,24 @@ Windows, macOS 및 Linux의 현대식 워크로드의 경우 다음을 참조하
 저장하려면 **파일->저장**을 클릭한 후 파일 이름을 지정합니다(예: `HelloWorld.ps1`).
 파일을 닫으려면 파일 이름 옆에 있는 "x"를 클릭합니다.
 Visual Studio Code를 종료하려면 **파일->종료**를 누릅니다.
+
+### <a name="installing-the-powershell-extension-on-restricted-systems"></a>제한 된 시스템에 PowerShell 확장 설치
+
+일부 시스템 검사할 모든 코드 서명 해야 하 고 PowerShell 편집기 서비스를 시스템에서 실행을 수동으로 승인 해야 하는 방식으로 설정 됩니다.
+실행 정책을 변경 하는 그룹 정책 업데이트 때문일 경우 PowerShell 확장을 설치 했지만 같은 오류에 도달 합니다.
+
+```
+Language server startup failed.
+```
+
+PowerShell 편집기 서비스 이므로 VSCode 용 PowerShell 확장을 수동으로 승인 하려면 프롬프트 및 실행 하는 PowerShell을 엽니다.
+
+```powershell
+Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellEditorServices\PowerShellEditorServices.psd1
+```
+
+"이 신뢰할 수 없는 게시자의 소프트웨어를 실행 하 시겠습니까?" 메시지가 표시 됩니다.
+형식 `R` 파일을 실행 합니다. 그런 다음 Visual Studio Code를 열고 PowerShell 확장이 제대로 작동 하는지 확인 합니다. 시작 하는 문제가 여전히 있는 경우에 알려 주세요 [GitHub](https://github.com/PowerShell/vscode-powershell/issues)합니다.
 
 #### <a name="using-a-specific-installed-version-of-powershell"></a>설치된 특정 버전의 PowerShell 사용
 

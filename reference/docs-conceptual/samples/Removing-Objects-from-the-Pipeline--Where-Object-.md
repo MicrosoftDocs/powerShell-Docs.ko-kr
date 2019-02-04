@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: 파이프라인에서 개체 제거(Where Object)
 ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
 ms.openlocfilehash: c060b93a3823be26ad6c7757acc633bb4fc2fcfa
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403260"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680768"
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>파이프라인에서 개체 제거(Where-Object)
 

@@ -3,11 +3,11 @@ ms.date: 05/17/2018
 keywords: powershell,core
 title: PowerShell 6.0의 주요 변경 내용
 ms.openlocfilehash: d477a9b27e8d5df6653ee40f8b606879b60a80c7
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655449"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680467"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>PowerShell 6.0의 주요 변경 내용
 

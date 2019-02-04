@@ -4,11 +4,11 @@ schema: 2.0.0
 keywords: PowerShell
 title: PowerShell 갤러리 UI에 영향을 주는 패키지 매니페스트 값
 ms.openlocfilehash: dcba56d9f7edf0c08a3b9e3f2326b39a6b3be3fa
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655348"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681858"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>PowerShell 갤러리 UI에 영향을 주는 패키지 매니페스트 값
 

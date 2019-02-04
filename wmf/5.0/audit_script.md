@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: b8f175cee0a1de501b64890fdc2798f4f6421a14
-ms.sourcegitcommit: 2ffb9fa92129c2001379ca2c17646466721f7165
-ms.translationtype: HT
+ms.openlocfilehash: 28cd186ab3a08a0da4ff81f5a21514f239770d13
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251486"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680123"
 ---
 # <a name="script-tracing-and-logging"></a>스크립트 추적 및 로깅
 
@@ -49,16 +49,16 @@ ID는 이벤트 ID 0x1008과 상호 관련될 수 있는 스크립트 블록을 
 ## Malware
 function SuperDecrypt
 {
-    param($script)
-    $bytes = [Convert]::FromBase64String($script)
+    param($script)
+    $bytes = [Convert]::FromBase64String($script)
 
-    ## XOR “encryption”
-    $xorKey = 0x42
-    for($counter = 0; $counter -lt $bytes.Length; $counter++)
-    {
-        $bytes[$counter] = $bytes[$counter] -bxor $xorKey
-    }
-    [System.Text.Encoding]::Unicode.GetString($bytes)
+    ## XOR “encryption”
+    $xorKey = 0x42
+    for($counter = 0; $counter -lt $bytes.Length; $counter++)
+    {
+        $bytes[$counter] = $bytes[$counter] -bxor $xorKey
+    }
+    [System.Text.Encoding]::Unicode.GetString($bytes)
 }
 
 $decrypted = SuperDecrypt "FUIwQitCNkInQm9CCkItQjFCNkJiQmVCEkI1QixCJkJlQg=="

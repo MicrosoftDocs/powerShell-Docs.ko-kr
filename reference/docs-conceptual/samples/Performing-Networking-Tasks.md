@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: 네트워킹 작업 수행
 ms.assetid: a43cc55f-70c1-45c8-9467-eaad0d57e3b5
 ms.openlocfilehash: 64c57c95a70bc4cad4b695a59d96673ed18afdf4
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403385"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682568"
 ---
 # <a name="performing-networking-tasks"></a>네트워킹 작업 수행
 

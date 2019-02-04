@@ -3,11 +3,11 @@ title: ARM에서 PowerShell Core 설치
 description: ARM 기반 시스템에서 PowerShell Core 설치
 ms.date: 08/06/2018
 ms.openlocfilehash: 1f41df9120461da55e35dfe4c2ec4ddefbc5b36e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403432"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55679790"
 ---
 # <a name="powershell-core-on-arm"></a>ARM에서 PowerShell Core
 

@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Azure 자동화에 배포
 ms.openlocfilehash: dc382b1cf3ceaa787f54c555d01e6bd9ba70e680
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
-ms.translationtype: HT
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50003768"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682353"
 ---
 # <a name="deploy-to-azure-automation"></a>Azure 자동화에 배포
 

@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: jea,powershell,security
 title: JEA에 대한 감사 및 보고
 ms.openlocfilehash: 2388c735840d8d3683aa8bc9869b9fb0371e5902
-ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851223"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682823"
 ---
 # <a name="auditing-and-reporting-on-jea"></a>JEA에 대한 감사 및 보고
 
-> 적용 대상: Windows PowerShell 5.0
+> 적용 대상: Windows Powershell 5.0
 
 JEA를 배포한 후에는 정기적으로 JEA 구성을 감사하려고 할 것입니다.
 감사를 통해 올바른 사용자에게 JEA 엔드포인트에 대한 액세스 권한이 있는지와 할당된 해당 역할이 여전히 올바른지를 평가할 수 있습니다.

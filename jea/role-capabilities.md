@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: jea,powershell,security
 title: JEA 역할 기능
 ms.openlocfilehash: bd0a995adc60e50049ff99d6b23e7c2aeb745a18
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
-ms.translationtype: HT
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45522945"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680603"
 ---
 # <a name="jea-role-capabilities"></a>JEA 역할 기능
 
-> 적용 대상: Windows PowerShell 5.0
+> 적용 대상: Windows Powershell 5.0
 
 JEA 엔드포인트를 만들 때 사용자가 JEA 세션에서 수행할 수 있는 *작업*을 설명하는 하나 이상의 "역할 기능"을 정의해야 합니다.
 역할 기능은 연결하는 사용자에게 제공되어야 하는 모든 cmdlet, 함수, 공급자 및 외부 프로그램을 나열하는 PowerShell 데이터 파일로서 확장명은 .psrc입니다.

@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: a2938c168f476e5f9c38ba55ceb45fa2b95571e2
-ms.sourcegitcommit: bad40d59598ae5597051fa381986316a2d9bf6c8
-ms.translationtype: HT
+ms.openlocfilehash: ac845a461eef4f567b74f813621f6bfa38419afb
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271180"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682283"
 ---
 # <a name="powershellget-cmdlets-for-script-management"></a>스크립트 관리를 위한 PowerShellGet Cmdlet
 
@@ -165,7 +165,7 @@ Version Name Author Description
 ## <a name="install-script-and-get-installedscript-cmdlets"></a>Install-Script 및 Get-InstalledScript cmdlet
 Install-Script cmdlet을 사용하면 특정 스크립트 파일을 종속성과 함께 지정된 범위에 설치할 수 있습니다. 기본적으로 스크립트는 AllUsers 범위에 설치됩니다. Get-InstalledScript cmdlet을 사용하면 Install-Script cmdlet을 사용하여 설치된 스크립트 파일 목록을 가져올 수 있습니다.
 
-참고: 설치된 후 스크립트를 관리하고 찾을 수 있도록 Install-script는 스크립트를 저장하는 기본 폴더를 $home\Documents\WindowsPowerShell\Scripts에 만들고 해당 폴더를 PATH 환경에 추가합니다. 경로 수정을 고려해야 하는 경우 Install-Script 대신 Save-Script를 사용하세요. Get-InstalledScripts 및 Uninstall-Script는 Install-Script를 사용하여 시스템에 배치된 스크립트에서만 작동합니다.
+참고: 참고: 설치된 후 스크립트를 관리하고 찾을 수 있도록 Install-script는 스크립트를 저장하는 기본 폴더를 $home\Documents\WindowsPowerShell\Scripts에 만들고 해당 폴더를 PATH 환경에 추가합니다. 경로 수정을 고려해야 하는 경우 Install-Script 대신 Save-Script를 사용하세요. Get-InstalledScripts 및 Uninstall-Script는 Install-Script를 사용하여 시스템에 배치된 스크립트에서만 작동합니다.
 ```powershell
 \# Install locations for scripts:
 \# Default scope is AllUsers.

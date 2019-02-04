@@ -1,19 +1,19 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 9a9bdac652512640209c20e3deb20d7abc0142c6
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.openlocfilehash: 5ac9566979e1b761249f5cc7c62ed44047a2b9f6
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219534"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680451"
 ---
 # <a name="register-a-powershell-repository"></a>PowerShell 리포지토리 등록
 내부 리포지토리에 대해 작동하도록 PowerShellGet을 구성할 수 있습니다. 이렇게 구성하려면 다음과 같은 추가 기능을 사용합니다.
-- Register-PSRepository: 현재 사용자에 대해 리포지토리를 등록합니다.
-- Unregister-PSRepository: 현재 사용자에 대해 등록된 리포지토리를 제거합니다.
-- Set-PSRepository: 등록된 리포지토리에 대해 값을 설정합니다.
-- Get-PSRepository: 현재 사용자에 대해 등록된 리포지토리를 모두 가져옵니다.
+- Register-PSRepository: 현재 사용자에 대 한 리포지토리를 등록합니다.
+- Unregister-PSRepository: 현재 사용자에 대 한 등록 된 리포지토리를 제거합니다.
+- Set-PSRepository: 등록 된 리포지토리에 대 한 값을 설정 합니다.
+- Get-PSRepository: 현재 사용자에 대 한 모든 등록 된 리포지토리를 가져옵니다.
 
 리포지토리를 등록한 후에는 Find-Module 및 Install-Module을 사용하여 작업할 수 있습니다.
 

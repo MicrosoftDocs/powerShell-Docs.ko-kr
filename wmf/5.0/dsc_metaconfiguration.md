@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 83a8e7a31284a5112fb0f2c5a2f712d31fbe83d7
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.openlocfilehash: 3c6a409a53ee88528a2109d8b007663d7fcc5288
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225711"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681128"
 ---
 # <a name="configure-dsc-lcm-with-new-meta-configuration-attribute"></a>새로운 메타 구성 특성으로 DSC LCM 구성
 

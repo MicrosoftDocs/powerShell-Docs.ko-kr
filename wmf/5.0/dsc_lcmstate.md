@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: db9b48c188b3bfe2e20c06875606a285922f55a6
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.openlocfilehash: 57152e9f62c34600df63a2db8e9683928e825d93
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219864"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680783"
 ---
 # <a name="detailed-information-about-lcm-state"></a>LCM 상태에 대한 자세한 정보
 

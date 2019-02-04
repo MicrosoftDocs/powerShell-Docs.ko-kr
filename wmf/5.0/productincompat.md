@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 271f26cf97035e50165e3e6777c00867c7f3ac31
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: f411bfde063615d6ba7c01b8ed50e0b5b9ae6d70
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34186758"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680878"
 ---
 # <a name="product-compatibility-status"></a>제품 호환성 상태
 

@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: 구성 Id (v4/v5)를 사용 하 여 끌어오기 서버에 게시
 ms.openlocfilehash: 0144fec43d7a8d65b79891567cc0dc3952175343
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402399"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681228"
 ---
 # <a name="publish-to-a-pull-server-using-configuration-ids-v4v5"></a>구성 Id (v4/v5)를 사용 하 여 끌어오기 서버에 게시
 

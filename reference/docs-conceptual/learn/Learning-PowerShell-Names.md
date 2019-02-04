@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: PowerShell 명령 이름 학습
 ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
 ms.openlocfilehash: 3f8ef2648709c4bb5d2eacf30fe9d8fb4f032c13
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012469"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55683063"
 ---
 # <a name="learning-powershell-command-names"></a>PowerShell 명령 이름 학습
 

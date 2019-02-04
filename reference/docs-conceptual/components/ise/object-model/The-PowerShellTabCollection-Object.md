@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: PowerShellTabCollection 개체
 ms.assetid: 81f4bf4a-83bf-415e-8378-1703792fbb58
 ms.openlocfilehash: d9088b26de35360b8258d3f15924b3010a986d15
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403151"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682918"
 ---
 # <a name="the-powershelltabcollection-object"></a>PowerShellTabCollection 개체
 

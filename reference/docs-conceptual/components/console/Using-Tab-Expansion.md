@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: 탭 확장 사용
 ms.assetid: c8730471-bf6a-43b8-ab1d-f9ef5a74f04e
 ms.openlocfilehash: 3d047bf0691c8a304d7637aa50fba6ae99709a82
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403525"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681108"
 ---
 # <a name="using-tab-expansion"></a>탭 확장 사용
 

@@ -2,15 +2,15 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: 3acd266a75bc61ffe4bce467cfb804ac7865c629
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
-ms.translationtype: HT
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39267925"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682143"
 ---
-# <a name="creating-and-connecting-to-a-jea-endpoint"></a>JEA 끝점 만들기 및 연결
+# <a name="creating-and-connecting-to-a-jea-endpoint"></a>JEA 엔드포인트 만들기 및 연결
 
-JEA 끝점을 만들려면 특별히 구성된 PowerShell 세션 구성 파일을 만들어야 합니다. 이 파일은 **New-PSSessionConfigurationFile** cmdlet을 사용하여 생성할 수 있습니다.
+JEA 엔드포인트를 만들려면 특별히 구성된 PowerShell 세션 구성 파일을 만들어야 합니다. 이 파일은 **New-PSSessionConfigurationFile** cmdlet을 사용하여 생성할 수 있습니다.
 
 ```powershell
 New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -TranscriptDirectory "C:\ProgramData\JEATranscripts" -RunAsVirtualAccount -RoleDefinitions @{ 'CONTOSO\NonAdmin_Operators' = @{ RoleCapabilities = 'Maintenance' }} -Path "$env:ProgramData\JEAConfiguration\Demo.pssc"
@@ -53,12 +53,12 @@ New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -TranscriptDi
 }
 ```
 
-JEA 끝점을 만들려면 다음과 같은 명령의 매개 변수(및 파일의 해당 키)를 설정해야 합니다.
+JEA 엔드포인트를 만들려면 다음과 같은 명령의 매개 변수(및 파일의 해당 키)를 설정해야 합니다.
 
 1. SessionType을 RestrictedRemoteServer로 설정
 2. RunAsVirtualAccount를 **$true**로 설정
 3. TranscriptPath를 각 세션 후 “자격 증명 입력” 기록이 저장될 디렉터리로 설정
-4. RoleDefinitions를 어떤 그룹이 어떤 “역할 기능”에 액세스할 수 있는지를 정의하는 해시 테이블로 설정. 이 필드는 이 끝점에서 **누가** **무엇**을 수행할 수 있는지를 정의합니다. 역할 기능은 특수 파일로 간단하게 설명합니다.
+4. RoleDefinitions를 어떤 그룹이 어떤 “역할 기능”에 액세스할 수 있는지를 정의하는 해시 테이블로 설정. 이 필드는 이 엔드포인트에서 **누가****무엇**을 수행할 수 있는지를 정의합니다. 역할 기능은 특수 파일로 간단하게 설명합니다.
 
 RoleDefinitions 필드는 어떤 그룹이 어떤 역할 기능에 액세스할 수 있는지를 정의합니다. 역할 기능은 연결하는 사용자에게 노출될 기능 집합을 정의하는 파일입니다.
 역할 기능은 **New-PSRoleCapabilityFile** 명령을 사용하여 만들 수 있습니다.
@@ -141,9 +141,9 @@ JEA 세션에 연결할 때 사용자가 액세스할 수 있는 cmdlet, 함수,
 Register-PSSessionConfiguration -Name Maintenance -Path "C:\ProgramData\JEAConfiguration\Demo.pssc"
 ```
 
-## <a name="connect-to-a-jea-endpoint"></a>JEA 끝점에 연결
+## <a name="connect-to-a-jea-endpoint"></a>JEA 엔드포인트에 연결
 
-JEA 끝점에 연결은 다른 모든 PowerShell 끝점에 연결하는 것과 동일한 방식으로 작동합니다.
+JEA 엔드포인트에 연결은 다른 모든 PowerShell 엔드포인트에 연결하는 것과 동일한 방식으로 작동합니다.
 **New-PSSession**, **Invoke-Command** 또는 **Enter-PSSession**에 대한 “ConfigurationName” 매개 변수처럼 JEA 엔드포인트에 이름만 지정하면 됩니다.
 
 ```powershell

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,setup
-ms.openlocfilehash: d2fa3e22b049b4164e9a44e8f2d62833cab093d0
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 3a810a21cb959691a910a3ef3767d7885683dce8
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190029"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682888"
 ---
 # <a name="product-compatibility-status"></a>제품 호환성 상태
 
@@ -19,7 +19,7 @@ ms.locfileid: "34190029"
 - Microsoft Lync Server 2013
 - System Center 2012 Configuration Manager
 
-_참고: WMF 5.1과 비즈니스용 Skype 서버 2015의 호환성은 Windows Server 2012 R2에서만 테스트되었습니다._
+_참고: WMF 5.1을 사용 하 여 Business Server 2015 호환성에 대 한 Skype는 Windows Server 2012 R2 에서만 테스트 되었습니다._
 
 ## <a name="not-tested"></a>테스트하지 않음:
 > 다음과 같은 서버 애플리케이션이 실행되는 시스템은 Windows Management Framework 5.1에 대해 **테스트하지 않았습니다.**

@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 116f79a95126d0a1c579a95ec99eb5d8b75cc1e0
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.openlocfilehash: 4b593e9a1eca43ee7ad85fc921ae3c1d62722db9
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225490"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682293"
 ---
 # <a name="declare-implemented-interface"></a>구현된 인터페이스 선언
 

@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: Linux용 기본 제공 필요한 상태 구성 리소스
 ms.openlocfilehash: ea700d24c7ff4377af671944184abb3f201852e8
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047706"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55683123"
 ---
 # <a name="built-in-desired-state-configuration-resources-for-linux"></a>Linux용 기본 제공 필요한 상태 구성 리소스
 

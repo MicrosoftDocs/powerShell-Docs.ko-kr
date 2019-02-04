@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 900960f20d251020b9b4a284d6c6175a7038e033
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.openlocfilehash: b5ba6f6088e6a81d044fc513572f7c7cb688cd10
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219218"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682378"
 ---
 # <a name="automatic-runas-support-for-dsc-resources"></a>DSC 리소스의 자동 RunAs 지원
 

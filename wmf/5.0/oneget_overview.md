@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: f1742aa901deacf2ff9eae14ce5814ee12682a2f
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.openlocfilehash: dfc8ea4aba6cfe79f58d58d81e6abb3bcfa0ca3e
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219490"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55683098"
 ---
 # <a name="software-discovery-install-and-inventory-with-packagemanagement"></a>PackageManagement를 사용하여 소프트웨어 검색, 설치 및 인벤토리에 추가
 

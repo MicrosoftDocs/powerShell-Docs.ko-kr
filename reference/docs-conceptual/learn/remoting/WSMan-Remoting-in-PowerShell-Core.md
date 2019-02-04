@@ -2,12 +2,12 @@
 title: PowerShell Core에서 WSMan(WS-Management) 원격
 description: WSMan을 사용하여 PowerShell Core에서 원격 작업
 ms.date: 08/06/2018
-ms.openlocfilehash: ce58ed88f59f32b0f83951e55de36e829f7fa3f4
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: e5f00128bc8ebc1b432cc77a5896a9e09d684109
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403452"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681093"
 ---
 # <a name="ws-management-wsman-remoting-in-powershell-core"></a>PowerShell Core에서 WSMan(WS-Management) 원격
 
@@ -28,7 +28,7 @@ PowerShell을 설치하면 `New-PSSession` 및 `Enter-PSSession`을 사용하여
 
 스크립트
 
-1. %windir%\System32\PowerShell 내에 플러그인에 대한 디렉터리를 만듭니다.
+1. 내에서 플러그 인에 대 한 디렉터리를 만듭니다. `$env:windir\System32\PowerShell`
 1. pwrshplugin.dll을 해당 위치에 복사합니다.
 1. 구성 파일을 생성합니다.
 1. 해당 플러그 인을 WinRM에 등록합니다.

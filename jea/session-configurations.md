@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: jea,powershell,security
 title: JEA 세션 구성
 ms.openlocfilehash: 1b598522d43b2c1a26a739a67cee5181b21a7c32
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655466"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55683198"
 ---
 # <a name="jea-session-configurations"></a>JEA 세션 구성
 
