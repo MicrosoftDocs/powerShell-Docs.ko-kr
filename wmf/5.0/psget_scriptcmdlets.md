@@ -1,19 +1,19 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: a2938c168f476e5f9c38ba55ceb45fa2b95571e2
-ms.sourcegitcommit: bad40d59598ae5597051fa381986316a2d9bf6c8
-ms.translationtype: HT
+ms.openlocfilehash: ac845a461eef4f567b74f813621f6bfa38419afb
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271180"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682283"
 ---
-# <a name="powershellget-cmdlets-for-script-management"></a><span data-ttu-id="9047b-102">스크립트 관리를 위한 PowerShellGet Cmdlet</span><span class="sxs-lookup"><span data-stu-id="9047b-102">PowerShellGet Cmdlets for Script Management</span></span>
+# <a name="powershellget-cmdlets-for-script-management"></a><span data-ttu-id="1b727-102">스크립트 관리를 위한 PowerShellGet Cmdlet</span><span class="sxs-lookup"><span data-stu-id="1b727-102">PowerShellGet Cmdlets for Script Management</span></span>
 
-## <a name="find-script-cmdlet"></a><span data-ttu-id="9047b-103">Find-Script cmdlet</span><span class="sxs-lookup"><span data-stu-id="9047b-103">Find-Script cmdlet</span></span>
-<span data-ttu-id="9047b-104">Find-Script cmdlet을 사용하면 종속성을 비롯한 이름, 태그, 필터, 명령 이름, 버전 범위, 정확한 버전, 모든 버전과 같은 다양한 검색 조건을 사용하여 스트립트 파일을 검색할 수 있으며 특정 또는 모든 등록된 리포지토리에서 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9047b-104">Find-Script cmdlet lets you to discover the script files with different search criteria like name, tag, filter, command name, version range, exact version, all versions, including its dependencies and from specific or all registered repositories.</span></span>
+## <a name="find-script-cmdlet"></a><span data-ttu-id="1b727-103">Find-Script cmdlet</span><span class="sxs-lookup"><span data-stu-id="1b727-103">Find-Script cmdlet</span></span>
+<span data-ttu-id="1b727-104">Find-Script cmdlet을 사용하면 종속성을 비롯한 이름, 태그, 필터, 명령 이름, 버전 범위, 정확한 버전, 모든 버전과 같은 다양한 검색 조건을 사용하여 스트립트 파일을 검색할 수 있으며 특정 또는 모든 등록된 리포지토리에서 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b727-104">Find-Script cmdlet lets you to discover the script files with different search criteria like name, tag, filter, command name, version range, exact version, all versions, including its dependencies and from specific or all registered repositories.</span></span>
 
-<span data-ttu-id="9047b-105">예제 사용법:</span><span class="sxs-lookup"><span data-stu-id="9047b-105">Example usage:</span></span>
+<span data-ttu-id="1b727-105">예제 사용법:</span><span class="sxs-lookup"><span data-stu-id="1b727-105">Example usage:</span></span>
 ```powershell
 \# Find a script from the registered repository with ScriptSourceLocation
 Find-Script -Repository GalleryINT -Name Required-Script2
@@ -149,8 +149,8 @@ Workflow {Test-WorkflowFromScript\_Fabrikam-ClientScript}
 Command {Test-FunctionFromScript\_Fabrikam-ClientScript, Test-WorkflowFromScript\_Fabrikam-ClientScript}
 ```
 
-## <a name="save-script-cmdlet"></a><span data-ttu-id="9047b-106">Save-Script cmdlet</span><span class="sxs-lookup"><span data-stu-id="9047b-106">Save-Script cmdlet</span></span>
-<span data-ttu-id="9047b-107">Save-Script cmdlet을 사용하면 스크립트 파일을 지정된 위치에 저장하여 검토할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9047b-107">Save-Script cmdlet lets you to review the script file by saving it to a specified location.</span></span>
+## <a name="save-script-cmdlet"></a><span data-ttu-id="1b727-106">Save-Script cmdlet</span><span class="sxs-lookup"><span data-stu-id="1b727-106">Save-Script cmdlet</span></span>
+<span data-ttu-id="1b727-107">Save-Script cmdlet을 사용하면 스크립트 파일을 지정된 위치에 저장하여 검토할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b727-107">Save-Script cmdlet lets you to review the script file by saving it to a specified location.</span></span>
 ```powershell
 \# Save a script file to the specified location for the script analysis
 \# Piping the Find-Script output to Save-Script cmdlet
@@ -162,10 +162,10 @@ Version Name Author Description
 1.5 Fabrikam-ClientScript manikb Description for the Fabrikam-ClientScript script
 ```
 
-## <a name="install-script-and-get-installedscript-cmdlets"></a><span data-ttu-id="9047b-108">Install-Script 및 Get-InstalledScript cmdlet</span><span class="sxs-lookup"><span data-stu-id="9047b-108">Install-Script and Get-InstalledScript cmdlets</span></span>
-<span data-ttu-id="9047b-109">Install-Script cmdlet을 사용하면 특정 스크립트 파일을 종속성과 함께 지정된 범위에 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9047b-109">Install-Script cmdlet lets you to install a specific script file along with its dependencies to the specified scope.</span></span> <span data-ttu-id="9047b-110">기본적으로 스크립트는 AllUsers 범위에 설치됩니다.</span><span class="sxs-lookup"><span data-stu-id="9047b-110">By default, scripts are installed to the AllUsers scope.</span></span> <span data-ttu-id="9047b-111">Get-InstalledScript cmdlet을 사용하면 Install-Script cmdlet을 사용하여 설치된 스크립트 파일 목록을 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9047b-111">Get-InstalledScript cmdlet lets you to get the list of script files which were installed using Install-Script cmdlet.</span></span>
+## <a name="install-script-and-get-installedscript-cmdlets"></a><span data-ttu-id="1b727-108">Install-Script 및 Get-InstalledScript cmdlet</span><span class="sxs-lookup"><span data-stu-id="1b727-108">Install-Script and Get-InstalledScript cmdlets</span></span>
+<span data-ttu-id="1b727-109">Install-Script cmdlet을 사용하면 특정 스크립트 파일을 종속성과 함께 지정된 범위에 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b727-109">Install-Script cmdlet lets you to install a specific script file along with its dependencies to the specified scope.</span></span> <span data-ttu-id="1b727-110">기본적으로 스크립트는 AllUsers 범위에 설치됩니다.</span><span class="sxs-lookup"><span data-stu-id="1b727-110">By default, scripts are installed to the AllUsers scope.</span></span> <span data-ttu-id="1b727-111">Get-InstalledScript cmdlet을 사용하면 Install-Script cmdlet을 사용하여 설치된 스크립트 파일 목록을 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b727-111">Get-InstalledScript cmdlet lets you to get the list of script files which were installed using Install-Script cmdlet.</span></span>
 
-<span data-ttu-id="9047b-112">참고: 설치된 후 스크립트를 관리하고 찾을 수 있도록 Install-script는 스크립트를 저장하는 기본 폴더를 $home\Documents\WindowsPowerShell\Scripts에 만들고 해당 폴더를 PATH 환경에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="9047b-112">Use note: To allow management and locating of scripts once they are installed, Install-script will create a default folder for storing scripts at $home\Documents\WindowsPowerShell\Scripts, and add that folder to your PATH environment.</span></span> <span data-ttu-id="9047b-113">경로 수정을 고려해야 하는 경우 Install-Script 대신 Save-Script를 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="9047b-113">If modifying the path is a concern, use Save-Script instead of Install-Script.</span></span> <span data-ttu-id="9047b-114">Get-InstalledScripts 및 Uninstall-Script는 Install-Script를 사용하여 시스템에 배치된 스크립트에서만 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="9047b-114">Get-InstalledScripts and Uninstall-Script can only work with scripts placed on the system using Install-Script.</span></span>
+<span data-ttu-id="1b727-112">참고: 참고: 설치된 후 스크립트를 관리하고 찾을 수 있도록 Install-script는 스크립트를 저장하는 기본 폴더를 $home\Documents\WindowsPowerShell\Scripts에 만들고 해당 폴더를 PATH 환경에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="1b727-112">Use note: To allow management and locating of scripts once they are installed, Install-script will create a default folder for storing scripts at $home\Documents\WindowsPowerShell\Scripts, and add that folder to your PATH environment.</span></span> <span data-ttu-id="1b727-113">경로 수정을 고려해야 하는 경우 Install-Script 대신 Save-Script를 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="1b727-113">If modifying the path is a concern, use Save-Script instead of Install-Script.</span></span> <span data-ttu-id="1b727-114">Get-InstalledScripts 및 Uninstall-Script는 Install-Script를 사용하여 시스템에 배치된 스크립트에서만 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="1b727-114">Get-InstalledScripts and Uninstall-Script can only work with scripts placed on the system using Install-Script.</span></span>
 ```powershell
 \# Install locations for scripts:
 \# Default scope is AllUsers.
@@ -221,7 +221,7 @@ InstalledLocation : C:\\Users\\manikb\\Documents\\WindowsPowerShell\\Scripts
 Installed script file is immediately available for usage.
 ```
 
-<span data-ttu-id="9047b-115">또한 Get-Command –Name &lt;InstalledScriptFileName&gt;을 사용하여 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9047b-115">You can also use Get-Command –Name &lt;InstalledScriptFileName&gt; to get it.</span></span> <span data-ttu-id="9047b-116">지정된 범위를 처음으로 사용할 때 두 개의 설치 위치가 PATH 환경 변수에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="9047b-116">Two install locations are added to the PATH environment variable on first use of a specified scope.</span></span>
+<span data-ttu-id="1b727-115">또한 Get-Command –Name &lt;InstalledScriptFileName&gt;을 사용하여 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b727-115">You can also use Get-Command –Name &lt;InstalledScriptFileName&gt; to get it.</span></span> <span data-ttu-id="1b727-116">지정된 범위를 처음으로 사용할 때 두 개의 설치 위치가 PATH 환경 변수에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="1b727-116">Two install locations are added to the PATH environment variable on first use of a specified scope.</span></span>
 ```powershell
 $env:Path -split ';'| Where-Object {$\_} | Select-Object -Last 2
 C:\\Program Files\\WindowsPowerShell\\Scripts
@@ -343,8 +343,8 @@ Function Test-FunctionFromScript\_Script-WithDependencies2 { Get-Date }
 Workflow Test-WorkflowFromScript\_Script-WithDependencies2 { Get-Date }
 ```
 
-## <a name="update-script-cmdlet"></a><span data-ttu-id="9047b-117">Update-Script cmdlet</span><span class="sxs-lookup"><span data-stu-id="9047b-117">Update-Script cmdlet</span></span>
-<span data-ttu-id="9047b-118">Update-Script cmdlet을 사용하면 Install-Script cmdlet을 사용하여 설치된 스크립트 파일의 In-place 업데이트를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9047b-118">Update-Script cmdlet lets you to do in-place update of the script files which were installed using Install-Script cmdlet.</span></span>
+## <a name="update-script-cmdlet"></a><span data-ttu-id="1b727-117">Update-Script cmdlet</span><span class="sxs-lookup"><span data-stu-id="1b727-117">Update-Script cmdlet</span></span>
+<span data-ttu-id="1b727-118">Update-Script cmdlet을 사용하면 Install-Script cmdlet을 사용하여 설치된 스크립트 파일의 In-place 업데이트를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b727-118">Update-Script cmdlet lets you to do in-place update of the script files which were installed using Install-Script cmdlet.</span></span>
 ```powershell
 Install-Script -Name Fabrikam-Script -RequiredVersion 1.0 -Repository GalleryINT -Scope
 Get-InstalledScript -Name Fabrikam-Script
@@ -385,7 +385,7 @@ Version Name Type Repository Description
 2.0 Script-WithDependencies2 Script GalleryINT Description for the Script-WithDependencies2 script
 ```
 
-## <a name="uninstall-script-cmdlet"></a><span data-ttu-id="9047b-119">Uninstall-Script cmdlet</span><span class="sxs-lookup"><span data-stu-id="9047b-119">Uninstall-Script cmdlet</span></span>
+## <a name="uninstall-script-cmdlet"></a><span data-ttu-id="1b727-119">Uninstall-Script cmdlet</span><span class="sxs-lookup"><span data-stu-id="1b727-119">Uninstall-Script cmdlet</span></span>
 ```powershell
 Uninstall-Script cmdlet lets you to uninstall the installed script files.
 Get-InstalledScript | Uninstall-Script -WhatIf
@@ -422,8 +422,8 @@ At C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\1.0.0.1\\PSModu
 + FullyQualifiedErrorId : NoMatchFound,Microsoft.PowerShell.PackageManagement.Cmdlets.GetPackage
 ```
 
-## <a name="new-scriptfileinfo-and-test-scriptfileinfo-cmdlets"></a><span data-ttu-id="9047b-120">New-ScriptFileInfo 및 Test-ScriptFileInfo cmdlet</span><span class="sxs-lookup"><span data-stu-id="9047b-120">New-ScriptFileInfo and Test-ScriptFileInfo cmdlets</span></span>
-<span data-ttu-id="9047b-121">New-ScriptFileInfo cmdlet을 사용하여 버전, GUID, 작성자, 설명 등의 메타데이터를 사용하여 새 스크립트 파일을 만들 수 있습니다. Test-ScriptFileInfo cmdlet을 사용하면 스크립트 파일 메타데이터의 유효성을 검사하고 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9047b-121">New-ScriptFileInfo cmdlet lets you to create a new script file with metadata like Version, Guid, Author, and Description, etc. Test-ScriptFileInfo cmdlet lets you to validate and get the script file metadata.</span></span>
+## <a name="new-scriptfileinfo-and-test-scriptfileinfo-cmdlets"></a><span data-ttu-id="1b727-120">New-ScriptFileInfo 및 Test-ScriptFileInfo cmdlet</span><span class="sxs-lookup"><span data-stu-id="1b727-120">New-ScriptFileInfo and Test-ScriptFileInfo cmdlets</span></span>
+<span data-ttu-id="1b727-121">New-ScriptFileInfo cmdlet을 사용하여 버전, GUID, 작성자, 설명 등의 메타데이터를 사용하여 새 스크립트 파일을 만들 수 있습니다. Test-ScriptFileInfo cmdlet을 사용하면 스크립트 파일 메타데이터의 유효성을 검사하고 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b727-121">New-ScriptFileInfo cmdlet lets you to create a new script file with metadata like Version, Guid, Author, and Description, etc. Test-ScriptFileInfo cmdlet lets you to validate and get the script file metadata.</span></span>
 ```powershell
 \# Create a new script file with minimum required metadata values
 New-ScriptFileInfo -Path C:\\ScriptSharingDemo\\Demo-Script.ps1 -Description "Script file description goes here"
@@ -574,8 +574,8 @@ DefinedFunctions : Demo-ScriptFunction
 DefinedWorkflows : Demo-ScriptWorkflow
 ```
 
-## <a name="update-scriptfileinfo-cmdlet"></a><span data-ttu-id="9047b-122">Update-ScriptFileInfo cmdlet</span><span class="sxs-lookup"><span data-stu-id="9047b-122">Update-ScriptFileInfo cmdlet</span></span>
-<span data-ttu-id="9047b-123">Update-ScriptFileInfo cmdlet을 사용하면 기존 스크립트 파일 메타데이터를 업데이트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9047b-123">Update-ScriptFileInfo cmdlet lets you to update the existing script file metadata.</span></span>
+## <a name="update-scriptfileinfo-cmdlet"></a><span data-ttu-id="1b727-122">Update-ScriptFileInfo cmdlet</span><span class="sxs-lookup"><span data-stu-id="1b727-122">Update-ScriptFileInfo cmdlet</span></span>
+<span data-ttu-id="1b727-123">Update-ScriptFileInfo cmdlet을 사용하면 기존 스크립트 파일 메타데이터를 업데이트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b727-123">Update-ScriptFileInfo cmdlet lets you to update the existing script file metadata.</span></span>
 ```powershell
 \# Use Update-ScriptFileInfo cmdlet to update the script metadata
 Update-ScriptFileInfo -Path C:\\ScriptSharingDemo\\Demo-ScriptWithCompletePSScriptInfo.ps1 -Version 2.0
@@ -585,8 +585,8 @@ Version Name Author Description
 2.0 Demo-ScriptWithComplet... manikb my new script file
 ```
 
-## <a name="register-psrepository-and-set-psrepository-cmdlets-with-script-sharing-support"></a><span data-ttu-id="9047b-124">스크립트 공유를 지원하는 Register-PSRepository 및 Set-PSRepository cmdlet</span><span class="sxs-lookup"><span data-stu-id="9047b-124">Register-PSRepository and Set-PSRepository cmdlets with script sharing support</span></span>
-<span data-ttu-id="9047b-125">Register-PSRepository/Set-PSRepository cmdlet을 사용하여 **ScriptSourceLocation** 및 **ScriptPublishLocation**을 PSRepository에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="9047b-125">Use Register-PSRepository/Set-PSRepository cmdlets to add the **ScriptSourceLocation** and **ScriptPublishLocation** to the PSRepository.</span></span>
+## <a name="register-psrepository-and-set-psrepository-cmdlets-with-script-sharing-support"></a><span data-ttu-id="1b727-124">스크립트 공유를 지원하는 Register-PSRepository 및 Set-PSRepository cmdlet</span><span class="sxs-lookup"><span data-stu-id="1b727-124">Register-PSRepository and Set-PSRepository cmdlets with script sharing support</span></span>
+<span data-ttu-id="1b727-125">Register-PSRepository/Set-PSRepository cmdlet을 사용하여 **ScriptSourceLocation** 및 **ScriptPublishLocation**을 PSRepository에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="1b727-125">Use Register-PSRepository/Set-PSRepository cmdlets to add the **ScriptSourceLocation** and **ScriptPublishLocation** to the PSRepository.</span></span>
 ```powershell
 \# Register an GalleryINT repository with Scripts and Modules support
 Register-PSRepository -Name GalleryINT \`
@@ -643,8 +643,8 @@ ScriptPublishLocation : https://MyGallery.com/api/v2/package/
 ProviderOptions : {}
 ```
 
-## <a name="publish-script-cmdlet"></a><span data-ttu-id="9047b-126">Publish-Script cmdlet</span><span class="sxs-lookup"><span data-stu-id="9047b-126">Publish-Script cmdlet</span></span>
-<span data-ttu-id="9047b-127">Publish-Script cmdlet을 사용하면 버전, GUID, 작성자, 설명 등의 유효한 메타데이터가 있는 스크립트 파일을 게시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9047b-127">Publish-Script cmdlet lets you to publish your script file with valid metadata like Version, Guid, Author, and Description, etc.</span></span>
+## <a name="publish-script-cmdlet"></a><span data-ttu-id="1b727-126">Publish-Script cmdlet</span><span class="sxs-lookup"><span data-stu-id="1b727-126">Publish-Script cmdlet</span></span>
+<span data-ttu-id="1b727-127">Publish-Script cmdlet을 사용하면 버전, GUID, 작성자, 설명 등의 유효한 메타데이터가 있는 스크립트 파일을 게시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b727-127">Publish-Script cmdlet lets you to publish your script file with valid metadata like Version, Guid, Author, and Description, etc.</span></span>
 ```powershell
 \# Publish the really basic script file with required metadata
 Publish-Script -Path C:\\ScriptSharingDemo\\Demo-Script.ps1 -Repository GalleryINT -NuGetApiKey cad91af7-a49c-4026-9570-a4c16564e785 -Verbose
