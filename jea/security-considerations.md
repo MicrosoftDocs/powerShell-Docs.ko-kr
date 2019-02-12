@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,security
 title: JEA 보안 고려 사항
-ms.openlocfilehash: ede727f0f30412d520712d6ba855ba2008375d9a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 9526e141517601ae3b6d6932cd3536fdf49aa9a6
+ms.sourcegitcommit: 10c347a8c3dcbf8962295601834f5ba85342a87b
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681853"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55887602"
 ---
 # <a name="jea-security-considerations"></a>JEA 보안 고려 사항
 
@@ -127,7 +127,7 @@ JEA 역할 기능은 해당 권한 있는 컨텍스트를 사용하여 실행될
 ```
 
 이 역할 기능을 통해 사용자는 Microsoft.PowerShell.Management 모듈에서 명사 "Process"를 사용하여 모든 PowerShell cmdlet을 실행할 수 있습니다.
-사용자는 `Get-Process`와 같은 cmdlet에 액세스하여 시스템에서 실행되고 있는 애플리케이션을 파악하고 `Stop-Process`에 액세스하여 응답 없는 애플리케이션을 종료해야 할 수 있습니다.
+사용자와 같은 cmdlet에 액세스 해야 할 수 있습니다 `Get-Process` 시스템에서 실행 되는 응용 프로그램을 이해 하 고 `Stop-Process` 응답 하지 않는 모든 응용 프로그램을 중지 합니다.
 그러나 이 항목은 전체 관리자 권한으로 임의 프로그램을 시작하는 데 사용될 수 있는 `Start-Process`도 허용합니다.
 프로그램이 시스템에 로컬로 설치될 필요가 없으므로 악의적 사용자가 연결하는 사용자에게 로컬 관리자 권한을 부여하고 맬웨어를 실행하는 등의 작업을 수행하는 프로그램을 파일 공유에서 손쉽게 시작할 수 있습니다.
 
