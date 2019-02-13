@@ -4,12 +4,12 @@ ms.topic: conceptual
 keywords: wmf,powershell,setup
 contributor: jianyunt, quoctruong
 title: WMF 5.1의 향상된 패키지 관리
-ms.openlocfilehash: 1ebd574bd98a056de634ac688244813c1947618e
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.openlocfilehash: adcddcc94022f4961f3dd23c2cd56f2a8720049b
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34187462"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682563"
 ---
 # <a name="improvements-to-package-management-in-wmf-51"></a>WMF 5.1의 향상된 패키지 관리#
 
@@ -30,7 +30,7 @@ WMF 5.1에서 수정된 사항은 다음과 같습니다.
 
 그러나 경우에 따라 컴퓨터에 이전 버전의 NuGet 공급자가 설치된 경우 이전 버전의 NuGet이 PowerShell 세션에 먼저 로드되는 경우가 있습니다. 즉, PackageManagement에서 경합 상태가 발생합니다. 그러나 PowerShellGet이 작동하려면 최신 버전의 NuGet 공급자가 필요하므로 PowerShellGet에서는 PackageManagement에 NuGet 공급자를 다시 부트스트랩하도록 요청합니다. 따라서 NuGet 공급자를 부트스트래핑할지 묻는 메시지 여러 번 표시됩니다.
 
-**해결 방법**: WMF 5.1에서 PackageManagement는 NuGet 공급자를 부트스트랩하라는 메시지가 여러 번 표시되지 않도록 최신 버전의 NuGet 공급자를 로드합니다.
+**해결 방법**: WMF5.1에서 PackageManagement는 최신 버전의 NuGet 공급자를 부트스트래핑 하는 것에 대 한 여러 프롬프트를 방지 하려면 NuGet 공급자를 로드 합니다.
 
 $env:ProgramFiles\PackageManagement\ProviderAssemblies 또는 $env:LOCALAPPDATA\PackageManagement\ProviderAssemblies에 있는 경우 NuGet 공급자(NuGet-Anycpu.exe)의 이전 버전을 수동으로 삭제하여 이 문제를 해결할 수도 있습니다.
 
@@ -41,7 +41,7 @@ $env:ProgramFiles\PackageManagement\ProviderAssemblies 또는 $env:LOCALAPPDATA\
 
 **시나리오**: WMF 5.0에서 PackageManagement는 인트라넷에만 연결되고 인터넷에는 연결되지 않은 컴퓨터를 지원하지 않았습니다.
 
-**해결 방법**: WMF 5.1에서는 다음 단계에 따라 인트라넷 컴퓨터에서 PackageManagement를 사용하도록 허용할 수 있습니다.
+**해결 방법**: WMF 5.1에서는 인트라넷 컴퓨터에서 PackageManagement를 사용 하도록 허용 하려면 다음이 단계를 수행 합니다.
 
 1. 인터넷에 연결된 다른 컴퓨터에서 `Install-PackageProvider -Name NuGet`을 사용하여 NuGet 공급자를 다운로드합니다.
 
