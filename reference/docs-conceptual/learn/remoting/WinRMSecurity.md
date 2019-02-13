@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: WinRMSecurity
 ms.openlocfilehash: 59717e4806857e6760de523335bbee6028da8e84
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402540"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682613"
 ---
 # <a name="powershell-remoting-security-considerations"></a>PowerShell Remoting 보안 고려 사항
 

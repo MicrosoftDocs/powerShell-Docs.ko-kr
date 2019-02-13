@@ -4,19 +4,19 @@ contributor: manikb
 keywords: gallery,powershell,cmdlet,psget
 title: 호환되는 PowerShell 버전이 있는 스크립트
 ms.openlocfilehash: e364879f611429a8583e550fb7704431e456fbb1
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655279"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681418"
 ---
 # <a name="script-with-compatible-powershell-editions"></a>호환되는 PowerShell 버전이 있는 스크립트
 
 버전 5.1부터 PowerShell은 다양한 기능 집합 및 플랫폼 호환성을 나타내는 다양한 버전으로 사용 가능합니다.
 
-- 데스크톱 버전 .NET Framework를 기반으로 하며 스크립트 및 모듈의 전체 설치 공간 버전의 Server Core와 같은 Windows 및 Windows 데스크톱에서 실행 중인 PowerShell 버전을 대상으로 호환성을 제공 합니다.
+- **Desktop Edition:** .NET Framework에서 구축되며 Server Core 및 Windows 데스크톱과 같은 전체 설치 공간 버전의 Windows에서 실행되는 PowerShell 버전을 대상으로 하는 스크립트 및 모듈과의 호환성을 제공합니다.
 
-- **Core Edition:** .NET Core를 기반으로 하며 스크립트 및 Nano Server와 같은 Windows 및 Windows IoT의 축소 버전에서 실행 되는 powershell 버전을 대상으로 하는 모듈을 사용 하 여 호환성을 제공 합니다.
+- **Core Edition:** .NET Core에서 구축되며 Nano Server 및 Windows IoT와 같은 축소된 설치 공간 버전의 Windows에서 실행되는 PowerShell 버전을 대상으로 하는 스크립트 및 모듈과의 호환성을 제공합니다.
 
 실행 중인 PowerShell의 에디션이 $PSVersionTable의 PSEdition 속성에 표시됩니다.
 

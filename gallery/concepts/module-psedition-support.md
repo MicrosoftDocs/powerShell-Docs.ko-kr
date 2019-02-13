@@ -4,18 +4,18 @@ contributor: manikb
 keywords: gallery,powershell,cmdlet,psget
 title: 호환되는 PowerShell 버전이 있는 모듈
 ms.openlocfilehash: bda924393d37ea1596fbf0d813c10cbdea33c218
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655330"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680315"
 ---
 # <a name="modules-with-compatible-powershell-editions"></a>호환되는 PowerShell 버전이 있는 모듈
 
 버전 5.1부터 PowerShell은 다양한 기능 집합 및 플랫폼 호환성을 나타내는 다양한 버전으로 사용 가능합니다.
 
-- 데스크톱 버전 .NET Framework를 기반으로 하며 스크립트 및 모듈의 전체 설치 공간 버전의 Server Core와 같은 Windows 및 Windows 데스크톱에서 실행 중인 PowerShell 버전을 대상으로 호환성을 제공 합니다.
-- **Core Edition:** .NET Core를 기반으로 하며 스크립트 및 Nano Server와 같은 Windows 및 Windows IoT의 축소 버전에서 실행 되는 powershell 버전을 대상으로 하는 모듈을 사용 하 여 호환성을 제공 합니다.
+- **Desktop Edition:** .NET Framework에서 구축되며 Server Core 및 Windows 데스크톱과 같은 전체 설치 공간 버전의 Windows에서 실행되는 PowerShell 버전을 대상으로 하는 스크립트 및 모듈과의 호환성을 제공합니다.
+- **Core Edition:** .NET Framework를 기반으로 구축되며 Nano 서버 및 Windows IoT와 같은 축소된 버전의 Windows에서 실행되는 PowerShell 버전을 대상 지정하는 스크립트 및 모듈과 호환성을 제공합니다.
 
 실행 중인 PowerShell 버전이 `$PSVersionTable`의 PSEdition 속성에 표시됩니다.
 
@@ -96,7 +96,7 @@ Core
 
 단일 모듈은 Desktop 및 Core 에디션 둘 다에서 작동할 수 있습니다. 이 경우 모듈 작성자는 $PSEdition 변수를 사용하여 RootModule 또는 모듈 매니페스트에 필수 논리를 추가해야 합니다. 모듈에는 CoreCLR 및 FullCLR 둘 다를 대상으로 하는 컴파일된 두 가지 DLL 집합이 있을 수 있습니다. 적절한 dll을 로드하기 위한 논리를 사용하여 모듈을 패키징하는 몇 가지 옵션은 다음과 같습니다.
 
-### <a name="option-1-packaging-a-module-for-targeting-multiple-versions-and-multiple-editions-of-powershell"></a>옵션 1: . 여러 버전 및 PowerShell의 여러 버전을 대상으로 하도록 모듈 패키징
+### <a name="option-1-packaging-a-module-for-targeting-multiple-versions-and-multiple-editions-of-powershell"></a>옵션 1: PowerShell의 여러 버전 및 여러 에디션을 대상으로 하도록 모듈 패키징
 
 모듈 폴더 콘텐츠
 
@@ -174,7 +174,7 @@ $PSModule.OnRemove = {
 }
 ```
 
-### <a name="option-2-use-psedition-variable-in-the-psd1-file-to-load-the-proper-dlls-and-nestedrequired-modules"></a>옵션 2: PSD1 파일의 $PSEdition 변수를 사용 하 여 적절 한 Dll 및 중첩/필수 모듈을 로드 하려면
+### <a name="option-2-use-psedition-variable-in-the-psd1-file-to-load-the-proper-dlls-and-nestedrequired-modules"></a>옵션 2: PSD1 파일의 $PSEdition 변수를 사용하여 적절한 DLL 및 중첩/필수 모듈 로드
 
 PS 5.1 이상에서 $PSEdition 전역 변수는 모듈 매니페스트 파일에서 허용됩니다. 모듈 작성자는 이 변수를 사용하여 모듈 매니페스트 파일에 조건부 값을 지정할 수 있습니다. $PSEdition 변수는 제한된 언어 모드 또는 데이터 섹션에서 참조될 수 있습니다.
 

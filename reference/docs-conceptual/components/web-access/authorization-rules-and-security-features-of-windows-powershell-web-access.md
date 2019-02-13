@@ -2,12 +2,12 @@
 ms.date: 06/27/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 웹 액세스의 권한 부여 규칙 및 보안 기능
-ms.openlocfilehash: 95c61d3a0431cda9dee738d1c9f5ec843c1209f3
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: c426b8cfb10829241ba244a5d840c91e1de9f66e
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402767"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681263"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Windows PowerShell 웹 액세스의 권한 부여 규칙 및 보안 기능
 
@@ -186,13 +186,13 @@ Add-PswaAuthorizationRule -userName PswaServer\chrisLocal `
 
 ### <a name="using-a-single-set-of-authorization-rules-for-multiple-sites"></a>여러 사이트에 단일 권한 부여 규칙 집합 사용
 
-권한 부여 규칙은 XML 파일에 저장됩니다. 기본적으로 XML 파일의 경로 이름은 `%windir%\Web\PowershellWebAccess\data\AuthorizationRules.xml`입니다.
+권한 부여 규칙은 XML 파일에 저장됩니다. 기본적으로 XML 파일의 경로 이름은 `$env:windir\Web\PowershellWebAccess\data\AuthorizationRules.xml`입니다.
 
-권한 부여 규칙 XML 파일은 **powwa.config** 파일에 저장되며 이 파일은 `%windir%\Web\PowershellWebAccess\data`에 있습니다. 관리자는 기본 설정이나 요구 사항에 맞춰 이 **powwa.config**에 포함된 기본 경로를 변경할 수 있습니다. 관리자가 파일 위치를 변경할 수 있으므로 여러 Windows PowerShell 웹 액세스 게이트웨이에서 동일한 권한 부여 규칙을 사용해야 할 경우 그러한 구성이 가능합니다.
+권한 부여 규칙 XML 파일은 **powwa.config** 파일에 저장되며 이 파일은 `$env:windir\Web\PowershellWebAccess\data`에 있습니다. 관리자는 기본 설정이나 요구 사항에 맞춰 이 **powwa.config**에 포함된 기본 경로를 변경할 수 있습니다. 관리자가 파일 위치를 변경할 수 있으므로 여러 Windows PowerShell 웹 액세스 게이트웨이에서 동일한 권한 부여 규칙을 사용해야 할 경우 그러한 구성이 가능합니다.
 
 ## <a name="session-management"></a>세션 관리
 
-기본적으로 Windows PowerShell 웹 액세스에서는 사용자가 한 번에 세 세션까지 사용할 수 있습니다. 하지만 IIS 관리자를 사용하여 사용자당 여러 세션을 지원하도록 웹 애플리케이션의 **web.config** 파일을 편집할 수 있습니다. **web.config** 파일의 경로는 `$Env:Windir\Web\PowerShellWebAccess\wwwroot\Web.config` 입니다.
+기본적으로 Windows PowerShell 웹 액세스에서는 사용자가 한 번에 세 세션까지 사용할 수 있습니다. 하지만 IIS 관리자를 사용하여 사용자당 여러 세션을 지원하도록 웹 애플리케이션의 **web.config** 파일을 편집할 수 있습니다. **web.config** 파일의 경로는 `$env:windir\Web\PowerShellWebAccess\wwwroot\Web.config` 입니다.
 
 기본적으로 IIS 웹 서버는 설정이 편집될 경우 애플리케이션 풀을 다시 시작하도록 구성됩니다. 예를 들어 **web.config** 파일이 변경되면 애플리케이션 풀이 다시 시작됩니다. **Windows PowerShell 웹 액세스**에서는 메모리 내 세션 상태가 사용되므로, 애플리케이션 풀이 다시 시작되면 **Windows PowerShell 웹 액세스** 세션에 로그인한 사용자는 해당 세션을 잃어버리게 됩니다.
 

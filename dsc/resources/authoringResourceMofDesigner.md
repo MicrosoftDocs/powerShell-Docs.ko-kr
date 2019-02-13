@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 리소스 디자이너 도구 사용
 ms.openlocfilehash: 3fd2f06cf46602ee30dd34f8e7bd77d3c92b808f
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402543"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681433"
 ---
 # <a name="using-the-resource-designer-tool"></a>리소스 디자이너 도구 사용
 
@@ -17,16 +17,16 @@ ms.locfileid: "53402543"
 이 항목에서는 Active Directory 사용자를 관리하는 DSC 리소스를 만듭니다.
 [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet을 사용하여 **xDscResourceDesigner** 모듈을 설치하세요.
 
->**참고**: **Install-module** 에 포함 되는 **PowerShellGet** PowerShell 5.0에 포함 된 모듈. [PackageManagement PowerShell 모듈 미리 보기](https://www.microsoft.com/en-us/download/details.aspx?id=49186)에서 PowerShell 3.0 및 4.0용 **PowerShellGet** 모듈을 다운로드할 수 있습니다.
+>**참고**: **Install-Module**은 PowerShell 5.0에 포함된 **PowerShellGet** 모듈에 포함되어 있습니다. [PackageManagement PowerShell 모듈 미리 보기](https://www.microsoft.com/en-us/download/details.aspx?id=49186)에서 PowerShell 3.0 및 4.0용 **PowerShellGet** 모듈을 다운로드할 수 있습니다.
 
 ## <a name="creating-resource-properties"></a>리소스 속성 만들기
 가장 먼저 해야 할 일은 리소스가 노출할 속성에 대해 결정하는 것입니다. 이 예의 경우, 다음 속성으로 Active Directory 사용자를 정의하게 됩니다.
 
 매개 변수 이름 설명
-* .**user**name 사용자를 고유 하 게 식별 하는 키 속성입니다.
-* Ensure 사용자 계정을 제공 해야 합니다. 또는 없는 지정 합니다. 이 매개 변수는 두 개의 가능한 값만 갖습니다.
-* **DomainCredential**: 사용자에 대 한 도메인 암호입니다.
-* 암호 필요한 경우 사용자 암호를 변경 하려면 구성을 허용 하는 사용자에 대 한 원하는 암호입니다.
+* **UserName**: 사용자를 고유하게 식별하는 주요 속성입니다.
+* **Ensure**: 사용자 계정이 있음인지 또는 없음인지 여부를 지정합니다. 이 매개 변수는 두 개의 가능한 값만 갖습니다.
+* **DomainCredential**: 사용자에 대한 도메인 암호입니다.
+* **암호**: 필요한 경우 구성으로 사용자 암호를 변경할 수 있도록 해주는 사용자에 대한 원하는 암호입니다.
 
 속성을 만들기 위해 우리는 **New-xDscResourceProperty** cmdlet을 사용합니다. 다음 PowerShell 명령을 사용하면 위에서 설명한 속성이 만들어집니다.
 

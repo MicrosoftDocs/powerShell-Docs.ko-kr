@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: 그래픽 날짜 선택 만들기
 ms.assetid: c1cb722c-41e9-4baa-be83-59b4653222e9
 ms.openlocfilehash: 6dd43a3b1f4c67633ad1755de3db88eb8c6772c8
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402180"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681323"
 ---
 # <a name="creating-a-graphical-date-picker"></a>그래픽 날짜 선택 만들기
 
@@ -60,7 +60,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-다음 두 .NET Framework 클래스를 로드하여 이 스크립트를 시작합니다. **System.Drawing** 및 **System.Windows.Forms**. 그런 다음 .NET Framework 클래스의 새 인스턴스인 **Windows.Forms.Form**을 시작하면 컨트롤을 추가할 수 있는 새 양식 또는 창이 제공됩니다.
+두 .NET Framework 클래스 **System.Drawing** 및 **System.Windows.Forms**를 로드하여 스크립트가 시작됩니다. 그런 다음 .NET Framework 클래스의 새 인스턴스인 **Windows.Forms.Form**을 시작하면 컨트롤을 추가할 수 있는 새 양식 또는 창이 제공됩니다.
 
 ```powershell
 $form = New-Object Windows.Forms.Form
@@ -138,5 +138,5 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ## <a name="see-also"></a>참고 항목
 
 - [스크립팅 작성자: 이러한 PowerShell GUI 예제가 작동하지 않는 이유는 무엇인가요?](https://go.microsoft.com/fwlink/?LinkId=506644)
-- [GitHub Dave Wyatt의 WinFormsExampleUpdates](https://github.com/dlwyatt/WinFormsExampleUpdates)
+- [GitHub: Dave Wyatt's WinFormsExampleUpdates](https://github.com/dlwyatt/WinFormsExampleUpdates)(GitHub: Dave Wyatt의 WinFormsExampleUpdates)
 - [Windows PowerShell Tip of the Week: 그래픽 날짜 선택 만들기](https://technet.microsoft.com/library/ff730942.aspx)

@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: 목록 상자에서 항목 선택
 ms.assetid: 327c7cc5-21d0-4ace-b151-aa1491d1d3c2
 ms.openlocfilehash: e3d52839409a2fd58fbdc924a2b92d96fbecee53
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402903"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682748"
 ---
 # <a name="selecting-items-from-a-list-box"></a>목록 상자에서 항목 선택
 
@@ -75,7 +75,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-다음 두 .NET Framework 클래스를 로드하여 이 스크립트를 시작합니다. **System.Drawing** 및 **System.Windows.Forms**. 그런 다음 .NET Framework 클래스의 새 인스턴스인 **System.Windows.Forms.Form**을 시작하면 컨트롤을 추가할 수 있는 새 양식 또는 창이 제공됩니다.
+두 .NET Framework 클래스 **System.Drawing** 및 **System.Windows.Forms**를 로드하여 스크립트가 시작됩니다. 그런 다음 .NET Framework 클래스의 새 인스턴스인 **System.Windows.Forms.Form**을 시작하면 컨트롤을 추가할 수 있는 새 양식 또는 창이 제공됩니다.
 
 ```powershell
 Add-Type -AssemblyName System.Windows.Forms
