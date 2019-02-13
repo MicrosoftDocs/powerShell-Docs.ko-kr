@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: MSFT_DSCLocalConfigurationManager 클래스의 ApplyConfiguration 메서드
 ms.openlocfilehash: 559ff1793a18e28dad2f176bdb20eb53bc08630d
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047510"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55679694"
 ---
 # <a name="applyconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>MSFT_DSCLocalConfigurationManager 클래스의 ApplyConfiguration 메서드
 
@@ -37,9 +37,9 @@ uint32 ApplyConfiguration(
 
 ## <a name="requirements"></a>요구 사항
 
-MOF** DscCore.mof
+**MOF:** DscCore.mof
 
-{0} 네임스페이스 Root\Microsoft\Windows\DesiredStateConfiguration
+**네임스페이스**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>참고 항목
 

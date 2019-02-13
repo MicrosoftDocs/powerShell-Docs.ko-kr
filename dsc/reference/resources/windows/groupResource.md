@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC 그룹 리소스
 ms.openlocfilehash: 9894150f6f749fc23efd4ce2b155b18788557d1d
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047573"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682043"
 ---
 # <a name="dsc-group-resource"></a>DSC 그룹 리소스
 
@@ -36,7 +36,7 @@ Group [string] #ResourceName
 |  속성  |  설명   |
 |---|---|
 | GroupName| 상태를 확인하려는 그룹의 이름입니다.|
-| 자격 증명| 원격 리소스에 액세스하는 데 필요한 자격 증명입니다. **참고**: 이 계정에는 로컬이 아닌 모든 계정을 그룹에 추가할 수 있는 Active Directory 사용 권한이 있어야 합니다. 그렇지 않으면 구성이 대상 노드에서 실행될 때 오류가 발생합니다.
+| 자격 증명| 원격 리소스에 액세스하는 데 필요한 자격 증명입니다. **참고**: 이 계정에 로컬이 아닌 모든 계정을 그룹에 추가할 수 있는 Active Directory 권한이 있어야 합니다. 그렇지 않으면 구성이 대상 노드에서 실행될 때 오류가 발생합니다.
 | 설명| 그룹에 대한 설명입니다.|
 | Ensure| 그룹이 존재하는지 여부를 나타냅니다. 그룹이 존재하지 않도록 하려면 이 속성을 "Absent"으로 설정합니다. 그룹이 존재하도록 하려면 이 속성을 "Present"(기본값)으로 설정합니다.|
 | 구성원| 현재 그룹 구성원 자격을 지정된 구성원으로 바꾸려면 이 속성을 사용합니다. 이 속성의 값은 폼의 문자열 배열을 *Domain*\\*UserName* 형식의 문자열 배열입니다. 구성에서 이 속성을 설정하는 경우 **MembersToExclude** 또는 **MembersToInclude** 속성을 사용하지 마세요. 사용할 경우 오류가 발생합니다.|

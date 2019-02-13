@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: PowerShell 4.0에서 구성 Id를 사용 하 여 끌어오기 클라이언트 설정
 ms.openlocfilehash: 9adc767e91ff19d373c122a0d493e7b8703d5476
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402991"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680593"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-40"></a>PowerShell 4.0에서 구성 Id를 사용 하 여 끌어오기 클라이언트 설정
 

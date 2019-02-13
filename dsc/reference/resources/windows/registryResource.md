@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC 레지스트리 리소스
 ms.openlocfilehash: e0ae1a4a27edc08c4e6ccd47786426917eb1ccb4
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047725"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682258"
 ---
 # <a name="dsc-registry-resource"></a>DSC 레지스트리 리소스
 
-적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0_
+‘적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0’
 
 PowerShell DSC(필요한 상태 구성)의 **레지스트리** 리소스에서는 대상 노드에 있는 레지스트리 키와 값을 관리하는 메커니즘을 제공합니다.
 

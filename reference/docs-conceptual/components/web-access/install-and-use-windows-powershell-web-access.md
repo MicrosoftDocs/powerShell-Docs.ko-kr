@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 웹 액세스 설치 및 사용
-ms.openlocfilehash: a129dfeb61531a1f4d333af3e872d16defa1d12f
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 5517347560b25f032baa77ecc2d769fb1e74ba4f
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402828"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55679646"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Install and Use Windows PowerShell Web Access(Windows PowerShell 웹 액세스 설치 및 사용)
 
@@ -136,7 +136,7 @@ Windows PowerShell cmdlet을 사용하거나 서버 관리자 내에서 열린 �
    - Path: /pswa
    - ApplicationPool: pswa_pool
    - EnabledProtocols: http
-   - PhysicalPath: `%*windir*%/Web/PowerShellWebAccess/wwwroot`
+   - PhysicalPath: %windir%/Web/PowerShellWebAccess/wwwroot
 
    **예**: `Install-PswaWebApplication -webApplicationName myWebApp -useTestCertificate`
 
@@ -161,7 +161,7 @@ Windows PowerShell cmdlet을 사용하거나 서버 관리자 내에서 열린 �
    - Path: /pswa
    - ApplicationPool: pswa_pool
    - EnabledProtocols: http
-   - PhysicalPath: `%*windir*%/Web/PowerShellWebAccess/wwwroot`
+   - PhysicalPath: %windir%/Web/PowerShellWebAccess/wwwroot
 
 3. 다음 중 한 가지를 수행하여 IIS 관리자 콘솔을 엽니다.
 
@@ -271,7 +271,7 @@ Windows PowerShell 웹 액세스가 설치되면 IIS 관리자에서 게이트�
 
 7. **애플리케이션 풀** 필드에서는 3단계에서 만든 애플리케이션 풀을 선택합니다.
 
-8. **실제 경로** 필드에서 애플리케이션의 위치를 검색합니다. 기본 위치 `%windir%/Web/PowerShellWebAccess/wwwroot`를 사용할 수 있습니다. **확인**을 클릭합니다.
+8. **실제 경로** 필드에서 애플리케이션의 위치를 검색합니다. 기본 위치 `$env:windir/Web/PowerShellWebAccess/wwwroot`를 사용할 수 있습니다. **확인**을 클릭합니다.
 
 9. 이 항목에서 [IIS 관리자로 SSL 인증서를 구성하려면](#to-configure-an-ssl-certificate-in-iis-Manager) 절차의 단계를 따릅니다.
 
@@ -318,7 +318,7 @@ Windows PowerShell 웹 액세스가 설치되면 IIS 관리자에서 게이트�
 
 1. 새 웹 사이트의 애플리케이션 풀이 자동으로 만들어집니다. 다른 애플리케이션 풀을 사용하려면 **선택**을 클릭하여 새 웹 사이트와 연결될 애플리케이션 풀을 선택합니다. **애플리케이션 풀 선택** 대화 상자에서 다른 애플리케이션 풀을 선택한 다음 **확인**을 클릭합니다.
 
-1. **실제 경로** 텍스트 상자에서 %*windir*%/Web/PowerShellWebAccess/wwwroot로 이동합니다.
+1. 에 **실제 경로** 텍스트 상자에서 %windir%/Web/PowerShellWebAccess/wwwroot 이동 합니다.
 
 1. **바인딩** 영역의 **유형** 필드에서 **https**를 선택합니다.
 

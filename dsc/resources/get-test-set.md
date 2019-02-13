@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: 가져오기-테스트-설정
-ms.openlocfilehash: e46710954679bf20f4536c6efbcbd4dafd9e629e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 6d059518a49926bc5fb56e37e7d3d4d2c66bddec
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402575"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682203"
 ---
 # <a name="get-test-set"></a>가져오기-테스트-설정
 
@@ -237,6 +237,6 @@ VERBOSE: Time taken for configuration job to complete is 1.379 seconds
 
 ## <a name="see-also"></a>참고 항목
 
-- [Azure Automation DSC 개요](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview)
+- [Azure Automation DSC 개요](https://docs.microsoft.com/azure/automation/automation-dsc-overview)
 - [Setting up an SMB pull server(SMB 끌어오기 서버 설정)](../pull-server/pullServerSMB.md)
 - [Configuring a pull client(끌어오기 클라이언트 구성)](../pull-server/pullClientConfigID.md)

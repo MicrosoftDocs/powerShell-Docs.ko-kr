@@ -2,12 +2,12 @@
 title: PowerShell Core 6.1의 새로운 기능
 description: PowerShell Core 6.1에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 09/13/2018
-ms.openlocfilehash: 4e39780a0ff446993005bba6284741f3b4b02549
-ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
+ms.openlocfilehash: 1b41368bee92850e3593ebf4f5b8a469c4282d98
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851310"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682318"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>PowerShell Core 6.1의 새로운 기능
 
@@ -37,7 +37,7 @@ Windows 호환 기능 책을 통해 PowerShell Core는 **Windows 10 2018년 10�
 
 ## <a name="support-for-application-whitelisting"></a>애플리케이션 허용 목록에 대한 지원
 
-PowerShell Core 6.1에는 [AppLocker](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) 및 [Device Guard](https://docs.microsoft.com/en-us/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) 애플리케이션 허용 목록을 지원하는 Windows PowerShell 5.1을 사용한 패리티가 있습니다.
+PowerShell Core 6.1에는 [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) 및 [Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) 애플리케이션 허용 목록을 지원하는 Windows PowerShell 5.1을 사용한 패리티가 있습니다.
 애플리케이션 허용 목록은 PowerShell [제한된 언어 모드](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/)와 함께 사용되어 실행할 수 있도록 허용된 바이너리의 세부적 제어를 허용합니다.
 
 ## <a name="performance-improvements"></a>성능 향상
@@ -209,7 +209,7 @@ Markdown은 HTML로 렌더링할 수 있는 기본 서식의 읽을 수 있는 �
 
 `Enable-PSRemoting`은 이제 다음과 같이 두 개의 원격 세션 구성을 만듭니다.
 
-- PowerShell의 주 버전에 대해 하나. 예를 들면 `PowerShell.6`입니다. 부 버전에 의존할 수 있는 이 엔드포인트는 “시스템 수준” PowerShell 6 세션 구성으로 업데이트함
+- PowerShell의 주 버전에 대해 하나. 정의합니다(예: `PowerShell.6`). 부 버전에 의존할 수 있는 이 엔드포인트는 “시스템 수준” PowerShell 6 세션 구성으로 업데이트함
 - 버전별 세션 구성에 대해 하나. 예를 들면 `PowerShell.6.1.0`입니다.
 
 이 동작은 여러 PowerShell 6 버전을 동일한 머신에 설치하고 액세스하려는 경우에 유용합니다.

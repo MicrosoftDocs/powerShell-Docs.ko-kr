@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: MSFT_DSCLocalConfigurationManager 클래스의 SendConfigurationApply 메서드
 ms.openlocfilehash: da3a08307122ab38ee4a6fd5d4a9b97579a988f7
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047505"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680539"
 ---
 # <a name="sendconfigurationapply-method-of-the-msftdsclocalconfigurationmanager-class"></a>MSFT_DSCLocalConfigurationManager 클래스의 SendConfigurationApply 메서드
 
@@ -38,9 +38,9 @@ uint32 SendConfigurationApply(
 
 ## <a name="requirements"></a>요구 사항
 
-MOF** DscCore.mof
+**MOF:** DscCore.mof
 
-{0} 네임스페이스 Root\Microsoft\Windows\DesiredStateConfiguration
+**네임스페이스**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>참고 항목
 

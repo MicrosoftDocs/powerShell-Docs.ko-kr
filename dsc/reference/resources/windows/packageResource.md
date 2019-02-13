@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC 패키지 리소스
 ms.openlocfilehash: 9285df71a303c9a53dd50d450272575a64e962e7
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047597"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681008"
 ---
 # <a name="dsc-package-resource"></a>DSC 패키지 리소스
 
-적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0_
+‘적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0’
 
 Windows PowerShell DSC(필요한 상태 구성)의 **Package** 리소스에서는 대상 노드에서 Windows Installer나 setup.exe 패키지와 같은 패키지를 설치하거나 제거하는 메커니즘을 제공합니다.
 

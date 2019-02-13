@@ -3,11 +3,11 @@ ms.date: 05/17/2018
 keywords: powershell,core
 title: PowerShell 6.0의 알려진 문제
 ms.openlocfilehash: ce40a1925e564fbd2c661e70ec36d3842d915dfe
-ms.sourcegitcommit: 47becf2823ece251a7264db2387bb503cf3abaa9
-ms.translationtype: HT
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49450999"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681508"
 ---
 # <a name="known-issues-for-powershell-60"></a>PowerShell 6.0의 알려진 문제
 
@@ -107,7 +107,7 @@ PowerShell에서 일반적으로 사용할 수 있는 많은 명령(cmdlet)이 L
 |`Get-Service`, `New-Service`, `Restart-Service`, `Resume-Service`, `Set-Service`, `Start-Service`, `Stop-Service`, `Suspend-Service`|사용할 수 없음.|이러한 명령은 인식되지 않습니다. 이 문제는 향후 릴리스에서 해결되어야 합니다.|
 |`Get-Acl`, `Set-Acl`|사용할 수 없음.|이러한 명령은 인식되지 않습니다. 이 문제는 향후 릴리스에서 해결되어야 합니다.|
 |`Get-AuthenticodeSignature`, `Set-AuthenticodeSignature`|사용할 수 없음.|이러한 명령은 인식되지 않습니다. 이 문제는 향후 릴리스에서 해결되어야 합니다.|
-|`Wait-Process`|사용 가능하지만 제대로 작동하지 않습니다. |예를 들어 `Start-Process gvim -PassThru | Wait-Process`는 작동하지 않고, 프로세스를 기다리지 못합니다.|
+|`Wait-Process`|사용 가능하지만 제대로 작동하지 않습니다. |예를 들어, `Start-Process gvim -PassThru | Wait-Process`는 작동하지 않고, 프로세스를 기다리지 못합니다.|
 |`Register-PSSessionConfiguration`, `Unregister-PSSessionConfiguration`, `Get-PSSessionConfiguration`|사용 가능하지만 작동하지 않습니다.|명령이 작동하지 않음을 나타내는 오류 메시지를 씁니다. 이 문제는 향후 릴리스에서 해결되어야 합니다.|
 |`Get-Event`, `New-Event`, `Register-EngineEvent`, `Register-WmiEvent`, `Remove-Event`, `Unregister-Event`|사용 가능하지만, 사용할 수 있는 이벤트 원본이 없습니다.|PowerShell 이벤트 명령이 있지만, 명령과 함께 사용되는 대부분의 이벤트 원본(예: System.Timers.Timer)은 Linux에서 사용할 수 없으므로 알파 릴리스에서는 명령이 아무 소용도 없습니다.|
 |`Set-ExecutionPolicy`|사용 가능하지만 작동하지 않습니다.|이 플랫폼에서 지원되지 않는다는 메시지를 반환합니다. 실행 정책은 사용자가 값비싼 실수를 하지 않도록 방지하는 사용자 중심 “안전 벨트”입니다. 보안 경계가 아닙니다.|

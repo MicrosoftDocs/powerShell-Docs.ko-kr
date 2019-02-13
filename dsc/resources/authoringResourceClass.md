@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: PowerShell 클래스를 사용하여 사용자 지정 DSC 리소스 작성
-ms.openlocfilehash: 0759685b04688f574d72b62a15833832ad19e816
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 34356f65bcb83153e7395a16d2a4a5cf2e507332
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402871"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682618"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>PowerShell 클래스를 사용하여 사용자 지정 DSC 리소스 작성
 
-> 적용 대상: Windows Powershell 5.0
+> 적용 대상: Windows PowerShell 5.0
 
 Windows PowerShell 5.0의 PowerShell 클래스 도입으로 이제 클래스를 만들어 DSC 리소스를 정의할 수 있습니다. 클래스는 리소스의 스키마와 구현을 모두 정의하며, 따라서 별도의 MOF 파일을 만들 필요가 없습니다. **DSCResources** 폴더가 필요하지 않으므로 클래스 기반 리소스의 폴더 구조도 더 간단합니다.
 
@@ -30,8 +30,8 @@ PowerShell 클래스를 사용하여 DSC 사용자 지정 리소스를 구현하
 ```
 $env:ProgramFiles\WindowsPowerShell\Modules (folder)
     |- MyDscResource (folder)
-        |- MyDscResource.psm1
-           MyDscResource.psd1
+        MyDscResource.psm1
+        MyDscResource.psd1
 ```
 
 ## <a name="create-the-class"></a>클래스 만들기
@@ -64,9 +64,9 @@ DSC 리소스 스키마는 클래스의 속성으로 정의됩니다. 세 가지
 
 속성은 특성으로 수정되고 있습니다. 특성의 의미는 다음과 같습니다.
 
-- **Dscproperty (key)**: 필수 속성이입니다. 속성이 키입니다. 키로 표시된 모든 속성의 값은 구성 내 리소스 인스턴스를 고유하게 식별하도록 결합해야 합니다.
-- **Dscproperty (mandatory)**: 필수 속성이입니다.
-- **Dscproperty (notconfigurable)**: 속성이 읽기 전용입니다. 이 특성으로 표시된 속성은 구성으로 설정할 수 없지만 존재할 경우 **Get()** 메서드로 채워집니다.
+- **DscProperty(Key)**: 필수 속성이입니다. 속성이 키입니다. 키로 표시된 모든 속성의 값은 구성 내 리소스 인스턴스를 고유하게 식별하도록 결합해야 합니다.
+- **DscProperty(Mandatory)**: 필수 속성이입니다.
+- **DscProperty(NotConfigurable)**: 읽기 전용 속성입니다. 이 특성으로 표시된 속성은 구성으로 설정할 수 없지만 존재할 경우 **Get()** 메서드로 채워집니다.
 - **DscProperty()**: 속성은 구성할 수 있지만 필요 하지 않습니다.
 
 **$Path** 및 **$SourcePath** 속성은 모두 문자열입니다. **$CreationTime**은 [DateTime](/dotnet/api/system.datetime) 속성입니다. **$Ensure** 속성은 다음과 같이 정의하는 열거형 형식입니다.
@@ -86,7 +86,6 @@ The **Get()**, **Set()** 및 **Test()** 메서드는 스크립트 리소스의 *
 이 코드에는 **$SourcePath**의 파일을 **$Path**에 복사하는 도우미 함수인 CopyFile() 함수도 포함되어 있습니다.
 
 ```powershell
-
     <#
         This method is equivalent of the Set-TargetResource script function.
         It sets the resource to the desired state.
@@ -217,6 +216,7 @@ The **Get()**, **Set()** 및 **Test()** 메서드는 스크립트 리소스의 *
 ```
 
 ### <a name="the-complete-file"></a>전체 파일
+
 전체 클래스 파일은 다음과 같습니다.
 
 ```powershell
@@ -414,7 +414,6 @@ class FileResource
 } # This module defines a class for a DSC "FileResource" provider.
 ```
 
-
 ## <a name="create-a-manifest"></a>매니페스트 만들기
 
 DSC 엔진에 사용할 수 있는 클래스 기반 리소스를 만들려면 매니페스트 파일에 리소스를 내보내도록 모듈에게 지시하는 **DscResourcesToExport** 문을 포함해야 합니다. 이 매니페스트는 다음과 같습니다.
@@ -497,6 +496,36 @@ class FileResource {
 }
 ```
 
+### <a name="declaring-multiple-class-resources-in-a-module"></a>모듈의 여러 클래스 리소스를 선언합니다.
+
+모듈 여러 클래스 기반 DSC 리소스를 정의할 수 있습니다. 다음과 같은 방법으로 폴더 구조를 만들 수 있습니다.
+
+1. 첫 번째 리소스를 정의 합니다 "<ModuleName>. psm1" 파일 및 후속 리소스를 **DSCResources** 폴더입니다.
+
+   ```
+   $env:ProgramFiles\WindowsPowerShell\Modules (folder)
+        |- MyDscResource (folder)
+           |- MyDscResource.psm1
+              MyDscResource.psd1
+        |- DSCResources
+           |- SecondResource.psm1
+   ```
+
+2. 아래의 모든 리소스를 정의 합니다 **DSCResources** 폴더입니다.
+
+   ```
+   $env:ProgramFiles\WindowsPowerShell\Modules (folder)
+        |- MyDscResource (folder)
+           |- MyDscResource.psm1
+              MyDscResource.psd1
+        |- DSCResources
+           |- FirstResource.psm1
+              SecondResource.psm1
+   ```
+
+> [!NOTE]
+> 위의 예제에서는 아래에 있는 모든 PSM1 파일을 추가 합니다 **DSCResources** 에 **NestedModules** PSD1 파일에서 키입니다.
+
 ### <a name="access-the-user-context"></a>사용자 컨텍스트 액세스
 
 사용자 지정 리소스 내에서 사용자 컨텍스트에 액세스하려는 경우 `$global:PsDscContext` 자동 변수를 사용할 수 있습니다.
@@ -510,5 +539,5 @@ if (PsDscContext.RunAsUser) {
 ```
 
 ## <a name="see-also"></a>참고 항목
-### <a name="concepts"></a>개념
+
 [사용자 지정 Windows PowerShell 필요한 상태 구성 리소스 빌드](authoringResource.md)

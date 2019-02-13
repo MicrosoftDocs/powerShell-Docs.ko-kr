@@ -3,11 +3,11 @@ ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: 웹 기반 Windows PowerShell 콘솔 사용
 ms.openlocfilehash: 2bb9c6ef486ef32012a15f9890997cf2fa6a3a0b
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403095"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681313"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Use the Web-based Windows PowerShell Console
 

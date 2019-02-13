@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: MOF를 사용하여 사용자 지정 DSC 리소스 작성
-ms.openlocfilehash: 2dcdeb49b50e23bc8b9d87293ebb8d8ec5e7b57d
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 5917e20769e750042a9855649ff5bec36ad14eb4
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402239"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682083"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>MOF를 사용하여 사용자 지정 DSC 리소스 작성
 
@@ -69,7 +69,7 @@ class Demo_IISWebsite : OMI_BaseResource
 
 리소스 스크립트는 리소스의 논리를 구현합니다. 이 모듈에서는 **Get-TargetResource**, **Set-TargetResource** 및 **Test-TargetResource**라는 세 가지 함수를 포함해야 합니다. 세 함수는 모두 리소스용으로 만든 MOF 스키마에 정의된 속성 집합과 동일한 매개 변수 집합을 사용해야 합니다. 이 문서에서는 이 속성 집합을 "리소스 속성"이라고 합니다. 이 세 개의 함수를 <ResourceName>.psm1이라는 파일에 저장합니다. 다음 예제에서는 이 함수들이 Demo_IISWebsite.psm1이라는 파일에 저장됩니다.
 
-> **참고**: 리소스에서 동일한 구성 스크립트를 두 번 이상 실행해도 오류가 표시되지 않고 리소스는 스크립트를 한 번 실행하는 것과 동일한 상태로 유지되어야 합니다. 이 작업을 해내려면 **Get-TargetResource** 및 **Test-TargetResource** 함수가 리소스를 변경하지 않고 그대로 두고, **Set-TargetResource** 함수를 동일한 매개 변수 값으로 순서대로 두 번 이상 호출하는 것은 한 번 호출하는 것과 항상 동일한지 확인합니다.
+> **참고**: 리소스에 대해 동일한 구성 스크립트를 두 번 이상 실행해도 오류가 표시되지 않으며, 리소스는 스크립트를 한 번 실행하는 것과 동일한 상태로 유지되어야 합니다. 이 작업을 해내려면 **Get-TargetResource** 및 **Test-TargetResource** 함수가 리소스를 변경하지 않고 그대로 두고, **Set-TargetResource** 함수를 동일한 매개 변수 값으로 순서대로 두 번 이상 호출하는 것은 한 번 호출하는 것과 항상 동일한지 확인합니다.
 
 **Get-TargetResource** 함수 구현에서는 매개 변수로 제공되는 주요 리소스 속성 값을 사용하여 지정된 리소스 인스턴스 상태를 확인합니다. 이 함수는 모든 리소스 속성을 키로 나열하고, 이러한 속성의 실제 값을 그에 대한 해당 값으로 나열하는 해시 테이블을 반환해야 합니다. 다음 코드에 예가 나와 있습니다.
 
@@ -214,7 +214,7 @@ $result
 }
 ```
 
-**참고**: 보다 쉽게 디버그하려면 이전 세 개의 함수를 구현할 때 **Write-Verbose** cmdlet을 사용하세요.
+**참고**: 보다 쉽게 디버그하려면, 앞의 세 함수에 대한 구현에서 **Write-Verbose** cmdlet을 사용하세요.
 >이 cmdlet은 자세한 정보 메시지 스트림에 텍스트를 씁니다.
 >자세한 정보 메시지 스트림은 기본적으로 표시되지 않지만 **$VerbosePreference** 변수 값을 변경하거나 DSC cmdlets = new에 **Verbose** 매개 변수를 사용하여 표시할 수 있습니다.
 
@@ -290,3 +290,16 @@ if (PsDscContext.RunAsUser) {
     Write-Verbose "User: $PsDscContext.RunAsUser";
 }
 ```
+
+## <a name="rebooting-the-node"></a>노드 다시 부팅
+
+경우 수행 된 작업에 `Set-TargetResource` 함수에서 다시 부팅이 필요, 노드를 다시 부팅 하도록 LCM을 구별 하는 전역 플래그를 사용할 수 있습니다. 이 다시 부팅 후 바로 발생 합니다 `Set-TargetResource` 함수 완료 합니다.
+
+내부 프로그램 `Set-TargetResource` 함수를 코드의 다음 줄을 추가 합니다.
+
+```powershell
+# Include this line if the resource requires a system reboot.
+$global:DSCMachineStatus = 1
+```
+
+LCM에서 노드를 재부팅을 순서로 합니다 **RebootNodeIfNeeded** 플래그 설정 해야 `$true`합니다. 합니다 **ActionAfterReboot** 도 설정 해야 **ContinueConfiguration**, 기본값입니다. LCM 구성에 대 한 자세한 내용은 참조 하세요. [로컬 구성 관리자 구성](../managing-nodes/metaConfig.md), 또는 [구성 로컬 구성 관리자 (v4)](../managing-nodes/metaConfig4.md)합니다.

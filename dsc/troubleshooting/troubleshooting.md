@@ -3,11 +3,11 @@ ms.date: 10/30/2018
 keywords: dsc,powershell,configuration,setup
 title: DSC 문제 해결
 ms.openlocfilehash: e1f36bbc97569ac0d65f003ee08f52ec174a4520
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402919"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680291"
 ---
 # <a name="troubleshooting-dsc"></a>DSC 문제 해결
 
@@ -79,14 +79,14 @@ StartDate             :    11/24/2015  3:44:56
 PSComputerName        :
 ```
 
-## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>스크립트가 실행되지 않음: DSC 로그를 사용하여 스크립트 오류 진단
+## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>스크립트가 실행 되지 않습니다. DSC를 사용 하 여 로그를 스크립트 오류 진단
 
 모든 Windows 소프트웨어와 마찬가지로, DSC에서는 [이벤트 뷰어](https://support.microsoft.com/hub/4338813/windows-help)에서 볼 수 있는 [로그](/windows/desktop/EventLog/about-event-logging)에 오류와 이벤트를 기록합니다.
 이러한 로그를 검사하면 특정 작업이 실패한 이유와 나중에 오류를 방지하는 방법을 이해하는 데 도움이 될 수 있습니다. 구성 스크립트 작성은 까다로울 수 있으므로, 작성자로서 오류 추적을 보다 쉽게 하려면, DSC 로그 리소스를 사용하여 분석 DSC 이벤트 로그에 있는 구성의 진행률을 추적합니다.
 
 ## <a name="where-are-dsc-event-logs"></a>DSC 이벤트 로그는 어디에 있나요?
 
-이벤트 뷰어에서 DSC 이벤트는 **애플리케이션 및 서비스 로그/Microsoft/Windows/필요한 상태 구성**에 있습니다.
+이벤트 뷰어에서 DSC 이벤트는: **응용 프로그램 및 서비스 로그/Microsoft/Windows/Desired State Configuration**
 
 해당 PowerShell cmdlet인 [Get-WinEvent](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent)를 실행해도 이벤트 로그를 볼 수도 있습니다.
 
@@ -100,7 +100,7 @@ TimeCreated                     Id LevelDisplayName Message
 11/17/2014 10:27:23 PM        4102 Information      Job {02C38626-D95A-47F1-9DA2-C1D44A7128E7} :
 ```
 
-위와 같이 DSC의 기본 로그 이름은 **Microsoft->Windows->DSC**(Windows 아래의 다른 로그 이름은 간결하게 하기 위해 표시하지 않음)입니다. 기본 이름을 채널 이름에 추가하여 전체 로그 이름이 만들어집니다. DSC 엔진은 [작업, 분석 및 디버그 로그](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11)), 이렇게 주로 세 가지 유형의 로그에 기록합니다. 분석 및 디버그 로그는 기본적으로 해제 되어 있으므로, 이벤트 뷰어에서 설정해야 합니다. 이렇게 하려면 Windows PowerShell에서 Show-EventLog를 입력하여 이벤트 뷰어를 엽니다. 또는 **시작** 단추, **제어판**, **관리 도구**, **이벤트 뷰어**를 차례로 클릭합니다.
+위와 같이 DSC의 기본 로그 이름은 **Microsoft->Windows->DSC**(Windows 아래의 다른 로그 이름은 간결하게 하기 위해 표시하지 않음)입니다. 기본 이름을 채널 이름에 추가하여 전체 로그 이름이 만들어집니다. DSC 엔진은 주로 세 가지 유형의 로그에 씁니다. [운영, 분석 및 디버그 로그](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11))합니다. 분석 및 디버그 로그는 기본적으로 해제 되어 있으므로, 이벤트 뷰어에서 설정해야 합니다. 이렇게 하려면 Windows PowerShell에서 Show-EventLog를 입력하여 이벤트 뷰어를 엽니다. 또는 **시작** 단추, **제어판**, **관리 도구**, **이벤트 뷰어**를 차례로 클릭합니다.
 이벤트 뷰어의 **보기** 메뉴에서 **분석 및 디버그 로그 표시**를 클릭합니다. 분석 채널에 대한 로그 이름은 **Microsoft-Windows-Dsc/Analytic**이고, 디버그 채널은 **Microsoft-Windows-Dsc/Debug**입니다. 다음 예에서 보듯이, [wevtutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)) 유틸리티를 사용하여 로그를 사용할 수도 있습니다.
 
 ```powershell
@@ -206,7 +206,7 @@ Count Name                      Group
    38 {5BCA8BE7-5BB6-11E3-BF... {System.Diagnostics.Eventing.Reader.EventLogRecord, System.Diagnostics....
 ```
 
-### <a name="2-details-of-operations-run-in-the-last-half-hour"></a>2: 마지막 30분 동안 실행된 작업의 세부 정보
+### <a name="2-details-of-operations-run-in-the-last-half-hour"></a>2: 마지막 30분 안에 실행되는 작업의 세부 정보
 
 모든 Windows 이벤트의 속성인 `TimeCreated`는 이벤트가 만들어진 시간을 기술합니다. 이 속성을 특정 날짜/시간 개체와 비교하여 모든 이벤트를 필터링할 수 있습니다.
 
@@ -461,7 +461,7 @@ SRV2   OPERATIONAL  6/24/2016 11:36:56 AM Operation Consistency Check or Pull co
 SRV2   ANALYTIC     6/24/2016 11:36:56 AM Deleting file from C:\Windows\System32\Configuration\DSCEngineCach...
 ```
 
-## <a name="my-resources-wont-update-how-to-reset-the-cache"></a>리소스가 업데이트되지 않음: 캐시 재설정 방법
+## <a name="my-resources-wont-update-how-to-reset-the-cache"></a>내 리소스가 업데이트 되지 않습니다. 캐시를 다시 설정 하는 방법
 
 DSC 엔진은 효율성 향상을 위해 PowerShell 모듈로서 구현하는 리소스를 캐시합니다.
 그러나 이렇게 하면 프로세스가 다시 시작되기 전까지 DSC가 캐시된 버전을 로드하게 되므로 리소스를 작성하고 동시에 테스트하는 경우 문제가 발생할 수 있습니다. DSC가 최신 버전을 로드하도록 하는 유일한 방법은 DSC 엔진을 호스팅하는 프로세스를 명시적으로 종료하는 것입니다.

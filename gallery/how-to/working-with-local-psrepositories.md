@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery,psget,갤러리
 title: 로컬 PSRepositories 사용
 ms.openlocfilehash: 94824ea584c097838b24c6f2cd02407b6147a781
-ms.sourcegitcommit: 91786b03704fbd2d185f674df0bc67faddfb6288
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51619206"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682673"
 ---
 # <a name="working-with-local-powershellget-repositories"></a>로컬 PowerShellGet 리포지토리 작업
 
@@ -23,7 +23,7 @@ PowerShell 갤러리 이외의 PowerShellGet 모듈 지원 리포지토리.
 
 ## <a name="local-repository-types"></a>로컬 저장소 유형
 
-두 가지 방법으로 로컬 PSRepository를 만들려면: NuGet 서버 또는 파일 공유 합니다. 각 형식에는 각각 장단점이 있습니다.
+두 가지 방법으로 로컬 PSRepository를 만들려면: NuGet 서버 또는 파일 공유입니다. 각 형식에는 각각 장단점이 있습니다.
 
 NuGet 서버
 

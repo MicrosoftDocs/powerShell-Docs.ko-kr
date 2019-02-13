@@ -5,11 +5,11 @@ keywords: wmf,powershell,setup
 contributor: keithb
 title: WMF 5.1 설치 및 구성
 ms.openlocfilehash: e5c7968744a442b4be9f1e43a45e91429a6d6165
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189349"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680350"
 ---
 # <a name="install-and-configure-wmf-51"></a>WMF 5.1 설치 및 구성 #
 
@@ -50,8 +50,8 @@ ZIP 파일의 압축을 푼 후 Windows 7 또는 Windows Server 2008 R2를 실�
 
 Install-WMF5.1.ps1은 다음 매개 변수를 사용하여 Windows Server 2008 R2 및 Windows 7에서 쉽게 설치를 자동화합니다.
 
-- AcceptEula: 이 매개 변수가 포함된 경우 EULA에 자동으로 동의하게 되고 EULA가 표시되지 않습니다.
-- AllowRestart: 이 매개 변수는 AcceptEula가 지정된 경우에만 사용할 수 있습니다. 이 매개 변수가 포함된 경우 WMF 5.1을 설치한 후 다시 시작해야 하면 설치가 완료된 직후 메시지가 표시되지 않고 다시 시작됩니다.
+- AcceptEula 이 매개 변수를 포함 하는 경우 EULA를 자동으로 적용 하 고 표시 되지 않습니다.
+- AllowRestart: 이 매개 변수 AcceptEula가 지정 된 경우에 사용할 수 있습니다. 이 매개 변수가 포함된 경우 WMF 5.1을 설치한 후 다시 시작해야 하면 설치가 완료된 직후 메시지가 표시되지 않고 다시 시작됩니다.
 
 **Windows Server 2008 R2 SP1 및 Windows 7 SP1에 대한 WMF 5.1 필수 조건**
 

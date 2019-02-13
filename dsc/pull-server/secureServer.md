@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 끌어오기 서버 모범 사례
 ms.openlocfilehash: da67f8fd793878b097ffb260afad0fcf5c69bb04
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402975"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681448"
 ---
 # <a name="pull-server-best-practices"></a>끌어오기 서버 모범 사례
 
@@ -117,7 +117,7 @@ CPU: 1.4ghz 64 비트 프로세서 메모리: 디스크 공간 50MB 32GB 네트�
 
 끌어오기 서버 인스턴스를 배포하는 데 필요한 서비스 계정 요구 사항은 없습니다.
 그러나 로컬 사용자 계정의 컨텍스트에서 웹 사이트를 실행할 수 있는 시나리오가 있습니다.
-웹 사이트 콘텐츠를 위해 저장소 공유에 액세스해야 하고 Windows Server 또는 저장소 공유를 호스트하는 디바이스가 도메인에 연결되지 않은 경우를 예로 들 수 있습니다.
+웹 사이트 콘텐츠를 위해 스토리지 공유에 액세스해야 하고 Windows Server 또는 스토리지 공유를 호스트하는 장치가 도메인에 연결되지 않은 경우를 예로 들 수 있습니다.
 
 ### <a name="dns-records"></a>DNS 레코드
 

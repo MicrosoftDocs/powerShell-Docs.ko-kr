@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 5.0의 새로운 기능
-ms.openlocfilehash: 9bd18b37b53890713faeeabc634876e5f48725da
-ms.sourcegitcommit: 7ed6ff9a3ce0b8b485d12dc2f5107c23d4b6e68b
+ms.openlocfilehash: 06088e4a974ed4fb2a245fb9acfa780710a8ccc4
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52978898"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682848"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Windows PowerShell 5.0의 새로운 기능
 Windows PowerShell 5.0에는 용도를 확장하고, 사용 편의성을 높이며, Windows 기반 환경을 더욱 쉽고 종합적으로 제어하고 관리하는 데 사용할 수 있는 중요한 새 기능이 포함되어 있습니다.
@@ -38,9 +38,9 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
   - 이제 [New-DscChecksum](https://technet.microsoft.com/library/dn521622.aspx)에서 UNC 경로를 지원합니다.
 
 - [PSDesiredStateConfiguration](https://technet.microsoft.com/library/dn391651(v=wps.640).aspx) 모듈의 새 cmdlet
-  - [Update-DscConfiguration](https://technet.microsoft.com/library/mt143541(v=wps.630).aspx)  주문형 끌어오기 서버 검사를 수행합니다.
-  - [Stop-DscConfiguration](https://technet.microsoft.com/library/mt143542(v=wps.630).aspx)  이미 실행 중인 구성을 중지 합니다.
-  - [Remove-DscConfigurationDocument](https://technet.microsoft.com/library/mt143544(v=wps.630).aspx)  다양 한 단계 (보류 중, 이전 또는 현재)에서 구성 문서를 제거할 수 있습니다.
+  - [Update-DscConfiguration](https://technet.microsoft.com/library/mt143541(v=wps.630).aspx):  주문형 끌어오기 서버 검사를 수행합니다.
+  - [Stop-DscConfiguration](https://technet.microsoft.com/library/mt143542(v=wps.630).aspx):  이미 실행 중인 구성을 중지 합니다.
+  - [Remove-DscConfigurationDocument](https://technet.microsoft.com/library/mt143544(v=wps.630).aspx):  다양 한 단계 (보류 중, 이전 또는 현재)에서 구성 문서를 제거할 수 있습니다.
 
 - 향상된 언어
   - 이제 DependsOn이 복합 리소스를 지원합니다.
@@ -65,7 +65,7 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 - 향상된 유연성
   - LocalConfigurationManager 리소스에 **ActionAfterReboot**라는 새 속성이 있습니다.
     - ContinueConfiguration (기본값): 대상 노드를 다시 시작한 후 구성을 자동으로 다시 시작 합니다.
-    - StopConfiguration 노드가 다시 시작 된 후 구성의 자동으로 재개 되지 않습니다.
+    - StopConfiguration: 노드가 다시 시작 된 후 구성의 자동으로 재개 되지 않습니다.
   - 이제 일관성 실행이 PULL 작업보다 더 자주 발생하거나 그 반대의 경우가 발생할 수 있습니다.
   - 버전 관리 지원:  DSC가 최신 클라이언트에서 생성 된 문서를 인식 이제 (포함 된 [WMF 5.0](https://aka.ms/wmf5download)).
 
@@ -140,7 +140,8 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 - 단일 모듈의 여러 버전을 저장할 수 있도록 FullyQualifiedName 매개 변수가 Import-Module 및 Remove-Module cmdlet에 추가되었습니다.
 - Save-Help, Update-Help, Import-PSSession, Export-PSSession 및 Get-Command에 ModuleSpecification 형식의 새로운 매개 변수인 FullyQualifiedModule이 있습니다. 정규화된 이름으로 모듈을 지정하려면 이 매개 변수를 추가합니다.
 - **$PSVersionTable.PSVersion** 값이 5.0으로 업데이트되었습니다.
-
+- WMF 5.0 (PowerShell 5.0)은 포함 된 **Pester** 모듈입니다.  Pester 테스트 프레임 워크를 PowerShell에 대 한 단위입니다. 스크립트에 대 한 테스트를 만들 수 있는 몇 가지 간단한 사용 키워드를 제공 합니다. 
+ 
 ### <a name="new-features-in-windows-powershell-desired-state-configuration"></a>Windows PowerShell 필요한 상태 구성의 새로운 기능
 
 - Windows PowerShell의 향상된 언어 기능을 사용하면 클래스를 통해 Windows PowerShell DSC(필요한 상태 구성) 리소스를 정의할 수 있습니다. 이제 Import-DscResource가 진정한 동적 키워드입니다. Windows PowerShell이 지정된 모듈의 루트 모듈을 구문 분석하여 DscResource 특성이 포함된 클래스를 검색합니다. 이제 클래스를 사용하여 모듈 폴더의 MOF 파일 또는 DSCResource 하위 폴더가 필요하지 않은 DSC 리소스를 정의할 수 있습니다. Windows PowerShell 모듈 파일에 여러 가지 DSC 리소스 클래스가 포함될 수 있습니다.
@@ -177,7 +178,7 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 
 ### <a name="new-features-in-windows-powershell-ise"></a>Windows PowerShell ISE의 새로운 기능
 
-- 이제 Enter-PSSession을 실행하여 편집할 파일이 저장되어 있는 컴퓨터에서 원격 세션을 시작한 다음 **PSEdit <path and file name on the remote computer>** 를 실행하여 Windows PowerShell ISE의 로컬 복사본에서 원격 Windows PowerShell 스크립트와 파일을 편집할 수 있습니다. 이 기능을 사용하면 Windows PowerShell ISE를 실행할 수 없는 Windows Server의 Server Core 설치 옵션에 저장되어 있는 Windows PowerShell 파일을 쉽게 편집할 수 있습니다.
+- Enter-pssession을 편집 하려면 원하는 파일을 저장 하는 컴퓨터의 원격 세션을 시작 하 고 다음 실행 하 여 Windows PowerShell ISE의 로컬 복사본에서 원격 Windows PowerShell 스크립트와 파일을 편집 이제 **PSEdit \<원격 컴퓨터의 경로 파일 이름을\>** 합니다. 이 기능을 사용하면 Windows PowerShell ISE를 실행할 수 없는 Windows Server의 Server Core 설치 옵션에 저장되어 있는 Windows PowerShell 파일을 쉽게 편집할 수 있습니다.
 - 이제 Windows PowerShell ISE에서 Start-Transcript cmdlet이 지원됩니다.
 - 이제 Windows PowerShell ISE에서 원격 스크립트를 디버그할 수 있습니다.
 - 새 메뉴 명령인 **모두 중단**(Ctrl+B)은 로컬 스크립트와 원격으로 실행 중인 스크립트 둘 다에 대해 디버거를 시작합니다.
@@ -315,7 +316,7 @@ Windows PowerShell 3.0에는 다음과 같은 새로운 기능이 있습니다.
 
 ### <a name="windows-powershell-workflow"></a>Windows PowerShell 워크플로
 
-Windows PowerShell 워크플로를 통해 Windows PowerShell에서 Windows Workflow Foundation의 강력한 기능을 사용할 수 있습니다. XAML 또는 Windows PowerShell 언어로 워크플로를 작성한 후 cmdlet을 실행할 때처럼 워크플로를 실행할 수 있습니다. [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) cmdlet은 워크플로 명령을 가져오고 [Get-Help](https://technet.microsoft.com/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) cmdlet은 워크플로에 대한 도움말을 가져옵니다.
+Windows PowerShell 워크플로를 통해 Windows PowerShell에서 Windows Workflow Foundation의 강력한 기능을 사용할 수 있습니다. XAML 또는 Windows PowerShell 언어로 워크플로를 작성한 후 cmdlet을 실행할 때처럼 워크플로를 실행할 수 있습니다. 합니다 [Get-command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) cmdlet은 워크플로 명령을 가져옵니다 하며 [Get-help](https://technet.microsoft.com/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) cmdlet은 워크플로에 대 한 도움말을 가져옵니다.
 
 워크플로는 장기적으로 자주 병렬 실행 가능하고, 반복, 중단, 일시 중단 및 다시 시작 가능한 다중 컴퓨터 관리 활동의 시퀀스입니다. 네트워크 중단, Windows 다시 시작, 정전 등과 같은 의도적이거나 우연적인 중단으로부터 워크플로를 다시 시작할 수 있습니다.
 
@@ -414,7 +415,7 @@ XML 기반 cmdlet 도움말 파일의 첫 번째 관련 링크 또는 함수의 
 
 ### <a name="cim-integration"></a>CIM 통합
 
-Windows PowerShell 3.0에서는 이기종 시스템 간에 관리 정보를 교환할 수 있도록 시스템, 네트워크, 애플리케이션 및 서비스에 대한 관리 정보의 일반 정의를 제공하는 CIM(Common Information Model)을 지원합니다. Windows PowerShell 3.0에서는 새 CIM 클래스 또는 기존 CIM 클래스를 기반으로 Windows PowerShell cmdlet 작성, cmdlet 정의 XML 파일 기반 명령, CIM .NET Framework 지원을 비롯한 CIM을 지원합니다. API, CIM 관리 cmdlet 및 WMI 2.0 공급자.
+Windows PowerShell 3.0에서는 이기종 시스템 간에 관리 정보를 교환할 수 있도록 시스템, 네트워크, 응용 프로그램 및 서비스에 대한 관리 정보의 일반 정의를 제공하는 CIM(Common Information Model)을 지원합니다. Windows PowerShell 3.0에서는 새 CIM 클래스 또는 기존 CIM 클래스를 기반으로 Windows PowerShell cmdlet 작성, cmdlet 정의 XML 파일 기반 명령, CIM .NET Framework 지원을 비롯한 CIM을 지원합니다. API, CIM 관리 cmdlet 및 WMI 2.0 공급자.
 
 ### <a name="session-configuration-files"></a>세션 구성 파일
 

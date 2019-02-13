@@ -3,11 +3,11 @@ title: PowerShell Core 6.0의 새로운 기능
 description: PowerShell Core 6.0에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 08/06/2018
 ms.openlocfilehash: 83c104d838db9d86fe1d485e92245a9c8f2d2057
-ms.sourcegitcommit: 59e568ac9fa8ba28e2c96932b7c84d4a855fed2f
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289245"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680818"
 ---
 # <a name="whats-new-in-powershell-core-60"></a>PowerShell Core 6.0의 새로운 기능
 
@@ -274,7 +274,7 @@ PowerShell 작업에 대한 자세한 내용은 [about_Jobs](https://msdn.micros
 - 웹 cmdlet에 `-SkipHeaderValidation` 스위치를 추가하여 헤더 값의 유효성을 검사하지 않고 헤더 추가를 지원합니다. (#4085)
 - 필요한 경우 웹 cmdlet이 서버의 HTTPS 인증서의 유효성을 검사하지 않도록 설정합니다.
 - 웹 cmdlet에 인증 매개 변수를 추가합니다. (#5052) ([@markekraus](https://github.com/markekraus)에게 감사드립니다.)
-  - 기본, OAuth 및 전달자의 세 가지 옵션을 제공하는 `-Authentication`을 추가합니다.
+  - 추가 `-Authentication` 는 세 가지 옵션을 제공 합니다. Basic, OAuth 및 전달자 있습니다.
   - `-Token`을 추가하여 OAuth 및 전달자 옵션에 대한 전달자 토큰을 가져옵니다.
   - HTTPS 이외의 전송 체계에 제공된 인증을 생략하려면 `-AllowUnencryptedAuthentication`을 추가합니다.
 - 응답 헤더 캡처를 사용하려면 `-ResponseHeadersVariable`을 `Invoke-RestMethod`에 추가합니다. (#4888) ([@markekraus](https://github.com/markekraus)에게 감사드립니다.)
