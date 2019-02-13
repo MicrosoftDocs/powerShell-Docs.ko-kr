@@ -3,26 +3,26 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: C#에서 DSC 리소스 작성
 ms.openlocfilehash: dcda36d27f2191f140eaaf209e1c85263d2cd8e1
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402412"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55683128"
 ---
-# <a name="authoring-a-dsc-resource-in-c"></a><span data-ttu-id="a603a-103">C#에서 DSC 리소스 작성</span><span class="sxs-lookup"><span data-stu-id="a603a-103">Authoring a DSC resource in C#</span></span>
+# <a name="authoring-a-dsc-resource-in-c"></a><span data-ttu-id="18b17-103">C#에서 DSC 리소스 작성</span><span class="sxs-lookup"><span data-stu-id="18b17-103">Authoring a DSC resource in C#</span></span>
 
-> <span data-ttu-id="a603a-104">적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="a603a-104">Applies To: Windows PowerShell 4.0, Windows PowerShell 5.0</span></span>
+> <span data-ttu-id="18b17-104">적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="18b17-104">Applies To: Windows PowerShell 4.0, Windows PowerShell 5.0</span></span>
 
-<span data-ttu-id="a603a-105">일반적으로, Windows PowerShell DSC(필요한 상태 구성) 사용자 지정 리소스는 PowerShell 스크립트로 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="a603a-105">Typically, a Windows PowerShell Desired State Configuration (DSC) custom resource is implemented in a PowerShell script.</span></span> <span data-ttu-id="a603a-106">그러나 C#으로 cmdlet을 작성하여 DSC 사용자 지정 리소스의 기능을 구현할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a603a-106">However, you can also implement the functionality of a DSC custom resource by writing cmdlets in C#.</span></span> <span data-ttu-id="a603a-107">C#에서 cmdlet을 작성하는 방법을 알려면 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](/powershell/developer/windows-powershell)을 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="a603a-107">For an introduction on writing cmdlets in C#, see [Writing a Windows PowerShell Cmdlet](/powershell/developer/windows-powershell).</span></span>
+<span data-ttu-id="18b17-105">일반적으로, Windows PowerShell DSC(필요한 상태 구성) 사용자 지정 리소스는 PowerShell 스크립트로 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="18b17-105">Typically, a Windows PowerShell Desired State Configuration (DSC) custom resource is implemented in a PowerShell script.</span></span> <span data-ttu-id="18b17-106">그러나 C#으로 cmdlet을 작성하여 DSC 사용자 지정 리소스의 기능을 구현할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="18b17-106">However, you can also implement the functionality of a DSC custom resource by writing cmdlets in C#.</span></span> <span data-ttu-id="18b17-107">C#에서 cmdlet을 작성하는 방법을 알려면 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](/powershell/developer/windows-powershell)을 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="18b17-107">For an introduction on writing cmdlets in C#, see [Writing a Windows PowerShell Cmdlet](/powershell/developer/windows-powershell).</span></span>
 
-<span data-ttu-id="a603a-108">C#에서 리소스를 cmdlet으로 구현하는 것 외에 MOF 스키마 만들기, 폴더 구조 만들기, 사용자 지정 DSC 리소스 가져오기 및 사용 프로세스는 [MOF를 사용하여 사용자 지정 DSC 리소스 작성](authoringResourceMOF.md)에 설명된 것과 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="a603a-108">Aside from implementing the resource in C# as cmdlets, the process of creating the MOF schema, creating the folder structure, importing and using your custom DSC resource are the same as described in [Writing a custom DSC resource with MOF](authoringResourceMOF.md).</span></span>
+<span data-ttu-id="18b17-108">C#에서 리소스를 cmdlet으로 구현하는 것 외에 MOF 스키마 만들기, 폴더 구조 만들기, 사용자 지정 DSC 리소스 가져오기 및 사용 프로세스는 [MOF를 사용하여 사용자 지정 DSC 리소스 작성](authoringResourceMOF.md)에 설명된 것과 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="18b17-108">Aside from implementing the resource in C# as cmdlets, the process of creating the MOF schema, creating the folder structure, importing and using your custom DSC resource are the same as described in [Writing a custom DSC resource with MOF](authoringResourceMOF.md).</span></span>
 
-## <a name="writing-a-cmdlet-based-resource"></a><span data-ttu-id="a603a-109">cmdlet 기반 리소스 작성</span><span class="sxs-lookup"><span data-stu-id="a603a-109">Writing a cmdlet-based resource</span></span>
-<span data-ttu-id="a603a-110">이 예의 경우, 텍스트 파일과 그 내용을 관리하는 간단한 리소스를 구현하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a603a-110">For this example, we will implement a simple resource that manages a text file and its contents.</span></span>
+## <a name="writing-a-cmdlet-based-resource"></a><span data-ttu-id="18b17-109">cmdlet 기반 리소스 작성</span><span class="sxs-lookup"><span data-stu-id="18b17-109">Writing a cmdlet-based resource</span></span>
+<span data-ttu-id="18b17-110">이 예의 경우, 텍스트 파일과 그 내용을 관리하는 간단한 리소스를 구현하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="18b17-110">For this example, we will implement a simple resource that manages a text file and its contents.</span></span>
 
-### <a name="writing-the-mof-schema"></a><span data-ttu-id="a603a-111">MOF 스키마 작성</span><span class="sxs-lookup"><span data-stu-id="a603a-111">Writing the MOF schema</span></span>
+### <a name="writing-the-mof-schema"></a><span data-ttu-id="18b17-111">MOF 스키마 작성</span><span class="sxs-lookup"><span data-stu-id="18b17-111">Writing the MOF schema</span></span>
 
-<span data-ttu-id="a603a-112">다음은 MOF 리소스 정의입니다.</span><span class="sxs-lookup"><span data-stu-id="a603a-112">The following is the MOF resource definition.</span></span>
+<span data-ttu-id="18b17-112">다음은 MOF 리소스 정의입니다.</span><span class="sxs-lookup"><span data-stu-id="18b17-112">The following is the MOF resource definition.</span></span>
 
 ```
 [ClassVersion("1.0.0"), FriendlyName("xDemoFile")]
@@ -34,19 +34,19 @@ class MSFT_XDemoFile : OMI_BaseResource
 };
 ```
 
-### <a name="setting-up-the-visual-studio-project"></a><span data-ttu-id="a603a-113">Visual Studio 프로젝트 설정</span><span class="sxs-lookup"><span data-stu-id="a603a-113">Setting up the Visual Studio project</span></span>
-#### <a name="setting-up-a-cmdlet-project"></a><span data-ttu-id="a603a-114">cmdlet 프로젝트 설정</span><span class="sxs-lookup"><span data-stu-id="a603a-114">Setting up a cmdlet project</span></span>
+### <a name="setting-up-the-visual-studio-project"></a><span data-ttu-id="18b17-113">Visual Studio 프로젝트 설정</span><span class="sxs-lookup"><span data-stu-id="18b17-113">Setting up the Visual Studio project</span></span>
+#### <a name="setting-up-a-cmdlet-project"></a><span data-ttu-id="18b17-114">cmdlet 프로젝트 설정</span><span class="sxs-lookup"><span data-stu-id="18b17-114">Setting up a cmdlet project</span></span>
 
-1. <span data-ttu-id="a603a-115">Visual Studio를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="a603a-115">Open Visual Studio.</span></span>
-1. <span data-ttu-id="a603a-116">C# 프로젝트를 만들고 이름을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="a603a-116">Create a C# project and provide the name.</span></span>
-1. <span data-ttu-id="a603a-117">사용 가능한 프로젝트 템플릿에서 **클래스 라이브러리**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="a603a-117">Select **Class Library** from the available project templates.</span></span>
-1. <span data-ttu-id="a603a-118">**확인**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="a603a-118">Click **Ok**.</span></span>
-1. <span data-ttu-id="a603a-119">System.Automation.Management.dll에 대한 어셈블리 참조를 프로젝트에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a603a-119">Add an assembly reference to System.Automation.Management.dll to your project.</span></span>
-1. <span data-ttu-id="a603a-120">어셈블리 이름을 리소스 이름과 일치하도록 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="a603a-120">Change the assembly name to match the resource name.</span></span> <span data-ttu-id="a603a-121">이 경우 어셈블리의 이름은 **MSFT_XDemoFile**로 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a603a-121">In this case, the assembly should be named **MSFT_XDemoFile**.</span></span>
+1. <span data-ttu-id="18b17-115">Visual Studio를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="18b17-115">Open Visual Studio.</span></span>
+1. <span data-ttu-id="18b17-116">C# 프로젝트를 만들고 이름을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="18b17-116">Create a C# project and provide the name.</span></span>
+1. <span data-ttu-id="18b17-117">사용 가능한 프로젝트 템플릿에서 **클래스 라이브러리**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="18b17-117">Select **Class Library** from the available project templates.</span></span>
+1. <span data-ttu-id="18b17-118">**확인**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="18b17-118">Click **Ok**.</span></span>
+1. <span data-ttu-id="18b17-119">System.Automation.Management.dll에 대한 어셈블리 참조를 프로젝트에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="18b17-119">Add an assembly reference to System.Automation.Management.dll to your project.</span></span>
+1. <span data-ttu-id="18b17-120">어셈블리 이름을 리소스 이름과 일치하도록 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="18b17-120">Change the assembly name to match the resource name.</span></span> <span data-ttu-id="18b17-121">이 경우 어셈블리의 이름은 **MSFT_XDemoFile**로 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="18b17-121">In this case, the assembly should be named **MSFT_XDemoFile**.</span></span>
 
-### <a name="writing-the-cmdlet-code"></a><span data-ttu-id="a603a-122">cmdlet 코드 작성</span><span class="sxs-lookup"><span data-stu-id="a603a-122">Writing the cmdlet code</span></span>
+### <a name="writing-the-cmdlet-code"></a><span data-ttu-id="18b17-122">cmdlet 코드 작성</span><span class="sxs-lookup"><span data-stu-id="18b17-122">Writing the cmdlet code</span></span>
 
-<span data-ttu-id="a603a-123">다음 C# 코드는 **Get-TargetResource**, **Set-TargetResource** 및 **Test-TargetResource** cmdlet을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="a603a-123">The following C# code implements the **Get-TargetResource**, **Set-TargetResource**, and **Test-TargetResource** cmdlets.</span></span>
+<span data-ttu-id="18b17-123">다음 C# 코드는 **Get-TargetResource**, **Set-TargetResource** 및 **Test-TargetResource** cmdlet을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="18b17-123">The following C# code implements the **Get-TargetResource**, **Set-TargetResource**, and **Test-TargetResource** cmdlets.</span></span>
 
 ```C#
 
@@ -262,9 +262,9 @@ namespace cSharpDSCResourceExample
 }
 ```
 
-### <a name="deploying-the-resource"></a><span data-ttu-id="a603a-124">리소스 배포</span><span class="sxs-lookup"><span data-stu-id="a603a-124">Deploying the resource</span></span>
+### <a name="deploying-the-resource"></a><span data-ttu-id="18b17-124">리소스 배포</span><span class="sxs-lookup"><span data-stu-id="18b17-124">Deploying the resource</span></span>
 
-<span data-ttu-id="a603a-125">컴파일된 dll 파일은 스크립트 기반 리소스와 비슷한 파일 구조에 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="a603a-125">The compiled dll file should be saved in a file structure similar to a script-based resource.</span></span> <span data-ttu-id="a603a-126">다음은 이 리소스에 대한 폴더 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="a603a-126">The following is the folder structure for this resource.</span></span>
+<span data-ttu-id="18b17-125">컴파일된 dll 파일은 스크립트 기반 리소스와 비슷한 파일 구조에 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="18b17-125">The compiled dll file should be saved in a file structure similar to a script-based resource.</span></span> <span data-ttu-id="18b17-126">다음은 이 리소스에 대한 폴더 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="18b17-126">The following is the folder structure for this resource.</span></span>
 
 ```
 $env: psmodulepath (folder)
@@ -277,8 +277,8 @@ $env: psmodulepath (folder)
                 |- MSFT_XDemoFile.schema.mof (file, required)
 ```
 
-### <a name="see-also"></a><span data-ttu-id="a603a-127">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a603a-127">See Also</span></span>
-#### <a name="concepts"></a><span data-ttu-id="a603a-128">개념</span><span class="sxs-lookup"><span data-stu-id="a603a-128">Concepts</span></span>
-[<span data-ttu-id="a603a-129">Writing a custom DSC resource with MOF(MOF를 사용하여 사용자 지정 DSC 리소스 작성)</span><span class="sxs-lookup"><span data-stu-id="a603a-129">Writing a custom DSC resource with MOF</span></span>](authoringResourceMOF.md)
-#### <a name="other-resources"></a><span data-ttu-id="a603a-130">관련 자료</span><span class="sxs-lookup"><span data-stu-id="a603a-130">Other Resources</span></span>
-<span data-ttu-id="a603a-131">[Writing a Windows PowerShell Cmdlet](/powershell/developer/windows-powershell)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="a603a-131">[Writing a Windows PowerShell Cmdlet](/powershell/developer/windows-powershell)</span></span>
+### <a name="see-also"></a><span data-ttu-id="18b17-127">참고 항목</span><span class="sxs-lookup"><span data-stu-id="18b17-127">See Also</span></span>
+#### <a name="concepts"></a><span data-ttu-id="18b17-128">개념</span><span class="sxs-lookup"><span data-stu-id="18b17-128">Concepts</span></span>
+[<span data-ttu-id="18b17-129">Writing a custom DSC resource with MOF(MOF를 사용하여 사용자 지정 DSC 리소스 작성)</span><span class="sxs-lookup"><span data-stu-id="18b17-129">Writing a custom DSC resource with MOF</span></span>](authoringResourceMOF.md)
+#### <a name="other-resources"></a><span data-ttu-id="18b17-130">관련 자료</span><span class="sxs-lookup"><span data-stu-id="18b17-130">Other Resources</span></span>
+<span data-ttu-id="18b17-131">[Writing a Windows PowerShell Cmdlet](/powershell/developer/windows-powershell)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="18b17-131">[Writing a Windows PowerShell Cmdlet](/powershell/developer/windows-powershell)</span></span>
