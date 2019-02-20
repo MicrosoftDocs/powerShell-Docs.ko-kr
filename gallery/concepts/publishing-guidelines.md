@@ -4,12 +4,12 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 description: 게시자용 지침
 title: PowerShell 갤러리 게시 지침 및 모범 사례
-ms.openlocfilehash: a996a820d6bd52e796a41659c6f468662dbff0f4
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.openlocfilehash: 64c3d607b13dce64f70f138fdee849e5baaf85df
+ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655398"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265572"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>PowerShell 갤러리 게시 지침 및 모범 사례
 
@@ -93,8 +93,8 @@ PowerShell 갤러리에 게시하는 모듈의 예제는 모듈 루트 아래의
 
 PowerShell 갤러리에서는 두 가지 피드백 방법이 제공됩니다.
 
-- 소유자에 게 문의 합니다. 이 패키지 소유자 전자 메일을 보낼 수 있습니다. 패키지 소유자는 PowerShell 갤러리 패키지에 사용하는 전자 메일 주소를 모니터링하여 제기되는 문제에 응답을 해야 합니다. 이 방법의 한 가지 단점은, 사용자와 소유자만이 교환하는 의견을 확인할 수 있으므로 소유자가 같은 질문에 여러 번 대답해야 할 수도 있다는 것입니다.
-- 설명 패키지의 맨 아래에 있는 페이지는 설명 필드를 사용 합니다.
+- 소유자에게 문의: 사용자가 패키지 소유자에게 메일을 보낼 수 있습니다. 패키지 소유자는 PowerShell 갤러리 패키지에 사용하는 전자 메일 주소를 모니터링하여 제기되는 문제에 응답을 해야 합니다. 이 방법의 한 가지 단점은, 사용자와 소유자만이 교환하는 의견을 확인할 수 있으므로 소유자가 같은 질문에 여러 번 대답해야 할 수도 있다는 것입니다.
+- 댓글: 패키지 페이지의 맨 아래에는 댓글 필드가 있습니다.
   이 시스템의 장점은 다른 사용자들도 댓글과 응답을 볼 수 있으므로 질문 하나에 대답해야 하는 횟수를 줄일 수 있다는 것입니다.
   패키지 소유자는 각 패키지에 대한 댓글을 팔로우하는 것이 좋습니다.
 자세한 방법은 [소셜 미디어나 댓글을 통해 피드백 제공](../how-to/working-with-packages/social-media-feedback.md)을 참조하세요.
@@ -140,11 +140,11 @@ ProjectURI를 제공하면 PowerShell 갤러리의 패키지 페이지 왼쪽에
 
 다음 태그를 사용 하 여 패키지를 해당 환경에서 잘 작동 하는 사용자에 게 보여 줍니다.
 
-- PSEdition_Desktop: Windows PowerShell을 사용 하 여 호환 되는 패키지 
-- PSEdition_Core: Powershell Core와 호환 되는 패키지 
-- Windows Windows 운영 체제와 호환 되는 패키지
-- Linux Linux 운영 체제와 호환 되는 패키지 
-- macOS Mac 운영 체제와 호환 되는 패키지
+- Windows PowerShell을 사용 하 여 호환 되는 PSEdition_Desktop: 패키지 
+- Powershell Core와 호환 되는 PSEdition_Core: 패키지 
+- Windows 운영 체제와 호환 되는 Windows: 패키지
+- Linux 운영 체제와 호환 되는 패키지를 Linux의 경우: 
+- Mac 운영 체제와 호환 되는 MacOS: 패키지
 
 ## <a name="include-tests"></a>테스트 포함
 
@@ -203,7 +203,7 @@ PowerShell 스크립트 파일에 서명하는 방법에 대한 자세한 내용
 - 버전은 0.1.1 또는 4.11.192와 같이 마침표로 구분된 숫자 블록 3개로 구성해야 합니다.
 - 버전이 "0"으로 시작하는 패키지는 아직 프로덕션 환경에서 사용할 준비가 되지 않은 것입니다. 버전에서 숫자 "0"만 사용되는 경우에만 첫 번째 숫자를 "0"으로 시작해야 합니다.
 - 첫 번째 숫자가 1.9.9999에서 2.0.0으로 바뀌는 등 변경되는 경우 버전 간에 중요한 변경 내용이 있는 것입니다.
-- 두 번째 숫자가 1.01에서 1.02로 바뀌는 등 변경되는 경우에는 모듈에 새 cmdlet이 추가되는 등의 기능 수준 변경이 적용된 것입니다.
+- 두 번째 숫자가 1.1에서 1.2로 바뀌는 등 변경되는 경우에는 모듈에 새 cmdlet이 추가되는 등의 기능 수준 변경이 적용된 것입니다.
 - 세 번째 숫자가 변경되는 경우에는 새 매개 변수, 업데이트된 샘플, 새 테스트 등의 일반적인 변경 내용이 있는 것입니다.
 - PowerShell은 버전을 나열할 때 버전을 문자열로 정렬하므로 1.01.0이 1.001.0보다 더 큰 것으로 간주됩니다.
 
