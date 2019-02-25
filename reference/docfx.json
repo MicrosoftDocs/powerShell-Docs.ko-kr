@@ -1,248 +1,130 @@
 {
-  "build": {
-    "content": [
-      {
-        "files": [
-          "bread-pscore/toc.yml"
-        ]
-      },
-      {
-        "files": [
-          "toc.yml"
+    "build": {
+        "content": [
+            { "files": ["bread/toc.yml"], "dest": "scripting" },
+
+            { "files": ["toc.yml"], "src": "docs-conceptual", "version": "powershell-3.0", "dest": "scripting/powershell-3.0" },
+            { "files": ["**/*.md"], "src": "docs-conceptual", "version": "powershell-3.0", "dest": "scripting" },
+            { "files": ["toc.yml"], "src": "3.0", "version": "powershell-3.0", "dest": "module/psdocs" },
+            { "files": ["**/*.md"], "src": "3.0", "version": "powershell-3.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+
+            { "files": ["toc.yml"], "src": "docs-conceptual", "version": "powershell-4.0", "dest": "scripting/powershell-4.0" },
+            { "files": ["**/*.md"], "src": "docs-conceptual", "version": "powershell-4.0", "dest": "scripting" },
+            { "files": ["toc.yml"], "src": "4.0", "version": "powershell-4.0", "dest": "module/psdocs" },
+            { "files": ["**/*.md"], "src": "4.0", "version": "powershell-4.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+
+            { "files": ["toc.yml"], "src": "docs-conceptual", "version": "powershell-5.0", "dest": "scripting/powershell-5.0" },
+            { "files": ["**/*.md"], "src": "docs-conceptual", "version": "powershell-5.0", "dest": "scripting" },
+            { "files": ["toc.yml"], "src": "5.0", "version": "powershell-5.0", "dest": "module/psdocs" },
+            { "files": ["**/*.md"], "src": "5.0", "version": "powershell-5.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+
+            { "files": ["toc.yml"], "src": "docs-conceptual", "version": "powershell-5.1", "dest": "scripting/powershell-5.1" },
+            { "files": ["**/*.md"], "src": "docs-conceptual", "version": "powershell-5.1", "dest": "scripting" },
+            { "files": ["toc.yml"], "src": "5.1", "version": "powershell-5.1", "dest": "module/psdocs" },
+            { "files": ["**/*.md"], "src": "5.1", "version": "powershell-5.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
+
+            { "files": ["toc.yml"], "src": "docs-conceptual", "version": "powershell-6", "dest": "scripting/powershell-6" },
+            { "files": ["**/*.md"], "src": "docs-conceptual", "version": "powershell-6", "dest": "scripting" },
+            { "files": ["toc.yml"], "src": "6", "version": "powershell-6", "dest": "module/psdocs" },
+            { "files": ["**/*.md"], "src": "6", "version": "powershell-6", "exclude": ["docs-conceptual/**"], "dest": "module" },
+
+            { "files": ["**/*.md"], "src": "virtual-directory", "dest": "scripting" },
+            { "files": ["**/*.md"], "src": "virtual-directory-module", "dest": "module" }
         ],
-        "src": "docs-conceptual",
-        "version": "powershell-3.0",
-        "dest": "scripting/powershell-3.0"
-      },
-      {
-        "files": [
-          "**/*.md"
+        "resource": [
+            { "files": ["**/images/**", "**/*.png", "**/*.gif", "**/*.jpeg", "**/*.jpg", "**/*.svg"], "exclude": ["**/obj/**", "**/includes/**"] },
+            { "files": ["**/images/**", "**/*.png", "**/*.gif", "**/*.jpeg", "**/*.jpg", "**/*.svg"], "exclude": ["**/obj/**", "**/includes/**"], "version": "powershell-3.0" },
+            { "files": ["**/images/**", "**/*.png", "**/*.gif", "**/*.jpeg", "**/*.jpg", "**/*.svg"], "exclude": ["**/obj/**", "**/includes/**"], "version": "powershell-4.0" },
+            { "files": ["**/images/**", "**/*.png", "**/*.gif", "**/*.jpeg", "**/*.jpg", "**/*.svg"], "exclude": ["**/obj/**", "**/includes/**"], "version": "powershell-5.0" },
+            { "files": ["**/images/**", "**/*.png", "**/*.gif", "**/*.jpeg", "**/*.jpg", "**/*.svg"], "exclude": ["**/obj/**", "**/includes/**"], "version": "powershell-5.1" },
+            { "files": ["**/images/**", "**/*.png", "**/*.gif", "**/*.jpeg", "**/*.jpg", "**/*.svg"], "exclude": ["**/obj/**", "**/includes/**"], "version": "powershell-6" }
         ],
-        "src": "docs-conceptual",
-        "version": "powershell-3.0",
-        "dest": "scripting"
-      },
-      {
-        "files": [
-          "toc.yml"
-        ],
-        "src": "3.0",
-        "version": "powershell-3.0",
-        "dest": "module/psdocs"
-      },
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "src": "3.0",
-        "version": "powershell-3.0",
-        "exclude": [
-          "docs-conceptual/**"
-        ],
-        "dest": "module"
-      },
-      {
-        "files": [
-          "toc.yml"
-        ],
-        "src": "docs-conceptual",
-        "version": "powershell-4.0",
-        "dest": "scripting/powershell-4.0"
-      },
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "src": "docs-conceptual",
-        "version": "powershell-4.0",
-        "dest": "scripting"
-      },
-      {
-        "files": [
-          "toc.yml"
-        ],
-        "src": "4.0",
-        "version": "powershell-4.0",
-        "dest": "module/psdocs"
-      },
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "src": "4.0",
-        "version": "powershell-4.0",
-        "exclude": [
-          "docs-conceptual/**"
-        ],
-        "dest": "module"
-      },
-      {
-        "files": [
-          "toc.yml"
-        ],
-        "src": "docs-conceptual",
-        "version": "powershell-5.0",
-        "dest": "scripting/powershell-5.0"
-      },
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "src": "docs-conceptual",
-        "version": "powershell-5.0",
-        "dest": "scripting"
-      },
-      {
-        "files": [
-          "toc.yml"
-        ],
-        "src": "5.0",
-        "version": "powershell-5.0",
-        "dest": "module/psdocs"
-      },
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "src": "5.0",
-        "version": "powershell-5.0",
-        "exclude": [
-          "docs-conceptual/**"
-        ],
-        "dest": "module"
-      },
-      {
-        "files": [
-          "toc.yml"
-        ],
-        "src": "docs-conceptual",
-        "version": "powershell-5.1",
-        "dest": "scripting/powershell-5.1"
-      },
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "src": "docs-conceptual",
-        "version": "powershell-5.1",
-        "dest": "scripting"
-      },
-      {
-        "files": [
-          "toc.yml"
-        ],
-        "src": "5.1",
-        "version": "powershell-5.1",
-        "dest": "module/psdocs"
-      },
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "src": "5.1",
-        "version": "powershell-5.1",
-        "exclude": [
-          "docs-conceptual/**"
-        ],
-        "dest": "module"
-      },
-      {
-        "files": [
-          "toc.yml"
-        ],
-        "src": "docs-conceptual",
-        "version": "powershell-6",
-        "dest": "scripting/powershell-6"
-      },
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "src": "docs-conceptual",
-        "version": "powershell-6",
-        "dest": "scripting"
-      },
-      {
-        "files": [
-          "toc.yml"
-        ],
-        "src": "6",
-        "version": "powershell-6",
-        "dest": "module/psdocs"
-      },
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "src": "6",
-        "version": "powershell-6",
-        "exclude": [
-          "docs-conceptual/**"
-        ],
-        "dest": "module"
-      },
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "src": "virtual-directory",
-        "dest": "scripting"
-      },
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "src": "virtual-directory-module",
-        "dest": "module"
-      }
-    ],
-    "resource": [
-      {
-        "files": [
-          "**/*.png",
-          "**/*.jpg"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**"
-        ]
-      }
-    ],
-    "versions": {
-      "powershell-3.0": {
-        "dest": "powershell-3.0"
-      },
-      "powershell-4.0": {
-        "dest": "powershell-4.0"
-      },
-      "powershell-5.0": {
-        "dest": "powershell-5.0"
-      },
-      "powershell-5.1": {
-        "dest": "powershell-5.1"
-      },
-      "powershell-6": {
-        "dest": "powershell-6"
-      }
-    },
-    "overwrite": [],
-    "externalReference": [],
-    "globalMetadata": {
-      "breadcrumb_path": "/powershell/bread-pscore/toc.json",
-      "uhfHeaderId": "MSDocsHeader-Powershell",
-      "apiPlatform": "powershell",
-      "ms.devlang": "powershell",
-      "ROBOTS": "INDEX, FOLLOW",
-      "ms.prod": "powershell",
-      "ms.technology": "powershell",
-      "ms.topic": "reference",
-      "manager": "carmonm",
-      "ms.tgt_pltfr": "windows, macos, linux",
-      "author": "juanpablojofre",
-      "ms.author": "jpjofre",
-      "bilingual_type": "hover over"
-    },
-    "fileMetadata": {},
+        "versions": {
+            "powershell-3.0": { "dest": "powershell-3.0" },
+            "powershell-4.0": { "dest": "powershell-4.0" },
+            "powershell-5.0": { "dest": "powershell-5.0" },
+            "powershell-5.1": { "dest": "powershell-5.1" },
+            "powershell-6": { "dest": "powershell-6" }
+        },
+        "overwrite": [],
+        "externalReference": [],
+        "globalMetadata": {
+            "bilingual_type": "hover over"
+            "breadcrumb_path": "/powershell/scripting/bread/toc.json",
+            "uhfHeaderId": "MSDocsHeader-Powershell",
+            "apiPlatform": "powershell",
+            "ms.devlang": "powershell",
+            "ROBOTS": "INDEX, FOLLOW",
+        },
+        "fileMetadata": {
+            "ms.prod": { "**/**.md": "powershell" },
+            "ms.technology": {
+                "3.0/**.md": "powershell-cmdlets",
+                "4.0/**.md": "powershell-cmdlets",
+                "5.0/**.md": "powershell-cmdlets",
+                "5.1/**.md": "powershell-cmdlets",
+                "6/**.md": "powershell-cmdlets",
+                "docs-conceptual/**.md": "powershell-conceptual"
+            },
+            "ms.topic": {
+                "3.0/**.md": "reference",
+                "4.0/**.md": "reference",
+                "5.0/**.md": "reference",
+                "5.1/**.md": "reference",
+                "6/**.md": "reference",
+                "docs-conceptual/**.md": "conceptual"
+            },
+            "manager": { "**/**.md": "carmonm" },
+            "ms.tgt_pltfr": { "**/**.md": "windows, macos, linux" },
+            "author": {
+                "**/CimCmdlets/**.md": "SteveL-MSFT",
+                "**/ISE/**.md": "SteveL-MSFT",
+                "**/Microsoft.PowerShell.Archive/**.md": "anmenaga",
+                "**/Microsoft.PowerShell.Core/**.md": "SteveL-MSFT",
+                "**/Microsoft.PowerShell.Diagnostics/**.md": "SteveL-MSFT",
+                "**/Microsoft.PowerShell.Host/**.md": "SteveL-MSFT",
+                "**/Microsoft.PowerShell.LocalAccounts/**.md": "SteveL-MSFT",
+                "**/Microsoft.PowerShell.Management/**.md": "daxian-dbw",
+                "**/Microsoft.PowerShell.ODataUtils/**.md": "anmenaga",
+                "**/Microsoft.PowerShell.Operation.Validation/**.md": "JamesWTruher",
+                "**/Microsoft.PowerShell.Security/**.md": "TravisEz13",
+                "**/Microsoft.PowerShell.Utility/**.md": "JamesWTruher",
+                "**/Microsoft.WSMan.Management/**.md": "PaulHigin",
+                "**/PackageManagement/**.md": "edyoung",
+                "**/PowerShellGet/**.md": "edyoung",
+                "**/PSDesiredStateConfiguration/**.md": "nitinbps",
+                "**/PSDiagnostics/**.md": "SteveL-MSFT",
+                "**/PSReadline/**.md": "SteveL-MSFT",
+                "**/PSScheduledJob/**.md": "SteveL-MSFT",
+                "**/PSWorkflow/**.md": "SteveL-MSFT",
+                "**/PSWorkflowUtility/**.md": "SteveL-MSFT",
+                "docs-conceptual/**.md": "joeyaiello"
+            },
+            "ms.author": {
+                "**/CimCmdlets/**.md": "slee",
+                "**/ISE/**.md": "slee",
+                "**/Microsoft.PowerShell.Archive/**.md": "anmenaga",
+                "**/Microsoft.PowerShell.Core/**.md": "slee",
+                "**/Microsoft.PowerShell.Diagnostics/**.md": "slee",
+                "**/Microsoft.PowerShell.Host/**.md": "slee",
+                "**/Microsoft.PowerShell.LocalAccounts/**.md": "slee",
+                "**/Microsoft.PowerShell.Management/**.md": "dongbow",
+                "**/Microsoft.PowerShell.ODataUtils/**.md": "anmenaga",
+                "**/Microsoft.PowerShell.Operation.Validation/**.md": "jimtru",
+                "**/Microsoft.PowerShell.Security/**.md": "tplunk",
+                "**/Microsoft.PowerShell.Utility/**.md": "jimtru",
+                "**/Microsoft.WSMan.Management/**.md": "paulhi",
+                "**/PackageManagement/**.md": "edyoung",
+                "**/PowerShellGet/**.md": "edyoung",
+                "**/PSDesiredStateConfiguration/**.md": "nitingup",
+                "**/PSDiagnostics/**.md": "slee",
+                "**/PSReadline/**.md": "slee",
+                "**/PSScheduledJob/**.md": "slee",
+                "**/PSWorkflow/**.md": "slee",
+                "**/PSWorkflowUtility/**.md": "slee",
+                "docs-conceptual/**.md": "jaiello"
+            }
+        },
         "template": [],
         "dest": "pscore-reference",
         "markdownEngineName": "markdig"
