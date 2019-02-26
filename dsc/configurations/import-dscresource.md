@@ -2,16 +2,16 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: Import-DSCResource 사용
-ms.openlocfilehash: f22c741969b1429074e7307a00a5c014cf563089
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
+ms.openlocfilehash: ee0b2f0469c6507c8f0148138198597a9e57cdd7
+ms.sourcegitcommit: c581c4c8036edf55147e7bce4b00c860da6c5a8b
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265504"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803415"
 ---
 # <a name="using-import-dscresource"></a>Import-DSCResource 사용
 
-`Import-DScResource` 구성 스크립트 블록 내부 에서만 사용할 수 있는 동적 키워드가입니다. `Import-DSCResource` 구성에 필요한 모든 리소스를 가져오기 위해 키워드입니다. 아래에 있는 리소스 `$phsome` 자동으로 가져와집니다를 명시적으로 사용 되는 모든 리소스를 가져와야 하는 모범 사례는 여전히 간주 하지만 하 [구성](Configurations.md)합니다.
+`Import-DScResource` 구성 스크립트 블록 내부 에서만 사용할 수 있는 동적 키워드가입니다. `Import-DSCResource` 구성에 필요한 모든 리소스를 가져오기 위해 키워드입니다. 아래에 있는 리소스 `$pshome` 자동으로 가져와집니다를 명시적으로 사용 되는 모든 리소스를 가져와야 하는 모범 사례는 여전히 간주 하지만 하 [구성](Configurations.md)합니다.
 
 구문은 `Import-DSCResource` 아래에 표시 됩니다.  모듈 이름으로 지정, 경우 새 줄에 나열 하는 요구 사항이 있습니다.
 
