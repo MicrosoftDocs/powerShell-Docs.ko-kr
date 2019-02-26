@@ -49,7 +49,7 @@
         "overwrite": [],
         "externalReference": [],
         "globalMetadata": {
-            "bilingual_type": "hover over"
+            "bilingual_type": "hover over",
             "breadcrumb_path": "/powershell/scripting/bread/toc.json",
             "uhfHeaderId": "MSDocsHeader-Powershell",
             "apiPlatform": "powershell",
