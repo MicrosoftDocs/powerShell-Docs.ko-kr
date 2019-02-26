@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
-title: 컴퍼지션 및 공동 작업에 대한 고급 DSC 작성
-ms.openlocfilehash: 3e40ba94de0a53c1c9663553c4ec443b5e0df3fd
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+title: CI/CD 파이프라인에서 DSC의 역할 이해
+ms.openlocfilehash: 7aec414b3d8e61d1daa1ce796184ac34dbbb43ce
+ms.sourcegitcommit: c581c4c8036edf55147e7bce4b00c860da6c5a8b
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681803"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803381"
 ---
-# <a name="advanced-dsc-authoring-for-composition-and-collaboration"></a>컴퍼지션 및 공동 작업에 대한 고급 DSC 작성
+# <a name="understanding-dscs-role-in-a-cicd-pipeline"></a>CI/CD 파이프라인에서 DSC의 역할 이해
 
 이 문서에서는 구성 및 리소스를 결합 하는 데 사용할 수 있는 방법의 유형을 설명합니다.
 각 시나리오의 목표는 서버 배포 최종 상태에 연결하기 위해 여러 구성을 사용하는 경우 복잡성을 줄이기 위한 것으로 동일합니다.
