@@ -2,12 +2,12 @@
 title: PowerShell 개발에 Visual Studio 코드 사용
 description: PowerShell 개발에 Visual Studio 코드 사용
 ms.date: 08/06/2018
-ms.openlocfilehash: 03f370d0906790b573ea42290b9ccdec2cf84f2e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 1e9b9d811a39656327af2810bd6dc8aaf3fde3a4
+ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681463"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251390"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>PowerShell 개발에 Visual Studio 코드 사용
 
@@ -116,17 +116,28 @@ Visual Studio Code에는 다음 구성 설정을 권장합니다.
     "editor.renderWhitespace": "all",
     "editor.renderControlCharacters": true,
     "omnisharp.projectLoadTimeout": 120,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "files.encoding": "utf8bom",
+    "files.autoGuessEncoding": true
 }
 ```
+
+모든 파일 형식에 영향을 하기 위해 이러한 설정을 사용 하지 않으려는 경우 VSCode 언어별 구성을 수도 있습니다. 설정에 배치 하 여 특정 언어 설정이 만들기를 `[<language-name>]` 필드입니다. 예:
+
+```json
+"[powershell]": {
+    "files.encoding": "utf8bom",
+    "files.autoGuessEncoding": true
+}
+```
+
+파일에 대 한 자세한 내용은 참조 VS Code에서 인코딩을 [파일 인코딩 이해](understanding-file-encoding.md)합니다.
 
 ## <a name="debugging-with-visual-studio-code"></a>Visual Studio Code 디버깅
 
 ### <a name="no-workspace-debugging"></a>작업 공간 없이 디버깅
 
-Visual Studio Code 버전 1.9부터 PowerShell 스크립트가 포함된 폴더를 열지 않고도 PowerShell 스크립트를 디버깅할 수 있습니다.
-**파일->파일 열기...** 로 PowerShell 스크립트 파일을 열고 특정 줄에 중단점을 설정한 후(F9 키 누름) F5 키를 눌러 디버깅을 시작하기만 하면 됩니다.
-디버거, 단계, 디버깅 다시 시작 및 중지로 나눌 수 있는 디버그 작업 창이 표시됩니다.
+Visual Studio Code 버전 1.9부터 PowerShell 스크립트가 포함된 폴더를 열지 않고도 PowerShell 스크립트를 디버깅할 수 있습니다. PowerShell 스크립트 파일을 엽니다 **파일에는 열려 있는 파일->...** ((f9 키 누름) 줄에 중단점을 설정 하 고 다음 f5 키를 눌러 디버깅을 시작 합니다. 디버거, 단계, 디버깅 다시 시작 및 중지로 나눌 수 있는 디버그 작업 창이 표시됩니다.
 
 ### <a name="workspace-debugging"></a>작업 영역에서 디버깅
 
@@ -183,7 +194,7 @@ Visual Studio Code 버전 1.9부터 PowerShell 스크립트가 포함된 폴더�
 
   이는 일반적인 디버그 시나리오를 나타냅니다.
   그러나 편집기에서 이 파일을 열면 **구성 추가...** 단추가 표시됩니다.
-  이 단추를 눌러 더 많은 PowerShell 디버그 구성을 추가할 수 있습니다. 추가할 유용한 구성 한 가지는 **PowerShell: 스크립트 시작**합니다.
+  이 단추를 눌러 더 많은 PowerShell 디버그 구성을 추가할 수 있습니다. 한 가지 간편한 구성은 **PowerShell: 스크립트 시작**입니다.
   이 구성을 사용하면 편집기에서 현재 어떤 파일이 활성화되어 있는지 관계없이 F5 키를 누를 때마다 시작되어야 하는 선택적 인수를 갖는 특정 파일을 지정할 수 있습니다.
 
   디버그 구성이 설정되면 **디버그** 보기의 도구 모음에 있는 디버그 구성 드롭다운에서 항목을 선택하여 디버그 세션 중에 사용할 구성을 선택할 수 있습니다.
