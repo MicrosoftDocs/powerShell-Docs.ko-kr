@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows PowerShell Programmer's Guide, providers
 ms.assetid: 863e48e9-7206-4c6a-a59a-2ab2d30396bc
 caps.latest.revision: 5
-ms.openlocfilehash: a114a4b0d5a5bfcc0d072f83f0e59ca6d329a172
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 286df63e75d6372cb41c974e60e79b02bd13686e
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862409"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429672"
 ---
 # <a name="how-to-create-a-windows-powershell-provider"></a>Windows PowerShell 공급자를 만드는 방법
 
@@ -33,7 +33,6 @@ Windows PowerShell 알려진된 데이터 저장소에 액세스 하는 데 사�
 
 ## <a name="accessing-the-stored-data-using-windows-powershell-paths"></a>Windows PowerShell 경로 사용 하 여 저장된 된 데이터에 액세스
 
-Windows PowerShell 공급자는 Windows PowerShell 런타임에 프로그래밍 방식으로 Windows PowerShell 경로 사용 하 여 명령에 액세스할 수 있습니다. 대부분의 경우 이러한 경로 공급자를 통해 데이터를 직접 액세스에 사용 됩니다. 그러나 일부 경로 데이터에 액세스 하려면 Windows PowerShell이 아닌 Api (응용 프로그래밍 인터페이스)를 사용 하는 cmdlet을 사용할 수 있는 공급자-내부 경로를 확인할 수 있습니다. Windows PowerShell 공급자를 Windows PowerShell 내에서 작동 하는 방법에 대 한 자세한 내용은 참조 하십시오 [Windows PowerShell 작동 방식](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)합니다.
 Windows PowerShell 공급자는 Windows PowerShell 런타임에 프로그래밍 방식으로 Windows PowerShell 경로 사용 하 여 명령에 액세스할 수 있습니다. 대부분의 경우 이러한 경로 공급자를 통해 데이터를 직접 액세스에 사용 됩니다. 그러나 일부 경로 데이터에 액세스 하려면 Windows PowerShell이 아닌 Api (응용 프로그래밍 인터페이스)를 사용 하는 cmdlet을 사용할 수 있는 공급자-내부 경로를 확인할 수 있습니다. Windows PowerShell 공급자를 Windows PowerShell 내에서 작동 하는 방법에 대 한 자세한 내용은 참조 하십시오 [Windows PowerShell 작동 방식](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)합니다.
 
 ## <a name="exposing-provider-cmdlets-using-windows-powershell-drives"></a>드라이브 공급자 Cmdlet Windows PowerShell을 사용 하 여 노출
@@ -64,8 +63,6 @@ Windows PowerShell 공급자는 가상 Windows PowerShell 드라이브를 사용
 |[Windows PowerShell 속성 공급자 만들기](./creating-a-windows-powershell-property-provider.md)|이 항목에는 데이터 저장소에 있는 항목의 속성을 조작할 수 있도록 하는 Windows PowerShell 공급자를 만드는 방법을 보여 줍니다.|
 
 ## <a name="see-also"></a>참고 항목
-
-[Windows PowerShell의 작동 원리](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
 
 [Windows PowerShell의 작동 원리](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
 

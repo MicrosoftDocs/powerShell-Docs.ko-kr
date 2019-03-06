@@ -11,19 +11,18 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], property provider
 ms.assetid: a6adca44-b94b-4103-9970-a9b414355e60
 caps.latest.revision: 5
-ms.openlocfilehash: ade8fbd38e4f4a675e825b0d8850af0379c9d211
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 4ed15dabffa933dee9becf2f839887eb9108775d
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858899"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57430012"
 ---
 # <a name="creating-a-windows-powershell-property-provider"></a>Windows PowerShell 속성 공급자 만들기
 
 이 항목에서는 사용자가 데이터 저장소에 있는 항목의 속성을 조작할 수 있는 공급자를 만드는 방법을 설명 합니다. 결과적으로이 유형의 공급자는 Windows PowerShell 속성 공급자를 라고 합니다. 예를 들어 레지스트리 공급자 레지스트리 키 항목의 속성으로 Windows PowerShell 핸들 레지스트리 키 값으로 제공 합니다. 이 유형의 공급자를 추가 해야 합니다 [System.Management.Automation.Provider.Ipropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider) .NET 클래스의 구현에 대 한 인터페이스입니다.
 
 > [!NOTE]
-> Windows PowerShell에는 Windows PowerShell 공급자를 개발 하는 데 사용할 수 있는 템플릿 파일을 제공 합니다. TemplateProvider.cs 파일은 Microsoft Windows 소프트웨어 개발 키트에 대 한 Windows Vista 및.NET Framework 3.0 런타임 구성 요소에서 사용할 수 있습니다. 다운로드 지침에 대해서 [Windows PowerShell 설치 및 Windows PowerShell SDK를 다운로드 하는 방법을](/powershell/developer/installing-the-windows-powershell-sdk)합니다.
 > Windows PowerShell에는 Windows PowerShell 공급자를 개발 하는 데 사용할 수 있는 템플릿 파일을 제공 합니다. TemplateProvider.cs 파일은 Microsoft Windows 소프트웨어 개발 키트에 대 한 Windows Vista 및.NET Framework 3.0 런타임 구성 요소에서 사용할 수 있습니다. 다운로드 지침에 대해서 [Windows PowerShell 설치 및 Windows PowerShell SDK를 다운로드 하는 방법을](/powershell/developer/installing-the-windows-powershell-sdk)합니다.
 >
 > 다운로드 한 템플릿에 사용할 수 있습니다 합니다  **\<PowerShell 샘플 >** 디렉터리입니다. 이 파일의 복사본을 확인 하 고 필요 하지 않은 모든 기능을 제거 하 여 새 Windows PowerShell 공급자를 만들기 위한 복사본을 사용 해야 합니다.
@@ -150,7 +149,6 @@ ms.locfileid: "56858899"
 ## <a name="building-the-windows-powershell-provider"></a>Windows PowerShell 공급자 작성
 
 참조 [Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법을](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)합니다.
-참조 [Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법을](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)합니다.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -159,9 +157,5 @@ ms.locfileid: "56858899"
 [디자인 Your Windows PowerShell 공급자](./designing-your-windows-powershell-provider.md)
 
 [확장 개체 형식 및 서식 지정](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
-
-[확장 개체 형식 및 서식 지정](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
-
-[Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)

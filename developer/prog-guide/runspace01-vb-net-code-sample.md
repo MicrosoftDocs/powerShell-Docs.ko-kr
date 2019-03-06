@@ -8,16 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 12ee5382-95ba-41c7-8291-7f69a6f63514
 caps.latest.revision: 7
-ms.openlocfilehash: fbc90a6736d841fe184b86ab143809ad23c7977a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: c45e802605bf0b4fd84a8847787bcc937b7f417b
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856059"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429774"
 ---
 # <a name="runspace01-vbnet-code-sample"></a>Runspace01(VB.NET) 코드 샘플
 
-에 설명 된 runspace에 대 한 코드 예제는 다음과 같습니다 [콘솔 응용 프로그램을 실행 지정 명령 만들기](http://msdn.microsoft.com/en-us/793a6570-a072-4799-840b-172f28ce620e)합니다. 이렇게 하려면 응용 프로그램 runspace를 호출 하 고 명령을 호출 합니다. (이 응용 프로그램에서 runspace 구성 정보를 지정 하지도 않습니다이 명시적으로 파이프라인 만들기는 note). 호출 되는 명령입니다는 `Get-Process` cmdlet.
 에 설명 된 runspace에 대 한 코드 예제는 다음과 같습니다 [콘솔 응용 프로그램을 실행 지정 명령 만들기](http://msdn.microsoft.com/en-us/793a6570-a072-4799-840b-172f28ce620e)합니다. 이렇게 하려면 응용 프로그램 runspace를 호출 하 고 명령을 호출 합니다. (이 응용 프로그램에서 runspace 구성 정보를 지정 하지도 않습니다이 명시적으로 파이프라인 만들기는 note). 호출 되는 명령입니다는 `Get-Process` cmdlet.
 
 ## <a name="code-sample"></a>코드 예제

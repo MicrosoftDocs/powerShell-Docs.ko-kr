@@ -11,12 +11,12 @@ helpviewer_keywords:
 - container providers [PowerShell Programmer's Guide]
 ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
 caps.latest.revision: 5
-ms.openlocfilehash: 8c111f8f2943043e4ad2a6a8677db4afe1b3cdab
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: e0d83a742eae2bcde2e691860a5f2b3e5862d2de
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863169"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57430042"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Windows PowerShell 컨테이너 공급자 만들기
 
@@ -25,7 +25,6 @@ ms.locfileid: "56863169"
 여러 수준의 데이터 저장소에서 사용할 수 있는 공급자는 Windows PowerShell 컨테이너 공급자 라고 합니다. 그러나 하나의 컨테이너 (중첩 된 컨테이너 없음) 항목을 사용 하 여 필요한 경우에 Windows PowerShell 컨테이너 공급자를 사용할 수 있는지 유의 합니다. 중첩 된 컨테이너의 경우 Windows PowerShell 탐색 공급자를 구현 해야 합니다. Windows PowerShell 탐색 공급자를 구현 하는 방법에 대 한 자세한 내용은 참조 하십시오 [Windows PowerShell 탐색 공급자 만들기](./creating-a-windows-powershell-navigation-provider.md)합니다.
 
 > [!NOTE]
-> 다운로드할 수 있습니다는 C# Microsoft Windows 소프트웨어 개발 키트에 대 한 Windows Vista 및.NET Framework 3.0 런타임 구성 요소를 사용 하 여이 공급자에 대 한 원본 파일 (AccessDBSampleProvider04.cs). 다운로드 지침에 대해서 [Windows PowerShell 설치 및 Windows PowerShell SDK를 다운로드 하는 방법을](/powershell/developer/installing-the-windows-powershell-sdk)합니다.
 > 다운로드할 수 있습니다는 C# Microsoft Windows 소프트웨어 개발 키트에 대 한 Windows Vista 및.NET Framework 3.0 런타임 구성 요소를 사용 하 여이 공급자에 대 한 원본 파일 (AccessDBSampleProvider04.cs). 다운로드 지침에 대해서 [Windows PowerShell 설치 및 Windows PowerShell SDK를 다운로드 하는 방법을](/powershell/developer/installing-the-windows-powershell-sdk)합니다.
 >
 > 다운로드 한 소스 파일에서 사용할 수는  **\<PowerShell 샘플 >** 디렉터리입니다.
@@ -418,7 +417,6 @@ protected override bool HasChildItems( string path )
 ## <a name="building-the-windows-powershell-provider"></a>Windows PowerShell 공급자 작성
 
 참조 [Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법을](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)합니다.
-참조 [Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법을](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)합니다.
 
 ## <a name="testing-the-windows-powershell-provider"></a>Windows PowerShell 공급자 테스트
 
@@ -537,8 +535,6 @@ Windows PowerShell을 사용 하 여 Windows PowerShell 공급자가 등록 하�
 [Windows PowerShell 항목 공급자 구현](./creating-a-windows-powershell-item-provider.md)
 
 [Windows PowerShell 탐색 공급자 구현](./creating-a-windows-powershell-navigation-provider.md)
-
-[Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
