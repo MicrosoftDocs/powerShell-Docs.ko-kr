@@ -2,12 +2,12 @@
 title: VSCode 및 PowerShell에서 파일 인코딩 이해
 description: VSCode 및 PowerShell에서 파일 인코딩 구성
 ms.date: 02/28/2019
-ms.openlocfilehash: f3b133b4bee7688821a5960429e2f26b69b01e12
-ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
-ms.translationtype: HT
+ms.openlocfilehash: 9cf445ebd0c2bb2dbdf4438f02dafe3df3a5d1e2
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251479"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429808"
 ---
 # <a name="understanding-file-encoding-in-vscode-and-powershell"></a>VSCode 및 PowerShell에서 파일 인코딩 이해
 
@@ -68,10 +68,10 @@ VSCode 인코딩합니다 문자 때문에이 문제가 발생 `–` u t F-8 바
 PowerShell 확장 스크립트는 여러 가지 방법으로에서 상호 작용 합니다.
 
 1. VSCode에서 스크립트를 편집 하면 내용은 VSCode에서 확장 프로그램에 전송 됩니다. 합니다 [언어 서버 프로토콜][] u t F-8이이 콘텐츠를 전송 하도록 지정 합니다. 따라서 잘못 된 인코딩이 가져오려는 확장에 대 한 가능한 아닙니다.
-2. 스크립트는 통합 콘솔에서 직접 실행 되 면 읽기 파일에서 PowerShell에서 직접. VSCode의에서 다른 Tf PowerShell 인코딩이, 무언가 문제가 발생할 수 있는 여기입니다.
+2. 스크립트는 통합 콘솔에서 직접 실행 되 면 읽기 파일에서 PowerShell에서 직접. PowerShell의 인코딩 VSCode의 다를 경우 수 문제가 여기 있습니다.
 3. VSCode에서 열려 있는 스크립트 VSCode에서 열려 있지 않은 다른 스크립트를 참조 하는 경우 확장 파일 시스템에서 해당 스크립트의 콘텐츠를 로드로 대체 합니다. PowerShell 확장 u t F-8 인코딩, 기본적으로 사용 되지만 사용 [바이트 순서 표시가][], 또는 BOM에 검색 기능이 올바른 인코딩을 선택 합니다.
 
-BOM 없는 형식의 인코딩을 가정 하는 경우 문제가 발생 (같은 [UTF-8][] BOM을 사용 하 여 및 [Windows-1252][]).
+BOM 없는 형식의 인코딩을 가정 하는 경우 문제가 발생 (같은 [utf-8][] BOM을 사용 하 여 및 [Windows-1252][]).
 PowerShell 확장 기본값은 u t F-8입니다. 확장은 VSCode의 인코딩 설정을 변경할 수 없습니다.
 자세한 내용은 [#824 발급](https://github.com/Microsoft/vscode/issues/824)합니다.
 
@@ -80,7 +80,7 @@ PowerShell 확장 기본값은 u t F-8입니다. 확장은 VSCode의 인코딩 �
 여러 시스템 및 응용 프로그램 마다 다른 인코딩을 사용할 수 있습니다.
 
 - .NET Standard에 Linux 분야에는 웹에서 u t F-8는 이제 기준 인코딩입니다.
-- 많은.NET Framework 응용 프로그램 사용 [UTF-16][]합니다. 기록을 위해가 "Unicode" 라고에 이제 이라는 용어를 광범위 [표준](https://en.wikipedia.org/wiki/Unicode) utf-8 및 u t F-16을 모두 포함 합니다.
+- 많은.NET Framework 응용 프로그램 사용 [utf-16][]합니다. 기록을 위해가 "Unicode" 라고에 이제 이라는 용어를 광범위 [표준](https://en.wikipedia.org/wiki/Unicode) utf-8 및 u t F-16을 모두 포함 합니다.
 - Windows에서 유니코드는 많은 네이티브 응용 프로그램 계속 기본적으로 Windows-1252를 사용 합니다.
 
 유니코드 인코딩도의 개념이 바이트 순서 표시 (BOM). 텍스트를 사용 하 여 인코딩을 디코더를 구별 하는 텍스트의 시작 부분에 Bom이 발생 합니다. 멀티 바이트 인코딩은 BOM 수도 나타냅니다 [엔디언](https://en.wikipedia.org/wiki/Endianness) 인코딩. Bom은 거의 텍스트는 유니코드 BOM이 있는 경우 적절 한 추측을 허용 하 고 유니코드가 아닌 텍스트에서 발생 하는 바이트 수 있도록 나타냅니다.
