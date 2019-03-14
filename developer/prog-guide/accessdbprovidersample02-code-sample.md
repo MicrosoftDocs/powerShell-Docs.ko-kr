@@ -8,19 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b89a4903-3efc-4b08-9b20-2baadf1d1b66
 caps.latest.revision: 6
-ms.openlocfilehash: 22a7bdf43a294d1e28f78ccf3412173892fdd53e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 67a169bfac0b0fc90e6ccd276d3d3592d1b70bb0
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856659"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795490"
 ---
 # <a name="accessdbprovidersample02-code-sample"></a>AccessDbProviderSample02 코드 샘플
 
 다음 코드에 설명 된 Windows PowerShell 공급자의 구현을 보여 줍니다 [Windows PowerShell 드라이브 공급자 만들기](./creating-a-windows-powershell-drive-provider.md)합니다. 이 구현 경로 만든 다음, Access 데이터베이스에 대 한 연결을 사용 하면 드라이브를 제거 합니다.
 
 > [!NOTE]
-> 다운로드할 수 있습니다는 C# Microsoft Windows 소프트웨어 개발 키트에 대 한 Windows Vista 및 Microsoft.NET Framework 3.0 런타임 구성 요소를 사용 하 여이 공급자에 대 한 원본 파일 (AccessDBSampleProvider02.cs). 다운로드 지침에 대해서 [Windows PowerShell 설치 및 Windows PowerShell SDK를 다운로드 하는 방법을](/powershell/developer/installing-the-windows-powershell-sdk)합니다.
 > 다운로드할 수 있습니다는 C# Microsoft Windows 소프트웨어 개발 키트에 대 한 Windows Vista 및 Microsoft.NET Framework 3.0 런타임 구성 요소를 사용 하 여이 공급자에 대 한 원본 파일 (AccessDBSampleProvider02.cs). 다운로드 지침에 대해서 [Windows PowerShell 설치 및 Windows PowerShell SDK를 다운로드 하는 방법을](/powershell/developer/installing-the-windows-powershell-sdk)합니다.
 >
 > 다운로드 한 소스 파일에서 사용할 수는  **\<PowerShell 샘플 >** 디렉터리입니다.

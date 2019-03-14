@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8c44df35-b22b-41b0-b34c-ba7ce17b889b
 caps.latest.revision: 7
-ms.openlocfilehash: e11197e4f919519945ad3846dfef99c9e292aa9a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 4b79b533e9fb926e851c9d0eebc932aec80ad959
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862139"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794317"
 ---
 # <a name="remote-runspace-samples"></a>Remote Runspace 샘플
 
@@ -23,7 +23,6 @@ ms.locfileid: "56862139"
 
 > [!NOTE]
 > 원격 컴퓨터에서 명령을 실행 하는 방법에 대 한 자세한 내용은 참조 하세요. [Windows PowerShell 원격](https://msdn.microsoft.com/en-us/library/ee706563(v=vs.85).aspx)합니다.
-> 원격 컴퓨터에서 명령을 실행 하는 방법에 대 한 자세한 내용은 [Windows PowerShell 원격 작업]을 참조 하세요. (https://msdn.microsoft.com/en-us/library/ee706563(v=vs.85)합니다.
 
  [RemoteRunspace01 샘플](./remoterunspace01-sample.md) 원격으로 연결 하는 데 사용 되는 원격 runspace를 만드는 방법을이 보여 줍니다.
 

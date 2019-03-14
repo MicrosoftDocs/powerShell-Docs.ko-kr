@@ -8,16 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a2e66c86-83a7-4148-8575-c28d6d429d4f
 caps.latest.revision: 6
-ms.openlocfilehash: ad7ea457fe0f67bfa41f6bf81f36d4b2e4a76cb3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: c178c4a48f9595001bcc249d5f55886fa54bb9f2
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860149"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794448"
 ---
 # <a name="list-view-groupby"></a>목록 보기(GroupBy)
 
-이 예제에서는 목록의 행 그룹으로 구분 하는 목록 뷰를 구현 하는 방법을 보여 줍니다. 이 목록 보기의 속성을 표시 합니다 [System.Serviceprocess.Servicecontroller? Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 에서 반환 된 개체를 [Get-service](/powershell/module/microsoft.powershell.management/get-service) cmdlet. 목록 뷰 구성 요소에 대 한 자세한 내용은 참조 [목록 뷰를 만들면](./creating-a-list-view.md)합니다.
 이 예제에서는 목록의 행 그룹으로 구분 하는 목록 뷰를 구현 하는 방법을 보여 줍니다. 이 목록 보기의 속성을 표시 합니다 [System.Serviceprocess.Servicecontroller? Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 에서 반환 된 개체를 [Get-service](/powershell/module/Microsoft.PowerShell.Management/Get-Service) cmdlet. 목록 뷰 구성 요소에 대 한 자세한 내용은 참조 [목록 뷰를 만들면](./creating-a-list-view.md)합니다.
 
 ### <a name="to-load-this-formatting-file"></a>이 서식 파일을 로드 하려면

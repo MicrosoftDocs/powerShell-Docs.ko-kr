@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 459b6d0f-d596-4269-9113-915a283c1e28
 caps.latest.revision: 10
-ms.openlocfilehash: afb865b3f6fdb8be96084b3a7fc69b51b23a6d35
-ms.sourcegitcommit: c581c4c8036edf55147e7bce4b00c860da6c5a8b
+ms.openlocfilehash: e0593fa5e58c49d93eae7d0516e080b43ad7decf
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56863689"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794674"
 ---
 # <a name="host06-sample"></a>Host06 샘플
 
@@ -43,7 +43,6 @@ ms.locfileid: "56863689"
 
 - 구현 된 [System.Management.Automation.Host.Ihostuisupportsmultiplechoiceselection](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) 인터페이스입니다.
 
-- 구현 된 [System.Management.Automation.Host.Ihostsupportsinteractivesession](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) 인터페이스를 사용 하 여 대화형 원격 기능을 지원 합니다 [Enter-pssession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) 및 [ Exit-pssession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) cmdlet.
 - 구현 된 [System.Management.Automation.Host.Ihostsupportsinteractivesession](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) 인터페이스를 사용 하 여 대화형 원격 기능을 지원 합니다 [Enter-pssession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) 및 [ Exit-pssession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) cmdlet.
 
 - 토큰화 API를 사용 하 여 색상은 입력 한 대로 명령줄을 지정 합니다.

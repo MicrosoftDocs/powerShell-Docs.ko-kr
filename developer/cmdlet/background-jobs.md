@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a0ef5ac9-8254-4832-ace8-84b356c10f08
 caps.latest.revision: 13
-ms.openlocfilehash: 9aff23647e55e8c9c41c54e5b62cedc15fb28a2d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: ff4fe159eedc47fc69f4d783cd90d2b0e888c0d5
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857169"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794708"
 ---
 # <a name="background-jobs"></a>백그라운드 작업
 
@@ -21,7 +21,6 @@ ms.locfileid: "56857169"
 
 ## <a name="background-jobs-child-jobs-and-the-job-repository"></a>백그라운드 작업, 자식 작업 및 작업 저장소
 
-백그라운드 작업을 지 원하는 cmdlet에서 반환 되는 작업 개체는 작업을 정의 합니다. (합니다 [Start-job](/powershell/module/Microsoft.PowerShell.Core/Start-Job) cmdlet도 작업 개체를 반환 합니다.) 작업, 작업, 상태 정보 및 자식 작업을 지정 하는 데 사용 되는 식별자의 이름은이 정의에 포함 됩니다. 작업 작업은 수행 하지 않습니다. 각 백그라운드 작업에는 하나 이상의 자식 작업이 자식 작업 실제 작업을 수행 하기 때문에 백그라운드 작업으로 수행 됩니다 있도록 cmdlet을 실행 하면 cmdlet을 추가 해야 작업 및 자식 작업 이라고 공용 리포지토리에 *작업 리포지토리가*합니다.
 백그라운드 작업을 지 원하는 cmdlet에서 반환 되는 작업 개체는 작업을 정의 합니다. (합니다 [Start-job](/powershell/module/Microsoft.PowerShell.Core/Start-Job) cmdlet도 작업 개체를 반환 합니다.) 작업, 작업, 상태 정보 및 자식 작업을 지정 하는 데 사용 되는 식별자의 이름은이 정의에 포함 됩니다. 작업 작업은 수행 하지 않습니다. 각 백그라운드 작업에는 하나 이상의 자식 작업이 자식 작업 실제 작업을 수행 하기 때문에 백그라운드 작업으로 수행 됩니다 있도록 cmdlet을 실행 하면 cmdlet을 추가 해야 작업 및 자식 작업 이라고 공용 리포지토리에 *작업 리포지토리가*합니다.
 
 명령줄에서 백그라운드 작업은 처리 하는 방법에 대 한 자세한 내용은 다음을 참조 하세요.

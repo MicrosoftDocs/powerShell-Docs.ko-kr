@@ -8,16 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 82244fbd-07b9-47f3-805c-3fb90ebbf58a
 caps.latest.revision: 13
-ms.openlocfilehash: 31ee7222c35e82ee58d6d56f710792dbc5cb24d7
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 0d4addc0a064873701ae15c204dbd335f3374ab7
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858629"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795626"
 ---
 # <a name="windows-powershell-provider-overview"></a>Windows PowerShell 공급자 개요
 
-Windows PowerShell 공급자를 통해 모든 데이터 저장소를 탑재 된 드라이브 것 처럼 파일 시스템과 마찬가지로 노출 될 수 있습니다. 예를 들어, 기본 제공 레지스트리 공급자 있습니다 탐색할 때와 같은 레지스트리를 탐색 하는 `c` 컴퓨터의 드라이브. 공급자를 재정의할 수도 있습니다는 `Item` cmdlet (예를 들어 `Get-Item`, `Set-Item`등) 파일과 같은 데이터 저장소의 데이터를 처리할 수 있습니다 하 고 디렉터리를 파일 시스템을 탐색 하면 처리 됩니다. 공급자 및 드라이브를 Windows PowerShell에서 기본 제공 공급자에 대 한 자세한 내용은 참조 하세요. [about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers)합니다.
 Windows PowerShell 공급자를 통해 모든 데이터 저장소를 탑재 된 드라이브 것 처럼 파일 시스템과 마찬가지로 노출 될 수 있습니다. 예를 들어, 기본 제공 레지스트리 공급자 있습니다 탐색할 때와 같은 레지스트리를 탐색 하는 `c` 컴퓨터의 드라이브. 공급자를 재정의할 수도 있습니다는 `Item` cmdlet (예를 들어 `Get-Item`, `Set-Item`등) 파일과 같은 데이터 저장소의 데이터를 처리할 수 있습니다 하 고 디렉터리를 파일 시스템을 탐색 하면 처리 됩니다. 공급자 및 드라이브를 Windows PowerShell에서 기본 제공 공급자에 대 한 자세한 내용은 참조 하세요. [about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers)합니다.
 
 ## <a name="providers-and-drives"></a>공급자 및 드라이브

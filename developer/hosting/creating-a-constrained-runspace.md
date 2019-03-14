@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 59125e65-7030-40bb-9926-756120b2d952
 caps.latest.revision: 5
-ms.openlocfilehash: 3c70296cb22c325ace10dc04c8b1fd941742857b
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 29f1be6a1215219ddd16367a31f528a4f0dbc2e3
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862999"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795133"
 ---
 # <a name="creating-a-constrained-runspace"></a>제한된 runspace 만들기
 
@@ -110,7 +110,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 ## <a name="making-commands-private"></a>개인 만들기 명령
 
  또한 가능 명령을 개인 설정 하 여의 [System.Management.Automation.Commandinfo.Visibility*](/dotnet/api/System.Management.Automation.CommandInfo.Visibility) 속성을 [System.Management.Automation.Sessionstateentryvisibility.Private](/dotnet/api/System.Management.Automation.SessionStateEntryVisibility.Private) . 호스트 응용 프로그램 및 기타 명령에는 명령을 호출할 수 있지만 응용 프로그램의 사용자 수 없습니다. 다음 예제에서는 [Get-childitem](/powershell/module/Microsoft.PowerShell.Management/Get-ChildItem) 개인 명령입니다.
-또한 가능 명령을 개인 설정 하 여의 [System.Management.Automation.Commandinfo.Visibility*](/dotnet/api/System.Management.Automation.CommandInfo.Visibility) 속성을 [System.Management.Automation.Sessionstateentryvisibility.Private](/dotnet/api/System.Management.Automation.SessionStateEntryVisibility.Private) . 호스트 응용 프로그램 및 기타 명령에는 명령을 호출할 수 있지만 응용 프로그램의 사용자 수 없습니다. 다음 예제에서는 [Get-childitem](/powershell/module/Microsoft.PowerShell.Management/Get-ChildItem) 개인 명령입니다.
 
 ```csharp
 defaultSessionState = InitialSessionState.CreateDefault();

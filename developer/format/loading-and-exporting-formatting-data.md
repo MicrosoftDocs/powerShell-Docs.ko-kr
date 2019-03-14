@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a48de31-7961-4b0e-b58b-93466e38370b
 caps.latest.revision: 6
-ms.openlocfilehash: 08c64d4094d8ba6c551b454887331666f0694f11
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 86a0e8b7e8967280daa57faf5c323efcd3b1368b
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860629"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794198"
 ---
 # <a name="loading-and-exporting-formatting-data"></a>형식 지정 데이터 로드 및 내보내기
 
@@ -24,16 +24,13 @@ ms.locfileid: "56860629"
 다음 메서드를 사용 하 여 현재 세션에 형식 지정 파일을 로드할 수 있습니다.
 
 - 명령줄에서 현재 세션으로 형식 지정 파일을 가져올 수 있습니다. 사용 된 [Update-formatdata](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) 다음 절차에 설명 된 대로 cmdlet.
-- 명령줄에서 현재 세션으로 형식 지정 파일을 가져올 수 있습니다. 사용 된 [Update-formatdata](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) 다음 절차에 설명 된 대로 cmdlet.
 
-- 서식 파일을 참조 하는 모듈 매니페스트를 만들 수 있습니다. 모듈을 사용 하면 배포에 대 한 파일 서식 지정 하면 패키지 있습니다. 사용 합니다 [New-modulemanifest](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) 매니페스트를 만드는 cmdlet 및 [Import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) 현재 세션으로 모듈을 로드 하는 cmdlet입니다. 모듈에 대 한 자세한 내용은 참조 하십시오 [Windows PowerShell 모듈 작성](../module/writing-a-windows-powershell-module.md)합니다.
 - 서식 파일을 참조 하는 모듈 매니페스트를 만들 수 있습니다. 모듈을 사용 하면 배포에 대 한 파일 서식 지정 하면 패키지 있습니다. 사용 합니다 [New-modulemanifest](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) 매니페스트를 만드는 cmdlet 및 [Import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) 현재 세션으로 모듈을 로드 하는 cmdlet입니다. 모듈에 대 한 자세한 내용은 참조 하십시오 [Windows PowerShell 모듈 작성](../module/writing-a-windows-powershell-module.md)합니다.
 
 - 서식 파일을 참조 하는 스냅인 만들 수 있습니다. 사용 된 [System.Management.Automation.Pssnapin.Formats](/dotnet/api/System.Management.Automation.PSSnapIn.Formats) 서식 파일을 참조 합니다. 것 배포용 패키지 cmdlet 모듈 및 모든 관련 형식 및 형식 파일을 사용 하는 것이 좋습니다. 모듈에 대 한 자세한 내용은 참조 하십시오 [Windows PowerShell 모듈 작성](../module/writing-a-windows-powershell-module.md)합니다.
 
 - 호출 하는 경우 명령을 프로그래밍 방식으로, 여기서 명령이 실행 되는 초기 세션 상태 runspace에 형식 지정 파일 항목을 추가할 수 있습니다. 서식 파일을 추가 하는 데 사용 되는.NET 형식에 대 한 자세한 내용은 참조는 [System.Management.Automation.Runspaces.Sessionstateformatentry? Displayproperty =](/dotnet/api/System.Management.Automation.Runspaces.SessionStateFormatEntry) 클래스입니다.
 
-형식 지정 파일 로드 되 면 추가 됩니다 내부 목록에 Windows PowerShell 명령줄에서 개체를 표시할 때 사용 하는 뷰를 확인 하는. 목록의 시작 부분에 형식 지정 파일을 앞 수 또는 목록 끝에 추가할 수 있습니다. 서식 파일에이 목록에 추가 되는 위치를 파악 하는 것이 중요 Windows PowerShell 핵심 cmdlet에서 반환 되는 개체는 어떻게 변경 하려는 경우 같은 정의 된 기존 뷰를 포함 하는 개체에 대 한 뷰를 정의 하는 서식 파일을 로드 하는 경우  표시 됩니다. 개체에 대 한 전용 뷰를 정의 하는 서식 파일을 로드 하는 경우에 앞에서 설명한 방법 중 하나를 사용할 수 있습니다.  개체에 대 한 다른 뷰를 정의 하는 서식 파일을 로드 하는 경우 사용 해야 합니다 [Update-formatdata](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) cmdlet 및 목록의 시작 부분에 대 한 파일 앞에 추가 합니다.
 형식 지정 파일 로드 되 면 추가 됩니다 내부 목록에 Windows PowerShell 명령줄에서 개체를 표시할 때 사용 하는 뷰를 확인 하는. 목록의 시작 부분에 형식 지정 파일을 앞 수 또는 목록 끝에 추가할 수 있습니다. 서식 파일에이 목록에 추가 되는 위치를 파악 하는 것이 중요 Windows PowerShell 핵심 cmdlet에서 반환 되는 개체는 어떻게 변경 하려는 경우 같은 정의 된 기존 뷰를 포함 하는 개체에 대 한 뷰를 정의 하는 서식 파일을 로드 하는 경우  표시 됩니다. 개체에 대 한 전용 뷰를 정의 하는 서식 파일을 로드 하는 경우에 앞에서 설명한 방법 중 하나를 사용할 수 있습니다.  개체에 대 한 다른 뷰를 정의 하는 서식 파일을 로드 하는 경우 사용 해야 합니다 [Update-formatdata](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) cmdlet 및 목록의 시작 부분에 대 한 파일 앞에 추가 합니다.
 
 ## <a name="storing-your-formatting-file"></a>서식 파일에 저장합니다.
@@ -44,7 +41,6 @@ ms.locfileid: "56860629"
 
 1. 디스크에 대 한 서식 파일을 저장 합니다.
 
-2. 실행 합니다 [Update-formatdata](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) 다음 명령 중 하나를 사용 하 여 cmdlet.
 2. 실행 합니다 [Update-formatdata](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) 다음 명령 중 하나를 사용 하 여 cmdlet.
 
    목록 맨 앞으로는 파일 형식을 추가 하려면이 명령을 사용 하 여 합니다. 개체로 표시 되는 방식을 변경 하는 경우이 명령을 사용 합니다.
@@ -59,7 +55,6 @@ ms.locfileid: "56860629"
    Update-FormatData -AppendPath PathToFormattingFile
    ```
 
-   사용 하 여 파일을 추가 하는 [Update-formatdata](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) cmdlet을 제거할 수 없습니다 파일 목록에서 세션이 열려 있는 동안. 목록에서 서식 파일을 제거 하려면 세션을 닫아야 합니다.
    사용 하 여 파일을 추가 하는 [Update-formatdata](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) cmdlet을 제거할 수 없습니다 파일 목록에서 세션이 열려 있는 동안. 목록에서 서식 파일을 제거 하려면 세션을 닫아야 합니다.
 
 ## <a name="exporting-format-data"></a>내보내기 형식 데이터

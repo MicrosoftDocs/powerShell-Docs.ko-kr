@@ -2,12 +2,12 @@
 ms.date: 08/09/2017
 keywords: powershell,cmdlet,다운로드,설치,설정,windows 10, windows 8.1, windows 8.0,windows 7
 title: Windows PowerShell 설치
-ms.openlocfilehash: 37f28c2af5a11af26d9110cc6c5f7612124be557
-ms.sourcegitcommit: 10c347a8c3dcbf8962295601834f5ba85342a87b
+ms.openlocfilehash: 345cde8012bece730e7217ed16be6175ad26bb28
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MTE95
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55887619"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429876"
 ---
 # <a name="installing-windows-powershell"></a>Windows PowerShell 설치
 
@@ -85,7 +85,7 @@ Windows 7 SP1<br/>Windows Server 2008 R2 SP1 | [WMF 3.0](https://www.microsoft.c
 
 **Azure PowerShell**을 찾는 경우 [Overview of Azure PowerShell](/powershell/azure/overview)(Azure PowerShell 개요)에서 시작할 수 있습니다.
 
-그러지 않으면 [Install and configure Azure PowerShell](/powershell/azure/install-azurerm-ps)(Azure PowerShell 설치 및 구성)이 필요할 수 있습니다.
+그러지 않으면 [Install and configure Azure PowerShell](/powershell/azure/install-az-ps)(Azure PowerShell 설치 및 구성)이 필요할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 

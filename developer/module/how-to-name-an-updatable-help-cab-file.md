@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: de302da0-c17a-4d31-a8ef-14a626738993
 caps.latest.revision: 7
-ms.openlocfilehash: 23303489372cfe7e036fdea842ae75f7e47503c8
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 0b58d5ee19a85bed26bc6549ced48b890cd62f64
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861289"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794760"
 ---
 # <a name="how-to-name-an-updatable-help-cab-file"></a>업데이트 가능한 도움말 CAB 파일 이름을 지정하는 방법
 
@@ -28,7 +28,6 @@ ms.locfileid: "56861289"
 이름의 요소는 다음과 같습니다.
 
 ModuleName 값의를 **이름** 의 속성을 **ModuleInfo** 개체를 [Get-module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet이 반환.
-값을 **이름** 의 속성을 **ModuleInfo** 개체를 [Get-module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet을 반환 합니다.
 
 ModuleGUID 값의 합니다 **GUID** 모듈 매니페스트 키입니다.
 

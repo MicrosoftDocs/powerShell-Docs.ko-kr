@@ -8,16 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 918f381c-43e6-4594-a468-a40bfa8a16d6
 caps.latest.revision: 7
-ms.openlocfilehash: 1c683693c331ccfaf7355a0dd51801ed6fd39b3b
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 3c94d8e98f179286112a417230fce659dc0b614c
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853309"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794164"
 ---
 # <a name="list-view-basic"></a>목록 보기(기본)
 
-이 예제에 표시 하는 기본 목록 보기를 구현 하는 방법을 보여 줍니다는 [System.Serviceprocess.Servicecontroller? Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 에서 반환 된 개체를 [Get-service](/powershell/module/microsoft.powershell.management/get-service) cmdlet. 목록 뷰 구성 요소에 대 한 자세한 내용은 참조 [목록 뷰를 만들면](./creating-a-list-view.md)합니다.
 이 예제에 표시 하는 기본 목록 보기를 구현 하는 방법을 보여 줍니다는 [System.Serviceprocess.Servicecontroller? Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 에서 반환 된 개체를 [Get-service](/powershell/module/microsoft.powershell.management/get-service) cmdlet. 목록 뷰 구성 요소에 대 한 자세한 내용은 참조 [목록 뷰를 만들면](./creating-a-list-view.md)합니다.
 
 ### <a name="to-load-this-formatting-file"></a>이 서식 파일을 로드 하려면

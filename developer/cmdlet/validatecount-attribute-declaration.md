@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ValidateCount attribute
 ms.assetid: 516af1ef-2c2e-408d-84bc-865f5bccf761
 caps.latest.revision: 11
-ms.openlocfilehash: 1a7b5ea340fe5212d003c97a9017278d6c631355
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 4e0be34b6f7a56dcf02a4381de4d2a5d08db14df
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859159"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794447"
 ---
 # <a name="validatecount-attribute-declaration"></a>ValidateCount 특성 선언
 
@@ -52,8 +52,6 @@ ValidateCount 특성 인수는 cmdlet 매개 변수에 대해 허용 되는 최�
 ## <a name="see-also"></a>참고 항목
 
 [System.Management.Automation.Validatecount](/dotnet/api/System.Management.Automation.ValidateCount)
-
-[입력된 유효성 검사 규칙을 선언 하는 방법](http://msdn.microsoft.com/en-us/544c2100-62ba-4be4-b2a2-cc0d4e4fc45b)
 
 [입력된 유효성 검사 규칙을 선언 하는 방법](http://msdn.microsoft.com/en-us/544c2100-62ba-4be4-b2a2-cc0d4e4fc45b)
 

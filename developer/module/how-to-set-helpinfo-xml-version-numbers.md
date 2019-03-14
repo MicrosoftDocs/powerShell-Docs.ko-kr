@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 93a00463-af58-41c8-b088-450909fa1d05
 caps.latest.revision: 6
-ms.openlocfilehash: 4929a5b1c9f73bb12b6df975e03fc529db3565ef
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: d69e8a734aa96ff9b7911815fb43b81103548b59
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863319"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794351"
 ---
 # <a name="how-to-set-helpinfo-xml-version-numbers"></a>HelpInfo XML 버전 번호를 설정하는 방법
 
@@ -21,7 +21,6 @@ ms.locfileid: "56863319"
 
 ## <a name="how-to-set-helpinfo-xml-version-numbers"></a>HelpInfo XML 버전 번호를 설정하는 방법
 
-HelpInfo XML 파일에 버전 번호는 업데이트할 수 있는 도움말의 작동에 중요 합니다. 합니다 [Update-help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) 하 고 [Save-help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet 원격 HelpInfo XML 파일에는 UI 문화권에 대 한 버전 번호를 해당 UI 문화권에 대 한 버전 번호 보다 큰 경우에 새 도움말 파일을 다운로드 합니다 로컬 HelpInfo XML 또는 로컬 HelpInfo XML 파일이 없습니다.
 HelpInfo XML 파일에 버전 번호는 업데이트할 수 있는 도움말의 작동에 중요 합니다. 합니다 [Update-help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) 하 고 [Save-help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet 원격 HelpInfo XML 파일에는 UI 문화권에 대 한 버전 번호를 해당 UI 문화권에 대 한 버전 번호 보다 큰 경우에 새 도움말 파일을 다운로드 합니다 로컬 HelpInfo XML 또는 로컬 HelpInfo XML 파일이 없습니다.
 
 HelpInfo XML 파일에 정의 된 4 부 버전 번호를 사용 합니다 **System.Version** Microsoft.NET Framework의 클래스입니다. 형식은 `N1.N2.N3.N4`합니다. 모듈 작성자는 번호 매기기 체계에서 허용 되는 모든 버전을 사용할 수는 **System.Version** 클래스입니다. 업데이트 가능한 도움말에서는 버전 번호를 증가 하는 UI 문화권에 대 한 해당 UI 문화권에 대 한 CAB 파일의 새 버전으로 지정 된 위치에 업로드 되 면 합니다 **HelpContentURI** HelpInfo XML 파일의 요소입니다.

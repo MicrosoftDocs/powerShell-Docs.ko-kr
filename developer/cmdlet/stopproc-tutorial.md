@@ -8,16 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a142aeb6-9c11-44a0-b34f-1f9470fa347b
 caps.latest.revision: 5
-ms.openlocfilehash: 6e1c8a4709988adfa59bda14eb3af52b0a79f1df
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 27c8e2c7525aba38e69e50b2b7fd3b18b8e54989
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856359"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794402"
 ---
 # <a name="stopproc-tutorial"></a>StopProc 자습서
 
-이 섹션에서는 매우 비슷한 중지 Proc cmdlet 만들기에 대 한 자습서를 제공 합니다 [Stop-process](/powershell/module/Microsoft.PowerShell.Management/Stop-Process) cmdlet은 Windows PowerShell에서 제공 합니다. 이 자습서에는 cmdlet 구현 하는 방법을 보여 주는 코드 조각 및 코드의 설명을 제공 합니다.
 이 섹션에서는 매우 비슷한 중지 Proc cmdlet 만들기에 대 한 자습서를 제공 합니다 [Stop-process](/powershell/module/Microsoft.PowerShell.Management/Stop-Process) cmdlet은 Windows PowerShell에서 제공 합니다. 이 자습서에는 cmdlet 구현 하는 방법을 보여 주는 코드 조각 및 코드의 설명을 제공 합니다.
 
 ## <a name="topics-in-this-tutorial"></a>이 자습서의 항목

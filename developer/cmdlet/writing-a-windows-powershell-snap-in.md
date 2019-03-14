@@ -10,12 +10,12 @@ helpviewer_keywords:
 - snap-ins [PowerShell SDK], PSSnapin example
 ms.assetid: 875024f4-e02b-4416-80b9-af5e5b50aad6
 caps.latest.revision: 7
-ms.openlocfilehash: ee8a6538fa6ad4d0f480f2dac46fe0f823a38be8
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: d4f57c062fee09e85c290445082be745ab229985
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853769"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795035"
 ---
 # <a name="writing-a-windows-powershell-snap-in"></a>Windows PowerShell 스냅인 작성
 
@@ -127,8 +127,6 @@ public class GetProcPSSnapIn01 : PSSnapIn
 ```
 
 ## <a name="see-also"></a>참고 항목
-
-[Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 

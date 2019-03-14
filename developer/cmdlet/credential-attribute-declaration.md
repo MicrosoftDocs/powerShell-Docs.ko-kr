@@ -8,16 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 96a5dcad-faed-44d8-8c80-321f10499710
 caps.latest.revision: 6
-ms.openlocfilehash: abdd6e915b768b8ac688b6fc8c3194723961765e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 1513d340cdadc5cb7622e791cc3c163ff39dfe1d
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863399"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795405"
 ---
 # <a name="credential-attribute-declaration"></a>Credential 증명 특성 선언
 
-자격 증명 특성은 형식의 자격 증명 매개 변수를 사용 하 여 사용할 수 있는 선택적 특성 [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential) 문자열 수 매개 변수에 인수로 전달 하는 수 있도록 합니다. 이 특성 매개 변수 선언에 추가 되 면 Windows PowerShell 문자열 입력을 변환 된 [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential) 개체입니다. 예를 들어 합니다 [Get-credential](/powershell/module/Microsoft.PowerShell.Security/Get-Credential) cmdlet이이 특성을 사용 하 여 Windows powershell을 생성 합니다 [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential) cmdlet에서 반환 되는 개체입니다.
 자격 증명 특성은 형식의 자격 증명 매개 변수를 사용 하 여 사용할 수 있는 선택적 특성 [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential) 문자열 수 매개 변수에 인수로 전달 하는 수 있도록 합니다. 이 특성 매개 변수 선언에 추가 되 면 Windows PowerShell 문자열 입력을 변환 된 [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential) 개체입니다. 예를 들어 합니다 [Get-credential](/powershell/module/Microsoft.PowerShell.Security/Get-Credential) cmdlet이이 특성을 사용 하 여 Windows powershell을 생성 합니다 [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential) cmdlet에서 반환 되는 개체입니다.
 
 ## <a name="syntax"></a>구문

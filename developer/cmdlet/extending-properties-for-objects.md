@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f33ff3e9-213c-44aa-92ab-09450e65c676
 caps.latest.revision: 11
-ms.openlocfilehash: dcab755f565cd176c85ef6b9c719bceae10301b4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: be31d03b02394cb1694909cf7b65bbc2a29f6976
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854529"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795439"
 ---
 # <a name="extending-properties-for-objects"></a>개체 속성 확장
 
@@ -101,7 +101,6 @@ ms.locfileid: "56854529"
 
 ## <a name="property-sets"></a>속성 집합
 
-속성 집합을 그룹 집합의 이름으로 참조할 수 있는 확장된 속성을 정의 합니다. 예를 들어 합니다 `Property` 의 매개 변수를 [Format-table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table) cmdlet 집합을 표시할 특정 속성을 지정할 수 있습니다. 지정 된 속성 집합은 집합에 속해 있는 속성만 표시 됩니다.
 속성 집합을 그룹 집합의 이름으로 참조할 수 있는 확장된 속성을 정의 합니다. 예를 들어 합니다 `Property` 의 매개 변수를 [Format-table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table) cmdlet 집합을 표시할 특정 속성을 지정할 수 있습니다. 지정 된 속성 집합은 집합에 속해 있는 속성만 표시 됩니다.
 
 개체에 대해 정의 될 수 있는 속성 집합의 수에 제한은 없습니다. 그러나 개체의 기본 표시 속성을 정의 하는 데 사용 되는 속성 집합 PSStandardMembers 멤버 집합 내에서 지정 되어야 합니다. Types.ps1xml 형식 파일의 기본 속성 집합 이름을 DefaultDisplayProperty, DefaultDisplayPropertySet, 및 DefaultKeyPropertySet 포함 됩니다. PSStandardMembers 멤버 집합에 추가한 모든 추가 속성 집합은 무시 됩니다.

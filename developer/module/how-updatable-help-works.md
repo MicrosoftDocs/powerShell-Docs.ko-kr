@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7674636e-a0f2-4587-bfc5-dd3e6ce5489e
 caps.latest.revision: 6
-ms.openlocfilehash: 8874cc18416937c4d3cb30d801f2714410304c8c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 5b6ae54ee6c843996c875189b6ee553be5e4f614
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860879"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794385"
 ---
 # <a name="how-updatable-help-works"></a>업데이트 가능한 도움말 작동 방법
 
@@ -21,7 +21,6 @@ ms.locfileid: "56860879"
 
 ## <a name="the-update-help-process"></a>Update-help 프로세스
 
-다음 목록에는 설명의 동작을 [Update-help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet 모듈의 특정 UI 문화권에 대 한 도움말 파일을 업데이트 하는 명령을 실행 하는 경우.
 다음 목록에는 설명의 동작을 [Update-help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet 모듈의 특정 UI 문화권에 대 한 도움말 파일을 업데이트 하는 명령을 실행 하는 경우.
 
 1. `Update-Help` 값으로 지정 된 위치에서 원격 HelpInfo XML 파일을 가져옵니다 합니다 **HelpInfoURI** 모듈 매니페스트에서 키를 스키마에 대해 파일의 유효성을 검사 합니다. (스키마를 보려면 [HelpInfo XML 스키마](./helpinfo-xml-schema.md).) 그런 다음 `Update-Help` 사용자의 컴퓨터에서 모듈 디렉터리에 있는 모듈에 대 한 로컬 HelpInfo XML 파일을 찾습니다.
@@ -36,7 +35,6 @@ ms.locfileid: "56860879"
 
 ## <a name="the-save-help-process"></a>Save-help 프로세스
 
-다음 목록에는 설명의 동작을 [Save-help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) 및 [Update-help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet 도움말 파일을 파일 공유의 업데이트를 사용 하 여 해당 파일에서 도움말 파일을 업데이트 하는 명령을 실행 하는 경우는 사용자의 컴퓨터입니다.
 다음 목록에는 설명의 동작을 [Save-help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) 및 [Update-help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet 도움말 파일을 파일 공유의 업데이트를 사용 하 여 해당 파일에서 도움말 파일을 업데이트 하는 명령을 실행 하는 경우는 사용자의 컴퓨터입니다.
 
 합니다 `Save-Help` cmdlet에 지정 된 파일 공유에서 모듈에 대 한 도움말 파일을 저장 하는 명령에 대 한 응답에서 다음 작업을 수행 합니다 **DestinationPath** 매개 변수입니다.

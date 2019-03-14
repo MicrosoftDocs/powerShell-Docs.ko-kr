@@ -11,12 +11,12 @@ helpviewer_keywords:
 - container providers [PowerShell Programmer's Guide]
 ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
 caps.latest.revision: 5
-ms.openlocfilehash: e0d83a742eae2bcde2e691860a5f2b3e5862d2de
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.openlocfilehash: de75e19abc0ee440e724fba7bf578ce240fbf2df
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57430042"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795456"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Windows PowerShell 컨테이너 공급자 만들기
 
@@ -40,7 +40,7 @@ ms.locfileid: "57430042"
 
 - [Windows PowerShell 컨테이너 공급자 클래스를 정의합니다.](#Defining-a-Windows-PowerShell-Container-Provider-Class)
 
-- [기본 기능 정의]()
+- [기본 기능 정의](#defining-base-functionality)
 
 - [자식 항목을 가져오는 중](#Retrieving-Child-Items)
 
@@ -69,8 +69,6 @@ ms.locfileid: "57430042"
 - [동적 매개 변수를 연결 합니다 `Copy-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Copy-Item-Cmdlet)
 
 - [코드 샘플](#Code-Sample)
-
-- [개체 유형 정의 및 서식 지정]()
 
 - [Windows PowerShell 공급자 작성](#Building-the-Windows-PowerShell-Provider)
 

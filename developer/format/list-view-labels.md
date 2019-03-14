@@ -8,16 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 53442bb1-74a3-49f9-9150-3bc3081a7565
 caps.latest.revision: 6
-ms.openlocfilehash: 2bb62ab3e4fa1db9b3af8c82eb9035aa4f3e31c0
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 27de41c88e224f7610c10a764e51524016ecc8cb
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860129"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794827"
 ---
 # <a name="list-view-labels"></a>목록 보기(레이블)
 
-이 예제에서는 목록의 각 행에 대 한 사용자 지정 레이블을 표시 하는 목록 보기를 구현 하는 방법을 보여 줍니다. 이 목록 보기의 속성을 표시 합니다 [System.Serviceprocess.Servicecontroller? Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 에서 반환 되는 개체를 [Get-service](/powershell/module/microsoft.powershell.management/get-service) cmdlet. 목록 뷰 구성 요소에 대 한 자세한 내용은 참조 [목록 뷰를 만들면](./creating-a-list-view.md)합니다.
 이 예제에서는 목록의 각 행에 대 한 사용자 지정 레이블을 표시 하는 목록 보기를 구현 하는 방법을 보여 줍니다. 이 목록 보기의 속성을 표시 합니다 [System.Serviceprocess.Servicecontroller? Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 에서 반환 되는 개체를 [Get-service](/powershell/module/Microsoft.PowerShell.Management/Get-Service) cmdlet. 목록 뷰 구성 요소에 대 한 자세한 내용은 참조 [목록 뷰를 만들면](./creating-a-list-view.md)합니다.
 
 ### <a name="to-load-this-formatting-file"></a>이 서식 파일을 로드 하려면

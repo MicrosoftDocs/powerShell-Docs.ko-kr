@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 77f94326-8ffe-4d40-bd2a-b79fb0b4a4e5
 caps.latest.revision: 8
-ms.openlocfilehash: e8185eb7221a3be0445eddc537dbca89478c74f2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2d634e7638ec0e0117d65ca0b2d08e68f0068a03
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859799"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794912"
 ---
 # <a name="defining-default-member-sets-for-objects"></a>개체에 대한 기본 멤버 집합 정의
 
@@ -21,7 +21,6 @@ PSStandardMembers 멤버 집합 개체에 대 한 기본 속성 집합을 정의
 
 ## <a name="member-set-for-systemdiagnosticsprocess"></a>System.Diagnostics.Process 멤버 집합
 
-다음 예에서 PSStandardMembers 멤버 집합에 대 한 설정 DefaultDisplayPropertySet 속성을 정의 [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) 개체입니다. 이 속성 집합에서 사용 되는 [Format-list](/powershell/module/Microsoft.PowerShell.Utility/Format-List) cmdlet.
 다음 예에서 PSStandardMembers 멤버 집합에 대 한 설정 DefaultDisplayPropertySet 속성을 정의 [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) 개체입니다. 이 속성 집합에서 사용 되는 [Format-list](/powershell/module/Microsoft.PowerShell.Utility/Format-List) cmdlet.
 
 ```xml
@@ -44,7 +43,6 @@ PSStandardMembers 멤버 집합 개체에 대 한 기본 속성 집합을 정의
   </MemberSet>
 ```
 
-다음 출력에서는에서 반환 되는 기본 속성을 [Format-list](/powershell/module/Microsoft.PowerShell.Utility/Format-List) cmdlet. 만 `Id`, `Handles`를 `CPU`, 및 `Name` 각 프로세스 개체에 대 한 속성이 반환 됩니다.
 다음 출력에서는에서 반환 되는 기본 속성을 [Format-list](/powershell/module/Microsoft.PowerShell.Utility/Format-List) cmdlet. 만 `Id`, `Handles`를 `CPU`, 및 `Name` 각 프로세스 개체에 대 한 속성이 반환 됩니다.
 
 ```powershell
