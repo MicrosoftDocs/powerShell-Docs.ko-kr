@@ -8,72 +8,72 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6aebd53f-0610-4959-88b2-42339588c859
 caps.latest.revision: 6
-ms.openlocfilehash: c3546301cfd77ca40dd4683a3d2fe2d040b7c4a7
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: ad4300937c10652b677346a62c42fa4f6e8513cf
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861909"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056001"
 ---
-# <a name="getprocesssample05-sample"></a><span data-ttu-id="2e8f4-102">GetProcessSample05 샘플</span><span class="sxs-lookup"><span data-stu-id="2e8f4-102">GetProcessSample05 Sample</span></span>
+# <a name="getprocesssample05-sample"></a><span data-ttu-id="5a266-102">GetProcessSample05 샘플</span><span class="sxs-lookup"><span data-stu-id="5a266-102">GetProcessSample05 Sample</span></span>
 
-<span data-ttu-id="2e8f4-103">이 샘플에서는 Get-proc cmdlet의 전체 버전을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-103">This sample shows a complete version of the Get-Proc cmdlet.</span></span>
+<span data-ttu-id="5a266-103">이 샘플에서는 Get-proc cmdlet의 전체 버전을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-103">This sample shows a complete version of the Get-Proc cmdlet.</span></span>
 
-## <a name="how-to-build-the-sample-using-visual-studio"></a><span data-ttu-id="2e8f4-104">Visual Studio를 사용 하 여 샘플을 빌드하는 방법.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-104">How to build the sample using Visual Studio.</span></span>
+## <a name="how-to-build-the-sample-using-visual-studio"></a><span data-ttu-id="5a266-104">Visual Studio를 사용 하 여 샘플을 빌드하는 방법.</span><span class="sxs-lookup"><span data-stu-id="5a266-104">How to build the sample using Visual Studio.</span></span>
 
-1. <span data-ttu-id="2e8f4-105">Windows 탐색기를 열고 샘플 디렉터리 아래의 GetProcessSample05 디렉터리로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-105">Open Windows Explorer and navigate to the GetProcessSample05 directory under the Samples directory.</span></span>
+1. <span data-ttu-id="5a266-105">Windows 탐색기를 열고 샘플 디렉터리 아래의 GetProcessSample05 디렉터리로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-105">Open Windows Explorer and navigate to the GetProcessSample05 directory under the Samples directory.</span></span>
 
-   <span data-ttu-id="2e8f4-106">Windows PowerShell 2.0 SDK 설치를 사용 하 여 GetProcessSample05 폴더로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-106">With the Windows PowerShell 2.0 SDK installed, navigate to the GetProcessSample05 folder.</span></span> <span data-ttu-id="2e8f4-107">기본 위치는 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample05 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample05.</span></span>
+   <span data-ttu-id="5a266-106">Windows PowerShell 2.0 SDK 설치를 사용 하 여 GetProcessSample05 폴더로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-106">With the Windows PowerShell 2.0 SDK installed, navigate to the GetProcessSample05 folder.</span></span> <span data-ttu-id="5a266-107">기본 위치는 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample05 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample05.</span></span>
 
-2. <span data-ttu-id="2e8f4-108">솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="2e8f4-109">이 Visual Studio에서 샘플 프로젝트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-109">This opens the sample project in Visual Studio.</span></span>
+2. <span data-ttu-id="5a266-108">솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="5a266-109">이 Visual Studio에서 샘플 프로젝트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-109">This opens the sample project in Visual Studio.</span></span>
 
-3. <span data-ttu-id="2e8f4-110">에 **빌드** 메뉴에서 **솔루션 빌드**합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-110">In the **Build** menu, select **Build Solution**.</span></span>
+3. <span data-ttu-id="5a266-110">에 **빌드** 메뉴에서 **솔루션 빌드**합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-110">In the **Build** menu, select **Build Solution**.</span></span>
 
-   <span data-ttu-id="2e8f4-111">이 샘플에 대 한 라이브러리 기본 \bin 또는 \bin\debug 디렉터리에 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-111">The library for the sample will be built in the default \bin or \bin\debug directories.</span></span>
+   <span data-ttu-id="5a266-111">이 샘플에 대 한 라이브러리 기본 \bin 또는 \bin\debug 디렉터리에 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-111">The library for the sample will be built in the default \bin or \bin\debug directories.</span></span>
 
-### <a name="how-to-run-the-sample"></a><span data-ttu-id="2e8f4-112">샘플을 실행 하는 방법</span><span class="sxs-lookup"><span data-stu-id="2e8f4-112">How to run the sample</span></span>
+### <a name="how-to-run-the-sample"></a><span data-ttu-id="5a266-112">샘플을 실행 하는 방법</span><span class="sxs-lookup"><span data-stu-id="5a266-112">How to run the sample</span></span>
 
-1. <span data-ttu-id="2e8f4-113">다음 모듈 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-113">Create the following module folder:</span></span>
+1. <span data-ttu-id="5a266-113">다음 모듈 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-113">Create the following module folder:</span></span>
 
    `[user]/documents/windowspowershell/modules/GetProcessSample05`
 
-2. <span data-ttu-id="2e8f4-114">모듈 폴더에 샘플 어셈블리를 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-114">Copy the sample assembly to the module folder.</span></span>
+2. <span data-ttu-id="5a266-114">모듈 폴더에 샘플 어셈블리를 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-114">Copy the sample assembly to the module folder.</span></span>
 
-3. <span data-ttu-id="2e8f4-115">Windows PowerShell을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-115">Start Windows PowerShell.</span></span>
+3. <span data-ttu-id="5a266-115">Windows PowerShell을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-115">Start Windows PowerShell.</span></span>
 
-4. <span data-ttu-id="2e8f4-116">Windows PowerShell에는 어셈블리를 로드 하려면 다음 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-116">Run the following command to load the assembly into Windows PowerShell:</span></span>
+4. <span data-ttu-id="5a266-116">Windows PowerShell에는 어셈블리를 로드 하려면 다음 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-116">Run the following command to load the assembly into Windows PowerShell:</span></span>
 
    `Import-module getprossessample05`
 
-5. <span data-ttu-id="2e8f4-117">Cmdlet을 실행 하려면 다음 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-117">Run the following command to run the cmdlet:</span></span>
+5. <span data-ttu-id="5a266-117">Cmdlet을 실행 하려면 다음 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-117">Run the following command to run the cmdlet:</span></span>
 
    `get-proc`
 
-## <a name="requirements"></a><span data-ttu-id="2e8f4-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2e8f4-118">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="5a266-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5a266-118">Requirements</span></span>
 
-<span data-ttu-id="2e8f4-119">이 샘플 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-119">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="5a266-119">이 샘플 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-119">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="2e8f4-120">시연</span><span class="sxs-lookup"><span data-stu-id="2e8f4-120">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="5a266-120">시연</span><span class="sxs-lookup"><span data-stu-id="5a266-120">Demonstrates</span></span>
 
-<span data-ttu-id="2e8f4-121">이 샘플에는 다음 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-121">This sample demonstrates the following.</span></span>
+<span data-ttu-id="5a266-121">이 샘플에는 다음 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-121">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="2e8f4-122">Cmdlet 특성을 사용 하는 cmdlet 클래스를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-122">Declaring a cmdlet class using the Cmdlet attribute.</span></span>
+- <span data-ttu-id="5a266-122">Cmdlet 특성을 사용 하는 cmdlet 클래스를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-122">Declaring a cmdlet class using the Cmdlet attribute.</span></span>
 
-- <span data-ttu-id="2e8f4-123">매개 변수 특성을 사용 하는 cmdlet 매개 변수를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-123">Declaring a cmdlet parameter using the Parameter attribute.</span></span>
+- <span data-ttu-id="5a266-123">매개 변수 특성을 사용 하는 cmdlet 매개 변수를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-123">Declaring a cmdlet parameter using the Parameter attribute.</span></span>
 
-- <span data-ttu-id="2e8f4-124">매개 변수에 대 한 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-124">Specifying positions for parameters.</span></span>
+- <span data-ttu-id="5a266-124">매개 변수에 대 한 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-124">Specifying positions for parameters.</span></span>
 
-- <span data-ttu-id="2e8f4-125">매개 변수 입력 파이프라인에서 수행 될 수 있음을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-125">Specifying that parameters can take input from the pipeline.</span></span> <span data-ttu-id="2e8f4-126">입력 개체 또는 속성 이름이 매개 변수 이름이 동일 개체의 속성에서 값을 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-126">The input can be taken from an object or a value from a property of an object whose property name is the same as the parameter name.</span></span>
+- <span data-ttu-id="5a266-125">매개 변수 입력 파이프라인에서 수행 될 수 있음을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-125">Specifying that parameters can take input from the pipeline.</span></span> <span data-ttu-id="5a266-126">입력 개체 또는 속성 이름이 매개 변수 이름이 동일 개체의 속성에서 값을 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-126">The input can be taken from an object or a value from a property of an object whose property name is the same as the parameter name.</span></span>
 
-- <span data-ttu-id="2e8f4-127">입력 매개 변수에 대 한 유효성 검사 특성을 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-127">Declaring a validation attribute for the parameter input.</span></span>
+- <span data-ttu-id="5a266-127">입력 매개 변수에 대 한 유효성 검사 특성을 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-127">Declaring a validation attribute for the parameter input.</span></span>
 
-- <span data-ttu-id="2e8f4-128">오류 및 예외를 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-128">Handling errors and exceptions.</span></span>
+- <span data-ttu-id="5a266-128">오류 및 예외를 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-128">Handling errors and exceptions.</span></span>
 
-- <span data-ttu-id="2e8f4-129">디버그 메시지를 작성 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-129">Writing debug messages.</span></span>
+- <span data-ttu-id="5a266-129">디버그 메시지를 작성 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-129">Writing debug messages.</span></span>
 
-## <a name="example"></a><span data-ttu-id="2e8f4-130">예제</span><span class="sxs-lookup"><span data-stu-id="2e8f4-130">Example</span></span>
+## <a name="example"></a><span data-ttu-id="5a266-130">예제</span><span class="sxs-lookup"><span data-stu-id="5a266-130">Example</span></span>
 
-<span data-ttu-id="2e8f4-131">이 샘플에는 지정 된 프로세스의 목록을 표시 하는 cmdlet을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2e8f4-131">This sample shows how to create a cmdlet that displays a list of specified processes.</span></span>
+<span data-ttu-id="5a266-131">이 샘플에는 지정 된 프로세스의 목록을 표시 하는 cmdlet을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5a266-131">This sample shows how to create a cmdlet that displays a list of specified processes.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands
@@ -248,7 +248,7 @@ namespace Microsoft.Samples.PowerShell.Commands
                  WriteVerbose("Finding matches for process name \""
                     + pattern + "\".");
 
-                 // WildCard serach on the available processes
+                 // WildCard search on the available processes
                  WildcardPattern wildcard =
                     new WildcardPattern(
                         pattern,
@@ -373,7 +373,7 @@ namespace Microsoft.Samples.PowerShell.Commands
       /// <summary>
       /// Retrieves the list of all processes matching the Id
       /// parameter and generates a nonterminating error for
-      /// each specified process identofier which is not found.
+      /// each specified process identifier which is not found.
       /// </summary>
       /// <returns>
       /// An array of processes that match the given identifier.
@@ -479,6 +479,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="2e8f4-132">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2e8f4-132">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a266-132">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5a266-132">See Also</span></span>
 
-<span data-ttu-id="2e8f4-133">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="2e8f4-133">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>
+<span data-ttu-id="5a266-133">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="5a266-133">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>

@@ -8,42 +8,42 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 471c85f3-9287-45c2-b4bc-833caa1b7634
 caps.latest.revision: 8
-ms.openlocfilehash: 8621878a339751d2cef842af6f5b3d5d2e270346
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 3850aec88bc800718a82f51c91fbd0cb3c705089
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862619"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059629"
 ---
-# <a name="runspace06-sample"></a><span data-ttu-id="3eab0-102">Runspace06 샘플</span><span class="sxs-lookup"><span data-stu-id="3eab0-102">Runspace06 Sample</span></span>
+# <a name="runspace06-sample"></a><span data-ttu-id="bee03-102">Runspace06 샘플</span><span class="sxs-lookup"><span data-stu-id="bee03-102">Runspace06 Sample</span></span>
 
-<span data-ttu-id="3eab0-103">이 샘플에서는 모듈을 추가 하는 방법을 보여 줍니다.는 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) runspace를 열 때 모듈이 로드 되도록 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="3eab0-103">This sample shows how to add a module to an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object so that the module is loaded when the runspace is opened.</span></span> <span data-ttu-id="3eab0-104">모듈 제공 Get-proc cmdlet (정의한를 [GetProcessSample02 샘플](../cmdlet/getprocesssample02-sample.md))를 사용 하 여 동기적으로 실행 되는 [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) 개체.</span><span class="sxs-lookup"><span data-stu-id="3eab0-104">The module provides a Get-Proc cmdlet (defined by the [GetProcessSample02 Sample](../cmdlet/getprocesssample02-sample.md)) that is run synchronously by using a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+<span data-ttu-id="bee03-103">이 샘플에서는 모듈을 추가 하는 방법을 보여 줍니다.는 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) runspace를 열 때 모듈이 로드 되도록 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="bee03-103">This sample shows how to add a module to an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object so that the module is loaded when the runspace is opened.</span></span> <span data-ttu-id="bee03-104">모듈 제공 Get-proc cmdlet (정의한를 [GetProcessSample02 샘플](../cmdlet/getprocesssample02-sample.md))를 사용 하 여 동기적으로 실행 되는 [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) 개체.</span><span class="sxs-lookup"><span data-stu-id="bee03-104">The module provides a Get-Proc cmdlet (defined by the [GetProcessSample02 Sample](../cmdlet/getprocesssample02-sample.md)) that is run synchronously by using a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="3eab0-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3eab0-105">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="bee03-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bee03-105">Requirements</span></span>
 
-<span data-ttu-id="3eab0-106">이 샘플 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="3eab0-106">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="bee03-106">이 샘플 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="bee03-106">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="3eab0-107">시연</span><span class="sxs-lookup"><span data-stu-id="3eab0-107">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="bee03-107">시연</span><span class="sxs-lookup"><span data-stu-id="bee03-107">Demonstrates</span></span>
 
-<span data-ttu-id="3eab0-108">이 샘플에는 다음 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3eab0-108">This sample demonstrates the following.</span></span>
+<span data-ttu-id="bee03-108">이 샘플에는 다음 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bee03-108">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="3eab0-109">만들기는 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="3eab0-109">Creating an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
+- <span data-ttu-id="bee03-109">만들기는 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="bee03-109">Creating an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
 
-- <span data-ttu-id="3eab0-110">모듈을 추가 합니다 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="3eab0-110">Adding the module to the [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
+- <span data-ttu-id="bee03-110">모듈을 추가 합니다 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="bee03-110">Adding the module to the [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
 
-- <span data-ttu-id="3eab0-111">만들기는 [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) 사용 하는 개체를 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="3eab0-111">Creating a [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object that uses the [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
+- <span data-ttu-id="bee03-111">만들기는 [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) 사용 하는 개체를 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="bee03-111">Creating a [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object that uses the [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
 
-- <span data-ttu-id="3eab0-112">만들기는 [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) runspace를 사용 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="3eab0-112">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the runspace.</span></span>
+- <span data-ttu-id="bee03-112">만들기는 [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) runspace를 사용 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="bee03-112">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the runspace.</span></span>
 
-- <span data-ttu-id="3eab0-113">모듈의 proc get cmdlet의 파이프라인에 추가 합니다 [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="3eab0-113">Adding the module's get-proc cmdlet to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+- <span data-ttu-id="bee03-113">모듈의 proc get cmdlet의 파이프라인에 추가 합니다 [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="bee03-113">Adding the module's get-proc cmdlet to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-- <span data-ttu-id="3eab0-114">동기적으로 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="3eab0-114">Running the command synchronously.</span></span>
+- <span data-ttu-id="bee03-114">동기적으로 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="bee03-114">Running the command synchronously.</span></span>
 
-- <span data-ttu-id="3eab0-115">속성에서 추출 합니다 [System.Management.Automation.Psobject](/dotnet/api/System.Management.Automation.PSObject) 명령에 의해 반환 되는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="3eab0-115">Extracting properties from the [System.Management.Automation.Psobject](/dotnet/api/System.Management.Automation.PSObject) objects returned by the command.</span></span>
+- <span data-ttu-id="bee03-115">속성에서 추출 합니다 [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) 명령에 의해 반환 되는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="bee03-115">Extracting properties from the [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects returned by the command.</span></span>
 
-## <a name="example"></a><span data-ttu-id="3eab0-116">예제</span><span class="sxs-lookup"><span data-stu-id="3eab0-116">Example</span></span>
+## <a name="example"></a><span data-ttu-id="bee03-116">예제</span><span class="sxs-lookup"><span data-stu-id="bee03-116">Example</span></span>
 
-<span data-ttu-id="3eab0-117">이 샘플에서는 사용 하는 runspace 만듭니다는 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) runspace를 열 때 사용할 수 있는 요소를 정의 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="3eab0-117">This sample creates a runspace that uses an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object to define the elements that are available when the runspace is opened.</span></span> <span data-ttu-id="3eab0-118">이 샘플에서는 Get-proc cmdlet을 정의 하는 모듈의 초기 세션 상태에 추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3eab0-118">In this sample, a module that defines a Get-Proc cmdlet is added to the initial session state.</span></span>
+<span data-ttu-id="bee03-117">이 샘플에서는 사용 하는 runspace 만듭니다는 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) runspace를 열 때 사용할 수 있는 요소를 정의 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="bee03-117">This sample creates a runspace that uses an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object to define the elements that are available when the runspace is opened.</span></span> <span data-ttu-id="bee03-118">이 샘플에서는 Get-proc cmdlet을 정의 하는 모듈의 초기 세션 상태에 추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bee03-118">In this sample, a module that defines a Get-Proc cmdlet is added to the initial session state.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -125,6 +125,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="3eab0-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3eab0-119">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bee03-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bee03-119">See Also</span></span>
 
-[<span data-ttu-id="3eab0-120">Windows PowerShell 호스트 응용 프로그램 작성</span><span class="sxs-lookup"><span data-stu-id="3eab0-120">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
+[<span data-ttu-id="bee03-120">Windows PowerShell 호스트 응용 프로그램 작성</span><span class="sxs-lookup"><span data-stu-id="bee03-120">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)

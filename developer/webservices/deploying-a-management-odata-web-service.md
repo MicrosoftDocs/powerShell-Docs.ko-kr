@@ -8,36 +8,36 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4497b64c-7875-4047-bf77-07e04c098ffe
 caps.latest.revision: 4
-ms.openlocfilehash: 08f5e74c69ce022e9ec6fa191a42d434ba76de81
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 376d90394b632e82322b848cb124f002ff91d8b3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861439"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054827"
 ---
-# <a name="deploying-a-management-odata-web-service"></a><span data-ttu-id="98875-102">관리 OData 웹 서비스 배포</span><span class="sxs-lookup"><span data-stu-id="98875-102">Deploying a Management OData web service</span></span>
+# <a name="deploying-a-management-odata-web-service"></a><span data-ttu-id="896a9-102">관리 OData 웹 서비스 배포</span><span class="sxs-lookup"><span data-stu-id="896a9-102">Deploying a Management OData web service</span></span>
 
-<span data-ttu-id="98875-103">모든 관리 OData 웹 서비스를 만드는 데 필요한 단계를 완료 한 후 IIS에서 웹 응용 프로그램으로 배포 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="98875-103">After you have completed all of the steps necessary to create a Management OData web service, you must deploy it as a web application in IIS.</span></span>
+<span data-ttu-id="896a9-103">모든 관리 OData 웹 서비스를 만드는 데 필요한 단계를 완료 한 후 IIS에서 웹 응용 프로그램으로 배포 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="896a9-103">After you have completed all of the steps necessary to create a Management OData web service, you must deploy it as a web application in IIS.</span></span>
 
-## <a name="deploying-the-web-service"></a><span data-ttu-id="98875-104">웹 서비스 배포</span><span class="sxs-lookup"><span data-stu-id="98875-104">Deploying the web service</span></span>
+## <a name="deploying-the-web-service"></a><span data-ttu-id="896a9-104">웹 서비스 배포</span><span class="sxs-lookup"><span data-stu-id="896a9-104">Deploying the web service</span></span>
 
-<span data-ttu-id="98875-105">관리 OData 웹 서비스를 배포 하려면 다음 단계를 완료 합니다.</span><span class="sxs-lookup"><span data-stu-id="98875-105">Complete the following steps to deploy the Management OData web service.</span></span>
+<span data-ttu-id="896a9-105">관리 OData 웹 서비스를 배포 하려면 다음 단계를 완료 합니다.</span><span class="sxs-lookup"><span data-stu-id="896a9-105">Complete the following steps to deploy the Management OData web service.</span></span>
 
-1. <span data-ttu-id="98875-106">IIS에서 웹 응용 프로그램에 대 한 `WWWRoot` 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="98875-106">Create a directory for you web application under your IIS `WWWRoot` directory.</span></span>
+1. <span data-ttu-id="896a9-106">IIS에서 웹 응용 프로그램에 대 한 `WWWRoot` 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="896a9-106">Create a directory for you web application under your IIS `WWWRoot` directory.</span></span>
 
-2. <span data-ttu-id="98875-107">MOF 스키마 파일을 XML 스키마 파일을 내보낸 Dll을 복사 합니다 [Microsoft.Management.Odata.Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 하 고 [System.Management.Automation.Remoting.Pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) 인터페이스 및 응용 프로그램 디렉터리에 web.config 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="98875-107">Copy the MOF schema file, the XML schema file, the DLLs that export the [Microsoft.Management.Odata.Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) and [System.Management.Automation.Remoting.Pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) interfaces, and the web.config file into the application directory.</span></span>
+2. <span data-ttu-id="896a9-107">MOF 스키마 파일을 XML 스키마 파일을 내보낸 Dll을 복사 합니다 [Microsoft.Management.Odata.Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 하 고 [System.Management.Automation.Remoting.Pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) 인터페이스 및 응용 프로그램 디렉터리에 web.config 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="896a9-107">Copy the MOF schema file, the XML schema file, the DLLs that export the [Microsoft.Management.Odata.Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) and [System.Management.Automation.Remoting.Pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) interfaces, and the web.config file into the application directory.</span></span>
 
-3. <span data-ttu-id="98875-108">사이트 ID를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="98875-108">Create a site ID.</span></span>
+3. <span data-ttu-id="896a9-108">사이트 ID를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="896a9-108">Create a site ID.</span></span>
 
-4. <span data-ttu-id="98875-109">페이지를 만들고 앱 풀을 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="98875-109">Create and configure an app pool.</span></span>
+4. <span data-ttu-id="896a9-109">페이지를 만들고 앱 풀을 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="896a9-109">Create and configure an app pool.</span></span>
 
-5. <span data-ttu-id="98875-110">사이트에 대 한 인증을 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="98875-110">Configure authentication for the site.</span></span>
+5. <span data-ttu-id="896a9-110">사이트에 대 한 인증을 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="896a9-110">Configure authentication for the site.</span></span>
 
-6. <span data-ttu-id="98875-111">방화벽을 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="98875-111">Configure the firewall.</span></span>
+6. <span data-ttu-id="896a9-111">방화벽을 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="896a9-111">Configure the firewall.</span></span>
 
-7. <span data-ttu-id="98875-112">사이트를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="98875-112">Start the site.</span></span>
+7. <span data-ttu-id="896a9-112">사이트를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="896a9-112">Start the site.</span></span>
 
-<span data-ttu-id="98875-113">다음 Windows PowerShell 스크립트에는 관리 OData 웹 서비스를 배포 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="98875-113">The following Windows PowerShell scripts demonstrate how to deploy a Management OData web service.</span></span>
+<span data-ttu-id="896a9-113">다음 Windows PowerShell 스크립트에는 관리 OData 웹 서비스를 배포 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="896a9-113">The following Windows PowerShell scripts demonstrate how to deploy a Management OData web service.</span></span>
 
 ```powershell
 # Test for presence of Microsoft.Samples.Management.OData.RoleBasedPlugins.dll
@@ -144,7 +144,7 @@ param($site,
         exit -1
     }
 
-if (!(Test-Path $customPluginAssembly))
+    if (!(Test-Path $customPluginAssembly))
     {
         Log "Custom plugin assembly file does not exist"
         exit -1
@@ -188,7 +188,7 @@ function IsIIsInstalled
 
         if ($WSRegKey -eq $null)
         {
-            Log "ERROR: Cannot retrive W3SVC key. IIS Web Services may not be installed"
+            Log "ERROR: Cannot retrieve W3SVC key. IIS Web Services may not be installed"
             exit
         }
         else
@@ -293,13 +293,13 @@ Function GenerateSiteID
 
 Function ValidateAndCopyFiles
 {
-    param ($path = $(throw "path is a requred parameter."),
-    $cfgfile = $(throw "cfgfile is a requred parameter."),
-    $svc = $(throw "svc is a requred parameter."),
-    $schema = $(throw "schema is a requred parameter."),
-$dispatchXml = $(throw "dispatchXml is a requred parameter."),
-    $rbac = $(throw "rbac is a requred parameter."),
-    $customPluginAssembly = $(throw "Custom plugins assembly is a requred parameter."))
+    param ($path = $(throw "path is a required parameter."),
+    $cfgfile = $(throw "cfgfile is a required parameter."),
+    $svc = $(throw "svc is a required parameter."),
+    $schema = $(throw "schema is a required parameter."),
+    $dispatchXml = $(throw "dispatchXml is a required parameter."),
+    $rbac = $(throw "rbac is a required parameter."),
+    $customPluginAssembly = $(throw "Custom plugins assembly is a required parameter."))
 
     if (!(Test-Path $cfgfile))
     {
@@ -316,7 +316,7 @@ $dispatchXml = $(throw "dispatchXml is a requred parameter."),
         throw "ERROR: $schema does not exist"
     }
 
-if (!(Test-Path $dispatchXml))
+    if (!(Test-Path $dispatchXml))
     {
         throw "ERROR: $dispatchXml does not exist"
     }
@@ -333,8 +333,8 @@ if (!(Test-Path $dispatchXml))
     Copy-Item $cfgfile (Join-Path $path "web.config")
     Copy-Item $svc $path
     Copy-Item $schema $path
-Copy-Item $dispatchXml $path
-Copy-Item $rbac (Join-Path $path "RbacConfiguration.xml")
+    Copy-Item $dispatchXml $path
+    Copy-Item $rbac (Join-Path $path "RbacConfiguration.xml")
     Copy-Item $customPluginAssembly $path
 }
 
@@ -363,8 +363,8 @@ Function SetupWebSite
     param($site = $(throw "site is a required parameter."),
     $path = $(throw "path is a required parameter."),
     $port = $(throw "port is a required parameter."),
-    $app = $(throw "app is a required paramater."),
-    $apppool = $(throw "apppool is a required paramater."))
+    $app = $(throw "app is a required parameter."),
+    $apppool = $(throw "apppool is a required parameter."))
 
     $siteID = GenerateSiteID
 
@@ -406,7 +406,7 @@ param($firewallPort)
     Log "Disable Inbound Firewall Notification"
     & $script:netsh advfirewall set currentprofile settings inboundusernotification disable
 
-Log "Add Firewall Rule for port $firewallPort"
+    Log "Add Firewall Rule for port $firewallPort"
     & $script:netsh advfirewall firewall add rule name=MOData_IIS_Port dir=in action=allow protocol=TCP localport=$firewallPort
 }
 
@@ -425,16 +425,16 @@ ActionAllSites start
 Start-Sleep 10
 ```
 
-## <a name="see-also"></a><span data-ttu-id="98875-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="98875-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="896a9-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="896a9-114">See Also</span></span>
 
-[<span data-ttu-id="98875-115">관리 OData 웹 서비스에 대 한 사용자 지정 권한 부여를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="98875-115">Implementing Custom Authorization for a Management OData web service</span></span>](./implementing-custom-authorization-for-a-management-odata-web-service.md)
+[<span data-ttu-id="896a9-115">관리 OData 웹 서비스에 대 한 사용자 지정 권한 부여를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="896a9-115">Implementing Custom Authorization for a Management OData web service</span></span>](./implementing-custom-authorization-for-a-management-odata-web-service.md)
 
-[<span data-ttu-id="98875-116">관리 OData 웹 서비스에 대 한 SessionConfiguration 구현</span><span class="sxs-lookup"><span data-stu-id="98875-116">Implementing SessionConfiguration for a Management OData web service</span></span>](./implementing-sessionconfiguration-for-a-management-odata-web-service.md)
+[<span data-ttu-id="896a9-116">관리 OData 웹 서비스에 대 한 SessionConfiguration 구현</span><span class="sxs-lookup"><span data-stu-id="896a9-116">Implementing SessionConfiguration for a Management OData web service</span></span>](./implementing-sessionconfiguration-for-a-management-odata-web-service.md)
 
-[<span data-ttu-id="98875-117">관리 OData 웹 서비스의 MOF 스키마 파일 작성</span><span class="sxs-lookup"><span data-stu-id="98875-117">Authoring the MOF schema file for a Management OData web service</span></span>](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
+[<span data-ttu-id="896a9-117">관리 OData 웹 서비스의 MOF 스키마 파일 작성</span><span class="sxs-lookup"><span data-stu-id="896a9-117">Authoring the MOF schema file for a Management OData web service</span></span>](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
 
-[<span data-ttu-id="98875-118">관리 OData 웹 서비스에 대 한 XML 스키마 파일 작성</span><span class="sxs-lookup"><span data-stu-id="98875-118">Authoring the XML schema file for a Management OData web service</span></span>](./authoring-the-xml-schema-file-for-a-management-odata-web-service.md)
+[<span data-ttu-id="896a9-118">관리 OData 웹 서비스에 대 한 XML 스키마 파일 작성</span><span class="sxs-lookup"><span data-stu-id="896a9-118">Authoring the XML schema file for a Management OData web service</span></span>](./authoring-the-xml-schema-file-for-a-management-odata-web-service.md)
 
-[<span data-ttu-id="98875-119">관리 OData 웹 서비스에 대 한 Web.config 파일 작성</span><span class="sxs-lookup"><span data-stu-id="98875-119">Authoring the Web.config file for a Management OData web service</span></span>](./authoring-the-web-config-file-for-a-management-odata-web-service.md)
+[<span data-ttu-id="896a9-119">관리 OData 웹 서비스에 대 한 Web.config 파일 작성</span><span class="sxs-lookup"><span data-stu-id="896a9-119">Authoring the Web.config file for a Management OData web service</span></span>](./authoring-the-web-config-file-for-a-management-odata-web-service.md)
 
-[<span data-ttu-id="98875-120">관리 OData 웹 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="98875-120">Creating a Management OData Web Service</span></span>](./creating-a-management-odata-web-service.md)
+[<span data-ttu-id="896a9-120">관리 OData 웹 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="896a9-120">Creating a Management OData Web Service</span></span>](./creating-a-management-odata-web-service.md)

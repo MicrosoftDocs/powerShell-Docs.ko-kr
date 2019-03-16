@@ -8,21 +8,21 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e4e1eee3-316b-43a4-8a60-313391619be6
 caps.latest.revision: 6
-ms.openlocfilehash: 740e8d60b71654b82020d16b2964165f3ee1e600
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2ac4aea2fdefdfe86349c14fe9b87cd8c41db090
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862309"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054563"
 ---
-# <a name="getproc02-c-sample-code"></a><span data-ttu-id="7b822-102">GetProc02(C#) 코드 샘플</span><span class="sxs-lookup"><span data-stu-id="7b822-102">GetProc02 (C#) Sample Code</span></span>
+# <a name="getproc02-c-sample-code"></a><span data-ttu-id="03e2b-102">GetProc02(C#) 코드 샘플</span><span class="sxs-lookup"><span data-stu-id="03e2b-102">GetProc02 (C#) Sample Code</span></span>
 
-<span data-ttu-id="7b822-103">다음 코드의 구현을 보여 줍니다는 `Get-Process` 명령줄 입력을 허용 하는 cmdlet입니다.</span><span class="sxs-lookup"><span data-stu-id="7b822-103">The following code shows the implementation of a `Get-Process` cmdlet that accepts command-line input.</span></span> <span data-ttu-id="7b822-104">이 구현을 정의 하는 `Name` 사용 하 고 명령줄 입력을 허용 하도록 매개 변수를 [System.Management.Automation.Cmdlet.Writeobject%28System.Object%2Csystem.Boolean%29](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29) 출력으로 메서드 출력을 보내기 위한 메커니즘을 파이프라인에는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="7b822-104">Notice that this implementation defines a `Name` parameter to allow command-line input, and it uses the [System.Management.Automation.Cmdlet.Writeobject%28System.Object%2Csystem.Boolean%29](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29) method as the output mechanism for sending output objects to the pipeline.</span></span>
+<span data-ttu-id="03e2b-103">다음 코드의 구현을 보여 줍니다는 `Get-Process` 명령줄 입력을 허용 하는 cmdlet입니다.</span><span class="sxs-lookup"><span data-stu-id="03e2b-103">The following code shows the implementation of a `Get-Process` cmdlet that accepts command-line input.</span></span> <span data-ttu-id="03e2b-104">이 구현을 정의 하는 `Name` 사용 하 고 명령줄 입력을 허용 하도록 매개 변수를 [System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29) 출력으로 메서드 출력을 보내기 위한 메커니즘을 파이프라인에는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="03e2b-104">Notice that this implementation defines a `Name` parameter to allow command-line input, and it uses the [System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29) method as the output mechanism for sending output objects to the pipeline.</span></span>
 
-## <a name="code-sample"></a><span data-ttu-id="7b822-105">코드 예제</span><span class="sxs-lookup"><span data-stu-id="7b822-105">Code Sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="03e2b-105">코드 예제</span><span class="sxs-lookup"><span data-stu-id="03e2b-105">Code Sample</span></span>
 
 [!code-csharp[GetProcessSample02.cs](../../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample02/GetProcessSample02.cs#L11-L76 "GetProcessSample02.cs")]
 
-## <a name="see-also"></a><span data-ttu-id="7b822-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7b822-106">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03e2b-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="03e2b-106">See Also</span></span>
 
-[<span data-ttu-id="7b822-107">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="7b822-107">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="03e2b-107">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="03e2b-107">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)

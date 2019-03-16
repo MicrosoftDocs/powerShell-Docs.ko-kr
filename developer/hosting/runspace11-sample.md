@@ -8,44 +8,44 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9c90d268-730b-4e73-9dfd-5f288c27aed0
 caps.latest.revision: 8
-ms.openlocfilehash: 09ec385827f8f6b4d1289a8caa4c1edf64f6ba43
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 74d7c9e9cb0d7ce829635e6aff994473e09e7479
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853069"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057221"
 ---
-# <a name="runspace11-sample"></a><span data-ttu-id="1f0d2-102">Runspace11 샘플</span><span class="sxs-lookup"><span data-stu-id="1f0d2-102">Runspace11 Sample</span></span>
+# <a name="runspace11-sample"></a><span data-ttu-id="a930a-102">Runspace11 샘플</span><span class="sxs-lookup"><span data-stu-id="a930a-102">Runspace11 Sample</span></span>
 
-<span data-ttu-id="1f0d2-103">이 샘플에 사용 하는 방법을 보여 줍니다 합니다 [System.Management.Automation.Proxycommand](/dotnet/api/System.Management.Automation.ProxyCommand) 기존 cmdlet을 호출 하지만 사용 가능한 매개 변수 집합을 제한 하는 프록시 명령을 만드는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="1f0d2-103">This sample shows how to use the [System.Management.Automation.Proxycommand](/dotnet/api/System.Management.Automation.ProxyCommand) class to create a proxy command that calls an existing cmdlet, but restricts the set of available parameters.</span></span> <span data-ttu-id="1f0d2-104">프록시 명령은 제한된 runspace를 만드는 데 사용되는 초기 세션 상태에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="1f0d2-104">The proxy command is then added to an initial session state that is used to create a constrained runspace.</span></span> <span data-ttu-id="1f0d2-105">따라서 사용자가 프록시 명령을 통해서만 cmdlet의 기능에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1f0d2-105">This means that the user can access the functionality of the cmdlet only through the proxy command.</span></span>
+<span data-ttu-id="a930a-103">이 샘플에 사용 하는 방법을 보여 줍니다 합니다 [System.Management.Automation.Proxycommand](/dotnet/api/System.Management.Automation.ProxyCommand) 기존 cmdlet을 호출 하지만 사용 가능한 매개 변수 집합을 제한 하는 프록시 명령을 만드는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="a930a-103">This sample shows how to use the [System.Management.Automation.Proxycommand](/dotnet/api/System.Management.Automation.ProxyCommand) class to create a proxy command that calls an existing cmdlet, but restricts the set of available parameters.</span></span> <span data-ttu-id="a930a-104">프록시 명령은 제한된 runspace를 만드는 데 사용되는 초기 세션 상태에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="a930a-104">The proxy command is then added to an initial session state that is used to create a constrained runspace.</span></span> <span data-ttu-id="a930a-105">따라서 사용자가 프록시 명령을 통해서만 cmdlet의 기능에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a930a-105">This means that the user can access the functionality of the cmdlet only through the proxy command.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="1f0d2-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1f0d2-106">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="a930a-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a930a-106">Requirements</span></span>
 
-<span data-ttu-id="1f0d2-107">이 샘플 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f0d2-107">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="a930a-107">이 샘플 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="a930a-107">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="1f0d2-108">시연</span><span class="sxs-lookup"><span data-stu-id="1f0d2-108">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="a930a-108">시연</span><span class="sxs-lookup"><span data-stu-id="a930a-108">Demonstrates</span></span>
 
-<span data-ttu-id="1f0d2-109">이 샘플에는 다음 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1f0d2-109">This sample demonstrates the following.</span></span>
+<span data-ttu-id="a930a-109">이 샘플에는 다음 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a930a-109">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="1f0d2-110">만들기는 [System.Management.Automation.Commandmetadata](/dotnet/api/System.Management.Automation.CommandMetadata) 기존 cmdlet의 메타 데이터를 설명 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="1f0d2-110">Creating a [System.Management.Automation.Commandmetadata](/dotnet/api/System.Management.Automation.CommandMetadata) object that describes the metadata of an existing cmdlet.</span></span>
+- <span data-ttu-id="a930a-110">만들기는 [System.Management.Automation.Commandmetadata](/dotnet/api/System.Management.Automation.CommandMetadata) 기존 cmdlet의 메타 데이터를 설명 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="a930a-110">Creating a [System.Management.Automation.Commandmetadata](/dotnet/api/System.Management.Automation.CommandMetadata) object that describes the metadata of an existing cmdlet.</span></span>
 
-- <span data-ttu-id="1f0d2-111">만들기는 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="1f0d2-111">Creating an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
+- <span data-ttu-id="a930a-111">만들기는 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="a930a-111">Creating an [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object.</span></span>
 
-- <span data-ttu-id="1f0d2-112">Cmdlet의 매개 변수를 제거 하려면 cmdlet은 메타 데이터를 수정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f0d2-112">Modifying the cmdlet metadata to remove a parameter of the cmdlet.</span></span>
+- <span data-ttu-id="a930a-112">Cmdlet의 매개 변수를 제거 하려면 cmdlet은 메타 데이터를 수정 합니다.</span><span class="sxs-lookup"><span data-stu-id="a930a-112">Modifying the cmdlet metadata to remove a parameter of the cmdlet.</span></span>
 
-- <span data-ttu-id="1f0d2-113">Cmdlet을 추가 합니다 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체와 cmdlet을 개인 만들기.</span><span class="sxs-lookup"><span data-stu-id="1f0d2-113">Adding the cmdlet to the [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object and making the cmdlet private.</span></span>
+- <span data-ttu-id="a930a-113">Cmdlet을 추가 합니다 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체와 cmdlet을 개인 만들기.</span><span class="sxs-lookup"><span data-stu-id="a930a-113">Adding the cmdlet to the [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object and making the cmdlet private.</span></span>
 
-- <span data-ttu-id="1f0d2-114">프록시 함수는 만들기는 기존 cmdlet을 호출 하지만 매개 변수 집합을 제한 된 노출 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f0d2-114">Creating a proxy function that calls the existing cmdlet, but exposes only a restricted set of parameters.</span></span>
+- <span data-ttu-id="a930a-114">프록시 함수는 만들기는 기존 cmdlet을 호출 하지만 매개 변수 집합을 제한 된 노출 합니다.</span><span class="sxs-lookup"><span data-stu-id="a930a-114">Creating a proxy function that calls the existing cmdlet, but exposes only a restricted set of parameters.</span></span>
 
-- <span data-ttu-id="1f0d2-115">프록시 함수 초기 세션 상태를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f0d2-115">Adding the proxy function to the initial session state.</span></span>
+- <span data-ttu-id="a930a-115">프록시 함수 초기 세션 상태를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="a930a-115">Adding the proxy function to the initial session state.</span></span>
 
-- <span data-ttu-id="1f0d2-116">만들기는 [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) 사용 하는 개체를 [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="1f0d2-116">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object.</span></span>
+- <span data-ttu-id="a930a-116">만들기는 [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) 사용 하는 개체를 [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="a930a-116">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object.</span></span>
 
-- <span data-ttu-id="1f0d2-117">개인 cmdlet을 사용 하 여 프록시 함수 호출을 [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) 개체를 제한 된 runspace를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1f0d2-117">Calling the private cmdlet and the proxy function using a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to demonstrate the constrained runspace.</span></span>
+- <span data-ttu-id="a930a-117">개인 cmdlet을 사용 하 여 프록시 함수 호출을 [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) 개체를 제한 된 runspace를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a930a-117">Calling the private cmdlet and the proxy function using a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to demonstrate the constrained runspace.</span></span>
 
-## <a name="example"></a><span data-ttu-id="1f0d2-118">예제</span><span class="sxs-lookup"><span data-stu-id="1f0d2-118">Example</span></span>
+## <a name="example"></a><span data-ttu-id="a930a-118">예제</span><span class="sxs-lookup"><span data-stu-id="a930a-118">Example</span></span>
 
-<span data-ttu-id="1f0d2-119">이 제한 된 runspace를 보여 주기 위해 개인 cmdlet에 대 한 프록시 명령을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1f0d2-119">This creates a proxy command for a private cmdlet to demonstrate a constrained runspace.</span></span>
+<span data-ttu-id="a930a-119">이 제한 된 runspace를 보여 주기 위해 개인 cmdlet에 대 한 프록시 명령을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="a930a-119">This creates a proxy command for a private cmdlet to demonstrate a constrained runspace.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -146,7 +146,7 @@ namespace Microsoft.Samples.PowerShell.Runspaces
     /// </remarks>
     private static void Main()
     {
-      // Create a default initial session state. The default inital session state
+      // Create a default initial session state. The default initial session state
       // includes all the elements that are provided by Windows PowerShell.
       InitialSessionState iss = InitialSessionState.CreateDefault();
 
@@ -157,7 +157,7 @@ namespace Microsoft.Samples.PowerShell.Runspaces
       // Make the cmdlet private so that it is not accessible.
       cmdletEntry.Visibility = SessionStateEntryVisibility.Private;
 
-      // Set the language mode of the initial session state to NoLanguge to
+      // Set the language mode of the initial session state to NoLanguage to
       //prevent users from using language features. Only the invocation of
       // public commands is allowed.
       iss.LanguageMode = PSLanguageMode.NoLanguage;
@@ -244,6 +244,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="1f0d2-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1f0d2-120">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a930a-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a930a-120">See Also</span></span>
 
-[<span data-ttu-id="1f0d2-121">Windows PowerShell 호스트 응용 프로그램 작성</span><span class="sxs-lookup"><span data-stu-id="1f0d2-121">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
+[<span data-ttu-id="a930a-121">Windows PowerShell 호스트 응용 프로그램 작성</span><span class="sxs-lookup"><span data-stu-id="a930a-121">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)

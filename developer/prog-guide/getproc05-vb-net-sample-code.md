@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8dfc0f66-65ec-4141-9088-68e47dbe3908
 caps.latest.revision: 6
-ms.openlocfilehash: e1d670b1313af86095d845b72e42846d1c08549a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: de0e7de6b02f62770126350d0c09df6c7909464e
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853509"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056416"
 ---
-# <a name="getproc05-vbnet-sample-code"></a><span data-ttu-id="f6d0c-102">GetProc05(VB.NET) 코드 샘플</span><span class="sxs-lookup"><span data-stu-id="f6d0c-102">GetProc05 (VB.NET) Sample Code</span></span>
+# <a name="getproc05-vbnet-sample-code"></a><span data-ttu-id="98e1d-102">GetProc05(VB.NET) 코드 샘플</span><span class="sxs-lookup"><span data-stu-id="98e1d-102">GetProc05 (VB.NET) Sample Code</span></span>
 
-<span data-ttu-id="f6d0c-103">GetProc05 샘플 cmdlet에 대 한 전체 VB.NET 코드는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="f6d0c-103">Here is the complete VB.NET code for the GetProc05 sample cmdlet.</span></span>
+<span data-ttu-id="98e1d-103">GetProc05 샘플 cmdlet에 대 한 전체 VB.NET 코드는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="98e1d-103">Here is the complete VB.NET code for the GetProc05 sample cmdlet.</span></span>
 
 ```vb
 Imports System
@@ -167,7 +167,7 @@ Namespace Microsoft.Samples.PowerShell.Commands
                     WriteVerbose(("Finding matches for process name """ & _
                         pattern & """."))
 
-                    ' WildCard serach on the available processes
+                    ' WildCard search on the available processes
                     Dim wildcard As New WildcardPattern(pattern, _
                         WildcardOptions.IgnoreCase)
 
@@ -186,7 +186,7 @@ Namespace Microsoft.Samples.PowerShell.Commands
                             End If
 
                             ' Perform a wildcard search on this particular
-                            ' process and check whehter this matches the
+                            ' process and check whether this matches the
                             ' pattern specified.
                             If Not wildcard.IsMatch(processName) Then
                                 GoTo ContinueForEach2
@@ -434,6 +434,6 @@ End Namespace
 
 <!-- TODO!!!:  [!code-csharp[GetProcessSample01.vb](../../powershell-sdk-samples/SDK-2.0/vb/GetProcessSample01/GetProcessSample01.vb#L10-L419 "GetProcessSample01.cs")] -->
 
-## <a name="see-also"></a><span data-ttu-id="f6d0c-104">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f6d0c-104">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="98e1d-104">참고 항목</span><span class="sxs-lookup"><span data-stu-id="98e1d-104">See Also</span></span>
 
-[<span data-ttu-id="f6d0c-105">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="f6d0c-105">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="98e1d-105">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="98e1d-105">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
