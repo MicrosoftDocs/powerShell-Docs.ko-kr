@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0f7a74e9-764d-46ce-ab8e-8b9314ce1659
 caps.latest.revision: 12
-ms.openlocfilehash: 723619e67612b859d0acbab37eecd82141adf923
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 442565d25f60ae8e04501f3f9ffba35d486fbc8a
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854949"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054946"
 ---
 # <a name="entryselectedby-element-for-listentry-for-listcontrol-format"></a>ListControl의 ListEntry에 대한 EntrySelectedBy 요소(형식)
 
@@ -44,7 +44,7 @@ ms.locfileid: "56854949"
 |요소|설명|
 |-------------|-----------------|
 |[ListControl (형식)에 대 한 EntrySelectedBy SelectionCondition 요소](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 이 목록 뷰 정의 사용할 수 있어야 하는 조건을 정의 합니다.|
-|[ListControl (형식)에 대 한 EnrtySelectedBy SelectionSetName 요소](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 이 목록 뷰 정의 사용 하는.NET 형식의 집합을 지정 합니다.|
+|[ListControl (형식)에 대 한 EntrySelectedBy SelectionSetName 요소](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 이 목록 뷰 정의 사용 하는.NET 형식의 집합을 지정 합니다.|
 |[EntrySelectedBy ListControl (형식)에 대 한 TypeName 요소](./typename-element-for-entryselectedby-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 이 목록 뷰 정의 사용 하는.NET 형식을 지정 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
@@ -79,7 +79,7 @@ ms.locfileid: "56854949"
 
 [ListControl (형식)에 대 한 EntrySelectedBy SelectionCondition 요소](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)
 
-[ListControl (형식)에 대 한 EnrtySelectedBy SelectionSetName 요소](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
+[ListControl (형식)에 대 한 EntrySelectedBy SelectionSetName 요소](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
 
 [EntrySelectedBy ListControl (형식)에 대 한 TypeName 요소](./typename-element-for-entryselectedby-for-listcontrol-format.md)
 

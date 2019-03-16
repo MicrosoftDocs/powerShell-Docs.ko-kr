@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drives [PowerShell Programmer's Guide]
 ms.assetid: 2b446841-6616-4720-9ff8-50801d7576ed
 caps.latest.revision: 6
-ms.openlocfilehash: d1546ab0b0e6b5502f35c92c01ce148211c53db2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 174d3a6860790295e1b73f32d9c1bad46b653917
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855799"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055652"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Windows PowerShell 드라이브 공급자 만들기
 
@@ -61,7 +61,7 @@ ms.locfileid: "56855799"
 
 즉, 드라이브 공급자 공급자를 호출할 때 Windows PowerShell 런타임에 의해 필요한 모든 상태 정보를 만들 필요가 있는지 모든 Windows PowerShell 공급자 상태 비저장 간주 됩니다.
 
-이 드라이브 공급자에 대 한 상태 정보에는 드라이브 정보로 유지 되는 데이터베이스 연결이 포함 됩니다. 다음은이 정보에 저장 되는 방법을 보여 주는 코드를 [System.Management.Automation.Psdriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) 드라이브를 설명 하는 개체:
+이 드라이브 공급자에 대 한 상태 정보에는 드라이브 정보로 유지 되는 데이터베이스 연결이 포함 됩니다. 다음은이 정보에 저장 되는 방법을 보여 주는 코드를 [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) 드라이브를 설명 하는 개체:
 
 [!code-csharp[AccessDBProviderSample02.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs#L130-L151 "AccessDBProviderSample02.cs")]
 
@@ -73,15 +73,15 @@ ms.locfileid: "56855799"
 
 이 메서드의 재정의 다음을 수행 해야 합니다.
 
-- 있는지 확인 합니다 [System.Management.Automation.Psdriveinfo.Root*](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) 멤버 존재 하 고 데이터 저장소에 연결 될 수 있는 합니다.
+- 있는지 확인 합니다 [System.Management.Automation.PSDriveinfo.Root*](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) 멤버 존재 하 고 데이터 저장소에 연결 될 수 있는 합니다.
 
 - 드라이브를 만들고 연결 하는 멤버를 지 원하는 채우기는 `New-PSDrive` cmdlet.
 
-- 유효성을 검사 합니다 [System.Management.Automation.Psdriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) 제안 된 드라이브에 대 한 개체입니다.
+- 유효성을 검사 합니다 [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) 제안 된 드라이브에 대 한 개체입니다.
 
-- 수정 된 [System.Management.Automation.Psdriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) 모든 필요한 성능 또는 안정성 정보를 사용 하 여 드라이브를 설명 하는 개체 또는 드라이브를 사용 하 여 호출자에 대 한 추가 데이터를 제공 합니다.
+- 수정 된 [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) 모든 필요한 성능 또는 안정성 정보를 사용 하 여 드라이브를 설명 하는 개체 또는 드라이브를 사용 하 여 호출자에 대 한 추가 데이터를 제공 합니다.
 
-- 사용 하 여 오류를 처리 합니다 [System.Management.Automation.Provider.Cmdletprovider.Writeerror*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) 메서드와 반환 `null`합니다.
+- 사용 하 여 오류를 처리 합니다 [System.Management.Automation.Provider.Cmdletprovider.WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) 메서드와 반환 `null`합니다.
 
   이 메서드는 메서드 또는 해당 공급자 버전으로 두 드라이브 정보를 전달 된를 반환 합니다.
 

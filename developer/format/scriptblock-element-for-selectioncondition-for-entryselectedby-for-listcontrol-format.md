@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4a1adad7-e864-4892-9d26-a6476a9698d2
 caps.latest.revision: 7
-ms.openlocfilehash: fd708473d04a76bcf6cf3a8f8278e1d15fb9addf
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: b65d953169f6daf15fb617ce4d0303cf4cb584ee
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858659"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057776"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format"></a>ListControl에 대한 EntrySelectedBy의 SelectionCondition에 대한 ScriptBlock 요소(형식)
 
@@ -59,7 +59,7 @@ ms.locfileid: "56858659"
 
 [ListEntry 요소 (형식)](./listentry-element-for-listcontrol-format.md)
 
-[PropertyName SelectionCondition EmtrySelectedBy ListEntry (형식)에 대 한에 대 한 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)
+[PropertyName SelectionCondition EntrySelectedBy ListEntry (형식)에 대 한에 대 한 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)
 
 [ListEntry (형식)에 대 한 EntrySelectedBy SelectionCondition 요소](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)
 

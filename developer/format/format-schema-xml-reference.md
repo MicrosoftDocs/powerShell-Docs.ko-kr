@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ac6f7aaa-d0cc-4c7b-a341-85e736174579
 caps.latest.revision: 21
-ms.openlocfilehash: 4dfe27a5105d82fa18e35f965f92fad16d390a2a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 437b3d6bb62fdd3a74f3392ec71df360c01a1974
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857789"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056654"
 ---
 # <a name="format-schema-xml-reference"></a>형식 스키마 XML 참조
 
@@ -81,7 +81,7 @@ ms.locfileid: "56857789"
 
 [DefaultSettings 요소 (형식)](./defaultsettings-element-format.md) 서식 파일의 모든 뷰에 적용 되는 일반적인 설정을 정의 합니다. 일반적인 설정의 컬렉션 확장 되는 방법을 정의 하는 테이블 및 기타 자동 줄 바꿈 오류 표시 포함 됩니다.
 
-[DisplayError 요소 (Frmat)](./displayerror-element-format.md) 오류가 발생 하는 데이터의 일부를 표시 하는 경우 문자열 #ERR 표시 되도록 지정 합니다.
+[DisplayError 요소 (형식)](./displayerror-element-format.md) 오류가 발생 하는 데이터의 일부를 표시 하는 경우 문자열 #ERR 표시 되도록 지정 합니다.
 
 [구성 (형식)에 대 한 컨트롤에 대 한 CustomEntry EntrySelectedBy 요소](./entryselectedby-element-for-customentry-for-controls-for-configuration-format.md) 공용 컨트롤 또는이 컨트롤을 사용할 수 있어야 하는 조건을 정의 사용 하는.NET 유형을 정의 합니다. 이 요소는 서식 파일의 모든 보기에서 사용할 수 있는 공용 컨트롤을 정의할 때 사용 됩니다.
 
@@ -235,7 +235,7 @@ ms.locfileid: "56857789"
 
 [GroupBy (형식)에 대 한 SelectionCondition PropertyName 요소](./propertyname-element-for-selectioncondition-for-groupby-format.md) 조건을 트리거하는.NET 속성을 지정 합니다. 이 속성이 있는 경우 또는로 평가 되 면 `true`조건이 충족 되 고 정의가 사용 됩니다. 이 요소는 새 개체 그룹에 표시 되는 방식을 정의 하는 경우에 사용 됩니다.
 
-[EmtrySelectedBy ListEntry (형식)에 대 한에 대 한 SelectionCondition PropertyName 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md) 조건을 트리거하는.NET 속성을 지정 합니다. 이 속성이 있는 경우 또는로 평가 되 면 `true`조건이 충족 되 고 목록 항목이 사용 됩니다.
+[EntrySelectedBy ListEntry (형식)에 대 한에 대 한 SelectionCondition PropertyName 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md) 조건을 트리거하는.NET 속성을 지정 합니다. 이 속성이 있는 경우 또는로 평가 되 면 `true`조건이 충족 되 고 목록 항목이 사용 됩니다.
 
 [EntrySelectedBy TableRowEntry (형식)에 대 한에 대 한 SelectionCondition PropertyName 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-tablerowentry-format.md) 조건을 트리거하는.NET 속성을 지정 합니다. 이 속성이 있는 경우 또는로 평가 되 면 `true`조건이 충족 되 고 테이블 항목이 사용 됩니다.
 
@@ -363,7 +363,7 @@ ms.locfileid: "56857789"
 
 [TableRowEntries 요소 (형식)](./tablerowentries-element-for-tablecontrol-format.md) 테이블의 행을 정의 합니다.
 
-[TableRowEntry 요소 (형식)](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md) 테이블의 행에 표시 되는 데이터를 정의 합니다.
+[TableRowEntry 요소 (형식)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md) 테이블의 행에 표시 되는 데이터를 정의 합니다.
 
 [텍스트 요소 구성 (형식)에 대 한 컨트롤에 대 한 CustomItem](./text-element-for-customitem-for-controls-for-configuration-format.md) 지정 텍스트 레이블과 같은 컨트롤에 의해 표시 되는 데이터에 추가 되는 괄호를 사용 하는 데이터 및 데이터를 들여쓸 공간을 묶습니다. 이 요소는 서식 파일의 모든 보기에서 사용할 수 있는 공용 컨트롤을 정의할 때 사용 됩니다.
 
@@ -427,7 +427,7 @@ ms.locfileid: "56857789"
 
 [Width 요소 (형식)](./width-element-for-tablecolumnheader-for-tablecontrol-format.md) 의 너비 (문자 단위) 열을 정의 합니다.
 
-[요소 (형식)를 래핑할](./wrap-element-for-tablerowentry-for-tablecontrl-format.md) 열 너비를 초과 하는 텍스트가 다음 줄에 표시 되도록 지정 합니다.
+[요소 (형식)를 래핑할](./wrap-element-for-tablerowentry-for-tablecontrol-format.md) 열 너비를 초과 하는 텍스트가 다음 줄에 표시 되도록 지정 합니다.
 
 [WrapTables 요소 (형식)](./wraptables-element-format.md) 데이터 표 셀에 다음 줄으로 이동 되 면 데이터 열의 너비 보다 길이 지정 합니다.
 

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b7bed607-369b-4507-87fa-f6011c2f1970
 caps.latest.revision: 9
-ms.openlocfilehash: f601bcd5cc57ce9828338676bf71cbe235593b5d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2ce146df05ef876d9c17f560628ebac2c39e57bf
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857139"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059204"
 ---
 # <a name="stopprocesssample01-sample"></a>StopProcessSample01 샘플
 
@@ -189,7 +189,7 @@ namespace Microsoft.Samples.PowerShell.Commands
                    }
 
                    // Make sure that the user really wants to stop a critical
-                   // process that culd possibly stop the computer.
+                   // process that could possibly stop the computer.
                    bool criticalProcess =
                        criticalProcessNames.Contains(processName.ToLower(CultureInfo.CurrentCulture));
 
@@ -201,16 +201,16 @@ namespace Microsoft.Samples.PowerShell.Commands
                                     processName);
 
                        // It is possible that the ProcessRecord method is called
-                       // multiple times when objects are recieved as inputs from
+                       // multiple times when objects are received as inputs from
                        // the pipeline. So to retain YesToAll and NoToAll input that
-                       // the user may enter across mutilple calls to this function,
+                       // the user may enter across multiple calls to this function,
                        // they are stored as private members of the cmdlet.
                        if (!ShouldContinue(message, "Warning!",
                                                ref yesToAll, ref noToAll))
                        {
                            continue;
                        }
-                   } // if (cricicalProcess...
+                   } // if (criticalProcess...
 
                    // Stop the named process.
                    try

@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ea15e00e-20dc-4209-9e97-9ffd763e5d97
 caps.latest.revision: 8
-ms.openlocfilehash: 6171f96d66d0b2aa0fd9cb2a939768287c4bcb87
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 28d55874960f9a64b986204411d38319ef1d0da7
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859389"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059527"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>데이터 저장소에 액세스하는 Cmdlet 만들기
 
-이 섹션에는 Windows PowerShell 공급자를 통해 저장 된 데이터에 액세스 하는 cmdlet을 만드는 방법을 설명 합니다. 이 유형의 cmdlet는 Windows PowerShell 공급자 인프라의 Windows PowerShell 런타임 사용 하 고는 cmdlet 클래스에서 파생 되어야 하므로 합니다 [System.Management.Automation.Pscmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 기본 클래스입니다.
+이 섹션에는 Windows PowerShell 공급자를 통해 저장 된 데이터에 액세스 하는 cmdlet을 만드는 방법을 설명 합니다. 이 유형의 cmdlet는 Windows PowerShell 공급자 인프라의 Windows PowerShell 런타임 사용 하 고는 cmdlet 클래스에서 파생 되어야 하므로 합니다 [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 기본 클래스입니다.
 
 여기에 설명 된 선택 Str cmdlet을 찾은 후 문자열을 파일 또는 개체를 선택 합니다. 문자열을 식별 하는 데 패턴을 통해 명시적으로 지정할 수는 `Path` 통해 암시적으로 또는 cmdlet의 매개 변수는 `Script` 매개 변수입니다.
 
@@ -45,7 +45,7 @@ Cmdlet에서 파생 되는 모든 Windows PowerShell 공급자를 사용 하도�
 
 Cmdlet 만드는 첫 번째 단계는 항상 cmdlet 이름과 cmdlet을 구현 하는.NET 클래스를 선언 합니다. 이 cmdlet에서 정의한 여기 선택한 동사 이름에 "Select" 이므로 특정 문자열을 검색 합니다 [System.Management.Automation.Verbscommon](/dotnet/api/System.Management.Automation.VerbsCommon) 클래스입니다. 문자열에는 cmdlet이 적용 되므로 "Str" 명사 이름 사용 됩니다. 다음 선언에는 cmdlet 클래스 이름을 cmdlet 동사 / 명사 이름이 내용이 반영 되었는지 note 합니다. 승인 된 cmdlet 동사에 대 한 자세한 내용은 참조 하세요. [Cmdlet 동사 이름](./approved-verbs-for-windows-powershell-commands.md)합니다.
 
-이 cmdlet에 대 한.NET 클래스에서 파생 되어야 합니다 [System.Management.Automation.Pscmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) Windows PowerShell 공급자를 노출 하는 데 필요한 Windows PowerShell 런타임에 의해 지원을 제공 하기 때문에 기본 클래스 인프라입니다. 이 cmdlet을 사용 하면 또한는 같은.NET Framework 정규식 클래스를 이용 [System.Text.Regularexpressions.Regex](/dotnet/api/System.Text.RegularExpressions.Regex)합니다.
+이 cmdlet에 대 한.NET 클래스에서 파생 되어야 합니다 [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) Windows PowerShell 공급자를 노출 하는 데 필요한 Windows PowerShell 런타임에 의해 지원을 제공 하기 때문에 기본 클래스 인프라입니다. 이 cmdlet을 사용 하면 또한는 같은.NET Framework 정규식 클래스를 이용 [System.Text.Regularexpressions.Regex](/dotnet/api/System.Text.RegularExpressions.Regex)합니다.
 
 다음 코드는이 선택 Str cmdlet에 대 한 클래스 정의입니다.
 
@@ -117,7 +117,7 @@ Cmdlet은 기본 매개 변수 집합을 사용 하 여이 매개 변수를 지�
 
 이 cmdlet은 cmdlet의 검색 기능을 수정 하는 다음 지원 매개 변수를 정의 합니다.
 
-`Script` 매개 변수를 cmdlet에 대 한 대체 검색 메커니즘을 제공 하는 스크립트 블록을 지정 합니다. 스크립트와 일치 하는 데 패턴을 포함 하며 반환 된 [System.Management.Automation.Psobject](/dotnet/api/System.Management.Automation.PSObject) 개체입니다. 이 매개 변수는 식별 하는 고유한 매개 변수 또한는 `ScriptParameterSet` 매개 변수 집합입니다. 에 속하는 매개 변수만 사용 하 여 Windows PowerShell 런타임이이 매개 변수를 인식 하는 경우는 `ScriptParameterSet` 매개 변수 집합입니다.
+`Script` 매개 변수를 cmdlet에 대 한 대체 검색 메커니즘을 제공 하는 스크립트 블록을 지정 합니다. 스크립트와 일치 하는 데 패턴을 포함 하며 반환 된 [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) 개체입니다. 이 매개 변수는 식별 하는 고유한 매개 변수 또한는 `ScriptParameterSet` 매개 변수 집합입니다. 에 속하는 매개 변수만 사용 하 여 Windows PowerShell 런타임이이 매개 변수를 인식 하는 경우는 `ScriptParameterSet` 매개 변수 집합입니다.
 
 ```csharp
 [Parameter(
@@ -195,13 +195,13 @@ internal WildcardPattern[] include = null;
 
 ### <a name="declaring-parameter-sets"></a>선언 매개 변수 집합
 
-이 cmdlet은 두 개의 매개 변수 집합을 사용 (`ScriptParameterSet` 고 `PatternParameterSet`, 기본은) 데이터 액세스에 사용 되는 두 매개 변수 집합의 이름으로 합니다. `PatternParameterSet` 기본 매개 변수 집합 및 경우에 사용 되는 `Pattern` 매개 변수를 지정 합니다. `ScriptParameterSet` 대체 검색 메커니즘을 통해 지정할 때 사용 되는 `Script` 매개 변수입니다. 매개 변수 집합에 대 한 자세한 내용은 참조 하세요. [Cmdlet에 매개 변수 집합 추가](./adding-parameter-sets-to-a-cmdlet.md)합니다.
+이 cmdlet은 두 개의 매개 변수 집합을 사용 (`ScriptParameterSet` 고 `PatternParameterSet`, 기본값) 데이터 액세스에 사용 되는 두 매개 변수 집합의 이름으로 합니다. `PatternParameterSet` 기본 매개 변수 집합 및 경우에 사용 되는 `Pattern` 매개 변수를 지정 합니다. `ScriptParameterSet` 대체 검색 메커니즘을 통해 지정할 때 사용 되는 `Script` 매개 변수입니다. 매개 변수 집합에 대 한 자세한 내용은 참조 하세요. [Cmdlet에 매개 변수 집합 추가](./adding-parameter-sets-to-a-cmdlet.md)합니다.
 
 ## <a name="overriding-input-processing-methods"></a>입력 처리 메서드를 재정의 합니다.
 
-Cmdlet은 하나 이상의 입력 처리에 대 한 메서드 재정의 해야 합니다 [System.Management.Automation.Pscmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 클래스입니다. 입력된 처리 방법에 대 한 자세한 내용은 참조 하세요. [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)합니다.
+Cmdlet은 하나 이상의 입력 처리에 대 한 메서드 재정의 해야 합니다 [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 클래스입니다. 입력된 처리 방법에 대 한 자세한 내용은 참조 하세요. [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)합니다.
 
-이 cmdlet을 재정의 합니다 [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드 배열을 빌드 컴파일된 정규식 시작 합니다. 단순 일치를 사용 하지 않는 검색 중에 성능을 향상 됩니다.
+이 cmdlet을 재정의 합니다 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드 배열을 빌드 컴파일된 정규식 시작 합니다. 단순 일치를 사용 하지 않는 검색 중에 성능을 향상 됩니다.
 
 ```csharp
 protected override void BeginProcessing()
@@ -280,7 +280,7 @@ protected override void BeginProcessing()
 }// End of function BeginProcessing().
 ```
 
-또한이 cmdlet를 재정의 합니다 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 사용자가 명령줄에서 문자열 선택 항목을 처리 하는 방법입니다. 개인을 호출 하 여 사용자 지정 개체의 형태로 문자열 선택의 결과 작성 **MatchString** 메서드.
+또한이 cmdlet를 재정의 합니다 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 사용자가 명령줄에서 문자열 선택 항목을 처리 하는 방법입니다. 개인을 호출 하 여 사용자 지정 개체의 형태로 문자열 선택의 결과 작성 **MatchString** 메서드.
 
 ```csharp
 protected override void ProcessRecord()
@@ -301,7 +301,7 @@ protected override void ProcessRecord()
     {
       WriteVerbose("Processing path " + path.Path);
 
-      // Check if the path represens one of the items to be
+      // Check if the path represents one of the items to be
       // excluded. If so, continue to next path.
       if (!MeetsIncludeExcludeCriteria(path.ProviderPath))
          continue;
@@ -357,7 +357,7 @@ protected override void ProcessRecord()
           }
           else
           {
-            // Add the block(line) that did notmatch to the
+            // Add the block(line) that did not match to the
             // collection of non matches , which will be stored
             // in the SessionState variable $NonMatches
             nonMatches.Add(items[0]);
@@ -391,7 +391,7 @@ protected override void ProcessRecord()
 
 ## <a name="accessing-content"></a>콘텐츠 액세스
 
-Cmdlet는 데이터에 액세스할 수 있도록 Windows PowerShell 경로에서 지정 된 공급자를 열어야 합니다. [System.Management.Automation.Sessionstate](/dotnet/api/System.Management.Automation.SessionState) 개체 공급자에 대 한 액세스에 사용 된 runspace에 대 한 동안 합니다 [System.Management.Automation.Pscmdlet.Invokeprovider*](/dotnet/api/System.Management.Automation.PSCmdlet.InvokeProvider) 의 속성을 cmdlet은 사용 하 여 공급자를 열를 합니다. 검색 하 여 콘텐츠 액세스를 제공 합니다 [System.Management.Automation.Providerintrinsics](/dotnet/api/System.Management.Automation.ProviderIntrinsics) 공급자에 대 한 개체를 열입니다.
+Cmdlet는 데이터에 액세스할 수 있도록 Windows PowerShell 경로에서 지정 된 공급자를 열어야 합니다. [System.Management.Automation.Sessionstate](/dotnet/api/System.Management.Automation.SessionState) 개체 공급자에 대 한 액세스에 사용 된 runspace에 대 한 동안 합니다 [System.Management.Automation.PSCmdlet.Invokeprovider*](/dotnet/api/System.Management.Automation.PSCmdlet.InvokeProvider) 의 속성을 cmdlet은 사용 하 여 공급자를 열를 합니다. 검색 하 여 콘텐츠 액세스를 제공 합니다 [System.Management.Automation.Providerintrinsics](/dotnet/api/System.Management.Automation.ProviderIntrinsics) 공급자에 대 한 개체를 열입니다.
 
 이 샘플 선택 Str cmdlet을 사용 합니다 [System.Management.Automation.Providerintrinsics.Content*](/dotnet/api/System.Management.Automation.ProviderIntrinsics.Content) 속성을 콘텐츠 검사를 표시 합니다. 호출할 수 있습니다 합니다 [System.Management.Automation.Contentcmdletproviderintrinsics.Getreader*](/dotnet/api/System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader) 메서드를 필요한 Windows PowerShell 경로 전달 합니다.
 
@@ -436,7 +436,7 @@ namespace Microsoft.Samples.PowerShell.Commands
     /// This parameter must specify a PowerShell that indicates the
     /// PowerShell provider that is used to access the objects to be
     /// searched for matching patterns. This parameter should also have
-    /// a PSPath alias to provide consistancy with other cmdlets that use
+    /// a PSPath alias to provide consistency with other cmdlets that use
     /// PowerShell providers.
     /// </summary>
     /// <value>Path of the object(s) to search.</value>
@@ -517,7 +517,7 @@ namespace Microsoft.Samples.PowerShell.Commands
     /// <summary>
     /// Declare a switch parameter that specifies if a case-sensitive
     /// search is performed.  If not (default), a case-insensitive search
-    /// is perfored.
+    /// is performed.
     /// </summary>
     /// <value>If True, a case-sensitive search is made.</value>
     [Parameter]
@@ -689,7 +689,7 @@ namespace Microsoft.Samples.PowerShell.Commands
         {
           WriteVerbose("Processing path " + path.Path);
 
-          // Check if the path represens one of the items to be
+          // Check if the path represents one of the items to be
           // excluded. If so, continue to next path.
           if (!MeetsIncludeExcludeCriteria(path.ProviderPath))
              continue;
@@ -745,7 +745,7 @@ namespace Microsoft.Samples.PowerShell.Commands
               }
               else
               {
-                // Add the block(line) that did notmatch to the
+                // Add the block(line) that did not match to the
                 // collection of non matches , which will be stored
                 // in the SessionState variable $NonMatches
                 nonMatches.Add(items[0]);
@@ -874,7 +874,7 @@ namespace Microsoft.Samples.PowerShell.Commands
     /// <summary>
     /// Check whether the supplied name meets the include/exclude criteria.
     /// That is - it's on the include list if the include list was
-    /// specified, and not on the exclude list if the explude list was specified.
+    /// specified, and not on the exclude list if the exclude list was specified.
     /// </summary>
     /// <param name="path">path to validate</param>
     /// <returns>True if the path is acceptable.</returns>
@@ -1078,7 +1078,7 @@ namespace Microsoft.Samples.PowerShell.Commands
     }
 
     /// <summary>
-    /// Specifiy the description of the PowerShell snap-in.
+    /// Specify the description of the PowerShell snap-in.
     /// </summary>
     public override string Description
     {

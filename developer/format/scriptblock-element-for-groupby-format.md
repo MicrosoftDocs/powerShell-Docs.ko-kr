@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 30183927-6f0e-4717-b6f5-f07a6e134cfb
 caps.latest.revision: 6
-ms.openlocfilehash: 41a6aaa24e5850bd390c8e3b6505cc88fc80b7b5
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f2f6b9af7740b1231881294c2f32bf97b5a1568b
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856209"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054428"
 ---
 # <a name="scriptblock-element-for-groupby-format"></a>GroupBy에 대한 ScriptBlock 요소(형식)
 
@@ -24,7 +24,7 @@ ms.locfileid: "56856209"
 ## <a name="syntax"></a>구문
 
 ```xml
-<ScriptBolck>ScriptToEvaluate</ScriptBlock>
+<ScriptBlock>ScriptToEvaluate</ScriptBlock>
 ```
 
 ## <a name="attributes-and-elements"></a>특성 및 요소

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1550b068-dfbc-4ae0-9aa1-72c9a680ec59
 caps.latest.revision: 15
-ms.openlocfilehash: dd48e82452e83f93e2e005c9db53bbc51d8b2eb4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 3942c008e026b0b99db3c77af4a0152b50fffc4e
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858919"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054580"
 ---
 # <a name="tablecontrol-element-format"></a>TableControl 요소(형식)
 
@@ -48,7 +48,7 @@ ViewDefinitions 요소 (형식) 보기 (형식) TableControl 요소 (형식)
 |[TableControl (형식)에 대 한 자동 크기 조정 요소](./autosize-element-for-tablecontrol-format.md)|선택적 요소입니다.<br /><br /> 조정 여부를 열 크기 및 열 개수는 데이터의 크기를 기준으로 지정 합니다.|
 |[TableControl (형식)에 대 한 HideTableHeaders 요소](./hidetableheaders-element-format.md)|선택적 요소입니다.<br /><br /> 테이블의 머리글을 표시 하지 여부를 나타냅니다.|
 |[TableControl (형식)에 대 한 TableHeaders 요소](./tableheaders-element-format.md)|필수 요소입니다.<br /><br /> 레이블, 너비 및 테이블 뷰의 열에 대 한 데이터의 맞춤을 정의합니다.|
-|[TableCotrol (형식)에 대 한 TableRowEntries 요소](./tablerowentries-element-for-tablecontrol-format.md)|선택적 요소입니다.<br /><br /> 테이블 보기의 정의 제공합니다.|
+|[TableControl (형식)에 대 한 TableRowEntries 요소](./tablerowentries-element-for-tablecontrol-format.md)|선택적 요소입니다.<br /><br /> 테이블 보기의 정의 제공합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 

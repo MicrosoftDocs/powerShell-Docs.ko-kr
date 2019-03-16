@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d10b68ca-256c-4c58-b503-73f7777b39ae
 caps.latest.revision: 15
-ms.openlocfilehash: d93750f919c1075f173dc9ac70324cc003e36879
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 88de19be02de4933f892e02093403a82ccdd5788
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862189"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055736"
 ---
 # <a name="tablerowentries-element-for-tablecontrol-format"></a>TableControl에 대한 TableRowEntries 요소(형식)
 
@@ -41,7 +41,7 @@ ms.locfileid: "56862189"
 
 |요소|설명|
 |-------------|-----------------|
-|[TableControl (형식)에 대 한 TableRowEntries TableRowEntry 요소](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)|필수 요소입니다.<br /><br /> 테이블의 행에 표시 되는 데이터를 정의 합니다.|
+|[TableControl (형식)에 대 한 TableRowEntries TableRowEntry 요소](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|필수 요소입니다.<br /><br /> 테이블의 행에 표시 되는 데이터를 정의 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
@@ -84,6 +84,6 @@ ms.locfileid: "56862189"
 
 [TableControl 요소 (형식)](./tablecontrol-element-format.md)
 
-[TableRowEntry 요소 (형식)](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)
+[TableRowEntry 요소 (형식)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)
 
 [서식 파일을 PowerShell 작성](./writing-a-powershell-formatting-file.md)

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 79c9bcbc-a2eb-4253-a4b8-65ba54ce8d01
 caps.latest.revision: 9
-ms.openlocfilehash: 97a2d3587f8f69edc92150474e94a620ff9a2f71
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 871a74a084da3c7ec36767b7195461e0e7290cb9
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854549"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056569"
 ---
 # <a name="advisory-development-guidelines"></a>권장되는 개발 지침
 
@@ -61,7 +61,7 @@ Microsoft.NET Framework 개체를 사용 하 여 직접 Windows PowerShell 작�
 
 ### <a name="handle-credentials-through-windows-powershell-ad03"></a>Windows PowerShell (AD03)을 통해 자격 증명 처리
 
-Cmdlet을 정의 해야는 `Credential` 자격 증명을 나타내는 매개 변수입니다. 이 매개 변수 형식 이어야 합니다 [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential) 자격 증명 특성 선언을 사용 하 여 정의 해야 합니다. 이 지원을 자동으로 전체 자격 증명을 직접 제공 되지 않은 경우 사용자 이름, 암호, 또는 둘 다에 사용자 라는 메시지가 나타납니다. 자격 증명 특성에 대 한 자세한 내용은 참조 하세요. [자격 증명 특성 선언을](./credential-attribute-declaration.md)합니다.
+Cmdlet을 정의 해야는 `Credential` 자격 증명을 나타내는 매개 변수입니다. 이 매개 변수 형식 이어야 합니다 [System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential) 자격 증명 특성 선언을 사용 하 여 정의 해야 합니다. 이 지원을 자동으로 전체 자격 증명을 직접 제공 되지 않은 경우 사용자 이름, 암호, 또는 둘 다에 사용자 라는 메시지가 나타납니다. 자격 증명 특성에 대 한 자세한 내용은 참조 하세요. [자격 증명 특성 선언을](./credential-attribute-declaration.md)합니다.
 
 ### <a name="support-encoding-parameters-ad04"></a>인코딩 매개 변수 (AD04)를 지원 합니다.
 
@@ -89,17 +89,17 @@ Cmdlet을 구현 하는.NET Framework 클래스에 이름을 지정할 때 클�
 
 ### <a name="if-no-pipeline-input-override-the-beginprocessing-method-ac02"></a>파이프라인 입력 되지 않았습니다 (AC02) BeginProcessing 메서드를 재정의 하는 경우
 
-Cmdlet에 파이프라인의 입력을 허용 하지 않는 경우 처리에 구현 해야 합니다 [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드. 이 메서드를 사용 하면 cmdlet 간에 순서를 유지 하려면 Windows PowerShell. 파이프라인의 첫 번째 cmdlet을 파이프라인의 나머지 cmdlet을 사용 하면 처리를 시작 하려면 기회가 전에 항상 해당 개체를 반환 합니다.
+Cmdlet에 파이프라인의 입력을 허용 하지 않는 경우 처리에 구현 해야 합니다 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드. 이 메서드를 사용 하면 cmdlet 간에 순서를 유지 하려면 Windows PowerShell. 파이프라인의 첫 번째 cmdlet을 파이프라인의 나머지 cmdlet을 사용 하면 처리를 시작 하려면 기회가 전에 항상 해당 개체를 반환 합니다.
 
 ### <a name="to-handle-stop-requests-override-the-stopprocessing-method-ac03"></a>처리 중지 요청 재정의 StopProcessing 메서드가 (AC03)
 
-재정의 된 [System.Management.Automation.Cmdlet.Stopprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) 메서드 cmdlet에 중지 신호를 처리할 수 있도록 합니다. 일부 cmdlet에는 해당 작업을 완료 하려면 시간이 오래 걸릴 및 오랫동안 cmdlet은 장기 실행 RPC 호출에 스레드를 차단 하는 경우와 같은 Windows PowerShell 런타임에 호출 간에 전달할 수 있도록 합니다. 이 호출 하는 cmdlet이 포함 됩니다는 [System.Management.Automation.Cmdlet.Writeobject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드를 합니다 [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 메서드 및 기타 피드백 완료 하는 데 시간이 오래 걸릴 수 있습니다 하는 메커니즘입니다. 이러한 경우 사용자 이러한 cmdlet에 중지 신호를 보내야 할 수도 있습니다.
+재정의 된 [System.Management.Automation.Cmdlet.StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) 메서드 cmdlet에 중지 신호를 처리할 수 있도록 합니다. 일부 cmdlet에는 해당 작업을 완료 하려면 시간이 오래 걸릴 및 오랫동안 cmdlet은 장기 실행 RPC 호출에 스레드를 차단 하는 경우와 같은 Windows PowerShell 런타임에 호출 간에 전달할 수 있도록 합니다. 이 호출 하는 cmdlet이 포함 됩니다는 [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드를 합니다 [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 메서드 및 기타 피드백 완료 하는 데 시간이 오래 걸릴 수 있습니다 하는 메커니즘입니다. 이러한 경우 사용자 이러한 cmdlet에 중지 신호를 보내야 할 수도 있습니다.
 
 ### <a name="implement-the-idisposable-interface-ac04"></a>IDisposable 인터페이스 (AC04)
 
-Cmdlet에서 (파이프라인에 기록)의 정리 되지 않은 개체에는 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 cmdlet에 추가 개체 폐기 해야 할 수 있습니다. 예를 들어, cmdlet에 대 한 파일 핸들을 열면 해당 [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드 및 사용에 대 한 열 핸들을 유지 합니다 [System.Management.Automation.Cmdlet.Processrecord ](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를이 핸들에 처리의 끝을 닫아야 합니다.
+Cmdlet에서 (파이프라인에 기록)의 정리 되지 않은 개체에는 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 cmdlet에 추가 개체 폐기 해야 할 수 있습니다. 예를 들어, cmdlet에 대 한 파일 핸들을 열면 해당 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드 및 사용에 대 한 열 핸들을 유지 합니다 [System.Management.Automation.Cmdlet.ProcessRecord ](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를이 핸들에 처리의 끝을 닫아야 합니다.
 
-Windows PowerShell 런타임에 항상 호출 하지 않습니다 합니다 [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드. 예를 들어 합니다 [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) cmdlet은 해당 작업을 통해 중간 취소 되거나 종료 하는 경우 cmdlet의 모든 부분에서 오류가 발생 하는 경우 메서드를 호출 하지 않을 수 있습니다. 개체를 정리 해야 하는 cmdlet에 대 한.NET Framework 클래스 전체를 구현 해야 하므로 [System.Idisposable](/dotnet/api/System.IDisposable) 인터페이스 패턴을 모두 Windows PowerShell 런타임에 호출할 수 있도록 종료자를 포함 하는 [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 하 고 [System.Idisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) 메서드 끝에 처리 합니다.
+Windows PowerShell 런타임에 항상 호출 하지 않습니다 합니다 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드. 예를 들어 합니다 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) cmdlet은 해당 작업을 통해 중간 취소 되거나 종료 하는 경우 cmdlet의 모든 부분에서 오류가 발생 하는 경우 메서드를 호출 하지 않을 수 있습니다. 개체를 정리 해야 하는 cmdlet에 대 한.NET Framework 클래스 전체를 구현 해야 하므로 [System.IDisposable](/dotnet/api/System.IDisposable) 인터페이스 패턴을 모두 Windows PowerShell 런타임에 호출할 수 있도록 종료자를 포함 하는 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 하 고 [System.IDisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) 메서드 끝에 처리 합니다.
 
 ### <a name="use-serialization-friendly-parameter-types-ac05"></a>직렬화에 적합 한 매개 변수 형식 (AC05)를 사용 합니다.
 
@@ -117,7 +117,7 @@ Windows PowerShell 런타임에 항상 호출 하지 않습니다 합니다 [Sys
 
 - PSPrimitiveDictionary
 
-- SwitchParmeter
+- SwitchParameter
 
 - PSListModifier
 

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6fed2f68-ce6d-4a8f-bf21-f94f27a155c2
 caps.latest.revision: 9
-ms.openlocfilehash: 39c0814faf72cdb4b24730acb2ae429a2f465b32
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 936728d64f30a08fb9e2fa9ccef103683594aa3e
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863129"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056263"
 ---
 # <a name="examples-of-cmdlet-code"></a>Cmdlet 코드 예제
 
@@ -38,7 +38,7 @@ ms.locfileid: "56863129"
 
 [입력 처리 메서드를 재정의 하는 방법을](./how-to-override-input-processing-methods.md) 이러한 예제에서는 BeginProcessing 고 ProcessRecord, EndProcessing 메서드를 재정의 하는 데 기본 구조를 보여 줍니다.
 
-[지원 ShouldProcess 호출 하는 방법](./how-to-request-confirmations.md) 보여 주는이 예제는 방법을 [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 고 [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue)cmdlet 내에서 메서드를 호출 수입니다.
+[지원 ShouldProcess 호출 하는 방법](./how-to-request-confirmations.md) 보여 주는이 예제는 방법을 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 하 고 [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) cmdlet 내에서 메서드를 호출 해야 합니다.
 
 [트랜잭션 지원 방법](./how-to-support-transactions.md) 이 예제에서는 cmdlet에서 트랜잭션을 지원 하도록 지정 하는 방법 및 cmdlet은 트랜잭션 내에서 사용 되는 경우 수행 되는 작업을 구현 하는 방법을 보여 줍니다.
 

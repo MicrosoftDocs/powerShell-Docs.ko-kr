@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5eac452c-eae2-4193-b4da-0b618bef3677
 caps.latest.revision: 9
-ms.openlocfilehash: 4b3fa7a54dc4096e79c4de94c8b28f4a784d4627
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: d732bce1af446090c3e5741eebeba737f86c7ca8
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855909"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058014"
 ---
 # <a name="how-to-support-jobs"></a>작업을 지원하는 방법
 
@@ -47,7 +47,7 @@ ms.locfileid: "56855909"
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06JobObject](msh_samplesGetProc06#GetProc06JobObject)]  -->
 
-3. 레코드 처리 메서드를 추가 `if` cmdlet 작업으로 실행 해야 하는지 여부를 검색 하는 문입니다. 다음 코드에서는 합니다 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드.
+3. 레코드 처리 메서드를 추가 `if` cmdlet 작업으로 실행 해야 하는지 여부를 검색 하는 문입니다. 다음 코드에서는 합니다 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드.
 
     ```csharp
     protected override void ProcessRecord()
@@ -131,7 +131,7 @@ ms.locfileid: "56855909"
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06JobClass](msh_samplesGetProc06#GetProc06JobClass)]  -->
 
-5. Cmdlet은 작업을 수행 하는 경우 호출 된 [System.Management.Automation.Cmdlet.Writeobject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 프로세스 개체를 파이프라인에 반환 하는 방법입니다. 작업으로 작업을 수행 하는 경우 작업에 자식 작업을 추가 합니다.
+5. Cmdlet은 작업을 수행 하는 경우 호출 된 [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 프로세스 개체를 파이프라인에 반환 하는 방법입니다. 작업으로 작업을 수행 하는 경우 작업에 자식 작업을 추가 합니다.
 
     ```csharp
     void DoProcessLogic(bool asJob)
@@ -168,7 +168,7 @@ using System.Threading;              // Thread pool namespace for posting work.
 using System.Diagnostics;            // Diagnostics namespace for retrieving
                                      // process objects.
 
-// This sample showes a cmdlet whose work can be done by the cmdlet or by using
+// This sample shows a cmdlet whose work can be done by the cmdlet or by using
 // a background job. Background jobs are executed in their own thread,
 // independent of the pipeline thread in which the cmdlet is executed.
 //

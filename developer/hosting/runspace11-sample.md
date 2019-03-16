@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9c90d268-730b-4e73-9dfd-5f288c27aed0
 caps.latest.revision: 8
-ms.openlocfilehash: 09ec385827f8f6b4d1289a8caa4c1edf64f6ba43
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 74d7c9e9cb0d7ce829635e6aff994473e09e7479
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853069"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057221"
 ---
 # <a name="runspace11-sample"></a>Runspace11 샘플
 
@@ -146,7 +146,7 @@ namespace Microsoft.Samples.PowerShell.Runspaces
     /// </remarks>
     private static void Main()
     {
-      // Create a default initial session state. The default inital session state
+      // Create a default initial session state. The default initial session state
       // includes all the elements that are provided by Windows PowerShell.
       InitialSessionState iss = InitialSessionState.CreateDefault();
 
@@ -157,7 +157,7 @@ namespace Microsoft.Samples.PowerShell.Runspaces
       // Make the cmdlet private so that it is not accessible.
       cmdletEntry.Visibility = SessionStateEntryVisibility.Private;
 
-      // Set the language mode of the initial session state to NoLanguge to
+      // Set the language mode of the initial session state to NoLanguage to
       //prevent users from using language features. Only the invocation of
       // public commands is allowed.
       iss.LanguageMode = PSLanguageMode.NoLanguage;

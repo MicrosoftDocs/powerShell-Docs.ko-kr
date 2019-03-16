@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e7040a5c-4a47-42df-a2ea-96b134a4ed9b
 caps.latest.revision: 10
-ms.openlocfilehash: e5dc525a6c80ce135d6d68e12968613056d447e8
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f20708ff41d9a6de90090997a875ba5371eccd74
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855189"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058881"
 ---
 # <a name="invoking-cmdlets-and-scripts-within-a-cmdlet"></a>Cmdlet 내에서 Cmdlet 및 호출
 
@@ -21,7 +21,7 @@ Cmdlet은 다른 cmdlet와 cmdlet의 메서드를 처리 된 입력 내의 스�
 
 ## <a name="the-invoke-method"></a>메서드를 호출 합니다.
 
-모든 cmdlet를 호출 하 여 기존 cmdlet을 호출할 수는 [System.Management.Automation.Cmdlet.Invoke](/dotnet/api/System.Management.Automation.Cmdlet.Invoke) 와 같은 메서드를 처리 하는 입력에서 메서드를 [ System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)되는 cmdlet에 의해 재정의 됩니다. 그러나에서 직접 파생 되는 cmdlet에만 호출할 수 있습니다 합니다 [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) 클래스입니다. 파생 되는 cmdlet를 호출할 수 없습니다는 [System.Management.Automation.Pscmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 클래스입니다.
+모든 cmdlet를 호출 하 여 기존 cmdlet을 호출할 수는 [System.Management.Automation.Cmdlet.Invoke](/dotnet/api/System.Management.Automation.Cmdlet.Invoke) 와 같은 메서드를 처리 하는 입력에서 메서드를 [ System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)되는 cmdlet에 의해 재정의 됩니다. 그러나에서 직접 파생 되는 cmdlet에만 호출할 수 있습니다 합니다 [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) 클래스입니다. 파생 되는 cmdlet를 호출할 수 없습니다는 [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 클래스입니다.
 
 합니다 [System.Management.Automation.Cmdlet.Invoke*](/dotnet/api/System.Management.Automation.Cmdlet.Invoke) 메서드가 다음과 같은 변형을 합니다.
 

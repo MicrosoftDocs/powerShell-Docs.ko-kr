@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49623fcf-1238-4d20-a7ce-238d47d9d565
 caps.latest.revision: 15
-ms.openlocfilehash: e18564c10898c73128e0a4bc7d077e7c7ffb1c22
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 9302bfed0324773cb98d698acdcf608f34ee19c1
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862329"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058762"
 ---
 # <a name="entryselectedby-element-for-tablerowentry--for-tablecontrol-format"></a>TableControl의 TableRowEntry에 대한 EntrySelectedBy 요소(형식)
 
@@ -51,7 +51,7 @@ ms.locfileid: "56862329"
 
 |요소|설명|
 |-------------|-----------------|
-|[TableControl (형식)에 대 한 TableRowEntry 요소](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)|테이블의 행에 표시 되는 데이터를 정의 합니다.|
+|[TableControl (형식)에 대 한 TableRowEntry 요소](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|테이블의 행에 표시 되는 데이터를 정의 합니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -89,7 +89,7 @@ ms.locfileid: "56862329"
 
 [TableControl (형식)에 대 한 EntrySelectedBy SelectionSetName 요소](./selectionsetname-element-for-entryselectedby-for-tablecontrol-format.md)
 
-[TableControl (형식)에 대 한 TableRowEntry 요소](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)
+[TableControl (형식)에 대 한 TableRowEntry 요소](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)
 
 [TableControl (형식)에 대 한 EntrySelectedBy TypeName 요소](./typename-element-for-entryselectedby-for-tablecontrol-format.md)
 

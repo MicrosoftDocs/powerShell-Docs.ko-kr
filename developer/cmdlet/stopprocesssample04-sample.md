@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ac4903f5-fd40-4f1c-b1d1-18923c16ce45
 caps.latest.revision: 8
-ms.openlocfilehash: 63f04e4caebc31974f35b49309b176241c9b8d4b
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 26e882dad839af43945f84d4cdd6cda7bdb2d587
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860539"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059714"
 ---
 # <a name="stopprocesssample04-sample"></a>StopProcessSample04 샘플
 
@@ -307,9 +307,9 @@ namespace Microsoft.Samples.PowerShell.Commands
                                             "The process \"{0}\" is a critical process and should not be stopped. Are you sure you wish to stop the process?",
                                                 processName);
                // It is possible that the ProcessRecord method is called
-               // multiple times when objects are recieved as inputs from
+               // multiple times when objects are received as inputs from
                // the pipeline. So to retain YesToAll and NoToAll input that
-               // the user may enter across mutilple calls to this function,
+               // the user may enter across multiple calls to this function,
                // they are stored as private members of the cmdlet.
                if (!ShouldContinue(message, "Warning!",
                             ref yesToAll, ref noToAll))
@@ -361,7 +361,7 @@ namespace Microsoft.Samples.PowerShell.Commands
 
            WriteVerbose(message);
 
-           // If the PassThru prameter is specified, return the terminated
+           // If the PassThru parameter is specified, return the terminated
            // process to the pipeline.
            if (passThru)
            {

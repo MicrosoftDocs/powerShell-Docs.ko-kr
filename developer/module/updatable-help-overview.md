@@ -10,12 +10,12 @@ applies_to:
 - Windows PowerShell 3.0
 ms.assetid: 3f7388a9-9fa8-42bc-b294-538c9a01e30a
 caps.latest.revision: 12
-ms.openlocfilehash: 4e962890fa1d5c282a02a89f0ae2e263844c635e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f2dfb9642ba2dde38124142b659b425bbbb00f37
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856969"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057606"
 ---
 # <a name="updatable-help-overview"></a>업데이트 가능한 도움말 개요
 
@@ -31,7 +31,9 @@ Windows PowerShell 도움말 항목은 Windows PowerShell 환경의 필수적인
 
 업데이트 가능한 도움말에는 다음과 같은 기능이 있습니다.
 
-- [Update-help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) 사용자 최신 도움말 지 여부를 확인 하는 cmdlet 모듈에 대 한 파일 하 고, 그렇지 않은 경우 인터넷에서 최신 도움말 파일을 다운로드, 압축을 푼에 올바른 모듈 하위 디렉터리에 설치 된 사용자의 컴퓨터입니다. 사용자가 사용할 수는 [Get-help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet을 새로 설치 된 도움말 항목을 즉시 확인 합니다. Windows PowerShell을 다시 시작할 필요가 없습니다.
+- [Update-help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) 사용자 최신 도움말 지 여부를 확인 하는 cmdlet 모듈에 대 한 파일 하 고, 그렇지 않은 경우 인터넷에서 최신 도움말 파일을 다운로드, 압축을 푼에 올바른 모듈 하위 디렉터리에 설치 된 사용자의 컴퓨터입니다.
+  사용자가 사용할 수는 [Get-help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet을 새로 설치 된 도움말 항목을 즉시 확인 합니다.
+  PowerShell을 다시 시작할 필요가 없습니다.
 
 - 합니다 [Save-help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) cmdlet은 최신 도움말을 다운로드 하는 인터넷에서 파일 및 파일 시스템 디렉터리에 저장 합니다. 사용자가 사용할 수는 `Update-Help` cmdlet을 통해 파일 시스템 디렉터리에서 도움말 파일을 가져올 및 압축 풀기를 사용자의 컴퓨터에서 모듈 하위 디렉터리에 설치 합니다. `Save-Help` cmdlet은 제한 된 사용자 또는 인터넷 액세스가 불가능 한 인터넷 액세스를 제한 하는 것을 선호 하는 엔터프라이즈를 위한 설계 되었습니다.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], property provider
 ms.assetid: a6adca44-b94b-4103-9970-a9b414355e60
 caps.latest.revision: 5
-ms.openlocfilehash: 4ed15dabffa933dee9becf2f839887eb9108775d
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.openlocfilehash: 6ec0752a9ae06c5c2cdd1a1851caeeff52d8eb74
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57430012"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055158"
 ---
 # <a name="creating-a-windows-powershell-property-provider"></a>Windows PowerShell 속성 공급자 만들기
 
@@ -66,7 +66,7 @@ ms.locfileid: "57430012"
 
 속성을 검색 하려면 공급자를 구현 해야 합니다 [System.Management.Automation.Provider.Ipropertycmdletprovider.Getproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.GetProperty) 메서드 호출에서 지원 하기는 `Get-ItemProperty` cmdlet. 이 메서드는 지정된 된 공급자-내부 경로 (정규화 된)에 있는 항목의 속성을 검색 합니다.
 
-`providerSpecificPickList` 매개 변수를 검색 하는 속성을 나타냅니다. 이 매개 변수가 `null` 또는 비어 있는 경우 메서드는 모든 속성을 검색 합니다. 또한 [System.Management.Automation.Provider.Ipropertycmdletprovider.Getproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.GetProperty) 인스턴스에 씁니다를 [System.Management.Automation.Psobject](/dotnet/api/System.Management.Automation.PSObject) 나타내는 개체를 검색된 속성의 속성 모음입니다. 메서드는 아무 것도 반환 해야 합니다.
+`providerSpecificPickList` 매개 변수를 검색 하는 속성을 나타냅니다. 이 매개 변수가 `null` 또는 비어 있는 경우 메서드는 모든 속성을 검색 합니다. 또한 [System.Management.Automation.Provider.Ipropertycmdletprovider.Getproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.GetProperty) 인스턴스에 씁니다를 [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) 나타내는 개체를 검색된 속성의 속성 모음입니다. 메서드는 아무 것도 반환 해야 합니다.
 
 것이 좋습니다 구현의 [System.Management.Automation.Provider.Ipropertycmdletprovider.Getproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.GetProperty) 선택 목록의 각 요소에 대 한 속성 이름의 와일드 카드 확장을 지원 합니다. 이 작업을 수행 하려면 사용 합니다 [System.Management.Automation.Wildcardpattern](/dotnet/api/System.Management.Automation.WildcardPattern) 와일드 카드 패턴 일치를 수행 하는 클래스입니다.
 
@@ -92,7 +92,7 @@ ms.locfileid: "57430012"
 
 ## <a name="setting-properties"></a>속성 설정
 
-속성을 설정 하려면 Windows PowerShell 속성 공급자를 구현 해야 합니다는 [System.Management.Automation.Provider.Ipropertycmdletprovider.Setproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 메서드 호출에서 지원 하기는 `Set-ItemProperty` cmdlet. 이 메서드는 지정된 된 경로에 항목의 하나 이상의 속성을 설정 하 고 필요에 따라 제공 된 속성을 덮어씁니다. [System.Management.Automation.Provider.Ipropertycmdletprovider.Setproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 도 씁니다. 인스턴스를 [System.Management.Automation.Psobject](/dotnet/api/System.Management.Automation.PSObject) 의 업데이트 된 속성 모음을 나타내는 개체 속성입니다.
+속성을 설정 하려면 Windows PowerShell 속성 공급자를 구현 해야 합니다는 [System.Management.Automation.Provider.Ipropertycmdletprovider.Setproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 메서드 호출에서 지원 하기는 `Set-ItemProperty` cmdlet. 이 메서드는 지정된 된 경로에 항목의 하나 이상의 속성을 설정 하 고 필요에 따라 제공 된 속성을 덮어씁니다. [System.Management.Automation.Provider.Ipropertycmdletprovider.Setproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 도 씁니다. 인스턴스를 [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) 의 업데이트 된 속성 모음을 나타내는 개체 속성입니다.
 
 기본 구현은 다음과 같습니다 [System.Management.Automation.Provider.Ipropertycmdletprovider.Setproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) TemplateProvider.cs 파일 Windows PowerShell에서 제공 합니다.
 
@@ -106,9 +106,9 @@ ms.locfileid: "57430012"
 
 - 기본적으로이 메서드는 재정의 하지 않는 한 사용자 로부터 숨겨진 개체에 대 한 판독기를 검색 하지 않아야 합니다 [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 속성이 `true`합니다. 경로 사용자 로부터 숨겨진 항목을 나타내는 경우 오류를 작성 해야 하 고 [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 로 설정 된 `false`합니다.
 
-- 구현 된 [System.Management.Automation.Provider.Ipropertycmdletprovider.Setproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 메서드를 호출 해야 [System.Management.Automation.Provider.Cmdletprovider.Shouldprocess* ](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 데이터 저장소로 변경 하기 전에 해당 반환 값을 확인 합니다. 이 메서드는 변경 될 때 시스템 상태를 예를 들어, 파일 이름 바꾸기 작업의 실행을 확인 하려면 사용 됩니다. [System.Management.Automation.Provider.Cmdletprovider.Shouldprocess*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) Windows PowerShell 런타임 및 명령줄 설정이 나 기본 설정 변수에서 처리를 사용 하 여 사용자에 게 변경 될 리소스의 이름을 전송 표시할 내용을 결정 합니다.
+- 구현 된 [System.Management.Automation.Provider.Ipropertycmdletprovider.Setproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 메서드를 호출 해야 [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 데이터 저장소로 변경 하기 전에 해당 반환 값을 확인 합니다. 이 메서드는 변경 될 때 시스템 상태를 예를 들어, 파일 이름 바꾸기 작업의 실행을 확인 하려면 사용 됩니다. [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) Windows PowerShell 런타임 및 명령줄 설정이 나 결정 하는 데 기본 설정 변수 처리를 사용 하 여 사용자에 게 변경 될 리소스의 이름을 전송 새로운 표시 되어야 합니다.
 
-  호출한 후 [System.Management.Automation.Provider.Cmdletprovider.Shouldprocess*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 반환 `true`잠재적으로 위험한 시스템 수정 작업을 수행할 수 있는 경우는 [ System.Management.Automation.Provider.Ipropertycmdletprovider.Setproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 메서드를 호출 해야 합니다 [System.Management.Automation.Provider.Cmdletprovider.Shouldcontinue*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드. 이 메서드는 작업을 계속할 수를 나타내는 추가 피드백을 허용 하도록 사용자에 게 확인 메시지를 보냅니다.
+  호출한 후 [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 반환 `true`잠재적으로 위험한 시스템 수정 작업을 수행할 수 있는 경우는 [ System.Management.Automation.Provider.Ipropertycmdletprovider.Setproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 메서드를 호출 해야 합니다 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드. 이 메서드는 작업을 계속할 수를 나타내는 추가 피드백을 허용 하도록 사용자에 게 확인 메시지를 보냅니다.
 
 ## <a name="attaching-dynamic-parameters-for-the-set-itemproperty-cmdlet"></a>Set-itemproperty Cmdlet에 대 한 동적 매개 변수 연결
 
@@ -134,9 +134,9 @@ ms.locfileid: "57430012"
 
 - 기본적으로이 메서드는 재정의 하지 않는 한 사용자 로부터 숨겨진 개체에 대 한 판독기를 검색 하지 않아야 합니다 [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 속성이 `true`합니다. 경로 사용자 로부터 숨겨진 항목을 나타내는 경우 오류를 작성 해야 하 고 [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 로 설정 된 `false`합니다.
 
-- 구현 된 [System.Management.Automation.Provider.Ipropertycmdletprovider.Clearproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) 메서드를 호출 해야 [System.Management.Automation.Provider.Cmdletprovider.Shouldprocess* ](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 데이터 저장소로 변경 하기 전에 해당 반환 값을 확인 합니다. 이 메서드는 콘텐츠를 지우는 등의 시스템 상태를 변경 되기 전에 작업의 실행을 확인 하려면 사용 됩니다. [System.Management.Automation.Provider.Cmdletprovider.Shouldprocess*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 명령줄 설정이 나 기본 설정 변수에서 고려 Windows PowerShell 런타임에 사용자에 게 변경 될 리소스의 이름을 전송 표시할 내용을 결정 합니다.
+- 구현 된 [System.Management.Automation.Provider.Ipropertycmdletprovider.Clearproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) 메서드를 호출 해야 [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess ](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 데이터 저장소로 변경 하기 전에 해당 반환 값을 확인 합니다. 이 메서드는 콘텐츠를 지우는 등의 시스템 상태를 변경 되기 전에 작업의 실행을 확인 하려면 사용 됩니다. [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 명령줄 설정이 나 기본 설정 변수에서 고려 Windows PowerShell 런타임에 사용자에 게 변경 될 리소스의 이름을 전송 표시할 내용을 결정 합니다.
 
-  호출한 후 [System.Management.Automation.Provider.Cmdletprovider.Shouldprocess*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 반환 `true`잠재적으로 위험한 시스템 수정 작업을 수행할 수 있는 경우는 [ System.Management.Automation.Provider.Ipropertycmdletprovider.Clearproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) 메서드를 호출 해야 합니다 [System.Management.Automation.Provider.Cmdletprovider.Shouldcontinue*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드. 이 메서드는 잠재적으로 위험한 작업을 계속할 수를 나타내는 추가 피드백을 허용 하도록 사용자에 게 확인 메시지를 보냅니다.
+  호출한 후 [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 반환 `true`잠재적으로 위험한 시스템 수정 작업을 수행할 수 있는 경우는 [ System.Management.Automation.Provider.Ipropertycmdletprovider.Clearproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) 메서드를 호출 해야 합니다 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드. 이 메서드는 잠재적으로 위험한 작업을 계속할 수를 나타내는 추가 피드백을 허용 하도록 사용자에 게 확인 메시지를 보냅니다.
 
 ## <a name="attaching-dynamic-parameters-to-the-clear-itemproperty-cmdlet"></a>Clear-itemproperty Cmdlet에 연결 하는 동적 매개 변수
 

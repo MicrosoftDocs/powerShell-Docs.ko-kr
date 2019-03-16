@@ -11,12 +11,12 @@ helpviewer_keywords:
 - attributes [PowerShell SDK], described
 ms.assetid: d3f4f652-d929-4c27-9358-9baa390a094c
 caps.latest.revision: 14
-ms.openlocfilehash: b06faf7204213b383b25685837941ad63dcb225b
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 326cd408e86402974569fc76d5e473be5a56f0b6
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853919"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055175"
 ---
 # <a name="cmdlet-attributes"></a>Cmdlet 특성
 
@@ -32,7 +32,7 @@ Windows PowerShell 공통 기능을 사용자 고유의 코드 내에서 해당 
 
 [Cmdlet 특성 선언을](./cmdlet-attribute-declaration.md) cmdlet를.NET Framework 클래스를 정의 하는 방법에 설명 합니다.
 
-[특성 선언을 자격 증명](./credential-attribute-declaration.md) 문자열 입력에 변환에 대 한 지원을 추가 하는 방법에 설명 합니다는 [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential) 개체입니다.
+[특성 선언을 자격 증명](./credential-attribute-declaration.md) 문자열 입력에 변환에 대 한 지원을 추가 하는 방법에 설명 합니다는 [System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential) 개체입니다.
 
 [OutputType 특성 선언](./outputtype-attribute-declaration.md) cmdlet에서 반환 되는.NET Framework 형식 지정 하는 방법에 설명 합니다.
 

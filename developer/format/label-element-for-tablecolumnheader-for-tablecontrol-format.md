@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7196f039-2f6a-41fd-b252-5b1623ebb9f9
 caps.latest.revision: 11
-ms.openlocfilehash: 59dfd40b95d5088a711eb89cf101eb31a4b159f5
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 09183a538c179f19347c3f1ed45b4ad38c2ca451
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856089"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054512"
 ---
 # <a name="label-element-for-tablecolumnheader-for-tablecontrol-format"></a>TableControl의 TableColumnHeader에 대한 Label 요소(형식)
 
 열의 맨 위에 있는 표시 되는 레이블을 정의 합니다. 이 요소는 테이블 뷰를 정의할 때 사용 됩니다.
 
-구성 요소 (형식) ViewDefinitions 요소 (형식) 보기 (형식) TableControl 요소 (형식) TableHeaders 요소 TableHeaders TableControl (형식) 레이블 요소에 대 한 TableControl (형식) TableColumnHeader 요소에 TableColumnHeader TablControl (형식)에 대 한
+구성 요소 (형식) ViewDefinitions 요소 (형식) 보기 (형식) TableControl 요소 (형식) TableHeaders 요소 TableHeaders TableControl (형식) 레이블 요소에 대 한 TableControl (형식) TableColumnHeader 요소에 TableControl (형식)에 대 한 TableColumnHeader
 
 ## <a name="syntax"></a>구문
 

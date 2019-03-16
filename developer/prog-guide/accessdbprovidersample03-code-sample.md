@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af25b560-017a-4d53-a8c3-97c5ab66b9d4
 caps.latest.revision: 5
-ms.openlocfilehash: d4c8dfc3d40d61abc99feec68aa159709d05cf92
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.openlocfilehash: 92de387b97445170eae204dcde24e795a5c3a89b
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429825"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055447"
 ---
 # <a name="accessdbprovidersample03-code-sample"></a>AccessDbProviderSample03 코드 샘플
 
@@ -613,7 +613,7 @@ namespace Microsoft.Samples.PowerShell.Providers
 
           try
           {
-              // Create a odbc data adpater. This can be sued to update the
+              // Create a odbc data adapter. This can be sued to update the
               // data source with the records that will be created here
               // using data sets
               string sql = "Select * from " + tableName;

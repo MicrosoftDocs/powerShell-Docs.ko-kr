@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb55971a-4ea4-4c51-aeff-4e0bb05a51b2
 caps.latest.revision: 6
-ms.openlocfilehash: 65d04c526ef7aa112da82adb924c0789731f3850
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 98cac43698b3f537ee318cd2570b2174631665a7
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853469"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055430"
 ---
 # <a name="creating-a-workflow-with-windows-powershell-activities"></a>Windows PowerShell 활동을 사용하여 워크플로 만들기
 
@@ -33,9 +33,9 @@ Visual Studio 도구 상자에서 활동을 선택 하 고 워크플로 디자�
 
 2. 명명 된 인수를 만듭니다 `ComputerName` 인수 유형으로 `String[]`입니다. 이 인수를 확인 하 고 조인 컴퓨터의 이름을 나타냅니다.
 
-3. 명명 된 인수를 만듭니다 `DomainCred` 형식의 [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential)합니다. 이 인수는 도메인에 컴퓨터를 가입 시킬 권한이 있는 도메인 계정의 도메인 자격 증명을 나타냅니다.
+3. 명명 된 인수를 만듭니다 `DomainCred` 형식의 [System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential)합니다. 이 인수는 도메인에 컴퓨터를 가입 시킬 권한이 있는 도메인 계정의 도메인 자격 증명을 나타냅니다.
 
-4. 명명 된 인수를 만듭니다 `MachineCred` 형식의 [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential)합니다. 이 인수를 확인 하 고 조인 컴퓨터의 관리자의 자격 증명을 나타냅니다.
+4. 명명 된 인수를 만듭니다 `MachineCred` 형식의 [System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential)합니다. 이 인수를 확인 하 고 조인 컴퓨터의 관리자의 자격 증명을 나타냅니다.
 
 5. 추가 **ParallelForEach** 내 활동의 **시퀀스** 활동입니다. 입력 `comp` 하 고 `ComputerName` 에서 루프의 요소를 반복 하는 입력란을 `ComputerName` 배열입니다.
 

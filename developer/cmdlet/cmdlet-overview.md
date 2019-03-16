@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], described
 ms.assetid: 0aa32589-4447-4ead-a5dd-a3be99113140
 caps.latest.revision: 21
-ms.openlocfilehash: a53b1ada46ad614af3522e6cc11e187afb76e7b1
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f8a8c9300d1ac811c7fbbf7050dd24f78306db8f
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855319"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056671"
 ---
 # <a name="cmdlet-overview"></a>Cmdlet 개요
 
@@ -46,9 +46,9 @@ Cmdlet는 작업을 수행 하 고 일반적으로 파이프라인에서 다음 
 
 - **동적 매개 변수**: 런타임 시 cmdlet에 추가 되는 매개 변수입니다. 일반적으로 다른 매개 변수가 특정 값으로 설정 된 경우 동적 매개 변수를 cmdlet에 추가 됩니다. 동적 매개 변수에 대 한 자세한 내용은 참조 하십시오 [cmdlet은 동적 매개 변수](./cmdlet-dynamic-parameters.md)합니다.
 
-- **입력 처리 메서드**: cmdlet이 입력으로 받은 레코드를 처리하는 데 사용할 수 있는 메서드입니다. 입력된 처리 메서드로 합니다 [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드는 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드, 합니다 [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드, 및 [System.Management.Automation.Cmdlet.Stopprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) 메서드. 하나 이상의 재정의 해야 cmdlet을 구현 하는 경우는 [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)를 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), 및 [ System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드. 일반적으로 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드는 해당 cmdlet이 처리 하는 모든 레코드에 대 한 호출 되므로 재정의 하는 메서드입니다. 반면에 [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드는 [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드 수행 하기 위해 한 번 호출 됩니다 전처리 또는 후 레코드를 처리 합니다. 이러한 방법에 대 한 자세한 내용은 참조 하세요. [입력 처리 메서드](./cmdlet-input-processing-methods.md)합니다.
+- **입력 처리 메서드**: cmdlet이 입력으로 받은 레코드를 처리하는 데 사용할 수 있는 메서드입니다. 입력된 처리 메서드로를 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드는 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드는 [ System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드 및 [System.Management.Automation.Cmdlet.StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) 메서드. 하나 이상의 재정의 해야 cmdlet을 구현 하는 경우는 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)를 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), 및 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드. 일반적으로 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드는 해당 cmdlet이 처리 하는 모든 레코드에 대 한 호출 되므로 재정의 하는 메서드입니다. 반면에 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드는 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드 수행 하기 위해 한 번 호출 됩니다 전처리 또는 후 레코드를 처리 합니다. 이러한 방법에 대 한 자세한 내용은 참조 하세요. [입력 처리 메서드](./cmdlet-input-processing-methods.md)합니다.
 
-- **ShouldProcess 기능**: Windows PowerShell을 사용 하면 cmdlet은 시스템에 변경의 작업을 수행 하기 전에 사용자에 게 피드백을 요청 하는 cmdlet를 만들 수 있습니다. 이 기능을 사용 하려면 cmdlet은 Cmdlet 특성을 선언 하 고 cmdlet을 호출 해야 하는 경우 ShouldProcess 기능을 지원 하 선언 해야 합니다 [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 고 [ System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 는 입력 처리 메서드 내에서 메서드. ShouldProcess 기능을 지 원하는 방법에 대 한 자세한 내용은 참조 하세요. [요청 확인](./requesting-confirmation-from-cmdlets.md)합니다.
+- **ShouldProcess 기능**: Windows PowerShell을 사용 하면 cmdlet은 시스템에 변경의 작업을 수행 하기 전에 사용자에 게 피드백을 요청 하는 cmdlet를 만들 수 있습니다. 이 기능을 사용 하려면 cmdlet은 Cmdlet 특성을 선언 하 고 cmdlet을 호출 해야 하는 경우 ShouldProcess 기능을 지원 하 선언 해야 합니다 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 고 [ System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 는 입력 처리 메서드 내에서 메서드. ShouldProcess 기능을 지 원하는 방법에 대 한 자세한 내용은 참조 하세요. [요청 확인](./requesting-confirmation-from-cmdlets.md)합니다.
 
 - **트랜잭션**: 단일 작업으로 처리 되는 명령의 논리적 그룹입니다. 작업 그룹의 모든 명령이 실패 하면 사용자에 게 적용 하거나 트랜잭션 내에서 수행 되는 작업을 취소 하도록 선택할 경우에 자동으로 실패 합니다. 트랜잭션에 참여 cmdlet은 Cmdlet 특성 선언 되 면 트랜잭션을 지원 하는지 선언 해야 합니다. 트랜잭션에 대 한 지원이 Windows PowerShell 2.0에서 도입 되었습니다. 트랜잭션에 대 한 자세한 내용은 참조 하세요. [Windows PowerShell 트랜잭션](http://msdn.microsoft.com/en-us/74d7bac7-bc53-49f1-a47a-272e8da84710)합니다.
 
@@ -72,21 +72,21 @@ Windows PowerShell cmdlet에는 다음 두 가지 기본 클래스에서 파생 
 
 - 파생 되는.NET Framework 클래스를 기반으로 하는 대부분의 cmdlet을 [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) 기본 클래스입니다. 이 클래스에서 파생 Windows PowerShell 런타임에 종속성의 최소 집합을 사용 하는 cmdlet이 있습니다. 이 두 가지 이점이 있습니다. 첫 번째 장점은 cmdlet 개체는 작게 하는 Windows PowerShell 런타임에 대 한 변경 내용에 영향을 받을 가능성이 적습니다. 두 번째 장점은 해야 할 경우 cmdlet은 개체의 인스턴스는 직접 만들 하 수 Windows PowerShell 런타임을 통해 호출 하는 대신 직접 호출 합니다.
 
-- 파생 되는.NET Framework 클래스를 기반으로 하는 보다 복잡 한 cmdlet의 [System.Management.Automation.Pscmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 기본 클래스입니다. 이 클래스에서 파생 액세스할 수 있습니다 훨씬 더 많은 Windows PowerShell 런타임에 있습니다. 이 액세스 cmdlet 공급자에 액세스 하 고 현재 세션 상태에 액세스 하는 데 스크립트를 호출할 수 있습니다. (현재 세션 상태에 액세스 하려면 얻고 세션 변수 및 기본 설정을 설정 합니다.) 그러나이 클래스에서 파생 cmdlet은 개체의 크기가 늘어나고 의미 cmdlet은 현재 버전의 Windows PowerShell 런타임에 더 밀접 하 게 결합 됩니다.
+- 파생 되는.NET Framework 클래스를 기반으로 하는 보다 복잡 한 cmdlet의 [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 기본 클래스입니다. 이 클래스에서 파생 액세스할 수 있습니다 훨씬 더 많은 Windows PowerShell 런타임에 있습니다. 이 액세스 cmdlet 공급자에 액세스 하 고 현재 세션 상태에 액세스 하는 데 스크립트를 호출할 수 있습니다. (현재 세션 상태에 액세스 하려면 얻고 세션 변수 및 기본 설정을 설정 합니다.) 그러나이 클래스에서 파생 cmdlet은 개체의 크기가 늘어나고 의미 cmdlet은 현재 버전의 Windows PowerShell 런타임에 더 밀접 하 게 결합 됩니다.
 
-일반적으로 Windows PowerShell 런타임에 확장된 액세스에 필요한 경우가 아니면에서 파생 시켜야 합니다 [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) 클래스입니다. 그러나 Windows PowerShell 런타임에 cmdlet 실행에 대 한 광범위 한 로깅 기능이 있습니다. 감사 모델이이 로깅에 의존 하는 경우에서 파생 하 여 다른 cmdlet 내에서 cmdlet의 실행을 방지할 수 있습니다 합니다 [System.Management.Automation.Pscmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 클래스입니다.
+일반적으로 Windows PowerShell 런타임에 확장된 액세스에 필요한 경우가 아니면에서 파생 시켜야 합니다 [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) 클래스입니다. 그러나 Windows PowerShell 런타임에 cmdlet 실행에 대 한 광범위 한 로깅 기능이 있습니다. 감사 모델이이 로깅에 의존 하는 경우에서 파생 하 여 다른 cmdlet 내에서 cmdlet의 실행을 방지할 수 있습니다 합니다 [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 클래스입니다.
 
 ## <a name="input-processing-methods"></a>입력 처리 메서드
 
 합니다 [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) 클래스는 레코드를 처리 하는 데 사용 되는 가상 메서드를 제공 합니다. 모든 파생 된 cmdlet 클래스로 처음 세 방법 중 하나 이상을 재정의 해야 합니다.
 
-- [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing): Cmdlet에 대해 선택적인 일회성 사전 처리 기능을 제공 하는 데 사용 합니다.
+- [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing): Cmdlet에 대해 선택적인 일회성 사전 처리 기능을 제공 하는 데 사용 합니다.
 
-- [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord): Cmdlet에 대 한 레코드에서 처리 기능을 제공 하는 데 사용 합니다. 합니다 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 횟수 또는 전혀 cmdlet의 입력에 따라 여러 메서드를 호출할 수 있습니다.
+- [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord): Cmdlet에 대 한 레코드에서 처리 기능을 제공 하는 데 사용 합니다. 합니다 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 횟수 또는 전혀 cmdlet의 입력에 따라 여러 메서드를 호출할 수 있습니다.
 
-- [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing): Cmdlet에 대해 선택적인 일회성 사후 처리 기능을 제공 하는 데 사용 합니다.
+- [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing): Cmdlet에 대해 선택적인 일회성 사후 처리 기능을 제공 하는 데 사용 합니다.
 
-- [System.Management.Automation.Cmdlet.Stopprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing): 사용자가 cmdlet을 비동기적으로 (예를 들어, CTRL + C를 눌러) 하는 경우 처리를 중지 하는 데 사용 합니다.
+- [System.Management.Automation.Cmdlet.StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing): 사용자가 cmdlet을 비동기적으로 (예를 들어, CTRL + C를 눌러) 하는 경우 처리를 중지 하는 데 사용 합니다.
 
 이러한 방법에 대 한 자세한 내용은 참조 하세요. [cmdlet은 입력 처리 메서드](./cmdlet-input-processing-methods.md)합니다.
 

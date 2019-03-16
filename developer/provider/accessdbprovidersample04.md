@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ee3a7e56-7331-4f71-9ecb-7a59b8021c68
 caps.latest.revision: 10
-ms.openlocfilehash: fd013384a4b588bcdb397d7771425fe5c031c48f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: d9109e8d5b69a25ad52b90bcaff9628b01067211
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856699"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057623"
 ---
 # <a name="accessdbprovidersample04"></a>AccessDBProviderSample04
 
@@ -30,7 +30,7 @@ ms.locfileid: "56856699"
 
 - 파생 되는 공급자 클래스를 정의 합니다 [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 클래스입니다.
 
-- 덮어쓰기 합니다 [System.Management.Automation.Provider.Containercmdletprovider.Copyitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 의 동작을 변경 하는 방법의 `Copy-Item` 다른 한 위치에서 항목을 복사할 수 있는 cmdlet. (이 샘플의 동적 매개 변수를 추가 하는 방법을 보여주지 않습니다는 `Copy-Item` cmdlet입니다.)
+- 덮어쓰기 합니다 [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 의 동작을 변경 하는 방법의 `Copy-Item` 다른 한 위치에서 항목을 복사할 수 있는 cmdlet. (이 샘플의 동적 매개 변수를 추가 하는 방법을 보여주지 않습니다는 `Copy-Item` cmdlet입니다.)
 
 - 덮어쓰기 합니다 [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 부모 항목의 자식 항목을 검색할 수 있는 Get ChildItems cmdlet의 동작을 변경 하는 방법 . (이 샘플 ChildItems Get cmdlet에 동적 매개 변수를 추가 하는 표시 되지 않습니다.)
 

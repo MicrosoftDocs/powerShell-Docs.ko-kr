@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 30abae8f-c7f7-479d-ad85-19e07ddef204
 caps.latest.revision: 10
-ms.openlocfilehash: e930e4422afd203feda6a389655ff8a355e3bec0
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 81eca4f66f0057074612f2d60482b45adc36357b
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858669"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059221"
 ---
 # <a name="entryselectedby-element-for-customentry-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 CustomEntry에 대한 EntrySelectedBy 요소(형식)
 
@@ -65,6 +65,6 @@ CustomControl Configuration (구성 (형식) CustomEntries 요소에 대 한 컨
 
 [구성 (형식)에 대 한 컨트롤에 대 한 CustomControl CustomEntry 요소](./customentry-element-for-customcontrol-for-controls-for-configuration-format.md)
 
-[구성 (형식)에 대 한 컨트롤에 대 한 EntrySelectdBy TypeName 요소](./typename-element-for-selectioncondition-for-controls-for-configuration-format.md)
+[구성 (형식)에 대 한 컨트롤에 대 한 EntrySelectedBy TypeName 요소](./typename-element-for-selectioncondition-for-controls-for-configuration-format.md)
 
 [서식 파일을 PowerShell 작성](./writing-a-powershell-formatting-file.md)

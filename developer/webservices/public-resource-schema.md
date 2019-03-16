@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e67298ee-a773-4402-8afb-d97ad0e030e5
 caps.latest.revision: 4
-ms.openlocfilehash: a9204ca7b28fc5792ef9bd18f6b0b24964de7386
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: c7e20ff0f36e8cab2d414ff2e5924b3359ad9c60
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859549"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057249"
 ---
 # <a name="public-resource-schema"></a>공용 리소스 스키마
 
@@ -21,7 +21,7 @@ ms.locfileid: "56859549"
 
 ## <a name="defining-a-resource"></a>리소스를 정의합니다.
 
-각 리소스는 Windows PowerShell cmdlet에서 반환 된 개체에 해당 합니다. Publc 리소스 MOF 파일에서 클래스를 선언 하 여 리소스를 정의 합니다. 클래스 개체의 속성에 해당 하는 속성으로 구성 됩니다. 예를 들어, 다음 예제에에서는 [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) 클래스 MOF를 다음으로 표시 됩니다.
+각 리소스는 Windows PowerShell cmdlet에서 반환 된 개체에 해당 합니다. 공용 리소스 MOF 파일에서 클래스를 선언 하 여 리소스를 정의 합니다. 클래스 개체의 속성에 해당 하는 속성으로 구성 됩니다. 예를 들어, 다음 예제에에서는 [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) 클래스 MOF를 다음으로 표시 됩니다.
 
 ```csharp
 class PswsTest_Process
@@ -55,7 +55,7 @@ class PswsTest_ProcessModule
 };
 ```
 
-복합 형식으로 엔터티 속성을 선언 하면 선언으로 `string` 유형과 `EmbeddedInstance` 복합 형식의 이름을 포함 하 여 한정자입니다. 다음 예제에서는 hshows 속성 선언의의 `PswsTest_ProcessModule` 이전 예제에서 형식 선언 합니다.
+복합 형식으로 엔터티 속성을 선언 하면 선언으로 `string` 유형과 `EmbeddedInstance` 복합 형식의 이름을 포함 하 여 한정자입니다. 다음 예제에서는 속성의 선언을 보여 줍니다는 `PswsTest_ProcessModule` 이전 예제에서 형식 선언 합니다.
 
 ```csharp
 [Required, EmbeddedInstance("PswsTest_ProcessModule")] String Modules[];
@@ -63,7 +63,7 @@ class PswsTest_ProcessModule
 
 ### <a name="associating-entities"></a>엔터티 연결
 
-연결 및 AssocationClass 한정자를 사용 하 여 두 엔터티를 연결할 수 있습니다. 자세한 내용은 [연결 관리 OData 엔터티](./associating-management-odata-entities.md)합니다.
+연결과 연관 클래스 한정자를 사용 하 여 두 엔터티를 연결할 수 있습니다. 자세한 내용은 [연결 관리 OData 엔터티](./associating-management-odata-entities.md)합니다.
 
 ### <a name="derived-types"></a>파생된 형식
 
@@ -72,17 +72,16 @@ class PswsTest_ProcessModule
 ```csharp
 Class Product {
 
-[Key] String ProductName;
+    [Key] String ProductName;
 
 };
 
 Class DairyProduct : Product {
 
-Uint16 PercentFat;
+    Uint16 PercentFat;
 };
 Class POPProduct : Product {
 
-Boolean IsCarbonated;
+    Boolean IsCarbonated;
 };
-
 ```

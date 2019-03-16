@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0db9f54c-4014-4450-9e81-c9f5fe562a0e
 caps.latest.revision: 12
-ms.openlocfilehash: a421d151ac3fdbb763668dd6fbf775f5b91a833f
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
+ms.openlocfilehash: c65deeda6b2ef1b52de55035dc606259a7f2d232
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56863649"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059663"
 ---
 # <a name="common-parameter-names"></a>일반 매개 변수 이름
 
@@ -30,7 +30,7 @@ ms.locfileid: "56863649"
 
 데이터 형식: SwitchParameter
 
-이 매개 변수 지정 하는지 여부를 프로그래머 수준의 디버깅 메시지를 명령줄에 표시 될 수 있습니다. 이러한 메시지는 cmdlet의 작동 문제를 해결 하는 것에 대 한 고 호출 하 여 생성 되는 [System.Management.Automation.Cmdlet.Writedebug*](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 메서드. 디버그 메시지를 지역화할 필요가 없습니다.
+이 매개 변수 지정 하는지 여부를 프로그래머 수준의 디버깅 메시지를 명령줄에 표시 될 수 있습니다. 이러한 메시지는 cmdlet의 작동 문제를 해결 하는 것에 대 한 고 호출 하 여 생성 되는 [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 메서드. 디버그 메시지를 지역화할 필요가 없습니다.
 
 ### <a name="erroraction-alias-ea"></a>ErrorAction (별칭: ea)
 
@@ -60,7 +60,7 @@ ms.locfileid: "56863649"
 
 데이터 형식: SwitchParameter
 
-이 매개 변수는 cmdlet은 명령줄에 표시 될 수 있는 설명 메시지를 기록 하는지 여부를 지정 합니다. 이러한 메시지는 사용자에 게 추가 도움을 제공 하 고를 호출 하 여 생성 되는 [System.Management.Automation.Cmdlet.Writeverbose*](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) 메서드.
+이 매개 변수는 cmdlet은 명령줄에 표시 될 수 있는 설명 메시지를 기록 하는지 여부를 지정 합니다. 이러한 메시지는 사용자에 게 추가 도움을 제공 하 고를 호출 하 여 생성 되는 [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) 메서드.
 
 ### <a name="warningaction-alias-wa"></a>WarningAction (별칭: 워싱턴)
 

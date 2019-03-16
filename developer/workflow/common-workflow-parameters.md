@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5891467-8e13-484d-b7af-32e6bffab35d
 caps.latest.revision: 4
-ms.openlocfilehash: 2aca4483e500432ef9f52804e85678d2268aa4cd
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: b2e8f272a82ee03de306fd8eac45e109142f6284
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856139"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054801"
 ---
 # <a name="common-workflow-parameters"></a>일반 워크플로 매개 변수
 
@@ -26,7 +26,7 @@ Windows PowerShell cmdlet에서 생성 된 워크플로 작업을 모든 작업�
 |이름|형식|설명|실행 시 최종 사용자가 지정할 수 있습니다.|작성 시 워크플로 작성자가 지정할 수 있습니다.|인스턴스화할 때 워크플로 작성자가 지정할 수 있습니다.|
 |----------|----------|-----------------|-----------------------------------------------------|------------------------------------------------------------|-----------------------------------------------------------|
 |PSComputerName|String[]|목록 작업을 시작 하는 컴퓨터 이름입니다.|예|예|예|
-|PSCredential|[System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential)|사용할 인증 자격 증명 PSComputerName 매개 변수로 지정한 컴퓨터에 로그인 합니다. 이 매개 변수는 PSComputerName 지정 하는 경우에 유효 합니다.|예|예|예|
+|PSCredential|[System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential)|사용할 인증 자격 증명 PSComputerName 매개 변수로 지정한 컴퓨터에 로그인 합니다. 이 매개 변수는 PSComputerName 지정 하는 경우에 유효 합니다.|예|예|예|
 |PSPort|UInt32|워크플로 실행 하는 데 사용할 포트입니다.|예|예|예|
 |PSUseSSL|부울|워크플로 실행 하 여 원격 컴퓨터에 보안 연결을 설정할 Secure Sockets Layer (SSL) 프로토콜을 사용 합니다.|예|예|예|
 |PSConfigurationName|문자열|워크플로 실행 하는 데 세션 구성을 가져옵니다.|예|예|예|

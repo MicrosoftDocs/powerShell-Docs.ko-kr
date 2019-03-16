@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6a04f15-b5d8-475b-ac9c-e75c58ec8933
 caps.latest.revision: 8
-ms.openlocfilehash: 9e8123e9b1068e0fd6efec8508eacf594ff22301
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 3cb370cd1bfe9ce7198980cc1c26fafb126d00a3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854749"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054903"
 ---
 # <a name="runspace04-sample"></a>Runspace04 샘플
 
@@ -35,7 +35,7 @@ ms.locfileid: "56854749"
 
 - 명령은 동기적으로 호출합니다.
 
-- 사용 하 여 [System.Management.Automation.Psobject](/dotnet/api/System.Management.Automation.PSObject) 개체를 추출 하 고 명령을 사용 하 여 반환 된 개체의 속성을 표시 합니다.
+- 사용 하 여 [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) 개체를 추출 하 고 명령을 사용 하 여 반환 된 개체의 속성을 표시 합니다.
 
 - 검색 하 고 명령을 실행 하는 동안 생성 된 오류 레코드를 표시 합니다.
 

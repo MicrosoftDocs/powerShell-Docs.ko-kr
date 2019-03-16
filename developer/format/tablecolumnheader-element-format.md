@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49ff3062-6396-4aa8-919b-3fd3ac60899a
 caps.latest.revision: 19
-ms.openlocfilehash: 15f47c97ac5d55cb76e153af86672b3ffaf176c9
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: d3ad7fa563def17d43ce4dc64d155b65b650521f
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858599"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057878"
 ---
 # <a name="tablecolumnheader-element-format"></a>TableColumnHeader 요소(형식)
 
@@ -45,7 +45,7 @@ ms.locfileid: "56858599"
 |-------------|-----------------|
 |[TableControl (형식)에 대 한 TableColumnHeader 레이블 요소](./label-element-for-tablecolumnheader-for-tablecontrol-format.md)|선택적 요소입니다.<br /><br /> 열의 맨 위에 있는 표시 되는 레이블을 정의 합니다. 레이블이 없으면 지정 된 경우 값은 행에 표시 되는 속성의 이름을 사용 됩니다.|
 |[TableControl (형식)에 대 한 TableColumnHeader 너비 요소](./width-element-for-tablecolumnheader-for-tablecontrol-format.md)|필수 요소입니다.<br /><br /> 너비 (문자 단위) 열을 지정합니다.|
-|[TableControl (형식)에 대 한 TableColumbnHeader 요소 맞춤](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)|선택적 요소입니다.<br /><br /> 열 레이블이 표시 되는 방식을 지정 합니다. 맞춤 없음이 지정 된 경우 레이블 왼쪽에 맞춰집니다.|
+|[TableControl (형식)에 대 한 TableColumnHeader 요소 맞춤](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)|선택적 요소입니다.<br /><br /> 열 레이블이 표시 되는 방식을 지정 합니다. 맞춤 없음이 지정 된 경우 레이블 왼쪽에 맞춰집니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
@@ -82,7 +82,7 @@ ms.locfileid: "56858599"
 
 ## <a name="see-also"></a>참고 항목
 
-[TableColumnHeader TableContrl (형식)에 대 한 맞춤 요소](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)
+[TableControl (형식)에 대 한 TableColumnHeader 요소 맞춤](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)
 
 [테이블 뷰 만들기](./creating-a-table-view.md)
 

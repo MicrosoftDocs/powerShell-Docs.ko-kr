@@ -10,12 +10,12 @@ helpviewer_keywords:
 - snap-ins [PowerShell SDK], examples
 ms.assetid: 71bd9b2c-5f2e-4aa8-b5fe-08c956540d37
 caps.latest.revision: 10
-ms.openlocfilehash: 73834cea1d90943cf954728d6295d8eb33e14f57
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 43199544dc02ccae4b61053c30d6ed36576adfcf
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859759"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055940"
 ---
 # <a name="how-to-create-a-windows-powershell-snap-in"></a>Windows PowerShell 스냅인을 만드는 방법
 
@@ -25,7 +25,7 @@ Windows PowerShell 스냅인을 사용 하는 cmdlet 및 다른 Windows PowerShe
 
 ## <a name="windows-powershell-snap-in-classes"></a>Windows PowerShell 스냅인 클래스
 
-모든 Windows PowerShell 스냅인 클래스에서 파생 된 [System.Management.Automation.Pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn) 하거나 [System.Management.Automation.Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) 클래스입니다.
+모든 Windows PowerShell 스냅인 클래스에서 파생 된 [System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn) 하거나 [System.Management.Automation.Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) 클래스입니다.
 
 ## <a name="examples"></a>예
 
@@ -35,7 +35,7 @@ Windows PowerShell 스냅인을 사용 하는 cmdlet 및 다른 Windows PowerShe
 
 ## <a name="see-also"></a>참고 항목
 
-[System.Management.Automation.Pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn)
+[System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn)
 
 [System.Management.Automation.Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn)
 

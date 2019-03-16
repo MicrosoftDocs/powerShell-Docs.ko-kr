@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 606c880c-6cf1-4ea6-8730-dbf137bfabff
 caps.latest.revision: 5
-ms.openlocfilehash: e3289e9336b863b5e0998a2beb29353c82a31f79
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 9285a2f0e673de8b86084157423512bdeeda109d
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856709"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058195"
 ---
 # <a name="writing-an-item-provider"></a>항목 공급자 작성
 
@@ -46,7 +46,7 @@ Windows PowerShell 공급자에 대 한 자세한 내용은 참조 하세요. [W
 
 ### <a name="implementing-getitem"></a>GetItem 구현
 
-합니다 [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 사용자를 호출할 때 PowerShell 엔진에 의해 호출 됩니다 합니다 [Microsoft.Powershell.Commands.Get 항목](/dotnet/api/Microsoft.PowerShell.Commands.Get-Item) cmdlet에 공급자입니다. 메서드는 지정된 된 경로에 있는 항목을 반환합니다. Access 데이터베이스 예제에서는 메서드 항목에 드라이브를 자체 데이터베이스 또는 데이터베이스에서 행의 테이블 인지 여부를 확인 합니다. 메서드를 호출 하 여 PowerShell 엔진에 항목을 전송 합니다 [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) 메서드.
+합니다 [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 사용자를 호출할 때 PowerShell 엔진에 의해 호출 됩니다 합니다 [Microsoft.PowerShell.Commands.Get 항목](/dotnet/api/Microsoft.PowerShell.Commands.Get-Item) cmdlet에 공급자입니다. 메서드는 지정된 된 경로에 있는 항목을 반환합니다. Access 데이터베이스 예제에서는 메서드 항목에 드라이브를 자체 데이터베이스 또는 데이터베이스에서 행의 테이블 인지 여부를 확인 합니다. 메서드를 호출 하 여 PowerShell 엔진에 항목을 전송 합니다 [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) 메서드.
 
 ```csharp
 protected override void GetItem(string path)
@@ -85,7 +85,7 @@ protected override void GetItem(string path)
 
 ### <a name="implementing-setitem"></a>SetItem 구현
 
-합니다 [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 메서드는 PowerShell 엔진을 호출 하 여 사용자를 호출할 때 합니다 [Microsoft.Powershell.Commands.Set 항목](/dotnet/api/Microsoft.PowerShell.Commands.Set-Item) cmdlet . 지정된 된 경로에 있는 항목의 값을 설정합니다.
+합니다 [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 메서드는 PowerShell 엔진을 호출 하 여 사용자를 호출할 때 합니다 [Microsoft.PowerShell.Commands.Set 항목](/dotnet/api/Microsoft.PowerShell.Commands.Set-Item) cmdlet . 지정된 된 경로에 있는 항목의 값을 설정합니다.
 
 해당 항목 이므로 행에는 메서드가 throw 하는 경우에 있는 항목의 값을 설정 하려면 편이 Access 데이터베이스 예제에서 [NotSupportedException](http://msdn.microsoft.com/library/system.notsupportedexception\(v=vs.110\).aspx) 항목이 없는 경우 행입니다.
 
@@ -145,7 +145,7 @@ protected override void SetItem(string path, object values)
 
 ### <a name="implementing-itemexists"></a>ItemExists 구현
 
-합니다 [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) 메서드는 PowerShell 엔진에서 호출 하는 사용자는 [Microsoft.Powershell.Commands.Test 경로](/dotnet/api/Microsoft.PowerShell.Commands.Test-Path) cmdlet. 메서드는 지정된 된 경로에 항목이 있는지 여부를 결정 합니다. 항목이 없으면 메서드가 전달 PowerShell 엔진으로 다시 호출 하 여 [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject)합니다.
+합니다 [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) 메서드는 PowerShell 엔진에서 호출 하는 사용자는 [Microsoft.PowerShell.Commands.Test 경로](/dotnet/api/Microsoft.PowerShell.Commands.Test-Path) cmdlet. 메서드는 지정된 된 경로에 항목이 있는지 여부를 결정 합니다. 항목이 없으면 메서드가 전달 PowerShell 엔진으로 다시 호출 하 여 [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject)합니다.
 
 ```csharp
 protected override bool ItemExists(string path)

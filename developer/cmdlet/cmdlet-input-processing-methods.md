@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods (PowerShell SDK]
 ms.assetid: b0bb8172-c9fa-454b-9f1b-57c3fe60671b
 caps.latest.revision: 12
-ms.openlocfilehash: 7f8d25e03707052b1d5b62e245caae360da11d0b
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: 065214647dfa6d376b727930fe75140911095faf
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794946"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059374"
 ---
 # <a name="cmdlet-input-processing-methods"></a>Cmdlet 입력 처리 메서드
 
@@ -63,7 +63,7 @@ protected override void ProcessRecord()
 
 Cmdlet를 재정의 해야 합니다 [System.Management.Automation.Cmdlet.Endprocessing%2A? Displayproperty =](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0) cmdlet에서 처리 된 모든 레코드에 유효한 모든 사후 처리 작업을 추가 하는 방법입니다. 예를 들어 cmdlet 할 개체 변수를 완료 한 후 정리를 처리 합니다.
 
-Windows PowerShell 명령 파이프라인을 처리할 때 Windows PowerShell이이 메서드를 호출 되 면 cmdlet에 파이프라인의 각 인스턴스에 대 한 합니다. 그러나는 것이 Windows PowerShell 런타임을 호출 하지 것입니다 고려해 야 합니다 [System.Management.Automation.Cmdlet.Endprocessing%2A? Displayproperty =](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0) 메서드 cmdlet은 해당 입력된 처리를 통해 중간 취소 되거나 종료 하는 경우 cmdlet의 모든 부분에서 오류가 발생 합니다. 이러한 이유로 cmdlet 개체를 정리 해야 하는 전체 구현 해야 [System.Idisposable](/dotnet/api/System.IDisposable) 둘 다 런타임에 호출할 수 있도록 종료자를 포함 하 여 패턴을 [ System.Management.Automation.Cmdlet.Endprocessing%2A? Displayproperty =](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0) 하 고 [System.Idisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) 메서드 끝에 처리 합니다. Windows PowerShell 명령 파이프라인을 호출 하는 방법에 대 한 자세한 내용은 참조 하세요. [주기를 처리 하는 Cmdlet](https://msdn.microsoft.com/en-us/3202f55c-314d-4ac3-ad78-4c7ca72253c5)합니다.
+Windows PowerShell 명령 파이프라인을 처리할 때 Windows PowerShell이이 메서드를 호출 되 면 cmdlet에 파이프라인의 각 인스턴스에 대 한 합니다. 그러나는 것이 Windows PowerShell 런타임을 호출 하지 것입니다 고려해 야 합니다 [System.Management.Automation.Cmdlet.Endprocessing%2A? Displayproperty =](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0) 메서드 cmdlet은 해당 입력된 처리를 통해 중간 취소 되거나 종료 하는 경우 cmdlet의 모든 부분에서 오류가 발생 합니다. 이러한 이유로 cmdlet 개체를 정리 해야 하는 전체 구현 해야 [System.IDisposable](/dotnet/api/System.IDisposable) 둘 다 런타임에 호출할 수 있도록 종료자를 포함 하 여 패턴을 [ System.Management.Automation.Cmdlet.Endprocessing%2A? Displayproperty =](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0) 하 고 [System.IDisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) 메서드 끝에 처리 합니다. Windows PowerShell 명령 파이프라인을 호출 하는 방법에 대 한 자세한 내용은 참조 하세요. [주기를 처리 하는 Cmdlet](https://msdn.microsoft.com/en-us/3202f55c-314d-4ac3-ad78-4c7ca72253c5)합니다.
 
 다음 코드의 구현을 보여 줍니다는 [System.Management.Automation.Cmdlet.Processrecord%2A? Displayproperty =](/dotnet/api/system.management.automation.cmdlet.processrecord?view=powershellsdk-1.1.0) 메서드.
 
@@ -88,6 +88,6 @@ protected override void EndProcessing()
 
 [System.Management.Automation.Cmdlet.Endprocessing%2A?Displayproperty=Fullname](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0)
 
-[System.Idisposable](/dotnet/api/System.IDisposable)
+[System.IDisposable](/dotnet/api/System.IDisposable)
 
 [Windows PowerShell Shell SDK](../windows-powershell-reference.md)

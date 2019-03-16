@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 31298f1b-8b76-4637-8406-863f5ad27e53
 caps.latest.revision: 8
-ms.openlocfilehash: 7ba1f11b9aa1e602d5f09d6ee0978095aec41837
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 91b56a78f878e0d9c0fc11e4b882399bdfb108ac
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854429"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058898"
 ---
 # <a name="stopprocesssample03-sample"></a>StopProcessSample03 샘플
 
@@ -67,7 +67,7 @@ ms.locfileid: "56854429"
 
 이 샘플에는 매개 변수 별칭을 선언 하 고 와일드 카드를 지원 하는 방법을 보여 줍니다.
 
-```
+```csharp
 using System;
 using System.Diagnostics;
 using System.Collections;
@@ -158,7 +158,7 @@ namespace Microsoft.Samples.PowerShell.Commands
            catch (InvalidOperationException ioe)
            {
                base.ThrowTerminatingError(new ErrorRecord(ioe,
-                         "UnableToAcessProcessList",
+                         "UnableToAccessProcessList",
                              ErrorCategory.InvalidOperation,
                                  null));
            }
@@ -249,7 +249,7 @@ namespace Microsoft.Samples.PowerShell.Commands
            string message = null;
 
            // Confirm the operation first.
-           // This is always false if the WhatIf parametr is specified.
+           // This is always false if the WhatIf parameter is specified.
            if (!ShouldProcess(string.Format(CultureInfo.CurrentCulture,
                     "{0} ({1})", processName, process.Id)))
            {
@@ -267,9 +267,9 @@ namespace Microsoft.Samples.PowerShell.Commands
                                 processName);
 
                // It is possible that ProcessRecord is called multiple
-               // when objects are recieved as inputs from a pipeline.
+               // when objects are received as inputs from a pipeline.
                // So, to retain YesToAll and NoToAll input that the
-               // user may enter across mutilple calls to this
+               // user may enter across multiple calls to this
                // function, they are stored as private members of the
                // Cmdlet.
                if (!ShouldContinue(message, "Warning!",

@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bb4e1564-3fd3-4be3-b93e-ac90480e05c0
 caps.latest.revision: 6
-ms.openlocfilehash: 9ec6caedcb7cf20d4aab2216cd8a9707269d9452
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 3130ecc69f7d1568bcbd392dd24e8cdcc3382905
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854959"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054852"
 ---
 # <a name="firstlineindent-element-for-frame-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 Frame에 대한 FirstLineIndent 요소(형식)
 
 데이터의 첫 번째 줄은 오른쪽으로 옮겨집니다 문자 수를 지정 합니다. 이 요소는 사용자 지정 컨트롤 뷰를 정의할 때 사용 됩니다.
 
-구성 요소 (형식) ViewDefinitions 요소 (형식) 보기 (형식) CustomControl 요소 (형식) CustomEntries 요소 CustomControl CustomEntries CustomItem 요소 (형식) 보기에 대 한 보기 (형식) CustomEntry 요소에 대 한 CutomControlView (형식) 프레임에 대 한 요소의 CustomControl (형식) 보기 FirstLineIndent 요소에 대 한 CustomItem CustomEntry
+구성 요소 (형식) ViewDefinitions 요소 (형식) 보기 (형식) CustomControl 요소 (형식) CustomEntries 요소 CustomControl CustomEntries CustomItem 요소 (형식) 보기에 대 한 보기 (형식) CustomEntry 요소에 대 한 CustomControlView (형식) 프레임에 대 한 요소의 CustomControl (형식) 보기 FirstLineIndent 요소에 대 한 CustomItem CustomEntry
 
 ## <a name="syntax"></a>구문
 

@@ -13,22 +13,22 @@ helpviewer_keywords:
 - error category string [PowerShell SDK]
 ms.assetid: bdd66fea-eb63-4bb6-9cbe-9a799e5e0db5
 caps.latest.revision: 9
-ms.openlocfilehash: bbe04a8fb556f0f6807bc0eae6634e3cf505759e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f6f5e50c55b477cbbeeaaf4f3ea665d5dc07758c
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861979"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059765"
 ---
 # <a name="windows-powershell-error-records"></a>Windows PowerShell 오류 레코드
 
-Cmdlet에 전달 해야 합니다는 [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) 종료 및 종료 되지 않는 오류에 대 한 오류 조건을 식별 하는 개체입니다.
+Cmdlet에 전달 해야 합니다는 [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) 종료 및 종료 되지 않는 오류에 대 한 오류 조건을 식별 하는 개체입니다.
 
-합니다 [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) 개체에는 다음 정보를 포함 합니다.
+합니다 [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) 개체에는 다음 정보를 포함 합니다.
 
 - 오류를 설명 하는 예외입니다. 종종 이것이 cmdlet 포착 하 고 오류 레코드를 변환 하는 예외입니다. 모든 오류 레코드에는 예외가 있어야 합니다.
 
-Cmdlet는 예외를 catch 하지 않은, 새 예외 하며 가장 오류 조건을 설명 하는 예외 클래스를 선택 합니다. 그러나 필요가 없습니다를 통해 액세스할 수 있기 때문에 예외를 throw 하는 [System.Management.Automation.Errorrecord.Exception*](/dotnet/api/System.Management.Automation.ErrorRecord.Exception) 의 속성을 [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) 개체입니다.
+Cmdlet는 예외를 catch 하지 않은, 새 예외 하며 가장 오류 조건을 설명 하는 예외 클래스를 선택 합니다. 그러나 필요가 없습니다를 통해 액세스할 수 있기 때문에 예외를 throw 하는 [System.Management.Automation.ErrorRecord.Exception](/dotnet/api/System.Management.Automation.ErrorRecord.Exception) 의 속성을 [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord)개체입니다.
 
 - 특정 오류 처리기를 사용 하 여 특정 오류 조건을 처리 하 게 진단 목적 및 Windows PowerShell 스크립트에서 사용할 수 있는 대상된 지정자를 제공 하는 오류 식별자입니다. 모든 오류 레코드 오류 식별자를 포함 해야 합니다 (오류 식별자 참조).
 
@@ -42,13 +42,13 @@ Cmdlet는 예외를 catch 하지 않은, 새 예외 하며 가장 오류 조건�
 
 ## <a name="error-identifier"></a>오류 식별자
 
-오류 레코드를 만든 경우 cmdlet 내에서 오류 조건을 지정 하는 식별자를 지정 합니다. Windows PowerShell 오류 정규화 된 식별자를 만들기 위해 cmdlet의 이름으로 대상으로 지정 된 식별자를 결합 합니다. 정규화 된 오류 식별자를 통해 액세스할 수는 [System.Management.Automation.Errorrecord.Fullyqualifiederrorid*](/dotnet/api/System.Management.Automation.ErrorRecord.FullyQualifiedErrorId) 의 속성을 [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord)개체입니다. 오류 식별자 단독으로 사용할 수 없는 경우 사용할 수 있는 정규화 된 오류 식별자의 일부로 합니다.
+오류 레코드를 만든 경우 cmdlet 내에서 오류 조건을 지정 하는 식별자를 지정 합니다. Windows PowerShell 오류 정규화 된 식별자를 만들기 위해 cmdlet의 이름으로 대상으로 지정 된 식별자를 결합 합니다. 정규화 된 오류 식별자를 통해 액세스할 수는 [System.Management.Automation.ErrorRecord.FullyQualifiedErrorId](/dotnet/api/System.Management.Automation.ErrorRecord.FullyQualifiedErrorId) 의 속성을 [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord)개체입니다. 오류 식별자 단독으로 사용할 수 없는 경우 사용할 수 있는 정규화 된 오류 식별자의 일부로 합니다.
 
 오류 레코드를 만들 때 오류 식별자를 생성 하려면 다음 지침을 따르세요.
 
 - 오류 조건에 특정 오류 식별자를 확인 합니다. 진단 목적 및 특정 오류 처리기를 사용 하 여 특정 오류 조건을 처리 하는 스크립트에 대 한 오류 식별자를 대상으로 합니다. 사용자 오류 식별자를 사용 하 여 오류와 해당 소스 식별에 있어야 합니다. 또한 오류 식별자는 새 예외 서브 클래스 필요 하지 않은 있도록 기존 예외 로부터 특정 오류 조건에 대 한 보고 사용 하도록 설정 합니다.
 
-- 일반적으로 서로 다른 코드 경로에 다른 오류 식별자를 할당 합니다. 최종 사용자가 특정 식별자에서 이점을 제공합니다. 호출 하는 각 코드 경로 종종 [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 또는 [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 자체 식별자. 일반적으로 오류 메시지 및 그 반대로 새 템플릿 문자열을 정의 하는 경우 새 식별자를 정의 합니다. 오류 메시지 식별자로 사용 하지 마세요.
+- 일반적으로 서로 다른 코드 경로에 다른 오류 식별자를 할당 합니다. 최종 사용자가 특정 식별자에서 이점을 제공합니다. 호출 하는 각 코드 경로 종종 [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 또는 [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 자체 식별자. 일반적으로 오류 메시지 및 그 반대로 새 템플릿 문자열을 정의 하는 경우 새 식별자를 정의 합니다. 오류 메시지 식별자로 사용 하지 마세요.
 
 - 특정 오류 식별자를 사용 하 여 코드를 게시할 때 전체 제품에 대 한 해당 식별자를 사용 하 여 오류의 의미 체계 지원 수명 주기 설정할 수 있습니다. 원래 컨텍스트에서 의미 체계가 다른 컨텍스트에서 재사용 하지 않습니다. 이 오류의 의미 체계를 변경 하는 경우 만들고 새 식별자를 사용 하 여 합니다.
 
@@ -64,7 +64,7 @@ Cmdlet는 예외를 catch 하지 않은, 새 예외 하며 가장 오류 조건�
 
 사용 하지 않도록 합니다 [System.Management.Automation.Errorcategory.Notspecified](/dotnet/api/System.Management.Automation.ErrorCategory.NotSpecified) 상수입니다. 또는 오류를 발생 시킨 작업에 대 한 오류에 대 한 정보를 사용 하는 경우 범주를 완벽 하 게 일치 하지 않습니다. 경우에 오류 또는 작업을 가장 잘 설명 하는 범주를 선택 합니다.
 
-Windows PowerShell에서 표시 되는 정보는 종류별 보기 문자열로 참조 되며의 속성에서 빌드되는 [System.Management.Automation.Errorcategoryinfo](/dotnet/api/System.Management.Automation.ErrorCategoryInfo) 클래스입니다. (이 클래스는 오류를 통해서나 [System.Management.Automation.Errorrecord.Categoryinfo*](/dotnet/api/System.Management.Automation.ErrorRecord.CategoryInfo) 속성입니다.)
+Windows PowerShell에서 표시 되는 정보는 종류별 보기 문자열로 참조 되며의 속성에서 빌드되는 [System.Management.Automation.Errorcategoryinfo](/dotnet/api/System.Management.Automation.ErrorCategoryInfo) 클래스입니다. (이 클래스는 오류를 통해서나 [System.Management.Automation.ErrorRecord.CategoryInfo](/dotnet/api/System.Management.Automation.ErrorRecord.CategoryInfo) 속성입니다.)
 
 ```
 {Category}: ({TargetName}:{TargetType}):[{Activity}], {Reason}
@@ -86,27 +86,27 @@ Windows PowerShell에서 표시 되는 정보는 종류별 보기 문자열로 �
 
 기본 메시지 텍스트에서 오류에 대 한 기본 오류 메시지는 cmdlet에 대 한 오류 레코드를 개발 하는 경우는 [System.Exception.Message](/dotnet/api/System.Exception.Message) 속성입니다. 해당 메시지 텍스트는만 디버깅용으로 사용 (.NET Framework 지침)에 따라 읽기 전용 속성입니다. 기본 메시지 텍스트를 확대 하거나이 대체 하는 오류 메시지를 만드는 것이 좋습니다. Cmdlet에 더 친숙 하 고 자세한 메시지를 확인 합니다.
 
-대체 메시지에서 제공 되는 [System.Management.Automation.Errordetails](/dotnet/api/System.Management.Automation.ErrorDetails) 개체입니다. Windows PowerShell에서 사용할 수 있는 추가 지역화 정보를 제공 하기 때문에이 개체의 생성자 중 하나를 사용 합니다.
+대체 메시지에서 제공 되는 [System.Management.Automation.ErrorDetails](/dotnet/api/System.Management.Automation.ErrorDetails) 개체입니다. Windows PowerShell에서 사용할 수 있는 추가 지역화 정보를 제공 하기 때문에이 개체의 생성자 중 하나를 사용 합니다.
 
-- [ErrorDetails.ErrorDetails (Cmdlet, 문자열, 문자열, 개체\[System.Management.Automation.Errordetails.%23Ctor%28System.Management.Automation.Cmdlet%2Csystem.String%2Csystem.String%2Csystem.Object%5B%5D%29? Displayproperty =](/dotnet/api/System.Management.Automation.ErrorDetails.%23ctor%28System.Management.Automation.Cmdlet%2CSystem.String%2CSystem.String%2CSystem.Object%5B%5D%29): 템플릿 문자열에는 cmdlet를 구현 하는 동일한 어셈블리에 리소스 문자열 또는 재정의 통해 템플릿 문자열을 로드 하려는 경우이 생성자를 사용 하 여 [System.Management.Automation.Cmdlet.Getresourcestring* ](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString) 메서드.
+- [ErrorDetails.ErrorDetails (Cmdlet, 문자열, 문자열, 개체\[System.Management.Automation.ErrorDetails.%23Ctor%28System.Management.Automation.Cmdlet%2CSystem.String%2CSystem.String%2CSystem.Object%5B%5D%29? Displayproperty =](/dotnet/api/System.Management.Automation.ErrorDetails.%23ctor%28System.Management.Automation.Cmdlet%2CSystem.String%2CSystem.String%2CSystem.Object%5B%5D%29): 템플릿 문자열에는 cmdlet를 구현 하는 동일한 어셈블리에 리소스 문자열 또는 재정의 통해 템플릿 문자열을 로드 하려는 경우이 생성자를 사용 하 여 [System.Management.Automation.Cmdlet.GetResourceString ](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString) 메서드.
 
-- [ErrorDetails.ErrorDetails (어셈블리, 문자열, 문자열, 개체\[System.Management.Automation.Errordetails.%23Ctor%28System.Reflection.Assembly%2Csystem.String%2Csystem.String%2Csystem.Object%5B%5D%29? Displayproperty =](/dotnet/api/System.Management.Automation.ErrorDetails.%23ctor%28System.Reflection.Assembly%2CSystem.String%2CSystem.String%2CSystem.Object%5B%5D%29): 이 생성자를 사용 하 여 템플릿 문자열에는 다른 어셈블리 내에 있고 재정의 통해 것을 로드 하지 [System.Management.Automation.Cmdlet.Getresourcestring*](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString)합니다.
+- [ErrorDetails.ErrorDetails (어셈블리, 문자열, 문자열, 개체\[System.Management.Automation.ErrorDetails.%23Ctor%28System.Reflection.Assembly%2CSystem.String%2CSystem.String%2CSystem.Object%5B%5D%29? Displayproperty =](/dotnet/api/System.Management.Automation.ErrorDetails.%23ctor%28System.Reflection.Assembly%2CSystem.String%2CSystem.String%2CSystem.Object%5B%5D%29): 이 생성자를 사용 하 여 템플릿 문자열에는 다른 어셈블리 내에 있고 재정의 통해 것을 로드 하지 [System.Management.Automation.Cmdlet.GetResourceString](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString)합니다.
 
 대체 메시지는 약간의 차이점이 사용 하 여 예외 메시지를 작성 하기 위한.NET Framework 디자인 지침을 따라야 합니다. 예외 메시지 개발자를 위한 기록 되어야 하는 지침 상태입니다. Cmdlet은 사용자에 대 한 이러한 대체 메시지를 작성 되어야 합니다.
 
-대체 오류 메시지를 하기 전에 추가 해야 합니다 [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 또는 [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 메서드를 호출 . 대체 메시지를 추가 하려면 설정 합니다 [System.Management.Automation.Errorrecord.Errordetails*](/dotnet/api/System.Management.Automation.ErrorRecord.ErrorDetails) error 레코드의 속성입니다. 이 속성을 설정 하는 경우 Windows PowerShell에 표시 됩니다는 [System.Management.Automation.Errordetails.Message*](/dotnet/api/System.Management.Automation.ErrorDetails.Message) 기본 메시지 텍스트 대신 속성입니다.
+전에 교체 오류 메시지를 추가 해야 합니다 [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 또는 [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 메서드를 호출 합니다. 대체 메시지를 추가 하려면 설정 합니다 [System.Management.Automation.ErrorRecord.ErrorDetails](/dotnet/api/System.Management.Automation.ErrorRecord.ErrorDetails) error 레코드의 속성입니다. 이 속성을 설정 하는 경우 Windows PowerShell에 표시 됩니다는 [System.Management.Automation.ErrorDetails.Message*](/dotnet/api/System.Management.Automation.ErrorDetails.Message) 기본 메시지 텍스트 대신 속성입니다.
 
 ## <a name="recommended-action-information"></a>작업 정보를 권장합니다.
 
-합니다 [System.Management.Automation.Errordetails](/dotnet/api/System.Management.Automation.ErrorDetails) 개체 오류가 발생 하는 경우 권장 되는 작업에 대 한 정보를 제공할 수도 있습니다.
+합니다 [System.Management.Automation.ErrorDetails](/dotnet/api/System.Management.Automation.ErrorDetails) 개체 오류가 발생 하는 경우 권장 되는 작업에 대 한 정보를 제공할 수도 있습니다.
 
 ## <a name="invocation-information"></a>호출 정보
 
-Cmdlet을 사용 하는 경우 [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 하거나 [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) Windows PowerShell 오류 레코드를 보고 하려면 오류가 발생할 때 호출 된 명령을 설명 하는 정보를 자동으로 추가 합니다. 이 정보는 [System.Management.Automation.Invocationinfo](/dotnet/api/System.Management.Automation.InvocationInfo) 명령 자체를 명령에 의해 호출 된 cmdlet의 이름이 포함 된 개체 및 파이프라인 또는 스크립트에 대 한 정보입니다. 이 속성은 읽기 전용입니다.
+Cmdlet을 사용 하는 경우 [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 하거나 [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) Windows PowerShell 오류 레코드를 보고 하려면 오류가 발생할 때 호출 된 명령을 설명 하는 정보를 자동으로 추가 합니다. 이 정보는 [System.Management.Automation.Invocationinfo](/dotnet/api/System.Management.Automation.InvocationInfo) 명령 자체를 명령에 의해 호출 된 cmdlet의 이름이 포함 된 개체 및 파이프라인 또는 스크립트에 대 한 정보입니다. 이 속성은 읽기 전용입니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)
+[System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)
 
 [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)
 
@@ -114,9 +114,9 @@ Cmdlet을 사용 하는 경우 [System.Management.Automation.Cmdlet.Writeerror*]
 
 [System.Management.Automation.Errorcategoryinfo](/dotnet/api/System.Management.Automation.ErrorCategoryInfo)
 
-[System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord)
+[System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord)
 
-[System.Management.Automation.Errordetails](/dotnet/api/System.Management.Automation.ErrorDetails)
+[System.Management.Automation.ErrorDetails](/dotnet/api/System.Management.Automation.ErrorDetails)
 
 [System.Management.Automation.Invocationinfo](/dotnet/api/System.Management.Automation.InvocationInfo)
 

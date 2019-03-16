@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0595b99e-b438-4240-b47b-555cf0316f33
 caps.latest.revision: 15
-ms.openlocfilehash: 4f463ac6b70a00f628c5b93b112c5fa510ff3bfb
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: bd5baa03c2050b2c3bbe1d7697c253d923175d39
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853579"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057929"
 ---
 # <a name="typename-element-for-types-format"></a>Types에 대한 TypeName 요소(형식)
 
@@ -83,4 +83,4 @@ ms.locfileid: "56853579"
 
 [형식 요소 (형식)](./types-element-for-selectionset-format.md)
 
-[Windows PowDefining 집합으로 ObjecterShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[서식 파일을 Windows PowerShell을 작성](./writing-a-powershell-formatting-file.md)

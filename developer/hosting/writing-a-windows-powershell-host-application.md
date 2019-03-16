@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 81aeafad-dbc3-4712-8bb9-e6a417be260f
 caps.latest.revision: 15
-ms.openlocfilehash: 2039e181becd1b39fc3d6cf0cdbcf0c20e9fc206
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2df5a59833fcdd58c6b2afbb4882111592fb3d76
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863179"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056433"
 ---
 # <a name="writing-a-windows-powershell-host-application"></a>Windows PowerShell 호스트 애플리케이션 작성
 
@@ -29,7 +29,7 @@ ms.locfileid: "56863179"
 
 [추가한 명령을 호출](./adding-and-invoking-commands.md) 만들고 호스트 응용 프로그램에서 명령 파이프라인을 실행 하는 방법을 설명...
 
-[원격 runspace를 만드는](./creating-remote-runspaces.md) Expains runspace 원격 컴퓨터에 연결 하는 방법입니다.
+[원격 runspace를 만드는](./creating-remote-runspaces.md) runspace 원격 컴퓨터에 연결 하는 방법에 설명 합니다.
 
 [사용자 지정 사용자 인터페이스 만들기](./creating-a-custom-user-interface.md) 소개 사용자 지정 사용자 인터페이스 및 예제에 대 한 링크를 제공 합니다.
 

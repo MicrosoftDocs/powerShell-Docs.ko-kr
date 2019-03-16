@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b99d53fc-0af9-426b-82ce-09955e031d4b
 caps.latest.revision: 13
-ms.openlocfilehash: d919d4ad8554e762230c1448d81b50e27c38ba99
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 0fa4a5f804586c51ae6a36121f9aab041b0989cc
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863369"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058048"
 ---
 # <a name="cmdlet-samples"></a>Cmdlet 샘플
 
@@ -39,7 +39,7 @@ ms.locfileid: "56863369"
 
 [StopProcessSample04 샘플](./stopprocesssample04-sample.md) 매개 변수 집합을 선언, 기본 매개 변수를 설정 하 고 입력된 개체를 받을 수를 지정 하는 cmdlet을 작성 하는 방법을이 보여 줍니다.
 
-[샘플 Events01](./events01-sample.md) 에서 발생 한 이벤트에 대 한 사용자 등록을 허용 하는 cmdlet을 만드는 방법을이 보여 줍니다 [System.IO.Filesystemwatcher](/dotnet/api/System.IO.FileSystemWatcher)합니다. 이 cmdlet을 사용 하 여 사용자 예를 들어 특정 디렉터리에서 파일을 만들 때 실행할 동작을 등록할 수 있습니다. 이 샘플에서 파생 된 [Microsoft.Powershell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 기본 클래스입니다.
+[샘플 Events01](./events01-sample.md) 에서 발생 한 이벤트에 대 한 사용자 등록을 허용 하는 cmdlet을 만드는 방법을이 보여 줍니다 [System.IO.Filesystemwatcher](/dotnet/api/System.IO.FileSystemWatcher)합니다. 이 cmdlet을 사용 하 여 사용자 예를 들어 특정 디렉터리에서 파일을 만들 때 실행할 동작을 등록할 수 있습니다. 이 샘플에서 파생 된 [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 기본 클래스입니다.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - parameter sets [PowerShell Programmer's Guide]
 ms.assetid: a6131db4-fd6e-45f1-bd47-17e7174afd56
 caps.latest.revision: 8
-ms.openlocfilehash: b02a2e0d4b0a27c261b0bc05febda7826ad5276e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f0bff11618c18bf53b9c2a185445795a17306fa3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859269"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054988"
 ---
 # <a name="adding-parameter-sets-to-a-cmdlet"></a>Cmdlet에 매개 변수 집합 추가
 
@@ -179,7 +179,7 @@ Private myInputObject() As Process
 
 ## <a name="overriding-an-input-processing-method"></a>입력 처리 메서드를 재정의 합니다.
 
-가장 일반적인, 모든 cmdlet을 입력 처리 메서드를 재정의 해야 합니다 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드. 이 cmdlet에는 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) cmdlet 개수에 관계 없이 프로세스를 처리할 수 있도록 메서드를 재정의 합니다. 사용자는 매개 변수 집합에 따라 다양 한 메서드 호출에 지정 하는 Select 문을 포함 합니다.
+가장 일반적인, 모든 cmdlet을 입력 처리 메서드를 재정의 해야 합니다 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드. 이 cmdlet에는 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) cmdlet 개수에 관계 없이 프로세스를 처리할 수 있도록 메서드를 재정의 합니다. 사용자는 매개 변수 집합에 따라 다양 한 메서드 호출에 지정 하는 Select 문을 포함 합니다.
 
 ```csharp
 protected override void ProcessRecord()

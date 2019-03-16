@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 471c85f3-9287-45c2-b4bc-833caa1b7634
 caps.latest.revision: 8
-ms.openlocfilehash: 8621878a339751d2cef842af6f5b3d5d2e270346
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 3850aec88bc800718a82f51c91fbd0cb3c705089
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862619"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059629"
 ---
 # <a name="runspace06-sample"></a>Runspace06 샘플
 
@@ -39,7 +39,7 @@ ms.locfileid: "56862619"
 
 - 동기적으로 명령을 실행 합니다.
 
-- 속성에서 추출 합니다 [System.Management.Automation.Psobject](/dotnet/api/System.Management.Automation.PSObject) 명령에 의해 반환 되는 개체입니다.
+- 속성에서 추출 합니다 [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) 명령에 의해 반환 되는 개체입니다.
 
 ## <a name="example"></a>예제
 

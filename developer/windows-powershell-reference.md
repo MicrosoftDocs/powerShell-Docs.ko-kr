@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows PowerShell SDK
 ms.assetid: cbba4879-bcac-484a-9906-4bbe2cd1eb33
 caps.latest.revision: 11
-ms.openlocfilehash: dfda6cb68b089a30a156760345420ee80d1d3ae9
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 86595ebaac32318a4e3b9a3c4b295c73fb2e1c75
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862109"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055498"
 ---
 # <a name="windows-powershell-reference"></a>Windows PowerShell 참조
 
@@ -47,10 +47,10 @@ Windows PowerShell SDK 외에도 다음 리소스를 자세한 정보를 제공 
 
 [System.Management.Automation.Provider](/dotnet/api/System.Management.Automation.Provider) 클래스, 열거형 및 인터페이스는 Windows PowerShell 공급자를 구현 하는 데 필요한이 네임 스페이스에 포함 되어 있습니다. 특히 합니다 [System.Management.Automation.Provider.Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) 클래스는 기본 클래스는 모든 Windows PowerShell에서 공급자 클래스를 파생 되어야 합니다.
 
-[Microsoft.Powershell.Commands](/dotnet/api/Microsoft.PowerShell.Commands) 이 네임 스페이스 Windows PowerShell에 의해 구현 되는 공급자와 cmdlet에 대 한 클래스를 포함 합니다. 마찬가지로, 것이 좋습니다 사용자가 만든를 *YourName*합니다. 구현 하는 이러한 cmdlet에 대 한 네임 스페이스는 명령입니다.
+[Microsoft.PowerShell.Commands](/dotnet/api/Microsoft.PowerShell.Commands) 이 네임 스페이스 Windows PowerShell에 의해 구현 되는 공급자와 cmdlet에 대 한 클래스를 포함 합니다. 마찬가지로, 것이 좋습니다 사용자가 만든를 *YourName*합니다. 구현 하는 이러한 cmdlet에 대 한 네임 스페이스는 명령입니다.
 
 [System.Management.Automation.Host](/dotnet/api/System.Management.Automation.Host) 클래스, 열거형 및 인터페이스는 사용자 및 Windows PowerShell 간의 상호 작용을 정의 하는 cmdlet이 네임이 스페이스에 포함 되어 있습니다.
 
-[System.Management.Automation.Internal](/dotnet/api/System.Management.Automation.Internal) 이 네임 스페이스에는 다른 네임 스페이스 클래스에서 사용 하는 기본 클래스를 포함 합니다. 예를 들어 합니다 [System.Management.Automation.Internal.Cmdletmetadataattribute](/dotnet/api/System.Management.Automation.Internal.CmdletMetadataAttribute) 클래스는 기본 클래스에 대 한 합니다 [System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute) 클래스.
+[System.Management.Automation.Internal](/dotnet/api/System.Management.Automation.Internal) 이 네임 스페이스에는 다른 네임 스페이스 클래스에서 사용 하는 기본 클래스를 포함 합니다. 예를 들어 합니다 [System.Management.Automation.Internal.Cmdletmetadataattribute](/dotnet/api/System.Management.Automation.Internal.CmdletMetadataAttribute) 클래스는 기본 클래스에 대 한 합니다 [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) 클래스.
 
 [System.Management.Automation.Runspaces](/dotnet/api/System.Management.Automation.Runspaces) 클래스, 열거형 및 인터페이스는 Windows PowerShell runspace를 만드는 데이 네임 스페이스에 포함 되어 있습니다. 이 컨텍스트에서 Windows PowerShell runspace는 하나 이상의 Windows PowerShell 파이프라인 cmdlet을 호출 하는 컨텍스트입니다. 즉, cmdlet은 Windows PowerShell runspace의 컨텍스트 내에서 작동합니다. 자세한 내용은 aboutWindows PowerShell runspace에 대 한 참조 [Windows PowerShell Runspace](http://msdn.microsoft.com/en-us/a1582cfe-f06d-4aff-adc6-71f49a860ce9)합니다.

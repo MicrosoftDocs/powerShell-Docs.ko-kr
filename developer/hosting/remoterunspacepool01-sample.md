@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dffedd31-c10d-4e11-a9ee-4fdfe9a869e8
 caps.latest.revision: 8
-ms.openlocfilehash: 03284495fbd6d6cfaed639604e87bc70c7023b6c
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: 894c995474d4bf5b7fe11c1289c4500371c9dd43
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57795048"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058303"
 ---
 # <a name="remoterunspacepool01-sample"></a>RemoteRunspacePool01 샘플
 
@@ -47,7 +47,7 @@ namespace Samples
   using System.Management.Automation.Runspaces;  // Windows PowerShell namespace.
 
   /// <summary>
-  /// This class contains the Main enrty point for the application.
+  /// This class contains the Main entry point for the application.
   /// </summary>
   internal class RemoteRunspacePool01
   {

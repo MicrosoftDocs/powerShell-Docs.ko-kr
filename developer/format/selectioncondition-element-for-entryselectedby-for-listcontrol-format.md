@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7649d5d0-2b56-49b5-a670-dde46caca343
 caps.latest.revision: 11
-ms.openlocfilehash: ec75945c5517c02fa001f0a38573c045ffcdbfd3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 633204f3b181316761746ea2679910216fb74657
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857489"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058967"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-listcontrol-format"></a>ListControl의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
 
@@ -44,7 +44,7 @@ ms.locfileid: "56857489"
 
 |요소|설명|
 |-------------|-----------------|
-|[PropertyName SelectionCondition EmtrySelectedBy ListEntry (형식)에 대 한에 대 한 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 조건이 트리거하는.NET 속성을 지정 합니다.|
+|[PropertyName SelectionCondition EntrySelectedBy ListEntry (형식)에 대 한에 대 한 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 조건이 트리거하는.NET 속성을 지정 합니다.|
 |[EntrySelectedBy ListEntry (형식)에 대 한에 대 한 SelectionCondition ScriptBlock 요소](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 조건이 트리거하는 스크립트를 지정 합니다.|
 |[EntrySelectedBy ListEntry (형식)에 대 한에 대 한 SelectionCondition SelectionSetName 요소](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md)|선택적 요소입니다.<br /><br /> 트리거 조건이 있는.NET 형식의 집합을 지정 합니다.|
 |[SelectionCondition EntrySelectedBy ListEntry (형식)에 대 한에 대 한 TypeName 요소](./typename-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 조건이 트리거하는.NET 형식을 지정 합니다.|
@@ -75,7 +75,7 @@ lWhen 선택 조건을 정의 하는, 다음 요구 사항을 적용 합니다.
 
 [ListEntry 요소 (형식)](./listentry-element-for-listcontrol-format.md)
 
-[ListEntry (형식)에 대 한 EnrtySelectedBy SelectionSetName 요소](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
+[ListEntry (형식)에 대 한 EntrySelectedBy SelectionSetName 요소](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
 
 [EntrySelectedBy ListEntry (형식)에 대 한 TypeName 요소](http://msdn.microsoft.com/en-us/fcd4daa6-f3fd-43f7-a468-03c582d34533)
 

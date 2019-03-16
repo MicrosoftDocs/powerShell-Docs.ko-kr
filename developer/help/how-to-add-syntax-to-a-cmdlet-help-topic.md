@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0c6d03f-1c1a-43d8-928e-e3290e90e0bc
 caps.latest.revision: 5
-ms.openlocfilehash: 947d0c0188df5bba3a9fb617fe5abf0b3b28eb51
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2e9dbc9ff8f9507f2008cd6e114ba6fec36b10bf
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857999"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054614"
 ---
 # <a name="how-to-add-syntax-to-a-cmdlet-help-topic"></a>Cmdlet 도움말 항목에 구문을 추가하는 방법
 
@@ -112,7 +112,7 @@ Cmdlet 도움말 파일의 구문 다이어그램에 대 한 XML 코드를 시�
 
    매개 변수의 의미는 분명 System.Int32에 대 한 "int" System.String "문자열" 등으로 형식 약어입니다.
 
-   열거형의 모든 값을 같은 목록 앞의 예제에서-형식 매개 변수 본 "basic" 또는 "고급"로 설정할 수 있습니다.
+   열거형의 모든 값 목록 "basic" 또는 "고급"으로 설정할 수 있는 이전 예제에서는-형식 매개 변수 등입니다.
 
    스위치 매개 변수-앞의 예제에서 목록 등, 하는 값입니다.
 

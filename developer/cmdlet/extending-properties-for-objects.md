@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f33ff3e9-213c-44aa-92ab-09450e65c676
 caps.latest.revision: 11
-ms.openlocfilehash: be31d03b02394cb1694909cf7b65bbc2a29f6976
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: 496e363b041194563d46c09eee67a12055bb54b0
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57795439"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057300"
 ---
 # <a name="extending-properties-for-objects"></a>개체 속성 확장
 
@@ -83,7 +83,7 @@ ms.locfileid: "57795439"
 
 스크립트 속성 값은 스크립트의 출력 속성을 정의 합니다.
 
-다음 예제에서는 `VersionInfo` 속성을 추가 합니다 [System.IO.Fileinfo? Displayproperty =](/dotnet/api/System.IO.FileInfo) 형식입니다. 합니다 [ScriptProperty](http://msdn.microsoft.com/en-us/858a4247-676b-4cc9-9f3e-057109aad350) 요소 스크립트 속성으로 확장 된 속성을 정의 합니다. 합니다 [이름을](http://msdn.microsoft.com/en-us/b58e9d21-c8c9-49a5-909e-9c1cfc64f873) 요소 확장된 속성의 이름을 지정 합니다. 그 뿐만 아니라 [GetScriptBlock](http://msdn.microsoft.com/en-us/f3c77546-b98e-4c4e-bbe0-6dfd06696d1c) 요소는 속성 값을 생성 하는 스크립트를 지정 합니다. (추가할 수도 있습니다는 [ScriptProperty](http://msdn.microsoft.com/en-us/858a4247-676b-4cc9-9f3e-057109aad350) 의 멤버에는 요소는 [구성원 집합](http://msdn.microsoft.com/en-us/46a50fb5-e150-4c03-8584-e1b53e4d49e3) 요소입니다.)
+다음 예제에서는 `VersionInfo` 속성을 추가 합니다 [System.IO.FileInfo? Displayproperty =](/dotnet/api/System.IO.FileInfo) 형식입니다. 합니다 [ScriptProperty](http://msdn.microsoft.com/en-us/858a4247-676b-4cc9-9f3e-057109aad350) 요소 스크립트 속성으로 확장 된 속성을 정의 합니다. 합니다 [이름을](http://msdn.microsoft.com/en-us/b58e9d21-c8c9-49a5-909e-9c1cfc64f873) 요소 확장된 속성의 이름을 지정 합니다. 그 뿐만 아니라 [GetScriptBlock](http://msdn.microsoft.com/en-us/f3c77546-b98e-4c4e-bbe0-6dfd06696d1c) 요소는 속성 값을 생성 하는 스크립트를 지정 합니다. (추가할 수도 있습니다는 [ScriptProperty](http://msdn.microsoft.com/en-us/858a4247-676b-4cc9-9f3e-057109aad350) 의 멤버에는 요소는 [구성원 집합](http://msdn.microsoft.com/en-us/46a50fb5-e150-4c03-8584-e1b53e4d49e3) 요소입니다.)
 
 ```xml
 <Type>

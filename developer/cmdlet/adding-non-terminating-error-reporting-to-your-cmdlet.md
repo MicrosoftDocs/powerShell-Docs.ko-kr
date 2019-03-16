@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2a1531a-a92a-4606-9d54-c5df80d34f33
 caps.latest.revision: 8
-ms.openlocfilehash: 2f3bb481722363557c93ebbc5e6df62baeff2555
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: e0550dacc33f45f45ba105ca5cb4d2e5b5d675fb
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862009"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056059"
 ---
 # <a name="adding-non-terminating-error-reporting-to-your-cmdlet"></a>Cmdlet에 종료되지 않는 오류 보고 추가
 
-Cmdlet를 호출 하 여 종료 되지 않는 오류를 보고할 수는 [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 메서드 계속 해 서 추가로 들어오는 또는 현재 입력된 개체에서 작동 하 고 개체를 파이프라인. 이 섹션에는 해당 입력된 처리 메서드를 종료 되지 않는 오류를 보고 하는 cmdlet을 만드는 방법을 설명 합니다.
+Cmdlet를 호출 하 여 종료 되지 않는 오류를 보고할 수는 [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 메서드 계속 해 서 추가로 들어오는 또는 현재 입력된 개체에서 작동 하 고 개체를 파이프라인. 이 섹션에는 해당 입력된 처리 메서드를 종료 되지 않는 오류를 보고 하는 cmdlet을 만드는 방법을 설명 합니다.
 
-종료 되지 않는 오류 (뿐만 아니라 종료 오류), cmdlet 통과 해야 합니다는 [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) 오류를 식별 하는 개체입니다. 각 오류 레코드 "오류 식별자입니다."를 호출 하는 고유 문자열에 의해 식별 됩니다. 식별자 외에도 각 오류의 범주 된 정의 된 상수는 [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory) 열거형입니다. 사용자는 설정 하 여 해당 범주에 따라 오류를 볼 수는 `$ErrorView` "CategoryView" 변수입니다.
+종료 되지 않는 오류 (뿐만 아니라 종료 오류), cmdlet 통과 해야 합니다는 [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) 오류를 식별 하는 개체입니다. 각 오류 레코드 "오류 식별자입니다."를 호출 하는 고유 문자열에 의해 식별 됩니다. 식별자 외에도 각 오류의 범주 된 정의 된 상수는 [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory) 열거형입니다. 사용자는 설정 하 여 해당 범주에 따라 오류를 볼 수는 `$ErrorView` "CategoryView" 변수입니다.
 
 오류 레코드에 대 한 자세한 내용은 참조 하세요. [Windows PowerShell 오류 레코드](./windows-powershell-error-records.md)합니다.
 
@@ -101,11 +101,11 @@ End Property
 > [!NOTE]
 > Cmdlet에 처리 해야 하지 각 레코드 최대한 독립적으로 합니다.
 
-Get-proc cmdlet이 재정의 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 처리 하는 메서드는 `Name` 스크립트나 사용자가 제공한 입력에 대 한 매개 변수입니다. 이 메서드는 제공 된 이름이 없는 경우 각 요청 된 프로세스 이름 또는 모든 프로세스에 대 한 프로세스를 가져옵니다. 이 재정의의 세부 정보에 제공 됩니다 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)합니다.
+Get-proc cmdlet이 재정의 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 처리 하는 메서드는 `Name` 스크립트나 사용자가 제공한 입력에 대 한 매개 변수입니다. 이 메서드는 제공 된 이름이 없는 경우 각 요청 된 프로세스 이름 또는 모든 프로세스에 대 한 프로세스를 가져옵니다. 이 재정의의 세부 정보에 제공 됩니다 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)합니다.
 
 #### <a name="things-to-remember-when-reporting-errors"></a>오류를 보고할 때 고려해 야 할 사항
 
-합니다 [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) cmdlet 전달의 핵심 예외가 필요한 오류를 작성 하는 경우는 개체입니다. 사용 하는 예외를 결정할 때.NET 지침을 따릅니다. 기본적으로 오류 의미상 동일한 경우 기존 예외로, cmdlet를 사용 하거나 해당 예외에서 파생 됩니다. 그렇지 않은 경우 새 예외 또는 예외 계층에서 직접 파생 되어야 합니다 [System.Exception](/dotnet/api/System.Exception) 클래스입니다.
+합니다 [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) cmdlet 전달의 핵심 예외가 필요한 오류를 작성 하는 경우는 개체입니다. 사용 하는 예외를 결정할 때.NET 지침을 따릅니다. 기본적으로 오류 의미상 동일한 경우 기존 예외로, cmdlet를 사용 하거나 해당 예외에서 파생 됩니다. 그렇지 않은 경우 새 예외 또는 예외 계층에서 직접 파생 되어야 합니다 [System.Exception](/dotnet/api/System.Exception) 클래스입니다.
 
 오류 식별자 (ErrorRecord 클래스의 FullyQualifiedErrorId 속성을 통해 액세스)를 만들 때 다음 사항에 유의 해야 합니다.
 
@@ -135,7 +135,7 @@ Cmdlet은 다른 코드 경로에 특정 오류 식별자를 할당 해야 합�
 
 ## <a name="reporting-nonterminating-errors"></a>종료 되지 않는 오류를 보고합니다.
 
-입력 처리 메서드 중 하나를 사용 하 여 출력 스트림을 종료 되지 않는 오류를 보고할 수 있습니다 합니다 [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 메서드. 에 대 한 호출을 보여 주는이 Get-proc cmdlet의 코드 예제는 다음과 같습니다 [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 에서 재정의 내는 [ System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드. 이 경우 cmdlet은 지정 된 프로세스 식별자에 대 한 프로세스를 찾을 수 없는 경우에 호출이 수행 됩니다.
+입력 처리 메서드 중 하나를 사용 하 여 출력 스트림을 종료 되지 않는 오류를 보고할 수 있습니다 합니다 [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 메서드. 에 대 한 호출을 보여 주는이 Get-proc cmdlet의 코드 예제는 다음과 같습니다 [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 에서 재정의 내는 [ System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드. 이 경우 cmdlet은 지정 된 프로세스 식별자에 대 한 프로세스를 찾을 수 없는 경우에 호출이 수행 됩니다.
 
 ```csharp
 protected override void ProcessRecord()

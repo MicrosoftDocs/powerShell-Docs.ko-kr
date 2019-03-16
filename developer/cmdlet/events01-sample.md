@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27d0ee5e-2589-4530-92ef-c09996b80994
 caps.latest.revision: 10
-ms.openlocfilehash: 3edbcabeff0c8d84831823df11749d152b347566
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: c9963819f1842d1245735dabc487babaa566c160
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863339"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057164"
 ---
 # <a name="events01-sample"></a>Events01 샘플
 
-이 샘플에 의해 발생 되는 이벤트에 대 한 사용자 등록을 허용 하는 cmdlet를 만드는 방법을 보여 줍니다 [System.IO.Filesystemwatcher](/dotnet/api/System.IO.FileSystemWatcher)합니다. 사용자는이 cmdlet을 사용 하 여 특정 디렉터리에서 파일을 만들 때 실행할 작업을 등록할 수 있습니다. 이 샘플에서 파생 된 [Microsoft.Powershell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 기본 클래스입니다.
+이 샘플에 의해 발생 되는 이벤트에 대 한 사용자 등록을 허용 하는 cmdlet를 만드는 방법을 보여 줍니다 [System.IO.Filesystemwatcher](/dotnet/api/System.IO.FileSystemWatcher)합니다. 사용자는이 cmdlet을 사용 하 여 특정 디렉터리에서 파일을 만들 때 실행할 작업을 등록할 수 있습니다. 이 샘플에서 파생 된 [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 기본 클래스입니다.
 
 ## <a name="how-to-build-the-sample-by-using-visual-studio"></a>Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.
 
@@ -78,7 +78,7 @@ A file was created in the TEMP directory
 
 이 샘플에는 다음 방법을 보여 줍니다.
 
-- 이벤트 등록 용 cmdlet을 작성 하는 방법입니다. Cmdlet에서 파생 되는 [Microsoft.Powershell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 클래스 등록-일반 매개 변수에 대 한 지원을 제공 하는 * 이벤트 cmdlet. 파생 되는 Cmdlet [Microsoft.Powershell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 특정 매개 변수를 정의 하 고 재정의에 필요 합니다 `GetSourceObject` 및 `GetSourceObjectEventName` 추상 메서드.
+- 이벤트 등록 용 cmdlet을 작성 하는 방법입니다. Cmdlet에서 파생 되는 [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 클래스 등록-일반 매개 변수에 대 한 지원을 제공 하는 * 이벤트 cmdlet. 파생 되는 Cmdlet [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 특정 매개 변수를 정의 하 고 재정의에 필요 합니다 `GetSourceObject` 및 `GetSourceObjectEventName` 추상 메서드.
 
 ## <a name="example"></a>예제
 

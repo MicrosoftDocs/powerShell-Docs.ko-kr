@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 45c45800-a87d-456e-b07c-12d4d8c27c67
 caps.latest.revision: 8
-ms.openlocfilehash: 431e5d8407b9f689a5224b329d8c7b52802e19e1
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2c6a3d678ca68dc0d189f6ab981fdea5fef894cb
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854919"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056484"
 ---
 # <a name="displayerror-element-format"></a>DisplayError 요소(형식)
 
 오류가 발생 하는 데이터의 일부를 표시 하는 경우 문자열 #ERR 표시 되도록 지정 합니다.
 
-구성 요소 (형식) DefaultSettings (형식) DisplayError 요소 (Frmat)
+구성 요소 (형식) DefaultSettings (형식) DisplayError 요소 (형식)
 
 ## <a name="syntax"></a>구문
 

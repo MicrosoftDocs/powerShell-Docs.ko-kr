@@ -7,16 +7,16 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
-- wildcards [PowerShell Programer's Guide]
+- wildcards [PowerShell Programmer's Guide]
 - parameters [PowerShell Programmer's Guide], wildcards
 ms.assetid: 9b26e1e9-9350-4a5a-aad5-ddcece658d93
 caps.latest.revision: 12
-ms.openlocfilehash: 296490e4692e72f823be0b00aee90dc8c3dc9131
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 6c762d3889bc4b649252390625525db4735f4c1d
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862519"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059612"
 ---
 # <a name="supporting-wildcard-characters-in-cmdlet-parameters"></a>Cmdlet 매개 변수에서 와일드카드 문자 지원
 

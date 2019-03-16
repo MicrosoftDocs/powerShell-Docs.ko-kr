@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4d68a8f3-fba0-44c5-97b9-9fc191d269a5
 caps.latest.revision: 13
-ms.openlocfilehash: c11e50913d2654b786e0e8cfeaf41454999bf75e
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: 0906d0d37c66b8c1538a0b2e9e0f1ff2fba12ac0
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794980"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057725"
 ---
 # <a name="strongly-encouraged-development-guidelines"></a>적극 권장되는 개발 지침
 
@@ -101,7 +101,7 @@ Cmdlet에 사용자 특정 매개 변수에 의미를 빠르게 확인할 수 �
 
 #### <a name="parameters-that-take-true-and-false"></a>매개 변수는 True 및 False
 
-매개 변수만 사용 하는 경우 `true` 하 고 `false`, 형식으로 매개 변수를 정의 [System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter)합니다. 스위치 매개 변수는 취급 `true` 명령에 지정 된 경우. Windows PowerShell 고려 되도록 매개 변수의 매개 변수를 명령에 포함 되지 않으면, `false`합니다. 부울 매개 변수를 정의 하지 않습니다.
+매개 변수만 사용 하는 경우 `true` 하 고 `false`, 형식으로 매개 변수를 정의 [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)합니다. 스위치 매개 변수는 취급 `true` 명령에 지정 된 경우. Windows PowerShell 고려 되도록 매개 변수의 매개 변수를 명령에 포함 되지 않으면, `false`합니다. 부울 매개 변수를 정의 하지 않습니다.
 
 매개 변수 3 개 값을 구분 하는 경우: $true, $false 및 "unspecified" Nullable 형식의 매개 변수를 정의 합니다\<bool >.  타사에 대 한 필요는 "알 수 없는" 값 cmdlet은 개체의 부울 속성을 수정할 수 있습니다 때에 일반적으로 발생 합니다. 이 경우 "알 수 없는" 이면 속성의 현재 값이 변경 되지 됩니다.
 
@@ -111,7 +111,7 @@ Cmdlet에 사용자 특정 매개 변수에 의미를 빠르게 확인할 수 �
 
 #### <a name="support-the-passthru-parameter"></a>PassThru 매개 변수를 지원 합니다.
 
-기본적으로 많은 cmdlet을 수정 하는 시스템 같은 합니다 [Stop-process](/powershell/module/Microsoft.PowerShell.Management/Stop-Process) cmdlet을 개체에 대 한 "싱크"로 작동 하 고 결과 반환 하지 않습니다. 이러한 cmdlet을 구현 해야 합니다 `PassThru` cmdlet이 개체를 반환 하도록 매개 변수입니다. 경우는 `PassThru` 매개 변수에 지정 된 경우 cmdlet에 대 한 호출을 사용 하 여 개체를 반환 합니다.는 [System.Management.Automation.Cmdlet.Writeobject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드. 예를 들어, 다음 명령을 Calc 프로세스를 중지 하 고 결과 프로세스를 파이프라인으로 전달 합니다.
+기본적으로 많은 cmdlet을 수정 하는 시스템 같은 합니다 [Stop-process](/powershell/module/Microsoft.PowerShell.Management/Stop-Process) cmdlet을 개체에 대 한 "싱크"로 작동 하 고 결과 반환 하지 않습니다. 이러한 cmdlet을 구현 해야 합니다 `PassThru` cmdlet이 개체를 반환 하도록 매개 변수입니다. 경우는 `PassThru` 매개 변수에 지정 된 경우 cmdlet에 대 한 호출을 사용 하 여 개체를 반환 합니다.는 [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드. 예를 들어, 다음 명령을 Calc 프로세스를 중지 하 고 결과 프로세스를 파이프라인으로 전달 합니다.
 
 ```powershell
 Stop-Process calc -passthru
@@ -135,21 +135,21 @@ Windows PowerShell 런타임에 각 호출의 출력을 처리 하는 방법을 
 
 #### <a name="support-the-writewarning-writeverbose-and-writedebug-methods"></a>WriteWarning, WriteVerbose를 및 WriteDebug 메서드 지원
 
-Cmdlet을 호출 해야 합니다 [System.Management.Automation.Cmdlet.Writewarning*](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) cmdlet 의도 하지 않은 결과 가질 수 있는 작업을 수행 하려고 할 때 메서드. 예를 들어, 경우 cmdlet에 대 한 읽기 전용 파일을 덮어쓸지 cmdlet이이 메서드를 호출 해야 합니다.
+Cmdlet을 호출 해야 합니다 [System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) cmdlet 의도 하지 않은 결과 가질 수 있는 작업을 수행 하려고 할 때 메서드. 예를 들어, 경우 cmdlet에 대 한 읽기 전용 파일을 덮어쓸지 cmdlet이이 메서드를 호출 해야 합니다.
 
-Cmdlet을 호출 해야 합니다 [System.Management.Automation.Cmdlet.Writeverbose*](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) cmdlet가 무엇을 수행 하는 방법에 대 한 일부 세부 정보를 표시할지 메서드. 예를 들어 cmdlet 작성자는 cmdlet가 무엇을 수행 하는 방법에 대 한 자세한 정보가 필요할 수 있는 시나리오는 판단 하는 경우 cmdlet이이 정보를 호출 해야 합니다.
+Cmdlet을 호출 해야 합니다 [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) cmdlet가 무엇을 수행 하는 방법에 대 한 일부 세부 정보를 표시할지 메서드. 예를 들어 cmdlet 작성자는 cmdlet가 무엇을 수행 하는 방법에 대 한 자세한 정보가 필요할 수 있는 시나리오는 판단 하는 경우 cmdlet이이 정보를 호출 해야 합니다.
 
-Cmdlet을 호출 해야 합니다 [System.Management.Automation.Cmdlet.Writedebug*](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 메서드 개발자나 제품 지원 엔지니어가 cmdlet 작업 손상 무엇을 이해 해야 합니다. 필요 없는 cmdlet에 대 한 호출을 [System.Management.Automation.Cmdlet.Writedebug*](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 메서드를 호출 하는 동일한 코드를 [System.Management.Automation.Cmdlet.Writeverbose*](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) 메서드 때문에 `Debug` 매개 변수는 두 가지 정보를 제공 합니다.
+Cmdlet을 호출 해야 합니다 [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 메서드 개발자나 제품 지원 엔지니어가 cmdlet 작업 손상 무엇을 이해 해야 합니다. 필요 없는 cmdlet에 대 한 호출을 [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 메서드를 호출 하는 동일한 코드를 [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) 메서드 때문에 `Debug` 매개 변수는 두 가지 정보를 제공 합니다.
 
 #### <a name="support-writeprogress-for-operations-that-take-a-long-time"></a>WriteProgress 시간이 오래 걸릴 수 있는 작업에 대 한 지원
 
-Cmdlet은 작업 백그라운드에서 실행할 수 없습니다 하 고 완료 하는 데 시간이 오래 사용 하는 진행률에 대 한 주기적인 호출을 통해 보고를 지원 해야 합니다 [System.Management.Automation.Cmdlet.Writeprogress*](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) 메서드.
+Cmdlet은 작업 백그라운드에서 실행할 수 없습니다 하 고 완료 하는 데 시간이 오래 사용 하는 진행률에 대 한 주기적인 호출을 통해 보고를 지원 해야 합니다 [System.Management.Automation.Cmdlet.WriteProgress](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) 메서드.
 
 #### <a name="use-the-host-interfaces"></a>호스트 인터페이스를 사용 합니다.
 
-경우에 따라 cmdlet와 통신 해야 직접 대신 사용자를 사용 하 여 다양 한 쓰거나에서 지 원하는 메서드를 해야 합니다 [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) 클래스입니다. Cmdlet에서 파생 되어야이 경우에 [System.Management.Automation.Pscmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 클래스 및 사용 합니다 [System.Management.Automation.Pscmdlet.Host*](/dotnet/api/System.Management.Automation.PSCmdlet.Host) 속성. 이 속성에는 서로 다른 수준의 PromptForChoice, 프롬프트 및 WriteLine/ReadLine 형식을 비롯 한 통신 형식 지원 합니다. 가장 특정 수준도 제공 개별 키를 읽고 하 고 버퍼를 사용 하 여 처리 방법은 합니다.
+경우에 따라 cmdlet와 통신 해야 직접 대신 사용자를 사용 하 여 다양 한 쓰거나에서 지 원하는 메서드를 해야 합니다 [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) 클래스입니다. Cmdlet에서 파생 되어야이 경우에 [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 클래스 및 사용 합니다 [System.Management.Automation.PSCmdlet.Host*](/dotnet/api/System.Management.Automation.PSCmdlet.Host) 속성. 이 속성에는 서로 다른 수준의 PromptForChoice, 프롬프트 및 WriteLine/ReadLine 형식을 비롯 한 통신 형식 지원 합니다. 가장 특정 수준도 제공 개별 키를 읽고 하 고 버퍼를 사용 하 여 처리 방법은 합니다.
 
-이 cmdlet은 그래픽 사용자 인터페이스 (GUI)를 생성 하도록 설계 된, 경우가 아니면 사용 하 여 호스트를 우회 하지는 해야 합니다 [System.Management.Automation.Pscmdlet.Host*](/dotnet/api/System.Management.Automation.PSCmdlet.Host) 속성입니다. GUI를 생성 하도록 설계 된 cmdlet의 예로 [Out-gridview](/powershell/module/Microsoft.PowerShell.Utility/Out-GridView) cmdlet.
+이 cmdlet은 그래픽 사용자 인터페이스 (GUI)를 생성 하도록 설계 된, 경우가 아니면 사용 하 여 호스트를 우회 하지는 해야 합니다 [System.Management.Automation.PSCmdlet.Host*](/dotnet/api/System.Management.Automation.PSCmdlet.Host) 속성입니다. GUI를 생성 하도록 설계 된 cmdlet의 예로 [Out-gridview](/powershell/module/Microsoft.PowerShell.Utility/Out-GridView) cmdlet.
 
 > [!NOTE]
 > Cmdlet을 사용 하지 않아야 합니다 [System.Console](/dotnet/api/System.Console) API.
@@ -174,15 +174,15 @@ Windows PowerShell 경로 네임 스페이스에 대 한 액세스를 정규화 
 
 Cmdlet을 읽거나 쓰는 데이터 파일에 cmdlet은 Windows PowerShell 경로 입력을 허용 해야 하 고 cmdlet을 사용 해야 합니다 [System.Management.Automation.Sessionstate.Path](/dotnet/api/System.Management.Automation.SessionState.Path) 는 Windows를 변환 하는 속성 PowerShell 파일 시스템에서 인식 하는 경로에 대 한 경로입니다. 다음 메서드를 포함 하는 특정 메커니즘.
 
-- [System.Management.Automation.Pscmdlet.Getresolvedproviderpathfrompspath](/dotnet/api/System.Management.Automation.PSCmdlet.GetResolvedProviderPathFromPSPath)
+- [System.Management.Automation.PSCmdlet.GetResolvedProviderPathFromPSPath](/dotnet/api/System.Management.Automation.PSCmdlet.GetResolvedProviderPathFromPSPath)
 
-- [System.Management.Automation.Pscmdlet.Getunresolvedproviderpathfrompspath](/dotnet/api/System.Management.Automation.PSCmdlet.GetUnresolvedProviderPathFromPSPath)
+- [System.Management.Automation.PSCmdlet.GetUnresolvedProviderPathFromPSPath](/dotnet/api/System.Management.Automation.PSCmdlet.GetUnresolvedProviderPathFromPSPath)
 
-- [System.Management.Automation.Pathintrinsics.Getresolvedproviderpathfrompspath](/dotnet/api/System.Management.Automation.PathIntrinsics.GetResolvedProviderPathFromPSPath)
+- [System.Management.Automation.PathIntrinsics.GetResolvedProviderPathFromPSPath](/dotnet/api/System.Management.Automation.PathIntrinsics.GetResolvedProviderPathFromPSPath)
 
-- [System.Management.Automation.Pathintrinsics.Getunresolvedproviderpathfrompspath](/dotnet/api/System.Management.Automation.PathIntrinsics.GetUnresolvedProviderPathFromPSPath)
+- [System.Management.Automation.PathIntrinsics.GetUnresolvedProviderPathFromPSPath](/dotnet/api/System.Management.Automation.PathIntrinsics.GetUnresolvedProviderPathFromPSPath)
 
-데이터를 읽거나 쓰는 cmdlet만 경우 cmdlet은 파일 대신 문자열 집합이 공급자 콘텐츠 정보를 사용할지 (`Content` 멤버) 읽기 및 쓰기입니다. 이 정보를 가져옵니다 합니다 [System.Management.Automation.Provider.Cmdletprovider.Invokeprovider*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.InvokeProvider) 속성입니다. 이러한 메커니즘 다른 데이터 저장소에 읽기 및 쓰기 데이터의 참여를 허용 합니다.
+데이터를 읽거나 쓰는 cmdlet만 경우 cmdlet은 파일 대신 문자열 집합이 공급자 콘텐츠 정보를 사용할지 (`Content` 멤버) 읽기 및 쓰기입니다. 이 정보를 가져옵니다 합니다 [System.Management.Automation.Provider.CmdletProvider.InvokeProvider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.InvokeProvider) 속성입니다. 이러한 메커니즘 다른 데이터 저장소에 읽기 및 쓰기 데이터의 참여를 허용 합니다.
 
 #### <a name="support-wildcard-characters"></a>와일드 카드 문자를 지원 합니다.
 
@@ -206,11 +206,11 @@ Cmdlet에 대 한 개체를 디자인 하는 경우 해당 멤버를 사용 하�
 
 Cmdlet에서 반환 되는 기존.NET Framework 개체가 자주 스크립트 개발자나 사용자에 필요한 일부 중요 하거나 편리한 멤버가 없습니다. 이러한 누락 된 멤버는 표시 및 파이프라인에 개체를 올바르게 전달할 수 있도록 올바른 멤버 이름을 만들기 위해 특히 중요할 수 있습니다. 이러한 필수 멤버를 문서화 하는 사용자 지정 Types.ps1xml 파일을 만듭니다. 이 파일을 만들면 다음 명명 규칙을 권장 합니다. *< Your_Product_Name >* 합니다. Types.ps1xml 합니다.
 
-예를 들어, 추가할 수 있습니다를 `Mode` 스크립트 속성을 합니다 [System.IO.Fileinfo](/dotnet/api/System.IO.FileInfo) 파일의 속성을 보다 명확 하 게 표시 하는 형식입니다. 또한 추가할 수 있습니다는 `Count` 별칭 속성을 합니다 [System.Array](/dotnet/api/System.Array) 는 속성 이름의 일관 된 사용을 허용 하는 형식 (대신 `Length`).
+예를 들어, 추가할 수 있습니다를 `Mode` 스크립트 속성을 합니다 [System.IO.FileInfo](/dotnet/api/System.IO.FileInfo) 파일의 속성을 보다 명확 하 게 표시 하는 형식입니다. 또한 추가할 수 있습니다는 `Count` 별칭 속성을 합니다 [System.Array](/dotnet/api/System.Array) 는 속성 이름의 일관 된 사용을 허용 하는 형식 (대신 `Length`).
 
 ##### <a name="implement-the-icomparable-interface"></a>IComparable 인터페이스를 구현 합니다.
 
-구현 된 [System.Icomparable](/dotnet/api/System.IComparable) 모든 출력 개체에 대 한 인터페이스입니다. 이렇게 하면 출력 개체를를 쉽게 정렬 및 분석에 대 한 다양 한 cmdlet에 파이프할 수 있습니다.
+구현 된 [System.IComparable](/dotnet/api/System.IComparable) 모든 출력 개체에 대 한 인터페이스입니다. 이렇게 하면 출력 개체를를 쉽게 정렬 및 분석에 대 한 다양 한 cmdlet에 파이프할 수 있습니다.
 
 ##### <a name="update-display-information"></a>정보를 표시 하는 업데이트
 
@@ -230,11 +230,11 @@ Cmdlet에서 반환 되는 기존.NET Framework 개체가 자주 스크립트 �
 
 #### <a name="support-the-processrecord-method"></a>ProcessRecord 메서드를 지원 합니다.
 
-파이프라인 이전 cmdlet에서 모든 레코드를 허용 하려면 cmdlet 구현 해야 합니다 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드. Windows PowerShell이이 메서드를 호출을 여러 번 번 cmdlet로 전송 되는 모든 레코드에 대 한 합니다.
+파이프라인 이전 cmdlet에서 모든 레코드를 허용 하려면 cmdlet 구현 해야 합니다 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드. Windows PowerShell이이 메서드를 호출을 여러 번 번 cmdlet로 전송 되는 모든 레코드에 대 한 합니다.
 
 ### <a name="write-single-records-to-the-pipeline-sc03"></a>파이프라인 (SC03)에 단일 레코드 기록
 
-Cmdlet은 개체를 작성 해야 cmdlet 개체를 반환 하는 경우 즉시 생성 됩니다. Cmdlet은 결합 된 배열로 버퍼링 하기 위해 이러한을 보관 하지 말아야 합니다. 입력으로 개체를 수신 하는 cmdlet을 처리 하 고, 표시 또는 처리 지연 시간 없이 출력 개체를 표시 됩니다. Cmdlet 출력을 생성 하는 개체를 한 번에 하나씩 호출 해야 합니다 [System.Management.Automation.Cmdlet.Writeobject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드. (예를 들어, 기본 API 반환 하므로 출력 개체의 배열) 일괄 처리에서 출력 개체를 생성 하는 cmdlet을 호출 해야 합니다 [System.Managemet.Automation.Cmdlet.Writeobject](/dotnet/api/System.Managemet.Automation.Cmdlet.WriteObject) 의 두 번째 매개 변수를 사용 하 여 메서드 설정 `true`입니다.
+Cmdlet은 개체를 작성 해야 cmdlet 개체를 반환 하는 경우 즉시 생성 됩니다. Cmdlet은 결합 된 배열로 버퍼링 하기 위해 이러한을 보관 하지 말아야 합니다. 입력으로 개체를 수신 하는 cmdlet을 처리 하 고, 표시 또는 처리 지연 시간 없이 출력 개체를 표시 됩니다. Cmdlet 출력을 생성 하는 개체를 한 번에 하나씩 호출 해야 합니다 [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드. (예를 들어, 기본 API 반환 하므로 출력 개체의 배열) 일괄 처리에서 출력 개체를 생성 하는 cmdlet을 호출 해야 합니다 [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 의 두 번째 매개 변수를 사용 하 여 메서드 설정 `true`입니다.
 
 ### <a name="make-cmdlets-case-insensitive-and-case-preserving-sc04"></a>Cmdlet을 대/소문자 확인 대소 문자가 구분 (SC04) 및
 

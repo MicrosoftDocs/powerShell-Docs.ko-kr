@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b0ef4483-74b2-409c-9d00-014d1ed64cb8
 caps.latest.revision: 6
-ms.openlocfilehash: b5696c3ca1988c9a6cd9179229697b6233d8d993
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: ec6154c69c3c2de9675780922d907fbf3edb6a95
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857449"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058745"
 ---
 # <a name="leftindent-element-for-frame-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 Frame에 대한 LeftIndent 요소(형식)
 
 왼쪽된 여백에서 데이터 이동은 문자 수를 지정 합니다. 이 요소는 사용자 지정 컨트롤 뷰를 정의할 때 사용 됩니다.
 
-구성 요소 (형식) ViewDefinitions 요소 (형식) 보기 (형식) CustomControl 요소 (형식) CustomEntries 요소 CustomControl CustomEntries CustomItem 요소 (형식) 보기에 대 한 보기 (형식) CustomEntry 요소에 대 한 CutomControlView (형식) 프레임에 대 한 요소의 CustomControl (형식) 보기 LeftIndent 요소에 대 한 CustomItem CustomEntry
+구성 요소 (형식) ViewDefinitions 요소 (형식) 보기 (형식) CustomControl 요소 (형식) CustomEntries 요소 CustomControl CustomEntries CustomItem 요소 (형식) 보기에 대 한 보기 (형식) CustomEntry 요소에 대 한 CustomControlView (형식) 프레임에 대 한 요소의 CustomControl (형식) 보기 LeftIndent 요소에 대 한 CustomItem CustomEntry
 
 ## <a name="syntax"></a>구문
 

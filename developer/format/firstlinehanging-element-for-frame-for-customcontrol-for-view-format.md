@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c6ac3d86-0529-4b93-9bc7-ee94fcef9618
 caps.latest.revision: 8
-ms.openlocfilehash: ae4ad8ae3e6cb5d1174dc001b30aa84dd182a606
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: ea43e025f5f653ff000e1d7591b535e73da5c9e5
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860239"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054223"
 ---
 # <a name="firstlinehanging-element-for-frame-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 Frame에 대한 FirstLineHanging 요소(형식)
 
 데이터의 첫 번째 줄은 왼쪽으로 이동 하는 문자 수를 지정 합니다. 이 요소는 사용자 지정 컨트롤 뷰를 정의할 때 사용 됩니다.
 
-구성 요소 (형식) ViewDefinitions 요소 (형식) 보기 (형식) CustomControl 요소 (형식) CustomEntries 요소 CustomControl CustomEntries CustomItem 요소 (형식) 보기에 대 한 보기 (형식) CustomEntry 요소에 대 한 CutomControlView (형식) 프레임에 대 한 요소의 CustomControl CustomControl 보려면 (형식)에 대 한 프레임에 대 한 보기 (형식) FirstLineHanging 요소에 대 한 CustomItem CustomEntry
+구성 요소 (형식) ViewDefinitions 요소 (형식) 보기 (형식) CustomControl 요소 (형식) CustomEntries 요소 CustomControl CustomEntries CustomItem 요소 (형식) 보기에 대 한 보기 (형식) CustomEntry 요소에 대 한 CustomControlView (형식) 프레임에 대 한 요소의 CustomControl CustomControl 보려면 (형식)에 대 한 프레임에 대 한 보기 (형식) FirstLineHanging 요소에 대 한 CustomItem CustomEntry
 
 ## <a name="syntax"></a>구문
 

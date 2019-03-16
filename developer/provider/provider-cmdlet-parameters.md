@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b3d09eaa-924f-4e2b-adfb-14bb729090dd
 caps.latest.revision: 8
-ms.openlocfilehash: d0fb81ee1ca1f80e216c021e1bd64771b8de4dc3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: ad7f9737c646dd5cea5abb14b828236e40feac5a
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860119"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057045"
 ---
 # <a name="provider-cmdlet-parameters"></a>공급자 cmdlet 매개 변수
 
@@ -29,9 +29,9 @@ ms.locfileid: "56860119"
 
 `Clear-ItemProperty` cmdlet 공급자에 전달 된 값을 사용 하는 방법을 정의할 수 있습니다는 `Path` 하 고 `Name` 의 매개 변수를 `Clear-ItemProperty` 구현 하 여 cmdlet를 [ System.Management.Automation.Provider.Ipropertycmdletprovider.Clearproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) 메서드.
 
-`Copy-Item` cmdlet 공급자에 전달 된 값을 사용 하는 방법을 정의할 수 있습니다 합니다 `Path`, `Destination`, 및 `Recurse` 의 매개 변수를 `Copy-Item` 구현 하 여 cmdlet는 [ System.Management.Automation.Provider.Containercmdletprovider.Copyitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 메서드.
+`Copy-Item` cmdlet 공급자에 전달 된 값을 사용 하는 방법을 정의할 수 있습니다 합니다 `Path`, `Destination`, 및 `Recurse` 의 매개 변수를 `Copy-Item` 구현 하 여 cmdlet는 [ System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 메서드.
 
-Get-ChildItems cmdlet 공급자에 전달 된 값을 사용 하는 방법을 정의할 수 있습니다는 `Path` 및 `Recures` 의 매개 변수를 `Get-ChildItem` 구현 하 여 cmdlet는 [ System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 하 고 [System.Management.Automation.Provider.Containercmdletprovider.Getchildnames*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) 메서드.
+Get-ChildItems cmdlet 공급자에 전달 된 값을 사용 하는 방법을 정의할 수 있습니다는 `Path` 및 `Recurse` 의 매개 변수를 `Get-ChildItem` 구현 하 여 cmdlet는 [ System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 하 고 [System.Management.Automation.Provider.Containercmdletprovider.Getchildnames*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) 메서드.
 
 `Get-Content` cmdlet 공급자에 전달 된 값을 사용 하는 방법을 정의할 수 있습니다 합니다 `Path` 의 매개 변수를 `Get-Content` 구현 하 여 cmdlet는 [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentreader*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) 메서드.
 
@@ -45,7 +45,7 @@ Get-ChildItems cmdlet 공급자에 전달 된 값을 사용 하는 방법을 정
 
 `New-Item` cmdlet 공급자에 전달 된 값을 사용 하는 방법을 정의할 수 있습니다 합니다 `Path`, `ItemType`, 및 `Value` 의 매개 변수를 `New-Item` 구현 하 여 cmdlet는 [ System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드.
 
-`New-ItemProperty` cmdlet 공급자에 전달 된 값을 사용 하는 방법을 정의할 수 있습니다 합니다 `Path`, `Name`, `PropertyType`, 및 `Value` 의 매개 변수는 `New-ItemProperty` 구현 하 여 cmdlet는 [ Microsoft.Powershell.Commands.Registryprovider.Newproperty*](/dotnet/api/Microsoft.PowerShell.Commands.RegistryProvider.NewProperty) 메서드.
+`New-ItemProperty` cmdlet 공급자에 전달 된 값을 사용 하는 방법을 정의할 수 있습니다 합니다 `Path`, `Name`, `PropertyType`, 및 `Value` 의 매개 변수는 `New-ItemProperty` 구현 하 여 cmdlet는 [ Microsoft.PowerShell.Commands.Registryprovider.Newproperty*](/dotnet/api/Microsoft.PowerShell.Commands.RegistryProvider.NewProperty) 메서드.
 
 `Remove-Item` 공급자에 전달 된 값을 사용 하는 방법을 정의할 수 있습니다는 `Path` 하 고 `Recurse` 의 매개 변수를 `Remove-Item` 구현 하 여 cmdlet를 [System.Management.Automation.Provider.Containercmdletprovider.Removeitem* ](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 메서드.
 

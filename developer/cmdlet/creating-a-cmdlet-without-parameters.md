@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell Programmers Guide], basic cmdlet
 ms.assetid: 54236ef3-82db-45f8-9114-1ecb7ff65d3e
 caps.latest.revision: 8
-ms.openlocfilehash: 75a45e539b45b50714951f2b992d9ecf69de4664
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: c380b28570c955de6f41152fd617f5c1b0f9e4bd
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860649"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054699"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>매개 변수 없이 Cmdlet 만들기
 
@@ -70,7 +70,7 @@ Public Class GetProcCommand
     Inherits Cmdlet
 ```
 
-클래스 정의 전에 있음을 합니다 [System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute) 구문 사용 하 여 특성을 `[Cmdlet(verb, noun, ...)]`를 cmdlet으로이 클래스를 식별 하는 데 사용 됩니다. 모든 cmdlet에 대 한 필수 속성 이며 올바르게 호출 하는 Windows PowerShell 런타임에 수 있습니다. 필요한 경우 추가 클래스를 선언 하려면 키워드 특성을 설정할 수 있습니다. 샘플 GetProcCommand 클래스에 대 한 특성 선언을 Get-proc cmdlet의 명사 및 동사 이름 선언 있는지 알아야 합니다.
+클래스 정의 전에 있음을 합니다 [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) 구문 사용 하 여 특성을 `[Cmdlet(verb, noun, ...)]`를 cmdlet으로이 클래스를 식별 하는 데 사용 됩니다. 모든 cmdlet에 대 한 필수 속성 이며 올바르게 호출 하는 Windows PowerShell 런타임에 수 있습니다. 필요한 경우 추가 클래스를 선언 하려면 키워드 특성을 설정할 수 있습니다. 샘플 GetProcCommand 클래스에 대 한 특성 선언을 Get-proc cmdlet의 명사 및 동사 이름 선언 있는지 알아야 합니다.
 
 > [!NOTE]
 > Windows PowerShell의 모든 특성 클래스에 설정할 수 있는 키워드는 특성 클래스의 속성에 해당 합니다.
@@ -78,27 +78,27 @@ Public Class GetProcCommand
 Cmdlet의 클래스 이름 지정 때 클래스 이름에 cmdlet 이름을 반영 하도록 하는 것이 좋습니다. 이렇게 하려면 "VerbNounCommand" 형식을 사용 하 여 및 동사와 명사 cmdlet 이름에 사용 되는 "동사" 및 "명사"를 대체 합니다. 이전 클래스 정의에 표시 된 대로 샘플 Get-proc cmdlet에서 파생 되는 GetProcCommand 라는 클래스를 정의 하는 합니다 [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) 기본 클래스입니다.
 
 > [!IMPORTANT]
-> .NET 클래스에서 파생 해야 Windows PowerShell 런타임에 직접 액세스 하는 cmdlet을 정의 하려는 경우는 [System.Management.Automation.Pscmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 기본 클래스입니다. 이 클래스에 대 한 자세한 내용은 참조 하세요. [Cmdlet을 해당 정의 매개 변수 집합을 만드는](./adding-parameter-sets-to-a-cmdlet.md)합니다.
+> .NET 클래스에서 파생 해야 Windows PowerShell 런타임에 직접 액세스 하는 cmdlet을 정의 하려는 경우는 [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 기본 클래스입니다. 이 클래스에 대 한 자세한 내용은 참조 하세요. [Cmdlet을 해당 정의 매개 변수 집합을 만드는](./adding-parameter-sets-to-a-cmdlet.md)합니다.
 
 > [!NOTE]
 > Cmdlet에 대 한 클래스 해야 명시적으로 공용으로 표시 되어야 합니다. 공용으로 표시 되지 않는 클래스는 기본적으로 내부 및 Windows PowerShell 런타임에 의해 찾을 수 없습니다.
 
-Windows PowerShell을 사용 합니다 [Microsoft.Powershell.Commands](/dotnet/api/Microsoft.PowerShell.Commands) 해당 cmdlet 클래스에 대 한 네임 스페이스입니다. 예를 들어 xxx.PS.Commands API 네임 스페이스의 명령 네임 스페이스의 cmdlet 클래스를 배치 하는 것이 좋습니다.
+Windows PowerShell을 사용 합니다 [Microsoft.PowerShell.Commands](/dotnet/api/Microsoft.PowerShell.Commands) 해당 cmdlet 클래스에 대 한 네임 스페이스입니다. 예를 들어 xxx.PS.Commands API 네임 스페이스의 명령 네임 스페이스의 cmdlet 클래스를 배치 하는 것이 좋습니다.
 
 ## <a name="overriding-an-input-processing-method"></a>입력 처리 메서드를 재정의 합니다.
 
 합니다 [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) 클래스는 cmdlet를 재정의 해야 하는 중 하나 이상이 세 개의 기본 입력된 처리 메서드를 제공 합니다. Windows PowerShell에서 레코드를 처리 하는 방법에 대 한 자세한 내용은 참조 하세요. [Windows PowerShell 작동 방식](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)합니다.
 
-Windows PowerShell 런타임에 입력의 모든 형식에 대 한 호출 [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 처리를 사용 하도록 설정 합니다. Cmdlet에 몇 가지 전처리 또는 설치를 수행 해야 하는 경우이 메서드를 재정의 하 여이 수행할 수 것입니다.
+Windows PowerShell 런타임에 입력의 모든 형식에 대 한 호출 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 처리를 사용 하도록 설정 합니다. Cmdlet에 몇 가지 전처리 또는 설치를 수행 해야 하는 경우이 메서드를 재정의 하 여이 수행할 수 것입니다.
 
 > [!NOTE]
 > Windows PowerShell cmdlet를 호출할 때 제공 하는 매개 변수 값의 집합을 설명 "레코드" 라는 용어를 사용 합니다.
 
-Cmdlet가 파이프라인 입력을 수락 재정의 해야 합니다 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 및 필요에 따라는 [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)메서드. 예를 들어 통해 cmdlet을 사용 하 여 모든 입력 수집 하는 경우 모두 메서드를 재정의할 수 있습니다 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 한 다음 입력에 하나의 요소가 아닌 전체 번으로 `Sort-Object` cmdlet은 하지 않습니다.
+Cmdlet가 파이프라인 입력을 수락 재정의 해야 합니다 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 및 필요에 따라는 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)메서드. 예를 들어 통해 cmdlet을 사용 하 여 모든 입력 수집 하는 경우 모두 메서드를 재정의할 수 있습니다 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 한 다음 입력에 하나의 요소가 아닌 전체 번으로 `Sort-Object` cmdlet은 하지 않습니다.
 
-Cmdlet은 파이프라인 입력에 수행 하지 하는 경우 재정의 해야 합니다 [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드. 이 메서드 대신 자주 사용 됩니다 [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 경우 cmdlet은 작업할 수 없습니다. 하나의 요소가 한 번에 정렬 cmdlet의 경우와 마찬가지로 합니다.
+Cmdlet은 파이프라인 입력에 수행 하지 하는 경우 재정의 해야 합니다 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드. 이 메서드 대신 자주 사용 됩니다 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 경우 cmdlet은 작업할 수 없습니다. 하나의 요소가 한 번에 정렬 cmdlet의 경우와 마찬가지로 합니다.
 
-재정의 샘플 Get-proc cmdlet이 파이프라인 입력을 수신 해야, 하므로 합니다 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드 사용에 대 한 기본 구현을 [ System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 하 고 [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)합니다. 합니다 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 재정의 프로세스를 검색 하 고 사용 하 여 명령줄에 기록 합니다 [System.Management.Automation.Cmdlet.Writeobject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드입니다.
+재정의 샘플 Get-proc cmdlet이 파이프라인 입력을 수신 해야, 하므로 합니다 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드 사용에 대 한 기본 구현을 [ System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 하 고 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)합니다. 합니다 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 재정의 프로세스를 검색 하 고 사용 하 여 명령줄에 기록 합니다 [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드.
 
 ```csharp
 protected override void ProcessRecord()
@@ -136,14 +136,14 @@ End Sub 'ProcessRecord
 
 - 입력 처리 메서드는 파이프라인에는 업스트림 cmdlet의 출력 개체에서 입력을 받을 수도 있습니다. 자세한 내용은 [프로세스 파이프라인 입력 하는 Cmdlet 만들기](./adding-parameters-that-process-pipeline-input.md)합니다. 주의 cmdlet을 조합 명령줄 입력을 수신 하 고 파이프라인 수는 원본입니다.
 
-- 오랜 시간 동안, 또는 전혀 다운스트림 cmdlet 반환 하지 않을 수 있습니다. 따라서 입력 cmdlet에서 메서드를 처리 해야 잠금을 보유 하지 호출 하는 동안 [System.Management.Automation.Cmdlet.Writeobject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject)는 범위를 벗어나는 cmdlet 인스턴스 잠금을 특히 합니다.
+- 오랜 시간 동안, 또는 전혀 다운스트림 cmdlet 반환 하지 않을 수 있습니다. 따라서 입력 cmdlet에서 메서드를 처리 해야 잠금을 보유 하지 호출 하는 동안 [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject)는 범위를 벗어나는 cmdlet 인스턴스 잠금을 특히 합니다.
 
 > [!IMPORTANT]
 > Cmdlet을 호출 하지 말아야 [System.Console.Writeline*](/dotnet/api/System.Console.WriteLine) 또는 이와 동등한 합니다.
 
-- Cmdlet을 마치면 정리 하기 위해 개체 변수 있을 수 있습니다 처리 (에서 파일 핸들이 열릴 경우에 예를 들어, 합니다 [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드와 핸들 여 용도로 유지[ System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)). 것이 Windows PowerShell 런타임에 항상 호출 하지 않습니다 고려해 야 합니다 [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 개체 정리를 수행 해야 하는 메서드.
+- Cmdlet을 마치면 정리 하기 위해 개체 변수 있을 수 있습니다 처리 (에서 파일 핸들이 열릴 경우에 예를 들어, 합니다 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드와 핸들 여 용도로 유지[ System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)). 것이 Windows PowerShell 런타임에 항상 호출 하지 않습니다 고려해 야 합니다 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 개체 정리를 수행 해야 하는 메서드.
 
-예를 들어 [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) cmdlet 중간 취소 되거나 종료 하는 경우 cmdlet의 모든 부분에서 오류가 발생 하는 경우 호출 되지 않을 수 있습니다. 개체를 정리 해야 하는 cmdlet 전체 구현 해야 하므로 [System.Idisposable](/dotnet/api/System.IDisposable) 패턴을 둘 다 런타임에 호출할 수 있도록 종료자를 포함 하 여 [ System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 하 고 [System.Idisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) 처리의 끝입니다.
+예를 들어 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) cmdlet 중간 취소 되거나 종료 하는 경우 cmdlet의 모든 부분에서 오류가 발생 하는 경우 호출 되지 않을 수 있습니다. 개체를 정리 해야 하는 cmdlet 전체 구현 해야 하므로 [System.IDisposable](/dotnet/api/System.IDisposable) 패턴을 둘 다 런타임에 호출할 수 있도록 종료자를 포함 하 여 [ System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 하 고 [System.IDisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) 처리의 끝입니다.
 
 ## <a name="code-sample"></a>코드 예제
 

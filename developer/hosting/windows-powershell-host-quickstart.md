@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5a134b81-bd0c-4e1c-a2f0-9acbe852745a
 caps.latest.revision: 9
-ms.openlocfilehash: 2c6a4bca03ee7f62371cbc296f854464167e5a62
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: cc014487a680747ad59437052f79d4576154a1cb
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857399"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059680"
 ---
 # <a name="windows-powershell-host-quickstart"></a>Windows PowerShell 호스트 빠른 시작
 
@@ -112,7 +112,7 @@ ps.AddScript(@"D:\PSScripts\MyScript.ps1", true).Invoke();
 
 ### <a name="creating-an-initialsessionstate-object"></a>InitialSessionState 개체 만들기
 
-Runspace를 만드는 사용자 지정을 먼저 만들어야 합니다는 [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체입니다. 다음 예에서는 사용 합니다 [System.Management.Automation.Runspaces.RunspaceFactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) 기본값을 만든 후를 ruspace를 만들려면 [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체입니다.
+Runspace를 만드는 사용자 지정을 먼저 만들어야 합니다는 [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체입니다. 다음 예에서는 사용 된 [System.Management.Automation.Runspaces.RunspaceFactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) runspace를 만드는 기본값을 만든 후 [System.Management.Automation.Runspaces.InitialSessionState ](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체입니다.
 
 ```csharp
 InitialSessionState iss = InitialSessionState.CreateDefault();
@@ -126,7 +126,7 @@ ps.Invoke();
 
 ### <a name="constraining-the-runspace"></a>제한 된 runspace
 
-기본값 이전 예에서 만들었습니다 [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 모든 기본 제공 핵심 Windows PowerShell을 로드 하는 개체입니다. 에서는 호출할 수도 있습니다. 또한 합니다 [System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) InitialSessionState 개체는 Mirosoft.PowerShell.Core의 명령만 로드를 만드는 방법 스냅인입니다. 빈 더 제한 된 runspace를 만들려면 만들어야 [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 를 호출 하 여 개체를 [ System.Management.Automation.Runspaces.InitialSessionState.Create*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) 메서드를 다음 명령에는 InitialSessionState을 추가 합니다.
+기본값 이전 예에서 만들었습니다 [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 모든 기본 제공 핵심 Windows PowerShell을 로드 하는 개체입니다. 에서는 호출할 수도 있습니다. 또한 합니다 [System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) InitialSessionState 개체는 Microsoft.PowerShell.Core의 명령만 로드를 만드는 방법 스냅인입니다. 빈 더 제한 된 runspace를 만들려면 만들어야 [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 를 호출 하 여 개체를 [ System.Management.Automation.Runspaces.InitialSessionState.Create*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) 메서드를 다음 명령에는 InitialSessionState을 추가 합니다.
 
 지정 하는 명령만 로드 하는 runspace를 사용 하 여 성능이 크게 향상 됩니다.
 

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e082c2e3-12ce-4032-9caf-bf6b2e0dcf81
 caps.latest.revision: 23
-ms.openlocfilehash: 67e041756974dcd84e15cdb4edaf91be45122e28
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: eaa927ec90df6053843f5c942357fed4c7dee966
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859209"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059493"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>PowerShell 모듈 매니페스트를 작성하는 방법
 
@@ -77,7 +77,7 @@ A *모듈 매니페스트* 은 모듈의 내용을 설명 하 고 모듈 처리 
 |PowerShellVersion<br /><br /> 형식: 문자열|' '|이 모듈에 필요한 Windows PowerShell 엔진의 최소 버전입니다. 현재 유효한 값 이며 1.0, 2.0, 3.0, 4.0 및 5.0<br /><br /> 예: `PowerShellVersion = '5.0'`|
 |PowerShellHostName<br /><br /> 형식: 문자열|' '|모듈에 필요한 Windows PowerShell 호스트의 이름을 지정 합니다. 이 이름은 Windows PowerShell에서 제공 됩니다. 프로그램에서 호스트 프로그램의 이름을 찾으려면 입력: `$host.name` 합니다.<br /><br /> 예: `PowerShellHostName = 'Windows PowerShell ISE Host'`|
 |PowerShellHostVersion<br /><br /> 형식: 문자열|' '|이 모듈에 필요한 Windows PowerShell 호스트의 최소 버전입니다.<br /><br /> 예: `PowerShellHostVersion = '2.0'`|
-|DotNetFrameworkVersion<br /><br /> 형식: 문자열|' '|이 모듈에 필요한 Microsoft.NET Framework의 최소 버전입니다.<br /><br /> 예: `DotNetFrameorkVersion = '3.5'`|
+|DotNetFrameworkVersion<br /><br /> 형식: 문자열|' '|이 모듈에 필요한 Microsoft.NET Framework의 최소 버전입니다.<br /><br /> 예: `DotNetFrameworkVersion = '3.5'`|
 |CLRVersion<br /><br /> 형식: 문자열|' '|이 모듈에 필요한 공용 언어 런타임 (CLR)의 최소 버전입니다.<br /><br /> 예: `CLRVersion = '3.5'`|
 |ProcessorArchitecture<br /><br /> 형식: 문자열|' '|프로세서 아키텍처 (None, X86, Amd64)이이 모듈에 필요한입니다. 유효한 값은 x86, AMD64, IA64 및 None(알 수 없음 또는 지정되지 않음)입니다.<br /><br /> 예: `ProcessorArchitecture = 'x86'`|
 |RequiredModules<br /><br /> 형식: [string []]|@()|이 모듈을 가져오기 전에 전역 환경으로 가져와야 하는 모듈입니다. 가 이미 로드 되지 않은 나열 된 모든 모듈이 로드 됩니다. (예를 들어, 일부 모듈이 이미 로드 수 있습니다 다른 모듈에 의해.). 특정 버전을 사용 하 여 로드를 지정할 수 이기도 `RequiredVersion` 대신 `ModuleVersion`합니다. 사용 하는 경우 `ModuleVersion` 최소 지정 된 버전의 사용 가능한 최신 버전을 로드 됩니다.<br /><br /> 예: `RequiredModules = @(@{ModuleName="myDependentModule", ModuleVersion="2.0",Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`<br /><br /> 예: `RequiredModules = @(@{ModuleName="myDependentModule", RequiredVersion="1.5",Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`|

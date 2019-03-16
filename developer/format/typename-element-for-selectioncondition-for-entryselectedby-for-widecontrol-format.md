@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d6d43fa-c900-4e2f-952d-deccd584236f
 caps.latest.revision: 11
-ms.openlocfilehash: 0d7bbfd8be3bf2bd1af75a45ca4db016dfb6bff6
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 6142350e3843a5feddcb5cee8901bbfa607d8d4c
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857959"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056010"
 ---
 # <a name="typename-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format"></a>WideControl에 대한 EntrySelectedBy의 SelectionCondition에 대한 TypeName 요소(형식)
 
@@ -57,7 +57,7 @@ ms.locfileid: "56857959"
 
 ## <a name="see-also"></a>참고 항목
 
-[만들 넓은 보기](./creating-a-wide-view.md)
+[넓은 보기 만들기](./creating-a-wide-view.md)
 
 [데이터 표시 되 면에 대 한 조건을 정의 합니다.](./defining-conditions-for-displaying-data.md)
 

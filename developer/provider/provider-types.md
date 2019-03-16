@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e523a8e1-42e4-4633-887f-fb74b3464561
 caps.latest.revision: 12
-ms.openlocfilehash: 25b604621c90f1aa88bc1eea365e47db66e98c3d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 37689571eb1650e5991af2e7002cd037ae99dd68
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858409"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057963"
 ---
 # <a name="provider-types"></a>공급자 유형
 
@@ -65,7 +65,7 @@ ms.locfileid: "56858409"
 
 합니다 [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 클래스는 특정 공급자 cmdlet을 구현 하기 위한 다음 메서드를 정의 합니다. 대부분의 경우에는 공급자 cmdlet을 지원 하기 위해 덮어써야와 같은 cmdlet을 호출 하려면 Windows PowerShell 엔진을 호출 하는 메서드를 `CopyItem` 에 대 한 메서드는 `Copy-Item` cmdlet을 필요에 따라 등의두번째메서드를덮어쓸수`CopyItemDynamicParameters`, 동적 매개 변수를 cmdlet에 추가 합니다.
 
-- 합니다 [System.Management.Automation.Provider.Containercmdletprovider.Copyitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 하 고 [System.Management.Automation.Provider.Containercmdletprovider.Copyitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) 메서드는 공급자에서 지 원하는 방법을 정의 합니다 `Copy-Item` 공급자 cmdlet. 이 cmdlet을 사용 하면 다른 한 위치에서 항목을 복사할 수 있습니다.
+- 합니다 [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 하 고 [System.Management.Automation.Provider.Containercmdletprovider.Copyitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) 메서드는 공급자에서 지 원하는 방법을 정의 합니다 `Copy-Item` 공급자 cmdlet. 이 cmdlet을 사용 하면 다른 한 위치에서 항목을 복사할 수 있습니다.
 
 - 합니다 [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 고 [System.Management.Automation.Provider.Containercmdletprovider.Getchilditemsdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) 메서드는 공급자에서 지 원하는 방법을 정의 합니다 `Get-ChildItem` 공급자 cmdlet. 이 cmdlet은 부모 항목의 자식 항목을 검색할 수가 있도록 합니다.
 

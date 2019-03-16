@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5ae707db-52e0-408c-87fa-b35c42eaaab1
 caps.latest.revision: 5
-ms.openlocfilehash: c23640b69d1e71a343e2bef2c6b3f8ffe19826d7
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 3a7c47487b632d00643fce0aa082e0dc9a9bb626
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855689"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057997"
 ---
 # <a name="creating-an-initialsessionstate"></a>InitialSessionState 만들기
 
@@ -39,7 +39,7 @@ namespace SampleHost
   {
     static void Main(string[] args)
     {
-      // Call the InitailSessionState.CreateDefault method to create
+      // Call the InitialSessionState.CreateDefault method to create
       // an empty InitialSessionState object, and then add the
       // elements that will be available when the runspace is opened.
       InitialSessionState iss = InitialSessionState.CreateDefault();

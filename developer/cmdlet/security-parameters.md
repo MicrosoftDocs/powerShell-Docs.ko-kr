@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e199bba3-90d3-41ca-9d78-cb502e58508d
 caps.latest.revision: 6
-ms.openlocfilehash: c8b3f907a80d1f6125a5ac04236245503db76ed0
-ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
+ms.openlocfilehash: 9b4d83aeaf45eab1365dec5fbf48c3c796ed5bde
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251305"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057132"
 ---
 # <a name="security-parameters"></a>보안 매개 변수
 
@@ -29,7 +29,7 @@ ms.locfileid: "57251305"
 |**CertStoreLocation**<br>데이터 형식: 문자열|사용자 인증서 저장소의 위치를 지정할 수 있도록이 매개 변수를 구현 합니다. 위치는 일반적으로 파일 경로.|
 |**CertSubjectName**<br>데이터 형식: 문자열|사용자는 인증서의 발급자를 지정할 수 있도록 또는 사용자 부분 문자열을 지정할 수 있도록이 매개 변수를 구현 합니다.|
 |**CertUsage**<br>데이터 형식: 문자열|키 사용 또는 확장 된 키 사용을 지정 하려면이 매개 변수를 구현 합니다. 비트 마스크를 약간 개체 식별자 (OID), 또는 문자열 키를 나타낼 수 있습니다.|
-|**자격 증명**<br>데이터 형식: [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential)|Cmdlet은 사용자에 게 사용자 이름 또는 암호를 묻는 자동으로이 매개 변수를 구현 합니다. 전체 자격 증명을 직접 제공 하지 않으면 둘 다에 대 한 프롬프트가 표시 됩니다.|
+|**자격 증명**<br>데이터 형식: [System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential)|Cmdlet은 사용자에 게 사용자 이름 또는 암호를 묻는 자동으로이 매개 변수를 구현 합니다. 전체 자격 증명을 직접 제공 하지 않으면 둘 다에 대 한 프롬프트가 표시 됩니다.|
 |**CSPName**<br>데이터 형식: 문자열|사용자는 인증서 서비스 공급자 (CSP)의 이름을 지정할 수 있도록이 매개 변수를 구현 합니다.|
 |**CSPType**<br>데이터 형식: 정수|사용자는 CSP의 유형을 지정할 수 있도록이 매개 변수를 구현 합니다.|
 |**그룹**<br>데이터 형식: 문자열|사용자 액세스에 대 한 주체의 컬렉션을 지정할 수 있도록이 매개 변수를 구현 합니다. 자세한 내용은 참조에 대 한 설명을 합니다 **주** 매개 변수입니다.|

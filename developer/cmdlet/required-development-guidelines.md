@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 41d2b308-a36a-496f-8542-666b6a21eedc
 caps.latest.revision: 19
-ms.openlocfilehash: a4b228be91bba27670b26fe21e765ae942afe968
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 3f6bcd2e4ef4d9c404b3a5deeaa9f25d3fa42ec1
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860719"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056518"
 ---
 # <a name="required-development-guidelines"></a>필수 개발 지침
 
@@ -107,7 +107,7 @@ Cmdlet에 이름을 지정할 때 다음과 같은 특수 문자가 사용 하�
 |%|백분율 기호|
 |+|더하기 기호|
 |=|등호 기호|
-|~|tilda|
+|~|물결표|
 
 ### <a name="parameters-names-that-cannot-be-used-rd03"></a>사용할 수 없는 매개 변수 이름 (RD03)
 
@@ -122,9 +122,9 @@ Cmdlet 설정 하 여 확인 요청 지원함을 지정 해야 하는 이러한 
 > [!NOTE]
 > Cmdlet 특성 cmdlet 클래스의 cmdlet에 대 한 호출을 지원 하는지 나타내는 경우는 [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 메서드, 및 cmdlet에 대 한 호출에 실패 했습니다는 [ System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 메서드는 사용자 시스템을 예기치 않게 수정할 수 있습니다.
 
-사용 된 [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 시스템 수정에 대 한 메서드. 사용자 기본 설정 및 `Whatif` 매개 변수 컨트롤을 [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 메서드. 반면에 [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 호출 잠재적으로 위험한 수정에 대 한 추가 확인을 수행 합니다. 이 메서드는 사용자 기본 설정에 의해 제어 되지 또는 `Whatif` 매개 변수입니다. Cmdlet을 호출 하는 경우는 [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 가 메서드를는 `Force` 이러한 두 가지 방법에 대 한 호출을 무시 하는 하 고 작업을 진행 하는 매개 변수입니다. 이것이 중요 한 cmdlet에 비 대화형 스크립트와 호스트에서 사용할 수 있기 때문입니다.
+사용 된 [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 시스템 수정에 대 한 메서드. 사용자 기본 설정 및 `WhatIf` 매개 변수 컨트롤을 [System.Management.Automation.Cmdlet.ShouldProcess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 메서드. 반면에 [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 호출 잠재적으로 위험한 수정에 대 한 추가 확인을 수행 합니다. 이 메서드는 사용자 기본 설정에 의해 제어 되지 또는 `WhatIf` 매개 변수입니다. Cmdlet을 호출 하는 경우는 [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 가 메서드를는 `Force` 이러한 두 가지 방법에 대 한 호출을 무시 하는 하 고 작업을 진행 하는 매개 변수입니다. 이것이 중요 한 cmdlet에 비 대화형 스크립트와 호스트에서 사용할 수 있기 때문입니다.
 
-Cmdlet에서 이러한 호출을 지원 하는 경우 사용자는 작업이 실제로 수행 되어야 하는지 여부를 확인할 수 있습니다. 예를 들어 합니다 [Stop-process](/powershell/module/microsoft.powershell.management/stop-process) cmdlet 호출을 [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) Winlogon 체제를 비롯 한 중요 한 프로세스의 집합을 중지 하기 전에 및 Spoolsrv 처리 합니다.
+Cmdlet에서 이러한 호출을 지원 하는 경우 사용자는 작업이 실제로 수행 되어야 하는지 여부를 확인할 수 있습니다. 예를 들어 합니다 [Stop-process](/powershell/module/microsoft.powershell.management/stop-process) cmdlet 호출을 [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) Winlogon 체제를 비롯 한 중요 한 프로세스의 집합을 중지 하기 전에 및 Spoolsv 처리 합니다.
 
 이러한 메서드를 지원에 대 한 자세한 내용은 참조 하세요. [요청 확인](./requesting-confirmation-from-cmdlets.md)합니다.
 

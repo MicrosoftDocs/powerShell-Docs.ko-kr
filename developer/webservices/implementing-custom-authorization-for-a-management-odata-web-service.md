@@ -8,20 +8,20 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ae37e3f3-5fd6-4ff6-bf66-a249ff96822b
 caps.latest.revision: 7
-ms.openlocfilehash: 5d6ad7f62c451a0013f6c52b294fac9abd0b4bf1
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2afa0e79d9de781149f31a45666d13f98ca10a26
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862589"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057895"
 ---
 # <a name="implementing-custom-authorization-for-a-management-odata-web-service"></a>관리 OData 웹 서비스에 대한 사용자 지정 권한 부여 구현
 
-제 3 자 구현에 필요한 Windows PowerShell 웹 서비스를 사용 하는 [Microsoft.Management.Odata.Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) Windows PowerShell cmdlet을 노출 하는 인터페이스입니다. 이 인터페이스는 웹 서비스에 사용자 권한 부여를 수행합니다. 인터페이스를 구현 하는 코드를 작성 한 후 웹 응용 프로그램에서 사용할 DLL로 컴파일합니다 해야 합니다.
+제 3 자 구현에 필요한 Windows PowerShell 웹 서비스를 사용 하는 [Microsoft.Management.Odata.CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) Windows PowerShell cmdlet을 노출 하는 인터페이스입니다. 이 인터페이스는 웹 서비스에 사용자 권한 부여를 수행합니다. 인터페이스를 구현 하는 코드를 작성 한 후 웹 응용 프로그램에서 사용할 DLL로 컴파일합니다 해야 합니다.
 
 ## <a name="pass-through-authorization"></a>통과 인증
 
-구현 하는 가장 간단한 방법은 합니다 [Microsoft.Management.Odata.Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 인터페이스에는 모든 사용자를 인증 하는 통과 구현입니다. 이 예제에서는 인터페이스를 구현 하는 방법에 대 한 llustration로만 제공 하는 s 없고 보안을 제공 합니다. 구현의 합니다 [Microsoft.Management.Odata.Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 인터페이스는 두 메서드를 재정의 해야 합니다. [Microsoft.Management.Odata.Customauthorization.Authorizeuser*](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) and [Microsoft.Management.Odata.Customauthorization.Getmembershipid*](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId). 이 예제에서는 합니다 [Microsoft.Management.Odata.Customauthorization.Authorizeuser*](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) 항상 반환 된 **System.Security.Principal.WindowsIdentity** 현재 사용자와 연결 된 개체 .
+구현 하는 가장 간단한 방법은 합니다 [Microsoft.Management.Odata.CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 인터페이스에는 모든 사용자를 인증 하는 통과 구현입니다. 이 예제에서는 인터페이스를 구현 하는 방법의 예시로만 제공가 없고 보안을 제공 합니다. 구현의 합니다 [Microsoft.Management.Odata.CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 인터페이스는 두 메서드를 재정의 해야 합니다. [Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) 하 고 [Microsoft.Management.Odata.CustomAuthorization.GetMembershipId](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId)합니다. 이 예제에서는 합니다 [Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) 항상 반환 합니다 **System.Security.Principal.WindowsIdentity** 현재 사용자와 연결 된 개체입니다.
 
 ```csharp
 namespace Microsoft.Samples. HYPERLINK "VBScript:u(%227%22,19)" Management. HYPERLINK "VBScript:u(%227%22,30)" OData. HYPERLINK "VBScript:u(%227%22,36)" BasicPlugins
@@ -68,7 +68,7 @@ namespace Microsoft.Samples. HYPERLINK "VBScript:u(%227%22,19)" Management. HYPE
 
         /// <summary>
 
-        /// Default managemnet system state key
+        /// Default management system state key
 
         /// </summary>
 
@@ -134,7 +134,7 @@ namespace Microsoft.Samples. HYPERLINK "VBScript:u(%227%22,19)" Management. HYPE
 
 ### <a name="role-based-authorization"></a>역할 기반 권한 부여
 
-다음 예제에서는 역할 기반 권한 부여 정책을 구현합니다. 정책을은 web.config 사용 하 여 기본 응용 프로그램 디렉터리에 있는 XML 파일 및 MOF 및 XML 매핑 스키마 파일에서 정의 됩니다. 권한 부여 스키마 파일을 구성 하는 방법에 대 한 정보를 참조 하세요 [구성 하는 역할 기반 권한 부여](./configuring-role-based-authorization.md)합니다. 샘플의 첫 번째 부분을 구현 합니다 [Microsoft.Management.Odata.Customauthorization.Authorizeuser*](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) 하 고 [Microsoft.Management.Odata.Customauthorization.Getmembershipid*](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId) 메서드입니다. 인터페이스 메서드의에서 메서드를 호출 하는 경우에 `RbacSystem` 사용자에 대 한 사용 권한을 확인 하는 실제 작업을 수행 하는 클래스 (아래 정의).
+다음 예제에서는 역할 기반 권한 부여 정책을 구현합니다. 정책을은 web.config 사용 하 여 기본 응용 프로그램 디렉터리에 있는 XML 파일 및 MOF 및 XML 매핑 스키마 파일에서 정의 됩니다. 권한 부여 스키마 파일을 구성 하는 방법에 대 한 정보를 참조 하세요 [구성 하는 역할 기반 권한 부여](./configuring-role-based-authorization.md)합니다. 샘플의 첫 번째 부분을 구현 합니다 [Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) 하 고 [Microsoft.Management.Odata.CustomAuthorization.GetMembershipId](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId) 메서드. 인터페이스 메서드의에서 메서드를 호출 하는 경우에 `RbacSystem` 사용자에 대 한 사용 권한을 확인 하는 실제 작업을 수행 하는 클래스 (아래 정의).
 
 ```csharp
 namespace Microsoft.Samples.Management.OData.RoleBasedPlugins
@@ -209,7 +209,7 @@ namespace Microsoft.Samples.Management.OData.RoleBasedPlugins
 
     /// <summary>
     /// Keeps Configuration for the RbacSystem
-    /// It reads the RacSystem configuration for configuratin file and creates RbacConfiguration
+    /// It reads the RacSystem configuration for configuration file and creates RbacConfiguration
     /// </summary>
     [Serializable]
     [XmlRoot("RbacConfiguration")]
@@ -719,7 +719,7 @@ namespace Microsoft.Samples.Management.OData.RoleBasedPlugins
             /// Indicates whether the current object is equal to another object of the object type.
             /// </summary>
             /// <param name="other">Other object instance</param>
-            /// <returns>true, if both instace are same else false</returns>
+            /// <returns>true, if both instance are same else false</returns>
             public override bool Equals(object other)
             {
                 return this.Equals(other as RbacUserInfo);
@@ -738,4 +738,4 @@ namespace Microsoft.Samples.Management.OData.RoleBasedPlugins
 }
 ```
 
-RbacSystem 클래스는 사용자의 사용 권한을 확인 하는 작업을 수행 하 고 구현에서 정의 된 메서드를 권한 부여 상태를 반환 하는 메서드를 구현 하는 마지막으로 [Microsoft.Management.Odata.Customauthorization ](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 인터페이스입니다.
+RbacSystem 클래스는 사용자의 사용 권한을 확인 하는 작업을 수행 하 고 구현에서 정의 된 메서드를 권한 부여 상태를 반환 하는 메서드를 구현 하는 마지막으로 [Microsoft.Management.Odata.CustomAuthorization ](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 인터페이스입니다.

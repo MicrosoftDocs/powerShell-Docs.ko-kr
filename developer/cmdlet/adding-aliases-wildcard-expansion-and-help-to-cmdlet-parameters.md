@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 931ccace-c565-4a98-8dcc-df00f86394b1
 caps.latest.revision: 8
-ms.openlocfilehash: 0f025213087e6f308adf8e597fc01c1320251f76
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: db664e589f625855b5a33a02c522d6b238ad2810
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859329"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054881"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>Cmdlet 매개 변수에 별칭, 와일드카드 확장 및 도움말 추가
 
@@ -110,7 +110,7 @@ Windows PowerShell을 사용 하면 cmdlet 매개 변수에 대 한 도움말을
 
 ## <a name="overriding-an-input-processing-method"></a>입력 처리 메서드를 재정의 합니다.
 
-Cmdlet는 입력 처리 메서드를 재정의 해야, 가장 일반적인 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)합니다. 시스템을 수정할 때 cmdlet을 호출 해야 합니다 [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 및 [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 허용 하는 방법의 변경 되기 전에 피드백을 제공 하는 사용자입니다. 이러한 방법에 대 한 자세한 내용은 참조 하세요. [시스템을 수정 하는 Cmdlet를 만들](./creating-a-cmdlet-that-modifies-the-system.md)합니다.
+Cmdlet는 입력 처리 메서드를 재정의 해야, 가장 일반적인 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)합니다. 시스템을 수정할 때 cmdlet을 호출 해야 합니다 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 하 고 [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 사용자를 허용 하는 방법 변경 되기 전에 피드백을 제공 합니다. 이러한 방법에 대 한 자세한 내용은 참조 하세요. [시스템을 수정 하는 Cmdlet를 만들](./creating-a-cmdlet-that-modifies-the-system.md)합니다.
 
 ## <a name="supporting-wildcard-expansion"></a>와일드 카드 확장 지원
 

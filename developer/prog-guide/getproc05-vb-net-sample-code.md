@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8dfc0f66-65ec-4141-9088-68e47dbe3908
 caps.latest.revision: 6
-ms.openlocfilehash: e1d670b1313af86095d845b72e42846d1c08549a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: de0e7de6b02f62770126350d0c09df6c7909464e
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853509"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056416"
 ---
 # <a name="getproc05-vbnet-sample-code"></a>GetProc05(VB.NET) 코드 샘플
 
@@ -167,7 +167,7 @@ Namespace Microsoft.Samples.PowerShell.Commands
                     WriteVerbose(("Finding matches for process name """ & _
                         pattern & """."))
 
-                    ' WildCard serach on the available processes
+                    ' WildCard search on the available processes
                     Dim wildcard As New WildcardPattern(pattern, _
                         WildcardOptions.IgnoreCase)
 
@@ -186,7 +186,7 @@ Namespace Microsoft.Samples.PowerShell.Commands
                             End If
 
                             ' Perform a wildcard search on this particular
-                            ' process and check whehter this matches the
+                            ' process and check whether this matches the
                             ' pattern specified.
                             If Not wildcard.IsMatch(processName) Then
                                 GoTo ContinueForEach2

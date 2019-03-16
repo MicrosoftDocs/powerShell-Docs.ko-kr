@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Cmdlet attribute
 ms.assetid: 1d323332-f773-4c0e-8a69-2aada765afb2
 caps.latest.revision: 12
-ms.openlocfilehash: 2bc03aaade1f18d48f65ecf5f9ee437ffaf07f92
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 6887467ad5ccafe6edf8f03f531b4750133aa9e9
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863429"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058031"
 ---
 # <a name="cmdlet-attribute-declaration"></a>Cmdlet 특성 선언
 
@@ -36,9 +36,9 @@ Cmdlet 특성 cmdlet으로 Microsoft.NET Framework 클래스를 식별 하 고 �
 
 `NounName` ([System.String](/dotnet/api/System.String)) 필요 합니다. Cmdlet 명사를 지정합니다. 이 명사는 cmdlet을 실행 하는 리소스를 지정 합니다. Cmdlet 명사에 대 한 자세한 내용은 참조 하세요. [Cmdlet 선언](./cmdlet-class-declaration.md) 하 고 [개발 지침 것이 좋습니다 강력한](./strongly-encouraged-development-guidelines.md)합니다.
 
-`SupportsShouldProcess` ([System.Boolean](/dotnet/api/System.Boolean)) 명명 된 매개 변수는 선택 사항입니다. `True` cmdlet에 대 한 호출을 지원함을 나타냅니다 합니다 [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) cmdlet을 사용 하 여 시스템을 변경 하는 동작을 수행 하기 전에 사용자에 게 제공 하는 메서드. `False`를 기본값인 cmdlet에 대 한 호출을 지원 하지 않음을 나타냅니다 합니다 [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 메서드. 확인 요청에 대 한 자세한 내용은 참조 하십시오 [요청 확인](./requesting-confirmation-from-cmdlets.md)합니다.
+`SupportsShouldProcess` ([System.Boolean](/dotnet/api/System.Boolean)) 명명 된 매개 변수는 선택 사항입니다. `True` cmdlet에 대 한 호출을 지원함을 나타냅니다 합니다 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) cmdlet을 사용 하 여 시스템을 변경 하는 동작을 수행 하기 전에 사용자에 게 제공 하는 메서드. `False`를 기본값인 cmdlet에 대 한 호출을 지원 하지 않음을 나타냅니다 합니다 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 메서드. 확인 요청에 대 한 자세한 내용은 참조 하십시오 [요청 확인](./requesting-confirmation-from-cmdlets.md)합니다.
 
-`ConfirmImpact` ([System.Management.Automation.Confirmimpact](/dotnet/api/System.Management.Automation.ConfirmImpact)) 명명 된 매개 변수는 선택 사항입니다. 호출 하 여 cmdlet의 작업은 확인 하는 경우 지정 된 [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 메서드. [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) (기본값: 보통) 하 여 cmdlet의 ConfirmImpact 값이 값 보다 크거나 같은 경우에 호출 수를 `$ConfirmPreference` 변수입니다. 이 매개 변수를 지정 해야 경우에만 `SupportsShouldProcess` 매개 변수를 지정 합니다.
+`ConfirmImpact` ([System.Management.Automation.Confirmimpact](/dotnet/api/System.Management.Automation.ConfirmImpact)) 명명 된 매개 변수는 선택 사항입니다. 호출 하 여 cmdlet의 작업은 확인 하는 경우 지정 된 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 메서드. [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) (기본값: 보통) 하 여 cmdlet의 ConfirmImpact 값이 값 보다 크거나 같은 경우에 호출 수를 `$ConfirmPreference` 변수입니다. 이 매개 변수를 지정 해야 경우에만 `SupportsShouldProcess` 매개 변수를 지정 합니다.
 
 `DefaultParameterSetName` ([System.String](/dotnet/api/System.String)) 명명 된 매개 변수는 선택 사항입니다. Windows PowerShell 런타임이 사용 하도록 설정 하는 매개 변수를 확인할 수를 사용 하는 기본 매개 변수 집합을 지정 합니다. 이 경우 unique 매개 변수 각 매개 변수의 필수 매개 변수를 설정 하 여 제거할 수 있다는 것을 확인 합니다.
 
@@ -54,9 +54,9 @@ Cmdlet 특성 cmdlet으로 Microsoft.NET Framework 클래스를 식별 하 고 �
 
 **VerbName-NounName**
 
-- Windows PowerShell의 외부 리소스를 변경 하는 모든 cmdlet이 포함 되어야 합니다 `SupportsShouldProcess` cmdlet이 호출을 허용 하는 Cmdlet 특성을 선언할 때 키워드를 [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) cmdlet은 해당 작업을 수행 하기 전에 합니다. 경우는 [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 반환 `false`는 작업도 수행 되지 않아야 합니다. 생성 된 확인 요청에 대 한 자세한 내용은 합니다 [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 호출을 참조 하십시오 [요청 확인](./requesting-confirmation-from-cmdlets.md)합니다.
+- Windows PowerShell의 외부 리소스를 변경 하는 모든 cmdlet이 포함 되어야 합니다 `SupportsShouldProcess` cmdlet이 호출을 허용 하는 Cmdlet 특성을 선언할 때 키워드를 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) cmdlet은 해당 작업을 수행 하기 전에 합니다. 경우는 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 반환 `false`는 작업도 수행 되지 않아야 합니다. 생성 된 확인 요청에 대 한 자세한 내용은 합니다 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 호출을 참조 하십시오 [요청 확인](./requesting-confirmation-from-cmdlets.md)합니다.
 
-합니다 `Confirm` 하 고 `WhatIf` cmdlet 매개 변수를 지 원하는 cmdlet에 대해서만 사용할 [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 호출 합니다.
+합니다 `Confirm` 하 고 `WhatIf` cmdlet 매개 변수를 지 원하는 cmdlet에 대해서만 사용할 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 호출 합니다.
 
 ## <a name="example"></a>예제
 

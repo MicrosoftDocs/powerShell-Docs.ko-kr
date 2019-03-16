@@ -8,15 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cmdlets [PowerShell Programmer's Guide], pipeline input
-- parameters [PowerShell Programer's Guide], pipeline input
+- parameters [PowerShell Programmer's Guide], pipeline input
 ms.assetid: 09bf70a9-7c76-4ffe-b3f0-a1d5f10a0931
 caps.latest.revision: 8
-ms.openlocfilehash: c790d20a792bcdb4a34485e53375560e129433a8
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: bd52dc8aee7975d0899083a5c2f595b17690dc33
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854539"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054767"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>파이프라인 입력을 처리하는 매개 변수 추가
 
@@ -93,7 +93,7 @@ End Property
 
 Cmdlet에 파이프라인 입력을 처리할 경우 적절 한 입력 처리 메서드를 재정의 해야 합니다. 에 도입 된 기본 입력된 처리 메서드로 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)합니다.
 
-Get-proc cmdlet이 재정의 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 처리 하는 메서드는 `Name` 사용자 또는 스크립트에서 제공 하는 매개 변수 입력 합니다. 이 메서드는 제공 된 이름이 없는 경우 각 요청 된 프로세스 이름 또는 모든 프로세스에 대 한 프로세스를 가져옵니다. 내에서 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)에 대 한 호출 [System.Management.Automation.Cmdlet.Writeobject%28System.Object%2Csystem.Boolean%29](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29) 되는 출력 개체를 파이프라인으로 보내기 위한 메커니즘을 출력 합니다. 이 호출의 두 번째 매개 변수 `enumerateCollection`로 설정 된 `true` 프로세스 개체의 배열을 열거 하 고 명령줄에 한 번에 하나의 프로세스를 작성 하려면 Windows PowerShell 런타임에 알려야 합니다.
+Get-proc cmdlet이 재정의 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 처리 하는 메서드는 `Name` 사용자 또는 스크립트에서 제공 하는 매개 변수 입력 합니다. 이 메서드는 제공 된 이름이 없는 경우 각 요청 된 프로세스 이름 또는 모든 프로세스에 대 한 프로세스를 가져옵니다. 내 있음을 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)에 대 한 호출 [System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29) 출력은 출력을 보내기 위한 메커니즘을 파이프라인에는 개체입니다. 이 호출의 두 번째 매개 변수 `enumerateCollection`로 설정 된 `true` 프로세스 개체의 배열을 열거 하 고 명령줄에 한 번에 하나의 프로세스를 작성 하려면 Windows PowerShell 런타임에 알려야 합니다.
 
 ```csharp
 protected override void ProcessRecord()

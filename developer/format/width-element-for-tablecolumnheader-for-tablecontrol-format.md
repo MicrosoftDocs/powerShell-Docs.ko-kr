@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 94eb0535-8002-4f17-9a2b-4be75ec20e5c
 caps.latest.revision: 18
-ms.openlocfilehash: a38fcbef457e69e3ea08d25ba3a9843621036f1e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 4a25c9d81df670dc10955065bfb66766cdb1bd33
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853109"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055192"
 ---
 # <a name="width-element-for-tablecolumnheader-for-tablecontrol-format"></a>TableControl의 TableColumnHeader에 대한 Width 요소(형식)
 
@@ -43,7 +43,7 @@ ms.locfileid: "56853109"
 
 |요소|설명|
 |-------------|-----------------|
-|[TbleControl (형식)에 대 한 TableHeaders TableColumnHeader 요소](./tablecolumnheader-element-format.md)|레이블, 너비 및 맞춤의 데이터 테이블의 열을 정의합니다.|
+|[TableControl (형식)에 대 한 TableHeaders TableColumnHeader 요소](./tablecolumnheader-element-format.md)|레이블, 너비 및 맞춤의 데이터 테이블의 열을 정의합니다.|
 
 ## <a name="text-value"></a>텍스트 값
 

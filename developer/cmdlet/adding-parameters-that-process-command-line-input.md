@@ -15,12 +15,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell Programmer's Guide], creating
 ms.assetid: da0b32f8-7b51-440e-a061-3177b5759e0e
 caps.latest.revision: 9
-ms.openlocfilehash: e010e28ec705932063bb418b260a1087fc3eef9e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: fb113086ce89e4becff9bcaf3232905fde2bf610
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856009"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055923"
 ---
 # <a name="adding-parameters-that-process-command-line-input"></a>명령줄 입력을 처리하는 매개 변수 추가
 
@@ -147,7 +147,7 @@ public string[] Name
 
 Cmdlet이 명령줄 입력을 처리 하려는 경우, 적절 한 입력 처리 메서드를 재정의 해야 합니다. 에 도입 된 기본 입력된 처리 메서드로 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)합니다.
 
-**Get-proc** cmdlet 재정의 합니다 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 처리 하는 메서드를 `Name` 사용자 또는 스크립트에서 제공 하는 매개 변수 입력 합니다. 이 메서드는 제공 된 이름이 없는 경우 각 요청된 프로세스 이름 또는 프로세스에 대 한 모든 프로세스를 가져옵니다. 있음을 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)에 대 한 호출 [System.Management.Automation.Cmdlet.Writeobject%28System.Object%2Csystem.Boolean%29](/dotnet/api/system.management.automation.cmdlet.writeobject?view=powershellsdk-1.1.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) 출력은 출력을 보내기 위한 메커니즘을 파이프라인에는 개체입니다. 이 호출의 두 번째 매개 변수 `enumerateCollection`를 `true` 출력 배열을 프로세스 개체를 열거 하 고 명령줄에 한 번에 하나의 프로세스를 작성 하는 Windows PowerShell 런타임에 알리기 위해.
+**Get-proc** cmdlet 재정의 합니다 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 처리 하는 메서드를 `Name` 사용자 또는 스크립트에서 제공 하는 매개 변수 입력 합니다. 이 메서드는 제공 된 이름이 없는 경우 각 요청된 프로세스 이름 또는 프로세스에 대 한 모든 프로세스를 가져옵니다. 있음을 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)에 대 한 호출 [System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29](/dotnet/api/system.management.automation.cmdlet.writeobject?view=powershellsdk-1.1.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) 출력은 출력을 보내기 위한 메커니즘을 파이프라인에는 개체입니다. 이 호출의 두 번째 매개 변수 `enumerateCollection`를 `true` 출력 배열을 프로세스 개체를 열거 하 고 명령줄에 한 번에 하나의 프로세스를 작성 하는 Windows PowerShell 런타임에 알리기 위해.
 
 ```csharp
 protected override void ProcessRecord()

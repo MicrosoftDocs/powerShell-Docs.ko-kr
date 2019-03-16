@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d43684ce-7c3d-4d14-8dbd-061c111ee805
 caps.latest.revision: 12
-ms.openlocfilehash: faa9ba78397e713400f6072df9915f20d966bb37
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: d05437aaa9652e7f81d0854d1a746acffe145699
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859449"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056909"
 ---
 # <a name="tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format"></a>TableControl의 TableRowEntry에 대한 TableColumnItems 요소(형식)
 
@@ -47,7 +47,7 @@ TableColumnItems>
 
 |요소|설명|
 |-------------|-----------------|
-|[TableControl (형식)에 대 한 TableRowEntries TableRowEntry 요소](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)|테이블의 행에 표시 되는 데이터를 정의 합니다.|
+|[TableControl (형식)에 대 한 TableRowEntries TableRowEntry 요소](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|테이블의 행에 표시 되는 데이터를 정의 합니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -80,6 +80,6 @@ TableColumnItems>
 
 [TableColumnItem 요소 (형식)](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)
 
-[TableRowEntry 요소 (형식)](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)
+[TableRowEntry 요소 (형식)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)
 
 [서식 파일을 PowerShell 작성](./writing-a-powershell-formatting-file.md)

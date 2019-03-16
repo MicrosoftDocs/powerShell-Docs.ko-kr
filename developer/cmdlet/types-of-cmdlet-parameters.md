@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6602730d-3892-4656-80c7-7bca2d14337f
 caps.latest.revision: 14
-ms.openlocfilehash: 59921a92661482b8d518b82f490c9879643543bb
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f5781c0c03aca41d01a44598a9a8c00d6d21d2fd
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859869"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059578"
 ---
 # <a name="types-of-cmdlet-parameters"></a>Cmdlet 매개 변수 형식
 
@@ -91,13 +91,13 @@ private string userName;
 
 ## <a name="switch-parameters"></a>스위치 매개 변수
 
-Windows PowerShell은 제공 된 [System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter) 값을 갖는 매개 변수를 정의할 수 있는 형식으로 자동 설정 됩니다 `false` 경우 cmdlet 매개 변수를 지정 하지 않으면 호출 됩니다. 가능 하면 부울 매개 변수 대신 스위치 매개 변수를 사용 합니다.
+Windows PowerShell은 제공 된 [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) 값을 갖는 매개 변수를 정의할 수 있는 형식으로 자동 설정 됩니다 `false` 경우 cmdlet 매개 변수를 지정 하지 않으면 호출 됩니다. 가능 하면 부울 매개 변수 대신 스위치 매개 변수를 사용 합니다.
 
 다음 샘플을 고려해보세요. 기본적으로 몇 가지 Windows PowerShell cmdlet에 출력 개체를 파이프라인으로 전달 하지 마십시오. 그러나 이러한 cmdlet에는 `PassThru` 기본 동작을 재정의 하는 매개 변수를 전환 합니다. 경우는 `PassThru` 파이프라인에 출력 개체를 반환 하는 cmdlet, 이러한 cmdlet이 호출 될 때 매개 변수를 지정 합니다.
 
-매개 변수가 기본 값을 가질 경우 `true` 호출에서 매개 변수를 지정 하지 않으면, 매개 변수의 의미를 반전 고려해 야 합니다. 샘플의 경우, 매개 변수 속성의 부울 값으로 설정 하는 대신 `true`를 속성으로 선언 된 [System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter) 형식과 매개변수의기본값을설정합니다`false`.
+매개 변수가 기본 값을 가질 경우 `true` 호출에서 매개 변수를 지정 하지 않으면, 매개 변수의 의미를 반전 고려해 야 합니다. 샘플의 경우, 매개 변수 속성의 부울 값으로 설정 하는 대신 `true`를 속성으로 선언 된 [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) 형식과 매개변수의기본값을설정합니다`false`.
 
-스위치 매개 변수를 정의 하려면 속성으로 선언 된 [System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter) 다음 샘플에 표시 된 것과 같이 입력 합니다.
+스위치 매개 변수를 정의 하려면 속성으로 선언 된 [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) 다음 샘플에 표시 된 것과 같이 입력 합니다.
 
 ```csharp
 [Parameter(Position = 1)]

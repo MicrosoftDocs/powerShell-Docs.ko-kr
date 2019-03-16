@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: efa4dc9c-ddee-46a3-978a-9dbb61e9bb6f
 caps.latest.revision: 12
-ms.openlocfilehash: d4564b51b74422cdaec3878b227ffc6be7c97949
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 57543a88d04eb66c9d109249a99ddd272b02ef9d
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855889"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055906"
 ---
 # <a name="how-to-invoke-a-cmdlet-from-within-a-cmdlet"></a>Cmdlet 내에서 Cmdlet을 호출하는 방법
 
@@ -24,7 +24,7 @@ Get-Process -name [a-t]
 ```
 
 > [!IMPORTANT]
-> 직접 파생 되는 cmdlet에만 호출할 수 있습니다 합니다 [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) 클래스입니다. 파생 되는 cmdlet를 호출할 수 없습니다는 [System.Management.Automation.Pscmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 클래스입니다.
+> 직접 파생 되는 cmdlet에만 호출할 수 있습니다 합니다 [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) 클래스입니다. 파생 되는 cmdlet를 호출할 수 없습니다는 [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 클래스입니다.
 
 ## <a name="to-invoke-a-cmdlet-from-within-a-cmdlet"></a>Cmdlet 내에서 cmdlet을 호출 하려면
 
@@ -36,7 +36,7 @@ Get-Process -name [a-t]
     using Microsoft.PowerShell.Commands;  // Windows PowerShell assembly.
     ```
 
-2. Cmdlet의 메서드를 처리 하는 입력을 호출할 cmdlet의 새 인스턴스를 만듭니다. 이 예제에서는 형식의 개체로 [Microsoft.Powershell.Commands.Getprocesscommand](/dotnet/api/Microsoft.PowerShell.Commands.GetProcessCommand) cmdlet 호출 될 때 사용 되는 인수를 포함 하는 문자열과 함께 만들어집니다.
+2. Cmdlet의 메서드를 처리 하는 입력을 호출할 cmdlet의 새 인스턴스를 만듭니다. 이 예제에서는 형식의 개체로 [Microsoft.PowerShell.Commands.Getprocesscommand](/dotnet/api/Microsoft.PowerShell.Commands.GetProcessCommand) cmdlet 호출 될 때 사용 되는 인수를 포함 하는 문자열과 함께 만들어집니다.
 
     ```csharp
     GetProcessCommand gp = new GetProcessCommand();
@@ -55,7 +55,7 @@ Get-Process -name [a-t]
 
 ## <a name="example"></a>예제
 
-이 예는 `Get-Process` cmdlet 내에서 호출 되는 [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) cmdlet의 메서드.
+이 예는 `Get-Process` cmdlet 내에서 호출 되는 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) cmdlet의 메서드.
 
 ```csharp
 using System;

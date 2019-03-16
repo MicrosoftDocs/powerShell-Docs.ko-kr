@@ -11,19 +11,19 @@ helpviewer_keywords:
 - declaring cmdlets [PowerShell SDK]
 ms.assetid: 1fcc4c5e-0c75-496c-a712-5f844e310576
 caps.latest.revision: 14
-ms.openlocfilehash: 3e410087438ac99526049f99e5c768c017a29848
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 3168275423dc65fcb2e41dedd9bea275ede58397
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854449"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055090"
 ---
 # <a name="cmdlet-class-declaration"></a>Cmdlet 클래스 선언
 
 Microsoft.NET Framework 클래스를 지정 하 여 cmdlet으로 선언 된 **Cmdlet** 클래스에 대 한 메타 데이터 특성입니다. (합니다 **Cmdlet** 특성은 모든 cmdlet에 대 한 필수 속성). 지정 하는 경우는 **Cmdlet** 특성인 cmdlet이 사용자를 식별 하는 동사-명사 쌍을 지정 해야 합니다. 및 cmdlet에서 지 원하는 Windows PowerShell 기능을 설명 해야 합니다. 지정 하는 데 사용 되는 선언 구문에 대 한 자세한 내용은 합니다 **Cmdlet** 특성을 참조 하십시오 [Cmdlet 특성 선언을](./cmdlet-attribute-declaration.md)합니다.
 
 > [!NOTE]
-> **Cmdlet** 특성은 정의한 합니다 [System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute) 클래스입니다. 이 클래스의 속성 특성을 선언 하는 경우 사용 되는 선언 매개 변수와 일치 합니다.
+> **Cmdlet** 특성은 정의한 합니다 [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) 클래스입니다. 이 클래스의 속성 특성을 선언 하는 경우 사용 되는 선언 매개 변수와 일치 합니다.
 
 ## <a name="nouns"></a>명사
 
@@ -57,7 +57,7 @@ Cmdlet에 이름을 지정할 때 사용 하 여 파스칼식 대/소문자 구�
 
 ## <a name="see-also"></a>참고 항목
 
-[System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute)
+[System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute)
 
 [CmdletAttribute 선언](./cmdlet-attribute-declaration.md)
 

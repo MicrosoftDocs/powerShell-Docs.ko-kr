@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0c0509cc-5a50-49ad-a74f-5527023d0270
 caps.latest.revision: 10
-ms.openlocfilehash: d6613889ebd2ba139ce0b3de1b8d24e4aec37d2a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 80e3e27bcf72b078c192525a843a3b3afb306529
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861399"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059170"
 ---
 # <a name="how-to-declare-cmdlet-parameters"></a>Cmdlet 매개 변수를 선언하는 방법
 
@@ -83,7 +83,7 @@ ms.locfileid: "56861399"
 
 ## <a name="how-to-declare-a-switch-parameter"></a>스위치 매개 변수를 선언 하는 방법
 
-- 형식으로 공용 속성을 정의 [System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter)과 다음 매개 변수 특성을 선언 합니다.
+- 형식으로 공용 속성을 정의 [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)과 다음 매개 변수 특성을 선언 합니다.
 
     ```csharp
     [Parameter(Position = 1)]
@@ -116,7 +116,7 @@ Alias 특성에 대 한 자세한 내용은 참조 하세요. [별칭 특성 선
 
 ## <a name="see-also"></a>참고 항목
 
-[System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter)
+[System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)
 
 [매개 변수 특성 선언](./parameter-attribute-declaration.md)
 

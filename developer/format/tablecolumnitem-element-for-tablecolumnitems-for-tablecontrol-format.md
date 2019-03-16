@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ef8395aa-4b31-48c0-a0b8-b481fd0b3738
 caps.latest.revision: 15
-ms.openlocfilehash: 5d80bdd736ad540f01c5ebc1f3d31dc9bd628ba5
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 159f943f6bfb33c5403b5714380631351523789f
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862419"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056994"
 ---
 # <a name="tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format"></a>TableControl의 TableColumnItems에 대한 TableColumnItem 요소(형식)
 
@@ -27,7 +27,7 @@ ms.locfileid: "56862419"
 <TableColumnItem>
   <Alignment>Left, Right, or Center</Alignment>
   <PropertyName>Nameof.NetProperty</PropertyName>
-  <SciptBlock>ScriptToEvaluate</ScriptBlock>
+  <ScriptBlock>ScriptToEvaluate</ScriptBlock>
 </TableColumnItem>
 ```
 

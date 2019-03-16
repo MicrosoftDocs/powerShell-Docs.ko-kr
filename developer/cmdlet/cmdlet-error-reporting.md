@@ -14,12 +14,12 @@ helpviewer_keywords:
 - error records [PowerShell], non-terminating
 ms.assetid: 0b014035-52ea-44cb-ab38-bbe463c5465a
 caps.latest.revision: 8
-ms.openlocfilehash: 7b54fc220a66a47c25b3e8cba644882d31713cb7
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 45f5934314a2871ceb921c7a66b9dfb658d0bd99
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857689"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057946"
 ---
 # <a name="cmdlet-error-reporting"></a>Cmdlet 오류 보고
 
@@ -43,7 +43,7 @@ Cmdlet 오류는 오류를 종료 하는 여부에 따라 다르게 오류 또�
 
 ## <a name="reporting-nonterminating-errors"></a>종료 되지 않는 오류를 보고합니다.
 
-종료 되지 않는 오류를 보고 해야 항상 내에서 수행할 cmdlet의 구현의 합니다 [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드를 [ System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드 또는 [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드. 호출에서 이러한 종류의 오류를 보고 합니다 [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 오류 스트림에 오류 레코드를 다시 전송 하는 메서드.
+종료 되지 않는 오류를 보고 해야 항상 내에서 수행할 cmdlet의 구현의 합니다 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드를 [ System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드 또는 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드. 호출에서 이러한 종류의 오류를 보고 합니다 [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 오류 스트림에 오류 레코드를 다시 전송 하는 메서드.
 
 ## <a name="reporting-terminating-errors"></a>종료 오류를 보고합니다.
 
@@ -53,7 +53,7 @@ Cmdlet 오류는 오류를 종료 하는 여부에 따라 다르게 오류 또�
 
 ## <a name="error-records"></a>오류 레코드
 
-Windows PowerShell 사용 하 여 종료 되지 않는 오류 조건을 설명 [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) 개체입니다. 각 [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) 개체는 오류 범주 정보, 선택적 대상 개체 및 오류 조건에 대 한 세부 정보를 제공 합니다.
+Windows PowerShell 사용 하 여 종료 되지 않는 오류 조건을 설명 [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) 개체입니다. 각 [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) 개체는 오류 범주 정보, 선택적 대상 개체 및 오류 조건에 대 한 세부 정보를 제공 합니다.
 
 ### <a name="error-identifiers"></a>오류 식별자
 
@@ -61,7 +61,7 @@ Windows PowerShell 사용 하 여 종료 되지 않는 오류 조건을 설명 [
 
 오류 식별자를 지정 하는 경우 다음 지침을 따라야 합니다.
 
-- 서로 다른 코드 경로에 다른 항상 특정 오류 식별자를 할당 합니다. 호출 하는 각 코드 경로 [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 하거나 [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 고유 오류 식별자 있어야 합니다.
+- 서로 다른 코드 경로에 다른 항상 특정 오류 식별자를 할당 합니다. 호출 하는 각 코드 경로 [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 하거나 [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 고유 오류 식별자 있어야 합니다.
 
 - 오류 식별자 종료 및 종료 되지 않는 오류에 대 한 CLR 예외 형식으로 고유 해야 합니다.
 

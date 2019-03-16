@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 524fd900-c0fe-4d13-87f2-14903a8fd5a4
 caps.latest.revision: 5
-ms.openlocfilehash: 2d2d6a32ac910ecc0fc3b6f1e78cdde54c21b427
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: bf0a73267b3cad1f50d983ebed53318ec98180e0
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858309"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056467"
 ---
 # <a name="writing-a-container-provider"></a>컨테이너 공급자 작성
 
@@ -44,7 +44,7 @@ Windows PowerShell 공급자에 대 한 자세한 내용은 참조 하세요. [W
 
 ### <a name="implementing-getchilditems"></a>GetChildItems 구현
 
-PowerShell 엔진 호출을 [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 메서드는 사용자는 [Microsoft.Powershell.Commands.Get Childitem](/dotnet/api/Microsoft.PowerShell.Commands.Get-ChildItem) cmdlet입니다. 이 메서드는 지정된 된 경로에 있는 항목의 자식 항목을 가져옵니다.
+PowerShell 엔진 호출을 [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 메서드는 사용자는 [Microsoft.PowerShell.Commands.Get Childitem](/dotnet/api/Microsoft.PowerShell.Commands.Get-ChildItem) cmdlet입니다. 이 메서드는 지정된 된 경로에 있는 항목의 자식 항목을 가져옵니다.
 
 Access 데이터베이스 예제에서는의 동작을 [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 메서드는 지정된 된 항목의 유형에 따라 다릅니다. 드라이브 항목을 사용 하는 경우 다음 자식 테이블 이며 메서드는 데이터베이스에서 테이블 집합을 반환 합니다. 테이블을 지정된 된 항목을 사용 하는 경우 자식은 해당 테이블의 행. 행 항목을 사용 하는 경우 다음에 자식 및 메서드는 행만 반환 합니다. 모든 자식 항목으로 PowerShell 엔진으로 다시 보내집니다 합니다 [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) 메서드.
 
@@ -155,7 +155,7 @@ protected override void GetChildNames(string path,
 
 ### <a name="implementing-newitem"></a>NewItem 구현
 
-합니다 [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드는 지정된 된 경로에 지정 된 형식의 새 항목을 만듭니다. PowerShell 엔진을 사용자 호출 하는 경우이 메서드를 호출 합니다 [Microsoft.Powershell.Commands.New 항목](/dotnet/api/Microsoft.PowerShell.Commands.New-Item) cmdlet.
+합니다 [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드는 지정된 된 경로에 지정 된 형식의 새 항목을 만듭니다. PowerShell 엔진을 사용자 호출 하는 경우이 메서드를 호출 합니다 [Microsoft.PowerShell.Commands.New 항목](/dotnet/api/Microsoft.PowerShell.Commands.New-Item) cmdlet.
 
 이 예제에서는 메서드는 경로 및 형식 일치 하는지 확인 하는 논리를 구현 합니다. 즉, (데이터베이스) 드라이브 바로 아래에 있는 테이블에만 만들 수 있으며 행만 테이블을 만들 수 있습니다. 지정 된 경로 및 항목 형식을 이러한 방식으로 일치 하지 않으면 메서드는 예외가 throw 됩니다.
 
@@ -333,7 +333,7 @@ protected override void NewItem(string path, string type,
 
 ### <a name="implementing-copyitem"></a>CopyItem 구현
 
-합니다 [System.Management.Automation.Provider.Containercmdletprovider.Copyitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 지정된 된 경로에 지정된 된 항목을 복사 합니다. PowerShell 엔진을 사용자 호출 하는 경우이 메서드를 호출 합니다 [Microsoft.Powershell.Commands.Copy 항목](/dotnet/api/Microsoft.PowerShell.Commands.Copy-Item) cmdlet. 이 메서드는 재귀적 이며 모든 항목 자체 외에도 항목 자식을 복사 될 수도 있습니다.
+합니다 [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 지정된 된 경로에 지정된 된 항목을 복사 합니다. PowerShell 엔진을 사용자 호출 하는 경우이 메서드를 호출 합니다 [Microsoft.PowerShell.Commands.Copy 항목](/dotnet/api/Microsoft.PowerShell.Commands.Copy-Item) cmdlet. 이 메서드는 재귀적 이며 모든 항목 자체 외에도 항목 자식을 복사 될 수도 있습니다.
 
 유사 하 게 합니다 [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드를이 메서드가 지정된 된 항목이 복사 되는 경로 대 한 올바른 형식 인지 확인 하는 논리를 수행 합니다. 예를 들어, 대상 경로 테이블 인 경우 항목을 복사할 행 이어야 합니다.
 
@@ -466,7 +466,7 @@ protected override void CopyItem(string path, string copyPath, bool recurse)
 
 ### <a name="implementing-removeitem"></a>RemoveItem 구현
 
-합니다 [System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 메서드는 지정된 된 경로에 항목을 제거 합니다. PowerShell 엔진을 사용자 호출 하는 경우이 메서드를 호출 합니다 [Microsoft.Powershell.Commands.Remove 항목](/dotnet/api/Microsoft.PowerShell.Commands.Remove-Item) cmdlet.
+합니다 [System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 메서드는 지정된 된 경로에 항목을 제거 합니다. PowerShell 엔진을 사용자 호출 하는 경우이 메서드를 호출 합니다 [Microsoft.PowerShell.Commands.Remove 항목](/dotnet/api/Microsoft.PowerShell.Commands.Remove-Item) cmdlet.
 
 ```csharp
 protected override void RemoveItem(string path, bool recurse)

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb82827e-fdb7-4cbf-b3d4-093e72b3ff0e
 caps.latest.revision: 28
-ms.openlocfilehash: f7899713dd273b793017adfa0a20b3ff3352b62a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 7c2bfca50de4645676eafc01bbf23d9797e8b758
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862169"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059782"
 ---
 # <a name="installing-a-powershell-module"></a>PowerShell 모듈 설치
 
@@ -160,7 +160,7 @@ Fabrikam 모듈을 찾으려면 Windows PowerShell 모듈 검색 기능을 사�
 
 ```powershell
 $p = [Environment]::GetEnvironmentVariable("PSModulePath")
-$p += "C:\Program Files\Fabrikam Technolgies\Fabrikam Manager\Modules\"
+$p += "C:\Program Files\Fabrikam Technologies\Fabrikam Manager\Modules\"
 [Environment]::SetEnvironmentVariable("PSModulePath",$p)
 ```
 
@@ -228,7 +228,7 @@ $p += ";C:\Program Files\Fabrikam\Fabrikam8;C:\Program Files\Fabrikam\Fabrikam9"
 [Environment]::SetEnvironmentVariable("PSModulePath",$p)
 ```
 
-이러한 단계가 완료 되 면 합니다 **ListAvailable** 의 매개 변수를 [Get-module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet은 Fabrikam 모듈은 모두 가져옵니다. 특정 모듈을 가져오려면 합니다 `MiminumVersion` 또는 `RequiredVersion` 의 매개 변수를 [Import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet.
+이러한 단계가 완료 되 면 합니다 **ListAvailable** 의 매개 변수를 [Get-module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet은 Fabrikam 모듈은 모두 가져옵니다. 특정 모듈을 가져오려면 합니다 `MinimumVersion` 또는 `RequiredVersion` 의 매개 변수를 [Import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet.
 
 모듈을 모두 동일한 세션으로 가져온 모듈 같은 이름의 cmdlet을 포함 하 고 마지막으로 가져온 cmdlet은 세션에 적용 됩니다.
 

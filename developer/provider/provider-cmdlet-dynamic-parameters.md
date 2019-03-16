@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f1069f7-8fa8-4622-9e2c-af29b0b961c2
 caps.latest.revision: 6
-ms.openlocfilehash: 803fe4ae24a4f8022639c5b6d6298100859177ce
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: a50de014988336c473c565b506a73de1c864d7e0
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858359"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058235"
 ---
 # <a name="provider-cmdlet-dynamic-parameters"></a>공급자 cmdlet 동적 매개 변수
 
@@ -73,7 +73,7 @@ internal sealed class CertificateProviderDynamicParameters
 
 `Copy-Item` cmdlet로 트리거되는 동적 매개 변수를 정의할 수 있습니다 합니다 `Path`, `Destination`, 및 `Recurse` 의 매개 변수를 `Copy-Item` 구현 하 여 cmdlet는 [ System.Management.Automation.Provider.Containercmdletprovider.Copyitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) 메서드.
 
-Get-ChildItems cmdlet로 트리거되는 동적 매개 변수를 정의할 수 있습니다는 `Path` 및 `Recures` 의 매개 변수를 `Get-ChildItem` 구현 하 여 cmdlet는 [ System.Management.Automation.Provider.Containercmdletprovider.Getchilditemsdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) 고 [System.Management.Automation.Provider.Containercmdletprovider.Getchildnamesdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) 메서드.
+Get-ChildItems cmdlet로 트리거되는 동적 매개 변수를 정의할 수 있습니다는 `Path` 및 `Recurse` 의 매개 변수를 `Get-ChildItem` 구현 하 여 cmdlet는 [ System.Management.Automation.Provider.Containercmdletprovider.Getchilditemsdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) 고 [System.Management.Automation.Provider.Containercmdletprovider.Getchildnamesdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) 메서드.
 
 `Get-Content` cmdlet로 트리거되는 동적 매개 변수를 정의할 수 있습니다 합니다 `Path` 의 매개 변수를 `Get-Content` 구현 하 여 cmdlet는 [ System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentreaderdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters) 메서드.
 
@@ -89,7 +89,7 @@ Get-ChildItems cmdlet로 트리거되는 동적 매개 변수를 정의할 수 �
 
 `New-ItemProperty` cmdlet로 트리거되는 동적 매개 변수를 정의할 수 있습니다 합니다 `Path`, `Name`, `PropertyType`, 및 `Value` 의 매개 변수는 `New-ItemProperty` 구현 하 여 cmdlet는 [ System.Management.Automation.Provider.Idynamicpropertycmdletprovider.Newpropertydynamicparameters*](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.NewPropertyDynamicParameters) 메서드.
 
-`New-PSDrive` cmdlet로 트리거되는 동적 매개 변수를 정의할 수 있습니다 합니다 [System.Management.Automation.Psdriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) 에서 반환 된 개체를 `New-PSDrive` 구현 하 여 cmdlet는 [ System.Management.Automation.Provider.Drivecmdletprovider.Newdrivedynamicparameters*](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) 메서드.
+`New-PSDrive` cmdlet로 트리거되는 동적 매개 변수를 정의할 수 있습니다 합니다 [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) 에서 반환 된 개체를 `New-PSDrive` 구현 하 여 cmdlet는 [ System.Management.Automation.Provider.Drivecmdletprovider.Newdrivedynamicparameters*](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) 메서드.
 
 `Remove-Item` 시작 되는 동적 매개 변수를 정의할 수 있습니다 합니다 `Path` 및 `Recurse` 의 매개 변수를 `Remove-Item` 구현 하 여 cmdlet는 [ System.Management.Automation.Provider.Containercmdletprovider.Removeitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters) 메서드.
 

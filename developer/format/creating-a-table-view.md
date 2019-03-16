@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1f405afb-70b5-4fe0-9986-bc07401d93fd
 caps.latest.revision: 23
-ms.openlocfilehash: 832527ea4b042812c39934cd7e124201c6dc2ea4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 862f942facafff6cea66c4f8f1040772c6a62ec3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861499"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057368"
 ---
 # <a name="creating-a-table-view"></a>테이블 보기 만들기
 
@@ -95,7 +95,7 @@ Running  Appinfo            Application Information
 
 2. 합니다 [TableColumnHeader](./tablecolumnheader-element-format.md) 요소 테이블의 열 위쪽에 표시 되는 항목을 정의 합니다. 표시 된 헤더를 원하는 순서로 이러한 요소를 지정 합니다.
 
-   사용할 수 있는 이러한 요소의 수 있지만 수 제한이 [TableColumnHeader](./tablecolumnheader-element-format.md) 테이블 보기의 요소 수가 같아야 [TableRowEntry](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md) 사용 하는 요소입니다.
+   사용할 수 있는 이러한 요소의 수 있지만 수 제한이 [TableColumnHeader](./tablecolumnheader-element-format.md) 테이블 보기의 요소 수가 같아야 [TableRowEntry](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md) 사용 하는 요소입니다.
 
 3. 합니다 [레이블](./label-element-for-tablecolumnheader-for-tablecontrol-format.md) 요소 표시 되는 텍스트를 지정 합니다. 이 요소는 선택 사항입니다.
 
@@ -136,7 +136,7 @@ Running  Appinfo            Application Information
 
 - 합니다 [EntrySelectedBy](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md) 요소는 특정 정의 의해 표시 되는 개체를 지정 합니다. 이 요소는 선택 사항이 며 여러 개를 정의 하는 경우에 필요 [TableRowEntry](./listentry-element-for-listcontrol-format.md) 다른 개체를 표시 하는 요소입니다.
 
-- 합니다 [Wrap](./wrap-element-for-tablerowentry-for-tablecontrl-format.md) 요소는 지정 된 열 너비를 초과 하는 텍스트가 다음 줄에 표시 됩니다. 기본적으로 열 너비를 초과하는 텍스트는 잘립니다.
+- 합니다 [Wrap](./wrap-element-for-tablerowentry-for-tablecontrol-format.md) 요소는 지정 된 열 너비를 초과 하는 텍스트가 다음 줄에 표시 됩니다. 기본적으로 열 너비를 초과하는 텍스트는 잘립니다.
 
 - 합니다 [TableColumnItems](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md) 요소 속성 또는 행의 값을 표시 하는 스크립트를 정의 합니다.
 

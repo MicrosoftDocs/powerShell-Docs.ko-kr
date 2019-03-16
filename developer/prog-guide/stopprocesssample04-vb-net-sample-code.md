@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48019ceb-0aeb-4cd1-8b42-79f2c29c3e65
 caps.latest.revision: 5
-ms.openlocfilehash: c3d8b4670d32a70ddac121e64488e7756d95449a
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.openlocfilehash: 8d8ff5f225609fc1ae9a1df6f2e990d632224102
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57430063"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057827"
 ---
 # <a name="stopprocesssample04-vbnet-sample-code"></a>StopProcessSample04(VB.NET) 코드 샘플
 
@@ -258,9 +258,9 @@ ContinueForEach1:
                     "Are you sure you wish to stop the process?", processName)
 
                 ' It is possible that ProcessRecord is called multiple
-                ' when objects are recieved as inputs from a pipeline.
+                ' when objects are received as inputs from a pipeline.
                 ' So, to retain YesToAll and NoToAll input that the
-                ' user may enter across mutilple calls to this
+                ' user may enter across multiple calls to this
                 ' function, they are stored as private members of the
                 ' Cmdlet.
                 If Not ShouldContinue(message, "Warning!", yesToAll, noToAll) Then

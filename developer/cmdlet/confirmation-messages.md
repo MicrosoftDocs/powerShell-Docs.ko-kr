@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a886a26d-7730-4586-aeac-fd3f0bc60b88
 caps.latest.revision: 8
-ms.openlocfilehash: 75214a3fe4bc019836f75db19fb873bd081f200f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 229725b5b9f1f0082592dcebe11564fd2f630ce1
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861419"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059476"
 ---
 # <a name="confirmation-messages"></a>확인 메시지
 
-여기는의 변형에 따라 표시 될 수 있는 다양 한 확인 메시지를 [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 고 [ System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 이라고 하는 방법입니다.
+여기는의 변형에 따라 표시 될 수 있는 다양 한 확인 메시지를 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 고 [System.Management.Automation.Cmdlet.ShouldContinue ](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 이라고 하는 방법입니다.
 
 > [!IMPORTANT]
 > 확인을 요청 하는 방법을 보여 주는 샘플 코드를 보려면 [요청 확인 하는 방법을](./how-to-request-confirmations.md)합니다.
@@ -33,7 +33,7 @@ Performing operation "Test-RequestConfirmationTemplate1" on Target "MyResource".
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
 ```
 
-사용자가 선택 **Yes** 또는 **모두 예** 확인 요청 (표시 된 대로 다음 예제의)를 호출 하는 [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 메서드 설정 되는 두 번째 확인 메시지가 표시 될 수 있습니다.
+사용자가 선택 **Yes** 또는 **모두 예** 확인 요청 (표시 된 대로 다음 예제의)를 호출 하는 [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue)메서드 설정 되는 두 번째 확인 메시지가 표시 될 수 있습니다.
 
 ```output
 Confirm
@@ -57,7 +57,7 @@ Performing operation "MyAction" on Target "MyResource".
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
 ```
 
-사용자가 선택 **예** 하거나 **모두 예** 이전 메시지에 대 한 호출에는 [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 메서드를 수행 하는 원인을 두 번째 확인 메시지가 표시 될 수 있습니다.
+사용자가 선택 **예** 하거나 **모두 예** 이전 메시지에 대 한 호출에는 [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 메서드를 수행 하는 원인을 두 번째 확인 메시지가 표시 될 수 있습니다.
 
 ```output
 Confirm

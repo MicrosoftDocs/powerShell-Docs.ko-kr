@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f24f77d5-e224-4b62-b128-535e045d333e
 caps.latest.revision: 9
-ms.openlocfilehash: 8cfbcacf93733667ffba63a252c86518c0919b57
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 19e96b612a8778d82cdbafb528a7ffeb01f15f99
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863409"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058830"
 ---
 # <a name="how-to-request-confirmations"></a>확인을 요청하는 방법
 
-호출 하는 방법을 보여 주는이 예제는 [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 하 고 [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 에서 확인을 요청 하는 방법의 작업을 수행 하기 전에 사용자입니다.
+호출 하는 방법을 보여 주는이 예제는 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 하 고 [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 에서 확인을 요청 하는 방법의 작업을 수행 하기 전에 사용자입니다.
 
 > [!IMPORTANT]
 > Windows PowerShell에서 이러한 요청을 처리 하는 방법에 대 한 자세한 내용은 참조 하십시오 [요청 확인](./requesting-confirmation-from-cmdlets.md)합니다.
@@ -43,13 +43,13 @@ ms.locfileid: "56863409"
     private bool force;
     ```
 
-3. 추가 `if` 의 반환 값을 사용 하는 문은 합니다 [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 여부를 확인 하는 메서드는 [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 메서드가 호출 됩니다.
+3. 추가 `if` 의 반환 값을 사용 하는 문은 합니다 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 여부를 확인 하는 메서드는 [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 메서드가 호출 됩니다.
 
-4. 추가 하 `if` 의 반환 값을 사용 하는 문은 합니다 [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 메서드 및 값을 `Force` 작업 해야 하는지 여부를 확인 하려면 매개 변수 수행 합니다.
+4. 추가 하 `if` 의 반환 값을 사용 하는 문은 합니다 [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 메서드 및 값을 `Force` 작업 해야 하는지 여부를 확인 하려면 매개 변수 수행 합니다.
 
 ## <a name="example"></a>예제
 
-다음 코드 예제에서는 [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 및 [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 메서드 내에서 호출 되는 재정의 된 [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드. 그러나 다른 입력 처리 메서드에서에서 이러한 메서드를 호출할 수도 있습니다.
+다음 코드 예제에서는 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 하 고 [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 메서드 재정의 내에서 호출 됩니다 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드. 그러나 다른 입력 처리 메서드에서에서 이러한 메서드를 호출할 수도 있습니다.
 
 ```csharp
 protected override void ProcessRecord()

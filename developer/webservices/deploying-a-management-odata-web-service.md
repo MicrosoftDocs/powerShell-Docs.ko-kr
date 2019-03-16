@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4497b64c-7875-4047-bf77-07e04c098ffe
 caps.latest.revision: 4
-ms.openlocfilehash: 08f5e74c69ce022e9ec6fa191a42d434ba76de81
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 376d90394b632e82322b848cb124f002ff91d8b3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861439"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054827"
 ---
 # <a name="deploying-a-management-odata-web-service"></a>관리 OData 웹 서비스 배포
 
@@ -144,7 +144,7 @@ param($site,
         exit -1
     }
 
-if (!(Test-Path $customPluginAssembly))
+    if (!(Test-Path $customPluginAssembly))
     {
         Log "Custom plugin assembly file does not exist"
         exit -1
@@ -188,7 +188,7 @@ function IsIIsInstalled
 
         if ($WSRegKey -eq $null)
         {
-            Log "ERROR: Cannot retrive W3SVC key. IIS Web Services may not be installed"
+            Log "ERROR: Cannot retrieve W3SVC key. IIS Web Services may not be installed"
             exit
         }
         else
@@ -293,13 +293,13 @@ Function GenerateSiteID
 
 Function ValidateAndCopyFiles
 {
-    param ($path = $(throw "path is a requred parameter."),
-    $cfgfile = $(throw "cfgfile is a requred parameter."),
-    $svc = $(throw "svc is a requred parameter."),
-    $schema = $(throw "schema is a requred parameter."),
-$dispatchXml = $(throw "dispatchXml is a requred parameter."),
-    $rbac = $(throw "rbac is a requred parameter."),
-    $customPluginAssembly = $(throw "Custom plugins assembly is a requred parameter."))
+    param ($path = $(throw "path is a required parameter."),
+    $cfgfile = $(throw "cfgfile is a required parameter."),
+    $svc = $(throw "svc is a required parameter."),
+    $schema = $(throw "schema is a required parameter."),
+    $dispatchXml = $(throw "dispatchXml is a required parameter."),
+    $rbac = $(throw "rbac is a required parameter."),
+    $customPluginAssembly = $(throw "Custom plugins assembly is a required parameter."))
 
     if (!(Test-Path $cfgfile))
     {
@@ -316,7 +316,7 @@ $dispatchXml = $(throw "dispatchXml is a requred parameter."),
         throw "ERROR: $schema does not exist"
     }
 
-if (!(Test-Path $dispatchXml))
+    if (!(Test-Path $dispatchXml))
     {
         throw "ERROR: $dispatchXml does not exist"
     }
@@ -333,8 +333,8 @@ if (!(Test-Path $dispatchXml))
     Copy-Item $cfgfile (Join-Path $path "web.config")
     Copy-Item $svc $path
     Copy-Item $schema $path
-Copy-Item $dispatchXml $path
-Copy-Item $rbac (Join-Path $path "RbacConfiguration.xml")
+    Copy-Item $dispatchXml $path
+    Copy-Item $rbac (Join-Path $path "RbacConfiguration.xml")
     Copy-Item $customPluginAssembly $path
 }
 
@@ -363,8 +363,8 @@ Function SetupWebSite
     param($site = $(throw "site is a required parameter."),
     $path = $(throw "path is a required parameter."),
     $port = $(throw "port is a required parameter."),
-    $app = $(throw "app is a required paramater."),
-    $apppool = $(throw "apppool is a required paramater."))
+    $app = $(throw "app is a required parameter."),
+    $apppool = $(throw "apppool is a required parameter."))
 
     $siteID = GenerateSiteID
 
@@ -406,7 +406,7 @@ param($firewallPort)
     Log "Disable Inbound Firewall Notification"
     & $script:netsh advfirewall set currentprofile settings inboundusernotification disable
 
-Log "Add Firewall Rule for port $firewallPort"
+    Log "Add Firewall Rule for port $firewallPort"
     & $script:netsh advfirewall firewall add rule name=MOData_IIS_Port dir=in action=allow protocol=TCP localport=$firewallPort
 }
 

@@ -2,12 +2,12 @@
 title: Windows PowerShell API를 사용하여 작업 예약
 ms.date: 09/13/2016
 ms.topic: article
-ms.openlocfilehash: 280067072c5c8e289a38745364294af842a455c6
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 4e1d4ed6bffd858b92bf29b1dc6d8503454fafda
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854029"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057487"
 ---
 # <a name="scheduling-jobs-with-the-windows-powershell-api"></a>Windows PowerShell API를 사용하여 작업 예약
 
@@ -15,7 +15,7 @@ ms.locfileid: "56854029"
 
 ## <a name="triggering-the-job"></a>작업 트리거
 
-예약 된 작업을 만드는 첫 번째 단계는 작업을 실행 해야 할 시기를 지정 하는 합니다. 만들고 T:Microsoft.PowerShell.ScheduledJob.ScheduledJobTriggerobject를 구성 하 여이 작업을 수행 합니다. 다음 코드는 한 번 20 초를 앞으로 실행 하는 작업을 예약 하는 트리거를 만듭니다.
+예약 된 작업을 만드는 첫 번째 단계는 작업을 실행 해야 할 시기를 지정 하는 합니다. 만들고 T:Microsoft.PowerShell.ScheduledJob.ScheduledJobTrigger 개체를 구성 하 여이 작업을 수행 합니다. 다음 코드는 한 번 20 초를 앞으로 실행 하는 작업을 예약 하는 트리거를 만듭니다.
 
 ```csharp
 ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
@@ -45,7 +45,7 @@ ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
 ```csharp
 string schedJobDefName = "MySampleSchedJob";
 Dictionary<string, object> jobDefParameters = new Dictionary<string, object>();
-jobDefParameters.Add("Name", schedJobDefName);      // Unique name is requiried.
+jobDefParameters.Add("Name", schedJobDefName);      // Unique name is required.
 
 ScriptBlock scriptBlock = ScriptBlock.Create(@"1..5 | foreach {sleep 1; ""SchedJobOutput $_""}");
 jobDefParameters.Add("ScriptBlock", scriptBlock);  // A scriptblock or script FilePath
@@ -54,7 +54,7 @@ jobDefParameters.Add("ScriptBlock", scriptBlock);  // A scriptblock or script Fi
 
 ## <a name="creating-the-invocation-and-job-definition-objects"></a>호출 및 작업 정의 개체 만들기
 
-그런 다음 작업을 실행 하려면 ScheduledJobInvicationInfo 및 SheduledJobDefinition 개체를 만듭니다. 다음 코드에서는 이 작업을 보여 줍니다.
+그런 다음 작업을 실행 하려면 ScheduledJobInvocationInfo 및 ScheduledJobDefinition 개체를 만듭니다. 다음 코드에서는 이 작업을 보여 줍니다.
 
 ```csharp
 ScheduledJobInvocationInfo jobInvocationInfo = new ScheduledJobInvocationInfo(
@@ -93,7 +93,7 @@ using Microsoft.PowerShell.ScheduledJob;        // Windows PowerShell ScheduledJ
 namespace Microsoft.Samples.PowerShell.ScheduledJob
 {
     /// <summary>
-    /// This class contains the Main enrty point for the application.
+    /// This class contains the Main entry point for the application.
     /// </summary>
     public class ScheduledJobSample
     {
@@ -141,7 +141,7 @@ namespace Microsoft.Samples.PowerShell.ScheduledJob
                 // RunAs32              - Switch (boolean type).
                 string schedJobDefName = "MySampleSchedJob";
                 Dictionary<string, object> jobDefParameters = new Dictionary<string, object>();
-                jobDefParameters.Add("Name", schedJobDefName);      // Unique name is requiried.
+                jobDefParameters.Add("Name", schedJobDefName);      // Unique name is required.
 
                 ScriptBlock scriptBlock = ScriptBlock.Create(@"1..5 | foreach {sleep 1; ""SchedJobOutput $_""}");
                 jobDefParameters.Add("ScriptBlock", scriptBlock);  // A scriptblock or script FilePath
@@ -174,7 +174,7 @@ namespace Microsoft.Samples.PowerShell.ScheduledJob
                 // Wait for Task Scheduler to run the PowerShell job.  This should happen in 20 seconds
                 // and then the job will take about 5 seconds to run.  If PowerShell job task doesn't
                 // run try increasing the trigger time in the ScheduledJobTrigger object.  You can also
-                // run this task manully from the Task Scheduler UI.
+                // run this task manually from the Task Scheduler UI.
                 for (int count = 1; count < 31; ++count)
                 {
                     Thread.Sleep(1000);
@@ -190,8 +190,8 @@ namespace Microsoft.Samples.PowerShell.ScheduledJob
                 // job store and the directory location is the current user local app
                 // data ($env:LOCALAPPDATA).
                 // This job store can be accessed through the ScheduledJobSourceAdapter class.
-                ScheduledJobSourceAdapter schedJobSourceAdpater = new ScheduledJobSourceAdapter();
-                IList<Job2> jobRuns = schedJobSourceAdpater.GetJobs();
+                ScheduledJobSourceAdapter schedJobSourceAdapter = new ScheduledJobSourceAdapter();
+                IList<Job2> jobRuns = schedJobSourceAdapter.GetJobs();
                 foreach (var jobRun in jobRuns)
                 {
                     // Check for jobs in finished state.

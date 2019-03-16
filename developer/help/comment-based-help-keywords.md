@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab90ec96-77f5-42e3-9c7e-2f4156ec207f
 caps.latest.revision: 6
-ms.openlocfilehash: dbb6f7c4cbefeaaaec0747511f50192bcf08c20c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: af8a151070d26ffe236800076115c964f625e572
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862659"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058082"
 ---
 # <a name="comment-based-help-keywords"></a>설명 기반 도움말 키워드
 
@@ -23,7 +23,7 @@ ms.locfileid: "56862659"
 
 다음은 유효한 설명 기반 도움말 키워드입니다. 일반적으로 나타나는 의도 한 용도 함께 도움말 항목의 순서 대로 나열 됩니다. 이러한 키워드는 주석 기반 도움말에 임의의 순서로 나타날 수 있습니다 하 고 대/소문자 구분 없는 합니다.
 
-`.ExternalHelp` 키워드는 다른 모든 설명 기반 도움말 키워드 보다 우선 합니다. 때 `.ExternalHelp` 가 있으면 합니다 [Microsoft.Powershell.Commands.Get 도움말](/dotnet/api/Microsoft.PowerShell.Commands.Get-Help) cmdlet 키워드의 값과 일치 하는 도움말 파일을 찾지 못하는 경우에 설명 기반 도움말을 표시 하지 않습니다.
+`.ExternalHelp` 키워드는 다른 모든 설명 기반 도움말 키워드 보다 우선 합니다. 때 `.ExternalHelp` 가 있으면 합니다 [Microsoft.PowerShell.Commands.Get 도움말](/dotnet/api/Microsoft.PowerShell.Commands.Get-Help) cmdlet 키워드의 값과 일치 하는 도움말 파일을 찾지 못하는 경우에 설명 기반 도움말을 표시 하지 않습니다.
 
 `.Synopsis` 함수 또는 스크립트의 간략 한 설명입니다. 이 키워드는 각 항목에 한 번만 사용할 수 있습니다.
 
@@ -61,9 +61,9 @@ ms.locfileid: "56862659"
 
 `.ExternalHelp` `<XML Help File>` 경로 및/또는 스크립트 또는 함수에 대 한 XML 기반 도움말 파일의 이름을 지정합니다.
 
-합니다 `.ExternalHelp` 키워드에 알립니다 합니다 [Microsoft.Powershell.Commands.Get 도움말](/dotnet/api/Microsoft.PowerShell.Commands.Get-Help) XML 기반 파일에 스크립트 또는 함수에 대 한 도움말을 보려면 cmdlet. **합니다. ExternalHelp** 키워드는 스크립트나 함수에 대 한 XML 기반 도움말 파일을 사용할 때 필요 합니다. 없으면 `Get-Help` 함수 또는 스크립트에 대 한 도움말 파일을 찾지 못합니다.
+합니다 `.ExternalHelp` 키워드에 알립니다 합니다 [Microsoft.PowerShell.Commands.Get 도움말](/dotnet/api/Microsoft.PowerShell.Commands.Get-Help) XML 기반 파일에 스크립트 또는 함수에 대 한 도움말을 보려면 cmdlet. **합니다. ExternalHelp** 키워드는 스크립트나 함수에 대 한 XML 기반 도움말 파일을 사용할 때 필요 합니다. 없으면 `Get-Help` 함수 또는 스크립트에 대 한 도움말 파일을 찾지 못합니다.
 
-`.ExternalHelp` 키워드는 다른 모든 설명 기반 도움말 키워드 보다 우선 합니다. 때 `.ExternalHelp` 가 있으면 합니다 [Microsoft.Powershell.Commands.Get 도움말](/dotnet/api/Microsoft.PowerShell.Commands.Get-Help) cmdlet 키워드의 값과 일치 하는 도움말 파일을 찾지 못하는 경우에 설명 기반 도움말을 표시 하지 않습니다.
+`.ExternalHelp` 키워드는 다른 모든 설명 기반 도움말 키워드 보다 우선 합니다. 때 `.ExternalHelp` 가 있으면 합니다 [Microsoft.PowerShell.Commands.Get 도움말](/dotnet/api/Microsoft.PowerShell.Commands.Get-Help) cmdlet 키워드의 값과 일치 하는 도움말 파일을 찾지 못하는 경우에 설명 기반 도움말을 표시 하지 않습니다.
 
 값을 스크립트 모듈에 의해 함수를 내보내는 경우 `.ExternalHelp` 경로 없이 파일 이름 이어야 합니다. `Get-Help` 모듈 디렉터리의 로캘별 하위 디렉터리에 파일을 찾습니다. 파일 이름에 대 한 요구 사항이 없습니다 있지만 다음 파일 이름 형식을 사용 하는 것이 좋습니다: `<ScriptModule>.psm1-help.xml`합니다.
 
