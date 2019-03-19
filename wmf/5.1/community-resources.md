@@ -3,14 +3,14 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: 커뮤니티 리소스
-ms.openlocfilehash: 144fa655d4c14656246bc6c86e7c43f1ea8dca3c
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: a26f6eefeb3beb41575675b3dd4077f056606a70
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219371"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794878"
 ---
-# <a name="community-resources"></a>커뮤니티 리소스 #
+# <a name="community-resources"></a>커뮤니티 리소스
 > 참고: 이 정보는 임시로 제공되며 변경될 수 있습니다.
 
 PowerShell 팀에서는 제품에 관한 고객의 의견을 환영하고 장려하며 문의할 수 있는 여러 가지 방법을 지원합니다.

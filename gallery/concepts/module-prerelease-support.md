@@ -3,12 +3,12 @@ ms.date: 09/26/2017
 contributor: keithb
 keywords: gallery,powershell,cmdlet,psget
 title: 시험판 모듈 버전
-ms.openlocfilehash: f58b5adfeba7ed06d231c76accbd52508c7d67d6
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: eced067dd21082de0db653daf3b838217154f1dd
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002772"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58056247"
 ---
 # <a name="prerelease-module-versions"></a>시험판 모듈 버전
 
@@ -169,10 +169,10 @@ C:\windows\system32> Uninstall-Module TestPackage -RequiredVersion 1.9.0-beta
 Uninstall-Module : The '-AllowPrerelease' parameter must be specified when using the Prerelease string in
 MinimumVersion, MaximumVersion, or RequiredVersion.
 At line:1 char:1
-+ Unnstall-Module TestPackage -RequiredVersion 1.9.0-beta
++ Uninstall-Module TestPackage -RequiredVersion 1.9.0-beta
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : InvalidArgument: (:) [Uninstall-Module], ArgumentException
-    + FullyQualifiedErrorId : AllowPrereleaseRequiredToUsePrereleaseStringInVersion,Uninnstall-Module
+    + FullyQualifiedErrorId : AllowPrereleaseRequiredToUsePrereleaseStringInVersion,Uninstall-Module
 
 C:\windows\system32> Uninstall-Module TestPackage -RequiredVersion 1.9.0-beta -AllowPrerelease
 C:\windows\system32> Get-InstalledModule TestPackage -AllVersions

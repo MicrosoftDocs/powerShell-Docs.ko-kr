@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e15712c9c5f4a2fa2648674fd4d6f167d4342b6f
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "58142212"
+---
 # <a name="contributor-guide"></a>Contributor 가이드
 
 품질 설명서 참가에 관심을 보여 주셔서 감사합니다.

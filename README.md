@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6e36e6599e36218ce2a925dceda7aa0ee6811057
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "58142231"
+---
 # <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 오픈 소스 규정
 
 이 프로젝트에서는 [Microsoft 오픈 소스 규정](https://opensource.microsoft.com/codeofconduct/)을 채택했습니다.
