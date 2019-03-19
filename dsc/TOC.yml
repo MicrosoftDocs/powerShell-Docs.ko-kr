@@ -67,6 +67,8 @@ items:
         href: configurations/resource-depends-on.md
       - name: 노드 간 종속성
         href: configurations/crossNodeDependencies.md
+      - name: 노드 다시 부팅
+        href: configurations/reboot-a-node.md
 - name: 리소스
   items:
   - name: 개념
@@ -283,9 +285,9 @@ items:
   items:
   - name: 백서
     href: further-reading/whitepapers.md
-ms.openlocfilehash: f2288226880ac36f24dd9c8a6b6ad84f47671d26
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.openlocfilehash: 177dc88e4a2a92104f6f2c2d4db118531274fcc4
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046711"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057198"

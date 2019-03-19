@@ -815,7 +815,7 @@ items:
       - name: TableControl에 대한 TableRowEntries 요소(형식)
         href: ./format/tablerowentries-element-for-tablecontrol-format.md
       - name: TableControl의 TableRowEntries에 대한 TableRowEntry 요소(형식)
-        href: ./format/tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md
+        href: ./format/tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md
       - name: Configuration에 대한 Controls의 CustomItem에 대한 Text 요소(형식)
         href: ./format/text-element-for-customitem-for-controls-for-configuration-format.md
       - name: View에 대한 Controls의 CustomItem에 대한 Text 요소(형식)
@@ -879,7 +879,7 @@ items:
       - name: TableControl의 TableColumnHeader에 대한 Width 요소(형식)
         href: ./format/width-element-for-tablecolumnheader-for-tablecontrol-format.md
       - name: TableControl의 TableRowEntry에 대한 Wrap 요소(형식)
-        href: ./format/wrap-element-for-tablerowentry-for-tablecontrl-format.md
+        href: ./format/wrap-element-for-tablerowentry-for-tablecontrol-format.md
       - name: WrapTables 요소(형식)
         href: ./format/wraptables-element-format.md
   - name: 설명 기반 도움말 항목 작성
@@ -1006,8 +1006,6 @@ items:
       href: ./workflow/creating-a-workflow-by-using-a-windows-powershell-script.md
     - name: Windows PowerShell 활동을 사용하여 워크플로 만들기
       href: ./workflow/creating-a-workflow-with-windows-powershell-activities.md
-    - name: Windows PowerShell 워크플로 활동 컨트롤러 확장
-      href: ./workflow/extending-the-windows-powershell-workflow-activity-controller.md
     - name: Windows PowerShell 워크플로 가져오기 및 호출
       href: ./workflow/importing-and-invoking-a-windows-powershell-workflow.md
     - name: Windows PowerShell API를 사용하여 작업 예약
@@ -1143,9 +1141,9 @@ items:
     items:
     - name: 새로운 기능
       href: windows-powershell-reference-whats-new.md
-ms.openlocfilehash: d95ae41e37ade171609500f0dd2627712aa6dae9
-ms.sourcegitcommit: 47becf2823ece251a7264db2387bb503cf3abaa9
+ms.openlocfilehash: 1ccdff0cabb81cbd68ecbfbdae69672463f9c4e8
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49451103"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056620"
