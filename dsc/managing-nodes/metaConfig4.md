@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: 이전 버전의 Windows PowerShell에서 로컬 구성 관리자 구성
-ms.openlocfilehash: 945d2dc95304a347ec26f2f66f5a17bfefb90997
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: cea32c9aa8144bc52f3d44f2ad852f577f6a5e6d
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55683008"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055311"
 ---
 # <a name="configuring-the-local-configuration-manager-in-previous-versions-of-windows-powershell"></a>이전 버전의 Windows PowerShell에서 로컬 구성 관리자 구성
 
@@ -29,25 +29,25 @@ ms.locfileid: "55683008"
 - **ConfigurationMode**: 로컬 구성 관리자가 실제로 구성을 대상 노드에 적용하는 방법을 지정합니다. 이 속성에 가능한 값은 다음과 같습니다.
   - **ApplyOnly**: 이 옵션을 사용하면 새 구성을 대상 노드에 직접 전송하여 새 구성이 검색되지 않은 경우 또는 풀 서비스에 연결하고 풀 서비스에서 확인하면 DSC에서 새 구성을 검색하는 경우, DSC가 구성을 적용하는 작업만을 수행합니다. 대상 노드의 구성이 변경되지 않는 경우 아무 작업도 수행되지 않습니다.
   - **ApplyAndMonitor**: 이 옵션(기본값)을 사용하면 대상 노드에 직접 전송했든지 아니면 풀 서비스에서 검색되었든지 관계없이 DSC에서 모든 새 구성을 적용합니다. 그 후 대상 노드의 구성이 구성 파일과 달라지면, DSC에서 로그 불일치를 보고합니다. DSC 로깅에 대한 자세한 내용은 [Using Event Logs to Diagnose Errors in Desired State Configuration(이벤트 로그를 사용하여 필요한 상태 구성에 있는 오류 진단)](http://blogs.msdn.com/b/powershell/archive/2014/01/03/using-event-logs-to-diagnose-errors-in-desired-state-configuration.aspx)을 참조하세요.
-  - **ApplyAndAutoCorrect**: 이 옵션을 사용하면, 작업자가 대상 노드에 직접 전송했든지, 아니면 풀 서비스에서 검색되었든지 관계없이 DSC에서 모든 새 구성을 적용합니다. 그 후 대상 노드의 구성이 구성 파일과 달라지면, DSC에서 로그 불일치를 보고한 다음, 구성 파일에 따라 가져올 대상 노드 구성에 대한 조정을 시도합니다.
-- **ConfigurationModeFrequencyMins**: DSC의 백그라운드 애플리케이션이 대상 노드에서 현재 구성에 대한 구현을 시도하는 빈도(분 단위)를 나타냅니다. 기본값은 15입니다. 이 값은 RefreshMode와 함께 설정할 수 있습니다. RefreshMode를 PULL로 설정하면 대상 노드에서는 RefreshFrequencyMins로 설정한 간격으로 구성 서비스에 연결하여 현재 구성을 다운로드합니다. RefreshMode 값에 관계없이 ConfigurationModeFrequencyMins로 설정한 간격으로, 대상 노드에 다운로드한 최신 구성을 일관성 엔진이 적용합니다. RefreshFrequencyMins는 ConfigurationModeFrequencyMins의 정수 배로 설정해야 합니다.
-- **Credential**: 구성 서비스 연결과 같이, 원격 리소스에 액세스하는 데 필요한 자격 증명(Get-Credential과 마찬가지로)을 나타냅니다.
-- **DownloadManagerCustomData**: 다운로드 관리자에 고유한 사용자 지정 데이터를 포함하는 배열을 나타냅니다.
+  - **ApplyAndAutoCorrect**: 이 옵션을 사용하면 작업자가 대상 노드에 직접 전송했든지, 아니면 풀 서비스에서 검색되었든지 관계없이 DSC에서 모든 새 구성을 적용합니다. 그 후 대상 노드의 구성이 구성 파일과 달라지면, DSC에서 로그 불일치를 보고한 다음, 구성 파일에 따라 가져올 대상 노드 구성에 대한 조정을 시도합니다.
+- **ConfigurationModeFrequencyMins**: DSC의 백그라운드 애플리케이션이 대상 노드에서 현재 구성을 구현하려고 시도하는 빈도(분)를 나타냅니다. 기본값은 15입니다. 이 값은 RefreshMode와 함께 설정할 수 있습니다. RefreshMode를 PULL로 설정하면 대상 노드에서는 RefreshFrequencyMins로 설정한 간격으로 구성 서비스에 연결하여 현재 구성을 다운로드합니다. RefreshMode 값에 관계없이 ConfigurationModeFrequencyMins로 설정한 간격으로, 대상 노드에 다운로드한 최신 구성을 일관성 엔진이 적용합니다. RefreshFrequencyMins는 ConfigurationModeFrequencyMins의 정수 배로 설정해야 합니다.
+- **Credential**: 구성 서비스 연결과 같이 원격 리소스에 액세스하는 데 필요한 자격 증명(Get-Credential과 마찬가지로)을 나타냅니다.
+- **DownloadManagerCustomData**: 다운로드 관리자에 특정된 사용자 지정 데이터를 포함하는 배열을 나타냅니다.
 - **DownloadManagerName**: 구성 및 모듈 다운로드 관리자의 이름을 나타냅니다.
-- **RebootNodeIfNeeded**: 이 값을 설정 `$true` 리소스를 사용 하 여 노드 다시 부팅을 허용 하는 `$global:DSCMachineStatus` 플래그입니다. 그렇지 않으면 다시 부팅해야 하는 구성에 대해 노드를 수동으로 다시 부팅해야 합니다. 기본값은 `$false`입니다. DSC 이외의 다른 항목(예: Windows Installer)에서 재부팅 조건을 시행하는 경우 이 설정을 사용하려면 설정을 [xPendingReboot](https://github.com/powershell/xpendingreboot) 모듈과 결합합니다.
+- **RebootNodeIfNeeded**: 이 값을 `$true`로 설정하여 리소스가 `$global:DSCMachineStatus` 플래그를 사용하는 노드를 다시 부팅할 수 있습니다. 그렇지 않으면 다시 부팅해야 하는 구성에 대해 노드를 수동으로 다시 부팅해야 합니다. 기본값은 `$false`입니다. DSC 이외의 다른 항목(예: Windows Installer)에서 재부팅 조건을 시행하는 경우 이 설정을 사용하려면 설정을 [xPendingReboot](https://github.com/powershell/xpendingreboot) 모듈과 결합합니다.
 - **RefreshFrequencyMins**: 풀 서비스를 설정하면 사용됩니다. 로컬 구성 관리자가 현재 구성을 다운로드하기 위해 풀 서비스에 연결하는 빈도(분)를 나타냅니다. 이 값은 ConfigurationModeFrequencyMins와 함께 설정할 수 있습니다. RefreshMode를 PULL로 설정하면 대상 노드에서는 RefreshFrequencyMins로 설정한 간격으로 풀 서비스에 연결하여 현재 구성을 다운로드합니다. 그러면 ConfigurationModeFrequencyMins로 설정한 간격으로, 대상 노드에 다운로드한 최신 구성을 일관성 엔진이 적용합니다. RefreshFrequencyMins가 ConfigurationModeFrequencyMins의 정수 배로 설정되어 있지 않으면 시스템에서 반올림합니다. 기본값은 30입니다.
-- **RefreshMode**: 가능한 값은 **Push**(기본값)와 **Pull**입니다. "밀어넣기" 구성에서는 임의의 클라이언트 컴퓨터를 사용하여 각 대상 노드에 구성 파일을 배치해야 합니다. “풀” 모드에서는 연결할 로컬 구성 관리자에 대한 풀 서비스를 설정하고 구성 파일에 액세스해야 합니다.
+- **RefreshMode**: 가능한 값은 **푸시**(기본값)와 **끌어오기**입니다. "밀어넣기" 구성에서는 임의의 클라이언트 컴퓨터를 사용하여 각 대상 노드에 구성 파일을 배치해야 합니다. “풀” 모드에서는 연결할 로컬 구성 관리자에 대한 풀 서비스를 설정하고 구성 파일에 액세스해야 합니다.
 
 > [!NOTE]
-> LCM 시작 합니다 **ConfigurationModeFrequencyMins** 주기를 기반으로 합니다.
+> LCM은 다음에 따라 **ConfigurationModeFrequencyMins** 주기를 시작합니다.
 >
-> - 새 metaconfig은 사용 하 여 적용 됩니다. `Set-DscLocalConfigurationManager`
-> - 컴퓨터 다시 시작
+> - 새 메타 구성은 `Set-DscLocalConfigurationManager`를 사용하여 적용됩니다.
+> - 머신 다시 시작
 >
-> 타이머 프로세스에서 발생 하는 위치 조건을 30 초 및 주기 내에서 검색 하는 충돌을 다시 시작 됩니다.
-> 동시 작업을 수행 하는 주기를 지연할 수 있습니다 시작 되는 것이 작업 중 구성 된 주기 빈도 초과 하는 경우 다음 타이머가 시작 되지 것입니다.
+> 타이머 프로세스가 충돌하는 조건의 경우 해당 기능이 30초 내에 검색되고 주기가 다시 시작됩니다.
+> 동시 실행 작업은 주기가 다시 시작되는 것을 지연시킬 수 있습니다. 이 작업의 기간이 구성된 주기 빈도를 초과하면 다음 타이머가 시작되지 않습니다.
 >
-> 끌어오기 발생 t1 및 예제는 metaconfig 15 분 끌어오기 빈도로 구성 됩니다.  노드는 16 분에 대 한 작업을 완료 되지 않습니다.  첫 번째 15 분 주기 무시 되 고 끌어오기 T1 + 15 + 15에서 발생 합니다.
+> 예를 들어 메타 구성은 끌어오기 빈도 15분으로 구성되고 끌어오기는 T1에 발생합니다.  노드는 16분 동안 작업을 완료하지 않습니다.  첫 번째 15분 주기가 무시되고, 다음 끌어오기는 T1+15+15분에 발생합니다.
 
 ### <a name="example-of-updating-local-configuration-manager-settings"></a>로컬 구성 관리자 설정을 업데이트하는 예제
 
@@ -87,7 +87,8 @@ ExampleConfig -OutputPath "c:\users\public\dsc"
 Set-DscLocalConfigurationManager -Path "c:\users\public\dsc"
 ```
 
-> **참고**: **Path** 매개 변수의 경우, 앞의 예제에서 구성을 호출할 때 **OutputPath**에 대해 지정한 것과 동일한 경로를 지정해야 합니다.
+> [!NOTE]
+> **Path** 매개 변수의 경우, 앞의 예제에서 구성을 호출할 때 **OutputPath**에 대해 지정한 것과 동일한 경로를 지정해야 합니다.
 
 현재 로컬 구성 관리자 설정을 확인하기 위해 **Get-DscLocalConfigurationManager** cmdlet을 사용할 수 있습니다.
 매개 변수 없이 이 cmdlet을 호출하는 경우, 기본적으로, 작업자가 실행하는 노드에 대한 로컬 구성 관리자 설정을 가져오게 됩니다.
