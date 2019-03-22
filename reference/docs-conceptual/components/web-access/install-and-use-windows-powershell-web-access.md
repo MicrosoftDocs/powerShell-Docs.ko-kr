@@ -2,16 +2,16 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 웹 액세스 설치 및 사용
-ms.openlocfilehash: 5517347560b25f032baa77ecc2d769fb1e74ba4f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 53558f9be5065c7f630f06e535ddab4d7ad72d9e
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55679646"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58056722"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Install and Use Windows PowerShell Web Access(Windows PowerShell 웹 액세스 설치 및 사용)
 
-업데이트됨: 2013 년 11 월 5 일, (편집: 2017년 8월
+업데이트됨: 2013년 11월 5일(편집된 날짜: 2017년 8월 23일)
 
 적용 대상: Windows Server 2012 R2, Windows Server 2012
 
@@ -178,7 +178,7 @@ Windows PowerShell cmdlet을 사용하거나 서버 관리자 내에서 열린 �
 7. **사이트 바인딩 추가** 대화 상자의 **유형** 필드에서 **https**를 선택합니다.
 
 8. **SSL 인증서** 필드의 드롭다운 메뉴에서 서명된 인증서를 선택합니다.
-   **확인**을 클릭합니다. 인증서를 얻는 방법에 대한 자세한 내용은 이 항목의 [IIS 관리자로 SSL 인증서를 구성하려면](#to-configure-an-ssl-certificate-in-iis-Manager)을 참조하세요.
+   **확인**을 클릭합니다. 인증서를 얻는 방법에 대한 자세한 내용은 이 항목의 [IIS 관리자로 SSL 인증서를 구성하려면](#to-configure-an-ssl-certificate-in-iis-manager)을 참조하세요.
 
    이제 Windows PowerShell 웹 액세스 웹 애플리케이션이 서명된 SSL 인증서를 사용하도록 구성됩니다.
 
@@ -273,7 +273,7 @@ Windows PowerShell 웹 액세스가 설치되면 IIS 관리자에서 게이트�
 
 8. **실제 경로** 필드에서 애플리케이션의 위치를 검색합니다. 기본 위치 `$env:windir/Web/PowerShellWebAccess/wwwroot`를 사용할 수 있습니다. **확인**을 클릭합니다.
 
-9. 이 항목에서 [IIS 관리자로 SSL 인증서를 구성하려면](#to-configure-an-ssl-certificate-in-iis-Manager) 절차의 단계를 따릅니다.
+9. 이 항목에서 [IIS 관리자로 SSL 인증서를 구성하려면](#to-configure-an-ssl-certificate-in-iis-manager) 절차의 단계를 따릅니다.
 
 10. ![](images/SecurityNote.jpeg)선택적 보안 단계:
 
@@ -318,7 +318,7 @@ Windows PowerShell 웹 액세스가 설치되면 IIS 관리자에서 게이트�
 
 1. 새 웹 사이트의 애플리케이션 풀이 자동으로 만들어집니다. 다른 애플리케이션 풀을 사용하려면 **선택**을 클릭하여 새 웹 사이트와 연결될 애플리케이션 풀을 선택합니다. **애플리케이션 풀 선택** 대화 상자에서 다른 애플리케이션 풀을 선택한 다음 **확인**을 클릭합니다.
 
-1. 에 **실제 경로** 텍스트 상자에서 %windir%/Web/PowerShellWebAccess/wwwroot 이동 합니다.
+1. **실제 경로** 텍스트 상자에서 %windir%/Web/PowerShellWebAccess/wwwroot로 이동합니다.
 
 1. **바인딩** 영역의 **유형** 필드에서 **https**를 선택합니다.
 
@@ -329,7 +329,7 @@ Windows PowerShell 웹 액세스가 설치되면 IIS 관리자에서 게이트�
 
 1. 조직에 필요한 경우에는 선택적으로 **`www.contoso.com`** 과 같이 조직과 사용자가 쉽게 알아볼 수 있는 호스트 이름을 지정합니다. **확인**을 클릭합니다.
 
-1. 보다 안전한 프로덕션 환경을 위해 반드시 CA에서 서명된 유효한 인증서를 제공하는 것이 좋습니다. 사용자는 HTTPS 웹 사이트를 통해서만 Windows PowerShell 웹 액세스에 연결할 수 있으므로, SSL 인증서를 제공해야 합니다. 인증서를 얻는 방법에 대한 자세한 내용은 이 항목의 [IIS 관리자로 SSL 인증서를 구성하려면](#to-configure-an-ssl-certificate-in-iis-Manager)을 참조하세요.
+1. 보다 안전한 프로덕션 환경을 위해 반드시 CA에서 서명된 유효한 인증서를 제공하는 것이 좋습니다. 사용자는 HTTPS 웹 사이트를 통해서만 Windows PowerShell 웹 액세스에 연결할 수 있으므로, SSL 인증서를 제공해야 합니다. 인증서를 얻는 방법에 대한 자세한 내용은 이 항목의 [IIS 관리자로 SSL 인증서를 구성하려면](#to-configure-an-ssl-certificate-in-iis-manager)을 참조하세요.
 
 1. **확인**을 클릭하여 **웹 사이트 추가** 대화 상자를 닫습니다.
 

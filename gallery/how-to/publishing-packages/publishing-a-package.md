@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: 항목 만들기 및 게시
-ms.openlocfilehash: 70696535a3bf540ff75a2dc43bca80cb1adf8f45
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
-ms.translationtype: MTE95
+ms.openlocfilehash: 0e0f871b5d43508735e396224fdfd1a29b1e91c0
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012537"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055481"
 ---
 # <a name="creating-and-publishing-an-item"></a>항목 만들기 및 게시
 
@@ -22,7 +22,7 @@ PowerShell 갤러리에 항목을 게시하기 위한 최소 요구 사항은 �
 - 항목에 필수 메타데이터가 포함되어 있어야 합니다.
 - 사전 유효성 검사 도구를 사용하여 항목을 게시할 준비가 되었는지를 확인해야 합니다.
 - Publish-Module 및 Publish-Script 명령을 사용하여 PowerShell 갤러리에 항목을 게시해야 합니다.
-- 질문이 나 궁금한 내용이 항목에 대 한 대응
+- 항목에 대한 문의 사항이나 문제 제기에 응답해야 합니다.
 
 PowerShell 갤러리에서는 PowerShell 모듈 및 PowerShell 스크립트를 게시할 수 있습니다. 여기서 스크립트란 대규모 모듈의 일부분이 아니라 단일 파일인 PowerShell 스크립트를 의미합니다.
 
@@ -32,7 +32,7 @@ PowerShell 갤러리 계정을 설정하는 방법은 [PowerShell 갤러리 계�
 
 계정을 만들면 항목을 게시하는 데 필요한 API 키를 받을 수 있습니다. 계정으로 로그인하고 나면 PowerShell 갤러리 페이지 위쪽에 "등록"이 아닌 사용자 이름이 표시됩니다. 사용자 이름을 클릭하면 내 계정 페이지로 이동하게 되며, 이 페이지에서 API 키를 확인할 수 있습니다.
 
-참고: API 키를 로그인 및 암호와 안전 하 게 처리 해야 합니다.
+참고: 참고: API 키는 로그인 및 암호와 마찬가지로 안전하게 취급해야 합니다.
 이 키를 사용하면 사용자를 비롯하여 누구나 PowerShell 갤러리에서 소유한 항목을 업데이트할 수 있습니다.
 따라서 키를 정기적으로 업데이트하는 것이 좋습니다. 내 계정 페이지에서 키 다시 설정을 사용하여 키를 업데이트할 수 있습니다.
 
@@ -43,18 +43,18 @@ PowerShell 갤러리에서는 스크립트 또는 모듈 매니페스트에 포�
 
 [New-ModuleManifest](/powershell/module/microsoft.powershell.core/new-modulemanifest) 및 [New-ScriptFileInfo](/powershell/module/PowerShellGet/New-ScriptFileInfo) cmdlet이 매니페스트 템플릿을 자동으로 생성하며, 모든 매니페스트 요소는 자리 표시자로 지정됩니다.
 
-두 매니페스트에 PrivateData의 PSData 영역과 기본 키 데이터를 게시 하기 위한 중요 한 두 섹션이 포함 합니다. PowerShell 모듈 매니페스트의 기본 키 데이터는 PrivateData 섹션을 전부입니다. 기본 키 집합은 사용 중인 PowerShell 버전과 연결되며, 정의되지 않은 키는 지원되지 않습니다. PrivateData의 경우에는 새 키를 추가할 수 있으므로 PowerShell 갤러리와 관련된 요소는 PSData에 포함됩니다.
+두 매니페스트에는 PrivateData의 기본 키 데이터 및 PSData 영역을 게시하기 위해 중요한 두 개의 섹션이 포함됩니다. PowerShell 모듈 매니페스트의 기본 키 데이터는 PrivateData 섹션을 제외한 모든 항목입니다. 기본 키 집합은 사용 중인 PowerShell 버전과 연결되며, 정의되지 않은 키는 지원되지 않습니다. PrivateData의 경우에는 새 키를 추가할 수 있으므로 PowerShell 갤러리와 관련된 요소는 PSData에 포함됩니다.
 
 
 PowerShell 갤러리에 게시하는 항목에 대해 입력해야 하는 가장 중요한 매니페스트 요소는 다음과 같습니다.
 
 - 스크립트 또는 모듈 이름 - 스크립트의 경우 .PS1, 모듈의 경우 .PSD1의 이름에서 가져옵니다.
-- 버전-필수 기본 키 이며 SemVer 지침의 형식을 따라야 합니다. 세부 정보에 대 한 모범 사례를 참조 하세요.
-- 작성자-필수 기본 키 이며 항목과 연결할 이름을 포함 합니다.
-작성자 및 소유자 아래를 참조 하세요.
+- 버전 - 필수 기본 키이며 SemVer 지침의 형식을 따라야 합니다. 자세한 내용은 모범 사례를 참조하세요.
+- 작성자 - 필수 기본 키이며 항목과 연결할 이름을 포함합니다.
+아래의 작성자 및 소유자를 참조하세요.
 - 설명 - 항목이 수행하는 작업과 항목 사용을 위한 요구 사항을 간략하게 설명하는 데 사용되는 필수 기본 키입니다.
 - ProjectURI - 항목 개발을 수행하는 Github 리포지토리 또는 유사한 위치의 링크를 제공하는 PSData의 URI 필드로, 포함하는 것이 좋습니다.
-- 태그는 것이 태그는 pseditions가 있는 플랫폼과와 호환성에 따라 패키지에 대 한 강력한 권장 합니다. 자세한 내용은 참조는 [게시 지침](../../concepts/publishing-guidelines.md#tag-your-package-with-the-compatible-pseditions-and-platforms)합니다.
+- 태그 - PSEdition 및 플랫폼과의 호환성에 따라 패키지에 태그를 지정하는 것이 좋습니다. 자세한 내용은 [게시 지침](../../concepts/publishing-guidelines.md#tag-your-package-with-the-compatible-pseditions-and-platforms)을 참조하세요.
 
 PowerShell 갤러리 항목의 작성자와 소유자는 서로 관련된 개념이지만 항상 일치하는 것은 아닙니다. 항목 소유자는 항목 유지 관리 권한이 있는 PowerShell 갤러리 계정을 소유한 사용자입니다. 항목을 업데이트할 수 있는 소유자가 여러 명일 수도 있습니다. 소유자는 PowerShell 갤러리에서만 사용 가능하며 시스템 간에 항목을 복사하면 손실됩니다. 작성자는 매니페스트 데이터에서 기본적으로 제공되는 문자열이므로 항상 항목의 일부분입니다. Microsoft 제품의 항목에 대한 권장 사항은 다음과 같습니다.
 
@@ -87,14 +87,14 @@ PowerShell 갤러리에 항목을 게시하려면 [Publish-Script](/powershell/m
 
 명령줄에 포함된 대부분의 기타 옵션은 게시하는 항목의 매니페스트 데이터에 포함되어 있으므로 명령에서는 지정하지 않아도 됩니다.
 
-오류를 방지하려면 게시 전에 -Whatif -Verbose를 사용하여 명령을 실행해 보는 것이 좋습니다. PowerShell 갤러리에 항목을 게시할 때마다 항목의 매니페스트 섹션에서 버전 번호를 업데이트해야 하므로, 이렇게 하면 시간을 크게 절약할 수 있습니다.
+오류를 방지하려면 게시 전에 -WhatIf -Verbose를 사용하여 명령을 실행해 보는 것이 좋습니다. PowerShell 갤러리에 항목을 게시할 때마다 항목의 매니페스트 섹션에서 버전 번호를 업데이트해야 하므로, 이렇게 하면 시간을 크게 절약할 수 있습니다.
 
 예제는 다음과 같습니다.
 
-* `Publish-Module -Path ".\MyModule" -NugetAPIKey "GUID" -Whatif -Verbose`
-* `Publish-Script -Path ".\MyScriptFile.PS1" -NugetAPIKey "GUID" -Whatif -Verbose`
+* `Publish-Module -Path ".\MyModule" -NugetAPIKey "GUID" -WhatIf -Verbose`
+* `Publish-Script -Path ".\MyScriptFile.PS1" -NugetAPIKey "GUID" -WhatIf -Verbose`
 
-출력을 자세히 검토하고 오류나 경고가 없으면 -Whatif 없이 명령을 다시 실행합니다.
+출력을 자세히 검토하고 오류나 경고가 없으면 -WhatIf 없이 명령을 다시 실행합니다.
 
 PowerShell 갤러리에서는 게시하는 모든 항목에 대해 바이러스를 검사하며, PowerShell 스크립트 분석기를 사용하여 항목을 분석합니다. 이 시점에서 문제가 발생하면 해당 문제를 해결하도록 항목이 게시자에게 반송됩니다.
 

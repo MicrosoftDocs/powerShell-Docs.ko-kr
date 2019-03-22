@@ -4,15 +4,14 @@ ms.topic: conceptual
 keywords: wmf,powershell,setup
 contributor: keithb
 title: WMF 5.1 설치 및 구성
-ms.openlocfilehash: e5c7968744a442b4be9f1e43a45e91429a6d6165
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: c439d0851189a89a81fa38194632dc54475a001d
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680350"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055989"
 ---
-# <a name="install-and-configure-wmf-51"></a>WMF 5.1 설치 및 구성 #
-
+# <a name="install-and-configure-wmf-51"></a>WMF 5.1 설치 및 구성
 
 ## <a name="download-and-install-the-wmf-51-package"></a>WMF 5.1 패키지 다운로드 및 설치
 
@@ -35,7 +34,8 @@ ms.locfileid: "55680350"
 
 ## <a name="install-wmf-51-for-windows-server-2008-r2-and-windows-7"></a>Windows Server 2008 R2 및 Windows 7의 경우 WMF 5.1 설치
 
-> **참고:** Windows Server 2008 R2 및 Windows 7에 대한 설치 지침이 변경되었으며 다른 패키지에 대한 지침과 다릅니다. Windows Server 2012 R2, Windows Server 2012 및 Windows 8.1에 대한 설치 지침은 다음과 같습니다.
+> [!NOTE]
+> Windows Server 2008 R2 및 Windows 7에 대한 설치 지침이 변경되었으며 다른 패키지에 대한 지침과 다릅니다. Windows Server 2012 R2, Windows Server 2012 및 Windows 8.1에 대한 설치 지침은 다음과 같습니다.
 
 **Windows Server 2008 R2 및 Windows 7에 WMF 5.1 설치**
 
@@ -50,8 +50,8 @@ ZIP 파일의 압축을 푼 후 Windows 7 또는 Windows Server 2008 R2를 실�
 
 Install-WMF5.1.ps1은 다음 매개 변수를 사용하여 Windows Server 2008 R2 및 Windows 7에서 쉽게 설치를 자동화합니다.
 
-- AcceptEula 이 매개 변수를 포함 하는 경우 EULA를 자동으로 적용 하 고 표시 되지 않습니다.
-- AllowRestart: 이 매개 변수 AcceptEula가 지정 된 경우에 사용할 수 있습니다. 이 매개 변수가 포함된 경우 WMF 5.1을 설치한 후 다시 시작해야 하면 설치가 완료된 직후 메시지가 표시되지 않고 다시 시작됩니다.
+- AcceptEula: 이 매개 변수가 포함된 경우 EULA에 자동으로 동의하게 되고 EULA가 표시되지 않습니다.
+- AllowRestart: 이 매개 변수는 AcceptEula가 지정된 경우에만 사용할 수 있습니다. 이 매개 변수가 포함된 경우 WMF 5.1을 설치한 후 다시 시작해야 하면 설치가 완료된 직후 메시지가 표시되지 않고 다시 시작됩니다.
 
 **Windows Server 2008 R2 SP1 및 Windows 7 SP1에 대한 WMF 5.1 필수 조건**
 
@@ -67,8 +67,8 @@ Windows PowerShell DSC(원하는 상태 구성)는 WinRM에 종속됩니다.
 WinRM은 Windows Server 2008 R2 및 Windows 7에서 기본적으로 사용하도록 설정되지 않습니다.
 Windows PowerShell 관리자 권한 세션에서 `Set-WSManQuickConfig`를 실행하여 WinRM을 사용하도록 설정합니다.
 
-
 ## <a name="install-wmf-51-for-windows-server-2012-r2-windows-server-2012-and-windows-81"></a>Windows Server 2012 R2, Windows Server 2012 및 Windows 8.1의 경우 WMF 5.1 설치
+
 **Windows 탐색기(또는 Windows Server 2012 R2나 Windows 8.1의 파일 탐색기)에서 설치**
 
 1. MSU 파일을 다운로드한 폴더로 이동합니다.

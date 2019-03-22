@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,security
 title: JEA 역할 기능
-ms.openlocfilehash: bd0a995adc60e50049ff99d6b23e7c2aeb745a18
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: b93d206680de485d6cb7a8cb26d63afda5bf8421
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680603"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055056"
 ---
 # <a name="jea-role-capabilities"></a>JEA 역할 기능
 
@@ -58,7 +58,7 @@ PowerShell 도움말 문서에는 파일을 구성하는 방법의 몇 가지 �
 
 ### <a name="allowing-powershell-cmdlets-and-functions"></a>PowerShell cmdlet 및 함수 허용
 
-사용자에게 PowerShell cmdlet 또는 함수를 실행할 수 있는 권한을 부여하려면 VisbibleCmdlets 또는 VisibleFunctions 필드에 cmdlet 또는 함수 이름을 추가합니다.
+사용자에게 PowerShell cmdlet 또는 함수를 실행할 수 있는 권한을 부여하려면 VisibleCmdlets 또는 VisibleFunctions 필드에 cmdlet 또는 함수 이름을 추가합니다.
 명령이 cmdlet인지 또는 함수인지 확실하지 않은 경우 `Get-Command <name>`을 실행하고 출력에서 "CommandType" 속성을 확인하면 됩니다.
 
 ```powershell
@@ -101,7 +101,6 @@ VisibleCmdlets 필드에 아래의 cmdlet 또는 함수를 원하는 대로 조�
 `@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'; ValidateSet = 'Value1', 'Value2' }}`  | 사용자는 `Param1` 매개 변수를 사용하여 `My-Func`를 실행할 수 있습니다. 매개 변수에 "Value1" 및 "Value2"만 제공할 수 있습니다.
 `@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'; ValidatePattern = 'contoso.*' }}`     | 사용자는 `Param1` 매개 변수를 사용하여 `My-Func`를 실행할 수 있습니다. 매개 변수에 "contoso"로 시작하는 모든 값을 제공할 수 있습니다.
 
-
 > [!WARNING]
 > 최상의 보안 방식을 위해 표시되는 cmdlet 또는 함수를 정의할 때 와일드카드는 사용하지 않는 것이 좋습니다.
 > 대신 신뢰할 수 있는 각 명령을 명시적으로 나열하여 같은 이름 지정 체계를 공유하는 다른 명령에 의도치 않게 권한이 부여되지 않도록 해야 합니다.
@@ -126,10 +125,10 @@ PowerShell cmdlet/함수에서 허용되는 매개 변수를 제어하는 것은
 
 예를 들어 로컬 컴퓨터에서 호스트되는 네트워크 공유를 확인하려는 파일 서버 관리자의 역할을 생각해 봅니다.
 확인하는 한 가지 방법은 `net share`를 사용하는 것입니다.
-그러나 관리자가 명령을 사용하여 `net group Administrators unprivilegedjeauser /add`로 관리자 권한을 쉽게 얻을 수 있으므로 net.exe를 허용하는 것은 매우 위험합니다.
+그러나 관리자가 `net group Administrators unprivilegedjeauser /add`로 관리자 권한을 얻는 명령을 쉽게 사용할 수 있으므로 net.exe를 허용하는 것은 매우 위험합니다.
 같은 결과를 생성하지만 훨씬 더 제한된 범위를 가지는 [Get-SmbShare](https://technet.microsoft.com/library/jj635704.aspx)를 허용하는 것이 더 낫습니다.
 
-JEA 세션에서 외부 명령을 사용자가 사용할 수 있도록 할 때 항상 실행 파일의 전체 경로를 지정하여 시스템의 다른 위치에 있는 유사한 이름의(그리고 잠재적으로 악성) 프로그램이 대신 실행되지 않도록 합니다.
+JEA 세션에서 외부 명령을 사용자가 사용할 수 있도록 할 때 항상 실행 파일의 전체 경로를 지정하여 시스템의 다른 위치에 있는 유사한 이름(그리고 잠재적으로 악성)의 프로그램이 대신 실행되지 않도록 합니다.
 
 ### <a name="allowing-access-to-powershell-providers"></a>PowerShell 공급자에 대한 액세스 허용
 
@@ -171,7 +170,6 @@ FunctionDefinitions = @{
 > [!IMPORTANT]
 > JEA 사용자가 사용자 지정 함수를 실행할 수 있도록 사용자 지정 함수의 이름을 **VisibleFunctions** 필드에 잊지 말고 추가하세요.
 
-
 사용자 지정 함수의 본문(스크립트 블록)은 시스템에 대한 기본 언어 모드에서 실행되며 JEA의 언어 제약 조건이 적용되지 않습니다.
 즉, 함수는 파일 시스템 및 레지스트리에 액세스하고 역할 기능 파일에 표시되도록 설정되지 않은 명령을 실행할 수 있습니다.
 매개 변수를 사용할 때 임의의 코드 실행을 허용하지 않도록 주의하고 `Invoke-Expression`과 같은 cmdlet에 사용자 입력을 직접 파이프하지 않도록 합니다.
@@ -211,14 +209,12 @@ PowerShell 모듈, 모듈 매니페스트 및 PSModulePath 환경 변수에 대�
 
 ## <a name="updating-role-capabilities"></a>역할 기능 업데이트
 
-
 역할 기능 파일에 변경 내용을 저장하여 언제든지 역할 기능 파일을 업데이트할 수 있습니다.
 역할 기능이 업데이트된 후 시작되는 모든 새 JEA 세션은 수정된 기능을 반영합니다.
 
 그러므로 역할 기능 폴더에 대한 액세스를 제어하는 것은 매우 중요합니다.
 매우 신뢰할 수 있는 관리자만 역할 기능 파일을 변경할 수 있어야 합니다.
 신뢰할 수 없는 사용자가 역할 기능 파일을 변경할 수 있는 경우 자신의 권한을 상승시킬 수 있는 cmdlet에 대한 액세스 권한을 자신에게 손쉽게 부여할 수 있습니다.
-
 
 역할 기능에 대한 액세스를 제한하려는 관리자의 경우 로컬 시스템에 역할 기능 파일 및 포함하는 모듈에 대한 읽기 권한이 있는지 확인합니다.
 
@@ -256,16 +252,14 @@ $roleB = @{
                      @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Server' } }
 }
 
-# Resulting permisisons for a user who belongs to both role A and B
-# - The constraint in role B for the DisplayName parameter on Get-Service is ignored becuase of rule #4
+# Resulting permissions for a user who belongs to both role A and B
+# - The constraint in role B for the DisplayName parameter on Get-Service is ignored because of rule #4
 # - The ValidateSets for Restart-Service are merged because both roles use ValidateSet on the same parameter per rule #5
 $mergedAandB = @{
     VisibleCmdlets = 'Get-Service',
                      @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client', 'DNS Server' } }
 }
 ```
-
-
 
 **VisibleExternalCommands, VisibleAliases, VisibleProviders, ScriptsToProcess**
 

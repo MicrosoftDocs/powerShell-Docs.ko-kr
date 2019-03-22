@@ -2,20 +2,22 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 5.0의 새로운 기능
-ms.openlocfilehash: 06088e4a974ed4fb2a245fb9acfa780710a8ccc4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: a21e6af9f23ac8bb3ddf84dbfa67a67f3ff93b24
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682848"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055107"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Windows PowerShell 5.0의 새로운 기능
+
 Windows PowerShell 5.0에는 용도를 확장하고, 사용 편의성을 높이며, Windows 기반 환경을 더욱 쉽고 종합적으로 제어하고 관리하는 데 사용할 수 있는 중요한 새 기능이 포함되어 있습니다.
 
 Windows PowerShell 5.0은 이전 버전과 호환됩니다. Windows PowerShell 4.0, Windows PowerShell 3.0 및 Windows PowerShell 2.0용으로 설계된 cmdlet, 공급자, 모듈, 스냅인, 함수 및 프로필은 일반적으로 Windows PowerShell 5.0에서 변경 없이 사용할 수 있습니다.
 
 ## <a name="installing-windows-powershell"></a>Windows PowerShell 설치
-Windows Server  2016 Technical Preview 및 Windows 10에서는 Windows PowerShell 5.0이 기본적으로 설치됩니다.
+
+Windows PowerShell 5.0은 Windows Server 2016 Technical Preview 및 Windows 10에 기본적으로 설치됩니다.
 
 Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Windows PowerShell 5.0을 설치하려면 [Windows Management Framework 5.0 Preview](https://aka.ms/wmf5download)를 다운로드하여 설치합니다. Windows Management Framework 5.0을 설치하기 전에 다운로드 정보를 확인하고 모든 시스템 요구 사항을 충족해야 합니다.
 
@@ -27,6 +29,7 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 - [Windows PowerShell 3.0의 새로운 기능](#new-features-in-windows-powershell-30)
 
 ## <a name="windows-powershell-40-updates-in-november-2014-update-rollup-kb-3000850"></a>2014년 11월 업데이트 롤업의 Windows PowerShell 4.0 업데이트(KB 3000850)
+
 [Windows RT 8.1, Windows 8.1 및 Windows Server 2012 R2용 2014년 11월 업데이트 롤업](https://support.microsoft.com/kb/3000850/)(KB 3000850)에서는 Windows PowerShell 4.0의 다양한 Windows PowerShell DSC(필요한 상태 구성) 업데이트 및 향상 기능을 사용할 수 있습니다. Windows PowerShell에서 `Get-Hotfix -Id KB3000850`을 실행하여 KB 3000850이 시스템에 설치되어 있는지 확인할 수 있습니다.
 
 - [PSDesiredStateConfiguration](https://technet.microsoft.com/library/dn391651(v=wps.640).aspx) 모듈의 기존 cmdlet에 대한 업데이트
@@ -39,8 +42,8 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 
 - [PSDesiredStateConfiguration](https://technet.microsoft.com/library/dn391651(v=wps.640).aspx) 모듈의 새 cmdlet
   - [Update-DscConfiguration](https://technet.microsoft.com/library/mt143541(v=wps.630).aspx):  주문형 끌어오기 서버 검사를 수행합니다.
-  - [Stop-DscConfiguration](https://technet.microsoft.com/library/mt143542(v=wps.630).aspx):  이미 실행 중인 구성을 중지 합니다.
-  - [Remove-DscConfigurationDocument](https://technet.microsoft.com/library/mt143544(v=wps.630).aspx):  다양 한 단계 (보류 중, 이전 또는 현재)에서 구성 문서를 제거할 수 있습니다.
+  - [Stop-DscConfiguration](https://technet.microsoft.com/library/mt143542(v=wps.630).aspx):  이미 실행 중인 구성을 중지합니다.
+  - [Remove-DscConfigurationDocument](https://technet.microsoft.com/library/mt143544(v=wps.630).aspx):  다양한 단계(보류 중, 이전 또는 현재)에서 구성 문서를 제거할 수 있습니다.
 
 - 향상된 언어
   - 이제 DependsOn이 복합 리소스를 지원합니다.
@@ -64,10 +67,10 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 
 - 향상된 유연성
   - LocalConfigurationManager 리소스에 **ActionAfterReboot**라는 새 속성이 있습니다.
-    - ContinueConfiguration (기본값): 대상 노드를 다시 시작한 후 구성을 자동으로 다시 시작 합니다.
-    - StopConfiguration: 노드가 다시 시작 된 후 구성의 자동으로 재개 되지 않습니다.
+    - ContinueConfiguration(기본값): 대상 노드가 다시 시작된 후에 자동으로 구성을 다시 시작합니다.
+    - StopConfiguration: 노드가 다시 시작된 후에 자동으로 구성을 다시 시작하지 않습니다.
   - 이제 일관성 실행이 PULL 작업보다 더 자주 발생하거나 그 반대의 경우가 발생할 수 있습니다.
-  - 버전 관리 지원:  DSC가 최신 클라이언트에서 생성 된 문서를 인식 이제 (포함 된 [WMF 5.0](https://aka.ms/wmf5download)).
+  - 버전 관리 지원:  이제 DSC가 최신 클라이언트에서 생성된 문서를 인식합니다([WMF 5.0](https://aka.ms/wmf5download)에 포함).
 
 - 향상된 오류 방지
   - 이제 구성을 적용하기 전에 모듈 버전이 적용됩니다.
@@ -117,7 +120,7 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 - Windows PowerShell 기록이 콘솔 호스트(**powershell.exe**)뿐 아니라 모든 호스팅 애플리케이션(예: Windows PowerShell ISE)에 적용되도록 향상되었습니다. 시스템 차원의 기록 사용을 포함한 기록 옵션은 관리 템플릿\Windows 구성 요소\Windows PowerShell에 있는 **PowerShell 기록 켜기** 그룹 정책 설정을 사용하도록 설정하여 구성할 수 있습니다.
 - 새로운 세부 스크립트 추적 기능을 사용하면 시스템에서 Windows PowerShell 스크립트 사용을 자세히 추적하고 분석할 수 있습니다. 세부 스크립트 추적을 사용하도록 설정하면 Windows PowerShell에서 모든 스크립트 블록을 ETW(Windows용 이벤트 추적) 이벤트 로그 **Microsoft-Windows-PowerShell/Operational**에 로깅합니다.
 - Windows PowerShell 5.0 이상에서는 새 암호화 메시지 구문 cmdlet이 [RFC5652](https://tools.ietf.org/html/rfc5652) 문서에 기록된 대로 메시지를 암호로 보호하기 위해 IETF 표준 형식을 사용하는 콘텐츠의 암호화 및 암호 해독을 지원합니다. Get-CmsMessage, Protect-CmsMessage 및 Unprotect-CmsMessage cmdlet이 [Microsoft.PowerShell.Security](https://technet.microsoft.com/library/hh849807.aspx) 모듈에 추가되었습니다.
-- [Microsoft.PowerShell.Utility](https://technet.microsoft.com/library/hh849958.aspx) 모듈의 새 cmdlet인 Get-Runspace, Debug-Runspace, Get-RunspaceDebug, Enable-RunspaceDebug 및 Disable-RunspaceDebug를 사용하면 Runspace에 디버그 옵션을 설정하고 Runspace에서 디버깅을 시작 및 중지할 수 있습니다. 임의의 Runspace, 즉 Windows PowerShell 콘솔 또는 Windows PowerShell ISE 세션의 기본 Runspace가 아닌 Runspace의 디버그를 위해 Windows PowerShell에서는 스크립트에 중단점을 설정하고 디버거를 연결하여 Runspace 스크립트를 디버그할 수 있을 때까지 추가된 중단점이 스크립트 실행을 중지하도록 할 수 있습니다. 임의의 Runspace에 대한 중첩된 디버깅 지원이 Runspace에 대한 Windows PowerShell 스크립트 디버거에 추가되었습니다.
+- [Microsoft.PowerShell.Utility](https://technet.microsoft.com/library/hh849958.aspx) 모듈의 새 cmdlet인 Get-Runspace, Debug-Runspace, Get-RunspaceDebug, Enable-RunspaceDebug 및 Disable-RunspaceDebug를 사용하면 Runspace에 디버그 옵션을 설정하고 Runspace에서 디버깅을 시작 및 중지할 수 있습니다. 임의의 Runspace(즉, Windows PowerShell 콘솔 또는 Windows PowerShell ISE 세션의 기본 Runspace가 아닌 Runspace)를 디버그하기 위해 Windows PowerShell에서는 스크립트에 중단점을 설정하고, 디버거를 연결하여 Runspace 스크립트를 디버그할 수 있을 때까지 추가된 중단점이 스크립트 실행을 중지하도록 할 수 있습니다. 임의의 Runspace에 대한 중첩된 디버깅 지원이 Runspace에 대한 Windows PowerShell 스크립트 디버거에 추가되었습니다.
 - 새 Format-Hex cmdlet이 [Microsoft.PowerShell.Utility](https://technet.microsoft.com/library/hh849958.aspx) 모듈에 추가되었습니다. Format-Hex을 사용하면 텍스트 또는 이진 데이터를 16진수 형식으로 볼 수 있습니다.
 - Get-Clipboard 및 Set-Clipboard cmdlet이 [Microsoft.PowerShell.Utility](https://technet.microsoft.com/library/hh849958.aspx) 모듈에 추가되었습니다. 두 cmdlet을 사용하면 Windows PowerShell 세션과의 콘텐츠 전송을 쉽게 수행할 수 있습니다. 클립보드 cmdlet은 이미지, 오디오 파일, 파일 목록 및 텍스트를 지원합니다.
 - 새 Clear-RecycleBin cmdlet이 [Microsoft.PowerShell.Management](https://technet.microsoft.com/library/hh849827(v=wps.640).aspx) 모듈에 추가되었습니다. 이 cmdlet은 외장형 드라이브를 포함하는 고정 드라이브의 휴지통을 비웁니다. 기본적으로 cmdlet의 ConfirmImpact 속성이 ConfirmImpact.High로 설정되어 있으므로 Clear-RecycleBin 명령을 확인하라는 메시지가 표시됩니다.
@@ -132,16 +135,16 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 - Windows PowerShell 작업에 대해 새 AtBreakpoint 상태가 추가되었습니다. AtBreakpoint 상태는 작업이 중단점 설정을 포함하는 스크립트를 실행하고 스크립트가 중단점에 도달했을 때 적용됩니다. 디버그 중단점에서 작업이 중지되면 Debug-Job cmdlet을 실행하여 작업을 디버그해야 합니다.
 - Windows PowerShell 5.0에서는 $PSModulePath의 동일한 폴더에서 단일 Windows PowerShell 모듈의 여러 버전에 대한 지원을 구현합니다. 모듈의 원하는 버전을 가져올 수 있도록 RequiredVersion 속성이 ModuleSpecification 클래스에 추가되었습니다. 이 속성은 ModuleVersion 속성과 함께 사용할 수 없습니다. 이제 RequiredVersion이 Get-Module, Import-Module 및 Remove-Module cmdlet에 대한 FullyQualifiedName 매개 변수 값의 일부로 지원됩니다.
 - 이제 Test-ModuleManifest cmdlet을 실행하여 모듈 버전 유효성 검사를 수행할 수 있습니다.
-- 이제 Get-Command cmdlet의 결과에 Version 열이 표시됩니다. 새 Version 속성이 CommandInfo 클래스에 추가되었습니다. Get-Command는 동일한 모듈의 여러 버전에 포함된 명령을 보여 줍니다. 버전 속성은 CmdletInfo의 파생된 클래스의 일부 이기도합니다. CmdletInfo 및 ApplicationInfo 합니다.
+- 이제 Get-Command cmdlet의 결과에 Version 열이 표시됩니다. 새 Version 속성이 CommandInfo 클래스에 추가되었습니다. Get-Command는 동일한 모듈의 여러 버전에 포함된 명령을 보여 줍니다. 또한 Version 속성은 CmdletInfo의 파생 클래스인 CmdletInfo 및 ApplicationInfo의 일부입니다.
 - Get-Command에는 ShowCommand 정보를 PSObjects로 반환하는 새 매개 변수 -ShowCommandInfo가 있습니다. 이 매개 변수는 Windows PowerShell ISE에서 Windows PowerShell 원격 기능을 사용하여 Show-Command를 실행할 때 특히 유용한 기능입니다. –ShowCommandInfo 매개 변수는 Microsoft.PowerShell.Utility 모듈의 기존 Get-SerializedCommand 함수를 대체하지만 하위 수준 스크립팅을 지원하기 위해 Get-SerializedCommand 스크립트를 계속 사용할 수 있습니다.
-- 새 Get-ItemPropertyValue cmdlet을 사용하면 점 표기법을 사용하지 않고 속성 값을 가져올 수 있습니다. 예를 들어, Windows PowerShell의 이전 릴리스에서 PowerShellEngine 레지스트리 키의 Application Base 속성 값을 가져오려면 다음 명령을 실행할 수 있습니다. **(Get-itemproperty-Path HKLM:\\소프트웨어\\Microsoft\\PowerShell\\3\\PowerShellEngine-ApplicationBase 이름). ApplicationBase**합니다. Windows PowerShell 5.0 이상에서는 **Get-ItemPropertyValue -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase**를 실행할 수 있습니다.
+- 새 Get-ItemPropertyValue cmdlet을 사용하면 점 표기법을 사용하지 않고 속성 값을 가져올 수 있습니다. 예를 들어 이전 Windows PowerShell 릴리스에서는 다음 명령을 실행하여 PowerShellEngine 레지스트리 키의 Application Base 속성 값을 가져올 수 있습니다. **(Get-ItemProperty -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase).ApplicationBase** Windows PowerShell 5.0 이상에서는 **Get-ItemPropertyValue -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase**를 실행할 수 있습니다.
 - 이제 Windows PowerShell 콘솔이 Windows PowerShell ISE와 같이 구문 색 지정을 사용합니다.
 - 새 NetworkSwitch 모듈에 포함된 cmdlet을 사용하면 스위치, VLAN(가상 LAN) 및 기본 계층 2 네트워크 스위치 포트 구성을 Windows Server 2012 R2 로고 인증 네트워크 스위치에 적용할 수 있습니다.
 - 단일 모듈의 여러 버전을 저장할 수 있도록 FullyQualifiedName 매개 변수가 Import-Module 및 Remove-Module cmdlet에 추가되었습니다.
 - Save-Help, Update-Help, Import-PSSession, Export-PSSession 및 Get-Command에 ModuleSpecification 형식의 새로운 매개 변수인 FullyQualifiedModule이 있습니다. 정규화된 이름으로 모듈을 지정하려면 이 매개 변수를 추가합니다.
 - **$PSVersionTable.PSVersion** 값이 5.0으로 업데이트되었습니다.
-- WMF 5.0 (PowerShell 5.0)은 포함 된 **Pester** 모듈입니다.  Pester 테스트 프레임 워크를 PowerShell에 대 한 단위입니다. 스크립트에 대 한 테스트를 만들 수 있는 몇 가지 간단한 사용 키워드를 제공 합니다. 
- 
+- WMF 5.0(PowerShell 5.0)에는 **Pester** 모듈이 포함됩니다.  Pester는 PowerShell에 대한 단위 테스트 프레임워크입니다. 스크립트에 대한 테스트를 만들 수 있는 몇 가지 간단한 사용 키워드를 제공합니다.
+
 ### <a name="new-features-in-windows-powershell-desired-state-configuration"></a>Windows PowerShell 필요한 상태 구성의 새로운 기능
 
 - Windows PowerShell의 향상된 언어 기능을 사용하면 클래스를 통해 Windows PowerShell DSC(필요한 상태 구성) 리소스를 정의할 수 있습니다. 이제 Import-DscResource가 진정한 동적 키워드입니다. Windows PowerShell이 지정된 모듈의 루트 모듈을 구문 분석하여 DscResource 특성이 포함된 클래스를 검색합니다. 이제 클래스를 사용하여 모듈 폴더의 MOF 파일 또는 DSCResource 하위 폴더가 필요하지 않은 DSC 리소스를 정의할 수 있습니다. Windows PowerShell 모듈 파일에 여러 가지 DSC 리소스 클래스가 포함될 수 있습니다.
@@ -178,7 +181,7 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 
 ### <a name="new-features-in-windows-powershell-ise"></a>Windows PowerShell ISE의 새로운 기능
 
-- Enter-pssession을 편집 하려면 원하는 파일을 저장 하는 컴퓨터의 원격 세션을 시작 하 고 다음 실행 하 여 Windows PowerShell ISE의 로컬 복사본에서 원격 Windows PowerShell 스크립트와 파일을 편집 이제 **PSEdit \<원격 컴퓨터의 경로 파일 이름을\>** 합니다. 이 기능을 사용하면 Windows PowerShell ISE를 실행할 수 없는 Windows Server의 Server Core 설치 옵션에 저장되어 있는 Windows PowerShell 파일을 쉽게 편집할 수 있습니다.
+- 이제 편집할 파일이 저장되어 있는 컴퓨터에서 원격 세션을 시작한 다음, 원격 컴퓨터에서 **PSEdit \<경로 및 파일 이름\>** 을 실행하기 위해 Enter-PSSession을 실행하여 Windows PowerShell ISE의 로컬 복사본에서 원격 Windows PowerShell 스크립트와 파일을 편집할 수 있습니다. 이 기능을 사용하면 Windows PowerShell ISE를 실행할 수 없는 Windows Server의 Server Core 설치 옵션에 저장되어 있는 Windows PowerShell 파일을 쉽게 편집할 수 있습니다.
 - 이제 Windows PowerShell ISE에서 Start-Transcript cmdlet이 지원됩니다.
 - 이제 Windows PowerShell ISE에서 원격 스크립트를 디버그할 수 있습니다.
 - 새 메뉴 명령인 **모두 중단**(Ctrl+B)은 로컬 스크립트와 원격으로 실행 중인 스크립트 둘 다에 대해 디버거를 시작합니다.
@@ -238,7 +241,7 @@ Windows PowerShell 4.0에는 다음과 같은 새로운 기능이 있습니다.
 
 - System Center Orchestrator에 사용된 것과 같은 반복 파이프라인 즉, 스트리밍을 사용하여 섞어서 실행하지 않고 왼쪽에서 오른쪽으로 실행하는 파이프라인의 컨텍스트에서 새 **PipelineVariable** 일반 매개 변수에 대한 지원이 추가되었습니다.
 - 현재 runspace에 없는 명령을 사용하는 경우처럼 탭 완성 시나리오를 벗어나서 작동하도록 매개 변수 바인딩이 크게 향상되었습니다.
-- 사용자 지정 컨테이너 활동 지원이 Windows PowerShell 워크플로에 추가되었습니다. 활동 매개 변수가 **Activity**, **Activity\[]** 형식이거나 제네릭 활동 모음이고 사용자가 스크립트 블록을 인수로 제공한 경우 Windows PowerShell 워크플로는 일반 Windows PowerShell 스크립트-워크플로 컴파일을 사용할 때와 마찬가지로 스크립트 블록을 XAML로 변환합니다.
+- 사용자 지정 컨테이너 활동 지원이 Windows PowerShell 워크플로에 추가되었습니다. 활동 매개 변수가 **Activity**, **Activity\[]** 형식(또는 활동의 제네릭 컬렉션)이고 사용자가 스크립트 블록을 인수로 제공한 경우 Windows PowerShell 워크플로는 일반 Windows PowerShell 스크립트-워크플로 컴파일을 사용할 때와 마찬가지로 스크립트 블록을 XAML로 변환합니다.
 - 충돌이 발생한 후에 Windows PowerShell 워크플로는 관리되는 노드에 자동으로 다시 연결됩니다.
 - 이제 **ThrottleLimit** 속성을 사용하여 **Foreach -Parallel** 활동 문을 제한할 수 있습니다.
 - **ErrorAction** 일반 매개 변수는 워크플로에 국한되는 새 유효한 값 **Suspend**가 있습니다.
@@ -316,7 +319,7 @@ Windows PowerShell 3.0에는 다음과 같은 새로운 기능이 있습니다.
 
 ### <a name="windows-powershell-workflow"></a>Windows PowerShell 워크플로
 
-Windows PowerShell 워크플로를 통해 Windows PowerShell에서 Windows Workflow Foundation의 강력한 기능을 사용할 수 있습니다. XAML 또는 Windows PowerShell 언어로 워크플로를 작성한 후 cmdlet을 실행할 때처럼 워크플로를 실행할 수 있습니다. 합니다 [Get-command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) cmdlet은 워크플로 명령을 가져옵니다 하며 [Get-help](https://technet.microsoft.com/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) cmdlet은 워크플로에 대 한 도움말을 가져옵니다.
+Windows PowerShell 워크플로를 통해 Windows PowerShell에서 Windows Workflow Foundation의 강력한 기능을 사용할 수 있습니다. XAML 또는 Windows PowerShell 언어로 워크플로를 작성한 후 cmdlet을 실행할 때처럼 워크플로를 실행할 수 있습니다. [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) cmdlet은 워크플로 명령을 가져오고 [Get-Help](https://technet.microsoft.com/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) cmdlet은 워크플로에 대한 도움말을 가져옵니다.
 
 워크플로는 장기적으로 자주 병렬 실행 가능하고, 반복, 중단, 일시 중단 및 다시 시작 가능한 다중 컴퓨터 관리 활동의 시퀀스입니다. 네트워크 중단, Windows 다시 시작, 정전 등과 같은 의도적이거나 우연적인 중단으로부터 워크플로를 다시 시작할 수 있습니다.
 
@@ -411,7 +414,7 @@ Windows PowerShell 3.0 이상에서 C# cmdlet 작성자는 cmdlet 클래스에�
 
 XML 기반 cmdlet 도움말 파일의 첫 번째 관련 링크 또는 함수의 명령 기반 도움말의 .Link 지시어에 **HelpUri** 값을 포함할 수도 있습니다.
 
-온라인 도움말 지원에 대 한 자세한 내용은 참조 하세요. [온라인 도움말 지원](/powershell/developer/module/supporting-online-help) Microsoft Docs에서.
+온라인 도움말 지원에 대한 자세한 내용은 Microsoft Docs에서 [온라인 도움말 지원](/powershell/developer/module/supporting-online-help)을 참조하세요.
 
 ### <a name="cim-integration"></a>CIM 통합
 
@@ -482,7 +485,9 @@ Windows PowerShell 3.0에는 언어를 간소하고 용이하며 일반 오류�
 |New-CimSessionOption|Update-Help|
 |New-IseSnippet||
 
-### <a name="improvements-to-existing-core-cmdlets-and-providerswindows-powershell-30-includes-new-features-for-existing-cmdlets-including-the-simplified-syntax-and-new-parameters-for-the-following-cmdlets-computer-cmdlets-csv-cmdlets-get-childitem-get-command-get-content-get-history-measure-object-security-cmdlets-select-object-select-string-split-path-start-process-tee-object-test-connection-add-member-and-wmi-cmdlets"></a>기존 핵심 Cmdlet 및 ProvidersWindows PowerShell 3.0의 향상 된 기능에는 간소화 된 구문 및 다음 cmdlet에 대 한 새 매개 변수를 포함 하는 기존 cmdlet에 대 한 새 기능이 포함 됩니다. 컴퓨터 cmdlet, CSV cmdlet, Get-ChildItem, Get-Command, Get-Content, Get-History, Measure-Object, 보안 cmdlet, Select-Object, Select-String, Split-Path, Start-Process, Tee-Object, Test-Connection, Add-Member, WMI cmdlet 등.
+### <a name="improvements-to-existing-core-cmdlets-and-providers"></a>기존 핵심 Cmdlet 및 공급자에서 향상된 기능
+
+Windows PowerShell 3.0에는 간소화된 구문을 포함하여 기존 cmdlet에 대한 새로운 기능 및 다음 cmdlet에 대한 새로운 매개 변수가 포함되어 있습니다. 컴퓨터 cmdlet, CSV cmdlet, Get-ChildItem, Get-Command, Get-Content, Get-History, Measure-Object, 보안 cmdlet, Select-Object, Select-String, Split-Path, Start-Process, Tee-Object, Test-Connection, Add-Member, WMI cmdlet 등.
 
 Windows PowerShell 공급자가 크게 향상되었습니다. 예를 들어 인증서 공급자가 웹 호스팅을 위한 SSL(Secure Socket Layer) 인증서 관리를 지원하고, 파일 시스템 드라이브에서 자격 증명, 지속성 네트워크 드라이브, 대체 데이터 스트림 등을 지원합니다.
 

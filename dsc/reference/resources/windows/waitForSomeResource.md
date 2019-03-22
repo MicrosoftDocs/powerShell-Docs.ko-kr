@@ -2,18 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC WaitForSome 리소스
-ms.openlocfilehash: 906375a8fcf9b87d4b7487e63e6fae3f05b86d0d
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.openlocfilehash: 888da1810f0a9233579bad5eef8d5dd556947c61
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047545"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58059459"
 ---
 # <a name="dsc-waitforsome-resource"></a>DSC WaitForSome 리소스
 
 > 적용 대상: Windows PowerShell 5.0 이상
 
-**WaitForAny** DSC(Desired State Configuration) 리소스를 [DSC 구성](../../../configurations/configurations.md)의 노드 블록 내에서 사용하면 다른 노드의 구성에 대한 종속성을 지정할 수 있습니다.
+**WaitForSome** DSC(Desired State Configuration) 리소스를 [DSC 구성](../../../configurations/configurations.md)의 노드 블록 내에서 사용하면 다른 노드의 구성에 대한 종속성을 지정할 수 있습니다.
 
 **ResourceName** 속성으로 지정된 리소스가 **NodeName** 속성으로 정의된 최소 노드 수(**NodeCount**를 통해 지정함)에서 필요한 상태이면 이 리소스가 정상적으로 적용됩니다.
 

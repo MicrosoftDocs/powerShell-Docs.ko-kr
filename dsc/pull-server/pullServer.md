@@ -2,12 +2,12 @@
 ms.date: 03/04/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC 끌어오기 서비스
-ms.openlocfilehash: 64c22bc021666026ae58a4c4fb4e3d31b25bae5c
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.openlocfilehash: 00e01e6c71226e6bde48b221e4e4fcf5f346feb4
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429961"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58056773"
 ---
 # <a name="desired-state-configuration-pull-service"></a>원하는 상태 구성 끌어오기 서비스
 
@@ -72,7 +72,8 @@ Windows Server에서 제공되는 끌어오기 서버는 해당 노드에서 요
 
 [Windows Server Insider Preview](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) 17090 릴리스부터 SQL Server는 끌어오기 서비스(Windows 기능 *DSC-Service*)에 지원되는 옵션입니다. 이는 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)로 마이그레이션되지 않은 대규모 DSC 환경의 규모를 조정하기 위한 새로운 옵션을 제공합니다.
 
-> **참고**: SQL Server 지원은 WMF 5.1(이하)의 이전 버전에 추가되지 않으며, Windows Server 17090 이상 버전에서만 제공됩니다.
+> [!NOTE]
+> SQL Server 지원은 WMF 5.1(이하)의 이전 버전에 추가되지 않으며, Windows Server 17090 이상 버전에서만 제공됩니다.
 
 SQL Server를 사용하도록 끌어오기 서버를 구성하려면 **SqlProvider**를 `$true`로, **SqlConnectionString**을 유효한 SQL Server 연결 문자열로 설정하세요. 자세한 내용은 [SqlClient 연결 문자열](/dotnet/framework/data/adonet/connection-string-syntax#sqlclient-connection-strings)을 참조하세요.
 **xDscWebService**를 사용한 SQL Server 구성의 예를 보려면 먼저 [xDscWebService 리소스 사용](#using-the-xdscwebservice-resource)을 읽은 후 [GitHub의 Sample_xDscWebServiceRegistration_UseSQLProvider.ps1](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/master/Examples/Sample_xDscWebServiceRegistration_UseSQLProvider.ps1)을 살펴보세요.
@@ -84,12 +85,12 @@ SQL Server를 사용하도록 끌어오기 서버를 구성하려면 **SqlProvid
 
 1. [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet을 호출하여 **xPSDesiredStateConfiguration** 모듈을 설치하세요.
    > [!NOTE]
-   > **Install-module** 에 포함 되는 **PowerShellGet** PowerShell 5.0에 포함 된 모듈. [PackageManagement PowerShell 모듈 미리 보기](https://www.microsoft.com/en-us/download/details.aspx?id=49186)에서 PowerShell 3.0 및 4.0용 **PowerShellGet** 모듈을 다운로드할 수 있습니다.
+   > **Install-Module**은 PowerShell 5.0에 포함된 **PowerShellGet** 모듈에 포함되어 있습니다. [PackageManagement PowerShell 모듈 미리 보기](https://www.microsoft.com/en-us/download/details.aspx?id=49186)에서 PowerShell 3.0 및 4.0용 **PowerShellGet** 모듈을 다운로드할 수 있습니다.
 2. 조직 내 또는 공공 기관 내의 신뢰할 수 있는 인증 기관에서 DSC 끌어오기 서버에 대한 SSL 인증서를 가져옵니다. 기관에서 받은 인증서는 일반적으로 PFX 형식입니다.
-3. DSC 끌어오기 서버는 기본 위치에 있는 노드에 인증서 설치 `CERT:\LocalMachine\My`합니다.
+3. `CERT:\LocalMachine\My`라는 기본 위치에 DSC 끌어오기 서버 역할을 할 노드의 인증서를 설치합니다.
    - 인증서 지문을 기록해 둡니다.
-4. 등록 키로 사용할 GUID를 선택합니다. PowerShell을 사용하여 생성하려면 PS 프롬프트에 '` [guid]::newGuid()`' 또는 '`New-Guid`'를 입력하고 Enter 키를 누릅니다. 이 키는 클라이언트 노드에서 등록할 때 인증할 공유 키로 사용됩니다. 자세한 내용은 아래 등록 키 섹션을 참조하세요.
-5. PowerShell ISE에서 시작 합니다 (f5 다음의 구성 스크립트 (의 Examples 폴더에 포함 된 **xPSDesiredStateConfiguration** 모듈 `Sample_xDscWebServiceRegistration.ps1`). 이 스크립트는 끌어오기 서버를 설정합니다.
+4. 등록 키로 사용할 GUID를 선택합니다. PowerShell을 사용하여 생성하려면 PS 프롬프트에 '`[guid]::newGuid()`' 또는 '`New-Guid`'를 입력하고 Enter 키를 누릅니다. 이 키는 클라이언트 노드에서 등록할 때 인증할 공유 키로 사용됩니다. 자세한 내용은 아래 등록 키 섹션을 참조하세요.
+5. PowerShell ISE에서 다음의 구성 스크립트(**xPSDesiredStateConfiguration** 모듈의 예제 폴더에 `Sample_xDscWebServiceRegistration.ps1`로 포함됨)를 시작합니다(F5). 이 스크립트는 끌어오기 서버를 설정합니다.
 
     ```powershell
     configuration Sample_xDscWebServiceRegistration
@@ -164,9 +165,9 @@ SQL Server를 사용하도록 끌어오기 서버를 구성하려면 **SqlProvid
 구성 ID 대신 구성 이름을 사용할 수 있도록 클라이언트 노드가 서버에 등록할 수 있도록 하려면 위 구성에서 만든 등록 키가 `C:\Program Files\WindowsPowerShell\DscService`에서 `RegistrationKeys.txt`라는 파일에 저장되어 있어야 합니다. 등록 키는 끌어오기 서버에 클라이언트를 처음 등록할 때 사용되는 공유 암호 역할을 합니다. 클라이언트는 등록이 완료되면 끌어오기 서버에 고유하게 인증하는 데 사용되는 자체 서명된 인증서를 생성합니다. 이 인증서의 지문은 로컬에 저장되고 끌어오기 서버의 URL과 연결됩니다.
 
 > [!NOTE]
-> PowerShell 4.0에서는 등록 키는 지원 되지 않습니다.
+> PowerShell 4.0에서는 등록 키가 지원되지 않습니다.
 
-끌어오기 서버에 인증하도록 노드를 구성하려면 이 끌어오기 서버에 등록할 모든 대상 노드의 메타 구성에 등록 키가 있어야 합니다. 유의 합니다 **RegistrationKey** 아래 메타 구성은 제거한 후 대상 컴퓨터에 성공적으로 등록 하는 값에 저장 된 값과 일치 해야 합니다는 `RegistrationKeys.txt` 끌어오기 서버에서 파일 (' 140a952b-b9d6-406b-b416-e0f759c9c0e4'이 예제에 대 한). 등록 키 값을 알면 대상 컴퓨터가 끌어오기 서버에 등록할 수 있으므로 등록 키 값을 항상 안전하게 보관하세요.
+끌어오기 서버에 인증하도록 노드를 구성하려면 이 끌어오기 서버에 등록할 모든 대상 노드의 메타 구성에 등록 키가 있어야 합니다. 아래 메타 구성에서 **RegistrationKey**는 대상 머신이 성공적으로 등록된 후에 제거되며, 해당 값은 끌어오기 서버의 `RegistrationKeys.txt` 파일에 저장된 값과 일치해야 합니다(이 예제의 경우 '140a952b-b9d6-406b-b416-e0f759c9c0e4'). 등록 키 값을 알면 대상 컴퓨터가 끌어오기 서버에 등록할 수 있으므로 등록 키 값을 항상 안전하게 보관하세요.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -210,7 +211,7 @@ Sample_MetaConfigurationToRegisterWithLessSecurePullServer -RegistrationKey $Reg
 ```
 
 > [!NOTE]
-> 합니다 **ReportServerWeb** 섹션 보고 데이터를 끌어오기 서버로 보낼 수 있습니다.
+> **ReportServerWeb** 섹션을 사용하면 보고 데이터를 끌어오기 서버로 보낼 수 있습니다.
 
 메타 구성 파일에 **ConfigurationID** 속성이 없으면 끌어오기 서버가 V2 버전의 끌어오기 서버 프로토콜을 지원하므로 초기 등록이 필요하다는 의미입니다.
 반대로 **ConfigurationID**가 있으면 V1 버전의 끌어오기 서버 프로토콜이 사용되고 등록 처리가 없습니다.
@@ -227,12 +228,12 @@ Sample_MetaConfigurationToRegisterWithLessSecurePullServer -RegistrationKey $Reg
 
 각 리소스 모듈은 압축해야 하며 `{Module Name}_{Module Version}.zip` 패턴에 따라 이름을 지정해야 합니다.
 
-모듈 버전이 3.1.2.0 인 xWebAdminstration 이라는 모듈 이름은 예를 들어 `xWebAdministration_3.2.1.0.zip`합니다.
+예를 들어 모듈 버전이 3.1.2.0인 xWebAdminstration이라는 모듈은 `xWebAdministration_3.2.1.0.zip`으로 이름이 지정됩니다.
 모듈의 각 버전은 단일 zip 파일에 포함되어야 합니다.
 각 zip 파일에 리소스의 단일 버전만 있으므로 단일 디렉터리에서 여러 모듈 버전을 지원하는 WMF 5.0에서 추가된 모듈 형식은 지원되지 않습니다.
 따라서 끌어오기 서버에서 사용할 DSC 리소스 모듈을 패키징하기 전에 디렉터리 구조를 약간 변경해야 합니다.
 WMF 5.0의 DSC 리소스를 포함하는 모듈의 기본 형식은 `{Module Folder}\{Module Version}\DscResources\{DSC Resource Folder}\`입니다.
-끌어오기 서버에 대해 패키징하기를 하기 전에 제거 합니다 **{모듈 버전}** 되므로 폴더 `{Module Folder}\DscResources\{DSC Resource Folder}\`합니다.
+끌어오기 서버에 대해 패키징하기 전에 **{모듈 버전}** 폴더를 제거하면 되므로 경로는 `{Module Folder}\DscResources\{DSC Resource Folder}\`가 됩니다.
 이렇게 변경하고 위에서 설명한 대로 폴더를 압축하여 이러한 zip 파일을 **ModulePath** 폴더에 배치합니다.
 
 `New-DscChecksum {module zip file}`을 사용하여 새로 추가된 모듈에 대한 체크섬 파일을 만듭니다.
@@ -280,8 +281,8 @@ DSC 커뮤니티는 끌어오기 서비스 프로토콜을 구현하는 여러 �
 
 다음 항목에서는 끌어오기 클라이언트를 설정하는 것에 대해 자세히 설명합니다.
 
-- [구성 ID를 사용 하 여 DSC 끌어오기 클라이언트 설정](pullClientConfigID.md)
-- [구성 이름을 사용 하 여 DSC 끌어오기 클라이언트 설정](pullClientConfigNames.md)
+- [구성 ID를 사용하여 DSC 끌어오기 클라이언트 설정](pullClientConfigID.md)
+- [구성 이름을 사용하여 DSC 끌어오기 클라이언트 설정](pullClientConfigNames.md)
 - [부분 구성](partialConfigs.md)
 
 ## <a name="see-also"></a>참고 항목
@@ -289,5 +290,5 @@ DSC 커뮤니티는 끌어오기 서비스 프로토콜을 구현하는 여러 �
 - [Windows PowerShell 필요한 상태 구성 개요](../overview/overview.md)
 - [구성 시행](enactingConfigurations.md)
 - [DSC 보고서 서버 사용](reportServer.md)
-- [[MS-DSCPM]: Desired State Configuration 끌어오기 모델 프로토콜](https://msdn.microsoft.com/library/dn393548.aspx)
-- [[MS-DSCPM]: Desired State Configuration 끌어오기 모델 프로토콜 오류](https://msdn.microsoft.com/library/mt612824.aspx)
+- [[MS-DSCPM]: 필요한 상태 구성 끌어오기 모델 프로토콜](https://msdn.microsoft.com/library/dn393548.aspx)
+- [[MS-DSCPM]: 필요한 상태 구성 끌어오기 모델 프로토콜 오류](https://msdn.microsoft.com/library/mt612824.aspx)

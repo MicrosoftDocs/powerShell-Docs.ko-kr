@@ -3,16 +3,16 @@ ms.date: 09/11/2018
 contributor: JKeithB
 keywords: gallery,powershell,psgallery
 title: 수동 패키지 다운로드
-ms.openlocfilehash: 57baa14089b803f58c42ccb54553ecace841e34b
-ms.sourcegitcommit: e24525046dd37166b9d83eeecdc534726316f429
-ms.translationtype: MTE95
+ms.openlocfilehash: af628f99befe50c16c2c0c60f1a352647af34ff4
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52742825"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58054880"
 ---
 # <a name="manual-package-download"></a>수동 패키지 다운로드
 
-PowerShell 갤러리는 PowerShellGet cmdlet을 사용하지 않고 웹 사이트에서 패키지를 직접 다운로드하도록 지원합니다. 내부 저장소에 복사할 수 있습니다는 NuGet 패키지 (.nupkg) 파일과 모든 패키지를 다운로드할 수 있습니다.
+PowerShell 갤러리는 PowerShellGet cmdlet을 사용하지 않고 웹 사이트에서 패키지를 직접 다운로드하도록 지원합니다. 모든 패키지를 NuGet 패키지(.nupkg) 파일로 다운로드한 다음, 내부 리포지토리에 복사할 수 있습니다.
 
 > [!NOTE]
 > 수동 패키지 다운로드는 Install-Module cmdlet을 대체하기 위한 것이 **아닙니다**.
@@ -45,7 +45,7 @@ NuGet 패키지 파일에는 원래 패키지된 코드의 일부가 아닌 다�
 1. 로컬 폴더에 NuGet 패키지의 콘텐츠를 추출합니다.
 2. 폴더에서 NuGet 관련 요소를 삭제합니다.
 3. 폴더 이름을 바꿉니다. 기본 폴더 이름은 일반적으로 `<name>.<version>`입니다. 태그가 시험판 버전으로 지정된 모듈인 경우 버전에 "-prerelease"가 포함될 수 있습니다. 폴더 이름을 모듈 이름으로만 바꿉니다. 예를 들어 "azurerm.storage.5.0.4-preview"는 "azurerm.storage"가 됩니다.
-4. 폴더의 폴더 중 하나를 복사 합니다 `$env:PSModulePath value`합니다. `$env:PSModulePath` 세미콜론으로 구분 된 집합 모듈에 대 한 PowerShell 같아야 하는 경로입니다.
+4. 폴더를 `$env:PSModulePath value`에 있는 폴더 중 하나로 복사합니다. `$env:PSModulePath`는 세미콜론으로 구분된 일련의 경로이고, PowerShell은 여기에서 모듈을 찾아야 합니다.
 
 > [!IMPORTANT]
 > 수동 다운로드에는 모듈에 필요한 종속성이 모두 포함되어 있지 않습니다. 패키지에 종속성이 있는 경우 이 모듈이 제대로 작동하려면 시스템에 해당 패키지를 설치해야 합니다. PowerShell 갤러리에는 패키지에 필요한 모든 종속성이 표시됩니다.

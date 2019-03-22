@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: gallery,powershell,cmdlet,psget
 title: PowerShellGet 설치
-ms.openlocfilehash: 5c51cb1c7ea2538cc5f8503ce6c5d80edda70e15
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: 23a53a9117c9f6a7ad157b635cd7ff4b3b3444c5
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002226"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58054832"
 ---
 # <a name="installing-powershellget"></a>PowerShellGet 설치
 
@@ -57,7 +57,7 @@ ms.locfileid: "50002226"
   Exit
   ```
 
-- PowerShellGet 및 PackageManagment 모듈이 다른 프로세스에서 로드되지 않았음을 확인합니다.
+- PowerShellGet 및 PackageManagement 모듈이 다른 프로세스에서 로드되지 않았는지 확인합니다.
 - `$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\` 및 `$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\` 폴더의 내용을 삭제합니다.
 - 관리자 권한으로 PS 콘솔을 다시 열고 다음 명령을 실행합니다.
 

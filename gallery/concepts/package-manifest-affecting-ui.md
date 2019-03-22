@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: PowerShell
 title: PowerShell 갤러리 UI에 영향을 주는 패키지 매니페스트 값
-ms.openlocfilehash: dcba56d9f7edf0c08a3b9e3f2326b39a6b3be3fa
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: cedf81df8de29c54ef559a800d654305029491ec
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681858"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58058218"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>PowerShell 갤러리 UI에 영향을 주는 패키지 매니페스트 값
 
@@ -40,7 +40,7 @@ ms.locfileid: "55681858"
 | **역할 기능** | PowerShell 갤러리에 게시되는 모듈에 JEA에서 사용되는 하나 이상의 역할 기능(.psrc) 파일이 있을 때 나열됩니다. [역할 기능](/powershell/jea/role-capabilities)에 대한 자세한 내용은 JEA 문서를 참조하세요. | 예 | 아니요 |
 | **PowerShell 버전** | 스크립트 또는 모듈 매니페스트에 지정됩니다. PowerShell 5.0 이하에서 사용하도록 디자인된 모듈의 경우 태그를 사용하여 제어됩니다. Desktop의 경우 PSEdition_Desktop 태그를 사용하고, Core의 경우 PSEdition_Core를 사용합니다. PowerShell 5.1 이상에서만 사용할 모듈의 경우 주 매니페스트에 CompatiblePSEditions 키가 있습니다. 자세한 내용은 [PowerShell Get 설명서](module-psedition-support.md)에서 PS Edition 기능을 참조하세요. | 예 | 예 |
 | **종속성** | 종속성은 모듈에서 RequiredModules로 선언되거나 스크립트 매니페스트에서 #Requires –Module (이름)로 선언되는 PowerShell 갤러리의 모듈입니다. | 예 | 예 |
-| **최소 Powershell 버전** | 모듈 매니페스트에서 PowerShellVersion으로 지정될 수 있습니다. | 예 | 아니요 |
+| **최소 PowerShell 버전** | 모듈 매니페스트에서 PowerShellVersion으로 지정될 수 있습니다. | 예 | 아니요 |
 | **버전 기록** | 버전 기록은 PowerShell 갤러리의 모듈에 대한 업데이트를 반영합니다. 삭제 기능을 사용하여 패키지의 버전이 숨겨져 있으면 패키지 소유자에게만 표시되고 버전 기록에는 표시되지 않습니다. | 아니요 | 아니요 |
 | **프로젝트 사이트** | 프로젝트 사이트는 ProjectURI를 지정하여 모듈 매니페스트의 Privatedata\PSData 섹션의 모듈에 대해 제공됩니다. 스크립트 매니페스트에서는 .PROJECTURI를 지정하여 제어됩니다. | 예 | 예 |
 | **라이선스** | 라이선스 링크는 LicenseURI를 지정하여 모듈 매니페스트의 Privatedata\PSData 섹션의 모듈에 대해 제공됩니다. 스크립트 매니페스트에서는 .LICENSEURI를 지정하여 제어됩니다. 라이선스가 LicenseURI를 통해 제공되지 않거나 모듈 내에서 제공되지 않는 경우, PowerShell 갤러리에 대한 사용 약관에 패키지에 대한 사용 약관이 명시됩니다. 자세한 내용은 사용 약관을 참조하세요. | 예 | 예 |

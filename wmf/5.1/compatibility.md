@@ -3,16 +3,17 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: WMF 5.1 운영 체제 호환성
-ms.openlocfilehash: f0037dbc3b172fc98f5f8044a794e49f7727a05c
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: f4d7d1403c1f397bf6720485d7a7302543c2010f
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34187513"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794972"
 ---
-# <a name="wmf-51-operating-system-compatibility"></a>WMF 5.1 운영 체제 호환성 #
+# <a name="wmf-51-operating-system-compatibility"></a>WMF 5.1 운영 체제 호환성
 
-> 참고: 이 정보는 임시로 제공되며 변경될 수 있습니다.
+> [!NOTE]
+> 이 정보는 임시로 제공되며 변경될 수 있습니다.
 
 | 운영 체제 버전 | [WMF 5.1](https://aka.ms/wmf51download) | [WMF 5.0](https://aka.ms/wmf5download) | [WMF 4.0](https://aka.ms/wmf4download) |  [WMF 3.0](https://aka.ms/wmf3download) | [WMF 2.0](https://aka.ms/wmf2download) |
 | ------------------------ | ----------- | ----------- | ----------- | ------------ |  ------------- |
@@ -29,11 +30,9 @@ ms.locfileid: "34187513"
 | Windows Server 2003| | | |  | 예 |
 | Windows XP | | | |  | 예 |
 
-
 "함께 제공*" 정보: WMF 5.0 기능은 원래 Windows 10 RTM 버전에 포함되었습니다.
 WMF 5.1 기능은 Windows Server 2016 및 Windows 10 Anniversary Edition에 포함되었습니다.
 Windows 업데이트를 통해 업데이트가 제공되므로 WMF 5.1은 이러한 운영 체제 버전에는 적용되지 않습니다.
-
 
 Windows에서는 WMF가 제공되지 않습니다.
 WMF는 이전에 릴리스된 Windows 버전에 Windows 기능 집합을 제공하는 업그레이드 패키지입니다.

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC 리소스 디버그
-ms.openlocfilehash: 9b2e7dd9b42332b869c4d7fabb21bd4b5a6b8800
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: c088e13a25ba31ceebaf52b2d24b5d32b96ae2fc
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402511"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055583"
 ---
 # <a name="debugging-dsc-resources"></a>DSC 리소스 디버그
 
@@ -105,7 +105,7 @@ PowerShell ISE의 새 인스턴스를 시작합니다.
 
 [Enable-DscDebug](/powershell/module/PSDesiredStateConfiguration/Enable-DscDebug)를 호출한 후 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration)을 호출하면 항상 구성으로 인해 디버거가 중단됩니다. 구성이 정상적으로 실행되도록 하려면 [Disable-DscDebug](/powershell/module/PSDesiredStateConfiguration/Disable-DscDebug) cmdlet을 호출하여 디버깅을 사용하지 않도록 설정해야 합니다.
 
->**참고:** 재부팅 해도 LCM의 디버그 상태가 변경 되지 않습니다. 디버깅을 사용하도록 설정하는 경우 재부팅 후 구성을 시작하면 여전히 디버거가 중단됩니다.
+>**참고:** 재부팅해도 LCM의 디버그 상태가 변경되지 않습니다. 디버깅을 사용하도록 설정하는 경우 재부팅 후 구성을 시작하면 여전히 디버거가 중단됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 끌어오기 서버 모범 사례
-ms.openlocfilehash: da67f8fd793878b097ffb260afad0fcf5c69bb04
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: fe483a487f85f2e4edb0928fccfe98746ae11231
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681448"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58057708"
 ---
 # <a name="pull-server-best-practices"></a>끌어오기 서버 모범 사례
 
@@ -16,7 +16,7 @@ ms.locfileid: "55681448"
 > [!IMPORTANT]
 > 끌어오기 서버(Windows 기능 *DSC-Service*)는 Windows Server의 지원되는 구성 요소이지만 새로운 기능을 제공할 계획은 없습니다. 관리되는 클라우드를 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)(Windows Server에 끌어오기 서버 이외의 기능 포함) 또는 [여기](pullserver.md#community-solutions-for-pull-service)에 나열된 커뮤니티 솔루션 중 하나로 전환하기 시작하는 것이 좋습니다.
 
-요약: 이 문서는 프로세스 및 확장성 솔루션을 준비 하는 엔지니어를 지원 하기 위한 것입니다. 세부 내용에서는 고객이 식별하고 제품 팀이 검증을 통해 미래에 대비하고 안정적이라고 간주되는 권장 사항으로 확인한 모범 사례를 제공합니다.
+요약: 이 문서는 솔루션을 준비하고 있는 엔지니어를 지원하는 프로세스 및 확장성을 포함하기 위해 작성되었습니다. 세부 내용에서는 고객이 식별하고 제품 팀이 검증을 통해 미래에 대비하고 안정적이라고 간주되는 권장 사항으로 확인한 모범 사례를 제공합니다.
 
 | |문서 정보|
 |:---|:---|
@@ -64,7 +64,7 @@ Windows PowerShell에서는 선언적 구성을 만들고 관리하는 데 사�
 
 ### <a name="software-downloads"></a>소프트웨어 다운로드
 
-Windows 업데이트에서 최신 콘텐츠를 설치 하는 것 외에도 가지 다운로드 하는 DSC 끌어오기 서버를 배포 하려면이 최선의 방법 끌어오기 서버 프로 비전을 자동화 하는 Windows Management Framework 및 DSC 모듈의 최신 버전입니다.
+Windows 업데이트에서 최신 콘텐츠를 설치하는 것 외에도 DSC 끌어오기 서버를 배포하기 위한 모범 사례인 다음과 같은 두 가지 다운로드가 있습니다. 최신 버전의 Windows Management Framework 및 끌어오기 서버 프로비전을 자동화하는 DSC 모듈
 
 ### <a name="wmf"></a>WMF
 
@@ -104,7 +104,7 @@ Windows Server 2012 R2용 설치 파일에 액세스할 수 있나요?|
 
 끌어오기 서버 배포는 물리적 서버와 가상 서버 모두에서 지원됩니다. 끌어오기 서버의 크기 요구 사항은 Windows Server 2012 R2의 요구 사항과 일치합니다.
 
-CPU: 1.4ghz 64 비트 프로세서 메모리: 디스크 공간 50MB 32GB 네트워크: 기가 비트 이더넷 어댑터
+CPU: 1.4GHz 64비트 프로세서 메모리: 512MB 디스크 공간: 32GB 네트워크: 기가비트 이더넷 어댑터
 
 계획 작업|
 ---|
@@ -260,7 +260,7 @@ Install-Module xPSDesiredStateConfiguration
 
 DSC 끌어오기 서버를 배포하는 최상의 방법은 DSC 구성 스크립트를 사용하는 것입니다. 이 문서에서는 DSC 웹 서비스만 구성하는 기본 설정과 DSC 웹 서비스를 포함하는 종단 간 Windows Server를 구성하는 고급 설정이 모두 포함된 스크립트를 제공합니다.
 
-참고:  현재는 `xPSDesiredStateConfiguation` DSC 모듈 EN-US 로캘의 서버가 필요 합니다.
+참고:  현재 `xPSDesiredStateConfiguration` DSC 모듈을 사용하려면 EN-US 로캘의 서버가 필요합니다.
 
 ### <a name="basic-configuration-for-windows-server-2012"></a>Windows Server 2012에 대한 기본 구성
 

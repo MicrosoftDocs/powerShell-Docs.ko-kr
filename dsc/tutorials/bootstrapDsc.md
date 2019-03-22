@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 초기 부팅 시 DSC를 사용하여 가상 컴퓨터 구성
-ms.openlocfilehash: 2ae6f7a85af3d08bad9e97b90efaefb2ff8410ca
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: f9634c330832e23fb2c6f08c5b299b55a5505ac9
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681613"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58059425"
 ---
 # <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>초기 부팅 시 DSC를 사용하여 가상 컴퓨터 구성
 
@@ -98,14 +98,14 @@ Configuration SampleIISInstall
 
 7. DSC MOF 문서를 설치한 VHD를 사용하여 VM을 만듭니다.
 
-초기 부팅 및 운영 체제 설치 후 IIS가 설치됩니다.
+초기 부팅 및 운영 체제 설치 후에 IIS가 설치됩니다.
 이 작업은 [Get-WindowsFeature](/powershell/module/servermanager/get-windowsfeature) cmdlet을 호출하여 확인할 수 있습니다.
 
 ## <a name="inject-a-dsc-metaconfiguration-into-a-vhd"></a>DSC 메타 구성을 VHD에 삽입
 
 또한 메타 구성([LCM(로컬 구성 관리자) 구성](../managing-nodes/metaConfig.md) 참조)을 VHD에 `MetaConfig.mof` 파일로 삽입하여 초기 부팅 시 구성을 가져오도록 컴퓨터를 구성할 수도 있습니다.
 **DSCAutomationHostEnabled** 레지스트리 키가 2(기본값)로 설정된 경우 컴퓨터가 처음으로 부팅할 때 DSC에서 `MetaConfig.mof`에 정의된 구성을 LCM에 적용합니다.
-메타 구성에서 LCM이 끌어오기 서버에서 구성을 가져오도록 지정하는 경우 컴퓨터에서는 초기 부팅 시 해당 끌어오기 서버에서 구성을 가져오려고 합니다.
+메타 구성에서 LCM이 끌어오기 서버로부터 구성을 가져오도록 지정하는 경우 컴퓨터에서는 초기 부팅 시 해당 끌어오기 서버로부터 구성을 가져오려고 합니다.
 DSC 끌어오기 서버 설정에 대한 자세한 내용은 [DSC 웹 끌어오기 서버 설정](../pull-server/pullServer.md)을 참조하세요.
 
 이 예제에서는 이전 섹션에 설명된 구성(**SampleIISInstall**) 및 다음 메타 구성을 모두 사용합니다.
@@ -140,7 +140,7 @@ configuration PullClientBootstrap
    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
    ```
 
-2. [웹 DSC 끌어오기 서버를 설정](../pull-server/pullServer.md)하고 **SampleIISInistall** 구성을 적절한 폴더에 저장합니다.
+2. [웹 DSC 끌어오기 서버를 설정](../pull-server/pullServer.md)하고, **SampleIISInstall** 구성을 적절한 폴더에 저장합니다.
 
 3. PowerShell 5.0 이상을 실행하는 컴퓨터에서 위의 메타 구성(**PullClientBootstrap**)을 PowerShell 스크립트(.ps1) 파일로 저장합니다.
 
@@ -168,7 +168,7 @@ configuration PullClientBootstrap
 
 8. DSC MOF 문서를 설치한 VHD를 사용하여 VM을 만듭니다.
 
-초기 부팅 및 운영 체제 설치 후 DSC는 끌어오기 서버에서 구성을 가져오고 IIS가 설치됩니다.
+초기 부팅 및 운영 체제 설치 후에 DSC가 끌어오기 서버로부터 구성을 가져오면 IIS가 설치됩니다.
 이 작업은 [Get-WindowsFeature](/powershell/module/servermanager/get-windowsfeature) cmdlet을 호출하여 확인할 수 있습니다.
 
 ## <a name="disable-dsc-at-boot-time"></a>부팅 시 DSC를 사용하지 않도록 설정

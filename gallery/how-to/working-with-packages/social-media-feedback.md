@@ -3,16 +3,16 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: 소셜 미디어나 댓글을 통해 피드백 제공
-ms.openlocfilehash: a7cdcc2ff2c18fb606d077adf0bdecf57c90703f
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: a27a2fc7cf54835cb53b11382c20d1354345a5a3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50003760"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055005"
 ---
 # <a name="providing-feedback-via-social-media-or-comments"></a>소셜 미디어나 댓글을 통해 피드백 제공
 
-Powershell 갤러리에서 사용자는 두 가지 방식을 통해 패키지에 대한 공개 피드백을 제공할 수 있습니다.
+PowerShell 갤러리에서는 사용자에게 두 가지 방식으로 패키지에 대한 공개 피드백을 제공합니다.
 
 - 왼쪽 모서리의 링크를 사용하여 Facebook, LinkedIn 또는 Twitter 소셜 미디어 사이트에서 패키지를 "공유"합니다.
 - 댓글 기능을 사용하여 패키지에 대한 댓글을 게시합니다. 그러면 작성자가 게시한 패키지에 대한 댓글을 확인할 수 있습니다.
@@ -26,8 +26,7 @@ PowerShell 갤러리에 있는 각 패키지의 페이지 왼쪽에는 Facebook,
 
 다른 사람들에게 추천하려는 패키지가 있는 경우 소셜 미디어에서 공유하면 효율적입니다.
 PowerShell 갤러리에서는 각 소셜 미디어 사이트에서 "공유"된 패키지를 확인하여 해당 패키지가 각 소셜 미디어 사이트에서 공유된 횟수를 표시합니다.
-이 경우 해당 패키지가 공유된 횟수만 표시되므로, 다른 사용자들은 해당 횟수를 패키지의 "좋아요" 수로 해석하게 됩니다.
-
+이 경우 해당 패키지가 공유된 횟수만 표시되므로 다른 사용자들은 해당 횟수를 패키지의 "좋아요" 수로 해석하게 됩니다.
 
 ## <a name="comments"></a>설명
 

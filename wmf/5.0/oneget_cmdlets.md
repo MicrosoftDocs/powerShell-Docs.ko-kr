@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 2f05fe96ec792a31fabf3aff0f9e18b40178316c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 042e9a30068d32dc5860255bdec960371121d866
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680494"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795099"
 ---
 # <a name="packagemanagement-cmdlets"></a>PackageManagement Cmdlet
 
@@ -130,7 +130,7 @@ Import-PackageProvider –Name "Nuget" -RequiredVersion "2.8.5.201" -Verbose
 Import-PackageProvider –Name MyProvider –RequiredVersion xxxx -force
 ```
 
-## <a name="-install-package-cmdletpowershellmodulepackagemanagementinstall-package"></a>[ Install-Package Cmdlet](/powershell/module/PackageManagement/Install-Package)
+## <a name="install-package-cmdletpowershellmodulepackagemanagementinstall-package"></a>[Install-Package Cmdlet](/powershell/module/PackageManagement/Install-Package)
 
 이 cmdlet을 사용하면 로드된 패키지 공급자를 사용하여 사용 가능한 패키지 소스에서 소프트웨어 패키지를 설치할 수 있습니다.
 

@@ -3,12 +3,12 @@ ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: 친숙한 명령 이름 사용
 ms.assetid: 021e2424-c64e-4fa5-aa98-aa6405758d5d
-ms.openlocfilehash: 3d2c681623086e061e237f08603d65150d2b1947
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: b61d647d882d4b2f7ea423a48319e3c104ce96c7
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55683053"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795677"
 ---
 # <a name="using-familiar-command-names"></a>친숙한 명령 이름 사용
 
@@ -45,7 +45,7 @@ Alias           cls -> Clear-Host
 
 ## <a name="interpreting-standard-aliases"></a>표준 별칭 해석
 
-에서는 이전에 설명한 별칭은 다른 명령 셸 사용 하 여 이름 호환성을 위해 설계 되었습니다.
+앞서 설명한 별칭은 다른 명령 셸에 대한 이름 호환성을 유지하기 위해 설계되었습니다.
 PowerShell에 기본 제공된 대부분의 별칭은 간결하게 디자인되었습니다. 이름이 짧을수록 입력하기가 더 쉽지만, 어떤 명령을 나타내는지 잘 모르면 이해하기 어렵습니다.
 
 PowerShell 별칭은 명확성과 간결성 간에 균형을 유지하려고 합니다. PowerShell은 일반 noun가 verb에 대한 표준 별칭 집합을 사용합니다.
@@ -65,7 +65,7 @@ PowerShell 별칭은 명확성과 간결성 간에 균형을 유지하려고 합
 
 | Cmdlet 이름    | 별칭 |
 |----------------|-------|
-| `Get-Item `    | gi    |
+| `Get-Item`     | gi    |
 | `Set-Item`     | si    |
 | `Get-Location` | gl    |
 | `Set-Location` | sl    |

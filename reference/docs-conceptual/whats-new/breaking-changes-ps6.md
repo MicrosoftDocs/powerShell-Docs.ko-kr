@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: PowerShell 6.0의 주요 변경 내용
-ms.openlocfilehash: d477a9b27e8d5df6653ee40f8b606879b60a80c7
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 975c978629f81f0f13a235c3d304e5ec03bae6d0
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680467"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795694"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>PowerShell 6.0의 주요 변경 내용
 
@@ -65,6 +65,10 @@ ms.locfileid: "55680467"
 ### <a name="-counter-cmdlets"></a>`*-Counter` cmdlet
 
 지원되지 않는 API를 사용하는 `*-Counter`는 더 나은 해결 방법을 찾을 때까지 PowerShell Core에서 제거되었습니다.
+
+### <a name="-eventlog-cmdlets"></a>`*-EventLog` cmdlet
+
+지원되지 않는 API를 사용하는 `*-EventLog`는 PowerShell Core에서 제거되었습니다. 더 나은 해결 방법을 찾을 때까지입니다. `Get-WinEvent` 및 `Create-WinEvent`는 Windows에서 이벤트를 가져오고 만드는 데 제공됩니다.
 
 ## <a name="enginelanguage-changes"></a>엔진/언어 변경 내용
 
@@ -179,9 +183,9 @@ Unix 규칙에 맞게 `pwsh.exe`의 종료 코드 변경
 
 지원되지 않는 API 때문에 `Diagnostics` 모듈의 `Counter` cmdlet 및 `LocalAccounts` 모듈이 더 나은 해결 방법을 찾을 때까지 제거되었습니다.
 
-### <a name="executing-powershell-script-with-bool-parameter-does-not-work-4036httpsgithubcompowershellpowershellissues4036"></a>bool 매개 변수로 PowerShell 스크립트를 실행할 경우, 작동하지 않음 [#4036](https://github.com/PowerShell/PowerShell/issues/4036)
+### <a name="executing-powershell-script-with-bool-parameter-does-not-work-4036httpsgithubcompowershellpowershellissues4036"></a>부울 매개 변수를 포함한 PowerShell 스크립트를 실행할 경우 작동하지 않음 [#4036](https://github.com/PowerShell/PowerShell/issues/4036)
 
-이전에는 powershell.exe(현재 `pwsh.exe`)를 사용하여 `-File`로 PowerShell 스크립트를 실행할 경우, $true/$false를 매개 변수 값으로 전달할 수 없었습니다. 매개 변수에 대한 구문 분석된 값으로 $true/$false 지원이 추가되었습니다. 현재 문서화된 구문이 작동하지 않으므로 스위치 값도 지원됩니다.
+이전에는 **powershell.exe**(현재 **pwsh.exe**)를 사용하여 `-File`을 사용하는 PowerShell 스크립트를 실행할 경우 `$true`/`$false`를 매개 변수 값으로 전달할 수 없었습니다. 매개 변수에 대한 구문 분석된 값으로 `$true`/`$false` 지원이 추가되었습니다. 현재 문서화된 구문이 작동하지 않으므로 스위치 값도 지원됩니다.
 
 ### <a name="remove-clrversion-property-from-psversiontable-4027httpsgithubcompowershellpowershellissues4027"></a>`$PSVersionTable`에서 `ClrVersion` 속성 제거 [#4027](https://github.com/PowerShell/PowerShell/issues/4027)
 
@@ -193,7 +197,7 @@ Unix 규칙에 맞게 `pwsh.exe`의 종료 코드 변경
 
 ### <a name="implement-unicode-escape-parsing-3958httpsgithubcompowershellpowershellissues3958"></a>유니코드 이스케이프 구문 분석 구현 [#3958](https://github.com/PowerShell/PowerShell/issues/3958)
 
-`` `u#### `` 또는 `` `u{####} ``이 해당 유니코드 문자로 변환됩니다. 리터럴 `` `u ``를 출력하려면 backtick을 이스케이프합니다(``` ``u ```).
+`` `u####`` 또는 `` `u{####}``이 해당 유니코드 문자로 변환됩니다. 리터럴 `` `u``를 출력하려면 backtick을 이스케이프합니다(``` ``u```).
 
 ### <a name="change-new-modulemanifest-encoding-to-utf8nobom-on-non-windows-platforms-3940httpsgithubcompowershellpowershellissues3940"></a>비 Windows 플랫폼에서 `New-ModuleManifest` 인코딩을 `UTF8NoBOM`으로 변경 [#3940](https://github.com/PowerShell/PowerShell/issues/3940)
 
@@ -271,4 +275,4 @@ Unix에서는 셸이 대화형 셸을 나타내는 `-i`를 허용하는 것이 �
 - `System.Net.ServicePointManager` 설정이 더 이상 적용되지 않습니다.
 - 현재 macOS에서 사용할 수 있는 인증서 기반 인증은 없습니다.
 - `http://` URI를 통해 `-Credential`을 사용하면 오류가 발생합니다. 오류를 표시하지 않으려면 `https://` URI를 사용하거나 `-AllowUnencryptedAuthentication` 매개 변수를 제공합니다.
-- `-MaximumRedirection` 이제 리디렉션을 시도 마지막 리디렉션 결과 반환 하는 대신 제공 된 제한을 초과 하면 종료 오류를 생성 합니다.
+- `-MaximumRedirection`은 이제 리디렉션이 마지막 리디렉션 결과를 반환하는 대신 제공된 제한을 초과하는 경우 종료 오류를 생성합니다.

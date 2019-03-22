@@ -2,12 +2,12 @@
 ms.date: 08/24/2018
 keywords: dsc,powershell,configuration,setup
 title: DSC 스크립트 리소스
-ms.openlocfilehash: ef84239820a44aab2a028f7f0fe17653a851b72e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 86dfb74bf52d8907686bb955fd722f4fb8b9131b
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680227"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58054759"
 ---
 # <a name="dsc-script-resource"></a>DSC 스크립트 리소스
 
@@ -61,7 +61,7 @@ DSC에서는 `GetScript`의 출력을 사용하지 않습니다. [Get-DscConfigu
 
 ## <a name="examples"></a>예
 
-### <a name="example-1-write-sample-text-using-a-script-resource"></a>예제 1: 스크립트 리소스를 사용 하 여 샘플 텍스트를 작성 합니다.
+### <a name="example-1-write-sample-text-using-a-script-resource"></a>예제 1: 스크립트 리소스를 사용하여 샘플 텍스트 쓰기
 
 이 예제에서는 각 노드에서 `C:\TempFolder\TestFile.txt`의 존재 여부를 테스트합니다. 존재하지 않는 경우 `SetScript`를 사용하여 만듭니다. `GetScript`는 파일의 내용을 반환하고, 해당 반환 값은 사용되지 않습니다.
 
@@ -86,7 +86,7 @@ Configuration ScriptTest
 }
 ```
 
-### <a name="example-2-compare-version-information-using-a-script-resource"></a>예제 2: 스크립트 리소스를 사용 하 여 버전 정보를 비교 합니다.
+### <a name="example-2-compare-version-information-using-a-script-resource"></a>예제 2: 스크립트 리소스를 사용하여 버전 정보 비교
 
 이 예제에서는 작성 컴퓨터의 텍스트 파일에서 *규격* 버전 정보를 검색한 후 `$version` 변수에 저장합니다. 노드의 MOF 파일을 생성할 때 DSC는 각 스크립트 블록의 `$using:version` 변수를 `$version` 변수의 값으로 바꿉니다. 실행 동안 *규격* 버전은 각 노드의 텍스트 파일에 저장되고, 후속 실행에서 비교 및 업데이트됩니다.
 

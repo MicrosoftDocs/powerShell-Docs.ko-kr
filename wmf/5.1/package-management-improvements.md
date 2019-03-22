@@ -4,21 +4,22 @@ ms.topic: conceptual
 keywords: wmf,powershell,setup
 contributor: jianyunt, quoctruong
 title: WMF 5.1의 향상된 패키지 관리
-ms.openlocfilehash: adcddcc94022f4961f3dd23c2cd56f2a8720049b
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 30ef59ed9dc0d56636d85cc6e53523a9a73963a4
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682563"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794283"
 ---
-# <a name="improvements-to-package-management-in-wmf-51"></a>WMF 5.1의 향상된 패키지 관리#
+# <a name="improvements-to-package-management-in-wmf-51"></a>WMF 5.1의 향상된 패키지 관리
 
-## <a name="improvements-in-packagemanagement"></a>패키지 관리의 개선 사항 ##
+## <a name="improvements-in-packagemanagement"></a>패키지 관리의 개선 사항
+
 WMF 5.1에서 수정된 사항은 다음과 같습니다.
 
 ### <a name="version-alias"></a>버전 별칭
 
-**시나리오**: 시스템에 P1 패키지의 버전 1.0 및 2.0이 설치되어 있는데 버전 1.0을 제거하려는 경우 `Uninstall-Package -Name P1 -Version 1.0`을 실행하면 cmdlet 실행 후 버전 1.0이 제거되어야 합니다. 그러나 결과로 버전 2.0이 제거됩니다.
+**시나리오**: 시스템에 P1 패키지의 버전 1.0 및 2.0이 설치되어 있고, 버전 1.0을 제거하려는 경우 `Uninstall-Package -Name P1 -Version 1.0`을 실행하면 cmdlet을 실행한 후에 버전 1.0이 제거되어야 합니다. 그러나 결과로 버전 2.0이 제거됩니다.
 
 이는 `-Version` 매개 변수가 `-MinimumVersion` 매개 변수의 별칭이기 때문입니다. PackageManagement에서 최소 버전이 1.0인 정규화된 패키지를 찾을 경우 최신 버전을 반환합니다. 일반적으로 최신 버전을 찾는 것이 필요한 결과이므로 일반적인 사례에서는 이 동작이 필요합니다. 그러나 `Uninstall-Package` 사례에는 적용하지 않아야 합니다.
 
@@ -26,11 +27,11 @@ WMF 5.1에서 수정된 사항은 다음과 같습니다.
 
 ### <a name="multiple-prompts-for-bootstrapping-the-nuget-provider"></a>NuGet 공급자를 부트스트래핑할지 묻는 메시지 여러 번 표시
 
-**시나리오**: `Find-Module`, `Install-Module` 또는 다른 PackageManagement cmdlet을 컴퓨터에서 처음으로 실행하면 PackageManagement에서 NuGet 공급자를 부트스트랩하려고 합니다. 이는 PowershellGet 공급자도 NuGet 공급자를 사용하여 PowerShell 모듈을 다운로드하기 때문입니다. 그런 다음 PackageManagement에서는 NuGet 공급자 설치를 허용할지 묻는 메시지를 표시합니다. 사용자가 부트스트래핑에 대해 “예"를 선택하면 NuGet 공급자의 최신 버전이 설치됩니다.
+**시나리오**: `Find-Module`이나 `Install-Module` 또는 다른 PackageManagement cmdlet을 컴퓨터에서 처음으로 실행하면 PackageManagement에서 NuGet 공급자를 부트스트랩하려고 합니다. 이는 PowershellGet 공급자도 NuGet 공급자를 사용하여 PowerShell 모듈을 다운로드하기 때문입니다. 그런 다음 PackageManagement에서는 NuGet 공급자 설치를 허용할지 묻는 메시지를 표시합니다. 사용자가 부트스트래핑에 대해 “예"를 선택하면 NuGet 공급자의 최신 버전이 설치됩니다.
 
 그러나 경우에 따라 컴퓨터에 이전 버전의 NuGet 공급자가 설치된 경우 이전 버전의 NuGet이 PowerShell 세션에 먼저 로드되는 경우가 있습니다. 즉, PackageManagement에서 경합 상태가 발생합니다. 그러나 PowerShellGet이 작동하려면 최신 버전의 NuGet 공급자가 필요하므로 PowerShellGet에서는 PackageManagement에 NuGet 공급자를 다시 부트스트랩하도록 요청합니다. 따라서 NuGet 공급자를 부트스트래핑할지 묻는 메시지 여러 번 표시됩니다.
 
-**해결 방법**: WMF5.1에서 PackageManagement는 최신 버전의 NuGet 공급자를 부트스트래핑 하는 것에 대 한 여러 프롬프트를 방지 하려면 NuGet 공급자를 로드 합니다.
+**해결 방법**: WMF 5.1에서 PackageManagement는 NuGet 공급자를 부트스트랩하라는 메시지가 여러 번 표시되지 않도록 최신 버전의 NuGet 공급자를 로드합니다.
 
 $env:ProgramFiles\PackageManagement\ProviderAssemblies 또는 $env:LOCALAPPDATA\PackageManagement\ProviderAssemblies에 있는 경우 NuGet 공급자(NuGet-Anycpu.exe)의 이전 버전을 수동으로 삭제하여 이 문제를 해결할 수도 있습니다.
 
@@ -41,7 +42,7 @@ $env:ProgramFiles\PackageManagement\ProviderAssemblies 또는 $env:LOCALAPPDATA\
 
 **시나리오**: WMF 5.0에서 PackageManagement는 인트라넷에만 연결되고 인터넷에는 연결되지 않은 컴퓨터를 지원하지 않았습니다.
 
-**해결 방법**: WMF 5.1에서는 인트라넷 컴퓨터에서 PackageManagement를 사용 하도록 허용 하려면 다음이 단계를 수행 합니다.
+**해결 방법**: WMF 5.1에서는 다음 단계에 따라 인트라넷 컴퓨터에서 PackageManagement를 사용하도록 허용할 수 있습니다.
 
 1. 인터넷에 연결된 다른 컴퓨터에서 `Install-PackageProvider -Name NuGet`을 사용하여 NuGet 공급자를 다운로드합니다.
 
@@ -61,6 +62,7 @@ WMF 5.1에서 PackageManagement는 기본 인증이 필요한 리포지토리에
 ``` PowerShell
 Find-Package -Source <SourceWithCredential> -Credential (Get-Credential)
 ```
+
 ### <a name="support-for-using-packagemanagement-behind-a-proxy"></a>프록시 뒤에 있는 PackageManagement 사용 지원
 
 WMF 5.1에서 PackageManagement는 새 프록시 매개 변수 `-ProxyCredential` 및 `-Proxy`를 사용합니다. 이러한 매개 변수를 사용하여 PackageManagement cmdlet에 프록시 URL 및 자격 증명을 지정할 수 있습니다. 기본적으로 시스템 프록시 설정이 사용됩니다. 예:

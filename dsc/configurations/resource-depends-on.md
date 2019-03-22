@@ -2,24 +2,24 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: DependsOn을 사용하는 리소스 종속성
-ms.openlocfilehash: 0d060f7d99bd261b0766028b245d4d32a5e1c349
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 5ea08c76c203188f41513ad0cc1f4571579b4172
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682438"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055702"
 ---
 # <a name="resource-dependencies-using-dependson"></a>DependsOn을 사용하는 리소스 종속성
 
-작성 하는 경우 [구성을](configurations.md)에 추가한 [리소스 블록](../resources/resources.md) 대상 노드의 측면을 구성 하 합니다. 추가 리소스 블록을 계속 하면서, 매우 크고 관리 하기가 불편 구성을 증가할 수 있습니다. 이러한 문제는 리소스 블록에 적용 된 순서입니다. 일반적으로 리소스 구성 내에서 정의 된 순서 대로 적용 됩니다. 보다 크고 복잡 한 구성을 늘어나면 사용할 수는 `DependsOn` 키를 지정 하 여 리소스를 다른 리소스에 종속 된 리소스의 적용된 순서를 변경 합니다.
+[구성](configurations.md)을 작성하는 경우 [리소스 블록](../resources/resources.md)을 추가하여 대상 노드의 측면을 구성합니다. 리소스 블록을 계속 추가하게 되면 구성을 관리하기에는 크고 불편할 수 있습니다. 이러한 문제 중 하나는 리소스 블록에 적용된 순서입니다. 일반적으로 리소스는 구성 내에서 정의된 순서대로 적용됩니다. 구성이 더 크고 복잡해지면 리소스가 다른 리소스에 종속되도록 지정하여 리소스의 적용된 순서를 변경하는 데 `DependsOn` 키를 사용할 수 있습니다.
 
-`DependsOn` 리소스 블록에서 키를 사용할 수 있습니다. 다른 리소스 키는 동일한 키/값 메커니즘을 사용 하 여 정의 됩니다. `DependsOn` 키에서는 다음 구문 사용 하 여 문자열의 배열입니다.
+`DependsOn` 키는 리소스 블록에서 사용할 수 있습니다. 다른 리소스 키와 동일한 키/값 메커니즘을 사용하여 정의됩니다. `DependsOn` 키는 다음 구문을 포함한 문자열의 배열을 사용합니다.
 
 ```
-DependsOn = '[<Resource Type>]<Resoure Name>', '[<Resource Type>]<Resource Name'
+DependsOn = '[<Resource Type>]<Resource Name>', '[<Resource Type>]<Resource Name'
 ```
 
-다음 예제를 사용 하도록 설정 하 고 공개 프로필을 구성한 후 방화벽 규칙을 구성 합니다.
+다음 예제에서는 공개 프로필을 설정하고 구성한 후에 방화벽 규칙을 구성합니다.
 
 ```powershell
 # Install the NetworkingDSC module to configure firewall rules and profiles.
@@ -60,7 +60,7 @@ Configuration ConfigureFirewall
 ConfigureFirewall -OutputPath C:\Temp\
 ```
 
-구성을 적용 하는 경우 방화벽 프로필 항상 구성지 것입니다 먼저 순서에 관계 없이 리소스 블록 정의 됩니다. 구성을 적용 하는 경우에 원하는 경우 되돌릴 수 있는 구성 기존 대상 노드를 확인 해야 합니다.
+구성을 적용하는 경우 방화벽 프로필은 리소스 블록이 정의되는 순서에 관계 없이 항상 먼저 구성됩니다. 구성을 적용하면 원하는 경우 되돌릴 수 있도록 구성이 위치한 대상 노드를 확인해야 합니다.
 
 ```
 PS> Start-DSCConfiguration -Verbose -Wait -Path C:\Temp\ -ComputerName localhost
@@ -118,13 +118,13 @@ VERBOSE: Operation 'Invoke CimMethod' complete.
 VERBOSE: Time taken for configuration job to complete is 15.385 seconds
 ```
 
-경우 이렇게 합니다 **FirewallProfile** 리소스가 어떤 이유로 실패는 **방화벽** 블록에는 먼저 정의 된 경우에 실행 되지 것입니다. `DependsOn` 키를 사용 하면 보다 유연 하 게 리소스 블록을 그룹화 하 고 리소스가 실행 되기 전에 종속성을 해결 있는지 확인 합니다.
+그러면 **FirewallProfile** 리소스가 어떤 이유로 실패하는 경우 **방화벽** 블록이 먼저 정의되더라도 실행되지 않도록 합니다. `DependsOn` 키를 사용하면 보다 유연하게 리소스 블록을 그룹화하고 리소스가 실행되기 전에 종속성을 해결했는지 확인할 수 있습니다.
 
-고급 구성에서 사용할 수도 있습니다 [노드 간 종속성](crossNodeDependencies.md) (예: 도메인 컨트롤러가 클라이언트 도메인에 가입 하기 전에 구성 확인) 훨씬 더 세부적으로 제어할 수 있도록 합니다.
+고급 구성에서 [노드 간 종속성](crossNodeDependencies.md)을 사용하여 훨씬 더 세부적으로 제어할 수도 있습니다(예: 클라이언트 도메인에 가입하기 전에 도메인 컨트롤러가 구성되었는지 확인).
 
 ## <a name="cleaning-up"></a>정리
 
-위의 구성에 적용 한 경우에 모든 변경 내용을 취소 하는 키를 되돌릴 수 있습니다. 위의 예제에서는 설정 된 **사용** false로 키 방화벽 규칙 및 프로필을 사용 하지 않도록 설정 됩니다. 대상 노드의 이전 구성 된 상태와 일치 하도록 필요에 따라 예제를 수정 해야 합니다.
+위의 구성을 적용한 경우 키를 되돌려서 모든 변경 내용을 취소할 수 있습니다. 위의 예제에서 **사용됨** 키를 false로 설정하면 방화벽 규칙 및 프로필을 사용하지 않도록 설정합니다. 대상 노드가 이전 구성된 상태와 일치하도록 필요에 따라 예제를 수정해야 합니다.
 
 ```powershell
         Firewall Firewall
@@ -143,4 +143,4 @@ VERBOSE: Time taken for configuration job to complete is 15.385 seconds
 
 ## <a name="see-also"></a>참고 항목
 
-- [노드 간 종속성을 사용 하 여](./crossNodeDependencies.md)
+- [노드 간 종속성 사용](./crossNodeDependencies.md)

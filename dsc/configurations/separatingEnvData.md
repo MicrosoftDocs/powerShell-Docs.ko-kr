@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 구성 및 환경 데이터 분리
-ms.openlocfilehash: 24a92e5e4f15959498b57a1488a688d5548f3585
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 305a766fec81d4ea4afce187756188b067a2048b
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682048"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794929"
 ---
 # <a name="separating-configuration-and-environment-data"></a>구성 및 환경 데이터 분리
 
@@ -88,7 +88,7 @@ Mode                LastWriteTime         Length Name
 
 단일 구성을 사용하여 웹 사이트의 개발 환경과 프로덕션 환경을 모두 설정하는 예 전체를 살펴보겠습니다. 개발 환경에서는 IIS와 SQL Server가 모두 단일 노드에 설치됩니다. 프로덕션 환경에서는 IIS와 SQL Server가 별도 노드에 설치됩니다. 구성 데이터 .psd1 파일을 사용하여 서로 다른 두 환경의 데이터를 지정하겠습니다.
 
- ### <a name="configuration-data-file"></a>구성 데이터 파일
+### <a name="configuration-data-file"></a>구성 데이터 파일
 
 `DevProdEnvData.psd1`이라는 파일에서 개발 및 프로덕션 환경 데이터를 다음과 같이 정의합니다.
 
@@ -135,7 +135,7 @@ Mode                LastWriteTime         Length Name
 
 구성 스크립트의 끝 부분에서 구성을 호출하며(MOF 문서로 컴파일) `DevProdEnvData.psd1`을 `$ConfigurationData` 매개 변수로 전달합니다.
 
->**참고:** 이 구성에서는 모듈 `xSqlPs` 고 `xWebAdministration` 대상 노드에 설치 합니다.
+>**참고:** 이 구성을 사용하려면 `xSqlPs` 및 `xWebAdministration` 모듈을 대상 노드에 설치해야 합니다.
 
 다음과 같이 이름이 `MyWebApp.ps1`인 파일에서 구성을 정의하겠습니다.
 

@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,security
 title: JEA 사용
-ms.openlocfilehash: 539d280aff0b2656a5e9c710acfa468057753027
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
-ms.translationtype: MTE95
+ms.openlocfilehash: fa3d3a3c8bc0090ec9ad788585ec5df933134173
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45522993"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58054682"
 ---
 # <a name="using-jea"></a>JEA 사용
 
-> 적용 대상: Windows PowerShell 5.0
+> 적용 대상: Windows Powershell 5.0
 
 이 항목에서는 JEA 엔드포인트에 연결하고 JEA 엔드포인트를 사용할 수 있는 다양한 방법을 설명합니다.
 
@@ -108,7 +108,7 @@ Import-PSSession -Session $jeasession -Prefix 'JEA' -CommandName $filteredComman
 [Export-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/Export-PSSession)을 사용하여 암시적 원격에서 프록시 설정된 cmdlet을 유지할 수도 있습니다.
 암시적 원격에 대한 자세한 내용은 [Import-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/import-pssession) 및 [Import-Module](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/import-module)에 대한 도움말 문서를 확인하세요.
 
-## <a name="using-jea-programatically"></a>프로그래밍 방식으로 JEA 사용
+## <a name="using-jea-programmatically"></a>프로그래밍 방식으로 JEA 사용
 
 사내 기술 지원팀 앱 및 웹 사이트와 같은 자동화 시스템 및 사용자 애플리케이션에서 JEA를 사용할 수도 있습니다.
 접근 방식은 비제한 PowerShell 엔드포인트와 통신하는 앱을 빌드하는 것과 같지만, 프로그램이 JEA가 원격 세션에서 실행될 수 있는 명령을 제한하고 있음을 인식해야 한다는 주의 사항이 있습니다.
@@ -129,7 +129,6 @@ $allowedCommands | Where-Object { $_.CommandType -in 'Function', 'Cmdlet' } | Fo
 C# 앱을 빌드하는 경우 [WSManConnectionInfo](https://msdn.microsoft.com/library/system.management.automation.runspaces.wsmanconnectioninfo(v=vs.85).aspx) 개체에 구성 이름을 지정하여 JEA 세션에 연결하는 PowerShell runspace를 만들 수 있습니다.
 
 ```csharp
-
 // using System.Management.Automation;
 var computerName = "SERVER01";
 var configName   = "JEAMaintenance";

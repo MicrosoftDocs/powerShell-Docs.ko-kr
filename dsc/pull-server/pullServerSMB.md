@@ -2,12 +2,12 @@
 ms.date: 04/11/2018
 keywords: dsc,powershell,configuration,setup
 title: DSC SMB 끌어오기 서버 설정
-ms.openlocfilehash: 722120369df9ff383a02c69111e0bacf2e2e76a5
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 9d087a08861b2f4683e81efd1e25f857b8b75e07
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680262"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58057759"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>DSC SMB 끌어오기 서버 설정
 
@@ -59,7 +59,7 @@ Configuration SmbShare
         {
             Name = 'DscSmbShare'
             Path = 'C:\DscSmbShare'
-            FullAccess = 'admininstrator'
+            FullAccess = 'administrator'
             ReadAccess = 'myDomain\Contoso-Server$'
             FolderEnumerationMode = 'AccessBased'
             Ensure = 'Present'
@@ -69,14 +69,14 @@ Configuration SmbShare
 }
 ```
 
-구성 디렉터리를 만들고 `C:\DscSmbShare`존재 하지 않는 경우 다음 해당 디렉터리를 사용 하 여 SMB 파일 공유로, 합니다. **FullAccess** 에 쓰거나 파일 공유에서 삭제 해야 하는 모든 계정에 부여 해야 합니다. **ReadAccess** 공유를 구성 및/또는 DSC 리소스를 가져오는 모든 클라이언트 노드에 제공 되어야 합니다.
+이 구성은 아직 없는 경우 `C:\DscSmbShare` 디렉터리를 만든 다음, 해당 디렉터리를 SMB 파일 공유로 사용합니다. **FullAccess**는 파일 공유에서 작성하거나 삭제해야 하는 계정에 부여되어야 합니다. **ReadAccess**는 공유로부터 구성 및/또는 DSC 리소스를 가져오는 클라이언트 노드에 제공되어야 합니다.
 
 > [!NOTE]
-> DSC 하므로 컴퓨터 자체를 공유에 액세스할 수 있어야 합니다. 시스템 계정으로 기본적으로 실행 됩니다.
+> DSC는 기본적으로 시스템 계정으로 실행되므로 컴퓨터 자체가 공유에 액세스할 수 있어야 합니다.
 
 ### <a name="give-file-system-access-to-the-pull-client"></a>파일 시스템에 끌어오기 클라이언트에 대한 액세스 권한 부여
 
-클라이언트 노드에 **ReadAccess**를 부여하면 해당 노드에서 SMB 공유에 액세스할 수 있지만 해당 공유 내의 파일이나 폴더에는 액세스할 수 없습니다. 클라이언트는 SMB 공유 폴더 및 하위 폴더에 대 한 노드 액세스를 명시적으로 부여 해야 합니다. DSC에서 [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0) 모듈에 포함된 **cNtfsPermissionEntry** 리소스 사용을 추가하여 이렇게 할 수 있습니다. 다음 구성에서는 끌어오기 클라이언트에 ReadAndExecute 액세스를 부여하는 **cNtfsPermissionEntry** 블록을 추가합니다.
+클라이언트 노드에 **ReadAccess**를 부여하면 해당 노드에서 SMB 공유에 액세스할 수 있지만 해당 공유 내의 파일이나 폴더에는 액세스할 수 없습니다. SMB 공유 폴더 및 하위 폴더에 대한 액세스 권한을 클라이언트 노드에 명시적으로 부여해야 합니다. DSC에서 [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0) 모듈에 포함된 **cNtfsPermissionEntry** 리소스 사용을 추가하여 이렇게 할 수 있습니다. 다음 구성에서는 끌어오기 클라이언트에 ReadAndExecute 액세스를 부여하는 **cNtfsPermissionEntry** 블록을 추가합니다.
 
 ```powershell
 Configuration DSCSMB
@@ -135,7 +135,7 @@ Configuration DSCSMB
 > [!NOTE]
 > SMB 끌어오기 서버를 사용하는 경우 구성 ID를 사용해야 합니다. SMB에서는 구성 이름이 지원되지 않습니다.
 
-각 리소스 모듈은 압축해야 하며 `{Module Name}_{Module Version}.zip` 패턴에 따라 이름을 지정해야 합니다. 예를 들어 모듈 버전이 3.1.2.0인 xWebAdminstration이라는 모듈은 'xWebAdministration_3.2.1.0.zip'으로 이름이 지정됩니다. 모듈의 각 버전은 단일 zip 파일에 포함되어야 합니다. 서로 다른 버전의 모듈 zip 파일에 지원 되지 않습니다. 끌어오기 서버에서 사용할 DSC 리소스 모듈을 패키징하기를 전에 디렉터리 구조를 약간 변경 해야 합니다.
+각 리소스 모듈은 압축해야 하며 `{Module Name}_{Module Version}.zip` 패턴에 따라 이름을 지정해야 합니다. 예를 들어 모듈 버전이 3.1.2.0인 xWebAdminstration이라는 모듈은 'xWebAdministration_3.2.1.0.zip'으로 이름이 지정됩니다. 모듈의 각 버전은 단일 zip 파일에 포함되어야 합니다. zip 파일에서 다른 버전의 모듈이 지원되지 않습니다. 끌어오기 서버에서 사용할 DSC 리소스 모듈을 패키지하기 전에 디렉터리 구조를 약간 변경해야 합니다.
 
 WMF 5.0의 DSC 리소스를 포함하는 모듈의 기본 형식은 `{Module Folder}\{Module Version}\DscResources\{DSC Resource Folder}\`입니다.
 
@@ -207,7 +207,7 @@ $ConfigurationData = @{
 
 ## <a name="acknowledgements"></a>감사의 말
 
-개인 특히 감사 드립니다.
+다음 분들에게 특히 감사드립니다.
 
 - Mike F. Robbins. 그가 게시한 DSC에 SMB 사용에 대한 게시물은 이 항목의 내용을 알리는 데 도움이 되었습니다. 그의 블로그는 [Mike F Robbins](http://mikefrobbins.com/)입니다.
 - Serge Nikalaichyk. **cNtfsAccessControl** 모듈을 작성했습니다. 이 모듈에 대한 원본은 [cNtfsAccessControl](https://github.com/SNikalaichyk/cNtfsAccessControl)에 있습니다.

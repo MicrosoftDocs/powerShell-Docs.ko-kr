@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE(통합 스크립팅 환경)
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
-ms.openlocfilehash: a5fcc8c813349d0b85cc3af29047424fe787d168
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 3002c2cb7213b1c2d7201dddf5ff3c0651fad767
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402188"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58054716"
 ---
 # <a name="windows-powershell-integrated-scripting-environment-ise"></a>Windows PowerShell ISE(통합 스크립팅 환경)
 
@@ -34,7 +34,7 @@ ISE를 사용하면 콘솔 창에서 명령을 실행할 수 있지만 스크립
 
 이제 자주 사용하는 파일에 쉽게 액세스할 수 있도록 **가장 최근에 사용한 목록**이 파일 열기 메뉴에 포함되었습니다.
 
-**병합된 콘솔 창**. 이전 버전의 ISE에서는 별개의 명령 창과 출력 창이 있었습니다. 이제 Windows Powershell 콘솔에 표시되는 방식과 더 유사한 단일 창으로 결합되었습니다.
+**병합된 콘솔 창**. 이전 버전의 ISE에서는 별개의 명령 창과 출력 창이 있었습니다. 이제 Windows PowerShell 콘솔에 표시되는 방식과 더 유사한 단일 창으로 결합되었습니다.
 
 **명령줄 스위치**. 몇 가지 새로운 명령줄 스위치를 통해 ISE 작동 방식을 보다 자세히 제어할 수 있습니다. -NoProfile은 프로필 스크립트를 실행하지 않고 ISE를 시작합니다. –Help는 ISE를 사용하여 도움말 창을 엽니다. –mta는 "다중 스레드 아파트 모드"로 ISE를 시작합니다. 기본값은 단일 스레드입니다.
 

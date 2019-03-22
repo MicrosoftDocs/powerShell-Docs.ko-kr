@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC 보고서 서버 사용
-ms.openlocfilehash: 8647f80c311ee49a5cc4d57360472386e01b044e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 73208477a74ff3c615d7d515fcad555beabe8f32
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681378"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58059272"
 ---
 # <a name="using-a-dsc-report-server"></a>DSC 보고서 서버 사용
 
@@ -16,7 +16,8 @@ ms.locfileid: "55681378"
 > [!IMPORTANT]
 > 끌어오기 서버(Windows 기능 *DSC-Service*)는 Windows Server의 지원되는 구성 요소이지만 새로운 기능을 제공할 계획은 없습니다. 관리되는 클라우드를 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)(Windows Server에 끌어오기 서버 이외의 기능 포함) 또는 [여기](pullserver.md#community-solutions-for-pull-service)에 나열된 커뮤니티 솔루션 중 하나로 전환하기 시작하는 것이 좋습니다.
 >
-> **참고** 이 항목에 설명된 보고서 서버는 PowerShell 4.0에서 사용할 수 없습니다.
+> [!NOTE]
+> 이 토픽에 설명된 보고서 서버는 PowerShell 4.0에서 제공되지 않습니다.
 
 노드의 LCM(로컬 구성 관리자)은 해당 구성 상태에 대한 보고서를 끌어오기 서버에 보내도록 구성할 수 있습니다. 이렇게 하면 해당 데이터를 검색하도록 쿼리할 수 있습니다. 노드는 구성을 확인하고 적용할 때마다 보고서를 보고서 서버에 보냅니다. 이러한 보고서는 서버의 데이터베이스에 저장되며, 보고 웹 서비스를 호출하여 검색할 수 있습니다. 각 보고서에는 적용된 구성, 성공 여부, 사용된 리소스, 발생한 모든 오류, 시작 및 완료 시간 등의 정보가 포함됩니다.
 
@@ -97,7 +98,7 @@ PullClientConfig
 
 ## <a name="getting-report-data"></a>보고서 데이터 가져오기
 
-끌어오기 서버에 전송된 보고서는 서버의 데이터베이스에 입력됩니다. 보고서는 웹 서비스 호출을 통해 사용할 수 있습니다. 특정 노드에 대 한 보고서를 검색 하려면 다음 형식으로 보고서 웹 서비스는 HTTP 요청을 보냅니다. `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId='MyNodeAgentId')/Reports`
+끌어오기 서버에 전송된 보고서는 서버의 데이터베이스에 입력됩니다. 보고서는 웹 서비스 호출을 통해 사용할 수 있습니다. 특정 노드에서 보고서를 검색하려면 보고서 웹 서비스에 다음 형식으로 HTTP 요청을 보냅니다. `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId='MyNodeAgentId')/Reports`
 여기서 `MyNodeAgentId`는 보고서를 가져올 노드의 에이전트 ID입니다. 해당 노드에서 [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager)를 호출하여 노드에 대한 에이전트 ID를 가져올 수 있습니다.
 
 보고서는 JSON 개체의 배열로 반환됩니다.

@@ -2,12 +2,12 @@
 title: SSH를 통한 PowerShell 원격
 description: SSH를 사용하여 PowerShell Core에서 원격 작업
 ms.date: 08/14/2018
-ms.openlocfilehash: b5c6bd70841e270c2c128601612c07af9d9aa6e4
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
-ms.translationtype: MTE95
+ms.openlocfilehash: 1d7bcb69c7e784bf745cb5c2633106ea53f6226a
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655296"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58056535"
 ---
 # <a name="powershell-remoting-over-ssh"></a>SSH를 통한 PowerShell 원격
 
@@ -30,7 +30,7 @@ SSH 원격 기능을 사용하면 Windows 및 Linux 컴퓨터 간에 기본적�
 
 ## <a name="general-setup-information"></a>일반적인 설치 정보
 
-SSH는 모든 컴퓨터에 설치해야 합니다. 컴퓨터에서 들어오고 나가는 원격 작업을 수행할 수 있도록 SSH 클라이언트(`ssh.exe`) 및 서버(`sshd.exe`)를 설치합니다. OpenSSH를 Windows 빌드 1809 Windows 10 및 Windows Server 2019 제공 되었습니다. 자세한 내용은 [OpenSSH를 Windows](/windows-server/administration/openssh/openssh_overview)합니다. Linux의 경우 플랫폼에 적합한 SSH(sshd 서버 포함)를 설치합니다. 또한 SSH 원격 기능을 가져오려면 GitHub에서 PowerShell Core를 설치해야 합니다. SSH 서버는 원격 컴퓨터에 PowerShell 프로세스를 호스트하기 위해 SSH 하위 시스템을 만들도록 구성되어야 합니다. 또한 암호 또는 키 기반 인증도 구성해야 합니다.
+SSH는 모든 컴퓨터에 설치해야 합니다. 컴퓨터에서 들어오고 나가는 원격 작업을 수행할 수 있도록 SSH 클라이언트(`ssh.exe`) 및 서버(`sshd.exe`)를 설치합니다. Windows용 OpenSSH는 이제 Windows 10 빌드 1809 및 Windows Server 2019에서 제공됩니다. 자세한 내용은 [Windows용 OpenSSH](/windows-server/administration/openssh/openssh_overview)를 참조하세요. Linux의 경우 플랫폼에 적합한 SSH(sshd 서버 포함)를 설치합니다. 또한 SSH 원격 기능을 가져오려면 GitHub에서 PowerShell Core를 설치해야 합니다. SSH 서버는 원격 컴퓨터에 PowerShell 프로세스를 호스트하기 위해 SSH 하위 시스템을 만들도록 구성되어야 합니다. 또한 암호 또는 키 기반 인증도 구성해야 합니다.
 
 ## <a name="set-up-on-windows-machine"></a>Windows 컴퓨터에 설치
 
@@ -46,8 +46,8 @@ SSH는 모든 컴퓨터에 설치해야 합니다. 컴퓨터에서 들어오고 
    New-PSSession [-HostName] <string[]> [-Name <string[]>] [-UserName <string>] [-KeyFilePath <string>] [-SSHTransport] [<CommonParameters>]
    ```
 
-2. 최신 Win32 OpenSSH를 설치 합니다. 설치 지침은 [설치의 OpenSSH](/windows-server/administration/openssh/openssh_install_firstuse)합니다.
-3. 편집 된 `sshd_config` 파일에 있는 `%ProgramData%\ssh`합니다.
+2. 최신 Win32 OpenSSH를 설치합니다. 설치 지침은 [OpenSSH 설치](/windows-server/administration/openssh/openssh_install_firstuse)를 참조하세요.
+3. `$env:ProgramData\ssh`에 있는 `sshd_config` 파일을 편집합니다.
 
    - 암호 인증이 활성화되었는지 확인합니다.
 
@@ -62,7 +62,7 @@ SSH는 모든 컴퓨터에 설치해야 합니다. 컴퓨터에서 들어오고 
      > [!NOTE]
      > 하위 시스템 실행 파일 경로의 작업에서 공백을 방지하는 Windows용 OpenSSH에 버그가 있습니다. 자세한 내용은 [이 GitHub 문제](https://github.com/PowerShell/Win32-OpenSSH/issues/784)를 참조하세요.
 
-     한 가지 해결 방법은 공백이 없는 Powershell 설치 디렉터리에 symlink를 만드는 것입니다.
+     한 가지 해결 방법은 공백이 없는 PowerShell 설치 디렉터리에 symlink를 만드는 것입니다.
 
      ```powershell
      mklink /D c:\pwsh "C:\Program Files\PowerShell\6"
@@ -314,6 +314,6 @@ sudo 명령은 Linux 컴퓨터에 대한 원격 세션에서 작동하지 않습
 
 [MacOS용 PowerShell Core](../../install/installing-powershell-core-on-macos.md)
 
-[Windows에 openssh를 설정](/windows-server/administration/openssh/openssh_overview)
+[Windows용 OpenSSH](/windows-server/administration/openssh/openssh_overview)
 
 [Ubuntu SSH](https://help.ubuntu.com/lts/serverguide/openssh-server.html)

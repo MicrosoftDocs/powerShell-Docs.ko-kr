@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC on Nano Server 사용
-ms.openlocfilehash: fd81fe56d16100f45d9ee2dfd8fdc303c2a6c17a
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: ac5eaf3885788f40e12e4f0a0f19025668280f7e
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402564"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58054665"
 ---
 # <a name="using-dsc-on-nano-server"></a>DSC on Nano Server 사용
 
@@ -38,7 +38,7 @@ Nano Server는 처음 사용자용 Windows Server에 비해 제한된 일부 API
 - [Stop-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Stop-DscConfiguration)
 - [Get-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Get-DscConfiguration)
 - [Test-DscConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)
-- [Publish-DscConfiguraiton](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration)
+- [Publish-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration)
 - [Update-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Update-DscConfiguration)
 - [Restore-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Restore-DscConfiguration)
 - [Remove-DscConfigurationDocument](/powershell/module/PSDesiredStateConfiguration/Remove-DscConfigurationDocument)
@@ -50,7 +50,7 @@ Nano Server는 처음 사용자용 Windows Server에 비해 제한된 일부 API
 
 - 구성 컴파일([DSC 구성](../configurations/configurations.md) 참조)
 
-  **문제 #1629** 암호 암호화 (참조 [MOF 파일 보안](../pull-server/secureMOF.md)) 구성 하는 동안 컴파일 작동 하지 않습니다.
+  **문제:** 구성 컴파일 중 암호 암호화([MOF 파일 보안](../pull-server/secureMOF.md) 참조)가 작동하지 않습니다.
 
 - 메타 구성 컴파일([로컬 구성 관리자 구성](../managing-nodes/metaConfig.md) 참조)
 
@@ -60,7 +60,7 @@ Nano Server는 처음 사용자용 Windows Server에 비해 제한된 일부 API
 
 - DSC 리소스 디버깅([DSC 리소스 디버그](../troubleshooting/debugResource.md) 참조)
 
-  **문제 #1629** 리소스가 PsDscRunAsCredential을 사용 중인 경우 작동 하지 않습니다 (참조 [사용자 자격 증명을 사용 하 여 DSC 실행](../configurations/runAsUser.md))
+  **문제:** 리소스가 PsDscRunAsCredential을 사용 중인 경우 작동하지 않습니다([사용자 자격 증명을 사용하여 DSC 실행](../configurations/runAsUser.md) 참조).
 
 - [노드 간 종속성 지정](../configurations/crossNodeDependencies.md)
 
@@ -97,12 +97,12 @@ Nano Server는 처음 사용자용 Windows Server에 비해 제한된 일부 API
 - **그룹**
 - **GroupSet**
 
-  **문제 #1629** 위 리소스가 특정 인스턴스를 두 번 호출 하면 실패 (동일한 구성을 두 번 실행)
+  **문제:** 특정 인스턴스를 두 번 호출하는 경우(동일한 구성을 두 번 실행) 위의 리소스가 실패합니다.
 
 - **Service**
 - **ServiceSet**
 
-  **문제 #1629** 에 (상태) 서비스 시작/중지 합니다. 시작 유형, 자격 증명, 설명 등과 같은 다른 서비스 특성을 변경하려고 하면 실패합니다. 발생하는 오류는 다음과 같습니다.
+  **문제:** 서비스 시작/중지(상태) 서비스에 대해서만 작동합니다. 시작 유형, 자격 증명, 설명 등과 같은 다른 서비스 특성을 변경하려고 하면 실패합니다. 발생하는 오류는 다음과 같습니다.
 
   *유형[management.managementobject]을 찾을 수 없습니다. 이 유형이 포함된 어셈블리가 로드되어 있는지 검증하세요.*
 

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,security
 title: JEA 세션 구성
-ms.openlocfilehash: 1b598522d43b2c1a26a739a67cee5181b21a7c32
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: b98726ea7ed3aabdfd05034c3b70118e327160cd
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55683198"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58056598"
 ---
 # <a name="jea-session-configurations"></a>JEA 세션 구성
 
@@ -60,7 +60,7 @@ JEA 세션에 대해 구성할 다른 여러 가지 필드도 있습니다.
 
 #### <a name="local-virtual-account"></a>로컬 가상 계정
 
-이 JEA 엔드포인트에서 지원하는 역할이 모두 로컬 컴퓨터를 관리하는 데 사용되고 명령을 실행하는 데 로컬 관리자 계정으로 충분하다면 로컬 가상 계정을 사용하도록 JEA를 구성해야 합니다.
+이 JEA 엔드포인트에서 지원하는 역할이 모두 로컬 머신을 관리하는 데 사용되고 명령을 실행하는 데 로컬 관리자 계정으로 충분하다면 로컬 가상 계정을 사용하도록 JEA를 구성해야 합니다.
 가상 계정은 특정 사용자에게 고유하고 해당 PowerShell 세션 기간 동안만 지속하는 임시 계정입니다.
 구성원 서버 또는 워크스테이션에서 가상 계정은 로컬 컴퓨터의 **Administrators** 그룹에 속하고 대부분의 시스템 리소스에 액세스할 수 있습니다.
 Active Directory 도메인 컨트롤러에서 가상 계정은 도메인의 **Domain Admins** 그룹에 속합니다.
@@ -80,8 +80,9 @@ RunAsVirtualAccount = $true
 RunAsVirtualAccount = $true
 RunAsVirtualAccountGroups = 'NetworkOperator', 'NetworkAuditor'
 ```
+
 > [!NOTE]
-> 일시적으로 가상 계정은 로컬 서버 보안 정책에서 서비스 권한 로그온을 부여 됩니다.  지정한 VirtualAccountGroups 중 하나가 이미 부여 된 경우 정책에서이 권한을, 개별 가상 계정은 더 이상 추가 되며 정책에서 제거 합니다.  이 도메인 컨트롤러 보안 정책에 대 한 수정 버전 감사 밀접 하 게 되는 도메인 컨트롤러와 같은 시나리오에서 유용할 수 있습니다.  2018 년 11 월을 사용 하 여 Windows Server 2016 또는 이후 롤업 및 Windows Server 2019 년 1 월 2019를 사용 하 여 최신 롤업을 제공만 됩니다.
+> 가상 계정에는 일시적으로 로컬 서버 보안 정책에서 서비스 권한으로 로그온 권한이 부여됩니다.  정책에서 지정된 VirtualAccountGroups 중 하나에 이 권한이 이미 부여된 경우 개별 가상 계정은 더 이상 추가되지 않고 정책에서 제거됩니다.  도메인 컨트롤러와 같이 도메인 컨트롤러 보안 정책에 대한 수정 버전을 긴밀히 감사하는 시나리오에 유용할 수 있습니다.  2018년 11월 이후 롤업을 포함한 Windows Server 2016 또는 2019년 1월 이후 롤업을 포함한 Windows Server 2019에서만 제공됩니다.
 
 #### <a name="group-managed-service-account"></a>그룹 관리 서비스 계정
 
@@ -104,7 +105,6 @@ gMSA 계정은 다음과 같은 몇 가지 이유로 네트워크 리소스에 �
 
 > [!NOTE]
 > 그룹 관리 서비스 계정은 Windows PowerShell 5.1 이상 및 도메인에 가입된 컴퓨터에서만 사용할 수 있습니다.
-
 
 #### <a name="more-information-about-run-as-users"></a>실행 사용자에 대한 자세한 내용
 
@@ -179,6 +179,7 @@ RoleDefinitions = @{
 ```
 
 ### <a name="role-capability-search-order"></a>역할 기능 검색 순서
+
 위의 예제에 표시된 것처럼 역할 기능은 역할 기능 파일의 일반 이름(확장명이 없는 파일 이름)으로 참조됩니다.
 시스템에서 일반 이름이 같은 역할 기능을 여러 개 사용할 수 있는 경우 PowerShell에서는 암시적 검색 순서를 사용하여 유효 역할 기능 파일을 선택합니다.
 이름이 같은 모든 역할 기능 파일에 대한 액세스 권한을 부여하지는 **않습니다**.
@@ -217,6 +218,7 @@ RequiredGroups = @{ And = 'elevated-jea', @{ Or = '2FA-logon', 'smartcard-logon'
 > 조건부 액세스 규칙은 Windows PowerShell 5.1 이상에서만 사용할 수 있습니다.
 
 ### <a name="other-properties"></a>기타 속성
+
 세션 구성 파일도 역할 기능 파일이 수행할 수 있는 모든 작업을 수행할 수 있지만, 연결하는 사용자에게 다른 명령에 대한 액세스 권한을 부여하는 기능은 제외됩니다.
 모든 사용자가 특정 cmdlet, 함수 또는 공급자에 액세스할 수 있게 하려는 경우 세션 구성 파일에서 직접 이렇게 할 수 있습니다.
 세션 구성 파일에서 지원되는 속성의 전체 목록을 보려면 `Get-Help New-PSSessionConfigurationFile -Full`을 실행합니다.

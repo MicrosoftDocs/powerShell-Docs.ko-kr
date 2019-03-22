@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,security
 title: JEA 구성 등록
-ms.openlocfilehash: 160aa95283da57a10aad5fdd4043adb1354a5db5
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 6fa0ce434c8e70eb718545e99417bfe034cda6bf
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55683153"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58059442"
 ---
 # <a name="registering-jea-configurations"></a>JEA 구성 등록
 
@@ -113,7 +113,7 @@ Configuration JEAMaintenance
 그러면 [직접 로컬 구성 관리자를 호출](https://msdn.microsoft.com/powershell/dsc/metaconfig)하거나 [가져오기 서버 구성](https://msdn.microsoft.com/powershell/dsc/pullserver)을 업데이트하여 시스템에 이 구성을 적용할 수 있습니다.
 
 DSC 리소스를 사용하여 기본 Microsoft.PowerShell 원격 엔드포인트를 바꿀 수도 있습니다.
-이렇게 할 경우 리소스가 기본 WinRM ACL(Remote Management Users 및 로컬 Administrators 그룹 구성원이 다음에 언급된 엔드포인트에 액세스할 수 있음)인 "Microsoft.PowerShell.Restricted"라는 백업 비제한 엔드포인트를 자동으로 등록합니다.
+이렇게 하면 리소스가 기본 WinRM ACL을 포함한 "Microsoft.PowerShell.Restricted"라는 백업 비제한 엔드포인트를 자동으로 등록합니다(원격 관리 사용자 및 로컬 관리자 그룹 멤버가 여기에 액세스하도록 허용함).
 
 ## <a name="unregistering-jea-configurations"></a>JEA 구성 등록 취소
 
