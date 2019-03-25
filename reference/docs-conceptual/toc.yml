@@ -184,6 +184,8 @@ items:
     href: samples/changing-computer-state.md
   - name: 컴퓨터에 대한 정보 수집
     href: samples/collecting-information-about-computers.md
+  - name: FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기
+    href: samples/creating-get-winEvent-queries-with-filterhashtable.md
   - name: UI 요소 만들기
     href: ''
     items:
@@ -250,9 +252,9 @@ items:
     href: samples/appendix-1---compatibility-aliases.md
   - name: 부록 2 사용자 지정 PowerShell 바로 가기 만들기
     href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
-ms.openlocfilehash: ee25bc078f3c6bea91cb0cdaf89e27f20cee2842
-ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
+ms.openlocfilehash: dd9cac7e7570d6ff4c58b0255a3909f3f0612605
+ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251339"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58320390"
