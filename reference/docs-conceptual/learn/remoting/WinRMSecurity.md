@@ -4,7 +4,7 @@ keywords: powershell,cmdlet
 title: WinRMSecurity
 ms.openlocfilehash: 59717e4806857e6760de523335bbee6028da8e84
 ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2019
 ms.locfileid: "55682613"
@@ -54,9 +54,9 @@ PowerShell 원격 연결 보안은 초기 인증 및 지속적인 통신의 두 
 클라이언트가 컴퓨터 이름(server01 또는 server01.contoso.com)을 사용해 도메인 서버에 연결되는 경우 기본 인증 프로토콜은 [Kerberos](https://msdn.microsoft.com/library/windows/desktop/aa378747.aspx)입니다.
 Kerberos는 모든 종류의 다시 사용할 수 있는 자격 증명을 보내지 않고 사용자 ID 및 서버 ID를 모두 보장합니다.
 
-클라이언트가 IP 주소를 사용해 도메인 서버에 연결되는 경우 또는 작업 그룹 서버에 연결되는 경우 Kerberos 인증은 사용할 수 없습니다. 이 경우 PowerShell 원격은 [NTLM authentication protocol(NTLM 인증 프로토콜)](https://msdn.microsoft.com/library/windows/desktop/aa378749.aspx)을 사용합니다. NTLM 인증 프로토콜은 어떠한 위임 가능 자격 증명도 보내지 않고 사용자 ID를 보장합니다. 사용자 ID를 입증하기 위해 NTLM 프로토콜은 클라이언트와 서버 모두 암호 자체를 교환하지 않고 사용자 암호에서 세션 키를 계산하도록 요구합니다. 서버는 일반적으로 사용자 암호를 모르므로 사용자 암호를 알고 서버의 세션 키를 저장하는 도메인 컨트롤러와 통신합니다.
+클라이언트가 IP 주소를 사용해 도메인 서버에 연결되는 경우 또는 작업 그룹 서버에 연결되는 경우 Kerberos 인증은 사용할 수 없습니다. 이 경우 PowerShell 원격은 [NTLM authentication protocol(NTLM 인증 프로토콜)](https://msdn.microsoft.com/library/windows/desktop/aa378749.aspx)을 사용합니다. NTLM 인증 프로토콜은 어떠한 위임 가능 자격 증명도 보내지 않고 사용자 ID를 보장합니다. 사용자 ID를 입증하기 위해 NTLM 프로토콜은 클라이언트와 서버 모두 암호 자체를 교환하지 않고 사용자 암호에서 세션 키를 컴퓨팅하도록 요구합니다. 서버는 일반적으로 사용자 암호를 모르므로 사용자 암호를 알고 서버의 세션 키를 저장하는 도메인 컨트롤러와 통신합니다.
 
-그러나 NTLM 프로토콜은 서버 ID를 보장하지 않습니다. 인증에 NTLM을 사용하는 모든 프로토콜에서와 마찬가지로 도메인에 가입된 컴퓨터의 컴퓨터 계정에 액세스할 수 있는 공격자는 도메인 컨트롤러의 호출하여 NTLM 세션 키를 계산하고 서버를 가장할 수 있습니다.
+그러나 NTLM 프로토콜은 서버 ID를 보장하지 않습니다. 인증에 NTLM을 사용하는 모든 프로토콜에서와 마찬가지로 도메인에 가입된 컴퓨터의 컴퓨터 계정에 액세스할 수 있는 공격자는 도메인 컨트롤러의 호출하여 NTLM 세션 키를 컴퓨팅하고 서버를 가장할 수 있습니다.
 
 NTLM 기반 인증은 기본적으로 사용하지 않도록 설정되어 있습니다. 하지만 대상 서버에 SSL을 구성하거나 클라이언트에서 WinRM TrustedHosts 설정을 구성해 허용할 수도 있습니다.
 
