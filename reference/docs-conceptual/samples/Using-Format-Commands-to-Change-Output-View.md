@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 형식 명령을 사용하여 출력 보기 변경
 ms.assetid: 63515a06-a6f7-4175-a45e-a0537f4f6d05
-ms.openlocfilehash: 97d3a9e04abb61bb80a0b8c67d9fb9e885a0b91b
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 35ccd2525d40ffd5e3f25a1abfa38904a109bde5
+ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403124"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58320424"
 ---
 # <a name="using-format-commands-to-change-output-view"></a>형식 명령을 사용하여 출력 보기 변경
 
@@ -49,10 +49,20 @@ PS> Get-Process -Name powershell | Format-Wide -Property Id
 
 #### <a name="controlling-format-wide-display-with-column"></a>열이 포함된 Format-Wide 표시 제어
 
-**Format-Wide** cmdlet을 사용하면 한 번에 하나의 속성만 표시할 수 있습니다. 이 cmdlet은 한 줄에 하나의 요소만 표시되는 간단한 목록을 표시하는 데 유용합니다. 간단한 목록을 표시하려면 다음과 같이 입력하여 **Column** 매개 변수의 값을 1로 설정합니다.
+`Format-Wide` cmdlet을 사용하면 한 번에 하나의 속성만 표시할 수 있습니다.
+이 cmdlet은 한 줄에 하나의 요소만 표시되는 간단한 목록을 표시하는 데 유용합니다.
+간단한 목록을 표시하려면 다음과 같이 입력하여 **Column** 매개 변수의 값을 1로 설정합니다.
 
 ```powershell
-Get-Command Format-Wide -Property Name -Column 1
+Get-Command -Verb Format | Format-Wide -Property Noun -Column 1
+```
+
+```output
+Custom
+Hex
+List
+Table
+Wide
 ```
 
 ### <a name="using-format-list-for-a-list-view"></a>Format-List를 사용하여 목록 보기

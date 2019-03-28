@@ -2,12 +2,12 @@
 title: VSCode 및 PowerShell에서 파일 인코딩 이해
 description: VSCode 및 PowerShell에서 파일 인코딩 구성
 ms.date: 02/28/2019
-ms.openlocfilehash: 73e766832d56a08bd5ef16df11899a0aab0badae
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: ec06d8f5d446a92e6cd9d2d70b11260d1d0afda8
+ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57795125"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58320407"
 ---
 # <a name="understanding-file-encoding-in-vscode-and-powershell"></a>VSCode 및 PowerShell에서 파일 인코딩 이해
 
@@ -60,8 +60,8 @@ VSCode가 UTF-8인 `–` 문자를 `0xE2 0x80 0x93` 바이트로 인코딩하기
 - `â€”` 대신 `—`
 - `Ã„2` 대신 `Ä`
 - ` `(줄 바꿈하지 않는 공백) 대신 `Â`
-- `é`
-<!-- markdownlint-enable MD038 --> 대신 `Ã©`
+- `Ã©` 대신 `é`
+<!-- markdownlint-enable MD038 -->
 
 이 유용한 [참조](https://www.i18nqa.com/debug/utf8-debug.html)에서는 UTF-8/Windows-1252 인코딩 문제를 나타내는 일반적인 패턴을 나열합니다.
 
@@ -215,7 +215,7 @@ ISE는 BOM을 적용해야 하지만 리플렉션을 사용하여 [인코딩을 
 ### <a name="source-control-software"></a>소스 제어 소프트웨어
 
 Git와 같은 일부 소스 제어 도구는 인코딩을 무시합니다. Git는 바이트를 추적하기만 합니다.
-TFS 또는 Mercurial과 같은 다른 도구는 그렇지 않습니다. 일부 Git 기반 도구도 디코딩 텍스트를 사용합니다.
+Azure DevOps 또는 Mercurial과 같은 다른 도구는 그렇지 않습니다. 일부 Git 기반 도구도 디코딩 텍스트를 사용합니다.
 
 이 경우에는 다음을 확인하세요.
 
