@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows PowerShell Programmer's Guide, providers
 ms.assetid: 863e48e9-7206-4c6a-a59a-2ab2d30396bc
 caps.latest.revision: 5
-ms.openlocfilehash: 286df63e75d6372cb41c974e60e79b02bd13686e
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.openlocfilehash: 06910f32752668f13400f9be0767a2179133df04
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429672"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623826"
 ---
 # <a name="how-to-create-a-windows-powershell-provider"></a>Windows PowerShell 공급자를 만드는 방법
 
@@ -29,7 +29,7 @@ ms.locfileid: "57429672"
 
 Windows PowerShell 알려진된 데이터 저장소에 액세스 하는 데 사용 되는 여러 공급자 (예: 파일 시스템 공급자, 레지스트리 공급자 및 별칭 공급자)를 제공 합니다. Windows PowerShell에서 제공 하는 공급자에 대 한 자세한 내용은 온라인 도움말에 액세스 하려면 다음 명령을 사용 합니다.
 
-**PS>get-help about_provider**
+**PS > about_providers 도움말 얻기**
 
 ## <a name="accessing-the-stored-data-using-windows-powershell-paths"></a>Windows PowerShell 경로 사용 하 여 저장된 된 데이터에 액세스
 
