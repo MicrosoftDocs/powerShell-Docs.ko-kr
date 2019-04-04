@@ -1,10 +1,15 @@
 ---
 ms.date: 08/12/2017
 ms.topic: conceptual
-keywords: 'wmf,powershell,setup'
+keywords: wmf,powershell,setup
 title: WMF 5.1 릴리스 정보
+ms.openlocfilehash: dd68f101e6f21256f966f7472dabc273a475a25e
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795337"
 ---
-
 # <a name="windows-management-framework-wmf-51"></a><span data-ttu-id="7db10-103">WMF(Windows Management Framework) 5.1</span><span class="sxs-lookup"><span data-stu-id="7db10-103">Windows Management Framework (WMF) 5.1</span></span>
 
 <span data-ttu-id="7db10-104">WMF는 기존 Windows 시스템을 Windows Server 2016과 함께 릴리스된 PowerShell, WMI, WinRM 및 SIL(소프트웨어 인벤토리 로깅) 구성 요소 버전으로 업데이트하는 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="7db10-104">WMF provides users with the ability to update existing Windows systems to the versions of PowerShell, WMI, WinRM, and Software Inventory Logging (SIL) components that were released with Windows Server 2016.</span></span>
