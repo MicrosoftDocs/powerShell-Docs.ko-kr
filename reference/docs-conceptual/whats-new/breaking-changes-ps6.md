@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: PowerShell 6.0의 주요 변경 내용
-ms.openlocfilehash: 975c978629f81f0f13a235c3d304e5ec03bae6d0
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: d25cf07baa11040af57f330feede44635c00c551
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57795694"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623928"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>PowerShell 6.0의 주요 변경 내용
 
@@ -61,6 +61,15 @@ ms.locfileid: "57795694"
 ### <a name="microsoftpowershelllocalaccounts"></a>Microsoft.PowerShell.LocalAccounts
 
 지원되지 않는 API를 사용하는 `Microsoft.PowerShell.LocalAccounts`는 더 나은 해결 방법을 찾을 때까지 PowerShell Core에서 제거되었습니다.
+
+### <a name="-computer-cmdlets"></a>`*-Computer` cmdlet
+
+지원되지 않는 API를 사용하기 때문에 다음 cmdlets이 더 나은 해결 방법을 찾을 때까지 PowerShell Core에서 제거되었습니다.
+
+- Add-Computer
+- Checkpoint-Computer
+- Remove-Computer
+- Restore-Computer
 
 ### <a name="-counter-cmdlets"></a>`*-Counter` cmdlet
 

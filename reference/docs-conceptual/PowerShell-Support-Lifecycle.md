@@ -2,12 +2,12 @@
 title: PowerShell Core 지원 수명 주기
 description: PowerShell Core에 대한 정책 관리 지원
 ms.date: 08/06/2018
-ms.openlocfilehash: 2e0ca1b9c133e6f316a40aff13365d0489059165
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 178e5c43520f9a392ca219b9f785eb18b1ec5436
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403495"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623861"
 ---
 # <a name="powershell-core-support-lifecycle"></a>PowerShell Core 지원 수명 주기
 
@@ -17,9 +17,11 @@ PowerShell Core는 Windows PowerShell과 별개로 제공, 설치 및 구성되�
 그러나 PowerShell Core는 [프리미어][], [Microsoft 기업 계약][enterprise-agreement] 및 [Microsoft 소프트웨어 보증][assurance]을 포함한 기존의 Microsoft 지원 계약에서 지원받을 수 있습니다.
 또한, 문제가 있는 경우 지원 요청서를 작성하여 PowerShell Core에 대한 [보조 지원][]을 유료로 이용할 수 있습니다.
 
+## <a name="community-support"></a>커뮤니티 지원
+
 또한 GitHub에 대한 [커뮤니티 지원][]도 제공하여 문제, 버그 또는 기능 요청을 취합할 수 있습니다.
 또는, [Microsoft 커뮤니티][] 또는 Microsoft [PowerShell 기술 커뮤니티][]와 같은 일반적인 커뮤니티에서 다양한 구성원들에게 도움을 받을 수도 있습니다.
-단, 문제가 제때 해결된다는 보장은 없습니다.
+단, 커뮤니티가 발생한 문제를 제때 처리하거나 해결한다는 보장은 없습니다.
 긴급하게 도움이 필요한 문제가 있는 경우 기존의 유료 지원 옵션을 사용해야 합니다.
 
 ## <a name="lifecycle-of-powershell-core"></a>PowerShell Core의 수명 주기
@@ -34,11 +36,18 @@ PowerShell Core는 [Microsoft 최신 수명 주기 정책][modern]을 채택합�
 
 예를 들어 PowerShell Core 6.1이 2018년 7월 1일에 릴리스 되고, 계속해서 지원을 받고자 하는 경우 2019년 1월 1일까지 PowerShell Core 6.1로 업데이트해야 합니다.
 
+> [!IMPORTANT]
+> 지원을 계속 받으려면 새 패치가 릴리스될 때마다 30일 이내에 업데이트해야 합니다.
+
+예를 들어 PowerShell Core 6.1을 실행하고 있으며 6.1.3이 2019년 2월 19일에 릴리스된 경우, 해당 릴리스가 지원을 유지하는 30일 후인 2019년 3월 21일까지 PowerShell Core 6.1.3으로 업데이트해야 합니다.
+수정 사항이 필요한 경우, 다음 누적 업데이트에서 수정 사항이 릴리스됩니다.
+
 ![PowerShell Core 분기 수명 주기][lifecycle-chart]
 
-최신 수명 주기 정책에 따라 Microsoft는 해당 제품(예: PowerShell Core)에 대한 지원을 중단하기 12개월 전에 고객 측에 공지해야 합니다.
+최신 수명 주기 정책에 따라 Microsoft는 해당 제품(즉, PowerShell Core)에 대한 지원을 중단하기 12개월 전에 고객 측에 공지해야 합니다.
 
-즉, PowerShell Core는 "장기 서비스"를 채택하여 6.x의 특정 분기/버전에 대한 지속적인 지원을 위해 서비스 및 보안 업데이트를 요청합니다.
+결국 PowerShell Core가 “장기 서비스” 방식을 채택하는 것을 예상합니다.
+이 서비스 방식에서는 6.x의 특정 분기/버전에 필요한 지속적인 지원을 위해 서비스 및 보안 업데이트만 요청합니다.
 
 ## <a name="supported-platforms"></a>지원되는 플랫폼
 
@@ -49,35 +58,44 @@ PowerShell Core는 [Microsoft 최신 수명 주기 정책][modern]을 채택합�
 
 `Experimental`로 나열되는 플랫폼은 공식적으로 지원되지는 않지만, 실험 및 피드백용으로 사용 가능합니다.
 
-|                                                   | 6.0         | 6.1         |
+|                                                   | 6.1         | 6.2         |
 |---------------------------------------------------|:-----------:|:-----------:|
 | Windows 7, 8.1 및 10                            | 지원 여부   | 지원 여부   |
 | Windows Server 2008 R2, 2012 R2, 2016             | 지원 여부   | 지원 여부   |
 | [Windows 서버 반기 채널][semi-annual] | 지원 여부   | 지원 여부   |
-| Ubuntu 14.04, 16.04                           | 지원 여부   | 지원 여부   |
-| Ubuntu 18.04                                      |             | 지원 여부   |
-| Ubuntu 18.10(맞춤 패키지를 통해)                   |             | 커뮤니티   |
-| Debian 8.7+, 9                                | 지원 여부   | 지원 여부   |
+| Ubuntu 16.04 및 18.04                            | 지원 여부   | 지원 여부   |
+| Ubuntu 18.10(맞춤 패키지를 통해)                   | 커뮤니티   | 커뮤니티   |
+| Debian 9                                          | 지원 여부   | 지원 여부   |
 | CentOS 7                                          | 지원 여부   | 지원 여부   |
 | Red Hat Enterprise Linux 7                        | 지원 여부   | 지원 여부   |
-| OpenSUSE 42.3                                     | 지원 여부   | 지원 여부   |
-| Fedora 27                                         | 지원 여부   | 지원 여부   |
-| Fedora 28                                         |             | 지원 여부   |
+| openSUSE 42.3                                     | 지원 여부   | 지원 여부   |
+| Fedora 28                                         | 지원 여부   | 지원 여부   |
 | macOS 10.12+                                      | 지원 여부   | 지원 여부   |
 | Arch                                              | 커뮤니티   | 커뮤니티   |
-| Raspbian                                          | 실험적| 커뮤니티   |
+| Raspbian                                          | 커뮤니티   | 커뮤니티   |
 | Kali                                              | 커뮤니티   | 커뮤니티   |
 | AppImage(여러 Linux 플랫폼에서 사용)     | 커뮤니티   | 커뮤니티   |
 | [맞춤 패키지](https://snapcraft.io/powershell)   | 참고 참조    | 참고 참조    |
 
 > [!NOTE]
-> 맞춤 패키지는 일정 기간 동안 실험적입니다.  이후에 맞춤에서는 새로운 지원 문제를 일으키지 않을 것입니다. 지원은 패키지를 실행하는 배포를 따릅니다.
+> 스냅 패키지는 패키지를 실행하고 있는 배포와 동일하게 지원됩니다.
 
-## <a name="platform-which-are-out-of-support"></a>지원되지 않는 플랫폼
+## <a name="powershell-release-end-of-life"></a>PowerShell 릴리스 종료
 
-플랫폼 버전이 플랫폼 소유자가 정의한 수명 종료에 도달하면 PowerShell Core도 해당 플랫폼 버전에 대한 지원 제공을 중단합니다. 이전에 릴리스된 패키지는 액세스가 필요한 고객이 계속 사용할 수는 있지만, 공식 지원 및 업데이트는 더 이상 제공되지 않습니다.
+[PowerShell Core의 수명 주기](#lifecycle-of-powershell-core)에 따라 다음 표에는 다양한 릴리스의 지원 중단 날짜가 나열되어 있습니다.
 
-그러므로 다음 버전에 대한 지원은 배포 소유자가 종료했으며, 지원되지 않습니다.
+| 버전 | 수명 종료                   |
+|---------|-------------------------------|
+| 6.0     | 2019년 2월 13일             |
+| 6.1     | 2019년 9월 28일            |
+| 6.2     | 6.3 릴리스 후 6개월   |
+
+## <a name="platforms-which-are-out-of-support"></a>지원되지 않는 플랫폼
+
+플랫폼 버전이 플랫폼 소유자가 정의한 수명 종료에 도달하면 PowerShell Core도 해당 플랫폼 버전의 지원 제공을 중단합니다.
+이전에 릴리스된 패키지는 액세스가 필요한 고객이 계속 사용할 수는 있지만, 공식 지원 및 업데이트는 더 이상 제공되지 않습니다.
+
+그러므로 다음 버전의 지원을 배포 소유자가 종료했으며 더 이상 지원되지 않습니다.
 
 | OS       | 버전 | 수명 종료                                                                                 |
 |----------|---------|---------------------------------------------------------------------------------------------|
@@ -89,6 +107,9 @@ PowerShell Core는 [Microsoft 최신 수명 주기 정책][modern]을 채택합�
 | Ubuntu   | 16.10   | [2017년 7월](https://lists.ubuntu.com/archives/ubuntu-announce/2017-July/000223.html)        |
 | Ubuntu   | 17.04   | [2018년 1월](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)          |
 | Ubuntu   | 17.10   | [2018년 7월](https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000232.html)        |
+| Debian   | 8       | [2018년 6월](https://lists.debian.org/debian-security-announce/2018/msg00132.html)           |
+| Fedora   | 27      | [2018년 11월](https://fedoramagazine.org/fedora-27-end-of-life/)                          |
+| Ubuntu   | 14.04   | [2019년 4월](https://wiki.ubuntu.com/Releases)                                              |
 
 ## <a name="notes-on-licensing"></a>라이선싱에 대한 메모
 
@@ -98,13 +119,13 @@ PowerShell Core는 [MIT 라이선스][]에서 릴리스 됩니다.
 
 ## <a name="windows-powershell-module"></a>Windows PowerShell 모듈
 
-PowerShell Core에 대한 지원은 명시적으로 이 모듈이 PowerShell Core를 지원하지 않는 한 다른 제품 모듈로 확장되지 않습니다.
+PowerShell Core에 대한 지원은 명시적으로 이 모듈이 PowerShell Core를 지원하지 않는 한 다른 제품 모듈을 포함하지 않습니다.
 예를 들어, Windows Server에 부분적으로 제공되는 `ActiveDirectory` 모듈을 사용하는 경우 지원되지 않습니다.
 
 그러나 PowerShell Core를 명시적으로 지원하지 않는 모듈은 경우에 따라 호환이 가능합니다.
-[`WindowsPSModulePath`][] 모듈을 설치하여 Windows PowerShell `PSModulePath` 를 PowerShell Core `PSModulePath`로 추가할 수 있습니다.
+[`WindowsPSModulePath`][] 모듈을 설치하여 Windows PowerShell `PSModulePath`를 PowerShell Core `PSModulePath`에 추가할 수 있습니다.
 
-먼저, PowerShell 갤러리에서 `WindowsPSModulePath` 모듈을 설치합니다.
+먼저 PowerShell 갤러리에서 `WindowsPSModulePath` 모듈을 설치합니다.
 
 ```powershell
 # Add `-Scope CurrentUser` if you're installing as non-admin
@@ -118,6 +139,10 @@ Install-Module WindowsPSModulePath -Force
 Add-WindowsPSModulePath
 ```
 
+## <a name="experimental-features"></a>실험적 기능
+
+[실험적 기능][]은 [커뮤니티 지원](#community-support)으로 제한됩니다.
+
 [프리미어]: https://www.microsoft.com/en-us/microsoftservices/support.aspx
 [enterprise-agreement]: https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise.aspx
 [assurance]: https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx
@@ -130,3 +155,4 @@ Add-WindowsPSModulePath
 [semi-annual]: https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview
 [MIT 라이선스]: https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt
 [`WindowsPSModulePath`]: https://www.powershellgallery.com/packages/WindowsPSModulePath/
+[실험적 기능]: /powershell/module/microsoft.powershell.core/about/about_powershell_config?view=powershell-6#experimentalfeatures

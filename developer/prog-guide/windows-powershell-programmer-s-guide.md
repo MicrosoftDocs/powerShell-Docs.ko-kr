@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows PowerShell Programmer's Guide
 ms.assetid: f3aaf667-af84-4ea8-a5ad-d454d0d700b8
 caps.latest.revision: 9
-ms.openlocfilehash: 1f7b5b60b202f4de0cf3d44b65057f5edd41f2b0
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 75425fbd38141fc82dd834835912c357ecfa6d2b
+ms.sourcegitcommit: 0ca836d1044e46d3a7dcbc69fa93d84f74848559
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860049"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920393"
 ---
 # <a name="windows-powershell-programmer39s-guide"></a>Windows PowerShell 프로그래머&#39;가이드
 
@@ -57,7 +57,7 @@ Windows PowerShell에서는 여러 기본 Windows PowerShell 공급자를 제공
 
 Windows PowerShell에는 사용자와 상호 작용 하 고 콘솔 창을 사용 하 여 Windows PowerShell 런타임을 호스트 하는 콘솔 응용 프로그램을 기본 호스트 응용 프로그램이 powershell.exe를 포함 합니다.
 
-드물게 있습니다 해야 Windows powershell의 경우 호스트 응용 프로그램 자체를 쓸 사용자 지정은 지원 되지만 합니다. 사용자 고유의 응용 프로그램을 해야 할 수 있습니다 하는 한 가지 경우에는 기본 호스트 응용 프로그램에서 제공 하는 인터페이스 보다 뛰어나며는 GUI 인터페이스에 대 한 요구 사항이 있는 경우는 합니다. 명령줄에서 GUI로 사용 하는 경우에 사용자 지정 응용 프로그램을 수도 있습니다. 자세한 내용은[Windows PowerShell 호스트 응용 프로그램을 만드는 방법](http://msdn.microsoft.com/en-us/d31355c9-a270-4b09-8f0c-35a7392a7d07)합니다.
+드물게 있습니다 해야 Windows powershell의 경우 호스트 응용 프로그램 자체를 쓸 사용자 지정은 지원 되지만 합니다. 사용자 고유의 응용 프로그램을 해야 할 수 있습니다 하는 한 가지 경우에는 기본 호스트 응용 프로그램에서 제공 하는 인터페이스 보다 뛰어나며는 GUI 인터페이스에 대 한 요구 사항이 있는 경우는 합니다. 명령줄에서 GUI로 사용 하는 경우에 사용자 지정 응용 프로그램을 수도 있습니다. 자세한 내용은 [Windows PowerShell 호스트 응용 프로그램을 만드는 방법](http://msdn.microsoft.com/en-us/d31355c9-a270-4b09-8f0c-35a7392a7d07)합니다.
 
 ### <a name="windows-powershell-runtime"></a>Windows PowerShell 런타임
 

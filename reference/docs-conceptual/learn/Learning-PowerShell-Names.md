@@ -3,12 +3,12 @@ ms.date: 08/24/2018
 keywords: powershell,cmdlet
 title: PowerShell 명령 이름 학습
 ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
-ms.openlocfilehash: 3f8ef2648709c4bb5d2eacf30fe9d8fb4f032c13
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 8d50ca03f98ed4ca8f9c09c83ae57afbf0d7888d
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55683063"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623724"
 ---
 # <a name="learning-powershell-command-names"></a>PowerShell 명령 이름 학습
 
@@ -25,7 +25,7 @@ ms.locfileid: "55683063"
 DC01에서 실행되는 작업을 나열하려면 **/S** 매개 변수와 컴퓨터 이름을 백슬래시 없이 사용합니다. 정의합니다(예: `tasklist /S DC01`).
 
 > [!NOTE]
-> PowerShell v6 이전에는 `sc`가 `Set-Content` cmdlet에 대한 별칭이었습니다. **sc.exe** 명령을 실행하려면 파일 확장명을 포함해야 합니다.
+> PowerShell v6 이전에는 `sc`가 `Set-Content` cmdlet에 대한 별칭이었습니다. 따라서 **sc.exe** 명령을 v6 이전의 PowerShell 버전에서 실행하려면 파일 확장명 **exe**를 포함하여 전체 파일 이름 **sc.exe**를 포함해야 합니다.
 
 서비스 및 프로세스는 수명 주기가 잘 정의된 컴퓨터에서 관리 가능한 요소의 예입니다. 서비스 및 프로세스를 시작 또는 중지하거나, 현재 실행 중인 모든 서비스나 프로세스의 목록을 가져올 수 있습니다. 서비스 및 프로세스 간에는 중요한 기술적 차이가 있지만, 서비스 및 프로세스에서 수행하는 작업은 개념적으로 동일합니다. 또한 매개 변수를 지정하여 한 동작을 사용자 정의하기 위해 선택하는 것도 개념적으로 비슷할 수 있습니다.
 
