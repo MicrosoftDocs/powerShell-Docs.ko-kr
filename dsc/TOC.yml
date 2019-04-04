@@ -122,8 +122,9 @@ items:
       - name: DSC HTTP 끌어오기 서버 설정
         href: pull-server/pullServer.md
     - name: 끌어오기 서버에서 노드 등록
-      href: pull-server/pullClient.md
       items:
+      - name: DSC 끌어오기 클라이언트 설정
+        href: pull-server/pullClient.md
       - name: 구성 이름을 사용하여 끌어오기 클라이언트 설정(v5)
         href: pull-server/pullClientConfigNames.md
       - name: 구성 ID를 사용하여 끌어오기 클라이언트 설정(v5)
@@ -165,7 +166,6 @@ items:
 - name: 참조
   items:
   - name: Windows 기본 제공 리소스
-    href: reference/resources/windows/builtInResource.md
     items:
     - name: 보관 리소스
       href: reference/resources/windows/archiveResource.md
@@ -212,7 +212,6 @@ items:
     - name: WindowsProcess 리소스
       href: reference/resources/windows/windowsProcessResource.md
   - name: 기본 제공 리소스
-    href: reference/resources/linux/lnxBuiltInResources.md
     items:
     - name: nxArchive 리소스
       href: reference/resources/linux/lnxArchiveResource.md
@@ -241,8 +240,9 @@ items:
     - name: PackageManagementSourceDsc 리소스
       href: reference/resources/packagemanagement/PackageManagementSourceDscResource.md
   - name: MSFT_DSCLocalConfigurationManager 클래스
-    href: reference/mof-classes/msft-dsclocalconfigurationmanager.md
     items:
+    - name: 개요
+      href: reference/mof-classes/msft-dsclocalconfigurationmanager.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 ApplyConfiguration 메서드
       href: reference/mof-classes/msft-dsclocalconfigurationmanager-applyconfiguration.md
     - name: MSFT_DSCLocalConfigurationManager 클래스의 DisableDebugConfiguration 메서드
@@ -285,9 +285,9 @@ items:
   items:
   - name: 백서
     href: further-reading/whitepapers.md
-ms.openlocfilehash: 177dc88e4a2a92104f6f2c2d4db118531274fcc4
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 68096f26178d4c33fd78e6051a3cc071bd749210
+ms.sourcegitcommit: 0ca836d1044e46d3a7dcbc69fa93d84f74848559
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057198"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920342"
