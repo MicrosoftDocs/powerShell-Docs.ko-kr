@@ -2,10 +2,10 @@ items:
 - name: 개요
   href: overview.md
 - name: 설치
-  href: install/installing-powershell.md
   items:
+  - name: 다양한 버전의 PowerShell 설치
+    href: install/installing-powershell.md
   - name: PowerShell Core
-    href: ''
     items:
     - name: Windows에서 PowerShell Core 설치
       href: install/installing-powershell-core-on-windows.md
@@ -16,7 +16,6 @@ items:
     - name: ARM에서 PowerShell Core 설치
       href: install/powershell-core-on-arm.md
   - name: Windows PowerShell
-    href: ''
     items:
     - name: Windows PowerShell 설치
       href: install/installing-windows-powershell.md
@@ -25,15 +24,17 @@ items:
     - name: Windows PowerShell 시스템 요구 사항
       href: install/windows-powershell-system-requirements.md
 - name: 시작
-  href: getting-started/getting-started-with-windows-powershell.md
   items:
+  - name: PowerShell 시작
+    href: getting-started/getting-started-with-windows-powershell.md
   - name: Windows PowerShell 시작
     href: getting-started/starting-windows-powershell.md
   - name: Windows PowerShell 2.0 엔진 시작
     href: getting-started/starting-the-windows-powershell-2.0-engine.md
 - name: PowerShell 학습
-  href: learn/understanding-important-powershell-concepts.md
   items:
+  - name: 중요한 PowerShell 개념 이해
+    href: learn/understanding-important-powershell-concepts.md
   - name: PowerShell 이름 학습
     href: learn/learning-powershell-names.md
   - name: 친숙한 명령 이름 사용
@@ -50,9 +51,10 @@ items:
     href: learn/more-powershell-learning.md
   - name: 이식 가능한 모듈 작성
     href: learn/writing-portable-modules.md
-  - name: 원격 명령 실행
-    href: learn/remoting/running-remote-commands.md
+  - name: PowerShell 원격 기능
     items:
+    - name: 원격 명령 실행
+      href: learn/remoting/running-remote-commands.md
     - name: SSH를 통한 PowerShell 원격
       href: learn/remoting/ssh-remoting-in-powershell-core.md
     - name: PowerShell Core에서 WSMan(WS-Management) 원격
@@ -64,22 +66,20 @@ items:
   - name: 용어집
     href: learn/windows-powershell-glossary.md
 - name: 구성 요소
-  href: ''
   items:
   - name: 콘솔
-    href: ''
     items:
     - name: PowerShell.exe 명령줄 도움말
       href: components/console/powershell.exe-command-line-help.md
     - name: 탭 확장 사용
       href: components/console/using-tab-expansion.md
   - name: ISE
-    href: components/ise/introducing-the-windows-powershell-ise.md
     items:
+    - name: Windows PowerShell ISE 소개
+      href: components/ise/introducing-the-windows-powershell-ise.md
     - name: Windows PowerShell ISE(통합 스크립팅 환경)
       href: components/ise/windows-powershell-integrated-scripting-environment--ise-.md
     - name: Windows PowerShell ISE 사용
-      href: ''
       items:
       - name: Windows PowerShell ISE 탐색
         href: components/ise/exploring-the-windows-powershell-ise.md
@@ -100,7 +100,6 @@ items:
       - name: Windows PowerShell ISE의 접근성
         href: components/ise/accessibility-in-windows-powershell-ise.md
     - name: ISE 스크립팅 개체 모델
-      href: ''
       items:
       - name: Windows PowerShell ISE 스크립팅 개체 모델의 용도
         href: components/ise/object-model/purpose-of-the-windows-powershell-ise-scripting-object-model.md
@@ -133,8 +132,9 @@ items:
       - name: PowerShellTab 개체
         href: components/ise/object-model/the-powershelltab-object.md
   - name: Visual Studio Code
-    href: components/vscode/using-vscode.md
     items:
+    - name: Visual Studio Code 사용
+      href: components/vscode/using-vscode.md
     - name: Visual Studio Code에서 ISE 환경을 복제하는 방법
       href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
     - name: Visual Studio Code를 사용하여 원격 편집 및 디버깅
@@ -142,7 +142,6 @@ items:
     - name: VSCode 및 PowerShell에서 파일 인코딩 이해
       href: components/vscode/understanding-file-encoding.md
   - name: 웹 액세스
-    href: ''
     items:
     - name: 권한 부여 규칙 및 보안 기능
       href: components/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md
@@ -157,20 +156,21 @@ items:
   - name: 워크플로 가이드
     href: components/workflows-guide.md
 - name: 새로운 기능
-  href: ''
   items:
-  - name: PowerShell Core 6.1의 새로운 기능
-    href: whats-new/what-s-new-in-powershell-core-61.md
-  - name: PowerShell Core 6.0의 새로운 기능
-    href: whats-new/what-s-new-in-powershell-core-60.md
+  - name: PowerShell Core 6.x의 새로운 기능
     items:
+    - name: PowerShell Core 6.1의 새로운 기능
+      href: whats-new/what-s-new-in-powershell-core-61.md
+    - name: PowerShell Core 6.0의 새로운 기능
+      href: whats-new/what-s-new-in-powershell-core-60.md
     - name: PowerShell Core 6.0의 주요 변경 내용
       href: whats-new/breaking-changes-ps6.md
     - name: PowerShell Core 6.0의 알려진 문제
       href: whats-new/known-issues-ps6.md
-  - name: PowerShell 5.0의 새로운 기능
-    href: whats-new/what-s-new-with-powershell.md
+  - name: PowerShell 5.x의 새로운 기능
     items:
+    - name: PowerShell 5.0의 새로운 기능
+      href: whats-new/what-s-new-with-powershell.md
     - name: Windows PowerShell 5.0의 새로운 기능
       href: whats-new/what-s-new-in-windows-powershell-50.md
     - name: PowerShell 5.0 ISE의 새로운 기능
@@ -178,8 +178,9 @@ items:
 - name: PowerShell Core 지원 수명 주기
   href: powershell-support-lifecycle.md
 - name: 샘플 스크립트
-  href: samples/sample-scripts-for-administration.md
   items:
+  - name: 관리용 샘플 스크립트
+    href: samples/sample-scripts-for-administration.md
   - name: 컴퓨터 상태 변경
     href: samples/changing-computer-state.md
   - name: 컴퓨터에 대한 정보 수집
@@ -187,7 +188,6 @@ items:
   - name: FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기
     href: samples/creating-get-winEvent-queries-with-filterhashtable.md
   - name: UI 요소 만들기
-    href: ''
     items:
     - name: 사용자 지정 입력란 만들기
       href: samples/creating-a-custom-input-box.md
@@ -220,7 +220,6 @@ items:
   - name: 파일, 폴더 및 레지스트리 키 작업
     href: samples/working-with-files-folders-and-registry-keys.md
   - name: 개체 작업
-    href: samples/working-with-objects.md
     items:
     - name: WMI 개체 가져오기 - Get-WmiObject
       href: samples/getting-wmi-objects--get-wmiobject-.md
@@ -252,9 +251,9 @@ items:
     href: samples/appendix-1---compatibility-aliases.md
   - name: 부록 2 사용자 지정 PowerShell 바로 가기 만들기
     href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
-ms.openlocfilehash: dd9cac7e7570d6ff4c58b0255a3909f3f0612605
-ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
+ms.openlocfilehash: 3894ca88d01d4f84742321445b0b1e962631c10d
+ms.sourcegitcommit: 0ca836d1044e46d3a7dcbc69fa93d84f74848559
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320390"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920461"
