@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], verb names
 ms.assetid: 2d4e58a9-05bc-437c-86b9-d8d55cba7d48
 caps.latest.revision: 36
-ms.openlocfilehash: d8a0561d6fbb4447a691c434e0518e3e16ce41e7
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
+ms.openlocfilehash: 4475b3f5e15826efbe8bab867011985cd7e2e1ae
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56863669"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293353"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>PowerShell 명령에 대 한 승인 된 동사
 
@@ -94,7 +94,7 @@ PowerShell 사용 하는 [System.Management.Automation.VerbsCommon](/dotnet/api/
 |[종료](/dotnet/api/System.Management.Automation.VerbsCommon.Exit) (예:)|가장 최근에 사용 된 컨텍스트에 현재 환경 또는 컨텍스트를 설정합니다. 예를 들어를 `Exit-PSSession` cmdlet는 대화형 세션을 시작 하는 데 사용 된 세션에서 사용자를 배치 합니다. 이 동사 이룹니다 `Enter`합니다.|이 작업에 대 한 Pop 같은 또는 Out 동사를 사용 하지 마십시오.|
 |[찾을](/dotnet/api/System.Management.Automation.VerbsCommon.Find) (fd)|알 수 없는 명시적, 묵시적, 선택적 또는 지정 된 컨테이너에서 개체를 찾습니다.||
 |[형식](/dotnet/api/System.Management.Automation.VerbsCommon.Format) (f)|지정 된 폼 또는 레이아웃에 있는 개체를 정렬합니다.||
-|[가져올](/dotnet/api/System.Management.Automation.VerbsCommon.Get) (g)|리소스를 검색 하는 동작을 지정 합니다. 이 동사 이룹니다 `Set`합니다.|이 작업에 대 한 읽기, 열기, Cat, 형식, Dir, 가져오기, 덤프, 획득, 검사, 찾기, 또는이 작업에 대 한 검색 등의 동사를 사용 하지 마십시오.|
+|[가져올](/dotnet/api/System.Management.Automation.VerbsCommon.Get) (g)|리소스를 검색 하는 동작을 지정 합니다. 이 동사 이룹니다 `Set`합니다.|이 작업에 대 한 읽기, 열기, Cat, 형식, Dir, 가져오기, 덤프, 획득, 검사, 찾기 또는 검색 등의 동사를 사용 하지 마십시오.|
 |[숨기기](/dotnet/api/System.Management.Automation.VerbsCommon.Hide) (h)|리소스를 검색할 수 있습니다. 예를 들어, 이름이 숨기기 동사를 포함 하는 cmdlet 사용자 로부터 서비스를 숨길 수 있습니다. 이 동사 이룹니다 `Show`합니다.|이 작업에 대 한 블록과 같은 동사를 사용 하지 마십시오.|
 |[조인](/dotnet/api/System.Management.Automation.VerbsCommon.Join) (j)|하나의 리소스에 리소스를 결합합니다. 예를 들어를 `Join-Path` cmdlet 단일 경로 만들려면 해당 자식 경로 중 하나를 사용 하 여 경로 결합 합니다. 이 동사 이룹니다 `Split`합니다.|이 작업에 대 한 결합, Unite, 연결, 연결 등의 동사를 사용 하지 마십시오.|
 |[잠금](/dotnet/api/System.Management.Automation.VerbsCommon.Lock) (lk)|리소스를 보호합니다. 이 동사 이룹니다 `Unlock`합니다.|이 작업에 대 한 제한 또는 보안 등의 동사를 사용 하지 마십시오.|
@@ -149,7 +149,7 @@ PowerShell을 사용 합니다 [System.Management.Automation.VerbsData](/dotnet/
 |[ConvertFrom](/dotnet/api/System.Management.Automation.VerbsData.ConvertFrom) (cf)|한 가지 기본 유형의 입력 (cmdlet 명사 입력을 나타냄) 하나 이상의 지원 되는 출력 형식으로 변환 합니다.|이 작업에 대 한 내보내기, 출력 또는 초과 같은 동사를 사용 하지 마십시오.|
 |[ConvertTo](/dotnet/api/System.Management.Automation.VerbsData.ConvertTo) (ct)|하나 이상의 유형의 입력 (cmdlet 명사 출력 종류를 나타냄)을 기본 출력 형식에서 변환 합니다.|이 작업을 사용 하지 마십시오 가져오기 등의 동사 입력 또는 합니다.|
 |[분리](/dotnet/api/System.Management.Automation.VerbsData.Dismount) (dm)|위치에서 명명된 된 엔터티를 분리합니다. 이 동사 이룹니다 `Mount`합니다.|이 작업에 대 한 분리 또는 연결 끊기와 같은 동사를 사용 하지 마십시오.|
-|[편집](/dotnet/api/System.Management.Automation.VerbsData.Edit) (교육)|추가 하거나 콘텐츠를 제거 하 여 기존 데이터를 수정 합니다.|이 작업에 대 한이 작업에 대 한 변경, 업데이트 또는 수정 등의 동사를 사용 하지 마십시오.|
+|[편집](/dotnet/api/System.Management.Automation.VerbsData.Edit) (교육)|추가 하거나 콘텐츠를 제거 하 여 기존 데이터를 수정 합니다.|이 작업에 대 한 변경, 업데이트 또는 수정 등의 동사를 사용 하지 마십시오.|
 |[확장](/dotnet/api/System.Management.Automation.VerbsData.Expand) (en)|압축 된 리소스의 데이터를 원래 상태로 복원 합니다. 이 동사 이룹니다 `Compress`합니다.|이 작업에 대 한 분해 등 압축 되지 않은 동사를 사용 하지 마십시오.|
 |[내보내기](/dotnet/api/System.Management.Automation.VerbsData.Export) (ep)|기본 입력 파일을 같은 영구 데이터 저장소에 또는 교환 형식으로 캡슐화합니다. 이 동사 이룹니다 `Import`합니다.|이 작업에 대 한 추출 또는 백업 등의 동사를 사용 하지 마십시오.|
 |[그룹](/dotnet/api/System.Management.Automation.VerbsData.Group) (gp)|정렬 또는 하나 이상의 리소스를 연결 합니다.|이 작업에 대 한 집계, 정렬, 연결 등의 동사를 사용 하지 않거나 상관 관계를 지정 합니다.|
