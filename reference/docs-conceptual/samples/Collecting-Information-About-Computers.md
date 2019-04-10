@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 컴퓨터에 대한 정보 수집
 ms.assetid: 9e7b6a2d-34f7-4731-a92c-8b3382eb51bb
-ms.openlocfilehash: 99125ef701705c20d4e955c79eaa3469ce4d58fb
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: d837684108656e17ebf26189bd4841c5de01051c
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402359"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293166"
 ---
 # <a name="collecting-information-about-computers"></a>컴퓨터에 대한 정보 수집
 
@@ -22,7 +22,7 @@ Windows PowerShell은 개체에서도 작동하며 단일 또는 여러 개체�
 WMI를 통해 연결할 수 있는 컴퓨터와 연관된 이름 또는 IP 주소를 지정할 수 있습니다.
 로컬 컴퓨터에 대한 정보를 검색하려면 **ComputerName** 매개 변수를 생략할 수 있습니다.
 
-### <a name="listing-desktop-settings"></a>데스크톱 설정 표시
+## <a name="listing-desktop-settings"></a>데스크톱 설정 표시
 
 먼저 로컬 컴퓨터에서 데스크톱 정보를 수집하는 명령을 실행하겠습니다.
 
@@ -44,7 +44,7 @@ Get-CimInstance -ClassName Win32_Desktop -ComputerName . | Select-Object -Exclud
 
 메타데이터를 필터링하려면 파이프라인 연산자(|)를 사용하여 `Get-CimInstance` 명령의 결과를 `Select-Object -ExcludeProperty "CIM*"`으로 보냅니다.
 
-### <a name="listing-bios-information"></a>BIOS 정보 표시
+## <a name="listing-bios-information"></a>BIOS 정보 표시
 
 WMI **Win32_BIOS** 클래스는 로컬 컴퓨터의 시스템 BIOS에 대한 전체 정보를 비교적 간결하게 반환합니다.
 
@@ -52,7 +52,7 @@ WMI **Win32_BIOS** 클래스는 로컬 컴퓨터의 시스템 BIOS에 대한 전
 Get-CimInstance -ClassName Win32_BIOS -ComputerName .
 ```
 
-### <a name="listing-processor-information"></a>프로세서 정보 표시
+## <a name="listing-processor-information"></a>프로세서 정보 표시
 
 정보를 필터링하려는 경우가 많지만 WMI의 **Win32_Processor** 클래스를 사용하여 일반적인 프로세서 정보를 검색할 수 있습니다.
 
@@ -70,7 +70,7 @@ SystemType
 X86-based PC
 ```
 
-### <a name="listing-computer-manufacturer-and-model"></a>컴퓨터 제조업체 및 모델 표시
+## <a name="listing-computer-manufacturer-and-model"></a>컴퓨터 제조업체 및 모델 표시
 
 **Win32_ComputerSystem**을 통해 컴퓨터 모델 정보를 확인할 수도 있습니다.
 OEM 데이터를 제공하기 위해 표시되는 표준 출력을 필터링하지 않아도 됩니다.
@@ -88,7 +88,7 @@ MyPC Jane Doe         WORKGROUP 804765696           DA243A-ABA 6415cl NA910 Comp
 일부 하드웨어의 정보를 직접 반환하는 이러한 명령의 출력 품질은 보유한 데이터에 따라 달라집니다.
 일부 정보는 하드웨어 제조업체에서 제대로 구성하지 않아 제공되지 않을 수도 있습니다.
 
-### <a name="listing-installed-hotfixes"></a>설치된 핫픽스 표시
+## <a name="listing-installed-hotfixes"></a>설치된 핫픽스 표시
 
 **Win32_QuickFixEngineering**을 사용하여 설치된 모든 핫픽스를 표시할 수 있습니다.
 
@@ -143,7 +143,7 @@ HotFixId
 KB4048951
 ```
 
-### <a name="listing-operating-system-version-information"></a>운영 체제 버전 정보 표시
+## <a name="listing-operating-system-version-information"></a>운영 체제 버전 정보 표시
 
 **Win32_OperatingSystem** 클래스 속성에는 버전 및 서비스 팩 정보가 포함되어 있습니다.
 이러한 속성만 명시적으로 선택하여 **Win32_OperatingSystem**에서 버전 정보 요약을 가져올 수 있습니다.
@@ -167,7 +167,7 @@ ServicePackMajorVersion : 0
 ServicePackMinorVersion : 0
 ```
 
-### <a name="listing-local-users-and-owner"></a>로컬 사용자 및 소유자 표시
+## <a name="listing-local-users-and-owner"></a>로컬 사용자 및 소유자 표시
 
 사용이 허가된 사용자 수, 현재 사용자 수, 소유자 이름 등의 로컬 일반 사용자 정보는 **Win32_OperatingSystem** 클래스의 속성을 선택하여 확인할 수 있습니다.
 다음과 같이 표시할 속성을 명시적으로 선택할 수 있습니다.
@@ -182,7 +182,7 @@ Get-CimInstance -ClassName Win32_OperatingSystem -ComputerName . | Select-Object
 Get-CimInstance -ClassName Win32_OperatingSystem -ComputerName . | Select-Object -Property *user*
 ```
 
-### <a name="getting-available-disk-space"></a>사용 가능한 디스크 공간 가져오기
+## <a name="getting-available-disk-space"></a>사용 가능한 디스크 공간 가져오기
 
 로컬 드라이브의 디스크 공간 및 여유 공간을 보려면 Win32_LogicalDisk WMI 클래스를 사용하면 됩니다.
 DriveType이 3(WMI에서 고정 하드 디스크에 사용하는 값)인 인스턴스만 표시해야 합니다.
@@ -203,7 +203,7 @@ FreeSpace 109839607808
 Size      326846914560
 ```
 
-### <a name="getting-logon-session-information"></a>로그온 세션 정보 가져오기
+## <a name="getting-logon-session-information"></a>로그온 세션 정보 가져오기
 
 **Win32_LogonSession** WMI 클래스를 통해 사용자와 관련된 로그온 세션에 대한 일반적인 정보를 가져올 수 있습니다.
 
@@ -211,7 +211,7 @@ Size      326846914560
 Get-CimInstance -ClassName Win32_LogonSession -ComputerName .
 ```
 
-### <a name="getting-the-user-logged-on-to-a-computer"></a>컴퓨터에 로그온한 사용자 가져오기
+## <a name="getting-the-user-logged-on-to-a-computer"></a>컴퓨터에 로그온한 사용자 가져오기
 
 Win32_ComputerSystem을 사용하여 특정 컴퓨터 시스템에 로그온한 사용자를 표시할 수 있습니다.
 이 명령은 시스템 데스크톱에 로그온한 사용자만 반환합니다.
@@ -220,7 +220,7 @@ Win32_ComputerSystem을 사용하여 특정 컴퓨터 시스템에 로그온한 
 Get-CimInstance -ClassName Win32_ComputerSystem -Property UserName -ComputerName .
 ```
 
-### <a name="getting-local-time-from-a-computer"></a>컴퓨터에서 로컬 시간 가져오기
+## <a name="getting-local-time-from-a-computer"></a>컴퓨터에서 로컬 시간 가져오기
 
 **Win32_LocalTime** WMI 클래스를 사용하여 특정 컴퓨터에서 현재 로컬 시간을 검색할 수 있습니다.
 
@@ -240,7 +240,7 @@ Year         : 2017
 PSComputerName : .
 ```
 
-### <a name="displaying-service-status"></a>서비스 상태 표시
+## <a name="displaying-service-status"></a>서비스 상태 표시
 
 특정 컴퓨터에서 모든 서비스의 상태를 보려면 앞에서 설명한 대로 `Get-Service` cmdlet을 로컬에서 사용할 수 있습니다.
 원격 시스템의 경우 **Win32_Service** WMI 클래스를 사용할 수 있습니다.

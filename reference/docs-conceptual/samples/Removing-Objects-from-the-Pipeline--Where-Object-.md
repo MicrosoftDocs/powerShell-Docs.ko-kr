@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 파이프라인에서 개체 제거(Where Object)
 ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
-ms.openlocfilehash: c060b93a3823be26ad6c7757acc633bb4fc2fcfa
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 1f7d064c7bf2dd551ea96b29762fbccad8174084
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680768"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293149"
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>파이프라인에서 개체 제거(Where-Object)
 
@@ -16,7 +16,7 @@ ms.locfileid: "55680768"
 
 Windows PowerShell에는 파이프라인에 있는 각 개체를 테스트하고 특정 테스트 조건을 만족하는 개체만 파이프라인을 통해 전달할 수 있는 `Where-Object` cmdlet이 포함되어 있습니다. 테스트를 통과하지 못한 개체는 파이프라인에서 제거됩니다. 테스트 조건은 `Where-Object` **FilterScript** 매개 변수의 값으로 제공합니다.
 
-### <a name="performing-simple-tests-with-where-object"></a>Where-Object를 사용하여 간단한 테스트 수행
+## <a name="performing-simple-tests-with-where-object"></a>Where-Object를 사용하여 간단한 테스트 수행
 
 **FilterScript**의 값은 true 또는 false로 계산되는 하나의 *스크립트 블록*(하나 이상의 Windows PowerShell 명령이 중괄호({})로 묶여 있음)입니다. 이러한 스크립트 블록은 매우 간단할 수 있지만 비교 연산자와 같은 다른 Windows PowerShell 개념을 알고 있어야 만들 수 있습니다. 비교 연산자는 자신을 중심으로 양쪽에 표시되는 두 항목을 비교합니다. 비교 연산자의 이름은 '-' 문자로 시작됩니다. 기본 비교 연산자는 거의 모든 유형의 개체에서 작동하지만 고급 비교 연산자는 텍스트나 배열에서만 작동할 수 있습니다.
 
@@ -46,7 +46,7 @@ PS> 1,2,3,4 | Where-Object -FilterScript {$_ -lt 3}
 2
 ```
 
-### <a name="filtering-based-on-object-properties"></a>개체 속성을 기반으로 필터링
+## <a name="filtering-based-on-object-properties"></a>개체 속성을 기반으로 필터링
 
 `$_`가 현재 파이프라인 개체를 참조하므로 테스트를 위해 이 개체의 속성에 액세스할 수 있습니다.
 

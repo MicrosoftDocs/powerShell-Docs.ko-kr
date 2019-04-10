@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 현재 위치 관리
 ms.assetid: a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
-ms.openlocfilehash: d1ebc9507a45841e6d4d8219e45c002990e1328c
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: f5e0653b2c3bbc9d2526c7a1c2ff88a8a6641695
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403007"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293189"
 ---
 # <a name="managing-current-location"></a>현재 위치 관리
 
@@ -16,7 +16,7 @@ ms.locfileid: "53403007"
 
 Windows PowerShell에서는 명사 **Location**을 사용하여 작업 디렉터리를 나타내고 cmdlet 패밀리를 구현하여 위치를 조사 및 조작합니다.
 
-### <a name="getting-your-current-location-get-location"></a>현재 위치 가져오기(Get-Location)
+## <a name="getting-your-current-location-get-location"></a>현재 위치 가져오기(Get-Location)
 
 현재 디렉터리 위치의 경로를 확인하려면 **Get-Location** 명령을 입력합니다.
 
@@ -30,7 +30,7 @@ C:\Documents and Settings\PowerUser
 > [!NOTE]
 > Get-Location cmdlet은 BASH 셸의 **pwd** 명령과 비슷합니다. Set-Location cmdlet은 Cmd.exe의 **cd** 명령과 비슷합니다.
 
-### <a name="setting-your-current-location-set-location"></a>현재 위치 설정(Set-Location)
+## <a name="setting-your-current-location-set-location"></a>현재 위치 설정(Set-Location)
 
 **Get-Location** 명령은 **Set-Location** 명령과 함께 사용됩니다. **Set-Location** 명령을 사용하여 현재 디렉터리 위치를 지정할 수 있습니다.
 
@@ -96,7 +96,7 @@ chdir -Path .. -PassThru
 sl -Path HKLM:\SOFTWARE -PassThru
 ```
 
-### <a name="saving-and-recalling-recent-locations-push-location-and-pop-location"></a>최근 위치 저장 및 다시 호출(Push-Location 및 Pop-Location)
+## <a name="saving-and-recalling-recent-locations-push-location-and-pop-location"></a>최근 위치 저장 및 다시 호출(Push-Location 및 Pop-Location)
 
 위치를 변경할 때 이전 위치를 추적하여 해당 위치로 돌아갈 수 있습니다. Windows PowerShell의 **Push-Location** cmdlet은 확인한 디렉터리 경로의 순차적 기록("스택")을 만듭니다. 따라서 보조 **Pop-Location** cmdlet을 사용하여 디렉터리 경로 기록의 이전 단계로 돌아갈 수 있습니다.
 

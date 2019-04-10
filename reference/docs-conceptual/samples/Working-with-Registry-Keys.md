@@ -3,18 +3,18 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 레지스트리 키 작업
 ms.assetid: 91bfaecd-8684-48b4-ad86-065dfe6dc90a
-ms.openlocfilehash: a9d08f2f6b5803980dec45a4e266ad66879c8c8d
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: e7b497ec2fccf9ba3934439a9c1e9be3cf70a705
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403475"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293200"
 ---
 # <a name="working-with-registry-keys"></a>레지스트리 키 작업
 
 레지스트리 키는 Windows PowerShell 드라이브에 있는 항목이므로 레지스트리 키에 대한 작업 수행은 파일 및 폴더 작업과 매우 유사합니다. 한 가지 중요한 차이점은 레지스트리 기반 Windows PowerShell 드라이브의 모든 항목은 파일 시스템 드라이브의 폴더와 같이 컨테이너라는 점입니다. 그러나 레지스트리 항목 및 연결된 값은 고유한 항목이 아니라 항목의 속성입니다.
 
-### <a name="listing-all-subkeys-of-a-registry-key"></a>레지스트리 키의 모든 하위 키 표시
+## <a name="listing-all-subkeys-of-a-registry-key"></a>레지스트리 키의 모든 하위 키 표시
 
 **Get-ChildItem**을 사용하여 레지스트리 키 바로 아래에 있는 항목을 모두 볼 수 있습니다. 선택적 **Force** 매개 변수를 추가하면 숨겨진 항목이나 시스템 항목을 볼 수도 있습니다. 예를 들어 다음 명령은 HKEY_CURRENT_USER 레지스트리 하이브에 해당하는 Windows PowerShell 드라이브 HKCU: 바로 아래에 있는 항목을 보여 줍니다.
 
@@ -58,7 +58,7 @@ Get-ChildItem -Path hkcu:\ -Recurse
 Get-ChildItem -Path HKCU:\Software -Recurse | Where-Object -FilterScript {($_.SubKeyCount -le 1) -and ($_.ValueCount -eq 4) }
 ```
 
-### <a name="copying-keys"></a>키 복사
+## <a name="copying-keys"></a>키 복사
 
 **Copy-Item**을 사용하여 복사를 수행합니다. 다음 명령은 "CurrentVersion"라는 새 키를 만들 때 HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion 및 모든 속성을 HKCU:\\에 복사합니다.
 
@@ -74,7 +74,7 @@ Copy-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Destination h
 
 파일 시스템 복사를 위해 이전부터 사용하던 다른 도구를 계속 사용할 수 있습니다. 예를 들어 reg.exe, regini.exe 및 regedit.exe 같은 레지스트리 편집 도구와 WScript.Shell 및 WMI의 StdRegProv 클래스와 같이 레지스트리 편집을 지원하는 COM 개체를 Windows PowerShell에서 사용할 수 있습니다.
 
-### <a name="creating-keys"></a>키 만들기
+## <a name="creating-keys"></a>키 만들기
 
 레지스트리에서 새 키를 만드는 것은 파일 시스템에서 새 항목을 만드는 것보다 간단합니다. 모든 레지스트리 키가 컨테이너이므로 항목 유형을 지정할 필요 없이 다음과 같이 명시적 경로만 지정하면 됩니다.
 
@@ -88,7 +88,7 @@ New-Item -Path hkcu:\software_DeleteMe
 New-Item -Path Registry::HKCU_DeleteMe
 ```
 
-### <a name="deleting-keys"></a>키 삭제
+## <a name="deleting-keys"></a>키 삭제
 
 기본적으로 항목 삭제는 모든 공급자에 대해 동일하게 수행됩니다. 다음 명령은 항목을 제거합니다.
 
@@ -97,7 +97,7 @@ Remove-Item -Path hkcu:\Software_DeleteMe
 Remove-Item -Path 'hkcu:\key with spaces in the name'
 ```
 
-### <a name="removing-all-keys-under-a-specific-key"></a>특정 키 아래에 있는 모든 키 제거
+## <a name="removing-all-keys-under-a-specific-key"></a>특정 키 아래에 있는 모든 키 제거
 
 **Remove-Item**을 사용하면 포함된 항목을 제거할 수 있지만 이 항목에 다른 항목이 들어 있는 경우 제거를 확인하는 메시지가 나타납니다. 예를 들어 앞에서 만든 HKCU:\\CurrentVersion 하위 키를 삭제하려고 하면 다음과 같은 메시지가 나타납니다.
 

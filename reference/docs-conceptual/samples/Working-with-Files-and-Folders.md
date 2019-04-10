@@ -3,18 +3,18 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 파일 및 폴더 작업
 ms.assetid: c0ceb96b-e708-45f3-803b-d1f61a48f4c1
-ms.openlocfilehash: a8d57a1c269d95e692db6c3f1ae10df49e305e4e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 393e886a4945222198d9b81019250c5d5b905ad3
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402351"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293223"
 ---
 # <a name="working-with-files-and-folders"></a>파일 및 폴더 작업
 
 Windows PowerShell 드라이브를 탐색하고 드라이브 항목을 조작하는 것은 Windows의 실제 디스크 드라이브에 있는 파일 및 폴더를 조작하는 것과 유사합니다. 이 섹션에서는 PowerShell을 사용하여 특정 파일 및 폴더 조작 작업을 처리하는 방법을 설명합니다.
 
-### <a name="listing-all-the-files-and-folders-within-a-folder"></a>폴더 내의 모든 파일 및 폴더 표시
+## <a name="listing-all-the-files-and-folders-within-a-folder"></a>폴더 내의 모든 파일 및 폴더 표시
 
 **Get-ChildItem**을 사용하여 폴더 바로 아래에 있는 항목을 모두 볼 수 있습니다. 선택적 **Force** 매개 변수를 추가하면 숨겨진 항목이나 시스템 항목을 볼 수도 있습니다. 예를 들어 다음 명령은 Windows의 실제 C 드라이브와 마찬가지로 Windows PowerShell C 드라이브 바로 아래에 있는 내용을 보여 줍니다.
 
@@ -36,7 +36,7 @@ Get-ChildItem -Path C:\ -Force -Recurse
 Get-ChildItem -Path $env:ProgramFiles -Recurse -Include *.exe | Where-Object -FilterScript {($_.LastWriteTime -gt '2005-10-01') -and ($_.Length -ge 1mb) -and ($_.Length -le 10mb)}
 ```
 
-### <a name="copying-files-and-folders"></a>파일 및 폴더 복사
+## <a name="copying-files-and-folders"></a>파일 및 폴더 복사
 
 **Copy-Item**을 사용하여 복사를 수행합니다. 다음 명령은 C:\\boot.ini를 C:\\boot.bak에 백업합니다.
 
@@ -70,7 +70,7 @@ Copy-Item -Filter *.txt -Path c:\data -Recurse -Destination C:\temp\text
 (New-Object -ComObject Scripting.FileSystemObject).CopyFile('C:\boot.ini', 'C:\boot.bak')
 ```
 
-### <a name="creating-files-and-folders"></a>파일 및 폴더 만들기
+## <a name="creating-files-and-folders"></a>파일 및 폴더 만들기
 
 새 항목 만들기는 Windows PowerShell 공급자에서 동일한 방식으로 작동합니다. Windows PowerShell 공급자에 한 가지 이상의 항목 유형이 있는 경우 항목 유형을 지정해야 합니다. 예를 들어 FileSystem Windows PowerShell 공급자는 디렉터리와 파일을 구별합니다.
 
@@ -86,7 +86,7 @@ New-Item -Path 'C:\temp\New Folder' -ItemType Directory
 New-Item -Path 'C:\temp\New Folder\file.txt' -ItemType File
 ```
 
-### <a name="removing-all-files-and-folders-within-a-folder"></a>폴더 내의 모든 파일 및 폴더 제거
+## <a name="removing-all-files-and-folders-within-a-folder"></a>폴더 내의 모든 파일 및 폴더 제거
 
 **Remove-Item**을 사용하면 포함된 항목을 제거할 수 있지만 이 항목에 다른 항목이 들어 있는 경우 제거를 확인하는 메시지가 나타납니다. 예를 들어 다른 항목이 들어 있는 C:\\temp\\DeleteMe라는 폴더를 삭제하려는 경우 다음과 같이 삭제하기 전에 확인 메시지가 나타납니다.
 
@@ -107,7 +107,7 @@ sure you want to continue?
 Remove-Item -Path C:\temp\DeleteMe -Recurse
 ```
 
-### <a name="mapping-a-local-folder-as-a-windows-accessible-drive"></a>Windows 액세스 드라이브로 로컬 폴더 매핑
+## <a name="mapping-a-local-folder-as-a-windows-accessible-drive"></a>Windows 액세스 드라이브로 로컬 폴더 매핑
 
 **subst** 명령을 사용하여 로컬 폴더를 매핑할 수도 있습니다. 다음 명령은 루트가 로컬 Program Files 디렉터리인 로컬 드라이브 P:를 만듭니다.
 
@@ -117,7 +117,7 @@ subst p: $env:programfiles
 
 그러면 네트워크 드라이브와 마찬가지로 **subst**를 사용하여 Windows PowerShell에 매핑된 드라이브가 Windows PowerShell 셸에 즉시 나타납니다.
 
-### <a name="reading-a-text-file-into-an-array"></a>텍스트 파일을 배열로 읽어오기
+## <a name="reading-a-text-file-into-an-array"></a>텍스트 파일을 배열로 읽어오기
 
 일반적으로 텍스트 데이터는 개별 데이터 요소로 취급되는 별도의 줄이 포함된 파일에 저장됩니다. **Get-Content** cmdlet을 사용하여 다음과 같이 한 단계에서 전체 파일을 읽을 수 있습니다.
 

@@ -3,18 +3,18 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 네트워킹 작업 수행
 ms.assetid: a43cc55f-70c1-45c8-9467-eaad0d57e3b5
-ms.openlocfilehash: 64c57c95a70bc4cad4b695a59d96673ed18afdf4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 250ae6e5f6431ce659b3600188d7e30e501c3247
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682568"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293132"
 ---
 # <a name="performing-networking-tasks"></a>네트워킹 작업 수행
 
 TCP/IP는 가장 일반적으로 사용되는 네트워크 프로토콜이므로 대부분의 간단한 네트워크 프로토콜 관리 작업은 TCP/IP와 관련이 있습니다. 이 섹션에서는 Windows PowerShell 및 WMI를 사용하여 이러한 작업을 수행합니다.
 
-### <a name="listing-ip-addresses-for-a-computer"></a>컴퓨터의 IP 주소 표시
+## <a name="listing-ip-addresses-for-a-computer"></a>컴퓨터의 IP 주소 표시
 
 로컬 컴퓨터에서 사용 중인 모든 IP 주소를 가져오려면 다음 명령을 사용합니다.
 
@@ -48,7 +48,7 @@ IPAddress Property   System.String[] IPAddress {get;}
 
 각 네트워크 어댑터의 IP주소 속성은 실제 배열입니다. 정의에 있는 중괄호는 **IPAddress**가 **System.String** 값이 아니라 **System.String** 값의 배열임을 나타냅니다.
 
-### <a name="listing-ip-configuration-data"></a>IP 구성 데이터 표시
+## <a name="listing-ip-configuration-data"></a>IP 구성 데이터 표시
 
 각 네트워크 어댑터의 자세한 IP 구성 데이터를 표시하려면 다음 명령을 사용합니다.
 
@@ -66,7 +66,7 @@ Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true -
 
 이 명령은 DHCP, DNS, 라우팅 및 기타 보조 IP 구성 속성에 대한 세부 정보를 반환합니다.
 
-### <a name="pinging-computers"></a>컴퓨터에 대해 ping 수행
+## <a name="pinging-computers"></a>컴퓨터에 대해 ping 수행
 
 **Win32_PingStatus**를 사용하여 컴퓨터에 대해 간단한 ping을 수행할 수 있습니다. 다음 명령은 ping을 수행하지만 긴 출력 결과를 반환합니다.
 
@@ -106,7 +106,7 @@ Windows PowerShell에서 1에서 254까지의 번호 배열을 나타내려면 *
 $ips = 1..254 | ForEach-Object -Process {'192.168.1.' + $_}
 ```
 
-### <a name="retrieving-network-adapter-properties"></a>네트워크 어댑터 속성 검색
+## <a name="retrieving-network-adapter-properties"></a>네트워크 어댑터 속성 검색
 
 이 사용 설명서 앞부분에서는 **Win32_NetworkAdapterConfiguration**을 사용하여 일반적인 구성 속성을 검색할 수 있다고 설명했습니다. TCP/IP 정보에는 그대로 적용되지 않을 수 있지만 MAC 주소와 어댑터 유형 같은 네트워크 어댑터 정보는 컴퓨터의 상태를 파악하는 데 유용할 수 있습니다. 이 정보의 요약을 보려면 다음 명령을 사용합니다.
 
@@ -114,7 +114,7 @@ $ips = 1..254 | ForEach-Object -Process {'192.168.1.' + $_}
 Get-WmiObject -Class Win32_NetworkAdapter -ComputerName .
 ```
 
-### <a name="assigning-the-dns-domain-for-a-network-adapter"></a>네트워크 어댑터의 DNS 도메인 할당
+## <a name="assigning-the-dns-domain-for-a-network-adapter"></a>네트워크 어댑터의 DNS 도메인 할당
 
 자동 이름 확인에 사용할 DNS 도메인을 할당하려면 **Win32_NetworkAdapterConfiguration SetDNSDomain** 메서드를 사용합니다. 각 네트워크 어댑터 구성에 대해 개별적으로 DNS 도메인을 할당하기 때문에 다음과 같이 **ForEach-Object** 문을 사용하여 각 어댑터에 도메인을 할당해야 합니다.
 
@@ -130,11 +130,11 @@ TCP/IP만 사용하는 네트워크에 있는 컴퓨터의 몇 가지 네트워�
 Get-WmiObject -Class Win32_NetworkAdapterConfiguration -ComputerName . | Where-Object -FilterScript {$_.IPEnabled} | ForEach-Object -Process {$_.SetDNSDomain('fabrikam.com')}
 ```
 
-### <a name="performing-dhcp-configuration-tasks"></a>DHCP 구성 작업 수행
+## <a name="performing-dhcp-configuration-tasks"></a>DHCP 구성 작업 수행
 
 DHCP 세부 정보는 DNS 구성과 같이 네트워크 어댑터 집합을 사용하여 수정합니다. WMI에서는 여러 가지 고유한 작업을 수행할 수 있는데, 이 설명서에서는 몇 가지 일반적인 작업을 단계별로 수행하는 방법을 보여 줍니다.
 
-#### <a name="determining-dhcp-enabled-adapters"></a>DHCP 사용 가능 어댑터 확인
+### <a name="determining-dhcp-enabled-adapters"></a>DHCP 사용 가능 어댑터 확인
 
 컴퓨터에서 DHCP 사용 가능 어댑터를 찾으려면 다음 명령을 사용합니다.
 
@@ -148,7 +148,7 @@ IP 구성에 문제가 있는 어댑터를 제외하려면 IP 사용 어댑터�
 Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$true and DHCPEnabled=$true" -ComputerName .
 ```
 
-#### <a name="retrieving-dhcp-properties"></a>DHCP 속성 검색
+### <a name="retrieving-dhcp-properties"></a>DHCP 속성 검색
 
 어댑터의 DHCP 관련 속성은 일반적으로 "DHCP"로 시작되므로 Format-Table의 Property 매개 변수를 사용하여 해당 속성만 표시할 수 있습니다.
 
@@ -156,7 +156,7 @@ Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$true 
 Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter "DHCPEnabled=$true" -ComputerName . | Format-Table -Property DHCP*
 ```
 
-#### <a name="enabling-dhcp-on-each-adapter"></a>각 어댑터에서 DHCP 사용
+### <a name="enabling-dhcp-on-each-adapter"></a>각 어댑터에서 DHCP 사용
 
 모든 어댑터에서 DHCP를 사용하도록 설정하려면 다음 명령을 사용합니다.
 
@@ -166,7 +166,7 @@ Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true -
 
 **Filter** 문 “IPEnabled=$true and DHCPEnabled=$false”를 사용하여 이미 설정된 곳에서는 DHCP를 설정하지 않도록 할 수 있습니다. 그러나 이 단계를 생략해도 오류가 발생하지는 않습니다.
 
-#### <a name="releasing-and-renewing-dhcp-leases-on-specific-adapters"></a>특정 어댑터에서 DHCP 임대 해제 및 갱신
+### <a name="releasing-and-renewing-dhcp-leases-on-specific-adapters"></a>특정 어댑터에서 DHCP 임대 해제 및 갱신
 
 **Win32_NetworkAdapterConfiguration** 클래스에는 **ReleaseDHCPLease** 및 **RenewDHCPLease** 메서드가 있습니다. 두 메서드의 사용 방법은 동일합니다. 일반적으로 이러한 메서드는 특정 서브넷에 있는 어댑터 주소를 임대 해제 또는 갱신만 하면 되는 경우에 사용합니다. 서브넷에서 어댑터를 필터링하는 가장 쉬운 방법은 이 서브넷의 게이트웨이를 사용하는 어댑터 구성만 선택하는 것입니다. 예를 들어 다음 명령은 192.168.1.254에서 DHCP를 임대하는 로컬 컴퓨터에 있는 어댑터의 모든 DHCP를 임대 해제합니다.
 
@@ -183,7 +183,7 @@ Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$true 
 > [!NOTE]
 > 원격 컴퓨터에서 이 메서드를 사용하면 임대 해제 또는 갱신된 어댑터를 통해 원격 시스템에 연결하는 경우 이 시스템에 액세스할 수 없습니다.
 
-#### <a name="releasing-and-renewing-dhcp-leases-on-all-adapters"></a>모든 어댑터에서 DHCP 임대 해제 및 갱신
+### <a name="releasing-and-renewing-dhcp-leases-on-all-adapters"></a>모든 어댑터에서 DHCP 임대 해제 및 갱신
 
 **Win32_NetworkAdapterConfiguration** 메서드, **ReleaseDHCPLeaseAll** 및 **RenewDHCPLeaseAll**을 사용하여 모든 어댑터에서 DHCP 주소를 한꺼번에 임대 해제 또는 갱신할 수 있습니다. 그러나 특정 어댑터 대신 WMI 클래스에서 한꺼번에 임대 해제하고 갱신하므로 이 명령을 특정 어댑터가 아니라 WMI 클래스에 적용해야 합니다.
 
@@ -205,7 +205,7 @@ Get-WmiObject -List | Where-Object -FilterScript {$_.Name -eq 'Win32_NetworkAdap
 ( Get-WmiObject -List | Where-Object -FilterScript {$_.Name -eq 'Win32_NetworkAdapterConfiguration'} ).RenewDHCPLeaseAll()
 ```
 
-### <a name="creating-a-network-share"></a>네트워크 공유 만들기
+## <a name="creating-a-network-share"></a>네트워크 공유 만들기
 
 네트워크 공유를 만들려면 다음과 같이 **Win32_Share Create** 메서드를 사용합니다.
 
@@ -219,7 +219,7 @@ Windows PowerShell에서 **net share**를 사용하여 공유를 만들 수도 �
 net share tempshare=c:\temp /users:25 /remark:"test share of the temp folder"
 ```
 
-### <a name="removing-a-network-share"></a>네트워크 공유 제거
+## <a name="removing-a-network-share"></a>네트워크 공유 제거
 
 **Win32_Share**와 함께 네트워크 공유를 제거할 수 있지만 **Win32_Share** 클래스 대신 제거할 특정 공유를 검색해야 하므로 제거 프로세스는 공유 만들기와 약간 다릅니다. 다음 문은 "TempShare" 공유를 삭제합니다.
 
@@ -235,7 +235,7 @@ PS> net share tempshare /delete
 tempshare was deleted successfully.
 ```
 
-### <a name="connecting-a-windows-accessible-network-drive"></a>액세스 가능한 Windows 네트워크 드라이브 연결
+## <a name="connecting-a-windows-accessible-network-drive"></a>액세스 가능한 Windows 네트워크 드라이브 연결
 
 **New-PSDrive** cmdlet은 Windows PowerShell 드라이브를 만들지만 이런 방식으로 만든 드라이브는 Windows PowerShell에서만 사용할 수 있습니다. 새 네트워크 드라이브를 만들려면 **WScript.Network** COM 개체를 사용하면 됩니다. 다음 명령은 \\\\FPS01\\users 공유를 로컬 드라이브 B:에 매핑합니다.
 

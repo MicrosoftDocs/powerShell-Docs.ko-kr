@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Out Cmdlet을 사용하여 데이터 리디렉션
 ms.assetid: 2a4acd33-041d-43a5-a3e9-9608a4c52b0c
-ms.openlocfilehash: f08879f436ce751b176af020aba21e90f09aa61f
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 7c601b09cc53524eb55014b8ea19a5d79cb98b0e
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402388"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293302"
 ---
 # <a name="redirecting-data-with-out--cmdlets"></a>Out-* Cmdlet을 사용하여 데이터 리디렉션
 
@@ -68,7 +68,7 @@ Name    : explorer
 > [!NOTE]
 > 모든 **Out** cmdlet은 줄 길이 제한과 같은 콘솔 창에 적용되는 형식을 사용하여 출력을 텍스트로 렌더링합니다.
 
-#### <a name="paging-console-output-out-host"></a>콘솔 출력 페이징(Out-Host)
+## <a name="paging-console-output-out-host"></a>콘솔 출력 페이징(Out-Host)
 
 기본적으로 Windows PowerShell은 데이터를 호스트 창으로 보내는데, 이는 Out-Host cmdlet이 수행하는 작업과 똑같습니다. Out-Host cmdlet의 주된 용도는 앞에서 설명한 대로 데이터를 페이징하는 것입니다. 예를 들어 다음 명령은 Out-Host를 사용하여 Get-Command cmdlet의 출력을 페이징합니다.
 
@@ -93,7 +93,7 @@ default=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS
 ...
 ```
 
-#### <a name="discarding-output-out-null"></a>출력 삭제(Out-Null)
+## <a name="discarding-output-out-null"></a>출력 삭제(Out-Null)
 
 **Out-Null** cmdlet은 수신한 입력을 즉시 삭제하도록 설계되었습니다. 이 cmdlet은 명령 실행의 부작용으로 수신되는 불필요한 데이터를 삭제하는 데 유용합니다. 다음 명령을 입력하면 명령에서 아무 것도 반환되지 않습니다.
 
@@ -111,7 +111,7 @@ At line:1 char:12
 + Get-Command  <<<< Is-NotACommand | Out-Null
 ```
 
-#### <a name="printing-data-out-printer"></a>데이터 인쇄(Out-Printer)
+## <a name="printing-data-out-printer"></a>데이터 인쇄(Out-Printer)
 
 **Out-Printer** cmdlet을 사용하여 데이터를 인쇄할 수 있습니다. 프린터 이름을 제공하지 않으면 **Out-Printer** cmdlet은 기본 프린터를 사용합니다. 표시 이름만 지정하면 아무 Windows 기반 컴퓨터나 사용할 수 있습니다. 프린터 포트 매핑이나 심지어 실제 프린터도 필요하지 않습니다. 예를 들어 Microsoft Office Document Imaging 도구가 설치되어 있으면 다음과 같이 입력하여 데이터를 이미지 파일로 보낼 수 있습니다.
 
@@ -119,7 +119,7 @@ At line:1 char:12
 Get-Command Get-Command | Out-Printer -Name 'Microsoft Office Document Image Writer'
 ```
 
-#### <a name="saving-data-out-file"></a>데이터 저장(Out-File)
+## <a name="saving-data-out-file"></a>데이터 저장(Out-File)
 
 **Out-File** cmdlet을 사용하여 출력을 콘솔 창이 아니라 파일로 보낼 수 있습니다. 다음 명령줄은 프로세스 목록을 **C:\\temp\\processlist.txt** 파일로 보냅니다.
 
