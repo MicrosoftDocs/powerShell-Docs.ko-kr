@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 5.0의 새로운 기능
-ms.openlocfilehash: a21e6af9f23ac8bb3ddf84dbfa67a67f3ff93b24
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: b2cb729948d4b53c5ea9a536dbeda04c7cb50997
+ms.sourcegitcommit: 9194e603ac242ae733839eb773e4af7360fdd044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58055107"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59363533"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Windows PowerShell 5.0의 새로운 기능
 
@@ -127,7 +127,7 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 - 새 New-TemporaryFile cmdlet을 사용하면 스크립팅의 일부로 임시 파일을 만들 수 있습니다. 기본적으로 새 임시 파일은 ```C:\Users\<user name>\AppData\Local\Temp```에 생성됩니다.
 - 이제 Out-File, Add-Content 및 Set-Content cmdlet에 출력 뒤에 오는 새 줄을 생략하는 새 –NoNewline 매개 변수가 있습니다.
 - New-Guid cmdlet은 .NET Framework Guid 클래스를 이용하여 스크립트나 DSC 리소스를 작성할 때 유용한 GUID를 생성합니다.
-- 파일 버전 정보는 특히 파일이 패치된 후 잘못될 수 있으므로 FileInfo 개체에 대한 새 FileVersionRaw 및 ProductVersionRaw 스크립트 속성을 사용할 수 있습니다. 예를 들어 다음 명령을 실행하여 PowerShell.exe의 이러한 속성 값을 표시할 수 있습니다. 여기서 $pid에는 실행 중인 세션의 Windows PowerShell에 대한 프로세스 ID가 포함됩니다. ```Get-Process -Id $pid -FileVersionInfo | Format-List *version* -Force```
+- 파일 버전 정보는 특히 파일이 패치된 후 잘못될 수 있으므로 FileInfo 개체에 대한 새 FileVersionRaw 및 ProductVersionRaw 스크립트 속성을 사용할 수 있습니다. 예를 들어 다음 명령을 실행하여 PowerShell.exe의 이러한 속성 값을 표시할 수 있습니다. 여기서 $pid에는 실행 중인 세션의 Windows PowerShell에 대한 프로세스 ID가 포함됩니다.  ```Get-Process -Id $pid -FileVersionInfo | Format-List *version* -Force```
 - 새 Enter-PSHostProcess 및 Exit-PSHostProcess cmdlet을 사용하면 Windows PowerShell 콘솔에서 실행 중인 현재 프로세스와 별개인 프로세스에서 Windows PowerShell 스크립트를 디버그할 수 있습니다. Enter-PSHostProcess를 실행하여 특정 프로세스 ID를 입력하거나 연결한 다음 Get-Runspace를 실행하여 프로세스 내의 활성 Runspace를 반환합니다. 프로세스 내에서 스크립트 디버그를 마쳤으면 Exit-PSHostProcess를 실행하여 프로세스에서 분리합니다.
 - 새 Wait-Debugger cmdlet이 [Microsoft.PowerShell.Utility](https://technet.microsoft.com/library/hh849958.aspx) 모듈에 추가되었습니다. Wait-Debugger를 실행하면 스크립트에서 다음 문을 실행하기 전에 디버거에서 스크립트를 중지할 수 있습니다.
 - 이제 Windows PowerShell 워크플로 디버거에서 명령 또는 탭 완성 기능을 지원하며 중첩된 워크플로 함수를 디버그할 수 있습니다. 이제 **Ctrl+Break**를 눌러 실행 중인 스크립트, 로컬 및 원격 세션, 워크플로 스크립트에서 디버거를 시작할 수 있습니다.
@@ -210,7 +210,7 @@ Windows 8.1 및 Windows Server 2012 R2에서는 Windows PowerShell 4.0이 기본
 
 Windows PowerShell 4.0에는 다음과 같은 새로운 기능이 있습니다.
 
-### <a name="new-features-in-windows-powershell"></a>Windows PowerShell의 새로운 기능
+### <a name="a-namenew-features-in-windows-powershell-1-new-features-in-windows-powershell"></a><a name="new-features-in-windows-powershell-1" />Windows PowerShell의 새로운 기능
 
 - **Windows PowerShell DSC**(필요한 상태 구성)는 Windows PowerShell 4.0에서 소프트웨어 서비스와 해당 서비스가 실행되는 환경에 대한 구성 데이터를 배포 및 관리하는 데 사용되는 새로운 관리 시스템입니다. DSC에 대한 자세한 내용은 [Windows PowerShell 필요한 상태 구성 시작](https://technet.microsoft.com/library/c134aa32-b085-4656-9a89-955d8ff768d0)을 참조하세요.
 - 이제 **Save-Help**를 사용하여 원격 컴퓨터에 설치되는 모듈에 대한 도움말을 저장할 수 있습니다. Save-Help를 사용하여 인터넷에 연결된 클라이언트에서 도움말 모듈을 다운로드한 다음(도움말이 필요한 일부 모듈은 반드시 설치해야 함) 저장된 도움말을 인터넷에 액세스할 수 없는 원격 컴퓨터 또는 원격 공유 폴더에 복사할 수 있습니다.
@@ -230,7 +230,7 @@ Windows PowerShell 4.0에는 다음과 같은 새로운 기능이 있습니다.
 - 지정된 파일에 대한 여러 형식 중 하나로 파일 해시를 반환하는 새 **Get-FileHash** cmdlet이 추가되었습니다.
 - Windows PowerShell 4.0에서는 모듈의 매니페스트에서 **DefaultCommandPrefix** 키를 사용하거나 사용자가 **Prefix** 매개 변수를 사용하여 모듈을 가져올 경우 모듈의 **ExportedCommands** 속성은 모듈의 명령을 접두사와 함께 표시합니다. 모듈의 정규화된 구문 ModuleName\\CommandName을 사용하여 명령을 실행할 경우 명령 이름에 접두사를 포함해야 합니다.
 - **$PSVersionTable.PSVersion** 값이 4.0으로 업데이트되었습니다.
-- **Where()** 연산자 동작이 변경되었습니다. `Collection.Where('property -match name')`은 더 이상 `"Property -CompareOperator Value"` 형식의 문자열 식을 허용하지 않습니다. 그러나 **Where()** 연산자는 scriptblock 형식의 문자열 식을 허용합니다. 이 연산자는 여전히 지원됩니다.
+- **Where()** 연산자 동작이 변경되었습니다. `Collection.Where('property -match name')` 은 더 이상 `"Property -CompareOperator Value"` 형식의 문자열 식을 허용하지 않습니다. 그러나 **Where()** 연산자는 scriptblock 형식의 문자열 식을 허용합니다. 이 연산자는 여전히 지원됩니다.
 
 ### <a name="new-features-in-windows-powershell-integrated-scripting-environment-ise"></a>Windows PowerShell ISE(통합 스크립팅 환경)의 새로운 기능
 
@@ -353,7 +353,7 @@ Windows PowerShell은 Common Language Runtime 4.0을 기반으로 합니다. Cmd
 
 ### <a name="support-for-windows-preinstallation-environment"></a>Windows 사전 설치 환경 지원
 
-Windows PowerShell 3.0은 Windows 8용 Windows PE(Windows 사전 설치 환경) 4.0의 선택적 구성 요소입니다. Windows PE는 운영 체제가 없는 컴퓨터를 시작하고 Windows 설치를 준비하는 최소 운영 체제입니다. Windows PE를 사용하면 하드 드라이브의 파티션을 추가하여 포맷하고, 디스크 이미지를 컴퓨터에 복사하고, 네트워크 공유에서 Windows 설치 프로그램을 시작할 수 있습니다. Windows PE에서 Windows PowerShell 3.0을 사용하여 배포, 진단 및 복구 시나리오를 관리할 수 있습니다.
+Windows PowerShell 3.0은 Windows 8용 Windows PE(Windows 사전 설치 환경) 4.0의 선택적 구성 요소입니다. Windows PE는 운영 체제가 없는 컴퓨터를 시작하고 Windows 설치를 준비하는 최소 운영 체제입니다. Windows PE를 사용하여 하드 드라이브를 분할 및 포맷하고, 디스크 이미지를 컴퓨터에 복사하고, 네트워크 공유에서 Windows 설치 프로그램을 시작할 수 있습니다. Windows PE에서 Windows PowerShell 3.0을 사용하여 배포, 진단 및 복구 시나리오를 관리할 수 있습니다.
 
 ### <a name="disconnected-sessions"></a>연결이 끊긴 세션
 
@@ -418,7 +418,7 @@ XML 기반 cmdlet 도움말 파일의 첫 번째 관련 링크 또는 함수의 
 
 ### <a name="cim-integration"></a>CIM 통합
 
-Windows PowerShell 3.0에서는 이기종 시스템 간에 관리 정보를 교환할 수 있도록 시스템, 네트워크, 응용 프로그램 및 서비스에 대한 관리 정보의 일반 정의를 제공하는 CIM(Common Information Model)을 지원합니다. Windows PowerShell 3.0에서는 새 CIM 클래스 또는 기존 CIM 클래스를 기반으로 Windows PowerShell cmdlet 작성, cmdlet 정의 XML 파일 기반 명령, CIM .NET Framework 지원을 비롯한 CIM을 지원합니다. API, CIM 관리 cmdlet 및 WMI 2.0 공급자.
+Windows PowerShell 3.0에서는 이기종 시스템 간에 관리 정보를 교환할 수 있도록 시스템, 네트워크, 애플리케이션 및 서비스에 대한 관리 정보의 일반 정의를 제공하는 CIM(Common Information Model)을 지원합니다. Windows PowerShell 3.0에서는 새 CIM 클래스 또는 기존 CIM 클래스를 기반으로 Windows PowerShell cmdlet 작성, cmdlet 정의 XML 파일 기반 명령, CIM .NET Framework 지원을 비롯한 CIM을 지원합니다. API, CIM 관리 cmdlet 및 WMI 2.0 공급자.
 
 ### <a name="session-configuration-files"></a>세션 구성 파일
 

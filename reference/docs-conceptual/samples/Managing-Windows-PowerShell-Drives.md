@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 드라이브 관리
 ms.assetid: bd809e38-8de9-437a-a250-f30a667d11b4
-ms.openlocfilehash: cfc5418e9d2efb1a786817e1b941d75e22291742
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 9ac5136fb28b450ea6397cab2f36082c50f22e1f
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403204"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293251"
 ---
 # <a name="managing-windows-powershell-drives"></a>Windows PowerShell 드라이브 관리
 
@@ -82,7 +82,7 @@ Path
 HKLM:\SOFTWARE\Microsoft
 ```
 
-### <a name="adding-new-windows-powershell-drives-new-psdrive"></a>새 Windows PowerShell 드라이브 추가(New-PSDrive)
+## <a name="adding-new-windows-powershell-drives-new-psdrive"></a>새 Windows PowerShell 드라이브 추가(New-PSDrive)
 
 **New-PSDrive** 명령을 사용하여 자체 Windows PowerShell 드라이브를 추가할 수 있습니다. **New-PSDrive** 명령의 구문을 가져오려면 **Get-Command** 명령을 **Syntax** 매개 변수와 함께 입력합니다.
 
@@ -146,7 +146,7 @@ cvkey:\
 
 New-PsDrive cmdlet은 현재 Windows PowerShell 세션에만 새 드라이브를 추가합니다. 따라서 Windows PowerShell 창을 닫으면 새 드라이브가 손실됩니다. Windows PowerShell 드라이브를 저장하려면 Export-Console cmdlet을 사용하여 현재 Windows PowerShell 세션을 내보낸 다음 PowerShell.exe **PSConsoleFile** 매개 변수를 사용하여 가져옵니다. 또는 새 드라이브를 Windows PowerShell 프로필에 추가합니다.
 
-### <a name="deleting-windows-powershell-drives-remove-psdrive"></a>Windows PowerShell 드라이브 삭제(Remove-PSDrive)
+## <a name="deleting-windows-powershell-drives-remove-psdrive"></a>Windows PowerShell 드라이브 삭제(Remove-PSDrive)
 
 **Remove-PSDrive** cmdlet을 사용하여 Windows PowerShell에서 드라이브를 삭제할 수 있습니다. **Remove-PSDrive** cmdlet은 사용하기 쉽습니다. 특정 Windows PowerShell 드라이브를 삭제하려면 Windows PowerShell 드라이브 이름을 제공합니다.
 
@@ -156,7 +156,7 @@ New-PsDrive cmdlet은 현재 Windows PowerShell 세션에만 새 드라이브를
 Remove-PSDrive -Name Office
 ```
 
-삭제 하는 **cvkey:** Windows PowerShell 드라이브를 표시 합니다 **New-psdrive** 항목 다음 명령을 사용 합니다.
+ **New-PSDrive** 항목에도 표시된 **cvkey:** Windows PowerShell 드라이브를 삭제하려면 다음 명령을 사용합니다.
 
 ```powershell
 Remove-PSDrive -Name cvkey
@@ -172,6 +172,6 @@ At line:1 char:15
 + remove-psdrive  <<<< -name office
 ```
 
-### <a name="adding-and-removing-drives-outside-windows-powershell"></a>Windows PowerShell 외부 드라이브 추가 및 제거
+## <a name="adding-and-removing-drives-outside-windows-powershell"></a>Windows PowerShell 외부 드라이브 추가 및 제거
 
 Windows PowerShell은 Windows에서 추가되거나 제거된 파일 시스템 드라이브(매핑되는 네트워크 드라이브, 연결된 USB 드라이브, WSH(Windows 스크립트 호스트) 스크립트에서 **net use** 명령 또는 **WScript.NetworkMapNetworkDrive** 및 **RemoveNetworkDrive** 메서드를 사용하여 삭제한 드라이브 등)를 검색합니다.

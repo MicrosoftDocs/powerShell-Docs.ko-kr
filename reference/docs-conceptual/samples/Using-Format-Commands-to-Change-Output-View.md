@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 형식 명령을 사용하여 출력 보기 변경
 ms.assetid: 63515a06-a6f7-4175-a45e-a0537f4f6d05
-ms.openlocfilehash: 35ccd2525d40ffd5e3f25a1abfa38904a109bde5
-ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
+ms.openlocfilehash: fba37b1d0479bf605d8f2171da27cd1bceb9976e
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320424"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293047"
 ---
 # <a name="using-format-commands-to-change-output-view"></a>형식 명령을 사용하여 출력 보기 변경
 
@@ -29,25 +29,34 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 
 이 섹션의 나머지 부분에서는 **Format** cmdlet을 사용하여 이 명령 출력의 표시 방법을 변경하는 방법을 설명합니다.
 
-### <a name="using-format-wide-for-single-item-output"></a>Format-Wide를 사용하여 단일 항목 출력
+## <a name="using-format-wide-for-single-item-output"></a>Format-Wide를 사용하여 단일 항목 출력
 
-기본적으로 **Format-Wide** cmdlet은 개체의 기본 속성만 표시합니다. 다음과 같이 각 개체와 연결된 정보는 하나의 열에 표시됩니다.
+기본적으로 `Format-Wide` cmdlet은 개체의 기본 속성만 표시합니다.
+다음과 같이 각 개체와 연결된 정보는 하나의 열에 표시됩니다.
 
+```powershell
+Get-Command -Verb Format | Format-Wide
 ```
-PS> Get-Process -Name powershell | Format-Wide
 
-powershell                              powershell
+```output
+Format-Custom                          Format-Hex
+Format-List                            Format-Table
+Format-Wide
 ```
 
 다음과 같이 기본 속성이 아닌 속성을 지정할 수도 있습니다.
 
-```
-PS> Get-Process -Name powershell | Format-Wide -Property Id
-
-2760                                    3448
+```powershell
+Get-Command -Verb Format | Format-Wide -Property Noun
 ```
 
-#### <a name="controlling-format-wide-display-with-column"></a>열이 포함된 Format-Wide 표시 제어
+```output
+Custom                                 Hex
+List                                   Table
+Wide
+```
+
+### <a name="controlling-format-wide-display-with-column"></a>열이 포함된 Format-Wide 표시 제어
 
 `Format-Wide` cmdlet을 사용하면 한 번에 하나의 속성만 표시할 수 있습니다.
 이 cmdlet은 한 줄에 하나의 요소만 표시되는 간단한 목록을 표시하는 데 유용합니다.
@@ -65,7 +74,7 @@ Table
 Wide
 ```
 
-### <a name="using-format-list-for-a-list-view"></a>Format-List를 사용하여 목록 보기
+## <a name="using-format-list-for-a-list-view"></a>Format-List를 사용하여 목록 보기
 
 **Format-List** cmdlet은 다음과 같이 각 속성에 레이블이 지정되어 있고 이러한 각 속성이 별도의 줄에 표시되는 목록 형식으로 개체를 표시합니다.
 
@@ -100,7 +109,7 @@ StartTime   : 2006-05-24 13:54:28
 Id          : 3448
 ```
 
-#### <a name="getting-detailed-information-by-using-format-list-with-wildcards"></a>와일드카드와 함께 Format-List를 사용하여 자세한 정보 보기
+### <a name="getting-detailed-information-by-using-format-list-with-wildcards"></a>와일드카드와 함께 Format-List를 사용하여 자세한 정보 보기
 
 **Format-List** cmdlet을 사용하면 와일드카드를 해당 **Property** 매개 변수의 값으로 사용할 수 있습니다. 이 경우 자세한 정보를 표시할 수 있습니다. 필요한 것보다 많은 정보가 개체에 포함되는 경우가 종종 있는데, 이는 Windows PowerShell이 기본적으로 모든 속성 값을 표시하지 않기 때문입니다. 개체의 속성을 모두 표시하려면 **Format-List -Property \&#42;** 명령을 사용합니다. 다음 명령은 단일 프로세스의 출력을 위해 60개 이상의 줄을 생성합니다.
 
@@ -110,7 +119,7 @@ Get-Process -Name powershell | Format-List -Property *
 
 **Format-List** 명령은 자세한 정보를 표시하는 데 유용하지만 많은 항목의 개요를 출력하려는 경우에는 대개 간단한 표 형식의 보기가 더 유용합니다.
 
-### <a name="using-format-table-for-tabular-output"></a>Format-Table을 사용하여 표 형식으로 출력
+## <a name="using-format-table-for-tabular-output"></a>Format-Table을 사용하여 표 형식으로 출력
 
 속성 이름이 지정되지 않은 **Format-Table** cmdlet을 사용하여 **Get-Process** 명령의 출력 형식을 지정하면 형식을 지정하지 않고 이와 같은 작업을 수행할 때와 똑같은 내용이 출력됩니다. 그 이유는 대부분의 Windows PowerShell 개체와 마찬가지로 프로세스도 대개 표 형식으로 표시되기 때문입니다.
 
@@ -123,7 +132,7 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
     332       9    23140        632   141     1.06   3448 powershell
 ```
 
-#### <a name="improving-format-table-output-autosize"></a>Format-Table 출력 향상(AutoSize)
+### <a name="improving-format-table-output-autosize"></a>Format-Table 출력 향상(AutoSize)
 
 표 형식의 보기는 비교 가능한 많은 정보를 표시하는 데 유용하지만 열이 너무 좁아 데이터를 모두 표시할 수 없는 경우에는 정보를 해석하기 어려울 수 있습니다. 예를 들어 프로세스의 Path, ID, Name 및 Company를 표시하려고 하면 다음과 같이 프로세스의 Path 열과 Company 열의 출력이 잘립니다.
 
@@ -173,7 +182,7 @@ Microsoft Corporation C:\Program Files\Windows PowerShell\v1.0\powershell.exe 6
 
 위의 출력에서는 목록에 맞게 조정하기 위해 ID 열이 잘리고 해당 열 머리글이 두 줄로 표시됩니다. 열 크기를 자동으로 조정해도 항상 원하는 대로 표시되지는 않습니다.
 
-#### <a name="wrapping-format-table-output-in-columns-wrap"></a>열에 Format-Table 출력 래핑(Wrap)
+### <a name="wrapping-format-table-output-in-columns-wrap"></a>열에 Format-Table 출력 래핑(Wrap)
 
 **Wrap** 매개 변수를 사용하여 긴 **Format-Table** 데이터를 해당 열 안에서 래핑할 수 있습니다. 다음과 같이 **Wrap** 매개 변수를 단독으로 사용하는 경우에도 **AutoSize**를 지정하지 않으면 기본 설정이 사용되기 때문에 예상되는 작업을 수행하지 않아도 됩니다.
 
@@ -216,7 +225,7 @@ C:\Program Files\Windows PowerShell\v1.0\powershell.exe 2836 Microsoft Corporat
                                                              ion
 ```
 
-#### <a name="organizing-table-output--groupby"></a>표 형식의 출력 구성(-GroupBy)
+### <a name="organizing-table-output--groupby"></a>표 형식의 출력 구성(-GroupBy)
 
 표 형식의 출력을 제어하는 데 사용할 수 있는 또 다른 유용한 매개 변수는 **GroupBy**입니다. 특히 긴 표 형식의 목록은 비교하기 어려울 수 있지만 **GroupBy** 매개 변수를 사용하면 속성 값을 기준으로 출력을 그룹화할 수 있습니다. 예를 들어 다음과 같이 프로세스를 더 쉽게 검사하기 위해 속성 목록에서 회사 값을 제거하여 해당 프로세스를 회사별로 그룹화할 수 있습니다.
 

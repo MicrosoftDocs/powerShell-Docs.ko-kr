@@ -2,43 +2,57 @@
 title: Windows에서 PowerShell Core 설치
 description: Windows에서 PowerShell Core를 설치하는 방법에 대한 정보
 ms.date: 08/06/2018
-ms.openlocfilehash: 450a38a1ef2e2890059094774fcc3f2ad4fcda6e
-ms.sourcegitcommit: 8dd4394cf867005a8b9ef0bb74b744c964fbc332
+ms.openlocfilehash: 910ee5a653fc1703bfddaf6367225f3b654d600f
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58748948"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293013"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Windows에서 PowerShell Core 설치
 
-## <a name="msi"></a>MSI
+Windows에서 여러 가지 방법으로 PowerShell Core를 설치할 수 있습니다.
 
-Windows 클라이언트 또는 Windows Server(Windows 7 SP1, Server 2008 R2 이상에서 작동)에 PowerShell을 설치하려면 GitHub [릴리스][] 페이지에서 MSI 패키지를 다운로드합니다.  설치하려는 릴리스의 **자산** 섹션으로 스크롤을 내립니다.  자산 섹션이 축소되어 있을 수 있으니 확장을 클릭해야 합니다.
+## <a name="prerequisites"></a>필수 구성 요소
 
-MSI 파일은 다음과 같습니다. - `PowerShell-<version>-win-<os-arch>.msi`
+WSMan을 통한 PowerShell 원격 기능을 사용하려면 다음 전제 조건을 충족해야 합니다.
+
+- Windows 10 이전의 Windows 버전에서는 [Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=50410)을 설치합니다. 직접 다운로드 또는 Windows 업데이트를 통해 사용할 수 있습니다. 옵션 패키지를 포함하여 완전히 패치된 지원 시스템은 이미 설치되어 있습니다.
+- Windows 7 및 Windows Server 2008 R2에 WMF(Windows Management Framework) 4.0 이상을 설치합니다.
+
+## <a name="a-idmsi-installing-the-msi-package"></a><a id="msi" />MSI 패키지 설치
+
+Windows 클라이언트 또는 Windows Server(Windows 7 SP1, Server 2008 R2 이상에서 작동)에 PowerShell을 설치하려면 GitHub [릴리스][] 페이지에서 MSI 패키지를 다운로드합니다. 설치하려는 릴리스의 **자산** 섹션으로 스크롤을 내립니다. 자산 섹션이 축소되어 있을 수 있으니 확장을 클릭해야 합니다.
+
+MSI 파일은 다음과 같습니다. `PowerShell-<version>-win-<os-arch>.msi`
 <!-- TODO: should be updated to point to the Download Center as well -->
 
 다운로드가 완료되면 설치 프로그램을 두 번 클릭하고 지시를 따릅니다.
 
-설치하고 나면 시작 메뉴에 바로 가기가 생깁니다.
+설치 관리자는 Windows 시작 메뉴에 바로 가기를 만듭니다.
 
-- 기본적으로 패키지는 `$env:ProgramFiles\PowerShell\<version>`에 설치됩니다.
-- 시작 메뉴 또는 `$env:ProgramFiles\PowerShell\<version>\pwsh.exe`를 통해 PowerShell을 시작할 수 있습니다.
+- 기본적으로 패키지는 다음 위치에 설치됩니다. `$env:ProgramFiles\PowerShell\<version>`
+- 시작 메뉴 또는 다음을 통해 PowerShell을 시작할 수 있습니다. `$env:ProgramFiles\PowerShell\<version>\pwsh.exe`
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="administrative-install-from-the-command-line"></a>명령줄에서 관리 설치
 
-WSMan을 통한 PowerShell 원격 기능을 사용하려면 다음 전제 조건을 충족해야 합니다.
+MSI 패키지를 명령줄에서 설치할 수 있습니다. 이렇게 하면 관리자가 사용자 개입 없이 패키지를 배포할 수 있습니다. PowerShell용 MSI 패키지에는 설치 옵션을 제어하는 다음 속성이 포함되어 있습니다.
 
-- Windows 10 이전의 Windows 버전에서는 [Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=50410)을 설치합니다.
-  직접 다운로드 또는 Windows 업데이트를 통해 사용할 수 있습니다.
-  옵션 패키지를 포함하여 완전히 패치된 지원 시스템은 이미 설치되어 있습니다.
-- Windows 7 및 Windows Server 2008 R2에 WMF(Windows Management Framework) 4.0 이상을 설치합니다.
+- **ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL** - 이 속성은 Windows 탐색기의 상황에 맞는 메뉴에 **Open PowerShell** 항목을 추가하는 옵션을 제어합니다.
+- **ENABLE_PSREMOTING** - 이 속성은 설치 중 PowerShell 원격을 사용하는 옵션을 제어합니다.
+- **REGISTER_MANIFEST** - 이 속성은 Windows 이벤트 로깅 매니페스트를 등록하는 옵션을 제어합니다.
 
-## <a name="zip"></a>ZIP
+다음 예제에서는 모든 설치 옵션을 사용하도록 설정하여 PowerShell Core를 자동으로 설치하는 방법을 보여 줍니다.
 
-고급 배포 시나리오를 지원하기 위해 PowerShell 이진 ZIP 아카이브가 제공됩니다.
-ZIP 아카이브를 사용하면 MSI 패키지에서와 같이 전제 조건 확인을 받지 못하게 됩니다.
-따라서 Windows 10 이전의 Windows 버전에서 WSMan을 원격으로 실행하려면 [전제 조건](#prerequisites)이 충족되는지 확인해야 합니다.
+```powershell
+msiexec.exe /package PowerShell-<version>-win-<os-arch>.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
+```
+
+Msiexec.exe에 대한 명령줄 옵션의 전체 목록은 [명령줄 옵션](/windows/desktop/Msi/command-line-options)을 참조하세요.
+
+## <a name="a-idzip-installing-the-zip-package"></a><a id="zip" />ZIP 패키지 설치
+
+고급 배포 시나리오를 지원하기 위해 PowerShell 이진 ZIP 아카이브가 제공됩니다. ZIP 아카이브를 사용하면 MSI 패키지에서와 같이 전제 조건 확인을 받지 못하게 됩니다. WSMan에서 원격 기능이 제대로 작동하려면 [필수 조건](#prerequisites)이 충족되는지 확인하세요.
 
 ## <a name="deploying-on-windows-iot"></a>Windows IoT에 배포
 
@@ -132,28 +146,12 @@ Nano 서버는 “헤드리스” OS입니다. 두 가지 방법으로 Core 이�
 
 - WSMan 기반 원격 작업이 필요한 경우 지침에 따라 [“다른 인스턴스 기법”](../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register)을 사용하여 원격 엔드포인트를 만듭니다.
 
-## <a name="instructions-to-create-a-remoting-endpoint"></a>원격 엔드포인트 만들기 지침
+## <a name="how-to-create-a-remoting-endpoint"></a>원격 엔드포인트를 만드는 방법
 
-PowerShell Core는 WSMan 및 SSH보다 PowerShell Remoting Protocol(PSRP)을 지원합니다.
-자세한 내용은 다음을 참조하세요.
+PowerShell Core는 WSMan 및 SSH보다 PowerShell Remoting Protocol(PSRP)을 지원합니다. 자세한 내용은 다음을 참조하세요.
 
-- [PowerShell Core에서의 SSH 원격 작업][ssh-remoting]
-- [PowerShell Core에서의 WSMan 원격 작업][wsman-remoting]
-
-## <a name="artifact-installation-instructions"></a>아티팩트 설치 지침
-
-[AppVeyor][]를 사용하여 모든 CI 빌드에 CoreCLR 비트가 있는 아카이브를 게시합니다.
-
-CoreCLR 아티팩트에서 PowerShell Core를 설치하려면
-
-1. 특정 빌드의 **아티팩트** 탭에서 ZIP 패키지를 다운로드합니다.
-2. ZIP 파일 차단 해제: 파일 탐색기에서 마우스 오른쪽 단추 클릭 -> 속성 -> ‘차단 해제’ 상자 선택 -> 적용
-3. zip 파일을 `bin` 디렉터리로 추출
-4. `./bin/pwsh.exe`
+- [PowerShell Core에서의 SSH 원격 작업][ssh-원격 작업]
+- [PowerShell Core에서의 WSMan 원격 작업][wsman-원격 작업]
 
 <!-- [download-center]: TODO -->
-
-[릴리스]: https://github.com/PowerShell/PowerShell/releases
-[ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md
-[wsman-remoting]: ../core-powershell/WSMan-Remoting-in-PowerShell-Core.md
-[AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
+[릴리스]: https://github.com/PowerShell/PowerShell/releases [ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md [wsman-remoting]: ../core-powershell/WSMan-Remoting-in-PowerShell-Core.md [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell

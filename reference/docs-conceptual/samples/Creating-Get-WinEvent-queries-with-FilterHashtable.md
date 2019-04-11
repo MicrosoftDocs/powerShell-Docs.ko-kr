@@ -1,12 +1,12 @@
 ---
 ms.date: 3/18/2019
 title: FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기
-ms.openlocfilehash: fae01cc8be5c1805e2aae008e1f21ed387efa325
-ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
+ms.openlocfilehash: 28ba3c99a297944003a28eaba7de34b77d9df536
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320458"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293285"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기
 
@@ -29,12 +29,12 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-### <a name="blog-posts-about-enumeration"></a>열거형에 관한 블로그 게시물
+## <a name="blog-posts-about-enumeration"></a>열거형에 관한 블로그 게시물
 
 이 문서에서는 해시 테이블의 열거된 값을 사용하는 방법에 대한 정보를 제공합니다. 열거형에 대한 자세한 내용은 **Scripting Guy** 블로그 게시물을 읽어보세요. 열거된 값을 반환하는 함수를 만들려면 [열거형 및 값](https://devblogs.microsoft.com/scripting/hey-scripting-guy-weekend-scripter-enumerations-and-values)을 참조하세요.
 자세한 내용은 [열거형에 대한 Scripting Guy 블로그 게시물 시리즈](https://devblogs.microsoft.com/scripting/?s=about+enumeration)를 참조하세요.
 
-### <a name="hash-table-keyvalue-pairs"></a>해시 테이블 키/값 쌍
+## <a name="hash-table-keyvalue-pairs"></a>해시 테이블 키/값 쌍
 
 효율적인 쿼리를 작성하려면 `Get-WinEvent` cmdlet과 **FilterHashtable** 매개 변수를 함께 사용합니다.
 **FilterHashtable**은 Windows 이벤트 로그에서 특정 정보를 가져오기 위한 필터로 해시 테이블을 사용합니다. 해시 테이블은 **키/값** 쌍을 사용합니다. 해시 테이블에 대한 자세한 내용은 [about_Hash_Tables](/powershell/module/microsoft.powershell.core/about/about_hash_tables)를 참조하세요.
@@ -62,7 +62,7 @@ Get-WinEvent -FilterHashtable @{
 | 데이터         | `<String[]>`       | 아니요  |
 | *            | `<String[]>`       | 아니요  |
 
-### <a name="building-a-query-with-a-hash-table"></a>해시 테이블을 사용하여 쿼리 작성
+## <a name="building-a-query-with-a-hash-table"></a>해시 테이블을 사용하여 쿼리 작성
 
 결과를 확인하고 문제를 해결하려는 경우 **키/값** 쌍을 한 번에 하나씩 사용해서 해시 테이블을 작성하는 것이 좋습니다. 쿼리는 **애플리케이션** 로그에서 데이터를 가져옵니다. 해시 테이블은 `Get-WinEvent –LogName Application`과 같습니다.
 
@@ -89,7 +89,7 @@ Get-WinEvent -FilterHashtable @{
 
 보관된 이벤트 로그에서 데이터를 가져오는 쿼리가 필요한 경우 **Path** 키를 사용합니다. **Path** 값은 로그 파일에 전체 경로를 지정합니다. 자세한 내용은 **Scripting Guy** 블로그 게시물, [PowerShell을 사용하여 저장된 이벤트 로그에 오류가 있는지 구문 분석](https://devblogs.microsoft.com/scripting/use-powershell-to-parse-saved-event-logs-for-errors)을 참조하세요.
 
-### <a name="using-enumerated-values-in-a-hash-table"></a>해시 테이블에서 열거된 값 사용
+## <a name="using-enumerated-values-in-a-hash-table"></a>해시 테이블에서 열거된 값 사용
 
 **Keywords**는 해시 테이블의 다음 키입니다. **Keywords** 데이터 형식은 큰 숫자를 포함하는 `[long]` 값 형식의 배열입니다. 다음 명령을 사용하여 `[long]`의 최대 값을 찾습니다.
 
@@ -156,7 +156,7 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-#### <a name="keywords-static-property-value-optional"></a>Keywords 정적 속성 값(선택 사항)
+### <a name="keywords-static-property-value-optional"></a>Keywords 정적 속성 값(선택 사항)
 
 **Keywords** 키는 열거형이지만 해시 테이블 쿼리에서 정적 속성 이름을 사용할 수 있습니다.
 반환된 문자열을 사용하는 대신, 속성 이름을 **Value__** 속성을 갖는 값으로 변환해야 합니다.
@@ -172,7 +172,7 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-### <a name="filtering-by-event-id"></a>이벤트 ID 기준으로 필터링
+## <a name="filtering-by-event-id"></a>이벤트 ID 기준으로 필터링
 
 보다 구체적인 데이터를 가져오기 위해 쿼리 결과가 **이벤트 ID**를 기준으로 필터링됩니다. **이벤트 ID**는 해시 테이블에서 키 **ID**로 참조되고 해당 값은 특정 **이벤트 ID**입니다. **Windows 이벤트 뷰어**는 **이벤트 ID**를 표시합니다. 이 예제에서는 **이벤트 ID 1023**을 사용합니다.
 
@@ -187,7 +187,7 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-### <a name="filtering-by-level"></a>수준 기준 필터링
+## <a name="filtering-by-level"></a>수준 기준 필터링
 
 결과를 구체화하고 오류가 있는 이벤트만 포함하려면 **Level** 키를 사용합니다.
 **Windows 이벤트 뷰어**는 **Level**을 문자열 값으로 표시하지만, 열거형 값입니다. 해시 테이블에서 문자열 값에 **Level** 키를 사용하면 오류 메시지가 표시됩니다.
@@ -236,7 +236,7 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-#### <a name="level-static-property-in-enumeration-optional"></a>열거형의 Level 정적 속성(선택 사항)
+### <a name="level-static-property-in-enumeration-optional"></a>열거형의 Level 정적 속성(선택 사항)
 
 **Level** 키는 열거형이지만 해시 테이블 쿼리에서 정적 속성 이름을 사용할 수 있습니다.
 반환된 문자열을 사용하는 대신, 속성 이름을 **Value__** 속성을 갖는 값으로 변환해야 합니다.

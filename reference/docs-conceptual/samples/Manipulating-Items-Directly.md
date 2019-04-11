@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 직접 항목 조작
 ms.assetid: 8cbd4867-917d-41ea-9ff0-b8e765509735
-ms.openlocfilehash: 5f5b6cf4a777229029743b9d9967030effc58215
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 4caa7d2e0eecff9783556062d8503fe10e616fe5
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680427"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293268"
 ---
 # <a name="manipulating-items-directly"></a>직접 항목 조작
 
@@ -32,7 +32,7 @@ Cmdlet          Rename-Item                     Rename-Item [-Path] <String>...
 Cmdlet          Set-Item                        Set-Item [-Path] <String[]> ...
 ```
 
-### <a name="creating-new-items-new-item"></a>새 항목 만들기(New-Item)
+## <a name="creating-new-items-new-item"></a>새 항목 만들기(New-Item)
 
 파일 시스템에서 새 항목을 만들려면 **New-Item** cmdlet을 사용합니다. 항목 경로에 **Path** 매개 변수를 포함하고, 값이 "file" 또는 "directory"인 **ItemType** 매개 변수를 포함합니다.
 
@@ -75,7 +75,7 @@ SKC  VC Name                           Property
 
 레지스트리 경로를 입력할 때 Windows PowerShell 드라이브 이름에 콜론(**:**)을 포함해야 합니다(예: HKLM: 및 HKCU:). 콜론이 없을 경우 Windows PowerShell에서는 경로의 드라이브 이름을 인식하지 못합니다.
 
-### <a name="why-registry-values-are-not-items"></a>레지스트리 값이 항목이 아닌 이유
+## <a name="why-registry-values-are-not-items"></a>레지스트리 값이 항목이 아닌 이유
 
 **Get-ChildItem** cmdlet을 사용하여 레지스트리 키에서 항목을 찾을 경우 실제 레지스트리 항목 또는 값이 표시되지 않습니다.
 
@@ -95,7 +95,7 @@ SKC  VC Name                           Property
 
 레지스트리 항목을 항목으로 처리하면 편리하지만 레지스트리 항목의 경로를 고유하게 지정할 수 없습니다. **Run** 레지스트리 하위 키와 **Run** 하위 키의 **(Default)** 레지스트리 항목 간에 경로 표기법이 구분되지 않습니다. 또한 레지스트리 항목 이름에 백슬래시(**\\**) 문자를 사용할 수 있으므로, 레지스트리 항목이 항목인 경우 경로 표기법을 사용하여 **Windows\\CurrentVersion\\Run** 레지스트리 항목을 해당 경로에 있는 하위 키와 구분할 수 없습니다.
 
-### <a name="renaming-existing-items-rename-item"></a>기존 항목 이름 바꾸기(Rename-Item)
+## <a name="renaming-existing-items-rename-item"></a>기존 항목 이름 바꾸기(Rename-Item)
 
 파일 또는 폴더의 이름을 변경하려면 **Rename-Item** cmdlet을 사용합니다. 다음 명령은 **file1.txt** 파일의 이름을 **fileOne.txt**로 변경합니다.
 
@@ -112,7 +112,7 @@ At line:1 char:12
 + Rename-Item  <<<< -Path C:\temp\New.Directory\fileOne c:\temp\fileOne.txt
 ```
 
-### <a name="moving-items-move-item"></a>항목 이동(Move-Item)
+## <a name="moving-items-move-item"></a>항목 이동(Move-Item)
 
 파일 또는 폴더를 이동하려면 **Move-Item** cmdlet을 사용합니다.
 
@@ -128,7 +128,7 @@ Mode                LastWriteTime     Length Name
 d----        2006-05-18  12:14 PM            New.Directory
 ```
 
-### <a name="copying-items-copy-item"></a>항목 복사(Copy-Item)
+## <a name="copying-items-copy-item"></a>항목 복사(Copy-Item)
 
 다른 셸에서의 복사 작업에 대해 잘 알고 있는 경우 Windows PowerShell의 **Copy-Item** cmdlet 동작이 특이함을 알 수 있습니다. 항목을 한 위치에서 다른 위치로 이동할 경우 Copy-Item은 기본적으로 해당 내용을 복사합니다.
 
@@ -167,7 +167,7 @@ Mode                LastWriteTime     Length Name
 -a---        2006-05-18  11:44 AM          0 file1
 ```
 
-### <a name="deleting-items-remove-item"></a>항목 삭제(Remove-Item)
+## <a name="deleting-items-remove-item"></a>항목 삭제(Remove-Item)
 
 파일 및 폴더를 삭제하려면 **Remove-Item** cmdlet을 사용합니다. 되돌릴 수 없는 중요한 변경을 수행하는 Windows PowerShell cmdlet(예: **Remove-Item**)은 명령을 입력할 때 종종 확인 메시지를 표시합니다. 예를 들어 **New.Directory** 폴더를 제거하려는 경우 폴더에 파일이 포함되어 있으므로 명령을 확인하는 메시지가 표시됩니다.
 
@@ -188,7 +188,7 @@ specified. If you continue, all children will be removed with the item. Are you
 Remove-Item C:\temp\New.Directory -Recurse
 ```
 
-### <a name="executing-items-invoke-item"></a>항목 실행(Invoke-Item)
+## <a name="executing-items-invoke-item"></a>항목 실행(Invoke-Item)
 
 Windows PowerShell에서는 **Invoke-Item** cmdlet을 사용하여 파일 또는 폴더에 대한 기본 작업을 수행합니다. 이 기본 작업은 레지스트리에 있는 기본 애플리케이션 처리기에 의해 결정되며, 파일 탐색기에서 항목을 두 번 클릭하는 경우와 효과는 동일합니다.
 

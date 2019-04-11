@@ -3,18 +3,18 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: .NET 및 COM 개체 만들기(New-Object)
 ms.assetid: 2057b113-efeb-465e-8b44-da2f20dbf603
-ms.openlocfilehash: 1ffd8d4afa419ec0c24321e44aa4a2f41a9bee44
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: ef8215303aacd90536d3c2ae57bc3629e202f318
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403502"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293370"
 ---
 # <a name="creating-net-and-com-objects-new-object"></a>.NET 및 COM 개체 만들기(New-Object)
 
 많은 시스템 관리 작업을 수행할 수 있게 해주는 .NET Framework 및 COM 인터페이스를 가진 소프트웨어 구성 요소가 있습니다. Windows PowerShell을 통해 이러한 구성 요소를 사용할 수 있으므로 cmdlet을 사용하여 수행할 수 있는 작업으로 제한되지 않습니다. Windows PowerShell 초기 릴리스에 포함된 많은 cmdlet은 원격 컴퓨터에 대해 작동하지 않습니다. Windows PowerShell에서 직접 .NET Framework **System.Diagnostics.EventLog** 클래스를 사용하여 이벤트 로그 관리 시 이 제한을 해결하는 방법을 보여 드리겠습니다.
 
-### <a name="using-new-object-for-event-log-access"></a>이벤트 로그 액세스에 New-Object 사용
+## <a name="using-new-object-for-event-log-access"></a>이벤트 로그 액세스에 New-Object 사용
 
 .NET Framework 클래스 라이브러리에는 이벤트 로그 관리에 사용할 수 있는 **System.Diagnostics.EventLog** 클래스가 포함되어 있습니다. **TypeName** 매개 변수와 함께 **New-Object** cmdlet을 사용하면 NET Framework 클래스의 새 인스턴스를 만들 수 있습니다. 예를 들어 다음 명령은 이벤트 로그 참조를 만듭니다.
 
@@ -27,7 +27,7 @@ PS> New-Object -TypeName System.Diagnostics.EventLog
 
 명령에서 EventLog 클래스 인스턴스를 만들었지만 해당 인스턴스에는 데이터가 없습니다. 이는 특정 이벤트 로그를 지정하지 않았기 때문입니다. 실제 이벤트 로그를 가져오려면 어떻게 해야 할까요?
 
-#### <a name="using-constructors-with-new-object"></a>New-Object와 함께 생성자 사용
+### <a name="using-constructors-with-new-object"></a>New-Object와 함께 생성자 사용
 
 특정 이벤트 로그를 참조하려면 로그 이름을 지정해야 합니다. **New-Object**에는 **ArgumentList** 매개 변수가 있습니다. 이 매개 변수에 값으로 전달하는 인수는 개체의 특수 시작 메서드에서 사용됩니다. 메서드는 개체를 생성하는 데 사용되기 때문에 *생성자*라고 합니다. 예를 들어 애플리케이션 로그에 대한 참조를 가져오려면 'Application' 문자열을 인수로 지정합니다.
 
@@ -42,7 +42,7 @@ Max(K) Retain OverflowAction        Entries Name
 > [!NOTE]
 > 대부분의 .NET Framework 핵심 클래스는 시스템 네임스페이스에 포함되어 있으므로 Windows PowerShell은 지정한 형식 이름과 일치하는 항목을 찾을 수 없을 경우 자동으로 System 네임스페이스에서 지정한 클래스를 찾으려고 합니다. 즉, System.Diagnostics.EventLog 대신 Diagnostics.EventLog를 지정할 수 있습니다.
 
-#### <a name="storing-objects-in-variables"></a>변수에 개체 저장
+### <a name="storing-objects-in-variables"></a>변수에 개체 저장
 
 현재 셸에서 사용할 수 있도록 개체 참조를 저장할 수 있습니다. Windows PowerShell에서는 파이프라인으로 많은 작업을 수행할 수 있지만 때로는 변수에 개체 참조를 저장하는 것이 해당 개체를 조작하는 데 더 편리합니다.
 
@@ -62,7 +62,7 @@ PS> $AppLog
   16,384      7 OverwriteOlder          2,160 Application
 ```
 
-#### <a name="accessing-a-remote-event-log-with-new-object"></a>New-Object를 사용하여 원격 이벤트 로그 액세스
+### <a name="accessing-a-remote-event-log-with-new-object"></a>New-Object를 사용하여 원격 이벤트 로그 액세스
 
 이전 섹션에서 사용된 명령은 로컬 컴퓨터를 대상으로 합니다. **Get-EventLog** cmdlet으로 이 작업을 수행할 수 있습니다. 원격 컴퓨터의 애플리케이션 로그에 액세스하려면 로그 이름과 컴퓨터 이름(또는 IP 주소)을 인수로 둘 다 제공해야 합니다.
 
@@ -77,7 +77,7 @@ PS> $RemoteAppLog
 
 이벤트 로그에 대한 참조를 $RemoteAppLog 변수에 저장한 후 어떤 작업을 수행할 수 있을까요?
 
-#### <a name="clearing-an-event-log-with-object-methods"></a>개체 메서드를 사용하여 이벤트 로그 지우기
+### <a name="clearing-an-event-log-with-object-methods"></a>개체 메서드를 사용하여 이벤트 로그 지우기
 
 개체에 작업을 수행하기 위해 호출할 수 있는 메서드가 있는 경우가 많습니다. **Get-Member**를 사용하여 개체와 연결된 메서드를 표시할 수 있습니다. 다음 명령과 선택한 출력은 EventLog 클래스의 일부 메서드를 보여 줍니다.
 
@@ -118,12 +118,12 @@ PS> $RemoteAppLog
      512      7 OverwriteOlder              0 Application
 ```
 
-### <a name="creating-com-objects-with-new-object"></a>New-Object를 사용하여 COM 개체 만들기
+## <a name="creating-com-objects-with-new-object"></a>New-Object를 사용하여 COM 개체 만들기
 **New-Object**를 사용하여 COM(구성 요소 개체 모델) 구성 요소로 작업할 수 있습니다. 구성 요소는 WSH(Windows 스크립트 호스트)에 포함된 다양한 라이브러리부터 대부분의 시스템에 설치되어 있는 Internet Explorer와 같은 ActiveX 애플리케이션에 이르기까지 다양합니다.
 
 **New-Object**는 .NET Framework 런타임 호출 가능 래퍼를 사용하여 COM 개체를 만들기 때문에 .NET Framework에서 COM 개체를 호출할 때와 동일한 제한 사항이 있습니다. COM 개체를 만들려면 사용하려는 COM 클래스의 *ProgId* 또는 프로그래밍 방식 식별자와 함께 **ComObject** 매개 변수를 지정해야 합니다. COM 사용의 제한 사항과 시스템에서 사용할 수 있는 ProgId 확인 방법에 대한 자세한 설명은 이 사용자 가이드의 범위를 벗어나지만 WSH와 같은 환경에서 잘 알려진 대부분의 개체는 Windows PowerShell 내에서 사용할 수 있습니다.
 
-이 Progid를 지정 하 여 WSH 개체를 만들 수 있습니다. **WScript.Shell**, **WScript.Network**합니다 **Scripting.Dictionary**, 및 **Scripting.FileSystemObject**합니다. 이러한 개체를 만드는 명령은 다음과 같습니다.
+다음 progid를 지정하여 WSH 개체를 만들 수 있습니다. **WScript.Shell**, **WScript.Network**, **Scripting.Dictionary**, **Scripting.FileSystemObject**. 이러한 개체를 만드는 명령은 다음과 같습니다.
 
 ```powershell
 New-Object -ComObject WScript.Shell
@@ -134,7 +134,7 @@ New-Object -ComObject Scripting.FileSystemObject
 
 이러한 클래스의 기능은 대부분 Windows PowerShell에서 다른 방법으로 제공되지만 바로 가기 만들기와 같은 몇 가지 작업은 WSH 클래스를 통해 수행하는 것이 더 쉽습니다.
 
-### <a name="creating-a-desktop-shortcut-with-wscriptshell"></a>WScript.Shell을 사용하여 바탕 화면 바로 가기 만들기
+## <a name="creating-a-desktop-shortcut-with-wscriptshell"></a>WScript.Shell을 사용하여 바탕 화면 바로 가기 만들기
 
 COM 개체를 사용하여 신속하게 수행할 수 있는 작업 중 하나는 바로 가기 만들기입니다. Windows PowerShell 홈 폴더에 연결하는 바로 가기를 바탕 화면에 만든다고 가정합니다. 먼저 **$WshShell** 변수에 저장할 **WScript.Shell** 참조를 만들어야 합니다.
 
@@ -203,7 +203,7 @@ $lnk.TargetPath = $PSHome
 $lnk.Save()
 ```
 
-### <a name="using-internet-explorer-from-windows-powershell"></a>Windows PowerShell에서 Internet Explorer 사용
+## <a name="using-internet-explorer-from-windows-powershell"></a>Windows PowerShell에서 Internet Explorer 사용
 
 COM을 사용하여 많은 애플리케이션(Microsoft Office 애플리케이션 제품군 및 Internet Explorer 포함)을 자동화할 수 있습니다. Internet Explorer는 COM 기반 애플리케이션 작업과 관련된 몇 가지 일반적인 방법과 문제를 보여 줍니다.
 
@@ -262,7 +262,7 @@ Remove-Variable ie
 > [!NOTE]
 > 해당 참조를 제거할 때 ActiveX 실행 파일을 종료할지 아니면 계속 실행할지에 대한 일반적인 표준은 없습니다. 애플리케이션이 표시되는지 여부, 애플리케이션에서 편집한 문서의 실행 여부 및 Windows PowerShell의 실행 여부와 같은 상황에 따라 애플리케이션이 종료될 수도 있고, 종료되지 않을 수도 있습니다. 따라서 Windows PowerShell에서 사용할 각 ActiveX 실행 파일의 종료 동작을 테스트해야 합니다.
 
-### <a name="getting-warnings-about-net-framework-wrapped-com-objects"></a>.NET Framework-Wrapped COM 개체에 대한 경고 보기
+## <a name="getting-warnings-about-net-framework-wrapped-com-objects"></a>.NET Framework-Wrapped COM 개체에 대한 경고 보기
 
 경우에 따라 COM 개체에는 **New-Object**가 사용하는 .NET Framework RCW(*런타임 호출 가능 래퍼*)가 포함되어 있을 수 있습니다. RCW의 동작이 일반적인 COM 개체와 다를 수 있기 때문에 **New-Object**에는 RCW 액세스에 대해 경고하는 **Strict** 매개 변수가 포함되어 있습니다. **Strict** 매개 변수를 지정한 다음 RCW를 사용하는 COM 개체를 만들면 다음과 같은 경고 메시지가 나타납니다.
 
