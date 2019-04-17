@@ -1,39 +1,29 @@
 {
-  "build": {
-    "markdownEngineName": "markdig",
-    "content": [
-      {
-        "files": [
-          "**/**.md",
-	  "**/**.yml"
+    "build": {
+        "content": [
+            { "files": ["**/**.md", "**/**.yml"], "exclude": ["**/obj/**"] }
         ],
-        "exclude": [
-          "**/obj/**"
-        ]
-      }
-    ],
-    "globalMetadata": {
-      "breadcrumb_path": "bread/toc.yml",
-      "ROBOTS": "INDEX, FOLLOW",
-	    "ms.prod": "powershell",
-            "ms.technology": "jea",
-            "manager": "carmonm",
+        "globalMetadata": {
+            "toc_preview": true,
+            "breadcrumb_path": "bread/toc.yml",
+            "uhfHeaderId": "MSDocsHeader-Powershell",
+            "ROBOTS": "INDEX, FOLLOW",
             "ms.devlang": "powershell",
-            "ms.tgt_pltfr": "windows",
-            "ms.author": "jpjofre",
-      "bilingual_type": "hover over"
-    },
-    "resource": [
-      {
-        "files": [
-          "**/images/**"
+            "ms.tgt_pltfr": "windows, macos, linux"
+        },
+        "fileMetadata": {
+            "ms.prod": { "**/**.md": "powershell" },
+            "ms.technology": { "**/**.md": "powershell-jea" },
+            "ms.topic": { "**/**.md": "conceptual" },
+            "manager": { "**/**.md": "carmonm" },
+            "author": { "**/**.md": "rpsqrd" },
+            "ms.author": { "**/**.md": "ryanpu" }
+        },
+        "resource": [
+            { "files": ["**/images/**"], "exclude": ["**/obj/**"] }
         ],
-        "exclude": [
-          "**/obj/**"
-        ]
-      }
-    ],
-    "template": "op.html",
-    "dest": "jea"
-  }
+        "template": "op.html",
+        "dest": "jea",
+        "markdownEngineName": "markdig"
+    }
 }
