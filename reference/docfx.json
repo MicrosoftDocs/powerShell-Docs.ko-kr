@@ -50,6 +50,7 @@
         "externalReference": [],
         "globalMetadata": {
             "bilingual_type": "hover over",
+	    "toc_preview": true,
             "breadcrumb_path": "/powershell/scripting/bread/toc.json",
             "uhfHeaderId": "MSDocsHeader-Powershell",
             "apiPlatform": "powershell",
