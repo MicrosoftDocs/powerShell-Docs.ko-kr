@@ -1,38 +1,28 @@
 {
-  "build": {
-    "content": [
-      {
-        "files": [
-          "**/**.md",
-          "**/**.yml"
+    "build": {
+        "content": [
+            { "files": ["**/**.yml", "**/**.md"], "exclude": ["**/obj/**"] }
         ],
-        "exclude": [
-          "**/obj/**"
-        ]
-      }
-    ],
-    "globalMetadata": {
-      "breadcrumb_path": "/powershell/gallery/bread/toc.yml",
-      "ROBOTS": "INDEX, FOLLOW",
-      "ms.prod": "powershell",
-      "ms.technology": "gallery",
-      "manager": "carmonm",
-      "ms.devlang": "powershell",
-      "ms.tgt_pltfr": "windows, macos, linux",
-      "author": "juanpablojofre",
-      "ms.author": "jpjofre",
-      "bilingual_type": "hover over"
-    },
-    "resource": [
-      {
-        "files": [
-          "**/images/**"
+        "globalMetadata": {
+            "toc_preview": true,
+            "breadcrumb_path": "bread/toc.yml",
+            "ROBOTS": "INDEX, FOLLOW",
+            "uhfHeaderId": "MSDocsHeader-Powershell",
+            "ms.devlang": "powershell",
+            "ms.tgt_pltfr": "windows, macos, linux",
+            "bilingual_type": "hover over"
+        },
+        "fileMetadata": {
+            "ms.prod": { "**/**.md": "powershell" },
+            "ms.technology": { "**/**.md": "powershell-gallery" },
+            "ms.topic": { "**/**.md": "conceptual" },
+            "manager": { "**/**.md": "carmonm" },
+            "ms.author": { "**/**.md": "sysmith" },
+            "author": { "**/**.md": "SydneyhSmith" }
+        },
+        "resource": [
+            { "files": ["**/images/**"], "exclude": ["**/obj/**"] }
         ],
-        "exclude": [
-          "**/obj/**"
-        ]
-      }
-    ],
         "template": "op.html",
         "dest": "gallery",
         "markdownEngineName": "markdig"
