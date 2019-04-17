@@ -1,39 +1,30 @@
 {
-  "build": {
-    "content": [
-      {
-        "files": [
-          "**/**.md",
-          "**/**.yml"
+    "build": {
+        "content": [
+            { "files": ["**/**.md", "**/**.yml"], "exclude": ["**/obj/**"] }
         ],
-        "exclude": [
-          "**/obj/**"
-        ]
-      }
-    ],
-    "globalMetadata": {
-      "breadcrumb_path": "bread/toc.yml",
-      "layout": "conceptual",
-      "ms.locale": "ko-kr",
-      "ROBOTS": "INDEX, FOLLOW",
-      "ms.prod": "powershell",
-      "ms.technology": "dsc",
-      "manager": "carmonm",
-      "ms.devlang": "powershell",
-      "ms.tgt_pltfr": "windows",
-      "ms.author": "eslesar",
-      "bilingual_type": "hover over"
-    },
-    "resource": [
-      {
-        "files": [
-          "**/images/**"
+        "globalMetadata": {
+            "toc_preview": true,
+            "breadcrumb_path": "~/bread/toc.yml",
+            "uhfHeaderId": "MSDocsHeader-Powershell",
+            "layout": "conceptual",
+      	    "ms.locale": "ko-kr",
+            "ROBOTS": "INDEX, FOLLOW",
+            "ms.devlang": "powershell",
+            "ms.tgt_pltfr": "windows",
+            "bilingual_type": "hover over"
+        },
+        "fileMetadata": {
+            "ms.prod": { "**/**.md": "powershell" },
+            "ms.technology": { "**/**.md": "powershell-dsc" },
+            "ms.topic": { "**/**.md": "conceptual" },
+            "manager": { "**/**.md": "carmonm" },
+            "ms.author": { "**/**.md": "robreed" },
+            "author": { "**/**.md": "bobbytreed" }
+        },
+        "resource": [
+            { "files": ["**/images/**", "**/*.png", "**/*.gif", "**/*.jpeg", "**/*.jpg", "**/*.svg"], "exclude": ["**/obj/**", "**/includes/**"] }
         ],
-        "exclude": [
-          "**/obj/**"
-        ]
-      }
-    ],
         "template": "op.html",
         "dest": "dsc",
         "markdownEngineName": "markdig"
