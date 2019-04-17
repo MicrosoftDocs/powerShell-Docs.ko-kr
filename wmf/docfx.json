@@ -1,39 +1,28 @@
 {
-  "build": {
-    "markdownEngineName": "markdig",
-    "content": [
-      {
-        "files": [
-          "**/**.md",
-   	  "**/**.yml"
+    "build": {
+        "content": [
+            { "files": ["**/**.yml", "**/**.md"], "exclude": ["**/obj/**", "README.md"] }
         ],
-        "exclude": [
-          "**/obj/**"
-        ]
-      }
-    ],
-    "globalMetadata": {
-      "breadcrumb_path": "/powershell/wmf/bread/toc.yml",
-      "ROBOTS": "INDEX, FOLLOW",
-	    "ms.prod": "powershell",
-            "ms.technology": "wmf",
-            "manager": "carmonm",
-            "ms.devlang": "powershell",
-            "ms.tgt_pltfr": "windows",
-            "ms.author": "jpjofre",
-      "bilingual_type": "hover over"
-    },
-    "resource": [
-      {
-        "files": [
-          "**/images/**"
+        "globalMetadata": {
+            "toc_preview": true,
+            "breadcrumb_path": "/powershell/wmf/bread/toc.yml",
+            "uhfHeaderId": "MSDocsHeader-Powershell",
+            "ROBOTS": "INDEX, FOLLOW",
+            "ms.tgt_pltfr": "windows"
+        },
+        "fileMetadata": {
+            "ms.prod": { "**/**.md": "powershell" },
+            "ms.technology": { "**/**.md": "powershell-wmf" },
+            "ms.topic": { "**/**.md": "reference" },
+            "manager": { "**/**.md": "carmonm" },
+            "author": { "**/**.md": "HemantMahawar" },
+            "ms.author": { "**/**.md": "hemantm" }
+        },
+        "resource": [
+            { "files": ["**/images/**"], "exclude": ["**/obj/**"] }
         ],
-        "exclude": [
-          "**/obj/**"
-        ]
-      }
-    ],
-    "template": "op.html",
-    "dest": "wmf"
-  }
+        "template": "op.html",
+        "dest": "wmf",
+        "markdownEngineName": "markdig"
+    }
 }
