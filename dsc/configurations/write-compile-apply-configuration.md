@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC, PowerShell, 구성, 서비스, 설정
 title: 구성 작성, 컴파일 및 적용
-ms.openlocfilehash: c884af9d92ac375457d6eb75d815ae9a9159e273
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: 947308efa165543571801c88a922daf44fa88be0
+ms.sourcegitcommit: 3f6002e7109373eda31cc65fc84d2600447cb7e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57795422"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506821"
 ---
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -61,12 +61,12 @@ Configuration HelloWorld {
 자세한 내용은 [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing)를 참조하세요.
 
 <!-- markdownlint-disable MD038 -->
-`. `(점, 공백) 뒤에 "HelloWorld.ps1" 스크립트를 저장한 경로를 입력하여 *도트 소스*합니다. 그런 다음, 함수처럼 구성을 호출하여 실행합니다.
+‘점, 공백’ 뒤에 "HelloWorld.ps1" 스크립트를 저장한 경로를 입력하여 `. `(도트 소스)합니다. 그런 다음, 함수처럼 구성을 호출하여 실행합니다.
 <!-- markdownlint-enable MD038 -->
 
 ```powershell
-. C:\Scripts\WebsiteTest.ps1
-HelloWolrd
+. C:\Scripts\HelloWorld.ps1
+HelloWorld
 ```
 
 그러면 다음과 같은 출력이 생성됩니다.
@@ -90,7 +90,7 @@ LCM은 DSC 리소스를 호출하여 구성을 적용합니다.
 아래 코드를 사용하여 `Start-DSCConfiguration` cmdlet을 실행합니다. "localhost.mof"가 저장된 디렉터리 경로를 `-Path` 매개 변수로 지정합니다. `Start-DSCConfiguration` cmdlet은 "\<computername\>.mof" 파일에서 지정된 디렉터리를 살펴봅니다. `Start-DSCConfiguration` cmdlet은 파일 이름별로 지정된 컴퓨터 이름에 찾은 ".mof" 파일을 적용하려고 합니다("localhost", "server01", "dc-02" 등).
 
 > [!NOTE]
-> `-Wait` 매개 변수가 지정되지 않으면 `Start-DSCConfiguration`은 백그라운드 작업을 만들어서 작업을 수행합니다. `-Verbose` 매개 변수를 지정하면 작업의 **자세한 정보 표시** 출력을 볼 수 있습니다. `-Wait` 및 `-Verbose`는 모두 선택적 매개 변수입니다.
+> `-Wait` 매개 변수가 지정되지 않으면 `Start-DSCConfiguration`은 백그라운드 작업을 만들어서 작업을 수행합니다. `-Verbose` 매개 변수를 지정하면 작업의 **자세한 정보 표시** 출력을 볼 수 있습니다. `-Wait`및 `-Verbose`는 모두 선택적 매개 변수입니다.
 
 ```powershell
 Start-DscConfiguration -Path C:\Scripts\HelloWorld -Verbose -Wait
