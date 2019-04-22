@@ -54,21 +54,22 @@ PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 패키
 기본 설정 방법입니다.
 
 ```sh
-# 마이크로소프트 저장소 GPG 키 다운로드
+# Download the Microsoft repository GPG keys
 wget -q https://packages.microsoft.com/config/ubuntu/14.04/packages-microsoft-prod.deb
 
-# 마이크로소프트 저장소 GPG 키 등록
+# Register the Microsoft repository GPG keys
 sudo dpkg -i packages-microsoft-prod.deb
 
-# 패키지 목록 업데이트
+# Update the list of products
 sudo apt-get update
 
-# PowerShell 설치
+# Install PowerShell
 sudo apt-get install -y powershell
 
-# PowerShell 실행
+# Start PowerShell
 pwsh
 ```
+
 이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다.
 그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 업데이트하면 됩니다.
 
@@ -103,23 +104,23 @@ PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 패키
 기본 설정 방법입니다.
 
 ```sh
-# 마이크로소프트 저장소 GPG 키 다운로드
+# Download the Microsoft repository GPG keys
 wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
 
-# 마이크로소프트 저장소 GPG 키 등록
+# Register the Microsoft repository GPG keys
 sudo dpkg -i packages-microsoft-prod.deb
 
-# 패키지 목록 업데이트
+# Update the list of products
 sudo apt-get update
 
-# PowerShell 설치
+# Install PowerShell
 sudo apt-get install -y powershell
 
-# PowerShell 실행
+# Start PowerShell
 pwsh
 ```
-이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다.
-그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 업데이트하면 됩니다.
+
+Microsoft 리포지토리를 superuser로 등록하고 나면 그 이후부터는 `sudo apt-get upgrade powershell`을 사용하여 업데이트해야 합니다.
 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>직접 다운로드를 통해 설치 - Ubuntu 16.04
 
@@ -152,23 +153,23 @@ PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 패키
 기본 설정 방법입니다.
 
 ```sh
-# 마이크로소프트 저장소 GPG 키 다운로드
+# Download the Microsoft repository GPG keys
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 
-# 마이크로소프트 저장소 GPG 키 등록
+# Register the Microsoft repository GPG keys
 sudo dpkg -i packages-microsoft-prod.deb
 
-# 패키지 목록 업데이트
+# Update the list of products
 sudo apt-get update
 
-# PowerShell 설치
+# Enable the "universe" repositories
 sudo apt-get install -y powershell
 
-# PowerShell 실행
+# Install PowerShell
 pwsh
 ```
-이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다.
-그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 업데이트하면 됩니다.
+
+Microsoft 리포지토리를 superuser로 등록하고 나면 그 이후부터는 `sudo apt-get upgrade powershell`을 사용하여 업데이트해야 합니다.
 
 ### <a name="installation-via-direct-download---ubuntu-1804"></a>직접 다운로드를 통해 설치 - Ubuntu 18.04
 
@@ -208,27 +209,27 @@ PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 패키
 기본 설정 방법입니다.
 
 ```sh
-# 시스템 구성 요소 설치
+# Install system components
 sudo apt-get update
 sudo apt-get install curl apt-transport-https
 
-# 공개 저장소 GPG 키 불러오기
+# Import the public repository GPG keys
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 
 # Microsoft Product 피드 등록
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-jessie-prod jessie main" > /etc/apt/sources.list.d/microsoft.list'
 
-# 패키지 목록 업데이트
+# Register the Microsoft Product feed
 sudo apt-get update
 
-# PowerShell 설치
+# Update the list of products
 sudo apt-get install -y powershell
 
-# PowerShell 실행
+# Install PowerShell
 pwsh
 ```
-이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다.
-그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 업데이트하면 됩니다.
+
+Microsoft 리포지토리를 superuser로 등록하고 나면 그 이후부터는 `sudo apt-get upgrade powershell`을 사용하여 업데이트해야 합니다.
 
 ## <a name="debian-9"></a>Debian 9
 
@@ -238,28 +239,27 @@ PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 패키
 기본 설정 방법입니다.
 
 ```sh
-# 시스템 구성 요소 설치
+# Install system components
 sudo apt-get update
 sudo apt-get install curl gnupg apt-transport-https
 
-# 공개 저장소 GPG 키 불러오기
+# Import the public repository GPG keys
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 
-# Microsoft Product 피드 등록
+# Register the Microsoft Product feed
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-stretch-prod stretch main" > /etc/apt/sources.list.d/microsoft.list'
 
-# 패키지 목록 업데이트
+# Update the list of products
 sudo apt-get update
 
-# PowerShell 설치
+# Install PowerShell
 sudo apt-get install -y powershell
 
-# PowerShell 실행
+# Start PowerShell
 pwsh
 ```
 
-이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다.
-그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 업데이트하면 됩니다.
+Microsoft 리포지토리를 superuser로 등록하고 나면 그 이후부터는 `sudo apt-get upgrade powershell`을 사용하여 업데이트해야 합니다.
 
 ### <a name="installation-via-direct-download---debian-9"></a>직접 다운로드를 통해 설치 - Debian 9
 
@@ -290,18 +290,17 @@ sudo apt-get remove powershell
 PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 공식 Microsoft 리포지토리에 게시됩니다.
 
 ```sh
-# 레드햇용 마이크로소프트 저장소 등록
+# Register the Microsoft RedHat repository
 curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/microsoft.repo
 
-# PowerShell 설치
+# Install PowerShell
 sudo yum install -y powershell
 
-# PowerShell 실행
+# Start PowerShell
 pwsh
 ```
 
-이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다.
-그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 업데이트하면 됩니다.
+이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다. 그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 업데이트하면 됩니다.
 
 ### <a name="installation-via-direct-download---centos-7"></a>직접 다운로드를 통해 설치 - CentOS 7
 
@@ -336,18 +335,17 @@ sudo yum remove powershell
 PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 공식 Microsoft 리포지토리에 게시됩니다.
 
 ```sh
-# 레드햇용 마이크로소프트 저장소 등록
+# Register the Microsoft RedHat repository
 curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/microsoft.repo
 
-# PowerShell 설치
+# Install PowerShell
 sudo yum install -y powershell
 
-# PowerShell 실행
+# Start PowerShell
 pwsh
 ```
 
-이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다.
-그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 업데이트하면 됩니다.
+Microsoft 리포지토리를 superuser로 등록하고 나면 `sudo yum update powershell`을 사용하여 PowerShell을 업데이트해야 합니다.
 
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>직접 다운로드를 통해 설치 - Red Hat Enterprise Linux(RHEL) 7
 
@@ -378,50 +376,50 @@ sudo yum remove powershell
 ### <a name="installation---opensuse-423"></a>설치 - openSUSE 42.3
 
 ```sh
-# 의존성 패키지 설치
+# Install dependencies
 zypper update && zypper --non-interactive install curl tar libicu52_1
 
-# Powershell '.tar.gz' 압축 파일 다운로드
+# Download the powershell '.tar.gz' archive
 curl -L https://github.com/PowerShell/PowerShell/releases/download/v6.2.0/powershell-6.2.0-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
-# Powershell이 설치될 폴더 생성
+# Create the target folder where powershell will be placed
 mkdir -p /opt/microsoft/powershell/6.2.0
 
-# Powershell을 폴더에 압축 해제
+# Expand powershell to the target folder
 tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/6.2.0
 
-# 실행 권한 부여
+# Set execute permissions
 chmod +x /opt/microsoft/powershell/6.2.0/pwsh
 
-# pwsh를 가리키는 심볼릭 링크 생성
+# Create the symbolic link that points to pwsh
 ln -s /opt/microsoft/powershell/6.2.0/pwsh /usr/bin/pwsh
 
-# PowerShell 실행
+# Start PowerShell
 pwsh
 ```
 
 ### <a name="installation---opensuse-leap-15"></a>설치 - openSUSE Leap 15
 
 ```sh
-# 의존성 패키지 설치
+# Install dependencies
 zypper update && zypper --non-interactive install curl tar gzip libopenssl1_0_0 libicu60_2
 
-# Powershell '.tar.gz' 압축 파일 다운로드
+# Download the powershell '.tar.gz' archive
 curl -L https://github.com/PowerShell/PowerShell/releases/download/v6.2.0/powershell-6.2.0-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
-# Powershell이 설치될 폴더 생성
+# Create the target folder where powershell will be placed
 mkdir -p /opt/microsoft/powershell/6.2.0
 
-# Powershell을 폴더에 압축 해제
+# Expand powershell to the target folder
 tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/6.2.0
 
-# 실행 권한 부여
+# Set execute permissions
 chmod +x /opt/microsoft/powershell/6.2.0/pwsh
 
-# pwsh를 가리키는 심볼릭 링크 생성
+# Create the symbolic link that points to pwsh
 ln -s /opt/microsoft/powershell/6.2.0/pwsh /usr/bin/pwsh
 
-# PowerShell 실행
+# Start PowerShell
 pwsh
 ```
 
@@ -441,27 +439,26 @@ rm -rf /usr/bin/pwsh /opt/microsoft/powershell
 PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 공식 Microsoft 리포지토리 게시됩니다.
 
 ```sh
-# 마이크로소프트 서명 키 등록
+# Register the Microsoft signature key
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
-# 래드햇용 마이크로소프트 저장소 등록 
+# Register the Microsoft RedHat repository
 curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/microsoft.repo
 
-# 패키지 목록 업데이트
+# Update the list of products
 sudo dnf update
 
-# 시스템 구성 요소 설치
+# Install a system component
 sudo dnf install compat-openssl10
 
-# PowerShell 설치
+# Install PowerShell
 sudo dnf install -y powershell
 
-# PowerShell 실행
+# Start PowerShell
 pwsh
 ```
 
-이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다.
-그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 업데이트하면 됩니다.
+이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다. 그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 업데이트하면 됩니다.
 
 ### <a name="installation-via-direct-download---fedora-27-fedora-28"></a>직접 다운로드를 통해 설치 - Fedora 27, Fedora 28
 
@@ -522,20 +519,20 @@ Linux용 PowerShell Core는 간편한 설치 및 업데이트를 위해 [맞춤 
 기본 설정 방법입니다.
 
 ```sh
-# PowerShell 설치
+# Install PowerShell
 sudo snap install powershell --classic
 
-# PowerShell 실행
+# Start PowerShell
 pwsh
 ```
 
 미리 보기 버전을 설치하려면 다음 방법을 따르세요.
 
 ```sh
-# PowerShell 설치
+# Install PowerShell
 sudo snap install powershell-preview --classic
 
-# PowerShell 실행
+# Start PowerShell
 pwsh-preview
 ```
 
@@ -558,21 +555,21 @@ sudo snap remove powershell-preview
 ### <a name="installation---kali"></a>설치 - Kali
 
 ```sh
-# 의존성 다운로드 & 설치
+# Download & Install prerequisites
 wget http://ftp.us.debian.org/debian/pool/main/i/icu/libicu57_57.1-9_amd64.deb
 dpkg -i libicu57_57.1-9_amd64.deb
 apt-get update && apt-get install -y curl gnupg apt-transport-https
 
-# APT에 마이크로소프트 서명 키를 등록
+# Add Microsoft public repository key to APT
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
-# 저장소 리스트에 마이크로소프트 저장소 추가
+# Add Microsoft package repository to the source list
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-stretch-prod stretch main" | tee /etc/apt/sources.list.d/powershell.list
 
-# PowerShell 설치
+# Install PowerShell package
 apt-get update && apt-get install -y powershell
 
-# PowerShell 실행
+# Start PowerShell
 pwsh
 ```
 
@@ -597,19 +594,19 @@ apt-get remove -y powershell
 ### <a name="installation---raspbian"></a>설치 - Raspbian
 
 ```sh
-# 의존성 설치
+# Install prerequisites
 sudo apt-get install libunwind8
 
-# 최신 버전 tar.gz 압축 파일 다운로드
+# Grab the latest tar.gz
 wget https://github.com/PowerShell/PowerShell/releases/download/v6.2.0/powershell-6.2.0-linux-arm32.tar.gz
 
-# PowerShell을 설치할 폴더 생성
+# Make folder to put powershell
 mkdir ~/powershell
 
-# tar.gz 파일 압축 해제
+# Unpack the tar.gz file
 tar -xvf ./powershell-6.2.0-linux-arm32.tar.gz -C ~/powershell
 
-# PowerShell 실행
+# Start PowerShell
 ~/powershell/pwsh
 ```
 
@@ -617,13 +614,12 @@ tar -xvf ./powershell-6.2.0-linux-arm32.tar.gz -C ~/powershell
 
 ```sh
 # Start PowerShell from bash with sudo to create a symbolic link
-# 심볼릭 링크를 생성하기 위해 PowerShell을 bash에서 관리자 권한으로 실행
 sudo ~/powershell/pwsh -c New-Item -ItemType SymbolicLink -Path "/usr/bin/pwsh" -Target "\$PSHOME/pwsh" -Force
 
-# 아니면, 이것을 실행
+# alternatively you can run following to create a symbolic link
 # sudo ln -s ~/powershell/pwsh /usr/bin/pwsh
 
-# 이제는 "pwsh" 을 입력해 PowerShell을 실행
+# Now to start PowerShell you can just run "pwsh"
 ```
 
 ### <a name="uninstallation---raspbian"></a>제거 - Raspbian
@@ -666,19 +662,19 @@ PowerShell은 모든 Linux 배포판를 위한 이식 가능한 실행 파일을
 #### <a name="linux"></a>Linux
 
 ```sh
-# Powershell "tar.gz" 압축 파일 다운로드
+# Download the powershell '.tar.gz' archive
 curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v6.2.0/powershell-6.2.0-linux-x64.tar.gz
 
-# PowerShell이 설치될 폴더 생성
+# Create the target folder where powershell will be placed
 sudo mkdir -p /opt/microsoft/powershell/6.2.0
 
-# PowerShell을 대상 폴더에 압축 해제
+# Expand powershell to the target folder
 sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/6.2.0
 
-# 실행 권한 부여
+# Set execute permissions
 sudo chmod +x /opt/microsoft/powershell/6.2.0/pwsh
 
-# pwsh를 향하는 심볼릭 링크를 생성
+# Create the symbolic link that points to pwsh
 sudo ln -s /opt/microsoft/powershell/6.2.0/pwsh /usr/bin/pwsh
 ```
 
