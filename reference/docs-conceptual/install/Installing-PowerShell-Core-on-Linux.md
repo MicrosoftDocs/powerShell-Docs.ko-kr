@@ -13,7 +13,7 @@ ms.locfileid: "59293336"
 
 [Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubuntu 18.10][u1810],  [Debian 9][deb9], [CentOS 7][cos], [RHEL(Red Hat Enterprise Linux) 7][rhel7], [openSUSE 42.3][opensuse], [openSUSE Leap 15][opensuse], [Fedora 27][fedora], [Fedora 28][fedora] 및 [Arch Linux][arch]를 지원합니다.
 
-공식적으로 지원되지 않는 Linux 배포판의 경우 [PowerShell 맞춤 패키지][snap]를 사용해 보세요.
+공식적으로 지원되지 않는 Linux 배포판의 경우 [PowerShell  패키지][snap]를 사용해 보세요.
 또한 Linux [`tar.gz` 보관][tar]을 사용하여 PowerShell 이진 파일을 직접 설치해 볼 수도 있지만 OS에 따라 별도로 필요한 종속성을 설치해야 합니다.
 
 모든 패키지는 GitHub [릴리스][] 페이지에 제공됩니다.
@@ -300,7 +300,7 @@ sudo yum install -y powershell
 pwsh
 ```
 
-이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다. 그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 업데이트하면 됩니다.
+이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다. 그 이후에는 `sudo yum update powershell`을 사용하여 업데이트하면 됩니다.
 
 ### <a name="installation-via-direct-download---centos-7"></a>직접 다운로드를 통해 설치 - CentOS 7
 
@@ -345,7 +345,7 @@ sudo yum install -y powershell
 pwsh
 ```
 
-Microsoft 리포지토리를 superuser로 등록하고 나면 `sudo yum update powershell`을 사용하여 PowerShell을 업데이트해야 합니다.
+이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다. 그 이후에는 `sudo yum update powershell`을 사용하여 업데이트하면 됩니다.
 
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>직접 다운로드를 통해 설치 - Red Hat Enterprise Linux(RHEL) 7
 
@@ -458,7 +458,7 @@ sudo dnf install -y powershell
 pwsh
 ```
 
-이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다. 그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 업데이트하면 됩니다.
+이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다. 그 이후에는 `sudo yum update powershell`을 사용하여 업데이트하면 됩니다.
 
 ### <a name="installation-via-direct-download---fedora-27-fedora-28"></a>직접 다운로드를 통해 설치 - Fedora 27, Fedora 28
 
@@ -510,8 +510,8 @@ AUR에서 패키지를 설치하는 방법에 대한 자세한 내용은 [Arch L
 
 ### <a name="getting-snapd"></a>snapd 가져오기
 
-`snapd` 맞춤을 실행하는 데 필요합니다.
-[이러한 지침](https://docs.snapcraft.io/core/install)을 사용하여 `snapd`를 설치했는지 확인합니다.
+`snapd` 패키지을 실행하는 데 필요합니다.
+[이러 지침](https://docs.snapcraft.io/core/install)을 참고하여 `snapd`를 설치했는지 확인합니다.
 
 ### <a name="installation-via-snap"></a>맞춤을 통해 설치
 
@@ -536,7 +536,7 @@ sudo snap install powershell-preview --classic
 pwsh-preview
 ```
 
-맞춤 설치를 자동으로 업그레이드한 후에 `sudo snap refresh powershell` 또는 `sudo snap refresh powershell-preview`를 사용하여 업그레이드를 트리거할 수 있습니다.
+설치한 후에 `sudo snap refresh powershell` 또는 `sudo snap refresh powershell-preview`를 사용하여 업그레이드할 수 있습니다.
 
 ### <a name="uninstallation"></a>제거
 
@@ -652,7 +652,7 @@ PowerShell은 모든 Linux 배포판를 위한 이식 가능한 실행 파일을
 | openSUSE Leap 15 | libcurl4, libopenssl1_0_0, libicu60_2 |
 | Fedora 27 <br> Fedora 28 | libunwind, libcurl, openssl-libs, libicu, compat-openssl10 |
 
-공식적으로 지원되지 않는 Linux 배포에 PowerShell 이진 파일을 배포하려면 별도의 단계를 통해 대상 OS에 필요한 종속성을 설치해야 합니다.
+공식적으로 지원되지 않는 Linux 배포에 PowerShell을 설치하려면 별도의 단계를 통해 대상 OS에 필요한 종속성을 설치해야 합니다.
 예를 들어 [Amazon Linux dockerfile][amazon-dockerfile]은 먼저 종속성을 설치한 후 Linux `tar.gz` 아카이브를 추출합니다.
 
 [amazon-dockerfile]: https://github.com/PowerShell/PowerShell-Docker/blob/master/release/community-stable/amazonlinux/docker/Dockerfile
