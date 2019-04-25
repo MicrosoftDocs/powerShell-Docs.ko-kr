@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: a2e66c86-83a7-4148-8575-c28d6d429d4f
 caps.latest.revision: 6
 ms.openlocfilehash: c178c4a48f9595001bcc249d5f55886fa54bb9f2
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065294"
 ---
 # <a name="list-view-groupby"></a>목록 보기(GroupBy)
 
@@ -30,7 +30,7 @@ ms.locfileid: "57794448"
    > [!WARNING]
    > 이 서식 파일에는 Windows PowerShell 형식 지정 파일에서 이미 정의 되어 있는 개체의 표시를 정의 합니다. 사용 해야 합니다는 `prependPath` 모듈로 파일 매개 변수 cmdlet을 실행 하 고 형식을 로드할 수 없습니다.
 
-## <a name="demonstrates"></a>시연
+## <a name="demonstrates"></a>데모
 
 이 서식 파일에 다음 XML 요소를 보여 줍니다.
 

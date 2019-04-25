@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 55908d67-7cbe-482a-a105-5a6da93c5311
 caps.latest.revision: 4
 ms.openlocfilehash: 8d692cf88d1d356886ef973f0989294d6b51ee6d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083164"
 ---
 # <a name="writing-help-for-powershell-cmdlets"></a>PowerShell Cmdlet에 대 한 도움말 작성
 

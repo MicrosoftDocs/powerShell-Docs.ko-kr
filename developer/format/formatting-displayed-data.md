@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 38971643-2a3d-4f5b-a1fa-6334c162b8ed
 caps.latest.revision: 4
 ms.openlocfilehash: e915ac71feb50cb58cfa9195f0de94763affdb77
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065668"
 ---
 # <a name="formatting-displayed-data"></a>표시되는 데이터 형식 지정
 

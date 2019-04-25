@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 37beeb0b-7a81-4747-becb-e309e17278fb
 caps.latest.revision: 12
 ms.openlocfilehash: 7a117c25b0d117dc846ba8e060e31e838b5edd52
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065260"
 ---
 # <a name="listcontrol-element-format"></a>ListControl 요소(형식)
 

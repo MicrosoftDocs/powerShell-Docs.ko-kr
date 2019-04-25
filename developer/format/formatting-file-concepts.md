@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 1804dbe4-69eb-4b0b-bc40-cbb2f00bb083
 caps.latest.revision: 10
 ms.openlocfilehash: 81b035f3cb44dcb672f5951511d03542e694cc42
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065702"
 ---
 # <a name="formatting-file-concepts"></a>형식 지정 파일 개념
 

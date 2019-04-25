@@ -12,11 +12,11 @@ helpviewer_keywords:
 ms.assetid: 1fcc4c5e-0c75-496c-a712-5f844e310576
 caps.latest.revision: 14
 ms.openlocfilehash: 3168275423dc65fcb2e41dedd9bea275ede58397
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068643"
 ---
 # <a name="cmdlet-class-declaration"></a>Cmdlet 클래스 선언
 

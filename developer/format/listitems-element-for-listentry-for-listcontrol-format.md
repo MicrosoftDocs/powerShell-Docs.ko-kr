@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d2c1da6d-acc7-4fe8-9e7d-6dcddc2787cd
 caps.latest.revision: 9
 ms.openlocfilehash: c25f18489d9c7abd8889758499dbbacd6ee29304
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065243"
 ---
 # <a name="listitems-element-for-listentry-for-listcontrol-format"></a>ListControl의 ListEntry에 대한 ListItems 요소(형식)
 
