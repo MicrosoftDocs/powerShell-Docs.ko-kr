@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: WMI 개체 가져오기(Get WmiObject)
 ms.assetid: f0ddfc7d-6b5e-4832-82de-2283597ea70d
 ms.openlocfilehash: 522822ac3ea6f08b20fa5af6c9accb48b01035d3
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058253"
 ---
 # <a name="getting-wmi-objects-get-wmiobject"></a>WMI 개체 가져오기(Get-WmiObject)
 

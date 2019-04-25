@@ -4,11 +4,11 @@ contributor: manikb
 keywords: gallery,powershell,cmdlet,psget
 title: 호환되는 PowerShell 버전이 있는 모듈
 ms.openlocfilehash: 425588c168a4f864fdc0c52aa53cfd748b80dc98
-ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58623843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084728"
 ---
 # <a name="modules-with-compatible-powershell-editions"></a>호환되는 PowerShell 버전이 있는 모듈
 

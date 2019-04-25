@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 title: WMF 5.1의 향상된 콘솔
 ms.openlocfilehash: a8e82e2f973916c2ed5007eba90ee6f2b7a9a769
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085144"
 ---
 # <a name="console-improvements-in-wmf-51"></a>WMF 5.1의 향상된 콘솔
 

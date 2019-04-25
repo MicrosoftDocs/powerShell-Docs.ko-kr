@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Windows PowerShell 2.0 엔진 시작
 ms.assetid: edafc2fa-7576-49c2-bbba-9336f4bcfc28
 ms.openlocfilehash: f5dd01cd93095fe15cc7e57f97f4b2920e580c22
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55683058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086513"
 ---
 # <a name="starting-the-windows-powershell-20-engine"></a>Windows PowerShell 2.0 엔진 시작
 

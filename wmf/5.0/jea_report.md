@@ -2,11 +2,11 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: cd3338ae305896e282056a871974e5f899ef6ff5
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085262"
 ---
 # <a name="reporting-on-jea"></a>JEA에 대한 보고
 

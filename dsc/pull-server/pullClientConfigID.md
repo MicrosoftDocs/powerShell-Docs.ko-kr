@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: PowerShell 5.0 이상에서 구성 ID를 사용하여 끌어오기 클라이언트 설정
 ms.openlocfilehash: 14db98d240bc87aca3ee985db08c14b7c65d8bb8
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58055719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079492"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-50-and-later"></a>PowerShell 5.0 이상에서 구성 ID를 사용하여 끌어오기 클라이언트 설정
 

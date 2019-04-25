@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: 레지스트리 키 작업
 ms.assetid: 91bfaecd-8684-48b4-ad86-065dfe6dc90a
 ms.openlocfilehash: e7b497ec2fccf9ba3934439a9c1e9be3cf70a705
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058865"
 ---
 # <a name="working-with-registry-keys"></a>레지스트리 키 작업
 

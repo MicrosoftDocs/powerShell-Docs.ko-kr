@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: DSC, PowerShell, 구성, 서비스, 설정
 title: 구성 작성, 컴파일 및 적용
 ms.openlocfilehash: 947308efa165543571801c88a922daf44fa88be0
-ms.sourcegitcommit: 3f6002e7109373eda31cc65fc84d2600447cb7e9
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080019"
 ---
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -90,7 +90,7 @@ LCM은 DSC 리소스를 호출하여 구성을 적용합니다.
 아래 코드를 사용하여 `Start-DSCConfiguration` cmdlet을 실행합니다. "localhost.mof"가 저장된 디렉터리 경로를 `-Path` 매개 변수로 지정합니다. `Start-DSCConfiguration` cmdlet은 "\<computername\>.mof" 파일에서 지정된 디렉터리를 살펴봅니다. `Start-DSCConfiguration` cmdlet은 파일 이름별로 지정된 컴퓨터 이름에 찾은 ".mof" 파일을 적용하려고 합니다("localhost", "server01", "dc-02" 등).
 
 > [!NOTE]
-> `-Wait` 매개 변수가 지정되지 않으면 `Start-DSCConfiguration`은 백그라운드 작업을 만들어서 작업을 수행합니다. `-Verbose` 매개 변수를 지정하면 작업의 **자세한 정보 표시** 출력을 볼 수 있습니다. `-Wait`및 `-Verbose`는 모두 선택적 매개 변수입니다.
+> `-Wait` 매개 변수가 지정되지 않으면 `Start-DSCConfiguration`은 백그라운드 작업을 만들어서 작업을 수행합니다. `-Verbose` 매개 변수를 지정하면 작업의 **자세한 정보 표시** 출력을 볼 수 있습니다. `-Wait` 및 `-Verbose`는 모두 선택적 매개 변수입니다.
 
 ```powershell
 Start-DscConfiguration -Path C:\Scripts\HelloWorld -Verbose -Wait

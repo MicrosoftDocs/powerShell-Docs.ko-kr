@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: Linux용 DSC(필요한 상태 구성) 시작
 ms.openlocfilehash: a18b226d4b2d8b8e1ba8b4168ec6ad8f73c73c42
-ms.sourcegitcommit: 3f6002e7109373eda31cc65fc84d2600447cb7e9
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079696"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Linux용 DSC(필요한 상태 구성) 시작
 
@@ -129,7 +129,7 @@ $Sess=New-CimSession -Credential $credential -ComputerName $Node -Port 5986 -Aut
 > "밀어넣기" 모드의 경우, 사용자 자격 증명은 Linux 컴퓨터 상의 루트 사용자여야 합니다.
 > Linux용 DSC에는 SSL/TLS 연결만 지원되며, `New-CimSession`은 $true로 설정된 –UseSSL 매개 변수와 함께 사용해야 합니다.
 > OMI(DSC용)에서 사용하는 SSL 인증서는 속성이 pemfile 및 keyfile인 `/opt/omi/etc/omiserver.conf` 파일에 지정되어 있습니다.
-> 이 인증서를 [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) cmdlet을 실행 중인 Windows 컴퓨터에서 신뢰하지 않는 경우에는 CIMSession 옵션을 사용하여 인증서 유효성 검사를 무시하도록 선택할 수 있습니다. `-SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true`
+> 이 인증서를 [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) cmdlet을 실행 중인 Windows 컴퓨터에서 신뢰하지 않는 경우에는 CIMSession 옵션 `-SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true`을 사용하여 인증서 유효성 검사를 무시하도록 선택할 수 있습니다.
 
 Linux 노드에 DSC 구성을 밀어 넣으려면 다음 명령을 실행합니다.
 

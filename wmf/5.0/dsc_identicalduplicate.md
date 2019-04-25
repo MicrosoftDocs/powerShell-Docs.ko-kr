@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 3f73b7cf0cdf033cbd561b3412734692bb7decd7
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 28f4f8ae2bbddc8fb5ef9d95d3061a91fcc8ffe2
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34187542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058729"
 ---
 # <a name="allowing-for-identical-duplicate-resources-in-a-configuration"></a>구성에서 동일한 중복 리소스 허용
 

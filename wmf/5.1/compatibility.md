@@ -4,11 +4,11 @@ ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: WMF 5.1 운영 체제 호환성
 ms.openlocfilehash: f4d7d1403c1f397bf6720485d7a7302543c2010f
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055601"
 ---
 # <a name="wmf-51-operating-system-compatibility"></a>WMF 5.1 운영 체제 호환성
 

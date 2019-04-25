@@ -2,11 +2,11 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: 2edf6ce6705738a0e544c2caf8b74f00064c21f2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058899"
 ---
 # <a name="support-for-mixed-refreshmode"></a>혼합 RefreshMode 지원
 

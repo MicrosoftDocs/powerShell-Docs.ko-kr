@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 6dadbe9c41ed0a61839ef94fe0a950fe501941ee
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: e61f59f8f7634853c9f6e0d3923939543ff04f20
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085663"
 ---
 # <a name="information-stream"></a>정보 스트림
 
@@ -69,7 +69,7 @@ MessageData
 {[Message, =============================], [NoNewLine, False], [ForegroundColor, DarkYellow], [BackgroundColor, DarkMa...
 {[Message, I ], [NoNewLine, True], [ForegroundColor, White], [BackgroundColor, DarkMagenta]}
 {[Message, <3], [NoNewLine, True], [ForegroundColor, Red], [BackgroundColor, DarkMagenta]}
-{[Message,  Output], [NoNewLine, False], [ForegroundColor, White], [BackgroundColor, DarkMagenta]}
+{[Message,  Output], [NoNewLine, False], [ForegroundColor, White], [BackgroundColor, DarkMagenta]}
 {[Message, =============================], [NoNewLine, False], [ForegroundColor, DarkYellow], [BackgroundColor, DarkMa...
 {[Message, ], [NoNewLine, False], [ForegroundColor, DarkYellow], [BackgroundColor, DarkMagenta]}
 {[Message, SCRIPT COMPLETE!One!Eleven!], [NoNewLine, False], [ForegroundColor, Green], [BackgroundColor, DarkMagenta]}
@@ -91,34 +91,34 @@ PS C:\Users\demo>
 PS C:\Users\demo> ## All output includes useful properties that you would expect
 PS C:\Users\demo> ## of a generic event stream
 PS C:\Users\demo> $ivOutput.Process
-MessageData     : System.Diagnostics.Process (powershell)
-Source          : c:\temp\OutputGusher.ps1
-TimeGenerated   : 2/9/2015 5:08:52 PM
-Tags            : {Process}
-User            : demo
-Computer        : srv2
-ProcessId       : 4008
-NativeThreadId  : 7980
+MessageData     : System.Diagnostics.Process (powershell)
+Source          : c:\temp\OutputGusher.ps1
+TimeGenerated   : 2/9/2015 5:08:52 PM
+Tags            : {Process}
+User            : demo
+Computer        : srv2
+ProcessId       : 4008
+NativeThreadId  : 7980
 ManagedThreadId : 8
 
 PS C:\Users\demo> ## And of course, this works from hosting applications.
 PS C:\Users\demo> $ps = [PowerShell]::Create()
 PS C:\Users\demo> $ps.AddCommand('c:\temp\OutputGusher.ps1').Invoke()
 
-Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
--------  ------    -----      ----- -----   ------     -- -----------
-    559      41   119704     130968 ...46     7.77   4008 powershell
+Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
+-------  ------    -----      ----- -----   ------     -- -----------
+    559      41   119704     130968 ...46     7.77   4008 powershell
 
 PS C:\Users\demo> $information = $ps.Streams.Information
 PS C:\Users\demo> $information | ? { $_.Tags -contains 'LogLow'}
 
-MessageData     : Some spammy logging information
-Source          : C:\temp\OutputGusher.ps1
-TimeGenerated   : 2/9/2015 5:08:53 PM
-Tags            : {LogLow}
-User            : demo
-Computer        : srv2
-ProcessId       : 4008
-NativeThreadId  : 2276
+MessageData     : Some spammy logging information
+Source          : C:\temp\OutputGusher.ps1
+TimeGenerated   : 2/9/2015 5:08:53 PM
+Tags            : {LogLow}
+User            : demo
+Computer        : srv2
+ProcessId       : 4008
+NativeThreadId  : 2276
 ManagedThreadId : 14
 ```

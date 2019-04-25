@@ -2,11 +2,11 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: b803c86c41770b85a7ee8aa97ef62dab50850ec0
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085765"
 ---
 # <a name="details-about-configuration-status"></a>구성 상태에 대한 세부 정보
 

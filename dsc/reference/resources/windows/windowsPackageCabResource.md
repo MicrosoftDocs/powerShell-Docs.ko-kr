@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC WindowsPackageCab 리소스
 ms.openlocfilehash: 035944e7ca5c7469250c48a19b79f2f2d5d38e9a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076942"
 ---
 # <a name="dsc-windowspackagecab-resource"></a>DSC WindowsPackageCab 리소스
 

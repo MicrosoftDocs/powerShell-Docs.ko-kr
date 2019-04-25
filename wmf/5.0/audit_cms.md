@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 14208e3b5d5c2fef80fa42a87cc00aeee81bd042
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: b8940ded189d822a5a2cd40773ef5146353611cc
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62059001"
 ---
 # <a name="cryptographic-message-syntax-cms-cmdlets"></a>암호화 메시지 구문(CMS) cmdlet
 

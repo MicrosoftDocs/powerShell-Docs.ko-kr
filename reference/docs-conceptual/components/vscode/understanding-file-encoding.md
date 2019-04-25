@@ -184,8 +184,8 @@ finally
 
 프로필 설정을 사용하여 보다 일반적으로 지정된 인코딩을 사용히도록 PowerShell을 구성할 수 있습니다. 다음 문서를 참조하세요.
 
-- [@mklement0][stackoverflow PowerShell 인코딩에 대 한 응답](https://stackoverflow.com/a/40098904)합니다.
-- [PowerShell에서 BOM을 포함하지 않는 UTF-8 입력을 처리하는 방법에 대한 @rkeithhill]의 [블로그 게시물](https://rkeithhill.wordpress.com/2010/05/26/handling-native-exe-output-encoding-in-utf8-with-no-bom/)
+- [@mklement0] [stackoverflow PowerShell 인코딩에 대 한 응답](https://stackoverflow.com/a/40098904)합니다.
+- [@rkeithhill] [PowerShell에서 BOM 없는 utf-8 입력을 처리 하는 방법에 대 한 블로그 게시물](https://rkeithhill.wordpress.com/2010/05/26/handling-native-exe-output-encoding-in-utf8-with-no-bom/)합니다.
 
 PowerShell이 특정 입력 인코딩을 사용하도록 강제할 수 없습니다. PowerShell 5.1 이하에서는 BOM이 없으면 Windows-1252 인코딩을 기본값으로 지정합니다. 상호 운용성을 위해 BOM을 포함한 유니코드 형식으로 스크립트를 저장하는 것이 좋습니다.
 

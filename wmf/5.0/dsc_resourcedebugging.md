@@ -2,11 +2,11 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: 207e1afb316b3f23d4192d26909454952a07cd0b
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55679803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058967"
 ---
 # <a name="dsc-resource-script-debugging"></a>DSC 리소스 스크립트 디버깅
 

@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 9ead27fd5d4f146e9062488c1c8cc22a073b922e
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 22a027ebc97e15075980bc77ce272d8ecdae0b5f
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34187105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058667"
 ---
 # <a name="improvements-in-powershell-script-debugging"></a>PowerShell 스크립트 디버깅의 향상된 기능
 

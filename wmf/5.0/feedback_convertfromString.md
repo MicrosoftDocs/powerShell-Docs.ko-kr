@@ -2,11 +2,11 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: fcf2adf67f36edb534df3e2a849459fb20e1c2de
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085357"
 ---
 # <a name="extract-and-parse-structured-objects-out-of-string"></a>문자열에서 구조화된 개체 추출 및 구문 분석
 
@@ -31,8 +31,8 @@ ms.locfileid: "37892366"
 ```
 
 ```output
-P1     P2
---     --
+P1     P2
+--     --
 Hello  World
 ```
 
@@ -41,49 +41,49 @@ Hello  World
 텍스트 기반 주소록을 사용하여 시작합니다.
 
 ```
-    Ana Trujillo
+    Ana Trujillo
 
-    Redmond, WA
+    Redmond, WA
 
-    Antonio Moreno
+    Antonio Moreno
 
-    Renton, WA
+    Renton, WA
 
-    Thomas Hardy
+    Thomas Hardy
 
-    Seattle, WA
+    Seattle, WA
 
-    Christina Berglund
+    Christina Berglund
 
-    Redmond, WA
+    Redmond, WA
 
-    Hanna Moos
+    Hanna Moos
 
-    Puyallup, WA
+    Puyallup, WA
 ```
 
 몇 가지 예제를 템플릿으로 사용할 파일에 복사합니다.
 
 ```
-    Ana Trujillo
+    Ana Trujillo
 
-    Redmond, WA
+    Redmond, WA
 
-    Antonio Moreno
+    Antonio Moreno
 
-    Renton, WA
+    Renton, WA
 ```
 
 추출하려는 데이터를 중괄호로 묶고 이름을 지정합니다. **이름** 속성(및 연결된 다른 속성)이 여러 번 나타날 수 있으므로 별표(\*)를 사용하여 많은 속성을 하나의 레코드로 추출하지 않고 여러 레코드로 추출함을 나타냅니다.
 
 ```
-    {Name\*:Ana Trujillo}
+    {Name\*:Ana Trujillo}
 
-    {City:Redmond}, {State:WA}
+    {City:Redmond}, {State:WA}
 
-    {Name\*:Antonio Moreno}
+    {Name\*:Antonio Moreno}
 
-    {City:Renton}, {State:WA}
+    {City:Renton}, {State:WA}
 ```
 
 이 예제 집합에서 `ConvertFrom-String`은 입력 파일에서 유사한 구조를 가진 개체 기반 출력을 자동으로 추출할 수 있습니다.
@@ -93,13 +93,13 @@ Get-Content .\addresses.output.txt | ConvertFrom-String -TemplateFile .\addresse
 ```
 
 ```output
-ExtentText                     Name               City     State
-----------                     ----               ----     -----
-Ana Trujillo...                Ana Trujillo       Redmond  WA
-Antonio Moreno...              Antonio Moreno     Renton   WA
-Thomas Hardy...                Thomas Hardy       Seattle  WA
-Christina Berglund...          Christina Berglund Redmond  WA
-Hanna Moos...                  Hanna Moos         Puyallup WA
+ExtentText                     Name               City     State
+----------                     ----               ----     -----
+Ana Trujillo...                Ana Trujillo       Redmond  WA
+Antonio Moreno...              Antonio Moreno     Renton   WA
+Thomas Hardy...                Thomas Hardy       Seattle  WA
+Christina Berglund...          Christina Berglund Redmond  WA
+Hanna Moos...                  Hanna Moos         Puyallup WA
 ```
 
 추출된 텍스트에서 추가 데이터 조작을 수행하기 위해 **ExtentText** 속성은 레코드가 추출된 원시 텍스트를 캡처합니다. 이 기능에 대한 사용자 의견을 제공하거나 예제를 작성하는 데 문제가 있는 콘텐츠를 공유하려면 <psdmfb@microsoft.com>으로 메일을 보내주세요.

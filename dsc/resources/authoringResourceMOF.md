@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: MOF를 사용하여 사용자 지정 DSC 리소스 작성
 ms.openlocfilehash: f243c3e3297711e6f6346a0f813a9c017fe227c3
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58059731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076738"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>MOF를 사용하여 사용자 지정 DSC 리소스 작성
 

@@ -4,11 +4,11 @@ ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: 커뮤니티 리소스
 ms.openlocfilehash: a26f6eefeb3beb41575675b3dd4077f056606a70
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085034"
 ---
 # <a name="community-resources"></a>커뮤니티 리소스
 > 참고: 이 정보는 임시로 제공되며 변경될 수 있습니다.

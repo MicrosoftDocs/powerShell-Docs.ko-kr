@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: 파일, 폴더 및 레지스트리 키 작업
 ms.assetid: e6cf87aa-b5f8-48d5-a75a-7cb7ecb482dc
 ms.openlocfilehash: cd20cc50b573435ba80b52b51e164e60625dc1b6
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086009"
 ---
 # <a name="working-with-files-folders-and-registry-keys"></a>파일, 폴더 및 레지스트리 키 작업
 

@@ -3,11 +3,11 @@ title: macOS에서 PowerShell Core 설치
 description: macOS에서 PowerShell Core를 설치하는 방법에 대한 정보
 ms.date: 12/12/2018
 ms.openlocfilehash: 7db8ca0cb6d13db8ce7f11b4a4b03b7d3f9b6feb
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086462"
 ---
 # <a name="installing-powershell-core-on-macos"></a>macOS에서 PowerShell Core 설치
 
@@ -84,8 +84,7 @@ brew cask upgrade powershell-preview
 
 ## <a name="installation-via-direct-download"></a>직접 다운로드를 통해 설치
 
-PKG 패키지 다운로드
-`powershell-6.2.0-osx-x64.pkg`
+PKG 패키지 `powershell-6.2.0-osx-x64.pkg`를
 [릴리스][] 페이지에서 macOS 머신으로 다운로드합니다.
 
 파일을 두 번 클릭하고 메시지를 따르거나 터미널에서 설치할 수 있습니다.
@@ -175,13 +174,13 @@ sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 
 ## <a name="paths"></a>경로
 
-* `$PSHOME` 다음인 경우 `/usr/local/microsoft/powershell/6.2.0/`
-* 사용자 프로필을 읽는 위치 `~/.config/powershell/profile.ps1`
-* 기본 프로필을 읽는 위치 `$PSHOME/profile.ps1`
-* 사용자 모듈을 읽는 위치 `~/.local/share/powershell/Modules`
-* 공유 모듈을 읽는 위치 `/usr/local/share/powershell/Modules`
-* 기본 모듈을 읽는 위치 `$PSHOME/Modules`
-* PSReadline 기록이 기록되는 위치 `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`
+* `$PSHOME`은 `/usr/local/microsoft/powershell/6.2.0/`입니다.
+* 사용자 프로필은 `~/.config/powershell/profile.ps1`에서 읽습니다.
+* 기본 프로필은 `$PSHOME/profile.ps1`에서 읽습니다.
+* 사용자 프로필은 `~/.local/share/powershell/Modules`에서 읽습니다.
+* 공유 모듈은 `/usr/local/share/powershell/Modules`에서 읽습니다.
+* 기본 모듈은 `$PSHOME/Modules`에서 읽습니다.
+* PSReadline 기록은 `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`에 기록됩니다.
 
 프로필은 PowerShell의 호스트별 구성을 반영합니다.
 따라서 기본 호스트별 프로필은 동일한 위치의 `Microsoft.PowerShell_profile.ps1`에 있습니다.

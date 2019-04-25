@@ -3,11 +3,11 @@ title: Linux에서 PowerShell Core 설치
 description: 다양한 Linux 배포판에서 PowerShell Core를 설치하는 방법에 대한 정보
 ms.date: 08/06/2018
 ms.openlocfilehash: 06194550f4e73f9dd38f8cdc25f6c7f698cafce2
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086564"
 ---
 # <a name="installing-powershell-core-on-linux"></a>Linux에서 PowerShell Core 설치
 
@@ -75,8 +75,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---ubuntu-1404"></a>직접 다운로드를 통해 설치 - Ubuntu 14.04
 
-Debian 패키지 다운로드
-`powershell_6.2.0-1.ubuntu.14.04_amd64.deb`
+Debian 패키지 `powershell_6.2.0-1.ubuntu.14.04_amd64.deb`를
 [릴리스][] 페이지에서 Ubuntu 컴퓨터로 다운로드합니다.
 
 그런 다음 터미널에서 다음을 실행합니다.
@@ -124,8 +123,7 @@ Microsoft 리포지토리를 superuser로 등록하고 나면 그 이후부터�
 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>직접 다운로드를 통해 설치 - Ubuntu 16.04
 
-Debian 패키지 다운로드
-`powershell_6.2.0-1.ubuntu.16.04_amd64.deb`
+Debian 패키지 `powershell_6.2.0-1.ubuntu.16.04_amd64.deb`를
 [릴리스][] 페이지에서 Ubuntu 컴퓨터로 다운로드합니다.
 
 그런 다음 터미널에서 다음을 실행합니다.
@@ -176,8 +174,7 @@ Microsoft 리포지토리를 superuser로 등록하고 나면 그 이후부터�
 
 ### <a name="installation-via-direct-download---ubuntu-1804"></a>직접 다운로드를 통해 설치 - Ubuntu 18.04
 
-Debian 패키지 다운로드
-`powershell_6.2.0-1.ubuntu.18.04_amd64.deb`
+Debian 패키지 `powershell_6.2.0-1.ubuntu.18.04_amd64.deb`를
 [릴리스][] 페이지에서 Ubuntu 컴퓨터로 다운로드합니다.
 
 그런 다음 터미널에서 다음을 실행합니다.
@@ -266,8 +263,7 @@ Microsoft 리포지토리를 superuser로 등록하고 나면 그 이후부터�
 
 ### <a name="installation-via-direct-download---debian-9"></a>직접 다운로드를 통해 설치 - Debian 9
 
-Debian 패키지 다운로드
-`powershell_6.2.0-1.debian.9_amd64.deb`
+Debian 패키지 `powershell_6.2.0-1.debian.9_amd64.deb`를
 [릴리스][] 페이지에서 Debian 컴퓨터로 다운로드합니다.
 
 그런 다음 터미널에서 다음을 실행합니다.
@@ -307,8 +303,7 @@ Microsoft 리포지토리를 superuser로 등록하고 나면 `sudo yum update p
 
 ### <a name="installation-via-direct-download---centos-7"></a>직접 다운로드를 통해 설치 - CentOS 7
 
-[CentOS 7][]을 사용하여 RPM 패키지 다운로드
-`powershell-6.2.0-1.rhel.7.x86_64.rpm`
+[CentOS 7][]을 사용하여 RPM 패키지 `powershell-6.2.0-1.rhel.7.x86_64.rpm`을
 [릴리스][] 페이지에서 CentOS 컴퓨터로 다운로드합니다.
 
 그런 다음 터미널에서 다음을 실행합니다.
@@ -352,8 +347,7 @@ Microsoft 리포지토리를 superuser로 등록하고 나면 `sudo yum update p
 
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>직접 다운로드를 통해 설치 - Red Hat Enterprise Linux(RHEL) 7
 
-RPM 패키지 다운로드
-`powershell-6.2.0-1.rhel.7.x86_64.rpm`
+RPM 패키지 `powershell-6.2.0-1.rhel.7.x86_64.rpm`을
 [릴리스][] 페이지에서 Red Hat Enterprise Linux 컴퓨터로 다운로드합니다.
 
 그런 다음 터미널에서 다음을 실행합니다.
@@ -463,8 +457,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---fedora-27-fedora-28"></a>직접 다운로드를 통해 설치 - Fedora 27, Fedora 28
 
-RPM 패키지 다운로드
-`powershell-6.2.0-1.rhel.7.x86_64.rpm`
+RPM 패키지 `powershell-6.2.0-1.rhel.7.x86_64.rpm`을
 [릴리스][] 페이지에서 Fedora 컴퓨터로 다운로드합니다.
 
 그런 다음 터미널에서 다음을 실행합니다.
@@ -511,7 +504,7 @@ AUR에서 패키지를 설치하는 방법에 대한 자세한 내용은 [Arch L
 
 ### <a name="getting-snapd"></a>snapd 가져오기
 
-`snapd` 맞춤을 실행하는 데 필요합니다.
+`snapd`는 맞춤을 실행하는 데 필요합니다.
 [이러한 지침](https://docs.snapcraft.io/core/install)을 사용하여 `snapd`를 설치했는지 확인합니다.
 
 ### <a name="installation-via-snap"></a>맞춤을 통해 설치
@@ -687,13 +680,13 @@ sudo rm -rf /usr/bin/pwsh /opt/microsoft/powershell
 
 ## <a name="paths"></a>경로
 
-* `$PSHOME` 다음인 경우 `/opt/microsoft/powershell/6.2.0/`
-* 사용자 프로필을 읽는 위치 `~/.config/powershell/profile.ps1`
-* 기본 프로필을 읽는 위치 `$PSHOME/profile.ps1`
-* 사용자 모듈을 읽는 위치 `~/.local/share/powershell/Modules`
-* 공유 모듈을 읽는 위치 `/usr/local/share/powershell/Modules`
-* 기본 모듈을 읽는 위치 `$PSHOME/Modules`
-* PSReadline 기록이 기록되는 위치 `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`
+* `$PSHOME`은 `/opt/microsoft/powershell/6.2.0/`입니다.
+* 사용자 프로필은 `~/.config/powershell/profile.ps1`에서 읽습니다.
+* 기본 프로필은 `$PSHOME/profile.ps1`에서 읽습니다.
+* 사용자 프로필은 `~/.local/share/powershell/Modules`에서 읽습니다.
+* 공유 모듈은 `/usr/local/share/powershell/Modules`에서 읽습니다.
+* 기본 모듈은 `$PSHOME/Modules`에서 읽습니다.
+* PSReadline 기록은 `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`에 기록됩니다.
 
 프로필은 PowerShell의 호스트별 구성을 계속 사용하므로 기본 호스트별 프로필은 동일한 위치의 `Microsoft.PowerShell_profile.ps1`에 있습니다.
 

@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 초기 부팅 시 DSC를 사용하여 가상 컴퓨터 구성
 ms.openlocfilehash: f9634c330832e23fb2c6f08c5b299b55a5505ac9
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58059425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076517"
 ---
 # <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>초기 부팅 시 DSC를 사용하여 가상 컴퓨터 구성
 

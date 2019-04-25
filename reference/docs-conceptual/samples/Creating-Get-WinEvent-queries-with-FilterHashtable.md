@@ -2,11 +2,11 @@
 ms.date: 3/18/2019
 title: FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기
 ms.openlocfilehash: 28ba3c99a297944003a28eaba7de34b77d9df536
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058831"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기
 

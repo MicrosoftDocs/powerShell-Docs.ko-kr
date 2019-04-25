@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: jea,powershell,security
 title: JEA에 대한 감사 및 보고
 ms.openlocfilehash: 2388c735840d8d3683aa8bc9869b9fb0371e5902
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084082"
 ---
 # <a name="auditing-and-reporting-on-jea"></a>JEA에 대한 감사 및 보고
 

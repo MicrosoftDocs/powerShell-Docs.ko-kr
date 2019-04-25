@@ -4,11 +4,11 @@ contributor: Farehar
 keywords: gallery,powershell,psgallery
 title: 라이선스 동의 필요
 ms.openlocfilehash: eaed248895d14bd455d2d8d3c2222d8848eeccae
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55679822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076211"
 ---
 # <a name="require-license-acceptance"></a>라이선스 동의 필요
 

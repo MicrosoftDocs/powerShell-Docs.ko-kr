@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: af16ce7c5d97731581aa3393a70aba672244c9d8
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: eec82b0cb9860d07a282a07c414c3723be313fa4
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34187088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085680"
 ---
 # <a name="remove-dsc-documents"></a>DSC 문서 제거
 

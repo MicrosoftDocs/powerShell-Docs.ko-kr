@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: 갤러리에 대한 ScriptAnazlyer 규칙 프로필
 ms.openlocfilehash: 939f01dece56b283dbe6e03c888f42ff866707af
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58059595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084592"
 ---
 # <a name="scriptanalyzer-rule-profile-for-gallery"></a>갤러리에 대한 ScriptAnazlyer 규칙 프로필
 

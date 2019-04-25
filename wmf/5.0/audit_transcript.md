@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 5e17b0a78f6e860c6144d2e81c426bb26126a85f
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: MTE95
+ms.openlocfilehash: f655cd7aa9b14bd38924d55c8f1246b55ef83756
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34222454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085856"
 ---
 # <a name="enhanced-transcription-options"></a>향상된 기록 옵션
 

@@ -2,11 +2,11 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: c6eef03b6cac5a0bf37016b8aaec18f296c2625e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058763"
 ---
 # <a name="additional-value-for-refreshmode-property"></a>RefreshMode 속성에 대한 추가 값
 

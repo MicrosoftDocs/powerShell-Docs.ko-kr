@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 11b5e36f703c242e0bc820ab19d11d39305fa90c
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 61c5df1b64cb9c54f9c7372a56e77abf319658dd
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34187914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085138"
 ---
 # <a name="network-switch-management-with-powershell"></a>PowerShell을 사용하여 네트워크 스위치 관리
 

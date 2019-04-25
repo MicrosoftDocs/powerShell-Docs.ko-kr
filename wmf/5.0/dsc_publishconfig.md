@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: f929ce4684bb53c3039238ecd465f1c0e432f741
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: db4543b788ad0a5c7aa32706246446533b901d09
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085816"
 ---
 # <a name="deliver-a-configuration-document-without-applying"></a>구성 문서를 적용하지 않고 제공
 
