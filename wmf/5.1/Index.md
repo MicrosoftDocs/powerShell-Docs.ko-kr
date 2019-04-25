@@ -4,11 +4,11 @@ ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: WMF 5.1 릴리스 정보
 ms.openlocfilehash: dd68f101e6f21256f966f7472dabc273a475a25e
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57795337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057284"
 ---
 # <a name="windows-management-framework-wmf-51"></a>WMF(Windows Management Framework) 5.1
 
