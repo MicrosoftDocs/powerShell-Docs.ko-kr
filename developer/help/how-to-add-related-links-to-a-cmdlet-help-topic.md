@@ -9,19 +9,19 @@ ms.topic: article
 ms.assetid: 5aadb730-4eb7-4936-b8df-3b0c0ca04fd5
 caps.latest.revision: 5
 ms.openlocfilehash: aa46cbc5bfcfdfec9fcf9d2581ff641baa532860
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083350"
 ---
-# <a name="how-to-add-related-links-to-a-cmdlet-help-topic"></a><span data-ttu-id="903ad-102">Cmdlet 도움말 항목에 관련 링크를 추가하는 방법</span><span class="sxs-lookup"><span data-stu-id="903ad-102">How to Add Related Links to a Cmdlet Help Topic</span></span>
+# <a name="how-to-add-related-links-to-a-cmdlet-help-topic"></a><span data-ttu-id="598da-102">Cmdlet 도움말 항목에 관련 링크를 추가하는 방법</span><span class="sxs-lookup"><span data-stu-id="598da-102">How to Add Related Links to a Cmdlet Help Topic</span></span>
 
-<span data-ttu-id="903ad-103">이 섹션에서는 Windows PowerShell® cmdlet 도움말 항목을 관련 된 다른 콘텐츠에 대 한 참조를 추가 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="903ad-103">This section describes how to add references to other content that is related to a Windows PowerShell® cmdlet Help topic.</span></span> <span data-ttu-id="903ad-104">이러한 참조는 명령 창에서 표시 하기 때문에 참조 된 콘텐츠가에 직접 연결 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="903ad-104">Because these references appear in a command window, they do not link directly to the referenced content.</span></span>
+<span data-ttu-id="598da-103">이 섹션에서는 Windows PowerShell® cmdlet 도움말 항목을 관련 된 다른 콘텐츠에 대 한 참조를 추가 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="598da-103">This section describes how to add references to other content that is related to a Windows PowerShell® cmdlet Help topic.</span></span> <span data-ttu-id="598da-104">이러한 참조는 명령 창에서 표시 하기 때문에 참조 된 콘텐츠가에 직접 연결 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="598da-104">Because these references appear in a command window, they do not link directly to the referenced content.</span></span>
 
-<span data-ttu-id="903ad-105">Windows PowerShell®에 포함 된 cmdlet 도움말 항목을 이러한 링크는 다른 cmdlet, 개념 콘텐츠 ("about_") 및 다른 문서 및 Windows PowerShell® 관련이 없는 도움말 파일을 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="903ad-105">In the cmdlet Help topics that are included in Windows PowerShell®, these links reference other cmdlets, conceptual content ("about_"), and other documents and Help files that are not related to Windows PowerShell®.</span></span>
+<span data-ttu-id="598da-105">Windows PowerShell®에 포함 된 cmdlet 도움말 항목을 이러한 링크는 다른 cmdlet, 개념 콘텐츠 ("about_") 및 다른 문서 및 Windows PowerShell® 관련이 없는 도움말 파일을 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="598da-105">In the cmdlet Help topics that are included in Windows PowerShell®, these links reference other cmdlets, conceptual content ("about_"), and other documents and Help files that are not related to Windows PowerShell®.</span></span>
 
-<span data-ttu-id="903ad-106">다음 XML에는 관련된 항목에 대 한 두 참조를 포함 하는 RelatedLinks 노드를 추가 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="903ad-106">The following XML shows how to add a RelatedLinks node that contains two references to related topics.</span></span>
+<span data-ttu-id="598da-106">다음 XML에는 관련된 항목에 대 한 두 참조를 포함 하는 RelatedLinks 노드를 추가 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="598da-106">The following XML shows how to add a RelatedLinks node that contains two references to related topics.</span></span>
 
 ```xml
 <maml:relatedLinks>
