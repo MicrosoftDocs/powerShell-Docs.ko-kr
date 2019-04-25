@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 6dc2093a-dc54-42c4-ada3-c8d089ba1e8e
 caps.latest.revision: 6
 ms.openlocfilehash: a6738a7c4c934b2d6a16695a711f7c6c80afdd2d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62075718"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-groupby-format"></a>GroupBy의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
 

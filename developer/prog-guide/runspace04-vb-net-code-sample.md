@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 8f0dea3c-4354-4d7d-9823-5e6234c9a89e
 caps.latest.revision: 6
 ms.openlocfilehash: c1d38c23ea20d7e5ccbc8e475b0c2246f9670ec3
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081328"
 ---
 # <a name="runspace04--vbnet-code-sample"></a>RunSpace04(VB.NET) 코드 샘플
 

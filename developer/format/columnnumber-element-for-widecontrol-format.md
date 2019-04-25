@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: fe9eb5f9-a193-41a4-ad47-a96ba3f8d7e3
 caps.latest.revision: 8
 ms.openlocfilehash: 49f501538b8f72777984a5e575b999866abcdebf
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066909"
 ---
 # <a name="columnnumber-element-for-widecontrol-format"></a>WideControl에 대한 ColumnNumber 요소(형식)
 

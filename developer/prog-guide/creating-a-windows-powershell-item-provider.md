@@ -12,11 +12,11 @@ helpviewer_keywords:
 ms.assetid: a5a304ce-fc99-4a5b-a779-de7d85e031fe
 caps.latest.revision: 6
 ms.openlocfilehash: f2c9e10f0dc392399cf062500b7f28b3d1c07f6e
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081872"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Windows PowerShell 항목 공급자 만들기
 
