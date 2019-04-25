@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 8dfc0f66-65ec-4141-9088-68e47dbe3908
 caps.latest.revision: 6
 ms.openlocfilehash: de0e7de6b02f62770126350d0c09df6c7909464e
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58056416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081685"
 ---
-# <a name="getproc05-vbnet-sample-code"></a><span data-ttu-id="98e1d-102">GetProc05(VB.NET) 코드 샘플</span><span class="sxs-lookup"><span data-stu-id="98e1d-102">GetProc05 (VB.NET) Sample Code</span></span>
+# <a name="getproc05-vbnet-sample-code"></a><span data-ttu-id="f05d9-102">GetProc05(VB.NET) 코드 샘플</span><span class="sxs-lookup"><span data-stu-id="f05d9-102">GetProc05 (VB.NET) Sample Code</span></span>
 
-<span data-ttu-id="98e1d-103">GetProc05 샘플 cmdlet에 대 한 전체 VB.NET 코드는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="98e1d-103">Here is the complete VB.NET code for the GetProc05 sample cmdlet.</span></span>
+<span data-ttu-id="f05d9-103">GetProc05 샘플 cmdlet에 대 한 전체 VB.NET 코드는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="f05d9-103">Here is the complete VB.NET code for the GetProc05 sample cmdlet.</span></span>
 
 ```vb
 Imports System
@@ -434,6 +434,6 @@ End Namespace
 
 <!-- TODO!!!:  [!code-csharp[GetProcessSample01.vb](../../powershell-sdk-samples/SDK-2.0/vb/GetProcessSample01/GetProcessSample01.vb#L10-L419 "GetProcessSample01.cs")] -->
 
-## <a name="see-also"></a><span data-ttu-id="98e1d-104">참고 항목</span><span class="sxs-lookup"><span data-stu-id="98e1d-104">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f05d9-104">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f05d9-104">See Also</span></span>
 
-[<span data-ttu-id="98e1d-105">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="98e1d-105">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="f05d9-105">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="f05d9-105">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
