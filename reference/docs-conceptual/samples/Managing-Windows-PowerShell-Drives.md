@@ -156,7 +156,7 @@ New-PsDrive cmdlet은 현재 Windows PowerShell 세션에만 새 드라이브를
 Remove-PSDrive -Name Office
 ```
 
- **New-PSDrive** 항목에도 표시된 **cvkey:** Windows PowerShell 드라이브를 삭제하려면 다음 명령을 사용합니다.
+**New-PSDrive** 항목에도 표시된 **cvkey:**  Windows PowerShell 드라이브를 삭제하려면 다음 명령을 사용합니다.
 
 ```powershell
 Remove-PSDrive -Name cvkey
