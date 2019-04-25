@@ -1,24 +1,24 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 61a914cc05c4ca9592196c925e232224d193f9d8
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 32a1a10ac30f4bccfdbdd4a1e4ca4ea9459a19af
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34218215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058066"
 ---
-# <a name="format-hex"></a><span data-ttu-id="3dadf-102">Format-Hex</span><span class="sxs-lookup"><span data-stu-id="3dadf-102">Format-Hex</span></span>
-<span data-ttu-id="3dadf-103">**Format-Hex**를 사용하면 텍스트 또는 이진 데이터를 16진수 형식으로 볼 수 있습니다. [Format-Hex](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/format-hex)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3dadf-103">**Format-Hex** lets you view text or binary data in hexadecimal format; see [Format-Hex](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/format-hex)</span></span>
+# <a name="format-hex"></a><span data-ttu-id="eee97-102">Format-Hex</span><span class="sxs-lookup"><span data-stu-id="eee97-102">Format-Hex</span></span>
+<span data-ttu-id="eee97-103">**Format-Hex**를 사용하면 텍스트 또는 이진 데이터를 16진수 형식으로 볼 수 있습니다. [Format-Hex](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/format-hex)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="eee97-103">**Format-Hex** lets you view text or binary data in hexadecimal format; see [Format-Hex](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/format-hex)</span></span>
 
-## <a name="example-1"></a><span data-ttu-id="3dadf-104">예제 1</span><span class="sxs-lookup"><span data-stu-id="3dadf-104">Example 1</span></span>
-<span data-ttu-id="3dadf-105">16진수 형식의 문자열 내용을 봅니다.</span><span class="sxs-lookup"><span data-stu-id="3dadf-105">View the contents of a string in hexadecimal format.</span></span>
+## <a name="example-1"></a><span data-ttu-id="eee97-104">예제 1</span><span class="sxs-lookup"><span data-stu-id="eee97-104">Example 1</span></span>
+<span data-ttu-id="eee97-105">16진수 형식의 문자열 내용을 봅니다.</span><span class="sxs-lookup"><span data-stu-id="eee97-105">View the contents of a string in hexadecimal format.</span></span>
 
 ```powershell
 "This is a very long line to force the line folding in Format-Hex cmdlet" | Format-Hex
 ```
 
-<span data-ttu-id="3dadf-106">출력</span><span class="sxs-lookup"><span data-stu-id="3dadf-106">Outputs</span></span>
+<span data-ttu-id="eee97-106">출력</span><span class="sxs-lookup"><span data-stu-id="eee97-106">Outputs</span></span>
 ```
 PS C:\> This is a very long line to force the line folding in Format-Hex cmdlet" | Format-Hex
 

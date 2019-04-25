@@ -2,18 +2,18 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: 0d3a87f3a9c3409656ea7f7263723436e1f9d48f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55683048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057369"
 ---
-# <a name="installation-of-module-dependencies"></a><span data-ttu-id="2c681-102">모듈 종속성의 설치</span><span class="sxs-lookup"><span data-stu-id="2c681-102">Installation of Module Dependencies</span></span>
+# <a name="installation-of-module-dependencies"></a><span data-ttu-id="c8430-102">모듈 종속성의 설치</span><span class="sxs-lookup"><span data-stu-id="c8430-102">Installation of Module Dependencies</span></span>
 
-<span data-ttu-id="2c681-103">이제 Windows PowerShell 5.0 이상에서 실행되는 Install-Module, Update-Module 및 Publish-Module cmdlet에서 SxS(side-by-side) 모듈 버전이 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c681-103">There is now side-by-side (SxS) module version support in Install-Module, Update-Module, and Publish-Module cmdlets that run in Windows PowerShell 5.0 or newer.</span></span>
-<span data-ttu-id="2c681-104">또한 게시할 버전을 지정하기 위해 Publish-Module cmdlet에 -RequiredVersion 매개 변수를 추가했습니다.</span><span class="sxs-lookup"><span data-stu-id="2c681-104">Also, we have added a -RequiredVersion parameter to the Publish-Module cmdlet to specify the version to be published.</span></span> <span data-ttu-id="2c681-105">이제 Path 매개 변수는 버전 폴더로 모듈 기본 경로를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="2c681-105">The Path parameter now supports the module base path with the version folder.</span></span>
+<span data-ttu-id="c8430-103">이제 Windows PowerShell 5.0 이상에서 실행되는 Install-Module, Update-Module 및 Publish-Module cmdlet에서 SxS(side-by-side) 모듈 버전이 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="c8430-103">There is now side-by-side (SxS) module version support in Install-Module, Update-Module, and Publish-Module cmdlets that run in Windows PowerShell 5.0 or newer.</span></span>
+<span data-ttu-id="c8430-104">또한 게시할 버전을 지정하기 위해 Publish-Module cmdlet에 -RequiredVersion 매개 변수를 추가했습니다.</span><span class="sxs-lookup"><span data-stu-id="c8430-104">Also, we have added a -RequiredVersion parameter to the Publish-Module cmdlet to specify the version to be published.</span></span> <span data-ttu-id="c8430-105">이제 Path 매개 변수는 버전 폴더로 모듈 기본 경로를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="c8430-105">The Path parameter now supports the module base path with the version folder.</span></span>
 
-<span data-ttu-id="2c681-106">**Install-Module 예제:**</span><span class="sxs-lookup"><span data-stu-id="2c681-106">**Install-Module examples:**</span></span>
+<span data-ttu-id="c8430-106">**Install-Module 예제:**</span><span class="sxs-lookup"><span data-stu-id="c8430-106">**Install-Module examples:**</span></span>
 ```powershell
 PS C:\windows\system32> Install-Module -Name ContosoServer -RequiredVersion 1.0 -Repository MSPSGallery
 
@@ -37,7 +37,7 @@ Version Name          Repository  Description
 2.0     ContosoServer MSPSGallery ContosoServer
 ```
 
-<span data-ttu-id="2c681-107">**종속성이 있는 모듈을 설치합니다.**</span><span class="sxs-lookup"><span data-stu-id="2c681-107">**Install a module with dependencies:**</span></span>
+<span data-ttu-id="c8430-107">**종속성이 있는 모듈을 설치합니다.**</span><span class="sxs-lookup"><span data-stu-id="c8430-107">**Install a module with dependencies:**</span></span>
 ```powershell
 PS C:\windows\system32> Get-InstalledModule
 PS C:\windows\system32> Find-Module -Repository GalleryINT -Name ModuleWithDependencies2 -IncludeDependencies
@@ -79,7 +79,7 @@ ModuleType Version Name                    ExportedCommands
 Manifest   2.0     ModuleWithDependencies2 {Get-NestedRequiredModule1, Get-NestedRequiredModule2, Get-NestedRequiredModule3, Get-NestedRequiredModule4...}
 ```
 
-<span data-ttu-id="2c681-108">**ModuleWithDependencies2 모듈 매니페스트 파일의 내용:**</span><span class="sxs-lookup"><span data-stu-id="2c681-108">**Contents of ModuleWithDependencies2 module manifest file:**</span></span>
+<span data-ttu-id="c8430-108">**ModuleWithDependencies2 모듈 매니페스트 파일의 내용:**</span><span class="sxs-lookup"><span data-stu-id="c8430-108">**Contents of ModuleWithDependencies2 module manifest file:**</span></span>
 ```powershell
 @{
 # Version number of this module.
@@ -149,7 +149,7 @@ PrivateData = @{
 }
 ```
 
-<span data-ttu-id="2c681-109">**Update-Module 예제:**</span><span class="sxs-lookup"><span data-stu-id="2c681-109">**Update-Module examples:**</span></span>
+<span data-ttu-id="c8430-109">**Update-Module 예제:**</span><span class="sxs-lookup"><span data-stu-id="c8430-109">**Update-Module examples:**</span></span>
 ```powershell
 PS C:\windows\system32> Update-Module -Name ContosoServer -RequiredVersion 1.5
 PS C:\windows\system32> Get-Module -ListAvailable -Name ContosoServer | Format-List Name,Version,ModuleBase
@@ -191,7 +191,7 @@ Version Name          Repository  Description
 2.8.1   ContosoServer MSPSGallery ContosoServer
 ```
 
-<span data-ttu-id="2c681-110">**Publish-Module 예제:**</span><span class="sxs-lookup"><span data-stu-id="2c681-110">**Publish-Module examples:**</span></span>
+<span data-ttu-id="c8430-110">**Publish-Module 예제:**</span><span class="sxs-lookup"><span data-stu-id="c8430-110">**Publish-Module examples:**</span></span>
 ```powershell
 ContosoServer module with different versions to be published.
 PS C:\windows\system32> Get-Module -Name ContosoServer -ListAvailable
