@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d10b68ca-256c-4c58-b503-73f7777b39ae
 caps.latest.revision: 15
 ms.openlocfilehash: 88de19be02de4933f892e02093403a82ccdd5788
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62075497"
 ---
 # <a name="tablerowentries-element-for-tablecontrol-format"></a>TableControl에 대한 TableRowEntries 요소(형식)
 

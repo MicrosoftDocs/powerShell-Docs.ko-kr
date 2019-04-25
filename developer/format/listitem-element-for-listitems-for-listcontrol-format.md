@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 0f96f4f5-8bd5-43ed-95e7-a7358115999a
 caps.latest.revision: 11
 ms.openlocfilehash: 1e0a1b2d20853650328b8cfd1513a08f7e167cd6
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065770"
 ---
 # <a name="listitem-element-for-listitems-for-listcontrol-format"></a>ListControl의 ListItems에 대한 ListItem 요소(형식)
 

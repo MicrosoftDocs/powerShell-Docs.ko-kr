@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f902fd4d-8f6e-4ef1-b07f-59983039a0d1
 caps.latest.revision: 10
 ms.openlocfilehash: a5822ef1ed3c9efb5957c20255783d515de8957a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068523"
 ---
 # <a name="cmdlet-parameter-sets"></a>Cmdlet 매개 변수 집합
 

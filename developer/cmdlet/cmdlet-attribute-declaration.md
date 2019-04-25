@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 1d323332-f773-4c0e-8a69-2aada765afb2
 caps.latest.revision: 12
 ms.openlocfilehash: 6887467ad5ccafe6edf8f03f531b4750133aa9e9
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58058031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068626"
 ---
 # <a name="cmdlet-attribute-declaration"></a>Cmdlet 특성 선언
 

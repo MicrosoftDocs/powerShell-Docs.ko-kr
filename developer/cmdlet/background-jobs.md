@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: a0ef5ac9-8254-4832-ace8-84b356c10f08
 caps.latest.revision: 13
 ms.openlocfilehash: ff4fe159eedc47fc69f4d783cd90d2b0e888c0d5
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068687"
 ---
 # <a name="background-jobs"></a>백그라운드 작업
 

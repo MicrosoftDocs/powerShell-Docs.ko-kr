@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 859a6e22-75b1-43d4-ba62-62c107803b37
 caps.latest.revision: 7
 ms.openlocfilehash: 98a3f61ff4fa2367f69357173d4e8e14288ff429
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083113"
 ---
 # <a name="writing-help-for-powershell-scripts-and-functions"></a>PowerShell 스크립트 및 함수에 대 한 도움말 작성
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f23ef405-0f1e-4607-b3f4-4017b7ead106
 caps.latest.revision: 7
 ms.openlocfilehash: a5098da55d0a63272a121b973cb05e26dc47e3e1
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62075769"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
 

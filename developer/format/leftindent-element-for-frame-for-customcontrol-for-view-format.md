@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: b0ef4483-74b2-409c-9d00-014d1ed64cb8
 caps.latest.revision: 6
 ms.openlocfilehash: ec6154c69c3c2de9675780922d907fbf3edb6a95
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58058745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065328"
 ---
 # <a name="leftindent-element-for-frame-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 Frame에 대한 LeftIndent 요소(형식)
 

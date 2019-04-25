@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 5ec7159e-e4e9-4b21-95df-94244432f679
 caps.latest.revision: 5
 ms.openlocfilehash: a663bd69be7825b1685f64ff8d3068bdd8ca3265
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083198"
 ---
 # <a name="placing-comment-based-help-in-functions"></a>함수에 설명 기반 도움말 배치
 
