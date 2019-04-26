@@ -9,63 +9,63 @@ ms.topic: article
 ms.assetid: b7bed607-369b-4507-87fa-f6011c2f1970
 caps.latest.revision: 9
 ms.openlocfilehash: 2ce146df05ef876d9c17f560628ebac2c39e57bf
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067266"
 ---
-# <a name="stopprocesssample01-sample"></a><span data-ttu-id="76fbf-102">StopProcessSample01 샘플</span><span class="sxs-lookup"><span data-stu-id="76fbf-102">StopProcessSample01 Sample</span></span>
+# <a name="stopprocesssample01-sample"></a><span data-ttu-id="b9565-102">StopProcessSample01 샘플</span><span class="sxs-lookup"><span data-stu-id="b9565-102">StopProcessSample01 Sample</span></span>
 
-<span data-ttu-id="76fbf-103">이 샘플에서는 프로세스를 중지 하려고 시도 하기 전에 사용자 로부터 피드백을 요청 하는 cmdlet을 작성 하는 방법 및 구현 하는 방법을 보여 줍니다.는 `PassThru` 나타내는 사용자가 cmdlet 개체를 반환 하는 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-103">This sample shows how to write a cmdlet that requests feedback from the user before it attempts to stop a process, and how to implement a `PassThru` parameter indicating that the user wants the cmdlet to return an object.</span></span> <span data-ttu-id="76fbf-104">이 cmdlet은 비슷합니다는 `Stop-Process` cmdlet은 Windows PowerShell 2.0에서 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-104">This cmdlet is similar to the `Stop-Process` cmdlet provided by Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="b9565-103">이 샘플에서는 프로세스를 중지 하려고 시도 하기 전에 사용자 로부터 피드백을 요청 하는 cmdlet을 작성 하는 방법 및 구현 하는 방법을 보여 줍니다.는 `PassThru` 나타내는 사용자가 cmdlet 개체를 반환 하는 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-103">This sample shows how to write a cmdlet that requests feedback from the user before it attempts to stop a process, and how to implement a `PassThru` parameter indicating that the user wants the cmdlet to return an object.</span></span> <span data-ttu-id="b9565-104">이 cmdlet은 비슷합니다는 `Stop-Process` cmdlet은 Windows PowerShell 2.0에서 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-104">This cmdlet is similar to the `Stop-Process` cmdlet provided by Windows PowerShell 2.0.</span></span>
 
-### <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="76fbf-105">Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-105">How to build the sample by using Visual Studio.</span></span>
+### <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="b9565-105">Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-105">How to build the sample by using Visual Studio.</span></span>
 
-1. <span data-ttu-id="76fbf-106">Windows PowerShell 2.0 SDK 설치를 사용 하 여 StopProcessSample01 폴더로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-106">With the Windows PowerShell 2.0 SDK installed, navigate to the StopProcessSample01 folder.</span></span> <span data-ttu-id="76fbf-107">기본 위치는 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample01 합니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample01.</span></span>
+1. <span data-ttu-id="b9565-106">Windows PowerShell 2.0 SDK 설치를 사용 하 여 StopProcessSample01 폴더로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-106">With the Windows PowerShell 2.0 SDK installed, navigate to the StopProcessSample01 folder.</span></span> <span data-ttu-id="b9565-107">기본 위치는 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample01 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample01.</span></span>
 
-2. <span data-ttu-id="76fbf-108">솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="76fbf-109">이 Microsoft Visual Studio에서 샘플 프로젝트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-109">This opens the sample project in Microsoft Visual Studio.</span></span>
+2. <span data-ttu-id="b9565-108">솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="b9565-109">이 Microsoft Visual Studio에서 샘플 프로젝트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-109">This opens the sample project in Microsoft Visual Studio.</span></span>
 
-3. <span data-ttu-id="76fbf-110">에 **빌드** 메뉴에서 **솔루션 빌드**합니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-110">In the **Build** menu, select **Build Solution**.</span></span>
+3. <span data-ttu-id="b9565-110">에 **빌드** 메뉴에서 **솔루션 빌드**합니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-110">In the **Build** menu, select **Build Solution**.</span></span>
 
-    <span data-ttu-id="76fbf-111">이 샘플에 대 한 라이브러리 기본 \bin 또는 \bin\debug 폴더에 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-111">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
+    <span data-ttu-id="b9565-111">이 샘플에 대 한 라이브러리 기본 \bin 또는 \bin\debug 폴더에 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-111">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
 
-### <a name="how-to-run-the-sample"></a><span data-ttu-id="76fbf-112">샘플을 실행 하는 방법</span><span class="sxs-lookup"><span data-stu-id="76fbf-112">How to run the sample</span></span>
+### <a name="how-to-run-the-sample"></a><span data-ttu-id="b9565-112">샘플을 실행 하는 방법</span><span class="sxs-lookup"><span data-stu-id="b9565-112">How to run the sample</span></span>
 
-1. <span data-ttu-id="76fbf-113">다음 모듈 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-113">Create the following module folder:</span></span>
+1. <span data-ttu-id="b9565-113">다음 모듈 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-113">Create the following module folder:</span></span>
 
     `[user]/documents/windowspowershell/modules/StopProcessSample01`
 
-2. <span data-ttu-id="76fbf-114">모듈 폴더에 샘플 어셈블리를 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-114">Copy the sample assembly to the module folder.</span></span>
+2. <span data-ttu-id="b9565-114">모듈 폴더에 샘플 어셈블리를 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-114">Copy the sample assembly to the module folder.</span></span>
 
-3. <span data-ttu-id="76fbf-115">Windows PowerShell을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-115">Start Windows PowerShell.</span></span>
+3. <span data-ttu-id="b9565-115">Windows PowerShell을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-115">Start Windows PowerShell.</span></span>
 
-4. <span data-ttu-id="76fbf-116">Windows PowerShell에는 어셈블리를 로드 하려면 다음 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-116">Run the following command to load the assembly into Windows PowerShell:</span></span>
+4. <span data-ttu-id="b9565-116">Windows PowerShell에는 어셈블리를 로드 하려면 다음 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-116">Run the following command to load the assembly into Windows PowerShell:</span></span>
 
     `import-module stopprossessample01`
 
-5. <span data-ttu-id="76fbf-117">Cmdlet을 실행 하려면 다음 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-117">Run the following command to run the cmdlet:</span></span>
+5. <span data-ttu-id="b9565-117">Cmdlet을 실행 하려면 다음 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-117">Run the following command to run the cmdlet:</span></span>
 
     `stop-proc`
 
-## <a name="requirements"></a><span data-ttu-id="76fbf-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="76fbf-118">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="b9565-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b9565-118">Requirements</span></span>
 
-<span data-ttu-id="76fbf-119">이 샘플 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-119">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="b9565-119">이 샘플 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-119">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="76fbf-120">시연</span><span class="sxs-lookup"><span data-stu-id="76fbf-120">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="b9565-120">데모</span><span class="sxs-lookup"><span data-stu-id="b9565-120">Demonstrates</span></span>
 
-<span data-ttu-id="76fbf-121">이 샘플에는 다음 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-121">This sample demonstrates the following.</span></span>
+<span data-ttu-id="b9565-121">이 샘플에는 다음 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-121">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="76fbf-122">Cmdlet 특성을 사용 하 여 cmdlet 클래스를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-122">Declaring a cmdlet class by using the Cmdlet attribute.</span></span>
+- <span data-ttu-id="b9565-122">Cmdlet 특성을 사용 하 여 cmdlet 클래스를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-122">Declaring a cmdlet class by using the Cmdlet attribute.</span></span>
 
-- <span data-ttu-id="76fbf-123">매개 변수 특성을 사용 하 여 cmdlet 매개 변수를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-123">Declaring a cmdlet parameters by using the Parameter attribute.</span></span>
+- <span data-ttu-id="b9565-123">매개 변수 특성을 사용 하 여 cmdlet 매개 변수를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-123">Declaring a cmdlet parameters by using the Parameter attribute.</span></span>
 
-- <span data-ttu-id="76fbf-124">확인을 요청 하는 ShouldProcess 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-124">Calling the ShouldProcess method to request confirmation.</span></span>
+- <span data-ttu-id="b9565-124">확인을 요청 하는 ShouldProcess 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-124">Calling the ShouldProcess method to request confirmation.</span></span>
 
-- <span data-ttu-id="76fbf-125">구현 된 `PassThru` 사용자가 cmdlet이 개체를 반환 하는 경우를 나타내는 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-125">Implementing a `PassThru` parameter that indicates if the user wants the cmdlet to return an object.</span></span> <span data-ttu-id="76fbf-126">기본적으로이 cmdlet은 개체를 파이프라인에 반환 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="76fbf-126">By default, this cmdlet does not return an object to the pipeline.</span></span>
+- <span data-ttu-id="b9565-125">구현 된 `PassThru` 사용자가 cmdlet이 개체를 반환 하는 경우를 나타내는 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-125">Implementing a `PassThru` parameter that indicates if the user wants the cmdlet to return an object.</span></span> <span data-ttu-id="b9565-126">기본적으로이 cmdlet은 개체를 파이프라인에 반환 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b9565-126">By default, this cmdlet does not return an object to the pipeline.</span></span>
 
-## <a name="example"></a><span data-ttu-id="76fbf-127">예제</span><span class="sxs-lookup"><span data-stu-id="76fbf-127">Example</span></span>
+## <a name="example"></a><span data-ttu-id="b9565-127">예제</span><span class="sxs-lookup"><span data-stu-id="b9565-127">Example</span></span>
 
-<span data-ttu-id="76fbf-128">이 샘플에서는 구현 하는 방법을 보여 줍니다.는 `PassThru` 사용자가 개체를 반환 하는 cmdlet을 호출 하 여 사용자에 게 피드백을 요청 하는 방법을 나타내는 매개 변수를 `ShouldProcess` 및 `ShouldContinue` 메서드.</span><span class="sxs-lookup"><span data-stu-id="76fbf-128">This sample shows how to implement a `PassThru` parameter that indicates that the user wants the cmdlet to return an object, and how to request user feedback by calls to the `ShouldProcess` and `ShouldContinue` methods.</span></span>
+<span data-ttu-id="b9565-128">이 샘플에서는 구현 하는 방법을 보여 줍니다.는 `PassThru` 사용자가 개체를 반환 하는 cmdlet을 호출 하 여 사용자에 게 피드백을 요청 하는 방법을 나타내는 매개 변수를 `ShouldProcess` 및 `ShouldContinue` 메서드.</span><span class="sxs-lookup"><span data-stu-id="b9565-128">This sample shows how to implement a `PassThru` parameter that indicates that the user wants the cmdlet to return an object, and how to request user feedback by calls to the `ShouldProcess` and `ShouldContinue` methods.</span></span>
 
 ```csharp
 using System;
@@ -263,6 +263,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="76fbf-129">참고 항목</span><span class="sxs-lookup"><span data-stu-id="76fbf-129">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9565-129">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b9565-129">See Also</span></span>
 
-<span data-ttu-id="76fbf-130">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="76fbf-130">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>
+<span data-ttu-id="b9565-130">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="b9565-130">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>

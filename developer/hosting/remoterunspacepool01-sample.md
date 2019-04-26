@@ -9,35 +9,35 @@ ms.topic: article
 ms.assetid: dffedd31-c10d-4e11-a9ee-4fdfe9a869e8
 caps.latest.revision: 8
 ms.openlocfilehash: 894c995474d4bf5b7fe11c1289c4500371c9dd43
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58058303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082756"
 ---
-# <a name="remoterunspacepool01-sample"></a><span data-ttu-id="6ecfc-102">RemoteRunspacePool01 샘플</span><span class="sxs-lookup"><span data-stu-id="6ecfc-102">RemoteRunspacePool01 Sample</span></span>
+# <a name="remoterunspacepool01-sample"></a><span data-ttu-id="470b6-102">RemoteRunspacePool01 샘플</span><span class="sxs-lookup"><span data-stu-id="470b6-102">RemoteRunspacePool01 Sample</span></span>
 
-<span data-ttu-id="6ecfc-103">이 샘플에서는 원격 runspace 풀을 생성 하는 방법 및이 풀을 사용 하 여 여러 명령을 동시에 실행 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6ecfc-103">This sample shows how to construct a remote runspace pool and how to run multiple commands concurrently by using this pool.</span></span>
+<span data-ttu-id="470b6-103">이 샘플에서는 원격 runspace 풀을 생성 하는 방법 및이 풀을 사용 하 여 여러 명령을 동시에 실행 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="470b6-103">This sample shows how to construct a remote runspace pool and how to run multiple commands concurrently by using this pool.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="6ecfc-104">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6ecfc-104">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="470b6-104">요구 사항</span><span class="sxs-lookup"><span data-stu-id="470b6-104">Requirements</span></span>
 
- <span data-ttu-id="6ecfc-105">이 샘플 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ecfc-105">This sample requires Windows PowerShell 2.0.</span></span>
+ <span data-ttu-id="470b6-105">이 샘플 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="470b6-105">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="6ecfc-106">시연</span><span class="sxs-lookup"><span data-stu-id="6ecfc-106">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="470b6-106">데모</span><span class="sxs-lookup"><span data-stu-id="470b6-106">Demonstrates</span></span>
 
-- <span data-ttu-id="6ecfc-107">만들기는 [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="6ecfc-107">Creating a [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
+- <span data-ttu-id="470b6-107">만들기는 [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="470b6-107">Creating a [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
 
-- <span data-ttu-id="6ecfc-108">설정 된 [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) 하 고 [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) 속성을 [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="6ecfc-108">Setting the [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) and [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) properties of the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
+- <span data-ttu-id="470b6-108">설정 된 [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) 하 고 [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) 속성을 [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="470b6-108">Setting the [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) and [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) properties of the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
 
-- <span data-ttu-id="6ecfc-109">사용 하는 원격 runspace가 만들기는 [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 원격 연결을 설정 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="6ecfc-109">Creating a remote runspace that uses the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object to establish the remote connection.</span></span>
+- <span data-ttu-id="470b6-109">사용 하는 원격 runspace가 만들기는 [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 원격 연결을 설정 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="470b6-109">Creating a remote runspace that uses the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object to establish the remote connection.</span></span>
 
-- <span data-ttu-id="6ecfc-110">실행 합니다 [Get-process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) 하 고 [Get-service](/powershell/module/microsoft.powershell.management/get-service) 원격 runspace 풀을 사용 하 여 동시에 cmdlet.</span><span class="sxs-lookup"><span data-stu-id="6ecfc-110">Running the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Get-Service](/powershell/module/microsoft.powershell.management/get-service) cmdlets concurrently by using the remote runspace pool.</span></span>
+- <span data-ttu-id="470b6-110">실행 합니다 [Get-process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) 하 고 [Get-service](/powershell/module/microsoft.powershell.management/get-service) 원격 runspace 풀을 사용 하 여 동시에 cmdlet.</span><span class="sxs-lookup"><span data-stu-id="470b6-110">Running the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Get-Service](/powershell/module/microsoft.powershell.management/get-service) cmdlets concurrently by using the remote runspace pool.</span></span>
 
-- <span data-ttu-id="6ecfc-111">원격 연결을 해제 하는 원격 runspace 풀을 닫는 중입니다.</span><span class="sxs-lookup"><span data-stu-id="6ecfc-111">Closing the remote runspace pool to release the remote connection.</span></span>
+- <span data-ttu-id="470b6-111">원격 연결을 해제 하는 원격 runspace 풀을 닫는 중입니다.</span><span class="sxs-lookup"><span data-stu-id="470b6-111">Closing the remote runspace pool to release the remote connection.</span></span>
 
-## <a name="example"></a><span data-ttu-id="6ecfc-112">예제</span><span class="sxs-lookup"><span data-stu-id="6ecfc-112">Example</span></span>
+## <a name="example"></a><span data-ttu-id="470b6-112">예제</span><span class="sxs-lookup"><span data-stu-id="470b6-112">Example</span></span>
 
- <span data-ttu-id="6ecfc-113">이 샘플에서는 원격 runspace 풀을 생성 하는 방법 및이 풀을 사용 하 여 여러 명령을 동시에 실행 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6ecfc-113">This sample shows how to construct a remote runspace pool and how to run multiple commands concurrently by using this pool.</span></span>
+ <span data-ttu-id="470b6-113">이 샘플에서는 원격 runspace 풀을 생성 하는 방법 및이 풀을 사용 하 여 여러 명령을 동시에 실행 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="470b6-113">This sample shows how to construct a remote runspace pool and how to run multiple commands concurrently by using this pool.</span></span>
 
 ```csharp
 namespace Samples
@@ -132,4 +132,4 @@ namespace Samples
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="6ecfc-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6ecfc-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="470b6-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="470b6-114">See Also</span></span>

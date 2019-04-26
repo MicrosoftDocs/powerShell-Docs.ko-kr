@@ -9,51 +9,51 @@ ms.topic: article
 ms.assetid: 27d0ee5e-2589-4530-92ef-c09996b80994
 caps.latest.revision: 10
 ms.openlocfilehash: c9963819f1842d1245735dabc487babaa566c160
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068133"
 ---
-# <a name="events01-sample"></a><span data-ttu-id="4c72b-102">Events01 샘플</span><span class="sxs-lookup"><span data-stu-id="4c72b-102">Events01 Sample</span></span>
+# <a name="events01-sample"></a><span data-ttu-id="b058d-102">Events01 샘플</span><span class="sxs-lookup"><span data-stu-id="b058d-102">Events01 Sample</span></span>
 
-<span data-ttu-id="4c72b-103">이 샘플에 의해 발생 되는 이벤트에 대 한 사용자 등록을 허용 하는 cmdlet를 만드는 방법을 보여 줍니다 [System.IO.Filesystemwatcher](/dotnet/api/System.IO.FileSystemWatcher)합니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-103">This sample shows how to create a cmdlet that allows the user to register for events that are raised by [System.IO.Filesystemwatcher](/dotnet/api/System.IO.FileSystemWatcher).</span></span> <span data-ttu-id="4c72b-104">사용자는이 cmdlet을 사용 하 여 특정 디렉터리에서 파일을 만들 때 실행할 작업을 등록할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-104">With this cmdlet, users can register an action to execute when a file is created under a specific directory.</span></span> <span data-ttu-id="4c72b-105">이 샘플에서 파생 된 [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 기본 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-105">This sample derives from the [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) base class.</span></span>
+<span data-ttu-id="b058d-103">이 샘플에 의해 발생 되는 이벤트에 대 한 사용자 등록을 허용 하는 cmdlet를 만드는 방법을 보여 줍니다 [System.IO.Filesystemwatcher](/dotnet/api/System.IO.FileSystemWatcher)합니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-103">This sample shows how to create a cmdlet that allows the user to register for events that are raised by [System.IO.Filesystemwatcher](/dotnet/api/System.IO.FileSystemWatcher).</span></span> <span data-ttu-id="b058d-104">사용자는이 cmdlet을 사용 하 여 특정 디렉터리에서 파일을 만들 때 실행할 작업을 등록할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-104">With this cmdlet, users can register an action to execute when a file is created under a specific directory.</span></span> <span data-ttu-id="b058d-105">이 샘플에서 파생 된 [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 기본 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-105">This sample derives from the [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) base class.</span></span>
 
-## <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="4c72b-106">Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-106">How to build the sample by using Visual Studio.</span></span>
+## <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="b058d-106">Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-106">How to build the sample by using Visual Studio.</span></span>
 
-1. <span data-ttu-id="4c72b-107">Windows PowerShell 2.0 SDK 설치를 사용 하 여 Events01 폴더로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-107">With the Windows PowerShell 2.0 SDK installed, navigate to the Events01 folder.</span></span> <span data-ttu-id="4c72b-108">기본 위치는 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-108">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01.</span></span>
+1. <span data-ttu-id="b058d-107">Windows PowerShell 2.0 SDK 설치를 사용 하 여 Events01 폴더로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-107">With the Windows PowerShell 2.0 SDK installed, navigate to the Events01 folder.</span></span> <span data-ttu-id="b058d-108">기본 위치는 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01 합니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-108">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01.</span></span>
 
-2. <span data-ttu-id="4c72b-109">솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-109">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="4c72b-110">이 Microsoft Visual Studio에서 샘플 프로젝트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-110">This opens the sample project in Microsoft Visual Studio.</span></span>
+2. <span data-ttu-id="b058d-109">솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-109">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="b058d-110">이 Microsoft Visual Studio에서 샘플 프로젝트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-110">This opens the sample project in Microsoft Visual Studio.</span></span>
 
-3. <span data-ttu-id="4c72b-111">에 **빌드** 메뉴에서 **솔루션 빌드**합니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-111">In the **Build** menu, select **Build Solution**.</span></span>
+3. <span data-ttu-id="b058d-111">에 **빌드** 메뉴에서 **솔루션 빌드**합니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-111">In the **Build** menu, select **Build Solution**.</span></span>
 
-    <span data-ttu-id="4c72b-112">이 샘플에 대 한 라이브러리 기본 \bin 또는 \bin\debug 폴더에 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-112">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
+    <span data-ttu-id="b058d-112">이 샘플에 대 한 라이브러리 기본 \bin 또는 \bin\debug 폴더에 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-112">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
 
-### <a name="how-to-run-the-sample"></a><span data-ttu-id="4c72b-113">샘플을 실행 하는 방법</span><span class="sxs-lookup"><span data-stu-id="4c72b-113">How to run the sample</span></span>
+### <a name="how-to-run-the-sample"></a><span data-ttu-id="b058d-113">샘플을 실행 하는 방법</span><span class="sxs-lookup"><span data-stu-id="b058d-113">How to run the sample</span></span>
 
-1. <span data-ttu-id="4c72b-114">다음 모듈 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-114">Create the following module folder:</span></span>
+1. <span data-ttu-id="b058d-114">다음 모듈 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-114">Create the following module folder:</span></span>
 
     `[user]/documents/windowspowershell/modules/events01`
 
-2. <span data-ttu-id="4c72b-115">모듈 폴더에 샘플에 대 한 라이브러리 파일을 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-115">Copy the library file for the sample to the module folder.</span></span>
+2. <span data-ttu-id="b058d-115">모듈 폴더에 샘플에 대 한 라이브러리 파일을 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-115">Copy the library file for the sample to the module folder.</span></span>
 
-3. <span data-ttu-id="4c72b-116">Windows PowerShell을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-116">Start Windows PowerShell.</span></span>
+3. <span data-ttu-id="b058d-116">Windows PowerShell을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-116">Start Windows PowerShell.</span></span>
 
-4. <span data-ttu-id="4c72b-117">Windows PowerShell cmdlet을 로드 하려면 다음 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-117">Run the following command to load the cmdlet into Windows PowerShell:</span></span>
+4. <span data-ttu-id="b058d-117">Windows PowerShell cmdlet을 로드 하려면 다음 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-117">Run the following command to load the cmdlet into Windows PowerShell:</span></span>
 
     ```powershell
     import-module events01
     ```
 
-5. <span data-ttu-id="4c72b-118">TEMP 디렉터리에서 파일을 만들 때 메시지를 작성 하는 액션을 등록 하려면 등록 FileSystemEvent cmdlet을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-118">Use the Register-FileSystemEvent cmdlet to register an action that will write a message when a file is created under the TEMP directory.</span></span>
+5. <span data-ttu-id="b058d-118">TEMP 디렉터리에서 파일을 만들 때 메시지를 작성 하는 액션을 등록 하려면 등록 FileSystemEvent cmdlet을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-118">Use the Register-FileSystemEvent cmdlet to register an action that will write a message when a file is created under the TEMP directory.</span></span>
 
     ```powershell
     Register-FileSystemEvent $env:temp Created -filter "*.txt" -action { Write-Host "A file was created in the TEMP directory" }
     ```
 
-6. <span data-ttu-id="4c72b-119">TEMP 디렉터리에서 파일을 만들고 작업을 실행 됩니다 (메시지 표시 됨).</span><span class="sxs-lookup"><span data-stu-id="4c72b-119">Create a file under the TEMP directory and note that the action is executed (the message is displayed).</span></span>
+6. <span data-ttu-id="b058d-119">TEMP 디렉터리에서 파일을 만들고 작업을 실행 됩니다 (메시지 표시 됨).</span><span class="sxs-lookup"><span data-stu-id="b058d-119">Create a file under the TEMP directory and note that the action is executed (the message is displayed).</span></span>
 
-<span data-ttu-id="4c72b-120">이것이 이러한 단계에 따라 발생 하는 샘플 출력입니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-120">This is a sample output that results by following these steps.</span></span>
+<span data-ttu-id="b058d-120">이것이 이러한 단계에 따라 발생 하는 샘플 출력입니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-120">This is a sample output that results by following these steps.</span></span>
 
 ```output
 Id              Name            State      HasMoreData     Location             Command
@@ -70,19 +70,19 @@ Set-Content $env:temp\test.txt "This is a test file"
 A file was created in the TEMP directory
 ```
 
-## <a name="requirements"></a><span data-ttu-id="4c72b-121">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4c72b-121">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="b058d-121">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b058d-121">Requirements</span></span>
 
-<span data-ttu-id="4c72b-122">이 샘플 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-122">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="b058d-122">이 샘플 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-122">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="4c72b-123">시연</span><span class="sxs-lookup"><span data-stu-id="4c72b-123">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="b058d-123">데모</span><span class="sxs-lookup"><span data-stu-id="b058d-123">Demonstrates</span></span>
 
-<span data-ttu-id="4c72b-124">이 샘플에는 다음 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-124">This sample demonstrates the following.</span></span>
+<span data-ttu-id="b058d-124">이 샘플에는 다음 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-124">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="4c72b-125">이벤트 등록 용 cmdlet을 작성 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-125">How to write a cmdlet for event registration.</span></span> <span data-ttu-id="4c72b-126">Cmdlet에서 파생 되는 [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 클래스 등록-일반 매개 변수에 대 한 지원을 제공 하는 \* 이벤트 cmdlet.</span><span class="sxs-lookup"><span data-stu-id="4c72b-126">The cmdlet derives from the [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) class, which provides support for parameters common to the Register-\*Event cmdlets.</span></span> <span data-ttu-id="4c72b-127">파생 되는 Cmdlet [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 특정 매개 변수를 정의 하 고 재정의에 필요 합니다 `GetSourceObject` 및 `GetSourceObjectEventName` 추상 메서드.</span><span class="sxs-lookup"><span data-stu-id="4c72b-127">Cmdlets that are derived from [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) need only to define their particular parameters and override the `GetSourceObject` and `GetSourceObjectEventName` abstract methods.</span></span>
+- <span data-ttu-id="b058d-125">이벤트 등록 용 cmdlet을 작성 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-125">How to write a cmdlet for event registration.</span></span> <span data-ttu-id="b058d-126">Cmdlet에서 파생 되는 [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 클래스 등록-일반 매개 변수에 대 한 지원을 제공 하는 \* 이벤트 cmdlet.</span><span class="sxs-lookup"><span data-stu-id="b058d-126">The cmdlet derives from the [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) class, which provides support for parameters common to the Register-\*Event cmdlets.</span></span> <span data-ttu-id="b058d-127">파생 되는 Cmdlet [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 특정 매개 변수를 정의 하 고 재정의에 필요 합니다 `GetSourceObject` 및 `GetSourceObjectEventName` 추상 메서드.</span><span class="sxs-lookup"><span data-stu-id="b058d-127">Cmdlets that are derived from [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) need only to define their particular parameters and override the `GetSourceObject` and `GetSourceObjectEventName` abstract methods.</span></span>
 
-## <a name="example"></a><span data-ttu-id="4c72b-128">예제</span><span class="sxs-lookup"><span data-stu-id="4c72b-128">Example</span></span>
+## <a name="example"></a><span data-ttu-id="b058d-128">예제</span><span class="sxs-lookup"><span data-stu-id="b058d-128">Example</span></span>
 
-<span data-ttu-id="4c72b-129">이 샘플에서 발생 한 이벤트에 대 한 등록 하는 방법을 보여 줍니다 [System.IO.FileSystemWatcher](https://msdn.microsoft.com/en-us/library/system.io.filesystemwatcher\(v=vs.110\).aspx)합니다.</span><span class="sxs-lookup"><span data-stu-id="4c72b-129">This sample shows how to register for events raised by [System.IO.FileSystemWatcher](https://msdn.microsoft.com/en-us/library/system.io.filesystemwatcher\(v=vs.110\).aspx).</span></span>
+<span data-ttu-id="b058d-129">이 샘플에서 발생 한 이벤트에 대 한 등록 하는 방법을 보여 줍니다 [System.IO.FileSystemWatcher](https://msdn.microsoft.com/en-us/library/system.io.filesystemwatcher\(v=vs.110\).aspx)합니다.</span><span class="sxs-lookup"><span data-stu-id="b058d-129">This sample shows how to register for events raised by [System.IO.FileSystemWatcher](https://msdn.microsoft.com/en-us/library/system.io.filesystemwatcher\(v=vs.110\).aspx).</span></span>
 
 ```csharp
 namespace Sample
@@ -181,6 +181,6 @@ namespace Sample
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="4c72b-130">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4c72b-130">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b058d-130">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b058d-130">See Also</span></span>
 
-<span data-ttu-id="4c72b-131">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="4c72b-131">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>
+<span data-ttu-id="b058d-131">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="b058d-131">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>

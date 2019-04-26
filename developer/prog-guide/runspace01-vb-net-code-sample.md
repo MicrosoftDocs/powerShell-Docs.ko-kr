@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: 12ee5382-95ba-41c7-8291-7f69a6f63514
 caps.latest.revision: 7
 ms.openlocfilehash: c45e802605bf0b4fd84a8847787bcc937b7f417b
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081444"
 ---
-# <a name="runspace01-vbnet-code-sample"></a><span data-ttu-id="9060a-102">Runspace01(VB.NET) 코드 샘플</span><span class="sxs-lookup"><span data-stu-id="9060a-102">Runspace01 (VB.NET) Code Sample</span></span>
+# <a name="runspace01-vbnet-code-sample"></a><span data-ttu-id="af0cd-102">Runspace01(VB.NET) 코드 샘플</span><span class="sxs-lookup"><span data-stu-id="af0cd-102">Runspace01 (VB.NET) Code Sample</span></span>
 
-<span data-ttu-id="9060a-103">에 설명 된 runspace에 대 한 코드 예제는 다음과 같습니다 [콘솔 응용 프로그램을 실행 지정 명령 만들기](http://msdn.microsoft.com/en-us/793a6570-a072-4799-840b-172f28ce620e)합니다.</span><span class="sxs-lookup"><span data-stu-id="9060a-103">Here are the code samples for the runspace described in [Creating a Console Application That Runs a Specified Command](http://msdn.microsoft.com/en-us/793a6570-a072-4799-840b-172f28ce620e).</span></span> <span data-ttu-id="9060a-104">이렇게 하려면 응용 프로그램 runspace를 호출 하 고 명령을 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="9060a-104">To do this, the application invokes a runspace, and then invokes a command.</span></span> <span data-ttu-id="9060a-105">(이 응용 프로그램에서 runspace 구성 정보를 지정 하지도 않습니다이 명시적으로 파이프라인 만들기는 note). 호출 되는 명령입니다는 `Get-Process` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="9060a-105">(Note that this application does not specify runspace configuration information, nor does it explicitly create a pipeline.) The command that is invoked is the `Get-Process` cmdlet.</span></span>
+<span data-ttu-id="af0cd-103">에 설명 된 runspace에 대 한 코드 예제는 다음과 같습니다 [콘솔 응용 프로그램을 실행 지정 명령 만들기](http://msdn.microsoft.com/en-us/793a6570-a072-4799-840b-172f28ce620e)합니다.</span><span class="sxs-lookup"><span data-stu-id="af0cd-103">Here are the code samples for the runspace described in [Creating a Console Application That Runs a Specified Command](http://msdn.microsoft.com/en-us/793a6570-a072-4799-840b-172f28ce620e).</span></span> <span data-ttu-id="af0cd-104">이렇게 하려면 응용 프로그램 runspace를 호출 하 고 명령을 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="af0cd-104">To do this, the application invokes a runspace, and then invokes a command.</span></span> <span data-ttu-id="af0cd-105">(이 응용 프로그램에서 runspace 구성 정보를 지정 하지도 않습니다이 명시적으로 파이프라인 만들기는 note). 호출 되는 명령입니다는 `Get-Process` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="af0cd-105">(Note that this application does not specify runspace configuration information, nor does it explicitly create a pipeline.) The command that is invoked is the `Get-Process` cmdlet.</span></span>
 
-## <a name="code-sample"></a><span data-ttu-id="9060a-106">코드 예제</span><span class="sxs-lookup"><span data-stu-id="9060a-106">Code Sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="af0cd-106">코드 예제</span><span class="sxs-lookup"><span data-stu-id="af0cd-106">Code Sample</span></span>
 
 ```vb
 Imports System
@@ -71,6 +71,6 @@ End Namespace
 
 <!-- TODO!!!: [!code-csharp[Runspace01.vb](../../powershell-sdk-samples/SDK-2.0/vb/Runspace01/Runspace01.vb#L09-L53 "Runspace01.vb")] -->
 
-## <a name="see-also"></a><span data-ttu-id="9060a-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9060a-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af0cd-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="af0cd-107">See Also</span></span>
 
-[<span data-ttu-id="9060a-108">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="9060a-108">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="af0cd-108">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="af0cd-108">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)

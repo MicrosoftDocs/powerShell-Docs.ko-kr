@@ -9,19 +9,19 @@ ms.topic: article
 ms.assetid: 0c0509cc-5a50-49ad-a74f-5527023d0270
 caps.latest.revision: 10
 ms.openlocfilehash: 80e3e27bcf72b078c192525a843a3b3afb306529
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067918"
 ---
-# <a name="how-to-declare-cmdlet-parameters"></a><span data-ttu-id="b7526-102">Cmdlet 매개 변수를 선언하는 방법</span><span class="sxs-lookup"><span data-stu-id="b7526-102">How to Declare Cmdlet Parameters</span></span>
+# <a name="how-to-declare-cmdlet-parameters"></a><span data-ttu-id="d97af-102">Cmdlet 매개 변수를 선언하는 방법</span><span class="sxs-lookup"><span data-stu-id="d97af-102">How to Declare Cmdlet Parameters</span></span>
 
-<span data-ttu-id="b7526-103">이러한 예제에는 명명 된, 위치, 필수 (선택 사항)를 선언 하 고 매개 변수를 전환 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-103">These examples show how to declare named, positional, required, optional, and switch parameters.</span></span> <span data-ttu-id="b7526-104">이러한 예제에는 매개 변수 별칭을 정의 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-104">These examples also show how to define a parameter alias.</span></span>
+<span data-ttu-id="d97af-103">이러한 예제에는 명명 된, 위치, 필수 (선택 사항)를 선언 하 고 매개 변수를 전환 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-103">These examples show how to declare named, positional, required, optional, and switch parameters.</span></span> <span data-ttu-id="d97af-104">이러한 예제에는 매개 변수 별칭을 정의 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-104">These examples also show how to define a parameter alias.</span></span>
 
-## <a name="how-to-declare-a-named-parameter"></a><span data-ttu-id="b7526-105">명명된 된 매개 변수를 선언 하는 방법</span><span class="sxs-lookup"><span data-stu-id="b7526-105">How to Declare a Named Parameter</span></span>
+## <a name="how-to-declare-a-named-parameter"></a><span data-ttu-id="d97af-105">명명된 된 매개 변수를 선언 하는 방법</span><span class="sxs-lookup"><span data-stu-id="d97af-105">How to Declare a Named Parameter</span></span>
 
-- <span data-ttu-id="b7526-106">다음 코드에 표시 된 대로 공용 속성을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-106">Define a public property as shown in the following code.</span></span> <span data-ttu-id="b7526-107">매개 변수 특성을 추가한 경우 생략 된 `Position` 특성에서 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-107">When you add the Parameter attribute, omit the `Position` keyword from the attribute.</span></span>
+- <span data-ttu-id="d97af-106">다음 코드에 표시 된 대로 공용 속성을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-106">Define a public property as shown in the following code.</span></span> <span data-ttu-id="d97af-107">매개 변수 특성을 추가한 경우 생략 된 `Position` 특성에서 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-107">When you add the Parameter attribute, omit the `Position` keyword from the attribute.</span></span>
 
     ```csharp
     [Parameter()]
@@ -33,11 +33,11 @@ ms.locfileid: "58059170"
     private string userName;
     ```
 
-<span data-ttu-id="b7526-108">매개 변수 특성에 대 한 자세한 내용은 참조 하세요. [매개 변수 특성 선언](./parameter-attribute-declaration.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-108">For more information about the Parameter attribute, see [Parameter Attribute Declaration](./parameter-attribute-declaration.md).</span></span>
+<span data-ttu-id="d97af-108">매개 변수 특성에 대 한 자세한 내용은 참조 하세요. [매개 변수 특성 선언](./parameter-attribute-declaration.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-108">For more information about the Parameter attribute, see [Parameter Attribute Declaration](./parameter-attribute-declaration.md).</span></span>
 
-## <a name="how-to-declare-a-positional-parameter"></a><span data-ttu-id="b7526-109">위치 매개 변수를 선언 하는 방법</span><span class="sxs-lookup"><span data-stu-id="b7526-109">How to Declare a Positional Parameter</span></span>
+## <a name="how-to-declare-a-positional-parameter"></a><span data-ttu-id="d97af-109">위치 매개 변수를 선언 하는 방법</span><span class="sxs-lookup"><span data-stu-id="d97af-109">How to Declare a Positional Parameter</span></span>
 
-- <span data-ttu-id="b7526-110">다음 코드에 표시 된 대로 공용 속성을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-110">Define a public property as shown in the following code.</span></span> <span data-ttu-id="b7526-111">매개 변수 특성을 추가할 때 설정는 `Position` 키워드 인수 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-111">When you add the Parameter attribute, set the `Position` keyword to the argument position.</span></span> <span data-ttu-id="b7526-112">값 0은 첫 번째 위치를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-112">A value of 0 indicates the first position.</span></span>
+- <span data-ttu-id="d97af-110">다음 코드에 표시 된 대로 공용 속성을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-110">Define a public property as shown in the following code.</span></span> <span data-ttu-id="d97af-111">매개 변수 특성을 추가할 때 설정는 `Position` 키워드 인수 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-111">When you add the Parameter attribute, set the `Position` keyword to the argument position.</span></span> <span data-ttu-id="d97af-112">값 0은 첫 번째 위치를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-112">A value of 0 indicates the first position.</span></span>
 
     ```csharp
     [Parameter(Position = 0)]
@@ -49,11 +49,11 @@ ms.locfileid: "58059170"
     private string userName;
     ```
 
-<span data-ttu-id="b7526-113">매개 변수 특성에 대 한 자세한 내용은 참조 하세요. [매개 변수 특성 선언](./parameter-attribute-declaration.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-113">For more information about the Parameter attribute, see [Parameter Attribute Declaration](./parameter-attribute-declaration.md).</span></span>
+<span data-ttu-id="d97af-113">매개 변수 특성에 대 한 자세한 내용은 참조 하세요. [매개 변수 특성 선언](./parameter-attribute-declaration.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-113">For more information about the Parameter attribute, see [Parameter Attribute Declaration](./parameter-attribute-declaration.md).</span></span>
 
-## <a name="how-to-declare-a-mandatory-parameter"></a><span data-ttu-id="b7526-114">필수 매개 변수를 선언 하는 방법</span><span class="sxs-lookup"><span data-stu-id="b7526-114">How to Declare a Mandatory Parameter</span></span>
+## <a name="how-to-declare-a-mandatory-parameter"></a><span data-ttu-id="d97af-114">필수 매개 변수를 선언 하는 방법</span><span class="sxs-lookup"><span data-stu-id="d97af-114">How to Declare a Mandatory Parameter</span></span>
 
-- <span data-ttu-id="b7526-115">다음 코드에 표시 된 대로 공용 속성을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-115">Define a public property as shown in the following code.</span></span> <span data-ttu-id="b7526-116">매개 변수 특성을 추가할 때 설정 된 `Mandatory` 키워드를 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-116">When you add the Parameter attribute, set the `Mandatory` keyword to `true`.</span></span>
+- <span data-ttu-id="d97af-115">다음 코드에 표시 된 대로 공용 속성을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-115">Define a public property as shown in the following code.</span></span> <span data-ttu-id="d97af-116">매개 변수 특성을 추가할 때 설정 된 `Mandatory` 키워드를 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-116">When you add the Parameter attribute, set the `Mandatory` keyword to `true`.</span></span>
 
     ```csharp
     [Parameter(Position = 0, Mandatory = true)]
@@ -65,11 +65,11 @@ ms.locfileid: "58059170"
     private string userName;
     ```
 
-<span data-ttu-id="b7526-117">매개 변수 특성에 대 한 자세한 내용은 참조 하세요. [매개 변수 특성 선언](./parameter-attribute-declaration.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-117">For more information about the Parameter attribute, see [Parameter Attribute Declaration](./parameter-attribute-declaration.md).</span></span>
+<span data-ttu-id="d97af-117">매개 변수 특성에 대 한 자세한 내용은 참조 하세요. [매개 변수 특성 선언](./parameter-attribute-declaration.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-117">For more information about the Parameter attribute, see [Parameter Attribute Declaration](./parameter-attribute-declaration.md).</span></span>
 
-## <a name="how-to-declare-an-optional-parameter"></a><span data-ttu-id="b7526-118">선택적 매개 변수를 선언 하는 방법</span><span class="sxs-lookup"><span data-stu-id="b7526-118">How to Declare an Optional Parameter</span></span>
+## <a name="how-to-declare-an-optional-parameter"></a><span data-ttu-id="d97af-118">선택적 매개 변수를 선언 하는 방법</span><span class="sxs-lookup"><span data-stu-id="d97af-118">How to Declare an Optional Parameter</span></span>
 
-- <span data-ttu-id="b7526-119">다음 코드에 표시 된 대로 공용 속성을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-119">Define a public property as shown in the following code.</span></span> <span data-ttu-id="b7526-120">매개 변수 특성을 추가한 경우 생략 된 `Mandatory` 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-120">When you add the Parameter attribute, omit the `Mandatory` keyword.</span></span>
+- <span data-ttu-id="d97af-119">다음 코드에 표시 된 대로 공용 속성을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-119">Define a public property as shown in the following code.</span></span> <span data-ttu-id="d97af-120">매개 변수 특성을 추가한 경우 생략 된 `Mandatory` 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-120">When you add the Parameter attribute, omit the `Mandatory` keyword.</span></span>
 
     ```csharp
     [Parameter(Position = 0)]
@@ -81,9 +81,9 @@ ms.locfileid: "58059170"
     private string userName;
     ```
 
-## <a name="how-to-declare-a-switch-parameter"></a><span data-ttu-id="b7526-121">스위치 매개 변수를 선언 하는 방법</span><span class="sxs-lookup"><span data-stu-id="b7526-121">How to Declare a Switch Parameter</span></span>
+## <a name="how-to-declare-a-switch-parameter"></a><span data-ttu-id="d97af-121">스위치 매개 변수를 선언 하는 방법</span><span class="sxs-lookup"><span data-stu-id="d97af-121">How to Declare a Switch Parameter</span></span>
 
-- <span data-ttu-id="b7526-122">형식으로 공용 속성을 정의 [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)과 다음 매개 변수 특성을 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-122">Define a public property as type [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter), and then declare the Parameter attribute.</span></span>
+- <span data-ttu-id="d97af-122">형식으로 공용 속성을 정의 [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)과 다음 매개 변수 특성을 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-122">Define a public property as type [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter), and then declare the Parameter attribute.</span></span>
 
     ```csharp
     [Parameter(Position = 1)]
@@ -95,11 +95,11 @@ ms.locfileid: "58059170"
     private bool goodbye;
     ```
 
-<span data-ttu-id="b7526-123">매개 변수 특성에 대 한 자세한 내용은 참조 하세요. [매개 변수 특성 선언](./parameter-attribute-declaration.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-123">For more information about the Parameter attribute, see [Parameter Attribute Declaration](./parameter-attribute-declaration.md).</span></span>
+<span data-ttu-id="d97af-123">매개 변수 특성에 대 한 자세한 내용은 참조 하세요. [매개 변수 특성 선언](./parameter-attribute-declaration.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-123">For more information about the Parameter attribute, see [Parameter Attribute Declaration](./parameter-attribute-declaration.md).</span></span>
 
-## <a name="how-to-declare-a-parameter-with-aliases"></a><span data-ttu-id="b7526-124">별칭을 사용 하 여 매개 변수를 선언 하는 방법</span><span class="sxs-lookup"><span data-stu-id="b7526-124">How to Declare a Parameter with Aliases</span></span>
+## <a name="how-to-declare-a-parameter-with-aliases"></a><span data-ttu-id="d97af-124">별칭을 사용 하 여 매개 변수를 선언 하는 방법</span><span class="sxs-lookup"><span data-stu-id="d97af-124">How to Declare a Parameter with Aliases</span></span>
 
-- <span data-ttu-id="b7526-125">다음 코드에 표시 된 대로 공용 속성을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-125">Define a public property as shown in the following code.</span></span> <span data-ttu-id="b7526-126">매개 변수의 별칭을 나열 하는 별칭 특성을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-126">Add an Alias attribute that lists the aliases for the parameter.</span></span> <span data-ttu-id="b7526-127">이 예제에서는 세 가지 별칭은 동일한 매개 변수에 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-127">In this example, three aliases are defined for the same parameter.</span></span> <span data-ttu-id="b7526-128">첫 번째 별칭에는 바로 가기를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-128">The first alias provides a shortcut.</span></span> <span data-ttu-id="b7526-129">두 번째 및 세 번째 별칭에는 다양 한 시나리오에 사용할 수 있는 이름을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-129">The second and third aliases provide names you can use for different scenarios.</span></span>
+- <span data-ttu-id="d97af-125">다음 코드에 표시 된 대로 공용 속성을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-125">Define a public property as shown in the following code.</span></span> <span data-ttu-id="d97af-126">매개 변수의 별칭을 나열 하는 별칭 특성을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-126">Add an Alias attribute that lists the aliases for the parameter.</span></span> <span data-ttu-id="d97af-127">이 예제에서는 세 가지 별칭은 동일한 매개 변수에 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-127">In this example, three aliases are defined for the same parameter.</span></span> <span data-ttu-id="d97af-128">첫 번째 별칭에는 바로 가기를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-128">The first alias provides a shortcut.</span></span> <span data-ttu-id="d97af-129">두 번째 및 세 번째 별칭에는 다양 한 시나리오에 사용할 수 있는 이름을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-129">The second and third aliases provide names you can use for different scenarios.</span></span>
 
     ```csharp
     [Alias("UN","Writer","Editor")]
@@ -112,14 +112,14 @@ ms.locfileid: "58059170"
     private string userName;
     ```
 
-<span data-ttu-id="b7526-130">Alias 특성에 대 한 자세한 내용은 참조 하세요. [별칭 특성 선언은](./alias-attribute-declaration.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b7526-130">For more information about the Alias attribute, see [Alias Attribute Declaration](./alias-attribute-declaration.md).</span></span>
+<span data-ttu-id="d97af-130">Alias 특성에 대 한 자세한 내용은 참조 하세요. [별칭 특성 선언은](./alias-attribute-declaration.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d97af-130">For more information about the Alias attribute, see [Alias Attribute Declaration](./alias-attribute-declaration.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="b7526-131">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b7526-131">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d97af-131">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d97af-131">See Also</span></span>
 
-[<span data-ttu-id="b7526-132">System.Management.Automation.SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="b7526-132">System.Management.Automation.SwitchParameter</span></span>](/dotnet/api/System.Management.Automation.SwitchParameter)
+[<span data-ttu-id="d97af-132">System.Management.Automation.SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="d97af-132">System.Management.Automation.SwitchParameter</span></span>](/dotnet/api/System.Management.Automation.SwitchParameter)
 
-[<span data-ttu-id="b7526-133">매개 변수 특성 선언</span><span class="sxs-lookup"><span data-stu-id="b7526-133">Parameter Attribute Declaration</span></span>](./parameter-attribute-declaration.md)
+[<span data-ttu-id="d97af-133">매개 변수 특성 선언</span><span class="sxs-lookup"><span data-stu-id="d97af-133">Parameter Attribute Declaration</span></span>](./parameter-attribute-declaration.md)
 
-[<span data-ttu-id="b7526-134">별칭 특성 선언</span><span class="sxs-lookup"><span data-stu-id="b7526-134">Alias Attribute Declaration</span></span>](./alias-attribute-declaration.md)
+[<span data-ttu-id="d97af-134">별칭 특성 선언</span><span class="sxs-lookup"><span data-stu-id="d97af-134">Alias Attribute Declaration</span></span>](./alias-attribute-declaration.md)
 
-<span data-ttu-id="b7526-135">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="b7526-135">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>
+<span data-ttu-id="d97af-135">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="d97af-135">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>
