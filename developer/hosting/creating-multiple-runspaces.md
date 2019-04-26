@@ -9,19 +9,19 @@ ms.topic: article
 ms.assetid: 42c40c7f-1ee7-4021-950c-2e013c8f2a4a
 caps.latest.revision: 4
 ms.openlocfilehash: 606a2ee4e70d303bf1b1d69b7523eb8649f9be0c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082960"
 ---
-# <a name="creating-multiple-runspaces"></a><span data-ttu-id="fe4f2-102">여러 runspace 만들기</span><span class="sxs-lookup"><span data-stu-id="fe4f2-102">Creating multiple runspaces</span></span>
+# <a name="creating-multiple-runspaces"></a><span data-ttu-id="50559-102">여러 runspace 만들기</span><span class="sxs-lookup"><span data-stu-id="50559-102">Creating multiple runspaces</span></span>
 
-<span data-ttu-id="fe4f2-103">많은 수의 runspace 만드는 경우 runspace 풀을 만드는 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="fe4f2-103">If you create a large number of runspaces, you might consider creating a runspace pool.</span></span> <span data-ttu-id="fe4f2-104">사용 하는 [System.Management.Automation.Runspaces.Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) 동일한 특성을 사용 하 여 많은 수의 개별 runspace 만들기 보다는 개체는 성능을 개선할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fe4f2-104">Using a [System.Management.Automation.Runspaces.Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) object, rather than creating a large number of individual runspaces with the same characteristics, can improve performance.</span></span>
+<span data-ttu-id="50559-103">많은 수의 runspace 만드는 경우 runspace 풀을 만드는 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="50559-103">If you create a large number of runspaces, you might consider creating a runspace pool.</span></span> <span data-ttu-id="50559-104">사용 하는 [System.Management.Automation.Runspaces.Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) 동일한 특성을 사용 하 여 많은 수의 개별 runspace 만들기 보다는 개체는 성능을 개선할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="50559-104">Using a [System.Management.Automation.Runspaces.Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) object, rather than creating a large number of individual runspaces with the same characteristics, can improve performance.</span></span>
 
-## <a name="creating-and-using-a-runspace-pool"></a><span data-ttu-id="fe4f2-105">만들고 runspace 풀을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="fe4f2-105">Creating and using a runspace pool.</span></span>
+## <a name="creating-and-using-a-runspace-pool"></a><span data-ttu-id="50559-105">만들고 runspace 풀을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="50559-105">Creating and using a runspace pool.</span></span>
 
- <span data-ttu-id="fe4f2-106">다음 예제에서는 runspace 풀을 만드는 방법 및 runspace 풀의 비동기적으로 명령을 실행 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fe4f2-106">The following example shows how to create a runspace pool and how to run a command asynchronously in a runspace of the pool.</span></span>
+ <span data-ttu-id="50559-106">다음 예제에서는 runspace 풀을 만드는 방법 및 runspace 풀의 비동기적으로 명령을 실행 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="50559-106">The following example shows how to create a runspace pool and how to run a command asynchronously in a runspace of the pool.</span></span>
 
 ```csharp
 namespace HostRunspacePool
@@ -79,6 +79,6 @@ namespace HostRunspacePool
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="fe4f2-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fe4f2-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="50559-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="50559-107">See Also</span></span>
 
- [<span data-ttu-id="fe4f2-108">InitialSessionState 만들기</span><span class="sxs-lookup"><span data-stu-id="fe4f2-108">Creating an InitialSessionState</span></span>](./creating-an-initialsessionstate.md)
+ [<span data-ttu-id="50559-108">InitialSessionState 만들기</span><span class="sxs-lookup"><span data-stu-id="50559-108">Creating an InitialSessionState</span></span>](./creating-an-initialsessionstate.md)
