@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 7b3ef3f4-c626-4679-884f-406a37412b3e
 caps.latest.revision: 16
 ms.openlocfilehash: 2f84c57da7429462c69b2a020d9f8ac04f8d0f35
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067078"
 ---
 # <a name="windows-powershell-cmdlet-concepts"></a>Windows PowerShell Cmdlet 개념
 

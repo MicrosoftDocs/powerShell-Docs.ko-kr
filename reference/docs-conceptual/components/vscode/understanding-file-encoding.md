@@ -2,12 +2,12 @@
 title: VSCode 및 PowerShell에서 파일 인코딩 이해
 description: VSCode 및 PowerShell에서 파일 인코딩 구성
 ms.date: 02/28/2019
-ms.openlocfilehash: ec06d8f5d446a92e6cd9d2d70b11260d1d0afda8
-ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
+ms.openlocfilehash: 6a00e45b3700f72f78e2fbcdf6e317f3a17b53c0
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058440"
 ---
 # <a name="understanding-file-encoding-in-vscode-and-powershell"></a>VSCode 및 PowerShell에서 파일 인코딩 이해
 
@@ -102,7 +102,7 @@ UTF-8이라는 신뢰할 수 있는 규칙이 어디서나 사용되기 때문�
 
 VSCode의 기본 인코딩은 BOM이 포함되지 않은 UTF-8입니다.
 
-[VSCode의 인코딩][]을 설정하려면 VSCode 설정(<kbd>Ctrl<kbd>+</kbd>,</kbd>)으로 이동하고 `"files.encoding"` 설정을 설정하세요.
+[VSCode의 인코딩][]을 설정하려면 VSCode 설정(<kbd>Ctrl</kbd>+<kbd>,</kbd>)으로 이동하고 `"files.encoding"` 설정을 설정하세요.
 
 ```json
 "files.encoding": "utf8bom"

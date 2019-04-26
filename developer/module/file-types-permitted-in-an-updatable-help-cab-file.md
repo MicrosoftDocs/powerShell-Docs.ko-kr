@@ -11,11 +11,11 @@ applies_to:
 ms.assetid: acabdb93-c41a-4b8d-acbe-45cdab91e198
 caps.latest.revision: 10
 ms.openlocfilehash: 3562804157ebdfca561445a8671d726b55cc4efd
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082450"
 ---
 # <a name="file-types-permitted-in-an-updatable-help-cab-file"></a>업데이트 가능한 도움말 CAB 파일 이름에 허용되는 파일 형식
 

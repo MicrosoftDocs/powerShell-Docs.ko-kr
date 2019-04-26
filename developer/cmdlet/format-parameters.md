@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 10e025c5-9aa6-45a5-b851-23d14db1f4cc
 caps.latest.revision: 7
 ms.openlocfilehash: 0bd3888d81aa6d1dde26c0066f7bca9dac8a8bca
-ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068116"
 ---
 # <a name="format-parameters"></a>형식 매개 변수
 

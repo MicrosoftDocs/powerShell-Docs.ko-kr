@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f71ea35d-cff5-4e44-a5c6-3a747ed4c4d9
 caps.latest.revision: 9
 ms.openlocfilehash: 6f6640afb15b3608669538f9b5f53d7a8a5c380d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068269"
 ---
 # <a name="declaring-properties-as-parameters"></a>매개 변수로 속성 선언
 
