@@ -9,55 +9,55 @@ ms.topic: article
 ms.assetid: fd2cac66-88bb-449f-9d47-bd2cd4fe1801
 caps.latest.revision: 13
 ms.openlocfilehash: e6024ec4f7fc490c92408047c8c15c775e45bf9d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065623"
 ---
-# <a name="formatstring-element-for-listitem-for-listcontrol--format"></a><span data-ttu-id="0781f-102">ListControl의 ListItem에 대한 FormatString 요소(형식)</span><span class="sxs-lookup"><span data-stu-id="0781f-102">FormatString Element for ListItem for ListControl  (Format)</span></span>
+# <a name="formatstring-element-for-listitem-for-listcontrol--format"></a><span data-ttu-id="ca799-102">ListControl의 ListItem에 대한 FormatString 요소(형식)</span><span class="sxs-lookup"><span data-stu-id="ca799-102">FormatString Element for ListItem for ListControl  (Format)</span></span>
 
-<span data-ttu-id="0781f-103">스크립트나 속성 값이 표시 되는 방식을 정의 하는 형식 패턴을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="0781f-103">Specifies a format pattern that defines how the property or script value is displayed.</span></span>
+<span data-ttu-id="ca799-103">스크립트나 속성 값이 표시 되는 방식을 정의 하는 형식 패턴을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca799-103">Specifies a format pattern that defines how the property or script value is displayed.</span></span>
 
-<span data-ttu-id="0781f-104">구성 요소 (형식) ViewDefinitions 요소 (형식) 보기 (형식) ListControl 요소 (형식) ListEntries 요소 ListControl (형식)에 대 한 ListControl (형식) ListItems 요소에 대 한 ListEntry 요소의 ListControl (형식) FormatString 요소 ListControl (형식)에 대 한 ListItem ListControl (형식)에 대 한 ListItem 요소</span><span class="sxs-lookup"><span data-stu-id="0781f-104">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) ListControl Element (Format) ListEntries Element for ListControl (Format) ListEntry Element for ListControl (Format) ListItems Element for ListControl (Format) ListItem Element for ListControl (Format) FormatString Element for ListItem for ListControl (Format)</span></span>
+<span data-ttu-id="ca799-104">구성 요소 (형식) ViewDefinitions 요소 (형식) 보기 (형식) ListControl 요소 (형식) ListEntries 요소 ListControl (형식)에 대 한 ListControl (형식) ListItems 요소에 대 한 ListEntry 요소의 ListControl (형식) FormatString 요소 ListControl (형식)에 대 한 ListItem ListControl (형식)에 대 한 ListItem 요소</span><span class="sxs-lookup"><span data-stu-id="ca799-104">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) ListControl Element (Format) ListEntries Element for ListControl (Format) ListEntry Element for ListControl (Format) ListItems Element for ListControl (Format) ListItem Element for ListControl (Format) FormatString Element for ListItem for ListControl (Format)</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="0781f-105">구문</span><span class="sxs-lookup"><span data-stu-id="0781f-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="ca799-105">구문</span><span class="sxs-lookup"><span data-stu-id="ca799-105">Syntax</span></span>
 
 ```xml
 <FormatString>PropertyPattern</FormatString>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="0781f-106">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="0781f-106">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="ca799-106">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="ca799-106">Attributes and Elements</span></span>
 
-<span data-ttu-id="0781f-107">다음 섹션에서는 특성, 자식 요소 및 부모 요소에는 `FormatString` 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="0781f-107">The following sections describe the attributes, child elements, and the parent element of the `FormatString` element.</span></span>
+<span data-ttu-id="ca799-107">다음 섹션에서는 특성, 자식 요소 및 부모 요소에는 `FormatString` 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="ca799-107">The following sections describe the attributes, child elements, and the parent element of the `FormatString` element.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="0781f-108">특성</span><span class="sxs-lookup"><span data-stu-id="0781f-108">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="ca799-108">특성</span><span class="sxs-lookup"><span data-stu-id="ca799-108">Attributes</span></span>
 
-<span data-ttu-id="0781f-109">없음</span><span class="sxs-lookup"><span data-stu-id="0781f-109">None.</span></span>
+<span data-ttu-id="ca799-109">없음</span><span class="sxs-lookup"><span data-stu-id="ca799-109">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="0781f-110">자식 요소</span><span class="sxs-lookup"><span data-stu-id="0781f-110">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="ca799-110">자식 요소</span><span class="sxs-lookup"><span data-stu-id="ca799-110">Child Elements</span></span>
 
-<span data-ttu-id="0781f-111">없음</span><span class="sxs-lookup"><span data-stu-id="0781f-111">None.</span></span>
+<span data-ttu-id="ca799-111">없음</span><span class="sxs-lookup"><span data-stu-id="ca799-111">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="0781f-112">부모 요소</span><span class="sxs-lookup"><span data-stu-id="0781f-112">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="ca799-112">부모 요소</span><span class="sxs-lookup"><span data-stu-id="ca799-112">Parent Elements</span></span>
 
-|<span data-ttu-id="0781f-113">요소</span><span class="sxs-lookup"><span data-stu-id="0781f-113">Element</span></span>|<span data-ttu-id="0781f-114">설명</span><span class="sxs-lookup"><span data-stu-id="0781f-114">Description</span></span>|
+|<span data-ttu-id="ca799-113">요소</span><span class="sxs-lookup"><span data-stu-id="ca799-113">Element</span></span>|<span data-ttu-id="ca799-114">설명</span><span class="sxs-lookup"><span data-stu-id="ca799-114">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="0781f-115">ListItem 요소 (형식)</span><span class="sxs-lookup"><span data-stu-id="0781f-115">ListItem Element (Format)</span></span>](./listitem-element-for-listitems-for-listcontrol-format.md)|<span data-ttu-id="0781f-116">속성 또는 목록 보기 행에 해당 값이 표시 되는 스크립트를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="0781f-116">Defines the property or script whose value is displayed in a row of the list view.</span></span>|
+|[<span data-ttu-id="ca799-115">ListItem 요소 (형식)</span><span class="sxs-lookup"><span data-stu-id="ca799-115">ListItem Element (Format)</span></span>](./listitem-element-for-listitems-for-listcontrol-format.md)|<span data-ttu-id="ca799-116">속성 또는 목록 보기 행에 해당 값이 표시 되는 스크립트를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca799-116">Defines the property or script whose value is displayed in a row of the list view.</span></span>|
 
-## <a name="text-value"></a><span data-ttu-id="0781f-117">텍스트 값</span><span class="sxs-lookup"><span data-stu-id="0781f-117">Text Value</span></span>
+## <a name="text-value"></a><span data-ttu-id="ca799-117">텍스트 값</span><span class="sxs-lookup"><span data-stu-id="ca799-117">Text Value</span></span>
 
-<span data-ttu-id="0781f-118">데이터의 형식을 지정 하는 데 사용 되는 패턴을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="0781f-118">Specify the pattern that is used to format the data.</span></span> <span data-ttu-id="0781f-119">예를 들어, 형식의 모든 속성의 값 형식을 지정 하려면이 패턴을 사용할 수 있습니다 [System.Timespan](/dotnet/api/System.TimeSpan): {0: MMM} {0:dd} {{0:hh}: {{0:mm}&fmt=csv}.</span><span class="sxs-lookup"><span data-stu-id="0781f-119">For example, you can use this pattern to format the value of any property that is of type [System.Timespan](/dotnet/api/System.TimeSpan): {0:MMM}{0:dd}{0:HH}:{0:mm}.</span></span>
+<span data-ttu-id="ca799-118">데이터의 형식을 지정 하는 데 사용 되는 패턴을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca799-118">Specify the pattern that is used to format the data.</span></span> <span data-ttu-id="ca799-119">예를 들어, 형식의 모든 속성의 값 형식을 지정 하려면이 패턴을 사용할 수 있습니다 [System.Timespan](/dotnet/api/System.TimeSpan): {0: MMM} {0:dd} {{0:hh}: {{0:mm}&fmt=csv}.</span><span class="sxs-lookup"><span data-stu-id="ca799-119">For example, you can use this pattern to format the value of any property that is of type [System.Timespan](/dotnet/api/System.TimeSpan): {0:MMM}{0:dd}{0:HH}:{0:mm}.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="0781f-120">설명</span><span class="sxs-lookup"><span data-stu-id="0781f-120">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="ca799-120">설명</span><span class="sxs-lookup"><span data-stu-id="ca799-120">Remarks</span></span>
 
-<span data-ttu-id="0781f-121">테이블 뷰, 목록 뷰, 와이드 뷰 또는 사용자 지정 보기를 만들 때 형식 문자열을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0781f-121">Format strings can be used when creating table views, list views, wide views, or custom views.</span></span> <span data-ttu-id="0781f-122">보기에 표시 된 값 형식에 대 한 자세한 내용은 참조 하세요. [표시 된 데이터 서식 지정](./formatting-displayed-data.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="0781f-122">For more information about formatting a value displayed in a view, see [Formatting Displayed Data](./formatting-displayed-data.md).</span></span>
+<span data-ttu-id="ca799-121">테이블 뷰, 목록 뷰, 와이드 뷰 또는 사용자 지정 보기를 만들 때 형식 문자열을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ca799-121">Format strings can be used when creating table views, list views, wide views, or custom views.</span></span> <span data-ttu-id="ca799-122">보기에 표시 된 값 형식에 대 한 자세한 내용은 참조 하세요. [표시 된 데이터 서식 지정](./formatting-displayed-data.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ca799-122">For more information about formatting a value displayed in a view, see [Formatting Displayed Data](./formatting-displayed-data.md).</span></span>
 
-<span data-ttu-id="0781f-123">형식 문자열을 사용 하 여 목록 보기에 대 한 자세한 내용은 참조 하세요. [목록 보기 만들기](./creating-a-list-view.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="0781f-123">For more information about using format strings in list views, see [Creating List View](./creating-a-list-view.md).</span></span>
+<span data-ttu-id="ca799-123">형식 문자열을 사용 하 여 목록 보기에 대 한 자세한 내용은 참조 하세요. [목록 보기 만들기](./creating-a-list-view.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ca799-123">For more information about using format strings in list views, see [Creating List View](./creating-a-list-view.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="0781f-124">예제</span><span class="sxs-lookup"><span data-stu-id="0781f-124">Example</span></span>
+## <a name="example"></a><span data-ttu-id="ca799-124">예제</span><span class="sxs-lookup"><span data-stu-id="ca799-124">Example</span></span>
 
-<span data-ttu-id="0781f-125">다음 예제에서는 값의 서식 지정 문자열을 정의 하는 방법의 `StartTime` 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="0781f-125">The following example shows how to define a formatting string for the value of the `StartTime` property.</span></span>
+<span data-ttu-id="ca799-125">다음 예제에서는 값의 서식 지정 문자열을 정의 하는 방법의 `StartTime` 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="ca799-125">The following example shows how to define a formatting string for the value of the `StartTime` property.</span></span>
 
 ```xml
 <ListItem>
@@ -66,10 +66,10 @@ ms.locfileid: "56860339"
 </ListItem>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0781f-126">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0781f-126">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ca799-126">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ca799-126">See Also</span></span>
 
-[<span data-ttu-id="0781f-127">목록 뷰 만들기</span><span class="sxs-lookup"><span data-stu-id="0781f-127">Creating a List View</span></span>](./creating-a-list-view.md)
+[<span data-ttu-id="ca799-127">목록 뷰 만들기</span><span class="sxs-lookup"><span data-stu-id="ca799-127">Creating a List View</span></span>](./creating-a-list-view.md)
 
-[<span data-ttu-id="0781f-128">ListItem 요소 (형식)</span><span class="sxs-lookup"><span data-stu-id="0781f-128">ListItem Element (Format)</span></span>](./listitem-element-for-listitems-for-listcontrol-format.md)
+[<span data-ttu-id="ca799-128">ListItem 요소 (형식)</span><span class="sxs-lookup"><span data-stu-id="ca799-128">ListItem Element (Format)</span></span>](./listitem-element-for-listitems-for-listcontrol-format.md)
 
-[<span data-ttu-id="0781f-129">Windows PowerShell 형식 지정을 작성 하 고 파일 형식</span><span class="sxs-lookup"><span data-stu-id="0781f-129">Writing a Windows PowerShell Formatting and Types File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="ca799-129">Windows PowerShell 형식 지정을 작성 하 고 파일 형식</span><span class="sxs-lookup"><span data-stu-id="ca799-129">Writing a Windows PowerShell Formatting and Types File</span></span>](./writing-a-powershell-formatting-file.md)
