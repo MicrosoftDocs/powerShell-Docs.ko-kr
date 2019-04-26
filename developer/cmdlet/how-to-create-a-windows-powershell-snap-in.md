@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 71bd9b2c-5f2e-4aa8-b5fe-08c956540d37
 caps.latest.revision: 10
 ms.openlocfilehash: 43199544dc02ccae4b61053c30d6ed36576adfcf
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067997"
 ---
 # <a name="how-to-create-a-windows-powershell-snap-in"></a>Windows PowerShell 스냅인을 만드는 방법
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 3af6aff8-4c2d-4f08-9bb1-e1f3ed3e583e
 caps.latest.revision: 11
 ms.openlocfilehash: 6a371bdbb85d07730c32931a4a79ee40856ce298
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066212"
 ---
 # <a name="entryselectedby-element-for-enumerableexpansion-format"></a>EnumerableExpansion에 대한 EntrySelectedBy 요소(형식)
 

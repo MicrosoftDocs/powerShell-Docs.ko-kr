@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 7674636e-a0f2-4587-bfc5-dd3e6ce5489e
 caps.latest.revision: 6
 ms.openlocfilehash: 5b6ae54ee6c843996c875189b6ee553be5e4f614
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082263"
 ---
 # <a name="how-updatable-help-works"></a>업데이트 가능한 도움말 작동 방법
 

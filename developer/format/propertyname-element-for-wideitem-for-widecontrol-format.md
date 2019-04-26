@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 3d91d0e6-bf18-4587-b651-db66849e5df5
 caps.latest.revision: 6
 ms.openlocfilehash: 326880834cd82ab826aadc409cd7a8f21cd36824
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064648"
 ---
 # <a name="propertyname-element-for-wideitem-for-widecontrol-format"></a>WideControl의 WideItem에 대한 PropertyName 요소(형식)
 

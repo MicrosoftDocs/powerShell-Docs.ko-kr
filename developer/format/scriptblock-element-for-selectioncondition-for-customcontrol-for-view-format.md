@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 7031fa8b-3e2b-4ea8-89cb-95171f467b5a
 caps.latest.revision: 6
 ms.openlocfilehash: e55d1c5aa533005b258ecbbbf3ed9d55f852eab6
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064563"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 SelectionCondition에 대한 ScriptBlock 요소(형식)
 

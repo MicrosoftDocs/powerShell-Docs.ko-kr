@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 5a134b81-bd0c-4e1c-a2f0-9acbe852745a
 caps.latest.revision: 9
 ms.openlocfilehash: cc014487a680747ad59437052f79d4576154a1cb
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082552"
 ---
 # <a name="windows-powershell-host-quickstart"></a>Windows PowerShell 호스트 빠른 시작
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f6c700c8-0889-49a1-a990-8c6e9aaf4735
 caps.latest.revision: 6
 ms.openlocfilehash: 5166213f8247fa23d5e0b3fdfd2367062d595169
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067759"
 ---
 # <a name="how-to-validate-parameter-input"></a>매개 변수 입력 유효성을 검사하는 방법
 

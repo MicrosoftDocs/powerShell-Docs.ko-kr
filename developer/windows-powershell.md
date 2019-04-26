@@ -3,15 +3,15 @@ title: Windows PowerShell SDK
 ms.date: 09/13/2016
 ms.topic: article
 ms.openlocfilehash: 600d43874d9eda04d556a0ece198026dde9174c3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080461"
 ---
 # <a name="windows-powershell"></a>Windows PowerShell
 
-업데이트됨: 2013 년 7 월 8
+업데이트 날짜: 2013 년 7 월 8
 
 Windows PowerShell®은 시스템 관리용으로 특별히 설계된 작업 기반 명령줄 셸 및 스크립트 언어입니다. .NET Framework를 기반으로 Windows PowerShell® IT 전문가 및 쉽게 제어 하 고 Windows 운영 체제 및 Windows에서 실행 되는 응용 프로그램의 관리를 자동화 합니다.
 

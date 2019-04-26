@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: d5ddaa6e-4904-46da-beb0-0295a8f38332
 caps.latest.revision: 12
 ms.openlocfilehash: 8a21675acd087df93f93c25952c78931255d60b3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067717"
 ---
 # <a name="how-to-validate-the-argument-length"></a>인수 길이 유효성을 검사하는 방법
 

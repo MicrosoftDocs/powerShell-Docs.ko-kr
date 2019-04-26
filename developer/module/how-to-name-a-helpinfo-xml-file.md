@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 64e85b53-5aeb-4d6c-903c-af4ab62f11c1
 caps.latest.revision: 7
 ms.openlocfilehash: 462cd7bd486a5924bb2bc43e0ac8d1558e30e657
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082399"
 ---
 # <a name="how-to-name-a-helpinfo-xml-file"></a>HelpInfo XML 파일 이름을 지정하는 방법
 

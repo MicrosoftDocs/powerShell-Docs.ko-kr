@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 01ae8cbe-acdc-4043-bd6e-1118a5691a55
 caps.latest.revision: 12
 ms.openlocfilehash: 405184f7bdbf1955f1df7766bf2723c244dcc27f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064920"
 ---
 # <a name="propertyname-element-for-listitem-for-listcontrol-format"></a>ListControl의 ListItem에 대한 PropertyName 요소(형식)
 

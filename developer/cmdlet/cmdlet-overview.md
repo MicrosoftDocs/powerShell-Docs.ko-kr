@@ -12,11 +12,11 @@ helpviewer_keywords:
 ms.assetid: 0aa32589-4447-4ead-a5dd-a3be99113140
 caps.latest.revision: 21
 ms.openlocfilehash: f8a8c9300d1ac811c7fbbf7050dd24f78306db8f
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58056671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068473"
 ---
 # <a name="cmdlet-overview"></a>Cmdlet 개요
 
@@ -94,7 +94,7 @@ Windows PowerShell cmdlet에는 다음 두 가지 기본 클래스에서 파생 
 
 Windows PowerShell cmdlet을 관리 하 고 Windows PowerShell에서 제공 하는 cmdlet에서 해야 할 수 있습니다 하는 일반적인 기능을 지정 하는 여러.NET Framework 특성을 정의 합니다. 예를 들어, cmdlet, cmdlet의 매개 변수를 지정 하 고 cmdlet 개발자는 해당 cmdlet 코드에서 해당 기능을 구현 하지 않아도 되도록 입력의 유효성 검사 요청으로 클래스를 지정 하려면 특성이 사용 됩니다. 특성에 대 한 자세한 내용은 참조 하세요. [Windows PowerShell 특성](./cmdlet-attributes.md)합니다.
 
-## <a name="cmdlet-names"></a>cmdlet 이름
+## <a name="cmdlet-names"></a>Cmdlet 이름
 
 Windows PowerShell cmdlet의 이름이 동사-명사 이름 쌍을 사용합니다. 예를 들어를 `Get-Command` cmdlet은 Windows PowerShell에 포함 된 명령 셸에서 등록 된 모든 cmdlet을 가져오는 데 사용 됩니다. Cmdlet은 수행 하는 작업을 식별 하는 동사 및 명사는 cmdlet이 해당 작업을 수행 하는 리소스를 식별 합니다.
 

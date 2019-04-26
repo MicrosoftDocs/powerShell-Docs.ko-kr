@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 0b2a7ce2-3c33-469c-a4a4-b8fe3bd05324
 caps.latest.revision: 5
 ms.openlocfilehash: 93780ee8af80d78a5b97a32098384a148070b54a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080631"
 ---
 # <a name="implementing-sessionconfiguration-for-a-management-odata-web-service"></a>관리 OData 웹 서비스에 대한 SessionConfiguration 구현
 

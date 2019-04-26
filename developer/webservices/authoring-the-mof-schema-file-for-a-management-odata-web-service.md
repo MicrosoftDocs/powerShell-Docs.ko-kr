@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 65fbac8b-07d0-4513-bc8d-79f1f389be0f
 caps.latest.revision: 5
 ms.openlocfilehash: 7aadee07b38d2e9d87c5f0c548d13a5cdad1939f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080767"
 ---
 # <a name="authoring-the-mof-schema-file-for-a-management-odata-web-service"></a>관리 OData 웹 서비스용 MOF 스키마 파일 작성
 

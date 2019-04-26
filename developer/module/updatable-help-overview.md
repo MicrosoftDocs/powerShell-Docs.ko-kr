@@ -11,11 +11,11 @@ applies_to:
 ms.assetid: 3f7388a9-9fa8-42bc-b294-538c9a01e30a
 caps.latest.revision: 12
 ms.openlocfilehash: f2dfb9642ba2dde38124142b659b425bbbb00f37
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082096"
 ---
 # <a name="updatable-help-overview"></a>업데이트 가능한 도움말 개요
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: bfbccc5b-2b2b-432a-a971-9f8ab503cdc3
 caps.latest.revision: 17
 ms.openlocfilehash: 3c6d8e410427d6cfaa1c15db421b3fe935f7d322
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082059"
 ---
 # <a name="writing-a-windows-powershell-module"></a>Windows PowerShell 모듈 작성
 
