@@ -6,11 +6,11 @@ ms.topic: article
 ms.assetid: e81c0920-d696-4355-aaf7-eb20a6f79b6d
 caps.latest.revision: 5
 ms.openlocfilehash: 53e9c91c6f123a2a30f32cf5b2396d2fa19074ec
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067419"
 ---
 # <a name="selectstr-tutorial"></a>SelectStr 자습서
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 9b1026ad-f072-4fca-8052-a2d8eb491c2a
 caps.latest.revision: 6
 ms.openlocfilehash: 52c75b3ca73706da39029d5b3ead52ff7197a5f1
-ms.sourcegitcommit: c581c4c8036edf55147e7bce4b00c860da6c5a8b
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56863809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068662"
 ---
 # <a name="attribute-types"></a>특성 유형
 

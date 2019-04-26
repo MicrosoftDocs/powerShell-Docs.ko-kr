@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 65094bb7-1972-44b3-b8b0-5f639860b58c
 caps.latest.revision: 5
 ms.openlocfilehash: 32c8214935a8c9f455426b76966d8c7fb33353d4
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57430080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081736"
 ---
 # <a name="getproc01-c-sample-code"></a>GetProc01(C#) 코드 샘플
 

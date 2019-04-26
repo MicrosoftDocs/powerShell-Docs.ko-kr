@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 53694f08-57f7-4185-b443-1636a0918afc
 caps.latest.revision: 8
 ms.openlocfilehash: 387340cd9b0aae2ad0419b187d96ab4fee183d5a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065807"
 ---
 # <a name="firstlinehanging-element-for-frame-for-controls-for-view-format"></a>View에 대한 Controls의 Frame에 대한 FirstLineHanging 요소(형식)
 
