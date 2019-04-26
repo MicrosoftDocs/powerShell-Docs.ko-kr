@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 3a31010d-1db9-44ae-a7f3-6ed32cb641cb
 caps.latest.revision: 16
 ms.openlocfilehash: 097d20cb6a04635124d1f96823248df6095ca1af
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065073"
 ---
 # <a name="name-element-for-view-format"></a>View에 대한 Name 요소(형식)
 

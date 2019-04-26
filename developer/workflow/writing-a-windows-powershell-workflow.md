@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 2551ceed-836f-4275-9fc0-ea68446d6a35
 caps.latest.revision: 7
 ms.openlocfilehash: 4f0be193fb5b5c753d040a48e5f49235ece11708
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080325"
 ---
 # <a name="writing-a-windows-powershell-workflow"></a>Windows PowerShell 워크플로 작성
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 057a666f-731b-423d-9d80-7be6b1836244
 caps.latest.revision: 5
 ms.openlocfilehash: f6cc69df8afe64cea867f5d7f9a7d45753a54d6f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082977"
 ---
 # <a name="creating-remote-runspaces"></a>원격 runspace 만들기
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 4732e38c-b1a0-4de7-b6de-75dbde850488
 caps.latest.revision: 8
 ms.openlocfilehash: c5eea216efd8048aee5768c78c0b48617670f091
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067861"
 ---
 # <a name="how-to-support-transactions"></a>트랜잭션을 지원하는 방법
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 9c8ef289-0659-42d1-9976-044b144201eb
 caps.latest.revision: 6
 ms.openlocfilehash: 2a8372d937fc3c959f7d829bb52495048423d506
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080478"
 ---
 # <a name="adding-windows-powershell-activities-to-the-visual-studio-toolbox"></a>Visual Studio 도구 상자에 Windows PowerShell 활동 추가
 

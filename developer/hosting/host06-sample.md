@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 459b6d0f-d596-4269-9113-915a283c1e28
 caps.latest.revision: 10
 ms.openlocfilehash: 8b89d7bf8a69626dc3e6bd566dab7951a4c7c5ab
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082875"
 ---
 # <a name="host06-sample"></a>Host06 샘플
 
@@ -25,7 +25,7 @@ ms.locfileid: "58059187"
 
 - 이 응용 프로그램을 관리자 권한 (관리자 권한으로 실행) 모드로 실행 되어야 합니다.
 
-## <a name="demonstrates"></a>시연
+## <a name="demonstrates"></a>데모
 
 - 해당 클래스에서 파생 하는 사용자 지정 호스트를 만드는 합니다 [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스는 [System.Management.Automation.Host.Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 클래스 및 합니다 [System.Management.Automation.Host.Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) 클래스입니다.
 

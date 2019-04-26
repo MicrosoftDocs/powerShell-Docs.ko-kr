@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: a317d482-73cc-4c98-a002-1357fa879cd7
 caps.latest.revision: 7
 ms.openlocfilehash: cf1a80e845c38d97d71f26eba63c38a550958b79
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066229"
 ---
 # <a name="entryselectedby-element-for-customentry-for-groupby-format"></a>GroupBy의 CustomEntry에 대한 EntrySelectedBy 요소(형식)
 

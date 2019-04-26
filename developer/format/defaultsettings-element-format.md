@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 41c56499-ee20-4821-830a-478fdcc33f83
 caps.latest.revision: 11
 ms.openlocfilehash: bc95c62222eb2806f92499257a397c2e4ec5dbab
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066348"
 ---
 # <a name="defaultsettings-element-format"></a>DefaultSettings 요소(형식)
 

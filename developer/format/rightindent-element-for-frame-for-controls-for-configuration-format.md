@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 3a6cedcc-0437-4312-961e-0845cc249532
 caps.latest.revision: 8
 ms.openlocfilehash: 9d8779c90421145b40d7b6b537686caf1ccd2a09
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064835"
 ---
 # <a name="rightindent-element-for-frame-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 Frame에 대한 RightIndent 요소(형식)
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 9ae11924-0072-451e-bf70-c5ffb25dccc0
 caps.latest.revision: 13
 ms.openlocfilehash: 0c20512e660c8d2b61d063dbd7078b55b23efeb8
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064954"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format"></a>EnumerableExpansion에 대한 EntrySelectedBy의 SelectionCondition에 대한 PropertyName 요소(형식)
 

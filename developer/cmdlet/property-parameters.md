@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d17e0d66-42ea-4e4c-a85b-3ca09b146492
 caps.latest.revision: 6
 ms.openlocfilehash: cc0742b86a7a36e5712707c077fd1952691f3f4b
-ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067572"
 ---
 # <a name="property-parameters"></a>속성 매개 변수
 

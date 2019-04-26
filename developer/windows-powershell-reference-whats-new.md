@@ -3,11 +3,11 @@ title: Windows PowerShell 참조-새로운 기능
 ms.date: 09/13/2016
 ms.topic: article
 ms.openlocfilehash: 364d081ddf2f87ceeaa47732266a35f4a126246f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080529"
 ---
 # <a name="whats-new"></a>새로운 기능
 

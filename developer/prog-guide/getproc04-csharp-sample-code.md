@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 439ba3f3-91b1-46a4-8d07-9af6edb71bc4
 caps.latest.revision: 5
 ms.openlocfilehash: 936fb355be40b98136719ea929cf50b06705b687
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58058286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081634"
 ---
 # <a name="getproc04-c-sample-code"></a>GetProc04(C#) 코드 샘플
 

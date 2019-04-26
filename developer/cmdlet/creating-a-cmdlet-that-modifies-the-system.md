@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 59be4120-1700-4d92-a308-ef4a32ccf11a
 caps.latest.revision: 8
 ms.openlocfilehash: bbe9f0213754d1cc47e0fd9a7a898bde916c0636
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068442"
 ---
 # <a name="creating-a-cmdlet-that-modifies-the-system"></a>시스템을 수정하는 Cmdlet 만들기
 

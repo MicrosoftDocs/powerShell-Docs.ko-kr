@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 89796687-ae20-447a-a6b1-2f51b559d4e9
 caps.latest.revision: 5
 ms.openlocfilehash: 5a7acbfa2a283c6bda4bf159ff310f9d3e20461f
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081175"
 ---
 # <a name="stopproc01-c-sample-code"></a>StopProc01(C#) 코드 샘플
 

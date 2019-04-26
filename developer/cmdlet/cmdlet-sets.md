@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: bcf0739e-920e-4dd8-afca-2c6d6927bc2a
 caps.latest.revision: 10
 ms.openlocfilehash: ef3b5bab5dcafc578397bcb4f071776bbdeaced1
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58058269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068388"
 ---
 # <a name="cmdlet-sets"></a>Cmdlet 집합
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 82df2cde-ba12-46d2-b6ec-da5455fd9b57
 caps.latest.revision: 8
 ms.openlocfilehash: a472f07cb24b0de8e5dcdfcaddd2802575318d7a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082586"
 ---
 # <a name="windows-powershell-api-samples"></a>Windows PowerShell API 샘플
 

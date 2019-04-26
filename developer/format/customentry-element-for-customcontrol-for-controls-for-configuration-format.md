@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 9dfba86f-29b2-473c-9e98-9d679176acce
 caps.latest.revision: 11
 ms.openlocfilehash: 497485a388d1cdc834ecc1d1079b0714a7d7f9db
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066475"
 ---
 # <a name="customentry-element-for-customcontrol-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 CustomControl에 대한 CustomEntry 요소(형식)
 

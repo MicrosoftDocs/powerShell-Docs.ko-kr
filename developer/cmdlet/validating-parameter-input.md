@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 3f15bf20-a068-4a7d-a170-bc43f755d1fe
 caps.latest.revision: 14
 ms.openlocfilehash: 171e3e974619e197a0bcc9dfc759297005e34568
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067147"
 ---
 # <a name="validating-parameter-input"></a>매개 변수 입력 유효성 검사
 

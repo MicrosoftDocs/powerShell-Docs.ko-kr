@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f4bea9d8-27ad-410e-ad48-287f807d3e4e
 caps.latest.revision: 7
 ms.openlocfilehash: 18b0113c9b7b0895a1093cb0b56cd2d02c74a6c1
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065827"
 ---
 # <a name="itemselectioncondition-element-for-expressionbinding-for-customcontrol-format"></a>CustomControl의 ExpressionBinding에 대한 ItemSelectionCondition 요소(형식)
 

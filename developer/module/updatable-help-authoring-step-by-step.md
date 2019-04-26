@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 10098160-c6b4-4339-b8ff-2c4f8cc0699b
 caps.latest.revision: 13
 ms.openlocfilehash: fbc77cc0fafce93d239da1c459d4b761b21ef3cb
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082127"
 ---
 # <a name="updatable-help-authoring-step-by-step"></a>업데이트 가능한 도움말 작성: 단계별
 
@@ -52,10 +52,10 @@ HelpInfo XML 정보 파일을 도움말 파일 및 지원 되는 각 UI 문화�
 
 디지털 서명 필요 없는 되지만 모범 사례 권장 사항을 파일을 공유 하는 때마다 있습니다.
 
-### <a name="step-5-create-cab-files"></a>5단계: CAB 파일 만들기
+### <a name="step-5-create-cab-files"></a>5 단계: CAB 파일 만들기
 
 만들려는 MakeCab.exe 같은 캐비닛 (.cab) 파일을 만드는 도구를 사용 하 여를 합니다. 모듈에 대 한 도움말 파일이 포함 된 CAB 파일입니다. 지원 되는 각 UI 문화권의 도움말 파일에 대 한 별도 CAB 파일을 만듭니다. 자세한 내용은 [업데이트할 수 있는 도움말 CAB 파일을 준비 하는 방법을](./how-to-prepare-updatable-help-cab-files.md)합니다.
 
-### <a name="step-6-upload-your-files"></a>6단계: 파일 업로드
+### <a name="step-6-upload-your-files"></a>6 단계: 파일 업로드
 
 새롭거나 업데이트 된 도움말 파일을 게시 하려면 지정 된 인터넷 위치에 CAB 파일을 업로드 합니다 **HelpContentUri** HelpInfo XML 파일의 요소입니다. 그런 다음 값으로 지정 된 인터넷 위치로 HelpInfo XML 파일을 업로드 합니다 **HelpInfoUri** 모듈 매니페스트 키입니다.

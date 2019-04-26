@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 82fe3a35-a94b-4bc1-ad9e-dfc5f1e788b3
 caps.latest.revision: 13
 ms.openlocfilehash: 3a4c5f279ce8587eeb5d583376ea3d2286210b83
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067164"
 ---
 # <a name="validatelength-attribute-declaration"></a>ValidateLength 특성 선언
 

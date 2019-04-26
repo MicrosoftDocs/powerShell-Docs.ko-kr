@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: fb82827e-fdb7-4cbf-b3d4-093e72b3ff0e
 caps.latest.revision: 28
 ms.openlocfilehash: 7c2bfca50de4645676eafc01bbf23d9797e8b758
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082195"
 ---
 # <a name="installing-a-powershell-module"></a>PowerShell 모듈 설치
 
 PowerShell 모듈을 만든 후 가능성이 해야 시스템에서 모듈을 설치 하 든 다른 사람이 사용할 수 있도록 합니다. 일반적으로이 단순히 이루어져 있습니다 모듈 파일 (ie,은. psm1, 또는 이진 어셈블리, 모듈 매니페스트 및 관련 된 기타 파일이) 디렉터리에 해당 컴퓨터에 복사 합니다. 매우 작은 프로젝트의 경우이 수 만큼 간단할 복사 및 붙여넣기를 단일 원격 컴퓨터에 Windows 탐색기를 사용 하 여 파일 그러나 더 큰 솔루션 보다 복잡 한 설치 프로세스를 사용 하는 수도 있습니다. 시스템 모듈을 얻는 방법에 관계 없이 PowerShell에는 다양 한 기술 찾아 모듈을 사용 하 여 사용자를 사용할 수 있습니다. (자세한 내용은 [PowerShell 모듈을 가져오는](./importing-a-powershell-module.md).) 따라서 설치에 대 한 주요 문제는 PowerShell 모듈을 찾을 수 있는지을 보장 합니다.
 
-이 항목에는 다음 섹션이 포함되어 있습니다.
+이 항목에는 다음과 같은 섹션이 포함되어 있습니다.
 
 - 모듈을 설치 하는 것에 대 한 규칙
 

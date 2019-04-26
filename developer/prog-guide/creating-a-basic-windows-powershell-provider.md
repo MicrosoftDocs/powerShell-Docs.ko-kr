@@ -12,11 +12,11 @@ helpviewer_keywords:
 ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
 caps.latest.revision: 7
 ms.openlocfilehash: 19cc3817016d96e1412a5f3506e9d694ba55b48d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082076"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>기본 Windows PowerShell 공급자 만들기
 

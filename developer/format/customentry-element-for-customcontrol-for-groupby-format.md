@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 2987cb45-f646-45d4-b81b-7871e77af36f
 caps.latest.revision: 5
 ms.openlocfilehash: dcf4f8b2bbd422067ffdf9b3b4972e279e91edf9
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066488"
 ---
 # <a name="customentry-element-for-customcontrol-for-groupby-format"></a>GroupBy의 CustomControl에 대한 CustomEntry 요소(형식)
 

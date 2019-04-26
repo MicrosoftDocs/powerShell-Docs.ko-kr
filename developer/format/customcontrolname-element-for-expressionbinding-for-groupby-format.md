@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 9e11da8f-1e75-4d3d-b4c8-b500dec3028e
 caps.latest.revision: 6
 ms.openlocfilehash: 32f8a71e9818c8c1a052f3b96f442f169c1bda4a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066571"
 ---
 # <a name="customcontrolname-element-for-expressionbinding-for-groupby-format"></a>GroupBy의 ExpressionBinding에 대한 CustomControlName 요소(형식)
 

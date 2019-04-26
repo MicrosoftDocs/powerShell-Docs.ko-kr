@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 2b4a41cc-2e22-49a0-b375-2e2447967751
 caps.latest.revision: 11
 ms.openlocfilehash: e77bcde0012fd84a460a522b01a421943fd23cf1
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57795388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082892"
 ---
 # <a name="host-application-samples"></a>호스트 애플리케이션 샘플
 

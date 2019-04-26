@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: e620bf6d-76be-47b0-a7a8-f43418f30c60
 caps.latest.revision: 6
 ms.openlocfilehash: b81a32b867795ae51c3f5308c2f82c31ed2747fa
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080784"
 ---
 # <a name="adding-resources-to-a-management-odata-web-service"></a>관리 OData 웹 서비스에 리소스 추가
 

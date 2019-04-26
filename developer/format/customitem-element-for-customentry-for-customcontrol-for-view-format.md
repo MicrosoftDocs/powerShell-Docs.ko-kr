@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 98708c1d-6f39-4a76-b454-31153a6ade8c
 caps.latest.revision: 12
 ms.openlocfilehash: 3c110bd5fe3ef2f790ef136556afa7c29d0b5b29
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066416"
 ---
 # <a name="customitem-element-for-customentry-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 CustomEntry에 대한 CustomItem 요소(형식)
 

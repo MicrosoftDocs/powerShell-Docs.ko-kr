@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 0dce97c0-bd9a-4691-8ca3-e8d5dea902c5
 caps.latest.revision: 11
 ms.openlocfilehash: 2f185e415e3effc2cf09a282ca1167e3bcfb7d6a
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068184"
 ---
 # <a name="error-reporting-concepts"></a>오류 보고 개념
 

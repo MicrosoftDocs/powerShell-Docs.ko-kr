@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 1685cfc4-b32c-4bed-b221-e0c4482db955
 caps.latest.revision: 9
 ms.openlocfilehash: eb227b5fa5e91f59b6fc99981ff5affca1cf63fd
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58056450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082705"
 ---
 # <a name="runspace05-sample"></a>Runspace05 샘플
 
@@ -23,7 +23,7 @@ ms.locfileid: "58056450"
 
 이 샘플 Windows PowerShell 2.0이 필요 합니다.
 
-## <a name="demonstrates"></a>시연
+## <a name="demonstrates"></a>데모
 
 이 샘플에는 다음 방법을 보여 줍니다.
 

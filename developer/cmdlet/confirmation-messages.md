@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: a886a26d-7730-4586-aeac-fd3f0bc60b88
 caps.latest.revision: 8
 ms.openlocfilehash: 229725b5b9f1f0082592dcebe11564fd2f630ce1
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068371"
 ---
 # <a name="confirmation-messages"></a>확인 메시지
 

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e082c2e3-12ce-4032-9caf-bf6b2e0dcf81
 caps.latest.revision: 23
-ms.openlocfilehash: eaa927ec90df6053843f5c942357fed4c7dee966
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 93a8c11099a9883127bca87422e1acaebfd2c093
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082299"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>PowerShell 모듈 매니페스트를 작성하는 방법
 
@@ -80,7 +80,7 @@ A *모듈 매니페스트* 은 모듈의 내용을 설명 하 고 모듈 처리 
 |DotNetFrameworkVersion<br /><br /> 형식: 문자열|' '|이 모듈에 필요한 Microsoft.NET Framework의 최소 버전입니다.<br /><br /> 예: `DotNetFrameworkVersion = '3.5'`|
 |CLRVersion<br /><br /> 형식: 문자열|' '|이 모듈에 필요한 공용 언어 런타임 (CLR)의 최소 버전입니다.<br /><br /> 예: `CLRVersion = '3.5'`|
 |ProcessorArchitecture<br /><br /> 형식: 문자열|' '|프로세서 아키텍처 (None, X86, Amd64)이이 모듈에 필요한입니다. 유효한 값은 x86, AMD64, IA64 및 None(알 수 없음 또는 지정되지 않음)입니다.<br /><br /> 예: `ProcessorArchitecture = 'x86'`|
-|RequiredModules<br /><br /> 형식: [string []]|@()|이 모듈을 가져오기 전에 전역 환경으로 가져와야 하는 모듈입니다. 가 이미 로드 되지 않은 나열 된 모든 모듈이 로드 됩니다. (예를 들어, 일부 모듈이 이미 로드 수 있습니다 다른 모듈에 의해.). 특정 버전을 사용 하 여 로드를 지정할 수 이기도 `RequiredVersion` 대신 `ModuleVersion`합니다. 사용 하는 경우 `ModuleVersion` 최소 지정 된 버전의 사용 가능한 최신 버전을 로드 됩니다.<br /><br /> 예: `RequiredModules = @(@{ModuleName="myDependentModule", ModuleVersion="2.0",Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`<br /><br /> 예: `RequiredModules = @(@{ModuleName="myDependentModule", RequiredVersion="1.5",Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`|
+|RequiredModules<br /><br /> 형식: [string []]|@()|이 모듈을 가져오기 전에 전역 환경으로 가져와야 하는 모듈입니다. 가 이미 로드 되지 않은 나열 된 모든 모듈이 로드 됩니다. (예를 들어, 일부 모듈이 이미 로드 수 있습니다 다른 모듈에 의해.). 특정 버전을 사용 하 여 로드를 지정할 수 이기도 `RequiredVersion` 대신 `ModuleVersion`합니다. 사용 하는 경우 `ModuleVersion` 최소 지정 된 버전의 사용 가능한 최신 버전을 로드 됩니다.<br /><br /> 예: `RequiredModules = @(@{ModuleName="myDependentModule"; ModuleVersion="2.0"; Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`<br /><br /> 예: `RequiredModules = @(@{ModuleName="myDependentModule"; RequiredVersion="1.5"; Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`|
 |RequiredAssemblies<br /><br /> 형식: [string []]|@()|이 모듈을 가져오기 전에 로드 해야 하는 어셈블리입니다.<br /><br /> RequiredModules 달리, 아직 로드 되지 않은 경우 PowerShell을 RequiredAssemblies 로드 됩니다.|
 |ScriptsToProcess<br /><br /> 형식: [string []]|@()|모듈을 가져올 때 호출자의 세션 상태에서 실행 되는 스크립트 (.ps1) 파일입니다. 전역 세션 상태 또는 다른 모듈 세션 상태의 중첩된 모듈에 대 한 수 있습니다. 이러한 스크립트를 사용 하 여 로그인 스크립트를 사용할 수도 처럼 환경을 준비할 수 있습니다.<br /><br /> 이러한 스크립트는 매니페스트에 나열 된 모듈 로드 되기 전에 실행 됩니다.|
 |TypesToProcess<br /><br /> 형식: [개체 []]|@()|이 모듈을 가져올 때 로드 되도록 파일 (.ps1xml)를 입력 합니다.|

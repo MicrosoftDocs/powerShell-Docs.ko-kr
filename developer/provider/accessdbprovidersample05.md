@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: a26661f2-a63c-4ca7-ad3e-dcb4d32ce5a1
 caps.latest.revision: 8
 ms.openlocfilehash: d7d6d3b377a0089bcf96d0ea46e866321441b537
-ms.sourcegitcommit: c581c4c8036edf55147e7bce4b00c860da6c5a8b
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56863789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081005"
 ---
 # <a name="accessdbprovidersample05"></a>AccessDBProviderSample05
 
 이 샘플에 대 한 호출을 지원 하기 위해 컨테이너 메서드를 덮어쓰는 방법을 보여 줍니다 합니다 `Move-Item` 고 `Join-Path` cmdlet. 이러한 메서드는 사용자가 컨테이너 내의 항목을 이동해야 하고 데이터 저장소에 중첩된 컨테이너가 포함되는 경우에 구현해야 합니다. 이 샘플의 공급자 클래스에서 파생 된 [System.Management.Automation.Provider.Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 클래스입니다.
 
-## <a name="demonstrates"></a>시연
+## <a name="demonstrates"></a>데모
 
 > [!IMPORTANT]
 > 공급자 클래스는 대부분 다음 클래스 중 하나에서 파생 되며 다른 공급자 인터페이스를 구현할 수 있습니다.

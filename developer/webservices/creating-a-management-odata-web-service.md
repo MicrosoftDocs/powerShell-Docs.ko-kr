@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 06b1b050-0bf7-48f5-ba05-43f489d597c0
 caps.latest.revision: 10
 ms.openlocfilehash: 476fce9fc087b870bad93a9204a820c5a84df99e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080699"
 ---
 # <a name="creating-a-management-odata-web-service"></a>관리 OData 웹 서비스 만들기
 

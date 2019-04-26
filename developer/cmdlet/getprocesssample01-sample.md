@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 7b48bf80-cbf0-4cb1-8d5b-3b8d06196598
 caps.latest.revision: 10
 ms.openlocfilehash: 00190c7350cb0f1cfc5c389b56e48e9397480446
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068065"
 ---
 # <a name="getprocesssample01-sample"></a>GetProcessSample01 샘플
 
@@ -68,7 +68,7 @@ ms.locfileid: "56859839"
 
 이 샘플에는 Windows PowerShell 1.0 이상이 필요합니다.
 
-## <a name="demonstrates"></a>시연
+## <a name="demonstrates"></a>데모
 
 이 샘플에는 다음 방법을 보여 줍니다.
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: e45929d1-bbb4-4dc6-892f-f9eacdb1c84c
 caps.latest.revision: 8
 ms.openlocfilehash: 553878c34e74129f9876cca25a5393cb0d53445a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067691"
 ---
 # <a name="input-filter-parameters"></a>입력 필터 매개 변수
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f2b58fa5-01bc-426c-a043-5c700d6578e9
 caps.latest.revision: 16
 ms.openlocfilehash: 443bf5f693d2ab161668de25a1097347826cb5c2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082037"
 ---
 # <a name="writing-help-for-windows-powershell-modules"></a>Windows PowerShell 모듈에 대한 도움말 작성
 

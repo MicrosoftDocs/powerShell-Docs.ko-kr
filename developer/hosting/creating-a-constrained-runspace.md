@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 59125e65-7030-40bb-9926-756120b2d952
 caps.latest.revision: 5
 ms.openlocfilehash: 29f1be6a1215219ddd16367a31f528a4f0dbc2e3
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57795133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083011"
 ---
 # <a name="creating-a-constrained-runspace"></a>제한된 runspace 만들기
 

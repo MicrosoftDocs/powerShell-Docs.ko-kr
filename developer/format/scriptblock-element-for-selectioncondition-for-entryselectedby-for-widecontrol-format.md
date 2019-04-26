@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 5ec68309-7826-4643-a521-e29c996663fb
 caps.latest.revision: 11
 ms.openlocfilehash: 649a978e21e9421a3f3e953261e1d309e23c3f9c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064325"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format"></a>WideControl에 대한 EntrySelectedBy의 SelectionCondition에 대한 ScriptBlock 요소(형식)
 
