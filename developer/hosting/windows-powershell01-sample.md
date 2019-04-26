@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f607a5ad-5372-4392-b2dc-ef3532fabd0f
 caps.latest.revision: 9
 ms.openlocfilehash: 7fafbc6bc19082abb8f37b68c031e0995bf879f6
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082535"
 ---
 # <a name="windows-powershell01-sample"></a>Windows PowerShell01 샘플
 
@@ -23,7 +23,7 @@ ms.locfileid: "56856829"
 
 이 샘플 Windows PowerShell 2.0이 필요 합니다.
 
-## <a name="demonstrates"></a>시연
+## <a name="demonstrates"></a>데모
 
 이 샘플에는 다음 방법을 보여 줍니다.
 

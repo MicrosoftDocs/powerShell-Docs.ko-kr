@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 47358eca-7719-4d77-9e49-676b78e25aec
 caps.latest.revision: 7
 ms.openlocfilehash: 66d32f1a5c4994ae578aea0a2a52c2510f97a3b9
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083589"
 ---
 # <a name="wraptables-element-format"></a>WrapTables 요소(형식)
 

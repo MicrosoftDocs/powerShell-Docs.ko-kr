@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d4e38235-9987-4347-afd2-0f7d1dc8f64a
 caps.latest.revision: 19
 ms.openlocfilehash: 77d328bc1cb8cb42d5a10f107a149c05ab270ce3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082110"
 ---
 # <a name="understanding-a-windows-powershell-module"></a>Windows PowerShell 모듈 이해
 

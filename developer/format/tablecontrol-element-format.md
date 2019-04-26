@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 1550b068-dfbc-4ae0-9aa1-72c9a680ec59
 caps.latest.revision: 15
 ms.openlocfilehash: 3942c008e026b0b99db3c77af4a0152b50fffc4e
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62063831"
 ---
 # <a name="tablecontrol-element-format"></a>TableControl 요소(형식)
 

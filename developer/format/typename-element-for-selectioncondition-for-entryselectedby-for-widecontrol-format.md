@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 6d6d43fa-c900-4e2f-952d-deccd584236f
 caps.latest.revision: 11
 ms.openlocfilehash: 6142350e3843a5feddcb5cee8901bbfa607d8d4c
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58056010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083810"
 ---
 # <a name="typename-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format"></a>WideControl에 대한 EntrySelectedBy의 SelectionCondition에 대한 TypeName 요소(형식)
 
