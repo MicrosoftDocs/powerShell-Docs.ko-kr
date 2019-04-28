@@ -34,11 +34,11 @@ ms.locfileid: "62086564"
 
 ## <a name="installing-preview-releases"></a>미리 보기 릴리스 설치
 
-패키지 리포지토리를 통해 Linux용 PowerShell Core 미리 보기 릴리스를 설치할 때 패키지 이름을 `powershell`에서 `powershell-preview`로 변경합니다.
+패키지 리포지토리를 통해 Linux용 PowerShell Core 미리 보기 버전을 설치하려면 패키지 이름을 `powershell`에서 `powershell-preview`로 변경하면 됩니다.
 
 직접 다운로드를 통한 설치는 파일 이름 외에는 변경되지 않습니다.
 
-다양한 패키지 관리자를 사용하여 안정적인 미리 보기 패키지를 설치하는 명령의 테이블은 다음과 같습니다.
+다양한 패키지 관리자를 사용하여 안정적인/미리 보기 버전 패키지를 설치하는 명령들은 다음과 같습니다.
 
 |배포|안정적인 명령 | 미리 보기 명령 |
 |---------------|---------------|-----------------|
@@ -50,7 +50,7 @@ ms.locfileid: "62086564"
 
 ### <a name="installation-via-package-repository---ubuntu-1404"></a>패키지 리포지토리를 통해 설치 - Ubuntu 14.04
 
-PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 패키지 리포지토리로 게시됩니다.
+PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 패키지 리포지토리에 게시됩니다.
 기본 설정 방법입니다.
 
 ```sh
@@ -99,7 +99,7 @@ sudo apt-get remove powershell
 
 ### <a name="installation-via-package-repository---ubuntu-1604"></a>패키지 리포지토리를 통해 설치 - Ubuntu 16.04
 
-PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 패키지 리포지토리로 게시됩니다.
+PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 패키지 리포지토리에 게시됩니다.
 기본 설정 방법입니다.
 
 ```sh
@@ -147,7 +147,7 @@ sudo apt-get remove powershell
 
 ### <a name="installation-via-package-repository---ubuntu-1804"></a>패키지 리포지토리를 통해 설치 - Ubuntu 18.04
 
-PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 패키지 리포지토리로 게시됩니다.
+PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 패키지 리포지토리에 게시됩니다.
 기본 설정 방법입니다.
 
 ```sh
@@ -197,7 +197,7 @@ sudo apt-get remove powershell
 ## <a name="ubuntu-1810"></a>Ubuntu 18.10
 
 > [!NOTE]
-> 18.10이 [중간 릴리스](https://www.ubuntu.com/about/release-cycle)이므로 [커뮤니티 지원](https://docs.microsoft.com/en-us/powershell/scripting/powershell-support-lifecycle?view=powershell-6)만 가능합니다.
+> 18.10이 [중간 릴리스](https://www.ubuntu.com/about/release-cycle)이므로 [커뮤니티 지원](https://docs.microsoft.com/en-us/powershell/scripting/powershell-support-lifecycle?view=powershell-6)만 지원됩니다.
 
 18.10의 설치는 `snapd`를 통해 지원됩니다. 전체 지침은 [맞춤 패키지][snap]를 참조하세요.
 
@@ -205,7 +205,7 @@ sudo apt-get remove powershell
 
 ### <a name="installation-via-package-repository---debian-8"></a>패키지 리포지토리를 통해 설치 - Debian 8
 
-PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 패키지 리포지토리로 게시됩니다.
+PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 패키지 리포지토리에 게시됩니다.
 기본 설정 방법입니다.
 
 ```sh
@@ -235,7 +235,7 @@ Microsoft 리포지토리를 superuser로 등록하고 나면 그 이후부터�
 
 ### <a name="installation-via-package-repository---debian-9"></a>패키지 리포지토리를 통해 설치 - Debian 9
 
-PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 패키지 리포지토리로 게시됩니다.
+PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 패키지 리포지토리에 게시됩니다.
 기본 설정 방법입니다.
 
 ```sh
@@ -286,7 +286,7 @@ sudo apt-get remove powershell
 
 ### <a name="installation-via-package-repository-preferred---centos-7"></a>패키지 리포지토리를 통해 설치(권장) - CentOS 7
 
-PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 공식 Microsoft 리포지토리로 게시됩니다.
+PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 공식 Microsoft 리포지토리에 게시됩니다.
 
 ```sh
 # Register the Microsoft RedHat repository
@@ -330,7 +330,7 @@ sudo yum remove powershell
 
 ### <a name="installation-via-package-repository-preferred---red-hat-enterprise-linux-rhel-7"></a>패키지 리포지토리(권장)를 통해 설치 - Red Hat Enterprise Linux(RHEL) 7
 
-PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 공식 Microsoft 리포지토리로 게시됩니다.
+PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 공식 Microsoft 리포지토리에 게시됩니다.
 
 ```sh
 # Register the Microsoft RedHat repository
@@ -433,7 +433,7 @@ rm -rf /usr/bin/pwsh /opt/microsoft/powershell
 
 ### <a name="installation-via-package-repository-preferred---fedora-27-fedora-28"></a>패키지 리포지토리를 통해 설치(권장) - Fedora 27, Fedora 28
 
-PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 공식 Microsoft 리포지토리로 게시됩니다.
+PowerShell Core for Linux는 간편한 설치(및 업데이트)를 위해 공식 Microsoft 리포지토리에 게시됩니다.
 
 ```sh
 # Register the Microsoft signature key
@@ -483,7 +483,7 @@ sudo dnf remove powershell
 ## <a name="arch-linux"></a>Arch Linux
 
 > [!NOTE]
-> Arch 지원은 실험적입니다.
+> 아치 리눅스 지원은 실험적입니다.
 
 PowerShell은 [Arch Linux][] 사용자 리포지토리(AUR)에 제공됩니다.
 
@@ -530,7 +530,7 @@ sudo snap install powershell-preview --classic
 pwsh-preview
 ```
 
-맞춤 설치를 자동으로 업그레이드한 후에 `sudo snap refresh powershell` 또는 `sudo snap refresh powershell-preview`를 사용하여 업그레이드를 트리거할 수 있습니다.
+설치 후 Snap은 자동으로 업그레이드하지만, `sudo snap refresh powershell` 또는 `sudo snap refresh powershell-preview`를 사용하여 업그레이드를 트리거할 수 있습니다.
 
 ### <a name="uninstallation"></a>제거
 
@@ -550,8 +550,8 @@ sudo snap remove powershell-preview
 
 ```sh
 # Download & Install prerequisites
-wget http://ftp.us.debian.org/debian/pool/main/i/icu/libicu57_57.1-9_amd64.deb
-dpkg -i libicu57_57.1-9_amd64.deb
+wget http://ftp.us.debian.org/debian/pool/main/i/icu/libicu57_57.1-6+deb9u2_amd64.deb
+dpkg -i libicu57_57.1-6+deb9u2_amd64.deb
 apt-get update && apt-get install -y curl gnupg apt-transport-https
 
 # Add Microsoft public repository key to APT
@@ -624,7 +624,7 @@ rm -rf ~/powershell
 
 ## <a name="binary-archives"></a>이진 아카이브
 
-고급 배포 시나리오를 지원하기 위해 Linux 플랫폼을 위한 PowerShell 이진 `tar.gz` 보관이 제공됩니다.
+고급 배포 시나리오를 지원하기 위해 Linux 플랫폼을 위한 PowerShell 이진 `tar.gz` 압축 파일이 제공됩니다.
 
 ### <a name="dependencies"></a>종속성
 
