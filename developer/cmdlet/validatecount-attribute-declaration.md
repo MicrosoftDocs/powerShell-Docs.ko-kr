@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 516af1ef-2c2e-408d-84bc-865f5bccf761
 caps.latest.revision: 11
 ms.openlocfilehash: ffc45f6b80a2b7ed22f27d083d042b1de7f353f6
-ms.sourcegitcommit: f4bd4e116e22c8b5bfcb61680a7c42e58b4da93e
-ms.translationtype: HT
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59983901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067181"
 ---
 # <a name="validatecount-attribute-declaration"></a>ValidateCount 특성 선언
 
