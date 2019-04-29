@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 6544070f-5549-407f-8603-5df60fe9e013
 caps.latest.revision: 7
 ms.openlocfilehash: 11804db56ec47554e82f04fe6954920ad9577370
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082433"
 ---
 # <a name="helpinfo-xml-sample-file"></a>HelpInfo XML 샘플 파일
 

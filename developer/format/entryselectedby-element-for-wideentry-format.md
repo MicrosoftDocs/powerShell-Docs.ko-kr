@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: e0c98933-b7a5-4205-b811-06c0b0bf8988
 caps.latest.revision: 9
 ms.openlocfilehash: 54c7c261a23075721cd7bce75e530150dc0e0212
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066178"
 ---
 # <a name="entryselectedby-element-for-wideentry-format"></a>WideEntry에 대한 EntrySelectedBy 요소(형식)
 
