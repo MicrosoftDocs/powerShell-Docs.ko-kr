@@ -299,7 +299,7 @@ sudo yum install -y powershell
 pwsh
 ```
 
-Microsoft 리포지토리를 superuser로 등록하고 나면 `sudo yum update powershell`을 사용하여 PowerShell을 업데이트해야 합니다.
+이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다. 그 이후에는 `sudo yum update powershell`을 사용하여 업데이트하면 됩니다.
 
 ### <a name="installation-via-direct-download---centos-7"></a>직접 다운로드를 통해 설치 - CentOS 7
 
@@ -343,7 +343,7 @@ sudo yum install -y powershell
 pwsh
 ```
 
-Microsoft 리포지토리를 superuser로 등록하고 나면 `sudo yum update powershell`을 사용하여 PowerShell을 업데이트해야 합니다.
+이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다. 그 이후에는 `sudo yum update powershell`을 사용하여 업데이트하면 됩니다.
 
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>직접 다운로드를 통해 설치 - Red Hat Enterprise Linux(RHEL) 7
 
@@ -504,7 +504,7 @@ AUR에서 패키지를 설치하는 방법에 대한 자세한 내용은 [Arch L
 
 ### <a name="getting-snapd"></a>snapd 가져오기
 
-`snapd`는 맞춤을 실행하는 데 필요합니다.
+`snapd`는 snap을 실행하는 데 필요합니다.
 [이러한 지침](https://docs.snapcraft.io/core/install)을 사용하여 `snapd`를 설치했는지 확인합니다.
 
 ### <a name="installation-via-snap"></a>맞춤을 통해 설치
