@@ -4,20 +4,20 @@ keywords: powershell,cmdlet
 title: 개체 정렬
 ms.assetid: 8530caa8-3ed4-4c56-aed7-1295dd9ba199
 ms.openlocfilehash: 06aa15d89888f1ecbe60b8e1dfb4efebb1d73673
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086054"
 ---
-# <a name="sorting-objects"></a><span data-ttu-id="902bd-103">개체 정렬</span><span class="sxs-lookup"><span data-stu-id="902bd-103">Sorting Objects</span></span>
+# <a name="sorting-objects"></a><span data-ttu-id="a3c2d-103">개체 정렬</span><span class="sxs-lookup"><span data-stu-id="a3c2d-103">Sorting Objects</span></span>
 
-<span data-ttu-id="902bd-104">표시 된 데이터를 사용 하 여 검사를 보다 쉽게 구성할 수 있습니다는 `Sort-Object` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="902bd-104">We can organize displayed data to make it easier to scan by using the `Sort-Object` cmdlet.</span></span> <span data-ttu-id="902bd-105">`Sort-Object` 정렬 기준으로 하나 이상의 속성 이름을 사용 하 고 이러한 속성의 값을 기준으로 정렬 된 데이터를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="902bd-105">`Sort-Object` takes the name of one or more properties to sort on, and returns data sorted by the values of those properties.</span></span>
+<span data-ttu-id="a3c2d-104">`Sort-Object` cmdlet을 사용하여 표시된 데이터를 검색하기 쉽게 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-104">We can organize displayed data to make it easier to scan by using the `Sort-Object` cmdlet.</span></span> <span data-ttu-id="a3c2d-105">`Sort-Object`는 정렬 기준으로 사용할 하나 이상의 속성 이름을 선택하고 이러한 속성의 값을 기준으로 정렬된 데이터를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-105">`Sort-Object` takes the name of one or more properties to sort on, and returns data sorted by the values of those properties.</span></span>
 
-## <a name="basic-sorting"></a><span data-ttu-id="902bd-106">기본 정렬</span><span class="sxs-lookup"><span data-stu-id="902bd-106">Basic sorting</span></span>
+## <a name="basic-sorting"></a><span data-ttu-id="a3c2d-106">기본 정렬</span><span class="sxs-lookup"><span data-stu-id="a3c2d-106">Basic sorting</span></span>
 
-<span data-ttu-id="902bd-107">현재 디렉터리의 파일과 하위 디렉터리를 나열 하는 문제를 고려해 야 합니다.</span><span class="sxs-lookup"><span data-stu-id="902bd-107">Consider the problem of listing subdirectories and files in the current directory.</span></span>
-<span data-ttu-id="902bd-108">기준으로 정렬 하고자 하는 경우 **LastWriteTime** 한 다음 **이름**를 입력 하 여 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="902bd-108">If we want to sort by **LastWriteTime** and then by **Name**, we can do it by typing:</span></span>
+<span data-ttu-id="a3c2d-107">현재 디렉터리의 하위 디렉터리 및 파일 나열 관련 문제를 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-107">Consider the problem of listing subdirectories and files in the current directory.</span></span>
+<span data-ttu-id="a3c2d-108">정렬 기준으로 **LastWriteTime**과 **Name**을 차례로 사용하여 정렬하려면 다음과 같이 입력하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-108">If we want to sort by **LastWriteTime** and then by **Name**, we can do it by typing:</span></span>
 
 ```powershell
 Get-ChildItem |
@@ -40,7 +40,7 @@ LastWriteTime          Name
 ...
 ```
 
-<span data-ttu-id="902bd-109">지정 하 여 개체를 반대 순서로 정렬할 수도 있습니다는 **Descending** 스위치 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="902bd-109">You can also sort the objects in reverse order by specifying the **Descending** switch parameter.</span></span>
+<span data-ttu-id="a3c2d-109">또한 **Descending** 스위치 매개 변수를 지정하여 개체를 반대 순서로 정렬할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-109">You can also sort the objects in reverse order by specifying the **Descending** switch parameter.</span></span>
 
 ```powershell
 Get-ChildItem |
@@ -65,14 +65,14 @@ LastWriteTime          Name
 11/6/2017 10:10:11 AM  .localization-config
 ```
 
-## <a name="using-hash-tables"></a><span data-ttu-id="902bd-110">해시 테이블을 사용 하 여</span><span class="sxs-lookup"><span data-stu-id="902bd-110">Using hash tables</span></span>
+## <a name="using-hash-tables"></a><span data-ttu-id="a3c2d-110">해시 테이블 사용</span><span class="sxs-lookup"><span data-stu-id="a3c2d-110">Using hash tables</span></span>
 
-<span data-ttu-id="902bd-111">배열에서 해시 테이블을 사용 하 여 서로 다른 속성에서 서로 다른 순서로 정렬할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="902bd-111">You can sort different properties in different orders by using hash tables in an array.</span></span>
-<span data-ttu-id="902bd-112">각 해시 테이블에서 사용 하는 **식** 속성 이름을 문자열로 지정 하는 키와 **오름차순** 또는 **내림차순** 하 여 정렬 순서를 지정 하는 키 `$true` 또는 `$false`.</span><span class="sxs-lookup"><span data-stu-id="902bd-112">Each hash table uses an **Expression** key to specify the property name as string and an **Ascending** or **Descending** key to specify the sort order by `$true` or `$false`.</span></span>
-<span data-ttu-id="902bd-113">합니다 **식** 키는 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="902bd-113">The **Expression** key is mandatory.</span></span>
-<span data-ttu-id="902bd-114">**오름차순** 하거나 **내림차순** 키는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="902bd-114">The **Ascending** or **Descending** key is optional.</span></span>
+<span data-ttu-id="a3c2d-111">배열에서 해시 테이블을 사용하여 여러 가지 속성을 다양한 순서로 정렬할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-111">You can sort different properties in different orders by using hash tables in an array.</span></span>
+<span data-ttu-id="a3c2d-112">각 해시 테이블은 **Expression** 키를 사용하여 속성 이름을 문자열로 지정하고 **Ascending** 또는 **Descending** 키를 사용하여 `$true` 또는 `$false`를 기준으로 정렬 순서를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-112">Each hash table uses an **Expression** key to specify the property name as string and an **Ascending** or **Descending** key to specify the sort order by `$true` or `$false`.</span></span>
+<span data-ttu-id="a3c2d-113">**Expression** 키는 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-113">The **Expression** key is mandatory.</span></span>
+<span data-ttu-id="a3c2d-114">**Ascending** 또는 **Descending** 키는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-114">The **Ascending** or **Descending** key is optional.</span></span>
 
-<span data-ttu-id="902bd-115">다음 예제에서는 개체를 내림차순으로 정렬 **LastWriteTime** 주문과 오름차순 **이름** 순서입니다.</span><span class="sxs-lookup"><span data-stu-id="902bd-115">The following example sorts objects in descending **LastWriteTime** order and ascending **Name** order.</span></span>
+<span data-ttu-id="a3c2d-115">다음 예제에서는 내림차순 **LastWriteTime** 및 오름차순 **Name**으로 개체를 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-115">The following example sorts objects in descending **LastWriteTime** order and ascending **Name** order.</span></span>
 
 ```powershell
 Get-ChildItem |
@@ -92,10 +92,10 @@ LastWriteTime          Name
 ...
 ```
 
-<span data-ttu-id="902bd-116">Scriptblock 설정할 수도 있습니다는 **식** 키입니다.</span><span class="sxs-lookup"><span data-stu-id="902bd-116">You can also set a scriptblock to the **Expression** key.</span></span>
-<span data-ttu-id="902bd-117">실행 하는 경우는 `Sort-Object` cmdlet는 scriptblock 실행 되 고 정렬에 대 한 결과 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="902bd-117">When running the `Sort-Object` cmdlet, the scriptblock is executed and the result is used for sorting.</span></span>
+<span data-ttu-id="a3c2d-116">scriptblock을 **Expression** 키로 설정할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-116">You can also set a scriptblock to the **Expression** key.</span></span>
+<span data-ttu-id="a3c2d-117">`Sort-Object` cmdlet을 실행하면 scriptblock이 실행되고 결과가 정렬에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-117">When running the `Sort-Object` cmdlet, the scriptblock is executed and the result is used for sorting.</span></span>
 
-<span data-ttu-id="902bd-118">다음 예제에서는 개체를 사이의 시간 범위를 기준으로 내림차순으로 정렬 **CreationTime** 하 고 **LastWriteTime**합니다.</span><span class="sxs-lookup"><span data-stu-id="902bd-118">The following example sorts objects in descending order by the time span between **CreationTime** and **LastWriteTime**.</span></span>
+<span data-ttu-id="a3c2d-118">다음 예제에서는 **CreationTime** 및 **LastWriteTime** 사이의 시간 간격을 기준으로 개체를 내림차순으로 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-118">The following example sorts objects in descending order by the time span between **CreationTime** and **LastWriteTime**.</span></span>
 
 ```powershell
 Get-ChildItem |
@@ -117,29 +117,29 @@ LastWriteTime          CreationTime
 ...
 ```
 
-## <a name="tips"></a><span data-ttu-id="902bd-119">팁</span><span class="sxs-lookup"><span data-stu-id="902bd-119">Tips</span></span>
+## <a name="tips"></a><span data-ttu-id="a3c2d-119">팁</span><span class="sxs-lookup"><span data-stu-id="a3c2d-119">Tips</span></span>
 
-<span data-ttu-id="902bd-120">생략할 수 있습니다 합니다 **속성** 다음과 같이 매개 변수 이름:</span><span class="sxs-lookup"><span data-stu-id="902bd-120">You can omit the **Property** parameter name as following:</span></span>
+<span data-ttu-id="a3c2d-120">다음과 같이 **Property** 매개 변수 이름을 생략할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-120">You can omit the **Property** parameter name as following:</span></span>
 
 ```powershell
 Sort-Object LastWriteTime, Name
 ```
 
-<span data-ttu-id="902bd-121">게다가를 참조할 수 있습니다 `Sort-Object` 해당 기본 제공 별칭 `sort`:</span><span class="sxs-lookup"><span data-stu-id="902bd-121">Besides, you can refer to `Sort-Object` by its built-in alias, `sort`:</span></span>
+<span data-ttu-id="a3c2d-121">또한 기본 제공 별칭 `sort`를 통해 `Sort-Object`를 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-121">Besides, you can refer to `Sort-Object` by its built-in alias, `sort`:</span></span>
 
 ```powershell
 sort LastWriteTime, Name
 ```
 
-<span data-ttu-id="902bd-122">다음과 같이 정렬에 대 한 해시 테이블의 키를 축약할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="902bd-122">The keys in the hash tables for sorting can be abbreviated as following:</span></span>
+<span data-ttu-id="a3c2d-122">정렬을 위한 해시 테이블의 키는 다음과 같이 약식으로 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-122">The keys in the hash tables for sorting can be abbreviated as following:</span></span>
 
 ```powershell
 Sort-Object @{ e = 'LastWriteTime'; d = $true }, @{ e = 'Name'; a = $true }
 ```
 
-<span data-ttu-id="902bd-123">이 예제에서는 합니다 **e** 는 의미 **식**, **d** 는 의미 **내림차순**, 및 **를** 에 대 한 의미 **오름차순**합니다.</span><span class="sxs-lookup"><span data-stu-id="902bd-123">In this example, the **e** stands for **Expression**, the **d** stands for **Descending**, and the **a** stands for **Ascending**.</span></span>
+<span data-ttu-id="a3c2d-123">이 예제에서 **e**는 **Expression**을 나타내고, **d**는 **Descending**을 나타내고, **a**는 **Ascending**을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-123">In this example, the **e** stands for **Expression**, the **d** stands for **Descending**, and the **a** stands for **Ascending**.</span></span>
 
-<span data-ttu-id="902bd-124">가독성을 높이기를 별도 변수에 해시 테이블을 배치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="902bd-124">To improve readability, you can place the hash tables into a separate variable:</span></span>
+<span data-ttu-id="a3c2d-124">가독성을 개선하기 위해 해시 테이블을 개별 변수에 넣을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a3c2d-124">To improve readability, you can place the hash tables into a separate variable:</span></span>
 
 ```powershell
 $order = @(

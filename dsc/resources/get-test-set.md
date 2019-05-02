@@ -1,23 +1,23 @@
 ---
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
-title: 가져오기-테스트-설정
+title: Get-Test-Set
 ms.openlocfilehash: 6d059518a49926bc5fb56e37e7d3d4d2c66bddec
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076602"
 ---
-# <a name="get-test-set"></a><span data-ttu-id="6b081-103">가져오기-테스트-설정</span><span class="sxs-lookup"><span data-stu-id="6b081-103">Get-Test-Set</span></span>
+# <a name="get-test-set"></a><span data-ttu-id="29158-103">Get-Test-Set</span><span class="sxs-lookup"><span data-stu-id="29158-103">Get-Test-Set</span></span>
 
-><span data-ttu-id="6b081-104">적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="6b081-104">Applies To: Windows PowerShell 4.0, Windows PowerShell 5.0</span></span>
+><span data-ttu-id="29158-104">적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="29158-104">Applies To: Windows PowerShell 4.0, Windows PowerShell 5.0</span></span>
 
 ![가져오기, 테스트 및 설정](/media/get-test-set.png)
 
-<span data-ttu-id="6b081-106">PowerShell Desired State Configuration 주위에 생성 된 **가져오기**, **테스트**, 및 **설정** 프로세스.</span><span class="sxs-lookup"><span data-stu-id="6b081-106">PowerShell Desired State Configuration is constructed around a **Get**, **Test**, and **Set** process.</span></span> <span data-ttu-id="6b081-107">DSC [리소스](resources.md) 각각 이러한 각 작업을 완료 하는 메서드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-107">DSC [resources](resources.md) each contains methods to complete each of these operations.</span></span> <span data-ttu-id="6b081-108">에 [구성](../configurations/configurations.md), 리소스 블록을 리소스에 대 한 매개 변수는 키 입력을 정의한 **가져오기**를 **테스트**, 및 **설정** 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-108">In a [Configuration](../configurations/configurations.md), you define resource blocks to fill in keys that become parameters for a resource's **Get**, **Test**, and **Set** methods.</span></span>
+<span data-ttu-id="29158-106">PowerShell Desired State Configuration은 **Get**, **Test** 및 **Set** 프로세스 주위에 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="29158-106">PowerShell Desired State Configuration is constructed around a **Get**, **Test**, and **Set** process.</span></span> <span data-ttu-id="29158-107">DSC [리소스](resources.md)에는 각각 이와 같은 각 작업을 완료하는 메서드가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="29158-107">DSC [resources](resources.md) each contains methods to complete each of these operations.</span></span> <span data-ttu-id="29158-108">[구성](../configurations/configurations.md)에서 리소스 블록을 정의하여 리소스의 **Get**, **Test** 및 **Set** 메서드에 대한 매개 변수가 되는 키를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="29158-108">In a [Configuration](../configurations/configurations.md), you define resource blocks to fill in keys that become parameters for a resource's **Get**, **Test**, and **Set** methods.</span></span>
 
-<span data-ttu-id="6b081-109">에 대 한 구문은이 **서비스** 리소스 블록.</span><span class="sxs-lookup"><span data-stu-id="6b081-109">This is the syntax for a **Service** resource block.</span></span> <span data-ttu-id="6b081-110">합니다 **서비스** 리소스는 Windows 서비스를 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-110">The **Service** resource configures Windows services.</span></span>
+<span data-ttu-id="29158-109">이 구문은 **Service** 리소스 블록의 구문입니다.</span><span class="sxs-lookup"><span data-stu-id="29158-109">This is the syntax for a **Service** resource block.</span></span> <span data-ttu-id="29158-110">**Service** 리소스는 Windows 서비스를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="29158-110">The **Service** resource configures Windows services.</span></span>
 
 ```syntax
 Service [String] #ResourceName
@@ -37,7 +37,7 @@ Service [String] #ResourceName
 }
 ```
 
-<span data-ttu-id="6b081-111">**가져오기**, **테스트**, 및 **설정** 메서드를 **서비스** 리소스 이러한 값을 허용 하는 매개 변수 블록을 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-111">The **Get**, **Test**, and **Set** methods of the **Service** resource will have parameter blocks that accept these values.</span></span>
+<span data-ttu-id="29158-111">**Service** 리소스의 **Get**, **Test** 및 **Set** 메서드에는 이 값을 허용하는 매개 변수 블록이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="29158-111">The **Get**, **Test**, and **Set** methods of the **Service** resource will have parameter blocks that accept these values.</span></span>
 
 ```powershell
     param
@@ -86,9 +86,9 @@ Service [String] #ResourceName
 ```
 
 > [!NOTE]
-> <span data-ttu-id="6b081-112">언어 및 리소스를 정의 하는 데 사용 되는 메서드를 결정 하는 방법을 **가져옵니다**, **테스트**, 및 **설정** 메서드 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-112">The language and method used to define the resource determines how the **Get**, **Test**, and **Set** methods will be defined.</span></span>
+> <span data-ttu-id="29158-112">리소스를 정의하는 데 사용되는 언어 및 메서드에 따라 **Get**, **Test** 및 **Set** 메서드를 정의하는 방법이 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="29158-112">The language and method used to define the resource determines how the **Get**, **Test**, and **Set** methods will be defined.</span></span>
 
-<span data-ttu-id="6b081-113">때문에 합니다 **서비스** 리소스에만 필수 키에 (`Name`), **서비스** 블록 리소스는이 처럼 간단할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-113">Because the **Service** resource only has one required key (`Name`), a **Service** block resource could be as simple as this:</span></span>
+<span data-ttu-id="29158-113">**Service** 리소스에는 하나의 필수 키(`Name`)만 있으므로 **Service** 블록 리소스는 다음과 같이 간단할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="29158-113">Because the **Service** resource only has one required key (`Name`), a **Service** block resource could be as simple as this:</span></span>
 
 ```powershell
 Configuration TestConfig
@@ -104,7 +104,7 @@ Configuration TestConfig
 }
 ```
 
-<span data-ttu-id="6b081-114">위의 구성을 컴파일하는 경우 키에 대 한 지정 된 값이 생성 되는 ".mof" 파일에 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-114">When you compile the Configuration above, the values you specify for a key are stored in the ".mof" file that is generated.</span></span> <span data-ttu-id="6b081-115">자세한 내용은 [MOF](/windows/desktop/wmisdk/managed-object-format--mof-)합니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-115">For more information, see [MOF](/windows/desktop/wmisdk/managed-object-format--mof-).</span></span>
+<span data-ttu-id="29158-114">위의 구성을 컴파일하면 키에 지정하는 값이 생성된 ".mof" 파일에 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="29158-114">When you compile the Configuration above, the values you specify for a key are stored in the ".mof" file that is generated.</span></span> <span data-ttu-id="29158-115">자세한 내용은 [MOF](/windows/desktop/wmisdk/managed-object-format--mof-)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="29158-115">For more information, see [MOF](/windows/desktop/wmisdk/managed-object-format--mof-).</span></span>
 
 ```
 instance of MSFT_ServiceResource as $MSFT_ServiceResource1ref
@@ -121,15 +121,15 @@ ModuleVersion = "1.0";
 };
 ```
 
-<span data-ttu-id="6b081-116">적용 하는 경우는 [로컬 구성 관리자](../managing-nodes/metaConfig.md) "Spooler" 값 ".mof" 파일에서 읽고에 전달 합니다 `-Name` 의 매개 변수를 **가져오기**, **테스트**, 및 **설정할** "MyService" 인스턴스에 대 한 메서드는 **서비스** 리소스입니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-116">When applied, the [Local Configuration Manager](../managing-nodes/metaConfig.md) will read the value "Spooler" from the ".mof" file, and pass it to the `-Name` parameter of the **Get**, **Test**, and **Set** methods for the "MyService" instance of the **Service** resource.</span></span>
+<span data-ttu-id="29158-116">적용되면 [로컬 구성 관리자](../managing-nodes/metaConfig.md)가 “.mof” 파일에서 “Spooler” 값을 읽고 **Service** 리소스의 “MyService” 인스턴스에 대한 **Get**, **Test** 및 **Set**의 `-Name` 매개 변수에 이 값을 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="29158-116">When applied, the [Local Configuration Manager](../managing-nodes/metaConfig.md) will read the value "Spooler" from the ".mof" file, and pass it to the `-Name` parameter of the **Get**, **Test**, and **Set** methods for the "MyService" instance of the **Service** resource.</span></span>
 
-## <a name="get"></a><span data-ttu-id="6b081-117">get</span><span class="sxs-lookup"><span data-stu-id="6b081-117">Get</span></span>
+## <a name="get"></a><span data-ttu-id="29158-117">get</span><span class="sxs-lookup"><span data-stu-id="29158-117">Get</span></span>
 
-<span data-ttu-id="6b081-118">합니다 **가져올** 메서드는 리소스의 대상 노드에 구성 된 대로 리소스의 상태를 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-118">The **Get** method of a resource, retrieves the state of the resource as it is configured on the target Node.</span></span> <span data-ttu-id="6b081-119">이 상태로 반환 되는 [hashtable](/powershell/module/microsoft.powershell.core/about/about_hash_tables).</span><span class="sxs-lookup"><span data-stu-id="6b081-119">This state is returned as a [hashtable](/powershell/module/microsoft.powershell.core/about/about_hash_tables).</span></span> <span data-ttu-id="6b081-120">키를 **hashtable** 됩니다 구성 가능한 값 또는 매개 변수는 리소스를 허용 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-120">The keys of the **hashtable** will be the configurable values, or parameters, the resource accepts.</span></span>
+<span data-ttu-id="29158-118">리소스의 **Get** 메서드는 대상 노드에서 구성되어 있는 리소스의 상태를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="29158-118">The **Get** method of a resource, retrieves the state of the resource as it is configured on the target Node.</span></span> <span data-ttu-id="29158-119">이 상태는 [해시 테이블](/powershell/module/microsoft.powershell.core/about/about_hash_tables)로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="29158-119">This state is returned as a [hashtable](/powershell/module/microsoft.powershell.core/about/about_hash_tables).</span></span> <span data-ttu-id="29158-120">**해시 테이블**의 키는 구성 가능한 값이거나 리소스가 허용하는 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="29158-120">The keys of the **hashtable** will be the configurable values, or parameters, the resource accepts.</span></span>
 
-<span data-ttu-id="6b081-121">**가져오기** 메서드를 직접 매핑합니다 합니다 [Get-dscconfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration) cmdlet.</span><span class="sxs-lookup"><span data-stu-id="6b081-121">The **Get** method maps directly to the [Get-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration) cmdlet.</span></span> <span data-ttu-id="6b081-122">호출 하는 경우 `Get-DSCConfiguration`, LCM 실행 합니다 **가져올** 현재 적용된 된 구성의 각 리소스는 메서드.</span><span class="sxs-lookup"><span data-stu-id="6b081-122">When you call `Get-DSCConfiguration`, the LCM runs the **Get** method of each resource in the currently applied configuration.</span></span> <span data-ttu-id="6b081-123">LCM는 각 해당 리소스 인스턴스에 대 한 매개 변수로 ".mof" 파일에 저장 된 키 값을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-123">The LCM uses the key values stored in the ".mof" file as parameters to each corresponding resource instance.</span></span>
+<span data-ttu-id="29158-121">**Get** 메서드는 [Get-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration) cmdlet에 직접 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="29158-121">The **Get** method maps directly to the [Get-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration) cmdlet.</span></span> <span data-ttu-id="29158-122">`Get-DSCConfiguration`을 호출하면 LCM은 현재 적용된 구성에서 각 리소스의 **Get** 메서드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="29158-122">When you call `Get-DSCConfiguration`, the LCM runs the **Get** method of each resource in the currently applied configuration.</span></span> <span data-ttu-id="29158-123">LCM은 ".mof" 파일에 저장된 키 값을 각 해당 리소스 인스턴스의 매개 변수로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="29158-123">The LCM uses the key values stored in the ".mof" file as parameters to each corresponding resource instance.</span></span>
 
-<span data-ttu-id="6b081-124">샘플 출력은이 **서비스** "Spooler" 서비스를 구성 하는 리소스입니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-124">This is sample output from a **Service** resource that configures the "Spooler" service.</span></span>
+<span data-ttu-id="29158-124">이 출력은 “Spooler” 서비스를 구성하는 **Service** 리소스의 샘플 출력입니다.</span><span class="sxs-lookup"><span data-stu-id="29158-124">This is sample output from a **Service** resource that configures the "Spooler" service.</span></span>
 
 ```output
 ConfigurationName    : Test
@@ -155,7 +155,7 @@ PSComputerName       :
 CimClassName         : MSFT_ServiceResource
 ```
 
-<span data-ttu-id="6b081-125">출력의 현재 값 속성을 구성할 수 있습니다 표시 합니다 **서비스** 리소스입니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-125">The output shows the current value properties configurable by the **Service** resource.</span></span>
+<span data-ttu-id="29158-125">출력에는 **Service** 리소스에서 구성 가능한 현재 값 속성이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="29158-125">The output shows the current value properties configurable by the **Service** resource.</span></span>
 
 ```syntax
 Service [String] #ResourceName
@@ -175,12 +175,12 @@ Service [String] #ResourceName
 }
 ```
 
-## <a name="test"></a><span data-ttu-id="6b081-126">테스트</span><span class="sxs-lookup"><span data-stu-id="6b081-126">Test</span></span>
+## <a name="test"></a><span data-ttu-id="29158-126">테스트</span><span class="sxs-lookup"><span data-stu-id="29158-126">Test</span></span>
 
-<span data-ttu-id="6b081-127">합니다 **테스트** 메서드는 리소스의 대상 노드 리소스의 현재 호환 되는 경우 결정 *필요한 상태*합니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-127">The **Test** method of a resource determines if the target node is currently compliant with the resource's *desired state*.</span></span> <span data-ttu-id="6b081-128">합니다 **테스트** 메서드가 반환 `$True` 또는 `$False` 노드 규격 인지 여부를 나타낼 때만 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-128">The **Test** method returns `$True` or `$False` only to indicate whether the Node is compliant.</span></span>
-<span data-ttu-id="6b081-129">호출 하는 경우 [Test-dscconfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration), LCM 호출 합니다 **테스트** 현재 적용된 된 구성의 각 리소스는 메서드.</span><span class="sxs-lookup"><span data-stu-id="6b081-129">When you call [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration), the LCM calls the **Test** method of each resource in the currently applied configuration.</span></span> <span data-ttu-id="6b081-130">LCM는 각 해당 리소스 인스턴스에 대 한 매개 변수로 ".mof" 파일에 저장 된 키 값을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-130">The LCM uses the key values stored in the ".mof" file as parameters to each corresponding resource instance.</span></span>
+<span data-ttu-id="29158-127">리소스의 **Test** 메서드는 대상 노드가 현재 리소스의 ‘원하는 상태’를 준수하는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="29158-127">The **Test** method of a resource determines if the target node is currently compliant with the resource's *desired state*.</span></span> <span data-ttu-id="29158-128">**Test** 메서드는 `$True` 또는 `$False`만 반환하여 노드의 준수 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="29158-128">The **Test** method returns `$True` or `$False` only to indicate whether the Node is compliant.</span></span>
+<span data-ttu-id="29158-129">[Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)을 호출하면 LCM은 현재 적용된 구성에서 각 리소스의 **Test** 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="29158-129">When you call [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration), the LCM calls the **Test** method of each resource in the currently applied configuration.</span></span> <span data-ttu-id="29158-130">LCM은 ".mof" 파일에 저장된 키 값을 각 해당 리소스 인스턴스의 매개 변수로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="29158-130">The LCM uses the key values stored in the ".mof" file as parameters to each corresponding resource instance.</span></span>
 
-<span data-ttu-id="6b081-131">경우 모든 개별 리소스의 결과인 **테스트** 는 `$False`, `Test-DSCConfiguration` 반환 `$False` 노드 규격 임을 나타내는입니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-131">If the result of any individual resource's **Test** is `$False`, `Test-DSCConfiguration` returns `$False` indicating that the Node is not compliant.</span></span> <span data-ttu-id="6b081-132">경우 모든 리소스 **테스트** 메서드는 반환 `$True`, `Test-DSCConfiguration` 반환 `$True` 노드 규격 임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-132">If all resource's **Test** methods return `$True`, `Test-DSCConfiguration` returns `$True` to indicate that the Node is compliant.</span></span>
+<span data-ttu-id="29158-131">개별 리소스 **Test**의 결과가 `$False`이면 `Test-DSCConfiguration`은 노드가 준수하지 않음을 나타내는 `$False`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="29158-131">If the result of any individual resource's **Test** is `$False`, `Test-DSCConfiguration` returns `$False` indicating that the Node is not compliant.</span></span> <span data-ttu-id="29158-132">모든 리소스 **Test** 메서드가 `$True`를 반환하면 `Test-DSCConfiguration`은 노드가 준수함을 나타내는 `$True`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="29158-132">If all resource's **Test** methods return `$True`, `Test-DSCConfiguration` returns `$True` to indicate that the Node is compliant.</span></span>
 
 ```powershell
 Test-DSCConfiguration
@@ -190,7 +190,7 @@ Test-DSCConfiguration
 True
 ```
 
-<span data-ttu-id="6b081-133">PowerShell 5.0부터는 `-Detailed` 매개 변수 추가 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-133">Beginning in PowerShell 5.0, the `-Detailed` parameter was added.</span></span> <span data-ttu-id="6b081-134">지정 `-Detailed` 하면 `Test-DSCConfiguration` 호환 및 호환 되지 않는 리소스에 대 한 결과의 컬렉션을 포함 하는 개체를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-134">Specifying `-Detailed` causes `Test-DSCConfiguration` to return an object containing collections of results for compliant, and non-compliant resources.</span></span>
+<span data-ttu-id="29158-133">PowerShell 5.0부터, `-Detailed` 매개 변수가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="29158-133">Beginning in PowerShell 5.0, the `-Detailed` parameter was added.</span></span> <span data-ttu-id="29158-134">`-Detailed`를 지정하면 `Test-DSCConfiguration`에서 준수 및 비준수 리소스에 대한 결과 컬렉션을 포함하는 개체가 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="29158-134">Specifying `-Detailed` causes `Test-DSCConfiguration` to return an object containing collections of results for compliant, and non-compliant resources.</span></span>
 
 ```powershell
 Test-DSCConfiguration -Detailed
@@ -202,13 +202,13 @@ PSComputerName  ResourcesInDesiredState        ResourcesNotInDesiredState     In
 localhost       {[Service]Spooler}                                            True
 ```
 
-<span data-ttu-id="6b081-135">자세한 내용은 참조 하세요. [Test-dscconfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)</span><span class="sxs-lookup"><span data-stu-id="6b081-135">For more information, see [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)</span></span>
+<span data-ttu-id="29158-135">자세한 내용은 [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="29158-135">For more information, see [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)</span></span>
 
-## <a name="set"></a><span data-ttu-id="6b081-136">Set(영문)</span><span class="sxs-lookup"><span data-stu-id="6b081-136">Set</span></span>
+## <a name="set"></a><span data-ttu-id="29158-136">Set(영문)</span><span class="sxs-lookup"><span data-stu-id="29158-136">Set</span></span>
 
-<span data-ttu-id="6b081-137">합니다 **설정** 메서드는 리소스의 노드 리소스의 준수를 강제로 시도할지 *필요한 상태*합니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-137">The **Set** method of a resource attempts to force the Node to become compliant with the resource's *desired state*.</span></span> <span data-ttu-id="6b081-138">합니다 **설정** 메서드를 사용할 계획이 **idempotent**, 즉 **설정** 여러 번 실행 하 고 항상 오류 없이 같은 결과 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-138">The **Set** method is meant to be **idempotent**, which means that **Set** could be run multiple times and always get the same result without errors.</span></span>  <span data-ttu-id="6b081-139">실행할 때 [Start-dscconfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration), 각 리소스에 현재 적용된 된 구성 LCM 순환 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-139">When you run [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration), the LCM cycles through each resource in the currently applied configuration.</span></span> <span data-ttu-id="6b081-140">LCM ".mof" 파일에서 현재 리소스 인스턴스에 대 한 키 값을 검색 하 고 매개 변수로 사용 하 여 **테스트** 메서드.</span><span class="sxs-lookup"><span data-stu-id="6b081-140">The LCM retrieves key values for the current resource instance from the ".mof" file and uses them as parameters for the **Test** method.</span></span> <span data-ttu-id="6b081-141">경우는 **테스트** 메서드가 반환 `$True`, 노드는 현재 리소스, 호환 및 **설정** 메서드를 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-141">If the **Test** method returns `$True`, the Node is compliant with the current resource, and the **Set** method is skipped.</span></span> <span data-ttu-id="6b081-142">경우는 **테스트** 반환 `$False`, 노드인 비준수입니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-142">If the **Test** returns `$False`, the Node is non-compliant.</span></span>  <span data-ttu-id="6b081-143">LCM은 리소스 인스턴스의 키 값 매개 변수로 전달 리소스의 **설정** 메서드를 준수 하려면 노드를 복원 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-143">The LCM passes the resource instance's key values as parameters to the resource's **Set** method, restoring the Node to compliance.</span></span>
+<span data-ttu-id="29158-137">리소스의 **Set** 메서드는 노드가 리소스의 ‘원하는 상태’를 강제로 준수하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="29158-137">The **Set** method of a resource attempts to force the Node to become compliant with the resource's *desired state*.</span></span> <span data-ttu-id="29158-138">**Set** 메서드는 **멱등성(idempotent)** 이 되어야 합니다. 이는 **Set**이 여러 번 실행되고 오류 없이 항상 동일한 결과를 가져올 수 있음을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="29158-138">The **Set** method is meant to be **idempotent**, which means that **Set** could be run multiple times and always get the same result without errors.</span></span>  <span data-ttu-id="29158-139">[Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration)을 실행하면 LCM은 현재 적용된 구성에서 각 리소스를 순환합니다.</span><span class="sxs-lookup"><span data-stu-id="29158-139">When you run [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration), the LCM cycles through each resource in the currently applied configuration.</span></span> <span data-ttu-id="29158-140">LCM은 “.mof” 파일에서 현재 리소스 인스턴스의 키 값을 검색하고 **Test** 메서드의 매개 변수로 이 값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="29158-140">The LCM retrieves key values for the current resource instance from the ".mof" file and uses them as parameters for the **Test** method.</span></span> <span data-ttu-id="29158-141">**Test** 메서드가 `$True`를 반환하면 노드는 현재 리소스를 준수하고 **Set** 메서드를 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="29158-141">If the **Test** method returns `$True`, the Node is compliant with the current resource, and the **Set** method is skipped.</span></span> <span data-ttu-id="29158-142">**Test**가 `$False`를 반환하면 노드는 비준수 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="29158-142">If the **Test** returns `$False`, the Node is non-compliant.</span></span>  <span data-ttu-id="29158-143">LCM은 리소스 인스턴스의 키 값을 매개 변수로 리소스의 **Set** 메서드에 전달하여 노드를 준수 상태로 복원합니다.</span><span class="sxs-lookup"><span data-stu-id="29158-143">The LCM passes the resource instance's key values as parameters to the resource's **Set** method, restoring the Node to compliance.</span></span>
 
-<span data-ttu-id="6b081-144">지정 하 여 합니다 `-Verbose` 하 고 `-Wait` 매개 변수에서의 진행률을 확인할 수 있습니다는 `Start-DSCConfiguration` cmdlet.</span><span class="sxs-lookup"><span data-stu-id="6b081-144">By specifying the `-Verbose` and `-Wait` parameters, you can watch the progress of the `Start-DSCConfiguration` cmdlet.</span></span> <span data-ttu-id="6b081-145">이 예제에서는 노드 준수 이미 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-145">In this example, the Node is already compliant.</span></span> <span data-ttu-id="6b081-146">합니다 `Verbose` 나타내는 출력을 **설정** 메서드 작업을 건너뛰었습니다.</span><span class="sxs-lookup"><span data-stu-id="6b081-146">The `Verbose` output indicates that the **Set** method was skipped.</span></span>
+<span data-ttu-id="29158-144">`-Verbose` 및 `-Wait` 매개 변수를 지정하여 `Start-DSCConfiguration` cmdlet의 진행 상태를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="29158-144">By specifying the `-Verbose` and `-Wait` parameters, you can watch the progress of the `Start-DSCConfiguration` cmdlet.</span></span> <span data-ttu-id="29158-145">이 예제에서 노드는 이미 준수 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="29158-145">In this example, the Node is already compliant.</span></span> <span data-ttu-id="29158-146">`Verbose` 출력은 **Set** 메서드를 건너뛰었음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="29158-146">The `Verbose` output indicates that the **Set** method was skipped.</span></span>
 
 ```
 PS> Start-DSCConfiguration -Verbose -Wait -UseExisting
@@ -235,8 +235,8 @@ VERBOSE: Operation 'Invoke CimMethod' complete.
 VERBOSE: Time taken for configuration job to complete is 1.379 seconds
 ```
 
-## <a name="see-also"></a><span data-ttu-id="6b081-147">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6b081-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="29158-147">참고 항목</span><span class="sxs-lookup"><span data-stu-id="29158-147">See also</span></span>
 
-- [<span data-ttu-id="6b081-148">Azure Automation DSC 개요</span><span class="sxs-lookup"><span data-stu-id="6b081-148">Azure Automation DSC Overview</span></span>](https://docs.microsoft.com/azure/automation/automation-dsc-overview)
-- [<span data-ttu-id="6b081-149">Setting up an SMB pull server(SMB 끌어오기 서버 설정)</span><span class="sxs-lookup"><span data-stu-id="6b081-149">Setting up an SMB pull server</span></span>](../pull-server/pullServerSMB.md)
-- [<span data-ttu-id="6b081-150">Configuring a pull client(끌어오기 클라이언트 구성)</span><span class="sxs-lookup"><span data-stu-id="6b081-150">Configuring a pull client</span></span>](../pull-server/pullClientConfigID.md)
+- [<span data-ttu-id="29158-148">Azure Automation DSC 개요</span><span class="sxs-lookup"><span data-stu-id="29158-148">Azure Automation DSC Overview</span></span>](https://docs.microsoft.com/azure/automation/automation-dsc-overview)
+- [<span data-ttu-id="29158-149">Setting up an SMB pull server(SMB 끌어오기 서버 설정)</span><span class="sxs-lookup"><span data-stu-id="29158-149">Setting up an SMB pull server</span></span>](../pull-server/pullServerSMB.md)
+- [<span data-ttu-id="29158-150">Configuring a pull client(끌어오기 클라이언트 구성)</span><span class="sxs-lookup"><span data-stu-id="29158-150">Configuring a pull client</span></span>](../pull-server/pullClientConfigID.md)
