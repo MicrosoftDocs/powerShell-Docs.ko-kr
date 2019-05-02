@@ -4,11 +4,11 @@ schema: 2.0.0
 keywords: PowerShell
 title: 라이선스 동의가 필요한 모듈
 ms.openlocfilehash: 369e32d5278a2e1bf1d3f2ae67f670c524b9f878
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62075225"
 ---
 # <a name="modules-requiring-license-acceptance"></a>라이선스 동의가 필요한 모듈
 
@@ -28,7 +28,7 @@ ms.locfileid: "50002670"
 ## <a name="impact-on-installsaveupdate-module"></a>Install/Save/Update-Module에 미치는 영향
 
 - Install/Save/Update cmdlet은 사용자가 라이선스를 확인한 것처럼 동작하는 새 매개 변수 –AcceptLicense를 지원합니다.
-- RequiredLicenseAcceptance가 True이고 –AcceptLicense가 지정되지 않은 경우 사용자에게 license.txt가 표시되고 &quot;Do you accept these license terms (Yes/No/YesToAll/NoToAll)&quot;(이 라이선스 조건에 동의하시나요(예/아니요/모두 예/모두 아니요))가 표시됩니다.
+- RequiredLicenseAcceptance가 True이고 –AcceptLicense가 지정되지 않은 경우 사용자에게 license.txt가 표시되고 &quot;Do you accept these license terms (Yes/No/YesToAll/NoToAll)&quot;(이 사용 조건에 동의하시나요(예/아니요/모두 예/모두 아니요))가 표시됩니다.
   - 라이선스에 동의하는 경우
     - **Save-Module:** 모듈이 사용자의 시스템에 복사됩니다.
     - **Install-Module:** 모듈이 사용자의 시스템에서 적절한 폴더(범위 기준)에 복사됩니다.

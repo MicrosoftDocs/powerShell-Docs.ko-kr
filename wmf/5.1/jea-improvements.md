@@ -5,17 +5,17 @@ keywords: wmf,powershell,setup
 contributor: ryanpu
 title: JEA(Just Enough Administration)에 대한 개선 사항
 ms.openlocfilehash: 66cbacb78f8a365e9c8556c7c56b3c3525de7395
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39267868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055635"
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>JEA(Just Enough Administration)에 대한 개선 사항
 
-## <a name="constrained-file-copy-tofrom-jea-endpoints"></a>JEA 끝점과의 파일 복사 제한
+## <a name="constrained-file-copy-tofrom-jea-endpoints"></a>JEA 엔드포인트와의 파일 복사 제한
 
-이제 원격으로 JEA 끝점으로나 JEA 끝점에서 파일을 복사할 수 있으며 연결하는 사용자는 시스템에서 *어떤* 파일도 복사할 수 없습니다. 이것이 가능하려면 연결하는 사용자에 대해 사용자 드라이브를 탑재하도록 PSSC 파일을 구성합니다. 사용자 드라이브는 연결하는 각 사용자에게 고유하고 세션 간에 유지되는 새 PSDrive입니다. `Copy-Item`을 사용하여 JEA 세션으로나 JEA 세센에서 파일을 복사하는 경우에는 사용자 드라이브에만 액세스할 수 있습니다. 다른 PSDrive로 파일을 복사하려고 하면 실패합니다.
+이제 원격으로 JEA 엔드포인트로나 JEA 엔드포인트에서 파일을 복사할 수 있으며 연결하는 사용자는 시스템에서 *어떤* 파일도 복사할 수 없습니다. 이것이 가능하려면 연결하는 사용자에 대해 사용자 드라이브를 탑재하도록 PSSC 파일을 구성합니다. 사용자 드라이브는 연결하는 각 사용자에게 고유하고 세션 간에 유지되는 새 PSDrive입니다. `Copy-Item`을 사용하여 JEA 세션으로나 JEA 세센에서 파일을 복사하는 경우에는 사용자 드라이브에만 액세스할 수 있습니다. 다른 PSDrive로 파일을 복사하려고 하면 실패합니다.
 
 JEA 세션 구성 파일에서 사용자 드라이브를 설정하려면 다음과 같은 새 필드를 사용합니다.
 
@@ -26,7 +26,7 @@ UserDriveMaximumSize = 10485760    # 10 MB
 
 The folder backing the user drive will be created at(사용자 드라이브를 지원하는 폴더가 생성되는 위치)`$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\DriveRoots\DOMAIN_USER`
 
-사용자 드라이브를 활용하고 사용자 드라이브를 노출하도록 구성된 JEA 끝점으로 또는 JEA 끝점에서 파일을 복사하려면 `Copy-Item`에서 `-ToSession` 및 `-FromSession` 매개 변수를 사용합니다.
+사용자 드라이브를 활용하고 사용자 드라이브를 노출하도록 구성된 JEA 엔드포인트로 또는 JEA 엔드포인트에서 파일을 복사하려면 `Copy-Item`에서 `-ToSession` 및 `-FromSession` 매개 변수를 사용합니다.
 
 ```powershell
 # Connect to the JEA endpoint
@@ -65,7 +65,7 @@ RunAsVirtualAccount = $false
 
 ## <a name="conditional-access-policies"></a>조건부 액세스 정책
 
-JEA는 사용자가 JEA를 관리할 시스템에 연결된 경우 수행할 수 있는 작업을 제한하는 데 유용하지만, 사용자가 JEA를 사용할 수 있는 *시기*도 제한하려면 어떻게 하나요? 사용자가 JEA 세션을 설정하려면 속해 있어야 하는 보안 그룹을 지정할 수 있는 구성 옵션이 세션 구성 파일(.pssc)에 추가되었습니다. 이 옵션은 환경에 JIT(Just In Time) 시스템이 있고 사용자가 높은 권한의 JEA 끝점에 액세스하기 전에 권한을 높이도록 하려는 경우에 특히 유용합니다.
+JEA는 사용자가 JEA를 관리할 시스템에 연결된 경우 수행할 수 있는 작업을 제한하는 데 유용하지만, 사용자가 JEA를 사용할 수 있는 *시기*도 제한하려면 어떻게 하나요? 사용자가 JEA 세션을 설정하려면 속해 있어야 하는 보안 그룹을 지정할 수 있는 구성 옵션이 세션 구성 파일(.pssc)에 추가되었습니다. 이 옵션은 환경에 JIT(Just In Time) 시스템이 있고 사용자가 높은 권한의 JEA 엔드포인트에 액세스하기 전에 권한을 높이도록 하려는 경우에 특히 유용합니다.
 
 PSSC 파일의 새 *RequiredGroups* 필드를 사용하여 사용자가 JEA에 연결할 수 있는지 여부를 결정하는 논리를 지정할 수 있습니다. 이를 위해서는 'And' 및 'Or' 키를 사용하는 해시테이블(필요에 따라 중첩됨)을 지정하여 규칙을 만듭니다. 다음은 이 필드를 사용하는 방법의 몇 가지 예입니다.
 

@@ -2,11 +2,11 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: ec4ae8e4b2ef0ec226cb75607f7aaf34b48f6b76
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085646"
 ---
 # <a name="authoring-improvements-using-powershell-ise"></a>PowerShell ISE를 사용하여 작성 기능 향상
 

@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: PowerShell 50 ISE의 새로운 기능
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
 ms.openlocfilehash: 2d953bc4553de7720c590304d29750b84a1ef3b2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058185"
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Windows PowerShell ISE의 새로운 기능
 이 항목에서는 Windows PowerShell  ISE(통합 스크립팅 환경) 버전에서 도입된 새로운 기능과 업데이트된 기능에 대해 설명합니다.
@@ -147,7 +147,7 @@ Windows PowerShell ISE 2.0에는 별도의 명령 창과 출력 창이 있습니
 
 **powershell_ise.exe**를 입력하여 명령줄에서 Windows PowerShell ISE를 시작하면 다음과 같은 새 명령줄 스위치를 추가할 수 있습니다.
 
-- *-NoProfile*: 실행 하지 않고 Windows PowerShell ISE를 시작 **$profile**
+- *-NoProfile*: **$profile**을 실행하지 않고 Windows PowerShell ISE를 시작합니다.
 
 - *-Help*: 도움말 창을 표시합니다.
 

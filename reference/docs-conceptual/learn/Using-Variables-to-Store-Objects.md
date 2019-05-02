@@ -4,16 +4,16 @@ keywords: powershell,cmdlet
 title: 변수를 사용하여 개체 저장
 ms.assetid: b1688d73-c173-491e-9ba6-6d0c1cc852de
 ms.openlocfilehash: d166ec58dc658c1b134030c9a9592249ee40d4f5
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086547"
 ---
 # <a name="using-variables-to-store-objects"></a>변수를 사용하여 개체 저장
 
 PowerShell에서는 개체에 대한 작업을 수행합니다. PowerShell을 사용하면 변수라고 하는 명명된 개체를 만들 수 있습니다.
-변수 이름은 영숫자 문자 및 밑줄만 포함할 수 있습니다. PowerShell에서 사용하는 경우는 변수는 항상 \$ 문자와 변수 이름을 차례로 입력하여 지정합니다.
+변수 이름에는 밑줄 문자와 영숫자가 포함될 수 있습니다. PowerShell에서 사용하는 경우는 변수는 항상 \$ 문자와 변수 이름을 차례로 입력하여 지정합니다.
 
 ## <a name="creating-a-variable"></a>변수 만들기
 

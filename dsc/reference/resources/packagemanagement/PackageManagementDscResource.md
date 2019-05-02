@@ -3,17 +3,17 @@ ms.date: 06/20/2018
 keywords: dsc,powershell,configuration,setup
 title: DSC PackageManagement 리소스
 ms.openlocfilehash: 18cbbfe0715c82dcfdf4a5fb6ee36ee814e43d3b
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62077622"
 ---
 # <a name="dsc-packagemanagement-resource"></a>DSC PackageManagement 리소스
 
 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0, Windows PowerShell 5.1
 
-Windows PowerShell DSC(필요한 상태 구성)의 **PackageManagement** 리소스는 대상 노드에서 패키지 관리 패키지를 설치하거나 제거하는 메커니즘을 제공합니다. 이 리소스를 사용하려면 [http://PowerShellGallery.com](http://PowerShellGallery.com)에서 제공하는 **PackageManagement** 모듈이 필요합니다.
+Windows PowerShell DSC(Desired State Configuration)의 **PackageManagement** 리소스는 대상 노드에서 패키지 관리 패키지를 설치하거나 제거하는 메커니즘을 제공합니다. 이 리소스를 사용하려면 [http://PowerShellGallery.com](http://PowerShellGallery.com)에서 제공하는 **PackageManagement** 모듈이 필요합니다.
 
 > [!IMPORTANT]
 > 다음 속성 정보가 올바르려면 **PackageManagement** 모듈이 버전 1.1.7.0 이상이어야 합니다.

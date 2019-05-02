@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 리소스 작성 검사 목록
 ms.openlocfilehash: 7b1a096bba1b729c096b6689178ee022e12e4634
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55679723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076585"
 ---
 # <a name="resource-authoring-checklist"></a>리소스 작성 검사 목록
 
@@ -85,7 +85,7 @@ If ($error.count –ne 0) {
 
 ## <a name="resource-is-idempotent-in-the-positive-case"></a>리소스가 양성 사례에서 idempotent임
 
-DSC 리소스의 기본 특성 중 하나는 idempotence입니다. 즉, 해당 리소스를 포함하는 DSC 구성을 여러 번 적용하면 항상 같은 결과가 나옵니다. 예를 들면 다음과 같은 파일 리소스를 포함하는 구성을 만드는 경우입니다.
+DSC 리소스의 기본 특성 중 하나는 멱등성(idempotence)입니다. 즉, 해당 리소스를 포함하는 DSC 구성을 여러 번 적용하면 항상 같은 결과가 나옵니다. 예를 들면 다음과 같은 파일 리소스를 포함하는 구성을 만드는 경우입니다.
 
 ```powershell
 File file {
@@ -210,11 +210,11 @@ File file {
 
 좋은 오류 메시지는 다음과 같아야 합니다.
 
-- 있습니다. 오류 메시지를 사용 하 여 가장 큰 문제는가는 종종 존재 하지 않는다는 해야 합니다.
-- 이해 하기 쉽습니다. 더 모호한 사람이 읽을 수 있는 오류 코드
-- 정확 무엇이 문제 정확 하 게 설명 합니다.
-- 건설적인: 조언 문제를 해결 하는 방법
-- 처리 완료 후: 사용자를 비난 하거나 잘못 된 것으로 생각 될 수 있도록 하지 마세요
+- 존재: 오류 메시지의 가장 큰 문제는 종종 존재하지 않는다는 점이므로 실제로 있는지 확인해야 합니다.
+- 이해하기 쉬움: 사용자가 읽을 수 있고 명확하지 않은 오류 코드가 없어야 합니다.
+- 정확함: 문제를 정확하게 설명해야 합니다.
+- 건설적임: 문제를 해결하는 방법을 조언해야 합니다.
+- 정중함: 사용자를 비난하거나 기분 나쁘게 하지 않도록 해야 합니다.
 
 리소스 함수를 직접 실행할 때 반환되는 오류와 다를 수 있으므로 종단 간 시나리오에서 `Start-DscConfiguration`을 사용하여 오류를 확인해야 합니다.
 
@@ -222,7 +222,7 @@ File file {
 
 리소스에 의해 출력된 로그가 이해하기 쉽고 사용자에게 값을 제공하는지 확인합니다. 리소스는 사용자에게 도움이 될 수 있는 모든 정보를 출력해야 하지만 로그가 많을수록 항상 더 좋은 것은 아닙니다. 추가 값을 제공하지 않는 데이터의 출력 및 중복성을 방지해야 합니다. 즉, 원하는 항목을 찾기 위해 수백 개의 로그 항목을 검토하는 일이 없도록 해야 합니다. 물론 로그가 없는 것도 이 문제에 적합한 솔루션은 아닐 수 있습니다.
 
-테스트할 때 ETW 로그뿐만 아니라 자세한 정보 로그 및 디버그 로그(`–Verbose` 및 `–Debug` 스위치를 적절히 사용하여 `Start-DscConfiguration` 실행)도 분석해야 합니다. DSC ETW 로그를 보려면 이벤트 뷰어로 이동 하 고 폴더를 엽니다. 응용 프로그램 및 서비스-Microsoft-Windows-Desired State Configuration.  기본적으로 작동 채널이 있지만 구성을 실행하기 전에 분석 및 디버그 채널을 사용하도록 설정해야 합니다.
+테스트할 때 ETW 로그뿐만 아니라 자세한 정보 로그 및 디버그 로그(`–Verbose` 및 `–Debug` 스위치를 적절히 사용하여 `Start-DscConfiguration` 실행)도 분석해야 합니다. DSC ETW 로그를 보려면 이벤트 뷰어로 이동하고 애플리케이션 및 서비스 - Microsoft - Windows - Desired State Configuration 폴더를 엽니다.  기본적으로 작동 채널이 있지만 구성을 실행하기 전에 분석 및 디버그 채널을 사용하도록 설정해야 합니다.
 분석/디버그 채널을 사용하려면 다음 스크립트를 실행할 수 있습니다.
 
 ```powershell
@@ -283,7 +283,7 @@ $programFilesPath = ${env:ProgramFiles(x86)}
 
 이 검사 목록에는 테스트해야 하거나 누락되는 경우가 많은 항목이 포함되어 있습니다. 다양한 테스트가 있을 수 있으며, 주로 테스트하고 있지만 여기에 언급되지 않은 리소스와 관련된 기능 테스트입니다. 부정적인 테스트 사례를 기억해 두어야 합니다.
 
-## <a name="best-practice-resource-module-contains-tests-folder-with-resourcedesignertestsps1-script"></a>모범 사례 리소스 모듈에 ResourceDesignerTests.ps1 스크립트가 된 Tests 폴더가 포함 되어 있습니다.
+## <a name="best-practice-resource-module-contains-tests-folder-with-resourcedesignertestsps1-script"></a>모범 사례: 리소스 모듈에 ResourceDesignerTests.ps1 스크립트가 포함된 Tests 폴더가 있음
 
 리소스 모듈 내에 “Tests” 폴더를 만들고 `ResourceDesignerTests.ps1` 파일을 만든 다음 지정된 모듈의 모든 리소스에 대해 **Test-xDscResource** 및 **Test-xDscSchema**를 사용하여 테스트를 추가하는 것이 좋습니다.
 이런 방식으로 지정된 모듈에서 모든 리소스의 스키마에 대해 신속하게 유효성을 검사하고 게시하기 전에 온전성 검사를 수행할 수 있습니다.
@@ -294,7 +294,7 @@ Test-xDscResource ..\DSCResources\MSFT_xRemoteFile
 Test-xDscSchema ..\DSCResources\MSFT_xRemoteFile\MSFT_xRemoteFile.schema.mof
 ```
 
-## <a name="best-practice-resource-folder-contains-resource-designer-script-for-generating-schema"></a>모범 사례 리소스 폴더에 스키마를 생성 하는 것에 대 한 리소스 디자이너 스크립트가
+## <a name="best-practice-resource-folder-contains-resource-designer-script-for-generating-schema"></a>모범 사례: 리소스 폴더에 스키마를 생성하는 리소스 디자이너 스크립트가 있음
 
 각 리소스에는 리소스의 mof 스키마를 생성하는 리소스 디자이너 스크립트가 있어야 합니다. 이 파일은 `<ResourceName>\ResourceDesignerScripts`에 저장되며 이름은 Generate `<ResourceName>Schema.ps1`로 지정됩니다. xRemoteFile 리소스의 경우 이 파일을 `GenerateXRemoteFileSchema.ps1`이라고 하며 다음을 포함합니다.
 
@@ -310,7 +310,7 @@ $CertificateThumbprint = New-xDscResourceProperty -Name CertificateThumbprint -T
 New-xDscResource -Name MSFT_xRemoteFile -Property @($DestinationPath, $Uri, $Headers, $UserAgent, $Ensure, $Credential, $CertificateThumbprint) -ModuleName xPSDesiredStateConfiguration2 -FriendlyName xRemoteFile
 ```
 
-## <a name="best-practice-resource-supports--whatif"></a>모범 사례 리소스에서-whatif를 지원함
+## <a name="best-practice-resource-supports--whatif"></a>모범 사례: 리소스에서 -WhatIf를 지원함
 
 리소스에서 “위험한” 작업을 수행하고 있는 경우 `-WhatIf` 기능을 구현하는 것이 좋습니다. 완료된 후에는 명령이 `-WhatIf` 스위치 없이 실행된 경우 수행된 작업에 대해 `-WhatIf` 출력이 올바르게 설명하는지 확인합니다.
 또한 `–WhatIf` 스위치가 있으면 작업이 실행되지 않고 노드의 상태가 변경되지 않는지 확인합니다.

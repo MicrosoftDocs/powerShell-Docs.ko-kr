@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: 명령에 대한 정보 가져오기
 ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
 ms.openlocfilehash: 7af83e3a0e776d96e580b442430357b4ea063a72
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057709"
 ---
 # <a name="getting-information-about-commands"></a>명령에 대한 정보 가져오기
 
@@ -74,7 +74,7 @@ Get-Command *
 > 별표(\*)는 PowerShell 명령 인수에서 와일드카드 일치에 사용됩니다. \*는 "하나 이상의 문자 일치"를 의미합니다. `Get-Command a*`를 입력하여 문자 "a"로 시작하는 모든 명령을 찾을 수 있습니다. **cmd.exe**의 와일드카드 일치와 달리 PowerShell의 와일드카드는 점(.)도 일치시킵니다.
 
 다른 형식의 네이티브 명령을 가져오려면 `Get-Command`의 **CommandType** 매개 변수를 사용합니다.
-cmdlet을 실행한 경우 반환된 쿼럼 리소스에 대한 정보를 검토할 수 있습니다.
+cmdlet.
 
 명령에 할당된 애칭인 명령 별칭을 가져오려면 다음과 같이 입력하세요.
 

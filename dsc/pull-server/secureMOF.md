@@ -3,11 +3,11 @@ ms.date: 10/31/2017
 keywords: dsc,powershell,configuration,setup
 title: MOF 파일 보안
 ms.openlocfilehash: 6c2aadb75ac617d9b845ef387f292b8156bb8889
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079338"
 ---
 # <a name="securing-the-mof-file"></a>MOF 파일 보안
 
@@ -51,11 +51,11 @@ DSC 구성을 보호하는 데 사용되는 자격 증명을 적절히 암호화
 이 공개 키 인증서를 DSC 자격 증명 암호화에 사용하려면 다음과 같은 특정 요구 사항을 충족해야 합니다.
 
 1. **키 사용**:
-   - 포함 해야 합니다. 'KeyEncipherment' 및 'DataEncipherment '입니다.
-   - 해야 _되지_ 포함: 디지털 서명:
+   - 포함해야 함: 'KeyEncipherment' 및 'DataEncipherment'.
+   - 포함하지 _않아야_ 함: 'Digital Signature'.
 2. **확장된 키 사용**:
-   - 포함 해야 합니다. 문서 암호화 (1.3.6.1.4.1.311.80.1)입니다.
-   - 해야 _되지_ 포함: 클라이언트 인증 (1.3.6.1.5.5.7.3.2) 및 서버 인증 (1.3.6.1.5.5.7.3.1).
+   - 포함해야 함: 문서 암호화(1.3.6.1.4.1.311.80.1).
+   - 포함하지 _않아야_ 함: 클라이언트 인증(1.3.6.1.5.5.7.3.2) 및 서버 인증(1.3.6.1.5.5.7.3.1).
 3. 인증서에 대한 개인 키를 *대상 노드_에서 사용할 수 있어야 합니다.
 4. 인증서의 **공급자**는 "Microsoft RSA SChannel Cryptographic Provider"여야 합니다.
 
@@ -84,7 +84,7 @@ MOF의 자격 증명 암호 해독에 사용되는 개인 키는 항상 대상 �
 
 #### <a name="on-the-target-node-create-and-export-the-certificate"></a>대상 노드: 인증서를 만들고 내보냅니다.
 
-> 대상 노드 Windows Server 2016 및 Windows 10
+> 대상 노드: Windows Server 2016 및 Windows 10
 
 ```powershell
 # note: These steps need to be performed in an Administrator PowerShell session
@@ -95,7 +95,7 @@ $cert | Export-Certificate -FilePath "$env:temp\DscPublicKey.cer" -Force
 
 내보내고 나면 `DscPublicKey.cer`을 **제작 노드**로 복사해야 합니다.
 
-> 대상 노드 Windows Server 2012 R2/Windows 8.1 및 이전 버전
+> 대상 노드: Windows Server 2012 R2/Windows 8.1 이하 버전
 > [!WARNING]
 > Windows 10 및 Windows Server 2016 이전의 Windows 운영 체제에서는 `New-SelfSignedCertificate` cmdlet이 **Type** 매개 변수를 지원하지 않으므로, 이 운영 체제에서는 이 인증서를 만들기 위한 대체 방법이 필요합니다.
 >
@@ -151,7 +151,7 @@ PFX는 암호로 보호되어 있지만 전송 중에도 보호 상태가 유지
 
 #### <a name="on-the-authoring-node-create-and-export-the-certificate"></a>제작 노드: 인증서를 만들고 내보냅니다.
 
-> 대상 노드 Windows Server 2016 및 Windows 10
+> 대상 노드: Windows Server 2016 및 Windows 10
 
 ```powershell
 # note: These steps need to be performed in an Administrator PowerShell session
@@ -167,7 +167,7 @@ Import-Certificate -FilePath "$env:temp\DscPublicKey.cer" -CertStoreLocation Cer
 
 내보내고 나면 `DscPrivateKey.pfx`을 **대상 노드**로 복사해야 합니다.
 
-> 대상 노드 Windows Server 2012 R2/Windows 8.1 및 이전 버전
+> 대상 노드: Windows Server 2012 R2/Windows 8.1 이하 버전
 > [!WARNING]
 > Windows 10 및 Windows Server 2016 이전의 Windows 운영 체제에서는 `New-SelfSignedCertificate` cmdlet이 **Type** 매개 변수를 지원하지 않으므로, 이 운영 체제에서는 이 인증서를 만들기 위한 대체 방법이 필요합니다.
 >

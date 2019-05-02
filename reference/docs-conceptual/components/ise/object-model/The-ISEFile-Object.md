@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: ISEFile 개체
 ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
 ms.openlocfilehash: 24549720b8bc35435882533b0eb138de432ede65
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057556"
 ---
 # <a name="the-isefile-object"></a>ISEFile 개체
 
@@ -52,8 +52,8 @@ Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 
 ### <a name="exceptions"></a>예외
 
-- **System.ArgumentNullException**: 합니다 **filename** 매개 변수가 null입니다.
-- **System.ArgumentException**: 합니다 **filename** 매개 변수가 비어 있습니다.
+- **System.ArgumentNullException**: **filename** 매개 변수가 Null입니다.
+- **System.ArgumentException**: **filename** 매개 변수가 비어 있습니다.
 - **System.IO.IOException**: 파일을 저장할 수 없습니다.
 
 ```powershell

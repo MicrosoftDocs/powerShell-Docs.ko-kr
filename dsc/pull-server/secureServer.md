@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 끌어오기 서버 모범 사례
 ms.openlocfilehash: fe483a487f85f2e4edb0928fccfe98746ae11231
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58057708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079203"
 ---
 # <a name="pull-server-best-practices"></a>끌어오기 서버 모범 사례
 
@@ -26,8 +26,8 @@ ms.locfileid: "58057708"
 
 ## <a name="abstract"></a>요약
 
-이 문서는 Windows PowerShell 필요한 상태 구성 끌어오기 서버 구현을 준비 중인 사용자에게 공식 지침을 제공하기 위해 작성되었습니다. 끌어오기 서버는 몇 분만에 배포할 수 있는 간단한 서비스입니다. 이 문서는 배포 시 사용할 수 있는 기술적인 방법 지침도 제공하지만, 모범 사례와 배포 전 고려할 사항을 참조할 수 있다는 점에서 유용합니다.
-이 문서를 읽으려면 DSC에 대한 기본 사항과 DSC 배포에 포함되는 구성 요소를 설명하는 용어를 잘 알고 있어야 합니다. 자세한 내용은 [Windows PowerShell 필요한 상태 구성 개요](/powershell/dsc/overview) 항목을 참조하세요.
+이 문서는 Windows PowerShell Desired State Configuration 끌어오기 서버 구현을 준비 중인 사용자에게 공식 지침을 제공하기 위해 작성되었습니다. 끌어오기 서버는 몇 분만에 배포할 수 있는 간단한 서비스입니다. 이 문서는 배포 시 사용할 수 있는 기술적인 방법 지침도 제공하지만, 모범 사례와 배포 전 고려할 사항을 참조할 수 있다는 점에서 유용합니다.
+이 문서를 읽으려면 DSC에 대한 기본 사항과 DSC 배포에 포함되는 구성 요소를 설명하는 용어를 잘 알고 있어야 합니다. 자세한 내용은 [Windows PowerShell Desired State Configuration 개요](/powershell/dsc/overview) 항목을 참조하세요.
 DSC는 클라우드 주기에 따라 개선될 것이므로 끌어오기 서버를 비롯한 기본 기술도 발전하고 새로운 기능을 도입할 것으로 예상됩니다. 이 문서의 부록에 포함된 버전 테이블에서는 이전 릴리스에 대한 참조와 진취적인 디자인을 권장하기 위한 미래에 대비한 솔루션에 대한 참조를 제공합니다.
 
 이 문서의 두 가지 주요 섹션은 다음과 같습니다.
@@ -39,18 +39,18 @@ DSC는 클라우드 주기에 따라 개선될 것이므로 끌어오기 서버�
 
 이 문서의 정보는 Windows Management Framework 5.0에 적용됩니다. 끌어오기 서버를 배포 및 운영하는 데 WMF 5.0이 필요하지는 않지만 이 문서에서는 버전 5.0을 주로 설명합니다.
 
-### <a name="windows-powershell-desired-state-configuration"></a>Windows PowerShell 필요한 상태 구성
+### <a name="windows-powershell-desired-state-configuration"></a>Windows PowerShell Desired State Configuration
 
-DSC(필요한 상태 구성)는 CIM(Common Information Model)을 설명하는 MOF(Managed Object Format)라는 산업 구문을 사용하여 구성 데이터를 배포 및 관리할 수 있는 관리 플랫폼입니다. 오픈 소스 프로젝트인 OMI(Open Management Infrastructure)는 Linux 및 네트워크 하드웨어 운영 체제를 비롯한 다양한 플랫폼에서 이러한 표준을 성공적으로 개발하기 위해 마련되었습니다. 자세한 내용은 [DMTF page linking to MOF specifications](https://www.dmtf.org/standards/cim)(MOF 사양에 연결되는 DMTF 페이지) 및 [OMI Documents and Source](https://collaboration.opengroup.org/omi/documents.php)(OMI 문서 및 원본)을 참조하세요.
+DSC(Desired State Configuration)는 CIM(Common Information Model)을 설명하는 MOF(Managed Object Format)라는 산업 구문을 사용하여 구성 데이터를 배포 및 관리할 수 있는 관리 플랫폼입니다. 오픈 소스 프로젝트인 OMI(Open Management Infrastructure)는 Linux 및 네트워크 하드웨어 운영 체제를 비롯한 다양한 플랫폼에서 이러한 표준을 성공적으로 개발하기 위해 마련되었습니다. 자세한 내용은 [DMTF page linking to MOF specifications](https://www.dmtf.org/standards/cim)(MOF 사양에 연결되는 DMTF 페이지) 및 [OMI Documents and Source](https://collaboration.opengroup.org/omi/documents.php)(OMI 문서 및 원본)을 참조하세요.
 
-Windows PowerShell에서는 선언적 구성을 만들고 관리하는 데 사용할 수 있는 필요한 상태 구성의 언어 확장 집합을 제공합니다.
+Windows PowerShell에서는 선언적 구성을 만들고 관리하는 데 사용할 수 있는 Desired State Configuration의 언어 확장 집합을 제공합니다.
 
 ### <a name="pull-server-role"></a>끌어오기 서버 역할
 
 끌어오기 서버는 구성을 저장하여 대상 노드에서 액세스할 수 있게 하는 중앙 집중식 서비스를 제공합니다.
 
 끌어오기 서버 역할은 웹 서버 인스턴스나 SMB 파일 공유로 배포할 수 있습니다. 웹 서버 기능에는 OData 인터페이스가 포함되며 필요에 따라 구성이 적용될 때 대상 노드가 성공 또는 실패에 대한 확인을 다시 보고하는 기능도 포함될 수 있습니다. 이 기능은 많은 수의 대상 노드가 있는 환경에서 유용합니다.
-대상 노드(클라이언트라고도 함)가 끌어오기 서버를 가리키도록 구성한 후 최신 구성 데이터 및 모든 필수 스크립트가 다운로드되어 적용됩니다. 이 작업은 일회성 배포 또는 되풀이 작업으로 수행될 수 있으므로 끌어오기 서버가 대규모 변경을 관리하기 위한 중요한 자산도 됩니다. 자세한 내용은 [Windows PowerShell 필요한 상태 구성 끌어오기 서버](/powershell/dsc/pullServer) 및
+대상 노드(클라이언트라고도 함)가 끌어오기 서버를 가리키도록 구성한 후 최신 구성 데이터 및 모든 필수 스크립트가 다운로드되어 적용됩니다. 이 작업은 일회성 배포 또는 되풀이 작업으로 수행될 수 있으므로 끌어오기 서버가 대규모 변경을 관리하기 위한 중요한 자산도 됩니다. 자세한 내용은 [Windows PowerShell Desired State Configuration 끌어오기 서버](/powershell/dsc/pullServer) 및
 
 [밀어넣기 및 끌어오기 구성 모드](/powershell/dsc/pullServer)를 참조하세요.
 
@@ -75,7 +75,7 @@ WMF는 Windows Server에 포함되어 있으며 Windows Server 릴리스 사이�
 
 - Windows PowerShell, Windows PowerShell ISE(통합 스크립팅
 - 환경), Windows PowerShell 웹 서비스(관리 OData
-- IIS 확장), Windows PowerShell DSC(필요한 상태 구성)
+- IIS 확장), Windows PowerShell DSC(Desired State Configuration)
 - WinRM(Windows 원격 관리), WMI(Windows Management Instrumentation)
 
 ### <a name="dsc-resource"></a>DSC 리소스
@@ -224,7 +224,7 @@ New-DscChecksum -ConfigurationPath .\ -OutPath .\
 - **서버당 GUID 할당** - 모든 서버 구성을 개별적으로 확실히 제어할 수 있습니다. 서버 수가 적은 환경에서 효과적인 이 접근 방식을 채택하면 정확하게 업데이트할 수 있습니다.
 - **서버 역할당 GUID 할당** - 웹 서버와 같이 동일한 기능을 수행하는 모든 서버가 동일한 GUID를 사용하여 필요한 구성 데이터를 참조합니다.  여러 서버가 동일한 GUID를 공유하는 경우 구성이 변경되면 이들 서버가 모두 동시에 업데이트됩니다.
 
-  GUID는 악의적인 의도를 가진 사람에 의해 환경의 서버 배포 및 구성 방법에 대한 정보를 얻는 데 활용될 수 있으므로 중요한 데이터로 고려해야 합니다. 자세한 내용은 [PowerShell 필요한 상태 구성 끌어오기 모드에서 GUID 안전하게 할당](https://blogs.msdn.microsoft.com/powershell/2014/12/31/securely-allocating-guids-in-powershell-desired-state-configuration-pull-mode/)을 참조하세요.
+  GUID는 악의적인 의도를 가진 사람에 의해 환경의 서버 배포 및 구성 방법에 대한 정보를 얻는 데 활용될 수 있으므로 중요한 데이터로 고려해야 합니다. 자세한 내용은 [PowerShell Desired State Configuration 끌어오기 모드에서 GUID 안전하게 할당](https://blogs.msdn.microsoft.com/powershell/2014/12/31/securely-allocating-guids-in-powershell-desired-state-configuration-pull-mode/)을 참조하세요.
 
 계획 작업|
 ---|

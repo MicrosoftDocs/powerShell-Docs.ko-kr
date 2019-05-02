@@ -2,11 +2,11 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 ms.openlocfilehash: 7a1725e3858c59a6d31699add22b042359c48463
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058202"
 ---
 # <a name="separation-of-node-and-configuration-ids"></a>노드 및 구성 ID의 분리
 

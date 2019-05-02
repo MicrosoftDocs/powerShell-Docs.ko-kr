@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 추가 PowerShell 학습
 ms.openlocfilehash: 5e81801df99a55a358d1d1405bdc79f882aae92f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058389"
 ---
 # <a name="more-powershell-learning"></a>추가 PowerShell 학습
 
@@ -29,9 +29,9 @@ PowerShell에 대해 알 수 있는 기타 소스
 - [PowerShell 3.0 Jump Start 시작](https://mva.microsoft.com/en-US/training-courses/getting-started-with-powershell-30-jump-start-8276)
 - [고급 도구 및 PowerShell 3.0 Jump Start를 사용한 스크립팅](https://mva.microsoft.com/en-US/training-courses/advanced-tools-scripting-with-powershell-30-jump-start-8277)
 
-### <a name="channel-9-videos"></a>Channel 9 비디오 보기
+### <a name="channel-9-videos"></a>Channel 9 동영상
 
-Channel 9은 비디오 게시 플랫폼입니다. PowerShell에 대 한 비디오 수백 개의 사용할 수 있습니다. ["PowerShell"에 대 한 검색](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated) 사용 가능한 비디오를 확인 합니다.
+Channel 9은 동영상 게시 플랫폼입니다. PowerShell에 대한 수백 개의 동영상을 사용할 수 있습니다. [“PowerShell”을 검색](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated)하여 사용 가능한 동영상을 확인합니다.
 
 ## <a name="resources-for-windows-powershell-developers"></a>Windows PowerShell 개발자를 위한 리소스
 

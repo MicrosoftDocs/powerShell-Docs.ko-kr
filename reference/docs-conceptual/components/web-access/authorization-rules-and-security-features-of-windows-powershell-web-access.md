@@ -3,15 +3,15 @@ ms.date: 06/27/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 웹 액세스의 권한 부여 규칙 및 보안 기능
 ms.openlocfilehash: c426b8cfb10829241ba244a5d840c91e1de9f66e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058423"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Windows PowerShell 웹 액세스의 권한 부여 규칙 및 보안 기능
 
-업데이트됨: 2013년 6월 24일
+업데이트 날짜: 2013년 6월 24일
 
 적용 대상: Windows Server 2012 R2, Windows Server 2012
 
@@ -156,7 +156,7 @@ Windows PowerShell 웹 액세스 cmdlet에서는 와일드카드 문자(\*)를 �
 - 관리자는 제한된 runspace가 사용되는 **PswaEndpoint**라는 엔드포인트를 만듭니다. 그런 다음, `*,*,PswaEndpoint`라는 규칙을 만들고 엔드포인트를 다른 컴퓨터에 배포합니다. 이 규칙을 통해 모든 사용자는 **PswaEndpoint**라는 엔드포인트가 있는 모든 컴퓨터에 액세스할 수 있습니다.
   이 규칙이 규칙 집합에 유일하게 정의되어 있는 규칙이라면 이 엔드포인트가 없는 컴퓨터에는 액세스할 수 없습니다.
 
-- 관리자는 제한된 runspace가 사용되는 **PswaEndpoint**라는 엔드포인트를 만들었으며, 특정 사용자만 액세스할 수 있도록 제한하려고 합니다. 관리자는 **Level1Support**라는 사용자 그룹을 만들고 **Level1Support,\*,PswaEndpoint** 규칙을 정의합니다. 이 규칙에서는 **Level1Support** 그룹의 모든 사용자가 **PswaEndpoint** 구성이 사용된 모든 컴퓨터에 액세스할 수 있도록 허용합니다. 이와 마찬가지로, 특정 컴퓨터 집합에만 액세스하도록 제한할 수도 있습니다.
+- 관리자는 제한된 runspace가 사용되는 **PswaEndpoint**라는 엔드포인트를 만들었으며, 특정 사용자만 액세스할 수 있도록 제한하려고 합니다. 관리자는 **Level1Support**라는 사용자 그룹을 만들고 다음 규칙, 즉 **Level1Support,\*,PswaEndpoint**를 정의합니다. 이 규칙에서는 **Level1Support** 그룹의 모든 사용자가 **PswaEndpoint** 구성이 사용된 모든 컴퓨터에 액세스할 수 있도록 허용합니다. 이와 마찬가지로, 특정 컴퓨터 집합에만 액세스하도록 제한할 수도 있습니다.
 
 - 일부 관리자는 특정 사용자에게 다른 사용자보다 많은 액세스 권한을 제공합니다. 예를 들어 관리자는 **Admins**과 **BasicSupport**라는 두 개의 사용자 그룹을 만듭니다. 또한 관리자는 제한된 runspace가 사용되는 **PswaEndpoint**라는 엔드포인트를 만들고, **Admins,\*,\*** 및 **BasicSupport,\*,PswaEndpoint**라는 두 개의 규칙을 정의합니다. 첫 번째 규칙에서는 **Admin** 그룹의 모든 사용자에게 모든 컴퓨터에 대한 액세스 권한을 제공하지만, 두 번째 규칙에서는 **BasicSupport** 그룹의 모든 사용자에게 **PswaEndpoint**가 포함된 컴퓨터에만 액세스할 수 있는 권한을 제공합니다.
 

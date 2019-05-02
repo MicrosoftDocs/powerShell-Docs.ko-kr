@@ -1,26 +1,26 @@
 ---
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
-title: 구성 Id (v4/v5)를 사용 하 여 끌어오기 서버에 게시
+title: 구성 ID를 사용하여 끌어오기 서버에 게시(v4/v5)
 ms.openlocfilehash: 0144fec43d7a8d65b79891567cc0dc3952175343
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079509"
 ---
-# <a name="publish-to-a-pull-server-using-configuration-ids-v4v5"></a>구성 Id (v4/v5)를 사용 하 여 끌어오기 서버에 게시
+# <a name="publish-to-a-pull-server-using-configuration-ids-v4v5"></a>구성 ID를 사용하여 끌어오기 서버에 게시(v4/v5)
 
-아래 섹션에서는 끌어오기 서버를 설정한 이미 가정 합니다. 끌어오기 서버를 설정 하지 않은 경우에 다음 가이드를 사용할 수 있습니다.
+아래 섹션에서는 끌어오기 서버를 이미 설정했다고 가정합니다. 끌어오기 서버를 설정하지 않은 경우에는 다음 가이드를 사용할 수 있습니다.
 
 - [DSC SMB 끌어오기 서버 설정](pullServerSmb.md)
 - [DSC HTTP 끌어오기 서버 설정](pullServer.md)
 
-각 대상 노드를 구성, 리소스를 다운로드 하 여 해당 상태를 보고할 수도 구성할 수 있습니다. 이 문서에서는, 다운로드 하 고 리소스를 자동으로 다운로드 하도록 클라이언트 구성에 사용할 수 있도록 리소스를 업로드 하는 방법을 보여 줍니다. 노드를 통해 할당된 된 구성의 받을 때 **끌어오기** 하거나 **푸시** (v5)에 자동으로 다운로드 LCM에 지정 된 위치에서 구성에 필요한 모든 리소스.
+구성, 리소스를 다운로드하고 해당 상태를 보고하도록 각 대상 노드를 구성할 수 있습니다. 이 문서에서는 다운로드할 수 있도록 리소스를 업로드하고 자동으로 리소스를 다운로드하도록 클라이언트를 구성하는 방법을 보여 줍니다. 노드가 할당된 구성을 받으면 **끌어오기** 또는 **밀어넣기**(v5)를 통해 LCM에 지정된 위치에서 구성에 필요한 모든 리소스를 자동으로 다운로드합니다.
 
 ## <a name="compile-configurations"></a>구성 컴파일
 
-저장 하 고 첫 번째 단계로 [구성을](../configurations/configurations.md) ".mof" 파일로 컴파일하는 끌어오기 서버에서. 제네릭 및 더 많은 클라이언트에 적용 가능한 구성 되도록 사용 하 여 `localhost` 노드 블록에 있습니다. 아래 예제에서는 표시를 사용 하는 구성 셸을 `localhost` 특정 클라이언트 이름 대신 합니다.
+끌어오기 서버에서 [구성](../configurations/configurations.md)을 저장하는 첫 번째 단계는 구성을 ".mof" 파일로 컴파일하는 것입니다. 구성을 제네릭으로 설정하고 더 많은 클라이언트에 적용하려면 Node 블록에서 `localhost`를 사용합니다. 아래 예제에서는 특정 클라이언트 이름 대신 `localhost`를 사용하는 구성 셸을 보여 줍니다.
 
 ```powershell
 Configuration GenericConfig
@@ -33,15 +33,15 @@ Configuration GenericConfig
 GenericConfig
 ```
 
-일반 구성, 컴파일되면 "localhost.mof" 파일이 있어야 합니다.
+제네릭 구성을 컴파일한 후에는 "localhost.mof" 파일이 있어야 합니다.
 
 ## <a name="renaming-the-mof-file"></a>MOF 파일 이름 바꾸기
 
-제공 하는 끌어오기 서버의 구성 ".mof" 파일을 저장할 수 있습니다 **ConfigurationName** 하거나 **ConfigurationID**합니다. 끌어오기 클라이언트 설정 하려는 방법에 따라 올바르게 컴파일된 ".mof" 파일의 이름을 바꾸려면 아래 섹션을 선택할 수 있습니다.
+**ConfigurationName** 또는 **ConfigurationID**를 통해 끌어오기 서버에서 구성 ".mof" 파일을 저장할 수 있습니다. 계속하는 끌어오기 클라이언트 설정 방법에 따라 아래 섹션을 선택하여 컴파일된 ".mof" 파일의 이름을 제대로 바꿀 수 있습니다.
 
-### <a name="configuration-ids-guid"></a>구성 Id (GUID)
+### <a name="configuration-ids-guid"></a>구성 ID(GUID)
 
-하기 위해 "localhost.mof" 파일 이름을 변경 해야 합니다 "<GUID>.mof" 파일입니다. 임의 만들 수 있습니다 **Guid** 아래 또는 사용 하 여 예제를 사용 하 여 [New-guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet.
+"localhost.mof" 파일 이름을 "<GUID>.mof" 파일로 바꿔야 합니다. 아래 예제 또는 [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet을 사용하여 임의의 **Guid**를 만들 수 있습니다.
 
 ```powershell
 [System.Guid]::NewGuid()
@@ -55,39 +55,39 @@ Guid
 64856475-939e-41fb-aba5-4469f4006059
 ```
 
-그런 다음 허용 가능한 메서드를 사용 하 여 ".mof" 파일을 바꿀 수 있습니다. 아래 예제에서 사용 하는 [Rename-item](/powershell/module/microsoft.powershell.management/rename-item) cmdlet.
+그런 다음, 허용되는 메서드를 사용하여 ".mof" 파일의 이름을 바꿀 수 있습니다. 아래 예제에서는 [Rename-Item](/powershell/module/microsoft.powershell.management/rename-item) cmdlet을 사용합니다.
 
 ```powershell
 Rename-Item -Path .\localhost.mof -NewName '64856475-939e-41fb-aba5-4469f4006059.mof'
 ```
 
-사용에 대 한 자세한 내용은 **Guid** 환경에서 참조 [Guid에 대 한 계획](/powershell/dsc/secureserver#guids)합니다.
+환경에서 **Guid**를 사용하는 방법에 대한 자세한 내용은 [Guid에 대한 계획](/powershell/dsc/secureserver#guids)을 참조하세요.
 
 ### <a name="configuration-names"></a>구성 이름
 
-하기 위해 "localhost.mof" 파일 이름을 변경 해야 합니다 "<Configuration Name>.mof" 파일입니다. 다음 예제에서는 이전 섹션의 구성 이름을 사용 됩니다. 그런 다음 허용 가능한 메서드를 사용 하 여 ".mof" 파일을 바꿀 수 있습니다. 아래 예제에서 사용 하는 [Rename-item](/powershell/module/microsoft.powershell.management/rename-item) cmdlet.
+"localhost.mof" 파일 이름을 "<Configuration Name>.mof" 파일로 바꿔야 합니다. 다음 예제에서는 이전 섹션의 구성 이름이 사용됩니다. 그런 다음, 허용되는 메서드를 사용하여 ".mof" 파일의 이름을 바꿀 수 있습니다. 아래 예제에서는 [Rename-Item](/powershell/module/microsoft.powershell.management/rename-item) cmdlet을 사용합니다.
 
 ```powershell
 Rename-Item -Path .\localhost.mof -NewName 'GenericConfig.mof'
 ```
 
-## <a name="create-the-checksum"></a>체크섬 만들기
+## <a name="create-the-checksum"></a>CheckSum 만들기
 
-각 ".mof" 파일 연결된 ".checksum" 파일로 있어야 끌어오기 서버 또는 SMB 공유에 저장 합니다. 이 파일에는 클라이언트가 연결된 ".mof" 파일에 변경 하 고 다시 다운로드 해야 하는 경우 알 수 있습니다.
+끌어오기 서버에 저장된 각 ".mof" 파일 또는 SMB 공유에는 연결된 ".checksum" 파일이 있어야 합니다. 이 파일을 통해 클라이언트는 연결된 ".mof" 파일이 변경되어 다시 다운로드되어야 하는 시기를 인식합니다.
 
-만들 수 있습니다는 **체크섬** 사용 하 여 합니다 [New-dscchecksum](/powershell/module/psdesiredstateconfiguration/new-dscchecksum) cmdlet. 실행할 수도 있습니다 `New-DSCCheckSum` 사용 하 여 파일의 디렉터리와 비교 합니다 `-Path` 매개 변수입니다. 체크섬을 이미 있는 경우 적용할 수 있습니다 사용 하 여 다시 만들어야 합니다 `-Force` 매개 변수입니다. 다음 예제에서는 이전 섹션에서 ".mof" 파일이 포함 된 디렉터리를 지정 하 고 사용 하 여 `-Force` 매개 변수입니다.
+[New-DSCCheckSum](/powershell/module/psdesiredstateconfiguration/new-dscchecksum) cmdlet을 사용하여 **CheckSum**을 만들 수 있습니다. `-Path` 매개 변수를 사용하여 파일 디렉터리에서 `New-DSCCheckSum`을 실행할 수도 있습니다. 체크섬이 이미 있는 경우 `-Force` 매개 변수를 사용하여 체크섬을 다시 만들 수 있습니다. 다음 예제에서는 이전 섹션의 ".mof" 파일을 포함하는 디렉터리를 지정했고 `-Force` 매개 변수를 사용합니다.
 
 ```powershell
 New-DscChecksum -Path '.\' -Force
 ```
 
-출력이 표시 됩니다 있지만 이제는 "<GUID or Configuration Name>. mof.checksum" 파일입니다.
+출력은 표시되지 않지만 이제 "<GUID or Configuration Name>.mof.checksum" 파일이 표시됩니다.
 
-## <a name="where-to-store-mof-files-and-checksums"></a>MOF 파일 및 체크섬을 저장할 위치
+## <a name="where-to-store-mof-files-and-checksums"></a>MOF 파일 및 CheckSum을 저장할 위치
 
-### <a name="on-a-dsc-http-pull-server"></a>DSC HTTP 끌어오기 서버에서
+### <a name="on-a-dsc-http-pull-server"></a>DSC HTTP 끌어오기 서버
 
-설정할 때 HTTP 끌어오기 서버에 설명 된 대로 [DSC HTTP 끌어오기 서버 설정](pullServer.md)에 대 한 디렉터리를 지정 합니다 **ModulePath** 및 **ConfigurationPath** 키입니다. 합니다 **ConfigurationPath** 키 ".mof" 파일이 저장 될 위치를 나타냅니다. 합니다 **ConfigurationPath** ".mof" 파일과 ".checksum" 파일 저장 될 위치를 나타냅니다.
+HTTP 끌어오기 서버를 설정할 때 [DSC HTTP 끌어오기 서버 설정](pullServer.md)에 설명된 대로 **ModulePath** 및 **ConfigurationPath** 키의 디렉터리를 지정합니다. **ConfigurationPath** 키는 ".mof" 파일을 저장해야 하는 위치를 나타냅니다. **ConfigurationPath**는 ".mof" 파일과 ".checksum" 파일을 저장해야 하는 위치를 나타냅니다.
 
 ```powershell
     xDscWebService PSDSCPullServer
@@ -100,9 +100,9 @@ New-DscChecksum -Path '.\' -Force
 
 ```
 
-### <a name="on-an-smb-share"></a>SMB 공유에
+### <a name="on-an-smb-share"></a>SMB 공유
 
-SMB 공유를 사용 하 여 끌어오기 클라이언트를 설정 하는 경우 지정 된 **ConfigurationRepositoryShare**합니다. 모든 ".mof" 파일과 ".checksum" 다음에 저장할지를 **SourcePath** 에서 디렉터리를 **ConfigurationRepositoryShare** 블록입니다.
+SMB 공유를 사용하도록 끌어오기 클라이언트를 설정할 때 **ConfigurationRepositoryShare**를 지정합니다. 모든 ".mof" 파일과 ".checksum" 파일은 **ConfigurationRepositoryShare** 블록의 **SourcePath** 디렉터리에 저장되어야 합니다.
 
 ```powershell
 ConfigurationRepositoryShare SMBPullServer
@@ -113,14 +113,14 @@ ConfigurationRepositoryShare SMBPullServer
 
 ## <a name="next-steps"></a>다음 단계
 
-다음으로, 지정 된 구성을 끌어오기를 끌어오기 클라이언트를 구성 해야 합니다. 자세한 내용은 다음 가이드 중 하나를 참조 하세요.
+다음으로, 지정된 구성을 끌어오도록 끌어오기 클라이언트를 구성할 수 있습니다. 자세한 내용은 다음 가이드 중 하나를 참조하세요.
 
-- [구성 Id (v4)를 사용 하 여 끌어오기 클라이언트 설정](pullClientConfigId4.md)
-- [구성 Id (v5)를 사용 하 여 끌어오기 클라이언트 설정](pullClientConfigId.md)
-- [구성 이름 (v5)를 사용 하 여 끌어오기 클라이언트 설정](pullClientConfigNames.md)
+- [구성 ID를 사용하여 끌어오기 클라이언트 설정(v4)](pullClientConfigId4.md)
+- [구성 ID를 사용하여 끌어오기 클라이언트 설정(v5)](pullClientConfigId.md)
+- [구성 이름을 사용하여 끌어오기 클라이언트 설정(v5)](pullClientConfigNames.md)
 
 ## <a name="see-also"></a>참고 항목
 
 - [DSC SMB 끌어오기 서버 설정](pullServerSmb.md)
 - [DSC HTTP 끌어오기 서버 설정](pullServer.md)
-- [패키지 및 끌어오기 서버에 업로드 리소스](package-upload-resources.md)
+- [리소스 패키지 및 끌어오기 서버에 업로드](package-upload-resources.md)

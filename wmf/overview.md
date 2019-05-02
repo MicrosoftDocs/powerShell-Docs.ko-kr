@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2018
+ms.date: 04/19/2019
 keywords: wmf,powershell,setup
 title: WMF(Windows Management Framework)
-ms.openlocfilehash: f279f975527dc198dd9b47ca1dc4258f54fafef5
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 6d25b4025bbc86f6be0e5c74db9f1fbe6705d816
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55679995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055448"
 ---
 # <a name="windows-management-framework"></a>Windows Management Framework
 
@@ -35,26 +35,30 @@ PowerShell 및 지정된 WMF의 다른 구성 요소에서 향상된 다양한 �
 
 ## <a name="wmf-availability-across-windows-operating-systems"></a>Windows 운영 체제에서의 WMF 가용성
 
-|운영 체제 버전  |[WMF 5.1][] |[WMF 5.0][] |[WMF 4.0][] |[WMF 3.0][]  |[WMF 2.0][] |
-|--------------------------|------------|------------|------------|-------------|------------|
-|Windows Server 2019       |함께 제공|            |            |             |            |
-|Windows Server 2016       |함께 제공|            |            |             |            |
-|Windows 10                |함께 제공|함께 제공|            |             |            |
-|Windows Server 2012 R2    |예         |예         |함께 제공|             |            |
-|Windows 8.1               |예         |예         |함께 제공|             |            |
-|Windows Server 2012       |예         |예         |예         |함께 제공 |            |
-|Windows 8                 |            |            |            |함께 제공 |            |
-|Windows Server 2008 R2 SP1|예         |예         |예         |예          |함께 제공|
-|Windows 7 SP1             |예         |예         |예         |예          |함께 제공|
-|Windows Server 2008 SP2   |            |            |            |예          |예         |
-|Windows Vista             |            |            |            |             |예         |
-|Windows Server 2003       |            |            |            |             |예         |
-|Windows XP                |            |            |            |예          |            |
+|        운영 체제 버전         | [WMF 5.1][]  | WMF 5.0<br>‘지원되지 않음’ | [WMF 4.0][]  | [WMF 3.0][]  | [WMF 2.0][]  |
+| --------------------------------------- | ------------ | --------------------------- | ------------ | ------------ | ------------ |
+| Windows Server 2019                     | 함께 제공 |                             |              |              |              |
+| Windows Server 2016                     | 함께 제공 |                             |              |              |              |
+| Windows 10                              | 함께 제공 | 함께 제공                |              |              |              |
+| Windows Server 2012 R2                  | 예          | 예                         | 함께 제공 |              |              |
+| Windows 8.1                             | 예          | 예                         | 함께 제공 |              |              |
+| Windows Server 2012                     | 예          | 예                         | 예          | 함께 제공 |              |
+| Windows 8<br>‘지원되지 않음’           |              |                             |              | 함께 제공 |              |
+| Windows Server 2008 R2 SP1              | 예          | 예                         | 예          | 예          | 함께 제공 |
+| Windows 7 SP1                           | 예          | 예                         | 예          | 예          | 함께 제공 |
+| Windows Server 2008 SP2                 |              |                             |              | 예          | 예          |
+| Windows Vista<br>‘지원되지 않음’       |              |                             |              |              | 예          |
+| Windows Server 2003<br>‘지원되지 않음’ |              |                             |              |              | 예          |
+| Windows XP<br>‘지원되지 않음’          |              |                             |              | 예          | 예          |
 
-**함께 제공**: 지정된 버전의 WMF 기능은 표시된 버전의 Windows 클라이언트 및 Windows Server에 제공되었습니다.
+- **함께 제공**: 지정된 버전의 WMF 기능은 표시된 버전의 Windows 클라이언트 및 Windows Server에 제공되었습니다.
+- **지원되지 않음**: 이 제품은 더 이상 Microsoft에서 지원되지 않습니다. 지원되는 새 버전으로 업그레이드해야 합니다. 자세한 내용은 [Microsoft 수명 주기 정책][] 페이지를 참조하세요.
 
+> [!NOTE]
+> WMF 5.0 설치 관리자는 더 이상 제공 또는 지원되지 않습니다. WMF 5.1에서 바뀌었습니다.
+
+[Microsoft 수명 주기 정책]: https://support.microsoft.com/lifecycle
 [WMF 5.1]: https://aka.ms/wmf51download
-[WMF 5.0]: https://aka.ms/wmf5download
 [WMF 4.0]: https://aka.ms/wmf4download
 [WMF 3.0]: https://aka.ms/wmf3download
 [WMF 2.0]: https://aka.ms/wmf2download

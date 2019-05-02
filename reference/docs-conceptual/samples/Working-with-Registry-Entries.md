@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: 레지스트리 항목 작업
 ms.assetid: fd254570-27ac-4cc9-81d4-011afd29b7dc
 ms.openlocfilehash: 667d17d0d62745a27ffef5f1912336b72f74c2a9
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086037"
 ---
 # <a name="working-with-registry-entries"></a>레지스트리 항목 작업
 
@@ -158,7 +158,7 @@ Set-ItemProperty -Path HKCU:\Environment -Name Path -Value $newpath
 .
 
 다음 예제에서는 위 예제에 추가된 경로를 제거하여 **Path** 항목을 변경합니다.
-`Get-ItemProperty` `reg query`에서 반환된 문자열을 구문 분석할 필요가 없도록 현재 값을 검색하는 데 사용됩니다. **SubString** 및 **LastIndexOf** 메서드는 **Path** 항목에 추가된 마지막 경로를 검색하는 데 사용됩니다.
+`Get-ItemProperty`는 `reg query`에서 반환된 문자열을 구문 분석할 필요가 없도록 현재 값을 검색하는 데 사용됩니다. **SubString** 및 **LastIndexOf** 메서드는 **Path** 항목에 추가된 마지막 경로를 검색하는 데 사용됩니다.
 
 ```powershell
 $value = Get-ItemProperty -Path HKCU:\Environment -Name Path

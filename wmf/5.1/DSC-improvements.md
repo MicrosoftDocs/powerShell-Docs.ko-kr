@@ -4,13 +4,13 @@ ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: WMF 5.1의 향상된 DSC
 ms.openlocfilehash: 92f82d62550e105a187fd7c0c58b49367c646a7e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55679630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085587"
 ---
-# <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>WMF 5.1에서 DSC(필요한 상태 구성)의 개선 사항
+# <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>WMF 5.1에서 DSC(Desired State Configuration)의 개선 사항
 
 ## <a name="dsc-class-resource-improvements"></a>향상된 DSC 클래스 리소스
 
@@ -206,12 +206,12 @@ WMF 5.1의 DSC에서는 카탈로그 및 구성(.MOF) 파일에 있는 디지털
 ### <a name="how-to-sign-configuration-and-module"></a>구성 및 모듈에 서명하는 방법
 
 ***
-* 구성 파일 (합니다. Mof): 기존 PowerShell cmdlet [Set-authenticodesignature](https://technet.microsoft.com/library/hh849819.aspx) MOF 파일 서명을 지원 하도록 확장 됩니다.
-* 모듈 다음 단계를 사용 하 여 해당 모듈 카탈로그에 서명 하 여 모듈 서명을 수행 합니다.
-    1. 카탈로그 파일을 만듭니다. 카탈로그 파일에는 암호화 해시 또는 지 문의 컬렉션이 포함 되어 있습니다.
+* 구성 파일(.MOF): 기존 PowerShell cmdlet [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx)가 MOF 파일 서명을 지원하도록 확장되었습니다.
+* 모듈: 다음 단계에 따라 해당 모듈 카탈로그에 서명하여 모듈 서명을 수행합니다.
+    1. 카탈로그 파일 만들기: 카탈로그 파일에는 암호화 해시 또는 지문의 컬렉션이 포함됩니다.
        각 지문은 모듈에 포함된 파일에 해당합니다.
        사용자가 모듈의 카탈로그 파일을 만들 수 있도록 지원하는 새로운 [New-FileCatalog](https://technet.microsoft.com/library/cc732148.aspx) cmdlet이 추가되었습니다.
-    2. 카탈로그 파일에 서명 합니다. 사용 하 여 [Set-authenticodesignature](https://technet.microsoft.com/library/hh849819.aspx) 카탈로그 파일에 서명 합니다.
+    2. 카탈로그 파일에 서명: [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx)를 사용하여 카탈로그 파일에 서명합니다.
     3. 카탈로그 파일을 모듈 폴더 내에 배치합니다.
 규칙에 따라 모듈 카탈로그 파일은 모듈과 이름이 같은 모듈 폴더에 배치해야 합니다.
 

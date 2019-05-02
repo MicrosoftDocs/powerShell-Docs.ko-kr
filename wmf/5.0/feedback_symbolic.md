@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
-ms.openlocfilehash: 82451c550014c684958aaf0f324457db8f0d8ceb
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 3cfc2f042234f682599bb67eac592ea3f77b31b6
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34222007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085187"
 ---
 # <a name="interact-with-symbolic-links-using-improved-item-cmdlets"></a>향상된 Item cmdlet을 사용하여 기호화된 링크 조작
 
@@ -14,9 +14,9 @@ ms.locfileid: "34222007"
 
 다음에서는 새 기능의 몇 가지 사용 사례를 보여 줍니다.
 
-## <a name="new-item"></a>NEW-ITEM
+## <a name="new-item"></a>New-Item
 
-### <a name="symbolic-link-files"></a>기호화된 링크 파일
+### <a name="symbolic-link-files"></a>바로 가기 링크 파일
 
 ```powershell
 # Create a new symbolic link file named MySymLinkFile.txt in C:\Temp which links to $pshome\profile.ps1
@@ -30,7 +30,7 @@ New-Item -ItemType SymbolicLink -Path C:\Temp\MySymLinkFile.txt -Value $pshome\p
 New-Item -ItemType SymbolicLink -Name C:\Temp\MySymLinkFile.txt -Value $pshome\profile.ps1
 ```
 
-### <a name="symbolic-link-directories"></a>기호화된 링크 디렉터리
+### <a name="symbolic-link-directories"></a>바로 가기 링크 디렉터리
 
 ```powershell
 # Create a new symbolic link directory named MySymLinkDir in C:\Temp which links to the $pshome folder
@@ -59,7 +59,7 @@ New-Item -ItemType Junction -Path C:\Temp\MyJunctionDir -Value $pshome
 # Same combinations of Path and Name allowed as described above
 ```
 
-## <a name="get-childitem"></a>GET-CHILDITEM
+## <a name="get-childitem"></a>Get-ChildItem
 
 ```powershell
 # Append link type column to Mode property and display with Get-ChildItem
@@ -110,7 +110,7 @@ SpecialBuild: False
 Language:
 ```
 
-## <a name="remove-item"></a>REMOVE-ITEM
+## <a name="remove-item"></a>Remove-Item
 
 ```powershell
 # Works like any other item type

@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC 리소스 메서드를 직접 호출
 ms.openlocfilehash: cf237f638593706e5959e2bcc0d851b0e55baf0e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079628"
 ---
 # <a name="calling-dsc-resource-methods-directly"></a>DSC 리소스 메서드를 직접 호출
 
@@ -49,7 +49,7 @@ $result = Invoke-DscResource -Name File -Method Get -Property @{
 $result.ItemValue | fl
 ```
 
->**참고:** 복합 리소스 메서드를 직접 호출 하는 것은 지원 되지 않습니다. 대신 복합 리소스를 구성하는 기본 리소스의 메서드를 호출합니다.
+>**참고:** 복합 리소스 메서드를 직접 호출할 수 없습니다. 대신 복합 리소스를 구성하는 기본 리소스의 메서드를 호출합니다.
 
 ## <a name="see-also"></a>참고 항목
 - [Writing a custom DSC resource with MOF(MOF를 사용하여 사용자 지정 DSC 리소스 작성)](../resources/authoringResourceMOF.md)

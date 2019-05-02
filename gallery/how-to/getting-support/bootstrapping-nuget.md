@@ -4,11 +4,11 @@ contributor: manikb
 keywords: gallery,powershell,cmdlet,psget
 title: NuGet 부트스트랩
 ms.openlocfilehash: 6d8f106bc3b8741203e87e4c097948a843f06d6e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55679726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084388"
 ---
 # <a name="bootstrap-the-nuget-provider-and-nugetexe"></a>NuGet 공급자 및 NuGet.exe 부트스트래프
 
@@ -155,7 +155,7 @@ cmdlet을 관리자 권한이 없는 사용자로 실행한 경우
 $env:userprofile\AppData\Local\Microsoft\Windows\PowerShell\PowerShellGet\
 ```
 
-두 번째 옵션은 NuGet.Org 웹 사이트([https://dist.nuget.org/index.html](https://www.nuget.org/downloads))에서 NuGet.exe를 다운로드하는 것입니다. 프로덕션 컴퓨터용 NuGet 버전을 선택할 때는 "권장" 레이블이 있는 2.8.5.208 이상 버전을 선택해야 합니다. 브라우저를 사용하여 다운로드한 파일의 경우 차단을 해제해야 합니다. `Unblock-File` cmdlet을 사용하여 차단을 해제할 수 있습니다.
+두 번째 옵션은 NuGet.Org 웹 사이트 [https://dist.nuget.org/index.html](https://www.nuget.org/downloads)에서 NuGet.exe를 다운로드하는 것입니다. 프로덕션 컴퓨터용 NuGet 버전을 선택할 때는 "권장" 레이블이 있는 2.8.5.208 이상 버전을 선택해야 합니다. 브라우저를 사용하여 다운로드한 파일의 경우 차단을 해제해야 합니다. `Unblock-File` cmdlet을 사용하여 차단을 해제할 수 있습니다.
 
 두 가지 방법 중 어떤 쪽을 사용하든 `$env:path`의 모든 위치에 NuGet.exe 파일을 복사할 수 있지만, 표준 위치는 다음과 같습니다.
 

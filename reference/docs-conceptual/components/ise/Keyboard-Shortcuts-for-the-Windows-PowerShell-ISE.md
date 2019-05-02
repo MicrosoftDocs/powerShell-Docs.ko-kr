@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Windows PowerShell ISE 바로 가기 키
 ms.assetid: 8328b946-0f02-4ef4-ac28-2743a1b4043b
 ms.openlocfilehash: 1abae849ce599b586357fd2a8db46c608932bd4e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086836"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Windows PowerShell ISE 바로 가기 키
 
@@ -20,7 +20,7 @@ ms.locfileid: "53402263"
 
 |작업|바로 가기 키|사용 위치|
 |----------|----------------------|----------|
-|**도움말**|F1|스크립트 창 **중요 합니다.** F1 도움말을 웹의 TechNet 라이브러리에서 가져온 또는 도움말 (Update-help 참조)를 다운로드를 지정할 수 있습니다. 선택하려면 **도구**, **옵션**을 차례로 클릭하고 **일반 설정** 탭에서 **온라인 콘텐츠 대신 로컬 도움말 콘텐츠 사용**을 설정하거나 선택 취소합니다.|
+|**도움말**|F1|스크립트 창 **중요:** F1 도움말을 웹의 TechNet 라이브러리 또는 다운로드한 도움말에서 가져오도록 지정할 수 있습니다(Update-Help 참조). 선택하려면 **도구**, **옵션**을 차례로 클릭하고 **일반 설정** 탭에서 **온라인 콘텐츠 대신 로컬 도움말 콘텐츠 사용**을 설정하거나 선택 취소합니다.|
 |**복사**|CTRL+C|스크립트 창, 명령 창, 출력 창|
 |**잘라내기**|CTRL+X|스크립트 창, 명령 창|
 |**개요 확장 또는 축소**|Ctrl+M|스크립트 창|
@@ -47,8 +47,8 @@ ms.locfileid: "53402263"
 |**실행**|F5|
 |**선택 항목 실행**|F8|
 |**실행 중지**|CTRL+BREAK 컨텍스트가 명확한 경우(선택한 텍스트가 없는 경우) Ctrl+C를 사용할 수 있습니다.|
-|**Tab** 키를 눌러 다음 스크립트로 이동|CTRL + TAB **참고 합니다.** 다음 스크립트를 탭 하거나 둘 이상의 Windows PowerShell 탭이 열려 있지만 스크립트 창에 포커스가 단일 Windows PowerShell 탭이 열려 있는 경우에 작동 합니다.|
-|**Tab** 키를 눌러 이전 스크립트로 이동|CTRL + SHIFT + TAB **참고 합니다.** 앞의 스크립트 탭은 하나의 Windows PowerShell 탭이 열려 있는 경우 또는 둘 이상의 Windows PowerShell 탭이 열려 있고 스크립트 창에 포커스가 있는 경우 작동 합니다.|
+|**Tab** 키를 눌러 다음 스크립트로 이동|CTRL+TAB **참고:** Tab 키를 눌러 다음 스크립트로 이동은 하나의 Windows PowerShell 탭만 열려 있는 경우 또는 둘 이상의 Windows PowerShell 탭이 열려 있지만 스크립트 창에 포커스가 있는 경우에 작동합니다.|
+|**Tab** 키를 눌러 이전 스크립트로 이동|CTRL+SHIFT+TAB **참고:** Tab 키를 눌러 이전 스크립트로 이동은 하나의 Windows PowerShell 탭만 열려 있는 경우 또는 둘 이상의 Windows PowerShell 탭이 열려 있고 스크립트 창에 포커스가 있는 경우에 작동합니다.|
 
 ## <a name="keyboard-shortcuts-for-customizing-the-view"></a>보기 사용자 지정 바로 가기 키
 
