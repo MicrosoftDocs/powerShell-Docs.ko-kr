@@ -38,7 +38,7 @@ ms.locfileid: "62076478"
 클라이언트 컴퓨터는 다음 항목이 설치된 Windows 컴퓨터여야 합니다.
 
 - [Git](https://git-scm.com/)
-- https://github.com/PowerShell/Demo_CI에서 복제된 로컬 Git 리포지토리
+- [https://github.com/PowerShell/Demo_CI](https://github.com/PowerShell/Demo_CI)에서 복제된 로컬 Git 리포지토리
 - [Visual Studio Code](https://code.visualstudio.com/)와 같은 텍스트 편집기
 
 ### <a name="tfssrv1"></a>TFSSrv1

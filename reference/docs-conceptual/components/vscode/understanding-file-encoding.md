@@ -255,7 +255,7 @@ PowerShell 스크립트를 읽거나 작성하는 다른 프로그램이 해당 
 
 PowerShell에서 인코딩 및 인코딩 구성에 대해 읽을 만한 몇 가지 다른 유용한 게시물은 다음과 같습니다.
 
-- [@mklement0][stackoverflow PowerShell 인코딩의 요약](https://stackoverflow.com/questions/40098771/changing-powershells-default-output-encoding-to-utf-8)
+- [@mklement0] [stackoverflow PowerShell 인코딩의 요약](https://stackoverflow.com/questions/40098771/changing-powershells-default-output-encoding-to-utf-8)
 - 인코딩 문제과 관련하여 vscode-PowerShell에서 열린 이전 문제:
   - [#1308](https://github.com/PowerShell/vscode-powershell/issues/1308)
   - [#1628](https://github.com/PowerShell/vscode-powershell/issues/1628)
