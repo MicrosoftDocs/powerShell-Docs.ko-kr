@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 30183927-6f0e-4717-b6f5-f07a6e134cfb
 caps.latest.revision: 6
-ms.openlocfilehash: f2f6b9af7740b1231881294c2f32bf97b5a1568b
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 37a297228eb33ff75daf94a12635d42b52c6cc9f
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62064512"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229308"
 ---
 # <a name="scriptblock-element-for-groupby-format"></a>GroupBy에 대한 ScriptBlock 요소(형식)
 
@@ -51,14 +51,14 @@ ms.locfileid: "62064512"
 
 ## <a name="remarks"></a>설명
 
-Windows PowerShell이이 스크립트의 값이 변경 될 때마다 새 그룹을 시작 합니다.
+PowerShell이이 스크립트의 값이 변경 될 때마다 새 그룹을 시작 합니다.
 
-이 요소를 지정 하는 경우 지정할 수 없습니다는 [PropertyName](http://msdn.microsoft.com/en-us/396dede0-039a-4a87-a5ef-3ecabb729676) 요소를 새 그룹을 시작 합니다.
+이 요소를 지정 하는 경우 지정할 수 없습니다는 [PropertyName](propertyname-element-for-groupby-format.md) 요소를 새 그룹을 시작 합니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[GroupBy (형식)에 대 한 PropertyName 요소](./propertyname-element-for-groupby-format.md)
+[GroupBy (형식)에 대 한 PropertyName 요소](propertyname-element-for-groupby-format.md)
 
-[뷰 (형식)에 대 한 GroupBy 요소](./groupby-element-for-view-format.md)
+[뷰 (형식)에 대 한 GroupBy 요소](groupby-element-for-view-format.md)
 
-[서식 파일을 PowerShell 작성](./writing-a-powershell-formatting-file.md)
+[서식 파일을 PowerShell 작성](writing-a-powershell-formatting-file.md)

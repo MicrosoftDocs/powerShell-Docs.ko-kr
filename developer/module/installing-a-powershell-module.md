@@ -8,26 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb82827e-fdb7-4cbf-b3d4-093e72b3ff0e
 caps.latest.revision: 28
-ms.openlocfilehash: 7c2bfca50de4645676eafc01bbf23d9797e8b758
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 60ac4bf9089232a9fa879e835e32da53422489fd
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082195"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229443"
 ---
 # <a name="installing-a-powershell-module"></a>PowerShell 모듈 설치
 
-PowerShell 모듈을 만든 후 가능성이 해야 시스템에서 모듈을 설치 하 든 다른 사람이 사용할 수 있도록 합니다. 일반적으로이 단순히 이루어져 있습니다 모듈 파일 (ie,은. psm1, 또는 이진 어셈블리, 모듈 매니페스트 및 관련 된 기타 파일이) 디렉터리에 해당 컴퓨터에 복사 합니다. 매우 작은 프로젝트의 경우이 수 만큼 간단할 복사 및 붙여넣기를 단일 원격 컴퓨터에 Windows 탐색기를 사용 하 여 파일 그러나 더 큰 솔루션 보다 복잡 한 설치 프로세스를 사용 하는 수도 있습니다. 시스템 모듈을 얻는 방법에 관계 없이 PowerShell에는 다양 한 기술 찾아 모듈을 사용 하 여 사용자를 사용할 수 있습니다. (자세한 내용은 [PowerShell 모듈을 가져오는](./importing-a-powershell-module.md).) 따라서 설치에 대 한 주요 문제는 PowerShell 모듈을 찾을 수 있는지을 보장 합니다.
-
-이 항목에는 다음과 같은 섹션이 포함되어 있습니다.
-
-- 모듈을 설치 하는 것에 대 한 규칙
-
-- 모듈을 설치 하는 위치
-
-- 모듈의 여러 버전 설치
-
-- 처리 명령 이름 충돌
+PowerShell 모듈을 만든 후 가능성이 해야 시스템에서 모듈을 설치 하 든 다른 사람이 사용할 수 있도록 합니다. 일반적으로이 구성의 모듈 파일 (ie,은. psm1, 또는 이진 어셈블리, 모듈 매니페스트 및 관련 된 기타 파일이) 디렉터리를 컴퓨터에 복사 됩니다. 매우 작은 프로젝트의 경우이 수 만큼 간단할 복사 및 붙여넣기를 단일 원격 컴퓨터에 Windows 탐색기를 사용 하 여 파일 그러나 더 큰 솔루션 보다 복잡 한 설치 프로세스를 사용 하는 수도 있습니다. 시스템 모듈을 얻는 방법에 관계 없이 PowerShell에는 다양 한 기술 찾아 모듈을 사용 하 여 사용자를 사용할 수 있습니다. 따라서 설치에 대 한 주요 문제는 PowerShell 모듈을 찾을 수 있는지을 보장 합니다. 자세한 내용은 [PowerShell 모듈을 가져오는](./importing-a-powershell-module.md)합니다.
 
 ## <a name="rules-for-installing-modules"></a>모듈을 설치 하는 것에 대 한 규칙
 
@@ -41,14 +31,14 @@ PowerShell 모듈을 만든 후 가능성이 해야 시스템에서 모듈을 �
 
 기본적으로 **PSModulePath** 사용자 모듈 디렉터리를 확인 하 고 다음과 같은 시스템 환경 변수 값에 포함 되어 있지만에 추가 하 고 값을 편집할 수 있습니다.
 
-- $ PSHome\Modules (%Windir%\System32\WindowsPowerShell\v1.0\Modules)
+- `$PSHome\Modules` (%Windir%\System32\WindowsPowerShell\v1.0\Modules)
 
   > [!WARNING]
   > 이 위치는 Windows와 함께 제공 되는 모듈에 대해 예약 됩니다. 이 위치에 모듈을 설치 하지 마세요.
 
-- $ Home\Documents\WindowsPowerShell\Modules (%UserProfile%\Documents\WindowsPowerShell\Modules)
+- `$Home\Documents\WindowsPowerShell\Modules` (%UserProfile%\Documents\WindowsPowerShell\Modules)
 
-- $Env: ProgramFiles\WindowsPowerShell\Modules (%ProgramFiles%\WindowsPowerShell\Modules)
+- `$Env:ProgramFiles\WindowsPowerShell\Modules` (%ProgramFiles%\WindowsPowerShell\Modules)
 
   값을 검색할 합니다 **PSModulePath** 환경 변수를 다음 명령 중 하나를 사용 합니다.
 
@@ -60,7 +50,6 @@ PowerShell 모듈을 만든 후 가능성이 해야 시스템에서 모듈을 �
   값에는 모듈 경로를 추가 합니다 **PSModulePath** 환경 변수 값, 다음 명령 형식을 사용 합니다. 이 형식은 사용 하 여는 **SetEnvironmentVariable** 메서드는 **System.Environment** 클래스를 세션에 관계 없이 변경 하는 **PSModulePath** 환경 변수입니다.
 
   ```powershell
-
   #Save the current value in the $p variable.
   $p = [Environment]::GetEnvironmentVariable("PSModulePath")
 
@@ -77,7 +66,7 @@ PowerShell 모듈을 만든 후 가능성이 해야 시스템에서 모듈을 �
 
 ### <a name="use-the-correct-module-directory-name"></a>올바른 모듈 디렉터리 이름을 사용 하 여
 
-"올바른된" 모듈은 모듈을 모듈 디렉터리에 하나 이상의 파일의 기본 이름으로 동일한 이름을 가진 디렉터리에 저장 됩니다. 모듈을 제대로 구성 하지 않으면 Windows PowerShell 인식 하지 못합니다 해당 모듈로.
+올바른 형식의 모듈은 모듈을 모듈 디렉터리에 하나 이상의 파일의 기본 이름으로 동일한 이름을 가진 디렉터리에 저장 됩니다. 모듈을 제대로 구성 하지 않으면 Windows PowerShell 인식 하지 못합니다 해당 모듈로.
 
 "기본" 파일의 이름은 파일 이름 확장명이 없는 이름입니다. 올바른 형식의 모듈을 모듈 파일이 포함 된 디렉터리의 이름을 모듈에서 하나 이상의 파일의 기본 이름과 일치 해야 합니다.
 
@@ -122,9 +111,7 @@ C:\Program Files
 
 사용자 고유의 모듈을 만들거나 Windows PowerShell 커뮤니티 웹 사이트와 같은 다른 파티에서 모듈을 가져올 하려는 경우 사용자 계정의 사용 가능 하도록 모듈을 사용자 고유의 모듈 디렉터리에 모듈을 설치 합니다.
 
-```
-$home\Documents\WindowsPowerShell\Modules\<Module Folder>\<Module Files>
-```
+`$home\Documents\WindowsPowerShell\Modules\<Module Folder>\<Module Files>`
 
 사용자 고유의 모듈 디렉터리의 값에 추가 됩니다는 **PSModulePath** 기본적으로 환경 변수입니다.
 
@@ -132,9 +119,7 @@ $home\Documents\WindowsPowerShell\Modules\<Module Folder>\<Module Files>
 
 컴퓨터의 모든 사용자 계정에 사용 가능 하도록 모듈을 사용 하도록 하려는 경우 Program Files 위치에 모듈을 설치 합니다.
 
-```
-$Env:ProgramFiles\WindowsPowerShell\Modules\<Module Folder>\<Module Files>
-```
+`$Env:ProgramFiles\WindowsPowerShell\Modules\<Module Folder>\<Module Files>`
 
 > [!NOTE]
 > 프로그램 파일 위치를 Windows PowerShell 4.0 이상에서 기본적으로 PSModulePath 환경 변수의 값에 추가 됩니다. Windows PowerShell의 버전을 수동으로 만들고 Program Files 위치 ((%ProgramFiles%\WindowsPowerShell\Modules) 하 위에서 설명한 대로이 경로를 PSModulePath 환경 변수에 추가 합니다.
@@ -160,7 +145,7 @@ Fabrikam 모듈을 찾으려면 Windows PowerShell 모듈 검색 기능을 사�
 
 ```powershell
 $p = [Environment]::GetEnvironmentVariable("PSModulePath")
-$p += "C:\Program Files\Fabrikam Technologies\Fabrikam Manager\Modules\"
+$p += ";C:\Program Files\Fabrikam Technologies\Fabrikam Manager\Modules\"
 [Environment]::SetEnvironmentVariable("PSModulePath",$p)
 ```
 
@@ -168,7 +153,7 @@ $p += "C:\Program Files\Fabrikam Technologies\Fabrikam Manager\Modules\"
 
 모듈 여러 버전의 제품 또는 제품의 여러 구성 요소를 사용 하면 %ProgramFiles%\Common Files\Modules 하위 디렉터리의 모듈의 특정 하위 디렉터리에 모듈을 설치 합니다.
 
-다음 예제에서는 Fabrikam 모듈 %ProgramFiles%\Common Files\Modules 하위 디렉터리의 Fabrikam 하위 디렉터리에 설치 됩니다. 각 모듈 모듈 하위 디렉터리에는 자체 하위 디렉터리에 상주 하는 참고 합니다.
+다음 예제에서는 Fabrikam 모듈이의 Fabrikam 하위 디렉터리에 설치 되는 `%ProgramFiles%\Common Files\Modules` 하위 디렉터리입니다. 각 모듈 모듈 하위 디렉터리에는 자체 하위 디렉터리에 상주 하는 참고 합니다.
 
 ```
 C:\Program Files
@@ -177,7 +162,6 @@ C:\Program Files
       Fabrikam
         Fabrikam.psd1 (module manifest)
         Fabrikam.dll (module assembly)
-
 ```
 
 설치 관리자의 값을 보장 하는 다음의 **PSModulePath** 환경 변수는 일반적인 파일 모듈 하위 디렉터리의 경로 포함 합니다.
@@ -198,9 +182,7 @@ $p = $q -join ';'
 동일한 모듈의 여러 버전을 설치 하려면 다음 절차를 따르십시오.
 
 1. 모듈의 각 버전에 대 한 디렉터리를 만듭니다. 디렉터리 이름에 버전 번호가 포함 됩니다.
-
 2. 모듈의 각 버전에 대 한 모듈 매니페스트를 만듭니다. 값에는 **ModuleVersion** 매니페스트에서 키, 모듈 버전 번호를 입력 합니다. 매니페스트 파일 (.psd1) 모듈에 대 한 버전별 디렉터리에 저장 합니다.
-
 3. 값으로 모듈 루트 폴더 경로 추가 합니다 **PSModulePath** 환경 변수를 다음 예에서 같이 합니다.
 
 모듈의 특정 버전을 가져오려면 최종 사용자가 사용할 수는 `MinimumVersion` 나 `RequiredVersion` 의 매개 변수를 [Import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet.

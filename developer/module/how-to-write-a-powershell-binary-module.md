@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eb4e72e6-24c4-42b6-b7b9-a62585c17f26
 caps.latest.revision: 15
-ms.openlocfilehash: 9ddb3bc172c66314603d2be4df5192a76c92e05d
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: ed614de125f78cbcf8411cc334baf3c95933dd47
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082229"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229309"
 ---
 # <a name="how-to-write-a-powershell-binary-module"></a>PowerShell 이진 모듈을 작성하는 방법
 
@@ -29,7 +29,10 @@ ms.locfileid: "62082229"
 
 2. 필요한 경우 솔루션의 나머지 부분을 만듭니다. (추가 cmdlet, XML 파일 및 등) 및 모듈 매니페스트를 사용 하 여 설명 합니다.
 
-   솔루션에서 cmdlet 어셈블리를 설명 하는 것 외에도 원하는 내보내고 가져올 모듈, cmdlet, 노출 되 고 모듈로 이동 하는 추가 파일은 모듈 매니페스트를 설명할 수 있습니다. 그러나 앞에서 설명한 대로 PowerShell 모듈을 추가 작업 없이 같은 이진 cmdlet을 처리할 수 있습니다. 따라서 모듈 매니페스트는 주로 단일 패키지에 여러 파일 결합 또는 명시적으로 지정된 된 어셈블리에 대 한 게시를 제어 하기 위한에 유용 합니다. 자세한 내용은 [PowerShell 모듈 매니페스트 작성 방법](http://msdn.microsoft.com/en-us/abe4c24b-e64e-4a61-81d5-18c4fceba0b6)합니다.
+   솔루션에서 cmdlet 어셈블리를 설명 하는 것 외에도 원하는 내보내고 가져올 모듈, cmdlet, 노출 되 고 모듈로 이동 하는 추가 파일은 모듈 매니페스트를 설명할 수 있습니다.
+   그러나 앞에서 설명한 대로 PowerShell 모듈을 추가 작업 없이 같은 이진 cmdlet을 처리할 수 있습니다.
+   따라서 모듈 매니페스트는 주로 단일 패키지에 여러 파일 결합 또는 명시적으로 지정된 된 어셈블리에 대 한 게시를 제어 하기 위한에 유용 합니다.
+   자세한 내용은 [PowerShell 모듈 매니페스트 작성 방법](how-to-write-a-powershell-module-manifest.md)합니다.
 
    다음 코드는 매우 간단한 C# 모듈로 사용할 수 있는 동일한 파일에서 세 개의 cmdlet을 포함 하는 코드 블록입니다.
 
@@ -82,7 +85,9 @@ ms.locfileid: "62082229"
 
 이진 모듈로 스냅인 어셈블리에 존재 하는 Cmdlet 및 공급자를 로드할 수 있습니다. 스냅인 어셈블리 이진 모듈을 로드할 경우 스냅인의 공급자와 cmdlet은 사용자에 게 사용할 수 있지만 어셈블리에 스냅인 클래스 무시 되 고 스냅인을 등록 되지 않았습니다. 결과적으로, cmdlet 및 공급자를 세션에 사용할 수 있지만 Windows PowerShell에서 제공 된 스냅인 cmdlet은 스냅인을 검색할 수 없습니다.
 
-또한 이진 모듈의 일부로 스냅인에서 참조 하는 모든 형식 또는 형식 파일을 가져올 수 없습니다. 서식 지정 및 형식 파일을 가져오는 모듈 매니페스트를 만들어야 합니다. 하세요 [PowerShell 모듈 매니페스트를 작성 하는 방법을](http://msdn.microsoft.com/en-us/abe4c24b-e64e-4a61-81d5-18c4fceba0b6)합니다.
+또한 이진 모듈의 일부로 스냅인에서 참조 하는 모든 형식 또는 형식 파일을 가져올 수 없습니다.
+서식 지정 및 형식 파일을 가져오는 모듈 매니페스트를 만들어야 합니다.
+하세요 [PowerShell 모듈 매니페스트를 작성 하는 방법을](how-to-write-a-powershell-module-manifest.md)합니다.
 
 ## <a name="see-also"></a>참고 항목
 
