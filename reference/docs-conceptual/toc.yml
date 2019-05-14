@@ -68,7 +68,7 @@
   items:
     - name: 콘솔
       items:
-        - name: PowerShell.exe 명령줄 도움말
+        - name: PowerShell 명령줄 옵션
           href: components/console/powershell.exe-command-line-help.md
         - name: 탭 확장 사용
           href: components/console/using-tab-expansion.md
