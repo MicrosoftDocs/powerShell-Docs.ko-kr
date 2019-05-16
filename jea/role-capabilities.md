@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,security
 title: JEA 역할 기능
-ms.openlocfilehash: b93d206680de485d6cb7a8cb26d63afda5bf8421
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 528b41c0e2ffdcfed3251fb0f714c649e7290761
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62084796"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229559"
 ---
 # <a name="jea-role-capabilities"></a>JEA 역할 기능
 
@@ -183,6 +183,8 @@ JEA 세션에서 제한된 모든 cmdlet은 함수에서 호출될 때 PowerShel
 
 많은 사용자 지정 함수를 작성하는 경우 사용자 지정 함수를 [PowerShell Script Module](https://msdn.microsoft.com/library/dd878340(v=vs.85).aspx)(PowerShell 스크립트 모듈)에 배치하는 것이 더 쉬울 수 있습니다.
 그런 다음 기본 제공 및 타사 모듈을 사용할 때처럼 VisibleFunctions 필드를 사용하여 JEA 세션에 해당 함수를 표시할 수 있습니다.
+
+JEA 세션에서 탭 완료가 제대로 작동하려면 **VisibleFunctions** 목록에 기본 제공 함수 `tabexpansion2`를 포함해야 합니다.
 
 ## <a name="place-role-capabilities-in-a-module"></a>모듈에 역할 기능 배치
 

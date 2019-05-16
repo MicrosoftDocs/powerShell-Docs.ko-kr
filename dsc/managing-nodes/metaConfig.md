@@ -2,18 +2,18 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: 로컬 구성 관리자 구성
-ms.openlocfilehash: 86d2cc17872692a738e9c68121b8931833d2a251
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 15d696587d54d4a6464096cfb78757c41e9185c6
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079680"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229505"
 ---
 # <a name="configuring-the-local-configuration-manager"></a>로컬 구성 관리자 구성
 
 > 적용 대상: Windows Powershell 5.0
 
-LCM(로컬 구성 관리자)은 DSC(Desired State Configuration)의 엔진입니다.
+LCM(로컬 구성 관리자)은 DSC(필요한 상태 구성)의 엔진입니다.
 LCM은 모든 대상 노드에서 실행되며, 노드로 전송되는 구성을 구문 분석하고 시행하는 일을 담당합니다.
 다음 작업을 포함하여 DSC의 수 많은 다른 측면을 담당하기도 합니다.
 
@@ -74,7 +74,7 @@ LCM 구성은 제한된 리소스 집합에 대한 블록만 포함할 수 있�
 |----------- |------- |--------------- |
 | ActionAfterReboot| string| 구성을 적용하는 동안 다시 부팅하면 어떤 일이 일어나는지 지정합니다. 가능한 값은 __"ContinueConfiguration"__ 및 __"StopConfiguration"__ 입니다. <ul><li> __ContinueConfiguration__: 머신을 다시 부팅한 후 현재 구성을 계속 적용합니다. 기본값입니다.</li><li>__StopConfiguration__: 머신을 다시 부팅한 후 현재 구성을 중지합니다.</li></ul>|
 | AllowModuleOverwrite| 부울| 풀 서비스에서 다운로드한 새 구성이 대상 노드에 있는 이전 구성을 덮어쓰도록 허용되는 경우 __$TRUE__입니다. 그렇지 않으면 $FALSE입니다.|
-| CertificateID| string| 구성으로 전달된 자격 증명을 보호하는 데 사용되는 인증서의 지문입니다. 자세한 내용은 [Want to secure credentials in Windows PowerShell Desired State Configuration(Windows PowerShell Desired State Configuration의 자격 증명 보호가 필요하세요)](http://blogs.msdn.com/b/powershell/archive/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration.aspx)을 참조하세요. <br> __참고:__ Azure Automation DSC 풀 서비스를 사용하는 경우 자동으로 관리됩니다.|
+| CertificateID| string| 구성으로 전달된 자격 증명을 보호하는 데 사용되는 인증서의 지문입니다. 자세한 내용은 [Want to secure credentials in Windows PowerShell Desired State Configuration(Windows PowerShell 필요한 상태 구성의 자격 증명 보호가 필요하세요)](http://blogs.msdn.com/b/powershell/archive/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration.aspx)을 참조하세요. <br> __참고:__ Azure Automation DSC 풀 서비스를 사용하는 경우 자동으로 관리됩니다.|
 | ConfigurationDownloadManagers| CimInstance[]| 사용되지 않습니다. 구성 풀 서비스 엔드포인트를 정의하려면 __ConfigurationRepositoryWeb__ 및 __ConfigurationRepositoryShare__ 블록을 사용합니다.|
 | ConfigurationID| string| 이전 풀 서비스 버전과의 호환성을 위해 사용합니다. 풀 서비스에서 가져올 구성 파일을 식별하는 GUID입니다. 구성 MOF의 이름이 ConfigurationID.mof로 지정된 경우 노드는 풀 서비스에서 구성을 끌어옵니다.<br> __참고:__ 이 속성을 설정하는 경우 __RegistrationKey__를 사용하여 풀 서비스에서 노드가 등록되지 않습니다. 자세한 내용은 [Setting up a pull client with configuration names(구성 이름을 사용하여 끌어오기 클라이언트 설정)](../pull-server/pullClientConfigNames.md)를 참조합니다.|
 | ConfigurationMode| string | LCM이 구성을 실제로 대상 노드를 적용하는 방식을 지정합니다. 가능한 값은 __“ApplyOnly”__,__“ApplyAndMonitor”__, __“ApplyAndAutoCorrect”__ 입니다. <ul><li>__ApplyOnly__: 새 구성이 대상 노드에 밀어넣어지지 않은 경우, 또는 새 구성이 서비스에서 끌어온 구성인 경우 DSC가 구성을 적용하고 더 이상의 작업은 수행하지 않습니다. 새 구성의 초기 적용 후에는 DSC에서 이전에 구성된 상태가 변경되었는지 여부를 확인하지 않습니다. DSC는 __ApplyOnly__가 적용되기 전에 성공할 때까지 구성을 적용하려고 시도합니다. </li><li> __ApplyAndMonitor__: 기본값입니다. LCM이 새 구성을 적용합니다. 새 구성의 초기 적용 후, 대상 노드의 상태가 필요한 상태에서 변경되는 경우 DSC에서는 로그의 불일치를 보고합니다. DSC는 __ApplyAndMonitor__가 적용되기 전에 성공할 때까지 구성을 적용하려고 시도합니다.</li><li>__ApplyAndAutoCorrect__: DSC에서 모든 새 구성을 적용합니다. 새 구성의 초기 적용 후, 대상 노드의 상태가 필요한 상태에서 변경되는 경우 DSC에서는 로그의 불일치를 보고한 다음, 현재 구성을 다시 적용합니다.</li></ul>|
@@ -107,7 +107,7 @@ LCM 구성에서는 다음 형식의 풀 서비스 엔드포인트를 정의할 
 - **리소스 서버**: PowerShell 모듈로서 패키지에 포함된 DSC 리소스용 리포지토리입니다. **ResourceRepositoryWeb**(웹 기반 서버용) 및 **ResourceRepositoryShare**(SMB 기반 서버용) 블록을 사용하여 리소스 서버를 정의합니다.
 - **보고서 서버**: DSC에서 보내는 보고서 데이터를 전송받는 서비스입니다. **ReportServerWeb** 블록을 사용하여 보고서 서버를 정의합니다. 보고서 서버는 웹 서비스여야 합니다.
 
-끌어오기 서비스에 대한 자세한 내용은 [Desired State Configuration 끌어오기 서비스](../pull-server/pullServer.md)를 참조하세요.
+끌어오기 서비스에 대한 자세한 내용은 [원하는 상태 구성 끌어오기 서비스](../pull-server/pullServer.md)를 참조하세요.
 
 ## <a name="configuration-server-blocks"></a>구성 서버 블록
 
@@ -121,6 +121,10 @@ LCM 구성에서는 다음 형식의 풀 서비스 엔드포인트를 정의할 
 |ConfigurationNames|String[]|대상 노드에서 끌어올 일련의 구성 이름입니다. 이 이름들은 노드가 **RegistrationKey**를 사용하여 풀 서비스에 등록되어 있지 않은 경우에만 사용됩니다. 자세한 내용은 [Setting up a pull client with configuration names(구성 이름을 사용하여 끌어오기 클라이언트 설정)](../pull-server/pullClientConfigNames.md)를 참조합니다.|
 |RegistrationKey|string|풀 서비스에 노드를 등록하는 GUID입니다. 자세한 내용은 [Setting up a pull client with configuration names(구성 이름을 사용하여 끌어오기 클라이언트 설정)](../pull-server/pullClientConfigNames.md)를 참조합니다.|
 |ServerURL|string|구성 서비스의 URL입니다.|
+|ProxyURL*|string|구성 서비스와 통신할 때 사용할 http 프록시의 URL입니다.|
+|ProxyCredential*|pscredential|Http 프록시에 사용할 자격 증명입니다.|
+
+>!참고 \* Windows 버전 1809 이상에서 지원됩니다.
 
 온-프레미스 노드에 대해 ConfigurationRepositoryWeb 값 구성을 간소화하는 예제 스크립트를 사용할 수 있습니다([DSC 메타 구성 생성](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations) 참조).
 
@@ -143,6 +147,10 @@ SMB 기반 구성 서버를 정의하려면 **ConfigurationRepositoryShare** 블
 |CertificateID|string|서버를 인증하는 데 사용되는 인증서의 지문입니다.|
 |RegistrationKey|string|풀 서비스에 대해 노드를 식별하는 GUID입니다.|
 |ServerURL|string|구성 서버의 URL입니다.|
+|ProxyURL*|string|구성 서비스와 통신할 때 사용할 http 프록시의 URL입니다.|
+|ProxyCredential*|pscredential|Http 프록시에 사용할 자격 증명입니다.|
+
+>!참고 \* Windows 버전 1809 이상에서 지원됩니다.
 
 온-프레미스 노드에 대해 ResourceRepositoryWeb 값 구성을 간소화하는 예제 스크립트를 사용할 수 있습니다([DSC 메타 구성 생성](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations) 참조).
 
@@ -166,6 +174,10 @@ SMB 기반 리소스 서버를 정의하려면 **ResourceRepositoryShare** 블�
 |CertificateID|string|서버를 인증하는 데 사용되는 인증서의 지문입니다.|
 |RegistrationKey|string|풀 서비스에 대해 노드를 식별하는 GUID입니다.|
 |ServerURL|string|구성 서버의 URL입니다.|
+|ProxyURL*|string|구성 서비스와 통신할 때 사용할 http 프록시의 URL입니다.|
+|ProxyCredential*|pscredential|Http 프록시에 사용할 자격 증명입니다.|
+
+>!참고 \* Windows 버전 1809 이상에서 지원됩니다.
 
 온-프레미스 노드에 대해 ReportServerWeb 값 구성을 간소화하는 예제 스크립트를 사용할 수 있습니다([DSC 메타 구성 생성](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations) 참조).
 
@@ -189,7 +201,7 @@ __참고:__ 부분 구성은 Azure Automation DSC에서 지원되지만 각 자�
 ## <a name="see-also"></a>참고 항목
 
 ### <a name="concepts"></a>개념
-[Desired State Configuration 개요](../overview/overview.md)
+[원하는 상태 구성 개요](../overview/overview.md)
 
 [Azure Automation DSC 시작하기](https://docs.microsoft.com/azure/automation/automation-dsc-getting-started)
 

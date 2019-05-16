@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: Get-Test-Set
-ms.openlocfilehash: 6d059518a49926bc5fb56e37e7d3d4d2c66bddec
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: e4aa7770bb5fc8b916b0c0a6488b1ccc0ef0ade9
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076602"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229523"
 ---
 # <a name="get-test-set"></a>Get-Test-Set
 
@@ -121,7 +121,7 @@ ModuleVersion = "1.0";
 };
 ```
 
-적용되면 [로컬 구성 관리자](../managing-nodes/metaConfig.md)가 “.mof” 파일에서 “Spooler” 값을 읽고 **Service** 리소스의 “MyService” 인스턴스에 대한 **Get**, **Test** 및 **Set**의 `-Name` 매개 변수에 이 값을 전달합니다.
+적용되면 [로컬 구성 관리자](../managing-nodes/metaConfig.md)(LCM)가 ".mof" 파일에서 "Spooler" 값을 읽고 **Service** 리소스의 "MyService" 인스턴스에 대한 **Get**, **Test** 및 **Set**의 `-Name` 매개 변수에 이 값을 전달합니다.
 
 ## <a name="get"></a>get
 

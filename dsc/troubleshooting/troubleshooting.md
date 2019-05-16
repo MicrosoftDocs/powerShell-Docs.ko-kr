@@ -2,12 +2,12 @@
 ms.date: 10/30/2018
 keywords: dsc,powershell,configuration,setup
 title: DSC 문제 해결
-ms.openlocfilehash: 5ee1b68f4f769426fea3c8e10738c3bb6ef94480
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 2a0d2138f30573b9ae6cf52d8b106a05f1193407
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076551"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229527"
 ---
 # <a name="troubleshooting-dsc"></a>DSC 문제 해결
 
@@ -627,6 +627,21 @@ onlyProperty                            PSComputerName
 ------------                            --------------
 14                                      localhost
 ```
+
+## <a name="dsc-returns-unexpected-response-code-internalservererror-when-registering-with-windows-pull-server"></a>Windows Pull Server에 등록할 때 DSC에서 "예기치 않은 응답 코드 InternalServerError"를 반환합니다.
+
+서버에 메타 구성을 적용하여 Windows Pull Server 인스턴스에 등록할 때 다음과 같은 오류가 발생할 수 있습니다.
+
+```PowerShell
+Registration of the Dsc Agent with the server https://<serverfqdn>:8080/PSDSCPullServer.svc failed. The underlying error is: The attempt to register Dsc Agent with AgentId <ID> with the server 
+https://<serverfqdn>:8080/PSDSCPullServer.svc/Nodes(AgentId='<ID>') returned unexpected response code InternalServerError. .
+    + CategoryInfo          : InvalidResult: (root/Microsoft/...gurationManager:String) [], CimException
+    + FullyQualifiedErrorId : RegisterDscAgentUnsuccessful,Microsoft.PowerShell.DesiredStateConfiguration.Commands.RegisterDscAgentCommand
+    + PSComputerName        : <computername>
+```
+
+이는 서버에서 트래픽을 암호화하는 데 사용되는 인증서에 노드에서 URL을 확인하기 위해 사용하는 DNS 이름과 다른 CN(일반 이름)이 있을 때 발생할 수 있습니다.
+수정된 이름의 인증서를 사용하도록 Windows Pull Server 인스턴스를 업데이트합니다.
 
 ## <a name="see-also"></a>참고 항목
 
