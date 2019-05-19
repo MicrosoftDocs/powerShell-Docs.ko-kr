@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], base provider
 ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
 caps.latest.revision: 7
-ms.openlocfilehash: 19cc3817016d96e1412a5f3506e9d694ba55b48d
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5ebc22067b20f0e1d35d31d5f33e599f50cb7564
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082076"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855076"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>기본 Windows PowerShell 공급자 만들기
 
@@ -26,22 +26,6 @@ ms.locfileid: "62082076"
 
 > [!NOTE]
 > Windows PowerShell에서 제공 되는 AccessDBSampleProvider01.cs 파일에서이 공급자의 샘플을 찾을 수 있습니다.
-
-이 항목의 섹션은 다음과 같습니다.
-
-- [Windows PowerShell 공급자 클래스를 정의합니다.](#Defining-the-Windows-PowerShell-Provider-Class)
-
-- [공급자 관련 상태 정보를 정의합니다.](#Defining-Provider-Specific-State-Information)
-
-- [공급자를 초기화합니다.](#Initializing-the-Provider)
-
-- [동적 매개 변수를 시작 합니다.](#Start-Dynamic-Parameters)
-
-- [공급자 초기화 취소](#Uninitializing-the-Provider)
-
-- [코드 샘플](#Code-Sample)
-
-- [Windows PowerShell 공급자 테스트](#Testing-the-Windows-PowerShell-Provider)
 
 ## <a name="defining-the-windows-powershell-provider-class"></a>Windows PowerShell 공급자 클래스를 정의합니다.
 
@@ -77,7 +61,7 @@ Windows PowerShell 런타임 호출 공급자를 초기화 합니다 [System.Man
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplesaccessdbprov01#accessdbprov01ProviderStart](Msh_samplesaccessdbprov01#accessdbprov01ProviderStart)]  -->
 
-에 설명 된 대로 공급자의 공급자별 정보 상태를 유지 관리할 수 있습니다 [정의 공급자별 데이터 상태](#Defining-Provider-Specific-State-Information)합니다. 이 경우 구현 재정의 해야 합니다 [System.Management.Automation.Provider.Cmdletprovider.Start*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) 파생된 클래스의 인스턴스를 반환 하는 방법입니다.
+에 설명 된 대로 공급자의 공급자별 정보 상태를 유지 관리할 수 있습니다 [정의 공급자별 데이터 상태](#defining-provider-specific-state-information)합니다. 이 경우 구현 재정의 해야 합니다 [System.Management.Automation.Provider.Cmdletprovider.Start*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) 파생된 클래스의 인스턴스를 반환 하는 방법입니다.
 
 ## <a name="start-dynamic-parameters"></a>동적 매개 변수를 시작 합니다.
 

@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 81aeafad-dbc3-4712-8bb9-e6a417be260f
 caps.latest.revision: 15
-ms.openlocfilehash: 2df5a59833fcdd58c6b2afbb4882111592fb3d76
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 1aaf936aa22af5c4a4b8c2fa4e6b3bbd2cff6d20
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082501"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855093"
 ---
 # <a name="writing-a-windows-powershell-host-application"></a>Windows PowerShell 호스트 애플리케이션 작성
 
 응용 프로그램에서 Windows PowerShell을 호스트할 수 있습니다. 호스트 응용 프로그램 명령을 실행 하 고 로컬 또는 원격 컴퓨터에서 세션을 열고 동기적 또는 비동기적으로 응용 프로그램의 요구에 따라 명령을 호출할 수 있는 runspace를 정의할 수 있습니다.
 
-다음 항목에서 호스팅하는 응용 프로그램을 만드는 방법 설명
+다음 항목에는 Windows PowerShell을 호스트 하는 응용 프로그램을 만드는 방법을 설명 합니다.
 
 ## <a name="in-this-section"></a>이 섹션의 내용
 

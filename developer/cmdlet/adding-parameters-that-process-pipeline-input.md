@@ -11,34 +11,18 @@ helpviewer_keywords:
 - parameters [PowerShell Programmer's Guide], pipeline input
 ms.assetid: 09bf70a9-7c76-4ffe-b3f0-a1d5f10a0931
 caps.latest.revision: 8
-ms.openlocfilehash: bd52dc8aee7975d0899083a5c2f595b17690dc33
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: def0ac2ff98575beb29c3c2a7d91a5a5c53e648e
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068762"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854990"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>파이프라인 입력을 처리하는 매개 변수 추가
 
 소스 cmdlet에 대 한 입력 중 하나에 업스트림 cmdlet에서 발생 하는 파이프라인에서 개체입니다. 이 섹션에는 Get-proc cmdlet 매개 변수를 추가 하는 방법을 설명 (에서 설명한 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)) cmdlet은 파이프라인 개체를 처리할 수 있도록 합니다.
 
 이 Get-proc cmdlet 사용을 `Name` 파이프라인 개체의 입력을 허용 하는 매개 변수는 제공 된 이름을 기반으로 하는 로컬 컴퓨터에서 프로세스 정보를 검색 하 고 다음 명령줄은 프로세스에 대 한 정보를 표시 합니다.
-
-이 섹션의에서 항목에서는 다음과 같습니다.
-
-- [Cmdlet 클래스 정의](#Defining-the-Cmdlet-Class)
-
-- [파이프라인의 입력 정의](#Defining-Input-from-the-Pipeline)
-
-- [입력 처리 메서드를 재정의 합니다.](#Overriding-an-Input-Processing-Method)
-
-- [코드 샘플](#Code-Sample)
-
-- [개체 유형 정의 및 서식 지정](#Defining-Object-Types-and-Formatting)
-
-- [Cmdlet은 빌드](#Building-the-Cmdlet)
-
-- [테스트 Cmdlet](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet-class"></a>Cmdlet 클래스 정의
 

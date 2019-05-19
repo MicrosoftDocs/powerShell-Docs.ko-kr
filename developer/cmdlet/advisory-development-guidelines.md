@@ -8,42 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 79c9bcbc-a2eb-4253-a4b8-65ba54ce8d01
 caps.latest.revision: 9
-ms.openlocfilehash: 871a74a084da3c7ec36767b7195461e0e7290cb9
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 980b488800587e31286e2ca2ece924e07f8af3f3
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068796"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854873"
 ---
 # <a name="advisory-development-guidelines"></a>권장되는 개발 지침
 
 이 섹션에서는 적절 한 개발 및 사용자 환경을 위해 고려해 야 하는 지침을 설명 합니다. 적용 될 수 있습니다 경우에 따라 및 경우도 있기 없습니다.
-
-## <a name="design-guidelines"></a>디자인 지침
-
-- [InputObject 매개 변수 (AD01)를 지원 합니다.](./advisory-development-guidelines.md#AD01)
-
-- [Force 매개 변수 (AD02)를 지원 합니다.](./advisory-development-guidelines.md#AD02)
-
-- [Windows PowerShell (AD03)을 통해 자격 증명 처리](./advisory-development-guidelines.md#AD03)
-
-- [인코딩 매개 변수 (AD04)를 지원 합니다.](./advisory-development-guidelines.md#AD04)
-
-- [테스트 Cmdlet (AD05) 부울 값을 반환 합니다.](./advisory-development-guidelines.md#AD05)
-
-## <a name="code-guidelines"></a>코드 지침
-
-- [Cmdlet 클래스 명명 규칙 (AC01)를 수행 합니다.](./advisory-development-guidelines.md#AC01)
-
-- [파이프라인 입력 되지 않았습니다 (AC02) BeginProcessing 메서드를 재정의 하는 경우](./advisory-development-guidelines.md#AC02)
-
-- [처리 중지 요청 재정의 StopProcessing 메서드가 (AC03)](./advisory-development-guidelines.md#AC03)
-
-- [IDisposable 인터페이스 (AC04)](./advisory-development-guidelines.md#AC04)
-
-- [직렬화에 적합 한 매개 변수 형식 (AC05)를 사용 합니다.](./advisory-development-guidelines.md#AC05)
-
-- [SecureString을 사용 하 여 중요 한 데이터 (AC06)](./advisory-development-guidelines.md#AC06)
 
 ## <a name="design-guidelines"></a>디자인 지침
 

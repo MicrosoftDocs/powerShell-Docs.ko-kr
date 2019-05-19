@@ -11,12 +11,12 @@ helpviewer_keywords:
 - container providers [PowerShell Programmer's Guide]
 ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
 caps.latest.revision: 5
-ms.openlocfilehash: 33effed9a96cf1b9ee5f1a50b60a1937526db9d1
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 9e7da13ff559e802d52df475f2a555baeeeef983
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081906"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855191"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Windows PowerShell 컨테이너 공급자 만들기
 
@@ -35,44 +35,6 @@ ms.locfileid: "62081906"
 
 > [!CAUTION]
 > 이 디자인 이름 ID 사용 하 여 필드가 있는 데이터베이스를 가정 하 고 필드의 형식이 LongInteger 알아야 합니다.
-
-다음은이 항목의 섹션의 목록입니다. Windows PowerShell 컨테이너 공급자 작성에 익숙한 경우 나타나는 순서에 따라이 정보를 참조 하세요. 그러나 Windows PowerShell 컨테이너 공급자 작성에 익숙한 경우 하세요로 직접 이동 해야 하는 정보.
-
-- [Windows PowerShell 컨테이너 공급자 클래스를 정의합니다.](#Defining-a-Windows-PowerShell-Container-Provider-Class)
-
-- [기본 기능 정의](#defining-base-functionality)
-
-- [자식 항목을 가져오는 중](#Retrieving-Child-Items)
-
-- [동적 매개 변수를 연결 합니다 `Get-ChildItem` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Get-ChildItem-Cmdlet)
-
-- [자식 항목 이름을 검색](#Retrieving-Child-Item-Names)
-
-- [동적 매개 변수를 연결 합니다 `Get-ChildItem` Cmdlet (이름)](#Attaching-Dynamic-Parameters-to-the-Get-ChildItem-Cmdlet-(Name))
-
-- [항목 이름 바꾸기](#Renaming-Items)
-
-- [동적 매개 변수를 연결 합니다 `Rename-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Rename-Item-Cmdlet)
-
-- [새 항목 만들기](#Creating-New-Items)
-
-- [동적 매개 변수를 연결 합니다 `New-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-New-Item-Cmdlet)
-
-- [항목을 제거합니다.](#Removing-Items)
-
-- [동적 매개 변수를 연결 합니다 `Remove-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Remove-Item-Cmdlet)
-
-- [자식 항목에 대 한 쿼리](#Querying-for-Child-Items)
-
-- [복사 항목](#Copying-Items)
-
-- [동적 매개 변수를 연결 합니다 `Copy-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Copy-Item-Cmdlet)
-
-- [코드 샘플](#Code-Sample)
-
-- [Windows PowerShell 공급자 작성](#Building-the-Windows-PowerShell-Provider)
-
-- [Windows PowerShell 공급자 테스트](#Testing-the-Windows-PowerShell-Provider)
 
 ## <a name="defining-a-windows-powershell-container-provider-class"></a>Windows PowerShell 컨테이너 공급자 클래스를 정의합니다.
 
@@ -398,7 +360,7 @@ protected override bool HasChildItems( string path )
 
 - 구현의 [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 순환 링크와 같은 경우 무한 재귀를 방지 하는 데 일을 담당 합니다. 이러한 상태를 반영 하도록 적절 한 종료 예외가 throw 됩니다.
 
-- 구현 된 [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 메서드를 호출 해야 [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 데이터 저장소로 변경 하기 전에 해당 반환 값을 확인 합니다. 호출한 후 [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) true를 반환 합니다 [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 메서드를 호출 해야 합니다 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 잠재적으로 위험한 시스템 수정에 대 한 추가 검사 때문 메서드. 이러한 메서드를 호출 하는 방법에 대 한 자세한 내용은 참조 하세요. [항목의 이름을 바꾸는](#Renaming-Items)합니다.
+- 구현 된 [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 메서드를 호출 해야 [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 데이터 저장소로 변경 하기 전에 해당 반환 값을 확인 합니다. 호출한 후 [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) true를 반환 합니다 [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 메서드를 호출 해야 합니다 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 잠재적으로 위험한 시스템 수정에 대 한 추가 검사 때문 메서드. 이러한 메서드를 호출 하는 방법에 대 한 자세한 내용은 참조 하세요. [항목의 이름을 바꾸는](#renaming-items)합니다.
 
 ## <a name="attaching-dynamic-parameters-to-the-copy-item-cmdlet"></a>Copy-item Cmdlet에 연결 하는 동적 매개 변수
 

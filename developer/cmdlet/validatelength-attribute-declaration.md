@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ValidateLength attribute
 ms.assetid: 82fe3a35-a94b-4bc1-ad9e-dfc5f1e788b3
 caps.latest.revision: 13
-ms.openlocfilehash: 3a4c5f279ce8587eeb5d583376ea3d2286210b83
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 4d3cdccc0fe3e24b1221e41beef4821b613aab93
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62067164"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855152"
 ---
 # <a name="validatelength-attribute-declaration"></a>ValidateLength 특성 선언
 
@@ -37,7 +37,7 @@ ValidateLength 특성 cmdlet 매개 변수 인수에 대 한 문자의 최소 �
 
 ## <a name="remarks"></a>설명
 
-- 이 특성을 선언 하는 방법에 대 한 자세한 내용은 참조 하세요. [입력 유효성 검사 규칙 선언 하는 방법을](http://msdn.microsoft.com/en-us/544c2100-62ba-4be4-b2a2-cc0d4e4fc45b)합니다.
+- 이 특성을 선언 하는 방법에 대 한 자세한 내용은 참조 하세요. [입력 유효성 검사 규칙 선언 하는 방법을](./how-to-validate-parameter-input.md)합니다.
 
 - 이 특성을 사용 하지 않으면 해당 매개 변수 인수 길이 수 있습니다.
 

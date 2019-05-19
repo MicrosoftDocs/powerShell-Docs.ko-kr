@@ -15,34 +15,16 @@ helpviewer_keywords:
 - cmdlets [PowerShell Programmer's Guide], creating
 ms.assetid: da0b32f8-7b51-440e-a061-3177b5759e0e
 caps.latest.revision: 9
-ms.openlocfilehash: fb113086ce89e4becff9bcaf3232905fde2bf610
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: c9ad84c5bcb6826fcf51db9a1f1a578a65a1f275
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068813"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854958"
 ---
 # <a name="adding-parameters-that-process-command-line-input"></a>명령줄 입력을 처리하는 매개 변수 추가
 
 소스 cmdlet에 대 한 입력 중 하나는 명령줄입니다. 이 항목에서는 매개 변수를 추가 하는 방법을 설명 합니다 **Get-proc** cmdlet (에 설명 되어 있는 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)) cmdlet 기반 명시적으로 로컬 컴퓨터에서 입력을 처리할 수 있도록 개체를 cmdlet에 전달 합니다. 합니다 **Get-proc** cmdlet 설명 여기 해당 이름을 기반으로 하는 프로세스를 검색 한 다음 명령 프롬프트에서 프로세스에 대 한 정보를 표시 합니다.
-
-다음 섹션에서는이 항목은 됩니다.
-
-- [Cmdlet 클래스 정의](#Defining-the-Cmdlet-Class)
-
-- [매개 변수를 선언합니다.](#Declaring-Parameters)
-
-- [매개 변수 유효성 검사를 지원합니다.](#Supporting-Parameter-Validation)
-
-- [입력 처리 메서드를 재정의 합니다.](#Overriding-an-Input-Processing-Method)
-
-- [코드 샘플](#Code-Sample)
-
-- [개체 유형 정의 및 서식 지정](#Defining-Object-Types-and-Formatting)
-
-- [Cmdlet은 빌드](#Building-the-Cmdlet)
-
-- [테스트 Cmdlet](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet-class"></a>Cmdlet 클래스 정의
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], property provider
 ms.assetid: a6adca44-b94b-4103-9970-a9b414355e60
 caps.latest.revision: 5
-ms.openlocfilehash: 6ec0752a9ae06c5c2cdd1a1851caeeff52d8eb74
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: c503b17a670a5d1f07aa48e714d8a0eb0aa78ae9
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081838"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854997"
 ---
 # <a name="creating-a-windows-powershell-property-provider"></a>Windows PowerShell 속성 공급자 만들기
 
@@ -31,26 +31,6 @@ ms.locfileid: "62081838"
 
 > [!CAUTION]
 > 속성 공급자의 메서드를 사용 하 여 모든 개체를 작성 해야 합니다 [System.Management.Automation.Provider.Cmdletprovider.Writepropertyobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WritePropertyObject) 메서드.
-
-다음은이 항목의 섹션을 포함합니다. Windows PowerShell 속성 공급자 쓰기와 잘 모르는 경우이 표시 되는 순서에 따라이 정보를 읽습니다. 그러나 Windows PowerShell 속성 공급자 작성에 익숙한 경우 하세요로 직접 이동 해야 하는 정보.
-
-- [Windows PowerShell 공급자를 정의합니다.](#Defining-the-Windows-PowerShell-provider)
-
-- [기본 기능 정의](#Defining-Base-Functionality)
-
-- [속성 검색](#Retrieving-Properties)
-
-- [동적 매개 변수를 연결 합니다 `Get-ItemProperty` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Get-ItemProperty-Cmdlet)
-
-- [속성 설정](#Setting-Properties)
-
-- [동적 매개 변수를 연결 합니다 `Set-ItemProperty` Cmdlet](#Attaching-Dynamic-Parameters-for-the-Set-ItemProperty-Cmdlet)
-
-- [속성의 선택을 취소](#Clearing-Properties)
-
-- [동적 매개 변수를 연결 합니다 `Clear-ItemProperty` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Clear-ItemProperty-Cmdlet)
-
-- [Windows PowerShell 공급자 작성](#Building-the-Windows-PowerShell-provider)
 
 ## <a name="defining-the-windows-powershell-provider"></a>Windows PowerShell 공급자를 정의합니다.
 

@@ -8,40 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 931ccace-c565-4a98-8dcc-df00f86394b1
 caps.latest.revision: 8
-ms.openlocfilehash: db664e589f625855b5a33a02c522d6b238ad2810
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 946b71e4480a47ac6ccd6930be445d7efb4fb62d
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62075259"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854902"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>Cmdlet 매개 변수에 별칭, 와일드카드 확장 및 도움말 추가
 
 이 섹션에서는 와일드 카드 식 별칭을 추가 하는 방법을 설명 하 고 도움말 메시지 중지 Proc cmdlet의 매개 변수를 (에서 설명한 [시스템을 수정 하는 Cmdlet를 만들](./creating-a-cmdlet-that-modifies-the-system.md)).
 
 이 중지 Proc cmdlet Get-proc cmdlet을 사용 하 여 검색 되는 프로세스를 중지 하려고 합니다. (에서 설명한 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)).
-
-이 섹션의에서 항목에서는 다음과 같습니다.
-
-- [Cmdlet을 정의합니다.](#Defining-the-Cmdlet)
-
-- [시스템 수정에 대 한 매개 변수를 정의합니다.](#Defining-Parameters-for-System-Modification)
-
-- [매개 변수 별칭을 정의합니다.](#Defining-a-Parameter-Alias)
-
-- [매개 변수에 대 한 도움말 작성](#Creating-Help-for-Parameters)
-
-- [입력 처리 메서드를 재정의 합니다.](#Overriding-an-Input-Processing-Method)
-
-- [와일드 카드 확장 지원](#Supporting-Wildcard-Expansion)
-
-- [코드 샘플](#Defining-a-Parameter-Alias)
-
-- [개체 유형 정의 및 서식 지정](#Define-Object-Types-and-Formatting)
-
-- [Cmdlet은 빌드](#Building-the-Cmdlet)
-
-- [테스트 Cmdlet](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet"></a>Cmdlet을 정의합니다.
 

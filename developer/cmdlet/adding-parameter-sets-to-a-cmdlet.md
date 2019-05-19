@@ -10,34 +10,14 @@ helpviewer_keywords:
 - parameter sets [PowerShell Programmer's Guide]
 ms.assetid: a6131db4-fd6e-45f1-bd47-17e7174afd56
 caps.latest.revision: 8
-ms.openlocfilehash: f0bff11618c18bf53b9c2a185445795a17306fa3
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 6a3b592c5f85c1f065ad4b5b0290cf44dcef484e
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068840"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854887"
 ---
 # <a name="adding-parameter-sets-to-a-cmdlet"></a>Cmdlet에 매개 변수 집합 추가
-
-이 섹션에서는 추가 중지 Proc cmdlet에 매개 변수를 설정 하는 방법에 설명 합니다 (에서 설명한 [시스템을 수정 하는 Cmdlet를 만들](./creating-a-cmdlet-that-modifies-the-system.md)). 이 Programmer's이 Guide에 설명 된 다른 중지 Proc cmdlet와 마찬가지로,이 cmdlet은 하려고 Get-proc cmdlet을 사용 하 여 검색 되는 프로세스를 중지 (에서 설명한 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)).
-
-이 섹션의에서 항목에서는 다음과 같습니다.
-
-- [매개 변수 집합에 대해 알아야 할 내용](#Adding-Parameter-Sets-to-a-Cmdlet)
-
-- [Cmdlet 클래스 선언](#Declaring-the-Cmdlet-Class)
-
-- [Cmdlet의 매개 변수를 선언합니다.](#Declaring-the-Parameters-of-the-Cmdlet)
-
-- [입력 처리 메서드를 재정의 합니다.](#Overriding-an-Input-Processing-Method)
-
-- [코드 샘플](#Declaring-the-Parameters-of-the-Cmdlet)
-
-- [개체 유형 정의 및 서식 지정](#Defining-Object-Types-and-Formatting)
-
-- [Cmdlet은 빌드](#Building-the-Cmdlet)
-
-- [테스트 Cmdlet](#Testing-the-Cmdlet)
 
 ## <a name="things-to-know-about-parameter-sets"></a>매개 변수 집합에 대해 알아야 할 내용
 

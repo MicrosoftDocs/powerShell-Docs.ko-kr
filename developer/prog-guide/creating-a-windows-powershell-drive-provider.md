@@ -12,38 +12,18 @@ helpviewer_keywords:
 - drives [PowerShell Programmer's Guide]
 ms.assetid: 2b446841-6616-4720-9ff8-50801d7576ed
 caps.latest.revision: 6
-ms.openlocfilehash: 174d3a6860790295e1b73f32d9c1bad46b653917
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 2696d78cae7739310b7684161b597ce436dabe92
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055652"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855198"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Windows PowerShell 드라이브 공급자 만들기
 
 이 항목에서는 Windows PowerShell 드라이브를 통해 데이터 저장소에 액세스 하는 방법을 제공 하는 Windows PowerShell 드라이브 공급자를 만드는 방법을 설명 합니다. 이 유형의 공급자는 Windows PowerShell 드라이브 공급자 라고도 합니다. 공급자가 사용 되는 Windows PowerShell 드라이브를 데이터 저장소에 연결 하는 방법을 제공 합니다.
 
 여기에 설명 된 Windows PowerShell 드라이브 공급자는 Microsoft Access 데이터베이스에 대 한 액세스를 제공 합니다. 이 공급자에 대 한 Windows PowerShell 드라이브 (드라이브 개수에 관계 없이 드라이브 공급자에 추가할 수는) 데이터베이스를 나타내는 드라이브의 최상위 컨테이너 데이터베이스의 테이블을 나타낼 및 컨테이너의 항목을 나타내는 행 테이블입니다.
-
-다음은이 항목의 섹션의 목록입니다. Windows PowerShell 드라이브 공급자 작성에 익숙한 경우 표시 되는 순서 대로 다음이 섹션을 참조 합니다. 그러나 드라이브 공급자 작성에 익숙한 경우 하세요로 직접 이동 해야 하는 정보.
-
-- [Windows PowerShell 공급자 클래스를 정의합니다.](#Defining-the-Windows-PowerShell-Provider-Class)
-
-- [기본 기능 정의](#Defining-Base-Functionality)
-
-- [드라이브 상태 정보를 만드는 중](#Creating-Drive-State-Information)
-
-- [드라이브 만들기](#Creating-a-Drive)
-
-- [동적 매개 변수 매핑하려고 시도에 연결](#Attaching-Dynamic-Parameters-to-NewDrive)
-
-- [드라이브를 제거합니다.](#Removing-a-Drive)
-
-- [초기화 하는 동안 기본 드라이브](#Initializing-Default-Drives)
-
-- [코드 샘플](#Code-Sample)
-
-- [Windows PowerShell 드라이브 공급자 테스트](#Testing-the-Windows-PowerShell-Drive-Provider)
 
 ## <a name="defining-the-windows-powershell-provider-class"></a>Windows PowerShell 공급자 클래스를 정의합니다.
 
