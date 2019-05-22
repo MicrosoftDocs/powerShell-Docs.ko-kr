@@ -2,12 +2,12 @@
 ms.date: 04/19/2019
 keywords: wmf,powershell,setup
 title: WMF(Windows Management Framework)
-ms.openlocfilehash: 6d25b4025bbc86f6be0e5c74db9f1fbe6705d816
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d581370fd602e03c86aa549eb8b273ff4d01b4e5
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055448"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854317"
 ---
 # <a name="windows-management-framework"></a>Windows Management Framework
 
@@ -28,8 +28,8 @@ WMF 설치는 다음 기능을 추가 및/또는 업데이트합니다.
 
 PowerShell 및 지정된 WMF의 다른 구성 요소에서 향상된 다양한 기능에 대해 알아보려면 아래 링크에서 릴리스 정보를 참조하세요.
 
-- [WMF 5.1](5.1/release-notes.md)
-- [WMF 5.0](5.0/releasenotes.md)
+- [WMF 5.1](whats-new/release-notes.md#wmf-51-changes)
+- [WMF 5.0](whats-new/release-notes.md#wmf-50-changes)
 - [WMF 4.0](https://download.microsoft.com/download/3/D/6/3D61D262-8549-4769-A660-230B67E15B25/Windows%20Management%20Framework%204%200%20Release%20Notes.docx)
 - [WMF 3.0](https://download.microsoft.com/download/E/7/6/E76850B8-DA6E-4FF5-8CCE-A24FC513FD16/WMF%203%20Release%20Notes.docx)
 
