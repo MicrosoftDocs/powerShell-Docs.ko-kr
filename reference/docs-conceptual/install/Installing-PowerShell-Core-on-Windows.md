@@ -2,12 +2,12 @@
 title: Windows에서 PowerShell Core 설치
 description: Windows에서 PowerShell Core를 설치하는 방법에 대한 정보
 ms.date: 08/06/2018
-ms.openlocfilehash: 910ee5a653fc1703bfddaf6367225f3b654d600f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5a3c43e27f0027cfbeeefab33b045e618e0ff045
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058032"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854356"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Windows에서 PowerShell Core 설치
 
@@ -18,7 +18,7 @@ Windows에서 여러 가지 방법으로 PowerShell Core를 설치할 수 있습
 WSMan을 통한 PowerShell 원격 기능을 사용하려면 다음 전제 조건을 충족해야 합니다.
 
 - Windows 10 이전의 Windows 버전에서는 [Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=50410)을 설치합니다. 직접 다운로드 또는 Windows 업데이트를 통해 사용할 수 있습니다. 옵션 패키지를 포함하여 완전히 패치된 지원 시스템은 이미 설치되어 있습니다.
-- Windows 7 및 Windows Server 2008 R2에 WMF(Windows Management Framework) 4.0 이상을 설치합니다.
+- Windows 7 및 Windows Server 2008 R2에 WMF(Windows Management Framework) 4.0 이상을 설치합니다. WMF에 대한 자세한 내용은 [WMF 개요](/powershell/wmf/overview)를 참조하세요.
 
 ## <a name="a-idmsi-installing-the-msi-package"></a><a id="msi" />MSI 패키지 설치
 

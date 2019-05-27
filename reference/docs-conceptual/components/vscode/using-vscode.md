@@ -2,12 +2,12 @@
 title: PowerShell 개발에 Visual Studio 코드 사용
 description: PowerShell 개발에 Visual Studio 코드 사용
 ms.date: 08/06/2018
-ms.openlocfilehash: 1e9b9d811a39656327af2810bd6dc8aaf3fde3a4
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5badffd49252e0d72ae2c20d3147ad4b1e92d5ed
+ms.sourcegitcommit: cf1a281cce9f7239c440c90f8b2798d32a13778d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086733"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882566"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>PowerShell 개발에 Visual Studio 코드 사용
 
@@ -82,27 +82,72 @@ Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellE
 "이 신뢰되지 않은 게시자가 서명한 소프트웨어를 실행하시겠습니까?"가 포함된 메시지가 표시됩니다.
 `R`을 입력하여 파일을 실행합니다. 그런 다음, Visual Studio Code를 열고 PowerShell 확장이 제대로 작동하는지 확인합니다. 그래도 시작하는 데 문제가 있으면 [GitHub](https://github.com/PowerShell/vscode-powershell/issues)에서 알려 주세요.
 
-#### <a name="using-a-specific-installed-version-of-powershell"></a>설치된 특정 버전의 PowerShell 사용
+#### <a name="choosing-a-version-of-powershell-to-use-with-the-extension"></a>확장과 함께 사용할 PowerShell 버전 선택
 
-Visual Studio Code에 설치된 특정 버전의 PowerShell을 사용하려면 사용자 설정 파일에 새로운 변수를 추가해야 합니다.
+Windows PowerShell과 함께 PowerShell Core를 side-by-side 설치하면 PowerShell 확장과 함께 특정 버전의 PowerShell을 사용할 수 있습니다. 다음 단계에 따라 해당 버전을 선택합니다.
 
-1. **파일 -> 기본 설정 -> 설정**을 클릭합니다.
-1. 두 개의 편집기 창이 표시됩니다.
-   맨 오른쪽 창(`settings.json`)에서 두 개의 중괄호(`{` 및 `}`) 사이에 아래에서 사용 중인 OS에 해당하는 설정을 삽입하고 **\<버전\>** 을 설치된 PowerShell 버전으로 바꿉니다.
+1. 명령 팔레트를 엽니다(Windows 및 Linux의 경우 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, macOS의 경우 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>).
+1. "세션"을 검색합니다.
+1. "PowerShell: 세션 메뉴 표시"를 클릭합니다.
+1. 목록에서 사용하려는 PowerShell 버전을 선택합니다(예: “PowerShell Core”).
 
-   ```json
-    // On Windows:
-    "powershell.powerShellExePath": "c:/Program Files/PowerShell/<version>/pwsh.exe"
+>[!IMPORTANT]
+> 이 기능은 운영 체제별로 몇 가지 잘 알려진 경로를 확인하여 PowerShell의 설치 위치를 검색합니다. 일반적이지 않은 위치에 PowerShell을 설치한 경우 처음에 PowerShell이 세션 메뉴에 표시되지 않을 수 있습니다. 아래 설명된 대로 [사용자 지정 경로를 추가](#adding-your-own-powershell-paths-to-the-session-menu)하여 세션 메뉴를 확장할 수 있습니다.
 
-    // On Linux:
-    "powershell.powerShellExePath": "/opt/microsoft/powershell/<version>/pwsh"
+>[!NOTE]
+> 세션 메뉴에 액세스하는 또 다른 방법이 있습니다. PowerShell 파일이 편집기에서 열리면 오른쪽 아래에 녹색 버전 번호가 표시됩니다. 이 버전 번호를 클릭하면 세션 메뉴로 이동됩니다.
 
-    // On macOS:
-    "powershell.powerShellExePath": "/usr/local/microsoft/powershell/<version>/pwsh"
-   ```
+##### <a name="adding-your-own-powershell-paths-to-the-session-menu"></a>세션 메뉴에 고유한 PowerShell 경로 추가
 
-1. 설정을 원하는 PowerShell 실행 파일에 대한 경로로 바꿉니다.
-1. 설정 파일을 저장하고 Visual Studio Code를 다시 시작합니다.
+VS Code 설정을 통해 세션 메뉴에 다른 PowerShell 실행 파일 경로를 추가할 수 있습니다.
+
+`powershell.powerShellAdditionalExePaths` 목록에 항목을 추가하거나, 목록이 `settings.json`에 없는 경우 목록을 만듭니다.
+
+```json
+{
+    // other settings...
+
+    "powershell.powerShellAdditionalExePaths": [
+        {
+            "exePath": "C:\\Users\\tyler\\Downloads\\PowerShell\\pwsh.exe",
+            "versionName": "Downloaded PowerShell"
+        }
+    ],
+    
+    // other settings...
+}
+```
+
+각 항목은 다음을 포함해야 합니다.
+
+* `exePath`: `pwsh` 또는 `powershell` 실행 파일의 경로입니다.
+* `versionName`: 세션 메뉴에 표시되는 텍스트입니다.
+
+`powershell.powerShellDefaultVersion` 설정을 세션 메뉴에 표시되는 텍스트(마지막 설정의 `versionName`)로 설정하여 이 설정을 통해 사용하도록 기본 PowerShell 버전을 설정할 수 있습니다.
+
+```json
+{
+    // other settings...
+
+    "powershell.powerShellAdditionalExePaths": [
+        {
+            "exePath": "C:\\Users\\tyler\\Downloads\\PowerShell\\pwsh.exe",
+            "versionName": "Downloaded PowerShell"
+        }
+    ],
+    
+    "powershell.powerShellDefaultVersion": "Downloaded PowerShell",
+    
+    // other settings...
+}
+```
+
+이 설정을 지정한 후 Visual Studio Code를 다시 시작하거나 "개발자: 창 다시 로드" 명령 팔레트 작업을 사용하여 현재 vscode 창을 다시 로드합니다.
+
+세션 메뉴를 열면 이제 추가 PowerShell 버전이 표시됩니다.
+
+> [!NOTE]
+> 원본에서 PowerShell을 빌드하는 경우 이 방법은 PowerShell의 로컬 빌드를 테스트하는 좋은 방법입니다.
 
 #### <a name="configuration-settings-for-visual-studio-code"></a>Visual Studio Code에 대한 구성 파일
 
