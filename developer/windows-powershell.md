@@ -2,12 +2,12 @@
 title: Windows PowerShell SDK
 ms.date: 09/13/2016
 ms.topic: article
-ms.openlocfilehash: 600d43874d9eda04d556a0ece198026dde9174c3
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 7627ab336ddc40ab47c3017eed77c78bbdac4e7f
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080461"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470814"
 ---
 # <a name="windows-powershell"></a>Windows PowerShell
 
@@ -22,7 +22,7 @@ Windows PowerShell을 사용 하 여 시작 하는 데 필요한 기본 정보, 
 
 ## <a name="windows-powershell-documents-on-msdn"></a>MSDN의 Windows PowerShell 문서
 
-- [Windows PowerShell SDK 설치](https://msdn.microsoft.com/en-us/library/ff458115.aspx) Windows PowerShell SDK를 설치 하는 방법에 대 한 정보를 제공 합니다.
+- [Windows PowerShell SDK 설치](./installing-the-windows-powershell-sdk.md) Windows PowerShell SDK를 설치 하는 방법에 대 한 정보를 제공 합니다.
 
 - [Windows PowerShell 모듈 작성](./module/writing-a-windows-powershell-module.md) 관리자, 스크립트 개발자 및 패키지 및 해당 Windows PowerShell 솔루션을 배포 해야 하는 cmdlet 개발자에 대 한 정보를 제공 합니다.
 

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed7645ea-5e52-4a45-81a7-aa3c2d605cde
 caps.latest.revision: 16
-ms.openlocfilehash: e8b7151538235cdf7183b78aa8df7e596d6bcfd9
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: b2a929a1724f77f0516ad24cfd90f6d6053ed19e
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859009"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470791"
 ---
 # <a name="how-to-write-a-powershell-script-module"></a>PowerShell 스크립트 모듈을 작성하는 방법
 
@@ -27,9 +27,9 @@ ms.locfileid: "56859009"
 
 1. 기존 PowerShell 스크립트를 가져오고. psm1 확장을 사용 하 여 스크립트를 저장 합니다.
 
-   확장 저장 합니다. psm1 사용 하 여 스크립트와 같은 모듈 cmdlet을 사용할 수를 의미 [Import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)에서. 이러한 cmdlet는 주로 있도록 하면 쉽게 가져오고 내보낼 수 있습니다에 코드를 다른 사용자의 시스템에 존재 합니다. (대체 솔루션 로드 한 후 다른 시스템 도트 소싱 코드 시작 특히 확장 가능한 솔루션이 없는 활성 메모리로 것입니다.) 자세한 내용은 참조는 **변수와 모듈 Cmdlet** 섹션 [Windows PowerShell 모듈](./understanding-a-windows-powershell-module.md) 는 기본적으로 스크립트에서 모든 함수 됩니다. psm1에 가져오기는 사용자에 게 액세스할 수 있습니다 파일을 하지만 속성 수신 되지 않습니다.
+   확장 저장 합니다. psm1 사용 하 여 스크립트와 같은 모듈 cmdlet을 사용할 수를 의미 [Import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)에서. 이러한 cmdlet는 주로 있도록 하면 쉽게 가져오고 내보낼 수 있습니다에 코드를 다른 사용자의 시스템에 존재 합니다. (대체 솔루션 로드 한 후 다른 시스템 도트 소싱 코드 시작 특히 확장 가능한 솔루션이 없는 활성 메모리로 것입니다.) 자세한 내용은 참조는 **변수와 모듈 Cmdlet** 섹션 [Windows PowerShell 모듈](./understanding-a-windows-powershell-module.md) , 기본적으로 스크립트에서 모든 함수는 사용자에 게 가져오기. psm1 파일에 액세스할 수 있습니다 하지만 속성은 없습니다.
 
-   Show-calendar, 자격이 부여 하는 예제 PowerShell 스크립트는이 항목의 끝에서 제공 됩니다.
+   예제 PowerShell 스크립트를 받을 자격이 `Show-Calendar`,이 항목의 끝에서 제공 됩니다.
 
    ```powershell
    function Show-Calendar {
@@ -45,7 +45,7 @@ ms.locfileid: "56859009"
    }
    ```
 
-2. 특정 함수 또는 속성에 대 한 사용자 액세스를 제어 하려는 경우 호출할 [Export-modulemember](/powershell/module/Microsoft.PowerShell.Core/Export-ModuleMember) 스크립트의 끝입니다.
+2. 특정 함수 또는 속성에 대 한 사용자 액세스를 제어 하려면 호출 [Export-modulemember](/powershell/module/Microsoft.PowerShell.Core/Export-ModuleMember) 스크립트의 끝입니다.
 
    페이지의 맨 아래에 있는 코드 예제는 하나의 함수를 기본적으로 노출 됩니다. 그러나 다음 코드에 설명 된 대로, 노출 하려는 함수 아웃 명시적으로 호출 하는 하는 것이 좋습니다.
 
@@ -65,9 +65,9 @@ ms.locfileid: "56859009"
    Import-Module GenericModule
    ```
 
-4. PowerShell 도움말 시스템에 모듈을 설명 하려는 경우 또는 파일 내에서 표준 도움말 주석으로 추가 도움말 파일을 사용 하 여이 수행할 수 있습니다.
+4. PowerShell 도움말 시스템에 모듈을 설명 하기 위해 표준 도움말 주석을 사용 하 여 파일 내에서 또는 추가 도움말 파일을 만듭니다.
 
-   이 항목의 맨 아래에 있는 코드 샘플에는 주석이 도움말 정보가 포함 됩니다. 따라서 원하는 경우에 추가 도움말 콘텐츠를 포함 하는 확장 된 XML 파일을 작성할 수 있습니다. 자세한 내용은 [작성에 대 한 Windows PowerShell 모듈 도움말](./writing-help-for-windows-powershell-modules.md)합니다.
+   이 항목의 맨 아래에 있는 코드 샘플에는 주석이 도움말 정보가 포함 됩니다. 또한 추가 도움말 콘텐츠를 포함 하는 확장 된 XML 파일을 작성할 수 있습니다. 자세한 내용은 [작성에 대 한 Windows PowerShell 모듈 도움말](./writing-help-for-windows-powershell-modules.md)합니다.
 
 5. 추가 모듈, XML 파일 또는 모듈을 사용 하 여 패키징하고 하려는 기타 콘텐츠 경우 모듈 매니페스트를 사용 하 여이 수행할 수 있습니다.
 
@@ -75,15 +75,17 @@ ms.locfileid: "56859009"
 
 6. 를 설치 및 모듈을 실행 하려면 적절 한 PowerShell 경로 중 하나에 모듈을 저장 하 고 호출할 `Import-Module`합니다.
 
-   에 있는 모듈을 설치할 수 있는 경로 `$env:PSModulePath` 전역 변수입니다. 예를 들어, 시스템에서 모듈을 저장 하기 위한 일반적인 경로 것 `%SystemRoot%/users/<user>/Documents/WindowsPowerShell/Modules/<moduleName>`입니다. 단일. psm1 파일만 경우에 존재 하 여 모듈에 대 한 폴더를 만들려고 해야 합니다. 호출에서 모듈의 위치에 전달 해야 이러한 경로 중 하나에 모듈을 저장 하지 않은 경우 `Import-Module`합니다. (그렇지 않으면 PowerShell 없게 찾을.) PowerShell 3.0부터 모듈의 PowerShell 모듈 경로 중 하나에 배치 했으면, 필요가 없습니다 명시적으로 가져와야 합니다: 함수를 호출 하는 사용자를 단순히 필요는 자동으로 로드 합니다. 모듈 경로에 대 한 자세한 내용은 참조 하세요. [PowerShell 모듈을 가져오는](./importing-a-powershell-module.md) 하 고 [PSModulePath 환경 변수](./modifying-the-psmodulepath-installation-path.md)합니다.
+   에 있는 모듈을 설치할 수 있는 경로 `$env:PSModulePath` 전역 변수입니다. 예를 들어, 시스템에서 모듈을 저장 하기 위한 일반적인 경로 것 `%SystemRoot%/users/<user>/Documents/WindowsPowerShell/Modules/<moduleName>`입니다. 단일. psm1 파일만 경우에 존재 하 여 모듈에 대 한 폴더를 만들려고 해야 합니다. 호출에서 모듈의 위치에 전달 해야 이러한 경로 중 하나에 모듈을 저장 하지 않은 경우 `Import-Module`합니다. (그렇지 않으면 PowerShell 없게 찾을.) PowerShell 3.0부터 모듈의 PowerShell 모듈 경로 중 하나에 배치 했으면, 필요가 없습니다 명시적으로 가져와야 합니다. 사용자 함수를 호출 하면 모듈 자동으로 로드 됩니다.
+   모듈 경로에 대 한 자세한 내용은 참조 하세요. [PowerShell 모듈을 가져오는](./importing-a-powershell-module.md) 하 고 [PSModulePath 환경 변수](./modifying-the-psmodulepath-installation-path.md)합니다.
 
 7. 활성 서비스에서 모듈을 제거 하려면 호출할 [Remove-module](/powershell/module/Microsoft.PowerShell.Core/Remove-Module)합니다.
 
-사실은 [Remove-module](/powershell/module/Microsoft.PowerShell.Core/Remove-Module) 모듈 제거-활성 메모리에서 삭제 되지 않습니다 실제로 해당 모듈 파일을 저장 한 위치에서.
+   사실은 [Remove-module](/powershell/module/Microsoft.PowerShell.Core/Remove-Module) 모듈 제거-활성 메모리에서 삭제 되지 않습니다 실제로 해당 모듈 파일을 저장 한 위치에서.
 
 ### <a name="show-calendar-code-example"></a>Show-calendar 코드 예제
 
-다음 예제 Show-calendar 라는 단일 함수를 포함 하는 간단한 스크립트 모듈입니다. 이 함수는 달력의 시각적 표현을 표시합니다. 또한 샘플 개요, 설명, 매개 변수 값 및 예제에 대 한 PowerShell 도움말 문자열을 포함합니다. 코드의 마지막 줄은 모듈을 가져올 때 Show-calendar 함수 모듈 구성원으로 내보낼 수 있다고 note 합니다.
+다음 예제는 명명 된 단일 함수를 포함 하는 간단한 스크립트 모듈 `Show-Calendar`합니다.
+이 함수는 달력의 시각적 표현을 표시합니다. 또한 샘플 개요, 설명, 매개 변수 값 및 예제에 대 한 PowerShell 도움말 문자열을 포함합니다. 코드의 마지막 줄 하면 참고는 `Show-Calendar` 모듈을 가져올 때 모듈 멤버로 함수 내보내집니다.
 
 ```powershell
 <#
@@ -217,10 +219,10 @@ while($start -le $end)
     $calendar = $weeks | Format-Table $dayNames -AutoSize | Out-String
 
     ## Add a centered header.
-    $width = ($calendar.Split("'n") | Measure-Object -Maximum Length).Maximum
+    $width = ($calendar.Split("`n") | Measure-Object -Maximum Length).Maximum
     $header = "{0:MMMM yyyy}" -f $start
     $padding = " " * (($width - $header.Length) / 2)
-    $displayCalendar = " 'n" + $padding + $header + "'n " + $calendar
+    $displayCalendar = " `n" + $padding + $header + "`n " + $calendar
     $displayCalendar.TrimEnd()
 
     ## Move to the next month.

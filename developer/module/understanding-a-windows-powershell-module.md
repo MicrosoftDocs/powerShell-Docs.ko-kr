@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d4e38235-9987-4347-afd2-0f7d1dc8f64a
 caps.latest.revision: 19
-ms.openlocfilehash: 77d328bc1cb8cb42d5a10f107a149c05ab270ce3
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: cff50d415c4c90182fa1cf015a5a5ba84d4d613a
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082110"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470777"
 ---
 # <a name="understanding-a-windows-powershell-module"></a>Windows PowerShell 모듈 이해
 
@@ -55,7 +55,7 @@ A *매니페스트 모듈* 은 모든 해당 구성 요소를 설명 하기 위�
 
 ### <a name="dynamic-modules"></a>동적 모듈
 
-A *동적 모듈* 는 모듈에서 로드 되지 않았거나 파일에 저장 합니다. 스크립트를 통해 동적으로 생성 된 대신 사용 하는 [New-module](/powershell/module/Microsoft.PowerShell.Core/New-Module) cmdlet. 이 형식은 모듈의 스크립트를를 로드 하거나 영구 저장소에 저장할 필요가 없습니다 주문형 모듈을 만들 수 있습니다. 기본적으로 동적 모듈을 단기 실행 요구 사항과 위한 것 이며에서 액세스할 수 없습니다는 `Get-Module` cmdlet. 마찬가지로, 일반적으로 필요 하지 않은 모듈 매니페스트 그럴 필요도 가능성이 관련된 어셈블리를 저장할 영구 폴더입니다.
+A *동적 모듈* 에서 로드 되거나 파일에 저장 되는 모듈입니다. 스크립트를 통해 동적으로 생성 된 대신 사용 하는 [New-module](/powershell/module/Microsoft.PowerShell.Core/New-Module) cmdlet. 이 형식은 모듈의 스크립트를를 로드 하거나 영구 저장소에 저장할 필요가 없습니다 주문형 모듈을 만들 수 있습니다. 기본적으로 동적 모듈을 단기 실행 요구 사항과 위한 것 이며에서 액세스할 수 없습니다는 `Get-Module` cmdlet. 마찬가지로, 일반적으로 필요 하지 않은 모듈 매니페스트 그럴 필요도 가능성이 관련된 어셈블리를 저장할 영구 폴더입니다.
 
 ## <a name="module-manifests"></a>모듈 매니페스트
 
