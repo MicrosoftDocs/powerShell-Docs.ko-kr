@@ -40,7 +40,7 @@ ms.locfileid: "64530640"
 
 다양한 패키지 관리자를 사용하여 안정적인/미리 보기 버전 패키지를 설치하는 명령들은 다음과 같습니다.
 
-|배포|안정적인 명령 | 미리 보기 명령 |
+|배포판 |안정 버전 | 미리 보기 버전 |
 |---------------|---------------|-----------------|
 | Ubuntu, Debian |`sudo apt-get install -y powershell`| `sudo apt-get install -y powershell-preview`|
 | CentOS, RedHat |`sudo yum install -y powershell` | `sudo yum install -y powershell-preview`|
@@ -70,8 +70,8 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-슈퍼 사용자로 Microsoft 리포지토리를 등록합니다.
-그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 설치를 업데이트하면 됩니다.
+이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다.
+그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 업데이트하면 됩니다.
 
 ### <a name="installation-via-direct-download---ubuntu-1404"></a>직접 다운로드를 통해 설치 - Ubuntu 14.04
 
@@ -161,12 +161,9 @@ sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
 
 # Enable the "universe" repositories
-sudo add-apt-repository universe
-
-# Install PowerShell
 sudo apt-get install -y powershell
 
-# Start PowerShell
+# Install PowerShell
 pwsh
 ```
 
@@ -216,16 +213,16 @@ sudo apt-get install curl apt-transport-https
 # Import the public repository GPG keys
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 
-# Register the Microsoft Product feed
+# Microsoft Product 피드 등록
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-jessie-prod jessie main" > /etc/apt/sources.list.d/microsoft.list'
 
-# Update the list of products
+# Register the Microsoft Product feed
 sudo apt-get update
 
-# Install PowerShell
+# Update the list of products
 sudo apt-get install -y powershell
 
-# Start PowerShell
+# Install PowerShell
 pwsh
 ```
 
@@ -454,6 +451,8 @@ sudo dnf install -y powershell
 # Start PowerShell
 pwsh
 ```
+
+이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다. 그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 업데이트하면 됩니다.
 
 ### <a name="installation-via-direct-download---fedora-27-fedora-28"></a>직접 다운로드를 통해 설치 - Fedora 27, Fedora 28
 
