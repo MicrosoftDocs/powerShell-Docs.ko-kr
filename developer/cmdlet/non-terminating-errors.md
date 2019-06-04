@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 468dabd6-bfeb-448d-8e09-0996db516edd
 caps.latest.revision: 8
 ms.openlocfilehash: 5f804756e0e3e867832f15f50967fd6987f160a5
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067657"
 ---
 # <a name="non-terminating-errors"></a>종료되지 않는 오류
 

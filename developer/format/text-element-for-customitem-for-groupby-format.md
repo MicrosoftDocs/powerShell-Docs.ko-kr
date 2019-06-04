@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 66d8c63c-6ce4-480d-ad65-e777052c3818
 caps.latest.revision: 6
 ms.openlocfilehash: dc8f1058448a0cf9720014972b736694de759404
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62063907"
 ---
 # <a name="text-element-for-customitem-for-groupby-format"></a>GroupBy의 CustomItem에 대한 Text 요소(형식)
 

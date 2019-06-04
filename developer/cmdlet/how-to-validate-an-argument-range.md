@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 3cba3ab7-c3b6-4d17-aa17-88377496551b
 caps.latest.revision: 9
 ms.openlocfilehash: a39e34d1f1c333185f09b4a934819e1368d29a48
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067793"
 ---
 # <a name="how-to-validate-an-argument-range"></a>인수 범위를 확인하는 방법
 

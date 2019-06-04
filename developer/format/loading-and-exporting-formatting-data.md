@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 2a48de31-7961-4b0e-b58b-93466e38370b
 caps.latest.revision: 6
 ms.openlocfilehash: 5c5168ffd74c15066b914ad1b39d9ead947c5e7f
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065209"
 ---
 # <a name="loading-and-exporting-formatting-data"></a>형식 지정 데이터 로드 및 내보내기
 
@@ -59,4 +59,4 @@ ms.locfileid: "58054189"
 
 ## <a name="exporting-format-data"></a>내보내기 형식 데이터
 
-여기에 섹션 본문을 삽입합니다.
+여기에 지정 된 섹션 본문을 삽입 합니다.

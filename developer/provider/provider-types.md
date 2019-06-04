@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: e523a8e1-42e4-4633-887f-fb74b3464561
 caps.latest.revision: 12
 ms.openlocfilehash: 37689571eb1650e5991af2e7002cd037ae99dd68
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080914"
 ---
 # <a name="provider-types"></a>공급자 유형
 

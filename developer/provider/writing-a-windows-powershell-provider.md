@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: a54ce657-e0e0-4b3e-b9dc-aed39876f933
 caps.latest.revision: 11
 ms.openlocfilehash: 58252956184703fdcdb3aa9b1db617c6e91294c1
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080837"
 ---
 # <a name="writing-a-windows-powershell-provider"></a>Windows PowerShell 공급자 작성
 

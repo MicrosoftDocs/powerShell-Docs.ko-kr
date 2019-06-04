@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: daea8c6f-873a-4639-9eee-599642822958
 caps.latest.revision: 6
 ms.openlocfilehash: 697f2ea284393ebddd77a862c408f27f3d332900
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62063890"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-controls-for-view-format"></a>View에 대한 Controls의 SelectionCondition에 대한 SelectionSetName 요소(형식)
 

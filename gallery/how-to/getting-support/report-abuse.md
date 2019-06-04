@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: 신고하기
 ms.openlocfilehash: 70e599a26c6f04312ed7fc188047721bf96fefe2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084252"
 ---
 # <a name="report-abuse"></a>신고하기
 

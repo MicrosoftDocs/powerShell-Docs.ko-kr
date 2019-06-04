@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: 분쟁 해결
 ms.openlocfilehash: 2376226c14ec1a8c2bf7c9328e29f79528d2aee9
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084269"
 ---
 # <a name="dispute-resolution"></a>분쟁 해결
 

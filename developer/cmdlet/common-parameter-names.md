@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 0db9f54c-4014-4450-9e81-c9f5fe562a0e
 caps.latest.revision: 12
 ms.openlocfilehash: c65deeda6b2ef1b52de55035dc606259a7f2d232
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068431"
 ---
 # <a name="common-parameter-names"></a>일반 매개 변수 이름
 
@@ -34,7 +34,7 @@ ms.locfileid: "58059663"
 
 ### <a name="erroraction-alias-ea"></a>ErrorAction (별칭: ea)
 
-데이터 형식: 열거
+데이터 형식: 열거형
 
 이 매개 변수는 어떤 조치를 오류가 발생 하면를 지정 합니다. 이 매개 변수에 가능한 값은가 정의한 합니다 [System.Management.Automation.Actionpreference](/dotnet/api/System.Management.Automation.ActionPreference) 열거형입니다.
 
@@ -64,7 +64,7 @@ ms.locfileid: "58059663"
 
 ### <a name="warningaction-alias-wa"></a>WarningAction (별칭: 워싱턴)
 
-데이터 형식: 열거
+데이터 형식: 열거형
 
 이 매개 변수는 어떤 조치를 cmdlet 경고 메시지를 기록 하는 경우를 지정 합니다. 이 매개 변수에 가능한 값은가 정의한 합니다 [System.Management.Automation.Actionpreference](/dotnet/api/System.Management.Automation.ActionPreference) 열거형입니다.
 

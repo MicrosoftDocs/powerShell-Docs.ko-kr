@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 구성 데이터의 자격 증명 옵션
 ms.openlocfilehash: 2a326e45bbbad7bd2362b66b88bf61b98df7b02e
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "55681233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080155"
 ---
 # <a name="credentials-options-in-configuration-data"></a>구성 데이터의 자격 증명 옵션
 
->적용 대상: Windows PowerShell 5.0
+>적용 대상: Windows Powershell 5.0
 
 ## <a name="plain-text-passwords-and-domain-users"></a>일반 텍스트 암호 및 도메인 사용자
 
@@ -137,7 +137,7 @@ At C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguratio
 1. 오류에서는 일반 텍스트 암호는 권장되지 않는다고 설명합니다.
 2. 경고에서는 도메인 자격 증명을 사용하지 말라고 합니다.
 
-플래그 **PSDSCAllowPlainTextPassword** 하 고 **PSDSCAllowDomainUser** 오류 및 관련 된 위험 사용자에 게 알리는 경고를 표시 하지 않습니다.
+플래그 **PSDSCAllowPlainTextPassword** 및 **PSDSCAllowDomainUser**는 사용자에게 관련된 위험을 알리는 오류 및 경고를 표시하지 않습니다.
 
 ## <a name="psdscallowplaintextpassword"></a>PSDSCAllowPlainTextPassword
 
@@ -181,7 +181,7 @@ DomainCredentialExample -ConfigurationData $cd
 
 ### <a name="localhostmof"></a>localhost.mof
 
-합니다 **PSDSCAllowPlainTextPassword** 사용자 승인 MOF 파일에 일반 텍스트 암호를 저장 위험이 플래그가 필요 합니다. 생성된 된 MOF 파일에도 **PSCredential** 개체를 포함 하는 **SecureString** 를 사용한 암호는 여전히 일반 텍스트로 표시 합니다. 자격 증명 노출 되는 유일한 시간입니다. 이 MOF 파일에 액세스할 모든 사용자가 관리자 계정에 대 한 액세스를 확보 합니다.
+**PSDSCAllowPlainTextPassword** 플래그는 사용자가 MOF 파일에 일반 텍스트 암호를 저장할 경우의 위험을 확인하도록 합니다. 생성된 MOF 파일에서는 **SecureString**을 포함하는 **PSCredential** 개체가 사용된 경우에도 암호가 일반 텍스트로 나타납니다. 유일하게 자격 증명이 공개되는 경우입니다. 이 MOF 파일에 대한 액세스 권한을 얻으면 누구나 관리자 계정에 액세스할 수 있습니다.
 
 ```
 /*
@@ -216,16 +216,16 @@ ModuleVersion = "1.0";
 };
 ```
 
-### <a name="credentials-in-transit-and-at-rest"></a>전송 중 및 미사용 시 자격 증명
+### <a name="credentials-in-transit-and-at-rest"></a>전송 중 및 미사용 중인 자격 증명
 
-- 합니다 **PSDscAllowPlainTextPassword** 플래그에서 일반 텍스트로 암호를 포함 하는 MOF 파일의 컴파일을 허용 합니다.
-  일반 텍스트 암호를 포함 하는 MOF 파일을 저장할 경우에 주의 해야 합니다.
-- MOF 파일의 노드로 전달 되는 시점 **푸시** 모드 WinRM를 사용 하 여 기본값을 재정의 하지 않으면 일반 텍스트 암호를 보호 하기 위해 통신 암호화 합니다 **AllowUnencrypted** 매개 변수입니다.
-  - 암호화 인증서를 사용 하 여 MOF는 노드에 적용 되기 전에 미사용 MOF 파일을 보호 합니다.
-- **끌어오기** 모드, Internet Information Server에 지정 된 프로토콜을 사용 하 여 트래픽을 암호화 하려면 HTTPS를 사용 하도록 Windows 끌어오기 서버를 구성할 수 있습니다. 자세한 내용은 문서를 참조 하세요 [DSC 끌어오기 클라이언트 설정](../pull-server/pullclient.md) 하 고 [인증서를 사용 하 여 보안 MOF 파일](../pull-server/secureMOF.md)합니다.
-  - 에 [Azure Automation 상태 구성](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview) 서비스를 끌어오기 트래픽이 항상 암호화 됩니다.
-- 미사용 암호화는 MOF 파일 노드에서 PowerShell 5.0에서 시작 합니다.
-  - PowerShell 4.0 MOF에 푸시된 하거나 노드를 가져온 경우 인증서를 사용 하 여 암호화 된 경우가 아니면 파일은 암호화 된 없습니다.
+- **PSDscAllowPlainTextPassword** 플래그는 일반 텍스트 암호를 포함하는 MOF 파일의 컴파일을 허용합니다.
+  일반 텍스트 암호를 포함하는 MOF 파일을 저장할 때 주의하세요.
+- MOF 파일이 **밀어넣기** 모드에서 노드에 전달되면 **AllowUnencrypted** 매개 변수를 사용하여 기본값을 재정의하지 않는 한, WinRM에서는 통신을 암호화하여 일반 텍스트 암호를 보호합니다.
+  - 인증서로 MOF를 암호화하면 노드에 적용되기 전에 미사용 중인 MOF 파일이 보호됩니다.
+- **끌어오기** 모드에서는 Internet Information Server에 지정된 프로토콜을 통해 트래픽을 암호화하는 데 HTTPS를 사용하도록 Windows 끌어오기 서버를 구성할 수 있습니다. 자세한 내용은 [DSC 끌어오기 클라이언트 설정](../pull-server/pullclient.md) 및 [인증서로 MOF 파일 보호](../pull-server/secureMOF.md) 문서를 참조하세요.
+  - [Azure Automation State Configuration](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview) 서비스에서는 끌어오기 트래픽이 항상 암호화됩니다.
+- PowerShell 5.0부터, 노드에서 미사용 중인 MOF 파일은 암호화됩니다.
+  - PowerShell 4.0에서는 미사용 중인 MOF 파일이 노드로 밀어넣거나 끌어올 때 인증서로 암호화되지 않는 한 해당 파일은 암호화되지 않습니다.
 
 **Microsoft에서는 일반 텍스트 암호가 상당한 보안 위험이 있으므로 사용하지 말 것을 권고합니다.**
 

@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: PowerShell 클래스를 사용하여 사용자 지정 DSC 리소스 작성
 ms.openlocfilehash: 34356f65bcb83153e7395a16d2a4a5cf2e507332
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076721"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>PowerShell 클래스를 사용하여 사용자 지정 DSC 리소스 작성
 
-> 적용 대상: Windows PowerShell 5.0
+> 적용 대상: Windows Powershell 5.0
 
 Windows PowerShell 5.0의 PowerShell 클래스 도입으로 이제 클래스를 만들어 DSC 리소스를 정의할 수 있습니다. 클래스는 리소스의 스키마와 구현을 모두 정의하며, 따라서 별도의 MOF 파일을 만들 필요가 없습니다. **DSCResources** 폴더가 필요하지 않으므로 클래스 기반 리소스의 폴더 구조도 더 간단합니다.
 
@@ -19,9 +19,9 @@ Windows PowerShell 5.0의 PowerShell 클래스 도입으로 이제 클래스를 
 
 이 항목에서는 지정된 경로에 있는 파일을 관리하는 **FileResource**라는 간단한 리소스를 만듭니다.
 
-DSC 리소스에 대한 자세한 내용은 [Build Custom Windows PowerShell Desired State Configuration Resources(사용자 지정 Windows PowerShell 필요한 상태 구성 리소스 빌드)](authoringResource.md)를 참조하세요.
+DSC 리소스에 대한 자세한 내용은 [Build Custom Windows PowerShell Desired State Configuration Resources(사용자 지정 Windows PowerShell Desired State Configuration 리소스 빌드)](authoringResource.md)를 참조하세요.
 
->**참고:** 제네릭 컬렉션 클래스 기반 리소스에서 지원 되지 않습니다.
+>**참고:** 제네릭 컬렉션은 클래스 기반 리소스에서 지원되지 않습니다.
 
 ## <a name="folder-structure-for-a-class-resource"></a>클래스 리소스에 대한 폴더 구조
 
@@ -64,10 +64,10 @@ DSC 리소스 스키마는 클래스의 속성으로 정의됩니다. 세 가지
 
 속성은 특성으로 수정되고 있습니다. 특성의 의미는 다음과 같습니다.
 
-- **DscProperty(Key)**: 필수 속성이입니다. 속성이 키입니다. 키로 표시된 모든 속성의 값은 구성 내 리소스 인스턴스를 고유하게 식별하도록 결합해야 합니다.
-- **DscProperty(Mandatory)**: 필수 속성이입니다.
-- **DscProperty(NotConfigurable)**: 읽기 전용 속성입니다. 이 특성으로 표시된 속성은 구성으로 설정할 수 없지만 존재할 경우 **Get()** 메서드로 채워집니다.
-- **DscProperty()**: 속성은 구성할 수 있지만 필요 하지 않습니다.
+- **DscProperty(Key)**: 이 속성은 필수입니다. 속성이 키입니다. 키로 표시된 모든 속성의 값은 구성 내 리소스 인스턴스를 고유하게 식별하도록 결합해야 합니다.
+- **DscProperty(Mandatory)**: 이 속성은 필수입니다.
+- **DscProperty(NotConfigurable)**: 속성이 읽기 전용입니다. 이 특성으로 표시된 속성은 구성으로 설정할 수 없지만 존재할 경우 **Get()** 메서드로 채워집니다.
+- **DscProperty()**: 이 속성은 구성이 가능하지만 필수는 아닙니다.
 
 **$Path** 및 **$SourcePath** 속성은 모두 문자열입니다. **$CreationTime**은 [DateTime](/dotnet/api/system.datetime) 속성입니다. **$Ensure** 속성은 다음과 같이 정의하는 열거형 형식입니다.
 
@@ -473,7 +473,7 @@ Start-DscConfiguration -Wait -Force Test
 
 ## <a name="supporting-psdscrunascredential"></a>PsDscRunAsCredential 지원
 
->**참고:** **PsDscRunAsCredential** PowerShell 5.0 이상에 지원 됩니다.
+>**참고:** **PsDscRunAsCredential**은 PowerShell 5.0이상에서 지원됩니다.
 
 **PsDscRunAsCredential** 속성을 [DSC 구성](../configurations/configurations.md) 리소스 블록에서 사용하면 지정된 자격 증명 집합으로 리소스를 실행해야 함을 지정할 수 있습니다.
 자세한 내용은 [사용자 자격 증명을 사용하여 DSC 실행](../configurations/runAsUser.md)을 참조하세요.
@@ -496,11 +496,11 @@ class FileResource {
 }
 ```
 
-### <a name="declaring-multiple-class-resources-in-a-module"></a>모듈의 여러 클래스 리소스를 선언합니다.
+### <a name="declaring-multiple-class-resources-in-a-module"></a>모듈에서 여러 클래스 리소스 선언
 
-모듈 여러 클래스 기반 DSC 리소스를 정의할 수 있습니다. 다음과 같은 방법으로 폴더 구조를 만들 수 있습니다.
+모듈에서는 여러 클래스 기반 DSC 리소스를 정의할 수 있습니다. 다음 방법으로 폴더 구조를 만들 수 있습니다.
 
-1. 첫 번째 리소스를 정의 합니다 "<ModuleName>. psm1" 파일 및 후속 리소스를 **DSCResources** 폴더입니다.
+1. "<ModuleName>.psm1" 파일에서 첫 번째 리소스를 정의하고 **DSCResources** 폴더 아래에서 후속 리소스를 정의합니다.
 
    ```
    $env:ProgramFiles\WindowsPowerShell\Modules (folder)
@@ -511,7 +511,7 @@ class FileResource {
            |- SecondResource.psm1
    ```
 
-2. 아래의 모든 리소스를 정의 합니다 **DSCResources** 폴더입니다.
+2. **DSCResources** 폴더 아래에서 모든 리소스를 정의합니다.
 
    ```
    $env:ProgramFiles\WindowsPowerShell\Modules (folder)
@@ -524,7 +524,7 @@ class FileResource {
    ```
 
 > [!NOTE]
-> 위의 예제에서는 아래에 있는 모든 PSM1 파일을 추가 합니다 **DSCResources** 에 **NestedModules** PSD1 파일에서 키입니다.
+> 위의 예제에서 **DSCResources** 아래에 있는 모든 PSM1 파일을 PSD1 파일의 **NestedModules** 키에 추가합니다.
 
 ### <a name="access-the-user-context"></a>사용자 컨텍스트 액세스
 
@@ -540,4 +540,4 @@ if (PsDscContext.RunAsUser) {
 
 ## <a name="see-also"></a>참고 항목
 
-[사용자 지정 Windows PowerShell 필요한 상태 구성 리소스 빌드](authoringResource.md)
+[사용자 지정 Windows PowerShell Desired State Configuration 리소스 빌드](authoringResource.md)

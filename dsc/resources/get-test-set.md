@@ -1,23 +1,23 @@
 ---
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
-title: 가져오기-테스트-설정
-ms.openlocfilehash: 6d059518a49926bc5fb56e37e7d3d4d2c66bddec
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+title: Get-Test-Set
+ms.openlocfilehash: e4aa7770bb5fc8b916b0c0a6488b1ccc0ef0ade9
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682203"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229523"
 ---
-# <a name="get-test-set"></a>가져오기-테스트-설정
+# <a name="get-test-set"></a>Get-Test-Set
 
 >적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 ![가져오기, 테스트 및 설정](/media/get-test-set.png)
 
-PowerShell Desired State Configuration 주위에 생성 된 **가져오기**, **테스트**, 및 **설정** 프로세스. DSC [리소스](resources.md) 각각 이러한 각 작업을 완료 하는 메서드를 포함 합니다. 에 [구성](../configurations/configurations.md), 리소스 블록을 리소스에 대 한 매개 변수는 키 입력을 정의한 **가져오기**를 **테스트**, 및 **설정** 메서드입니다.
+PowerShell Desired State Configuration은 **Get**, **Test** 및 **Set** 프로세스 주위에 생성됩니다. DSC [리소스](resources.md)에는 각각 이와 같은 각 작업을 완료하는 메서드가 포함됩니다. [구성](../configurations/configurations.md)에서 리소스 블록을 정의하여 리소스의 **Get**, **Test** 및 **Set** 메서드에 대한 매개 변수가 되는 키를 입력합니다.
 
-에 대 한 구문은이 **서비스** 리소스 블록. 합니다 **서비스** 리소스는 Windows 서비스를 구성 합니다.
+이 구문은 **Service** 리소스 블록의 구문입니다. **Service** 리소스는 Windows 서비스를 구성합니다.
 
 ```syntax
 Service [String] #ResourceName
@@ -37,7 +37,7 @@ Service [String] #ResourceName
 }
 ```
 
-**가져오기**, **테스트**, 및 **설정** 메서드를 **서비스** 리소스 이러한 값을 허용 하는 매개 변수 블록을 갖습니다.
+**Service** 리소스의 **Get**, **Test** 및 **Set** 메서드에는 이 값을 허용하는 매개 변수 블록이 포함됩니다.
 
 ```powershell
     param
@@ -86,9 +86,9 @@ Service [String] #ResourceName
 ```
 
 > [!NOTE]
-> 언어 및 리소스를 정의 하는 데 사용 되는 메서드를 결정 하는 방법을 **가져옵니다**, **테스트**, 및 **설정** 메서드 정의 됩니다.
+> 리소스를 정의하는 데 사용되는 언어 및 메서드에 따라 **Get**, **Test** 및 **Set** 메서드를 정의하는 방법이 결정됩니다.
 
-때문에 합니다 **서비스** 리소스에만 필수 키에 (`Name`), **서비스** 블록 리소스는이 처럼 간단할 수 있습니다.
+**Service** 리소스에는 하나의 필수 키(`Name`)만 있으므로 **Service** 블록 리소스는 다음과 같이 간단할 수 있습니다.
 
 ```powershell
 Configuration TestConfig
@@ -104,7 +104,7 @@ Configuration TestConfig
 }
 ```
 
-위의 구성을 컴파일하는 경우 키에 대 한 지정 된 값이 생성 되는 ".mof" 파일에 저장 됩니다. 자세한 내용은 [MOF](/windows/desktop/wmisdk/managed-object-format--mof-)합니다.
+위의 구성을 컴파일하면 키에 지정하는 값이 생성된 ".mof" 파일에 저장됩니다. 자세한 내용은 [MOF](/windows/desktop/wmisdk/managed-object-format--mof-)를 참조하세요.
 
 ```
 instance of MSFT_ServiceResource as $MSFT_ServiceResource1ref
@@ -121,15 +121,15 @@ ModuleVersion = "1.0";
 };
 ```
 
-적용 하는 경우는 [로컬 구성 관리자](../managing-nodes/metaConfig.md) "Spooler" 값 ".mof" 파일에서 읽고에 전달 합니다 `-Name` 의 매개 변수를 **가져오기**, **테스트**, 및 **설정할** "MyService" 인스턴스에 대 한 메서드는 **서비스** 리소스입니다.
+적용되면 [로컬 구성 관리자](../managing-nodes/metaConfig.md)(LCM)가 ".mof" 파일에서 "Spooler" 값을 읽고 **Service** 리소스의 "MyService" 인스턴스에 대한 **Get**, **Test** 및 **Set**의 `-Name` 매개 변수에 이 값을 전달합니다.
 
 ## <a name="get"></a>get
 
-합니다 **가져올** 메서드는 리소스의 대상 노드에 구성 된 대로 리소스의 상태를 검색 합니다. 이 상태로 반환 되는 [hashtable](/powershell/module/microsoft.powershell.core/about/about_hash_tables). 키를 **hashtable** 됩니다 구성 가능한 값 또는 매개 변수는 리소스를 허용 합니다.
+리소스의 **Get** 메서드는 대상 노드에서 구성되어 있는 리소스의 상태를 검색합니다. 이 상태는 [해시 테이블](/powershell/module/microsoft.powershell.core/about/about_hash_tables)로 반환됩니다. **해시 테이블**의 키는 구성 가능한 값이거나 리소스가 허용하는 매개 변수입니다.
 
-**가져오기** 메서드를 직접 매핑합니다 합니다 [Get-dscconfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration) cmdlet. 호출 하는 경우 `Get-DSCConfiguration`, LCM 실행 합니다 **가져올** 현재 적용된 된 구성의 각 리소스는 메서드. LCM는 각 해당 리소스 인스턴스에 대 한 매개 변수로 ".mof" 파일에 저장 된 키 값을 사용 합니다.
+**Get** 메서드는 [Get-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration) cmdlet에 직접 매핑됩니다. `Get-DSCConfiguration`을 호출하면 LCM은 현재 적용된 구성에서 각 리소스의 **Get** 메서드를 실행합니다. LCM은 ".mof" 파일에 저장된 키 값을 각 해당 리소스 인스턴스의 매개 변수로 사용합니다.
 
-샘플 출력은이 **서비스** "Spooler" 서비스를 구성 하는 리소스입니다.
+이 출력은 “Spooler” 서비스를 구성하는 **Service** 리소스의 샘플 출력입니다.
 
 ```output
 ConfigurationName    : Test
@@ -155,7 +155,7 @@ PSComputerName       :
 CimClassName         : MSFT_ServiceResource
 ```
 
-출력의 현재 값 속성을 구성할 수 있습니다 표시 합니다 **서비스** 리소스입니다.
+출력에는 **Service** 리소스에서 구성 가능한 현재 값 속성이 표시됩니다.
 
 ```syntax
 Service [String] #ResourceName
@@ -177,10 +177,10 @@ Service [String] #ResourceName
 
 ## <a name="test"></a>테스트
 
-합니다 **테스트** 메서드는 리소스의 대상 노드 리소스의 현재 호환 되는 경우 결정 *필요한 상태*합니다. 합니다 **테스트** 메서드가 반환 `$True` 또는 `$False` 노드 규격 인지 여부를 나타낼 때만 합니다.
-호출 하는 경우 [Test-dscconfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration), LCM 호출 합니다 **테스트** 현재 적용된 된 구성의 각 리소스는 메서드. LCM는 각 해당 리소스 인스턴스에 대 한 매개 변수로 ".mof" 파일에 저장 된 키 값을 사용 합니다.
+리소스의 **Test** 메서드는 대상 노드가 현재 리소스의 ‘원하는 상태’를 준수하는지 확인합니다. **Test** 메서드는 `$True` 또는 `$False`만 반환하여 노드의 준수 여부를 나타냅니다.
+[Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)을 호출하면 LCM은 현재 적용된 구성에서 각 리소스의 **Test** 메서드를 호출합니다. LCM은 ".mof" 파일에 저장된 키 값을 각 해당 리소스 인스턴스의 매개 변수로 사용합니다.
 
-경우 모든 개별 리소스의 결과인 **테스트** 는 `$False`, `Test-DSCConfiguration` 반환 `$False` 노드 규격 임을 나타내는입니다. 경우 모든 리소스 **테스트** 메서드는 반환 `$True`, `Test-DSCConfiguration` 반환 `$True` 노드 규격 임을 나타냅니다.
+개별 리소스 **Test**의 결과가 `$False`이면 `Test-DSCConfiguration`은 노드가 준수하지 않음을 나타내는 `$False`를 반환합니다. 모든 리소스 **Test** 메서드가 `$True`를 반환하면 `Test-DSCConfiguration`은 노드가 준수함을 나타내는 `$True`를 반환합니다.
 
 ```powershell
 Test-DSCConfiguration
@@ -190,7 +190,7 @@ Test-DSCConfiguration
 True
 ```
 
-PowerShell 5.0부터는 `-Detailed` 매개 변수 추가 되었습니다. 지정 `-Detailed` 하면 `Test-DSCConfiguration` 호환 및 호환 되지 않는 리소스에 대 한 결과의 컬렉션을 포함 하는 개체를 반환 합니다.
+PowerShell 5.0부터, `-Detailed` 매개 변수가 추가되었습니다. `-Detailed`를 지정하면 `Test-DSCConfiguration`에서 준수 및 비준수 리소스에 대한 결과 컬렉션을 포함하는 개체가 반환됩니다.
 
 ```powershell
 Test-DSCConfiguration -Detailed
@@ -202,13 +202,13 @@ PSComputerName  ResourcesInDesiredState        ResourcesNotInDesiredState     In
 localhost       {[Service]Spooler}                                            True
 ```
 
-자세한 내용은 참조 하세요. [Test-dscconfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)
+자세한 내용은 [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)을 참조하세요.
 
 ## <a name="set"></a>Set(영문)
 
-합니다 **설정** 메서드는 리소스의 노드 리소스의 준수를 강제로 시도할지 *필요한 상태*합니다. 합니다 **설정** 메서드를 사용할 계획이 **idempotent**, 즉 **설정** 여러 번 실행 하 고 항상 오류 없이 같은 결과 얻을 수 있습니다.  실행할 때 [Start-dscconfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration), 각 리소스에 현재 적용된 된 구성 LCM 순환 합니다. LCM ".mof" 파일에서 현재 리소스 인스턴스에 대 한 키 값을 검색 하 고 매개 변수로 사용 하 여 **테스트** 메서드. 경우는 **테스트** 메서드가 반환 `$True`, 노드는 현재 리소스, 호환 및 **설정** 메서드를 건너뜁니다. 경우는 **테스트** 반환 `$False`, 노드인 비준수입니다.  LCM은 리소스 인스턴스의 키 값 매개 변수로 전달 리소스의 **설정** 메서드를 준수 하려면 노드를 복원 합니다.
+리소스의 **Set** 메서드는 노드가 리소스의 ‘원하는 상태’를 강제로 준수하도록 합니다. **Set** 메서드는 **멱등성(idempotent)** 이 되어야 합니다. 이는 **Set**이 여러 번 실행되고 오류 없이 항상 동일한 결과를 가져올 수 있음을 의미합니다.  [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration)을 실행하면 LCM은 현재 적용된 구성에서 각 리소스를 순환합니다. LCM은 “.mof” 파일에서 현재 리소스 인스턴스의 키 값을 검색하고 **Test** 메서드의 매개 변수로 이 값을 사용합니다. **Test** 메서드가 `$True`를 반환하면 노드는 현재 리소스를 준수하고 **Set** 메서드를 건너뜁니다. **Test**가 `$False`를 반환하면 노드는 비준수 상태입니다.  LCM은 리소스 인스턴스의 키 값을 매개 변수로 리소스의 **Set** 메서드에 전달하여 노드를 준수 상태로 복원합니다.
 
-지정 하 여 합니다 `-Verbose` 하 고 `-Wait` 매개 변수에서의 진행률을 확인할 수 있습니다는 `Start-DSCConfiguration` cmdlet. 이 예제에서는 노드 준수 이미 있습니다. 합니다 `Verbose` 나타내는 출력을 **설정** 메서드 작업을 건너뛰었습니다.
+`-Verbose` 및 `-Wait` 매개 변수를 지정하여 `Start-DSCConfiguration` cmdlet의 진행 상태를 확인할 수 있습니다. 이 예제에서 노드는 이미 준수 상태입니다. `Verbose` 출력은 **Set** 메서드를 건너뛰었음을 나타냅니다.
 
 ```
 PS> Start-DSCConfiguration -Verbose -Wait -UseExisting

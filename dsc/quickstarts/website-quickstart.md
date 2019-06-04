@@ -1,22 +1,22 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
-title: 빠른 시작-DSC를 사용 하 여 웹 사이트 만들기
+title: 빠른 시작 - DSC를 사용하여 웹 사이트 만들기
 ms.openlocfilehash: d98607939ccd3cc5e660936d8c0a6d54fce7d65f
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079124"
 ---
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-# <a name="quickstart---create-a-website-with-dsc"></a>빠른 시작-DSC를 사용 하 여 웹 사이트 만들기
+# <a name="quickstart---create-a-website-with-dsc"></a>빠른 시작 - DSC를 사용하여 웹 사이트 만들기
 
-이 연습에서는 DSC(필요한 상태 구성) 구성을 만들고 적용하는 과정을 처음부터 끝까지 자세히 설명합니다.
+이 연습에서는 DSC(Desired State Configuration) 구성을 만들고 적용하는 과정을 처음부터 끝까지 자세히 설명합니다.
 여기에서 사용할 예제는 서버에 `Web-Server`(IIS) 기능을 사용하며 서버의 `inetpub\wwwroot` 디렉터리에 단순한 "Hello World" 웹 사이트 콘텐츠가 있는지 확인합니다.
 
-DSC가 무엇이며 어떻게 작동하는지에 대한 개요는 [의사 결정자를 위한 필요한 상태 구성 개요](../overview/decisionMaker.md)를 참조하세요.
+DSC가 무엇이며 어떻게 작동하는지에 대한 개요는 [의사 결정자를 위한 Desired State Configuration 개요](../overview/decisionMaker.md)를 참조하세요.
 
 ## <a name="requirements"></a>요구 사항
 

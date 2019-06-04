@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 938d3c8f-ed74-47c2-b9d4-b56799203e1a
 caps.latest.revision: 4
 ms.openlocfilehash: 6af8a57948b3d62fe3f26aecc431c9b1c6e6b4f3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083453"
 ---
 # <a name="how-to-add-capabilities"></a>기능을 추가하는 방법
 
@@ -21,8 +21,8 @@ ms.locfileid: "56856729"
 
 ## <a name="section-heading"></a>섹션 제목
 
-여기에 섹션 본문을 삽입합니다.
+여기에 지정 된 섹션 본문을 삽입 합니다.
 
-### <a name="subsection-heading"></a>하위 섹션 제목
+### <a name="subsection-heading"></a>하위 단원 제목
 
-여기에 하위 섹션 본문을 삽입합니다.
+여기에 하위 섹션 본문을 삽입 합니다.

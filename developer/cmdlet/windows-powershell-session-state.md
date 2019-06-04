@@ -12,11 +12,11 @@ helpviewer_keywords:
 ms.assetid: 74912940-2b10-4a76-b174-6d035d71c02b
 caps.latest.revision: 8
 ms.openlocfilehash: fa207130bbb120750780bb0aa9b32150a32daaa2
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066977"
 ---
 # <a name="windows-powershell-session-state"></a>Windows PowerShell 세션 상태
 

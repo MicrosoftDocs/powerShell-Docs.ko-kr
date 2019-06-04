@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], item provider
 ms.assetid: a5a304ce-fc99-4a5b-a779-de7d85e031fe
 caps.latest.revision: 6
-ms.openlocfilehash: f2c9e10f0dc392399cf062500b7f28b3d1c07f6e
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 6f91fd53d41dd72c99f8fbc7bc7b863322d88787
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055124"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855047"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Windows PowerShell 항목 공급자 만들기
 
@@ -30,44 +30,6 @@ ms.locfileid: "58055124"
 > 다른 Windows PowerShell 공급자 구현에 대 한 자세한 내용은 참조 하십시오 [Your Windows PowerShell 공급자 디자인](./designing-your-windows-powershell-provider.md)합니다.
 
 이 항목에서 설명 하는 Windows PowerShell 항목 공급자는 Access 데이터베이스에서 데이터 항목을 가져옵니다. 이 경우 "항목"은 Access 데이터베이스에서 테이블 또는 테이블의 행입니다.
-
-다음은이 항목의 섹션을 포함합니다. Windows PowerShell 항목 공급자 작성에 익숙한 경우 표시 되는 순서 대로 다음이 섹션을 참조 합니다. 그러나 Windows PowerShell 항목 공급자 작성에 익숙한 경우 다음과 같이 해야 하는 정보에 직접 이동 합니다.
-
-- [Windows PowerShell 항목 공급자 클래스를 정의합니다.](#Defining-the-Windows-PowerShell-Item-Provider-Class)
-
-- [기본 기능 정의](#Defining-Base-Functionality)
-
-- [경로 유효성 검사](#Checking-for-Path-Validity)
-
-- [항목의 존재 여부 확인](#Determining-if-an-Item-Exists)
-
-- [동적 매개 변수를 연결 합니다 `Test-Path` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Test-Path-Cmdlet)
-
-- [항목 검색](#Retrieving-an-Item)
-
-- [동적 매개 변수를 연결 합니다 `Get-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Get-Item-Cmdlet)
-
-- [항목 설정](#Setting-an-Item)
-
-- [동적 매개 변수를 연결 합니다 `Set-Item` Cmdlet](#Retrieving-Dynamic-Parameters-for-SetItem)
-
-- [항목 지우기](#Clearing-an-Item)
-
-- [동적 연결 매개 변수를 지우려면 Clear-item Cmdlet](#Retrieve-Dynamic-Parameters-for-ClearItem)
-
-- [항목에 대 한 기본 작업 수행](#Performing-a-Default-Action-for-an-Item)
-
-- [InvokeDefaultAction 동적 매개 변수 검색](#Retrieve-Dynamic-Parameters-for-InvokeDefaultAction)
-
-- [도우미 메서드 및 클래스를 구현합니다.](#Implementing-Helper-Methods-and-Classes)
-
-- [코드 샘플](#Code-Sample)
-
-- [개체 유형 정의 및 서식 지정](#Defining-Object-Types-and-Formatting)
-
-- [Windows PowerShell 공급자 작성](#Building-the-Windows-PowerShell-provider)
-
-- [Windows PowerShell 공급자 테스트](#Testing-the-Windows-PowerShell-provider)
 
 ## <a name="defining-the-windows-powershell-item-provider-class"></a>Windows PowerShell 항목 공급자 클래스를 정의합니다.
 
@@ -223,7 +185,7 @@ Windows PowerShell 항목 공급자를 구현할 수는 [System.Management.Autom
 
 ## <a name="implementing-helper-methods-and-classes"></a>도우미 메서드 및 클래스를 구현합니다.
 
-이 항목 공급자는 몇 가지 도우미 메서드를 구현 하 고 공개적으로 사용 되는 클래스가 Windows PowerShell에서 정의 된 메서드를 재정의 합니다. 이러한 도우미 메서드 및 클래스에 대 한 코드에 표시 되는 [코드 샘플](#Code-Sample) 섹션입니다.
+이 항목 공급자는 몇 가지 도우미 메서드를 구현 하 고 공개적으로 사용 되는 클래스가 Windows PowerShell에서 정의 된 메서드를 재정의 합니다. 이러한 도우미 메서드 및 클래스에 대 한 코드에 표시 되는 [코드 샘플](#code-sample) 섹션입니다.
 
 ### <a name="normalizepath-method"></a>NormalizePath 메서드
 

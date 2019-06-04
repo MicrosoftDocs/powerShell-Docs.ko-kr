@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ea15e00e-20dc-4209-9e97-9ffd763e5d97
 caps.latest.revision: 8
-ms.openlocfilehash: 28d55874960f9a64b986204411d38319ef1d0da7
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 8d7ba9d122e90b80f6009b6dc8e8e3bb07331e4a
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059527"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854845"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>데이터 저장소에 액세스하는 Cmdlet 만들기
 
@@ -22,24 +22,6 @@ ms.locfileid: "58059527"
 여기에 설명 된 선택 Str cmdlet을 찾은 후 문자열을 파일 또는 개체를 선택 합니다. 문자열을 식별 하는 데 패턴을 통해 명시적으로 지정할 수는 `Path` 통해 암시적으로 또는 cmdlet의 매개 변수는 `Script` 매개 변수입니다.
 
 Cmdlet에서 파생 되는 모든 Windows PowerShell 공급자를 사용 하도록 설계 된 [System.Management.Automation.Provider.Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider)합니다. 예를 들어, 파일 시스템 공급자 또는 Windows PowerShell에서 제공 하는 변수 공급자 cmdlet 지정할 수 있습니다. 자세한 내용은 aboutWindows PowerShell 공급자에 대 한 참조 [Windows PowerShell 디자인 공급자](../prog-guide/designing-your-windows-powershell-provider.md)합니다.
-
-이 섹션의에서 항목에서는 다음과 같습니다.
-
-- [Cmdlet 클래스 정의](#Defining-the-Cmdlet-Class)
-
-- [데이터 액세스에 대 한 매개 변수를 정의합니다.](#Declaring-the-Path-Parameter)
-
-- [입력 처리 메서드를 재정의 합니다.](#Overriding-Input-Processing-Methods)
-
-- [콘텐츠 액세스](#Accessing-Content)
-
-- [코드 샘플](#Code-Sample)
-
-- [개체 유형 정의 및 서식 지정](#Declaring-Search-Support-Parameters)
-
-- [Cmdlet은 빌드](#Building-the-Cmdlet)
-
-- [테스트 Cmdlet](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet-class"></a>Cmdlet 클래스 정의
 
@@ -397,7 +379,7 @@ Cmdlet는 데이터에 액세스할 수 있도록 Windows PowerShell 경로에�
 
 ## <a name="code-sample"></a>코드 예제
 
-다음 코드에는이 선택 Str cmdlet이이 버전의 구현을 보여 줍니다. 이 코드는 cmdlet 클래스, cmdlet을 사용 하는 개인 방법 및 cmdlet을 등록 하는 데 코드 Windows PowerShell 스냅인에 포함 하는 참고 합니다. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [cmdlet은 빌드](#Building-the-Cmdlet)합니다.
+다음 코드에는이 선택 Str cmdlet이이 버전의 구현을 보여 줍니다. 이 코드는 cmdlet 클래스, cmdlet을 사용 하는 개인 방법 및 cmdlet을 등록 하는 데 코드 Windows PowerShell 스냅인에 포함 하는 참고 합니다. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [cmdlet은 빌드](#building-the-cmdlet)합니다.
 
 ```csharp
 //

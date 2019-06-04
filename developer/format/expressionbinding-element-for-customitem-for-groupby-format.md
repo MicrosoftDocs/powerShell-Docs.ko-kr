@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 5eae5088-7605-4ef2-a703-faf3e5a5fc94
 caps.latest.revision: 8
 ms.openlocfilehash: 4714bfd1530585aa80aabc010b86d25bf0c7f9c4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065906"
 ---
 # <a name="expressionbinding-element-for-customitem-for-groupby-format"></a>GroupBy의 CustomItem에 대한 ExpressionBinding 요소(형식)
 

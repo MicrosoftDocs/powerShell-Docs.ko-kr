@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: cc0bc6ce-48a5-4d9c-927e-636bca743e9f
 caps.latest.revision: 9
 ms.openlocfilehash: 7dcb8bc20ab56225764854f9dc6fdfd858ed7451
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067878"
 ---
 # <a name="how-to-invoke-scripts-within-a-cmdlet"></a>Cmdlet 내에서 스크립트를 호출하는 방법
 

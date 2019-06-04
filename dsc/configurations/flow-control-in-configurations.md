@@ -3,22 +3,22 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: 구성의 조건문 및 루프
 ms.openlocfilehash: 0073d94d28afbb45bb635442129a6cddde4c805a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55683143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080138"
 ---
 # <a name="conditional-statements-and-loops-in-configurations"></a>구성의 조건문 및 루프
 
-할 수 있습니다 하 [구성을](configurations.md) PowerShell 흐름 제어 키워드를 사용 하 여 더 동적입니다. 이 문서는 구성을 보다 동적인 있도록 조건문 및 루프를 사용 하는 방법을 보여드리겠습니다를 보여 줍니다. 결합 조건부 및 사용 하 여 루프 [매개 변수](add-parameters-to-a-configuration.md) 하 고 [구성 데이터](configData.md) 구성을 컴파일할 때 더 많은 유연성과 제어 허용 합니다.
+PowerShell 흐름 제어 키워드를 사용하여 더 동적인 [구성](configurations.md)을 만들 수 있습니다. 이 문서에서는 조건문 및 루프를 사용하여 더 동적인 구성을 만드는 방법을 보여 줍니다. 조건 및 루프를 [매개 변수](add-parameters-to-a-configuration.md) 및 [구성 데이터](configData.md)와 결합하면 구성을 컴파일할 때 유연성을 높이고 제어를 강화할 수 있습니다.
 
-함수 또는 스크립트 블록 처럼 구성 내에서 모든 PowerShell 언어를 사용할 수 있습니다. "Mof" 파일을 컴파일하는 데 구성을 호출 하는 경우에 사용 하는 문은 확인 됩니다. 아래 예제에서는 개념을 설명 하는 간단한 시나리오를 보여 줍니다. 매개 변수 및 구성 데이터를 사용 하 여 더 자주 사용 하 여 루프가 하는 조건입니다.
+함수 및 스크립트 블록처럼, 구성 내에서 모든 PowerShell 언어를 사용할 수 있습니다. 사용하는 문은 구성을 호출하여 ".mof" 파일을 컴파일할 때만 평가됩니다. 아래 예제에서는 개념을 설명하는 간단한 시나리오를 보여 줍니다. 조건 및 루프는 매개 변수 및 구성 데이터에서 더 자주 사용됩니다.
 
-이 간단한 예제는 **서비스** 리소스 블록의 현재 상태를 유지 관리 하는 ".mof" 파일을 생성 하려면 컴파일 시간에 서비스의 현재 상태를 검색 합니다.
+이 간단한 예제에서 **Service** 리소스 블록은 컴파일 시간에 서비스의 현재 상태를 검색하여 현재 상태를 유지 관리하는 ".mof" 파일을 생성합니다.
 
 > [!NOTE]
-> 동적 리소스 블록을 사용 하 여 Intellisense의 효과 선점 됩니다. PowerShell 파서를 지정 된 값은 허용 되는 구성이 컴파일될 때까지 확인할 수 없습니다.
+> 동적 리소스 블록을 사용하면 IntelliSense의 효과를 대체할 수 있습니다. PowerShell 파서는 구성이 컴파일될 때까지 지정된 값이 허용 가능한지 확인할 수 없습니다.
 
 ```powershell
 Configuration ServiceState
@@ -37,7 +37,7 @@ Configuration ServiceState
 }
 ```
 
-또한 만들 수 있습니다는 **서비스** 차단 현재 컴퓨터의 모든 서비스에 대 한 리소스를 사용 하 여를 `foreach` 루프.
+또한 `foreach` 루프를 사용하여 현재 머신에 있는 모든 서비스의 **Service** 블록 리소스를 만들 수 있습니다.
 
 ```powershell
 Configuration ServiceState
@@ -59,7 +59,7 @@ Configuration ServiceState
 }
 ```
 
-Online을 사용 하 여 간단한 컴퓨터용 구성만 만들 수 있습니다 `if` 문입니다.
+간단한 `if` 문을 사용하여 온라인 상태의 머신에 대한 구성만 만들 수도 있습니다.
 
 ```powershell
 Configuration ServiceState
@@ -85,7 +85,7 @@ Configuration ServiceState
 ```
 
 > [!NOTE]
-> 위 예 참조는 현재 컴퓨터 동적 리소스 블록입니다. 컴퓨터 구성에서 제작 하는 것에이 예에서는 대상 노드가 없습니다.
+> 위 예제의 동적 리소스 블록은 현재 머신을 참조합니다. 이 경우 현재 머신은 대상 노드가 아니라 구성을 작성 중인 머신입니다.
 
 <!---
 Mention Get-DSCConfigurationFromSystem
@@ -93,19 +93,19 @@ Mention Get-DSCConfigurationFromSystem
 
 ## <a name="summary"></a>요약
 
-요약 하자면, 구성 내에서 모든 PowerShell 언어를 사용할 수 있습니다.
+요약하면, 구성 내에서 모든 PowerShell 언어를 사용할 수 있습니다.
 
-이 등이 포함 됩니다.
+여기에는 다음과 같은 항목이 포함됩니다.
 
 - 사용자 지정 개체
 - 해시 테이블
 - 문자열 조작
 - 원격
 - WMI 및 CIM
-- Active Directory 개체
+- ActiveDirectory 개체
 - 추가...
 
-구성에 정의 된 모든 PowerShell 코드를 컴파일 시간에 평가 되지만 구성을 포함 하는 스크립트에서 코드를 배치할 수도 있습니다. 구성 블록 외부에서 코드 구성을 가져올 때 실행 됩니다.
+구성에 정의된 모든 PowerShell 코드는 컴파일 시간에 평가되지만, 구성을 포함하는 스크립트에 코드를 넣을 수도 있습니다. 구성 블록 외부의 모든 코드는 구성을 가져올 때 실행됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

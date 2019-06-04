@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: gallery,powershell,psgallery,GDPR
 title: PowerShell 갤러리 GDPR 준수
 ms.openlocfilehash: fb1191d8a1cd12d5994e41238c384eb504d0c261
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084235"
 ---
 # <a name="powershell-gallery-gdpr-compliance"></a>PowerShell 갤러리 GDPR 준수
 
@@ -53,8 +53,8 @@ PowerShell 갤러리에서 보내거나 PowerShell 갤러리로 보낸 이메일
 이메일은 90일 후에 정책에 의해 삭제됩니다.
 
 지난 90일 이내에 자신의 이메일 주소와 PowerShell 갤러리에서 보내거나 받은 모든 이메일의 사본을 요청할 수 있습니다.
-이 서신을 요청하려면 [cgadmin@microsoft.com](mailto:cgadmin@microsoft.com)으로 "이 계정과 관련된 이메일에 대한 DSR 요청"이라는 제목으로 이메일을 보내세요.
-메시지 본문에 요청하려는 정보를 기재하세요(예: 이 이메일 주소와 주고 받은 모든 이메일을 보내주십시오). 요청 후 90일 이내에 이메일 주소와 관련된 모든 이메일은 영업일 기준 7일 이내에 발송됩니다.
+이 서신을 요청하려면 [cgadmin@microsoft.com](mailto:cgadmin@microsoft.com)으로 “이 계정과 관련된 메일에 대한 DSR 요청”이라는 제목으로 메일을 보내세요.
+메시지 본문에 요청하려는 정보를 기재하세요(예: 이 메일 주소와 주고 받은 모든 메일을 보내주세요). 요청 후 90일 이내에 이메일 주소와 관련된 모든 이메일은 영업일 기준 7일 이내에 발송됩니다.
 
 ### <a name="powershell-gallery-account-information"></a>PowerShell 갤러리 계정 정보
 

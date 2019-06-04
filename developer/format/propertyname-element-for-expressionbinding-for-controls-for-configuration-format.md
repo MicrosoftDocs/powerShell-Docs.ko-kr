@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f4da7f70-acfb-4cae-9dc9-e15d8fe19d63
 caps.latest.revision: 6
 ms.openlocfilehash: 93389adbfa13e2404354f1081ac545d967589e4b
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065126"
 ---
 # <a name="propertyname-element-for-expressionbinding-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 ExpressionBinding에 대한 PropertyName 요소(형식)
 

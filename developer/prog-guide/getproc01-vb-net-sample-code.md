@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 3ee87f67-6d2c-48cc-b300-3ae917c6dc88
 caps.latest.revision: 5
 ms.openlocfilehash: 2411642c39737e7dc03bd0bb4ea753ed27783732
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081804"
 ---
 # <a name="getproc01-vbnet-sample-code"></a>GetProc01(VB.NET) 코드 샘플
 

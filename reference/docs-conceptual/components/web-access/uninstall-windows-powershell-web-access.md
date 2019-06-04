@@ -3,15 +3,15 @@ ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 웹 액세스 제거
 ms.openlocfilehash: 22c874d766445dccedd8494097daf16c30fa66ff
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058150"
 ---
 # <a name="uninstall-windows-powershell-web-access"></a>Windows PowerShell 웹 액세스 제거
 
-업데이트됨: 2013년 6월 24일
+업데이트 날짜: 2013년 6월 24일
 
 적용 대상: Windows Server 2012 R2, Windows Server 2012
 
@@ -33,7 +33,7 @@ ms.locfileid: "55682508"
 
 모두 제거할 수 있습니다.
 
-### <a name="step-1-delete-the-web-application-using-cmdlets"></a>1단계: Cmdlet을 사용 하 여 웹 응용 프로그램 삭제
+### <a name="step-1-delete-the-web-application-using-cmdlets"></a>1단계: cmdlet을 사용하여 웹 애플리케이션 삭제
 
 1. 다음 중 하나를 수행하여 Windows PowerShell 세션을 엽니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "55682508"
 
         `Uninstall-PswaWebApplication -DeleteTestCertificate`
 
-### <a name="step-2-uninstall-windows-powershell-web-access-using-cmdlets"></a>2단계: Cmdlet을 사용 하 여 Windows PowerShell 웹 액세스 제거
+### <a name="step-2-uninstall-windows-powershell-web-access-using-cmdlets"></a>2단계: cmdlet을 사용하여 Windows PowerShell 웹 액세스 제거
 
 1. 다음 중 하나를 수행하여 관리자 권한으로 Windows PowerShell 세션을 엽니다. 세션이가 이미 열려 있으면 다음 단계로 이동합니다.
 
@@ -76,7 +76,7 @@ ms.locfileid: "55682508"
 
 이 섹션의 절차를 따라서 서버 관리자의 역할 및 기능 제거 마법사 및 IIS 관리자 콘솔을 사용하여 Windows PowerShell 웹 액세스 웹 애플리케이션 및 Windows PowerShell 웹 액세스 기능을 모두 제거할 수 있습니다.
 
-### <a name="step-1-delete-the-web-application-using-iis-manager"></a>1단계: IIS 관리자를 사용 하 여 웹 응용 프로그램 삭제
+### <a name="step-1-delete-the-web-application-using-iis-manager"></a>1단계: IIS 관리자를 사용하여 웹 애플리케이션 삭제
 
 
 1. 다음 중 한 가지를 수행하여 IIS 관리자 콘솔을 엽니다. 콘솔이 이미 열려 있으면 다음 단계로 이동합니다.
@@ -101,7 +101,7 @@ ms.locfileid: "55682508"
 >
 > 자체 서명된 인증서를 만들었거나 테스트 인증서를 사용한 경우에 이 인증서를 제거하려면 IIS 관리자에서 해당 인증서를 삭제합니다.
 
-### <a name="step-2-uninstall-windows-powershell-web-access-using-the-remove-roles-and-features-wizard"></a>2단계: 역할 제거 및 기능 마법사를 사용 하 여 Windows PowerShell 웹 액세스 제거
+### <a name="step-2-uninstall-windows-powershell-web-access-using-the-remove-roles-and-features-wizard"></a>2단계: 역할 및 기능 제거 마법사를 사용하여 Windows PowerShell 웹 액세스 제거
 
 1. 서버 관리자가 이미 열려 있으면 다음 단계로 이동합니다. 서버 관리자가 아직 열려 있지 않으면 다음 중 하나를 수행하여 엽니다.
 

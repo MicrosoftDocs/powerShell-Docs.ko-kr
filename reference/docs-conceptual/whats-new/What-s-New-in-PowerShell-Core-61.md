@@ -2,12 +2,12 @@
 title: PowerShell Core 6.1의 새로운 기능
 description: PowerShell Core 6.1에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 09/13/2018
-ms.openlocfilehash: fe1e892d4a13a7758f5405867fdd7488c059f5cc
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.openlocfilehash: 3d836a24b494df9c7f6ebe994386e2a0297521fa
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086137"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>PowerShell Core 6.1의 새로운 기능
 
@@ -67,7 +67,7 @@ Measure-Command { 1..100000 | % {Get-Random -Minimum 1 -Maximum 10000} | Sort-Ob
 | 시간(초)   | 12.170                 | 8.493               | 7.08                |
 | 속도 증가(%) | 해당 없음                    | 30.2%               | 16.6%               |
 
-`Import-Csv` 또한 Windows PowerShell에서 회귀된 후 속도가 크게 향상되었습니다.
+`Import-Csv`도 Windows PowerShell에서 회귀된 후 속도가 크게 향상되었습니다.
 다음 예제에서는 26,616개 행과 6개의 열이 있는 CSV 테스트를 사용합니다.
 
 ```powershell
@@ -179,8 +179,9 @@ Markdown은 HTML로 렌더링할 수 있는 기본 서식의 읽을 수 있는 �
 
 ## <a name="experimental-feature-flags"></a>실험적 기능 플래그
 
-실험적 기능 플래그를 사용하면 사용자가 마무리하지 않은 기능을 켤 수 있습니다.
-이러한 실험적 기능은 지원되지 않으며 버그가 있을 수 있습니다.
+[실험적 기능][]에 대한 지원을 사용하도록 설정했습니다. 이 기능을 사용하여 PowerShell 개발자는 새로운 기능을 제공하고 디자인이 완료되기 전에 피드백을 얻을 수 있습니다. 이 방법으로 디자인이 진전됨에 따라 호환성이 손상되는 변경이 생성되는 것을 피합니다.
+
+`Get-ExperimentalFeature`를 사용하여 사용 가능한 실험적 기능 목록을 확인합니다. `Enable-ExperimentalFeature` 및 `Disable-ExperimentalFeature`를 사용하여 이 기능을 사용하거나 사용하지 않도록 설정할 수 있습니다.
 
 [PowerShell RFC0029](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0029-Support-Experimental-Features.md)에서 이 기능에 대해 자세히 알아볼 수 있습니다.
 
@@ -207,10 +208,10 @@ Markdown은 HTML로 렌더링할 수 있는 기본 서식의 읽을 수 있는 �
 
 ### <a name="enable-psremoting-now-creates-separate-remoting-endpoints-for-preview-versions"></a>`Enable-PSRemoting`은 이제 별도의 원격 엔드포인트를 미리 보기 버전으로 만듭니다.
 
-`Enable-PSRemoting` 이제 다음과 같이 두 개의 원격 세션 구성을 만듭니다.
+`Enable-PSRemoting`은 이제 다음과 같이 두 개의 원격 세션 구성을 만듭니다.
 
 - PowerShell의 주 버전에 대해 하나. 정의합니다(예: `PowerShell.6`). 부 버전에 의존할 수 있는 이 엔드포인트는 “시스템 수준” PowerShell 6 세션 구성으로 업데이트함
-- 버전별 세션 구성에 대해 하나. 예: `PowerShell.6.1.0`
+- 버전별 세션 구성에 대해 하나. 예를 들면 `PowerShell.6.1.0`입니다.
 
 이 동작은 여러 PowerShell 6 버전을 동일한 머신에 설치하고 액세스하려는 경우에 유용합니다.
 
@@ -305,12 +306,12 @@ PS /etc>
 ### <a name="update-help-as-non-admin"></a>`Update-Help`, 관리자가 아님
 
 많은 요청에 의해 `Update-Help`는 더 이상 관리자 권한으로 실행될 필요가 없습니다.
-`Update-Help` 이제 기본 제공되어 사용자 범위 폴더에 대한 도움말을 저장합니다.
+`Update-Help`는 이제 기본 제공되어 사용자 범위 폴더에 대한 도움말을 저장합니다.
 
 ### <a name="new-methodsproperties-on-pscustomobject"></a>`PSCustomObject`의 새 메서드/속성
 
 [@iSazonov](https://github.com/iSazonov) 덕분에 새 메서드 및 속성을 `PSCustomObject`에 추가했습니다.
-`PSCustomObject` 이제 다른 개체처럼 `Count`/`Length` 속성이 포함됩니다.
+`PSCustomObject`에는 이제 다른 개체처럼 `Count`/`Length` 속성이 포함됩니다.
 
 ```powershell
 $PSCustomObject = [pscustomobject]@{foo = 1}
@@ -523,3 +524,6 @@ Visual Basic은 `Add-Type`과는 거의 사용되지 않았습니다. PowerShell
 순서에 의존해서는 안 되지만, 첫 번째 그룹을 원한 경우 이러한 변경으로 낙담할 수 있습니다. Microsoft는 이전 동작에 종속되는 영향력이 낮으므로 이 성능 개선이 변경 가치가 있다고 결정했습니다.
 
 이 변경에 대한 자세한 내용은 [문제 #7409](https://github.com/PowerShell/PowerShell/issues/7409)를 참조하세요.
+
+<!-- URL references -->
+[실험적 기능]: /powershell/module/Microsoft.PowerShell.Core/About/about_Experimental_Features

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: e199bba3-90d3-41ca-9d78-cb502e58508d
 caps.latest.revision: 6
 ms.openlocfilehash: 9b4d83aeaf45eab1365dec5fbf48c3c796ed5bde
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067436"
 ---
 # <a name="security-parameters"></a>보안 매개 변수
 

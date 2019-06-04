@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: 41d2b308-a36a-496f-8542-666b6a21eedc
 caps.latest.revision: 19
 ms.openlocfilehash: 3f6bcd2e4ef4d9c404b3a5deeaa9f25d3fa42ec1
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58056518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067470"
 ---
 # <a name="required-development-guidelines"></a>필수 개발 지침
 
 Cmdlet을 작성 하는 경우 다음 지침을 따라야 합니다. Cmdlet 및 cmdlet 코드 작성에 대 한 지침을 디자인 하기 위한 지침으로 구분 됩니다. 이러한 지침을 따르지 않으면 cmdlet 수 실패 하 고 cmdlet을 사용할 때 사용자에 게 열악 한 환경이 있을 합니다.
 
-## <a name="in-this-topic"></a>이 항목의 내용
+## <a name="in-this-topic"></a>이 항목의
 
 ### <a name="design-guidelines"></a>디자인 지침
 

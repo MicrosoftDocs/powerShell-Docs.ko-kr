@@ -2,12 +2,12 @@
 title: Windows에서 PowerShell Core 설치
 description: Windows에서 PowerShell Core를 설치하는 방법에 대한 정보
 ms.date: 08/06/2018
-ms.openlocfilehash: 910ee5a653fc1703bfddaf6367225f3b654d600f
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.openlocfilehash: 5a3c43e27f0027cfbeeefab33b045e618e0ff045
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293013"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854356"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Windows에서 PowerShell Core 설치
 
@@ -18,21 +18,21 @@ Windows에서 여러 가지 방법으로 PowerShell Core를 설치할 수 있습
 WSMan을 통한 PowerShell 원격 기능을 사용하려면 다음 전제 조건을 충족해야 합니다.
 
 - Windows 10 이전의 Windows 버전에서는 [Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=50410)을 설치합니다. 직접 다운로드 또는 Windows 업데이트를 통해 사용할 수 있습니다. 옵션 패키지를 포함하여 완전히 패치된 지원 시스템은 이미 설치되어 있습니다.
-- Windows 7 및 Windows Server 2008 R2에 WMF(Windows Management Framework) 4.0 이상을 설치합니다.
+- Windows 7 및 Windows Server 2008 R2에 WMF(Windows Management Framework) 4.0 이상을 설치합니다. WMF에 대한 자세한 내용은 [WMF 개요](/powershell/wmf/overview)를 참조하세요.
 
 ## <a name="a-idmsi-installing-the-msi-package"></a><a id="msi" />MSI 패키지 설치
 
 Windows 클라이언트 또는 Windows Server(Windows 7 SP1, Server 2008 R2 이상에서 작동)에 PowerShell을 설치하려면 GitHub [릴리스][] 페이지에서 MSI 패키지를 다운로드합니다. 설치하려는 릴리스의 **자산** 섹션으로 스크롤을 내립니다. 자산 섹션이 축소되어 있을 수 있으니 확장을 클릭해야 합니다.
 
-MSI 파일은 다음과 같습니다. `PowerShell-<version>-win-<os-arch>.msi`
+MSI 파일은 다음과 같습니다. - `PowerShell-<version>-win-<os-arch>.msi`
 <!-- TODO: should be updated to point to the Download Center as well -->
 
 다운로드가 완료되면 설치 프로그램을 두 번 클릭하고 지시를 따릅니다.
 
 설치 관리자는 Windows 시작 메뉴에 바로 가기를 만듭니다.
 
-- 기본적으로 패키지는 다음 위치에 설치됩니다. `$env:ProgramFiles\PowerShell\<version>`
-- 시작 메뉴 또는 다음을 통해 PowerShell을 시작할 수 있습니다. `$env:ProgramFiles\PowerShell\<version>\pwsh.exe`
+- 기본적으로 패키지는 `$env:ProgramFiles\PowerShell\<version>`에 설치됩니다.
+- 시작 메뉴 또는 `$env:ProgramFiles\PowerShell\<version>\pwsh.exe`를 통해 PowerShell을 시작할 수 있습니다.
 
 ### <a name="administrative-install-from-the-command-line"></a>명령줄에서 관리 설치
 

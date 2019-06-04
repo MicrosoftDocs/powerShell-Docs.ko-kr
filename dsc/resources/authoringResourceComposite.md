@@ -3,17 +3,17 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 복합 리소스--DSC 구성을 리소스로 사용
 ms.openlocfilehash: 2823d05e0c8feb2933ca691f9ab5149ace2f7ee3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55679771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076687"
 ---
-# <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>복합 리소스 DSC 구성을 리소스로 사용
+# <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>복합 리소스: DSC 구성을 리소스로 사용
 
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-실제 상황에서, 구성은 다양 한 리소스를 호출하고 무수한 속성을 설정하므로 길고 복잡해질 수 있습니다. 이러한 복잡성을 해결하는 데 도움이 되도록 Windows PowerShell DSC(필요한 상태 구성) 구성을 다른 구성에 대한 리소스로 사용할 수 있습니다. 이것을 복합 리소스라고 합니다. 복합 리소스는 매개 변수를 사용하는 DSC 구성입니다. 구성의 매개 변수는 리소스의 속성으로서 작동합니다. 구성은 **.schema.psm1** 확장으로 저장되며, 일반적인 DSC 리소스에서 MOF 스키마와 리소스 스크립트 모두를 대신합니다(DSC 리소스에 대한 자세한 내용은 [Windows PowerShell 필요한 상태 구성 리소스](resources.md) 참조).
+실제 상황에서, 구성은 다양 한 리소스를 호출하고 무수한 속성을 설정하므로 길고 복잡해질 수 있습니다. 이러한 복잡성을 해결하는 데 도움이 되도록 Windows PowerShell DSC(Desired State Configuration) 구성을 다른 구성에 대한 리소스로 사용할 수 있습니다. 이것을 복합 리소스라고 합니다. 복합 리소스는 매개 변수를 사용하는 DSC 구성입니다. 구성의 매개 변수는 리소스의 속성으로서 작동합니다. 구성은 **.schema.psm1** 확장으로 저장되며, 일반적인 DSC 리소스에서 MOF 스키마와 리소스 스크립트 모두를 대신합니다(DSC 리소스에 대한 자세한 내용은 [Windows PowerShell Desired State Configuration 리소스](resources.md) 참조).
 
 ## <a name="creating-the-composite-resource"></a>복합 리소스 만들기
 
@@ -190,7 +190,7 @@ configuration RenameVM
 
 ## <a name="supporting-psdscrunascredential"></a>PsDscRunAsCredential 지원
 
->**참고:** **PsDscRunAsCredential** PowerShell 5.0 이상에 지원 됩니다.
+>**참고:** **PsDscRunAsCredential**은 PowerShell 5.0이상에서 지원됩니다.
 
 **PsDscRunAsCredential** 속성을 [DSC 구성](../configurations/configurations.md) 리소스 블록에서 사용하면 지정된 자격 증명 집합으로 리소스를 실행해야 함을 지정할 수 있습니다.
 자세한 내용은 [사용자 자격 증명을 사용하여 DSC 실행](../configurations/runAsUser.md)을 참조하세요.
@@ -208,4 +208,4 @@ if ($PsDscContext.RunAsUser) {
 ## <a name="see-also"></a>참고 항목
 ### <a name="concepts"></a>개념
 * [Writing a custom DSC resource with MOF(MOF를 사용하여 사용자 지정 DSC 리소스 작성)](authoringResourceMOF.md)
-* [Windows PowerShell 필요한 상태 구성 시작](../overview/overview.md)
+* [Windows PowerShell Desired State Configuration 시작](../overview/overview.md)

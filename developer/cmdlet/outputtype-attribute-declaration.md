@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: a97a98ee-ffc0-42f0-a9a6-b0717b39c798
 caps.latest.revision: 5
 ms.openlocfilehash: 7aa6fa407e509a31c4066c4f73ae01b02b2f338c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067606"
 ---
 # <a name="outputtype-attribute-declaration"></a>OutputType 특성 선언
 

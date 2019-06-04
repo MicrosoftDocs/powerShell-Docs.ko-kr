@@ -8,28 +8,14 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f723b21-8f95-4981-8b6e-4f07c22d601a
 caps.latest.revision: 5
-ms.openlocfilehash: 5e8d1df6b423bfd2cd6b0a64a8875dea9c3fb4ef
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: b6f8aef76a5f4b5dc1a60425541856ead9a9c77a
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857319"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855125"
 ---
 # <a name="how-to-add-examples-to-a-cmdlet-help-topic"></a>Cmdlet 도움말 항목에 예제를 추가하는 방법
-
-- [예제 Cmdlet 도움말에 대해 알아야 할 내용](#Things-to-Know-about-Examples-in-Cmdlet-Help)
-
-- [예제를 표시 하는 도움말 보기](#Help-Views-that-Display-Examples)
-
-- [예제 노드를 추가합니다.](#Adding-an-Examples-Node)
-
-- [문자 앞에 추가 합니다.](#Adding-Preceding-Characters)
-
-- [명령 추가](#Adding-the-Command)
-
-- [설명 추가](#Adding-a-Description)
-
-- [추가 예제 출력](#Adding-Example-Output)
 
 ## <a name="things-to-know-about-examples-in-cmdlet-help"></a>예제 Cmdlet 도움말에 대해 알아야 할 내용
 

@@ -31,12 +31,12 @@ helpviewer_keywords:
 - user notifications
 ms.assetid: 14c13acb-f0b7-4613-bc7d-c361d14da1a2
 caps.latest.revision: 8
-ms.openlocfilehash: 5b3a5f5d5d02c7d5a3c1d622ec1a3740739c694f
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 138c6a43937e72fffaa2a09243e500e9822e6111
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055039"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854930"
 ---
 # <a name="adding-user-messages-to-your-cmdlet"></a>Cmdlet에 사용자 메시지 추가
 
@@ -51,32 +51,6 @@ Cmdlet는 여러 가지 Windows PowerShell 런타임에 의해 사용자에 게 
 - 메시지 크기에 대 한 정보를 포함 하는 cmdlet은 작업 진행률 보고서는 오래 걸리는 작업을 수행 하는 경우 완료 되었습니다.
 
 Cmdlet에 쓸 수 있는 메시지 수 또는 cmdlet에 기록 하는 메시지의 형식에는 한도가 있습니다. 각 메시지 처리 방법 cmdlet의 입력 내에서 특정를 호출 하 여 기록 됩니다.
-
-## <a name="the-stopproc-cmdlet"></a>StopProc Cmdlet
-
-이 섹션의에서 항목에서는 다음과 같습니다.
-
-- [Cmdlet을 정의합니다.](#Defining-the-Cmdlet)
-
-- [시스템 수정에 대 한 매개 변수를 정의합니다.](#Defining-Parameters-for-System-Modification)
-
-- [입력 처리 메서드를 재정의 합니다.](#Overriding-an-Input-Processing-Method)
-
-- [자세한 정보 메시지를 작성합니다.](#Writing-a-Verbose-Message)
-
-- [디버그 메시지를 작성합니다.](#Writing-a-Debug-Message)
-
-- [경고 메시지를 작성합니다.](#Writing-a-Warning-Message)
-
-- [진행률 메시지를 작성합니다.](#Writing-a-Progress-Message)
-
-- [코드 샘플](#Code-Sample)
-
-- [개체 유형 및 서식을 정의합니다](#Define-Object-Types-and-Formatting)
-
-- [Cmdlet은 빌드](#Building-the-Cmdlet)
-
-- [테스트 Cmdlet](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet"></a>Cmdlet을 정의합니다.
 

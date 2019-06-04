@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: ae37e3f3-5fd6-4ff6-bf66-a249ff96822b
 caps.latest.revision: 7
 ms.openlocfilehash: 2afa0e79d9de781149f31a45666d13f98ca10a26
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080661"
 ---
 # <a name="implementing-custom-authorization-for-a-management-odata-web-service"></a>관리 OData 웹 서비스에 대한 사용자 지정 권한 부여 구현
 

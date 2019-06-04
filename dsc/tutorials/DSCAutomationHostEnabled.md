@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSCAutomationHostEnabled 레지스트리 키
-ms.openlocfilehash: 38e3189323c39a522b2ccad89f5cfcadf5e45616
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 2bccd2738b9f61efd656fdf0f98cf71affdbe781
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076493"
 ---
 >적용 대상: Windows Powershell 5.0
 
 # <a name="dscautomationhostenabled-registry-key"></a>DSCAutomationHostEnabled 레지스트리 키
 
-DSC에서는 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies** 아래의 **DSCAutomationHostEnabled** 레지스트리 키를 사용하여 초기 부팅 시 컴퓨터를 구성할 수 있도록 합니다.
-DSCAutomationHostEnabled는 다음의 세 가지 모드를 지원합니다.
+DSC에서는 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System** 아래의 **DSCAutomationHostEnabled** 레지스트리 키를 사용하여 초기 부팅 시 컴퓨터를 구성할 수 있도록 합니다.
+**DSCAutomationHostEnabled**는 다음의 세 가지 모드를 지원합니다.
 
 |  DSCAutomationHostEnabled 값  |  설명   |
 |---|---|

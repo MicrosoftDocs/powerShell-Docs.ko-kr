@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: b4371d45-49a4-4303-8384-5b54105bd0d6
 caps.latest.revision: 8
 ms.openlocfilehash: 2704a530e0ae269efb772ac10e531bcbb12f6eff
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065192"
 ---
 # <a name="name-element-for-control-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 Control에 대한 Name 요소(형식)
 

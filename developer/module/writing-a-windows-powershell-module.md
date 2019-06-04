@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bfbccc5b-2b2b-432a-a971-9f8ab503cdc3
 caps.latest.revision: 17
-ms.openlocfilehash: 3c6d8e410427d6cfaa1c15db421b3fe935f7d322
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 0b7263ea19745e902fff04b993933e443d4d6333
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857939"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229354"
 ---
 # <a name="writing-a-windows-powershell-module"></a>Windows PowerShell 모듈 작성
 
@@ -43,7 +43,7 @@ Cmdlet 및 공급자 개발자는 테스트 하 고 스냅인을 만들 필요 �
 
 [PowerShell 이진 모듈을 작성 하는 방법](./how-to-write-a-powershell-binary-module.md)
 
-[PowerShell 모듈 매니페스트를 작성 하는 방법](http://msdn.microsoft.com/en-us/abe4c24b-e64e-4a61-81d5-18c4fceba0b6)
+[PowerShell 모듈 매니페스트를 작성 하는 방법](how-to-write-a-powershell-module-manifest.md)
 
 [PSModulePath 설치 경로 수정](./modifying-the-psmodulepath-installation-path.md)
 

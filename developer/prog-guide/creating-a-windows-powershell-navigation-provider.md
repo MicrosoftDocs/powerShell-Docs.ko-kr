@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], navigation provider
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
 caps.latest.revision: 5
-ms.openlocfilehash: 40454f880b57d5b3a8a8ded21c8c97aebba027fe
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 5f7a61e261399d3d2abe62fe4523e8c9895d5ad4
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055073"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855165"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Windows PowerShell 탐색 공급자 만들기
 
@@ -33,34 +33,6 @@ ms.locfileid: "58055073"
 
 > [!CAUTION]
 > 이 디자인 이름 ID 사용 하 여 필드가 있는 데이터베이스를 가정 하 고 필드의 형식이 LongInteger 알아야 합니다.
-
-다음은이 항목에서 섹션을 포함 합니다. Windows PowerShell 탐색 공급자 작성에 익숙한 경우 나타나는 순서에 따라이 정보를 읽습니다. 그러나 Windows PowerShell 탐색 공급자 작성에 익숙한 경우 하세요로 직접 이동 해야 하는 정보.
-
-- [PS 탐색 공급자 클래스를 정의합니다.](#Define-the-Windows-PowerShell-provider)
-
-- [기본 기능 정의](#Defining-Base-Functionality)
-
-- [PS 경로 만들기](#Creating-a-Windows-PowerShell-Path)
-
-- [부모 경로 검색합니다.](#Retrieving-the-Parent-Path)
-
-- [자식 경로 이름 검색](#Retrieve-the-Child-Path-Name)
-
-- [항목 컨테이너 인지 확인 합니다.](#Determining-if-an-Item-is-a-Container)
-
-- [항목 이동](#Moving-an-Item)
-
-- [동적 매개 변수를 연결 합니다 `Move-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Move-Item-Cmdlet)
-
-- [상대 경로 정규화합니다.](#Normalizing-a-Relative-Path)
-
-- [코드 샘플](#Code-Sample)
-
-- [개체 유형 정의 및 서식 지정](#Defining-Object-Types-and-Formatting)
-
-- [Windows PowerShell 공급자 작성](#Building-the-Windows-PowerShell-provider)
-
-- [Windows PowerShell 공급자 테스트](#Testing-the-Windows-PowerShell-provider)
 
 ## <a name="define-the-windows-powershell-provider"></a>Windows PowerShell 공급자를 정의 합니다.
 

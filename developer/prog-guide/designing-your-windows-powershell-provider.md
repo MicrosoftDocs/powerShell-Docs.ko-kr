@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 11d20319-cc40-4227-b810-4af33372b182
 caps.latest.revision: 10
 ms.openlocfilehash: 711a85e9b2eade7b9095d7560f53610e709e380a
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081821"
 ---
 # <a name="designing-your-windows-powershell-provider"></a>Windows PowerShell 공급자 설계
 

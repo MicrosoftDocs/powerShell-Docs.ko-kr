@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 6af3be7d-921e-4cf7-bd5a-d87aa0b4efbd
 caps.latest.revision: 7
 ms.openlocfilehash: b2b0a0d1996392614807e08b820a72978e38a0cb
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065464"
 ---
 # <a name="itemselectioncondition-element-for-expressionbinding-for-groupby-format"></a>GroupBy의 ExpressionBinding에 대한 ItemSelectionCondition 요소(형식)
 

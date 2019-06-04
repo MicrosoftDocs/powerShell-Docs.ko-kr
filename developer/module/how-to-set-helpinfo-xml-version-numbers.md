@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 93a00463-af58-41c8-b088-450909fa1d05
 caps.latest.revision: 6
 ms.openlocfilehash: b98e6879bbfe0e3ec1a9ab37496dde44caf523a4
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082280"
 ---
 # <a name="how-to-set-helpinfo-xml-version-numbers"></a>HelpInfo XML 버전 번호를 설정하는 방법
 

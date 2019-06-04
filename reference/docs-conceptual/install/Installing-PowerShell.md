@@ -3,11 +3,11 @@ ms.date: 08/09/2018
 keywords: 설치, windows, linux, macOS, ARM, raspbian
 title: PowerShell 설치
 ms.openlocfilehash: b89f11c36459bd0b03693d89ae3ff6f1327ea755
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62059035"
 ---
 # <a name="installing-various-versions-of-powershell"></a>다양한 버전의 PowerShell 설치
 

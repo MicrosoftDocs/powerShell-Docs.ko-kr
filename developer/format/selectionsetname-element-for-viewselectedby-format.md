@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 8ab0f033-df09-4435-a8bd-76ec2d01f13b
 caps.latest.revision: 13
 ms.openlocfilehash: d1de2b30860bac80bf17508f40eec33c2794c4b2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076228"
 ---
 # <a name="selectionsetname-element-for-viewselectedby-format"></a>ViewSelectedBy에 대한 SelectionSetName 요소(형식)
 

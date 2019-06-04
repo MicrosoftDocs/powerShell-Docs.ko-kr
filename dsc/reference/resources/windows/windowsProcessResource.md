@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC WindowsProcess 리소스
 ms.openlocfilehash: cee93ab283ded407d6e032161125aa6d6ac98827
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076772"
 ---
 # <a name="dsc-windowsprocess-resource"></a>DSC WindowsProcess 리소스
 
-‘적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0’
+_적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0_
 
 Windows PowerShell DSC(필요한 상태 구성)의 **WindowsProcess** 리소스에서는 대상 노드에서 프로세스를 구성하는 메커니즘을 제공 합니다.
 

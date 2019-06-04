@@ -2,12 +2,12 @@
 ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: PowerShell 스크립팅
-ms.openlocfilehash: 07925ce8dcafd33970a703c9b241bf6f76f88d10
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 281f2e798b3d3fa1c150b079d633cb7e8490dcec
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058491"
 ---
 # <a name="powershell"></a>PowerShell
 
@@ -50,7 +50,7 @@ Get-Service | Get-Member
 
 ### <a name="consistency"></a>일관성
 
-시스템 관리는 복잡한 작업일 수 있습니다. 도구에는 내재된 복잡성을 제어하는 데 도움이 되는 일관된 인터페이스가 있습니다. 그렇지만 일관성이 입증된 명령줄 도구 및 스크립트 가능한 COM 개체는 없습니다.
+시스템 관리는 복잡한 작업일 수 있습니다. 도구에는 내재된 복잡성을 제어하는 데 도움이 되는 일관된 인터페이스가 있습니다. 그렇지만 일관성이 입증된 명령줄 도구 및 스크립트 가능한 COM(구성 요소 개체 모델) 개체는 없습니다.
 
 PowerShell의 일관성은 기본 자산 중 하나입니다. 예를 들어 `Sort-Object` cmdlet을 사용하는 방법을 배운 경우 해당 지식을 사용하여 모든 cmdlet의 출력을 정렬할 수 있습니다. 각 cmdlet의 다른 정렬 루틴을 배울 필요가 없습니다.
 

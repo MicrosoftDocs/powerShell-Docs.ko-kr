@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: ISEMenuItemCollection 개체
 ms.assetid: 0c0f5484-3320-408e-8534-5bd1c8e48512
 ms.openlocfilehash: 7e5030416df394aaa9e9d3f63978e204a7faabf1
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086700"
 ---
 # <a name="the-isemenuitemcollection-object"></a>ISEMenuItemCollection 개체
 

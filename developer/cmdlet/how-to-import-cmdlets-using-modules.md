@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: a41d9e5f-de6f-47b7-9601-c108609320d0
 caps.latest.revision: 8
 ms.openlocfilehash: c007bb11324e10ffd100797dccd9e6ab0d09a73e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067980"
 ---
 # <a name="how-to-import-cmdlets-using-modules"></a>모듈을 사용하여 Cmdlet을 가져오는 방법
 

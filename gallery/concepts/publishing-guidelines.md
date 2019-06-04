@@ -5,11 +5,11 @@ keywords: gallery,powershell,cmdlet,psgallery
 description: 게시자용 지침
 title: PowerShell 갤러리 게시 지침 및 모범 사례
 ms.openlocfilehash: 1cd0140cc208949e13d23331b23a58ffc374430b
-ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58623911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084660"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>PowerShell 갤러리 게시 지침 및 모범 사례
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 1a1ad921-5816-4937-acf1-ed4760fae740
 caps.latest.revision: 8
 ms.openlocfilehash: cfee55576518cf9ce38501192872ce94054f5213
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58056399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067946"
 ---
 # <a name="how-to-override-input-processing-methods"></a>입력 처리 메서드를 재정의하는 방법
 

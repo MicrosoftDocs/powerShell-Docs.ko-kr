@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: c693ff46-d1ad-4dc7-93ac-41ff2fc6c103
 caps.latest.revision: 9
 ms.openlocfilehash: c1293d5a1f942704ac01388c66bd9009fd340e82
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065430"
 ---
 # <a name="label-element-for-listitem-for-listcontrol-format"></a>ListControl의 ListItem에 대한 Label 요소(형식)
 

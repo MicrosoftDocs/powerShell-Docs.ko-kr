@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC WindowsFeatureSet 리소스
 ms.openlocfilehash: 8b7c7e72dd58459bd19cb723e5790a82841515c0
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076789"
 ---
 # <a name="dsc-windowsfeatureset-resource"></a>DSC WindowsFeatureSet 리소스
 

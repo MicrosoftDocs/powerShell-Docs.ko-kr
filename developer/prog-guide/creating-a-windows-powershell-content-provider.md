@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], content provider
 ms.assetid: 3da88ff9-c4c7-4ace-aa24-0a29c8cfa060
 caps.latest.revision: 6
-ms.openlocfilehash: 35c68a2b0f8c9bd1ed4fc54c41aa427ddd75907c
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: d7e237514b4db4bce3366836d3b6e0cd340bf107
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58056637"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855015"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Windows PowerShell 콘텐츠 공급자 만들기
 
@@ -28,36 +28,6 @@ ms.locfileid: "58056637"
 > 다운로드 한 소스 파일에서 사용할 수는  **\<PowerShell 샘플 >** 디렉터리입니다.
 >
 > 다른 Windows PowerShell 공급자 구현에 대 한 자세한 내용은 참조 하십시오 [Your Windows PowerShell 공급자 디자인](./designing-your-windows-powershell-provider.md)합니다.
-
-다음은이 항목의 섹션을 포함합니다. Windows PowerShell 콘텐츠 공급자 쓰기와 잘 모르는 경우 표시 되는 순서 대로 다음이 섹션을 참조 합니다. 그러나 Windows PowerShell 콘텐츠 공급자 작성에 익숙한 경우 다음과 같이 해야 하는 정보에 직접 이동 합니다.
-
-- [Windows PowerShell 콘텐츠 공급자 클래스를 정의합니다.](#Define-the-Windows-PowerShell-Content-Provider-Class)
-
-- [기본 기능 정의](#Define-Functionality-of-Base-Class)
-
-- [콘텐츠 판독기 구현](#Implementing-a-Content-Reader)
-
-- [콘텐츠 작성자를 구현합니다.](#Implementing-a-Content-Writer)
-
-- [콘텐츠 판독기를 검색합니다.](#Retrieving-the-Content-Reader)
-
-- [동적 매개 변수를 연결 합니다 `Get-Content` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Get-Content-Cmdlet)
-
-- [콘텐츠 작성기를 검색합니다.](#Retrieving-the-Content-Writer)
-
-- [동적 매개 변수는 Add_Content 연결할 및 `Set-Content` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Add-Content-and-Set-Content-Cmdlets)
-
-- [콘텐츠 지우기](#Clearing-Content)
-
-- [동적 매개 변수를 연결 합니다 `Clear-Content` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Clear-Content-Cmdlet)
-
-- [코드 샘플](#Code-Sample)
-
-- [개체 유형 정의 및 서식 지정](#defining-object-types-and-formatting)
-
-- [Windows PowerShell 공급자 작성](#Building-the-Windows-PowerShell-Provider)
-
-- [Windows PowerShell 공급자 테스트](#Testing-the-Windows-PowerShell-Provider)
 
 ## <a name="define-the-windows-powershell-content-provider-class"></a>Windows PowerShell 콘텐츠 공급자 클래스를 정의 합니다.
 

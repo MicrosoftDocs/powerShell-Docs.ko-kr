@@ -3,17 +3,17 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 리소스 디자이너 도구 사용
 ms.openlocfilehash: 3fd2f06cf46602ee30dd34f8e7bd77d3c92b808f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076670"
 ---
 # <a name="using-the-resource-designer-tool"></a>리소스 디자이너 도구 사용
 
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-리소스 디자이너 도구는 Windows PowerShell DSC(필요한 상태 구성) 리소스를 만드는 작업을 더 쉽게 해주고 **xDscResourceDesigner** 모듈에 의해 노출된 cmdlet 집합입니다. 이 리소스의 cmdlet은 MOF 스키마, 스크립트 모듈 및 새 리소스에 대한 디렉터리 구조를 만드는 데 도움이 됩니다. DSC 리소스에 대한 자세한 내용은 [Build Custom Windows PowerShell Desired State Configuration Resources(사용자 지정 Windows PowerShell 필요한 상태 구성 리소스 빌드)](authoringResource.md)를 참조하세요.
+리소스 디자이너 도구는 Windows PowerShell DSC(Desired State Configuration) 리소스를 만드는 작업을 더 쉽게 해주고 **xDscResourceDesigner** 모듈에 의해 노출된 cmdlet 집합입니다. 이 리소스의 cmdlet은 MOF 스키마, 스크립트 모듈 및 새 리소스에 대한 디렉터리 구조를 만드는 데 도움이 됩니다. DSC 리소스에 대한 자세한 내용은 [Build Custom Windows PowerShell Desired State Configuration Resources(사용자 지정 Windows PowerShell Desired State Configuration 리소스 빌드)](authoringResource.md)를 참조하세요.
 이 항목에서는 Active Directory 사용자를 관리하는 DSC 리소스를 만듭니다.
 [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet을 사용하여 **xDscResourceDesigner** 모듈을 설치하세요.
 
@@ -26,7 +26,7 @@ ms.locfileid: "55681433"
 * **UserName**: 사용자를 고유하게 식별하는 주요 속성입니다.
 * **Ensure**: 사용자 계정이 있음인지 또는 없음인지 여부를 지정합니다. 이 매개 변수는 두 개의 가능한 값만 갖습니다.
 * **DomainCredential**: 사용자에 대한 도메인 암호입니다.
-* **암호**: 필요한 경우 구성으로 사용자 암호를 변경할 수 있도록 해주는 사용자에 대한 원하는 암호입니다.
+* **Password**: 필요한 경우 구성으로 사용자 암호를 변경할 수 있도록 해주는 사용자에 대한 원하는 암호입니다.
 
 속성을 만들기 위해 우리는 **New-xDscResourceProperty** cmdlet을 사용합니다. 다음 PowerShell 명령을 사용하면 위에서 설명한 속성이 만들어집니다.
 
@@ -178,7 +178,7 @@ Update-xDscResource –Name ‘Demo_ADUser’ –Property $UserName, $Ensure, $D
 ### <a name="see-also"></a>참고 항목
 
 #### <a name="concepts"></a>개념
-[사용자 지정 Windows PowerShell 필요한 상태 구성 리소스 빌드](authoringResource.md)
+[사용자 지정 Windows PowerShell Desired State Configuration 리소스 빌드](authoringResource.md)
 
 #### <a name="other-resources"></a>관련 자료
 [xDscResourceDesigner 모듈](https://www.powershellgallery.com/packages/xDscResourceDesigner/1.12.0.0)

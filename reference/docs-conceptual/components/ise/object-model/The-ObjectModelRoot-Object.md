@@ -3,11 +3,11 @@ ms.date: 08/25/2017
 keywords: powershell,cmdlet
 title: ObjectModelRoot 개체
 ms.openlocfilehash: 2670321ebac1eac4ecc8457afb796f9f260da471
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55679958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086785"
 ---
 # <a name="the-objectmodelroot-object"></a>ObjectModelRoot 개체
 

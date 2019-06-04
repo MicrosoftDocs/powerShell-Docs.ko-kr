@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: df90dfe1-991f-43cb-a522-4cab7e8daa49
 caps.latest.revision: 6
 ms.openlocfilehash: 6e33f85a9066a78e35823961123bb015cc025a0c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064801"
 ---
 # <a name="scriptblock-element-for-expressionbinding-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 ExpressionBinding에 대한 ScriptBlock 요소(형식)
 

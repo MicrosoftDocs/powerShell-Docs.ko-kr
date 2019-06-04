@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 2472e256-8f4f-4288-8b67-a3300649dafa
 caps.latest.revision: 9
 ms.openlocfilehash: 2e84e770a345e272d4c5917b00afe7520840e1db
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066756"
 ---
 # <a name="customcontrol-element-for-groupby-format"></a>GroupBy에 대한 CustomControl 요소(형식)
 

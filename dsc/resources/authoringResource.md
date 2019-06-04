@@ -1,19 +1,19 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
-title: 사용자 지정 Windows PowerShell 필요한 상태 구성 리소스 빌드
+title: 사용자 지정 Windows PowerShell Desired State Configuration 리소스 빌드
 ms.openlocfilehash: 882b6efed4564d2354183d7472b301e1e1758335
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076874"
 ---
-# <a name="build-custom-windows-powershell-desired-state-configuration-resources"></a>사용자 지정 Windows PowerShell 필요한 상태 구성 리소스 빌드
+# <a name="build-custom-windows-powershell-desired-state-configuration-resources"></a>사용자 지정 Windows PowerShell Desired State Configuration 리소스 빌드
 
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Windows PowerShell DSC(필요한 상태 구성)은 환경을 구성하는 데 사용할 수 있는 기본 제공 리소스를 포함합니다. 이 항목에서는 리소스 개발에 대한 개요와 특정 정보 및 예제가 있는 항목에 대한 링크를 제공합니다.
+Windows PowerShell DSC(Desired State Configuration)은 환경을 구성하는 데 사용할 수 있는 기본 제공 리소스를 포함합니다. 이 항목에서는 리소스 개발에 대한 개요와 특정 정보 및 예제가 있는 항목에 대한 링크를 제공합니다.
 
 ## <a name="dsc-resource-components"></a>DSC 리소스 구성 요소
 
@@ -22,5 +22,5 @@ DSC 리소스는 Windows PowerShell 모듈입니다. 모듈에는 리소스에 �
 * [Writing a custom DSC resource with MOF(MOF를 사용하여 사용자 지정 DSC 리소스 작성)](authoringResourceMOF.md)
 * [Implementing a DSC resource in C#(C#에서 DSC 리소스 구현)](authoringResourceMofCS.md)
 * [PowerShell 클래스를 사용하여 사용자 지정 DSC 리소스 작성](authoringResourceClass.md)
-* [복합 리소스--DSC 구성을 리소스로 사용](authoringResourceComposite.md)
+* [복합 리소스: DSC 구성을 리소스로 사용](authoringResourceComposite.md)
 * [Using the Resource Designer tool(리소스 디자이너 도구 사용)](../authoringResourceMofDesigner.md)

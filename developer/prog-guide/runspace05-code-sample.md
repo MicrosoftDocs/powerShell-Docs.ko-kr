@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 9688cd69-07ea-4ea0-8822-0a4850bcf86c
 caps.latest.revision: 7
 ms.openlocfilehash: b16ee45383059c52ce3433699c6b8d2120992431
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081345"
 ---
 # <a name="runspace05-code-sample"></a>RunSpace05 코드 샘플
 

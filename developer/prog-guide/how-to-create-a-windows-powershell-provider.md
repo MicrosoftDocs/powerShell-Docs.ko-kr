@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 863e48e9-7206-4c6a-a59a-2ab2d30396bc
 caps.latest.revision: 5
 ms.openlocfilehash: 06910f32752668f13400f9be0767a2179133df04
-ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58623826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081753"
 ---
 # <a name="how-to-create-a-windows-powershell-provider"></a>Windows PowerShell 공급자를 만드는 방법
 

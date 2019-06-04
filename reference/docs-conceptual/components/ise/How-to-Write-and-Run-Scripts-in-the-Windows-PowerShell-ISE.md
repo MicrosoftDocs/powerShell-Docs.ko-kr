@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Windows PowerShell ISE에서 스크립트를 작성 및 실행하는 방법
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
 ms.openlocfilehash: 61db5e18f05e8e334cd9ba6dab2cf15dee7390cc
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086853"
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Windows PowerShell ISE에서 스크립트를 작성 및 실행하는 방법
 
@@ -144,7 +144,7 @@ $psISE.CurrentFile.Save([System.Text.Encoding]::ASCII)
 $psISE.CurrentFile.encoding
 ```
 
-Windows PowerShell ISE에서는 다음 인코딩 옵션을 지원합니다. ASCII, BigEndianUnicode, 유니코드, UTF32, UTF7, UTF8, 및 기본입니다. 기본값 옵션의 값은 시스템에 따라 다릅니다.
+Windows PowerShell ISE에서는 인코딩 옵션 ASCII, BigEndianUnicode, 유니코드, UTF32, UTF7, UTF8 및 기본값을 지원합니다. 기본값 옵션의 값은 시스템에 따라 다릅니다.
 
 Windows PowerShell ISE에서는 저장 또는 다른 이름으로 저장을 사용하는 경우 스크립트 파일의 인코딩이 변경되지 않습니다.
 

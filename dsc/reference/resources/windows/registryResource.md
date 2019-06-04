@@ -3,17 +3,17 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC 레지스트리 리소스
 ms.openlocfilehash: e0ae1a4a27edc08c4e6ccd47786426917eb1ccb4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076959"
 ---
 # <a name="dsc-registry-resource"></a>DSC 레지스트리 리소스
 
-‘적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0’
+_적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0_
 
-PowerShell DSC(필요한 상태 구성)의 **레지스트리** 리소스에서는 대상 노드에 있는 레지스트리 키와 값을 관리하는 메커니즘을 제공합니다.
+PowerShell DSC(Desired State Configuration)의 **레지스트리** 리소스에서는 대상 노드에 있는 레지스트리 키와 값을 관리하는 메커니즘을 제공합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -42,7 +42,7 @@ Registry [string] #ResourceName
 | Hex| 데이터가 16진수 형식으로 표현될 것인지 여부를 나타냅니다. 지정하는 경우 DWORD/QWORD 값 데이터가 16진수 형식으로 표시됩니다. 다른 형식에 대해서는 유효하지 않습니다. 기본값은 **$false**입니다.|
 | DependsOn| 이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 **ResourceName**이고 해당 형식이 **ResourceType**일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다.|
 | ValueData| 레지스트리 값에 대한 데이터입니다.|
-| ValueType| 값의 형식을 나타냅니다. 지원되는 형식은 다음과 같습니다. 문자열 (REG_SZ) "," 이진수 (REG-BINARY) "," Dword 32 비트 (REG_DWORD) "," Qword 64 비트 (REG_QWORD) "," 다중 문자열 (REG_MULTI_SZ), 확장 가능한 문자열 (REG_EXPAND_SZ) |
+| ValueType| 값의 형식을 나타냅니다. 지원되는 형식은 다음과 같습니다. 문자열(REG_SZ), 이진(REG-BINARY), Dword 32비트(REG_DWORD), Qword 64비트(REG_QWORD), 다중 문자열(REG_MULTI_SZ), 확장 가능한 문자열(REG_EXPAND_SZ) |
 
 ## <a name="example"></a>예제
 

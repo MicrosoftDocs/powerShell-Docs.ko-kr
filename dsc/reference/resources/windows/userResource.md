@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC 사용자 리소스
 ms.openlocfilehash: 04543351df19160a2da05ccea96e5d392d8c55bf
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076905"
 ---
 # <a name="dsc-user-resource"></a>DSC 사용자 리소스
 

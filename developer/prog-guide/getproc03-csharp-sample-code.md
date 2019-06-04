@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: ebc0d538-69ac-43d5-837d-b6f47344fc6a
 caps.latest.revision: 5
 ms.openlocfilehash: 4d921dd62999bc68b80838bafa2a3da8d4df3ebb
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081521"
 ---
 # <a name="getproc03-c-sample-code"></a>GetProc03(C#) 코드 샘플
 

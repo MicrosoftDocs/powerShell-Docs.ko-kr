@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 8e3e28a9-2aaf-40a9-9c6b-ace20c9799f3
 caps.latest.revision: 4
 ms.openlocfilehash: 45f4b40d4cf0e203aca7bcdd1f6bdde9b8a83f35
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083402"
 ---
 # <a name="how-to-add-notes-to-a-provider-help-topic"></a>공급자 도움말 항목에 메모를 추가하는 방법
 
@@ -21,8 +21,8 @@ ms.locfileid: "56853289"
 
 ## <a name="section-heading"></a>섹션 제목
 
-여기에 섹션 본문을 삽입합니다.
+여기에 지정 된 섹션 본문을 삽입 합니다.
 
-### <a name="subsection-heading"></a>하위 섹션 제목
+### <a name="subsection-heading"></a>하위 단원 제목
 
-여기에 하위 섹션 본문을 삽입합니다.
+여기에 하위 섹션 본문을 삽입 합니다.

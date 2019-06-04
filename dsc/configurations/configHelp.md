@@ -3,25 +3,25 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: DSC 구성에 대한 도움말 작성
 ms.openlocfilehash: 498ec0f594ed3229e097903c4ea2ae34d3da03a2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55683003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080187"
 ---
 # <a name="writing-help-for-dsc-configurations"></a>DSC 구성에 대한 도움말 작성
 
 >적용 대상: Windows Powershell 5.0
 
-DSC 구성에 설명 기반 도움말을 사용할 수 있습니다. 사용자가 호출 하 여 도움말에 액세스할 수는 **구성** 사용 하 여 `-?`, 또는 사용 하 여 합니다 [Get-help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet. 에 설명 기반 도움말 바로 위에 배치 합니다 `Configuration` 키워드입니다.
-매개 변수 선언, 또는 둘 다가 아래 예제와 같이 바로 위에 주석 블록을 사용 하 여 인라인에서 매개 변수 도움말을 배치할 수 있습니다.
+DSC 구성에 설명 기반 도움말을 사용할 수 있습니다. 사용자는 `-?`가 포함된 **구성**을 호출하거나 [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet을 사용하여 도움말에 액세스할 수 있습니다. `Configuration` 키워드 바로 위에 주석 기반 도움말을 배치합니다.
+매개 변수 선언 바로 위에 주석 블록과 인라인으로 매개 변수 도움말을 배치하거나 둘 다 아래 예제와 같이 배치할 수 있습니다.
 
 PowerShell 설명 기반 도움말에 대한 자세한 내용은 [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help)를 참조하세요.
 
 > [!NOTE]
-> VSCode 및 ISE가 같은 PowerShell 개발 환경, 주석 요소 템플릿을 자동으로 삽입할 수 있도록 코드 조각 포함 되어 있습니다.
+> VSCode 및 ISE 같은 PowerShell 개발 환경에도 주석 블록 템플릿을 자동으로 삽입할 수 있는 코드 조각이 있습니다.
 
-다음 예제에서는 구성 및 각 구성에 대한 설명 기반 도움말을 포함하는 스크립트를 보여줍니다. 이 예제에서는 매개 변수를 사용 하 여 구성을 보여 줍니다. 구성에 매개 변수를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요 [구성 매개 변수 추가](add-parameters-to-a-configuration.md)합니다.
+다음 예제에서는 구성 및 각 구성에 대한 설명 기반 도움말을 포함하는 스크립트를 보여줍니다. 이 예제에서는 매개 변수를 사용하는 구성을 보여 줍니다. 구성에서 매개 변수를 사용하는 방법에 대한 자세한 내용은 [구성에 매개 변수 추가](add-parameters-to-a-configuration.md)를 참조하세요.
 
 ```powershell
 <#
@@ -77,7 +77,7 @@ configuration HelpSample1
 
 ## <a name="viewing-configuration-help"></a>구성 도움말 보기
 
-구성에 대 한 도움말을 보려면 다음을 사용 합니다 `Get-Help` 함수 또는 형식 이름 사용 하 여 cmdlet 함수 이름 뒤에 `-?`합니다. 다음은 출력에 전달 된 이전 구성의 `Get-Help`합니다.
+구성에 대한 도움말을 보려면 함수의 이름과 함께 `Get-Help` cmdlet을 사용하거나 함수의 이름 뒤에 `-?`를 붙여 입력하세요. 다음은 `Get-Help`로 전달된 이전 구성의 출력입니다.
 
 ```powershell
 Get-Help HelpSample1 -Detailed
@@ -157,7 +157,7 @@ REMARKS
 ```
 
 > [!NOTE]
-> 구문 필드 및 매개 변수 특성은 자동으로 PowerShell에서를 생성 됩니다.
+> 구문 필드 및 매개 변수 특성은 PowerShell에서 자동으로 생성됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

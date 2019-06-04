@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 6fed2f68-ce6d-4a8f-bf21-f94f27a155c2
 caps.latest.revision: 9
 ms.openlocfilehash: 936728d64f30a08fb9e2fa9ccef103683594aa3e
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58056263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068201"
 ---
 # <a name="examples-of-cmdlet-code"></a>Cmdlet 코드 예제
 

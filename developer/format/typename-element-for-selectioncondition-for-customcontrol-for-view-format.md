@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d2c65171-4d4c-46a9-a545-591df058acd1
 caps.latest.revision: 7
 ms.openlocfilehash: 00e9ae0916dd6d22602b99b201c9c4b7e549dc48
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083878"
 ---
 # <a name="typename-element-for-selectioncondition-for-customcontrol-for-view--format"></a>View에 대한 CustomControl의 SelectionCondition에 대한 TypeName 요소(형식)
 

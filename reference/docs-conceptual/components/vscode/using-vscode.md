@@ -2,12 +2,12 @@
 title: PowerShell 개발에 Visual Studio 코드 사용
 description: PowerShell 개발에 Visual Studio 코드 사용
 ms.date: 08/06/2018
-ms.openlocfilehash: 1e9b9d811a39656327af2810bd6dc8aaf3fde3a4
-ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
-ms.translationtype: MTE95
+ms.openlocfilehash: 5badffd49252e0d72ae2c20d3147ad4b1e92d5ed
+ms.sourcegitcommit: cf1a281cce9f7239c440c90f8b2798d32a13778d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251390"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882566"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>PowerShell 개발에 Visual Studio 코드 사용
 
@@ -64,45 +64,90 @@ Windows, macOS 및 Linux의 현대식 워크로드의 경우 다음을 참조하
 파일을 닫으려면 파일 이름 옆에 있는 "x"를 클릭합니다.
 Visual Studio Code를 종료하려면 **파일->종료**를 누릅니다.
 
-### <a name="installing-the-powershell-extension-on-restricted-systems"></a>제한 된 시스템에 PowerShell 확장 설치
+### <a name="installing-the-powershell-extension-on-restricted-systems"></a>제한된 시스템에 PowerShell 확장 설치
 
-일부 시스템 검사할 모든 코드 서명 해야 하 고 PowerShell 편집기 서비스를 시스템에서 실행을 수동으로 승인 해야 하는 방식으로 설정 됩니다.
-실행 정책을 변경 하는 그룹 정책 업데이트 때문일 경우 PowerShell 확장을 설치 했지만 같은 오류에 도달 합니다.
+일부 시스템은 모든 코드 서명을 확인하여 시스템에서 실행될 PowerShell Editor Services를 수동으로 승인해야 하는 방식으로 설정됩니다.
+PowerShell 확장을 설치했지만 다음과 같은 오류에 도달하는 경우 실행 정책을 변경하는 그룹 정책 업데이트가 원인일 수 있습니다.
 
 ```
 Language server startup failed.
 ```
 
-PowerShell 편집기 서비스 이므로 VSCode 용 PowerShell 확장을 수동으로 승인 하려면 프롬프트 및 실행 하는 PowerShell을 엽니다.
+PowerShell Editor Services를 수동으로 승인하여 VSCode용 PowerShell 확장을 수동으로 승인하려면 PowerShell 프롬프트를 열고 다음을 실행합니다.
 
 ```powershell
 Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellEditorServices\PowerShellEditorServices.psd1
 ```
 
-"이 신뢰할 수 없는 게시자의 소프트웨어를 실행 하 시겠습니까?" 메시지가 표시 됩니다.
-형식 `R` 파일을 실행 합니다. 그런 다음 Visual Studio Code를 열고 PowerShell 확장이 제대로 작동 하는지 확인 합니다. 시작 하는 문제가 여전히 있는 경우에 알려 주세요 [GitHub](https://github.com/PowerShell/vscode-powershell/issues)합니다.
+"이 신뢰되지 않은 게시자가 서명한 소프트웨어를 실행하시겠습니까?"가 포함된 메시지가 표시됩니다.
+`R`을 입력하여 파일을 실행합니다. 그런 다음, Visual Studio Code를 열고 PowerShell 확장이 제대로 작동하는지 확인합니다. 그래도 시작하는 데 문제가 있으면 [GitHub](https://github.com/PowerShell/vscode-powershell/issues)에서 알려 주세요.
 
-#### <a name="using-a-specific-installed-version-of-powershell"></a>설치된 특정 버전의 PowerShell 사용
+#### <a name="choosing-a-version-of-powershell-to-use-with-the-extension"></a>확장과 함께 사용할 PowerShell 버전 선택
 
-Visual Studio Code에 설치된 특정 버전의 PowerShell을 사용하려면 사용자 설정 파일에 새로운 변수를 추가해야 합니다.
+Windows PowerShell과 함께 PowerShell Core를 side-by-side 설치하면 PowerShell 확장과 함께 특정 버전의 PowerShell을 사용할 수 있습니다. 다음 단계에 따라 해당 버전을 선택합니다.
 
-1. **파일 -> 기본 설정 -> 설정**을 클릭합니다.
-1. 두 개의 편집기 창이 표시됩니다.
-   맨 오른쪽 창(`settings.json`)에서 두 개의 중괄호(`{` 및 `}`) 사이에 아래에서 사용 중인 OS에 해당하는 설정을 삽입하고 **\<버전\>** 을 설치된 PowerShell 버전으로 바꿉니다.
+1. 명령 팔레트를 엽니다(Windows 및 Linux의 경우 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, macOS의 경우 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>).
+1. "세션"을 검색합니다.
+1. "PowerShell: 세션 메뉴 표시"를 클릭합니다.
+1. 목록에서 사용하려는 PowerShell 버전을 선택합니다(예: “PowerShell Core”).
 
-   ```json
-    // On Windows:
-    "powershell.powerShellExePath": "c:/Program Files/PowerShell/<version>/pwsh.exe"
+>[!IMPORTANT]
+> 이 기능은 운영 체제별로 몇 가지 잘 알려진 경로를 확인하여 PowerShell의 설치 위치를 검색합니다. 일반적이지 않은 위치에 PowerShell을 설치한 경우 처음에 PowerShell이 세션 메뉴에 표시되지 않을 수 있습니다. 아래 설명된 대로 [사용자 지정 경로를 추가](#adding-your-own-powershell-paths-to-the-session-menu)하여 세션 메뉴를 확장할 수 있습니다.
 
-    // On Linux:
-    "powershell.powerShellExePath": "/opt/microsoft/powershell/<version>/pwsh"
+>[!NOTE]
+> 세션 메뉴에 액세스하는 또 다른 방법이 있습니다. PowerShell 파일이 편집기에서 열리면 오른쪽 아래에 녹색 버전 번호가 표시됩니다. 이 버전 번호를 클릭하면 세션 메뉴로 이동됩니다.
 
-    // On macOS:
-    "powershell.powerShellExePath": "/usr/local/microsoft/powershell/<version>/pwsh"
-   ```
+##### <a name="adding-your-own-powershell-paths-to-the-session-menu"></a>세션 메뉴에 고유한 PowerShell 경로 추가
 
-1. 설정을 원하는 PowerShell 실행 파일에 대한 경로로 바꿉니다.
-1. 설정 파일을 저장하고 Visual Studio Code를 다시 시작합니다.
+VS Code 설정을 통해 세션 메뉴에 다른 PowerShell 실행 파일 경로를 추가할 수 있습니다.
+
+`powershell.powerShellAdditionalExePaths` 목록에 항목을 추가하거나, 목록이 `settings.json`에 없는 경우 목록을 만듭니다.
+
+```json
+{
+    // other settings...
+
+    "powershell.powerShellAdditionalExePaths": [
+        {
+            "exePath": "C:\\Users\\tyler\\Downloads\\PowerShell\\pwsh.exe",
+            "versionName": "Downloaded PowerShell"
+        }
+    ],
+    
+    // other settings...
+}
+```
+
+각 항목은 다음을 포함해야 합니다.
+
+* `exePath`: `pwsh` 또는 `powershell` 실행 파일의 경로입니다.
+* `versionName`: 세션 메뉴에 표시되는 텍스트입니다.
+
+`powershell.powerShellDefaultVersion` 설정을 세션 메뉴에 표시되는 텍스트(마지막 설정의 `versionName`)로 설정하여 이 설정을 통해 사용하도록 기본 PowerShell 버전을 설정할 수 있습니다.
+
+```json
+{
+    // other settings...
+
+    "powershell.powerShellAdditionalExePaths": [
+        {
+            "exePath": "C:\\Users\\tyler\\Downloads\\PowerShell\\pwsh.exe",
+            "versionName": "Downloaded PowerShell"
+        }
+    ],
+    
+    "powershell.powerShellDefaultVersion": "Downloaded PowerShell",
+    
+    // other settings...
+}
+```
+
+이 설정을 지정한 후 Visual Studio Code를 다시 시작하거나 "개발자: 창 다시 로드" 명령 팔레트 작업을 사용하여 현재 vscode 창을 다시 로드합니다.
+
+세션 메뉴를 열면 이제 추가 PowerShell 버전이 표시됩니다.
+
+> [!NOTE]
+> 원본에서 PowerShell을 빌드하는 경우 이 방법은 PowerShell의 로컬 빌드를 테스트하는 좋은 방법입니다.
 
 #### <a name="configuration-settings-for-visual-studio-code"></a>Visual Studio Code에 대한 구성 파일
 
@@ -122,7 +167,7 @@ Visual Studio Code에는 다음 구성 설정을 권장합니다.
 }
 ```
 
-모든 파일 형식에 영향을 하기 위해 이러한 설정을 사용 하지 않으려는 경우 VSCode 언어별 구성을 수도 있습니다. 설정에 배치 하 여 특정 언어 설정이 만들기를 `[<language-name>]` 필드입니다. 예:
+이러한 설정이 모든 파일 형식에 영향을 주지 않으려는 경우 VSCode에서 언어별 구성을 허용할 수도 있습니다. `[<language-name>]` 필드에서 설정을 지정하여 언어별 설정을 만듭니다. 예:
 
 ```json
 "[powershell]": {
@@ -131,13 +176,13 @@ Visual Studio Code에는 다음 구성 설정을 권장합니다.
 }
 ```
 
-파일에 대 한 자세한 내용은 참조 VS Code에서 인코딩을 [파일 인코딩 이해](understanding-file-encoding.md)합니다.
+VS Code의 파일 인코딩에 대한 자세한 내용은 [파일 인코딩 이해](understanding-file-encoding.md)를 참조하세요.
 
 ## <a name="debugging-with-visual-studio-code"></a>Visual Studio Code 디버깅
 
 ### <a name="no-workspace-debugging"></a>작업 공간 없이 디버깅
 
-Visual Studio Code 버전 1.9부터 PowerShell 스크립트가 포함된 폴더를 열지 않고도 PowerShell 스크립트를 디버깅할 수 있습니다. PowerShell 스크립트 파일을 엽니다 **파일에는 열려 있는 파일->...** ((f9 키 누름) 줄에 중단점을 설정 하 고 다음 f5 키를 눌러 디버깅을 시작 합니다. 디버거, 단계, 디버깅 다시 시작 및 중지로 나눌 수 있는 디버그 작업 창이 표시됩니다.
+Visual Studio Code 버전 1.9부터 PowerShell 스크립트가 포함된 폴더를 열지 않고도 PowerShell 스크립트를 디버깅할 수 있습니다. **파일->파일 열기...** 로 PowerShell 스크립트 파일을 열고 특정 줄에 중단점을 설정한 후(F9 키 누름) F5 키를 눌러 디버깅을 시작합니다. 디버거, 단계, 디버깅 다시 시작 및 중지로 나눌 수 있는 디버그 작업 창이 표시됩니다.
 
 ### <a name="workspace-debugging"></a>작업 영역에서 디버깅
 

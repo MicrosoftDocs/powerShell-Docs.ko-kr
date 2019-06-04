@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 39388197-4ff9-4889-aa32-526011afa1f6
 caps.latest.revision: 6
 ms.openlocfilehash: e95ec550a7815a76a8bd7f9526dfa405a9644360
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083657"
 ---
 # <a name="wide-view-groupby"></a>넓게 보기(GroupBy)
 
@@ -30,7 +30,7 @@ ms.locfileid: "56861629"
    > [!WARNING]
    > 이 형식 지정 파일 형식 지정 파일을 Windows PowerShell에서 이미 정의 되어 있는 개체의 표시를 정의 합니다. 사용 해야 합니다는 `prependPath` 모듈로 파일 매개 변수 cmdlet을 실행 하 고 형식을 로드할 수 없습니다.
 
-## <a name="demonstrates"></a>시연
+## <a name="demonstrates"></a>데모
 
 이 서식 파일에 다음 XML 요소를 보여 줍니다.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], described
 ms.assetid: 0aa32589-4447-4ead-a5dd-a3be99113140
 caps.latest.revision: 21
-ms.openlocfilehash: f8a8c9300d1ac811c7fbbf7050dd24f78306db8f
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 14200aed2fb94c37c8b8af29650f602945e7ac1c
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58056671"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229372"
 ---
 # <a name="cmdlet-overview"></a>Cmdlet 개요
 
@@ -38,19 +38,53 @@ Cmdlet는 작업을 수행 하 고 일반적으로 파이프라인에서 다음 
 
 다음 용어는 Windows PowerShell cmdlet 설명서에서 자주 사용 됩니다.
 
-- **Cmdlet 특성**: Cmdlet으로는 cmdlet 클래스를 선언 하는 데 사용 되는.NET Framework 특성입니다. Windows PowerShell은 선택적 요소는 다른 여러 특성을 사용 하지만 Cmdlet 특성이 필요 합니다. 이 특성에 대 한 자세한 내용은 참조 하세요. [Cmdlet 특성 선언을](./cmdlet-attribute-declaration.md)합니다.
+### <a name="cmdlet-attribute"></a>Cmdlet 특성
 
-- **Cmdlet 매개 변수**: 사용자에 게 또는 cmdlet을 실행 하는 응용 프로그램에 사용할 수 있는 매개 변수를 정의 하는 공용 속성입니다. Cmdlet 필수, 명명 된, 위치 및 *전환* 매개 변수입니다. 스위치 매개 변수를 사용 하면 호출 된 매개 변수를 지정 하는 경우에 평가 되는 매개 변수를 정의할 수 있습니다. 다양 한 유형의 매개 변수에 대 한 자세한 내용은 참조 하세요. [Cmdlet 매개 변수](./cmdlet-parameters.md)합니다.
+Cmdlet으로는 cmdlet 클래스를 선언 하는 데 사용 되는.NET Framework 특성입니다.
+PowerShell은 선택적 요소는 다른 여러 특성을 사용 하지만 Cmdlet 특성이 필요 합니다.
+이 특성에 대 한 자세한 내용은 참조 하세요. [Cmdlet 특성 선언을](cmdlet-attribute-declaration.md)합니다.
 
-- **매개 변수 집합**: 특정 작업을 수행하기 위해 동일한 명령에 사용할 수 있는 매개 변수 그룹입니다. Cmdlet는 여러 매개 변수 집합이 있을 수 있습니다 하지만 각 매개 변수 집합에는 고유한 매개 변수가 하나 이상 있어야 합니다. 좋은 cmdlet 설계 unique 매개 변수는 필수 매개 변수를 될 하는 것이 가장 좋습니다. 매개 변수 집합에 대 한 자세한 내용은 참조 하세요. [Cmdlet 매개 변수 설정](./cmdlet-parameter-sets.md)합니다.
+### <a name="cmdlet-parameter"></a>Cmdlet 매개 변수
 
-- **동적 매개 변수**: 런타임 시 cmdlet에 추가 되는 매개 변수입니다. 일반적으로 다른 매개 변수가 특정 값으로 설정 된 경우 동적 매개 변수를 cmdlet에 추가 됩니다. 동적 매개 변수에 대 한 자세한 내용은 참조 하십시오 [cmdlet은 동적 매개 변수](./cmdlet-dynamic-parameters.md)합니다.
+사용자에 게 또는 cmdlet을 실행 하는 응용 프로그램에 사용할 수 있는 매개 변수를 정의 하는 공용 속성입니다.
+Cmdlet 필수, 명명 된, 위치 및 *전환* 매개 변수입니다.
+스위치 매개 변수를 사용 하면 호출 된 매개 변수를 지정 하는 경우에 평가 되는 매개 변수를 정의할 수 있습니다.
+다양 한 유형의 매개 변수에 대 한 자세한 내용은 참조 하세요. [Cmdlet 매개 변수](cmdlet-parameters.md)합니다.
 
-- **입력 처리 메서드**: cmdlet이 입력으로 받은 레코드를 처리하는 데 사용할 수 있는 메서드입니다. 입력된 처리 메서드로를 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드는 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드는 [ System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드 및 [System.Management.Automation.Cmdlet.StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) 메서드. 하나 이상의 재정의 해야 cmdlet을 구현 하는 경우는 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)를 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), 및 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드. 일반적으로 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드는 해당 cmdlet이 처리 하는 모든 레코드에 대 한 호출 되므로 재정의 하는 메서드입니다. 반면에 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드는 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드 수행 하기 위해 한 번 호출 됩니다 전처리 또는 후 레코드를 처리 합니다. 이러한 방법에 대 한 자세한 내용은 참조 하세요. [입력 처리 메서드](./cmdlet-input-processing-methods.md)합니다.
+### <a name="parameter-set"></a>매개 변수 집합
 
-- **ShouldProcess 기능**: Windows PowerShell을 사용 하면 cmdlet은 시스템에 변경의 작업을 수행 하기 전에 사용자에 게 피드백을 요청 하는 cmdlet를 만들 수 있습니다. 이 기능을 사용 하려면 cmdlet은 Cmdlet 특성을 선언 하 고 cmdlet을 호출 해야 하는 경우 ShouldProcess 기능을 지원 하 선언 해야 합니다 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 고 [ System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 는 입력 처리 메서드 내에서 메서드. ShouldProcess 기능을 지 원하는 방법에 대 한 자세한 내용은 참조 하세요. [요청 확인](./requesting-confirmation-from-cmdlets.md)합니다.
+특정 작업을 수행하기 위해 동일한 명령에 사용할 수 있는 매개 변수 그룹입니다.
+Cmdlet는 여러 매개 변수 집합이 있을 수 있습니다 하지만 각 매개 변수 집합에는 고유한 매개 변수가 하나 이상 있어야 합니다.
+좋은 cmdlet 설계 unique 매개 변수는 필수 매개 변수를 될 하는 것이 가장 좋습니다.
+매개 변수 집합에 대 한 자세한 내용은 참조 하세요. [Cmdlet 매개 변수 설정](cmdlet-parameter-sets.md)합니다.
 
-- **트랜잭션**: 단일 작업으로 처리 되는 명령의 논리적 그룹입니다. 작업 그룹의 모든 명령이 실패 하면 사용자에 게 적용 하거나 트랜잭션 내에서 수행 되는 작업을 취소 하도록 선택할 경우에 자동으로 실패 합니다. 트랜잭션에 참여 cmdlet은 Cmdlet 특성 선언 되 면 트랜잭션을 지원 하는지 선언 해야 합니다. 트랜잭션에 대 한 지원이 Windows PowerShell 2.0에서 도입 되었습니다. 트랜잭션에 대 한 자세한 내용은 참조 하세요. [Windows PowerShell 트랜잭션](http://msdn.microsoft.com/en-us/74d7bac7-bc53-49f1-a47a-272e8da84710)합니다.
+### <a name="dynamic-parameter"></a>동적 매개 변수
+
+런타임 시 cmdlet에 추가 되는 매개 변수입니다.
+일반적으로 다른 매개 변수가 특정 값으로 설정 된 경우 동적 매개 변수를 cmdlet에 추가 됩니다.
+동적 매개 변수에 대 한 자세한 내용은 참조 하십시오 [cmdlet은 동적 매개 변수](cmdlet-dynamic-parameters.md)합니다.
+
+### <a name="input-processing-method"></a>입력 처리 메서드
+
+cmdlet이 입력으로 받은 레코드를 처리하는 데 사용할 수 있는 메서드입니다.
+입력된 처리 메서드로를 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드는 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드는 [ System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드 및 [System.Management.Automation.Cmdlet.StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) 메서드. 하나 이상의 재정의 해야 cmdlet을 구현 하는 경우는 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)를 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord), 및 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드.
+일반적으로 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드는 해당 cmdlet이 처리 하는 모든 레코드에 대 한 호출 되므로 재정의 하는 메서드입니다.
+반면에 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드는 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드 수행 하기 위해 한 번 호출 됩니다 전처리 또는 후 레코드를 처리 합니다.
+이러한 방법에 대 한 자세한 내용은 참조 하세요. [입력 처리 메서드](cmdlet-input-processing-methods.md)합니다.
+
+### <a name="shouldprocess-feature"></a>ShouldProcess 기능
+
+PowerShell을 사용 하면 cmdlet은 시스템에 변경의 작업을 수행 하기 전에 사용자에 게 피드백을 요청 하는 cmdlet를 만들 수 있습니다.
+이 기능을 사용 하려면 cmdlet은 Cmdlet 특성을 선언 하 고 cmdlet을 호출 해야 하는 경우 ShouldProcess 기능을 지원 하 선언 해야 합니다 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 고 [ System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 는 입력 처리 메서드 내에서 메서드.
+ShouldProcess 기능을 지 원하는 방법에 대 한 자세한 내용은 참조 하세요. [요청 확인](requesting-confirmation-from-cmdlets.md)합니다.
+
+### <a name="transaction"></a>트랜잭션
+
+단일 작업으로 처리 되는 명령의 논리적 그룹입니다.
+작업 그룹의 모든 명령이 실패 하면 사용자에 게 적용 하거나 트랜잭션 내에서 수행 되는 작업을 취소 하도록 선택할 경우에 자동으로 실패 합니다.
+트랜잭션에 참여 cmdlet은 Cmdlet 특성 선언 되 면 트랜잭션을 지원 하는지 선언 해야 합니다.
+트랜잭션에 대 한 지원이 Windows PowerShell 2.0에서 도입 되었습니다.
+트랜잭션에 대 한 자세한 내용은 참조 하세요. [트랜잭션을 지원 방법](how-to-support-transactions.md)합니다.
 
 ## <a name="how-cmdlets-differ-from-commands"></a>명령에서 Cmdlet을 다 하는 방법
 
@@ -94,7 +128,7 @@ Windows PowerShell cmdlet에는 다음 두 가지 기본 클래스에서 파생 
 
 Windows PowerShell cmdlet을 관리 하 고 Windows PowerShell에서 제공 하는 cmdlet에서 해야 할 수 있습니다 하는 일반적인 기능을 지정 하는 여러.NET Framework 특성을 정의 합니다. 예를 들어, cmdlet, cmdlet의 매개 변수를 지정 하 고 cmdlet 개발자는 해당 cmdlet 코드에서 해당 기능을 구현 하지 않아도 되도록 입력의 유효성 검사 요청으로 클래스를 지정 하려면 특성이 사용 됩니다. 특성에 대 한 자세한 내용은 참조 하세요. [Windows PowerShell 특성](./cmdlet-attributes.md)합니다.
 
-## <a name="cmdlet-names"></a>cmdlet 이름
+## <a name="cmdlet-names"></a>Cmdlet 이름
 
 Windows PowerShell cmdlet의 이름이 동사-명사 이름 쌍을 사용합니다. 예를 들어를 `Get-Command` cmdlet은 Windows PowerShell에 포함 된 명령 셸에서 등록 된 모든 cmdlet을 가져오는 데 사용 됩니다. Cmdlet은 수행 하는 작업을 식별 하는 동사 및 명사는 cmdlet이 해당 작업을 수행 하는 리소스를 식별 합니다.
 

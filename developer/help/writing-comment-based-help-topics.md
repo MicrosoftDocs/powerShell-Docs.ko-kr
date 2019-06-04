@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: e619ab16-90ad-46e9-9bde-d6dce492ba56
 caps.latest.revision: 4
 ms.openlocfilehash: e3d32f36b597088abc41e229bb0955c1b25504e6
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083181"
 ---
 # <a name="writing-comment-based-help-topics"></a>설명 기반 도움말 항목 작성
 

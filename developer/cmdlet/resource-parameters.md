@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 460c43aa-f5c5-4a1a-a6f2-5e07db143de1
 caps.latest.revision: 5
 ms.openlocfilehash: 9752570e5c997ef4da56a08df14f39b77ba37a4a
-ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067453"
 ---
 # <a name="resource-parameters"></a>리소스 매개 변수
 

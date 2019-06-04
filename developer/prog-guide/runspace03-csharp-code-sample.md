@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 9ac8ab99-1856-4d6f-b30d-c0a18b8dd1fc
 caps.latest.revision: 6
 ms.openlocfilehash: 0e80f4d850a7c6dc044526a56b92f16eea4040b5
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081379"
 ---
 # <a name="runspace03-c-code-sample"></a>RunSpace03(C#) 코드 샘플
 

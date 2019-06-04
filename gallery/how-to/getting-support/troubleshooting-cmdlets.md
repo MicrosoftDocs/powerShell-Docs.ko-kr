@@ -4,11 +4,11 @@ contributor: manikb
 keywords: gallery,powershell,cmdlet,psget
 title: cmdlet 문제 해결
 ms.openlocfilehash: f5cd9c0cc23fef5891bf02c10b6541ab0f9d418a
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084184"
 ---
 # <a name="troubleshooting-cmdlets"></a>cmdlet 문제 해결
 

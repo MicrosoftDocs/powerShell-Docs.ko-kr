@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: af25b560-017a-4d53-a8c3-97c5ab66b9d4
 caps.latest.revision: 5
 ms.openlocfilehash: 92de387b97445170eae204dcde24e795a5c3a89b
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082008"
 ---
 # <a name="accessdbprovidersample03-code-sample"></a>AccessDbProviderSample03 코드 샘플
 

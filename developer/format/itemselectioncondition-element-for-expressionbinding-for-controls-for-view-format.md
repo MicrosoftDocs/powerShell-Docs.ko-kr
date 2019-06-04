@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 82c15014-2440-410d-b02d-b7f1a49240a0
 caps.latest.revision: 7
 ms.openlocfilehash: 80f375c53c205c793600655fa6031d114871618e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065481"
 ---
 # <a name="itemselectioncondition-element-for-expressionbinding-for-controls-for-view-format"></a>View에 대한 Controls의 ExpressionBinding에 대한 ItemSelectionCondition 요소(형식)
 

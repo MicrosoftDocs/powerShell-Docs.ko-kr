@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 778ce1a2-e16d-4af5-b15b-77ca4326bdc4
 caps.latest.revision: 5
 ms.openlocfilehash: a09efae487dd34238289a6c13dd7786020f15c7d
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081158"
 ---
 # <a name="stopprocesssample04-c-sample-code"></a>StopProcessSample04(C#) 코드 샘플
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 6215a651-100c-49bb-863f-edc6984dd634
 caps.latest.revision: 7
 ms.openlocfilehash: 61807d6a2ce076f1bca1d1329e44af8e943b97ca
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067521"
 ---
 # <a name="registering-cmdlets"></a>Cmdlet 등록
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 2b51c937-909e-42af-9085-e224f3919bdf
 caps.latest.revision: 6
 ms.openlocfilehash: 532b8efdd3997d2cecaa7a006254d4a8793bbe01
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064784"
 ---
 # <a name="scriptblock-element-for-expressionbinding-for-controls-for-view-format"></a>View에 대한 Controls의 ExpressionBinding에 대한 ScriptBlock 요소(형식)
 

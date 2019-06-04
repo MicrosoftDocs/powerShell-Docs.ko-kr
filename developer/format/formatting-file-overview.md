@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: fe888fee-1fe9-459f-9d62-35732c19a7f8
 caps.latest.revision: 13
 ms.openlocfilehash: d418cff70c1197aa3c331eed909f49198da139e9
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065736"
 ---
 # <a name="formatting-file-overview"></a>형식 지정 파일 개요
 

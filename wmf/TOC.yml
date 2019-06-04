@@ -1,218 +1,47 @@
-items:
-- name: WMF(Windows Management Framework) 개요
+- name: WMF(Windows Management Framework)
   href: overview.md
-- name: WMF 5.1
+- name: 설치
   items:
-  - name: WMF 5.1 릴리스 정보
-    href: 5.1/release-notes.md
-  - name: 새로운 시나리오 및 기능
-    items:
-    - name: 새로운 시나리오 및 기능
-      href: 5.1/scenarios-features.md
-    - name: DSC(원하는 상태 구성)의 향상된 기능
-      href: 5.1/DSC-improvements.md
-    - name: PowerShell 콘솔의 개선 사항
-      href: 5.1/console-improvements.md
-    - name: PowerShell 엔진의 개선 사항
-      href: 5.1/engine-improvements.md
-    - name: 패키지 관리의 개선 사항
-      href: 5.1/package-management-improvements.md
-    - name: JEA의 향상 기능
-      href: 5.1/jea-improvements.md
-    - name: 카탈로그 cmdlet
-      href: 5.1/catalog-cmdlets.md
-    - name: WMF 5.1에서 수정된 버그
-      href: 5.1/bugfixes.md
-  - name: 설치 및 구성
-    href: 5.1/install-configure.md
-  - name: 알려진 문제
-    href: 5.1/known-issues.md
-  - name: 호환성
-    href: 5.1/Compatibility.md
-  - name: 제품 호환성
-    href: 5.1/productincompat.md
-- name: WMF 5.0
+    - name: WMF 5.1 설치 및 구성
+      href: setup/install-configure.md
+    - name: WMF 5.0 제거
+      href: setup/uninstall.md
+- name: 새로운 기능
+  expanded: true
   items:
-  - name: WMF 5.0 릴리스 정보
-    href: 5.0/releasenotes.md
-  - name: 설치 정보
-    href: 5.0/requirements.md
-  - name: 알려진 문제 및 제한 사항
-    href: 5.0/limitation_overview.md
-  - name: DSC(원하는 상태 구성)의 알려진 문제
-    href: 5.0/limitation_dsc.md
-  - name: 제품 호환성 상태
-    href: 5.0/productincompat.md
-  - name: WMF 5.0에서 사용하도록 설정된 시나리오
-    items:
-    - name: JEA(Just Enough Administration)
-      items:
-      - name: JEA 개요
-        href: 5.0/jea_overview.md
-      - name: JEA 엔드포인트 만들기 및 연결
-        href: 5.0/jea_endpoint.md
-      - name: JEA에 대한 보고
-        href: 5.0/jea_report.md
+    - name: WMF 5.x 릴리스 정보
+      href: whats-new/release-notes.md
+    - name: WMF 5.1의 버그 수정
+      href: whats-new/bugfixes.md
+    - name: 새로 제공되거나 업데이트된 cmdlet
+      href: whats-new/new-updated-cmdlets.md
     - name: PowerShell 클래스를 사용하여 사용자 지정 형식 만들기
-      items:
-      - name: 개요
-        href: 5.0/class_overview.md
-      - name: 사용자 지정 형식 정의
-        href: 5.0/class_newtype.md
-      - name: 기본 클래스 선언
-        href: 5.0/class_base.md
-      - name: 구현된 인터페이스 선언
-        href: 5.0/class_interface.md
-      - name: 기본 클래스 생성자 호출
-        href: 5.0/class_baseconstructor.md
-      - name: 기본 클래스 메서드 호출
-        href: 5.0/class_basemethod.md
+      href: whats-new/class-overview.md
+    - name: WMF 5.1의 향상된 콘솔
+      href: whats-new/console-improvements.md
     - name: PowerShell 스크립트 디버깅의 향상된 기능
-      href: 5.0/debug_overview.md
-    - name: DSC(원하는 상태 구성)의 향상된 기능
-      items:
-      - name: DSC 향상된 기능 개요
-        href: 5.0/dsc_improvements.md
-      - name: 구성
-        items:
-        - name: 노든 간 종속성 지정
-          href: 5.0/dsc_waitfor.md
-        - name: 암호화된 MOF
-          href: 5.0/dsc_encryptedmof.md
-        - name: DSC 구성에 대한 도움말 지원
-          href: 5.0/dsc_confighelp.md
-        - name: PowerShell ISE를 사용하여 작성 기능 향상
-          href: 5.0/dsc_authoring.md
-        - name: 구성에서 동일한 중복 리소스에 대한 허용
-          href: 5.0/dsc_identicalduplicate.md
-        - name: Import-DscResource 키워드에서 -ModuleVersion 매개 변수 지원
-          href: 5.0/dsc_importdscresource.md
-        - name: WOW64에서 구성 키워드 지원
-          href: 5.0/dsc_wow64.md
-      - name: 리소스
-        items:
-        - name: 클래스 기반 DSC 리소스
-          href: 5.0/dsc_classbasedresource.md
-        - name: DSC 리소스 스크립트 디버깅
-          href: 5.0/dsc_resourcedebugging.md
-        - name: DSC 리소스의 자동 RunAs 지원
-          href: 5.0/dsc_runas.md
-        - name: DSC 리소스의 Side-by-side 버전 관리 지원
-          href: 5.0/dsc_sxsresource.md
-        - name: 새로운 기본 제공 리소스
-          href: 5.0/dsc_newresources.md
-      - name: 로컬 구성 관리자
-        items:
-        - name: 여러 구성 조각을 사용하여 노드 구성
-          href: 5.0/dsc_partialconfig.md
-        - name: 혼합 RefreshMode 지원
-          href: 5.0/dsc_partialconfig_mixedmode.md
-        - name: 새 특성으로 DSC 엔진 구성
-          href: 5.0/dsc_metaconfiguration.md
-        - name: LCM 상태에 대한 자세한 정보
-          href: 5.0/dsc_lcmstate.md
-        - name: RefreshMode 및 ConfigurationMode의 빈도가 서로의 배수일 필요가 없음
-          href: 5.0/dsc_freqnomultiple.md
-        - name: RefreshMode 속성에 대한 추가 값
-          href: 5.0/dsc_refreshmode.md
-      - name: Cmdlet
-        items:
-        - name: 구성 상태에 대한 세부 정보
-          href: 5.0/dsc_getconfigurationstatus.md
-        - name: Test-DscConfiguration cmdlet에서 참조 구성 지원
-          href: 5.0/dsc_testconfiguration.md
-        - name: DSC 리소스 메서드에 직접 액세스
-          href: 5.0/dsc_directaccess.md
-        - name: 적용하지 않고 구성 문서 제공
-          href: 5.0/dsc_publishconfig.md
-        - name: DSC 문서 제거
-          href: 5.0/dsc_removeconfigdoc.md
-        - name: 통합되고 일관된 상태 및 상태 표현
-          href: 5.0/dsc_statestatus.md
-        - name: Set-DscLocalConfigurationManager cmdlet에서 -Force 매개 변수 지원
-          href: 5.0/dsc_setdsclcm.md
-      - name: 끌어오기 모드
-        items:
-        - name: DSC 구성의 요청 시 끌어오기
-          href: 5.0/dsc_updateconfig.md
-        - name: 노드 및 구성 ID의 분리
-          href: 5.0/dsc_nodeid.md
-        - name: 구성, 리소스 및 보고서 리포지토리의 분리
-          href: 5.0/dsc_repository.md
-        - name: 중앙 위치에 구성 상태 보고
-          href: 5.0/dsc_reporting.md
-    - name: 기록 및 로깅을 사용하여 PowerShell 사용 감사
-      items:
-      - name: 감사 개요
-        href: 5.0/audit_overview.md
-      - name: 향상된 기록 옵션
-        href: 5.0/audit_transcript.md
-      - name: 스크립트 추적 및 로깅
-        href: 5.0/audit_script.md
-      - name: CMS(암호화 메시지 구문) cmdlet
-        href: 5.0/audit_cms.md
-    - name: PackageManagement를 사용하여 소프트웨어 검색, 설치 및 인벤토리에 추가
-      items:
-      - name: PackageManagement 개요
-        href: 5.0/oneget_overview.md
-      - name: PackageManagement Cmdlet
-        href: 5.0/oneget_cmdlets.md
-    - name: PowerShellGet을 사용하여 PowerShell 모듈 검색, 설치 및 인벤토리에 추가
-      items:
-      - name: PowerShellGet 모듈 개요
-        href: 5.0/psget_module_overview.md
-      - name: PowerShell 리포지토리 등록
-        href: 5.0/psget_psrepository.md
-      - name: PowerShell 5.0 이상의 Side-by-Side 버전 지원
-        href: 5.0/psget_modulesxsinstall.md
-      - name: 모듈 종속성의 설치
-        href: 5.0/psget_moduledependency.md
-      - name: 모듈 관리를 위한 PowerShellGet Cmdlet
-        href: 5.0/psget_modulecmdlets.md
-    - name: PowerShellGet을 사용하여 PowerShell 스크립트 검색, 설치 및 관리
-      items:
-      - name: PowerShellGet 스크립트 개요
-        href: 5.0/psget_script_overview.md
-      - name: 스크립트 관리를 위한 PowerShellGet Cmdlet
-        href: 5.0/psget_scriptcmdlets.md
-    - name: 커뮤니티 피드백에 따라 새로 제공되거나 업데이트된 cmdlet
-      items:
-      - name: 커뮤니티 피드백에 따라 새로 제공되거나 업데이트된 cmdlet
-      - name: Item cmdlet을 사용하는 기호화된 링크
-        href: 5.0/feedback_symbolic.md
-      - name: 보관 cmdlet
-        href: 5.0/feedback_archive.md
-      - name: 클립보드 cmdlet
-        href: 5.0/feedback_clipboard.md
-      - name: Convert-String
-        href: 5.0/feedback_convertstring.md
-      - name: 문자열에서 구조화된 개체 추출 및 구문 분석
-        href: 5.0/feedback_convertfromString.md
-      - name: Format-Hex
-        href: 5.0/feedback_formathex.md
-      - name: NoNewLine 매개 변수
-        href: 5.0/feedback_nonewline.md
-      - name: New-TemporaryFile
-        href: 5.0/feedback_tempfile.md
-      - name: New-Guid
-        href: 5.0/feedback_newguid.md
-      - name: Get-ChildItem의 -Depth 매개 변수
-        href: 5.0/feedback_getchilditem.md
-      - name: FileInfo 개체에 대한 업데이트
-        href: 5.0/feedback_fileinfo.md
-      - name: 모듈의 버전 범위 선언(1.* 등) 지원
-        href: 5.0/feedback_moduleversionranges.md
+      href: whats-new/debug-overview.md
+    - name: 스크립트 추적 및 로깅
+      href: whats-new/script-logging.md
+    - name: WMF 5.1의 향상된 DSC
+      href: whats-new/DSC-improvements.md
+    - name: WMF 5.1의 향상된 PowerShell 엔진
+      href: whats-new/engine-improvements.md
     - name: 정보 스트림
-      href: 5.0/informationstream_overview.md
-    - name: OData 엔드포인트에 따라 PowerShell Cmdlet 생성
-      href: 5.0/odata_overview.md
-    - name: PowerShell을 사용하여 네트워크 스위치 관리
-      href: 5.0/networkswitch_overview.md
+      href: whats-new/informationstream-overview.md
+    - name: JEA(Just Enough Administration)에 대한 개선 사항
+      href: whats-new/jea-improvements.md
+    - name: WMF 5.1의 향상된 패키지 관리
+      href: whats-new/package-management-improvements.md
     - name: 소프트웨어 인벤토리 로깅(SIL)
-      href: 5.0/sil_overview.md
-ms.openlocfilehash: dba0eb2986dc4e14c59c78e3273d08dd6b7f1779
-ms.sourcegitcommit: 0ca836d1044e46d3a7dcbc69fa93d84f74848559
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920427"
+      href: whats-new/sil-overview.md
+    - name: 제품 호환성 상태
+      href: whats-new/compatibility.md
+- name: 알려진 문제
+  items:
+    - name: WMF 5.0의 알려진 문제
+      href: known-issues/known-issues-50.md
+    - name: WMF 5.1의 알려진 문제
+      href: known-issues/known-issues-51.md
+    - name: DSC의 알려진 문제 및 제한 사항
+      href: known-issues/known-issues-dsc.md

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 4eb17b4f-d4c3-4ab1-8dd8-ad34f300b273
 caps.latest.revision: 4
 ms.openlocfilehash: aaacd5c1f844fd1299cc9570da990a46c0222176
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066365"
 ---
 # <a name="defining-common-configuration-features"></a>일반적 구성 기능 정의
 
@@ -21,8 +21,8 @@ ms.locfileid: "56862799"
 
 ## <a name="section-heading"></a>섹션 제목
 
-여기에 섹션 본문을 삽입합니다.
+여기에 지정 된 섹션 본문을 삽입 합니다.
 
-### <a name="subsection-heading"></a>하위 섹션 제목
+### <a name="subsection-heading"></a>하위 단원 제목
 
-여기에 하위 섹션 본문을 삽입합니다.
+여기에 하위 섹션 본문을 삽입 합니다.

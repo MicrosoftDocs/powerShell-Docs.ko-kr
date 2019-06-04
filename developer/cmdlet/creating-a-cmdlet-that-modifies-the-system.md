@@ -13,12 +13,12 @@ helpviewer_keywords:
 - confirm impact [PowerShell Programmer's Guide]
 ms.assetid: 59be4120-1700-4d92-a308-ef4a32ccf11a
 caps.latest.revision: 8
-ms.openlocfilehash: bbe9f0213754d1cc47e0fd9a7a898bde916c0636
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: a4fa9ce52855928679a2425f24f2e49a68030c63
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055141"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854908"
 ---
 # <a name="creating-a-cmdlet-that-modifies-the-system"></a>시스템을 수정하는 Cmdlet 만들기
 
@@ -42,28 +42,6 @@ Cmdlet는 확인을 지원 하기 위해 두 가지 작업을 수행 해야 합�
 ## <a name="the-stopproc-cmdlet"></a>StopProc Cmdlet
 
 이 항목에서는 Get-proc cmdlet을 사용 하 여 검색 되는 프로세스를 중지 하려고 하는 중지 Proc cmdlet에 설명 합니다 (에 설명 된 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)).
-
-이 섹션의에서 항목에서는 다음과 같습니다.
-
-- [Cmdlet을 정의합니다.](#Defining-the-Cmdlet)
-
-- [시스템 수정에 대 한 매개 변수를 정의합니다.](#Defining-Parameters-for-System-Modification)
-
-- [입력 처리 메서드를 재정의 합니다.](#Overriding-an-Input-Processing-Method)
-
-- [ShouldProcess 메서드를 호출합니다.](#Calling-the-ShouldProcess-Method)
-
-- [ShouldContinue 메서드를 호출합니다.](#Calling-the-ShouldContinue-Method)
-
-- [입력된 처리를 중지 하는 중](#Stopping-Input-Processing)
-
-- [코드 샘플](#Code-Sample)
-
-- [개체 유형 정의 및 서식 지정](#Defining-Object-Types-and-Formatting)
-
-- [Cmdlet은 빌드](#Building-the-Cmdlet)
-
-- [테스트 Cmdlet](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet"></a>Cmdlet을 정의합니다.
 

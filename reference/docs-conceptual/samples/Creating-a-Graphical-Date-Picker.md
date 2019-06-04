@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: 그래픽 날짜 선택 만들기
 ms.assetid: c1cb722c-41e9-4baa-be83-59b4653222e9
 ms.openlocfilehash: d3b24af935e781a8a36fc346a6108baaed37b6db
-ms.sourcegitcommit: 3f6002e7109373eda31cc65fc84d2600447cb7e9
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058610"
 ---
 # <a name="creating-a-graphical-date-picker"></a>그래픽 날짜 선택 만들기
 

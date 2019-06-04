@@ -2,16 +2,16 @@
 title: Windows PowerShell SDK
 ms.date: 09/13/2016
 ms.topic: article
-ms.openlocfilehash: 600d43874d9eda04d556a0ece198026dde9174c3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 7627ab336ddc40ab47c3017eed77c78bbdac4e7f
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855359"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470814"
 ---
 # <a name="windows-powershell"></a>Windows PowerShell
 
-업데이트됨: 2013 년 7 월 8
+업데이트 날짜: 2013 년 7 월 8
 
 Windows PowerShell®은 시스템 관리용으로 특별히 설계된 작업 기반 명령줄 셸 및 스크립트 언어입니다. .NET Framework를 기반으로 Windows PowerShell® IT 전문가 및 쉽게 제어 하 고 Windows 운영 체제 및 Windows에서 실행 되는 응용 프로그램의 관리를 자동화 합니다.
 
@@ -22,7 +22,7 @@ Windows PowerShell을 사용 하 여 시작 하는 데 필요한 기본 정보, 
 
 ## <a name="windows-powershell-documents-on-msdn"></a>MSDN의 Windows PowerShell 문서
 
-- [Windows PowerShell SDK 설치](https://msdn.microsoft.com/en-us/library/ff458115.aspx) Windows PowerShell SDK를 설치 하는 방법에 대 한 정보를 제공 합니다.
+- [Windows PowerShell SDK 설치](./installing-the-windows-powershell-sdk.md) Windows PowerShell SDK를 설치 하는 방법에 대 한 정보를 제공 합니다.
 
 - [Windows PowerShell 모듈 작성](./module/writing-a-windows-powershell-module.md) 관리자, 스크립트 개발자 및 패키지 및 해당 Windows PowerShell 솔루션을 배포 해야 하는 cmdlet 개발자에 대 한 정보를 제공 합니다.
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 679c8bcb-b49d-4bb4-91f5-ea1af6c217e3
 caps.latest.revision: 8
 ms.openlocfilehash: 4553f95e48a2b1440c00b4951bea56376b00628a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065889"
 ---
 # <a name="firstlinehanging-element-for-frame-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 Frame에 대한 FirstLineHanging 요소(형식)
 

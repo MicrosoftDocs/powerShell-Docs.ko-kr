@@ -8,26 +8,29 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27d0ee5e-2589-4530-92ef-c09996b80994
 caps.latest.revision: 10
-ms.openlocfilehash: c9963819f1842d1245735dabc487babaa566c160
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 8f745cc0e5ef6db7a6bbdf39d826103f3b8a98ce
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057164"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229293"
 ---
 # <a name="events01-sample"></a>Events01 샘플
 
-이 샘플에 의해 발생 되는 이벤트에 대 한 사용자 등록을 허용 하는 cmdlet를 만드는 방법을 보여 줍니다 [System.IO.Filesystemwatcher](/dotnet/api/System.IO.FileSystemWatcher)합니다. 사용자는이 cmdlet을 사용 하 여 특정 디렉터리에서 파일을 만들 때 실행할 작업을 등록할 수 있습니다. 이 샘플에서 파생 된 [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 기본 클래스입니다.
+이 샘플에 의해 발생 되는 이벤트에 대 한 사용자 등록을 허용 하는 cmdlet를 만드는 방법을 보여 줍니다 [System.IO.FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher)합니다.
+사용자는이 cmdlet을 사용 하 여 특정 디렉터리에서 파일을 만들 때 실행할 작업을 등록할 수 있습니다.
+이 샘플에서 파생 된 [Microsoft.PowerShell.Commands.ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 기본 클래스입니다.
 
 ## <a name="how-to-build-the-sample-by-using-visual-studio"></a>Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.
 
-1. Windows PowerShell 2.0 SDK 설치를 사용 하 여 Events01 폴더로 이동 합니다. 기본 위치는 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01 합니다.
+1. Windows PowerShell 2.0 SDK 설치를 사용 하 여 Events01 폴더로 이동 합니다.
+   기본 위치는 `C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01`합니다.
 
-2. 솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다. 이 Microsoft Visual Studio에서 샘플 프로젝트를 엽니다.
+2. 솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다.
+   이 Microsoft Visual Studio에서 샘플 프로젝트를 엽니다.
 
 3. 에 **빌드** 메뉴에서 **솔루션 빌드**합니다.
-
-    이 샘플에 대 한 라이브러리 기본 \bin 또는 \bin\debug 폴더에 빌드됩니다.
+   이 샘플에 대 한 라이브러리 기본에서 빌드됩니다 `\bin` 또는 `\bin\debug` 폴더입니다.
 
 ### <a name="how-to-run-the-sample"></a>샘플을 실행 하는 방법
 
@@ -74,15 +77,18 @@ A file was created in the TEMP directory
 
 이 샘플 Windows PowerShell 2.0이 필요 합니다.
 
-## <a name="demonstrates"></a>시연
+## <a name="demonstrates"></a>데모
 
 이 샘플에는 다음 방법을 보여 줍니다.
 
-- 이벤트 등록 용 cmdlet을 작성 하는 방법입니다. Cmdlet에서 파생 되는 [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 클래스 등록-일반 매개 변수에 대 한 지원을 제공 하는 * 이벤트 cmdlet. 파생 되는 Cmdlet [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 특정 매개 변수를 정의 하 고 재정의에 필요 합니다 `GetSourceObject` 및 `GetSourceObjectEventName` 추상 메서드.
+### <a name="how-to-write-a-cmdlet-for-event-registration"></a>이벤트 등록 용 cmdlet을 작성 하는 방법
+
+Cmdlet에서 파생 되는 [Microsoft.PowerShell.Commands.ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 공통 매개 변수에 대 한 지원을 제공 하는 클래스는 `Register-*Event` cmdlet.
+파생 되는 Cmdlet [Microsoft.PowerShell.Commands.ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 특정 매개 변수를 정의 하 고 재정의에 필요 합니다 `GetSourceObject` 및 `GetSourceObjectEventName` 추상 메서드.
 
 ## <a name="example"></a>예제
 
-이 샘플에서 발생 한 이벤트에 대 한 등록 하는 방법을 보여 줍니다 [System.IO.FileSystemWatcher](https://msdn.microsoft.com/en-us/library/system.io.filesystemwatcher\(v=vs.110\).aspx)합니다.
+이 샘플에서 발생 한 이벤트에 대 한 등록 하는 방법을 보여 줍니다 [System.IO.FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher)합니다.
 
 ```csharp
 namespace Sample
@@ -183,4 +189,4 @@ namespace Sample
 
 ## <a name="see-also"></a>참고 항목
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet](writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

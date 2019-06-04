@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: PowerShellTab 개체
 ms.assetid: a9b58556-951b-4f48-b3ae-b351b7564360
 ms.openlocfilehash: 577e2aaaddf3071801816d9ae91dbf0006dd5072
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057675"
 ---
 # <a name="the-powershelltab-object"></a>PowerShellTab 개체
 
@@ -40,7 +40,7 @@ Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습
 PowerShell 탭에서 지정된 스크립트를 실행합니다.
 
 > [!NOTE]
-> 이 메서드는 이 메서드가 실행되는 PowerShell 탭이 아닌, 다른 PowerShell 탭에 대해서만 작동합니다. 스크립트 블록이 실행되고, 스크립트에서 반환되는 모든 값은 명령을 호출한 실행 환경에 반환됩니다. 명령 보다 오래 걸리는 경우는 **millesecondsTimeout** 값이 지정 다음 예외와 함께 명령이 실패 합니다. 작업 제한 시간이 초과되었습니다.
+> 이 메서드는 이 메서드가 실행되는 PowerShell 탭이 아닌, 다른 PowerShell 탭에 대해서만 작동합니다. 스크립트 블록이 실행되고, 스크립트에서 반환되는 모든 값은 명령을 호출한 실행 환경에 반환됩니다. **millesecondsTimeout** 값이 지정하는 시간보다 명령이 실행되는 데 더 오래 걸린다면 "작업 시간이 초과되었습니다."라는 예외와 함께 명령이 실패합니다.
 
 **Script** - System.Management.Automation.ScriptBlock 또는 문자열. 실행할 스크립트 블록입니다.
 

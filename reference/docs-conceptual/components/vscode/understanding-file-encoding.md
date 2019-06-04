@@ -2,12 +2,12 @@
 title: VSCode 및 PowerShell에서 파일 인코딩 이해
 description: VSCode 및 PowerShell에서 파일 인코딩 구성
 ms.date: 02/28/2019
-ms.openlocfilehash: ec06d8f5d446a92e6cd9d2d70b11260d1d0afda8
-ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
+ms.openlocfilehash: 6a00e45b3700f72f78e2fbcdf6e317f3a17b53c0
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058440"
 ---
 # <a name="understanding-file-encoding-in-vscode-and-powershell"></a>VSCode 및 PowerShell에서 파일 인코딩 이해
 
@@ -102,7 +102,7 @@ UTF-8이라는 신뢰할 수 있는 규칙이 어디서나 사용되기 때문�
 
 VSCode의 기본 인코딩은 BOM이 포함되지 않은 UTF-8입니다.
 
-[VSCode의 인코딩][]을 설정하려면 VSCode 설정(<kbd>Ctrl<kbd>+</kbd>,</kbd>)으로 이동하고 `"files.encoding"` 설정을 설정하세요.
+[VSCode의 인코딩][]을 설정하려면 VSCode 설정(<kbd>Ctrl</kbd>+<kbd>,</kbd>)으로 이동하고 `"files.encoding"` 설정을 설정하세요.
 
 ```json
 "files.encoding": "utf8bom"
@@ -184,8 +184,8 @@ finally
 
 프로필 설정을 사용하여 보다 일반적으로 지정된 인코딩을 사용히도록 PowerShell을 구성할 수 있습니다. 다음 문서를 참조하세요.
 
-- [StackOverflow에서 PowerShell 인코딩에 대한 @mklement0]의 [대답](https://stackoverflow.com/a/40098904)
-- [PowerShell에서 BOM을 포함하지 않는 UTF-8 입력을 처리하는 방법에 대한 @rkeithhill]의 [블로그 게시물](https://rkeithhill.wordpress.com/2010/05/26/handling-native-exe-output-encoding-in-utf8-with-no-bom/)
+- [@mklement0] [stackoverflow PowerShell 인코딩에 대 한 응답](https://stackoverflow.com/a/40098904)합니다.
+- [@rkeithhill] [PowerShell에서 BOM 없는 utf-8 입력을 처리 하는 방법에 대 한 블로그 게시물](https://rkeithhill.wordpress.com/2010/05/26/handling-native-exe-output-encoding-in-utf8-with-no-bom/)합니다.
 
 PowerShell이 특정 입력 인코딩을 사용하도록 강제할 수 없습니다. PowerShell 5.1 이하에서는 BOM이 없으면 Windows-1252 인코딩을 기본값으로 지정합니다. 상호 운용성을 위해 BOM을 포함한 유니코드 형식으로 스크립트를 저장하는 것이 좋습니다.
 
@@ -255,7 +255,7 @@ PowerShell 스크립트를 읽거나 작성하는 다른 프로그램이 해당 
 
 PowerShell에서 인코딩 및 인코딩 구성에 대해 읽을 만한 몇 가지 다른 유용한 게시물은 다음과 같습니다.
 
-- [StackOverflow에서 PowerShell 인코딩에 대한 @mklement0]의 [요약](https://stackoverflow.com/questions/40098771/changing-powershells-default-output-encoding-to-utf-8)
+- [@mklement0] [stackoverflow PowerShell 인코딩의 요약](https://stackoverflow.com/questions/40098771/changing-powershells-default-output-encoding-to-utf-8)
 - 인코딩 문제과 관련하여 vscode-PowerShell에서 열린 이전 문제:
   - [#1308](https://github.com/PowerShell/vscode-powershell/issues/1308)
   - [#1628](https://github.com/PowerShell/vscode-powershell/issues/1628)

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 48019ceb-0aeb-4cd1-8b42-79f2c29c3e65
 caps.latest.revision: 5
 ms.openlocfilehash: 8d8ff5f225609fc1ae9a1df6f2e990d632224102
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081107"
 ---
 # <a name="stopprocesssample04-vbnet-sample-code"></a>StopProcessSample04(VB.NET) 코드 샘플
 

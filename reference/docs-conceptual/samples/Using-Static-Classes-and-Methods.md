@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: 정적 클래스 및 메서드 사용
 ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9
 ms.openlocfilehash: e4caff63a1ec7295b6fe450c2915baf0cc7e31af
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086017"
 ---
 # <a name="using-static-classes-and-methods"></a>정적 클래스 및 메서드 사용
 

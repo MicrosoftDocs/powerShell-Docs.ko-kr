@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: PowerShell 갤러리 계정 설정
 ms.openlocfilehash: ebe784ec5aae5ff3a4d444d12a168ef38aaef65f
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084523"
 ---
 # <a name="powershell-gallery-account-settings"></a>PowerShell 갤러리 계정 설정
 
@@ -21,7 +21,7 @@ PowerShell 갤러리에서 제공하는 계정 설정은 다음과 같습니다.
 - PowerShell 갤러리 계정과 연결된 사용자 계정
 - PowerShell 갤러리 계정과 연결된 그림
 
-## <a name="email-address"></a>전자 메일 주소
+## <a name="email-address"></a>메일 주소
 
 이메일 주소는 PowerShell 갤러리 알림의 대상입니다. 로그인 계정과 일치할 필요가 없습니다. 액세스할 수 있는 이메일 계정을 사용할 수 있습니다. 이메일 주소는 PowerShell 갤러리에서 다른 사용자에게 직접 제공하지 않습니다.
 

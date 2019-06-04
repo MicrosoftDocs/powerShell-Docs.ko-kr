@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC를 사용하여 연속 통합 및 연속 배포 파이프라인 빌드
-ms.openlocfilehash: c305d9bc7e0f8c659129b5a20d0b7e8b34d09ba8
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 012057a32ccf85b0d15e76a332cadda4b226180a
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076478"
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>DSC를 사용하여 연속 통합 및 연속 배포 파이프라인 빌드
 
@@ -38,7 +38,7 @@ ms.locfileid: "53402951"
 클라이언트 컴퓨터는 다음 항목이 설치된 Windows 컴퓨터여야 합니다.
 
 - [Git](https://git-scm.com/)
-- https://github.com/PowerShell/Demo_CI에서 복제된 로컬 Git 리포지토리
+- [https://github.com/PowerShell/Demo_CI](https://github.com/PowerShell/Demo_CI)에서 복제된 로컬 Git 리포지토리
 - [Visual Studio Code](https://code.visualstudio.com/)와 같은 텍스트 편집기
 
 ### <a name="tfssrv1"></a>TFSSrv1
@@ -388,7 +388,7 @@ Demo_CI 리포지토리 루트(`./InfraDNS/Deploy.ps1`)의 `Deploy.ps1`에 정�
 
 이렇게 하려면 앞에서 만든 `InfraDNS` 빌드 정의와 연결된 새 릴리스 정의를 추가합니다.
 새 빌드를 완료할 때마다 새 릴리스가 트리거되도록 **연속 배포**를 선택해야 합니다.
-[방법: 릴리스 정의 사용 하 여 작업](https://www.visualstudio.com/en-us/docs/build/actions/work-with-release-definitions)) 하 고 다음과 같이 구성 합니다.
+해당 방법은 [릴리스 파이프라인이란?](/azure/devops/pipelines/release/what-is-release-management)을 참조하세요. 다음과 같이 새 릴리스 정의를 구성합니다.
 
 릴리스 정의에 다음 단계를 추가합니다.
 

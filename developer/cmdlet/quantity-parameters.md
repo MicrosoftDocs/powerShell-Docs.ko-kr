@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 8c0bd8a9-1749-4885-ab24-38c0a4d9f2cb
 caps.latest.revision: 6
 ms.openlocfilehash: 7a3efc60fcc8729d833f6de070016cfd08cc9b88
-ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067538"
 ---
 # <a name="quantity-parameters"></a>수량 매개 변수수량 매개 변수
 

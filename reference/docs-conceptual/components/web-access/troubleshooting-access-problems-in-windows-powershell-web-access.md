@@ -3,15 +3,15 @@ ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 웹 액세스의 액세스 문제 해결
 ms.openlocfilehash: 314e4a8098988111739705d55b68ff5ed2f5eff3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086598"
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Windows PowerShell 웹 액세스의 액세스 문제 해결
 
-업데이트됨: 2013 년 6 월 24, (2017 년 8 월 23 일 수정)
+업데이트 날짜: 2013년 6월 24일(2017년 8월 23일 수정됨)
 
 적용 대상: Windows Server 2012 R2, Windows Server 2012
 

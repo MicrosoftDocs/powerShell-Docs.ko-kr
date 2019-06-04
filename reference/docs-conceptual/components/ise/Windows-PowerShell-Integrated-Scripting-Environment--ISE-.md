@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Windows PowerShell ISE(통합 스크립팅 환경)
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
 ms.openlocfilehash: 3002c2cb7213b1c2d7201dddf5ff3c0651fad767
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58054716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057488"
 ---
 # <a name="windows-powershell-integrated-scripting-environment-ise"></a>Windows PowerShell ISE(통합 스크립팅 환경)
 

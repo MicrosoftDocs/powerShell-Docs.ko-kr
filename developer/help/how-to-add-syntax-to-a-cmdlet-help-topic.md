@@ -8,24 +8,14 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0c6d03f-1c1a-43d8-928e-e3290e90e0bc
 caps.latest.revision: 5
-ms.openlocfilehash: 2e9dbc9ff8f9507f2008cd6e114ba6fec36b10bf
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 0210b5ed3104777541692a0e78e7d3b16f9c8256
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054614"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855143"
 ---
 # <a name="how-to-add-syntax-to-a-cmdlet-help-topic"></a>Cmdlet 도움말 항목에 구문을 추가하는 방법
-
-- [매개 변수 특성](#Parameter-Attributes)
-
-- [매개 변수 값 특성](#Parameter-Value-Attributes)
-
-- [구문 정보 수집](#Gathering-Syntax-Information)
-
-- [XML 구문 다이어그램은 코딩](#Coding-the-Syntax-Diagram-XML)
-
-## <a name="things-to-know-about-the-syntax-diagram-in-cmdlet-help"></a>Cmdlet 도움말의 구문 다이어그램에 대해 알아야 할 내용
 
 Cmdlet 도움말 파일의 구문 다이어그램에 대 한 XML 코드를 시작 하기 전에 명확히 제공 하는 데 필요한 데이터의 매개 변수 특성 및 해당 데이터를 구문 다이어그램에 표시 되는 방식을 같은 종류의이 섹션을 읽고...
 
@@ -166,7 +156,7 @@ Cmdlet 도움말 파일의 구문 다이어그램에 대 한 XML 코드를 시�
 
 ## <a name="coding-the-syntax-diagram-xml"></a>XML 구문 다이어그램은 코딩
 
-XML 구문 노드의 끝나는 설명 노드를 후 즉시 시작 되는 \</maml:description > 태그입니다. 구문 다이어그램에 사용 된 데이터를 수집 하는 방법에 대 한 내용은 [구문 정보 수집](#Gathering-Syntax-Information)합니다.
+XML 구문 노드의 끝나는 설명 노드를 후 즉시 시작 되는 \</maml:description > 태그입니다. 구문 다이어그램에 사용 된 데이터를 수집 하는 방법에 대 한 내용은 [구문 정보 수집](#gathering-syntax-information)합니다.
 
 ### <a name="adding-a-syntax-node"></a>구문 노드 추가
 
@@ -210,7 +200,7 @@ Cmdlet 도움말 항목에 표시 된 구문 다이어그램은 구문 노드의
 
 쌍 내에서 구문 항목 노드를 추가 하는 각 매개 변수를 지정 하는 \<명령: 매개 변수 > 태그입니다. 한 쌍의 필요한 \<명령: 매개 변수 > Windows PowerShell에서 제공 하는 일반 매개 변수를 제외 하 고 매개 변수 집합에 포함 된 각 매개 변수에 대 한 태그.
 
-열기의 특성 \<명령: 매개 변수 > 태그는 매개 변수 구문 다이어그램에 표시 되는 방식을 결정 합니다. 매개 변수 특성에 대 한 자세한 내용은 [매개 변수 특성](#Parameter-Attributes)합니다.
+열기의 특성 \<명령: 매개 변수 > 태그는 매개 변수 구문 다이어그램에 표시 되는 방식을 결정 합니다. 매개 변수 특성에 대 한 자세한 내용은 [매개 변수 특성](#parameter-attributes)합니다.
 
 > [!NOTE]
 > 합니다 \<명령: 매개 변수 > 태그가 자식 요소를 지원 합니다. \<maml:description > 내용이 표시 되지 않습니다. 매개 변수 설명은 XML의 매개 변수 노드에 지정 됩니다. 구문 항목의 정보 간 불일치를 방지 하려면 했 노드와 매개 변수를 생략 합니다 (\<maml:description > 하거나 비워 두세요.

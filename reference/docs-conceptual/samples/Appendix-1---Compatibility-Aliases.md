@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: 부록 1 호환성 별칭
 ms.assetid: 96ad921e-1a57-463e-8e60-424faf8b6ef8
 ms.openlocfilehash: 113bbee1af185f98777df5767022d54accb69447
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086309"
 ---
 # <a name="appendix-1---compatibility-aliases"></a>부록 1 - 호환성 별칭
 

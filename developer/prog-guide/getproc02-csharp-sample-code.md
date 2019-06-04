@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: e4e1eee3-316b-43a4-8a60-313391619be6
 caps.latest.revision: 6
 ms.openlocfilehash: 2ac4aea2fdefdfe86349c14fe9b87cd8c41db090
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081708"
 ---
 # <a name="getproc02-c-sample-code"></a>GetProc02(C#) 코드 샘플
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 8c44df35-b22b-41b0-b34c-ba7ce17b889b
 caps.latest.revision: 7
 ms.openlocfilehash: 4b79b533e9fb926e851c9d0eebc932aec80ad959
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082773"
 ---
 # <a name="remote-runspace-samples"></a>Remote Runspace 샘플
 

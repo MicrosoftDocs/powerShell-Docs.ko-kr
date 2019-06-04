@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 875024f4-e02b-4416-80b9-af5e5b50aad6
 caps.latest.revision: 7
 ms.openlocfilehash: 0c99f4bcfe5e2d34d31714dc85a53b5e8abe0925
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066960"
 ---
 # <a name="writing-a-windows-powershell-snap-in"></a>Windows PowerShell 스냅인 작성
 

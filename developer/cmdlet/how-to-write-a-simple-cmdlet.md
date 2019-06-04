@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 137543d8-0012-4cba-bcd6-98b25aac83bb
 caps.latest.revision: 9
 ms.openlocfilehash: 8271512d06047f3ff5e45f81d971ffe2c1f6afd7
-ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067742"
 ---
 # <a name="how-to-write-a-cmdlet"></a>Cmdlet을 작성 하는 방법
 

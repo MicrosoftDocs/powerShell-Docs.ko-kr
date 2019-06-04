@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Windows PowerShell ISE의 접근성
 ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
 ms.openlocfilehash: 78a001dbe43a0b005d10a817e05e4cc7a72f5bd0
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53402527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058457"
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Windows PowerShell ISE의 접근성
 
@@ -85,8 +85,8 @@ Windows PowerShell ISE에서는 고대비 모드를 지원합니다. 시각 장�
 |**실행**|F5|
 |**선택 항목 실행**|F8|
 |**실행 중지**|CTRL+BREAK 컨텍스트가 명확한 경우(선택한 텍스트가 없는 경우) Ctrl+C를 사용할 수 있습니다.|
-|**Tab** 키를 눌러 다음 스크립트로 이동|CTRL + TAB **참고 합니다.** 다음 스크립트에는 탭에는 하나의 PowerShell 탭이 열려 있는 경우에 또는 둘 이상의 PowerShell 탭이 열려 있지만 스크립트 창에 포커스가 있는 경우 작동 합니다.|
-|**Tab** 키를 눌러 이전 스크립트로 이동|CTRL + SHIFT + TAB **참고 합니다.** 앞의 스크립트 탭은 하나의 PowerShell 탭이 열려 있는 경우 또는 둘 이상의 PowerShell 탭이 열려 있고 스크립트 창에 포커스가 있는 경우 작동 합니다.|
+|**Tab** 키를 눌러 다음 스크립트로 이동|CTRL+TAB **참고:** Tab 키를 눌러 다음 스크립트로 이동은 하나의 PowerShell 탭만 열려 있는 경우 또는 둘 이상의 PowerShell 탭이 열려 있지만 스크립트 창에 포커스가 있는 경우에 작동합니다.|
+|**Tab** 키를 눌러 이전 스크립트로 이동|CTRL+SHIFT+TAB **참고:** Tab 키를 눌러 이전 스크립트로 이동은 하나의 PowerShell 탭만 열려 있는 경우 또는 둘 이상의 PowerShell 탭이 열려 있고 스크립트 창에 포커스가 있는 경우에 작동합니다.|
 
 ## <a name="keyboard-shortcuts-for-customizing-the-view"></a>보기 사용자 지정 바로 가기 키
 

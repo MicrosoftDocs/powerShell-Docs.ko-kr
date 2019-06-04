@@ -11,32 +11,16 @@ helpviewer_keywords:
 - cmdlets [PowerShell Programmers Guide], basic cmdlet
 ms.assetid: 54236ef3-82db-45f8-9114-1ecb7ff65d3e
 caps.latest.revision: 8
-ms.openlocfilehash: c380b28570c955de6f41152fd617f5c1b0f9e4bd
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 7f10acf59dedbb4af17bc5250e8624282ba22656
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054699"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854960"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>매개 변수 없이 Cmdlet 만들기
 
 이 섹션에는 매개 변수를 사용 하지 않고 로컬 컴퓨터에서 정보를 검색 한 다음 파이프라인에 정보를 기록 하는 cmdlet을 만드는 방법을 설명 합니다. 여기에 설명 된 cmdlet은 로컬 컴퓨터의 프로세스에 대 한 정보를 검색 하 고 다음 명령줄에서 해당 정보를 표시 하는 Get-proc cmdlet.
-
-이 섹션의에서 항목에서는 다음과 같습니다.
-
-- [Cmdlet 이름 지정](#Naming-the-Cmdlet)
-
-- [Cmdlet 클래스 정의](#Defining-the-Cmdlet-Class)
-
-- [입력 처리 메서드를 재정의 합니다.](#Overriding-an-Input-Processing-Method)
-
-- [코드 샘플](#Code-Sample)
-
-- [개체 유형 정의 및 서식 지정](#Defining-Object-Types-and-Formatting)
-
-- [Cmdlet은 빌드](#Building-the-Cmdlet)
-
-- [테스트 Cmdlet](#Testing-the-Cmdlet)
 
 > [!NOTE]
 > Cmdlet를 작성할 때 Windows PowerShell® 참조 어셈블리를 다운로드 된 디스크에 기본적으로 C:\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0에 주의 합니다. 이러한 전역 어셈블리 캐시 (GAC)에 설치 되지 않습니다.
