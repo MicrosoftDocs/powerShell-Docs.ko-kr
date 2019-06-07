@@ -1,17 +1,24 @@
 ---
-ms.openlocfilehash: 6e36e6599e36218ce2a925dceda7aa0ee6811057
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 84b29953f09eb62eb30f52d84b087eb4f1f90eed
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068827"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470651"
 ---
 # <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 오픈 소스 규정
 
 이 프로젝트에서는 [Microsoft 오픈 소스 규정](https://opensource.microsoft.com/codeofconduct/)을 채택했습니다.
 자세한 내용은 [규정 FAQ](https://opensource.microsoft.com/codeofconduct/faq/)를 참조하고, 질문이나 의견이 더 있는 경우는 [opencode@microsoft.com](mailto:opencode@microsoft.com)으로 문의하세요.
 
-[![빌드 상태](https://ci.appveyor.com/api/projects/status/onshefxnc4g4pv87/branch/staging?svg=true)](https://ci.appveyor.com/project/PowerShell/powershell-docs/branch/staging)
+[라이브 배지]: https://powershell.visualstudio.com/PowerShell-Docs/_apis/build/status/PowerShell-Docs-CI?branchName=live
+[스테이징 배지]: https://powershell.visualstudio.com/PowerShell-Docs/_apis/build/status/PowerShell-Docs-CI?branchName=staging
+
+## <a name="build-status"></a>빌드 상태
+
+| 라이브 분기 | 스테이징 분기 |
+|:------------|:---------------|
+| [![라이브 배지][]][라이브 배지] | [![스테이징 배지][]][스테이징 배지]
 
 ## <a name="powershell-documentation"></a>PowerShell 설명서
 

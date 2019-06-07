@@ -2,12 +2,12 @@
 title: Windows에서 PowerShell Core 설치
 description: Windows에서 PowerShell Core를 설치하는 방법에 대한 정보
 ms.date: 08/06/2018
-ms.openlocfilehash: 5a3c43e27f0027cfbeeefab33b045e618e0ff045
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: e716e24ba47c0c109ab302b4b1a9254d7110ddef
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854356"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470994"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Windows에서 PowerShell Core 설치
 
