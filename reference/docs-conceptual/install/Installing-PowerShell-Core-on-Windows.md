@@ -2,12 +2,12 @@
 title: Windows에서 PowerShell Core 설치
 description: Windows에서 PowerShell Core를 설치하는 방법에 대한 정보
 ms.date: 08/06/2018
-ms.openlocfilehash: e716e24ba47c0c109ab302b4b1a9254d7110ddef
-ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
+ms.openlocfilehash: 3f21761037311891162f1083234edb0aca80d28b
+ms.sourcegitcommit: 4ec9e10647b752cc62b1eabb897ada3dc03c93eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66470994"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66830220"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Windows에서 PowerShell Core 설치
 
@@ -22,7 +22,7 @@ WSMan을 통한 PowerShell 원격 기능을 사용하려면 다음 전제 조건
 
 ## <a name="a-idmsi-installing-the-msi-package"></a><a id="msi" />MSI 패키지 설치
 
-Windows 클라이언트 또는 Windows Server(Windows 7 SP1, Server 2008 R2 이상에서 작동)에 PowerShell을 설치하려면 GitHub [릴리스][] 페이지에서 MSI 패키지를 다운로드합니다. 설치하려는 릴리스의 **자산** 섹션으로 스크롤을 내립니다. 자산 섹션이 축소되어 있을 수 있으니 확장을 클릭해야 합니다.
+Windows 클라이언트 또는 Windows Server(Windows 7 SP1, Server 2008 R2 이상에서 작동)에 PowerShell을 설치하려면 GitHub [릴리스][releases] 페이지에서 MSI 패키지를 다운로드합니다. 설치하려는 릴리스의 **자산** 섹션으로 스크롤을 내립니다. 자산 섹션이 축소되어 있을 수 있으니 확장을 클릭해야 합니다.
 
 MSI 파일은 다음과 같습니다. - `PowerShell-<version>-win-<os-arch>.msi`
 <!-- TODO: should be updated to point to the Download Center as well -->
@@ -150,8 +150,12 @@ Nano 서버는 “헤드리스” OS입니다. 두 가지 방법으로 Core 이�
 
 PowerShell Core는 WSMan 및 SSH보다 PowerShell Remoting Protocol(PSRP)을 지원합니다. 자세한 내용은 다음을 참조하세요.
 
-- [PowerShell Core에서의 SSH 원격 작업][ssh-원격 작업]
-- [PowerShell Core에서의 WSMan 원격 작업][wsman-원격 작업]
+- [PowerShell Core에서의 SSH 원격 작업][ssh-remoting]
+- [PowerShell Core에서의 WSMan 원격 작업][wsman-remoting]
 
 <!-- [download-center]: TODO -->
-[릴리스]: https://github.com/PowerShell/PowerShell/releases [ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md [wsman-remoting]: ../core-powershell/WSMan-Remoting-in-PowerShell-Core.md [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
+
+[releases]: https://github.com/PowerShell/PowerShell/releases
+[ssh-remoting]: ../learn/remoting/SSH-Remoting-in-PowerShell-Core.md
+[wsman-remoting]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md
+[AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
