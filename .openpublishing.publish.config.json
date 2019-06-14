@@ -2,6 +2,22 @@
   "build_entry_point": "docs",
   "docsets_to_publish": [
     {
+      "docset_name": "developer-docs",
+      "build_source_folder": "developer",
+      "build_output_subfolder": "developer-docs",
+      "locale": "ko-kr",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
       "docset_name": "PowerShell_PowerShell-docs_dsc",
       "build_source_folder": "dsc",
       "build_output_subfolder": "dsc",
@@ -13,7 +29,8 @@
         "RestApi": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "version": 0
     },
     {
       "docset_name": "PowerShell_PowerShell-docs_gallery",
@@ -27,7 +44,8 @@
         "RestApi": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "version": 0
     },
     {
       "docset_name": "PowerShell_PowerShell-docs_jea",
@@ -41,7 +59,8 @@
         "RestApi": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "version": 0
     },
     {
       "docset_name": "PowerShell_PowerShell-docs_reference",
@@ -57,6 +76,7 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
+      "version": 0,
       "customized_template_paths": [
         "_dependentPackages/azurecli.plugins/azurecli"
       ],
@@ -81,19 +101,19 @@
         "RestApi": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "version": 0
     }
   ],
-  "notification_subscribers": [
-    "CnE_Content_Brno@moravia.com",
-    "CnE_UE_Bugfixing_ENG@moravia.com"
-  ],
+  "notification_subscribers": [],
+  "sync_notification_subscribers": [],
   "branches_to_filter": [
     "live-oldev",
     "live"
   ],
   "skip_source_output_uploading": false,
-  "need_preview_pull_request": false,
+  "need_preview_pull_request": true,
+  "enable_incremental_build": true,
   "contribution_branch_mappings": {
     "live-sxs": "live"
   },
@@ -105,8 +125,14 @@
       "branch_mapping": {}
     },
     {
+      "path_to_root": "powershell-sdk-samples",
+      "url": "https://github.com/MicrosoftDocs/powershell-sdk-samples",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
       "path_to_root": "_repo.en-us",
-      "url": "https://github.com/PowerShell/PowerShell-Docs",
+      "url": "https://github.com/MicrosoftDocs/PowerShell-Docs",
       "branch": "live",
       "branch_mapping": {
         "live": "live",
@@ -116,8 +142,7 @@
   ],
   "branch_target_mapping": {},
   "need_generate_pdf_url_template": false,
-  "need_generate_pdf": false,
-  "need_generate_intellisense": false,
+  "targets": {},
   "dependent_packages": [
     {
       "path_to_root": "_dependentPackages/azurecli.plugins",
@@ -131,5 +156,7 @@
       "version": "latest",
       "nuget_feed": "https://www.myget.org/F/op/api/v2"
     }
-  ]
+  ],
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false
 }
