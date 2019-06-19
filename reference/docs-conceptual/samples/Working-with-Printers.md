@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 프린터 작업
-ms.assetid: 4f29ead3-f83b-4706-ac3e-f2154ff38dc5
-ms.openlocfilehash: fce1bc129ada3c509c55941a59a70de230edf68f
-ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
+ms.openlocfilehash: 816388325cc3155f1dbd1bc15fc1736155216092
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66470944"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030667"
 ---
 # <a name="working-with-printers"></a>프린터 작업
 

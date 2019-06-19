@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE에서 PowerShell 탭을 만드는 방법
-ms.assetid: c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
-ms.openlocfilehash: 080fe89bf1443f51460589b445431913fa20b4b8
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 7baf9a4051a196045d53eebf8ce5260bdc1bc55a
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62057743"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030594"
 ---
 # <a name="how-to-create-a-powershell-tab-in-windows-powershell-ise"></a>Windows PowerShell ISE에서 PowerShell 탭을 만드는 방법
 

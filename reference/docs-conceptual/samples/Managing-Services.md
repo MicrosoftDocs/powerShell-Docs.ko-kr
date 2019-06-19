@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 서비스 관리
-ms.assetid: 7a410e4d-514b-4813-ba0c-0d8cef88df31
-ms.openlocfilehash: 81fd8802215da80ce22fa3fd4750b1df6efe8206
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d9e17b2d91ae01d7d4d6d573348289fa68dc9c56
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086190"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030172"
 ---
 # <a name="managing-services"></a>서비스 관리
 

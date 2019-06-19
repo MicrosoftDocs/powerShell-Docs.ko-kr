@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 기타 유용한 스크립팅 개체
-ms.assetid: 4d781196-720b-4ccc-90d2-c570e5e719f5
-ms.openlocfilehash: ff494f375c0d43d83b2a067dbe4f2ab35a90d564
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 8d1d10b518d1aadd6aec831b512802558f8fc075
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086207"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030040"
 ---
 # <a name="other-useful-scripting-objects"></a>기타 유용한 스크립팅 개체
 

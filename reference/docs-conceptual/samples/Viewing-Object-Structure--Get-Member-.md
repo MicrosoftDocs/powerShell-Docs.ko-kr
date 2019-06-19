@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 개체 구조 보기(Get Member)
-ms.assetid: a1819ed2-2ef3-453a-b2b0-f3589c550481
-ms.openlocfilehash: cc93e45e4306b3d623c1d3d1096dd20c1afc59c8
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 80b36abd303a708195f12d96511e616178d11b5a
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058848"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030708"
 ---
 # <a name="viewing-object-structure-get-member"></a>개체 구조 보기(Get-Member)
 

@@ -2,13 +2,12 @@
 ms.date: 08/23/2018
 keywords: powershell,cmdlet
 title: PowerShell 파이프라인 이해
-ms.assetid: 6be50926-7943-4ef7-9499-4490d72a63fb
-ms.openlocfilehash: 10e09fbe8de83eba2473f8f042657f7c80473fbd
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 3033a4fe1a704fbbfa76e6d38662c8b22c3dbd9b
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854339"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030382"
 ---
 # <a name="understanding-pipelines"></a>파이프라인 이해
 

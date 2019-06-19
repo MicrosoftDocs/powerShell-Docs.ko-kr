@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 파일 및 폴더 작업
-ms.assetid: c0ceb96b-e708-45f3-803b-d1f61a48f4c1
-ms.openlocfilehash: 393e886a4945222198d9b81019250c5d5b905ad3
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 0f7cb233918b59475417ec49b611ecc25a94ebe1
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058933"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030696"
 ---
 # <a name="working-with-files-and-folders"></a>파일 및 폴더 작업
 

@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 사용자 지정 입력란 만들기
-ms.assetid: 0b12e56c-299f-40ee-afbf-d30d23ed2565
-ms.openlocfilehash: 2d04ad6df65cdb4ff13d136dea47bbba6a01f3a2
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 9c1c3c72482157e849c0259e7d2e25ed969a4aab
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086292"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030235"
 ---
 # <a name="creating-a-custom-input-box"></a>사용자 지정 입력란 만들기
 

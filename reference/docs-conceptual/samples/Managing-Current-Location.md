@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 현재 위치 관리
-ms.assetid: a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
-ms.openlocfilehash: f5e0653b2c3bbc9d2526c7a1c2ff88a8a6641695
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 42ab56759dec882d140f813c8614e578957722b3
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086258"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030191"
 ---
 # <a name="managing-current-location"></a>현재 위치 관리
 
@@ -50,9 +49,9 @@ C:\WINDOWS
 
 Windows PowerShell에서 **-PassThru** 매개 변수를 많은 Set 명령과 함께 사용하여 기본 출력이 없는 경우에 결과에 대한 정보를 반환할 수 있습니다.
 
-대부분의 UNIX 및 Windows 명령 셸에서와 동일한 방법으로 현재 위치를 기준으로 경로를 지정할 수 있습니다. 상대 경로에 대한 표준 표기법에서 점(**.**)은 현재 폴더를 나타내고, 이중 점(**..**)은 현재 위치의 부모 디렉터리를 나타냅니다.
+대부분의 UNIX 및 Windows 명령 셸에서와 동일한 방법으로 현재 위치를 기준으로 경로를 지정할 수 있습니다. 상대 경로에 대한 표준 표기법에서 점( **.** )은 현재 폴더를 나타내고, 이중 점( **..** )은 현재 위치의 부모 디렉터리를 나타냅니다.
 
-예를 들어 **C:\\Windows** 폴더에 있는 경우 점(**.**)은 **C:\\Windows**를 나타내고 이중 점(**..**)은 **C:** 를 나타냅니다. 다음과 같이 입력하여 현재 위치에서 C: 드라이브의 루트로 변경할 수 있습니다.
+예를 들어 **C:\\Windows** 폴더에 있는 경우 점( **.** )은 **C:\\Windows**를 나타내고 이중 점( **..** )은 **C:** 를 나타냅니다. 다음과 같이 입력하여 현재 위치에서 C: 드라이브의 루트로 변경할 수 있습니다.
 
 ```
 PS> Set-Location -Path .. -PassThru
@@ -62,7 +61,7 @@ Path
 C:\
 ```
 
-이 기술은 파일 시스템 드라이브가 아닌 Windows PowerShell 드라이브(예: **HKLM:**)에서 사용됩니다. 다음과 같이 입력하여 현재 위치를 레지스트리의 HKLM\\Software 키로 설정할 수 있습니다.
+이 기술은 파일 시스템 드라이브가 아닌 Windows PowerShell 드라이브(예: **HKLM:** )에서 사용됩니다. 다음과 같이 입력하여 현재 위치를 레지스트리의 HKLM\\Software 키로 설정할 수 있습니다.
 
 ```
 PS> Set-Location -Path HKLM:\SOFTWARE -PassThru

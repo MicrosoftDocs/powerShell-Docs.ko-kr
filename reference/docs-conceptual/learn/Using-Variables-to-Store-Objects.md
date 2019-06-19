@@ -2,13 +2,12 @@
 ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: 변수를 사용하여 개체 저장
-ms.assetid: b1688d73-c173-491e-9ba6-6d0c1cc852de
-ms.openlocfilehash: 16e82b83df967674da11193c8ac60d637687a01b
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 2d20d84e48d3f68cab5c1ffa05d689b46415ebc8
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854328"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030360"
 ---
 # <a name="using-variables-to-store-objects"></a>변수를 사용하여 개체 저장
 

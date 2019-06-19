@@ -2,13 +2,12 @@
 ms.date: 08/14/2018
 keywords: powershell,cmdlet
 title: 원격 명령 실행
-ms.assetid: d6938b56-7dc8-44ba-b4d4-cd7b169fd74d
-ms.openlocfilehash: 2001b5509acde6ec4259bb1442944958a67aa66f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d6609deafd8dec4f34a8412439d87dacd20d46f1
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058916"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030322"
 ---
 # <a name="running-remote-commands"></a>원격 명령 실행
 

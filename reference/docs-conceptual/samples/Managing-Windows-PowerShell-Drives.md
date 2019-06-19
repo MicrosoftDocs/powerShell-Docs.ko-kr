@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 드라이브 관리
-ms.assetid: bd809e38-8de9-437a-a250-f30a667d11b4
-ms.openlocfilehash: 9ac5136fb28b450ea6397cab2f36082c50f22e1f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 32efa282fb787753942e43acab53c7b6eaeb88e3
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62057828"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030151"
 ---
 # <a name="managing-windows-powershell-drives"></a>Windows PowerShell 드라이브 관리
 
@@ -117,7 +116,7 @@ Office     FileSystem    C:\Program Files\Microsoft Offic...
 > [!NOTE]
 > 일반적으로 경로는 대/소문자를 구분하지 않습니다.
 
-모든 Windows PowerShell 드라이브를 나타낼 때와 마찬가지로 이름 뒤에 콜론(**:**)을 사용하여 새 Windows PowerShell 드라이브를 나타냅니다.
+모든 Windows PowerShell 드라이브를 나타낼 때와 마찬가지로 이름 뒤에 콜론( **:** )을 사용하여 새 Windows PowerShell 드라이브를 나타냅니다.
 
 Windows PowerShell 드라이브를 사용하면 많은 작업을 훨씬 간편하게 수행할 수 있습니다. 예를 들어 Windows 레지스트리의 가장 중요한 일부 키는 매우 긴 경로를 사용하여 액세스하기 번거롭고 기억하기 어렵습니다. 중요 구성 정보는 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion** 아래에 있습니다. CurrentVersion 레지스트리 키의 항목을 보고 변경하려면 다음과 같이 입력하여 해당 키의 루트로 사용할 Windows PowerShell 드라이브를 만들 수 있습니다.
 

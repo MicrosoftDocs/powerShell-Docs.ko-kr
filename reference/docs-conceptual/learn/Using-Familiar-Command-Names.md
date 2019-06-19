@@ -2,13 +2,12 @@
 ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: 친숙한 명령 이름 사용
-ms.assetid: 021e2424-c64e-4fa5-aa98-aa6405758d5d
-ms.openlocfilehash: b61d647d882d4b2f7ea423a48319e3c104ce96c7
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 30b33bc8739975c1a40e51c04a3ee4e426c199e7
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62057998"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030901"
 ---
 # <a name="using-familiar-command-names"></a>친숙한 명령 이름 사용
 

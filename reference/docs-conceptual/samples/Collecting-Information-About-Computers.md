@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 컴퓨터에 대한 정보 수집
-ms.assetid: 9e7b6a2d-34f7-4731-a92c-8b3382eb51bb
-ms.openlocfilehash: d837684108656e17ebf26189bd4841c5de01051c
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5dc8fcc5f12fdf9e3fc8151d3e50b8b660262c62
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058338"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030843"
 ---
 # <a name="collecting-information-about-computers"></a>컴퓨터에 대한 정보 수집
 
@@ -18,7 +17,7 @@ ms.locfileid: "62058338"
 Windows PowerShell은 개체에서도 작동하며 단일 또는 여러 개체를 동일한 방식으로 처리할 수 있게 해주는 파이프라인이 있기 때문에 일반적인 WMI 액세스를 통해 몇 가지 고급 작업을 매우 적은 노력으로 수행할 수 있습니다.
 
 다음 예제에서는 임의 컴퓨터에 대해 `Get-CimInstance`를 사용하여 특정 정보를 수집하는 방법을 보여줍니다.
-로컬 컴퓨터를 나타내는 점 값(**.**)과 함께 **ComputerName** 매개 변수를 지정합니다.
+로컬 컴퓨터를 나타내는 점 값( **.** )과 함께 **ComputerName** 매개 변수를 지정합니다.
 WMI를 통해 연결할 수 있는 컴퓨터와 연관된 이름 또는 IP 주소를 지정할 수 있습니다.
 로컬 컴퓨터에 대한 정보를 검색하려면 **ComputerName** 매개 변수를 생략할 수 있습니다.
 

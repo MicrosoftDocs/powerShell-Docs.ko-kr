@@ -2,13 +2,12 @@
 ms.date: 08/23/2018
 keywords: powershell,cmdlet
 title: 중요한 PowerShell 개념 이해
-ms.assetid: 3e601e38-4520-4578-a48d-b6779f1d35ee
-ms.openlocfilehash: fad64563d1a7a6abd4f0e430331f81f91f43d312
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 8f9af370db46ea47dbccbabb7cc90fc27b8f2765
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058593"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030974"
 ---
 # <a name="understanding-important-powershell-concepts"></a>중요한 PowerShell 개념 이해
 

@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE 탐색
-ms.assetid: e0d2c6e8-5126-40e7-a1e1-d1cff29fe94a
-ms.openlocfilehash: 059651f159fb2636a93167709134788e90d062b8
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 8c47e236e2e345a887fc3af281e429f440e176ff
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086904"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67031035"
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>Windows PowerShell ISE 탐색
 

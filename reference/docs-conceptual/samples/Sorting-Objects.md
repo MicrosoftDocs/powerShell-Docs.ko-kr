@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 개체 정렬
-ms.assetid: 8530caa8-3ed4-4c56-aed7-1295dd9ba199
-ms.openlocfilehash: 06aa15d89888f1ecbe60b8e1dfb4efebb1d73673
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: ed78e7e333f3468781c9cd96df2194fbdfebe753
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086054"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030776"
 ---
 # <a name="sorting-objects"></a>개체 정렬
 

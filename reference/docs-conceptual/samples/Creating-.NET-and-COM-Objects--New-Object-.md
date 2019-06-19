@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: .NET 및 COM 개체 만들기(New-Object)
-ms.assetid: 2057b113-efeb-465e-8b44-da2f20dbf603
-ms.openlocfilehash: ef8215303aacd90536d3c2ae57bc3629e202f318
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 8bb0326d350be634a50897bdcd432e13ec93450c
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086373"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030259"
 ---
 # <a name="creating-net-and-com-objects-new-object"></a>.NET 및 COM 개체 만들기(New-Object)
 

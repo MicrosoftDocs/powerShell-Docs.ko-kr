@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 개체의 일부 선택(Select Object)
-ms.assetid: 72e64b1a-d351-4500-9da3-24d8a71d7a92
-ms.openlocfilehash: 323c57ba4462e20d9713fb74732989584f5a993f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 4d4c89f0b5103e4701a3af3cd07fcd7c8f1c697f
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62057899"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030110"
 ---
 # <a name="selecting-parts-of-objects-select-object"></a>개체의 일부 선택(Select-Object)
 

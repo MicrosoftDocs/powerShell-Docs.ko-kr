@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE에서 프로필을 사용하는 방법
-ms.assetid: 0219626a-6da5-4acc-b630-d058e8b29cc6
-ms.openlocfilehash: b319aa089c2a4a7008acd9850f15342dac70aee2
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 28354f39aaaa577cec69c1b3f62cfe16ef091218
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62057538"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030614"
 ---
 # <a name="how-to-use-profiles-in-windows-powershell-ise"></a>Windows PowerShell ISE에서 프로필을 사용하는 방법
 

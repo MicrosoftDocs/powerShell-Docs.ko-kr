@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 레지스트리 키 작업
-ms.assetid: 91bfaecd-8684-48b4-ad86-065dfe6dc90a
-ms.openlocfilehash: e7b497ec2fccf9ba3934439a9c1e9be3cf70a705
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 18daeaea2ee8917a709fef421d2b316f46bf7f4c
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058865"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030663"
 ---
 # <a name="working-with-registry-keys"></a>레지스트리 키 작업
 
@@ -36,7 +35,7 @@ SKC  VC Name                           Property
 
 이러한 키는 레지스트리 편집기(Regedit.exe)의 HKEY_CURRENT_USER에 표시되는 최상위 키입니다.
 
-레지스트리 공급자 이름(뒤에 "**::**"이 옴)을 지정하여 레지스트리 경로를 지정할 수도 있습니다. 레지스트리 공급자의 전체 이름은 **Microsoft.PowerShell.Core\\Registry**이지만 **Registry**로 줄일 수 있습니다. 다음 명령은 HKCU: 바로 아래에 있는 내용을 보여 줍니다.
+레지스트리 공급자 이름(뒤에 " **::** "이 옴)을 지정하여 레지스트리 경로를 지정할 수도 있습니다. 레지스트리 공급자의 전체 이름은 **Microsoft.PowerShell.Core\\Registry**이지만 **Registry**로 줄일 수 있습니다. 다음 명령은 HKCU: 바로 아래에 있는 내용을 보여 줍니다.
 
 ```powershell
 Get-ChildItem -Path Registry::HKEY_CURRENT_USER

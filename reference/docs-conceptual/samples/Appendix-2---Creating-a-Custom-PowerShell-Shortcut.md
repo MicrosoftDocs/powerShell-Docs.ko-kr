@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 부록 2 사용자 지정 PowerShell 바로 가기 만들기
-ms.assetid: 5d4fd421-5d43-4ec7-86fd-acfe887b066e
-ms.openlocfilehash: e8081b7a64d313c8ef4bbccf95f250445dd68ad9
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 6f1a6a8187b1797103e3620b2cf9155978807ea5
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62057856"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030293"
 ---
 # <a name="appendix-2---creating-a-custom-powershell-shortcut"></a>부록 2 - 사용자 지정 PowerShell 바로 가기 만들기
 

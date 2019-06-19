@@ -2,13 +2,12 @@
 ms.date: 08/24/2018
 keywords: powershell,cmdlet
 title: PowerShell 명령 이름 학습
-ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
-ms.openlocfilehash: 8d50ca03f98ed4ca8f9c09c83ae57afbf0d7888d
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: a65ffcdca6510093b0a77234e20546b6cc1f02bf
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086428"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030419"
 ---
 # <a name="learning-powershell-command-names"></a>PowerShell 명령 이름 학습
 

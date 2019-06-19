@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE 바로 가기 키
-ms.assetid: 8328b946-0f02-4ef4-ac28-2743a1b4043b
-ms.openlocfilehash: 1abae849ce599b586357fd2a8db46c608932bd4e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: f71aea16f7a98ff7b6427237dc90104e4ea0db71
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086836"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030931"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Windows PowerShell ISE 바로 가기 키
 

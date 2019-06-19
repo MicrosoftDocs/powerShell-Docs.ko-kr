@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 컴퓨터 상태 변경
-ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
-ms.openlocfilehash: f8a2ed6a1a0390021eb633c9af64a725146ad136
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 80692ad7c56aa13e55d4997cfec289ffb3605458
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086326"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030288"
 ---
 # <a name="changing-computer-state"></a>컴퓨터 상태 변경
 

@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 다중 선택 목록 상자
-ms.assetid: f74cd5d9-da57-4802-b614-0b194a7bc8f8
-ms.openlocfilehash: a762145dc197ec7e1424b2fbdcef5e7380d13803
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: dcfa43ac8e7cc4ba6147f71791edbf7989af3583
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62057961"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030102"
 ---
 # <a name="multiple-selection-list-boxes"></a>다중 선택 목록 상자
 

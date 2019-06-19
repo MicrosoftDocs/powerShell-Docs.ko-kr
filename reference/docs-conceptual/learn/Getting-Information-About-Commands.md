@@ -2,13 +2,12 @@
 ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: 명령에 대한 정보 가져오기
-ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
-ms.openlocfilehash: 7af83e3a0e776d96e580b442430357b4ea063a72
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: eb918c6f89d8369db775258263a8f7a7902a6cc7
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62057709"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030951"
 ---
 # <a name="getting-information-about-commands"></a>명령에 대한 정보 가져오기
 

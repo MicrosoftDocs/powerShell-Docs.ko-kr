@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 직접 항목 조작
-ms.assetid: 8cbd4867-917d-41ea-9ff0-b8e765509735
-ms.openlocfilehash: 4caa7d2e0eecff9783556062d8503fe10e616fe5
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 50aed569cf6b876297abe3cf1544eba70f6279ce
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086224"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030136"
 ---
 # <a name="manipulating-items-directly"></a>직접 항목 조작
 
@@ -73,7 +72,7 @@ SKC  VC Name                           Property
   0   0 _Test                          {}
 ```
 
-레지스트리 경로를 입력할 때 Windows PowerShell 드라이브 이름에 콜론(**:**)을 포함해야 합니다(예: HKLM: 및 HKCU:). 콜론이 없을 경우 Windows PowerShell에서는 경로의 드라이브 이름을 인식하지 못합니다.
+레지스트리 경로를 입력할 때 Windows PowerShell 드라이브 이름에 콜론( **:** )을 포함해야 합니다(예: HKLM: 및 HKCU:). 콜론이 없을 경우 Windows PowerShell에서는 경로의 드라이브 이름을 인식하지 못합니다.
 
 ## <a name="why-registry-values-are-not-items"></a>레지스트리 값이 항목이 아닌 이유
 
@@ -93,7 +92,7 @@ SKC  VC Name                           Property
   3   0 OptionalComponents             {}
 ```
 
-레지스트리 항목을 항목으로 처리하면 편리하지만 레지스트리 항목의 경로를 고유하게 지정할 수 없습니다. **Run** 레지스트리 하위 키와 **Run** 하위 키의 **(Default)** 레지스트리 항목 간에 경로 표기법이 구분되지 않습니다. 또한 레지스트리 항목 이름에 백슬래시(**\\**) 문자를 사용할 수 있으므로, 레지스트리 항목이 항목인 경우 경로 표기법을 사용하여 **Windows\\CurrentVersion\\Run** 레지스트리 항목을 해당 경로에 있는 하위 키와 구분할 수 없습니다.
+레지스트리 항목을 항목으로 처리하면 편리하지만 레지스트리 항목의 경로를 고유하게 지정할 수 없습니다. **Run** 레지스트리 하위 키와 **Run** 하위 키의 **(Default)** 레지스트리 항목 간에 경로 표기법이 구분되지 않습니다. 또한 레지스트리 항목 이름에 백슬래시( **\\** ) 문자를 사용할 수 있으므로, 레지스트리 항목이 항목인 경우 경로 표기법을 사용하여 **Windows\\CurrentVersion\\Run** 레지스트리 항목을 해당 경로에 있는 하위 키와 구분할 수 없습니다.
 
 ## <a name="renaming-existing-items-rename-item"></a>기존 항목 이름 바꾸기(Rename-Item)
 

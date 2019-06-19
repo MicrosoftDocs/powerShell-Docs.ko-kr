@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 정적 클래스 및 메서드 사용
-ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9
-ms.openlocfilehash: e4caff63a1ec7295b6fe450c2915baf0cc7e31af
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 437e7b430f37224de7c617e120e37c3efcd7787a
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086017"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030740"
 ---
 # <a name="using-static-classes-and-methods"></a>정적 클래스 및 메서드 사용
 
@@ -47,7 +46,7 @@ True     False    Environment                              System.Object
 ```
 
 > [!NOTE]
-> 앞에서 언급한 것처럼 Windows PowerShell에서 **New Object** 를 사용하면 자동으로 유형 이름 앞에 '**System.**'이 추가됩니다. 대괄호로 묶은 유형 이름을 사용하는 경우에도 마찬가지이므로 **\[System.Environment]** 를 **\[Environment]** 로 지정할 수 있습니다.
+> 앞에서 언급한 것처럼 Windows PowerShell에서 **New Object** 를 사용하면 자동으로 유형 이름 앞에 '**System.** '이 추가됩니다. 대괄호로 묶은 유형 이름을 사용하는 경우에도 마찬가지이므로 **\[System.Environment]** 를 **\[Environment]** 로 지정할 수 있습니다.
 
 **System.Environment** 클래스에는 현재 프로세스(Windows PowerShell에서 작업하는 경우 powershell.exe임)의 작업 환경에 대한 일반적인 정보가 포함되어 있습니다.
 
