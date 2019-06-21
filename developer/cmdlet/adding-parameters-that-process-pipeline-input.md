@@ -11,12 +11,12 @@ helpviewer_keywords:
 - parameters [PowerShell Programmer's Guide], pipeline input
 ms.assetid: 09bf70a9-7c76-4ffe-b3f0-a1d5f10a0931
 caps.latest.revision: 8
-ms.openlocfilehash: def0ac2ff98575beb29c3c2a7d91a5a5c53e648e
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 34643d20c16f8cc45e7fb20dc2a87d78b18bbf10
+ms.sourcegitcommit: f60fa420bdc81db174e6168d3aeb11371e483162
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854990"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298637"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>파이프라인 입력을 처리하는 매개 변수 추가
 
@@ -77,7 +77,7 @@ End Property
 
 Cmdlet에 파이프라인 입력을 처리할 경우 적절 한 입력 처리 메서드를 재정의 해야 합니다. 에 도입 된 기본 입력된 처리 메서드로 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)합니다.
 
-Get-proc cmdlet이 재정의 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 처리 하는 메서드는 `Name` 사용자 또는 스크립트에서 제공 하는 매개 변수 입력 합니다. 이 메서드는 제공 된 이름이 없는 경우 각 요청 된 프로세스 이름 또는 모든 프로세스에 대 한 프로세스를 가져옵니다. 내 있음을 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)에 대 한 호출 [System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject%28System.Object%2CSystem.Boolean%29) 출력은 출력을 보내기 위한 메커니즘을 파이프라인에는 개체입니다. 이 호출의 두 번째 매개 변수 `enumerateCollection`로 설정 된 `true` 프로세스 개체의 배열을 열거 하 고 명령줄에 한 번에 하나의 프로세스를 작성 하려면 Windows PowerShell 런타임에 알려야 합니다.
+Get-proc cmdlet이 재정의 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 처리 하는 메서드는 `Name` 사용자 또는 스크립트에서 제공 하는 매개 변수 입력 합니다. 이 메서드는 제공 된 이름이 없는 경우 각 요청 된 프로세스 이름 또는 모든 프로세스에 대 한 프로세스를 가져옵니다. 내에서 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)에 대 한 호출 [WriteObject(System.Object,System.Boolean)](/dotnet/api/system.management.automation.cmdlet.writeobject?view=pscore-6.2.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) 는 출력 개체를 전송 하는 것에 대 한 출력 메커니즘을 파이프라인입니다. 이 호출의 두 번째 매개 변수 `enumerateCollection`로 설정 된 `true` 프로세스 개체의 배열을 열거 하 고 명령줄에 한 번에 하나의 프로세스를 작성 하려면 Windows PowerShell 런타임에 알려야 합니다.
 
 ```csharp
 protected override void ProcessRecord()
@@ -130,11 +130,11 @@ End Sub 'ProcessRecord
 
 ## <a name="defining-object-types-and-formatting"></a>개체 유형 정의 및 서식 지정
 
-Windows PowerShell.Net 개체를 사용 하 여 cmdlet 간에 정보를 전달 합니다. 따라서 cmdlet는 고유한 형식을 정의 해야 합니다. 또는 cmdlet을 다른 cmdlet에서 제공 하는 기존 형식을 확장 해야 할 수 있습니다. 새 형식 정의 또는 기존 형식을 확장 하는 방법에 대 한 자세한 내용은 참조 하세요. [확장 개체 형식 및 서식](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)합니다.
+Windows PowerShell.Net 개체를 사용 하 여 cmdlet 간에 정보를 전달 합니다. 따라서 cmdlet는 고유한 형식을 정의 해야 합니다. 또는 cmdlet을 다른 cmdlet에서 제공 하는 기존 형식을 확장 해야 할 수 있습니다. 새 형식 정의 또는 기존 형식을 확장 하는 방법에 대 한 자세한 내용은 참조 하세요. [확장 개체 형식 및 서식](/previous-versions//ms714665(v=vs.85))합니다.
 
 ## <a name="building-the-cmdlet"></a>Cmdlet은 빌드
 
-Windows PowerShell을 통해 Windows PowerShell을 사용 하 여 등록 해야 하는 cmdlet을 구현 하 고 나면 스냅인. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [등록 Cmdlet, 공급자 및 응용 프로그램을 호스트 하는 방법을](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)합니다.
+Windows PowerShell을 통해 Windows PowerShell을 사용 하 여 등록 해야 하는 cmdlet을 구현 하 고 나면 스냅인. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [등록 Cmdlet, 공급자 및 응용 프로그램을 호스트 하는 방법을](/previous-versions//ms714644(v=vs.85))합니다.
 
 ## <a name="testing-the-cmdlet"></a>테스트 Cmdlet
 
@@ -180,9 +180,9 @@ Windows PowerShell cmdlet에 등록 하는 경우 명령줄에서 실행 하 여
 
 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)
 
-[확장 개체 형식 및 서식 지정](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[확장 개체 형식 및 서식 지정](/previous-versions//ms714665(v=vs.85))
 
-[Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법](/previous-versions//ms714644(v=vs.85))
 
 [Windows PowerShell 참조](../windows-powershell-reference.md)
 

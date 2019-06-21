@@ -13,12 +13,12 @@ helpviewer_keywords:
 - confirm impact [PowerShell Programmer's Guide]
 ms.assetid: 59be4120-1700-4d92-a308-ef4a32ccf11a
 caps.latest.revision: 8
-ms.openlocfilehash: a4fa9ce52855928679a2425f24f2e49a68030c63
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 8a65915b88a04e36e773853b903528a65fe11e99
+ms.sourcegitcommit: f60fa420bdc81db174e6168d3aeb11371e483162
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854908"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67301396"
 ---
 # <a name="creating-a-cmdlet-that-modifies-the-system"></a>시스템을 수정하는 Cmdlet 만들기
 
@@ -59,7 +59,7 @@ public class StopProcCommand : Cmdlet
 
 ### <a name="extremely-destructive-actions"></a>매우 안전 하지 않은 작업
 
-일부 작업은 다시 포맷 하는 활성 하드 디스크 파티션 등 야기할입니다. 이러한 경우 cmdlet을 설정 해야 `ConfirmImpact`  =  `ConfirmImpact.High` 선언할 때 합니다 [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) 특성입니다. 이 설정을 사용자 지정 하지 하는 경우에 요청 사용자에 게 확인 하려면 cmdlet을 사용 하면를 `Confirm` 매개 변수입니다. 그러나 cmdlet 개발자 안 지나치게 `ConfirmImpact` 사용자 계정 삭제와 같은 잠재적으로 방금 삭제 된 작업에 대 한 합니다. 경우 `ConfirmImpact` 로 설정 된 [System.Management.Automation.Confirmimpact.High](/dotnet/api/System.Management.Automation.ConfirmImpact.High)합니다.
+일부 작업은 다시 포맷 하는 활성 하드 디스크 파티션 등 야기할입니다. 이러한 경우 cmdlet을 설정 해야 `ConfirmImpact`  =  `ConfirmImpact.High` 선언할 때 합니다 [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) 특성입니다. 이 설정을 사용자 지정 하지 하는 경우에 요청 사용자에 게 확인 하려면 cmdlet을 사용 하면를 `Confirm` 매개 변수입니다. 그러나 cmdlet 개발자 안 지나치게 `ConfirmImpact` 사용자 계정 삭제와 같은 잠재적으로 방금 삭제 된 작업에 대 한 합니다. 경우 `ConfirmImpact` 로 설정 된 [System.Management.Automation.ConfirmImpact](/dotnet/api/System.Management.Automation.ConfirmImpact) **높은**합니다.
 
 마찬가지로, 일부 작업을 수행할 이론상에서 수정 Windows PowerShell 외부 시스템의 실행 상태 이지만 시스템을 손상 시키는 일 수 없습니다. 이러한 cmdlet을 설정할 수 있습니다 `ConfirmImpact` 하 [System.Management.Automation.Confirmimpact.Low](/dotnet/api/system.management.automation.confirmimpact?view=powershellsdk-1.1.0)합니다. 이 중간 영향 및 강력한 작업을 확인 하 라는 메시지가 표시 된 확인 요청을 무시 됩니다.
 
@@ -278,11 +278,11 @@ if (criticalProcess &&!force)
 
 ## <a name="defining-object-types-and-formatting"></a>개체 유형 정의 및 서식 지정
 
-Windows PowerShell.Net 개체를 사용 하 여 cmdlet 간에 정보를 전달 합니다. 따라서 cmdlet는 고유한 형식을 정의 해야 합니다. 또는 cmdlet을 다른 cmdlet에서 제공 하는 기존 형식을 확장 해야 할 수 있습니다. 새 형식 정의 또는 기존 형식을 확장 하는 방법에 대 한 자세한 내용은 참조 하세요. [확장 개체 형식 및 서식](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)합니다.
+Windows PowerShell.Net 개체를 사용 하 여 cmdlet 간에 정보를 전달 합니다. 따라서 cmdlet는 고유한 형식을 정의 해야 합니다. 또는 cmdlet을 다른 cmdlet에서 제공 하는 기존 형식을 확장 해야 할 수 있습니다. 새 형식 정의 또는 기존 형식을 확장 하는 방법에 대 한 자세한 내용은 참조 하세요. [확장 개체 형식 및 서식](/previous-versions//ms714665(v=vs.85))합니다.
 
 ## <a name="building-the-cmdlet"></a>Cmdlet은 빌드
 
-Cmdlet를 구현한 후 등록 해야 Windows PowerShell을 사용 하 여 Windows PowerShell 스냅인을 통해. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [등록 Cmdlet, 공급자 및 응용 프로그램을 호스트 하는 방법을](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)합니다.
+Cmdlet를 구현한 후 등록 해야 Windows PowerShell을 사용 하 여 Windows PowerShell 스냅인을 통해. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [등록 Cmdlet, 공급자 및 응용 프로그램을 호스트 하는 방법을](/previous-versions//ms714644(v=vs.85))합니다.
 
 ## <a name="testing-the-cmdlet"></a>테스트 Cmdlet
 
@@ -354,9 +354,9 @@ Windows PowerShell cmdlet에 등록 하는 경우 명령줄에서 실행 하 여
 
 [명령줄 입력을 처리 하는 매개 변수 추가](./adding-parameters-that-process-command-line-input.md)
 
-[확장 개체 형식 및 서식 지정](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[확장 개체 형식 및 서식 지정](/previous-versions//ms714665(v=vs.85))
 
-[Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법](/previous-versions//ms714644(v=vs.85))
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)
 
