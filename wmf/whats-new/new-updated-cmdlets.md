@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 title: 새로 제공되거나 업데이트된 cmdlet
-ms.openlocfilehash: 9ec31c89c0bc4b111b40e2d4725fa0782a573204
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: ffd5db2d4fc9bf8f67ef5e352633ad3209f72c87
+ms.sourcegitcommit: f60fa420bdc81db174e6168d3aeb11371e483162
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65855548"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298645"
 ---
 # <a name="new-and-updated-cmdlets"></a>새로 제공되거나 업데이트된 cmdlet
 
@@ -39,17 +39,17 @@ ms.locfileid: "65855548"
 
 ## <a name="cryptographic-message-syntax-cms-cmdlets"></a>암호화 메시지 구문(CMS) cmdlet
 
-암호화 메시지 구문 cmdlet은 [RFC5652](https://tools.ietf.org/html/rfc5652) 문서에 기록된 대로 메시지를 암호로 보호하기 위해 IETF 표준 형식을 사용하는 콘텐츠의 암호화 및 암호 해독을 지원합니다.
+암호화 메시지 구문 cmdlet은 [RFC5652](https://tools.ietf.org/html/rfc5652.html) 문서에 기록된 대로 메시지를 암호로 보호하기 위해 IETF 표준 형식을 사용하는 콘텐츠의 암호화 및 암호 해독을 지원합니다.
 
-CMS 암호화 표준은 공개 키 암호화를 구현하는데, 여기서는 콘텐츠를 암호화하는 데 사용되는 키(‘공개 키’)와 콘텐츠를 암호 해독하는 데 사용되는 키(‘프라이빗 키’)가 구분됩니다.
+CMS 암호화 표준은 공개 키 암호화를 구현하는데, 여기서는 콘텐츠를 암호화하는 데 사용되는 키(‘공개 키’)와 콘텐츠를 암호 해독하는 데 사용되는 키(‘프라이빗 키’)가 구분됩니다.  
 
 공개 키는 광범위하게 공유할 수 있으며 중요한 데이터가 아닙니다. 공개 키로 암호화된 모든 콘테츠는 프라이빗 키로만 암호 해독할 수 있습니다. 자세한 내용은 [공개 키 암호화](https://en.wikipedia.org/wiki/Public-key_cryptography)를 참조하세요.
 
 자세한 내용은 다음을 참조하세요.
 
-- [Get-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/Get-CmsMessage.md)
-- [Protect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/Protect-CmsMessage.md)
-- [Unprotect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/rotect-CmsMessage.md)
+- [Get-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/Get-CmsMessage)
+- [Protect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/Protect-CmsMessage)
+- [Unprotect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/unprotect-CmsMessage)
 
 PowerShell에서 인증서가 데이터 암호화 인증서로 식별되려면 고유 키 사용 식별자(EKU)(예: ‘코드 서명' 또는 ‘암호화된 메일’)가 필요합니다. 인증서 공급자에서 문서 암호화 인증서를 보려면 `Get-ChildItem`의 **DocumentEncryptionCert** 동적 매개 변수를 사용하면 됩니다.
 
@@ -145,6 +145,7 @@ e19d6ea5-3cc2-4db9-8095-0cdaed5a703d
 "a single " | Add-Content -Path Example.txt -NoNewline
 "sentence." | Add-Content -Path Example.txt -NoNewline
 Get-Content .\Example.txt
+```
 
 ```Output
 This is a single sentence.

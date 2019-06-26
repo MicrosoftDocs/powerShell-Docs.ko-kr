@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC를 사용하여 연속 통합 및 연속 배포 파이프라인 빌드
-ms.openlocfilehash: 012057a32ccf85b0d15e76a332cadda4b226180a
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 2d049cd640f0df9b018a88ad106e59dbeed7bcee
+ms.sourcegitcommit: f60fa420bdc81db174e6168d3aeb11371e483162
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076478"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67301502"
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>DSC를 사용하여 연속 통합 및 연속 배포 파이프라인 빌드
 
@@ -22,10 +22,10 @@ ms.locfileid: "62076478"
 
 이 예제를 사용하려면 다음에 대해 잘 알고 있어야 합니다.
 
-- CI-CD 개념. [릴리스 파이프라인 모델](http://aka.ms/thereleasepipelinemodelpdf)에서 유용한 참조 정보를 확인할 수 있습니다.
+- CI-CD 개념. [릴리스 파이프라인 모델](https://aka.ms/thereleasepipelinemodelpdf)에서 유용한 참조 정보를 확인할 수 있습니다.
 - [Git](https://git-scm.com/) 소스 제어
 - [Pester](https://github.com/pester/Pester) 테스트 프레임워크
-- [Team Foundation Server](https://www.visualstudio.com/tfs/)
+- [Team Foundation Server](https://visualstudio.microsoft.com/tfs/)
 
 ## <a name="what-you-will-need"></a>필요한 사항
 
@@ -38,13 +38,13 @@ ms.locfileid: "62076478"
 클라이언트 컴퓨터는 다음 항목이 설치된 Windows 컴퓨터여야 합니다.
 
 - [Git](https://git-scm.com/)
-- [https://github.com/PowerShell/Demo_CI](https://github.com/PowerShell/Demo_CI)에서 복제된 로컬 Git 리포지토리
+- [https://github.com/PowerShell/Demo_CI](https://github.com/PowerShell/Demo_CI )에서 복제된 로컬 Git 리포지토리
 - [Visual Studio Code](https://code.visualstudio.com/)와 같은 텍스트 편집기
 
 ### <a name="tfssrv1"></a>TFSSrv1
 
 빌드와 릴리스를 정의할 TFS 서버를 호스트하는 컴퓨터입니다.
-이 컴퓨터에는 [Team Foundation Server 2017](https://www.visualstudio.com/tfs/)이 설치되어 있어야 합니다.
+이 컴퓨터에는 [Team Foundation Server 2017](https://visualstudio.microsoft.com/tfs/)이 설치되어 있어야 합니다.
 
 ### <a name="buildagent"></a>BuildAgent
 
@@ -157,7 +157,7 @@ Node $AllNodes.Where{$_.Role -eq 'DNSServer'}.NodeName
 
 이 문은 `DevEnv.ps1` 스크립트를 통해 작성되는 [구성 데이터](../configurations/configData.md)에서 역할이 `DNSServer`로 정의된 노드를 찾습니다.
 
-[about_arrays](/powershell/reference/3.0/Microsoft.PowerShell.Core/About/about_Arrays.md)의 `Where` 메서드에 대해 자세히 알아볼 수 있습니다.
+[about_arrays](/powershell/module/microsoft.powershell.core/about/about_arrays)의 `Where` 메서드에 대해 자세히 알아볼 수 있습니다.
 
 CI 수행 시에는 구성 데이터를 사용하여 노드를 정의해야 합니다. 노드 정보는 환경 간에 변경될 가능성이 높은데, 구성 데이터를 사용하면 구성 코드를 변경하지 않고도 노드 정보를 쉽게 변경할 수 있기 때문입니다.
 
@@ -319,7 +319,7 @@ Demo_CI 리포지토리 루트(`./InfraDNS/Deploy.ps1`)의 `Deploy.ps1`에 정�
 
 지금까지 코드를 TFS에 업로드하고 코드가 수행하는 작업을 살펴보았습니다. 그러면 이제 빌드를 정의해 보겠습니다.
 
-여기서는 빌드에 추가할 빌드 단계에 대해서만 설명합니다. TFS에서 빌드 정의를 작성하는 방법에 대한 지침은 [빌드 정의 만들기 및 큐에 넣기](/azure/devops/pipelines/get-started-designer)를 참조하세요.
+여기서는 빌드에 추가할 빌드 단계에 대해서만 설명합니다. TFS에서 빌드 정의를 작성하는 방법에 대한 지침은 [빌드 정의 만들기 및 큐에 넣기](/azure/devops/pipelines/create-first-pipeline)를 참조하세요.
 
 **빈** 템플릿을 선택하여 새 빌드 정의 "InfraDNS"를 만들고
 빌드 정의에 다음 단계를 추가합니다.
@@ -329,7 +329,7 @@ Demo_CI 리포지토리 루트(`./InfraDNS/Deploy.ps1`)의 `Deploy.ps1`에 정�
 - 파일 복사
 - 아티팩트 게시
 
-이러한 빌드 단계를 추가한 후에 다음과 같이 각 단계의 속성을 편집합니다. 
+이러한 빌드 단계를 추가한 후에 다음과 같이 각 단계의 속성을 편집합니다.
 
 ### <a name="powershell-script"></a>PowerShell 스크립트
 
@@ -388,7 +388,7 @@ Demo_CI 리포지토리 루트(`./InfraDNS/Deploy.ps1`)의 `Deploy.ps1`에 정�
 
 이렇게 하려면 앞에서 만든 `InfraDNS` 빌드 정의와 연결된 새 릴리스 정의를 추가합니다.
 새 빌드를 완료할 때마다 새 릴리스가 트리거되도록 **연속 배포**를 선택해야 합니다.
-해당 방법은 [릴리스 파이프라인이란?](/azure/devops/pipelines/release/what-is-release-management)을 참조하세요. 다음과 같이 새 릴리스 정의를 구성합니다.
+해당 방법은 [릴리스 파이프라인이란?](/azure/devops/pipelines/release/)을 참조하세요. 다음과 같이 새 릴리스 정의를 구성합니다.
 
 릴리스 정의에 다음 단계를 추가합니다.
 

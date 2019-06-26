@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a82aba91-71af-447d-b9ef-b6b6ac7d9de4
 caps.latest.revision: 19
-ms.openlocfilehash: 743efcf23174a9521925c5c19dd670979bc0c523
-ms.sourcegitcommit: 13f24786ed39ca1c07eff2b73a1974c366e31cb8
+ms.openlocfilehash: 1b8ff219e275279fdf603fc2336a8052e64f3a95
+ms.sourcegitcommit: b8427ec6fbacee08da1a580743c338524179d0cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263819"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67389094"
 ---
 # <a name="writing-a-windows-powershell-cmdlet"></a>Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)
 
@@ -26,8 +26,6 @@ ms.locfileid: "67263819"
 [Windows PowerShell Cmdlet 개념](./windows-powershell-cmdlet-concepts.md) cmdlet 이란 무엇 이며 작동 방식에 대해 설명 합니다.
 
 [Cmdlet 코드 예가](./examples-of-cmdlet-code.md) 이 섹션에서는 사용자 고유의 cmdlet을 작성 하려면 사용할 수 있는 예제 코드를 포함 합니다.
-
-[Cmdlet 출력에 대 한 서식 파일을 쓰는](../format/writing-a-powershell-formatting-file.md) 이 섹션에서는 서식 파일을 만드는 방법에 설명 합니다. 서식 파일 PowerShell 명령줄에서 개체를 표시 하는 방법을 정의 합니다.
 
 [쓰기 Cmdlet에 대 한 자습서](./tutorials-for-writing-cmdlets.md) 이 섹션에서는 cmdlet 코드와 관련 기본 사항에 대해 자세히 알아보려면 사용할 수 있는 자습서가 포함 되어 있습니다.
 
