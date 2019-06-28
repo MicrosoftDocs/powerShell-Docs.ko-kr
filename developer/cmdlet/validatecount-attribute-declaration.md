@@ -55,10 +55,10 @@ ValidateCount 특성 인수는 cmdlet 매개 변수에 대해 허용 되는 최�
 
 [인수 개수를 확인 하는 방법을][]
 
-[Writing a Windows PowerShell Cmdlet][](Windows PowerShell Cmdlet 작성)
+[(Windows PowerShell Cmdlet 작성)][]
 
 [인수 개수를 확인 하는 방법을]: how-to-validate-an-argument-count.md
-[Writing a Windows PowerShell Cmdlet]: writing-a-windows-powershell-cmdlet.md(Windows PowerShell Cmdlet 작성)
+[(Windows PowerShell Cmdlet 작성)]: writing-a-windows-powershell-cmdlet.md
 
 [System.Int32]: /dotnet/api/System.Int32
 [System.Management.Automation.ValidateCountAttribute]: /dotnet/api/System.Management.Automation.ValidateCountAttribute
