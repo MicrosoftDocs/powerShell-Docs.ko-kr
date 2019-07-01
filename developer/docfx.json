@@ -14,7 +14,8 @@
             "ms.devlang": "powershell",
             "ms.tgt_pltfr": "windows, macos, linux",
             "author": "joeyaiello",
-            "ms.author": "jaiello"
+            "ms.author": "jaiello",
+            "disable_contribution_on_translation_quality": ["MT"]
         },
         "resource": [
             { "files": ["**/media/**", "**/*.png", "**/*.gif", "**/*.jpeg", "**/*.jpg", "**/*.svg"], "exclude": ["**/obj/**", "**/includes/**"] }
