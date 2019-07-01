@@ -10,7 +10,8 @@
             "ROBOTS": "INDEX, FOLLOW",
             "ms.devlang": "powershell",
             "ms.tgt_pltfr": "windows, macos, linux",
-            "bilingual_type": "hover over"
+            "bilingual_type": "hover over",
+            "disable_contribution_on_translation_quality": ["MT"]
         },
         "fileMetadata": {
             "ms.prod": { "**/**.md": "powershell" },
