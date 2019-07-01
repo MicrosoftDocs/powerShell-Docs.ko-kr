@@ -8,7 +8,8 @@
             "breadcrumb_path": "bread/toc.yml",
             "uhfHeaderId": "MSDocsHeader-Powershell",
             "ROBOTS": "INDEX, FOLLOW",
-            "ms.tgt_pltfr": "windows"
+            "ms.tgt_pltfr": "windows",
+            "disable_contribution_on_translation_quality": ["MT"]
         },
         "fileMetadata": {
             "ms.prod": { "**/**.md": "powershell" },
