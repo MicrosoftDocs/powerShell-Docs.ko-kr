@@ -82,7 +82,8 @@
             "uhfHeaderId": "MSDocsHeader-Powershell",
             "apiPlatform": "powershell",
             "ms.devlang": "powershell",
-            "ROBOTS": "INDEX, FOLLOW"
+            "ROBOTS": "INDEX, FOLLOW",
+	    "disable_contribution_on_translation_quality": ["MT"]
         },
         "fileMetadata": {
             "ms.prod": { "**/**.md": "powershell" },
