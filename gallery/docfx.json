@@ -9,7 +9,8 @@
             "ROBOTS": "INDEX, FOLLOW",
             "uhfHeaderId": "MSDocsHeader-Powershell",
             "ms.devlang": "powershell",
-            "ms.tgt_pltfr": "windows, macos, linux"
+            "ms.tgt_pltfr": "windows, macos, linux",
+            "disable_contribution_on_translation_quality": ["MT"]
         },
         "fileMetadata": {
             "ms.prod": { "**/**.md": "powershell" },
