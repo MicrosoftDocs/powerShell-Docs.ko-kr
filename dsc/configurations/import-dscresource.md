@@ -65,7 +65,7 @@ Name 매개 변수를 사용하는 경우 고려해야 할 사항:
 
 아래 설명된 대로 `-Name` 매개 변수를 사용하여 `–ModuleName`을 지정하는 것이 좋습니다.
 
-이 사용법은 다음과 같은 이점이 있습니다.
+이 방법은 다음과 같은 이점이 있습니다.
 
 - 지정된 리소스의 검색 범위를 제한하여 성능에 미치는 영향을 줄입니다.
 - 리소스를 정의하는 모듈을 명시적으로 정의하므로 올바른 리소스가 로드됩니다.
@@ -117,7 +117,7 @@ Configuration SchemaValidationInCorrectEnumValue
 PSDesiredStateConfiguration\WindowsFeature: At least one of the values ‘Invalid’ is not supported or valid for property ‘Ensure’ on class ‘WindowsFeature’. Please specify only supported values: Present, Absent.
 ```
 
-IntelliSense 및 스키마 유효성 검사를 사용하면 구문 분석 및 컴파일 시간에 더 많은 오류를 catch할 수 있어 런타임에 컴파일이 방지됩니다.
+IntelliSense 및 스키마 유효성 검사를 사용하면 구문 분석 및 컴파일 시간에 더 많은 오류를 catch할 수 있어 런타임에 컴플리케이션이 방지됩니다.
 
 > [!NOTE]
 > 각 DSC 리소스에는 이름 및 리소스 스키마에서 정의한 **FriendlyName**이 포함될 수 있습니다. "MSFT_ServiceResource.shema.mof"의 처음 두 줄은 다음과 같습니다.
@@ -145,7 +145,7 @@ PowerShell 4.0에서는 여러 리소스 버전을 병렬로 설치 및 사용�
 
 ### <a name="resource-location"></a>리소스 위치
 
-구성을 작성하고 컴파일하면 [PSModulePath](/powershell/developer/module/modifying-the-psmodulepath-installation-path)에서 지정한 디렉터리에 리소스를 저장할 수 있습니다. PowerShell 4.0에서 LCM을 사용하려면 모든 DSC 리소스 모듈을 “Program Files\WindowsPowerShell\Modules” 또는 `$pshome\Modules` 아래에 저장해야 합니다. PowerShell 5.0부터, 이 요구 사항이 제거되었고 리소스 모듈은 `PSModulePath`에서 지정한 디렉터리에 저장할 수 있습니다.
+구성을 작성하고 컴파일하면 [PSModulePath](/powershell/developer/module/modifying-the-psmodulepath-installation-path)에서 지정한 디렉터리에 리소스를 저장할 수 있습니다. PowerShell 4.0에서 LCM을 사용하려면 모든 DSC 리소스 모듈을 “Program Files\WindowsPowerShell\Modules” 또는 `$pshome\Modules` 아래에 저장해야 합니다. PowerShell 5.0부터, 이 요구 사항이 제거되었고 리소스 모듈은 `PSModulePath`에서 지정한 모든 디렉터리에 저장할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
