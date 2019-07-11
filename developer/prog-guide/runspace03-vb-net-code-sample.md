@@ -8,23 +8,23 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3611d66b-19da-4477-ac05-2e5e68312f51
 caps.latest.revision: 6
-ms.openlocfilehash: 432105db021bd19f467f6a275b3ea9038fa82d5b
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 6c625c325e491135af3e5c8d58eead62e89ccb4a
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081396"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734990"
 ---
-# <a name="runspace03-vbnet-code-sample"></a><span data-ttu-id="e685b-102">RunSpace03(VB.NET) 코드 샘플</span><span class="sxs-lookup"><span data-stu-id="e685b-102">RunSpace03 (VB.NET) Code Sample</span></span>
+# <a name="runspace03-vbnet-code-sample"></a><span data-ttu-id="fc656-102">RunSpace03(VB.NET) 코드 샘플</span><span class="sxs-lookup"><span data-stu-id="fc656-102">RunSpace03 (VB.NET) Code Sample</span></span>
 
-<span data-ttu-id="e685b-103">에 설명 된 콘솔 응용 프로그램에 대 한 VB.NET 소스 코드를 다음과 같습니다 [콘솔 응용 프로그램을 실행은 지정 된 스크립트를 만드는](http://msdn.microsoft.com/en-us/a93e6006-36db-4bcc-b9da-c5bebf4ffd68)합니다.</span><span class="sxs-lookup"><span data-stu-id="e685b-103">Here is the VB.NET source code for the console application described in [Creating a Console Application That Runs a Specified Script](http://msdn.microsoft.com/en-us/a93e6006-36db-4bcc-b9da-c5bebf4ffd68).</span></span> <span data-ttu-id="e685b-104">이 샘플에서는 합니다 [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) 검색 스크립트에 전달 하는 프로세스 이름의 목록에 대 한 정보를 처리 하는 스크립트를 실행 하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="e685b-104">This sample uses the [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) class to execute a script that retrieves process information for the list of process names passed into the script.</span></span> <span data-ttu-id="e685b-105">스크립트에 입력된 개체를 전달 하는 방법 및 출력 개체 뿐만 아니라 오류 개체를 검색 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e685b-105">It shows how to pass input objects to a script and how to retrieve error objects as well as the output objects.</span></span>
+<span data-ttu-id="fc656-103">에 설명 된 콘솔 응용 프로그램에 대 한 VB.NET 소스 코드를 다음과 같습니다 [콘솔 응용 프로그램을 실행은 지정 된 스크립트를 만드는](fd)합니다.</span><span class="sxs-lookup"><span data-stu-id="fc656-103">Here is the VB.NET source code for the console application described in [Creating a Console Application That Runs a Specified Script](fd).</span></span> <span data-ttu-id="fc656-104">이 샘플에서는 합니다 [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) 검색 스크립트에 전달 하는 프로세스 이름의 목록에 대 한 정보를 처리 하는 스크립트를 실행 하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="fc656-104">This sample uses the [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) class to execute a script that retrieves process information for the list of process names passed into the script.</span></span> <span data-ttu-id="fc656-105">스크립트에 입력된 개체를 전달 하는 방법 및 출력 개체 뿐만 아니라 오류 개체를 검색 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fc656-105">It shows how to pass input objects to a script and how to retrieve error objects as well as the output objects.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e685b-106">Windows 소프트웨어 개발 키트에 대 한 Windows Vista 및 Microsoft.NET Framework 3.0 런타임 구성 요소를 사용 하 여이 샘플에 대 한 VB.NET 소스 파일 (runspace03.vb)를 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e685b-106">You can download the VB.NET source file (runspace03.vb) for this sample by using the Windows Software Development Kit for Windows Vista and Microsoft .NET Framework 3.0 Runtime Components.</span></span> <span data-ttu-id="e685b-107">다운로드 지침에 대해서 [Windows PowerShell 설치 및 Windows PowerShell SDK를 다운로드 하는 방법을](/powershell/developer/installing-the-windows-powershell-sdk)합니다.</span><span class="sxs-lookup"><span data-stu-id="e685b-107">For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).</span></span>
+> <span data-ttu-id="fc656-106">Windows 소프트웨어 개발 키트에 대 한 Windows Vista 및 Microsoft.NET Framework 3.0 런타임 구성 요소를 사용 하 여이 샘플에 대 한 VB.NET 소스 파일 (runspace03.vb)를 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc656-106">You can download the VB.NET source file (runspace03.vb) for this sample by using the Windows Software Development Kit for Windows Vista and Microsoft .NET Framework 3.0 Runtime Components.</span></span> <span data-ttu-id="fc656-107">다운로드 지침에 대해서 [Windows PowerShell 설치 및 Windows PowerShell SDK를 다운로드 하는 방법을](/powershell/developer/installing-the-windows-powershell-sdk)합니다.</span><span class="sxs-lookup"><span data-stu-id="fc656-107">For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).</span></span>
 >
-> <span data-ttu-id="e685b-108">다운로드 한 소스 파일에서 사용할 수는  **\<PowerShell 샘플 >** 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="e685b-108">The downloaded source files are available in the **\<PowerShell Samples>** directory.</span></span>
+> <span data-ttu-id="fc656-108">다운로드 한 소스 파일에서 사용할 수는  **\<PowerShell 샘플 >** 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="fc656-108">The downloaded source files are available in the **\<PowerShell Samples>** directory.</span></span>
 
-## <a name="code-sample"></a><span data-ttu-id="e685b-109">코드 예제</span><span class="sxs-lookup"><span data-stu-id="e685b-109">Code Sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="fc656-109">코드 예제</span><span class="sxs-lookup"><span data-stu-id="fc656-109">Code Sample</span></span>
 
 ```vb
 Imports System
@@ -106,8 +106,8 @@ End Namespace
 
 <!-- TODO!!!: [!code-csharp[Runspace03.vb](../../powershell-sdk-samples/SDK-2.0/vb/Runspace01/Runspace03.vb#L09-L83 "Runspace03.vb")] -->
 
-## <a name="see-also"></a><span data-ttu-id="e685b-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e685b-110">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fc656-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fc656-110">See Also</span></span>
 
-[<span data-ttu-id="e685b-111">Windows PowerShell 프로그래머 가이드</span><span class="sxs-lookup"><span data-stu-id="e685b-111">Windows PowerShell Programmer's Guide</span></span>](./windows-powershell-programmer-s-guide.md)
+[<span data-ttu-id="fc656-111">Windows PowerShell 프로그래머 가이드</span><span class="sxs-lookup"><span data-stu-id="fc656-111">Windows PowerShell Programmer's Guide</span></span>](./windows-powershell-programmer-s-guide.md)
 
-[<span data-ttu-id="e685b-112">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="e685b-112">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="fc656-112">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="fc656-112">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
