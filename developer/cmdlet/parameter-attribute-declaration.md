@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Parameter attribute
 ms.assetid: 08433d0b-169b-42c8-9335-2881d9034698
 caps.latest.revision: 13
-ms.openlocfilehash: a3488d5fb3f7eb3df28d0242d6c39d07145a3c8d
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 81b1ed95669f51ba554f6f99031d098e239f02e0
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62067555"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735142"
 ---
 # <a name="parameter-attribute-declaration"></a>Parameter 특성 선언
 
@@ -36,7 +36,7 @@ ms.locfileid: "62067555"
 
 `ParameterSetName` ([System.String](/dotnet/api/System.String)) 명명 된 매개 변수는 선택 사항입니다. 이 cmdlet은 매개 변수가 속한 매개 변수 집합을 지정 합니다. 없는 매개 변수 집합을 지정 하는 경우 매개 변수는 모든 매개 변수 집합에 속합니다.
 
-`Position` ([System.Integer](/dotnet/api/System.Integer)) 명명 된 매개 변수는 선택 사항입니다. Windows PowerShell 명령 내에서 매개 변수의 위치를 지정합니다.
+`Position` ([System.Int32](/dotnet/api/System.Int32)) 명명 된 매개 변수는 선택 사항입니다. Windows PowerShell 명령 내에서 매개 변수의 위치를 지정합니다.
 
 `ValueFromPipeline` ([System.Boolean](/dotnet/api/System.Boolean)) 명명 된 매개 변수는 선택 사항입니다. `True` cmdlet 매개 변수는 파이프라인 개체에서 해당 값을 나타냅니다. Cmdlet은 전체 액세스 하는 경우이 키워드를 지정 합니다. 개체의 속성 뿐 아니라 개체입니다. 기본값은 `false`입니다.
 

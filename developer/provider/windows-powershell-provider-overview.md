@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 82244fbd-07b9-47f3-805c-3fb90ebbf58a
 caps.latest.revision: 13
-ms.openlocfilehash: 0d4addc0a064873701ae15c204dbd335f3374ab7
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 81f6c8cd75ccea9e711cd8f6d6daa6cca5a499a0
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080913"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734872"
 ---
 # <a name="windows-powershell-provider-overview"></a>Windows PowerShell 공급자 개요
 
@@ -27,7 +27,7 @@ Windows PowerShell 공급자를 통해 모든 데이터 저장소를 탑재 된 
 
 ## <a name="type-of-providers"></a>공급자의 형식
 
-여러 유형의 다른 수준의 기능을 제공 하는 각 공급자 있습니다. 공급자의 하위 항목 중 하나에서 파생 되는 클래스로 구현 되는 [System.Management.Automation.Sessionstatecategory.Cmdletprovider](/dotnet/api/System.Management.Automation.SessionStateCategory.CmdletProvider) 클래스입니다. 다양 한 유형의 공급자에 대 한 정보를 참조 하세요 [공급자 유형을](./provider-types.md)합니다.
+여러 유형의 다른 수준의 기능을 제공 하는 각 공급자 있습니다. 공급자의 하위 항목 중 하나에서 파생 되는 클래스로 구현 되는 [System.Management.Automation.SessionStateCategory](/dotnet/api/system.management.automation.sessionstatecategory?view=pscore-6.2.0) **CmdletProvider** 클래스입니다. 다양 한 유형의 공급자에 대 한 정보를 참조 하세요 [공급자 유형을](./provider-types.md)합니다.
 
 ## <a name="provider-cmdlets"></a>공급자 cmdlet
 
@@ -39,7 +39,7 @@ Windows PowerShell 공급자를 통해 모든 데이터 저장소를 탑재 된 
 
 ### <a name="drive-qualified-paths"></a>드라이브의 정규화 된 경로
 
-드라이브의 정규화 된 경로 항목 이름, 컨테이너 및 항목의 위치를 가리키는, 하위 컨테이너 항목이 액세스 될 Windows PowerShell 드라이브의 조합입니다. (드라이브는 데이터 저장소에 액세스 하는 데 사용 되는 공급자에 의해 정의 됩니다. 이 경로 드라이브 이름 뒤에 콜론 (:)를 사용 하 여 시작 합니다. 예를 들면 다음과 같습니다. `get-childitem C:`
+드라이브의 정규화 된 경로 항목 이름, 컨테이너 및 항목의 위치를 가리키는, 하위 컨테이너 항목이 액세스 될 Windows PowerShell 드라이브의 조합입니다. (드라이브는 데이터 저장소에 액세스 하는 데 사용 되는 공급자에 의해 정의 됩니다. 이 경로 드라이브 이름 뒤에 콜론 (:)를 사용 하 여 시작 합니다. 예: `get-childitem C:`
 
 ### <a name="provider-qualified-paths"></a>공급자의 정규화 된 경로
 
@@ -63,7 +63,7 @@ Windows PowerShell 공급자에 대 한 원격 액세스를 허용 하려면 현
 
 ## <a name="provider-capabilities"></a>공급자 기능
 
-합니다 [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) 열거형은 다양 한 공급자에서 지원할 수 있는 기능을 정의 합니다. 여기에 트랜잭션을 지원 사용 하 여 와일드 카드, 항목을 필터링 하는 기능이 포함 됩니다. 기능 공급자를 지정 하려면 값의 목록을 추가 합니다 [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) 논리 결합 열거형 `OR` 작업으로는 [ System.Management.Automation.Provider.Cmdletproviderattribute.Providercapabilities*](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) 는 두 번째 매개 변수인 특성의 속성을 [System.Management.Automation.Provider.Cmdletproviderattribute ](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 공급자 클래스에 대 한 특성입니다. 공급자를 지원 한다는 다음 특성을 지정 하는 예를 들어 합니다 [System.Management.Automation.Provider.Providercapabilities.Shouldprocess](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities.ShouldProcess) 고 [ System.Management.Automation.Provider.Providercapabilities.Transactions](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities.Transactions) 기능입니다.
+합니다 [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) 열거형은 다양 한 공급자에서 지원할 수 있는 기능을 정의 합니다. 여기에 트랜잭션을 지원 사용 하 여 와일드 카드, 항목을 필터링 하는 기능이 포함 됩니다. 기능 공급자를 지정 하려면 값의 목록을 추가 합니다 [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) 논리 결합 열거형 `OR` 작업으로는 [ System.Management.Automation.Provider.Cmdletproviderattribute.Providercapabilities*](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) 는 두 번째 매개 변수인 특성의 속성을 [System.Management.Automation.Provider.Cmdletproviderattribute ](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 공급자 클래스에 대 한 특성입니다. 공급자를 지원 한다는 다음 특성을 지정 하는 예를 들어 합니다 [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **ShouldProcess** 고 [ System.Management.Automation.Provider.ProviderCapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **트랜잭션을** 기능입니다.
 
 ```csharp
 [CmdletProvider(RegistryProvider.ProviderName, ProviderCapabilities.ShouldProcess | ProviderCapabilities.Transactions)]
@@ -90,7 +90,7 @@ Windows PowerShell 엔진 호출을 [System.Management.Automation.Provider.Icmdl
 <CmdletHelpPath>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Windows PowerShell 공급자 기능](./provider-types.md)
 

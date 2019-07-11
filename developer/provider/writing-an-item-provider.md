@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 606c880c-6cf1-4ea6-8730-dbf137bfabff
 caps.latest.revision: 5
-ms.openlocfilehash: 9285a2f0e673de8b86084157423512bdeeda109d
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 12d2cb8c40c9fd6278bb964a6259d03167536195
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080818"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734710"
 ---
 # <a name="writing-an-item-provider"></a>항목 공급자 작성
 
@@ -25,7 +25,7 @@ Windows PowerShell 공급자에 대 한 자세한 내용은 참조 하세요. [W
 
 ## <a name="implementing-item-methods"></a>항목 메서드를 구현합니다.
 
-합니다 [System.Management.Automation.Provider.Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 클래스에 액세스 하는 데이터 저장소에서 항목을 조작할 수 있는 여러 메서드를 노출 합니다. 이러한 메서드의 전체 목록은 참조 하세요 [ItemCmdletProvider 메서드](http://msdn.microsoft.com/library/system.management.automation.provider.itemcmdletprovider_methods\(v=vs.85\).aspx)합니다. 이 예제에서는 이러한 메서드 중 4 개를 구현 합니다. [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 지정된 된 경로에 항목을 가져옵니다. [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 지정된 된 항목의 값을 설정 합니다. [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) 항목이 지정된 된 경로에 있는지 여부를 확인 합니다. [System.Management.Automation.Provider.Itemcmdletprovider.Isvalidpath*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) 데이터 저장소의 위치에 매핑되는 경우 참조에 대 한 경로 확인 합니다.
+합니다 [System.Management.Automation.Provider.Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 클래스에 액세스 하는 데이터 저장소에서 항목을 조작할 수 있는 여러 메서드를 노출 합니다. 이러한 메서드의 전체 목록은 참조 하세요 [ItemCmdletProvider 메서드](/dotnet/api/system.management.automation.provider.itemcmdletprovider?view=pscore-6.2.0#methods)합니다. 이 예제에서는 이러한 메서드 중 4 개를 구현 합니다. [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 지정된 된 경로에 항목을 가져옵니다. [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 지정된 된 항목의 값을 설정 합니다. [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) 항목이 지정된 된 경로에 있는지 여부를 확인 합니다. [System.Management.Automation.Provider.Itemcmdletprovider.Isvalidpath*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) 데이터 저장소의 위치에 매핑되는 경우 참조에 대 한 경로 확인 합니다.
 
 > [!NOTE]
 > 이 항목의 정보를 빌드 [Windows PowerShell 공급자 퀵 스타트](./windows-powershell-provider-quickstart.md)합니다. 이 항목에서는 기본 공급자 프로젝트를 설정 하는 방법 다루지 않습니다 또는 메서드를 구현 하는 방법에서 상속 합니다 [System.Management.Automation.Provider.Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 만들고 드라이브를 제거 하는 클래스입니다.
@@ -46,7 +46,7 @@ Windows PowerShell 공급자에 대 한 자세한 내용은 참조 하세요. [W
 
 ### <a name="implementing-getitem"></a>GetItem 구현
 
-합니다 [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 사용자를 호출할 때 PowerShell 엔진에 의해 호출 됩니다 합니다 [Microsoft.PowerShell.Commands.Get 항목](/dotnet/api/Microsoft.PowerShell.Commands.Get-Item) cmdlet에 공급자입니다. 메서드는 지정된 된 경로에 있는 항목을 반환합니다. Access 데이터베이스 예제에서는 메서드 항목에 드라이브를 자체 데이터베이스 또는 데이터베이스에서 행의 테이블 인지 여부를 확인 합니다. 메서드를 호출 하 여 PowerShell 엔진에 항목을 전송 합니다 [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) 메서드.
+합니다 [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 사용자를 호출할 때 PowerShell 엔진에 의해 호출 되는 [Microsoft.PowerShell.Commands.GetItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.getitemcommand) cmdlet 공급자입니다. 메서드는 지정된 된 경로에 있는 항목을 반환합니다. Access 데이터베이스 예제에서는 메서드 항목에 드라이브를 자체 데이터베이스 또는 데이터베이스에서 행의 테이블 인지 여부를 확인 합니다. 메서드를 호출 하 여 PowerShell 엔진에 항목을 전송 합니다 [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) 메서드.
 
 ```csharp
 protected override void GetItem(string path)
@@ -85,9 +85,9 @@ protected override void GetItem(string path)
 
 ### <a name="implementing-setitem"></a>SetItem 구현
 
-합니다 [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 메서드는 PowerShell 엔진을 호출 하 여 사용자를 호출할 때 합니다 [Microsoft.PowerShell.Commands.Set 항목](/dotnet/api/Microsoft.PowerShell.Commands.Set-Item) cmdlet . 지정된 된 경로에 있는 항목의 값을 설정합니다.
+합니다 [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 메서드는 PowerShell 엔진을 호출 하 여 사용자를 호출할 때 합니다 [Microsoft.PowerShell.Commands.SetItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.setitemcommand) cmdlet입니다. 지정된 된 경로에 있는 항목의 값을 설정합니다.
 
-해당 항목 이므로 행에는 메서드가 throw 하는 경우에 있는 항목의 값을 설정 하려면 편이 Access 데이터베이스 예제에서 [NotSupportedException](http://msdn.microsoft.com/library/system.notsupportedexception\(v=vs.110\).aspx) 항목이 없는 경우 행입니다.
+해당 항목 이므로 행에는 메서드가 throw 하는 경우에 있는 항목의 값을 설정 하려면 편이 Access 데이터베이스 예제에서 [NotSupportedException](/dotnet/api/system.notsupportedexception?view=netframework-4.8) 항목이 없는 경우 행입니다.
 
 ```csharp
 protected override void SetItem(string path, object values)
@@ -145,7 +145,7 @@ protected override void SetItem(string path, object values)
 
 ### <a name="implementing-itemexists"></a>ItemExists 구현
 
-합니다 [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) 메서드는 PowerShell 엔진에서 호출 하는 사용자는 [Microsoft.PowerShell.Commands.Test 경로](/dotnet/api/Microsoft.PowerShell.Commands.Test-Path) cmdlet. 메서드는 지정된 된 경로에 항목이 있는지 여부를 결정 합니다. 항목이 없으면 메서드가 전달 PowerShell 엔진으로 다시 호출 하 여 [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject)합니다.
+합니다 [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) 메서드는 PowerShell 엔진에서 호출 하는 사용자는 [Microsoft.PowerShell.Commands.TestPathCommand](/dotnet/api/Microsoft.PowerShell.Commands.Testpathcommand) cmdlet입니다. 메서드는 지정된 된 경로에 항목이 있는지 여부를 결정 합니다. 항목이 없으면 메서드가 전달 PowerShell 엔진으로 다시 호출 하 여 [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject)합니다.
 
 ```csharp
 protected override bool ItemExists(string path)
@@ -225,7 +225,7 @@ protected override bool IsValidPath(string path)
 
 일반적인 실제 공급자는 하나의 경로에서 드라이브 내에서 다른 항목을 이동 및 기타 항목을 포함 하는 항목을 지원할 수 있습니다. 컨테이너를 지 원하는 공급자의 예제를 보려면 [컨테이너 공급자 작성](./writing-a-container-provider.md)합니다. 이동 된 항목을 지 원하는 공급자의 예제를 참조 하세요 [탐색 공급자 작성](./writing-a-navigation-provider.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [컨테이너 공급자 작성](./writing-a-container-provider.md)
 

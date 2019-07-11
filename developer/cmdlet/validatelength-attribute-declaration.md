@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ValidateLength attribute
 ms.assetid: 82fe3a35-a94b-4bc1-ad9e-dfc5f1e788b3
 caps.latest.revision: 13
-ms.openlocfilehash: 4d3cdccc0fe3e24b1221e41beef4821b613aab93
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: a25fa2410fcc6803563573596af1bc99052c3ffa
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65855152"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735100"
 ---
 # <a name="validatelength-attribute-declaration"></a>ValidateLength 특성 선언
 
@@ -31,9 +31,9 @@ ValidateLength 특성 cmdlet 매개 변수 인수에 대 한 문자의 최소 �
 
 #### <a name="parameters"></a>매개 변수
 
-`MinLength` ([System.Integer](/dotnet/api/System.Integer)) 필요 합니다. 허용 되는 문자의 최소 수를 지정 합니다.
+`MinLength` ([System.Int32](/dotnet/api/System.Int32)) 필요 합니다. 허용 되는 문자의 최소 수를 지정 합니다.
 
-`MaxLength` ([System.Integer](/dotnet/api/System.Integer)) 필요 합니다. 허용 되는 문자의 최대 수를 지정 합니다.
+`MaxLength` ([System.Int32](/dotnet/api/System.Int32)) 필요 합니다. 허용 되는 문자의 최대 수를 지정 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -51,7 +51,7 @@ ValidateLength 특성 cmdlet 매개 변수 인수에 대 한 문자의 최소 �
 
 - ValidateLength 특성은 정의한 합니다 [System.Management.Automation.Validatelengthattribute](/dotnet/api/System.Management.Automation.ValidateLengthAttribute) 클래스입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [System.Management.Automation.Validatelengthattribute](/dotnet/api/System.Management.Automation.ValidateLengthAttribute)
 

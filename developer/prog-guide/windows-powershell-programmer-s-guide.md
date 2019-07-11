@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows PowerShell Programmer's Guide
 ms.assetid: f3aaf667-af84-4ea8-a5ad-d454d0d700b8
 caps.latest.revision: 9
-ms.openlocfilehash: 75425fbd38141fc82dd834835912c357ecfa6d2b
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 44a9c970d32dc6f98456227f8b02101280541dd9
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081090"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734881"
 ---
 # <a name="windows-powershell-programmer39s-guide"></a>Windows PowerShell 프로그래머&#39;가이드
 
@@ -37,7 +37,7 @@ ms.locfileid: "62081090"
 
 Windows PowerShell 개발에서 명령 사용할 수 있는 여러 유형의 정의 합니다. 이러한 명령에 포함: 함수, 필터, 스크립트, 별칭 및 실행 파일 (응용 프로그램). 이 가이드에 설명 된 기본 명령 유형은 "cmdlet"을 호출 하는 간단 하 고 작은 명령을 합니다. Windows PowerShell cmdlet 집합을 제공 하 고 사용자 환경에 맞게 사용자 지정 cmdlet를 완벽 하 게 지원 합니다. Windows PowerShell 런타임이 cmdlet을 파이프라인을 사용 하는 것 처럼 모든 명령 유형을 처리 합니다.
 
-명령 외에도 Windows PowerShell cmdlet의 특정 집합을 사용할 수 있도록 다양 한 사용자 지정 가능한 Windows PowerShell 공급자를 지원 합니다. 셸에서 Windows PowerShell이 제공 하는 호스트 응용 프로그램 (Windows PowerShell.exe) 내에서 작동 하지만 특정 요구 사항에 맞게 개발할 수 있는 사용자 지정 호스트 응용 프로그램에서 동일 하 게 액세스할 수 있습니다. 자세한 내용은 [Windows PowerShell 작동 방식](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)합니다.
+명령 외에도 Windows PowerShell cmdlet의 특정 집합을 사용할 수 있도록 다양 한 사용자 지정 가능한 Windows PowerShell 공급자를 지원 합니다. 셸에서 Windows PowerShell이 제공 하는 호스트 응용 프로그램 (Windows PowerShell.exe) 내에서 작동 하지만 특정 요구 사항에 맞게 개발할 수 있는 사용자 지정 호스트 응용 프로그램에서 동일 하 게 액세스할 수 있습니다. 자세한 내용은 [Windows PowerShell 작동 방식](/previous-versions//ms714658(v=vs.85))합니다.
 
 ### <a name="windows-powershell-cmdlets"></a>Windows PowerShell Cmdlet
 
@@ -51,17 +51,17 @@ Cmdlet에 대 한 자세한 내용은 참조 하십시오 [Windows PowerShell Cm
 
 Windows PowerShell에서는 여러 기본 Windows PowerShell 공급자를 제공합니다. 예를 들어 레지스트리 공급자는 탐색 및 조작 Windows 레지스트리를 지원합니다. 레지스트리 키 항목으로 표시 됩니다 하 고 레지스트리 값 속성으로 처리 됩니다.
 
-에 설명 된 대로 사용자 고유의 Windows PowerShell 공급자를 작성 해야 할 수는 사용자가 액세스 해야 하는 데이터 저장소를 노출 하는 경우 [Windows PowerShell 공급자를 만드는](./how-to-create-a-windows-powershell-provider.md)합니다. 자세한 내용은 aboutWindows PowerShell 공급자에 대 한 참조 [Windows PowerShell 작동 방식](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)합니다.
+에 설명 된 대로 사용자 고유의 Windows PowerShell 공급자를 작성 해야 할 수는 사용자가 액세스 해야 하는 데이터 저장소를 노출 하는 경우 [Windows PowerShell 공급자를 만드는](./how-to-create-a-windows-powershell-provider.md)합니다. 자세한 내용은 aboutWindows PowerShell 공급자에 대 한 참조 [Windows PowerShell 작동 방식](/previous-versions//ms714658(v=vs.85))합니다.
 
 ### <a name="host-application"></a>호스트 응용 프로그램
 
 Windows PowerShell에는 사용자와 상호 작용 하 고 콘솔 창을 사용 하 여 Windows PowerShell 런타임을 호스트 하는 콘솔 응용 프로그램을 기본 호스트 응용 프로그램이 powershell.exe를 포함 합니다.
 
-드물게 있습니다 해야 Windows powershell의 경우 호스트 응용 프로그램 자체를 쓸 사용자 지정은 지원 되지만 합니다. 사용자 고유의 응용 프로그램을 해야 할 수 있습니다 하는 한 가지 경우에는 기본 호스트 응용 프로그램에서 제공 하는 인터페이스 보다 뛰어나며는 GUI 인터페이스에 대 한 요구 사항이 있는 경우는 합니다. 명령줄에서 GUI로 사용 하는 경우에 사용자 지정 응용 프로그램을 수도 있습니다. 자세한 내용은 [Windows PowerShell 호스트 응용 프로그램을 만드는 방법](http://msdn.microsoft.com/en-us/d31355c9-a270-4b09-8f0c-35a7392a7d07)합니다.
+드물게 있습니다 해야 Windows powershell의 경우 호스트 응용 프로그램 자체를 쓸 사용자 지정은 지원 되지만 합니다. 사용자 고유의 응용 프로그램을 해야 할 수 있습니다 하는 한 가지 경우에는 기본 호스트 응용 프로그램에서 제공 하는 인터페이스 보다 뛰어나며는 GUI 인터페이스에 대 한 요구 사항이 있는 경우는 합니다. 명령줄에서 GUI로 사용 하는 경우에 사용자 지정 응용 프로그램을 수도 있습니다. 자세한 내용은 [Windows PowerShell 호스트 응용 프로그램을 만드는 방법](/powershell/developer/hosting/writing-a-windows-powershell-host-application)합니다.
 
 ### <a name="windows-powershell-runtime"></a>Windows PowerShell 런타임
 
-Windows PowerShell 런타임에 명령 처리를 구현 하는 실행 엔진입니다. 호스트 응용 프로그램 및 Windows PowerShell 명령 및 공급자 간의 인터페이스를 제공 하는 클래스를 포함 합니다. Windows PowerShell 런타임에 셸 및 명령 실행 작업 환경은 현재 Windows PowerShell 세션에 대 한 runspace 개체로 구현 됩니다. 작업 세부 정보를 참조 하세요 [Windows PowerShell 작동 방식](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)합니다.
+Windows PowerShell 런타임에 명령 처리를 구현 하는 실행 엔진입니다. 호스트 응용 프로그램 및 Windows PowerShell 명령 및 공급자 간의 인터페이스를 제공 하는 클래스를 포함 합니다. Windows PowerShell 런타임에 셸 및 명령 실행 작업 환경은 현재 Windows PowerShell 세션에 대 한 runspace 개체로 구현 됩니다. 작업 세부 정보를 참조 하세요 [Windows PowerShell 작동 방식](/previous-versions//ms714658(v=vs.85))합니다.
 
 ### <a name="windows-powershell-language"></a>Windows PowerShell 언어
 
@@ -81,7 +81,7 @@ Windows PowerShell 다양 한.NET과 같은 다른 개체 및 XML 개체에 대 
 
   ETS를 사용 하는 만들 수 있습니다 유연한 새 "형식" Windows PowerShell 언어와 호환 됩니다. 예를 들어 Windows PowerShell 언어 스크립팅에 적용 동일한 의미 체계를 사용 하 여 개체를 사용 하 여 작업에 개체를 계산 하는 경우 확인할 수 있다면.NET 개발자 라면 `true`합니다.
 
-  ETS 및 Windows PowerShell 개체를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [Windows PowerShell 개체 개념](http://msdn.microsoft.com/en-us/12700631-be23-4e6b-9bf0-81ea0d166353)합니다.
+  ETS 및 Windows PowerShell 개체를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [Windows PowerShell 개체 개념](/powershell/scripting/learn/understanding-important-powershell-concepts?view=powershell-6)합니다.
 
 ## <a name="programming-for-windows-powershell"></a>Windows PowerShell에 대 한 프로그래밍
 
@@ -100,7 +100,7 @@ Windows PowerShell 셸을 사용 하 여 시작 하는 방법에 대 한 자세�
 |항목|정의|
 |-----------|----------------|
 |[Windows PowerShell 공급자를 만드는 방법](./how-to-create-a-windows-powershell-provider.md)|이 섹션에는 Windows PowerShell 용 Windows PowerShell 공급자를 빌드하는 방법을 설명 합니다.|
-|[Windows PowerShell 호스트 응용 프로그램을 만드는 방법](http://msdn.microsoft.com/en-us/d31355c9-a270-4b09-8f0c-35a7392a7d07)|이 섹션에서는 runspace를 조작 하는 호스트 응용 프로그램을 작성 하는 방법과 자체 사용자 지정 호스트를 구현 하는 호스트 응용 프로그램을 작성 하는 방법을 설명 합니다.|
+|[Windows PowerShell 호스트 응용 프로그램을 만드는 방법](/powershell/developer/hosting/writing-a-windows-powershell-host-application)|이 섹션에서는 runspace를 조작 하는 호스트 응용 프로그램을 작성 하는 방법과 자체 사용자 지정 호스트를 구현 하는 호스트 응용 프로그램을 작성 하는 방법을 설명 합니다.|
 |[Windows PowerShell 스냅인을 만드는 방법](../cmdlet/how-to-create-a-windows-powershell-snap-in.md)|이 섹션에는 어셈블리의 모든 cmdlet 및 공급자를 등록 하는 데 사용 되는 스냅인을 만드는 방법 및 사용자 지정 스냅인을 만드는 방법을 설명 합니다.|
 |[콘솔 셸을 만드는 방법](./how-to-create-a-console-shell.md)|이 섹션에는 확장 가능 하지 않은 콘솔 셸을 만드는 방법을 설명 합니다.|
 |[Windows PowerShell 개념](./windows-powershell-concepts.md)|이 섹션에서는 개발자의 관점에서 Windows PowerShell을 이해 하는 데 도움이 되는 개념 정보를 포함 합니다.|

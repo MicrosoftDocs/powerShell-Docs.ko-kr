@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows PowerShell SDK
 ms.assetid: cbba4879-bcac-484a-9906-4bbe2cd1eb33
 caps.latest.revision: 11
-ms.openlocfilehash: 86595ebaac32318a4e3b9a3c4b295c73fb2e1c75
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 48b2b2b9ab2a39cf185ed54bcfa99d46562e13b6
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080501"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733741"
 ---
 # <a name="windows-powershell-reference"></a>Windows PowerShell 참조
 
@@ -53,4 +53,4 @@ Windows PowerShell SDK 외에도 다음 리소스를 자세한 정보를 제공 
 
 [System.Management.Automation.Internal](/dotnet/api/System.Management.Automation.Internal) 이 네임 스페이스에는 다른 네임 스페이스 클래스에서 사용 하는 기본 클래스를 포함 합니다. 예를 들어 합니다 [System.Management.Automation.Internal.Cmdletmetadataattribute](/dotnet/api/System.Management.Automation.Internal.CmdletMetadataAttribute) 클래스는 기본 클래스에 대 한 합니다 [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) 클래스.
 
-[System.Management.Automation.Runspaces](/dotnet/api/System.Management.Automation.Runspaces) 클래스, 열거형 및 인터페이스는 Windows PowerShell runspace를 만드는 데이 네임 스페이스에 포함 되어 있습니다. 이 컨텍스트에서 Windows PowerShell runspace는 하나 이상의 Windows PowerShell 파이프라인 cmdlet을 호출 하는 컨텍스트입니다. 즉, cmdlet은 Windows PowerShell runspace의 컨텍스트 내에서 작동합니다. 자세한 내용은 aboutWindows PowerShell runspace에 대 한 참조 [Windows PowerShell Runspace](http://msdn.microsoft.com/en-us/a1582cfe-f06d-4aff-adc6-71f49a860ce9)합니다.
+[System.Management.Automation.Runspaces](/dotnet/api/System.Management.Automation.Runspaces) 클래스, 열거형 및 인터페이스는 Windows PowerShell runspace를 만드는 데이 네임 스페이스에 포함 되어 있습니다. 이 컨텍스트에서 Windows PowerShell runspace는 하나 이상의 Windows PowerShell 파이프라인 cmdlet을 호출 하는 컨텍스트입니다. 즉, cmdlet은 Windows PowerShell runspace의 컨텍스트 내에서 작동합니다. 자세한 내용은 aboutWindows PowerShell runspace에 대 한 참조 [Windows PowerShell Runspace](https://msdn.microsoft.com/en-us/a1582cfe-f06d-4aff-adc6-71f49a860ce9)합니다.

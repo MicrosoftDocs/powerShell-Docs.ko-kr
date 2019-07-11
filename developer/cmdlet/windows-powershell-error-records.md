@@ -13,12 +13,12 @@ helpviewer_keywords:
 - error category string [PowerShell SDK]
 ms.assetid: bdd66fea-eb63-4bb6-9cbe-9a799e5e0db5
 caps.latest.revision: 9
-ms.openlocfilehash: f6f5e50c55b477cbbeeaaf4f3ea665d5dc07758c
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5412d88b690a1f5f1ef387416e3bf9da3a32c95d
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62067045"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735069"
 ---
 # <a name="windows-powershell-error-records"></a>Windows PowerShell 오류 레코드
 
@@ -60,9 +60,9 @@ Cmdlet는 예외를 catch 하지 않은, 새 예외 하며 가장 오류 조건�
 
 ## <a name="error-category"></a>오류 범주
 
-오류 레코드를 만들 때 정의 된 상수 중 하나를 사용 하 여 오류의 범주를 지정 합니다 [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory) 열거형입니다. Windows PowerShell의 오류 범주를 사용 하 여 사용자가 설정 된 경우 오류 정보를 표시 하는 `$ErrorView` 변수를 `"CategoryView"`입니다.
+오류 레코드를 만들 때 정의 된 상수 중 하나를 사용 하 여 오류의 범주를 지정 합니다 [System.Management.Automation.ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) 열거형입니다. Windows PowerShell의 오류 범주를 사용 하 여 사용자가 설정 된 경우 오류 정보를 표시 하는 `$ErrorView` 변수를 `"CategoryView"`입니다.
 
-사용 하지 않도록 합니다 [System.Management.Automation.Errorcategory.Notspecified](/dotnet/api/System.Management.Automation.ErrorCategory.NotSpecified) 상수입니다. 또는 오류를 발생 시킨 작업에 대 한 오류에 대 한 정보를 사용 하는 경우 범주를 완벽 하 게 일치 하지 않습니다. 경우에 오류 또는 작업을 가장 잘 설명 하는 범주를 선택 합니다.
+사용 하지 않도록 합니다 [System.Management.Automation.ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) **NotSpecified** 상수입니다. 또는 오류를 발생 시킨 작업에 대 한 오류에 대 한 정보를 사용 하는 경우 범주를 완벽 하 게 일치 하지 않습니다. 경우에 오류 또는 작업을 가장 잘 설명 하는 범주를 선택 합니다.
 
 Windows PowerShell에서 표시 되는 정보는 종류별 보기 문자열로 참조 되며의 속성에서 빌드되는 [System.Management.Automation.Errorcategoryinfo](/dotnet/api/System.Management.Automation.ErrorCategoryInfo) 클래스입니다. (이 클래스는 오류를 통해서나 [System.Management.Automation.ErrorRecord.CategoryInfo](/dotnet/api/System.Management.Automation.ErrorRecord.CategoryInfo) 속성입니다.)
 
@@ -72,7 +72,7 @@ Windows PowerShell에서 표시 되는 정보는 종류별 보기 문자열로 �
 
 다음 목록에서는 표시 되는 정보를 설명 합니다.
 
-- 범주: Windows PowerShell 정의한 [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory) 상수입니다.
+- 범주: Windows PowerShell 정의한 [System.Management.Automation.ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) 상수입니다.
 
 - TargetName: 기본적으로 개체의 이름을 cmdlet가 처리 오류가 발생 합니다. 또는 다른 cmdlet 정의한 문자열입니다.
 
@@ -88,9 +88,9 @@ Windows PowerShell에서 표시 되는 정보는 종류별 보기 문자열로 �
 
 대체 메시지에서 제공 되는 [System.Management.Automation.ErrorDetails](/dotnet/api/System.Management.Automation.ErrorDetails) 개체입니다. Windows PowerShell에서 사용할 수 있는 추가 지역화 정보를 제공 하기 때문에이 개체의 생성자 중 하나를 사용 합니다.
 
-- [ErrorDetails.ErrorDetails (Cmdlet, 문자열, 문자열, 개체\[System.Management.Automation.ErrorDetails.%23Ctor%28System.Management.Automation.Cmdlet%2CSystem.String%2CSystem.String%2CSystem.Object%5B%5D%29? Displayproperty =](/dotnet/api/System.Management.Automation.ErrorDetails.%23ctor%28System.Management.Automation.Cmdlet%2CSystem.String%2CSystem.String%2CSystem.Object%5B%5D%29): 템플릿 문자열에는 cmdlet를 구현 하는 동일한 어셈블리에 리소스 문자열 또는 재정의 통해 템플릿 문자열을 로드 하려는 경우이 생성자를 사용 하 여 [System.Management.Automation.Cmdlet.GetResourceString ](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString) 메서드.
+- [ErrorDetails(Cmdlet, String, String, Object[])](/dotnet/api/system.management.automation.errordetails.-ctor?view=pscore-6.2.0#System_Management_Automation_ErrorDetails__ctor_System_Management_Automation_Cmdlet_System_String_System_String_System_Object___): 템플릿 문자열에는 cmdlet를 구현 하는 동일한 어셈블리에 리소스 문자열 또는 재정의 통해 템플릿 문자열을 로드 하려는 경우이 생성자를 사용 하 여 [System.Management.Automation.Cmdlet.GetResourceString ](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString) 메서드.
 
-- [ErrorDetails.ErrorDetails (어셈블리, 문자열, 문자열, 개체\[System.Management.Automation.ErrorDetails.%23Ctor%28System.Reflection.Assembly%2CSystem.String%2CSystem.String%2CSystem.Object%5B%5D%29? Displayproperty =](/dotnet/api/System.Management.Automation.ErrorDetails.%23ctor%28System.Reflection.Assembly%2CSystem.String%2CSystem.String%2CSystem.Object%5B%5D%29): 이 생성자를 사용 하 여 템플릿 문자열에는 다른 어셈블리 내에 있고 재정의 통해 것을 로드 하지 [System.Management.Automation.Cmdlet.GetResourceString](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString)합니다.
+- [ErrorDetails(Assembly, String, String, Object[])](/dotnet/api/system.management.automation.errordetails.-ctor?view=pscore-6.2.0#System_Management_Automation_ErrorDetails__ctor_System_Reflection_Assembly_System_String_System_String_System_Object___): 이 생성자를 사용 하 여 템플릿 문자열에는 다른 어셈블리 내에 있고 재정의 통해 것을 로드 하지 [System.Management.Automation.Cmdlet.GetResourceString](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString)합니다.
 
 대체 메시지는 약간의 차이점이 사용 하 여 예외 메시지를 작성 하기 위한.NET Framework 디자인 지침을 따라야 합니다. 예외 메시지 개발자를 위한 기록 되어야 하는 지침 상태입니다. Cmdlet은 사용자에 대 한 이러한 대체 메시지를 작성 되어야 합니다.
 
@@ -110,7 +110,7 @@ Cmdlet을 사용 하는 경우 [System.Management.Automation.Cmdlet.WriteError](
 
 [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)
 
-[System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory)
+[System.Management.Automation.ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0)
 
 [System.Management.Automation.Errorcategoryinfo](/dotnet/api/System.Management.Automation.ErrorCategoryInfo)
 

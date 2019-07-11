@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ea15e00e-20dc-4209-9e97-9ffd763e5d97
 caps.latest.revision: 8
-ms.openlocfilehash: 8d7ba9d122e90b80f6009b6dc8e8e3bb07331e4a
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 555baec08539403d3c15d1eca2b23eec0a874e49
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854845"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733954"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>데이터 저장소에 액세스하는 Cmdlet 만들기
 
@@ -72,7 +72,7 @@ private string[] paths;
 
 두 [System.Management.Automation.Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성 선언 합니다 `Path` 매개 변수가 속한 합니다 `ScriptParameterSet` 및 `PatternParameterSet`합니다. 매개 변수 집합에 대 한 자세한 내용은 참조 하세요. [Cmdlet에 매개 변수 집합 추가](./adding-parameter-sets-to-a-cmdlet.md)합니다.
 
-합니다 [System.Management.Automation.Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) 특성 선언를 `PSPath` 별칭을 `Path` 매개 변수입니다. Windows PowerShell 공급자에 액세스 하는 다른 cmdlet 사용 하 여 일관성을 위해이 별칭을 선언이 좋습니다. 자세한 내용은 aboutWindows PowerShell 경로에서 "PowerShell 경로 개념" 참조 [Windows PowerShell 작동 방식](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)합니다.
+합니다 [System.Management.Automation.Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) 특성 선언를 `PSPath` 별칭을 `Path` 매개 변수입니다. Windows PowerShell 공급자에 액세스 하는 다른 cmdlet 사용 하 여 일관성을 위해이 별칭을 선언이 좋습니다. 자세한 내용은 aboutWindows PowerShell 경로에서 "PowerShell 경로 개념" 참조 [Windows PowerShell 작동 방식](/previous-versions//ms714658(v=vs.85))합니다.
 
 ### <a name="declaring-the-pattern-parameter"></a>Pattern 매개 변수를 선언합니다.
 
@@ -379,7 +379,7 @@ Cmdlet는 데이터에 액세스할 수 있도록 Windows PowerShell 경로에�
 
 ## <a name="code-sample"></a>코드 예제
 
-다음 코드에는이 선택 Str cmdlet이이 버전의 구현을 보여 줍니다. 이 코드는 cmdlet 클래스, cmdlet을 사용 하는 개인 방법 및 cmdlet을 등록 하는 데 코드 Windows PowerShell 스냅인에 포함 하는 참고 합니다. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [cmdlet은 빌드](#building-the-cmdlet)합니다.
+다음 코드에는이 선택 Str cmdlet이이 버전의 구현을 보여 줍니다. 이 코드는 cmdlet 클래스, cmdlet을 사용 하는 개인 방법 및 cmdlet을 등록 하는 데 코드 Windows PowerShell 스냅인에 포함 하는 참고 합니다. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [cmdlet은 빌드](#Defining-the-Cmdlet-Class)합니다.
 
 ```csharp
 //
@@ -1090,7 +1090,7 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 ## <a name="building-the-cmdlet"></a>Cmdlet은 빌드
 
-Cmdlet를 구현한 후 Windows PowerShell 스냅인을 통해 Windows PowerShell을 사용 하 여 등록 해야 합니다. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [등록 Cmdlet, 공급자 및 응용 프로그램을 호스트 하는 방법을](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)합니다.
+Cmdlet를 구현한 후 Windows PowerShell 스냅인을 통해 Windows PowerShell을 사용 하 여 등록 해야 합니다. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [등록 Cmdlet, 공급자 및 응용 프로그램을 호스트 하는 방법을](/previous-versions//ms714644(v=vs.85))합니다.
 
 ## <a name="testing-the-cmdlet"></a>테스트 Cmdlet
 
@@ -1214,7 +1214,7 @@ Windows PowerShell cmdlet에 등록 하는 경우 명령줄에서 실행 하 여
 
 ## <a name="see-also"></a>참고 항목
 
-[Windows PowerShell Cmdlet을 만드는 방법](https://msdn.microsoft.com/en-us/0d721742-c849-4d0d-964f-78ddd9cd258c)
+[Windows PowerShell Cmdlet을 만드는 방법](/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 
 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)
 
@@ -1222,8 +1222,8 @@ Windows PowerShell cmdlet에 등록 하는 경우 명령줄에서 실행 하 여
 
 [Windows PowerShell 공급자를 디자인 합니다.](../prog-guide/designing-your-windows-powershell-provider.md)
 
-[Windows PowerShell의 작동 원리](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
+[Windows PowerShell의 작동 원리](/previous-versions//ms714658(v=vs.85))
 
-[Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법](/previous-versions//ms714644(v=vs.85))
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 524fd900-c0fe-4d13-87f2-14903a8fd5a4
 caps.latest.revision: 5
-ms.openlocfilehash: bf0a73267b3cad1f50d983ebed53318ec98180e0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 48ab9102e8f1b17b3b533cc3b0aa1dacef0e2076
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080852"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734836"
 ---
 # <a name="writing-a-container-provider"></a>컨테이너 공급자 작성
 
@@ -25,7 +25,7 @@ Windows PowerShell 공급자에 대 한 자세한 내용은 참조 하세요. [W
 
 ## <a name="implementing-container-methods"></a>컨테이너 메서드를 구현합니다.
 
-합니다 [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 클래스 컨테이너를 지원 하 고 만들기, 복사 및 항목을 제거 하는 메서드를 구현 합니다. 이러한 메서드의 전체 목록은 참조 하세요 [ContainerCmdletProvider 메서드](http://msdn.microsoft.com/library/system.management.automation.provider.containercmdletprovider_methods\(v=vs.85\).aspx)합니다.
+합니다 [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 클래스 컨테이너를 지원 하 고 만들기, 복사 및 항목을 제거 하는 메서드를 구현 합니다. 이러한 메서드의 전체 목록은 참조 하세요 [System.Management.Automation.Provider.ContainerCmdletProvider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider?view=pscore-6.2.0#methods)합니다.
 
 > [!NOTE]
 > 이 항목의 정보를 빌드 [Windows PowerShell 공급자 퀵 스타트](./windows-powershell-provider-quickstart.md)합니다. 이 항목에서는 기본 공급자 프로젝트를 설정 하는 방법 다루지 않습니다 또는 메서드를 구현 하는 방법에서 상속 합니다 [System.Management.Automation.Provider.Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 만들고 드라이브를 제거 하는 클래스입니다. 이 항목에서는 또한 다루지 않습니다 의해 노출 된 메서드를 구현 하는 방법을 합니다 [System.Management.Automation.Provider.Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 클래스입니다. Item cmdlet을 구현 하는 방법을 보여 주는 예제를 보려면 [항목 공급자 작성](./writing-an-item-provider.md)합니다.
@@ -44,7 +44,7 @@ Windows PowerShell 공급자에 대 한 자세한 내용은 참조 하세요. [W
 
 ### <a name="implementing-getchilditems"></a>GetChildItems 구현
 
-PowerShell 엔진 호출을 [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 메서드는 사용자는 [Microsoft.PowerShell.Commands.Get Childitem](/dotnet/api/Microsoft.PowerShell.Commands.Get-ChildItem) cmdlet입니다. 이 메서드는 지정된 된 경로에 있는 항목의 자식 항목을 가져옵니다.
+PowerShell 엔진 호출을 [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 메서드는 사용자는 [Microsoft.PowerShell.Commands.GetChildItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.Getchilditemcommand) cmdlet입니다. 이 메서드는 지정된 된 경로에 있는 항목의 자식 항목을 가져옵니다.
 
 Access 데이터베이스 예제에서는의 동작을 [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 메서드는 지정된 된 항목의 유형에 따라 다릅니다. 드라이브 항목을 사용 하는 경우 다음 자식 테이블 이며 메서드는 데이터베이스에서 테이블 집합을 반환 합니다. 테이블을 지정된 된 항목을 사용 하는 경우 자식은 해당 테이블의 행. 행 항목을 사용 하는 경우 다음에 자식 및 메서드는 행만 반환 합니다. 모든 자식 항목으로 PowerShell 엔진으로 다시 보내집니다 합니다 [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) 메서드.
 
@@ -155,7 +155,7 @@ protected override void GetChildNames(string path,
 
 ### <a name="implementing-newitem"></a>NewItem 구현
 
-합니다 [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드는 지정된 된 경로에 지정 된 형식의 새 항목을 만듭니다. PowerShell 엔진을 사용자 호출 하는 경우이 메서드를 호출 합니다 [Microsoft.PowerShell.Commands.New 항목](/dotnet/api/Microsoft.PowerShell.Commands.New-Item) cmdlet.
+합니다 [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드는 지정된 된 경로에 지정 된 형식의 새 항목을 만듭니다. PowerShell 엔진을 사용자 호출 하는 경우이 메서드를 호출 합니다 [Microsoft.PowerShell.Commands.NewItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.newitemcommand) cmdlet.
 
 이 예제에서는 메서드는 경로 및 형식 일치 하는지 확인 하는 논리를 구현 합니다. 즉, (데이터베이스) 드라이브 바로 아래에 있는 테이블에만 만들 수 있으며 행만 테이블을 만들 수 있습니다. 지정 된 경로 및 항목 형식을 이러한 방식으로 일치 하지 않으면 메서드는 예외가 throw 됩니다.
 
@@ -333,7 +333,7 @@ protected override void NewItem(string path, string type,
 
 ### <a name="implementing-copyitem"></a>CopyItem 구현
 
-합니다 [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 지정된 된 경로에 지정된 된 항목을 복사 합니다. PowerShell 엔진을 사용자 호출 하는 경우이 메서드를 호출 합니다 [Microsoft.PowerShell.Commands.Copy 항목](/dotnet/api/Microsoft.PowerShell.Commands.Copy-Item) cmdlet. 이 메서드는 재귀적 이며 모든 항목 자체 외에도 항목 자식을 복사 될 수도 있습니다.
+합니다 [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 지정된 된 경로에 지정된 된 항목을 복사 합니다. PowerShell 엔진을 사용자 호출 하는 경우이 메서드를 호출 합니다 [Microsoft.PowerShell.Commands.CopyItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.copyitemcommand) cmdlet. 이 메서드는 재귀적 이며 모든 항목 자체 외에도 항목 자식을 복사 될 수도 있습니다.
 
 유사 하 게 합니다 [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드를이 메서드가 지정된 된 항목이 복사 되는 경로 대 한 올바른 형식 인지 확인 하는 논리를 수행 합니다. 예를 들어, 대상 경로 테이블 인 경우 항목을 복사할 행 이어야 합니다.
 
@@ -466,7 +466,7 @@ protected override void CopyItem(string path, string copyPath, bool recurse)
 
 ### <a name="implementing-removeitem"></a>RemoveItem 구현
 
-합니다 [System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 메서드는 지정된 된 경로에 항목을 제거 합니다. PowerShell 엔진을 사용자 호출 하는 경우이 메서드를 호출 합니다 [Microsoft.PowerShell.Commands.Remove 항목](/dotnet/api/Microsoft.PowerShell.Commands.Remove-Item) cmdlet.
+합니다 [System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 메서드는 지정된 된 경로에 항목을 제거 합니다. PowerShell 엔진을 사용자 호출 하는 경우이 메서드를 호출 합니다 [Microsoft.PowerShell.Commands.RemoveItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.removeitemcommand) cmdlet.
 
 ```csharp
 protected override void RemoveItem(string path, bool recurse)
@@ -540,7 +540,7 @@ protected override void RemoveItem(string path, bool recurse)
 
 일반적인 실제 공급자는 다른 드라이브 내에서 하나의 경로에서 항목 이동 수 있습니다. 이동 된 항목을 지 원하는 공급자의 예제를 참조 하세요 [탐색 공급자 작성](./writing-a-navigation-provider.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [탐색 공급자 작성](./writing-a-navigation-provider.md)
 

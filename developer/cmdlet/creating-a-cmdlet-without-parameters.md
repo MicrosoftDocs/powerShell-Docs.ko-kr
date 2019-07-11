@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell Programmers Guide], basic cmdlet
 ms.assetid: 54236ef3-82db-45f8-9114-1ecb7ff65d3e
 caps.latest.revision: 8
-ms.openlocfilehash: 7f10acf59dedbb4af17bc5250e8624282ba22656
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 2685215f41c96955fc662d5eee27fc0e7a31da83
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854960"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733957"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>매개 변수 없이 Cmdlet 만들기
 
@@ -71,7 +71,7 @@ Windows PowerShell을 사용 합니다 [Microsoft.PowerShell.Commands](/dotnet/a
 
 ## <a name="overriding-an-input-processing-method"></a>입력 처리 메서드를 재정의 합니다.
 
-합니다 [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) 클래스는 cmdlet를 재정의 해야 하는 중 하나 이상이 세 개의 기본 입력된 처리 메서드를 제공 합니다. Windows PowerShell에서 레코드를 처리 하는 방법에 대 한 자세한 내용은 참조 하세요. [Windows PowerShell 작동 방식](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)합니다.
+합니다 [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) 클래스는 cmdlet를 재정의 해야 하는 중 하나 이상이 세 개의 기본 입력된 처리 메서드를 제공 합니다. Windows PowerShell에서 레코드를 처리 하는 방법에 대 한 자세한 내용은 참조 하세요. [Windows PowerShell 작동 방식](/previous-versions//ms714658(v=vs.85))합니다.
 
 Windows PowerShell 런타임에 입력의 모든 형식에 대 한 호출 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 처리를 사용 하도록 설정 합니다. Cmdlet에 몇 가지 전처리 또는 설치를 수행 해야 하는 경우이 메서드를 재정의 하 여이 수행할 수 것입니다.
 
@@ -135,11 +135,11 @@ End Sub 'ProcessRecord
 
 ## <a name="defining-object-types-and-formatting"></a>개체 유형 정의 및 서식 지정
 
-Windows PowerShell.NET 개체를 사용 하 여 cmdlet 간에 정보를 전달 합니다. 따라서 cmdlet는 고유한 형식을 정의 해야 합니다. 또는 cmdlet을 다른 cmdlet에서 제공 하는 기존 형식을 확장 해야 할 수 있습니다. 새 형식 정의 또는 기존 형식을 확장 하는 방법에 대 한 자세한 내용은 참조 하세요. [확장 개체 형식 및 서식](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)합니다.
+Windows PowerShell.NET 개체를 사용 하 여 cmdlet 간에 정보를 전달 합니다. 따라서 cmdlet는 고유한 형식을 정의 해야 합니다. 또는 cmdlet을 다른 cmdlet에서 제공 하는 기존 형식을 확장 해야 할 수 있습니다. 새 형식 정의 또는 기존 형식을 확장 하는 방법에 대 한 자세한 내용은 참조 하세요. [확장 개체 형식 및 서식](/previous-versions//ms714665(v=vs.85))합니다.
 
 ## <a name="building-the-cmdlet"></a>Cmdlet은 빌드
 
-Cmdlet를 구현한 후 Windows PowerShell 스냅인을 통해 Windows PowerShell을 사용 하 여 등록 해야 합니다. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [등록 Cmdlet, 공급자 및 응용 프로그램을 호스트 하는 방법을](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)합니다.
+Cmdlet를 구현한 후 Windows PowerShell 스냅인을 통해 Windows PowerShell을 사용 하 여 등록 해야 합니다. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [등록 Cmdlet, 공급자 및 응용 프로그램을 호스트 하는 방법을](/previous-versions//ms714644(v=vs.85))합니다.
 
 ## <a name="testing-the-cmdlet"></a>테스트 Cmdlet
 
@@ -260,13 +260,13 @@ Windows PowerShell cmdlet에 등록 하는 경우 명령줄에서 실행 하 여
 
 [파이프라인 입력을 처리 하는 Cmdlet 만들기](./adding-parameters-that-process-pipeline-input.md)
 
-[Windows PowerShell Cmdlet을 만드는 방법](https://msdn.microsoft.com/en-us/0d721742-c849-4d0d-964f-78ddd9cd258c)
+[Windows PowerShell Cmdlet을 만드는 방법](/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 
-[확장 개체 형식 및 서식 지정](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[확장 개체 형식 및 서식 지정](/previous-versions//ms714665(v=vs.85))
 
-[Windows PowerShell의 작동 원리](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
+[Windows PowerShell의 작동 원리](/previous-versions//ms714658(v=vs.85))
 
-[Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법](/previous-versions//ms714644(v=vs.85))
 
 [Windows PowerShell 참조](../windows-powershell-reference.md)
 

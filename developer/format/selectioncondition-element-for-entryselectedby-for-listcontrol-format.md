@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7649d5d0-2b56-49b5-a670-dde46caca343
 caps.latest.revision: 11
-ms.openlocfilehash: 633204f3b181316761746ea2679910216fb74657
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: f04a07c241268566eaedfe2b299c33d5be4dc19d
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62064104"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735094"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-listcontrol-format"></a>ListControl의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
 
@@ -42,7 +42,7 @@ ms.locfileid: "62064104"
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|설명|
+|요소|Description|
 |-------------|-----------------|
 |[PropertyName SelectionCondition EntrySelectedBy ListEntry (형식)에 대 한에 대 한 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 조건이 트리거하는.NET 속성을 지정 합니다.|
 |[EntrySelectedBy ListEntry (형식)에 대 한에 대 한 SelectionCondition ScriptBlock 요소](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 조건이 트리거하는 스크립트를 지정 합니다.|
@@ -77,6 +77,6 @@ lWhen 선택 조건을 정의 하는, 다음 요구 사항을 적용 합니다.
 
 [ListEntry (형식)에 대 한 EntrySelectedBy SelectionSetName 요소](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
 
-[EntrySelectedBy ListEntry (형식)에 대 한 TypeName 요소](http://msdn.microsoft.com/en-us/fcd4daa6-f3fd-43f7-a468-03c582d34533)
+[EntrySelectedBy ListEntry (형식)에 대 한 TypeName 요소](/powershell/developer/format/typename-element-for-entryselectedby-for-listcontrol-format)
 
 [서식 파일을 PowerShell 작성](./writing-a-powershell-formatting-file.md)
