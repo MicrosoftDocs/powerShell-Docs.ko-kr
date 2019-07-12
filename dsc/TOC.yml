@@ -19,7 +19,10 @@
     - name: Azure Virtual Machines에서 DSC 시작하기
       href: getting-started/azureDSCexthistory.md
 - name: 빠른 시작
+  expanded: true
   items:
+    - name: 그룹 정책에서 구성 만들기
+      href: quickstarts/gpo-quickstart.md
     - name: DSC를 사용하여 웹 사이트 만들기
       href: quickstarts/website-quickStart.md
 - name: 구성
@@ -102,7 +105,7 @@
           href: managing-nodes/apply-get-test.md
         - name: 로컬 Configuration Manager 구성(v5)
           href: managing-nodes/metaConfig.md
-        - name: 로컬 Configuration Manager 구성(v4)
+        - name: PowerShell 4.0에서 LCM 구성
           href: managing-nodes/metaConfig4.md
         - name: DSC 리소스 메서드 직접 호출
           href: managing-nodes/directCallResource.md
@@ -242,43 +245,43 @@
       items:
         - name: 개요
           href: reference/mof-classes/msft-dsclocalconfigurationmanager.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 ApplyConfiguration 메서드
+        - name: ApplyConfiguration 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-applyconfiguration.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 DisableDebugConfiguration 메서드
+        - name: DisableDebugConfiguration 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-disabledebugconfiguration.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 EnableDebugConfiguration 메서드
+        - name: EnableDebugConfiguration 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-enabledebugconfiguration.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 GetConfiguration 메서드
+        - name: GetConfiguration 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-getconfiguration.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 GetConfigurationResultOutput 메서드
+        - name: GetConfigurationResultOutput 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 GetConfigurationStatus 메서드
+        - name: GetConfigurationStatus 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-getconfigurationstatus.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 GetMetaConfiguration 메서드
+        - name: GetMetaConfiguration 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-getmetaconfiguration.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 PerformRequiredConfigurationChecks 메서드
+        - name: PerformRequiredConfigurationChecks 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 RemoveConfiguration 메서드
+        - name: RemoveConfiguration 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-removeconfiguration.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 ResourceGet 메서드
+        - name: ResourceGet 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-resourceget.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 ResourceSet 메서드
+        - name: ResourceSet 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-resourceset.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 ResourceTest 메서드
+        - name: ResourceTest 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-resourcetest.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 RollBack 메서드
+        - name: RollBack 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-rollback.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 SendConfiguration 메서드
+        - name: SendConfiguration 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendconfiguration.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 SendConfigurationApply 메서드
+        - name: SendConfigurationApply 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendconfigurationapply.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 SendConfigurationApplyAsync 메서드
+        - name: SendConfigurationApplyAsync 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 SendMetaConfigurationApply 메서드
+        - name: SendMetaConfigurationApply 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 StopConfiguration 메서드
+        - name: StopConfiguration 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-stopconfiguration.md
-        - name: MSFT_DSCLocalConfigurationManager 클래스의 TestConfiguration 메서드
+        - name: TestConfiguration 메서드
           href: reference/mof-classes/msft-dsclocalconfigurationmanager-testconfiguration.md
 - name: 추가 정보
   items:
