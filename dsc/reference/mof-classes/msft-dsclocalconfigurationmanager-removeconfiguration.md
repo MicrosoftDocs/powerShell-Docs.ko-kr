@@ -1,19 +1,19 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
-title: MSFT_DSCLocalConfigurationManager 클래스의 RemoveConfiguration 메서드
-ms.openlocfilehash: 03555cc73da1272bdebebc3d93b26aaf8fabc18e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: RemoveConfiguration 메서드
+ms.openlocfilehash: aacbed96beb960d7e0d449423a4de9a27f0a287e
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078693"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734394"
 ---
-# <a name="removeconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="d3cba-103">MSFT_DSCLocalConfigurationManager 클래스의 RemoveConfiguration 메서드</span><span class="sxs-lookup"><span data-stu-id="d3cba-103">RemoveConfiguration method of the MSFT_DSCLocalConfigurationManager class</span></span>
+# <a name="removeconfiguration-method"></a><span data-ttu-id="fa155-103">RemoveConfiguration 메서드</span><span class="sxs-lookup"><span data-stu-id="fa155-103">RemoveConfiguration method</span></span>
 
-<span data-ttu-id="d3cba-104">구성 파일을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="d3cba-104">Removes the configuration files.</span></span>
+<span data-ttu-id="fa155-104">구성 파일을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="fa155-104">Removes the configuration files.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="d3cba-105">구문</span><span class="sxs-lookup"><span data-stu-id="d3cba-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="fa155-105">구문</span><span class="sxs-lookup"><span data-stu-id="fa155-105">Syntax</span></span>
 
 ```mof
 uint32 RemoveConfiguration(
@@ -22,32 +22,32 @@ uint32 RemoveConfiguration(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="d3cba-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d3cba-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="fa155-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="fa155-106">Parameters</span></span>
 
-<span data-ttu-id="d3cba-107">*Stage* \[in\] 제거할 구성 문서를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d3cba-107">*Stage* \[in\] Specifies which configuration document to remove.</span></span> <span data-ttu-id="d3cba-108">다음은 유효한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="d3cba-108">The following values are valid:</span></span>
+<span data-ttu-id="fa155-107">*Stage* \[in\] 제거할 구성 문서를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fa155-107">*Stage* \[in\] Specifies which configuration document to remove.</span></span> <span data-ttu-id="fa155-108">다음은 유효한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="fa155-108">The following values are valid:</span></span>
 
-|<span data-ttu-id="d3cba-109">Value</span><span class="sxs-lookup"><span data-stu-id="d3cba-109">Value</span></span> |<span data-ttu-id="d3cba-110">설명</span><span class="sxs-lookup"><span data-stu-id="d3cba-110">Description</span></span> |
+|<span data-ttu-id="fa155-109">Value</span><span class="sxs-lookup"><span data-stu-id="fa155-109">Value</span></span> |<span data-ttu-id="fa155-110">설명</span><span class="sxs-lookup"><span data-stu-id="fa155-110">Description</span></span> |
 |:--- |:---|
-|<span data-ttu-id="d3cba-111">**1**</span><span class="sxs-lookup"><span data-stu-id="d3cba-111">**1**</span></span> | <span data-ttu-id="d3cba-112">**현재** 구성 문서(current.mof)입니다.</span><span class="sxs-lookup"><span data-stu-id="d3cba-112">The **Current** configuration document (current.mof).</span></span> |
-|<span data-ttu-id="d3cba-113">**2**</span><span class="sxs-lookup"><span data-stu-id="d3cba-113">**2**</span></span> | <span data-ttu-id="d3cba-114">**보류 중인** 구성 문서(pending.mof)입니다.</span><span class="sxs-lookup"><span data-stu-id="d3cba-114">The **Pending** configuration document (pending.mof).</span></span>  |
-|<span data-ttu-id="d3cba-115">**4**</span><span class="sxs-lookup"><span data-stu-id="d3cba-115">**4**</span></span> | <span data-ttu-id="d3cba-116">**이전** 구성 문서(previous.mof)입니다.</span><span class="sxs-lookup"><span data-stu-id="d3cba-116">The **Previous** configuration document (previous.mof).</span></span> |
+|<span data-ttu-id="fa155-111">**1**</span><span class="sxs-lookup"><span data-stu-id="fa155-111">**1**</span></span> | <span data-ttu-id="fa155-112">**현재** 구성 문서(current.mof)입니다.</span><span class="sxs-lookup"><span data-stu-id="fa155-112">The **Current** configuration document (current.mof).</span></span> |
+|<span data-ttu-id="fa155-113">**2**</span><span class="sxs-lookup"><span data-stu-id="fa155-113">**2**</span></span> | <span data-ttu-id="fa155-114">**보류 중인** 구성 문서(pending.mof)입니다.</span><span class="sxs-lookup"><span data-stu-id="fa155-114">The **Pending** configuration document (pending.mof).</span></span>  |
+|<span data-ttu-id="fa155-115">**4**</span><span class="sxs-lookup"><span data-stu-id="fa155-115">**4**</span></span> | <span data-ttu-id="fa155-116">**이전** 구성 문서(previous.mof)입니다.</span><span class="sxs-lookup"><span data-stu-id="fa155-116">The **Previous** configuration document (previous.mof).</span></span> |
 
-<span data-ttu-id="d3cba-117">*Force* \[in\] **true**이면 구성을 강제로 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="d3cba-117">*Force* \[in\] **true** to force the removal of the configuration.</span></span>
+<span data-ttu-id="fa155-117">*Force* \[in\] **true**이면 구성을 강제로 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="fa155-117">*Force* \[in\] **true** to force the removal of the configuration.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="d3cba-118">반환 값</span><span class="sxs-lookup"><span data-stu-id="d3cba-118">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="fa155-118">반환 값</span><span class="sxs-lookup"><span data-stu-id="fa155-118">Return value</span></span>
 
-<span data-ttu-id="d3cba-119">성공하면 0을 반환하고 그렇지 않으면 오류 코드를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d3cba-119">Returns zero on success; otherwise returns an error code.</span></span>
+<span data-ttu-id="fa155-119">성공하면 0을 반환하고 그렇지 않으면 오류 코드를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="fa155-119">Returns zero on success; otherwise returns an error code.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="d3cba-120">설명</span><span class="sxs-lookup"><span data-stu-id="d3cba-120">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="fa155-120">설명</span><span class="sxs-lookup"><span data-stu-id="fa155-120">Remarks</span></span>
 
-<span data-ttu-id="d3cba-121">정적 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="d3cba-121">This is a static method.</span></span>
+<span data-ttu-id="fa155-121">정적 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="fa155-121">This is a static method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="d3cba-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d3cba-122">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="fa155-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="fa155-122">Requirements</span></span>
 
-<span data-ttu-id="d3cba-123">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="d3cba-123">**MOF:** DscCore.mof</span></span>
+<span data-ttu-id="fa155-123">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="fa155-123">**MOF:** DscCore.mof</span></span>
 
-<span data-ttu-id="d3cba-124">**네임스페이스**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="d3cba-124">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
+<span data-ttu-id="fa155-124">**네임스페이스**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="fa155-124">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d3cba-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d3cba-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fa155-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fa155-125">See also</span></span>
 
-[<span data-ttu-id="d3cba-126">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="d3cba-126">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
+[<span data-ttu-id="fa155-126">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="fa155-126">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
