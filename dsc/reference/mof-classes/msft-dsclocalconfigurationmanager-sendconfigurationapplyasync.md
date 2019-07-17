@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
-title: MSFT_DSCLocalConfigurationManager 클래스의 SendConfigurationApplyAsync 메서드
-ms.openlocfilehash: b028079cf826719967858f50e357b441ba8f9d79
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: SendConfigurationApplyAsync 메서드
+ms.openlocfilehash: c0e6dc9418757ee719e848fa8e7006dd73d91ad8
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078280"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734308"
 ---
-# <a name="sendconfigurationapplyasync-method-of-the-msftdsclocalconfigurationmanager-class"></a>MSFT_DSCLocalConfigurationManager 클래스의 SendConfigurationApplyAsync 메서드
+# <a name="sendconfigurationapplyasync-method"></a>SendConfigurationApplyAsync 메서드
 
 구성 문서를 비동기적으로 관리 노드로 보내고, 구성 에이전트를 사용해 구성을 적용합니다.
 

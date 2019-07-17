@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC WindowsFeatureSet 리소스
-ms.openlocfilehash: 8b7c7e72dd58459bd19cb723e5790a82841515c0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 8a64168d9ad0d6a6c40eb0398cc734fa93a247dc
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076789"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726782"
 ---
 # <a name="dsc-windowsfeatureset-resource"></a>DSC WindowsFeatureSet 리소스
 
@@ -38,7 +38,7 @@ WindowsFeatureSet [string] #ResourceName
 
 |  속성  |  설명   |
 |---|---|
-| 이름| 추가 또는 제거하려는 역할이나 기능의 이름입니다. 이것은 [Get-WindowsFeature](https://technet.microsoft.com/en-us/library/jj205469.aspx) cmdlet의 **Name** 속성과 동일하며, 역할이나 기능의 표시 이름은 아닙니다.|
+| 이름| 추가 또는 제거하려는 역할이나 기능의 이름입니다. 이것은 [Get-WindowsFeature](/powershell/module/servermanager/get-windowsfeature?view=winserver2012r2-ps) cmdlet의 **Name** 속성과 동일하며, 역할이나 기능의 표시 이름은 아닙니다.|
 | 자격 증명| 역할 또는 기능을 추가 또는 제거하는 데 사용할 자격 증명입니다.|
 | Ensure| 역할이나 기능이 추가되는지 여부를 지정합니다. 역할이나 기능이 추가되도록 하려면 이 속성을 "Present"로 설정하고, 역할이나 기능이 제거되도록 하려면 이 속성을 "Absent"로 설정합니다.|
 | IncludeAllSubFeature| **Name** 속성에 지정하는 기능과 함께 모든 필수 하위 기능을 포함하려면 이 속성을 **$true**로 설정합니다.|

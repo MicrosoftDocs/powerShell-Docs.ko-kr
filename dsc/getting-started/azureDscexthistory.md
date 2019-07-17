@@ -1,18 +1,18 @@
 ---
-description: Azure에서 DSC(Desired State Configuration) 확장에 대한 버전 기록에 대해 알아봅니다.
+description: Azure에서 DSC(필요한 상태 구성) 확장에 대한 버전 기록에 대해 알아봅니다.
 ms.date: 06/21/2018
 keywords: dsc, powershell, azure, 확장
 title: Azure DSC 확장 버전 기록
-ms.openlocfilehash: 2c076e3beccc15e99af2327820916d7a4d28da68
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 6d821e53e9206d99425e8c83f6d90986c7c28b63
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079747"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734669"
 ---
-# <a name="azure-desired-state-configuration-extension-version-history"></a>Azure Desired State Configuration 확장 버전 기록
+# <a name="azure-desired-state-configuration-extension-version-history"></a>Azure 필요한 상태 구성 확장 버전 기록
 
-Azure DSC(Desired State Configuration) VM 확장은 필요에 따라 Azure, Windows Server 및 Windows PowerShell을 포함하는 WMF(Windows 관리 프레임워크)로 제공되는 향상된 기능 및 새로운 기능을 지원하도록 업데이트됩니다.
+Azure DSC(필요한 상태 구성) VM 확장은 필요에 따라 Azure, Windows Server 및 Windows PowerShell을 포함하는 WMF(Windows 관리 프레임워크)로 제공되는 향상된 기능 및 새로운 기능을 지원하도록 업데이트됩니다.
 
 이 문서에서는 Azure DSC VM 확장의 각 버전에 대한 정보, 지원하는 환경 및 새 기능 또는 변경 내용에 대한 설명 및 주의를 제공합니다.
 
@@ -164,7 +164,7 @@ Azure DSC(Desired State Configuration) VM 확장은 필요에 따라 Azure, Wind
 - **환경:** Azure
 - **설명:** 이 버전은 Windows Server 2016 Technical Preview에 포함된 DSC를 사용합니다. 다른 Windows OSes의 경우 [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/)을 설치합니다(WMF 설치에 재부팅 필요).
 - **새로운 기능:**
-  - WMF 5.1 미리 보기에 대한 지원 처음 게시할 때 이 버전은 선택적 업그레이드였으며 Resource Manager 템플릿에서 WMF 5.1 미리 보기를 설치하기 위해 Wmfversion = ‘5.1PP’를 지정해야 했습니다. Wmfversion = ‘latest’는 여전히 [WMF 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/)을 설치합니다. WMF 5.1 미리 보기에 대한 자세한 내용은 [이 블로그]( https://blogs.msdn.microsoft.com/powershell/2016/07/16/announcing-windows-management-framework-wmf-5-1-preview/)를 참조하세요.
+  - WMF 5.1 미리 보기에 대한 지원 처음 게시할 때 이 버전은 선택적 업그레이드였으며 Resource Manager 템플릿에서 WMF 5.1 미리 보기를 설치하기 위해 Wmfversion = ‘5.1PP’를 지정해야 했습니다. Wmfversion = ‘latest’는 여전히 [WMF 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/)을 설치합니다. WMF 5.1 미리 보기에 대한 자세한 내용은 [이 블로그](https://blogs.msdn.microsoft.com/powershell/2016/07/16/announcing-windows-management-framework-wmf-5-1-preview/)를 참조하세요.
   - 기타 사소한 수정 사항 및 향상된 기능이 추가되었습니다.
 
 ### <a name="version--219"></a>버전 2.19

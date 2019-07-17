@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
-title: MSFT_DSCLocalConfigurationManager 클래스의 ApplyConfiguration 메서드
-ms.openlocfilehash: 559ff1793a18e28dad2f176bdb20eb53bc08630d
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: ApplyConfiguration 메서드
+ms.openlocfilehash: 0425b9a7db37e421830ba37da8f5c0a4877a1b72
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079169"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727187"
 ---
-# <a name="applyconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>MSFT_DSCLocalConfigurationManager 클래스의 ApplyConfiguration 메서드
+# <a name="applyconfiguration-method"></a>ApplyConfiguration 메서드
 
 구성 에이전트를 사용해 보류 중인 구성을 적용합니다.
 

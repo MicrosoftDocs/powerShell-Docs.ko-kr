@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
-title: MSFT_DSCLocalConfigurationManager 클래스의 ResourceSet 메서드
-ms.openlocfilehash: 2712b7ff0a19e643c1f343d436c084f8970c9dd4
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: ResourceSet 메서드
+ms.openlocfilehash: 18364027b249e502e1f0b8802d9f3e031c7b07ce
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078404"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727095"
 ---
-# <a name="resourceset-method-of-the-msftdsclocalconfigurationmanager-class"></a>MSFT_DSCLocalConfigurationManager 클래스의 ResourceSet 메서드
+# <a name="resourceset-method"></a>ResourceSet 메서드
 
 DSC 리소스의 **Set** 메서드를 직접 호출합니다.
 

@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
-title: MSFT_DSCLocalConfigurationManager 클래스의 GetMetaConfiguration 메서드
-ms.openlocfilehash: e14237ef68b95d68e2f14071aa1fa6ba0717f39f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: GetMetaConfiguration 메서드
+ms.openlocfilehash: bd280cb8ebd7b0522e4e01cbd24bd9bdcfddf4c2
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078523"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734435"
 ---
-# <a name="getmetaconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>MSFT_DSCLocalConfigurationManager 클래스의 GetMetaConfiguration 메서드
+# <a name="getmetaconfiguration-method"></a>GetMetaConfiguration 메서드
 
 구성 에이전트를 제어하는 데 사용되는 로컬 구성 관리자 설정을 가져옵니다.
 

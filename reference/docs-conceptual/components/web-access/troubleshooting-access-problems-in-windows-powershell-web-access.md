@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 웹 액세스의 액세스 문제 해결
-ms.openlocfilehash: 314e4a8098988111739705d55b68ff5ed2f5eff3
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 66e913504cf0c34f8d9ab18b088fb06173aca24c
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086598"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733858"
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Windows PowerShell 웹 액세스의 액세스 문제 해결
 
@@ -35,7 +35,7 @@ ms.locfileid: "62086598"
 
   사용자가 연결하려는 컴퓨터에서 원격 관리가 사용되는지 확인합니다.
 
-  자세한 내용은 [How to Configure Your Computer for Remoting](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_requirements#how-to-configure-your-computer-for-remoting)(컴퓨터를 원격으로 사용할 수 있도록 구성하는 방법)을 참조하세요.
+  자세한 내용은 [How to Configure Your Computer for Remoting](/powershell/module/microsoft.powershell.core/about/about_remote_requirements#how-to-configure-your-computer-for-remoting)(컴퓨터를 원격으로 사용할 수 있도록 구성하는 방법)을 참조하세요.
 
 ## <a name="internal-server-error"></a>내부 서버 오류
 

@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
-title: MSFT_DSCLocalConfigurationManager 클래스의 GetConfiguration 메서드
-ms.openlocfilehash: ae31ac30c152c96707b764ddaf00c924806afcfc
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: GetConfiguration 메서드
+ms.openlocfilehash: eabc536cfe69abe1144ff031a6f64c09a772e638
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078656"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734533"
 ---
-# <a name="getconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>MSFT_DSCLocalConfigurationManager 클래스의 GetConfiguration 메서드
+# <a name="getconfiguration-method"></a>GetConfiguration 메서드
 
 구성 문서를 관리 노드로 보내고, 구성 에이전트의 **Get** 메서드를 사용해 구성을 적용합니다.
 

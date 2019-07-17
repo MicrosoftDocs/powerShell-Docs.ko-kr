@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
-title: MSFT_DSCLocalConfigurationManager 클래스의 SendConfiguration 메서드
-ms.openlocfilehash: 3529bc56ecba19ed0fbbf070a4e86d0692824d39
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: SendConfiguration 메서드
+ms.openlocfilehash: 4feba090bc58844659c2329a304dd9805255564f
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078387"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734315"
 ---
-# <a name="sendconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>MSFT_DSCLocalConfigurationManager 클래스의 SendConfiguration 메서드
+# <a name="sendconfiguration-method"></a>SendConfiguration 메서드
 
 구성 문서를 관리 노드로 보내고 보류 중인 변경으로 저장합니다.
 

@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
-title: MSFT_DSCLocalConfigurationManager 클래스의 PerformRequiredConfigurationChecks 메서드
-ms.openlocfilehash: b92eefb7fbea6d96afa31f6b802ba10fe20d4103
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: PerformRequiredConfigurationChecks 메서드
+ms.openlocfilehash: 909e3a48d08e0220ab0efc6a03bea7ead5d9843e
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078439"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734414"
 ---
-# <a name="performrequiredconfigurationchecks-method-of-the-msftdsclocalconfigurationmanager-class"></a>MSFT_DSCLocalConfigurationManager 클래스의 PerformRequiredConfigurationChecks 메서드
+# <a name="performrequiredconfigurationchecks-method"></a>PerformRequiredConfigurationChecks 메서드
 
 작업 스케줄러를 사용해 일관성 확인을 시작합니다.
 

@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
-title: MSFT_DSCLocalConfigurationManager 클래스의 EnableDebugConfiguration 메서드
-ms.openlocfilehash: b2eaebfa901cb5d93fd0183287073e6b31f975d1
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: EnableDebugConfiguration 메서드
+ms.openlocfilehash: f1290e4d898332361850ffc85aa0a8d79863c8f7
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078767"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727138"
 ---
-# <a name="enabledebugconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>MSFT_DSCLocalConfigurationManager 클래스의 EnableDebugConfiguration 메서드
+# <a name="enabledebugconfiguration-method"></a>EnableDebugConfiguration 메서드
 
 DSC 리소스 디버깅을 사용하도록 설정합니다.
 

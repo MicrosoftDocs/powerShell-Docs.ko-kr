@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: PowerShell 6.0의 알려진 문제
-ms.openlocfilehash: ce40a1925e564fbd2c661e70ec36d3842d915dfe
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 502143b660204edada6a9e62bdf6b260a384a078
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62085969"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733832"
 ---
 # <a name="known-issues-for-powershell-60"></a>PowerShell 6.0의 알려진 문제
 
@@ -55,7 +55,7 @@ Linux/macOS의 와일드카드 환경을 개선하는 방법에 대한 피드백
 
 Linux/macOS의 PowerShell은 Microsoft Windows의 전체 .NET Framework 하위 집합인 .NET Core를 사용합니다. PowerShell을 통해 기본 프레임워크 형식, 메서드 등에 직접 액세스하기 때문에 이러한 차이는 중요합니다. 그 결과로, Windows에서 실행되는 스크립트가 프레임워크의 차이로 인해 비 Windows 플랫폼에서는 실행되지 않을 수 있습니다. .NET Core Framework에 대한 자세한 내용은 <https://dotnetfoundation.org/net-core>를 참조하세요.
 
-[.NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)이 도입되면서, .NET Core 2.0에서는 전체 .NET Framework에 있는 기존의 여러 형식과 메서드를 다시 가져올 것입니다. 따라서 PowerShell Core에서 기존의 여러 Windows PowerShell 모듈을 수정 없이 로드할 수 있게 됩니다. [여기](https://github.com/PowerShell/PowerShell/projects/4)에서 .NET Standard 2.0 관련 작업을 확인할 수 있습니다.
+[.NET Standard 2.0](https://devblogs.microsoft.com/dotnet/introducing-net-standard/)이 도입되면서, .NET Core 2.0에서는 전체 .NET Framework에 있는 기존의 여러 형식과 메서드를 다시 가져올 것입니다. 따라서 PowerShell Core에서 기존의 여러 Windows PowerShell 모듈을 수정 없이 로드할 수 있게 됩니다. [여기](https://github.com/PowerShell/PowerShell/projects/4)에서 .NET Standard 2.0 관련 작업을 확인할 수 있습니다.
 
 ### <a name="redirection-issues"></a>리디렉션 문제
 
@@ -82,7 +82,7 @@ Linux/macOS의 PowerShell에는 작업 제어 지원이 없습니다.
 
 WSMan 기반 원격 작업은 [psl-omi-provider](https://github.com/PowerShell/psl-omi-provider) 리포지토리에서 수행되고 있습니다.
 
-PowerShell Core는 모든 플랫폼(Windows, macOS 및 Linux)에서 SSH를 통한 PowerShell 원격(PSRP)도 지원합니다. 프로덕션에서 현재 지원되지는 않지만, [여기](../core-powershell/ssh-remoting-in-powershell-core.md)에서 설정 방법을 자세히 알아볼 수 있습니다.
+PowerShell Core는 모든 플랫폼(Windows, macOS 및 Linux)에서 SSH를 통한 PowerShell 원격(PSRP)도 지원합니다. 프로덕션에서 현재 지원되지는 않지만, [여기](../learn/remoting/SSH-Remoting-in-PowerShell-Core.md)에서 설정 방법을 자세히 알아볼 수 있습니다.
 
 ### <a name="just-enough-administration-jea-support"></a>JEA(Just-Enough-Administration) 지원
 

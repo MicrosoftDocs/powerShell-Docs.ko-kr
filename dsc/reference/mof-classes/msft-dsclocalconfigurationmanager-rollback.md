@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
-title: MSFT_DSCLocalConfigurationManager 클래스의 RollBack 메서드
-ms.openlocfilehash: 4956900ecd2c9cb7f2e2b5bcab94616f9f5d5565
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: RollBack 메서드
+ms.openlocfilehash: 6452bdffd5160d9956576fb59c98e2f9ff7ddbbb
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078370"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727034"
 ---
-# <a name="rollback-method-of-the-msftdsclocalconfigurationmanager-class"></a>MSFT_DSCLocalConfigurationManager 클래스의 RollBack 메서드
+# <a name="rollback-method"></a>RollBack 메서드
 
 이전 버전으로 구성을 롤백합니다.
 
