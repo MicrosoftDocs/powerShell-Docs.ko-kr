@@ -2,18 +2,20 @@
 title: Linux에서 PowerShell Core 설치
 description: 다양한 Linux 배포판에서 PowerShell Core를 설치하는 방법에 대한 정보
 ms.date: 08/06/2018
-ms.openlocfilehash: 0a7c9549c37222bf599e4bdb9e36c91288191bb3
-ms.sourcegitcommit: 00cf9a99972ce40db7c25b9a3fc6152dec6bddb6
+ms.openlocfilehash: 32d6c0e718ca798af2f6a5d796c3ca362e7befd9
+ms.sourcegitcommit: 13e170e8bff29d3d5f854c874de88f53c5e5ef20
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64530640"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829432"
 ---
 # <a name="installing-powershell-core-on-linux"></a>Linux에서 PowerShell Core 설치
 
-[Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubuntu 18.10][u1810],  [Debian 9][deb9], [CentOS 7][cos], [RHEL(Red Hat Enterprise Linux) 7][rhel7], [openSUSE 42.3][opensuse], [openSUSE Leap 15][opensuse], [Fedora 27][fedora], [Fedora 28][fedora] 및 [Arch Linux][arch]를 지원합니다.
+[Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubuntu 18.10][u1810],  [Debian 9][deb9],
+[CentOS 7][cos], [RHEL(Red Hat Enterprise Linux) 7][rhel7], [openSUSE 42.3][opensuse], [openSUSE Leap 15][opensuse],
+[Fedora 27][fedora], [Fedora 28][fedora] 및 [Arch Linux][arch]를 지원합니다.
 
-공식적으로 지원되지 않는 Linux 배포판의 경우 [PowerShell  Snap 패키지][snap]를 사용해 보세요.
+공식적으로 지원되지 않는 Linux 배포판의 경우 [PowerShell Snap 패키지][snap]를 사용해 보세요.
 또한 Linux [`tar.gz` 보관][tar]을 사용하여 PowerShell 이진 파일을 직접 배포해 볼 수도 있지만 OS에 따라 별도의 단계로 필요한 종속성을 설정해야 합니다.
 
 모든 패키지는 GitHub [릴리스][] 페이지에 제공됩니다.
@@ -40,7 +42,7 @@ ms.locfileid: "64530640"
 
 다양한 패키지 관리자를 사용하여 안정적인/미리 보기 버전 패키지를 설치하는 명령들은 다음과 같습니다.
 
-|배포판 |안정 버전 | 미리 보기 버전 |
+|배포|안정적인 명령 | 미리 보기 명령 |
 |---------------|---------------|-----------------|
 | Ubuntu, Debian |`sudo apt-get install -y powershell`| `sudo apt-get install -y powershell-preview`|
 | CentOS, RedHat |`sudo yum install -y powershell` | `sudo yum install -y powershell-preview`|
@@ -70,8 +72,8 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다.
-그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 업데이트하면 됩니다.
+슈퍼 사용자로 Microsoft 리포지토리를 등록합니다.
+그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 설치를 업데이트하면 됩니다.
 
 ### <a name="installation-via-direct-download---ubuntu-1404"></a>직접 다운로드를 통해 설치 - Ubuntu 14.04
 
@@ -161,9 +163,12 @@ sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
 
 # Enable the "universe" repositories
-sudo apt-get install -y powershell
+sudo add-apt-repository universe
 
 # Install PowerShell
+sudo apt-get install -y powershell
+
+# Start PowerShell
 pwsh
 ```
 
@@ -213,16 +218,16 @@ sudo apt-get install curl apt-transport-https
 # Import the public repository GPG keys
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 
-# Microsoft Product 피드 등록
+# Register the Microsoft Product feed
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-jessie-prod jessie main" > /etc/apt/sources.list.d/microsoft.list'
 
-# Register the Microsoft Product feed
+# Update the list of products
 sudo apt-get update
 
-# Update the list of products
+# Install PowerShell
 sudo apt-get install -y powershell
 
-# Install PowerShell
+# Start PowerShell
 pwsh
 ```
 
@@ -452,8 +457,6 @@ sudo dnf install -y powershell
 pwsh
 ```
 
-이 명령들은 관리자 계정으로 Microsoft 리포지토리를 추가합니다. 그 이후에는 `sudo apt-get upgrade powershell`을 사용하여 업데이트하면 됩니다.
-
 ### <a name="installation-via-direct-download---fedora-27-fedora-28"></a>직접 다운로드를 통해 설치 - Fedora 27, Fedora 28
 
 RPM 패키지 `powershell-6.2.0-1.rhel.7.x86_64.rpm`을
@@ -587,8 +590,18 @@ apt-get remove -y powershell
 ### <a name="installation---raspbian"></a>설치 - Raspbian
 
 ```sh
-# Install prerequisites
-sudo apt-get install libunwind8
+###################################
+# Prerequisites
+
+# Update package lists
+sudo apt-get update
+
+# Install libunwind8 and libssl1.0
+# Regex is used to ensure that we do not install libssl1.0-dev, as it is a variant that is not required
+sudo apt-get install '^libssl1.0.[0-9]$' libunwind8 -y
+
+###################################
+# Download and extract PowerShell
 
 # Grab the latest tar.gz
 wget https://github.com/PowerShell/PowerShell/releases/download/v6.2.0/powershell-6.2.0-linux-arm32.tar.gz

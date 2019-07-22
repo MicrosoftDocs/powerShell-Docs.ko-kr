@@ -2,12 +2,12 @@
 title: PowerShell Core 6.0의 새로운 기능
 description: PowerShell Core 6.0에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 08/06/2018
-ms.openlocfilehash: 83c104d838db9d86fe1d485e92245a9c8f2d2057
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: e1218a38398f4d86829cf2b4ba6a3a882675eaab
+ms.sourcegitcommit: 09f02ccef56ef30e7a9ca901f8d3713724960c68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62059018"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67843925"
 ---
 # <a name="whats-new-in-powershell-core-60"></a>PowerShell Core 6.0의 새로운 기능
 
@@ -32,7 +32,7 @@ PowerShell은 이제 다음을 포함하여 공식적으로 macOS 및 Linux를 �
 
 - Windows 7, 8.1, 10
 - Windows Server 2008 R2, 2012 R2, 2016
-- [Windows 서버 반기 채널][semi-annual]
+- [Windows Server 반기 채널][semi-annual]
 - Ubuntu 14.04, 16.04, 17.04
 - Debian 8.7+, 9
 - CentOS 7
@@ -139,7 +139,7 @@ Windows의 일부로 제공되는 대부분의 모듈(예: `DnsClient`, `Hyper-V
 PowerShell 팀은 이러한 제품 그룹 및 팀과 협력하여 기존 모듈의 유효성을 확인하고 PowerShell 코어로 포팅합니다.
 .NET Standard 및 [CDXML][]을 사용하면 이러한 기존의 Windows PowerShell 모듈 중 상당수가 PowerShell Core에서 작동하는 것처럼 보이지만, 공식적으로 유효성이 검사되지 않았을 뿐만 아니라 공식적으로 지원되지 않습니다.
 
-[`WindowsPSModulePath`][windowspsmodulepath] 모듈을 설치하면 Windows PowerShell `PSModulePath`을 PowerShell Core `PSModulePath`에 추가하여 Windows PowerShell 모듈을 사용할 수 있습니다.
+[`WindowsPSModulePath`][windowspsmodulepath] 모듈을 설치하면 Windows PowerShell `PSModulePath`를 PowerShell Core `PSModulePath`에 추가하여 Windows PowerShell 모듈을 사용할 수 있습니다.
 
 먼저 PowerShell 갤러리에서 `WindowsPSModulePath` 모듈을 설치합니다.
 
@@ -159,7 +159,7 @@ Add-WindowsPSModulePath
 
 PowerShell Core는 지원하는 모든 주요 플랫폼(여러 Linux 배포판, Windows Server Core 및 Nano 서버 포함)에 대한 Docker 컨테이너 지원을 추가합니다.
 
-전체 목록을 보려면 [`microsoft/powershell`Docker Hub][docker-hub]의에 있는 태그를 확인합니다.
+전체 목록을 보려면 [`microsoft/powershell`Docker Hub][docker-hub]에 있는 태그를 확인합니다.
 Docker 및 PowerShell Core에 대한 자세한 내용은 GitHub의 [Docker][]를 참조하세요.
 
 ## <a name="ssh-based-powershell-remoting"></a>SSH 기반 PowerShell 원격
@@ -295,9 +295,10 @@ PowerShell 작업에 대한 자세한 내용은 [about_Jobs](https://msdn.micros
 
 ### <a name="csv-cmdlets"></a>CSV cmdlet
 
+- `Import-Csv`는 이제 W3C 확장 로그 파일 형식(#2482)을 지원합니다([@iSazonov](https://github.com/iSazonov)에게 감사드립니다!)
 - `Import-Csv` 및 `ConvertFrom-Csv`에 대한 `PSTypeName` 지원을 추가합니다. (#5389) ([@markekraus](https://github.com/markekraus)에게 감사드립니다!)
 - `Import-Csv`를 `CR`, `LF` 및 `CRLF`를 줄 구분 기호로 지원하도록 합니다. (#5363) ([@iSazonov](https://github.com/iSazonov)에게 감사드립니다!)
-- `-NoTypeInformation`을 `Export-Csv` 및 `ConvertTo-Csv`의 기본값으로 만듭니다. (#5164) ([@markekraus](https://github.com/markekraus)에게 감사드립니다.)
+- `-NoTypeInformation`을 `Export-Csv` 및 `ConvertTo-Csv`의 기본값으로 만듭니다. (#5164)([@markekraus](https://github.com/markekraus)에게 감사드립니다!)
 
 ### <a name="service-cmdlets"></a>서비스 cmdlet
 

@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: 노드 간 종속성 지정
-ms.openlocfilehash: 1bdfbd9f8a94809d6bf410eff525e1c877fb6aad
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 62e553d894897ae1908745c2788b7b7b9cbe50ff
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080206"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734678"
 ---
 # <a name="specifying-cross-node-dependencies"></a>노드 간 종속성 지정
 
@@ -55,14 +55,22 @@ WaitForSome [String] #ResourceName
 
 모든 **WaitForXXXX**는 다음 구문 키를 공유합니다.
 
-|  속성  |  설명   | | RetryIntervalSec| 다시 시도할 때까지의 시간(초)입니다. 최소값은 1입니다.| | RetryCount| 다시 시도할 최대 횟수입니다.| | ThrottleLimit| 동시에 연결할 컴퓨터 수입니다. 기본값은 `New-CimSession` 기본값입니다.| | DependsOn | 이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 자세한 내용은 [DependsOn](resource-depends-on.md)을 참조하세요. | | PsDscRunAsCredential | [사용자 자격 증명에 DSC 사용](./runAsUser.md)을 참조하세요.  |
-
+|속성|  설명   |
+|---------|---------------------|
+| RetryIntervalSec| 다시 시도할 때까지의 시간(초)입니다. 최소값은 1입니다.|
+| RetryCount| 최대 다시 시도 횟수입니다.|
+| ThrottleLimit| 동시에 연결하는 컴퓨터의 수입니다. 기본값은 `New-CimSession` 기본값입니다.|
+| DependsOn | 이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 자세한 내용은 [DependsOn](resource-depends-on.md)을 참조하세요.|
+| PsDscRunAsCredential | [사용자 자격 증명을 사용하여 DSC 실행](./runAsUser.md) 참조 |
 
 ## <a name="using-waitforxxxx-resources"></a>WaitForXXXX 리소스 사용
 
-각 **WaitForXXXX** 리소스는 지정된 리소스가 지정된 노드에서 완료될 때까지 기다립니다. 동일한 구성의 다른 리소스는 **DependsOn** 키를 사용하는 **WaitForXXXX** 리소스에 따라 ‘달라’질 수 있습니다.
+각 **WaitForXXXX** 리소스는 지정된 리소스가 지정된 노드에서 완료될 때까지 기다립니다.
+동일한 구성의 다른 리소스는 **DependsOn** 키를 사용하는 **WaitForXXXX** 리소스에 따라 ‘달라’질 수 있습니다. 
 
 예를 들어 다음 구성에서 대상 노드는 대상 노드가 도메인에 가입하기 전에 **xADDomain** 리소스가 **MyDC** 노드에서 최대 30번의 시도를 15초 간격으로 완료할 때까지 대기합니다.
+
+기본적으로 **WaitForXXX** 리소스는 한 번 시도한 다음, 실패합니다. 필수는 아니지만 일반적으로 **RetryCount** 및 **RetryIntervalSec**을 지정할 수 있습니다.
 
 ```powershell
 Configuration JoinDomain
@@ -111,7 +119,9 @@ Configuration JoinDomain
 
 구성을 컴파일하면 두 개의 ".mof" 파일이 생성됩니다. [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet을 사용하여 대상 노드에 ".mof" 파일을 적용합니다.
 
->**참고:** 기본적으로 WaitForXXX 리소스는 한 번 시도한 후에 실패합니다. 필수는 아니지만 일반적으로 **RetryCount** 및 **RetryIntervalSec**을 지정할 수 있습니다.
+> [!NOTE]
+> **WaitForXXX** 리소스는 Windows 원격 관리를 사용하여 다른 노드의 상태를 확인합니다.
+> WinRM에 대한 포트 및 보안 요구 사항에 대한 자세한 내용은 [PowerShell Remoting 보안 고려 사항](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

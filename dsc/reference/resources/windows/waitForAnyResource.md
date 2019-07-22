@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC WaitForAny 리소스
-ms.openlocfilehash: 55869f665837b422c006f4cfb3e91366fac60362
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d15acb3fb34d571eca56ed496eaa9a04b2551ff0
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076829"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726862"
 ---
 # <a name="dsc-waitforany-resource"></a>DSC WaitForAny 리소스
 
@@ -17,6 +17,9 @@ ms.locfileid: "62076829"
 
 **ResourceName** 속성으로 지정된 리소스가 **NodeName** 속성으로 정의된 임의의 대상 노드에서 필요한 상태이면 이 리소스가 정상적으로 적용됩니다.
 
+> [!NOTE]
+> **WaitForAny** 리소스는 Windows 원격 관리를 사용하여 다른 노드의 상태를 확인합니다.
+> WinRM에 대한 포트 및 보안 요구 사항에 대한 자세한 내용은 [PowerShell Remoting 보안 고려 사항](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6)을 참조하세요.
 
 ## <a name="syntax"></a>구문
 
