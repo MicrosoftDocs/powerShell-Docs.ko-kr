@@ -2,12 +2,12 @@
 title: SSH를 통한 PowerShell 원격
 description: SSH를 사용하여 PowerShell Core에서 원격 작업
 ms.date: 08/14/2018
-ms.openlocfilehash: 1d7bcb69c7e784bf745cb5c2633106ea53f6226a
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d994a3888b9a372b803a65666634775a8905d63a
+ms.sourcegitcommit: 118eb294d5a84a772e6449d42a9d9324e18ef6b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086394"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68372144"
 ---
 # <a name="powershell-remoting-over-ssh"></a>SSH를 통한 PowerShell 원격
 
@@ -17,8 +17,7 @@ PowerShell 원격 기능은 일반적으로 연결 협상 및 데이터 전송�
 
 WinRM은 PowerShell 원격 세션을 위한 강력한 호스팅 모델을 제공합니다. SSH 기반 원격 기능은 원격 엔드포인트 구성 및 JEA(Just Enough Administration)를 지원하지 않습니다.
 
-SSH 원격 기능을 사용하면 Windows 및 Linux 컴퓨터 간에 기본적인 PowerShell 세션 원격 작업을 수행할 수 있습니다. SSH 원격 기능은 대상 컴퓨터에 SSH 하위 시스템으로 PowerShell 호스트 프로세스를 만듭니다.
-앞으로는 엔드포인트 구성 및 JEA를 지원하기 위해 WinRM과 유사한 일반 호스팅 모델을 구현할 예정입니다.
+SSH 원격 기능을 사용하면 Windows 및 Linux 컴퓨터 간에 기본적인 PowerShell 세션 원격 작업을 수행할 수 있습니다. SSH 원격 기능은 대상 컴퓨터에 SSH 하위 시스템으로 PowerShell 호스트 프로세스를 만듭니다. 앞으로는 엔드포인트 구성 및 JEA를 지원하기 위해 WinRM과 유사한 일반 호스팅 모델을 구현할 예정입니다.
 
 `New-PSSession`, `Enter-PSSession` 및 `Invoke-Command` cmdlet에는 이제 이 새로운 원격 연결을 지원하기 위한 새로운 매개 변수가 설정됩니다.
 
@@ -88,9 +87,9 @@ SSH는 모든 컴퓨터에 설치해야 합니다. 컴퓨터에서 들어오고 
 
 5. Path 환경 변수에 OpenSSH가 설치된 경로를 추가합니다. 정의합니다(예: `C:\Program Files\OpenSSH\`). 이 항목을 입력하면 ssh.exe를 찾을 수 있습니다.
 
-## <a name="set-up-on-linux-ubuntu-1404-machine"></a>Linux(Ubuntu 14.04) 컴퓨터에 설치
+## <a name="set-up-on-linux-ubuntu-1604-machine"></a>Linux(Ubuntu 16.04) 머신에 설치
 
-1. GitHub에서 최신 [Linux용 PowerShell Core](../../install/installing-powershell-core-on-linux.md#ubuntu-1404) 빌드를 설치합니다.
+1. GitHub에서 최신 [Linux용 PowerShell Core](../../install/installing-powershell-core-on-linux.md#ubuntu-1604) 빌드를 설치합니다.
 2. 필요에 따라 [Ubuntu SSH](https://help.ubuntu.com/lts/serverguide/openssh-server.html)를 설치합니다.
 
    ```bash
@@ -169,11 +168,7 @@ SSH는 모든 컴퓨터에 설치해야 합니다. 컴퓨터에서 들어오고 
 
 ## <a name="authentication"></a>인증
 
-SSH를 통한 PowerShell 원격 기능은 SSH 클라이언트 및 SSH 서비스 간에 인증 교환을 필요로 하며 어떤 인증 체계도 구현하지 않습니다.
-즉, 다단계 인증을 비롯한 모든 구성된 인증 체계는 SSH에서 처리하며 PowerShell과는 독립적입니다.
-예를 들어 보안 강화를 위해 일회용 암호뿐만 아니라 공개 키 인증이 필요하도록 SSH 서비스를 구성할 수 있습니다.
-다단계 인증의 구성은 이 설명서의 범위를 벗어납니다.
-PowerShell 원격 기능에서 다단계 인증을 사용하기 전에 올바르게 다단계 인증을 구성하고 PowerShell 외부에서 작동하는지 유효성 검사를 하는 방법은 SSH에 대한 설명서를 참조하세요.
+SSH를 통한 PowerShell 원격 기능은 SSH 클라이언트 및 SSH 서비스 간에 인증 교환을 필요로 하며 어떤 인증 체계도 구현하지 않습니다. 즉, 다단계 인증을 비롯한 모든 구성된 인증 체계는 SSH에서 처리하며 PowerShell과는 독립적입니다. 예를 들어 보안 강화를 위해 일회용 암호뿐만 아니라 공개 키 인증이 필요하도록 SSH 서비스를 구성할 수 있습니다. 다단계 인증의 구성은 이 설명서의 범위를 벗어납니다. PowerShell 원격 기능에서 다단계 인증을 사용하기 전에 올바르게 다단계 인증을 구성하고 PowerShell 외부에서 작동하는지 유효성 검사를 하는 방법은 SSH에 대한 설명서를 참조하세요.
 
 ## <a name="powershell-remoting-example"></a>PowerShell 원격 기능 예제
 
@@ -209,7 +204,7 @@ Enter-PSSession $session
 
 ```output
 [UbuntuVM1]: PS /home/TestUser> uname -a
-Linux TestUser-UbuntuVM1 4.2.0-42-generic 49~14.04.1-Ubuntu SMP Wed Jun 29 20:22:11 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+Linux TestUser-UbuntuVM1 4.2.0-42-generic 49~16.04.1-Ubuntu SMP Wed Jun 29 20:22:11 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
 
 [UbuntuVM1]: PS /home/TestUser> Exit-PSSession
 ```
@@ -310,7 +305,7 @@ sudo 명령은 Linux 컴퓨터에 대한 원격 세션에서 작동하지 않습
 
 [Windows용 PowerShell Core](../../install/installing-powershell-core-on-windows.md#msi)
 
-[Linux용 PowerShell Core](../../install/installing-powershell-core-on-linux.md#ubuntu-1404)
+[Linux용 PowerShell Core](../../install/installing-powershell-core-on-linux.md#ubuntu-1604)
 
 [MacOS용 PowerShell Core](../../install/installing-powershell-core-on-macos.md)
 

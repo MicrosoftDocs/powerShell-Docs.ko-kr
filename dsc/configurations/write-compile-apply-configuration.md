@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC, PowerShell, 구성, 서비스, 설정
 title: 구성 작성, 컴파일 및 적용
-ms.openlocfilehash: 947308efa165543571801c88a922daf44fa88be0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 8bcd55518b0409b9a4b02ca95f027a0a77eb5300
+ms.sourcegitcommit: 118eb294d5a84a772e6449d42a9d9324e18ef6b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080019"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68372184"
 ---
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -47,6 +47,18 @@ Configuration HelloWorld {
 }
 ```
 
+> !Important 여러 DSC 리소스를 작업할 수 있도록 여러 모듈을 가져와야 하는 고급 시나리오에서는 `Import-DscResource`를 사용하여 각 모듈을 별도의 줄에 둡니다.
+> 이는 소스 제어에서 관리하기가 쉽고 Azure State Configuration에서 DSC를 작업할 때 필요합니다.
+>
+> ```powershell
+>  Configuration HelloWorld {
+>
+>   # Import the module that contains the File resource.
+>   Import-DscResource -ModuleName PsDesiredStateConfiguration
+>   Import-DscResource -ModuleName xWebAdministration
+>
+> ```
+
 파일을 "HelloWorld.ps1"로 저장합니다.
 
 구성을 정의하는 것은 함수를 정의하는 것과 비슷합니다. **Node** 블록은 구성할 대상 노드를 지정하며, 이 경우는 `localhost`입니다.
@@ -61,7 +73,7 @@ Configuration HelloWorld {
 자세한 내용은 [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing)를 참조하세요.
 
 <!-- markdownlint-disable MD038 -->
-‘점, 공백’ 뒤에 "HelloWorld.ps1" 스크립트를 저장한 경로를 입력하여 `. `(도트 소스)합니다. 그런 다음, 함수처럼 구성을 호출하여 실행합니다.
+‘점, 공백’ 뒤에 "HelloWorld.ps1" 스크립트를 저장한 경로를 입력하여 `. `(도트 소스)합니다.  그런 다음, 함수처럼 구성을 호출하여 실행합니다.
 <!-- markdownlint-enable MD038 -->
 
 ```powershell
