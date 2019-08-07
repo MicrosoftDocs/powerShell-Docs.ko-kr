@@ -3,10 +3,10 @@ ms.date: 05/17/2018
 keywords: powershell,core
 title: PowerShell 6.0의 주요 변경 내용
 ms.openlocfilehash: 186e55c1ac46ce3fc172df18995f8c15d9eeb8eb
-ms.sourcegitcommit: 09f02ccef56ef30e7a9ca901f8d3713724960c68
+ms.sourcegitcommit: 118eb294d5a84a772e6449d42a9d9324e18ef6b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 07/26/2019
 ms.locfileid: "67843936"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>PowerShell 6.0의 주요 변경 내용
@@ -15,7 +15,7 @@ ms.locfileid: "67843936"
 
 ### <a name="powershell-workflow"></a>PowerShell 워크플로
 
-[PowerShell 워크플로][workflow]: 장기 실행 또는 병렬화 작업을 위한 강력한 Runbooks의 생성을 지원하는 is a feature in Windows PowerShell that builds on top of [Windows Workflow Foundation (WF)][workflow-foundation]입니다.
+[PowerShell 워크플로][workflow]는 [Windows WF(Workflow Foundation)][workflow-foundation]을 토대로 빌드되는 Windows PowerShell의 기능으로, 장기 실행 또는 병렬 처리 작업을 위한 강력한 Runbook을 만들 수 있습니다.
 
 .NET Core에 Windows Workflow Foundation 지원이 없으므로 PowerShell Core에서는 이후에도 PowerShell 워크플로를 지원하지 않을 것입니다.
 
@@ -163,7 +163,7 @@ HTTP를 사용하는 경우 암호를 포함하는 콘텐츠가 일반 텍스트
 
 ### <a name="removed-runspaceconfiguration-support-4942httpsgithubcompowershellpowershellissues4942"></a>`RunspaceConfiguration` 지원 제거 [#4942](https://github.com/PowerShell/PowerShell/issues/4942)
 
-이전에는 API를 사용하여 프로그래밍 방식으로 PowerShell Runspace를 만들 때 레거시 [`RunspaceConfiguration`][runspaceconfig] or the newer [`InitialSessionState`][iss]를 사용할 수 있었습니다. 이 변경으로, `RunspaceConfiguration` 지원이 제거되었으며 `InitialSessionState`만 지원됩니다.
+이전에는 API를 사용하여 프로그래밍 방식으로 PowerShell Runspace를 만들 때 레거시 [`RunspaceConfiguration`][runspaceconfig] 또는 최신 [`InitialSessionState`][iss]를 사용할 수 있었습니다. 이 변경으로, `RunspaceConfiguration` 지원이 제거되었으며 `InitialSessionState`만 지원됩니다.
 
 [runspaceconfig]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.runspaceconfiguration
 [iss]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.initialsessionstate
