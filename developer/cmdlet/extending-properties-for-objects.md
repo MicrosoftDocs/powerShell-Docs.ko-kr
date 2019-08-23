@@ -1,32 +1,32 @@
 ---
-title: 개체에 대 한 속성을 확장 | Microsoft Docs
+title: 개체에 대 한 속성 확장 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 08/21/2019
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f33ff3e9-213c-44aa-92ab-09450e65c676
 caps.latest.revision: 11
-ms.openlocfilehash: 496e363b041194563d46c09eee67a12055bb54b0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 3b14007384cca0d0cfa35655aee437adf73b1ff0
+ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068150"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986484"
 ---
 # <a name="extending-properties-for-objects"></a>개체 속성 확장
 
-.NET Framework 개체를 확장 하는 경우 추가할 수 있습니다 별칭 속성, 코드 속성, 메모 속성, 스크립트 속성 및 속성 집합 개체. 이러한 속성을 정의 하는 데 사용 되는 XML은 다음 섹션에 설명 되어 있습니다.
+.NET Framework 개체를 확장 하는 경우 개체에 별칭 속성, 코드 속성, 메모 속성, 스크립트 속성 및 속성 집합을 추가할 수 있습니다. 이러한 속성을 정의 하는 XML은 다음 섹션에 설명 되어 있습니다.
 
 > [!NOTE]
-> 다음 섹션의 예는 Windows PowerShell 설치 디렉터리에서 Types.ps1xml 형식 기본 파일에서 (`$pshome`).
+> 다음 섹션의 예는 PowerShell 설치 디렉터리의 기본 `Types.ps1xml` 형식 파일 (`$PSHOME`)에 있습니다. 자세한 내용은 [Types.ps1xml 정보](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)를 참조 하세요.
 
 ## <a name="alias-properties"></a>별칭 속성
 
-별칭 속성을 기존 속성에 대 한 새 이름을 정의합니다.
+별칭 속성은 기존 속성의 새 이름을 정의 합니다.
 
-다음 예제에서는 `Count` 속성을 추가 합니다 [System.Array? Displayproperty =](/dotnet/api/System.Array) 형식입니다. 합니다 [AliasProperty](http://msdn.microsoft.com/en-us/b140038c-807a-4bb9-beca-332491cda1b1) 요소 별칭 속성으로 확장 된 속성을 정의 합니다. 합니다 [이름을](http://msdn.microsoft.com/en-us/b58e9d21-c8c9-49a5-909e-9c1cfc64f873) 요소에 새 이름을 지정 합니다. 그 뿐만 아니라 [ReferencedMemberName](http://msdn.microsoft.com/en-us/0c5db6cc-9033-4d48-88a7-76b962882f7a) 요소 별칭에서 참조 되는 기존 속성을 지정 합니다. (추가할 수도 있습니다는 [AliasProperty](http://msdn.microsoft.com/en-us/d6647953-94ad-4b0b-af2e-4dda6952dee1) 의 멤버에는 요소는 [구성원 집합](http://msdn.microsoft.com/en-us/46a50fb5-e150-4c03-8584-e1b53e4d49e3) 요소입니다.)
+다음 예제에서는 **Count** 속성이 [system.object](/dotnet/api/System.Array) 형식에 추가 됩니다. [AliasProperty](/dotnet/api/system.management.automation.psaliasproperty) 요소는 확장 속성을 별칭 속성으로 정의 합니다. [Name](/dotnet/api/system.management.automation.psmemberinfo.name) 요소는 새 이름을 지정 합니다. [ReferencedMemberName](/dotnet/api/system.management.automation.psaliasproperty.referencedmembername) 요소는 별칭에 의해 참조 되는 기존 속성을 지정 합니다. `AliasProperty` [MemberSets](/dotnet/api/system.management.automation.psmemberset) 요소의 멤버에 요소를 추가할 수도 있습니다.
 
 ```xml
 <Type>
@@ -42,9 +42,9 @@ ms.locfileid: "62068150"
 
 ## <a name="code-properties"></a>코드 속성
 
-코드 속성에는.NET Framework 개체의 정적 속성을 참조합니다.
+코드 속성은 .NET Framework 개체의 정적 속성을 참조 합니다.
 
-다음 예제에서는 `Node` 속성을 추가 합니다 [System.IO.Directoryinfo? Displayproperty =](/dotnet/api/System.IO.DirectoryInfo) 형식입니다. 합니다 [CodeProperty](http://msdn.microsoft.com/en-us/59bc4d18-41eb-4c0d-8ad3-bbfa5dc488db) 요소 코드 속성으로 확장 된 속성을 정의 합니다. 합니다 [이름을](http://msdn.microsoft.com/en-us/b58e9d21-c8c9-49a5-909e-9c1cfc64f873) 요소 확장된 속성의 이름을 지정 합니다. 그 뿐만 아니라 [GetCodeReference](http://msdn.microsoft.com/en-us/62af34f5-cc22-42c0-9e0c-3bd0f5c1a4a0) 요소 확장된 속성에서 참조 되는 정적 메서드를 정의 합니다. (추가할 수도 있습니다는 [CodeProperty](http://msdn.microsoft.com/en-us/59bc4d18-41eb-4c0d-8ad3-bbfa5dc488db) 의 멤버에는 요소는 [구성원 집합](http://msdn.microsoft.com/en-us/46a50fb5-e150-4c03-8584-e1b53e4d49e3) 요소입니다.)
+다음 예제에서 **Mode** 속성은 [system.io.directoryinfo](/dotnet/api/System.IO.DirectoryInfo) 형식에 추가 됩니다. [Codeproperty](/dotnet/api/system.management.automation.pscodeproperty) 요소는 확장 속성을 코드 속성으로 정의 합니다. [Name](/dotnet/api/system.management.automation.psmemberinfo.name) 요소는 확장 속성의 이름을 지정 합니다. 그리고 [Getcodereference](/dotnet/api/system.management.automation.pscodeproperty.gettercodereference) 요소는 확장 속성이 참조 하는 정적 메서드를 정의 합니다. `CodeProperty` [MemberSets](/dotnet/api/system.management.automation.psmemberset) 요소의 멤버에 요소를 추가할 수도 있습니다.
 
 ```xml
 <Type>
@@ -63,9 +63,9 @@ ms.locfileid: "62068150"
 
 ## <a name="note-properties"></a>참고 속성
 
-메모 속성을 정적 값이 있는 속성을 정의 합니다.
+Note 속성은 정적 값이 있는 속성을 정의 합니다.
 
-다음 예제에서는 `Status` (값은 "성공"이 항상) 속성을 추가 합니다 [System.IO.Directoryinfo? Displayproperty =](/dotnet/api/System.IO.DirectoryInfo) 형식입니다. [NoteProperty](http://msdn.microsoft.com/en-us/331e6c50-d703-43f0-89bc-ca9fb97800eb) 참고 속성으로 확장 된 속성을 정의 하는 요소는 [이름](http://msdn.microsoft.com/en-us/b58e9d21-c8c9-49a5-909e-9c1cfc64f873) 요소는 확장된 속성의 이름을 지정 하며 [값](http://msdn.microsoft.com/en-us/f3c77546-b98e-4c4e-bbe0-6dfd06696d1c) 요소 확장된 속성의 정적 값을 지정합니다. (합니다 [NoteProperty](http://msdn.microsoft.com/en-us/331e6c50-d703-43f0-89bc-ca9fb97800eb) 의 멤버에 요소를 추가할 수도 있습니다는 [구성원 집합](http://msdn.microsoft.com/en-us/46a50fb5-e150-4c03-8584-e1b53e4d49e3) 요소입니다.)
+다음 예제에서 값이 항상 **Success**인 **Status** 속성은 [system.io.directoryinfo](/dotnet/api/System.IO.DirectoryInfo) 형식에 추가 됩니다. [Note property](/dotnet/api/system.management.automation.psnoteproperty) 요소는 확장 속성을 note 속성으로 정의 합니다. [Name](/dotnet/api/system.management.automation.psmemberinfo.name) 요소는 확장 속성의 이름을 지정 합니다. [Value](/dotnet/api/system.management.automation.psnoteproperty.value) 요소는 확장 속성의 정적 값을 지정 합니다. 요소 `NoteProperty` 는 [MemberSets](/dotnet/api/system.management.automation.psmemberset) 요소의 멤버에도 추가할 수 있습니다.
 
 ```xml
 <Type>
@@ -81,9 +81,9 @@ ms.locfileid: "62068150"
 
 ## <a name="script-properties"></a>스크립트 속성
 
-스크립트 속성 값은 스크립트의 출력 속성을 정의 합니다.
+스크립트 속성은 값이 스크립트의 출력 인 속성을 정의 합니다.
 
-다음 예제에서는 `VersionInfo` 속성을 추가 합니다 [System.IO.FileInfo? Displayproperty =](/dotnet/api/System.IO.FileInfo) 형식입니다. 합니다 [ScriptProperty](http://msdn.microsoft.com/en-us/858a4247-676b-4cc9-9f3e-057109aad350) 요소 스크립트 속성으로 확장 된 속성을 정의 합니다. 합니다 [이름을](http://msdn.microsoft.com/en-us/b58e9d21-c8c9-49a5-909e-9c1cfc64f873) 요소 확장된 속성의 이름을 지정 합니다. 그 뿐만 아니라 [GetScriptBlock](http://msdn.microsoft.com/en-us/f3c77546-b98e-4c4e-bbe0-6dfd06696d1c) 요소는 속성 값을 생성 하는 스크립트를 지정 합니다. (추가할 수도 있습니다는 [ScriptProperty](http://msdn.microsoft.com/en-us/858a4247-676b-4cc9-9f3e-057109aad350) 의 멤버에는 요소는 [구성원 집합](http://msdn.microsoft.com/en-us/46a50fb5-e150-4c03-8584-e1b53e4d49e3) 요소입니다.)
+다음 예제에서는 **VersionInfo** 속성이 [system.object](/dotnet/api/System.IO.FileInfo) 형식에 추가 됩니다. [Scriptproperty](/dotnet/api/system.management.automation.psscriptproperty) 요소는 확장 속성을 스크립트 속성으로 정의 합니다. [Name](/dotnet/api/system.management.automation.psmemberinfo.name) 요소는 확장 속성의 이름을 지정 합니다. [Getscriptblock](/dotnet/api/system.management.automation.psscriptproperty.getterscript) 요소는 속성 값을 생성 하는 스크립트를 지정 합니다. `ScriptProperty` [MemberSets](/dotnet/api/system.management.automation.psmemberset) 요소의 멤버에 요소를 추가할 수도 있습니다.
 
 ```xml
 <Type>
@@ -101,11 +101,13 @@ ms.locfileid: "62068150"
 
 ## <a name="property-sets"></a>속성 집합
 
-속성 집합을 그룹 집합의 이름으로 참조할 수 있는 확장된 속성을 정의 합니다. 예를 들어 합니다 `Property` 의 매개 변수를 [Format-table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table) cmdlet 집합을 표시할 특정 속성을 지정할 수 있습니다. 지정 된 속성 집합은 집합에 속해 있는 속성만 표시 됩니다.
+속성 집합은 집합의 이름으로 참조할 수 있는 확장 속성의 그룹을 정의 합니다.
+예를 들어 [형식-테이블](/powershell/module/Microsoft.PowerShell.Utility/Format-Table)
+**속성** 매개 변수는 표시할 특정 속성 집합을 지정할 수 있습니다. 속성 집합을 지정 하면 해당 집합에 속한 속성만 표시 됩니다.
 
-개체에 대해 정의 될 수 있는 속성 집합의 수에 제한은 없습니다. 그러나 개체의 기본 표시 속성을 정의 하는 데 사용 되는 속성 집합 PSStandardMembers 멤버 집합 내에서 지정 되어야 합니다. Types.ps1xml 형식 파일의 기본 속성 집합 이름을 DefaultDisplayProperty, DefaultDisplayPropertySet, 및 DefaultKeyPropertySet 포함 됩니다. PSStandardMembers 멤버 집합에 추가한 모든 추가 속성 집합은 무시 됩니다.
+개체에 대해 정의할 수 있는 속성 집합의 수에는 제한이 없습니다. 그러나 개체의 기본 표시 속성을 정의 하는 데 사용 되는 속성 집합은 **Psstandardmembers** 멤버 집합 내에서 지정 해야 합니다. Types 파일에서 기본 속성 집합 이름에는 **defaultdisplayproperty**, **DefaultDisplayPropertySet**및 DefaultKeyPropertySet가 포함 됩니다. `Types.ps1xml` **Psstandardmembers** 멤버 집합에 추가 하는 모든 추가 속성 집합은 무시 됩니다.
 
-다음 예제에서는 DefaultDisplayPropertySet 속성 집합 PSStandardMembers 멤버 집합에 추가 되는 [System.Serviceprocess.Servicecontroller? Displayproperty =](/dotnet/api/System.ServiceProcess.ServiceController) 형식입니다. 합니다 [PropertySet](http://msdn.microsoft.com/en-us/14cdc234-796e-4857-9b51-bdbaa1412188) 요소 그룹 속성을 정의 합니다. 합니다 [이름을](http://msdn.microsoft.com/en-us/b58e9d21-c8c9-49a5-909e-9c1cfc64f873) 요소 속성 집합의 이름을 지정 합니다. 그 뿐만 아니라 [ReferencedProperties](http://msdn.microsoft.com/en-us/5e620423-8679-4fbf-b6db-9f79288e4786) 요소 집합의 속성을 지정 합니다. (추가할 수도 있습니다는 [PropertySet](http://msdn.microsoft.com/en-us/14cdc234-796e-4857-9b51-bdbaa1412188) 의 멤버에는 요소는 [형식](http://msdn.microsoft.com/en-us/e5dbd353-d6b2-40a1-92b6-6f1fea744ebe) 요소입니다.)
+다음 예제에서는 **DefaultDisplayPropertySet** 속성 집합이 [Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) 형식의 **psstandardmembers** 멤버 집합에 추가 됩니다. [PropertySet](/dotnet/api/system.management.automation.pspropertyset) 요소는 속성의 그룹을 정의 합니다. [Name](/dotnet/api/system.management.automation.psmemberinfo.name) 요소는 속성 집합의 이름을 지정 합니다. 그리고 [Referencedproperties](/dotnet/api/system.management.automation.pspropertyset.referencedpropertynames) 요소는 집합의 속성을 지정 합니다. 또한 `PropertySet` 요소를 [Type](/dotnet/api/system.management.automation.pstypename) 요소의 멤버에 추가할 수 있습니다.
 
 ```xml
 <Type>
@@ -128,6 +130,10 @@ ms.locfileid: "62068150"
 </Type>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
+
+[Types.ps1xml 정보](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)
+
+[시스템 관리. 자동화](/dotnet/api/System.Management.Automation)
 
 [Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

@@ -1,5 +1,5 @@
 ---
-title: Cmdlet은 동적 매개 변수 | Microsoft Docs
+title: Cmdlet 동적 매개 변수 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,44 +8,44 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8ae2196d-d6c8-4101-8805-4190d293af51
 caps.latest.revision: 13
-ms.openlocfilehash: 2fc73b6ef5a862fafb7a3c8fe3da19ac71bafc05
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 19d31f6b619dff23e7e35bb53d2397f4f41eb728
+ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068541"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986249"
 ---
 # <a name="cmdlet-dynamic-parameters"></a>Cmdlet 동적 매개 변수
 
-Cmdlet는 경우와 같이 다른 매개 변수 인수의 특정 값을 특수 한 상황에서 사용자에 게 사용할 수 있는 매개 변수를 정의할 수 있습니다. 이러한 매개 변수는 런타임에 추가 되 고 이라고 *동적 매개 변수* 있으므로 필요할 때에 추가 됩니다. 예를 들어, 특정 스위치 매개 변수를 지정 하는 경우에 여러 매개 변수를 추가 하는 cmdlet를 디자인할 수 있습니다.
+Cmdlet은 다른 매개 변수의 인수가 특정 값인 경우와 같이 사용자가 특별 한 조건에서 사용할 수 있는 매개 변수를 정의할 수 있습니다. 이러한 매개 변수는 런타임에 추가 되며 필요한 경우에만 추가 되므로 동적 매개 변수 라고 합니다. 예를 들어 특정 스위치 매개 변수가 지정 된 경우에만 여러 매개 변수를 추가 하는 cmdlet을 디자인할 수 있습니다.
 
 > [!NOTE]
-> 공급자 및 Windows PowerShell 함수는 동적 매개 변수를 정의할 수도 있습니다.
+> 공급자 및 PowerShell 함수는 동적 매개 변수를 정의할 수도 있습니다.
 
-## <a name="dynamic-parameters-in-windows-powershell-cmdlets"></a>Windows PowerShell Cmdlet에서 동적 매개 변수
+## <a name="dynamic-parameters-in-powershell-cmdlets"></a>PowerShell cmdlet의 동적 매개 변수
 
-Windows PowerShell 공급자 cmdlet의 여러 동적 매개 변수를 사용합니다. 예를 들어, 합니다 `Get-Item` 및 `Get-ChildItem` cmdlet 추가 `CodeSigningCert` 런타임에 매개 변수 때를 `Path` cmdlet의 매개 변수는 인증서 공급자 경로 지정 합니다. 경우는 `Path` 다른 공급자에 대 한 경로 지정 하는 cmdlet의 매개 변수는 `CodeSigningCert` 매개 변수를 사용할 수 없습니다.
+PowerShell은 여러 공급자 cmdlet에서 동적 매개 변수를 사용 합니다. 예를 들어, `Get-Item` 및 `Get-ChildItem` cmdlet은 **path** 매개 변수에서 **인증서** 공급자 경로를 지정 하는 경우 런타임에 **codesigningcert** 매개 변수를 추가 합니다. **Path** 매개 변수가 다른 공급자의 경로를 지정 하는 경우 **Codesigningcert** 매개 변수를 사용할 수 없습니다.
 
-다음 예제에서는 표시 하는 방법을 `CodeSigningCert` 매개 변수는 런타임에 추가 됩니다 때를 `Get-Item` cmdlet을 실행 합니다.
+다음 예에서는를 실행할 `Get-Item` 때 **codesigningcert** 매개 변수를 런타임에 추가 하는 방법을 보여 줍니다.
 
-첫 번째 예에서는 Windows PowerShell 런타임이 매개 변수를 추가 및 cmdlet은 성공 합니다.
+이 예에서는 PowerShell 런타임에서 매개 변수를 추가 하 고 cmdlet이 성공 했습니다.
 
 ```powershell
-Get-Item -Path cert:\CurrentUser -codesigningcert
+Get-Item -Path cert:\CurrentUser -CodeSigningCert
 ```
 
-```output
+```Output
 Location   : CurrentUser
 StoreNames : {SmartCardRoot, UserDS, AuthRoot, CA...}
 ```
 
-두 번째 예제에서는 파일 시스템 드라이브를 지정 하 고 오류가 반환 됩니다. 오류 메시지를 표시 하는 `CodeSigningCert` 매개 변수를 찾을 수 없습니다.
+이 예제에서는 **파일 시스템** 드라이브를 지정 하 고 오류가 반환 됩니다. 오류 메시지는 **Codesigningcert** 매개 변수를 찾을 수 없음을 나타냅니다.
 
 ```powershell
-Get-Item -Path C:\ -codesigningcert
+Get-Item -Path C:\ -CodeSigningCert
 ```
 
-```output
+```Output
 Get-Item : A parameter cannot be found that matches parameter name 'codesigningcert'.
 At line:1 char:37
 +  get-item -path C:\ -codesigningcert <<<<
@@ -54,19 +54,25 @@ At line:1 char:37
     FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetItemCommand
 ```
 
-## <a name="support-for-dynamic-parameters"></a>동적 매개 변수에 대 한 지원
+## <a name="support-for-dynamic-parameters"></a>동적 매개 변수 지원
 
-동적 매개 변수를 지원 하려면 cmdlet 코드는 다음과 같은 요소를 포함 해야 합니다.
+동적 매개 변수를 지원 하려면 다음 요소를 cmdlet 코드에 포함 해야 합니다.
 
-[System.Management.Automation.Idynamicparameters](/dotnet/api/System.Management.Automation.IDynamicParameters) 이 인터페이스는 동적 매개 변수를 검색 하는 메서드를 제공 합니다.
+### <a name="interface"></a>인터페이스
 
-예:
+[IDynamicParameters](/dotnet/api/System.Management.Automation.IDynamicParameters)입니다.
+이 인터페이스는 동적 매개 변수를 검색 하는 메서드를 제공 합니다.
+
+예를 들어:
 
 `public class SendGreetingCommand : Cmdlet, IDynamicParameters`
 
-[System.Management.Automation.Idynamicparameters.Getdynamicparameters*](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters) 이 메서드는 동적 매개 변수 정의 포함 하는 개체를 검색 합니다.
+### <a name="method"></a>메서드
 
-예:
+[IDynamicParameters. GetDynamicParameters](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters)
+이 메서드는 동적 매개 변수 정의를 포함 하는 개체를 검색 합니다.
+
+예를 들어:
 
 ```csharp
  public object GetDynamicParameters()
@@ -81,7 +87,9 @@ At line:1 char:37
 private SendGreetingCommandDynamicParameters context;
 ```
 
-동적 매개 변수 클래스가이 클래스에 추가할 매개 변수를 정의 합니다. 이 클래스는 각 매개 변수 및 cmdlet에 필요한 모든 선택적 별칭 및 유효성 검사 특성에 대 한 매개 변수 특성을 포함 해야 합니다.
+### <a name="class"></a>클래스
+
+추가할 동적 매개 변수를 정의 하는 클래스입니다. 이 클래스에는 각 매개 변수에 대 한 **매개 변수** 특성과 cmdlet에 필요한 선택적 **별칭** 및 **유효성 검사** 특성이 포함 되어야 합니다.
 
 예:
 
@@ -99,13 +107,13 @@ public class SendGreetingCommandDynamicParameters
 }
 ```
 
-동적 매개 변수를 지 원하는 cmdlet의 전체 예제를 참조 하세요 [동적 매개 변수를 선언 하는 방법을](./how-to-declare-dynamic-parameters.md)합니다.
+동적 매개 변수를 지 원하는 cmdlet의 전체 예제는 [동적 매개 변수를 선언 하는 방법](./how-to-declare-dynamic-parameters.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-[System.Management.Automation.Idynamicparameters](/dotnet/api/System.Management.Automation.IDynamicParameters)
+[IDynamicParameters.](/dotnet/api/System.Management.Automation.IDynamicParameters)
 
-[System.Management.Automation.Idynamicparameters.Getdynamicparameters*](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters)
+[IDynamicParameters. GetDynamicParameters](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters)
 
 [동적 매개 변수를 선언 하는 방법](./how-to-declare-dynamic-parameters.md)
 
