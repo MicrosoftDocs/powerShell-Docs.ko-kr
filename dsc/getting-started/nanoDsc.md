@@ -120,7 +120,7 @@ Nano Server는 처음 사용자용 Windows Server에 비해 제한된 일부 API
 ## <a name="using-custom-dsc-resources-on-nano-server"></a>Nano Server에서 사용자 지정 DSC 리소스 사용
 
 Nano Server에서 사용할 수 있는 Windows API 집합과 CLR 라이브러리가 한정되어 있기 때문에 Windows 전체 CLR 버전에서 동작하는 DSC 리소스가 Nano Server에서 동작하지 않을 수도 있습니다.
-DSC 사용자 지정 리소스를 프로덕션 환경에 배포하기 전에 종단 간 테스트를 완료하세요.
+DSC 사용자 지정 리소스를 프로덕션 환경에 배포하기 전에 엔드투엔드 테스트를 완료하세요.
 
 ## <a name="see-also"></a>참고 항목
 

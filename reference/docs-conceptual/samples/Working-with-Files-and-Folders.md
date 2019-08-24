@@ -118,7 +118,7 @@ subst p: $env:programfiles
 
 ## <a name="reading-a-text-file-into-an-array"></a>텍스트 파일을 배열로 읽어오기
 
-일반적으로 텍스트 데이터는 개별 데이터 요소로 취급되는 별도의 줄이 포함된 파일에 저장됩니다. **Get-Content** cmdlet을 사용하여 다음과 같이 한 단계에서 전체 파일을 읽을 수 있습니다.
+일반적으로 텍스트 데이터는 개별 데이터 요소로 취급되는 별도의 줄이 포함된 파일에 스토리지됩니다. **Get-Content** cmdlet을 사용하여 다음과 같이 한 단계에서 전체 파일을 읽을 수 있습니다.
 
 ```
 PS> Get-Content -Path C:\boot.ini

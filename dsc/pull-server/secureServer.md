@@ -117,7 +117,7 @@ CPU: 1.4GHz 64비트 프로세서 메모리: 512MB 디스크 공간: 32GB 네트
 
 끌어오기 서버 인스턴스를 배포하는 데 필요한 서비스 계정 요구 사항은 없습니다.
 그러나 로컬 사용자 계정의 컨텍스트에서 웹 사이트를 실행할 수 있는 시나리오가 있습니다.
-웹 사이트 콘텐츠를 위해 저장소 공유에 액세스해야 하고 Windows Server 또는 저장소 공유를 호스트하는 디바이스가 도메인에 연결되지 않은 경우를 예로 들 수 있습니다.
+웹 사이트 콘텐츠를 위해 스토리지 공유에 액세스해야 하고 Windows Server 또는 스토리지 공유를 호스트하는 디바이스가 도메인에 연결되지 않은 경우를 예로 들 수 있습니다.
 
 ### <a name="dns-records"></a>DNS 레코드
 
@@ -258,7 +258,7 @@ Install-Module xPSDesiredStateConfiguration
 
 ### <a name="installation-and-configuration-scripts"></a>설치 및 구성 스크립트
 
-DSC 끌어오기 서버를 배포하는 최상의 방법은 DSC 구성 스크립트를 사용하는 것입니다. 이 문서에서는 DSC 웹 서비스만 구성하는 기본 설정과 DSC 웹 서비스를 포함하는 종단 간 Windows Server를 구성하는 고급 설정이 모두 포함된 스크립트를 제공합니다.
+DSC 끌어오기 서버를 배포하는 최상의 방법은 DSC 구성 스크립트를 사용하는 것입니다. 이 문서에서는 DSC 웹 서비스만 구성하는 기본 설정과 DSC 웹 서비스를 포함하는 엔드투엔드 Windows Server를 구성하는 고급 설정이 모두 포함된 스크립트를 제공합니다.
 
 참고:  현재 `xPSDesiredStateConfiguration` DSC 모듈을 사용하려면 EN-US 로캘의 서버가 필요합니다.
 
