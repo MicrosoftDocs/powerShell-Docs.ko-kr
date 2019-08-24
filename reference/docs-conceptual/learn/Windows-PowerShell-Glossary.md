@@ -54,4 +54,4 @@ ms.locfileid: "67030349"
 |Windows PowerShell 스크립트|Windows PowerShell 언어로 작성된 스크립트입니다.|
 |Windows PowerShell 스크립트 파일|확장명이 .ps1이고 Windows PowerShell 언어로 작성된 스크립트를 포함하는 파일입니다.|
 |Windows PowerShell 스냅인|Windows PowerShell 환경에 추가할 수 있는 cmdlet, 공급자 및 Microsoft.NET Framework 형식 집합을 정의하는 리소스입니다.|
-|Windows PowerShell 워크플로|워크플로는 프로그래밍 방식으로 연결된 단계의 시퀀스로, 장기 실행 작업을 수행하거나 여러 디바이스 또는 관리 노드에서 여러 단계의 조정을 필요로 합니다. Windows PowerShell 워크플로를 통해 IT 전문가와 개발자는 다중 장치 관리 활동 또는 워크플로 내 단일 작업의 시퀀스를 워크플로로 작성할 수 있습니다. Windows PowerShell 워크플로를 통해 Windows PowerShell 스크립트와 XAML 파일 둘 다를 워크플로로 적용하고 실행할 수 있습니다.|
+|Windows PowerShell 워크플로|워크플로는 프로그래밍 방식으로 연결된 단계의 시퀀스로, 장기 실행 작업을 수행하거나 여러 디바이스 또는 관리 노드에서 여러 단계의 조정을 필요로 합니다. Windows PowerShell 워크플로를 통해 IT 전문가와 개발자는 다중 디바이스 관리 활동 또는 워크플로 내 단일 작업의 시퀀스를 워크플로로 작성할 수 있습니다. Windows PowerShell 워크플로를 통해 Windows PowerShell 스크립트와 XAML 파일 둘 다를 워크플로로 적용하고 실행할 수 있습니다.|
