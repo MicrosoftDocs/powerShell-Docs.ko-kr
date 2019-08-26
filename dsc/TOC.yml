@@ -12,6 +12,8 @@
   items:
     - name: Linux용 DSC 시작하기
       href: getting-started/lnxGettingStarted.md
+    - name: Windows용 DSC 시작하기
+      href: getting-started/winGettingStarted.md
     - name: Nano에서 DSC 시작하기
       href: getting-started/nanoDSC.md
     - name: Azure Automation에서 DSC 시작하기
