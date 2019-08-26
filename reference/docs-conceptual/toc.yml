@@ -52,6 +52,24 @@
       href: learn/writing-portable-modules.md
     - name: PowerShell 원격 기능
       items:
+        - name: JEA(Just Enough Administration)
+          items:
+            - name: 개요
+              href: learn/remoting/jea/overview.md
+            - name: 필수 구성 요소
+              href: learn/remoting/jea/prerequisites.md
+            - name: 역할 기능
+              href: learn/remoting/jea/role-capabilities.md
+            - name: 세션 구성
+              href: learn/remoting/jea/session-configurations.md
+            - name: JEA 등록
+              href: learn/remoting/jea/register-jea.md
+            - name: JEA 사용
+              href: learn/remoting/jea/using-jea.md
+            - name: 보안 고려 사항
+              href: learn/remoting/jea/security-considerations.md
+            - name: JEA에 대한 감사 및 보고
+              href: learn/remoting/jea/audit-and-report.md
         - name: 원격 명령 실행
           href: learn/remoting/running-remote-commands.md
         - name: SSH를 통한 PowerShell 원격
