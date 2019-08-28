@@ -2,12 +2,12 @@
 ms.date: 03/04/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC 끌어오기 서비스
-ms.openlocfilehash: 3cb2ca09111100f39589072a0d8e7010f9188efb
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 865eae5813e0c7b656a4158f0b1350e60f1e3291
+ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079407"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986544"
 ---
 # <a name="desired-state-configuration-pull-service"></a>원하는 상태 구성 끌어오기 서비스
 
@@ -228,7 +228,7 @@ Sample_MetaConfigurationToRegisterWithLessSecurePullServer -RegistrationKey $Reg
 
 각 리소스 모듈은 압축해야 하며 `{Module Name}_{Module Version}.zip` 패턴에 따라 이름을 지정해야 합니다.
 
-예를 들어 모듈 버전이 3.1.2.0인 xWebAdminstration이라는 모듈은 `xWebAdministration_3.2.1.0.zip`으로 이름이 지정됩니다.
+예를 들어 모듈 버전이 3.1.2.0인 xWebAdminstration이라는 모듈은 `xWebAdministration_3.1.2.0.zip`으로 이름이 지정됩니다.
 모듈의 각 버전은 단일 zip 파일에 포함되어야 합니다.
 각 zip 파일에 리소스의 단일 버전만 있으므로 단일 디렉터리에서 여러 모듈 버전을 지원하는 WMF 5.0에서 추가된 모듈 형식은 지원되지 않습니다.
 따라서 끌어오기 서버에서 사용할 DSC 리소스 모듈을 패키징하기 전에 디렉터리 구조를 약간 변경해야 합니다.

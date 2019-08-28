@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC 보고서 서버 사용
-ms.openlocfilehash: 73208477a74ff3c615d7d515fcad555beabe8f32
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 1ccd4f96b782b41b7d7c953735cb41b3ba3d2bce
+ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079237"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986548"
 ---
 # <a name="using-a-dsc-report-server"></a>DSC 보고서 서버 사용
 
@@ -51,7 +51,7 @@ configuration ReportClientConfig
 
         ReportServerWeb CONTOSO-ReportSrv
         {
-            ServerURL               = 'http://CONTOSO-REPORT:8080/PSDSCReportServer.svc'
+            ServerURL               = 'http://CONTOSO-REPORT:8080/PSDSCPullServer.svc'
             RegistrationKey         = 'ba39daaa-96c5-4f2f-9149-f95c46460faa'
             AllowUnsecureConnection = $true
         }
