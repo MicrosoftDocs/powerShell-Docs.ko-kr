@@ -25,7 +25,7 @@ SSH 원격 기능을 사용하면 Windows 및 Linux 컴퓨터 간에 기본적�
 [-HostName <string>]  [-UserName <string>]  [-KeyFilePath <string>]
 ```
 
-원격 세션을 만들려면 `HostName` 매개 변수를 사용하여 대상 컴퓨터를 지정하고 `UserName`을 사용하여 사용자 이름을 제공합니다. cmdlet을 대화형으로 실행하면 암호를 묻는 메시지가 나타납니다. `KeyFilePath` 매개 변수와 함께 개인 키 파일을 사용하여 SSH 키 인증을 사용할 수도 있습니다.
+원격 세션을 만들려면 `HostName` 매개 변수를 사용하여 대상 컴퓨터를 지정하고 `UserName`을 사용하여 사용자 이름을 제공합니다. cmdlet을 대화형으로 실행하면 암호를 묻는 메시지가 나타납니다. `KeyFilePath` 매개 변수와 함께 프라이빗 키 파일을 사용하여 SSH 키 인증을 사용할 수도 있습니다.
 
 ## <a name="general-setup-information"></a>일반적인 설치 정보
 

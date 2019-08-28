@@ -29,7 +29,7 @@ ms.locfileid: "69986544"
 
 **권장 솔루션**이며, 대부분의 기능에서 사용 가능한 옵션은 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)입니다.
 
-Azure 서비스는 개인 데이터 센터의 온-프레미스에 있는 노드를 관리하거나 Azure와 AWS 같은 공용 클라우드에 있는 노드를 관리할 수 있습니다.
+Azure 서비스는 개인 데이터 센터의 온-프레미스에 있는 노드를 관리하거나 Azure와 AWS 같은 퍼블릭 클라우드에 있는 노드를 관리할 수 있습니다.
 서버를 인터넷에 직접 연결할 수 없는 개인 환경의 경우, 아웃바운드 트래픽을 게시된 Azure IP 범위로만 제한하세요([Azure Datacenter IP Ranges](https://www.microsoft.com/en-us/download/details.aspx?id=41653)(Azure 데이터 센터 IP 범위) 참조).
 
 Windows Server의 풀 서비스에서 현재 사용할 수 없는 온라인 서비스의 기능은 다음과 같습니다.

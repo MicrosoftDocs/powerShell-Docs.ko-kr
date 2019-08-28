@@ -167,7 +167,7 @@ Docker 및 PowerShell Core에 대한 자세한 내용은 GitHub의 [Docker][]를
 PowerShell Remoting Protocol(PSRP)은 이제 기존 WinRM 기반 PSRP 외에도 Secure Shell(SSH) 프로토콜과도 함께 작동합니다.
 
 즉, `Enter-PSSession` 및 `New-PSSession`와 같은 cmdlet을 사용하고 SSH를 사용하여 인증할 수 있습니다.
-OpenSSH 기반 SSH 서버를 사용하여 PowerShell을 서브 시스템으로 등록하면, 기존의 `PSSession` 의미 체계와 함께 기존 SSH 기반 인증 메커니즘(암호 또는 개인 키 등)을 사용할 수 있습니다.
+OpenSSH 기반 SSH 서버를 사용하여 PowerShell을 서브 시스템으로 등록하면, 기존의 `PSSession` 의미 체계와 함께 기존 SSH 기반 인증 메커니즘(암호 또는 프라이빗 키 등)을 사용할 수 있습니다.
 
 SSH 기반 원격 구성 및 사용에 대한 자세한 내용은 [SSH를 통한 PowerShell 원격][ssh-remoting]을 참조하세요.
 
