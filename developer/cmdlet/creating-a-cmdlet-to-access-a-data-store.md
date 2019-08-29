@@ -1,33 +1,31 @@
 ---
-title: 데이터 저장소에 액세스 하는 Cmdlet 만들기 | Microsoft Docs
+title: 데이터 저장소에 액세스하는 Cmdlet 만들기
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: ea15e00e-20dc-4209-9e97-9ffd763e5d97
-caps.latest.revision: 8
-ms.openlocfilehash: 555baec08539403d3c15d1eca2b23eec0a874e49
-ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
+ms.openlocfilehash: 7acccbd48dcfb654b11e448a1f24835ad3668fae
+ms.sourcegitcommit: a02ccbeaa17c0e513d6c4a21b877c88ac7725458
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733954"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104460"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>데이터 저장소에 액세스하는 Cmdlet 만들기
 
-이 섹션에는 Windows PowerShell 공급자를 통해 저장 된 데이터에 액세스 하는 cmdlet을 만드는 방법을 설명 합니다. 이 유형의 cmdlet는 Windows PowerShell 공급자 인프라의 Windows PowerShell 런타임 사용 하 고는 cmdlet 클래스에서 파생 되어야 하므로 합니다 [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 기본 클래스입니다.
+이 섹션에서는 Windows PowerShell 공급자를 통해 저장 된 데이터에 액세스 하는 cmdlet을 만드는 방법에 대해 설명 합니다. 이 유형의 cmdlet은 windows PowerShell 런타임의 Windows PowerShell 공급자 인프라를 사용 하므로 cmdlet 클래스가 [PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 기본 클래스에서 파생 되어야 합니다.
 
-여기에 설명 된 선택 Str cmdlet을 찾은 후 문자열을 파일 또는 개체를 선택 합니다. 문자열을 식별 하는 데 패턴을 통해 명시적으로 지정할 수는 `Path` 통해 암시적으로 또는 cmdlet의 매개 변수는 `Script` 매개 변수입니다.
+여기에 설명 된 Select Str cmdlet은 파일 또는 개체에서 문자열을 찾아 선택할 수 있습니다. 문자열을 식별 하는 데 사용 되는 패턴은 cmdlet의 `Path` 매개 변수를 통해 명시적으로 지정 하거나 `Script` 매개 변수를 통해 암시적으로 지정할 수 있습니다.
 
-Cmdlet에서 파생 되는 모든 Windows PowerShell 공급자를 사용 하도록 설계 된 [System.Management.Automation.Provider.Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider)합니다. 예를 들어, 파일 시스템 공급자 또는 Windows PowerShell에서 제공 하는 변수 공급자 cmdlet 지정할 수 있습니다. 자세한 내용은 aboutWindows PowerShell 공급자에 대 한 참조 [Windows PowerShell 디자인 공급자](../prog-guide/designing-your-windows-powershell-provider.md)합니다.
+Cmdlet은 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider)에서 파생 되는 모든 Windows PowerShell 공급자를 사용 하도록 설계 되었습니다. 예를 들어 cmdlet은 Windows PowerShell에서 제공 하는 파일 시스템 공급자 또는 변수 공급자를 지정할 수 있습니다. PowerShell 공급자 aboutWindows 자세한 내용은 [Windows powershell 공급자 디자인](../prog-guide/designing-your-windows-powershell-provider.md)을 참조 하세요.
 
 ## <a name="defining-the-cmdlet-class"></a>Cmdlet 클래스 정의
 
-Cmdlet 만드는 첫 번째 단계는 항상 cmdlet 이름과 cmdlet을 구현 하는.NET 클래스를 선언 합니다. 이 cmdlet에서 정의한 여기 선택한 동사 이름에 "Select" 이므로 특정 문자열을 검색 합니다 [System.Management.Automation.Verbscommon](/dotnet/api/System.Management.Automation.VerbsCommon) 클래스입니다. 문자열에는 cmdlet이 적용 되므로 "Str" 명사 이름 사용 됩니다. 다음 선언에는 cmdlet 클래스 이름을 cmdlet 동사 / 명사 이름이 내용이 반영 되었는지 note 합니다. 승인 된 cmdlet 동사에 대 한 자세한 내용은 참조 하세요. [Cmdlet 동사 이름](./approved-verbs-for-windows-powershell-commands.md)합니다.
+Cmdlet을 만드는 첫 번째 단계는 항상 cmdlet의 이름을 지정 하 고 cmdlet을 구현 하는 .NET 클래스를 선언 하는 것입니다. 이 cmdlet은 특정 문자열을 검색 하므로 여기에서 선택한 동사 이름은 [Verbscommon](/dotnet/api/System.Management.Automation.VerbsCommon) 클래스에 정의 된 "Select"입니다. 명사 이름 "Str"는 cmdlet이 문자열에 대해 작동 하기 때문에 사용 됩니다. 아래 선언에서 cmdlet 동사와 명사 이름이 cmdlet 클래스의 이름에 반영 되어 있는지 확인 합니다. 승인 된 cmdlet 동사에 대 한 자세한 내용은 [Cmdlet 동사 이름](./approved-verbs-for-windows-powershell-commands.md)을 참조 하세요.
 
-이 cmdlet에 대 한.NET 클래스에서 파생 되어야 합니다 [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) Windows PowerShell 공급자를 노출 하는 데 필요한 Windows PowerShell 런타임에 의해 지원을 제공 하기 때문에 기본 클래스 인프라입니다. 이 cmdlet을 사용 하면 또한는 같은.NET Framework 정규식 클래스를 이용 [System.Text.Regularexpressions.Regex](/dotnet/api/System.Text.RegularExpressions.Regex)합니다.
+이 cmdlet에 대 한 .NET 클래스는 windows powershell 공급자 인프라를 표시 하는 Windows PowerShell 런타임에서 필요한 지원을 제공 하기 때문에 [PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 기본 클래스에서 파생 되어야 합니다. 이 cmdlet은 .NET Framework 정규식 클래스 (예: [system.text.regularexpressions.regex>](/dotnet/api/System.Text.RegularExpressions.Regex))도 사용 합니다.
 
 다음 코드는이 선택 Str cmdlet에 대 한 클래스 정의입니다.
 
@@ -36,18 +34,18 @@ Cmdlet 만드는 첫 번째 단계는 항상 cmdlet 이름과 cmdlet을 구현 �
 public class SelectStringCommand : PSCmdlet
 ```
 
-추가 하 여 기본 매개 변수를 정의 하는이 cmdlet은 `DefaultParameterSetName` 키워드 특성을 클래스 선언 합니다. 기본 매개 변수 집합 `PatternParameterSet` 될 때 사용 됩니다는 `Script` 매개 변수를 지정 하지 않습니다. 이 매개 변수 집합에 대 한 자세한 내용은 참조는 `Pattern` 및 `Script` 다음 섹션에 설명 된 매개 변수입니다.
+이 cmdlet은 `DefaultParameterSetName` attribute 키워드를 클래스 선언에 추가 하 여 기본 매개 변수 집합을 정의 합니다. 기본 매개 변수 집합 `PatternParameterSet` 은 `Script` 매개 변수가 지정 되지 않은 경우에 사용 됩니다. 이 매개 변수 집합에 대 한 자세한 내용은 다음 `Pattern` 섹션 `Script` 에서 및 매개 변수 설명을 참조 하십시오.
 
-## <a name="defining-parameters-for-data-access"></a>데이터 액세스에 대 한 매개 변수를 정의합니다.
+## <a name="defining-parameters-for-data-access"></a>데이터 액세스를 위한 매개 변수 정의
 
-이 cmdlet은 사용자가 액세스 하 여 저장 된 데이터를 검사 하도록 허용 하는 여러 매개 변수를 정의 합니다. 이러한 매개 변수에 `Path` 데이터 저장소의 위치를 나타내는 매개 변수를 `Pattern` 검색 하는 데 사용할 패턴을 지정 하는 매개 변수 및 여러 다른 매개 변수는 검색이 수행 되는 방법을 지원 합니다.
+이 cmdlet은 사용자가 저장 된 데이터에 액세스 하 고 검사할 수 있도록 하는 몇 가지 매개 변수를 정의 합니다. 이러한 매개 변수에는 `Path` 데이터 저장소의 위치를 나타내는 매개 변수 `Pattern` , 검색에 사용할 패턴을 지정 하는 매개 변수 및 검색 수행 방법을 지 원하는 몇 가지 다른 매개 변수가 포함 됩니다.
 
 > [!NOTE]
-> 매개 변수를 정의 하는 기본 사항에 대 한 자세한 내용은 참조 [해당 프로세스 명령줄 입력 매개 변수 추가](./adding-parameters-that-process-command-line-input.md)합니다.
+> 매개 변수 정의에 대 한 자세한 내용은 [명령줄 입력을 처리 하는 매개 변수 추가](./adding-parameters-that-process-command-line-input.md)를 참조 하세요.
 
-### <a name="declaring-the-path-parameter"></a>Path 매개 변수를 선언합니다.
+### <a name="declaring-the-path-parameter"></a>Path 매개 변수 선언
 
-데이터 저장소를 찾으려면이 cmdlet은 데이터 저장소에 액세스 하도록 설계 된 Windows PowerShell 공급자를 식별 하는 Windows PowerShell 경로 사용 해야 합니다. 따라서 정의 `Path` 공급자의 위치를 나타내는 문자열 배열 형식의 매개 변수입니다.
+이 cmdlet은 데이터 저장소를 찾기 위해 Windows PowerShell 경로를 사용 하 여 데이터 저장소에 액세스 하도록 디자인 된 Windows PowerShell 공급자를 확인 해야 합니다. 따라서 공급자의 위치를 `Path` 나타내는 문자열 배열 형식의 매개 변수를 정의 합니다.
 
 ```csharp
 [Parameter(
@@ -68,15 +66,15 @@ public string[] Path
 private string[] paths;
 ```
 
-이 매개 변수 두 가지 매개 변수 집합에 속하며 별칭에 note 합니다.
+이 매개 변수는 두 개의 서로 다른 매개 변수 집합에 속하고 별칭이 있음을 확인 합니다.
 
-두 [System.Management.Automation.Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성 선언 합니다 `Path` 매개 변수가 속한 합니다 `ScriptParameterSet` 및 `PatternParameterSet`합니다. 매개 변수 집합에 대 한 자세한 내용은 참조 하세요. [Cmdlet에 매개 변수 집합 추가](./adding-parameter-sets-to-a-cmdlet.md)합니다.
+두 개의 [system.object](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성 특성은 `Path` `ScriptParameterSet` 매개 변수가 및 `PatternParameterSet`에 속하도록 선언 합니다. 매개 변수 집합에 대 한 자세한 내용은 [Cmdlet에 매개 변수 집합 추가](./adding-parameter-sets-to-a-cmdlet.md)를 참조 하세요.
 
-합니다 [System.Management.Automation.Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) 특성 선언를 `PSPath` 별칭을 `Path` 매개 변수입니다. Windows PowerShell 공급자에 액세스 하는 다른 cmdlet 사용 하 여 일관성을 위해이 별칭을 선언이 좋습니다. 자세한 내용은 aboutWindows PowerShell 경로에서 "PowerShell 경로 개념" 참조 [Windows PowerShell 작동 방식](/previous-versions//ms714658(v=vs.85))합니다.
+[Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) 특성은 `PSPath` `Path` 매개 변수에 대 한 별칭을 선언 합니다. Windows PowerShell 공급자에 액세스 하는 다른 cmdlet과의 일관성을 위해이 별칭을 선언 하는 것이 좋습니다. PowerShell 경로에 대 한 자세한 내용은 [Windows powershell의 작동 방식](/previous-versions//ms714658(v=vs.85))에서 "Powershell 경로 개념"을 참조 하세요.
 
-### <a name="declaring-the-pattern-parameter"></a>Pattern 매개 변수를 선언합니다.
+### <a name="declaring-the-pattern-parameter"></a>패턴 매개 변수 선언
 
-검색할 패턴을 지정 하려면이 cmdlet는 다음과 같이 선언 됩니다.는 `Pattern` 매개 변수 문자열의 배열입니다. 긍정적인 결과 패턴 중 하나는 데이터 저장소에서 발견 되 면 반환 됩니다. 이러한 패턴 컴파일된 정규식의 배열 또는 리터럴 검색에 사용 되는 와일드 카드 패턴의 배열을 컴파일할 수 있는 참고 합니다.
+검색할 패턴을 지정 하기 위해이 cmdlet은 문자열 배열인 매개 `Pattern` 변수를 선언 합니다. 데이터 저장소에서 패턴을 찾을 때 긍정 결과가 반환 됩니다. 이러한 패턴은 컴파일된 정규식의 배열 또는 리터럴 검색에 사용 되는 와일드 카드 패턴의 배열로 컴파일될 수 있습니다.
 
 ```csharp
 [Parameter(
@@ -93,13 +91,13 @@ private Regex[] regexPattern;
 private WildcardPattern[] wildcardPattern;
 ```
 
-Cmdlet은 기본 매개 변수 집합을 사용 하 여이 매개 변수를 지정 하면 `PatternParameterSet`합니다. 이 경우 cmdlet은 문자열을 선택 하려면 여기에 지정 된 패턴을 사용 합니다. 반면,는 `Script` 매개 변수 패턴을 포함 하는 스크립트를 제공 하기 사용할 수도 있습니다. 합니다 `Script` 및 `Pattern` 매개 변수는 상호 배타적인 되므로 두 개의 별도 매개 변수 집합을 정의 합니다.
+이 매개 변수를 지정 하면 cmdlet은 기본 매개 변수 집합 `PatternParameterSet`을 사용 합니다. 이 경우 cmdlet은 여기에 지정 된 패턴을 사용 하 여 문자열을 선택 합니다. 반면 매개 변수는 `Script` 패턴을 포함 하는 스크립트를 제공 하는 데에도 사용할 수 있습니다. `Script` 및`Pattern` 매개 변수는 두 개의 개별 매개 변수 집합을 정의 하므로 함께 사용할 수 없습니다.
 
-### <a name="declaring-search-support-parameters"></a>검색 지원 매개 변수를 선언합니다.
+### <a name="declaring-search-support-parameters"></a>검색 지원 매개 변수 선언
 
-이 cmdlet은 cmdlet의 검색 기능을 수정 하는 다음 지원 매개 변수를 정의 합니다.
+이 cmdlet은 cmdlet의 검색 기능을 수정 하는 데 사용할 수 있는 다음 지원 매개 변수를 정의 합니다.
 
-`Script` 매개 변수를 cmdlet에 대 한 대체 검색 메커니즘을 제공 하는 스크립트 블록을 지정 합니다. 스크립트와 일치 하는 데 패턴을 포함 하며 반환 된 [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) 개체입니다. 이 매개 변수는 식별 하는 고유한 매개 변수 또한는 `ScriptParameterSet` 매개 변수 집합입니다. 에 속하는 매개 변수만 사용 하 여 Windows PowerShell 런타임이이 매개 변수를 인식 하는 경우는 `ScriptParameterSet` 매개 변수 집합입니다.
+매개 `Script` 변수는 cmdlet에 대 한 대체 검색 메커니즘을 제공 하는 데 사용할 수 있는 스크립트 블록을 지정 합니다. 스크립트에는 [system.object](/dotnet/api/System.Management.Automation.PSObject) 를 일치 하 고 반환 하는 데 사용 되는 패턴이 포함 되어야 합니다. 이 매개 변수는 `ScriptParameterSet` 매개 변수 집합을 식별 하는 고유한 매개 변수 이기도 합니다. 이 매개 변수는 Windows PowerShell 런타임에서 볼 때 `ScriptParameterSet` 매개 변수 집합에 속하는 매개 변수만 사용 합니다.
 
 ```csharp
 [Parameter(
@@ -114,7 +112,7 @@ public ScriptBlock Script
 ScriptBlock script;
 ```
 
-`SimpleMatch` 매개 변수는 cmdlet이 제공 되기 때문에 명시적으로 패턴을 일치 하도록 인지 여부를 나타내는 스위치 매개 변수입니다. 사용자가 명령줄 매개 변수를 지정 하는 경우 (`true`), cmdlet은 제공 되기 때문 패턴을 사용 합니다. 매개 변수를 지정 하지 않으면 (`false`), cmdlet은 정규식을 사용 합니다. 이 매개 변수의 기본값은 `false`합니다.
+`SimpleMatch` 매개 변수는 제공 된 패턴과 일치 하는지 여부를 지정 하는 스위치 매개 변수입니다. 사용자가 명령줄 (`true`)에서 매개 변수를 지정 하면 cmdlet은 제공 된 패턴을 사용 합니다. 매개 변수가 지정 되지 않은 경우 (`false`) cmdlet은 정규식을 사용 합니다. 이 매개 변수에 `false`대 한 기본값은입니다.
 
 ```csharp
 [Parameter]
@@ -126,7 +124,7 @@ public SwitchParameter SimpleMatch
 private bool simpleMatch;
 ```
 
-`CaseSensitive` 매개 변수는 대/소문자 구분 검색 수행 되는지 여부를 나타내는 스위치 매개 변수입니다. 사용자가 명령줄 매개 변수를 지정 하는 경우 (`true`), 대문자에 대 한 cmdlet은 확인 및 비교할 때 문자의 소문자 패턴입니다. 매개 변수를 지정 하지 않으면 (`false`), cmdlet은 대 / 소문자 구분 하지 않습니다. 예를 들어 "MyFile" 및 "myfile" 모두 반환 됩니다 양의 적중으로. 이 매개 변수의 기본값은 `false`합니다.
+`CaseSensitive` 매개 변수는 대/소문자를 구분 하는 검색을 수행할지 여부를 지정 하는 스위치 매개 변수입니다. 사용자가 명령줄 (`true`)에서 매개 변수를 지정 하면 cmdlet은 패턴을 비교할 때 문자의 대문자 및 소문자를 확인 합니다. 매개 변수가 지정 되지 않은 경우 (`false`) cmdlet은 대/소문자를 구분 하지 않습니다. 예를 들어 "MyFile" 및 "myfile"은 모두 긍정 적중 횟수로 반환 됩니다. 이 매개 변수에 `false`대 한 기본값은입니다.
 
 ```csharp
 [Parameter]
@@ -138,7 +136,7 @@ public SwitchParameter CaseSensitive
 private bool caseSensitive;
 ```
 
-합니다 `Exclude` 고 `Include` 매개 변수를 명시적으로 제외에서 또는 검색에 포함 된 항목을 식별 합니다. 기본적으로 cmdlet는 데이터 저장소에 모든 항목을 검색 합니다. 그러나 cmdlet에서 수행 되는 검색을 제한 하려면 이러한 매개 변수 수 명시적 검색에 포함할 항목을 표시 하는 데 사용 되거나 생략 합니다.
+`Exclude` 및`Include` 매개 변수는 검색에서 명시적으로 제외 되거나 검색에 포함 되는 항목을 식별 합니다. 기본적으로 cmdlet은 데이터 저장소에 있는 모든 항목을 검색 합니다. 그러나 cmdlet에서 수행 하는 검색을 제한 하기 위해 이러한 매개 변수를 사용 하 여 검색에 포함 되거나 생략 된 항목을 명시적으로 지정할 수 있습니다.
 
 ```csharp
 [Parameter]
@@ -175,15 +173,15 @@ internal string[] includeStrings = null;
 internal WildcardPattern[] include = null;
 ```
 
-### <a name="declaring-parameter-sets"></a>선언 매개 변수 집합
+### <a name="declaring-parameter-sets"></a>매개 변수 집합 선언
 
-이 cmdlet은 두 개의 매개 변수 집합을 사용 (`ScriptParameterSet` 고 `PatternParameterSet`, 기본값) 데이터 액세스에 사용 되는 두 매개 변수 집합의 이름으로 합니다. `PatternParameterSet` 기본 매개 변수 집합 및 경우에 사용 되는 `Pattern` 매개 변수를 지정 합니다. `ScriptParameterSet` 대체 검색 메커니즘을 통해 지정할 때 사용 되는 `Script` 매개 변수입니다. 매개 변수 집합에 대 한 자세한 내용은 참조 하세요. [Cmdlet에 매개 변수 집합 추가](./adding-parameter-sets-to-a-cmdlet.md)합니다.
+이 cmdlet은 데이터 액세스에 사용`ScriptParameterSet` 되 `PatternParameterSet`는 두 매개 변수 집합의 이름으로 두 개의 매개 변수 집합 (기본값은)을 사용 합니다. `PatternParameterSet`는 기본 매개 변수 집합이 며 `Pattern` 매개 변수를 지정할 때 사용 됩니다. `ScriptParameterSet`사용자가 매개 변수를 `Script` 통해 대체 검색 메커니즘을 지정할 때 사용 됩니다. 매개 변수 집합에 대 한 자세한 내용은 [Cmdlet에 매개 변수 집합 추가](./adding-parameter-sets-to-a-cmdlet.md)를 참조 하세요.
 
-## <a name="overriding-input-processing-methods"></a>입력 처리 메서드를 재정의 합니다.
+## <a name="overriding-input-processing-methods"></a>입력 처리 메서드 재정의
 
-Cmdlet은 하나 이상의 입력 처리에 대 한 메서드 재정의 해야 합니다 [System.Management.Automation.PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 클래스입니다. 입력된 처리 방법에 대 한 자세한 내용은 참조 하세요. [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)합니다.
+Cmdlet은 [PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 클래스에 대해 하나 이상의 입력 처리 메서드를 재정의 해야 합니다. 입력 처리 방법에 대 한 자세한 내용은 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)를 참조 하세요.
 
-이 cmdlet을 재정의 합니다 [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드 배열을 빌드 컴파일된 정규식 시작 합니다. 단순 일치를 사용 하지 않는 검색 중에 성능을 향상 됩니다.
+이 cmdlet은 시작 시 컴파일된 정규식의 배열을 빌드하기 위해 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 를 재정의 합니다. 이렇게 하면 단순 일치를 사용 하지 않는 검색 중 성능이 향상 됩니다.
 
 ```csharp
 protected override void BeginProcessing()
@@ -262,7 +260,7 @@ protected override void BeginProcessing()
 }// End of function BeginProcessing().
 ```
 
-또한이 cmdlet를 재정의 합니다 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 사용자가 명령줄에서 문자열 선택 항목을 처리 하는 방법입니다. 개인을 호출 하 여 사용자 지정 개체의 형태로 문자열 선택의 결과 작성 **MatchString** 메서드.
+또한이 cmdlet은 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 재정의 하 여 사용자가 명령줄에서 수행 하는 문자열 선택을 처리 합니다. Private **MatchString** 메서드를 호출 하 여 문자열 선택의 결과를 사용자 지정 개체의 형식으로 씁니다.
 
 ```csharp
 protected override void ProcessRecord()
@@ -373,13 +371,13 @@ protected override void ProcessRecord()
 
 ## <a name="accessing-content"></a>콘텐츠 액세스
 
-Cmdlet는 데이터에 액세스할 수 있도록 Windows PowerShell 경로에서 지정 된 공급자를 열어야 합니다. [System.Management.Automation.Sessionstate](/dotnet/api/System.Management.Automation.SessionState) 개체 공급자에 대 한 액세스에 사용 된 runspace에 대 한 동안 합니다 [System.Management.Automation.PSCmdlet.Invokeprovider*](/dotnet/api/System.Management.Automation.PSCmdlet.InvokeProvider) 의 속성을 cmdlet은 사용 하 여 공급자를 열를 합니다. 검색 하 여 콘텐츠 액세스를 제공 합니다 [System.Management.Automation.Providerintrinsics](/dotnet/api/System.Management.Automation.ProviderIntrinsics) 공급자에 대 한 개체를 열입니다.
+Cmdlet은 데이터에 액세스할 수 있도록 Windows PowerShell 경로로 표시 된 공급자를 열어야 합니다. Runspace에 대 한 [Sessionstate](/dotnet/api/System.Management.Automation.SessionState) 개체는 공급자에 대 한 액세스에 사용 되는 반면, Cmdlet의 [PSCmdlet. Invokeprovider *](/dotnet/api/System.Management.Automation.PSCmdlet.InvokeProvider) 속성은 공급자를 여는 데 사용 됩니다. 콘텐츠에 대 한 액세스는 열려 있는 공급자에 대 한 [System.object 내장](/dotnet/api/System.Management.Automation.ProviderIntrinsics) 개체의 검색을 통해 제공 됩니다.
 
-이 샘플 선택 Str cmdlet을 사용 합니다 [System.Management.Automation.Providerintrinsics.Content*](/dotnet/api/System.Management.Automation.ProviderIntrinsics.Content) 속성을 콘텐츠 검사를 표시 합니다. 호출할 수 있습니다 합니다 [System.Management.Automation.Contentcmdletproviderintrinsics.Getreader*](/dotnet/api/System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader) 메서드를 필요한 Windows PowerShell 경로 전달 합니다.
+이 샘플 선택-Str cmdlet은 [system.web. content *](/dotnet/api/System.Management.Automation.ProviderIntrinsics.Content) 속성을 사용 하 여 검색할 콘텐츠를 노출 합니다. 그런 다음 필요한 Windows PowerShell 경로를 전달 하 여 [system.object](/dotnet/api/System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader) 를 호출 하 고,이 메서드를 호출 합니다.
 
 ## <a name="code-sample"></a>코드 예제
 
-다음 코드에는이 선택 Str cmdlet이이 버전의 구현을 보여 줍니다. 이 코드는 cmdlet 클래스, cmdlet을 사용 하는 개인 방법 및 cmdlet을 등록 하는 데 코드 Windows PowerShell 스냅인에 포함 하는 참고 합니다. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [cmdlet은 빌드](#Defining-the-Cmdlet-Class)합니다.
+다음 코드에서는이 Select Str cmdlet의이 버전을 구현 하는 방법을 보여 줍니다. 이 코드에는 cmdlet 클래스, cmdlet에서 사용 되는 전용 메서드 및 cmdlet을 등록 하는 데 사용 되는 Windows PowerShell 스냅인 코드가 포함 됩니다. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 [Cmdlet 빌드](#defining-the-cmdlet-class)를 참조 하세요.
 
 ```csharp
 //
@@ -1088,21 +1086,21 @@ namespace Microsoft.Samples.PowerShell.Commands
 } //namespace Microsoft.Samples.PowerShell.Commands;
 ```
 
-## <a name="building-the-cmdlet"></a>Cmdlet은 빌드
+## <a name="building-the-cmdlet"></a>Cmdlet 빌드
 
-Cmdlet를 구현한 후 Windows PowerShell 스냅인을 통해 Windows PowerShell을 사용 하 여 등록 해야 합니다. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [등록 Cmdlet, 공급자 및 응용 프로그램을 호스트 하는 방법을](/previous-versions//ms714644(v=vs.85))합니다.
+Cmdlet을 구현한 후 Windows PowerShell 스냅인을 통해 Windows PowerShell에 등록 해야 합니다. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 [cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](/previous-versions//ms714644(v=vs.85))을 참조 하세요.
 
-## <a name="testing-the-cmdlet"></a>테스트 Cmdlet
+## <a name="testing-the-cmdlet"></a>Cmdlet 테스트
 
-Windows PowerShell cmdlet에 등록 하는 경우 명령줄에서 실행 하 여 테스트할 수 있습니다. 샘플 선택 Str cmdlet을 테스트 하려면 다음 절차를 사용할 수 있습니다.
+Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 하 여 테스트할 수 있습니다. 다음 절차를 사용 하 여 샘플 선택 Str cmdlet을 테스트할 수 있습니다.
 
-1. Windows PowerShell을 시작 하 고 ".NET" 식 사용 하 여 줄 항목에 대 한 정보 파일을 검색 합니다. 둘 이상의 단어의 경로 구성 하는 경우에 경로의 이름 묶는 따옴표 필요는 참고 합니다.
+1. Windows PowerShell을 시작 하 고 ".NET" 식으로 노트 파일에서 줄의 발생을 검색 합니다. 경로 이름을 둘러싼 따옴표는 경로가 둘 이상의 단어로 구성 된 경우에만 필요 합니다.
 
     ```powershell
     select-str -Path "notes" -Pattern ".NET" -SimpleMatch=$false
     ```
 
-    다음과 같은 출력이 표시 됩니다.
+    다음 출력이 표시 됩니다.
 
     ```output
     IgnoreCase   : True
@@ -1117,13 +1115,13 @@ Windows PowerShell cmdlet에 등록 하는 경우 명령줄에서 실행 하 여
     Pattern      : .NET
     ```
 
-2. 다른 텍스트 뒤에 "통해" 단어를 사용 하 여 줄 항목에 대 한 정보 파일을 검색 합니다. 합니다 `SimpleMatch` 매개 변수 기본값을 사용 하는 `false`합니다. 검색은 대/소문자 구분 하기 때문에 `CaseSensitive` 매개 변수는 설정 `false`합니다.
+2. "Over" 단어와 기타 텍스트가 있는 줄의 발생에 대 한 노트 파일을 검색 합니다. 매개 변수는의 `false`기본값을 사용 합니다. `SimpleMatch` `CaseSensitive` 매개 변수가로 설정 되어 있으므로 검색은 대/소문자를 `false`구분 하지 않습니다.
 
     ```powershell
     select-str -Path notes -Pattern "over*" -SimpleMatch -CaseSensitive:$false
     ```
 
-    다음과 같은 출력이 표시 됩니다.
+    다음 출력이 표시 됩니다.
 
     ```output
     IgnoreCase   : True
@@ -1138,13 +1136,13 @@ Windows PowerShell cmdlet에 등록 하는 경우 명령줄에서 실행 하 여
     Pattern      : over*
     ```
 
-3. 정규식 패턴으로 사용 하 여 정보 파일을 검색 합니다. Cmdlet은 알파벳 문자 및 괄호로 묶인 빈 공간을 검색 합니다.
+3. 패턴으로 정규식을 사용 하 여 노트 파일을 검색 합니다. Cmdlet은 괄호로 묶은 영문자와 공백을 검색 합니다.
 
     ```powershell
     select-str -Path notes -Pattern "\([A-Za-z:blank:]" -SimpleMatch:$false
     ```
 
-    다음과 같은 출력이 표시 됩니다.
+    다음 출력이 표시 됩니다.
 
     ```output
     IgnoreCase   : True
@@ -1159,13 +1157,13 @@ Windows PowerShell cmdlet에 등록 하는 경우 명령줄에서 실행 하 여
     Pattern      : \([A-Za-z:blank:]
     ```
 
-4. "매개 변수" 라는 단어에 대 한 정보 파일의 대/소문자 구분 검색을 수행 합니다.
+4. "매개 변수" 단어의 발생에 대 한 참고 파일의 대/소문자 구분 검색을 수행 합니다.
 
     ```powershell
     select-str -Path notes -Pattern Parameter -CaseSensitive
     ```
 
-    다음과 같은 출력이 표시 됩니다.
+    다음 출력이 표시 됩니다.
 
     ```output
     IgnoreCase   : False
@@ -1180,13 +1178,13 @@ Windows PowerShell cmdlet에 등록 하는 경우 명령줄에서 실행 하 여
     Pattern      : Parameter
     ```
 
-5. 0에서 9 사이의 숫자 값이 있는 변수의 함께 제공 되는 Windows PowerShell을 사용 하 여 변수 공급자를 검색 합니다.
+5. 0에서 9 사이의 숫자 값을 가진 변수에 대해 Windows PowerShell과 함께 제공 된 변수 공급자를 검색 합니다.
 
     ```powershell
     select-str -Path * -Pattern "[0-9]"
     ```
 
-    다음과 같은 출력이 표시 됩니다.
+    다음 출력이 표시 됩니다.
 
     ```output
     IgnoreCase   : True
@@ -1196,13 +1194,13 @@ Windows PowerShell cmdlet에 등록 하는 경우 명령줄에서 실행 하 여
     Pattern      : [0-9]
     ```
 
-6. 문자열 "Pos" SelectStrCommandSample.cs 파일을 검색 하려면 스크립트 블록을 사용 합니다. 합니다 **cmatch** 대/소문자 패턴 일치를 수행 하는 스크립트에 대 한 작동 합니다.
+6. 스크립트 블록을 사용 하 여 SelectStrCommandSample.cs 파일에서 "Pos" 문자열을 검색 합니다. 스크립트에 대 한 **cmatch** 함수는 대/소문자를 구분 하지 않는 패턴 일치를 수행 합니다.
 
     ```powershell
     select-str -Path "SelectStrCommandSample.cs" -Script { if ($args[0] -cmatch "Pos"){ return $true } return $false }
     ```
 
-    다음과 같은 출력이 표시 됩니다.
+    다음 출력이 표시 됩니다.
 
     ```output
     IgnoreCase   : True
@@ -1212,7 +1210,7 @@ Windows PowerShell cmdlet에 등록 하는 경우 명령줄에서 실행 하 여
     Pattern      :
     ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Windows PowerShell Cmdlet을 만드는 방법](/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 
@@ -1220,10 +1218,10 @@ Windows PowerShell cmdlet에 등록 하는 경우 명령줄에서 실행 하 여
 
 [시스템을 수정 하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)
 
-[Windows PowerShell 공급자를 디자인 합니다.](../prog-guide/designing-your-windows-powershell-provider.md)
+[Windows PowerShell 공급자 디자인](../prog-guide/designing-your-windows-powershell-provider.md)
 
-[Windows PowerShell의 작동 원리](/previous-versions//ms714658(v=vs.85))
+[Windows PowerShell 작동 방법](/previous-versions//ms714658(v=vs.85))
 
-[Cmdlet, 공급자, 등록 및 응용 프로그램을 호스트 하는 방법](/previous-versions//ms714644(v=vs.85))
+[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](/previous-versions//ms714644(v=vs.85))
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)

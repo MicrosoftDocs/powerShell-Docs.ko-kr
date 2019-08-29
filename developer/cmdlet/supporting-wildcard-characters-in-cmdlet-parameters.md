@@ -1,70 +1,80 @@
 ---
-title: Cmdlet 매개 변수에서 와일드 카드 문자를 지 원하는 | Microsoft Docs
+title: Cmdlet 매개 변수에서 와일드카드 문자 지원
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 08/26/2019
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- wildcards [PowerShell Programmer's Guide]
-- parameters [PowerShell Programmer's Guide], wildcards
-ms.assetid: 9b26e1e9-9350-4a5a-aad5-ddcece658d93
-caps.latest.revision: 12
-ms.openlocfilehash: 6c762d3889bc4b649252390625525db4735f4c1d
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 19644c5bc186a5554d6b134a67fc7c4d7aa7b64c
+ms.sourcegitcommit: a02ccbeaa17c0e513d6c4a21b877c88ac7725458
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62067402"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104454"
 ---
 # <a name="supporting-wildcard-characters-in-cmdlet-parameters"></a>Cmdlet 매개 변수에서 와일드카드 문자 지원
 
-종종 단일 리소스 아닌 리소스 그룹에 대해 실행 하는 cmdlet를 디자인 해야 합니다. 예를 들어 cmdlet 이름이 없거나 확장 하는 데이터 저장소에서 모든 파일을 찾을 해야 합니다. 리소스 그룹에 대해 실행 되는 cmdlet를 디자인할 때 와일드 카드 문자를 지원 해야 합니다.
+단일 리소스 대신 리소스 그룹에 대해 실행 되도록 cmdlet을 디자인 해야 하는 경우가 종종 있습니다. 예를 들어 cmdlet은 이름이 나 확장명이 같은 데이터 저장소의 모든 파일을 찾아야 할 수 있습니다. 리소스 그룹에 대해 실행 될 cmdlet을 디자인할 때 와일드 카드 문자에 대 한 지원을 제공 해야 합니다.
 
 > [!NOTE]
-> 와일드 카드 문자를 사용 하는 경우에 따라 라고도 *와일드 카드 사용*합니다.
+> *와일드 카드 사용*라고도 하는 와일드 카드 문자를 사용 합니다.
 
 ## <a name="windows-powershell-cmdlets-that-use-wildcards"></a>와일드 카드를 사용 하는 Windows PowerShell Cmdlet
 
- 많은 Windows PowerShell cmdlet의 매개 변수 값에 대 한 와일드 카드 문자를 지원 합니다. 예를 들어, 거의 모든 cmdlet는에 `Name` 또는 `Path` 매개 변수는 이러한 매개 변수에 대 한 와일드 카드 문자를 지원 합니다. (하지만 있는 대부분의 cmdlet을 `Path` 매개 변수 수도 `LiteralPath` 와일드 카드 문자를 지원 하지 않는 매개 변수.) 다음 명령을 Get 동사를 포함 하는 이름이 현재 세션의 모든 cmdlet을 반환 하려면 와일드 카드 문자는 사용 하는 방법을 보여 줍니다.
+ 많은 Windows PowerShell cmdlet은 해당 매개 변수 값에 와일드 카드 문자를 지원 합니다. 예를 들어 `Name` 또는 `Path` 매개 변수가 있는 거의 모든 cmdlet은 이러한 매개 변수에 대해 와일드 카드 문자를 지원 합니다. `Path` 매개 변수`LiteralPath` 를 포함 하는 대부분의 cmdlet에는 와일드 카드 문자를 지원 하지 않는 매개 변수도 있습니다. 다음 명령은 와일드 카드 문자를 사용 하 여 이름에 Get 동사가 포함 된 현재 세션의 모든 cmdlet을 반환 하는 방법을 보여 줍니다.
 
- **PS > get 명령을 get-\***
+ `Get-Command get-*`
 
 ## <a name="supported-wildcard-characters"></a>지원 되는 와일드 카드 문자
 
-Windows PowerShell 와일드 카드 문자를 지원합니다.
+Windows PowerShell은 다음 와일드 카드 문자를 지원 합니다.
 
-|와일드 카드 문자|설명|예제|일치 항목|일치 하지 않습니다.|
-|------------------------|-----------------|-------------|-------------|--------------------|
-|*|지정 된 위치 에서부터 0 개 이상의 문자 일치|a*|Apple ag||
-|?|지정된 된 위치에 문자 일치|? n|프로그램에서는,에서|실행|
-|[ ]|다양 한 문자 일치|[a-l]ook|책, 쿡, 모양|수행한|
-|[ ]|지정된 된 문자 일치|[bc]ook|서적, 쿡|look|
+| 카드인 |                             설명                             |  예제   |     요청 내용      | 일치 하지 않음 |
+| -------- | ------------------------------------------------------------------- | ---------- | ---------------- | -------------- |
+| *        | 지정 된 위치에서 시작 하 여 0 개 이상의 문자를 찾습니다. | `a*`       | A, ag, Apple     |                |
+| ?        | 지정 된 위치의 모든 문자를 찾습니다.                     | `?n`       | , In, on       | 되었음            |
+| [ ]      | 문자 범위를 찾습니다.                                       | `[a-l]ook` | 책, 쿡, 모양 | nook, 걸린 시간     |
+| [ ]      | 지정 된 문자와 일치 합니다.                                    | `[bn]ook`  | 서적, nook       | 쿡, 살펴보기     |
 
-와일드 카드 문자를 지 원하는 cmdlet를 디자인할 때 와일드 카드 문자 조합을 허용 합니다. 예를 들어, 다음 명령을 사용 하 여 `Get-ChildItem` c:\Techdocs 폴더에 있으며 문자로 시작 하는 "a"부터 "l." 모든.txt 파일을 검색 하기 위한 cmdlet
+와일드 카드 문자를 지 원하는 cmdlet을 디자인 하는 경우 와일드 카드 문자 조합을 허용 합니다. 예를 들어 다음 명령은 `Get-ChildItem` cmdlet을 사용 하 여 c:\Techdocs 폴더에 있고 문자 "a"부터 "l"로 시작 하는 모든 .txt 파일을 검색 합니다.
 
-**get-childitem c:\techdocs\\[a-l]\*.txt**
+`Get-ChildItem c:\techdocs\[a-l]\*.txt`
 
-이전 명령은 범위 와일드 카드 **[a-l]** "a"부터 "l." 파일 이름은 문자로 시작 해야를 지정 하려면 다음 명령은 * 파일 이름의 첫 번째 문자와.txt 확장명 사이 있는 문자에 대 한 자리 표시자로 와일드 카드 문자입니다.
+이전 명령은 range 와일드 카드 `[a-l]` 를 사용 하 여 파일 이름이 문자 "a"부터 "l"로 시작 하 고, 파일 이름의 첫 문자 사이에 있는 문자에 대 한 자리 표시자로 `*` 와일드 카드 문자를 사용 하도록 지정 합니다. **.txt** 확장명입니다.
 
-다음 예제에서는 "d" 문자를 제외 하지만 "a"부터 "f." 다른 모든 문자를 포함 하는 범위 와일드 카드 패턴
+다음 예제에서는 "d" 문자를 제외 하 고 "a"부터 "f" 까지의 다른 모든 문자를 포함 하는 범위 와일드 카드 패턴을 사용 합니다.
 
-**get-childitem c:\techdocs\\[a-cef]\*.txt**
+`Get-ChildItem c:\techdocs\[a-cef]\*.txt`
 
-## <a name="handling-literal-characters-in-wildcard-patterns"></a>와일드 카드 패턴의 리터럴 문자를 처리합니다.
+## <a name="handling-literal-characters-in-wildcard-patterns"></a>와일드 카드 패턴의 리터럴 문자 처리
 
-지정한 와일드 카드 패턴 리터럴 문자열을 포함 하는 경우 억음 악센트 문자 (') 이스케이프 문자로 사용 합니다. 리터럴 문자를 프로그래밍 방식으로 지정 하는 경우 단일 억음 악센트 기호를 사용 합니다. 명령 프롬프트에서 리터럴 문자를 지정 하는 경우에 두 개의 backtick을 사용 합니다. 예를 들어, 다음 패턴에 문자 그대로 수행 해야 하는 두 개의 대괄호가 포함 되어 있습니다.
+지정 하는 와일드 카드 패턴에 와일드 카드 문자로 interpretted 서는 안 되는 리터럴 문자가 포함 된 경우에는 억음 문자 (`` ` ``)를 이스케이프 문자로 사용 합니다. PowerShell API에서 리터럴 문자를 지정 하는 경우 단일 backtick을 사용 합니다. PowerShell 명령 프롬프트에서 리터럴 문자를 지정 하는 경우 두 개의 backticks을 사용 합니다.
 
-"John Smith \`[*']" (프로그래밍 방식으로 지정)
+예를 들어 다음 패턴에는 문자 그대로 수행 해야 하는 두 개의 대괄호가 포함 되어 있습니다.
 
-"John Smith \` \`[*\`']" (명령 프롬프트에서 지정 됨)
+PowerShell API에서 사용 하는 경우 다음을 사용 합니다.
 
-이 패턴에는 "John Smith [마케팅]" 또는 "John Smith [개발]"와 일치합니다.
+- "John Smith \`[* ']"
+
+PowerShell 명령 프롬프트에서 사용 되는 경우:
+
+- "John Smith \` \`[*\`']"
+
+이 패턴은 "John Smith [Marketing]" 또는 "John Smith [Development]"와 일치 합니다. 예를 들어:
+
+```
+PS> "John Smith [Marketing]" -like "John Smith ``[*``]"
+True
+
+PS> "John Smith [Development]" -like "John Smith ``[*``]"
+True
+```
 
 ## <a name="cmdlet-output-and-wildcard-characters"></a>Cmdlet 출력 및 와일드 카드 문자
 
-Cmdlet 매개 변수는 와일드 카드 문자를 지원 하는 경우 cmdlet은 작업을 일반적으로 배열 출력을 생성 합니다. 경우에 따라이 의미가 없습니다 사용자는 한 번에 하나의 항목만 사용할 수 있으므로 출력 배열을 지원 합니다. 예를 들어를 `Set-Location` cmdlet은 사용자만 단일 위치를 설정 하기 때문에 출력 배열을 지원지 않습니다. 이 예에서는 cmdlet을 계속 와일드 카드 문자를 지원 하지만 단일 위치를 확인 하 게 하기.
+Cmdlet 매개 변수가 와일드 카드 문자를 지 원하는 경우이 작업은 일반적으로 배열 출력을 생성 합니다.
+사용자가 단일 항목만 사용할 수 있기 때문에 경우에 따라 배열 출력을 지 원하는 것은 바람직하지 않습니다. 예를 들어 사용자 `Set-Location` 가 단일 위치만 설정 하므로 cmdlet은 배열 출력을 지원 하지 않습니다. 이 인스턴스에서 cmdlet은 여전히 와일드 카드 문자를 지원 하지만 단일 위치에 대해 해상도를 강제 적용 합니다.
 
 ## <a name="see-also"></a>참고 항목
 
