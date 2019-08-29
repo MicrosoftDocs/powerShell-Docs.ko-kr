@@ -48,21 +48,6 @@
             "version": 0
         },
         {
-            "docset_name": "PowerShell_PowerShell-docs_jea",
-            "build_source_folder": "jea",
-            "build_output_subfolder": "jea",
-            "locale": "ko-kr",
-            "open_to_public_contributors": true,
-            "type_mapping": {
-                "Conceptual": "Content",
-                "ManagedReference": "Content",
-                "RestApi": "Content"
-            },
-            "build_entry_point": "docs",
-            "template_folder": "_themes",
-            "version": 0
-        },
-        {
             "docset_name": "PowerShell_PowerShell-docs_reference",
             "build_source_folder": "reference",
             "build_output_subfolder": "reference",
@@ -117,6 +102,9 @@
     "need_preview_pull_request": false,
     "need_generate_pdf_url_template": false,
     "branch_target_mapping": {},
+		"contribution_branch_mappings": {
+		    "live-sxs": "live"
+    },
     "targets": {},
     "need_generate_pdf": false,
     "need_generate_intellisense": false,
