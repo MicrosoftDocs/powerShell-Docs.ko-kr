@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
+contributor: JKeithB, SydneyhSmith
 keywords: gallery,powershell,cmdlet,psgallery
 description: 게시자용 지침
 title: PowerShell 갤러리 게시 지침 및 모범 사례
-ms.openlocfilehash: 1cd0140cc208949e13d23331b23a58ffc374430b
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: b470dbd81e79d2a6a228b8c89f85e57c03803ede
+ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62084660"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986502"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>PowerShell 갤러리 게시 지침 및 모범 사례
 
@@ -85,6 +85,22 @@ PowerShell 갤러리에 게시하는 모듈의 예제는 모듈 루트 아래의
 
 적절한 예제 패턴은 [PSDscResource 모듈](https://www.powershellgallery.com/packages/PSDscResources)의 Examples\RegistryResource 폴더에서 확인할 수 있습니다.
 이 폴더에는 4가지 샘플 사용 사례가 포함되어 있으며, 각 파일의 맨 위에는 해당 사용 사례에서 제시하는 사용 방식의 간략한 설명이 나와 있습니다.
+
+## <a name="manage-dependencies"></a>종속성 관리
+
+모듈 매니페스트에서 모듈이 종속되는 모듈을 지정하는 것이 중요합니다.
+이렇게 하면 최종 사용자는 해당 모듈이 종속성을 가지는 모듈의 적절한 버전을 설치할 걱정을 하지 않아도 됩니다.
+종속 모듈을 지정하려면 모듈 매니페스트에서 필수 모듈 필드를 사용해야 합니다.
+모듈이 아직 로드되어 있지 않은 경우 모듈을 가져오기 전에 나열된 모든 모듈이 전역 환경에 로드됩니다. (예를 들어 일부 모듈은 다른 모듈에 의해 이미 로드되어 있을 수 있음).
+또한 ModuleVersion 필드가 아닌 RequiredVersion 필드를 사용하여 로드할 특정 버전을 지정할 수도 있습니다. ModuleVersion을 사용하는 경우 지정된 최소 버전에서 사용 가능한 최신 버전을 로드합니다.
+RequiredVersion 필드를 사용하여 특정 버전을 지정하지 않는 경우 필수 모듈의 버전 업데이트를 모니터링하는 것이 중요합니다.
+모듈의 사용자 환경에 영향을 미칠 수 있는 호환성이 손상되는 변경을 파악하는 것이 특히 중요합니다.
+
+```powershell
+Example: RequiredModules = @(@{ModuleName="myDependentModule"; ModuleVersion="2.0"; Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})
+
+Example: RequiredModules = @(@{ModuleName="myDependentModule"; RequiredVersion="1.5"; Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})
+```
 
 ## <a name="respond-to-feedback"></a>피드백에 응답
 

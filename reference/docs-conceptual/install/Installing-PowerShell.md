@@ -11,7 +11,7 @@ ms.locfileid: "62059035"
 ---
 # <a name="installing-various-versions-of-powershell"></a>다양한 버전의 PowerShell 설치
 
-몇 년 동안에 여러 버전의 PowerShell 있었습니다. 처음에는 Windows PowerShell이 ​​.NET Framework를 기반으로 빌드되었고, Windows 시스템에서만 작동했습니다. 현재 릴리스에서 PowerShell Core는 .NET Core 2.x를 런타임으로 사용합니다. PowerShell Core는 Windows, macOS 및 Linux 플랫폼을 지원합니다.
+몇 년 동안에 여러 버전의 PowerShell이 있었습니다. 처음에는 Windows PowerShell이 ​​.NET Framework를 기반으로 빌드되었고, Windows 시스템에서만 작동했습니다. 현재 릴리스에서 PowerShell Core는 .NET Core 2.x를 런타임으로 사용합니다. PowerShell Core는 Windows, macOS 및 Linux 플랫폼을 지원합니다.
 
 ## <a name="windows-powershell"></a>Windows PowerShell
 

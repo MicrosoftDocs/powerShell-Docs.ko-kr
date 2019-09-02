@@ -71,7 +71,7 @@ cmdlet에 대한 간략한 설명은 다음과 같습니다.
 
 macOS에서 Azure의 Ubuntu VM로 이동 중이므로 원격에 SSH를 사용합니다.
 
-첫째 통합 콘솔에서 `Enter-PSSession`을 실행합니다. `[<hostname>]`이 프롬프트 왼쪽에 표시되면 원격 세션에 연결된 것입니다.
+첫째, 통합 콘솔에서 `Enter-PSSession`을 실행합니다. `[<hostname>]`이 프롬프트 왼쪽에 표시되면 원격 세션에 연결된 것입니다.
 
 ![Enter-PSSession 호출](images/Using-VSCode-for-Remote-Editing-and-Debugging/4-enter-pssession.png)
 

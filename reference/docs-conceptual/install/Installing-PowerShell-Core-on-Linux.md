@@ -2,16 +2,16 @@
 title: Linux에서 PowerShell Core 설치
 description: 다양한 Linux 배포판에서 PowerShell Core를 설치하는 방법에 대한 정보
 ms.date: 07/19/2019
-ms.openlocfilehash: 929b153ef784f3203cd31a0e2fc52e744a07532f
-ms.sourcegitcommit: 118eb294d5a84a772e6449d42a9d9324e18ef6b9
+ms.openlocfilehash: be11a2a873af71c193730d0a9e723da2dc70a62d
+ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68372188"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986725"
 ---
 # <a name="installing-powershell-core-on-linux"></a>Linux에서 PowerShell Core 설치
 
-[Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubuntu 18.10][u1810], [Debian 9][deb9], [CentOS 7][cos], [RHEL(Red Hat Enterprise Linux) 7][rhel7], [openSUSE 42.3][opensuse], [openSUSE Leap 15][opensuse], [Fedora 27][fedora], [Fedora 28][fedora] 및 [Arch Linux][arch]를 지원합니다.
+[Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubuntu 18.10][u1810], [Ubuntu 19.04][u1904], [Debian 9][deb9], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [openSUSE 42.3][opensuse], [openSUSE Leap 15][opensuse], [Fedora 27][fedora], [Fedora 28][fedora] 및 [Arch Linux][arch]를 지원합니다.
 
 공식적으로 지원되지 않는 Linux 배포의 경우 [PowerShell 맞춤 패키지][snap]를 사용하여 PowerShell을 설치해 볼 수 있습니다. 또한 Linux [`tar.gz` 보관][tar]을 사용하여 PowerShell 이진 파일을 직접 배포해 볼 수도 있지만 OS에 따라 별도의 단계로 필요한 종속성을 설정해야 합니다.
 
@@ -20,6 +20,7 @@ ms.locfileid: "68372188"
 [u16]: #ubuntu-1604
 [u1804]: #ubuntu-1804
 [u1810]: #ubuntu-1810
+[u1904]: #ubuntu-1904
 [deb9]: #debian-9
 [cos]: #centos-7
 [rhel7]: #red-hat-enterprise-linux-rhel-7
@@ -142,10 +143,17 @@ sudo apt-get remove powershell
 
 ## <a name="ubuntu-1810"></a>Ubuntu 18.10
 
-> [!NOTE]
-> 18.10이 [중간 릴리스](https://www.ubuntu.com/about/release-cycle)이므로 [커뮤니티 지원](https://docs.microsoft.com/en-us/powershell/scripting/powershell-support-lifecycle?view=powershell-6)만 지원됩니다.
+설치는 `snapd`를 통해 지원됩니다. 지침은 [맞춤 패키지][snap]를 참조하세요.
 
-18.10의 설치는 `snapd`를 통해 지원됩니다. 전체 지침은 [맞춤 패키지][snap]를 참조하세요.
+> [!NOTE]
+> Ubuntu 18.10은 [중간 릴리스](https://www.ubuntu.com/about/release-cycle)로서 [커뮤니티 지원이 됩니다](../powershell-support-lifecycle.md).
+
+## <a name="ubuntu-1904"></a>Ubuntu 19.04
+
+설치는 `snapd`를 통해 지원됩니다. 지침은 [맞춤 패키지][snap]를 참조하세요.
+
+> [!NOTE]
+> Ubuntu 19.04는 [중간 릴리스](https://www.ubuntu.com/about/release-cycle)로서 [커뮤니티 지원이 됩니다](../powershell-support-lifecycle.md).
 
 ## <a name="debian-8"></a>Debian 8
 
