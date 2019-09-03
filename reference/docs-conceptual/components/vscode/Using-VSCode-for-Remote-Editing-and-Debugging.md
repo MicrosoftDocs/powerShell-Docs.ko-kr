@@ -89,4 +89,4 @@ macOS에서 Azure의 Ubuntu VM로 이동 중이므로 원격에 SSH를 사용합
 
    ![원격 파일 디버깅](images/Using-VSCode-for-Remote-Editing-and-Debugging/7-start-debugging.png)
 
-문제가 있는 경우 [GitHub 리포지토리](https://github.com/powershell/vscode-powershell)에서 문제를 시작할 수 있습니다.
+문제가 있는 경우 [GitHub 리포지토리](https://github.com/powershell/vscode-powershell)에서 이슈를 열 수 있습니다.
