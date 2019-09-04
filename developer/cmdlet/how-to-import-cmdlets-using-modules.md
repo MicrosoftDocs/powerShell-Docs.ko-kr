@@ -1,45 +1,55 @@
 ---
 title: 모듈을 사용 하 여 Cmdlet을 가져오는 방법 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 08/28/2019
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a41d9e5f-de6f-47b7-9601-c108609320d0
 caps.latest.revision: 8
-ms.openlocfilehash: c007bb11324e10ffd100797dccd9e6ab0d09a73e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 2f145795a57c988da0cb4ed294142aa141c53cae
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62067980"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215269"
 ---
-# <a name="how-to-import-cmdlets-using-modules"></a><span data-ttu-id="111e7-102">모듈을 사용하여 Cmdlet을 가져오는 방법</span><span class="sxs-lookup"><span data-stu-id="111e7-102">How to Import Cmdlets Using Modules</span></span>
+# <a name="how-to-import-cmdlets-using-modules"></a><span data-ttu-id="a56fe-102">모듈을 사용하여 Cmdlet을 가져오는 방법</span><span class="sxs-lookup"><span data-stu-id="a56fe-102">How to Import Cmdlets Using Modules</span></span>
 
-<span data-ttu-id="111e7-103">이 항목에서는 이진 모듈을 사용 하 여 Windows PowerShell 세션에 cmdlet을 가져오는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="111e7-103">This topic describes how to import cmdlets to a Windows PowerShell session by using a binary module.</span></span>
+<span data-ttu-id="a56fe-103">이 문서에서는 이진 모듈을 사용 하 여 cmdlet을 PowerShell 세션으로 가져오는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="a56fe-103">This article describes how to import cmdlets to a PowerShell session by using a binary module.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="111e7-104">모듈의 멤버 cmdlet, 공급자, 함수, 변수, 별칭 및 등을 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="111e7-104">The members of modules can include cmdlets, providers, functions, variables, aliases, and much more.</span></span> <span data-ttu-id="111e7-105">스냅인에는 cmdlet과 공급자만 포함 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="111e7-105">Snap-ins can contain only cmdlets and providers.</span></span>
+> <span data-ttu-id="a56fe-104">모듈의 멤버에는 cmdlet, 공급자, 함수, 변수, 별칭 등이 포함 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a56fe-104">The members of modules can include cmdlets, providers, functions, variables, aliases, and much more.</span></span> <span data-ttu-id="a56fe-105">스냅인은 cmdlet 및 공급자만 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a56fe-105">Snap-ins can contain only cmdlets and providers.</span></span>
 
-## <a name="how-to-load-cmdlets-using-a-module"></a><span data-ttu-id="111e7-106">모듈을 사용 하 여 cmdlet을 로드 하는 방법</span><span class="sxs-lookup"><span data-stu-id="111e7-106">How to load cmdlets using a module</span></span>
+## <a name="how-to-load-cmdlets-using-a-module"></a><span data-ttu-id="a56fe-106">모듈을 사용 하 여 cmdlet을 로드 하는 방법</span><span class="sxs-lookup"><span data-stu-id="a56fe-106">How to load cmdlets using a module</span></span>
 
-1. <span data-ttu-id="111e7-107">Cmdlet 구현 되는 어셈블리 파일 이름이 같은 모듈 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="111e7-107">Create a module folder that has the same name as the assembly file in which the cmdlets are implemented.</span></span> <span data-ttu-id="111e7-108">이 절차에서는 모듈 폴더에 만들어집니다는 `system32` 폴더입니다.</span><span class="sxs-lookup"><span data-stu-id="111e7-108">In this procedure, the module folder is created in the `system32` folder.</span></span>
+1. <span data-ttu-id="a56fe-107">Cmdlet이 구현 되는 어셈블리 파일과 이름이 같은 모듈 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="a56fe-107">Create a module folder that has the same name as the assembly file in which the cmdlets are implemented.</span></span> <span data-ttu-id="a56fe-108">이 절차에서는 Windows `system32` 폴더에 module 폴더가 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="a56fe-108">In this procedure, the module folder is created in the Windows `system32` folder.</span></span>
 
    `%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules\mymodule`
 
-2. <span data-ttu-id="111e7-109">했는지를 `PSModulePath` 환경 변수는 새 모듈 폴더에 경로 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="111e7-109">Make sure that the `PSModulePath` environment variable includes the path to your new module folder.</span></span> <span data-ttu-id="111e7-110">기본적으로 시스템 폴더는 이미 추가 하 여 `PSModulePath` 환경 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="111e7-110">By default, the system folder is already added to the `PSModulePath` environment variable.</span></span>
+1. <span data-ttu-id="a56fe-109">`PSModulePath` 환경 변수에 새 모듈 폴더에 대 한 경로가 포함 되어 있는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="a56fe-109">Make sure that the `PSModulePath` environment variable includes the path to your new module folder.</span></span> <span data-ttu-id="a56fe-110">기본적으로 시스템 폴더는 `PSModulePath` 환경 변수에 이미 추가 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a56fe-110">By default, the system folder is already added to the `PSModulePath` environment variable.</span></span> <span data-ttu-id="a56fe-111">를 보려면 `PSModulePath`을 `$env:PSModulePath`입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="a56fe-111">To view the `PSModulePath`, type: `$env:PSModulePath`.</span></span>
 
-3. <span data-ttu-id="111e7-111">Cmdlet은 어셈블리 모듈 폴더에 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="111e7-111">Copy the cmdlet assembly into the module folder.</span></span>
+1. <span data-ttu-id="a56fe-112">Cmdlet 어셈블리를 모듈 폴더에 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="a56fe-112">Copy the cmdlet assembly into the module folder.</span></span>
 
-4. <span data-ttu-id="111e7-112">Cmdlet은 세션에 추가 하려면 다음 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="111e7-112">Run the following command to add the cmdlets to the session:</span></span>
+1. <span data-ttu-id="a56fe-113">모듈의 루트 폴더에 모듈`.psd1`매니페스트 파일 ()을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="a56fe-113">Add a module manifest file (`.psd1`) in the module's root folder.</span></span> <span data-ttu-id="a56fe-114">PowerShell은 모듈 매니페스트를 사용 하 여 모듈을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="a56fe-114">PowerShell uses the module manifest to import your module.</span></span> <span data-ttu-id="a56fe-115">자세한 내용은 [PowerShell 모듈 매니페스트를 작성 하는 방법](../module/how-to-write-a-powershell-module-manifest.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="a56fe-115">For more information, see [How to Write a PowerShell Module Manifest](../module/how-to-write-a-powershell-module-manifest.md).</span></span>
 
-   `import-module [Module_Name]`
+1. <span data-ttu-id="a56fe-116">다음 명령을 실행 하 여 cmdlet을 세션에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="a56fe-116">Run the following command to add the cmdlets to the session:</span></span>
 
-   <span data-ttu-id="111e7-113">Cmdlet을 테스트 하려면이 절차를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="111e7-113">This procedure can be used to test your cmdlets.</span></span> <span data-ttu-id="111e7-114">세션에 어셈블리의 모든 cmdlet을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="111e7-114">It adds all the cmdlets in the assembly to the session.</span></span> <span data-ttu-id="111e7-115">모듈에 대 한 자세한 내용은 다양 한 유형의 모듈을 로드할 모듈 및 내보낸 된 모듈의 요소를 제한 하는 방법에 대 한 다양 한 방법 참조 [Windows PowerShell 모듈 작성](../module/writing-a-windows-powershell-module.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="111e7-115">For more information about modules, the different types of modules, the different ways to load modules, and how to restrict the elements of a module that are exported, see [Writing a Windows PowerShell Module](../module/writing-a-windows-powershell-module.md).</span></span>
+   `Import-Module [Module_Name]`
 
-## <a name="see-also"></a><span data-ttu-id="111e7-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="111e7-116">See Also</span></span>
+   <span data-ttu-id="a56fe-117">이 절차를 사용 하 여 cmdlet을 테스트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a56fe-117">This procedure can be used to test your cmdlets.</span></span> <span data-ttu-id="a56fe-118">어셈블리의 모든 cmdlet을 세션에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="a56fe-118">It adds all the cmdlets in the assembly to the session.</span></span> <span data-ttu-id="a56fe-119">모듈에 대 한 자세한 내용은 [Windows PowerShell 모듈 작성](../module/writing-a-windows-powershell-module.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="a56fe-119">For more information about modules, see [Writing a Windows PowerShell Module](../module/writing-a-windows-powershell-module.md).</span></span>
 
-<span data-ttu-id="111e7-117">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="111e7-117">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="a56fe-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="a56fe-120">See also</span></span>
 
-[<span data-ttu-id="111e7-118">모듈 설치</span><span class="sxs-lookup"><span data-stu-id="111e7-118">Installing Modules</span></span>](../module/installing-a-powershell-module.md)
+[<span data-ttu-id="a56fe-121">PowerShell 모듈 매니페스트를 작성 하는 방법</span><span class="sxs-lookup"><span data-stu-id="a56fe-121">How to Write a PowerShell Module Manifest</span></span>](../module/how-to-write-a-powershell-module-manifest.md)
+
+[<span data-ttu-id="a56fe-122">PowerShell 모듈 가져오기</span><span class="sxs-lookup"><span data-stu-id="a56fe-122">Importing a PowerShell Module</span></span>](../module/importing-a-powershell-module.md)
+
+[<span data-ttu-id="a56fe-123">Import-Module</span><span class="sxs-lookup"><span data-stu-id="a56fe-123">Import-Module</span></span>](/powershell/module/Microsoft.PowerShell.Core/Import-Module)
+
+[<span data-ttu-id="a56fe-124">모듈 설치</span><span class="sxs-lookup"><span data-stu-id="a56fe-124">Installing Modules</span></span>](../module/installing-a-powershell-module.md)
+
+[<span data-ttu-id="a56fe-125">PSModulePath 설치 경로 수정</span><span class="sxs-lookup"><span data-stu-id="a56fe-125">Modifying the PSModulePath Installation Path</span></span>](../module/modifying-the-psmodulepath-installation-path.md)
+
+<span data-ttu-id="a56fe-126">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="a56fe-126">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>
