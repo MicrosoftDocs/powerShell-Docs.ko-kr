@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: Import-DSCResource 사용
-ms.openlocfilehash: ee0b2f0469c6507c8f0148138198597a9e57cdd7
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: e1c2c06d756a70c2de516f330e3123235ce740ba
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080104"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215411"
 ---
 # <a name="using-import-dscresource"></a>Import-DSCResource 사용
 
@@ -78,7 +78,7 @@ Name 매개 변수를 사용하는 경우 고려해야 할 사항:
 
 ISE에서 DSC 구성을 작성하면 PowerShell에서는 리소스 및 리소스 속성에 대한 IntelliSense를 제공합니다. `$pshome` 모듈 경로 아래에 있는 리소스 정의가 자동으로 로드됩니다. `Import-DSCResource` 키워드를 사용하여 리소스를 가져오면 지정된 리소스 정의가 추가되고 가져온 리소스의 스키마를 포함하도록 IntelliSense가 확장됩니다.
 
-![리소스 IntelliSense](/media/resource-intellisense.png)
+![리소스 IntelliSense](../media/resource-intellisense.png)
 
 > [!NOTE]
 > PowerShell 5.0부터, 탭 완성이 DSC 리소스 및 해당 속성에 대한 ISE에 추가되었습니다. 자세한 내용은 [리소스](../resources/resources.md)를 참조하세요.
@@ -137,11 +137,11 @@ PowerShell 4.0에서는 여러 리소스 버전을 병렬로 설치 및 사용�
 
 아래 이미지에는 **xPSDesiredStateConfiguration** 모듈의 두 가지 버전이 설치되어 있습니다.
 
-![수정된 여러 리소스 버전](/media/multiple-resource-versions-broken.md)
+![수정된 여러 리소스 버전](../media/multiple-resource-versions-broken.png)
 
 원하는 모듈 버전의 콘텐츠를 모듈 디렉터리의 맨 위 수준으로 복사합니다.
 
-![수정된 여러 리소스 버전](/media/multiple-resource-versions-fixed.md)
+![수정된 여러 리소스 버전](../media/multiple-resource-versions-fixed.png)
 
 ### <a name="resource-location"></a>리소스 위치
 
