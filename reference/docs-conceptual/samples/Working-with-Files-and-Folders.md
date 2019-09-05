@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 파일 및 폴더 작업
-ms.openlocfilehash: 0f7cb233918b59475417ec49b611ecc25a94ebe1
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 743e261d2f5e8bfa39f2731fca7fea6e5678c711
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030696"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215528"
 ---
 # <a name="working-with-files-and-folders"></a>파일 및 폴더 작업
 
@@ -106,15 +106,17 @@ sure you want to continue?
 Remove-Item -Path C:\temp\DeleteMe -Recurse
 ```
 
-## <a name="mapping-a-local-folder-as-a-windows-accessible-drive"></a>Windows 액세스 드라이브로 로컬 폴더 매핑
+## <a name="mapping-a-local-folder-as-a-drive"></a>로컬 폴더를 드라이브로 매핑
 
-**subst** 명령을 사용하여 로컬 폴더를 매핑할 수도 있습니다. 다음 명령은 루트가 로컬 Program Files 디렉터리인 로컬 드라이브 P:를 만듭니다.
+**New-PSDrive** 명령을 사용하여 로컬 폴더를 매핑할 수도 있습니다. 다음 명령은 로컬 Program Files 디렉터리에 있는 로컬 드라이브 P:를 만듭니다(PowerShell 세션에서만 표시됨).
 
 ```powershell
-subst p: $env:programfiles
+New-PSDrive -Name P -Root $env:ProgramFiles -PSProvider FileSystem
 ```
 
-그러면 네트워크 드라이브와 마찬가지로 **subst**를 사용하여 Windows PowerShell에 매핑된 드라이브가 Windows PowerShell 셸에 즉시 나타납니다.
+그러면 네트워크 드라이브와 마찬가지로 Windows PowerShell 내에 매핑된 드라이브가 Windows PowerShell 셸에 즉시 표시됩니다.
+파일 탐색기에서 표시되는 매핑된 드라이브를 만들기 위해서는 매개 변수 **-Persist**가 필요합니다. 그러나 원격 경로만 Persist와 함께 사용할 수 있습니다.
+
 
 ## <a name="reading-a-text-file-into-an-array"></a>텍스트 파일을 배열로 읽어오기
 
