@@ -9,33 +9,33 @@ ms.topic: article
 ms.assetid: 302f00ef-e145-4668-a26a-03bc96ef4b8f
 caps.latest.revision: 10
 ms.openlocfilehash: 9cc6933858f4f37e4fa8b3bbe9afb69a73c68572
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: ffcc1c55f5b3adc063353cb75f2a2183acc2234a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059646"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70737571"
 ---
 # <a name="remoterunspace01-sample"></a>RemoteRunspace01 샘플
 
-이 샘플에는 원격으로 연결 하는 데 사용 되는 원격 runspace를 만드는 방법을 보여 줍니다.
+이 샘플에서는 원격 연결을 설정 하는 데 사용 되는 원격 runspace를 만드는 방법을 보여 줍니다.
 
 ## <a name="requirements"></a>요구 사항
 
- 이 샘플 Windows PowerShell 2.0이 필요 합니다.
+ 이 샘플에는 Windows PowerShell 2.0이 필요 합니다.
 
-## <a name="demonstrates"></a>시연
+## <a name="demonstrates"></a>세부 항목
 
-- 만들기는 [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 개체입니다.
+- [Runspace Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 개체를 만듭니다.
 
-- 설정 된 [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) 하 고 [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) 속성을 [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 개체입니다.
+- Runspace. [Runspaceconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) * 및 [runspace. Runspaceconnectioninfo. Opentimeout *](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) 속성을 설정 하는 것입니다 [. Runspace. Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 개체입니다.
 
-- 사용 하는 원격 runspace가 만들기는 [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 원격 연결을 설정 하는 개체입니다.
+- [Runspace Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 개체를 사용 하 여 원격 연결을 설정 하는 원격 runspace를 만듭니다.
 
-- 원격 연결을 해제 하는 원격 runspace를 닫는 중입니다.
+- 원격 연결을 해제 하기 위해 원격 runspace를 닫습니다.
 
 ## <a name="example"></a>예제
 
-이 샘플 원격 연결을 정의 하 고 연결 정보를 사용 하 여 원격으로 연결 하려면.
+이 샘플에서는 원격 연결을 정의한 다음 해당 연결 정보를 사용 하 여 원격 연결을 설정 합니다.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
