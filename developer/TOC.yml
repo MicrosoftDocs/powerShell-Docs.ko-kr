@@ -887,39 +887,13 @@
         - name: Windows PowerShell Cmdlet에 대한 도움말 작성
           href: ./help/writing-help-for-windows-powershell-cmdlets.md
         - name: Windows PowerShell 공급자에 대한 도움말 작성
-          href: ./help/writing-help-for-windows-powershell-providers.md
           items:
-            - name: 공급자 도움말 항목을 만드는 방법
-              href: ./help/how-to-create-a-provider-help-topic.md
-            - name: 공급자 이름을 추가하는 방법
-              href: ./help/how-to-add-the-provider-name.md
-            - name: 공급자 드라이브를 추가하는 방법
-              href: ./help/how-to-add-the-provider-drives.md
-            - name: 공급자 개요를 추가하는 방법
-              href: ./help/how-to-add-the-provider-synopsis.md
-            - name: 공급자 설명을 추가하는 방법
-              href: ./help/how-to-add-a-provider-description.md
-            - name: 기능을 추가하는 방법
-              href: ./help/how-to-add-capabilities.md
-            - name: 공급자 도움말 항목에 작업을 추가하는 방법
-              href: ./help/how-to-add-tasks-to-a-provider-help-topic.md
             - name: 공급자 도움말 항목에 동적 매개 변수를 추가하는 방법
               href: ./help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
-            - name: 공급자 도움말 항목에 메모를 추가하는 방법
-              href: ./help/how-to-add-notes-to-a-provider-help-topic.md
             - name: 공급자 도움말 항목에 참고 항목 섹션을 추가하는 방법
               href: ./help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
         - name: Windows PowerShell 스크립트 및 함수에 대한 도움말 작성
           href: ./help/writing-help-for-windows-powershell-scripts-and-functions.md
-          items:
-            - name: 스크립트 및 함수에 대한 XML 기반 도움말 항목 작성
-              href: ./help/writing-xml-based-help-topics-for-scripts-and-functions.md
-        - name: Windows PowerShell 스냅인에 대한 도움말 작성
-          href: ./help/writing-help-for-windows-powershell-snap-ins.md
-        - name: Windows PowerShell 공급자에 대한 사용자 지정 Cmdlet 도움말 작성
-          href: ./help/writing-custom-cmdlet-help-for-windows-powershell-providers.md
-        - name: Windows PowerShell 도움말 정보 작성
-          href: ./help/writing-windows-powershell-about-help.md
         - name: 설명 기반 도움말 항목 작성
           href: ./help/writing-comment-based-help-topics.md
           items:
@@ -936,7 +910,6 @@
             - name: 설명 기반 도움말 예제
               href: ./help/examples-of-comment-based-help.md
         - name: 명령에 대한 XML 기반 도움말 항목 작성
-          href: ./help/writing-xml-based-help-topics-for-commands.md
           items:
             - name: Cmdlet 도움말 파일을 만드는 방법
               href: ./help/how-to-create-the-cmdlet-help-file.md
