@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e20e5ad6-a6e6-4a63-9d42-1ac54214f748
 caps.latest.revision: 5
-ms.openlocfilehash: cc4877242a16a9caa99564aeaae985f85e38791e
-ms.sourcegitcommit: ffcc1c55f5b3adc063353cb75f2a2183acc2234a
+ms.openlocfilehash: 59839e9b8b6f2a56f2f1a9c755f2f1a85deb34aa
+ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70737593"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848124"
 ---
 # <a name="how-to-add-dynamic-parameters-to-a-provider-help-topic"></a>공급자 도움말 항목에 동적 매개 변수를 추가하는 방법
 
@@ -23,7 +23,7 @@ ms.locfileid: "70737593"
 
 공급자 도움말 항목에 설명 된 동적 매개 변수는 공급자 드라이브에서 cmdlet 또는 함수를 사용할 때 공급자가 cmdlet 또는 함수에 추가 하는 동적 매개 변수입니다.
 
-동적 매개 변수는 공급자에 대 한 사용자 지정 cmdlet 도움말에도 설명 되어 있습니다. 공급자 도움말과 사용자 지정 cmdlet 도움말을 모두 작성할 때 두 문서 모두에 동적 매개 변수 설명서를 포함 합니다. 사용자 지정 cmdlet 도움말에 대 한 자세한 내용은 [공급자에 대 한 Windows PowerShell 사용자 지정 Cmdlet 도움말 작성](./writing-custom-cmdlet-help-for-windows-powershell-providers.md)을 참조 하세요.
+동적 매개 변수는 공급자에 대 한 사용자 지정 cmdlet 도움말에도 설명 되어 있습니다. 공급자 도움말과 사용자 지정 cmdlet 도움말을 모두 작성할 때 두 문서 모두에 동적 매개 변수 설명서를 포함 합니다.
 
 공급자가 동적 매개 변수를 구현 하지 않으면 공급자 도움말 항목에 빈 `DynamicParameters` 요소가 포함 됩니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "70737593"
 
 1. Dll-help 파일 `providerHelp` 의`DynamicParameters` 요소 내에서 요소를 추가 합니다. 요소는 요소 `Tasks` 뒤와 `RelatedLinks` 요소 앞에 표시 되어야 합니다. `DynamicParameters`
 
-   예:
+   예를 들어:
 
     ```xml
     <providerHelp>
@@ -48,7 +48,7 @@ ms.locfileid: "70737593"
 
 2. 요소 내에서 각 동적 매개 변수에 대해 `DynamicParameter` 요소를 추가 합니다. `DynamicParameters`
 
-   예:
+   예를 들어:
 
     ```xml
     <DynamicParameters/>
@@ -117,7 +117,7 @@ ms.locfileid: "70737593"
    |PossibleValues|이 요소는 컨테이너입니다. 자식 요소는 아래에 설명 되어 있습니다. 각 공급자 `PossibleValues` 도움말 항목에 요소를 하나씩 추가 합니다. 요소는 비어 있을 수 있습니다.|
    |PossibleValue|이 요소는 컨테이너입니다. 자식 요소는 아래에 설명 되어 있습니다. 동적 매개 `PossibleValue` 변수의 각 값에 대해 하나의 요소를 추가 합니다.|
    |값|값 이름을 지정 합니다.|
-   |Description|이 요소는 요소 `Para` 를 포함 합니다. `Para` 요소의 텍스트는 `Value` 요소에 명명 된 값을 설명 합니다.|
+   |설명|이 요소는 요소 `Para` 를 포함 합니다. `Para` 요소의 텍스트는 `Value` 요소에 명명 된 값을 설명 합니다.|
 
    예를 들어 다음 XML은 `PossibleValue` `Encoding` 동적 매개 변수의 한 요소를 보여 줍니다.
 

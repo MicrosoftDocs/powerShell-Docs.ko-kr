@@ -8,28 +8,27 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6b8303d-e868-4dd0-bbbb-ed2e6d8f2f76
 caps.latest.revision: 6
-ms.openlocfilehash: 985fbc6f53ca204e700da821fcd08187edc3b60f
-ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
+ms.openlocfilehash: bfb8d036a787ecf2f3afc394fca83ff0bf027af9
+ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735039"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848047"
 ---
 # <a name="runspace03-code-samples"></a>RunSpace03 코드 샘플
 
-에 설명 된 runspace에 대 한 코드 예제는 다음과 같습니다 [콘솔 응용 프로그램을 실행은 지정 된 스크립트를 만드는](fd)합니다.
+다음은 "지정 된 스크립트를 실행 하는 콘솔 응용 프로그램 만들기"에 설명 된 runspace에 대 한 코드 샘플입니다.
 
 > [!NOTE]
-> 다운로드할 수 있습니다는 C# 원본 파일 (runspace03.cs) 및 Microsoft Windows 소프트웨어 개발 키트에 대 한 Windows Vista 및 Microsoft.NET Framework 3.0 런타임 구성 요소를 사용 하 여이 샘플에 대 한 VB.NET 소스 파일 (runspace03.vb). 다운로드 지침에 대해서 [Windows PowerShell 설치 및 Windows PowerShell SDK를 다운로드 하는 방법을](/powershell/developer/installing-the-windows-powershell-sdk)합니다.
->
-> 다운로드 한 소스 파일에서 사용할 수는  **\<PowerShell 샘플 >** 디렉터리입니다.
+> Windows Vista 용 Microsoft C# Windows 소프트웨어 개발 키트 및 Microsoft .NET Framework 3.0 런타임 구성 요소를 사용 하 여이 샘플에 대 한 소스 파일 (runspace03.cs) 및 VB.NET 원본 파일 (runspace03)을 다운로드할 수 있습니다. 다운로드 지침은 [Windows powershell을 설치 하 고 Windows POWERSHELL SDK를 다운로드 하는 방법](/powershell/developer/installing-the-windows-powershell-sdk)을 참조 하세요.
+> 다운로드 된 원본 파일은  **\<PowerShell Samples >** 디렉터리에서 사용할 수 있습니다.
 
-전체 샘플 코드를 다음 항목을 참조 하십시오.
+전체 샘플 코드는 다음 항목을 참조 하세요.
 
-|언어|항목|
-|--------------|-----------|
-|C#|[RunSpace03 (C#) 코드 샘플](./runspace03-csharp-code-sample.md)|
-|VB.NET|[RunSpace03 (VB.NET) 코드 샘플](./runspace03-vb-net-code-sample.md)|
+| 언어 |                                 항목                                 |
+| -------- | --------------------------------------------------------------------- |
+| C#       | [RunSpace03 (C#) 코드 샘플](./runspace03-csharp-code-sample.md)     |
+| VB.NET   | [RunSpace03 (VB.NET) 코드 샘플](./runspace03-vb-net-code-sample.md) |
 
 ## <a name="see-also"></a>관련 항목
 
