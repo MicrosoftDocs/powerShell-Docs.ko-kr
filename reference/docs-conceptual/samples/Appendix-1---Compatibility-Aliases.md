@@ -1,36 +1,54 @@
 ---
-ms.date: 06/05/2017
+ms.date: 09/09/2019
 keywords: powershell,cmdlet
 title: 부록 1 호환성 별칭
-ms.openlocfilehash: 553b9f01d6b5e3f4e04f1a75c25979b54dc205da
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 2351fdf23711fe1417f7e3fc3cca5b642d5a59fc
+ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030335"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848172"
 ---
 # <a name="appendix-1---compatibility-aliases"></a>부록 1 - 호환성 별칭
 
-Windows PowerShell에는 UNIX 및 Cmd 사용자가 Windows PowerShell에서 친숙한 명령 이름을 사용할 수 있게 해주는 여러 전환 별칭이 있습니다. 아래 표에는 가장 일반적인 별칭이 나와 있으며, 별칭 뒤에 Windows PowerShell 명령과 표준 Windows PowerShell 별칭(있는 경우)이 표시됩니다.
+PowerShell에는 **UNIX** 및 **cmd.exe** 사용자가 친숙한 명령을 사용할 수 있게 하는 몇 가지 별칭이 있습니다.
+명령, 관련 PowerShell cmdlet 및 PowerShell 별칭은 다음 표에 나와 있습니다.
 
-Get-Alias cmdlet을 사용하면 Windows PowerShell 내에서 별칭이 가리키는 Windows PowerShell 명령을 찾을 수 있습니다. 예를 들어 **get-alias cls**를 입력합니다.
-
-```
-CommandType     Name                            Definition
------------     ----                            ----------
-Alias           cls                             Clear-Host
-```
-
-|CMD 명령|UNIX 명령|PS 명령|PS 별칭|
+|cmd.exe 명령|UNIX 명령|PowerShell cmdlet|PowerShell 별칭|
 |---------------|----------------|--------------|------------|
-|**dir**|**ls**|**Get-ChildItem**|**gci**|
-|**cls**|**clear**|**Clear-Host**(함수)|**cls**|
-|**del, erase, rmdir**|**rm**|**Remove-Item**|**ri**|
-|**copy**|**cp**|**Copy-Item**|**ci**|
-|**move**|**mv**|**Move-Item**|**mi**|
-|**rename**|**mv**|**Rename-Item**|**rni**|
-|**type**|**cat**|**Get-Content**|**gc**|
-|**cd**|**cd**|**Set-Location**|**sl**|
-|**md**|**mkdir**|**New-Item**|**ni**|
-|**pushd**|**pushd**|**Push-Location**|**pushd**|
-|**popd**|**popd**|**Pop-Location**|**popd**|
+|**cls**|**clear**|`Clear-Host`(함수)|`cls`|
+|**copy**|**cp**|`Copy-Item`|`cpi`|
+|**dir**|**ls**|`Get-ChildItem`|`gci`|
+|**type**|**cat**|`Get-Content`|`gc`|
+|**move**|**mv**|`Move-Item`|`mi`|
+|**md**|**mkdir**|`New-Item`|`ni`|
+|**pushd**|**pushd**|`Push-Location`|`pushd`|
+|**popd**|**popd**|`Pop-Location`|`popd`|
+|**del**, **erase**, **rd**, **rmdir**|**rm**|`Remove-Item`|`ri`|
+|**ren**|**mv**|`Rename-Item`|`rni`|
+|**cd**, **chdir**|**cd**|`Set-Location`|`sl`|
+
+PowerShell 별칭을 찾으려면 [Get Alias](/powershell/module/Microsoft.PowerShell.Utility/Get-Alias) cmdlet을 사용합니다. Cmdlet의 별칭을 표시하려면 **Definition** 매개 변수를 사용하고 cmdlet 이름을 지정합니다.
+별칭의 cmdlet 이름을 찾으려면 **Name** 매개 변수를 사용하고 별칭을 지정합니다.
+
+```powershell
+Get-Alias -Definition Get-ChildItem
+```
+
+```Output
+CommandType     Name
+-----------     ----
+Alias           dir -> Get-ChildItem
+Alias           gci -> Get-ChildItem
+Alias           ls -> Get-ChildItem
+```
+
+```powershell
+Get-Alias -Name gci
+```
+
+```Output
+CommandType     Name
+-----------     ----
+Alias           gci -> Get-ChildItem
+```

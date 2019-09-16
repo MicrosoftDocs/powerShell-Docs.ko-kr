@@ -1,0 +1,99 @@
+### YamlMime:Landing
+title: 시스템 관리용 샘플 스크립트
+summary: 예제 컬렉션에서는 PowerShell을 사용하여 시스템을 관리하는 시나리오를 안내합니다.
+metadata:
+  title: 시스템 관리용 샘플 스크립트
+  description: 예제 컬렉션에서는 PowerShell을 사용하여 시스템을 관리하는 시나리오를 안내합니다.
+  ms.topic: landing-page
+  author: sdwheeler
+  ms.author: sewhee
+  ms.date: 09/05/2019
+  ms.openlocfilehash: 95ed43cf713f79d8b648a0f3af77fe2e0119f9c4
+  ms.sourcegitcommit: d1ba596f9e0d4df9565601a70687a126d535c917
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 09/05/2019
+  ms.locfileid: "70392030"
+landingContent:
+- title: 개체 작업
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 개체 구조 보기
+      url: ./viewing-object-structure--get-member-.md
+    - text: 개체의 일부 선택
+      url: ./selecting-parts-of-objects--select-object-.md
+    - text: 파이프라인에서 개체 필터링
+      url: ./removing-objects-from-the-pipeline--where-object-.md
+    - text: 개체 정렬
+      url: ./sorting-objects.md
+    - text: 여러 개체에 대해 작업 반복
+      url: ./repeating-a-task-for-multiple-objects--foreach-object-.md
+    - text: .NET 및 COM 개체 만들기
+      url: ./creating-.net-and-com-objects--new-object-.md
+    - text: 정적 클래스 및 메서드 사용
+      url: ./using-static-classes-and-methods.md
+    - text: WMI 개체 가져오기 - Get-WmiObject
+      url: ./getting-wmi-objects--get-wmiobject-.md
+- title: 컴퓨터 관리
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 컴퓨터 상태 변경
+      url: ./changing-computer-state.md
+    - text: 컴퓨터에 대한 정보 수집
+      url: ./collecting-information-about-computers.md
+    - text: FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기
+      url: ./creating-get-winEvent-queries-with-filterhashtable.md
+- title: 프로세스 및 서비스 관리
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 프로세스 cmdlet으로 프로세스 관리
+      url: ./managing-processes-with-process-cmdlets.md
+    - text: 서비스 관리
+      url: ./managing-services.md
+    - text: Windows PowerShell 드라이브 관리
+      url: ./managing-windows-powershell-drives.md
+    - text: 프린터 작업
+      url: ./working-with-printers.md
+    - text: 네트워킹 작업 수행
+      url: ./performing-networking-tasks.md
+    - text: 소프트웨어 설치 작업
+      url: ./working-with-software-installations.md
+    - text: 실행 중인 프로세스에서 PowerShell 명령 디코딩
+      url: ./decode-powershell-command-from-a-running-process.md
+- title: 출력 작업
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Out-* cmdlet을 사용하여 데이터 리디렉션
+      url: ./redirecting-data-with-out---cmdlets.md
+    - text: 형식 명령을 사용하여 출력 보기 변경
+      url: ./using-format-commands-to-change-output-view.md
+- title: 드라이브 및 파일 관리
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 현재 위치 관리
+      url: ./managing-current-location.md
+    - text: 파일 및 폴더 작업
+      url: ./working-with-files-and-folders.md
+    - text: 파일, 폴더 및 레지스트리 키 작업
+      url: ./working-with-files-folders-and-registry-keys.md
+    - text: 레지스트리 항목 작업
+      url: ./working-with-registry-entries.md
+    - text: 레지스트리 키 작업
+      url: ./working-with-registry-keys.md
+- title: UI 요소 만들기
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 사용자 지정 입력란 만들기
+      url: ./creating-a-custom-input-box.md
+    - text: 그래픽 날짜 선택 만들기
+      url: ./creating-a-graphical-date-picker.md
+    - text: 다중 선택 목록 상자
+      url: ./multiple-selection-list-boxes.md
+    - text: 목록 상자에서 항목 선택
+      url: ./selecting-items-from-a-list-box.md

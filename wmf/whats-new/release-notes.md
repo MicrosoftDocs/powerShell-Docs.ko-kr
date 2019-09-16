@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: WMF 5.x 릴리스 정보
-ms.openlocfilehash: 8bdc423234cf0b104b72b1bee1de35e50783d8a4
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 8924240a4bbedcd34bc68b7cacdd23189a3716d6
+ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65855768"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848149"
 ---
 # <a name="windows-management-framework-wmf-5x-release-notes"></a>WMF(Windows Management Framework) 5.x 릴리스 정보
 
@@ -41,6 +41,9 @@ WMF 5.1에는 Windows Server 2016과 함께 릴리스된 PowerShell, WMI, WinRM 
 - DSC 및 PowerShell 클래스에 대한 디버깅 개선 사항
 - 끌어오기 서버에서 나오는 카탈로그 서명 모듈 적용 및 PowerShellGet cmdlet을 사용할 경우를 비롯한 보안 향상
 - 다양한 사용자 요청 및 문제에 대한 응답
+
+> [!IMPORTANT]
+> Windows Server 2008 또는 Windows 7에 WMF 5.1을 설치하기 전에 WMF 3.0이 설치되어 있지 않은지 확인합니다. 자세한 내용은 [Windows Server 2008 R2 SP1 및 Windows 7 SP1에 대한 WMF 5.1 필수 조건](../setup/install-configure.md#wmf-51-prerequisites-for-windows-server-2008-r2-sp1-and-windows-7-sp1)을 참조하세요.
 
 ## <a name="powershell-editions"></a>PowerShell 버전
 
@@ -90,6 +93,7 @@ WMF 5.1에서 `using module`은 PowerShell에서 다른 모듈 관련 생성과 
 WMF 5.1에서는 다음과 같습니다.
 
 - [ModuleSpecification Constructor (Hashtable)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor?view=powershellsdk-1.1.0#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_)(ModuleSpecification 생성자(해시 테이블))를 사용할 수 있습니다.
+
   이 해시 테이블은 `Get-Module -FullyQualifiedName`과 형식이 같습니다.
 
   **예:** `using module @{ModuleName = 'PSReadLine'; RequiredVersion = '1.1'}`
