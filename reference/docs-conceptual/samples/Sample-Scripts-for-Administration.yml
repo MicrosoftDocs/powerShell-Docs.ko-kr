@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: <span data-ttu-id="2d898-101">시스템 관리용 샘플 스크립트</span><span class="sxs-lookup"><span data-stu-id="2d898-101">Sample scripts for system administration</span></span>
-summary: <span data-ttu-id="2d898-102">예제 컬렉션에서는 PowerShell을 사용하여 시스템을 관리하는 시나리오를 안내합니다.</span><span class="sxs-lookup"><span data-stu-id="2d898-102">A collection of examples walks through scenarios for administering systems with PowerShell.</span></span>
+title: 시스템 관리용 샘플 스크립트
+summary: 예제 컬렉션에서는 PowerShell을 사용하여 시스템을 관리하는 시나리오를 안내합니다.
 metadata:
-  title: <span data-ttu-id="2d898-103">시스템 관리용 샘플 스크립트</span><span class="sxs-lookup"><span data-stu-id="2d898-103">Sample scripts for system administration</span></span>
-  description: <span data-ttu-id="2d898-104">예제 컬렉션에서는 PowerShell을 사용하여 시스템을 관리하는 시나리오를 안내합니다.</span><span class="sxs-lookup"><span data-stu-id="2d898-104">A collection of examples walks through scenarios for administering systems with PowerShell.</span></span>
+  title: 시스템 관리용 샘플 스크립트
+  description: 예제 컬렉션에서는 PowerShell을 사용하여 시스템을 관리하는 시나리오를 안내합니다.
   ms.topic: landing-page
   author: sdwheeler
   ms.author: sewhee
@@ -15,85 +15,85 @@ metadata:
   ms.lasthandoff: 09/05/2019
   ms.locfileid: "70392030"
 landingContent:
-- title: <span data-ttu-id="2d898-105">개체 작업</span><span class="sxs-lookup"><span data-stu-id="2d898-105">Working with objects</span></span>
+- title: 개체 작업
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: <span data-ttu-id="2d898-106">개체 구조 보기</span><span class="sxs-lookup"><span data-stu-id="2d898-106">Viewing object structure</span></span>
+    - text: 개체 구조 보기
       url: ./viewing-object-structure--get-member-.md
-    - text: <span data-ttu-id="2d898-107">개체의 일부 선택</span><span class="sxs-lookup"><span data-stu-id="2d898-107">Selecting parts of object</span></span>
+    - text: 개체의 일부 선택
       url: ./selecting-parts-of-objects--select-object-.md
-    - text: <span data-ttu-id="2d898-108">파이프라인에서 개체 필터링</span><span class="sxs-lookup"><span data-stu-id="2d898-108">Filtering objects in the pipeline</span></span>
+    - text: 파이프라인에서 개체 필터링
       url: ./removing-objects-from-the-pipeline--where-object-.md
-    - text: <span data-ttu-id="2d898-109">개체 정렬</span><span class="sxs-lookup"><span data-stu-id="2d898-109">Sorting objects</span></span>
+    - text: 개체 정렬
       url: ./sorting-objects.md
-    - text: <span data-ttu-id="2d898-110">여러 개체에 대해 작업 반복</span><span class="sxs-lookup"><span data-stu-id="2d898-110">Repeating a task for multiple objects</span></span>
+    - text: 여러 개체에 대해 작업 반복
       url: ./repeating-a-task-for-multiple-objects--foreach-object-.md
-    - text: <span data-ttu-id="2d898-111">.NET 및 COM 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="2d898-111">Creating .NET and COM objects</span></span>
+    - text: .NET 및 COM 개체 만들기
       url: ./creating-.net-and-com-objects--new-object-.md
-    - text: <span data-ttu-id="2d898-112">정적 클래스 및 메서드 사용</span><span class="sxs-lookup"><span data-stu-id="2d898-112">Using static classes and methods</span></span>
+    - text: 정적 클래스 및 메서드 사용
       url: ./using-static-classes-and-methods.md
-    - text: <span data-ttu-id="2d898-113">WMI 개체 가져오기 - Get-WmiObject</span><span class="sxs-lookup"><span data-stu-id="2d898-113">Getting WMI objects - Get-WmiObject</span></span>
+    - text: WMI 개체 가져오기 - Get-WmiObject
       url: ./getting-wmi-objects--get-wmiobject-.md
-- title: <span data-ttu-id="2d898-114">컴퓨터 관리</span><span class="sxs-lookup"><span data-stu-id="2d898-114">Managing computers</span></span>
+- title: 컴퓨터 관리
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: <span data-ttu-id="2d898-115">컴퓨터 상태 변경</span><span class="sxs-lookup"><span data-stu-id="2d898-115">Changing computer state</span></span>
+    - text: 컴퓨터 상태 변경
       url: ./changing-computer-state.md
-    - text: <span data-ttu-id="2d898-116">컴퓨터에 대한 정보 수집</span><span class="sxs-lookup"><span data-stu-id="2d898-116">Collecting information about computers</span></span>
+    - text: 컴퓨터에 대한 정보 수집
       url: ./collecting-information-about-computers.md
-    - text: <span data-ttu-id="2d898-117">FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기</span><span class="sxs-lookup"><span data-stu-id="2d898-117">Creating Get-WinEvent queries with FilterHashtable</span></span>
+    - text: FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기
       url: ./creating-get-winEvent-queries-with-filterhashtable.md
-- title: <span data-ttu-id="2d898-118">프로세스 및 서비스 관리</span><span class="sxs-lookup"><span data-stu-id="2d898-118">Managing processes & services</span></span>
+- title: 프로세스 및 서비스 관리
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: <span data-ttu-id="2d898-119">프로세스 cmdlet으로 프로세스 관리</span><span class="sxs-lookup"><span data-stu-id="2d898-119">Managing processes with process cmdlets</span></span>
+    - text: 프로세스 cmdlet으로 프로세스 관리
       url: ./managing-processes-with-process-cmdlets.md
-    - text: <span data-ttu-id="2d898-120">서비스 관리</span><span class="sxs-lookup"><span data-stu-id="2d898-120">Managing services</span></span>
+    - text: 서비스 관리
       url: ./managing-services.md
-    - text: <span data-ttu-id="2d898-121">Windows PowerShell 드라이브 관리</span><span class="sxs-lookup"><span data-stu-id="2d898-121">Managing Windows PowerShell drives</span></span>
+    - text: Windows PowerShell 드라이브 관리
       url: ./managing-windows-powershell-drives.md
-    - text: <span data-ttu-id="2d898-122">프린터 작업</span><span class="sxs-lookup"><span data-stu-id="2d898-122">Working with printers</span></span>
+    - text: 프린터 작업
       url: ./working-with-printers.md
-    - text: <span data-ttu-id="2d898-123">네트워킹 작업 수행</span><span class="sxs-lookup"><span data-stu-id="2d898-123">Performing networking tasks</span></span>
+    - text: 네트워킹 작업 수행
       url: ./performing-networking-tasks.md
-    - text: <span data-ttu-id="2d898-124">소프트웨어 설치 작업</span><span class="sxs-lookup"><span data-stu-id="2d898-124">Working with software installations</span></span>
+    - text: 소프트웨어 설치 작업
       url: ./working-with-software-installations.md
-    - text: <span data-ttu-id="2d898-125">실행 중인 프로세스에서 PowerShell 명령 디코딩</span><span class="sxs-lookup"><span data-stu-id="2d898-125">Decode a PowerShell command from a running process</span></span>
+    - text: 실행 중인 프로세스에서 PowerShell 명령 디코딩
       url: ./decode-powershell-command-from-a-running-process.md
-- title: <span data-ttu-id="2d898-126">출력 작업</span><span class="sxs-lookup"><span data-stu-id="2d898-126">Working with output</span></span>
+- title: 출력 작업
   linkLists:
   - linkListType: concept
     links:
-    - text: <span data-ttu-id="2d898-127">Out-\* cmdlet을 사용하여 데이터 리디렉션</span><span class="sxs-lookup"><span data-stu-id="2d898-127">Redirecting data with Out-\* cmdlets</span></span>
+    - text: Out-* cmdlet을 사용하여 데이터 리디렉션
       url: ./redirecting-data-with-out---cmdlets.md
-    - text: <span data-ttu-id="2d898-128">형식 명령을 사용하여 출력 보기 변경</span><span class="sxs-lookup"><span data-stu-id="2d898-128">Using format commands to change output view</span></span>
+    - text: 형식 명령을 사용하여 출력 보기 변경
       url: ./using-format-commands-to-change-output-view.md
-- title: <span data-ttu-id="2d898-129">드라이브 및 파일 관리</span><span class="sxs-lookup"><span data-stu-id="2d898-129">Managing drives & files</span></span>
+- title: 드라이브 및 파일 관리
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: <span data-ttu-id="2d898-130">현재 위치 관리</span><span class="sxs-lookup"><span data-stu-id="2d898-130">Managing current location</span></span>
+    - text: 현재 위치 관리
       url: ./managing-current-location.md
-    - text: <span data-ttu-id="2d898-131">파일 및 폴더 작업</span><span class="sxs-lookup"><span data-stu-id="2d898-131">Working with files and folders</span></span>
+    - text: 파일 및 폴더 작업
       url: ./working-with-files-and-folders.md
-    - text: <span data-ttu-id="2d898-132">파일, 폴더 및 레지스트리 키 작업</span><span class="sxs-lookup"><span data-stu-id="2d898-132">Working with files folders and registry keys</span></span>
+    - text: 파일, 폴더 및 레지스트리 키 작업
       url: ./working-with-files-folders-and-registry-keys.md
-    - text: <span data-ttu-id="2d898-133">레지스트리 항목 작업</span><span class="sxs-lookup"><span data-stu-id="2d898-133">Working with registry entries</span></span>
+    - text: 레지스트리 항목 작업
       url: ./working-with-registry-entries.md
-    - text: <span data-ttu-id="2d898-134">레지스트리 키 작업</span><span class="sxs-lookup"><span data-stu-id="2d898-134">Working with registry keys</span></span>
+    - text: 레지스트리 키 작업
       url: ./working-with-registry-keys.md
-- title: <span data-ttu-id="2d898-135">UI 요소 만들기</span><span class="sxs-lookup"><span data-stu-id="2d898-135">Creating UI elements</span></span>
+- title: UI 요소 만들기
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: <span data-ttu-id="2d898-136">사용자 지정 입력란 만들기</span><span class="sxs-lookup"><span data-stu-id="2d898-136">Creating a custom input box</span></span>
+    - text: 사용자 지정 입력란 만들기
       url: ./creating-a-custom-input-box.md
-    - text: <span data-ttu-id="2d898-137">그래픽 날짜 선택 만들기</span><span class="sxs-lookup"><span data-stu-id="2d898-137">Creating a graphical date picker</span></span>
+    - text: 그래픽 날짜 선택 만들기
       url: ./creating-a-graphical-date-picker.md
-    - text: <span data-ttu-id="2d898-138">다중 선택 목록 상자</span><span class="sxs-lookup"><span data-stu-id="2d898-138">Multiple selection list boxes</span></span>
+    - text: 다중 선택 목록 상자
       url: ./multiple-selection-list-boxes.md
-    - text: <span data-ttu-id="2d898-139">목록 상자에서 항목 선택</span><span class="sxs-lookup"><span data-stu-id="2d898-139">Selecting items from a list box</span></span>
+    - text: 목록 상자에서 항목 선택
       url: ./selecting-items-from-a-list-box.md
