@@ -194,6 +194,55 @@
           href: whats-new/what-s-new-in-the-powershell-50-ise.md
 - name: PowerShell Core 지원 수명 주기
   href: powershell-support-lifecycle.md
+- name: WMF(Windows Management Framework)
+  items:
+    - name: 개요
+      href: wmf/overview.md
+    - name: 설치
+      items:
+        - name: WMF 5.1 설치 및 구성
+          href: wmf/setup/install-configure.md
+        - name: WMF 5.0 제거
+          href: wmf/setup/uninstall.md
+    - name: 새로운 기능
+      expanded: true
+      items:
+        - name: WMF 5.x 릴리스 정보
+          href: wmf/whats-new/release-notes.md
+        - name: WMF 5.1의 버그 수정
+          href: wmf/whats-new/bugfixes.md
+        - name: 새로 제공되거나 업데이트된 cmdlet
+          href: wmf/whats-new/new-updated-cmdlets.md
+        - name: PowerShell 클래스를 사용하여 사용자 지정 형식 만들기
+          href: wmf/whats-new/class-overview.md
+        - name: WMF 5.1의 향상된 콘솔
+          href: wmf/whats-new/console-improvements.md
+        - name: PowerShell 스크립트 디버깅의 향상된 기능
+          href: wmf/whats-new/debug-overview.md
+        - name: 스크립트 추적 및 로깅
+          href: wmf/whats-new/script-logging.md
+        - name: WMF 5.1의 향상된 DSC
+          href: wmf/whats-new/DSC-improvements.md
+        - name: WMF 5.1의 향상된 PowerShell 엔진
+          href: wmf/whats-new/engine-improvements.md
+        - name: 정보 스트림
+          href: wmf/whats-new/informationstream-overview.md
+        - name: JEA(Just Enough Administration)에 대한 개선 사항
+          href: wmf/whats-new/jea-improvements.md
+        - name: WMF 5.1의 향상된 패키지 관리
+          href: wmf/whats-new/package-management-improvements.md
+        - name: 소프트웨어 인벤토리 로깅(SIL)
+          href: wmf/whats-new/sil-overview.md
+        - name: 제품 호환성 상태
+          href: wmf/whats-new/compatibility.md
+    - name: 알려진 문제
+      items:
+        - name: WMF 5.0의 알려진 문제
+          href: wmf/known-issues/known-issues-50.md
+        - name: WMF 5.1의 알려진 문제
+          href: wmf/known-issues/known-issues-51.md
+        - name: DSC의 알려진 문제 및 제한 사항
+          href: wmf/known-issues/known-issues-dsc.md
 - name: 샘플 스크립트
   items:
     - name: 관리용 샘플 스크립트
