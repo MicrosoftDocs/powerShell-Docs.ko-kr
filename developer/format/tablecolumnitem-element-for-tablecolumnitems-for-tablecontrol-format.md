@@ -1,5 +1,5 @@
 ---
-title: TableControl (형식)에 대 한 TableColumnItems TableColumnItem 요소 | Microsoft Docs
+title: TableColumnItems의 TableControl 요소에 대 한 TableColumnItem 요소 (형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,24 +8,25 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ef8395aa-4b31-48c0-a0b8-b481fd0b3738
 caps.latest.revision: 15
-ms.openlocfilehash: 159f943f6bfb33c5403b5714380631351523789f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 9e6cffc7476ef01124d95ecbf287d9788b0324c9
+ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62063941"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71143574"
 ---
 # <a name="tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format"></a>TableControl의 TableColumnItems에 대한 TableColumnItem 요소(형식)
 
-속성 또는 값은 행의 열에 표시 된 스크립트를 정의 합니다.
+행의 열에 값이 표시 되는 속성이 나 스크립트를 정의 합니다.
 
-구성 요소 (형식) ViewDefinitions 요소 (형식) 보기 (형식) TableControl 요소 (형식) TableRowEntries 요소 TableControl (형식)에 대 한 TableRowEntries TableRowEntry 요소 TableControl (형식)에 TableControl (형식)에 대 한 TableColumnItems TableColumnItem 요소 TableControl (형식)에 대 한 TableControlEntry TableColumnItems 요소
+Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (format) TableControl Element (format) TableRowEntries 요소에 대 한 TableControl (format) TableRowEntry Element for TableRowEntries (Format) TableColumnItems에 대 한 TableControlEntry for TableControl (Format) TableColumnItem 요소에 대 한 TableColumnItems 요소 (형식)
 
 ## <a name="syntax"></a>구문
 
 ```xml
 <TableColumnItem>
   <Alignment>Left, Right, or Center</Alignment>
+  <FormatString>FormatPattern</FormatString>
   <PropertyName>Nameof.NetProperty</PropertyName>
   <ScriptBlock>ScriptToEvaluate</ScriptBlock>
 </TableColumnItem>
@@ -33,7 +34,7 @@ ms.locfileid: "62063941"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 부모 요소에는 `TableColumnItem` 요소입니다.
+다음 섹션에서는 `TableColumnItem` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -43,26 +44,26 @@ ms.locfileid: "62063941"
 
 |요소|설명|
 |-------------|-----------------|
-|[TableControl (형식)에 대 한 TableColumnItem 요소 맞춤](./alignment-element-for-tablecolumnitem-for-tablecontrol-format.md)|선택적 요소입니다.<br /><br /> 데이터 행의 열에 표시 되는 방식을 정의 합니다.|
-|[TableControl (형식)에 대 한 TableColumnItem FormatString 요소](./formatstring-element-for-tablecolumnitem-for-tablecontrol-format.md)|행의 열에 데이터의 형식을 지정 하는 데 사용 되는 형식 패턴을 지정 합니다.|
-|[TableControl (형식)에 대 한 TableColumnItem PropertyName 요소](./propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md)|선택적 요소입니다.<br /><br /> 값은 표시 되는 속성의 이름을 지정 합니다.|
-|[TableControl (형식)에 대 한 TableColumnItem ScriptBlock 요소](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md)|선택적 요소입니다.<br /><br /> 값을 갖는 행의 열에 표시 됩니다 스크립트를 지정 합니다.|
+|[TableControl에 대 한 TableColumnItem의 Alignment 요소 (Format)](./alignment-element-for-tablecolumnitem-for-tablecontrol-format.md)|선택적 요소입니다.<br /><br /> 행의 열에 있는 데이터를 표시 하는 방법을 정의 합니다.|
+|[TableControl의 TableColumnItem에 대 한 FormatString 요소 (형식)](./formatstring-element-for-tablecolumnitem-for-tablecontrol-format.md)|행의 열에 있는 데이터의 서식을 지정 하는 데 사용 되는 형식 패턴을 지정 합니다.|
+|[TableControl의 TableColumnItem에 대 한 PropertyName 요소 (형식)](./propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md)|선택적 요소입니다.<br /><br /> 값이 표시 되는 속성의 이름을 지정 합니다.|
+|[TableControl의 TableColumnItem에 대 한 ScriptBlock 요소 (형식)](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md)|선택적 요소입니다.<br /><br /> 행의 열에 값이 표시 되는 스크립트를 지정 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
 |요소|설명|
 |-------------|-----------------|
-|[TableControl (형식)에 대 한 TableControlEntry TableColumnItems 요소](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)|속성 또는 행의 값을 표시 하는 스크립트를 정의 합니다.|
+|[TableControl의 TableControlEntry 요소에 대 한 TableColumnItems 요소 (형식)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)|행에 값이 표시 되는 속성 또는 스크립트를 정의 합니다.|
 
 ## <a name="remarks"></a>설명
 
-행의 각 열에는 개체 또는 스크립트의 속성을 지정할 수 있습니다. 지정 된 자식 요소가 없는 경우 항목 자리 표시자 이며 데이터가 표시 되지 않습니다.
+행의 각 열에 개체 또는 스크립트의 속성을 지정할 수 있습니다. 자식 요소가 지정 되지 않은 경우 해당 항목은 자리 표시자 이며 데이터는 표시 되지 않습니다.
 
-테이블 보기의 구성 요소에 대 한 자세한 내용은 참조 [테이블 뷰를 만드는](./creating-a-table-view.md)합니다.
+테이블 뷰의 구성 요소에 대 한 자세한 내용은 [테이블 뷰 만들기](./creating-a-table-view.md)를 참조 하세요.
 
 ## <a name="example"></a>예제
 
-보여 주는이 예제는 `TableColumnItem` 값을 표시 하는 요소는 `Status` 의 속성을 [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) 개체.
+이 예제에서는 `TableColumnItem` [system.object](/dotnet/api/System.Diagnostics.Process) 개체의 `Status` 속성 값을 표시 하는 요소를 보여 줍니다.
 
 ```xml
 <TableColumnItem>
@@ -76,14 +77,14 @@ ms.locfileid: "62063941"
 
 [테이블 뷰 만들기](./creating-a-table-view.md)
 
-[TableControl (형식)에 대 한 TableColumnItem 요소 맞춤](./alignment-element-for-tablecolumnitem-for-tablecontrol-format.md)
+[TableControl에 대 한 TableColumnItem의 Alignment 요소 (Format)](./alignment-element-for-tablecolumnitem-for-tablecontrol-format.md)
 
-[TableColumnItems 요소 (형식)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)
+[TableColumnItems 요소 (Format)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)
 
-[TableControl (형식)에 대 한 TableColumnItem FormatString 요소](./formatstring-element-for-tablecolumnitem-for-tablecontrol-format.md)
+[TableControl의 TableColumnItem에 대 한 FormatString 요소 (형식)](./formatstring-element-for-tablecolumnitem-for-tablecontrol-format.md)
 
-[TableControl (형식)에 대 한 TableColumnItem PropertyName 요소](./propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md)
+[TableControl의 TableColumnItem에 대 한 PropertyName 요소 (형식)](./propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md)
 
-[TableControl (형식)에 대 한 TableColumnItem ScriptBlock 요소](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md)
+[TableControl의 TableColumnItem에 대 한 ScriptBlock 요소 (형식)](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md)
 
-[서식 파일을 PowerShell 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
