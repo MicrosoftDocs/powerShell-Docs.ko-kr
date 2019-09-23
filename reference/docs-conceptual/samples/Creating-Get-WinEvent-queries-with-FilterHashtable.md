@@ -1,12 +1,12 @@
 ---
-ms.date: 03/18/2019
+ms.date: 09/13/2019
 title: FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기
-ms.openlocfilehash: 2f598fceb570f189bee776b6ed572b11a6938f64
-ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
+ms.openlocfilehash: 1bf321c09c20736de36eb896fabced31cfdfbd75
+ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66471024"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71143668"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기
 
@@ -16,9 +16,11 @@ ms.locfileid: "66471024"
 
 대규모 이벤트 로그를 사용할 경우 개체를 파이프라인 아래로 보내 `Where-Object` 명령으로 전달하는 것은 효율적이지 않습니다. PowerShell 6 이전에는 `Get-EventLog` cmdlet이 로그 데이터를 가져오는 또 다른 옵션으로 사용되었습니다. 예를 들어, 다음 명령은 **Microsoft-Windows-Defrag** 로그를 필터링하는 데 비효율적입니다.
 
-`Get-EventLog -LogName Application | Where-Object Source -Match defrag`
+```powershell
+Get-EventLog -LogName Application | Where-Object Source -Match defrag
 
-`Get-WinEvent -LogName Application | Where-Object { $_.ProviderName -Match 'defrag' }`
+Get-WinEvent -LogName Application | Where-Object { $_.ProviderName -Match 'defrag' }
+```
 
 다음 명령은 성능을 향상시키는 해시 테이블을 사용합니다.
 
@@ -48,19 +50,35 @@ Get-WinEvent -FilterHashtable @{
 
 다음 표는 키 이름, 데이터 형식, 데이터 값에 대해 와일드카드 문자가 허용되는지 여부를 표시합니다.
 
-| 키 이름     | 값 데이터 형식    | 와일드카드 문자 허용 여부 |
-|------------- | ------------------ | ---------------------------- |
-| LogName      | `<String[]>`       | 예 |
-| ProviderName | `<String[]>`       | 예 |
-| 경로         | `<String[]>`       | 아니요  |
-| 키워드     | `<Long[]>`         | 아니요  |
-| ID           | `<Int32[]>`        | 아니요  |
-| 수준        | `<Int32[]>`        | 아니요  |
-| StartTime    | `<DateTime>`       | 아니요  |
-| EndTime      | `<DateTime>`       | 아니요  |
-| UserID       | `<SID>`            | 아니요  |
-| 데이터         | `<String[]>`       | 아니요  |
-| *            | `<String[]>`       | 아니요  |
+|    키 이름    | 값 데이터 형식 | 와일드카드 문자 허용 여부 |
+| -------------- | --------------- | ---------------------------- |
+| LogName        | `<String[]>`    | 예                          |
+| ProviderName   | `<String[]>`    | 예                          |
+| 경로           | `<String[]>`    | 아니요                           |
+| 키워드       | `<Long[]>`      | 아니요                           |
+| ID             | `<Int32[]>`     | 아니요                           |
+| 수준          | `<Int32[]>`     | 아니요                           |
+| StartTime      | `<DateTime>`    | 아니요                           |
+| EndTime        | `<DateTime>`    | 아니요                           |
+| UserID         | `<SID>`         | 아니요                           |
+| 데이터           | `<String[]>`    | 아니요                           |
+| \<named-data\> | `<String[]>`    | 아니요                           |
+
+\<named-data\> 키는 명명된 이벤트 데이터 필드를 나타냅니다. 예를 들어, Perflib 이벤트 1008은 다음 이벤트 데이터를 포함할 수 있습니다.
+
+```xml
+<EventData>
+  <Data Name="Service">BITS</Data>
+  <Data Name="Library">C:\Windows\System32\bitsperf.dll</Data>
+  <Data Name="Win32Error">2</Data>
+</EventData>
+```
+
+이러한 이벤트를 다음 명령을 사용하여 쿼리할 수 있습니다.
+
+```powershell
+Get-WinEvent -FilterHashtable @{LogName='Application'; 'Service'='Bits'}
+```
 
 ## <a name="building-a-query-with-a-hash-table"></a>해시 테이블을 사용하여 쿼리 작성
 
