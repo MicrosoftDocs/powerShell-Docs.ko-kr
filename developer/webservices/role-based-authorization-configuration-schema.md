@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4ba6d1d2-7055-4fef-b752-a5ae8b4eeb65
 caps.latest.revision: 7
-ms.openlocfilehash: 50a02e9a7522fc04b407329f513670215ad051cf
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 0a4d4b0cd2c9672ea9b11698258916ae1d0520c0
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080546"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323047"
 ---
 # <a name="role-based-authorization-configuration-schema"></a>역할 기반 권한 부여 구성 스키마
 
-합니다 [PswsRoleBasedPlugins](http://go.microsoft.com/fwlink/?LinkId=243041) 샘플 XML 파일을 사용 하 여 권한 부여 정책을 구성 합니다. 다음 XSD이 파일에 사용 된 스키마를 정의 합니다.
+[PswsRoleBasedPlugins](https://go.microsoft.com/fwlink/?LinkId=243041) 샘플에서는 XML 파일을 사용 하 여 권한 부여 정책을 구성 합니다. 다음 XSD는 이러한 파일에 사용 되는 스키마를 정의 합니다.
 
 ```
 <?xml version="1.0" encoding="utf-8"?>

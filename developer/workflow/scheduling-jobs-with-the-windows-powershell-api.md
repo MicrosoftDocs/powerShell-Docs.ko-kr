@@ -1,5 +1,5 @@
 ---
-title: Windows PowerShell API 사용 하 여 작업 예약 | Microsoft Docs
+title: Windows PowerShell API를 사용 하 여 작업 예약 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2016
 ms.reviewer: ''
@@ -8,24 +8,24 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 64718f8e-de60-4fb7-894d-2975b5257ff6
 caps.latest.revision: 4
-ms.openlocfilehash: 8e1d2feff0665f169966f7d5e99540088e66bdfb
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: bdced961d91088dd75be347b7b74b22467c8c9be
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080359"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322953"
 ---
 # <a name="scheduling-jobs-with-the-powershell-api"></a>PowerShell API를 사용 하 여 작업 예약
 
-노출 하는 개체로 사용할 수는 **Microsoft.PowerShell.ScheduledJob** 다음을 수행 하는 네임 스페이스:
+**Set-scheduledjob** 네임 스페이스에서 노출 하는 개체를 사용 하 여 다음을 수행할 수 있습니다.
 
 - 예약 된 작업을 만듭니다.
-- 작업이 실행 되는 때를 정의 합니다.
+- 작업이 실행 되는 시간을 정의 합니다.
 - 완료 된 작업에 대 한 결과를 가져옵니다.
 
 ## <a name="triggering-the-job"></a>작업 트리거
 
-예약 된 작업을 만드는 첫 번째 단계는 작업을 실행 해야 할 시기를 지정 하는 합니다. 만들기 및 구성 하 여이 작업을 수행을 **Microsoft.PowerShell.ScheduledJob.ScheduledJobTrigger** 개체입니다. 다음 코드는 한 번 20 초를 앞으로 실행 하는 작업을 예약 하는 트리거를 만듭니다.
+예약 된 작업을 만드는 첫 번째 단계는 작업을 실행할 시기를 지정 하는 것입니다. **Set-scheduledjob ScheduledJobTrigger** 개체를 만들고 구성 하 여이 작업을 수행 합니다. 다음 코드는 나중에 20 초 후에 한 번 실행 되도록 작업을 예약 하는 트리거를 만듭니다.
 
 ```csharp
 ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
@@ -45,13 +45,13 @@ ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
 |매개 변수 이름|설명|
 |--------------------|-----------------|
 |**이름**|작업의 이름입니다.|
-|**ScriptBock**|작업의 용도 지정 하는 PowerShell 스크립트 블록입니다.|
-|**FilePath**|작업의 용도 지정 하려면 PowerShell 스크립트 블록을 포함 하는 파일 경로입니다.|
-|**InitializationScript**|작업을 초기화 하는 PowerShell 스크립트 블록입니다.|
-|**ArgumentList**|작업이 수행 하는 인수를 지정 하는 개체의 배열입니다.|
-|**RunAs32**|32 비트 프로세스에서 작업 실행 여부를 지정 하는 부울 값입니다.|
+|**ScriptBock**|작업에서 수행 하는 작업을 지정 하는 PowerShell 스크립트 블록입니다.|
+|**FilePath**|작업에서 수행 하는 작업을 지정 하는 PowerShell 스크립트 블록을 포함 하는 파일의 경로입니다.|
+|**또한 initializationscript**|작업을 초기화 하는 PowerShell 스크립트 블록입니다.|
+|**ArgumentList**|작업에서 수행 하는 인수를 지정 하는 개체의 배열입니다.|
+|**체제가 있어도 runas32**|작업을 32 비트 프로세스로 실행할지 여부를 지정 하는 부울 값입니다.|
 
-다음 코드는 매개 변수 사전 개체를 만듭니다 가져오거나 설정 합니다 **이름을** 및 **ScriptBlock** 매개 변수입니다.
+다음 코드는 매개 변수 사전 개체를 만들고 **Name** 및 **ScriptBlock** 매개 변수를 설정 합니다.
 
 ```csharp
 string schedJobDefName = "MySampleSchedJob";
@@ -64,9 +64,9 @@ string schedJobDefName = "MySampleSchedJob";
 
 ```
 
-## <a name="creating-the-invocation-and-job-definition-objects"></a>정의 개체 호출 및 작업 만들기
+## <a name="creating-the-invocation-and-job-definition-objects"></a>호출 및 작업 정의 개체 만들기
 
-그런 다음 만든 `ScheduledJobInvocationInfo` 고 `ScheduledJobDefinition` 다음 예제에서와 같이 작업을 실행 하는 개체:
+그런 다음, `ScheduledJobInvocationInfo` 다음 `ScheduledJobDefinition` 예제와 같이 및 개체를 만들어 작업을 실행 합니다.
 
 ```csharp
 ScheduledJobInvocationInfo jobInvocationInfo = new ScheduledJobInvocationInfo(
@@ -82,9 +82,9 @@ ScheduledJobInvocationInfo jobInvocationInfo = new ScheduledJobInvocationInfo(
 
 ```
 
-## <a name="registering-the-job-with-the-task-scheduler"></a>작업 scheduler를 사용 하 여 작업 등록
+## <a name="registering-the-job-with-the-task-scheduler"></a>작업 스케줄러에 작업 등록
 
-다음 코드를 사용 하 여 작업을 등록 합니다 [Windows 작업 Scheduler](http://go.microsoft.com/fwlink/?LinkId=251817)합니다.
+다음 코드는 작업을 [Windows 작업 스케줄러](https://go.microsoft.com/fwlink/?LinkId=251817)에 등록 합니다.
 
 ```csharp
 schedJobDefinition.Register();
@@ -95,7 +95,7 @@ schedJobDefinition.Register();
 
 ## <a name="complete-code-example"></a>전체 코드 예제
 
-다음은 이전 코드 조각 수행한 전체 코드 예제입니다.
+다음은 이전 코드 조각이 만들어진 전체 코드 예제입니다.
 
 ```csharp
 using System;
