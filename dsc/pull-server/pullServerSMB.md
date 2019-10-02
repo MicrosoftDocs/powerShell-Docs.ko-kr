@@ -2,12 +2,12 @@
 ms.date: 04/11/2018
 keywords: dsc,powershell,configuration,setup
 title: DSC SMB 끌어오기 서버 설정
-ms.openlocfilehash: 9d087a08861b2f4683e81efd1e25f857b8b75e07
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 25705d9ae06b3ce8daa352142cc0b84793ab6359
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079288"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71324853"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>DSC SMB 끌어오기 서버 설정
 
@@ -164,8 +164,8 @@ LCM 구성에 대한 자세한 내용은 [구성 ID를 사용하여 끌어오기
 > 리소스를 끌어오기만 하는 경우에도 SMB 끌어오기 서버에 대한 메타 구성의 **Settings** 블록에 **ConfigurationID**를 지정**해야** 합니다.
 
 ```powershell
-$secpasswd = ConvertTo-SecureString “Pass1Word” -AsPlainText -Force
-$mycreds = New-Object System.Management.Automation.PSCredential (“TestUser”, $secpasswd)
+$secpasswd = ConvertTo-SecureString "Pass1Word" -AsPlainText -Force
+$mycreds = New-Object System.Management.Automation.PSCredential ("TestUser", $secpasswd)
 
 [DSCLocalConfigurationManager()]
 configuration SmbCredTest

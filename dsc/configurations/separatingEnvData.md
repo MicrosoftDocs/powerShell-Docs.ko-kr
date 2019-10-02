@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 구성 및 환경 데이터 분리
-ms.openlocfilehash: 305a766fec81d4ea4afce187756188b067a2048b
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: b16243fc9096f786a25ed20868e94a3aa85e403e
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080036"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323239"
 ---
 # <a name="separating-configuration-and-environment-data"></a>구성 및 환경 데이터 분리
 
@@ -265,21 +265,21 @@ $MyData =
     AllNodes =
     @(
         @{
-            NodeName           = “*”
-            LogPath            = “C:\Logs”
+            NodeName           = "*"
+            LogPath            = "C:\Logs"
         },
 
         @{
-            NodeName = “VM-1”
-            SiteContents = “C:\Site1”
-            SiteName = “Website1”
+            NodeName = "VM-1"
+            SiteContents = "C:\Site1"
+            SiteName = "Website1"
         },
 
 
         @{
-            NodeName = “VM-2”;
-            SiteContents = “C:\Site2”
-            SiteName = “Website2”
+            NodeName = "VM-2"
+            SiteContents = "C:\Site2"
+            SiteName = "Website2"
         }
     );
 
@@ -299,12 +299,12 @@ configuration WebsiteConfig
         {
             Name         = $Node.SiteName
             PhysicalPath = $Node.SiteContents
-            Ensure       = “Present”
+            Ensure       = "Present"
         }
 
         File ConfigFile
         {
-            DestinationPath = $Node.SiteContents + “\\config.xml”
+            DestinationPath = $Node.SiteContents + "\\config.xml"
             Contents = $ConfigurationData.NonNodeData.ConfigFileContents
         }
     }
