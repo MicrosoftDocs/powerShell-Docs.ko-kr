@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: Get-Test-Set
-ms.openlocfilehash: 68738107cd4a222a13dd4afa158f0370953158ad
-ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
+ms.openlocfilehash: 42c1df6df2fbf65cbbb8407db613cac2e5b81cfb
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70215416"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323616"
 ---
 # <a name="get-test-set"></a>Get-Test-Set
 
@@ -143,7 +143,7 @@ BuiltInAccount       : LocalSystem
 Credential           :
 Dependencies         : {RPCSS, http}
 Description          : This service spools print jobs and handles interaction with the printer.  If you turn off
-                       this service, you won’t be able to print or see your printers.
+                       this service, you won't be able to print or see your printers.
 DisplayName          : Print Spooler
 Ensure               :
 Name                 : Spooler

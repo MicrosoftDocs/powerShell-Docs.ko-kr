@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: CI/CD 파이프라인에서 DSC의 역할 이해
-ms.openlocfilehash: 7aec414b3d8e61d1daa1ce796184ac34dbbb43ce
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: a8e2e6ef4634216ae7468384b8e1f4d849bb997a
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079831"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71324956"
 ---
 # <a name="understanding-dscs-role-in-a-cicd-pipeline"></a>CI/CD 파이프라인에서 DSC의 역할 이해
 
@@ -73,20 +73,20 @@ Configuration Name
 {
   File 1
   {
-    Ensure = “Present”
-    Path = “c:\inetpub\file1.zip”
-    Source = “http://uri/file1.zip”
+    Ensure = "Present"
+    Path = "c:\inetpub\file1.zip"
+    Source = "http://uri/file1.zip"
   }
   Service A
   {
-    Ensure = “Present”
-    Name = “ServiceA”
-    Status = “Running”
+    Ensure = "Present"
+    Name = "ServiceA"
+    Status = "Running"
   }
   SecurityBaseline Settings
   {
-    Ensure = “Present”
-    Datacenter = “NorthAmerica”
+    Ensure = "Present"
+    Datacenter = "NorthAmerica"
   }
 }
 ```

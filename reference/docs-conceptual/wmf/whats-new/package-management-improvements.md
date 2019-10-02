@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: WMF 5.1의 향상된 패키지 관리
-ms.openlocfilehash: 24ff05d6bf5993826106f1a1d2cee6dad363d1e2
-ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
+ms.openlocfilehash: cb19c2d71391b5729ce9d73fc6b033270f8db307
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71147793"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71325112"
 ---
 # <a name="improvements-to-package-management-in-wmf-51"></a>WMF 5.1의 향상된 패키지 관리
 
@@ -66,5 +66,5 @@ Find-Package -Source <SourceWithCredential> -Credential (Get-Credential)
 WMF 5.1에서 PackageManagement는 새 프록시 매개 변수 `-ProxyCredential` 및 `-Proxy`를 사용합니다. 이러한 매개 변수를 사용하여 PackageManagement cmdlet에 프록시 URL 및 자격 증명을 지정할 수 있습니다. 기본적으로 시스템 프록시 설정이 사용됩니다. 예:
 
 ```powershell
-Find-Package -Source http://www.nuget.org/api/v2/ -Proxy http://www.myproxyserver.com -ProxyCredential (Get-Credential)
+Find-Package -Source https://www.nuget.org/api/v2/ -Proxy http://www.myproxyserver.com -ProxyCredential (Get-Credential)
 ```

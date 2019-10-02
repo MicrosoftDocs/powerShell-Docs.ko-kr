@@ -2,12 +2,12 @@
 ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: 자세한 도움말 정보 보기
-ms.openlocfilehash: 3f52de8c9963618c154b119d5f4859a92d61fbda
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 033a8962ca438b49c10fafa2852c87d19868b4d9
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030410"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71325202"
 ---
 # <a name="getting-detailed-help-information"></a>자세한 도움말 정보 보기
 
@@ -168,7 +168,7 @@ Get-Help Add-Computer
 문서의 관련 링크 섹션에 있는 첫 번째 줄은 아래와 같이 표시됩니다.
 
 ```Output
-Online version: http://go.microsoft.com/fwlink/?LinkId=821564
+Online version: https://go.microsoft.com/fwlink/?LinkId=821564
 ```
 
 도움말 문서에 대한 온라인 지원을 제공하는 방법에 대한 내용은 [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help)를 참조하세요.

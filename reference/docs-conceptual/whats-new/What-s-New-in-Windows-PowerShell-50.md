@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 5.0의 새로운 기능
-ms.openlocfilehash: b2cb729948d4b53c5ea9a536dbeda04c7cb50997
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d86c9c947c521e0aee261a8a0335f1557b0d5a34
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62085952"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71325129"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Windows PowerShell 5.0의 새로운 기능
 
@@ -407,7 +407,7 @@ Windows PowerShell 3.0의 **Get-Help -Online** 기능은 이제 cmdlet에 대한
 
 ```
 PS C:\>(Get-Command Get-ScheduledJob).HelpUri
-http://go.microsoft.com/fwlink/?LinkID=223923
+https://go.microsoft.com/fwlink/?LinkID=223923
 ```
 
 Windows PowerShell 3.0 이상에서 C# cmdlet 작성자는 cmdlet 클래스에서 **HelpUri** 특성을 만들어서 **HelpUri** 속성을 채울 수 있습니다. 고급 기능의 작성자는 **CmdletBinding** 특성에서 **HelpUri** 속성을 정의할 수 있습니다. **HelpUri** 속성 값은 "http" 또는 "https"로 시작해야 합니다.

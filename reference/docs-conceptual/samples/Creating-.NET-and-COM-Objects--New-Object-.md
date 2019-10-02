@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: .NET 및 COM 개체 만들기(New-Object)
-ms.openlocfilehash: 8bb0326d350be634a50897bdcd432e13ec93450c
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 6e98a159451bc7da4ba3b37eaeb813eb71590d2b
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030259"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71325160"
 ---
 # <a name="creating-net-and-com-objects-new-object"></a>.NET 및 COM 개체 만들기(New-Object)
 
@@ -226,7 +226,7 @@ $ie.Visible = $true
 그런 다음 Navigate 메서드를 사용하여 특정 웹 주소로 이동할 수 있습니다.
 
 ```powershell
-$ie.Navigate("http://www.microsoft.com/technet/scriptcenter/default.mspx")
+$ie.Navigate("https://devblogs.microsoft.com/scripting/")
 ```
 
 Internet Explorer 개체 모델의 다른 멤버를 사용하여 웹 페이지에서 텍스트 콘텐츠를 검색할 수 있습니다. 다음 명령은 현재 웹 페이지의 본문에 있는 HTML 텍스트를 표시합니다.

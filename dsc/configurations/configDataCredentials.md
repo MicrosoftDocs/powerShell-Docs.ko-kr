@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 구성 데이터의 자격 증명 옵션
-ms.openlocfilehash: 2a326e45bbbad7bd2362b66b88bf61b98df7b02e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 660c3643f7eb2e9ccb91bd992747fb9d5da0ccdb
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080155"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323296"
 ---
 # <a name="credentials-options-in-configuration-data"></a>구성 데이터의 자격 증명 옵션
 
@@ -143,7 +143,7 @@ At C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguratio
 
 첫 번째 오류 메시지에는 설명이 있는 URL이 있습니다.
 이 링크에서는 [ConfigurationData](./configData.md) 구조와 인증서를 사용하여 암호를 암호화하는 방법에 대해 설명입니다.
-인증서 및 DSC에 대한 자세한 내용은 [이 게시물을 읽어 보세요](http://aka.ms/certs4dsc).
+인증서 및 DSC에 대한 자세한 내용은 [이 게시물을 읽어 보세요](https://aka.ms/certs4dsc).
 
 일반 텍스트 암호를 적용하려면 다음과 같이 리소스의 구성 데이터 섹션에 `PsDscAllowPlainTextPassword` 키워드가 있어야 합니다.
 
