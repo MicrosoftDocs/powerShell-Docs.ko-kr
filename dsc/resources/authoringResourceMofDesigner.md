@@ -2,22 +2,22 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 리소스 디자이너 도구 사용
-ms.openlocfilehash: 3fd2f06cf46602ee30dd34f8e7bd77d3c92b808f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 4f678f4586c75c830bf876b891fe4784aa3b4e95
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076670"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323749"
 ---
 # <a name="using-the-resource-designer-tool"></a>리소스 디자이너 도구 사용
 
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-리소스 디자이너 도구는 Windows PowerShell DSC(Desired State Configuration) 리소스를 만드는 작업을 더 쉽게 해주고 **xDscResourceDesigner** 모듈에 의해 노출된 cmdlet 집합입니다. 이 리소스의 cmdlet은 MOF 스키마, 스크립트 모듈 및 새 리소스에 대한 디렉터리 구조를 만드는 데 도움이 됩니다. DSC 리소스에 대한 자세한 내용은 [Build Custom Windows PowerShell Desired State Configuration Resources(사용자 지정 Windows PowerShell Desired State Configuration 리소스 빌드)](authoringResource.md)를 참조하세요.
+리소스 디자이너 도구는 Windows PowerShell DSC(필요한 상태 구성) 리소스를 만드는 작업을 더 쉽게 해주고 **xDscResourceDesigner** 모듈에 의해 노출된 cmdlet 집합입니다. 이 리소스의 cmdlet은 MOF 스키마, 스크립트 모듈 및 새 리소스에 대한 디렉터리 구조를 만드는 데 도움이 됩니다. DSC 리소스에 대한 자세한 내용은 [Build Custom Windows PowerShell Desired State Configuration Resources(사용자 지정 Windows PowerShell 필요한 상태 구성 리소스 빌드)](authoringResource.md)를 참조하세요.
 이 항목에서는 Active Directory 사용자를 관리하는 DSC 리소스를 만듭니다.
 [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet을 사용하여 **xDscResourceDesigner** 모듈을 설치하세요.
 
->**참고**: **Install-Module**은 PowerShell 5.0에 포함된 **PowerShellGet** 모듈에 포함되어 있습니다. [PackageManagement PowerShell 모듈 미리 보기](https://www.microsoft.com/en-us/download/details.aspx?id=49186)에서 PowerShell 3.0 및 4.0용 **PowerShellGet** 모듈을 다운로드할 수 있습니다.
+>**참고**: Install-Module은 PowerShell 5.0에 포함된 **PowerShellGet** 모듈에 포함되어 있습니다. [PackageManagement PowerShell 모듈 미리 보기](https://www.microsoft.com/en-us/download/details.aspx?id=49186)에서 PowerShell 3.0 및 4.0용 **PowerShellGet** 모듈을 다운로드할 수 있습니다.
 
 ## <a name="creating-resource-properties"></a>리소스 속성 만들기
 가장 먼저 해야 할 일은 리소스가 노출할 속성에 대해 결정하는 것입니다. 이 예의 경우, 다음 속성으로 Active Directory 사용자를 정의하게 됩니다.
@@ -32,7 +32,7 @@ ms.locfileid: "62076670"
 
 ```powershell
 $UserName = New-xDscResourceProperty –Name UserName -Type String -Attribute Key
-$Ensure = New-xDscResourceProperty –Name Ensure -Type String -Attribute Write –ValidateSet “Present”, “Absent”
+$Ensure = New-xDscResourceProperty –Name Ensure -Type String -Attribute Write –ValidateSet "Present", "Absent"
 $DomainCredential = New-xDscResourceProperty –Name DomainCredential -Type PSCredential -Attribute Write
 $Password = New-xDscResourceProperty –Name Password -Type PSCredential -Attribute Write
 ```
@@ -42,7 +42,7 @@ $Password = New-xDscResourceProperty –Name Password -Type PSCredential -Attrib
 이제 리소스 속성이 만들어졌으므로 **New-xDscResource** cmdlet을 호출하여 리소스를 만들 수 있습니다. **New-xDscResource** cmdlet에서는 속성 목록을 매개 변수로 사용합니다. 또한 모듈을 만들어야 하는 경로, 새 리소스의 이름 및 리소스가 들어 있는 모듈의 이름도 사용해야 합니다. 다음 PowerShell 명령은 리소스를 만듭니다.
 
 ```powershell
-New-xDscResource –Name Demo_ADUser –Property $UserName, $Ensure, $DomainCredential, $Password –Path ‘C:\Program Files\WindowsPowerShell\Modules’ –ModuleName Demo_DSCModule
+New-xDscResource –Name Demo_ADUser –Property $UserName, $Ensure, $DomainCredential, $Password –Path 'C:\Program Files\WindowsPowerShell\Modules' –ModuleName Demo_DSCModule
 ```
 
 **New-xDscResource** cmdlet은 MOF 스키마, 뼈대 리소스 스크립트, 새 리소스에 대한 필수 디렉터리 구조와 새 리소스를 노출하는 모듈에 대한 매니페스트를 만듭니다.
@@ -167,8 +167,8 @@ Export-ModuleMember -Function *-TargetResource
 예를 들어 리소스에서 사용자에 대한 마지막 로그인 시간을 포함하려고 한다고 가정할 경우, 리소스를 완전히 다시 작성하는 대신 **New-xDscResourceProperty**를 호출하여 새 속성을 만든 다음, **Update-xDscResource**를 호출하고 새 속성을 속성 목록에 추가할 수 있습니다.
 
 ```powershell
-$lastLogon = New-xDscResourceProperty –Name LastLogon –Type Hashtable –Attribute Write –Description “For mapping users to their last log on time”
-Update-xDscResource –Name ‘Demo_ADUser’ –Property $UserName, $Ensure, $DomainCredential, $Password, $lastLogon -Force
+$lastLogon = New-xDscResourceProperty –Name LastLogon –Type Hashtable –Attribute Write –Description "For mapping users to their last log on time"
+Update-xDscResource –Name 'Demo_ADUser' –Property $UserName, $Ensure, $DomainCredential, $Password, $lastLogon -Force
 ```
 
 ## <a name="testing-a-resource-schema"></a>리소스 스키마 테스트
@@ -178,7 +178,7 @@ Update-xDscResource –Name ‘Demo_ADUser’ –Property $UserName, $Ensure, $D
 ### <a name="see-also"></a>참고 항목
 
 #### <a name="concepts"></a>개념
-[사용자 지정 Windows PowerShell Desired State Configuration 리소스 빌드](authoringResource.md)
+[사용자 지정 Windows PowerShell 필요한 상태 구성 리소스 빌드](authoringResource.md)
 
 #### <a name="other-resources"></a>관련 자료
 [xDscResourceDesigner 모듈](https://www.powershellgallery.com/packages/xDscResourceDesigner/1.12.0.0)
