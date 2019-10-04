@@ -1,0 +1,156 @@
+### YamlMime:Hub
+title: PowerShell 설명서
+summary: PowerShell 공식 제품 설명서
+brand: windows
+metadata:
+  title: PowerShell 설명서
+  ms.topic: hub-page
+  ms.collection: collection
+  author: sdwheeler
+  ms.author: sewhee
+  ms.date: 09/04/2019
+  ms.openlocfilehash: 126576a54dd28e3561bb41e51783f802ec27241c
+  ms.sourcegitcommit: ed34aa38436e8036beba7ef23c8b426419022cfa
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/02/2019
+  ms.locfileid: "71835417"
+highlightedContent:
+  items:
+  - title: 개요
+    itemType: get-started
+    url: https://docs.microsoft.com/powershell/scripting/overview
+  - title: 설정 및 설치
+    itemType: download
+    url: https://docs.microsoft.com/powershell/scripting/install/installing-powershell
+  - title: 샘플 스크립트
+    itemType: how-to-guide
+    url: https://docs.microsoft.com/powershell/scripting/samples/sample-scripts-for-administration
+  - title: PowerShell 갤러리
+    itemType: deploy
+    url: http://www.powershellgallery.com/
+  - title: PowerShell 모듈 브라우저
+    itemType: reference
+    url: https://docs.microsoft.com/powershell/module/
+  - title: GitHub의 PowerShell
+    itemType: architecture
+    url: https://github.com/PowerShell/PowerShell
+productDirectory:
+  title: PowerShell 버전 + 도구
+  summary: PowerShell을 지원하는 사용 가능한 버전, 도구 및 기술
+  items:
+  - title: PowerShell 5.1
+    imageSrc: ./media/index/powershell_128.svg
+    links:
+    - url: https://docs.microsoft.com/powershell/scripting/install/installing-windows-powershell
+      text: Windows PowerShell 설치
+    - url: https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-windows-powershell-50
+      text: PowerShell 5.x의 새로운 기능
+  - title: PowerShell Core
+    imageSrc: ./media/index/ps_black_128.svg
+    links:
+    - url: https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows
+      text: Windows에서 PowerShell Core 설치
+    - url: https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux
+      text: Linux에서 PowerShell Core 설치
+    - url: https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos
+      text: macOS에서 PowerShell Core 설치
+    - url: https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-62
+      text: PowerShell 6.2의 새로운 기능
+  - title: PowerShell 갤러리
+    imageSrc: ./media/index/avatar_128.svg
+    links:
+    - url: https://www.powershellgallery.com/
+      text: PowerShell 갤러리
+    - url: https://docs.microsoft.com/powershell/gallery/overview
+      text: PowerShell 갤러리란?
+    - url: https://docs.microsoft.com/powershell/gallery/concepts/publishing-guidelines
+      text: 최선의 구현 방법
+    - url: https://docs.microsoft.com/powershell/gallery/faqs
+      text: FAQ
+  - title: PowerShell DSC
+    imageSrc: https://docs.microsoft.com/media/common/i_config-tools.svg
+    links:
+    - url: https://docs.microsoft.com/powershell/dsc/overview/overview
+      text: DSC 개요
+    - url: https://docs.microsoft.com/powershell/dsc/getting-started/lnxgettingstarted
+      text: Linux용 DSC 시작하기
+    - url: https://dsccommunity.org/
+      text: DSC 커뮤니티
+  - title: 개발자 리소스
+    imageSrc: https://docs.microsoft.com/media/common/i_code-edit.svg
+    links:
+    - url: https://docs.microsoft.com/powershell/developer
+      text: PowerShell SDK 설명서
+    - url: https://docs.microsoft.com/dotnet/api/?view=pscore-6.2.0
+      text: PowerShell Core SDK 6.2.0 API 참조
+    - url: https://code.visualstudio.com/docs/languages/powershell
+      text: Visual Studio Code PowerShell 확장
+    - url: https://docs.microsoft.com/powershell/scripting/components/vscode/using-vscode-for-remote-editing-and-debugging
+      text: VSCode를 사용하여 원격 편집 및 디버깅
+  - title: 관련 기술
+    imageSrc: https://docs.microsoft.com/media/common/i_tools.svg
+    links:
+    - url: https://docs.microsoft.com/powershell/wmf/
+      text: Windows Management Framework
+    - url: https://docs.microsoft.com/powershell/windows/get-started?view=win10-ps
+      text: Windows를 관리하는 PowerShell 모듈
+    - url: https://aka.ms/cloudshell/powershell-docs
+      text: Azure Cloud Shell의 PowerShell
+    - url: https://docs.microsoft.com/powershell/azure/overview
+      text: Azure PowerShell
+    - url: https://docs.microsoft.com/azure/automation/automation-runbook-types
+      text: Azure Automation Runbook
+    - url: https://docs.microsoft.com/azure/azure-functions/functions-create-first-function-powershell
+      text: PowerShell을 사용하는 Azure Functions
+tools:
+  title: 커뮤니티 리소스
+  summary: 다른 PowerShell 사용자와 연결
+  items:
+  - title: 사용자 그룹
+    imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_group.svg
+    url: https://aka.ms/psusergroup
+  - title: TechNet 포럼
+    imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_group-feedback.svg
+    url: https://social.technet.microsoft.com/forums/home?forum=winserverpowershell
+  - title: DSC 커뮤니티
+    imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_group-feedback.svg
+    url: https://dsccommunity.org/
+  - title: PowerShell.org
+    imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_group-feedback.svg
+    url: https://powershell.org/
+  - title: StackOverFlow
+    imageSrc: https://docs.microsoft.com/media/hubs/powershell/logo_stackoverflow.svg
+    url: https://stackoverflow.com/questions/tagged/powershell
+  - title: r/PowerShell
+    imageSrc: https://docs.microsoft.com/media/hubs/powershell/logo_reddit.svg
+    url: https://www.reddit.com/r/PowerShell/
+  - title: PowerShell Slack
+    imageSrc: https://docs.microsoft.com/media/logos/logo-slack.svg
+    url: http://poshcode.org/slack
+  - title: PowerShell 충동
+    imageSrc: ./media/index/discord.svg
+    url: http://poshcode.org/discord
+  - title: 디지털 아트
+    imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_digital-art.svg
+    url: digital-art.md
+additionalContent:
+  sections:
+  - title: PowerShell 팀
+    summary: PowerShell 팀과 통신
+    items:
+    - title: 공식 PowerShell 블로그
+      summary: 공식 뉴스 및 공지
+      url: https://devblogs.microsoft.com/powershell/
+    - title: PowerShell 팀 Twitter
+      summary: PowerShell 뉴스 한 번에 280문자
+      url: https://twitter.com/PowerShell_Team
+    - title: PowerShell UserVoice
+      summary: Windows PowerShell에서 버그에 대한 장소
+      url: https://windowsserver.uservoice.com/forums/301869-powershell
+    - title: GitHub 문제
+      summary: 현재 릴리스에서 버그를 위한 장소
+      url: https://github.com/powershell/powershell/issues
+    - title: 스크립팅 이용자 여러분, 블로그
+      summary: PowerShell에 대해 알아보고 자동화의 사례를 공유 하는 장소
+      url: https://devblogs.microsoft.com/scripting/
