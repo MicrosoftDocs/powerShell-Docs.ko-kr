@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 웹 액세스의 액세스 문제 해결
-ms.openlocfilehash: 66e913504cf0c34f8d9ab18b088fb06173aca24c
-ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
+ms.openlocfilehash: 74cebbe418fecd21567ba9ecc7c561b51ac008fd
+ms.sourcegitcommit: a35450f420dc10a02379f6e6f08a28ad11fe5a6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733858"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71692230"
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Windows PowerShell 웹 액세스의 액세스 문제 해결
 
@@ -49,7 +49,7 @@ ms.locfileid: "67733858"
 
 #### <a name="workaround"></a>해결 방법
 
-1. [Internet Explorer 10을 설치하고 실행합니다.](https://ie.microsoft.com/testdrive/info/downloads/Default.html)
+1. Internet Explorer 10 설치 및 실행
 1. Internet Explorer **문서 모드** 설정을 *IE10 표준*으로 변경합니다.
    1. **F12** 키를 눌러 개발자 도구 콘솔을 엽니다.
    1. Internet Explorer 10에서 **브라우저 모드**를 클릭한 후 *Internet Explorer 10*을 선택합니다.

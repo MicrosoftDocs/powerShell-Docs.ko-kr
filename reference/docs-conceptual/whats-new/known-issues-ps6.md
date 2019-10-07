@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: PowerShell 6.0의 알려진 문제
-ms.openlocfilehash: 502143b660204edada6a9e62bdf6b260a384a078
-ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
+ms.openlocfilehash: e84dd2f7deefcc64aea09585e7ce24dc1e8515fc
+ms.sourcegitcommit: a35450f420dc10a02379f6e6f08a28ad11fe5a6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733832"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71692215"
 ---
 # <a name="known-issues-for-powershell-60"></a>PowerShell 6.0의 알려진 문제
 
@@ -53,7 +53,7 @@ Linux/macOS의 와일드카드 환경을 개선하는 방법에 대한 피드백
 
 ### <a name="net-framework-vs-net-core-framework"></a>.NET Framework 및 .NET Core Framework
 
-Linux/macOS의 PowerShell은 Microsoft Windows의 전체 .NET Framework 하위 집합인 .NET Core를 사용합니다. PowerShell을 통해 기본 프레임워크 형식, 메서드 등에 직접 액세스하기 때문에 이러한 차이는 중요합니다. 그 결과로, Windows에서 실행되는 스크립트가 프레임워크의 차이로 인해 비 Windows 플랫폼에서는 실행되지 않을 수 있습니다. .NET Core Framework에 대한 자세한 내용은 <https://dotnetfoundation.org/net-core>를 참조하세요.
+Linux/macOS의 PowerShell은 Microsoft Windows의 전체 .NET Framework 하위 집합인 .NET Core를 사용합니다. PowerShell을 통해 기본 프레임워크 형식, 메서드 등에 직접 액세스하기 때문에 이러한 차이는 중요합니다. 그 결과로, Windows에서 실행되는 스크립트가 프레임워크의 차이로 인해 비 Windows 플랫폼에서는 실행되지 않을 수 있습니다. .NET Core Framework에 대한 자세한 내용은 [dotnetfoundation](https://dotnetfoundation.org/)을 참조하세요.
 
 [.NET Standard 2.0](https://devblogs.microsoft.com/dotnet/introducing-net-standard/)이 도입되면서, .NET Core 2.0에서는 전체 .NET Framework에 있는 기존의 여러 형식과 메서드를 다시 가져올 것입니다. 따라서 PowerShell Core에서 기존의 여러 Windows PowerShell 모듈을 수정 없이 로드할 수 있게 됩니다. [여기](https://github.com/PowerShell/PowerShell/projects/4)에서 .NET Standard 2.0 관련 작업을 확인할 수 있습니다.
 

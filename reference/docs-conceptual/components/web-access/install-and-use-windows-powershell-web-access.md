@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 웹 액세스 설치 및 사용
-ms.openlocfilehash: 53558f9be5065c7f630f06e535ddab4d7ad72d9e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5f6e94859c55bbd07f3f8a83bc4b9a83bc89d0fa
+ms.sourcegitcommit: a35450f420dc10a02379f6e6f08a28ad11fe5a6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058575"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71692260"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Install and Use Windows PowerShell Web Access(Windows PowerShell 웹 액세스 설치 및 사용)
 
@@ -275,7 +275,7 @@ Windows PowerShell 웹 액세스가 설치되면 IIS 관리자에서 게이트�
 
 9. 이 항목에서 [IIS 관리자로 SSL 인증서를 구성하려면](#to-configure-an-ssl-certificate-in-iis-manager) 절차의 단계를 따릅니다.
 
-10. ![](images/SecurityNote.jpeg)선택적 보안 단계:
+10. ![보안 정보](images/SecurityNote.jpeg) 선택적 보안 단계:
 
     트리 창에서 웹 사이트를 선택한 상태에서 내용 창의 **SSL 설정**을 두 번 클릭합니다.
     **SSL 필요**를 선택한 다음 **작업** 창에서 **적용**을 클릭합니다. 필요에 따라 **SSL 설정** 창에서 Windows PowerShell 웹 액세스 웹 사이트에 연결하는 사용자에게는 클라이언트 인증서가 있어야 할 수 있습니다. 클라이언트 인증서를 통해 클라이언트 디바이스 사용자의 신분을 확인할 수 있습니다. 클라이언트 인증서를 요구하여 Windows PowerShell 웹 액세스의 보안을 강화하는 방법에 대한 자세한 내용은 이 가이드의 [Windows PowerShell 웹 액세스의 권한 부여 규칙 및 보안 기능](authorization-rules-and-security-features-of-windows-powershell-web-access.md)을 참조하세요.
