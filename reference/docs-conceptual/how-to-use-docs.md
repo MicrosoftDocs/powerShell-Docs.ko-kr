@@ -2,12 +2,12 @@
 ms.date: 09/25/2019
 keywords: powershell,cmdlet
 title: PowerShell 설명서를 사용하는 방법
-ms.openlocfilehash: 403cb155dcd18560267fd360a9277004a5e2510d
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.openlocfilehash: 9e3d5828d6bdb4ef14701994f146354a041efaea
+ms.sourcegitcommit: a80bb79b85deab8ae3c21de56d1ee432fdd92628
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71327874"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72281641"
 ---
 # <a name="how-to-use-the-powershell-documentation"></a>PowerShell 설명서를 사용하는 방법
 
@@ -27,6 +27,18 @@ PowerShell 온라인 설명서에 오신 것을 환영합니다. 이 사이트�
 페이지 위쪽의 버전 선택기를 사용하여 원하는 PowerShell 버전을 선택합니다.
 
 ![버전 선택기](images/how-to-use-docs/picker-vall.gif)
+
+사용 중인 PowerShell의 버전은 `$PSversionTable.PSVersion` 값을 검사해서 확인할 수 있습니다. 다음 예제에서는 Windows PowerShell v5.1의 출력을 보여줍니다.
+
+```powershell
+$PSVersionTable.PSVersion
+```
+
+```Output
+Major  Minor  Build  Revision
+-----  -----  -----  --------
+5      1      18362  145
+```
 
 ## <a name="searching-for-articles"></a>문서 검색
 

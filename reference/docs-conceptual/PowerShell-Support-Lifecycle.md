@@ -2,12 +2,12 @@
 title: PowerShell Core 지원 수명 주기
 description: PowerShell Core에 대한 정책 관리 지원
 ms.date: 08/06/2018
-ms.openlocfilehash: 60999ed54ca3be15232ffee3ab0c49cb94873a8f
-ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
+ms.openlocfilehash: fbbda0a5f8460e5625625adcc50c631729df53f1
+ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69986741"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72351808"
 ---
 # <a name="powershell-core-support-lifecycle"></a>PowerShell Core 지원 수명 주기
 
@@ -49,28 +49,35 @@ PowerShell Core의 플랫폼과 버전이 공식적으로 지원되는지 확인
 
 `Experimental`로 나열되는 플랫폼은 공식적으로 지원되지는 않지만, 실험 및 피드백용으로 사용 가능합니다.
 
-| 플랫폼                                          | 6.1         | 6.2         |
-|---------------------------------------------------|:-----------:|:-----------:|
-| Windows 7, 8.1 및 10                            | 지원 여부   | 지원 여부   |
-| Windows Server 2008 R2, 2012 R2, 2016             | 지원 여부   | 지원 여부   |
-| [Windows Server 반기 채널][semi-annual] | 지원 여부   | 지원 여부   |
-| Ubuntu 16.04 및 18.04                            | 지원 여부   | 지원 여부   |
-| Ubuntu 18.10(맞춤 패키지를 통해)                   | 커뮤니티   | 커뮤니티   |
-| Ubuntu 19.04(맞춤 패키지를 통해)                   | 커뮤니티   | 커뮤니티   |
-| Debian 9                                          | 지원 여부   | 지원 여부   |
-| CentOS 7                                          | 지원 여부   | 지원 여부   |
-| Red Hat Enterprise Linux 7                        | 지원 여부   | 지원 여부   |
-| openSUSE 42.3                                     | 지원 여부   | 지원 여부   |
-| Fedora 28                                         | 지원 여부   | 지원 여부   |
-| macOS 10.12+                                      | 지원 여부   | 지원 여부   |
-| Arch                                              | 커뮤니티   | 커뮤니티   |
-| Raspbian                                          | 커뮤니티   | 커뮤니티   |
-| Kali                                              | 커뮤니티   | 커뮤니티   |
-| AppImage(여러 Linux 플랫폼에서 사용)      | 커뮤니티   | 커뮤니티   |
-| [맞춤 패키지](https://snapcraft.io/powershell)   | 참고 참조    | 참고 참조    |
+| 플랫폼                                          |      6.2      |    7.0    |
+|---------------------------------------------------|:-------------:|:---------:|
+| Windows 7, 8.1 및 10                            |   지원 여부   | 지원 여부 |
+| Windows Server 2008 R2, 2012 R2, 2016             |   지원 여부   | 지원 여부 |
+| [Windows Server 반기 채널][semi-annual] |   지원 여부   | 지원 여부 |
+| Ubuntu 16.04 및 18.04                            |   지원 여부   | 지원 여부 |
+| Ubuntu 18.10(맞춤 패키지를 통해)                   |   커뮤니티   | 커뮤니티 |
+| Ubuntu 19.04(맞춤 패키지를 통해)                   |   커뮤니티   | 커뮤니티 |
+| Debian 9                                          |   지원 여부   | 지원 여부 |
+| Debian 10                                         | 지원되지 않음 | 지원 여부 |
+| CentOS 7                                          |   지원 여부   | 지원 여부 |
+| Red Hat Enterprise Linux 7                        |   지원 여부   | 지원 여부 |
+| openSUSE 42.3                                     |   지원 여부   | 지원 여부 |
+| Fedora 28                                         |   지원 여부   | 지원 여부 |
+| Fedora 29, 30                                     | 지원되지 않음 | 지원 여부 |
+| Alpine 3.8                                        |   참고 참조    | 참고 참조  |
+| Alpine 3.9 및 3.10                               | 지원되지 않음 | 참고 참조  |
+| macOS 10.12+                                      |   지원 여부   | 지원 여부 |
+| Arch                                              |   커뮤니티   | 커뮤니티 |
+| Raspbian                                          |   커뮤니티   | 커뮤니티 |
+| Kali                                              |   커뮤니티   | 커뮤니티 |
+| AppImage(여러 Linux 플랫폼에서 사용)      |   커뮤니티   | 커뮤니티 |
+| [맞춤 패키지](https://snapcraft.io/powershell)   |   참고 참조    | 참고 참조  |
 
 > [!NOTE]
 > 맞춤 패키지는 패키지를 실행하고 있는 배포와 동일하게 지원됩니다.
+
+> [!NOTE]
+> CIM, PowerShell Remoting, DSC는 Alpine에서 지원되지 않습니다.
 
 ## <a name="powershell-releases-end-of-life"></a>PowerShell 릴리스 수명 종료
 
