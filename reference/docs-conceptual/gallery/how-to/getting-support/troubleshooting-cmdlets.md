@@ -29,5 +29,5 @@ Update-Module Azure -Verbose
 - oneget.org
 - go.microsoft.com
 - az818661.vo.msecnd.net
-- www.powershellgallery.com
+- [www.powershellgallery.com](www.powershellgallery.com)
 - devopsgallerystorage.blob.core.windows.net
