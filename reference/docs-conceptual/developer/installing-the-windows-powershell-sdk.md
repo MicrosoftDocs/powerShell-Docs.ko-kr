@@ -2,12 +2,12 @@
 title: Windows PowerShell SDK 설치
 ms.date: 09/13/2016
 ms.topic: article
-ms.openlocfilehash: da1b3dbb8a599aee2cdbab9115aedcab0b4c78c9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: e7ca38377b3e6533eec1a70027f6de1a9fb3091b
+ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72367272"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444511"
 ---
 # <a name="installing-the-windows-powershell-sdk"></a>Windows PowerShell SDK 설치
 
@@ -17,24 +17,21 @@ ms.locfileid: "72367272"
 
 ## <a name="installing-windows-powershell-30-sdk-for-windows-8-and-windows-server-2012"></a>Windows 8 및 Windows Server 2012용 Windows PowerShell 3.0 SDK 설치
 
-Windows PowerShell 3.0은 Windows 8 및 Windows Server 2012와 함께 자동으로 설치됩니다. 또한 Windows 8 SDK의 일부로써 Windows PowerShell 3.0의 참조 어셈블리를 다운로드하고 설치할 수 있습니다. 이러한 어셈블리를 사용하여 Windows PowerShell 3.0에 대한 cmdlet, 공급자 및 호스트 프로그램을 작성할 수 있습니다. Windows 8용 Windows SDK를 설치하면 Windows PowerShell 어셈블리가 참조 어셈블리 폴더(\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0)에 자동으로 설치됩니다. 자세한 내용은 Windows 8 SDK 다운로드 사이트를 참조 하세요. Windows PowerShell 코드 샘플은 개발자 센터에서도 제공됩니다.
-자세한 내용은 개발자 센터 사이트의 데스크톱 코드 샘플 페이지를 참조 하세요.
-
-또한 Windows PowerShell 3.0은 다수의 코드 샘플이 포함된 이전 버전인 Windows PowerShell 2.0 SDK와 호환됩니다. Windows PowerShell 2.0 SDK를 다운로드하는 방법에 대한 자세한 내용은 다음을 참조하세요. (2.0 코드 샘플은 Windows 8 및 Windows PowerShell 3.0과 호환되지만 Windows 8 플랫폼에 Windows PowerShell 2.0을 설치할 수 없습니다.)
+Windows PowerShell 3.0은 Windows 8 및 Windows Server 2012와 함께 자동으로 설치됩니다. 또한 Windows 8 SDK의 일부로써 Windows PowerShell 3.0의 참조 어셈블리를 다운로드하고 설치할 수 있습니다. 이러한 어셈블리를 사용하여 Windows PowerShell 3.0에 대한 cmdlet, 공급자 및 호스트 프로그램을 작성할 수 있습니다. Windows 8용 Windows SDK를 설치하면 Windows PowerShell 어셈블리가 참조 어셈블리 폴더(`\Program Files
+(x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0`)에 자동으로 설치됩니다. 자세한 내용은 Windows 8 SDK 다운로드 사이트를 참조 하세요. Windows PowerShell 코드 샘플은 [Windows powershell 3.0 SDK 샘플 팩](https://code.msdn.microsoft.com/Windows-PowerShell-30-SDK-9a34641d)의 개발 센터 에서도 사용할 수 있습니다.
 
 ## <a name="installing-windows-powershell-30-sdk-for-windows-7-and-windows-server-2008-r2"></a>Windows 7 및 Windows Server 2008 R2용 Windows PowerShell 3.0 SDK 설치
 
-Windows 7 및 Windows Server 2008 R2는 PowerShell 2.0을 자동으로 설치합니다. 또한 이러한 시스템에 PowerShell 3.0을 설치할 수 있습니다. 자세한 내용은 Windows PowerShell 설치를 참조 하세요. 위에서 설명한 대로, Windows 7 및 Windows Server 2008 R2에서도 Windows 8 SDK를 설치할 수 있습니다.
+Windows 7 및 Windows Server 2008 R2는 PowerShell 2.0을 자동으로 설치합니다. 또한 이러한 시스템에 PowerShell 3.0을 설치할 수 있습니다. 위에서 설명한 대로 windows 7 및 Windows Server 2008 r 2에 Windows 8 SDK를 설치할 수도 있습니다.
 
 ## <a name="installing-windows-powershell-20-sdk-for-windows-7-vista-xp-server-2003-and-server-2008"></a>Windows 7, Vista, XP, Server 2003 및 Server 2008용 Windows PowerShell 2.0 SDK 설치
 
-Windows PowerShell 2.0 SDK는 cmdlet, 공급자 및 호스팅 애플리케이션을 작성하는 데 필요한 참조 어셈블리를 제공하고 코드 작성을 시작할 때 시작 지점으로 사용할 수 있는 C# 샘플 코드를 제공합니다.
-
-이 SDK를 설치 하려면 Windows PowerShell 2.0 SDK를 참조 하세요.
+Windows PowerShell 2.0 SDK는 cmdlet, 공급자 및 호스팅 애플리케이션을 작성하는 데 필요한 참조 어셈블리를 제공하고 코드 작성을 시작할 때 시작 지점으로 사용할 수 있는 C# 샘플 코드를 제공합니다. [https://www.microsoft.com/download/details.aspx?id=2560](https://www.microsoft.com/download/details.aspx?id=2560)에서 코드 샘플을 다운로드할 수 있습니다.
 
 ### <a name="reference-assemblies"></a>참조 어셈블리
 
-참조 어셈블리는 기본적으로 다음 위치에 설치 됩니다. c:\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\V1.0.
+참조 어셈블리는 기본적으로 다음 위치에 설치됩니다. `c:\Program Files\Reference
+Assemblies\Microsoft\WindowsPowerShell\V1.0`
 
 > [!NOTE]
 >
@@ -43,7 +40,8 @@ Windows PowerShell 2.0 SDK는 cmdlet, 공급자 및 호스팅 애플리케이션
 
 ### <a name="samples"></a>샘플
 
-코드 샘플은 기본적으로 다음 위치에 설치 됩니다. C:\Program Files\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\. 다음 섹션에서는 각 샘플의 용도에 대해 간략하게 설명합니다.
+코드 샘플은 기본적으로 다음 위치에 설치됩니다. `C:\Program Files\Microsoft
+SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\` 다음 섹션에서는 각 샘플의 용도에 대해 간략하게 설명합니다.
 
 #### <a name="cmdlet-samples"></a>Cmdlet 샘플
 
@@ -75,8 +73,8 @@ Windows PowerShell 2.0 SDK는 cmdlet, 공급자 및 호스팅 애플리케이션
 #### <a name="hosting-application-samples"></a>호스팅 애플리케이션 샘플
 
 - Runspace01-PowerShell 클래스를 사용 하 여 `Get-Process` cmdlet을 동기적으로 실행 하는 방법을 보여 줍니다.
-@No__t-0 cmdlet은 로컬 컴퓨터에서 실행 되는 각 프로세스에 대 한 프로세스 개체를 반환 합니다.
-- Runspace02-PowerShell 클래스를 사용 하 여 `Get-Process` 및 `Sort-Object` cmdlet을 동기적으로 실행 하는 방법을 보여 줍니다. @No__t-0 cmdlet은 로컬 컴퓨터에서 실행 되는 각 프로세스에 대 한 프로세스 개체를 반환 하 고 `Sort-Object`은 해당 Id 속성을 기준으로 개체를 정렬 합니다. 이러한 명령의 결과는 DataGridView 컨트롤을 사용 하 여 표시 됩니다.
+`Get-Process` cmdlet은 로컬 컴퓨터에서 실행 되는 각 프로세스에 대 한 프로세스 개체를 반환 합니다.
+- Runspace02-PowerShell 클래스를 사용 하 여 `Get-Process` 및 `Sort-Object` cmdlet을 동기적으로 실행 하는 방법을 보여 줍니다. `Get-Process` cmdlet은 로컬 컴퓨터에서 실행 되는 각 프로세스에 대 한 프로세스 개체를 반환 하 고 `Sort-Object`는 해당 Id 속성을 기준으로 개체를 정렬 합니다. 이러한 명령의 결과는 DataGridView 컨트롤을 사용 하 여 표시 됩니다.
 - Runspace03-PowerShell 클래스를 사용 하 여 스크립트를 동기적으로 실행 하는 방법과 종료 되지 않는 오류를 처리 하는 방법을 보여 줍니다. 스크립트는 프로세스 이름 목록을 받은 다음 해당 프로세스를 검색합니다. 스크립트를 실행할 때 생성된 종료되지 않는 오류를 포함하여 스크립트의 결과가 콘솔 창에 표시됩니다.
 - Runspace04-PowerShell 클래스를 사용 하 여 명령을 실행 하는 방법과 명령을 실행할 때 throw 되는 종료 오류를 catch 하는 방법을 보여 줍니다. 두 개의 명령이 실행되는데, 마지막 명령은 유효하지 않은 매개 변수 인수를 전달받습니다. 따라서 개체가 반환되지 않고 종료 오류가 발생합니다.
 - Runspace05-runspace를 열 때 스냅인의 cmdlet을 사용할 수 있도록 InitialSessionState 개체에 스냅인을 추가 하는 방법을 보여 줍니다. 스냅인은 PowerShell 개체를 사용 하 여 동기적으로 실행 되는 GetProcessSample01 샘플로 정의 된 Get Proc cmdlet을 제공 합니다.
