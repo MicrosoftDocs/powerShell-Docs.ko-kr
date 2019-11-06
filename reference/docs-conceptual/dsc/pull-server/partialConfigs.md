@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: PowerShell 필요한 상태 구성 부분 구성
-ms.openlocfilehash: b2b17e35597707eb97ecdcea9dda4466deeab0cb
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.openlocfilehash: f25bdec54e0a028e94b8c7d7b623e53ff3e3c666
+ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71955190"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444528"
 ---
 # <a name="powershell-desired-state-configuration-partial-configurations"></a>PowerShell 필요한 상태 구성 부분 구성
 
@@ -77,7 +77,7 @@ Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
 -a----        8/11/2016   2:02 PM           2034 TestVM.mof
 
-    Directory: C:\DscTests\SharePointConfig
+    Directory: C:\PartialConfigTest\SharePointConfig
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
