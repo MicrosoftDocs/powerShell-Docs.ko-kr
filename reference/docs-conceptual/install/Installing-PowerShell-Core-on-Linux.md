@@ -2,12 +2,12 @@
 title: Linux에서 PowerShell Core 설치
 description: 다양한 Linux 배포판에서 PowerShell Core를 설치하는 방법에 대한 정보
 ms.date: 07/19/2019
-ms.openlocfilehash: fc5a278f0fc10733a0d60fb856d0400332ba2719
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: 3159de2d64d9c473e00b58c9f9c52b6d1c7779af
+ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72350203"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444407"
 ---
 # <a name="installing-powershell-core-on-linux"></a>Linux에서 PowerShell Core 설치
 
@@ -30,6 +30,13 @@ ms.locfileid: "72350203"
 [arch]: #arch-linux
 [snap]: #snap-package
 [tar]: #binary-archives
+
+> [!TIP]
+> [.NET Core SDK](/dotnet/core/sdk)가 이미 설치되어 있는 경우 PowerShell을 [.NET 전역 도구](/dotnet/core/tools/global-tools)로 쉽게 설치할 수 있습니다.
+>
+> ```
+> dotnet tool install --global PowerShell
+> ```
 
 ## <a name="installing-preview-releases"></a>미리 보기 릴리스 설치
 
@@ -536,7 +543,7 @@ sudo dnf remove powershell
 ## <a name="arch-linux"></a>Arch Linux
 
 > [!NOTE]
-> 아치 리눅스 지원은 실험적입니다.
+> Arch 지원은 Microsoft에서 공식적으로 지원하지 않으며 커뮤니티에서 유지 관리합니다.
 
 PowerShell은 [Arch Linux][] 사용자 리포지토리(AUR)에 제공됩니다.
 
@@ -598,6 +605,9 @@ sudo snap remove powershell-preview
 ```
 
 ## <a name="kali"></a>Kali
+
+> [!NOTE]
+> Kali 지원은 Microsoft에서 공식적으로 지원하지 않으며 커뮤니티에서 유지 관리합니다.
 
 ### <a name="installation---kali"></a>설치 - Kali
 

@@ -2,16 +2,23 @@
 title: Windows에서 PowerShell Core 설치
 description: Windows에서 PowerShell Core를 설치하는 방법에 대한 정보
 ms.date: 08/06/2018
-ms.openlocfilehash: 3f21761037311891162f1083234edb0aca80d28b
-ms.sourcegitcommit: 4ec9e10647b752cc62b1eabb897ada3dc03c93eb
+ms.openlocfilehash: c06eba06e376c3f795ab9c0fae9270cf6cf8f2ce
+ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66830220"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444459"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Windows에서 PowerShell Core 설치
 
 Windows에서 여러 가지 방법으로 PowerShell Core를 설치할 수 있습니다.
+
+> [!TIP]
+> [.NET Core SDK](/dotnet/core/sdk)가 이미 설치되어 있는 경우 PowerShell을 [.NET 전역 도구](/dotnet/core/tools/global-tools)로 쉽게 설치할 수 있습니다.
+>
+> ```
+> dotnet tool install --global PowerShell
+> ```
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
