@@ -33,21 +33,6 @@
       "version": 0
     },
     {
-      "docset_name": "PowerShell_PowerShell-docs_gallery",
-      "build_source_folder": "gallery",
-      "build_output_subfolder": "gallery",
-      "locale": "ko-kr",
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0
-    },
-    {
       "docset_name": "PowerShell_PowerShell-docs_jea",
       "build_source_folder": "jea",
       "build_output_subfolder": "jea",
