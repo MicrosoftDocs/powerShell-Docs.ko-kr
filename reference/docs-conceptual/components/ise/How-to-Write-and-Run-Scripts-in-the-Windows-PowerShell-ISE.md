@@ -2,12 +2,12 @@
 ms.date: 08/14/2018
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE에서 스크립트를 작성 및 실행하는 방법
-ms.openlocfilehash: 4a08d7d206d103dcb398964d7ce75bea1e76559a
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: be54e26965a6d2f1472059820080a6a06c47dd26
+ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67028980"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117563"
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Windows PowerShell ISE에서 스크립트를 작성 및 실행하는 방법
 
@@ -149,4 +149,4 @@ Windows PowerShell ISE에서는 저장 또는 다른 이름으로 저장을 사�
 
 ## <a name="see-also"></a>참고 항목
 
-- [Windows PowerShell ISE 탐색](../../getting-started/fundamental/exploring-the-windows-powershell-ise.md)
+- [Windows PowerShell ISE 탐색](exploring-the-windows-powershell-ise.md)

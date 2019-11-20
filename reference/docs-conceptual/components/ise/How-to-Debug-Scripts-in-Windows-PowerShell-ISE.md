@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE에서 스크립트를 디버깅하는 방법
-ms.openlocfilehash: b7af2de83a3f796a2057514e36ad8b74367e8ce2
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 99d6fbcb805e3fe31f95eafd4daf272cf41fd845
+ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086870"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117419"
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Windows PowerShell ISE에서 스크립트를 디버깅하는 방법
 
@@ -195,4 +195,4 @@ C:\ps-test\MyScript.ps1
 
 ## <a name="see-also"></a>참고 항목
 
-- [Windows PowerShell ISE 탐색](../../getting-started/fundamental/exploring-the-windows-powershell-ise.md)
+- [Windows PowerShell ISE 탐색](exploring-the-windows-powershell-ise.md)

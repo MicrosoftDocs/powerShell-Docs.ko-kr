@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 시작
-ms.openlocfilehash: 3b0bde8d86b0f0ae64b430022543ba493f3927b7
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: fde0788a877cf93ee6423566c3275380474f4ee4
+ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030465"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117551"
 ---
 # <a name="getting-started-with-windows-powershell"></a>Windows PowerShell 시작
 Windows PowerShell은 시스템 관리자를 위해 특별히 설계된 Windows 명령줄 셸입니다. Windows PowerShell에는 독립적으로 또는 함께 사용할 수 있는 대화형 프롬프트 및 스크립팅 환경이 포함되어 있습니다.
@@ -22,8 +22,8 @@ Windows PowerShell은 셸에 기본 제공되는 간단한 단일 함수 명령�
 
 이 항목의 내용:
 
-- [Windows PowerShell 시스템 요구 사항](../setup/Windows-PowerShell-System-Requirements.md)
+- [Windows PowerShell 시스템 요구 사항](../install/Windows-PowerShell-System-Requirements.md)
 
-- [Windows PowerShell 설치](../setup/Installing-Windows-PowerShell.md)
+- [Windows PowerShell 설치](../install/Installing-Windows-PowerShell.md)
 
-- [Windows PowerShell 시작](../setup/Starting-Windows-PowerShell.md)
+- [Windows PowerShell 시작](Starting-Windows-PowerShell.md)

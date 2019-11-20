@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE 탐색
-ms.openlocfilehash: 8c47e236e2e345a887fc3af281e429f440e176ff
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 7949b690cda73148f07922985b1fc30fe1e8b2d0
+ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67031035"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117446"
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>Windows PowerShell ISE 탐색
 
@@ -18,7 +18,7 @@ Windows PowerShell® ISE(통합 스크립팅 환경)를 사용하여 명령 및 
 
 ## <a name="menu-bar"></a>메뉴 모음
 
-메뉴 모음에는 **파일**, **편집**, **보기**, **도구**, **디버그**, **추가 기능** 및 **도움말** 메뉴가 있습니다. 메뉴의 단추를 사용하여 Windows PowerShell ISE에서 스크립트를 작성 및 실행하고 명령을 실행하는 것과 관련된 작업을 수행할 수 있습니다. 또한 [ISE 개체 모델 계층 구조](../../core-powershell/ise/The-ISE-Object-Model-Hierarchy.md)를 사용하는 스크립트를 실행하여 메뉴 모음에 [추가 기능 도구](../../core-powershell/ise/The-ISEAddOnTool-Object.md)를 배치할 수 있습니다.
+메뉴 모음에는 **파일**, **편집**, **보기**, **도구**, **디버그**, **추가 기능** 및 **도움말** 메뉴가 있습니다. 메뉴의 단추를 사용하여 Windows PowerShell ISE에서 스크립트를 작성 및 실행하고 명령을 실행하는 것과 관련된 작업을 수행할 수 있습니다. 또한 [ISE 개체 모델 계층 구조](object-model/The-ISE-Object-Model-Hierarchy.md)를 사용하는 스크립트를 실행하여 메뉴 모음에 [추가 기능 도구](object-model/The-ISEAddOnTool-Object.md)를 배치할 수 있습니다.
 
 > [!NOTE]
 > Windows PowerShell ISE 2.0에는 **도구** 및 **추가 기능** 메뉴가 없었습니다.
@@ -83,4 +83,4 @@ Windows PowerShell ISE에 대한 도움말을 웹의 TechNet 라이브러리에�
 
 ## <a name="see-also"></a>참고 항목
 
-- [Windows PowerShell ISE 소개](../../core-powershell/ise/Introducing-the-Windows-PowerShell-ISE.md)
+- [Windows PowerShell ISE 소개](Introducing-the-Windows-PowerShell-ISE.md)

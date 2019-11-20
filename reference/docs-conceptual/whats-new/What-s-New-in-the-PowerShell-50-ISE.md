@@ -2,12 +2,12 @@
 ms.date: 09/06/2019
 keywords: powershell,cmdlet
 title: PowerShell 5.0 ISE의 새로운 기능
-ms.openlocfilehash: a719baef0da1600f0a5377e1b72c81b67e37eef2
-ms.sourcegitcommit: a74ae7ed089301992fed201fbe55d827a622afa0
+ms.openlocfilehash: f687c409a1a4b0e6b872863e9f132f7cf5baff20
+ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70746216"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117504"
 ---
 # <a name="whats-new-in-the-windows-powershell-50-ise"></a>Windows PowerShell 5.0 ISE의 새로운 기능
 
@@ -201,4 +201,4 @@ Windows PowerShell 스크립트에서 `Show-Command`를 사용하면 익숙한 �
 
 ## <a name="see-also"></a>참고 항목
 
-Windows PowerShell ISE 사용에 대한 자세한 내용은 [Windows PowerShell 통합 스크립팅 환경 탐색](../getting-started/fundamental/exploring-the-windows-powershell-ise.md)을 참조하세요.
+Windows PowerShell ISE 사용에 대한 자세한 내용은 [Windows PowerShell 통합 스크립팅 환경 탐색](../components/ise/exploring-the-windows-powershell-ise.md)을 참조하세요.
