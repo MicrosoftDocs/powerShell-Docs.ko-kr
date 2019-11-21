@@ -2,12 +2,12 @@
 title: Visual Studio Code에서 ISE 환경을 복제하는 방법
 description: Visual Studio Code에서 ISE 환경을 복제하는 방법
 ms.date: 08/06/2018
-ms.openlocfilehash: 983da850c13d72bcdc7b2d33970c6e9e06b3d869
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d5542e9a3a48b1ae64356309be669418edf6c79e
+ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058525"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117502"
 ---
 # <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>Visual Studio Code에서 ISE 환경을 복제하는 방법
 
@@ -27,12 +27,29 @@ VSCode용 PowerShell 확장 PowerShell ISE와 완전히 동일한 기능을 제�
 
 VSCode에서도 [고유한 키 바인딩을 구성](https://code.visualstudio.com/docs/getstarted/keybindings#_custom-keybindings-for-refactorings)할 수 있습니다.
 
+## <a name="simplified-ise-like-ui"></a>간소화된 ISE와 유사한 UI
+
+Visual Studio Code UI를 간소화하여 ISE의 UI를 보다 자세히 살펴보려면 다음 두 가지 설정을 적용합니다.
+
+```json
+"workbench.activityBar.visible": false,
+"debug.openDebug": "neverOpen",
+```
+
+이렇게 하면 빨간색 상자 내부 아래에 있는 "작업 표시줄" 및 "디버그 사이드 막대" 섹션이 숨겨집니다.
+
+![강조 표시된 섹션에는 작업 표시줄과 디버그 사이드 막대가 포함됩니다.](images/How-To-Replicate-the-ISE-Experience-In-VSCode/1-highlighted-sidebar.png)
+
+최종 결과는 다음과 같습니다.
+
+![VS Code의 단순화된 보기](images/How-To-Replicate-the-ISE-Experience-In-VSCode/2-simplified-ui.png)
+
 ## <a name="tab-completion"></a>탭 완성
 
 더 ISE와 유사한 탭 완성을 사용하려면 이 설정을 추가합니다.
 
 ```json
-"editor.tabCompletion": "on"
+"editor.tabCompletion": "on",
 ```
 
 > [!NOTE]
@@ -64,7 +81,7 @@ VSCode에서도 [고유한 키 바인딩을 구성](https://code.visualstudio.co
 새/제목 없는 파일을 만들려면 기본적으로 PowerShell로 등록합니다.
 
 ```json
-"files.defaultLanguage": "powershell"
+"files.defaultLanguage": "powershell",
 ```
 
 ## <a name="color-scheme"></a>색 구성표
@@ -77,7 +94,7 @@ VSCode에서 편집기 모양을 ISE와 훨씬 더 비슷하게 설정하는 데
 다음을 사용하여 설정에서 이 테마를 설정할 수 있습니다.
 
 ```json
-"workbench.colorTheme": "PowerShell ISE"
+"workbench.colorTheme": "PowerShell ISE",
 ```
 
 ## <a name="powershell-command-explorer"></a>PowerShell Command Explorer

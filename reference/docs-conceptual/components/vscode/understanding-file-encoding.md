@@ -2,12 +2,12 @@
 title: VSCode 및 PowerShell에서 파일 인코딩 이해
 description: VSCode 및 PowerShell에서 파일 인코딩 구성
 ms.date: 02/28/2019
-ms.openlocfilehash: 6a00e45b3700f72f78e2fbcdf6e317f3a17b53c0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 3283e1262c8eb26906429ecf195cfa0b122b330f
+ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058440"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117416"
 ---
 # <a name="understanding-file-encoding-in-vscode-and-powershell"></a>VSCode 및 PowerShell에서 파일 인코딩 이해
 
@@ -15,7 +15,7 @@ VS Code를 사용하여 PowerShell 스크립트를 편집할 때 올바른 문�
 
 ## <a name="what-is-file-encoding-and-why-is-it-important"></a>파일 인코딩의 정의 및 중요한 이유는 무엇인가요?
 
-VSCode는 버퍼에 사람이 입력한 문자의 문자열과 파일 시스템에 대한 바이트의 읽기/쓰기 블록 간의 인터페이스를 관리합니다. VSCode가 파일을 저장할 때 텍스트 인코딩을 사용하여 해당 작업을 수행합니다.
+VSCode는 버퍼에 사람이 입력한 문자의 문자열과 파일 시스템에 대한 바이트의 읽기/쓰기 블록 간의 인터페이스를 관리합니다. VSCode는 파일을 저장할 때 텍스트 인코딩을 사용하여 각 문자가 되는 바이트를 결정합니다.
 
 마찬가지로, PowerShell이 스크립트를 실행할 때 파일의 바이트를 문자로 변환하여 파일을 PowerShell 프로그램으로 다시 구성해야 합니다. VSCode가 파일을 작성하고 PowerShell이 파일을 읽게 되므로 둘 다 동일한 인코딩 시스템을 사용해야 합니다. PowerShell 스크립트를 구문 분석하는 이 프로세스는 다음과 같은 순서로 이루어집니다. *바이트* -> *문자* -> *토큰* -> *추상 구문 트리* -> *실행*
 
@@ -27,9 +27,10 @@ VSCode를 인코딩하거나 스크립트 파일이 예상되는 PowerShell 인�
 
 [7비트 ASCII 문자 세트](https://ascii.cl/)에 포함되지 않는 문자를 사용할 때 인코딩 문제가 발생할 가능성이 더 높습니다. 예:
 
+- em-dash(`—`), 비 공백(` `) 또는 왼쪽 큰따옴표(`“`)와 같이 확장된 문자가 아닌 문자
 - 악센트 부호가 있는 라틴어 문자(`É`, `ü`)
 - 키릴 자모와 같은 비라틴어 문자(`Д`, `Ц`)
-- 중국어 한자(`脚`, `本`)
+- CJK 문자(`本`, `화`, `が`)
 
 인코딩 문제에 대한 일반적인 원인은 다음과 같습니다.
 
