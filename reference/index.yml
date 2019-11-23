@@ -9,12 +9,12 @@ metadata:
   author: sdwheeler
   ms.author: sewhee
   ms.date: 09/04/2019
-  ms.openlocfilehash: 126576a54dd28e3561bb41e51783f802ec27241c
-  ms.sourcegitcommit: ed34aa38436e8036beba7ef23c8b426419022cfa
+  ms.openlocfilehash: b8d493c070681fe680308fc9aa5b1ca0ae79acff
+  ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 10/02/2019
-  ms.locfileid: "71835417"
+  ms.lasthandoff: 11/23/2019
+  ms.locfileid: "74416586"
 highlightedContent:
   items:
   - title: 개요
@@ -62,25 +62,25 @@ productDirectory:
     links:
     - url: https://www.powershellgallery.com/
       text: PowerShell 갤러리
-    - url: https://docs.microsoft.com/powershell/gallery/overview
+    - url: https://docs.microsoft.com/powershell/scripting/gallery/overview
       text: PowerShell 갤러리란?
-    - url: https://docs.microsoft.com/powershell/gallery/concepts/publishing-guidelines
+    - url: https://docs.microsoft.com/powershell/scripting/gallery/concepts/publishing-guidelines
       text: 최선의 구현 방법
-    - url: https://docs.microsoft.com/powershell/gallery/faqs
+    - url: https://docs.microsoft.com/powershell/scripting/gallery/faqs
       text: FAQ
   - title: PowerShell DSC
     imageSrc: https://docs.microsoft.com/media/common/i_config-tools.svg
     links:
-    - url: https://docs.microsoft.com/powershell/dsc/overview/overview
+    - url: https://docs.microsoft.com/powershell/scripting/dsc/overview/overview
       text: DSC 개요
-    - url: https://docs.microsoft.com/powershell/dsc/getting-started/lnxgettingstarted
+    - url: https://docs.microsoft.com/powershell/scripting/dsc/getting-started/lnxgettingstarted
       text: Linux용 DSC 시작하기
     - url: https://dsccommunity.org/
       text: DSC 커뮤니티
   - title: 개발자 리소스
     imageSrc: https://docs.microsoft.com/media/common/i_code-edit.svg
     links:
-    - url: https://docs.microsoft.com/powershell/developer
+    - url: https://docs.microsoft.com/powershell/scripting/developer/windows-powershell
       text: PowerShell SDK 설명서
     - url: https://docs.microsoft.com/dotnet/api/?view=pscore-6.2.0
       text: PowerShell Core SDK 6.2.0 API 참조
@@ -91,7 +91,7 @@ productDirectory:
   - title: 관련 기술
     imageSrc: https://docs.microsoft.com/media/common/i_tools.svg
     links:
-    - url: https://docs.microsoft.com/powershell/wmf/
+    - url: https://docs.microsoft.com/powershell/scripting/wmf/overview
       text: Windows Management Framework
     - url: https://docs.microsoft.com/powershell/windows/get-started?view=win10-ps
       text: Windows를 관리하는 PowerShell 모듈
