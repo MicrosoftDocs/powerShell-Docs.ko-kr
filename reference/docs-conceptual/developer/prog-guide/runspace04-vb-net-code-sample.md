@@ -1,5 +1,5 @@
 ---
-title: RunSpace04 (VB.NET) 코드 샘플 | Microsoft Docs
+title: RunSpace04  (VB.NET) Code Sample | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,23 +8,23 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f0dea3c-4354-4d7d-9823-5e6234c9a89e
 caps.latest.revision: 6
-ms.openlocfilehash: c1d38c23ea20d7e5ccbc8e475b0c2246f9670ec3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: a0c04adb64ab5f2a9fd42fa7dee3977638d3b535
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72366502"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417956"
 ---
 # <a name="runspace04--vbnet-code-sample"></a>RunSpace04(VB.NET) 코드 샘플
 
-Runspace04 샘플에 대 한 VB.NET 소스 코드는 다음과 같습니다. 이 샘플에서는 [Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) 클래스를 사용 하 여 종료 오류를 생성 하는 스크립트를 실행 합니다. 호스트 응용 프로그램은 오류를 catch 하 고 오류 레코드를 해석 합니다.
+Here is the VB.NET source code for the Runspace04 sample. This sample uses the [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) class to execute a script that generates a terminating error. The host application is responsible for catching the error and interpreting the error record.
 
 > [!NOTE]
-> Windows Vista 용 Windows 소프트웨어 개발 키트 및 Microsoft .NET Framework 3.0 런타임 구성 요소를 사용 하 여이 샘플에 대 한 VB.NET 원본 파일 (runspace02)을 다운로드할 수 있습니다. 다운로드 지침은 [Windows powershell을 설치 하 고 Windows POWERSHELL SDK를 다운로드 하는 방법](/powershell/developer/installing-the-windows-powershell-sdk)을 참조 하세요.
+> You can download the VB.NET source file (runspace02.vb) for this sample by using the Windows Software Development Kit for Windows Vista and Microsoft .NET Framework 3.0 Runtime Components. For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
-> 다운로드 된 원본 파일은 **\<PowerShell 샘플 >** 디렉터리에서 사용할 수 있습니다.
+> The downloaded source files are available in the **\<PowerShell Samples>** directory.
 
-## <a name="code-sample"></a>코드 샘플
+## <a name="code-sample"></a>Code Sample
 
 ```vb
 Imports System
@@ -117,6 +117,6 @@ End Namespace
 
 ## <a name="see-also"></a>참고 항목
 
-[Windows PowerShell 프로그래머 가이드](./windows-powershell-programmer-s-guide.md)
+[Windows PowerShell Programmer's Guide](./windows-powershell-programmer-s-guide.md)
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)

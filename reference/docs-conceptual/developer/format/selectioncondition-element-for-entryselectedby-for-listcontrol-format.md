@@ -1,5 +1,5 @@
 ---
-title: 이 listcontrol (형식)에 대 한 EntrySelectedBy의 SelectionCondition 요소 | Microsoft Docs
+title: SelectionCondition Element for EntrySelectedBy for ListControl (Format) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7649d5d0-2b56-49b5-a670-dde46caca343
 caps.latest.revision: 11
-ms.openlocfilehash: f04a07c241268566eaedfe2b299c33d5be4dc19d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: 7150b29ad84dfb587215ee3e64c356adbd5a6305
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72364822"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417546"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-listcontrol-format"></a>ListControl의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
 
-목록 뷰의이 정의를 사용 하기 위해 있어야 하는 조건을 정의 합니다. 목록 정의에 지정할 수 있는 선택 조건 수에는 제한이 없습니다.
+Defines the condition that must exist to use this definition of the list view. There is no limit to the number of selection conditions that can be specified for a list definition.
 
-Configuration 요소 (Format) ViewDefinitions 요소 (format)이 listcontrol Element (format) ListEntries Element (format) ListEntry Element (format) EntrySelectedBy 요소에 대 한 ListEntry (Format) SelectionCondition 요소 ListEntry에 대 한 EntrySelectedBy (형식)
+Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) ListControl Element (Format) ListEntries Element (Format) ListEntry Element (Format) EntrySelectedBy Element for ListEntry (Format) SelectionCondition Element for EntrySelectedBy for ListEntry (Format)
 
 ## <a name="syntax"></a>구문
 
@@ -34,7 +34,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format)이 listcontrol Ele
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `SelectionCondition` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+The following sections describe attributes, child elements, and the parent element of the `SelectionCondition` element.
 
 ### <a name="attributes"></a>특성
 
@@ -44,39 +44,39 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format)이 listcontrol Ele
 
 |요소|설명|
 |-------------|-----------------|
-|[ListEntry (형식)의 경우 EntrySelectedBy에 대 한 SelectionCondition의 PropertyName 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 조건을 트리거하는 .NET 속성을 지정 합니다.|
-|[ListEntry (형식)의 경우 EntrySelectedBy에 대 한 SelectionCondition의 ScriptBlock 요소](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 조건을 트리거하는 스크립트를 지정 합니다.|
-|[ListEntry (형식)에 대 한 EntrySelectedBy의 SelectionCondition에 대 한 SelectionSetName 요소](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md)|선택적 요소입니다.<br /><br /> 조건을 트리거하는 .NET 형식 집합을 지정 합니다.|
-|[ListEntry (형식)에 대해 EntrySelectedBy의 SelectionCondition에 대 한 TypeName 요소](./typename-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 조건을 트리거하는 .NET 유형을 지정 합니다.|
+|[PropertyName Element for SelectionCondition for EntrySelectedBy for ListEntry (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Optional element.<br /><br /> Specifies the .NET property that triggers the condition.|
+|[ScriptBlock Element for SelectionCondition for EntrySelectedBy for ListEntry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Optional element.<br /><br /> Specifies the script that triggers the condition.|
+|[SelectionSetName Element for SelectionCondition for EntrySelectedBy for ListEntry (Format)](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md)|Optional element.<br /><br /> Specifies the set of .NET types that trigger the condition.|
+|[TypeName Element for SelectionCondition for EntrySelectedBy for ListEntry (Format)](./typename-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Optional element.<br /><br /> Specifies a .NET type that triggers the condition.|
 
 ### <a name="parent-elements"></a>부모 요소
 
 |요소|설명|
 |-------------|-----------------|
-|[TableRowEntry (형식)에 대 한 EntrySelectedBy 요소](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|이 테이블 항목을 사용 하는 .NET 형식 또는이 항목을 사용 하기 위해 존재 해야 하는 조건을 정의 합니다.|
+|[EntrySelectedBy Element for TableRowEntry (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Defines the .NET types that use this table entry or the condition that must exist for this entry to be used.|
 
 ## <a name="remarks"></a>설명
 
-lWhen 선택 조건을 정의 하는 경우 다음 요구 사항이 적용 됩니다.
+lWhen you are defining a selection condition, the following requirements apply:
 
-- 선택 조건은 하나 이상의 속성 이름 또는 스크립트 블록을 지정 해야 하지만 둘 다 지정할 수는 없습니다.
+- The selection condition must specify a least one property name or a script block, but cannot specify both.
 
-- 선택 조건은 원하는 수의 .NET 형식 또는 선택 집합을 지정할 수 있지만 둘 다 지정할 수는 없습니다.
+- The selection condition can specify any number of .NET types or selection sets, but cannot specify both.
 
-선택 조건을 사용 하는 방법에 대 한 자세한 내용은 [데이터 표시 시기에 대 한 조건 정의](./defining-conditions-for-displaying-data.md)를 참조 하세요.
+For more information about how to use selection conditions, see [Defining Conditions for when Data is Displayed](./defining-conditions-for-displaying-data.md).
 
-목록 뷰의 다른 구성 요소에 대 한 자세한 내용은 [목록 뷰 만들기](./creating-a-list-view.md)를 참조 하세요.
+For more information about other components of a list view, see [Creating a List View](./creating-a-list-view.md).
 
 ## <a name="see-also"></a>참고 항목
 
-[목록 보기 만들기](./creating-a-list-view.md)
+[Creating a List View](./creating-a-list-view.md)
 
-[데이터가 표시 되는 시점에 대 한 조건 정의](./defining-conditions-for-displaying-data.md)
+[Defining Conditions for When Data Is Displayed](./defining-conditions-for-displaying-data.md)
 
-[ListEntry 요소 (Format)](./listentry-element-for-listcontrol-format.md)
+[ListEntry Element (Format)](./listentry-element-for-listcontrol-format.md)
 
-[ListEntry (형식)에 대 한 EntrySelectedBy의 SelectionSetName 요소](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
+[SelectionSetName Element for EntrySelectedBy for ListEntry (Format)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
 
-[ListEntry에 대 한 EntrySelectedBy (형식)의 TypeName 요소](/powershell/developer/format/typename-element-for-entryselectedby-for-listcontrol-format)
+[TypeName Element for EntrySelectedBy for ListEntry (Format)](/powershell/scripting/developer/format/typename-element-for-entryselectedby-for-listcontrol-format)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[Writing a PowerShell Formatting File](./writing-a-powershell-formatting-file.md)

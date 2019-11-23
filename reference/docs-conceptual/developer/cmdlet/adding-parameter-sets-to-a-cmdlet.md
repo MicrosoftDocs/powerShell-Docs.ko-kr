@@ -1,5 +1,5 @@
 ---
-title: Cmdlet에 매개 변수 집합 추가 | Microsoft Docs
+title: Adding Parameter Sets to a Cmdlet | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -10,33 +10,33 @@ helpviewer_keywords:
 - parameter sets [PowerShell Programmer's Guide]
 ms.assetid: a6131db4-fd6e-45f1-bd47-17e7174afd56
 caps.latest.revision: 8
-ms.openlocfilehash: 59db96cf03ff7086e8c89fb45bc96fd805078ac8
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: c9c0b9a7a587e856efc82b4d277cee373e3f8b38
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72364592"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416317"
 ---
 # <a name="adding-parameter-sets-to-a-cmdlet"></a>Cmdlet에 매개 변수 집합 추가
 
-## <a name="things-to-know-about-parameter-sets"></a>매개 변수 집합에 대해 알아야 할 사항
+## <a name="things-to-know-about-parameter-sets"></a>Things to Know About Parameter Sets
 
-Windows PowerShell은 함께 작동 하는 매개 변수 그룹으로 매개 변수 집합을 정의 합니다. Cmdlet의 매개 변수를 그룹화 하 여 사용자가 지정 하는 매개 변수 그룹에 따라 해당 기능을 변경할 수 있는 단일 cmdlet을 만들 수 있습니다.
+Windows PowerShell defines a parameter set as a group of parameters that operate together. By grouping the parameters of a cmdlet, you can create a single cmdlet that can change its functionality based on what group of parameters the user specifies.
 
-다른 기능을 정의 하는 두 개의 매개 변수 집합을 사용 하는 cmdlet의 예는 Windows PowerShell에서 제공 하는 `Get-EventLog` cmdlet입니다. 이 cmdlet은 사용자가 `List` 또는 `LogName` 매개 변수를 지정할 때 다른 정보를 반환 합니다. @No__t-0 매개 변수가 지정 된 경우 cmdlet은 지정 된 이벤트 로그의 이벤트에 대 한 정보를 반환 합니다. @No__t-0 매개 변수가 지정 된 경우 cmdlet은 로그 파일 자체에 대 한 정보를 반환 합니다 (포함 된 이벤트 정보가 아님). 이 경우 `List` 및 `LogName` 매개 변수는 두 개의 개별 매개 변수 집합을 식별 합니다.
+An example of a cmdlet that uses two parameter sets to define different functionalities is the `Get-EventLog` cmdlet that is provided by Windows PowerShell. This cmdlet returns different information when the user specifies the `List` or `LogName` parameter. If the `LogName` parameter is specified, the cmdlet returns information about the events in a given event log. If the `List` parameter is specified, the cmdlet returns information about the log files themselves (not the event information they contain). In this case, the `List` and `LogName` parameters identify two separate parameter sets.
 
-매개 변수 집합에 대해 기억해 야 하는 두 가지 중요 한 사항은 Windows PowerShell 런타임이 특정 입력에 대해 하나의 매개 변수 집합만 사용 하 고 각 매개 변수 집합에 해당 매개 변수 집합에 대해 고유한 매개 변수를 하나 이상 포함 해야 한다는 것입니다.
+Two important things to remember about parameter sets is that the Windows PowerShell runtime uses only one parameter set for a particular input, and that each parameter set must have at least one parameter that is unique for that parameter set.
 
-마지막 지점을 설명 하기 위해이 Stop Proc cmdlet은 `ProcessName`, `ProcessId` 및 `InputObject`의 세 가지 매개 변수 집합을 사용 합니다. 이러한 각 매개 변수 집합에는 다른 매개 변수 집합에 없는 매개 변수가 하나 있습니다. 매개 변수 집합은 다른 매개 변수를 공유할 수 있지만 cmdlet은 고유 매개 변수 `ProcessName`, `ProcessId`, `InputObject`를 사용 하 여 Windows PowerShell 런타임에서 사용 해야 하는 매개 변수 집합을 식별 합니다.
+To illustrate that last point, this Stop-Proc cmdlet uses three parameter sets: `ProcessName`, `ProcessId`, and `InputObject`. Each of these parameter sets has one parameter that is not in the other parameter sets. The parameter sets could share other parameters, but the cmdlet uses the unique parameters `ProcessName`, `ProcessId`, and `InputObject` to identify which set of parameters that the Windows PowerShell runtime should use.
 
-## <a name="declaring-the-cmdlet-class"></a>Cmdlet 클래스 선언
+## <a name="declaring-the-cmdlet-class"></a>Declaring the Cmdlet Class
 
-Cmdlet을 만드는 첫 번째 단계는 항상 cmdlet의 이름을 지정 하 고 cmdlet을 구현 하는 .NET 클래스를 선언 하는 것입니다. 이 cmdlet의 경우 cmdlet은 시스템 프로세스를 중지 하므로 수명 주기 동사 "Stop"이 사용 됩니다. 명사 이름 "Proc"는 cmdlet이 프로세스에서 작동 하기 때문에 사용 됩니다. 아래 선언에서 cmdlet 동사와 명사 이름이 cmdlet 클래스의 이름에 반영 되어 있는지 확인 합니다.
+The first step in cmdlet creation is always naming the cmdlet and declaring the .NET class that implements the cmdlet. For this cmdlet, the life-cycle verb "Stop" is used because the cmdlet stops system processes. The noun name "Proc" is used because the cmdlet works on processes. In the declaration below, note that the cmdlet verb and noun name are reflected in the name of the cmdlet class.
 
 > [!NOTE]
-> 승인 된 cmdlet 동사 이름에 대 한 자세한 내용은 [Cmdlet 동사 이름](./approved-verbs-for-windows-powershell-commands.md)을 참조 하세요.
+> For more information about approved cmdlet verb names, see [Cmdlet Verb Names](./approved-verbs-for-windows-powershell-commands.md).
 
-다음 코드는이 Stop Proc cmdlet에 대 한 클래스 정의입니다.
+The following code is the class definition for this Stop-Proc cmdlet.
 
 ```csharp
 [Cmdlet(VerbsLifecycle.Stop, "Proc",
@@ -52,13 +52,13 @@ Public Class StopProcCommand
     Inherits PSCmdlet
 ```
 
-## <a name="declaring-the-parameters-of-the-cmdlet"></a>Cmdlet의 매개 변수 선언
+## <a name="declaring-the-parameters-of-the-cmdlet"></a>Declaring the Parameters of the Cmdlet
 
-이 cmdlet은 cmdlet에 대 한 입력으로 필요한 매개 변수 3 개 (매개 변수 집합도 정의)를 정의 하 고 cmdlet이 수행 하는 작업을 관리 하는 `Force` 매개 변수와 cmdlet이 출력 개체를 보낼지 여부를 결정 하는 `PassThru` 매개 변수를 정의 합니다. 파이프라인을 통해. 기본적으로이 cmdlet은 파이프라인을 통해 개체를 전달 하지 않습니다. 이러한 마지막 두 매개 변수에 대 한 자세한 내용은 [시스템을 수정 하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)를 참조 하세요.
+This cmdlet defines three parameters needed as input to the cmdlet (these parameters also define the parameter sets), as well as a `Force` parameter that manages what the cmdlet does and a `PassThru` parameter that determines whether the cmdlet sends an output object through the pipeline. By default, this cmdlet does not pass an object through the pipeline. For more information about these last two parameters, see [Creating a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md).
 
-### <a name="declaring-the-name-parameter"></a>Name 매개 변수 선언
+### <a name="declaring-the-name-parameter"></a>Declaring the Name Parameter
 
-사용자는이 입력 매개 변수를 사용 하 여 중지할 프로세스의 이름을 지정할 수 있습니다. [System.object](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성의 `ParameterSetName` attribute 키워드는이 매개 변수에 대해 설정 된 `ProcessName` 매개 변수를 지정 합니다.
+This input parameter allows the user to specify the names of the processes to be stopped. Note that the `ParameterSetName` attribute keyword of the [System.Management.Automation.Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) attribute specifies the `ProcessName` parameter set for this parameter.
 
 [!code-csharp[StopProcessSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/StopProcessSample04/StopProcessSample04.cs#L44-L58 "StopProcessSample04.cs")]
 
@@ -80,11 +80,11 @@ End Property
 Private processNames() As String
 ```
 
-또한이 매개 변수에는 "ProcessName" 별칭이 지정 됩니다.
+Note also that the alias "ProcessName" is given to this parameter.
 
-### <a name="declaring-the-id-parameter"></a>Id 매개 변수 선언
+### <a name="declaring-the-id-parameter"></a>Declaring the Id Parameter
 
-사용자는이 입력 매개 변수를 사용 하 여 중지할 프로세스의 식별자를 지정할 수 있습니다. [System.object](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성의 `ParameterSetName` attribute 키워드는 `ProcessId` 매개 변수 집합을 지정 합니다.
+This input parameter allows the user to specify the identifiers of the processes to be stopped. Note that the `ParameterSetName` attribute keyword of the [System.Management.Automation.Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) attribute specifies the `ProcessId` parameter set.
 
 ```csharp
 [Parameter(
@@ -118,11 +118,11 @@ End Property
 Private processIds() As Integer
 ```
 
-또한이 매개 변수에는 별칭 "ProcessId"가 제공 됩니다.
+Note also that the alias "ProcessId" is given to this parameter.
 
-### <a name="declaring-the-inputobject-parameter"></a>InputObject 매개 변수 선언
+### <a name="declaring-the-inputobject-parameter"></a>Declaring the InputObject Parameter
 
-사용자는이 입력 매개 변수를 사용 하 여 중지할 프로세스에 대 한 정보를 포함 하는 입력 개체를 지정할 수 있습니다. [System.object](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성의 `ParameterSetName` attribute 키워드는이 매개 변수에 대해 설정 된 `InputObject` 매개 변수를 지정 합니다.
+This input parameter allows the user to specify an input object that contains information about the processes to be stopped. Note that the `ParameterSetName` attribute keyword of the [System.Management.Automation.Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) attribute specifies the `InputObject` parameter set for this parameter.
 
 ```csharp
 [Parameter(
@@ -151,15 +151,15 @@ End Property
 Private myInputObject() As Process
 ```
 
-또한이 매개 변수에는 별칭이 없습니다.
+Note also that this parameter has no alias.
 
-### <a name="declaring-parameters-in-multiple-parameter-sets"></a>여러 매개 변수 집합에서 매개 변수 선언
+### <a name="declaring-parameters-in-multiple-parameter-sets"></a>Declaring Parameters in Multiple Parameter Sets
 
-각 매개 변수 집합에 대 한 고유한 매개 변수가 있어야 하지만 매개 변수는 둘 이상의 매개 변수 집합에 속할 수 있습니다. 이러한 경우 매개 변수가 속한 각 집합에 대해 shared 매개 변수를 [system.object](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성 선언으로 지정 합니다. 매개 변수가 모든 매개 변수 집합에 있는 경우 매개 변수 특성을 한 번만 선언 하면 되며 매개 변수 집합 이름을 지정할 필요가 없습니다.
+Although there must be a unique parameter for each parameter set, parameters can belong to more than one parameter set. In these cases, give the shared parameter a [System.Management.Automation.Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) attribute declaration for each set to which that the parameter belongs. If a parameter is in all parameter sets, you only have to declare the parameter attribute once and do not need to specify the parameter set name.
 
-## <a name="overriding-an-input-processing-method"></a>입력 처리 메서드 재정의
+## <a name="overriding-an-input-processing-method"></a>Overriding an Input Processing Method
 
-모든 cmdlet은 입력 처리 메서드를 재정의 해야 합니다. 대부분의 경우 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드가 가장 일반적입니다. 이 cmdlet에서는 cmdlet이 원하는 수의 프로세스를 처리할 수 있도록 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 재정의 합니다. 사용자가 지정한 매개 변수 집합에 따라 다른 메서드를 호출 하는 Select 문이 포함 되어 있습니다.
+Every cmdlet must override an input processing method, most often this will be the [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) method. In this cmdlet, the [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) method is overridden so that the cmdlet can process any number of processes. It contains a Select statement that calls a different method based on which parameter set the user has specified.
 
 ```csharp
 protected override void ProcessRecord()
@@ -209,25 +209,25 @@ Protected Overrides Sub ProcessRecord()
 End Sub 'ProcessRecord ' ProcessRecord
 ```
 
-Select 문에서 호출 하는 도우미 메서드는 여기서 설명 하지 않지만, 다음 섹션의 전체 코드 샘플에서 해당 구현을 볼 수 있습니다.
+The Helper methods called by the Select statement are not described here, but you can see their implementation in the complete code sample in the next section.
 
-## <a name="code-sample"></a>코드 샘플
+## <a name="code-sample"></a>Code Sample
 
-전체 C# 샘플 코드는 [StopProcessSample04 샘플](./stopprocesssample04-sample.md)을 참조 하세요.
+For the complete C# sample code, see [StopProcessSample04 Sample](./stopprocesssample04-sample.md).
 
-## <a name="defining-object-types-and-formatting"></a>개체 형식 및 서식 정의
+## <a name="defining-object-types-and-formatting"></a>Defining Object Types and Formatting
 
-Windows PowerShell은 .NET 개체를 사용 하 여 cmdlet 간에 정보를 전달 합니다. 따라서 cmdlet은 자체 형식을 정의 해야 할 수도 있고, 다른 cmdlet에서 제공 하는 기존 형식을 cmdlet에서 확장 해야 할 수도 있습니다. 새 형식을 정의 하거나 기존 형식을 확장 하는 방법에 대 한 자세한 내용은 [개체 형식 확장 및 서식 지정](/previous-versions//ms714665(v=vs.85))을 참조 하세요.
+Windows PowerShell passes information between cmdlets using .NET objects. Consequently, a cmdlet might need to define its own type, or the cmdlet might need to extend an existing type provided by another cmdlet. For more information about defining new types or extending existing types, see [Extending Object Types and Formatting](/previous-versions//ms714665(v=vs.85)).
 
-## <a name="building-the-cmdlet"></a>Cmdlet 빌드
+## <a name="building-the-cmdlet"></a>Building the Cmdlet
 
-Cmdlet을 구현한 후 Windows PowerShell 스냅인을 통해 Windows PowerShell에 등록 해야 합니다. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 [cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](/previous-versions//ms714644(v=vs.85))을 참조 하세요.
+After implementing a cmdlet, you must register it with Windows PowerShell through a Windows PowerShell snap-in. For more information about registering cmdlets, see [How to Register Cmdlets, Providers, and Host Applications](/previous-versions//ms714644(v=vs.85)).
 
-## <a name="testing-the-cmdlet"></a>Cmdlet 테스트
+## <a name="testing-the-cmdlet"></a>Testing the Cmdlet
 
-Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 하 여 테스트 합니다. @No__t-0 및 `InputObject` 매개 변수를 사용 하 여 프로세스를 중지 하는 매개 변수 집합을 테스트 하는 방법을 보여 주는 몇 가지 테스트가 있습니다.
+When your cmdlet has been registered with Windows PowerShell, test it by running it on the command line. Here are some tests that show how the `ProcessId` and `InputObject` parameters can be used to test their parameter sets to stop a process.
 
-- Windows PowerShell이 시작 되 면 `ProcessId` 매개 변수 집합을 사용 하 여 Stop Proc cmdlet을 실행 하 여 해당 식별자를 기반으로 프로세스를 중지 합니다. 이 경우 cmdlet은 `ProcessId` 매개 변수 집합을 사용 하 여 프로세스를 중지 합니다.
+- With Windows PowerShell started, run the Stop-Proc cmdlet with the `ProcessId` parameter set to stop a process based on its identifier. In this case, the cmdlet is using the `ProcessId` parameter set to stop the process.
 
     ```
     PS> stop-proc -Id 444
@@ -237,7 +237,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
     ```
 
-- Windows PowerShell을 시작한 상태에서 `InputObject` 매개 변수 집합을 사용 하 여 `Get-Process` 명령으로 검색 된 메모장 개체의 프로세스를 중지 하는 Stop Proc cmdlet을 실행 합니다.
+- With Windows PowerShell started, run the Stop-Proc cmdlet with the `InputObject` parameter set to stop processes on the Notepad object retrieved by the `Get-Process` command.
 
     ```
     PS> get-process notepad | stop-proc
@@ -249,12 +249,12 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
 
 ## <a name="see-also"></a>참고 항목
 
-[시스템을 수정 하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)
+[Creating a Cmdlet that Modifies the System](./creating-a-cmdlet-that-modifies-the-system.md)
 
-[Windows PowerShell Cmdlet을 만드는 방법](/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet)
+[How to Create a Windows PowerShell Cmdlet](/powershell/scripting/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 
-[개체 형식 및 서식 확장](/previous-versions//ms714665(v=vs.85))
+[Extending Object Types and Formatting](/previous-versions//ms714665(v=vs.85))
 
-[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](/previous-versions//ms714644(v=vs.85))
+[How to Register Cmdlets, Providers, and Host Applications](/previous-versions//ms714644(v=vs.85))
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)
