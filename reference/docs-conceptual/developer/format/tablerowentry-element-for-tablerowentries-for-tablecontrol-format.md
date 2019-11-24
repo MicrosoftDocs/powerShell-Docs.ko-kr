@@ -33,7 +33,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `TableRowEntry` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `TableRowEntry` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -55,7 +55,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="remarks"></a>설명
 
-@No__t-0 요소와 1 개의 @no__t 요소를 지정 해야 합니다.
+`TableColumnItems` 요소 하 나와 `EntrySelectedBy` 요소 하나를 지정 해야 합니다.
 
 테이블 뷰의 구성 요소에 대 한 자세한 내용은 [테이블 뷰 만들기](./creating-a-table-view.md)를 참조 하세요.
 
@@ -79,7 +79,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 </TableRowEntry>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [테이블 뷰 만들기](./creating-a-table-view.md)
 

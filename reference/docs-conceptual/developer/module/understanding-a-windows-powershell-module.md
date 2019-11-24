@@ -55,7 +55,7 @@ ms.locfileid: "72360642"
 
 ### <a name="dynamic-modules"></a>동적 모듈
 
-*동적 모듈* 은 파일에서 로드 되거나 파일에 저장 되지 않은 모듈입니다. 대신, [새 모듈](/powershell/module/Microsoft.PowerShell.Core/New-Module) cmdlet을 사용 하 여 스크립트에 의해 동적으로 만들어집니다. 이 유형의 모듈을 사용 하면 스크립트를 사용 하 여 영구 저장소에 로드 하거나 저장할 필요가 없는 모듈을 주문형으로 만들 수 있습니다. 동적 모듈은 기본적으로 수명이 짧을 것 이므로 `Get-Module` cmdlet으로 액세스할 수 없습니다. 마찬가지로 일반적으로 모듈 매니페스트가 필요 하지 않으며 관련 어셈블리를 저장 하는 데 영구적인 폴더가 필요할 수 있습니다.
+*동적 모듈* 은 파일에서 로드 되거나 파일에 저장 되지 않은 모듈입니다. 대신, [새 모듈](/powershell/module/Microsoft.PowerShell.Core/New-Module) cmdlet을 사용 하 여 스크립트에 의해 동적으로 만들어집니다. 이 유형의 모듈을 사용 하면 스크립트를 사용 하 여 영구 저장소에 로드 하거나 저장할 필요가 없는 모듈을 주문형으로 만들 수 있습니다. 이러한 특성을 사용 하는 경우 동적 모듈은 수명이 짧아야 하므로 `Get-Module` cmdlet으로 액세스할 수 없습니다. 마찬가지로 일반적으로 모듈 매니페스트가 필요 하지 않으며 관련 어셈블리를 저장 하는 데 영구적인 폴더가 필요할 수 있습니다.
 
 ## <a name="module-manifests"></a>모듈 매니페스트
 
@@ -85,13 +85,13 @@ ms.locfileid: "72360642"
 
 스크립트, 이진 또는 매니페스트 모듈을 만든 후에는 다른 사용자가 액세스할 수 있는 위치에 작업을 저장할 수 있습니다. 예를 들어 Windows PowerShell이 설치 된 시스템 폴더에 모듈을 저장 하거나 사용자 폴더에 저장할 수 있습니다.
 
-일반적으로 `$ENV:PSModulePath` 변수에 저장 된 경로 중 하나를 사용 하 여 모듈을 설치 해야 하는 위치를 결정할 수 있습니다. 이러한 경로 중 하나를 사용 하면 사용자가 코드에서 모듈을 호출할 때 PowerShell에서 자동으로 모듈을 찾아 로드할 수 있습니다. 다른 위치에 모듈을 저장 하는 경우 @no__t를 호출할 때 모듈의 위치를 매개 변수로 전달 하 여 PowerShell에서 명시적으로 알릴 수 있습니다.
+일반적으로 `$ENV:PSModulePath` 변수에 저장 된 경로 중 하나를 사용 하 여 모듈을 설치 해야 하는 위치를 결정할 수 있습니다. 이러한 경로 중 하나를 사용 하면 사용자가 코드에서 모듈을 호출할 때 PowerShell에서 자동으로 모듈을 찾아 로드할 수 있습니다. 다른 위치에 모듈을 저장 하는 경우 `Install-Module`를 호출할 때 모듈의 위치를 매개 변수로 전달 하 여 PowerShell이 명시적으로 표시 되도록 할 수 있습니다.
 
 폴더 경로는 모듈 (ModuleBase)의 *기반* 으로 참조 되며 스크립트, 이진 또는 매니페스트 모듈 파일의 이름은 모듈 폴더 이름과 동일 해야 합니다. 단, 다음과 같은 경우는 예외입니다.
 
-- @No__t-0 cmdlet에 의해 생성 된 동적 모듈은 cmdlet의 `Name` 매개 변수를 사용 하 여 이름을 지정할 수 있습니다.
+- Cmdlet의 `Name` 매개 변수를 사용 하 여 `New-Module` cmdlet에서 만든 동적 모듈의 이름을 지정할 수 있습니다.
 
-- 다음 구문에 따라 어셈블리 개체에서 가져온 모듈의 이름은 **@no__t** . `"dynamic_code_module_" + assembly.GetName()`입니다.
+- 어셈블리 개체에서 가져온 모듈은 다음 구문에 따라 이름이 지정 됩니다. `"dynamic_code_module_" + assembly.GetName()` **`Import-Module`** .
 
   자세한 내용은 [PowerShell 모듈 설치](./installing-a-powershell-module.md) 및 [PSModulePath 설치 경로 수정](./modifying-the-psmodulepath-installation-path.md)을 참조 하세요.
 
@@ -117,6 +117,6 @@ ms.locfileid: "72360642"
 
 $env:P SModulePath이 환경 변수는 Windows PowerShell 모듈을 저장 하는 디렉터리 목록을 포함 합니다. Windows PowerShell은 모듈을 자동으로 가져올 때이 변수의 값을 사용 하 고 모듈에 대 한 도움말 항목을 업데이트 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Windows PowerShell 모듈 작성](./writing-a-windows-powershell-module.md)

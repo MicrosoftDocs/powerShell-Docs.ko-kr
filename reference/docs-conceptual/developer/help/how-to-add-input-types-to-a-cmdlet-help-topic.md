@@ -19,9 +19,9 @@ ms.locfileid: "72361242"
 
 이 섹션에서는 Windows PowerShell® cmdlet 도움말 항목에 입력 섹션을 추가 하는 방법에 대해 설명 합니다. 입력 섹션에는 cmdlet이 파이프라인에서 입력으로 허용 하는 개체의 .NET 클래스 (값 또는 속성 이름)가 나열 됩니다.
 
-입력 섹션에 추가할 수 있는 클래스 수에는 제한이 없습니다. 입력 형식은 \<command: inputTypes > 노드에 포함 되며 각 클래스는 \<command: inputType > 요소에 포함 됩니다.
+입력 섹션에 추가할 수 있는 클래스 수에는 제한이 없습니다. 입력 형식은 \<명령: inputTypes > 노드로 묶여 있으며 각 클래스는 \<명령: inputType > 요소에 포함 됩니다.
 
-이 스키마는 각 \<command: inputType > 요소에 두 개의 @no__t 0maml: description > 요소를 포함 합니다. 그러나 `Get-Help` cmdlet은 \<command: inputType >/\<maml: description >) 요소의 콘텐츠만 표시 합니다.
+이 스키마에는 각 \<command: inputType > 요소에 두 개의 \<maml: description > 요소가 포함 되어 있습니다. 그러나 `Get-Help` cmdlet은 \<명령의 inputType >/\<maml: description >) 요소만 표시 합니다.
 
 Windows PowerShell 3.0부터 `Get-Help` cmdlet은 \<maml: uri > 요소의 내용을 표시 합니다. 이 요소를 사용 하 여 .NET 클래스를 설명 하는 항목으로 사용자를 지시할 수 있습니다.
 

@@ -49,7 +49,7 @@ Cmdlet을 사용 하 여 cmdlet 및 기타 cmdlet을 사용 하는 것과 일관
 
 Cmdlet 이름에 사용 되는 명사는 사용자가 cmdlet을 검색할 수 있도록 매우 구체적 이어야 합니다. "Server"와 같은 일반적인 명사를 제품 이름의 축약 된 버전으로 접두사로 붙입니다. 예를 들어 명사가 Microsoft SQL Server의 인스턴스를 실행 하는 서버를 참조 하는 경우 "SQLServer"와 같은 명사를 사용 합니다. 사용자는 특정 명사와 승인 된 동사의 짧은 목록을 조합 하 여 cmdlet 이름 간의 중복을 방지 하면서 기능을 신속 하 게 검색 하 고 예측할 수 있습니다.
 
-사용자 환경을 개선 하기 위해 cmdlet 이름에 대해 선택 하는 명사는 단 수 여야 합니다. 예를 들어, **Get**process 대신 이름 `Get-Process`을 사용 합니다. Cmdlet이 둘 이상의 항목에 대해 작동할 가능성이 있는 경우에도 모든 cmdlet 이름에 대해이 규칙을 따르는 것이 가장 좋습니다.
+사용자 환경을 개선 하기 위해 cmdlet 이름에 대해 선택 하는 명사는 단 수 여야 합니다. 예를 들어, **Get 프로세스**대신 `Get-Process` 이름을 사용 합니다. Cmdlet이 둘 이상의 항목에 대해 작동할 가능성이 있는 경우에도 모든 cmdlet 이름에 대해이 규칙을 따르는 것이 가장 좋습니다.
 
 ### <a name="use-pascal-case-for-cmdlet-names-sd02"></a>Cmdlet 이름으로 파스칼식 대/소문자 사용 (SD02)
 
@@ -57,11 +57,11 @@ Cmdlet 이름에 사용 되는 명사는 사용자가 cmdlet을 검색할 수 �
 
 ### <a name="parameter-design-guidelines-sd03"></a>매개 변수 디자인 지침 (SD03)
 
-Cmdlet에는 작동 해야 하는 데이터를 수신 하는 매개 변수와 작업의 특징을 결정 하는 데 사용 되는 정보를 나타내는 매개 변수가 필요 합니다. 예를 들어 cmdlet은 파이프라인에서 데이터를 수신 하는 `Name` 매개 변수를 가질 수 있으며 cmdlet은이 cmdlet을 통해 작업을 강제로 수행할 수 있음을 나타내는 `Force` 매개 변수를 사용할 수 있습니다. Cmdlet에서 정의할 수 있는 매개 변수의 수에는 제한이 없습니다.
+Cmdlet에는 작동 해야 하는 데이터를 수신 하는 매개 변수와 작업의 특징을 결정 하는 데 사용 되는 정보를 나타내는 매개 변수가 필요 합니다. 예를 들어, cmdlet은 파이프라인에서 데이터를 수신 하는 `Name` 매개 변수를 가질 수 있으며 cmdlet은이 매개 변수를 `Force` 포함 하 여 cmdlet이 작업을 강제로 수행할 수 있음을 나타낼 수 있습니다. Cmdlet에서 정의할 수 있는 매개 변수의 수에는 제한이 없습니다.
 
 #### <a name="use-standard-parameter-names"></a>표준 매개 변수 이름 사용
 
-사용자가 특정 매개 변수의 의미를 빠르게 확인할 수 있도록 cmdlet은 표준 매개 변수 이름을 사용 해야 합니다. 보다 구체적인 이름이 필요한 경우 표준 매개 변수 이름을 사용 하 고 별칭으로 더 구체적인 이름을 지정 합니다. 예를 들어 `Get-Service` cmdlet에는 제네릭 이름 (`Name`)과 보다 구체적인 별칭 (`ServiceName`)이 있는 매개 변수가 있습니다. 두 용어는 모두 매개 변수를 지정 하는 데 사용할 수 있습니다.
+사용자가 특정 매개 변수의 의미를 빠르게 확인할 수 있도록 cmdlet은 표준 매개 변수 이름을 사용 해야 합니다. 보다 구체적인 이름이 필요한 경우 표준 매개 변수 이름을 사용 하 고 별칭으로 더 구체적인 이름을 지정 합니다. 예를 들어 `Get-Service` cmdlet에는 제네릭 이름 (`Name`)과 보다 구체적인 별칭 (`ServiceName`)을 포함 하는 매개 변수가 있습니다. 두 용어는 모두 매개 변수를 지정 하는 데 사용할 수 있습니다.
 
 매개 변수 이름 및 해당 데이터 형식에 대 한 자세한 내용은 [Cmdlet 매개 변수 이름 및 기능 지침](./standard-cmdlet-parameter-names-and-types.md)을 참조 하세요.
 
@@ -97,13 +97,13 @@ Cmdlet에는 작동 해야 하는 데이터를 수신 하는 매개 변수와 �
 
 #### <a name="use-consistent-parameter-types"></a>일관 된 매개 변수 형식 사용
 
-동일한 매개 변수를 여러 cmdlet에서 사용 하는 경우 항상 동일한 매개 변수 형식을 사용 합니다.  예를 들어 `Process` 매개 변수가 하나의 cmdlet에 대 한 [system.string 형식이 면](/dotnet/api/System.Int16) 다른 cmdlet에 대 한 `Process` 매개 변수를 [system.object](/dotnet/api/System.UInt16) 형식으로 만들지 마십시오.
+동일한 매개 변수를 여러 cmdlet에서 사용 하는 경우 항상 동일한 매개 변수 형식을 사용 합니다.  예를 들어 `Process` 매개 변수가 하나의 cmdlet에 대 한 [system.string 형식이 면](/dotnet/api/System.Int16) 다른 cmdlet에 대 한 `Process` 매개 [변수를 다른 cmdlet으로 설정](/dotnet/api/System.UInt16) 하지 마십시오.
 
 #### <a name="parameters-that-take-true-and-false"></a>True 및 False를 사용 하는 매개 변수
 
-매개 변수가 `true` 및 `false`만 사용 하는 경우 매개 변수를 [system.object](/dotnet/api/System.Management.Automation.SwitchParameter)형식으로 정의 합니다. 스위치 매개 변수는 명령에 지정 될 때 `true`으로 처리 됩니다. 매개 변수가 명령에 포함 되지 않은 경우 Windows PowerShell은 매개 변수 값을 0 @no__t로 간주 합니다. 부울 매개 변수를 정의 하지 마십시오.
+매개 변수가 `true` 및 `false`만 사용 하는 경우 매개 변수를 type [system.object](/dotnet/api/System.Management.Automation.SwitchParameter)로 정의 합니다. 스위치 매개 변수는 명령에 지정 될 때 `true`으로 처리 됩니다. 매개 변수가 명령에 포함 되지 않은 경우 Windows PowerShell은 매개 변수 값을 `false`으로 간주 합니다. 부울 매개 변수를 정의 하지 마십시오.
 
-매개 변수가 3 개의 값을 구분 해야 하는 경우 $true, $false 및 "지정 되지 않음"으로 Nullable @ no__t-0bool > 형식의 매개 변수를 정의 합니다.  세 번째 "지정 되지 않음" 값은 일반적으로 cmdlet이 개체의 부울 속성을 수정할 수 있는 경우에 발생 합니다. 이 경우 "지정 하지 않음"은 속성의 현재 값을 변경 하지 않음을 의미 합니다.
+매개 변수가 3 개의 값을 구분 해야 하는 경우 $true, $false 및 "지정 되지 않음"으로 Nullable\<Nullable > 형식의 매개 변수를 정의 합니다.  세 번째 "지정 되지 않음" 값은 일반적으로 cmdlet이 개체의 부울 속성을 수정할 수 있는 경우에 발생 합니다. 이 경우 "지정 하지 않음"은 속성의 현재 값을 변경 하지 않음을 의미 합니다.
 
 #### <a name="support-arrays-for-parameters"></a>매개 변수에 대 한 지원 배열
 
@@ -111,7 +111,7 @@ Cmdlet에는 작동 해야 하는 데이터를 수신 하는 매개 변수와 �
 
 #### <a name="support-the-passthru-parameter"></a>PassThru 매개 변수 지원
 
-기본적으로 [Stop Process](/powershell/module/Microsoft.PowerShell.Management/Stop-Process) cmdlet과 같이 시스템을 수정 하는 많은 cmdlet은 개체의 "싱크" 역할을 하며 결과를 반환 하지 않습니다. 이러한 cmdlet은 `PassThru` 매개 변수를 구현 하 여 cmdlet이 강제로 개체를 반환 하도록 합니다. @No__t-0 매개 변수가 지정 된 경우 cmdlet은 [WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드를 호출 하 여 개체를 반환 합니다. 예를 들어 다음 명령은 Calc 프로세스를 중지 하 고 결과 프로세스를 파이프라인으로 전달 합니다.
+기본적으로 [Stop Process](/powershell/module/Microsoft.PowerShell.Management/Stop-Process) cmdlet과 같이 시스템을 수정 하는 많은 cmdlet은 개체의 "싱크" 역할을 하며 결과를 반환 하지 않습니다. 이러한 cmdlet은 `PassThru` 매개 변수를 구현 하 여 cmdlet이 강제로 개체를 반환 하도록 해야 합니다. `PassThru` 매개 변수를 지정 하면 cmdlet은 [WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드를 호출 하 여 개체를 반환 합니다. 예를 들어 다음 명령은 Calc 프로세스를 중지 하 고 결과 프로세스를 파이프라인으로 전달 합니다.
 
 ```powershell
 Stop-Process calc -passthru
@@ -139,7 +139,7 @@ Cmdlet에서 의도 하지 않은 결과가 발생할 수 있는 작업을 수�
 
 Cmdlet은 사용자가 cmdlet이 수행 하는 작업에 대 한 세부 정보가 필요한 경우에는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) 를 호출 해야 합니다. 예를 들어 cmdlet이 cmdlet이 수행 하는 작업에 대 한 추가 정보가 필요할 수 있는 시나리오가 있는 경우 cmdlet은이 정보를 호출 해야 합니다.
 
-개발자 또는 기술 지원 엔지니어가 cmdlet 작업의 손상 원인을 이해 해야 하는 경우 cmdlet은 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 를 호출 해야 합니다. @No__t-2 매개 변수가 모두 제공 되기 때문에 cmdlet이 동일한 코드에서 System.object를 호출 하는 것과 동일한 코드에서 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 를 호출 하는 것은 필요 하지 [않습니다.](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) 정보 집합입니다.
+개발자 또는 기술 지원 엔지니어가 cmdlet 작업의 손상 원인을 이해 해야 하는 경우 cmdlet은 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 를 호출 해야 합니다. `Debug` 매개 변수가 두 정보 집합을 모두 제공 하기 때문에 cmdlet이 동일한 코드에서 System.object를 호출 하는 것과 동일한 코드에서 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 를 호출할 필요가 [없습니다.](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose)
 
 #### <a name="support-writeprogress-for-operations-that-take-a-long-time"></a>시간이 오래 걸리는 작업의 WriteProgress 지원
 
@@ -170,9 +170,9 @@ Cmdlet 및 기타 cmdlet을 사용 하는 것과 일관 된 사용자 환경을 
 
 Windows PowerShell 경로는 네임 스페이스에 대 한 액세스를 정규화 하는 메커니즘입니다. Cmdlet의 매개 변수에 Windows PowerShell 경로를 할당 하면 사용자는 특정 경로에 대 한 바로 가기 역할을 하는 사용자 지정 "드라이브"를 정의할 수 있습니다. 사용자가 이러한 드라이브를 지정 하는 경우 레지스트리의 데이터와 같은 저장 된 데이터를 일관 된 방식으로 사용할 수 있습니다.
 
-사용자가 cmdlet에서 파일 또는 데이터 원본을 지정할 수 있도록 허용 하는 경우 [system.string](/dotnet/api/System.String)형식의 매개 변수를 정의 해야 합니다. 둘 이상의 드라이브가 지원 되는 경우 형식은 배열 이어야 합니다. 매개 변수의 이름은-0 @no__t 이어야 하며 별칭은 `PSPath`입니다. 또한 `Path` 매개 변수는 와일드 카드 문자를 지원 해야 합니다. 와일드 카드 문자를 지원 하지 않아도 되는 경우 `LiteralPath` 매개 변수를 정의 합니다.
+사용자가 cmdlet에서 파일 또는 데이터 원본을 지정할 수 있도록 허용 하는 경우 [system.string](/dotnet/api/System.String)형식의 매개 변수를 정의 해야 합니다. 둘 이상의 드라이브가 지원 되는 경우 형식은 배열 이어야 합니다. 매개 변수의 이름은 `PSPath`별칭을 사용 하 여 `Path`해야 합니다. 또한 `Path` 매개 변수는 와일드 카드 문자를 지원 해야 합니다. 와일드 카드 문자를 지원 하지 않아도 되는 경우 `LiteralPath` 매개 변수를 정의 합니다.
 
-Cmdlet에서 읽거나 쓰는 데이터를 파일로 사용 해야 하는 경우 cmdlet은 Windows PowerShell 경로 입력을 수락 해야 하며, cmdlet은 [Sessionstate](/dotnet/api/System.Management.Automation.SessionState.Path) 속성을 사용 하 여 windows powershell 경로를로 변환 해야 합니다. 파일 시스템에서 인식 하는 경로입니다. 특정 메커니즘에는 다음과 같은 메서드가 포함 됩니다.
+Cmdlet에서 읽기 또는 쓰기 데이터를 파일로 사용 해야 하는 경우 cmdlet은 Windows PowerShell 경로 입력을 수락 해야 하며, cmdlet은 [Sessionstate](/dotnet/api/System.Management.Automation.SessionState.Path) 속성을 사용 하 여 windows powershell 경로를 파일 시스템에서 인식 하는 경로로 변환 해야 합니다. 특정 메커니즘에는 다음과 같은 메서드가 포함 됩니다.
 
 - [PSCmdlet. GetResolvedProviderPathFromPSPath](/dotnet/api/System.Management.Automation.PSCmdlet.GetResolvedProviderPathFromPSPath)
 
@@ -182,11 +182,11 @@ Cmdlet에서 읽거나 쓰는 데이터를 파일로 사용 해야 하는 경우
 
 - [GetUnresolvedProviderPathFromPSPath (영문)](/dotnet/api/System.Management.Automation.PathIntrinsics.GetUnresolvedProviderPathFromPSPath)
 
-Cmdlet에서 읽기 또는 쓰기 데이터를 파일 대신 문자열 집합만 사용 하는 경우 cmdlet은 공급자 콘텐츠 정보 (`Content` 멤버)를 사용 하 여 읽고 써야 합니다. 이 정보는 [InvokeProvider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.InvokeProvider) 속성에서 가져온 것이 고, 이러한 메커니즘을 통해 다른 데이터 저장소에서 데이터 읽기 및 쓰기에 참여할 수 있습니다.
+Cmdlet에서 읽거나 쓰는 데이터가 파일 대신 문자열 집합인 경우 cmdlet은 공급자 콘텐츠 정보 (`Content` 멤버)를 사용 하 여 읽고 써야 합니다. 이 정보는 [InvokeProvider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.InvokeProvider) 속성에서 가져온 것이 고, 이러한 메커니즘을 통해 다른 데이터 저장소에서 데이터 읽기 및 쓰기에 참여할 수 있습니다.
 
 #### <a name="support-wildcard-characters"></a>와일드 카드 문자 지원
 
-가능 하면 cmdlet은 와일드 카드 문자를 지원 해야 합니다. Cmdlet의 여러 위치에서 와일드 카드 문자를 지원 합니다. 특히 매개 변수가 개체 집합에서 하나의 개체를 식별 하는 문자열을 사용 하는 경우에는 특히 그렇습니다. 예를 들어 [Stopproc 자습서](./stopproc-tutorial.md) 의 샘플 **Stop proc** cmdlet은 프로세스 이름을 나타내는 문자열을 처리 하는 `Name` 매개 변수를 정의 합니다. 이 매개 변수는 사용자가 중지할 프로세스를 쉽게 지정할 수 있도록 와일드 카드 문자를 지원 합니다.
+가능 하면 cmdlet은 와일드 카드 문자를 지원 해야 합니다. Cmdlet의 여러 위치에서 와일드 카드 문자를 지원 합니다. 특히 매개 변수가 개체 집합에서 하나의 개체를 식별 하는 문자열을 사용 하는 경우에는 특히 그렇습니다. 예를 들어 [Stopproc 자습서](./stopproc-tutorial.md) 의 샘플 **Stop proc** cmdlet은 `Name` 매개 변수를 정의 하 여 프로세스 이름을 나타내는 문자열을 처리 합니다. 이 매개 변수는 사용자가 중지할 프로세스를 쉽게 지정할 수 있도록 와일드 카드 문자를 지원 합니다.
 
 와일드 카드 문자 지원을 사용할 수 있는 경우 일반적으로 cmdlet 작업에서 배열을 생성 합니다. 경우에 따라 사용자가 한 번에 하나의 항목만 사용할 수 있기 때문에 배열을 지 원하는 것은 적절 하지 않습니다. 예를 들어, 사용자가 단일 위치만 설정 하므로 [집합 위치](/powershell/module/Microsoft.PowerShell.Management/Set-Location) cmdlet은 배열을 지원할 필요가 없습니다. 이 인스턴스에서 cmdlet은 여전히 와일드 카드 문자를 지원 하지만 단일 위치에 대해 해상도를 강제 적용 합니다.
 
@@ -206,7 +206,7 @@ Cmdlet에 대 한 개체를 디자인 하는 경우 해당 멤버가 해당 멤�
 
 Cmdlet에서 반환 되는 기존 .NET Framework 개체에는 스크립트 개발자 또는 사용자에 게 필요한 몇 가지 중요 한 멤버나 편리한 멤버가 종종 있습니다. 이러한 누락 된 멤버는 개체를 파이프라인으로 올바르게 전달할 수 있도록 올바른 멤버 이름을 표시 하 고 만드는 데 특히 중요할 수 있습니다. 사용자 지정 types.ps1xml 파일을 만들어 이러한 필수 멤버를 문서화 합니다. 이 파일을 만들 때 *< Your_Product_Name >* 명명 규칙을 따르는 것이 좋습니다. Types.ps1xml.
 
-예를 들어 `Mode` 스크립트 속성을 [system.object](/dotnet/api/System.IO.FileInfo) 형식에 추가 하 여 파일의 특성을 보다 명확 하 게 표시할 수 있습니다. 또한 `Count` 별칭 속성을 [system.string 형식에](/dotnet/api/System.Array) 추가 하 여 해당 속성 이름을 일관 되 게 사용할 수 있습니다 (`Length` 대신).
+예를 들어, 파일의 특성을 보다 명확 하 게 표시 하기 위해 `Mode` 스크립트 속성을 [system.object](/dotnet/api/System.IO.FileInfo) 형식에 추가할 수 있습니다. 또한 `Count` 별칭 속성을 [system.string 형식에](/dotnet/api/System.Array) 추가 하 여 `Length`대신 해당 속성 이름을 일관 되 게 사용할 수 있습니다.
 
 ##### <a name="implement-the-icomparable-interface"></a>IComparable 인터페이스 구현
 
@@ -214,7 +214,7 @@ Cmdlet에서 반환 되는 기존 .NET Framework 개체에는 스크립트 개�
 
 ##### <a name="update-display-information"></a>표시 정보 업데이트
 
-개체에 대 한 디스플레이에서 예상 된 결과를 제공 하지 않는 경우 사용자 지정 *\<>의 productname*을 만듭니다. 해당 개체에 대 한 types.ps1xml 파일입니다.
+개체에 대 한 디스플레이에서 예상 된 결과를 제공 하지 않는 경우 사용자 지정 *\<productname >* 를 만듭니다. 해당 개체에 대 한 types.ps1xml 파일입니다.
 
 ### <a name="support-well-defined-pipeline-input-sc02"></a>잘 정의 된 파이프라인 입력 지원 (SC02)
 
@@ -226,7 +226,7 @@ Cmdlet에서 반환 되는 기존 .NET Framework 개체에는 스크립트 개�
 
 Cmdlet에 대해 설정 된 각 매개 변수에서 파이프라인의 입력을 지 원하는 매개 변수를 하나 이상 포함 합니다. 파이프라인 입력 지원을 통해 사용자는 데이터 나 개체를 검색 하 고, 올바른 매개 변수 집합으로 전송 하 고, 결과를 cmdlet에 직접 전달할 수 있습니다.
 
-매개 **변수** 특성에 `ValueFromPipeline` 키워드, `ValueFromPipelineByPropertyName` 키워드 특성 또는 선언에 두 키워드가 모두 포함 된 경우 매개 변수는 파이프라인의 입력을 허용 합니다. 매개 변수 집합에 `ValueFromPipeline` 또는 `ValueFromPipelineByPropertyName` 키워드를 지 원하는 매개 변수가 없는 경우 cmdlet은 파이프라인 입력을 무시 하기 때문에 다른 cmdlet 뒤에 의미를 적용할 수 없습니다.
+매개 **변수** 특성에 `ValueFromPipeline` 키워드, `ValueFromPipelineByPropertyName` 키워드 특성 또는 선언에 두 키워드가 모두 포함 된 경우 매개 변수는 파이프라인의 입력을 허용 합니다. 매개 변수 집합의 매개 변수가 `ValueFromPipeline` 또는 `ValueFromPipelineByPropertyName` 키워드를 지원 하지 않는 경우 cmdlet은 파이프라인 입력을 무시 하기 때문에 다른 cmdlet 뒤에 의미를 적용할 수 없습니다.
 
 #### <a name="support-the-processrecord-method"></a>ProcessRecord 메서드 지원
 
@@ -234,13 +234,13 @@ Cmdlet에 대해 설정 된 각 매개 변수에서 파이프라인의 입력을
 
 ### <a name="write-single-records-to-the-pipeline-sc03"></a>파이프라인에 단일 레코드 쓰기 (SC03)
 
-Cmdlet에서 개체를 반환 하는 경우 cmdlet은 생성 되는 즉시 개체를 작성 해야 합니다. 이 cmdlet은 결합 된 배열로 버퍼링 하기 위해 해당 변수를 포함 해서는 안 됩니다. 그러면 개체를 입력으로 수신 하는 cmdlet이 출력 개체를 지연 없이 처리, 표시 또는 처리 하 고 표시할 수 있습니다. 한 번에 하나씩 출력 개체를 생성 하는 cmdlet은 [WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드를 호출 해야 합니다. 출력 개체를 일괄 처리로 생성 하는 cmdlet (예: 기본 API가 출력 개체의 배열을 반환 하는 경우)은 두 번째 매개 변수를 `true`로 설정 하 여 [WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드를 호출 해야 합니다.
+Cmdlet에서 개체를 반환 하는 경우 cmdlet은 생성 되는 즉시 개체를 작성 해야 합니다. 이 cmdlet은 결합 된 배열로 버퍼링 하기 위해 해당 변수를 포함 해서는 안 됩니다. 그러면 개체를 입력으로 수신 하는 cmdlet이 출력 개체를 지연 없이 처리, 표시 또는 처리 하 고 표시할 수 있습니다. 한 번에 하나씩 출력 개체를 생성 하는 cmdlet은 [WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드를 호출 해야 합니다. 출력 개체를 일괄 처리로 생성 하는 cmdlet (예: 기본 API가 출력 개체의 배열을 반환 하는 경우)은 두 번째 매개 변수를 `true`설정 하 여 [WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드를 호출 해야 합니다.
 
 ### <a name="make-cmdlets-case-insensitive-and-case-preserving-sc04"></a>Cmdlet에서 대/소문자를 구분 하지 않고 대/소문자를 유지 합니다 (SC04).
 
 기본적으로 Windows PowerShell 자체는 대/소문자를 구분 하지 않습니다. 그러나 많은 기존 시스템을 처리 하기 때문에 Windows PowerShell은 작업 및 호환성을 위해 대/소문자를 유지 합니다. 즉, 문자를 대문자로 제공 하는 경우 Windows PowerShell은 해당 문자를 대문자로 유지 합니다. 시스템이 제대로 작동 하려면 cmdlet이이 규칙을 따라야 합니다. 가능 하면 대/소문자를 구분 하지 않는 방식으로 작동 해야 합니다. 그러나 나중에 명령이 나 파이프라인에서 발생 하는 cmdlet에 대 한 원래 사례를 유지 해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [필수 개발 지침](./required-development-guidelines.md)
 

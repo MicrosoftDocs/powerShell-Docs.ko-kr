@@ -33,7 +33,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `TableColumnHeader` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `TableColumnHeader` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -57,7 +57,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 테이블의 각 열에 대 한 헤더를 지정 합니다. 열은 `TableColumnHeader` 요소가 정의 된 순서 대로 표시 됩니다.
 
-테이블의 @no__t 요소 수는 `TableRowEntry` 개 요소와 동일 해야 합니다. 열 머리글은 테이블의 위쪽에 있는 텍스트가 표시 되는 방법을 정의 합니다. 행 항목은 테이블의 행에 표시 되는 데이터를 정의 합니다.
+테이블에는 `TableRowEntry` 요소와 동일한 수의 `TableColumnHeader` 요소가 있어야 합니다. 열 머리글은 테이블의 위쪽에 있는 텍스트가 표시 되는 방법을 정의 합니다. 행 항목은 테이블의 행에 표시 되는 데이터를 정의 합니다.
 
 테이블 뷰의 구성 요소에 대 한 자세한 내용은 [테이블 뷰](./creating-a-table-view.md)를 참조 하세요.
 
@@ -80,7 +80,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 </TableHeaders>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [TableControl에 대 한 TableColumnHeader의 Alignment 요소 (Format)](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)
 

@@ -19,7 +19,7 @@ ms.locfileid: "72363722"
 
 이 단원의 항목에서는 서식 파일 (types.ps1xml 파일)에 사용 되는 XML 요소에 대해 설명 합니다. 파일 서식 지정은 .NET 개체 표시 방법을 정의 합니다. 개체 자체는 변경 하지 않습니다.
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [TableControl에 대 한 TableColumnHeader의 Alignment 요소 (Format)](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md) 열 머리글의 데이터를 표시 하는 방법을 정의 합니다.
 
@@ -213,33 +213,33 @@ CustomControl에 대 한 [ExpressionBinding의 PropertyName 요소 (형식)](./p
 
 [GroupBy (형식)에 대 한 PropertyName 요소](./propertyname-element-for-groupby-format.md) 값이 변경 될 때마다 새 그룹을 시작 하는 .NET 속성을 지정 합니다.
 
-구성에 대 한 ItemSeclectionCondition에 대 한 [PropertyName 요소 (형식)](./propertyname-element-for-itemseclectioncondition-for-controls-for-configuration-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`으로 평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 서식 파일의 모든 뷰에서 사용할 수 있는 공용 컨트롤을 정의 하는 데 사용 됩니다.
+구성에 대 한 ItemSeclectionCondition에 대 한 [PropertyName 요소 (형식)](./propertyname-element-for-itemseclectioncondition-for-controls-for-configuration-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`된 것으로 평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 서식 파일의 모든 뷰에서 사용할 수 있는 공용 컨트롤을 정의 하는 데 사용 됩니다.
 
-[View 컨트롤에 대 한 ItemSelectionCondition의 PropertyName 요소 (형식)](./propertyname-element-for-itemselectioncondition-for-controls-for-view-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`으로 평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 뷰에서 사용할 수 있는 컨트롤을 정의 하는 데 사용 됩니다.
+[View 컨트롤에 대 한 ItemSelectionCondition의 PropertyName 요소 (형식)](./propertyname-element-for-itemselectioncondition-for-controls-for-view-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`된 것으로 평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 뷰에서 사용할 수 있는 컨트롤을 정의 하는 데 사용 됩니다.
 
-CustomControl에 대 한 [ItemSelectionCondition의 PropertyName 요소 (Format)](./propertyname-element-for-itemselectioncondition-for-customcontrol-for-view-format.md) 는 조건을 트리거하는 .net 속성을 지정 합니다. 이 속성이 있거나 `true`으로 평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 사용자 지정 컨트롤 뷰를 정의할 때 사용 됩니다.
+CustomControl에 대 한 [ItemSelectionCondition의 PropertyName 요소 (Format)](./propertyname-element-for-itemselectioncondition-for-customcontrol-for-view-format.md) 는 조건을 트리거하는 .net 속성을 지정 합니다. 이 속성이 있거나 `true`된 것으로 평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 사용자 지정 컨트롤 뷰를 정의할 때 사용 됩니다.
 
-[GroupBy (형식)에 대 한 ItemSelectionCondition의 PropertyName 요소](./propertyname-element-for-itemselectioncondition-for-groupby-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`으로 평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 새 개체 그룹이 표시 되는 방법을 정의 하는 데 사용 됩니다.
+[GroupBy (형식)에 대 한 ItemSelectionCondition의 PropertyName 요소](./propertyname-element-for-itemselectioncondition-for-groupby-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`된 것으로 평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 새 개체 그룹이 표시 되는 방법을 정의 하는 데 사용 됩니다.
 
-[ListItem (형식)에 대 한 ItemSelectionCondition의 PropertyName 요소](./propertyname-element-for-itemselectioncondition-for-listcontrol-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`으로 평가 되 면 조건이 충족 되 고 뷰가 사용 됩니다. 이 요소는 목록 뷰를 정의할 때 사용 됩니다.
+[ListItem (형식)에 대 한 ItemSelectionCondition의 PropertyName 요소](./propertyname-element-for-itemselectioncondition-for-listcontrol-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`된 것으로 평가 되 면 조건이 충족 되 고 뷰가 사용 됩니다. 이 요소는 목록 뷰를 정의할 때 사용 됩니다.
 
 [이 listcontrol의 ListItem 요소에 대 한 PropertyName 요소 (형식)](./propertyname-element-for-listitem-for-listcontrol-format.md) 값이 목록에 표시 되는 .NET 속성을 지정 합니다.
 
-[ListEntry (형식)의 경우 EntrySelectedBy에 대 한 SelectionCondition의 PropertyName 요소](./propertyname-element-for-selectioncondition-for-controls-for-configuration-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`으로 평가 되 면 조건이 충족 되 고 항목이 사용 됩니다. 이 요소는 서식 파일의 모든 뷰에서 사용할 수 있는 공용 컨트롤을 정의 하는 데 사용 됩니다.
+[ListEntry (형식)의 경우 EntrySelectedBy에 대 한 SelectionCondition의 PropertyName 요소](./propertyname-element-for-selectioncondition-for-controls-for-configuration-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`된 것으로 평가 되 면 조건이 충족 되 고 항목이 사용 됩니다. 이 요소는 서식 파일의 모든 뷰에서 사용할 수 있는 공용 컨트롤을 정의 하는 데 사용 됩니다.
 
-[View 컨트롤의 SelectionCondition에 대 한 PropertyName 요소 (형식)](./propertyname-element-for-selectioncondition-for-controls-for-view-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`으로 평가 되 면 조건이 충족 되 고 항목이 사용 됩니다. 이 요소는 뷰에서 사용할 수 있는 컨트롤을 정의 하는 데 사용 됩니다.
+[View 컨트롤의 SelectionCondition에 대 한 PropertyName 요소 (형식)](./propertyname-element-for-selectioncondition-for-controls-for-view-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`된 것으로 평가 되 면 조건이 충족 되 고 항목이 사용 됩니다. 이 요소는 뷰에서 사용할 수 있는 컨트롤을 정의 하는 데 사용 됩니다.
 
-CustomControl에 대 한 [SelectionCondition의 PropertyName 요소 (형식)](./propertyname-element-for-selectioncondition-for-customcontrol-for-view-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`으로 평가 되 면 조건이 충족 되 고 정의가 사용 됩니다. 이 요소는 사용자 지정 컨트롤 뷰를 정의할 때 사용 됩니다.
+CustomControl에 대 한 [SelectionCondition의 PropertyName 요소 (형식)](./propertyname-element-for-selectioncondition-for-customcontrol-for-view-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`로 평가 될 때 조건이 충족 되 고 정의가 사용 됩니다. 이 요소는 사용자 지정 컨트롤 뷰를 정의할 때 사용 됩니다.
 
-[EnumerableExpansion (형식)의 경우 EntrySelectedBy의 SelectionCondition에 대 한 PropertyName 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`으로 평가 되 면 조건이 충족 되 고 정의가 사용 됩니다.
+[EnumerableExpansion (형식)의 경우 EntrySelectedBy의 SelectionCondition에 대 한 PropertyName 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`로 평가 될 때 조건이 충족 되 고 정의가 사용 됩니다.
 
-[GroupBy (형식)에 대 한 SelectionCondition의 PropertyName 요소](./propertyname-element-for-selectioncondition-for-groupby-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`으로 평가 되 면 조건이 충족 되 고 정의가 사용 됩니다. 이 요소는 새 개체 그룹이 표시 되는 방법을 정의 하는 데 사용 됩니다.
+[GroupBy (형식)에 대 한 SelectionCondition의 PropertyName 요소](./propertyname-element-for-selectioncondition-for-groupby-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`로 평가 될 때 조건이 충족 되 고 정의가 사용 됩니다. 이 요소는 새 개체 그룹이 표시 되는 방법을 정의 하는 데 사용 됩니다.
 
-[ListEntry (형식)의 경우 EntrySelectedBy에 대 한 SelectionCondition의 PropertyName 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`으로 평가 되 면 조건이 충족 되 고 목록 항목이 사용 됩니다.
+[ListEntry (형식)의 경우 EntrySelectedBy에 대 한 SelectionCondition의 PropertyName 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`된 것으로 평가 되 면 조건이 충족 되 고 목록 항목이 사용 됩니다.
 
-[TableRowEntry (형식)의 경우 EntrySelectedBy에 대 한 SelectionCondition의 PropertyName 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-tablerowentry-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`으로 평가 되 면 조건이 충족 되 고 테이블 항목이 사용 됩니다.
+[TableRowEntry (형식)의 경우 EntrySelectedBy에 대 한 SelectionCondition의 PropertyName 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-tablerowentry-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`로 평가 될 때 조건이 충족 되 고 테이블 항목이 사용 됩니다.
 
-[WideEntry (형식)의 경우 EntrySelectedBy에 대 한 SelectionCondition의 PropertyName 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`으로 평가 되 면 조건이 충족 되 고 정의가 사용 됩니다.
+[WideEntry (형식)의 경우 EntrySelectedBy에 대 한 SelectionCondition의 PropertyName 요소](./propertyname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format.md) 조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`로 평가 될 때 조건이 충족 되 고 정의가 사용 됩니다.
 
 [TableColumnItem에 대 한 PropertyName 요소 (형식)](./propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md) 행의 열에 값이 표시 되는 속성을 지정 합니다.
 
@@ -263,33 +263,33 @@ CustomCustomControl에 대 한 [ExpressionBinding의 ScriptBlock 요소 (형식)
 
 [GroupBy (형식)에 대 한 ScriptBlock 요소](./scriptblock-element-for-groupby-format.md) 값이 변경 될 때마다 새 그룹을 시작 하는 스크립트를 지정 합니다.
 
-[구성에 대 한 ItemSelectionCondition의 ScriptBlock 요소 (형식)](./scriptblock-element-for-itemseclectioncondition-for-controls-for-configuration-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트를 사용 하 여 `true`으로 평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 서식 파일의 모든 뷰에서 사용할 수 있는 공용 컨트롤을 정의 하는 데 사용 됩니다.
+[구성에 대 한 ItemSelectionCondition의 ScriptBlock 요소 (형식)](./scriptblock-element-for-itemseclectioncondition-for-controls-for-configuration-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트가 `true`평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 서식 파일의 모든 뷰에서 사용할 수 있는 공용 컨트롤을 정의 하는 데 사용 됩니다.
 
-[View 컨트롤에 대 한 ItemSelectionCondition의 ScriptBlock 요소 (형식)](./scriptblock-element-for-itemselectioncondition-for-controls-for-view-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트를 사용 하 여 `true`으로 평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 뷰에서 사용할 수 있는 컨트롤을 정의 하는 데 사용 됩니다.
+[View 컨트롤에 대 한 ItemSelectionCondition의 ScriptBlock 요소 (형식)](./scriptblock-element-for-itemselectioncondition-for-controls-for-view-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트가 `true`평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 뷰에서 사용할 수 있는 컨트롤을 정의 하는 데 사용 됩니다.
 
-CustomControl에 대 한 [ItemSelectionCondition의 ScriptBlock 요소 (형식)](./scriptblock-element-for-itemselectioncondition-for-customcontrol-for-view-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트를 사용 하 여 `true`으로 평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 사용자 지정 컨트롤 뷰를 정의할 때 사용 됩니다.
+CustomControl에 대 한 [ItemSelectionCondition의 ScriptBlock 요소 (형식)](./scriptblock-element-for-itemselectioncondition-for-customcontrol-for-view-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트가 `true`평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 사용자 지정 컨트롤 뷰를 정의할 때 사용 됩니다.
 
-[GroupBy (형식)에 대 한 ItemSelectionCondition의 ScriptBlock 요소](./scriptblock-element-for-itemselectioncondition-for-groupby-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트를 사용 하 여 `true`으로 평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 새 개체 그룹이 표시 되는 방법을 정의 하는 데 사용 됩니다.
+[GroupBy (형식)에 대 한 ItemSelectionCondition의 ScriptBlock 요소](./scriptblock-element-for-itemselectioncondition-for-groupby-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트가 `true`평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 새 개체 그룹이 표시 되는 방법을 정의 하는 데 사용 됩니다.
 
-[이 listcontrol (형식)에 대 한 ItemSelectionCondition의 ScriptBlock 요소](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트를 `true`으로 평가 하면 조건이 충족 되 고 목록 항목이 사용 됩니다. 이 요소는 목록 뷰를 정의할 때 사용 됩니다.
+[이 listcontrol (형식)에 대 한 ItemSelectionCondition의 ScriptBlock 요소](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트가 `true`평가 되 면 조건이 충족 되 고 목록 항목이 사용 됩니다. 이 요소는 목록 뷰를 정의할 때 사용 됩니다.
 
 [ListItem의 ScriptBlock 요소 (Format)](./scriptblock-element-for-listitem-for-listcontrol-format.md) 목록의 행에 값이 표시 되는 스크립트를 지정 합니다.
 
-[구성 컨트롤에 대 한 SelectionCondition의 ScriptBlock 요소 (형식)](./scriptblock-element-for-selectioncondition-for-controls-for-configuration-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트를 `true`으로 평가 하면 조건이 충족 되 고 정의가 사용 됩니다. 이 요소는 서식 파일의 모든 뷰에서 사용할 수 있는 공용 컨트롤을 정의 하는 데 사용 됩니다.
+[구성 컨트롤에 대 한 SelectionCondition의 ScriptBlock 요소 (형식)](./scriptblock-element-for-selectioncondition-for-controls-for-configuration-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트가 `true`평가 되 면 조건이 충족 되 고 정의가 사용 됩니다. 이 요소는 서식 파일의 모든 뷰에서 사용할 수 있는 공용 컨트롤을 정의 하는 데 사용 됩니다.
 
-[View 컨트롤의 SelectionCondition에 대 한 ScriptBlock 요소 (형식)](./scriptblock-element-for-selectioncondition-for-controls-for-view-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트를 `true`으로 평가 하면 조건이 충족 되 고 정의가 사용 됩니다. 이 요소는 뷰에서 사용할 수 있는 컨트롤을 정의 하는 데 사용 됩니다.
+[View 컨트롤의 SelectionCondition에 대 한 ScriptBlock 요소 (형식)](./scriptblock-element-for-selectioncondition-for-controls-for-view-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트가 `true`평가 되 면 조건이 충족 되 고 정의가 사용 됩니다. 이 요소는 뷰에서 사용할 수 있는 컨트롤을 정의 하는 데 사용 됩니다.
 
-CustomControl에 대 한 [SelectionCondition의 ScriptBlock 요소 (형식)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트를 `true`으로 평가 하면 조건이 충족 되 고 정의가 사용 됩니다. 이 요소는 사용자 지정 컨트롤 뷰를 정의할 때 사용 됩니다.
+CustomControl에 대 한 [SelectionCondition의 ScriptBlock 요소 (형식)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트가 `true`평가 되 면 조건이 충족 되 고 정의가 사용 됩니다. 이 요소는 사용자 지정 컨트롤 뷰를 정의할 때 사용 됩니다.
 
 [EnumerableExpansion (형식)에 대 한 EntrySelectedBy의 SelectionCondition 요소](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md) 조건을 트리거하는 스크립트를 지정 합니다.
 
-[GroupBy (형식)에 대 한 SelectionCondition의 ScriptBlock 요소](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트를 `true`으로 평가 하면 조건이 충족 되 고 정의가 사용 됩니다. 이 요소는 새 개체 그룹이 표시 되는 방법을 정의 하는 데 사용 됩니다.
+[GroupBy (형식)에 대 한 SelectionCondition의 ScriptBlock 요소](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트가 `true`평가 되 면 조건이 충족 되 고 정의가 사용 됩니다. 이 요소는 새 개체 그룹이 표시 되는 방법을 정의 하는 데 사용 됩니다.
 
-[ListEntry (형식)의 경우 EntrySelectedBy에 대 한 SelectionCondition의 ScriptBlock 요소](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트를 `true`으로 평가 하면 조건이 충족 되 고 목록 항목이 사용 됩니다.
+[ListEntry (형식)의 경우 EntrySelectedBy에 대 한 SelectionCondition의 ScriptBlock 요소](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트가 `true`평가 되 면 조건이 충족 되 고 목록 항목이 사용 됩니다.
 
-[TableRowEntry (형식)의 경우 EntrySelectedBy에 대 한 SelectionCondition의 ScriptBlock 요소](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md) 조건을 트리거하는 스크립트 블록을 지정 합니다. 이 스크립트는-0 @no__t으로 평가 되 면 조건이 충족 되 고 테이블 항목이 사용 됩니다.
+[TableRowEntry (형식)의 경우 EntrySelectedBy에 대 한 SelectionCondition의 ScriptBlock 요소](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md) 조건을 트리거하는 스크립트 블록을 지정 합니다. 이 스크립트가 `true`평가 되 면 조건이 충족 되 고 테이블 항목이 사용 됩니다.
 
-[WideEntry (형식)의 경우 EntrySelectedBy에 대 한 SelectionCondition의 ScriptBlock 요소](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트를 사용 하 여 `true`으로 평가 되 면 조건이 충족 되 고 넓은 항목 정의가 사용 됩니다.
+[WideEntry (형식)의 경우 EntrySelectedBy에 대 한 SelectionCondition의 ScriptBlock 요소](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format.md) 조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트가 `true`평가 되 면 조건이 충족 되 고 넓은 항목 정의가 사용 됩니다.
 
 [TableColumnItem에 대 한 ScriptBlock 요소 (형식)](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md) 행의 열에 값이 표시 되는 스크립트를 지정 합니다.
 
@@ -431,6 +431,6 @@ CustomControl에 대 한 [SelectionCondition의 TypeName 요소 (형식)](./type
 
 [WrapTables 요소 (Format)](./wraptables-element-format.md) 데이터가 열의 너비 보다 길면 표 셀의 데이터가 다음 줄로 이동 하도록 지정 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)

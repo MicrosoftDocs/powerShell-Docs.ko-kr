@@ -23,7 +23,7 @@ Visual Studio 도구 상자에서 작업을 선택 하 고 워크플로 디자�
 
 ### <a name="setting-up-the-project"></a>프로젝트 설정
 
-1. [Visual Studio 도구 상자에 Windows PowerShell 활동 추가](./adding-windows-powershell-activities-to-the-visual-studio-toolbox.md) 의 절차에 따라 워크플로 프로젝트를 만들고 [microsoft](/dotnet/api/Microsoft.PowerShell.Activities) . s a [s. ](/dotnet/api/Microsoft.PowerShell.Management.Activities)도구 상자에 어셈블리를 추가할 수 있습니다.
+1. [Visual Studio 도구 상자에 Windows PowerShell 활동 추가](./adding-windows-powershell-activities-to-the-visual-studio-toolbox.md) 의 절차에 따라 워크플로 프로젝트를 만들고 [microsoft. powershell](/dotnet/api/Microsoft.PowerShell.Activities) 및 [microsoft.](/dotnet/api/Microsoft.PowerShell.Management.Activities) . s s e.
 
 2. 프로젝트에 참조 어셈블리로 서 management. Automation, Microsoft. management, microsoft. management, 및 Microsoft. c r e a t. n e t. n e t. Management를 추가 합니다.
 
@@ -31,13 +31,13 @@ Visual Studio 도구 상자에서 작업을 선택 하 고 워크플로 디자�
 
 1. 워크플로에 **시퀀스** 활동을 추가 합니다.
 
-2. 인수 형식이 `String[]` 인 `ComputerName` 이라는 인수를 만듭니다. 이 인수는 확인 및 가입할 컴퓨터의 이름을 나타냅니다.
+2. 인수 형식이 `String[]`인 `ComputerName` 이라는 인수를 만듭니다. 이 인수는 확인 및 가입할 컴퓨터의 이름을 나타냅니다.
 
 3. [System.object](/dotnet/api/System.Management.Automation.PSCredential)형식의 `DomainCred` 이라는 인수를 만듭니다. 이 인수는 도메인에 컴퓨터를 가입 시킬 수 있는 도메인 계정의 도메인 자격 증명을 나타냅니다.
 
 4. [System.object](/dotnet/api/System.Management.Automation.PSCredential)형식의 `MachineCred` 이라는 인수를 만듭니다. 이 인수는 확인 및 가입할 컴퓨터의 관리자 자격 증명을 나타냅니다.
 
-5. **Sequence** 활동 내에 **ParallelForEach** 활동을 추가 합니다. 루프가 `ComputerName` 배열의 요소를 반복 하도록 텍스트 상자에 `comp` 및 `ComputerName`을 입력 합니다.
+5. **Sequence** 활동 내에 **ParallelForEach** 활동을 추가 합니다. 루프에서 `ComputerName` 배열의 요소를 반복 하도록 텍스트 상자에 `comp` 및 `ComputerName`을 입력 합니다.
 
 6. **ParallelForEach** 활동의 본문에 **시퀀스** 활동을 추가 합니다. 시퀀스의 **DisplayName** 속성을 `JoinDomain`로 설정 합니다.
 
@@ -45,7 +45,7 @@ Visual Studio 도구 상자에서 작업을 선택 하 고 워크플로 디자�
 
 8. 다음과 같이 **GetWmiObject** 활동의 속성을 편집 합니다.
 
-   |속성|Value|
+   |속성|값|
    |--------------|-----------|
    |**클래스**|"Win32_ComputerSystem"|
    |**PSComputerName**|생략|
@@ -55,7 +55,7 @@ Visual Studio 도구 상자에서 작업을 선택 하 고 워크플로 디자�
 
 10. 다음과 같이 **Addcomputer** 활동의 속성을 편집 합니다.
 
-    |속성|Value|
+    |속성|값|
     |--------------|-----------|
     |**컴퓨터**|생략|
     |**DomainCredential**|DomainCred|
@@ -64,7 +64,7 @@ Visual Studio 도구 상자에서 작업을 선택 하 고 워크플로 디자�
 
 12. 다음과 같이 **RestartComputer** 활동의 속성을 편집 합니다.
 
-    |속성|Value|
+    |속성|값|
     |--------------|-----------|
     |**컴퓨터**|생략|
     |**증명서**|MachineCred|
@@ -77,4 +77,5 @@ Visual Studio 도구 상자에서 작업을 선택 하 고 워크플로 디자�
 
     절차를 완료 하면 워크플로 디자인 창이 다음과 같이 표시 됩니다.
 
-    workflow designer의 0JoinDomain XAML @no__t workflow designer![의 No__t JOINDOMAIN xaml](../media/joindomainworkflow.png "JoinDomainWorkflow")
+    workflow designer의 ![JoinDomain XAML](../media/joindomainworkflow.png)
+    ![workflow designer의 JOINDOMAIN xaml](../media/joindomainworkflow.png "JoinDomainWorkflow")

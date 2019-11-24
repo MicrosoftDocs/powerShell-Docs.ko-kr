@@ -33,15 +33,15 @@ Windows PowerShell 경로에 대 한 자세한 내용은 Windows PowerShell의 �
 
 ### <a name="defining-a-provider-qualified-path"></a>공급자 한정 경로 정의
 
-Windows PowerShell 런타임에서 공급자를 초기화 하 고 초기화 하지 못하게 하려면 Windows PowerShell 공급자가 공급자 한정 경로를 지원 해야 합니다. 예를 들어 FileSystem:: \\ \ uncshare\abc\bar는 Windows PowerShell에서 제공 하는 filesystem 공급자의 공급자 한정 경로입니다.
+Windows PowerShell 런타임에서 공급자를 초기화 하 고 초기화 하지 못하게 하려면 Windows PowerShell 공급자가 공급자 한정 경로를 지원 해야 합니다. 예를 들어 FileSystem::\\\uncshare\abc\bar는 Windows PowerShell에서 제공 하는 filesystem 공급자의 공급자 한정 경로입니다.
 
 ### <a name="defining-a-provider-direct-path"></a>공급자 직접 경로 정의
 
-Windows PowerShell 공급자에 대 한 원격 액세스를 허용 하려면 현재 위치에 대 한 Windows PowerShell 공급자에 직접 전달 하는 공급자 직접 경로를 지원 해야 합니다. 예를 들어, 레지스트리 Windows PowerShell 공급자는 \\ \ server\regkeypath를 공급자 직접 경로로 사용할 수 있습니다.
+Windows PowerShell 공급자에 대 한 원격 액세스를 허용 하려면 현재 위치에 대 한 Windows PowerShell 공급자에 직접 전달 하는 공급자 직접 경로를 지원 해야 합니다. 예를 들어, 레지스트리 Windows PowerShell 공급자는 \\\server\regkeypath를 공급자 직접 경로로 사용할 수 있습니다.
 
 ### <a name="defining-a-provider-internal-path"></a>공급자 정의-내부 경로
 
-공급자 cmdlet이 비 Windows PowerShell Api (응용 프로그래밍 인터페이스)를 사용 하 여 데이터에 액세스할 수 있도록 하려면 Windows PowerShell 공급자가 공급자 내부 경로를 지원 해야 합니다. 이 경로는 공급자 정규화 경로의 "::" 뒤에 표시 됩니다. 예를 들어 filesystem Windows PowerShell 공급자에 대 한 공급자 내부 경로는 \\ \ uncshare\abc\bar.입니다.
+공급자 cmdlet이 비 Windows PowerShell Api (응용 프로그래밍 인터페이스)를 사용 하 여 데이터에 액세스할 수 있도록 하려면 Windows PowerShell 공급자가 공급자 내부 경로를 지원 해야 합니다. 이 경로는 공급자 정규화 경로의 "::" 뒤에 표시 됩니다. 예를 들어 filesystem Windows PowerShell 공급자에 대 한 공급자 내부 경로는 \\\uncshare\abc\bar.
 
 ## <a name="changing-stored-data"></a>저장 된 데이터 변경
 
@@ -53,11 +53,11 @@ Windows PowerShell은 고유한 Windows PowerShell 공급자를 구현 하는 �
 
 각 Windows PowerShell 공급자 기본 클래스는 cmdlet 집합을 사용할 수 있도록 합니다. 이 섹션에서는 cmdlet에 대해 설명 하지만 매개 변수는 설명 하지 않습니다.
 
-Windows PowerShell 런타임에서는 세션 상태를 사용 하 여 `Get-Location`, `Set-Location`, `Pop-Location` 및 `Push-Location` cmdlet과 같은 특정 Windows PowerShell 공급자에서 몇 가지 location cmdlet을 사용할 수 있도록 합니다. @No__t-0 cmdlet을 사용 하 여 이러한 위치 cmdlet에 대 한 정보를 가져올 수 있습니다.
+Windows PowerShell 런타임에서는 세션 상태를 사용 하 여 `Get-Location`, `Set-Location`, `Pop-Location`, `Push-Location` cmdlet 등의 특정 Windows PowerShell 공급자에서 몇 가지 location cmdlet을 사용할 수 있도록 합니다. `Get-Help` cmdlet을 사용 하 여 이러한 위치 cmdlet에 대 한 정보를 가져올 수 있습니다.
 
 ### <a name="cmdletprovider-base-class"></a>CmdletProvider 기본 클래스
 
-[System.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) 클래스는 기본 Windows PowerShell 공급자를 정의 합니다. 이 클래스는 공급자 선언을 지원 하 고 모든 Windows PowerShell 공급자가 사용할 수 있는 다양 한 속성 및 메서드를 제공 합니다. 클래스는 `Get-PSProvider` cmdlet에 의해 호출 되어 세션에 사용 가능한 모든 공급자를 나열 합니다. 이 cmdlet의 구현은 세션 상태로 제공 됩니다.
+[System.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) 클래스는 기본 Windows PowerShell 공급자를 정의 합니다. 이 클래스는 공급자 선언을 지원 하 고 모든 Windows PowerShell 공급자가 사용할 수 있는 다양 한 속성 및 메서드를 제공 합니다. 클래스는 세션에 사용 가능한 모든 공급자를 나열 하기 위해 `Get-PSProvider` cmdlet에 의해 호출 됩니다. 이 cmdlet의 구현은 세션 상태로 제공 됩니다.
 
 > [!NOTE]
 > Windows powershell 공급자는 모든 Windows PowerShell 언어 범위에서 사용할 수 있습니다.
@@ -84,7 +84,7 @@ Windows PowerShell 런타임에서는 세션 상태를 사용 하 여 `Get-Locat
 |`Invoke-Item`|지정 된 경로에 있는 항목에 대 한 기본 동작을 호출 합니다.|
 |`Set-Item`|지정 된 위치에 있는 항목을 지정 된 값으로 설정 합니다. 이 cmdlet은 `PassThru` 매개 변수를 지정 하지 않으면 파이프라인을 통해 출력 개체를 전달 하지 않습니다.|
 |`Resolve-Path`|Windows PowerShell 경로에 대 한 와일드 카드 및 스트림 경로 정보를 확인 합니다.|
-|`Test-Path`|지정 된 경로에 대 한를 테스트 하 고 `true`을 반환 합니다 (있는 경우). 그렇지 않으면-1을 @no__t 합니다. 이 cmdlet은 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) 에 대 한 `IsContainer` 매개 변수를 지원 하기 위해 구현 됩니다.|
+|`Test-Path`|지정 된 경로를 테스트 하 고, 존재 하면 `true`을 반환 하 고, 그렇지 않으면 `false` 합니다. 이 cmdlet은 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) 에 대 한 `IsContainer` 매개 변수를 지원 하기 위해 구현 됩니다.|
 
 ### <a name="containercmdletprovider-base-class"></a>ContainerCmdletProvider 기본 클래스
 
@@ -131,7 +131,7 @@ Windows powershell 공급자는 Windows PowerShell 기본 클래스 중 하나�
 [System.object](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider) 는 데이터 저장소의 항목 속성에 대 한 작업을 수행 하는 속성 Windows PowerShell 공급자를 정의 합니다. 다음 표에서는이 인터페이스에서 노출 하는 cmdlet을 보여 줍니다.
 
 > [!NOTE]
-> 이러한 cmdlet의 `Path` 매개 변수는 속성을 식별 하는 대신 항목에 대 한 경로를 나타냅니다.
+> 이러한 cmdlet의 `Path` 매개 변수는 속성을 식별 하는 대신 항목의 경로를 나타냅니다.
 
 |Cmdlet|정의|
 |------------|----------------|
@@ -141,7 +141,7 @@ Windows powershell 공급자는 Windows PowerShell 기본 클래스 중 하나�
 
 ### <a name="idynamicpropertycmdletprovider"></a>IDynamicPropertyCmdletProvider
 
-[System.object](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider)에서 파생 된 [Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider) 인터페이스는 해당 하는의 동적 매개 변수를 지정 하는 공급자를 정의 합니다. 지원 되는 cmdlet입니다. 이 형식의 공급자는 런타임에 속성을 정의할 수 있는 작업 (예: 새 속성 작업)을 처리 합니다. 정적으로 정의 된 속성을 가진 항목에서는 이러한 작업을 수행할 수 없습니다. 다음 표에서는이 인터페이스에서 노출 하는 cmdlet을 보여 줍니다.
+[System.object](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider)에서 파생 된 [Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider) 인터페이스는 지원 되는 cmdlet에 대 한 동적 매개 변수를 지정 하는 공급자를 정의 합니다. 이 형식의 공급자는 런타임에 속성을 정의할 수 있는 작업 (예: 새 속성 작업)을 처리 합니다. 정적으로 정의 된 속성을 가진 항목에서는 이러한 작업을 수행할 수 없습니다. 다음 표에서는이 인터페이스에서 노출 하는 cmdlet을 보여 줍니다.
 
 |Cmdlet|정의|
 |------------|----------------|
@@ -160,7 +160,7 @@ Windows powershell 공급자는 Windows PowerShell 기본 클래스 중 하나�
 |`Get-Acl`|운영 체제 리소스 (예: 파일 또는 개체)를 보호 하는 데 사용 되는 보안 설명자의 일부인 ACL (액세스 제어 목록)에 포함 된 정보를 검색 합니다.|
 |`Set-Acl`|ACL에 대 한 정보를 설정 합니다. 지정 된 경로에 대해 지정 된 항목에 대 한 [accesscontrol-namespace](/dotnet/api/System.Security.AccessControl.ObjectSecurity) 의 인스턴스 형식으로 되어 있습니다. Windows PowerShell 공급자가 보안 정보 설정을 지 원하는 경우이 cmdlet은 레지스트리의 파일, 키 및 하위 키에 대 한 정보를 설정할 수 있습니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Windows PowerShell 공급자 만들기](./how-to-create-a-windows-powershell-provider.md)
 

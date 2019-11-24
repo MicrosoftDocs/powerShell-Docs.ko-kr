@@ -17,13 +17,13 @@ ms.locfileid: "72360982"
 ---
 # <a name="runspace02-sample"></a>Runspace02 샘플
 
-이 샘플에서는 [system.object](/dotnet/api/system.management.automation.powershell) 를 사용 하 여 [Get Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) 및 [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) cmdlet을 동기적으로 실행 하는 방법을 보여 줍니다. System.Diagnostics.Process.Id [cmdlet은](/powershell/module/Microsoft.PowerShell.Management/Get-Process) 로컬 컴퓨터에서 실행 중인 각 프로세스에 대해 [system.object](/dotnet/api/System.Diagnostics.Process) 개체를 반환 하 고, @no__t 2는 해당 [*](/dotnet/api/System.Diagnostics.Process.Id) 속성을 기준으로 개체를 정렬 합니다. 이러한 명령의 결과는 [Windows Forms](/dotnet/api/System.Windows.Forms.DataGridView) 컨트롤을 사용 하 여 표시 됩니다.
+이 샘플에서는 [system.object](/dotnet/api/system.management.automation.powershell) 를 사용 하 여 [Get Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) 및 [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) cmdlet을 동기적으로 실행 하는 방법을 보여 줍니다. System.Diagnostics.Process.Id [cmdlet은](/powershell/module/Microsoft.PowerShell.Management/Get-Process) 로컬 컴퓨터에서 실행 중인 각 프로세스에 대해 [system.object](/dotnet/api/System.Diagnostics.Process) 개체를 반환 하 고, `Sort-Object`는 해당 [*](/dotnet/api/System.Diagnostics.Process.Id) 속성을 기준으로 개체를 정렬 합니다. 이러한 명령의 결과는 [Windows Forms](/dotnet/api/System.Windows.Forms.DataGridView) 컨트롤을 사용 하 여 표시 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
 이 샘플에는 Windows PowerShell 2.0이 필요 합니다.
 
-## <a name="demonstrates"></a>보여
+## <a name="demonstrates"></a>데모
 
 이 샘플에서는 다음을 보여 줍니다.
 
@@ -114,6 +114,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Windows PowerShell 호스트 응용 프로그램 작성](./writing-a-windows-powershell-host-application.md)

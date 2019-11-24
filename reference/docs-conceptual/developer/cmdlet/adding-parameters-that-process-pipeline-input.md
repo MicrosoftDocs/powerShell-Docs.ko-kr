@@ -45,7 +45,7 @@ Public Class GetProcCommand
 
 이 섹션에서는 cmdlet에 대 한 파이프라인에서 입력을 정의 하는 방법을 설명 합니다. 이 In-proc cmdlet은 [명령줄 입력을 처리 하는 매개 변수 추가](./adding-parameters-that-process-command-line-input.md)에 설명 된 대로 `Name` 매개 변수를 나타내는 속성을 정의 합니다. 매개 변수 선언에 대 한 일반 정보는 해당 항목을 참조 하세요.
 
-그러나 cmdlet이 파이프라인 입력을 처리 해야 하는 경우에는 Windows PowerShell 런타임에서 입력 값에 바인딩된 매개 변수를 포함 해야 합니다. 이렇게 하려면 `ValueFromPipeline` 키워드를 추가 하거나 `ValueFromPipelineByProperty` 키워드를 [system.object](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성 선언에 추가 해야 합니다. Cmdlet이 전체 입력 개체에 액세스 하는 경우 `ValueFromPipeline` 키워드를 지정 합니다. Cmdlet이 개체의 속성에만 액세스 하는 경우 `ValueFromPipelineByProperty`을 지정 합니다.
+그러나 cmdlet이 파이프라인 입력을 처리 해야 하는 경우에는 Windows PowerShell 런타임에서 입력 값에 바인딩된 매개 변수를 포함 해야 합니다. 이렇게 하려면 `ValueFromPipeline` 키워드를 추가 하거나 `ValueFromPipelineByProperty` 키워드를 [system.object](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성 선언에 추가 해야 합니다. Cmdlet이 전체 입력 개체에 액세스 하는 경우 `ValueFromPipeline` 키워드를 지정 합니다. Cmdlet이 개체의 속성에만 액세스 하는 경우 `ValueFromPipelineByProperty`를 지정 합니다.
 
 다음은 파이프라인 입력을 허용 하는이 In-proc cmdlet의 `Name` 매개 변수에 대 한 매개 변수 선언입니다.
 
@@ -68,7 +68,7 @@ End Property
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplesgetproc03#GetProc03VBNameParameter](Msh_samplesgetproc03#GetProc03VBNameParameter)]  -->
 
-이전 선언은 `ValueFromPipeline` 키워드를 `true`로 설정 하 여 개체가 매개 변수와 동일한 형식 이거나 동일한 형식으로 강제 변환할 수 있는 경우 Windows PowerShell 런타임이 들어오는 개체에 매개 변수를 바인딩합니다. 또한 `ValueFromPipelineByPropertyName` 키워드는 Windows PowerShell 런타임에서 들어오는 개체에서 `Name` 속성을 확인 하도록 `true`로 설정 됩니다. 들어오는 개체에 이러한 속성이 있는 경우 런타임에서는 `Name` 매개 변수를 들어오는 개체의 `Name` 속성에 바인딩합니다.
+이전 선언은 `true`로 `ValueFromPipeline` 키워드를 설정 하 여, 개체가 매개 변수와 동일한 형식 이거나 동일한 형식으로 강제 변환할 수 있는 경우 Windows PowerShell 런타임이 들어오는 개체에 매개 변수를 바인딩합니다. Windows PowerShell 런타임이 들어오는 개체에서 `Name` 속성을 확인할 수 있도록 `ValueFromPipelineByPropertyName` 키워드도 `true`로 설정 됩니다. 들어오는 개체에 이러한 속성이 있는 경우 런타임에서는 `Name` 매개 변수를 들어오는 개체의 `Name` 속성에 바인딩합니다.
 
 > [!NOTE]
 > 매개 변수에 대 한 `ValueFromPipeline` attribute 키워드의 설정은 `ValueFromPipelineByPropertyName` 키워드의 설정 보다 우선 합니다.
@@ -77,7 +77,7 @@ End Property
 
 Cmdlet이 파이프라인 입력을 처리 하려면 적절 한 입력 처리 메서드를 재정의 해야 합니다. 기본 입력 처리 방법은 [첫 번째 Cmdlet을 만드는 데](./creating-a-cmdlet-without-parameters.md)도입 되었습니다.
 
-이 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 재정의 하 여 사용자 또는 스크립트에서 제공 하는 @no__t 1 매개 변수 입력을 처리 합니다. 이 메서드는 요청 된 각 프로세스 이름 또는 모든 프로세스에 대 한 프로세스를 가져옵니다. 이름이 제공 되지 않은 경우에는입니다. [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)내에서 [WriteObject (system.string, system.string)](/dotnet/api/system.management.automation.cmdlet.writeobject?view=pscore-6.2.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) 호출은 파이프라인에 출력 개체를 전송 하는 데 필요한 출력 메커니즘을 가집니다. 이 호출의 두 번째 매개 변수 `enumerateCollection`은 `true`로 설정 하 여 프로세스 개체의 배열을 열거 하도록 Windows PowerShell 런타임에 지시 하 고 명령줄에 프로세스를 한 번에 하나씩 작성 합니다.
+이 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드는 사용자 또는 스크립트에서 제공 하는 `Name` 매개 변수 입력을 처리 하도록 재정의 합니다. 이 메서드는 요청 된 각 프로세스 이름 또는 모든 프로세스에 대 한 프로세스를 가져옵니다. 이름이 제공 되지 않은 경우에는입니다. [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)내에서 [WriteObject (system.string, system.string)](/dotnet/api/system.management.automation.cmdlet.writeobject?view=pscore-6.2.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) 호출은 파이프라인에 출력 개체를 전송 하는 데 필요한 출력 메커니즘을 가집니다. 이 호출의 두 번째 매개 변수 `enumerateCollection`는 Windows PowerShell 런타임에 프로세스 개체의 배열을 열거 하도록 지시 하 고 명령줄에 프로세스를 한 번에 하나씩 작성 하도록 `true`로 설정 됩니다.
 
 ```csharp
 protected override void ProcessRecord()
@@ -124,7 +124,7 @@ Protected Overrides Sub ProcessRecord()
 End Sub 'ProcessRecord
 ```
 
-## <a name="code-sample"></a>코드 샘플
+## <a name="code-sample"></a>코드 예제
 
 전체 C# 샘플 코드는 [GetProcessSample03 샘플](./getprocesssample03-sample.md)을 참조 하세요.
 
@@ -174,7 +174,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
         726      21  25872   16652    138   22.09  3860  iexplore
     ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [명령줄 입력을 처리 하는 매개 변수 추가](./adding-parameters-that-process-command-line-input.md)
 

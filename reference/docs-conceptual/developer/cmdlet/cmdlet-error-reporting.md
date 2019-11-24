@@ -43,7 +43,7 @@ Cmdlet은 오류 종료 오류 또는 종료 되지 않는 오류에 따라 오�
 
 ## <a name="reporting-nonterminating-errors"></a>종료 되지 않는 오류 보고
 
-종료 되지 않는 오류에 대 한 보고는 항상 cmdlet의 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드 구현 내에서 수행 해야 [합니다 .이](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드는, 또는입니다. [system.object](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . n a m. 이러한 오류 유형은 [WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 메서드를 호출 하 여 오류 스트림으로 오류 레코드를 전송 하 여 보고 됩니다.
+종료 되지 않는 오류에 대 한 보고는 항상 cmdlet의 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드 또는 system.object 구현 내에서 수행 [해야 합니다 (](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 예를 들어,, 또는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) ... s a s.). 이러한 오류 유형은 [WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 메서드를 호출 하 여 오류 스트림으로 오류 레코드를 전송 하 여 보고 됩니다.
 
 ## <a name="reporting-terminating-errors"></a>종료 오류 보고
 
@@ -82,9 +82,9 @@ PowerShell은이 식별자와 cmdlet 식별자를 결합 하 여 나중에 오�
 
 사용할 수 있는 오류 범주에 대 한 설명은 [ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) 열거를 참조 하세요. 일반적으로 가능한 경우 **noerror**, **UndefinedError**및 **genericerror** 를 사용 하지 않도록 해야 합니다.
 
-사용자 @no__t는 범주를 기반으로 하는 **오류를 볼**수 있습니다.
+사용자는 범주 **보기**에 `$ErrorView` 설정 된 범주에 따라 오류를 볼 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [Cmdlet 개요](./cmdlet-overview.md)
 

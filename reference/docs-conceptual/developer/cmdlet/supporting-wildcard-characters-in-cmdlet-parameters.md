@@ -22,7 +22,7 @@ ms.locfileid: "72365312"
 
 ## <a name="windows-powershell-cmdlets-that-use-wildcards"></a>와일드 카드를 사용 하는 Windows PowerShell Cmdlet
 
- 많은 Windows PowerShell cmdlet은 해당 매개 변수 값에 와일드 카드 문자를 지원 합니다. 예를 들어 `Name` 또는 `Path` 매개 변수를 포함 하는 거의 모든 cmdlet은 이러한 매개 변수에 대해 와일드 카드 문자를 지원 합니다. @No__t-0 매개 변수를 포함 하는 대부분의 cmdlet에는 와일드 카드 문자를 지원 하지 않는 `LiteralPath` 매개 변수만 있습니다. 다음 명령은 와일드 카드 문자를 사용 하 여 이름에 Get 동사가 포함 된 현재 세션의 모든 cmdlet을 반환 하는 방법을 보여 줍니다.
+ 많은 Windows PowerShell cmdlet은 해당 매개 변수 값에 와일드 카드 문자를 지원 합니다. 예를 들어 `Name` 또는 `Path` 매개 변수가 있는 거의 모든 cmdlet은 이러한 매개 변수에 대해 와일드 카드 문자를 지원 합니다. `Path` 매개 변수를 포함 하는 대부분의 cmdlet에는 와일드 카드 문자를 지원 하지 않는 `LiteralPath` 매개 변수도 있습니다. 다음 명령은 와일드 카드 문자를 사용 하 여 이름에 Get 동사가 포함 된 현재 세션의 모든 cmdlet을 반환 하는 방법을 보여 줍니다.
 
  `Get-Command get-*`
 
@@ -30,7 +30,7 @@ ms.locfileid: "72365312"
 
 Windows PowerShell은 다음 와일드 카드 문자를 지원 합니다.
 
-| 카드인 |                             설명                             |  예제   |     일치 항목      | 일치 하지 않음 |
+| 카드인 |                             설명                             |  예제   |     요청 내용      | 일치 하지 않음 |
 | -------- | ------------------------------------------------------------------- | ---------- | ---------------- | -------------- |
 | *        | 지정 된 위치에서 시작 하 여 0 개 이상의 문자를 찾습니다. | `a*`       | A, ag, Apple     |                |
 | ?        | 지정 된 위치의 모든 문자를 찾습니다.                     | `?n`       | , In, on       | 되었음            |
@@ -41,7 +41,7 @@ Windows PowerShell은 다음 와일드 카드 문자를 지원 합니다.
 
 `Get-ChildItem c:\techdocs\[a-l]\*.txt`
 
-이전 명령은 와일드 카드 `[a-l]`을 사용 하 여 파일 이름이 문자 "a"부터 "l"로 시작 하 고 `*` 와일드 카드 문자를 파일 이름 및 .txt의 첫 문자 사이에 있는 모든 문자에 대 한 자리 표시자로 사용 하도록 지정 합니다 **.** 확장.
+이전 명령은 range 와일드 카드 `[a-l]`를 사용 하 여 파일 이름이 문자 "a"부터 "l"로 시작 하 고 `*` 와일드 카드 문자를 파일 이름과 **.txt** 확장명의 첫 문자 사이에 있는 모든 문자에 대 한 자리 표시자로 사용 하도록 지정 합니다.
 
 다음 예제에서는 "d" 문자를 제외 하 고 "a"부터 "f" 까지의 다른 모든 문자를 포함 하는 범위 와일드 카드 패턴을 사용 합니다.
 
@@ -49,19 +49,19 @@ Windows PowerShell은 다음 와일드 카드 문자를 지원 합니다.
 
 ## <a name="handling-literal-characters-in-wildcard-patterns"></a>와일드 카드 패턴의 리터럴 문자 처리
 
-지정 하는 와일드 카드 패턴에 와일드 카드 문자로 interpretted 서는 안 되는 리터럴 문자가 포함 된 경우에는 이스케이프 문자로 억음 문자 (`` ` ``)를 사용 합니다. PowerShell API에서 리터럴 문자를 지정 하는 경우 단일 backtick을 사용 합니다. PowerShell 명령 프롬프트에서 리터럴 문자를 지정 하는 경우 두 개의 backticks을 사용 합니다.
+지정 하는 와일드 카드 패턴에 와일드 카드 문자로 interpretted 서는 안 되는 리터럴 문자가 포함 된 경우에는 억음 문자 (`` ` ``)를 이스케이프 문자로 사용 합니다. PowerShell API에서 리터럴 문자를 지정 하는 경우 단일 backtick을 사용 합니다. PowerShell 명령 프롬프트에서 리터럴 문자를 지정 하는 경우 두 개의 backticks을 사용 합니다.
 
 예를 들어 다음 패턴에는 문자 그대로 수행 해야 하는 두 개의 대괄호가 포함 되어 있습니다.
 
 PowerShell API에서 사용 하는 경우 다음을 사용 합니다.
 
-- "John Smith \` [* ']"
+- "John Smith \`[* ']"
 
 PowerShell 명령 프롬프트에서 사용 되는 경우:
 
-- "John Smith \` @ no__t [* \` ']"
+- "John Smith \`\`[*\`']"
 
-이 패턴은 "John Smith [Marketing]" 또는 "John Smith [Development]"와 일치 합니다. 예:
+이 패턴은 "John Smith [Marketing]" 또는 "John Smith [Development]"와 일치 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```
 PS> "John Smith [Marketing]" -like "John Smith ``[*``]"
@@ -74,9 +74,9 @@ True
 ## <a name="cmdlet-output-and-wildcard-characters"></a>Cmdlet 출력 및 와일드 카드 문자
 
 Cmdlet 매개 변수가 와일드 카드 문자를 지 원하는 경우이 작업은 일반적으로 배열 출력을 생성 합니다.
-사용자가 단일 항목만 사용할 수 있기 때문에 경우에 따라 배열 출력을 지 원하는 것은 바람직하지 않습니다. 예를 들어 `Set-Location` cmdlet은 사용자가 단일 위치만 설정 하므로 배열 출력을 지원 하지 않습니다. 이 인스턴스에서 cmdlet은 여전히 와일드 카드 문자를 지원 하지만 단일 위치에 대해 해상도를 강제 적용 합니다.
+사용자가 단일 항목만 사용할 수 있기 때문에 경우에 따라 배열 출력을 지 원하는 것은 바람직하지 않습니다. 예를 들어 사용자가 단일 위치만 설정 하므로 `Set-Location` cmdlet은 배열 출력을 지원 하지 않습니다. 이 인스턴스에서 cmdlet은 여전히 와일드 카드 문자를 지원 하지만 단일 위치에 대해 해상도를 강제 적용 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
 

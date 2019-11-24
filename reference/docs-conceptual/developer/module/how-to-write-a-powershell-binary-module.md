@@ -73,9 +73,9 @@ ms.locfileid: "72367122"
 
 3. 솔루션을 패키지 하 고 PowerShell 모듈 경로의 어딘가에 패키지를 저장 합니다.
 
-   @No__t-0 전역 환경 변수는 PowerShell이 모듈을 찾는 데 사용 하는 기본 경로를 설명 합니다. 예를 들어 시스템에 모듈을 저장 하는 일반적인 경로는 `%SystemRoot%\users\<user>\Documents\WindowsPowerShell\Modules\<moduleName>`입니다. 기본 경로를 사용 하지 않는 경우 설치 하는 동안 모듈의 위치를 명시적으로 명시 해야 합니다. 솔루션에 대 한 여러 어셈블리와 파일을 저장 하는 폴더가 필요할 수 있으므로 모듈을 저장할 폴더를 만들어야 합니다.
+   `PSModulePath` 전역 환경 변수는 PowerShell이 모듈을 찾는 데 사용 하는 기본 경로를 설명 합니다. 예를 들어 시스템에 모듈을 저장 하는 일반적인 경로는 `%SystemRoot%\users\<user>\Documents\WindowsPowerShell\Modules\<moduleName>`됩니다. 기본 경로를 사용 하지 않는 경우 설치 하는 동안 모듈의 위치를 명시적으로 명시 해야 합니다. 솔루션에 대 한 여러 어셈블리와 파일을 저장 하는 폴더가 필요할 수 있으므로 모듈을 저장할 폴더를 만들어야 합니다.
 
-   기술적으로는 @no__t 아무 곳에 나 모듈을 설치할 필요가 없습니다.-0은 PowerShell에서 모듈에 대해 찾을 기본 위치입니다. 그러나 모듈을 다른 위치에 저장 해야 하는 경우를 제외 하 고이 작업을 수행 하는 것이 좋습니다. 자세한 내용은 [Powershell 모듈](./installing-a-powershell-module.md) 설치 및 [Powershell 모듈 설치 경로 수정](./modifying-the-psmodulepath-installation-path.md)을 참조 하세요.
+   기술적으로는 `PSModulePath` 어디에 나 모듈을 설치할 필요가 없습니다 .이는 단순히 PowerShell이 모듈을 찾을 기본 위치입니다. 그러나 모듈을 다른 위치에 저장 해야 하는 경우를 제외 하 고이 작업을 수행 하는 것이 좋습니다. 자세한 내용은 [Powershell 모듈](./installing-a-powershell-module.md) 설치 및 [Powershell 모듈 설치 경로 수정](./modifying-the-psmodulepath-installation-path.md)을 참조 하세요.
 
 4. [Import-module에 대 한](/powershell/module/Microsoft.PowerShell.Core/Import-Module)호출을 사용 하 여 모듈을 PowerShell로 가져옵니다.
 
@@ -89,6 +89,6 @@ ms.locfileid: "72367122"
 서식 지정 및 형식 파일을 가져오려면 모듈 매니페스트를 만들어야 합니다.
 [PowerShell 모듈 매니페스트를 작성 하는 방법](how-to-write-a-powershell-module-manifest.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Windows PowerShell 모듈 작성](./writing-a-windows-powershell-module.md)

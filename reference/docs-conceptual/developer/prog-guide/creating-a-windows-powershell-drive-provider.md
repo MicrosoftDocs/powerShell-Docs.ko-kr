@@ -31,11 +31,11 @@ ms.locfileid: "72366832"
 
 [!code-csharp[AccessDBProviderSample02.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs#L29-L30 "AccessDBProviderSample02.cs")]
 
-이 예제에서 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 특성은 공급자의 사용자에 게 친숙 한 이름과 공급자가 windows에 노출 하는 windows PowerShell 관련 기능을 지정 합니다. 명령을 처리 하는 동안 PowerShell 런타임 공급자 기능에 사용할 수 있는 값은 [system.web](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . x m m. 이 드라이브 공급자는 이러한 기능을 지원 하지 않습니다.
+이 예에서 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 특성은 공급자에 대해 사용자에 게 친숙 한 이름을 지정 하 고, 명령을 처리 하는 동안 공급자가 windows powershell 런타임에 노출 하는 windows powershell 관련 기능을 지정 합니다. 공급자 기능에 사용할 수 있는 값은 [system.web](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . x m m. 이 드라이브 공급자는 이러한 기능을 지원 하지 않습니다.
 
 ## <a name="defining-base-functionality"></a>기본 기능 정의
 
-[Windows PowerShell 공급자 디자인](./designing-your-windows-powershell-provider.md)에 설명 된 대로, [system.web](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . c s d. c s d. c s [d.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) 공급자를 초기화 하 고 초기화 하는 데 필요한 메서드를 정의 합니다. 세션 관련 초기화 정보를 추가 하 고 공급자가 사용 하는 리소스를 해제 하는 기능을 구현 하려면 [기본 Windows PowerShell 공급자 만들기](./creating-a-basic-windows-powershell-provider.md)를 참조 하세요. 그러나 여기에 설명 된 공급자를 비롯 한 대부분의 공급자는 Windows PowerShell에서 제공 하는이 기능의 기본 구현을 사용할 수 있습니다.
+[Windows PowerShell 공급자 디자인](./designing-your-windows-powershell-provider.md)에 설명 된 대로, [system.object](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 를 초기화 하 고 초기화 하는 데 필요한 메서드를 정의 하는 [system.web](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) . n a m e. c s d. 세션 관련 초기화 정보를 추가 하 고 공급자가 사용 하는 리소스를 해제 하는 기능을 구현 하려면 [기본 Windows PowerShell 공급자 만들기](./creating-a-basic-windows-powershell-provider.md)를 참조 하세요. 그러나 여기에 설명 된 공급자를 비롯 한 대부분의 공급자는 Windows PowerShell에서 제공 하는이 기능의 기본 구현을 사용할 수 있습니다.
 
 ## <a name="creating-drive-state-information"></a>드라이브 상태 정보 만들기
 
@@ -55,13 +55,13 @@ Windows PowerShell 런타임에서 드라이브를 만들 수 있도록 하려�
 
 - [PSDriveinfo *](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) 멤버가 있고 데이터 저장소에 대 한 연결을 만들 수 있는지 확인 하십시오.
 
-- @No__t-0 cmdlet을 지원 하 여 드라이브를 만들고 연결 멤버를 채웁니다.
+- `New-PSDrive` cmdlet을 지원 하 여 드라이브를 만들고 연결 멤버를 채웁니다.
 
 - 제안 된 드라이브에 대 한 [PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) 개체의 유효성을 검사 합니다.
 
 - 필요한 성능 또는 안정성 정보를 사용 하 여 드라이브를 설명 하는 [PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) 개체를 수정 하거나 드라이브를 사용 하는 호출자에 게 추가 데이터를 제공 합니다.
 
-- [WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) 메서드를 사용 하 여 오류를 처리 한 다음-1 @no__t 반환 합니다.
+- [WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) 메서드를 사용 하 여 오류를 처리 한 다음 `null`을 반환 합니다.
 
   이 메서드는 메서드에 전달 된 드라이브 정보 또는 공급자별 버전을 반환 합니다.
 
@@ -95,9 +95,9 @@ Windows PowerShell 런타임에서 드라이브를 만들 수 있도록 하려�
 
 #### <a name="things-to-remember-about-implementing-initializedefaultdrives"></a>InitializeDefaultDrives 구현에 대해 기억할 사항
 
-모든 드라이브 공급자는 사용자가 검색 기능을 지원할 수 있도록 루트 드라이브를 탑재 해야 합니다. 루트 드라이브에는 다른 탑재 된 드라이브의 루트로 사용 되는 위치가 나열 될 수 있습니다. 예를 들어 Active Directory 공급자는 DSE (루트 분산 시스템 환경)의 `namingContext` 특성에서 찾은 명명 컨텍스트를 나열 하는 드라이브를 만들 수 있습니다. 이렇게 하면 사용자가 다른 드라이브의 탑재 위치를 검색할 수 있습니다.
+모든 드라이브 공급자는 사용자가 검색 기능을 지원할 수 있도록 루트 드라이브를 탑재 해야 합니다. 루트 드라이브에는 다른 탑재 된 드라이브의 루트로 사용 되는 위치가 나열 될 수 있습니다. 예를 들어 Active Directory 공급자는 DSE (루트 분산 시스템 환경)의 `namingContext` 특성에 있는 명명 컨텍스트를 나열 하는 드라이브를 만들 수 있습니다. 이렇게 하면 사용자가 다른 드라이브의 탑재 위치를 검색할 수 있습니다.
 
-## <a name="code-sample"></a>코드 샘플
+## <a name="code-sample"></a>코드 예제
 
 전체 샘플 코드는 [AccessDbProviderSample02 코드 샘플](./accessdbprovidersample02-code-sample.md)을 참조 하세요.
 
@@ -105,11 +105,11 @@ Windows PowerShell 런타임에서 드라이브를 만들 수 있도록 하려�
 
 Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 파생에서 사용할 수 있는 모든 cmdlet을 포함 하 여 명령줄에서 지원 되는 cmdlet을 실행 하 여 테스트할 수 있습니다. 샘플 드라이브 공급자를 테스트해 보겠습니다.
 
-1. @No__t-0 cmdlet을 실행 하 여 공급자 목록을 검색 하 여 AccessDB 드라이브 공급자가 있는지 확인 합니다.
+1. `Get-PSProvider` cmdlet을 실행 하 여 공급자 목록을 검색 하 여 AccessDB 드라이브 공급자가 있는지 확인 합니다.
 
    **PS > `Get-PSProvider`**
 
-   다음과 같은 출력이 나타납니다.
+   다음 출력이 표시됩니다.
 
    ```output
    Name                 Capabilities                  Drives
@@ -128,7 +128,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
 
    **PS > psdrive-name mydb-root c:\ps\northwind.mdb-psprovider AccessDb**
 
-   다음과 같은 출력이 나타납니다.
+   다음 출력이 표시됩니다.
 
    ```output
    Name     Provider     Root                   CurrentLocation
@@ -143,7 +143,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
 
    **PS > (psdrive mydb). 연결**
 
-   다음과 같은 출력이 나타납니다.
+   다음 출력이 표시됩니다.
 
    ```output
    ConnectionString  : Driver={Microsoft Access Driver (*.mdb)};DBQ=c:\ps\northwind.mdb
@@ -163,7 +163,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
 
    **PS > 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Windows PowerShell 공급자 만들기](./how-to-create-a-windows-powershell-provider.md)
 

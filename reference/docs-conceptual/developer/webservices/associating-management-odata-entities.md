@@ -17,7 +17,7 @@ ms.locfileid: "72359812"
 ---
 # <a name="associating-management-odata-entities"></a>관리 OData 엔터티 연결
 
-서로 다른 두 관리 OData 엔터티 간에 연결을 만드는 것이 유용한 경우가 많습니다. 예를 들어 관리 OData 서비스는 범주로 구성 된 제품의 카탈로그를 관리 하는 엔터티를 가질 수 있으며-0 및 `Category` @no__t 엔터티를 정의 합니다. 클라이언트는 이러한 두 엔터티를 연결 하 여 웹 서비스에 대 한 단일 요청으로 범주의 모든 제품에 대 한 정보를 가져올 수 있습니다.
+서로 다른 두 관리 OData 엔터티 간에 연결을 만드는 것이 유용한 경우가 많습니다. 예를 들어 관리 OData 서비스는 범주로 구성 된 제품의 카탈로그를 관리 하는 엔터티를 가질 수 있으며 `Product` 및 `Category`엔터티를 정의 합니다. 클라이언트는 이러한 두 엔터티를 연결 하 여 웹 서비스에 대 한 단일 요청으로 범주의 모든 제품에 대 한 정보를 가져올 수 있습니다.
 
 엔터티 간의 연결을 만드는 방법을 보여 주는 샘플은 [연결 샘플](https://code.msdn.microsoft.com:443/windowsdesktop/Association-sample-0f0fa87e)에서 다운로드할 수 있습니다.
 
@@ -43,9 +43,9 @@ string Products[];
 }
 ```
 
-@No__t-0 클래스는 해당 범주에 속하는 제품의 이름 배열인 속성을 정의 합니다.
+`Category` 클래스는 해당 범주에 속하는 제품의 이름 배열인 속성을 정의 합니다.
 
-두 엔터티를 연결 하려면 서비스에 대 한 리소스 스키마 MOF 파일에서 `Association` 특성을 사용 하 여 클래스를 정의 해야 합니다. 클래스는 연결할 두 엔터티를 정의 해야 합니다 (연결의 `ends` 이라고 함). 다음 예제에서는 Category와 Products 엔터티 간의 연결을 정의 하는 클래스의 정의를 보여 줍니다.
+두 엔터티를 연결 하려면 서비스에 대 한 리소스 스키마 MOF 파일에서 `Association` 특성을 사용 하 여 클래스를 정의 해야 합니다. 클래스는 연결 된 두 엔터티를 정의 해야 합니다 (연결의 `ends` 이라고 함). 다음 예제에서는 Category와 Products 엔터티 간의 연결을 정의 하는 클래스의 정의를 보여 줍니다.
 
 ```csharp
 [Association]
@@ -55,7 +55,7 @@ Product ref theProducts;
 }
 ```
 
-또한 Category 클래스에서 Products 속성의 선언을 변경 해야 합니다. @No__t-0 키워드를 사용 하 여 속성이 연결의 한쪽 end 임을 지정 합니다. 또한 속성은 문자열 배열이 아니라 개별 엔터티에 대 한 참조로 정의 되어야 합니다. @No__t-0 키워드를 사용 하 여이 작업을 수행 합니다. 다음 예에서는 연결에 대 한 속성 정의를 보여 줍니다.
+또한 Category 클래스에서 Products 속성의 선언을 변경 해야 합니다. `AssociationClass` 키워드를 사용 하 여 속성이 연결의 한쪽 end 임을 지정 합니다. 또한 속성은 문자열 배열이 아니라 개별 엔터티에 대 한 참조로 정의 되어야 합니다. `ref` 키워드를 사용 하 여이 작업을 수행 합니다. 다음 예에서는 연결에 대 한 속성 정의를 보여 줍니다.
 
 ```csharp
 class Sample_Category {
@@ -82,7 +82,7 @@ Sample_Category ref AssociatedCategory;
 
 #### <a name="steps-for-associating-entities-in-the-resource-schema-file"></a>리소스 스키마 파일에서 엔터티를 연결 하는 단계
 
-- @No__t-0 키워드를 사용 하 여 연결을 클래스로 정의 합니다.
+- `Association` 키워드를 사용 하 여 연결을 클래스로 정의 합니다.
 
 - AssociationClass 키워드를 사용 하 여 연결의 끝을 정의 하 여 연결 된 엔터티의 속성을 한정 합니다.
 
@@ -94,7 +94,7 @@ Sample_Category ref AssociatedCategory;
 
 - 탐색 속성이 내부에 있으면입니다. .NET Framework 형식이 고이 속성에 외래 키가 포함 되어 있으면 명시적 매핑이 필요 하지 않습니다.
 
-- 탐색 속성이 내부 .NET Framework 형식에 없는 경우 연결 된 인스턴스의 키 목록을 검색 하는 cmdlet을 지정 해야 합니다. 이렇게 하려면 다른 CRUD 명령에 대해 `cmdlets`를 정의 하는 요소에 따라 `CmdletImplementation` 요소 아래에 중첩 된 `Association` 요소를 추가 합니다.
+- 탐색 속성이 내부 .NET Framework 형식에 없는 경우 연결 된 인스턴스의 키 목록을 검색 하는 cmdlet을 지정 해야 합니다. 이렇게 하려면 다른 CRUD 명령의 `cmdlets`을 정의 하는 요소를 따라 `CmdletImplementation` 요소 아래에 중첩 된 `Association` 요소를 추가 합니다.
 
   ```xml
   Class Name=" Category">
@@ -177,7 +177,7 @@ Sample_Category ref AssociatedCategory;
 
 #### <a name="constructing-queries-for-associated-entities"></a>연결 된 엔터티에 대 한 쿼리 생성
 
-- 클라이언트는 연결 된 제품을 검색 하지 않고 범주의 세부 정보를 요청할 수 있습니다. 예를 들어 다음 요청은 `food` 범주의 세부 정보를 가져옵니다.
+- 클라이언트는 연결 된 제품을 검색 하지 않고 범주의 세부 정보를 요청할 수 있습니다. 예를 들어 다음 요청은 `food` 범주에 대 한 세부 정보를 가져옵니다.
 
   ```
   http://localhost:7000/MODataSvc/sample.svc/Category('food')
@@ -201,6 +201,6 @@ Sample_Category ref AssociatedCategory;
   http://localhost:7000/MODataSvc/sample.svc/Category('food')?$expand=AssociatedProducts
   ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [관리 OData IIS 확장 웹 서비스 만들기](./creating-a-management-odata-web-service.md)

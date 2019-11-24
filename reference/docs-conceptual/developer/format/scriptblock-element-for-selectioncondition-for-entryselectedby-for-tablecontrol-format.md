@@ -17,7 +17,7 @@ ms.locfileid: "72368582"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format"></a>TableControl에 대한 EntrySelectedBy의 SelectionCondition에 대한 ScriptBlock 요소(형식)
 
-조건을 트리거하는 스크립트 블록을 지정 합니다. 이 스크립트는-0 @no__t으로 평가 되 면 조건이 충족 되 고 테이블 항목이 사용 됩니다.
+조건을 트리거하는 스크립트 블록을 지정 합니다. 이 스크립트가 `true`평가 되 면 조건이 충족 되 고 테이블 항목이 사용 됩니다.
 
 Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (format) TableControl Element (format) TableRowEntries Element (format) TableRowEntry Element (format) EntrySelectedBy 요소 (형식) TableRowEntry (형식)에 대 한 EntrySelectedBy TableRowEntry (Format) ScriptBlock 요소의 selectioncondition 요소에 대 한 selectioncondition 요소
 
@@ -29,7 +29,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (form
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `ScriptBlock` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `ScriptBlock` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -55,7 +55,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (form
 
 테이블 뷰의 구성 요소에 대 한 자세한 내용은 [테이블 뷰 만들기](./creating-a-table-view.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [테이블 뷰 만들기](./creating-a-table-view.md)
 

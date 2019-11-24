@@ -31,7 +31,7 @@ PowerShell 2.0은 적절 하 게 명명 된 [import-module](/powershell/module/M
 Import-Module myModule
 ```
 
-MyModule가 `PSModulePath`에 있는 것으로 가정 하면 PowerShell은 myModule를 활성 메모리에 로드 합니다. MyModule이 `PSModulePath` 경로에 없는 경우 PowerShell에서 찾을 위치를 명시적으로 지정할 수 있습니다.
+MyModule가 `PSModulePath`에 있는 것으로 가정 하면 PowerShell은 myModule를 활성 메모리에 로드 합니다. MyModule가 `PSModulePath` 경로에 없는 경우 PowerShell에서 찾을 위치를 명시적으로 지정할 수 있습니다.
 
 ```powershell
 Import-Module -Name C:\myRandomDirectory\myModule -Verbose
@@ -45,13 +45,13 @@ Windows PowerShell 3.0부터 모듈의 cmdlet 또는 함수를 명령에 사용�
 
 다음 작업은 모듈의 자동 가져오기를 트리거하 며 "모듈 자동 로드" 라고도 합니다.
 
-- 명령에서 cmdlet 사용 예를 들어 `Get-ExecutionPolicy`을 입력 하면 `Get-ExecutionPolicy` cmdlet이 포함 된 Microsoft. PowerShell을 가져옵니다.
+- 명령에서 cmdlet 사용 예를 들어 `Get-ExecutionPolicy`를 입력 하면 `Get-ExecutionPolicy` cmdlet을 포함 하는 Microsoft. PowerShell.
 
-- 명령을 사용 하 [여 명령을 가져옵니다](/powershell/module/Microsoft.PowerShell.Core/Get-Command) .  예를 들어 `Get-Command Get-JobTrigger`을 입력 하면 @no__t cmdlet을 포함 하는 **PSScheduledJob** 모듈을 가져옵니다. 와일드 카드 문자를 포함 하는 `Get-Command` 명령은 검색으로 간주 되며 모듈 가져오기를 트리거하지 않습니다.
+- 명령을 사용 하 [여 명령을 가져옵니다](/powershell/module/Microsoft.PowerShell.Core/Get-Command) .  예를 들어 `Get-Command Get-JobTrigger`를 입력 하면 `Get-JobTrigger` cmdlet을 포함 하는 **PSScheduledJob** 모듈을 가져옵니다. 와일드 카드 문자를 포함 하는 `Get-Command` 명령은 검색으로 간주 되며 모듈 가져오기를 트리거하지 않습니다.
 
-- [Get help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet을 사용 하 여 cmdlet에 대 한 도움말을 가져옵니다. 예를 들어 `Get-Help Get-WinEvent`을 입력 하면 `Get-WinEvent` cmdlet이 포함 된 Microsoft. PowerShell 진단 모듈을 가져옵니다.
+- [Get help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet을 사용 하 여 cmdlet에 대 한 도움말을 가져옵니다. 예를 들어 `Get-Help Get-WinEvent`를 입력 하면 `Get-WinEvent` cmdlet을 포함 하는 Microsoft. PowerShell 진단 모듈을 가져옵니다.
 
-모듈 자동 가져오기를 지원 하기 위해 `Get-Command` cmdlet은 모듈을 세션으로 가져오지 않은 경우에도 모든 설치 된 모듈의 모든 cmdlet 및 함수를 가져옵니다. 자세한 내용은 [get-help](/powershell/module/Microsoft.PowerShell.Core/Get-Command) cmdlet에 대 한 도움말 항목을 참조 하세요.
+모듈의 자동 가져오기를 지원 하기 위해 `Get-Command` cmdlet은 모듈을 세션으로 가져오지 않은 경우에도 설치 된 모든 모듈의 모든 cmdlet 및 함수를 가져옵니다. 자세한 내용은 [get-help](/powershell/module/Microsoft.PowerShell.Core/Get-Command) cmdlet에 대 한 도움말 항목을 참조 하세요.
 
 ## <a name="the-importing-process"></a>가져오기 프로세스
 
@@ -76,6 +76,6 @@ Windows PowerShell 3.0부터 모듈의 cmdlet 또는 함수를 명령에 사용�
 
 - `Alias`:이 매개 변수는 내보내는 별칭을 제한 합니다 (모듈 매니페스트를 사용 하는 경우 AliasesToExport 키 참조).
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Windows PowerShell 모듈 작성](./writing-a-windows-powershell-module.md)

@@ -17,9 +17,9 @@ ms.locfileid: "72366372"
 ---
 # <a name="accessdbprovidersample02"></a>AccessDBProviderSample02
 
-이 샘플에서는 `New-PSDrive`에 대 한 호출을 지원 하기 위해 [Newdrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) 및 [Removedrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) 메서드를 덮어쓰는 방법을 보여 줍니다.-2에 대 한 호출을 지원 합니다. 및 @no__t cmdlet. 이 샘플의 공급자 클래스는 [system.object](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 에서 파생 된 공급자 클래스에서 파생 됩니다.
+이 샘플에서는 `New-PSDrive` 및 `Remove-PSDrive` cmdlet에 대 한 호출을 지원 하기 위해 [Newdrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) 및 [Removedrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) 메서드를 덮어쓰는 방법을 보여 줍니다 (예를 들어,이 샘플은. 이 샘플의 공급자 클래스는 [system.object](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 에서 파생 된 공급자 클래스에서 파생 됩니다.
 
-## <a name="demonstrates"></a>보여
+## <a name="demonstrates"></a>데모
 
 > [!IMPORTANT]
 > 공급자 클래스는 다음 클래스 중 하나에서 파생 되 고 다른 공급자 인터페이스를 구현할 수 있습니다.
@@ -32,7 +32,7 @@ ms.locfileid: "72366372"
 
 이 샘플은 다음을 보여 줍니다.
 
-- @No__t-0 특성을 선언 합니다.
+- `CmdletProvider` 특성을 선언 합니다.
 
 - [System.object](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 에서 구동 하는 공급자 클래스를 정의 합니다...
 
@@ -197,7 +197,7 @@ namespace Microsoft.Samples.PowerShell.Providers
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [System.object. i n g.](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider)
 

@@ -89,7 +89,7 @@ ms.locfileid: "72368112"
 
 ## <a name="adding-a-description"></a>설명 추가
 
-다음 XML은 예제에 대 한 설명을 추가 하는 방법을 보여 줍니다. 여러 @no__t 1maml: 단락 > 태그를 사용할 수 있는 경우에도 Windows PowerShell®는 설명에 대해 단일 \<maml: 단락 > 태그 집합을 사용 합니다.
+다음 XML은 예제에 대 한 설명을 추가 하는 방법을 보여 줍니다. 여러 \<maml: 단락 > 태그를 사용할 수 있는 경우에도 Windows PowerShell®는 설명에 대해 단일 \<maml: 단락 > 태그 집합을 사용 합니다.
 
 ```xml
 <command:examples>
@@ -108,7 +108,7 @@ ms.locfileid: "72368112"
 
 ## <a name="adding-example-output"></a>예제 출력 추가
 
-다음 XML에서는 명령의 출력을 추가 하는 방법을 보여 줍니다. 명령 결과 정보는 선택 사항 이지만 경우에 따라 특정 매개 변수를 사용 하는 경우의 영향을 보여 주는 데 도움이 됩니다. Windows PowerShell®는 두 개의 빈 \<maml: 단락 > 태그 집합을 사용 하 여 명령의 출력을 구분 합니다.
+다음 XML에서는 명령의 출력을 추가 하는 방법을 보여 줍니다. 명령 결과 정보는 선택 사항 이지만 경우에 따라 특정 매개 변수를 사용 하는 경우의 영향을 보여 주는 데 도움이 됩니다. Windows PowerShell®에서는 두 개의 빈 \<maml: 단락 > 태그 집합을 사용 하 여 명령 출력을 명령과 구분 합니다.
 
 ```xml
 <command:examples>

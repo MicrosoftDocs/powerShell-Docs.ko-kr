@@ -51,7 +51,7 @@ ms.locfileid: "72365302"
 
 이 샘플에는 Windows PowerShell 2.0이 필요 합니다.
 
-## <a name="demonstrates"></a>보여
+## <a name="demonstrates"></a>데모
 
 이 샘플에서는 다음을 보여 줍니다.
 
@@ -61,11 +61,11 @@ ms.locfileid: "72365302"
 
 - 확인을 요청 하는 ShouldProcess 메서드를 호출 합니다.
 
-- 사용자가 cmdlet을 사용 하 여 개체를 반환 하려고 하는지 여부를 나타내는 0 @no__t 매개 변수를 구현 합니다. 기본적으로이 cmdlet은 개체를 파이프라인에 반환 하지 않습니다.
+- 사용자가 cmdlet을 사용 하 여 개체를 반환 하려고 하는지 여부를 나타내는 `PassThru` 매개 변수를 구현 합니다. 기본적으로이 cmdlet은 개체를 파이프라인에 반환 하지 않습니다.
 
 ## <a name="example"></a>예제
 
-이 샘플에서는 사용자가 cmdlet에서 개체를 반환 하도록 지정 하는 `PassThru` 매개 변수를 구현 하는 방법과 `ShouldProcess` 및 `ShouldContinue` 메서드를 호출 하 여 사용자 피드백을 요청 하는 방법을 보여 줍니다.
+이 샘플에서는 사용자가 cmdlet을 사용 하 여 개체를 반환 하 고 `ShouldProcess` 및 `ShouldContinue` 메서드를 호출 하 여 사용자 피드백을 요청 하는 방법을 나타내는 `PassThru` 매개 변수를 구현 하는 방법을 보여 줍니다.
 
 ```csharp
 using System;
@@ -263,6 +263,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

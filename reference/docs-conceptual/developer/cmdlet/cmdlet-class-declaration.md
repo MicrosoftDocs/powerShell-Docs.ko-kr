@@ -29,7 +29,7 @@ Microsoft .NET Framework 클래스는 cmdlet 특성을 클래스의 메타 데�
 
 Cmdlet의 명사는 cmdlet이 작동 하는 리소스를 지정 합니다. 명사는 다른 cmdlet에서 cmdlet을 구별 합니다.
 
-Cmdlet 이름의 명사는 특정 해야 하며, *서버*와 같은 일반적인 명사의 경우 리소스를 다른 비슷한 리소스와 구별 하는 짧은 접두사를 추가 하는 것이 가장 좋습니다. 예를 들어 접두사를 포함 하는 명사를 포함 하는 cmdlet 이름은 `Get-SQLServer`입니다. 특정 명사를 보다 일반적인 동사로 조합 하면 사용자가 해당 작업으로 cmdlet을 빠르게 찾은 다음 불필요 한 cmdlet 이름 중복을 방지 하는 동시에 해당 리소스에서 cmdlet을 식별할 수 있습니다.
+Cmdlet 이름의 명사는 특정 해야 하며, *서버*와 같은 일반적인 명사의 경우 리소스를 다른 비슷한 리소스와 구별 하는 짧은 접두사를 추가 하는 것이 가장 좋습니다. 예를 들어 접두사가 포함 된 명사를 포함 하는 cmdlet 이름은 `Get-SQLServer`. 특정 명사를 보다 일반적인 동사로 조합 하면 사용자가 해당 작업으로 cmdlet을 빠르게 찾은 다음 불필요 한 cmdlet 이름 중복을 방지 하는 동시에 해당 리소스에서 cmdlet을 식별할 수 있습니다.
 
 Cmdlet 이름에 사용할 수 없는 특수 문자 목록은 [필수 개발 지침](./required-development-guidelines.md)을 참조 하세요.
 
@@ -53,9 +53,9 @@ Cmdlet 이름에 사용할 수 없는 특수 문자 목록은 [필수 개발 지
 
 ## <a name="pascal-casing"></a>파스칼식 대/소문자 구분
 
-Cmdlet의 이름을 사용할 때는 파스칼식 대/소문자를 사용 합니다. 예를 들어 `Get-Item` 및 @no__t cmdlet은 cmdlet의 이름을 지정할 때 대/소문자를 사용 하는 올바른 방법을 보여 줍니다.
+Cmdlet의 이름을 사용할 때는 파스칼식 대/소문자를 사용 합니다. 예를 들어 `Get-Item` 및 `Get-ItemProperty` cmdlet은 cmdlet의 이름을 지정할 때 대/소문자를 사용 하는 올바른 방법을 보여 줍니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [System.object. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute)
 

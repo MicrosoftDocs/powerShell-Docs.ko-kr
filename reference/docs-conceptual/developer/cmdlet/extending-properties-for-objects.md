@@ -20,7 +20,7 @@ ms.locfileid: "72364452"
 .NET Framework 개체를 확장 하는 경우 개체에 별칭 속성, 코드 속성, 메모 속성, 스크립트 속성 및 속성 집합을 추가할 수 있습니다. 이러한 속성을 정의 하는 XML은 다음 섹션에 설명 되어 있습니다.
 
 > [!NOTE]
-> 다음 섹션의 예는 PowerShell 설치 디렉터리 (`$PSHOME`)의 기본 `Types.ps1xml` 유형 파일에서 가져온 것입니다. 자세한 내용은 [Types.ps1xml 정보](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)를 참조 하세요.
+> 다음 섹션의 예는 PowerShell 설치 디렉터리 (`$PSHOME`)의 기본 `Types.ps1xml` 형식 파일에서 가져온 것입니다. 자세한 내용은 [Types.ps1xml 정보](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)를 참조 하세요.
 
 ## <a name="alias-properties"></a>별칭 속성
 
@@ -102,11 +102,12 @@ Note 속성은 정적 값이 있는 속성을 정의 합니다.
 ## <a name="property-sets"></a>속성 집합
 
 속성 집합은 집합의 이름으로 참조할 수 있는 확장 속성의 그룹을 정의 합니다.
-예를 들어 [형식-테이블](/powershell/module/Microsoft.PowerShell.Utility/Format-Table)@no__t**속성** 매개 변수는 표시할 특정 속성 집합을 지정할 수 있습니다. 속성 집합을 지정 하면 해당 집합에 속한 속성만 표시 됩니다.
+예를 들어 [Format-Table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table)
+**property** 매개 변수는 표시할 특정 속성 집합을 지정할 수 있습니다. 속성 집합을 지정 하면 해당 집합에 속한 속성만 표시 됩니다.
 
-개체에 대해 정의할 수 있는 속성 집합의 수에는 제한이 없습니다. 그러나 개체의 기본 표시 속성을 정의 하는 데 사용 되는 속성 집합은 **Psstandardmembers** 멤버 집합 내에서 지정 해야 합니다. @No__t-0 형식 파일에서 기본 속성 집합 이름에는 **Defaultdisplayproperty**, **DefaultDisplayPropertySet**및 **DefaultKeyPropertySet**가 포함 됩니다. **Psstandardmembers** 멤버 집합에 추가 하는 모든 추가 속성 집합은 무시 됩니다.
+개체에 대해 정의할 수 있는 속성 집합의 수에는 제한이 없습니다. 그러나 개체의 기본 표시 속성을 정의 하는 데 사용 되는 속성 집합은 **Psstandardmembers** 멤버 집합 내에서 지정 해야 합니다. `Types.ps1xml` 형식 파일에서 기본 속성 집합 이름에는 **Defaultdisplayproperty**, **DefaultDisplayPropertySet**및 **DefaultKeyPropertySet**가 포함 됩니다. **Psstandardmembers** 멤버 집합에 추가 하는 모든 추가 속성 집합은 무시 됩니다.
 
-다음 예제에서는 **DefaultDisplayPropertySet** 속성 집합이 [Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) 형식의 **psstandardmembers** 멤버 집합에 추가 됩니다. [PropertySet](/dotnet/api/system.management.automation.pspropertyset) 요소는 속성의 그룹을 정의 합니다. [Name](/dotnet/api/system.management.automation.psmemberinfo.name) 요소는 속성 집합의 이름을 지정 합니다. 그리고 [Referencedproperties](/dotnet/api/system.management.automation.pspropertyset.referencedpropertynames) 요소는 집합의 속성을 지정 합니다. @No__t-0 요소를 [Type](/dotnet/api/system.management.automation.pstypename) 요소의 멤버에 추가할 수도 있습니다.
+다음 예제에서는 **DefaultDisplayPropertySet** 속성 집합이 [Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) 형식의 **psstandardmembers** 멤버 집합에 추가 됩니다. [PropertySet](/dotnet/api/system.management.automation.pspropertyset) 요소는 속성의 그룹을 정의 합니다. [Name](/dotnet/api/system.management.automation.psmemberinfo.name) 요소는 속성 집합의 이름을 지정 합니다. 그리고 [Referencedproperties](/dotnet/api/system.management.automation.pspropertyset.referencedpropertynames) 요소는 집합의 속성을 지정 합니다. 또한 [Type](/dotnet/api/system.management.automation.pstypename) 요소의 멤버에 `PropertySet` 요소를 추가할 수 있습니다.
 
 ```xml
 <Type>
@@ -129,7 +130,7 @@ Note 속성은 정적 값이 있는 속성을 정의 합니다.
 </Type>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [Types.ps1xml 정보](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)
 
