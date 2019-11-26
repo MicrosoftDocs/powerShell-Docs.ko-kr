@@ -1,5 +1,5 @@
 ---
-title: AccessDbProviderSample06 Code Sample | Microsoft Docs
+title: AccessDbProviderSample06 코드 샘플 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -17,21 +17,21 @@ ms.locfileid: "74416228"
 ---
 # <a name="accessdbprovidersample06-code-sample"></a>AccessDbProviderSample06 코드 샘플
 
-The following code shows the implementation of the Windows PowerShell content provider described in [Creating a Windows PowerShell Content Provider](./creating-a-windows-powershell-content-provider.md). This provider enables the user to manipulate the contents of the items in a data store.
+다음 코드는 [Windows Powershell 콘텐츠 공급자 만들기](./creating-a-windows-powershell-content-provider.md)에 설명 된 windows powershell 콘텐츠 공급자의 구현을 보여 줍니다. 이 공급자를 사용 하면 사용자가 데이터 저장소에 있는 항목의 내용을 조작할 수 있습니다.
 
 > [!NOTE]
-> You can download the C# source file (AccessDBSampleProvider06.cs) for this provider by using the Microsoft Windows Software Development Kit for Windows Vista and Microsoft .NET Framework 3.0 Runtime Components. For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
+> Windows Vista 용 Microsoft C# Windows 소프트웨어 개발 키트 및 Microsoft .NET Framework 3.0 런타임 구성 요소를 사용 하 여이 공급자에 대 한 원본 파일 (AccessDBSampleProvider06.cs)을 다운로드할 수 있습니다. 다운로드 지침은 [Windows powershell을 설치 하 고 Windows POWERSHELL SDK를 다운로드 하는 방법](/powershell/scripting/developer/installing-the-windows-powershell-sdk)을 참조 하세요.
 >
-> The downloaded source files are available in the **\<PowerShell Samples>** directory.
+> 다운로드 된 원본 파일은 **\<PowerShell Samples >** 디렉터리에서 사용할 수 있습니다.
 >
-> For more information about other Windows PowerShell provider implementations, see [Designing Your Windows PowerShell Provider](./designing-your-windows-powershell-provider.md).
+> 다른 Windows PowerShell 공급자 구현에 대 한 자세한 내용은 [Windows Powershell 공급자 디자인](./designing-your-windows-powershell-provider.md)을 참조 하세요.
 
-## <a name="code-sample"></a>Code Sample
+## <a name="code-sample"></a>코드 예제
 
 [!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L11-L2399 "AccessDBProviderSample06.cs")]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
-[Windows PowerShell Programmer's Guide](./windows-powershell-programmer-s-guide.md)
+[Windows PowerShell 프로그래머 가이드](./windows-powershell-programmer-s-guide.md)
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)

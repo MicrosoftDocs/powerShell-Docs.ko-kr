@@ -1,5 +1,5 @@
 ---
-title: How to Write a PowerShell Script Module | Microsoft Docs
+title: PowerShell 스크립트 모듈을 작성 하는 방법 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/21/2019
 ms.reviewer: ''
@@ -17,24 +17,24 @@ ms.locfileid: "74416269"
 ---
 # <a name="how-to-write-a-powershell-script-module"></a>PowerShell 스크립트 모듈을 작성하는 방법
 
-A script module is any valid PowerShell script saved in a `.psm1` extension. This extension allows the PowerShell engine to use rules and module cmdlets on your file. Most of these capabilities are there to help you install your code on other systems, as well as manage scoping. You can also use a module manifest file, which describes more complex installations and solutions.
+스크립트 모듈은 `.psm1` 확장에 저장 된 유효한 PowerShell 스크립트입니다. 이 확장을 통해 PowerShell 엔진은 파일에서 규칙 및 모듈 cmdlet을 사용할 수 있습니다. 이러한 기능 중 대부분은 다른 시스템에 코드를 설치 하 고 범위를 관리 하는 데 도움이 됩니다. 더 복잡 한 설치 및 솔루션을 설명 하는 모듈 매니페스트 파일을 사용할 수도 있습니다.
 
-## <a name="writing-a-powershell-script-module"></a>Writing a PowerShell script module
+## <a name="writing-a-powershell-script-module"></a>PowerShell 스크립트 모듈 작성
 
-To create a script module, save a valid PowerShell script to a `.psm1` file. The script and the directory where it's stored must use the same name. For example, a script named `MyPsScript.psm1` is stored in a directory named `MyPsScript`.
+스크립트 모듈을 만들려면 유효한 PowerShell 스크립트를 `.psm1` 파일에 저장 합니다. 스크립트와 저장 된 디렉터리는 동일한 이름을 사용 해야 합니다. 예를 들어 `MyPsScript.psm1` 이라는 스크립트는 `MyPsScript`라는 디렉터리에 저장 됩니다.
 
-The module's directory needs to be in a path specified in `$env:PSModulePath`. The module's directory can contain any resources that are needed to run the script, and a module manifest file that describes to PowerShell how your module works.
+모듈의 디렉터리는 `$env:PSModulePath`에 지정 된 경로에 있어야 합니다. 모듈의 디렉터리에는 스크립트를 실행 하는 데 필요한 모든 리소스와 모듈 작동 방식을 설명 하는 모듈 매니페스트 파일이 포함 될 수 있습니다.
 
-## <a name="create-a-basic-powershell-module"></a>Create a basic PowerShell module
+## <a name="create-a-basic-powershell-module"></a>기본 PowerShell 모듈 만들기
 
-The following steps describe how to create a PowerShell module.
+다음 단계에서는 PowerShell 모듈을 만드는 방법을 설명 합니다.
 
-1. Save a PowerShell script with a `.psm1` extension. Use the same name for the script and the directory where the script is saved.
+1. `.psm1` 확장을 사용 하 여 PowerShell 스크립트를 저장 합니다. 스크립트와 스크립트를 저장할 디렉터리에 동일한 이름을 사용 합니다.
 
-   Saving a script with the `.psm1` extension means that you can use the module cmdlets, such as [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module). The module cmdlets exist primarily so that you can import and export your code onto other user's systems. The alternate solution would be to load your code on other systems and then dot-source it into active memory, which isn't a scalable solution. For more information, see [Understanding a Windows PowerShell Module](./understanding-a-windows-powershell-module.md#module-cmdlets-and-variables).
-   By default, when users import your `.psm1` file, all functions in your script are accessible, but variables aren't.
+   `.psm1` 확장을 사용 하 여 스크립트를 저장 하면 모듈 cmdlet (예: [import-module)](/powershell/module/Microsoft.PowerShell.Core/Import-Module)을 사용할 수 있다는 의미입니다. 모듈 cmdlet은 코드를 다른 사용자의 시스템으로 가져오고 내보낼 수 있도록 주로 존재 합니다. 대체 솔루션은 다른 시스템에서 코드를 로드 한 다음 해당 코드를 확장 가능한 솔루션이 아닌 활성 메모리로 로드 하는 것입니다. 자세한 내용은 [Windows PowerShell 모듈 이해](./understanding-a-windows-powershell-module.md#module-cmdlets-and-variables)를 참조 하세요.
+   기본적으로 사용자가 `.psm1` 파일을 가져올 때 스크립트의 모든 함수에 액세스할 수 있지만 변수는 사용할 수 없습니다.
 
-   An example PowerShell script, entitled `Show-Calendar`, is available at the end of this article.
+   `Show-Calendar`에 대 한 예제 PowerShell 스크립트는이 문서의 끝에 제공 됩니다.
 
    ```powershell
    function Show-Calendar {
@@ -50,9 +50,9 @@ The following steps describe how to create a PowerShell module.
    }
    ```
 
-2. To control user access to certain functions or variables, call [Export-ModuleMember](/powershell/module/Microsoft.PowerShell.Core/Export-ModuleMember) at the end of your script.
+2. 특정 함수 또는 변수에 대 한 사용자 액세스를 제어 하려면 스크립트의 끝에서 [export-modulemember](/powershell/module/Microsoft.PowerShell.Core/Export-ModuleMember) 를 호출 합니다.
 
-   The example code at the bottom of the article has only one function, which by default would be exposed. However, it's recommended you explicitly call out which functions you wish to expose, as described in the following code:
+   문서의 맨 아래에 있는 예제 코드는 기본적으로 노출 되는 함수를 하나만 포함 합니다. 그러나 다음 코드에 설명 된 대로 노출할 함수를 명시적으로 호출 하는 것이 좋습니다.
 
    ```powershell
    function Show-Calendar {
@@ -60,38 +60,38 @@ The following steps describe how to create a PowerShell module.
    Export-ModuleMember -Function Show-Calendar
    ```
 
-   You can restrict what's imported using a module manifest. For more information, see [Importing a PowerShell Module](./importing-a-powershell-module.md) and [How to Write a PowerShell Module Manifest](./how-to-write-a-powershell-module-manifest.md).
+   모듈 매니페스트를 사용 하 여 가져온 항목을 제한할 수 있습니다. 자세한 내용은 [Powershell 모듈 가져오기](./importing-a-powershell-module.md) 및 [powershell 모듈 매니페스트를 작성 하는 방법](./how-to-write-a-powershell-module-manifest.md)을 참조 하세요.
 
-3. If you have modules that your own module needs to load, you can use `Import-Module`, at the top of your module.
+3. 사용자 고유의 모듈을 로드 해야 하는 모듈이 있는 경우 모듈 맨 위에 있는 `Import-Module`를 사용할 수 있습니다.
 
-   The `Import-Module` cmdlet imports a targeted module onto a system, and can be used at a later point in the procedure to install your own module. The sample code at the bottom of this article doesn't use any import modules. But if it did, they would be listed at the top of the file, as shown in the following code:
+   `Import-Module` cmdlet은 대상 모듈을 시스템으로 가져오며, 프로시저의 이후 단계에서 사용자 고유의 모듈을 설치 하는 데 사용할 수 있습니다. 이 문서의 맨 아래에 있는 샘플 코드는 가져오기 모듈을 사용 하지 않습니다. 그러나이 경우 다음 코드와 같이 파일의 맨 위에 나열 됩니다.
 
    ```powershell
    Import-Module GenericModule
    ```
 
-4. To describe your module to the PowerShell Help system, you can either use standard help comments inside the file, or create an additional Help file.
+4. PowerShell 도움말 시스템에 대 한 모듈을 설명 하려면 파일 내에서 표준 도움말 주석을 사용 하거나 추가 도움말 파일을 만들 수 있습니다.
 
-   The code sample at the bottom of this article includes the help information in the comments. You could also write expanded XML files that contain additional help content. For more information, see [Writing Help for Windows PowerShell Modules](./writing-help-for-windows-powershell-modules.md).
+   이 문서의 맨 아래에 있는 코드 샘플에는 주석에 대 한 도움말 정보가 포함 되어 있습니다. 추가 도움말 콘텐츠를 포함 하는 확장 된 XML 파일을 작성할 수도 있습니다. 자세한 내용은 [Windows PowerShell 모듈에 대 한 도움말 작성](./writing-help-for-windows-powershell-modules.md)을 참조 하세요.
 
-5. If you have additional modules, XML files, or other content you want to package with your module, you can use a module manifest.
+5. 모듈을 사용 하 여 패키지 하려는 추가 모듈, XML 파일 또는 다른 콘텐츠가 있는 경우 모듈 매니페스트를 사용할 수 있습니다.
 
-   A module manifest is a file that contains the names of other modules, directory layouts, versioning numbers, author data, and other pieces of information. PowerShell uses the module manifest file to organize and deploy your solution. For more information, see [How to write a PowerShell module manifest](./how-to-write-a-powershell-module-manifest.md).
+   모듈 매니페스트는 다른 모듈의 이름, 디렉터리 레이아웃, 버전 번호, 작성자 데이터 및 기타 정보를 포함 하는 파일입니다. PowerShell은 모듈 매니페스트 파일을 사용 하 여 솔루션을 구성 하 고 배포 합니다. 자세한 내용은 [PowerShell 모듈 매니페스트를 작성 하는 방법](./how-to-write-a-powershell-module-manifest.md)을 참조 하세요.
 
-6. To install and run your module, save the module to one of the appropriate PowerShell paths, and use `Import-Module`.
+6. 모듈을 설치 하 고 실행 하려면 모듈을 적절 한 PowerShell 경로 중 하나에 저장 하 고 `Import-Module`를 사용 합니다.
 
-   The paths where you can install your module are located in the `$env:PSModulePath` global variable. For example, a common path to save a module on a system would be `%SystemRoot%/users/<user>/Documents/PowerShell/Modules/<moduleName>`. Be sure to create a directory for your module that uses the same name as the script module, even if it's only a single `.psm1` file. If you didn't save your module to one of these paths, you would have to specify the module's location in the `Import-Module` command. Otherwise, PowerShell wouldn't be able to find the module.
+   모듈을 설치할 수 있는 경로는 `$env:PSModulePath` 전역 변수에 있습니다. 예를 들어 시스템에 모듈을 저장 하는 일반적인 경로는 `%SystemRoot%/users/<user>/Documents/PowerShell/Modules/<moduleName>`됩니다. 단일 `.psm1` 파일 이더라도 스크립트 모듈과 동일한 이름을 사용 하는 모듈에 대 한 디렉터리를 만들어야 합니다. 이러한 경로 중 하나에 모듈을 저장 하지 않은 경우 `Import-Module` 명령에서 모듈의 위치를 지정 해야 합니다. 그렇지 않으면 PowerShell이 모듈을 찾을 수 없습니다.
 
-   Starting with PowerShell 3.0, if you've placed your module in one of the PowerShell module paths, you don't need to explicitly import it. Your module is automatically loaded when a user calls your function. For more information about the module path, see [Importing a PowerShell Module](./importing-a-powershell-module.md) and [Modifying the PSModulePath Installation Path](./modifying-the-psmodulepath-installation-path.md).
+   PowerShell 3.0부터 PowerShell 모듈 경로 중 하나에 모듈을 배치한 경우 명시적으로 가져올 필요가 없습니다. 사용자가 함수를 호출 하면 모듈이 자동으로 로드 됩니다. 모듈 경로에 대 한 자세한 내용은 [PowerShell 모듈 가져오기](./importing-a-powershell-module.md) 및 [PSModulePath 설치 경로 수정](./modifying-the-psmodulepath-installation-path.md)을 참조 하세요.
 
-7. To remove a module from active service in the current PowerShell session, use [Remove-Module](/powershell/module/Microsoft.PowerShell.Core/Remove-Module).
+7. 현재 PowerShell 세션의 활성 서비스에서 모듈을 제거 하려면 [모듈 제거](/powershell/module/Microsoft.PowerShell.Core/Remove-Module)를 사용 합니다.
 
    > [!NOTE]
-   > `Remove-Module` removes a module from the current PowerShell session, but doesn't uninstall the module or delete the module's files.
+   > `Remove-Module` 현재 PowerShell 세션에서 모듈을 제거 하지만 모듈을 제거 하거나 모듈의 파일을 삭제 하지 않습니다.
 
-## <a name="show-calendar-code-example"></a>Show-Calendar code example
+## <a name="show-calendar-code-example"></a>표시-일정 코드 예제
 
-The following example is a script module that contains a single function named `Show-Calendar`. This function displays a visual representation of a calendar. The sample contains the PowerShell Help strings for the synopsis, description, parameter values, and code. When the module is imported, the `Export-ModuleMember` command ensures that the `Show-Calendar` function is exported as a module member.
+다음 예는 `Show-Calendar`라는 단일 함수를 포함 하는 스크립트 모듈입니다. 이 함수는 달력의 시각적 표시를 표시 합니다. 이 샘플에는 개요, 설명, 매개 변수 값 및 코드에 대 한 PowerShell 도움말 문자열이 포함 되어 있습니다. 모듈을 가져올 때 `Export-ModuleMember` 명령은 `Show-Calendar` 함수를 모듈 멤버로 내보내도록 합니다.
 
 ```powershell
 <#
