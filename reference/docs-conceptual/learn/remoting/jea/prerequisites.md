@@ -2,12 +2,12 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA 필수 조건
-ms.openlocfilehash: 8fca5c068412e86acfdb8bed400699f721b76191
-ms.sourcegitcommit: e894ed833cef57967cdaf002f8c883f66864e836
+ms.openlocfilehash: 1833bacf49eebcccefc10f7c85a39732559c1a97
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2019
-ms.locfileid: "70017814"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416720"
 ---
 # <a name="prerequisites"></a>필수 구성 요소
 
@@ -60,7 +60,7 @@ JEA는 PowerShell 5.0 이상에서 사용할 수 있습니다. 전체 기능을 
 
 ### <a name="install-windows-management-framework"></a>Windows Management Framework 설치
 
-이전 버전의 PowerShell을 실행 중인 경우 최신 WMF(Windows Management Framework) 업데이트로 시스템을 업데이트해야 할 수 있습니다. 자세한 내용은 [WMF 설명서](/powershell/wmf/overview)를 참조하세요.
+이전 버전의 PowerShell을 실행 중인 경우 최신 WMF(Windows Management Framework) 업데이트로 시스템을 업데이트해야 할 수 있습니다. 자세한 내용은 [WMF 설명서](/powershell/scripting/wmf/overview)를 참조하세요.
 
 모든 서버를 업그레이드하기 전에 WMF와의 워크로드 호환성을 테스트하는 것이 좋습니다.
 

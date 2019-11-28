@@ -2,12 +2,12 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA 역할 기능
-ms.openlocfilehash: 7191b90e198ffb539da6870a8ddc3e449ad9e8ae
-ms.sourcegitcommit: e894ed833cef57967cdaf002f8c883f66864e836
+ms.openlocfilehash: 613557d03bb481f9280a06ca1506166a18b4dab2
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2019
-ms.locfileid: "70017844"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416789"
 ---
 # <a name="jea-role-capabilities"></a>JEA 역할 기능
 
@@ -177,7 +177,7 @@ New-Item -ItemType Directory $rcFolder
 Copy-Item -Path .\MyFirstJEARole.psrc -Destination $rcFolder
 ```
 
-PowerShell 모듈에 대한 자세한 내용은 [PowerShell 모듈 이해](/powershell/developer/windows-powershell)를 참조하세요.
+PowerShell 모듈에 대한 자세한 내용은 [PowerShell 모듈 이해](/powershell/scripting/developer/windows-powershell)를 참조하세요.
 
 ## <a name="updating-role-capabilities"></a>역할 기능 업데이트
 

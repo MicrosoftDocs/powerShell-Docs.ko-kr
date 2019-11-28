@@ -2,12 +2,12 @@
 ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: 자세한 도움말 정보 보기
-ms.openlocfilehash: 033a8962ca438b49c10fafa2852c87d19868b4d9
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.openlocfilehash: e722eb8a0ca13e3d2de864314775a0a9fa578390
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71325202"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417665"
 ---
 # <a name="getting-detailed-help-information"></a>자세한 도움말 정보 보기
 
@@ -79,7 +79,7 @@ Get-Help Get-ChildItem -Parameter *
 Get-Help Get-ChildItem -Examples
 ```
 
-작성하는 cmdlet의 도움말 문서를 작성하는 방법에 대한 자세한 내용은 [Cmdlet 도움말 작성 방법](/powershell/developer/help/writing-help-for-windows-powershell-cmdlets)을 참조하세요.
+작성하는 cmdlet의 도움말 문서를 작성하는 방법에 대한 자세한 내용은 [Cmdlet 도움말 작성 방법](/powershell/scripting/developer/help/writing-help-for-windows-powershell-cmdlets)을 참조하세요.
 
 ## <a name="getting-conceptual-help"></a>개념 도움말 보기
 

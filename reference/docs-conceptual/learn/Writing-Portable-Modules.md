@@ -2,12 +2,12 @@
 ms.date: 12/14/2018
 keywords: powershell,cmdlet
 title: 이식 가능한 모듈 작성
-ms.openlocfilehash: 237f6aaea0ed019c54d04a8477d7a456edf00910
-ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
+ms.openlocfilehash: 7871f524495c1ce5283b30696a24185d427edebf
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66470985"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417637"
 ---
 # <a name="portable-modules"></a>이식 가능한 모듈
 
@@ -17,7 +17,7 @@ Windows PowerShell은 [.NET Framework][]용으로 작성되지만 PowerShell Cor
 
 ### <a name="porting-a-pssnapin"></a>PSSnapIn 이식
 
-PowerShell [스냅인](/powershell/developer/cmdlet/modules-and-snap-ins)은 PowerShell Core에서 지원되지 않습니다. 그러나 PSSnapIn을 PowerShell 모듈로 변환하는 것은 간단합니다. 일반적으로 PSSnapIn 등록 코드는 [PSSnapIn][]에서 파생되는 클래스의 단일 원본 파일에 있습니다.
+PowerShell [스냅인](/powershell/scripting/developer/cmdlet/modules-and-snap-ins)은 PowerShell Core에서 지원되지 않습니다. 그러나 PSSnapIn을 PowerShell 모듈로 변환하는 것은 간단합니다. 일반적으로 PSSnapIn 등록 코드는 [PSSnapIn][]에서 파생되는 클래스의 단일 원본 파일에 있습니다.
 빌드에서 이 원본 파일을 제거하세요. 이 파일은 더 이상 필요하지 않습니다.
 
 [New-ModuleManifest][]를 사용하여 PSSnapIn 등록 코드를 사용할 필요가 없는 새 모듈 매니페스트를 만듭니다. **PSSnapIn**의 일부 값(예: **Description**)은 모듈 매니페스트 내에서 다시 사용할 수 있습니다.
@@ -266,4 +266,4 @@ PowerShell Standard는 항상 상위 버전과 호환됩니다. PowerShell Stand
 [PowerShell Standard 5.1]: https://www.nuget.org/packages/PowerShellStandard.Library/5.1.0
 [PowerShell 갤러리]: https://www.powershellgallery.com
 [.NET 이식성 분석기]: https://github.com/Microsoft/dotnet-apiport
-[CompatiblePSEditions]: /powershell/gallery/concepts/module-psedition-support
+[CompatiblePSEditions]: /powershell/scripting/gallery/concepts/module-psedition-support

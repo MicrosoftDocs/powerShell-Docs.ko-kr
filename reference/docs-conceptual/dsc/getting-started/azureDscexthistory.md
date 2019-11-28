@@ -3,12 +3,12 @@ description: Azure에서 DSC(필요한 상태 구성) 확장에 대한 버전 �
 ms.date: 06/21/2018
 keywords: dsc, powershell, azure, 확장
 title: Azure DSC 확장 버전 기록
-ms.openlocfilehash: d97ba879679972752196e3f16d0dfb7c731776b9
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.openlocfilehash: 7a89037d62cb2c8580141d2b177fdded5db654eb
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71953920"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417288"
 ---
 # <a name="azure-desired-state-configuration-extension-version-history"></a>Azure 필요한 상태 구성 확장 버전 기록
 
@@ -219,7 +219,7 @@ Azure DSC(필요한 상태 구성) VM 확장은 필요에 따라 Azure, Windows 
 - **환경:** Azure
 - **설명:** 이 버전은 Windows Server 2016 Technical Preview에 포함된 DSC를 사용합니다. 다른 Windows OSes의 경우 [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/)을 설치합니다(WMF 설치에 재부팅 필요).
 - **새로운 기능:**
-  - 확장 버전 2.14에서 WMF RTM 설치를 위한 변경 내용이 포함되었습니다. 확장 버전 2.13.2.0에서 2.14.0.0으로 업그레이드하는 동안 일부 DSC cmdlet이 실패하거나 구성이 ‘지정된 속성 값으로 인스턴스를 찾을 수 없음’ 오류로 실패하는 것을 확인할 수 있습니다. 자세한 내용은 [DSC 릴리스 정보](https://msdn.microsoft.com/en-us/powershell/wmf/limitation_dsc)를 참조하세요. 이러한 문제에 대한 해결 방법이 2.15 버전에서 추가되었습니다.
+  - 확장 버전 2.14에서 WMF RTM 설치를 위한 변경 내용이 포함되었습니다. 확장 버전 2.13.2.0에서 2.14.0.0으로 업그레이드하는 동안 일부 DSC cmdlet이 실패하거나 구성이 ‘지정된 속성 값으로 인스턴스를 찾을 수 없음’ 오류로 실패하는 것을 확인할 수 있습니다. 자세한 내용은 [DSC 릴리스 정보](/powershell/scripting/wmf/known-issues/known-issues-dsc)를 참조하세요. 이러한 문제에 대한 해결 방법이 2.15 버전에서 추가되었습니다.
   - 안타깝게도 버전 2.14를 이미 설치했고 위의 두 가지 문제 중 하나가 발생한 경우 이러한 단계를 수동으로 수행해야 합니다.  승격된 PowerShell 세션에서:
     - `Remove-Item -Path $env:SystemRoot\system32\Configuration\DSCEngineCache.mof`
     - `mofcomp $env:windir\system32\wbem\DscCoreConfProv.mof`

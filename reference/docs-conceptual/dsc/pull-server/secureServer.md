@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 끌어오기 서버 모범 사례
-ms.openlocfilehash: a3c4ca039b1e061a9246848bef6aeecebcd89011
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.openlocfilehash: 5cb47598b11f7884dddf1440cec21afeab49bebb
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71953530"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417734"
 ---
 # <a name="pull-server-best-practices"></a>끌어오기 서버 모범 사례
 
 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> 끌어오기 서버(Windows 기능 *DSC-Service*)는 Windows Server의 지원되는 구성 요소이지만 새로운 기능을 제공할 계획은 없습니다. 관리되는 클라우드를 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)(Windows Server에 끌어오기 서버 이외의 기능 포함) 또는 [여기](/powershell/dsc/pull-server/pullserver#community-solutions-for-pull-service)에 나열된 커뮤니티 솔루션 중 하나로 전환하기 시작하는 것이 좋습니다.
+> 끌어오기 서버(Windows 기능 *DSC-Service*)는 Windows Server의 지원되는 구성 요소이지만 새로운 기능을 제공할 계획은 없습니다. 관리되는 클라우드를 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)(Windows Server에 끌어오기 서버 이외의 기능 포함) 또는 [여기](/powershell/scripting/dsc/pull-server/pullserver#community-solutions-for-pull-service)에 나열된 커뮤니티 솔루션 중 하나로 전환하기 시작하는 것이 좋습니다.
 
 요약: 이 문서는 솔루션을 준비하고 있는 엔지니어를 지원하는 프로세스 및 확장성을 포함하기 위해 작성되었습니다. 세부 내용에서는 고객이 식별하고 제품 팀이 검증을 통해 미래에 대비하고 안정적이라고 간주되는 권장 사항으로 확인한 모범 사례를 제공합니다.
 
@@ -27,7 +27,7 @@ ms.locfileid: "71953530"
 ## <a name="abstract"></a>요약
 
 이 문서는 Windows PowerShell 필요한 상태 구성 끌어오기 서버 구현을 준비 중인 사용자에게 공식 지침을 제공하기 위해 작성되었습니다. 끌어오기 서버는 몇 분만에 배포할 수 있는 간단한 서비스입니다. 이 문서는 배포 시 사용할 수 있는 기술적인 방법 지침도 제공하지만, 모범 사례와 배포 전 고려할 사항을 참조할 수 있다는 점에서 유용합니다.
-이 문서를 읽으려면 DSC에 대한 기본 사항과 DSC 배포에 포함되는 구성 요소를 설명하는 용어를 잘 알고 있어야 합니다. 자세한 내용은 [Windows PowerShell 필요한 상태 구성 개요](/powershell/dsc/overview) 항목을 참조하세요.
+이 문서를 읽으려면 DSC에 대한 기본 사항과 DSC 배포에 포함되는 구성 요소를 설명하는 용어를 잘 알고 있어야 합니다. 자세한 내용은 [Windows PowerShell 필요한 상태 구성 개요](/powershell/scripting/dsc/overview) 항목을 참조하세요.
 DSC는 클라우드 주기에 따라 개선될 것이므로 끌어오기 서버를 비롯한 기본 기술도 발전하고 새로운 기능을 도입할 것으로 예상됩니다. 이 문서의 부록에 포함된 버전 테이블에서는 이전 릴리스에 대한 참조와 진취적인 디자인을 권장하기 위한 미래에 대비한 솔루션에 대한 참조를 제공합니다.
 
 이 문서의 두 가지 주요 섹션은 다음과 같습니다.
@@ -50,9 +50,9 @@ Windows PowerShell에서는 선언적 구성을 만들고 관리하는 데 사�
 끌어오기 서버는 구성을 저장하여 대상 노드에서 액세스할 수 있게 하는 중앙 집중식 서비스를 제공합니다.
 
 끌어오기 서버 역할은 웹 서버 인스턴스나 SMB 파일 공유로 배포할 수 있습니다. 웹 서버 기능에는 OData 인터페이스가 포함되며 필요에 따라 구성이 적용될 때 대상 노드가 성공 또는 실패에 대한 확인을 다시 보고하는 기능도 포함될 수 있습니다. 이 기능은 많은 수의 대상 노드가 있는 환경에서 유용합니다.
-대상 노드(클라이언트라고도 함)가 끌어오기 서버를 가리키도록 구성한 후 최신 구성 데이터 및 모든 필수 스크립트가 다운로드되어 적용됩니다. 이 작업은 일회성 배포 또는 되풀이 작업으로 수행될 수 있으므로 끌어오기 서버가 대규모 변경을 관리하기 위한 중요한 자산도 됩니다. 자세한 내용은 [Windows PowerShell 필요한 상태 구성 끌어오기 서버](/powershell/dsc/pullServer/pullserver) 및
+대상 노드(클라이언트라고도 함)가 끌어오기 서버를 가리키도록 구성한 후 최신 구성 데이터 및 모든 필수 스크립트가 다운로드되어 적용됩니다. 이 작업은 일회성 배포 또는 되풀이 작업으로 수행될 수 있으므로 끌어오기 서버가 대규모 변경을 관리하기 위한 중요한 자산도 됩니다. 자세한 내용은 [Windows PowerShell 필요한 상태 구성 끌어오기 서버](/powershell/scripting/dsc/pullServer/pullserver) 및
 
-[밀어넣기 및 끌어오기 구성 모드](/powershell/dsc/pullServer/pullserver)를 참조하세요.
+[밀어넣기 및 끌어오기 구성 모드](/powershell/scripting/dsc/pullServer/pullserver)를 참조하세요.
 
 ## <a name="configuration-planning"></a>구성 계획
 

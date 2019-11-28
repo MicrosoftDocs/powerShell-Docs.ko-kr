@@ -2,12 +2,12 @@
 ms.date: 06/18/2019
 keywords: powershell,cmdlet
 title: 추가 PowerShell 학습
-ms.openlocfilehash: 9b9c95f1348edf90221fb9e27b13218cbe310cfc
-ms.sourcegitcommit: 13f24786ed39ca1c07eff2b73a1974c366e31cb8
+ms.openlocfilehash: 9d756d24e46215bea5cb9530c2628b996327cb87
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263879"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416736"
 ---
 # <a name="more-powershell-learning"></a>추가 PowerShell 학습
 
@@ -40,5 +40,5 @@ Microsoft Virtual Academy 비디오가 Channel 9에 이동되었습니다.
 
 다음은 개발자가 PowerShell 모듈, 함수, cmdlet, 공급자 및 호스팅 애플리케이션을 만드는 데 유용한 리소스입니다.
 
-- [PowerShell SDK](/powershell/developer/windows-powershell)
+- [PowerShell SDK](/powershell/scripting/developer/windows-powershell)
 - [PowerShell SDK API 브라우저](/dotnet/api/system.management.automation)

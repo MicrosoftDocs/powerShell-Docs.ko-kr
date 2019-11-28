@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: PowerShell
 title: PowerShell 갤러리 UI에 영향을 주는 패키지 매니페스트 값
-ms.openlocfilehash: cedf81df8de29c54ef559a800d654305029491ec
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.openlocfilehash: 9e37fec879f2f5cbe3926c7dbc946389425d856a
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71328134"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417052"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>PowerShell 갤러리 UI에 영향을 주는 패키지 매니페스트 값
 
@@ -37,7 +37,7 @@ ms.locfileid: "71328134"
 | **함수** | FunctionsToExport를 사용하여 모듈 매니페스트에 제공됩니다. 가장 좋은 방법은 사용자의 load-module 성능을 개선하므로 와일드카드 “*”를 사용하는 대신 항목을 명시적으로 나열하는 것입니다. | 예 | 아니요 |
 | **DSC 리소스** | PowerShell 버전 5.0 이상에서 사용되는 모듈의 경우 DscResourcesToExport를 사용하여 매니페스트에 제공됩니다. 모듈이 PowerShell 4에서 사용되는 경우 DSCResourcesToExport는 지원되는 매니페스트 키가 아니므로 사용할 수 없습니다. (DSC는 PowerShell 4 이전에서는 사용할 수 없습니다.) | 예 | 아니요 |
 | **워크플로** | 워크플로는 PowerShell 갤러리에 스크립트로 게시되고 코드에서 워크플로로 식별됩니다([Connect-AzureVM](https://www.powershellgallery.com/packages/Connect-AzureVM/1.0/Content/Connect-AzureVM.ps1) 참조). 워크플로는 매니페스트에서 제어되지 않습니다. | 아니요 | 아니요 |
-| **역할 기능** | PowerShell 갤러리에 게시되는 모듈에 JEA에서 사용되는 하나 이상의 역할 기능(.psrc) 파일이 있을 때 나열됩니다. [역할 기능](/powershell/jea/role-capabilities)에 대한 자세한 내용은 JEA 문서를 참조하세요. | 예 | 아니요 |
+| **역할 기능** | PowerShell 갤러리에 게시되는 모듈에 JEA에서 사용되는 하나 이상의 역할 기능(.psrc) 파일이 있을 때 나열됩니다. [역할 기능](/powershell/scripting/learn/remoting/jea/role-capabilities)에 대한 자세한 내용은 JEA 문서를 참조하세요. | 예 | 아니요 |
 | **PowerShell 버전** | 스크립트 또는 모듈 매니페스트에 지정됩니다. PowerShell 5.0 이하에서 사용하도록 디자인된 모듈의 경우 태그를 사용하여 제어됩니다. Desktop의 경우 PSEdition_Desktop 태그를 사용하고, Core의 경우 PSEdition_Core를 사용합니다. PowerShell 5.1 이상에서만 사용할 모듈의 경우 주 매니페스트에 CompatiblePSEditions 키가 있습니다. 자세한 내용은 [PowerShell Get 설명서](module-psedition-support.md)에서 PS Edition 기능을 참조하세요. | 예 | 예 |
 | **종속성** | 종속성은 모듈에서 RequiredModules로 선언되거나 스크립트 매니페스트에서 #Requires –Module (이름)로 선언되는 PowerShell 갤러리의 모듈입니다. | 예 | 예 |
 | **최소 PowerShell 버전** | 모듈 매니페스트에서 PowerShellVersion으로 지정될 수 있습니다. | 예 | 아니요 |

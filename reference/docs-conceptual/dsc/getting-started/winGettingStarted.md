@@ -2,12 +2,12 @@
 ms.date: 08/15/2019
 keywords: dsc,powershell,configuration,setup
 title: Windows용 DSC(필요한 상태 구성) 시작
-ms.openlocfilehash: a4f9db481afda65fc4ac5e553230dbba3037ac9a
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.openlocfilehash: a9346b96693acdbad9bacbd4b6ca85971e17a3d1
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71954410"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417756"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-windows"></a>Windows용 DSC(필요한 상태 구성) 시작
 
@@ -110,4 +110,4 @@ PowerShellGet cmdlet을 사용하는 PowerShell 갤러리 같은 외부 소스�
 ## <a name="windows-powershell-desired-state-configuration-log-files"></a>Windows PowerShell 필요한 상태 구성 로그 파일
 
 DSC에 대한 로그는 경로 `Microsoft-Windows-Dsc/Operational`에 있는 Windows 이벤트 로그에 기록됩니다.
-디버깅 목적을 위한 추가 로그는 [DSC 이벤트 로그 위치](/powershell/dsc/troubleshooting/troubleshooting#where-are-dsc-event-logs)의 단계에 따라 사용하도록 설정할 수 있습니다.
+디버깅 목적을 위한 추가 로그는 [DSC 이벤트 로그 위치](/powershell/scripting/dsc/troubleshooting/troubleshooting#where-are-dsc-event-logs)의 단계에 따라 사용하도록 설정할 수 있습니다.

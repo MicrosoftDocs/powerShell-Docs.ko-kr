@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: WMF 5.x 릴리스 정보
-ms.openlocfilehash: 8924240a4bbedcd34bc68b7cacdd23189a3716d6
-ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
+ms.openlocfilehash: 3fc712dbcbe184c60ae248b260c8f6800f111fdd
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71147583"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416512"
 ---
 # <a name="windows-management-framework-wmf-5x-release-notes"></a>WMF(Windows Management Framework) 5.x 릴리스 정보
 
@@ -56,8 +56,8 @@ WMF 5.1에는 Windows Server 2016과 함께 릴리스된 PowerShell, WMI, WinRM 
 
 - [$PSVersionTable을 사용하여 실행 중인 PowerShell 버전 확인](/powershell/module/microsoft.powershell.core/about/about_automatic_variables)
 - [PSEdition 매개 변수를 사용하여 CompatiblePSEditions를 기준으로 Get-Module 결과 필터링](/powershell/module/microsoft.powershell.core/get-module)
-- [호환되는 PowerShell 버전에서 실행하지 않는 경우 스크립트 실행 방지](/powershell/gallery/concepts/script-psedition-support)
-- [특정 PowerShell 버전에 대한 모듈의 호환성 선언](/powershell/gallery/concepts/module-psedition-support)
+- [호환되는 PowerShell 버전에서 실행하지 않는 경우 스크립트 실행 방지](/powershell/scripting/gallery/concepts/script-psedition-support)
+- [특정 PowerShell 버전에 대한 모듈의 호환성 선언](/powershell/scripting/gallery/concepts/module-psedition-support)
 
 ## <a name="module-analysis-cache"></a>모듈 분석 캐시
 

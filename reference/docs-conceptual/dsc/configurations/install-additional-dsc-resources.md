@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,리소스,갤러리,설정
 title: 추가 DSC 리소스 설치
-ms.openlocfilehash: ecaf176230ccd934b57b1c27d72ff83e6ba906e9
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.openlocfilehash: 7a6a935349358e11a77d2f00c0bf88e0ad18c097
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71954490"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417803"
 ---
 # <a name="install-additional-dsc-resources"></a>추가 DSC 리소스 설치
 
@@ -39,7 +39,7 @@ OOB 리소스는 일반적인 작업을 위한 좋은 시작점입니다. OOB �
 
 ## <a name="installing-powershellget"></a>PowerShellGet 설치
 
-**PowerShell**을 이미 다운로드했는지 확인하거나 설치하는 데 도움이 필요하면 다음 가이드를 참조하세요. [PowerShellGet 설치](/powershell/gallery/installing-psget).
+**PowerShell**을 이미 다운로드했는지 확인하거나 설치하는 데 도움이 필요하면 다음 가이드를 참조하세요. [PowerShellGet 설치](/powershell/scripting/gallery/installing-psget).
 
 ## <a name="finding-dsc-resources-using-powershellget"></a>PowerShellGet을 사용하여 DSC 리소스 찾기
 

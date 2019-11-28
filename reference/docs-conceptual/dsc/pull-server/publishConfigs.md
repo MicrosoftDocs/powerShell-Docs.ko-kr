@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: 구성 ID를 사용하여 끌어오기 서버에 게시(v4/v5)
-ms.openlocfilehash: c258814f480b91eba75c7ce9abf70c558f1f469e
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.openlocfilehash: 3b094308338e62c783b19f4d3bb41634feee63f6
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71953600"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417246"
 ---
 # <a name="publish-to-a-pull-server-using-configuration-ids-v4v5"></a>구성 ID를 사용하여 끌어오기 서버에 게시(v4/v5)
 
@@ -61,7 +61,7 @@ Guid
 Rename-Item -Path .\localhost.mof -NewName '64856475-939e-41fb-aba5-4469f4006059.mof'
 ```
 
-환경에서 **Guid**를 사용하는 방법에 대한 자세한 내용은 [Guid에 대한 계획](/powershell/dsc/secureserver#guids)을 참조하세요.
+환경에서 **Guid**를 사용하는 방법에 대한 자세한 내용은 [Guid에 대한 계획](/powershell/scripting/dsc/secureserver#guids)을 참조하세요.
 
 ### <a name="configuration-names"></a>구성 이름
 

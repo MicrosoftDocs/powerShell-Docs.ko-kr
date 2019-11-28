@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 title: DSC(원하는 상태 구성)의 알려진 문제 및 제한 사항
-ms.openlocfilehash: 6faf24795d14a93f265943029d9f6f1388f32263
-ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
+ms.openlocfilehash: a76c5bb336804c5b384e6b6ba6a705c6049ef7fb
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71147723"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416613"
 ---
 # <a name="desired-state-configuration-dsc-known-issues-and-limitations"></a>DSC(원하는 상태 구성)의 알려진 문제 및 제한 사항
 
@@ -52,7 +52,7 @@ LCM이 DebugMode인 경우 Ctrl+C를 눌러 `Get-DscConfiguration`의 처리를 
 
 LCM이 DebugMode인 경우 `Get-DscConfiguration`으로 시작한 작업을 중지하려고 하면 `Stop-DscConfiguration`이 응답하지 않을 수 있습니다.
 
-**해결 방법:** [DSC 리소스 디버그](/powershell/dsc/troubleshooting/debugResource)에 설명된 대로 `Get-DscConfiguration`으로 시작한 작업의 디버깅을 완료하세요.
+**해결 방법:** [DSC 리소스 디버그](/powershell/scripting/dsc/troubleshooting/debugResource)에 설명된 대로 `Get-DscConfiguration`으로 시작한 작업의 디버깅을 완료하세요.
 
 ## <a name="no-verbose-error-messages-are-shown-in-debugmode"></a>DebugMode에 자세한 오류 메시지가 표시되지 않음
 
@@ -80,7 +80,7 @@ LCM이 **DebugMode**인 경우 DSC 리소스에서 자세한 오류 메시지가
 
 ## <a name="dsc-resources-cannot-be-debugged-easily-when-used-with-invoke-dscresource"></a>Invoke-DscResource와 함께 사용할 경우 DSC 리소스를 쉽게 디버그할 수 없음
 
-LCM이 디버그 모드에서 실행되고 있으면 `Invoke-DscResource` cmdlet에서 디버깅을 위해 연결할 runspace에 대한 정보를 제공하지 않습니다. 자세한 내용은 [DSC 리소스 디버그](/powershell/dsc/troubleshooting/debugResource)를 참조하세요.
+LCM이 디버그 모드에서 실행되고 있으면 `Invoke-DscResource` cmdlet에서 디버깅을 위해 연결할 runspace에 대한 정보를 제공하지 않습니다. 자세한 내용은 [DSC 리소스 디버그](/powershell/scripting/dsc/troubleshooting/debugResource)를 참조하세요.
 
 **해결 방법:** `Get-PSHostProcessInfo`, `Enter-PSHostProcess`, `Get-Runspace` 및 `Debug-Runspace` cmdlet을 사용하여 runspace를 검색 및 연결하여 DSC 리소스를 디버깅하세요.
 

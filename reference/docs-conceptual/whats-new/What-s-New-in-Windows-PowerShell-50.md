@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 5.0의 새로운 기능
-ms.openlocfilehash: d86c9c947c521e0aee261a8a0335f1557b0d5a34
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.openlocfilehash: 08775c1767f1d9d18dafab39d188db152073e69d
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71325129"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417574"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Windows PowerShell 5.0의 새로운 기능
 
@@ -414,7 +414,7 @@ Windows PowerShell 3.0 이상에서 C# cmdlet 작성자는 cmdlet 클래스에�
 
 XML 기반 cmdlet 도움말 파일의 첫 번째 관련 링크 또는 함수의 명령 기반 도움말의 .Link 지시어에 **HelpUri** 값을 포함할 수도 있습니다.
 
-온라인 도움말 지원에 대한 자세한 내용은 Microsoft Docs에서 [온라인 도움말 지원](/powershell/developer/module/supporting-online-help)을 참조하세요.
+온라인 도움말 지원에 대한 자세한 내용은 Microsoft Docs에서 [온라인 도움말 지원](/powershell/scripting/developer/module/supporting-online-help)을 참조하세요.
 
 ### <a name="cim-integration"></a>CIM 통합
 

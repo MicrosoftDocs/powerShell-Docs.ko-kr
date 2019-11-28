@@ -4,12 +4,12 @@ contributor: JKeithB, SydneyhSmith
 keywords: gallery,powershell,cmdlet,psgallery
 description: 게시자용 지침
 title: PowerShell 갤러리 게시 지침 및 모범 사례
-ms.openlocfilehash: 03c3a037b1d6c523914a2275249124940111fdcd
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.openlocfilehash: 9047e938ab961c68e225c9029e52403c40afbe26
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71328514"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417674"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>PowerShell 갤러리 게시 지침 및 모범 사례
 
@@ -98,7 +98,7 @@ PowerShell 갤러리에서는 두 가지 피드백 방법이 제공됩니다.
 
 다른 사용자와 스크립트를 공유하면 해당 사용자에게 발생했을 수 있는 문제를 해결하는 방법의 예를 제공할 수 있으므로 효율적입니다. 그런데 PowerShell 갤러리의 스크립트는 별도의 설명서, 예제 및 테스트가 없는 단일 파일입니다.
 
-반면 PowerShell 모듈은 여러 폴더와 파일을 패키지에 포함할 수 있는 폴더 구조로 되어 있습니다. 이러한 모듈 구조를 활용하면 앞에서 모범 사례로 언급한 cmdlet 도움말, 설명서, 예제, 테스트 등의 기타 패키지를 포함할 수 있습니다. 모듈의 가장 큰 단점은, 모듈 내의 스크립트를 노출하여 함수로 사용해야 한다는 것입니다. 모듈을 작성하는 방법에 대한 자세한 내용은 [Windows PowerShell 모듈 작성](/powershell/developer/module/writing-a-windows-powershell-module)을 참조하세요.
+반면 PowerShell 모듈은 여러 폴더와 파일을 패키지에 포함할 수 있는 폴더 구조로 되어 있습니다. 이러한 모듈 구조를 활용하면 앞에서 모범 사례로 언급한 cmdlet 도움말, 설명서, 예제, 테스트 등의 기타 패키지를 포함할 수 있습니다. 모듈의 가장 큰 단점은, 모듈 내의 스크립트를 노출하여 함수로 사용해야 한다는 것입니다. 모듈을 작성하는 방법에 대한 자세한 내용은 [Windows PowerShell 모듈 작성](/powershell/scripting/developer/module/writing-a-windows-powershell-module)을 참조하세요.
 
 스크립트가 사용자에게 보다 효율적인 환경을 제공하는 상황, 특히 DSC 구성을 사용하는 경우가 있습니다. DSC 구성의 모범 사례는 문서, 예제, 테스트가 들어 있는 모듈을 포함하여 구성을 스크립트로 게시하는 것입니다. 스크립트는 `RequiredModules = @(Name of the Module)`를 사용하여 해당 모듈을 나열합니다. 모든 스크립트에서 이 방식을 사용할 수 있습니다.
 
@@ -165,7 +165,7 @@ PowerShell에서는 두 가지 기본적인 방식을 통한 코드 서명 유�
 
 PowerShell 파일에 서명하는 것은 실행 중인 코드가 신뢰할 수 있는 출처에서 제작되었으며 해시가 수정되지 않았음을 효율적으로 확인할 수 있는 방법입니다. PowerShell 스크립트 파일에 서명하는 방법에 대한 자세한 내용은 [서명 정보](/powershell/module/microsoft.powershell.core/about/about_signing) 문서에 나와 있습니다. 요약하자면, 스크립트를 로드할 때 PowerShell에서 유효성을 검사하는 모든 `.PS1` 파일에 서명을 추가할 수 있습니다. [실행 정책](/powershell/module/microsoft.powershell.core/about/about_execution_policies) cmdlet을 사용하면 서명된 스크립트를 사용하도록 PowerShell을 제한할 수 있습니다.
 
-카탈로그 서명 모듈은 PowerShell 버전 5.1에 추가된 기능입니다. 모듈에 서명하는 방법은 [카탈로그 Cmdlet](/powershell/wmf/5.1/catalog-cmdlets) 문서에 나와 있습니다. 요약하자면, 모듈의 모든 파일에 대한 해시 값이 포함된 카탈로그 파일을 만들어 해당 파일에 서명하는 방식으로 카탈로그 서명을 수행합니다.
+카탈로그 서명 모듈은 PowerShell 버전 5.1에 추가된 기능입니다. 모듈에 서명하는 방법은 [카탈로그 Cmdlet](/powershell/scripting/wmf/5.1/catalog-cmdlets) 문서에 나와 있습니다. 요약하자면, 모듈의 모든 파일에 대한 해시 값이 포함된 카탈로그 파일을 만들어 해당 파일에 서명하는 방식으로 카탈로그 서명을 수행합니다.
 
 **PowerShellGet** `Publish-Module`, `Install-Module` 및 `Update-Module` cmdlet은 서명을 검사하여 유효한지 확인한 다음 각 패키지의 해시 값이 카탈로그에 있는 값과 일치하는지 확인합니다. `Save-Module`은 서명 유효성을 검사하지 않습니다. 이전 버전의 모듈이 시스템에 설치되어 있으면 `Install-Module`은 새 버전의 서명 기관이 이전에 설치한 모듈의 기관과 일치하는지 확인합니다. `Install-Module` 및 `Update-Module`은 패키지가 카탈로그 서명되지 않은 경우 `.PSD1` 파일의 서명을 사용합니다. 카탈로그 서명 방식은 스크립트 파일 서명 방식과 함께 사용할 수는 있지만 대신 사용할 수는 없습니다. PowerShell은 모듈 로드 시에 카탈로그 서명의 유효성을 검사하지 않습니다.
 

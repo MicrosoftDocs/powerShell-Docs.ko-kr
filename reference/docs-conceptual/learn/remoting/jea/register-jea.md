@@ -2,12 +2,12 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA 구성 등록
-ms.openlocfilehash: c85eddea2196e4db4bbeea54bde11074f3d1c927
-ms.sourcegitcommit: e894ed833cef57967cdaf002f8c883f66864e836
+ms.openlocfilehash: dbed5c7dd71f2f7a09d97416be56dff675799548
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2019
-ms.locfileid: "70017714"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417607"
 ---
 # <a name="registering-jea-configurations"></a>JEA 구성 등록
 
@@ -51,7 +51,7 @@ Register-PSSessionConfiguration -Path .\MyJEAConfig.pssc -Name 'JEAMaintenance' 
 
 ## <a name="multi-machine-configuration-with-dsc"></a>DSC를 사용한 다중 컴퓨터 구성
 
-JEA를 여러 머신에 배포할 때 가장 간단한 배포 모델은 JEA [DSC(필요한 상태 구성)](/powershell/dsc/overview) 리소스를 사용하여 각 머신에 신속하고 일관되게 JEA를 배포하는 것입니다.
+JEA를 여러 머신에 배포할 때 가장 간단한 배포 모델은 JEA [DSC(필요한 상태 구성)](/powershell/scripting/dsc/overview) 리소스를 사용하여 각 머신에 신속하고 일관되게 JEA를 배포하는 것입니다.
 
 DSC를 사용하여 JEA를 배포하려면 다음 필수 조건이 충족되는지 확인합니다.
 
@@ -59,7 +59,7 @@ DSC를 사용하여 JEA를 배포하려면 다음 필수 조건이 충족되는�
 - 역할을 포함하는 PowerShell 모듈을 각 컴퓨터에서 액세스할 수 있는 (읽기 전용) 파일 공유에 저장했습니다.
 - 세션 구성에 대한 설정을 결정했습니다. JEA DSC 리소스를 사용할 때 세션 구성 파일을 만들 필요가 없습니다.
 - 각 머신에서 관리 작업을 허용하거나 해당 머신을 관리하는 데 사용되는 DSC 끌어오기 서버에 액세스할 수 있는 자격 증명이 있습니다.
-- [JEA DSC 리소스](https://github.com/PowerShell/JEA/tree/master/DSC%20Resource)를 다운로드했습니다.
+- [JEA DSC 리소스](https://github.com/powershell/JEA/tree/master/DSC%20Resource)를 다운로드했습니다.
 
 대상 머신 또는 풀 서버에 JEA 엔드포인트에 대한 DSC 구성을 만듭니다. 이 구성에서는 **JustEnoughAdministration** DSC 리소스가 세션 구성 파일을 정의하고 **File** 리소스가 파일 공유에서 역할 기능을 복사합니다.
 
@@ -102,7 +102,7 @@ Configuration JEAMaintenance
 }
 ```
 
-그런 다음, [로컬 구성 관리자](/powershell/dsc/managing-nodes/metaConfig)를 직접 호출하거나 [끌어오기 서버 구성](/powershell/dsc/pull-server/pullServer)을 업데이트하여 시스템에 이 구성을 적용합니다.
+그런 다음, [로컬 구성 관리자](/powershell/scripting/dsc/managing-nodes/metaConfig)를 직접 호출하거나 [끌어오기 서버 구성](/powershell/scripting/dsc/pull-server/pullServer)을 업데이트하여 시스템에 이 구성을 적용합니다.
 
 DSC 리소스를 사용하여 기본 **Microsoft.PowerShell** 엔드포인트를 바꿀 수도 있습니다. 바꾸면 리소스가 **Microsoft.PowerShell.Restricted**라는 백업 엔드포인트를 자동으로 등록합니다. 백업 엔드포인트에는 원격 관리 사용자 및 로컬 Administrators 그룹 멤버가 액세스할 수 있도록 하는 기본 WinRM ACL이 있습니다.
 
