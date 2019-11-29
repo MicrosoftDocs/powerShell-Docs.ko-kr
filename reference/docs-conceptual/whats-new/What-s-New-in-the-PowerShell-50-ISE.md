@@ -2,16 +2,22 @@
 ms.date: 09/06/2019
 keywords: powershell,cmdlet
 title: PowerShell 5.0 ISE의 새로운 기능
-ms.openlocfilehash: f687c409a1a4b0e6b872863e9f132f7cf5baff20
-ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
+ms.openlocfilehash: 8f15e99c5a6ae33aeae9bd33eb0cf58fb27e3b90
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74117504"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416639"
 ---
 # <a name="whats-new-in-the-windows-powershell-50-ise"></a>Windows PowerShell 5.0 ISE의 새로운 기능
 
-이 항목에서는 Windows PowerShell ISE(통합 스크립팅 환경) 버전에서 도입된 새로운 기능과 업데이트된 기능에 대해 설명합니다.
+이 항목에서는 Windows PowerShell ISE(통합 스크립팅 환경)의 5.0 버전에서 도입된 새로운 기능과 업데이트된 기능에 대해 설명합니다.
+
+> [!NOTE]
+> PowerShell ISE는 더 이상 활성 기능 개발에 필요하지 않습니다. Windows의 배송 구성 요소로서 보안 및 우선 순위가 높은 서비스 수정 사항을 위해 공식적으로 계속 지원됩니다.
+> 현재 Windows에서 ISE를 제거할 계획은 없습니다.
+>
+> PowerShell v6 이상에서는 ISE가 지원되지 않습니다. ISE를 대체하려는 사용자는 [PowerShell 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)을 통해 [Visual Studio Code](https://code.visualstudio.com/)를 사용해야 합니다.
 
 ## <a name="feature-description"></a>기능 설명
 

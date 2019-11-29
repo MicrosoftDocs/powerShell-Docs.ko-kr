@@ -2,12 +2,12 @@
 ms.date: 08/14/2018
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE 소개
-ms.openlocfilehash: 729c8535dbcfcd2c51070b8beac5d328375f36ae
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 1723c11f38966cfffec9a6b3e4cb7b2304f19e7a
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62057426"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416275"
 ---
 # <a name="the-windows-powershell-ise"></a>Windows PowerShell ISE
 
@@ -15,16 +15,21 @@ Windows PowerShell ISE(통합 스크립팅 환경)는 Windows PowerShell의 호�
 
 ## <a name="support"></a>Support(지원)
 
-ISE는 Windows PowerShell V2에 처음 도입되었고 PowerShell V3에서 다시 디자인되었습니다. ISE는 Windows PowerShell V5.1 이하의 모든 지원되는 Windows PowerShell 버전에서 지원됩니다. 그러나 ISE는 유지 관리 모드에 있고 새로운 기능이 추가될 가능성이 없습니다.
-또한 PowerShell v6 이상에서는 ISE가 지원되지 않습니다. PowerShell 스크립트 등을 관리하는 데 그래픽 도구를 사용하려는 사용자는 [Visual Studio Code](https://code.visualstudio.com/)를 고려해야 합니다.
+ISE는 Windows PowerShell V2에 처음 도입되었고 PowerShell V3에서 다시 디자인되었습니다. ISE는 Windows PowerShell V5.1 이하의 모든 지원되는 Windows PowerShell 버전에서 지원됩니다.
+
+> [!NOTE]
+> PowerShell ISE는 더 이상 활성 기능 개발에 필요하지 않습니다. Windows의 배송 구성 요소로서 보안 및 우선 순위가 높은 서비스 수정 사항을 위해 공식적으로 계속 지원됩니다.
+> 현재 Windows에서 ISE를 제거할 계획은 없습니다.
+>
+> PowerShell v6 이상에서는 ISE가 지원되지 않습니다. ISE를 대체하려는 사용자는 [PowerShell 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)을 통해 [Visual Studio Code](https://code.visualstudio.com/)를 사용해야 합니다.
 
 ## <a name="key-features"></a>주요 기능
 
 Windows PowerShell ISE의 주요 기능은 다음과 같습니다.
 
-- 여러 줄 편집: 명령 창에서 현재 줄 아래에 빈 줄을 삽입하려면 Shift+Enter를 누릅니다.
-- 선택적 실행: 스크립트의 일부를 실행하려면 실행할 텍스트를 선택한 다음, **스크립트 실행** 단추를 클릭합니다. 또는 F5 키를 누릅니다.
-- 상황에 맞는 도움말: **Invoke-Item**을 입력한 다음, F1 키를 누릅니다. 도움말 파일이 **Invoke-Item** cmdlet에 대한 문서로 열립니다.
+- 여러 줄 편집: 명령 창에서 현재 줄 아래에 빈 줄을 삽입하려면 <kbd>SHIFT</kbd>+<kbd>ENTER</kbd> 키를 누릅니다.
+- 선택적 실행: 스크립트의 일부를 실행하려면 실행할 텍스트를 선택한 다음, **스크립트 실행** 단추를 클릭합니다. 또는 <kbd>F5</kbd> 키를 누릅니다.
+- 상황에 맞는 도움말: `Invoke-Item`을 입력하고 <kbd>F1</kbd> 키를 누릅니다. 도움말 파일이 `Invoke-Item` cmdlet에 대한 문서로 열립니다.
 
 Windows PowerShell ISE를 사용하여 해당 모양의 일부 측면을 사용자 지정할 수 있습니다. 또한 자체 Windows PowerShell 프로필 스크립트도 있습니다.
 
@@ -35,4 +40,4 @@ Windows PowerShell ISE를 사용하여 해당 모양의 일부 측면을 사용�
 
 ## <a name="to-get-help-in-the-windows-powershell-ise"></a>Windows PowerShell ISE에서 도움말을 가져오려면
 
-**도움말** 메뉴에서 **Windows PowerShell 도움말**을 클릭합니다. 또는 F1 키를 누릅니다. 열린 파일에는 Get-Help cmdlet에서 사용 가능한 모든 도움말을 비롯하여 Windows PowerShell ISE 및 Windows PowerShell이 설명되어 있습니다.
+**도움말** 메뉴에서 **Windows PowerShell 도움말**을 클릭합니다. 또는 <kbd>F1</kbd> 키를 누릅니다. 열린 파일에는 `Get-Help` cmdlet에서 사용 가능한 모든 도움말을 비롯하여 Windows PowerShell ISE 및 Windows PowerShell이 설명되어 있습니다.

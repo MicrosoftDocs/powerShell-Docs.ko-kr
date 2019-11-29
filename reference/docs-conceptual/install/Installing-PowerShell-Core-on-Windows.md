@@ -2,12 +2,12 @@
 title: Windows에서 PowerShell Core 설치
 description: Windows에서 PowerShell Core를 설치하는 방법에 대한 정보
 ms.date: 08/06/2018
-ms.openlocfilehash: c06eba06e376c3f795ab9c0fae9270cf6cf8f2ce
-ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
+ms.openlocfilehash: 00a1d8064a3c1ec6608a46415bbabb8d98d880f0
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444459"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416771"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Windows에서 PowerShell Core 설치
 
@@ -25,7 +25,7 @@ Windows에서 여러 가지 방법으로 PowerShell Core를 설치할 수 있습
 WSMan을 통한 PowerShell 원격 기능을 사용하려면 다음 전제 조건을 충족해야 합니다.
 
 - Windows 10 이전의 Windows 버전에서는 [Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=50410)을 설치합니다. 직접 다운로드 또는 Windows 업데이트를 통해 사용할 수 있습니다. 옵션 패키지를 포함하여 완전히 패치된 지원 시스템은 이미 설치되어 있습니다.
-- Windows 7 및 Windows Server 2008 R2에 WMF(Windows Management Framework) 4.0 이상을 설치합니다. WMF에 대한 자세한 내용은 [WMF 개요](/powershell/wmf/overview)를 참조하세요.
+- Windows 7 및 Windows Server 2008 R2에 WMF(Windows Management Framework) 4.0 이상을 설치합니다. WMF에 대한 자세한 내용은 [WMF 개요](/powershell/scripting/wmf/overview)를 참조하세요.
 
 ## <a name="a-idmsi-installing-the-msi-package"></a><a id="msi" />MSI 패키지 설치
 
@@ -56,6 +56,18 @@ msiexec.exe /package PowerShell-<version>-win-<os-arch>.msi /quiet ADD_EXPLORER_
 ```
 
 Msiexec.exe에 대한 명령줄 옵션의 전체 목록은 [명령줄 옵션](/windows/desktop/Msi/command-line-options)을 참조하세요.
+
+## <a name="a-idmsix-installing-the-msix-package"></a><a id="msix" />MSIX 패키지 설치
+
+Windows 10 클라이언트에 MSIX 패키지를 수동으로 설치하려면 GitHub [릴리스][releases] 페이지에서 MSIX 패키지를 다운로드합니다. 설치하려는 릴리스의 **자산** 섹션으로 스크롤을 내립니다. 자산 섹션이 축소되어 있을 수 있으니 확장을 클릭해야 합니다.
+
+MSI 파일은 다음과 같습니다. - `PowerShell-<version>-win-<os-arch>.msix`
+
+다운로드한 후에는 이 패키지에서 가상화되지 않은 리소스를 사용해야 하므로 설치 관리자를 두 번 클릭해서는 설치할 수는 없습니다.  설치하려면 `Add-AppxPackage` cmdlet을 사용해야 합니다.
+
+```powershell
+Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
+```
 
 ## <a name="a-idzip-installing-the-zip-package"></a><a id="zip" />ZIP 패키지 설치
 

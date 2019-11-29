@@ -1,15 +1,15 @@
 ---
-ms.date: 05/17/2018
+ms.date: 11/15/2019
 keywords: powershell,core
 title: PowerShell 6.0의 주요 변경 내용
-ms.openlocfilehash: df716fc3ad48d640ddefcfd87da445eaf104cfbe
-ms.sourcegitcommit: e1027805385081c2e6f9250f9cd1167a45f035b0
+ms.openlocfilehash: a1dac42bcda8e1258a99ef281691a9d4c5986b53
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72561276"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417566"
 ---
-# <a name="breaking-changes-for-powershell-60"></a>PowerShell 6.0의 주요 변경 내용
+# <a name="breaking-changes-for-powershell-6x"></a>PowerShell 6.x의 호환성이 손상되는 변경
 
 ## <a name="features-no-longer-available-in-powershell-core"></a>PowerShell Core에서 더 이상 사용할 수 없는 기능
 
@@ -23,7 +23,7 @@ ms.locfileid: "72561276"
 
 OS를 다시 시작한 후에도 검사점을 사용하여 스크립트를 다시 시작해야하는 경우에는 작업 스케줄러를 사용하여 OS를 시작할 때 스크립트를 실행하는 것이 좋습니다. 하지만 스크립트는 자체 상태를 유지해야 합니다(예: 파일에 유지).
 
-[workflow]: https://docs.microsoft.com/powershell/scripting/core-powershell/workflows-guide
+[workflow]: /powershell/scripting/components/workflows-guide
 [workflow-foundation]: https://docs.microsoft.com/dotnet/framework/windows-workflow-foundation/
 
 ### <a name="custom-snap-ins"></a>사용자 지정 스냅인
@@ -291,3 +291,4 @@ Unix에서는 셸이 대화형 셸을 나타내는 `-i`를 허용하는 것이 �
 - 현재 macOS에서 사용할 수 있는 인증서 기반 인증은 없습니다.
 - `http://` URI를 통해 `-Credential`을 사용하면 오류가 발생합니다. 오류를 표시하지 않으려면 `https://` URI를 사용하거나 `-AllowUnencryptedAuthentication` 매개 변수를 제공합니다.
 - `-MaximumRedirection`은 이제 리디렉션이 마지막 리디렉션 결과를 반환하는 대신 제공된 제한을 초과하는 경우 종료 오류를 생성합니다.
+- PowerShell 6.2에서는 JSON 응답을 위해 UTF-8 인코딩으로 기본 변경 내용이 변경되었습니다. JSON 응답에 대해 문자 집합이 제공되지 않으면 RFC 8259에 따라 기본 인코딩이 UTF-8이어야 합니다.

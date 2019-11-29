@@ -1,13 +1,13 @@
 ---
-ms.date: 10/22/2019
+ms.date: 11/22/2019
 keywords: powershell,cmdlet
 title: 형식 명령을 사용하여 출력 보기 변경
-ms.openlocfilehash: 9d9854362b5150a99bdd0c02518599840c1fd42d
-ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
+ms.openlocfilehash: f270d5ec5efe5caf506d6a8a45285990996f6ae6
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444414"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417598"
 ---
 # <a name="using-format-commands-to-change-output-view"></a>형식 명령을 사용하여 출력 보기 변경
 
@@ -128,7 +128,7 @@ Id          : 21748
 
 ### <a name="getting-detailed-information-by-using-format-list-with-wildcards"></a>와일드카드와 함께 Format-List를 사용하여 자세한 정보 보기
 
-`Format-List` cmdlet을 사용하면 와일드카드를 해당 **Property** 매개 변수의 값으로 사용할 수 있습니다. 이 경우 자세한 정보를 표시할 수 있습니다. 필요한 것보다 많은 정보가 개체에 포함되는 경우가 종종 있는데, 이는 PowerShell이 기본적으로 모든 속성 값을 표시하지는 않기 때문입니다. 개체의 속성을 모두 표시하려면 **Format-List -Property \&#42;** 명령을 사용합니다. 다음 명령은 단일 프로세스의 출력을 위해 60개 이상의 줄을 생성합니다.
+`Format-List` cmdlet을 사용하면 와일드카드를 해당 **Property** 매개 변수의 값으로 사용할 수 있습니다. 이 경우 자세한 정보를 표시할 수 있습니다. 필요한 것보다 많은 정보가 개체에 포함되는 경우가 종종 있는데, 이는 PowerShell이 기본적으로 모든 속성 값을 표시하지는 않기 때문입니다. 개체의 모든 속성을 표시하려면 `Format-List -Property *` 명령을 사용합니다. 다음 명령은 단일 프로세스의 출력을 위해 60개 이상의 줄을 생성합니다.
 
 ```powershell
 Get-Process -Name iexplore | Format-List -Property *

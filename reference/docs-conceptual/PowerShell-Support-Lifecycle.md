@@ -2,12 +2,12 @@
 title: PowerShell Core 지원 수명 주기
 description: PowerShell Core에 대한 정책 관리 지원
 ms.date: 08/06/2018
-ms.openlocfilehash: fbbda0a5f8460e5625625adcc50c631729df53f1
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: 27738514fc84105a0339eafcdbb540b7d3790052
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72351808"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416295"
 ---
 # <a name="powershell-core-support-lifecycle"></a>PowerShell Core 지원 수명 주기
 
@@ -19,7 +19,7 @@ PowerShell Core는 Windows PowerShell과 별개로 제공, 설치 및 구성되�
 ## <a name="community-support"></a>커뮤니티 지원
 
 또한 GitHub에 대한 [커뮤니티 지원][]도 제공하여 문제, 버그 또는 기능 요청을 취합할 수 있습니다.
-또는, [Microsoft 커뮤니티][] 또는 Microsoft [PowerShell 기술 커뮤니티][]와 같은 일반적인 커뮤니티에서 다양한 구성원들에게 도움을 받을 수도 있습니다. 단, 커뮤니티가 발생한 문제를 제때 처리하거나 해결한다는 보장은 없습니다. 긴급하게 도움이 필요한 문제가 있는 경우 기존의 유료 지원 옵션을 사용해야 합니다.
+또한 Microsoft [PowerShell 기술 커뮤니티][] 또는 [PowerShell][pshub] 허브 페이지의 커뮤니티 섹션에 나열된 포럼에서 커뮤니티의 다른 구성원에 게 도움을 얻을 수 있습니다. 단, 커뮤니티가 발생한 문제를 제때 처리하거나 해결한다는 보장은 없습니다. 긴급하게 도움이 필요한 문제가 있는 경우 기존의 유료 지원 옵션을 사용해야 합니다.
 
 ## <a name="lifecycle-of-powershell-core"></a>PowerShell Core의 수명 주기
 
@@ -117,9 +117,9 @@ PowerShell Core는 [MIT 라이선스][]에서 릴리스 됩니다. 본 라이선
 
 PowerShell Core에 대한 지원은 명시적으로 이 모듈이 PowerShell Core를 지원하지 않는 한 다른 제품 모듈을 포함하지 않습니다. 예를 들어, Windows Server에 부분적으로 제공되는 `ActiveDirectory` 모듈을 사용하는 경우 지원되지 않습니다.
 
-그러나 PowerShell Core를 명시적으로 지원하지 않는 모듈은 경우에 따라 호환이 가능합니다. [`WindowsPSModulePath`][] 모듈을 설치하여 Windows PowerShell `PSModulePath`를 PowerShell Core `PSModulePath`에 추가할 수 있습니다.
+그러나 PowerShell Core를 명시적으로 지원하지 않는 모듈은 경우에 따라 호환이 가능합니다. [WindowsPSModulePath][] 모듈을 설치하여 Windows PowerShell `PSModulePath`를 PowerShell Core `PSModulePath`에 추가할 수 있습니다.
 
-먼저 PowerShell 갤러리에서 `WindowsPSModulePath` 모듈을 설치합니다.
+먼저 PowerShell 갤러리에서 **WindowsPSModulePath** 모듈을 설치합니다.
 
 ```powershell
 # Add `-Scope CurrentUser` if you're installing as non-admin
@@ -141,12 +141,12 @@ Add-WindowsPSModulePath
 [enterprise-agreement]: https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise.aspx
 [assurance]: https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx
 [커뮤니티 지원]: https://github.com/powershell/powershell/issues
-[Microsoft 커뮤니티]: https://answers.microsoft.com/
+[pshub]: https://docs.microsoft.com/powershell
 [PowerShell 기술 커뮤니티]: https://techcommunity.microsoft.com/t5/PowerShell/ct-p/WindowsPowerShell
 [보조 지원]: https://support.microsoft.com/assistedsupportproducts
 [modern]: https://support.microsoft.com/help/30881/modern-lifecycle-policy
 [lifecycle-chart]: ./images/modern-lifecycle.png
 [semi-annual]: https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview
 [MIT 라이선스]: https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt
-[`WindowsPSModulePath`]: https://www.powershellgallery.com/packages/WindowsPSModulePath/
+[WindowsPSModulePath]: https://www.powershellgallery.com/packages/WindowsPSModulePath/
 [실험적 기능]: /powershell/module/microsoft.powershell.core/about/about_powershell_config?view=powershell-6#experimentalfeatures
