@@ -3,21 +3,21 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 복합 리소스--DSC 구성을 리소스로 사용
 ms.openlocfilehash: 7fa6ee56d4706b96fb47123c7aa00c4df6256492
-ms.sourcegitcommit: 14b50e5446f69729f72231f5dc6f536cdd1084c3
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73933835"
 ---
-# <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a><span data-ttu-id="d5624-103">복합 리소스: DSC 구성을 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="d5624-103">Composite resources: Using a DSC configuration as a resource</span></span>
+# <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a><span data-ttu-id="957f4-103">복합 리소스: DSC 구성을 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="957f4-103">Composite resources: Using a DSC configuration as a resource</span></span>
 
-> <span data-ttu-id="d5624-104">적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="d5624-104">Applies To: Windows PowerShell 4.0, Windows PowerShell 5.0</span></span>
+> <span data-ttu-id="957f4-104">적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="957f4-104">Applies To: Windows PowerShell 4.0, Windows PowerShell 5.0</span></span>
 
-<span data-ttu-id="d5624-105">실제 상황에서, 구성은 다양 한 리소스를 호출하고 무수한 속성을 설정하므로 길고 복잡해질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-105">In real-world situations, configurations can become long and complex, calling many different resources and setting a vast number of properties.</span></span> <span data-ttu-id="d5624-106">이러한 복잡성을 해결하는 데 도움이 되도록 Windows PowerShell DSC(필요한 상태 구성) 구성을 다른 구성에 대한 리소스로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-106">To help address this complexity, you can use a Windows PowerShell Desired State Configuration (DSC) configuration as a resource for other configurations.</span></span> <span data-ttu-id="d5624-107">이것을 복합 리소스라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-107">We call this a composite resource.</span></span> <span data-ttu-id="d5624-108">복합 리소스는 매개 변수를 사용하는 DSC 구성입니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-108">A composite resource is a DSC configuration that takes parameters.</span></span> <span data-ttu-id="d5624-109">구성의 매개 변수는 리소스의 속성으로서 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-109">The parameters of the configuration act as the properties of the resource.</span></span> <span data-ttu-id="d5624-110">구성은 **.schema.psm1** 확장으로 저장되며, 일반적인 DSC 리소스에서 MOF 스키마와 리소스 스크립트 모두를 대신합니다(DSC 리소스에 대한 자세한 내용은 [Windows PowerShell 필요한 상태 구성 리소스](resources.md) 참조).</span><span class="sxs-lookup"><span data-stu-id="d5624-110">The configuration is saved as a file with a **.schema.psm1** extension, and takes the place of both the MOF schema and the resource script in a typical DSC resource (for more information about DSC resources, see [Windows PowerShell Desired State Configuration Resources](resources.md).</span></span>
+<span data-ttu-id="957f4-105">실제 상황에서, 구성은 다양 한 리소스를 호출하고 무수한 속성을 설정하므로 길고 복잡해질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-105">In real-world situations, configurations can become long and complex, calling many different resources and setting a vast number of properties.</span></span> <span data-ttu-id="957f4-106">이러한 복잡성을 해결하는 데 도움이 되도록 Windows PowerShell DSC(필요한 상태 구성) 구성을 다른 구성에 대한 리소스로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-106">To help address this complexity, you can use a Windows PowerShell Desired State Configuration (DSC) configuration as a resource for other configurations.</span></span> <span data-ttu-id="957f4-107">이것을 복합 리소스라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-107">We call this a composite resource.</span></span> <span data-ttu-id="957f4-108">복합 리소스는 매개 변수를 사용하는 DSC 구성입니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-108">A composite resource is a DSC configuration that takes parameters.</span></span> <span data-ttu-id="957f4-109">구성의 매개 변수는 리소스의 속성으로서 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-109">The parameters of the configuration act as the properties of the resource.</span></span> <span data-ttu-id="957f4-110">구성은 **.schema.psm1** 확장으로 저장되며, 일반적인 DSC 리소스에서 MOF 스키마와 리소스 스크립트 모두를 대신합니다(DSC 리소스에 대한 자세한 내용은 [Windows PowerShell 필요한 상태 구성 리소스](resources.md) 참조).</span><span class="sxs-lookup"><span data-stu-id="957f4-110">The configuration is saved as a file with a **.schema.psm1** extension, and takes the place of both the MOF schema and the resource script in a typical DSC resource (for more information about DSC resources, see [Windows PowerShell Desired State Configuration Resources](resources.md).</span></span>
 
-## <a name="creating-the-composite-resource"></a><span data-ttu-id="d5624-111">복합 리소스 만들기</span><span class="sxs-lookup"><span data-stu-id="d5624-111">Creating the composite resource</span></span>
+## <a name="creating-the-composite-resource"></a><span data-ttu-id="957f4-111">복합 리소스 만들기</span><span class="sxs-lookup"><span data-stu-id="957f4-111">Creating the composite resource</span></span>
 
-<span data-ttu-id="d5624-112">이 예제에서는 다양한 기존 리소스를 호출하여 가상 컴퓨터를 구성하는 구성을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-112">In our example, we create a configuration that invokes a number of existing resources to configure virtual machines.</span></span> <span data-ttu-id="d5624-113">구성 블록에서 설정되는 값을 지정하는 대신 구성에서는 많은 매개 변수를 가져와서 구성 블록에 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-113">Instead of specifying the values to be set in configuration blocks, the configuration takes a number of parameters that are then used in the configuration blocks.</span></span>
+<span data-ttu-id="957f4-112">이 예제에서는 다양한 기존 리소스를 호출하여 가상 컴퓨터를 구성하는 구성을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-112">In our example, we create a configuration that invokes a number of existing resources to configure virtual machines.</span></span> <span data-ttu-id="957f4-113">구성 블록에서 설정되는 값을 지정하는 대신 구성에서는 많은 매개 변수를 가져와서 구성 블록에 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-113">Instead of specifying the values to be set in configuration blocks, the configuration takes a number of parameters that are then used in the configuration blocks.</span></span>
 
 ```powershell
 Configuration xVirtualMachine
@@ -131,15 +131,15 @@ Configuration xVirtualMachine
 }
 ```
 
-### <a name="saving-the-configuration-as-a-composite-resource"></a><span data-ttu-id="d5624-114">구성을 복합 리소스로서 저장</span><span class="sxs-lookup"><span data-stu-id="d5624-114">Saving the configuration as a composite resource</span></span>
+### <a name="saving-the-configuration-as-a-composite-resource"></a><span data-ttu-id="957f4-114">구성을 복합 리소스로서 저장</span><span class="sxs-lookup"><span data-stu-id="957f4-114">Saving the configuration as a composite resource</span></span>
 
-<span data-ttu-id="d5624-115">매개 변수가 있는 구성을 DSC 리소스로 사용하려면, 이 구성을 다른 MOF 기반 리소스의 디렉터리 구조과 같은 디렉터리 구조에 저장하고 이름을 **.schema.psm1** 확장으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-115">To use the parameterized configuration as a DSC resource, save it in a directory structure like that of any other MOF-based resource, and name it with a **.schema.psm1** extension.</span></span> <span data-ttu-id="d5624-116">이 예의 경우에는 파일의 이름을 **xVirtualMachine.schema.psm1**로 지정하겠습니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-116">For this example, we'll name the file **xVirtualMachine.schema.psm1**.</span></span> <span data-ttu-id="d5624-117">다음 줄을 포함하는 **xVirtualMachine.psd1**이라는 매니페스트도 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-117">You also need to create a manifest named **xVirtualMachine.psd1** that contains the following line.</span></span> <span data-ttu-id="d5624-118">이것은 **MyDscResources** 폴더 아래의 모든 리소스에 대한 모듈 매니페스트인 **MyDscResources.psd1** 이 외의 추가적인 매니페스트입니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-118">Note that this is in addition to **MyDscResources.psd1**, the module manifest for all resources under the **MyDscResources** folder.</span></span>
+<span data-ttu-id="957f4-115">매개 변수가 있는 구성을 DSC 리소스로 사용하려면, 이 구성을 다른 MOF 기반 리소스의 디렉터리 구조과 같은 디렉터리 구조에 저장하고 이름을 **.schema.psm1** 확장으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-115">To use the parameterized configuration as a DSC resource, save it in a directory structure like that of any other MOF-based resource, and name it with a **.schema.psm1** extension.</span></span> <span data-ttu-id="957f4-116">이 예의 경우에는 파일의 이름을 **xVirtualMachine.schema.psm1**로 지정하겠습니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-116">For this example, we'll name the file **xVirtualMachine.schema.psm1**.</span></span> <span data-ttu-id="957f4-117">다음 줄을 포함하는 **xVirtualMachine.psd1**이라는 매니페스트도 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-117">You also need to create a manifest named **xVirtualMachine.psd1** that contains the following line.</span></span> <span data-ttu-id="957f4-118">이것은 **MyDscResources** 폴더 아래의 모든 리소스에 대한 모듈 매니페스트인 **MyDscResources.psd1** 이 외의 추가적인 매니페스트입니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-118">Note that this is in addition to **MyDscResources.psd1**, the module manifest for all resources under the **MyDscResources** folder.</span></span>
 
 ```powershell
 RootModule = 'xVirtualMachine.schema.psm1'
 ```
 
-<span data-ttu-id="d5624-119">완료되면 폴더 구조는 다음과 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-119">When you are done, the folder structure should be as follows.</span></span>
+<span data-ttu-id="957f4-119">완료되면 폴더 구조는 다음과 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-119">When you are done, the folder structure should be as follows.</span></span>
 
 ```
 $env: psmodulepath
@@ -151,11 +151,11 @@ $env: psmodulepath
                 |- xVirtualMachine.schema.psm1
 ```
 
-<span data-ttu-id="d5624-120">이제 리소스는 Get-DscResource cmdlet을 사용하여 검색할 수 있으며, 해당 속성은 해당 cmdlet이나, Windows PowerShell ISE에서 **Ctrl+Space** 자동 완성을 사용하여 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-120">The resource is now discoverable by using the Get-DscResource cmdlet, and its properties are discoverable by either that cmdlet or by using **Ctrl+Space** auto-complete in the Windows PowerShell ISE.</span></span>
+<span data-ttu-id="957f4-120">이제 리소스는 Get-DscResource cmdlet을 사용하여 검색할 수 있으며, 해당 속성은 해당 cmdlet이나, Windows PowerShell ISE에서 **Ctrl+Space** 자동 완성을 사용하여 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-120">The resource is now discoverable by using the Get-DscResource cmdlet, and its properties are discoverable by either that cmdlet or by using **Ctrl+Space** auto-complete in the Windows PowerShell ISE.</span></span>
 
-## <a name="using-the-composite-resource"></a><span data-ttu-id="d5624-121">복합 리소스 사용</span><span class="sxs-lookup"><span data-stu-id="d5624-121">Using the composite resource</span></span>
+## <a name="using-the-composite-resource"></a><span data-ttu-id="957f4-121">복합 리소스 사용</span><span class="sxs-lookup"><span data-stu-id="957f4-121">Using the composite resource</span></span>
 
-<span data-ttu-id="d5624-122">다음으로 복합 리소스를 호출하는 구성을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-122">Next we create a configuration that calls the composite resource.</span></span> <span data-ttu-id="d5624-123">이 구성은 xVirtualMachine 복합 리소스를 호출하여 가상 컴퓨터를 만든 다음, **xComputer** 리소스를 호출하여 이름을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-123">This configuration calls the xVirtualMachine composite resource to create a virtual machine, and then calls the **xComputer** resource to rename it.</span></span>
+<span data-ttu-id="957f4-122">다음으로 복합 리소스를 호출하는 구성을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-122">Next we create a configuration that calls the composite resource.</span></span> <span data-ttu-id="957f4-123">이 구성은 xVirtualMachine 복합 리소스를 호출하여 가상 컴퓨터를 만든 다음, **xComputer** 리소스를 호출하여 이름을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-123">This configuration calls the xVirtualMachine composite resource to create a virtual machine, and then calls the **xComputer** resource to rename it.</span></span>
 
 ```powershell
 configuration RenameVM
@@ -186,7 +186,7 @@ configuration RenameVM
 }
 ```
 
-<span data-ttu-id="d5624-124">또한 이 리소스를 사용하여 VM 이름 배열을 xVirtualMachine 리소스에 전달하여 여러 VM을 만들 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-124">You can also use this resource to create multiple VMs by passing in an array of VM names to the xVirtualMachine resource.</span></span>
+<span data-ttu-id="957f4-124">또한 이 리소스를 사용하여 VM 이름 배열을 xVirtualMachine 리소스에 전달하여 여러 VM을 만들 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-124">You can also use this resource to create multiple VMs by passing in an array of VM names to the xVirtualMachine resource.</span></span>
 
 ```PowerShell
 Configuration MultipleVms
@@ -208,17 +208,17 @@ Configuration MultipleVms
 }
 ```
 
-## <a name="supporting-psdscrunascredential"></a><span data-ttu-id="d5624-125">PsDscRunAsCredential 지원</span><span class="sxs-lookup"><span data-stu-id="d5624-125">Supporting PsDscRunAsCredential</span></span>
+## <a name="supporting-psdscrunascredential"></a><span data-ttu-id="957f4-125">PsDscRunAsCredential 지원</span><span class="sxs-lookup"><span data-stu-id="957f4-125">Supporting PsDscRunAsCredential</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="d5624-126">**PsDscRunAsCredential**은 PowerShell 5.0이상에서 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-126">**PsDscRunAsCredential** is supported in PowerShell 5.0 and later.</span></span>
+> <span data-ttu-id="957f4-126">**PsDscRunAsCredential**은 PowerShell 5.0이상에서 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-126">**PsDscRunAsCredential** is supported in PowerShell 5.0 and later.</span></span>
 
-<span data-ttu-id="d5624-127">**PsDscRunAsCredential** 속성을 [DSC 구성](../configurations/configurations.md) 리소스 블록에서 사용하면 지정된 자격 증명 집합으로 리소스를 실행해야 함을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-127">The **PsDscRunAsCredential** property can be used in [DSC configurations](../configurations/configurations.md) resource block to specify that the resource should be run under a specified set of credentials.</span></span>
-<span data-ttu-id="d5624-128">자세한 내용은 [사용자 자격 증명을 사용하여 DSC 실행](../configurations/runAsUser.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d5624-128">For more information, see [Running DSC with user credentials](../configurations/runAsUser.md).</span></span>
+<span data-ttu-id="957f4-127">**PsDscRunAsCredential** 속성을 [DSC 구성](../configurations/configurations.md) 리소스 블록에서 사용하면 지정된 자격 증명 집합으로 리소스를 실행해야 함을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-127">The **PsDscRunAsCredential** property can be used in [DSC configurations](../configurations/configurations.md) resource block to specify that the resource should be run under a specified set of credentials.</span></span>
+<span data-ttu-id="957f4-128">자세한 내용은 [사용자 자격 증명을 사용하여 DSC 실행](../configurations/runAsUser.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="957f4-128">For more information, see [Running DSC with user credentials](../configurations/runAsUser.md).</span></span>
 
-<span data-ttu-id="d5624-129">사용자 지정 리소스 내에서 사용자 컨텍스트에 액세스하려는 경우 `$PsDscContext` 자동 변수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-129">To access the user context from within a custom resource, you can use the automatic variable `$PsDscContext`.</span></span>
+<span data-ttu-id="957f4-129">사용자 지정 리소스 내에서 사용자 컨텍스트에 액세스하려는 경우 `$PsDscContext` 자동 변수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-129">To access the user context from within a custom resource, you can use the automatic variable `$PsDscContext`.</span></span>
 
-<span data-ttu-id="d5624-130">예를 들어 다음 코드는 리소스가 자세한 정보 출력 스트림으로 실행되는 사용자 컨텍스트를 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="d5624-130">For example the following code would write the user context under which the resource is running to the verbose output stream:</span></span>
+<span data-ttu-id="957f4-130">예를 들어 다음 코드는 리소스가 자세한 정보 출력 스트림으로 실행되는 사용자 컨텍스트를 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="957f4-130">For example the following code would write the user context under which the resource is running to the verbose output stream:</span></span>
 
 ```powershell
 if ($PsDscContext.RunAsUser) {
@@ -226,7 +226,7 @@ if ($PsDscContext.RunAsUser) {
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="d5624-131">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d5624-131">See Also</span></span>
-### <a name="concepts"></a><span data-ttu-id="d5624-132">개념</span><span class="sxs-lookup"><span data-stu-id="d5624-132">Concepts</span></span>
-* [<span data-ttu-id="d5624-133">Writing a custom DSC resource with MOF(MOF를 사용하여 사용자 지정 DSC 리소스 작성)</span><span class="sxs-lookup"><span data-stu-id="d5624-133">Writing a custom DSC resource with MOF</span></span>](authoringResourceMOF.md)
-* [<span data-ttu-id="d5624-134">Windows PowerShell 필요한 상태 구성 시작</span><span class="sxs-lookup"><span data-stu-id="d5624-134">Get Started with Windows PowerShell Desired State Configuration</span></span>](../overview/overview.md)
+## <a name="see-also"></a><span data-ttu-id="957f4-131">참고 항목</span><span class="sxs-lookup"><span data-stu-id="957f4-131">See Also</span></span>
+### <a name="concepts"></a><span data-ttu-id="957f4-132">개념</span><span class="sxs-lookup"><span data-stu-id="957f4-132">Concepts</span></span>
+* [<span data-ttu-id="957f4-133">Writing a custom DSC resource with MOF(MOF를 사용하여 사용자 지정 DSC 리소스 작성)</span><span class="sxs-lookup"><span data-stu-id="957f4-133">Writing a custom DSC resource with MOF</span></span>](authoringResourceMOF.md)
+* [<span data-ttu-id="957f4-134">Windows PowerShell 필요한 상태 구성 시작</span><span class="sxs-lookup"><span data-stu-id="957f4-134">Get Started with Windows PowerShell Desired State Configuration</span></span>](../overview/overview.md)

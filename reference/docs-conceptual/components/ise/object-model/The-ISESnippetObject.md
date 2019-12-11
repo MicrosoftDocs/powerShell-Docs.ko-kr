@@ -3,45 +3,45 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: ISESnippet 개체
 ms.openlocfilehash: 62d470569deb051fca80005235d4c492319cf5ec
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67028895"
 ---
-# <a name="the-isesnippetobject"></a><span data-ttu-id="cf1a5-103">ISESnippet 개체</span><span class="sxs-lookup"><span data-stu-id="cf1a5-103">The ISESnippetObject</span></span>
+# <a name="the-isesnippetobject"></a><span data-ttu-id="4fb29-103">ISESnippet 개체</span><span class="sxs-lookup"><span data-stu-id="4fb29-103">The ISESnippetObject</span></span>
 
-<span data-ttu-id="cf1a5-104">**ISESnippet** 개체는 Microsoft.PowerShell.Host.ISE.ISESnippet 클래스의 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="cf1a5-104">An **ISESnippet** object is an instance of the Microsoft.PowerShell.Host.ISE.ISESnippet class.</span></span> <span data-ttu-id="cf1a5-105">**$psISE.CurrentPowerShellTab.Snippets** 컬렉션의 멤버는 모두 **ISESnippet** 개체의 예입니다.</span><span class="sxs-lookup"><span data-stu-id="cf1a5-105">The members of the **$psISE.CurrentPowerShellTab.Snippets** collection are all examples of **ISESnippet** objects.</span></span> <span data-ttu-id="cf1a5-106">코드 조각을 만드는 가장 쉬운 방법은 [New-IseSnippet&#91;PSITPro5_ISE&#93;](https://technet.microsoft.com/library/0a6339a3-2683-4a8e-8929-90ad9a95c3e0) cmdlet을 사용하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="cf1a5-106">The easiest way to create a snippet is to use the [New-IseSnippet&#91;PSITPro5_ISE&#93;](https://technet.microsoft.com/library/0a6339a3-2683-4a8e-8929-90ad9a95c3e0) cmdlet.</span></span>
+<span data-ttu-id="4fb29-104">**ISESnippet** 개체는 Microsoft.PowerShell.Host.ISE.ISESnippet 클래스의 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="4fb29-104">An **ISESnippet** object is an instance of the Microsoft.PowerShell.Host.ISE.ISESnippet class.</span></span> <span data-ttu-id="4fb29-105">**$psISE.CurrentPowerShellTab.Snippets** 컬렉션의 멤버는 모두 **ISESnippet** 개체의 예입니다.</span><span class="sxs-lookup"><span data-stu-id="4fb29-105">The members of the **$psISE.CurrentPowerShellTab.Snippets** collection are all examples of **ISESnippet** objects.</span></span> <span data-ttu-id="4fb29-106">코드 조각을 만드는 가장 쉬운 방법은 [New-IseSnippet&#91;PSITPro5_ISE&#93;](https://technet.microsoft.com/library/0a6339a3-2683-4a8e-8929-90ad9a95c3e0) cmdlet을 사용하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="4fb29-106">The easiest way to create a snippet is to use the [New-IseSnippet&#91;PSITPro5_ISE&#93;](https://technet.microsoft.com/library/0a6339a3-2683-4a8e-8929-90ad9a95c3e0) cmdlet.</span></span>
 
-## <a name="properties"></a><span data-ttu-id="cf1a5-107">속성</span><span class="sxs-lookup"><span data-stu-id="cf1a5-107">Properties</span></span>
+## <a name="properties"></a><span data-ttu-id="4fb29-107">속성</span><span class="sxs-lookup"><span data-stu-id="4fb29-107">Properties</span></span>
 
-### <a name="author"></a><span data-ttu-id="cf1a5-108">Author</span><span class="sxs-lookup"><span data-stu-id="cf1a5-108">Author</span></span>
+### <a name="author"></a><span data-ttu-id="4fb29-108">Author</span><span class="sxs-lookup"><span data-stu-id="4fb29-108">Author</span></span>
 
-<span data-ttu-id="cf1a5-109">Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="cf1a5-109">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
+<span data-ttu-id="4fb29-109">Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4fb29-109">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
 
-<span data-ttu-id="cf1a5-110">코드 조각 작성자의 이름을 가져오는 읽기 전용 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="cf1a5-110">The read-only property that gets the name of the author of the snippet.</span></span>
+<span data-ttu-id="4fb29-110">코드 조각 작성자의 이름을 가져오는 읽기 전용 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="4fb29-110">The read-only property that gets the name of the author of the snippet.</span></span>
 
 ```powershell
 # Get the author of the first snippet item
 $psISE.CurrentPowerShellTab.Snippets.Item(0).Author
 ```
 
-### <a name="codefragment"></a><span data-ttu-id="cf1a5-111">CodeFragment</span><span class="sxs-lookup"><span data-stu-id="cf1a5-111">CodeFragment</span></span>
+### <a name="codefragment"></a><span data-ttu-id="4fb29-111">CodeFragment</span><span class="sxs-lookup"><span data-stu-id="4fb29-111">CodeFragment</span></span>
 
-<span data-ttu-id="cf1a5-112">Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="cf1a5-112">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
+<span data-ttu-id="4fb29-112">Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4fb29-112">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
 
-<span data-ttu-id="cf1a5-113">편집기에 삽입할 코드 조각을 가져오는 읽기 전용 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="cf1a5-113">The read-only property that gets the code fragment to be inserted into the editor.</span></span>
+<span data-ttu-id="4fb29-113">편집기에 삽입할 코드 조각을 가져오는 읽기 전용 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="4fb29-113">The read-only property that gets the code fragment to be inserted into the editor.</span></span>
 
 ```powershell
 # Get the code fragment associated with the first snippet item.
 $psISE.CurrentPowerShellTab.Snippets.Item(0).CodeFragment
 ```
 
-### <a name="shortcut"></a><span data-ttu-id="cf1a5-114">바로 가기</span><span class="sxs-lookup"><span data-stu-id="cf1a5-114">Shortcut</span></span>
+### <a name="shortcut"></a><span data-ttu-id="4fb29-114">바로 가기</span><span class="sxs-lookup"><span data-stu-id="4fb29-114">Shortcut</span></span>
 
-<span data-ttu-id="cf1a5-115">Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="cf1a5-115">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
+<span data-ttu-id="4fb29-115">Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4fb29-115">Supported in Windows PowerShell ISE 3.0 and later, and not present in earlier versions.</span></span>
 
-<span data-ttu-id="cf1a5-116">메뉴 항목에 대한 Windows 바로 가기 키를 가져오는 읽기 전용 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="cf1a5-116">The read-only property that gets the Windows keyboard shortcut for the menu item.</span></span>
+<span data-ttu-id="4fb29-116">메뉴 항목에 대한 Windows 바로 가기 키를 가져오는 읽기 전용 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="4fb29-116">The read-only property that gets the Windows keyboard shortcut for the menu item.</span></span>
 
 ```powershell
 # Get the shortcut for the first submenu item.
@@ -50,8 +50,8 @@ $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Add('_Process', {Get-Process}, '
 $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus[0].Shortcut
 ```
 
-## <a name="see-also"></a><span data-ttu-id="cf1a5-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cf1a5-117">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4fb29-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4fb29-117">See Also</span></span>
 
-- [<span data-ttu-id="cf1a5-118">ISESnippetCollection 개체</span><span class="sxs-lookup"><span data-stu-id="cf1a5-118">The ISESnippetCollection Object</span></span>](The-ISESnippetCollection-Object.md)
-- [<span data-ttu-id="cf1a5-119">Windows PowerShell ISE 스크립팅 개체 모델의 용도</span><span class="sxs-lookup"><span data-stu-id="cf1a5-119">Purpose of the Windows PowerShell ISE Scripting Object Model</span></span>](purpose-of-the-windows-powershell-ise-scripting-object-model.md)
-- [<span data-ttu-id="cf1a5-120">ISE 개체 모델 계층 구조</span><span class="sxs-lookup"><span data-stu-id="cf1a5-120">The ISE Object Model Hierarchy</span></span>](The-ISE-Object-Model-Hierarchy.md)
+- [<span data-ttu-id="4fb29-118">ISESnippetCollection 개체</span><span class="sxs-lookup"><span data-stu-id="4fb29-118">The ISESnippetCollection Object</span></span>](The-ISESnippetCollection-Object.md)
+- [<span data-ttu-id="4fb29-119">Windows PowerShell ISE 스크립팅 개체 모델의 용도</span><span class="sxs-lookup"><span data-stu-id="4fb29-119">Purpose of the Windows PowerShell ISE Scripting Object Model</span></span>](purpose-of-the-windows-powershell-ise-scripting-object-model.md)
+- [<span data-ttu-id="4fb29-120">ISE 개체 모델 계층 구조</span><span class="sxs-lookup"><span data-stu-id="4fb29-120">The ISE Object Model Hierarchy</span></span>](The-ISE-Object-Model-Hierarchy.md)
