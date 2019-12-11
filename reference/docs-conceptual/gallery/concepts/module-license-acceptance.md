@@ -4,10 +4,10 @@ schema: 2.0.0
 keywords: PowerShell
 title: 라이선스 동의가 필요한 모듈
 ms.openlocfilehash: 369e32d5278a2e1bf1d3f2ae67f670c524b9f878
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71328524"
 ---
 # <a name="modules-requiring-license-acceptance"></a>라이선스 동의가 필요한 모듈

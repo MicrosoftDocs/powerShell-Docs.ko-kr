@@ -4,10 +4,10 @@ ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: WMF 5.1의 향상된 패키지 관리
 ms.openlocfilehash: cb19c2d71391b5729ce9d73fc6b033270f8db307
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71325112"
 ---
 # <a name="improvements-to-package-management-in-wmf-51"></a>WMF 5.1의 향상된 패키지 관리

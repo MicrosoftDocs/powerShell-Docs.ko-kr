@@ -3,10 +3,10 @@ ms.date: 06/03/2019
 keywords: powershell,cmdlet
 title: 소프트웨어 설치 작업
 ms.openlocfilehash: 6d2111a332f0e8c1b545186d3d950e936aed1834
-ms.sourcegitcommit: 4ec9e10647b752cc62b1eabb897ada3dc03c93eb
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "66830297"
 ---
 # <a name="working-with-software-installations"></a>소프트웨어 설치 작업

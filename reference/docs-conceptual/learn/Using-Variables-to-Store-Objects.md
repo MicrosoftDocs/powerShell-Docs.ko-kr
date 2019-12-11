@@ -3,10 +3,10 @@ ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: 변수를 사용하여 개체 저장
 ms.openlocfilehash: 2d20d84e48d3f68cab5c1ffa05d689b46415ebc8
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67030360"
 ---
 # <a name="using-variables-to-store-objects"></a>변수를 사용하여 개체 저장

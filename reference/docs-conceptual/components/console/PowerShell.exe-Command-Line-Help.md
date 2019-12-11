@@ -3,10 +3,10 @@ ms.date: 05/02/2019
 keywords: powershell,cmdlet
 title: PowerShell 명령줄 옵션
 ms.openlocfilehash: c7cd96344ce3686fa33725320f86a9c86ac6a68b
-ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65229769"
 ---
 # <a name="powershell-command-line-options"></a>PowerShell 명령줄 옵션

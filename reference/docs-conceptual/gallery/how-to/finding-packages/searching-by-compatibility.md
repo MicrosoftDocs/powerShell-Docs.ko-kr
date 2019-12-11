@@ -4,10 +4,10 @@ contributor: JKeithB, SydneyhSmith
 keywords: gallery,powershell,cmdlet,psgallery
 title: 호환 가능한 PowerShell 버전 또는 운영 체제가 있는 패키지
 ms.openlocfilehash: 14038aa9b0453e1d06e6587e97da391b56297c75
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71328444"
 ---
 # <a name="packages-with-compatible-powershell-editions-or-operating-systems"></a>호환 가능한 PowerShell 버전 또는 운영 체제가 있는 패키지

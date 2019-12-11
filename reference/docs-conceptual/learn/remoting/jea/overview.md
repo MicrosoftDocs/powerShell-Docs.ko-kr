@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: Just Enough Administration 개요
 ms.openlocfilehash: 4b74e5be9558810748a8844a325c8213e1b3ebc9
-ms.sourcegitcommit: e894ed833cef57967cdaf002f8c883f66864e836
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "70017704"
 ---
 # <a name="just-enough-administration"></a>JEA(Just Enough Administration)
