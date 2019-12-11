@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA 역할 기능
 ms.openlocfilehash: 613557d03bb481f9280a06ca1506166a18b4dab2
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416789"
 ---
 # <a name="jea-role-capabilities"></a>JEA 역할 기능

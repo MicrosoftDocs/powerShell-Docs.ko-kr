@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: 패키지 소유자에게 문의
 ms.openlocfilehash: 1adb0cfefc9e9c3f447e7345eaf0b088a04a452b
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71328254"
 ---
 # <a name="contacting-package-owners"></a>패키지 소유자에게 문의

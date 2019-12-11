@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA 필수 조건
 ms.openlocfilehash: 1833bacf49eebcccefc10f7c85a39732559c1a97
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416720"
 ---
 # <a name="prerequisites"></a>필수 구성 요소

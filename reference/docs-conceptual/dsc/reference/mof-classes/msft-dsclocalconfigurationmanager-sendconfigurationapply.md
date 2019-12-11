@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: SendConfigurationApply 메서드
 ms.openlocfilehash: 11b9d435bbaac1600d25ff074b6c55b236a8378b
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71954890"
 ---
 # <a name="sendconfigurationapply-method"></a>SendConfigurationApply 메서드

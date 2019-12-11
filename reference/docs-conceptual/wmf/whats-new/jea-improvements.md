@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 title: JEA(Just Enough Administration)에 대한 개선 사항
 ms.openlocfilehash: 847ae92a6225023bcd0ee3dfe7c7058bdc356836
-ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71147603"
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>JEA(Just Enough Administration)에 대한 개선 사항

@@ -3,10 +3,10 @@ ms.date: 09/09/2019
 keywords: powershell,cmdlet
 title: 부록 1 호환성 별칭
 ms.openlocfilehash: 2351fdf23711fe1417f7e3fc3cca5b642d5a59fc
-ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "70848172"
 ---
 # <a name="appendix-1---compatibility-aliases"></a>부록 1 - 호환성 별칭

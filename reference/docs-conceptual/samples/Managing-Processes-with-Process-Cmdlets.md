@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Process Cmdlet으로 프로세스 관리
 ms.openlocfilehash: 0962290327a02141f582acdf168143dee14ac60a
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67030181"
 ---
 # <a name="managing-processes-with-process-cmdlets"></a>Process Cmdlet으로 프로세스 관리

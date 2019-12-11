@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC ServiceSet 리소스
 ms.openlocfilehash: 97c25f46940d69ed6c696e2692e29131e9a997b0
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71953030"
 ---
 # <a name="dsc-serviceset-resource"></a>DSC ServiceSet 리소스

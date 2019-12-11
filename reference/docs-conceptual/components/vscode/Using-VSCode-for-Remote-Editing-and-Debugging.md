@@ -3,10 +3,10 @@ title: Visual Studio Code를 사용하여 원격 편집 및 디버깅
 description: Visual Studio Code를 사용하여 원격 편집 및 디버깅
 ms.date: 06/13/2019
 ms.openlocfilehash: ae3b7a3709498fcd547a48d0849b0dc880217225
-ms.sourcegitcommit: 13f24786ed39ca1c07eff2b73a1974c366e31cb8
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67263960"
 ---
 # <a name="using-visual-studio-code-for-remote-editing-and-debugging"></a>Visual Studio Code를 사용하여 원격 편집 및 디버깅
@@ -89,4 +89,4 @@ macOS에서 Azure의 Ubuntu VM로 이동 중이므로 원격에 SSH를 사용합
 
    ![원격 파일 디버깅](images/Using-VSCode-for-Remote-Editing-and-Debugging/7-start-debugging.png)
 
-문제가 있는 경우 [GitHub 리포지토리](https://github.com/powershell/vscode-powershell)에서 이슈를 열 수 있습니다.
+문제가 있는 경우 [GitHub 리포지토리](https://github.com/powershell/vscode-powershell)에서 문제를 시작할 수 있습니다.

@@ -3,10 +3,10 @@ ms.date: 01/17/2019
 keywords: dsc,powershell,configuration,setup
 title: 노드 다시 부팅
 ms.openlocfilehash: 22c63fab9b6646f522f8531b46a43a94ff883552
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71954030"
 ---
 # <a name="reboot-a-node"></a>노드 다시 부팅

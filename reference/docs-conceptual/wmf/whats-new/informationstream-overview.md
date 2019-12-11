@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 title: 정보 스트림
 ms.openlocfilehash: c54603cf0dd4f0b69f8147620130f9f29bc3e5ec
-ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71147613"
 ---
 # <a name="information-stream"></a>정보 스트림

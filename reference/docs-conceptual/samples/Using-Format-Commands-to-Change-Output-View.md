@@ -3,10 +3,10 @@ ms.date: 11/22/2019
 keywords: powershell,cmdlet
 title: 형식 명령을 사용하여 출력 보기 변경
 ms.openlocfilehash: f270d5ec5efe5caf506d6a8a45285990996f6ae6
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417598"
 ---
 # <a name="using-format-commands-to-change-output-view"></a>형식 명령을 사용하여 출력 보기 변경

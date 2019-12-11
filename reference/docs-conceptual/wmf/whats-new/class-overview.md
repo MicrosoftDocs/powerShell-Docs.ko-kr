@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 title: PowerShell 클래스를 사용하여 사용자 지정 형식 만들기
 ms.openlocfilehash: c2c50fb65ce4931fcf6ae529b4146df391c831c4
-ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71147843"
 ---
 # <a name="creating-custom-types-using-powershell-classes"></a>PowerShell 클래스를 사용하여 사용자 지정 형식 만들기
