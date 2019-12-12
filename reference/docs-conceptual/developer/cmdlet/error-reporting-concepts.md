@@ -14,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: 0dce97c0-bd9a-4691-8ca3-e8d5dea902c5
 caps.latest.revision: 11
 ms.openlocfilehash: 2f185e415e3effc2cf09a282ca1167e3bcfb7d6a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364622"
 ---
 # <a name="error-reporting-concepts"></a>오류 보고 개념

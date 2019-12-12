@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d7286443-eed4-43d5-b809-50cdcdcba088
 caps.latest.revision: 4
 ms.openlocfilehash: 23518c625fe1138e1bd2bcc895274cb21d7daf8a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367632"
 ---
 # <a name="creating-a-custom-user-interface"></a>사용자 지정 사용자 인터페이스 만들기

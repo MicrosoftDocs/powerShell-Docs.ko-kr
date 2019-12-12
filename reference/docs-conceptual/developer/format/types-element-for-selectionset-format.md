@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 4606fec0-ff31-4d36-af68-227405335ec3
 caps.latest.revision: 15
 ms.openlocfilehash: 0427367efa2c8a7e352d718706d1341a0c8e3621
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367962"
 ---
 # <a name="types-element-for-selectionset-format"></a>SelectionSet에 대한 Types 요소(형식)
@@ -32,7 +32,7 @@ Configuration 요소 (Format) SelectionSets 요소 (Format) Selectionsets 요소
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `Types` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 자식 요소가 하나 이상 있어야 하지만 추가할 수 있는 자식 요소 수에 대 한 최대 제한은 없습니다.
+다음 섹션에서는 특성, 자식 요소 및 `Types` 요소의 부모 요소에 대해 설명 합니다. 자식 요소가 하나 이상 있어야 하지만 추가할 수 있는 자식 요소 수에 대 한 최대 제한은 없습니다.
 
 ### <a name="attributes"></a>특성
 
@@ -42,7 +42,7 @@ Configuration 요소 (Format) SelectionSets 요소 (Format) Selectionsets 요소
 
 |요소|설명|
 |-------------|-----------------|
-|[형식의 TypeName 요소 (형식)](./typename-element-for-types-format.md)|필수 요소입니다.<br /><br /> 선택 집합에 속하는 .NET 개체를 지정 합니다.|
+|[형식의 TypeName 요소 (형식)](./typename-element-for-types-format.md)|필수적 요소입니다.<br /><br /> 선택 집합에 속하는 .NET 개체를 지정 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 

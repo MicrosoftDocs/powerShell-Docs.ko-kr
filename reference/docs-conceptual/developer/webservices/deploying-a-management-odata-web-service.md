@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 4497b64c-7875-4047-bf77-07e04c098ffe
 caps.latest.revision: 4
 ms.openlocfilehash: 376d90394b632e82322b848cb124f002ff91d8b3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366182"
 ---
 # <a name="deploying-a-management-odata-web-service"></a>관리 OData 웹 서비스 배포
@@ -25,7 +25,7 @@ ms.locfileid: "72366182"
 
 1. IIS `WWWRoot` 디렉터리에서 웹 응용 프로그램에 대 한 디렉터리를 만듭니다.
 
-2. MOF 스키마 파일, XML 스키마 파일, [Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 및 [register-pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) 인터페이스를 내보내는 dll을 복사 하 고 web.config 파일을 다음으로 복사 합니다. 응용 프로그램 디렉터리입니다.
+2. MOF 스키마 파일, XML 스키마 파일, [Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 및 [register-pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) 인터페이스를 내보내는 dll을 복사 하 고 web.config 파일을 응용 프로그램 디렉터리로 복사 하 여 복사 합니다.
 
 3. 사이트 ID를 만듭니다.
 

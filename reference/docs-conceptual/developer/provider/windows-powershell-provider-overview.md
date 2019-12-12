@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 82244fbd-07b9-47f3-805c-3fb90ebbf58a
 caps.latest.revision: 13
 ms.openlocfilehash: 81f6c8cd75ccea9e711cd8f6d6daa6cca5a499a0
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366292"
 ---
 # <a name="windows-powershell-provider-overview"></a>Windows PowerShell 공급자 개요
 
-Windows PowerShell 공급자를 사용 하면 모든 데이터 저장소가 탑재 된 드라이브인 것 처럼 파일 시스템 처럼 노출 될 수 있습니다. 예를 들어 기본 제공 레지스트리 공급자를 사용 하면 컴퓨터의 `c` 드라이브로 이동 하는 것 처럼 레지스트리를 탐색할 수 있습니다. 공급자는 파일 시스템을 탐색할 때 파일 및 디렉터리를 처리 하는 것 처럼 데이터 저장소의 데이터를 처리할 수 있도록 `Item` cmdlet (예: `Get-Item`, `Set-Item` 등)을 재정의할 수도 있습니다. 공급자 및 드라이브 및 Windows PowerShell의 기본 제공 공급자에 대 한 자세한 내용은 [about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers)를 참조 하세요.
+Windows PowerShell 공급자를 사용 하면 모든 데이터 저장소가 탑재 된 드라이브인 것 처럼 파일 시스템 처럼 노출 될 수 있습니다. 예를 들어 기본 제공 레지스트리 공급자를 사용 하면 컴퓨터의 `c` 드라이브로 이동 하는 것 처럼 레지스트리를 탐색할 수 있습니다. 공급자는 파일 시스템을 탐색할 때 파일 및 디렉터리를 처리 하는 것 처럼 데이터 저장소의 데이터를 처리할 수 있도록 `Item` cmdlet (예: `Get-Item`, `Set-Item`등)을 재정의할 수도 있습니다. 공급자 및 드라이브 및 Windows PowerShell의 기본 제공 공급자에 대 한 자세한 내용은 [about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers)를 참조 하세요.
 
 ## <a name="providers-and-drives"></a>공급자 및 드라이브
 
@@ -51,7 +51,7 @@ Windows PowerShell 공급자에 대 한 원격 액세스를 허용 하려면 현
 
 ### <a name="provider-internal-paths"></a>공급자-내부 경로
 
-공급자 cmdlet이 비 Windows PowerShell Api (응용 프로그래밍 인터페이스)를 사용 하 여 데이터에 액세스할 수 있도록 하려면 Windows PowerShell 공급자가 공급자 내부 경로를 지원 해야 합니다. 이 경로는 공급자 정규화 경로의 "::" 뒤에 표시 됩니다. 예를 들어 filesystem Windows PowerShell 공급자에 대 한 공급자 내부 경로를 `\\uncshare\abc\bar` 합니다.
+공급자 cmdlet이 비 Windows PowerShell Api (응용 프로그래밍 인터페이스)를 사용 하 여 데이터에 액세스할 수 있도록 하려면 Windows PowerShell 공급자가 공급자 내부 경로를 지원 해야 합니다. 이 경로는 공급자 정규화 경로의 "::" 뒤에 표시 됩니다. 예를 들어 filesystem Windows PowerShell 공급자에 대 한 공급자 내부 경로를 `\\uncshare\abc\bar`합니다.
 
 ## <a name="overriding-cmdlet-parameters"></a>Cmdlet 매개 변수 재정의
 
@@ -76,7 +76,7 @@ Windows PowerShell 공급자에 대 한 원격 액세스를 허용 하려면 현
 
 Windows PowerShell 엔진은 [Icmdletprovidersupportshelp. Gethelpmaml *](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml) 메서드를 호출 하 여 공급자 cmdlet에 대 한 도움말 항목을 표시 합니다. 엔진은 `Get-Help` cmdlet을 실행할 때 사용자가 지정한 cmdlet의 이름과 사용자의 현재 경로를 제공 합니다. 현재 경로는 공급자가 다른 드라이브에 대해 동일한 공급자 cmdlet의 다른 버전을 구현 하는 경우에 필요 합니다. 메서드는 cmdlet 도움말의 XML이 포함 된 문자열을 반환 해야 합니다.
 
-도움말 파일의 콘텐츠는 PSMAML XML을 사용 하 여 작성 됩니다. 이는 독립 실행형 cmdlet에 대 한 도움말 콘텐츠를 작성 하는 데 사용 되는 XML 스키마와 동일 합니다. 사용자 지정 cmdlet 도움말의 콘텐츠를 `CmdletHelpPaths` 요소의 공급자에 대 한 도움말 파일에 추가 합니다. 다음 예에서는 단일 공급자 cmdlet에 대 한 `command` 요소를 보여 줍니다. 공급자 cmdlet의 이름을 지정 하는 방법을 보여 줍니다. 지원함
+도움말 파일의 콘텐츠는 PSMAML XML을 사용 하 여 작성 됩니다. 이는 독립 실행형 cmdlet에 대 한 도움말 콘텐츠를 작성 하는 데 사용 되는 XML 스키마와 동일 합니다. 사용자 지정 cmdlet 도움말의 콘텐츠를 `CmdletHelpPaths` 요소의 공급자에 대 한 도움말 파일에 추가 합니다. 다음 예에서는 단일 공급자 cmdlet에 대 한 `command` 요소를 보여 줍니다. 공급자 cmdlet의 이름을 지정 하는 방법을 보여 줍니다. 에서는 앱 스토어의 앱, 웹 응용 프로그램 및 회사 내부에서 직접 작성한 앱 등
 
 ```xml
 <CmdletHelpPaths>

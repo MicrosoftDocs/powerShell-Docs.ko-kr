@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 50e6f9b1-2678-4f53-9250-7c48843a9549
 caps.latest.revision: 5
 ms.openlocfilehash: 1113c0d1cd68bb97d2f96b529f755b62137d1f40
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366042"
 ---
 # <a name="importing-and-invoking-a-windows-powershell-workflow"></a>Windows PowerShell 워크플로 가져오기 및 호출
@@ -25,7 +25,7 @@ Windows PowerShell 3을 사용 하면 Windows PowerShell 모듈로 패키지 된
 
 1. [Runspace Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo)개체를 만들어 원격 runspace에 대 한 연결을 만듭니다.
 
-2. [Runspace Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo.ShellUri) 개체의 [runspace](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo)속성을 `Microsoft.PowerShell.Workflow`로 설정 하 여 Windows PowerShell 끝점을 지정 합니다 (Windows PowerShell 끝점을 지정).
+2. [Runspace Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo.ShellUri) 개체의 [runspace](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo)속성을 `Microsoft.PowerShell.Workflow` 설정 하 여 Windows PowerShell 끝점을 지정 합니다 .이 속성은 Windows PowerShell 끝점을 지정 합니다.
 
 3. 이전 단계를 완료 하 여 만든 연결을 사용 하는 runspace를 만듭니다.
 

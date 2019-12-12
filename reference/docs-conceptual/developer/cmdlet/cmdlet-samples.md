@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: b99d53fc-0af9-426b-82ce-09955e031d4b
 caps.latest.revision: 13
 ms.openlocfilehash: 0fa4a5f804586c51ae6a36121f9aab041b0989cc
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365882"
 ---
 # <a name="cmdlet-samples"></a>Cmdlet 샘플
@@ -31,7 +31,7 @@ ms.locfileid: "72365882"
 
 [GetProcessSample05 샘플](./getprocesssample05-sample.md) 이 샘플은 전체 버전의 Get Proc cmdlet을 보여 줍니다.
 
-[StopProcessSample01 샘플](./stopprocesssample01-sample.md) 이 샘플에서는 프로세스를 중지 하기 전에 사용자에 게 피드백을 요청 하는 cmdlet을 작성 하는 방법과 사용자가 cmdlet을 사용 하 여 개체를 반환 하려고 함을 나타내는 `PassThru` 매개 변수를 구현 하는 방법을 보여 줍니다.
+[StopProcessSample01 샘플](./stopprocesssample01-sample.md) 이 샘플에서는 프로세스를 중지 하기 전에 사용자에 게 피드백을 요청 하는 cmdlet을 작성 하는 방법과 사용자가 cmdlet을 사용 하 여 개체를 반환 하도록 지정 하는 `PassThru` 매개 변수를 구현 하는 방법을 보여 줍니다.
 
 [StopProcessSample02 샘플](./stopprocesssample02-sample.md) 이 샘플에서는 로컬 컴퓨터에서 프로세스를 중지 하는 동안 디버그, 자세한 정보 및 경고 메시지를 기록 하는 cmdlet을 작성 하는 방법을 보여 줍니다.
 

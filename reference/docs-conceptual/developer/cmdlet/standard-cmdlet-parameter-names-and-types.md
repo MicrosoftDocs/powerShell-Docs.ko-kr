@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: fb24e342-0629-47f8-9ed3-1d4e83458b73
 caps.latest.revision: 6
 ms.openlocfilehash: 6eb10d3cba94b55bd92d8070b59153552534791b
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365322"
 ---
 # <a name="standard-cmdlet-parameter-names-and-types"></a>표준 Cmdlet 매개 변수 이름 및 형식

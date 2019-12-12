@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: e67298ee-a773-4402-8afb-d97ad0e030e5
 caps.latest.revision: 4
 ms.openlocfilehash: c7e20ff0f36e8cab2d414ff2e5924b3359ad9c60
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366272"
 ---
 # <a name="public-resource-schema"></a>공용 리소스 스키마
@@ -38,9 +38,9 @@ class PswsTest_Process
 
 각 속성 이름 앞에는 데이터 형식이 있습니다. 이 예제의 데이터 형식은 .NET Framework의 기본 CLR 데이터 형식에 해당 하지만 속성은 나중에 설명 하는 다른 리소스나 복합 형식에 대 한 참조일 수도 있습니다.
 
-@No__t-0 한정자는 속성이 리소스 인스턴스를 고유 하 게 식별 하는 데 사용 됨을 나타냅니다. 리소스에는 두 개 이상의 키가 있을 수 있습니다.
+`Key` 한정자는 속성이 리소스 인스턴스를 고유 하 게 식별 하는 데 사용 됨을 나타냅니다. 리소스에는 두 개 이상의 키가 있을 수 있습니다.
 
-@No__t-0 한정자는 속성이 필요 함을 나타냅니다. 속성에 `Key` 한정자가 지정 된 경우 필요한 것으로 간주 되며 `Required` 한정자는 필요 하지 않습니다.
+`Required` 한정자는 속성이 필요 함을 나타냅니다. 속성에 `Key` 한정자가 지정 된 경우 필요한 것으로 간주 되며 `Required` 한정자는 필요 하지 않습니다.
 
 ### <a name="complex-data-types"></a>복합 데이터 형식
 

@@ -16,10 +16,10 @@ helpviewer_keywords:
 ms.assetid: da0b32f8-7b51-440e-a061-3177b5759e0e
 caps.latest.revision: 9
 ms.openlocfilehash: 7db93af33717dc4802ed915793f6cd570cfb48f6
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364632"
 ---
 # <a name="adding-parameters-that-process-command-line-input"></a>명령줄 입력을 처리하는 매개 변수 추가
@@ -49,7 +49,7 @@ Cmdlet 매개 변수를 사용 하면 사용자가 cmdlet에 입력을 제공할
 
 **PS > get-proc; `get-member`-membertype 속성**
 
-Cmdlet에 대 한 매개 변수를 선언 하려면 먼저 매개 변수를 나타내는 속성을 정의 해야 합니다. 이 경우에는 **명령줄** 에서 검색할 .NET Framework 프로세스 개체의 이름을 나타내는 유일한 매개 변수는 `Name`입니다. 따라서 cmdlet 클래스는 이름 배열을 허용 하는 문자열 형식의 속성을 정의 합니다.
+cmdlet의 매개 변수를 선언하려면 매개 변수를 나타내는 속성을 먼저 정의해야 합니다. 이 경우에는 **명령줄** 에서 검색할 .NET Framework 프로세스 개체의 이름을 나타내는 유일한 매개 변수는 `Name`입니다. 따라서 cmdlet 클래스는 이름 배열을 허용 하는 문자열 형식의 속성을 정의 합니다.
 
 다음은 **Get Proc** cmdlet의 `Name` 매개 변수에 대 한 매개 변수 선언입니다.
 
@@ -198,7 +198,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     PS> get-proc -name iexplore
     ```
 
-다음 출력이 표시 됩니다.
+다음 출력이 표시됩니다.
 
     ```
     Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)   Id   ProcessName
@@ -212,7 +212,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     PS> get-proc -name iexplore, outlook, notepad
     ```
 
-다음 출력이 표시 됩니다.
+다음 출력이 표시됩니다.
 
     ```
     Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)   Id   ProcessName
@@ -224,7 +224,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
          39       2   1024     356     30   0.08  3396   notepad
     ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [파이프라인 입력을 처리 하는 매개 변수 추가](./adding-parameters-that-process-pipeline-input.md)
 
