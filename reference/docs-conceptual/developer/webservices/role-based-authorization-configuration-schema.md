@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 4ba6d1d2-7055-4fef-b752-a5ae8b4eeb65
 caps.latest.revision: 7
 ms.openlocfilehash: 0a4d4b0cd2c9672ea9b11698258916ae1d0520c0
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366132"
 ---
-# <a name="role-based-authorization-configuration-schema"></a><span data-ttu-id="6a134-102">역할 기반 권한 부여 구성 스키마</span><span class="sxs-lookup"><span data-stu-id="6a134-102">Role-Based Authorization Configuration Schema</span></span>
+# <a name="role-based-authorization-configuration-schema"></a><span data-ttu-id="93ec0-102">역할 기반 권한 부여 구성 스키마</span><span class="sxs-lookup"><span data-stu-id="93ec0-102">Role-Based Authorization Configuration Schema</span></span>
 
-<span data-ttu-id="6a134-103">[PswsRoleBasedPlugins](https://go.microsoft.com/fwlink/?LinkId=243041) 샘플에서는 XML 파일을 사용 하 여 권한 부여 정책을 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="6a134-103">The [PswsRoleBasedPlugins](https://go.microsoft.com/fwlink/?LinkId=243041) sample uses XML files to configure the authorization policy.</span></span> <span data-ttu-id="6a134-104">다음 XSD는 이러한 파일에 사용 되는 스키마를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="6a134-104">The following XSD defines the schema used for these files.</span></span>
+<span data-ttu-id="93ec0-103">[PswsRoleBasedPlugins](https://go.microsoft.com/fwlink/?LinkId=243041) 샘플에서는 XML 파일을 사용 하 여 권한 부여 정책을 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="93ec0-103">The [PswsRoleBasedPlugins](https://go.microsoft.com/fwlink/?LinkId=243041) sample uses XML files to configure the authorization policy.</span></span> <span data-ttu-id="93ec0-104">다음 XSD는 이러한 파일에 사용 되는 스키마를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="93ec0-104">The following XSD defines the schema used for these files.</span></span>
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
