@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 00dbb5ee-93d4-4914-a082-ef4d8b236b5c
 caps.latest.revision: 16
 ms.openlocfilehash: 596212f2e64401a751cf3dca0ee7d60b80912c00
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368852"
 ---
 # <a name="defining-selection-sets"></a>선택 영역 집합 정의
@@ -35,15 +35,15 @@ ms.locfileid: "72368852"
 
 다음과 같은 방법으로 선택 집합을 참조할 수 있습니다.
 
-- 각 뷰에는 뷰를 사용 하 여 표시 되는 개체를 정의 하는 `ViewSelectedBy` 요소가 있습니다. @No__t-0 요소에는 뷰의 모든 정의에 사용 되는 선택 집합을 지정 하는 `SelectionSetName` 자식 요소가 있습니다. 뷰에서 참조할 수 있는 선택 집합 수에는 제한이 없습니다.
+- 각 뷰에는 뷰를 사용 하 여 표시 되는 개체를 정의 하는 `ViewSelectedBy` 요소가 있습니다. `ViewSelectedBy` 요소에는 뷰의 모든 정의에 사용 되는 선택 집합을 지정 하는 `SelectionSetName` 자식 요소가 있습니다. 뷰에서 참조할 수 있는 선택 집합 수에는 제한이 없습니다.
 
-- 뷰나 컨트롤의 각 정의에서 `EntrySelectedBy` 요소는 해당 정의를 사용 하 여 표시 되는 개체를 정의 합니다. 일반적으로 뷰 또는 컨트롤에는 하나의 정의만 있으므로 `ViewSelectedBy` 요소에 의해 개체가 정의 됩니다. 정의의 `EntrySelectedBy` 요소에는 선택 집합을 지정 하는 `SelectionSetName` 자식 요소가 있습니다. 정의에 대 한 선택 집합을 지정 하는 경우 `EntrySelectedBy` 요소의 다른 자식 요소를 지정할 수 없습니다.
+- 뷰나 컨트롤의 각 정의에서 `EntrySelectedBy` 요소는 해당 정의를 사용 하 여 표시 되는 개체를 정의 합니다. 일반적으로 뷰 또는 컨트롤에는 정의가 하나만 있으므로 `ViewSelectedBy` 요소에 의해 개체가 정의 됩니다. 정의의 `EntrySelectedBy` 요소에는 선택 집합을 지정 하는 `SelectionSetName` 자식 요소가 있습니다. 정의에 대 한 선택 집합을 지정 하는 경우 `EntrySelectedBy` 요소의 다른 자식 요소를 지정할 수 없습니다.
 
-- 뷰나 컨트롤의 각 정의에서 `SelectionCondition` 요소를 사용 하 여 정의를 사용 하는 경우에 대 한 조건을 지정할 수 있습니다. @No__t-0 요소에는 조건을 트리거하는 선택 집합을 지정 하는 `SelectionSetName` 자식 요소가 있습니다. 선택 집합에 정의 된 개체가 표시 될 때 조건이 트리거됩니다. 이러한 조건을 설정 하는 방법에 대 한 자세한 내용은 [데이터 표시 시기에 대 한 조건 정의](./defining-conditions-for-displaying-data.md)를 참조 하세요.
+- 뷰나 컨트롤의 각 정의에서 `SelectionCondition` 요소를 사용 하 여 정의를 사용 하는 경우에 대 한 조건을 지정할 수 있습니다. `SelectionCondition` 요소에는 조건을 트리거하는 선택 집합을 지정 하는 `SelectionSetName` 자식 요소가 있습니다. 선택 집합에 정의 된 개체가 표시 될 때 조건이 트리거됩니다. 이러한 조건을 설정 하는 방법에 대 한 자세한 내용은 [데이터 표시 시기에 대 한 조건 정의](./defining-conditions-for-displaying-data.md)를 참조 하세요.
 
 ## <a name="selection-set-example"></a>선택 집합 예제
 
-다음 예제에서는 Windows PowerShell에서 제공 하는 `FileSystem` 서식 지정 파일에서 직접 가져온 선택 집합을 보여 줍니다. 다른 Windows PowerShell 형식 지정 파일에 대 한 자세한 내용은 [Windows Powershell 형식 지정 파일](./powershell-formatting-files.md)을 참조 하세요.
+다음 예제에서는 Windows PowerShell에서 제공 하는 `FileSystem` 서식 파일에서 직접 가져온 선택 집합을 보여 줍니다. 다른 Windows PowerShell 형식 지정 파일에 대 한 자세한 내용은 [Windows Powershell 형식 지정 파일](./powershell-formatting-files.md)을 참조 하세요.
 
 ```xml
 <SelectionSets>
@@ -138,9 +138,9 @@ ms.locfileid: "72368852"
 
 [SelectionSet](./selectionset-element-format.md)
 
-[이름의](./name-element-for-selectionset-format.md)
+[이름](./name-element-for-selectionset-format.md)
 
-[종류](./types-element-for-selectionset-format.md)
+[유형](./types-element-for-selectionset-format.md)
 
 [PowerShell 서식 파일](./powershell-formatting-files.md)
 

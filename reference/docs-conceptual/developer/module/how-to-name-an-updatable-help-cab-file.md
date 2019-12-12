@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: de302da0-c17a-4d31-a8ef-14a626738993
 caps.latest.revision: 7
 ms.openlocfilehash: 0b58d5ee19a85bed26bc6549ced48b890cd62f64
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367162"
 ---
 # <a name="how-to-name-an-updatable-help-cab-file"></a>업데이트 가능한 도움말 CAB 파일 이름을 지정하는 방법

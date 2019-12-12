@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: eb4e72e6-24c4-42b6-b7b9-a62585c17f26
 caps.latest.revision: 15
 ms.openlocfilehash: ed614de125f78cbcf8411cc334baf3c95933dd47
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367122"
 ---
 # <a name="how-to-write-a-powershell-binary-module"></a>PowerShell 이진 모듈을 작성하는 방법
@@ -89,6 +89,6 @@ ms.locfileid: "72367122"
 서식 지정 및 형식 파일을 가져오려면 모듈 매니페스트를 만들어야 합니다.
 [PowerShell 모듈 매니페스트를 작성 하는 방법](how-to-write-a-powershell-module-manifest.md)을 참조 하세요.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell 모듈 작성](./writing-a-windows-powershell-module.md)

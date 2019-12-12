@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 31df99d7-6954-4fdc-b6f5-06ecba094f43
 caps.latest.revision: 8
 ms.openlocfilehash: 39495f7813aecf5d0210866fc11f94557fdb0cd9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360922"
 ---
 # <a name="runspace03-sample"></a>Runspace03 샘플
@@ -23,7 +23,7 @@ ms.locfileid: "72360922"
 
 이 샘플에는 Windows PowerShell 2.0이 필요 합니다.
 
-## <a name="demonstrates"></a>보여
+## <a name="demonstrates"></a>데모
 
 이 샘플에서는 다음을 보여 줍니다.
 

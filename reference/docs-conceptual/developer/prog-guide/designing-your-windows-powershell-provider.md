@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: 11d20319-cc40-4227-b810-4af33372b182
 caps.latest.revision: 10
 ms.openlocfilehash: 962d2ba9fd892c297a633276b9ac07a5fa75ea87
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366812"
 ---
 # <a name="designing-your-windows-powershell-provider"></a>Windows PowerShell 공급자 설계
@@ -160,7 +160,7 @@ Windows powershell 공급자는 Windows PowerShell 기본 클래스 중 하나�
 |`Get-Acl`|운영 체제 리소스 (예: 파일 또는 개체)를 보호 하는 데 사용 되는 보안 설명자의 일부인 ACL (액세스 제어 목록)에 포함 된 정보를 검색 합니다.|
 |`Set-Acl`|ACL에 대 한 정보를 설정 합니다. 지정 된 경로에 대해 지정 된 항목에 대 한 [accesscontrol-namespace](/dotnet/api/System.Security.AccessControl.ObjectSecurity) 의 인스턴스 형식으로 되어 있습니다. Windows PowerShell 공급자가 보안 정보 설정을 지 원하는 경우이 cmdlet은 레지스트리의 파일, 키 및 하위 키에 대 한 정보를 설정할 수 있습니다.|
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell 공급자 만들기](./how-to-create-a-windows-powershell-provider.md)
 

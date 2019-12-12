@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 918f381c-43e6-4594-a468-a40bfa8a16d6
 caps.latest.revision: 7
 ms.openlocfilehash: 3c94d8e98f179286112a417230fce659dc0b614c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362812"
 ---
 # <a name="list-view-basic"></a>목록 보기(기본)
@@ -23,14 +23,14 @@ ms.locfileid: "72362812"
 
 1. 이 항목의 예제 섹션에서 XML을 텍스트 파일로 복사 합니다.
 
-2. 텍스트 파일을 저장 합니다. 파일에 `format.ps1xml` 확장을 추가 하 여 서식 파일 인지 확인 해야 합니다.
+2. 텍스트 파일을 저장합니다. 파일에 `format.ps1xml` 확장을 추가 하 여 서식 파일 인지 확인 해야 합니다.
 
 3. Windows PowerShell을 열고 다음 명령을 실행 하 여 현재 세션에 형식 지정 파일을 로드 합니다. `Update-formatdata -prependpath PathToFormattingFile`.
 
    > [!WARNING]
    > 이 서식 파일은 Windows PowerShell 서식 파일에 의해 이미 정의 된 개체의 표시를 정의 합니다. Cmdlet을 실행할 때 `prependPath` 매개 변수를 사용 해야 하며,이 서식 파일을 모듈로 로드할 수 없습니다.
 
-## <a name="demonstrates"></a>보여
+## <a name="demonstrates"></a>데모
 
 이 서식 파일은 다음 XML 요소를 보여 줍니다.
 

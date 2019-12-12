@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a6b8303d-e868-4dd0-bbbb-ed2e6d8f2f76
 caps.latest.revision: 6
 ms.openlocfilehash: 93bcdb1dae1c55e46fa06161141117286a9009a9
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417984"
 ---
 # <a name="runspace03-code-samples"></a>RunSpace03 코드 샘플
@@ -25,12 +25,12 @@ ms.locfileid: "74417984"
 
 전체 샘플 코드는 다음 항목을 참조 하세요.
 
-| 언어 |                                 항목                                 |
+| Language |                                 항목                                 |
 | -------- | --------------------------------------------------------------------- |
 | C#       | [RunSpace03 (C#) 코드 샘플](./runspace03-csharp-code-sample.md)     |
 | VB.NET   | [RunSpace03 (VB.NET) 코드 샘플](./runspace03-vb-net-code-sample.md) |
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell 프로그래머 가이드](./windows-powershell-programmer-s-guide.md)
 

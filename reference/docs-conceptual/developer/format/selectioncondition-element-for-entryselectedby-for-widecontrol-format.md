@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: b7a9f086-b1ca-4400-9be7-9ec1ec8880f3
 caps.latest.revision: 11
 ms.openlocfilehash: f20679e3392b99a049c075f24c7712262bab08e1
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364782"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-widecontrol-format"></a>WideControl의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
@@ -34,7 +34,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) WideControl Elemen
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `SelectionCondition` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 단일 `PropertyName` 또는 `ScriptBlock` 요소를 지정 해야 합니다. @No__t-0 및 `TypeName` 요소는 선택 사항입니다. 두 요소 중 하나를 지정할 수 있습니다.
+다음 섹션에서는 특성, 자식 요소 및 `SelectionCondition` 요소의 부모 요소에 대해 설명 합니다. 단일 `PropertyName` 또는 `ScriptBlock` 요소를 지정 해야 합니다. `SelectionSetName` 및 `TypeName` 요소는 선택 사항입니다. 두 요소 중 하나를 지정할 수 있습니다.
 
 ### <a name="attributes"></a>특성
 

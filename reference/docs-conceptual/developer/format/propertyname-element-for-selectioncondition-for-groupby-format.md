@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: d1707317-6c26-4866-bcc1-8924103c9014
 caps.latest.revision: 6
 ms.openlocfilehash: 7241ea0ea364befa7ad4ab0af4c4209be72214a7
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364952"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-groupby-format"></a>GroupBy의 SelectionCondition에 대한 PropertyName 요소(형식)
 
-조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`으로 평가 되 면 조건이 충족 되 고 정의가 사용 됩니다. 이 요소는 새 개체 그룹이 표시 되는 방법을 정의 하는 데 사용 됩니다.
+조건을 트리거하는 .NET 속성을 지정 합니다. 이 속성이 있거나 `true`로 평가 될 때 조건이 충족 되 고 정의가 사용 됩니다. 이 요소는 새 개체 그룹이 표시 되는 방법을 정의 하는 데 사용 됩니다.
 
 Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (format)의 groupby 요소 (groupby (format) CustomEntries 요소에 대 한 CustomControl 요소에 대 한 groupby (format) Customentries 요소에 대 한 CustomControl Groupby (format) EntrySelectedBy 요소에 대 한 CustomControl 요소에 대 한 CustomEntry for groupby (format) PropertyName 요소에 대 한 selectioncondition on groupby (format)의 SelectionCondition 요소
 
@@ -29,7 +29,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `PropertyName` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `PropertyName` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

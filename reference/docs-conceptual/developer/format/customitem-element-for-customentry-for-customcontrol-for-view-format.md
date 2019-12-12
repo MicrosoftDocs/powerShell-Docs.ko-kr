@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 98708c1d-6f39-4a76-b454-31153a6ade8c
 caps.latest.revision: 12
 ms.openlocfilehash: 3c110bd5fe3ef2f790ef136556afa7c29d0b5b29
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363952"
 ---
 # <a name="customitem-element-for-customentry-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 CustomEntry에 대한 CustomItem 요소(형식)
@@ -34,7 +34,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `CustomItem` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `CustomItem` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

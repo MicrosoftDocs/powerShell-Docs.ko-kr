@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a82aba91-71af-447d-b9ef-b6b6ac7d9de4
 caps.latest.revision: 19
 ms.openlocfilehash: 1b8ff219e275279fdf603fc2336a8052e64f3a95
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364242"
 ---
 # <a name="writing-a-windows-powershell-cmdlet"></a>Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)

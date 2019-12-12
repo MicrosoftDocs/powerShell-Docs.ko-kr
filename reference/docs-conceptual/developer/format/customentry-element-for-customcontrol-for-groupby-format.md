@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 2987cb45-f646-45d4-b81b-7871e77af36f
 caps.latest.revision: 5
 ms.openlocfilehash: dcf4f8b2bbd422067ffdf9b3b4972e279e91edf9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364062"
 ---
 # <a name="customentry-element-for-customcontrol-for-groupby-format"></a>GroupBy의 CustomControl에 대한 CustomEntry 요소(형식)
@@ -32,7 +32,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `CustomEntry` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `CustomEntry` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -43,7 +43,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 |요소|설명|
 |-------------|-----------------|
 |[GroupBy (형식)에 대 한 CustomEntry의 EntrySelectedBy 요소](./entryselectedby-element-for-customentry-for-groupby-format.md)|선택적 요소입니다.<br /><br /> 이 컨트롤 정의를 사용 하는 .NET 형식 또는이 정의를 사용 하기 위해 존재 해야 하는 조건을 정의 합니다.|
-|[GroupBy (형식)에 대 한 Customitem의 CustomItem 요소](./customitem-element-for-customentry-for-groupby-format.md)|필수 요소입니다.<br /><br /> 컨트롤에서 데이터를 표시 하는 방법을 정의 합니다.|
+|[GroupBy (형식)에 대 한 Customitem의 CustomItem 요소](./customitem-element-for-customentry-for-groupby-format.md)|필수적 요소입니다.<br /><br /> 컨트롤에서 데이터를 표시 하는 방법을 정의 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 

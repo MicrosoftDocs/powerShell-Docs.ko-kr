@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 0aa32589-4447-4ead-a5dd-a3be99113140
 caps.latest.revision: 21
 ms.openlocfilehash: 14200aed2fb94c37c8b8af29650f602945e7ac1c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365892"
 ---
 # <a name="cmdlet-overview"></a>Cmdlet 개요
@@ -75,7 +75,7 @@ cmdlet이 입력으로 받은 레코드를 처리하는 데 사용할 수 있는
 ### <a name="shouldprocess-feature"></a>ShouldProcess 기능
 
 PowerShell을 사용 하면 cmdlet이 시스템을 변경 하기 전에 사용자에 게 피드백을 요청 하는 cmdlet을 만들 수 있습니다.
-이 기능을 사용 하려면 cmdlet에서 Cmdlet 특성을 선언할 때 ShouldProcess 기능을 지원 하도록 선언 해야 하며 cmdlet은 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) [를 호출 해야 합니다. ](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue)입력 처리 메서드 내에서이 메서드를 계속 실행 합니다.
+이 기능을 사용 하려면 cmdlet에서 Cmdlet 특성을 선언할 때 ShouldProcess 기능을 지원 하도록 선언 해야 하며, cmdlet은 입력 처리 메서드 내에서 [system.xml..](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) a s t e r. a s [t.](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue)
 ShouldProcess 기능을 지 원하는 방법에 대 한 자세한 내용은 [확인 요청](requesting-confirmation-from-cmdlets.md)을 참조 하세요.
 
 ### <a name="transaction"></a>트랜잭션
@@ -104,7 +104,7 @@ Cmdlet은 다음과 같은 방법으로 다른 명령 셸 환경의 명령과 �
 
 Windows PowerShell은 다음 두 가지 기본 클래스에서 파생 된 cmdlet을 지원 합니다.
 
-- 대부분의 cmdlet은 [system.object](/dotnet/api/System.Management.Automation.Cmdlet) 기본 클래스에서 파생 되는 .NET Framework 클래스를 기반으로 합니다. 이 클래스에서 파생 하면 cmdlet이 Windows PowerShell 런타임에 최소 종속성 집합을 사용할 수 있습니다. 이 경우 두 가지 이점이 있습니다. 첫 번째 방법은 cmdlet 개체가 작으며 Windows PowerShell 런타임에 대 한 변경의 영향을 받을 가능성이 낮은 것입니다. 두 번째 혜택은 필요할 경우 cmdlet 개체의 인스턴스를 직접 만든 다음 Windows PowerShell 런타임을 통해 호출 하는 대신 직접 호출할 수 있다는 것입니다.
+- 대부분의 cmdlet은 [system.object](/dotnet/api/System.Management.Automation.Cmdlet) 기본 클래스에서 파생 되는 .NET Framework 클래스를 기반으로 합니다. 이 클래스에서 파생 하면 cmdlet이 Windows PowerShell 런타임에 최소 종속성 집합을 사용할 수 있습니다. 여기에는 두 가지 이점이 있습니다. 첫 번째 방법은 cmdlet 개체가 작으며 Windows PowerShell 런타임에 대 한 변경의 영향을 받을 가능성이 낮은 것입니다. 두 번째 혜택은 필요할 경우 cmdlet 개체의 인스턴스를 직접 만든 다음 Windows PowerShell 런타임을 통해 호출 하는 대신 직접 호출할 수 있다는 것입니다.
 
 - 더 복잡 한 cmdlet은 [PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 기본 클래스에서 파생 되는 .NET Framework 클래스를 기반으로 합니다. 이 클래스에서 파생 하면 Windows PowerShell 런타임에 훨씬 더 많은 액세스 권한이 제공 됩니다. 이 액세스를 통해 cmdlet은 스크립트를 호출 하 고, 공급자에 액세스 하 고, 현재 세션 상태에 액세스할 수 있습니다. 현재 세션 상태에 액세스 하려면 세션 변수 및 기본 설정을 가져오고 설정 합니다. 그러나이 클래스에서 파생 하면 cmdlet 개체의 크기가 늘어나고 cmdlet이 현재 버전의 Windows PowerShell 런타임과 더욱 긴밀 하 게 결합 됩니다.
 
@@ -114,13 +114,13 @@ Windows PowerShell은 다음 두 가지 기본 클래스에서 파생 된 cmdlet
 
 [System.object](/dotnet/api/System.Management.Automation.Cmdlet) 클래스는 레코드를 처리 하는 데 사용 되는 다음과 같은 가상 메서드를 제공 합니다. 모든 파생 된 cmdlet 클래스는 처음 세 가지 메서드 중 하나 이상을 재정의 해야 합니다.
 
-- [System.object를 처리](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)합니다. Cmdlet에 대 한 선택적인 일회성 전처리 기능을 제공 하는 데 사용 됩니다.
+- [System.object](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing): cmdlet에 대 한 선택적인 일회성 전처리 기능을 제공 하는 데 사용 됩니다.
 
-- [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)는 다음과 같습니다. Cmdlet에 대 한 레코드 레코드 처리 기능을 제공 하는 데 사용 됩니다. [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드는 Cmdlet의 입력에 따라 여러 번 호출 되거나 전혀 호출 되지 않을 수 있습니다 (예를 들어,
+- [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord): Cmdlet에 대 한 레코드 레코드 처리 기능을 제공 하는 데 사용 됩니다. [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드는 Cmdlet의 입력에 따라 여러 번 호출 되거나 전혀 호출 되지 않을 수 있습니다 (예를 들어,
 
-- [System.object](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing). n a m. Cmdlet에 대 한 선택적인 일회성 사후 처리 기능을 제공 하는 데 사용 됩니다.
+- [System.object](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing): cmdlet에 대 한 선택적 일회성 사후 처리 기능을 제공 하는 데 사용 됩니다.
 
-- [System.object를 처리](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing)합니다. 사용자가 cmdlet을 비동기적으로 중지할 때 (예: CTRL + C를 눌러) 처리를 중지 하는 데 사용 됩니다.
+- [System.object](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing): 사용자가 Cmdlet을 비동기적으로 중지할 때 (예: CTRL + C를 눌러) 처리를 중지 하는 데 사용 됩니다.
 
 이러한 메서드에 대 한 자세한 내용은 [Cmdlet 입력 처리 메서드](./cmdlet-input-processing-methods.md)를 참조 하세요.
 
@@ -128,7 +128,7 @@ Windows PowerShell은 다음 두 가지 기본 클래스에서 파생 된 cmdlet
 
 Windows PowerShell은 cmdlet을 관리 하 고 Windows PowerShell에서 제공 하는 일반 기능을 지정 하는 데 사용 되 고 cmdlet에 필요할 수 있는 몇 가지 .NET Framework 특성을 정의 합니다. 예를 들어 특성을 사용 하 여 클래스를 cmdlet으로 지정 하 고, cmdlet의 매개 변수를 지정 하 고, cmdlet 개발자가 cmdlet 코드에서 해당 기능을 구현할 필요가 없도록 입력 유효성 검사를 요청 합니다. 특성에 대 한 자세한 내용은 [Windows PowerShell 특성](./cmdlet-attributes.md)을 참조 하세요.
 
-## <a name="cmdlet-names"></a>Cmdlet 이름
+## <a name="cmdlet-names"></a>cmdlet 이름
 
 Windows PowerShell은 동사 및 명사 이름 쌍을 사용 하 여 cmdlet의 이름을 만듭니다. 예를 들어 Windows PowerShell에 포함 된 `Get-Command` cmdlet은 명령 셸에 등록 된 모든 cmdlet을 가져오는 데 사용 됩니다. 동사는 cmdlet이 수행 하는 작업을 식별 하 고, 명사는 cmdlet이 해당 동작을 수행 하는 리소스를 식별 합니다.
 

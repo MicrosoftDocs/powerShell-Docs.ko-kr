@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d9d92a9e-c680-46ca-962e-e82452726953
 caps.latest.revision: 10
 ms.openlocfilehash: 1d72ce5b18e89bd81c7f81b27f4b8c60bed99764
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368972"
 ---
 # <a name="customcontrol-element-for-control-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 Control에 대한 CustomControl 요소(형식)
@@ -31,7 +31,7 @@ ms.locfileid: "72368972"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `CustomControl` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 이 요소에는 자식 요소가 하나 이상 있어야 합니다. 지정할 수 있는 자식 요소 수에 대 한 최대 제한은 없습니다.
+다음 섹션에서는 특성, 자식 요소 및 `CustomControl` 요소의 부모 요소에 대해 설명 합니다. 이 요소에는 자식 요소가 하나 이상 있어야 합니다. 지정할 수 있는 자식 요소 수에 대 한 최대 제한은 없습니다.
 
 ### <a name="attributes"></a>특성
 
@@ -41,7 +41,7 @@ ms.locfileid: "72368972"
 
 |요소|설명|
 |-------------|-----------------|
-|[구성에 대 한 CustomControl의 CustomEntries 요소 (형식)](./customentries-element-for-customcontrol-for-controls-for-configuration-format.md)|필수 요소입니다.<br /><br /> 컨트롤의 정의를 제공 합니다.|
+|[구성에 대 한 CustomControl의 CustomEntries 요소 (형식)](./customentries-element-for-customcontrol-for-controls-for-configuration-format.md)|필수적 요소입니다.<br /><br /> 컨트롤의 정의를 제공 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 

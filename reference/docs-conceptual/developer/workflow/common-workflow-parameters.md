@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d5891467-8e13-484d-b7af-32e6bffab35d
 caps.latest.revision: 4
 ms.openlocfilehash: b2e8f272a82ee03de306fd8eac45e109142f6284
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366052"
 ---
 # <a name="common-workflow-parameters"></a>일반 워크플로 매개 변수
@@ -26,7 +26,7 @@ Windows PowerShell cmdlet에서 생성 된 워크플로 작업은 모든 작업�
 |Name|유형|설명|실행 시간에 최종 사용자가 지정할 수 있나요?|제작 시 워크플로 작성자가 지정할 수 있나요?|인스턴스화할 때 워크플로 작성자가 지정할 수 있나요?|
 |----------|----------|-----------------|-----------------------------------------------------|------------------------------------------------------------|-----------------------------------------------------------|
 |PSComputerName|String[]|작업을 시작할 컴퓨터 이름 목록입니다.|예|예|예|
-|유형이|[System.object. PSCredential](/dotnet/api/System.Management.Automation.PSCredential)|PSComputerName 매개 변수로 지정 된 컴퓨터에 로그인 하는 데 사용할 인증 자격 증명입니다. 이 매개 변수는 PSComputerName가 지정 된 경우에만 유효 합니다.|예|예|예|
+|PSCredential|[System.object. PSCredential](/dotnet/api/System.Management.Automation.PSCredential)|PSComputerName 매개 변수로 지정 된 컴퓨터에 로그인 하는 데 사용할 인증 자격 증명입니다. 이 매개 변수는 PSComputerName가 지정 된 경우에만 유효 합니다.|예|예|예|
 |PSPort|UInt32|워크플로를 실행 하는 데 사용할 포트입니다.|예|예|예|
 |PSUseSSL|부울|SSL (SSL(Secure Sockets Layer)) 프로토콜을 사용 하 여 원격 컴퓨터에 대 한 보안 연결을 설정 하 여 워크플로를 실행 합니다.|예|예|예|
 |PSConfigurationName|문자열|워크플로를 실행 하는 데 사용 되는 세션 구성입니다.|예|예|예|

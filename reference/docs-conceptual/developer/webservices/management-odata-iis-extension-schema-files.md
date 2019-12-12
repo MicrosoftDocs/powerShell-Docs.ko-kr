@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d603de38-6dfe-4fd9-898c-21fbcb686645
 caps.latest.revision: 8
 ms.openlocfilehash: 099a4955cd74770008f353c67491077899e5a31c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359702"
 ---
 # <a name="management-odata-iis-extension-schema-files"></a>관리 OData IIS 확장 스키마 파일

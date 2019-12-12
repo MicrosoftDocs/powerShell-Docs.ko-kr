@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 1f8066e6-e5d3-4f4e-8948-a90af5dace82
 caps.latest.revision: 11
 ms.openlocfilehash: 155a406b9855c435041fe175ac7d983a4b4eb8b7
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369132"
 ---
 # <a name="validaterange-attribute-declaration"></a>ValidateRange 특성 선언
@@ -31,17 +31,17 @@ ValidateRange 특성은 cmdlet 매개 변수 인수에 대 한 최소값 및 최
 
 #### <a name="parameters"></a>매개 변수
 
-`MinRange` ([system.object](/dotnet/api/system.object))이 필요 합니다. 허용 되는 최소값을 지정 합니다.
+`MinRange` ([system.object](/dotnet/api/system.object))가 필요 합니다. 허용 되는 최소값을 지정 합니다.
 
-`MaxRange` ([system.object](/dotnet/api/system.object))이 필요 합니다. 허용 되는 최대값을 지정 합니다.
+`MaxRange` ([system.object](/dotnet/api/system.object))가 필요 합니다. 허용 되는 최대값을 지정 합니다.
 
 ## <a name="remarks"></a>설명
 
-- @No__t-0 매개 변수의 값이 `MaxRange` 매개 변수의 값 보다 크면 Windows PowerShell 런타임이 생성 오류를 throw 합니다.
+- `MinRange` 매개 변수의 값이 `MaxRange` 매개 변수의 값 보다 크면 Windows PowerShell 런타임이 생성 오류를 throw 합니다.
 
 - Windows PowerShell 런타임은 다음과 같은 경우 유효성 검사 오류를 throw 합니다.
 
-    - 인수의 값이 `MinRange` 보다 작거나 `MaxRange` 제한 보다 큰 경우
+    - 인수의 값이 `MinRange` 제한 보다 작거나 `MaxRange` 제한 보다 큽니다.
 
     - 인수가 `MinRange` 및 `MaxRange` 매개 변수와 동일한 형식이 아닌 경우
 

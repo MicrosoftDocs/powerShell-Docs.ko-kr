@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 912f3e63-e4d5-41ce-8710-6dfd8c885dc2
 caps.latest.revision: 12
 ms.openlocfilehash: 2faca6021dc26878869bdd2d35bc4ffc64d0fe7b
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368392"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-tablecontrol-format"></a>TableControl의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)

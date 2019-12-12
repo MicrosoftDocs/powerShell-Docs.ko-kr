@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 114acaf9-b295-4cc2-b349-1225156ab3f2
 caps.latest.revision: 6
 ms.openlocfilehash: ae06cd7347727ae532f4de3cb2edb0bacc420ec3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360332"
 ---
 # <a name="getproc05-c-sample-code"></a>GetProc05(C#) 코드 샘플

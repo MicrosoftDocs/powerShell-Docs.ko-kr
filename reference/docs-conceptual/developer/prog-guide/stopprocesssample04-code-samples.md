@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: dc68af2b-f622-47c4-964f-b07f3d5bdf14
 caps.latest.revision: 5
 ms.openlocfilehash: 9aef3eeb8bfeeccd234755b6c5a7c451da6628cc
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417838"
 ---
 # <a name="stopprocesssample04-code-samples"></a>StopProcessSample04 코드 샘플
@@ -26,12 +26,12 @@ StopProc00 sample cmdlet에 대 한 코드 샘플은 다음과 같습니다. [Cm
 
 전체 샘플 코드는 다음 항목을 참조 하세요.
 
-|언어|항목|
+|Language|항목|
 |--------------|-----------|
 |C#|[StopProc04 (C#) 샘플 코드](./stopprocesssample04-csharp-sample-code.md)|
 |VB.NET|[StopProc04 (VB.NET) 샘플 코드](./stopprocesssample04-vb-net-sample-code.md)|
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell 프로그래머 가이드](./windows-powershell-programmer-s-guide.md)
 

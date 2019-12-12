@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 85d27545-8097-4010-9947-6d8b3ce2eac0
 caps.latest.revision: 15
 ms.openlocfilehash: 71c1c181058c5646c817b90d9832976a78c6c7de
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369832"
 ---
 # <a name="custom-formatting-files"></a>형식 지정 파일 사용자 지정
@@ -40,7 +40,7 @@ Windows PowerShell은 이러한 서식 지정 파일의 데이터를 사용 하 
 
 ## <a name="view-xml-elements"></a>XML 요소 보기
 
-다음 예에서는 두 개의 열이 포함 된 테이블 뷰를 정의 하는 데 사용 되는 XML 태그를 보여 줍니다. [Viewdefinitions](../format/viewdefinitions-element-format.md) 요소는 서식 파일에 정의 된 모든 뷰에 대 한 컨테이너 요소입니다. [View](../format/view-element-format.md) 요소는 특정 테이블, 목록, 전체 또는 사용자 지정 뷰를 정의 합니다. 각 뷰 내에서 [name](../format/name-element-for-view-format.md) 요소는 뷰의 이름을 지정 하 고 [viewselectedby](../format/viewselectedby-element-format.md) 요소는 뷰를 사용 하는 개체를 정의 하며, `TableControl` 요소와 같은 다른 컨트롤 요소는 뷰의 형식을 정의 합니다.
+다음 예에서는 두 개의 열이 포함 된 테이블 뷰를 정의 하는 데 사용 되는 XML 태그를 보여 줍니다. [Viewdefinitions](../format/viewdefinitions-element-format.md) 요소는 서식 파일에 정의 된 모든 뷰에 대 한 컨테이너 요소입니다. [View](../format/view-element-format.md) 요소는 특정 테이블, 목록, 전체 또는 사용자 지정 뷰를 정의 합니다. 각 뷰 내에서 [name](../format/name-element-for-view-format.md) 요소는 뷰의 이름을 지정 하 고 [viewselectedby](../format/viewselectedby-element-format.md) 요소는 뷰를 사용 하는 개체를 정의 하며 `TableControl` 요소와 같은 다른 컨트롤 요소는 뷰의 형식을 정의 합니다.
 
 ```xml
 ViewDefinitions

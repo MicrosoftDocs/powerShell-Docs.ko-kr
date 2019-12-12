@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 4a88dd89-6beb-494f-9e2a-6b10baed1a8d
 caps.latest.revision: 17
 ms.openlocfilehash: 08e05939f8aee42f2cd502a3da7a528d8460dec1
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361202"
 ---
 # <a name="how-to-create-the-cmdlet-help-file"></a>Cmdlet 도움말 파일을 만드는 방법

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: fb82827e-fdb7-4cbf-b3d4-093e72b3ff0e
 caps.latest.revision: 28
 ms.openlocfilehash: 60ac4bf9089232a9fa879e835e32da53422489fd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367072"
 ---
 # <a name="installing-a-powershell-module"></a>PowerShell 모듈 설치
@@ -62,7 +62,7 @@ PowerShell 모듈을 만든 후에는 사용자 또는 다른 사용자가 사�
   ```
 
   > [!IMPORTANT]
-  > **PSModulePath**에 대 한 경로를 추가한 후에는 변경 내용에 대 한 환경 메시지를 브로드캐스트합니다. 변경을 브로드캐스팅 하면 셸과 같은 다른 응용 프로그램에서 변경 내용을 선택할 수 있습니다. 변경을 브로드캐스트하려면 제품 설치 코드에서 `lParam`이 문자열 "환경"으로 설정 된 **WM_SETTINGCHANGE** 메시지를 보냅니다. 모듈 설치 코드에서 **PSModulePath**를 업데이트 한 후 메시지를 보내야 합니다.
+  > **PSModulePath**에 대 한 경로를 추가한 후에는 변경 내용에 대 한 환경 메시지를 브로드캐스트합니다. 변경을 브로드캐스팅 하면 셸과 같은 다른 응용 프로그램에서 변경 내용을 선택할 수 있습니다. 변경을 브로드캐스트하려면 제품 설치 코드에서 `lParam`가 "환경" 문자열로 설정 된 **WM_SETTINGCHANGE** 메시지를 전송 하도록 합니다. 모듈 설치 코드에서 **PSModulePath**를 업데이트 한 후 메시지를 보내야 합니다.
 
 ### <a name="use-the-correct-module-directory-name"></a>올바른 모듈 디렉터리 이름 사용
 
@@ -101,7 +101,7 @@ C:\Program Files
 
 - [표시 명령](/powershell/module/Microsoft.PowerShell.Utility/Show-Command) cmdlet은 모듈의 명령을 찾아 표시할 수 없습니다.
 
-  Windows PowerShell ISE (통합 스크립팅 환경)의 `Show-Command` 창에는 모듈의 명령이 없습니다.
+  Windows PowerShell ISE (통합 스크립팅 환경)의 `Show-Command` 창에 모듈의 명령이 없습니다.
 
 ## <a name="where-to-install-modules"></a>모듈을 설치 하는 위치
 
@@ -220,7 +220,7 @@ $p += ";C:\Program Files\Fabrikam\Fabrikam8;C:\Program Files\Fabrikam\Fabrikam9"
 
 세션에 이름이 같은 두 개의 명령이 포함 된 경우 Windows PowerShell은 우선 순위가 높은 명령 유형을 실행 합니다. 세션에 이름과 형식이 같은 명령이 두 개 포함 된 경우 Windows PowerShell은 가장 최근에 세션에 추가 된 명령을 실행 합니다. 기본적으로 실행 되지 않는 명령을 실행 하려면 사용자가 모듈 이름으로 명령 이름을 한정할 수 있습니다.
 
-예를 들어 세션에 `Get-Date` 함수 및 `Get-Date` cmdlet이 포함 되어 있으면 Windows PowerShell은 기본적으로 함수를 실행 합니다. Cmdlet을 실행 하려면 명령 앞에 모듈 이름 (예:)을 사용 합니다.
+예를 들어 세션에 `Get-Date` 함수와 `Get-Date` cmdlet이 포함 되어 있으면 Windows PowerShell은 기본적으로 함수를 실행 합니다. Cmdlet을 실행 하려면 명령 앞에 모듈 이름 (예:)을 사용 합니다.
 
 ```powershell
 Microsoft.PowerShell.Utility\Get-Date

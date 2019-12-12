@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 20cbf009-9633-476e-b0b3-5604117ef2dd
 caps.latest.revision: 4
 ms.openlocfilehash: adde7c205f26c9bb87307f7eaa56988cefccdeaf
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367672"
 ---
 # <a name="writing-windows-powershell-help"></a>Windows PowerShell 도움말 작성
 
-이 문서는 Windows PowerShell cmdlet, 공급자 및 개념에 대 한 도움말 콘텐츠를 작성 하는 모든 사용자를 위해 작성 되었습니다. `Get-Help` cmdlet을 사용 하 여 명령줄에서 볼 수 있습니다.
+이 문서는 `Get-Help` cmdlet을 사용 하 여 명령줄에서 볼 수 있는 Windows PowerShell cmdlet, 공급자 및 개념에 대 한 도움말 콘텐츠를 작성 하는 모든 사용자를 위해 작성 되었습니다.
 
 ## <a name="cmdlet-help"></a>Cmdlet 도움말
 

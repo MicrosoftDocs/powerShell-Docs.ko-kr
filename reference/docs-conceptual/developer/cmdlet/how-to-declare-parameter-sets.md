@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 46905eb9-64d7-4c55-9c2a-7bc7bf04e14b
 caps.latest.revision: 10
 ms.openlocfilehash: 6c2e5891a8e3f24969c12a2e57dc5ae8caa68e41
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365612"
 ---
 # <a name="how-to-declare-parameter-sets"></a>매개 변수 집합을 선언하는 방법

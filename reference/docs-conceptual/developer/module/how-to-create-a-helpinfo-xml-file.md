@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 3971ce1f-271c-4938-a9d3-47ff3aaf7219
 caps.latest.revision: 9
 ms.openlocfilehash: 7df9764fd573b75f285fec592448a550e481bea3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367322"
 ---
 # <a name="how-to-create-a-helpinfo-xml-file"></a>HelpInfo XML 파일을 만드는 방법

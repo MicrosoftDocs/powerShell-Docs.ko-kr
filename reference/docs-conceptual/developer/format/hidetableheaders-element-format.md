@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a20eaa3d-2bca-4a1f-8d40-fe038631d778
 caps.latest.revision: 11
 ms.openlocfilehash: 532563a70c702c05771a37a06124212c9548bb23
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362962"
 ---
 # <a name="hidetableheaders-element-format"></a>HideTableHeaders 요소(형식)
@@ -47,7 +47,7 @@ ViewDefinitions 요소 (Format) View 요소 (format) TableControl Element (forma
 
 ## <a name="text-value"></a>텍스트 값
 
-@No__t-0을 지정 하 여 테이블의 머리글을 숨깁니다.
+테이블의 머리글을 숨기려면 `true`를 지정 합니다.
 
 ## <a name="remarks"></a>설명
 

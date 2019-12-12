@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 2b11fbcf-3426-48ae-9319-2c847969f723
 caps.latest.revision: 10
 ms.openlocfilehash: 7afc834e68ef332bee1e23da782fb5c5527fcf54
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368582"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format"></a>TableControl에 대한 EntrySelectedBy의 SelectionCondition에 대한 ScriptBlock 요소(형식)
@@ -55,7 +55,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (form
 
 테이블 뷰의 구성 요소에 대 한 자세한 내용은 [테이블 뷰 만들기](./creating-a-table-view.md)를 참조 하세요.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [테이블 뷰 만들기](./creating-a-table-view.md)
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 697791b3-2135-4a39-b9d7-8566ed67acf2
 caps.latest.revision: 13
 ms.openlocfilehash: bb5d036e5658c365a4fafa2cac05c0bba9f87019
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360702"
 ---
 # <a name="importing-a-powershell-module"></a>PowerShell 모듈 가져오기
@@ -41,7 +41,7 @@ Import-Module -Name C:\myRandomDirectory\myModule -Verbose
 
 ## <a name="implicitly-importing-a-module-powershell-30"></a>암시적으로 모듈 가져오기 (PowerShell 3.0)
 
-Windows PowerShell 3.0부터 모듈의 cmdlet 또는 함수를 명령에 사용할 때 모듈을 자동으로 가져옵니다. 이 기능은 **PSModulePath** 환경 변수의 값에 포함 된 디렉터리의 모든 모듈에서 작동 합니다. 그러나 모듈을 유효한 경로에 저장 하지 않는 경우에도 위에 설명 된 명시적 [import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) 옵션을 사용 하 여 모듈을 로드할 수 있습니다.
+Windows PowerShell 3.0부터 모듈은 명령에서 cmdlet 또는 모듈의 함수를 사용할 경우 자동으로 가져옵니다. 이 기능은 **PSModulePath** 환경 변수의 값에 포함 된 디렉터리의 모든 모듈에서 작동 합니다. 그러나 모듈을 유효한 경로에 저장 하지 않는 경우에도 위에 설명 된 명시적 [import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) 옵션을 사용 하 여 모듈을 로드할 수 있습니다.
 
 다음 작업은 모듈의 자동 가져오기를 트리거하 며 "모듈 자동 로드" 라고도 합니다.
 
@@ -76,6 +76,6 @@ Windows PowerShell 3.0부터 모듈의 cmdlet 또는 함수를 명령에 사용�
 
 - `Alias`:이 매개 변수는 내보내는 별칭을 제한 합니다 (모듈 매니페스트를 사용 하는 경우 AliasesToExport 키 참조).
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell 모듈 작성](./writing-a-windows-powershell-module.md)

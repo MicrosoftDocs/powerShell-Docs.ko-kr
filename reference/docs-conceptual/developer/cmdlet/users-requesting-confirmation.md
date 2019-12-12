@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 6f337498-c534-40ed-968a-09d4d9ca3849
 caps.latest.revision: 8
 ms.openlocfilehash: ed9ff9fc1668a89e1ac0ceac8f0800a15b349226
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369252"
 ---
 # <a name="users-requesting-confirmation"></a>사용자 확인 요청
@@ -31,6 +31,6 @@ Cmdlet 특성 선언의 `SupportsShouldProcess` 매개 변수에 `true` 값을 �
 
 - 사용자가 `Verbose` 매개 변수를 지정 하는 경우 확인 메시지를 표시 하지 않는 경우에도 작업에 대 한 알림이 표시 됩니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

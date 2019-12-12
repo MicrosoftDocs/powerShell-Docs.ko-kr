@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 5bc6ea26-3ca6-4bab-8a13-29189821ba15
 caps.latest.revision: 7
 ms.openlocfilehash: a1dc145864a6904fd4af6c3b9187819c49e224b0
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363032"
 ---
 # <a name="formatstring-element-for-wideitem-for-widecontrol-format"></a>WideControl의 WideItem에 대한 FormatString 요소(형식)
@@ -29,7 +29,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (form
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `FormatString` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `FormatString` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -57,7 +57,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (form
 
 ## <a name="example"></a>예제
 
-다음 예에서는 `StartTime` 속성의 값에 대 한 서식 문자열을 정의 하는 방법을 보여 줍니다.
+다음 예제에서는 `StartTime` 속성의 값에 대 한 서식 문자열을 정의 하는 방법을 보여 줍니다.
 
 ```xml
 <WideItem>

@@ -7,10 +7,10 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.openlocfilehash: 3096965ba9f99f70994f2fb5b180cc58691b04f8
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74415704"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>데이터 저장소에 액세스하는 Cmdlet 만들기
@@ -1100,7 +1100,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     select-str -Path "notes" -Pattern ".NET" -SimpleMatch=$false
     ```
 
-    다음 출력이 표시 됩니다.
+    다음 출력이 표시됩니다.
 
     ```output
     IgnoreCase   : True
@@ -1121,7 +1121,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     select-str -Path notes -Pattern "over*" -SimpleMatch -CaseSensitive:$false
     ```
 
-    다음 출력이 표시 됩니다.
+    다음 출력이 표시됩니다.
 
     ```output
     IgnoreCase   : True
@@ -1142,7 +1142,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     select-str -Path notes -Pattern "\([A-Za-z:blank:]" -SimpleMatch:$false
     ```
 
-    다음 출력이 표시 됩니다.
+    다음 출력이 표시됩니다.
 
     ```output
     IgnoreCase   : True
@@ -1163,7 +1163,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     select-str -Path notes -Pattern Parameter -CaseSensitive
     ```
 
-    다음 출력이 표시 됩니다.
+    다음 출력이 표시됩니다.
 
     ```output
     IgnoreCase   : False
@@ -1184,7 +1184,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     select-str -Path * -Pattern "[0-9]"
     ```
 
-    다음 출력이 표시 됩니다.
+    다음 출력이 표시됩니다.
 
     ```output
     IgnoreCase   : True
@@ -1200,7 +1200,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     select-str -Path "SelectStrCommandSample.cs" -Script { if ($args[0] -cmatch "Pos"){ return $true } return $false }
     ```
 
-    다음 출력이 표시 됩니다.
+    다음 출력이 표시됩니다.
 
     ```output
     IgnoreCase   : True
@@ -1210,7 +1210,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     Pattern      :
     ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell Cmdlet을 만드는 방법](/powershell/scripting/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 

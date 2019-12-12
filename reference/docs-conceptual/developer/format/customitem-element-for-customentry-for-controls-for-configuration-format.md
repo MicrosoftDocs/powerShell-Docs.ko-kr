@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 73fb11ee-0ebd-477a-ac36-acdfbb32e70d
 caps.latest.revision: 7
 ms.openlocfilehash: bd0cb69770817ec215ddb1862a43a838baddefcf
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364032"
 ---
 # <a name="customitem-element-for-customentry-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 CustomEntry에 대한 CustomItem 요소(형식)
@@ -34,7 +34,7 @@ ms.locfileid: "72364032"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `CustomItem` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 자세한 내용은 설명 부분을 참조 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `CustomItem` 요소의 부모 요소에 대해 설명 합니다. 자세한 내용은 설명 부분을 참조 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -57,9 +57,9 @@ ms.locfileid: "72364032"
 
 ## <a name="remarks"></a>설명
 
-@No__t-0 요소의 자식 요소를 지정할 때는 다음 사항을 염두에 두어야 합니다.
+`CustomItem` 요소의 자식 요소를 지정할 때는 다음 사항을 염두에 두어야 합니다.
 
-- 자식 요소는 `ExpressionBinding`, `NewLine`, `Text` 및 `Frame` 순서로 추가 해야 합니다.
+- 자식 요소는 `ExpressionBinding`, `NewLine`, `Text`및 `Frame`순서로 추가 해야 합니다.
 
 - 지정할 수 있는 시퀀스 수에 대 한 최대 제한은 없습니다.
 

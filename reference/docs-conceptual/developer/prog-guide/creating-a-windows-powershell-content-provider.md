@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 3da88ff9-c4c7-4ace-aa24-0a29c8cfa060
 caps.latest.revision: 6
 ms.openlocfilehash: 4afe0370f7a2c5b17826544e94e76650611c9d68
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417511"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Windows PowerShell 콘텐츠 공급자 만들기
@@ -178,7 +178,7 @@ public IContentWriter GetContentWriter(string path)
 
 - [Icontentcmdletprovider. Clearcontent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) 메서드를 구현 하면 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 것이 좋습니다. 이 메서드는 콘텐츠 지우기와 같은 데이터 저장소가 변경 될 때 작업 실행을 확인 하는 데 사용 됩니다. [System.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 는 사용자에 게 변경할 리소스의 이름을 보냅니다 .이 메서드는 사용자에 게 표시 되는 모든 명령줄 설정 또는 기본 설정 변수를 처리 하는 사용자에 게 변경할 리소스의 이름을 보냅니다.
 
-  Icontentcmdletprovider를 호출한 후에는 [ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 가 `true`를 반환 합니다. Clearcontent * 메서드는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 를 호출 해야 합니다. [*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) 메서드를 호출 하는 경우에는 메서드를 호출 해야 합니다. 이 메서드는 사용자에 게 작업을 계속 해야 하는지 여부를 확인 하기 위해 사용자에 게 메시지를 보냅니다. System.object를 호출 하면 잠재적으로 위험한 시스템 수정에 대 한 추가 검사를 수행할 수 있습니다 [.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)
+  [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)에 대한 호출이 `true`이면 [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) 메서드는 잠재적으로 위험한 시스템 수정에 대한 추가 확인으로 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 호출해야 합니다. 이 메서드는 사용자에 게 작업을 계속 해야 하는지 여부를 확인 하기 위해 사용자에 게 메시지를 보냅니다. System.object를 호출 하면 잠재적으로 위험한 시스템 수정에 대 한 추가 검사를 수행할 수 있습니다 [.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)
 
 ## <a name="attaching-dynamic-parameters-to-the-clear-content-cmdlet"></a>동적 매개 변수를 Clear Content Cmdlet에 연결
 
@@ -244,7 +244,7 @@ Zip       : 98089
 Country   : USA
 ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell 공급자 만들기](./how-to-create-a-windows-powershell-provider.md)
 

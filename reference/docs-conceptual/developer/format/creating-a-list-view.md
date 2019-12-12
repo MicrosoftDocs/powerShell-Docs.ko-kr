@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 8c7a40ca-1786-46f0-bab5-6ce229daa7ee
 caps.latest.revision: 14
 ms.openlocfilehash: 25d24063501196d44e0f806a55bb699c82f771ce
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368982"
 ---
 # <a name="creating-a-list-view"></a>목록 보기 만들기
@@ -99,11 +99,11 @@ ServiceType         : Win32OwnProcess
 
 - [Name](./name-element-for-view-format.md) 요소는 뷰의 이름을 지정 합니다. 이 요소는 모든 뷰에 필요 합니다.
 
-- [Viewselectedby](./viewselectedby-element-format.md) 요소는 뷰를 사용 하는 개체를 정의 합니다. 이 요소는 필수입니다.
+- [Viewselectedby](./viewselectedby-element-format.md) 요소는 뷰를 사용 하는 개체를 정의 합니다. 필수적 요소로,
 
-- [GroupBy](./groupby-element-for-view-format.md) 요소는 새 개체 그룹이 표시 되는 시기를 정의 합니다. 특정 속성 또는 스크립트의 값이 변경 될 때마다 새 그룹이 시작 됩니다. 이 요소는 선택 사항입니다.
+- [GroupBy](./groupby-element-for-view-format.md) 요소는 새 개체 그룹이 표시 되는 시기를 정의 합니다. 특정 속성 또는 스크립트의 값이 변경 될 때마다 새 그룹이 시작 됩니다. 이 요소는 선택적입니다.
 
-- [Controls](./controls-element-for-view-format.md) 요소는 목록 뷰에서 정의 된 사용자 지정 컨트롤을 정의 합니다. 컨트롤을 통해 데이터 표시 방법을 추가로 지정할 수 있습니다. 이 요소는 선택 사항입니다. 뷰는 자체 사용자 지정 컨트롤을 정의 하거나 서식 파일의 뷰에서 사용할 수 있는 공용 컨트롤을 사용할 수 있습니다. 사용자 지정 컨트롤에 대 한 자세한 내용은 [사용자 지정 컨트롤 만들기](./creating-custom-controls.md)를 참조 하세요.
+- [Controls](./controls-element-for-view-format.md) 요소는 목록 뷰에서 정의 된 사용자 지정 컨트롤을 정의 합니다. 컨트롤을 통해 데이터 표시 방법을 추가로 지정할 수 있습니다. 이 요소는 선택적입니다. 뷰는 자체 사용자 지정 컨트롤을 정의 하거나 서식 파일의 뷰에서 사용할 수 있는 공용 컨트롤을 사용할 수 있습니다. 사용자 지정 컨트롤에 대 한 자세한 내용은 [사용자 지정 컨트롤 만들기](./creating-custom-controls.md)를 참조 하세요.
 
 - [이 listcontrol](./listcontrol-element-format.md) 요소는 뷰에 표시 되는 내용 및 형식을 지정 하는 방법을 정의 합니다. 다른 모든 뷰와 마찬가지로 목록 보기에는 스크립트에 의해 생성 된 개체 속성 또는 값의 값이 표시 될 수 있습니다.
 
@@ -141,7 +141,7 @@ ServiceType         : Win32OwnProcess
 
 - [이 listcontrol](./listcontrol-element-format.md) 요소 및 해당 자식 요소는 뷰에 표시 되는 내용을 정의 합니다.
 
-- [ListEntries](./listentries-element-for-listcontrol-format.md) 요소는 뷰의 정의를 제공 합니다. 대부분의 경우 보기에는 하나의 정의만 있습니다. 이 요소는 필수입니다.
+- [ListEntries](./listentries-element-for-listcontrol-format.md) 요소는 뷰의 정의를 제공 합니다. 대부분의 경우 보기에는 하나의 정의만 있습니다. 필수적 요소로,
 
 - [ListEntry](./listentry-element-for-listcontrol-format.md) 요소는 뷰의 정의를 제공 합니다. 하나 이상의 [ListEntry](./listentry-element-for-listcontrol-format.md) 가 필요 합니다. 그러나 추가할 수 있는 요소 수에 대 한 최대 제한은 없습니다. 대부분의 경우 보기에는 하나의 정의만 있습니다.
 
@@ -155,11 +155,11 @@ ServiceType         : Win32OwnProcess
 
 - [ScriptBlock](./scriptblock-element-for-listitem-for-listcontrol-format.md) 요소는 값이 행에 표시 되는 스크립트를 지정 합니다. 스크립트나 속성 중 하나를 지정 해야 하지만 둘 다 지정할 수는 없습니다.
 
-- [Label](./label-element-for-listitem-for-listcontrol-format.md) 요소는 행에서 속성 또는 스크립트 값의 왼쪽에 표시 되는 레이블을 지정 합니다. 이 요소는 선택 사항입니다. 레이블을 지정 하지 않으면 속성이 나 스크립트의 이름이 표시 됩니다. 전체 예제는 [목록 뷰 (레이블)](./list-view-labels.md)를 참조 하세요.
+- [Label](./label-element-for-listitem-for-listcontrol-format.md) 요소는 행에서 속성 또는 스크립트 값의 왼쪽에 표시 되는 레이블을 지정 합니다. 이 요소는 선택적입니다. 레이블을 지정 하지 않으면 속성이 나 스크립트의 이름이 표시 됩니다. 전체 예제는 [목록 뷰 (레이블)](./list-view-labels.md)를 참조 하세요.
 
-- [Itemselectioncondition](./itemselectioncondition-element-for-listitem-for-listcontrol-format.md) 요소는 행을 표시 하기 위해 존재 해야 하는 조건을 지정 합니다. 목록 뷰에 조건을 추가 하는 방법에 대 한 자세한 내용은 [데이터 표시 조건 정의](./defining-conditions-for-displaying-data.md)를 참조 하세요. 이 요소는 선택 사항입니다.
+- [Itemselectioncondition](./itemselectioncondition-element-for-listitem-for-listcontrol-format.md) 요소는 행을 표시 하기 위해 존재 해야 하는 조건을 지정 합니다. 목록 뷰에 조건을 추가 하는 방법에 대 한 자세한 내용은 [데이터 표시 조건 정의](./defining-conditions-for-displaying-data.md)를 참조 하세요. 이 요소는 선택적입니다.
 
-- [FormatString](./formatstring-element-for-listitem-for-listcontrol-format.md) 요소는 속성이 나 스크립트의 값을 표시 하는 데 사용 되는 패턴을 지정 합니다. 이 요소는 선택 사항입니다.
+- [FormatString](./formatstring-element-for-listitem-for-listcontrol-format.md) 요소는 속성이 나 스크립트의 값을 표시 하는 데 사용 되는 패턴을 지정 합니다. 이 요소는 선택적입니다.
 
 간단한 목록 뷰를 정의 하는 전체 서식 파일의 예는 [목록 뷰 (Basic)](./list-view-basic.md)를 참조 하세요.
 
@@ -245,17 +245,17 @@ ServiceType         : Win32OwnProcess
 
 - [ScriptBlock](./scriptblock-element-for-groupby-format.md) 요소는 값이 변경 될 때마다 새 그룹을 시작 하는 스크립트를 지정 합니다. 그룹을 시작 하려면 스크립트나 속성을 지정 해야 하지만 둘 다 지정할 수는 없습니다.
 
-- [Label](./label-element-for-groupby-format.md) 요소는 각 그룹의 시작 부분에 표시 되는 레이블을 정의 합니다. 이 요소에 지정 된 텍스트 외에도 Windows PowerShell은 새 그룹을 트리거한 값을 표시 하 고 레이블 앞뒤에 빈 줄을 추가 합니다. 이 요소는 선택 사항입니다.
+- [Label](./label-element-for-groupby-format.md) 요소는 각 그룹의 시작 부분에 표시 되는 레이블을 정의 합니다. 이 요소에 지정 된 텍스트 외에도 Windows PowerShell은 새 그룹을 트리거한 값을 표시 하 고 레이블 앞뒤에 빈 줄을 추가 합니다. 이 요소는 선택적입니다.
 
-- [CustomControl](./customcontrol-element-for-groupby-format.md) 요소는 데이터를 표시 하는 데 사용 되는 컨트롤을 정의 합니다. 이 요소는 선택 사항입니다.
+- [CustomControl](./customcontrol-element-for-groupby-format.md) 요소는 데이터를 표시 하는 데 사용 되는 컨트롤을 정의 합니다. 이 요소는 선택적입니다.
 
-- [Customcontrolname](./customcontrolname-element-for-groupby-format.md) 요소는 데이터를 표시 하는 데 사용 되는 공용 또는 뷰 컨트롤을 지정 합니다. 이 요소는 선택 사항입니다.
+- [Customcontrolname](./customcontrolname-element-for-groupby-format.md) 요소는 데이터를 표시 하는 데 사용 되는 공용 또는 뷰 컨트롤을 지정 합니다. 이 요소는 선택적입니다.
 
 그룹을 정의 하는 전체 서식 파일에 대 한 예제는 [목록 뷰 (GroupBy)](./list-view-groupby.md)를 참조 하세요.
 
 ## <a name="using-format-strings"></a>서식 문자열 사용
 
-서식 문자열을 뷰에 추가 하 여 데이터 표시 방법을 추가로 정의할 수 있습니다. 다음 예에서는 `StartTime` 속성의 값에 대 한 서식 문자열을 정의 하는 방법을 보여 줍니다.
+서식 문자열을 뷰에 추가 하 여 데이터 표시 방법을 추가로 정의할 수 있습니다. 다음 예제에서는 `StartTime` 속성의 값에 대 한 서식 문자열을 정의 하는 방법을 보여 줍니다.
 
 ```xml
 <ListItem>
@@ -274,7 +274,7 @@ ServiceType         : Win32OwnProcess
 
 - [ScriptBlock](./scriptblock-element-for-listitem-for-listcontrol-format.md) 요소 (표시 되지 않음)는 값이 뷰에 표시 되는 스크립트를 지정 합니다. 스크립트나 속성 중 하나를 지정 해야 하지만 둘 다 지정할 수는 없습니다.
 
-다음 예에서는 `ToString` 메서드를 호출 하 여 스크립트의 값에 대 한 서식을 지정 합니다. 스크립트는 개체의 메서드를 호출할 수 있습니다. 따라서 개체에 형식 매개 변수를 포함 하는 메서드 (예: `ToString`)가 있는 경우 스크립트는 해당 메서드를 호출 하 여 스크립트의 출력 값에 대 한 형식을 지정할 수 있습니다.
+다음 예제에서는 스크립트의 값에 대 한 서식을 지정 하기 위해 `ToString` 메서드를 호출 합니다. 스크립트는 개체의 메서드를 호출할 수 있습니다. 따라서 개체에 형식 지정 매개 변수가 있는 `ToString`와 같은 메서드가 있는 경우 스크립트는 해당 메서드를 호출 하 여 스크립트의 출력 값에 대 한 형식을 지정할 수 있습니다.
 
 ```xml
 <ListItem>

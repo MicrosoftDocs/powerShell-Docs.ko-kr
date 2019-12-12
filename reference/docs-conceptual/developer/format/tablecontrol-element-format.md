@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 1550b068-dfbc-4ae0-9aa1-72c9a680ec59
 caps.latest.revision: 15
 ms.openlocfilehash: 3942c008e026b0b99db3c77af4a0152b50fffc4e
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368202"
 ---
 # <a name="tablecontrol-element-format"></a>TableControl 요소(형식)
@@ -35,7 +35,7 @@ ViewDefinitions 요소 (Format) View 요소 (format) TableControl 요소 (Format
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `TableControl` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 테이블의 행을 지정 해야 합니다. 다른 모든 자식 요소는 선택 사항입니다.
+다음 섹션에서는 특성, 자식 요소 및 `TableControl` 요소의 부모 요소에 대해 설명 합니다. 테이블의 행을 지정 해야 합니다. 다른 모든 자식 요소는 선택 사항입니다.
 
 ### <a name="attributes"></a>특성
 
@@ -47,7 +47,7 @@ ViewDefinitions 요소 (Format) View 요소 (format) TableControl 요소 (Format
 |-------------|-----------------|
 |[TableControl에 대 한 AutoSize 요소 (형식)](./autosize-element-for-tablecontrol-format.md)|선택적 요소입니다.<br /><br /> 데이터 크기에 따라 열 크기 및 열 수를 조정 하는지 여부를 지정 합니다.|
 |[TableControl에 대 한 HideTableHeaders 요소 (형식)](./hidetableheaders-element-format.md)|선택적 요소입니다.<br /><br /> 테이블의 헤더가 표시 되지 않는지 여부를 나타냅니다.|
-|[TableControl (형식)의 TableHeaders 요소](./tableheaders-element-format.md)|필수 요소입니다.<br /><br /> 테이블 뷰의 열에 대 한 레이블, 너비 및 데이터 맞춤을 정의 합니다.|
+|[TableControl (형식)의 TableHeaders 요소](./tableheaders-element-format.md)|필수적 요소입니다.<br /><br /> 테이블 뷰의 열에 대 한 레이블, 너비 및 데이터 맞춤을 정의 합니다.|
 |[TableControl에 대 한 TableRowEntries 요소 (형식)](./tablerowentries-element-for-tablecontrol-format.md)|선택적 요소입니다.<br /><br /> 테이블 뷰의 정의를 제공 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소

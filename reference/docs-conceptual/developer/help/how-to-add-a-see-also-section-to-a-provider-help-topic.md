@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 9c754ac3-cee3-4c13-9bad-e499c8a68a09
 caps.latest.revision: 4
 ms.openlocfilehash: f5c48fd04c620828a6e99c5c5424d11b31fd10e5
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367842"
 ---
 # <a name="how-to-add-a-see-also-section-to-a-provider-help-topic"></a>공급자 도움말 항목에 참고 항목 섹션을 추가하는 방법
@@ -29,7 +29,7 @@ ms.locfileid: "72367842"
 
 1. Dll-help 파일의 `providerHelp` 요소 내에 `RelatedLinks` 요소를 추가 *합니다.* `RelatedLinks` 요소는 `providerHelp` 요소의 마지막 요소 여야 합니다. 각 공급자 도움말 항목에는 하나의 `RelatedLinks` 요소만 사용할 수 있습니다.
 
-   예를 들어 다음과 같은 가치를 제공해야 합니다.
+   예:
 
     ```xml
     <providerHelp>
@@ -40,7 +40,7 @@ ms.locfileid: "72367842"
 
 2. **참고** 항목 섹션의 각 항목에 대해 `RelatedLinks` 요소 내에서 `navigationLink` 요소를 추가 합니다. 그런 다음 각 `navigationLink` 요소 내에서 하나의 `linkText` 요소와 하나의 `uri` 요소를 추가 합니다. `uri` 요소를 사용 하지 않는 경우이 요소를 빈 요소 (\<uri/>)로 추가할 수 있습니다.
 
-   예를 들어 다음과 같은 가치를 제공해야 합니다.
+   예:
 
     ```xml
     <providerHelp>

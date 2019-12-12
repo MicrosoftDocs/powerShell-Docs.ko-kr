@@ -9,21 +9,21 @@ ms.topic: article
 ms.assetid: 7c265084-e072-46ca-9844-c3c0e275d6b0
 caps.latest.revision: 7
 ms.openlocfilehash: fdf0036c68b608d254ed928ae9ac58616a856200
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367342"
 ---
 # <a name="runspace10-sample"></a>Runspace10 샘플
 
-이 샘플에서는 기본 초기 세션 상태를 만드는 방법, [runspace](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)에 cmdlet을 추가 하는 방법, 초기 세션 상태를 사용 하는 runspace를 만드는 방법 및를 사용 하 여 명령을 실행 하는 방법을 보여 줍니다. [System.object. Powershell](/dotnet/api/system.management.automation.powershell) 개체입니다.
+이 샘플에서는 기본 초기 세션 상태를 만드는 방법, Runspace에 cmdlet을 추가 하는 방법, 초기 세션 상태를 사용 하는 runspace를 만드는 방법 및 [Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) [개체를](/dotnet/api/system.management.automation.powershell) 사용 하 여 명령을 실행 하는 방법을 보여 줍니다.
 
 ## <a name="requirements"></a>요구 사항
 
 이 샘플에는 Windows PowerShell 2.0이 필요 합니다.
 
-## <a name="demonstrates"></a>보여
+## <a name="demonstrates"></a>데모
 
 이 샘플에서는 다음을 보여 줍니다.
 

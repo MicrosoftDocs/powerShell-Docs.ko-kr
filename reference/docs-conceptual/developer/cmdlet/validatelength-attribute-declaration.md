@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 82fe3a35-a94b-4bc1-ad9e-dfc5f1e788b3
 caps.latest.revision: 13
 ms.openlocfilehash: a25fa2410fcc6803563573596af1bc99052c3ffa
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369182"
 ---
 # <a name="validatelength-attribute-declaration"></a>ValidateLength 특성 선언
@@ -43,9 +43,9 @@ ValidateLength 특성은 cmdlet 매개 변수 인수에 대 한 최소 및 최�
 
 - Windows PowerShell 런타임은 다음과 같은 경우에 오류를 throw 합니다.
 
-    - @No__t-0 특성 매개 변수의 값이 `MinLength` 특성 매개 변수의 값 보다 작은 경우
+    - `MaxLength` attribute 매개 변수의 값이 `MinLength` attribute 매개 변수의 값 보다 작은 경우
 
-    - @No__t-0 특성 매개 변수가 0으로 설정 된 경우
+    - `MaxLength` attribute 매개 변수가 0으로 설정 된 경우
 
     - 인수가 문자열이 아닌 경우
 

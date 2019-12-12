@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 3e879ba7-c334-460b-94a1-3e9b63d3d8de
 caps.latest.revision: 5
 ms.openlocfilehash: 949c0d63b1e5bca1bfe670362df4297c29e98fcc
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359922"
 ---
 # <a name="windows-powershell-provider-quickstart"></a>Windows PowerShell 공급자 빠른 시작
@@ -21,7 +21,7 @@ ms.locfileid: "72359922"
 
 ## <a name="writing-a-basic-provider"></a>기본 공급자 작성
 
-Windows PowerShell 공급자의 가장 기본적인 기능은 드라이브를 만들고 제거 하는 것입니다. 이 예제에서는 [Newdrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) 및 [Removedrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) 메서드를 구현 합니다 .이 메서드를 구현 하는 방법에 대 [한 자세한 내용은이 (가) System.object](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) ... c a d. 공급자 클래스를 선언 하는 방법도 확인 합니다.
+Windows PowerShell 공급자의 가장 기본적인 기능은 드라이브를 만들고 제거 하는 것입니다. 이 예제에서는 [Newdrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) 및 Removedrive * 메서드를 구현 합니다 .이 메서드는 [system.object](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 의 [*](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) 메서드를 구현 하는 것입니다. c d m. c d m. c d m. 공급자 클래스를 선언 하는 방법도 확인 합니다.
 
 공급자를 작성할 때 공급자를 사용할 수 있을 때 자동으로 생성 되는 기본 드라이브 드라이브를 지정할 수 있습니다. 또한 메서드를 정의 하 여 해당 공급자를 사용 하는 새 드라이브를 만듭니다.
 
@@ -35,7 +35,7 @@ Visual Studio에서 AccessDBProviderSample 이라는 클래스 라이브러리 �
 
 1. 프로젝트에 대 한 참조로 System.web 어셈블리를 추가 합니다.
 
-2. **Project > AccessDBProviderSample 속성 > 디버그**를 클릭 합니다. **시작 프로젝트**에서 **시작 외부 프로그램**을 클릭 하 고 Windows PowerShell 실행 파일 (일반적으로 c:\windows\system32\windowspowershell\ v1.0\\.powershell.exe)로 이동 합니다.
+2. **Project > AccessDBProviderSample 속성 > 디버그**를 클릭 합니다. **시작 프로젝트**에서 **시작 외부 프로그램**을 클릭 하 고 Windows PowerShell 실행 파일 (일반적으로 c:\Windows\System32\WindowsPowerShell\v1.0\\)로 이동 합니다.
 
 3. **시작 옵션**아래에서 **명령줄 인수** 상자에 다음을 입력 합니다. `-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
 
@@ -43,7 +43,7 @@ Visual Studio에서 AccessDBProviderSample 이라는 클래스 라이브러리 �
 
 이 공급자는 [system.object](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 에서 파생 된 공급자 클래스에서 파생 됩니다. 실제 기능을 제공 하는 대부분의 공급자 (항목 액세스 및 조작, 데이터 저장소 탐색, 항목 내용 가져오기 및 설정)는 [system.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 에서 파생 됩니다.
 
-클래스가 [system.object](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider)에서 파생 되도록 지정 하는 것 외에도 예제에 표시 된 것 처럼 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 를 사용 하 여 데코 레이트 해야 합니다. .
+클래스가 [system.object](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider)에서 파생 되도록 지정 하는 것 외에도 예제에 표시 된 것 처럼 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 를 사용 하 여 데코 레이트 된 클래스를 사용 하도록 지정 해야 합니다.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Providers
@@ -67,9 +67,9 @@ namespace Microsoft.Samples.PowerShell.Providers
 
 ### <a name="implementing-newdrive"></a>NewDrive 구현
 
-사용자가의 이름을 지정 하 여 [NewPSDriveCommand](/dotnet/api/Microsoft.PowerShell.Commands.Newpsdrivecommand) cmdlet을 호출 하는 경우 [Newdrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) 메서드는 Windows powershell 엔진에 의해 호출 되는 경우입니다. 공급자별. PSDriveInfo 매개 변수는 Windows PowerShell 엔진에 의해 전달 되 고, 메서드는 새 드라이브를 Windows PowerShell 엔진에 반환 합니다. 이 메서드는 위에서 만든 클래스 내에서 선언 해야 합니다.
+사용자가 공급자의 이름을 지정 하 여 [NewPSDriveCommand](/dotnet/api/Microsoft.PowerShell.Commands.Newpsdrivecommand) cmdlet을 호출 하는 경우 [Newdrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) 메서드는 Windows powershell 엔진에 의해 호출 되는 것입니다. PSDriveInfo 매개 변수는 Windows PowerShell 엔진에 의해 전달 되 고, 메서드는 새 드라이브를 Windows PowerShell 엔진에 반환 합니다. 이 메서드는 위에서 만든 클래스 내에서 선언 해야 합니다.
 
-메서드는 먼저 전달 된 드라이브 개체와 드라이브 루트가 모두 있는지 확인 하 고, 둘 중 하나가 없는 경우 `null`을 반환 합니다. 그런 다음 내부 클래스 AccessDBPSDriveInfo의 생성자를 사용 하 여 드라이브가 나타내는 액세스 데이터베이스에 대 한 연결 및 새 드라이브를 만듭니다.
+메서드는 먼저 전달 된 드라이브 개체와 드라이브 루트가 모두 있는지 확인 하 고, 해당 개체 중 하나가 없는 경우 `null`를 반환 합니다. 그런 다음 내부 클래스 AccessDBPSDriveInfo의 생성자를 사용 하 여 드라이브가 나타내는 액세스 데이터베이스에 대 한 연결 및 새 드라이브를 만듭니다.
 
 ```csharp
 protected override PSDriveInfo NewDrive(PSDriveInfo drive)

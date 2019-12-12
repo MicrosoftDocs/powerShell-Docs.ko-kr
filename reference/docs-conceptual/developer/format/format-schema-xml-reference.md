@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: ac6f7aaa-d0cc-4c7b-a341-85e736174579
 caps.latest.revision: 21
 ms.openlocfilehash: 437b3d6bb62fdd3a74f3392ec71df360c01a1974
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363722"
 ---
 # <a name="format-schema-xml-reference"></a>형식 스키마 XML 참조
 
 이 단원의 항목에서는 서식 파일 (types.ps1xml 파일)에 사용 되는 XML 요소에 대해 설명 합니다. 파일 서식 지정은 .NET 개체 표시 방법을 정의 합니다. 개체 자체는 변경 하지 않습니다.
 
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 
 [TableControl에 대 한 TableColumnHeader의 Alignment 요소 (Format)](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md) 열 머리글의 데이터를 표시 하는 방법을 정의 합니다.
 
@@ -431,6 +431,6 @@ CustomControl에 대 한 [SelectionCondition의 TypeName 요소 (형식)](./type
 
 [WrapTables 요소 (Format)](./wraptables-element-format.md) 데이터가 열의 너비 보다 길면 표 셀의 데이터가 다음 줄로 이동 하도록 지정 합니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)

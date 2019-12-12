@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: d3f4f652-d929-4c27-9358-9baa390a094c
 caps.latest.revision: 14
 ms.openlocfilehash: 326cd408e86402974569fc76d5e473be5a56f0b6
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369962"
 ---
 # <a name="cmdlet-attributes"></a>Cmdlet 특성

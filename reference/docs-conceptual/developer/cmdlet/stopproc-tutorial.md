@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a142aeb6-9c11-44a0-b34f-1f9470fa347b
 caps.latest.revision: 5
 ms.openlocfilehash: 27c8e2c7525aba38e69e50b2b7fd3b18b8e54989
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369412"
 ---
 # <a name="stopproc-tutorial"></a>StopProc 자습서

@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 946cd2b5-ac37-4a13-bb49-29fbc70ec8d7
 caps.latest.revision: 6
 ms.openlocfilehash: 0c07ab0e5d04c4056a7e7215bfa55773bfccb41d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362072"
 ---
 # <a name="scriptblock-element-for-itemselectioncondition-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 ItemSelectionCondition에 대한 ScriptBlock 요소(형식)
 
-조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트를 사용 하 여 `true`으로 평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 사용자 지정 컨트롤 뷰를 정의할 때 사용 됩니다.
+조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트가 `true`평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 사용자 지정 컨트롤 뷰를 정의할 때 사용 됩니다.
 
 Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (format) CustomControl Element (format) CustomEntries 요소에 대 한 Customentries 요소에 대 한 view (format) Customentries 요소에 대 한 CustomEntries 요소 뷰 (형식)에 대 한 CustomEntry for CustomControl for View (format) ItemSelectionCondition 요소에 대 한 CustomControl for View (format) ScriptBlock 요소에 대 한 ItemSelectionCondition 요소 보기에 대 한 CustomControl (형식)
 
@@ -29,7 +29,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `ScriptBlock` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `ScriptBlock` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

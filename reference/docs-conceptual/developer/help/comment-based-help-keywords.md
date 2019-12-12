@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ab90ec96-77f5-42e3-9c7e-2f4156ec207f
 caps.latest.revision: 6
 ms.openlocfilehash: 534a6c9a43326c8a01b2181c7a799286fa4d3997
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361362"
 ---
 # <a name="comment-based-help-keywords"></a>설명 기반 도움말 키워드
@@ -29,7 +29,7 @@ ms.locfileid: "72361362"
 
 함수 또는 스크립트에 대 한 자세한 설명을 `.Description` 합니다. 이 키워드는 각 항목에서 한 번만 사용할 수 있습니다.
 
-매개 변수에 대 한 설명 *>\<매개 변수 이름* `.Parameter` 합니다. 함수 또는 스크립트의 각 매개 변수에 대 한 `.Parameter` 키워드를 포함할 수 있습니다.
+매개 변수에 대 한 설명 *\<매개 변수 이름* `.Parameter` 합니다. 함수 또는 스크립트의 각 매개 변수에 대 한 `.Parameter` 키워드를 포함할 수 있습니다.
 
 `.Parameter` 키워드는 주석 블록에서 순서에 관계 없이 나타날 수 있지만 `Param` 문이나 함수 선언에 매개 변수가 나타나는 순서에 따라 매개 변수가 도움말 항목에 표시 되는 순서가 결정 됩니다. 도움말 항목의 매개 변수 순서를 변경 하려면 `Param` 문이나 함수 선언에서 매개 변수의 순서를 변경 합니다.
 

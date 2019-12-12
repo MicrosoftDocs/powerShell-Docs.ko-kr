@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 3182c0c5-ba43-4d00-b3e0-27f24d272b2f
 caps.latest.revision: 9
 ms.openlocfilehash: b0ed329600811206b8569b864032825818841479
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363232"
 ---
 # <a name="enumeratecollection-element-for-expressionbinding-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 ExpressionBinding에 대한 EnumerateCollection 요소(형식)
@@ -29,7 +29,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `EnumerateCollection` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `EnumerateCollection` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: 853b7e5d-76c1-490e-8269-0ef31ba2ff13
 caps.latest.revision: 10
 ms.openlocfilehash: dc1ae92af8a57d6197b595db8e098256ac444b78
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360002"
 ---
 # <a name="accessdbprovidersample01"></a>AccessDBProviderSample01
 
 이 샘플에서는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) 클래스에서 직접 파생 되는 공급자 클래스를 선언 하는 방법을 보여 줍니다. 여기서는 참조용으로만 설명합니다.
 
-## <a name="demonstrates"></a>보여
+## <a name="demonstrates"></a>데모
 
 > [!IMPORTANT]
 > 공급자 클래스는 다음 클래스 중 하나에서 파생 되 고 다른 공급자 인터페이스를 구현할 수 있습니다.
@@ -32,7 +32,7 @@ ms.locfileid: "72360002"
 
 이 샘플은 다음을 보여 줍니다.
 
-- @No__t-0 특성을 선언 합니다.
+- `CmdletProvider` 특성을 선언 합니다.
 
 - [System.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) 클래스에서 직접 파생 되는 공급자 클래스를 정의 합니다.
 

@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 51f7aec9-7b01-4370-84f4-1e58508a851f
 caps.latest.revision: 6
 ms.openlocfilehash: e92b2dfff07358132c480c47c34279e5365fe400
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362122"
 ---
 # <a name="scriptblock-element-for-itemseclectioncondition-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 ItemSelectionCondition에 대한 ScriptBlock 요소(형식)
 
-조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트를 사용 하 여 `true`으로 평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 서식 파일의 모든 뷰에서 사용할 수 있는 공용 컨트롤을 정의 하는 데 사용 됩니다.
+조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트가 `true`평가 되 면 조건이 충족 되 고 컨트롤이 사용 됩니다. 이 요소는 서식 파일의 모든 뷰에서 사용할 수 있는 공용 컨트롤을 정의 하는 데 사용 됩니다.
 
 구성 요소 (format) 컨트롤 요소의 구성 (format) CustomControl 요소에 대 한 Control 요소 구성의 CustomControl에 대 한 구성 (형식) CustomEntries 요소 Format) 구성에 대 한 컨트롤의 CustomControl에 대 한 CustomEntry 요소 구성 (형식)에 대 한 컨트롤의 Customentry 요소 구성 요소에 대 한 Customentry에 대 한 컨트롤의 customentry 구성 (형식)의 컨트롤에 대 한 ItemSelectionCondition의 구성 (Format) ScriptBlock 요소에 대 한 ExpressionBinding의 ItemSelectionCondition 요소
 
@@ -29,7 +29,7 @@ ms.locfileid: "72362122"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `ScriptBlock` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `ScriptBlock` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

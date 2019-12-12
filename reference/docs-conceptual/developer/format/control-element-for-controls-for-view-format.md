@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 1fd53f55-698d-4df5-bb9a-fe28dc3193e1
 caps.latest.revision: 11
 ms.openlocfilehash: df568ccb36a2646b983622cdf95718dd5cac62c3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363472"
 ---
 # <a name="control-element-for-controls-for-view--format"></a>View의 Controls에 대한 Control 요소(형식)
@@ -32,7 +32,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (Format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `Control` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `Control` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -42,8 +42,8 @@ Configuration 요소 (Format) ViewDefinitions 요소 (Format) View 요소 (forma
 
 |요소|설명|
 |-------------|-----------------|
-|[View 컨트롤의 Name 요소 (Format)](./name-element-for-control-for-controls-for-view-format.md)|필수 요소입니다.<br /><br /> 컨트롤의 이름을 지정 합니다.|
-|[View 컨트롤의 컨트롤에 대 한 CustomControl 요소 (형식)](./customcontrol-element-for-control-for-controls-for-view-format.md)|필수 요소입니다.<br /><br /> 이 뷰에서 사용 하는 컨트롤을 정의 합니다.|
+|[View 컨트롤의 Name 요소 (Format)](./name-element-for-control-for-controls-for-view-format.md)|필수적 요소입니다.<br /><br /> 컨트롤의 이름을 지정 합니다.|
+|[View 컨트롤의 컨트롤에 대 한 CustomControl 요소 (형식)](./customcontrol-element-for-control-for-controls-for-view-format.md)|필수적 요소입니다.<br /><br /> 이 뷰에서 사용 하는 컨트롤을 정의 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 

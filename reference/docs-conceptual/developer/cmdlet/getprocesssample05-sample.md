@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 6aebd53f-0610-4959-88b2-42339588c859
 caps.latest.revision: 6
 ms.openlocfilehash: ad4300937c10652b677346a62c42fa4f6e8513cf
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365702"
 ---
 # <a name="getprocesssample05-sample"></a>GetProcessSample05 샘플
@@ -27,11 +27,11 @@ ms.locfileid: "72365702"
 
 2. 솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다. 그러면 Visual Studio에서 샘플 프로젝트가 열립니다.
 
-3. **빌드** 메뉴에서 **솔루션 빌드**를 선택 합니다.
+3. **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.
 
    샘플에 대 한 라이브러리는 기본 \bin 또는 \bin\debug 디렉터리에 빌드됩니다.
 
-### <a name="how-to-run-the-sample"></a>샘플을 실행 하는 방법
+### <a name="how-to-run-the-sample"></a>샘플을 실행하는 방법
 
 1. 다음 모듈 폴더를 만듭니다.
 
@@ -53,7 +53,7 @@ ms.locfileid: "72365702"
 
 이 샘플에는 Windows PowerShell 2.0이 필요 합니다.
 
-## <a name="demonstrates"></a>보여
+## <a name="demonstrates"></a>데모
 
 이 샘플에서는 다음을 보여 줍니다.
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: aaf9351e-157f-4d48-8b8f-1fd64855b682
 caps.latest.revision: 10
 ms.openlocfilehash: d291e401bbf3da998735ebb00f1eb35521f9a19c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366372"
 ---
 # <a name="accessdbprovidersample02"></a>AccessDBProviderSample02
@@ -197,7 +197,7 @@ namespace Microsoft.Samples.PowerShell.Providers
 }
 ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [System.object. i n g.](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider)
 

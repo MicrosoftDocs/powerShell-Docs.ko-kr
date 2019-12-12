@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 2edac16c-0b30-4985-ac84-0821aa9a9f6d
 caps.latest.revision: 12
 ms.openlocfilehash: bd0f7ca4de8dede97d1553cd62884ea45876e0c7
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363362"
 ---
 # <a name="customcontrol-element-for-view-format"></a>View에 대한 CustomControl 요소(형식)
@@ -31,7 +31,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `CustomControl` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 하나의 자식 요소를 지정 해야 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `CustomControl` 요소의 부모 요소에 대해 설명 합니다. 하나의 자식 요소를 지정 해야 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -41,7 +41,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 |요소|설명|
 |-------------|-----------------|
-|[CustomControl에 대 한 CustomEntries 요소 (형식)](./customentries-element-for-customcontrol-for-view-format.md)|필수 요소입니다.<br /><br /> 사용자 지정 컨트롤 뷰의 정의를 제공 합니다.|
+|[CustomControl에 대 한 CustomEntries 요소 (형식)](./customentries-element-for-customcontrol-for-view-format.md)|필수적 요소입니다.<br /><br /> 사용자 지정 컨트롤 뷰의 정의를 제공 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 

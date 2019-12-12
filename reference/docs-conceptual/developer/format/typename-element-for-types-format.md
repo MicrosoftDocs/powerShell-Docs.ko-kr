@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 0595b99e-b438-4240-b47b-555cf0316f33
 caps.latest.revision: 15
 ms.openlocfilehash: bd5baa03c2050b2c3bbe1d7697c253d923175d39
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368032"
 ---
 # <a name="typename-element-for-types-format"></a>Types에 대한 TypeName 요소(형식)
@@ -29,7 +29,7 @@ Configuration 요소 (Format) SelectionSets 요소 (Format) Selectionsets 요소
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `TypeName` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 하나 이상의 `TypeName` 요소가 선택 집합에 포함 되어야 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `TypeName` 요소의 부모 요소에 대해 설명 합니다. 하나 이상의 `TypeName` 요소가 선택 집합에 포함 되어야 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -53,7 +53,7 @@ Configuration 요소 (Format) SelectionSets 요소 (Format) Selectionsets 요소
 
 상속을 통해 관련 된 개체 집합과 같이 단일 이름을 사용 하 여 참조 하려는 관련 개체 집합이 있는 경우 선택 집합을 사용할 수 있습니다. 뷰를 정의할 때 각 보기 내에 모든 개체를 나열 하는 대신 선택 집합의 이름을 사용 하 여 개체 집합을 지정할 수 있습니다.
 
-일반 선택 집합은 형식 지정 파일의 뷰를 정의할 때 이름으로 지정 됩니다. 이 경우 뷰의 `ViewSelectedBy` 요소에 있는 `SelectionSetName` 자식 요소는 집합을 지정 합니다. 그러나 뷰의 다른 항목은 뷰의 해당 항목에만 적용 되는 선택 집합을 지정할 수도 있습니다. 선택 집합에 대 한 자세한 내용은 [개체 집합 정의](./defining-selection-sets.md)를 참조 하세요.
+일반 선택 집합은 형식 지정 파일의 뷰를 정의할 때 이름으로 지정 됩니다. 이러한 경우 뷰에 대 한 `ViewSelectedBy` 요소의 `SelectionSetName` 자식 요소는 집합을 지정 합니다. 그러나 뷰의 다른 항목은 뷰의 해당 항목에만 적용 되는 선택 집합을 지정할 수도 있습니다. 선택 집합에 대 한 자세한 내용은 [개체 집합 정의](./defining-selection-sets.md)를 참조 하세요.
 
 ## <a name="example"></a>예제
 

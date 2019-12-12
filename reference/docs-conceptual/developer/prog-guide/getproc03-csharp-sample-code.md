@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ebc0d538-69ac-43d5-837d-b6f47344fc6a
 caps.latest.revision: 5
 ms.openlocfilehash: 126df3092c0722b0fc9d02cb61d3faf0578b8e97
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416136"
 ---
 # <a name="getproc03-c-sample-code"></a>GetProc03(C#) 코드 샘플
@@ -28,7 +28,7 @@ ms.locfileid: "74416136"
 
 [!code-csharp[GetProcessSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample03/GetProcessSample03.cs#L11-L78 "GetProcessSample03.cs")]
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell 프로그래머 가이드](./windows-powershell-programmer-s-guide.md)
 

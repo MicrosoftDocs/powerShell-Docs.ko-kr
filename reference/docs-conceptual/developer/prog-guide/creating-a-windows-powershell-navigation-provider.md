@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
 caps.latest.revision: 5
 ms.openlocfilehash: f73e732ca9416b906b3647c5090dfa04ad940484
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416204"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Windows PowerShell 탐색 공급자 만들기
@@ -128,7 +128,7 @@ Windows PowerShell 탐색 공급자는 표시 된 전체 또는 부분 공급자
 
 [Moveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 메서드를 구현 하는 경우에는 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 것이 좋습니다. 이 메서드는 시스템 상태가 변경 될 때 (예: 파일 삭제) 작업 실행을 확인 하는 데 사용 됩니다. Windows PowerShell 런타임이 사용자에 게 표시 되는 항목을 확인 하는 데 필요한 명령줄 설정이 나 기본 설정 변수를 고려 하 여 사용자에 게 변경할 리소스의 [이름을 보냅니다.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)
 
-Moveitem에 대 한 호출 후에는 [ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 가 `true`반환 되 고, 그렇지 않으면 [*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 메서드가 system.object를 호출 해야 합니다. [shouldprocess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 호출 하는 메서드를 호출 해야 합니다. 이 메서드는 사용자에 게 작업을 계속 해야 하는 경우 사용자에 게 메시지를 보내 사용자에 게 피드백을 보냅니다. 공급자는 System.object를 호출 해야 합니다 [. shouldcontinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 잠재적으로 위험한 시스템 수정에 대 한 추가 검사로 계속 합니다.
+[System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)에 대한 호출이 끝나면 [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 메서드는 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 `true`호출해야 합니다. 이 메서드는 사용자에 게 작업을 계속 해야 하는 경우 사용자에 게 메시지를 보내 사용자에 게 피드백을 보냅니다. 공급자는 System.object를 호출 해야 합니다 [. shouldcontinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 잠재적으로 위험한 시스템 수정에 대 한 추가 검사로 계속 합니다.
 
 ## <a name="attaching-dynamic-parameters-to-the-move-item-cmdlet"></a>동적 매개 변수를 Move Item Cmdlet에 연결
 
@@ -284,7 +284,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
    ReportsTo       : 2
    ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell 공급자 만들기](./how-to-create-a-windows-powershell-provider.md)
 

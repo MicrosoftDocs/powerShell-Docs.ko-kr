@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: e7040a5c-4a47-42df-a2ea-96b134a4ed9b
 caps.latest.revision: 10
 ms.openlocfilehash: f20708ff41d9a6de90090997a875ba5371eccd74
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364292"
 ---
 # <a name="invoking-cmdlets-and-scripts-within-a-cmdlet"></a>Cmdlet 내에서 Cmdlet 및 호출
@@ -21,7 +21,7 @@ Cmdlet은 cmdlet의 입력 처리 메서드 내에서 다른 cmdlet 및 스크�
 
 ## <a name="the-invoke-method"></a>Invoke 메서드
 
-모든 cmdlet은에 의해 재정의 되는 입력 처리 메서드 (예: [system.object](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing))에서 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.Invoke) 를 호출 하 여 기존 cmdlet을 호출할 수 있습니다. cmdlet입니다. 그러나 [system.object](/dotnet/api/System.Management.Automation.Cmdlet) 클래스에서 직접 파생 되는 cmdlet만 호출할 수 있습니다. [PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 클래스에서 파생 된 cmdlet을 호출할 수 없습니다.
+모든 cmdlet은 cmdlet에 의해 재정의 되는 입력 처리 메서드 (예: [system.object](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)) 내에서 [system.xml 메서드를](/dotnet/api/System.Management.Automation.Cmdlet.Invoke) 호출 하 여 기존 cmdlet을 호출할 수 있습니다. 그러나 [system.object](/dotnet/api/System.Management.Automation.Cmdlet) 클래스에서 직접 파생 되는 cmdlet만 호출할 수 있습니다. [PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 클래스에서 파생 된 cmdlet을 호출할 수 없습니다.
 
 System.object. n a m. [Invoke *](/dotnet/api/System.Management.Automation.Cmdlet.Invoke) 메서드에는 다음과 같은 변형이 있습니다.
 

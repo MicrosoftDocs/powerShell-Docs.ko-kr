@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a252e0ec-d456-42d7-bd49-d6b8bc57f388
 caps.latest.revision: 11
 ms.openlocfilehash: 9c9d50c880f843e21621e5735c800e3afb48b2ad
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369722"
 ---
 # <a name="extending-output-objects"></a>출력 개체 확장
@@ -21,7 +21,7 @@ ms.locfileid: "72369722"
 
 ## <a name="extending-the-systemarray-object"></a>System.object 개체 확장
 
-다음 예제에서는 Windows PowerShell에서 types.ps1xml 파일의 [system.object](/dotnet/api/System.Array) 개체를 확장 하는 방법을 보여 줍니다. 기본적으로 [system.object](/dotnet/api/System.Array) 개체에는 배열의 개체 수를 나열 하는 `Length` 속성이 있습니다. 그러나 이름 "length"는 속성을 명확 하 게 설명 하지 않으므로 Windows PowerShell은 `Count` 별칭 속성을 추가 합니다 .이 속성은 `Length` 속성과 같은 값을 표시 합니다. 다음 XML은 `Count` 속성을 [system.object](/dotnet/api/System.Array) 형식에 추가 합니다.
+다음 예제에서는 Windows PowerShell에서 types.ps1xml 파일의 [system.object](/dotnet/api/System.Array) 개체를 확장 하는 방법을 보여 줍니다. 기본적으로 [system.object](/dotnet/api/System.Array) 개체에는 배열의 개체 수를 나열 하는 `Length` 속성이 있습니다. 그러나 이름 "length"는 속성을 명확 하 게 설명 하지 않으므로 Windows PowerShell은 `Length` 속성과 동일한 값을 표시 하는 `Count` alias 속성을 추가 합니다. 다음 XML은 `Count` 속성을 [system.object](/dotnet/api/System.Array) 형식에 추가 합니다.
 
 ```xml
 <Type>
@@ -55,7 +55,7 @@ Get            Method        System.Object Get(Int32 )
 ...
 Length         Property      System.Int32 Length {get;}
 ```
-@No__t-0 속성 또는 `Length` 속성 중 하나를 사용 하 여 배열에 있는 개체 수를 확인할 수 있습니다. 예:
+`Count` 속성 또는 `Length` 속성 중 하나를 사용 하 여 배열에 있는 개체 수를 확인할 수 있습니다. 예:
 
 ```powershell
 PS> (1, 2, 3, 4).Count
@@ -92,7 +92,7 @@ PS> (1, 2, 3, 4).Length
 
 ## <a name="signing-types-files"></a>형식 파일 서명
 
-XML에 스크립트 블록이 포함 될 수 있으므로 변조를 방지 하기 위해 형식 파일을 디지털 서명 해야 합니다. 디지털 서명을 추가 하는 방법에 대 한 자세한 내용은 [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) 를 참조 하세요.
+XML에 스크립트 블록이 포함 될 수 있으므로 변조를 방지 하기 위해 형식 파일을 디지털 서명 해야 합니다. 디지털 서명을 추가 하는 방법에 대 한 자세한 내용은 [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) 을 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 

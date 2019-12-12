@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: 2a65b964-5bc6-4ade-a66b-b6afa7351ce7
 caps.latest.revision: 9
 ms.openlocfilehash: 32ebf2531237bfd1042310ccc4155193a58401fd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365422"
 ---
 # <a name="interpreting-errorrecord-objects"></a>ErrorRecord 개체 해석
 
 대부분의 경우 [ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) 개체는 명령 또는 스크립트에 의해 생성 되는 종료 되지 않는 오류를 나타냅니다. 종료 오류는 [Icontainserrorrecord](/dotnet/api/System.Management.Automation.IContainsErrorRecord) 인터페이스를 통해 ErrorRecord에서 추가 정보를 지정할 수도 있습니다.
 
-스크립트나 스크립트를 실행 하는 동안 발생 하는 특정 오류를 처리 하는 스크립트 또는 호스트에 오류 처리기를 쓰려면 [ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) 개체를 해석 하 여 다음 클래스를 나타내는지 여부를 확인 해야 합니다. 처리 하려는 오류입니다.
+스크립트나 스크립트를 실행 하는 동안 발생 하는 특정 오류를 처리 하는 스크립트 또는 호스트에 오류 처리기를 쓰려면 [ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) 개체를 해석 하 여 처리 하려는 오류 클래스를 나타내는지 여부를 확인 해야 합니다.
 
 Cmdlet이 종료 또는 종료 되지 않는 오류를 발견 하면 오류 조건을 설명 하는 오류 레코드를 만들어야 합니다. 호스트 응용 프로그램은 이러한 오류 레코드를 조사 하 고 오류를 완화 하는 모든 작업을 수행 해야 합니다. 또한 호스트 응용 프로그램은 레코드를 처리 하는 데 실패 했지만 계속 진행할 수 있는 종료 되지 않는 오류에 대 한 오류 레코드를 조사 해야 하며, 파이프라인을 중지 시킨 종료 오류에 대 한 오류 레코드를 조사 해야 합니다.
 

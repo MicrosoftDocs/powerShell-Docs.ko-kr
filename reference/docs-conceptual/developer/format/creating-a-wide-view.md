@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 2d4303c5-b451-4ccb-9831-b17a17ceac20
 caps.latest.revision: 16
 ms.openlocfilehash: 651de5d3bc2619f20438f3951ac5a8c4b0bf46d4
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368952"
 ---
 # <a name="creating-a-wide-view"></a>넓게 보기 만들기
@@ -76,11 +76,11 @@ View>
 
 - [Name](./name-element-for-view-format.md) 요소는 뷰의 이름을 지정 합니다. 이 요소는 모든 뷰에 필요 합니다.
 
-- [Viewselectedby](./viewselectedby-element-format.md) 요소는 뷰를 사용 하는 개체를 정의 합니다. 이 요소는 필수입니다.
+- [Viewselectedby](./viewselectedby-element-format.md) 요소는 뷰를 사용 하는 개체를 정의 합니다. 필수적 요소로,
 
-- [GroupBy](./groupby-element-for-view-format.md) 요소는 새 개체 그룹이 표시 되는 시기를 정의 합니다. 특정 속성 또는 스크립트의 값이 변경 될 때마다 새 그룹이 시작 됩니다. 이 요소는 선택 사항입니다.
+- [GroupBy](./groupby-element-for-view-format.md) 요소는 새 개체 그룹이 표시 되는 시기를 정의 합니다. 특정 속성 또는 스크립트의 값이 변경 될 때마다 새 그룹이 시작 됩니다. 이 요소는 선택적입니다.
 
-- [Controls](./controls-element-for-view-format.md) 요소는 넓은 뷰로 정의 된 사용자 지정 컨트롤을 정의 합니다. 컨트롤을 통해 데이터 표시 방법을 추가로 지정할 수 있습니다. 이 요소는 선택 사항입니다. 뷰는 자체 사용자 지정 컨트롤을 정의 하거나 서식 파일의 뷰에서 사용할 수 있는 공용 컨트롤을 사용할 수 있습니다. 사용자 지정 컨트롤에 대 한 자세한 내용은 [사용자 지정 컨트롤 만들기](./creating-custom-controls.md)를 참조 하세요.
+- [Controls](./controls-element-for-view-format.md) 요소는 넓은 뷰로 정의 된 사용자 지정 컨트롤을 정의 합니다. 컨트롤을 통해 데이터 표시 방법을 추가로 지정할 수 있습니다. 이 요소는 선택적입니다. 뷰는 자체 사용자 지정 컨트롤을 정의 하거나 서식 파일의 뷰에서 사용할 수 있는 공용 컨트롤을 사용할 수 있습니다. 사용자 지정 컨트롤에 대 한 자세한 내용은 [사용자 지정 컨트롤 만들기](./creating-custom-controls.md)를 참조 하세요.
 
 - [WideControl](./widecontrol-element-format.md) 요소 및 해당 자식 요소는 뷰에 표시 되는 내용을 정의 합니다. 위의 예제에서 뷰는 [Processname](/dotnet/api/System.Diagnostics.Process.ProcessName) 속성을 표시 하도록 디자인 되었습니다.
 
@@ -108,11 +108,11 @@ View>
 
 - [WideControl](./widecontrol-element-format.md) 요소 및 해당 자식 요소는 뷰에 표시 되는 내용을 정의 합니다.
 
-- [AutoSize](./autosize-element-for-widecontrol-format.md) 요소는 데이터 크기에 따라 열 크기 및 열 수를 조정 하는지 여부를 지정 합니다. 이 요소는 선택 사항입니다.
+- [AutoSize](./autosize-element-for-widecontrol-format.md) 요소는 데이터 크기에 따라 열 크기 및 열 수를 조정 하는지 여부를 지정 합니다. 이 요소는 선택적입니다.
 
-- [Columnnumber](./columnnumber-element-for-widecontrol-format.md) 요소는 넓은 보기에 표시 되는 열 수를 지정 합니다. 이 요소는 선택 사항입니다.
+- [Columnnumber](./columnnumber-element-for-widecontrol-format.md) 요소는 넓은 보기에 표시 되는 열 수를 지정 합니다. 이 요소는 선택적입니다.
 
-- [WideEntries](./wideentries-element-for-widecontrol-format.md) 요소는 뷰의 정의를 제공 합니다. 대부분의 경우 보기에는 하나의 정의만 있습니다. 이 요소는 필수입니다.
+- [WideEntries](./wideentries-element-for-widecontrol-format.md) 요소는 뷰의 정의를 제공 합니다. 대부분의 경우 보기에는 하나의 정의만 있습니다. 필수적 요소로,
 
 - [WideEntry](./wideentry-element-for-widecontrol-format.md) 요소는 뷰의 정의를 제공 합니다. 하나 이상의 [WideEntry](./wideentry-element-for-widecontrol-format.md) 가 필요 합니다. 그러나 추가할 수 있는 요소 수에 대 한 최대 제한은 없습니다. 대부분의 경우 보기에는 하나의 정의만 있습니다.
 
@@ -124,7 +124,7 @@ View>
 
 - [ScriptBlock](./scriptblock-element-for-wideitem-for-widecontrol-format.md) 요소는 값이 뷰에 표시 되는 스크립트를 지정 합니다. 스크립트나 속성 중 하나를 지정 해야 하지만 둘 다 지정할 수는 없습니다.
 
-- [FormatString](./formatstring-element-for-wideitem-for-widecontrol-format.md) 요소는 데이터를 표시 하는 데 사용 되는 패턴을 지정 합니다. 이 요소는 선택 사항입니다.
+- [FormatString](./formatstring-element-for-wideitem-for-widecontrol-format.md) 요소는 데이터를 표시 하는 데 사용 되는 패턴을 지정 합니다. 이 요소는 선택적입니다.
 
 넓은 뷰 정의를 정의 하는 전체 서식 파일의 예는 [넓은 뷰 (기본)](./wide-view-basic.md)를 참조 하세요.
 
@@ -210,17 +210,17 @@ View>
 
 - [ScriptBlock](./scriptblock-element-for-groupby-format.md) 요소는 값이 변경 될 때마다 새 그룹을 시작 하는 스크립트를 지정 합니다. 그룹을 시작 하려면 스크립트나 속성을 지정 해야 하지만 둘 다 지정할 수는 없습니다.
 
-- [Label](./label-element-for-groupby-format.md) 요소는 각 그룹의 시작 부분에 표시 되는 레이블을 정의 합니다. 이 요소에 지정 된 텍스트 외에도 Windows PowerShell은 새 그룹을 트리거한 값을 표시 하 고 레이블 앞뒤에 빈 줄을 추가 합니다. 이 요소는 선택 사항입니다.
+- [Label](./label-element-for-groupby-format.md) 요소는 각 그룹의 시작 부분에 표시 되는 레이블을 정의 합니다. 이 요소에 지정 된 텍스트 외에도 Windows PowerShell은 새 그룹을 트리거한 값을 표시 하 고 레이블 앞뒤에 빈 줄을 추가 합니다. 이 요소는 선택적입니다.
 
-- [CustomControl](./customcontrol-element-for-groupby-format.md) 요소는 데이터를 표시 하는 데 사용 되는 컨트롤을 정의 합니다. 이 요소는 선택 사항입니다.
+- [CustomControl](./customcontrol-element-for-groupby-format.md) 요소는 데이터를 표시 하는 데 사용 되는 컨트롤을 정의 합니다. 이 요소는 선택적입니다.
 
-- [Customcontrolname](./customcontrolname-element-for-groupby-format.md) 요소는 데이터를 표시 하는 데 사용 되는 공용 또는 뷰 컨트롤을 지정 합니다. 이 요소는 선택 사항입니다.
+- [Customcontrolname](./customcontrolname-element-for-groupby-format.md) 요소는 데이터를 표시 하는 데 사용 되는 공용 또는 뷰 컨트롤을 지정 합니다. 이 요소는 선택적입니다.
 
 그룹을 정의 하는 전체 서식 파일의 예는 [전체 뷰 (GroupBy)](./wide-view-groupby.md)를 참조 하세요.
 
 ## <a name="using-format-strings"></a>서식 문자열 사용
 
-서식 문자열을 넓은 보기에 추가 하 여 데이터가 표시 되는 방법을 추가로 정의할 수 있습니다. 다음 예에서는 `StartTime` 속성의 값에 대 한 서식 문자열을 정의 하는 방법을 보여 줍니다.
+서식 문자열을 넓은 보기에 추가 하 여 데이터가 표시 되는 방법을 추가로 정의할 수 있습니다. 다음 예제에서는 `StartTime` 속성의 값에 대 한 서식 문자열을 정의 하는 방법을 보여 줍니다.
 
 ```xml
 <WideItem>
@@ -239,7 +239,7 @@ View>
 
 - [ScriptBlock](./scriptblock-element-for-wideitem-for-widecontrol-format.md) 요소 (표시 되지 않음)는 값이 뷰에 표시 되는 스크립트를 지정 합니다. 스크립트나 속성 중 하나를 지정 해야 하지만 둘 다 지정할 수는 없습니다.
 
-다음 예에서는 `ToString` 메서드를 호출 하 여 스크립트의 값에 대 한 서식을 지정 합니다. 스크립트는 개체의 메서드를 호출할 수 있습니다. 따라서 개체에 형식 매개 변수를 포함 하는 메서드 (예: `ToString`)가 있는 경우 스크립트는 해당 메서드를 호출 하 여 스크립트의 출력 값에 대 한 형식을 지정할 수 있습니다.
+다음 예제에서는 스크립트의 값에 대 한 서식을 지정 하기 위해 `ToString` 메서드를 호출 합니다. 스크립트는 개체의 메서드를 호출할 수 있습니다. 따라서 개체에 형식 지정 매개 변수가 있는 `ToString`와 같은 메서드가 있는 경우 스크립트는 해당 메서드를 호출 하 여 스크립트의 출력 값에 대 한 형식을 지정할 수 있습니다.
 
 ```xml
 <WideItem>

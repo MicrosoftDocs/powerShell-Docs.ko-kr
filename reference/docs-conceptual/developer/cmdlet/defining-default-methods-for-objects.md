@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 53fe744a-485f-4c21-9623-1cb546372211
 caps.latest.revision: 9
 ms.openlocfilehash: 346a194c6b4c81aa61a6331cdb62ae380a17bb1e
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365692"
 ---
 # <a name="defining-default-methods-for-objects"></a>개체에 대한 기본 메서드 정의
@@ -21,7 +21,7 @@ ms.locfileid: "72365692"
 이러한 메서드를 정의 하는 데 사용 되는 XML은 다음 섹션에 설명 되어 있습니다.
 
 > [!NOTE]
-> 다음 섹션의 예는 Windows PowerShell 설치 디렉터리 (`$PSHOME`)의 `Types.ps1xml` 유형 파일에서 가져온 것입니다. 자세한 내용은 [Types.ps1xml 정보](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)를 참조 하세요.
+> 다음 섹션의 예제는 Windows PowerShell 설치 디렉터리 (`$PSHOME`)의 `Types.ps1xml` types 파일에서 가져온 것입니다. 자세한 내용은 [Types.ps1xml 정보](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)를 참조 하세요.
 
 ## <a name="code-methods"></a>코드 메서드
 

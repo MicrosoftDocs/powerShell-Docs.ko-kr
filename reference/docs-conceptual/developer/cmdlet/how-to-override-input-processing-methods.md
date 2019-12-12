@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 1a1ad921-5816-4937-acf1-ed4760fae740
 caps.latest.revision: 8
 ms.openlocfilehash: cfee55576518cf9ce38501192872ce94054f5213
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364472"
 ---
 # <a name="how-to-override-input-processing-methods"></a>입력 처리 메서드를 재정의하는 방법
@@ -29,7 +29,7 @@ ms.locfileid: "72364472"
 
 - 보호 된 재정의를 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 의 재정의 메서드로 선언 합니다.
 
-다음 클래스는 샘플 메시지를 인쇄 합니다. 이 클래스를 사용 하려면 Cmdlet 특성에서 동사 및 명사를 변경 하 고, 새 동사 및 명사를 반영 하도록 클래스의 이름을 변경한 다음, 필요한 기능을 System.object의 재정의에 추가 합니다 [.](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 방법이.
+다음 클래스는 샘플 메시지를 인쇄 합니다. 이 클래스를 사용 하려면 Cmdlet 특성에서 동사 및 명사를 변경 하 고, 새 동사 및 명사를 반영 하도록 클래스의 이름을 변경한 다음, 필요한 기능을 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 를 재정의 하는 데 필요한 기능을 추가 합니다.
 
 ```csharp
 [Cmdlet(VerbsDiagnostic.Test, "BeginProcessingClass")]

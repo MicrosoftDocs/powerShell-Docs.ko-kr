@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 0c4bff45-0960-4b3a-95e7-47f2cee03ac5
 caps.latest.revision: 12
 ms.openlocfilehash: 083f3c8df8136858e32778ed231943ef983e47aa
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361432"
 ---
 # <a name="wideentries-element-for-widecontrol-format"></a>WideControl에 대한 WideEntries 요소(형식)
@@ -56,7 +56,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="example"></a>예제
 
-다음 예에서는 단일 `WideEntry` 요소를 정의 하는 `WideEntries` 요소를 보여 줍니다. @No__t-0 요소는 뷰에 표시 되는 속성 또는 스크립트 값을 정의 하는 단일 `WideItem` 요소를 포함 합니다.
+다음 예제에서는 단일 `WideEntry` 요소를 정의 하는 `WideEntries` 요소를 보여 줍니다. `WideEntry` 요소에는 뷰에 표시 되는 속성 또는 스크립트 값을 정의 하는 단일 `WideItem` 요소가 포함 됩니다.
 
 ```xml
 <WideControl>

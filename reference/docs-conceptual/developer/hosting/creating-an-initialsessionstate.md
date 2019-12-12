@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 5ae707db-52e0-408c-87fa-b35c42eaaab1
 caps.latest.revision: 5
 ms.openlocfilehash: 9140d03e046def2fbbcc2a842b9ea1b9e1fa2985
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367622"
 ---
 # <a name="creating-an-initialsessionstate"></a>InitialSessionState 만들기
@@ -25,7 +25,7 @@ InitialSessionState는 runspace의 특성을 지정 합니다. 예를 들어 run
 ## <a name="create-a-default-initialsessionstate"></a>기본 InitialSessionState 만들기
 
 **InitialSessionState** 클래스의 [Createdefault](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault) 및 [initialsessionstate.createdefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) 메서드를 사용 하 여 **InitialSessionState** 개체를 만들 수 있습니다.
-**Createdefault** 메서드는 모든 기본 제공 명령을 로드 하 여 **InitialSessionState** 을 만들지만 **initialsessionstate.createdefault2** 메서드는 PowerShell을 호스트 하는 데 필요한 명령만 로드 합니다. Microsoft. PowerShell. 핵심 모듈).
+**Createdefault** 메서드는 모든 기본 제공 명령이 로드 된 **InitialSessionState** 을 만들지만 **initialsessionstate.createdefault2** 메서드는 powershell을 호스트 하는 데 필요한 명령 (Microsoft. PowerShell 모듈의 명령)만 로드 합니다.
 
 호스트 응용 프로그램에서 사용할 수 있는 명령을 추가로 제한 하려면 제한 된 runspace를 만들어야 합니다.
 자세한 내용은 [제한 된 Runspace 만들기](creating-a-constrained-runspace.md)를 참조 하세요.

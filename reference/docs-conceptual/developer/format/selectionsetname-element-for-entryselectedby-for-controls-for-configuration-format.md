@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 42143d1e-7cda-4c4a-b568-fa1951bb9417
 caps.latest.revision: 6
 ms.openlocfilehash: 9060ee54d6f88c7f910b16cf5c9b87f37844b736
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364792"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 EntrySelectedBy에 대한 SelectionSetName 요소(형식)
@@ -30,7 +30,7 @@ ms.locfileid: "72364792"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `SelectionSetName` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `SelectionSetName` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

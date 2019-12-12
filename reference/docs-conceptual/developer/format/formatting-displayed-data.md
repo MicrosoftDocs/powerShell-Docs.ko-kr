@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 38971643-2a3d-4f5b-a1fa-6334c162b8ed
 caps.latest.revision: 4
 ms.openlocfilehash: e915ac71feb50cb58cfa9195f0de94763affdb77
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363702"
 ---
 # <a name="formatting-displayed-data"></a>표시되는 데이터 형식 지정
 
-목록, 테이블 또는 넓은 보기에서 개별 데이터 요소를 표시 하는 방법을 지정할 수 있습니다. 뷰의 항목을 정의할 때 `FormatString` 요소를 사용 하거나 `ScriptBlock` 요소를 사용 하 여 데이터에 대 한 `FormatString` 메서드를 호출할 수 있습니다.
+목록, 테이블 또는 넓은 보기에서 개별 데이터 요소를 표시 하는 방법을 지정할 수 있습니다. 뷰의 항목을 정의할 때 `FormatString` 요소를 사용 하거나 `ScriptBlock` 요소를 사용 하 여 데이터에 대해 `FormatString` 메서드를 호출할 수 있습니다.
 
 ## <a name="using-the-formatstring-element"></a>FormatString 요소 사용
 

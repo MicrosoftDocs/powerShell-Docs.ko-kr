@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d2668aea-37e9-4753-a4e9-7980ae5ec2eb
 caps.latest.revision: 10
 ms.openlocfilehash: 6bc0ccbcc5bd62429f63ed220da66dc66f44f7ca
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365192"
 ---
 # <a name="itemselectioncondition-element-for-listitem-for-listcontrol-format"></a>ListControl의 ListItem에 대한 ItemSelectionCondition 요소(형식)
@@ -32,7 +32,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `ItemSelectionCondition` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `ItemSelectionCondition` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

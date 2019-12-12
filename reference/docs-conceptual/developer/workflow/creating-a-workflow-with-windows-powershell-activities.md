@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: fb55971a-4ea4-4c51-aeff-4e0bb05a51b2
 caps.latest.revision: 6
 ms.openlocfilehash: 98cac43698b3f537ee318cd2570b2174631665a7
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359632"
 ---
 # <a name="creating-a-workflow-with-windows-powershell-activities"></a>Windows PowerShell 활동을 사용하여 워크플로 만들기
@@ -45,7 +45,7 @@ Visual Studio 도구 상자에서 작업을 선택 하 고 워크플로 디자�
 
 8. 다음과 같이 **GetWmiObject** 활동의 속성을 편집 합니다.
 
-   |속성|값|
+   |속성|Value|
    |--------------|-----------|
    |**클래스**|"Win32_ComputerSystem"|
    |**PSComputerName**|생략|
@@ -55,20 +55,20 @@ Visual Studio 도구 상자에서 작업을 선택 하 고 워크플로 디자�
 
 10. 다음과 같이 **Addcomputer** 활동의 속성을 편집 합니다.
 
-    |속성|값|
+    |속성|Value|
     |--------------|-----------|
-    |**컴퓨터**|생략|
+    |**컴퓨터 이름**|생략|
     |**DomainCredential**|DomainCred|
 
 11. **Addcomputer** 활동 이후 **JoinDomain** 시퀀스에 **RestartComputer** 활동을 추가 합니다.
 
 12. 다음과 같이 **RestartComputer** 활동의 속성을 편집 합니다.
 
-    |속성|값|
+    |속성|Value|
     |--------------|-----------|
-    |**컴퓨터**|생략|
-    |**증명서**|MachineCred|
-    |**에 대 한**|Microsoft. PowerShell. WaitForServiceTypes. PowerShell|
+    |**컴퓨터 이름**|생략|
+    |**자격 증명**|MachineCred|
+    |**형식**|Microsoft. PowerShell. WaitForServiceTypes. PowerShell|
     |**설정**|True|
     |연결 시도 간격|True|
     |PSComputerName|{""}|
@@ -77,5 +77,5 @@ Visual Studio 도구 상자에서 작업을 선택 하 고 워크플로 디자�
 
     절차를 완료 하면 워크플로 디자인 창이 다음과 같이 표시 됩니다.
 
-    workflow designer의 ![JoinDomain XAML](../media/joindomainworkflow.png)
-    ![workflow designer의 JOINDOMAIN xaml](../media/joindomainworkflow.png "JoinDomainWorkflow")
+    workflow designer의 JoinDomain XAML ![workflow designer ![의 JOINDOMAIN xaml](../media/joindomainworkflow.png "JoinDomainWorkflow")](../media/joindomainworkflow.png)
+    

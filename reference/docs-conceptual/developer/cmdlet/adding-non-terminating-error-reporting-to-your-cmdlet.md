@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: f2a1531a-a92a-4606-9d54-c5df80d34f33
 caps.latest.revision: 8
 ms.openlocfilehash: a4426abec96cd922360aeef8c157b4e9f41a15b9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364612"
 ---
 # <a name="adding-non-terminating-error-reporting-to-your-cmdlet"></a>Cmdlet에 종료되지 않는 오류 보고 추가
@@ -185,10 +185,10 @@ protected override void ProcessRecord()
 종료 되지 않는 오류의 경우 cmdlet은 각 특정 입력 개체에 대해 특정 오류 식별자를 생성 해야 합니다.
 
 Cmdlet은 종료 되지 않는 오류에 의해 생성 된 PowerShell 작업을 수정 해야 하는 경우가 많습니다.
-@No__t_0 및 `ErrorVariable` 매개 변수를 정의 하 여이 작업을 수행할 수 있습니다.
-@No__t_0 매개 변수를 정의 하는 경우 cmdlet은 [System.object 기본 설정][], `$ErrorActionPreference` 변수를 설정 하 여 작업에 직접 영향을 줄 수 있습니다.
+`ErrorAction` 및 `ErrorVariable` 매개 변수를 정의 하 여이 작업을 수행할 수 있습니다.
+`ErrorAction` 매개 변수를 정의 하는 경우 cmdlet은 [System.object 기본 설정][], `$ErrorActionPreference` 변수를 설정 하 여 작업에 직접 영향을 줄 수 있습니다.
 
-Cmdlet은 `ErrorAction` 설정의 영향을 받지 않는 `ErrorVariable` 매개 변수를 사용 하 여 종료 되지 않는 오류를 변수에 저장할 수 있습니다.
+Cmdlet은 `ErrorAction`설정의 영향을 받지 않는 `ErrorVariable` 매개 변수를 사용 하 여 종료 되지 않는 오류를 변수에 저장할 수 있습니다.
 변수 이름 앞에 더하기 기호 (+)를 추가 하 여 기존 오류 변수에 오류를 추가할 수 있습니다.
 
 ## <a name="code-sample"></a>코드 예제
@@ -217,7 +217,7 @@ PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 
     PS> get-proc -name test
     ```
 
-다음 출력이 표시 됩니다.
+다음 출력이 표시됩니다.
 
     ```
     get-proc : Operation is not valid due to the current state of the object.
@@ -225,7 +225,7 @@ PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 
     + get-proc  <<<< -name test
     ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [파이프라인 입력을 처리 하는 매개 변수 추가](./adding-parameters-that-process-pipeline-input.md)
 

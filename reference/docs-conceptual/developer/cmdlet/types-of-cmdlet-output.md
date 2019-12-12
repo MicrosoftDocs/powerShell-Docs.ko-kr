@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: 547e6695-e936-4cac-a90b-417d0dab393d
 caps.latest.revision: 12
 ms.openlocfilehash: 3efa98c7aa22fdaee8042bae99282aea0618ef5f
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369292"
 ---
 # <a name="types-of-cmdlet-output"></a>Cmdlet 출력의 유형
@@ -30,7 +30,7 @@ Cmdlet은 파이프라인의 다음 명령으로 처리할 수 있는 개체를 
 일반적으로 개체를 반환 하지 않는 cmdlet에 대 한 **PassThru** 스위치 매개 변수를 제공할 수 있습니다.
 명령줄에서 **PassThru** 스위치 매개 변수를 지정 하면 cmdlet에서 개체를 반환 하 라는 메시지가 표시 됩니다. **PassThru** 매개 변수를 포함 하는 cmdlet의 예는 [추가-기록](/powershell/module/Microsoft.PowerShell.Core/Add-History)을 참조 하세요.
 
-### <a name="error-output"></a>오류 출력
+### <a name="error-output"></a>오류 출력.
 
 Cmdlet은 오류를 보고할 수 있습니다. 종료 오류가 발생 하면 cmdlet이 예외를 throw 합니다. 종료 되지 않는 오류가 발생 하는 경우 cmdlet은 [WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) 메서드를 호출 하 여 오류 레코드를 오류 데이터 스트림으로 보냅니다. 오류 보고에 대 한 자세한 내용은 [오류 보고 개념](./error-reporting-concepts.md)을 참조 하십시오.
 
@@ -54,7 +54,7 @@ Cmdlet은 cmdlet 코드 문제를 해결할 때 유용한 디버그 메시지를
 
 Cmdlet은 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) 를 호출 하 여 경고 메시지를 표시할 수 있습니다.
 
-기본적으로 경고 메시지가 표시 됩니다. 그러나 `$WarningPreference` 변수를 사용 하거나 cmdlet을 호출할 때 **Verbose** 및 **디버그** 매개 변수를 사용 하 여 경고 메시지를 구성할 수 있습니다.
+기본적으로 경고 메시지가 표시 됩니다. 그러나 cmdlet을 호출할 때 `$WarningPreference` 변수를 사용 하거나 **Verbose** 및 **Debug** 매개 변수를 사용 하 여 경고 메시지를 구성할 수 있습니다.
 
 ## <a name="displaying-output"></a>출력 표시
 
@@ -62,7 +62,7 @@ Cmdlet은 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteW
 
 ## <a name="accessing-the-output-functionality-of-a-host-application"></a>호스트 응용 프로그램의 출력 기능에 액세스
 
-PowerShell 런타임을 통해 호스트 응용 프로그램의 출력 기능에 직접 액세스 하는 cmdlet을 디자인할 수도 있습니다. [Console](/dotnet/api/System.Console) 또는 [system.web](/dotnet/api/System.Windows.Forms) 대신 PowerShell에서 제공 하는 호스트 api를 사용 하면 cmdlet이 다양 한 호스트에서 작동 합니다. 예를 들면 **powershell .exe** 콘솔 호스트, **powershell_ise** 그래픽 호스트, powershell 원격 호스트 및 타사 호스트가 있습니다.
+PowerShell 런타임을 통해 호스트 응용 프로그램의 출력 기능에 직접 액세스 하는 cmdlet을 디자인할 수도 있습니다. [Console](/dotnet/api/System.Console) 또는 [system.web](/dotnet/api/System.Windows.Forms) 대신 PowerShell에서 제공 하는 호스트 api를 사용 하면 cmdlet이 다양 한 호스트에서 작동 합니다. 예를 들어, **powershell .exe** 콘솔 호스트, **powershell_ise** 그래픽 호스트, powershell 원격 호스트 및 타사 호스트가 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: f2b58fa5-01bc-426c-a043-5c700d6578e9
 caps.latest.revision: 16
 ms.openlocfilehash: 443bf5f693d2ab161668de25a1097347826cb5c2
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360562"
 ---
 # <a name="writing-help-for-windows-powershell-modules"></a>Windows PowerShell 모듈에 대한 도움말 작성
@@ -109,7 +109,7 @@ Windows PowerShell 3.0부터 사용자는 cmdlet 클래스에서 HelpUri 특성�
 
 자세한 내용은 [온라인 도움말 지원](./supporting-online-help.md)을 참조 하세요.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell 모듈 작성](./writing-a-windows-powershell-module.md)
 

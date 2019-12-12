@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: 4e6b6ac4-1003-4e7e-9d4a-9f1cf74fc4af
 caps.latest.revision: 8
 ms.openlocfilehash: b6ddb8185f21a65b2e3142ebb640962047e11763
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365532"
 ---
 # <a name="how-to-validate-an-argument-count"></a>인수 개수를 확인하는 방법

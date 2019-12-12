@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ef8395aa-4b31-48c0-a0b8-b481fd0b3738
 caps.latest.revision: 15
 ms.openlocfilehash: 9e6cffc7476ef01124d95ecbf287d9788b0324c9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368232"
 ---
 # <a name="tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format"></a>TableControl의 TableColumnItems에 대한 TableColumnItem 요소(형식)

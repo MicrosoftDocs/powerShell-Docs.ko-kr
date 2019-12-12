@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 8ad39c7d-2f64-49d1-9be0-d2295e4302b3
 caps.latest.revision: 5
 ms.openlocfilehash: bd6d26cb830bcd6706c88548956e5358b2fddf41
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416144"
 ---
 # <a name="getproc03-code-samples"></a>GetProc03 코드 샘플
@@ -26,12 +26,12 @@ GetProc03 sample cmdlet에 대 한 코드 샘플은 다음과 같습니다. [파
 
 전체 샘플 코드는 다음 항목을 참조 하세요.
 
-|언어|항목|
+|Language|항목|
 |--------------|-----------|
 |C#|[GetProc03 (C#) 샘플 코드](./getproc03-csharp-sample-code.md)|
 |VB.NET|[GetProc03 (VB.NET) 샘플 코드](./getproc03-vb-net-sample-code.md)|
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell 프로그래머 가이드](./windows-powershell-programmer-s-guide.md)
 

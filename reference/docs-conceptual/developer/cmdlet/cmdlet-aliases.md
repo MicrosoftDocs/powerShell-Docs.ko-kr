@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d0d70864-33fb-49ce-8054-c41ba19fd554
 caps.latest.revision: 11
 ms.openlocfilehash: 32f45702cc0d28e6652ef61ebdbe085291013408
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369982"
 ---
 # <a name="cmdlet-aliases"></a>Cmdlet 별칭

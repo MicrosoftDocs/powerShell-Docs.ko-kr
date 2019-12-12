@@ -3,10 +3,10 @@ title: Windows PowerShell SDK 설치
 ms.date: 09/13/2016
 ms.topic: article
 ms.openlocfilehash: e7ca38377b3e6533eec1a70027f6de1a9fb3091b
-ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73444511"
 ---
 # <a name="installing-the-windows-powershell-sdk"></a>Windows PowerShell SDK 설치
@@ -100,12 +100,12 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\` 다음 섹션에서는 각
 
 - AccessDBProviderSample01-CmdletProvider 클래스에서 직접 파생 되는 공급자 클래스를 선언 하는 방법을 보여 줍니다. 여기서는 참조용으로만 설명합니다.
 
-- AccessDBProviderSample02-NewDrive 및 RemoveDrive 메서드를 덮어써서 `New-PSDrive` 및 `Remove-PSDrive` cmdlet에 대 한 호출을 지 원하는 방법을 보여 줍니다. 이 샘플의 공급자 클래스는 드라이브 클래스에서 파생 됩니다.
+- AccessDBProviderSample02-`New-PSDrive` 및 `Remove-PSDrive` cmdlet에 대 한 호출을 지원 하도록 NewDrive 및 RemoveDrive 메서드를 덮어쓰는 방법을 보여 줍니다. 이 샘플의 공급자 클래스는 드라이브 클래스에서 파생 됩니다.
 
-- AccessDBProviderSample03-GetItem 및 SetItem 메서드를 덮어써서 `Get-Item` 및 `Set-Item` cmdlet에 대 한 호출을 지 원하는 방법을 보여 줍니다. 이 샘플의 공급자 클래스는 ItemCmdletProvider 클래스에서 파생 됩니다.
+- AccessDBProviderSample03-`Get-Item` 및 `Set-Item` cmdlet에 대 한 호출을 지원 하도록 GetItem 및 SetItem 메서드를 덮어쓰는 방법을 보여 줍니다. 이 샘플의 공급자 클래스는 ItemCmdletProvider 클래스에서 파생 됩니다.
 
-- AccessDBProviderSample04-`Copy-Item`, `Get-ChildItem`, `New-Item` 및 `Remove-Item` cmdlet에 대 한 호출을 지원 하도록 컨테이너 메서드를 덮어쓰는 방법을 보여 줍니다. 이러한 메서드는 데이터 저장소에 컨테이너 항목이 포함될 때 구현해야 합니다. 컨테이너는 공통 부모 항목 아래에 있는 자식 항목 그룹입니다. 이 샘플의 공급자 클래스는 ItemCmdletProvider 클래스에서 파생 됩니다.
+- AccessDBProviderSample04-`Copy-Item`, `Get-ChildItem`, `New-Item`및 `Remove-Item` cmdlet에 대 한 호출을 지원 하도록 컨테이너 메서드를 덮어쓰는 방법을 보여 줍니다. 이러한 메서드는 데이터 저장소에 컨테이너 항목이 포함될 때 구현해야 합니다. 컨테이너는 공통 부모 항목 아래에 있는 자식 항목 그룹입니다. 이 샘플의 공급자 클래스는 ItemCmdletProvider 클래스에서 파생 됩니다.
 
 - AccessDBProviderSample05-`Move-Item` 및 `Join-Path` cmdlet에 대 한 호출을 지원 하도록 컨테이너 메서드를 덮어쓰는 방법을 보여 줍니다. 이러한 메서드는 사용자가 컨테이너 내의 항목을 이동해야 하고 데이터 저장소에 중첩된 컨테이너가 포함되는 경우에 구현해야 합니다. 이 샘플의 공급자 클래스는 NavigationCmdletProvider 클래스에서 파생 됩니다.
 
-- AccessDBProviderSample06-`Clear-Content`, `Get-Content`, `Set-Content` cmdlet에 대 한 호출을 지원 하도록 콘텐츠 메서드를 덮어쓰는 방법을 보여 줍니다. 이러한 메서드는 사용자가 데이터 저장소에 있는 항목의 콘텐츠를 관리해야 하는 경우에 구현해야 합니다. 이 샘플의 공급자 클래스는 NavigationCmdletProvider 클래스에서 파생 되며 IContentCmdletProvider 인터페이스를 구현 합니다.
+- AccessDBProviderSample06-`Clear-Content`, `Get-Content`및 `Set-Content` cmdlet에 대 한 호출을 지원 하도록 콘텐츠 메서드를 덮어쓰는 방법을 보여 줍니다. 이러한 메서드는 사용자가 데이터 저장소에 있는 항목의 콘텐츠를 관리해야 하는 경우에 구현해야 합니다. 이 샘플의 공급자 클래스는 NavigationCmdletProvider 클래스에서 파생 되며 IContentCmdletProvider 인터페이스를 구현 합니다.

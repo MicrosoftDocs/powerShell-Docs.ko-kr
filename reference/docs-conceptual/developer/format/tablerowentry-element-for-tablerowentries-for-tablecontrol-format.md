@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 18d86af7-7ff9-4968-81be-2caa61937d49
 caps.latest.revision: 10
 ms.openlocfilehash: 946ffb3fe857503c02b9000238a86775969abbd6
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361802"
 ---
 # <a name="tablerowentry-element-for-tablerowentries-for-tablecontrol-format"></a>TableControl의 TableRowEntries에 대한 TableRowEntry 요소(형식)
@@ -43,8 +43,8 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 |요소|설명|
 |-------------|-----------------|
-|[TableControl (형식)의 TableRowEntry에 대 한 EntrySelectedBy 요소](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|필수 요소입니다.<br /><br /> 해당 속성 값이 행에 표시 되는 개체를 정의 합니다.|
-|[TableControl의 TableRowEntry 요소에 대 한 TableColumnItems 요소 (형식)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)|필수 요소입니다.<br /><br /> 값이 표시 되는 속성 또는 스크립트를 정의 합니다.|
+|[TableControl (형식)의 TableRowEntry에 대 한 EntrySelectedBy 요소](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|필수적 요소입니다.<br /><br /> 해당 속성 값이 행에 표시 되는 개체를 정의 합니다.|
+|[TableControl의 TableRowEntry 요소에 대 한 TableColumnItems 요소 (형식)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)|필수적 요소입니다.<br /><br /> 값이 표시 되는 속성 또는 스크립트를 정의 합니다.|
 |[TableControl의 TableRowEntry 요소에 대 한 Wrap 요소 (형식)](./wrap-element-for-tablerowentry-for-tablecontrol-format.md)|선택적 요소입니다.<br /><br /> 열 너비를 초과 하는 텍스트를 다음 줄에 표시 하도록 지정 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
@@ -79,7 +79,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 </TableRowEntry>
 ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [테이블 뷰 만들기](./creating-a-table-view.md)
 

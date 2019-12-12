@@ -7,10 +7,10 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.openlocfilehash: 19644c5bc186a5554d6b134a67fc7c4d7aa7b64c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365312"
 ---
 # <a name="supporting-wildcard-characters-in-cmdlet-parameters"></a>Cmdlet 매개 변수에서 와일드카드 문자 지원
@@ -30,7 +30,7 @@ ms.locfileid: "72365312"
 
 Windows PowerShell은 다음 와일드 카드 문자를 지원 합니다.
 
-| 카드인 |                             설명                             |  예제   |     요청 내용      | 일치 하지 않음 |
+| 와일드카드 |                             설명                             |  예제   |     일치 항목      | 일치하지 않음 |
 | -------- | ------------------------------------------------------------------- | ---------- | ---------------- | -------------- |
 | *        | 지정 된 위치에서 시작 하 여 0 개 이상의 문자를 찾습니다. | `a*`       | A, ag, Apple     |                |
 | ?        | 지정 된 위치의 모든 문자를 찾습니다.                     | `?n`       | , In, on       | 되었음            |
@@ -61,7 +61,7 @@ PowerShell 명령 프롬프트에서 사용 되는 경우:
 
 - "John Smith \`\`[*\`']"
 
-이 패턴은 "John Smith [Marketing]" 또는 "John Smith [Development]"와 일치 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+이 패턴은 "John Smith [Marketing]" 또는 "John Smith [Development]"와 일치 합니다. 예:
 
 ```
 PS> "John Smith [Marketing]" -like "John Smith ``[*``]"
@@ -76,7 +76,7 @@ True
 Cmdlet 매개 변수가 와일드 카드 문자를 지 원하는 경우이 작업은 일반적으로 배열 출력을 생성 합니다.
 사용자가 단일 항목만 사용할 수 있기 때문에 경우에 따라 배열 출력을 지 원하는 것은 바람직하지 않습니다. 예를 들어 사용자가 단일 위치만 설정 하므로 `Set-Location` cmdlet은 배열 출력을 지원 하지 않습니다. 이 인스턴스에서 cmdlet은 여전히 와일드 카드 문자를 지원 하지만 단일 위치에 대해 해상도를 강제 적용 합니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
 

@@ -14,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: bdd66fea-eb63-4bb6-9cbe-9a799e5e0db5
 caps.latest.revision: 9
 ms.openlocfilehash: 5412d88b690a1f5f1ef387416e3bf9da3a32c95d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369112"
 ---
 # <a name="windows-powershell-error-records"></a>Windows PowerShell 오류 레코드
@@ -38,7 +38,7 @@ Cmdlet이 예외를 catch 하지 않으면 새 예외를 만들고 오류 조건
 
 - 오류를 throw 한 cmdlet에 대 한 선택적 호출 정보입니다. 이 정보는 Windows PowerShell에서 지정 됩니다 (호출 메시지 참조).
 
-- 오류가 발생 했을 때 처리 중 이었던 대상 개체입니다. 이는 입력 개체 일 수도 있고 cmdlet이 처리 하는 다른 개체 일 수도 있습니다. 예를 들어 `remove-item -recurse c:\somedirectory` 명령에 대 한 오류는 "c:\somedirectory\lockedfile"에 대 한 FileInfo 개체의 인스턴스일 수 있습니다. 대상 개체 정보는 선택 사항입니다.
+- 오류가 발생 했을 때 처리 중 이었던 대상 개체입니다. 이는 입력 개체 일 수도 있고 cmdlet이 처리 하는 다른 개체 일 수도 있습니다. 예를 들어 명령 `remove-item -recurse c:\somedirectory`의 경우 오류는 "c:\somedirectory\lockedfile"에 대 한 FileInfo 개체의 인스턴스일 수 있습니다. 대상 개체 정보는 선택 사항입니다.
 
 ## <a name="error-identifier"></a>오류 식별자
 
@@ -60,7 +60,7 @@ Cmdlet이 예외를 catch 하지 않으면 새 예외를 만들고 오류 조건
 
 ## <a name="error-category"></a>오류 범주
 
-오류 레코드를 만들 때 [ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) 열거형에 정의 된 상수 중 하나를 사용 하 여 오류 범주를 지정 합니다. Windows PowerShell은 사용자가 `$ErrorView` 변수를 `"CategoryView"`로 설정 하는 경우 오류 범주를 사용 하 여 오류 정보를 표시 합니다.
+오류 레코드를 만들 때 [ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) 열거형에 정의 된 상수 중 하나를 사용 하 여 오류 범주를 지정 합니다. Windows PowerShell은 사용자가 `$ErrorView` 변수를 `"CategoryView"`로 설정 하면 오류 범주를 사용 하 여 오류 정보를 표시 합니다.
 
 [ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) **NotSpecified** 상수를 사용 하지 마십시오. 오류 또는 오류를 발생 시킨 작업에 대 한 정보가 있는 경우 해당 범주가 완벽 하 게 일치 하지 않는 경우에도 오류 또는 작업을 가장 잘 설명 하는 범주를 선택 합니다.
 
@@ -88,7 +88,7 @@ Cmdlet에 대 한 오류 레코드를 개발 하는 경우 오류에 대 한 기
 
 대체 메시지는 [system.web. ErrorDetails](/dotnet/api/System.Management.Automation.ErrorDetails) 개체에서 제공 됩니다. 이 개체의 다음 생성자 중 하나를 사용 하 여 Windows PowerShell에서 사용할 수 있는 추가 지역화 정보를 제공 합니다.
 
-- [Errordetails (cmdlet, string, string, Object [])](/dotnet/api/system.management.automation.errordetails.-ctor?view=pscore-6.2.0#System_Management_Automation_ErrorDetails__ctor_System_Management_Automation_Cmdlet_System_String_System_String_System_Object___): 템플릿 문자열이 Cmdlet을 구현 하는 어셈블리와 동일한 어셈블리에 있는 리소스 문자열 이거나의 재정의를 통해 템플릿 문자열을 로드 하려는 경우이 생성자를 사용 합니다 [. System.object. Cmdlet. GetResourceString](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString) 메서드.
+- [Errordetails (cmdlet, string, string, Object [])](/dotnet/api/system.management.automation.errordetails.-ctor?view=pscore-6.2.0#System_Management_Automation_ErrorDetails__ctor_System_Management_Automation_Cmdlet_System_String_System_String_System_Object___): 템플릿 문자열이 Cmdlet이 구현 된 어셈블리와 동일한 어셈블리에 있는 리소스 문자열이 면이 생성자를 사용 하 고, 또는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString) 의 재정의를 통해 템플릿 문자열을 로드 하려는 경우이 생성자를 사용 합니다.
 
 - [Errordetails (Assembly, string, string, Object [])](/dotnet/api/system.management.automation.errordetails.-ctor?view=pscore-6.2.0#System_Management_Automation_ErrorDetails__ctor_System_Reflection_Assembly_System_String_System_String_System_Object___): 템플릿 문자열이 다른 어셈블리에 있고 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString)의 재정의를 통해 로드 하지 않는 경우이 생성자를 사용 합니다.
 
@@ -102,7 +102,7 @@ Cmdlet에 대 한 오류 레코드를 개발 하는 경우 오류에 대 한 기
 
 ## <a name="invocation-information"></a>호출 정보
 
-Cmdlet이 [WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 또는 [Throwterminatingerror *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 를 사용 하 여 오류 레코드를 보고 하는 경우 Windows PowerShell은 다음을 설명 하는 정보를 자동으로 추가 합니다. 오류가 발생 했을 때 호출 된 명령입니다. 이 정보는 명령에 의해 호출 된 cmdlet의 이름, 명령 자체 및 파이프라인이 나 스크립트에 대 한 정보를 포함 하는 [Invocationinfo](/dotnet/api/System.Management.Automation.InvocationInfo) 개체에 의해 제공 됩니다. 이 속성은 읽기 전용입니다.
+Cmdlet에서 [WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 또는 [Throwterminatingerror *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 를 사용 하 여 오류 레코드를 보고 하면 Windows PowerShell에서 오류가 발생 했을 때 호출 된 명령을 설명 하는 정보를 자동으로 추가 합니다. 이 정보는 명령에 의해 호출 된 cmdlet의 이름, 명령 자체 및 파이프라인이 나 스크립트에 대 한 정보를 포함 하는 [Invocationinfo](/dotnet/api/System.Management.Automation.InvocationInfo) 개체에 의해 제공 됩니다. 이 속성은 읽기 전용입니다.
 
 ## <a name="see-also"></a>참고 항목
 

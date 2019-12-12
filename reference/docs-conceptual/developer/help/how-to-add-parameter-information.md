@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: cf6c1442-60aa-477a-8f30-ab02b1b11039
 caps.latest.revision: 7
 ms.openlocfilehash: d4a5fc934a41b00f89862674e44e4540680674f7
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361232"
 ---
 # <a name="how-to-add-parameter-information"></a>매개 변수 정보를 추가하는 방법
@@ -175,7 +175,7 @@ ms.locfileid: "72361232"
 
 매개 변수의 기본값은 cmdlet 도움말 항목의 모든 뷰에 표시 되지 않습니다. 그러나이 속성은 사용자가 토픽의 전체 (Get-help \<cmdletname >) 또는 매개 변수 (Get-help \<cmdletname > 매개 변수) 보기를 요청 하는 경우 매개 변수 설명에 따라 매개 변수 특성을 사용 하 여 테이블에 표시 됩니다.
 
-다음 XML에서는 `<command:parameter>` 노드에 추가 된 `<dev:defaultValue>` 태그 쌍을 보여 줍니다. 기본값은 닫는 `</command:parameterValue>` 태그 (매개 변수 값이 지정 된 경우) 또는 매개 변수 설명의 닫는 `</maml:description>` 태그 바로 다음에 옵니다. 이름의.
+다음 XML에서는 `<command:parameter>` 노드에 추가 된 `<dev:defaultValue>` 태그 쌍을 보여 줍니다. 기본값은 닫는 `</command:parameterValue>` 태그 (매개 변수 값이 지정 된 경우) 또는 매개 변수 설명의 닫는 `</maml:description>` 태그 바로 다음에 옵니다. name.
 
 ```xml
 <command:parameters>

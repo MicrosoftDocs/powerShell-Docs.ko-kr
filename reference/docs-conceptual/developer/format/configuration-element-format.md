@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d46df0cb-50b7-4b81-82ba-37186a7b7a7f
 caps.latest.revision: 28
 ms.openlocfilehash: 296c63d0c774a0bf56e90dbaa32f2c221d4c3dbd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363502"
 ---
 # <a name="configuration-element-format"></a>Configuration 요소(형식)
@@ -35,7 +35,7 @@ ms.locfileid: "72363502"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `Configuration` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 이 요소는 각 서식 파일에 대 한 루트 요소 여야 하 고이 요소에는 자식 요소가 하나 이상 포함 되어야 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `Configuration` 요소의 부모 요소에 대해 설명 합니다. 이 요소는 각 서식 파일에 대 한 루트 요소 여야 하 고이 요소에는 자식 요소가 하나 이상 포함 되어야 합니다.
 
 ### <a name="attributes"></a>특성
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 4663905f-560a-4e39-9b03-6db2c315c322
 caps.latest.revision: 6
 ms.openlocfilehash: bbd07a0d0abd30742b7e02482adedae3af43aca4
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364442"
 ---
 # <a name="getproc-tutorial"></a>GetProc 자습서

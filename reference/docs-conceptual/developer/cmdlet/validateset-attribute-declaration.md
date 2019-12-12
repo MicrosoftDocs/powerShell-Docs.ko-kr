@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 4a6f97ab-45b2-4f3d-84d4-30acf8e074d0
 caps.latest.revision: 12
 ms.openlocfilehash: b036f39cd01ffe4b4ce7db9627cb6da0d5327190
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364282"
 ---
 # <a name="validateset-attribute-declaration"></a>ValidateSet 특성 선언
@@ -41,7 +41,7 @@ ValidateSetAttribute 특성은 cmdlet 매개 변수 인수에 사용할 수 있�
 [ValidateSetAttribute("Steve","Mary")]
 ```
 
-`IgnoreCase` ([system.string) 선택적](/dotnet/api/System.Boolean)명명 된 매개 변수입니다. 기본값 `true`은 대/소문자가 무시 됨을 나타냅니다. @No__t 값이 0 이면 cmdlet에서 대/소문자를 구분 합니다.
+`IgnoreCase` ([system.string](/dotnet/api/System.Boolean)) 선택적 명명 된 매개 변수입니다. `true` 기본값은 대/소문자가 무시 됨을 나타냅니다. `false` 값을 사용 하면 cmdlet에서 대/소문자를 구분 합니다.
 
 ## <a name="remarks"></a>설명
 

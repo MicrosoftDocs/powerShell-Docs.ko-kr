@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 3485958a-ba87-4932-907c-a8f140c4abdb
 caps.latest.revision: 8
 ms.openlocfilehash: 4856aee930285781a101868bd6cb67824585bce1
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368812"
 ---
 # <a name="customentries-element-for-customcontrol-for-controls-for-view-format"></a>View에 대한 Controls의 CustomControl에 대한 CustomEntries 요소(형식)
@@ -41,7 +41,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (Format) View 요소 (forma
 
 |요소|설명|
 |-------------|-----------------|
-|[뷰의 컨트롤에 대 한 CustomEntry 요소 (형식)](./customentry-element-for-customentries-for-controls-for-view-format.md)|필수 요소입니다.<br /><br /> 컨트롤의 정의를 제공 합니다.|
+|[뷰의 컨트롤에 대 한 CustomEntry 요소 (형식)](./customentry-element-for-customentries-for-controls-for-view-format.md)|필수적 요소입니다.<br /><br /> 컨트롤의 정의를 제공 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 

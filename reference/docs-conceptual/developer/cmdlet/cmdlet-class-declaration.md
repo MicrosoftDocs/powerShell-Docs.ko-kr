@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 1fcc4c5e-0c75-496c-a712-5f844e310576
 caps.latest.revision: 14
 ms.openlocfilehash: 979025ad5c34ab73dcc23d0e38ffb9acc431f15a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363522"
 ---
 # <a name="cmdlet-class-declaration"></a>Cmdlet 클래스 선언
@@ -25,7 +25,7 @@ Microsoft .NET Framework 클래스는 cmdlet 특성을 클래스의 메타 데�
 > [!NOTE]
 > **Cmdlet** 특성은 [system.object](/dotnet/api/System.Management.Automation.CmdletAttribute) 특성 클래스에 의해 정의 됩니다. 이 클래스의 속성은 특성을 선언할 때 사용 되는 선언 매개 변수에 해당 합니다.
 
-## <a name="nouns"></a>쓸
+## <a name="nouns"></a>명사
 
 Cmdlet의 명사는 cmdlet이 작동 하는 리소스를 지정 합니다. 명사는 다른 cmdlet에서 cmdlet을 구별 합니다.
 
@@ -45,7 +45,7 @@ Cmdlet 이름에 사용할 수 없는 특수 문자 목록은 [필수 개발 지
 
 **Cmdlet** 특성을 지정 하는 데 사용 되는 선언 구문에 대 한 자세한 내용은 [cmdlet 특성 선언](./cmdlet-attribute-declaration.md)을 참조 하세요.
 
-## <a name="cmdlet-class-definition"></a>Cmdlet 클래스 정의
+## <a name="cmdlet-class-definition"></a>cmdlet 클래스 정의
 
 다음 코드는 GetProc cmdlet 클래스에 대 한 정의입니다. 파스칼식 대/소문자가 사용 되 고 클래스 이름에 cmdlet의 동사와 명사가 포함 되어 있는지 확인 합니다.
 
@@ -55,7 +55,7 @@ Cmdlet 이름에 사용할 수 없는 특수 문자 목록은 [필수 개발 지
 
 Cmdlet의 이름을 사용할 때는 파스칼식 대/소문자를 사용 합니다. 예를 들어 `Get-Item` 및 `Get-ItemProperty` cmdlet은 cmdlet의 이름을 지정할 때 대/소문자를 사용 하는 올바른 방법을 보여 줍니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [System.object. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute)
 

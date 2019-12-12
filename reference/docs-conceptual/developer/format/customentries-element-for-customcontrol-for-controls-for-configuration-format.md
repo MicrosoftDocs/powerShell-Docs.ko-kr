@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 80fc4de2-208f-4506-9a6a-c2675bb83be4
 caps.latest.revision: 11
 ms.openlocfilehash: abef6c91500f665c2366f221496d4cfd6444f5c9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368822"
 ---
 # <a name="customentries-element-for-customcontrol-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 CustomControl에 대한 CustomEntries 요소(형식)
@@ -32,7 +32,7 @@ ms.locfileid: "72368822"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `CustomEntries` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 하나 이상의 자식 요소를 지정 해야 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `CustomEntries` 요소의 부모 요소에 대해 설명 합니다. 하나 이상의 자식 요소를 지정 해야 합니다.
 
 ### <a name="attributes"></a>특성
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 931ccace-c565-4a98-8dcc-df00f86394b1
 caps.latest.revision: 8
 ms.openlocfilehash: d210a852a90d94df2ab360dd86f0b83a396330e3
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74415649"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>Cmdlet 매개 변수에 별칭, 와일드카드 확장 및 도움말 추가
@@ -150,7 +150,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     PS> stop-proc -ProcessName notepad
     ```
 
-다음 출력이 표시 됩니다.
+다음 출력이 표시됩니다.
 
     ```
     Confirm
@@ -165,7 +165,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     PS> stop-proc
     ```
 
-다음 출력이 표시 됩니다.
+다음 출력이 표시됩니다.
 
     ```
     Cmdlet stop-proc at command pipeline position 1
@@ -182,7 +182,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     PS> stop-proc -Name *note*
     ```
 
-다음 출력이 표시 됩니다.
+다음 출력이 표시됩니다.
 
     ```
     Confirm
@@ -191,7 +191,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
     ```
 
-다음 출력이 표시 됩니다.
+다음 출력이 표시됩니다.
 
     ```
     Confirm
@@ -200,7 +200,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
     ```
 
-다음 출력이 표시 됩니다.
+다음 출력이 표시됩니다.
 
     ```
     Confirm
@@ -209,7 +209,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
     ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [시스템을 수정 하는 Cmdlet을 만듭니다.](./creating-a-cmdlet-that-modifies-the-system.md)
 

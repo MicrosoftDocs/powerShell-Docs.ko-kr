@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: f7c517aa-24f5-41ae-b82d-cb0fac81a245
 caps.latest.revision: 7
 ms.openlocfilehash: 2d821f5e3bc8d0f81ef8a8a040c6f9bcb1658bee
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363882"
 ---
 # <a name="customitem-element-for-customentry-for-groupby-format"></a>GroupBy의 CustomEntry에 대한 CustomItem 요소(형식)
@@ -34,7 +34,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (Format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `CustomItem` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `CustomItem` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: e620bf6d-76be-47b0-a7a8-f43418f30c60
 caps.latest.revision: 6
 ms.openlocfilehash: b81a32b867795ae51c3f5308c2f82c31ed2747fa
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359822"
 ---
 # <a name="adding-resources-to-a-management-odata-web-service"></a>관리 OData 웹 서비스에 리소스 추가
@@ -49,7 +49,7 @@ ms.locfileid: "72359822"
 
 2. **로컬 컴퓨터** 가 선택 되어 있는지 확인 하 고 **다음**을 클릭 합니다.
 
-3. 설치 된 Windows PowerShell 모듈이 선택 되어 있는지 확인 하 고 드롭다운 목록에서 Hyper-v를 선택 합니다. **다음**을 클릭 합니다. **다음**을 클릭합니다.
+3. 설치 된 Windows PowerShell 모듈이 선택 되어 있는지 확인 하 고 드롭다운 목록에서 Hyper-v를 선택 합니다. **다음**을 클릭합니다. 클릭 하 여 **다음**.
 
 4. **Cmdlet 명사** 목록에서 **VM**을 선택 합니다. **다음**을 클릭합니다.
 
@@ -57,7 +57,7 @@ ms.locfileid: "72359822"
 
 6. VM cmdlet에 대 한 메타 데이터는 출력 유형을 지정 하지 않으므로 cmdlet을 실행 하 여 출력 유형을 지정 해야 합니다. **출력 유형 제공** 을 선택 하 고 **cmdlet 실행**을 클릭 합니다. **Cmdlet 실행** 대화 상자가 나타납니다. **실행**을 클릭합니다. **CLR 유형** 상자는 `VirtualMachine` 유형으로 채워집니다. **확인**을 클릭 한 후 **다음**을 클릭 합니다.
 
-7. 기본적으로 VirtualMachine 개체의 모든 속성이 선택 됩니다. 웹 서비스에서이 리소스를 요청할 때 반환 되는 데이터의 일부로 원하지 않는 속성은 모두 지울 수 있습니다. **다음**을 클릭합니다.
+7. 기본적으로 VirtualMachine 개체의 모든 속성이 선택 됩니다. 웹 서비스에서이 리소스를 요청할 때 반환 되는 데이터의 일부로 원하지 않는 속성은 모두 지울 수 있습니다. 클릭 하 여 **다음**.
 
 8. 키로 사용할 속성을 하나 이상 선택 해야 합니다. 목록에서 **이름** 을 선택 하 고 **다음**을 클릭 합니다.
 

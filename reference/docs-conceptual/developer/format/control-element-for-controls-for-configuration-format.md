@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: bddf7ffa-04d3-4354-90b9-5e714e096260
 caps.latest.revision: 13
 ms.openlocfilehash: 26fe417c9ca60dda22bdc23d9d339d40135a0c9b
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369012"
 ---
 # <a name="control-element-for-controls-for-configuration-format"></a>Configuration의 Controls에 대한 Control 요소(형식)
@@ -32,7 +32,7 @@ ms.locfileid: "72369012"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `Control` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 각 자식 요소 중 하나만 지정 해야 합니다.
+다음 섹션에서는 `Control` 요소에 대 한 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 각 자식 요소 중 하나만 지정 해야 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -42,8 +42,8 @@ ms.locfileid: "72369012"
 
 |요소|설명|
 |-------------|-----------------|
-|[구성에 대 한 컨트롤에 대 한 CustomControl 요소 (형식)](./customcontrol-element-for-control-for-controls-for-configuration-format.md)|필수 요소입니다.<br /><br /> 컨트롤을 정의 합니다.|
-|[구성에 대 한 컨트롤의 Name 요소 (형식)](./name-element-for-control-for-controls-for-configuration-format.md)|필수 요소입니다.<br /><br /> 컨트롤을 참조 하는 데 사용 되는 이름을 지정 합니다.|
+|[구성에 대 한 컨트롤에 대 한 CustomControl 요소 (형식)](./customcontrol-element-for-control-for-controls-for-configuration-format.md)|필수적 요소입니다.<br /><br /> 컨트롤을 정의 합니다.|
+|[구성에 대 한 컨트롤의 Name 요소 (형식)](./name-element-for-control-for-controls-for-configuration-format.md)|필수적 요소입니다.<br /><br /> 컨트롤을 참조 하는 데 사용 되는 이름을 지정 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 

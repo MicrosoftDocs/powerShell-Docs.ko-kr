@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 5a134b81-bd0c-4e1c-a2f0-9acbe852745a
 caps.latest.revision: 9
 ms.openlocfilehash: 390eb2d0153c65967d8c0711c852aa6e13fe4660
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360822"
 ---
 # <a name="windows-powershell-host-quickstart"></a>Windows PowerShell 호스트 빠른 시작
@@ -58,7 +58,7 @@ ms.locfileid: "72360822"
 
 이전 예제에서는 매개 변수 없이 단일 명령을 실행 합니다.
 명령을 사용 하 여 매개 변수를 추가할 수 있습니다. [AddParameter](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) 메서드.
-예를 들어 다음 코드는 컴퓨터에서 실행 되는 `PowerShell`으로 명명 된 모든 프로세스 목록을 가져옵니다.
+예를 들어 다음 코드는 컴퓨터에서 실행 되 `PowerShell` 이름이 지정 된 모든 프로세스 목록을 가져옵니다.
 
 ```csharp
 PowerShell.Create().AddCommand("Get-Process")
@@ -91,7 +91,7 @@ PowerShell.Create().AddCommand("Get-Process")
 ### <a name="addstatement"></a>AddStatement
 
 파이프라인의 끝에 문을 추가 하는 [system.object](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) 를 사용 하 여 일괄 처리를 시뮬레이션할 수 있습니다.
-다음 코드는 이름이 `PowerShell` 인 실행 중인 프로세스 목록을 가져온 다음 실행 중인 서비스 목록을 가져옵니다.
+다음 코드는 `PowerShell`이름이 인 실행 중인 프로세스 목록을 가져온 다음 실행 중인 서비스 목록을 가져옵니다.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -104,15 +104,15 @@ ps.Invoke();
 
 [System.object](/dotnet/api/System.Management.Automation.PowerShell.AddScript) 메서드를 호출 하 여 기존 스크립트를 실행할 수 있습니다.
 다음 예제에서는 스크립트를 파이프라인에 추가 하 고 실행 합니다.
-이 예에서는 `D:\PSScripts` 이라는 폴더에 `MyScript.ps1` 이라는 스크립트가 이미 있다고 가정 합니다.
+이 예에서는 `D:\PSScripts`라는 폴더에 `MyScript.ps1` 라는 스크립트가 이미 있다고 가정 합니다.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
 ps.AddScript("D:\PSScripts\MyScript.ps1").Invoke();
 ```
 
-@No__t-0 이라는 부울 매개 변수를 사용 하는 AddScript 메서드의 버전도 있습니다.
-이 매개 변수를 `true`으로 설정 하면 스크립트가 로컬 범위에서 실행 됩니다.
+또한 `useLocalScope`라는 부울 매개 변수를 사용 하는 AddScript 메서드의 버전이 있습니다.
+이 매개 변수가 `true`로 설정 된 경우 스크립트는 로컬 범위에서 실행 됩니다.
 다음 코드에서는 로컬 범위에서 스크립트를 실행 합니다.
 
 ```csharp

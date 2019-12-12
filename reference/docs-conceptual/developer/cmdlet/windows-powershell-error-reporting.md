@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 61b7773a-c346-4835-a928-7212dc4c85bc
 caps.latest.revision: 7
 ms.openlocfilehash: 259de341fd2fcce2b0c4629f806b4348cba1ff2c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364272"
 ---
 # <a name="windows-powershell-error-reporting"></a>Windows PowerShell 오류 보고

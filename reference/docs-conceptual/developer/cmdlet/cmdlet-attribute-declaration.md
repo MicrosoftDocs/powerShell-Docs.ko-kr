@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 1d323332-f773-4c0e-8a69-2aada765afb2
 caps.latest.revision: 12
 ms.openlocfilehash: 6887467ad5ccafe6edf8f03f531b4750133aa9e9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363542"
 ---
 # <a name="cmdlet-attribute-declaration"></a>Cmdlet 특성 선언
@@ -69,6 +69,6 @@ public class GetProcCommand : Cmdlet
 
 **Get-help** cmdlet에 대 한 자세한 내용은 [getproc 자습서](./getproc-tutorial.md)를 참조 하십시오.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

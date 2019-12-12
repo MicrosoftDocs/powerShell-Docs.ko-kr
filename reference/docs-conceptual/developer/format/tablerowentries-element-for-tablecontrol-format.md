@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d10b68ca-256c-4c58-b503-73f7777b39ae
 caps.latest.revision: 15
 ms.openlocfilehash: 88de19be02de4933f892e02093403a82ccdd5788
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368152"
 ---
 # <a name="tablerowentries-element-for-tablecontrol-format"></a>TableControl에 대한 TableRowEntries 요소(형식)
@@ -41,7 +41,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 |요소|설명|
 |-------------|-----------------|
-|[TableControl의 TableRowEntries 요소에 대 한 TableRowEntry 요소 (형식)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|필수 요소입니다.<br /><br /> 테이블의 행에 표시 되는 데이터를 정의 합니다.|
+|[TableControl의 TableRowEntries 요소에 대 한 TableRowEntry 요소 (형식)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|필수적 요소입니다.<br /><br /> 테이블의 행에 표시 되는 데이터를 정의 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 

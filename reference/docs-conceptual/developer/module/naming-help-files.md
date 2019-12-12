@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: bf54eac7-88c6-4108-a5f6-2f0906d1662b
 caps.latest.revision: 5
 ms.openlocfilehash: f65a90023df88fceafae1d1875ddf46b9088e2b8
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367012"
 ---
 # <a name="naming-help-files"></a>도움말 파일 이름 지정
@@ -29,7 +29,7 @@ Cmdlet에 대 한 C# 도움말 파일은 cmdlet이 정의 된 어셈블리의 �
 
 어셈블리가 중첩 모듈인 경우에도 어셈블리 이름 형식이 필요 합니다.
 
-예를 들어, [Get WinEvent; PSITPro5_Diagnostic;](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent) cmdlet은 Microsoft. PowerShell .dll 어셈블리에 정의 되어 있습니다. @No__t cmdlet은 모듈 디렉터리의 dll-help 파일에 있는 `Get-WinEvent` cmdlet에 대 한 도움말 항목을 찾습니다.
+예를 들어, [Get WinEvent; PSITPro5_Diagnostic;](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent) cmdlet은 Microsoft. PowerShell .dll 어셈블리에 정의 되어 있습니다. `Get-Help` cmdlet은 모듈 디렉터리의 dll-help 파일 에서만 `Get-WinEvent` cmdlet에 대 한 도움말 항목을 찾습니다.
 
 ## <a name="provider-help-files"></a>공급자 도움말 파일
 
@@ -41,7 +41,7 @@ Windows PowerShell 공급자에 대 한 도움말 파일은 공급자가 정의 
 
 어셈블리가 중첩 모듈인 경우에도 어셈블리 이름 형식이 필요 합니다.
 
-예를 들어 인증서 공급자는 Microsoft. PowerShell. .dll 어셈블리에 정의 되어 있습니다. @No__t-0 cmdlet은 모듈 디렉터리의 dll-help 파일 에서만 인증서 공급자에 대 한 도움말 항목을 찾습니다.
+예를 들어 인증서 공급자는 Microsoft. PowerShell. .dll 어셈블리에 정의 되어 있습니다. `Get-Help` cmdlet은 모듈 디렉터리의 dll-help 파일 에서만 인증서 공급자에 대 한 도움말 항목을 찾습니다.
 
 ## <a name="function-help-files"></a>함수 도움말 파일
 
@@ -72,6 +72,6 @@ CIM 명령은 모듈에 중첩 모듈로 포함 될 수 있는 CDXML 파일에 �
 <ScriptModule>.psm1-help.xml
 ```
 
-다른 스크립팅된 명령과 달리 스크립트 워크플로에는 `.ExternalHelp` 주석 키워드가 필요 하지 않으므로 도움말 파일과 연결할 수 있습니다. 대신 Windows PowerShell은 모듈 디렉터리의 UI 문화권 관련 하위 디렉터리에서 XML 기반 도움말 파일을 검색 하 고 모든 파일의 스크립트 워크플로에 대 한 도움말을 찾습니다. `.ExternalHelp` 주석 키워드는 무시 됩니다.
+다른 스크립팅된 명령과 달리 스크립트 워크플로에는 `.ExternalHelp` comment 키워드를 사용 하 여 도움말 파일과 연결할 필요가 없습니다. 대신 Windows PowerShell은 모듈 디렉터리의 UI 문화권 관련 하위 디렉터리에서 XML 기반 도움말 파일을 검색 하 고 모든 파일의 스크립트 워크플로에 대 한 도움말을 찾습니다. `.ExternalHelp` comment 키워드는 무시 됩니다.
 
-@No__t-0 comment 키워드는 무시 되기 때문에 `Get-Help` cmdlet은 모듈에 포함 된 경우에만 스크립트 워크플로에 대 한 도움말을 찾을 수 있습니다.
+`.ExternalHelp` comment 키워드는 무시 되므로 `Get-Help` cmdlet은 모듈에 포함 된 경우에만 스크립트 워크플로에 대 한 도움말을 찾을 수 있습니다.

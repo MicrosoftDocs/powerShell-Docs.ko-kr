@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: e20e5ad6-a6e6-4a63-9d42-1ac54214f748
 caps.latest.revision: 5
 ms.openlocfilehash: 59839e9b8b6f2a56f2f1a9c755f2f1a85deb34aa
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361262"
 ---
 # <a name="how-to-add-dynamic-parameters-to-a-provider-help-topic"></a>공급자 도움말 항목에 동적 매개 변수를 추가하는 방법
@@ -31,7 +31,7 @@ ms.locfileid: "72361262"
 
 1. Dll-help 파일의 `providerHelp` 요소 내에 `DynamicParameters` 요소를 추가 *합니다.* `DynamicParameters` 요소는 `Tasks` 요소와 `RelatedLinks` 요소 앞에 표시 되어야 합니다.
 
-   예를 들어 다음과 같은 가치를 제공해야 합니다.
+   예:
 
     ```xml
     <providerHelp>
@@ -48,7 +48,7 @@ ms.locfileid: "72361262"
 
 2. `DynamicParameters` 요소 내에서 각 동적 매개 변수에 대해 `DynamicParameter` 요소를 추가 합니다.
 
-   예를 들어 다음과 같은 가치를 제공해야 합니다.
+   예:
 
     ```xml
     <DynamicParameters/>
@@ -61,7 +61,7 @@ ms.locfileid: "72361262"
 
    |요소 이름|설명|
    |------------------|-----------------|
-   |이름|매개 변수 이름을 지정 합니다.|
+   |Name|매개 변수 이름을 지정 합니다.|
    |CmdletSupported|매개 변수가 유효한 cmdlet을 지정 합니다. 쉼표로 구분 된 cmdlet 이름 목록을 입력 합니다.|
 
    예를 들어 다음 XML은 Windows PowerShell 파일 시스템 공급자가 `Add-Content`, `Get-Content`, `Set-Content` cmdlet에 추가 하는 `Encoding` 동적 매개 변수를 문서화 합니다.
@@ -116,7 +116,7 @@ ms.locfileid: "72361262"
    |------------------|-----------------|
    |PossibleValues|이 요소는 컨테이너입니다. 자식 요소는 아래에 설명 되어 있습니다. 각 공급자 도움말 항목에 하나의 `PossibleValues` 요소를 추가 합니다. 요소는 비어 있을 수 있습니다.|
    |PossibleValue|이 요소는 컨테이너입니다. 자식 요소는 아래에 설명 되어 있습니다. 동적 매개 변수의 각 값에 대해 하나의 `PossibleValue` 요소를 추가 합니다.|
-   |값|값 이름을 지정 합니다.|
+   |Value|값 이름을 지정 합니다.|
    |설명|이 요소는 `Para` 요소를 포함 합니다. `Para` 요소의 텍스트는 `Value` 요소에 명명 된 값을 설명 합니다.|
 
    예를 들어 다음 XML은 `Encoding` 동적 매개 변수의 한 `PossibleValue` 요소를 보여 줍니다.

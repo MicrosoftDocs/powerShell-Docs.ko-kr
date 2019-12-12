@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 37beeb0b-7a81-4747-becb-e309e17278fb
 caps.latest.revision: 12
 ms.openlocfilehash: 7a117c25b0d117dc846ba8e060e31e838b5edd52
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362782"
 ---
 # <a name="listcontrol-element-format"></a>ListControl 요소(형식)
@@ -32,7 +32,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `ListControl` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 이 요소는 자식 요소를 하나만 포함 해야 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `ListControl` 요소의 부모 요소에 대해 설명 합니다. 이 요소는 자식 요소를 하나만 포함 해야 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -42,7 +42,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 |요소|설명|
 |-------------|-----------------|
-|[ListEntries 요소 (Format)](./listentries-element-for-listcontrol-format.md)|필수 요소입니다.<br /><br /> 목록 뷰의 정의를 제공 합니다.|
+|[ListEntries 요소 (Format)](./listentries-element-for-listcontrol-format.md)|필수적 요소입니다.<br /><br /> 목록 뷰의 정의를 제공 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 

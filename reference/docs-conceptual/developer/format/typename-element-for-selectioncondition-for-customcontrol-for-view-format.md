@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d2c65171-4d4c-46a9-a545-591df058acd1
 caps.latest.revision: 7
 ms.openlocfilehash: 00e9ae0916dd6d22602b99b201c9c4b7e549dc48
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361592"
 ---
 # <a name="typename-element-for-selectioncondition-for-customcontrol-for-view--format"></a>View에 대한 CustomControl의 SelectionCondition에 대한 TypeName 요소(형식)
@@ -30,7 +30,7 @@ Configuration 요소 (Format) ViewDefinitions element (Format) View 요소 (form
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `TypeName` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `TypeName` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -48,7 +48,7 @@ Configuration 요소 (Format) ViewDefinitions element (Format) View 요소 (form
 
 ## <a name="text-value"></a>텍스트 값
 
-.NET 형식의 정규화 된 이름 (예: `System.IO.DirectoryInfo`)을 지정 합니다.
+`System.IO.DirectoryInfo`와 같은 .NET 형식의 정규화 된 이름을 지정 합니다.
 
 ## <a name="remarks"></a>설명
 

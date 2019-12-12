@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 2b446841-6616-4720-9ff8-50801d7576ed
 caps.latest.revision: 6
 ms.openlocfilehash: 2e3d97e224b06bdf36ac0bc1237911e029ea762d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366832"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Windows PowerShell 드라이브 공급자 만들기
@@ -109,7 +109,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
 
    **PS > `Get-PSProvider`**
 
-   다음 출력이 표시됩니다.
+   다음과 같은 출력이 나타납니다.
 
    ```output
    Name                 Capabilities                  Drives
@@ -128,7 +128,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
 
    **PS > psdrive-name mydb-root c:\ps\northwind.mdb-psprovider AccessDb**
 
-   다음 출력이 표시됩니다.
+   다음과 같은 출력이 나타납니다.
 
    ```output
    Name     Provider     Root                   CurrentLocation
@@ -143,7 +143,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
 
    **PS > (psdrive mydb). 연결**
 
-   다음 출력이 표시됩니다.
+   다음과 같은 출력이 나타납니다.
 
    ```output
    ConnectionString  : Driver={Microsoft Access Driver (*.mdb)};DBQ=c:\ps\northwind.mdb
@@ -163,7 +163,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
 
    **PS > 종료**
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell 공급자 만들기](./how-to-create-a-windows-powershell-provider.md)
 

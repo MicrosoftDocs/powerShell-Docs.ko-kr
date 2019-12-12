@@ -15,10 +15,10 @@ helpviewer_keywords:
 ms.assetid: 0b014035-52ea-44cb-ab38-bbe463c5465a
 caps.latest.revision: 8
 ms.openlocfilehash: 5dfec318438ca139518c596011ac5e56445738ea
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365922"
 ---
 # <a name="cmdlet-error-reporting"></a>Cmdlet 오류 보고
@@ -84,7 +84,7 @@ PowerShell은이 식별자와 cmdlet 식별자를 결합 하 여 나중에 오�
 
 사용자는 범주 **보기**에 `$ErrorView` 설정 된 범주에 따라 오류를 볼 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Cmdlet 개요](./cmdlet-overview.md)
 

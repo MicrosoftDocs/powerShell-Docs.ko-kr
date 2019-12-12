@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 848e7acd-d578-4fd1-a575-c0c3b9b5e68a
 caps.latest.revision: 17
 ms.openlocfilehash: c809aa6c3a40d16cfd2fd99065a846d265ec0f61
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368382"
 ---
 # <a name="selectionset-element-format"></a>SelectionSet 요소(형식)
@@ -32,7 +32,7 @@ Configuration 요소 (Format) SelectionSets 요소 (Format) Selectionsets 요소
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `SelectionSet` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 각 선택 집합에는 이름이 있어야 하며 집합의 .NET 개체를 지정 해야 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `SelectionSet` 요소의 부모 요소에 대해 설명 합니다. 각 선택 집합에는 이름이 있어야 하며 집합의 .NET 개체를 지정 해야 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -42,8 +42,8 @@ Configuration 요소 (Format) SelectionSets 요소 (Format) Selectionsets 요소
 
 |요소|설명|
 |-------------|-----------------|
-|[SelectionSet (Format)의 Name 요소](./name-element-for-selectionset-format.md)|필수 요소입니다.<br /><br /> 선택 집합을 참조 하는 데 사용 되는 이름을 지정 합니다.|
-|[Types 요소 (Format)](./types-element-for-selectionset-format.md)|필수 요소입니다.<br /><br /> 선택 집합에 있는 .NET 개체를 정의 합니다.|
+|[SelectionSet (Format)의 Name 요소](./name-element-for-selectionset-format.md)|필수적 요소입니다.<br /><br /> 선택 집합을 참조 하는 데 사용 되는 이름을 지정 합니다.|
+|[Types 요소 (Format)](./types-element-for-selectionset-format.md)|필수적 요소입니다.<br /><br /> 선택 집합에 있는 .NET 개체를 정의 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 

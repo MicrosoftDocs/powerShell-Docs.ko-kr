@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 1f405afb-70b5-4fe0-9986-bc07401d93fd
 caps.latest.revision: 23
 ms.openlocfilehash: 862f942facafff6cea66c4f8f1040772c6a62ec3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363412"
 ---
 # <a name="creating-a-table-view"></a>테이블 보기 만들기
@@ -79,13 +79,13 @@ Running  Appinfo            Application Information
 
 - [Name](./name-element-for-view-format.md) 요소는 뷰의 이름을 지정 합니다. 이 요소는 모든 뷰에 필요 합니다.
 
-- [Viewselectedby](./viewselectedby-element-format.md) 요소는 뷰를 사용 하는 개체를 정의 합니다. 이 요소는 필수입니다.
+- [Viewselectedby](./viewselectedby-element-format.md) 요소는 뷰를 사용 하는 개체를 정의 합니다. 필수적 요소로,
 
-- [GroupBy](./groupby-element-for-view-format.md) 요소 (이 예제에는 표시 되지 않음)는 새 개체 그룹이 표시 되는 시점을 정의 합니다. 특정 속성 또는 스크립트의 값이 변경 될 때마다 새 그룹이 시작 됩니다. 이 요소는 선택 사항입니다.
+- [GroupBy](./groupby-element-for-view-format.md) 요소 (이 예제에는 표시 되지 않음)는 새 개체 그룹이 표시 되는 시점을 정의 합니다. 특정 속성 또는 스크립트의 값이 변경 될 때마다 새 그룹이 시작 됩니다. 이 요소는 선택적입니다.
 
-- [Controls](./controls-element-for-view-format.md) 요소 (이 예제에는 표시 되지 않음)는 테이블 뷰로 정의 된 사용자 지정 컨트롤을 정의 합니다. 컨트롤을 통해 데이터 표시 방법을 추가로 지정할 수 있습니다. 이 요소는 선택 사항입니다. 뷰는 자체 사용자 지정 컨트롤을 정의 하거나 서식 파일의 뷰에서 사용할 수 있는 공용 컨트롤을 사용할 수 있습니다. 사용자 지정 컨트롤에 대 한 자세한 내용은 [사용자 지정 컨트롤 만들기](./creating-custom-controls.md)를 참조 하세요.
+- [Controls](./controls-element-for-view-format.md) 요소 (이 예제에는 표시 되지 않음)는 테이블 뷰로 정의 된 사용자 지정 컨트롤을 정의 합니다. 컨트롤을 통해 데이터 표시 방법을 추가로 지정할 수 있습니다. 이 요소는 선택적입니다. 뷰는 자체 사용자 지정 컨트롤을 정의 하거나 서식 파일의 뷰에서 사용할 수 있는 공용 컨트롤을 사용할 수 있습니다. 사용자 지정 컨트롤에 대 한 자세한 내용은 [사용자 지정 컨트롤 만들기](./creating-custom-controls.md)를 참조 하세요.
 
-- [HideTableHeaders](./hidetableheaders-element-format.md) 요소 (이 예에서는 표시 되지 않음)는 테이블의 맨 위에 레이블을 표시 하지 않도록 지정 합니다. 이 요소는 선택 사항입니다.
+- [HideTableHeaders](./hidetableheaders-element-format.md) 요소 (이 예에서는 표시 되지 않음)는 테이블의 맨 위에 레이블을 표시 하지 않도록 지정 합니다. 이 요소는 선택적입니다.
 
 - 테이블의 헤더 및 행 정보를 정의 하는 [TableControl](./tablecontrol-element-format.md) 요소입니다. 다른 모든 뷰와 마찬가지로, 테이블 뷰에서는 스크립트에 의해 생성 된 개체 속성 또는 값의 값을 표시할 수 있습니다.
 
@@ -97,11 +97,11 @@ Running  Appinfo            Application Information
 
    사용할 수 있는 이러한 요소 수에는 제한이 없지만 테이블 뷰의 [TableColumnHeader](./tablecolumnheader-element-format.md) 요소 수는 사용 하는 [TableRowEntry](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md) 요소 수와 같아야 합니다.
 
-3. [Label](./label-element-for-tablecolumnheader-for-tablecontrol-format.md) 요소는 표시 되는 텍스트를 지정 합니다. 이 요소는 선택 사항입니다.
+3. [Label](./label-element-for-tablecolumnheader-for-tablecontrol-format.md) 요소는 표시 되는 텍스트를 지정 합니다. 이 요소는 선택적입니다.
 
-4. [Width](./width-element-for-tablecolumnheader-for-tablecontrol-format.md) 요소는 열의 너비 (문자)를 지정 합니다. 이 요소는 선택 사항입니다.
+4. [Width](./width-element-for-tablecolumnheader-for-tablecontrol-format.md) 요소는 열의 너비 (문자)를 지정 합니다. 이 요소는 선택적입니다.
 
-5. [Alignment](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md) 요소는 레이블이 표시 되는 방법을 지정 합니다. 레이블은 왼쪽, 오른쪽 또는 가운데에 맞출 수 있습니다. 이 요소는 선택 사항입니다.
+5. [Alignment](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md) 요소는 레이블이 표시 되는 방법을 지정 합니다. 레이블은 왼쪽, 오른쪽 또는 가운데에 맞출 수 있습니다. 이 요소는 선택적입니다.
 
 ## <a name="defining-the-table-rows"></a>테이블 행 정의
 
@@ -146,9 +146,9 @@ Running  Appinfo            Application Information
 
 - [ScriptBlock](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md) 요소는 값이 행에 표시 되는 스크립트를 지정 합니다. 스크립트나 속성 중 하나를 지정 해야 하지만 둘 다 지정할 수는 없습니다.
 
-- [FormatString](./label-element-for-listitem-for-listcontrol-format.md) 요소는 속성 또는 스크립트 값이 표시 되는 방법을 정의 하는 형식 패턴을 지정 합니다. 이 요소는 선택 사항입니다.
+- [FormatString](./label-element-for-listitem-for-listcontrol-format.md) 요소는 속성 또는 스크립트 값이 표시 되는 방법을 정의 하는 형식 패턴을 지정 합니다. 이 요소는 선택적입니다.
 
-- [Alignment](./alignment-element-for-tablecolumnitem-for-tablecontrol-format.md) 요소는 속성이 나 스크립트의 값이 표시 되는 방법을 지정 합니다. 값을 왼쪽, 오른쪽 또는 가운데에 맞출 수 있습니다. 이 요소는 선택 사항입니다.
+- [Alignment](./alignment-element-for-tablecolumnitem-for-tablecontrol-format.md) 요소는 속성이 나 스크립트의 값이 표시 되는 방법을 지정 합니다. 값을 왼쪽, 오른쪽 또는 가운데에 맞출 수 있습니다. 이 요소는 선택적입니다.
 
 ## <a name="defining-the-objects-that-use-the-table-view"></a>테이블 뷰를 사용 하는 개체 정의
 

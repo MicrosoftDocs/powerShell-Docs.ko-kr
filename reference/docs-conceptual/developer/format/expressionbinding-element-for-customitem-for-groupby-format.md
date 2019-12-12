@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 5eae5088-7605-4ef2-a703-faf3e5a5fc94
 caps.latest.revision: 8
 ms.openlocfilehash: 4714bfd1530585aa80aabc010b86d25bf0c7f9c4
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368632"
 ---
 # <a name="expressionbinding-element-for-customitem-for-groupby-format"></a>GroupBy의 CustomItem에 대한 ExpressionBinding 요소(형식)
@@ -36,7 +36,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `ExpressionBinding` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `ExpressionBinding` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

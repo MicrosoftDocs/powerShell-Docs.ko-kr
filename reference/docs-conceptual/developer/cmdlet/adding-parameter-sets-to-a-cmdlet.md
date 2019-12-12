@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: a6131db4-fd6e-45f1-bd47-17e7174afd56
 caps.latest.revision: 8
 ms.openlocfilehash: c9c0b9a7a587e856efc82b4d277cee373e3f8b38
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416317"
 ---
 # <a name="adding-parameter-sets-to-a-cmdlet"></a>Cmdlet에 매개 변수 집합 추가
@@ -247,7 +247,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
     ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [시스템을 수정 하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)
 

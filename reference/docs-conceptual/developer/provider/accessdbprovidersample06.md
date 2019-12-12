@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: 46dc0657-110f-4367-8bb6-a95dca2c5016
 caps.latest.revision: 8
 ms.openlocfilehash: 9c00ec6de987729fec42dc57245a949d11e31f4b
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366332"
 ---
 # <a name="accessdbprovidersample06"></a>AccessDBProviderSample06
 
-이 샘플에서는 `Clear-Content`, `Get-Content` 및 `Set-Content` cmdlet에 대 한 호출을 지원 하도록 콘텐츠 메서드를 덮어쓰는 방법을 보여 줍니다. 이러한 메서드는 사용자가 데이터 저장소에 있는 항목의 콘텐츠를 관리해야 하는 경우에 구현해야 합니다. 이 샘플의 공급자 클래스는 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider) 인터페이스를 구현 하는 클래스에서 파생 되며, [이 클래스는](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) system.object를 구현 합니다.
+이 샘플에서는 `Clear-Content`, `Get-Content`및 `Set-Content` cmdlet에 대 한 호출을 지원 하도록 콘텐츠 메서드를 덮어쓰는 방법을 보여 줍니다. 이러한 메서드는 사용자가 데이터 저장소에 있는 항목의 콘텐츠를 관리해야 하는 경우에 구현해야 합니다. 이 샘플의 공급자 클래스는 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider) 인터페이스를 구현 하는 클래스에서 파생 되며, [이 클래스는](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) system.object를 구현 합니다.
 
-## <a name="demonstrates"></a>보여
+## <a name="demonstrates"></a>데모
 
 > [!IMPORTANT]
 > 공급자 클래스는 다음 클래스 중 하나에서 파생 되 고 다른 공급자 인터페이스를 구현할 수 있습니다.
@@ -32,15 +32,15 @@ ms.locfileid: "72366332"
 
 이 샘플은 다음을 보여 줍니다.
 
-- @No__t_0 특성을 선언 합니다.
+- `CmdletProvider` 특성을 선언 합니다.
 
 - [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider) 인터페이스를 선언 하 고 system.object 클래스에서 파생 되는 [공급자 클래스를](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 정의 하는 것입니다 (.
 
-- @No__t_1 cmdlet의 동작을 변경 하 여 사용자가 항목에서 콘텐츠를 제거할 수 있도록 하는 [Clearcontent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) 메서드를 덮어씁니다. (이 샘플은 `Clear-Content` cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
+- `Clear-Content` cmdlet의 동작을 변경 하 여 사용자가 항목에서 콘텐츠를 제거할 수 있도록 하는 [Clearcontent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) 메서드를 덮어씁니다. (이 샘플은 `Clear-Content` cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
 
-- @No__t_1 cmdlet의 동작을 변경 하 여 사용자가 항목의 콘텐츠를 검색할 수 있도록 하는 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) 메서드를 덮어씁니다. (이 샘플은 `Get-Content` cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
+- `Get-Content` cmdlet의 동작을 변경 하 여 사용자가 항목의 콘텐츠를 검색할 수 있도록 하는 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) 메서드를 덮어씁니다. (이 샘플은 `Get-Content` cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
 
-- @No__t_1 cmdlet의 동작을 변경 하 여 사용자가 항목의 내용을 업데이트할 수 있도록 하는 [Filesystemprovider](/dotnet/api/Microsoft.PowerShell.Commands.FileSystemProvider.GetContentWriter) 메서드를 덮어씁니다. (이 샘플은 `Set-Content` cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
+- `Set-Content` cmdlet의 동작을 변경 하 여 사용자가 항목의 내용을 업데이트할 수 있도록 하는 [Filesystemprovider](/dotnet/api/Microsoft.PowerShell.Commands.FileSystemProvider.GetContentWriter) 메서드를 덮어씁니다. (이 샘플은 `Set-Content` cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
 
 ## <a name="example"></a>예제
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a52ab737-753c-4d04-8af7-758d5c805e18
 caps.latest.revision: 7
 ms.openlocfilehash: b21811e5a5a819c3d5c4a55fcbe685a84819b71d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367802"
 ---
 # <a name="how-to-add-return-values-to-a-cmdlet-help-topic"></a>Cmdlet 도움말 항목에 반환 값을 추가하는 방법

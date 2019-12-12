@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 0c0509cc-5a50-49ad-a74f-5527023d0270
 caps.latest.revision: 10
 ms.openlocfilehash: 80e3e27bcf72b078c192525a843a3b3afb306529
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365682"
 ---
 # <a name="how-to-declare-cmdlet-parameters"></a>Cmdlet 매개 변수를 선언하는 방법
@@ -37,7 +37,7 @@ ms.locfileid: "72365682"
 
 ## <a name="how-to-declare-a-positional-parameter"></a>위치 매개 변수를 선언 하는 방법
 
-- 다음 코드와 같이 공용 속성을 정의 합니다. 매개 변수 특성을 추가 하는 경우 `Position` 키워드를 인수 위치로 설정 합니다. 값 0은 첫 번째 위치를 나타냅니다.
+- 다음 코드와 같이 공용 속성을 정의 합니다. 매개 변수 특성을 추가할 때 `Position` 키워드를 인수 위치로 설정 합니다. 값 0은 첫 번째 위치를 나타냅니다.
 
     ```csharp
     [Parameter(Position = 0)]
@@ -53,7 +53,7 @@ ms.locfileid: "72365682"
 
 ## <a name="how-to-declare-a-mandatory-parameter"></a>필수 매개 변수를 선언 하는 방법
 
-- 다음 코드와 같이 공용 속성을 정의 합니다. 매개 변수 특성을 추가 하는 경우 `Mandatory` 키워드를 `true`로 설정 합니다.
+- 다음 코드와 같이 공용 속성을 정의 합니다. 매개 변수 특성을 추가할 때 `Mandatory` 키워드를 `true`로 설정 합니다.
 
     ```csharp
     [Parameter(Position = 0, Mandatory = true)]
@@ -69,7 +69,7 @@ ms.locfileid: "72365682"
 
 ## <a name="how-to-declare-an-optional-parameter"></a>선택적 매개 변수를 선언 하는 방법
 
-- 다음 코드와 같이 공용 속성을 정의 합니다. 매개 변수 특성을 추가 하는 경우 `Mandatory` 키워드를 생략 합니다.
+- 다음 코드와 같이 공용 속성을 정의 합니다. 매개 변수 특성을 추가할 때 `Mandatory` 키워드를 생략 합니다.
 
     ```csharp
     [Parameter(Position = 0)]

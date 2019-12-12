@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 3204599c-7159-47aa-82ec-4a476f461027
 caps.latest.revision: 7
 ms.openlocfilehash: 5c5707d1c533e0498c6794b60f4499e530e25813
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360662"
 ---
 # <a name="supporting-online-help"></a>온라인 도움말 지원
@@ -21,13 +21,13 @@ Windows PowerShell 3.0부터 Windows PowerShell 명령에 대 한 `Get-Help` 온
 
 ## <a name="about-online-help"></a>온라인 도움말 정보
 
-온라인 도움말은 항상 Windows PowerShell의 중요 한 부분입니다. @No__t-0 cmdlet은 명령 프롬프트에서 도움말 항목을 표시 하지만 많은 사용자가 커뮤니티 콘텐츠 및 wiki 기반 문서에서 색 구분, 하이퍼링크 및 아이디어 공유를 포함 하 여 온라인 읽기 환경을 선호 합니다. 가장 중요 한 점은 업데이트할 수 있는 도움말을 제공 하기 전에 온라인 도움말에서 최신 버전의 도움말 파일을 제공 하는 것입니다.
+온라인 도움말은 항상 Windows PowerShell의 중요 한 부분입니다. `Get-Help` cmdlet은 명령 프롬프트에서 도움말 항목을 표시 하지만 대부분의 사용자는 커뮤니티 콘텐츠 및 wiki 기반 문서에서 색 구분, 하이퍼링크 및 아이디어 공유를 비롯 한 온라인 읽기 환경을 선호 합니다. 가장 중요 한 점은 업데이트할 수 있는 도움말을 제공 하기 전에 온라인 도움말에서 최신 버전의 도움말 파일을 제공 하는 것입니다.
 
 Windows PowerShell 3.0에서 업데이트할 수 있는 도움말을 사용 하 여 온라인 도움말에서 여전히 중요 한 역할을 합니다. 유연한 사용자 환경 외에도 온라인 도움말은 업데이트할 수 있는 도움말 항목을 다운로드 하는 데 사용할 수 없는 사용자를 위한 도움말을 제공 합니다.
 
 ## <a name="how-get-help--online-works"></a>Get-help-Online 작동 방법
 
-사용자가 명령에 대 한 온라인 도움말 항목을 찾을 수 있도록 `Get-Help` 명령에는 사용자의 기본 인터넷 브라우저에서 명령에 대 한 온라인 버전의 도움말 항목을 여는 온라인 매개 변수가 있습니다.
+사용자가 명령에 대 한 온라인 도움말 항목을 찾을 수 있도록 `Get-Help` 명령은 사용자의 기본 인터넷 브라우저에서 명령에 대 한 온라인 버전의 도움말 항목을 여는 온라인 매개 변수를 포함 합니다.
 
 예를 들어 다음 명령은 `Invoke-Command` cmdlet에 대 한 온라인 도움말 항목을 엽니다.
 
@@ -35,21 +35,21 @@ Windows PowerShell 3.0에서 업데이트할 수 있는 도움말을 사용 하 
 Get-Help Invoke-Command -Online
 ```
 
-@No__t-0-Online을 구현 하기 위해 `Get-Help` cmdlet은 다음 위치의 온라인 버전 도움말 항목에 대 한 URI (Uniform Resource Identifier)를 찾습니다.
+`Get-Help`-Online을 구현 하기 위해 `Get-Help` cmdlet은 다음 위치의 온라인 버전 도움말 항목에 대 한 URI (Uniform Resource Identifier)를 찾습니다.
 
 - 명령에 대 한 도움말 항목의 관련 링크 섹션에 있는 첫 번째 링크입니다. 사용자의 컴퓨터에 도움말 항목이 설치 되어 있어야 합니다. 이 기능은 Windows PowerShell 2.0에서 도입 되었습니다.
 
 - 모든 명령의 HelpUri 속성입니다. HelpUri 속성은 사용자의 컴퓨터에 명령에 대 한 도움말 항목이 설치 되어 있지 않은 경우에도 액세스할 수 있습니다. 이 기능은 Windows PowerShell 3.0에서 도입 되었습니다.
 
-  HelpUri 속성 값을 가져오기 전에 `Get-Help`은 관련 링크 섹션의 첫 번째 항목에서 URI를 찾습니다. 속성 값이 잘못 되었거나 변경 된 경우 첫 번째 관련 링크에 다른 값을 입력 하 여 재정의할 수 있습니다. 그러나 첫 번째 관련 링크는 도움말 항목이 사용자의 컴퓨터에 설치 된 경우에만 작동 합니다.
+  `Get-Help`는 HelpUri 속성 값을 가져오기 전에 관련 링크 섹션의 첫 번째 항목에서 URI를 찾습니다. 속성 값이 잘못 되었거나 변경 된 경우 첫 번째 관련 링크에 다른 값을 입력 하 여 재정의할 수 있습니다. 그러나 첫 번째 관련 링크는 도움말 항목이 사용자의 컴퓨터에 설치 된 경우에만 작동 합니다.
 
 ## <a name="adding-a-uri-to-the-first-related-link-of-a-command-help-topic"></a>명령 도움말 항목의 첫 번째 관련 링크에 URI 추가
 
-명령에 대 한 XML 기반 도움말 항목의 관련 링크 섹션에 있는 첫 번째 항목에 유효한 URI를 추가 하 여 모든 명령에 대 한 `Get-Help`-Online을 지원할 수 있습니다. 이 옵션은 XML 기반 도움말 항목에만 사용할 수 있으며 도움말 항목이 사용자의 컴퓨터에 설치 된 경우에만 사용할 수 있습니다. 도움말 항목을 설치 하 고 URI를 채우면이 값이 명령의 **HelpUri** 속성 보다 우선적으로 적용 됩니다.
+명령에 대 한 XML 기반 도움말 항목의 관련 링크 섹션에 있는 첫 번째 항목에 유효한 URI를 추가 하 여 명령에 대 한 `Get-Help`-Online을 지원할 수 있습니다. 이 옵션은 XML 기반 도움말 항목에만 사용할 수 있으며 도움말 항목이 사용자의 컴퓨터에 설치 된 경우에만 사용할 수 있습니다. 도움말 항목을 설치 하 고 URI를 채우면이 값이 명령의 **HelpUri** 속성 보다 우선적으로 적용 됩니다.
 
 이 기능을 지원 하려면 URI가 `maml:relatedLinks` 요소의 첫 번째 `maml:relatedLinks/maml:navigationLink` 요소 아래 `maml:uri` 요소에 표시 되어야 합니다.
 
-다음 XML은 URI의 올바른 배치를 보여 줍니다. @No__t-0 요소의 "온라인 버전:" 텍스트가 모범 사례 이지만 반드시 필요한 것은 아닙니다.
+다음 XML은 URI의 올바른 배치를 보여 줍니다. `maml:linkText` 요소의 "온라인 버전:" 텍스트는 모범 사례 이지만 반드시 필요한 것은 아닙니다.
 
 ```xml
 

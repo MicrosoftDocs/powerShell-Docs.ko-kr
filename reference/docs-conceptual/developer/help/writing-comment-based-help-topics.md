@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: e619ab16-90ad-46e9-9bde-d6dce492ba56
 caps.latest.revision: 4
 ms.openlocfilehash: e3d32f36b597088abc41e229bb0955c1b25504e6
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361082"
 ---
 # <a name="writing-comment-based-help-topics"></a>설명 기반 도움말 항목 작성
 
 특수 도움말 주석 키워드를 사용 하 여 함수 및 스크립트에 대 한 주석 기반 도움말 항목을 작성할 수 있습니다.
 
- @No__t-0 cmdlet은 XML 파일에서 생성 된 cmdlet 도움말 항목을 표시 하는 것과 동일한 형식으로 주석 기반 도움말을 표시 합니다. 사용자는 Detailed, Full, Example 및 Online과 같이 `Get-Help`의 모든 매개 변수를 사용 하 여 함수 및 스크립트 도움말을 표시할 수 있습니다.
+ `Get-Help` cmdlet은 XML 파일에서 생성 된 cmdlet 도움말 항목을 표시 하는 것과 같은 형식으로 주석 기반 도움말을 표시 합니다. 사용자는 Detailed, Full, Example 및 Online과 같은 `Get-Help`의 모든 매개 변수를 사용 하 여 함수 및 스크립트 도움말을 표시할 수 있습니다.
 
  스크립트 및 함수에 대 한 XML 기반 도움말 항목을 작성 하 고 도움말 주석 키워드를 사용 하 여 사용자를 XML 기반 항목 또는 기타 항목으로 리디렉션할 수도 있습니다.
 

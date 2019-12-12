@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 52003450-07ca-41e5-b075-8b6b03fc6e88
 caps.latest.revision: 6
 ms.openlocfilehash: 30215734ef832d778b08d3d7be224ff8d88b0579
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361782"
 ---
 # <a name="typename-element-for-entryselectedby-for-controls-for-view-format"></a>View에 대한 Controls의 EntrySelectedBy에 대한 TypeName 요소(형식)
@@ -30,7 +30,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (Format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `TypeName` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `TypeName` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -48,7 +48,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (Format) View 요소 (forma
 
 ## <a name="text-value"></a>텍스트 값
 
-.NET 형식의 정규화 된 이름 (예: `System.IO.DirectoryInfo`)을 지정 합니다.
+`System.IO.DirectoryInfo`와 같은 .NET 형식의 정규화 된 이름을 지정 합니다.
 
 ## <a name="remarks"></a>설명
 

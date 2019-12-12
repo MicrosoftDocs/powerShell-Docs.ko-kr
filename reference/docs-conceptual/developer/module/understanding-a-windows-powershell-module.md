@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d4e38235-9987-4347-afd2-0f7d1dc8f64a
 caps.latest.revision: 19
 ms.openlocfilehash: b42ba6b2bf42a74213eb78f2db22e16de7e90583
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360642"
 ---
 # <a name="understanding-a-windows-powershell-module"></a>Windows PowerShell 모듈 이해
@@ -117,6 +117,6 @@ ms.locfileid: "72360642"
 
 $env:P SModulePath이 환경 변수는 Windows PowerShell 모듈을 저장 하는 디렉터리 목록을 포함 합니다. Windows PowerShell은 모듈을 자동으로 가져올 때이 변수의 값을 사용 하 고 모듈에 대 한 도움말 항목을 업데이트 합니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell 모듈 작성](./writing-a-windows-powershell-module.md)

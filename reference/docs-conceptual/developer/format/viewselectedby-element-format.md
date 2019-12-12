@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: acdeef4d-3554-4f39-a7e6-a684e3848fd7
 caps.latest.revision: 19
 ms.openlocfilehash: efc1c5d1338889ecd0be7150b7733842ce78979e
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367972"
 ---
 # <a name="viewselectedby-element-format"></a>ViewSelectedBy 요소(형식)
@@ -55,7 +55,7 @@ ViewDefinitions 요소 (Format) View 요소 (format) ViewSelectedBy 요소 (형�
 
 다른 뷰에서이 요소를 사용 하는 방법에 대 한 자세한 내용은 [테이블 뷰 구성 요소](./creating-a-table-view.md), [목록 뷰 구성 요소](./creating-a-list-view.md), [넓은 뷰 구성](./creating-a-wide-view.md)요소 및 [사용자 지정 컨트롤 구성 요소](./creating-custom-controls.md)를 참조 하세요.
 
-@No__t-0 요소는 서식 파일이 여러 뷰에 표시 되는 개체 집합을 정의 하는 경우에 사용 됩니다. 선택 집합을 정의 하 고 참조 하는 방법에 대 한 자세한 내용은 [개체 집합 정의](./defining-selection-sets.md)를 참조 하세요.
+`SelectionSetName` 요소는 서식 파일이 여러 뷰에 표시 되는 개체 집합을 정의 하는 경우에 사용 됩니다. 선택 집합을 정의 하 고 참조 하는 방법에 대 한 자세한 내용은 [개체 집합 정의](./defining-selection-sets.md)를 참조 하세요.
 
 ## <a name="example"></a>예제
 

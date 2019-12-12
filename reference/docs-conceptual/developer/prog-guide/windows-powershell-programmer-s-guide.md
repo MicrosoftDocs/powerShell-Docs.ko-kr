@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: f3aaf667-af84-4ea8-a5ad-d454d0d700b8
 caps.latest.revision: 9
 ms.openlocfilehash: f8cbaf464345b8f2b693e72f3dbe781a47605b28
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417784"
 ---
 # <a name="windows-powershell-programmer39s-guide"></a>Windows PowerShell 프로그래머&#39;가이드
@@ -105,6 +105,6 @@ Windows PowerShell shell 사용을 시작 하는 방법에 대 한 자세한 내
 |[콘솔 셸을 만드는 방법](./how-to-create-a-console-shell.md)|이 섹션에서는 확장할 수 없는 콘솔 셸을 만드는 방법을 설명 합니다.|
 |[Windows PowerShell 개념](./windows-powershell-concepts.md)|이 섹션에는 개발자의 관점에서 Windows PowerShell을 이해 하는 데 도움이 되는 개념 정보가 포함 되어 있습니다.|
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)

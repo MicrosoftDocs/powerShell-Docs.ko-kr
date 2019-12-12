@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a886a26d-7730-4586-aeac-fd3f0bc60b88
 caps.latest.revision: 8
 ms.openlocfilehash: 229725b5b9f1f0082592dcebe11564fd2f630ce1
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365732"
 ---
 # <a name="confirmation-messages"></a>확인 메시지
@@ -33,7 +33,7 @@ Performing operation "Test-RequestConfirmationTemplate1" on Target "MyResource".
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
 ```
 
-사용자가 다음 예제와 같이 확인 요청에 대해 모두 **예** 또는 예를 선택 **하** 는 경우에는 두 번째 확인 메시지를 표시 하는 system.web. a s n [continue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 메서드를 호출 합니다. 표시할지.
+사용자가 다음 예제와 같이 확인 요청에 대해 모두 **예** 또는 예를 선택 **하** 는 경우에는 두 번째 확인 메시지가 표시 되는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 를 호출 하 게 됩니다.
 
 ```output
 Confirm
@@ -48,7 +48,7 @@ Continue with this operation?
 
 ## <a name="specifying-the-operation-and-resource"></a>작업 및 리소스 지정
 
-변경할 리소스와 해당 명령이 수행할 작업 (... n a m a. %2?)을 지정할 수 있습니다. [ Displayproperty = Fullname](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess?view=powershellsdk-1.1.0) 메서드. 이 경우 `target` 매개 변수를 사용 하 여 `target` 매개 변수와 작업을 사용 하 여 리소스를 제공 합니다. 다음 메시지에서 "MyResource" 라는 텍스트는 수행 되는 리소스 이며 "Myresource"은 수행 되는 작업입니다.
+변경할 리소스와 해당 명령이 수행할 작업 (... n a m a. %2?)을 지정할 수 있습니다. [ Displayproperty = Fullname](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess?view=powershellsdk-1.1.0) 메서드. 이 경우 `target` 매개 변수를 사용 하 여 리소스를 제공 하 고 `target` 매개 변수를 사용 하 여 작업을 수행 합니다. 다음 메시지에서 "MyResource" 라는 텍스트는 수행 되는 리소스 이며 "Myresource"은 수행 되는 작업입니다.
 
 ```output
 Confirm

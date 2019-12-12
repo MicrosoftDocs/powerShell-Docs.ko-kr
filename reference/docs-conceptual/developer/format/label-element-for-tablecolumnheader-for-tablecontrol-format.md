@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 7196f039-2f6a-41fd-b252-5b1623ebb9f9
 caps.latest.revision: 11
 ms.openlocfilehash: 09183a538c179f19347c3f1ed45b4ad38c2ca451
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365172"
 ---
 # <a name="label-element-for-tablecolumnheader-for-tablecontrol-format"></a>TableControl의 TableColumnHeader에 대한 Label 요소(형식)
@@ -30,7 +30,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `Label` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 각 열에는 하나의 레이블만 사용할 수 있습니다.
+다음 섹션에서는 특성, 자식 요소 및 `Label` 요소의 부모 요소에 대해 설명 합니다. 각 열에는 하나의 레이블만 사용할 수 있습니다.
 
 ### <a name="attributes"></a>특성
 

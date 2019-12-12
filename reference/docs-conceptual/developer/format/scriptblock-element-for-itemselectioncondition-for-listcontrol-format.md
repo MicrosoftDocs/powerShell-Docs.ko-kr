@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: c929a6df-d050-416a-9de0-e913dd5a035c
 caps.latest.revision: 8
 ms.openlocfilehash: a0768a9c1ac66cd9dcf1848c4b031ccbc722b4c2
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362102"
 ---
 # <a name="scriptblock-element-for-itemselectioncondition-for-listcontrol-format"></a>ListControl의 ItemSelectionCondition에 대한 ScriptBlock 요소(형식)
 
-조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트를 `true`으로 평가 하면 조건이 충족 되 고 목록 항목이 사용 됩니다. 이 요소는 목록 뷰를 정의할 때 사용 됩니다.
+조건을 트리거하는 스크립트를 지정 합니다. 이 스크립트가 `true`평가 되 면 조건이 충족 되 고 목록 항목이 사용 됩니다. 이 요소는 목록 뷰를 정의할 때 사용 됩니다.
 
 Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (format)이 listcontrol Element (format) ListEntries 요소에 대 한이 listcontrol (format) ListEntry 요소 ListEntries의이 listcontrol (Format) ListItems 요소 ListItems에 대 한이 listcontrol (format) ListItem 요소의 경우이 listcontrol (format)의 ListItem 요소에 대 한 itemselectioncondition 요소이 listcontrol의 ItemSelectionCondition (형식)
 
@@ -29,7 +29,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `ScriptBlock` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `ScriptBlock` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

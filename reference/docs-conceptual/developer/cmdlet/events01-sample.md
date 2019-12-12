@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 27d0ee5e-2589-4530-92ef-c09996b80994
 caps.latest.revision: 10
 ms.openlocfilehash: 8f745cc0e5ef6db7a6bbdf39d826103f3b8a98ce
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369742"
 ---
 # <a name="events01-sample"></a>Events01 샘플
@@ -29,10 +29,10 @@ ms.locfileid: "72369742"
 2. 솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다.
    그러면 Microsoft Visual Studio의 샘플 프로젝트가 열립니다.
 
-3. **빌드** 메뉴에서 **솔루션 빌드**를 선택 합니다.
-   샘플에 대 한 라이브러리는 기본 `\bin` 또는 `\bin\debug` 폴더로 빌드됩니다.
+3. **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.
+   샘플에 대 한 라이브러리는 기본 `\bin` 또는 `\bin\debug` 폴더에 빌드됩니다.
 
-### <a name="how-to-run-the-sample"></a>샘플을 실행 하는 방법
+### <a name="how-to-run-the-sample"></a>샘플을 실행하는 방법
 
 1. 다음 모듈 폴더를 만듭니다.
 
@@ -77,7 +77,7 @@ A file was created in the TEMP directory
 
 이 샘플에는 Windows PowerShell 2.0이 필요 합니다.
 
-## <a name="demonstrates"></a>보여
+## <a name="demonstrates"></a>데모
 
 이 샘플에서는 다음을 보여 줍니다.
 

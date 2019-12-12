@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 290d38e3-b9bd-4382-9671-2e28b32b7260
 caps.latest.revision: 6
 ms.openlocfilehash: a4036b1e9de85da7e0029e02cca9e0eaed462f70
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361482"
 ---
 # <a name="typename-element-for-selectioncondition-for-groupby-format"></a>GroupBy의 SelectionCondition에 대한 TypeName 요소(형식)
@@ -30,7 +30,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `TypeName` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `TypeName` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -48,11 +48,11 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="text-value"></a>텍스트 값
 
-.NET 형식의 정규화 된 이름 (예: `System.IO.DirectoryInfo`)을 지정 합니다.
+`System.IO.DirectoryInfo`와 같은 .NET 형식의 정규화 된 이름을 지정 합니다.
 
 ## <a name="remarks"></a>설명
 
-이 요소를 지정 하는 경우 `SelectionSetName` 요소를 지정할 수 없습니다. 선택 조건을 정의 하는 방법에 대 한 자세한 내용은 [데이터 표시 조건 정의](./defining-conditions-for-displaying-data.md)를 참조 하세요.
+이 요소를 지정 하면 `SelectionSetName` 요소를 지정할 수 없습니다. 선택 조건을 정의 하는 방법에 대 한 자세한 내용은 [데이터 표시 조건 정의](./defining-conditions-for-displaying-data.md)를 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 

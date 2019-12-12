@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 47358eca-7719-4d77-9e49-676b78e25aec
 caps.latest.revision: 7
 ms.openlocfilehash: 66d32f1a5c4994ae578aea0a2a52c2510f97a3b9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367922"
 ---
 # <a name="wraptables-element-format"></a>WrapTables 요소(형식)
@@ -29,7 +29,7 @@ Configuration 요소 (Format) DefaultSettings 요소 (format) WrapTables 요소 
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `WrapTables` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `WrapTables` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

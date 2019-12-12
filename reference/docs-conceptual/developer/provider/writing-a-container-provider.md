@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 524fd900-c0fe-4d13-87f2-14903a8fd5a4
 caps.latest.revision: 5
 ms.openlocfilehash: 48ab9102e8f1b17b3b533cc3b0aa1dacef0e2076
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366242"
 ---
 # <a name="writing-a-container-provider"></a>컨테이너 공급자 작성
@@ -105,7 +105,7 @@ protected override void GetChildItems(string path, bool recurse)
 
 ### <a name="implementing-getchildnames"></a>GetChildNames 구현
 
-[Containercmdletprovider. Getchildnames *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) 메서드는 반환 되는 경우를 제외 하 고 [Containercmdletprovider. Getchilditems *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 메서드와 유사 합니다. 단, 항목 자체가 아니라 항목의 name 속성입니다.
+[Containercmdletprovider. Getchildnames *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) 메서드는 항목 자체가 아니라 항목의 name 속성만 반환 한다는 점을 제외 하 고 [Containercmdletprovider. Getchilditems *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 메서드와 유사 하 게 제공 됩니다 (예를 들어).
 
 ```csharp
 protected override void GetChildNames(string path,

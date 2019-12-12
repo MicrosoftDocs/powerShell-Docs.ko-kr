@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 94eb0535-8002-4f17-9a2b-4be75ec20e5c
 caps.latest.revision: 18
 ms.openlocfilehash: 4a25c9d81df670dc10955065bfb66766cdb1bd33
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367872"
 ---
 # <a name="width-element-for-tablecolumnheader-for-tablecontrol-format"></a>TableControl의 TableColumnHeader에 대한 Width 요소(형식)
@@ -55,7 +55,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="example"></a>예제
 
-다음 예에서는 너비가 16 자인 `TableColumnHeader` 요소를 보여 줍니다.
+다음 예제에서는 너비가 16 자인 `TableColumnHeader` 요소를 보여 줍니다.
 
 ```xml
 <TableColumnHeader>

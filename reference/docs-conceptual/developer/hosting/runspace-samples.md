@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: c92a6d3d-8d34-4a76-bdc3-dea923d9858e
 caps.latest.revision: 17
 ms.openlocfilehash: e24d40746da91f60aaf2af655ddcadc88ab6a4db
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361002"
 ---
 # <a name="runspace-samples"></a>Runspace 샘플
@@ -42,7 +42,7 @@ ms.locfileid: "72361002"
 
  [Runspace09 샘플](./runspace09-sample.md) 이 샘플에서는 스크립트를 [system.web. Powershell](/dotnet/api/system.management.automation.powershell) 개체의 파이프라인에 추가 하는 방법과 스크립트를 비동기식으로 실행 하는 방법을 보여 줍니다. 이벤트는 스크립트의 출력을 처리하는 데 사용됩니다.
 
- [Runspace10 샘플](./runspace10-sample.md) 이 샘플에서는 기본 초기 세션 상태를 만드는 방법, [runspace](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)에 cmdlet을 추가 하는 방법, 초기 세션 상태를 사용 하는 runspace를 만드는 방법 및를 사용 하 여 명령을 실행 하는 방법을 보여 줍니다. [System.object. Powershell](/dotnet/api/system.management.automation.powershell) 개체입니다.
+ [Runspace10 샘플](./runspace10-sample.md) 이 샘플에서는 기본 초기 세션 상태를 만드는 방법, Runspace에 cmdlet을 추가 하는 방법, 초기 세션 상태를 사용 하는 runspace를 만드는 방법 및 [Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) [개체를](/dotnet/api/system.management.automation.powershell) 사용 하 여 명령을 실행 하는 방법을 보여 줍니다.
 
  [Runspace11 샘플](./runspace11-sample.md) 이 예에서는 [system.object](/dotnet/api/System.Management.Automation.ProxyCommand) 를 사용 하 여 기존 cmdlet을 호출 하지만 사용 가능한 매개 변수 집합을 제한 하는 프록시 명령을 만드는 방법을 보여 줍니다. 프록시 명령은 제한된 runspace를 만드는 데 사용되는 초기 세션 상태에 추가됩니다. 따라서 사용자가 프록시 명령을 통해서만 cmdlet의 기능에 액세스할 수 있습니다.
 

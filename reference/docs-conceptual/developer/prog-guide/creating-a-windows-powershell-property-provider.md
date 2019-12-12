@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: a6adca44-b94b-4103-9970-a9b414355e60
 caps.latest.revision: 5
 ms.openlocfilehash: 9197f5635528e0f52cd08adde1c6bd69467725e8
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417472"
 ---
 # <a name="creating-a-windows-powershell-property-provider"></a>Windows PowerShell 속성 공급자 만들기
@@ -88,7 +88,7 @@ System.object [를](/dotnet/api/System.Management.Automation.Provider.IPropertyC
 
 - System.object 구현에서는 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 방법으로 구현 해야 합니다. ". [i](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) n d. 이 메서드는 시스템 상태가 변경 될 때 (예: 파일 이름 바꾸기) 작업 실행을 확인 하는 데 사용 됩니다. Windows PowerShell 런타임을 사용 하 여 사용자에 게 변경할 리소스의 [이름을 보내고,](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 표시 되는 항목을 결정 하는 데 필요한 명령줄 설정 또는 기본 변수를 처리 합니다.
 
-  [System.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 를 호출한 후에는 `true`를 반환 하 고 잠재적으로 위험한 시스템을 수정할 수 있는 경우에는 system.object를 호출 해야 합니다. 즉, system.object를 수정할 수 있습니다. [Setproperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 메서드는 system.object를 호출 해야 합니다. [shouldprocess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드. 이 메서드는 사용자에 게 확인 메시지를 보내 작업을 계속 해야 함을 나타내는 추가 피드백을 허용 합니다.
+  [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)에 대한 호출이 `true`을 반환한 후 잠재적으로 위험한 시스템 수정을 수행할 수 있는 경우에는 [System.Management.Automation.Provider.Ipropertycmdletprovider.Setproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 메서드는 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 호출해야 합니다. 이 메서드는 사용자에 게 확인 메시지를 보내 작업을 계속 해야 함을 나타내는 추가 피드백을 허용 합니다.
 
 ## <a name="attaching-dynamic-parameters-for-the-set-itemproperty-cmdlet"></a>Get-itemproperty Cmdlet에 대 한 동적 매개 변수 연결
 
@@ -116,7 +116,7 @@ System.object [를](/dotnet/api/System.Management.Automation.Provider.IPropertyC
 
 - [System.object](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) 구현에서는 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 것이 좋습니다.-... a n d. 이 메서드는 콘텐츠 지우기와 같은 시스템 상태를 변경 하기 전에 작업 실행을 확인 하는 데 사용 됩니다. Windows PowerShell 런타임이 사용자에 게 변경할 리소스의 [이름을 보내고,](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 표시 되는 항목을 결정 하는 데 사용 되는 모든 명령줄 설정이 나 기본 설정 변수를 고려 하 여 Windows PowerShell 런타임을 사용 합니다.
 
-  잠재적으로 위험한 시스템 수정을 수행할 수 있는 경우에는 System.object를 호출한 후에는 `true`를 반환 [합니다.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 이 경우에는 system.object를 수정할 수 있습니다. [clearproperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) 메서드는 system.object를 호출 해야 합니다. [shouldprocess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 호출 합니다. 이 메서드는 사용자에 게 확인 메시지를 보내 잠재적으로 위험한 작업을 계속 해야 함을 나타낼 수 있습니다.
+  [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)에 대한 호출이 `true`을 반환한 후 잠재적으로 위험한 시스템 수정을 수행할 수 있는 경우에는 [System.Management.Automation.Provider.Ipropertycmdletprovider.Setproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) 메서드는 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 호출해야 합니다. 이 메서드는 사용자에 게 확인 메시지를 보내 잠재적으로 위험한 작업을 계속 해야 함을 나타낼 수 있습니다.
 
 ## <a name="attaching-dynamic-parameters-to-the-clear-itemproperty-cmdlet"></a>Get-itemproperty Cmdlet에 동적 매개 변수 연결
 
@@ -130,7 +130,7 @@ System.object [를](/dotnet/api/System.Management.Automation.Provider.IPropertyC
 
 [Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법을](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)참조 하세요.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell 공급자](./designing-your-windows-powershell-provider.md)
 

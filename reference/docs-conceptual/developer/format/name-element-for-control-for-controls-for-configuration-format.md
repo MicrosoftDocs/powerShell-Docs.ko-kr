@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: b4371d45-49a4-4303-8384-5b54105bd0d6
 caps.latest.revision: 8
 ms.openlocfilehash: 2704a530e0ae269efb772ac10e531bcbb12f6eff
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362712"
 ---
 # <a name="name-element-for-control-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 Control에 대한 Name 요소(형식)
@@ -30,7 +30,7 @@ ms.locfileid: "72362712"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `Name` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `Name` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: 55f0f664-d2ad-4501-a3dc-9f7a27c8ab11
 caps.latest.revision: 8
 ms.openlocfilehash: 6d8b189ed6311efd5a7348ab1e58934e9bff12a3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365512"
 ---
 # <a name="how-to-validate-an-argument-set"></a>인수 집합을 확인하는 방법

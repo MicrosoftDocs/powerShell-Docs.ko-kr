@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 014763cb-7716-4931-899c-8375b5d7a3dd
 caps.latest.revision: 15
 ms.openlocfilehash: d1d13b5c3436871053353814293d9163ea13c7fb
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367902"
 ---
 # <a name="wideentry-element-for-widecontrol-format"></a>WideControl에 대한 WideEntry 요소(형식)
@@ -32,7 +32,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `WideEntry` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 단일 `WideItem` 자식 요소를 지정 해야 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `WideEntry` 요소의 부모 요소에 대해 설명 합니다. 단일 `WideItem` 자식 요소를 지정 해야 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -43,7 +43,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 |요소|설명|
 |-------------|-----------------|
 |[WideEntry (형식)에 대 한 EntrySelectedBy 요소](./entryselectedby-element-for-wideentry-format.md)|선택적 요소입니다.<br /><br /> 이 정의를 사용 하기 위해 존재 해야 하는 조건 또는이 광범위 한 항목 정의를 사용 하는 .NET 형식을 정의 합니다.|
-|[WideItem 요소 (Format)](./wideitem-element-for-widecontrol-format.md)|필수 요소입니다.<br /><br /> 값이 표시 되는 속성 또는 스크립트를 정의 합니다.|
+|[WideItem 요소 (Format)](./wideitem-element-for-widecontrol-format.md)|필수적 요소입니다.<br /><br /> 값이 표시 되는 속성 또는 스크립트를 정의 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
@@ -57,7 +57,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="example"></a>예제
 
-다음 예에서는 단일 `WideItem` 요소를 정의 하는 `WideEntry` 요소를 보여 줍니다. @No__t-0 요소는 값이 뷰에 표시 되는 속성을 정의 합니다.
+다음 예제에서는 단일 `WideItem` 요소를 정의 하는 `WideEntry` 요소를 보여 줍니다. `WideItem` 요소는 값이 뷰에 표시 되는 속성을 정의 합니다.
 
 ```xml
 <WideEntries>

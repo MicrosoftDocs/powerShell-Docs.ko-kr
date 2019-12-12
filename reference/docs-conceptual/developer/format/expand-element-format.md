@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: faa0314b-f6f1-44fd-ad2b-b00cbe38923f
 caps.latest.revision: 9
 ms.openlocfilehash: 8b924c989133b47e4d95d8429778003c76595d58
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368742"
 ---
 # <a name="expand-element-format"></a>Expand 요소(형식)
@@ -29,7 +29,7 @@ Configuration 요소 (Format) DefaultSettings 요소 (format) EnumerableExpansio
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `Expand` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `Expand` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -47,7 +47,7 @@ Configuration 요소 (Format) DefaultSettings 요소 (format) EnumerableExpansio
 
 ## <a name="text-value"></a>텍스트 값
 
-다음 값 중 하나를 지정 합니다.
+다음 값 중 하나를 지정합니다.
 
 - EnumOnly: 컬렉션에 있는 개체의 속성만 표시 합니다.
 

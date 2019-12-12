@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 42c40c7f-1ee7-4021-950c-2e013c8f2a4a
 caps.latest.revision: 4
 ms.openlocfilehash: 606a2ee4e70d303bf1b1d69b7523eb8649f9be0c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367612"
 ---
 # <a name="creating-multiple-runspaces"></a>여러 runspace 만들기

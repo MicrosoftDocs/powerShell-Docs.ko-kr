@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 8ae2196d-d6c8-4101-8805-4190d293af51
 caps.latest.revision: 13
 ms.openlocfilehash: 19d31f6b619dff23e7e35bb53d2397f4f41eb728
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369882"
 ---
 # <a name="cmdlet-dynamic-parameters"></a>Cmdlet 동적 매개 변수
@@ -24,9 +24,9 @@ Cmdlet은 다른 매개 변수의 인수가 특정 값인 경우와 같이 사�
 
 ## <a name="dynamic-parameters-in-powershell-cmdlets"></a>PowerShell cmdlet의 동적 매개 변수
 
-PowerShell은 여러 공급자 cmdlet에서 동적 매개 변수를 사용 합니다. 예를 들어 `Get-Item` 및 `Get-ChildItem` cmdlet은 **Path** 매개 변수가 **인증서** 공급자 경로를 지정 하는 경우 런타임에 **codesigningcert** 매개 변수를 추가 합니다. **Path** 매개 변수가 다른 공급자의 경로를 지정 하는 경우 **Codesigningcert** 매개 변수를 사용할 수 없습니다.
+PowerShell은 여러 공급자 cmdlet에서 동적 매개 변수를 사용 합니다. 예를 들어 `Get-Item` 및 `Get-ChildItem` cmdlet은 **path** 매개 변수에서 **인증서** 공급자 경로를 지정 하는 경우 런타임에 **codesigningcert** 매개 변수를 추가 합니다. **Path** 매개 변수가 다른 공급자의 경로를 지정 하는 경우 **Codesigningcert** 매개 변수를 사용할 수 없습니다.
 
-다음 예에서는 `Get-Item`이 실행 될 때 **Codesigningcert** 매개 변수가 런타임에 추가 되는 방법을 보여 줍니다.
+다음 예에서는 `Get-Item` 실행 될 때 **Codesigningcert** 매개 변수가 런타임에 추가 되는 방법을 보여 줍니다.
 
 이 예에서는 PowerShell 런타임에서 매개 변수를 추가 하 고 cmdlet이 성공 했습니다.
 

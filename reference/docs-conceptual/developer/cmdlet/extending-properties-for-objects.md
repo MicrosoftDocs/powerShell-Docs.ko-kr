@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: f33ff3e9-213c-44aa-92ab-09450e65c676
 caps.latest.revision: 11
 ms.openlocfilehash: 3b14007384cca0d0cfa35655aee437adf73b1ff0
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364452"
 ---
 # <a name="extending-properties-for-objects"></a>개체 속성 확장
@@ -130,7 +130,7 @@ Note 속성은 정적 값이 있는 속성을 정의 합니다.
 </Type>
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Types.ps1xml 정보](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)
 

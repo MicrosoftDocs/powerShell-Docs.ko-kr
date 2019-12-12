@@ -3,10 +3,10 @@ title: Windows PowerShell API를 사용하여 작업 예약
 ms.date: 09/13/2016
 ms.topic: article
 ms.openlocfilehash: 4e1d4ed6bffd858b92bf29b1dc6d8503454fafda
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359832"
 ---
 # <a name="scheduling-jobs-with-the-windows-powershell-api"></a>Windows PowerShell API를 사용하여 작업 예약
@@ -54,7 +54,7 @@ jobDefParameters.Add("ScriptBlock", scriptBlock);  // A scriptblock or script Fi
 
 ## <a name="creating-the-invocation-and-job-definition-objects"></a>호출 및 작업 정의 개체 만들기
 
-그런 다음 ScheduledJobInvocationInfo 및 ScheduledJobDefinition 개체를 만들어 작업을 실행 합니다. 다음 코드에서는이를 보여 줍니다.
+그런 다음 ScheduledJobInvocationInfo 및 ScheduledJobDefinition 개체를 만들어 작업을 실행 합니다. 다음 코드에서는 이 작업을 보여 줍니다.
 
 ```csharp
 ScheduledJobInvocationInfo jobInvocationInfo = new ScheduledJobInvocationInfo(

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 495869a6-080e-4401-9ddc-16edd2f86857
 caps.latest.revision: 6
 ms.openlocfilehash: 2c1fbd70aab1f65f33ea206b7ab1e2bd3dfd8c7a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367142"
 ---
 # <a name="how-to-update-help-files"></a>도움말 파일을 업데이트하는 방법

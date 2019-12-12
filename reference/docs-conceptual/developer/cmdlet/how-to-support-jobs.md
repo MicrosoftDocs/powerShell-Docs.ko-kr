@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 5eac452c-eae2-4193-b4da-0b618bef3677
 caps.latest.revision: 9
 ms.openlocfilehash: d732bce1af446090c3e5741eebeba737f86c7ca8
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369662"
 ---
 # <a name="how-to-support-jobs"></a>작업을 지원하는 방법

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: daea8c6f-873a-4639-9eee-599642822958
 caps.latest.revision: 6
 ms.openlocfilehash: 697f2ea284393ebddd77a862c408f27f3d332900
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361972"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-controls-for-view-format"></a>View에 대한 Controls의 SelectionCondition에 대한 SelectionSetName 요소(형식)
@@ -29,7 +29,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (Format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `SelectionSetName` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `SelectionSetName` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

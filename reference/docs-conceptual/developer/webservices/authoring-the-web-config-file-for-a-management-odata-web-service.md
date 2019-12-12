@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: d569f5d5-9746-40c0-be5e-f218bc4560f7
 caps.latest.revision: 4
 ms.openlocfilehash: f52953ee091f05df5f355719ecba788d3d5ee055
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359792"
 ---
 # <a name="authoring-the-webconfig-file-for-a-management-odata-web-service"></a>관리 OData 웹 서비스용 Web.config 파일 작성
 
-관리 OData 웹 서비스를 배포 하려면 먼저 XML 스키마 파일 및 [Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) [를 구현 하는 dll을 가리키도록 web.config 파일을 구성 해야 합니다. Register-pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) 인터페이스를 호출 합니다.
+관리 OData 웹 서비스를 배포 하려면 먼저 [Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 및 [register-pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) 인터페이스를 구현 하는 dll과 XML 스키마 파일을 가리키도록 web.config 파일을 구성 해야 합니다 .이 파일을 구성 해야 합니다.
 
 ## <a name="sample-config-file"></a>샘플 구성 파일
 

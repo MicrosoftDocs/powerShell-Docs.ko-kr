@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: def37479-7b6e-40cf-bc81-0f7cbc651b31
 caps.latest.revision: 11
 ms.openlocfilehash: 6dbaef5886a0600bd9fe96dbc8d21f00a674dfcf
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369052"
 ---
 # <a name="autosize-element-for-widecontrol-format"></a>WideControl에 대한 AutoSize 요소(형식)
@@ -29,7 +29,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (Format) View Element (form
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `AutoSize` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `AutoSize` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

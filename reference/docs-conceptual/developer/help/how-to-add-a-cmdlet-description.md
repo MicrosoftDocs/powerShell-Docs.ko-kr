@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 47af9d57-bd63-4596-816a-0b717418476b
 caps.latest.revision: 10
 ms.openlocfilehash: a2e4c4d42566d5a52006924eab02295c37cf3159
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361282"
 ---
 # <a name="how-to-add-a-cmdlet-description"></a>Cmdlet 설명을 추가하는 방법

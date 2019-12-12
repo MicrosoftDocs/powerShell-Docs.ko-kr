@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 2b9da6c5-548b-480f-86ae-6de6fecabaca
 caps.latest.revision: 8
 ms.openlocfilehash: 06089730008839f18c471711a4b4411722f99c38
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363782"
 ---
 # <a name="expressionbinding-element-for-customitem-for-controls-for-view-format"></a>View에 대한 Controls의 CustomItem에 대한 ExpressionBinding 요소(형식)
@@ -36,7 +36,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (Format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `ExpressionBinding` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `ExpressionBinding` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

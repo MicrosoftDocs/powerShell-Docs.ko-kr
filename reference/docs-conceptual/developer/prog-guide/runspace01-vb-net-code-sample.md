@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: 12ee5382-95ba-41c7-8291-7f69a6f63514
 caps.latest.revision: 7
 ms.openlocfilehash: 19de0fd33cd764c161366c8161adf46c2247482b
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360222"
 ---
 # <a name="runspace01-vbnet-code-sample"></a>Runspace01(VB.NET) 코드 샘플
 
 다음은 [지정 된 명령을 실행 하는 콘솔 응용 프로그램 만들기](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program)에서 설명 하는 runspace에 대 한 코드 샘플입니다. 이렇게 하기 위해 응용 프로그램은 runspace를 호출한 다음 명령을 호출 합니다. 이 응용 프로그램은 runspace 구성 정보를 지정 하지 않으며 파이프라인을 명시적으로 만들지 않습니다. 호출 되는 명령은 `Get-Process` cmdlet입니다.
 
-## <a name="code-sample"></a>코드 샘플
+## <a name="code-sample"></a>코드 예제
 
 ```vb
 Imports System

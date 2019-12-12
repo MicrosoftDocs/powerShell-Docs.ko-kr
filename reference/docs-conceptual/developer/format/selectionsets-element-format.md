@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ebbac73a-1c99-4388-9f47-703cd024dc6d
 caps.latest.revision: 18
 ms.openlocfilehash: a9356635d60d5f8c5d4dec4ec8b7d0aea2b037dd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361872"
 ---
 # <a name="selectionsets-element-format"></a>SelectionSets 요소(형식)
@@ -41,7 +41,7 @@ ms.locfileid: "72361872"
 
 |요소|설명|
 |-------------|-----------------|
-|[SelectionSet 요소 (형식)](./selectionset-element-format.md)|필수 요소입니다.<br /><br /> 집합의 이름으로 참조할 수 있는 단일 .NET 개체 집합을 정의 합니다.|
+|[SelectionSet 요소 (형식)](./selectionset-element-format.md)|필수적 요소입니다.<br /><br /> 집합의 이름으로 참조할 수 있는 단일 .NET 개체 집합을 정의 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d0c6d03f-1c1a-43d8-928e-e3290e90e0bc
 caps.latest.revision: 5
 ms.openlocfilehash: 0210b5ed3104777541692a0e78e7d3b16f9c8256
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361212"
 ---
 # <a name="how-to-add-syntax-to-a-cmdlet-help-topic"></a>Cmdlet 도움말 항목에 구문을 추가하는 방법

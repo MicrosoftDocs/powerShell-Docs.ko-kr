@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 64087c6c-2abd-446d-b837-7d3ee03a6874
 caps.latest.revision: 11
 ms.openlocfilehash: 102fe1b9c3bd04562aa296f390ec549d5f8f35e9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361392"
 ---
 # <a name="wrap-element-for-tablerowentry-for-tablecontrol--format"></a>TableControl의 TableRowEntry에 대한 Wrap 요소(형식)

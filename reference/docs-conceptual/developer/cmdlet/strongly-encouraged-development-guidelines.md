@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 4d68a8f3-fba0-44c5-97b9-9fc191d269a5
 caps.latest.revision: 13
 ms.openlocfilehash: 0906d0d37c66b8c1538a0b2e9e0f1ff2fba12ac0
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369342"
 ---
 # <a name="strongly-encouraged-development-guidelines"></a>적극 권장되는 개발 지침
@@ -53,7 +53,7 @@ Cmdlet 이름에 사용 되는 명사는 사용자가 cmdlet을 검색할 수 �
 
 ### <a name="use-pascal-case-for-cmdlet-names-sd02"></a>Cmdlet 이름으로 파스칼식 대/소문자 사용 (SD02)
 
-매개 변수 이름으로 파스칼식 대/소문자를 사용 합니다. 즉, 동사에서 첫 글자를 대문자로 사용 하 고 모든 용어를 명사에 사용 합니다. 예를 들어 "`Clear-ItemProperty`"입니다.
+매개 변수 이름으로 파스칼식 대/소문자를 사용 합니다. 즉, 동사에서 첫 글자를 대문자로 사용 하 고 모든 용어를 명사에 사용 합니다. 예를 들면 "`Clear-ItemProperty`"입니다.
 
 ### <a name="parameter-design-guidelines-sd03"></a>매개 변수 디자인 지침 (SD03)
 
@@ -240,7 +240,7 @@ Cmdlet에서 개체를 반환 하는 경우 cmdlet은 생성 되는 즉시 개�
 
 기본적으로 Windows PowerShell 자체는 대/소문자를 구분 하지 않습니다. 그러나 많은 기존 시스템을 처리 하기 때문에 Windows PowerShell은 작업 및 호환성을 위해 대/소문자를 유지 합니다. 즉, 문자를 대문자로 제공 하는 경우 Windows PowerShell은 해당 문자를 대문자로 유지 합니다. 시스템이 제대로 작동 하려면 cmdlet이이 규칙을 따라야 합니다. 가능 하면 대/소문자를 구분 하지 않는 방식으로 작동 해야 합니다. 그러나 나중에 명령이 나 파이프라인에서 발생 하는 cmdlet에 대 한 원래 사례를 유지 해야 합니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [필수 개발 지침](./required-development-guidelines.md)
 

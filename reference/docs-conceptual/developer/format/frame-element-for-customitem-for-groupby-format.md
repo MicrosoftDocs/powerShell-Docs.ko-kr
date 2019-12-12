@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ab2a5379-299d-4c97-86a2-b639ea890fae
 caps.latest.revision: 6
 ms.openlocfilehash: 7f9066c0fe0954fadff9dc8f0c35a62c6710f516
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362952"
 ---
 # <a name="frame-element-for-customitem-for-groupby-format"></a>GroupBy의 CustomItem에 대한 Frame 요소(형식)
@@ -35,7 +35,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `Frame` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `Frame` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

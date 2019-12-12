@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: a26661f2-a63c-4ca7-ad3e-dcb4d32ce5a1
 caps.latest.revision: 8
 ms.openlocfilehash: d7d6d3b377a0089bcf96d0ea46e866321441b537
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359972"
 ---
 # <a name="accessdbprovidersample05"></a>AccessDBProviderSample05
 
 이 샘플에서는 `Move-Item` 및 `Join-Path` cmdlet에 대 한 호출을 지원 하도록 컨테이너 메서드를 덮어쓰는 방법을 보여 줍니다. 이러한 메서드는 사용자가 컨테이너 내의 항목을 이동해야 하고 데이터 저장소에 중첩된 컨테이너가 포함되는 경우에 구현해야 합니다. 이 샘플의 공급자 클래스는 [system.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 에서 파생 된 공급자 클래스에서 파생 됩니다.
 
-## <a name="demonstrates"></a>보여
+## <a name="demonstrates"></a>데모
 
 > [!IMPORTANT]
 > 공급자 클래스는 다음 클래스 중 하나에서 파생 되 고 다른 공급자 인터페이스를 구현할 수 있습니다.
@@ -32,13 +32,13 @@ ms.locfileid: "72359972"
 
 이 샘플은 다음을 보여 줍니다.
 
-- @No__t-0 특성을 선언 합니다.
+- `CmdletProvider` 특성을 선언 합니다.
 
 - [System.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 클래스에서 파생 되는 공급자 클래스를 정의 합니다.
 
-- @No__t-1 cmdlet의 동작을 변경 하 여 사용자가 한 위치에서 다른 위치로 항목을 이동할 수 있도록 하는 [Moveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 메서드를 덮어씁니다. (이 샘플은 `Move-Item` cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
+- `Move-Item` cmdlet의 동작을 변경 하 여 사용자가 한 위치에서 다른 위치로 항목을 이동할 수 있도록 하는 [Moveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 메서드를 덮어씁니다. (이 샘플은 `Move-Item` cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
 
-- @No__t-1 cmdlet의 동작을 변경 하 [는 메서드를 덮어쓴 경우. @](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) @ @.
+- `Join-Path` cmdlet의 동작을 변경 하기 위해 [System.web 경로 *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) 메서드를 덮어쓰고 있습니다.
 
 - System.object를 덮어씁니다. [Isitemcontainer *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) 메서드를 덮어씁니다.
 

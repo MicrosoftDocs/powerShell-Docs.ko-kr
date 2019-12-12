@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 2933a6ca-fe92-4ba2-97ee-ef0f0d5fdfcf
 caps.latest.revision: 8
 ms.openlocfilehash: b73284adb4bf228510bf8134aa4c6a10561b7ea2
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359772"
 ---
 # <a name="configuring-role-based-authorization"></a>역할 기반 권한 부여 구성
@@ -23,7 +23,7 @@ ms.locfileid: "72359772"
 
 ## <a name="modifying-the-rbacconfigurationxml-file"></a>RBacConfiguration 파일 수정
 
-이 파일은 응용 프로그램에 대 한 권한 부여 정책을 정의 합니다. 역할은 `Group` 노드를 사용 하 여 정의 됩니다. @No__t_0 노드는 해당 그룹에 할당 된 사용자가 실행할 수 있는 Windows PowerShell 명령을 정의 합니다. 사용자는 `User` 노드를 사용 하 여 그룹에 할당 됩니다.
+이 파일은 응용 프로그램에 대 한 권한 부여 정책을 정의 합니다. 역할은 `Group` 노드를 사용 하 여 정의 됩니다. `Group` 노드는 해당 그룹에 할당 된 사용자가 실행할 수 있는 Windows PowerShell 명령을 정의 합니다. 사용자는 `User` 노드를 사용 하 여 그룹에 할당 됩니다.
 
 이 예에서는 관리자 `Group` 노드에 모듈을 추가 하 고 각 그룹에 사용자를 추가 합니다.
 
@@ -97,9 +97,9 @@ ms.locfileid: "72359772"
 
 #### <a name="adding-a-user-to-a-group-node"></a>그룹 노드에 사용자 추가
 
-1. 텍스트 편집기에서 **RBacConfiguration** 파일을 엽니다. 이 파일은 설치 전에 끝점 이름을 변경 하지 않은 경우 C: \\ \inetpub\wwwroot\Modata 폴더에 있습니다.
+1. 텍스트 편집기에서 **RBacConfiguration** 파일을 엽니다. 이 파일은 설치 전에 끝점 이름을 변경 하지 않은 경우 C:\\\inetpub\wwwroot\Modata 폴더에 있습니다.
 
-2. @No__t_0 노드의 닫는 태그 바로 뒤에 다음 XML을 추가 합니다.
+2. `Users` 노드의 닫는 태그 바로 뒤에 다음 XML을 추가 합니다.
 
    ```xml
    <User Name="UserName" GroupName="AdminGroup" AuthenticationType="Basic" DomainName="DomainName"/>

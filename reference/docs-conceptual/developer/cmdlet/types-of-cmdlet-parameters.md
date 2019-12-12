@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 6602730d-3892-4656-80c7-7bca2d14337f
 caps.latest.revision: 14
 ms.openlocfilehash: f5781c0c03aca41d01a44598a9a8c00d6d21d2fd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369312"
 ---
 # <a name="types-of-cmdlet-parameters"></a>Cmdlet 매개 변수 형식
@@ -52,7 +52,7 @@ private string userName;
 
 위치 및 명명 된 매개 변수는 단일 인수 또는 쉼표로 구분 된 여러 인수를 허용 합니다. 매개 변수가 문자열 배열과 같은 컬렉션을 허용 하는 경우에만 여러 인수를 사용할 수 있습니다. 동일한 cmdlet에서 위치 및 명명 된 매개 변수를 혼합할 수 있습니다. 이 경우 시스템은 명명 된 인수를 먼저 검색 한 다음 나머지 명명 되지 않은 인수를 위치 매개 변수에 매핑하려고 시도 합니다.
 
-다음 명령은 `Get-Command` cmdlet의 매개 변수에 대 한 단일 인수와 여러 인수를 지정할 수 있는 여러 가지 방법을 보여 줍니다. @No__t-1 매개 변수가 위치 매개 변수로 정의 되어 있으므로 마지막 두 샘플에서 **-name** 을 지정할 필요가 없습니다.
+다음 명령은 `Get-Command` cmdlet의 매개 변수에 대 한 단일 인수와 여러 인수를 지정할 수 있는 여러 가지 방법을 보여 줍니다. 마지막 두 샘플에서 `Name` 매개 변수는 위치 매개 변수로 정의 되므로 **이름을** 지정할 필요가 없습니다.
 
 ```powershell
 Get-Command -Name get-service
@@ -91,11 +91,11 @@ private string userName;
 
 ## <a name="switch-parameters"></a>스위치 매개 변수
 
-Windows PowerShell은 cmdlet을 호출할 때 매개 변수가 지정 되지 않은 경우 값이 `false`로 자동 설정 되는 매개 변수를 정의할 수 있도록 하는 [system.web 매개 변수](/dotnet/api/System.Management.Automation.SwitchParameter) 형식을 제공 합니다. 가능 하면 부울 매개 변수 대신 스위치 매개 변수를 사용 합니다.
+Windows PowerShell은 cmdlet을 호출할 때 매개 변수가 지정 되지 않은 경우 해당 값이 `false` 자동으로 설정 되는 매개 변수를 정의할 수 있도록 하는 [system.web. switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter) 형식을 제공 합니다. 가능 하면 부울 매개 변수 대신 스위치 매개 변수를 사용 합니다.
 
-다음 샘플을 참조 하세요. 기본적으로 여러 Windows PowerShell cmdlet은 출력 개체를 파이프라인 아래로 전달 하지 않습니다. 그러나 이러한 cmdlet에는 기본 동작을 재정의 하는 `PassThru` 스위치 매개 변수가 있습니다. 이러한 cmdlet을 호출할 때 `PassThru` 매개 변수가 지정 된 경우 cmdlet은 출력 개체를 파이프라인에 반환 합니다.
+다음 샘플을 참조 하세요. 기본적으로 여러 Windows PowerShell cmdlet은 출력 개체를 파이프라인 아래로 전달 하지 않습니다. 그러나 이러한 cmdlet에는 기본 동작을 재정의 하는 `PassThru` 스위치 매개 변수가 있습니다. 이러한 cmdlet을 호출할 때 `PassThru` 매개 변수를 지정 하면 cmdlet이 출력 개체를 파이프라인에 반환 합니다.
 
-호출에 매개 변수가 지정 되지 않은 경우 매개 변수의 기본값을 `true`으로 지정 해야 하는 경우 매개 변수의 의미를 반대로 하는 것이 좋습니다. 샘플의 경우 매개 변수 특성을 부울 값 `true`으로 설정 하는 대신 속성을 [system.object](/dotnet/api/System.Management.Automation.SwitchParameter) 로 선언한 다음 매개 변수의 기본값을 `false`로 설정 합니다.
+호출에 매개 변수가 지정 되지 않은 경우 매개 변수가 `true`의 기본값을 갖도록 하려면 매개 변수의 의미를 반대로 하는 것이 좋습니다. 샘플의 경우 매개 변수 특성을 `true`부울 값으로 설정 하는 대신 속성을 [system.object](/dotnet/api/System.Management.Automation.SwitchParameter) 로 선언한 다음 매개 변수의 기본값을 `false`로 설정 합니다.
 
 스위치 매개 변수를 정의 하려면 다음 샘플과 같이 속성을 [System.object 매개 변수](/dotnet/api/System.Management.Automation.SwitchParameter) 형식으로 선언 합니다.
 

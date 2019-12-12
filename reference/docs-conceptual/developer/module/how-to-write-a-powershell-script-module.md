@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ed7645ea-5e52-4a45-81a7-aa3c2d605cde
 caps.latest.revision: 16
 ms.openlocfilehash: 7742eedd67283535b9e5898adc74d0d48faf68fe
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416269"
 ---
 # <a name="how-to-write-a-powershell-script-module"></a>PowerShell 스크립트 모듈을 작성하는 방법

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: aea8d293-c45b-41eb-8385-548f7c9b280b
 caps.latest.revision: 10
 ms.openlocfilehash: 14505c4f7cc8490418ca463e3b81902f29d4f90b
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72370002"
 ---
 # <a name="attributes-in-cmdlet-code"></a>Cmdlet 코드의 특성

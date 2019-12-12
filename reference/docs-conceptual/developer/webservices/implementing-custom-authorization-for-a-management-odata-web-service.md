@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ae37e3f3-5fd6-4ff6-bf66-a249ff96822b
 caps.latest.revision: 7
 ms.openlocfilehash: 2afa0e79d9de781149f31a45666d13f98ca10a26
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359682"
 ---
 # <a name="implementing-custom-authorization-for-a-management-odata-web-service"></a>관리 OData 웹 서비스에 대한 사용자 지정 권한 부여 구현
@@ -21,7 +21,7 @@ Windows PowerShell 웹 서비스를 사용 하려면 Windows PowerShell cmdlet�
 
 ## <a name="pass-through-authorization"></a>통과 권한 부여
 
-[CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 인터페이스를 구현 하는 가장 간단한 방법은 모든 사용자에 게 권한을 부여 하는 통과 구현입니다. 이 예제에서는 보안을 제공 하지 않으며,는 인터페이스를 구현 하는 방법에 대 한 그림 으로만 제공 됩니다. [CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 인터페이스를 구현 하는 경우에는 두 메서드인 [CustomAuthorization AuthorizeUser](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) 를 [재정의 해야 합니다. CustomAuthorization. GetMembershipId](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId). 이 예제에서 AuthorizeUser는 항상 현재 사용자와 연결 된 **WindowsIdentity** 개체를 반환 합니다. [CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) .
+[CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 인터페이스를 구현 하는 가장 간단한 방법은 모든 사용자에 게 권한을 부여 하는 통과 구현입니다. 이 예제에서는 보안을 제공 하지 않으며,는 인터페이스를 구현 하는 방법에 대 한 그림 으로만 제공 됩니다. [CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 인터페이스를 구현 하는 경우에는 [CustomAuthorization와 AuthorizeUser](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) 및 CustomAuthorization의 두 메서드를 재정의 해야 합니다. [GetMembershipId](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId). 이 예제에서 AuthorizeUser는 항상 현재 사용자와 연결 된 **WindowsIdentity** 개체를 반환 합니다. [CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) .
 
 ```csharp
 namespace Microsoft.Samples. HYPERLINK "VBScript:u(%227%22,19)" Management. HYPERLINK "VBScript:u(%227%22,30)" OData. HYPERLINK "VBScript:u(%227%22,36)" BasicPlugins
@@ -738,4 +738,4 @@ namespace Microsoft.Samples.Management.OData.RoleBasedPlugins
 }
 ```
 
-마지막으로, RbacSystem 클래스는 사용자에 대 한 사용 권한을 확인 하 고 CustomAuthorization 구현에 정의 된 메서드에 권한 부여 상태를 반환 하는 메서드를 구현 합니다 [.](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 감열재.
+마지막으로, RbacSystem 클래스는 사용자에 대 한 사용 권한을 확인 하 고 [CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 인터페이스 구현에 정의 된 메서드에 권한 부여 상태를 반환 하는 메서드를 구현 합니다.

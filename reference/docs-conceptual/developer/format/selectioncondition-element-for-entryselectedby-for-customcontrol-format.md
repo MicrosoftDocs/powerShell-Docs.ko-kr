@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 231e9c6d-09ec-4e68-80ee-0c8f7fe1b9f5
 caps.latest.revision: 7
 ms.openlocfilehash: 49e2c0cf09dfa55b535effcd431e980daf12fac3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368442"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-customcontrol-format"></a>CustomControl의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
@@ -34,7 +34,7 @@ Configuration 요소 (Format) ViewDefinitions element (Format) View 요소 (form
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `SelectionCondition` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `SelectionCondition` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

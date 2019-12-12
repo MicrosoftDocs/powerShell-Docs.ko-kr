@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 8ab0f033-df09-4435-a8bd-76ec2d01f13b
 caps.latest.revision: 13
 ms.openlocfilehash: d1de2b30860bac80bf17508f40eec33c2794c4b2
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368262"
 ---
 # <a name="selectionsetname-element-for-viewselectedby-format"></a>ViewSelectedBy에 대한 SelectionSetName 요소(형식)
@@ -29,7 +29,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `SelectionSetName` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `SelectionSetName` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -47,7 +47,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="text-value"></a>텍스트 값
 
-선택 집합의 `Name` 요소로 정의 된 선택 집합의 이름을 지정 합니다.
+선택 집합의 `Name` 요소에 정의 된 선택 집합의 이름을 지정 합니다.
 
 ## <a name="remarks"></a>설명
 

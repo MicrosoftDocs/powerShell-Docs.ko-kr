@@ -9,21 +9,21 @@ ms.topic: article
 ms.assetid: c1e05821-6aec-437b-84a5-218a5727f88b
 caps.latest.revision: 10
 ms.openlocfilehash: 8a5b84b6a461e9fc340a5981578d95ca2ac6b9f7
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363902"
 ---
 # <a name="defining-conditions-for-displaying-data"></a>데이터 표시 조건 정의
 
-보기 또는 컨트롤에 의해 표시 되는 데이터를 정의 하는 경우 데이터를 표시 하기 위해 존재 해야 하는 조건을 지정할 수 있습니다. 조건은 특정 속성에 의해 트리거하거나 스크립트나 속성 값이 `true`으로 평가 되는 경우에 발생할 수 있습니다. 선택 조건이 충족 되 면 뷰나 컨트롤의 정의가 사용 됩니다.
+보기 또는 컨트롤에 의해 표시 되는 데이터를 정의 하는 경우 데이터를 표시 하기 위해 존재 해야 하는 조건을 지정할 수 있습니다. 조건은 특정 속성에 의해 트리거하거나 스크립트나 속성 값이 `true`로 평가 될 때 트리거될 수 있습니다. 선택 조건이 충족 되 면 뷰나 컨트롤의 정의가 사용 됩니다.
 
 ## <a name="specifying-a-selection-condition-for-a-definition"></a>정의에 대 한 선택 조건 지정
 
-뷰나 컨트롤에 대 한 정의를 만들 때 `EntrySelectedBy` 요소는 정의를 사용할 개체를 지정 하는 데 사용 되거나 정의를 사용할 조건을 지정 하는 데 사용 됩니다. 조건은 `SelectionCondition` 요소로 지정 됩니다.
+뷰 또는 컨트롤에 대 한 정의를 만들 때 `EntrySelectedBy` 요소를 사용 하 여 정의를 사용할 개체 또는 정의를 사용할 조건을 지정 합니다. 조건은 `SelectionCondition` 요소에 의해 지정 됩니다.
 
-다음 예에서는 테이블 뷰 정의에 대 한 선택 조건이 지정 됩니다. 이 예에서는 지정 된 스크립트가 `true`으로 평가 되는 경우에만 정의가 사용 됩니다.
+다음 예에서는 테이블 뷰 정의에 대 한 선택 조건이 지정 됩니다. 이 예에서는 지정 된 스크립트가 `true`로 평가 되는 경우에만 정의가 사용 됩니다.
 
 ```xml
 <TableRowEntry>
@@ -46,7 +46,7 @@ ms.locfileid: "72363902"
 
 ## <a name="specifying-a-selection-condition-for-an-item"></a>항목에 대 한 선택 조건 지정
 
-항목 정의에 `ItemSelectionCondition` 요소를 포함 하 여 목록 뷰 또는 컨트롤의 항목을 사용 하는 경우를 지정할 수도 있습니다. 다음 예에서는 목록 뷰의 항목에 대해 선택 조건이 지정 됩니다. 이 예제에서 항목은 스크립트가 `true`으로 평가 되는 경우에만 사용 됩니다.
+항목 정의에서 `ItemSelectionCondition` 요소를 포함 하 여 목록 뷰 또는 컨트롤의 항목을 사용 하는 경우를 지정할 수도 있습니다. 다음 예에서는 목록 뷰의 항목에 대해 선택 조건이 지정 됩니다. 이 예제에서 항목은 스크립트를 `true`으로 평가 하는 경우에만 사용 됩니다.
 
 ```xml
 <ListItem>

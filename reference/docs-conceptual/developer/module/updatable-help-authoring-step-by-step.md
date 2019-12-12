@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 10098160-c6b4-4339-b8ff-2c4f8cc0699b
 caps.latest.revision: 13
 ms.openlocfilehash: fbc77cc0fafce93d239da1c459d4b761b21ef3cb
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366992"
 ---
 # <a name="updatable-help-authoring-step-by-step"></a>업데이트 가능한 도움말 작성: 단계별

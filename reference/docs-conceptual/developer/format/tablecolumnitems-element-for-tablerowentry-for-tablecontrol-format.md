@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d43684ce-7c3d-4d14-8dbd-061c111ee805
 caps.latest.revision: 12
 ms.openlocfilehash: d05437aaa9652e7f81d0854d1a746acffe145699
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361812"
 ---
 # <a name="tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format"></a>TableControl의 TableRowEntry에 대한 TableColumnItems 요소(형식)
@@ -41,7 +41,7 @@ TableColumnItems>
 
 |요소|설명|
 |-------------|-----------------|
-|[TableControl의 TableColumnItems 요소에 대 한 TableColumnItem 요소 (형식)](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)|필수 요소입니다.<br /><br /> 행의 열에 값이 표시 되는 속성이 나 스크립트를 정의 합니다.|
+|[TableControl의 TableColumnItems 요소에 대 한 TableColumnItem 요소 (형식)](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)|필수적 요소입니다.<br /><br /> 행의 열에 값이 표시 되는 속성이 나 스크립트를 정의 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 

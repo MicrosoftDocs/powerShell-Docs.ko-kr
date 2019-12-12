@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 6dc2093a-dc54-42c4-ada3-c8d089ba1e8e
 caps.latest.revision: 6
 ms.openlocfilehash: a6738a7c4c934b2d6a16695a711f7c6c80afdd2d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368432"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-groupby-format"></a>GroupBy의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
@@ -34,7 +34,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `SelectionCondition` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `SelectionCondition` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

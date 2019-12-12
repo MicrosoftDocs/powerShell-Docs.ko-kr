@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 64718f8e-de60-4fb7-894d-2975b5257ff6
 caps.latest.revision: 4
 ms.openlocfilehash: bdced961d91088dd75be347b7b74b22467c8c9be
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366022"
 ---
 # <a name="scheduling-jobs-with-the-powershell-api"></a>PowerShell API를 사용 하 여 작업 예약
@@ -40,13 +40,13 @@ ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
 
 ## <a name="defining-the-job"></a>작업 정의
 
-매개 변수 사전을 만들어 PowerShell 작업을 정의 합니다. 지원 되는 매개 변수는 다음과 같습니다.
+매개 변수 사전을 만들어 PowerShell 작업을 정의 합니다. 다음과 같은 매개 변수가 지원됩니다.
 
 |매개 변수 이름|설명|
 |--------------------|-----------------|
-|**이름의**|작업의 이름입니다.|
+|**이름**|작업의 이름입니다.|
 |**ScriptBock**|작업에서 수행 하는 작업을 지정 하는 PowerShell 스크립트 블록입니다.|
-|**Null**|작업에서 수행 하는 작업을 지정 하는 PowerShell 스크립트 블록을 포함 하는 파일의 경로입니다.|
+|**FilePath**|작업에서 수행 하는 작업을 지정 하는 PowerShell 스크립트 블록을 포함 하는 파일의 경로입니다.|
 |**또한 initializationscript**|작업을 초기화 하는 PowerShell 스크립트 블록입니다.|
 |**ArgumentList**|작업에서 수행 하는 인수를 지정 하는 개체의 배열입니다.|
 |**체제가 있어도 runas32**|작업을 32 비트 프로세스로 실행할지 여부를 지정 하는 부울 값입니다.|
@@ -66,7 +66,7 @@ string schedJobDefName = "MySampleSchedJob";
 
 ## <a name="creating-the-invocation-and-job-definition-objects"></a>호출 및 작업 정의 개체 만들기
 
-그런 다음 `ScheduledJobInvocationInfo` 및 `ScheduledJobDefinition` 개체를 만들어 다음 예제와 같이 작업을 실행 합니다.
+그런 다음, 다음 예제와 같이 `ScheduledJobInvocationInfo` 및 `ScheduledJobDefinition` 개체를 만들어 작업을 실행 합니다.
 
 ```csharp
 ScheduledJobInvocationInfo jobInvocationInfo = new ScheduledJobInvocationInfo(

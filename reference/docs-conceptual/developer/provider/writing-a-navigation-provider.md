@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 98bcfda0-6ee2-46f5-bbc7-5fab8b780d6a
 caps.latest.revision: 5
 ms.openlocfilehash: edb4d9944a527391983e068ddf07f4fac415c3f9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359872"
 ---
 # <a name="writing-a-navigation-provider"></a>탐색 공급자 작성
@@ -132,7 +132,7 @@ protected override string GetParentPath(string path, string root)
 
 ### <a name="implementing-makepath"></a>MakePath 구현
 
-System.object는 지정 된 부모 경로와 지정 된 자식 경로를 조인 하 여 공급자 내부 경로를 만듭니다. 공급자가 지원할 수 있는 경로 형식에 대 한 자세한 내용은을 참조 하십시오 [.](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) [Windows PowerShell 공급자 개요](./windows-powershell-provider-overview.md). PowerShell 엔진은 사용자가 [Microsoft powershell. JoinPathCommand](/dotnet/api/Microsoft.PowerShell.Commands.joinpathcommand) cmdlet을 호출할 때이 메서드를 호출 합니다.
+[System.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) 는 지정 된 부모 경로와 지정 된 자식 경로를 조인 하 여 공급자 내부 경로를 만듭니다. 공급자가 지원할 수 있는 경로 형식에 대 한 자세한 내용은 [Windows PowerShell 공급자 개요](./windows-powershell-provider-overview.md)를 참조 하세요. PowerShell 엔진은 사용자가 [Microsoft powershell. JoinPathCommand](/dotnet/api/Microsoft.PowerShell.Commands.joinpathcommand) cmdlet을 호출할 때이 메서드를 호출 합니다.
 
 ```csharp
 protected override string MakePath(string parent, string child)
@@ -191,7 +191,7 @@ protected override string MakePath(string parent, string child)
 
 ### <a name="implementing-normalizerelativepath"></a>NormalizeRelativePath 구현
 
-[Normalizerelativepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) 메서드는 `path` 및 `basepath` 매개 변수를 사용 하 고 `path` 매개 변수와 동일 하 고 `basepath`를 기준으로 하는 정규화 된 경로를 반환 합니다. 변수에.
+[Normalizerelativepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) 메서드는 `path` 및 `basepath` 매개 변수를 사용 하 고 `path` 매개 변수와 같으며 `basepath` 매개 변수에 상대적인 정규화 된 경로를 반환 합니다.
 
 ```csharp
 protected override string NormalizeRelativePath(string path,

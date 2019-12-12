@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 868194a2-17e9-4184-bc36-c04a33f26494
 caps.latest.revision: 4
 ms.openlocfilehash: 30e98bfcf06b1720005a73ee8294aeba7e1ae066
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367822"
 ---
 # <a name="examples-of-comment-based-help"></a>설명 기반 도움말 예제
@@ -145,7 +145,7 @@ C:\PS> get-help add-extension -full
 
 다음 샘플 함수는 주석 기반 도움말을 포함 합니다.
 
-닫는 **#>** 과 `Param` 문 사이에 빈 줄을 확인 합니다. @No__t-0 문이 없는 스크립트에서는 도움말 항목의 마지막 주석과 첫 번째 함수 선언 사이에 두 개 이상의 빈 줄이 있어야 합니다. 이러한 빈 줄이 없으면 Get-help는 스크립트 대신 도움말 항목을 함수와 연결 합니다.
+Closing **#>** 와 `Param` 문 사이에 빈 줄을 확인 합니다. `Param` 문이 없는 스크립트에서 도움말 항목의 마지막 주석과 첫 번째 함수 선언 사이에는 두 개 이상의 빈 줄이 있어야 합니다. 이러한 빈 줄이 없으면 Get-help는 스크립트 대신 도움말 항목을 함수와 연결 합니다.
 
 ```powershell
 <#

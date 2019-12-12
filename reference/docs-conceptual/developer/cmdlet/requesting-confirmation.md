@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 4468066f-6759-402f-84db-0d8303cfd5cb
 caps.latest.revision: 7
 ms.openlocfilehash: c5deaa9bb0dd9621b6f03aeb188cf76ed35dff6c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365352"
 ---
 # <a name="requesting-confirmation"></a>확인 요청

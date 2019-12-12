@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: b3d09eaa-924f-4e2b-adfb-14bb729090dd
 caps.latest.revision: 8
 ms.openlocfilehash: ad7f9737c646dd5cea5abb14b828236e40feac5a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366312"
 ---
 # <a name="provider-cmdlet-parameters"></a>공급자 cmdlet 매개 변수
@@ -69,7 +69,7 @@ Containercmdletprovider cmdlet은 공급자가 `Path`에 전달 된 값을 사�
 
 Cmdlet 공급자의 동적 매개 변수는 독립 실행형 cmdlet에 대 한 동적 공급자와 유사 합니다. 두 경우 모두 사용자가 기본 매개 변수 중 하나에 대 한 특정 값 (예: `path` 매개 변수)을 지정할 때 매개 변수가 cmdlet에 추가 됩니다. 그러나 모든 정적 매개 변수를 사용 하 여 동적 매개 변수 추가를 트리거할 수 있는 것은 아닙니다. 동적 매개 변수에 대 한 자세한 내용은 [공급자 Cmdlet 동적 매개 변수](./provider-cmdlet-dynamic-parameters.md)를 참조 하세요.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Provider Cmdlet 동적 매개 변수](./provider-cmdlet-dynamic-parameters.md)
 

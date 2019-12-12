@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 96a5dcad-faed-44d8-8c80-321f10499710
 caps.latest.revision: 6
 ms.openlocfilehash: 49a62ccb09f06f77862d4737199e58293e7fbe0a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369892"
 ---
 # <a name="credential-attribute-declaration"></a>Credential 증명 특성 선언

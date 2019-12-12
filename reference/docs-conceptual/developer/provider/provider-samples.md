@@ -9,19 +9,19 @@ ms.topic: article
 ms.assetid: c4933dad-fec9-4337-a1a9-9dc16ee87cc3
 caps.latest.revision: 9
 ms.openlocfilehash: 1e7aeb5bcb6bd5a2845648c3327e2245e6c428ba
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366302"
 ---
 # <a name="provider-samples"></a>공급자 샘플
 
 이 섹션에는 Microsoft Access 데이터베이스에 액세스 하는 공급자의 샘플이 포함 되어 있습니다. 이러한 샘플에는 모든 기본 공급자 클래스에서 파생 되는 공급자 클래스가 포함 됩니다.
 
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 
-이 섹션에서는 다음 항목을 다룹니다.
+이 섹션에는 다음 항목이 포함됩니다.
 
 [AccessDBProviderSample01 샘플](./accessdbprovidersample01.md) 이 샘플에서는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) 클래스에서 직접 파생 되는 공급자 클래스를 선언 하는 방법을 보여 줍니다. 여기서는 참조용으로만 설명합니다.
 
@@ -35,6 +35,6 @@ ms.locfileid: "72366302"
 
 [AccessDBProviderSample06](./accessdbprovidersample06.md) 이 샘플에서는 `Clear-Content`, `Get-Content`및 `Set-Content` cmdlet에 대 한 호출을 지원 하도록 콘텐츠 메서드를 덮어쓰는 방법을 보여 줍니다. 이러한 메서드는 사용자가 데이터 저장소에 있는 항목의 콘텐츠를 관리해야 하는 경우에 구현해야 합니다. 이 샘플의 공급자 클래스는 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider) 인터페이스를 구현 하는 클래스에서 파생 되며, [이 클래스는](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) system.object를 구현 합니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell 공급자 작성](./writing-a-windows-powershell-provider.md)

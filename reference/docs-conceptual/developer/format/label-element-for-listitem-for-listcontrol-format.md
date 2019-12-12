@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: c693ff46-d1ad-4dc7-93ac-41ff2fc6c103
 caps.latest.revision: 9
 ms.openlocfilehash: c1293d5a1f942704ac01388c66bd9009fd340e82
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362892"
 ---
 # <a name="label-element-for-listitem-for-listcontrol-format"></a>ListControl의 ListItem에 대한 Label 요소(형식)
@@ -29,7 +29,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View element (form
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `Label` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 `Label` 요소의 부모 요소에 대해 설명 합니다.
 
 ### <a name="attributes"></a>특성
 

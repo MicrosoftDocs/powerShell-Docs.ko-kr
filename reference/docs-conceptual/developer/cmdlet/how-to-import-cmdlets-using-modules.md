@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a41d9e5f-de6f-47b7-9601-c108609320d0
 caps.latest.revision: 8
 ms.openlocfilehash: 2f145795a57c988da0cb4ed294142aa141c53cae
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364462"
 ---
 # <a name="how-to-import-cmdlets-using-modules"></a>모듈을 사용하여 Cmdlet을 가져오는 방법
@@ -28,7 +28,7 @@ ms.locfileid: "72364462"
 
    `%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules\mymodule`
 
-1. @No__t-0 환경 변수에 새 모듈 폴더에 대 한 경로가 포함 되어 있는지 확인 합니다. 기본적으로 시스템 폴더는 `PSModulePath` 환경 변수에 이미 추가 되어 있습니다. @No__t-0을 보려면 `$env:PSModulePath`을 입력 합니다.
+1. `PSModulePath` 환경 변수에 새 모듈 폴더에 대 한 경로가 포함 되어 있는지 확인 합니다. 기본적으로 시스템 폴더는 `PSModulePath` 환경 변수에 이미 추가 되어 있습니다. `PSModulePath`를 보려면 `$env:PSModulePath`을 입력 합니다.
 
 1. Cmdlet 어셈블리를 모듈 폴더에 복사 합니다.
 
