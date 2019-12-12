@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
 caps.latest.revision: 7
 ms.openlocfilehash: e825581b96f0f33893b38f9f6499dd46a7bf38eb
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360522"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>기본 Windows PowerShell 공급자 만들기
@@ -49,7 +49,7 @@ API 네임 스페이스의 `Providers` 네임 스페이스에 공급자 클래�
 
 ## <a name="defining-provider-specific-state-information"></a>공급자별 상태 정보 정의
 
-Windows PowerShell 런타임이 필요한 경우에만 공급자 인스턴스를 만들기 때문에 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) 및 모든 파생 클래스는 상태 비저장으로 간주 됩니다. 따라서 공급자에 게 공급자별 데이터에 대 한 모든 권한 및 상태 유지 관리가 필요한 경우 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 클래스에서 클래스를 파생 해야 합니다. 파생 된 클래스는 상태를 유지 관리 하는 데 필요한 멤버를 정의 해야 [합니다. 이렇게](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) 하면 Windows PowerShell 런타임에서 해당 공급자 관련 데이터에 액세스할 수 있습니다. 공급자를 초기화 합니다.
+Windows PowerShell 런타임이 필요한 경우에만 공급자 인스턴스를 만들기 때문에 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) 및 모든 파생 클래스는 상태 비저장으로 간주 됩니다. 따라서 공급자에 게 공급자별 데이터에 대 한 모든 권한 및 상태 유지 관리가 필요한 경우 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 클래스에서 클래스를 파생 해야 합니다. 파생 된 클래스는 상태를 유지 관리 하는 데 필요한 멤버를 정의 해야 합니다. 이렇게 하면 Windows PowerShell 런타임에서 공급자를 초기화할 때 공급자 특정 데이터에 액세스할 수 [있습니다.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start)
 
 Windows PowerShell 공급자는 연결 기반 상태를 유지할 수도 있습니다. 연결 상태를 유지 관리 하는 방법에 대 한 자세한 내용은 [PowerShell 드라이브 공급자 만들기](./creating-a-windows-powershell-drive-provider.md)를 참조 하세요.
 
@@ -65,7 +65,7 @@ Windows powershell이 시작 될 때 공급자를 초기화 하기 위해 Window
 
 ## <a name="start-dynamic-parameters"></a>동적 매개 변수 시작
 
-공급자를 구현 [하는 경우](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) 에는 추가 매개 변수가 필요할 수 있습니다. 이 경우 공급자는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.StartDynamicParameters) 를 재정의 하 고 cmdlet 클래스 또는 [와 유사한 구문 분석 특성을 가진 속성 및 필드가 있는 개체를 반환 해야 합니다. Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체입니다.
+공급자를 구현 [하는 경우](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) 에는 추가 매개 변수가 필요할 수 있습니다. 이 경우 공급자는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.StartDynamicParameters) 를 재정의 하 고 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성을 가진 속성 및 필드가 있는 개체를 반환 해야 하는 경우를 반환 합니다.
 
 이 기본 공급자는이 메서드를 재정의 하지 않습니다. 그러나 다음 코드는이 메서드의 기본 구현을 보여 줍니다.
 
@@ -91,7 +91,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 후에는 명�
 Get-PSProvider
 ```
 
-다음 출력이 표시됩니다.
+다음과 같은 출력이 나타납니다.
 
 ```output
 Name                 Capabilities                  Drives

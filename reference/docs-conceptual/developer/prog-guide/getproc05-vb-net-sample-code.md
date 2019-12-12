@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 8dfc0f66-65ec-4141-9088-68e47dbe3908
 caps.latest.revision: 6
 ms.openlocfilehash: de0e7de6b02f62770126350d0c09df6c7909464e
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366662"
 ---
 # <a name="getproc05-vbnet-sample-code"></a>GetProc05(VB.NET) 코드 샘플

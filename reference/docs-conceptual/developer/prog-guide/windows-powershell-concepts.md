@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: 3dd5608e-50b6-4c6a-aee3-dde0e86032bc
 caps.latest.revision: 7
 ms.openlocfilehash: 4410b1f9c80afefd5479fa68154f9947b805edcf
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366682"
 ---
 # <a name="windows-powershell-concepts"></a>Windows PowerShell 개념
 
 이 섹션에는 개발자의 관점에서 PowerShell을 이해 하는 데 도움이 되는 개념 정보가 포함 되어 있습니다.
 
-|항목 이름|설명|
+|토픽 이름|설명|
 |----------------|-----------------|
 |[about_Objects](/powershell/module/microsoft.powershell.core/about/about_objects)|PowerShell 개체에 대 한 설명입니다. 자세한 내용은 [개체 만들기 정보](/powershell/module/microsoft.powershell.core/about/about_object_creation) 를 참조 하세요.|
 |[Runspace 만들기](../hosting/creating-runspaces.md)|명령이 처리 되는 운영 환경 자세한 내용은 [Runspace 클래스](/dotnet/api/system.management.automation.runspaces.runspace)를 참조 하세요.|

@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 481f557d-3344-4d33-b2da-4736a0165181
 caps.latest.revision: 7
 ms.openlocfilehash: fa4cd8a724793e71b615c84a5c5a833aa92c93fc
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364572"
 ---
 # <a name="getprocesssample02-sample"></a>GetProcessSample02 샘플
 
-이 샘플에서는 로컬 컴퓨터의 프로세스를 검색 하는 cmdlet을 작성 하는 방법을 보여 줍니다. 이 매개 변수는 검색할 프로세스를 지정 하는 데 사용할 수 있는 `Name` 매개 변수를 제공 합니다. 이 cmdlet은 Windows PowerShell 2.0에서 제공 하는 `Get-Process` cmdlet의 단순화 된 버전입니다.
+이 샘플에서는 로컬 컴퓨터의 프로세스를 검색 하는 cmdlet을 작성 하는 방법을 보여 줍니다. 이 클래스는 검색할 프로세스를 지정 하는 데 사용할 수 있는 `Name` 매개 변수를 제공 합니다. 이 cmdlet은 Windows PowerShell 2.0에서 제공 하는 `Get-Process` cmdlet의 단순화 된 버전입니다.
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.
 
@@ -25,11 +25,11 @@ ms.locfileid: "72364572"
 
 2. 솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다. 그러면 Visual Studio에서 샘플 프로젝트가 열립니다.
 
-3. **빌드** 메뉴에서 **솔루션 빌드**를 선택 합니다.
+3. **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.
 
     샘플에 대 한 라이브러리는 기본 \bin 또는 \bin\debug 폴더에 빌드됩니다.
 
-### <a name="how-to-run-the-sample"></a>샘플을 실행 하는 방법
+### <a name="how-to-run-the-sample"></a>샘플을 실행하는 방법
 
 1. 다음 모듈 폴더를 만듭니다.
 
@@ -51,7 +51,7 @@ ms.locfileid: "72364572"
 
 이 샘플에는 Windows PowerShell 2.0이 필요 합니다.
 
-## <a name="demonstrates"></a>보여
+## <a name="demonstrates"></a>데모
 
 이 샘플에서는 다음을 보여 줍니다.
 
@@ -65,7 +65,7 @@ ms.locfileid: "72364572"
 
 ## <a name="example"></a>예제
 
-이 샘플에서는 `Name` 매개 변수를 포함 하는 Get Proc cmdlet의 구현을 보여 줍니다.
+이 샘플은 `Name` 매개 변수를 포함 하는 Get Proc cmdlet의 구현을 보여 줍니다.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands
