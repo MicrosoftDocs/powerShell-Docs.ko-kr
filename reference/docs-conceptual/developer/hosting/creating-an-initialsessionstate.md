@@ -9,29 +9,29 @@ ms.topic: article
 ms.assetid: 5ae707db-52e0-408c-87fa-b35c42eaaab1
 caps.latest.revision: 5
 ms.openlocfilehash: 9140d03e046def2fbbcc2a842b9ea1b9e1fa2985
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367622"
 ---
-# <a name="creating-an-initialsessionstate"></a><span data-ttu-id="da445-102">InitialSessionState 만들기</span><span class="sxs-lookup"><span data-stu-id="da445-102">Creating an InitialSessionState</span></span>
+# <a name="creating-an-initialsessionstate"></a><span data-ttu-id="6df55-102">InitialSessionState 만들기</span><span class="sxs-lookup"><span data-stu-id="6df55-102">Creating an InitialSessionState</span></span>
 
-<span data-ttu-id="da445-103">PowerShell 명령은 runspace에서 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="da445-103">PowerShell commands run in a runspace.</span></span>
-<span data-ttu-id="da445-104">응용 프로그램에서 PowerShell을 호스트 하려면 [runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) 개체를 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="da445-104">To host PowerShell in your application, you must create a [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object.</span></span>
-<span data-ttu-id="da445-105">모든 runspace에는 [Runspace InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체가 연결 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da445-105">Every runspace has an [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object associated with it.</span></span>
-<span data-ttu-id="da445-106">InitialSessionState는 runspace의 특성을 지정 합니다. 예를 들어 runspace에 사용할 수 있는 명령, 변수 및 모듈을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="da445-106">The InitialSessionState specifies characteristics of the runspace, such as which commands, variables, and modules are available for that runspace.</span></span>
+<span data-ttu-id="6df55-103">PowerShell 명령은 runspace에서 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6df55-103">PowerShell commands run in a runspace.</span></span>
+<span data-ttu-id="6df55-104">응용 프로그램에서 PowerShell을 호스트 하려면 [runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) 개체를 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6df55-104">To host PowerShell in your application, you must create a [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object.</span></span>
+<span data-ttu-id="6df55-105">모든 runspace에는 [Runspace InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체가 연결 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6df55-105">Every runspace has an [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) object associated with it.</span></span>
+<span data-ttu-id="6df55-106">InitialSessionState는 runspace의 특성을 지정 합니다. 예를 들어 runspace에 사용할 수 있는 명령, 변수 및 모듈을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6df55-106">The InitialSessionState specifies characteristics of the runspace, such as which commands, variables, and modules are available for that runspace.</span></span>
 
-## <a name="create-a-default-initialsessionstate"></a><span data-ttu-id="da445-107">기본 InitialSessionState 만들기</span><span class="sxs-lookup"><span data-stu-id="da445-107">Create a default InitialSessionState</span></span>
+## <a name="create-a-default-initialsessionstate"></a><span data-ttu-id="6df55-107">기본 InitialSessionState 만들기</span><span class="sxs-lookup"><span data-stu-id="6df55-107">Create a default InitialSessionState</span></span>
 
-<span data-ttu-id="da445-108">**InitialSessionState** 클래스의 [Createdefault](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault) 및 [initialsessionstate.createdefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) 메서드를 사용 하 여 **InitialSessionState** 개체를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da445-108">The [CreateDefault](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault) and [CreateDefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) methods of the **InitialSessionState** class can be used to create an **InitialSessionState** object.</span></span>
-<span data-ttu-id="da445-109">**Createdefault** 메서드는 모든 기본 제공 명령을 로드 하 여 **InitialSessionState** 을 만들지만 **initialsessionstate.createdefault2** 메서드는 PowerShell을 호스트 하는 데 필요한 명령만 로드 합니다. Microsoft. PowerShell. 핵심 모듈).</span><span class="sxs-lookup"><span data-stu-id="da445-109">The **CreateDefault** method creates an **InitialSessionState** with all of the built-in commands loaded, while the **CreateDefault2** method loads only the commands required to host PowerShell (the commands from the Microsoft.PowerShell.Core module).</span></span>
+<span data-ttu-id="6df55-108">**InitialSessionState** 클래스의 [Createdefault](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault) 및 [initialsessionstate.createdefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) 메서드를 사용 하 여 **InitialSessionState** 개체를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6df55-108">The [CreateDefault](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault) and [CreateDefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) methods of the **InitialSessionState** class can be used to create an **InitialSessionState** object.</span></span>
+<span data-ttu-id="6df55-109">**Createdefault** 메서드는 모든 기본 제공 명령이 로드 된 **InitialSessionState** 을 만들지만 **initialsessionstate.createdefault2** 메서드는 powershell을 호스트 하는 데 필요한 명령 (Microsoft. PowerShell 모듈의 명령)만 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="6df55-109">The **CreateDefault** method creates an **InitialSessionState** with all of the built-in commands loaded, while the **CreateDefault2** method loads only the commands required to host PowerShell (the commands from the Microsoft.PowerShell.Core module).</span></span>
 
-<span data-ttu-id="da445-110">호스트 응용 프로그램에서 사용할 수 있는 명령을 추가로 제한 하려면 제한 된 runspace를 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="da445-110">If you want to further limit the commands available in your host application you need to create a constrained runspace.</span></span>
-<span data-ttu-id="da445-111">자세한 내용은 [제한 된 Runspace 만들기](creating-a-constrained-runspace.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="da445-111">For information, see [Creating a constrained runspace](creating-a-constrained-runspace.md).</span></span>
+<span data-ttu-id="6df55-110">호스트 응용 프로그램에서 사용할 수 있는 명령을 추가로 제한 하려면 제한 된 runspace를 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6df55-110">If you want to further limit the commands available in your host application you need to create a constrained runspace.</span></span>
+<span data-ttu-id="6df55-111">자세한 내용은 [제한 된 Runspace 만들기](creating-a-constrained-runspace.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="6df55-111">For information, see [Creating a constrained runspace](creating-a-constrained-runspace.md).</span></span>
 
-<span data-ttu-id="da445-112">다음 코드에서는 **InitialSessionState**을 만들고 runspace에 할당 하 고 해당 runspace에서 파이프라인에 명령을 추가 하 고 명령을 호출 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="da445-112">The following code shows how to create an **InitialSessionState**, assign it to a runspace, add commands to the pipeline in that runspace, and invoke the commands.</span></span>
-<span data-ttu-id="da445-113">명령 추가 및 호출에 대 한 자세한 내용은 [명령 추가 및 호출](adding-and-invoking-commands.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="da445-113">For more information about adding and invoking commands, see [Adding and invoking commands](adding-and-invoking-commands.md).</span></span>
+<span data-ttu-id="6df55-112">다음 코드에서는 **InitialSessionState**을 만들고 runspace에 할당 하 고 해당 runspace에서 파이프라인에 명령을 추가 하 고 명령을 호출 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6df55-112">The following code shows how to create an **InitialSessionState**, assign it to a runspace, add commands to the pipeline in that runspace, and invoke the commands.</span></span>
+<span data-ttu-id="6df55-113">명령 추가 및 호출에 대 한 자세한 내용은 [명령 추가 및 호출](adding-and-invoking-commands.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="6df55-113">For more information about adding and invoking commands, see [Adding and invoking commands](adding-and-invoking-commands.md).</span></span>
 
 ```csharp
 namespace SampleHost
@@ -93,8 +93,8 @@ namespace SampleHost
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="da445-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="da445-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6df55-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6df55-114">See Also</span></span>
 
-[<span data-ttu-id="da445-115">제한 된 runspace 만들기</span><span class="sxs-lookup"><span data-stu-id="da445-115">Creating a constrained runspace</span></span>](creating-a-constrained-runspace.md)
+[<span data-ttu-id="6df55-115">제한 된 runspace 만들기</span><span class="sxs-lookup"><span data-stu-id="6df55-115">Creating a constrained runspace</span></span>](creating-a-constrained-runspace.md)
 
-[<span data-ttu-id="da445-116">명령 추가 및 호출</span><span class="sxs-lookup"><span data-stu-id="da445-116">Adding and invoking commands</span></span>](adding-and-invoking-commands.md)
+[<span data-ttu-id="6df55-116">명령 추가 및 호출</span><span class="sxs-lookup"><span data-stu-id="6df55-116">Adding and invoking commands</span></span>](adding-and-invoking-commands.md)

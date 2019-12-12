@@ -9,19 +9,19 @@ ms.topic: article
 ms.assetid: 0b2a7ce2-3c33-469c-a4a4-b8fe3bd05324
 caps.latest.revision: 5
 ms.openlocfilehash: 93780ee8af80d78a5b97a32098384a148070b54a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366142"
 ---
-# <a name="implementing-sessionconfiguration-for-a-management-odata-web-service"></a><span data-ttu-id="5c52c-102">관리 OData 웹 서비스에 대한 SessionConfiguration 구현</span><span class="sxs-lookup"><span data-stu-id="5c52c-102">Implementing SessionConfiguration for a Management OData web service</span></span>
+# <a name="implementing-sessionconfiguration-for-a-management-odata-web-service"></a><span data-ttu-id="87421-102">관리 OData 웹 서비스에 대한 SessionConfiguration 구현</span><span class="sxs-lookup"><span data-stu-id="87421-102">Implementing SessionConfiguration for a Management OData web service</span></span>
 
-<span data-ttu-id="5c52c-103">Windows PowerShell 웹 서비스를 사용 하려면 Windows PowerShell cmdlet을 노출 하기 위해 [register-pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) 인터페이스를 구현 하는 타사가 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="5c52c-103">Using the Windows PowerShell Web Service requires a third party to implement the [System.Management.Automation.Remoting.Pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) interface to expose Windows PowerShell cmdlets.</span></span> <span data-ttu-id="5c52c-104">이 인터페이스는 웹 서비스가 서버에서 cmdlet을 실행 하는 데 사용 하는 원격 세션에 대 한 정보에 대 한 액세스를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="5c52c-104">This interface provides access to information about the remote session that the web service uses to run the cmdlets on the server.</span></span> <span data-ttu-id="5c52c-105">인터페이스를 구현 하는 코드를 작성 한 후에는 웹 응용 프로그램에서 사용할 DLL로 컴파일해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5c52c-105">After writing the code to implement the interface, you must compile it into a DLL to be used in the web application.</span></span>
+<span data-ttu-id="87421-103">Windows PowerShell 웹 서비스를 사용 하려면 Windows PowerShell cmdlet을 노출 하기 위해 [register-pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) 인터페이스를 구현 하는 타사가 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="87421-103">Using the Windows PowerShell Web Service requires a third party to implement the [System.Management.Automation.Remoting.Pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) interface to expose Windows PowerShell cmdlets.</span></span> <span data-ttu-id="87421-104">이 인터페이스는 웹 서비스가 서버에서 cmdlet을 실행 하는 데 사용 하는 원격 세션에 대 한 정보에 대 한 액세스를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="87421-104">This interface provides access to information about the remote session that the web service uses to run the cmdlets on the server.</span></span> <span data-ttu-id="87421-105">인터페이스를 구현 하는 코드를 작성 한 후에는 웹 응용 프로그램에서 사용할 DLL로 컴파일해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="87421-105">After writing the code to implement the interface, you must compile it into a DLL to be used in the web application.</span></span>
 
-## <a name="implementation-of-pssessionconfiguration-interface"></a><span data-ttu-id="5c52c-106">Register-pssessionconfiguration 인터페이스 구현</span><span class="sxs-lookup"><span data-stu-id="5c52c-106">Implementation of PSSessionConfiguration interface</span></span>
+## <a name="implementation-of-pssessionconfiguration-interface"></a><span data-ttu-id="87421-106">Register-pssessionconfiguration 인터페이스 구현</span><span class="sxs-lookup"><span data-stu-id="87421-106">Implementation of PSSessionConfiguration interface</span></span>
 
-<span data-ttu-id="5c52c-107">다음 코드는 [register-pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) 인터페이스를 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="5c52c-107">The following code implements the [System.Management.Automation.Remoting.Pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) interface.</span></span>
+<span data-ttu-id="87421-107">다음 코드는 [register-pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) 인터페이스를 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="87421-107">The following code implements the [System.Management.Automation.Remoting.Pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) interface.</span></span>
 
 ```csharp
 //-----------------------------------------------------------------------
@@ -114,6 +114,6 @@ namespace Microsoft.Samples.Management.OData.RoleBasedPlugins
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="5c52c-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5c52c-108">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="87421-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="87421-108">See Also</span></span>
 
-[<span data-ttu-id="5c52c-109">관리 OData 웹 서비스에 대 한 사용자 지정 권한 부여 구현</span><span class="sxs-lookup"><span data-stu-id="5c52c-109">Implementing Custom Authorization for a Management OData web service</span></span>](./implementing-custom-authorization-for-a-management-odata-web-service.md)
+[<span data-ttu-id="87421-109">관리 OData 웹 서비스에 대 한 사용자 지정 권한 부여 구현</span><span class="sxs-lookup"><span data-stu-id="87421-109">Implementing Custom Authorization for a Management OData web service</span></span>](./implementing-custom-authorization-for-a-management-odata-web-service.md)

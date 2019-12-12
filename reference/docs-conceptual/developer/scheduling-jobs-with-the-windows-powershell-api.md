@@ -3,19 +3,19 @@ title: Windows PowerShell API를 사용하여 작업 예약
 ms.date: 09/13/2016
 ms.topic: article
 ms.openlocfilehash: 4e1d4ed6bffd858b92bf29b1dc6d8503454fafda
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359832"
 ---
-# <a name="scheduling-jobs-with-the-windows-powershell-api"></a><span data-ttu-id="6ee5d-102">Windows PowerShell API를 사용하여 작업 예약</span><span class="sxs-lookup"><span data-stu-id="6ee5d-102">Scheduling Jobs with the Windows PowerShell API</span></span>
+# <a name="scheduling-jobs-with-the-windows-powershell-api"></a><span data-ttu-id="baade-102">Windows PowerShell API를 사용하여 작업 예약</span><span class="sxs-lookup"><span data-stu-id="baade-102">Scheduling Jobs with the Windows PowerShell API</span></span>
 
-<span data-ttu-id="6ee5d-103">N:Microsoft.PowerShell.ScheduledJob 네임 스페이스에서 노출 하는 개체를 사용 하 여 예약 된 작업을 만들고, 실행 시간을 정의 하 고, 완료 된 작업에 대 한 결과를 실행 한 후에 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-103">You can use the objects exposed by the N:Microsoft.PowerShell.ScheduledJob namespace to create a scheduled job, define when it runs, and get results about the completed job after it has run.</span></span>
+<span data-ttu-id="baade-103">N:Microsoft.PowerShell.ScheduledJob 네임 스페이스에서 노출 하는 개체를 사용 하 여 예약 된 작업을 만들고, 실행 시간을 정의 하 고, 완료 된 작업에 대 한 결과를 실행 한 후에 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="baade-103">You can use the objects exposed by the N:Microsoft.PowerShell.ScheduledJob namespace to create a scheduled job, define when it runs, and get results about the completed job after it has run.</span></span>
 
-## <a name="triggering-the-job"></a><span data-ttu-id="6ee5d-104">작업 트리거</span><span class="sxs-lookup"><span data-stu-id="6ee5d-104">Triggering the Job</span></span>
+## <a name="triggering-the-job"></a><span data-ttu-id="baade-104">작업 트리거</span><span class="sxs-lookup"><span data-stu-id="baade-104">Triggering the Job</span></span>
 
-<span data-ttu-id="6ee5d-105">예약 된 작업을 만드는 첫 번째 단계는 작업을 실행할 시기를 지정 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-105">The first step in creating a scheduled job is specifying when the job should run.</span></span> <span data-ttu-id="6ee5d-106">T:Microsoft.PowerShell.ScheduledJob.ScheduledJobTrigger 개체를 만들고 구성 하 여이 작업을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-106">Do this by creating and configuring a T:Microsoft.PowerShell.ScheduledJob.ScheduledJobTrigger object.</span></span> <span data-ttu-id="6ee5d-107">다음 코드는 나중에 20 초 후에 한 번 실행 되도록 작업을 예약 하는 트리거를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-107">The following code creates a trigger that schedules a job to run a single time 20 seconds in the future.</span></span>
+<span data-ttu-id="baade-105">예약 된 작업을 만드는 첫 번째 단계는 작업을 실행할 시기를 지정 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="baade-105">The first step in creating a scheduled job is specifying when the job should run.</span></span> <span data-ttu-id="baade-106">T:Microsoft.PowerShell.ScheduledJob.ScheduledJobTrigger 개체를 만들고 구성 하 여이 작업을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="baade-106">Do this by creating and configuring a T:Microsoft.PowerShell.ScheduledJob.ScheduledJobTrigger object.</span></span> <span data-ttu-id="baade-107">다음 코드는 나중에 20 초 후에 한 번 실행 되도록 작업을 예약 하는 트리거를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="baade-107">The following code creates a trigger that schedules a job to run a single time 20 seconds in the future.</span></span>
 
 ```csharp
 ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
@@ -27,20 +27,20 @@ ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
     true);                              // Create trigger enabled
 ```
 
-## <a name="defining-the-job"></a><span data-ttu-id="6ee5d-108">작업 정의</span><span class="sxs-lookup"><span data-stu-id="6ee5d-108">Defining the Job</span></span>
+## <a name="defining-the-job"></a><span data-ttu-id="baade-108">작업 정의</span><span class="sxs-lookup"><span data-stu-id="baade-108">Defining the Job</span></span>
 
-<span data-ttu-id="6ee5d-109">매개 변수 사전을 만들어 Windows PowerShell 작업을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-109">You define a Windows PowerShell job by creating a parameter dictionary.</span></span> <span data-ttu-id="6ee5d-110">지원 되는 매개 변수는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-110">The following parameters are supported.</span></span>
+<span data-ttu-id="baade-109">매개 변수 사전을 만들어 Windows PowerShell 작업을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="baade-109">You define a Windows PowerShell job by creating a parameter dictionary.</span></span> <span data-ttu-id="baade-110">지원 되는 매개 변수는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="baade-110">The following parameters are supported.</span></span>
 
-|<span data-ttu-id="6ee5d-111">매개 변수 이름</span><span class="sxs-lookup"><span data-stu-id="6ee5d-111">Parameter Name</span></span>|<span data-ttu-id="6ee5d-112">설명</span><span class="sxs-lookup"><span data-stu-id="6ee5d-112">Description</span></span>|
+|<span data-ttu-id="baade-111">매개 변수 이름</span><span class="sxs-lookup"><span data-stu-id="baade-111">Parameter Name</span></span>|<span data-ttu-id="baade-112">설명</span><span class="sxs-lookup"><span data-stu-id="baade-112">Description</span></span>|
 |---|---|
-|<span data-ttu-id="6ee5d-113">Name</span><span class="sxs-lookup"><span data-stu-id="6ee5d-113">Name</span></span>|<span data-ttu-id="6ee5d-114">작업의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-114">The name of the job.</span></span>|
-|<span data-ttu-id="6ee5d-115">ScriptBock</span><span class="sxs-lookup"><span data-stu-id="6ee5d-115">ScriptBock</span></span>|<span data-ttu-id="6ee5d-116">작업에서 수행 하는 작업을 지정 하는 Windows PowerShell 스크립트 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-116">A Windows PowerShell script block that specifies what the job does.</span></span>|
-|<span data-ttu-id="6ee5d-117">FilePath</span><span class="sxs-lookup"><span data-stu-id="6ee5d-117">FilePath</span></span>|<span data-ttu-id="6ee5d-118">작업에서 수행 하는 작업을 지정 하는 Windows PowerShell 스크립트 블록을 포함 하는 파일에 대 한 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-118">A path to a file that contains Windows PowerShell script block that specifies what the job does.</span></span>|
-|<span data-ttu-id="6ee5d-119">또한 initializationscript</span><span class="sxs-lookup"><span data-stu-id="6ee5d-119">InitializationScript</span></span>|<span data-ttu-id="6ee5d-120">작업을 초기화 하는 Windows PowerShell 스크립트 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-120">A Windows PowerShell script block that initializes the job.</span></span>|
-|<span data-ttu-id="6ee5d-121">ArgumentList</span><span class="sxs-lookup"><span data-stu-id="6ee5d-121">ArgumentList</span></span>|<span data-ttu-id="6ee5d-122">작업에서 수행 하는 인수를 지정 하는 개체의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-122">An array of objects that specify arguments that the job takes.</span></span>|
-|<span data-ttu-id="6ee5d-123">체제가 있어도 runas32</span><span class="sxs-lookup"><span data-stu-id="6ee5d-123">RunAs32</span></span>|<span data-ttu-id="6ee5d-124">작업을 32 비트 프로세스로 실행할지 여부를 지정 하는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-124">A boolean value that specifies whether to run the job in a 32-bit process.</span></span>|
+|<span data-ttu-id="baade-113">Name</span><span class="sxs-lookup"><span data-stu-id="baade-113">Name</span></span>|<span data-ttu-id="baade-114">작업의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="baade-114">The name of the job.</span></span>|
+|<span data-ttu-id="baade-115">ScriptBock</span><span class="sxs-lookup"><span data-stu-id="baade-115">ScriptBock</span></span>|<span data-ttu-id="baade-116">작업에서 수행 하는 작업을 지정 하는 Windows PowerShell 스크립트 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="baade-116">A Windows PowerShell script block that specifies what the job does.</span></span>|
+|<span data-ttu-id="baade-117">FilePath</span><span class="sxs-lookup"><span data-stu-id="baade-117">FilePath</span></span>|<span data-ttu-id="baade-118">작업에서 수행 하는 작업을 지정 하는 Windows PowerShell 스크립트 블록을 포함 하는 파일에 대 한 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="baade-118">A path to a file that contains Windows PowerShell script block that specifies what the job does.</span></span>|
+|<span data-ttu-id="baade-119">또한 initializationscript</span><span class="sxs-lookup"><span data-stu-id="baade-119">InitializationScript</span></span>|<span data-ttu-id="baade-120">작업을 초기화 하는 Windows PowerShell 스크립트 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="baade-120">A Windows PowerShell script block that initializes the job.</span></span>|
+|<span data-ttu-id="baade-121">ArgumentList</span><span class="sxs-lookup"><span data-stu-id="baade-121">ArgumentList</span></span>|<span data-ttu-id="baade-122">작업에서 수행 하는 인수를 지정 하는 개체의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="baade-122">An array of objects that specify arguments that the job takes.</span></span>|
+|<span data-ttu-id="baade-123">체제가 있어도 runas32</span><span class="sxs-lookup"><span data-stu-id="baade-123">RunAs32</span></span>|<span data-ttu-id="baade-124">작업을 32 비트 프로세스로 실행할지 여부를 지정 하는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="baade-124">A boolean value that specifies whether to run the job in a 32-bit process.</span></span>|
 
-<span data-ttu-id="6ee5d-125">다음 코드는 매개 변수 사전 개체를 만들고 Name 및 ScriptBlock 매개 변수를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-125">The following code creates a parameter dictionary object and sets the Name and ScriptBlock parameters.</span></span>
+<span data-ttu-id="baade-125">다음 코드는 매개 변수 사전 개체를 만들고 Name 및 ScriptBlock 매개 변수를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="baade-125">The following code creates a parameter dictionary object and sets the Name and ScriptBlock parameters.</span></span>
 
 ```csharp
 string schedJobDefName = "MySampleSchedJob";
@@ -52,9 +52,9 @@ jobDefParameters.Add("ScriptBlock", scriptBlock);  // A scriptblock or script Fi
                                                    // is required.
 ```
 
-## <a name="creating-the-invocation-and-job-definition-objects"></a><span data-ttu-id="6ee5d-126">호출 및 작업 정의 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="6ee5d-126">Creating the Invocation and Job Definition Objects</span></span>
+## <a name="creating-the-invocation-and-job-definition-objects"></a><span data-ttu-id="baade-126">호출 및 작업 정의 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="baade-126">Creating the Invocation and Job Definition Objects</span></span>
 
-<span data-ttu-id="6ee5d-127">그런 다음 ScheduledJobInvocationInfo 및 ScheduledJobDefinition 개체를 만들어 작업을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-127">You then create ScheduledJobInvocationInfo and ScheduledJobDefinition objects to run the job.</span></span> <span data-ttu-id="6ee5d-128">다음 코드에서는이를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-128">The following code demonstrates this.</span></span>
+<span data-ttu-id="baade-127">그런 다음 ScheduledJobInvocationInfo 및 ScheduledJobDefinition 개체를 만들어 작업을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="baade-127">You then create ScheduledJobInvocationInfo and ScheduledJobDefinition objects to run the job.</span></span> <span data-ttu-id="baade-128">다음 코드에서는 이 작업을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="baade-128">The following code demonstrates this.</span></span>
 
 ```csharp
 ScheduledJobInvocationInfo jobInvocationInfo = new ScheduledJobInvocationInfo(
@@ -69,9 +69,9 @@ schedJobDefinition = new ScheduledJobDefinition(
                                                 // in default Task Scheduler process, account.
 ```
 
-## <a name="registering-the-job-with-the-task-scheduler"></a><span data-ttu-id="6ee5d-129">작업 스케줄러에 작업 등록</span><span class="sxs-lookup"><span data-stu-id="6ee5d-129">Registering the Job with the Task Scheduler</span></span>
+## <a name="registering-the-job-with-the-task-scheduler"></a><span data-ttu-id="baade-129">작업 스케줄러에 작업 등록</span><span class="sxs-lookup"><span data-stu-id="baade-129">Registering the Job with the Task Scheduler</span></span>
 
-<span data-ttu-id="6ee5d-130">다음 코드는 작업을 Windows 작업 스케줄러에 등록 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-130">The following code registers the job with the Windows Task Scheduler.</span></span>
+<span data-ttu-id="baade-130">다음 코드는 작업을 Windows 작업 스케줄러에 등록 합니다.</span><span class="sxs-lookup"><span data-stu-id="baade-130">The following code registers the job with the Windows Task Scheduler.</span></span>
 
 ```csharp
 schedJobDefinition.Register();
@@ -79,9 +79,9 @@ registrationSucceeded = true;
 Console.WriteLine("Scheduled job has been registered.  Waiting 30 seconds for it to be started and run.");
 ```
 
-## <a name="complete-code-example"></a><span data-ttu-id="6ee5d-131">전체 코드 예제</span><span class="sxs-lookup"><span data-stu-id="6ee5d-131">Complete Code Example</span></span>
+## <a name="complete-code-example"></a><span data-ttu-id="baade-131">전체 코드 예제</span><span class="sxs-lookup"><span data-stu-id="baade-131">Complete Code Example</span></span>
 
-<span data-ttu-id="6ee5d-132">다음은 이전 코드 조각이 만들어진 전체 코드 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="6ee5d-132">The following is the complete code example from which the previous snippets were taken.</span></span>
+<span data-ttu-id="baade-132">다음은 이전 코드 조각이 만들어진 전체 코드 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="baade-132">The following is the complete code example from which the previous snippets were taken.</span></span>
 
 ```csharp
 using System;

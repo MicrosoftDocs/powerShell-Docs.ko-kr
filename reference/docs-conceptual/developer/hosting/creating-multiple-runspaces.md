@@ -9,19 +9,19 @@ ms.topic: article
 ms.assetid: 42c40c7f-1ee7-4021-950c-2e013c8f2a4a
 caps.latest.revision: 4
 ms.openlocfilehash: 606a2ee4e70d303bf1b1d69b7523eb8649f9be0c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367612"
 ---
-# <a name="creating-multiple-runspaces"></a><span data-ttu-id="0861f-102">여러 runspace 만들기</span><span class="sxs-lookup"><span data-stu-id="0861f-102">Creating multiple runspaces</span></span>
+# <a name="creating-multiple-runspaces"></a><span data-ttu-id="51341-102">여러 runspace 만들기</span><span class="sxs-lookup"><span data-stu-id="51341-102">Creating multiple runspaces</span></span>
 
-<span data-ttu-id="0861f-103">다 수의 runspace를 만드는 경우 runspace 풀을 만드는 것을 고려할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0861f-103">If you create a large number of runspaces, you might consider creating a runspace pool.</span></span> <span data-ttu-id="0861f-104">[Runspace Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) 개체를 사용 하 여 동일한 특성으로 많은 수의 개별 runspace를 만드는 대신 성능을 향상 시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0861f-104">Using a [System.Management.Automation.Runspaces.Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) object, rather than creating a large number of individual runspaces with the same characteristics, can improve performance.</span></span>
+<span data-ttu-id="51341-103">다 수의 runspace를 만드는 경우 runspace 풀을 만드는 것을 고려할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51341-103">If you create a large number of runspaces, you might consider creating a runspace pool.</span></span> <span data-ttu-id="51341-104">[Runspace Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) 개체를 사용 하 여 동일한 특성으로 많은 수의 개별 runspace를 만드는 대신 성능을 향상 시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51341-104">Using a [System.Management.Automation.Runspaces.Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) object, rather than creating a large number of individual runspaces with the same characteristics, can improve performance.</span></span>
 
-## <a name="creating-and-using-a-runspace-pool"></a><span data-ttu-id="0861f-105">Runspace 풀 만들기 및 사용</span><span class="sxs-lookup"><span data-stu-id="0861f-105">Creating and using a runspace pool.</span></span>
+## <a name="creating-and-using-a-runspace-pool"></a><span data-ttu-id="51341-105">Runspace 풀 만들기 및 사용</span><span class="sxs-lookup"><span data-stu-id="51341-105">Creating and using a runspace pool.</span></span>
 
- <span data-ttu-id="0861f-106">다음 예제에서는 runspace 풀을 만드는 방법과 풀의 runspace에서 비동기적으로 명령을 실행 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0861f-106">The following example shows how to create a runspace pool and how to run a command asynchronously in a runspace of the pool.</span></span>
+ <span data-ttu-id="51341-106">다음 예제에서는 runspace 풀을 만드는 방법과 풀의 runspace에서 비동기적으로 명령을 실행 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="51341-106">The following example shows how to create a runspace pool and how to run a command asynchronously in a runspace of the pool.</span></span>
 
 ```csharp
 namespace HostRunspacePool
@@ -79,6 +79,6 @@ namespace HostRunspacePool
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0861f-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0861f-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="51341-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="51341-107">See Also</span></span>
 
- [<span data-ttu-id="0861f-108">InitialSessionState 만들기</span><span class="sxs-lookup"><span data-stu-id="0861f-108">Creating an InitialSessionState</span></span>](./creating-an-initialsessionstate.md)
+ [<span data-ttu-id="51341-108">InitialSessionState 만들기</span><span class="sxs-lookup"><span data-stu-id="51341-108">Creating an InitialSessionState</span></span>](./creating-an-initialsessionstate.md)

@@ -11,49 +11,49 @@ helpviewer_keywords:
 ms.assetid: 875024f4-e02b-4416-80b9-af5e5b50aad6
 caps.latest.revision: 7
 ms.openlocfilehash: 465ab9e8fa29716ce0f46ad0dcf01d0ddd615bcd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364232"
 ---
-# <a name="writing-a-windows-powershell-snap-in"></a><span data-ttu-id="0e95f-102">Windows PowerShell 스냅인 작성</span><span class="sxs-lookup"><span data-stu-id="0e95f-102">Writing a Windows PowerShell Snap-in</span></span>
+# <a name="writing-a-windows-powershell-snap-in"></a><span data-ttu-id="1184c-102">Windows PowerShell 스냅인 작성</span><span class="sxs-lookup"><span data-stu-id="1184c-102">Writing a Windows PowerShell Snap-in</span></span>
 
-<span data-ttu-id="0e95f-103">이 예제에서는 어셈블리의 모든 cmdlet 및 Windows PowerShell 공급자를 등록 하는 데 사용할 수 있는 Windows PowerShell 스냅인을 작성 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0e95f-103">This example shows how to write a Windows PowerShell snap-in that can be used to register all the cmdlets and Windows PowerShell providers in an assembly.</span></span>
+<span data-ttu-id="1184c-103">이 예제에서는 어셈블리의 모든 cmdlet 및 Windows PowerShell 공급자를 등록 하는 데 사용할 수 있는 Windows PowerShell 스냅인을 작성 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1184c-103">This example shows how to write a Windows PowerShell snap-in that can be used to register all the cmdlets and Windows PowerShell providers in an assembly.</span></span>
 
-<span data-ttu-id="0e95f-104">이 유형의 스냅인을 사용 하 여 등록 하려는 cmdlet 및 공급자를 선택 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0e95f-104">With this type of snap-in, you do not select which cmdlets and providers you want to register.</span></span> <span data-ttu-id="0e95f-105">등록 된 항목을 선택할 수 있는 스냅인을 작성 하려면 [사용자 지정 Windows PowerShell 스냅인 작성](./writing-a-custom-windows-powershell-snap-in.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="0e95f-105">To write a snap-in that allows you to select what is registered, see [Writing a Custom Windows PowerShell Snap-in](./writing-a-custom-windows-powershell-snap-in.md).</span></span>
+<span data-ttu-id="1184c-104">이 유형의 스냅인을 사용 하 여 등록 하려는 cmdlet 및 공급자를 선택 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1184c-104">With this type of snap-in, you do not select which cmdlets and providers you want to register.</span></span> <span data-ttu-id="1184c-105">등록 된 항목을 선택할 수 있는 스냅인을 작성 하려면 [사용자 지정 Windows PowerShell 스냅인 작성](./writing-a-custom-windows-powershell-snap-in.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="1184c-105">To write a snap-in that allows you to select what is registered, see [Writing a Custom Windows PowerShell Snap-in](./writing-a-custom-windows-powershell-snap-in.md).</span></span>
 
-### <a name="writing-a-windows-powershell-snap-in"></a><span data-ttu-id="0e95f-106">Windows PowerShell 스냅인 작성</span><span class="sxs-lookup"><span data-stu-id="0e95f-106">Writing a Windows PowerShell Snap-in</span></span>
+### <a name="writing-a-windows-powershell-snap-in"></a><span data-ttu-id="1184c-106">Windows PowerShell 스냅인 작성</span><span class="sxs-lookup"><span data-stu-id="1184c-106">Writing a Windows PowerShell Snap-in</span></span>
 
-1. <span data-ttu-id="0e95f-107">RunInstallerAttribute 특성을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e95f-107">Add the RunInstallerAttribute attribute.</span></span>
+1. <span data-ttu-id="1184c-107">RunInstallerAttribute 특성을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="1184c-107">Add the RunInstallerAttribute attribute.</span></span>
 
-2. <span data-ttu-id="0e95f-108">[Add-pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn) 클래스에서 파생 되는 공용 클래스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="0e95f-108">Create a public class that derives from the [System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn) class.</span></span>
+2. <span data-ttu-id="1184c-108">[Add-pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn) 클래스에서 파생 되는 공용 클래스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1184c-108">Create a public class that derives from the [System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn) class.</span></span>
 
-    <span data-ttu-id="0e95f-109">이 예제에서 클래스 이름은 "GetProcPSSnapIn01"입니다.</span><span class="sxs-lookup"><span data-stu-id="0e95f-109">In this example, the class name is "GetProcPSSnapIn01".</span></span>
+    <span data-ttu-id="1184c-109">이 예제에서 클래스 이름은 "GetProcPSSnapIn01"입니다.</span><span class="sxs-lookup"><span data-stu-id="1184c-109">In this example, the class name is "GetProcPSSnapIn01".</span></span>
 
-3. <span data-ttu-id="0e95f-110">스냅인 이름에 대 한 public 속성 (필수)을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e95f-110">Add a public property for the name of the snap-in (required).</span></span> <span data-ttu-id="0e95f-111">스냅인의 이름을 지정할 때 # 문자를 사용 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="0e95f-111">When naming snap-ins, do not use any of the following characters: # .</span></span> <span data-ttu-id="0e95f-112">, () {} [] &-/\ $; : "' \< >;?</span><span class="sxs-lookup"><span data-stu-id="0e95f-112">, ( ) { } [ ] & - /\ $ ; : " ' \< > ; ?</span></span> <span data-ttu-id="0e95f-113">@ \` \*</span><span class="sxs-lookup"><span data-stu-id="0e95f-113">@ \` \*</span></span>
+3. <span data-ttu-id="1184c-110">스냅인 이름에 대 한 public 속성 (필수)을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="1184c-110">Add a public property for the name of the snap-in (required).</span></span> <span data-ttu-id="1184c-111">스냅인의 이름을 지정할 때 # 문자를 사용 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="1184c-111">When naming snap-ins, do not use any of the following characters: # .</span></span> <span data-ttu-id="1184c-112">, () {} [] &-/\ $; : "' \< >;?</span><span class="sxs-lookup"><span data-stu-id="1184c-112">, ( ) { } [ ] & - /\ $ ; : " ' \< > ; ?</span></span> <span data-ttu-id="1184c-113">@ \` \*</span><span class="sxs-lookup"><span data-stu-id="1184c-113">@ \` \*</span></span>
 
-    <span data-ttu-id="0e95f-114">이 예제에서 스냅인의 이름은 "GetProcPSSnapIn01"입니다.</span><span class="sxs-lookup"><span data-stu-id="0e95f-114">In this example, the name of the snap-in is "GetProcPSSnapIn01".</span></span>
+    <span data-ttu-id="1184c-114">이 예제에서 스냅인의 이름은 "GetProcPSSnapIn01"입니다.</span><span class="sxs-lookup"><span data-stu-id="1184c-114">In this example, the name of the snap-in is "GetProcPSSnapIn01".</span></span>
 
-4. <span data-ttu-id="0e95f-115">스냅인 공급 업체에 대 한 공용 속성 (필수)을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e95f-115">Add a public property for the vendor of the snap-in (required).</span></span>
+4. <span data-ttu-id="1184c-115">스냅인 공급 업체에 대 한 공용 속성 (필수)을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="1184c-115">Add a public property for the vendor of the snap-in (required).</span></span>
 
-    <span data-ttu-id="0e95f-116">이 예제에서 공급 업체는 "Microsoft"입니다.</span><span class="sxs-lookup"><span data-stu-id="0e95f-116">In this example, the vendor is "Microsoft".</span></span>
+    <span data-ttu-id="1184c-116">이 예제에서 공급 업체는 "Microsoft"입니다.</span><span class="sxs-lookup"><span data-stu-id="1184c-116">In this example, the vendor is "Microsoft".</span></span>
 
-5. <span data-ttu-id="0e95f-117">스냅인의 공급 업체 리소스에 대 한 공용 속성을 추가 합니다 (선택 사항).</span><span class="sxs-lookup"><span data-stu-id="0e95f-117">Add a public property for the vendor resource of the snap-in (optional).</span></span>
+5. <span data-ttu-id="1184c-117">스냅인의 공급 업체 리소스에 대 한 공용 속성을 추가 합니다 (선택 사항).</span><span class="sxs-lookup"><span data-stu-id="1184c-117">Add a public property for the vendor resource of the snap-in (optional).</span></span>
 
-    <span data-ttu-id="0e95f-118">이 예제에서 공급 업체 리소스는 "GetProcPSSnapIn01, Microsoft"입니다.</span><span class="sxs-lookup"><span data-stu-id="0e95f-118">In this example, the vendor resource is "GetProcPSSnapIn01,Microsoft".</span></span>
+    <span data-ttu-id="1184c-118">이 예제에서 공급 업체 리소스는 "GetProcPSSnapIn01, Microsoft"입니다.</span><span class="sxs-lookup"><span data-stu-id="1184c-118">In this example, the vendor resource is "GetProcPSSnapIn01,Microsoft".</span></span>
 
-6. <span data-ttu-id="0e95f-119">스냅인에 대 한 설명에 대 한 public 속성 (필수)을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e95f-119">Add a public property for the description of the snap-in (required).</span></span>
+6. <span data-ttu-id="1184c-119">스냅인에 대 한 설명에 대 한 public 속성 (필수)을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="1184c-119">Add a public property for the description of the snap-in (required).</span></span>
 
-    <span data-ttu-id="0e95f-120">이 예제에서 설명은 "This is the Windows PowerShell 스냅인은 get proc cmdlet을 등록 합니다."입니다.</span><span class="sxs-lookup"><span data-stu-id="0e95f-120">In this example, the description is "This is a Windows PowerShell snap-in that registers the get-proc cmdlet".</span></span>
+    <span data-ttu-id="1184c-120">이 예제에서 설명은 "This is the Windows PowerShell 스냅인은 get proc cmdlet을 등록 합니다."입니다.</span><span class="sxs-lookup"><span data-stu-id="1184c-120">In this example, the description is "This is a Windows PowerShell snap-in that registers the get-proc cmdlet".</span></span>
 
-7. <span data-ttu-id="0e95f-121">스냅인의 설명 리소스에 대 한 public 속성을 추가 합니다 (선택 사항).</span><span class="sxs-lookup"><span data-stu-id="0e95f-121">Add a public property for the description resource of the snap-in (optional).</span></span>
+7. <span data-ttu-id="1184c-121">스냅인의 설명 리소스에 대 한 public 속성을 추가 합니다 (선택 사항).</span><span class="sxs-lookup"><span data-stu-id="1184c-121">Add a public property for the description resource of the snap-in (optional).</span></span>
 
-    <span data-ttu-id="0e95f-122">이 예제에서 공급 업체 리소스는 "GetProcPSSnapIn01" 이며,이는 get proc cmdlet을 등록 하는 Windows PowerShell 스냅인입니다.</span><span class="sxs-lookup"><span data-stu-id="0e95f-122">In this example, the vendor resource is "GetProcPSSnapIn01,This is a Windows PowerShell snap-in that registers the get-proc cmdlet".</span></span>
+    <span data-ttu-id="1184c-122">이 예제에서 공급 업체 리소스는 "GetProcPSSnapIn01" 이며,이는 get proc cmdlet을 등록 하는 Windows PowerShell 스냅인입니다.</span><span class="sxs-lookup"><span data-stu-id="1184c-122">In this example, the vendor resource is "GetProcPSSnapIn01,This is a Windows PowerShell snap-in that registers the get-proc cmdlet".</span></span>
 
-## <a name="example"></a><span data-ttu-id="0e95f-123">예제</span><span class="sxs-lookup"><span data-stu-id="0e95f-123">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1184c-123">예제</span><span class="sxs-lookup"><span data-stu-id="1184c-123">Example</span></span>
 
-<span data-ttu-id="0e95f-124">이 예제에서는 Windows PowerShell 셸에서 Get Proc cmdlet을 등록 하는 데 사용할 수 있는 Windows PowerShell 스냅인을 작성 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0e95f-124">This example shows how to write a Windows PowerShell snap-in that can be used to register the Get-Proc cmdlet in the Windows PowerShell shell.</span></span> <span data-ttu-id="0e95f-125">이 예제에서 전체 어셈블리에는 GetProcPSSnapIn01 스냅인 클래스와 Get Proc cmdlet 클래스만 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0e95f-125">Be aware that in this example, the complete assembly would contain only the GetProcPSSnapIn01 snap-in class and the Get-Proc cmdlet class.</span></span>
+<span data-ttu-id="1184c-124">이 예제에서는 Windows PowerShell 셸에서 Get Proc cmdlet을 등록 하는 데 사용할 수 있는 Windows PowerShell 스냅인을 작성 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1184c-124">This example shows how to write a Windows PowerShell snap-in that can be used to register the Get-Proc cmdlet in the Windows PowerShell shell.</span></span> <span data-ttu-id="1184c-125">이 예제에서 전체 어셈블리에는 GetProcPSSnapIn01 스냅인 클래스와 Get Proc cmdlet 클래스만 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1184c-125">Be aware that in this example, the complete assembly would contain only the GetProcPSSnapIn01 snap-in class and the Get-Proc cmdlet class.</span></span>
 
 ```csharp
 [RunInstaller(true)]
@@ -126,8 +126,8 @@ public class GetProcPSSnapIn01 : PSSnapIn
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0e95f-126">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0e95f-126">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1184c-126">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1184c-126">See Also</span></span>
 
-[<span data-ttu-id="0e95f-127">Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법</span><span class="sxs-lookup"><span data-stu-id="0e95f-127">How to Register Cmdlets, Providers, and Host Applications</span></span>](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[<span data-ttu-id="1184c-127">Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법</span><span class="sxs-lookup"><span data-stu-id="1184c-127">How to Register Cmdlets, Providers, and Host Applications</span></span>](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
-[<span data-ttu-id="0e95f-128">Windows PowerShell Shell SDK</span><span class="sxs-lookup"><span data-stu-id="0e95f-128">Windows PowerShell Shell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="1184c-128">Windows PowerShell Shell SDK</span><span class="sxs-lookup"><span data-stu-id="1184c-128">Windows PowerShell Shell SDK</span></span>](../windows-powershell-reference.md)

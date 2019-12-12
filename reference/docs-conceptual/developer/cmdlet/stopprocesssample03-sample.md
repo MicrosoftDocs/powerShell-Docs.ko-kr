@@ -9,63 +9,63 @@ ms.topic: article
 ms.assetid: 31298f1b-8b76-4637-8406-863f5ad27e53
 caps.latest.revision: 8
 ms.openlocfilehash: 91b56a78f878e0d9c0fc11e4b882399bdfb108ac
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369372"
 ---
-# <a name="stopprocesssample03-sample"></a><span data-ttu-id="ffc1e-102">StopProcessSample03 샘플</span><span class="sxs-lookup"><span data-stu-id="ffc1e-102">StopProcessSample03 Sample</span></span>
+# <a name="stopprocesssample03-sample"></a><span data-ttu-id="9a50b-102">StopProcessSample03 샘플</span><span class="sxs-lookup"><span data-stu-id="9a50b-102">StopProcessSample03 Sample</span></span>
 
-<span data-ttu-id="ffc1e-103">이 샘플에서는 매개 변수에 별칭이 있고 해당 매개 변수에서 와일드 카드 문자를 지 원하는 cmdlet을 작성 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-103">This sample shows how to write a cmdlet whose parameters have aliases and whose parameters support wildcard characters.</span></span> <span data-ttu-id="ffc1e-104">이 cmdlet은 Windows PowerShell 2.0에서 제공 하는 `Stop-Process` cmdlet과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-104">This cmdlet is similar to the `Stop-Process` cmdlet provided by Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="9a50b-103">이 샘플에서는 매개 변수에 별칭이 있고 해당 매개 변수에서 와일드 카드 문자를 지 원하는 cmdlet을 작성 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-103">This sample shows how to write a cmdlet whose parameters have aliases and whose parameters support wildcard characters.</span></span> <span data-ttu-id="9a50b-104">이 cmdlet은 Windows PowerShell 2.0에서 제공 하는 `Stop-Process` cmdlet과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-104">This cmdlet is similar to the `Stop-Process` cmdlet provided by Windows PowerShell 2.0.</span></span>
 
-### <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="ffc1e-105">Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-105">How to build the sample by using Visual Studio.</span></span>
+### <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="9a50b-105">Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-105">How to build the sample by using Visual Studio.</span></span>
 
-1. <span data-ttu-id="ffc1e-106">Windows PowerShell 2.0 SDK가 설치 된 상태에서 StopProcessSample03 폴더로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-106">With the Windows PowerShell 2.0 SDK installed, navigate to the StopProcessSample03 folder.</span></span> <span data-ttu-id="ffc1e-107">기본 위치는 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample03.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample03.</span></span>
+1. <span data-ttu-id="9a50b-106">Windows PowerShell 2.0 SDK가 설치 된 상태에서 StopProcessSample03 폴더로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-106">With the Windows PowerShell 2.0 SDK installed, navigate to the StopProcessSample03 folder.</span></span> <span data-ttu-id="9a50b-107">기본 위치는 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample03.</span><span class="sxs-lookup"><span data-stu-id="9a50b-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample03.</span></span>
 
-2. <span data-ttu-id="ffc1e-108">솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="ffc1e-109">그러면 Microsoft Visual Studio의 샘플 프로젝트가 열립니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-109">This opens the sample project in Microsoft Visual Studio.</span></span>
+2. <span data-ttu-id="9a50b-108">솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="9a50b-109">그러면 Microsoft Visual Studio의 샘플 프로젝트가 열립니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-109">This opens the sample project in Microsoft Visual Studio.</span></span>
 
-3. <span data-ttu-id="ffc1e-110">**빌드** 메뉴에서 **솔루션 빌드**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-110">In the **Build** menu, select **Build Solution**.</span></span>
+3. <span data-ttu-id="9a50b-110">**빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-110">In the **Build** menu, select **Build Solution**.</span></span>
 
-    <span data-ttu-id="ffc1e-111">샘플에 대 한 라이브러리는 기본 \bin 또는 \bin\debug 폴더에 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-111">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
+    <span data-ttu-id="9a50b-111">샘플에 대 한 라이브러리는 기본 \bin 또는 \bin\debug 폴더에 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-111">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
 
-### <a name="how-to-run-the-sample"></a><span data-ttu-id="ffc1e-112">샘플을 실행 하는 방법</span><span class="sxs-lookup"><span data-stu-id="ffc1e-112">How to run the sample</span></span>
+### <a name="how-to-run-the-sample"></a><span data-ttu-id="9a50b-112">샘플을 실행하는 방법</span><span class="sxs-lookup"><span data-stu-id="9a50b-112">How to run the sample</span></span>
 
-1. <span data-ttu-id="ffc1e-113">다음 모듈 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-113">Create the following module folder:</span></span>
+1. <span data-ttu-id="9a50b-113">다음 모듈 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-113">Create the following module folder:</span></span>
 
     `[user]/documents/windowspowershell/modules/StopProcessSample03`
 
-2. <span data-ttu-id="ffc1e-114">모듈 폴더에 샘플 어셈블리를 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-114">Copy the sample assembly to the module folder.</span></span>
+2. <span data-ttu-id="9a50b-114">모듈 폴더에 샘플 어셈블리를 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-114">Copy the sample assembly to the module folder.</span></span>
 
-3. <span data-ttu-id="ffc1e-115">Windows PowerShell을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-115">Start Windows PowerShell.</span></span>
+3. <span data-ttu-id="9a50b-115">Windows PowerShell을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-115">Start Windows PowerShell.</span></span>
 
-4. <span data-ttu-id="ffc1e-116">다음 명령을 실행 하 여 Windows PowerShell에 어셈블리를 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-116">Run the following command to load the assembly into Windows PowerShell:</span></span>
+4. <span data-ttu-id="9a50b-116">다음 명령을 실행 하 여 Windows PowerShell에 어셈블리를 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-116">Run the following command to load the assembly into Windows PowerShell:</span></span>
 
     `import-module stopprossessample03`
 
-5. <span data-ttu-id="ffc1e-117">다음 명령을 실행 하 여 cmdlet을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-117">Run the following command to run the cmdlet:</span></span>
+5. <span data-ttu-id="9a50b-117">다음 명령을 실행 하 여 cmdlet을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-117">Run the following command to run the cmdlet:</span></span>
 
     `stop-proc`
 
-## <a name="requirements"></a><span data-ttu-id="ffc1e-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ffc1e-118">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="9a50b-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9a50b-118">Requirements</span></span>
 
-<span data-ttu-id="ffc1e-119">이 샘플에는 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-119">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="9a50b-119">이 샘플에는 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-119">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="ffc1e-120">보여</span><span class="sxs-lookup"><span data-stu-id="ffc1e-120">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="9a50b-120">데모</span><span class="sxs-lookup"><span data-stu-id="9a50b-120">Demonstrates</span></span>
 
-<span data-ttu-id="ffc1e-121">이 샘플에서는 다음을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-121">This sample demonstrates the following.</span></span>
+<span data-ttu-id="9a50b-121">이 샘플에서는 다음을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-121">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="ffc1e-122">Cmdlet 특성을 사용 하 여 cmdlet 클래스 선언</span><span class="sxs-lookup"><span data-stu-id="ffc1e-122">Declaring a cmdlet class by using the Cmdlet attribute.</span></span>
+- <span data-ttu-id="9a50b-122">Cmdlet 특성을 사용 하 여 cmdlet 클래스 선언</span><span class="sxs-lookup"><span data-stu-id="9a50b-122">Declaring a cmdlet class by using the Cmdlet attribute.</span></span>
 
-- <span data-ttu-id="ffc1e-123">매개 변수 특성을 사용 하 여 cmdlet 매개 변수 선언</span><span class="sxs-lookup"><span data-stu-id="ffc1e-123">Declaring a cmdlet parameters by using the Parameter attribute.</span></span>
+- <span data-ttu-id="9a50b-123">매개 변수 특성을 사용 하 여 cmdlet 매개 변수 선언</span><span class="sxs-lookup"><span data-stu-id="9a50b-123">Declaring a cmdlet parameters by using the Parameter attribute.</span></span>
 
-- <span data-ttu-id="ffc1e-124">매개 변수 선언에 별칭을 추가 하는 중입니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-124">Adding aliases to parameter declarations..</span></span>
+- <span data-ttu-id="9a50b-124">매개 변수 선언에 별칭을 추가 하는 중입니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-124">Adding aliases to parameter declarations..</span></span>
 
-- <span data-ttu-id="ffc1e-125">매개 변수에 와일드 카드 지원을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-125">Adding wildcard support to parameters.</span></span>
+- <span data-ttu-id="9a50b-125">매개 변수에 와일드 카드 지원을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-125">Adding wildcard support to parameters.</span></span>
 
-## <a name="example"></a><span data-ttu-id="ffc1e-126">예제</span><span class="sxs-lookup"><span data-stu-id="ffc1e-126">Example</span></span>
+## <a name="example"></a><span data-ttu-id="9a50b-126">예제</span><span class="sxs-lookup"><span data-stu-id="9a50b-126">Example</span></span>
 
-<span data-ttu-id="ffc1e-127">이 샘플에서는 매개 변수 별칭을 선언 하 고 와일드 카드를 지 원하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ffc1e-127">This sample shows how to declare parameter aliases and support wildcards.</span></span>
+<span data-ttu-id="9a50b-127">이 샘플에서는 매개 변수 별칭을 선언 하 고 와일드 카드를 지 원하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9a50b-127">This sample shows how to declare parameter aliases and support wildcards.</span></span>
 
 ```csharp
 using System;
@@ -350,6 +350,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 } // namespace Microsoft.Samples.PowerShell.Commands
 ```
 
-## <a name="see-also"></a><span data-ttu-id="ffc1e-128">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ffc1e-128">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9a50b-128">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9a50b-128">See Also</span></span>
 
-<span data-ttu-id="ffc1e-129">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="ffc1e-129">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>
+<span data-ttu-id="9a50b-129">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="9a50b-129">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>

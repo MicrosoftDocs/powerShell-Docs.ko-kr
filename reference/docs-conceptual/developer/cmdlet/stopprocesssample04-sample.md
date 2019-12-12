@@ -9,67 +9,67 @@ ms.topic: article
 ms.assetid: ac4903f5-fd40-4f1c-b1d1-18923c16ce45
 caps.latest.revision: 8
 ms.openlocfilehash: 26e882dad839af43945f84d4cdd6cda7bdb2d587
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369362"
 ---
-# <a name="stopprocesssample04-sample"></a><span data-ttu-id="5eec8-102">StopProcessSample04 샘플</span><span class="sxs-lookup"><span data-stu-id="5eec8-102">StopProcessSample04 Sample</span></span>
+# <a name="stopprocesssample04-sample"></a><span data-ttu-id="cd101-102">StopProcessSample04 샘플</span><span class="sxs-lookup"><span data-stu-id="cd101-102">StopProcessSample04 Sample</span></span>
 
-<span data-ttu-id="5eec8-103">이 샘플에서는 매개 변수 집합을 선언 하 고, 기본 매개 변수 집합을 지정 하 고, 입력 개체를 허용할 수 있는 cmdlet을 작성 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-103">This sample shows how to write a cmdlet that declares parameter sets, specifies the default parameter set, and can accept an input object.</span></span> <span data-ttu-id="5eec8-104">이 cmdlet은 Windows PowerShell 2.0에서 제공 하는 `Stop-Process` cmdlet과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-104">This cmdlet is similar to the `Stop-Process` cmdlet provided by Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="cd101-103">이 샘플에서는 매개 변수 집합을 선언 하 고, 기본 매개 변수 집합을 지정 하 고, 입력 개체를 허용할 수 있는 cmdlet을 작성 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-103">This sample shows how to write a cmdlet that declares parameter sets, specifies the default parameter set, and can accept an input object.</span></span> <span data-ttu-id="cd101-104">이 cmdlet은 Windows PowerShell 2.0에서 제공 하는 `Stop-Process` cmdlet과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-104">This cmdlet is similar to the `Stop-Process` cmdlet provided by Windows PowerShell 2.0.</span></span>
 
-### <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="5eec8-105">Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-105">How to build the sample by using Visual Studio.</span></span>
+### <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="cd101-105">Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-105">How to build the sample by using Visual Studio.</span></span>
 
-1. <span data-ttu-id="5eec8-106">Windows PowerShell 2.0 SDK가 설치 된 상태에서 StopProcessSample04 폴더로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-106">With the Windows PowerShell 2.0 SDK installed, navigate to the StopProcessSample04 folder.</span></span> <span data-ttu-id="5eec8-107">기본 위치는 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample04.</span><span class="sxs-lookup"><span data-stu-id="5eec8-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample04.</span></span>
+1. <span data-ttu-id="cd101-106">Windows PowerShell 2.0 SDK가 설치 된 상태에서 StopProcessSample04 폴더로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-106">With the Windows PowerShell 2.0 SDK installed, navigate to the StopProcessSample04 folder.</span></span> <span data-ttu-id="cd101-107">기본 위치는 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample04.</span><span class="sxs-lookup"><span data-stu-id="cd101-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample04.</span></span>
 
-2. <span data-ttu-id="5eec8-108">솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="5eec8-109">그러면 Microsoft Visual Studio의 샘플 프로젝트가 열립니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-109">This opens the sample project in Microsoft Visual Studio.</span></span>
+2. <span data-ttu-id="cd101-108">솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="cd101-109">그러면 Microsoft Visual Studio의 샘플 프로젝트가 열립니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-109">This opens the sample project in Microsoft Visual Studio.</span></span>
 
-3. <span data-ttu-id="5eec8-110">**빌드** 메뉴에서 **솔루션 빌드**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-110">In the **Build** menu, select **Build Solution**.</span></span>
+3. <span data-ttu-id="cd101-110">**빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-110">In the **Build** menu, select **Build Solution**.</span></span>
 
-    <span data-ttu-id="5eec8-111">샘플에 대 한 라이브러리는 기본 \bin 또는 \bin\debug 폴더에 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-111">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
+    <span data-ttu-id="cd101-111">샘플에 대 한 라이브러리는 기본 \bin 또는 \bin\debug 폴더에 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-111">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
 
-### <a name="how-to-run-the-sample"></a><span data-ttu-id="5eec8-112">샘플을 실행 하는 방법</span><span class="sxs-lookup"><span data-stu-id="5eec8-112">How to run the sample</span></span>
+### <a name="how-to-run-the-sample"></a><span data-ttu-id="cd101-112">샘플을 실행하는 방법</span><span class="sxs-lookup"><span data-stu-id="cd101-112">How to run the sample</span></span>
 
-1. <span data-ttu-id="5eec8-113">다음 모듈 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-113">Create the following module folder:</span></span>
+1. <span data-ttu-id="cd101-113">다음 모듈 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-113">Create the following module folder:</span></span>
 
     `[user]/documents/windowspowershell/modules/StopProcessSample04`
 
-2. <span data-ttu-id="5eec8-114">모듈 폴더에 샘플 어셈블리를 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-114">Copy the sample assembly to the module folder.</span></span>
+2. <span data-ttu-id="cd101-114">모듈 폴더에 샘플 어셈블리를 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-114">Copy the sample assembly to the module folder.</span></span>
 
-3. <span data-ttu-id="5eec8-115">Windows PowerShell을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-115">Start Windows PowerShell.</span></span>
+3. <span data-ttu-id="cd101-115">Windows PowerShell을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-115">Start Windows PowerShell.</span></span>
 
-4. <span data-ttu-id="5eec8-116">다음 명령을 실행 하 여 Windows PowerShell에 어셈블리를 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-116">Run the following command to load the assembly into Windows PowerShell:</span></span>
+4. <span data-ttu-id="cd101-116">다음 명령을 실행 하 여 Windows PowerShell에 어셈블리를 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-116">Run the following command to load the assembly into Windows PowerShell:</span></span>
 
     `import-module stopprossessample04`
 
-5. <span data-ttu-id="5eec8-117">다음 명령을 실행 하 여 cmdlet을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-117">Run the following command to run the cmdlet:</span></span>
+5. <span data-ttu-id="cd101-117">다음 명령을 실행 하 여 cmdlet을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-117">Run the following command to run the cmdlet:</span></span>
 
     `stop-proc`
 
-## <a name="requirements"></a><span data-ttu-id="5eec8-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5eec8-118">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="cd101-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="cd101-118">Requirements</span></span>
 
-<span data-ttu-id="5eec8-119">이 샘플에는 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-119">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="cd101-119">이 샘플에는 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-119">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="5eec8-120">보여</span><span class="sxs-lookup"><span data-stu-id="5eec8-120">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="cd101-120">데모</span><span class="sxs-lookup"><span data-stu-id="cd101-120">Demonstrates</span></span>
 
-<span data-ttu-id="5eec8-121">이 샘플에서는 다음을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-121">This sample demonstrates the following.</span></span>
+<span data-ttu-id="cd101-121">이 샘플에서는 다음을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-121">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="5eec8-122">Cmdlet 특성을 사용 하 여 cmdlet 클래스 선언</span><span class="sxs-lookup"><span data-stu-id="5eec8-122">Declaring a cmdlet class by using the Cmdlet attribute.</span></span>
+- <span data-ttu-id="cd101-122">Cmdlet 특성을 사용 하 여 cmdlet 클래스 선언</span><span class="sxs-lookup"><span data-stu-id="cd101-122">Declaring a cmdlet class by using the Cmdlet attribute.</span></span>
 
-- <span data-ttu-id="5eec8-123">매개 변수 특성을 사용 하 여 cmdlet 매개 변수 선언</span><span class="sxs-lookup"><span data-stu-id="5eec8-123">Declaring a cmdlet parameters by using the Parameter attribute.</span></span>
+- <span data-ttu-id="cd101-123">매개 변수 특성을 사용 하 여 cmdlet 매개 변수 선언</span><span class="sxs-lookup"><span data-stu-id="cd101-123">Declaring a cmdlet parameters by using the Parameter attribute.</span></span>
 
-- <span data-ttu-id="5eec8-124">입력 개체를 허용 하는 매개 변수를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-124">Adding a parameter that accepts input object.</span></span>
+- <span data-ttu-id="cd101-124">입력 개체를 허용 하는 매개 변수를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-124">Adding a parameter that accepts input object.</span></span>
 
-- <span data-ttu-id="5eec8-125">매개 변수 집합에 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="5eec8-125">Adding parameters to parameter sets</span></span>
+- <span data-ttu-id="cd101-125">매개 변수 집합에 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="cd101-125">Adding parameters to parameter sets</span></span>
 
-- <span data-ttu-id="5eec8-126">기본 매개 변수 집합 지정</span><span class="sxs-lookup"><span data-stu-id="5eec8-126">Specifying the default parameter set.</span></span>
+- <span data-ttu-id="cd101-126">기본 매개 변수 집합 지정</span><span class="sxs-lookup"><span data-stu-id="cd101-126">Specifying the default parameter set.</span></span>
 
-## <a name="example"></a><span data-ttu-id="5eec8-127">예제</span><span class="sxs-lookup"><span data-stu-id="5eec8-127">Example</span></span>
+## <a name="example"></a><span data-ttu-id="cd101-127">예제</span><span class="sxs-lookup"><span data-stu-id="cd101-127">Example</span></span>
 
-<span data-ttu-id="5eec8-128">다음 코드에서는 매개 변수 집합을 선언 하 고, 기본 매개 변수 집합을 지정 하 고, 입력 개체를 허용할 수 있는 Stop Proc cmdlet의 구현을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-128">The following code shows an implementation of the Stop-Proc cmdlet that declare parameter sets, specifies the default parameter set, and can accept an input object.</span></span>
+<span data-ttu-id="cd101-128">다음 코드에서는 매개 변수 집합을 선언 하 고, 기본 매개 변수 집합을 지정 하 고, 입력 개체를 허용할 수 있는 Stop Proc cmdlet의 구현을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-128">The following code shows an implementation of the Stop-Proc cmdlet that declare parameter sets, specifies the default parameter set, and can accept an input object.</span></span>
 
-<span data-ttu-id="5eec8-129">이 샘플에서는 입력 개체, 매개 변수 집합을 선언 하는 방법 및 사용할 기본 매개 변수 집합을 지정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5eec8-129">This sample shows the input object, how to declare parameter sets, and how to specify the default parameter set to use.</span></span>
+<span data-ttu-id="cd101-129">이 샘플에서는 입력 개체, 매개 변수 집합을 선언 하는 방법 및 사용할 기본 매개 변수 집합을 지정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cd101-129">This sample shows the input object, how to declare parameter sets, and how to specify the default parameter set to use.</span></span>
 
 ```csharp
 using System;
@@ -490,6 +490,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="5eec8-130">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5eec8-130">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cd101-130">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cd101-130">See Also</span></span>
 
-<span data-ttu-id="5eec8-131">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="5eec8-131">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>
+<span data-ttu-id="cd101-131">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="cd101-131">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>

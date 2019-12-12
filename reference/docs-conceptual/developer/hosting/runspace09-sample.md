@@ -9,37 +9,37 @@ ms.topic: article
 ms.assetid: f19f12c0-82e9-42f6-a7df-76c45b733855
 caps.latest.revision: 8
 ms.openlocfilehash: d78c865b869f802c7ebe2743942b6f21681de4b3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360862"
 ---
-# <a name="runspace09-sample"></a><span data-ttu-id="3d0ef-102">Runspace09 샘플</span><span class="sxs-lookup"><span data-stu-id="3d0ef-102">Runspace09 Sample</span></span>
+# <a name="runspace09-sample"></a><span data-ttu-id="518e6-102">Runspace09 샘플</span><span class="sxs-lookup"><span data-stu-id="518e6-102">Runspace09 Sample</span></span>
 
-<span data-ttu-id="3d0ef-103">이 샘플에서는 스크립트를 [system.web. Powershell](/dotnet/api/system.management.automation.powershell) 개체의 파이프라인에 추가 하는 방법과 스크립트를 비동기식으로 실행 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3d0ef-103">This sample shows how to add a script to the pipeline of a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object and how to run the script asynchronously.</span></span> <span data-ttu-id="3d0ef-104">이벤트는 스크립트의 출력을 처리하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="3d0ef-104">Events are used to handle the output of the script.</span></span>
+<span data-ttu-id="518e6-103">이 샘플에서는 스크립트를 [system.web. Powershell](/dotnet/api/system.management.automation.powershell) 개체의 파이프라인에 추가 하는 방법과 스크립트를 비동기식으로 실행 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="518e6-103">This sample shows how to add a script to the pipeline of a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object and how to run the script asynchronously.</span></span> <span data-ttu-id="518e6-104">이벤트는 스크립트의 출력을 처리하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="518e6-104">Events are used to handle the output of the script.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="3d0ef-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3d0ef-105">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="518e6-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="518e6-105">Requirements</span></span>
 
-<span data-ttu-id="3d0ef-106">이 샘플에는 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d0ef-106">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="518e6-106">이 샘플에는 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="518e6-106">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="3d0ef-107">보여</span><span class="sxs-lookup"><span data-stu-id="3d0ef-107">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="518e6-107">데모</span><span class="sxs-lookup"><span data-stu-id="518e6-107">Demonstrates</span></span>
 
-<span data-ttu-id="3d0ef-108">이 샘플에서는 다음을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3d0ef-108">This sample demonstrates the following.</span></span>
+<span data-ttu-id="518e6-108">이 샘플에서는 다음을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="518e6-108">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="3d0ef-109">Runspace를 사용 하는 [system.web. Powershell](/dotnet/api/system.management.automation.powershell) 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3d0ef-109">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the runspace.</span></span>
+- <span data-ttu-id="518e6-109">Runspace를 사용 하는 [system.web. Powershell](/dotnet/api/system.management.automation.powershell) 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="518e6-109">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the runspace.</span></span>
 
-- <span data-ttu-id="3d0ef-110">스크립트를 추가 하는 [중입니다.](/dotnet/api/system.management.automation.powershell)</span><span class="sxs-lookup"><span data-stu-id="3d0ef-110">Adding a script the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+- <span data-ttu-id="518e6-110">스크립트를 추가 하는 [중입니다.](/dotnet/api/system.management.automation.powershell)</span><span class="sxs-lookup"><span data-stu-id="518e6-110">Adding a script the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-- <span data-ttu-id="3d0ef-111">파이프라인을 비동기식으로 실행 [하는 데 사용 합니다.](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke)</span><span class="sxs-lookup"><span data-stu-id="3d0ef-111">Using the [System.Management.Automation.Powershell.Begininvoke\*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) method to run the pipeline asynchronously.</span></span>
+- <span data-ttu-id="518e6-111">파이프라인을 비동기식으로 실행 [하는 데 사용 합니다.](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke)</span><span class="sxs-lookup"><span data-stu-id="518e6-111">Using the [System.Management.Automation.Powershell.Begininvoke\*](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) method to run the pipeline asynchronously.</span></span>
 
-- <span data-ttu-id="3d0ef-112">[System.object](/dotnet/api/system.management.automation.powershell) 의 이벤트를 사용 하 여 스크립트의 출력을 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d0ef-112">Using the events of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to process the output of the script.</span></span>
+- <span data-ttu-id="518e6-112">[System.object](/dotnet/api/system.management.automation.powershell) 의 이벤트를 사용 하 여 스크립트의 출력을 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="518e6-112">Using the events of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to process the output of the script.</span></span>
 
-- <span data-ttu-id="3d0ef-113">파이프라인의 호출을 중단 하려면 [Stop \*](/dotnet/api/System.Management.Automation.PowerShell.Stop) 메서드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d0ef-113">Using the [System.Management.Automation.Powershell.Stop\*](/dotnet/api/System.Management.Automation.PowerShell.Stop) method to interrupt the invocation of the pipeline.</span></span>
+- <span data-ttu-id="518e6-113">파이프라인의 호출을 중단 하려면 [Stop \*](/dotnet/api/System.Management.Automation.PowerShell.Stop) 메서드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="518e6-113">Using the [System.Management.Automation.Powershell.Stop\*](/dotnet/api/System.Management.Automation.PowerShell.Stop) method to interrupt the invocation of the pipeline.</span></span>
 
-## <a name="example"></a><span data-ttu-id="3d0ef-114">예제</span><span class="sxs-lookup"><span data-stu-id="3d0ef-114">Example</span></span>
+## <a name="example"></a><span data-ttu-id="518e6-114">예제</span><span class="sxs-lookup"><span data-stu-id="518e6-114">Example</span></span>
 
-<span data-ttu-id="3d0ef-115">이 샘플은 각 숫자 사이에 지연이 발생 하 여 1에서 10 사이의 숫자를 생성 하는 스크립트를 실행 하기 위해 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3d0ef-115">This sample runs to run a script that generates the numbers from 1 to 10 with delays between each number.</span></span> <span data-ttu-id="3d0ef-116">스크립트는 비동기적으로 실행 되 고 이벤트는 출력을 처리 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3d0ef-116">The script is run asynchronously and events are used to handle the output.</span></span>
+<span data-ttu-id="518e6-115">이 샘플은 각 숫자 사이에 지연이 발생 하 여 1에서 10 사이의 숫자를 생성 하는 스크립트를 실행 하기 위해 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="518e6-115">This sample runs to run a script that generates the numbers from 1 to 10 with delays between each number.</span></span> <span data-ttu-id="518e6-116">스크립트는 비동기적으로 실행 되 고 이벤트는 출력을 처리 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="518e6-116">The script is run asynchronously and events are used to handle the output.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -148,6 +148,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="3d0ef-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3d0ef-117">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="518e6-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="518e6-117">See Also</span></span>
 
-[<span data-ttu-id="3d0ef-118">Windows PowerShell 호스트 응용 프로그램 작성</span><span class="sxs-lookup"><span data-stu-id="3d0ef-118">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
+[<span data-ttu-id="518e6-118">Windows PowerShell 호스트 응용 프로그램 작성</span><span class="sxs-lookup"><span data-stu-id="518e6-118">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
