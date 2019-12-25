@@ -26,17 +26,17 @@ Windows 버전에 따라 위치가 바뀌므로 때때로 Windows에서 PowerShe
 
 버전 | 위치
 -- | --
-Windows 10 | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell 입력을 시작합니다.
-Windows 8.1, 8.0 | 시작 화면에서 PowerShell 입력을 시작합니다.<br/>바탕 화면에 있는 경우 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell 입력을 시작합니다.
-Windows 7 SP1 | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 검색 상자에서 PowerShell 입력을 시작합니다.
+Windows 10 | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell을 입력합니다.
+Windows 8.1, 8.0 | 시작 화면에서 PowerShell을 입력합니다.<br/>바탕 화면에 있는 경우 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell을 입력합니다.
+Windows 7 SP1 | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 검색 상자에 PowerShell을 입력합니다.
 
 ### <a name="for-ise"></a>ISE의 경우
 
 버전 | 위치
 -- | --
-Windows 10 | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 ISE 입력을 시작합니다.
+Windows 10 | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 ISE를 입력합니다.
 Windows 8.1, 8.0 | 시작 화면에서 **PowerShell ISE**를 입력합니다.<br/>바탕 화면에 있는 경우 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 **PowerShell ISE**를 입력합니다.
-Windows 7 SP1 | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 검색 상자에서 PowerShell 입력을 시작합니다.
+Windows 7 SP1 | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 검색 상자에 PowerShell을 입력합니다.
 
 ## <a name="finding-powershell-in-windows-server-versions"></a>Windows Server 버전에서 PowerShell 찾기
 
@@ -52,7 +52,7 @@ GUI가 없는 Windows Server 버전은 이름이 **Core** 버전으로 지정되
 
 ### <a name="windows-server-desktop-editions"></a>Windows Server Desktop 버전
 
-모든 Desktop 버전에서는 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell 입력을 시작합니다.
+모든 Desktop 버전에서는 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell을 입력합니다.
 콘솔 및 ISE 옵션을 모두 이용할 수 있습니다.
 
 위 규칙에 대한 유일한 예외는 Windows Server 2008 R2 SP1의 ISE입니다. 이 경우에는 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell ISE를 입력합니다.
