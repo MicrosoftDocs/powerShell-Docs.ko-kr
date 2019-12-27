@@ -15,7 +15,7 @@ ms.locfileid: "74953809"
 
 공식적으로 지원되지 않는 Linux 배포의 경우 [PowerShell 맞춤 패키지][snap]를 사용하여 PowerShell을 설치해 볼 수 있습니다. 또한 Linux [`tar.gz` 보관][tar]을 사용하여 PowerShell 이진 파일을 직접 배포해 볼 수도 있지만 OS에 따라 별도의 단계로 필요한 종속성을 설정해야 합니다.
 
-모든 패키지는 GitHub [릴리스][] 페이지에 제공됩니다. 패키지가 설치된 후 터미널에서 `pwsh`를 실행합니다. [미리 보기 릴리스](#installing-preview-releases)를 설치한 경우 `pwsh-preview`를 실행합니다.
+모든 패키지는 GitHub [릴리스][] 페이지에 제공됩니다. 패키지를 설치한 후 실행하려면 터미널에서 `pwsh`를 실행합니다. [미리 보기 릴리스](#installing-preview-releases)를 설치한 경우 `pwsh-preview`를 실행합니다.
 
 [u16]: #ubuntu-1604
 [u1804]: #ubuntu-1804
@@ -33,7 +33,7 @@ ms.locfileid: "74953809"
 [tar]: #binary-archives
 
 > [!TIP]
-> [.NET Core SDK](/dotnet/core/sdk)가 이미 설치되어 있는 경우 PowerShell을 [.NET 전역 도구](/dotnet/core/tools/global-tools)로 쉽게 설치할 수 있습니다.
+> [.NET Core SDK](/dotnet/core/sdk)가 이미 설치되어 있는 경우 PowerShell을 [.NET 전역 도구](/dotnet/core/tools/global-tools)를 이용해 쉽게 설치할 수 있습니다.
 >
 > ```
 > dotnet tool install --global PowerShell
@@ -343,7 +343,7 @@ pwsh-preview
 ## <a name="centos-7"></a>CentOS 7
 
 > [!NOTE]
-> 이 패키지는 Oracle Linux 7에서 작동합니다.
+> 이 패키지는 Oracle Linux 7에서도 작동합니다.
 
 ### <a name="installation-via-package-repository-preferred---centos-7"></a>패키지 리포지토리를 통해 설치(권장) - CentOS 7
 
@@ -372,7 +372,7 @@ pwsh
 sudo yum install powershell-6.2.0-1.rhel.7.x86_64.rpm
 ```
 
-다운로드의 중간 단계 없이 RPM을 설치할 수 있습니다.
+다운로드 없이 바로 RPM을 설치할 수 있습니다.
 
 ```sh
 sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v6.2.0/powershell-6.2.0-1.rhel.7.x86_64.rpm
@@ -415,7 +415,7 @@ pwsh
 sudo yum install powershell-6.2.0-1.rhel.7.x86_64.rpm
 ```
 
-다운로드의 중간 단계 없이 RPM을 설치할 수 있습니다.
+다운로드 없이 바로 RPM을 설치할 수 있습니다.
 
 ```sh
 sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v6.2.0/powershell-6.2.0-1.rhel.7.x86_64.rpm
@@ -528,7 +528,7 @@ sudo dnf install compat-openssl10
 sudo dnf install powershell-6.2.0-1.rhel.7.x86_64.rpm
 ```
 
-다운로드의 중간 단계 없이 RPM을 설치할 수 있습니다.
+다운로드 없이 바로 RPM을 설치할 수 있습니다.
 
 ```sh
 sudo dnf install compat-openssl10
@@ -544,7 +544,7 @@ sudo dnf remove powershell
 ## <a name="arch-linux"></a>Arch Linux
 
 > [!NOTE]
-> Arch 지원은 Microsoft에서 공식적으로 지원하지 않으며 커뮤니티에서 유지 관리합니다.
+> Arch Linux는 Microsoft에서 공식적으로 지원하지 않으며 커뮤니티에서 유지 관리합니다.
 
 PowerShell은 [Arch Linux][] 사용자 리포지토리(AUR)에 제공됩니다.
 
@@ -552,7 +552,7 @@ PowerShell은 [Arch Linux][] 사용자 리포지토리(AUR)에 제공됩니다.
 * [최신 마스터 커밋][arch-git]에서 컴파일할 수 있습니다.
 * [최신 릴리스 이진 파일][arch-bin]을 사용하여 설치할 수 있습니다.
 
-AUR의 패키지는 커뮤니티에서 유지 관리되며 공식적인 지원은 없습니다.
+AUR 패키지는 커뮤니티가 유지 관리하며 공식적인 지원은 없습니다.
 
 AUR에서 패키지를 설치하는 방법에 대한 자세한 내용은 [Arch Linux wiki](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages) 또는 [DockerFile](https://github.com/PowerShell/PowerShell/blob/master/docker/community/archlinux/Dockerfile) 커뮤니티를 참조하세요.
 
