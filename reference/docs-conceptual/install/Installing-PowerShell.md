@@ -19,7 +19,7 @@ Windows에 PowerShell의 레거시 버전을 설치하는 방법에 대한 자�
 
 ## <a name="powershell-core"></a>PowerShell Core
 
-PowerShell Core는 현재 [GitHub](https://github.com/powershell/powershell)의 오픈 소스 프로젝트입니다.
+PowerShell Core는 현재 [GitHub](https://github.com/powershell/powershell)에 게시된 오픈 소스 프로젝트입니다.
 지원되는 다양한 실험 플랫폼에 PowerShell Core를 설치하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 - [Windows에서 PowerShell Core 설치](Installing-PowerShell-Core-on-Windows.md)

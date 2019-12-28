@@ -565,7 +565,7 @@ AUR에서 패키지를 설치하는 방법에 대한 자세한 내용은 [Arch L
 
 ### <a name="getting-snapd"></a>snapd 가져오기
 
-`snapd`는 snap을 실행하는 데 필요합니다. [이러한 지침](https://docs.snapcraft.io/core/install)을 사용하여 `snapd`를 설치했는지 확인합니다.
+`snapd`는 snap을 실행하는 데 필요합니다. [이 지침](https://docs.snapcraft.io/core/install)을 사용하여 `snapd`를 설치했는지 확인합니다.
 
 ### <a name="installation-via-snap"></a>맞춤을 통해 설치
 
@@ -608,7 +608,7 @@ sudo snap remove powershell-preview
 ## <a name="kali"></a>Kali
 
 > [!NOTE]
-> Kali 지원은 Microsoft에서 공식적으로 지원하지 않으며 커뮤니티에서 유지 관리합니다.
+> Kali Linux는 Microsoft에서 공식적으로 지원하지 않으며 커뮤니티에서 유지 관리합니다.
 
 ### <a name="installation---kali"></a>설치 - Kali
 

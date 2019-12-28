@@ -52,7 +52,7 @@ GUI가 없는 Windows Server 버전은 이름이 **Core** 버전으로 지정되
 
 ### <a name="windows-server-desktop-editions"></a>Windows Server Desktop 버전
 
-모든 Desktop 버전에서는 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell 입력을 시작합니다.
+모든 Desktop 버전에서는 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell을 입력합니다.
 콘솔 및 ISE 옵션을 모두 이용할 수 있습니다.
 
 위 규칙에 대한 유일한 예외는 Windows Server 2008 R2 SP1의 ISE입니다. 이 경우에는 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell ISE를 입력합니다.

@@ -24,12 +24,12 @@ Windows에서 여러 가지 방법으로 PowerShell Core를 설치할 수 있습
 
 WSMan을 통한 PowerShell 원격 기능을 사용하려면 다음 전제 조건을 충족해야 합니다.
 
-- Windows 10 이전의 Windows 버전에서는 [Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=50410)을 설치합니다. 직접 다운로드 또는 Windows 업데이트를 통해 사용할 수 있습니다. 옵션 패키지를 포함하여 완전히 패치된 지원 시스템은 이미 설치되어 있습니다.
-- Windows 7 및 Windows Server 2008 R2에 WMF(Windows Management Framework) 4.0 이상을 설치합니다. WMF에 대한 자세한 내용은 [WMF 개요](/powershell/scripting/wmf/overview)를 참조하세요.
+- Windows 10 이전의 Windows 버전에서는 [Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=50410)을 설치하여야만 합니다. 직접 다운로드 또는 Windows 업데이트를 통해 설치할 수 있습니다. 옵션 패키지를 포함하여 완전히 패치된 지원 시스템에는 이미 설치되어 있습니다.
+- Windows 7 및 Windows Server 2008 R2에서는 WMF(Windows Management Framework) 4.0 이상을 설치해야만 합니다. WMF에 대한 자세한 내용은 [WMF 개요](/powershell/scripting/wmf/overview)를 참조하세요.
 
 ## <a name="a-idmsi-installing-the-msi-package"></a><a id="msi" />MSI 패키지 설치
 
-Windows 클라이언트 또는 Windows Server(Windows 7 SP1, Server 2008 R2 이상에서 작동)에 PowerShell을 설치하려면 GitHub [릴리스][releases] 페이지에서 MSI 패키지를 다운로드합니다. 설치하려는 릴리스의 **자산** 섹션으로 스크롤을 내립니다. 자산 섹션이 축소되어 있을 수 있으니 확장을 클릭해야 합니다.
+Windows 클라이언트 또는 Windows Server(Windows 7 SP1, Server 2008 R2 이상에서 작동)에 PowerShell을 설치하려면 GitHub [릴리스][releases] 페이지에서 MSI 패키지를 다운로드합니다. 설치하려는 릴리스의 **Assets** 섹션까지 아래로 스크롤합니다. Assets 섹션이 축소되어 있으면 클릭해서 확장합니다.
 
 MSI 파일은 다음과 같습니다. - `PowerShell-<version>-win-<os-arch>.msi`
 <!-- TODO: should be updated to point to the Download Center as well -->
@@ -45,8 +45,8 @@ MSI 파일은 다음과 같습니다. - `PowerShell-<version>-win-<os-arch>.msi`
 
 MSI 패키지를 명령줄에서 설치할 수 있습니다. 이렇게 하면 관리자가 사용자 개입 없이 패키지를 배포할 수 있습니다. PowerShell용 MSI 패키지에는 설치 옵션을 제어하는 다음 속성이 포함되어 있습니다.
 
-- **ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL** - 이 속성은 Windows 탐색기의 상황에 맞는 메뉴에 **Open PowerShell** 항목을 추가하는 옵션을 제어합니다.
-- **ENABLE_PSREMOTING** - 이 속성은 설치 중 PowerShell 원격을 사용하는 옵션을 제어합니다.
+- **ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL** - 이 속성은 Windows 탐색기의 컨택스트 메뉴에 **Open PowerShell** 항목을 추가하는 옵션을 제어합니다.
+- **ENABLE_PSREMOTING** - 이 속성은 설치 중 PowerShell 원격 조정을 사용하는 옵션을 제어합니다.
 - **REGISTER_MANIFEST** - 이 속성은 Windows 이벤트 로깅 매니페스트를 등록하는 옵션을 제어합니다.
 
 다음 예제에서는 모든 설치 옵션을 사용하도록 설정하여 PowerShell Core를 자동으로 설치하는 방법을 보여 줍니다.
@@ -59,7 +59,7 @@ Msiexec.exe에 대한 명령줄 옵션의 전체 목록은 [명령줄 옵션](/w
 
 ## <a name="a-idmsix-installing-the-msix-package"></a><a id="msix" />MSIX 패키지 설치
 
-Windows 10 클라이언트에 MSIX 패키지를 수동으로 설치하려면 GitHub [릴리스][releases] 페이지에서 MSIX 패키지를 다운로드합니다. 설치하려는 릴리스의 **자산** 섹션으로 스크롤을 내립니다. 자산 섹션이 축소되어 있을 수 있으니 확장을 클릭해야 합니다.
+Windows 10 클라이언트에 MSIX 패키지를 수동으로 설치하려면 GitHub [릴리스][releases] 페이지에서 MSIX 패키지를 다운로드합니다. 설치하려는 릴리스의 **Assets** 섹션까지 아래로 스크롤합니다. Assets 섹션이 축소되어 있으면 클릭해서 확장합니다.
 
 MSI 파일은 다음과 같습니다. - `PowerShell-<version>-win-<os-arch>.msix`
 
@@ -167,7 +167,7 @@ Nano 서버는 “헤드리스” OS입니다. 두 가지 방법으로 Core 이�
 
 ## <a name="how-to-create-a-remoting-endpoint"></a>원격 엔드포인트를 만드는 방법
 
-PowerShell Core는 WSMan 및 SSH보다 PowerShell Remoting Protocol(PSRP)을 지원합니다. 자세한 내용은 다음을 참조하세요.
+PowerShell Core는 WSMan 및 SSH와 함께 PowerShell Remoting Protocol(PSRP)을 지원합니다. 자세한 내용은 다음을 참조하세요.
 
 - [PowerShell Core에서의 SSH 원격 작업][ssh-remoting]
 - [PowerShell Core에서의 WSMan 원격 작업][wsman-remoting]

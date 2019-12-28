@@ -16,7 +16,7 @@ PowerShell Core는 macOS 10.12 이상을 지원합니다.
 패키지가 설치된 후 터미널에서 `pwsh`를 실행합니다.
 
 > [!TIP]
-> [.NET Core SDK](/dotnet/core/sdk)가 이미 설치되어 있는 경우 PowerShell을 [.NET 전역 도구](/dotnet/core/tools/global-tools)로 쉽게 설치할 수 있습니다.
+> [.NET Core SDK](/dotnet/core/sdk)가 이미 설치되어 있는 경우 PowerShell을 [.NET 전역 도구](/dotnet/core/tools/global-tools)를 이용해 쉽게 설치할 수 있습니다.
 >
 > ```
 > dotnet tool install --global PowerShell
@@ -30,7 +30,7 @@ PowerShell Core는 macOS 10.12 이상을 지원합니다.
 
 ## <a name="installation-of-latest-stable-release-via-homebrew-on-macos-1012-or-higher"></a>macOS 10.12 이상에서 Homebrew를 통해 안정적인 최신 릴리스 설치
 
-Brew에 대한 자세한 내용은 [Brew정보](#about-brew)를 참조하세요.
+Brew에 대한 자세한 내용은 [Brew 정보](#about-brew)를 참조하세요.
 
 이제 PowerShell을 설치할 수 있습니다.
 
@@ -44,7 +44,7 @@ brew cask install powershell
 pwsh
 ```
 
-PowerShell의 새 버전이 릴리스되면 Homebrew의 공식을 업데이트하고 PowerShell을 업그레이드합니다.
+PowerShell의 새 버전이 릴리스되면 Homebrew의 Formula를 업데이트하고 PowerShell을 업그레이드합니다.
 
 ```sh
 brew update
@@ -58,7 +58,7 @@ brew cask upgrade powershell
 
 ## <a name="installation-of-latest-preview-release-via-homebrew-on-macos-1012-or-higher"></a>macOS 10.12 이상에서 Homebrew를 통해 최신 미리 보기 릴리스 설치
 
-Brew에 대한 자세한 내용은 [Brew정보](#about-brew)를 참조하세요.
+Brew에 대한 자세한 내용은 [Brew 정보](#about-brew)를 참조하세요.
 
 Homebrew를 설치한 후 PowerShell을 설치할 수 있습니다.
 먼저 [Cask-Versions][cask-versions] 패키지를 설치합니다. 그러면 cask 패키지의 대체 버전을 설치할 수 있습니다.
@@ -79,7 +79,7 @@ brew cask install powershell-preview
 pwsh-preview
 ```
 
-PowerShell의 새 버전이 릴리스되면 Homebrew의 공식을 업데이트하고 PowerShell을 업그레이드합니다.
+PowerShell의 새 버전이 릴리스되면 Homebrew의 Formula를 업데이트하고 PowerShell을 업그레이드합니다.
 
 ```sh
 brew update
@@ -105,7 +105,7 @@ sudo installer -pkg powershell-6.2.0-osx-x64.pkg -target /
 
 ## <a name="binary-archives"></a>이진 아카이브
 
-고급 배포 시나리오를 사용하도록 설정하려면 macOS 플랫폼에 대해 PowerShell 이진 `tar.gz` 보관이 제공됩니다.
+고급 배포 시나리오를 위해 macOS 플랫폼에 대해 PowerShell 이진 `tar.gz` 보관이 제공됩니다.
 
 ### <a name="installing-binary-archives-on-macos"></a>macOS에서 이진 보관 설치
 
@@ -142,7 +142,7 @@ OpenSSL은 PowerShell 원격 기능 및 CIM 작업에 필요합니다. MacPorts 
 
 #### <a name="install-openssl-via-brew"></a>Brew를 통해 OpenSSL 설치
 
-Brew에 대한 자세한 내용은 [Brew정보](#about-brew)를 참조하세요.
+Brew에 대한 자세한 내용은 [Brew 정보](#about-brew)를 참조하세요.
 
 OpenSSL을 설치하려면 `brew install openssl`을 실행합니다.
 
@@ -195,7 +195,7 @@ sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 
 PowerShell은 macOS의 [XDG 기본 디렉터리 사양][xdg-bds]을 따릅니다.
 
-macOS는 BSD에서 파생된 것이므로 `/opt` 대신 `/usr/local`이 접두사로 사용됩니다.
+macOS는 BSD에서 파생된 운영체제이므로 `/opt` 대신 `/usr/local`이 접두사로 사용됩니다.
 따라서 `$PSHOME`은 `/usr/local/microsoft/powershell/6.2.0/`이며 기호화된 링크는 `/usr/local/bin/pwsh`에 있습니다.
 
 ## <a name="additional-resources"></a>추가 리소스
