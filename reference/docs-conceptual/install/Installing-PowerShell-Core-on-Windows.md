@@ -25,11 +25,13 @@ Windows에서 여러 가지 방법으로 PowerShell Core를 설치할 수 있습
 WSMan을 통한 PowerShell 원격 기능을 사용하려면 다음 전제 조건을 충족해야 합니다.
 
 - Windows 10 이전의 Windows 버전에서는 [Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=50410)을 설치하여야만 합니다. 직접 다운로드 또는 Windows 업데이트를 통해 설치할 수 있습니다. 옵션 패키지를 포함하여 완전히 패치된 지원 시스템에는 이미 설치되어 있습니다.
+
 - Windows 7 및 Windows Server 2008 R2에서는 WMF(Windows Management Framework) 4.0 이상을 설치해야만 합니다. WMF에 대한 자세한 내용은 [WMF 개요](/powershell/scripting/wmf/overview)를 참조하세요.
 
 ## <a name="a-idmsi-installing-the-msi-package"></a><a id="msi" />MSI 패키지 설치
 
 Windows 클라이언트 또는 Windows Server(Windows 7 SP1, Server 2008 R2 이상에서 작동)에 PowerShell을 설치하려면 GitHub [릴리스][releases] 페이지에서 MSI 패키지를 다운로드합니다. 설치하려는 릴리스의 **Assets** 섹션까지 아래로 스크롤합니다. Assets 섹션이 축소되어 있으면 클릭해서 확장합니다.
+
 
 MSI 파일은 다음과 같습니다. - `PowerShell-<version>-win-<os-arch>.msi`
 <!-- TODO: should be updated to point to the Download Center as well -->
@@ -60,6 +62,7 @@ Msiexec.exe에 대한 명령줄 옵션의 전체 목록은 [명령줄 옵션](/w
 ## <a name="a-idmsix-installing-the-msix-package"></a><a id="msix" />MSIX 패키지 설치
 
 Windows 10 클라이언트에 MSIX 패키지를 수동으로 설치하려면 GitHub [릴리스][releases] 페이지에서 MSIX 패키지를 다운로드합니다. 설치하려는 릴리스의 **Assets** 섹션까지 아래로 스크롤합니다. Assets 섹션이 축소되어 있으면 클릭해서 확장합니다.
+
 
 MSI 파일은 다음과 같습니다. - `PowerShell-<version>-win-<os-arch>.msix`
 
