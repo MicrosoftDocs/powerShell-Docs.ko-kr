@@ -372,7 +372,7 @@ pwsh
 sudo yum install powershell-6.2.0-1.rhel.7.x86_64.rpm
 ```
 
-다운로드의 중간 단계 없이 RPM을 설치할 수 있습니다.
+다운로드 없이 바로 RPM을 설치할 수 있습니다.
 
 ```sh
 sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v6.2.0/powershell-6.2.0-1.rhel.7.x86_64.rpm
@@ -415,7 +415,7 @@ pwsh
 sudo yum install powershell-6.2.0-1.rhel.7.x86_64.rpm
 ```
 
-다운로드의 중간 단계 없이 RPM을 설치할 수 있습니다.
+다운로드 없이 바로 RPM을 설치할 수 있습니다.
 
 ```sh
 sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v6.2.0/powershell-6.2.0-1.rhel.7.x86_64.rpm
