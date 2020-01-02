@@ -13,7 +13,7 @@ ms.locfileid: "74953809"
 
 [Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubuntu 18.10][u1810], [Ubuntu 19.04][u1904], [Debian 8][deb8], [Debian 9][deb9], [Debian 10][deb10], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [openSUSE 42.3][opensuse], [openSUSE Leap 15][opensuse], [Fedora 27][fedora], [Fedora 28][fedora], [Arch Linux][arch]를 지원합니다.
 
-공식적으로 지원되지 않는 Linux 배포의 경우 [PowerShell 맞춤 패키지][snap]를 사용하여 PowerShell을 설치해 볼 수 있습니다. 또한 Linux [`tar.gz` 보관][tar]을 사용하여 PowerShell 이진 파일을 직접 배포해 볼 수도 있지만 OS에 따라 별도의 단계로 필요한 종속성을 설정해야 합니다.
+공식적으로 지원되지 않는 Linux 배포의 경우 [PowerShell 맞춤 패키지][snap]를 사용하여 PowerShell을 설치해 볼 수 있습니다. 또한 Linux [`tar.gz` 보관][tar]을 사용하여 PowerShell 이진 파일을 직접 배포해 볼 수도 있지만 OS에 따라 별도의 단계로 필요한 종속성 패키지를 설치해야 합니다.
 
 모든 패키지는 GitHub [릴리스][] 페이지에 제공됩니다. 패키지를 설치한 후 실행하려면 터미널에서 `pwsh`를 실행합니다. [미리 보기 릴리스](#installing-preview-releases)를 설치한 경우 `pwsh-preview`를 실행합니다.
 
@@ -364,7 +364,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---centos-7"></a>직접 다운로드를 통해 설치 - CentOS 7
 
-[CentOS 7][]을 사용하여 [릴리스][] 페이지의 RPM 패키지 `powershell-6.2.0-1.rhel.7.x86_64.rpm`을 CentOS 컴퓨터로 다운로드합니다.
+[CentOS 7][]에서 [릴리스][] 페이지의 RPM 패키지 `powershell-6.2.0-1.rhel.7.x86_64.rpm`을 CentOS 컴퓨터로 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
@@ -548,8 +548,8 @@ sudo dnf remove powershell
 
 PowerShell은 [Arch Linux][] 사용자 리포지토리(AUR)에 제공됩니다.
 
-* [최신 태깅 릴리스][arch-release]를 사용하여 컴파일할 수 있습니다.
-* [최신 마스터 커밋][arch-git]에서 컴파일할 수 있습니다.
+* [최신 태깅 릴리스][arch-release]를 컴파일할 수 있습니다.
+* [최신 마스터 커밋][arch-git]을 컴파일할 수 있습니다.
 * [최신 릴리스 이진 파일][arch-bin]을 사용하여 설치할 수 있습니다.
 
 AUR 패키지는 커뮤니티가 유지 관리하며 공식적인 지원은 없습니다.
