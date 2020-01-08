@@ -2,12 +2,12 @@
 ms.date: 10/11/2019
 keywords: dsc,powershell,configuration,setup
 title: 의사 결정자를 위한 필요한 상태 구성 개요
-ms.openlocfilehash: 271ec04035feb17e932acd0ac80f32213a4e018b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b6d483d105c2d3b9be7215be36397d452338c7f1
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72352130"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737256"
 ---
 # <a name="desired-state-configuration-overview-for-decision-makers"></a>의사 결정자를 위한 필요한 상태 구성 개요
 
@@ -31,7 +31,7 @@ DSC에서는 모니터링 및 보고 기능을 기본적으로 제공합니다. 
 
 ## <a name="dsc-and-devops"></a>DSC 및 DevOps
 
-DSC는 [DevOps](http://blogs.technet.com/b/ashleymcglone/archive/2015/11/20/devops-for-n00bs-ie-windows-people.aspx)를 염두에 두고 설계되었습니다. 내부 사용자든 외부 사용자든 최종 사용자에게 가치를 제공하는 데 중점을 둔 빠른 배포와 반복이 가능한 사용자, 프로세스 및 도구의 조합입니다. 환경을 정의하는 단일 구성이란 개발자가 본인의 요구 사항을 구성 내에 인코딩하고 해당 구성을 원본 코드 제어로 체크인할 수 있음을 의미합니다. 그러면 운영 팀은 오류가 발생하기 쉬운 수동 프로세스를 거치지 않고 코드를 배포할 수 있습니다.
+DSC는 [DevOps](/archive/blogs/ashleymcglone/devops-for-n00bs-ie-windows-people-like-me)를 염두에 두고 설계되었습니다. 내부 사용자든 외부 사용자든 최종 사용자에게 가치를 제공하는 데 중점을 둔 빠른 배포와 반복이 가능한 사용자, 프로세스 및 도구의 조합입니다. 환경을 정의하는 단일 구성이란 개발자가 본인의 요구 사항을 구성 내에 인코딩하고 해당 구성을 원본 코드 제어로 체크인할 수 있음을 의미합니다. 그러면 운영 팀은 오류가 발생하기 쉬운 수동 프로세스를 거치지 않고 코드를 배포할 수 있습니다.
 
 구성은 [데이터 기반](../configurations/configData.md)입니다. 운영 팀은 정의된 데이터를 통해 개발자의 개입 없이 환경을 쉽게 식별하고 변경할 수 있습니다.
 
