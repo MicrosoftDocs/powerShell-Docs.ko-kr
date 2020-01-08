@@ -22,7 +22,13 @@
       "ms.tgt_pltfr": "windows, macos, linux",
       "author": "juanpablojofre",
       "ms.author": "jpjofre",
-      "bilingual_type": "hover over"
+      "bilingual_type": "hover over",
+      "disable_contribution_on_translation_quality": [
+        "MT",
+        "MTE75",
+        "MTE95",
+        "Blank"
+      ]
     },
     "resource": [
       {
