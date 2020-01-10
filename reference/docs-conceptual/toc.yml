@@ -24,7 +24,7 @@
           href: install/installing-the-windows-powershell-2.0-engine.md
         - name: Windows PowerShell 시스템 요구 사항
           href: install/windows-powershell-system-requirements.md
-- name: 시작
+- name: 시작하기
   items:
     - name: PowerShell 시작
       href: getting-started/getting-started-with-windows-powershell.md
@@ -58,7 +58,7 @@
           items:
             - name: 개요
               href: learn/remoting/jea/overview.md
-            - name: 필수 구성 요소
+            - name: 사전 요구 사항
               href: learn/remoting/jea/prerequisites.md
             - name: 역할 기능
               href: learn/remoting/jea/role-capabilities.md
@@ -68,7 +68,7 @@
               href: learn/remoting/jea/register-jea.md
             - name: JEA 사용
               href: learn/remoting/jea/using-jea.md
-            - name: 보안 고려 사항
+            - name: 보안 고려사항
               href: learn/remoting/jea/security-considerations.md
             - name: JEA에 대한 감사 및 보고
               href: learn/remoting/jea/audit-and-report.md
@@ -82,7 +82,7 @@
           href: learn/remoting/winrmsecurity.md
         - name: PowerShell 원격에서 두 번째 홉 만들기
           href: learn/remoting/ps-remoting-second-hop.md
-    - name: 용어집
+    - name: 용어
       href: learn/windows-powershell-glossary.md
 - name: 구성 요소
   items:
@@ -180,7 +180,7 @@
       href: gallery/installing-psget.md
     - name: 시작하기
       href: gallery/getting-started.md
-    - name: 방법
+    - name: 사용 방법
       items:
         - name: 갤러리에서 패키지 찾기
           items:
@@ -222,7 +222,7 @@
               href: gallery/how-to/managing-profile/managing-account.md
             - name: API 키 관리
               href: gallery/how-to/managing-profile/creating-apikeys.md
-        - name: 로컬 PowerShellGet 리포지토리 작업
+        - name: 프라이빗 PowerShellGet 리포지토리 작업
           href: gallery/how-to/working-with-local-psrepositories.md
     - name: 개념
       items:
@@ -266,7 +266,7 @@
           href: gallery/how-to/getting-support/gdpr-dsr-policy.md
     - name: 갤러리 FAQ
       href: gallery/faqs.md
-- name: 새로운 기능
+- name: What's New
   items:
     - name: PowerShell Core 6.x의 새로운 기능
       items:
@@ -300,7 +300,7 @@
           href: wmf/setup/install-configure.md
         - name: WMF 5.0 제거
           href: wmf/setup/uninstall.md
-    - name: 새로운 기능
+    - name: What's New
       expanded: true
       items:
         - name: WMF 5.x 릴리스 정보
@@ -351,7 +351,7 @@
           href: dsc/overview/DscForEngineers.md
         - name: CI/CD 파이프라인에서 DSC의 역할 이해
           href: dsc/overview/authoringAdvanced.md
-    - name: 시작하기
+    - name: 시작
       items:
         - name: Linux용 DSC 시작하기
           href: dsc/getting-started/lnxGettingStarted.md
@@ -1830,5 +1830,5 @@
     - name: Windows PowerShell 참조
       href: developer/windows-powershell-reference.md
       items:
-        - name: 새로운 기능
+        - name: What's New
           href: developer/windows-powershell-reference-whats-new.md
