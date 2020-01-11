@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], property provider
 ms.assetid: a6adca44-b94b-4103-9970-a9b414355e60
 caps.latest.revision: 5
-ms.openlocfilehash: 9197f5635528e0f52cd08adde1c6bd69467725e8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d6c84c3b23439cd3fd6205a2c1d480e0c063d09c
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417472"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870679"
 ---
 # <a name="creating-a-windows-powershell-property-provider"></a>Windows PowerShell 속성 공급자 만들기
 
@@ -24,10 +24,7 @@ ms.locfileid: "74417472"
 
 > [!NOTE]
 > Windows powershell은 Windows PowerShell 공급자를 개발 하는 데 사용할 수 있는 템플릿 파일을 제공 합니다. TemplateProvider.cs 파일은 Windows Vista 용 Microsoft Windows 소프트웨어 개발 키트 및 .NET Framework 3.0 런타임 구성 요소에서 사용할 수 있습니다. 다운로드 지침은 [Windows powershell을 설치 하 고 Windows POWERSHELL SDK를 다운로드 하는 방법](/powershell/scripting/developer/installing-the-windows-powershell-sdk)을 참조 하세요.
->
-> 다운로드 한 템플릿은 **\<PowerShell Samples >** 디렉터리에서 사용할 수 있습니다. 이 파일의 복사본을 만들고 복사본을 사용 하 여 새 Windows PowerShell 공급자를 만들어 필요 하지 않은 기능을 제거 해야 합니다.
->
-> 다른 Windows PowerShell 공급자 구현에 대 한 자세한 내용은 [Windows Powershell 공급자 디자인](./designing-your-windows-powershell-provider.md)을 참조 하세요.
+> 다운로드 한 템플릿은 **\<PowerShell Samples >** 디렉터리에서 사용할 수 있습니다. 이 파일의 복사본을 만들고 복사본을 사용 하 여 새 Windows PowerShell 공급자를 만들어 필요 하지 않은 기능을 제거 해야 합니다. 다른 Windows PowerShell 공급자 구현에 대 한 자세한 내용은 [Windows Powershell 공급자 디자인](./designing-your-windows-powershell-provider.md)을 참조 하세요.
 
 > [!CAUTION]
 > 속성 공급자의 메서드는 System.object를 사용 하 여 개체를 작성 해야 합니다. [Writepropertyobject *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WritePropertyObject) 메서드.
@@ -72,7 +69,8 @@ System.object [를](/dotnet/api/System.Management.Automation.Provider.IPropertyC
 
 ## <a name="setting-properties"></a>속성 설정
 
-속성을 설정 하려면 Windows PowerShell 속성 공급자가 `Set-ItemProperty` cmdlet의 호출을 지원 하기 위해 [system.object](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 를 구현 해야 합니다. 이 메서드는 지정 된 경로에 있는 항목의 속성을 하나 이상 설정 하 고 필요한 경우 제공 된 속성을 덮어씁니다. [System.object. Setproperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 는 업데이트 된 속성의 속성 모음을 나타내는 [system.object](/dotnet/api/System.Management.Automation.PSObject) 의 인스턴스를 작성 합니다. 또한이 개체는 업데이트 된 속성의 속성 모음을 나타냅니다.
+속성을 설정 하려면 Windows PowerShell 속성 공급자가 `Set-ItemProperty` cmdlet의 호출을 지원 하기 위해 [system.object](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 를 구현 해야 합니다. 이 메서드는 지정 된 경로에 있는 항목의 속성을 하나 이상 설정 하 고 필요한 경우 제공 된 속성을 덮어씁니다.
+[System.object. Setproperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 는 업데이트 된 속성의 속성 모음을 나타내는 [system.object](/dotnet/api/System.Management.Automation.PSObject) 의 인스턴스를 작성 합니다. 또한이 개체는 업데이트 된 속성의 속성 모음을 나타냅니다.
 
 다음은 Windows PowerShell에서 제공 하는 TemplateProvider.cs [파일에서 제공](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 하는 기본 구현입니다.
 
@@ -86,7 +84,8 @@ System.object [를](/dotnet/api/System.Management.Automation.Provider.IPropertyC
 
 - 기본적으로이 메서드의 재정의는 사용자에 게 표시 되는 개체에 대 한 판독기를 검색 해서는 안 됩니다 .이 경우에는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 를 `true`으로 설정 해야 합니다. 경로가 사용자 및 시스템에서 숨겨진 항목을 나타내는 경우에는 오류를 작성 해야 합니다 [. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 는 `false`로 설정 됩니다.
 
-- System.object 구현에서는 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 방법으로 구현 해야 합니다. ". [i](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) n d. 이 메서드는 시스템 상태가 변경 될 때 (예: 파일 이름 바꾸기) 작업 실행을 확인 하는 데 사용 됩니다. Windows PowerShell 런타임을 사용 하 여 사용자에 게 변경할 리소스의 [이름을 보내고,](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 표시 되는 항목을 결정 하는 데 필요한 명령줄 설정 또는 기본 변수를 처리 합니다.
+- System.object 구현에서는 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 방법으로 구현 해야 합니다. ". [i](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) n d. 이 메서드는 시스템 상태가 변경 될 때 (예: 파일 이름 바꾸기) 작업 실행을 확인 하는 데 사용 됩니다.
+  Windows PowerShell 런타임을 사용 하 여 사용자에 게 변경할 리소스의 [이름을 보내고,](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 표시 되는 항목을 결정 하는 데 필요한 명령줄 설정 또는 기본 변수를 처리 합니다.
 
   [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)에 대한 호출이 `true`을 반환한 후 잠재적으로 위험한 시스템 수정을 수행할 수 있는 경우에는 [System.Management.Automation.Provider.Ipropertycmdletprovider.Setproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 메서드는 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 호출해야 합니다. 이 메서드는 사용자에 게 확인 메시지를 보내 작업을 계속 해야 함을 나타내는 추가 피드백을 허용 합니다.
 
@@ -114,7 +113,8 @@ System.object [를](/dotnet/api/System.Management.Automation.Provider.IPropertyC
 
 - 기본적으로이 메서드의 재정의는 사용자에 게 표시 되는 개체에 대 한 판독기를 검색 해서는 안 됩니다 .이 경우에는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 를 `true`으로 설정 해야 합니다. 경로가 사용자 및 시스템에서 숨겨진 항목을 나타내는 경우에는 오류를 작성 해야 합니다 [. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 는 `false`로 설정 됩니다.
 
-- [System.object](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) 구현에서는 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 것이 좋습니다.-... a n d. 이 메서드는 콘텐츠 지우기와 같은 시스템 상태를 변경 하기 전에 작업 실행을 확인 하는 데 사용 됩니다. Windows PowerShell 런타임이 사용자에 게 변경할 리소스의 [이름을 보내고,](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 표시 되는 항목을 결정 하는 데 사용 되는 모든 명령줄 설정이 나 기본 설정 변수를 고려 하 여 Windows PowerShell 런타임을 사용 합니다.
+- [System.object](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) 구현에서는 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 것이 좋습니다.-... a n d. 이 메서드는 콘텐츠 지우기와 같은 시스템 상태를 변경 하기 전에 작업 실행을 확인 하는 데 사용 됩니다.
+  Windows PowerShell 런타임이 사용자에 게 변경할 리소스의 [이름을 보내고,](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 표시 되는 항목을 결정 하는 데 사용 되는 모든 명령줄 설정이 나 기본 설정 변수를 고려 하 여 Windows PowerShell 런타임을 사용 합니다.
 
   [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)에 대한 호출이 `true`을 반환한 후 잠재적으로 위험한 시스템 수정을 수행할 수 있는 경우에는 [System.Management.Automation.Provider.Ipropertycmdletprovider.Setproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) 메서드는 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 호출해야 합니다. 이 메서드는 사용자에 게 확인 메시지를 보내 잠재적으로 위험한 작업을 계속 해야 함을 나타낼 수 있습니다.
 
@@ -128,7 +128,7 @@ System.object [를](/dotnet/api/System.Management.Automation.Provider.IPropertyC
 
 ## <a name="building-the-windows-powershell-provider"></a>Windows PowerShell 공급자 빌드
 
-[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법을](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)참조 하세요.
+[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법을](https://msdn.microsoft.com/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -136,6 +136,6 @@ System.object [를](/dotnet/api/System.Management.Automation.Provider.IPropertyC
 
 [Windows PowerShell 공급자 디자인](./designing-your-windows-powershell-provider.md)
 
-[개체 형식 및 서식 확장](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[개체 형식 및 서식 확장](https://msdn.microsoft.com/da976d91-a3d6-44e8-affa-466b1e2bd351)
 
-[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](https://msdn.microsoft.com/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)

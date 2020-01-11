@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 70532e7e-9cac-43c3-9687-e77011ecc878
 caps.latest.revision: 4
-ms.openlocfilehash: 5eb2186cbceee21f8b4a8c88b812e9c71f15e0af
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5720200ce32f114cd4965d961b9e2804bd154b2e
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366032"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870849"
 ---
 # <a name="creating-a-workflow-by-using-a-windows-powershell-script"></a>Windows PowerShell 스크립트를 사용하여 워크플로 만들기
 
@@ -28,11 +28,12 @@ workflow Invoke-HelloWorld {"Hello World from workflow"}
 
 ## <a name="implementing-parallel-and-sequence"></a>병렬 및 시퀀스 구현
 
-[Windows Workflow Foundation](https://msdn.microsoft.com/en-us/library/ms735967.aspx) 는 작업을 병렬로 실행할 수 있도록 지원 합니다. Windows PowerShell 스크립트에서이 기능을 구현 하려면 스크립트 블록 앞에 `parallel` 키워드를 사용 합니다. `foreach -parallel` 생성을 사용 하 여 개체 컬렉션을 병렬로 반복할 수도 있습니다. 병렬 블록 내에서 작업 그룹을 순서 대로 실행 하려면 해당 작업 그룹을 스크립트 블록으로 묶고 시퀀스 키워드를 사용 하 여 블록 앞에 옵니다.
+[Windows Workflow Foundation](/previous-versions/dotnet/netframework-3.5/ms735967(v=vs.90)) 는 작업을 병렬로 실행할 수 있도록 지원 합니다. Windows PowerShell 스크립트에서이 기능을 구현 하려면 스크립트 블록 앞에 `parallel` 키워드를 사용 합니다. `foreach -parallel` 생성을 사용 하 여 개체 컬렉션을 병렬로 반복할 수도 있습니다. 병렬 블록 내에서 작업 그룹을 순서 대로 실행 하려면 해당 작업 그룹을 스크립트 블록으로 묶고 시퀀스 키워드를 사용 하 여 블록 앞에 옵니다.
 
 ## <a name="joining-computers-to-a-domain"></a>도메인에 컴퓨터 가입
 
-다음 스크립트는 사용자 지정 컴퓨터 그룹의 도메인 상태를 확인 하 고 도메인에 가입 되어 있지 않은 경우이를 도메인에 가입 시키는 워크플로를 만든 다음 상태를 다시 확인 합니다. [Windows PowerShell 작업을 사용 하 여 워크플로 만들기](./creating-a-workflow-with-windows-powershell-activities.md)에서 설명 하는 XAML 워크플로의 스크립트 버전입니다.
+다음 스크립트는 사용자 지정 컴퓨터 그룹의 도메인 상태를 확인 하 고 도메인에 가입 되어 있지 않은 경우이를 도메인에 가입 시키는 워크플로를 만든 다음 상태를 다시 확인 합니다.
+[Windows PowerShell 작업을 사용 하 여 워크플로 만들기](./creating-a-workflow-with-windows-powershell-activities.md)에서 설명 하는 XAML 워크플로의 스크립트 버전입니다.
 
 ```powershell
 workflow Join-Domain
@@ -48,6 +49,5 @@ workflow Join-Domain
         Get-WmiObject -PSComputerName $Computer -PSCredential $MachineCred
         }
     }
- }
-
+}
 ```

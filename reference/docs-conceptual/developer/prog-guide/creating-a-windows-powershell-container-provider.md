@@ -11,12 +11,12 @@ helpviewer_keywords:
 - container providers [PowerShell Programmer's Guide]
 ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
 caps.latest.revision: 5
-ms.openlocfilehash: fcb03d4021f00837095ce703beb0d841233391d6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 69e45de4220a234783d35a877116ad5a5e47d182
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416222"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870781"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Windows PowerShell 컨테이너 공급자 만들기
 
@@ -26,10 +26,7 @@ ms.locfileid: "74416222"
 
 > [!NOTE]
 > Windows Vista 및 .NET Framework C# 3.0 런타임 구성 요소에 대 한 Microsoft Windows 소프트웨어 개발 키트를 사용 하 여이 공급자에 대 한 원본 파일 (AccessDBSampleProvider04.cs)을 다운로드할 수 있습니다. 다운로드 지침은 [Windows powershell을 설치 하 고 Windows POWERSHELL SDK를 다운로드 하는 방법](/powershell/scripting/developer/installing-the-windows-powershell-sdk)을 참조 하세요.
->
-> 다운로드 된 원본 파일은 **\<PowerShell Samples >** 디렉터리에서 사용할 수 있습니다.
->
-> 다른 Windows PowerShell 공급자 구현에 대 한 자세한 내용은 [Windows Powershell 공급자 디자인](./designing-your-windows-powershell-provider.md)을 참조 하세요.
+> 다운로드 된 원본 파일은 **\<PowerShell Samples >** 디렉터리에서 사용할 수 있습니다. 다른 Windows PowerShell 공급자 구현에 대 한 자세한 내용은 [Windows Powershell 공급자 디자인](./designing-your-windows-powershell-provider.md)을 참조 하세요.
 
 여기에 설명 된 Windows PowerShell 컨테이너 공급자는 데이터베이스의 테이블 및 행이 컨테이너의 항목으로 정의 된 단일 컨테이너로 데이터베이스를 정의 합니다.
 
@@ -41,8 +38,8 @@ ms.locfileid: "74416222"
 Windows PowerShell 컨테이너 공급자는 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 기본 클래스에서 파생 되는 .net 클래스를 정의 해야 합니다. 이 섹션에서 설명 하는 Windows PowerShell 컨테이너 공급자에 대 한 클래스 정의는 다음과 같습니다.
 
 ```csharp
-   [CmdletProvider("AccessDB", ProviderCapabilities.None)]
-   public class AccessDBProvider : ContainerCmdletProvider
+[CmdletProvider("AccessDB", ProviderCapabilities.None)]
+public class AccessDBProvider : ContainerCmdletProvider
 ```
 
 [!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L34-L35 "AccessDBProviderSample04.cs")]
@@ -53,7 +50,8 @@ Windows PowerShell 컨테이너 공급자는 [Containercmdletprovider](/dotnet/a
 
 [Windows PowerShell 공급자 디자인](./designing-your-windows-powershell-provider.md)에 설명 된 대로 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 클래스는 다른 공급자 기능을 제공 하는 다른 여러 클래스에서 파생 됩니다. 따라서 Windows PowerShell 컨테이너 공급자는 해당 클래스에서 제공 하는 기능을 모두 정의 해야 합니다.
 
-세션 관련 초기화 정보를 추가 하 고 공급자가 사용 하는 리소스를 해제 하는 기능을 구현 하려면 [기본 Windows PowerShell 공급자 만들기](./creating-a-basic-windows-powershell-provider.md)를 참조 하세요. 그러나 여기에 설명 된 공급자를 비롯 한 대부분의 공급자는 Windows PowerShell에서 제공 하는이 기능의 기본 구현을 사용할 수 있습니다.
+세션 관련 초기화 정보를 추가 하 고 공급자가 사용 하는 리소스를 해제 하는 기능을 구현 하려면 [기본 Windows PowerShell 공급자 만들기](./creating-a-basic-windows-powershell-provider.md)를 참조 하세요.
+그러나 여기에 설명 된 공급자를 비롯 한 대부분의 공급자는 Windows PowerShell에서 제공 하는이 기능의 기본 구현을 사용할 수 있습니다.
 
 데이터 저장소에 대 한 액세스 권한을 얻으려면 공급자는 [system.object](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 의 메서드를 구현 해야 합니다 (예를 들어, 공급자는 클래스의 메서드를 구현 해야 합니다. 이러한 메서드를 구현 하는 방법에 대 한 자세한 내용은 [Windows PowerShell 드라이브 공급자 만들기](./creating-a-windows-powershell-drive-provider.md)를 참조 하세요.
 
@@ -231,11 +229,13 @@ protected override void GetChildNames(string path,
 
 - 공급자 클래스를 정의 하는 경우 Windows PowerShell 컨테이너 공급자가 ExpandWildcards, Filter, Include 또는 Exclude의 공급자 기능을 [system.object](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) 열거형에서 선언할 수 있습니다. 이러한 경우 [Containercmdletprovider. Getchilditems *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 메서드를 구현 하면 메서드에 전달 된 경로가 지정 된 기능의 요구 사항을 충족 하는지 확인 해야 합니다. 이 작업을 수행 하려면 메서드가 적절 한 속성 (예: System.object)에 액세스 해야 합니다. [*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) 및 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .... n a m.
 
-- [Containercmdletprovider. Renameitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) 메서드는 이동 작업에 대 한 것이 아니라 항목의 이름만 수정 하기 위한 것입니다. `newName` 매개 변수에 경로 구분 기호가 포함 되어 있거나, 그렇지 않은 경우 항목의 부모 위치가 변경 될 수 있는 경우 메서드를 구현 하면 오류가 발생 합니다.
+- [Containercmdletprovider. Renameitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) 메서드는 이동 작업에 대 한 것이 아니라 항목의 이름만 수정 하기 위한 것입니다.
+  `newName` 매개 변수에 경로 구분 기호가 포함 되어 있거나, 그렇지 않은 경우 항목의 부모 위치가 변경 될 수 있는 경우 메서드를 구현 하면 오류가 발생 합니다.
 
 - 기본적으로이 메서드의 재정의는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 를 지정 하지 않는 한 개체의 이름을 바꾸지 않아야 합니다. 지정 된 경로가 컨테이너를 나타내는 경우에는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 를 지정 하지 않아도 됩니다.
 
-- [Containercmdletprovider. Renameitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) 메서드를 구현 하면 데이터 저장소를 변경 하기 전에를 호출 하 고 해당 반환 값을 확인 [해야 하는](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 경우를 들 수 있습니다. 이 메서드는 시스템 상태가 변경 될 때 (예: 파일 이름 바꾸기) 작업 실행을 확인 하는 데 사용 됩니다. Windows PowerShell 런타임이 사용자에 게 변경할 리소스의 [이름을 보내고,](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 표시 되는 항목을 결정 하는 데 사용 되는 모든 명령줄 설정이 나 기본 설정 변수를 고려 하 여 Windows PowerShell 런타임을 사용 합니다.
+- [Containercmdletprovider. Renameitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) 메서드를 구현 하면 데이터 저장소를 변경 하기 전에를 호출 하 고 해당 반환 값을 확인 [해야 하는](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 경우를 들 수 있습니다. 이 메서드는 시스템 상태가 변경 될 때 (예: 파일 이름 바꾸기) 작업 실행을 확인 하는 데 사용 됩니다.
+  Windows PowerShell 런타임이 사용자에 게 변경할 리소스의 [이름을 보내고,](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 표시 되는 항목을 결정 하는 데 사용 되는 모든 명령줄 설정이 나 기본 설정 변수를 고려 하 여 Windows PowerShell 런타임을 사용 합니다.
 
   [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)에 대한 호출이 `true` 반환한 후 [System.Management.Automation.Provider.Containercmdletprovider.Renameitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) 메서드는 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 호출해야 합니다. 이 메서드는 사용자에 게 확인 메시지를 보내 작업을 계속 해야 하는 경우 추가 피드백을 허용 하도록 메시지를 보냅니다. 공급자는 잠재적으로 위험한 시스템 수정에 대 한 추가 검사로 [계속 합니다.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)
 
@@ -254,8 +254,7 @@ protected override void GetChildNames(string path,
 이 공급자에 대 한 [Containercmdletprovider. Newitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드의 구현은 다음과 같습니다.
 
 ```csharp
-protected override void NewItem( string path, string type,
-                                 object newItemValue )
+protected override void NewItem( string path, string type, object newItemValue )
 {
     // Create the new item here after
     // performing necessary validations
@@ -279,7 +278,8 @@ protected override void NewItem( string path, string type,
 
 다음 조건은 Containercmdletprovider의 구현에 적용 될 수 있습니다. [Newitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem):
 
-- [Containercmdletprovider Newitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드는 `type` 매개 변수에 전달 된 문자열의 대/소문자를 구분 하지 않는 비교를 수행 해야 합니다. 또한 모호한 일치 항목을 최소한으로 허용 해야 합니다. 예를 들어 "file" 및 "directory" 유형의 경우 모호성을 위해 첫 문자만 필요 합니다. `type` 매개 변수가 공급자가 만들 수 없는 형식을 나타내는 경우 [Newitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드는 공급자가 만들 수 있는 형식을 나타내는 메시지와 함께 ArgumentException을 써야 합니다.
+- [Containercmdletprovider Newitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드는 `type` 매개 변수에 전달 된 문자열의 대/소문자를 구분 하지 않는 비교를 수행 해야 합니다.
+  또한 모호한 일치 항목을 최소한으로 허용 해야 합니다. 예를 들어 "file" 및 "directory" 유형의 경우 모호성을 위해 첫 문자만 필요 합니다. `type` 매개 변수가 공급자가 만들 수 없는 형식을 나타내는 경우 [Newitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드는 공급자가 만들 수 있는 형식을 나타내는 메시지와 함께 ArgumentException을 써야 합니다.
 
 - `newItemValue` 매개 변수의 경우 [Newitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드를 구현 하 여 최소한의 문자열을 허용 하는 것이 좋습니다. 동일한 경로에 대 한 [Getitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 메서드에서 검색 된 개체의 형식에도 동의 해야 하는 경우. [Containercmdletprovider. Newitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드는 [languageprimitives.physicalhash. convertto-html *](/dotnet/api/System.Management.Automation.LanguagePrimitives.ConvertTo) 메서드를 사용 하 여 형식을 원하는 형식으로 변환할 수 있습니다.
 
@@ -376,7 +376,7 @@ Containercmdletprovider의 구현에는 다음 조건이 적용 될 수 있습�
 
 ## <a name="building-the-windows-powershell-provider"></a>Windows PowerShell 공급자 빌드
 
-[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법을](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)참조 하세요.
+[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법을](/previous-versions/ms714644(v=vs.85))참조 하세요.
 
 ## <a name="testing-the-windows-powershell-provider"></a>Windows PowerShell 공급자 테스트
 
@@ -456,7 +456,8 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우 명령�
    Fax          : (425) 555-0101
    ```
 
-5. 이제 `New-Item` cmdlet을 사용 하 여 기존 테이블에 행을 추가 합니다. `Path` 매개 변수는 행의 전체 경로를 지정 하 고 테이블의 기존 행 수보다 큰 행 번호를 나타내야 합니다. `Type` 매개 변수는 추가할 항목의 형식을 지정 하는 "row"를 나타냅니다. 마지막으로 `Value` 매개 변수는 행의 열 값에 대 한 쉼표로 구분 된 목록을 지정 합니다.
+5. 이제 `New-Item` cmdlet을 사용 하 여 기존 테이블에 행을 추가 합니다. `Path` 매개 변수는 행의 전체 경로를 지정 하 고 테이블의 기존 행 수보다 큰 행 번호를 나타내야 합니다. `Type` 매개 변수는 추가할 항목의 형식을 지정 하는 "row"를 나타냅니다.
+   마지막으로 `Value` 매개 변수는 행의 열 값에 대 한 쉼표로 구분 된 목록을 지정 합니다.
 
    ```powershell
    New-Item -Path mydb:\Customers\3 -ItemType "row" -Value "3,CustomerFirstName,CustomerLastName,CustomerEmailAddress,CustomerTitle,CustomerCompany,CustomerPhone, CustomerAddress,CustomerCity,CustomerState,CustomerZip,CustomerCountry"
@@ -496,7 +497,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우 명령�
 
 [탐색 Windows PowerShell 공급자 구현](./creating-a-windows-powershell-navigation-provider.md)
 
-[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](/previous-versions/ms714644(v=vs.85))
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)
 

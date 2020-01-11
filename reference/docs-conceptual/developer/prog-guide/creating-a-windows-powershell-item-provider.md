@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], item provider
 ms.assetid: a5a304ce-fc99-4a5b-a779-de7d85e031fe
 caps.latest.revision: 6
-ms.openlocfilehash: ad42b8de867f468e832380ab6a22a39b6d27d3c6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a64e49894ce5195cc177e97a7049740389b09456
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417494"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870713"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Windows PowerShell 항목 공급자 만들기
 
@@ -24,10 +24,7 @@ ms.locfileid: "74417494"
 
 > [!NOTE]
 > Windows Vista 및 .NET Framework C# 3.0 런타임 구성 요소에 대 한 Microsoft Windows 소프트웨어 개발 키트를 사용 하 여이 공급자에 대 한 원본 파일 (AccessDBSampleProvider03.cs)을 다운로드할 수 있습니다. 다운로드 지침은 [Windows powershell을 설치 하 고 Windows POWERSHELL SDK를 다운로드 하는 방법](/powershell/scripting/developer/installing-the-windows-powershell-sdk)을 참조 하세요.
->
-> 다운로드 된 원본 파일은 **\<PowerShell Samples >** 디렉터리에서 사용할 수 있습니다.
->
-> 다른 Windows PowerShell 공급자 구현에 대 한 자세한 내용은 [Windows Powershell 공급자 디자인](./designing-your-windows-powershell-provider.md)을 참조 하세요.
+> 다운로드 된 원본 파일은 **\<PowerShell Samples >** 디렉터리에서 사용할 수 있습니다. 다른 Windows PowerShell 공급자 구현에 대 한 자세한 내용은 [Windows Powershell 공급자 디자인](./designing-your-windows-powershell-provider.md)을 참조 하세요.
 
 이 항목에서 설명 하는 Windows PowerShell 항목 공급자는 Access 데이터베이스에서 데이터 항목을 가져옵니다. 이 경우 "항목"은 Access 데이터베이스의 테이블 또는 테이블의 행입니다.
 
@@ -43,13 +40,15 @@ Windows PowerShell 항목 공급자는 [system.object](/dotnet/api/System.Manage
 
 [Windows PowerShell 공급자 디자인](./designing-your-windows-powershell-provider.md)에 [설명 된 대로](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 다른 공급자 기능을 제공 하는 다른 여러 클래스에서 파생 됩니다. 따라서 Windows PowerShell 항목 공급자는 해당 클래스에서 제공 하는 기능을 모두 정의 해야 합니다.
 
-세션 관련 초기화 정보를 추가 하 고 공급자가 사용 하는 리소스를 해제 하기 위한 기능을 구현 하는 방법에 대 한 자세한 내용은 [기본 Windows PowerShell 공급자 만들기](./creating-a-basic-windows-powershell-provider.md)를 참조 하세요. 그러나 여기에 설명 된 공급자를 비롯 한 대부분의 공급자는 Windows PowerShell에서 제공 하는이 기능의 기본 구현을 사용할 수 있습니다.
+세션 관련 초기화 정보를 추가 하 고 공급자가 사용 하는 리소스를 해제 하기 위한 기능을 구현 하는 방법에 대 한 자세한 내용은 [기본 Windows PowerShell 공급자 만들기](./creating-a-basic-windows-powershell-provider.md)를 참조 하세요.
+그러나 여기에 설명 된 공급자를 비롯 한 대부분의 공급자는 Windows PowerShell에서 제공 하는이 기능의 기본 구현을 사용할 수 있습니다.
 
 Windows PowerShell 항목 공급자는 저장소의 항목을 조작 하기 전에 데이터 저장소에 액세스 하는 데 사용 되는 [system.object](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 의 메서드를 구현 해야 합니다. 이 클래스를 구현 하는 방법에 대 한 자세한 내용은 [Windows PowerShell 드라이브 공급자 만들기](./creating-a-windows-powershell-drive-provider.md)를 참조 하세요.
 
 ## <a name="checking-for-path-validity"></a>경로 유효성 검사
 
-Windows powershell 런타임은 데이터 항목을 찾을 때 windows [powershell이 작동 하는 방법](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)의 "PSPath 개념" 단원에 정의 된 대로 공급자에 대 한 windows powershell 경로를 furnishes 합니다. Windows PowerShell 항목 공급자는 System.object를 구현 하 여 전달 된 경로의 구문 및 의미 체계 유효성을 확인 해야 합니다. [isvalidpath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) 메서드. 경로가 올바르면이 메서드는 `true`을 반환 하 고, 그렇지 않으면 `false` 합니다. 이 메서드의 구현에서는 경로에 항목이 있는지 확인 하지 않아야 합니다. 단, 경로가 구문적 이며 의미 체계가 올바른지 확인 해야 합니다.
+Windows powershell 런타임은 데이터 항목을 찾을 때 windows [powershell이 작동 하는 방법](/previous-versions/ms714658(v=vs.85))의 "PSPath 개념" 단원에 정의 된 대로 공급자에 대 한 windows powershell 경로를 furnishes 합니다.
+Windows PowerShell 항목 공급자는 System.object를 구현 하 여 전달 된 경로의 구문 및 의미 체계 유효성을 확인 해야 합니다. [isvalidpath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) 메서드. 경로가 올바르면이 메서드는 `true`을 반환 하 고, 그렇지 않으면 `false` 합니다. 이 메서드의 구현에서는 경로에 항목이 있는지 확인 하지 않아야 합니다. 단, 경로가 구문적 이며 의미 체계가 올바른지 확인 해야 합니다.
 
 이 공급자에 대 한 다음은이 공급자에 대 한 [system.object](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) 의 구현입니다. 이 구현은 NormalizePath helper 메서드를 호출 하 여 경로의 모든 구분 기호를 균일 한 것으로 변환 합니다.
 
@@ -225,11 +224,11 @@ Windows PowerShell 항목 공급자는 [Invokedefaultaction *](/dotnet/api/Syste
 
 ## <a name="defining-object-types-and-formatting"></a>개체 형식 및 서식 정의
 
-공급자를 작성할 때 기존 개체에 멤버를 추가 하거나 새 개체를 정의 해야 할 수 있습니다. 완료 되 면 Windows PowerShell에서 개체의 멤버와 개체 표시 방법을 정의 하는 서식 파일을 식별 하는 데 사용할 수 있는 형식 파일을 만듭니다. 에 대 한 자세한 내용은 [개체 형식 확장 및 서식 지정](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)을 참조 하세요.
+공급자를 작성할 때 기존 개체에 멤버를 추가 하거나 새 개체를 정의 해야 할 수 있습니다. 완료 되 면 Windows PowerShell에서 개체의 멤버와 개체 표시 방법을 정의 하는 서식 파일을 식별 하는 데 사용할 수 있는 형식 파일을 만듭니다. 에 대 한 자세한 내용은 [개체 형식 확장 및 서식 지정](/previous-versions/ms714665(v=vs.85))을 참조 하세요.
 
 ## <a name="building-the-windows-powershell-provider"></a>Windows PowerShell 공급자 빌드
 
-[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법을](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)참조 하세요.
+[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법을](/previous-versions/ms714644(v=vs.85))참조 하세요.
 
 ## <a name="testing-the-windows-powershell-provider"></a>Windows PowerShell 공급자 테스트
 
@@ -245,12 +244,12 @@ Windows powershell을 사용 하 여이 Windows PowerShell 항목 공급자를 �
 
 [Windows PowerShell 공급자 디자인](./designing-your-windows-powershell-provider.md)
 
-[개체 형식 및 서식 확장](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[개체 형식 및 서식 확장](/previous-versions/ms714665(v=vs.85))
 
-[Windows PowerShell 작동 방법](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
+[Windows PowerShell 작동 방법](/previous-versions/ms714658(v=vs.85))
 
 [컨테이너 Windows PowerShell 공급자 만들기](./creating-a-windows-powershell-container-provider.md)
 
 [드라이브 만들기 Windows PowerShell 공급자](./creating-a-windows-powershell-drive-provider.md)
 
-[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](/previous-versions/ms714644(v=vs.85))

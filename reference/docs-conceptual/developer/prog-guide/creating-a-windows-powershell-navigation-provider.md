@@ -1,22 +1,14 @@
 ---
-title: Windows PowerShell 탐색 공급자 만들기 | Microsoft Docs
-ms.custom: ''
+title: Windows PowerShell 탐색 공급자 만들기
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- navigation providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], navigation provider
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
-caps.latest.revision: 5
-ms.openlocfilehash: f73e732ca9416b906b3647c5090dfa04ad940484
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 96a9167019c047bb9c6e56362b2c1110ece553dd
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416204"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870696"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Windows PowerShell 탐색 공급자 만들기
 
@@ -24,10 +16,7 @@ ms.locfileid: "74416204"
 
 > [!NOTE]
 > Windows Vista 및 .NET Framework C# 3.0 런타임 구성 요소에 대 한 Microsoft Windows 소프트웨어 개발 키트를 사용 하 여이 공급자에 대 한 원본 파일 (AccessDBSampleProvider05.cs)을 다운로드할 수 있습니다. 다운로드 지침은 [Windows powershell을 설치 하 고 Windows POWERSHELL SDK를 다운로드 하는 방법](/powershell/scripting/developer/installing-the-windows-powershell-sdk)을 참조 하세요.
->
-> 다운로드 된 원본 파일은 **\<PowerShell Samples >** 디렉터리에서 사용할 수 있습니다.
->
-> 다른 Windows PowerShell 공급자 구현에 대 한 자세한 내용은 [Windows Powershell 공급자 디자인](./designing-your-windows-powershell-provider.md)을 참조 하세요.
+> 다운로드 된 원본 파일은 **\<PowerShell Samples >** 디렉터리에서 사용할 수 있습니다. 다른 Windows PowerShell 공급자 구현에 대 한 자세한 내용은 [Windows Powershell 공급자 디자인](./designing-your-windows-powershell-provider.md)을 참조 하세요.
 
 여기에 설명 된 공급자를 사용 하면 사용자가 데이터베이스의 데이터 테이블로 이동할 수 있도록 Access 데이터베이스를 드라이브로 처리할 수 있습니다. 사용자 고유의 탐색 공급자를 만들 때 탐색에 필요한 드라이브 한정 경로를 설정 하 고, 상대 경로를 정규화 하 고, 데이터 저장소의 항목을 이동 하 고, 자식 이름을 가져오는 메서드와 항목의 부모 경로를 가져오고, 테스트 하는 메서드를 구현할 수 있습니다. 항목이 컨테이너 인지 여부를 식별 합니다.
 
@@ -38,7 +27,8 @@ ms.locfileid: "74416204"
 
 Windows PowerShell 탐색 공급자는 [system.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 클래스에서 파생 되는 .net 클래스를 만들어야 합니다. 이 섹션에서 설명 하는 탐색 공급자에 대 한 클래스 정의는 다음과 같습니다.
 
-[!code-csharp[AccessDBProviderSample05.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32 "AccessDBProviderSample05.cs")]
+[!code-csharp[AccessDBProviderSample05.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32
+"AccessDBProviderSample05.cs")]
 
 이 공급자에서 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 특성에는 두 개의 매개 변수가 포함 되어 있습니다. 첫 번째 매개 변수는 Windows PowerShell에서 사용 되는 공급자에 대 한 친숙 한 이름을 지정 합니다. 두 번째 매개 변수는 명령을 처리 하는 동안 공급자가 Windows PowerShell 런타임에 노출 하는 Windows PowerShell 특정 기능을 지정 합니다. 이 공급자의 경우 추가 되는 Windows PowerShell 관련 기능이 없습니다.
 
@@ -77,7 +67,8 @@ Windows PowerShell 탐색 공급자는 공급자 내부 Windows PowerShell 경�
 
 Windows PowerShell 탐색 공급자는 표시 된 전체 또는 부분 공급자별 경로의 부모 파트를 검색 하는 [Getparentpath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath) 메서드를 구현 합니다. 메서드는 경로의 자식 부분을 제거 하 고 부모 경로 부분을 반환 합니다. `root` 매개 변수는 드라이브의 루트에 대 한 정규화 된 경로를 지정 합니다. 탑재 된 드라이브가 검색 작업에 사용 되 고 있지 않으면이 매개 변수는 null 이거나 비어 있을 수 있습니다. 루트가 지정 된 경우 메서드는 루트와 동일한 트리의 컨테이너에 대 한 경로를 반환 해야 합니다.
 
-샘플 탐색 공급자는이 메서드를 재정의 하지 않지만 기본 구현을 사용 합니다. "/" 및 "\\"를 모두 경로 구분 기호로 사용 하는 경로를 허용 합니다. 먼저 "\\" 구분 기호를 포함 하도록 경로를 정규화 한 다음 마지막 "\\"에서 부모 경로를 분할 하 고 부모 경로를 반환 합니다.
+샘플 탐색 공급자는이 메서드를 재정의 하지 않지만 기본 구현을 사용 합니다.
+"/" 및 "\\"를 모두 경로 구분 기호로 사용 하는 경로를 허용 합니다. 먼저 "\\" 구분 기호를 포함 하도록 경로를 정규화 한 다음 마지막 "\\"에서 부모 경로를 분할 하 고 부모 경로를 반환 합니다.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidergetparentpath](Msh_samplestestcmdlets#testprovidergetparentpath)]  -->
 
@@ -126,7 +117,8 @@ Windows PowerShell 탐색 공급자는 표시 된 전체 또는 부분 공급자
 
 기본적으로이 메서드의 재정의는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 를 `true`로 설정 하지 않으면 기존 개체를 통해 개체를 이동 하면 안 됩니다. 예를 들어 c:\temp\abc.txt [*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 속성이 `true`로 설정 되어 있지 않으면 파일 시스템 공급자는 기존 c:\bar.txt 파일을 통해를 복사 하지 않습니다. `destination` 매개 변수에 지정 된 경로가 있고 컨테이너인 경우에는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 를 지정 하지 않아도 됩니다.... 이 경우 [Moveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 는 `path` 매개 변수로 표시 된 항목을 `destination` 매개 변수로 표시 되는 컨테이너로 이동 해야 합니다 (자식 항목).
 
-[Moveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 메서드를 구현 하는 경우에는 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 것이 좋습니다. 이 메서드는 시스템 상태가 변경 될 때 (예: 파일 삭제) 작업 실행을 확인 하는 데 사용 됩니다. Windows PowerShell 런타임이 사용자에 게 표시 되는 항목을 확인 하는 데 필요한 명령줄 설정이 나 기본 설정 변수를 고려 하 여 사용자에 게 변경할 리소스의 [이름을 보냅니다.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)
+[Moveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 메서드를 구현 하는 경우에는 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 것이 좋습니다. 이 메서드는 시스템 상태가 변경 될 때 (예: 파일 삭제) 작업 실행을 확인 하는 데 사용 됩니다.
+Windows PowerShell 런타임이 사용자에 게 표시 되는 항목을 확인 하는 데 필요한 명령줄 설정이 나 기본 설정 변수를 고려 하 여 사용자에 게 변경할 리소스의 [이름을 보냅니다.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)
 
 [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)에 대한 호출이 끝나면 [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 메서드는 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 `true`호출해야 합니다. 이 메서드는 사용자에 게 작업을 계속 해야 하는 경우 사용자에 게 메시지를 보내 사용자에 게 피드백을 보냅니다. 공급자는 System.object를 호출 해야 합니다 [. shouldcontinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 잠재적으로 위험한 시스템 수정에 대 한 추가 검사로 계속 합니다.
 
@@ -156,11 +148,11 @@ Windows PowerShell 탐색 공급자는 표시 된 전체 또는 부분 공급자
 
 ## <a name="defining-object-types-and-formatting"></a>개체 형식 및 서식 정의
 
-공급자는 기존 개체에 멤버를 추가 하거나 새 개체를 정의할 수 있습니다. 자세한 내용은[개체 형식 확장 및 서식 지정](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)을 참조 하세요.
+공급자는 기존 개체에 멤버를 추가 하거나 새 개체를 정의할 수 있습니다. 자세한 내용은[개체 형식 확장 및 서식 지정](/previous-versions/ms714665(v=vs.85))을 참조 하세요.
 
 ## <a name="building-the-windows-powershell-provider"></a>Windows PowerShell 공급자 빌드
 
-자세한 내용은 [cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)을 참조 하세요.
+자세한 내용은 [cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](/previous-versions/ms714644(v=vs.85))을 참조 하세요.
 
 ## <a name="testing-the-windows-powershell-provider"></a>Windows PowerShell 공급자 테스트
 
@@ -178,7 +170,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
    Get-ChildItem | Format-Table rowcount,name -AutoSize
    ```
 
-   ```output
+   ```Output
    RowCount   Name
    --------   ----
         180   MSysAccessObjects
@@ -211,7 +203,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
    Get-Location
    ```
 
-   ```output
+   ```Output
    Path
    ----
    mydb:\Employees
@@ -223,7 +215,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
    Get-ChildItem | Format-Table rownumber,psiscontainer,data -AutoSize
    ```
 
-   ```output
+   ```Output
    RowNumber   PSIsContainer   Data
    ---------   --------------   ----
    0           False            System.Data.DataRow
@@ -243,7 +235,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
    Get-Item 0
    ```
 
-   ```output
+   ```Output
    PSPath        : AccessDB::C:\PS\Northwind.mdb\Employees\0
    PSParentPath  : AccessDB::C:\PS\Northwind.mdb\Employees
    PSChildName   : 0
@@ -260,7 +252,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
    (Get-Item 0).data
    ```
 
-   ```output
+   ```Output
    EmployeeID      : 1
    LastName        : Davis
    FirstName       : Sara
@@ -290,11 +282,11 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
 
 [Windows PowerShell 공급자 디자인](./designing-your-windows-powershell-provider.md)
 
-[개체 형식 및 서식 확장](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[개체 형식 및 서식 확장](/previous-versions/ms714665(v=vs.85))
 
 [컨테이너 Windows PowerShell 공급자 구현](./creating-a-windows-powershell-container-provider.md)
 
-[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](/previous-versions/ms714644(v=vs.85))
 
 [Windows PowerShell 프로그래머 가이드](./windows-powershell-programmer-s-guide.md)
 

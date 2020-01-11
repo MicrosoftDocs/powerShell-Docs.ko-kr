@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 81aeafad-dbc3-4712-8bb9-e6a417be260f
 caps.latest.revision: 15
-ms.openlocfilehash: b44708b3bbcb974a6178323dff2302b7da121af6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fe0393634a1e5bb1a3d4a98ccf245e199beb0f16
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367282"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75869914"
 ---
 # <a name="writing-a-windows-powershell-host-application"></a>Windows PowerShell 호스트 애플리케이션 작성
 
@@ -34,7 +34,3 @@ ms.locfileid: "72367282"
 [사용자 지정 사용자 인터페이스 만들기](./creating-a-custom-user-interface.md) 사용자 지정 사용자 인터페이스를 소개 하 고 예제에 대 한 링크를 제공 합니다.
 
 [호스트 응용 프로그램 샘플](./host-application-samples.md) 이 섹션에는 전체 호스트 응용 프로그램의 샘플이 포함 되어 있습니다.
-
-## <a name="see-also"></a>참고 항목
-
-[Windows PowerShell](https://msdn.microsoft.com/en-us/b41a2af3-aec1-402d-8e18-c2c26be461ff)

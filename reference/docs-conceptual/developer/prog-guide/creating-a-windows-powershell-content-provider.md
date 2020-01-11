@@ -1,22 +1,14 @@
 ---
-title: Windows PowerShell 콘텐츠 공급자 만들기 | Microsoft Docs
-ms.custom: ''
+title: Windows PowerShell 콘텐츠 공급자 만들기
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- content providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], content provider
 ms.assetid: 3da88ff9-c4c7-4ace-aa24-0a29c8cfa060
-caps.latest.revision: 6
-ms.openlocfilehash: 4afe0370f7a2c5b17826544e94e76650611c9d68
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2d48c18cb41dcca372b1e12e1f3abc4c3f5e4bee
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417511"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870730"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Windows PowerShell 콘텐츠 공급자 만들기
 
@@ -24,16 +16,14 @@ ms.locfileid: "74417511"
 
 > [!NOTE]
 > Windows Vista 및 .NET Framework C# 3.0 런타임 구성 요소에 대 한 Microsoft Windows 소프트웨어 개발 키트를 사용 하 여이 공급자에 대 한 원본 파일 (AccessDBSampleProvider06.cs)을 다운로드할 수 있습니다. 다운로드 지침은 [Windows powershell을 설치 하 고 Windows POWERSHELL SDK를 다운로드 하는 방법](/powershell/scripting/developer/installing-the-windows-powershell-sdk)을 참조 하세요.
->
-> 다운로드 된 원본 파일은 **\<PowerShell Samples >** 디렉터리에서 사용할 수 있습니다.
->
-> 다른 Windows PowerShell 공급자 구현에 대 한 자세한 내용은 [Windows Powershell 공급자 디자인](./designing-your-windows-powershell-provider.md)을 참조 하세요.
+> 다운로드 된 원본 파일은 **\<PowerShell Samples >** 디렉터리에서 사용할 수 있습니다. 다른 Windows PowerShell 공급자 구현에 대 한 자세한 내용은 [Windows Powershell 공급자 디자인](./designing-your-windows-powershell-provider.md)을 참조 하세요.
 
 ## <a name="define-the-windows-powershell-content-provider-class"></a>Windows PowerShell 콘텐츠 공급자 클래스 정의
 
 Windows PowerShell 콘텐츠 공급자는 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider) 인터페이스를 지 원하는 .net 클래스를 만들어야 합니다. 이 섹션에서 설명 하는 항목 공급자에 대 한 클래스 정의는 다음과 같습니다.
 
-[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L32-L33 "AccessDBProviderSample06.cs")]
+[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L32-L33
+"AccessDBProviderSample06.cs")]
 
 이 클래스 정의에서 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 특성에는 두 개의 매개 변수가 포함 되어 있습니다. 첫 번째 매개 변수는 Windows PowerShell에서 사용 되는 공급자에 대 한 친숙 한 이름을 지정 합니다. 두 번째 매개 변수는 명령을 처리 하는 동안 공급자가 Windows PowerShell 런타임에 노출 하는 Windows PowerShell 특정 기능을 지정 합니다. 이 공급자의 경우 추가 된 Windows PowerShell 관련 기능이 없습니다.
 
@@ -41,7 +31,8 @@ Windows PowerShell 콘텐츠 공급자는 [Icontentcmdletprovider](/dotnet/api/S
 
 [Windows PowerShell 공급자 디자인](./designing-your-windows-powershell-provider.md)에 설명 된 대로, 다른 공급자 기능을 제공 하는 다른 여러 클래스에서 [파생 된 다른](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 클래스에서 파생 됩니다. 따라서 Windows PowerShell 콘텐츠 공급자는 일반적으로 해당 클래스에서 제공 하는 모든 기능을 정의 합니다.
 
-세션 관련 초기화 정보를 추가 하 고 공급자가 사용 하는 리소스를 해제 하기 위한 기능을 구현 하는 방법에 대 한 자세한 내용은 [기본 Windows PowerShell 공급자 만들기](./creating-a-basic-windows-powershell-provider.md)를 참조 하세요. 그러나 여기에 설명 된 공급자를 비롯 한 대부분의 공급자는 Windows PowerShell에서 제공 하는이 기능의 기본 구현을 사용할 수 있습니다.
+세션 관련 초기화 정보를 추가 하 고 공급자가 사용 하는 리소스를 해제 하기 위한 기능을 구현 하는 방법에 대 한 자세한 내용은 [기본 Windows PowerShell 공급자 만들기](./creating-a-basic-windows-powershell-provider.md)를 참조 하세요.
+그러나 여기에 설명 된 공급자를 비롯 한 대부분의 공급자는 Windows PowerShell에서 제공 하는이 기능의 기본 구현을 사용할 수 있습니다.
 
 데이터 저장소에 액세스 하려면 공급자는 [system.object](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 의 메서드를 구현 해야 합니다 (예를 들어). 이러한 메서드를 구현 하는 방법에 대 한 자세한 내용은 [Windows PowerShell 드라이브 공급자 만들기](./creating-a-windows-powershell-drive-provider.md)를 참조 하세요.
 
@@ -53,13 +44,16 @@ Windows PowerShell 콘텐츠 공급자는 [Icontentcmdletprovider](/dotnet/api/S
 
 ## <a name="implementing-a-content-reader"></a>콘텐츠 판독기 구현
 
-항목에서 콘텐츠를 읽으려면 공급자가 [Icontentreader](/dotnet/api/System.Management.Automation.Provider.IContentReader)에서 파생 되는 콘텐츠 판독기 클래스를 구현 해야 합니다. 이 공급자에 대 한 콘텐츠 판독기를 사용 하면 데이터 테이블의 행 내용에 액세스할 수 있습니다. 콘텐츠 판독기 클래스는 표시 된 행에서 데이터를 검색 하 고 해당 데이터를 나타내는 목록, 콘텐츠 판독기를 이동 하는 **Seek** 메서드, 콘텐츠 판독기를 닫는 **Close** 메서드 및 **Dispose** 메서드를 반환 하는 **읽기** 메서드를 정의 합니다.
+항목에서 콘텐츠를 읽으려면 공급자가 [Icontentreader](/dotnet/api/System.Management.Automation.Provider.IContentReader)에서 파생 되는 콘텐츠 판독기 클래스를 구현 해야 합니다.
+이 공급자에 대 한 콘텐츠 판독기를 사용 하면 데이터 테이블의 행 내용에 액세스할 수 있습니다. 콘텐츠 판독기 클래스는 표시 된 행에서 데이터를 검색 하 고 해당 데이터를 나타내는 목록, 콘텐츠 판독기를 이동 하는 **Seek** 메서드, 콘텐츠 판독기를 닫는 **Close** 메서드 및 **Dispose** 메서드를 반환 하는 **읽기** 메서드를 정의 합니다.
 
-[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L2115-L2241 "AccessDBProviderSample06.cs")]
+[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L2115-L2241
+"AccessDBProviderSample06.cs")]
 
 ## <a name="implementing-a-content-writer"></a>콘텐츠 작성기 구현
 
-항목에 콘텐츠를 쓰려면 공급자가 [Icontentwriter](/dotnet/api/System.Management.Automation.Provider.IContentWriter)에서 파생 된 콘텐츠 작성기 클래스를 구현 해야 합니다. 콘텐츠 작성기 클래스는 지정 된 행 내용을 쓰는 **Write** 메서드, 콘텐츠 작성기를 이동 하는 **Seek** 메서드, 콘텐츠 작성기를 닫는 **Close** 메서드 및 **Dispose** 메서드를 정의 합니다.
+항목에 콘텐츠를 쓰려면 공급자가 [Icontentwriter](/dotnet/api/System.Management.Automation.Provider.IContentWriter)에서 파생 된 콘텐츠 작성기 클래스를 구현 해야 합니다.
+콘텐츠 작성기 클래스는 지정 된 행 내용을 쓰는 **Write** 메서드, 콘텐츠 작성기를 이동 하는 **Seek** 메서드, 콘텐츠 작성기를 닫는 **Close** 메서드 및 **Dispose** 메서드를 정의 합니다.
 
 [!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L2250-L2394 "AccessDBProviderSample06.cs")]
 
@@ -201,11 +195,11 @@ public object ClearContentDynamicParameters(string path)
 
 ## <a name="defining-object-types-and-formatting"></a>개체 형식 및 서식 정의
 
-공급자를 작성할 때 기존 개체에 멤버를 추가 하거나 새 개체를 정의 해야 할 수 있습니다. 이 작업이 완료 되 면 Windows PowerShell에서 개체의 멤버와 개체 표시 방법을 정의 하는 서식 파일을 식별 하는 데 사용할 수 있는 형식 파일을 만들어야 합니다. 자세한 내용은 [개체 형식 확장 및 서식 지정](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)을 참조 하세요.
+공급자를 작성할 때 기존 개체에 멤버를 추가 하거나 새 개체를 정의 해야 할 수 있습니다. 이 작업이 완료 되 면 Windows PowerShell에서 개체의 멤버와 개체 표시 방법을 정의 하는 서식 파일을 식별 하는 데 사용할 수 있는 형식 파일을 만들어야 합니다. 자세한 내용은 [개체 형식 확장 및 서식 지정](/previous-versions//ms714665(v=vs.85))을 참조 하세요.
 
 ## <a name="building-the-windows-powershell-provider"></a>Windows PowerShell 공급자 빌드
 
-[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법을](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)참조 하세요.
+[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법을](/previous-versions/ms714644(v=vs.85))참조 하세요.
 
 ## <a name="testing-the-windows-powershell-provider"></a>Windows PowerShell 공급자 테스트
 
@@ -217,7 +211,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우 명령�
 Get-Content -Path mydb:\Customers -ReadCount 2
 ```
 
-```output
+```Output
 ID        : 1
 FirstName : Eric
 LastName  : Gruber
@@ -250,11 +244,11 @@ Country   : USA
 
 [Windows PowerShell 공급자 디자인](./designing-your-windows-powershell-provider.md)
 
-[개체 형식 및 서식 확장](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[개체 형식 및 서식 확장](/previous-versions//ms714665(v=vs.85))
 
 [탐색 Windows PowerShell 공급자 구현](./creating-a-windows-powershell-navigation-provider.md)
 
-[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](/previous-versions/ms714644(v=vs.85))
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)
 

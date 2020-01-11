@@ -10,12 +10,12 @@ helpviewer_keywords:
 - snap-ins [PowerShell SDK], PSSnapin example
 ms.assetid: 875024f4-e02b-4416-80b9-af5e5b50aad6
 caps.latest.revision: 7
-ms.openlocfilehash: 465ab9e8fa29716ce0f46ad0dcf01d0ddd615bcd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d12a66e354a23041fffb0f8fa286c849849ec2b0
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364232"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870475"
 ---
 # <a name="writing-a-windows-powershell-snap-in"></a>Windows PowerShell 스냅인 작성
 
@@ -31,7 +31,7 @@ ms.locfileid: "72364232"
 
     이 예제에서 클래스 이름은 "GetProcPSSnapIn01"입니다.
 
-3. 스냅인 이름에 대 한 public 속성 (필수)을 추가 합니다. 스냅인의 이름을 지정할 때 # 문자를 사용 하지 마십시오. , () {} [] &-/\ $; : "' \< >;? @ ` *
+3. 스냅인 이름에 대 한 public 속성 (필수)을 추가 합니다. 스냅인의 이름을 지정할 때는 다음 문자를 사용 하지 마세요. `#`, `.`, `,`, `(`, `)`, `{`, `}`, `[`, `]`, `&`, `-`, `/`, `\`, `$`, `;`, `:`, `"`, `'`, `<`, `>`, `|`, `?`
 
     이 예제에서 스냅인의 이름은 "GetProcPSSnapIn01"입니다.
 
@@ -51,9 +51,9 @@ ms.locfileid: "72364232"
 
     이 예제에서 공급 업체 리소스는 "GetProcPSSnapIn01" 이며,이는 get proc cmdlet을 등록 하는 Windows PowerShell 스냅인입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-이 예제에서는 Windows PowerShell 셸에서 Get Proc cmdlet을 등록 하는 데 사용할 수 있는 Windows PowerShell 스냅인을 작성 하는 방법을 보여 줍니다. 이 예제에서 전체 어셈블리에는 GetProcPSSnapIn01 스냅인 클래스와 Get Proc cmdlet 클래스만 포함 됩니다.
+이 예제에서는 Windows PowerShell 셸에서 Get Proc cmdlet을 등록 하는 데 사용할 수 있는 Windows PowerShell 스냅인을 작성 하는 방법을 보여 줍니다. 이 예제에서 전체 어셈블리는 GetProcPSSnapIn01 스냅인 클래스와 `Get-Proc` cmdlet 클래스만 포함 합니다.
 
 ```csharp
 [RunInstaller(true)]
@@ -128,6 +128,6 @@ public class GetProcPSSnapIn01 : PSSnapIn
 
 ## <a name="see-also"></a>참고 항목
 
-[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](/previous-versions/ms714644(v=vs.85))
 
 [Windows PowerShell Shell SDK](../windows-powershell-reference.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows PowerShell SDK
 ms.assetid: cbba4879-bcac-484a-9906-4bbe2cd1eb33
 caps.latest.revision: 11
-ms.openlocfilehash: 48b2b2b9ab2a39cf185ed54bcfa99d46562e13b6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c00590df4d07e0f5ed9e93fd84a2780329753e39
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366282"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870866"
 ---
 # <a name="windows-powershell-reference"></a>Windows PowerShell 참조
 
@@ -37,7 +37,8 @@ Windows PowerShell SDK 외에도 다음 리소스에서 추가 정보를 제공 
 
 [Windows PowerShell Cmdlet 작성](./cmdlet/writing-a-windows-powershell-cmdlet.md) Cmdlet을 디자인 하는 프로그램 관리자와 cmdlet 코드를 구현 하는 개발자를 위한 정보 및 코드 예제를 제공 합니다.
 
-[Windows PowerShell 팀 블로그](https://blogs.msdn.microsoft.com/PowerShell/) 다른 Windows PowerShell 사용자의 학습 및 공동 작업에 가장 적합 한 리소스입니다. Windows PowerShell 팀 블로그를 읽은 다음 Windows PowerShell 사용자 포럼 (microsoft. w i m. Windows 실시간 검색을 사용 하 여 다른 Windows PowerShell 블로그 및 리소스를 찾을 수 있습니다. 그런 다음 전문 지식을 개발 하면서 아이디어를 자유롭게 기여 하세요.
+[Windows PowerShell 팀 블로그](https://blogs.msdn.microsoft.com/PowerShell/) 다른 Windows PowerShell 사용자의 학습 및 공동 작업에 가장 적합 한 리소스입니다. Windows PowerShell 팀 블로그를 읽은 다음 Windows PowerShell 사용자 포럼 (microsoft. w i m.
+Windows 실시간 검색을 사용 하 여 다른 Windows PowerShell 블로그 및 리소스를 찾을 수 있습니다. 그런 다음 전문 지식을 개발 하면서 아이디어를 자유롭게 기여 하세요.
 
 [PowerShell 모듈 브라우저](/powershell/module/) 명령줄 도움말 항목의 최신 버전을 제공 합니다.
 
@@ -53,4 +54,4 @@ Windows PowerShell SDK 외에도 다음 리소스에서 추가 정보를 제공 
 
 [System.object](/dotnet/api/System.Management.Automation.Internal) .이 네임 스페이스는 다른 네임 스페이스 클래스에서 사용 되는 기본 클래스를 포함 합니다. 예를 들어, [system.web. Cmdletmetadataattribute](/dotnet/api/System.Management.Automation.Internal.CmdletMetadataAttribute) 클래스는 [system.object](/dotnet/api/System.Management.Automation.CmdletAttribute) 클래스에 대 한 기본 클래스입니다.
 
-[Runspace](/dotnet/api/System.Management.Automation.Runspaces) 이 네임 스페이스는 Windows PowerShell runspace를 만드는 데 사용 되는 클래스, 열거형 및 인터페이스를 포함 합니다. 이 컨텍스트에서 Windows PowerShell runspace는 하나 이상의 Windows PowerShell 파이프라인이 cmdlet을 호출 하는 컨텍스트입니다. 즉, cmdlet은 Windows PowerShell runspace 컨텍스트 내에서 작동 합니다. PowerShell runspace aboutWindows에 대 한 자세한 내용은 [Windows Powershell runspace](https://msdn.microsoft.com/en-us/a1582cfe-f06d-4aff-adc6-71f49a860ce9)을 참조 하세요.
+[Runspace](/dotnet/api/System.Management.Automation.Runspaces) 이 네임 스페이스는 Windows PowerShell runspace를 만드는 데 사용 되는 클래스, 열거형 및 인터페이스를 포함 합니다. 이 컨텍스트에서 Windows PowerShell runspace는 하나 이상의 Windows PowerShell 파이프라인이 cmdlet을 호출 하는 컨텍스트입니다. 즉, cmdlet은 Windows PowerShell runspace 컨텍스트 내에서 작동 합니다. PowerShell runspace aboutWindows에 대 한 자세한 내용은 [Windows Powershell runspace](hosting/creating-runspaces.md)을 참조 하세요.
