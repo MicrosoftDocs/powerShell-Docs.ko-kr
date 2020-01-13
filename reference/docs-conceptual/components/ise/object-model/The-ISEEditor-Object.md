@@ -1,13 +1,13 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: ISEEditor 개체
-ms.openlocfilehash: 2d4c3d941035384c591ca57e809c0e3a9b852f5c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: cb63acebc1a8bb9fa6cc07199088ae0d5441bc91
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "62086768"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736192"
 ---
 # <a name="the-iseeditor-object"></a>ISEEditor 개체
 
@@ -69,7 +69,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-편집기 개체의 **CanGoToMatch** 속성이 **$true**인 경우, 캐럿을 일치하는 문자로 이동합니다. 캐럿이 여는 괄호, 대괄호 또는 중괄호 \(,\[,{ 바로 앞에 있거나 닫는 괄호, 대괄호 또는 중괄호 \),\],} 바로 뒤에 있을 때 이런 일이 발생합니다.  캐럿은 여는 문자가 앞이나 닫는 문자 뒤에 배치됩니다. **CanGoToMatch** 속성이 **$false**라면, 이 메서드는 아무 작업도 수행하지 않습니다.
+편집기 개체의 **CanGoToMatch** 속성이 `$true`인 경우, 캐럿을 일치하는 문자로 이동합니다. 캐럿이 여는 괄호, 대괄호 또는 중괄호 `(`,`[`,`{` 바로 앞에 있거나 닫는 괄호, 대괄호 또는 중괄호 `)`,`]`,`}` 바로 뒤에 있을 때 이런 일이 발생합니다. 캐럿은 여는 문자가 앞이나 닫는 문자 뒤에 배치됩니다. **CanGoToMatch** 속성이 `$false`이면, 이 메서드는 아무 작업도 수행하지 않습니다.
 
 ```powershell
 # Goes to the matching character if CanGoToMatch() is $true
@@ -147,7 +147,7 @@ $psISE.CurrentFile.Editor.ToggleOutliningExpansion()
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-캐럿이 괄호, 대괄호 또는 중괄호(\(\), \[\], {}) 옆에 있는지 여부를 나타내는 읽기 전용 부울 속성입니다. 캐럿이 여는 문자의 바로 앞 또는 닫는 문자 바로 뒤에 있다면 이 속성 값은 **$true**입니다. 그렇지 않으면 **$false**입니다.
+캐럿이 괄호, 대괄호 또는 중괄호(`()`,`[]`,`{}`) 옆에 있는지 여부를 나타내는 읽기 전용 부울 속성입니다. 캐럿이 여는 문자의 바로 앞 또는 닫는 문자 바로 뒤에 있다면 이 속성 값은 `$true`입니다. 그렇지 않으면 `$false`입니다.
 
 ```powershell
 # Test to see if the caret is next to a parenthesis, bracket, or brace

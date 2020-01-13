@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 3cbf64e5-f9e8-4002-b40c-4d3f39025c83
 caps.latest.revision: 11
 ms.openlocfilehash: 0ca522cebb22c624902ab986b13e425db3754adf
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361032"
 ---
 # <a name="host04-sample"></a>Host04 샘플
@@ -23,13 +23,13 @@ ms.locfileid: "72361032"
 
  이 샘플에는 Windows PowerShell 2.0이 필요 합니다.
 
-## <a name="demonstrates"></a>보여
+## <a name="demonstrates"></a>데모
 
-- 클래스가 [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스에서 파생 되는 사용자 지정 호스트를 만듭니다. [Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 클래스, 및에서 파생 된 [클래스의 System.object를 관리](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) 합니다.
+- [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스, [System.Management.Automation.Host.Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 클래스 및 [System.Management.Automation.Host.Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) 클래스에서 파생 되는 클래스의 사용자 지정 호스트를 만들고 있습니다. 이 클래스는  클래스와 같은 클래스입니다.
 
 - 이러한 호스트 클래스를 사용 하 여 대화형 Windows PowerShell 셸을 빌드하는 콘솔 응용 프로그램 빌드
 
-- @No__t-0 변수를 만들고 다음 프로필을 로드 합니다.
+- `$profile` 변수를 만들고 다음 프로필을 로드 하는 중입니다.
 
   - 현재 사용자, 현재 호스트
 

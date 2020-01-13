@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: PowerShellTab 개체
-ms.openlocfilehash: bfa11b553f97b7b27b974855ff4e8f1a48c33fea
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 55e3678a8285f0ec7e8131d98c87478216c26f37
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67028912"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736933"
 ---
 # <a name="the-powershelltab-object"></a>PowerShellTab 개체
 
@@ -43,7 +43,7 @@ PowerShell 탭에서 지정된 스크립트를 실행합니다.
 
 **Script** - System.Management.Automation.ScriptBlock 또는 문자열. 실행할 스크립트 블록입니다.
 
-**\[useNewScope\]** - 기본적으로 **$true**로 설정되는 선택적 부울. **$true**로 설정된 경우 명령을 실행할 새 범위가 만들어집니다. 명령으로 지정되는 PowerShell 탭의 런타임 환경을 수정하지는 않습니다.
+**\[useNewScope\]** - 기본적으로 `$true`로 설정되는 선택적 부울. `$true`로 설정된 경우 명령을 실행할 새 범위가 만들어집니다. 명령으로 지정되는 PowerShell 탭의 런타임 환경을 수정하지는 않습니다.
 
 **\[millisecondsTimeout\]** - 기본값이 **500**인 선택적 정수.
 이 명령이 지정된 시간 안에 완료되지 않으면 이 명령은 "작업 시간이 초과되었습니다"라는 메시지와 함께 **TimeoutException**을 생성합니다.
@@ -92,7 +92,7 @@ $psISE.CurrentPowerShellTab.AddOnsMenu
 
 Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 
-스크립트를 [Invoke( Script )](#invoke-script-) 메서드로 호출할 수 있으면 **$true** 값을 반환하는 읽기 전용 부울 속성입니다.
+스크립트를 [Invoke( Script )](#invoke-script-) 메서드로 호출할 수 있으면 `$true` 값을 반환하는 읽기 전용 부울 속성입니다.
 
 ```powershell
 # CanInvoke will be false if the PowerShell
@@ -107,9 +107,9 @@ $secondTab.Invoke({sleep 20})
 $secondTab.CanInvoke
 ```
 
-### <a name="consolepane"></a>Consolepane
+### <a name="consolepane"></a>ConsolePane
 
-Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.  Windows PowerShell ISE 2.0에서는 이 속성의 이름이 **CommandPane**이었습니다.
+Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다. Windows PowerShell ISE 2.0에서는 이 속성의 이름이 **CommandPane**이었습니다.
 
 콘솔 창 [editor](The-ISEEditor-Object.md) 개체를 가져오는 읽기 전용 속성입니다.
 
@@ -156,7 +156,7 @@ $newFile.Editor.LineCount
 
 ### <a name="output"></a>출력
 
-이 기능은 Windows PowerShell ISE 2.0에는 있었지만 그 이후 버전의 ISE에서 제거되었거나 이름이 바뀌었습니다.  Windows PowerShell ISE의 이후 버전에서는 동일한 용도로 **ConsolePane** 개체를 사용할 수 있습니다.
+이 기능은 Windows PowerShell ISE 2.0에는 있었지만 그 이후 버전의 ISE에서 제거되었거나 이름이 바뀌었습니다. Windows PowerShell ISE의 이후 버전에서는 동일한 용도로 **ConsolePane** 개체를 사용할 수 있습니다.
 
 현재 [편집기](The-ISEEditor-Object.md)의 출력 창을 가져오는 읽기 전용 속성입니다.
 
@@ -165,7 +165,7 @@ $newFile.Editor.LineCount
 $psISE.CurrentPowerShellTab.output.clear()
 ```
 
-### <a name="prompt"></a>Prompt
+### <a name="prompt"></a>prompt
 
 Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 

@@ -1,17 +1,17 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: ISEFile 개체
-ms.openlocfilehash: ebb5a35f6ea9d93eab633b9f4e6c84e4fddd6ae8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1069e46aa586b8df2050129194a909b90f77b745
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67028950"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737001"
 ---
 # <a name="the-isefile-object"></a>ISEFile 개체
 
-**ISEFile** 개체는 Windows PowerShell® ISE(통합 스크립팅 환경)에 있는 파일을 나타내며, Microsoft.PowerShell.Host.ISE.ISEFile 클래스의 인스턴스입니다. 이 항목에는 멤버 메서드 및 멤버 속성이 나열됩니다. **$psISE.CurrentFile**과 PowerShell 탭의 파일 컬렉션에 있는 파일이 Microsoft.PowerShell.Host.ISE.ISEFile 클래스의 전체 인스턴스입니다.
+**ISEFile** 개체는 Windows PowerShell® ISE(통합 스크립팅 환경)에 있는 파일을 나타내며, **Microsoft.PowerShell.Host.ISE.ISEFile** 클래스의 인스턴스입니다. 이 항목에는 멤버 메서드 및 멤버 속성이 나열됩니다. `$psISE.CurrentFile`과 PowerShell 탭의 파일 컬렉션에 있는 파일이 ****Microsoft.PowerShell.Host.ISE.ISEFile** 클래스의 전체 인스턴스입니다.
 
 ## <a name="methods"></a>메서드
 
@@ -69,7 +69,7 @@ $psISE.CurrentFile.SaveAs($fullPath, [System.Text.Encoding]::UTF8)
 
 Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 
-이 파일의 표시 이름을 포함하는 문자열을 가져오는 읽기 전용 속성입니다. 이름은 편집기의 맨 위에 있는 **파일** 탭에 표시됩니다. 이름의 끝에 별표(\(\*\))가 있다면 파일에 저장되지 않은 변경 내용이 있다는 것입니다.
+이 파일의 표시 이름을 포함하는 문자열을 가져오는 읽기 전용 속성입니다. 이름은 편집기의 맨 위에 있는 **파일** 탭에 표시됩니다. 이름의 끝에 별표(`(*)`)가 있다면 파일에 저장되지 않은 변경 내용이 있다는 것입니다.
 
 ```powershell
 # Shows the display name of the file.
@@ -87,7 +87,7 @@ Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 $psISE.CurrentFile.Editor.Text
 ```
 
-### <a name="encoding"></a>인코딩
+### <a name="encoding"></a>Encoding
 
 Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 
@@ -113,7 +113,7 @@ $psISE.CurrentFile.FullPath
 
 Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 
-파일이 마지막으로 수정한 후 저장된 경우 **$true**를 반환하는 읽기 전용 부울 속성입니다.
+파일이 마지막으로 수정한 후 저장된 경우 `$true`를 반환하는 읽기 전용 부울 속성입니다.
 
 ```powershell
 # Determines whether the file has been saved since it was last modified.
@@ -125,7 +125,7 @@ $myfile.IsSaved
 
 Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 
-파일에 제목이 지정된 적이 없는 경우 **$true**를 반환하는 읽기 전용 속성입니다.
+파일에 제목이 지정된 적이 없는 경우 `$true`를 반환하는 읽기 전용 속성입니다.
 
 ```powershell
 # Determines whether the file has never been given a title.

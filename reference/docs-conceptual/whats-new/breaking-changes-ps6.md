@@ -1,13 +1,13 @@
 ---
-ms.date: 11/15/2019
+ms.date: 12/18/2019
 keywords: powershell,core
 title: PowerShell 6.0의 주요 변경 내용
-ms.openlocfilehash: a1dac42bcda8e1258a99ef281691a9d4c5986b53
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: dfbbeb5e5bb3d43959ce144afffc5b10193f8b30
+ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417566"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75415706"
 ---
 # <a name="breaking-changes-for-powershell-6x"></a>PowerShell 6.x의 호환성이 손상되는 변경
 
@@ -63,6 +63,10 @@ OS를 다시 시작한 후에도 검사점을 사용하여 스크립트를 다�
 ### <a name="microsoftpowershelllocalaccounts"></a>Microsoft.PowerShell.LocalAccounts
 
 지원되지 않는 API를 사용하는 `Microsoft.PowerShell.LocalAccounts`는 더 나은 해결 방법을 찾을 때까지 PowerShell Core에서 제거되었습니다.
+
+### <a name="new-webserviceproxy-cmdlet-removed"></a>`New-WebServiceProxy` cmdlet이 제거됨
+
+.NET Core는 SOAP 프로토콜을 사용하기 위한 서비스를 제공하는 Windows Communication Framework를 지원하지 않습니다. 이 cmdlet은 SOAP가 필요하므로 제거되었습니다.
 
 ### <a name="-computer-cmdlets"></a>`*-Computer` cmdlet
 
@@ -145,7 +149,7 @@ CoreFX의 RPC 원격 관련 문제로 인해(특히 비 Windows 플랫폼) Power
 
 HTTP를 사용하는 경우 암호를 포함하는 콘텐츠가 일반 텍스트로 전송됩니다. 이 변경은 이 동작을 기본적으로 허용하지 않고 자격 증명이 비보안 방식으로 전달될 경우 오류를 반환하기 위한 것입니다. 사용자는 `-AllowUnencryptedAuthentication` 스위치를 사용하여 이 변경을 무시할 수 있습니다.
 
-## <a name="api-changes"></a>API 변경 내용
+## <a name="api-changes"></a>API 변경
 
 ### <a name="remove-addtypecommandbase-class-5407httpsgithubcompowershellpowershellissues5407"></a>`AddTypeCommandBase` 클래스 제거 [#5407](https://github.com/PowerShell/PowerShell/issues/5407)
 

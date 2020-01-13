@@ -2,17 +2,16 @@
 ms.date: 08/25/2017
 keywords: powershell,cmdlet
 title: ObjectModelRoot 개체
-ms.openlocfilehash: 2670321ebac1eac4ecc8457afb796f9f260da471
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0b04bdb3127edaac7b504556843efb64ee65ed13
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "62086785"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736031"
 ---
 # <a name="the-objectmodelroot-object"></a>ObjectModelRoot 개체
 
-Windows PowerShell® ISE(통합 스크립팅 환경)의 주 루트 개체인 **$psISE** 개체는 Microsoft.PowerShell.Host.ISE.ObjectModelRoot 클래스의 인스턴스입니다.
-이 항목에서는 **ObjectModelRoot** 개체의 속성을 설명합니다.
+Windows PowerShell® ISE(통합 스크립팅 환경)의 주 루트 개체인 `$psISE` 개체는 Microsoft.PowerShell.Host.ISE.ObjectModelRoot 클래스의 인스턴스입니다. 이 항목에서는 **ObjectModelRoot** 개체의 속성을 설명합니다.
 
 ## <a name="properties"></a>속성
 

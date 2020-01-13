@@ -1,13 +1,13 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE 스크립팅 개체 모델의 용도
-ms.openlocfilehash: e59593ef06911c709e92fa7a1eabd96d2636ca30
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1f48df112bd19297baa311116e79d3d7603d7c81
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030919"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736235"
 ---
 # <a name="purpose-of-the-windows-powershell-ise-scripting-object-model"></a>Windows PowerShell ISE 스크립팅 개체 모델의 용도
 
@@ -17,12 +17,13 @@ ms.locfileid: "67030919"
 
 개체 모델을 사용하여 애플리케이션 설정 및 옵션을 수정할 수 있습니다. 예를 들어, 다음과 같이 수정할 수 있습니다.
 
-- 오류, 경고, 자세한 정보 출력 및 디버그 출력의 색을 변경할 수 있습니다.
-- 명령 창, 출력 창 및 스크립트 창의 배경색을 가져오거나 설정할 수 있습니다.
-- 출력 창의 전경색을 설정할 수 있습니다.
-- Windows PowerShell ISE의 글꼴 이름 및 글꼴 크기를 설정할 수 있습니다.
-- 경고를 구성할 수 있습니다. 이 설정에는 파일이 여러 PowerShell 탭에 열려 있거나, 파일에 있는 스크립트가 파일이 저장되기 전에 실행되는 경우 발생하는 경고가 포함됩니다.
-- 스크립트 창과 출력 창이 나란히 있는 보기와 스크립트 창이 출력 창 위에 있는 보기 간에 전환할 수 있습니다. 명령 창을 출력 창의 맨 아래 또는 위에 도킹할 수 있습니다.
+- 오류, 경고, 자세한 정보 출력 및 디버그 출력의 색을 변경합니다.
+- 명령 창, 출력 창 및 스크립트 창의 배경색을 가져오거나 설정합니다.
+- 출력 창의 전경색을 설정합니다.
+- Windows PowerShell ISE의 글꼴 이름 및 글꼴 크기를 설정합니다.
+- 경고를 구성합니다. 이 설정에는 파일이 여러 PowerShell 탭에 열려 있거나, 파일에 있는 스크립트가 파일이 저장되기 전에 실행되는 경우 발생하는 경고가 포함됩니다.
+- 스크립트 창과 출력 창이 나란히 있는 보기와 스크립트 창이 출력 창 위에 있는 보기 간에 전환합니다.
+- 명령 창을 출력 창의 맨 아래 또는 위에 고정합니다.
 
 ## <a name="enhancing-the-functionality-of-windows-powershell-ise"></a>Windows PowerShell ISE의 기능 향상
 

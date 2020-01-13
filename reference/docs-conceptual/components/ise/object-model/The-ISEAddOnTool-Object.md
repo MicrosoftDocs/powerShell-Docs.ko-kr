@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: ISEAddOnTool 개체
-ms.openlocfilehash: c71602d200b941ed4fb142b9c35f0fe68982e3e9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a5357005ec1a883f5a14882a42e3150e09ff33a2
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67028989"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736133"
 ---
 # <a name="the-iseaddontool-object"></a>ISEAddOnTool 개체
 
@@ -23,16 +23,19 @@ Windows PowerShell ISE의 각 PowerShell 탭에는 자체의 추가 기능 도�
 
 ## <a name="properties"></a>속성
 
-### <a name="control"></a>컨트롤
+### <a name="control"></a>제어
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-**컨트롤** 속성은 명령 추가 기능 도구의 세부 정보 중 많은 부분에 대한 읽기 권한을 제공합니다.
+**Control** 속성은 명령 추가 기능 도구의 세부 정보 중 많은 부분에 대한 읽기 권한을 제공합니다.
 
 ```powershell
 # View the properties of the Commands add-on tool.
 # (assumes that it is visible in the vertical pane)
 $psISE.CurrentVisibleVerticalTool.Control
+```
+
+```Output
 HostObject                  : Microsoft.PowerShell.Host.ISE.ObjectModelRoot
 Content                     :
 HasContent                  :
@@ -143,7 +146,7 @@ Dispatcher                  : System.Windows.Threading.Dispatcher
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-추가 기능 도구가 현재 할당된 해당 창에 표시되는지 여부를 나타내는 부울 속성입니다. 표시되는 경우, **IsVisible** 속성을 **$false**로 설정하여 도구를 숨기거나, **IsVisible** 속성을 **$true**로 설정하여 추가 기능이 PowerShell 탭에 표시되도록 할 수 있습니다. 추가 기능 도구가 숨겨지면 더 이상 **CurrentVisibleHorizontalTool** 또는 **CurrentVisibleVerticalTool** 개체를 통해 액세스할 수 없으며, 따라서 해당 개체에서 이 속성을 사용하여 표시할 수 없습니다.
+추가 기능 도구가 현재 할당된 해당 창에 표시되는지 여부를 나타내는 부울 속성입니다. 표시되는 경우, **IsVisible** 속성을 `$false`로 설정하여 도구를 숨기거나, **IsVisible** 속성을 `$true`로 설정하여 추가 기능이 PowerShell 탭에 표시되도록 할 수 있습니다. 추가 기능 도구가 숨겨지면 더 이상 **CurrentVisibleHorizontalTool** 또는 **CurrentVisibleVerticalTool** 개체를 통해 액세스할 수 없으며, 따라서 해당 개체에서 이 속성을 사용하여 표시할 수 없습니다.
 
 ```powershell
 # Hide the current tool in the vertical tool pane
@@ -152,7 +155,7 @@ $psISE.CurrentVisibleVerticalTool.IsVisible = $false
 $psISE.CurrentPowerShellTab.VerticalAddOnTools[0].IsVisible = $true
 ```
 
-### <a name="name"></a>이름
+### <a name="name"></a>속성
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
@@ -161,6 +164,9 @@ Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습
 ```powershell
 # Gets the name of the visible vertical pane add-on tool.
 $psISE.CurrentVisibleVerticalTool.Name
+```
+
+```Output
 Commands
 ```
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 057a666f-731b-423d-9d80-7be6b1836244
 caps.latest.revision: 5
 ms.openlocfilehash: c97b0dfc12d96f99c53383d3578579f1988efd52
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367682"
 ---
 # <a name="creating-remote-runspaces"></a>원격 runspace 만들기
@@ -21,9 +21,9 @@ ms.locfileid: "72367682"
 
 ## <a name="using-a-wsmanconnection-to-create-a-remote-runspace"></a>WSManConnection을 사용 하 여 원격 runspace 만들기
 
- 원격 컴퓨터에 연결 하는 runspace를 만들려면 [runspace. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 개체를 만듭니다. 개체의 [Runspace WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo.ConnectionUri) 속성을 설정 하 여 연결에 대 한 대상 끝점을 지정 합니다. 그런 다음 Runspace 메서드를 호출 하 여 runspace를 만들고 `connectionInfo`로 [CreateRunspace](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory.CreateRunspace) 메서드를 지정 합니다. [runspace](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 개체를 지정 합니다. 변수에.
+ 원격 컴퓨터에 연결 하는 runspace를 만들려면 [runspace. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 개체를 만듭니다. 개체의 [Runspace WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo.ConnectionUri) 속성을 설정 하 여 연결에 대 한 대상 끝점을 지정 합니다. 그런 다음 Runspace [System.Management.Automation.Runspaces.RunspaceFactory.CreateRunspace](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory.CreateRunspace) 메서드를 호출 하 고 [System.Management.Automation.Runspaces.WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) 개체를 `connectionInfo` 매개 변수로 지정 하 여 Runspace를 만듭니다. CreateRunspace 메서드를 호출 합니다.
 
- 다음 예에서는 원격 컴퓨터에 연결 하는 runspace를 만드는 방법을 보여 줍니다. 이 예제에서 `RemoteComputerUri`은 원격 컴퓨터의 실제 URI에 대 한 자리 표시자로 사용 됩니다.
+ 다음 예에서는 원격 컴퓨터에 연결 하는 runspace를 만드는 방법을 보여 줍니다. 예제에서 `RemoteComputerUri`은 원격 컴퓨터의 실제 URI에 대 한 자리 표시자로 사용 됩니다.
 
 ```csharp
 namespace Samples

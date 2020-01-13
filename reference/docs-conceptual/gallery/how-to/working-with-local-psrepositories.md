@@ -3,14 +3,14 @@ ms.date: 11/06/2018
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery,psget,갤러리
 title: 로컬 PSRepository 작업
-ms.openlocfilehash: 94824ea584c097838b24c6f2cd02407b6147a781
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c1bd905674ae76a3badd3eff50780f0e1bb5fc64
+ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71327994"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75415831"
 ---
-# <a name="working-with-local-powershellget-repositories"></a>로컬 PowerShellGet 리포지토리 작업
+# <a name="working-with-private-powershellget-repositories"></a>프라이빗 PowerShellGet 리포지토리 작업
 
 PowerShellGet 모듈은 PowerShell 갤러리 이외의 리포지토리를 지원합니다.
 이 cmdlet을 통해 다음 시나리오가 가능해집니다.
@@ -18,6 +18,7 @@ PowerShellGet 모듈은 PowerShell 갤러리 이외의 리포지토리를 지원
 - 사용자 환경에서 사용할 신뢰할 수 있는 미리 유효성 검사된 PowerShell 모듈 세트 지원
 - PowerShell 모듈 또는 스크립트를 빌드하는 CI/CD 파이프라인 테스트
 - 인터넷에 액세스할 수 없는 시스템에 PowerShell 스크립트 및 모듈 전달
+- 조직에서만 사용할 수 있는 PowerShell 스크립트 및 모듈 전달
 
 이 문서에서는 로컬 PowerShell 리포지토리를 설정하는 방법을 설명합니다. 또한 PowerShell 갤러리에서 사용할 수 있는 [OfflinePowerShellGetDeploy][] 모듈을 다룹니다. 이 모듈에는 최신 버전의 PowerShellGet을 로컬 리포지토리에 설치하는 cmdlet이 포함됩니다.
 
@@ -25,18 +26,18 @@ PowerShellGet 모듈은 PowerShell 갤러리 이외의 리포지토리를 지원
 
 로컬 PSRepository를 만드는 두 가지 방법은 NuGet 서버 또는 파일 공유입니다. 각 유형에는 다음과 같은 장단점이 있습니다.
 
-NuGet 서버
+### <a name="nuget-server"></a>NuGet 서버
 
-| 이점| 단점 |
+| 장점| 단점 |
 | --- | --- |
 | Powershell 갤러리 기능을 최대한 가깝게 모방 | 다중 계층 앱에 작업 계획 및 지원 필요 |
 | NuGet이 Visual Studio, 기타 도구에 통합 | 인증 모델 및 NuGet 계정 관리 필요 |
 | NuGet이 `.Nupkg` 패키지의 메타데이터 지원 | 게시에 API 키 관리 및 유지 관리 필요 |
 | 검색, 패키지 관리 등 제공 | |
 
-파일 공유
+### <a name="file-share"></a>파일 공유
 
-| 이점| 단점 |
+| 장점| 단점 |
 | --- | --- |
 | 간편한 설정, 백업 및 유지 관리 | PowerShellGet에서 사용되는 메타데이터를 사용할 수 없음 |
 | 간단한 보안 모델 - 공유에 대한 사용자 권한 | 기본 파일 공유 이외의 UI 없음 |
@@ -73,7 +74,7 @@ Register-PSRepository -Name LocalPSRepo -SourceLocation '\\localhost\PSRepoLocal
 
 두 가지 명령이 **ScriptSourceLocation**을 처리하는 방식의 차이에 주의하세요. 파일 공유 기반 리포지토리의 경우 **SourceLocation** 및 **ScriptSourceLocation**이 일치해야 합니다. 웹 기반 리포지토리의 경우 두 항목이 달라야 하므로, 이 예제에서는 후행 "/"가 **SourceLocation**에 추가됩니다.
 
-새로 생성된 PSRepository를 기본 리포지토리로 설정하려면 모든 다른 PSRepository를 등록 취소해야 합니다. 예:
+새로 생성된 PSRepository를 기본 리포지토리로 설정하려면 모든 다른 PSRepository를 등록 취소해야 합니다. 다음은 그 예입니다.
 
 ```powershell
 Unregister-PSRepository -Name PSGallery
@@ -98,7 +99,7 @@ Register-PSRepository -Default
 
 - 코드 위치 지정
 - API 키 제공
-- 리포지토리 이름을 지정합니다. 예를 들면 `-PSRepository LocalPSRepo`과 같습니다.
+- 리포지토리 이름을 지정합니다. 예를 들어 `-PSRepository LocalPSRepo`
 
 > [!NOTE]
 > NuGet 서버에서 계정을 만든 후 로그인하여 API 키를 생성하고 저장해야 합니다.
@@ -109,7 +110,9 @@ Register-PSRepository -Default
 ```powershell
 # Publish to a NuGet Server repository using my NuGetAPI key
 Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey 'oy2bi4avlkjolp6bme6azdyssn6ps3iu7ib2qpiudrtbji'
+```
 
+```powershell
 # Publish to a file share repo - the NuGet API key must be a non-blank string
 Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey 'AnyStringWillDo'
 ```
@@ -126,11 +129,11 @@ PSGallery의 모듈을 로컬 PSRepository에 게시하려면 'Save-Package' cmd
 - PSGallery 위치를 원본으로 지정(https://www.powershellgallery.com/api/v2)
 - 로컬 리포지토리의 경로 지정
 
-예:
+예제:
 
 ```powershell
 # Publish from the PSGallery to your local Repository
-Save-Package -Name 'PackageName' -Provider Nuget -Source https://www.powershellgallery.com/api/v2 -Path '\\localhost\PSRepoLocal\'
+Save-Package -Name 'PackageName' -Provider NuGet -Source https://www.powershellgallery.com/api/v2 -Path '\\localhost\PSRepoLocal\'
 ```
 
 로컬 PSRepository가 웹 기반인 경우 게시할 때 nuget.exe를 사용하는 추가 단계가 필요합니다.
@@ -181,6 +184,10 @@ Publish-Module -Path 'F:\OfflinePowershellGet' -Repository LocalPsRepo -NuGetApi
 # Publish to a file share repo - the NuGet API key must be a non-blank string
 Publish-Module -Path 'F:\OfflinePowerShellGet' -Repository LocalPsRepo -NuGetApiKey 'AnyStringWillDo'
 ```
+
+## <a name="use-packaging-solutions-to-host-powershellget-repositories"></a>패키지 솔루션을 사용하여 PowerShellGet 리포지토리 호스트
+
+Azure Artifacts와 같은 패키지 솔루션을 사용하여 프라이빗 또는 퍼블릭 PowerShellGet 리포지토리를 호스트할 수도 있습니다. 자세한 내용 및 지침은 [Azure Artifacts 설명서](https://docs.microsoft.com/azure/devops/artifacts/tutorials/private-powershell-library)를 참조하세요.
 
 > [!IMPORTANT]
 > 보안을 적용하려면 API 키가 스크립트에서 하드 코드되지 않아야 합니다. 보안 키 관리 시스템을 사용합니다.

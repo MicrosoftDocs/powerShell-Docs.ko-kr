@@ -1,13 +1,13 @@
 ---
-ms.date: 06/03/2019
+ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 소프트웨어 설치 작업
-ms.openlocfilehash: 6d2111a332f0e8c1b545186d3d950e936aed1834
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d164064418ad7a0209166c81a7c3cc32a9db300a
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "66830297"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737154"
 ---
 # <a name="working-with-software-installations"></a>소프트웨어 설치 작업
 
@@ -24,44 +24,44 @@ Windows Installer를 사용하도록 설계된 애플리케이션은 WMI의 **Wi
 
 ```powershell
 Get-CimInstance -Class Win32_Product |
-  Where-Object Name -eq "Microsoft .NET Core Runtime - 2.1.2 (x64)"
+  Where-Object Name -eq "Microsoft .NET Core Runtime - 2.1.5 (x64)"
 ```
 
 ```Output
-Name               Caption                     Vendor                 Version      IdentifyingNumber
-----               -------                     ------                 -------      -----------------
-Microsoft .NET ... Microsoft .NET Core Runt... Microsoft Corporation  16.72.26629  {ACC73072-9AD5-416C-94B...
+Name             Caption                   Vendor                    Version       IdentifyingNumber
+----             -------                   ------                    -------       -----------------
+Microsoft .NET … Microsoft .NET Core Runt… Microsoft Corporation     16.84.26919   {BEB59D04-C6DD-4926-AFE…
 ```
 
 모든 **Win32_Product** 개체의 속성을 디스플레이에 표시하려면 값이 `*`인 형식 지정 `Format-List`cmdlet의 **Properties** 매개 변수를 사용합니다.
 
 ```powershell
 Get-CimInstance -Class Win32_Product |
-  Where-Object Name -eq "Microsoft .NET Core Runtime - 2.1.2 (x64)" |
+  Where-Object Name -eq "Microsoft .NET Core Runtime - 2.1.5 (x64)" |
     Format-List -Property *
 ```
 
 ```Output
-Name                  : Microsoft .NET Core Runtime - 2.1.2 (x64)
-Version               : 16.72.26629
+Name                  : Microsoft .NET Core Runtime - 2.1.5 (x64)
+Version               : 16.84.26919
 InstallState          : 5
-Caption               : Microsoft .NET Core Runtime - 2.1.2 (x64)
-Description           : Microsoft .NET Core Runtime - 2.1.2 (x64)
-IdentifyingNumber     : {ACC73072-9AD5-416C-94BF-D82DDCEA0F1B}
+Caption               : Microsoft .NET Core Runtime - 2.1.5 (x64)
+Description           : Microsoft .NET Core Runtime - 2.1.5 (x64)
+IdentifyingNumber     : {BEB59D04-C6DD-4926-AFEB-410CBE2EBCE4}
 SKUNumber             :
 Vendor                : Microsoft Corporation
 AssignmentType        : 1
 HelpLink              :
 HelpTelephone         :
-InstallDate           : 20180816
+InstallDate           : 20181105
 InstallDate2          :
 InstallLocation       :
-InstallSource         : C:\ProgramData\Package Cache\{ACC73072-9AD5-416C-94BF-D82DDCEA0F1B}v16.72.26629\
+InstallSource         : C:\ProgramData\Package Cache\{BEB59D04-C6DD-4926-AFEB-410CBE2EBCE4}v16.84.26919\
 Language              : 1033
-LocalPackage          : C:\WINDOWS\Installer\414c96e.msi
-PackageCache          : C:\WINDOWS\Installer\414c96e.msi
-PackageCode           : {D20AC783-1EC5-4A58-9277-F452F5EB9AD9}
-PackageName           : dotnet-runtime-2.1.2-win-x64.msi
+LocalPackage          : C:\WINDOWS\Installer\4f97a771.msi
+PackageCache          : C:\WINDOWS\Installer\4f97a771.msi
+PackageCode           : {9A271A10-039D-49EA-8D24-043D91B9F915}
+PackageName           : dotnet-runtime-2.1.5-win-x64.msi
 ProductID             :
 RegCompany            :
 RegOwner              :
@@ -75,25 +75,25 @@ CimInstanceProperties : {Caption, Description, IdentifyingNumber, Name...}
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ```
 
-또는 `Get-CimInstance` **Filter** 매개 변수를 사용하여 Microsoft .NET Framework 2.0만 선택할 수 있습니다. **Filter** 매개 변수 값은 Windows PowerShell 구문이 아니라 WQL(WMI 쿼리 언어) 구문을 사용합니다. 예:
+또는 `Get-CimInstance` **Filter** 매개 변수를 사용하여 Microsoft .NET 2.0 Runtime만 선택할 수 있습니다. **Filter** 매개 변수 값은 Windows PowerShell 구문이 아니라 WQL(WMI 쿼리 언어) 구문을 사용합니다. 다음은 그 예입니다.
 
 ```powershell
-Get-CimInstance -Class Win32_Product -Filter "Name='Microsoft .NET Core Runtime - 2.1.2 (x64)'" |
+Get-CimInstance -Class Win32_Product -Filter "Name='Microsoft .NET Core Runtime - 2.1.5 (x64)'" |
   Format-List -Property *
 ```
 
 원하는 속성만 나열하려면 형식 지정 cmdlet의 **Property** 매개 변수를 사용하여 원하는 속성을 나열합니다.
 
 ```powershell
-Get-CimInstance -Class Win32_Product  -Filter "Name='Microsoft .NET Core Runtime - 2.1.2 (x64)'" |
+Get-CimInstance -Class Win32_Product  -Filter "Name='Microsoft .NET Core Runtime - 2.1.5 (x64)'" |
   Format-List -Property Name,InstallDate,InstallLocation,PackageCache,Vendor,Version,IdentifyingNumber
 ```
 
 ```Output
-Name              : Microsoft .NET Core Runtime - 2.1.2 (x64)
+Name              : Microsoft .NET Core Runtime - 2.1.5 (x64)
 InstallDate       : 20180816
 InstallLocation   :
-PackageCache      : C:\WINDOWS\Installer\414c96e.msi
+PackageCache      : C:\WINDOWS\Installer\4f97a771.msi
 Vendor            : Microsoft Corporation
 Version           : 16.72.26629
 IdentifyingNumber : {ACC73072-9AD5-416C-94BF-D82DDCEA0F1B}
@@ -101,9 +101,9 @@ IdentifyingNumber : {ACC73072-9AD5-416C-94BF-D82DDCEA0F1B}
 
 ## <a name="listing-all-uninstallable-applications"></a>모든 제거 가능한 애플리케이션 나열
 
-대부분의 표준 애플리케이션에서는 Windows에 제거 프로그램을 등록하므로 Windows 레지스트리에서 제거 프로그램을 찾아서 로컬로 작업할 수 있습니다. 시스템에서 모든 애플리케이션을 찾을 수 있는 확실한 방법은 없습니다. 그러나 **프로그램 추가 또는 제거**에 목록이 표시된 모든 프로그램을 찾을 수 있습니다. **프로그램 추가 또는 제거**에서는 다음 레지스트리 키에서 이러한 애플리케이션을 찾습니다.
+대부분의 표준 애플리케이션에서는 Windows에 제거 프로그램을 등록하므로 Windows 레지스트리에서 제거 프로그램을 찾아서 로컬로 작업할 수 있습니다. 시스템에서 모든 애플리케이션을 찾을 수 있는 확실한 방법은 없습니다. 그러나 다음 레지스트리 키에서 **프로그램 추가 또는 제거**에 목록이 표시된 모든 프로그램을 찾을 수 있습니다.
 
-`HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall`을 차례로 클릭합니다.
+`HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall`입니다.
 
 이 키를 조사하여 애플리케이션을 찾을 수도 있습니다. 제거 키를 눈에 잘 띄게 하려면 Windows PowerShell 드라이브를 이 레지스트리 위치에 매핑할 수 있습니다.
 
@@ -116,14 +116,18 @@ Name       Provider      Root                                   CurrentLocation
 ----       --------      ----                                   ---------------
 Uninstall  Registry      HKEY_LOCAL_MACHINE\SOFTWARE\Micr...
 ```
+
 이제 "Uninstall" 드라이브를 사용하여 애플리케이션 설치를 빠르고 쉽게 찾을 수 있습니다. Uninstall에서 레지스트리 키의 수를 계산하여 설치된 애플리케이션 수를 확인할 수 있습니다. PowerShell 드라이브:
 
-```
+```powershell
 (Get-ChildItem -Path Uninstall:).Count
+```
+
+```Output
 459
 ```
 
-**Get-ChildItem**에서 시작하여 다양한 기술로 이 애플리케이션 목록을 검색할 수 있습니다. 애플리케이션 목록을 가져와서 **$UninstallableApplications** 변수에 저장하려면 다음 명령을 사용합니다.
+`Get-ChildItem`에서 시작하여 다양한 기술로 이 애플리케이션 목록을 검색할 수 있습니다. 애플리케이션 목록을 가져와서 `$UninstallableApplications` 변수에 저장하려면 다음 명령을 사용합니다.
 
 ```powershell
 $UninstallableApplications = Get-ChildItem -Path Uninstall:
@@ -140,38 +144,42 @@ $UninstallableApplications | ForEach-Object -Process { $_.GetValue('DisplayName'
 이러한 값이 고유하다는 보장은 없습니다. 다음 예에서는 두 개의 설치된 항목이 "Windows Media Encoder 9 Series"로 표시됩니다.
 
 ```powershell
-$UninstallableApplications | Where-Object -FilterScript { $_.GetValue("DisplayName") -eq "Windows Media Encoder 9 Series"}
+$UninstallableApplications | Where-Object -FilterScript {
+  $_.GetValue("DisplayName") -eq "Microsoft Silverlight"
+}
 ```
 
 ```Output
+    Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+
 Name                           Property
 ----                           --------
-{ACC73072-9AD5-416C-94BF-D82DD AuthorizedCDFPrefix :
-CEA0F1B}                       Comments            :
+{89F4137D-6C26-4A84-BDB8-2E5A4 AuthorizedCDFPrefix :
+BB71E00}                       Comments            :
                                Contact             :
-                               DisplayVersion      : 16.72.26629
-                               HelpLink            :
+                               DisplayVersion      : 5.1.50918.0
+                               HelpLink            : http://go.microsoft.com/fwlink/?LinkID=91955
                                HelpTelephone       :
-                               InstallDate         : 20180816
-                               InstallLocation     :
-                               InstallSource       : C:\ProgramData\Package
-                               Cache\{ACC73072-9AD5-416C-94BF-D82DDCEA0F1B}v16.72.26629\
-                               ModifyPath          : MsiExec.exe /X{ACC73072-9AD5-416C-94BF-D82DDCEA0F1B}
+                               InstallDate         : 20190115
+                               InstallLocation     : C:\Program Files\Microsoft Silverlight\
+                               InstallSource       : c:\ef64c54526db9c34cd477c103e68a254\
+                               ModifyPath          : MsiExec.exe /X{89F4137D-6C26-4A84-BDB8-2E5A4BB71E00}
                                NoModify            : 1
+                               NoRepair            : 1
                                Publisher           : Microsoft Corporation
                                Readme              :
                                Size                :
-                               EstimatedSize       : 67156
-                               SystemComponent     : 1
-                               UninstallString     : MsiExec.exe /X{ACC73072-9AD5-416C-94BF-D82DDCEA0F1B}
+                               EstimatedSize       : 236432
+                               UninstallString     : MsiExec.exe /X{89F4137D-6C26-4A84-BDB8-2E5A4BB71E00}
                                URLInfoAbout        :
                                URLUpdateInfo       :
-                               VersionMajor        : 16
-                               VersionMinor        : 72
+                               VersionMajor        : 5
+                               VersionMinor        : 1
                                WindowsInstaller    : 1
-                               Version             : 273180677
+                               Version             : 84002534
                                Language            : 1033
-                               DisplayName         : Microsoft .NET Core Runtime - 2.1.2 (x64)
+                               DisplayName         : Microsoft Silverlight
+                               sEstimatedSize2     : 79214
 ```
 
 ## <a name="installing-applications"></a>애플리케이션 설치

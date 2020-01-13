@@ -1,13 +1,13 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: ISEOptions 개체
-ms.openlocfilehash: e9dcb13c14212ec4aec40a7f163e2ed56ceea6f9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9caa78a70cb837c755b2eff9af6ce0aa5dbb7452
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67028917"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736950"
 ---
 # <a name="the-iseoptions-object"></a>ISEOptions 개체
 
@@ -80,7 +80,7 @@ $psISE.Options.AutoSaveMinuteInterval = 3
 
 ### <a name="commandpanebackgroundcolor"></a>CommandPaneBackgroundColor
 
-이 기능은 Windows PowerShell ISE 2.0에는 있었지만 그 이후 버전의 ISE에서 제거되었거나 이름이 바뀌었습니다.  이후 버전에 대해서는 [ConsolePaneBackgroundColor](#consolepanebackgroundcolor)를 참조하세요.
+이 기능은 Windows PowerShell ISE 2.0에는 있었지만 그 이후 버전의 ISE에서 제거되었거나 이름이 바뀌었습니다. 이후 버전에 대해서는 [ConsolePaneBackgroundColor](#consolepanebackgroundcolor)를 참조하세요.
 
 명령 창에 대한 배경색을 지정합니다. **System.Windows.Media.Color** 클래스의 인스턴스입니다.
 
@@ -137,7 +137,9 @@ $psISE.Options.ConsolePaneTextBackgroundColor = 'pink'
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-Windows PowerShell ISE 콘솔 창에서 IntelliSense 토큰의 색을 지정합니다. 이 속성은 토큰 형식과 콘솔 창에 대한 색의 이름/값 쌍을 포함하는 사전 개체입니다. 스크립트 창에서 IntelliSense 토큰의 색을 변경하려면 [TokenColors](#tokencolors)를 참조합니다. 색을 기본값으로 다시 설정하려면 [RestoreDefaultConsoleTokenColors()](#restoredefaultconsoletokencolors)를 참조합니다. 다음에 대한 토큰 색상을 설정할 수 있습니다. Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
+Windows PowerShell ISE 콘솔 창에서 IntelliSense 토큰의 색을 지정합니다. 이 속성은 토큰 형식과 콘솔 창에 대한 색의 이름/값 쌍을 포함하는 사전 개체입니다. 스크립트 창에서 IntelliSense 토큰의 색을 변경하려면 [TokenColors](#tokencolors)를 참조합니다.
+색을 기본값으로 다시 설정하려면 [RestoreDefaultConsoleTokenColors()](#restoredefaultconsoletokencolors)를 참조합니다.
+다음에 대한 토큰 색상을 설정할 수 있습니다. Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
 
 ```powershell
 # Sets the color of commands to green.
@@ -177,7 +179,9 @@ Reset 메서드를 사용할 때 사용할 기본값을 지정하는 속성의 �
 ```powershell
 # Displays the name of the default options. This example is from ISE 4.0.
 $psISE.Options.DefaultOptions
+```
 
+```Output
 SelectedScriptPaneState                   : Top
 ShowDefaultSnippets                       : True
 ShowToolBar                               : True
@@ -263,7 +267,8 @@ $psISE.Options.FontSize = 20
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-IntelliSense에서 현재 입력한 텍스트를 확인하는 데 사용하는 시간(초)의 수를 지정합니다. 이 시간(초)이 지나면 IntelliSense에서는 제한 시간이 끝나서 계속 입력할 수 있습니다. 기본값은 3초입니다. 이 값은 정수입니다.
+IntelliSense에서 현재 입력한 텍스트를 확인하는 데 사용하는 시간(초)의 수를 지정합니다.
+이 시간(초)이 지나면 IntelliSense에서는 제한 시간이 끝나서 계속 입력할 수 있습니다. 기본값은 3초입니다. 이 값은 정수입니다.
 
 ```powershell
 # Changes the number of seconds for IntelliSense syntax recognition to 5.
@@ -283,7 +288,7 @@ $psISE.Options.MruCount = 5
 
 ### <a name="outputpanebackgroundcolor"></a>OutputPaneBackgroundColor
 
-이 기능은 Windows PowerShell ISE 2.0에는 있었지만 그 이후 버전의 ISE에서 제거되었거나 이름이 바뀌었습니다.  이후 버전에 대해서는 [ConsolePaneBackgroundColor](#consolepanebackgroundcolor)를 참조하세요.
+이 기능은 Windows PowerShell ISE 2.0에는 있었지만 그 이후 버전의 ISE에서 제거되었거나 이름이 바뀌었습니다. 이후 버전에 대해서는 [ConsolePaneBackgroundColor](#consolepanebackgroundcolor)를 참조하세요.
 
 출력 창 자체에 대한 배경색을 가져오거나 설정하는 읽기/쓰기 속성입니다. **System.Windows.Media.Color** 클래스의 인스턴스입니다.
 
@@ -294,7 +299,7 @@ $psISE.Options.OutputPaneForegroundColor = 'gold'
 
 ### <a name="outputpanetextforegroundcolor"></a>OutputPaneTextForegroundColor
 
-이 기능은 Windows PowerShell ISE 2.0에는 있었지만 그 이후 버전의 ISE에서 제거되었거나 이름이 바뀌었습니다.  이후 버전에 대해서는 [ConsolePaneForegroundColor](#consolepaneforegroundcolor)를 참조하세요.
+이 기능은 Windows PowerShell ISE 2.0에는 있었지만 그 이후 버전의 ISE에서 제거되었거나 이름이 바뀌었습니다. 이후 버전에 대해서는 [ConsolePaneForegroundColor](#consolepaneforegroundcolor)를 참조하세요.
 
 Windows PowerShell ISE 2.0의 출력 창에 있는 텍스트의 전경색을 변경하는 읽기/쓰기 속성입니다.
 
@@ -305,7 +310,7 @@ $psISE.Options.OutputPaneTextForegroundColor  = 'blue'
 
 ### <a name="outputpanetextbackgroundcolor"></a>OutputPaneTextBackgroundColor
 
-이 기능은 Windows PowerShell ISE 2.0에는 있었지만 그 이후 버전의 ISE에서 제거되었거나 이름이 바뀌었습니다.  이후 버전에 대해서는 [ConsolePaneTextBackgroundColor](#consolepanetextbackgroundcolor)를 참조하세요.
+이 기능은 Windows PowerShell ISE 2.0에는 있었지만 그 이후 버전의 ISE에서 제거되었거나 이름이 바뀌었습니다. 이후 버전에 대해서는 [ConsolePaneTextBackgroundColor](#consolepanetextbackgroundcolor)를 참조하세요.
 
 출력 창에 있는 텍스트의 배경색을 변경하는 읽기/쓰기 속성입니다.
 
@@ -356,7 +361,8 @@ $psISE.Options.SelectedScriptPaneState = 'Maximized'
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-코드 조각의 **CTRL+J** 목록에 Windows PowerShell에 포함된 시작 세트가 포함되는지 여부를 지정합니다. **$false**로 설정하면 사용자가 정의한 코드 조각만 **CTRL+J** 목록에 표시됩니다. 기본값은 **$true**입니다.
+코드 조각의 <kbd>Ctrl</kbd>+<kbd>J</kbd> 목록에 Windows PowerShell에 포함된 시작 세트가 포함되는지 여부를 지정합니다. `$false`로 설정하면 사용자가 정의한 코드 조각만 <kbd>Ctrl</kbd>+<kbd>J</kbd> 목록에 표시됩니다.
+기본값은 `$true`입니다.
 
 ```powershell
 # Hide the default snippets from the CTRL+J list.
@@ -367,7 +373,8 @@ $psISE.Options.ShowDefaultSnippets = $false
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-IntelliSense가 콘솔 창에서 구문, 매개 변수 및 값 제안을 제공하는지 여부를 지정합니다. 기본값은 **$true**입니다.
+IntelliSense가 콘솔 창에서 구문, 매개 변수 및 값 제안을 제공하는지 여부를 지정합니다.
+기본값은 `$true`입니다.
 
 ```powershell
 # Turn off IntelliSense in the console pane.
@@ -378,7 +385,8 @@ $psISE.Options.ShowIntellisenseInConsolePane = $false
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-IntelliSense가 스크립트 창에서 구문, 매개 변수 및 값 제안을 제공하는지 여부를 지정합니다. 기본값은 **$true**입니다.
+IntelliSense가 스크립트 창에서 구문, 매개 변수 및 값 제안을 제공하는지 여부를 지정합니다.
+기본값은 `$true`입니다.
 
 ```powershell
 # Turn off IntelliSense in the Script pane.
@@ -389,7 +397,7 @@ $psISE.Options.ShowIntellisenseInScriptPane = $false
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-스크립트 창의 왼쪽 여백에 줄 번호가 표시되는지 여부를 지정합니다. 기본값은 **$true**입니다.
+스크립트 창의 왼쪽 여백에 줄 번호가 표시되는지 여부를 지정합니다. 기본값은 `$true`입니다.
 
 ```powershell
 # Turn off line numbers in the Script pane.
@@ -400,7 +408,7 @@ $psISE.Options.ShowLineNumbers = $false
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-스크립트 창에서 왼쪽 여백에 있는 코드 섹션 옆에 확장 및 축소가 가능한 대괄호가 표시되는지 여부를 지정합니다. 표시된다면 텍스트 블록의 옆에 있는 빼기(\(-\)) 아이콘을 클릭하여 텍스트 블록을 축소하거나 더하기(\(+\)) 아이콘을 클릭하여 텍스트 블록을 확장할 수 있습니다. 기본값은 **$true**입니다.
+스크립트 창에서 왼쪽 여백에 있는 코드 섹션 옆에 확장 및 축소가 가능한 대괄호가 표시되는지 여부를 지정합니다. 표시된다면 텍스트 블록의 옆에 있는 빼기(`-`) 아이콘을 클릭하여 텍스트 블록을 축소하거나 더하기(`+`) 아이콘을 클릭하여 텍스트 블록을 확장할 수 있습니다. 기본값은 `$true`입니다.
 
 ```powershell
 # Turn off outlining in the Script pane.
@@ -411,7 +419,7 @@ $psISE.Options.ShowOutlining = $false
 
 Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 
-Windows PowerShell ISE 창의 맨 위에 ISE 도구 모음이 표시되는지 여부를 지정합니다. 기본값은 **$true**입니다.
+Windows PowerShell ISE 창의 맨 위에 ISE 도구 모음이 표시되는지 여부를 지정합니다. 기본값은 `$true`입니다.
 
 ```powershell
 # Show the toolbar.
@@ -422,7 +430,8 @@ $psISE.Options.ShowToolBar = $true
 
 Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 
-스크립트를 실행하기 전에 자동으로 저장할 때 경고 메시지가 표시되는지 여부를 지정합니다. 기본값은 **$true**입니다.
+스크립트를 실행하기 전에 자동으로 저장할 때 경고 메시지가 표시되는지 여부를 지정합니다.
+기본값은 `$true`입니다.
 
 ```powershell
 # Enable the warning message when an attempt
@@ -434,7 +443,7 @@ $psISE.Options.ShowWarningBeforeSavingOnRun = $true
 
 Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 
-다른 PowerShell 탭에 동일한 파일이 열리면 경고 메시지가 표시되는지 여부를 지정합니다. **$true**로 설정된 경우, 여러 탭에서 같은 파일을 열려고 하면 "이 파일의 복사본이 다른 Windows PowerShell 탭에서 열려 있습니다. 이 파일의 변경 내용은 열려 있는 모든 복사본에 적용됩니다."라는 메시지가 표시됩니다. 기본값은 **$true**입니다.
+다른 PowerShell 탭에 동일한 파일이 열리면 경고 메시지가 표시되는지 여부를 지정합니다. `$true`로 설정된 경우, 여러 탭에서 같은 파일을 열려고 하면 "이 파일의 복사본이 다른 Windows PowerShell 탭에서 열려 있습니다. 이 파일의 변경 내용은 열려 있는 모든 복사본에 적용됩니다."라는 메시지가 표시됩니다. 기본값은 `$true`입니다.
 
 ```powershell
 # Enable the warning message when a file is
@@ -446,7 +455,9 @@ $psISE.Options.ShowWarningForDuplicateFiles = $true
 
 Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 
-Windows PowerShell ISE 스크립트 창에서 IntelliSense 토큰의 색을 지정합니다. 이 속성은 토큰 형식과 스크립트 창에 대한 색의 이름/값 쌍을 포함하는 사전 개체입니다. 콘솔 창에서 IntelliSense 토큰의 색을 변경하려면 [ConsoleTokenColors](#consoletokencolors)를 참조합니다. 색을 기본값으로 다시 설정하려면 [RestoreDefaultTokenColors](#restoredefaulttokencolors)를 참조합니다. 다음에 대한 토큰 색상을 설정할 수 있습니다. Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
+Windows PowerShell ISE 스크립트 창에서 IntelliSense 토큰의 색을 지정합니다. 이 속성은 토큰 형식과 스크립트 창에 대한 색의 이름/값 쌍을 포함하는 사전 개체입니다. 콘솔 창에서 IntelliSense 토큰의 색을 변경하려면 [ConsoleTokenColors](#consoletokencolors)를 참조합니다.
+색을 기본값으로 다시 설정하려면 [RestoreDefaultTokenColors](#restoredefaulttokencolors)를 참조합니다.
+다음에 대한 토큰 색상을 설정할 수 있습니다. Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
 
 ```powershell
 # Sets the color of commands to green.
@@ -459,7 +470,7 @@ $psISE.Options.TokenColors["Keyword"] = "magenta"
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-콘솔 창에서 IntelliSense 제공 옵션을 선택하기 위해 Enter 키를 사용할 수 있는지 여부를 지정합니다. 기본값은 **$true**입니다.
+콘솔 창에서 IntelliSense 제공 옵션을 선택하기 위해 Enter 키를 사용할 수 있는지 여부를 지정합니다. 기본값은 `$true`입니다.
 
 ```powershell
 # Turn off using the ENTER key to select an IntelliSense provided option in the Console pane.
@@ -470,7 +481,7 @@ $psISE.Options.UseEnterToSelectInConsolePaneIntellisense = $false
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-스크립트 창에서 IntelliSense 제공 옵션을 선택하기 위해 Enter 키를 사용할 수 있는지 여부를 지정합니다. 기본값은 **$true**입니다.
+스크립트 창에서 IntelliSense 제공 옵션을 선택하기 위해 Enter 키를 사용할 수 있는지 여부를 지정합니다. 기본값은 `$true`입니다.
 
 ```powershell
 # Turn on using the Enter key to select an IntelliSense provided option in the Console pane.
@@ -481,7 +492,7 @@ $psISE.Options.UseEnterToSelectInConsolePaneIntellisense = $true
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-커서가 키워드 있는 상태에서 F1 키를 누를 때 로컬로 설치된 도움말이나 온라인 TechNet 라이브러리 도움말이 나타나는지 여부를 지정합니다. **$true**로 설정된 경우, 팝업 창에 로컬로 설치된 도움말 콘텐츠가 표시됩니다. `Update-Help` 명령을 실행하여 도움말 파일을 설치할 수 있습니다. **$false**로 설정된 경우, 브라우저로 TechNet 라이브러리에 있는 페이지가 열립니다.
+커서가 키워드 있는 상태에서 <kbd>F1</kbd> 키를 누를 때 로컬로 설치된 도움말이나 온라인 TechNet 라이브러리 도움말이 나타나는지 여부를 지정합니다. `$true`로 설정된 경우, 팝업 창에 로컬로 설치된 도움말 콘텐츠가 표시됩니다. `Update-Help` 명령을 실행하여 도움말 파일을 설치할 수 있습니다. `$false`로 설정된 경우, 브라우저로 TechNet 라이브러리에 있는 페이지가 열립니다.
 
 ```powershell
 # Sets the option for the online help to be displayed.
@@ -547,11 +558,12 @@ $psISE.Options.XmlTokenColors["ElementName"] = 'green'
 $psISE.Options.XmlTokenColors["Comment"] = 'magenta'
 ```
 
-### <a name="zoom"></a>확대/축소
+### <a name="zoom"></a>Zoom
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-콘솔 창과 스크립트 창 모두에서 텍스트의 상대 크기를 지정합니다. 기본값은 100입니다. 값이 작을수록 Windows PowerShell ISE의 텍스트가 작게 표시되고, 큰 숫자일수록 텍스트가 더 크게 표시됩니다. 값은 20에서 400 사이의 정수입니다.
+콘솔 창과 스크립트 창 모두에서 텍스트의 상대 크기를 지정합니다. 기본값은 100입니다.
+값이 작을수록 Windows PowerShell ISE의 텍스트가 작게 표시되고, 큰 숫자일수록 텍스트가 더 크게 표시됩니다. 값은 20에서 400 사이의 정수입니다.
 
 ```powershell
 # Changes the text in the Windows PowerShell ISE to be double its normal size.

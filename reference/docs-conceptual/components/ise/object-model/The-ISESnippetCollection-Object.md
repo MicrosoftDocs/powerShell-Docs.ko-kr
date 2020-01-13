@@ -1,17 +1,17 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: ISESnippetCollection 개체
-ms.openlocfilehash: 6c392c08767fba004f63155d5a469777856a0b59
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6cdc43dd1d82e94f66122d7f7b313c02e755fed7
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030506"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736048"
 ---
 # <a name="the-isesnippetcollection-object"></a>ISESnippetCollection 개체
 
-**ISESnippetCollection** 개체는 **ISESnippet** 개체의 컬렉션입니다. **PowerShellTab** 개체와 연결되어 있는 파일 컬렉션이 이 클래스의 멤버입니다. 예제는 **$psISE.CurrentPowerShellTab.Files** 컬렉션입니다.
+**ISESnippetCollection** 개체는 **ISESnippet** 개체의 컬렉션입니다. **PowerShellTab** 개체와 연결되어 있는 파일 컬렉션이 이 클래스의 멤버입니다. `$psISE.CurrentPowerShellTab.Files` 컬렉션을 예로 들 수 있습니다.
 
 ## <a name="methods"></a>메서드
 
@@ -19,7 +19,7 @@ ms.locfileid: "67030506"
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-사용자가 정의한 코드 조각을 포함하는 .snippets.ps1xml 파일을 로드합니다. 코드 조각을 만드는 가장 쉬운 방법은 New-IseSnippet cmdlet을 사용하는 것입니다. 이 cmdlet은 Windows PowerShell ISE를 시작할 때마다 코드 조각이 로드되도록 코드 조각을 프로필 폴더에 자동으로 저장합니다.
+사용자가 정의한 코드 조각을 포함하는 `.snippets.ps1xml` 파일을 로드합니다. 코드 조각을 만드는 가장 쉬운 방법은 `New-IseSnippet` cmdlet을 사용하는 것입니다. 이 cmdlet은 Windows PowerShell ISE를 시작할 때마다 코드 조각이 로드되도록 코드 조각을 프로필 폴더에 자동으로 저장합니다.
 
 **FilePathName** – 문자열. 코드 조각 정의를 포함하는 .snippets.ps1xml 파일의 경로 및 파일 이름입니다.
 
