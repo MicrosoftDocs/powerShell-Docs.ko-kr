@@ -1,17 +1,17 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: ISEAddOnToolCollection 개체
-ms.openlocfilehash: 28ab9747e573b7a76ee655289b341870b1728bc2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e07a47169381307b50ac190165307c926b4ad94e
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030630"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737018"
 ---
 # <a name="the-iseaddontoolcollection-object"></a>ISEAddOnToolCollection 개체
 
-**ISEAddOnToolCollection** 개체는 **ISEAddOnTool** 개체의 컬렉션입니다. 예제는 **$psISE.CurrentPowerShellTab.VerticalAddOnTools** 개체입니다.
+**ISEAddOnToolCollection** 개체는 **ISEAddOnTool** 개체의 컬렉션입니다. `$psISE.CurrentPowerShellTab.VerticalAddOnTools` 개체를 예로 들 수 있습니다.
 
 ## <a name="methods"></a>메서드
 
@@ -25,7 +25,7 @@ Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습
 
 **ControlType** – 형식. 추가되는 컨트롤을 지정합니다.
 
-**\[IsVisible\]** – 선택적 부울. **$true**로 설정되면, 추가 기능 도구가 연결된 도구 창에 즉시 표시됩니다.
+**\[IsVisible\]** – 선택적 부울. `$true`로 설정되면, 추가 기능 도구가 연결된 도구 창에 즉시 표시됩니다.
 
 ```powershell
 # Load a DLL with an add-on and then add it to the ISE
