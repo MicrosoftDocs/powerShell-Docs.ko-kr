@@ -19,16 +19,16 @@ Windows Server® 2012 R2, Windows® 8.1, Windows Server 2012 및 Windows 8에서
 
 PowerShell Core(PowerShell 이라고 함)는 오픈 소스이고 .NET Core를 사용하는 버전 6 이상입니다. 지원되는 버전은 Windows, macOS 및 Linux에서 사용할 수 있습니다.
 
-PowerShell 6부터 PowerShell 이진의 이름이 Windows의 경우 **pwsh.exe**, macOS 및 Linux의 경우 **pwsh**로 변경되었습니다. **pwsh-preview**를 사용하여 PowerShell 미리 보기 버전을 시작할 수 있습니다. 자세한 내용은 [PowerShell Core 6.0의 새로운 기능](/powershell/scripting/whats-new/what-s-new-in-powershell-core-60#renamed-powershellexe-to-pwshexe) 및 [pwsh 정보](/powershell/module/microsoft.powershell.core/about/about_pwsh?view=powershell-7)를 참조하세요.
+PowerShell 6부터 PowerShell 바이너리의 이름이 Windows의 경우 **pwsh.exe**, macOS 및 Linux의 경우 **pwsh**로 변경되었습니다. **pwsh-preview**를 사용하여 PowerShell 미리 보기 버전을 시작할 수 있습니다. 자세한 내용은 [PowerShell Core 6.0의 새로운 기능](/powershell/scripting/whats-new/what-s-new-in-powershell-core-60#renamed-powershellexe-to-pwshexe) 및 [pwsh 정보](/powershell/module/microsoft.powershell.core/about/about_pwsh?view=powershell-7)를 참조하세요.
 
 PowerShell 7에 대한 cmdlet 참조 및 설치 설명서를 찾으려면 다음 링크를 사용합니다.
 
 | 문서 | 링크 |
 | ----- | ----- |
 | Cmdlet 참조 | [PowerShell 모듈 브라우저](/powershell/module/?view=powershell-7) |
-| Windows 설치 | [Windows에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7) |
-| macOS 설치 | [macOS에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7) |
-| Linux 설치 | [Linux에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7) |
+| Windows에서 설치 | [Windows에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7) |
+ | macOS에서 설치 | [macOS에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7) |
+ | Linux에서 설치 | [Linux에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7) |
 
 다른 PowerShell 버전에 대한 콘텐츠를 보려면 [PowerShell을 사용하는 방법 설명서](../how-to-use-docs.md)를 참조하세요.
 
