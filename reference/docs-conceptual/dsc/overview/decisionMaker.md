@@ -2,12 +2,12 @@
 ms.date: 10/11/2019
 keywords: dsc,powershell,configuration,setup
 title: 의사 결정자를 위한 필요한 상태 구성 개요
-ms.openlocfilehash: b6d483d105c2d3b9be7215be36397d452338c7f1
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.openlocfilehash: bb73ee8fe636272f99989aa45712fe34fedad617
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75737256"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870798"
 ---
 # <a name="desired-state-configuration-overview-for-decision-makers"></a>의사 결정자를 위한 필요한 상태 구성 개요
 
@@ -38,7 +38,7 @@ DSC는 [DevOps](/archive/blogs/ashleymcglone/devops-for-n00bs-ie-windows-people-
 ## <a name="dsc-on-premises-and-off-premises"></a>DSC 온-프레미스 및 오프-프레미스
 
 DSC는 온-프레미스 배포와 오프-프레미스 배포 모두의 관리가 가능합니다. 온-프레미스 솔루션의 경우 DSC에는 컴퓨터를 중앙 집중식으로 관리하고 컴퓨터 상태를 보고하는 데 사용되는 [끌어오기 서버](../pull-server/pullServer.md)가 있습니다. 오프-프레미스 클라우드 솔루션의 경우 DSC는 Windows 사용이 가능한 어디서든 사용할 수 있습니다.
-DSC 기반 Azure에서는 DSC 보고를 중앙 집중화하는 [Azure Automation](https://azure.microsoft.com/en-us/documentation/services/automation/) 같은 특정 서비스가 제공됩니다.
+DSC 기반 Azure에서는 DSC 보고를 중앙 집중화하는 [Azure Automation](/azure/automation) 같은 특정 서비스가 제공됩니다.
 
 ## <a name="dsc-and-compatibility"></a>DSC 및 호환성
 
