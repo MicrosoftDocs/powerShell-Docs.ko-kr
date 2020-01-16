@@ -13,7 +13,7 @@ ms.locfileid: "67030435"
 
 이 섹션에서는 Windows PowerShell 2.0 엔진이 포함된 Windows 8.1, Windows Server 2012 R2, Windows 8 및 Windows Server 2012와 Windows PowerShell 2.0, Windows PowerShell 3.0 및 Windows PowerShell 4.0이 설치된 다른 시스템에서 Windows PowerShell 2.0 엔진을 시작하는 방법을 설명합니다.
 
-Windows PowerShell 4.0 및 Windows PowerShell 3.0은 이전 버전인 Windows PowerShell 2.0과 호환되도록 설계되었습니다. Windows PowerShell 2.0용으로 작성된 cmdlet, 공급자, 스냅인, 모듈 및 스크립트는 Windows PowerShell 4.0 및 Windows PowerShell 3.0에서 변경되지 않고 실행됩니다. 그러나 Microsoft .NET Framework 4의 런타임 정품 인증 정책 변경으로 인해 Windows PowerShell 2.0용으로 작성되고 CLR(공용 언어 런타임) 2.0으로 컴파일된 Windows PowerShell 호스트 프로그램은 CLR 4.0으로 컴파일된 Windows PowerShell 3.0 또는 Windows PowerShell 4.0에서 수정 없이 실행할 수 없습니다. Windows PowerShell 2.0 엔진은 기존 스크립트 또는 호스트 프로그램이 Windows PowerShell 4.0, Windows PowerShell 3.0 또는 Microsoft .NET Framework 4와 호환되지 않아 실행할 수 없는 경우에만 사용됩니다. 이러한 경우는 많지 않을 것으로 예상됩니다.
+Windows PowerShell 4.0 및 Windows PowerShell 3.0은 이전 버전인 Windows PowerShell 2.0과 호환되도록 설계되었습니다. Windows PowerShell 2.0용으로 작성된 cmdlet, 공급자, 스냅인, 모듈 및 스크립트는 Windows PowerShell 4.0 및 Windows PowerShell 3.0에서 문제 없이 실행됩니다. 그러나 Microsoft .NET Framework 4의 런타임 정품 인증 정책 변경으로 인해 Windows PowerShell 2.0용으로 작성되고 CLR(공용 언어 런타임) 2.0으로 컴파일된 Windows PowerShell 호스트 프로그램은 CLR 4.0으로 컴파일된 Windows PowerShell 3.0 또는 Windows PowerShell 4.0에서 수정 없이 실행할 수 없습니다. Windows PowerShell 2.0 엔진은 기존 스크립트 또는 호스트 프로그램이 Windows PowerShell 4.0, Windows PowerShell 3.0 또는 Microsoft .NET Framework 4와 호환되지 않아 실행할 수 없는 경우에만 사용됩니다. 이러한 경우는 많지 않을 것으로 예상됩니다.
 
 Windows PowerShell 2.0 엔진을 필요로 하는 대부분의 프로그램은 자동으로 엔진을 시작합니다. 이러한 지침은 엔진을 수동으로 시작해야 하는 드문 경우를 위해 포함되었습니다.
 

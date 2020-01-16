@@ -12,7 +12,7 @@ ms.locfileid: "71327864"
 ---
 # <a name="the-powershell-gallery"></a>PowerShell 갤러리
 
-PowerShell 갤러리는 PowerShell 콘텐츠에 대한 중앙 리포지토리입니다. PowerShell 갤러리에서 PowerShell 명령 및 DSC(필요한 상태 구성) 리소스가 포함된 유용한 PowerShell 모듈을 찾을 수 있습니다.
+PowerShell 갤러리는 PowerShell 콘텐츠의 중앙 리포지토리입니다. PowerShell 갤러리에서 PowerShell 명령 및 DSC(필요한 상태 구성) 리소스가 포함된 유용한 PowerShell 모듈을 찾을 수 있습니다.
 PowerShell 워크플로가 포함된 경우도 있으며 일련의 작업을 간략하게 설명하고 해당 작업 순서를 제공하는 PowerShell 스크립트를 찾을 수도 있습니다. 이러한 패키지 중 일부는 Microsoft에서 작성되었으며 다른 항목은 PowerShell 커뮤니티에서 작성되었습니다.
 
 ## <a name="powershellget-overview"></a>PowerShellGet 개요
@@ -43,7 +43,7 @@ PowerShellGet 모듈에는 [PowerShell 갤러리](https://www.PowerShellGallery.
 
 **PowerShellGet**을 사용하려면 .NET Framework 4.5 이상이 필요합니다. .NET Framework 4.5 이상은 [여기](https://msdn.microsoft.com/library/5a4x27ek.aspx)에서 설치할 수 있습니다.
 
-**PowerShell Core**는 교차 플랫폼이므로 Windows, Linux 및 MacOS에서 작동하며, 그 결과 **PowerShellGet**을 이러한 시스템에서 사용할 수 있습니다. **PowerShell Core**가 지원하는 전체 시스템 목록은 [PowerShell 설치](/powershell/scripting/setup/installing-powershell)를 참조하세요.
+**PowerShell Core**는 교차 플랫폼이므로 Windows, Linux 및 MacOS에서 작동하며, 그렇기 때문에 **PowerShellGet**을 이러한 시스템들에서 사용할 수 있습니다. **PowerShell Core**가 지원하는 전체 시스템 목록은 [PowerShell 설치](/powershell/scripting/setup/installing-powershell)를 참조하세요.
 
 갤러리에 호스트된 많은 모듈은 각기 다른 OS를 지원하며 추가 요구 사항이 있습니다. 자세한 내용은 모듈 설명서를 참조하세요.
 
