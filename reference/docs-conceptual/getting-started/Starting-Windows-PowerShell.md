@@ -27,8 +27,8 @@ PowerShell 7에 대한 cmdlet 참조 및 설치 설명서를 찾으려면 다음
 | ----- | ----- |
 | Cmdlet 참조 | [PowerShell 모듈 브라우저](/powershell/module/?view=powershell-7) |
 | Windows에서 설치 | [Windows에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7) |
- | macOS에서 설치 | [macOS에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7) |
- | Linux에서 설치 | [Linux에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7) |
+| macOS에서 설치 | [macOS에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7) |
+| Linux에서 설치 | [Linux에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7) |
 
 다른 PowerShell 버전에 대한 콘텐츠를 보려면 [PowerShell을 사용하는 방법 설명서](../how-to-use-docs.md)를 참조하세요.
 
