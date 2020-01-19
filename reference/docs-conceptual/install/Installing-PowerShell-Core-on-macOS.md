@@ -26,7 +26,7 @@ PowerShell Core는 macOS 10.12 이상을 지원합니다.
 
 [Homebrew][brew]는 macOS용 기본 패키지 관리자입니다.
 `brew` 명령이 없을 경우 [해당 지침][brew]에 따라 Homebrew를 설치해야 합니다.
-그렇지 않으면 [직접 다운로드](#installation-via-direct-download) 또는 [이진 아카이브](#binary-archives)에서 PowerShell을 설치할 수 있습니다.
+그렇지 않으면 [직접 다운로드](#installation-via-direct-download) 또는 [이진 아카이브](#binary-archives)를 이용해 PowerShell을 설치할 수 있습니다.
 
 ## <a name="installation-of-latest-stable-release-via-homebrew-on-macos-1012-or-higher"></a>macOS 10.12 이상에서 Homebrew를 통해 안정적인 최신 릴리스 설치
 
@@ -101,7 +101,7 @@ PKG 패키지 `powershell-6.2.0-osx-x64.pkg`를
 sudo installer -pkg powershell-6.2.0-osx-x64.pkg -target /
 ```
 
-[OpenSSL](#install-openssl)를 설치합니다. OpenSSL은 PowerShell 원격 기능 및 CIM 작업에 필요합니다.
+[OpenSSL](#install-openssl)을 설치합니다. OpenSSL은 PowerShell 원격 기능 및 CIM 작업에 필요합니다.
 
 ## <a name="binary-archives"></a>이진 아카이브
 
@@ -126,7 +126,7 @@ sudo chmod +x /usr/local/microsoft/powershell/6.2.0/pwsh
 sudo ln -s /usr/local/microsoft/powershell/6.2.0/pwsh /usr/local/bin/pwsh
 ```
 
-[OpenSSL](#install-openssl)를 설치합니다. OpenSSL은 PowerShell 원격 기능 및 CIM 작업에 필요합니다.
+[OpenSSL](#install-openssl)을 설치합니다. OpenSSL은 PowerShell 원격 기능 및 CIM 작업에 필요합니다.
 
 ## <a name="installing-dependencies"></a>종속성 설치
 
