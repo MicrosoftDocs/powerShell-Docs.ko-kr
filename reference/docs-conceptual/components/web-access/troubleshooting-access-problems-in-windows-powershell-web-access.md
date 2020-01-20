@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 웹 액세스의 액세스 문제 해결
-ms.openlocfilehash: 74cebbe418fecd21567ba9ecc7c561b51ac008fd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 818beffaf7df55ae36a154b7b751f9201c5b4299
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71692230"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870186"
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Windows PowerShell 웹 액세스의 액세스 문제 해결
 
@@ -66,63 +66,59 @@ ms.locfileid: "71692230"
 
 ## <a name="cannot-find-web-server-iis-management-tools-even-though-the-role-was-installed"></a>웹 서버(IIS) 역할이 설치되어 있는데도 웹 서버(IIS) 관리 도구를 찾을 수 없는 경우
 
-`Install-WindowsFeature` cmdlet을 사용하여 Windows PowerShell 웹 액세스를 설치한 경우 `-IncludeManagementTools` 매개 변수를 cmdlet에 추가하지 않으면 관리 도구가 설치되지 않습니다.
+`Install-WindowsFeature` cmdlet을 사용하여 Windows PowerShell 웹 액세스를 설치한 경우 **IncludeManagementTools** 매개 변수가 cmdlet에 추가되지 않으면 관리 도구가 설치되지 않습니다.
 
 이에 해당하는 예는 [Windows PowerShell cmdlet을 사용하여 Windows PowerShell 웹 액세스를 설치하려면](install-and-use-windows-powershell-web-access.md#to-install-windows-powershell-web-access-by-using-windows-powershell-cmdlets)을 참조하세요.
 
-IIS 관리자 콘솔 및 기타 IIS 관리 도구가 필요한 경우 게이트웨이 서버를 대상으로 하는 **역할 및 기능 추가 마법사** 세션에서 해당 도구를 선택하여 추가할 수 있습니다.
-역할 및 기능 추가 마법사는 서버 관리자 내에서 열립니다.
+IIS 관리자 콘솔 및 기타 IIS 관리 도구가 필요한 경우 게이트웨이 서버를 대상으로 하는 **역할 및 기능 추가 마법사** 세션에서 해당 도구를 선택하여 추가할 수 있습니다. 역할 및 기능 추가 마법사는 서버 관리자 내에서 열립니다.
 
 ## <a name="windows-powershell-web-access-website-is-not-accessible"></a>Windows PowerShell 웹 액세스 웹 사이트에 액세스할 수 없는 경우
 
 Internet Explorer에서 보안 강화 구성(IE ESC)이 사용되는 경우 신뢰할 수 있는 사이트 목록에 Windows PowerShell 웹 액세스 웹 사이트를 추가합니다.
 
-IE ESC를 사용하지 않도록 설정할 수도 있지만 보안 위험 때문에 사용하지 않는 것이 좋습니다.
-IE ESC는 서버 관리자의 [로컬 서버] 페이지에 있는 [속성] 타일에서 사용하지 않도록 설정할 수 있습니다.
+IE ESC를 사용하지 않도록 설정할 수도 있지만 보안 위험 때문에 사용하지 않는 것이 좋습니다. IE ESC는 서버 관리자의 [로컬 서버] 페이지에 있는 [속성] 타일에서 사용하지 않도록 설정할 수 있습니다.
 
 ## <a name="an-authorization-failure-occurred-verify-that-you-are-authorized-to-connect-to-the-destination-computer"></a>권한 부여 오류가 발생했습니다. 대상 컴퓨터에 연결할 권한이 있는지 검증하세요.
 
 위 오류 메시지는 게이트웨이 서버가 대상 컴퓨터이고 작업 그룹에 있을 때 연결하려고 하면 표시됩니다.
 
-또한 게이트웨이 서버가 대상 서버이며 작업 그룹에 속해 있는 경우 사용자 이름, 컴퓨터 이름 및 사용자 그룹 이름을 지정합니다.
-컴퓨터 이름을 나타내는 데에는 점(.)을 단독으로 사용하면 안 됩니다.
+또한 게이트웨이 서버가 대상 서버이며 작업 그룹에 속해 있는 경우 사용자 이름, 컴퓨터 이름 및 사용자 그룹 이름을 지정합니다. 컴퓨터 이름을 나타내는 데에는 점(.)을 단독으로 사용하면 안 됩니다.
 
 ### <a name="scenarios-and-proper-values"></a>시나리오 및 적절한 값
 
 #### <a name="all-cases"></a>모든 사례
 
-매개 변수 | Value
--- | --
-UserName | Server\_name\\user\_name<br/>Localhost\\user\_name<br/>.\\user\_name
-UserGroup | Server\_name\\user\_group<br/>Localhost\\user\_group<br/>.\\user\_group
-ComputerGroup | Server\_name\\computer\_group<br/>Localhost\\computer\_group<br/>.\\computer\_group
+  매개 변수   |                                        값
+------------- | -----------------------------------------------------------------------------------
+UserName      | `Server_name\user_name`<br/>`Localhost\user_name`<br/>`.\user_name`
+UserGroup     | `Server_name\user_group`<br/>`Localhost\user_group`<br/>`.\user_group`
+ComputerGroup | `Server_name\computer_group`<br/>`Localhost\computer_group`<br/>`.\computer_group`
 
 #### <a name="gateway-server-is-in-a-domain"></a>도메인의 게이트웨이 서버
 
-매개 변수 | Value
--- | --
-ComputerName | 정규화된 게이트웨이 서버의 이름 또는 Localhost
+ 매개 변수   |                        값
+------------ | ----------------------------------------------------
+컴퓨터 이름 | 정규화된 게이트웨이 서버의 이름 또는 Localhost
 
 #### <a name="gateway-server-is-in-a-workgroup"></a>작업 그룹의 게이트웨이 서버
 
-매개 변수 | Value
--- | --
-ComputerName | 서버 이름
+ 매개 변수   |    값
+------------ | -----------
+컴퓨터 이름 | 서버 이름
 
 ### <a name="gateway-credentials"></a>게이트웨이 자격 증명
 
 다음 중 하나로 형식화된 자격 증명을 사용하여 게이트웨이 서버에 대상 컴퓨터로 로그인합니다.
 
-- Server\_name\\user\_name
-- Localhost\\user\_name
-- .\\user\_name
+- `Server_name\user_name`
+- `Localhost\user_name`
+- `.\user_name`
 
 ## <a name="a-security-identifier-sid-is-displayed-in-an-authorization-rule"></a>권한 부여 규칙에 SID(보안 식별자)가 표시되지 않는 경우
 
-SID(보안 식별자)는 구문 user\_name/computer\_name 대신 권한 부여 규칙에 표시됩니다.
+SID(보안 식별자)는 구문 `user_name/computer_name` 대신 권한 부여 규칙에 표시됩니다.
 
-규칙이 더 이상 유효하지 않거나, Active Directory 도메인 서비스를 쿼리하지 못했습니다.
-권한 부여 규칙은 게이트웨이 서버가 이전에는 작업 그룹에 있었지만 나중에 도메인에 가입한 시나리오에서는 항상 유효하지 않습니다.
+규칙이 더 이상 유효하지 않거나, Active Directory 도메인 서비스를 쿼리하지 못했습니다. 권한 부여 규칙은 게이트웨이 서버가 이전에는 작업 그룹에 있었지만 나중에 도메인에 가입한 시나리오에서는 항상 유효하지 않습니다.
 
 ## <a name="cannot-sign-in-with-rule-as-an-ipv6-address-with-a-domain"></a>규칙을 사용하여 도메인의 IPv6 주소로 로그인할 수 없는 경우
 
@@ -130,13 +126,12 @@ SID(보안 식별자)는 구문 user\_name/computer\_name 대신 권한 부여 �
 
 권한 부여 규칙은 도메인 이름 형식의 IPv6 주소를 지원하지 않습니다.
 
-IPv6 주소를 사용하여 대상 컴퓨터를 지정하려면 권한 부여 규칙의 원래 IPv6 주소(콜론 포함)를 사용하십시오.
-도메인과 숫자(콜론 포함)가 모두 포함된 IPv6 주소는 Windows PowerShell 웹 액세스 로그인 페이지에서 대상 컴퓨터 이름으로 사용할 수는 있지만 권한 부여 규칙에서는 사용할 수 없습니다.
+IPv6 주소를 사용하여 대상 컴퓨터를 지정하려면 권한 부여 규칙의 원래 IPv6 주소(콜론 포함)를 사용하십시오. 도메인과 숫자(콜론 포함)가 모두 포함된 IPv6 주소는 Windows PowerShell 웹 액세스 로그인 페이지에서 대상 컴퓨터 이름으로 사용할 수는 있지만 권한 부여 규칙에서는 사용할 수 없습니다.
 
-IPv6 주소에 대한 자세한 내용은 [IPv6 작동 방법](https://technet.microsoft.com/library/cc781672(v=ws.10).aspx)을 참조하세요.
+IPv6 주소에 대한 자세한 내용은 [IPv6 작동 방법](/previous-versions/windows/it-pro/windows-server-2003/cc781672(v=ws.10))을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-- [Windows PowerShell 웹 액세스의 권한 부여 규칙 및 보안 기능](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx)
-- [웹 기반 Windows PowerShell 콘솔 사용](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx)
-- [about_Remote_Requirements](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_requirements)
+- [Windows PowerShell 웹 액세스의 권한 부여 규칙 및 보안 기능](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282394(v=ws.11))
+- [웹 기반 Windows PowerShell 콘솔 사용](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831417(v=ws.11))
+- [about_Remote_Requirements](/powershell/module/microsoft.powershell.core/about/about_remote_requirements)
