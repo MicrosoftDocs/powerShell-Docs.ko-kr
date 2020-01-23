@@ -1,13 +1,13 @@
 ---
-ms.date: 12/14/2018
+ms.date: 01/10/2020
 keywords: powershell,cmdlet
 title: 이식 가능한 모듈 작성
-ms.openlocfilehash: 7871f524495c1ce5283b30696a24185d427edebf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 124e6efadfd07b8c5214a5c0446b1589f7142388
+ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417637"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022252"
 ---
 # <a name="portable-modules"></a>이식 가능한 모듈
 
@@ -200,7 +200,7 @@ PowerShell Standard는 항상 상위 버전과 호환됩니다. PowerShell Stand
 
 모듈 매니페스트 내에서 `PrivateData` 속성에는 `PSData` 하위 속성이 있습니다. `PSData`의 선택적 `Tags` 속성은 PowerShell 갤러리에 표시되는 값 배열을 사용합니다. PowerShell 갤러리는 다음 호환성 값을 지원합니다.
 
-| 태그               | 설명                                |
+| 태그               | Description                                |
 |-------------------|--------------------------------------------|
 | PSEdition_Core    | PowerShell Core 6과 호환 가능          |
 | PSEdition_Desktop | Windows PowerShell과 호환 가능         |
@@ -208,7 +208,7 @@ PowerShell Standard는 항상 상위 버전과 호환됩니다. PowerShell Stand
 | Linux             | Linux와 호환 가능(특정 배포판 없음) |
 | macOS             | macOS와 호환 가능                      |
 
-예:
+예제:
 
 ```powershell
 @{
@@ -254,6 +254,45 @@ PowerShell Standard는 항상 상위 버전과 호환됩니다. PowerShell Stand
 }
 ```
 
+## <a name="dependency-on-native-libraries"></a>네이티브 라이브러리에 대한 종속성
+
+여러 운영 체제 또는 프로세서 아키텍처에서 사용하기 위한 모듈은 자체적으로 일부 네이티브 라이브러리에 종속된 관리되는 라이브러리에 종속될 수 있습니다.
+
+PowerShell 7 이전 버전에서는 관리되는 라이브러리가 제대로 찾을 수 있도록 적절한 네이티브 dll을 로드하는 사용자 지정 코드가 있어야 합니다.
+
+PowerShell 7에서는 [.NET RID 카탈로그][] 표기법의 하위 집합에 따라 로드할 네이티브 이진 파일을 관리되는 라이브러리의 위치에 있는 하위 폴더에서 검색할 수 있습니다.
+
+```
+managed.dll folder
+                |
+                |--- 'win-x64' folder
+                |       |--- native.dll
+                |
+                |--- 'win-x86' folder
+                |       |--- native.dll
+                |
+                |--- 'win-arm' folder
+                |       |--- native.dll
+                |
+                |--- 'win-arm64' folder
+                |       |--- native.dll
+                |
+                |--- 'linux-x64' folder
+                |       |--- native.so
+                |
+                |--- 'linux-x86' folder
+                |       |--- native.so
+                |
+                |--- 'linux-arm' folder
+                |       |--- native.so
+                |
+                |--- 'linux-arm64' folder
+                |       |--- native.so
+                |
+                |--- 'osx-x64' folder
+                |       |--- native.dylib
+```
+
 <!-- reference links -->
 [.NET Framework]: /dotnet/framework/
 [.NET Core]: /dotnet/core/
@@ -267,3 +306,4 @@ PowerShell Standard는 항상 상위 버전과 호환됩니다. PowerShell Stand
 [PowerShell 갤러리]: https://www.powershellgallery.com
 [.NET 이식성 분석기]: https://github.com/Microsoft/dotnet-apiport
 [CompatiblePSEditions]: /powershell/scripting/gallery/concepts/module-psedition-support
+[.NET RID 카탈로그]: https://docs.microsoft.com/dotnet/core/rid-catalog

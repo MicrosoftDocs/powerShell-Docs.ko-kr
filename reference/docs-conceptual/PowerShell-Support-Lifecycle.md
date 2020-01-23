@@ -2,12 +2,12 @@
 title: PowerShell Core 지원 수명 주기
 description: PowerShell Core에 대한 정책 관리 지원
 ms.date: 08/06/2018
-ms.openlocfilehash: 27738514fc84105a0339eafcdbb540b7d3790052
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 57804df830da01bee0f48acc374658b025a46b85
+ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416295"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022220"
 ---
 # <a name="powershell-core-support-lifecycle"></a>PowerShell Core 지원 수명 주기
 
@@ -41,7 +41,7 @@ PowerShell Core는 [Microsoft 최신 수명 주기 정책][modern]을 채택합�
 
 결국 PowerShell Core가 장기 서비스 방식을 채택하는 것을 예상합니다. 이 서비스 방식에서는 6.x의 특정 분기/버전에 필요한 지속적인 지원을 위해 서비스 및 보안 업데이트만 요청합니다.
 
-## <a name="supported-platforms"></a>지원되는 플랫폼
+## <a name="supported-platforms"></a>지원 플랫폼
 
 PowerShell Core의 플랫폼과 버전이 공식적으로 지원되는지 확인하려면 다음 표를 참조하세요.
 
@@ -51,23 +51,25 @@ PowerShell Core의 플랫폼과 버전이 공식적으로 지원되는지 확인
 
 | 플랫폼                                          |      6.2      |    7.0    |
 |---------------------------------------------------|:-------------:|:---------:|
-| Windows 7, 8.1 및 10                            |   지원 여부   | 지원 여부 |
-| Windows Server 2008 R2, 2012 R2, 2016             |   지원 여부   | 지원 여부 |
-| [Windows Server 반기 채널][semi-annual] |   지원 여부   | 지원 여부 |
-| Ubuntu 16.04 및 18.04                            |   지원 여부   | 지원 여부 |
+| Windows 7, 8.1 및 10                            |   지원됨   | 지원됨 |
+| Windows Server 2008 R2, 2012 R2, 2016             |   지원됨   | 지원됨 |
+| [Windows Server 반기 채널][semi-annual] |   지원됨   | 지원됨 |
+| Ubuntu 16.04 및 18.04                            |   지원됨   | 지원됨 |
 | Ubuntu 18.10(맞춤 패키지를 통해)                   |   커뮤니티   | 커뮤니티 |
 | Ubuntu 19.04(맞춤 패키지를 통해)                   |   커뮤니티   | 커뮤니티 |
-| Debian 9                                          |   지원 여부   | 지원 여부 |
-| Debian 10                                         | 지원되지 않음 | 지원 여부 |
-| CentOS 7                                          |   지원 여부   | 지원 여부 |
-| Red Hat Enterprise Linux 7                        |   지원 여부   | 지원 여부 |
-| openSUSE 42.3                                     |   지원 여부   | 지원 여부 |
-| Fedora 28                                         |   지원 여부   | 지원 여부 |
-| Fedora 29, 30                                     | 지원되지 않음 | 지원 여부 |
+| Debian 9                                          |   지원됨   | 지원됨 |
+| Debian 10                                         | 지원되지 않음 | 지원됨 |
+| CentOS 7                                          |   지원됨   | 지원됨 |
+| CentOS 8                                          | 지원되지 않음 | 지원됨 |
+| Red Hat Enterprise Linux 7                        |   지원됨   | 지원됨 |
+| Red Hat Enterprise Linux 8                        | 지원되지 않음 | 지원됨 |
+| openSUSE 42.3                                     |   지원됨   | 지원됨 |
+| Fedora 28                                         |   지원됨   | 지원됨 |
+| Fedora 29, 30                                     | 지원되지 않음 | 지원됨 |
 | Alpine 3.8                                        |   참고 참조    | 참고 참조  |
 | Alpine 3.9 및 3.10                               | 지원되지 않음 | 참고 참조  |
-| macOS 10.12+                                      |   지원 여부   | 지원 여부 |
-| Arch                                              |   커뮤니티   | 커뮤니티 |
+| macOS 10.12 이상                                      |   지원됨   | 지원됨 |
+| 아키텍처                                              |   커뮤니티   | 커뮤니티 |
 | Raspbian                                          |   커뮤니티   | 커뮤니티 |
 | Kali                                              |   커뮤니티   | 커뮤니티 |
 | AppImage(여러 Linux 플랫폼에서 사용)      |   커뮤니티   | 커뮤니티 |
