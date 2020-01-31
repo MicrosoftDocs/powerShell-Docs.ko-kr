@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9ab83bcb-2d31-4744-a8bc-2ee22e48fc1b
 caps.latest.revision: 17
-ms.openlocfilehash: 34918f32a86718ce82987c029cb4dfa09b4359bd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: cb21a4dd9bbc9ccd0f93ae6f7ecbc09cd89c29d3
+ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367482"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818093"
 ---
 # <a name="host02-sample"></a>Host02 샘플
 
@@ -33,7 +33,7 @@ ms.locfileid: "72367482"
 
 - 스크립트를 실행 하 여 프로세스를 검색 하 고 정렬 한 다음 독일어로 표시 되는 현재 날짜를 검색 하는 [system.object](/dotnet/api/system.management.automation.powershell) 개체를 만듭니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
  다음 코드에서는 사용자 지정 호스트를 사용 하는 호스트 응용 프로그램의 구현을 보여 줍니다.
 
@@ -132,7 +132,7 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
  다음 코드는이 호스트 응용 프로그램에서 사용 하는 [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스의 구현입니다. 구현 되지 않은 요소는 예외를 throw 하거나 아무 것도 반환 하지 않습니다.
 
@@ -314,7 +314,7 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
  다음 코드는이 호스트 응용 프로그램에서 사용 하는 [Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 클래스의 구현입니다.
 
@@ -565,7 +565,7 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
  다음 코드는이 호스트 응용 프로그램에서 사용 하는 [system.web](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) 클래스의 구현입니다. 구현 되지 않은 요소는 예외를 throw 하거나 아무 것도 반환 하지 않습니다.
 
@@ -659,7 +659,7 @@ namespace Microsoft.Samples.PowerShell.Host
     }
 
     /// <summary>
-    /// Gets the dimentions of the largest window size that can be
+    /// Gets the dimensions of the largest window size that can be
     /// displayed. This example uses the Console.LargestWindowWidth and
     /// console.LargestWindowHeight properties to determine the returned
     /// value of this property.
