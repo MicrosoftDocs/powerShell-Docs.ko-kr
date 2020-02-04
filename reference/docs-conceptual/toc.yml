@@ -288,6 +288,8 @@
           href: whats-new/what-s-new-in-windows-powershell-50.md
         - name: PowerShell 5.0 ISE의 새로운 기능
           href: whats-new/what-s-new-in-the-powershell-50-ise.md
+    - name: 모듈 및 cmdlet 릴리스 기록
+      href: whats-new/cmdlet-versions.md
 - name: PowerShell Core 지원 수명 주기
   href: powershell-support-lifecycle.md
 - name: WMF(Windows Management Framework)
