@@ -2,12 +2,12 @@
 title: PowerShell Core 6.2의 새로운 기능
 description: PowerShell Core 6.2에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 03/28/2019
-ms.openlocfilehash: 2f5f5d11ba46d53966093c5e3ed6d0c7d47308d0
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.openlocfilehash: 98dd97b064e11509bf97e68e0a312e6b34b5d2bc
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75737137"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76995470"
 ---
 # <a name="whats-new-in-powershell-core-62"></a>PowerShell Core 6.2의 새로운 기능
 

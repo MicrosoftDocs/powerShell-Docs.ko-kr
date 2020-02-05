@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3e83c9d9-6d06-4247-94d9-e3bfd4013b11
 caps.latest.revision: 4
-ms.openlocfilehash: a806d012097d107b6cc35710b9a93f2b27dd1ace
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b830571418fe75bbfc68df02f20a6012efefd99a
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359802"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76996065"
 ---
 # <a name="authoring-the-xml-schema-file-for-a-management-odata-web-service"></a>관리 OData 웹 서비스용 XML 스키마 파일 작성
 
@@ -25,7 +25,7 @@ XML 파일의 첫 번째 부분에서는 MOF 스키마 파일에 정의 된 리�
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<ResourceMetadata xmlns="http://schemas.microsoft.com/powershell-web-services/2010/09">
+<ResourceMetadata xmlns="https://schemas.microsoft.com/powershell-web-services/2010/09">
     <SchemaNamespace>PswsTest</SchemaNamespace>
     <ContainerName>PSWSEntityContainer</ContainerName>
     <Resources>
