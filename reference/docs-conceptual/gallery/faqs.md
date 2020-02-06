@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: PowerShell 갤러리 FAQ
-ms.openlocfilehash: bcbb36a9ec60d88d1ef56fd270f0ae1862d5ca6b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 70e2220bd68b351e0b09dd3c59901104f7874335
+ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328054"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818127"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
@@ -36,7 +36,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 
 **패키지를 설치하거나 저장하기 위해 갤러리에 등록 또는 로그인할 필요는 없습니다.**
 
-## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>PowerShell 갤러리에 항목을 게시하려고 했을 때 "요청을 처리하지 못했습니다. '지정된 API 키가 잘못되었거나 지정된 패키지에 액세스할 수 있는 권한이 없습니다.' PowerShell 갤러리에 패키지를 게시할 때 원격 서버에서 (403) 사용할 수 없음." 오류가 발생했습니다. 어떤 의미입니까?
+## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>PowerShell 갤러리에 항목을 게시하려고 했을 때 "요청을 처리하지 못했습니다. '지정된 API 키가 잘못되었거나 지정된 패키지에 액세스할 수 있는 권한이 없습니다.' 원격 서버에서 다음과 같은 오류를 반환했습니다. (403) 사용할 수 없음." 오류가 발생했습니다. 이는 무엇을 의미하나요?
 
 이 오류는 다음과 같은 이유로 발생할 수 있습니다.
 
@@ -64,8 +64,8 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 매니페스트에 다음 정보가 포함된 모든 모듈을 갤러리에 게시할 수 있습니다.
 
 - 버전
-- 설명
-- Author
+- Description
+- 작성자
 - 매니페스트의 **PrivateData** 섹션이나 [Publish-Module][] cmdlet의 **LicenseUri** 매개 변수에 포함된 모듈 사용 조건에 대한 URI입니다.
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>올바른 형식의 모듈 매니페스트를 만들려면 어떻게 하나요?
@@ -85,16 +85,16 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 PSScriptInfo 섹션에 다음 정보가 포함된 모든 스크립트를 갤러리에 게시할 수 있습니다.
 
 - 버전
-- 설명
-- Author
+- Description
+- 작성자
 - 스크립트의 **PSScriptInfo** 섹션이나 [Publish-Script][] cmdlet의 **LicenseUri** 매개 변수에 포함된 모듈 사용 조건에 대한 URI입니다.
 
 ## <a name="how-do-i-search"></a>검색하려면 어떻게 하나요?
 
 텍스트 상자에 찾으려는 내용을 입력합니다. 예를 들어 Azure SQL과 관련된 모듈을 찾으려는 경우 "azure sql"을 입력하면 됩니다. 검색 엔진은 제목, 설명 및 메타데이터를 비롯하여 게시된 모든 패키지에서 해당 키워드를 검색합니다. 그런 다음 가중치가 적용된 품질 점수를 기준으로 가장 가까운 일치 항목을 표시합니다. 다음 필드에 대한 검색 쿼리에 필드:"값" 구문을 사용하여 특정 필드를 기준으로 검색할 수도 있습니다.
 
-- 태그
-- 함수
+- 태그들
+- Functions
 - Cmdlet
 - DscResources
 - PowerShellVersion
@@ -160,7 +160,7 @@ PackageManagement 패키지 공급자 계층에서 PSModule 패키지 공급자�
 
 따라서 **PowerShellGet**에는 다음 운영 체제 중 하나가 필요합니다.
 
-- Windows 10
+- 윈도우 10
 - Windows 8.1 Pro
 - Windows 8.1 Enterprise
 - Windows 7 SP1

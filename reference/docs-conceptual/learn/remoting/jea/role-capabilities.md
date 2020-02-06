@@ -2,12 +2,12 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA 역할 기능
-ms.openlocfilehash: 613557d03bb481f9280a06ca1506166a18b4dab2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5b5b5977d4fec1ed850f1146fe7c09463908651b
+ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416789"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818178"
 ---
 # <a name="jea-role-capabilities"></a>JEA 역할 기능
 
@@ -157,9 +157,11 @@ FunctionDefinitions = @{
 
 JEA 세션에서 탭 완료가 제대로 작동하려면 **VisibleFunctions** 목록에 기본 제공 함수 `tabexpansion2`를 포함해야 합니다.
 
-## <a name="place-role-capabilities-in-a-module"></a>모듈에 역할 기능 배치
+## <a name="make-the-role-capabilities-available-to-a-configuration"></a>구성에서 역할 기능을 사용할 수 있도록 설정
 
-PowerShell에서 역할 기능 파일을 찾도록 하려면 역할 기능 파일을 PowerShell 모듈의 **RoleCapabilities** 폴더에 저장해야 합니다. 모듈은 `$env:PSModulePath` 환경 변수에 포함된 모든 폴더에 저장할 수 있지만, System32 또는 신뢰할 수 없는 연결하는 사용자가 파일을 수정할 수 있는 폴더에 배치해서는 안 됩니다. 다음은 `$env:ProgramFiles` 경로에 **ContosoJEA**라는 기본 PowerShell 스크립트 모듈을 만드는 예제입니다.
+PowerShell 6 이전의 경우 PowerShell에서 역할 기능 파일을 찾으려면 역할 기능 파일을 PowerShell 모듈의 **RoleCapabilities** 폴더에 저장해야 합니다. 모듈은 `$env:PSModulePath` 환경 변수에 포함된 모든 폴더에 저장할 수 있지만, `$env:SystemRoot\System32` 또는 신뢰할 수 없는 사용자가 파일을 수정할 수 있는 폴더에 배치해서는 안 됩니다.
+
+다음 예에서는 역할 기능 파일을 호스트하기 위해 `$env:ProgramFiles` 경로에 **ContosoJEA**라는 PowerShell 스크립트 모듈을 만듭니다.
 
 ```powershell
 # Create a folder for the module
@@ -178,6 +180,8 @@ Copy-Item -Path .\MyFirstJEARole.psrc -Destination $rcFolder
 ```
 
 PowerShell 모듈에 대한 자세한 내용은 [PowerShell 모듈 이해](/powershell/scripting/developer/windows-powershell)를 참조하세요.
+
+PowerShell 6부터 **RoleDefinitions** 속성이 세션 구성 파일에 추가되었습니다. 이 속성을 사용하여 역할 정의에 대한 역할 구성 파일의 위치를 지정할 수 있습니다. [New-PSSessionConfigurationFile](/powershell/module/microsoft.powershell.core/new-pssessionconfigurationfile)의 예를 참조하세요.
 
 ## <a name="updating-role-capabilities"></a>역할 기능 업데이트
 

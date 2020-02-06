@@ -2,12 +2,12 @@
 ms.date: 01/08/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC 끌어오기 서비스
-ms.openlocfilehash: d71c87e0420a0ee54eca36f1792b43103431233f
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: f171c3dc579dfb24a8c9fb87fbb50dccae619091
+ms.sourcegitcommit: aaf1284dfec2e4c698009d6dc27ff103aaafd581
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870815"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76885390"
 ---
 # <a name="desired-state-configuration-pull-service"></a>원하는 상태 구성 끌어오기 서비스
 
@@ -22,6 +22,14 @@ ms.locfileid: "75870815"
 - Windows Server에서 실행되는 끌어오기 서비스
 - 커뮤니티에서 유지 관리하는 오픈 소스 솔루션
 - SMB 공유
+
+각 솔루션에 권장되는 크기는 다음과 같습니다.
+
+|                   해결 방법                   |              클라이언트 노드              |
+| -------------------------------------------- | -------------------------------------- |
+| MDB/ESENT 데이터베이스를 사용하는 Windows 끌어오기 서버 | 최대 500개 노드                        |
+| SQL 데이터베이스를 사용하는 Windows 끌어오기 서버       | 최대 1000개 노드                       |
+| Azure Automation DSC                         | 1000개 이상의 노드를 포함하는 시나리오 |
 
 **권장 솔루션**이며, 대부분의 기능에서 사용 가능한 옵션은 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)입니다.
 
@@ -219,7 +227,7 @@ Sample_MetaConfigurationToRegisterWithLessSecurePullServer -RegistrationKey $Reg
 
 각 리소스 모듈은 압축해야 하며 `{Module Name}_{Module Version}.zip` 패턴에 따라 이름을 지정해야 합니다.
 
-예를 들어 모듈 버전이 3.1.2.0인 xWebAdminstration이라는 모듈은 `xWebAdministration_3.1.2.0.zip`으로 이름이 지정됩니다. 모듈의 각 버전은 단일 zip 파일에 포함되어야 합니다.
+예를 들어 모듈 버전이 3.1.2.0인 `xWebAdministration_3.1.2.0.zip`이라는 모듈은 **xWebAdminstration**으로 이름이 지정됩니다. 모듈의 각 버전은 단일 zip 파일에 포함되어야 합니다.
 각 zip 파일에 리소스의 단일 버전만 있으므로 단일 디렉터리에서 여러 모듈 버전을 지원하는 WMF 5.0에서 추가된 모듈 형식은 지원되지 않습니다. 따라서 끌어오기 서버에서 사용할 DSC 리소스 모듈을 패키징하기 전에 디렉터리 구조를 약간 변경해야 합니다. WMF 5.0의 DSC 리소스를 포함하는 모듈의 기본 형식은 `{Module Folder}\{Module Version}\DscResources\{DSC Resource Folder}\`입니다. 끌어오기 서버에 대해 패키징하기 전에 **{모듈 버전}** 폴더를 제거하면 되므로 경로는 `{Module Folder}\DscResources\{DSC Resource Folder}\`가 됩니다. 이렇게 변경하고 위에서 설명한 대로 폴더를 압축하여 이러한 zip 파일을 **ModulePath** 폴더에 배치합니다.
 
 `New-DscChecksum {module zip file}`을 사용하여 새로 추가된 모듈에 대한 체크섬 파일을 만듭니다.

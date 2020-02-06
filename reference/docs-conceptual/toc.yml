@@ -654,8 +654,8 @@
           href: samples/creating-.net-and-com-objects--new-object-.md
         - name: 정적 클래스 및 메서드 사용
           href: samples/using-static-classes-and-methods.md
-        - name: WMI 개체 가져오기 - Get-WmiObject
-          href: samples/getting-wmi-objects--get-wmiobject-.md
+        - name: WMI 개체 가져오기 - Get-CimInstance
+          href: samples/getting-wmi-objects--get-ciminstance-.md
     - name: 컴퓨터 관리
       items:
         - name: 컴퓨터 상태 변경

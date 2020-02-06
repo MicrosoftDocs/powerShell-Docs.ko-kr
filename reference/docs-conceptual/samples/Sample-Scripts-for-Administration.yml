@@ -8,12 +8,12 @@ metadata:
   author: sdwheeler
   ms.author: sewhee
   ms.date: 09/05/2019
-  ms.openlocfilehash: 95ed43cf713f79d8b648a0f3af77fe2e0119f9c4
-  ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+  ms.openlocfilehash: 2f687dc39649ab1d8c20a7bd9398ab4da4444d98
+  ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "70392030"
+  ms.lasthandoff: 02/04/2020
+  ms.locfileid: "76995596"
 landingContent:
 - title: 개체 작업
   linkLists:
@@ -33,8 +33,8 @@ landingContent:
       url: ./creating-.net-and-com-objects--new-object-.md
     - text: 정적 클래스 및 메서드 사용
       url: ./using-static-classes-and-methods.md
-    - text: WMI 개체 가져오기 - Get-WmiObject
-      url: ./getting-wmi-objects--get-wmiobject-.md
+    - text: WMI 개체 가져오기 - Get-CimInstance
+      url: samples/getting-wmi-objects--get-ciminstance-.md
 - title: 컴퓨터 관리
   linkLists:
   - linkListType: how-to-guide

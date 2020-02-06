@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 리소스 작성 검사 목록
-ms.openlocfilehash: c0a18169b5e9f6ba0c3848b00725731453763611
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e7401071db9cb149fff572d79568d69a0b8ea004
+ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71952880"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818144"
 ---
 # <a name="resource-authoring-checklist"></a>리소스 작성 검사 목록
 
@@ -36,7 +36,7 @@ xPSDesiredStateConfiguration
 ## <a name="resource-and-schema-are-correct"></a>리소스 및 스키마가 올바름
 
 리소스 스키마(*.schema.mof) 파일을 확인합니다. [DSC Resource Designer](https://www.powershellgallery.com/packages/xDSCResourceDesigner/1.12.0.0)(DSC 리소스 디자이너)를 사용하여 스키마를 개발하고 테스트할 수 있습니다.
-다음 사항을 확인하세요.
+확인할 사항은 다음과 같습니다.
 
 - 속성 형식이 올바릅니다. 예를 들어 숫자 값을 허용하는 속성에 문자열을 사용하지 마세요. 대신 UInt32나 다른 숫자 형식을 사용해야 합니다.
 - 속성 특성이 다음과 같이 올바르게 지정되었습니다([key], [required], [write], [read]).
@@ -63,7 +63,7 @@ Test-xDscResource <Resource_folder>
 Test-xDscSchema <Path_to_resource_schema_file>
 ```
 
-예:
+다음은 그 예입니다.
 
 ```powershell
 Test-xDscResource ..\DSCResources\MSFT_xRemoteFile
@@ -130,7 +130,7 @@ File file {
 - DSC 에이전트가 서비스로 실행되기 때문에 자격 증명/세션이 다르게 동작할 수 있습니다.  여기에서 모든 기능을 종단 간 테스트해야 합니다.
 - `Start-DscConfiguration`에 의해 출력된 오류가 `Set-TargetResource` 함수를 직접 호출할 때 표시되는 오류와 다를 수 있습니다.
 
-## <a name="test-compatability-on-all-dsc-supported-platforms"></a>모든 DSC 지원 플랫폼에서 호환성 테스트
+## <a name="test-compatibility-on-all-dsc-supported-platforms"></a>모든 DSC 지원 플랫폼에서 호환성 테스트
 
 리소스는 모든 DSC 지원 플랫폼(Windows Server 2008 R2 이상)에서 작동해야 합니다. 최신 버전의 DSC를 가져오려면 OS에 최신 WMF(Windows Management Framework)를 설치합니다. 리소스가 디자인에 따라 이러한 플랫폼 일부에서 작동하지 않을 경우 특정 오류 메시지가 반환되어야 합니다. 또한 호출하는 cmdlet이 특정 컴퓨터에 있는지 여부를 리소스에서 확인해야 합니다. Windows Server 2012에서는 Windows Server 2008 R2에서 WMF가 설치된 경우에도 제공하지 않는 많은 새로운 cmdlet이 추가되었습니다.
 
@@ -244,9 +244,9 @@ Invoke-Expression $commandToExecute
 리소스 구현에 하드 코드된 경로가 없는지 확인합니다. 특히 언어(en-us)를 가정하거나 사용할 수 있는 시스템 변수가 있는 경우는 더욱 그렇습니다.
 리소스에서 특정 경로에 액세스해야 하는 경우 다른 컴퓨터에서는 달라질 수 있으므로 경로를 하드코딩하는 대신 환경 변수를 사용하세요.
 
-예:
+예제:
 
-다음 문자열 대신에
+다음 식을 사용하는 대신
 
 ```powershell
 $tempPath = "C:\Users\kkaczma\AppData\Local\Temp\MyResource"

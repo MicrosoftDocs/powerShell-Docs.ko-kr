@@ -2,19 +2,18 @@
 title: PowerShell Core 6.1의 새로운 기능
 description: PowerShell Core 6.1에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 09/13/2018
-ms.openlocfilehash: 3d836a24b494df9c7f6ebe994386e2a0297521fa
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 531259217f2b71213776e7d394616c7790e9aca9
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "62086137"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76995511"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>PowerShell Core 6.1의 새로운 기능
 
 다음은 PowerShell Core 6.1에 도입된 몇 가지 새로운 주요 기능 및 변경 내용의 선택 항목입니다.
 
-PowerShell을 더 빠르고 더 안정적으로 만들어주는 “지루한 작업”도 **많이** 있습니다(또한 아주 많은 버그 수정도)!
-변경 사항의 전체 목록은 [GitHub의 changelog](https://github.com/PowerShell/PowerShell/blob/master/CHANGELOG.md)를 확인하세요.
+PowerShell을 더 빠르고 더 안정적으로 만들어주는 “지루한 작업”도 **많이** 있습니다(또한 아주 많은 버그 수정도)! 변경 사항의 전체 목록은 [GitHub의 changelog](https://github.com/PowerShell/PowerShell/blob/master/CHANGELOG.md)를 확인하세요.
 
 다음 이름 중 일부를 호출하는 동안 이 릴리스를 가능하게 해준 [커뮤니티 기여자 모두에게](https://github.com/PowerShell/PowerShell/graphs/contributors) 감사의 말씀을 드립니다.
 
@@ -37,13 +36,11 @@ Windows 호환 기능 책을 통해 PowerShell Core는 **Windows 10 2018년 10�
 
 ## <a name="support-for-application-whitelisting"></a>애플리케이션 허용 목록에 대한 지원
 
-PowerShell Core 6.1에는 [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) 및 [Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) 애플리케이션 허용 목록을 지원하는 Windows PowerShell 5.1을 사용한 패리티가 있습니다.
-애플리케이션 허용 목록은 PowerShell [제한된 언어 모드](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/)와 함께 사용되어 실행할 수 있도록 허용된 바이너리의 세부적 제어를 허용합니다.
+PowerShell Core 6.1에는 [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) 및 [Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) 애플리케이션 허용 목록을 지원하는 Windows PowerShell 5.1을 사용한 패리티가 있습니다. 애플리케이션 허용 목록은 PowerShell [제한된 언어 모드](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/)와 함께 사용되어 실행할 수 있도록 허용된 바이너리의 세부적 제어를 허용합니다.
 
 ## <a name="performance-improvements"></a>성능 향상
 
-PowerShell Core 6.0은 일부 성능이 크게 향상되었습니다.
-PowerShell Core 6.1은 특정 작업의 속도를 계속 개선하고 있습니다.
+PowerShell Core 6.0은 일부 성능이 크게 향상되었습니다. PowerShell Core 6.1은 특정 작업의 속도를 계속 개선하고 있습니다.
 
 예를 들어 `Group-Object`의 속도는 66% 빨라졌습니다.
 
@@ -95,8 +92,7 @@ Measure-Command {Get-Content .\foo.json | ConvertFrom-Json}
 
 Windows 10 1809 업데이트 및 Windows Server 2019에서 몇 가지 미해결 PowerShell 모듈을 업데이트하여 PowerShell Core와 호환되도록 표시했습니다.
 
-PowerShell Core 6.1이 시작되면 자동으로 `$windir\System32`가 `PSModulePath` 환경 변수의 일부로 포함됩니다.
-단, 해당 `CompatiblePSEdition`이 `Core`와 호환되는 것으로 표시되는 경우 모듈을 `Get-Module` 및 `Import-Module`에만 노출합니다.
+PowerShell Core 6.1이 시작되면 자동으로 `$windir\System32`가 `PSModulePath` 환경 변수의 일부로 포함됩니다. 단, 해당 `CompatiblePSEdition`이 `Core`와 호환되는 것으로 표시되는 경우 모듈을 `Get-Module` 및 `Import-Module`에만 노출합니다.
 
 
 ```powershell
@@ -191,8 +187,8 @@ Markdown은 HTML로 렌더링할 수 있는 기본 서식의 읽을 수 있는 �
 및 [`Invoke-RestMethod`](/powershell/module/microsoft.powershell.utility/invoke-restmethod).
 
 - [PR #6109](https://github.com/PowerShell/PowerShell/pull/6109) - `application-json` 응답을 위한 UTF-8로 설정된 기본 인코딩
-- [PR #6018](https://github.com/PowerShell/PowerShell/pull/6018) -  표준을 준수하지 않는 `Content-Type` 헤더를 허용하는 `-SkipHeaderValidation` 매개 변수
-- [PR #5972](https://github.com/PowerShell/PowerShell/pull/5972) -  간소화된 `multipart/form-data`를 지원하는 `Form` 매개 변수
+- [PR #6018](https://github.com/PowerShell/PowerShell/pull/6018) - 표준을 준수하지 않는 `Content-Type` 헤더를 허용하는 `-SkipHeaderValidation` 매개 변수
+- [PR #5972](https://github.com/PowerShell/PowerShell/pull/5972) - 간소화된 `multipart/form-data`를 지원하는 `Form` 매개 변수
 - [PR #6338](https://github.com/PowerShell/PowerShell/pull/6338) - 호환, 대/소문자를 구분하지 않는 관계 키 처리
 - [PR #6447](https://github.com/PowerShell/PowerShell/pull/6447) - 웹 cmdlet에 대한 `-Resume` 매개 변수 추가
 
@@ -202,15 +198,13 @@ Markdown은 HTML로 렌더링할 수 있는 기본 서식의 읽을 수 있는 �
 
 [PowerShell Direct](/virtualization/hyper-v-on-windows/user-guide/powershell-direct)는 사용자가 네트워크 연결 또는 기타 원격 관리 서비스 없이 Hyper-V VM 또는 컨테이너에 연결할 수 있도록 허용하는 PowerShell 및 Hyper-V의 기능입니다.
 
-과거에 PowerShell Direct는 받은 편지함 Windows PowerShell 인스턴스를 사용하여 컨테이너에 연결되었습니다.
-이제 PowerShell Direct는 먼저 `PATH` 환경 변수에서 사용 가능한 `pwsh.exe`를 사용하여 연결을 시도합니다.
-`pwsh.exe`를 사용할 수 없는 경우 PowerShell Direct는 `powershell.exe`를 다시 사용합니다.
+과거에 PowerShell Direct는 받은 편지함 Windows PowerShell 인스턴스를 사용하여 컨테이너에 연결되었습니다. 이제 PowerShell Direct는 먼저 `PATH` 환경 변수에서 사용 가능한 `pwsh.exe`를 사용하여 연결을 시도합니다. `pwsh.exe`를 사용할 수 없는 경우 PowerShell Direct는 `powershell.exe`를 다시 사용합니다.
 
 ### <a name="enable-psremoting-now-creates-separate-remoting-endpoints-for-preview-versions"></a>`Enable-PSRemoting`은 이제 별도의 원격 엔드포인트를 미리 보기 버전으로 만듭니다.
 
 `Enable-PSRemoting`은 이제 다음과 같이 두 개의 원격 세션 구성을 만듭니다.
 
-- PowerShell의 주 버전에 대해 하나. 정의합니다(예: `PowerShell.6`). 부 버전에 의존할 수 있는 이 엔드포인트는 “시스템 수준” PowerShell 6 세션 구성으로 업데이트함
+- PowerShell의 주 버전에 대해 하나. `PowerShell.6`)을 입력합니다. 부 버전에 의존할 수 있는 이 엔드포인트는 “시스템 수준” PowerShell 6 세션 구성으로 업데이트함
 - 버전별 세션 구성에 대해 하나. 예를 들면 `PowerShell.6.1.0`입니다.
 
 이 동작은 여러 PowerShell 6 버전을 동일한 머신에 설치하고 액세스하려는 경우에 유용합니다.
@@ -262,8 +256,7 @@ Permission    : NT AUTHORITY\INTERACTIVE AccessAllowed, BUILTIN\Administrators A
 
 ### <a name="userhostport-syntax-supported-for-ssh"></a>SSH에 대해 지원되는 `user@host:port` 구문
 
-SSH 클라이언트는 일반적으로 `user@host:port` 형식의 연결 문자열을 지원합니다.
-추가 SSH를 PowerShell 원격 기능에 대한 프로토콜로 사용하여 연결 문자열의 이 형식에 대한 지원을 추가했습니다.
+SSH 클라이언트는 일반적으로 `user@host:port` 형식의 연결 문자열을 지원합니다. 추가 SSH를 PowerShell 원격 기능에 대한 프로토콜로 사용하여 연결 문자열의 이 형식에 대한 지원을 추가했습니다.
 
 `Enter-PSSession -HostName fooUser@ssh.contoso.com:2222`
 
@@ -305,13 +298,11 @@ PS /etc>
 
 ### <a name="update-help-as-non-admin"></a>`Update-Help`, 관리자가 아님
 
-많은 요청에 의해 `Update-Help`는 더 이상 관리자 권한으로 실행될 필요가 없습니다.
-`Update-Help`는 이제 기본 제공되어 사용자 범위 폴더에 대한 도움말을 저장합니다.
+많은 요청에 의해 `Update-Help`는 더 이상 관리자 권한으로 실행될 필요가 없습니다. `Update-Help`는 이제 기본 제공되어 사용자 범위 폴더에 대한 도움말을 저장합니다.
 
 ### <a name="new-methodsproperties-on-pscustomobject"></a>`PSCustomObject`의 새 메서드/속성
 
-[@iSazonov](https://github.com/iSazonov) 덕분에 새 메서드 및 속성을 `PSCustomObject`에 추가했습니다.
-`PSCustomObject`에는 이제 다른 개체처럼 `Count`/`Length` 속성이 포함됩니다.
+[@iSazonov](https://github.com/iSazonov) 덕분에 새 메서드 및 속성을 `PSCustomObject`에 추가했습니다. `PSCustomObject`에는 이제 다른 개체처럼 `Count`/`Length` 속성이 포함됩니다.
 
 ```powershell
 $PSCustomObject = [pscustomobject]@{foo = 1}
@@ -353,8 +344,7 @@ foo
 
 ### `Where-Object -Not`
 
-@SimonWahlin 덕분에 `-Not` 매개 변수를 `Where-Object`에 추가했습니다.
-이제 존재하지 않는 속성 또는 null/비어 있는 속성 값에 대한 파이프라인에서 개체를 필터링할 수 있습니다.
+@SimonWahlin 덕분에 `-Not` 매개 변수를 `Where-Object`에 추가했습니다. 이제 존재하지 않는 속성 또는 null/비어 있는 속성 값에 대한 파이프라인에서 개체를 필터링할 수 있습니다.
 
 예를 들어 이 명령은 정의된 모든 종속 서비스가 없는 모든 서비스를 반환합니다.
 
@@ -368,8 +358,7 @@ PowerShell 6.0에서 BOM이 없는 UTF-8로 이동하여 UTF-16 대신 BOM이 �
 
 ### <a name="conversions-from-psmethod-to-delegate"></a>PSMethod에서 대리자로 변환
 
-[@powercode](https://github.com/powercode) 덕분에 이제 대리자로의 `PSMethod` 변환을 지원하게 되었습니다.
-이를 통해 `PSMethod` `[M]::DoubleStrLen`을 대리자 값으로 `[M]::AggregateString`에 전달하는 등의 작업을 수행할 수 있습니다.
+[@powercode](https://github.com/powercode) 덕분에 이제 대리자로의 `PSMethod` 변환을 지원하게 되었습니다. 이를 통해 `PSMethod` `[M]::DoubleStrLen`을 대리자 값으로 `[M]::AggregateString`에 전달하는 등의 작업을 수행할 수 있습니다.
 
 ```powershell
 class M {
@@ -420,8 +409,7 @@ $certThumbPrint = (Get-PfxCertificate -FilePath $certFile -Password $certPass ).
 
 ### <a name="removal-of-the-more-function"></a>`more` 함수 제거
 
-과거에 PowerShell은 Windows에서 `more.com`을 래핑한 `more`라는 함수를 제공했습니다.
-해당 함수는 이제 제거되었습니다.
+과거에 PowerShell은 Windows에서 `more.com`을 래핑한 `more`라는 함수를 제공했습니다. 해당 함수는 이제 제거되었습니다.
 
 또한 `help` 함수가 Windows에서 `more.com`을 사용하거나 비Windows 플랫폼에서 `$env:PAGER`에 의해 지정된 시스템의 기본 호출기를 사용하도록 변경되었습니다.
 
@@ -511,8 +499,7 @@ PowerShell Core는 시작할 때 기본 원격 분석 데이터를 Microsoft로 
 
 ### <a name="removed-visualbasic-as-a-supported-language-in-add-type"></a>Add-Type에서 지원되는 언어로 `VisualBasic` 제거
 
-이전에는 `Add-Type` cmdlet을 사용하여 Visual Basic 코드를 컴파일할 수 있었습니다.
-Visual Basic은 `Add-Type`과는 거의 사용되지 않았습니다. PowerShell의 크기를 줄이기 위해 이 기능을 제거했습니다.
+이전에는 `Add-Type` cmdlet을 사용하여 Visual Basic 코드를 컴파일할 수 있었습니다. Visual Basic은 `Add-Type`과는 거의 사용되지 않았습니다. PowerShell의 크기를 줄이기 위해 이 기능을 제거했습니다.
 
 ### <a name="cleaned-up-uses-of-commandtypesworkflow-and-workflowinfocleaned"></a>`CommandTypes.Workflow` 및 `WorkflowInfoCleaned` 사용 정리
 

@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: PowerShell 갤러리 시작
-ms.openlocfilehash: ee3fe7d9c65ad1a8f9ffd2ddec0f4ce6659bc3d5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fd4185234136dd9f3e628df50954b6ebff637639
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328464"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76995882"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>PowerShell 갤러리 시작
 
@@ -23,7 +23,7 @@ PowerShell 갤러리의 [홈페이지](https://www.powershellgallery.com)에서 
 
 다음 매개 변수를 사용하여 갤러리의 결과를 필터링할 수 있습니다.
 
-- 이름
+- 속성
 - AllVersions
 - MinimumVersion
 - RequiredVersion
@@ -32,7 +32,7 @@ PowerShell 갤러리의 [홈페이지](https://www.powershellgallery.com)에서 
 - DscResource
 - RoleCapability
 - 명령
-- 필터
+- Assert
 
 갤러리에서 특정 DSC 리소스를 검색하는 데만 관심이 있는 경우 [Find-DscResource][] cmdlet을 실행할 수 있습니다. Find-DscResource는 갤러리에 포함된 DSC 리소스에 대한 데이터를 반환합니다. DSC 리소스는 항상 모듈의 일부로 제공되기 때문에 여전히 [Install-Module][]을 실행하여 이러한 DSC 리소스를 설치해야 합니다.
 
@@ -68,7 +68,7 @@ PowerShell 갤러리에서 패키지를 다운로드하려면 다음 프로세�
 
 기본적으로 [Install-Module][] 및 [Install-Script][]는 최신 버전의 패키지를 설치합니다. 이전 버전의 패키지를 설치하려면 `-RequiredVersion` 매개 변수를 추가합니다.
 
-### <a name="deploy"></a>배포 게스트 클러스터에
+### <a name="deploy"></a>배포
 
 PowerShell 갤러리의 패키지를 Azure Automation에 배포하려면 **Azure Automation**을 클릭한 후 패키지 세부 정보 페이지에서 **Azure Automation에 배포**를 클릭합니다. Azure 관리 포털로 리디렉션되며, 여기서 Azure 계정 자격 증명을 사용하여 로그인합니다. 종속성과 함께 패키지를 배포하면 모든 종속성이 Azure Automation에 배포됩니다. 패키지 메타데이터에 **AzureAutomationNotSupported** 태그를 추가하면 Azure Automation에 배포 단추를 해제할 수 있습니다.
 
@@ -98,3 +98,5 @@ PowerShell 갤러리에서 설치한 모듈을 찾으려면 [Get-InstalledModule
 [Register-PSRepository]: /powershell/module/powershellget/Register-Repository
 [Save-Module]: /powershell/module/powershellget/Save-Module
 [Save-Script]: /powershell/module/powershellget/Save-Script
+[Update-Module]: /powershell/module/powershellget/Update-Module
+[Update-Script]: /powershell/module/powershellget/Update-Script

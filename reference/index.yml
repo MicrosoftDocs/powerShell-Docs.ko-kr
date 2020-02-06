@@ -9,12 +9,12 @@ metadata:
   author: sdwheeler
   ms.author: sewhee
   ms.date: 09/04/2019
-  ms.openlocfilehash: b8d493c070681fe680308fc9aa5b1ca0ae79acff
-  ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+  ms.openlocfilehash: 67d3f5f1816a11933183d079d2eb4bd3a5ab6e66
+  ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/23/2019
-  ms.locfileid: "74416586"
+  ms.lasthandoff: 02/04/2020
+  ms.locfileid: "76996083"
 highlightedContent:
   items:
   - title: 개요
@@ -28,7 +28,7 @@ highlightedContent:
     url: https://docs.microsoft.com/powershell/scripting/samples/sample-scripts-for-administration
   - title: PowerShell 갤러리
     itemType: deploy
-    url: http://www.powershellgallery.com/
+    url: https://www.powershellgallery.com/
   - title: PowerShell 모듈 브라우저
     itemType: reference
     url: https://docs.microsoft.com/powershell/module/
@@ -65,7 +65,7 @@ productDirectory:
     - url: https://docs.microsoft.com/powershell/scripting/gallery/overview
       text: PowerShell 갤러리란?
     - url: https://docs.microsoft.com/powershell/scripting/gallery/concepts/publishing-guidelines
-      text: 최선의 구현 방법
+      text: 모범 사례
     - url: https://docs.microsoft.com/powershell/scripting/gallery/faqs
       text: FAQ
   - title: PowerShell DSC
