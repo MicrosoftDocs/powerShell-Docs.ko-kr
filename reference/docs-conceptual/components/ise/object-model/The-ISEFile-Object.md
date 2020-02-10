@@ -11,7 +11,7 @@ ms.locfileid: "75737001"
 ---
 # <a name="the-isefile-object"></a>ISEFile 개체
 
-**ISEFile** 개체는 Windows PowerShell® ISE(통합 스크립팅 환경)에 있는 파일을 나타내며, **Microsoft.PowerShell.Host.ISE.ISEFile** 클래스의 인스턴스입니다. 이 항목에는 멤버 메서드 및 멤버 속성이 나열됩니다. `$psISE.CurrentFile`과 PowerShell 탭의 파일 컬렉션에 있는 파일이 ****Microsoft.PowerShell.Host.ISE.ISEFile** 클래스의 전체 인스턴스입니다.
+**ISEFile** 개체는 Windows PowerShell® ISE(통합 스크립팅 환경)에 있는 파일을 나타내며, **Microsoft.PowerShell.Host.ISE.ISEFile** 클래스의 인스턴스입니다. 이 항목에는 멤버 메서드 및 멤버 속성이 나열됩니다. `$psISE.CurrentFile`과 PowerShell 탭의 파일 컬렉션에 있는 파일이 \*\***Microsoft.PowerShell.Host.ISE.ISEFile** 클래스의 전체 인스턴스입니다.
 
 ## <a name="methods"></a>메서드
 
