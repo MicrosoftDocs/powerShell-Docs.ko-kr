@@ -2,12 +2,12 @@
 title: PowerShell Core 지원 수명 주기
 description: PowerShell Core에 대한 정책 관리 지원
 ms.date: 08/06/2018
-ms.openlocfilehash: 57804df830da01bee0f48acc374658b025a46b85
-ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
+ms.openlocfilehash: d535199e19c1aabbbfdd140b38aad329bc5d957e
+ms.sourcegitcommit: 5f199cd2a1b31dbcebaab44f2fe496f289831a30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022220"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478805"
 ---
 # <a name="powershell-core-support-lifecycle"></a>PowerShell Core 지원 수명 주기
 
@@ -50,22 +50,20 @@ PowerShell Core의 플랫폼과 버전이 공식적으로 지원되는지 확인
 `Experimental`로 나열되는 플랫폼은 공식적으로 지원되지는 않지만, 실험 및 피드백용으로 사용 가능합니다.
 
 | 플랫폼                                          |      6.2      |    7.0    |
-|---------------------------------------------------|:-------------:|:---------:|
-| Windows 7, 8.1 및 10                            |   지원됨   | 지원됨 |
-| Windows Server 2008 R2, 2012 R2, 2016             |   지원됨   | 지원됨 |
+| ------------------------------------------------- | :-----------: | :-------: |
+| Windows 8.1 및 10                               |   지원됨   | 지원됨 |
+| Windows Server 2012 R2, 2016                      |   지원됨   | 지원됨 |
 | [Windows Server 반기 채널][semi-annual] |   지원됨   | 지원됨 |
 | Ubuntu 16.04 및 18.04                            |   지원됨   | 지원됨 |
-| Ubuntu 18.10(맞춤 패키지를 통해)                   |   커뮤니티   | 커뮤니티 |
-| Ubuntu 19.04(맞춤 패키지를 통해)                   |   커뮤니티   | 커뮤니티 |
+| Ubuntu 19.10(맞춤 패키지를 통해)                   |   커뮤니티   | 커뮤니티 |
+| Ubuntu 20.04(맞춤 패키지를 통해)                   |   커뮤니티   | 커뮤니티 |
 | Debian 9                                          |   지원됨   | 지원됨 |
 | Debian 10                                         | 지원되지 않음 | 지원됨 |
 | CentOS 7                                          |   지원됨   | 지원됨 |
 | CentOS 8                                          | 지원되지 않음 | 지원됨 |
 | Red Hat Enterprise Linux 7                        |   지원됨   | 지원됨 |
 | Red Hat Enterprise Linux 8                        | 지원되지 않음 | 지원됨 |
-| openSUSE 42.3                                     |   지원됨   | 지원됨 |
-| Fedora 28                                         |   지원됨   | 지원됨 |
-| Fedora 29, 30                                     | 지원되지 않음 | 지원됨 |
+| Fedora 30                                         | 지원되지 않음 | 지원됨 |
 | Alpine 3.8                                        |   참고 참조    | 참고 참조  |
 | Alpine 3.9 및 3.10                               | 지원되지 않음 | 참고 참조  |
 | macOS 10.12 이상                                      |   지원됨   | 지원됨 |
@@ -97,19 +95,23 @@ PowerShell Core의 플랫폼과 버전이 공식적으로 지원되는지 확인
 
 그러므로 다음 버전의 지원을 배포 소유자가 종료했으며 더 이상 지원되지 않습니다.
 
-| 플랫폼 | 버전 | 수명 종료                                                                                 |
-|----------|---------|---------------------------------------------------------------------------------------------|
-| Fedora   | 24      | [2017년 8월](https://fedoramagazine.org/fedora-24-eol/)                                    |
-| Fedora   | 25      | [2017년 12월](https://fedoramagazine.org/fedora-25-end-life/)                             |
-| Fedora   | 26      | [2018년 5월](https://fedoramagazine.org/fedora-26-end-life/)                                  |
-| openSUSE | 42.1    | [2017년 5월](https://lists.opensuse.org/opensuse-security-announce/2017-05/msg00053.html)     |
-| openSUSE | 42.2    | [2018년 1월](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html) |
-| Ubuntu   | 16.10   | [2017년 7월](https://lists.ubuntu.com/archives/ubuntu-announce/2017-July/000223.html)        |
-| Ubuntu   | 17.04   | [2018년 1월](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)          |
-| Ubuntu   | 17.10   | [2018년 7월](https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000232.html)        |
-| Debian   | 8       | [2018년 6월](https://lists.debian.org/debian-security-announce/2018/msg00132.html)           |
-| Fedora   | 27      | [2018년 11월](https://fedoramagazine.org/fedora-27-end-of-life/)                          |
-| Ubuntu   | 14.04   | [2019년 4월](https://wiki.ubuntu.com/Releases)                                              |
+| 플랫폼       | 버전 | 수명 종료                                                                                                                        |
+| -------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Debian         | 8       | [2018년 6월](https://lists.debian.org/debian-security-announce/2018/msg00132.html)                                                  |
+| Fedora         | 24      | [2017년 8월](https://fedoramagazine.org/fedora-24-eol/)                                                                           |
+| Fedora         | 25      | [2017년 12월](https://fedoramagazine.org/fedora-25-end-life/)                                                                    |
+| Fedora         | 26      | [2018년 5월](https://fedoramagazine.org/fedora-26-end-life/)                                                                         |
+| Fedora         | 27      | [2018년 11월](https://fedoramagazine.org/fedora-27-end-of-life/)                                                                 |
+| Fedora         | 28      | [2019년 5월](https://fedoramagazine.org/fedora-28-end-of-life/)                                                                      |
+| openSUSE       | 42.1    | [2017년 5월](https://lists.opensuse.org/opensuse-security-announce/2017-05/msg00053.html)                                            |
+| openSUSE       | 42.2    | [2018년 1월](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html)                                        |
+| openSUSE       | 42.3    | [2019년 7월](https://lists.opensuse.org/opensuse-security-announce/2019-07/msg00000.html)                                           |
+| Ubuntu         | 14.04   | [2019년 4월](https://wiki.ubuntu.com/Releases)                                                                                     |
+| Ubuntu         | 16.10   | [2017년 7월](https://lists.ubuntu.com/archives/ubuntu-announce/2017-July/000223.html)                                               |
+| Ubuntu         | 17.04   | [2018년 1월](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)                                                 |
+| Ubuntu         | 17.10   | [2018년 7월](https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000232.html)                                               |
+| Windows        | 7       | [2020년 1월](https://support.microsoft.com/en-us/help/4057281/windows-7-support-ended-on-january-14-2020)                        |
+| Windows Server | 2008 R2 | [2020년 1월](https://support.microsoft.com/en-us/help/4456235/end-of-support-for-windows-server-2008-and-windows-server-2008-r2) |
 
 ## <a name="notes-on-licensing"></a>라이선싱에 대한 메모
 
