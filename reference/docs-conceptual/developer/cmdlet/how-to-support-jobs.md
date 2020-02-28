@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5eac452c-eae2-4193-b4da-0b618bef3677
 caps.latest.revision: 9
-ms.openlocfilehash: d732bce1af446090c3e5741eebeba737f86c7ca8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 65f6b3d44910a0a3e848b4d2cd3e619186e5ed25
+ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369662"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706243"
 ---
 # <a name="how-to-support-jobs"></a>작업을 지원하는 방법
 
@@ -333,22 +333,7 @@ namespace Microsoft.Samples.PowerShell.Commands
       }
     } // End DoProcessLogic.
   } //End GetProcCommand
-}    void DoProcessLogic(bool asJob)
-    {
-      Process[] p = Process.GetProcesses();
-
-      foreach (Process pl in p)
-      {
-        if (!asjob)
-        {
-          WriteObject(pl);
-        }
-        else
-        {
-          job.ChildJobs[0].Output.Add(new PSObject(pl));
-        }
-      }
-    } // End DoProcessLogic.
+}
 ```
 
 <!-- TODO!!!: review snippet reference  [!CODE [msh_samplesGetProc06#GetProc06All](msh_samplesGetProc06#GetProc06All)]  -->
