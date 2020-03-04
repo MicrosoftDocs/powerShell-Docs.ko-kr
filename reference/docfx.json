@@ -103,6 +103,7 @@
         "externalReference": [],
     "globalMetadata": {
       "toc_preview": true,
+        "bilingual_type": "hover over",
       "archive_url": "https://docs.microsoft.com/previous-versions/powershell/scripting/overview",
             "searchScope": ["PowerShell"],
       "hideScope": false,
