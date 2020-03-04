@@ -2,12 +2,12 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA 구성 등록
-ms.openlocfilehash: dbed5c7dd71f2f7a09d97416be56dff675799548
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7cc67e891bc14dd667c97e9a8b550b33b4c2b874
+ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417607"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706209"
 ---
 # <a name="registering-jea-configurations"></a>JEA 구성 등록
 
@@ -51,7 +51,7 @@ Register-PSSessionConfiguration -Path .\MyJEAConfig.pssc -Name 'JEAMaintenance' 
 
 ## <a name="multi-machine-configuration-with-dsc"></a>DSC를 사용한 다중 컴퓨터 구성
 
-JEA를 여러 머신에 배포할 때 가장 간단한 배포 모델은 JEA [DSC(필요한 상태 구성)](/powershell/scripting/dsc/overview) 리소스를 사용하여 각 머신에 신속하고 일관되게 JEA를 배포하는 것입니다.
+JEA를 여러 머신에 배포할 때 가장 간단한 배포 모델은 JEA [DSC(필요한 상태 구성)](../../../dsc/overview/overview.md) 리소스를 사용하여 각 머신에 신속하고 일관되게 JEA를 배포하는 것입니다.
 
 DSC를 사용하여 JEA를 배포하려면 다음 필수 조건이 충족되는지 확인합니다.
 
