@@ -2,12 +2,12 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: 모듈 및 cmdlet의 릴리스 기록
-ms.openlocfilehash: e421201d74da2cc74b1bd57529fb3c3e5245ecae
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: e0fe9b263bdd0a5e1bedd0762b7613a4bbe02a58
+ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995448"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706134"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>모듈 및 cmdlet의 릴리스 기록
 
@@ -47,7 +47,7 @@ ms.locfileid: "76995448"
 | PSScheduledJob                            | &check; |         |         |         | Windows만 해당 |
 | PSWorkflow                                | &check; |         |         |         | Windows만 해당 |
 | PSWorkflowUtility                         | &check; |         |         |         | Windows만 해당 |
-| ThreadJob                                 |         | &check; | &check; | &check; |              |
+| ThreadJob                                 |         | &check; | &check; | &check; | PowerShell 5.1에 설치 가능 |
 
 ## <a name="cmdlet-release-history"></a>Cmdlet 릴리스 기록
 
@@ -121,7 +121,7 @@ ms.locfileid: "76995448"
 | Get-PSSessionCapability           | &check; | &check; | &check; | &check; |                            |
 | Get-PSSessionConfiguration        | &check; | &check; | &check; | &check; |                            |
 | Get-PSSnapin                      | &check; |         |         |         | Windows만 해당               |
-| Get-Verb                          | &check; |         |         |         | Windows만 해당               |
+| Get-Verb                          | &check; |         |         |         | Microsoft.PowerShell.Utility 6.0+로 이동 |
 | 모듈 가져오기                     | &check; | &check; | &check; | &check; |                            |
 | Invoke-Command                    | &check; | &check; | &check; | &check; |                            |
 | Invoke-History                    | &check; | &check; | &check; | &check; |                            |
@@ -636,4 +636,4 @@ ms.locfileid: "76995448"
 
 |   Cmdlet 이름   |  5.1  |   6.x   |   7.0   |   7.1   | 참고 |
 | --------------- | :---: | :-----: | :-----: | :-----: | ---- |
-| Start-ThreadJob |       | &check; | &check; | &check; |      |
+| Start-ThreadJob |       | &check; | &check; | &check; | PowerShell 5.1에 설치 가능 |

@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 목록 상자에서 항목 선택
-ms.openlocfilehash: 55bc9409b0e330a2080781bfd4c586109896258f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 048bccd403e01e2290a8930a0faba30d4c7caa73
+ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030819"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706175"
 ---
 # <a name="selecting-items-from-a-list-box"></a>목록 상자에서 항목 선택
 
@@ -26,21 +26,21 @@ $form.Text = 'Select a Computer'
 $form.Size = New-Object System.Drawing.Size(300,200)
 $form.StartPosition = 'CenterScreen'
 
-$OKButton = New-Object System.Windows.Forms.Button
-$OKButton.Location = New-Object System.Drawing.Point(75,120)
-$OKButton.Size = New-Object System.Drawing.Size(75,23)
-$OKButton.Text = 'OK'
-$OKButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
-$form.AcceptButton = $OKButton
-$form.Controls.Add($OKButton)
+$okButton = New-Object System.Windows.Forms.Button
+$okButton.Location = New-Object System.Drawing.Point(75,120)
+$okButton.Size = New-Object System.Drawing.Size(75,23)
+$okButton.Text = 'OK'
+$okButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
+$form.AcceptButton = $okButton
+$form.Controls.Add($okButton)
 
-$CancelButton = New-Object System.Windows.Forms.Button
-$CancelButton.Location = New-Object System.Drawing.Point(150,120)
-$CancelButton.Size = New-Object System.Drawing.Size(75,23)
-$CancelButton.Text = 'Cancel'
-$CancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
-$form.CancelButton = $CancelButton
-$form.Controls.Add($CancelButton)
+$cancelButton = New-Object System.Windows.Forms.Button
+$cancelButton.Location = New-Object System.Drawing.Point(150,120)
+$cancelButton.Size = New-Object System.Drawing.Size(75,23)
+$cancelButton.Text = 'Cancel'
+$cancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
+$form.CancelButton = $cancelButton
+$form.Controls.Add($cancelButton)
 
 $label = New-Object System.Windows.Forms.Label
 $label.Location = New-Object System.Drawing.Point(10,20)
@@ -87,7 +87,8 @@ Form 클래스의 인스턴스를 만든 후 이 클래스의 세 속성에 값�
 
 - **Size.** 양식의 크기(픽셀)입니다. 이전 스크립트는 너비가 300픽셀이고 높이가 200픽셀인 양식을 만듭니다.
 
-- **StartingPosition.** 이전 스크립트에서는 이 선택적 속성이 **CenterScreen**으로 설정되어 있습니다. 이 속성을 추가하지 않은 경우 양식을 열 때 위치가 자동으로 선택됩니다. **StartingPosition**을 **CenterScreen**으로 설정하면 양식이 로드할 때마다 화면 가운데 자동으로 표시됩니다.
+- **StartingPosition.** 이전 스크립트에서는 이 선택적 속성이 **CenterScreen**으로 설정되어 있습니다.
+  이 속성을 추가하지 않은 경우 양식을 열 때 위치가 자동으로 선택됩니다. **StartingPosition**을 **CenterScreen**으로 설정하면 양식이 로드할 때마다 화면 가운데 자동으로 표시됩니다.
 
 ```powershell
 $form.Text = 'Select a Computer'
@@ -98,25 +99,25 @@ $form.StartPosition = 'CenterScreen'
 그런 다음 양식에 대한 **확인** 단추를 만듭니다. **확인** 단추의 크기와 동작을 지정합니다. 이 예제에서는 단추가 양식의 위쪽 가장자리에서 120픽셀, 왼쪽 가장자리에서 75픽셀 위치에 배치됩니다. 단추의 높이는 23픽셀이고 길이는 75픽셀입니다. 이 스크립트는 미리 정의된 Windows Forms 형식을 사용하여 단추 동작을 결정합니다.
 
 ```powershell
-$OKButton = New-Object System.Windows.Forms.Button
-$OKButton.Location = New-Object System.Drawing.Point(75,120)
-$OKButton.Size = New-Object System.Drawing.Size(75,23)
-$OKButton.Text = 'OK'
-$OKButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
-$form.AcceptButton = $OKButton
-$form.Controls.Add($OKButton)
+$okButton = New-Object System.Windows.Forms.Button
+$okButton.Location = New-Object System.Drawing.Point(75,120)
+$okButton.Size = New-Object System.Drawing.Size(75,23)
+$okButton.Text = 'OK'
+$okButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
+$form.AcceptButton = $okButton
+$form.Controls.Add($okButton)
 ```
 
 마찬가지로 **취소** 단추를 만듭니다. **취소** 단추는 위쪽에서 120픽셀, 창의 왼쪽 가장자리에서 150픽셀 위치에 있습니다.
 
 ```powershell
-$CancelButton = New-Object System.Windows.Forms.Button
-$CancelButton.Location = New-Object System.Drawing.Point(150,120)
-$CancelButton.Size = New-Object System.Drawing.Size(75,23)
-$CancelButton.Text = 'Cancel'
-$CancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
-$form.CancelButton = $CancelButton
-$form.Controls.Add($CancelButton)
+$cancelButton = New-Object System.Windows.Forms.Button
+$cancelButton.Location = New-Object System.Drawing.Point(150,120)
+$cancelButton.Size = New-Object System.Drawing.Size(75,23)
+$cancelButton.Text = 'Cancel'
+$cancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
+$form.CancelButton = $cancelButton
+$form.Controls.Add($cancelButton)
 ```
 
 그런 다음 창에서 사용자에게 제공할 정보를 설명하는 레이블 텍스트를 입력합니다. 이 경우 사용자가 컴퓨터를 선택하도록 합니다.
@@ -129,7 +130,7 @@ $label.Text = 'Please select a computer:'
 $form.Controls.Add($label)
 ```
 
-사용자가 레이블 텍스트에 설명된 정보를 입력할 수 있는 컨트롤(이 경우 목록 상자)을 추가합니다. 세부적인 제어를 위해 목록 상자 이외에 다른 여러 컨트롤을 추가할 수 있습니다. 자세한 내용은 MSDN에서 [System.Windows.Forms 네임스페이스](https://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx)를 참조하세요.
+사용자가 레이블 텍스트에 설명된 정보를 입력할 수 있는 컨트롤(이 경우 목록 상자)을 추가합니다. 세부적인 제어를 위해 목록 상자 이외에 다른 여러 컨트롤을 추가할 수 있습니다. 자세한 내용은 MSDN에서 [System.Windows.Forms 네임스페이스](/dotnet/api/system.windows.forms)를 참조하세요.
 
 ```powershell
 $listBox = New-Object System.Windows.Forms.ListBox
@@ -141,7 +142,7 @@ $listBox.Height = 80
 다음 섹션에서는 목록 상자에서 사용자에게 표시할 값을 지정합니다.
 
 > [!NOTE]
-> 이 스크립트로 만든 목록 상자에서는 하나만 선택할 수 있습니다. 여러 항목을 선택할 수 있는 목록 상자 컨트롤을 만들려면 다음과 같이 **SelectionMode** 속성 값을 지정합니다. `$listBox.SelectionMode = 'MultiExtended'`. 자세한 내용은 [다중 선택 목록 상자](Multiple-selection-List-Boxes.md)를 참조하세요.
+> 이 스크립트로 만든 목록 상자에서는 하나만 선택할 수 있습니다. 여러 항목을 선택할 수 있는 목록 상자 컨트롤을 만들려면 **SelectionMode** 속성 값을 다음과 같이 지정합니다. `$listBox.SelectionMode = 'MultiExtended'`. 자세한 내용은 [다중 선택 목록 상자](Multiple-selection-List-Boxes.md)를 참조하세요.
 
 ```powershell
 [void] $listBox.Items.Add('atl-dc-001')
@@ -178,6 +179,5 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 ## <a name="see-also"></a>참고 항목
 
-- [Hey Scripting Guy:  왜 이런 PowerShell GUI가 작동하지 않나요?](https://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: Dave Wyatt의 WinFormsExampleUpdates](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [이번 주 Windows PowerShell 팁:  목록 상자에서 항목 선택](https://technet.microsoft.com/library/ff730949.aspx)
+- [이번 주 Windows PowerShell 팁:  목록 상자에서 항목 선택](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730949(v=technet.10))

@@ -2,12 +2,12 @@
 title: PowerShell Core 지원 수명 주기
 description: PowerShell Core에 대한 정책 관리 지원
 ms.date: 08/06/2018
-ms.openlocfilehash: d535199e19c1aabbbfdd140b38aad329bc5d957e
-ms.sourcegitcommit: 5f199cd2a1b31dbcebaab44f2fe496f289831a30
+ms.openlocfilehash: 8cf8a0ac6140d28e55b065bf711763ba1c681d63
+ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77478805"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706260"
 ---
 # <a name="powershell-core-support-lifecycle"></a>PowerShell Core 지원 수명 주기
 
@@ -141,6 +141,22 @@ Add-WindowsPSModulePath
 
 [실험적 기능][]은 [커뮤니티 지원](#community-support)으로 제한됩니다.
 
+## <a name="release-history"></a>릴리스 기록
+
+다음 표에는 PowerShell의 주요 릴리스 일정이 포함되어 있습니다. 이 표는 기록 참조 목적으로 제공되는 것으로, 지원 수명 주기를 결정하는 데 사용하기 위한 것이 아닙니다.
+
+|       버전        | 출시 날짜 |                                                                     참고                                                                      |
+| -------------------- | :----------: | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| PowerShell 7.0(LTS) |   2020년 3월   | .NET Core 3.1(LTS) 기반                                                                                                                  |
+| PowerShell 6.0       |   2018년 1월   | .NET Core 2.1 기반 첫 번째 릴리스. Windows, Linux 및 macOS에 설치 가능.                                                              |
+| PowerShell 5.1       |   2016년 8월   | Windows 10 1주년 업데이트 및 Windows Server 2016에서 릴리스                                                                             |
+| PowerShell 5.0       |   2016년 2월   | WMF(Windows Management Framework) 5.0에서 릴리스                                                                                            |
+| PowerShell 4.0       |   2013년 10월   | Windows 8.1에서 Windows Server 2012 R2와 통합. Windows 7 SP1, Windows Server 2008 R2 SP1, 및 Windows Server 2012에 설치 가능. |
+| PowerShell 3.0       |   2012년 10월   | Windows 8에서 Windows Server 2012와 통합. Windows 7 SP1, Windows Server 2008 SP1, 및 Windows Server 2008 R2 SP1에 설치 가능.  |
+| PowerShell 2.0       |   2009년 7월   | Windows 7 및 Windows Server 2008 R2에서 통합. Windows XP SP3, Windows Server 2003 SP2, 및 Windows Vista SP1에 설치 가능.            |
+| PowerShell 1.0       |   2006년 11월   | Windows XP SP2, Windows Server 2003 SP1 및 Windows Vista에 설치 가능. Windows Server 2008의 선택적 구성 요소.                          |
+
+<!-- hyperlink references -->
 [프리미어]: https://www.microsoft.com/en-us/microsoftservices/support.aspx
 [enterprise-agreement]: https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise.aspx
 [assurance]: https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx
