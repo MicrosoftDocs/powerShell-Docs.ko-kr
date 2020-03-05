@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f902fd4d-8f6e-4ef1-b07f-59983039a0d1
 caps.latest.revision: 10
-ms.openlocfilehash: dfe747893b4aef6376ea3b12dd79b7c144455ed0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 41cb32735091f065a0835378428de190d08f3160
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74415693"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278989"
 ---
 # <a name="cmdlet-parameter-sets"></a>Cmdlet 매개 변수 집합
 
@@ -31,7 +31,7 @@ PowerShell은 매개 변수 집합을 사용 하 여 다양 한 시나리오에 
 
 다음 그림에서 왼쪽 열에는 세 개의 유효한 매개 변수 집합이 표시 됩니다. **A 매개 변수는** 첫 번째 매개 변수 집합에 대해 고유 하며, **매개 변수 B** 는 두 번째 매개 변수 집합에 고유 하며, **C 매개 변수** 는 세 번째 매개 변수 집합에 대해 고유 합니다. 오른쪽 열에서 매개 변수 집합에는 고유한 매개 변수가 없습니다.
 
-![ps_parametersets](../media/ps-parametersets.gif)
+![ps_parametersets](media/cmdlet-parameter-sets/ps-parametersets.gif)
 
 ## <a name="parameter-set-requirements"></a>매개 변수 집합 요구 사항
 

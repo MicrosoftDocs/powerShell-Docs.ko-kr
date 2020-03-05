@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb55971a-4ea4-4c51-aeff-4e0bb05a51b2
 caps.latest.revision: 6
-ms.openlocfilehash: 98cac43698b3f537ee318cd2570b2174631665a7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7d399786b9b43ee302493359d9702981045212e9
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359632"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78277470"
 ---
 # <a name="creating-a-workflow-with-windows-powershell-activities"></a>Windows PowerShell 활동을 사용하여 워크플로 만들기
 
@@ -45,7 +45,7 @@ Visual Studio 도구 상자에서 작업을 선택 하 고 워크플로 디자�
 
 8. 다음과 같이 **GetWmiObject** 활동의 속성을 편집 합니다.
 
-   |속성|Value|
+   |속성|값|
    |--------------|-----------|
    |**클래스**|"Win32_ComputerSystem"|
    |**PSComputerName**|생략|
@@ -55,7 +55,7 @@ Visual Studio 도구 상자에서 작업을 선택 하 고 워크플로 디자�
 
 10. 다음과 같이 **Addcomputer** 활동의 속성을 편집 합니다.
 
-    |속성|Value|
+    |속성|값|
     |--------------|-----------|
     |**컴퓨터 이름**|생략|
     |**DomainCredential**|DomainCred|
@@ -64,11 +64,11 @@ Visual Studio 도구 상자에서 작업을 선택 하 고 워크플로 디자�
 
 12. 다음과 같이 **RestartComputer** 활동의 속성을 편집 합니다.
 
-    |속성|Value|
+    |속성|값|
     |--------------|-----------|
     |**컴퓨터 이름**|생략|
     |**자격 증명**|MachineCred|
-    |**형식**|Microsoft. PowerShell. WaitForServiceTypes. PowerShell|
+    |**에 대 한**|Microsoft. PowerShell. WaitForServiceTypes. PowerShell|
     |**설정**|True|
     |연결 시도 간격|True|
     |PSComputerName|{""}|
@@ -77,5 +77,5 @@ Visual Studio 도구 상자에서 작업을 선택 하 고 워크플로 디자�
 
     절차를 완료 하면 워크플로 디자인 창이 다음과 같이 표시 됩니다.
 
-    workflow designer의 JoinDomain XAML ![workflow designer ![의 JOINDOMAIN xaml](../media/joindomainworkflow.png "JoinDomainWorkflow")](../media/joindomainworkflow.png)
+    workflow designer의 JoinDomain XAML ![workflow designer ![의 JOINDOMAIN xaml](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png "JoinDomainWorkflow")](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png)
     
