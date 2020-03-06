@@ -8,18 +8,21 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dc5ce5a2-50e9-4c88-abf1-ac148a8a6b7b
 caps.latest.revision: 15
-ms.openlocfilehash: 5957ea4c15cd3778bd09b67c4b97de0ef0cfdd2a
-ms.sourcegitcommit: 0e4c69d8b5cf71431592fe41da816dec9b70f1f9
+ms.openlocfilehash: b176d8439025ac132962859f79e72ae6f9703e82
+ms.sourcegitcommit: 4a26c05f162c4fa347a9d67e339f8a33e230b9ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74953843"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78405047"
 ---
 # <a name="modifying-the-psmodulepath-installation-path"></a>PSModulePath 설치 경로 수정
 
 `PSModulePath` 환경 변수는 디스크에 설치 된 모듈의 위치에 대 한 경로를 저장 합니다. PowerShell에서는 사용자가 모듈의 전체 경로를 지정 하지 않은 경우이 변수를 사용 하 여 모듈을 찾습니다. 이 변수의 경로는 표시 된 순서 대로 검색 됩니다.
 
-PowerShell이 시작 되 면 다음과 같은 기본값을 사용 하는 시스템 환경 변수로 `PSModulePath` 만들어집니다. Windows PowerShell의 경우 `$HOME\Documents\PowerShell\Modules; $PSHOME\Modules` 또는 `$HOME\Documents\WindowsPowerShell\Modules; $PSHOME\Modules`입니다.
+PowerShell이 시작 되 면 다음과 같은 기본값을 사용 하는 시스템 환경 변수로 `PSModulePath` 만들어집니다. Windows 및 Linux 또는 Mac에서 `$HOME/.local/share/powershell/Modules: usr/local/share/powershell/Modules` `$HOME\Documents\PowerShell\Modules; $PSHOME\Modules` Windows PowerShell의 경우 `$HOME\Documents\WindowsPowerShell\Modules; $PSHOME\Modules`.
+
+> [!NOTE]
+> 사용자 고유의 **CurrentUser** 위치는 사용자 프로필의 **문서** 위치에 있는 `WindowsPowerShell\Modules` 폴더입니다. 해당 위치의 특정 경로는 Windows의 버전에 따라 다르며 폴더 리디렉션을 사용 하는지 여부에 따라 다릅니다. 기본적으로 Windows 10에서는 해당 위치가 `$HOME\Documents\WindowsPowerShell\Modules`됩니다.
 
 ## <a name="to-view-the-psmodulepath-variable"></a>PSModulePath 변수를 보려면
 
@@ -56,3 +59,5 @@ PowerShell이 시작 되 면 다음과 같은 기본값을 사용 하는 시스�
 ## <a name="see-also"></a>참고 항목
 
 [Windows PowerShell 모듈 작성](./writing-a-windows-powershell-module.md)
+
+[about_Modules](/powershell/module/microsoft.powershell.core/about/about_modules)
