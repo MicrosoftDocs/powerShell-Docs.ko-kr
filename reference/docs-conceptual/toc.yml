@@ -6,7 +6,7 @@
   items:
     - name: 다양한 버전의 PowerShell 설치
       href: install/installing-powershell.md
-    - name: PowerShell Core
+    - name: PowerShell 설치
       items:
         - name: Windows에서 PowerShell Core 설치
           href: install/installing-powershell-core-on-windows.md
@@ -16,7 +16,7 @@
           href: install/installing-powershell-core-on-macos.md
         - name: ARM에서 PowerShell Core 설치
           href: install/powershell-core-on-arm.md
-    - name: Windows PowerShell
+    - name: Windows PowerShell 5.1 설치
       items:
         - name: Windows PowerShell 설치
           href: install/installing-windows-powershell.md
@@ -24,6 +24,8 @@
           href: install/installing-the-windows-powershell-2.0-engine.md
         - name: Windows PowerShell 시스템 요구 사항
           href: install/windows-powershell-system-requirements.md
+    - name: Docker에서 PowerShell 사용
+      href: install/PowerShell-in-Docker.md
 - name: 시작하기
   items:
     - name: PowerShell 시작
@@ -268,6 +270,10 @@
       href: gallery/faqs.md
 - name: What's New
   items:
+    - name: PowerShell 7.x의 새로운 기능
+      items:
+        - name: PowerShell 7.0의 새로운 기능
+          href: whats-new/what-s-new-in-powershell-70.md
     - name: PowerShell Core 6.x의 새로운 기능
       items:
         - name: PowerShell Core 6.2의 새로운 기능
