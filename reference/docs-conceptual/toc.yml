@@ -8,13 +8,13 @@
       href: install/installing-powershell.md
     - name: PowerShell 설치
       items:
-        - name: Windows에서 PowerShell Core 설치
+        - name: Windows에 PowerShell 설치
           href: install/installing-powershell-core-on-windows.md
-        - name: Linux에서 PowerShell Core 설치
+        - name: Linux에 PowerShell 설치
           href: install/installing-powershell-core-on-linux.md
-        - name: macOS에서 PowerShell Core 설치
+        - name: MacOS에 PowerShell 설치
           href: install/installing-powershell-core-on-macos.md
-        - name: ARM에서 PowerShell Core 설치
+        - name: ARM에 PowerShell 설치
           href: install/powershell-core-on-arm.md
     - name: Windows PowerShell 5.1 설치
       items:
@@ -296,6 +296,8 @@
           href: whats-new/what-s-new-in-the-powershell-50-ise.md
     - name: 모듈 및 cmdlet 릴리스 기록
       href: whats-new/cmdlet-versions.md
+    - name: 모듈 호환성 목록
+      href: whats-new/module-compatibility.md
 - name: PowerShell Core 지원 수명 주기
   href: powershell-support-lifecycle.md
 - name: WMF(Windows Management Framework)
