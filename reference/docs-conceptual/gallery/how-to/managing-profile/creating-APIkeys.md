@@ -3,12 +3,12 @@ ms.date: 09/10/2018
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: API 키 관리
-ms.openlocfilehash: 954eb27c25babdb8efe50c13caf5f2d287c6b3e3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0f44a080415f1acf13680771b6e9db5b805f8f45
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328294"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278308"
 ---
 # <a name="managing-api-keys"></a>API 키 관리
 
@@ -19,7 +19,7 @@ PowerShell 갤러리는 다양한 API 요구 사항을 지원하기 위해 여�
 
 다음 이미지에서는 범위가 지정된 API 키를 만들 때 사용할 수 있는 옵션을 보여 줍니다.
 
-![API 키 만들기](../../Images/PSGallery_KeyScoped.png)
+![API 키 만들기](media/creating-APIkeys/PSGallery_KeyScoped.png)
 
 이 예에서는 **AzureRMDataFactory**라는 API 키를 만들었습니다. 이 키 값은 'AzureRM.DataFactory'로 시작하고 365일 동안 유효한 이름의 패키지를 푸시하는 데 사용할 수 있습니다. 동일한 조직 내의 여러 팀이 서로 다른 패키지에서 작업하는 일반적인 시나리오입니다. 팀 멤버에게는 자신이 작업할 특정 패키지에 대한 권한이 부여되는 키가 있습니다.
 만료 값은 부실하거나 잊어버린 키를 사용하지 않도록 방지합니다.
@@ -32,7 +32,7 @@ PowerShell 갤러리는 다양한 API 요구 사항을 지원하기 위해 여�
 
 보안을 위해 새로 만든 키 값은 화면에 표시되지 않으며, 아래와 같이 [복사] 단추로만 사용할 수 있습니다.
 
-![새 API 키 값 가져오기](../../Images/PSGallery_CopyCreatedKey.png)
+![새 API 키 값 가져오기](media/creating-APIkeys/PSGallery_CopyCreatedKey.png)
 
 > [!IMPORTANT]
 > API 키 값은 만들거나 새로 고친 직후에만 복사할 수 있습니다. 표시되지 않으며, 페이지를 새로 고친 후에는 다시 액세스할 수 없습니다. 키 값을 잃어버리면 [다시 생성]을 사용하고, 다시 생성된 후에 키를 복사해야 합니다.
@@ -59,7 +59,7 @@ PowerShell 갤러리는 다양한 API 요구 사항을 지원하기 위해 여�
 
 기존 키의 일부 설정은 변경할 수 있습니다. 앞에서 설명한 대로 기존 API 키에 대한 보안 범위를 수정하거나 만료 시간을 변경할 수 없습니다. 변경할 수 있는 옵션은 다음 스크린샷과 같습니다.
 
-![새 API 키 값 가져오기](../../Images/PSGallery_EditAPIKey.png)
+![새 API 키 값 가져오기](media/creating-APIkeys/PSGallery_EditAPIKey.png)
 
 키로 제어되는 패키지를 변경하려면 목록에서 개별 패키지를 선택하거나 GLOB 패턴을 변경할 수 있습니다.
 

@@ -2,12 +2,12 @@
 title: PowerShell Core 6.1의 새로운 기능
 description: PowerShell Core 6.1에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 09/13/2018
-ms.openlocfilehash: 531259217f2b71213776e7d394616c7790e9aca9
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 079d5a472c743ce94f2e93143c1dcb4ff406951f
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995511"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78277745"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>PowerShell Core 6.1의 새로운 기능
 
@@ -169,7 +169,7 @@ Markdown은 HTML로 렌더링할 수 있는 기본 서식의 읽을 수 있는 �
 
 예를 들어 `Show-Markdown`은 콘솔에 Markdown 파일을 렌더링합니다.
 
-![Show-Markdown 예제](./images/markdown_example.png)
+![Show-Markdown 예제](media/What-s-New-in-PowerShell-Core-61/markdown_example.png)
 
 이러한 cmdlet의 작동 방식에 대한 자세한 내용은 [이 RFC](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0025-Native-Markdown-Rendering.md)를 확인하세요.
 
@@ -264,7 +264,7 @@ SSH 클라이언트는 일반적으로 `user@host:port` 형식의 연결 문자�
 
 [@bergmeister](https://github.com/bergmeister) 덕분에 이제 Windows에서 상황에 맞는 메뉴를 사용할 수 있습니다. 이제 Windows 탐색기의 어느 폴더에서나 PowerShell 6.1의 시스템 수준 설치를 열 수 있습니다.
 
-![PowerShell 6을 위한 셸 상황에 맞는 메뉴](./images/shell_context_menu.png)
+![PowerShell 6을 위한 셸 상황에 맞는 메뉴](media/What-s-New-in-PowerShell-Core-61/shell_context_menu.png)
 
 ## <a name="goodies"></a>혜택
 
@@ -272,7 +272,7 @@ SSH 클라이언트는 일반적으로 `user@host:port` 형식의 연결 문자�
 
 [@bergmeister](https://github.com/bergmeister) 덕분에 이제 “관리자 권한으로 실행”이 PowerShell Core 바로 가기의 점프 목록에 포함됩니다.
 
-![PowerShell 6 점프 목록의 관리자 권한으로 실행](./images/jumplist.png)
+![PowerShell 6 점프 목록의 관리자 권한으로 실행](media/What-s-New-in-PowerShell-Core-61/jumplist.png)
 
 ### <a name="cd---returns-to-previous-directory"></a>`cd -`가 이전 디렉터리를 반환
 

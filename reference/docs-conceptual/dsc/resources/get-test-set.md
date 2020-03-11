@@ -2,18 +2,18 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: Get-Test-Set
-ms.openlocfilehash: 42c1df6df2fbf65cbbb8407db613cac2e5b81cfb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: bf409f71c07c434fbc7389789e16575868d21b42
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954290"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278423"
 ---
 # <a name="get-test-set"></a>Get-Test-Set
 
 >적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-![가져오기, 테스트 및 설정](../media/get-test-set.png)
+![가져오기, 테스트 및 설정](media/get-test-set/get-test-set.png)
 
 PowerShell Desired State Configuration은 **Get**, **Test** 및 **Set** 프로세스 주위에 생성됩니다. DSC [리소스](resources.md)에는 각각 이와 같은 각 작업을 완료하는 메서드가 포함됩니다. [구성](../configurations/configurations.md)에서 리소스 블록을 정의하여 리소스의 **Get**, **Test** 및 **Set** 메서드에 대한 매개 변수가 되는 키를 입력합니다.
 
@@ -123,7 +123,7 @@ ModuleVersion = "1.0";
 
 적용되면 [로컬 구성 관리자](../managing-nodes/metaConfig.md)(LCM)가 ".mof" 파일에서 "Spooler" 값을 읽고 **Service** 리소스의 "MyService" 인스턴스에 대한 **Get**, **Test** 및 **Set**의 `-Name` 매개 변수에 이 값을 전달합니다.
 
-## <a name="get"></a>get
+## <a name="get"></a>가져오기
 
 리소스의 **Get** 메서드는 대상 노드에서 구성되어 있는 리소스의 상태를 검색합니다. 이 상태는 [해시 테이블](/powershell/module/microsoft.powershell.core/about/about_hash_tables)로 반환됩니다. **해시 테이블**의 키는 구성 가능한 값이거나 리소스가 허용하는 매개 변수입니다.
 
@@ -204,7 +204,7 @@ localhost       {[Service]Spooler}                                            Tr
 
 자세한 내용은 [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)을 참조하세요.
 
-## <a name="set"></a>Set(영문)
+## <a name="set"></a>설정
 
 리소스의 **Set** 메서드는 노드가 리소스의 ‘원하는 상태’를 강제로 준수하도록 합니다.  **Set** 메서드는 **멱등성(idempotent)** 이 되어야 합니다. 이는 **Set**이 여러 번 실행되고 오류 없이 항상 동일한 결과를 가져올 수 있음을 의미합니다.  [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration)을 실행하면 LCM은 현재 적용된 구성에서 각 리소스를 순환합니다. LCM은 “.mof” 파일에서 현재 리소스 인스턴스의 키 값을 검색하고 **Test** 메서드의 매개 변수로 이 값을 사용합니다. **Test** 메서드가 `$True`를 반환하면 노드는 현재 리소스를 준수하고 **Set** 메서드를 건너뜁니다. **Test**가 `$False`를 반환하면 노드는 비준수 상태입니다.  LCM은 리소스 인스턴스의 키 값을 매개 변수로 리소스의 **Set** 메서드에 전달하여 노드를 준수 상태로 복원합니다.
 

@@ -3,18 +3,18 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Azure 자동화에 배포
-ms.openlocfilehash: 707691e24a77647064e60da0d9a31ad5eece1c59
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5d09a0777c59b642400d683c8cb6f881319fb881
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71327914"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278746"
 ---
 # <a name="deploy-to-azure-automation"></a>Azure 자동화에 배포
 
 패키지 세부 정보 페이지의 Azure Automation에 배포 단추를 클릭하면 PowerShell 갤러리의 패키지가 Azure Automation에 배포됩니다.
 
-![Azure Automation에 배포](../../Images/DeployToAzureAutomationButton.png)
+![Azure Automation에 배포](media/deploy-to-azure-automation/DeployToAzureAutomationButton.png)
 
 클릭하면 Azure 관리 포털로 리디렉션되며, 여기서 Azure 계정 자격 증명을 사용하여 로그인합니다.
 패키지에 종속성이 포함된 경우 모든 종속성도 Azure Automation에 배포됩니다.
@@ -30,7 +30,7 @@ ms.locfileid: "71327914"
 
 Azure Automation에 배포되는 모듈에 라이선스 동의가 필요한 경우 포털 UI에 ‘This module requires license acceptance. By clicking OK, you are accepting license terms.’(이 모듈은 라이선스 동의가 필요합니다. [확인]을 클릭하면 라이선스 조건에 동의하게 됩니다.)가 표시됩니다.
 
-![Azure Automation에 배포하려면 라이선스 동의 필요](../../Images/DeployToAzureAutomationRequireLicenseAcceptanceDisclaimer.png)
+![Azure Automation에 배포하려면 라이선스 동의 필요](media/deploy-to-azure-automation/DeployToAzureAutomationRequireLicenseAcceptanceDisclaimer.png)
 
 ## <a name="more-details"></a>자세한 내용
 

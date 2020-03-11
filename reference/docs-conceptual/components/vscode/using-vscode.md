@@ -2,12 +2,12 @@
 title: PowerShell 개발에 Visual Studio 코드 사용
 description: PowerShell 개발에 Visual Studio 코드 사용
 ms.date: 11/07/2019
-ms.openlocfilehash: 4f197e71d3b79828f466584f5d862415726818b1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 16ae228c0d169261b783366a730fd2d5d77d32d6
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74117389"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78279074"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>PowerShell 개발에 Visual Studio 코드 사용
 
@@ -48,7 +48,7 @@ Windows 10을 사용하거나 하위 수준의 Windows OS(예: Windows 8.1 등)�
    1. 사이드바에 **확장** 보기가 열립니다. Microsoft의 PowerShell 확장을 선택합니다.
       다음 이미지와 비슷한 VSCode 화면이 표시되어야 합니다.
 
-      ![VSCode](../../images/using-vscode/vscode.png)
+      ![VSCode](media/using-vscode/vscode.png)
 
    1. Microsoft의 PowerShell 확장에서 **설치** 단추를 클릭합니다.
    1. 설치 후 **설치** 단추가 **다시 로드**로 바뀌는 것을 볼 수 있습니다. **다시 로드**를 클릭합니다.
@@ -157,7 +157,7 @@ VSCode에는 다음 구성 설정을 권장합니다.
 }
 ```
 
-이러한 설정이 모든 파일 형식에 영향을 주지 않으려는 경우 VSCode에서 언어별 구성을 허용할 수도 있습니다. `[<language-name>]` 필드에서 설정을 지정하여 언어별 설정을 만듭니다. 예:
+이러한 설정이 모든 파일 형식에 영향을 주지 않으려는 경우 VSCode에서 언어별 구성을 허용할 수도 있습니다. `[<language-name>]` 필드에서 설정을 지정하여 언어별 설정을 만듭니다. 다음은 그 예입니다.
 
 ```json
 "[powershell]": {

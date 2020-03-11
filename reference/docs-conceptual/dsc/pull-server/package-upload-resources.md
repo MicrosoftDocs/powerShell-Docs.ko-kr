@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: 리소스 패키지 및 끌어오기 서버에 업로드
-ms.openlocfilehash: 29a62f96393a53c9e7da57a5e51732dcb0937194
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8aac343d7495ecda94ed76d1d97079397eecd65f
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954380"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278507"
 ---
 # <a name="package-and-upload-resources-to-a-pull-server"></a>리소스 패키지 및 끌어오기 서버에 업로드
 
@@ -27,7 +27,7 @@ ms.locfileid: "71954380"
 
 원하는 유틸리티, 스크립트 또는 메서드를 사용하여 리소스 디렉터리를 압축할 수 있습니다. Windows에서는 "xPSDesiredStateConfiguration" 디렉터리를 ‘마우스 오른쪽 단추로 클릭’하고 "보내기", "압축 폴더"를 차례로 선택합니다. 
 
-![마우스 오른쪽 단추로 클릭](../media/right-click.gif)
+![마우스 오른쪽 단추로 클릭](media/package-upload-resources/right-click.gif)
 
 ### <a name="naming-the-resource-archive"></a>리소스 보관 파일 이름 지정
 

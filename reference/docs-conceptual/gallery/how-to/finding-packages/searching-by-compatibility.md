@@ -3,12 +3,12 @@ ms.date: 12/11/2018
 contributor: JKeithB, SydneyhSmith
 keywords: gallery,powershell,cmdlet,psgallery
 title: 호환 가능한 PowerShell 버전 또는 운영 체제가 있는 패키지
-ms.openlocfilehash: 14038aa9b0453e1d06e6587e97da391b56297c75
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b414ce2c2b189e9da150cbe612e0bb2572d39e76
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328444"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278375"
 ---
 # <a name="packages-with-compatible-powershell-editions-or-operating-systems"></a>호환 가능한 PowerShell 버전 또는 운영 체제가 있는 패키지
 
@@ -25,7 +25,7 @@ ms.locfileid: "71328444"
 패키지에서 호환되는 PSEdition을 지정한 경우 패키지 표시 페이지 및 패키지 결과에 'PowerShell 버전'의 일부로 표시됩니다.
 PowerShell을 사용하여 호환 가능한 패키지를 검색할 수도 있습니다.
 
-![PSEditions가 있는 항목 표시 페이지](../../Images/packagedisplaypagewithpseditions.PNG)
+![PSEditions가 있는 항목 표시 페이지](media/searching-by-compatibility/packagedisplaypagewithpseditions.PNG)
 
 ### <a name="search-for-packages-in-the-gallery-ui-that-work-on-powershell-core"></a>PowerShell Core에서 작동하는 패키지 갤러리 UI에서 검색
 
@@ -33,11 +33,11 @@ Tags:"PSEdition_Desktop" 및 Tags:"PSEdition_Core"를 사용하여 PowerShell �
 
 ### <a name="use-tagspsedition_core-to-search-items-compatible-with-powershell-core-edition"></a>Tags:"PSEdition_Core"를 사용하여 PowerShell Core Edition과 호환되는 항목을 검색합니다.
 
-![Core PSEdition과 호환되는 항목에 대한 검색 결과](../../Images/searchresultswithpseditions.PNG)
+![Core PSEdition과 호환되는 항목에 대한 검색 결과](media/searching-by-compatibility/searchresultswithpseditions.PNG)
 
 ### <a name="use-tagspsedition_desktop-to-search-items-compatible-with-powershell-desktop-edition"></a>Tags:"PSEdition_Desktop"을 사용하여 PowerShell Desktop Edition과 호환되는 항목을 검색합니다.
 
-![Desktop PSEdition과 호환되는 항목에 대한 검색 결과](../../Images/searchresultswithpseditionsdesktop.PNG)
+![Desktop PSEdition과 호환되는 항목에 대한 검색 결과](media/searching-by-compatibility/searchresultswithpseditionsdesktop.PNG)
 
 ### <a name="search-for-packages-to-find-compatible-editions-using-powershell"></a>패키지를 검색하여 PowerShell을 사용하여 호환 가능한 버전 찾기
 PowerShell 버전 및 OS에서 필터링할 태그를 지정할 수 있습니다.

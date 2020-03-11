@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: PowerShell 갤러리 FAQ
-ms.openlocfilehash: 70e2220bd68b351e0b09dd3c59901104f7874335
-ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
+ms.openlocfilehash: 9572a61d38b0d540b0b8933405810ac4f2b6377e
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76818127"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278184"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
@@ -148,7 +148,7 @@ PowerShell cmdlet 계층에서 [Install-Module][]은 실제로 Install-Package -
 
 PackageManagement 패키지 공급자 계층에서 PSModule 패키지 공급자는 실제로 다른 PackageManagement 패키지 공급자를 호출합니다. 예를 들어 NuGet 기반 갤러리(예: PowerShell 갤러리)로 작업하는 경우 PSModule 패키지 공급자는 NuGet 패키지 공급자를 사용하여 리포지토리에서 작업합니다.
 
-![PowerShellGet 아키텍처](Images/powershellgetArchitecture.png)
+![PowerShellGet 아키텍처](media/faqs/powershellgetArchitecture.png)
 
 그림 1: PowerShellGet 아키텍처
 

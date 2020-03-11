@@ -3,12 +3,12 @@ ms.date: 09/05/2018
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: PowerShell 갤러리 계정 설정
-ms.openlocfilehash: ebe784ec5aae5ff3a4d444d12a168ef38aaef65f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: db61c3fd8c73048b51f3411a8c1dab52fb03d08a
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328034"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278115"
 ---
 # <a name="powershell-gallery-account-settings"></a>PowerShell 갤러리 계정 설정
 
@@ -25,7 +25,7 @@ PowerShell 갤러리에서 제공하는 계정 설정은 다음과 같습니다.
 
 이메일 주소는 PowerShell 갤러리 알림의 대상입니다. 로그인 계정과 일치할 필요가 없습니다. 액세스할 수 있는 이메일 계정을 사용할 수 있습니다. 이메일 주소는 PowerShell 갤러리에서 다른 사용자에게 직접 제공하지 않습니다.
 
-![이메일 주소 변경](../../Images/PSGallery_AcccountEmailAddress.png)
+![이메일 주소 변경](media/managing-account/PSGallery_AcccountEmailAddress.png)
 
 새 이메일 주소를 입력하면 PowerShell 갤러리에서 해당 주소로 확인 메일을 보냅니다. 확인 메일에는 변경 프로세스를 완료하기 위해 PowerShell 갤러리에 다시 연결되는 링크가 포함되어 있습니다. 확인 프로세스가 완료될 때까지 모든 알림은 이전 주소로 보내집니다.
 
@@ -36,10 +36,10 @@ PowerShell 갤러리에서 제공하는 알림 옵션은 다음과 같습니다.
 - 사용자가 PowerShell 갤러리를 통해 연락할 수 있음
 - 내 계정을 사용하여 PowerShell 갤러리에 패키지를 푸시할 때 알림
 
-![이메일 주소 변경](../../Images/PSGallery_AccountEmailOptions.png)
+![이메일 주소 변경](media/managing-account/PSGallery_AccountEmailOptions.png)
 
 페이지에서 설명한 대로 PowerShell 갤러리의 중요 알림은 해제할 수 없습니다.
-몇 가지 작업이 있습니다.
+이러한 개체는 다음과 같습니다.
 
 - 보안 알림
 - PowerShell 갤러리 관리자의 계정 관리 알림
@@ -49,20 +49,20 @@ PowerShell 갤러리에서 제공하는 알림 옵션은 다음과 같습니다.
 
 로그인 계정을 변경하려면 현재 계정으로 로그인해야 합니다. 변경을 완료하려면 다음 단계를 사용합니다.
 
-![로그인 계정 설정](../../Images/PSGallery_LoginAccountSettings.png)
+![로그인 계정 설정](media/managing-account/PSGallery_LoginAccountSettings.png)
 
 1. **계정 변경**을 클릭합니다. 팝업 창에서 로그인 계정을 변경하면 PowerShell 갤러리에 있는 해당 계정의 모든 사용에 적용된다고 설명합니다. 정보를 검토한 다음, **확인**을 클릭하여 계속합니다.
 
-   ![로그인 계정 설정](../../Images/PSGallery_LoginAccountChange-1.png)
+   ![로그인 계정 설정](media/managing-account/PSGallery_LoginAccountChange-1.png)
 
 2. 그런 다음, _새 계정_을 사용하여 로그인하라는 메시지가 표시됩니다.
 
-   ![로그인 계정 설정](../../Images/PSGallery_LoginAccountChange-2.png)
+   ![로그인 계정 설정](media/managing-account/PSGallery_LoginAccountChange-2.png)
 
 3. **다음**을 클릭하면 현재 계정을 사용하여 로그인했다는 메시지가 표시됩니다.
    **다른 계정으로 로그아웃 및 로그인**을 클릭합니다.
 
-   ![로그인 계정 설정](../../Images/PSGallery_LoginAccountChange-3.png)
+   ![로그인 계정 설정](media/managing-account/PSGallery_LoginAccountChange-3.png)
 
 4. 새 계정의 암호를 입력합니다. 암호가 입력되면 로그인 계정이 업데이트되었음을 보여 주는 [계정 설정] 페이지로 돌아갑니다.
 
