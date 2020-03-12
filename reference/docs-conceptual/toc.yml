@@ -726,6 +726,36 @@
           href: samples/appendix-1---compatibility-aliases.md
         - name: 부록 2 사용자 지정 PowerShell 바로 가기 만들기
           href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
+- name: 커뮤니티
+  items:
+    - name: 커뮤니티 리소스
+      href: community/community-support.md
+    - name: 디지털 아트
+      href: community/digital-art.md
+    - name: PowerShell Docs의 새로운 소식
+      href: community/whats-new-in-docs.md
+    - name: 기여자 가이드
+      items:
+        - name: 개요
+          href: community/contributing/overview.md
+        - name: Docs 이슈를 제출하는 방법
+          href: community/contributing/file-an-issue.md
+        - name: 문서 작성 시작
+          href: community/contributing/get-started-writing.md
+        - name: 끌어오기 요청 제출
+          href: community/contributing/pull-requests.md
+        - name: PowerShell-Docs 스타일 가이드
+          href: community/contributing/powershell-style-guide.md
+        - name: cmdlet 참조 편집
+          href: community/contributing/editing-cmdlet-ref.md
+        - name: 추가 리소스
+          items:
+            - name: 편집 검사 목록
+              href: community/contributing/editorial-checklist.md
+            - name: 이슈를 관리하는 방법
+              href: community/contributing/managing-issues.md
+            - name: 끌어오기 요청을 관리하는 방법
+              href: community/contributing/managing-pull-requests.md
 - name: PowerShell SDK
   items:
     - name: 개요

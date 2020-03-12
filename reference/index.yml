@@ -9,12 +9,12 @@ metadata:
   author: sdwheeler
   ms.author: sewhee
   ms.date: 09/04/2019
-  ms.openlocfilehash: 67d3f5f1816a11933183d079d2eb4bd3a5ab6e66
-  ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+  ms.openlocfilehash: 00a24bcf26f6f17e2a6badad4c9a045f570d8962
+  ms.sourcegitcommit: 18d832858a7b8ea094763afa753e0f48f01372e7
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/04/2020
-  ms.locfileid: "76996083"
+  ms.lasthandoff: 03/10/2020
+  ms.locfileid: "79058874"
 highlightedContent:
   items:
   - title: 개요
@@ -110,9 +110,9 @@ tools:
   - title: 사용자 그룹
     imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_group.svg
     url: https://aka.ms/psusergroup
-  - title: TechNet 포럼
+  - title: PowerShell Tech Community
     imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_group-feedback.svg
-    url: https://social.technet.microsoft.com/forums/home?forum=winserverpowershell
+    url: https://techcommunity.microsoft.com/t5/PowerShell/ct-p/WindowsPowerShell
   - title: DSC 커뮤니티
     imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_group-feedback.svg
     url: https://dsccommunity.org/
@@ -133,7 +133,7 @@ tools:
     url: http://poshcode.org/discord
   - title: 디지털 아트
     imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_digital-art.svg
-    url: digital-art.md
+    url: https://docs.microsoft.com/powershell/scripting/community/digital-art.md
 additionalContent:
   sections:
   - title: PowerShell 팀
