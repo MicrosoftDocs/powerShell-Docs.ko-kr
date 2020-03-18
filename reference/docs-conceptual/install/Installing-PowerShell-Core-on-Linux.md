@@ -1,21 +1,28 @@
 ---
-title: Linux에서 PowerShell Core 설치
-description: 다양한 Linux 배포판에서 PowerShell Core를 설치하는 방법에 대한 정보
-ms.date: 07/19/2019
-ms.openlocfilehash: 3b0b9b1520247fa49760e631c837196fb7107b5f
-ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
+title: Linux에 PowerShell 설치
+description: 다양한 Linux 배포에 PowerShell을 설치하는 방법에 대한 정보
+ms.date: 03/09/2020
+ms.openlocfilehash: 0c7b2bd804d07b2fcb61a61240b139f84fabd6db
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022254"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402540"
 ---
-# <a name="installing-powershell-core-on-linux"></a>Linux에서 PowerShell Core 설치
+# <a name="installing-powershell-on-linux"></a>Linux에 PowerShell 설치
 
 [Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubuntu 18.10][u1810], [Ubuntu 19.04][u1904], [Debian 8][deb8], [Debian 9][deb9], [Debian 10][deb10], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [openSUSE 42.3][opensuse], [openSUSE Leap 15][opensuse], [Fedora 27][fedora], [Fedora 28][fedora], [Arch Linux][arch]를 지원합니다.
 
 공식적으로 지원되지 않는 Linux 배포의 경우 [PowerShell 맞춤 패키지][snap]를 사용하여 PowerShell을 설치해 볼 수 있습니다. 또한 Linux [`tar.gz` 보관][tar]을 사용하여 PowerShell 이진 파일을 직접 배포해 볼 수도 있지만 OS에 따라 별도의 단계로 필요한 종속성 패키지를 설치해야 합니다.
 
 모든 패키지는 GitHub [릴리스][] 페이지에 제공됩니다. 패키지를 설치한 후 실행하려면 터미널에서 `pwsh`를 실행합니다. [미리 보기 릴리스](#installing-preview-releases)를 설치한 경우 `pwsh-preview`를 실행합니다.
+
+> [!NOTE]
+> PowerShell 7은 PowerShell Core 6.x를 제거하는 현재 위치 업그레이드입니다.
+>
+> `/usr/local/microsoft/powershell/6` 폴더가 `/usr/local/microsoft/powershell/7`로 바뀝니다.
+>
+> PowerShell 6과 PowerShell 7을 함께 실행해야 하는 경우 [이진 아카이브](#binary-archives) 메서드를 사용하여 PowerShell 6을 다시 설치합니다.
 
 [u16]: #ubuntu-1604
 [u1804]: #ubuntu-1804
@@ -32,32 +39,26 @@ ms.locfileid: "76022254"
 [snap]: #snap-package
 [tar]: #binary-archives
 
-> [!TIP]
-> [.NET Core SDK](/dotnet/core/sdk)가 이미 설치되어 있는 경우 PowerShell을 [.NET 전역 도구](/dotnet/core/tools/global-tools)를 이용해 쉽게 설치할 수 있습니다.
->
-> ```
-> dotnet tool install --global PowerShell
-> ```
 
 ## <a name="installing-preview-releases"></a>미리 보기 릴리스 설치
 
-패키지 리포지토리를 통해 Linux용 PowerShell Core 미리 보기 버전을 설치하려면 패키지 이름을 `powershell`에서 `powershell-preview`로 변경하면 됩니다.
+패키지 리포지토리를 통해 Linux용 PowerShell 미리 보기 버전을 설치하면 패키지 이름이 `powershell`에서 `powershell-preview`로 변경됩니다.
 
 직접 다운로드를 통한 설치는 파일 이름 외에는 변경되지 않습니다.
 
 다음 표에는 다양한 패키지 관리자를 사용하여 안정적인/미리 보기 버전 패키지를 설치하는 명령이 들어 있습니다.
 
-|배포|안정적인 명령 | 미리 보기 명령 |
-|---------------|---------------|-----------------|
-| Ubuntu, Debian |`sudo apt-get install -y powershell`| `sudo apt-get install -y powershell-preview`|
-| CentOS, RedHat |`sudo yum install -y powershell` | `sudo yum install -y powershell-preview`|
-| Fedora   |`sudo dnf install -y powershell` | `sudo dnf install -y powershell-preview`|
+| 배포 |            안정적인 명령            |               미리 보기 명령                |
+| --------------- | ------------------------------------ | -------------------------------------------- |
+| Ubuntu, Debian  | `sudo apt-get install -y powershell` | `sudo apt-get install -y powershell-preview` |
+| CentOS, RedHat  | `sudo yum install -y powershell`     | `sudo yum install -y powershell-preview`     |
+| Fedora          | `sudo dnf install -y powershell`     | `sudo dnf install -y powershell-preview`     |
 
 ## <a name="ubuntu-1604"></a>Ubuntu 16.04
 
 ### <a name="installation-via-package-repository---ubuntu-1604"></a>패키지 리포지토리를 통해 설치 - Ubuntu 16.04
 
-Linux용 PowerShell Core는 간편한 설치 및 업데이트를 위해 패키지 리포지토리에 게시됩니다.
+Linux용 PowerShell은 간편한 설치 및 업데이트를 위해 패키지 리포지토리에 게시됩니다.
 
 기본 방법은 다음과 같습니다.
 
@@ -104,7 +105,7 @@ sudo apt-get remove powershell
 
 ### <a name="installation-via-package-repository---ubuntu-1804"></a>패키지 리포지토리를 통해 설치 - Ubuntu 18.04
 
-Linux용 PowerShell Core는 간편한 설치 및 업데이트를 위해 패키지 리포지토리에 게시됩니다.
+Linux용 PowerShell은 간편한 설치 및 업데이트를 위해 패키지 리포지토리에 게시됩니다.
 
 기본 방법은 다음과 같습니다.
 
@@ -168,7 +169,7 @@ sudo apt-get remove powershell
 
 ### <a name="installation-via-package-repository---debian-8"></a>패키지 리포지토리를 통해 설치 - Debian 8
 
-Linux용 PowerShell Core는 간편한 설치 및 업데이트를 위해 패키지 리포지토리에 게시됩니다.
+Linux용 PowerShell은 간편한 설치 및 업데이트를 위해 패키지 리포지토리에 게시됩니다.
 
 기본 방법은 다음과 같습니다.
 
@@ -199,7 +200,7 @@ pwsh
 
 ### <a name="installation-via-package-repository---debian-9"></a>패키지 리포지토리를 통해 설치 - Debian 9
 
-Linux용 PowerShell Core는 간편한 설치 및 업데이트를 위해 패키지 리포지토리에 게시됩니다.
+Linux용 PowerShell은 간편한 설치 및 업데이트를 위해 패키지 리포지토리에 게시됩니다.
 
 기본 방법은 다음과 같습니다.
 
@@ -250,7 +251,7 @@ sudo apt-get remove powershell
 
 ### <a name="installation-via-direct-download---debian-10"></a>직접 다운로드를 통해 설치 - Debian 10
 
-[릴리스][] 페이지의 tar.gz 패키지 `powershell_7.0.0-preview-7-linux-x64.tar.gz`를 Debian 컴퓨터에 다운로드합니다.
+[릴리스][] 페이지의 tar.gz 패키지 `powershell_7.0.0-linux-x64.tar.gz`를 Debian 컴퓨터에 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
@@ -272,22 +273,22 @@ sudo apt-get install -y \
         curl
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.0-preview.4/powershell-7.0.0-preview.4-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L  https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/powershell-7.0.0-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
-sudo mkdir -p /opt/microsoft/powershell/7-preview
+sudo mkdir -p /opt/microsoft/powershell/7
 
 # Expand powershell to the target folder
-sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7-preview
+sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7
 
 # Set execute permissions
-sudo chmod +x /opt/microsoft/powershell/7-preview/pwsh
+sudo chmod +x /opt/microsoft/powershell/7/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /opt/microsoft/powershell/7-preview/pwsh /usr/bin/pwsh-preview
+sudo ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
 
 # Start PowerShell
-pwsh-preview
+pwsh
 ```
 
 ## <a name="alpine-39-and-310"></a>Alpine 3.9 및 3.10
@@ -297,7 +298,7 @@ pwsh-preview
 
 ### <a name="installation-via-direct-download---alpine-39-and-310"></a>직접 다운로드를 통해 설치 - Alpine 3.9 및 3.10
 
-[릴리스][] 페이지의 tar.gz 패키지 `powershell_7.0.0-preview-7-linux-x64.tar.gz`를 Alpine 컴퓨터에 다운로드합니다.
+[릴리스][] 페이지의 tar.gz 패키지 `powershell_7.0.0-linux-x64.tar.gz`를 Alpine 컴퓨터에 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
@@ -322,22 +323,22 @@ sudo apk -X https://dl-cdn.alpinelinux.org/alpine/edge/main add --no-cache \
     lttng-ust
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.0-preview.4/powershell-7.0.0-preview.4-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/powershell-7.0.0-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
-sudo mkdir -p /opt/microsoft/powershell/7-preview
+sudo mkdir -p /opt/microsoft/powershell/7
 
 # Expand powershell to the target folder
-sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7-preview
+sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7
 
 # Set execute permissions
-sudo chmod +x /opt/microsoft/powershell/7-preview/pwsh
+sudo chmod +x /opt/microsoft/powershell/7/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /opt/microsoft/powershell/7-preview/pwsh /usr/bin/pwsh-preview
+sudo ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
 
 # Start PowerShell
-pwsh-preview
+pwsh
 ```
 
 ## <a name="centos-7"></a>CentOS 7
@@ -347,7 +348,7 @@ pwsh-preview
 
 ### <a name="installation-via-package-repository-preferred---centos-7"></a>패키지 리포지토리를 통해 설치(권장) - CentOS 7
 
-Linux용 PowerShell Core는 간편한 설치 및 업데이트를 위해 공식 Microsoft 리포지토리에 게시됩니다.
+Linux용 PowerShell은 간편한 설치 및 업데이트를 위해 공식 Microsoft 리포지토리에 게시됩니다.
 
 ```sh
 # Register the Microsoft RedHat repository
@@ -390,7 +391,7 @@ sudo yum remove powershell
 
 ### <a name="installation-via-package-repository-preferred---red-hat-enterprise-linux-rhel-7"></a>패키지 리포지토리(권장)를 통해 설치 - Red Hat Enterprise Linux(RHEL) 7
 
-Linux용 PowerShell Core는 간편한 설치 및 업데이트를 위해 공식 Microsoft 리포지토리에 게시됩니다.
+Linux용 PowerShell은 간편한 설치 및 업데이트를 위해 공식 Microsoft 리포지토리에 게시됩니다.
 
 ```sh
 # Register the Microsoft RedHat repository
@@ -488,14 +489,14 @@ rm -rf /usr/bin/pwsh /opt/microsoft/powershell
 ## <a name="fedora"></a>Fedora
 
 > [!NOTE]
-> Fedora 28은 PowerShell Core 6.1 이상에서만 지원됩니다.
+> Fedora 28은 PowerShell 6.1 이상에서만 지원됩니다.
 
 > [!NOTE]
 > Fedora 29 및 30은 PowerShell 7.0 이상에서만 지원됩니다.
 
 ### <a name="installation-via-package-repository-preferred---fedora-28-29-and-30"></a>패키지 리포지토리를 통해 설치(권장) - Fedora 28, 29 및 30
 
-Linux용 PowerShell Core는 간편한 설치 및 업데이트를 위해 공식 Microsoft 리포지토리에 게시됩니다.
+Linux용 PowerShell은 간편한 설치 및 업데이트를 위해 공식 Microsoft 리포지토리에 게시됩니다.
 
 ```sh
 # Register the Microsoft signature key
@@ -569,7 +570,7 @@ AUR에서 패키지를 설치하는 방법에 대한 자세한 내용은 [Arch L
 
 ### <a name="installation-via-snap"></a>맞춤을 통해 설치
 
-Linux용 PowerShell Core는 간편한 설치 및 업데이트를 위해 [맞춤 저장소](https://snapcraft.io/store)에 게시됩니다.
+Linux용 PowerShell은 간편한 설치 및 업데이트를 위해 [맞춤 저장소](https://snapcraft.io/store)에 게시됩니다.
 
 기본 방법은 다음과 같습니다.
 
@@ -634,7 +635,7 @@ apt -y remove powershell
 
 현재 PowerShell은 Raspbian Stretch에서만 지원됩니다.
 
-[Pi Zero](https://github.com/dotnet/coreclr/issues/10605) 등의 다른 디바이스에는 지원되지 않는 프로세서가 있기 때문에 CoreCLR 및 PowerShell Core는 Pi 2 및 Pi 3 디바이스에서만 작동합니다.
+[Pi Zero](https://github.com/dotnet/coreclr/issues/10605)등의 다른 디바이스에는 지원되지 않는 프로세서가 있기 때문에 CoreCLR 및 PowerShell은 Pi 2 및 Pi 3 디바이스에서만 작동합니다.
 
 [Raspbian Stretch](https://www.raspberrypi.org/downloads/raspbian/)를 다운로드하고 [설치 지침](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)에 따라 Pi에 설치합니다.
 
@@ -683,6 +684,14 @@ sudo ~/powershell/pwsh -c New-Item -ItemType SymbolicLink -Path "/usr/bin/pwsh" 
 
 ```sh
 rm -rf ~/powershell
+```
+
+## <a name="install-as-a-net-global-tool"></a>.NET 전역 도구로 설치
+
+[.NET Core SDK](/dotnet/core/sdk)가 이미 설치되어 있는 경우 PowerShell을 [.NET 전역 도구](/dotnet/core/tools/global-tools)로 쉽게 설치할 수 있습니다.
+
+```
+dotnet tool install --global PowerShell
 ```
 
 ## <a name="binary-archives"></a>이진 아카이브
@@ -740,13 +749,13 @@ sudo rm -rf /usr/bin/pwsh /opt/microsoft/powershell
 
 ## <a name="paths"></a>경로
 
-* `$PSHOME`은 `/opt/microsoft/powershell/7/`입니다.
-* 사용자 프로필은 `~/.config/powershell/profile.ps1`에서 읽습니다.
-* 기본 프로필은 `$PSHOME/profile.ps1`에서 읽습니다.
-* 사용자 프로필은 `~/.local/share/powershell/Modules`에서 읽습니다.
-* 공유 모듈은 `/usr/local/share/powershell/Modules`에서 읽습니다.
-* 기본 모듈은 `$PSHOME/Modules`에서 읽습니다.
-* PSReadline 기록은 `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`에 기록됩니다.
+- `$PSHOME`은 `/opt/microsoft/powershell/7/`입니다.
+- 사용자 프로필은 `~/.config/powershell/profile.ps1`에서 읽습니다.
+- 기본 프로필은 `$PSHOME/profile.ps1`에서 읽습니다.
+- 사용자 프로필은 `~/.local/share/powershell/Modules`에서 읽습니다.
+- 공유 모듈은 `/usr/local/share/powershell/Modules`에서 읽습니다.
+- 기본 모듈은 `$PSHOME/Modules`에서 읽습니다.
+- PSReadline 기록은 `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`에 기록됩니다.
 
 프로필은 PowerShell의 호스트별 구성을 계속 사용하므로 기본 호스트별 프로필은 동일한 위치의 `Microsoft.PowerShell_profile.ps1`에 있습니다.
 

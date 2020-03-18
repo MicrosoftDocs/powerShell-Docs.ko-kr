@@ -3,11 +3,11 @@ ms.date: 06/27/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 웹 액세스의 권한 부여 규칙 및 보안 기능
 ms.openlocfilehash: c426b8cfb10829241ba244a5d840c91e1de9f66e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "62058423"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402610"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Windows PowerShell 웹 액세스의 권한 부여 규칙 및 보안 기능
 
@@ -47,7 +47,7 @@ IIS 모범 사례 및 서비스 거부 공격 방지에 대한 자세한 내용�
 
 다음 표에는 최종 사용자와 대상 컴퓨터 간의 4단계 보안 계층이 설명되어 있습니다.
 
-|수준|계층|
+|Level|계층|
 |-|-|
 |1|[IIS 웹 서버 보안 기능](#iis-web-server-security-features)|
 |2|[Windows PowerShell 웹 액세스 양식 기반 게이트웨이 인증](#windows-powershell-web-access-forms-based-gateway-authentication)|
@@ -127,7 +127,7 @@ Windows PowerShell 웹 액세스 cmdlet에서는 와일드카드 문자(\*)를 �
    ```
 
 4. **Get-PswaAuthorizationRule** cmdlet 또는 `Test-PswaAuthorizationRule -UserName <domain\user | computer\user> -ComputerName** <computer_name>`을 실행하여 이 규칙이 생성되어 있는지 확인합니다.
-   정의합니다(예: `Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214`).
+   `Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214`)을 입력합니다.
 
 #### <a name="to-remove-an-authorization-rule"></a>권한 부여 규칙을 제거하려면
 

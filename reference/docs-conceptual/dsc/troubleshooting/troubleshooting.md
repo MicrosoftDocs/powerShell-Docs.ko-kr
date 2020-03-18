@@ -3,11 +3,11 @@ ms.date: 10/30/2018
 keywords: dsc,powershell,configuration,setup
 title: DSC 문제 해결
 ms.openlocfilehash: 5cbe6496a6e0b9940f4b69e13d1e19e43b3915f0
-ms.sourcegitcommit: 5f199cd2a1b31dbcebaab44f2fe496f289831a30
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77478788"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402410"
 ---
 # <a name="troubleshooting-dsc"></a>DSC 문제 해결
 
@@ -628,7 +628,7 @@ onlyProperty                            PSComputerName
 14                                      localhost
 ```
 
-## <a name="dsc-returns-unexpected-response-code-internalservererror-when-registering-with-windows-pull-server"></a>Windows Pull Server에 등록할 때 DSC에서 "예기치 않은 응답 코드 InternalServerError" 반환
+## <a name="dsc-returns-unexpected-response-code-internalservererror-when-registering-with-windows-pull-server"></a>Windows Pull Server에 등록할 때 DSC에서 "예기치 않은 응답 코드 InternalServerError"를 반환합니다.
 
 서버에 메타 구성을 적용하여 Windows Pull Server 인스턴스에 등록할 때 다음과 같은 오류가 발생할 수 있습니다.
 

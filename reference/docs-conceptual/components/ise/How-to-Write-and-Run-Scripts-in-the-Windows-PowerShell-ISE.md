@@ -3,11 +3,11 @@ ms.date: 01/02/2020
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE에서 스크립트를 작성 및 실행하는 방법
 ms.openlocfilehash: 2e3122a3b436ba878d2c5f9d72d4f9e024d4d031
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75737069"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402530"
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Windows PowerShell ISE에서 스크립트를 작성 및 실행하는 방법
 

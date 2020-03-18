@@ -4,11 +4,11 @@ ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: WMF 5.x 릴리스 정보
 ms.openlocfilehash: 3fc712dbcbe184c60ae248b260c8f6800f111fdd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416512"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402360"
 ---
 # <a name="windows-management-framework-wmf-5x-release-notes"></a>WMF(Windows Management Framework) 5.x 릴리스 정보
 
@@ -96,7 +96,7 @@ WMF 5.1에서는 다음과 같습니다.
 
   이 해시 테이블은 `Get-Module -FullyQualifiedName`과 형식이 같습니다.
 
-  **예:** `using module @{ModuleName = 'PSReadLine'; RequiredVersion = '1.1'}`
+  **예제:** `using module @{ModuleName = 'PSReadLine'; RequiredVersion = '1.1'}`
 
 - 모듈의 여러 버전이 있는 경우 PowerShell에서는 `Import-Module`과 **동일한 해결 논리**를 사용하고 오류가 발생하지 않습니다. 동작은 `Import-Module` 및 `Import-DscResource`와 동일합니다.
 

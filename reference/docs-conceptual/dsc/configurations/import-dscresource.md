@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: Import-DSCResource 사용
-ms.openlocfilehash: 4bc269ab1dd4696298b4f33f7661473aae869eba
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a041169ad557becf7ca87641d9ce5222ee8f6beb
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417414"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402450"
 ---
 # <a name="using-import-dscresource"></a>Import-DSCResource 사용
 
@@ -19,7 +19,7 @@ ms.locfileid: "74417414"
 Import-DscResource [-Name <ResourceName(s)>] [-ModuleName <ModuleName>] [-ModuleVersion <ModuleVersion>]
 ```
 
-|매개 변수  |설명  |
+|매개 변수  |Description  |
 |---------|---------|
 |`-Name`|가져와야 하는 DSC 리소스 이름입니다. 모듈 이름을 지정하면 명령은 이 모듈 내에서 해당 DSC 리소스를 검색하고, 모듈 이름을 지정하지 않으면 명령은 모든 DSC 리소스 경로에서 DSC 리소스를 검색합니다. 와일드카드가 지원됩니다.|
 |`-ModuleName`|모듈 이름 또는 모듈 사양입니다.  모듈에서 가져올 리소스를 지정하면 명령은 해당 리소스만 가져옵니다. 모듈만 지정하면 명령은 모듈에 있는 모든 DSC 리소스를 가져옵니다.|
@@ -29,7 +29,7 @@ Import-DscResource [-Name <ResourceName(s)>] [-ModuleName <ModuleName>] [-Module
 Import-DscResource -ModuleName xActiveDirectory
 ```
 
-## <a name="example-use-import-dscresource-within-a-configuration"></a>예: 구성 내에서 Import-DSCResource 사용
+## <a name="example-use-import-dscresource-within-a-configuration"></a>예제: 구성 내에서 Import-DSCResource 사용
 
 ```powershell
 Configuration MSDSCConfiguration
@@ -80,7 +80,7 @@ Name 매개 변수를 사용하는 경우 고려해야 할 사항:
 
 ISE에서 DSC 구성을 작성하면 PowerShell에서는 리소스 및 리소스 속성에 대한 IntelliSense를 제공합니다. `$pshome` 모듈 경로 아래에 있는 리소스 정의가 자동으로 로드됩니다. `Import-DSCResource` 키워드를 사용하여 리소스를 가져오면 지정된 리소스 정의가 추가되고 가져온 리소스의 스키마를 포함하도록 IntelliSense가 확장됩니다.
 
-![리소스 IntelliSense](../media/resource-intellisense.png)
+![리소스 IntelliSense](media/import-dscresource/resource-intellisense.png)
 
 > [!NOTE]
 > PowerShell 5.0부터, 탭 완성이 DSC 리소스 및 해당 속성에 대한 ISE에 추가되었습니다. 자세한 내용은 [리소스](../resources/resources.md)를 참조하세요.
@@ -139,11 +139,11 @@ PowerShell 4.0에서는 여러 리소스 버전을 병렬로 설치 및 사용�
 
 아래 이미지에는 **xPSDesiredStateConfiguration** 모듈의 두 가지 버전이 설치되어 있습니다.
 
-![수정된 여러 리소스 버전](../media/multiple-resource-versions-broken.png)
+![수정된 여러 리소스 버전](media/import-dscresource/multiple-resource-versions-broken.png)
 
 원하는 모듈 버전의 콘텐츠를 모듈 디렉터리의 맨 위 수준으로 복사합니다.
 
-![수정된 여러 리소스 버전](../media/multiple-resource-versions-fixed.png)
+![수정된 여러 리소스 버전](media/import-dscresource/multiple-resource-versions-fixed.png)
 
 ### <a name="resource-location"></a>리소스 위치
 
