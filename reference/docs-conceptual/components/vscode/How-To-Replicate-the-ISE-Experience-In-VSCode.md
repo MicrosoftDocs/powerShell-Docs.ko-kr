@@ -2,12 +2,12 @@
 title: Visual Studio Code에서 ISE 환경을 복제하는 방법
 description: Visual Studio Code에서 ISE 환경을 복제하는 방법
 ms.date: 08/06/2018
-ms.openlocfilehash: d5542e9a3a48b1ae64356309be669418edf6c79e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 193243dc2e3e921b22a6ee068370200ae84ce4ac
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74117502"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78279264"
 ---
 # <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>Visual Studio Code에서 ISE 환경을 복제하는 방법
 
@@ -15,9 +15,25 @@ VSCode용 PowerShell 확장 PowerShell ISE와 완전히 동일한 기능을 제�
 
 이 문서에는 사용자 환경을 ISE보다는 조금 더 친숙하게 만들도록 VSCode에서 구성할 수 있는 설정이 나와 있습니다.
 
+## <a name="ise-mode"></a>ISE 모드
+
+> [!NOTE]
+> 이 기능은 버전 2019.12.0 이후 PowerShell 미리 보기 확장과 버전 2020.3.0 이후 PowerShell 확장에서 사용할 수 있습니다.
+
+Visual Studio Code에서 ISE 환경을 복제하는 가장 쉬운 방법은 "ISE 모드"를 설정하는 것입니다.
+이 작업을 수행하려면 명령 팔레트(<kbd>F1</kbd> 또는 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> 또는 macOS에서 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)를 열고 "ISE 모드"를 입력합니다.
+목록에서 "PowerShell: ISE 모드 사용"을 선택합니다.
+
+이 명령은 이 문서에 있는 많은 설정을 자동으로 적용합니다.
+결과는 다음과 같습니다.
+
+![ISE 모드](media/How-To-Replicate-the-ISE-Experience-In-VSCode/3-ise-mode.png)
+
+이 문서의 나머지 부분에는 ISE 모드의 설정 및 몇 가지 추가 설정에 대한 자세한 정보가 포함되어 있습니다.
+
 ## <a name="key-bindings"></a>키 바인딩
 
-| 기능                              | ISE 바인딩                  | VSCode 바인딩                              |
+| 함수                              | ISE 바인딩                  | VSCode 바인딩                              |
 | ----------------                      | -----------                  | --------------                              |
 | 디버거 중단          | <kbd>Ctrl</kbd>+<kbd>B</kbd> | <kbd>F6</kbd>                               |
 | 현재 줄/강조 표시된 텍스트 실행 | <kbd>F8</kbd>                | <kbd>F8</kbd>                               |
@@ -36,13 +52,16 @@ Visual Studio Code UI를 간소화하여 ISE의 UI를 보다 자세히 살펴보
 "debug.openDebug": "neverOpen",
 ```
 
+> [!NOTE]
+> 이러한 설정은 ["ISE 모드"](#ise-mode)에 포함되어 있습니다.
+
 이렇게 하면 빨간색 상자 내부 아래에 있는 "작업 표시줄" 및 "디버그 사이드 막대" 섹션이 숨겨집니다.
 
-![강조 표시된 섹션에는 작업 표시줄과 디버그 사이드 막대가 포함됩니다.](images/How-To-Replicate-the-ISE-Experience-In-VSCode/1-highlighted-sidebar.png)
+![강조 표시된 섹션에는 작업 표시줄과 디버그 사이드 막대가 포함됩니다.](media/How-To-Replicate-the-ISE-Experience-In-VSCode/1-highlighted-sidebar.png)
 
 최종 결과는 다음과 같습니다.
 
-![VS Code의 단순화된 보기](images/How-To-Replicate-the-ISE-Experience-In-VSCode/2-simplified-ui.png)
+![VS Code의 단순화된 보기](media/How-To-Replicate-the-ISE-Experience-In-VSCode/2-simplified-ui.png)
 
 ## <a name="tab-completion"></a>탭 완성
 
@@ -55,7 +74,10 @@ Visual Studio Code UI를 간소화하여 ISE의 UI를 보다 자세히 살펴보
 > [!NOTE]
 > 이 설정은 VSCode에 직접 추가되었습니다(확장으로 추가되지 않음). 해당 동작은 VSCode에 의해 직접 결정되며 확장에 의해 변경될 수 없습니다.
 
-## <a name="no-focus-on-console-when-executing"></a>실행할 때 콘솔에 포커스 없음
+> [!NOTE]
+> 이 설정은 ["ISE 모드"](#ise-mode)에 포함되어 있습니다.
+
+## <a name="no-focus-on-console-when-executing"></a>실행 시 콘솔에 포커스 없음
 
 <kbd>F8</kbd>로 실행할 때 편집기에서 포커스를 유지하려면
 
@@ -63,7 +85,10 @@ Visual Studio Code UI를 간소화하여 ISE의 UI를 보다 자세히 살펴보
 "powershell.integratedConsole.focusConsoleOnExecute": false
 ```
 
-기본값은 `true`입니다.
+> [!NOTE]
+> 이 설정은 ["ISE 모드"](#ise-mode)에 포함되어 있습니다.
+
+기본값은 액세스 가능성을 위해 `true`가 됩니다.
 
 ## <a name="dont-start-integrated-console-on-startup"></a>시작 시 통합 콘솔을 시작하지 않음
 
@@ -84,6 +109,9 @@ Visual Studio Code UI를 간소화하여 ISE의 UI를 보다 자세히 살펴보
 "files.defaultLanguage": "powershell",
 ```
 
+> [!NOTE]
+> 이 설정은 ["ISE 모드"](#ise-mode)에 포함되어 있습니다.
+
 ## <a name="color-scheme"></a>색 구성표
 
 VSCode에서 편집기 모양을 ISE와 훨씬 더 비슷하게 설정하는 데 사용할 수 있는 다양한 ISE 테마가 있습니다.
@@ -97,17 +125,23 @@ VSCode에서 편집기 모양을 ISE와 훨씬 더 비슷하게 설정하는 데
 "workbench.colorTheme": "PowerShell ISE",
 ```
 
+> [!NOTE]
+> 이 설정은 ["ISE 모드"](#ise-mode)에 포함되어 있습니다.
+
 ## <a name="powershell-command-explorer"></a>PowerShell Command Explorer
 
 [@corbob](https://github.com/corbob)의 작업 덕분에 PowerShell 확장에는 고유한 초기 명령 탐색기가 있습니다.
 
 [명령 팔레트]에 `PowerShell Command Explorer`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다.
 
+> [!NOTE]
+> ["ISE 모드"](#ise-mode)에서는 자동으로 표시됩니다.
+
 ## <a name="open-in-the-ise"></a>ISE에서 열기
 
 어떤 방식으로든 ISE에서 파일을 열게 되는 경우 <kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd>를 사용할 수 있습니다.
 
-## <a name="other-resources"></a>다른 리소스
+## <a name="other-resources"></a>기타 리소스
 
 - 4sysops에는 VSCode를 ISE와 더 유사하게 구성하는 방법에 대한 [유용한 문서](https://4sysops.com/archives/make-visual-studio-code-look-and-behave-like-powershell-ise/)가 있습니다.
 - Mike F Robbins는 VSCode 설정에 대한 [유용한 게시물](https://mikefrobbins.com/2017/08/24/how-to-install-visual-studio-code-and-configure-it-as-a-replacement-for-the-powershell-ise/)을 제공합니다.

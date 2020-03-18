@@ -1,32 +1,30 @@
 ---
-title: macOS에서 PowerShell Core 설치
-description: macOS에서 PowerShell Core를 설치하는 방법에 대한 정보
+title: MacOS에 PowerShell 설치
+description: macOS에서 PowerShell을 설치하는 방법에 대한 정보
 ms.date: 12/12/2018
-ms.openlocfilehash: ad1306e99261e8e6e2fd49d3199d863929c31e92
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7f0d6a1aa275deb39a7d670546ee7e833b8ef315
+ms.sourcegitcommit: 4a26c05f162c4fa347a9d67e339f8a33e230b9ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73444438"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78404818"
 ---
-# <a name="installing-powershell-core-on-macos"></a>macOS에서 PowerShell Core 설치
+# <a name="installing-powershell-on-macos"></a>MacOS에 PowerShell 설치
 
-PowerShell Core는 macOS 10.12 이상을 지원합니다.
+PowerShell은 macOS 10.12 이상을 지원합니다.
 모든 패키지는 GitHub [릴리스][] 페이지에 제공됩니다.
-패키지가 설치된 후 터미널에서 `pwsh`를 실행합니다.
+패키지를 설치한 후 실행하려면 터미널에서 `pwsh`를 실행합니다.
 
-> [!TIP]
-> [.NET Core SDK](/dotnet/core/sdk)가 이미 설치되어 있는 경우 PowerShell을 [.NET 전역 도구](/dotnet/core/tools/global-tools)를 이용해 쉽게 설치할 수 있습니다.
+> [!NOTE]
+> PowerShell 7은 PowerShell Core 6.x를 제거하는 현재 위치 업그레이드입니다.
 >
-> ```
-> dotnet tool install --global PowerShell
-> ```
+> `/usr/local/microsoft/powershell/6` 폴더가 `/usr/local/microsoft/powershell/7`로 바뀝니다.
+>
+> PowerShell 6과 PowerShell 7을 함께 실행해야 하는 경우 [이진 아카이브](#binary-archives) 메서드를 사용하여 PowerShell 6을 다시 설치합니다.
 
 ## <a name="about-brew"></a>Brew 정보
 
-[Homebrew][brew]는 macOS용 기본 패키지 관리자입니다.
-`brew` 명령이 없을 경우 [해당 지침][brew]에 따라 Homebrew를 설치해야 합니다.
-그렇지 않으면 [직접 다운로드](#installation-via-direct-download) 또는 [이진 아카이브](#binary-archives)를 이용해 PowerShell을 설치할 수 있습니다.
+[Homebrew][brew]는 macOS용 기본 패키지 관리자입니다. `brew` 명령이 없을 경우 [해당 지침][brew]에 따라 Homebrew를 설치해야 합니다. 그렇지 않으면 [직접 다운로드](#installation-via-direct-download) 또는 [이진 아카이브](#binary-archives)를 이용해 PowerShell을 설치할 수 있습니다.
 
 ## <a name="installation-of-latest-stable-release-via-homebrew-on-macos-1012-or-higher"></a>macOS 10.12 이상에서 Homebrew를 통해 안정적인 최신 릴리스 설치
 
@@ -103,6 +101,14 @@ sudo installer -pkg powershell-6.2.0-osx-x64.pkg -target /
 
 [OpenSSL](#install-openssl)을 설치합니다. OpenSSL은 PowerShell 원격 기능 및 CIM 작업에 필요합니다.
 
+## <a name="install-as-a-net-global-tool"></a>.NET 전역 도구로 설치
+
+[.NET Core SDK](/dotnet/core/sdk)가 이미 설치되어 있는 경우 PowerShell을 [.NET 전역 도구](/dotnet/core/tools/global-tools)로 쉽게 설치할 수 있습니다.
+
+```
+dotnet tool install --global PowerShell
+```
+
 ## <a name="binary-archives"></a>이진 아카이브
 
 고급 배포 시나리오를 위해 macOS 플랫폼에 대해 PowerShell 이진 `tar.gz` 보관이 제공됩니다.
@@ -161,7 +167,7 @@ sudo mkdir -p /usr/local/opt/openssl
 sudo ln -s /opt/local/lib /usr/local/opt/openssl/lib
 ```
 
-## <a name="uninstalling-powershell-core"></a>PowerShell Core 제거
+## <a name="uninstalling-powershell"></a>PowerShell 제거
 
 Homebrew를 사용하여 PowerShell을 설치한 경우 다음 명령을 사용하여 제거합니다.
 

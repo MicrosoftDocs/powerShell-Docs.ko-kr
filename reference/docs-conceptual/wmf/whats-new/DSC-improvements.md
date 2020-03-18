@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: WMF 5.1의 향상된 DSC
-ms.openlocfilehash: d9339ec9f316c4a32c5fa6cb2360c077973ee334
-ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
+ms.openlocfilehash: 99434d14100de54d2d4c89c5888741ab2f1c512a
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76818110"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78277639"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>WMF 5.1에서 DSC(필요한 상태 구성)의 개선 사항
 
@@ -59,7 +59,7 @@ WMF 5.0에서 PowerShell 디버거는 클래스 기반 리소스 메서드(Get/S
 
 - 노드가 수신할 수 있는 부분 구성을 정의하는 로컬 구성 설정입니다.
 
-  ![샘플 메타 구성](../images/DSC-improvements/MetaConfigPartialOne.png)
+  ![샘플 메타 구성](media/DSC-improvements/MetaConfigPartialOne.png)
 
 - 샘플 부분 구성 정의
 
@@ -80,11 +80,11 @@ WMF 5.0에서 PowerShell 디버거는 클래스 기반 리소스 메서드(Get/S
 
 - 생성된 MOF 파일에 포함된 ‘ConfigurationName’
 
-  ![생성된 mof 파일 샘플](../images/DSC-improvements/PartialGeneratedMof.png)
+  ![생성된 mof 파일 샘플](media/DSC-improvements/PartialGeneratedMof.png)
 
 - 풀 구성 리포지토리의 FileName
 
-  ![구성 리포지토리의 FileName](../images/DSC-improvements/PartialInConfigRepository.png)
+  ![구성 리포지토리의 FileName](media/DSC-improvements/PartialInConfigRepository.png)
 
   Azure 자동화 서비스 이름은 MOF 파일을 `<ConfigurationName>.<NodeName>.mof`로 생성했습니다. 따라서 아래 구성은 PartialOne.localhost.mof로 컴파일됩니다.
 
@@ -293,11 +293,11 @@ Set-DscLocalConfigurationManager -Path .\EnableSignatureValidation -Verbose
 > 모듈 카탈로그 및 구성의 서명 유효성 검사는 시스템에 구성을 처음으로 적용할 때나 모듈을 다운로드하여 설치할 때만 수행됩니다.
 > 일관성 검사에서는 Current.mof 또는 해당 모듈 종속성의 서명 유효성을 검사하지 않습니다. 끌어오기 서버에서 끌어온 구성에 서명이 되어 있지 않은 등 어느 단계에서든 유효성 검사가 실패하면 구성 처리가 종료되고 아래와 같은 오류가 표시되며 모든 임시 파일이 삭제됩니다.
 
-![샘플 오류 출력 구성](../images/DSC-improvements/PullUnsignedConfigFail.png)
+![샘플 오류 출력 구성](media/DSC-improvements/PullUnsignedConfigFail.png)
 
 마찬가지로 카탈로그에 서명이 되어 있지 않은 모듈을 끌어오면 다음 오류가 발생합니다.
 
-![샘플 오류 출력 모듈](../images/DSC-improvements/PullUnisgnedCatalog.png)
+![샘플 오류 출력 모듈](media/DSC-improvements/PullUnisgnedCatalog.png)
 
 #### <a name="push"></a>밀어넣기
 
@@ -345,12 +345,12 @@ Set-DscLocalConfigurationManager -Path .\EnableSignatureValidation -Verbose
   Start-DscConfiguration -Path .\Test -Wait -Verbose -Force
   ```
 
-  ![ErrorUnsignedMofPushed](../images/DSC-improvements/PushUnsignedMof.png)
+  ![ErrorUnsignedMofPushed](media/DSC-improvements/PushUnsignedMof.png)
 
 - 코드 서명 인증서를 사용하여 구성 파일에 서명합니다.
 
-  ![SignMofFile](../images/DSC-improvements/SignMofFile.png)
+  ![SignMofFile](media/DSC-improvements/SignMofFile.png)
 
 - 서명된 MOF 파일을 푸시해 봅니다.
 
-  ![PushSignedMofFile](../images/DSC-improvements/PushSignedMof.png)
+  ![PushSignedMofFile](media/DSC-improvements/PushSignedMof.png)

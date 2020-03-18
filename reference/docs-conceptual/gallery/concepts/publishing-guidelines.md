@@ -4,12 +4,12 @@ contributor: JKeithB, SydneyhSmith
 keywords: gallery,powershell,cmdlet,psgallery
 description: 게시자용 지침
 title: PowerShell 갤러리 게시 지침 및 모범 사례
-ms.openlocfilehash: 9047e938ab961c68e225c9029e52403c40afbe26
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 07271e037100350d3efc7ae63860f42afd22aae7
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417674"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278219"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>PowerShell 갤러리 게시 지침 및 모범 사례
 
@@ -128,7 +128,7 @@ ProjectURI를 제공하면 PowerShell 갤러리의 패키지 페이지 왼쪽에
 - MacOS: Mac 운영 체제와 호환 가능한 패키지
 
 호환 플랫폼을 사용하여 패키지를 태그하면 검색 결과 왼쪽 창의 갤러리 검색 필터에 포함됩니다. GitHub에서 패키지를 호스트하는 경우 패키지 태그를 지정할 때, [PowerShell 갤러리 호환성 보호](https://img.shields.io/powershellgallery/p/:packageName.svg)
-![호환성 보호](../Images/CosmosDB.svg)를 활용할 수도 있습니다.
+![호환성 보호](media/publishing-guidelines/CosmosDB.svg)를 활용할 수도 있습니다.
 
 ## <a name="include-tests"></a>테스트 포함
 
