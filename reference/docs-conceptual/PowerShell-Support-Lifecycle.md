@@ -1,31 +1,40 @@
 ---
 title: PowerShell Core 지원 수명 주기
 description: PowerShell Core에 대한 정책 관리 지원
-ms.date: 08/06/2018
-ms.openlocfilehash: 8cf8a0ac6140d28e55b065bf711763ba1c681d63
-ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
+ms.date: 03/09/2020
+ms.openlocfilehash: a1cd316b1d5351acd04c547bc35b3cc62a561429
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77706260"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090254"
 ---
-# <a name="powershell-core-support-lifecycle"></a>PowerShell Core 지원 수명 주기
+# <a name="powershell-support-lifecycle"></a>PowerShell 지원 수명 주기
 
-PowerShell Core는 Windows PowerShell과 별개로 제공, 설치 및 구성되는 도구 및 구성 요소의 고유 집합입니다. 따라서 PowerShell Core는 Windows 7/8.1/10 또는 Windows Server 라이선싱 계약에 포함되어 있지 않습니다.
+PowerShell은 Windows PowerShell과 별개로 제공, 설치 및 구성되는 도구 및 구성 요소의 고유 집합입니다. PowerShell은 Windows 라이선스 계약에 포함 되지 않습니다.
 
-그러나 PowerShell Core는 [프리미어][], [Microsoft 기업계약][enterprise-agreement] 및 [Microsoft 소프트웨어 보증][assurance]을 포함한 기존의 Microsoft 지원 계약으로 지원받을 수 있습니다.
-또한, 문제가 있는 경우 지원 요청서를 작성하여 PowerShell Core에 대한 [보조 지원][]을 유료로 이용할 수 있습니다.
+PowerShell은 [프리미어][], [Microsoft 기업계약][enterprise-agreement] 및 [Microsoft 소프트웨어 보증][assurance]을 포함한 기존의 Microsoft 지원 계약으로 지원받을 수 있습니다.
+또한 문제가 있는 경우 지원 요청서를 작성하여 PowerShell에 대한 [보조 지원][]을 유료로 이용할 수 있습니다.
 
 ## <a name="community-support"></a>커뮤니티 지원
 
 또한 GitHub에 대한 [커뮤니티 지원][]도 제공하여 문제, 버그 또는 기능 요청을 취합할 수 있습니다.
 또한 Microsoft [PowerShell 기술 커뮤니티][] 또는 [PowerShell][pshub] 허브 페이지의 커뮤니티 섹션에 나열된 포럼에서 커뮤니티의 다른 구성원에 게 도움을 얻을 수 있습니다. 단, 커뮤니티가 발생한 문제를 제때 처리하거나 해결한다는 보장은 없습니다. 긴급하게 도움이 필요한 문제가 있는 경우 기존의 유료 지원 옵션을 사용해야 합니다.
 
-## <a name="lifecycle-of-powershell-core"></a>PowerShell Core의 수명 주기
+## <a name="lifecycle-of-powershell-7"></a>PowerShell 7의 수명 주기
 
-PowerShell Core는 [Microsoft 최신 수명 주기 정책][modern]을 채택합니다. 이 지원 수명 주기는 고객이 항상 최신 버전을 사용할 수 있도록 합니다.
+PowerShell 7 릴리스에서 PowerShell은 [Microsoft 최신 수명 주기 정책][modern]에 따라 계속 지원되며 지원 날짜는 [.NET Core의 지원 수명 주기][Long-Term]와 관련됩니다. 이 서비스 방식에서 고객은 LTS(장기 지원) 릴리스 또는 현재 릴리스를 선택할 수 있습니다. PowerShell 7.0은 LTS 릴리스입니다. 해당 지원은 .NET Core 3.1 지원을 마지막으로 종료됩니다. 다음 LTS 릴리스는 다음 .NET Core LTS 릴리스를 따릅니다. 현재 종료 지원 날짜에 대한 자세한 내용은 [PowerShell 릴리스 수명 종료 표](#powershell-releases-end-of-life)을 참조하세요. LTS 릴리스 업데이트에는 기존 워크로드에 대 한 영향을 방지하거나 최소화하도록 설계된 중요 보안 및 서비스 업데이트/수정 사항만 포함됩니다.
 
-약 6개월 단위로 PowerShell Core의 6.x 버전이 분기별로 업데이트 됩니다(예: 6.0, 6.1, 6.2 등).
+현재 릴리스는 LTS 릴리스 간에 발생하는 릴리스입니다. 현재 릴리스에는 중요 수정 사항, 혁신 및 새 기능이 포함될 수 있습니다. 현재 릴리스는 다음 현재 릴리스 또는 LTS 릴리스 이후 3개월 동안 지원됩니다.
+
+> [!IMPORTANT]
+> 지원을 받으려면 최신 패치 업데이트가 설치되어 있어야 합니다. 예를 들어 PowerShell 7.0을 실행 중인데 7.0.1이 릴리스된 경우 지원을 받으려면 7.0.1로 업데이트해야 합니다.
+
+## <a name="lifecycle-of-powershell-core-6x"></a>PowerShell Core 6.x의 수명 주기
+
+PowerShell Core는 [Microsoft 최신 수명 주기 정책][modern]을 사용합니다. 이 지원 수명 주기는 고객이 항상 최신 버전을 사용할 수 있도록 합니다.
+
+PowerShell Core의 6.x 버전은 약 6개월 단위의 분기별로 업데이트되었습니다(예: 6.0, 6.1, 6.2 등). 그러나 PowerShell 7 릴리스에서는 더 이상 6.x 릴리스의 부 버전 릴리스가 없습니다. PowerShell 6.2.x는 여전히 지원되며 계속해서 서비스 업데이트를 받습니다.
 
 > [!IMPORTANT]
 > 지원을 계속 받으려면 부 버전이 새로 릴리스될 때마다 6개월 이내에 업데이트해야 합니다.
@@ -38,8 +47,6 @@ PowerShell Core는 [Microsoft 최신 수명 주기 정책][modern]을 채택합�
 예를 들어 PowerShell Core 6.1을 실행하고 있으며 6.1.3이 2019년 2월 19일에 릴리스된 경우 해당 릴리스가 지원을 유지하는 30일 후인 2019년 3월 21일까지 PowerShell Core 6.1.3으로 업데이트해야 합니다. 수정 사항이 필요한 경우, 다음 누적 업데이트에서 수정 사항이 릴리스됩니다.
 
 최신 수명 주기 정책에 따라 Microsoft는 해당 제품(즉, PowerShell Core)에 대한 지원을 중단하기 12개월 전에 고객 측에 공지해야 합니다.
-
-결국 PowerShell Core가 장기 서비스 방식을 채택하는 것을 예상합니다. 이 서비스 방식에서는 6.x의 특정 분기/버전에 필요한 지속적인 지원을 위해 서비스 및 보안 업데이트만 요청합니다.
 
 ## <a name="supported-platforms"></a>지원 플랫폼
 
@@ -81,13 +88,14 @@ PowerShell Core의 플랫폼과 버전이 공식적으로 지원되는지 확인
 
 ## <a name="powershell-releases-end-of-life"></a>PowerShell 릴리스 수명 종료
 
-[PowerShell Core의 수명 주기](#lifecycle-of-powershell-core)에 따라 다음 표에는 다양한 릴리스의 지원 중단 날짜가 나열되어 있습니다.
+[PowerShell의 수명 주기](#lifecycle-of-powershell-7)에 따라 다음 표에는 다양한 릴리스의 지원 중단 날짜가 나와 있습니다.
 
-| 버전 | 수명 종료                   |
-|---------|-------------------------------|
-| 6.0     | 2019년 2월 13일             |
-| 6.1     | 2019년 9월 28일            |
-| 6.2     | 7 릴리스 후 6개월     |
+| 버전 |    수명 종료     |
+| :-----: | ------------------ |
+|   7.0   | 2022년 12월 3일   |
+|   6.2   | 2020년 9월 4일  |
+|   6.1   | 2019년 9월 28일 |
+|   6.0   | 2019년 2월 13일  |
 
 ## <a name="unsupported-platforms"></a>지원되지 않는 플랫폼
 
@@ -95,47 +103,37 @@ PowerShell Core의 플랫폼과 버전이 공식적으로 지원되는지 확인
 
 그러므로 다음 버전의 지원을 배포 소유자가 종료했으며 더 이상 지원되지 않습니다.
 
-| 플랫폼       | 버전 | 수명 종료                                                                                                                        |
-| -------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Debian         | 8       | [2018년 6월](https://lists.debian.org/debian-security-announce/2018/msg00132.html)                                                  |
-| Fedora         | 24      | [2017년 8월](https://fedoramagazine.org/fedora-24-eol/)                                                                           |
-| Fedora         | 25      | [2017년 12월](https://fedoramagazine.org/fedora-25-end-life/)                                                                    |
-| Fedora         | 26      | [2018년 5월](https://fedoramagazine.org/fedora-26-end-life/)                                                                         |
-| Fedora         | 27      | [2018년 11월](https://fedoramagazine.org/fedora-27-end-of-life/)                                                                 |
-| Fedora         | 28      | [2019년 5월](https://fedoramagazine.org/fedora-28-end-of-life/)                                                                      |
-| openSUSE       | 42.1    | [2017년 5월](https://lists.opensuse.org/opensuse-security-announce/2017-05/msg00053.html)                                            |
-| openSUSE       | 42.2    | [2018년 1월](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html)                                        |
-| openSUSE       | 42.3    | [2019년 7월](https://lists.opensuse.org/opensuse-security-announce/2019-07/msg00000.html)                                           |
-| Ubuntu         | 14.04   | [2019년 4월](https://wiki.ubuntu.com/Releases)                                                                                     |
-| Ubuntu         | 16.10   | [2017년 7월](https://lists.ubuntu.com/archives/ubuntu-announce/2017-July/000223.html)                                               |
-| Ubuntu         | 17.04   | [2018년 1월](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)                                                 |
-| Ubuntu         | 17.10   | [2018년 7월](https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000232.html)                                               |
-| Windows        | 7       | [2020년 1월](https://support.microsoft.com/en-us/help/4057281/windows-7-support-ended-on-january-14-2020)                        |
-| Windows Server | 2008 R2 | [2020년 1월](https://support.microsoft.com/en-us/help/4456235/end-of-support-for-windows-server-2008-and-windows-server-2008-r2) |
+|    플랫폼    | 버전 |                                                         수명 종료                                                          |
+| -------------- | :-----: | ---------------------------------------------------------------------------------------------------------------------------- |
+| Debian         |    8    | [2018년 6월](https://lists.debian.org/debian-security-announce/2018/msg00132.html)                                            |
+| Fedora         |   24    | [2017년 8월](https://fedoramagazine.org/fedora-24-eol/)                                                                     |
+| Fedora         |   25    | [2017년 12월](https://fedoramagazine.org/fedora-25-end-life/)                                                              |
+| Fedora         |   26    | [2018년 5월](https://fedoramagazine.org/fedora-26-end-life/)                                                                   |
+| Fedora         |   27    | [2018년 11월](https://fedoramagazine.org/fedora-27-end-of-life/)                                                           |
+| Fedora         |   28    | [2019년 5월](https://fedoramagazine.org/fedora-28-end-of-life/)                                                                |
+| openSUSE       |  42.1   | [2017년 5월](https://lists.opensuse.org/opensuse-security-announce/2017-05/msg00053.html)                                      |
+| openSUSE       |  42.2   | [2018년 1월](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html)                                  |
+| openSUSE       |  42.3   | [2019년 7월](https://lists.opensuse.org/opensuse-security-announce/2019-07/msg00000.html)                                     |
+| Ubuntu         |  14.04  | [2019년 4월](https://wiki.ubuntu.com/Releases)                                                                               |
+| Ubuntu         |  16.10  | [2017년 7월](https://lists.ubuntu.com/archives/ubuntu-announce/2017-July/000223.html)                                         |
+| Ubuntu         |  17.04  | [2018년 1월](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)                                           |
+| Ubuntu         |  17.10  | [2018년 7월](https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000232.html)                                         |
+| Windows        |    7    | [2020년 1월](https://support.microsoft.com/help/4057281/windows-7-support-ended-on-january-14-2020)                        |
+| Windows Server | 2008 R2 | [2020년 1월](https://support.microsoft.com/help/4456235/end-of-support-for-windows-server-2008-and-windows-server-2008-r2) |
 
 ## <a name="notes-on-licensing"></a>라이선싱에 대한 메모
 
 PowerShell Core는 [MIT 라이선스][]에서 릴리스 됩니다. 본 라이선스 및 유료 지원 계약이 안 된 경우 사용자는 [커뮤니티 지원][]으로 서비스가 제한됩니다. 커뮤니티 지원을 이용하더라도 Microsoft는 문의 응답 및 해결 방안을 보장하지 않습니다.
 
-## <a name="windows-powershell-module"></a>Windows PowerShell 모듈
+## <a name="windows-powershell-compatibility"></a>Windows PowerShell 호환성
 
-PowerShell Core에 대한 지원은 명시적으로 이 모듈이 PowerShell Core를 지원하지 않는 한 다른 제품 모듈을 포함하지 않습니다. 예를 들어, Windows Server에 부분적으로 제공되는 `ActiveDirectory` 모듈을 사용하는 경우 지원되지 않습니다.
+PowerShell의 지원 수명 주기에는 PowerShell 7 릴리스 패키지 외부로 제공되는 모듈은 포함되지 않습니다. 예를 들어 Windows Server에 부분적으로 제공되는 `ActiveDirectory` 모듈을 사용하는 경우 [Windows 지원 수명 주기][]에 따라 지원됩니다.
 
-그러나 PowerShell Core를 명시적으로 지원하지 않는 모듈은 경우에 따라 호환이 가능합니다. [WindowsPSModulePath][] 모듈을 설치하여 Windows PowerShell `PSModulePath`를 PowerShell Core `PSModulePath`에 추가할 수 있습니다.
+PowerShell 7은 Windows PowerShell용으로 작성 된 기존 PowerShell 모듈과의 호환성을 향상시킵니다.
+자세한 내용은 [about_Windows_Compatibility][] 문서 및 [모듈 호환성 목록][]을 참조하세요.
 
-먼저 PowerShell 갤러리에서 **WindowsPSModulePath** 모듈을 설치합니다.
-
-```powershell
-# Add `-Scope CurrentUser` if you're installing as non-admin
-Install-Module WindowsPSModulePath -Force
-```
-
-이 모듈을 설치한 후에, `Add-WindowsPSModulePath` cmdlet을 실행하여 Windows PowerShell `PSModulePath`를 PowerShell Core에 추가합니다.
-
-```powershell
-# Add this line to your profile if you always want Windows PowerShell PSModulePath
-Add-WindowsPSModulePath
-```
+> [!NOTE]
+> [**WindowsPSModulePath**](https://www.powershellgallery.com/packages/WindowsPSModulePath) 모듈은 PowerShell 7에서 더 이상 필요하지 않으므로 지원되지 않습니다.
 
 ## <a name="experimental-features"></a>실험적 기능
 
@@ -157,16 +155,20 @@ Add-WindowsPSModulePath
 | PowerShell 1.0       |   2006년 11월   | Windows XP SP2, Windows Server 2003 SP1 및 Windows Vista에 설치 가능. Windows Server 2008의 선택적 구성 요소.                          |
 
 <!-- hyperlink references -->
-[프리미어]: https://www.microsoft.com/en-us/microsoftservices/support.aspx
-[enterprise-agreement]: https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise.aspx
-[assurance]: https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx
-[커뮤니티 지원]: https://github.com/powershell/powershell/issues
-[pshub]: https://docs.microsoft.com/powershell
+[프리미어]: https://www.microsoft.com/microsoftservices/support.aspx
+[enterprise-agreement]: https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx
+[assurance]: https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx
+[커뮤니티 지원]: /powershell/scripting/community/community-support
+[pshub]: /powershell
 [PowerShell 기술 커뮤니티]: https://techcommunity.microsoft.com/t5/PowerShell/ct-p/WindowsPowerShell
 [보조 지원]: https://support.microsoft.com/assistedsupportproducts
 [modern]: https://support.microsoft.com/help/30881/modern-lifecycle-policy
+[Long-Term]: https://dotnet.microsoft.com/platform/support/policy/dotnet-core
 [lifecycle-chart]: ./images/modern-lifecycle.png
-[semi-annual]: https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview
+[semi-annual]: /windows-server/get-started/semi-annual-channel-overview
 [MIT 라이선스]: https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt
+[about_Windows_Compatibility]: /powershell/module/microsoft.powershell.core/about/about_windows_powershell_compatibility
+[Windows 지원 수명 주기]: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet
+[모듈 호환성 목록]: /powershell/scripting/whats-new/module-compatibility
 [WindowsPSModulePath]: https://www.powershellgallery.com/packages/WindowsPSModulePath/
-[실험적 기능]: /powershell/module/microsoft.powershell.core/about/about_powershell_config?view=powershell-6#experimentalfeatures
+[실험적 기능]: /powershell/module/microsoft.powershell.core/about/about_powershell_config#experimentalfeatures

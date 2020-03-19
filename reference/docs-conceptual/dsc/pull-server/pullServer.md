@@ -2,12 +2,12 @@
 ms.date: 01/08/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC 끌어오기 서비스
-ms.openlocfilehash: f171c3dc579dfb24a8c9fb87fbb50dccae619091
-ms.sourcegitcommit: aaf1284dfec2e4c698009d6dc27ff103aaafd581
+ms.openlocfilehash: cf2420e6889f63ac3b2859e5ee36fa888b728afc
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76885390"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402440"
 ---
 # <a name="desired-state-configuration-pull-service"></a>원하는 상태 구성 끌어오기 서비스
 
@@ -28,10 +28,10 @@ ms.locfileid: "76885390"
 |                   해결 방법                   |              클라이언트 노드              |
 | -------------------------------------------- | -------------------------------------- |
 | MDB/ESENT 데이터베이스를 사용하는 Windows 끌어오기 서버 | 최대 500개 노드                        |
-| SQL 데이터베이스를 사용하는 Windows 끌어오기 서버       | 최대 1000개 노드                       |
-| Azure Automation DSC                         | 1000개 이상의 노드를 포함하는 시나리오 |
+| SQL 데이터베이스를 사용하는 Windows 끌어오기 서버       | 최대 3,500개 노드                       |
+| Azure Automation DSC                         | 중소기업 및 대기업 모두      |
 
-**권장 솔루션**이며, 대부분의 기능에서 사용 가능한 옵션은 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)입니다.
+**권장 솔루션**이며, 대부분의 기능에서 사용 가능한 옵션은 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)입니다. Automation 계정당 노드 수에 대한 상한 값이 식별되지 않았습니다.
 
 Azure 서비스는 개인 데이터 센터의 온-프레미스에 있는 노드를 관리하거나 Azure와 AWS 같은 퍼블릭 클라우드에 있는 노드를 관리할 수 있습니다. 서버를 인터넷에 직접 연결할 수 없는 개인 환경의 경우, 아웃바운드 트래픽을 게시된 Azure IP 범위로만 제한하세요([Azure Datacenter IP Ranges](https://www.microsoft.com/download/details.aspx?id=41653)(Azure 데이터 센터 IP 범위) 참조).
 

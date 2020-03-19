@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 웹 액세스 설치 및 사용
-ms.openlocfilehash: 5f6e94859c55bbd07f3f8a83bc4b9a83bc89d0fa
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a3207c859c4b93b07d4c1b41d7df5269daa39a7d
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71692260"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402620"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Install and Use Windows PowerShell Web Access(Windows PowerShell 웹 액세스 설치 및 사용)
 
@@ -35,7 +35,7 @@ Windows PowerShell 웹 액세스를 설치 및 구성하기 전에 Windows Power
 
 다음 그림에는 Windows PowerShell 웹 액세스 작동 방식이 나와 있습니다.
 
-![Windows PowerShell 웹 액세스 다이어그램](images/Windows-PowerShell-Web-Access-diagram.jpg)
+![Windows PowerShell 웹 액세스 다이어그램](media/install-and-use-windows-powershell-web-access/Windows-PowerShell-Web-Access-diagram.jpg)
 
 ## <a name="requirements-for-running-windows-powershell-web-access"></a>Windows PowerShell 웹 액세스 실행에 필요한 요구 사항
 
@@ -114,7 +114,8 @@ Windows PowerShell cmdlet을 사용하거나 서버 관리자 내에서 열린 �
 `Install-PswaWebApplication` cmdlet을 실행하거나 IIS 관리자에서 GUI 기반의 구성 단계를 수행하여 Windows PowerShell 웹 액세스 웹 애플리케이션 구성을 완료할 수 있습니다.
 기본적으로 이 cmdlet은 IIS 관리자에 표시된 바와 같이 **기본 웹 사이트** 컨테이너에 웹 애플리케이션인 **pswa**(및 해당 애플리케이션 풀인 **pswa_pool**)를 설치합니다. 필요에 따라 웹 애플리케이션의 기본 사이트 컨테이너를 변경하는 명령을 이 cmdlet에 추가할 수 있습니다. IIS 관리자는 웹 애플리케이션에서 사용 가능한 구성 옵션(예: SSL(Secure Sockets Layer) 인증서의 포트 번호 변경)을 제공합니다.
 
-> **![보안 정보](images/securitynote.jpeg) 보안 정보** 관리자는 반드시 CA에서 서명된 유효한 인증서를 사용하도록 게이트웨이를 구성하는 것이 좋습니다.
+> [!IMPORTANT]
+> 관리자는 반드시 CA에서 서명된 유효한 인증서를 사용하도록 게이트웨이를 구성하는 것이 좋습니다.
 
 #### <a name="to-configure-the-windows-powershell-web-access-gateway-with-a-test-certificate-by-using-install-pswawebapplication"></a>Install-PswaWebApplication을 사용하여 테스트 인증서가 사용된 Windows PowerShell 웹 액세스 게이트웨이를 구성하려면
 
@@ -127,7 +128,8 @@ Windows PowerShell cmdlet을 사용하거나 서버 관리자 내에서 열린 �
 
    `Install-PswaWebApplication -UseTestCertificate`
 
-   > **![보안 정보](images/securitynote.jpeg) 보안 정보** `UseTestCertificate`매개 변수는 개인 테스트 환경에서만 사용되어야 합니다. 안전한 프로덕션 환경을 위해 CA에서 서명된 유효한 인증서를 사용하는 것이 좋습니다.
+   > [!IMPORTANT]
+   > `UseTestCertificate` 매개 변수는 개인 테스트 환경에서만 사용되어야 합니다. 안전한 프로덕션 환경을 위해 CA에서 서명된 유효한 인증서를 사용하는 것이 좋습니다.
 
    이 cmdlet을 실행하면 Windows PowerShell 웹 액세스 웹 애플리케이션이 IIS 기본 웹 사이트 컨테이너에 설치됩니다. 이 cmdlet은 기본 웹 사이트인 `https://<server_name>/pswa`에서 Windows PowerShell 웹 액세스를 실행하는 데 필요한 인프라를 만듭니다. 웹 애플리케이션을 다른 웹 사이트에 설치하려면 `WebSiteName` 매개 변수를 추가하여 웹 사이트 이름을 입력합니다. 웹 애플리케이션의 이름을 변경하려면(기본 이름: `pswa`) `WebApplicationName` 매개 변수를 추가합니다.
 
@@ -156,7 +158,7 @@ Windows PowerShell cmdlet을 사용하거나 서버 관리자 내에서 열린 �
 
    `Install-PswaWebApplication`
 
-   이 cmdlet을 실행하면 다음과 같은 게이트웨이 설정이 구성됩니다. 필요에 따라 IIS 관리자 콘솔에서 이러한 설정을 수동으로 변경할 수 있습니다. `WebsiteName` cmdlet의 `WebApplicationName` 및 `Install-PswaWebApplication` 매개 변수에 대한 값을 지정할 수도 있습니다.
+   이 cmdlet을 실행하면 다음과 같은 게이트웨이 설정이 구성됩니다. 필요에 따라 IIS 관리자 콘솔에서 이러한 설정을 수동으로 변경할 수 있습니다. `Install-PswaWebApplication` cmdlet의 `WebsiteName` 및 `WebApplicationName` 매개 변수에 대한 값을 지정할 수도 있습니다.
 
    - Path: /pswa
    - ApplicationPool: pswa_pool
@@ -208,13 +210,13 @@ Windows PowerShell 웹 액세스 권한 부여 규칙 및 보안에 대한 자�
 
    이 권한 부여 규칙을 통해 특정 사용자는 일반적으로 액세스 권한을 갖고 있는 네트워크상의 한 컴퓨터에만 액세스할 수 있으며, 일반적인 스크립팅 및 cmdlet 환경에 해당하는 특정 세션 구성에 액세스할 수 있습니다.
 
-   다음 예에서는 `JSmith` 도메인의 `Contoso` 라는 사용자에게 `Contoso_214`컴퓨터를 관리하고, `NewAdminsOnly`라는 세션 구성을 사용할 수 있는 액세스 권한이 부여됩니다
+   다음 예제에서는 `Contoso` 도메인의 `JSmith`라는 사용자에게 `Contoso_214` 컴퓨터를 관리하고, `NewAdminsOnly`라는 세션 구성을 사용할 수 있는 액세스 권한이 부여됩니다.
 
    `Add-PswaAuthorizationRule -UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly`
 
 4. `Get-PswaAuthorizationRule` cmdlet 또는 `Test-PswaAuthorizationRule -UserName <domain\user> -ComputerName <computer-name>`을 실행하여 규칙이 생성되어 있는지 확인합니다.
 
-   정의합니다(예: `Test-PswaAuthorizationRule -UserName 'Contoso\JSmith' -ComputerName Contoso_214`).
+   `Test-PswaAuthorizationRule -UserName 'Contoso\JSmith' -ComputerName Contoso_214`)을 입력합니다.
 
 권한 부여 규칙을 구성하고 나면 권한이 부여된 사용자가 웹 기반 콘솔에 로그인하고 Windows PowerShell 웹 액세스를 사용할 준비가 됩니다.
 
@@ -275,7 +277,7 @@ Windows PowerShell 웹 액세스가 설치되면 IIS 관리자에서 게이트�
 
 9. 이 항목에서 [IIS 관리자로 SSL 인증서를 구성하려면](#to-configure-an-ssl-certificate-in-iis-manager) 절차의 단계를 따릅니다.
 
-10. ![보안 정보](images/SecurityNote.jpeg) 선택적 보안 단계:
+10. 선택적 보안 단계:
 
     트리 창에서 웹 사이트를 선택한 상태에서 내용 창의 **SSL 설정**을 두 번 클릭합니다.
     **SSL 필요**를 선택한 다음 **작업** 창에서 **적용**을 클릭합니다. 필요에 따라 **SSL 설정** 창에서 Windows PowerShell 웹 액세스 웹 사이트에 연결하는 사용자에게는 클라이언트 인증서가 있어야 할 수 있습니다. 클라이언트 인증서를 통해 클라이언트 디바이스 사용자의 신분을 확인할 수 있습니다. 클라이언트 인증서를 요구하여 Windows PowerShell 웹 액세스의 보안을 강화하는 방법에 대한 자세한 내용은 이 가이드의 [Windows PowerShell 웹 액세스의 권한 부여 규칙 및 보안 기능](authorization-rules-and-security-features-of-windows-powershell-web-access.md)을 참조하세요.
@@ -347,7 +349,7 @@ Windows PowerShell 웹 액세스가 설치되면 IIS 관리자에서 게이트�
    c:\windows\system32\icacls.exe $authorizationFile
    ```
 
-1. IIS 관리자 트리 창에서 새 웹 사이트가 선택된 상태에서 **작업** 창의 **시작** 을 클릭하여 웹 사이트를 시작합니다.
+1. IIS 관리자 트리 창에서 새 웹 사이트가 선택된 상태에서 **작업** 창의 **시작**을 클릭하여 웹 사이트를 시작합니다.
 
 1. 클라이언트 디바이스에서 브라우저 세션을 엽니다. 지원되는 브라우저와 디바이스에 대한 자세한 내용은 이 문서의 [브라우저 및 클라이언트 디바이스 지원](#browser-and-client-device-support)을 참조하세요.
 
@@ -371,7 +373,7 @@ Windows PowerShell 웹 액세스 권한 부여 규칙 및 보안에 대한 자�
    - Windows 바탕 화면의 작업 표시줄에서 **Windows PowerShell**을 마우스 오른쪽 단추로 클릭한 다음 **관리자 권한으로 실행**을 클릭합니다.
    - Windows **시작** 화면에서 **Windows PowerShell**을 마우스 오른쪽 단추로 클릭한 다음 **관리자 권한으로 실행**을 클릭합니다.
 
-1. ![보안 정보](images/SecurityNote.jpeg) 세션 구성을 사용하여 사용자 액세스를 제한하는 단계(옵션):
+1. 세션 구성을 사용하여 사용자 액세스를 제한하는 단계(옵션):
 
    규칙에 사용할 세션 구성이 이미 있는지 확인합니다. 해당 구성을 아직 만들지 않은 경우 [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configurations)에서 세션 구성을 만드는 방법에 대한 지침을 따르세요.
 
@@ -379,15 +381,15 @@ Windows PowerShell 웹 액세스 권한 부여 규칙 및 보안에 대한 자�
 
    `Add-PswaAuthorizationRule -UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>`
 
-   이 권한 부여 규칙을 통해 특정 사용자는 일반적으로 액세스 권한을 갖고 있는 네트워크상의 한 컴퓨터에만 액세스할 수 있으며, 일반적인 스크립팅 및 cmdlet 환경에 해당하는 특정 세션 구성에 액세스할 수 있습니다.
+   이 권한 부여 규칙을 통해 특정 사용자는 일반적으로 액세스 권한을 갖고 있는 네트워크의 한 컴퓨터에만 액세스할 수 있으며, 사용자&trade;의 일반적인 스크립팅 및 cmdlet 요구 사항에 해당하는 특정 세션 구성에 액세스할 수 있습니다.
 
-   다음 예에서는 `JSmith` 도메인의 `Contoso` 라는 사용자에게 `Contoso_214`컴퓨터를 관리하고, `NewAdminsOnly`라는 세션 구성을 사용할 수 있는 액세스 권한이 부여됩니다
+   다음 예제에서는 `Contoso` 도메인의 `JSmith`라는 사용자에게 `Contoso_214` 컴퓨터를 관리하고, `NewAdminsOnly`라는 세션 구성을 사용할 수 있는 액세스 권한이 부여됩니다.
 
    `Add-PswaAuthorizationRule -UserName 'Contoso\JSmith' -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly`
 
 1. `Get-PswaAuthorizationRule` cmdlet 또는 `Test-PswaAuthorizationRule -UserName '<domain\user>' -ComputerName <computer-name>`을 실행하여 규칙이 생성되어 있는지 확인합니다.
 
-   정의합니다(예: `Test-PswaAuthorizationRule -UserName 'Contoso\JSmith' -ComputerName Contoso_214`).
+   `Test-PswaAuthorizationRule -UserName 'Contoso\JSmith' -ComputerName Contoso_214`)을 입력합니다.
 
    권한 부여 규칙을 구성하고 나면 권한이 부여된 사용자가 웹 기반 콘솔에 로그인하고 Windows PowerShell 웹 액세스를 사용할 준비가 됩니다.
 
