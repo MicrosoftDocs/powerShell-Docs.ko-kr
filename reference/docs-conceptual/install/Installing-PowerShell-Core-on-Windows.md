@@ -2,12 +2,12 @@
 title: Windows에 PowerShell 설치
 description: Windows에서 PowerShell을 설치하는 방법에 대한 정보
 ms.date: 08/06/2018
-ms.openlocfilehash: df05a16bcf7a81d43d24535e50517fa217f82e7a
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: bb0971b6c4ac99bde70b226da2becf2f4ed82083
+ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402420"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80082787"
 ---
 # <a name="installing-powershell-on-windows"></a>Windows에 PowerShell 설치
 
@@ -20,7 +20,7 @@ WSMan을 통한 PowerShell 원격 기능을 사용하려면 다음 전제 조건
 - Windows 10 이전의 Windows 버전에서는 [Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=50410)을 설치하여야만 합니다. 직접 다운로드 또는 Windows 업데이트를 통해 설치할 수 있습니다. 옵션 패키지를 포함하여 완전히 패치된 지원 시스템에는 이미 설치되어 있습니다.
 - Windows 7 및 Windows Server 2008 R2에서는 WMF(Windows Management Framework) 4.0 이상을 설치해야만 합니다. WMF에 대한 자세한 내용은 [WMF 개요](/powershell/scripting/wmf/overview)를 참조하세요.
 
-## <a name="a-idmsi-installing-the-msi-package"></a><a id="msi" />MSI 패키지 설치
+## <a name="installing-the-msi-package"></a><a id="msi" />MSI 패키지 설치
 
 Windows 클라이언트 또는 Windows Server(Windows 7 SP1, Server 2008 R2 이상에서 작동)에 PowerShell을 설치하려면 GitHub [릴리스][releases] 페이지에서 MSI 패키지를 다운로드합니다. 설치하려는 릴리스의 **Assets** 섹션까지 아래로 스크롤합니다. Assets 섹션이 축소되어 있으면 클릭해서 확장합니다.
 
@@ -58,7 +58,7 @@ msiexec.exe /package PowerShell-<version>-win-<os-arch>.msi /quiet ADD_EXPLORER_
 
 Msiexec.exe에 대한 명령줄 옵션의 전체 목록은 [명령줄 옵션](/windows/desktop/Msi/command-line-options)을 참조하세요.
 
-## <a name="a-idmsix-installing-the-msix-package"></a><a id="msix" />MSIX 패키지 설치
+## <a name="installing-the-msix-package"></a><a id="msix" />MSIX 패키지 설치
 
 Windows 10 클라이언트에 MSIX 패키지를 수동으로 설치하려면 GitHub [릴리스][releases] 페이지에서 MSIX 패키지를 다운로드합니다. 설치하려는 릴리스의 **Assets** 섹션까지 아래로 스크롤합니다. Assets 섹션이 축소되어 있으면 클릭해서 확장합니다.
 
@@ -70,7 +70,7 @@ MSIX 파일은 다음과 같습니다. `PowerShell-<version>-win-<os-arch>.msix`
 Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
 ```
 
-## <a name="a-idzip-installing-the-zip-package"></a><a id="zip" />ZIP 패키지 설치
+## <a name="installing-the-zip-package"></a><a id="zip" />ZIP 패키지 설치
 
 고급 배포 시나리오를 지원하기 위해 PowerShell 이진 ZIP 아카이브가 제공됩니다. ZIP 아카이브를 사용하면 MSI 패키지에서와 같이 전제 조건 확인을 받지 못하게 됩니다. WSMan에서 원격 기능이 제대로 작동하려면 [필수 조건](#prerequisites)이 충족되는지 확인하세요.
 
@@ -81,7 +81,8 @@ Windows IoT는 이미 Windows PowerShell과 함께 제공되며, Windows PowerSh
 1. 대상 디바이스에 대한 `PSSession` 만들기
 
    ```powershell
-   $s = New-PSSession -ComputerName <deviceIp> -Credential Administrator
+   Set-Item -Path WSMan:\localhost\Client\TrustedHosts <deviceip>
+   $S = New-PSSession -ComputerName <deviceIp> -Credential Administrator
    ```
 
 2. 디바이스에 ZIP 패키지 복사
@@ -173,6 +174,8 @@ Nano 서버는 “헤드리스” OS입니다. 두 가지 방법으로 PowerShel
 ```
 dotnet tool install --global PowerShell
 ```
+
+dotnet 도구 설치 프로그램은 `$env:PATH` 환경 변수에 `$env:USERPROFILE\dotnet\tools`를 추가합니다. 그러나 현재 실행 중인 셸에는 `$env:PATH`가 업데이트되지 않습니다. 새 셸에서 `pwsh`를 입력하여 PowerShell을 시작할 수 있습니다.
 
 ## <a name="how-to-create-a-remoting-endpoint"></a>원격 엔드포인트를 만드는 방법
 

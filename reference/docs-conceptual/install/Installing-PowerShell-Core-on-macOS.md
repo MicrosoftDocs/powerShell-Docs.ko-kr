@@ -2,12 +2,12 @@
 title: MacOS에 PowerShell 설치
 description: macOS에서 PowerShell을 설치하는 방법에 대한 정보
 ms.date: 12/12/2018
-ms.openlocfilehash: 7f0d6a1aa275deb39a7d670546ee7e833b8ef315
-ms.sourcegitcommit: 4a26c05f162c4fa347a9d67e339f8a33e230b9ba
+ms.openlocfilehash: 2233bc01ee8c53087f79d83ca936c5a3800cfdba
+ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78404818"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80082767"
 ---
 # <a name="installing-powershell-on-macos"></a>MacOS에 PowerShell 설치
 
@@ -108,6 +108,8 @@ sudo installer -pkg powershell-6.2.0-osx-x64.pkg -target /
 ```
 dotnet tool install --global PowerShell
 ```
+
+dotnet 도구 설치 프로그램은 `PATH` 환경 변수에 `~/.dotnet/tools`를 추가합니다. 그러나 현재 실행 중인 셸에는 `PATH`가 업데이트되지 않습니다. 새 셸에서 `pwsh`를 입력하여 PowerShell을 시작할 수 있습니다.
 
 ## <a name="binary-archives"></a>이진 아카이브
 

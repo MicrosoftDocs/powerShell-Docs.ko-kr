@@ -2,18 +2,18 @@
 ms.date: 10/20/2019
 keywords: powershell,cmdlet
 title: PowerShell 설명서를 사용하는 방법
-ms.openlocfilehash: 7b73bc82f32e3ce1e6015822e0cc82078183931b
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: 50b054ddc21d55946969414688306fc0d15a5adf
+ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78279312"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80082827"
 ---
 # <a name="how-to-use-the-powershell-documentation"></a>PowerShell 설명서를 사용하는 방법
 
 PowerShell 온라인 설명서에 오신 것을 환영합니다. 이 사이트에는 다음 버전의 PowerShell에 대한 cmdlet 참조가 포함되어 있습니다.
 
-- PowerShell 7(미리 보기)
+- PowerShell 7
 - PowerShell 6
 - PowerShell 5.1
 

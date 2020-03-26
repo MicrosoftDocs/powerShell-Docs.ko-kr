@@ -2,12 +2,12 @@
 title: Linux에 PowerShell 설치
 description: 다양한 Linux 배포에 PowerShell을 설치하는 방법에 대한 정보
 ms.date: 03/09/2020
-ms.openlocfilehash: 0c7b2bd804d07b2fcb61a61240b139f84fabd6db
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 13b8583ed45f1201e61225b377112a59d2b26cb2
+ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402540"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80082808"
 ---
 # <a name="installing-powershell-on-linux"></a>Linux에 PowerShell 설치
 
@@ -298,7 +298,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---alpine-39-and-310"></a>직접 다운로드를 통해 설치 - Alpine 3.9 및 3.10
 
-[릴리스][] 페이지의 tar.gz 패키지 `powershell_7.0.0-linux-x64.tar.gz`를 Alpine 컴퓨터에 다운로드합니다.
+[릴리스][] 페이지의 tar.gz 패키지 `powershell-7.0.0-linux-alpine-x64.tar.gz`를 Alpine 컴퓨터에 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
@@ -693,6 +693,8 @@ rm -rf ~/powershell
 ```
 dotnet tool install --global PowerShell
 ```
+
+dotnet 도구 설치 프로그램은 `PATH` 환경 변수에 `~/.dotnet/tools`를 추가합니다. 그러나 현재 실행 중인 셸에는 `PATH`가 업데이트되지 않습니다. 새 셸에서 `pwsh`를 입력하여 PowerShell을 시작할 수 있습니다.
 
 ## <a name="binary-archives"></a>이진 아카이브
 
