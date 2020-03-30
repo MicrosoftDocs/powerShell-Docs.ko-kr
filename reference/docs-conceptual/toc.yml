@@ -294,6 +294,8 @@
           href: whats-new/what-s-new-in-windows-powershell-50.md
         - name: PowerShell 5.0 ISE의 새로운 기능
           href: whats-new/what-s-new-in-the-powershell-50-ise.md
+    - name: Windows PowerShell 5.1에서 PowerShell 7로 마이그레이션
+      href: whats-new/Migrating-from-Windows-PowerShell-51-to-PowerShell-7.md
     - name: 모듈 및 cmdlet 릴리스 기록
       href: whats-new/cmdlet-versions.md
     - name: 모듈 호환성 목록
