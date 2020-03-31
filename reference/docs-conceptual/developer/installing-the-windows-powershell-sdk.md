@@ -1,13 +1,13 @@
 ---
 title: Windows PowerShell SDK 설치
-ms.date: 09/13/2016
+ms.date: 03/30/2020
 ms.topic: article
-ms.openlocfilehash: e7ca38377b3e6533eec1a70027f6de1a9fb3091b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b47dddaf167024d30a7a31596f96569f976109d7
+ms.sourcegitcommit: bf71c8c5e2a4fc7d5c3a67a537db1285089d03a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73444511"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80394985"
 ---
 # <a name="installing-the-windows-powershell-sdk"></a>Windows PowerShell SDK 설치
 
@@ -18,7 +18,7 @@ ms.locfileid: "73444511"
 ## <a name="installing-windows-powershell-30-sdk-for-windows-8-and-windows-server-2012"></a>Windows 8 및 Windows Server 2012용 Windows PowerShell 3.0 SDK 설치
 
 Windows PowerShell 3.0은 Windows 8 및 Windows Server 2012와 함께 자동으로 설치됩니다. 또한 Windows 8 SDK의 일부로써 Windows PowerShell 3.0의 참조 어셈블리를 다운로드하고 설치할 수 있습니다. 이러한 어셈블리를 사용하여 Windows PowerShell 3.0에 대한 cmdlet, 공급자 및 호스트 프로그램을 작성할 수 있습니다. Windows 8용 Windows SDK를 설치하면 Windows PowerShell 어셈블리가 참조 어셈블리 폴더(`\Program Files
-(x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0`)에 자동으로 설치됩니다. 자세한 내용은 Windows 8 SDK 다운로드 사이트를 참조 하세요. Windows PowerShell 코드 샘플은 [Windows powershell 3.0 SDK 샘플 팩](https://code.msdn.microsoft.com/Windows-PowerShell-30-SDK-9a34641d)의 개발 센터 에서도 사용할 수 있습니다.
+(x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0`)에 자동으로 설치됩니다. 자세한 내용은 Windows 8 SDK 다운로드 사이트를 참조 하세요. Windows PowerShell 코드 샘플은 [powershell sdk-샘플](https://github.com/MicrosoftDocs/powershell-sdk-samples/tree/master/SDK-3.0) 리포지토리에서도 제공 됩니다.
 
 ## <a name="installing-windows-powershell-30-sdk-for-windows-7-and-windows-server-2008-r2"></a>Windows 7 및 Windows Server 2008 R2용 Windows PowerShell 3.0 SDK 설치
 
@@ -34,9 +34,7 @@ Windows PowerShell 2.0 SDK는 cmdlet, 공급자 및 호스팅 애플리케이션
 Assemblies\Microsoft\WindowsPowerShell\V1.0`
 
 > [!NOTE]
->
 > Windows PowerShell 2.0 어셈블리에 대해 컴파일된 코드는 Windows PowerShell 1.0 설치에 로드할 수 없습니다. 그러나 Windows PowerShell 1.0 어셈블리에 대해 컴파일되는 코드는 Windows PowerShell 2.0 설치에 로드할 수 있습니다.
-
 
 ### <a name="samples"></a>샘플
 
@@ -73,12 +71,12 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\` 다음 섹션에서는 각
 #### <a name="hosting-application-samples"></a>호스팅 애플리케이션 샘플
 
 - Runspace01-PowerShell 클래스를 사용 하 여 `Get-Process` cmdlet을 동기적으로 실행 하는 방법을 보여 줍니다.
-`Get-Process` cmdlet은 로컬 컴퓨터에서 실행 되는 각 프로세스에 대 한 프로세스 개체를 반환 합니다.
+  `Get-Process` cmdlet은 로컬 컴퓨터에서 실행 되는 각 프로세스에 대 한 프로세스 개체를 반환 합니다.
 - Runspace02-PowerShell 클래스를 사용 하 여 `Get-Process` 및 `Sort-Object` cmdlet을 동기적으로 실행 하는 방법을 보여 줍니다. `Get-Process` cmdlet은 로컬 컴퓨터에서 실행 되는 각 프로세스에 대 한 프로세스 개체를 반환 하 고 `Sort-Object`는 해당 Id 속성을 기준으로 개체를 정렬 합니다. 이러한 명령의 결과는 DataGridView 컨트롤을 사용 하 여 표시 됩니다.
 - Runspace03-PowerShell 클래스를 사용 하 여 스크립트를 동기적으로 실행 하는 방법과 종료 되지 않는 오류를 처리 하는 방법을 보여 줍니다. 스크립트는 프로세스 이름 목록을 받은 다음 해당 프로세스를 검색합니다. 스크립트를 실행할 때 생성된 종료되지 않는 오류를 포함하여 스크립트의 결과가 콘솔 창에 표시됩니다.
 - Runspace04-PowerShell 클래스를 사용 하 여 명령을 실행 하는 방법과 명령을 실행할 때 throw 되는 종료 오류를 catch 하는 방법을 보여 줍니다. 두 개의 명령이 실행되는데, 마지막 명령은 유효하지 않은 매개 변수 인수를 전달받습니다. 따라서 개체가 반환되지 않고 종료 오류가 발생합니다.
 - Runspace05-runspace를 열 때 스냅인의 cmdlet을 사용할 수 있도록 InitialSessionState 개체에 스냅인을 추가 하는 방법을 보여 줍니다. 스냅인은 PowerShell 개체를 사용 하 여 동기적으로 실행 되는 GetProcessSample01 샘플로 정의 된 Get Proc cmdlet을 제공 합니다.
-- Runspace06-runspace를 열 때 모듈이 로드 되도록 InitialSessionState 개체에 모듈을 추가 하는 방법을 보여 줍니다. 이 모듈은 PowerShell 개체를 사용 하 여 동기적으로 실행 되는 GetProcessSample02 샘플에 의해 정의 된 가져오기-프로시저 cmdlet을 제공 합니다.
+- Runspace06-runspace를 열 때 모듈이 로드 되도록 InitialSessionState 개체에 모듈을 추가 하는 방법을 보여 줍니다. 이 모듈은 PowerShell 개체를 사용 하 여 동기적으로 실행 되는 GetProcessSample02 샘플에 의해 정의 된 Get Proc cmdlet을 제공 합니다.
 - Runspace07-runspace를 만든 다음이 runspace를 사용 하 여 PowerShell 개체를 사용 하 여 두 개의 cmdlet을 동기적으로 실행 하는 방법을 보여 줍니다.
 - Runspace08-PowerShell 개체의 파이프라인에 명령 및 인수를 추가 하는 방법과 동기적으로 명령을 실행 하는 방법을 보여 줍니다.
 - Runspace09-PowerShell 개체의 파이프라인에 스크립트를 추가 하는 방법과 비동기식으로 스크립트를 실행 하는 방법을 보여 줍니다. 이벤트는 스크립트의 출력을 처리하는 데 사용됩니다.
@@ -89,7 +87,7 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\` 다음 섹션에서는 각
 
 #### <a name="host-samples"></a>호스트 샘플
 
-- Host01-사용자 지정 호스트를 사용 하는 호스트 응용 프로그램을 구현 하는 방법을 보여 줍니다. 이 샘플에서는 사용자 지정 호스트를 사용 하는 runspace를 만든 다음 PowerShell API를 사용 하 여 "종료"를 호출 하는 스크립트를 실행 합니다. 호스트 애플리케이션은 스크립트의 출력을 살펴보고 결과를 출력합니다.
+- Host01-사용자 지정 호스트를 사용 하는 호스트 응용 프로그램을 구현 하는 방법을 보여 줍니다. 이 샘플에서는 사용자 지정 호스트를 사용 하는 runspace를 만든 다음 PowerShell API를 사용 하 여 `exit`를 호출 하는 스크립트를 실행 합니다. 호스트 애플리케이션은 스크립트의 출력을 살펴보고 결과를 출력합니다.
 - Host02-사용자 지정 호스트 구현과 함께 Windows PowerShell 런타임을 사용 하는 호스트 응용 프로그램을 작성 하는 방법을 보여 줍니다. 호스트 응용 프로그램은 호스트 문화권을 독일어로 설정 하 고, `Get-Process` cmdlet을 실행 하 고, pwrsh를 사용 하 여 결과를 표시 한 다음 현재 데이터와 시간을 독일어로 출력 합니다.
 - Host03-명령줄에서 명령을 읽고 명령을 실행 한 다음 결과를 콘솔에 표시 하는 대화형 콘솔 기반 호스트 응용 프로그램을 빌드하는 방법을 보여 줍니다.
 - Host04-명령줄에서 명령을 읽고 명령을 실행 한 다음 결과를 콘솔에 표시 하는 대화형 콘솔 기반 호스트 응용 프로그램을 빌드하는 방법을 보여 줍니다. 이 호스트 애플리케이션은 사용자가 여러 선택 항목을 지정할 수 있는 프롬프트 표시도 지원합니다.
