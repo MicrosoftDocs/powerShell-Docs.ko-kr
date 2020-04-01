@@ -2,12 +2,12 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA 사용
-ms.openlocfilehash: 912e7a3c46be40ff5b5dfa37fe92b67bab5f98dc
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 1c424eb4a476dd0db3cc69c0e6f14c89a3c523ba
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995421"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500507"
 ---
 # <a name="using-jea"></a>JEA 사용
 
@@ -91,8 +91,8 @@ $filteredCommands = $commands.Name | Where-Object { $jeaDefaultCmdlets -notconta
 Import-PSSession -Session $jeasession -Prefix 'JEA' -CommandName $filteredCommands
 ```
 
-[Export-PSSession](/powershell/microsoft.powershell.utility/Export-PSSession)을 사용하여 암시적 원격에서 프록시 설정된 cmdlet을 유지할 수도 있습니다.
-암시적 원격에 대한 자세한 내용은 [Import-PSSession](/powershell/microsoft.powershell.utility/import-pssession) 및 [Import-Module](/powershell/microsoft.powershell.core/import-module)에 대한 설명서를 참조하세요.
+[Export-PSSession](/powershell/module/microsoft.powershell.utility/Export-PSSession)을 사용하여 암시적 원격에서 프록시 설정된 cmdlet을 유지할 수도 있습니다.
+암시적 원격에 대한 자세한 내용은 [Import-PSSession](/powershell/module/microsoft.powershell.utility/import-pssession) 및 [Import-Module](/powershell/module/microsoft.powershell.core/import-module)에 대한 설명서를 참조하세요.
 
 ## <a name="using-jea-programmatically"></a>프로그래밍 방식으로 JEA 사용
 

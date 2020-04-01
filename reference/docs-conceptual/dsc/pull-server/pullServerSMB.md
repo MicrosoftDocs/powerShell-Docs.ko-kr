@@ -2,12 +2,12 @@
 ms.date: 04/11/2018
 keywords: dsc,powershell,configuration,setup
 title: DSC SMB 끌어오기 서버 설정
-ms.openlocfilehash: 25705d9ae06b3ce8daa352142cc0b84793ab6359
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: be41f7a708f1a129919fae8300fc4307441097f7
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71953590"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500698"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>DSC SMB 끌어오기 서버 설정
 
@@ -32,7 +32,7 @@ DSC에 대해 SMB 끌어오기 서버를 사용하려면 다음을 수행해야 
 [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet을 호출하여 **xSmbShare** 모듈을 설치합니다.
 
 > [!NOTE]
-> `Install-Module`은 PowerShell 5.0에 포함된 **PowerShellGet** 모듈에 포함되어 있습니다. [PackageManagement PowerShell 모듈 미리 보기](https://www.microsoft.com/en-us/download/details.aspx?id=49186)에서 PowerShell 3.0 및 4.0용 **PowerShellGet** 모듈을 다운로드할 수 있습니다.
+> `Install-Module`은 PowerShell 5.0에 포함된 **PowerShellGet** 모듈에 포함되어 있습니다.
 > **xSmbShare**에는 SMB 파일 공유를 만드는 데 사용할 수 있는 DSC 리소스 **xSmbShare**가 포함되어 있습니다.
 
 ### <a name="create-the-directory-and-file-share"></a>디렉터리 및 파일 공유 만들기
@@ -76,7 +76,8 @@ Configuration SmbShare
 
 ### <a name="give-file-system-access-to-the-pull-client"></a>파일 시스템에 끌어오기 클라이언트에 대한 액세스 권한 부여
 
-클라이언트 노드에 **ReadAccess**를 부여하면 해당 노드에서 SMB 공유에 액세스할 수 있지만 해당 공유 내의 파일이나 폴더에는 액세스할 수 없습니다. SMB 공유 폴더 및 하위 폴더에 대한 액세스 권한을 클라이언트 노드에 명시적으로 부여해야 합니다. DSC에서 [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0) 모듈에 포함된 **cNtfsPermissionEntry** 리소스 사용을 추가하여 이렇게 할 수 있습니다. 다음 구성에서는 끌어오기 클라이언트에 ReadAndExecute 액세스를 부여하는 **cNtfsPermissionEntry** 블록을 추가합니다.
+클라이언트 노드에 **ReadAccess**를 부여하면 해당 노드에서 SMB 공유에 액세스할 수 있지만 해당 공유 내의 파일이나 폴더에는 액세스할 수 없습니다. SMB 공유 폴더 및 하위 폴더에 대한 액세스 권한을 클라이언트 노드에 명시적으로 부여해야 합니다. DSC에서 [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0) 모듈에 포함된 **cNtfsPermissionEntry** 리소스 사용을 추가하여 이렇게 할 수 있습니다.
+다음 구성에서는 끌어오기 클라이언트에 ReadAndExecute 액세스를 부여하는 **cNtfsPermissionEntry** 블록을 추가합니다.
 
 ```powershell
 Configuration DSCSMB
@@ -135,7 +136,8 @@ Configuration DSCSMB
 > [!NOTE]
 > SMB 끌어오기 서버를 사용하는 경우 구성 ID를 사용해야 합니다. SMB에서는 구성 이름이 지원되지 않습니다.
 
-각 리소스 모듈은 압축해야 하며 `{Module Name}_{Module Version}.zip` 패턴에 따라 이름을 지정해야 합니다. 예를 들어 모듈 버전이 3.1.2.0인 xWebAdminstration이라는 모듈은 'xWebAdministration_3.2.1.0.zip'으로 이름이 지정됩니다. 모듈의 각 버전은 단일 zip 파일에 포함되어야 합니다. zip 파일에서 다른 버전의 모듈이 지원되지 않습니다. 끌어오기 서버에서 사용할 DSC 리소스 모듈을 패키지하기 전에 디렉터리 구조를 약간 변경해야 합니다.
+각 리소스 모듈은 압축해야 하며 `{Module Name}_{Module Version}.zip` 패턴에 따라 이름을 지정해야 합니다. 예를 들어 모듈 버전이 3.1.2.0인 xWebAdminstration이라는 모듈은 'xWebAdministration_3.2.1.0.zip'으로 이름이 지정됩니다. 모듈의 각 버전은 단일 zip 파일에 포함되어야 합니다. zip 파일에서 다른 버전의 모듈이 지원되지 않습니다.
+끌어오기 서버에서 사용할 DSC 리소스 모듈을 패키지하기 전에 디렉터리 구조를 약간 변경해야 합니다.
 
 WMF 5.0의 DSC 리소스를 포함하는 모듈의 기본 형식은 `{Module Folder}\{Module Version}\DscResources\{DSC Resource Folder}\`입니다.
 
@@ -143,9 +145,7 @@ WMF 5.0의 DSC 리소스를 포함하는 모듈의 기본 형식은 `{Module Fol
 
 ## <a name="creating-the-mof-checksum"></a>MOF 체크섬 만들기
 
-구성 MOF 파일은 대상 노드의 LCM이 구성에 대한 유효성을 검사할 수 있도록 체크섬 파일과 함께 사용해야 합니다.
-체크섬을 만들려면 [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum) cmdlet을 호출합니다. 이 cmdlet은 구성 MOF가 있는 폴더를 지정하는 `Path` 매개 변수를 사용합니다. cmdlet은 `ConfigurationMOFName.mof.checksum`이라는 체크섬 파일을 만들며, 여기서 `ConfigurationMOFName`은 구성 mof 파일의 이름입니다.
-지정된 폴더에 구성 MOF 파일이 두 개 이상 있는 경우, 폴더에 있는 각 구성에 대해 체크섬이 만들어집니다.
+구성 MOF 파일은 대상 노드의 LCM이 구성에 대한 유효성을 검사할 수 있도록 체크섬 파일과 함께 사용해야 합니다. 체크섬을 만들려면 [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum) cmdlet을 호출합니다. 이 cmdlet은 구성 MOF가 있는 폴더를 지정하는 `Path` 매개 변수를 사용합니다. cmdlet은 `ConfigurationMOFName.mof.checksum`이라는 체크섬 파일을 만들며, 여기서 `ConfigurationMOFName`은 구성 mof 파일의 이름입니다. 지정된 폴더에 구성 MOF 파일이 두 개 이상 있는 경우, 폴더에 있는 각 구성에 대해 체크섬이 만들어집니다.
 
 체크섬 파일은 구성 MOF 파일과 동일한 디렉터리에 있어야 하며(기본적으로 `$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration`), 동일한 이름에 확장명으로 `.checksum`을 사용해야 합니다.
 
@@ -159,9 +159,7 @@ SMB 공유에서 구성 및/또는 리소스를 끌어오는 클라이언트를 
 LCM 구성에 대한 자세한 내용은 [구성 ID를 사용하여 끌어오기 클라이언트 설정](pullClientConfigID.md)을 참조하세요.
 
 > [!NOTE]
-> 편의상 이 예제에서는 **PSDscAllowPlainTextPassword**를 사용하여 일반 텍스트 암호를 **Credential** 매개 변수에 전달하는 것을 허용합니다. 자격 증명을 더 안전하게 전달하는 방법에 대한 자세한 내용은 [구성 데이터의 자격 증명 옵션](../configurations/configDataCredentials.md)을 참조하세요.
->
-> 리소스를 끌어오기만 하는 경우에도 SMB 끌어오기 서버에 대한 메타 구성의 **Settings** 블록에 **ConfigurationID**를 지정**해야** 합니다.
+> 편의상 이 예제에서는 **PSDscAllowPlainTextPassword**를 사용하여 일반 텍스트 암호를 **Credential** 매개 변수에 전달하는 것을 허용합니다. 자격 증명을 더 안전하게 전달하는 방법에 대한 자세한 내용은 [구성 데이터의 자격 증명 옵션](../configurations/configDataCredentials.md)을 참조하세요. 리소스를 끌어오기만 하는 경우에도 SMB 끌어오기 서버에 대한 메타 구성의 **Settings** 블록에 **ConfigurationID**를 지정**해야** 합니다.
 
 ```powershell
 $secpasswd = ConvertTo-SecureString "Pass1Word" -AsPlainText -Force
@@ -214,7 +212,7 @@ $ConfigurationData = @{
 
 ## <a name="see-also"></a>참고 항목
 
-[Windows PowerShell 필요한 상태 구성 개요](../overview/overview.md)
+[Windows PowerShell Desired State Configuration 개요](../overview/overview.md)
 
 [구성 시행](enactingConfigurations.md)
 

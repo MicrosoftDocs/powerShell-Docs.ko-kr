@@ -2,16 +2,16 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: ISESnippet 개체
-ms.openlocfilehash: 60456ec90f56753fa96f141b8b8299ef3f7e41c9
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.openlocfilehash: f810e6b26f0ded04be15bdc37f336d7890e29dad
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75736967"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500918"
 ---
 # <a name="the-isesnippetobject"></a>ISESnippet 개체
 
-**ISESnippet** 개체는 Microsoft.PowerShell.Host.ISE.ISESnippet 클래스의 인스턴스입니다. `$psISE.CurrentPowerShellTab.Snippets` 컬렉션의 멤버는 모두 **ISESnippet** 개체의 예입니다. 코드 조각을 만드는 가장 쉬운 방법은 [New-IseSnippet](/reference/5.1/ISE/New-IseSnippet.md) cmdlet을 사용하는 것입니다.
+**ISESnippet** 개체는 Microsoft.PowerShell.Host.ISE.ISESnippet 클래스의 인스턴스입니다. `$psISE.CurrentPowerShellTab.Snippets` 컬렉션의 멤버는 모두 **ISESnippet** 개체의 예입니다. 코드 조각을 만드는 가장 쉬운 방법은 [New-IseSnippet](/powershell/module/ISE/New-IseSnippet) cmdlet을 사용하는 것입니다.
 
 ## <a name="properties"></a>속성
 

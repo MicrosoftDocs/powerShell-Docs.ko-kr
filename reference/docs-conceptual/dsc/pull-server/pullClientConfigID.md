@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: PowerShell 5.0 이상에서 구성 ID를 사용하여 끌어오기 클라이언트 설정
-ms.openlocfilehash: bd173a1079b916c450a0292dca7a595a9bcff985
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a014e04fc5fbf2e813d9b0d79f39fe5aa3836f86
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417240"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500728"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-50-and-later"></a>PowerShell 5.0 이상에서 구성 ID를 사용하여 끌어오기 클라이언트 설정
 
@@ -30,7 +30,7 @@ ms.locfileid: "74417240"
 
 아래 예제 중 하나가 실행되면 **PullClientConfigID**라는 새 출력 폴더가 생성되고, 거기에 메타 구성 MOF 파일을 만듭니다. 이 경우 메타 구성 MOF 파일의 이름은 `localhost.meta.mof`로 지정됩니다.
 
-구성을 적용하려면 메타 구성 MOF 파일의 위치로 설정된 **Path**와 함께 **Set-DscLocalConfigurationManager** cmdlet을 호출합니다. 예:
+구성을 적용하려면 메타 구성 MOF 파일의 위치로 설정된 **Path**와 함께 **Set-DscLocalConfigurationManager** cmdlet을 호출합니다. 다음은 그 예입니다.
 
 ```powershell
 Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientConfigId –Verbose.
@@ -46,7 +46,7 @@ Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientC
 [System.Guid]::NewGuid()
 ```
 
-환경에서 **Guid**를 사용하는 방법에 대한 자세한 내용은 [Guid에 대한 계획](/powershell/scripting/dsc/secureserver#guids)을 참조하세요.
+환경에서 **Guid**를 사용하는 방법에 대한 자세한 내용은 [Guid에 대한 계획](secureserver.md#guids)을 참조하세요.
 
 ## <a name="set-up-a-pull-client-to-download-configurations"></a>구성을 다운로드하도록 끌어오기 클라이언트 설정
 
@@ -244,8 +244,7 @@ configuration PullClientConfigID
 PullClientConfigID
 ```
 
-보고서 서버를 지정하려면 **ReportRepositoryWeb** 블록을 사용합니다. 보고서 서버는 SMB 서버일 수 없습니다.
-해당 메타 구성은 **CONTOSO-PullSrv**에서 구성을 가져오고 **CONTOSO-ResourceSrv**에서 리소스를 가져오고, **CONTOSO-ReportSrv**에 상태 보고서를 보내도록 끌어오기 클라이언트를 구성합니다.
+보고서 서버를 지정하려면 **ReportRepositoryWeb** 블록을 사용합니다. 보고서 서버는 SMB 서버일 수 없습니다. 해당 메타 구성은 **CONTOSO-PullSrv**에서 구성을 가져오고 **CONTOSO-ResourceSrv**에서 리소스를 가져오고, **CONTOSO-ReportSrv**에 상태 보고서를 보내도록 끌어오기 클라이언트를 구성합니다.
 
 ```powershell
 [DSCLocalConfigurationManager()]

@@ -3,12 +3,12 @@ title: 참조 문서 편집
 description: 이 문서에서는 cmdlet 참조를 편집하기 위한 특정 요구 사항과 PowerShell 설명서의 정보 항목에 대해 설명합니다.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: 3c6f1b4fc27ca8ece7ec30317daf4ed2a6bc9228
-ms.sourcegitcommit: 18d832858a7b8ea094763afa753e0f48f01372e7
+ms.openlocfilehash: 3aed1c14429310c57681397d4877a3a6f48400fd
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79060328"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500970"
 ---
 # <a name="editing-reference-articles"></a>참조 문서 편집
 
@@ -86,5 +86,5 @@ Get-Command -ListImported
 [PlatyPS]: https://github.com/powershell/platyps
 [platyPS.schema.md]: https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md
 [issue1806]: https://github.com/MicrosoftDocs/PowerShell-Docs/issues/1806
-[about-example]: https://github.com/MicrosoftDocs/PowerShell-Docs/reference/5.1/Microsoft.PowerShell.Core/About/about_Comparison_Operators.md
+[about-example]: /PowerShell/module/Microsoft.PowerShell.Core/About/about_Comparison_Operators
 [Pandoc]: https://pandoc.org

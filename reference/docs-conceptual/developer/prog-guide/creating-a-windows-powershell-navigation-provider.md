@@ -3,12 +3,12 @@ title: Windows PowerShell 탐색 공급자 만들기
 ms.date: 09/13/2016
 ms.topic: article
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
-ms.openlocfilehash: 96a9167019c047bb9c6e56362b2c1110ece553dd
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 7ca7e3ca6feeba018ad793d074caf67cd9506a68
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870696"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500798"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Windows PowerShell 탐색 공급자 만들기
 
@@ -27,8 +27,7 @@ ms.locfileid: "75870696"
 
 Windows PowerShell 탐색 공급자는 [system.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 클래스에서 파생 되는 .net 클래스를 만들어야 합니다. 이 섹션에서 설명 하는 탐색 공급자에 대 한 클래스 정의는 다음과 같습니다.
 
-[!code-csharp[AccessDBProviderSample05.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32
-"AccessDBProviderSample05.cs")]
+[!code-csharp[AccessDBProviderSample05.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32 "AccessDBProviderSample05.cs")]
 
 이 공급자에서 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 특성에는 두 개의 매개 변수가 포함 되어 있습니다. 첫 번째 매개 변수는 Windows PowerShell에서 사용 되는 공급자에 대 한 친숙 한 이름을 지정 합니다. 두 번째 매개 변수는 명령을 처리 하는 동안 공급자가 Windows PowerShell 런타임에 노출 하는 Windows PowerShell 특정 기능을 지정 합니다. 이 공급자의 경우 추가 되는 Windows PowerShell 관련 기능이 없습니다.
 
@@ -97,7 +96,7 @@ Windows PowerShell 탐색 공급자는 표시 된 전체 또는 부분 공급자
 
 다음 코드는 샘플 탐색 공급자의 [Isitemcontainer *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) 구현을 보여 줍니다 .이 예제에서는 메서드는 지정 된 경로가 올바른지 그리고 테이블이 있는지 확인 하 고 경로가 컨테이너를 나타내는 경우 true를 반환 합니다.
 
-[!code-csharp[AccessDBProviderSample05.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L847-L872 "AccessDBProviderSample05.cs")]
+[!code-csharp[AccessDBProviderSample05.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L847-L872 "AccessDBProviderSample05.cs")]
 
 #### <a name="things-to-remember-about-implementing-isitemcontainer"></a>IsItemContainer 구현에 대해 기억할 사항
 
@@ -120,7 +119,7 @@ Windows PowerShell 탐색 공급자는 표시 된 전체 또는 부분 공급자
 [Moveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 메서드를 구현 하는 경우에는 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 것이 좋습니다. 이 메서드는 시스템 상태가 변경 될 때 (예: 파일 삭제) 작업 실행을 확인 하는 데 사용 됩니다.
 Windows PowerShell 런타임이 사용자에 게 표시 되는 항목을 확인 하는 데 필요한 명령줄 설정이 나 기본 설정 변수를 고려 하 여 사용자에 게 변경할 리소스의 [이름을 보냅니다.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)
 
-[System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)에 대한 호출이 끝나면 [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 메서드는 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 `true`호출해야 합니다. 이 메서드는 사용자에 게 작업을 계속 해야 하는 경우 사용자에 게 메시지를 보내 사용자에 게 피드백을 보냅니다. 공급자는 System.object를 호출 해야 합니다 [. shouldcontinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 잠재적으로 위험한 시스템 수정에 대 한 추가 검사로 계속 합니다.
+Moveitem에 대 한 호출 후에는 [ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 가 `true`반환 되 고, 그렇지 않으면 [*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 메서드가 system.object를 호출 해야 합니다. [shouldprocess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 호출 하는 메서드를 호출 해야 합니다. 이 메서드는 사용자에 게 작업을 계속 해야 하는 경우 사용자에 게 메시지를 보내 사용자에 게 피드백을 보냅니다. 공급자는 System.object를 호출 해야 합니다 [. shouldcontinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 잠재적으로 위험한 시스템 수정에 대 한 추가 검사로 계속 합니다.
 
 ## <a name="attaching-dynamic-parameters-to-the-move-item-cmdlet"></a>동적 매개 변수를 Move Item Cmdlet에 연결
 

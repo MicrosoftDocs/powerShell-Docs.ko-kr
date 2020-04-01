@@ -2,12 +2,12 @@
 title: PowerShell 커뮤니티 리소스
 description: PowerShell 사용자를 위해, 그리고 사용자가 만든 리소스 목록
 ms.date: 03/04/2020
-ms.openlocfilehash: ce828926624ab0255bc0ede1ce1c2ff965dbf679
-ms.sourcegitcommit: 18d832858a7b8ea094763afa753e0f48f01372e7
+ms.openlocfilehash: 50f5eaaef9ef30351fa605f74648a8efbce90af3
+ms.sourcegitcommit: bf71c8c5e2a4fc7d5c3a67a537db1285089d03a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79060358"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80395011"
 ---
 # <a name="powershell-community-resources"></a>PowerShell 커뮤니티 리소스
 
@@ -32,4 +32,4 @@ PowerShell 커뮤니티는 [GitHub](https://github.com/powershell/powershell/iss
 
 Microsoft에는 즐길 수 있는 디지털 아트워크 모음이 있습니다.
 
-[디지털 아트](https://docs.microsoft.com/powershell/scripting/community/digital-art.md)
+[디지털 아트](/powershell/scripting/community/digital-art)

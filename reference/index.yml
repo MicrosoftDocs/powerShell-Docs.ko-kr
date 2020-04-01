@@ -9,12 +9,12 @@ metadata:
   author: sdwheeler
   ms.author: sewhee
   ms.date: 09/04/2019
-  ms.openlocfilehash: 00a24bcf26f6f17e2a6badad4c9a045f570d8962
-  ms.sourcegitcommit: 18d832858a7b8ea094763afa753e0f48f01372e7
+  ms.openlocfilehash: dfaf084a76d6f1cb37a722956fb8abca5bc8416c
+  ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 03/10/2020
-  ms.locfileid: "79058874"
+  ms.lasthandoff: 04/01/2020
+  ms.locfileid: "80500528"
 highlightedContent:
   items:
   - title: 개요
@@ -133,7 +133,7 @@ tools:
     url: http://poshcode.org/discord
   - title: 디지털 아트
     imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_digital-art.svg
-    url: https://docs.microsoft.com/powershell/scripting/community/digital-art.md
+    url: https://docs.microsoft.com/powershell/scripting/community/digital-art
 additionalContent:
   sections:
   - title: PowerShell 팀

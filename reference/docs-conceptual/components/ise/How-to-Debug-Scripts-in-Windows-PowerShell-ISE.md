@@ -2,12 +2,12 @@
 ms.date: 01/02/2020
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE에서 스크립트를 디버깅하는 방법
-ms.openlocfilehash: c5da80f3e0e013448533c80bbe1957a301be38f5
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.openlocfilehash: 6fbe340cbff832b5d0e2a5515ef432cec574a3c1
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75737120"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500933"
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Windows PowerShell ISE에서 스크립트를 디버깅하는 방법
 
@@ -26,13 +26,13 @@ Windows PowerShell 디버깅 환경에서는 다음 세 가지 유형의 중단�
 
 1. **명령 중단점.** 스크립트 작업 중 지정된 명령을 실행하려 할 때마다 스크립트가 일시 중지됩니다. 매개 변수를 포함하여 중단점을 원하는 작업으로만 추가로 필터링할 수 있습니다. 명령은 사용자가 만든 함수일 수도 있습니다.
 
-Windows PowerShell ISE 디버깅 환경에서는 이 중에서 줄 중단점만 메뉴 또는 바로 가기 키를 통해 설정할 수 있습니다. 다른 두 유형의 중단점도 설정할 수 있지만 콘솔 창에서 [Set-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Set-PSBreakpoint.md) cmdlet을 통해 설정됩니다. 이 섹션에서는 Windows PowerShell ISE에서 메뉴(사용할 수 있을 경우)를 사용하여 디버깅 작업을 수행하는 방법과 콘솔 창에서 스크립팅을 사용하여 보다 다양한 명령을 수행하는 방법을 설명합니다.
+Windows PowerShell ISE 디버깅 환경에서는 이 중에서 줄 중단점만 메뉴 또는 바로 가기 키를 통해 설정할 수 있습니다. 다른 두 유형의 중단점도 설정할 수 있지만 콘솔 창에서 [Set-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Set-PSBreakpoint) cmdlet을 통해 설정됩니다. 이 섹션에서는 Windows PowerShell ISE에서 메뉴(사용할 수 있을 경우)를 사용하여 디버깅 작업을 수행하는 방법과 콘솔 창에서 스크립팅을 사용하여 보다 다양한 명령을 수행하는 방법을 설명합니다.
 
 ### <a name="to-set-a-breakpoint"></a>중단점을 설정하려면
 
 스크립트를 저장한 후에만 스크립트에 중단점을 설정할 수 있습니다. 줄 중단점을 설정할 줄을 마우스 오른쪽 단추로 클릭한 다음 **중단점 설정/해제**를 클릭합니다. 또는 줄 중단점을 설정할 줄을 클릭한 다음 <kbd>F9</kbd> 키를 누르거나 **디버그** 메뉴에서 **중단점 설정/해제**를 클릭합니다.
 
-다음 스크립트는 [Set-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Set-PSBreakpoint.md) cmdlet을 사용하여 콘솔 창에서 변수 중단점을 설정하는 방법의 예입니다.
+다음 스크립트는 [Set-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Set-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 변수 중단점을 설정하는 방법의 예입니다.
 
 ```powershell
 # This command sets a breakpoint on the Server variable in the Sample.ps1 script.
@@ -43,7 +43,7 @@ Set-PSBreakpoint -Script sample.ps1 -Variable Server
 
 현재 Windows PowerShell 세션에 있는 중단점을 모두 표시합니다.
 
-**디버그** 메뉴에서 **중단점 목록**을 클릭합니다. 다음 스크립트는 [Get-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Get-PSBreakpoint.md) cmdlet을 사용하여 콘솔 창에서 모든 중단점을 표시하는 방법의 예입니다.
+**디버그** 메뉴에서 **중단점 목록**을 클릭합니다. 다음 스크립트는 [Get-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Get-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 모든 중단점을 표시하는 방법의 예입니다.
 
 ```powershell
 # This command lists all breakpoints in the current session.
@@ -55,7 +55,7 @@ Get-PSBreakpoint
 중단점을 제거하면 삭제됩니다.
 
 나중에 다시 사용할 수도 있는 경우 대신 [중단점을 사용하지 않도록 설정](#disable-a-breakpoint)하는 것이 좋습니다. 중단점을 제거할 줄을 마우스 오른쪽 단추로 클릭한 다음, **ToggleBreakpoint**를 클릭합니다.
-또는 중단점을 제거할 줄을 클릭한 다음 **디버그** 메뉴에서 **중단점 설정/해제**를 클릭합니다. 다음 스크립트는 [Remove-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Remove-PSBreakpoint.md) cmdlet을 사용하여 콘솔 창에서 지정된 ID의 중단점을 제거하는 방법의 예입니다.
+또는 중단점을 제거할 줄을 클릭한 다음 **디버그** 메뉴에서 **중단점 설정/해제**를 클릭합니다. 다음 스크립트는 [Remove-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Remove-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 지정된 ID의 중단점을 제거하는 방법의 예입니다.
 
 ```powershell
 # This command deletes the breakpoint with breakpoint ID 2.
@@ -66,7 +66,7 @@ Remove-PSBreakpoint -Id 2
 
 현재 세션에서 정의된 모든 중단점을 제거하려면 **디버그** 메뉴에서 **모든 중단점 제거**를 클릭합니다.
 
-다음 스크립트는 [Remove-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Remove-PSBreakpoint.md) cmdlet을 사용하여 콘솔 창에서 모든 중단점을 제거하는 방법의 예입니다.
+다음 스크립트는 [Remove-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Remove-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 모든 중단점을 제거하는 방법의 예입니다.
 
 ```powershell
 # This command deletes all of the breakpoints in the current session.
@@ -75,7 +75,7 @@ Get-PSBreakpoint | Remove-PSBreakpoint
 
 ### <a name="disable-a-breakpoint"></a>중단점 사용 안 함
 
-중단점을 사용하지 않도록 설정할 경우 중단점이 제거되지 않고, 사용하도록 설정할 때까지 해제됩니다. 특정 줄 중단점을 사용하지 않도록 설정하려면 중단점을 사용하지 않도록 설정할 줄을 마우스 오른쪽 단추로 클릭한 다음 **중단점 사용 안 함**을 클릭합니다. 또는 중단점을 사용하지 않도록 설정할 줄을 클릭한 다음 <kbd>F9</kbd> 키를 누르거나 **디버그** 메뉴에서 **중단점 사용 안 함**을 클릭합니다. 다음 스크립트는 [Disable-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Disable-PSBreakpoint.md) cmdlet을 사용하여 콘솔 창에서 지정된 ID의 중단점을 제거하는 방법의 예입니다.
+중단점을 사용하지 않도록 설정할 경우 중단점이 제거되지 않고, 사용하도록 설정할 때까지 해제됩니다. 특정 줄 중단점을 사용하지 않도록 설정하려면 중단점을 사용하지 않도록 설정할 줄을 마우스 오른쪽 단추로 클릭한 다음 **중단점 사용 안 함**을 클릭합니다. 또는 중단점을 사용하지 않도록 설정할 줄을 클릭한 다음 <kbd>F9</kbd> 키를 누르거나 **디버그** 메뉴에서 **중단점 사용 안 함**을 클릭합니다. 다음 스크립트는 [Disable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Disable-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 지정된 ID의 중단점을 제거하는 방법의 예입니다.
 
 ```powershell
 # This command disables the breakpoint with breakpoint ID 0.
@@ -84,7 +84,7 @@ Disable-PSBreakpoint -Id 0
 
 ### <a name="disable-all-breakpoints"></a>모든 중단점 사용 안 함
 
-중단점을 사용하지 않도록 설정할 경우 중단점이 제거되지 않고, 사용하도록 설정할 때까지 해제됩니다. 현재 세션의 모든 중단점을 사용하지 않도록 설정하려면 **디버그** 메뉴에서 **모든 중단점 사용 안 함**을 클릭합니다. 다음 스크립트는 [Disable-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Disable-PSBreakpoint.md) cmdlet을 사용하여 콘솔 창에서 모든 중단점을 사용하지 않도록 설정하는 방법의 예입니다.
+중단점을 사용하지 않도록 설정할 경우 중단점이 제거되지 않고, 사용하도록 설정할 때까지 해제됩니다. 현재 세션의 모든 중단점을 사용하지 않도록 설정하려면 **디버그** 메뉴에서 **모든 중단점 사용 안 함**을 클릭합니다. 다음 스크립트는 [Disable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Disable-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 모든 중단점을 사용하지 않도록 설정하는 방법의 예입니다.
 
 ```powershell
 # This command disables all breakpoints in the current session.
@@ -94,7 +94,7 @@ Get-PSBreakpoint | Disable-PSBreakpoint
 
 ### <a name="enable-a-breakpoint"></a>중단점 사용
 
-특정 중단점을 사용하도록 설정하려면 중단점을 사용하도록 설정할 줄을 마우스 오른쪽 단추로 클릭한 다음 **중단점 사용**을 클릭합니다. 또는 중단점을 사용하도록 설정할 줄을 클릭한 다음 <kbd>F9</kbd> 키를 누르거나 **디버그** 메뉴에서 **중단점 사용**을 클릭합니다. 다음 스크립트는 [Enable-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Enable-PSBreakpoint.md) cmdlet을 사용하여 콘솔 창에서 특정 중단점을 사용하도록 설정하는 방법의 예입니다.
+특정 중단점을 사용하도록 설정하려면 중단점을 사용하도록 설정할 줄을 마우스 오른쪽 단추로 클릭한 다음 **중단점 사용**을 클릭합니다. 또는 중단점을 사용하도록 설정할 줄을 클릭한 다음 <kbd>F9</kbd> 키를 누르거나 **디버그** 메뉴에서 **중단점 사용**을 클릭합니다. 다음 스크립트는 [Enable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Enable-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 특정 중단점을 사용하도록 설정하는 방법의 예입니다.
 
 ```powershell
 # This command enables breakpoints with breakpoint IDs 0, 1, and 5.
@@ -103,7 +103,7 @@ Enable-PSBreakpoint -Id 0, 1, 5
 
 ### <a name="enable-all-breakpoints"></a>모든 중단점 사용
 
-현재 세션에서 정의된 모든 중단점을 사용하도록 설정하려면 **디버그** 메뉴에서 **모든 중단점 사용**을 클릭합니다. 다음 스크립트는 [Enable-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Enable-PSBreakpoint.md) cmdlet을 사용하여 콘솔 창에서 모든 중단점을 사용하도록 설정하는 방법의 예입니다.
+현재 세션에서 정의된 모든 중단점을 사용하도록 설정하려면 **디버그** 메뉴에서 **모든 중단점 사용**을 클릭합니다. 다음 스크립트는 [Enable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Enable-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 모든 중단점을 사용하도록 설정하는 방법의 예입니다.
 
 ```powershell
 # This command enables all breakpoints in the current session.
@@ -113,7 +113,7 @@ Get-PSBreakpoint | Enable-PSBreakpoint
 
 ## <a name="how-to-manage-a-debugging-session"></a>디버깅 세션을 관리하는 방법
 
-디버깅을 시작하기 전에 중단점을 하나 이상 설정해야 합니다. 디버그하려는 스크립트를 저장하지 않은 경우 중단점을 설정할 수 없습니다. 중단점을 설정하는 방법에 대한 지침은 [중단점을 관리하는 방법](#how-to-manage-breakpoints) 또는 [Set-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Set-PSBreakpoint.md)를 참조하세요.
+디버깅을 시작하기 전에 중단점을 하나 이상 설정해야 합니다. 디버그하려는 스크립트를 저장하지 않은 경우 중단점을 설정할 수 없습니다. 중단점을 설정하는 방법에 대한 지침은 [중단점을 관리하는 방법](#how-to-manage-breakpoints) 또는 [Set-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Set-PSBreakpoint)를 참조하세요.
 디버깅을 시작한 후에는 디버깅을 중지할 때까지 스크립트를 편집할 수 없습니다. 중단점이 하나 이상 설정되어 있는 스크립트는 실행되기 전에 자동으로 저장됩니다.
 
 ### <a name="to-start-debugging"></a>디버깅을 시작하려면
@@ -198,4 +198,4 @@ C:\ps-test\MyScript.ps1
 
 ## <a name="see-also"></a>참고 항목
 
-- [Windows PowerShell ISE 탐색](exploring-the-windows-powershell-ise.md)
+[Windows PowerShell ISE 탐색](exploring-the-windows-powershell-ise.md)

@@ -2,12 +2,12 @@
 ms.date: 06/27/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 웹 액세스의 권한 부여 규칙 및 보안 기능
-ms.openlocfilehash: c426b8cfb10829241ba244a5d840c91e1de9f66e
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 9bc1be125ebab4e9ba29ba832b442777e9bfc859
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402610"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500896"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Windows PowerShell 웹 액세스의 권한 부여 규칙 및 보안 기능
 
@@ -85,7 +85,7 @@ Windows PowerShell 웹 액세스의 보안을 위한 마지막 계층은 대상 
 
 기본적으로 Windows PowerShell 웹 액세스에서는 게이트웨이와 대상 컴퓨터를 모두 인증하는 데 기본 사용자 이름과 암호를 사용합니다. 하지만 **옵션 연결 설정**섹션의 웹 기반 로그인 페이지에는 대상 컴퓨터에 다른 자격 증명을 제공하는 옵션이 있으므로, 필요에 따라 적절히 사용할 수 있습니다. 사용자가 대체 자격 증명을 제공하지 않으면 게이트웨이 연결에 사용되는 기본 사용자 이름과 암호가 대상 컴퓨터와 연결하는 데에도 사용됩니다.
 
-권한 부여 규칙을 사용하면 사용자가 특정 세션 구성에 액세스할 수 있도록 허용할 수 있습니다. Windows PowerShell 웹 액세스에 대한 _제한된 runspace_나 세션 구성을 만들어 특정 사용자가 Windows PowerShell 웹 액세스에 로그인할 때 특정 세션 구성에만 연결할 수 있도록 구성할 수 있습니다. ACL(액세스 제어 목록)을 사용하면 특정 엔드포인트에 액세스할 수 있는 사용자를 지정할 수 있으며, 이 섹션에 설명된 권한 부여 규칙을 통해 특정 사용자 집합의 엔드포인트에 대한 액세스를 추가로 제한할 수 있습니다. 제한된 runspace에 대한 자세한 내용은 MSDN의 [Creating a constrained runspace](https://msdn.microsoft.com/library/dn614668)(제한된 runspace 만들기)를 참조하세요.
+권한 부여 규칙을 사용하면 사용자가 특정 세션 구성에 액세스할 수 있도록 허용할 수 있습니다. Windows PowerShell 웹 액세스에 대한 _제한된 runspace_나 세션 구성을 만들어 특정 사용자가 Windows PowerShell 웹 액세스에 로그인할 때 특정 세션 구성에만 연결할 수 있도록 구성할 수 있습니다. ACL(액세스 제어 목록)을 사용하면 특정 엔드포인트에 액세스할 수 있는 사용자를 지정할 수 있으며, 이 섹션에 설명된 권한 부여 규칙을 통해 특정 사용자 집합의 엔드포인트에 대한 액세스를 추가로 제한할 수 있습니다. 제한된 runspace에 대한 자세한 내용은 MSDN의 [Creating a constrained runspace](/powershell/scripting/developer/hosting/creating-a-constrained-runspace)(제한된 runspace 만들기)를 참조하세요.
 
 ### <a name="configuring-authorization-rules"></a>권한 부여 규칙 구성
 
@@ -112,7 +112,7 @@ Windows PowerShell 웹 액세스 cmdlet에서는 와일드카드 문자(\*)를 �
 
    해당 구성을 아직 만들지 않은 경우 [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configuration_files)에서 세션 구성을 만드는 방법에 대한 지침을 따르세요.
 
-3. 이 권한 부여 규칙을 통해 특정 사용자는 일반적으로 액세스 권한을 갖고 있는 네트워크상의 한 컴퓨터에만 액세스할 수 있으며, 일반적인 스크립팅 및 cmdlet 환경에 해당하는 특정 세션 구성에 액세스할 수 있습니다. 다음을 입력하고 **Enter** 키를 누릅니다.
+3. 이 권한 부여 규칙을 통해 특정 사용자는 일반적으로 액세스 권한을 갖고 있는 네트워크의 한 컴퓨터에만 액세스할 수 있으며, 사용자&trade;의 일반적인 스크립팅 및 cmdlet 요구 사항에 해당하는 특정 세션 구성에 액세스할 수 있습니다. 다음을 입력하고 **Enter** 키를 누릅니다.
 
    ```
    Add-PswaAuthorizationRule -UserName <domain\user | computer\user> `
@@ -151,7 +151,8 @@ Windows PowerShell 웹 액세스 cmdlet에서는 와일드카드 문자(\*)를 �
 
 #### <a name="other-authorization-rule-scenario-examples"></a>기타 권한 부여 규칙 시나리오 예
 
-모든 Windows PowerShell 세션에서는 세션 구성을 사용하는데, 세션에 세션 구성이 지정되어 있지 않은 경우 Microsoft.PowerShell이라고 하는 기본 제공 Windows PowerShell 세션 구성이 Windows PowerShell에서 기본적으로 사용됩니다. 이 기본 세션 구성에는 컴퓨터에서 사용할 수 있는 모든 cmdlet이 포함되어 있습니다. 관리자는 제한된 runspace(최종 사용자가 제한된 범위의 cmdlet과 작업을 수행할 수 있음)가 사용된 세션 구성을 정의하여 모든 컴퓨터에 대한 액세스를 제한할 수 있습니다. 한 컴퓨터에 대해 모든 언어에 액세스할 수 있거나 Windows PowerShell 원격 관리 cmdlet에만 액세스할 수 있도록 허용된 사용자는 첫 번째 컴퓨터에 연결된 다른 컴퓨터에도 연결할 수 있습니다. 제한된 runspace를 정의하면 사용자가 허용된 자신의 Windows PowerShell runspace에서 다른 컴퓨터를 액세스할 수 없게 되어 Windows PowerShell 웹 액세스 환경의 보안을 강화할 수 있습니다. 그룹 정책을 사용하여 관리자가 Windows PowerShell 웹 액세스를 통해 액세스할 수 있도록 구성하려는 모든 컴퓨터에 세션 구성을 배포할 수 있습니다. 세션 구성에 대한 자세한 내용은 [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx)를 참조하세요. 아래 이 시나리오에 대한 몇 가지 예가 나와 있습니다.
+모든 Windows PowerShell 세션에서는 세션 구성을 사용하는데, 세션에 세션 구성이 지정되어 있지 않은 경우 Microsoft.PowerShell이라고 하는 기본 제공 Windows PowerShell 세션 구성이 Windows PowerShell에서 기본적으로 사용됩니다. 이 기본 세션 구성에는 컴퓨터에서 사용할 수 있는 모든 cmdlet이 포함되어 있습니다. 관리자는 제한된 runspace(최종 사용자가 제한된 범위의 cmdlet과 작업을 수행할 수 있음)가 사용된 세션 구성을 정의하여 모든 컴퓨터에 대한 액세스를 제한할 수 있습니다. 한 컴퓨터에 대해 모든 언어에 액세스할 수 있거나 Windows PowerShell 원격 관리 cmdlet에만 액세스할 수 있도록 허용된 사용자는 첫 번째 컴퓨터에 연결된 다른 컴퓨터에도 연결할 수 있습니다. 제한된 runspace를 정의하면 사용자가 허용된 자신의 Windows PowerShell runspace에서 다른 컴퓨터를 액세스할 수 없게 되어 Windows PowerShell 웹 액세스 환경의 보안을 강화할 수 있습니다. 그룹 정책을 사용하여 관리자가 Windows PowerShell 웹 액세스를 통해 액세스할 수 있도록 구성하려는 모든 컴퓨터에 세션 구성을 배포할 수 있습니다. 세션 구성에 대한 자세한 내용은 [about_Session_Configurations](/powershell/module/Microsoft.PowerShell.Core/About/about_session_configurations)를 참조하세요.
+아래 이 시나리오에 대한 몇 가지 예가 나와 있습니다.
 
 - 관리자는 제한된 runspace가 사용되는 **PswaEndpoint**라는 엔드포인트를 만듭니다. 그런 다음, `*,*,PswaEndpoint`라는 규칙을 만들고 엔드포인트를 다른 컴퓨터에 배포합니다. 이 규칙을 통해 모든 사용자는 **PswaEndpoint**라는 엔드포인트가 있는 모든 컴퓨터에 액세스할 수 있습니다.
   이 규칙이 규칙 집합에 유일하게 정의되어 있는 규칙이라면 이 엔드포인트가 없는 컴퓨터에는 액세스할 수 없습니다.
@@ -181,8 +182,8 @@ Add-PswaAuthorizationRule -userName PswaServer\chrisLocal `
 2. **옵션 연결 설정** 영역의 로그인 페이지에서 제공된 대체 자격 증명을 사용하여 대상 컴퓨터에서 인증
 
    > [!NOTE]
-   > 게이트웨이 및 대상 컴퓨터가 다른 작업 그룹이나 도메인에 있을 경우, 두 개의 작업 그룹 컴퓨터나 두 개의 도메인 또는 작업 그룹과 도메인 간에 트러스트 관계가 설정되어 있어야 합니다. 이 관계는 Windows PowerShell 웹 액세스 권한 부여 규칙 cmdlet을 사용하여 구성할 수 없습니다. 권한 규칙이 컴퓨터 간의 트러스트 관계를 정의하지는 않습니다. 즉 권한 규칙은 특정 대상 컴퓨터와 세션 구성에 연결하는 사용자만 인증할 수 있습니다. 서로 다른 도메인 간에 트러스트 관계를 구성하는 방법에 대한 자세한 내용은 [도메인 및 포리스트 트러스트 만들기](https://technet.microsoft.com/library/cc794775.aspx)를 참조하세요.
-   > 신뢰할 수 있는 호스트 목록에 작업 그룹 컴퓨터를 추가하는 방법에 대한 자세한 내용은 [서버 관리자를 통한 원격 관리](https://technet.microsoft.com/library/dd759202.aspx)를 참조하세요.
+   > 게이트웨이 및 대상 컴퓨터가 다른 작업 그룹이나 도메인에 있을 경우, 두 개의 작업 그룹 컴퓨터나 두 개의 도메인 또는 작업 그룹과 도메인 간에 트러스트 관계가 설정되어 있어야 합니다. 이 관계는 Windows PowerShell 웹 액세스 권한 부여 규칙 cmdlet을 사용하여 구성할 수 없습니다. 권한 규칙이 컴퓨터 간의 트러스트 관계를 정의하지는 않습니다. 즉 권한 규칙은 특정 대상 컴퓨터와 세션 구성에 연결하는 사용자만 인증할 수 있습니다. 서로 다른 도메인 간에 트러스트 관계를 구성하는 방법에 대한 자세한 내용은 [도메인 및 포리스트 트러스트 만들기](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794775(v=ws.10))를 참조하세요.
+   > 신뢰할 수 있는 호스트 목록에 작업 그룹 컴퓨터를 추가하는 방법에 대한 자세한 내용은 [서버 관리자를 통한 원격 관리](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759202(v=ws.11))를 참조하세요.
 
 ### <a name="using-a-single-set-of-authorization-rules-for-multiple-sites"></a>여러 사이트에 단일 권한 부여 규칙 집합 사용
 
@@ -198,7 +199,7 @@ Add-PswaAuthorizationRule -userName PswaServer\chrisLocal `
 
 ### <a name="setting-default-parameters-on-the-sign-in-page"></a>로그인 페이지의 기본 매개 변수 설정
 
-Windows PowerShell 웹 액세스 게이트웨이가 Windows Server 2012 R2에서 실행되는 경우 Windows PowerShell 웹 액세스 로그인 페이지에 표시되는 설정에 대한 기본값을 구성할 수 있습니다. 이전 단락에 설명된 **web.config** 파일에서 값을 구성할 수 있습니다. 로그인 페이지 설정에 대한 기본값은 web.config 파일의 **appSettings** 섹션에 있습니다. 다음은 **appSettings** 섹션의 예입니다. 이러한 설정에 유효한 값은 대부분 Windows PowerShell에서 [New-PSSession](https://technet.microsoft.com/library/hh849717.aspx) cmdlet의 해당 매개 변수에 대한 값과 동일합니다.
+Windows PowerShell 웹 액세스 게이트웨이가 Windows Server 2012 R2에서 실행되는 경우 Windows PowerShell 웹 액세스 로그인 페이지에 표시되는 설정에 대한 기본값을 구성할 수 있습니다. 이전 단락에 설명된 **web.config** 파일에서 값을 구성할 수 있습니다. 로그인 페이지 설정에 대한 기본값은 web.config 파일의 **appSettings** 섹션에 있습니다. 다음은 **appSettings** 섹션의 예입니다. 이러한 설정에 유효한 값은 대부분 Windows PowerShell에서 [New-PSSession](/powershell/module/Microsoft.PowerShell.Core/New-PSSession) cmdlet의 해당 매개 변수에 대한 값과 동일합니다.
 
 예를 들어 다음 코드 블록에 표시된 `defaultApplicationName` 키는 대상 컴퓨터의 **$PSSessionApplicationName** 기본 설정 변수 값입니다.
 
@@ -225,8 +226,8 @@ Windows Server 2012 R2에서 실행되는 Windows PowerShell 웹 액세스에서
 
 ## <a name="see-also"></a>참고 항목
 
-[Windows PowerShell 웹 액세스 설치 및 사용](https://technet.microsoft.com/library/hh831611(v=ws.11).aspx)
+[Windows PowerShell 웹 액세스 설치 및 사용](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831611(v=ws.11))
 
-[about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx)
+[about_Session_Configurations](/powershell/module/microsoft.powershell.core/about/about_Session_Configurations)
 
 [Windows PowerShell Web Access Cmdlets](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps)(Windows PowerShell 웹 액세스 Cmdlet)

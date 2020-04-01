@@ -2,12 +2,12 @@
 title: PowerShell Core 6.0의 새로운 기능
 description: PowerShell Core 6.0에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 08/06/2018
-ms.openlocfilehash: d1bc1ef2676da60062b8bdd57042331f0f245bec
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 39bcb343c44c32d183c8bb90306a8f4a57397eb6
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995487"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500482"
 ---
 # <a name="whats-new-in-powershell-core-60"></a>PowerShell Core 6.0의 새로운 기능
 
@@ -231,7 +231,7 @@ Windows 이외의 플랫폼에서는 텍스트 파일의 기본 인코딩으로 
 - 웹 cmdlet의 링크 헤더 페이지 매김 지원 (#3828)
   - `Invoke-WebRequest`의 경우, 응답에 링크 헤더가 포함될 때 URL 및 `rel` 특성을 나타내는 사전으로 RelationLink 속성을 만들고 개발자가 쉽게 사용할 수 있도록 URL이 절대적인지 확인합니다.
   - `Invoke-RestMethod`의 경우, 응답에 링크 헤더가 포함될 때 더 이상 존재하지 않거나 선택적 `-MaximumFollowRelLink` 매개 변수 값에 도달할 때까지 자동으로 `next` `rel` 링크를 따라가는 `-FollowRelLink` 스위치가 노출됩니다.
-- 웹 cmdlet에 `-CustomMethod` 매개 변수를 추가하여 비표준 메서드 동사를 허용합니다. (#3142) ([@Lee303](https://github.com/Lee303)에게 감사드립니다!)
+- 웹 cmdlet에 `-CustomMethod` 매개 변수를 추가하여 비표준 메서드 동사를 허용합니다. (#3142) (@Lee303에게 감사드립니다!)
 - 웹 cmdlet에 `SslProtocol` 지원을 추가합니다. (#5329) ([@markekraus](https://github.com/markekraus)에게 감사드립니다!)
 - 웹 cmdlet에 Multipart 지원을 추가합니다. (#4782) ([@markekraus](https://github.com/markekraus)에게 감사드립니다.)
 - 웹 cmdlet에 `-NoProxy`를 추가하여 시스템 수준의 프록시 설정을 무시합니다. (#3447) ([@TheFlyingCorpse](https://github.com/TheFlyingCorpse)에게 감사드립니다!)
@@ -248,7 +248,7 @@ Windows 이외의 플랫폼에서는 텍스트 파일의 기본 인코딩으로 
 - 웹 cmdlet `UserAgent`를 `WindowsPowerShell`에서 `PowerShell`로 변경합니다. (#4914) ([@markekraus](https://github.com/markekraus)에게 감사드립니다.)
 - 명시적 `ContentType` 검색을 `Invoke-RestMethod`에 추가합니다. (#4692)
 - 비표준 사용자 에이전트 헤더에서 작동하도록 웹 cmdlet `-SkipHeaderValidation`을 수정합니다. (#4479 &
-  #<a name="4512-thanks-markekraushttpsgithubcommarkekraus"></a>4512) ([@markekraus](https://github.com/markekraus)에게 감사드립니다.)
+  #<a name="4512-thanks-markekraus"></a>4512) ([@markekraus](https://github.com/markekraus)에게 감사드립니다.)
 
 ### <a name="json-cmdlets"></a>JSON cmdlet
 

@@ -2,12 +2,12 @@
 ms.date: 07/09/2019
 keywords: dsc,gpo,powershell,configuration,setup
 title: 빠른 시작 - 그룹 정책을 DSC로 변환
-ms.openlocfilehash: 8c89dbbce5b2b146194b799d7e36ecce3105bfeb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5e6b86be5127332fe4fd400980c8e147b735247b
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71953470"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500646"
 ---
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -56,6 +56,6 @@ Mode                LastWriteTime     Length Name
 
 ## <a name="next-steps"></a>다음 단계
 
-- 구성 스크립트를 Azure Automation 상태 구성으로 업로드하려면 [시작하기](/automation/automation-dsc-getting-started#importing-a-configuration-into-azure-automation)를 참조하세요.
+- 구성 스크립트를 Azure Automation 상태 구성으로 업로드하려면 [시작하기](/azure/automation/automation-dsc-getting-started#importing-a-configuration-into-azure-automation)를 참조하세요.
 - **SecurityPolicyDSC** 및 **AuditPolicyDSC** 모듈을 [Automation 계정](/azure/automation/shared-resources/modules)에 추가합니다.
 - [PowerShell 갤러리](https://www.powershellgallery.com/)에서는 DSC 구성 및 리소스를 찾을 수 있습니다.

@@ -2,22 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 리소스 디자이너 도구 사용
-ms.openlocfilehash: 4f678f4586c75c830bf876b891fe4784aa3b4e95
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 36eed0fc888380a03a3279e834748708f578d973
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71952860"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500636"
 ---
 # <a name="using-the-resource-designer-tool"></a>리소스 디자이너 도구 사용
 
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-리소스 디자이너 도구는 Windows PowerShell DSC(필요한 상태 구성) 리소스를 만드는 작업을 더 쉽게 해주고 **xDscResourceDesigner** 모듈에 의해 노출된 cmdlet 집합입니다. 이 리소스의 cmdlet은 MOF 스키마, 스크립트 모듈 및 새 리소스에 대한 디렉터리 구조를 만드는 데 도움이 됩니다. DSC 리소스에 대한 자세한 내용은 [Build Custom Windows PowerShell Desired State Configuration Resources(사용자 지정 Windows PowerShell 필요한 상태 구성 리소스 빌드)](authoringResource.md)를 참조하세요.
-이 항목에서는 Active Directory 사용자를 관리하는 DSC 리소스를 만듭니다.
-[Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet을 사용하여 **xDscResourceDesigner** 모듈을 설치하세요.
-
->**참고**: **Install-Module**은 PowerShell 5.0에 포함된 **PowerShellGet** 모듈에 포함되어 있습니다. [PackageManagement PowerShell 모듈 미리 보기](https://www.microsoft.com/en-us/download/details.aspx?id=49186)에서 PowerShell 3.0 및 4.0용 **PowerShellGet** 모듈을 다운로드할 수 있습니다.
+리소스 디자이너 도구는 Windows PowerShell DSC(필요한 상태 구성) 리소스를 만드는 작업을 더 쉽게 해주고 **xDscResourceDesigner** 모듈에 의해 노출된 cmdlet 집합입니다. 이 리소스의 cmdlet은 MOF 스키마, 스크립트 모듈 및 새 리소스에 대한 디렉터리 구조를 만드는 데 도움이 됩니다. DSC 리소스에 대한 자세한 내용은 [Build Custom Windows PowerShell Desired State Configuration Resources(사용자 지정 Windows PowerShell 필요한 상태 구성 리소스 빌드)](authoringResource.md)를 참조하세요. 이 항목에서는 Active Directory 사용자를 관리하는 DSC 리소스를 만듭니다. [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet을 사용하여 **xDscResourceDesigner** 모듈을 설치하세요.
 
 ## <a name="creating-resource-properties"></a>리소스 속성 만들기
 가장 먼저 해야 할 일은 리소스가 노출할 속성에 대해 결정하는 것입니다. 이 예의 경우, 다음 속성으로 Active Directory 사용자를 정의하게 됩니다.
@@ -26,7 +22,7 @@ ms.locfileid: "71952860"
 * **UserName**: 사용자를 고유하게 식별하는 주요 속성입니다.
 * **Ensure**: 사용자 계정이 있음인지 또는 없음인지 여부를 지정합니다. 이 매개 변수는 두 개의 가능한 값만 갖습니다.
 * **DomainCredential**: 사용자에 대한 도메인 암호입니다.
-* **Password**: 필요한 경우 구성으로 사용자 암호를 변경할 수 있도록 해주는 사용자에 대한 원하는 암호입니다.
+* **암호**: 필요한 경우 구성으로 사용자 암호를 변경할 수 있도록 해주는 사용자에 대한 원하는 암호입니다.
 
 속성을 만들기 위해 우리는 **New-xDscResourceProperty** cmdlet을 사용합니다. 다음 PowerShell 명령을 사용하면 위에서 설명한 속성이 만들어집니다.
 
@@ -60,7 +56,8 @@ class Demo_ADUser : OMI_BaseResource
 };
 ```
 
-리소스 스크립트는 **C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.psm1**에 있습니다. 이 스크립트는 리소스를 구현하는 실제 논리를 포함하지 않습니다. 실제 논리는 직접 추가해야 합니다. 뼈대 스크립트의 내용은 다음과 같습니다.
+리소스 스크립트는 **C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.psm1**에 있습니다.
+이 스크립트는 리소스를 구현하는 실제 논리를 포함하지 않습니다. 실제 논리는 직접 추가해야 합니다. 뼈대 스크립트의 내용은 다음과 같습니다.
 
 ```powershell
 function Get-TargetResource

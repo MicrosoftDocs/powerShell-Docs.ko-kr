@@ -3,12 +3,12 @@ title: Windows PowerShell 콘텐츠 공급자 만들기
 ms.date: 09/13/2016
 ms.topic: article
 ms.assetid: 3da88ff9-c4c7-4ace-aa24-0a29c8cfa060
-ms.openlocfilehash: 2d48c18cb41dcca372b1e12e1f3abc4c3f5e4bee
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 149ddb5becf2e0237973e535323ddf8b03b86f24
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870730"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500831"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Windows PowerShell 콘텐츠 공급자 만들기
 
@@ -22,8 +22,7 @@ ms.locfileid: "75870730"
 
 Windows PowerShell 콘텐츠 공급자는 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider) 인터페이스를 지 원하는 .net 클래스를 만들어야 합니다. 이 섹션에서 설명 하는 항목 공급자에 대 한 클래스 정의는 다음과 같습니다.
 
-[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L32-L33
-"AccessDBProviderSample06.cs")]
+[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L32-L33 "AccessDBProviderSample06.cs")]
 
 이 클래스 정의에서 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 특성에는 두 개의 매개 변수가 포함 되어 있습니다. 첫 번째 매개 변수는 Windows PowerShell에서 사용 되는 공급자에 대 한 친숙 한 이름을 지정 합니다. 두 번째 매개 변수는 명령을 처리 하는 동안 공급자가 Windows PowerShell 런타임에 노출 하는 Windows PowerShell 특정 기능을 지정 합니다. 이 공급자의 경우 추가 된 Windows PowerShell 관련 기능이 없습니다.
 
@@ -47,7 +46,7 @@ Windows PowerShell 콘텐츠 공급자는 [Icontentcmdletprovider](/dotnet/api/S
 항목에서 콘텐츠를 읽으려면 공급자가 [Icontentreader](/dotnet/api/System.Management.Automation.Provider.IContentReader)에서 파생 되는 콘텐츠 판독기 클래스를 구현 해야 합니다.
 이 공급자에 대 한 콘텐츠 판독기를 사용 하면 데이터 테이블의 행 내용에 액세스할 수 있습니다. 콘텐츠 판독기 클래스는 표시 된 행에서 데이터를 검색 하 고 해당 데이터를 나타내는 목록, 콘텐츠 판독기를 이동 하는 **Seek** 메서드, 콘텐츠 판독기를 닫는 **Close** 메서드 및 **Dispose** 메서드를 반환 하는 **읽기** 메서드를 정의 합니다.
 
-[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L2115-L2241
+[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L2115-L2241
 "AccessDBProviderSample06.cs")]
 
 ## <a name="implementing-a-content-writer"></a>콘텐츠 작성기 구현
@@ -55,7 +54,7 @@ Windows PowerShell 콘텐츠 공급자는 [Icontentcmdletprovider](/dotnet/api/S
 항목에 콘텐츠를 쓰려면 공급자가 [Icontentwriter](/dotnet/api/System.Management.Automation.Provider.IContentWriter)에서 파생 된 콘텐츠 작성기 클래스를 구현 해야 합니다.
 콘텐츠 작성기 클래스는 지정 된 행 내용을 쓰는 **Write** 메서드, 콘텐츠 작성기를 이동 하는 **Seek** 메서드, 콘텐츠 작성기를 닫는 **Close** 메서드 및 **Dispose** 메서드를 정의 합니다.
 
-[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L2250-L2394 "AccessDBProviderSample06.cs")]
+[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L2250-L2394 "AccessDBProviderSample06.cs")]
 
 ## <a name="retrieving-the-content-reader"></a>콘텐츠 판독기를 검색 하는 중
 
@@ -84,7 +83,7 @@ public IContentReader GetContentReader(string path)
 } // GetContentReader
 ```
 
-[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1829-L1846 "AccessDBProviderSample06.cs")]
+[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1829-L1846 "AccessDBProviderSample06.cs")]
 
 #### <a name="things-to-remember-about-implementing-getcontentreader"></a>GetContentReader 구현에 대해 기억할 사항
 
@@ -107,7 +106,7 @@ public object GetContentReaderDynamicParameters(string path)
 }
 ```
 
-[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1853-L1856 "AccessDBProviderSample06.cs")]
+[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1853-L1856 "AccessDBProviderSample06.cs")]
 
 ## <a name="retrieving-the-content-writer"></a>콘텐츠 기록기를 검색 하는 중
 
@@ -136,7 +135,7 @@ public IContentWriter GetContentWriter(string path)
 }
 ```
 
-[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1863-L1880 "AccessDBProviderSample06.cs")]
+[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1863-L1880 "AccessDBProviderSample06.cs")]
 
 #### <a name="things-to-remember-about-implementing-getcontentwriter"></a>GetContentWriter 구현에 대해 기억할 사항
 
@@ -152,7 +151,7 @@ public IContentWriter GetContentWriter(string path)
 
 이 Windows PowerShell 컨테이너 공급자는이 메서드를 구현 하지 않습니다. 그러나 다음 코드는이 메서드의 기본 구현입니다.
 
-[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1887-L1890 "AccessDBProviderSample06.cs")]
+[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1887-L1890 "AccessDBProviderSample06.cs")]
 
 ## <a name="clearing-content"></a>콘텐츠 지우기
 
@@ -160,7 +159,7 @@ public IContentWriter GetContentWriter(string path)
 
 이 공급자에 대 한 [Icontentcmdletprovider. Clearcontent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) 메서드의 구현은 다음과 같습니다.
 
-[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1775-L1812 "AccessDBProviderSample06.cs")]
+[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1775-L1812 "AccessDBProviderSample06.cs")]
 
 #### <a name="things-to-remember-about-implementing-clearcontent"></a>ClearContent 구현에 대해 기억할 사항
 
@@ -172,7 +171,7 @@ public IContentWriter GetContentWriter(string path)
 
 - [Icontentcmdletprovider. Clearcontent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) 메서드를 구현 하면 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 것이 좋습니다. 이 메서드는 콘텐츠 지우기와 같은 데이터 저장소가 변경 될 때 작업 실행을 확인 하는 데 사용 됩니다. [System.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 는 사용자에 게 변경할 리소스의 이름을 보냅니다 .이 메서드는 사용자에 게 표시 되는 모든 명령줄 설정 또는 기본 설정 변수를 처리 하는 사용자에 게 변경할 리소스의 이름을 보냅니다.
 
-  [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)에 대한 호출이 `true`이면 [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) 메서드는 잠재적으로 위험한 시스템 수정에 대한 추가 확인으로 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 호출해야 합니다. 이 메서드는 사용자에 게 작업을 계속 해야 하는지 여부를 확인 하기 위해 사용자에 게 메시지를 보냅니다. System.object를 호출 하면 잠재적으로 위험한 시스템 수정에 대 한 추가 검사를 수행할 수 있습니다 [.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)
+  Icontentcmdletprovider를 호출한 후에는 [ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 가 `true`를 반환 합니다. Clearcontent * 메서드는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 를 호출 해야 합니다. [*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) 메서드를 호출 하는 경우에는 메서드를 호출 해야 합니다. 이 메서드는 사용자에 게 작업을 계속 해야 하는지 여부를 확인 하기 위해 사용자에 게 메시지를 보냅니다. System.object를 호출 하면 잠재적으로 위험한 시스템 수정에 대 한 추가 검사를 수행할 수 있습니다 [.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)
 
 ## <a name="attaching-dynamic-parameters-to-the-clear-content-cmdlet"></a>동적 매개 변수를 Clear Content Cmdlet에 연결
 
@@ -187,7 +186,7 @@ public object ClearContentDynamicParameters(string path)
 }
 ```
 
-[!code-csharp[AccessDBProviderSample06.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1819-L1822 "AccessDBProviderSample06.cs")]
+[!code-csharp[AccessDBProviderSample06.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1819-L1822 "AccessDBProviderSample06.cs")]
 
 ## <a name="code-sample"></a>코드 예제
 
@@ -195,7 +194,7 @@ public object ClearContentDynamicParameters(string path)
 
 ## <a name="defining-object-types-and-formatting"></a>개체 형식 및 서식 정의
 
-공급자를 작성할 때 기존 개체에 멤버를 추가 하거나 새 개체를 정의 해야 할 수 있습니다. 이 작업이 완료 되 면 Windows PowerShell에서 개체의 멤버와 개체 표시 방법을 정의 하는 서식 파일을 식별 하는 데 사용할 수 있는 형식 파일을 만들어야 합니다. 자세한 내용은 [개체 형식 확장 및 서식 지정](/previous-versions//ms714665(v=vs.85))을 참조 하세요.
+공급자를 작성할 때 기존 개체에 멤버를 추가 하거나 새 개체를 정의 해야 할 수 있습니다. 이 작업이 완료 되 면 Windows PowerShell에서 개체의 멤버와 개체 표시 방법을 정의 하는 서식 파일을 식별 하는 데 사용할 수 있는 형식 파일을 만들어야 합니다. 자세한 내용은 [개체 형식 확장 및 서식 지정](/previous-versions/ms714665(v=vs.85))을 참조 하세요.
 
 ## <a name="building-the-windows-powershell-provider"></a>Windows PowerShell 공급자 빌드
 
