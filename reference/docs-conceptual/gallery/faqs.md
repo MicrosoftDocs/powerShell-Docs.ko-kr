@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: PowerShell 갤러리 FAQ
-ms.openlocfilehash: 9572a61d38b0d540b0b8933405810ac4f2b6377e
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: 035681e108e1a3e05fe5d659d527ae1ad1c64cf4
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78278184"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500581"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
@@ -29,10 +29,10 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 
 ## <a name="how-can-i-publish-to-the-powershell-gallery"></a>PowerShell 갤러리에 게시하려면 어떻게 하나요?
 
-갤러리에 패키지를 게시하려면 먼저 PowerShell 갤러리에 계정을 등록해야 합니다. 패키지를 게시하려면 등록 시 제공되는 NuGetApiKey가 필요하기 때문입니다. 등록하려면 개인, 회사 또는 학교 계정을 사용하여 PowerShell 갤러리에 로그인합니다. 일회성 등록 프로세스는 최초 로그인 시 필요합니다. 그 후에는 프로필 페이지에서 NuGetApiKey를 사용할 수 있습니다.
+갤러리에 패키지를 게시하려면 먼저 PowerShell 갤러리에 계정을 등록해야 합니다. 패키지를 게시하려면 등록 시 제공되는 NuGetApiKey가 필요하기 때문입니다. 등록하려면 개인, 회사 또는 학교 계정을 사용하여 PowerShell 갤러리에 로그인합니다. 일회성 등록 프로세스는 최초 로그인 시 필요합니다.
+그 후에는 프로필 페이지에서 NuGetApiKey를 사용할 수 있습니다.
 
-갤러리에 등록했으면 [Publish-Module][] 또는 [Publish-Script][] cmdlet을 사용하여 갤러리에 패키지를 게시합니다.
-이러한 cmdlet을 실행하는 방법에 대한 자세한 내용은 게시 탭이나 [Publish-Module][] 및 [Publish-Script][] 설명서를 참조하세요.
+갤러리에 등록했으면 [Publish-Module][] 또는 [Publish-Script][] cmdlet을 사용하여 갤러리에 패키지를 게시합니다. 이러한 cmdlet을 실행하는 방법에 대한 자세한 내용은 게시 탭이나 [Publish-Module][] 및 [Publish-Script][] 설명서를 참조하세요.
 
 **패키지를 설치하거나 저장하기 위해 갤러리에 등록 또는 로그인할 필요는 없습니다.**
 
@@ -40,16 +40,15 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 
 이 오류는 다음과 같은 이유로 발생할 수 있습니다.
 
-- **지정된 API 키가 잘못되었습니다.**
-     계정에서 유효한 API 키를 지정했는지 확인합니다. API 키를 가져오려면 프로필 페이지를 봅니다.
-- **지정된 패키지 이름이 사용자 소유가 아닙니다.**
-     API 키가 올바른지 확인했으면 사용하려는 이름과 동일한 이름의 패키지가 있는 것일 수 있습니다. 소유자가 패키지를 목록에서 제거했을 수 있으며, 이 경우 검색 결과에 표시되지 않습니다. 동일한 이름의 패키지가 이미 있는지 확인하려면 브라우저를 열고 패키지의 세부 정보 페이지(`https://www.powershellgallery.com/packages/<packageName>`)로 이동합니다. 예를 들어 `https://www.powershellgallery.com/packages/pester`로 직접 이동하면 목록에 있는지 여부에 관계없이 Pester 모듈의 세부 정보 페이지가 표시됩니다. 충돌하는 이름의 패키지가 이미 있고 목록에 표시되지 않는 경우 다음을 수행할 수 있습니다.
-    - 패키지에 대해 다른 이름을 선택합니다.
-    - 기존 패키지의 소유자에게 문의합니다.
+- **지정된 API 키가 잘못되었습니다.** 계정에서 유효한 API 키를 지정했는지 확인합니다. API 키를 가져오려면 프로필 페이지를 봅니다.
+- **지정된 패키지 이름이 사용자 소유가 아닙니다.** API 키가 올바른지 확인했으면 사용하려는 이름과 동일한 이름의 패키지가 있는 것일 수 있습니다. 소유자가 패키지를 목록에서 제거했을 수 있으며, 이 경우 검색 결과에 표시되지 않습니다. 동일한 이름의 패키지가 이미 있는지 확인하려면 브라우저를 열고 패키지의 세부 정보 페이지(`https://www.powershellgallery.com/packages/<packageName>`)로 이동합니다. 예를 들어 `https://www.powershellgallery.com/packages/pester`로 직접 이동하면 목록에 있는지 여부에 관계없이 Pester 모듈의 세부 정보 페이지가 표시됩니다. 충돌하는 이름의 패키지가 이미 있고 목록에 표시되지 않는 경우 다음을 수행할 수 있습니다.
+  - 패키지에 대해 다른 이름을 선택합니다.
+  - 기존 패키지의 소유자에게 문의합니다.
 
 ## <a name="why-cant-i-sign-in-with-my-personal-account-but-i-could-sign-in-yesterday"></a>어제는 로그인할 수 있었는데 내 개인 계정으로 로그인할 수 없는 이유는 무엇인가요?
 
-갤러리 계정은 기본 메일 별칭의 변경을 허용하지 않습니다. 자세한 내용은 [Microsoft 메일 별칭](https://windows.microsoft.com/windows/outlook/add-alias-account)을 참조하세요.
+갤러리 계정은 기본 메일 별칭의 변경을 허용하지 않습니다.
+자세한 내용은 [Microsoft 메일 별칭](https://windows.microsoft.com/windows/outlook/add-alias-account)을 참조하세요.
 
 ## <a name="why-dont-i-see-all-the-gallery-packages-when-i-select-all-the-category-checkboxes-on-the-packages-tab"></a>패키지 탭에서 범주 확인란을 모두 선택해도 모든 갤러리 패키지가 표시되지 않는 이유는 무엇인가요?
 
@@ -57,11 +56,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 
 ## <a name="what-are-the-requirements-to-publish-a-module-to-the-powershell-gallery"></a>PowerShell 갤러리에 모듈을 게시하기 위한 요구 사항은 무엇인가요?
 
-모든 종류의 PowerShell 모듈(스크립트 모듈, 이진 모듈 또는 매니페스트 모듈)을 갤러리에 게시할 수 있습니다.
-모듈을 게시하려면 PowerShellGet에 버전, 설명, 작성자, 사용 허가 방법 등의 몇 가지 정보가 필요합니다.
-이 정보는 게시 프로세스의 일부로 *모듈 매니페스트*(.psd1) 파일 또는 [Publish-Module][] cmdlet의 **LicenseUri** 매개 변수 값에서 읽어옵니다.
-갤러리에 게시된 모든 모듈에는 모듈 매니페스트가 있어야 합니다.
-매니페스트에 다음 정보가 포함된 모든 모듈을 갤러리에 게시할 수 있습니다.
+모든 종류의 PowerShell 모듈(스크립트 모듈, 이진 모듈 또는 매니페스트 모듈)을 갤러리에 게시할 수 있습니다. 모듈을 게시하려면 PowerShellGet에 버전, 설명, 작성자, 사용 허가 방법 등의 몇 가지 정보가 필요합니다. 이 정보는 게시 프로세스의 일부로 *모듈 매니페스트*(.psd1) 파일 또는 [Publish-Module][] cmdlet의 **LicenseUri** 매개 변수 값에서 읽어옵니다. 갤러리에 게시된 모든 모듈에는 모듈 매니페스트가 있어야 합니다. 매니페스트에 다음 정보가 포함된 모든 모듈을 갤러리에 게시할 수 있습니다.
 
 - 버전
 - Description
@@ -78,11 +73,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 
 ## <a name="what-are-the-requirements-to-publish-a-script-to-the-gallery"></a>갤러리에 스크립트를 게시하기 위한 요구 사항은 무엇인가요?
 
-모든 종류의 PowerShell 스크립트(스크립트 또는 워크플로)를 갤러리에 게시할 수 있습니다.
-스크립트를 게시하려면 PowerShellGet에 버전, 설명, 작성자, 사용 허가 방법 등의 몇 가지 정보가 필요합니다.
-이 정보는 게시 프로세스의 일부로 스크립트 파일의 *PSScriptInfo* 섹션이나 [Publish-Script][] cmdlet의 **LicenseUri** 매개 변수 값에서 읽어옵니다.
-갤러리에 게시된 모든 스크립트에는 메타데이터 정보가 있어야 합니다.
-PSScriptInfo 섹션에 다음 정보가 포함된 모든 스크립트를 갤러리에 게시할 수 있습니다.
+모든 종류의 PowerShell 스크립트(스크립트 또는 워크플로)를 갤러리에 게시할 수 있습니다. 스크립트를 게시하려면 PowerShellGet에 버전, 설명, 작성자, 사용 허가 방법 등의 몇 가지 정보가 필요합니다. 이 정보는 게시 프로세스의 일부로 스크립트 파일의 *PSScriptInfo* 섹션이나 [Publish-Script][] cmdlet의 **LicenseUri** 매개 변수 값에서 읽어옵니다. 갤러리에 게시된 모든 스크립트에는 메타데이터 정보가 있어야 합니다. PSScriptInfo 섹션에 다음 정보가 포함된 모든 스크립트를 갤러리에 게시할 수 있습니다.
 
 - 버전
 - Description
@@ -121,10 +112,7 @@ PowerShell 모듈이란 용어는 실제 기능을 구현하는 파일도 가리
 
 PackageManagement는 모든 패키지 관리자 작업에 사용되는 공용 인터페이스입니다. PowerShell 모듈, MSI, Ruby 보석, NuGet 패키지 또는 Perl 모듈 중 어떤 것을 처리하든 간에 PackageManagement 명령(Find-Package 및 Install-Package)을 사용하여 찾아서 설치할 수 있어야 합니다. PackageManagement는 PackageManagement에 연결하는 각 패키지 관리자에 대한 패키지 공급자를 포함하여 이 작업을 수행합니다. 공급자가 실제 작업을 모두 수행합니다. 리포지토리에서 콘텐츠를 가져와 로컬에 설치합니다. 패키지 공급자가 지정된 패키지 유형에 대한 기존 패키지 관리자 도구를 단순히 래핑하는 경우도 많습니다.
 
-PowerShellGet은 PowerShell 패키지에 대한 패키지 관리자입니다.
-PackageManagement를 통해 PowerShellGet 기능을 노출하는 PSModule 패키지 공급자가 있습니다.
-이 때문에 [Install-Module][] 또는 Install-Package -Provider PSModule을 실행하여 PowerShell 갤러리에서 모듈을 설치할 수 있습니다.
-[Update-Module][] 및 [Publish-Module][]을 비롯한 특정 PowerShellGet 기능은 PackageManagement 명령을 통해 액세스할 수 있습니다.
+PowerShellGet은 PowerShell 패키지에 대한 패키지 관리자입니다. PackageManagement를 통해 PowerShellGet 기능을 노출하는 PSModule 패키지 공급자가 있습니다. 이 때문에 [Install-Module][] 또는 Install-Package -Provider PSModule을 실행하여 PowerShell 갤러리에서 모듈을 설치할 수 있습니다. [Update-Module][] 및 [Publish-Module][]을 비롯한 특정 PowerShellGet 기능은 PackageManagement 명령을 통해 액세스할 수 있습니다.
 
 요약하자면, PowerShellGet은 전적으로 PowerShell 콘텐츠에 대한 프리미엄 패키지 관리 환경 사용에 중점을 둡니다. PackageManagement는 하나의 일반적인 도구 집합을 통해 모든 패키지 관리 환경을 노출하는 데 중점을 둡니다. 이 응답이 만족스럽지 않은 경우 이 문서의 맨 아래에 있는 **PackageManagement는 실제로 PowerShellGet과 어떤 관계가 있나요?** 섹션에 자세한 답변이 나와 있습니다.
 
@@ -132,7 +120,8 @@ PackageManagement를 통해 PowerShellGet 기능을 노출하는 PSModule 패키
 
 ## <a name="how-does-nuget-relate-to-powershellget"></a>NuGet은 PowerShellGet과 어떤 관계가 있나요?
 
-PowerShell 갤러리는 [NuGet 갤러리](https://www.nuget.org/)의 수정된 버전입니다. PowerShellGet은 NuGet 공급자를 사용하여 PowerShell 갤러리 등의 NuGet 기반 리포지토리로 작업합니다.
+PowerShell 갤러리는 [NuGet 갤러리](https://www.nuget.org/)의 수정된 버전입니다.
+PowerShellGet은 NuGet 공급자를 사용하여 PowerShell 갤러리 등의 NuGet 기반 리포지토리로 작업합니다.
 
 유효한 모든 NuGet 리포지토리 또는 파일 공유에 대해 PowerShellGet을 사용할 수 있습니다. [Register-PSRepository][] cmdlet을 실행하여 리포지토리를 추가하면 됩니다.
 
@@ -144,7 +133,7 @@ PowerShell 갤러리는 [NuGet 갤러리](https://www.nuget.org/)의 수정된 �
 
 내부적으로 PowerShellGet은 PackageManagement 인프라를 많이 활용합니다.
 
-PowerShell cmdlet 계층에서 [Install-Module][]은 실제로 Install-Package -Provider PSModule을 둘러싼 씬 래퍼입니다.
+PowerShell cmdlet 계층에서 [Install-Module][]은 실제로 `Install-Package -Provider PSModule`을 둘러싼 씬 래퍼입니다.
 
 PackageManagement 패키지 공급자 계층에서 PSModule 패키지 공급자는 실제로 다른 PackageManagement 패키지 공급자를 호출합니다. 예를 들어 NuGet 기반 갤러리(예: PowerShell 갤러리)로 작업하는 경우 PSModule 패키지 공급자는 NuGet 패키지 공급자를 사용하여 리포지토리에서 작업합니다.
 
@@ -172,7 +161,8 @@ PackageManagement 패키지 공급자 계층에서 PSModule 패키지 공급자�
 
 ## <a name="is-it-possible-to-reserve-names-for-packages-that-will-be-published-in-future"></a>나중에 게시할 패키지의 이름을 예약할 수 있나요?
 
-패키지 이름을 무단 사용할 수는 없습니다. 기존 패키지가 해당 패키지에 더 맞는 이름을 사용한 경우 [패키지의 소유자에게 문의](./how-to/working-with-packages/contacting-package-owners.md)하세요. 몇 주 내에 응답을 받지 못한 경우 지원 담당자에게 문의하면 PowerShell 갤러리 팀에서 살펴보겠습니다.
+패키지 이름을 무단 사용할 수는 없습니다. 기존 패키지가 해당 패키지에 더 맞는 이름을 사용한 경우 [패키지의 소유자에게 문의](./how-to/working-with-packages/contacting-package-owners.md)하세요.
+몇 주 내에 응답을 받지 못한 경우 지원 담당자에게 문의하면 PowerShell 갤러리 팀에서 살펴보겠습니다.
 
 ## <a name="how-do-i-claim-ownership-for-packages"></a>패키지의 소유권을 클레임하려면 어떻게 하나요?
 
@@ -180,12 +170,12 @@ PackageManagement 패키지 공급자 계층에서 PSModule 패키지 공급자�
 
 ## <a name="how-do-i-deal-with-a-package-owner-who-is-violating-my-package-license"></a>내 패키지 라이선스를 위반하는 패키지 소유자에 대응하려면 어떻게 하나요?
 
-PowerShell 커뮤니티에서 협력하여 패키지 소유자와 다른 패키지의 소유자 간에 발생할 수 있는 분쟁을 해결하는 것이 좋습니다.  PowerShellGallery.com 관리자가 중재하기 전에 작성된 [분쟁 해결 프로세스](./how-to/getting-support/dispute-resolution.md)를 따라야 합니다.
+PowerShell 커뮤니티에서 협력하여 패키지 소유자와 다른 패키지의 소유자 간에 발생할 수 있는 분쟁을 해결하는 것이 좋습니다. PowerShellGallery.com 관리자가 중재하기 전에 작성된 [분쟁 해결 프로세스](./how-to/getting-support/dispute-resolution.md)를 따라야 합니다.
 
+<!-- link references-->
 [New-ModuleManifest]: /powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest
 [Test-ModuleManifest]: /powershell/module/Microsoft.PowerShell.Core/Test-ModuleManifest
-[Update-ModuleManifest]: /powershell/module/Microsoft.PowerShell.Core/Update-ModuleManifest
-
+[Update-ModuleManifest]: /powershell/module/PowerShellGet/Update-ModuleManifest
 [Install-Module]: /powershell/module/PowershellGet/Install-Module
 [New-ScriptFileInfo]: /powershell/module/PowershellGet/New-ScriptFileInfo
 [Publish-Module]: /powershell/module/PowershellGet/Publish-Module

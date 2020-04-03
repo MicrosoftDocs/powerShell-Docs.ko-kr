@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: 웹 기반 Windows PowerShell 콘솔 사용
-ms.openlocfilehash: 4c1bac2c712e430263d748b36897f4cfd8885919
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 29aa123049884004dd4e1a8f042783538d80abc6
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402590"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500880"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Use the Web-based Windows PowerShell Console
 
@@ -102,7 +102,7 @@ Windows PowerShell 웹 액세스에 로그인하기 전에 관리하려는 원�
 
 - 브라우저가 실행 중인 클라이언트 디바이스를 끄거나 네트워크와의 연결을 끊습니다.
 
-- 웹 콘솔에서 **끝내기** 명령을 실행합니다. 연결하려는 세션의 구성이 [NoLanguage](https://msdn.microsoft.com/library/windows/desktop/system.management.automation.pslanguagemode.aspx) 모드를 지원하도록 구성되어 있거나 제한된 runspace에 있는 경우에는 이 명령이 작동되지 않습니다.
+- 웹 콘솔에서 **끝내기** 명령을 실행합니다. 연결하려는 세션의 구성이 [NoLanguage](/dotnet/api/system.management.automation.pslanguagemode) 모드를 지원하도록 구성되어 있거나 제한된 runspace에 있는 경우에는 이 명령이 작동되지 않습니다.
 
 다시 로그인하려면 Windows PowerShell 웹 액세스 웹 페이지를 다시 열고 이 항목의 [Windows PowerShell 웹 액세스에 로그인](#signing-in-to-windows-powershell-web-access)에 설명된 단계를 수행하여 로그인합니다.
 
@@ -211,12 +211,9 @@ Alt+F7          | 명령 기록 목록 지우기
 
     이와 비슷한 방법으로 콘솔 높이를 변경할 수 있습니다.
 
-    콘솔 표시를 사용자 지정할 수 있는 추가적인 예가 [Windows PowerShell 팀 블로그](hhttps://devblogs.microsoft.com/powershell)에 나와 있습니다.
+    콘솔 표시를 사용자 지정할 수 있는 추가적인 예가 [Windows PowerShell 팀 블로그](h https://devblogs.microsoft.com/powershell)에 나와 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-- [Windows PowerShell Cmdlet Reference](https://technet.microsoft.com/library/ee407531(ws.10).aspx)(Windows PowerShell Cmdlet 참조)
-- [Microsoft TechNet의 Windows PowerShell](https://technet.microsoft.com/library/bb978526.aspx)
-- [TechNet 스크립트 센터 리포지토리](https://gallery.technet.microsoft.com/scriptcenter)
-- [스크립트 센터 - 스크립팅 이용자 여러분!](https://technet.microsoft.com/scriptcenter)
-- [Windows PowerShell Team Blog](https://blogs.msdn.com/b/powershell/)(Windows PowerShell 팀 블로그)
+- [스크립팅 이용자 여러분,](https://devblogs.microsoft.com/scripting/)
+- [PowerShell 팀 블로그](https://devblogs.microsoft.com/powershell/)

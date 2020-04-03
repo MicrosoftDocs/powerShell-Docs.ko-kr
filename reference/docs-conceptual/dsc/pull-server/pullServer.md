@@ -2,12 +2,12 @@
 ms.date: 01/08/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC 끌어오기 서비스
-ms.openlocfilehash: cf2420e6889f63ac3b2859e5ee36fa888b728afc
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 821f183c91e805154323f9f6a42f7f5006499182
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402440"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500717"
 ---
 # <a name="desired-state-configuration-pull-service"></a>원하는 상태 구성 끌어오기 서비스
 
@@ -70,7 +70,7 @@ Windows Server에서 제공되는 끌어오기 서버는 해당 노드에서 요
 | ------- | -------------------- | -------------------- | ---------------------------------------------- |
 | MDB     | ESENT(기본값), MDB | ESENT(기본값), MDB | ESENT(기본값), SQL Server, MDB               |
 
-[Windows Server Insider Preview](https://www.microsoft.com/software-download/windowsinsiderpreviewserver) 17090 릴리스부터 SQL Server는 끌어오기 서비스(Windows 기능 *DSC-Service*)에 지원되는 옵션입니다. 이는 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)로 마이그레이션되지 않은 대규모 DSC 환경의 규모를 조정하기 위한 새로운 옵션을 제공합니다.
+Windows Server 17090 릴리스부터 SQL Server는 끌어오기 서비스(Windows 기능 *DSC-Service*)에 지원되는 옵션입니다. 이는 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)로 마이그레이션되지 않은 대규모 DSC 환경의 규모를 조정하기 위한 새로운 옵션을 제공합니다.
 
 > [!NOTE]
 > SQL Server 지원은 WMF 5.1(이하)의 이전 버전에 추가되지 않으며, Windows Server 17090 이상 버전에서만 제공됩니다.
@@ -82,7 +82,7 @@ SQL Server를 사용하도록 끌어오기 서버를 구성하려면 **SqlProvid
 
 웹 끌어오기 서버를 설정하는 가장 쉬운 방법은 **xPSDesiredStateConfiguration** 모듈에 포함된 **xDscWebService** 리소스를 사용하는 것입니다. 다음 단계에서는 웹 서비스를 설정하는 `Configuration`에서 리소스를 사용하는 방법에 대해 설명합니다.
 
-1. [Install-Module](/reference/6/PowerShellGet/Install-Module.md) cmdlet을 호출하여 **xPSDesiredStateConfiguration** 모듈을 설치하세요.
+1. [Install-Module](/powershell/module/PowerShellGet/Install-Module) cmdlet을 호출하여 **xPSDesiredStateConfiguration** 모듈을 설치하세요.
 
    > [!NOTE]
    > `Install-Module`은 PowerShell 5.0 이상에 포함된 **PowerShellGet** 모듈에 포함되어 있습니다.
@@ -234,7 +234,7 @@ Sample_MetaConfigurationToRegisterWithLessSecurePullServer -RegistrationKey $Reg
 
 ### <a name="configuration-mof-format"></a>구성 MOF 형식
 
-구성 MOF 파일은 대상 노드의 LCM이 구성에 대한 유효성을 검사할 수 있도록 체크섬 파일과 함께 사용해야 합니다. 체크섬을 만들려면 [New-DscChecksum](/reference/6/PSDesiredStateConfiguration/New-DSCCheckSum.md) cmdlet을 호출합니다. 이 cmdlet은 구성 MOF가 있는 폴더를 지정하는 **Path** 매개 변수를 사용합니다. cmdlet은 `ConfigurationMOFName.mof.checksum`이라는 체크섬 파일을 만들며, 여기서 `ConfigurationMOFName`은 구성 mof 파일의 이름입니다. 지정된 폴더에 구성 MOF 파일이 두 개 이상 있는 경우, 폴더에 있는 각 구성에 대해 체크섬이 만들어집니다. MOF 파일 및 연관된 체크섬 파일을 **ConfigurationPath** 폴더에 배치합니다.
+구성 MOF 파일은 대상 노드의 LCM이 구성에 대한 유효성을 검사할 수 있도록 체크섬 파일과 함께 사용해야 합니다. 체크섬을 만들려면 [New-DscChecksum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum) cmdlet을 호출합니다. 이 cmdlet은 구성 MOF가 있는 폴더를 지정하는 **Path** 매개 변수를 사용합니다. cmdlet은 `ConfigurationMOFName.mof.checksum`이라는 체크섬 파일을 만들며, 여기서 `ConfigurationMOFName`은 구성 mof 파일의 이름입니다. 지정된 폴더에 구성 MOF 파일이 두 개 이상 있는 경우, 폴더에 있는 각 구성에 대해 체크섬이 만들어집니다. MOF 파일 및 연관된 체크섬 파일을 **ConfigurationPath** 폴더에 배치합니다.
 
 > [!NOTE]
 > 어떤 식으로든 구성 MOF 파일을 변경하는 경우 체크섬 파일도 다시 만들어야 합니다.

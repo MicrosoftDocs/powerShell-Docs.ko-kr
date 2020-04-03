@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,리소스,갤러리,설정
 title: 구성에 매개 변수 추가
-ms.openlocfilehash: 72e6c15593d11ed39d7fe8ea79f794089f410cf8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9dd9f2be58c13840be2b24e7e21a0d4af79b67cc
+ms.sourcegitcommit: b0966d61293e28ecdb929c5065be9760884e4e7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954200"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80263155"
 ---
 # <a name="add-parameters-to-a-configuration"></a>구성에 매개 변수 추가
 
@@ -36,17 +36,18 @@ Configuration TestConfig
 
 함수와 달리 [CmdletBinding](/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute) 특성은 기능을 추가하지 않습니다. [일반 매개 변수](/powershell/module/microsoft.powershell.core/about/about_commonparameters) 외에도 구성에서는 매개 변수를 정의할 필요 없이 다음 기본 제공 매개 변수를 사용할 수도 있습니다.
 
-|매개 변수  |설명  |
-|---------|---------|
-|`-InstanceName`|[복합 구성](compositeconfigs.md)을 정의하는 데 사용됩니다.|
-|`-DependsOn`|[복합 구성](compositeconfigs.md)을 정의하는 데 사용됩니다.|
-|`-PSDSCRunAsCredential`|[복합 구성](compositeconfigs.md)을 정의하는 데 사용됩니다.|
-|`-ConfigurationData`|구성에서 사용하도록 구조적 [구성 데이터](configData.md)를 전달하는 데 사용됩니다.|
-|`-OutputPath`|"\<computername\>.mof" 파일을 컴파일할 위치를 지정하는 데 사용됩니다.|
+|        매개 변수        |                                         Description                                          |
+| ----------------------- | -------------------------------------------------------------------------------------------- |
+| `-InstanceName`         | [복합 구성](compositeconfigs.md)을 정의하는 데 사용됩니다.                             |
+| `-DependsOn`            | [복합 구성](compositeconfigs.md)을 정의하는 데 사용됩니다.                             |
+| `-PSDSCRunAsCredential` | [복합 구성](compositeconfigs.md)을 정의하는 데 사용됩니다.                             |
+| `-ConfigurationData`    | 구성에서 사용하도록 구조적 [구성 데이터](configData.md)를 전달하는 데 사용됩니다. |
+| `-OutputPath`           | "\<computername\>.mof" 파일을 컴파일할 위치를 지정하는 데 사용됩니다.                      |
 
 ## <a name="adding-your-own-parameters-to-configurations"></a>구성에 고유한 매개 변수 추가
 
-기본 제공 매개 변수 외에 고유한 매개 변수를 구성에 추가할 수도 있습니다. 매개 변수 블록은 함수처럼 구성 선언 내부로 직접 이동합니다. 구성 매개 변수 블록은 **Node** 선언 외부 및 *import* 문 위에 있어야 합니다. 매개 변수를 추가하면 더 강력하고 동적인 구성을 만들 수 있습니다.
+기본 제공 매개 변수 외에 고유한 매개 변수를 구성에 추가할 수도 있습니다.
+매개 변수 블록은 함수처럼 구성 선언 내부로 직접 이동합니다. 구성 매개 변수 블록은 **Node** 선언 외부 및 *import* 문 위에 있어야 합니다. 매개 변수를 추가하면 더 강력하고 동적인 구성을 만들 수 있습니다.
 
 ```powershell
 Configuration TestConfig
@@ -117,7 +118,8 @@ TestConfig -ComputerName "server01", "server02", "server03"
 
 ## <a name="advanced-parameters-in-configurations"></a>구성의 고급 매개 변수
 
-`-ComputerName` 매개 변수 외에도 서비스 이름 및 상태에 대한 매개 변수를 추가할 수 있습니다. 다음 예제에서는 `-ServiceName`을 사용하여 매개 변수 블록을 추가하고 이 매개 변수를 **Service** 리소스 블록을 동적으로 정의하는 데 사용합니다. 또한 `-State` 매개 변수를 추가하여 **Service** 리소스 블록에서 **State**를 동적으로 정의합니다.
+`-ComputerName` 매개 변수 외에도 서비스 이름 및 상태에 대한 매개 변수를 추가할 수 있습니다.
+다음 예제에서는 `-ServiceName`을 사용하여 매개 변수 블록을 추가하고 이 매개 변수를 **Service** 리소스 블록을 동적으로 정의하는 데 사용합니다. 또한 `-State` 매개 변수를 추가하여 **Service** 리소스 블록에서 **State**를 동적으로 정의합니다.
 
 ```powershell
 Configuration TestConfig
@@ -213,7 +215,7 @@ Configuration TestConfig
     # It is best practice to explicitly import any required resources or modules.
     Import-DSCResource -Module PSDesiredStateConfiguration
 
-    Node localhost
+    Node $ComputerName
     {
         Service $ServiceName
         {

@@ -2,16 +2,16 @@
 title: Linux에 PowerShell 설치
 description: 다양한 Linux 배포에 PowerShell을 설치하는 방법에 대한 정보
 ms.date: 03/09/2020
-ms.openlocfilehash: 13b8583ed45f1201e61225b377112a59d2b26cb2
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.openlocfilehash: 31da32b81dbbcf4b46fd5f0cd9d921f28f434763
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082808"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500545"
 ---
 # <a name="installing-powershell-on-linux"></a>Linux에 PowerShell 설치
 
-[Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubuntu 18.10][u1810], [Ubuntu 19.04][u1904], [Debian 8][deb8], [Debian 9][deb9], [Debian 10][deb10], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [openSUSE 42.3][opensuse], [openSUSE Leap 15][opensuse], [Fedora 27][fedora], [Fedora 28][fedora], [Arch Linux][arch]를 지원합니다.
+[Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubuntu 18.10][u1810], [Ubuntu 19.04][u1904], [Debian 8][deb8], [Debian 9][deb9], [Debian 10][deb10], [Alpine 3.9 및 3.10][alpine], [CentOS 7][cos], [Red Hat Enterprise Linux(RHEL) 7][rhel7], [openSUSE 42.3][opensuse], [openSUSE Leap 15][opensuse], [Fedora 28][fedora], [Fedora 29][fedora], [Fedora 30][fedora], [Arch Linux][arch]를 지원합니다.
 
 공식적으로 지원되지 않는 Linux 배포의 경우 [PowerShell 맞춤 패키지][snap]를 사용하여 PowerShell을 설치해 볼 수 있습니다. 또한 Linux [`tar.gz` 보관][tar]을 사용하여 PowerShell 이진 파일을 직접 배포해 볼 수도 있지만 OS에 따라 별도의 단계로 필요한 종속성 패키지를 설치해야 합니다.
 
@@ -31,6 +31,7 @@ ms.locfileid: "80082808"
 [deb8]: #debian-8
 [deb9]: #debian-9
 [deb10]: #debian-10
+[alpine]: #alpine-39-and-310
 [cos]: #centos-7
 [rhel7]: #red-hat-enterprise-linux-rhel-7
 [opensuse]: #opensuse
@@ -83,12 +84,12 @@ pwsh
 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>직접 다운로드를 통해 설치 - Ubuntu 16.04
 
-[릴리스][] 페이지의 Debian 패키지 `powershell_7.0.0-1.ubuntu.16.04_amd64.deb`를 Ubuntu 컴퓨터에 다운로드합니다.
+[릴리스][] 페이지의 Debian 패키지 `powershell-lts_7.0.0-1.ubuntu.16.04_amd64.deb`를 Ubuntu 컴퓨터에 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
 ```sh
-sudo dpkg -i powershell_7.0.0-1.ubuntu.16.04_amd64.deb
+sudo dpkg -i powershell-lts_7.0.0-1.ubuntu.16.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -133,12 +134,12 @@ pwsh
 
 ### <a name="installation-via-direct-download---ubuntu-1804"></a>직접 다운로드를 통해 설치 - Ubuntu 18.04
 
-[릴리스][] 페이지의 Debian 패키지 `powershell_7.0.0-1.ubuntu.18.04_amd64.deb`를 Ubuntu 컴퓨터에 다운로드합니다.
+[릴리스][] 페이지의 Debian 패키지 `powershell-lts_7.0.0-1.ubuntu.18.04_amd64.deb`를 Ubuntu 컴퓨터에 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
 ```sh
-sudo dpkg -i powershell_7.0.0-1.ubuntu.18.04_amd64.deb
+sudo dpkg -i powershell-lts_7.0.0-1.ubuntu.18.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -229,12 +230,12 @@ pwsh
 
 ### <a name="installation-via-direct-download---debian-9"></a>직접 다운로드를 통해 설치 - Debian 9
 
-[릴리스][] 페이지의 Debian 패키지 `powershell_7.0.0-1.debian.9_amd64.deb`를 Debian 컴퓨터에 다운로드합니다.
+[릴리스][] 페이지의 Debian 패키지 `powershell-lts_7.0.0-1.debian.9_amd64.deb`를 Debian 컴퓨터에 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
 ```sh
-sudo dpkg -i powershell_7.0.0-1.debian.9_amd64.deb
+sudo dpkg -i powershell-lts_7.0.0-1.debian.9_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -248,6 +249,29 @@ sudo apt-get remove powershell
 
 > [!NOTE]
 > Debian 10은 PowerShell 7.0 이상에서만 지원됩니다.
+
+### <a name="installation-via-package-repository---debian-10"></a>패키지 리포지토리를 통해 설치 - Debian 10
+
+Linux용 PowerShell은 간편한 설치 및 업데이트를 위해 패키지 리포지토리에 게시됩니다.
+
+기본 방법은 다음과 같습니다.
+
+```sh
+# Download the Microsoft repository GPG keys
+wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb
+
+# Register the Microsoft repository GPG keys
+sudo dpkg -i packages-microsoft-prod.deb
+
+# Update the list of products
+sudo apt-get update
+
+# Install PowerShell
+sudo apt-get install -y powershell
+
+# Start PowerShell
+pwsh
+```
 
 ### <a name="installation-via-direct-download---debian-10"></a>직접 다운로드를 통해 설치 - Debian 10
 
@@ -365,18 +389,18 @@ pwsh
 
 ### <a name="installation-via-direct-download---centos-7"></a>직접 다운로드를 통해 설치 - CentOS 7
 
-[CentOS 7][]에서 [릴리스][] 페이지의 RPM 패키지 `powershell-7.0.0-1.rhel.7.x86_64.rpm`을 CentOS 컴퓨터로 다운로드합니다.
+[CentOS 7][]에서 [릴리스][] 페이지의 RPM 패키지 `powershell-lts-7.0.0-1.rhel.7.x86_64.rpm`을 CentOS 컴퓨터로 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
 ```sh
-sudo yum install powershell-7.0.0-1.rhel.7.x86_64.rpm
+sudo yum install powershell-lts-7.0.0-1.rhel.7.x86_64.rpm
 ```
 
 다운로드 없이 바로 RPM을 설치할 수 있습니다.
 
 ```sh
-sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/powershell-7.0.0-1.rhel.7.x86_64.rpm
+sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/powershell-lts-7.0.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---centos-7"></a>제거 - CentOS 7
@@ -408,18 +432,18 @@ pwsh
 
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>직접 다운로드를 통해 설치 - Red Hat Enterprise Linux(RHEL) 7
 
-[릴리스][] 페이지의 RPM 패키지 `powershell-7.0.0-1.rhel.7.x86_64.rpm`을 Red Hat Enterprise Linux 컴퓨터로 다운로드합니다.
+[릴리스][] 페이지의 RPM 패키지 `powershell-lts-7.0.0-1.rhel.7.x86_64.rpm`을 Red Hat Enterprise Linux 컴퓨터로 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
 ```sh
-sudo yum install powershell-7.0.0-1.rhel.7.x86_64.rpm
+sudo yum install powershell-lts-7.0.0-1.rhel.7.x86_64.rpm
 ```
 
 다운로드 없이 바로 RPM을 설치할 수 있습니다.
 
 ```sh
-sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/powershell-7.0.0-1.rhel.7.x86_64.rpm
+sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/powershell-lts-7.0.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---red-hat-enterprise-linux-rhel-7"></a>제거 - Red Hat Enterprise Linux(RHEL) 7
@@ -555,7 +579,7 @@ PowerShell은 [Arch Linux][] 사용자 리포지토리(AUR)에 제공됩니다.
 
 AUR 패키지는 커뮤니티가 유지 관리하며 공식적인 지원은 없습니다.
 
-AUR에서 패키지를 설치하는 방법에 대한 자세한 내용은 [Arch Linux wiki](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages) 또는 [DockerFile](https://github.com/PowerShell/PowerShell/blob/master/docker/community/archlinux/Dockerfile) 커뮤니티를 참조하세요.
+AUR에서 패키지를 설치하는 방법에 대한 자세한 내용은 [Arch Linux wiki](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages) 또는 [Docker에서 PowerShell 사용](powershell-in-docker.md)을 참조하세요.
 
 [Arch Linux]: https://www.archlinux.org/download/
 [arch-release]: https://aur.archlinux.org/packages/powershell/
@@ -672,7 +696,7 @@ tar -xvf ./powershell-7.0.0-linux-arm32.tar.gz -C ~/powershell
 
 ```sh
 # Start PowerShell from bash with sudo to create a symbolic link
-sudo ~/powershell/pwsh -c New-Item -ItemType SymbolicLink -Path "/usr/bin/pwsh" -Target "\$PSHOME/pwsh" -Force
+sudo ~/powershell/pwsh -c New-Item -ItemType SymbolicLink -Path "/usr/bin/pwsh" -Target "$PSHOME/pwsh" -Force
 
 # alternatively you can run following to create a symbolic link
 # sudo ln -s ~/powershell/pwsh /usr/bin/pwsh

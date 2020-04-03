@@ -2,12 +2,12 @@
 ms.date: 12/19/2019
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE의 접근성
-ms.openlocfilehash: e618daca98d76f767a8b60a3425760bfc0bd0f64
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.openlocfilehash: 89eff839d69fdbd5a1fa48b61dab627ef83f751b
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75736286"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500957"
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Windows PowerShell ISE의 접근성
 
@@ -121,7 +121,7 @@ Windows PowerShell ISE에서 보기를 사용자 지정할 때 다음과 같은 
 | **디버거 중지**          | <kbd>Shift</kbd>+<kbd>F5</kbd>                 | 스크립트 창, 스크립트를 디버그할 때 |
 
 > [!NOTE]
-> Windows PowerShell ISE에서 스크립트를 디버그할 때 Windows PowerShell 콘솔용으로 설계된 바로 가기 키를 사용할 수도 있습니다. 이러한 바로 가기를 사용하려면 콘솔 창에서 바로 가기를 입력하고 Enter 키를 눌러야 합니다.
+> Windows PowerShell ISE에서 스크립트를 디버그할 때 Windows PowerShell 콘솔용으로 설계된 바로 가기 키를 사용할 수도 있습니다. 이러한 바로 가기를 사용하려면 콘솔 창에서 바로 가기를 입력하고 <kbd>ENTER</kbd> 키를 눌러야 합니다.
 
 |                 작업                  |      바로 가기 키       |                사용 위치                 |
 | --------------------------------------- | ---------------------------- | ------------------------------------- |
@@ -143,7 +143,7 @@ Windows PowerShell 탭을 사용할 때 다음과 같은 바로 가기 키를 �
 | ------------------------------- | ---------------------------------------------------------------------------------- |
 | **PowerShell 탭 닫기**        | <kbd>Ctrl</kbd>+<kbd>W</kbd>                                                       |
 | **새 PowerShell 탭**          | <kbd>Ctrl</kbd>+<kbd>T</kbd>                                                       |
-| **이전 PowerShell 탭**     | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>(PowerShell 탭에 열려 있는 파일이 없는 경우에만 해당)                 |
+| **이전 PowerShell 탭**     | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>(PowerShell 탭에 열려 있는 파일이 없는 경우에만 해당) |
 | **다음 Windows PowerShell 탭** | <kbd>Ctrl</kbd>+<kbd>Tab</kbd>(PowerShell 탭에 열려 있는 파일이 없는 경우에만 해당) |
 
 ## <a name="keyboard-shortcuts-for-starting-and-exiting"></a>시작 및 종료 바로 가기 키
@@ -157,8 +157,7 @@ Windows PowerShell 탭을 사용할 때 다음과 같은 바로 가기 키를 �
 
 ## <a name="breakpoint-management"></a>중단점 관리
 
-시각 장애가 있는 사용자의 경우 중단점 관리 cmdlet(예: [Get-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Get-PSBreakpoint.md) 및 [Set-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Set-PSBreakpoint.md))을 통해 중단점 정보를 사용할 수 있습니다.
-자세한 내용은 [Windows PowerShell ISE에서 스크립트를 디버그하는 방법](How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)에서 ‘중단점을 관리하는 방법’을 참조하세요.
+시각 장애가 있는 사용자의 경우 중단점 관리 cmdlet(예: [Get-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Get-PSBreakpoint) 및 [Set-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Set-PSBreakpoint))을 통해 중단점 정보를 사용할 수 있습니다. 자세한 내용은 [Windows PowerShell ISE에서 스크립트를 디버그하는 방법](How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)에서 ‘중단점을 관리하는 방법’을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

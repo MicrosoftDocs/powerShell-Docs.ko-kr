@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: CI/CD 파이프라인에서 DSC의 역할 이해
-ms.openlocfilehash: 79740225c030974546035b67e0f873fa00aa690a
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: 8d7244a6e5e2c215d9d3ada959b716df2cce0b83
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78279376"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500818"
 ---
 # <a name="understanding-dscs-role-in-a-cicd-pipeline"></a>CI/CD 파이프라인에서 DSC의 역할 이해
 
@@ -41,7 +41,7 @@ ms.locfileid: "78279376"
 
 또한 이 모델을 사용할 경우 각 제어 팀의 구성 변경이 릴리스 파이프라인을 통해 완벽하게 테스트되지 않아 프로덕션 환경에서 예기치 않은 결과를 초래할 수 있다는 피드백도 제공했습니다.
 
-**서버에 릴리스된 모든 변경 내용을 평가하는 데 단일 파이프라인을 사용하는 것이 중요합니다.**
+**서버에 릴리스된 모든 변경 내용은 단일 파이프라인을 사용해 평가하는 것이 중요합니다.**
 
 아래 그림에서 B 팀은 A 팀에 해당 부분 구성을 릴리스한 다음, A 팀은 두 구성이 모두 적용된 서버에 대해 해당 테스트를 실행합니다. 이 모델에서 하나의 기관에만 프로덕션 환경에서 변경할 권한이 있습니다.
 

@@ -2,12 +2,12 @@
 title: PowerShell 개발에 Visual Studio 코드 사용
 description: PowerShell 개발에 Visual Studio 코드 사용
 ms.date: 11/07/2019
-ms.openlocfilehash: 86739970b58460bef9686a75bf0604d0605d4888
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.openlocfilehash: 8644aa7c648d649651ca679238e0b79ff35ac579
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082423"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500907"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>PowerShell 개발에 Visual Studio 코드 사용
 
@@ -22,9 +22,9 @@ PowerShell 확장이 있는 Visual Studio Code는 PowerShell 스크립트 작성
 
 시작하기 전에 시스템에 PowerShell이 있는지 확인합니다. Windows, macOS 및 Linux에서 최신 작업을 수행하려면 다음 링크를 참조하세요.
 
-- [Linux에서 PowerShell Core 설치][install-pscore-linux]
-- [macOS에서 PowerShell Core 설치][install-pscore-macos]
-- [Windows에서 PowerShell Core 설치][install-pscore-windows]
+- [Linux에 PowerShell 설치][install-pscore-linux]
+- [macOS에 PowerShell 설치][install-pscore-macos]
+- [Windows에 PowerShell 설치][install-pscore-windows]
 
 기존 Windows PowerShell 워크로드의 경우 [Windows PowerShell 설치][install-winps]를 참조하세요.
 
@@ -268,7 +268,16 @@ Visual Studio Code 버전 1.9부터 PowerShell 스크립트가 포함된 폴더�
 
 디버그 구성이 설정된 후에 디버그 세션 중에 사용하려는 구성을 선택할 수 있습니다. **디버그** 보기의 도구 모음에 있는 디버그 구성 드롭다운에서 구성을 선택합니다.
 
-Visual Studio Code에 대한 PowerShell 확장 사용을 시작하는 데 도움이 되는 몇 가지 블로그가 있습니다.
+## <a name="useful-resources"></a>유용한 리소스
+
+Visual Studio Code에 대한 PowerShell 확장 사용을 시작하는 데 도움이 되는 몇 가지 동영상 및 블로그 게시물이 있습니다.
+
+### <a name="videos"></a>동영상
+
+- [기본 PowerShell 편집기로 Visual Studio Code 사용](https://youtu.be/bGn45vIeAMM)
+- [Visual Studio Code: PowerShell 스크립트 디버깅 자세히 알아보기](https://youtu.be/cSbIXmlkr8o)
+
+### <a name="blog-posts"></a>블로그 게시물
 
 - [PowerShell 확장][ps-extension]
 - [Visual Studio Code에서 PowerShell 스크립트 작성 및 디버깅][debug]
@@ -279,6 +288,16 @@ Visual Studio Code에 대한 PowerShell 확장 사용을 시작하는 데 도움
 - [PowerShell 개발을 위한 Visual Studio Code 편집 기능 – 2부][editing-part2]
 - [Visual Studio Code에서 PowerShell 스크립트 디버깅 – 1부][debugging-part1]
 - [Visual Studio Code에서 PowerShell 스크립트 디버깅 – 2부][debugging-part2]
+
+## <a name="powershell-extension-for-visual-studio-code"></a>Visual Studio Code용 PowerShell 확장
+
+PowerShell 확장의 소스 코드는 [GitHub](https://github.com/PowerShell/vscode-powershell)에서 확인할 수 있습니다.
+
+참가에 관심이 있는 경우 끌어오기 요청은 언제나 환영합니다. [GitHub의 개발자 설명서](https://github.com/PowerShell/vscode-powershell/blob/master/docs/development.md)를 따라 시작하세요.
+
+## <a name="troubleshooting-the-powershell-extension-for-visual-studio-code"></a>Visual Studio Code용 PowerShell 확장 문제 해결
+
+PowerShell 스크립트 개발을 위해 Visual Studio Code를 사용하는 데 문제가 발생하는 경우 [GitHub의 문제 해결 가이드](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md)를 확인하세요.
 
 [ise]: ../ise/Introducing-the-Windows-PowerShell-ISE.md
 [install-pscore-linux]:  ../../install/Installing-PowerShell-Core-on-Linux.md
@@ -294,13 +313,3 @@ Visual Studio Code에 대한 PowerShell 확장 사용을 시작하는 데 도움
 [editing-part2]: https://devblogs.microsoft.com/scripting/visual-studio-code-editing-features-for-powershell-development-part-2/
 [debugging-part1]: https://devblogs.microsoft.com/scripting/debugging-powershell-script-in-visual-studio-code-part-1/
 [debugging-part2]: https://devblogs.microsoft.com/scripting/debugging-powershell-script-in-visual-studio-code-part-2/
-
-## <a name="powershell-extension-for-visual-studio-code"></a>Visual Studio Code용 PowerShell 확장
-
-PowerShell 확장의 소스 코드는 [GitHub](https://github.com/PowerShell/vscode-powershell)에서 확인할 수 있습니다.
-
-참가에 관심이 있는 경우 끌어오기 요청은 언제나 환영합니다. [GitHub의 개발자 설명서](https://github.com/PowerShell/vscode-powershell/blob/master/docs/development.md)를 따라 시작하세요.
-
-## <a name="troubleshooting-the-powershell-extension-for-visual-studio-code"></a>Visual Studio Code용 PowerShell 확장 문제 해결
-
-PowerShell 스크립트 개발을 위해 Visual Studio Code를 사용하는 데 문제가 발생하는 경우 [GitHub의 문제 해결 가이드](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md)를 확인하세요.

@@ -2,18 +2,18 @@
 title: PowerShell Core 지원 수명 주기
 description: PowerShell Core에 대한 정책 관리 지원
 ms.date: 03/09/2020
-ms.openlocfilehash: c1e91aa193dd4a6353098e16ae18301c0753ea85
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.openlocfilehash: c319371778eb4615559ae12e0cd153a535ed22bf
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082402"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500983"
 ---
 # <a name="powershell-support-lifecycle"></a>PowerShell 지원 수명 주기
 
 PowerShell은 Windows PowerShell과 별개로 제공, 설치 및 구성되는 도구 및 구성 요소의 고유 집합입니다. PowerShell은 Windows 라이선스 계약에 포함 되지 않습니다.
 
-PowerShell은 [프리미어][], [Microsoft 기업계약][enterprise-agreement] 및 [Microsoft 소프트웨어 보증][assurance]을 포함한 기존의 Microsoft 지원 계약으로 지원받을 수 있습니다.
+PowerShell은 [유료 지원][], [Microsoft 기업계약][enterprise-agreement] 및 [Microsoft Software Assurance][assurance]를 포함한 기존 Microsoft 지원 계약으로 지원받을 수 있습니다.
 또한 문제가 있는 경우 지원 요청서를 작성하여 PowerShell에 대한 [보조 지원][]을 유료로 이용할 수 있습니다.
 
 ## <a name="community-support"></a>커뮤니티 지원
@@ -155,7 +155,7 @@ PowerShell 7은 Windows PowerShell용으로 작성 된 기존 PowerShell 모듈�
 | PowerShell 1.0       |   2006년 11월   | Windows XP SP2, Windows Server 2003 SP1 및 Windows Vista에 설치 가능. Windows Server 2008의 선택적 구성 요소.                          |
 
 <!-- hyperlink references -->
-[프리미어]: https://www.microsoft.com/microsoftservices/support.aspx
+[유료 지원]: https://support.microsoft.com/hub/4343728/support-for-business
 [enterprise-agreement]: https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx
 [assurance]: https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx
 [커뮤니티 지원]: /powershell/scripting/community/community-support

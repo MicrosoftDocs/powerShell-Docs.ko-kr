@@ -2,12 +2,12 @@
 title: PowerShell 7.0의 새로운 기능
 description: PowerShell 7.0에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 03/04/2020
-ms.openlocfilehash: 6915bb70d6e54da86d2b935e3feed8d7f3770ba9
-ms.sourcegitcommit: 4a26c05f162c4fa347a9d67e339f8a33e230b9ba
+ms.openlocfilehash: 84631d9fa169c8d1b4cd4dd23eb3d7c1bca120bb
+ms.sourcegitcommit: b0966d61293e28ecdb929c5065be9760884e4e7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78404989"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80263138"
 ---
 # <a name="whats-new-in-powershell-70"></a>PowerShell 7.0의 새로운 기능
 
@@ -396,6 +396,7 @@ Invoke-DscResource -Name Log -Method Set -ModuleName PSDesiredStateConfiguration
 - AppDomain.CurrentDomain.ProcessExit에서 이벤트 처리기를 등록 취소하여 리소스 누수 문제를 수정(#10626)
 - 디버그, 오류, 정보, 진행률, 자세한 정보 표시 또는 경고 메시지가 생성될 때 디버거로 중단되도록 ActionPreference.Break 지원을 추가(#8205)(@KirkMunro에게 감사드립니다!)
 - .CPL 확장명을 지정하지 않고 PowerShell Core 내에서 제어판 추가 기능을 시작하도록 허용 (#9828)
+- -split 연산자(#8960)에서 음수 지원(@ece-jacob-scott에게 감사드립니다!)
 
 ### <a name="general-cmdlet-updates-and-fixes"></a>일반 Cmdlet 업데이트 및 수정
 
