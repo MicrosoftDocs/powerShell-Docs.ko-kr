@@ -1,19 +1,58 @@
 ---
 title: PowerShell Docs의 새로운 기능
 description: PowerShell 설명서 변경 내용 목록
-ms.date: 03/04/2020
-ms.openlocfilehash: b2b196a83eafc87daf9f9eb06a93377058f1ff20
-ms.sourcegitcommit: 18d832858a7b8ea094763afa753e0f48f01372e7
+ms.date: 03/31/2020
+ms.openlocfilehash: b7fee886b1c5584dc9d75b86ca79980579040db7
+ms.sourcegitcommit: ef1a3079809ec2e3c58e785c84de2df968145658
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79060218"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80537077"
 ---
 # <a name="whats-new-in-powershell-docs"></a>PowerShell Docs의 새로운 기능
 
 이 문서에서는 이전 달에 발생한 문서에 대한 주요 변경 내용을 나열하고 커뮤니티 기여에 대한 감사를 전합니다.
 
 설명서를 개선하는 데 도움을 주세요. 시작하는 방법을 알아보려면 [기여자 가이드][contrib]를 읽으세요.
+
+## <a name="2020-march"></a>2020년 3월
+
+### <a name="highlights"></a>주요 사항
+
+- 새로운 문서
+  - PowerShell Docs 커뮤니티 페이지
+    - [커뮤니티 리소스](/powershell/scripting/community/community-support) 페이지
+    - [Powershell Docs의 새로운 기능](#2020-march) 페이지(이 페이지)
+    - 디지털 아트 페이지에 추가된 [PowerShell 인포그래픽](https://github.com/MicrosoftDocs/PowerShell-Docs/blob/staging/assets/PowerShell_7_Infographic.pdf)
+    - [PowerShell-Doc 기여자 가이드](/powershell/scripting/community/contributing/overview?view=powershell-7)
+  - 새 PowerShell 콘텐츠
+    - [Windows PowerShell 5.1에서 PowerShell 7로 마이그레이션](/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7)
+    - [PowerShell 7 모듈 호환성 목록](/PowerShell/scripting/whats-new/module-compatibility)
+    - [Docker에서 PowerShell 사용](/powershell/scripting/install/powershell-in-docker)
+  - 새 Wiki 콘텐츠
+    - [PowerShell prevents exceptions for non existent keys for types that implement IDictionary TKey, TValue](https://github.com/MicrosoftDocs/PowerShell-Docs/wiki/PowerShell-prevents-exceptions-for-non-existent-keys-for-types-that-implement-IDictionary-TKey,-TValue-)(PowerShell이 IDictionary TKey, TValue를 구현하는 존재하지 않는 키 형식에 대한 예외 방지)
+    - [PowerShell's treatment of namespaces is case insensitive but case preserving](https://github.com/MicrosoftDocs/PowerShell-Docs/wiki/PowerShell's-treatment-of-namespaces-is-case-insensitive-but-case-preserving)(PowerShell에서 네임스페이스는 대/소문자를 구분하지 않지만 대/소문자를 보존함)
+
+- 설명서 유지 관리
+  - 끊어진 링크의 대규모 정리
+  - 이전 및 중복 문제 정리
+
+- GitHub 통계
+  - 100개 PR 병합(커뮤니티에서 14개)
+  - 68개 문제 개설(커뮤니티에서 56개)
+  - 109개 문제 종결
+
+### <a name="top-community-contributors"></a>상위 커뮤니티 기여자
+
+다음 기여자는 끌어오기 요청을 제출하거나 문제를 제출하여 PowerShell Docs에 기여했습니다. 감사합니다.
+
+- k-takai - 7개 PR
+- mklement0 - 5개 문제
+- juvtib - 4개 문제
+- iSazonov - 3개 문제
+- doctordns - 2개 문제
+- mdorantesm - 2개 문제
+- qt3m45su0najc7 - 2개 문제
 
 ## <a name="2020-february"></a>2020년 2월
 
@@ -32,7 +71,7 @@ ms.locfileid: "79060218"
 
 ### <a name="top-community-contributors"></a>상위 커뮤니티 기여자
 
-다음 기여자는 끌어오기 요청을 제출하거나 문제를 제출하여 PowerShell 문서에 기여했습니다. 감사합니다.
+다음 기여자는 끌어오기 요청을 제출하거나 문제를 제출하여 PowerShell Docs에 기여했습니다. 감사합니다.
 
 - Maamue - 2개 PR
 - doctordns - 2개 PR
@@ -56,7 +95,7 @@ ms.locfileid: "79060218"
 
 ### <a name="top-community-contributors"></a>상위 커뮤니티 기여자
 
-다음 기여자는 끌어오기 요청을 제출하거나 문제를 제출하여 PowerShell 문서에 기여했습니다. 감사합니다.
+다음 기여자는 끌어오기 요청을 제출하거나 문제를 제출하여 PowerShell Docs에 기여했습니다. 감사합니다.
 
 - Makovec - 3개 PR
 - mklement0 - 9개 문제
@@ -77,11 +116,11 @@ PowerShell 커뮤니티는 활기찬 공동 작업 그룹입니다. Microsoft는
 
 | 문서 PR 제출 | 2016 | 2017 | 2018 | 2019 | 2020 | 총합계 |
 | ------------------ | ---: | ---: | ---: | ---: | ---: | ----------: |
-| 커뮤니티 합계    |  194 |  447 |  467 |  320 |   16 |        1447 |
+| 커뮤니티 합계    |  198 |  448 |  468 |  322 |   22 |        1469 |
 | matt9ucci          |      |  157 |   80 |   30 |      |         267 |
 | nschonni           |      |      |   14 |  138 |      |         152 |
 | kiazhi             |   25 |   79 |   12 |      |      |         116 |
-| alexandair         |   57 |    7 |   26 |    2 |      |          92 |
+| alexandair         |   59 |    8 |   26 |    2 |      |          95 |
 | doctordns          |    5 |   32 |   20 |    7 |    2 |          66 |
 | sethvs             |      |    1 |   44 |      |      |          45 |
 | Dan1el42           |   20 |      |      |      |      |          20 |
@@ -89,8 +128,10 @@ PowerShell 커뮤니티는 활기찬 공동 작업 그룹입니다. Microsoft는
 | it-praktyk         |      |      |   16 |    1 |      |          17 |
 | markekraus         |      |   11 |    5 |      |      |          16 |
 | purdo17            |      |      |   13 |      |      |          13 |
+| k-takai            |      |      |    5 |    1 |    7 |          13 |
 | kvprasoon          |    2 |    1 |    7 |    2 |      |          12 |
 | PlagueHO           |   10 |      |      |    1 |      |          11 |
+| KirkMunro          |    1 |    1 |    2 |    6 |      |          10 |
 | exchange12rocks    |      |    7 |    3 |      |      |          10 |
 
 ### <a name="github-issues-opened"></a>GitHub 문제 개설
@@ -99,14 +140,14 @@ GitHub 문제는 Microsoft가 설명서에서 오류 및 실제 사례와의 격
 
 | 문서 문제 개설 | 2016 | 2017 | 2018 | 2019 | 2020 | 총합계 |
 | ------------------ | ---: | ---: | ---: | ---: | ---: | ----------: |
-| 커뮤니티 합계    |   34 |   95 |  213 |  575 |   86 |        1003 |
-| mklement0          |      |   19 |   60 |   56 |   13 |         148 |
+| 커뮤니티 합계    |   34 |   95 |  213 |  575 |  123 |        1081 |
+| mklement0          |      |   19 |   60 |   56 |   17 |         153 |
 | jszabo98           |      |      |    2 |   15 |    2 |          19 |
-| iSazonov           |      |    1 |    4 |   10 |      |          15 |
-| doctordns          |      |    5 |    3 |    5 |    2 |          15 |
+| iSazonov           |      |    1 |    4 |   10 |    2 |          18 |
+| doctordns          |      |    5 |    3 |    5 |    4 |          17 |
+| alexandair         |    9 |    4 |    2 |      |      |          15 |
 | KirkMunro          |      |      |    7 |    7 |      |          14 |
 | vexx32             |      |      |    3 |   11 |      |          14 |
-| alexandair         |    6 |    4 |    2 |      |      |          12 |
 
 <!-- Link references -->
 [contrib]: contributing/overview.md

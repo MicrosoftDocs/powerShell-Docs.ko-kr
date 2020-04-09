@@ -4,12 +4,12 @@ description: Docker 이미지에 사전 설치된 PowerShell을 사용하는 방
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/03/2020
-ms.openlocfilehash: 771214c719ef01fe2c8bc56a4b26c629fcad3856
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: b16a31a04ca863ab55c7c9718b1a1a973e61ee46
+ms.sourcegitcommit: f55da6dea4b58a2cd13c7be7c24c07341f177b71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78279660"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80646367"
 ---
 # <a name="using-powershell-in-docker"></a>Docker에서 PowerShell 사용
 
@@ -35,7 +35,7 @@ docker run -it mcr.microsoft.com/powershell
 
 ### <a name="remove-the-image-when-no-longer-needed"></a>더 이상 필요하지 않은 이미지 제거
 
-다음 명령은 더 이상 필요하지 않을 경우 Docker 컨테이너를 삭제하는 데 사용됩니다.
+더 이상 필요하지 않은 경우 다음 명령이 Docker 이미지를 삭제하는 데 사용됩니다.
 
 ```console
 docker rmi mcr.microsoft.com/powershell
