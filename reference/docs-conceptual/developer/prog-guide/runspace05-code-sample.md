@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9688cd69-07ea-4ea0-8822-0a4850bcf86c
 caps.latest.revision: 7
-ms.openlocfilehash: 8802e308712be93992ead5ef77b97d8c21b137f7
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 4d9a2db76fe69a8509d33a22124f5f952b1d3c80
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870645"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978307"
 ---
 # <a name="runspace05-code-sample"></a>RunSpace05 코드 샘플
 
@@ -26,7 +26,7 @@ ms.locfileid: "75870645"
 
 ## <a name="code-sample"></a>코드 예제
 
-[!code-csharp[Runspace05.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/Runspace05/Runspace05.cs#L11-L86 "Runspace05.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/Runspace05/Runspace05.cs" range="11-86":::
 
 ## <a name="see-also"></a>참고 항목
 

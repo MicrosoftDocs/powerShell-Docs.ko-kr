@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e4e1eee3-316b-43a4-8a60-313391619be6
 caps.latest.revision: 6
-ms.openlocfilehash: 5989b1e7030375b1bacdd9b82c25c1a8288fd637
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c5e71ddacae1036164c5e8e579ddc8704d30670e
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360372"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978392"
 ---
 # <a name="getproc02-c-sample-code"></a>GetProc02(C#) 코드 샘플
 
@@ -21,7 +21,7 @@ ms.locfileid: "72360372"
 
 ## <a name="code-sample"></a>코드 예제
 
-[!code-csharp[GetProcessSample02.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample02/GetProcessSample02.cs#L11-L76 "GetProcessSample02.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample02/GetProcessSample02.cs" range="11-76":::
 
 ## <a name="see-also"></a>참고 항목
 

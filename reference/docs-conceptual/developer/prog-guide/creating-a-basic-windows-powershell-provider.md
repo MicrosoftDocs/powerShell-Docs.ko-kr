@@ -11,16 +11,16 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], base provider
 ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
 caps.latest.revision: 7
-ms.openlocfilehash: e825581b96f0f33893b38f9f6499dd46a7bf38eb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0f8621cd22ca402f3a564ccdfb36c97da68dac6a
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360522"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978511"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>기본 Windows PowerShell 공급자 만들기
 
-이 항목은 Windows PowerShell 공급자를 만드는 방법을 배우는 시작점입니다. 여기서 설명 하는 기본 공급자는 공급자를 시작 하 고 중지 하는 방법을 제공 합니다 .이 공급자는 데이터 저장소에 액세스 하거나 데이터 저장소의 데이터를 가져오거나 설정 하는 방법을 제공 하지 않지만에 필요한 기본 기능을 제공 합니다. 모든 공급자.
+이 항목은 Windows PowerShell 공급자를 만드는 방법을 배우는 시작점입니다. 여기서 설명 하는 기본 공급자는 공급자를 시작 하 고 중지 하는 방법을 제공 합니다 .이 공급자는 데이터 저장소에 액세스 하거나 데이터 저장소의 데이터를 가져오거나 설정 하는 방법을 제공 하지 않지만 모든 공급자가 필요로 하는 기본 기능을 제공 합니다.
 
 앞에서 설명한 대로 여기에 설명 된 기본 공급자는 공급자를 시작 및 중지 하기 위한 메서드를 구현 합니다. Windows PowerShell 런타임에서는 이러한 메서드를 호출 하 여 공급자를 초기화 하 고 초기화 합니다.
 
@@ -38,7 +38,7 @@ API 네임 스페이스의 `Providers` 네임 스페이스에 공급자 클래�
 
 이 기본 공급자에 대 한 클래스 정의는 다음과 같습니다.
 
-[!code-csharp[AccessDBProviderSample01.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample01/AccessDBProviderSample01.cs#L23-L24 "AccessDBProviderSample01.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample01/AccessDBProviderSample01.cs" range="23-24":::
 
 클래스 정의 바로 앞에 [CmdletProvider ()] 구문을 사용 하 여 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 특성을 선언 해야 합니다.
 
@@ -55,7 +55,7 @@ Windows PowerShell 공급자는 연결 기반 상태를 유지할 수도 있습�
 
 ## <a name="initializing-the-provider"></a>공급자 초기화
 
-Windows powershell이 시작 될 때 공급자를 초기화 하기 위해 Windows PowerShell 런타임에서는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) 를 호출 합니다. 대부분의 경우 공급자는이 메서드의 기본 구현을 사용할 수 있습니다 .이 메서드는 공급자를 설명 하는 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 개체를 반환 하기만 합니다. 그러나 초기화 정보를 추가하려는 경우에는 수정된 버전의 [System.Management.Automation.Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo)를 반환하는 사용자 고유의 [System.Management.Automation.Provider.Cmdletprovider.Start*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start)공급자에게 전달되는 Providerinfo 개체입니다. 일반적으로이 메서드는 전달 된 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 개체 또는 다른 초기화 정보를 포함 하는 수정 된 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 개체를 반환 해야 합니다.
+Windows powershell이 시작 될 때 공급자를 초기화 하기 위해 Windows PowerShell 런타임에서는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) 를 호출 합니다. 대부분의 경우 공급자는이 메서드의 기본 구현을 사용할 수 있습니다 .이 메서드는 공급자를 설명 하는 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 개체를 반환 하기만 합니다. 그러나 추가 초기화 정보를 추가 하려는 경우에는 공급자에 전달 되는 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 개체의 수정 된 버전을 반환 하는 고유한 [system.web](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) . n a m a. i n a m. 일반적으로이 메서드는 전달 된 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 개체 또는 다른 초기화 정보를 포함 하는 수정 된 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 개체를 반환 해야 합니다.
 
 이 기본 공급자는이 메서드를 재정의 하지 않습니다. 그러나 다음 코드는이 메서드의 기본 구현을 보여 줍니다.
 
@@ -91,9 +91,9 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 후에는 명�
 Get-PSProvider
 ```
 
-다음과 같은 출력이 나타납니다.
+다음 출력이 표시됩니다.
 
-```output
+```Output
 Name                 Capabilities                  Drives
 ----                 ------------                  ------
 AccessDb             None                          {}

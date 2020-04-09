@@ -11,12 +11,12 @@ helpviewer_keywords:
 - parameters [PowerShell Programmer's Guide], pipeline input
 ms.assetid: 09bf70a9-7c76-4ffe-b3f0-a1d5f10a0931
 caps.latest.revision: 8
-ms.openlocfilehash: 9ecb73a4138a5853fa5fb378874da2d81c5dbdba
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4966ac274713899e7ea9e0c375dca220a972a1b5
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364602"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978732"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>파이프라인 입력을 처리하는 매개 변수 추가
 
@@ -43,13 +43,14 @@ Public Class GetProcCommand
 
 ## <a name="defining-input-from-the-pipeline"></a>파이프라인에서 입력 정의
 
-이 섹션에서는 cmdlet에 대 한 파이프라인에서 입력을 정의 하는 방법을 설명 합니다. 이 In-proc cmdlet은 [명령줄 입력을 처리 하는 매개 변수 추가](./adding-parameters-that-process-command-line-input.md)에 설명 된 대로 `Name` 매개 변수를 나타내는 속성을 정의 합니다. 매개 변수 선언에 대 한 일반 정보는 해당 항목을 참조 하세요.
+이 섹션에서는 cmdlet에 대 한 파이프라인에서 입력을 정의 하는 방법을 설명 합니다. 이 In-proc cmdlet은 [명령줄 입력을 처리 하는 매개 변수 추가](./adding-parameters-that-process-command-line-input.md)에 설명 된 대로 `Name` 매개 변수를 나타내는 속성을 정의 합니다.
+매개 변수 선언에 대 한 일반 정보는 해당 항목을 참조 하세요.
 
 그러나 cmdlet이 파이프라인 입력을 처리 해야 하는 경우에는 Windows PowerShell 런타임에서 입력 값에 바인딩된 매개 변수를 포함 해야 합니다. 이렇게 하려면 `ValueFromPipeline` 키워드를 추가 하거나 `ValueFromPipelineByProperty` 키워드를 [system.object](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성 선언에 추가 해야 합니다. Cmdlet이 전체 입력 개체에 액세스 하는 경우 `ValueFromPipeline` 키워드를 지정 합니다. Cmdlet이 개체의 속성에만 액세스 하는 경우 `ValueFromPipelineByProperty`를 지정 합니다.
 
 다음은 파이프라인 입력을 허용 하는이 In-proc cmdlet의 `Name` 매개 변수에 대 한 매개 변수 선언입니다.
 
-[!code-csharp[GetProcessSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample03/GetProcessSample03.cs#L35-L44 "GetProcessSample03.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample03/GetProcessSample03.cs" range="35-44":::
 
 ```vb
 <Parameter(Position:=0, ValueFromPipeline:=True, _
@@ -77,7 +78,7 @@ End Property
 
 Cmdlet이 파이프라인 입력을 처리 하려면 적절 한 입력 처리 메서드를 재정의 해야 합니다. 기본 입력 처리 방법은 [첫 번째 Cmdlet을 만드는 데](./creating-a-cmdlet-without-parameters.md)도입 되었습니다.
 
-이 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드는 사용자 또는 스크립트에서 제공 하는 `Name` 매개 변수 입력을 처리 하도록 재정의 합니다. 이 메서드는 요청 된 각 프로세스 이름 또는 모든 프로세스에 대 한 프로세스를 가져옵니다. 이름이 제공 되지 않은 경우에는입니다. [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)내에서 [WriteObject (system.string, system.string)](/dotnet/api/system.management.automation.cmdlet.writeobject?view=pscore-6.2.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) 호출은 파이프라인에 출력 개체를 전송 하는 데 필요한 출력 메커니즘을 가집니다. 이 호출의 두 번째 매개 변수 `enumerateCollection`는 Windows PowerShell 런타임에 프로세스 개체의 배열을 열거 하도록 지시 하 고 명령줄에 프로세스를 한 번에 하나씩 작성 하도록 `true`로 설정 됩니다.
+이 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드는 사용자 또는 스크립트에서 제공 하는 `Name` 매개 변수 입력을 처리 하도록 재정의 합니다. 이 메서드는 요청 된 각 프로세스 이름 또는 모든 프로세스에 대 한 프로세스를 가져옵니다. 이름이 제공 되지 않은 경우에는입니다. [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)내에서 [WriteObject (system.string, system.string)](/dotnet/api/system.management.automation.cmdlet.writeobject#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) 호출은 파이프라인에 출력 개체를 전송 하는 데 필요한 출력 메커니즘을 가집니다. 이 호출의 두 번째 매개 변수 `enumerateCollection`는 Windows PowerShell 런타임에 프로세스 개체의 배열을 열거 하도록 지시 하 고 명령줄에 프로세스를 한 번에 하나씩 작성 하도록 `true`로 설정 됩니다.
 
 ```csharp
 protected override void ProcessRecord()
@@ -142,37 +143,37 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
 
 - Windows PowerShell 프롬프트에서 다음 명령을 입력 하 여 파이프라인을 통해 프로세스 이름을 검색 합니다.
 
-    ```powershell
-    PS> type ProcessNames | get-proc
-    ```
+  ```powershell
+  PS> type ProcessNames | get-proc
+  ```
 
-다음 출력이 표시됩니다.
+  다음 출력이 표시 됩니다.
 
-    ```
-    Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName
-    -------  ------  -----   ----- -----   ------    --  -----------
-        809      21  40856    4448    147    9.50  2288  iexplore
-        737      21  26036   16348    144   22.03  3860  iexplore
-         39       2   1024     388     30    0.08  3396  notepad
-       3927      62  71836   26984    467  195.19  1848  OUTLOOK
-    ```
+  ```
+  Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName
+  -------  ------  -----   ----- -----   ------    --  -----------
+      809      21  40856    4448    147    9.50  2288  iexplore
+      737      21  26036   16348    144   22.03  3860  iexplore
+       39       2   1024     388     30    0.08  3396  notepad
+     3927      62  71836   26984    467  195.19  1848  OUTLOOK
+  ```
 
 - 다음 줄을 입력 하 여 "IEXPLORE.EXE" 라는 프로세스에서 `Name` 속성이 있는 프로세스 개체를 가져옵니다. 이 예에서는 Windows PowerShell에서 제공 하는 `Get-Process` cmdlet을 업스트림 명령으로 사용 하 여 "IEXPLORE.EXE" 프로세스를 검색 합니다.
 
-    ```powershell
-    PS> get-process iexplore | get-proc
-    ```
+  ```powershell
+  PS> get-process iexplore | get-proc
+  ```
 
-다음 출력이 표시됩니다.
+  다음 출력이 표시 됩니다.
 
-    ```
-    Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName
-    -------  ------  -----      ----- -----   ------     -- -----------
-        801      21  40720    6544    142    9.52  2288  iexplore
-        726      21  25872   16652    138   22.09  3860  iexplore
-        801      21  40720    6544    142    9.52  2288  iexplore
-        726      21  25872   16652    138   22.09  3860  iexplore
-    ```
+  ```
+  Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName
+  -------  ------  -----   ----- -----   ------    --  -----------
+      801      21  40720    6544    142    9.52  2288  iexplore
+      726      21  25872   16652    138   22.09  3860  iexplore
+      801      21  40720    6544    142    9.52  2288  iexplore
+      726      21  25872   16652    138   22.09  3860  iexplore
+  ```
 
 ## <a name="see-also"></a>참고 항목
 

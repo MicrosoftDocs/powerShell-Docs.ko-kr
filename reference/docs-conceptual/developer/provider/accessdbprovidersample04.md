@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ee3a7e56-7331-4f71-9ecb-7a59b8021c68
 caps.latest.revision: 10
-ms.openlocfilehash: 7096f8066568c214a5902f6943a2c093932d3b56
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0d3133c75d8e608967f15ffb7345fc0f63e1cd5c
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366342"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80977508"
 ---
 # <a name="accessdbprovidersample04"></a>AccessDBProviderSample04
 
@@ -27,24 +27,18 @@ ms.locfileid: "72366342"
 이 샘플은 다음을 보여 줍니다.
 
 - `CmdletProvider` 특성을 선언 합니다.
-
 - [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 클래스에서 파생 되는 공급자 클래스를 정의 합니다.
-
 - [ContainerCmdletProvider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 메서드를 덮어써서 사용자가 한 위치에서 다른 위치로 항목을 복사할 수 있도록 하는 `Copy-Item` cmdlet의 동작을 변경 합니다. (이 샘플은 `Copy-Item` cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
-
 - [Containercmdletprovider Getchilditems *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 메서드를 덮어써서 사용자가 부모 항목의 자식 항목을 검색할 수 있도록 하는 Get childitems cmdlet의 동작을 변경 합니다. (이 샘플은 동적 매개 변수를 Get ChildItems cmdlet에 추가 하는 방법을 보여 주지 않습니다.)
-
 - Cmdlet의 `Name` 매개 변수가 지정 된 경우 [Containercmdletprovider Getchildnames *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) 메서드를 덮어써서 Get childitems cmdlet의 동작을 변경 합니다.
-
 - 사용자가 데이터 저장소에 항목을 추가할 수 있도록 하는 `New-Item` cmdlet의 동작을 변경 하기 위해 [Containercmdletprovider. Newitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드를 덮어씁니다. (이 샘플은 `New-Item` cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
-
 - `Remove-Item` cmdlet의 동작을 변경 하기 위해 [Containercmdletprovider. Removeitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 메서드를 덮어씁니다. (이 샘플은 `Remove-Item` cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
 
 ## <a name="example"></a>예제
 
 이 샘플에서는 항목을 복사, 만들기 및 제거 하는 데 필요한 메서드 뿐만 아니라 부모 항목의 자식 항목을 가져오는 메서드를 덮어쓰는 방법을 보여 줍니다.
 
-[!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L11-L1635 "AccessDBProviderSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs" range="11-1635":::
 
 ## <a name="see-also"></a>참고 항목
 

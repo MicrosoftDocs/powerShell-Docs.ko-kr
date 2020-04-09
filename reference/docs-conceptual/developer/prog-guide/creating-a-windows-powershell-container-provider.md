@@ -1,22 +1,13 @@
 ---
-title: Windows PowerShell 컨테이너 공급자 만들기 | Microsoft Docs
-ms.custom: ''
+title: Windows PowerShell 컨테이너 공급자 만들기
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- providers [PowerShell Programmer's Guide], container provider
-- container providers [PowerShell Programmer's Guide]
-ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
-caps.latest.revision: 5
-ms.openlocfilehash: 69e45de4220a234783d35a877116ad5a5e47d182
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: eec92d526ad78d2351eef6679eaa0df19900715b
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870781"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978494"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Windows PowerShell 컨테이너 공급자 만들기
 
@@ -42,7 +33,7 @@ Windows PowerShell 컨테이너 공급자는 [Containercmdletprovider](/dotnet/a
 public class AccessDBProvider : ContainerCmdletProvider
 ```
 
-[!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L34-L35 "AccessDBProviderSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs" range="34-35":::
 
 이 클래스 정의에서 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 특성에는 두 개의 매개 변수가 포함 되어 있습니다. 첫 번째 매개 변수는 Windows PowerShell에서 사용 되는 공급자에 대 한 친숙 한 이름을 지정 합니다. 두 번째 매개 변수는 명령을 처리 하는 동안 공급자가 Windows PowerShell 런타임에 노출 하는 Windows PowerShell 특정 기능을 지정 합니다. 이 공급자의 경우 추가 되는 Windows PowerShell 관련 기능이 없습니다.
 
@@ -118,7 +109,7 @@ protected override void GetChildItems(string path, bool recurse)
 } // GetChildItems
 ```
 
-[!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L311-L362 "AccessDBProviderSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs" range="311-362":::
 
 #### <a name="things-to-remember-about-implementing-getchilditems"></a>GetChildItems 구현에 대해 기억할 사항
 
@@ -126,7 +117,7 @@ protected override void GetChildItems(string path, bool recurse)
 
 - 공급자 클래스를 정의 하는 경우 Windows PowerShell 컨테이너 공급자가 ExpandWildcards, Filter, Include 또는 Exclude의 공급자 기능을 [system.object](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) 열거형에서 선언할 수 있습니다. 이러한 경우 [Containercmdletprovider. Getchilditems *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 메서드를 구현 하면 메서드에 전달 된 경로가 지정 된 기능의 요구 사항을 충족 하는지 확인 해야 합니다. 이 작업을 수행 하려면 메서드가 적절 한 속성 (예: System.object)에 액세스 해야 합니다. [*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) 및 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .... n a m.
 
-- 이 메서드의 구현에서는 항목이 사용자에 게 표시 될 수 있도록 하는 항목에 대 한 모든 형태의 액세스를 고려해 야 합니다. 예를 들어, 사용자가 파일 시스템 공급자 (Windows PowerShell에서 제공)를 통해 파일에 대 한 쓰기 권한을가지고 있지만 읽기 액세스 권한이 없는 경우 파일은 여전히 존재 하며,이 경우에는 System.object를 반환 합니다 [. Itemexists *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) 를 반환 합니다`true`. 구현에서 부모 항목을 확인 하 여 자식을 열거할 수 있는지 확인 해야 할 수 있습니다.
+- 이 메서드의 구현에서는 항목이 사용자에 게 표시 될 수 있도록 하는 항목에 대 한 모든 형태의 액세스를 고려해 야 합니다. 예를 들어, 사용자가 파일 시스템 공급자 (Windows PowerShell에서 제공)를 통해 파일에 대 한 쓰기 권한을가지고 있지만 읽기 권한이 없는 경우 해당 파일은 여전히 존재 하 고 [system.object](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) 는 `true`을 반환 합니다. 구현에서 부모 항목을 확인 하 여 자식을 열거할 수 있는지 확인 해야 할 수 있습니다.
 
 - 여러 항목을 작성할 때 [Containercmdletprovider. Getchilditems *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 메서드는 약간의 시간이 걸릴 수 있습니다. 공급자를 디자인 하 여 한 번에 하나씩, [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) 를 사용 하 여 항목을 작성할 수 있습니다. 이 기술을 사용 하면 사용자에 게 스트림의 항목이 표시 됩니다.
 
@@ -192,7 +183,7 @@ protected override void GetChildNames(string path,
 } // GetChildNames
 ```
 
-[!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L369-L411 "AccessDBProviderSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs" range="369-411":::
 
 #### <a name="things-to-remember-about-implementing-getchildnames"></a>GetChildNames 구현에 대해 기억할 사항
 
@@ -209,7 +200,7 @@ protected override void GetChildNames(string path,
 
 ## <a name="attaching-dynamic-parameters-to-the-get-childitem-cmdlet-name"></a>동적 매개 변수를 Get ChildItem Cmdlet (이름)에 연결
 
-경우에 따라 `Name` 매개 변수를 사용 하 여 `Get-ChildItem` cmdlet에는 런타임에 동적으로 지정 되는 추가 매개 변수가 필요 합니다. 이러한 동적 매개 변수를 제공 하려면 Windows PowerShell 컨테이너 공급자가 [Containercmdletprovider. Getchildnamesdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) 메서드를 구현 해야 합니다. 이 메서드는 지정된 경로에서 항목에 대한 동적 매개 변수를 검색하고 cmdlet 클래스 또는 [System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환합니다. Windows PowerShell 런타임은 반환 된 개체를 사용 하 여 `Get-ChildItem` cmdlet에 매개 변수를 추가 합니다.
+경우에 따라 `Name` 매개 변수를 사용 하 여 `Get-ChildItem` cmdlet에는 런타임에 동적으로 지정 되는 추가 매개 변수가 필요 합니다. 이러한 동적 매개 변수를 제공 하려면 Windows PowerShell 컨테이너 공급자가 [Containercmdletprovider. Getchildnamesdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) 메서드를 구현 해야 합니다. 이 메서드는 지정 된 경로에서 항목에 대 한 동적 매개 변수를 검색 하 고 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환 합니다. Windows PowerShell 런타임은 반환 된 개체를 사용 하 여 `Get-ChildItem` cmdlet에 매개 변수를 추가 합니다.
 
 이 공급자는이 메서드를 구현 하지 않습니다. 그러나 다음 코드는이 메서드의 기본 구현입니다.
 
@@ -237,7 +228,7 @@ protected override void GetChildNames(string path,
 - [Containercmdletprovider. Renameitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) 메서드를 구현 하면 데이터 저장소를 변경 하기 전에를 호출 하 고 해당 반환 값을 확인 [해야 하는](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 경우를 들 수 있습니다. 이 메서드는 시스템 상태가 변경 될 때 (예: 파일 이름 바꾸기) 작업 실행을 확인 하는 데 사용 됩니다.
   Windows PowerShell 런타임이 사용자에 게 변경할 리소스의 [이름을 보내고,](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 표시 되는 항목을 결정 하는 데 사용 되는 모든 명령줄 설정이 나 기본 설정 변수를 고려 하 여 Windows PowerShell 런타임을 사용 합니다.
 
-  [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)에 대한 호출이 `true` 반환한 후 [System.Management.Automation.Provider.Containercmdletprovider.Renameitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) 메서드는 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 호출해야 합니다. 이 메서드는 사용자에 게 확인 메시지를 보내 작업을 계속 해야 하는 경우 추가 피드백을 허용 하도록 메시지를 보냅니다. 공급자는 잠재적으로 위험한 시스템 수정에 대 한 추가 검사로 [계속 합니다.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)
+  Containercmdletprovider를 호출한 후에는 [ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 가 `true`를 반환 합니다. Renameitem * 메서드는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 를 호출 해야 합니다. [*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) 메서드를 호출 하는 경우에는 메서드를 호출 해야 합니다. 이 메서드는 사용자에 게 확인 메시지를 보내 작업을 계속 해야 하는 경우 추가 피드백을 허용 하도록 메시지를 보냅니다. 공급자는 잠재적으로 위험한 시스템 수정에 대 한 추가 검사로 [계속 합니다.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)
 
 ## <a name="attaching-dynamic-parameters-to-the-rename-item-cmdlet"></a>항목 이름 바꾸기 Cmdlet에 동적 매개 변수 연결
 
@@ -272,7 +263,7 @@ protected override void NewItem( string path, string type, object newItemValue )
 } // NewItem
 ```
 
-[!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L939-L955 "AccessDBProviderSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs" range="939-955":::
 
 #### <a name="things-to-remember-about-implementing-newitem"></a>NewItem 구현에 대해 기억할 사항
 
@@ -311,11 +302,11 @@ protected override void NewItem( string path, string type, object newItemValue )
 
 - [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 을 구현 하는 것은 순환 링크가 있는 경우 무한 재귀를 방지 하는 것입니다. 이러한 조건을 반영 하려면 적절 한 종료 예외를 throw 해야 합니다.
 
-- [Containercmdletprovider. Removeitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 메서드를 구현 하면 데이터 저장소를 변경 하기 전에를 호출 하 고 해당 반환 값을 확인 [해야 하는](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 경우를 들 수 있습니다. [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)에 대한 호출이 `true`을 반환한 후 [System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 메서드는 잠재적으로 위험한 시스템 수정에 대한 추가 확인으로 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 호출해야 합니다.
+- [Containercmdletprovider. Removeitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 메서드를 구현 하면 데이터 저장소를 변경 하기 전에를 호출 하 고 해당 반환 값을 확인 [해야 하는](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 경우를 들 수 있습니다. Containercmdletprovider를 호출한 후에는 [ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 가 `true`을 반환 하 고, [Removeitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) [메서드는 잠재적](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 으로 위험한 시스템 수정에 대 한 추가 검사로 메서드를 호출 해야 하는 경우를 들 수 있습니다 (예를 들어
 
 ## <a name="attaching-dynamic-parameters-to-the-remove-item-cmdlet"></a>항목을 제거 하는 Cmdlet에 동적 매개 변수 연결
 
-경우에 따라 `Remove-Item` cmdlet에는 런타임에 동적으로 지정 되는 추가 매개 변수가 필요 합니다. 이러한 동적 매개 변수를 제공 하려면 컨테이너 공급자가 이러한 매개 변수를 처리 하는 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters) 을 구현 해야 합니다. 이 메서드는 지정된 경로에서 항목에 대한 동적 매개 변수를 검색하고 cmdlet 클래스 또는 [System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환합니다. Windows PowerShell 런타임은 반환 된 개체를 사용 하 여 `Remove-Item` cmdlet에 매개 변수를 추가 합니다.
+경우에 따라 `Remove-Item` cmdlet에는 런타임에 동적으로 지정 되는 추가 매개 변수가 필요 합니다. 이러한 동적 매개 변수를 제공 하려면 컨테이너 공급자가 이러한 매개 변수를 처리 하는 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters) 을 구현 해야 합니다. 이 메서드는 지정 된 경로에서 항목에 대 한 동적 매개 변수를 검색 하 고 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환 합니다. Windows PowerShell 런타임은 반환 된 개체를 사용 하 여 `Remove-Item` cmdlet에 매개 변수를 추가 합니다.
 
 이 컨테이너 공급자는이 메서드를 구현 하지 않습니다. 그러나 다음 코드는 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters)의 기본 구현으로,이는 기본 구현입니다.
 
@@ -334,7 +325,7 @@ protected override bool HasChildItems( string path )
 } // HasChildItems
 ```
 
-[!code-csharp[AccessDBProviderSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs#L1094-L1097 "AccessDBProviderSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample04/AccessDBProviderSample04.cs" range="1094-1097":::
 
 #### <a name="things-to-remember-about-implementing-haschilditems"></a>HasChildItems 구현에 대해 기억할 사항
 
@@ -360,7 +351,7 @@ Containercmdletprovider의 구현에는 다음 조건이 적용 될 수 있습�
 
 - [ContainerCmdletProvider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 를 구현 하는 것은 순환 링크가 있는 경우 무한 재귀를 방지 하는 것입니다. 이러한 조건을 반영 하려면 적절 한 종료 예외를 throw 해야 합니다.
 
-- [ContainerCmdletProvider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 메서드를 구현 하면 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 것도 가능 해야 합니다. [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)에 대한 호출이 true이면 [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 메서드는 잠재적으로 위험한 시스템 수정에 대한 추가 확인으로 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 호출해야 합니다. 이러한 메서드를 호출 하는 방법에 대 한 자세한 내용은 [항목 이름 바꾸기](#renaming-items)를 참조 하세요.
+- [ContainerCmdletProvider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 메서드를 구현 하면 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 것도 가능 해야 합니다. ContainerCmdletProvider를 호출한 후에는 [ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 가 true를 반환 하 고, 잠재적으로 위험한 시스템 수정에 대 한 추가 확인으로 [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) [메서드를](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 호출 해야 하는 경우를 들 수 있습니다 (예를 들어) 합니다. 이러한 메서드를 호출 하는 방법에 대 한 자세한 내용은 [항목 이름 바꾸기](#renaming-items)를 참조 하세요.
 
 ## <a name="attaching-dynamic-parameters-to-the-copy-item-cmdlet"></a>복사 항목 Cmdlet에 동적 매개 변수 연결
 
@@ -388,7 +379,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우 명령�
    Get-ChildItem mydb:customers
    ```
 
-   다음 출력이 표시됩니다.
+   다음 출력이 표시 됩니다.
 
    ```output
    PSPath        : AccessDB::customers
@@ -407,7 +398,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우 명령�
    (Get-ChildItem mydb:customers).data
    ```
 
-   다음 출력이 표시됩니다.
+   다음 출력이 표시 됩니다.
 
    ```output
    TABLE_CAT   : c:\PS\northwind
@@ -423,7 +414,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우 명령�
    Get-Item mydb:\customers\0
    ```
 
-   다음 출력이 표시됩니다.
+   다음 출력이 표시 됩니다.
 
    ```output
    PSPath        : AccessDB::customers\0
@@ -440,7 +431,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우 명령�
    (Get-Item mydb:\customers\0).data
    ```
 
-   다음 출력이 표시됩니다.
+   다음 출력이 표시 됩니다.
 
    ```output
    CustomerID   : 1234
@@ -470,7 +461,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우 명령�
    PS mydb:\Customers> (Get-Item 3).data
    ```
 
-   다음 출력이 표시됩니다.
+   다음 출력이 표시 됩니다.
 
    ```output
    ID        : 3

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - parameter sets [PowerShell Programmer's Guide]
 ms.assetid: a6131db4-fd6e-45f1-bd47-17e7174afd56
 caps.latest.revision: 8
-ms.openlocfilehash: c9c0b9a7a587e856efc82b4d277cee373e3f8b38
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6e17ff3d8ad3f7b2c511b879c913633f320bf511
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416317"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978630"
 ---
 # <a name="adding-parameter-sets-to-a-cmdlet"></a>Cmdlet에 매개 변수 집합 추가
 
@@ -60,7 +60,7 @@ Public Class StopProcCommand
 
 사용자는이 입력 매개 변수를 사용 하 여 중지할 프로세스의 이름을 지정할 수 있습니다. [System.object](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성의 `ParameterSetName` attribute 키워드는이 매개 변수에 대해 설정 된 `ProcessName` 매개 변수를 지정 합니다.
 
-[!code-csharp[StopProcessSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/StopProcessSample04/StopProcessSample04.cs#L44-L58 "StopProcessSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/StopProcessSample04/StopProcessSample04.cs" range="44-58":::
 
 ```vb
 <Parameter(Position:=0, ParameterSetName:="ProcessName", _
@@ -229,23 +229,23 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
 
 - Windows PowerShell이 시작 되 면 `ProcessId` 매개 변수 집합을 사용 하 여 Stop-Proc cmdlet을 실행 하 여 해당 식별자에 따라 프로세스를 중지 합니다. 이 경우 cmdlet은 `ProcessId` 매개 변수 집합을 사용 하 여 프로세스를 중지 합니다.
 
-    ```
-    PS> stop-proc -Id 444
-    Confirm
-    Are you sure you want to perform this action?
-    Performing operation "stop-proc" on Target "notepad (444)".
-    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
-    ```
+  ```
+  PS> stop-proc -Id 444
+  Confirm
+  Are you sure you want to perform this action?
+  Performing operation "stop-proc" on Target "notepad (444)".
+  [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
+  ```
 
 - Windows PowerShell이 시작 되 면 `InputObject` 매개 변수 집합을 사용 하 여 Stop Proc cmdlet을 실행 하 여 `Get-Process` 명령으로 검색 된 메모장 개체의 프로세스를 중지 합니다.
 
-    ```
-    PS> get-process notepad | stop-proc
-    Confirm
-    Are you sure you want to perform this action?
-    Performing operation "stop-proc" on Target "notepad (444)".
-    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
-    ```
+  ```
+  PS> get-process notepad | stop-proc
+  Confirm
+  Are you sure you want to perform this action?
+  Performing operation "stop-proc" on Target "notepad (444)".
+  [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
+  ```
 
 ## <a name="see-also"></a>참고 항목
 

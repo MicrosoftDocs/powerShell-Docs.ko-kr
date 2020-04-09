@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 778ce1a2-e16d-4af5-b15b-77ca4326bdc4
 caps.latest.revision: 5
-ms.openlocfilehash: df5591e351790d18bf2a5b5554d792ab8175dcc6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b7bd7c8ad190c6ace0f2325a16307c297016f32b
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416050"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80977559"
 ---
 # <a name="stopprocesssample04-c-sample-code"></a>StopProcessSample04(C#) 코드 샘플
 
@@ -21,10 +21,9 @@ StopProc04 sample cmdlet에 C# 대 한 전체 샘플 코드는 다음과 같습�
 
 > [!NOTE]
 > Windows Vista 용 Microsoft C# Windows 소프트웨어 개발 키트 및 .NET Framework 3.0 런타임 구성 요소를 사용 하 여이 stopprocesssample04.cs cmdlet에 대 한 () 원본 파일을 다운로드할 수 있습니다. 다운로드 지침은 [Windows powershell을 설치 하 고 Windows POWERSHELL SDK를 다운로드 하는 방법](/powershell/scripting/developer/installing-the-windows-powershell-sdk)을 참조 하세요.
->
 > 다운로드 된 원본 파일은 **\<PowerShell Samples >** 디렉터리에서 사용할 수 있습니다.
 
-[!code-csharp[StopProcessSample04.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/StopProcessSample04/StopProcessSample04.cs#L11-L435 "StopProcessSample04.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/StopProcessSample04/StopProcessSample04.cs" range="11-435":::
 
 ## <a name="see-also"></a>참고 항목
 

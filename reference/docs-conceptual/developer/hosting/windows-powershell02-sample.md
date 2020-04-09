@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 92492a7e-257d-47d3-b119-89df3c5545e8
 caps.latest.revision: 9
-ms.openlocfilehash: db7ff3a2dbd92f562379d206db494ab92ef08736
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4d697e73ff4ab4cc4b88593f814d589f89005663
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367302"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978647"
 ---
 # <a name="windows-powershell02-sample"></a>Windows PowerShell02 샘플
 
@@ -28,20 +28,16 @@ ms.locfileid: "72367302"
 이 샘플은 다음을 보여 줍니다.
 
 - 최소 및 최대 runspace 수를 사용 하 여 RunspacePool 개체를 만들고 동시에 열 수 있도록 허용 합니다.
-
 - 명령 목록을 만듭니다.
-
 - 비동기적으로 명령을 실행 합니다.
-
 - [Runspace Runspacepool. Getavailablerunspaces *](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool.GetAvailableRunspaces) 메서드를 호출 하 여 사용 가능한 runspace의 수를 확인 합니다.
-
 - [System.object](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) 를 사용 하 여 명령 출력을 캡처합니다.
 
 ## <a name="example"></a>예제
 
 이 샘플에서는 runspace 풀의 runspace를 여는 방법과 이러한 runspace에서 비동기적으로 명령을 실행 하는 방법을 보여 줍니다.
 
-[!code-csharp[PowerShell02.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/PowerShell02/PowerShell02.cs#L11-L96 "PowerShell02.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/PowerShell02/PowerShell02.cs" range="11-96":::
 
 ## <a name="see-also"></a>참고 항목
 

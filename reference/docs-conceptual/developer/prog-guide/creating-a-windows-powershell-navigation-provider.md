@@ -3,12 +3,12 @@ title: Windows PowerShell 탐색 공급자 만들기
 ms.date: 09/13/2016
 ms.topic: article
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
-ms.openlocfilehash: 7ca7e3ca6feeba018ad793d074caf67cd9506a68
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: 1280da0067f93873a42cb534fae75f758c310912
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500798"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978409"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Windows PowerShell 탐색 공급자 만들기
 
@@ -27,7 +27,7 @@ ms.locfileid: "80500798"
 
 Windows PowerShell 탐색 공급자는 [system.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 클래스에서 파생 되는 .net 클래스를 만들어야 합니다. 이 섹션에서 설명 하는 탐색 공급자에 대 한 클래스 정의는 다음과 같습니다.
 
-[!code-csharp[AccessDBProviderSample05.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32 "AccessDBProviderSample05.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs" range="31-32":::
 
 이 공급자에서 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 특성에는 두 개의 매개 변수가 포함 되어 있습니다. 첫 번째 매개 변수는 Windows PowerShell에서 사용 되는 공급자에 대 한 친숙 한 이름을 지정 합니다. 두 번째 매개 변수는 명령을 처리 하는 동안 공급자가 Windows PowerShell 런타임에 노출 하는 Windows PowerShell 특정 기능을 지정 합니다. 이 공급자의 경우 추가 되는 Windows PowerShell 관련 기능이 없습니다.
 
@@ -96,7 +96,7 @@ Windows PowerShell 탐색 공급자는 표시 된 전체 또는 부분 공급자
 
 다음 코드는 샘플 탐색 공급자의 [Isitemcontainer *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) 구현을 보여 줍니다 .이 예제에서는 메서드는 지정 된 경로가 올바른지 그리고 테이블이 있는지 확인 하 고 경로가 컨테이너를 나타내는 경우 true를 반환 합니다.
 
-[!code-csharp[AccessDBProviderSample05.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L847-L872 "AccessDBProviderSample05.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs" range="847-872":::
 
 #### <a name="things-to-remember-about-implementing-isitemcontainer"></a>IsItemContainer 구현에 대해 기억할 사항
 

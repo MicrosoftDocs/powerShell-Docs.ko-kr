@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 114acaf9-b295-4cc2-b349-1225156ab3f2
 caps.latest.revision: 6
-ms.openlocfilehash: ae06cd7347727ae532f4de3cb2edb0bacc420ec3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: bc7f1ba28df94d31c2594c77771f226381707dd9
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360332"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978341"
 ---
 # <a name="getproc05-c-sample-code"></a>GetProc05(C#) 코드 샘플
 
 GetProc05 sample cmdlet에 C# 대 한 전체 코드는 다음과 같습니다.
 
-[!code-csharp[GetProcessSample05.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample05/GetProcessSample05.cs#L11-L411 "GetProcessSample05.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample05/GetProcessSample05.cs" range="11-411":::
 
 ## <a name="see-also"></a>참고 항목
 
