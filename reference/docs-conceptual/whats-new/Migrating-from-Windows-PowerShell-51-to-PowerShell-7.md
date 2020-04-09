@@ -176,7 +176,7 @@ Windows PowerShell 원격 작업을 사용하려면 원격 관리를 위해 원�
 Enter-PSSession -HostName <Computer> -UserName <Username>
 ```
 
-또는 **HostName** 매개 변수를 사용할 때 사용자 이름 정보를 제공하세요. 이 이름 다음에는 '@' 기호와 컴퓨터 이름이 차례로 나옵니다.
+또는 **HostName** 매개 변수를 사용할 때 사용자 이름 정보를 제공하세요. 이 이름 다음에는 '\@' 기호와 컴퓨터 이름이 차례로 나옵니다.
 
 ```powershell
 Enter-PSSession -HostName <Username>@<Computer>
