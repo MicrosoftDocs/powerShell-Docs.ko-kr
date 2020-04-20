@@ -257,7 +257,7 @@ Windows PowerShell 4.0에는 다음과 같은 새로운 기능이 있습니다.
 
 ### <a name="new-features-in-windows-powershell-web-services"></a>Windows PowerShell 웹 서비스의 새로운 기능
 
-- cmdlet을 실행하는 중에 Windows PowerShell 웹 서비스(PSWS, 관리 OData IIS 확장이라고도 함)에서 오류가 발생할 경우 자세한 오류 메시지가 호출자에게 반환됩니다. 또한 오류 코드는 [Micosoft Azure REST API 오류 코드 지침](/rest/api/storageservices/Common-REST-API-Error-Codes)을 따릅니다.
+- cmdlet을 실행하는 중에 Windows PowerShell 웹 서비스(PSWS, 관리 OData IIS 확장이라고도 함)에서 오류가 발생할 경우 자세한 오류 메시지가 호출자에게 반환됩니다. 또한 오류 코드는 [Microsoft Azure REST API 오류 코드 지침](/rest/api/storageservices/Common-REST-API-Error-Codes)을 따릅니다.
 - 이제 엔드포인트에서 API 버전을 정의하고 특정 API 버전을 강제로 사용할 수 있습니다. 클라이언트와 서버의 버전이 일치하지 않을 경우 항상 클라이언트와 서버 모두에 오류가 표시됩니다.
 - 스키마에서 누락된 필드에 대한 값을 자동으로 생성하여 디스패치 스키마 관리를 간소화했습니다. 디스패치 스키마가 없는 경우에도 유용한 시작점으로 생성됩니다.
 - Windows PowerShell의 **PSTypeConverter**와 비슷하게 동작하여 기본 생성자가 아닌 다른 생성자를 사용하는 형식을 지원하도록 PSWS의 형식 처리가 향상되었습니다. 따라서 PSWS에서 복잡한 형식을 사용할 수 있습니다.
