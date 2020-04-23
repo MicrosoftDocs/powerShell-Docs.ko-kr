@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 title: JEA(Just Enough Administration)에 대한 개선 사항
 ms.openlocfilehash: 847ae92a6225023bcd0ee3dfe7c7058bdc356836
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147603"
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>JEA(Just Enough Administration)에 대한 개선 사항
@@ -26,7 +26,7 @@ UserDriveMaximumSize = 10485760    # 10 MB
 
 The folder backing the user drive will be created at(사용자 드라이브를 지원하는 폴더가 생성되는 위치)`$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\DriveRoots\DOMAIN_USER`
 
-사용자 드라이브를 활용하고 사용자 드라이브를 노출하도록 구성된 JEA 엔드포인트로 또는 JEA 엔드포인트에서 파일을 복사하려면 `Copy-Item`에서 `-ToSession` 및 `-FromSession` 매개 변수를 사용합니다.
+사용자 드라이브를 활용하고 사용자 드라이브를 노출하도록 구성된 JEA 엔드포인트로 또는 JEA 엔드포인트에서 파일을 복사하려면 `-ToSession`에서 `-FromSession` 및 `Copy-Item` 매개 변수를 사용합니다.
 
 ```powershell
 # Connect to the JEA endpoint

@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 title: WMF 5.1의 향상된 콘솔
 ms.openlocfilehash: d0dd8e3c31dc0ddebab1bb899468b77a9292954d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147633"
 ---
 # <a name="console-improvements-in-wmf-51"></a>WMF 5.1의 향상된 콘솔
@@ -20,7 +20,7 @@ ms.locfileid: "71147633"
 Windows 10에서는 [VT100 escape sequences](/windows/console/console-virtual-terminal-sequences)(VT100 이스케이프 스퀀스)에 대한 지원을 추가했습니다.
 PowerShell에서는 표 너비를 계산할 때 특정 VT100 서식 이스케이프 시퀀스를 무시합니다.
 
-또한 PowerShell에서는 VT100이 지원되는지 여부를 결정하는 서식 코드에 사용할 수 있는 새로운 API도 추가했습니다. 예:
+또한 PowerShell에서는 VT100이 지원되는지 여부를 결정하는 서식 코드에 사용할 수 있는 새로운 API도 추가했습니다. 다음은 그 예입니다.
 
 ```powershell
 if ($host.UI.SupportsVirtualTerminal)
@@ -34,7 +34,7 @@ else
 }
 ```
 
-다음은 `Select-String`의 일치 항목을 강조 표시하는 데 사용할 수 있는 전체 [예제](https://gist.github.com/lzybkr/dcb973dccd54900b67783c48083c28f7)입니다. 예제를 `MatchInfo.format.ps1xml`이라는 파일로 저장하고 프로필 또는 다른 위치에서 사용하려면 `Update-FormatData -Prepend MatchInfo.format.ps1xml`을 실행합니다.
+다음은 [의 일치 항목을 강조 표시하는 데 사용할 수 있는 전체 ](https://gist.github.com/lzybkr/dcb973dccd54900b67783c48083c28f7)예제`Select-String`입니다. 예제를 `MatchInfo.format.ps1xml`이라는 파일로 저장하고 프로필 또는 다른 위치에서 사용하려면 `Update-FormatData -Prepend MatchInfo.format.ps1xml`을 실행합니다.
 
 VT100 이스케이프 시퀀스는 Windows 10 Anniversary 업데이트부터만 지원됩니다.
 이전 시스템에서는 지원되지 않습니다.

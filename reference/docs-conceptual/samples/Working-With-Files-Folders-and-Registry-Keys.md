@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 파일, 폴더 및 레지스트리 키 작업
 ms.openlocfilehash: 0c8716c384827d0816e2847ff81232c14638681b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030766"
 ---
 # <a name="working-with-files-folders-and-registry-keys"></a>파일, 폴더 및 레지스트리 키 작업
@@ -43,7 +43,7 @@ Get-Command -Name Get-ChildItem -Syntax
 
 ### <a name="listing-all-contained-items--recurse"></a>모든 포함된 항목 나열(-Recurse)
 
-Windows 폴더 내에 있는 항목과 하위 폴더에 포함된 모든 항목을 표시하려면 **Get-ChildItem**의 **Recurse** 매개 변수를 사용합니다. 목록에는 Windows 폴더 내의 모든 항목과 하위 폴더의 항목이 표시됩니다. 예:
+Windows 폴더 내에 있는 항목과 하위 폴더에 포함된 모든 항목을 표시하려면 **Get-ChildItem**의 **Recurse** 매개 변수를 사용합니다. 목록에는 Windows 폴더 내의 모든 항목과 하위 폴더의 항목이 표시됩니다. 다음은 그 예입니다.
 
 ```
 PS> Get-ChildItem -Path C:\WINDOWS -Recurse
@@ -70,7 +70,7 @@ assembly
 
 ### <a name="forcibly-listing-hidden-items--force"></a>숨겨진 항목을 강제로 나열(-Force)
 
-일반적으로 파일 탐색기 또는 Cmd.exe에 표시되지 않는 항목은 **Get-ChildItem** 명령의 출력에 표시되지 않습니다. 숨겨진 항목을 표시하려면 **Get-ChildItem**의 **Force** 매개 변수를 사용합니다. 예:
+일반적으로 파일 탐색기 또는 Cmd.exe에 표시되지 않는 항목은 **Get-ChildItem** 명령의 출력에 표시되지 않습니다. 숨겨진 항목을 표시하려면 **Get-ChildItem**의 **Force** 매개 변수를 사용합니다. 다음은 그 예입니다.
 
 ```powershell
 Get-ChildItem -Path C:\Windows -Force

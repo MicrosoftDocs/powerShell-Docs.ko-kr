@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 용어집
 ms.openlocfilehash: 0827ec771b1744b87a8c0f0ddf48438f9ba484b2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030349"
 ---
 # <a name="windows-powershell-glossary"></a>Windows PowerShell 용어집
@@ -21,7 +21,7 @@ ms.locfileid: "67030349"
 |동적 매개 변수|특정 조건에서 Windows PowerShell cmdlet, 함수 또는 스크립트에 추가되는 매개 변수입니다. cmdlet, 함수, 공급자 및 스크립트는 동적 매개 변수를 추가할 수 있습니다.|
 |서식 파일|확장명이 .format.ps1xml이고 Windows PowerShell에서 .NET Framework 형식에 따라 개체를 표시하는 방법을 정의하는 Windows PowerShell XML 파일입니다.|
 |전역 세션 상태|Windows PowerShell 세션의 사용자가 액세스할 수 있는 데이터를 포함하는 세션 상태입니다.|
-|호스트|Windows PowerShell 엔진이 사용자와 통신하는 데 사용하는 인터페이스입니다. 예를 들어 호스트는 Windows PowerShell과 사용자 간의 프롬프트 처리 방법을 지정합니다.|
+|host|Windows PowerShell 엔진이 사용자와 통신하는 데 사용하는 인터페이스입니다. 예를 들어 호스트는 Windows PowerShell과 사용자 간의 프롬프트 처리 방법을 지정합니다.|
 |호스트 애플리케이션|Windows PowerShell 엔진을 해당 프로세스에 로드하고 작업을 수행하는 데 사용하는 프로그램입니다.|
 |입력 처리 메서드|cmdlet이 입력으로 받은 레코드를 처리하는 데 사용할 수 있는 메서드입니다. 입력 처리 메서드로는 BeginProcessing 메서드, ProcessRecord 메서드, EndProcessing 메서드 및 StopProcessing 메서드가 있습니다.|
 |매니페스트 모듈|매니페스트가 있으며 RootModule 키가 비어 있는 Windows PowerShell 모듈입니다.|
@@ -31,7 +31,7 @@ ms.locfileid: "67030349"
 |명사|Windows PowerShell cmdlet 이름에서 하이픈 뒤에 오는 단어입니다. 명사는 cmdlet이 적용되는 리소스를 설명합니다.|
 |매개 변수 집합|특정 작업을 수행하기 위해 동일한 명령에 사용할 수 있는 매개 변수 그룹입니다.|
 |파이프|Windows PowerShell에서는 이전 명령의 결과를 파이프라인의 다음 명령에 입력으로 보냅니다.|
-|파이프라인|파이프라인 연산자(&#124;)(ASCII 124)로 연결된 일련의 명령입니다. 각 파이프라인 연산자는 이전 명령의 결과를 다음 명령에 입력으로 보냅니다.|
+|pipeline|파이프라인 연산자(&#124;)(ASCII 124)로 연결된 일련의 명령입니다. 각 파이프라인 연산자는 이전 명령의 결과를 다음 명령에 입력으로 보냅니다.|
 |PSSession|사용자가 만들고 관리 및 종료하는 Windows PowerShell 세션의 형식입니다.|
 |루트 모듈|모듈 매니페스트의 RootModule 키에 지정된 모듈입니다.|
 |Runspace|Windows PowerShell에서는 파이프라인의 각 명령이 실행되는 운영 체제입니다.|
@@ -43,7 +43,7 @@ ms.locfileid: "67030349"
 |종료 오류|Windows PowerShell이 명령을 처리할 수 없는 오류입니다.|
 |트랜잭션|작업의 원자 단위입니다. 한 트랜잭션의 작업은 전체를 완료해야 합니다. 트랜잭션의 일부가 실패하면 전체 트랜잭션이 실패합니다.|
 |형식 파일|확장명이 .ps1xml이고 Windows PowerShell에서 Microsoft .NET Framework 형식의 속성을 확장하는 Windows PowerShell XML 파일입니다.|
-|동사|Windows PowerShell cmdlet 이름에서 하이픈 앞에 오는 단어입니다. 동사는 cmdlet이 수행하는 작업을 설명합니다.|
+|verb|Windows PowerShell cmdlet 이름에서 하이픈 앞에 오는 단어입니다. 동사는 cmdlet이 수행하는 작업을 설명합니다.|
 |Windows PowerShell|IT 관리자가 시스템 관리 작업을 포괄적으로 제어하고 자동화할 수 있게 해주는 명령줄 셸 및 작업 기반 스크립팅 기술입니다.|
 |Windows PowerShell 명령|작업이 수행되게 하는 파이프라인의 요소입니다. Windows PowerShell 명령은 키보드에서 입력되거나 프로그래밍 방식으로 호출됩니다.|
 |Windows PowerShell 데이터 파일|파일 이름 확장명이 .psd1인 텍스트 파일입니다. Windows PowerShell은 모듈 매니페스트 데이터 저장, 스크립트 국제화를 위해 번역된 문자열 저장 등의 다양한 용도로 데이터 파일을 사용합니다.|

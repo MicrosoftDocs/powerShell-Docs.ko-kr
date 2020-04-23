@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: 소셜 미디어나 댓글을 통해 피드백 제공
 ms.openlocfilehash: 95e5db22b94151c3974189c30f1d4e580b47eeb5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71327884"
 ---
 # <a name="providing-feedback-via-social-media-or-comments"></a>소셜 미디어나 댓글을 통해 피드백 제공
@@ -28,7 +28,7 @@ PowerShell 갤러리에 있는 각 패키지의 페이지 왼쪽에는 Facebook,
 PowerShell 갤러리에서는 각 소셜 미디어 사이트에서 "공유"된 패키지를 확인하여 해당 패키지가 각 소셜 미디어 사이트에서 공유된 횟수를 표시합니다.
 이 경우 해당 패키지가 공유된 횟수만 표시되므로 다른 사용자들은 해당 횟수를 패키지의 "좋아요" 수로 해석하게 됩니다.
 
-## <a name="comments"></a>설명
+## <a name="comments"></a>주석
 
 > [!IMPORTANT]
 > Livefyre 댓글 처리는 타사 공급 업체가 제공하며 더 이상 지원되지 않습니다.

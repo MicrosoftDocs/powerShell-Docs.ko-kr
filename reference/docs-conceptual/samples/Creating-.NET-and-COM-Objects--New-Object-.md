@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: .NET 및 COM 개체 만들기(New-Object)
 ms.openlocfilehash: 6e98a159451bc7da4ba3b37eaeb813eb71590d2b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71325160"
 ---
 # <a name="creating-net-and-com-objects-new-object"></a>.NET 및 COM 개체 만들기(New-Object)
@@ -120,9 +120,9 @@ PS> $RemoteAppLog
 ## <a name="creating-com-objects-with-new-object"></a>New-Object를 사용하여 COM 개체 만들기
 **New-Object**를 사용하여 COM(구성 요소 개체 모델) 구성 요소로 작업할 수 있습니다. 구성 요소는 WSH(Windows 스크립트 호스트)에 포함된 다양한 라이브러리부터 대부분의 시스템에 설치되어 있는 Internet Explorer와 같은 ActiveX 애플리케이션에 이르기까지 다양합니다.
 
-**New-Object**는 .NET Framework 런타임 호출 가능 래퍼를 사용하여 COM 개체를 만들기 때문에 .NET Framework에서 COM 개체를 호출할 때와 동일한 제한 사항이 있습니다. COM 개체를 만들려면 사용하려는 COM 클래스의 *ProgId* 또는 프로그래밍 방식 식별자와 함께 **ComObject** 매개 변수를 지정해야 합니다. COM 사용의 제한 사항과 시스템에서 사용할 수 있는 ProgId 확인 방법에 대한 자세한 설명은 이 사용자 가이드의 범위를 벗어나지만 WSH와 같은 환경에서 잘 알려진 대부분의 개체는 Windows PowerShell 내에서 사용할 수 있습니다.
+**New-Object**는 .NET Framework 런타임 호출 가능 래퍼를 사용하여 COM 개체를 만들기 때문에 .NET Framework에서 COM 개체를 호출할 때와 동일한 제한 사항이 있습니다. COM 개체를 만들려면 사용하려는 COM 클래스의 **ProgId** 또는 프로그래밍 방식 식별자와 함께 *ComObject* 매개 변수를 지정해야 합니다. COM 사용의 제한 사항과 시스템에서 사용할 수 있는 ProgId 확인 방법에 대한 자세한 설명은 이 사용자 가이드의 범위를 벗어나지만 WSH와 같은 환경에서 잘 알려진 대부분의 개체는 Windows PowerShell 내에서 사용할 수 있습니다.
 
-다음 progid를 지정하여 WSH 개체를 만들 수 있습니다. **WScript.Shell**, **WScript.Network**, **Scripting.Dictionary**, **Scripting.FileSystemObject**. 이러한 개체를 만드는 명령은 다음과 같습니다.
+**WScript.Shell**, **WScript.Network**, **Scripting.Dictionary**, **Scripting.FileSystemObject** 등의 progid를 지정하여 WSH 개체를 만들 수 있습니다. 이러한 개체를 만드는 명령은 다음과 같습니다.
 
 ```powershell
 New-Object -ComObject WScript.Shell
@@ -155,7 +155,7 @@ CreateShortcut           Method                IDispatch CreateShortcut (str...
 ...
 ```
 
-**Get-Member**에는 파이프 대신 사용하여 **Get-Member**에 입력을 제공할 수 있는 선택적 **InputObject** 매개 변수가 있습니다. **Get-Member -InputObject $WshShell** 명령을 대신 사용한 경우 위와 동일한 출력이 표시됩니다. **InputObject**를 사용하는 경우 해당 인수가 단일 항목으로 처리됩니다. 즉, 변수에 여러 개체가 있는 경우 **Get-Member**는 개체 배열로 처리합니다. 예:
+**Get-Member**에는 파이프 대신 사용하여 **Get-Member**에 입력을 제공할 수 있는 선택적 **InputObject** 매개 변수가 있습니다. **Get-Member -InputObject $WshShell** 명령을 대신 사용한 경우 위와 동일한 출력이 표시됩니다. **InputObject**를 사용하는 경우 해당 인수가 단일 항목으로 처리됩니다. 즉, 변수에 여러 개체가 있는 경우 **Get-Member**는 개체 배열로 처리합니다. 다음은 그 예입니다.
 
 ```
 PS> $a = 1,2,"three"
@@ -263,7 +263,7 @@ Remove-Variable ie
 
 ## <a name="getting-warnings-about-net-framework-wrapped-com-objects"></a>.NET Framework-Wrapped COM 개체에 대한 경고 보기
 
-경우에 따라 COM 개체에는 **New-Object**가 사용하는 .NET Framework RCW(*런타임 호출 가능 래퍼*)가 포함되어 있을 수 있습니다. RCW의 동작이 일반적인 COM 개체와 다를 수 있기 때문에 **New-Object**에는 RCW 액세스에 대해 경고하는 **Strict** 매개 변수가 포함되어 있습니다. **Strict** 매개 변수를 지정한 다음 RCW를 사용하는 COM 개체를 만들면 다음과 같은 경고 메시지가 나타납니다.
+경우에 따라 COM 개체에는 *New-Object*가 사용하는 .NET Framework RCW(**런타임 호출 가능 래퍼**)가 포함되어 있을 수 있습니다. RCW의 동작이 일반적인 COM 개체와 다를 수 있기 때문에 **New-Object**에는 RCW 액세스에 대해 경고하는 **Strict** 매개 변수가 포함되어 있습니다. **Strict** 매개 변수를 지정한 다음 RCW를 사용하는 COM 개체를 만들면 다음과 같은 경고 메시지가 나타납니다.
 
 ```
 PS> $xl = New-Object -ComObject Excel.Application -Strict

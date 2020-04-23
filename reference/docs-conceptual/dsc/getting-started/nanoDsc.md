@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC on Nano Server 사용
 ms.openlocfilehash: fb826455c21833ae4c8dc2ecd731ffce6bf7eaba
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953860"
 ---
 # <a name="using-dsc-on-nano-server"></a>DSC on Nano Server 사용
 
-> 적용 대상: Windows Powershell 5.0
+> 적용 대상: Windows PowerShell 5.0
 
 **DSC on Nano Server**는 Windows Server 2016 미디어의 `NanoServer\Packages` 폴더에 있는 선택적 패키지입니다. 이 패키지는 **Microsoft-NanoServer-DSC-Package**를 **New-NanoServerImage** 함수의 **Packages** 매개 변수 값으로 지정하여 Nano Server에 대한 VHD를 만들 때 설치할 수 있습니다. 예를 들어 가상 컴퓨터에 대한 VHD를 만드는 경우 다음과 같은 명령을 사용합니다.
 
@@ -80,13 +80,13 @@ Nano Server는 처음 사용자용 Windows Server에 비해 제한된 일부 API
 
 - 올바르게 작동하는 리소스
 
-- **Archive**
-- **Environment**
-- **File**
+- **보관**
+- **환경**
+- **최근에 사용한 파일**
 - **Log**
 - **ProcessSet**
 - **Registry**
-- **Script**
+- **스크립트**
 - **WindowsPackageCab**
 - **WindowsProcess**
 - **WaitForAll**([노드 간 종속성 지정](../configurations/crossNodeDependencies.md) 참조)
@@ -97,17 +97,17 @@ Nano Server는 처음 사용자용 Windows Server에 비해 제한된 일부 API
 - **그룹**
 - **GroupSet**
 
-  **문제:** 특정 인스턴스를 두 번 호출하는 경우(동일한 구성을 두 번 실행) 위의 리소스가 실패합니다.
+  **문제:** 특정 인스턴스를 두 번 호출하는 경우(동일한 구성을 두 번 실행) 위 리소스가 실패합니다.
 
-- **Service**
+- **서비스**
 - **ServiceSet**
 
-  **문제:** 서비스 시작/중지(상태) 서비스에 대해서만 작동합니다. 시작 유형, 자격 증명, 설명 등과 같은 다른 서비스 특성을 변경하려고 하면 실패합니다. 발생하는 오류는 다음과 같습니다.
+  **문제:** 서비스 시작/중지(상태)에 대해서만 작동합니다. 시작 유형, 자격 증명, 설명 등과 같은 다른 서비스 특성을 변경하려고 하면 실패합니다. 발생하는 오류는 다음과 같습니다.
 
   *유형[management.managementobject]을 찾을 수 없습니다. 이 유형이 포함된 어셈블리가 로드되어 있는지 검증하세요.*
 
 - 작동하지 않는 리소스
-- **User**
+- **사용자**
 
 ## <a name="dsc-features-not-available-on-nano-server"></a>Nano Server에서 사용할 수 없는 DSC 기능
 

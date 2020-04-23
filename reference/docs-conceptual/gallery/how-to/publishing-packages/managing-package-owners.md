@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: 패키지 소유자 관리
 ms.openlocfilehash: 5cf26a7195ac446177cbb7f3a055e8e0a78569cc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328264"
 ---
 # <a name="managing-package-owners"></a>패키지 소유자 관리
@@ -34,7 +34,7 @@ PowerShell 갤러리에 패키지를 게시한 후 추가 사용자를 패키지
 5. 패키지의 소유자가 되도록 초대하는 메일이 새 공동 소유자에게 전송됩니다.
 6. 해당 사용자가 링크를 클릭하면 소유자인 다른 사용자를 제거하는 기능을 포함하여 패키지에 대한 모든 권한을 가진 전체 공동 소유자가 됩니다.
 
-**참고**: 새 소유자가 소유권을 확인하기 전에는 패키지의 소유자로 나열되지 ‘않습니다’. 
+**참고**: 새 소유자가 소유권을 확인하기 전에는 패키지의 소유자로 나열되지 *않습니다*.
 **소유자 관리** 페이지를 보고 있는 경우 현재 소유자에 "승인 보류 중" 항목이 표시됩니다.
 다른 소유자를 제거할 수 있는 것과 마찬가지로 해당 초대를 제거할 수 있습니다.
 이 초대 프로세스는 사용자가 다른 사용자를 패키지의 소유자로 거짓 추가하는 것을 방지합니다.

@@ -3,10 +3,10 @@ ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: 친숙한 명령 이름 사용
 ms.openlocfilehash: 30b33bc8739975c1a40e51c04a3ee4e426c199e7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030901"
 ---
 # <a name="using-familiar-command-names"></a>친숙한 명령 이름 사용
@@ -22,12 +22,12 @@ PowerShell은 대체 이름으로 명령을 참조하도록 별칭을 지원합�
 |||||
 |-|-|-|-|
 |cat|dir|mount|rm|
-|cd|echo|move|rmdir|
+|CD|echo|이동|rmdir|
 |chdir|erase|popd|sleep|
-|clear|h|ps|sort|
+|지우기|h|ps|sort|
 |cls|history|pushd|tee|
 |copy|kill|pwd|type|
-|del|lp|r|write|
+|del|lp|r|쓰기|
 |diff|ls|ren||
 
 `Get-Alias` cmdlet은 별칭과 연결된 네이티브 PowerShell 명령의 실제 이름을 표시합니다.
@@ -53,16 +53,16 @@ PowerShell 별칭은 명확성과 간결성 간에 균형을 유지하려고 합
 
 | Noun 또는 Verb | 약어 |
 |--------------|--------------|
-| get          | g            |
-| Set(영문)          | s            |
+| 가져오기          | g            |
+| 설정          | s            |
 | 항목         | i            |
 | 위치     | l            |
 | 명령      | cm           |
-| 별칭        | al           |
+| Alias        | al           |
 
 이러한 별칭은 축약 이름을 아는 경우 이해할 수 있습니다.
 
-| Cmdlet 이름    | 별칭 |
+| Cmdlet 이름    | Alias |
 |----------------|-------|
 | `Get-Item`     | gi    |
 | `Set-Item`     | si    |
@@ -86,7 +86,7 @@ Set-Alias -Name gcm -Value Get-Command
 ```
 
 내부적으로 PowerShell은 시작할 때 비슷한 명령을 사용하지만 이러한 별칭은 변경할 수 없습니다.
-이러한 명령 중 하나를 실행하려고 하면 별칭을 수정할 수 없다는 오류 메시지가 나타납니다. 예:
+이러한 명령 중 하나를 실행하려고 하면 별칭을 수정할 수 없다는 오류 메시지가 나타납니다. 다음은 그 예입니다.
 
 ```
 PS> Set-Alias -Name gi -Value Get-Item

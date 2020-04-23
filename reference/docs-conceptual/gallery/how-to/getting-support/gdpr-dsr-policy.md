@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: gallery,powershell,psgallery,GDPR
 title: PowerShell 갤러리 GDPR 준수
 ms.openlocfilehash: fb1191d8a1cd12d5994e41238c384eb504d0c261
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328324"
 ---
 # <a name="powershell-gallery-gdpr-compliance"></a>PowerShell 갤러리 GDPR 준수
@@ -15,7 +15,7 @@ ms.locfileid: "71328324"
 ## <a name="overview"></a>개요
 
 2018년 5월부터 유럽 개인 정보 보호법인 GDPR(General Data Protection Regulation)이 시행되었습니다.
-GDPR은 기업, 정부 기관, 비영리 단체, 그리고 EU(유럽 연합)의 사람들에게 물품과 서비스를 제공하거나 EU 거주자와 관련된 데이터를 수집하고 분석하는 기타 조직에 새로운 규칙을 적용합니다.
+GDPR은 회사, 정부 기관, 비영리 단체 및 기타 EU(유럽 연합)의 사용자에게 상품 및 서비스를 제공하거나 EU 거주자와 연결된 데이터를 수집하고 분석하는 조직에 새 규칙을 적용합니다.
 GDPR은 귀하가 어디에 있든 관계없이 적용됩니다.
 
 > [!NOTE]
@@ -41,7 +41,7 @@ PowerShell 갤러리 계정을 만든 사용자는 PowerShell 갤러리에 패�
 
 다음 절에서는 PowerShell 갤러리가 데이터 주체 요청(DSR)을 지원하는 방법과 PowerShell 갤러리에 저장된 정보를 내보내는 방법, 그리고 이 정보를 삭제하는 방법을 설명합니다.
 
-### <a name="email"></a>메일
+### <a name="email"></a>Email
 
 이메일 서신에는 다음 중 하나가 포함될 수 있습니다.
 
@@ -93,7 +93,7 @@ Save-Script Get-repository psgallery
 ## <a name="deleting-personal-data-from-the-powershell-gallery"></a>PowerShell 갤러리에서 개인 데이터 삭제
 
 PowerShell 갤러리 계정이나 PowerShell 갤러리에서 소유하고 있는 패키지를 삭제하려면 cgadmin@microsoft.com으로 "이 계정과 관련된 항목에 대한 GDPR 요청"이라는 제목으로 메일을 보내세요.
-메시지 본문에는 삭제할 정보가 표시됩니다. 예:
+메시지 본문에는 삭제할 정보가 표시됩니다. 다음은 그 예입니다.
 
 - 내 패키지의 "패키지 이름"에서 버전 x.y.z를 삭제하세요.
 - 내 패키지의 "패키지 이름"에서 버전을 모두 삭제하세요.

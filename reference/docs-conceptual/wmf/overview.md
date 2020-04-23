@@ -3,10 +3,10 @@ ms.date: 04/19/2019
 keywords: wmf,powershell,setup
 title: WMF(Windows Management Framework)
 ms.openlocfilehash: d581370fd602e03c86aa549eb8b273ff4d01b4e5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147913"
 ---
 # <a name="windows-management-framework"></a>Windows Management Framework
@@ -19,7 +19,7 @@ WMF 설치는 다음 기능을 추가 및/또는 업데이트합니다.
 - Windows PowerShell DSC(원하는 상태 구성)
 - Windows PowerShell ISE(통합 스크립트 환경)
 - WinRM(Windows Remote Management)
-- WMI(Windows Management Instrumentation)
+- Windows Management Instrumentation(WMI)
 - Windows PowerShell 웹 서비스(관리 OData IIS 확장)
 - 소프트웨어 인벤토리 로깅(SIL)
 - 서버 관리자 CIM 공급자
@@ -39,7 +39,7 @@ PowerShell 및 지정된 WMF의 다른 구성 요소에서 향상된 다양한 �
 | --------------------------------------- | ------------ | --------------------------- | ------------ | ------------ | ------------ |
 | Windows Server 2019                     | 함께 제공 |                             |              |              |              |
 | Windows Server 2016                     | 함께 제공 |                             |              |              |              |
-| Windows 10                              | 함께 제공 | 함께 제공                |              |              |              |
+| 윈도우 10                              | 함께 제공 | 함께 제공                |              |              |              |
 | Windows Server 2012 R2                  | 예          | 예                         | 함께 제공 |              |              |
 | Windows 8.1                             | 예          | 예                         | 함께 제공 |              |              |
 | Windows Server 2012                     | 예          | 예                         | 예          | 함께 제공 |              |

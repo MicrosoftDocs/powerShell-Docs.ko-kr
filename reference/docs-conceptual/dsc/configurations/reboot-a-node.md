@@ -3,10 +3,10 @@ ms.date: 01/17/2019
 keywords: dsc,powershell,configuration,setup
 title: 노드 다시 부팅
 ms.openlocfilehash: 22c63fab9b6646f522f8531b46a43a94ff883552
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954030"
 ---
 # <a name="reboot-a-node"></a>노드 다시 부팅
@@ -15,7 +15,7 @@ ms.locfileid: "71954030"
 > 이 토픽에서는 노드를 다시 부팅하는 방법을 설명합니다. 다시 부팅에 성공하기 위해 **ActionAfterReboot** 및 **RebootNodeIfNeeded** LCM 설정을 올바르게 구성해야 합니다.
 > 로컬 구성 관리자 설정에 대해 알라보려면 [로컬 구성 관리자 구성](../managing-nodes/metaConfig.md) 또는 [로컬 구성 관리자 구성(v4)](../managing-nodes/metaConfig4.md)을 참조하세요.
 
-노드는 `$global:DSCMachineStatus` 플래그를 사용하여 리소스 내에서 다시 부팅될 수 있습니다. `Set-TargetResource` 함수에서 이 플래그를 `1`로 설정하면 현재 리소스의 **설정** 메서드 이후에 LCM가 노드를 직접 다시 부팅하도록 강제합니다. 이 플래그를 사용하여 [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) DSC 리소스 모듈의 **PendingReboot** 리소스는 재부팅이 DSC 외부에서 보류 중인지 탐지합니다.
+노드는 `$global:DSCMachineStatus` 플래그를 사용하여 리소스 내에서 다시 부팅될 수 있습니다. `1` 함수에서 이 플래그를 `Set-TargetResource`로 설정하면 현재 리소스의 **설정** 메서드 이후에 LCM가 노드를 직접 다시 부팅하도록 강제합니다. 이 플래그를 사용하여 **ComputerManagementDsc** DSC 리소스 모듈의 [PendingReboot](https://github.com/PowerShell/ComputerManagementDsc) 리소스는 재부팅이 DSC 외부에서 보류 중인지 탐지합니다.
 
 [구성](configurations.md)은 노드를 다시 부팅해야 하는 단계를 수행할 수 있습니다. 다음과 같은 작업을 포함할 수 있습니다.
 
@@ -47,9 +47,9 @@ PendingReboot [String] #ResourceName
 
 ## <a name="properties"></a>속성
 
-| 속성 | 설명 |
+| 속성 | Description |
 | --- | --- |
-| 이름| 구성 내에서 리소스의 인스턴스마다 고유해야 하는 필수 매개 변수입니다.|
+| 속성| 구성 내에서 리소스의 인스턴스마다 고유해야 하는 필수 매개 변수입니다.|
 | SkipComponentBasedServicing | 구성 요소 기반 서비스 구성 요소에 의해 트리거되는 다시 부팅을 건너뜁니다. |
 | SkipWindowsUpdate | Windows 업데이트에 의해 트리거되는 다시 부팅을 건너뜁니다.|
 | SkipPendingFileRename | 보류 중인 파일 이름 바꾸기 다시 부팅을 건너뜁니다. |

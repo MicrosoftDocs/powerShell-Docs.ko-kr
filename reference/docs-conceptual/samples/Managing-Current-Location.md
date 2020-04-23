@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 현재 위치 관리
 ms.openlocfilehash: 42ab56759dec882d140f813c8614e578957722b3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030191"
 ---
 # <a name="managing-current-location"></a>현재 위치 관리
@@ -81,7 +81,7 @@ Path
 HKLM:\
 ```
 
-Set-Location을 입력하거나 Set-Location에 대한 기본 제공 Windows PowerShell 별칭(cd, chdir, sl)을 사용할 수 있습니다. 예:
+Set-Location을 입력하거나 Set-Location에 대한 기본 제공 Windows PowerShell 별칭(cd, chdir, sl)을 사용할 수 있습니다. 다음은 그 예입니다.
 
 ```powershell
 cd -Path C:\Windows

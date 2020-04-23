@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 개체 정렬
 ms.openlocfilehash: ed78e7e333f3468781c9cd96df2194fbdfebe753
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030776"
 ---
 # <a name="sorting-objects"></a>개체 정렬
@@ -124,7 +124,7 @@ LastWriteTime          CreationTime
 Sort-Object LastWriteTime, Name
 ```
 
-또한 기본 제공 별칭 `sort`를 통해 `Sort-Object`를 참조할 수 있습니다.
+또한 기본 제공 별칭 `Sort-Object`를 통해 `sort`를 참조할 수 있습니다.
 
 ```powershell
 sort LastWriteTime, Name

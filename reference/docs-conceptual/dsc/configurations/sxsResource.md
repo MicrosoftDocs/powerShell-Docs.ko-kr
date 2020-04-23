@@ -3,21 +3,21 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 특정 버전의 설치된 리소스 가져오기
 ms.openlocfilehash: 5ed81e11aa67eb6590d958647f48a33b1b5f1c0e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953990"
 ---
 # <a name="import-a-specific-version-of-an-installed-resource"></a>특정 버전의 설치된 리소스 가져오기
 
-> 적용 대상: Windows Powershell 5.0
+> 적용 대상: Windows PowerShell 5.0
 
 PowerShell 5.0에서 DSC 리소스의 개별 버전을 컴퓨터에 병렬로 설치할 수 있습니다. 리소스 모듈은 리소스의 개별 버전을 버전 명명된 폴더에 저장할 수 있습니다.
 
 ## <a name="installing-separate-resource-versions-side-by-side"></a>개별 리소스 버전을 병렬로 설치
 
-[Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet의 **MinimumVersion**, **MaximumVersion** 및 **RequiredVersion**를 사용하여 설치할 모듈 버전을 지정할 수 있습니다. 버전을 지정하지 않고 **Install-Module**을 호출하면 가장 최근 버전이 설치됩니다.
+**Install-Module** cmdlet의 **MinimumVersion**, **MaximumVersion** 및 [RequiredVersion](/powershell/module/PowershellGet/Install-Module)를 사용하여 설치할 모듈 버전을 지정할 수 있습니다. 버전을 지정하지 않고 **Install-Module**을 호출하면 가장 최근 버전이 설치됩니다.
 
 예를 들어 **xFailOverCluster** 모듈의 여러 버전이 있고, 각 버전에는 **xCluster** 리소스가 포함되어 있습니다. 버전 번호를 지정하지 않고 **Install-Module**을 호출하면 가장 최근 버전의 모듈이 설치됩니다.
 
@@ -74,7 +74,7 @@ configuration VersionTest
 }
 ```
 
->참고: Import-DscResource의 ModuleVersion 매개 변수는 PowerShell 4.0에서 사용할 수 없습니다. PowerShell 4.0에서는 모듈 사양 개체를 Import-DscResource의 ModuleName 매개 변수로 전달하여 모듈 버전을 지정할 수 있습니다. 모듈 사양 개체는 ModuleName 및 RequiredVersion 키가 포함된 해시 테이블입니다. 예:
+>참고: Import-DscResource의 ModuleVersion 매개 변수는 PowerShell 4.0에서 사용할 수 없습니다. PowerShell 4.0에서는 모듈 사양 개체를 Import-DscResource의 ModuleName 매개 변수로 전달하여 모듈 버전을 지정할 수 있습니다. 모듈 사양 개체는 ModuleName 및 RequiredVersion 키가 포함된 해시 테이블입니다. 다음은 그 예입니다.
 
 ```powershell
 configuration VersionTest

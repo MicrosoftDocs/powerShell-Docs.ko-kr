@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: 노드 간 종속성 지정
 ms.openlocfilehash: 62e553d894897ae1908745c2788b7b7b9cbe50ff
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954110"
 ---
 # <a name="specifying-cross-node-dependencies"></a>노드 간 종속성 지정
@@ -55,7 +55,7 @@ WaitForSome [String] #ResourceName
 
 모든 **WaitForXXXX**는 다음 구문 키를 공유합니다.
 
-|속성|  설명   |
+|속성|  Description   |
 |---------|---------------------|
 | RetryIntervalSec| 다시 시도할 때까지의 시간(초)입니다. 최소값은 1입니다.|
 | RetryCount| 최대 다시 시도 횟수입니다.|

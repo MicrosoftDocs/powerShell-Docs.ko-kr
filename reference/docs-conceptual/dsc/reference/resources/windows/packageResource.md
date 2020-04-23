@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC 패키지 리소스
 ms.openlocfilehash: efac07b4b051564cadd5aa1542a6afda6cd453ad
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953150"
 ---
 # <a name="dsc-package-resource"></a>DSC 패키지 리소스
@@ -35,9 +35,9 @@ Package [string] #ResourceName
 
 ## <a name="properties"></a>속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
-|이름 |특정 상태가 되게 할 패키지의 이름을 나타냅니다. |
+|속성 |특정 상태가 되게 할 패키지의 이름을 나타냅니다. |
 |경로 |패키지가 있는 경로 나타냅니다. |
 |ProductId |패키지를 고유하게 식별하는 제품 ID를 나타냅니다. |
 |인수 |제공된 대로 패키지에 전달할 인수 문자열을 나열합니다. |
@@ -47,7 +47,7 @@ Package [string] #ResourceName
 
 ## <a name="common-properties"></a>공용 속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
 |DependsOn |이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. |
 |Ensure |패키지가 설치되어 있는지 여부를 나타냅니다. 패키지가 설치되어 있지 않도록 하려면(또는 설치되어 있다면 패키지를 제거) 이 속성을 **Absent**로 설정합니다. 패키지가 설치되어 있도록 하려면 이 속성을 **Present**로 설정합니다. 기본값은 **Present**입니다. |

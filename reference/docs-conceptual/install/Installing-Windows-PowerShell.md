@@ -3,10 +3,10 @@ ms.date: 08/09/2017
 keywords: powershell,cmdlet,다운로드,설치,설정,windows 10, windows 8.1, windows 8.0,windows 7
 title: Windows PowerShell 설치
 ms.openlocfilehash: 345cde8012bece730e7217ed16be6175ad26bb28
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "62086479"
 ---
 # <a name="installing-windows-powershell"></a>Windows PowerShell 설치
@@ -26,18 +26,17 @@ Windows 버전에 따라 위치가 바뀌므로 때때로 Windows에서 PowerShe
 
 버전 | 위치
 -- | --
-Windows 10 | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell을 입력합니다.
-Windows 8.1, 8.0 | 시작 화면에서 PowerShell을 입력합니다.<br/>바탕 화면에 있는 경우 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell을 입력합니다.
-
-Windows 7 SP1 | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 검색 상자에 PowerShell을 입력합니다.
+윈도우 10 | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell 입력을 시작합니다.
+Windows 8.1, 8.0 | 시작 화면에서 PowerShell 입력을 시작합니다.<br/>바탕 화면에 있는 경우 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell 입력을 시작합니다.
+Windows 7 SP1 | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 검색 상자에서 PowerShell 입력을 시작합니다.
 
 ### <a name="for-ise"></a>ISE의 경우
 
 버전 | 위치
 -- | --
-Windows 10 | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 ISE를 입력합니다.
+윈도우 10 | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 ISE 입력을 시작합니다.
 Windows 8.1, 8.0 | 시작 화면에서 **PowerShell ISE**를 입력합니다.<br/>바탕 화면에 있는 경우 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 **PowerShell ISE**를 입력합니다.
-Windows 7 SP1 | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 검색 상자에 PowerShell을 입력합니다.
+Windows 7 SP1 | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 검색 상자에서 PowerShell 입력을 시작합니다.
 
 ## <a name="finding-powershell-in-windows-server-versions"></a>Windows Server 버전에서 PowerShell 찾기
 
@@ -53,7 +52,7 @@ GUI가 없는 Windows Server 버전은 이름이 **Core** 버전으로 지정되
 
 ### <a name="windows-server-desktop-editions"></a>Windows Server Desktop 버전
 
-모든 Desktop 버전에서는 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell을 입력합니다.
+모든 Desktop 버전에서는 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell 입력을 시작합니다.
 콘솔 및 ISE 옵션을 모두 이용할 수 있습니다.
 
 위 규칙에 대한 유일한 예외는 Windows Server 2008 R2 SP1의 ISE입니다. 이 경우에는 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 PowerShell ISE를 입력합니다.

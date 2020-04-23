@@ -4,10 +4,10 @@ ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: WMF 5.1의 알려진 문제
 ms.openlocfilehash: 8348f9d45dca32dcda2ef8baa75d586c8728d0a4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147953"
 ---
 # <a name="known-issues-in-wmf-51"></a>WMF 5.1의 알려진 문제

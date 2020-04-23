@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA에 대한 감사 및 보고
 ms.openlocfilehash: 2afefe83acecc1fc3643d49766120ffecc25378f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "70017794"
 ---
 # <a name="auditing-and-reporting-on-jea"></a>JEA에 대한 감사 및 보고
@@ -31,7 +31,7 @@ Permission    : CONTOSO\JEA_DNS_ADMINS AccessAllowed, CONTOSO\JEA_DNS_OPERATORS 
                 CONTOSO\JEA_DNS_AUDITORS AccessAllowed
 ```
 
-엔드포인트에 대한 유효 권한은 **Permission** 속성에 나열됩니다. 이러한 사용자는 JEA 엔드포인트에 연결할 수 있는 권한을 가집니다. 그러나 액세스 권한이 있는 역할과 명령은 엔드포인트를 등록하는 데 사용된 [세션 구성 파일](session-configurations.md)의 **RoleDefinitions** 속성에 의해 결정됩니다. **RoleDefinitions** 속성을 확장하여 등록된 JEA 엔드포인트의 역할 매핑을 평가할 수 있습니다.
+엔드포인트에 대한 유효 권한은 **Permission** 속성에 나열됩니다. 이러한 사용자는 JEA 엔드포인트에 연결할 수 있는 권한을 가집니다. 그러나 액세스 권한이 있는 역할과 명령은 엔드포인트를 등록하는 데 사용된 **세션 구성 파일**의 [RoleDefinitions](session-configurations.md) 속성에 의해 결정됩니다. **RoleDefinitions** 속성을 확장하여 등록된 JEA 엔드포인트의 역할 매핑을 평가할 수 있습니다.
 
 ```powershell
 # Get the desired session configuration
@@ -46,7 +46,7 @@ $jea.RoleDefinitions.GetEnumerator() | Select-Object Name, @{
 
 ## <a name="find-available-role-capabilities-on-the-machine"></a>컴퓨터에서 사용 가능한 역할 기능 찾기
 
-JEA는 PowerShell 모듈 내의 **RoleCapabilities** 폴더에 저장된 `.psrc` 파일에서 역할 기능을 가져옵니다. 다음 함수는 컴퓨터에서 사용할 수 있는 모든 역할 기능을 찾습니다.
+JEA는 PowerShell 모듈 내의 `.psrc`RoleCapabilities**폴더에 저장된** 파일에서 역할 기능을 가져옵니다. 다음 함수는 컴퓨터에서 사용할 수 있는 모든 역할 기능을 찾습니다.
 
 ```powershell
 function Find-LocalRoleCapability {
@@ -131,9 +131,9 @@ PS>CommandInvocation(Get-Service): "Get-Service"
 Running  Dns                DNS Server
 ```
 
-**CommandInvocation** 줄은 사용자가 실행하는 각 명령에 대해 작성됩니다. **ParameterBindings**는 명령과 함께 제공된 각 매개 변수와 값을 기록합니다. 이전 예제에서 매개 변수 **Name**이 `Get-Service` cmdlet에 대한 값 **Dns**와 함께 제공되었음을 알 수 있습니다.
+**CommandInvocation** 줄은 사용자가 실행하는 각 명령에 대해 작성됩니다. **ParameterBindings**는 명령과 함께 제공된 각 매개 변수와 값을 기록합니다. 이전 예제에서 매개 변수 **Name**이 **cmdlet에 대한 값**Dns`Get-Service`와 함께 제공되었음을 알 수 있습니다.
 
-또한 각 명령의 출력은 일반적으로 `Out-Default`로 **CommandInvocation**을 트리거합니다. `Out-Default`의 **InputObject**는 명령에서 반환되는 PowerShell 개체입니다. 해당 개체의 세부 정보가 몇 줄 아래에 출력되어 사용자가 보게 되는 내용과 매우 비슷한 내용을 표시합니다.
+또한 각 명령의 출력은 일반적으로 **로** CommandInvocation`Out-Default`을 트리거합니다. **의** InputObject`Out-Default`는 명령에서 반환되는 PowerShell 개체입니다. 해당 개체의 세부 정보가 몇 줄 아래에 출력되어 사용자가 보게 되는 내용과 매우 비슷한 내용을 표시합니다.
 
 ## <a name="see-also"></a>참고 항목
 

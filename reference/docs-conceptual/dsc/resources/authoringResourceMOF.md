@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: MOF를 사용하여 사용자 지정 DSC 리소스 작성
 ms.openlocfilehash: 24e9d15bcbe1eddd297daeb04e0713c443e52c38
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952900"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>MOF를 사용하여 사용자 지정 DSC 리소스 작성
@@ -129,7 +129,7 @@ function Get-TargetResource
 * 기존 웹 사이트 업데이트
 * 기존 웹 사이트 삭제
 
-다음 예제에서는 이것을 보여 줍니다.
+다음은 이에 대한 예입니다.
 
 ```powershell
 # The Set-TargetResource function is used to create, delete or configure a website on the target machine.

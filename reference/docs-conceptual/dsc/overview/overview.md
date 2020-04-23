@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: Windows PowerShell 필요한 상태 구성 개요
 ms.openlocfilehash: 5c4853cb059ca0cf063a9450f97230732bc56b10
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953640"
 ---
 # <a name="windows-powershell-desired-state-configuration-overview"></a>Windows PowerShell 필요한 상태 구성 개요

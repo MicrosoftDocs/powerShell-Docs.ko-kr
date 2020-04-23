@@ -4,17 +4,17 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: 분쟁 해결
 ms.openlocfilehash: 2376226c14ec1a8c2bf7c9328e29f79528d2aee9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328094"
 ---
 # <a name="dispute-resolution"></a>분쟁 해결
 
 이 문서는 커뮤니티 멤버가 다른 PowerShell 갤러리 게시자와 분쟁을 해결하는 데 도움이 되는 권장 분쟁 해결 프로세스입니다.
 
-## <a name="process"></a>프로세스
+## <a name="process"></a>Process
 
 1. 패키지 세부 정보 페이지에 있는 **소유자에게 문의** 링크를 사용하여 분쟁이 발생한 패키지의 소유자에게 문의합니다.
    친절하고 직접적인 방식으로 문제를 설명합니다.

@@ -3,10 +3,10 @@ ms.date: 08/14/2018
 keywords: powershell,cmdlet
 title: 원격 명령 실행
 ms.openlocfilehash: d6609deafd8dec4f34a8412439d87dacd20d46f1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030322"
 ---
 # <a name="running-remote-commands"></a>원격 명령 실행
@@ -118,7 +118,7 @@ $s = New-PSSession -ComputerName Server01, Server02
 Invoke-Command -Session $s {$h = Get-HotFix}
 ```
 
-이제 동일한 세션에서 다른 명령에 `$h` 변수의 데이터를 사용할 수 있습니다. 결과는 로컬 컴퓨터에 표시됩니다. 예:
+이제 동일한 세션에서 다른 명령에 `$h` 변수의 데이터를 사용할 수 있습니다. 결과는 로컬 컴퓨터에 표시됩니다. 다음은 그 예입니다.
 
 ```powershell
 Invoke-Command -Session $s {$h | where {$_.InstalledBy -ne "NTAUTHORITY\SYSTEM"}}

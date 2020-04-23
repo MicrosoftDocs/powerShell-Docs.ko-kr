@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: Linux용 DSC nxSshAuthorizedKeys 리소스
 ms.openlocfilehash: 6e008efcbff2e679650d0bc3d5b8b573f6ef83e0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953260"
 ---
 # <a name="dsc-for-linux-nxsshauthorizedkeys-resource"></a>Linux용 DSC nxSshAuthorizedKeys 리소스
@@ -28,15 +28,15 @@ nxAuthorizedKeys <string> #ResourceName
 
 ## <a name="properties"></a>속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
 |KeyComment |키에 대한 고유 설명입니다. 이 속성은 키를 고유하게 식별하는 데 사용됩니다. |
-|Username |ssh 권한 있는 키 파일을 관리할 사용자 이름입니다. 정의되지 않은 경우, 기본 사용자는 **root**입니다. |
+|사용자 이름 |ssh 권한 있는 키 파일을 관리할 사용자 이름입니다. 정의되지 않은 경우, 기본 사용자는 **root**입니다. |
 |키 |키의 내용입니다. **Ensure**가 **Present**로 설정되어 있을 경우 필수입니다.|
 
 ## <a name="common-properties"></a>공용 속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
 |DependsOn |이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. |
 |Ensure |키가 정의되어 있는지 여부를 지정합니다. 키가 사용자의 권한 있는 키 파일에 존재하지 않도록 하려면 이 속성을 **Absent**로 설정합니다. 키가 사용자의 권한 있는 키 파일에 정의되어 있도록 하려면 이 속성을 **Present**로 설정합니다. |

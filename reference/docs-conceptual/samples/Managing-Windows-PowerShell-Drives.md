@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 드라이브 관리
 ms.openlocfilehash: 5d1aba459caeaab2542e17e74534da6713b0faa9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "70215514"
 ---
 # <a name="managing-windows-powershell-drives"></a>Windows PowerShell 드라이브 관리
@@ -155,13 +155,13 @@ New-PsDrive cmdlet은 현재 Windows PowerShell 세션에만 새 드라이브를
 Remove-PSDrive -Name Office
 ```
 
-**cvkey:** Windows PowerShell 드라이브(**New-PSDrive** 항목에도 표시됨)를 삭제하려면 다음 명령을 사용합니다.
+**New-PSDrive** 항목에 표시된 **cvkey:** Windows PowerShell 드라이브를 삭제하려면 다음 명령을 사용합니다.
 
 ```powershell
 Remove-PSDrive -Name cvkey
 ```
 
-Windows PowerShell 드라이브는 쉽게 삭제할 수 있지만 드라이브 내에서는 삭제할 수 없습니다. 예:
+Windows PowerShell 드라이브는 쉽게 삭제할 수 있지만 드라이브 내에서는 삭제할 수 없습니다. 다음은 그 예입니다.
 
 ```
 PS> cd office:

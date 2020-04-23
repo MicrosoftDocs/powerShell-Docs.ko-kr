@@ -4,10 +4,10 @@ keywords: powershell,cmdlet
 title: 실행 중인 프로세스에서 PowerShell 명령 디코딩
 author: randomnote1
 ms.openlocfilehash: a6c01d8edf67aba6c47350a97cc0ceec4801ad29
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "66470974"
 ---
 # <a name="decode-a-powershell-command-from-a-running-process"></a>실행 중인 프로세스에서 PowerShell 명령 디코딩
@@ -33,7 +33,7 @@ powershell.exe -Command {
 
 ## <a name="view-the-process"></a>프로세스 보기
 
-PowerShell이 실행 중인 명령의 본문은 [Win32_Process][] 클래스의 **CommandLine** 속성에 저장됩니다. 명령이 인코딩된 명령인 경우 **CommandLine** 속성에는 문자열 "EncodedCommand"가 포함됩니다. 이 정보를 사용하면 다음 프로세스를 통해 인코딩된 명령의 난독 처리를 제거할 수 있습니다.
+PowerShell이 실행 중인 명령의 본문은 **Win32_Process** 클래스의 [Win32_Process][] 속성에 저장됩니다. 명령이 인코딩된 명령인 경우 **CommandLine** 속성에는 문자열 "EncodedCommand"가 포함됩니다. 이 정보를 사용하면 다음 프로세스를 통해 인코딩된 명령의 난독 처리를 제거할 수 있습니다.
 
 관리자 권한으로 PowerShell을 시작합니다. PowerShell은 관리자 권한으로 실행 중이어야 합니다. 그렇지 않으면 실행 프로세스를 쿼리할 때 결과가 반환되지 않습니다.
 

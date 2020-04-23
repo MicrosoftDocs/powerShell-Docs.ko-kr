@@ -4,10 +4,10 @@ keywords: dsc,powershell,configuration,setup
 description: 대상 노드에 있는 로컬 그룹을 관리하는 메커니즘을 제공합니다.
 title: DSC GroupSet 리소스
 ms.openlocfilehash: d36274741b2c96a0852f384ccf5d187ac8d27131
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953180"
 ---
 # <a name="dsc-groupset-resource"></a>DSC GroupSet 리소스
@@ -37,18 +37,18 @@ Group [string] #ResourceName
 
 ## <a name="properties"></a>속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
 |GroupName |상태를 확인하려는 그룹의 이름입니다. |
 |구성원 |현재 그룹 구성원 자격을 지정된 구성원으로 바꾸려면 이 속성을 사용합니다. 이 속성의 값은 `Domain\UserName` 형식의 문자열 배열입니다. 구성에서 이 속성을 설정하는 경우 **MembersToExclude** 또는 **MembersToInclude** 속성을 사용하지 마세요. 사용할 경우 오류가 발생합니다. |
-|설명 |그룹에 대한 설명입니다. |
+|Description |그룹에 대한 설명입니다. |
 |MembersToInclude |그룹의 기존 구성원 자격에 구성원을 추가하려면 이 속성을 사용합니다. 이 속성의 값은 `Domain\UserName` 형식의 문자열 배열입니다. 구성에서 이 속성을 설정하는 경우 **Members** 속성을 사용하지 마세요. 사용할 경우 오류가 발생합니다. |
 |MembersToExclude |그룹의 기존 구성원 자격에서 구성원을 제거하려면 이 속성을 사용합니다. 이 속성의 값은 `Domain\UserName` 형식의 문자열 배열입니다. 구성에서 이 속성을 설정하는 경우 **Members** 속성을 사용하지 마세요. 사용할 경우 오류가 발생합니다. |
 |자격 증명 |원격 리소스에 액세스하는 데 필요한 자격 증명입니다. 이 계정에는 로컬이 아닌 모든 계정을 그룹에 추가할 수 있는 Active Directory 사용 권한이 있어야 합니다. 그렇지 않으면 오류가 발생합니다. |
 
 ## <a name="common-properties"></a>공용 속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
 |DependsOn |이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. |
 |Ensure |그룹이 있는지 여부를 나타냅니다. 그룹이 존재하지 않도록 하려면 이 속성을 **Absent**로 설정합니다. **Present**로 설정하면 그룹이 존재합니다. 기본값은 **Present**입니다. |

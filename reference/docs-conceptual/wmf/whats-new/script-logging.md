@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 title: 스크립트 추적 및 로깅
 ms.openlocfilehash: 6b7e5022cb4c974da5ddb3d670b5808dc9fb7bdc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147803"
 ---
 # <a name="script-tracing-and-logging"></a>스크립트 추적 및 로깅
@@ -19,9 +19,9 @@ PowerShell에는 cmdlet의 호출을 기록하는 **LogPipelineExecutionDetails*
 
 | 채널 |                               작동                               |
 | ------- | ----------------------------------------------------------------------- |
-| 수준   | Verbose                                                                 |
-| Opcode  | 만들기                                                                  |
-| 작업    | CommandStart                                                            |
+| Level   | 자세히                                                                 |
+| Opcode  | 생성                                                                  |
+| Task    | CommandStart                                                            |
 | 키워드 | Runspace                                                                |
 | EventId | Engine_ScriptBlockCompiled(0x1008 = 4104)                              |
 | 메시지 | Scriptblock 텍스트를 만드는 중(%1/%2): </br> %3 </br> ScriptBlock ID: %4 |
@@ -33,9 +33,9 @@ PowerShell에는 cmdlet의 호출을 기록하는 **LogPipelineExecutionDetails*
 
 | 채널 |                                 작동                                |
 | ------- | -------------------------------------------------------------------------- |
-| 수준   | Verbose                                                                    |
+| Level   | 자세히                                                                    |
 | Opcode  | 열기/닫기                                                               |
-| 작업    | CommandStart/CommandStop                                                 |
+| Task    | CommandStart/CommandStop                                                 |
 | 키워드 | Runspace                                                                   |
 | EventId | ScriptBlock\_Invoke\_Start\_Detail(0x1009 = 4105) / </br> ScriptBlock\_Invoke\_Complete\_Detail(0x100A = 4106) |
 | 메시지 | ScriptBlock ID 호출을 시작/완료했습니다. %1 </br> Runspace ID: %2 |

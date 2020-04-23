@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: PowerShell 5.0의 새로운 기능
 ms.openlocfilehash: c9a3a360d0143d4b384cec226c36fe6565eb6040
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "62085918"
 ---
 # <a name="whats-new-with-powershell-50"></a>PowerShell 5.0의 새로운 기능
@@ -16,7 +16,7 @@ Windows PowerShell 5.0은 이전 버전과 호환됩니다. Windows PowerShell 4
 
 Windows Server® 2016 및 Windows®10에서는 Windows PowerShell 5.0이 기본적으로 설치됩니다. Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Windows PowerShell 5.0을 설치하려면 [Windows Management Framework 5.0 Preview](https://go.microsoft.com/fwlink/?linkid=830436)를 다운로드하여 설치합니다. Windows Management Framework 5.0을 설치하기 전에 다운로드 정보를 확인하고 모든 시스템 요구 사항을 충족해야 합니다.
 
-## <a name="in-this-topic"></a>이 항목의 내용
+## <a name="in-this-topic"></a>항목 내용
 
 - [PowerShell 5.0의 새로운 기능](What-s-New-in-Windows-PowerShell-50.md)
 

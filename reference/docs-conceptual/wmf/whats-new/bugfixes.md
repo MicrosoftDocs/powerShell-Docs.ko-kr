@@ -4,10 +4,10 @@ ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: WMF 5.1의 버그 수정
 ms.openlocfilehash: 8edf295eb6304dc04de2fa5d3792b1c2fc4b01f3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147853"
 ---
 # <a name="bug-fixes-in-wmf-51"></a>WMF 5.1의 버그 수정
@@ -18,7 +18,7 @@ WMF 5.1에서는 다음과 같은 주목할 만한 버그가 수정되었습니�
 
 ### <a name="module-auto-discovery-fully-honors-psmodulepath"></a>모듈 자동 검색에서 완전히 적용함 PSModulePath
 
-모듈 자동 검색(명령을 호출할 때 명시적 Import-Module 없이 모듈을 자동으로 로드)이 WMF 3에 도입되었습니다. 도입될 때 PowerShell에서는 `$env:PSModulePath`를 사용하기 전에 `$PSHome\Modules`에 있는 명령을 확인했습니다.
+모듈 자동 검색(명령을 호출할 때 명시적 Import-Module 없이 모듈을 자동으로 로드)이 WMF 3에 도입되었습니다. 도입될 때 PowerShell에서는 `$PSHome\Modules`를 사용하기 전에 `$env:PSModulePath`에 있는 명령을 확인했습니다.
 
 WMF5.1에서는 `$env:PSModulePath`를 완전히 적용하도록 이 동작을 변경합니다. 따라서 PowerShell에서 제공하는 명령(예: `Get-ChildItem`)을 정의하는 사용자 작업 모듈이 자동으로 로드되고 기본 제공 명령을 올바로 재정의할 수 있습니다.
 
@@ -53,7 +53,7 @@ $obj.SendKeys([char]173)
 
 #### <a name="enumerable-com-objects-not-always-handled-correctly"></a>열거 가능 COM 개체가 올바로 처리되지 않을 수도 있음
 
-PowerShell에서는 대부분의 열거 가능 개체를 정상적으로 열거하지만 WMF 5.0에 도입된 회귀로 인해 IEnumerable을 구현하는 COM 개체가 열거되지 못했습니다. 예:
+PowerShell에서는 대부분의 열거 가능 개체를 정상적으로 열거하지만 WMF 5.0에 도입된 회귀로 인해 IEnumerable을 구현하는 COM 개체가 열거되지 못했습니다. 다음은 그 예입니다.
 
 ```powershell
 function Get-COMDictionary

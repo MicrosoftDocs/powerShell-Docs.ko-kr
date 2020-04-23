@@ -3,10 +3,10 @@ ms.date: 10/13/2017
 keywords: dsc,powershell,configuration,setup
 title: 엔지니어를 위한 필요한 상태 구성 개요
 ms.openlocfilehash: 0e599c2218cd2df29dbd0529006be5e1ef17ce5f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953800"
 ---
 # <a name="desired-state-configuration-overview-for-engineers"></a>엔지니어를 위한 필요한 상태 구성 개요

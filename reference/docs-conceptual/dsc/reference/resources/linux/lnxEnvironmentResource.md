@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: Linux nxEnvironment 리소스용 DSC
 ms.openlocfilehash: 55c1b2402e23c1042ed48b40c1084aa63c515b36
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953230"
 ---
 # <a name="dsc-for-linux-nxenvironment-resource"></a>Linux nxEnvironment 리소스용 DSC
@@ -28,15 +28,15 @@ nxEnvironment <string> #ResourceName
 
 ## <a name="properties"></a>속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
-|이름 |특정 상태를 확인하려는 환경 변수의 이름을 나타냅니다. |
-|Value |환경 변수에 할당할 값입니다. |
-|경로 |구성 중인 환경 변수를 정의합니다. 변수가 **Path** 변수이면 이 속성을 `$true`로 설정하고, 그렇지 않으면 `$false`로 설정합니다. 기본값은 `$false`입니다. 구성되고 있는 변수가 **Path** 변수라면, **Value** 속성을 통해 제공된 값은 기존 값에 추가됩니다. |
+|속성 |특정 상태를 확인하려는 환경 변수의 이름을 나타냅니다. |
+|값 |환경 변수에 할당할 값입니다. |
+|경로 |구성 중인 환경 변수를 정의합니다. 변수가 `$true`Path**변수이면 이 속성을**로 설정하고, 그렇지 않으면 `$false`로 설정합니다. 기본값은 `$false`입니다. 구성되고 있는 변수가 **Path** 변수라면, **Value** 속성을 통해 제공된 값은 기존 값에 추가됩니다. |
 
 ## <a name="common-properties"></a>공용 속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
 |DependsOn |이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. |
 |Ensure |해당 변수가 존재하는지를 확인할지 여부를 결정합니다. 변수가 존재하도록 하려면 이 속성을 **Present**로 설정합니다. 변수가 존재하지 않도록 하려면 이 속성을 **Absent**로 설정합니다. 기본값은 **Present**입니다. |

@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 title: 새로 제공되거나 업데이트된 cmdlet
 ms.openlocfilehash: ffd5db2d4fc9bf8f67ef5e352633ad3209f72c87
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147593"
 ---
 # <a name="new-and-updated-cmdlets"></a>새로 제공되거나 업데이트된 cmdlet
@@ -51,7 +51,7 @@ CMS 암호화 표준은 공개 키 암호화를 구현하는데, 여기서는 �
 - [Protect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/Protect-CmsMessage)
 - [Unprotect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/unprotect-CmsMessage)
 
-PowerShell에서 인증서가 데이터 암호화 인증서로 식별되려면 고유 키 사용 식별자(EKU)(예: ‘코드 서명' 또는 ‘암호화된 메일’)가 필요합니다. 인증서 공급자에서 문서 암호화 인증서를 보려면 `Get-ChildItem`의 **DocumentEncryptionCert** 동적 매개 변수를 사용하면 됩니다.
+PowerShell에서 인증서가 데이터 암호화 인증서로 식별되려면 고유 키 사용 식별자(EKU)(예: ‘코드 서명' 또는 ‘암호화된 메일’)가 필요합니다. 인증서 공급자에서 문서 암호화 인증서를 보려면 **의** DocumentEncryptionCert`Get-ChildItem` 동적 매개 변수를 사용하면 됩니다.
 
 ```powershell
 Get-ChildItem Cert:\CurrentUser -DocumentEncryptionCert -Recurse
@@ -138,7 +138,7 @@ e19d6ea5-3cc2-4db9-8095-0cdaed5a703d
 
 ## <a name="nonewline-parameter"></a>NoNewLine 매개 변수
 
-이제 `Out-File`, `Add-Content` 및 `Set-Content`는 출력 뒤에 오는 새 줄을 생략하는 새로운 **NoNewline** 스위치를 제공합니다. 예:
+이제 `Out-File`, `Add-Content` 및 `Set-Content`는 출력 뒤에 오는 새 줄을 생략하는 새로운 **NoNewline** 스위치를 제공합니다. 다음은 그 예입니다.
 
 ```powershell
 "This is " | Out-File -FilePath Example.txt -NoNewline

@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC WaitForAll 리소스
 ms.openlocfilehash: 1bdaa63812766cfe5ec0778ef07689109683b994
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953020"
 ---
 # <a name="dsc-waitforall-resource"></a>DSC WaitForAll 리소스
@@ -37,7 +37,7 @@ WaitForAll [string] #ResourceName
 
 ## <a name="properties"></a>속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
 |ResourceName |사용할 리소스 이름입니다. 이 리소스가 다른 구성에 속하면 `[ResourceType]ResourceName::[ConfigurationName]::[ConfigurationName]`으로 이름을 지정합니다. |
 |NodeName |사용할 리소스의 대상 노드입니다. |
@@ -47,7 +47,7 @@ WaitForAll [string] #ResourceName
 
 ## <a name="common-properties"></a>공용 속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
 |DependsOn |이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. |
 |PsDscRunAsCredential |전체 리소스를 실행하기 위한 자격 증명을 설정합니다. |

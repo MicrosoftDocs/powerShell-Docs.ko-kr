@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: PowerShell 4.0에서 LCM 구성
 ms.openlocfilehash: 747b15c483c79a7ecbb62214ef5a59f8dc137bd4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953830"
 ---
 # <a name="configuring-the-lcm-in-powershell-40"></a>PowerShell 4.0에서 LCM 구성
@@ -26,7 +26,7 @@ ms.locfileid: "71953830"
 - **AllowModuleOverwrite**: 구성 서비스에서 다운로드한 새 구성이 대상 노드에 있는 이전 구성을 덮어쓰도록 허용되는지 여부를 제어합니다. 가능한 값은 True와 False입니다.
 - **CertificateID**: 구성으로 전달된 자격 증명을 보호하는 데 사용되는 인증서의 지문입니다. 자세한 내용은 [Want to secure credentials in Windows PowerShell Desired State Configuration?(Windows PowerShell 필요한 상태 구성의 자격 증명 보호가 필요하세요?)](https://blogs.msdn.microsoft.com/powershell/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration/)을 참조하세요.
 - **ConfigurationID**: 풀 서비스에서 특정 구성 파일을 가져오는 데 사용되는 GUID를 나타냅니다. 이 GUID는 올바른 구성 파일에 액세스하도록 해줍니다.
-- **ConfigurationMode**: 로컬 구성 관리자가 실제로 구성을 대상 노드에 적용하는 방법을 지정합니다. 이 속성에 가능한 값은 다음과 같습니다.
+- **ConfigurationMode**: 로컬 구성 관리자가 실제로 구성을 대상 노드에 적용하는 방법을 지정합니다. 사용되는 값은 다음과 같습니다.
   - **ApplyOnly**: 이 옵션을 사용하면 새 구성을 대상 노드에 직접 전송하여 새 구성이 검색되지 않은 경우 또는 풀 서비스에 연결하고 풀 서비스에서 확인하면 DSC에서 새 구성을 검색하는 경우, DSC가 구성을 적용하는 작업만을 수행합니다. 대상 노드의 구성이 변경되지 않는 경우 아무 작업도 수행되지 않습니다.
   - **ApplyAndMonitor**: 이 옵션(기본값)을 사용하면 대상 노드에 직접 전송했든지 아니면 풀 서비스에서 검색되었든지 관계없이 DSC에서 모든 새 구성을 적용합니다. 그 후 대상 노드의 구성이 구성 파일과 달라지면, DSC에서 로그 불일치를 보고합니다. DSC 로깅에 대한 자세한 내용은 [Using Event Logs to Diagnose Errors in Desired State Configuration(이벤트 로그를 사용하여 필요한 상태 구성에 있는 오류 진단)](https://blogs.msdn.com/b/powershell/archive/2014/01/03/using-event-logs-to-diagnose-errors-in-desired-state-configuration.aspx)을 참조하세요.
   - **ApplyAndAutoCorrect**: 이 옵션을 사용하면 작업자가 대상 노드에 직접 전송했든지, 아니면 풀 서비스에서 검색되었든지 관계없이 DSC에서 모든 새 구성을 적용합니다. 그 후 대상 노드의 구성이 구성 파일과 달라지면, DSC에서 로그 불일치를 보고한 다음, 구성 파일에 따라 가져올 대상 노드 구성에 대한 조정을 시도합니다.

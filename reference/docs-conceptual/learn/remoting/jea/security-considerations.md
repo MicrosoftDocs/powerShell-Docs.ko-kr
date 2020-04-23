@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA 보안 고려 사항
 ms.openlocfilehash: befc24fec368c4f6d60477daf63bf17e9431133e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "70017774"
 ---
 # <a name="jea-security-considerations"></a>JEA 보안 고려 사항
@@ -31,9 +31,9 @@ JEA를 사용하면 컴퓨터의 영구 관리자 수를 줄여 보안 상태를
 
 |        컴퓨터 유형         | 가상 계정 그룹 구성 |                   로컬 사용자 컨텍스트                    | 네트워크 사용자 컨텍스트 |
 | ---------------------------- | ----------------------------------- | ------------------------------------------------------- | -------------------- |
-| 도메인 컨트롤러            | Default                             | 도메인 사용자, '*DOMAIN*\Domain Admins'의 구성원         | 컴퓨터 계정     |
+| 도메인 컨트롤러            | 기본값                             | 도메인 사용자, '*DOMAIN*\Domain Admins'의 구성원         | 컴퓨터 계정     |
 | 도메인 컨트롤러            | 도메인 그룹 A 및 B               | 도메인 사용자, '*DOMAIN*\A', '*DOMAIN*\B'의 구성원       | 컴퓨터 계정     |
-| 구성원 서버 또는 워크스테이션 | Default                             | 로컬 사용자, '*BUILTIN*\Administrators'의 구성원        | 컴퓨터 계정     |
+| 구성원 서버 또는 워크스테이션 | 기본값                             | 로컬 사용자, '*BUILTIN*\Administrators'의 구성원        | 컴퓨터 계정     |
 | 구성원 서버 또는 워크스테이션 | 로컬 그룹 C 및 D                | 로컬 사용자, '*COMPUTER*\C' 및 '*COMPUTER*\D'의 구성원 | 컴퓨터 계정     |
 
 보안 감사 이벤트 및 애플리케이션 이벤트 로그를 보면 각 JEA 사용자 세션에 고유 가상 계정이 있음을 알 수 있습니다. 이 고유한 계정은 JEA 엔드포인트에서 명령을 실행한 원래 사용자까지 거슬러 올라가 추적하는 데 도움이 됩니다. 가상 계정 이름은 `WinRM Virtual Users\WinRM_VA_<ACCOUNTNUMBER>_<DOMAIN>_<sAMAccountName>` 형식을 따릅니다. 예를 들어 도메인 **Contoso**의 사용자 **Alice**가 JEA 엔드포인트에서 서비스를 다시 시작하면 모든 서비스 제어 관리자 이벤트와 연결된 사용자 이름은 `WinRM Virtual Users\WinRM_VA_1_contoso_alice`가 됩니다.

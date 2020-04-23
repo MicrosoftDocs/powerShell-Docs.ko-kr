@@ -3,10 +3,10 @@ ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: 변수를 사용하여 개체 저장
 ms.openlocfilehash: 2d20d84e48d3f68cab5c1ffa05d689b46415ebc8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030360"
 ---
 # <a name="using-variables-to-store-objects"></a>변수를 사용하여 개체 저장
@@ -40,7 +40,7 @@ Path
 C:\temp
 ```
 
-`Get-Member`를 사용하여 변수의 내용에 대한 정보를 표시할 수 있습니다. `Get-Member`는 `Get-Location`의 출력과 마찬가지로 `$loc`가 **PathInfo** 개체임을 보여 줍니다.
+`Get-Member`를 사용하여 변수의 내용에 대한 정보를 표시할 수 있습니다. `Get-Member`는 `$loc`의 출력과 마찬가지로 **가** PathInfo`Get-Location` 개체임을 보여 줍니다.
 
 ```powershell
 PS> $loc | Get-Member -MemberType Property
