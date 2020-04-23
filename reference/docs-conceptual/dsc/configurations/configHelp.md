@@ -3,25 +3,25 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: DSC 구성에 대한 도움말 작성
 ms.openlocfilehash: 498ec0f594ed3229e097903c4ea2ae34d3da03a2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954140"
 ---
-# <a name="writing-help-for-dsc-configurations"></a><span data-ttu-id="55b5f-103">DSC 구성에 대한 도움말 작성</span><span class="sxs-lookup"><span data-stu-id="55b5f-103">Writing help for DSC configurations</span></span>
+# <a name="writing-help-for-dsc-configurations"></a><span data-ttu-id="8bde6-103">DSC 구성에 대한 도움말 작성</span><span class="sxs-lookup"><span data-stu-id="8bde6-103">Writing help for DSC configurations</span></span>
 
-><span data-ttu-id="55b5f-104">적용 대상: Windows Powershell 5.0</span><span class="sxs-lookup"><span data-stu-id="55b5f-104">Applies To: Windows PowerShell 5.0</span></span>
+><span data-ttu-id="8bde6-104">적용 대상: Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="8bde6-104">Applies To: Windows PowerShell 5.0</span></span>
 
-<span data-ttu-id="55b5f-105">DSC 구성에 설명 기반 도움말을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="55b5f-105">You can use comment-based help in DSC configurations.</span></span> <span data-ttu-id="55b5f-106">사용자는 `-?`가 포함된 **구성**을 호출하거나 [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet을 사용하여 도움말에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="55b5f-106">Users can access the help by calling the **Configuration** with `-?`, or by using the [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet.</span></span> <span data-ttu-id="55b5f-107">`Configuration` 키워드 바로 위에 주석 기반 도움말을 배치합니다.</span><span class="sxs-lookup"><span data-stu-id="55b5f-107">Place your Comment-based help directly above the `Configuration` keyword.</span></span>
-<span data-ttu-id="55b5f-108">매개 변수 선언 바로 위에 주석 블록과 인라인으로 매개 변수 도움말을 배치하거나 둘 다 아래 예제와 같이 배치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="55b5f-108">You can place parameter help in-line with your comment block, directly above the parameter declaration, or both as in the example below.</span></span>
+<span data-ttu-id="8bde6-105">DSC 구성에 설명 기반 도움말을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8bde6-105">You can use comment-based help in DSC configurations.</span></span> <span data-ttu-id="8bde6-106">사용자는 **가 포함된** 구성`-?`을 호출하거나 [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet을 사용하여 도움말에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8bde6-106">Users can access the help by calling the **Configuration** with `-?`, or by using the [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet.</span></span> <span data-ttu-id="8bde6-107">`Configuration` 키워드 바로 위에 주석 기반 도움말을 배치합니다.</span><span class="sxs-lookup"><span data-stu-id="8bde6-107">Place your Comment-based help directly above the `Configuration` keyword.</span></span>
+<span data-ttu-id="8bde6-108">매개 변수 선언 바로 위에 주석 블록과 인라인으로 매개 변수 도움말을 배치하거나 둘 다 아래 예제와 같이 배치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8bde6-108">You can place parameter help in-line with your comment block, directly above the parameter declaration, or both as in the example below.</span></span>
 
-<span data-ttu-id="55b5f-109">PowerShell 설명 기반 도움말에 대한 자세한 내용은 [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="55b5f-109">For more information about PowerShell comment-based help, see [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help).</span></span>
+<span data-ttu-id="8bde6-109">PowerShell 설명 기반 도움말에 대한 자세한 내용은 [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8bde6-109">For more information about PowerShell comment-based help, see [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="55b5f-110">VSCode 및 ISE 같은 PowerShell 개발 환경에도 주석 블록 템플릿을 자동으로 삽입할 수 있는 코드 조각이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="55b5f-110">PowerShell development environments, like VSCode and the ISE, also have snippets to allow you to automatically insert comment block templates.</span></span>
+> <span data-ttu-id="8bde6-110">VSCode 및 ISE 같은 PowerShell 개발 환경에도 주석 블록 템플릿을 자동으로 삽입할 수 있는 코드 조각이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8bde6-110">PowerShell development environments, like VSCode and the ISE, also have snippets to allow you to automatically insert comment block templates.</span></span>
 
-<span data-ttu-id="55b5f-111">다음 예제에서는 구성 및 각 구성에 대한 설명 기반 도움말을 포함하는 스크립트를 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="55b5f-111">The following example shows a script that contains a configuration and comment-based help for it.</span></span> <span data-ttu-id="55b5f-112">이 예제에서는 매개 변수를 사용하는 구성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="55b5f-112">This example shows a Configuration with parameters.</span></span> <span data-ttu-id="55b5f-113">구성에서 매개 변수를 사용하는 방법에 대한 자세한 내용은 [구성에 매개 변수 추가](add-parameters-to-a-configuration.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="55b5f-113">To learn more about using parameters in your Configurations, see [Add Parameters to your Configurations](add-parameters-to-a-configuration.md).</span></span>
+<span data-ttu-id="8bde6-111">다음 예제에서는 구성 및 각 구성에 대한 설명 기반 도움말을 포함하는 스크립트를 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="8bde6-111">The following example shows a script that contains a configuration and comment-based help for it.</span></span> <span data-ttu-id="8bde6-112">이 예제에서는 매개 변수를 사용하는 구성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8bde6-112">This example shows a Configuration with parameters.</span></span> <span data-ttu-id="8bde6-113">구성에서 매개 변수를 사용하는 방법에 대한 자세한 내용은 [구성에 매개 변수 추가](add-parameters-to-a-configuration.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8bde6-113">To learn more about using parameters in your Configurations, see [Add Parameters to your Configurations](add-parameters-to-a-configuration.md).</span></span>
 
 ```powershell
 <#
@@ -75,9 +75,9 @@ configuration HelpSample1
 }
 ```
 
-## <a name="viewing-configuration-help"></a><span data-ttu-id="55b5f-114">구성 도움말 보기</span><span class="sxs-lookup"><span data-stu-id="55b5f-114">Viewing configuration help</span></span>
+## <a name="viewing-configuration-help"></a><span data-ttu-id="8bde6-114">구성 도움말 보기</span><span class="sxs-lookup"><span data-stu-id="8bde6-114">Viewing configuration help</span></span>
 
-<span data-ttu-id="55b5f-115">구성에 대한 도움말을 보려면 함수의 이름과 함께 `Get-Help` cmdlet을 사용하거나 함수의 이름 뒤에 `-?`를 붙여 입력하세요.</span><span class="sxs-lookup"><span data-stu-id="55b5f-115">To view the help for a configuration, use the `Get-Help` cmdlet with the name of the function, or type the name of the function followed by `-?`.</span></span> <span data-ttu-id="55b5f-116">다음은 `Get-Help`로 전달된 이전 구성의 출력입니다.</span><span class="sxs-lookup"><span data-stu-id="55b5f-116">The following is the output of the previous Configuration passed to `Get-Help`.</span></span>
+<span data-ttu-id="8bde6-115">구성에 대한 도움말을 보려면 함수의 이름과 함께 `Get-Help` cmdlet을 사용하거나 함수의 이름 뒤에 `-?`를 붙여 입력하세요.</span><span class="sxs-lookup"><span data-stu-id="8bde6-115">To view the help for a configuration, use the `Get-Help` cmdlet with the name of the function, or type the name of the function followed by `-?`.</span></span> <span data-ttu-id="8bde6-116">다음은 `Get-Help`로 전달된 이전 구성의 출력입니다.</span><span class="sxs-lookup"><span data-stu-id="8bde6-116">The following is the output of the previous Configuration passed to `Get-Help`.</span></span>
 
 ```powershell
 Get-Help HelpSample1 -Detailed
@@ -157,10 +157,10 @@ REMARKS
 ```
 
 > [!NOTE]
-> <span data-ttu-id="55b5f-117">구문 필드 및 매개 변수 특성은 PowerShell에서 자동으로 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="55b5f-117">Syntax fields and parameter attributes are automatically generated for you by PowerShell.</span></span>
+> <span data-ttu-id="8bde6-117">구문 필드 및 매개 변수 특성은 PowerShell에서 자동으로 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="8bde6-117">Syntax fields and parameter attributes are automatically generated for you by PowerShell.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="55b5f-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="55b5f-118">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8bde6-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8bde6-118">See Also</span></span>
 
-- [<span data-ttu-id="55b5f-119">DSC 구성</span><span class="sxs-lookup"><span data-stu-id="55b5f-119">DSC Configurations</span></span>](configurations.md)
-- [<span data-ttu-id="55b5f-120">구성 작성, 컴파일 및 적용</span><span class="sxs-lookup"><span data-stu-id="55b5f-120">Write, Compile, and Apply a Configuration</span></span>](write-compile-apply-configuration.md)
-- [<span data-ttu-id="55b5f-121">구성에 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="55b5f-121">Add Parameters to a Configuration</span></span>](add-parameters-to-a-configuration.md)
+- [<span data-ttu-id="8bde6-119">DSC 구성</span><span class="sxs-lookup"><span data-stu-id="8bde6-119">DSC Configurations</span></span>](configurations.md)
+- [<span data-ttu-id="8bde6-120">구성 작성, 컴파일 및 적용</span><span class="sxs-lookup"><span data-stu-id="8bde6-120">Write, Compile, and Apply a Configuration</span></span>](write-compile-apply-configuration.md)
+- [<span data-ttu-id="8bde6-121">구성에 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="8bde6-121">Add Parameters to a Configuration</span></span>](add-parameters-to-a-configuration.md)
