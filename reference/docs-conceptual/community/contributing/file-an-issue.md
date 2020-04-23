@@ -4,10 +4,10 @@ description: 이 문서에서는 PowerShell 설명서에 대한 피드백을 제
 ms.date: 03/05/2020
 ms.topic: conceptual
 ms.openlocfilehash: fa2c74d55cdcd779646c50d58f7705f7a4c33542
-ms.sourcegitcommit: 18d832858a7b8ea094763afa753e0f48f01372e7
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "79060298"
 ---
 # <a name="how-to-file-a-powershell-docs-issue"></a>PowerShell-Docs 문제를 제출하는 방법
@@ -28,7 +28,7 @@ ms.locfileid: "79060298"
 
 ## <a name="filing-issues-on-github"></a>GitHub 문제 제출
 
-GitHub 문제를 직접 제출하려면 [PowerShell-Docs][docs-issues] 리포지토리에서 [새 문제][new-issue] 단추를 클릭합니다. 만들려는 문제 유형에 대한 **시작** 단추를 클릭하세요. 새 GitHub 문제는 템플릿에 미리 채워져 있습니다. 이 템플릿을 사용하면 보고하는 문제를 해결하는 데 필요한 정보를 제공할 수 있습니다.
+GitHub 문제를 직접 제출하려면 [PowerShell-Docs][new-issue] 리포지토리에서 [새 문제][docs-issues] 단추를 클릭합니다. 만들려는 문제 유형에 대한 **시작** 단추를 클릭하세요. 새 GitHub 문제는 템플릿에 미리 채워져 있습니다. 이 템플릿을 사용하면 보고하는 문제를 해결하는 데 필요한 정보를 제공할 수 있습니다.
 
 새 문제를 해결하기 전에 기존 문제를 읽고 문제가 이미 보고되었는지 확인합니다. 이렇게 하면 중복을 방지할 수 있으며, 해당 문제에 이미 답변이 달려 있을 수도 있습니다. 기존 문제를 발견한 경우 설명, 관련 질문 또는 답변을 추가할 수 있습니다.
 

@@ -3,13 +3,13 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 복합 리소스--DSC 구성을 리소스로 사용
 ms.openlocfilehash: 79fe94bd5bab8fa460714e5994d2e2487f302410
-ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75415898"
 ---
-# <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>복합 리소스: DSC 구성을 리소스로 사용
+# <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>복합 리소스: DSC 구성을 자원으로 사용
 
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 

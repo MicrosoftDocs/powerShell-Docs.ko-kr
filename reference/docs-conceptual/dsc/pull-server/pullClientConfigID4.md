@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: PowerShell 4.0에서 구성 ID를 사용하여 끌어오기 클라이언트 설정
 ms.openlocfilehash: 9259c624c8725f7d76f61e9ad7caa42e1bfa308c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71955150"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-40"></a>PowerShell 4.0에서 구성 ID를 사용하여 끌어오기 클라이언트 설정
@@ -27,7 +27,7 @@ ms.locfileid: "71955150"
 
 아래 예제 중 하나가 실행되면 **PullClientConfigID**라는 새 출력 폴더가 생성되고, 거기에 메타 구성 MOF 파일을 만듭니다. 이 경우 메타 구성 MOF 파일의 이름은 `localhost.meta.mof`로 지정됩니다.
 
-구성을 적용하려면 메타 구성 MOF 파일의 위치로 설정된 **Path**와 함께 **Set-DscLocalConfigurationManager** cmdlet을 호출합니다. 예:
+구성을 적용하려면 메타 구성 MOF 파일의 위치로 설정된 **Path**와 함께 **Set-DscLocalConfigurationManager** cmdlet을 호출합니다. 다음은 그 예입니다.
 
 ```powershell
 Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientConfigId –Verbose.

@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 끌어오기 서버 모범 사례
 ms.openlocfilehash: b2469984086a827b6b2a0fe84d1f326fc214ec28
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500691"
 ---
 # <a name="pull-server-best-practices"></a>끌어오기 서버 모범 사례

@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: PowerShell 갤러리 FAQ
 ms.openlocfilehash: 035681e108e1a3e05fe5d659d527ae1ad1c64cf4
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500581"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
@@ -36,7 +36,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 
 **패키지를 설치하거나 저장하기 위해 갤러리에 등록 또는 로그인할 필요는 없습니다.**
 
-## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>PowerShell 갤러리에 항목을 게시하려고 했을 때 "요청을 처리하지 못했습니다. '지정된 API 키가 잘못되었거나 지정된 패키지에 액세스할 수 있는 권한이 없습니다.' 원격 서버에서 다음과 같은 오류를 반환했습니다. (403) 사용할 수 없음." 오류가 발생했습니다. 이는 무엇을 의미하나요?
+## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>PowerShell 갤러리에 항목을 게시하려고 했을 때 "요청을 처리하지 못했습니다. '지정된 API 키가 잘못되었거나 지정된 패키지에 액세스할 수 있는 권한이 없습니다.' 원격 서버에서 (403) 사용할 수 없음 오류를 반환했습니다."라는 오류가 발생했습니다. 이는 무엇을 의미하나요?
 
 이 오류는 다음과 같은 이유로 발생할 수 있습니다.
 
@@ -61,7 +61,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 - 버전
 - Description
 - 작성자
-- 매니페스트의 **PrivateData** 섹션이나 [Publish-Module][] cmdlet의 **LicenseUri** 매개 변수에 포함된 모듈 사용 조건에 대한 URI입니다.
+- 매니페스트의 **PrivateData** 섹션이나 **Publish-Module** cmdlet의 [Publish-Module][] 매개 변수에 포함된 모듈 사용 조건에 대한 URI입니다.
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>올바른 형식의 모듈 매니페스트를 만들려면 어떻게 하나요?
 
@@ -78,7 +78,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 - 버전
 - Description
 - 작성자
-- 스크립트의 **PSScriptInfo** 섹션이나 [Publish-Script][] cmdlet의 **LicenseUri** 매개 변수에 포함된 모듈 사용 조건에 대한 URI입니다.
+- 스크립트의 **PSScriptInfo** 섹션이나 **Publish-Script** cmdlet의 [Publish-Script][] 매개 변수에 포함된 모듈 사용 조건에 대한 URI입니다.
 
 ## <a name="how-do-i-search"></a>검색하려면 어떻게 하나요?
 

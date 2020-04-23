@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC WindowsPackageCab 리소스
 ms.openlocfilehash: ec465b2c3b1d180ba46ee24a61f2be1129148962
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954640"
 ---
 # <a name="dsc-windowspackagecab-resource"></a>DSC WindowsPackageCab 리소스
@@ -32,15 +32,15 @@ Windows PowerShell DSC(Desired State Configuration)의 **WindowsPackageCab** 리
 
 ## <a name="properties"></a>속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
-|이름 |특정 상태가 되게 할 패키지의 이름을 나타냅니다. |
+|속성 |특정 상태가 되게 할 패키지의 이름을 나타냅니다. |
 |SourcePath |패키지가 있는 경로 나타냅니다. |
 |LogPath |패키지를 설치하거나 제거하기 위해 공급자가 로그 파일을 저장하도록 하려는 전체 경로를 나타냅니다. |
 
 ## <a name="common-properties"></a>공용 속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
 |DependsOn |이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. |
 |Ensure |패키지가 설치되어 있는지 여부를 나타냅니다. 패키지가 설치되어 있지 않도록 하려면(또는 설치되어 있다면 패키지를 제거) 이 속성을 **Absent**로 설정합니다. 패키지가 설치되어 있도록 하려면 이 속성을 **Present**로 설정합니다. **Ensure**는 **WindowsPackageCab** 리소스의 필수 속성입니다. |

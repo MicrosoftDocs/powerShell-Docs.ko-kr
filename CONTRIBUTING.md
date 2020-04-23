@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 16e17a3cab676a55ad83607f746e56dc80cd6504
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80082568"
 ---
 # <a name="contributor-guide"></a>Contributor 가이드

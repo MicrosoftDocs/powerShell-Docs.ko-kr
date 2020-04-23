@@ -3,10 +3,10 @@ title: PowerShell 커뮤니티 리소스
 description: PowerShell 사용자를 위해, 그리고 사용자가 만든 리소스 목록
 ms.date: 03/04/2020
 ms.openlocfilehash: 50f5eaaef9ef30351fa605f74648a8efbce90af3
-ms.sourcegitcommit: bf71c8c5e2a4fc7d5c3a67a537db1285089d03a7
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80395011"
 ---
 # <a name="powershell-community-resources"></a>PowerShell 커뮤니티 리소스

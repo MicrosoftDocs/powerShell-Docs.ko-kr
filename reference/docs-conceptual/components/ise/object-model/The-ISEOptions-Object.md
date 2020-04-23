@@ -3,10 +3,10 @@ ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: ISEOptions 개체
 ms.openlocfilehash: 9caa78a70cb837c755b2eff9af6ce0aa5dbb7452
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75736950"
 ---
 # <a name="the-iseoptions-object"></a>ISEOptions 개체

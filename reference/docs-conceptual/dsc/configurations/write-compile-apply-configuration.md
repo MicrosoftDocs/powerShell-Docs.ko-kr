@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: DSC, PowerShell, 구성, 서비스, 설정
 title: 구성 작성, 컴파일 및 적용
 ms.openlocfilehash: eb61e518762b9f13e617ecd4711bfef7a86814ec
-ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "76818161"
 ---
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -73,7 +73,7 @@ Configuration HelloWorld {
 자세한 내용은 [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing)를 참조하세요.
 
 <!-- markdownlint-disable MD038 -->
-‘점, 공백’ 뒤에 "HelloWorld.ps1" 스크립트를 저장한 경로를 입력하여 `. `(도트 소스)합니다.  그런 다음, 함수처럼 구성을 호출하여 실행합니다.
+‘점, 공백’ 뒤에 "HelloWorld.ps1" 스크립트를 저장한 경로를 입력하여 *(도트 소스)합니다.* `. ` 그런 다음, 함수처럼 구성을 호출하여 실행합니다.
 <!-- markdownlint-enable MD038 -->
 
 ```powershell
@@ -112,7 +112,7 @@ Start-DscConfiguration -Path C:\Scripts\HelloWorld -Verbose -Wait
 
 `Start-DSCConfiguration` cmdlet이 완료되면 지정한 위치에서 "HelloWorld.txt" 파일을 표시합니다. [Get-Content](/powershell/module/microsoft.powershell.management/get-content) cmdlet을 사용하여 콘텐츠를 확인할 수 있습니다.
 
-[Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)을 사용하여 현재 상태를 *테스트*할 수도 있습니다.
+*Test-DSCConfiguration*을 사용하여 현재 상태를 [테스트](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)할 수도 있습니다.
 
 노드가 현재 적용된 구성을 준수하는 경우 출력은 "True"여야 합니다.
 
@@ -134,7 +134,7 @@ Hello World from DSC!
 
 ## <a name="re-applying-the-configuration"></a>구성 다시 적용
 
-구성이 다시 적용되는지 확인하려면 구성에 의해 생성된 텍스트 파일을 제거하면 됩니다. `-UseExisting` 매개 변수와 `Start-DSCConfiguration` cmdlet을 사용합니다. `-UseExisting` 매개 변수는 `Start-DSCConfiguration`이 가장 최근에 성공적으로 적용된 구성을 나타내는 "current.mof" 파일을 다시 적용하도록 지시합니다.
+구성이 다시 적용되는지 확인하려면 구성에 의해 생성된 텍스트 파일을 제거하면 됩니다. `Start-DSCConfiguration` 매개 변수와 `-UseExisting` cmdlet을 사용합니다. `-UseExisting` 매개 변수는 `Start-DSCConfiguration`이 가장 최근에 성공적으로 적용된 구성을 나타내는 "current.mof" 파일을 다시 적용하도록 지시합니다.
 
 ```powershell
 Remove-Item -Path C:\Temp\HelloWorld.txt

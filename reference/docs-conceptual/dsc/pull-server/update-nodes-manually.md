@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 끌어오기 서버에서 노드 업데이트
 ms.openlocfilehash: fa59a2f6574db2dbc96621be4326f1d5a55e5de9
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500669"
 ---
 # <a name="update-nodes-from-a-pull-server"></a>끌어오기 서버에서 노드 업데이트

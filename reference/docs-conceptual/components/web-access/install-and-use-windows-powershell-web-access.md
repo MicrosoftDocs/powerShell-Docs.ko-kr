@@ -3,15 +3,15 @@ ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 웹 액세스 설치 및 사용
 ms.openlocfilehash: a3207c859c4b93b07d4c1b41d7df5269daa39a7d
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "79402620"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Install and Use Windows PowerShell Web Access(Windows PowerShell 웹 액세스 설치 및 사용)
 
-업데이트 날짜: 2013년 11월 5일(편집된 날짜: 2017년 8월 23일)
+업데이트됨: 2013년 11월 5일(편집됨: 2017년 8월 23일)
 
 적용 대상: Windows Server 2012 R2, Windows Server 2012
 
@@ -158,7 +158,7 @@ Windows PowerShell cmdlet을 사용하거나 서버 관리자 내에서 열린 �
 
    `Install-PswaWebApplication`
 
-   이 cmdlet을 실행하면 다음과 같은 게이트웨이 설정이 구성됩니다. 필요에 따라 IIS 관리자 콘솔에서 이러한 설정을 수동으로 변경할 수 있습니다. `Install-PswaWebApplication` cmdlet의 `WebsiteName` 및 `WebApplicationName` 매개 변수에 대한 값을 지정할 수도 있습니다.
+   이 cmdlet을 실행하면 다음과 같은 게이트웨이 설정이 구성됩니다. 필요에 따라 IIS 관리자 콘솔에서 이러한 설정을 수동으로 변경할 수 있습니다. `WebsiteName` cmdlet의 `WebApplicationName` 및 `Install-PswaWebApplication` 매개 변수에 대한 값을 지정할 수도 있습니다.
 
    - Path: /pswa
    - ApplicationPool: pswa_pool
@@ -210,7 +210,7 @@ Windows PowerShell 웹 액세스 권한 부여 규칙 및 보안에 대한 자�
 
    이 권한 부여 규칙을 통해 특정 사용자는 일반적으로 액세스 권한을 갖고 있는 네트워크상의 한 컴퓨터에만 액세스할 수 있으며, 일반적인 스크립팅 및 cmdlet 환경에 해당하는 특정 세션 구성에 액세스할 수 있습니다.
 
-   다음 예제에서는 `Contoso` 도메인의 `JSmith`라는 사용자에게 `Contoso_214` 컴퓨터를 관리하고, `NewAdminsOnly`라는 세션 구성을 사용할 수 있는 액세스 권한이 부여됩니다.
+   다음 예제에서는 `JSmith` 도메인의 `Contoso`라는 사용자에게 `Contoso_214` 컴퓨터를 관리하고, `NewAdminsOnly`라는 세션 구성을 사용할 수 있는 액세스 권한이 부여됩니다.
 
    `Add-PswaAuthorizationRule -UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly`
 
@@ -269,7 +269,7 @@ Windows PowerShell 웹 액세스가 설치되면 IIS 관리자에서 게이트�
 
 5. Windows PowerShell 웹 액세스 웹 사이트를 추가할 웹 사이트(예: **기본 웹 사이트**)를 마우스 오른쪽 단추로 클릭한 다음 **애플리케이션 추가**를 클릭합니다.
 
-6. **별칭** 필드에 pswa를 입력하거나 다른 별칭을 제공합니다. 이 별칭은 가상 디렉터리 이름이 됩니다. 예를 들어 URL `https://<server-name>/pswa`의 **pswa**는 이 단계에서 지정된 별칭을 나타냅니다.
+6. **별칭** 필드에 pswa를 입력하거나 다른 별칭을 제공합니다. 이 별칭은 가상 디렉터리 이름이 됩니다. 예를 들어 URL **의** pswa`https://<server-name>/pswa`는 이 단계에서 지정된 별칭을 나타냅니다.
 
 7. **애플리케이션 풀** 필드에서는 3단계에서 만든 애플리케이션 풀을 선택합니다.
 
@@ -383,7 +383,7 @@ Windows PowerShell 웹 액세스 권한 부여 규칙 및 보안에 대한 자�
 
    이 권한 부여 규칙을 통해 특정 사용자는 일반적으로 액세스 권한을 갖고 있는 네트워크의 한 컴퓨터에만 액세스할 수 있으며, 사용자&trade;의 일반적인 스크립팅 및 cmdlet 요구 사항에 해당하는 특정 세션 구성에 액세스할 수 있습니다.
 
-   다음 예제에서는 `Contoso` 도메인의 `JSmith`라는 사용자에게 `Contoso_214` 컴퓨터를 관리하고, `NewAdminsOnly`라는 세션 구성을 사용할 수 있는 액세스 권한이 부여됩니다.
+   다음 예제에서는 `JSmith` 도메인의 `Contoso`라는 사용자에게 `Contoso_214` 컴퓨터를 관리하고, `NewAdminsOnly`라는 세션 구성을 사용할 수 있는 액세스 권한이 부여됩니다.
 
    `Add-PswaAuthorizationRule -UserName 'Contoso\JSmith' -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly`
 
@@ -406,7 +406,7 @@ Windows PowerShell 웹 액세스 권한 부여 규칙 및 보안에 대한 자�
 1. **작업** 창에서 다음 중 하나를 수행합니다. IIS에서 서버 인증서를 구성하는 방법에 대한 자세한 내용은 [IIS 7에서 서버 인증서 구성](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))을 참조하세요.
 
    - 네트워크 위치에서 기존의 유효한 인증서를 가져오려면 **가져오기**를 클릭합니다.
-   - CA에서 [VeriSign](https://www.verisign.com/), [Thawte](https://www.thawte.com/) 또는 [GeoTrust](https://www.geotrust.com/) 등의 인증서를 요청하려면 **인증서 요청 만들기**를 클릭합니다. 인증서의 일반 이름은 요청의 호스트 헤더와 일치해야 합니다.
+   - CA에서 **VeriSign**, [Thawte](https://www.verisign.com/) 또는 [GeoTrust](https://www.thawte.com/) 등의 인증서를 요청하려면 [인증서 요청 만들기](https://www.geotrust.com/)를 클릭합니다. 인증서의 일반 이름은 요청의 호스트 헤더와 일치해야 합니다.
 
      예를 들어 클라이언트 브라우저에서 `http://www.contoso.com/`을 요청하면 일반 이름도 `http://www.contoso.com/`이어야 합니다. 이 방법이 Windows PowerShell 웹 액세스 게이트웨이에 인증서를 제공하는 가장 안전한 방법입니다.
 

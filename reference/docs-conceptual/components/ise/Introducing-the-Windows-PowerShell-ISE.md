@@ -3,10 +3,10 @@ ms.date: 08/14/2018
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE 소개
 ms.openlocfilehash: 3e4471d0982ba4d7ef1a9d59906a9ff297f6f7cb
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75736201"
 ---
 # <a name="the-windows-powershell-ise"></a>Windows PowerShell ISE

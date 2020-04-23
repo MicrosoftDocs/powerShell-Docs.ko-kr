@@ -3,17 +3,17 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: DSC 구성에 대한 도움말 작성
 ms.openlocfilehash: 498ec0f594ed3229e097903c4ea2ae34d3da03a2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954140"
 ---
 # <a name="writing-help-for-dsc-configurations"></a>DSC 구성에 대한 도움말 작성
 
->적용 대상: Windows Powershell 5.0
+>적용 대상: Windows PowerShell 5.0
 
-DSC 구성에 설명 기반 도움말을 사용할 수 있습니다. 사용자는 `-?`가 포함된 **구성**을 호출하거나 [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet을 사용하여 도움말에 액세스할 수 있습니다. `Configuration` 키워드 바로 위에 주석 기반 도움말을 배치합니다.
+DSC 구성에 설명 기반 도움말을 사용할 수 있습니다. 사용자는 **가 포함된** 구성`-?`을 호출하거나 [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet을 사용하여 도움말에 액세스할 수 있습니다. `Configuration` 키워드 바로 위에 주석 기반 도움말을 배치합니다.
 매개 변수 선언 바로 위에 주석 블록과 인라인으로 매개 변수 도움말을 배치하거나 둘 다 아래 예제와 같이 배치할 수 있습니다.
 
 PowerShell 설명 기반 도움말에 대한 자세한 내용은 [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help)를 참조하세요.

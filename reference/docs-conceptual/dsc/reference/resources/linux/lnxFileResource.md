@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: Linux용 DSC nxFile 리소스
 ms.openlocfilehash: be5f098d2fe1c8b354c07e6a8f882b8fdf00e1db
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954830"
 ---
 # <a name="dsc-for-linux-nxfile-resource"></a>Linux용 DSC nxFile 리소스
@@ -36,23 +36,23 @@ nxFile <string> #ResourceName
 
 ## <a name="properties"></a>속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
 |DestinationPath |파일 또는 디렉터리에 대한 상태를 확인하려는 위치를 지정합니다. |
 |SourcePath |파일 또는 폴더 리소스를 복사해 올 소스 경로를 지정합니다. 이 경로는 로컬 경로이거나 `http/https/ftp` URL일 수 있습니다. 원격 `http/https/ftp` URL은 **Type** 속성의 값이 **file**일 때에만 지원됩니다. |
-|유형 |구성되는 리소스가 디렉터리인지 아니면 파일인지를 지정합니다. 리소스가 디렉터리임을 나타내려면 이 속성을 **directory**로 설정합니다. 리소스가 파일을 나타내려면 이 속성을 **file**로 설정합니다. 기본값은 **file**입니다. |
+|Type |구성되는 리소스가 디렉터리인지 아니면 파일인지를 지정합니다. 리소스가 디렉터리임을 나타내려면 이 속성을 **directory**로 설정합니다. 리소스가 파일을 나타내려면 이 속성을 **file**로 설정합니다. 기본값은 **file**입니다. |
 |콘텐츠 |특정 문자열과 같이 파일의 내용을 지정합니다. |
 |체크섬 |두 파일이 동일한 것인지 결정할 때 사용할 형식을 정의합니다. **Checksum**을 지정하지 않은 경우 비교에 파일 또는 디렉터리 이름만 사용됩니다. 값은 **ctime**, **mtime** 또는 **md5**입니다. |
 |Recurse |하위 디렉터리가 포함되어 있는지를 나타냅니다. 하위 디렉터리가 포함되도록 하려면 이 속성을 `$true`로 설정합니다. 기본값은 `$false`입니다. **Type** 속성이 **directory**로 설정되어 있을 때에만 이 속성이 유효합니다. |
 |Force |특정 파일 작업(예: 파일 덮어쓰기나 비어 있지 않은 디렉터리 삭제)을 수행하면 오류가 발생합니다. **Force** 속성을 사용하면 이러한 오류가 무시됩니다. 기본값은 `$false`입니다. |
 |링크 |바로 가기 링크에 대해 원하는 동작을 지정합니다. 기호화된 링크를 따르고 링크 대상에 대해 작업을 수행하도록 하려면 이 속성을 **follow**로 설정합니다. 예를 들어 링크 대신 파일을 복사합니다. 링크에 대해 작업을 수행하도록 하려면 이 속성을 **manage**로 설정합니다. 예를 들어 링크 자체를 복사합니다. 바로 가기 링크를 무시하려면 이 속성을 **ignore**로 설정합니다. |
 |그룹 |파일 또는 디렉터리에 대한 사용 권한이 있는 **Group**의 이름입니다. |
-|모드 |리소스에 대해 원하는 사용 권한을 8진수 또는 기호 표기법으로 지정합니다. 예를 들어 **777** 또는 **rwxrwxrwx**입니다. 기호 표기법을 사용하는 경우, 디렉터리나 파일을 나타내는 첫 번째 문자를 제공하지 마세요. |
+|Mode |리소스에 대해 원하는 사용 권한을 8진수 또는 기호 표기법으로 지정합니다. 예를 들어 **777** 또는 **rwxrwxrwx**입니다. 기호 표기법을 사용하는 경우, 디렉터리나 파일을 나타내는 첫 번째 문자를 제공하지 마세요. |
 |소유자 |파일 또는 디렉터리를 소유하는 그룹의 이름입니다. |
 
 ## <a name="common-properties"></a>공용 속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
 |DependsOn |이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. |
 |Ensure |해당 파일이 존재하는지를 확인할지 여부를 결정합니다. 해당 파일이 존재하도록 하려면 이 속성을 **Present**로 설정합니다. 해당 파일이 존재하지 않도록 하려면 이 속성을 **Absent**로 설정합니다. 기본값은 **Present**입니다. |
@@ -80,7 +80,7 @@ Linux 및 Windows에서는 텍스트 파일에서 기본적으로 서로 다른 
    }
    ```
 
-1. Linux 줄 바꿈 문자를 사용하도록 **$OFS** 속성을 설정한 후 [Get-Content](https://technet.microsoft.com/library/hh849787.aspx)로 PowerShell 스크립트에 있는 파일 내용을 읽습니다.
+1. Linux 줄 바꿈 문자를 사용하도록 [$OFS](https://technet.microsoft.com/library/hh849787.aspx) 속성을 설정한 후 **Get-Content**로 PowerShell 스크립트에 있는 파일 내용을 읽습니다.
 
    ```powershell
    Import-DSCResource -Module nx

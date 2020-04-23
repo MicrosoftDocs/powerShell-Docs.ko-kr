@@ -2,12 +2,12 @@
 ms.date: 06/27/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 웹 액세스의 권한 부여 규칙 및 보안 기능
-ms.openlocfilehash: 9bc1be125ebab4e9ba29ba832b442777e9bfc859
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: ee25df052994e47e559daa87b89af813471d896b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500896"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81624757"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Windows PowerShell 웹 액세스의 권한 부여 규칙 및 보안 기능
 
@@ -112,7 +112,7 @@ Windows PowerShell 웹 액세스 cmdlet에서는 와일드카드 문자(\*)를 �
 
    해당 구성을 아직 만들지 않은 경우 [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configuration_files)에서 세션 구성을 만드는 방법에 대한 지침을 따르세요.
 
-3. 이 권한 부여 규칙을 통해 특정 사용자는 일반적으로 액세스 권한을 갖고 있는 네트워크의 한 컴퓨터에만 액세스할 수 있으며, 사용자&trade;의 일반적인 스크립팅 및 cmdlet 요구 사항에 해당하는 특정 세션 구성에 액세스할 수 있습니다. 다음을 입력하고 **Enter** 키를 누릅니다.
+3. 이 권한 부여 규칙을 통해 특정 사용자는 일반적으로 액세스 권한을 갖고 있는 네트워크상의 한 컴퓨터에만 액세스할 수 있으며, 일반적인 스크립팅 및 cmdlet 환경에 해당하는 특정 세션 구성에 액세스할 수 있습니다. 다음을 입력하고 **Enter** 키를 누릅니다.
 
    ```
    Add-PswaAuthorizationRule -UserName <domain\user | computer\user> `

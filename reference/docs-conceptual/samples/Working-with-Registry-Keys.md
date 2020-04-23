@@ -3,10 +3,10 @@ ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 레지스트리 키 작업
 ms.openlocfilehash: 3feaf6d26db51a507434a6cec1f1095c9013efc8
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75736848"
 ---
 # <a name="working-with-registry-keys"></a>레지스트리 키 작업
@@ -15,7 +15,7 @@ ms.locfileid: "75736848"
 
 ## <a name="listing-all-subkeys-of-a-registry-key"></a>레지스트리 키의 모든 하위 키 표시
 
-`Get-ChildItem`을 사용하여 레지스트리 키 바로 아래에 있는 항목을 모두 볼 수 있습니다. 선택적 **Force** 매개 변수를 추가하면 숨겨진 항목이나 시스템 항목을 볼 수도 있습니다. 예를 들어 다음 명령은 `HKEY_CURRENT_USER` 레지스트리 하이브에 해당하는 Windows PowerShell 드라이브 `HKCU:` 바로 아래에 있는 항목을 보여 줍니다.
+`Get-ChildItem`을 사용하여 레지스트리 키 바로 아래에 있는 항목을 모두 볼 수 있습니다. 선택적 **Force** 매개 변수를 추가하면 숨겨진 항목이나 시스템 항목을 볼 수도 있습니다. 예를 들어 다음 명령은 `HKCU:` 레지스트리 하이브에 해당하는 Windows PowerShell 드라이브 `HKEY_CURRENT_USER` 바로 아래에 있는 항목을 보여 줍니다.
 
 ```powershell
 Get-ChildItem -Path HKCU:\ | Select-Object Name
@@ -57,7 +57,7 @@ Get-ChildItem -Path Microsoft.PowerShell.Core\Registry::HKCU
 Get-ChildItem HKCU:
 ```
 
-이 명령은 **Cmd.exe**의 `DIR` 명령이나 UNIX 셸의 `ls`를 사용하는 것과 매우 유사한 방법으로 바로 아래에 포함된 항목만 보여 줍니다. 포함된 항목을 모두 보려면 **Recurse** 매개 변수를 지정해야 합니다. `HKCU:`의 모든 레지스트리 키를 나열하려면 다음 명령을 사용합니다.
+이 명령은 `DIR`Cmd.exe**의**  명령이나 UNIX 셸의 `ls`를 사용하는 것과 매우 유사한 방법으로 바로 아래에 포함된 항목만 보여 줍니다. 포함된 항목을 모두 보려면 **Recurse** 매개 변수를 지정해야 합니다. `HKCU:`의 모든 레지스트리 키를 나열하려면 다음 명령을 사용합니다.
 
 ```powershell
 Get-ChildItem -Path HKCU:\ -Recurse
@@ -72,7 +72,7 @@ Get-ChildItem -Path HKCU:\Software -Recurse |
 
 ## <a name="copying-keys"></a>키 복사
 
-`Copy-Item`을 사용하여 복사를 수행합니다. 다음 예제에서는 `HKLM:\SOFTWARE\Microsoft\Windows\`의 `CurrentVersion` 하위 키와 모든 속성을 `HKCU:\`로 복사합니다.
+`Copy-Item`을 사용하여 복사를 수행합니다. 다음 예제에서는 `CurrentVersion`의 `HKLM:\SOFTWARE\Microsoft\Windows\` 하위 키와 모든 속성을 `HKCU:\`로 복사합니다.
 
 ```powershell
 Copy-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Destination HKCU:

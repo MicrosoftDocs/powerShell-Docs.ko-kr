@@ -3,10 +3,10 @@ title: PowerShell Core 지원 수명 주기
 description: PowerShell Core에 대한 정책 관리 지원
 ms.date: 03/09/2020
 ms.openlocfilehash: c319371778eb4615559ae12e0cd153a535ed22bf
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500983"
 ---
 # <a name="powershell-support-lifecycle"></a>PowerShell 지원 수명 주기

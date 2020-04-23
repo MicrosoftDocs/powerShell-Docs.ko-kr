@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,리소스,갤러리,설정
 title: 추가 DSC 리소스 설치
 ms.openlocfilehash: 7a6a935349358e11a77d2f00c0bf88e0ad18c097
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74417803"
 ---
 # <a name="install-additional-dsc-resources"></a>추가 DSC 리소스 설치
@@ -18,18 +18,18 @@ PowerShell 4.0에 포함된 OOB 리소스 및 리소스 기능에 대한 설명�
 > [!NOTE]
 > OOB 리소스 수가 PowerShell의 각 버전과 함께 증가하므로 불완전한 목록입니다.
 
-|리소스  |설명  |
+|리소스  |Description  |
 |---------|---------|
-|**File**|파일 및 디렉터리의 상태를 제어합니다. **원본**에서 **대상**으로 파일을 복사하고 날짜, 체크섬 및 해시를 비교하여 **원본**이 변경되면 파일을 업데이트합니다.|
-|**Archive**|지정된 위치에 보관 파일의 압축을 풉니다. 지정된 **체크섬**을 사용하여 보관 파일의 유효성을 검사합니다.|
-|**Environment**|환경 변수를 관리합니다.|
+|**최근에 사용한 파일**|파일 및 디렉터리의 상태를 제어합니다. **원본**에서 **대상**으로 파일을 복사하고 날짜, 체크섬 및 해시를 비교하여 **원본**이 변경되면 파일을 업데이트합니다.|
+|**보관**|지정된 위치에 보관 파일의 압축을 풉니다. 지정된 **체크섬**을 사용하여 보관 파일의 유효성을 검사합니다.|
+|**환경**|환경 변수를 관리합니다.|
 |**그룹**|로컬 그룹을 관리하고 그룹 멤버 자격을 제어합니다.|
 |**Log**|`Microsoft-Windows-Desired State Configuration/Analytic` 이벤트 로그에 메시지를 씁니다.|
 |**패키지**|**Arguments**, **LogPath**, **ReturnCode**, 기타 설정을 사용하여 패키지를 설치하거나 제거합니다.|
 |**Registry**|레지스트리 키 및 값을 관리합니다.|
-|**Script**|고유한 [get-test-set](../resources/get-test-set.md) script 블록을 디자인할 수 있습니다.|
-|**Service**|Windows 서비스를 구성합니다.|
-|**User** |로컬 사용자 및 특성을 관리합니다.|
+|**스크립트**|고유한 [get-test-set](../resources/get-test-set.md) script 블록을 디자인할 수 있습니다.|
+|**서비스**|Windows 서비스를 구성합니다.|
+|**사용자** |로컬 사용자 및 특성을 관리합니다.|
 |**WindowsFeature**|역할 및 기능을 관리합니다.|
 |**WindowsProcess**|Windows 프로세스를 구성합니다.|
 

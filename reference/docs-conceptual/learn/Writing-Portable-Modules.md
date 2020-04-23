@@ -3,10 +3,10 @@ ms.date: 01/10/2020
 keywords: powershell,cmdlet
 title: 이식 가능한 모듈 작성
 ms.openlocfilehash: 124e6efadfd07b8c5214a5c0446b1589f7142388
-ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "76022252"
 ---
 # <a name="portable-modules"></a>이식 가능한 모듈
@@ -198,7 +198,7 @@ PowerShell Standard는 항상 상위 버전과 호환됩니다. PowerShell Stand
 
 먼저 모듈이 Linux 및 macOS에서 작동하는지 유효성을 검사합니다. 다음으로, 모듈 매니페스트에서 해당 운영 체제와의 호환성을 표시합니다. 이렇게 하면 모듈이 [PowerShell 갤러리][]에 게시되는 경우 사용자가 사용 중인 운영 체제용 모듈을 더 쉽게 찾을 수 있습니다.
 
-모듈 매니페스트 내에서 `PrivateData` 속성에는 `PSData` 하위 속성이 있습니다. `PSData`의 선택적 `Tags` 속성은 PowerShell 갤러리에 표시되는 값 배열을 사용합니다. PowerShell 갤러리는 다음 호환성 값을 지원합니다.
+모듈 매니페스트 내에서 `PrivateData` 속성에는 `PSData` 하위 속성이 있습니다. `Tags`의 선택적 `PSData` 속성은 PowerShell 갤러리에 표시되는 값 배열을 사용합니다. PowerShell 갤러리는 다음 호환성 값을 지원합니다.
 
 | 태그               | Description                                |
 |-------------------|--------------------------------------------|

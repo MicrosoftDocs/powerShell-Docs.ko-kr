@@ -3,10 +3,10 @@ ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE 스크립팅 개체 모델의 용도
 ms.openlocfilehash: 1f48df112bd19297baa311116e79d3d7603d7c81
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75736235"
 ---
 # <a name="purpose-of-the-windows-powershell-ise-scripting-object-model"></a>Windows PowerShell ISE 스크립팅 개체 모델의 용도

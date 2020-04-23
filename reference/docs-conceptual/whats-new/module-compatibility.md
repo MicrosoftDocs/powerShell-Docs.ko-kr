@@ -2,10 +2,10 @@
 title: PowerShell 7 모듈 호환성
 ms.date: 02/03/2020
 ms.openlocfilehash: 02095b8233b6fc7b6d2a30bcb841bfd831a50031
-ms.sourcegitcommit: 1fa89ab20d14a61f139f1394c45aaedd5a7c5438
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78935186"
 ---
 # <a name="powershell-7-module-compatibility"></a>PowerShell 7 모듈 호환성

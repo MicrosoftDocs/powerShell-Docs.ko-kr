@@ -4,10 +4,10 @@ ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: WMF 5.x 릴리스 정보
 ms.openlocfilehash: 3fc712dbcbe184c60ae248b260c8f6800f111fdd
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "79402360"
 ---
 # <a name="windows-management-framework-wmf-5x-release-notes"></a>WMF(Windows Management Framework) 5.x 릴리스 정보
@@ -49,8 +49,8 @@ WMF 5.1에는 Windows Server 2016과 함께 릴리스된 PowerShell, WMI, WinRM 
 
 버전 5.1부터 PowerShell은 다양한 기능 집합 및 플랫폼 호환성을 나타내는 다양한 버전으로 사용 가능합니다.
 
-- **Desktop Edition:** .NET Framework를 기반으로 구축되며 Server Core 및 Windows Desktop과 같은 전체 버전의 Windows에서 실행되는 PowerShell 버전을 대상으로 지정하는 스크립트 및 모듈과 호환성을 제공합니다.
-- **Core Edition:** .NET Framework를 기반으로 구축되며 Nano 서버 및 Windows IoT와 같은 축소된 버전의 Windows에서 실행되는 PowerShell 버전을 대상으로 지정하는 스크립트 및 모듈과 호환성을 제공합니다.
+- **Desktop Edition:** .NET Framework를 기반으로 구축되며 Server Core 및 Windows Desktop과 같은 전체 버전의 Windows에서 실행되는 PowerShell 버전을 대상 지정하는 스크립트 및 모듈과 호환성을 제공합니다.
+- **Core Edition:** .NET Framework를 기반으로 구축되며 Nano 서버 및 Windows IoT와 같은 축소된 버전의 Windows에서 실행되는 PowerShell 버전을 대상 지정하는 스크립트 및 모듈과 호환성을 제공합니다.
 
 ### <a name="learn-more-about-using-powershell-editions"></a>PowerShell 버전 사용 방법에 대한 자세한 정보
 
@@ -98,7 +98,7 @@ WMF 5.1에서는 다음과 같습니다.
 
   **예제:** `using module @{ModuleName = 'PSReadLine'; RequiredVersion = '1.1'}`
 
-- 모듈의 여러 버전이 있는 경우 PowerShell에서는 `Import-Module`과 **동일한 해결 논리**를 사용하고 오류가 발생하지 않습니다. 동작은 `Import-Module` 및 `Import-DscResource`와 동일합니다.
+- 모듈의 여러 버전이 있는 경우 PowerShell에서는 **과** 동일한 해결 논리`Import-Module`를 사용하고 오류가 발생하지 않습니다. 동작은 `Import-Module` 및 `Import-DscResource`와 동일합니다.
 
 ## <a name="improvements-to-pester"></a>Pester의 향상된 기능
 

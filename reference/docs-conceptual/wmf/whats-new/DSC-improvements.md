@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: WMF 5.1의 향상된 DSC
-ms.openlocfilehash: 99434d14100de54d2d4c89c5888741ab2f1c512a
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: 78c15f453977384ba437b0bd69cd620eb1a29fbd
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78277639"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978290"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>WMF 5.1에서 DSC(필요한 상태 구성)의 개선 사항
 
@@ -147,7 +147,7 @@ WMF 5.0에서 PowerShell 디버거는 클래스 기반 리소스 메서드(Get/S
 
 ## <a name="using-psdscrunascredential-with-dsc-composite-resources"></a>DSC 복합 리소스와 함께 PsDscRunAsCredential 사용
 
-[PsDscRunAsCredential](/powershell/scripting/dsc/configurations/runAsUser)을 DSC [복합](/powershell/scripting/dsc/authoringresourcecomposite) 리소스와 함께 사용할 수 있도록 지원을 추가했습니다.
+[PsDscRunAsCredential](/powershell/scripting/dsc/configurations/runAsUser)을 DSC [복합](/powershell/scripting/dsc/resources/authoringresourcecomposite) 리소스와 함께 사용할 수 있도록 지원을 추가했습니다.
 
 이제 구성 내에서 복합 리소스를 사용할 때 **PsDscRunAsCredential** 값을 지정할 수 있습니다. 이 값을 지정할 경우 모든 리소스가 복합 리소스 내에서 RunAs 사용자로 실행됩니다. 복합 리소스가 다른 복합 리소스를 호출하는 경우에도 해당 리소스가 모두 RunAs 사용자로 실행됩니다. RunAs 자격 증명은 복합 리소스 계층 구조의 모든 수준에 전파됩니다. 복합 리소스 내의 리소스가 **PsDscRunAsCredential**의 고유한 값을 지정하는 경우 구성 컴파일 중 병합 오류가 발생합니다.
 
@@ -241,8 +241,8 @@ WMF 5.1의 DSC에서는 카탈로그 및 구성(.MOF) 파일에 있는 디지털
 
 - 구성 파일(.MOF): 기존 PowerShell cmdlet [Set-AuthenticodeSignature](/powershell/module/Microsoft.PowerShell.Security/Set-AuthenticodeSignature)가 MOF 파일 서명을 지원하도록 확장되었습니다.
 - 모듈: 다음 단계에 따라 해당 모듈 카탈로그에 서명하여 모듈 서명을 수행합니다.
-  1. 카탈로그 파일 만들기: 카탈로그 파일에는 암호화 해시 또는 지문의 컬렉션이 포함됩니다. 각 지문은 모듈에 포함된 파일에 해당합니다. 사용자가 모듈의 카탈로그 파일을 만들 수 있도록 지원하는 새로운 [New-FileCatalog](/powershell/module/microsoft.powershell.security/new-filecatalog) cmdlet이 추가되었습니다.
-  2. 카탈로그 파일에 서명: [Set-AuthenticodeSignature](/powershell/module/Microsoft.PowerShell.Security/Set-AuthenticodeSignature)를 사용하여 카탈로그 파일에 서명합니다.
+  1. 카탈로그 파일을 만듭니다. 카탈로그 파일에는 암호화 해시 또는 지문의 컬렉션이 포함됩니다. 각 지문은 모듈에 포함된 파일에 해당합니다. 사용자가 모듈의 카탈로그 파일을 만들 수 있도록 지원하는 새로운 [New-FileCatalog](/powershell/module/microsoft.powershell.security/new-filecatalog) cmdlet이 추가되었습니다.
+  2. 카탈로그 파일에 서명합니다. [Set-AuthenticodeSignature](/powershell/module/Microsoft.PowerShell.Security/Set-AuthenticodeSignature)를 사용하여 카탈로그 파일에 서명합니다.
   3. 카탈로그 파일을 모듈 폴더 내에 배치합니다. 규칙에 따라 모듈 카탈로그 파일은 모듈과 이름이 같은 모듈 폴더에 배치해야 합니다.
 
 ### <a name="localconfigurationmanager-settings-to-enable-signing-validations"></a>서명 유효성 검사를 사용하도록 설정하는 LocalConfigurationManager 설정
@@ -286,7 +286,7 @@ Set-DscLocalConfigurationManager -Path .\EnableSignatureValidation -Verbose
    - `<moduleName>.cat` 파일을 찾고 `Get-AuthenticodeSignature`를 사용하여 해당 서명을 확인합니다.
    - 서명자를 인증한 인증 기관을 신뢰할 수 있는지 확인합니다.
    - 새 `Test-FileCatalog` cmdlet을 사용하여 모듈의 콘텐츠가 변조되지 않았는지 확인합니다.
-5. `$env:ProgramFiles\WindowsPowerShell\Modules\`에 대한 `Install-Module`
+5. `Install-Module`에 대한 `$env:ProgramFiles\WindowsPowerShell\Modules\`
 6. 구성 처리
 
 > [!NOTE]

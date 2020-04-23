@@ -3,10 +3,10 @@ ms.date: 02/03/2020
 keywords: powershell,core
 title: 모듈 및 cmdlet의 릴리스 기록
 ms.openlocfilehash: 824380c7aa732e6a2027d86be33cbde901ab11e1
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80082728"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>모듈 및 cmdlet의 릴리스 기록

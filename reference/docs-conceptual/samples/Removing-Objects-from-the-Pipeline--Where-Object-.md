@@ -3,10 +3,10 @@ ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 파이프라인에서 개체 제거(Where Object)
 ms.openlocfilehash: 370e7745341b70c0794352a690d5750d21f53ac2
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75737188"
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>파이프라인에서 개체 제거(Where-Object)
@@ -107,7 +107,7 @@ intelppm               Intel Processor Driver
 ...
 ```
 
-위의 명령에는 두 개의 `Where-Object` 요소가 있지만 다음과 같이`-and` 논리 연산자를 사용하면 단일 `Where-Object` 요소로 표시할 수 있습니다.
+위의 명령에는 두 개의 `Where-Object` 요소가 있지만 다음과 같이`Where-Object` 논리 연산자를 사용하면 단일 `-and` 요소로 표시할 수 있습니다.
 
 ```powershell
 Get-CimInstance -Class Win32_SystemDriver |

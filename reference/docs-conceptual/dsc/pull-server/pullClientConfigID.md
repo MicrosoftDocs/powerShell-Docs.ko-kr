@@ -3,15 +3,15 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: PowerShell 5.0 이상에서 구성 ID를 사용하여 끌어오기 클라이언트 설정
 ms.openlocfilehash: a014e04fc5fbf2e813d9b0d79f39fe5aa3836f86
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500728"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-50-and-later"></a>PowerShell 5.0 이상에서 구성 ID를 사용하여 끌어오기 클라이언트 설정
 
-> 적용 대상: Windows Powershell 5.0
+> 적용 대상: Windows PowerShell 5.0
 
 > [!IMPORTANT]
 > 끌어오기 서버(Windows 기능 *DSC-Service*)는 Windows Server의 지원되는 구성 요소이지만 새로운 기능을 제공할 계획은 없습니다. 관리되는 클라우드를 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)(Windows Server에 끌어오기 서버 이외의 기능 포함) 또는 [여기](pullserver.md#community-solutions-for-pull-service)에 나열된 커뮤니티 솔루션 중 하나로 전환하기 시작하는 것이 좋습니다.
@@ -40,7 +40,7 @@ Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientC
 
 아래 예제에서는 이전에 이 목적으로 만들어진 LCM의 **ConfigurationID** 속성을 **Guid**로 설정합니다. **ConfigurationID**는 LCM이 끌어오기 서버에서 적절한 구성의 찾는 데 사용하는 ID입니다. 끌어오기 서버의 구성 MOF 파일의 이름은 `ConfigurationID.mof`로 지정해야 합니다. 여기서 *ConfigurationID*는 대상 노드의 LCM의 **ConfigurationID** 속성의 값입니다. 자세한 내용은 [끌어오기 서버에 구성 게시(v4/v5)](publishConfigs.md)를 참조하세요.
 
-아래 예제 또는 [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet을 사용하여 임의의 **Guid**를 만들 수 있습니다.
+아래 예제 또는 **New-Guid** cmdlet을 사용하여 임의의 [Guid](/powershell/module/microsoft.powershell.utility/new-guid)를 만들 수 있습니다.
 
 ```powershell
 [System.Guid]::NewGuid()

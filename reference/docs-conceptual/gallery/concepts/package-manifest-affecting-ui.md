@@ -4,10 +4,10 @@ schema: 2.0.0
 keywords: PowerShell
 title: PowerShell 갤러리 UI에 영향을 주는 패키지 매니페스트 값
 ms.openlocfilehash: 9e37fec879f2f5cbe3926c7dbc946389425d856a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74417052"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>PowerShell 갤러리 UI에 영향을 주는 패키지 매니페스트 값
@@ -21,44 +21,44 @@ ms.locfileid: "74417052"
 
 아래 표에는 게시자가 관리하는 PowerShell 갤러리 패키지 페이지 UI의 요소가 나와 있습니다. 각 항목은 모듈 매니페스트로 관리되는지, 스크립트 매니페스트로 관리되는지를 나타냅니다.
 
-| UI 요소 | 설명 | 모듈 | 스크립트 |
+| UI 요소 | Description | 모듈 | 스크립트 |
 | --- | --- | --- | --- |
-| **제목** | 갤러리에 게시되는 패키지의 이름입니다.  | 아니요 | 아니요 |
-| **버전** | 표시되는 버전은 메타데이터의 버전 문자열이며, 버전이 지정된 경우 시험판입니다. 모듈 매니페스트에서 버전의 주 부분은 ModuleVersion입니다. 스크립트의 경우 .VERSION으로 식별됩니다. 시험판 버전 문자열이 지정되면 모듈의 경우 ModuleVersion에 추가되며, 스크립트의 경우 .VERSION의 일부로 지정됩니다. [모듈](module-prerelease-support.md) 및 [스크립트](script-prerelease-support.md)에 시험판 문자열 지정에 대한 설명서가 있습니다. | 예 | 예 |
-| **설명** | 모듈 매니페스트의 설명이며, 스크립트 파일 매니페스트에서는 .DESCRIPTION입니다. | 예 | 예 |
-| **라이선스 동의 필요** | 모듈은 모듈 매니페스트를 RequireLicenseAcceptance = $true로 수정하고, LicenseURI를 제공하고, 모듈 폴더의 루트에 license.txt 파일을 제공하여 사용자가 라이선스를 승인하도록 요구할 수 있습니다. [라이선스 동의 필요](../how-to/working-with-packages/packages-that-require-license-acceptance.md) 항목에서 추가 정보를 확인할 수 있습니다. | 예 | 아니요 |
-| **릴리스 정보** | 모듈의 경우 이 정보는 PSData\PrivateData 아래의 ReleaseNotes 섹션에서 가져옵니다. 스크립트 매니페스트에서는 .RELEASENOTES 요소입니다. | 예 | 예 |
-| **소유자** | 소유자는 패키지를 업데이트할 수 있는 PowerShell 갤러리의 사용자 목록입니다. 소유자 목록은 패키지 매니페스트에 포함되지 않습니다. 추가 문서에 [항목 소유자 관리](../how-to/publishing-packages/managing-package-owners.md)방법이 설명되어 있습니다. | 아니요 | 아니요 |
-| **작성자** | 모듈 매니페스트에 작성자로 포함되며, 스크립트 매니페스트에서는 .AUTHOR로 포함됩니다. 작성자 필드는 패키지와 연결된 회사 또는 조직을 지정하는 데 자주 사용됩니다. | 예 | 예 |
-| **Copyright** | 모듈 매니페스트의 저작권 필드이며, 스크립트 매니페스트의 .COPYRIGHT입니다. | 예 | 예 |
-| **FileList** | 파일 목록은 PowerShell 갤러리에 게시될 때 패키지에서 가져옵니다. 매니페스트 정보로 제어할 수 없습니다. 참고: PowerShell 갤러리에는 각 패키지와 함께 나열된 추가 .nuspec 파일이 있습니다. 이 파일은 시스템에 패키지를 설치한 후에는 존재하지 않습니다. 패키지에 대한 Nuget 패키지 매니페스트이며, 무시할 수 있습니다. | 아니요 | 아니요 |
-| **태그** | 모듈의 경우 태그는 PSData\PrivateData 아래에 포함됩니다. 스크립트의 경우 섹션은 .TAGS로 레이블이 지정됩니다. 태그는 따옴표 안에 있는 경우에도 공백을 포함할 수 없습니다. 태그에는 추가 요구 사항과 의미가 있습니다. 추가 요구 사항과 의미는 이 항목의 뒷부분에 있는 태그 세부 정보 섹션에 설명되어 있습니다. | 예 | 예 |
-| **Cmdlet** | CmdletsToExport를 사용하여 모듈 매니페스트에 제공됩니다. 가장 좋은 방법은 사용자의 load-module 성능을 개선하므로 와일드카드 “*”를 사용하는 대신 항목을 명시적으로 나열하는 것입니다. | 예 | 아니요 |
-| **함수** | FunctionsToExport를 사용하여 모듈 매니페스트에 제공됩니다. 가장 좋은 방법은 사용자의 load-module 성능을 개선하므로 와일드카드 “*”를 사용하는 대신 항목을 명시적으로 나열하는 것입니다. | 예 | 아니요 |
-| **DSC 리소스** | PowerShell 버전 5.0 이상에서 사용되는 모듈의 경우 DscResourcesToExport를 사용하여 매니페스트에 제공됩니다. 모듈이 PowerShell 4에서 사용되는 경우 DSCResourcesToExport는 지원되는 매니페스트 키가 아니므로 사용할 수 없습니다. (DSC는 PowerShell 4 이전에서는 사용할 수 없습니다.) | 예 | 아니요 |
-| **워크플로** | 워크플로는 PowerShell 갤러리에 스크립트로 게시되고 코드에서 워크플로로 식별됩니다([Connect-AzureVM](https://www.powershellgallery.com/packages/Connect-AzureVM/1.0/Content/Connect-AzureVM.ps1) 참조). 워크플로는 매니페스트에서 제어되지 않습니다. | 아니요 | 아니요 |
-| **역할 기능** | PowerShell 갤러리에 게시되는 모듈에 JEA에서 사용되는 하나 이상의 역할 기능(.psrc) 파일이 있을 때 나열됩니다. [역할 기능](/powershell/scripting/learn/remoting/jea/role-capabilities)에 대한 자세한 내용은 JEA 문서를 참조하세요. | 예 | 아니요 |
-| **PowerShell 버전** | 스크립트 또는 모듈 매니페스트에 지정됩니다. PowerShell 5.0 이하에서 사용하도록 디자인된 모듈의 경우 태그를 사용하여 제어됩니다. Desktop의 경우 PSEdition_Desktop 태그를 사용하고, Core의 경우 PSEdition_Core를 사용합니다. PowerShell 5.1 이상에서만 사용할 모듈의 경우 주 매니페스트에 CompatiblePSEditions 키가 있습니다. 자세한 내용은 [PowerShell Get 설명서](module-psedition-support.md)에서 PS Edition 기능을 참조하세요. | 예 | 예 |
-| **종속성** | 종속성은 모듈에서 RequiredModules로 선언되거나 스크립트 매니페스트에서 #Requires –Module (이름)로 선언되는 PowerShell 갤러리의 모듈입니다. | 예 | 예 |
-| **최소 PowerShell 버전** | 모듈 매니페스트에서 PowerShellVersion으로 지정될 수 있습니다. | 예 | 아니요 |
-| **버전 기록** | 버전 기록은 PowerShell 갤러리의 모듈에 대한 업데이트를 반영합니다. 삭제 기능을 사용하여 패키지의 버전이 숨겨져 있으면 패키지 소유자에게만 표시되고 버전 기록에는 표시되지 않습니다. | 아니요 | 아니요 |
-| **프로젝트 사이트** | 프로젝트 사이트는 ProjectURI를 지정하여 모듈 매니페스트의 Privatedata\PSData 섹션의 모듈에 대해 제공됩니다. 스크립트 매니페스트에서는 .PROJECTURI를 지정하여 제어됩니다. | 예 | 예 |
-| **라이선스** | 라이선스 링크는 LicenseURI를 지정하여 모듈 매니페스트의 Privatedata\PSData 섹션의 모듈에 대해 제공됩니다. 스크립트 매니페스트에서는 .LICENSEURI를 지정하여 제어됩니다. 라이선스가 LicenseURI를 통해 제공되지 않거나 모듈 내에서 제공되지 않는 경우, PowerShell 갤러리에 대한 사용 약관에 패키지에 대한 사용 약관이 명시됩니다. 자세한 내용은 사용 약관을 참조하세요. | 예 | 예 |
-| **아이콘** | 스크립트 매니페스트에서 또는 모듈 매니페스트의 Privatedata-PSData 섹션에서 IconURI 플래그를 제공하여 PowerShell 갤러리의 패키지에 대한 아이콘을 지정할 수 있습니다. IconURI는 배경이 투명한 32x32 이미지를 가리켜야 합니다. URI는 **반드시** 직접 이미지 URL이어야 하며, 이미지가 포함된 웹 페이지 또는 PowerShell 갤러리 패키지의 파일로 이동하면 **안 됩니다**. | 예 | 예 |
+| **제목** | 갤러리에 게시되는 패키지의 이름입니다.  | 예 | 예 |
+| **버전** | 표시되는 버전은 메타데이터의 버전 문자열이며, 버전이 지정된 경우 시험판입니다. 모듈 매니페스트에서 버전의 주 부분은 ModuleVersion입니다. 스크립트의 경우 .VERSION으로 식별됩니다. 시험판 버전 문자열이 지정되면 모듈의 경우 ModuleVersion에 추가되며, 스크립트의 경우 .VERSION의 일부로 지정됩니다. [모듈](module-prerelease-support.md) 및 [스크립트](script-prerelease-support.md)에 시험판 문자열 지정에 대한 설명서가 있습니다. | yes | yes |
+| **설명** | 모듈 매니페스트의 설명이며, 스크립트 파일 매니페스트에서는 .DESCRIPTION입니다. | yes | yes |
+| **라이선스 동의 필요** | 모듈은 모듈 매니페스트를 RequireLicenseAcceptance = $true로 수정하고, LicenseURI를 제공하고, 모듈 폴더의 루트에 license.txt 파일을 제공하여 사용자가 라이선스를 승인하도록 요구할 수 있습니다. [라이선스 동의 필요](../how-to/working-with-packages/packages-that-require-license-acceptance.md) 항목에서 추가 정보를 확인할 수 있습니다. | yes | 예 |
+| **릴리스 정보** | 모듈의 경우 이 정보는 PSData\PrivateData 아래의 ReleaseNotes 섹션에서 가져옵니다. 스크립트 매니페스트에서는 .RELEASENOTES 요소입니다. | yes | yes |
+| **소유자** | 소유자는 패키지를 업데이트할 수 있는 PowerShell 갤러리의 사용자 목록입니다. 소유자 목록은 패키지 매니페스트에 포함되지 않습니다. 추가 문서에 [항목 소유자 관리](../how-to/publishing-packages/managing-package-owners.md)방법이 설명되어 있습니다. | 예 | 예 |
+| **작성자** | 모듈 매니페스트에 작성자로 포함되며, 스크립트 매니페스트에서는 .AUTHOR로 포함됩니다. 작성자 필드는 패키지와 연결된 회사 또는 조직을 지정하는 데 자주 사용됩니다. | yes | yes |
+| **Copyright** | 모듈 매니페스트의 저작권 필드이며, 스크립트 매니페스트의 .COPYRIGHT입니다. | yes | yes |
+| **FileList** | 파일 목록은 PowerShell 갤러리에 게시될 때 패키지에서 가져옵니다. 매니페스트 정보로 제어할 수 없습니다. 참고: PowerShell 갤러리에는 각 패키지와 함께 나열된 추가 .nuspec 파일이 있습니다. 이 파일은 시스템에 패키지를 설치한 후에는 존재하지 않습니다. 패키지에 대한 Nuget 패키지 매니페스트이며, 무시할 수 있습니다. | 예 | 예 |
+| **태그** | 모듈의 경우 태그는 PSData\PrivateData 아래에 포함됩니다. 스크립트의 경우 섹션은 .TAGS로 레이블이 지정됩니다. 태그는 따옴표 안에 있는 경우에도 공백을 포함할 수 없습니다. 태그에는 추가 요구 사항과 의미가 있습니다. 추가 요구 사항과 의미는 이 항목의 뒷부분에 있는 태그 세부 정보 섹션에 설명되어 있습니다. | yes | yes |
+| **Cmdlet** | CmdletsToExport를 사용하여 모듈 매니페스트에 제공됩니다. 가장 좋은 방법은 사용자의 load-module 성능을 개선하므로 와일드카드 “*”를 사용하는 대신 항목을 명시적으로 나열하는 것입니다. | yes | 예 |
+| **함수** | FunctionsToExport를 사용하여 모듈 매니페스트에 제공됩니다. 가장 좋은 방법은 사용자의 load-module 성능을 개선하므로 와일드카드 “*”를 사용하는 대신 항목을 명시적으로 나열하는 것입니다. | yes | 예 |
+| **DSC 리소스** | PowerShell 버전 5.0 이상에서 사용되는 모듈의 경우 DscResourcesToExport를 사용하여 매니페스트에 제공됩니다. 모듈이 PowerShell 4에서 사용되는 경우 DSCResourcesToExport는 지원되는 매니페스트 키가 아니므로 사용할 수 없습니다. (DSC는 PowerShell 4 이전에서는 사용할 수 없습니다.) | yes | 예 |
+| **워크플로** | 워크플로는 PowerShell 갤러리에 스크립트로 게시되고 코드에서 워크플로로 식별됩니다([Connect-AzureVM](https://www.powershellgallery.com/packages/Connect-AzureVM/1.0/Content/Connect-AzureVM.ps1) 참조). 워크플로는 매니페스트에서 제어되지 않습니다. | 예 | 예 |
+| **역할 기능** | PowerShell 갤러리에 게시되는 모듈에 JEA에서 사용되는 하나 이상의 역할 기능(.psrc) 파일이 있을 때 나열됩니다. [역할 기능](/powershell/scripting/learn/remoting/jea/role-capabilities)에 대한 자세한 내용은 JEA 문서를 참조하세요. | yes | 예 |
+| **PowerShell 버전** | 스크립트 또는 모듈 매니페스트에 지정됩니다. PowerShell 5.0 이하에서 사용하도록 디자인된 모듈의 경우 태그를 사용하여 제어됩니다. Desktop의 경우 PSEdition_Desktop 태그를 사용하고, Core의 경우 PSEdition_Core를 사용합니다. PowerShell 5.1 이상에서만 사용할 모듈의 경우 주 매니페스트에 CompatiblePSEditions 키가 있습니다. 자세한 내용은 [PowerShell Get 설명서](module-psedition-support.md)에서 PS Edition 기능을 참조하세요. | yes | yes |
+| **종속성** | 종속성은 모듈에서 RequiredModules로 선언되거나 스크립트 매니페스트에서 #Requires –Module (이름)로 선언되는 PowerShell 갤러리의 모듈입니다. | yes | yes |
+| **최소 PowerShell 버전** | 모듈 매니페스트에서 PowerShellVersion으로 지정될 수 있습니다. | yes | 예 |
+| **버전 기록** | 버전 기록은 PowerShell 갤러리의 모듈에 대한 업데이트를 반영합니다. 삭제 기능을 사용하여 패키지의 버전이 숨겨져 있으면 패키지 소유자에게만 표시되고 버전 기록에는 표시되지 않습니다. | 예 | 예 |
+| **프로젝트 사이트** | 프로젝트 사이트는 ProjectURI를 지정하여 모듈 매니페스트의 Privatedata\PSData 섹션의 모듈에 대해 제공됩니다. 스크립트 매니페스트에서는 .PROJECTURI를 지정하여 제어됩니다. | yes | yes |
+| **라이선스** | 라이선스 링크는 LicenseURI를 지정하여 모듈 매니페스트의 Privatedata\PSData 섹션의 모듈에 대해 제공됩니다. 스크립트 매니페스트에서는 .LICENSEURI를 지정하여 제어됩니다. 라이선스가 LicenseURI를 통해 제공되지 않거나 모듈 내에서 제공되지 않는 경우, PowerShell 갤러리에 대한 사용 약관에 패키지에 대한 사용 약관이 명시됩니다. 자세한 내용은 사용 약관을 참조하세요. | yes | yes |
+| **아이콘** | 스크립트 매니페스트에서 또는 모듈 매니페스트의 Privatedata-PSData 섹션에서 IconURI 플래그를 제공하여 PowerShell 갤러리의 패키지에 대한 아이콘을 지정할 수 있습니다. IconURI는 배경이 투명한 32x32 이미지를 가리켜야 합니다. URI는 **반드시** 직접 이미지 URL이어야 하며, 이미지가 포함된 웹 페이지 또는 PowerShell 갤러리 패키지의 파일로 이동하면 **안 됩니다**. | yes | yes |
 
 
 ## <a name="editing-package-details"></a>패키지 세부 정보 편집
 
 PowerShell 갤러리 편집 패키지 페이지에서는 게시자가 패키지에 대해 표시되는 여러 필드를 변경할 수 있습니다.
 
-- Title
-- 설명
+- 제목
+- Description
 - 요약
 - 아이콘 URL
 - 프로젝트 홈페이지 URL
-- 작성자
+- Authors
 - 저작권
-- 태그
+- 태그들
 - 릴리스 정보
 - 라이선스 필요
 
@@ -84,8 +84,8 @@ PowerShell 갤러리 및 PowerShellGet cmdlet이 고유하게 처리하는 태�
 | SQL |  |
 | AWS |  |
 | DSCResource |  |
-| 자동화 |  |
-| REST |  |
+| Automation |  |
+| REST (영문) |  |
 | ActiveDirectory | AD는 현재 단독으로 사용되지 않습니다.  |
 | SQLServer |  |
 | DBA |  |
@@ -93,7 +93,7 @@ PowerShell 갤러리 및 PowerShellGet cmdlet이 고유하게 처리하는 태�
 | 데이터베이스 | Databases(복수)는 그다지 적합하지 않습니다. |
 | DevOps |  |
 | Windows |  |
-| Build |  |
+| 빌드 |  |
 | 배포 | Deploy는 자주 사용되지 않습니다. |
 | 클라우드 |  |
 | GIT |  |
@@ -101,7 +101,7 @@ PowerShell 갤러리 및 PowerShellGet cmdlet이 고유하게 처리하는 태�
 | VersionControl | Version은 더 자주 사용되지만 덜 정확합니다.  |
 | 로깅 | 동작인 경우 Logging을 사용하는 것이 좋습니다. |
 | 로그 | 사물인 경우 Log를 사용하는 것이 좋습니다. |
-| 백업 |  |
+| Backup |  |
 | IaaS |  |
 | Linux |  |
 | IIS |  |
@@ -110,7 +110,7 @@ PowerShell 갤러리 및 PowerShellGet cmdlet이 고유하게 처리하는 태�
 | GitHub |  |
 | Json |  |
 | Exchange |  |
-| Network (네트워크) | Networking은 비슷하지만 자주 사용되지 않습니다. |
+| 네트워크 | Networking은 비슷하지만 자주 사용되지 않습니다. |
 | SharePoint |  |
 | 보고 | Reporting은 동작이고 Report는 사물입니다. |
 | 보고서 | Report는 사물입니다. |
@@ -119,7 +119,7 @@ PowerShell 갤러리 및 PowerShellGet cmdlet이 고유하게 처리하는 태�
 | VSTS |  |
 | Excel |  |
 | Google |  |
-| Color |  |
+| 색 |  |
 | DNS |  |
 | Office365 | Office의 철자를 모두 쓰는 것이 좋습니다. O365는 짧지만 일반적으로 사용되지 않습니다. |
 | Gitlab |  |

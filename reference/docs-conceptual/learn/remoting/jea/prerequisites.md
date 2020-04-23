@@ -3,13 +3,13 @@ ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA 필수 조건
 ms.openlocfilehash: 1833bacf49eebcccefc10f7c85a39732559c1a97
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74416720"
 ---
-# <a name="prerequisites"></a>필수 구성 요소
+# <a name="prerequisites"></a>사전 요구 사항
 
 Just Enough Administration은 PowerShell 5.0 이상에 포함된 기능입니다. 이 문서에서는 JEA 사용을 시작하기 위해 충족해야 하는 필수 조건을 설명합니다.
 

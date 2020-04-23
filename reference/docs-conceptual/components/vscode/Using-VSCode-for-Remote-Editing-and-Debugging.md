@@ -3,10 +3,10 @@ title: Visual Studio Code를 사용하여 원격 편집 및 디버깅
 description: Visual Studio Code를 사용하여 원격 편집 및 디버깅
 ms.date: 06/13/2019
 ms.openlocfilehash: 5ce7f575d90ff47fd6b8a0a2b567e972ec3a9fef
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78279168"
 ---
 # <a name="using-visual-studio-code-for-remote-editing-and-debugging"></a>Visual Studio Code를 사용하여 원격 편집 및 디버깅

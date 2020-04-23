@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: Linux용 DSC(필요한 상태 구성) 시작
 ms.openlocfilehash: b1bc9b9fafd89a1af0f967de38a817bff1f3ffe3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "73933843"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Linux용 DSC(필요한 상태 구성) 시작
@@ -20,13 +20,13 @@ ms.locfileid: "73933843"
 - CentOS 5, 6 및 7(x86/x64)
 - Debian GNU/Linux 6, 7 및 8(x86/x64)
 - Oracle Linux 5, 6 및 7(x86/x64)
-- Red Hat Enterprise Linux 서버 5, 6 및 7(x86/x64)
+- Red Hat Enterprise Linux Server 5, 6 및 7(x86/x64)
 - SUSE Linux Enterprise Server 10, 11 및 12(x86/x64)
 - Ubuntu Server 12.04 LTS, 14.04 LTS 및 16.04 LTS(x86/x64)
 
 다음 표에서는 Linux용 DSC에 대한 필수 패키지 종속성에 대해 설명합니다.
 
-|  필수 패키지 |  설명 |  최소 버전 |
+|  필수 패키지 |  Description |  최소 버전 |
 |---|---|---|
 | glibc| GNU 라이브러리| 2…4 – 31.30|
 | python| Python| 2.4 – 3.4|
@@ -41,7 +41,7 @@ Linux용 DSC를 설치하려면 먼저 [OMI(개방형 관리 인프라)](https:/
 
 ### <a name="installing-omi"></a>OMI 설치
 
-Linux용 필요한 상태 구성을 사용하려면 OMI(개방형 관리 인프라) CIM 서버 버전 1.0.8.1 이상이 있어야 합니다. OMI는 Open Group에서 다운로드할 수 있습니다. [OMI(개방형 관리 인프라)](https://github.com/Microsoft/omi).
+Linux용 필요한 상태 구성을 사용하려면 OMI(개방형 관리 인프라) CIM 서버 버전 1.0.8.1 이상이 있어야 합니다. OMI는 Open Group: [Open Management Infrastructure(OMI)](https://github.com/Microsoft/omi)(개방형 관리 인프라)에서 다운로드할 수 있습니다.
 
 OMI를 설치하려면 Linux 시스템(.rpm 또는.deb)과 OpenSSL 버전(ssl_098 또는 ssl_100) 및 아키텍처(x64/x86)에 적절한 패키지를 설치합니다. RPM 패키지는 CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Oracle Linux에 적합합니다. DEB 패키지는 Debian GNU/Linux 및 Ubuntu 서버에 적합합니다. ssl_098 패키지는 OpenSSL 0.9.8이 설치된 컴퓨터에 적합하고, ssl_100 패키지는 OpenSSL 1.0이 설치된 컴퓨터에 적합합니다.
 
@@ -183,7 +183,7 @@ Linux용 DSC는 로컬 Linux 컴퓨터의 구성으로 작업하는 스크립트
 
 Linux용 DSC 메시지용으로 다음 로그 파일이 생성됩니다.
 
-|로그 파일|디렉터리|설명|
+|로그 파일|디렉터리|Description|
 |---|---|---|
 |**omiserver.log**|`/var/opt/omi/log`|OMI CIM 서버의 작업에 관한 메시지입니다.|
 |**dsc.log**|`/var/opt/omi/log`|LCM(로컬 구성 관리자)의 작업 및 DSC 리소스 작업에 대한 메시지입니다.|

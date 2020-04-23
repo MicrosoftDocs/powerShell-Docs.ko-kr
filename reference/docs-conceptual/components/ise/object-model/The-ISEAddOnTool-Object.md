@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: ISEAddOnTool 개체
 ms.openlocfilehash: a5357005ec1a883f5a14882a42e3150e09ff33a2
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75736133"
 ---
 # <a name="the-iseaddontool-object"></a>ISEAddOnTool 개체

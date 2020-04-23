@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: 웹 기반 Windows PowerShell 콘솔 사용
-ms.openlocfilehash: 29aa123049884004dd4e1a8f042783538d80abc6
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: 9a5d6d825dc82710466768bc612b012dd80937da
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500880"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978664"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Use the Web-based Windows PowerShell Console
 
@@ -211,9 +211,8 @@ Alt+F7          | 명령 기록 목록 지우기
 
     이와 비슷한 방법으로 콘솔 높이를 변경할 수 있습니다.
 
-    콘솔 표시를 사용자 지정할 수 있는 추가적인 예가 [Windows PowerShell 팀 블로그](h https://devblogs.microsoft.com/powershell)에 나와 있습니다.
+    콘솔 표시를 사용자 지정할 수 있는 추가적인 예가 [Windows PowerShell 팀 블로그](https://devblogs.microsoft.com/powershell)에 나와 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
 - [스크립팅 이용자 여러분,](https://devblogs.microsoft.com/scripting/)
-- [PowerShell 팀 블로그](https://devblogs.microsoft.com/powershell/)

@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: DSC 구성
 ms.openlocfilehash: d7749ec88f9cca3e29c6b38d61fb73776af7ceb4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954500"
 ---
 # <a name="dsc-configurations"></a>DSC 구성
@@ -165,7 +165,7 @@ cmdlet인 [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-D
 **Import-DscResource**에서는 두 개의 매개 변수를 지원합니다.
 
 - **ModuleName**은 **Import-DscResource**를 사용하는 권장 방법입니다. 가져올 리소스를 포함하는 모듈의 이름을 받습니다(모듈 이름으로 이루어진 문자열 배열도 받음).
-- **Name**은 가져올 리소스의 이름입니다. 이 이름은 [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)에 의해 "Name"으로 반환한 친숙한 이름이 아니라, 리소스 스키마를 정의할 때 사용된 클래스 이름입니다([Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)에 의해 **ResourceType**으로 반환됨).
+- **Name**은 가져올 리소스의 이름입니다. 이 이름은 [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)에 의해 "Name"으로 반환한 친숙한 이름이 아니라, 리소스 스키마를 정의할 때 사용된 클래스 이름입니다(**Get-DscResource**에 의해 [ResourceType](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)으로 반환됨).
 
 `Import-DSCResource` 사용에 대한 자세한 내용은 [Import-DSCResource 사용](import-dscresource.md)을 참조하세요.
 
@@ -175,6 +175,6 @@ PowerShell 4.0에서 DSC 리소스를 저장해야 하는 경우에는 차이가
 
 ## <a name="see-also"></a>참고 항목
 
-- [Windows PowerShell 필요한 상태 구성 개요](../overview/overview.md)
+- [Windows PowerShell Desired State Configuration 개요](../overview/overview.md)
 - [DSC 리소스](../resources/resources.md)
 - [로컬 구성 관리자 구성](../managing-nodes/metaConfig.md)

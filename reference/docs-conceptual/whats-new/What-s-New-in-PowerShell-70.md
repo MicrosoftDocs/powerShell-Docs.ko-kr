@@ -3,10 +3,10 @@ title: PowerShell 7.0의 새로운 기능
 description: PowerShell 7.0에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 03/04/2020
 ms.openlocfilehash: 84631d9fa169c8d1b4cd4dd23eb3d7c1bca120bb
-ms.sourcegitcommit: b0966d61293e28ecdb929c5065be9760884e4e7d
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80263138"
 ---
 # <a name="whats-new-in-powershell-70"></a>PowerShell 7.0의 새로운 기능
@@ -222,7 +222,7 @@ $todaysDate ??= (Get-Date).ToShortDateString()
 1/10/2020
 ```
 
-### <a name="null-conditional-member-access-operators--and--experimental"></a>Null 조건 멤버 액세스 ?. 및 ?[](실험적)
+### <a name="null-conditional-member-access-operators--and--experimental"></a>Null 조건 멤버 액세스 ?. 및 ?[] (실험적)
 
 > [!NOTE]
 > **PSNullConditionalOperators**라는 실험적 기능입니다. 자세한 내용은 [실험적 기능](/powershell/module/microsoft.powershell.core/about/about_experimental_features?view=powershell-7)을 참조하세요.

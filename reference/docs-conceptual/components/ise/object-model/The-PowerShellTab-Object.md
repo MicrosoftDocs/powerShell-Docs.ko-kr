@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: PowerShellTab 개체
 ms.openlocfilehash: 55e3678a8285f0ec7e8131d98c87478216c26f37
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "79402520"
 ---
 # <a name="the-powershelltab-object"></a>PowerShellTab 개체

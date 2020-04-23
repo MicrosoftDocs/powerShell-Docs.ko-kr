@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: Linux용 DSC nxUser 리소스
 ms.openlocfilehash: 6d7b52809741813af7fa80b1c6372b267aff4777
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954800"
 ---
 # <a name="dsc-for-linux-nxuser-resource"></a>Linux용 DSC nxUser 리소스
@@ -37,7 +37,7 @@ nxUser <string> #ResourceName
 |---|---|
 |UserName |파일 또는 디렉터리에 대한 상태를 확인하려는 위치를 지정합니다. |
 |FullName |사용자 계정에 사용할 전체 이름을 포함하는 문자열입니다. |
-|설명 |사용자 계정에 대한 설명입니다. |
+|Description |사용자 계정에 대한 설명입니다. |
 |암호 |Linux 컴퓨터용으로 적절한 형태의 사용자 암호 해시입니다. 일반적으로 솔트된 SHA-256 또는 SHA-512 해시입니다. Debian 및 Ubuntu Linux에서 이 값은 `mkpasswd` 명령을 사용하여 생성할 수 있습니다. 다른 Linux 배포판의 경우 Python의 암호화 라이브러리의 암호화 방법을 사용하여 해시를 생성할 수 있습니다. |
 |사용 안 함 |계정이 활성화되어 있는지 여부를 나타냅니다. 이 계정을 사용하지 않도록 하려면 이 속성을 `$true`로 설정하고, 사용하도록 하려면 `$false`로 설정합니다. |
 |PasswordChangeRequired |사용자가 암호를 변경할 수 있는지 여부를 나타냅니다. 사용자가 암호를 변경할 수 없도록 하려면 이 속성을 `$true`로 설정하고, 사용자가 암호를 변경할 수 있도록 하려면 `$false`로 설정합니다. 기본값은 `$false`입니다. 이 속성은 사용자 계정이 이전에 존재하지 않아서 만들어지는 경우에만 평가됩니다. |
@@ -46,7 +46,7 @@ nxUser <string> #ResourceName
 
 ## <a name="common-properties"></a>공용 속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
 |DependsOn |이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. |
 |Ensure |계정이 존재하는지 여부를 지정합니다. 계정이 존재하도록 하려면 이 속성을 **Present**로 설정하고, 계정이 존재하지 않도록 하려면 **Absent**로 설정합니다. |

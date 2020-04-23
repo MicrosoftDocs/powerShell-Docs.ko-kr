@@ -3,10 +3,10 @@ title: SSH를 통한 PowerShell 원격
 description: SSH를 사용하여 PowerShell Core에서 원격 작업
 ms.date: 09/30/2019
 ms.openlocfilehash: 0f2fb13010d62dec5b19b373a24a199bff22665d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "73444368"
 ---
 # <a name="powershell-remoting-over-ssh"></a>SSH를 통한 PowerShell 원격
@@ -53,7 +53,7 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
    > [!NOTE]
    > PowerShell을 OpenSSH의 기본 셸로 설정하려면 [OpenSSH용 Windows 구성](/windows-server/administration/openssh/openssh_server_configuration)을 참조하세요.
 
-1. `$env:ProgramData\ssh`에 있는 `sshd_config` 파일을 편집합니다.
+1. `sshd_config`에 있는 `$env:ProgramData\ssh` 파일을 편집합니다.
 
    암호 인증이 활성화되었는지 확인합니다.
 
@@ -97,7 +97,7 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
    Restart-Service sshd
    ```
 
-1. Path 환경 변수에 OpenSSH가 설치된 경로를 추가합니다. 정의합니다(예: `C:\Program Files\OpenSSH\`). 이 항목을 입력하면 `ssh.exe`를 찾을 수 있습니다.
+1. Path 환경 변수에 OpenSSH가 설치된 경로를 추가합니다. `C:\Program Files\OpenSSH\`)을 입력합니다. 이 항목을 입력하면 `ssh.exe`를 찾을 수 있습니다.
 
 ## <a name="set-up-on-an-ubuntu-1604-linux-computer"></a>Ubuntu 16.04 Linux 컴퓨터에서 설정하기
 
@@ -109,7 +109,7 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
    sudo apt install openssh-server
    ```
 
-1. `/etc/ssh` 위치에서 `sshd_config` 파일을 편집합니다.
+1. `sshd_config` 위치에서 `/etc/ssh` 파일을 편집합니다.
 
    암호 인증이 활성화되었는지 확인합니다.
 
@@ -141,12 +141,12 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
 
    다음 단계를 수행하여 SSH 원격 기능이 활성화되어 있는지 확인합니다.
 
-   1. `System Preferences`을 엽니다.
+   1. `System Preferences`를 엽니다.
    1. `Sharing`을 클릭합니다.
    1. `Remote Login`을 선택하고 `Remote Login: On`으로 설정합니다.
    1. 적절한 사용자에게 액세스를 허용합니다.
 
-1. `/private/etc/ssh/sshd_config` 위치에서 `sshd_config` 파일을 편집합니다.
+1. `sshd_config` 위치에서 `/private/etc/ssh/sshd_config` 파일을 편집합니다.
 
    **nano**와 같은 텍스트 편집기를 사용합니다.
 

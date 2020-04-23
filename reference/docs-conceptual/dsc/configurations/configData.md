@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 구성 데이터 사용
 ms.openlocfilehash: 7d13b19ba932d1a818194a221f145fd1a3832547
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954190"
 ---
 # <a name="using-configuration-data-in-dsc"></a>DSC에서 구성 데이터 사용
@@ -23,7 +23,7 @@ ms.locfileid: "71954190"
 ## <a name="the-configurationdata-common-parameter"></a>ConfigurationData 일반 매개 변수
 
 DSC 구성에서는 구성을 컴파일할 때 지정하는 일반 매개 변수 **ConfigurationData**를 사용합니다.
-구성을 컴파일하는 방법에 대한 자세한 내용은 [DSC 구성](configurations.md)을 참조하세요.
+구성 컴파일에 대한 자세한 내용은 [DSC 구성](configurations.md)을 참조하세요.
 
 **ConfigurationData** 매개 변수는 **AllNodes**라는 키가 하나 이상 있어야 하는 해시 테이블입니다.
 다른 키도 하나 이상 있을 수 있습니다.

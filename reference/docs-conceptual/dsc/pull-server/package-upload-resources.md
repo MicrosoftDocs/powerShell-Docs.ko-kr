@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: 리소스 패키지 및 끌어오기 서버에 업로드
 ms.openlocfilehash: 8aac343d7495ecda94ed76d1d97079397eecd65f
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78278507"
 ---
 # <a name="package-and-upload-resources-to-a-pull-server"></a>리소스 패키지 및 끌어오기 서버에 업로드
@@ -41,13 +41,13 @@ ms.locfileid: "78278507"
 
 ### <a name="create-checksums"></a>CheckSum 만들기
 
-리소스 모듈이 압축되고 이름이 바뀐 후 **CheckSum**을 만들어야 합니다.  **CheckSum**은 클라이언트의 LCM에서 리소스가 변경되었고 다시 다운로드되어야 하는지 확인하는 데 사용됩니다. 아래 예제와 같이 [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum) cmdlet을 사용하여 **CheckSum**을 만들 수 있습니다.
+리소스 모듈이 압축되고 이름이 바뀐 후 **CheckSum**을 만들어야 합니다.  **CheckSum**은 클라이언트의 LCM에서 리소스가 변경되었고 다시 다운로드되어야 하는지 확인하는 데 사용됩니다. 아래 예제와 같이 **New-DSCCheckSum** cmdlet을 사용하여 [CheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum)을 만들 수 있습니다.
 
 ```powershell
 New-DscChecksum -Path .\xPSDesiredStateConfiguration_8.4.4.0.zip
 ```
 
-출력은 표시되지 않지만 이제 "xPSDesiredStateConfiguration_8.4.4.0.zip.checksum" 파일이 표시됩니다. `-Path` 매개 변수를 사용하여 파일 디렉터리에서 `New-DSCCheckSum`을 실행할 수도 있습니다. 체크섬이 이미 있는 경우 `-Force` 매개 변수를 사용하여 체크섬을 다시 만들 수 있습니다.
+출력은 표시되지 않지만 이제 "xPSDesiredStateConfiguration_8.4.4.0.zip.checksum" 파일이 표시됩니다. `New-DSCCheckSum` 매개 변수를 사용하여 파일 디렉터리에서 `-Path`을 실행할 수도 있습니다. 체크섬이 이미 있는 경우 `-Force` 매개 변수를 사용하여 체크섬을 다시 만들 수 있습니다.
 
 ### <a name="where-to-store-resource-archives"></a>리소스 보관 파일을 저장할 위치
 

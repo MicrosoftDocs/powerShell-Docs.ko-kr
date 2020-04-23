@@ -3,10 +3,10 @@ ms.date: 12/06/2019
 keywords: powershell,cmdlet
 title: Windows PowerShell 시스템 요구 사항
 ms.openlocfilehash: 713b062916fec0c5c70ea9a7f95fea3570afb64a
-ms.sourcegitcommit: 0e4c69d8b5cf71431592fe41da816dec9b70f1f9
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74953792"
 ---
 # <a name="windows-powershell-system-requirements"></a>Windows PowerShell 시스템 요구 사항
@@ -120,8 +120,8 @@ Windows Server 2012 R2 또는 Windows Server 2012의 Server Core 설치 옵션�
   - [Show-ControlPanelItem](/powershell/module/Microsoft.PowerShell.Management/Show-ControlPanelItem)
   - [Show-EventLog](/powershell/module/Microsoft.PowerShell.Management/Show-EventLog)
 - 매개 변수
-  - [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet의 **ShowWindow** 매개 변수
-  - [Register-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Register-PSSessionConfiguration) 및 [Set-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Set-PSSessionConfiguration) cmdlet의 **ShowSecurityDescriptorUI** 매개 변수
+  - **Get-Help** cmdlet의 [ShowWindow](/powershell/module/Microsoft.PowerShell.Core/Get-Help) 매개 변수
+  - **Register-PSSessionConfiguration** 및 [Set-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Register-PSSessionConfiguration) cmdlet의 [ShowSecurityDescriptorUI](/powershell/module/Microsoft.PowerShell.Core/Set-PSSessionConfiguration) 매개 변수
 
 ## <a name="windows-powershell-engine-requirements"></a>Windows PowerShell 엔진 요구 사항
 

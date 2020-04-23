@@ -3,10 +3,10 @@ ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 컴퓨터에 대한 정보 수집
 ms.openlocfilehash: 9407ff15b3c3ca6b3adab60d4d01d957c599e79e
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75737239"
 ---
 # <a name="collecting-information-about-computers"></a>컴퓨터에 대한 정보 수집
@@ -117,7 +117,7 @@ CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ...
 ```
 
-`Get-CimInstance`의 **Property** 매개 변수는 PowerShell로 반환되는 개체가 아니라 WMI 클래스 인스턴스에서 반환되는 속성을 제한하기 때문에 추가 데이터가 반환됩니다. 출력을 줄이려면 `Select-Object`를 사용합니다.
+**의** Property`Get-CimInstance` 매개 변수는 PowerShell로 반환되는 개체가 아니라 WMI 클래스 인스턴스에서 반환되는 속성을 제한하기 때문에 추가 데이터가 반환됩니다. 출력을 줄이려면 `Select-Object`를 사용합니다.
 
 ```powershell
 Get-CimInstance -ClassName Win32_QuickFixEngineering -Property HotFixId | Select-Object -Property HotFixId
@@ -242,7 +242,7 @@ PSComputerName :
 Get-CimInstance -ClassName Win32_Service | Select-Object -Property Status,Name,DisplayName
 ```
 
-이름이 매우 긴, 가끔 발생하는 서비스의 이름을 전체 표시하려면 **AutoSize** 및 **Wrap** 매개 변수와 함께 `Format-Table`을 사용하여 열 너비를 최적화하고 긴 이름이 잘리는 대신 줄 바꿈되도록 할 수 있습니다.
+이름이 매우 긴, 가끔 발생하는 서비스의 이름을 전체 표시하려면 `Format-Table`AutoSize**및**Wrap**매개 변수와 함께**을 사용하여 열 너비를 최적화하고 긴 이름이 잘리는 대신 줄 바꿈되도록 할 수 있습니다.
 
 ```powershell
 Get-CimInstance -ClassName Win32_Service | Format-Table -Property Status,Name,DisplayName -AutoSize -Wrap

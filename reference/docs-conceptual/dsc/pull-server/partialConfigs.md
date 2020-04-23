@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: PowerShell 필요한 상태 구성 부분 구성
 ms.openlocfilehash: 842acad221d468ca5e4c9e660f0205c567bcc220
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500765"
 ---
 # <a name="powershell-desired-state-configuration-partial-configurations"></a>PowerShell 필요한 상태 구성 부분 구성
 
-_적용 대상: Windows PowerShell 5.0 이상._
+적용 대상: Windows PowerShell 5.0 이상. 
 
 PowerShell 5.0에서 DSC(필요한 상태 구성)를 사용하면 구성을 여러 소스에서 조각화하여 제공할 수 있습니다. 대상 노드의 LCM(로컬 구성 관리자)은 이 조각들을 한데 모아 하나의 구성으로 적용합니다. 이 기능을 사용하면 구성에 대한 제어권을 팀이나 개인들 간에 공유할 수 있습니다. 예를 들어 두 개 이상의 개발자 팀이 어떤 서비스에 대해 공동으로 작업 중인 경우 이들은 각각 서비스의 해당 부분을 관리하는 구성을 만들 수 있습니다. 이 구성들의 각각은 서로 다른 끌어오기 서버에서 가져올 수 있으며, 개발의 서로 다른 단계에서 추가할 수 있습니다. 부분 구성은 또한 서로 다른 개인이나 팀이 단일 구성 문서에 대한 편집 작업을 조정하지 않고도 노드 구성의 다양한 측면을 제어할 수 있도록 해줍니다. 예를 들어 한 팀은 VM과 운영 체제를 배포하는 일을 담당하고, 다른 팀은 해당 VM에서 다른 애플리케이션과 서비스를 배포할 수도 있습니다. 부분 구성을 사용하면 어느 한 팀이 불필요하게 복잡해지지 않고 각 팀이 해당 팀의 구성을 만들 수 있습니다.
 
@@ -193,7 +193,7 @@ PartialConfigDemo
 
 ### <a name="naming-and-placing-the-configuration-documents-on-the-pull-server-configurationnames"></a>끌어오기 서버에서 구성 문서 이름 지정 및 배치(ConfigurationNames)
 
-부분 구성 문서는 끌어오기 서버용의 `web.config` 파일에서 **ConfigurationPath**로 지정된 폴더에 배치해야 합니다(일반적으로 `C:\Program
+부분 구성 문서는 끌어오기 서버용의 ** 파일에서 **ConfigurationPath`web.config`로 지정된 폴더에 배치해야 합니다(일반적으로 `C:\Program
 Files\WindowsPowerShell\DscService\Configuration`).
 
 #### <a name="naming-configuration-documents-on-the-pull-server-in-powershell-51"></a>PowerShell 5.1의 끌어오기 서버에서 구성 문서 이름 지정
@@ -213,7 +213,7 @@ SharePointConfig.mof.checksum
 
 ### <a name="naming-and-placing-the-configuration-documents-on-the-pull-server-configurationid"></a>끌어오기 서버에서 구성 문서 이름 지정 및 배치(ConfigurationID)
 
-부분 구성 문서는 끌어오기 서버용의 `web.config` 파일에서 **ConfigurationPath**로 지정된 폴더에 배치해야 합니다(일반적으로 `C:\Program Files\WindowsPowerShell\DscService\Configuration`). 구성 문서 이름을 다음과 같이 지정해야 합니다. `<ConfigurationName>.<ConfigurationID>.mof`. 여기서 _ConfigurationName_은 부분 구성의 이름이고, _ConfigurationID_는 대상 노드의 LCM에 정의된 구성 ID입니다. 이 예에서 구성 문서의 이름은 다음과 같아야 합니다.
+부분 구성 문서는 끌어오기 서버용의 **파일에서**ConfigurationPath`web.config`로 지정된 폴더에 배치해야 합니다(일반적으로 `C:\Program Files\WindowsPowerShell\DscService\Configuration`). 구성 문서 이름을 다음과 같이 지정해야 합니다. `<ConfigurationName>.<ConfigurationID>.mof`. 여기서 _ConfigurationName_은 부분 구성의 이름이고, _ConfigurationID_는 대상 노드의 LCM에 정의된 구성 ID입니다. 이 예에서 구성 문서의 이름은 다음과 같아야 합니다.
 
 ```
 ServiceAccountConfig.1d545e3b-60c3-47a0-bf65-5afc05182fd0.mof
@@ -307,7 +307,7 @@ configuration PartialConfigDemo
 PartialConfigDemo
 ```
 
-Settings 블록에 지정된 **RefreshMode**는 "Pull"이지만, `SharePointConfig` 부분 구성에 대한 **RefreshMode**는 "Push"입니다.
+Settings 블록에 지정된 **RefreshMode**는 "Pull"이지만, **부분 구성에 대한**RefreshMode`SharePointConfig`는 "Push"입니다.
 
 각각의 새로 고침 모드에 대해 위에서 설명한 대로 구성 MOF 파일에 이름을 지정하고 배치합니다.
 `Publish-DSCConfiguration`을 호출하여 `SharePointConfig` 부분 구성을 게시하고, 끌어오기 서버에서 `ServiceAccountConfig` 구성을 끌어오기를 기다리거나 [Update-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Update-DscConfiguration)을 호출하여 새로 고침을 적용합니다.

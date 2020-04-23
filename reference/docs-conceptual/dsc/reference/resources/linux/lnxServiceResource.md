@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: Linux용 DSC nxService 리소스
 ms.openlocfilehash: 6bb58796c4deff1153f932f61c328d84f8c4d2ca
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954840"
 ---
 # <a name="dsc-for-linux-nxservice-resource"></a>Linux용 DSC nxService 리소스
@@ -28,16 +28,16 @@ nxService <string> #ResourceName
 
 ## <a name="properties"></a>속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
-|이름 |구성할 서비스/데몬의 이름입니다. |
+|속성 |구성할 서비스/데몬의 이름입니다. |
 |컨트롤러 |서비스를 구성할 때 사용할 서비스 컨트롤러의 형식입니다. |
 |사용 |부팅 시 서비스가 시작되는지 여부를 나타냅니다. |
-|State |서비스가 실행되고 있는지를 나타냅니다. 서비스가 실행 중이 아니도록 설정하려면 이 속성을 **Stopped**로 설정합니다. 서비스가 실행 중이도록 하려면 이 속성을 **Running**으로 설정합니다. |
+|시스템 상태 |서비스가 실행되고 있는지를 나타냅니다. 서비스가 실행 중이 아니도록 설정하려면 이 속성을 **Stopped**로 설정합니다. 서비스가 실행 중이도록 하려면 이 속성을 **Running**으로 설정합니다. |
 
 ## <a name="common-properties"></a>공용 속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
 |DependsOn |이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. |
 

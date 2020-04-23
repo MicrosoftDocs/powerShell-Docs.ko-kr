@@ -2,10 +2,10 @@
 ms.date: 09/13/2019
 title: FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기
 ms.openlocfilehash: 35d18dc894d90e698b38395b79ff4cf395515909
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "73444393"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기
@@ -54,15 +54,15 @@ Get-WinEvent -FilterHashtable @{
 | -------------- | --------------- | ---------------------------- |
 | LogName        | `<String[]>`    | 예                          |
 | ProviderName   | `<String[]>`    | 예                          |
-| 경로           | `<String[]>`    | 아니요                           |
-| 키워드       | `<Long[]>`      | 아니요                           |
-| ID             | `<Int32[]>`     | 아니요                           |
-| 수준          | `<Int32[]>`     | 아니요                           |
-| StartTime      | `<DateTime>`    | 아니요                           |
-| EndTime        | `<DateTime>`    | 아니요                           |
-| UserID         | `<SID>`         | 아니요                           |
-| 데이터           | `<String[]>`    | 아니요                           |
-| `<named-data>` | `<String[]>`    | 아니요                           |
+| 경로           | `<String[]>`    | 예                           |
+| 키워드       | `<Long[]>`      | 예                           |
+| ID             | `<Int32[]>`     | 예                           |
+| Level          | `<Int32[]>`     | 예                           |
+| StartTime      | `<DateTime>`    | 예                           |
+| EndTime        | `<DateTime>`    | 예                           |
+| UserID         | `<SID>`         | 예                           |
+| 데이터           | `<String[]>`    | 예                           |
+| `<named-data>` | `<String[]>`    | 예                           |
 
 `<named-data>` 키는 명명된 이벤트 데이터 필드를 나타냅니다. 예를 들어, Perflib 이벤트 1008은 다음 이벤트 데이터를 포함할 수 있습니다.
 
@@ -155,7 +155,7 @@ WdiDiagnostic    Property   static System.Diagnostics.Eventing.Reader.StandardEv
 
 **Keywords** 이름 및 열거형 값은 다음과 같습니다.
 
-| 이름             |  Value            |
+| 속성             |  값            |
 | ---------------- | ------------------|
 | AuditFailure     | 4503599627370496  |
 | AuditSuccess     | 9007199254740992  |
@@ -165,7 +165,7 @@ WdiDiagnostic    Property   static System.Diagnostics.Eventing.Reader.StandardEv
 | WdiDiagnostic    | 1125899906842624  |
 | WdiContext       | 562949953421312   |
 | ResponseTime     | 281474976710656   |
-| 없음             | 0                 |
+| None             | 0                 |
 
 해시 테이블을 업데이트하고 **키-값** 쌍(키: **Keywords** 및 **EventLogClassic** 열거형 값, **36028797018963968** )을 포함합니다.
 
@@ -236,12 +236,12 @@ Warning       Property   static System.Diagnostics.Eventing.Reader.StandardEvent
 
 **Level** 키의 이름 및 열거형 값은 다음과 같습니다.
 
-| 이름           | Value |
+| 속성           | 값 |
 | -------------- | ----- |
-| Verbose        |   5   |
+| 자세히        |   5   |
 | 정보 제공  |   4   |
-| 경고        |   3   |
-| 오류          |   2   |
+| Warning        |   3   |
+| Error          |   2   |
 | 위험       |   1   |
 | LogAlways      |   0   |
 

@@ -3,15 +3,15 @@ ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 웹 액세스 제거
 ms.openlocfilehash: 3c2c83525f5a240976eef215b5eac939796c91e8
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78279013"
 ---
 # <a name="uninstall-windows-powershell-web-access"></a>Windows PowerShell 웹 액세스 제거
 
-업데이트 날짜: 2013년 6월 24일
+업데이트됨: 2013년 6월 24일
 
 적용 대상: Windows Server 2012 R2, Windows Server 2012
 
@@ -70,7 +70,7 @@ ms.locfileid: "78279013"
 
 1. 제거가 완료되면 서버 관리자에서 **모든 서버** 페이지를 열고 기능을 제거한 서버를 선택한 후 선택한 서버 페이지에서 **역할 및 기능** 타일을 확인하여 Windows PowerShell 웹 액세스가 제거되었는지 확인합니다.
 
-    또한 선택한 서버(Get-WindowsFeature -ComputerName &lt;*computer_name*&gt;)를 대상으로 `Get-WindowsFeature` cmdlet을 실행하여 서버에 설치된 역할 및 기능 목록을 볼 수 있습니다.
+    또한 선택한 서버(Get-WindowsFeature -ComputerName `Get-WindowsFeature`&lt;computer_name  )를 대상으로 &gt; cmdlet을 실행하여 서버에 설치된 역할 및 기능 목록을 볼 수 있습니다.
 
 ## <a name="custom-uninstallation"></a>사용자 지정 제거
 

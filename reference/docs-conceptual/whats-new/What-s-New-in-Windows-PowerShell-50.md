@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 5.0의 새로운 기능
-ms.openlocfilehash: 8c1858a63adad467e389a683708bccba2a6768c7
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: dba016546fe034684f6b7afe43ec2e7a1b793d96
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500459"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978205"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Windows PowerShell 5.0의 새로운 기능
 
@@ -460,7 +460,7 @@ Windows PowerShell 백그라운드 작업과 마찬가지로 예약된 작업은
 
 예약된 작업은 관리하는 데 필요한 사용자 지정된 cmdlet 집합과 함께 제공됩니다. cmdlet을 사용하여 예약된 작업을 작성, 편집 또는 관리하거나 사용하지 않도록 지정한 다음 다시 사용하도록 지정하고, 예약된 작업 트리거를 만들고, 예약된 작업 옵션을 설정할 수 있습니다.
 
-예약된 작업에 대한 자세한 내용은 [about_Scheduled_Jobs](/powershell/module/microsoft.powershell.core/about/about_Scheduled_Jobs)를 참조하세요.
+예약된 작업에 대한 자세한 내용은 [about_Scheduled_Jobs](/powershell/module/psscheduledjob/about/about_scheduled_jobs?view=powershell-5.1)를 참조하세요.
 
 ### <a name="windows-powershell-language-enhancements"></a>Windows PowerShell 언어 향상
 

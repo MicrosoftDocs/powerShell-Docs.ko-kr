@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: API 키 관리
 ms.openlocfilehash: 0f44a080415f1acf13680771b6e9db5b805f8f45
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78278308"
 ---
 # <a name="managing-api-keys"></a>API 키 관리

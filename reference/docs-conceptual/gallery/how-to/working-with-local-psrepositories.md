@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery,psget,갤러리
 title: 로컬 PSRepository 작업
 ms.openlocfilehash: c1bd905674ae76a3badd3eff50780f0e1bb5fc64
-ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75415831"
 ---
 # <a name="working-with-private-powershellget-repositories"></a>프라이빗 PowerShellGet 리포지토리 작업

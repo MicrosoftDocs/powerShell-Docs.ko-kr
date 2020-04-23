@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA 역할 기능
 ms.openlocfilehash: 5b5b5977d4fec1ed850f1146fe7c09463908651b
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "79402400"
 ---
 # <a name="jea-role-capabilities"></a>JEA 역할 기능
@@ -80,12 +80,12 @@ VisibleCmdlets = @{ Name = 'Restart-Service'; Parameters = @{ Name = 'Name'; Val
 |                                           예제                                           |                                                             사용 사례                                                              |
 | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | `'My-Func'` 또는 `@{ Name = 'My-Func' }`                                                      | 사용자는 매개 변수에 대한 제한 없이 `My-Func`를 실행할 수 있습니다.                                                      |
-| `'MyModule\My-Func'`                                                                        | 사용자는 매개 변수에 대한 제한 없이 `MyModule` 모듈에서 `My-Func`를 실행할 수 있습니다.                           |
+| `'MyModule\My-Func'`                                                                        | 사용자는 매개 변수에 대한 제한 없이 `My-Func` 모듈에서 `MyModule`를 실행할 수 있습니다.                           |
 | `'My-*'`                                                                                    | 사용자는 동사 `My`가 포함된 모든 cmdlet 또는 함수를 실행할 수 있습니다.                                                                 |
 | `'*-Func'`                                                                                  | 사용자는 명사 `Func`가 포함된 모든 cmdlet 또는 함수를 실행할 수 있습니다.                                                               |
-| `@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'}, @{ Name = 'Param2' }}`              | 사용자는 `Param1` 및 `Param2` 매개 변수를 사용하여 `My-Func`를 실행할 수 있습니다. 매개 변수에 아무 값이나 제공할 수 있습니다.          |
-| `@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'; ValidateSet = 'Value1', 'Value2' }}` | 사용자는 `Param1` 매개 변수를 사용하여 `My-Func`를 실행할 수 있습니다. 매개 변수에 "Value1" 및 "Value2"만 제공할 수 있습니다.        |
-| `@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'; ValidatePattern = 'contoso.*' }}`    | 사용자는 `Param1` 매개 변수를 사용하여 `My-Func`를 실행할 수 있습니다. 매개 변수에 "contoso"로 시작하는 모든 값을 제공할 수 있습니다. |
+| `@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'}, @{ Name = 'Param2' }}`              | 사용자는 `My-Func` 및 `Param1` 매개 변수를 사용하여 `Param2`를 실행할 수 있습니다. 매개 변수에 아무 값이나 제공할 수 있습니다.          |
+| `@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'; ValidateSet = 'Value1', 'Value2' }}` | 사용자는 `My-Func` 매개 변수를 사용하여 `Param1`를 실행할 수 있습니다. 매개 변수에 "Value1" 및 "Value2"만 제공할 수 있습니다.        |
+| `@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'; ValidatePattern = 'contoso.*' }}`    | 사용자는 `My-Func` 매개 변수를 사용하여 `Param1`를 실행할 수 있습니다. 매개 변수에 "contoso"로 시작하는 모든 값을 제공할 수 있습니다. |
 
 > [!WARNING]
 > 최상의 보안 방식을 위해 표시되는 cmdlet 또는 함수를 정의할 때 와일드카드는 사용하지 않는 것이 좋습니다. 대신 신뢰할 수 있는 각 명령을 명시적으로 나열하여 같은 이름 지정 체계를 공유하는 다른 명령에 의도치 않게 권한이 부여되지 않도록 해야 합니다.
@@ -108,7 +108,7 @@ PowerShell cmdlet 및 함수에서 허용되는 매개 변수를 제어할 수 �
 
 많은 실행 파일을 통해 현재 상태를 읽은 다음, 다른 매개 변수를 제공하여 변경할 수 있습니다.
 
-예를 들어 시스템에서 호스팅되는 네트워크 공유를 관리하는 파일 서버 관리자의 역할을 고려합니다. 공유를 관리하는 한 가지 방법은 `net share`를 사용하는 것입니다. 그러나 사용자가 명령을 사용하여 `net group Administrators unprivilegedjeauser /add`로 관리자 권한을 얻을 수 있으므로 **net.exe**를 허용하는 것은 위험합니다. 더 안전한 옵션은 [Get-SmbShare](/powershell/module/smbshare/get-smbshare)를 허용하는 것으로, 결과는 동일하지만 범위는 훨씬 제한적입니다.
+예를 들어 시스템에서 호스팅되는 네트워크 공유를 관리하는 파일 서버 관리자의 역할을 고려합니다. 공유를 관리하는 한 가지 방법은 `net share`를 사용하는 것입니다. 그러나 사용자가 명령을 사용하여 **로 관리자 권한을 얻을 수 있으므로** net.exe`net group Administrators unprivilegedjeauser /add`를 허용하는 것은 위험합니다. 더 안전한 옵션은 [Get-SmbShare](/powershell/module/smbshare/get-smbshare)를 허용하는 것으로, 결과는 동일하지만 범위는 훨씬 제한적입니다.
 
 JEA 세션에서 사용자가 외부 명령을 사용할 수 있게 하려면 항상 실행 파일의 전체 경로를 지정합니다. 이렇게 하면 시스템의 다른 위치에 있는 이름이 비슷하거나 잠재적으로 악의적인 프로그램이 실행되는 것을 방지합니다.
 
@@ -148,20 +148,20 @@ FunctionDefinitions = @{
 
 사용자 지정 함수의 본문(스크립트 블록)은 시스템에 대한 기본 언어 모드에서 실행되며 JEA의 언어 제약 조건이 적용되지 않습니다. 즉, 함수는 파일 시스템 및 레지스트리에 액세스하고 역할 기능 파일에 표시되도록 설정되지 않은 명령을 실행할 수 있습니다. 매개 변수를 사용할 때 임의의 코드가 실행되지 않도록 주의하세요. 사용자 입력을 `Invoke-Expression`과 같은 cmdlet에 직접 연결하지 마세요.
 
-위 예제에서 축약형 `Select-Object` 대신 FQMN(정규화된 모듈 이름) `Microsoft.PowerShell.Utility\Select-Object`가 사용되었다는 것을 알 수 있습니다.
+위 예제에서 축약형 `Microsoft.PowerShell.Utility\Select-Object` 대신 FQMN(정규화된 모듈 이름) `Select-Object`가 사용되었다는 것을 알 수 있습니다.
 역할 기능 파일에 정의된 함수에는 여전히 JEA 세션의 범위가 적용되며 여기에는 JEA가 기존 명령을 제한하기 위해 만드는 프록시 함수가 포함됩니다.
 
 기본적으로 `Select-Object`는 개체에 대한 임의 속성을 선택할 수 없게 하는, 모든 JEA 세션의 제한된 cmdlet입니다. 함수에서 비제한 `Select-Object`를 사용하려면 FQMN을 사용하여 전체 구현을 명시적으로 요청해야 합니다. JEA 세션에서 제한된 cmdlet에는 함수에서 호출될 때 동일한 제약 조건이 있습니다. 자세한 내용은 [about_Command_Precedence](/powershell/module/microsoft.powershell.core/about/about_command_precedence)를 참조하세요.
 
 여러 개의 사용자 지정 함수를 작성하는 경우 PowerShell 스크립트 모듈에 배치하는 것이 더 편리합니다. 기본 제공 및 타사 모듈을 사용할 때처럼 **VisibleFunctions** 필드를 사용하여 JEA 세션에서 해당 함수를 표시할 수 있습니다.
 
-JEA 세션에서 탭 완료가 제대로 작동하려면 **VisibleFunctions** 목록에 기본 제공 함수 `tabexpansion2`를 포함해야 합니다.
+JEA 세션에서 탭 완료가 제대로 작동하려면 `tabexpansion2`VisibleFunctions**목록에 기본 제공 함수**를 포함해야 합니다.
 
 ## <a name="make-the-role-capabilities-available-to-a-configuration"></a>구성에서 역할 기능을 사용할 수 있도록 설정
 
 PowerShell 6 이전의 경우 PowerShell에서 역할 기능 파일을 찾으려면 역할 기능 파일을 PowerShell 모듈의 **RoleCapabilities** 폴더에 저장해야 합니다. 모듈은 `$env:PSModulePath` 환경 변수에 포함된 모든 폴더에 저장할 수 있지만, `$env:SystemRoot\System32` 또는 신뢰할 수 없는 사용자가 파일을 수정할 수 있는 폴더에 배치해서는 안 됩니다.
 
-다음 예에서는 역할 기능 파일을 호스트하기 위해 `$env:ProgramFiles` 경로에 **ContosoJEA**라는 PowerShell 스크립트 모듈을 만듭니다.
+다음 예에서는 역할 기능 파일을 호스트하기 위해 **경로에**ContosoJEA`$env:ProgramFiles`라는 PowerShell 스크립트 모듈을 만듭니다.
 
 ```powershell
 # Create a folder for the module

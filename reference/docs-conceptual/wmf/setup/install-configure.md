@@ -5,10 +5,10 @@ keywords: wmf,powershell,setup
 contributor: keithb
 title: WMF 5.1 설치 및 구성
 ms.openlocfilehash: 241f52be011e1afc87d25c9a934db0c1e0361b76
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "79402370"
 ---
 # <a name="install-and-configure-wmf-51"></a>WMF 5.1 설치 및 구성

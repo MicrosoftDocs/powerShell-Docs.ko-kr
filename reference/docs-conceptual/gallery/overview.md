@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery,psget,갤러리
 title: PowerShell 갤러리
 ms.openlocfilehash: e489d2dd4db087b53eb07d2a8793c8f586c9b210
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500573"
 ---
 # <a name="the-powershell-gallery"></a>PowerShell 갤러리
@@ -31,7 +31,7 @@ PowerShellGet 모듈에는 [PowerShell 갤러리](https://www.PowerShellGallery.
 
 **PowerShellGet**을 사용하려면 .NET Framework 4.5 이상이 필요합니다. .NET Framework 4.5 이상은 [여기](https://msdn.microsoft.com/library/5a4x27ek.aspx)에서 설치할 수 있습니다.
 
-**PowerShell Core**는 교차 플랫폼이므로 Windows, Linux 및 MacOS에서 작동하며, 그렇기 때문에 **PowerShellGet**을 이러한 시스템들에서 사용할 수 있습니다. **PowerShell Core**가 지원하는 전체 시스템 목록은 [PowerShell 설치](/powershell/scripting/install/installing-powershell)를 참조하세요.
+**PowerShell Core**는 교차 플랫폼이므로 Windows, Linux 및 MacOS에서 작동하며, 그 결과 **PowerShellGet**을 이러한 시스템에서 사용할 수 있습니다. **PowerShell Core**가 지원하는 전체 시스템 목록은 [PowerShell 설치](/powershell/scripting/install/installing-powershell)를 참조하세요.
 
 갤러리에 호스트된 많은 모듈은 각기 다른 OS를 지원하며 추가 요구 사항이 있습니다.
 자세한 내용은 모듈 설명서를 참조하세요.

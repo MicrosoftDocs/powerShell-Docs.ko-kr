@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 2.0 엔진 설치
 ms.openlocfilehash: 24bca7bd18fd33392f4f79b958189d3251ec35c1
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75870543"
 ---
 # <a name="installing-the-windows-powershell-20-engine"></a>Windows PowerShell 2.0 엔진 설치

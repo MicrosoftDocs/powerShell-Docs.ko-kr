@@ -3,10 +3,10 @@ ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: ISE 개체 모델 계층 구조
 ms.openlocfilehash: 1ec5810fc5e7b765c2a08af83bce0415dd61a54b
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75737035"
 ---
 # <a name="the-ise-object-model-hierarchy"></a>ISE 개체 모델 계층 구조
@@ -17,11 +17,11 @@ ms.locfileid: "75737035"
 
 `$psISE` 개체는 Windows PowerShell ISE 개체 계층 구조의 [루트 개체](The-ObjectModelRoot-Object.md)입니다. 최상위 수준에 있는 이 개체를 사용하면 스크립팅에 다음 개체를 사용할 수 있습니다.
 
-## <a name="psisecurrentfilethe-isefile-objectmd"></a>[$psISE.CurrentFile](The-ISEFile-Object.md)
+## <a name="psisecurrentfile"></a>[$psISE.CurrentFile](The-ISEFile-Object.md)
 
 `$psISE.CurrentFile` 개체는 [ISEFile](The-ISEFile-Object.md) 클래스의 인스턴스입니다.
 
-## <a name="psisecurrentpowershelltabthe-powershelltab-objectmd"></a>[$psISE.CurrentPowerShellTab](The-PowerShellTab-Object.md)
+## <a name="psisecurrentpowershelltab"></a>[$psISE.CurrentPowerShellTab](The-PowerShellTab-Object.md)
 
 `$psISE.CurrentPowerShellTab` 개체는 [PowerShellTab](The-PowerShellTab-Object.md) 클래스의 인스턴스입니다.
 
@@ -33,11 +33,11 @@ ms.locfileid: "75737035"
 
 `$psISE.CurrentVisibleHorizontalTool` 개체는 [ISEAddOnTool](The-ISEAddOnTool-Object.md) 클래스의 인스턴스입니다. 현재 Windows PowerShell ISE 창의 오른쪽 가장자리에 도킹되어 있는 설치된 추가 기능 도구를 나타냅니다.
 
-## <a name="psiseoptionsthe-iseoptions-objectmd"></a>[$psISE.Options](The-ISEOptions-Object.md)
+## <a name="psiseoptions"></a>[$psISE.Options](The-ISEOptions-Object.md)
 
 `$psISE.Options` 개체는 [ISEOptions](The-ISEOptions-Object.md) 클래스의 인스턴스입니다. ISEOptions 개체는 Windows PowerShell ISE에 대한 다양한 설정을 나타냅니다. Microsoft.PowerShell.Host.ISE.ISEOptions 클래스의 인스턴스입니다.
 
-## <a name="psisepowershelltabsthe-powershelltabcollection-objectmd"></a>[$psISE.PowerShellTabs](The-PowerShellTabCollection-Object.md)
+## <a name="psisepowershelltabs"></a>[$psISE.PowerShellTabs](The-PowerShellTabCollection-Object.md)
 
 `$psISE.PowerShellTabs` 개체는 [PowerShellTabCollection](The-PowerShellTabCollection-Object.md) 클래스의 인스턴스입니다. 로컬 컴퓨터 또는 연결된 원격 컴퓨터에서 사용 가능한 Windows PowerShell 실행 환경을 나타내는 현재 열려 있는 모든 PowerShell 탭의 모음입니다. 컬렉션의 각 멤버는 [PowerShellTab](The-PowerShellTab-Object.md) 클래스의 인스턴스입니다.
 

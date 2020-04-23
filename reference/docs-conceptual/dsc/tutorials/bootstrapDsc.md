@@ -3,16 +3,16 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 초기 부팅 시 DSC를 사용하여 가상 컴퓨터 구성
 ms.openlocfilehash: f9634c330832e23fb2c6f08c5b299b55a5505ac9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954610"
 ---
 # <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>초기 부팅 시 DSC를 사용하여 가상 컴퓨터 구성
 
 > [!IMPORTANT]
-> 적용 대상: Windows Powershell 5.0
+> 적용 대상: Windows PowerShell 5.0
 
 ## <a name="requirements"></a>요구 사항
 
@@ -28,7 +28,7 @@ ms.locfileid: "71954610"
 
   DSC를 사용하면 초기 부팅 시 컴퓨터에서 소프트웨어 설치 및 구성을 자동화할 수 있습니다.
   이렇게 하려면 구성 MOF 문서 또는 메타 구성을 부팅 가능한 미디어(예: VHD)에 삽입하여 초기 부팅 과정 중 실행되게 합니다.
-  이 동작은 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System` 아래에 [DSCAutomationHostEnabled 레지스트리 키](DSCAutomationHostEnabled.md) 레지스트리 키로 지정합니다.
+  이 동작은 [ 아래에 ](DSCAutomationHostEnabled.md)DSCAutomationHostEnabled 레지스트리 키`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System` 레지스트리 키로 지정합니다.
   기본적으로 이 키의 값은 2이며, 이 경우 DSC가 부팅 시 실행될 수 있습니다.
 
   부팅 시 DSC가 실행되지 않게 하려면 [DSCAutomationHostEnabled 레지스트리 키](DSCAutomationHostEnabled.md) 레지스트리 키 값을 0으로 설정합니다.
@@ -66,7 +66,7 @@ Configuration SampleIISInstall
 
 ### <a name="to-inject-the-configuration-mof-document-on-the-vhd"></a>구성 MOF 문서를 VHD에 삽입하려면
 
-1. 구성을 삽입할 VHD를 [Mount-VHD](/powershell/module/hyper-v/mount-vhd) cmdlet을 호출하여 탑재합니다. 예:
+1. 구성을 삽입할 VHD를 [Mount-VHD](/powershell/module/hyper-v/mount-vhd) cmdlet을 호출하여 탑재합니다. 다음은 그 예입니다.
 
    ```powershell
    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
@@ -84,13 +84,13 @@ Configuration SampleIISInstall
    ```
 
 5. 그러면 `localhost.mof` 파일이 `SampleIISInstall`이라는 폴더에 만들어집니다.
-   이 파일을 `Pending.mof`로 이름을 바꾸고 [Move-item](/powershell/module/microsoft.powershell.management/move-item) cmdlet을 사용하여 VHD에서 적절한 위치로 이동합니다. 예:
+   이 파일을 `Pending.mof`로 이름을 바꾸고 [Move-item](/powershell/module/microsoft.powershell.management/move-item) cmdlet을 사용하여 VHD에서 적절한 위치로 이동합니다. 다음은 그 예입니다.
 
    ```powershell
        Move-Item -Path C:\DSCTest\SampleIISInstall\localhost.mof -Destination E:\Windows\System32\Configuration\Pending.mof
    ```
 
-6. [Dismount-VHD](/powershell/module/hyper-v/dismount-vhd) cmdlet을 호출하여 VHD를 분리합니다. 예:
+6. [Dismount-VHD](/powershell/module/hyper-v/dismount-vhd) cmdlet을 호출하여 VHD를 분리합니다. 다음은 그 예입니다.
 
    ```powershell
    Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
@@ -134,7 +134,7 @@ configuration PullClientBootstrap
 
 ### <a name="to-inject-the-metaconfiguration-mof-document-on-the-vhd"></a>메타 구성 MOF 문서를 VHD에 삽입하려면
 
-1. 메타 구성을 삽입할 VHD를 [Mount-VHD](/powershell/module/hyper-v/mount-vhd) cmdlet을 호출하여 탑재합니다. 예:
+1. 메타 구성을 삽입할 VHD를 [Mount-VHD](/powershell/module/hyper-v/mount-vhd) cmdlet을 호출하여 탑재합니다. 다음은 그 예입니다.
 
    ```powershell
    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
@@ -160,7 +160,7 @@ configuration PullClientBootstrap
    Move-Item -Path C:\DSCTest\PullClientBootstrap\localhost.meta.mof -Destination E:\Windows\System32\Configuration\MetaConfig.mof
    ```
 
-7. [Dismount-VHD](/powershell/module/hyper-v/dismount-vhd) cmdlet을 호출하여 VHD를 분리합니다. 예:
+7. [Dismount-VHD](/powershell/module/hyper-v/dismount-vhd) cmdlet을 호출하여 VHD를 분리합니다. 다음은 그 예입니다.
 
    ```powershell
    Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
@@ -175,13 +175,13 @@ configuration PullClientBootstrap
 
 기본적으로 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\DSCAutomationHostEnabled` 키 값은 2로 설정되며, 이 경우 컴퓨터가 보류 중이거나 현재 상태이면 DSC 구성을 실행할 수 있습니다. 초기 부팅 시 구성이 실행되지 않게 하려면 이 키 값을 0으로 설정해야 합니다.
 
-1. [Mount-VHD](/powershell/module/hyper-v/mount-vhd) cmdlet을 호출하여 VHD를 탑재합니다. 예:
+1. [Mount-VHD](/powershell/module/hyper-v/mount-vhd) cmdlet을 호출하여 VHD를 탑재합니다. 다음은 그 예입니다.
 
    ```powershell
    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
    ```
 
-2. `reg load`를 호출하여 VHD에서 레지스트리 `HKLM\Software` 하위 키를 로드합니다.
+2. `HKLM\Software`를 호출하여 VHD에서 레지스트리 `reg load` 하위 키를 로드합니다.
 
    ```powershell
    reg load HKLM\Vhd E:\Windows\System32\Config\Software`

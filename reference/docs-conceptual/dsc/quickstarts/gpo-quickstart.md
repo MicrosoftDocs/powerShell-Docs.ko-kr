@@ -3,10 +3,10 @@ ms.date: 07/09/2019
 keywords: dsc,gpo,powershell,configuration,setup
 title: 빠른 시작 - 그룹 정책을 DSC로 변환
 ms.openlocfilehash: 5e6b86be5127332fe4fd400980c8e147b735247b
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500646"
 ---
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0

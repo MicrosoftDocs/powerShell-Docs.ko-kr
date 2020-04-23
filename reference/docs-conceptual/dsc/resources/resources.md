@@ -3,10 +3,10 @@ ms.date: 02/28/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC 리소스
 ms.openlocfilehash: 863898d910cc3c75c3e5977a5b6b0657ba7ed512
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78278252"
 ---
 # <a name="dsc-resources"></a>DSC 리소스

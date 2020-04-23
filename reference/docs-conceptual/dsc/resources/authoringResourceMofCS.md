@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: C#에서 DSC 리소스 작성
 ms.openlocfilehash: a19559c225dd91eceed397df91dd584a577cd7d4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74417688"
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>C\#에서 DSC 리소스 작성
@@ -40,7 +40,7 @@ class MSFT_XDemoFile : OMI_BaseResource
 1. Visual Studio를 엽니다.
 1. C# 프로젝트를 만들고 이름을 입력합니다.
 1. 사용 가능한 프로젝트 템플릿에서 **클래스 라이브러리**를 선택합니다.
-1. **확인**을 클릭합니다.
+1. **Ok**를 클릭합니다.
 1. System.Automation.Management.dll에 대한 어셈블리 참조를 프로젝트에 추가합니다.
 1. 어셈블리 이름을 리소스 이름과 일치하도록 변경합니다. 이 경우 어셈블리의 이름은 **MSFT_XDemoFile**로 지정해야 합니다.
 

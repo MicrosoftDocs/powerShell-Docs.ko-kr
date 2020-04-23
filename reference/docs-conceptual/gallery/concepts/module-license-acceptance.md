@@ -4,10 +4,10 @@ schema: 2.0.0
 keywords: PowerShell
 title: 라이선스 동의가 필요한 모듈
 ms.openlocfilehash: a2f7ed72aae8579a6723f65b86dd0993f1a22afd
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80082824"
 ---
 # <a name="modules-requiring-license-acceptance"></a>라이선스 동의가 필요한 모듈
@@ -89,7 +89,7 @@ Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 
 이 명령은 `license.txt` 파일의 라이선스를 표시하고 사용자에게 라이선스에 동의하라는 메시지를 표시합니다.
 
-### <a name="example-3-install-module-requiring-license-acceptance-with--acceptlicense"></a>예 3: -AcceptLicense로 라이선스 동의가 필요한 모듈 설치
+### <a name="example-3-install-module-requiring-license-acceptance-with--acceptlicense"></a>예제 3: -AcceptLicense로 라이선스 동의가 필요한 모듈 설치
 
 ```powershell
 Install-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense
@@ -97,7 +97,7 @@ Install-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense
 
 라이선스에 동의하라는 메시지가 표시되지 않고 모듈이 설치됩니다.
 
-### <a name="example-4-install-module-requiring-license-acceptance-with--force"></a>예 4: -Force로 라이선스 동의가 필요한 모듈 설치
+### <a name="example-4-install-module-requiring-license-acceptance-with--force"></a>예제 4: -Force로 라이선스 동의가 필요한 모듈 설치
 
 ```powershell
 Install-Module -Name ModuleRequireLicenseAcceptance -Force

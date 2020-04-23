@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 사용자 지정 입력란 만들기
 ms.openlocfilehash: ff0588b44169bc276e2833254cec60eda759e2c8
-ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "77706192"
 ---
 # <a name="creating-a-custom-input-box"></a>사용자 지정 입력란 만들기
@@ -65,7 +65,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-다음 두 .NET Framework 클래스를 로드하여 스크립트를 시작합니다. **System.Drawing** 및 **System.Windows.Forms**. 그런 다음 .NET Framework 클래스의 새 인스턴스인 **System.Windows.Forms.Form**을 시작하면 컨트롤을 추가할 수 있는 새 양식 또는 창이 제공됩니다.
+두 .NET Framework 클래스 **System.Drawing** 및 **System.Windows.Forms**를 로드하여 스크립트가 시작됩니다. 그런 다음 .NET Framework 클래스의 새 인스턴스인 **System.Windows.Forms.Form**을 시작하면 컨트롤을 추가할 수 있는 새 양식 또는 창이 제공됩니다.
 
 ```powershell
 $form = New-Object System.Windows.Forms.Form
@@ -159,5 +159,5 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 ## <a name="see-also"></a>참고 항목
 
-- [GitHub: Dave Wyatt의 WinFormsExampleUpdates](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730941(v=technet.10))
-- [이번 주 Windows PowerShell 팁:  사용자 지정 입력 상자 만들기](https://technet.microsoft.com/library/ff730941.aspx)
+- [GitHub: Dave Wyatt's WinFormsExampleUpdates](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730941(v=technet.10))(GitHub: Dave Wyatt의 WinFormsExampleUpdates)
+- [Windows PowerShell Tip of the Week: 사용자 지정 입력란 만들기](https://technet.microsoft.com/library/ff730941.aspx)

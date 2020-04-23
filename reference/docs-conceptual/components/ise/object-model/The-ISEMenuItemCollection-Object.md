@@ -3,15 +3,15 @@ ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: ISEMenuItemCollection 개체
 ms.openlocfilehash: 39e8547c9b19ba323d4b224a46eda416542b2807
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "75736175"
 ---
 # <a name="the-isemenuitemcollection-object"></a>ISEMenuItemCollection 개체
 
-**ISEMenuItemCollection** 개체는 **ISEMenuItem** 개체의 컬렉션이며, **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection** 클래스의 인스턴스입니다. 예제는 Windows PowerShell® ISE(통합 스크립팅 환경)에서 **추가 기능** 메뉴를 사용자 지정하는 데 사용되는 `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus` 개체입니다.
+**ISEMenuItemCollection** 개체는 **ISEMenuItem** 개체의 컬렉션이며, **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection** 클래스의 인스턴스입니다. 예제는 Windows PowerShell® ISE(통합 스크립팅 환경)에서 `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus`추가 기능**메뉴를 사용자 지정하는 데 사용되는** 개체입니다.
 
 ## <a name="method"></a>방법
 

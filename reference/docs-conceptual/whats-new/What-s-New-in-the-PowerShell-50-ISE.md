@@ -3,10 +3,10 @@ ms.date: 09/06/2019
 keywords: powershell,cmdlet
 title: PowerShell 5.0 ISE의 새로운 기능
 ms.openlocfilehash: 8f15e99c5a6ae33aeae9bd33eb0cf58fb27e3b90
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74416639"
 ---
 # <a name="whats-new-in-the-windows-powershell-50-ise"></a>Windows PowerShell 5.0 ISE의 새로운 기능
@@ -119,7 +119,7 @@ Windows PowerShell ISE의 첫 번째 릴리스에서 제공된 별도의 명령 
 - <kbd>Ctrl</kbd>+<kbd>F1</kbd> 상황에 맞는 Show-Command
 - 복잡한 스크립트 및 오른쪽에서 왼쪽으로 쓰는 언어 지원
 - 글꼴 지원
-- 확대/축소
+- Zoom
 - 줄 선택 및 블록 선택 모드
 - <kbd>위쪽 화살표</kbd>를 눌러 콘솔에서 기록을 볼 때 명령줄에 입력된 콘텐츠 유지
 

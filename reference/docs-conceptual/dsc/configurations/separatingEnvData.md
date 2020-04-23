@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 구성 및 환경 데이터 분리
 ms.openlocfilehash: b16243fc9096f786a25ed20868e94a3aa85e403e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954440"
 ---
 # <a name="separating-configuration-and-environment-data"></a>구성 및 환경 데이터 분리
@@ -82,7 +82,7 @@ Mode                LastWriteTime         Length Name
 -a----        3/31/2017   5:09 PM           1970 VM-2.mof
 ```
 
-`$MyData`는 각각 `NodeName` 및 `Role`을 가진 서로 다른 두 노드를 지정합니다. 구성에서는 `$MyData` (특히 `$AllNodes`)로부터 받는 노드의 컬렉션을 받아 동적으로 **Node** 블록을 만들고 `Role` 속성을 기준으로 컬렉션을 필터링합니다.
+`$MyData`는 각각 `NodeName` 및 `Role`을 가진 서로 다른 두 노드를 지정합니다. 구성에서는 **(특히**)로부터 받는 노드의 컬렉션을 받아 동적으로 `$MyData`Node`$AllNodes` 블록을 만들고 `Role` 속성을 기준으로 컬렉션을 필터링합니다.
 
 ## <a name="using-configuration-data-to-define-development-and-production-environments"></a>구성 데이터를 사용하여 개발 및 프로덕션 환경 정의
 

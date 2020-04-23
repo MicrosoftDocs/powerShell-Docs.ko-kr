@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 리소스 작성 검사 목록
 ms.openlocfilehash: 85e0963d46358cd37cb87ea94fe6d1178a4f6a4a
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500619"
 ---
 # <a name="resource-authoring-checklist"></a>리소스 작성 검사 목록
