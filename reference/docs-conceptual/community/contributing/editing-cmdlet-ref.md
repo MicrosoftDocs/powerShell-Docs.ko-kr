@@ -3,12 +3,12 @@ title: 참조 문서 편집
 description: 이 문서에서는 cmdlet 참조를 편집하기 위한 특정 요구 사항과 PowerShell 설명서의 정보 항목에 대해 설명합니다.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: 3aed1c14429310c57681397d4877a3a6f48400fd
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: e135f6cc81ba7537a535a08421e1ca9b2b2af573
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500970"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81624774"
 ---
 # <a name="editing-reference-articles"></a>참조 문서 편집
 
@@ -26,18 +26,17 @@ PlatyPS에는 코드에 작성된 cmdlet 참조에 대한 하드 코딩된 스�
 
 ## <a name="formatting-about_-files"></a>About_ 파일 서식 지정
 
-이제 `About_*` 파일은 PlatyPS가 아니라 [Pandoc][]에 의해 처리됩니다. `About_*` 파일은 모든 버전의 PowerShell에서 최상의 호환성을 보장하도록 게시 도구를 사용하여 서식 지정됩니다.
+`About_*` 파일은 Markdown으로 작성되지만 일반 텍스트 파일로 제공됩니다. [Pandoc][]을 사용하여 Markdown을 일반 텍스트로 변환합니다. `About_*` 파일은 모든 버전의 PowerShell에서 최상의 호환성을 보장하도록 게시 도구를 사용하여 서식 지정됩니다.
 
 기본 서식 지정 지침:
 
-- 줄을 80자로 제한
-- 코드 블록 및 테이블은 76자로 제한됩니다. Pandoc이 일반 텍스트로 변환하는 동안 공백 4개를 들여쓰기 때문입니다.
-- 테이블이 76자 이내에 들어가야 함
-  - 여러 줄에 걸치는 셀의 내용을 수동으로 줄 바꿈
-  - 각 줄에서 열기 및 닫기 `|` 문자를 사용
-  - [about_Comparison_Operators][about-example]의 작업 예제를 참조하세요.
-- Pandoc 특수 문자 `\`,`$` 및 `<` 사용
-  - 헤더 안에서 이러한 문자는 선행 `\` 문자를 사용하여 이스케이프하거나 역따옴표(`` ` ``)으로 묶어야 합니다.
+- 줄을 80자로 제한합니다. Pandoc은 일부 Markdown 블록을 들여쓰므로 해당 블록을 조정해야 합니다.
+  - 코드 블록은 76자로 제한됨
+  - 테이블은 76자로 제한됨
+  - 블록 따옴표(및 경고)는 78자로 제한됨
+
+- Pandoc의 특수 메타 문자 `\`,`$`, `<` 사용
+  - 헤더 내 - 이러한 문자는 선행 `\` 문자를 사용하여 이스케이프하거나 역따옴표(`` ` ``)를 사용하여 코드 범위를 묶어야 합니다.
   - 단락 안에서 이러한 문자는 코드 스팬에 넣어야 합니다. 다음은 그 예입니다.
 
     ~~~markdown
@@ -45,6 +44,29 @@ PlatyPS에는 코드에 작성된 cmdlet 참조에 대한 하드 코딩된 스�
 
     The `$foo` variable is used to store ...
     ~~~
+
+- 테이블이 76자 이내에 들어가야 함
+  - 여러 줄에 걸치는 셀의 내용을 수동으로 줄 바꿈
+  - 각 줄에서 열기 및 닫기 `|` 문자를 사용
+  - 다음 예제는 셀 내 여러 줄로 래핑되는 정보가 포함된 테이블을 올바르게 구성하는 방법을 보여줍니다.
+
+    ~~~markdown
+    ```
+    |Operator|Description                |Example                          |
+    |--------|---------------------------|---------------------------------|
+    |`-is`   |Returns TRUE when the input|`(get-date) -is [DateTime]`      |
+    |        |is an instance of the      |`True`                           |
+    |        |specified .NET type.       |                                 |
+    |`-isNot`|Returns TRUE when the input|`(get-date) -isNot [DateTime]`   |
+    |        |not an instance of the     |`False`                          |
+    |        |specified.NET type.        |                                 |
+    |`-as`   |Converts the input to the  |`"5/7/07" -as [DateTime]`        |
+    |        |specified .NET type.       |`Monday, May 7, 2007 12:00:00 AM`|
+    ```
+    ~~~
+
+    > [!NOTE]
+    > 76열 제한은 `About_*` 항목에만 적용됩니다. 개념 또는 cmdlet 참조 문서에서 넓은 열을 사용할 수 있습니다.
 
 ## <a name="structuring-examples"></a>예제 구조화
 

@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: 검색 결과 필터링
 ms.openlocfilehash: 13270a310613a974e1588a9f56d443a936cfebb8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328044"
 ---
 # <a name="filtering-search-results"></a>검색 결과 필터링
@@ -32,16 +32,16 @@ ms.locfileid: "71328044"
 - 범주
   - Cmdlet
   - DSC 리소스
-  - 기능
+  - 함수
   - 역할 기능
-  - Workflow
+  - 워크플로
 
 PowerShell 갤러리의 모듈만 보려면 [패키지 종류]에서 [모듈]을 선택합니다.
 마찬가지로 PowerShell 갤러리에서 스크립트만 보려면 [패키지 종류]에서 [스크립트]를 선택합니다.
 
 > [!NOTE]
 > 필터가 포함됩니다.
-> 예: cmdlet과 함수를 둘 다 포함하는 패키지는 [Cmdlet] 또는 [함수] \(또는 둘 다)를 선택한 경우에 표시됩니다.
+> 예제: cmdlet과 함수를 둘 다 포함하는 패키지는 [Cmdlet] 또는 [함수] \(또는 둘 다)를 선택한 경우에 표시됩니다.
 > 둘 다 선택하지 않으면 패키지가 표시되지 않습니다.
 > 마찬가지로, 모든 범주를 선택하면 이러한 범주 중 하나를 포함하는 패키지만 표시됩니다.
 > **이러한 범주에 속하지 않는 패키지는 표시되지 않습니다.**

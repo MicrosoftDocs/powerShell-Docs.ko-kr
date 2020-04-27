@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: PowerShell 클래스를 사용하여 사용자 지정 DSC 리소스 작성
 ms.openlocfilehash: 34356f65bcb83153e7395a16d2a4a5cf2e507332
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952830"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>PowerShell 클래스를 사용하여 사용자 지정 DSC 리소스 작성
@@ -483,7 +483,7 @@ Start-DscConfiguration -Wait -Force Test
 **DscResource()** 특성은 선택적 매개 변수 **RunAsCredential**을 사용합니다.
 이 매개 변수는 다음의 3개 값 중 하나를 사용합니다.
 
-- `Optional`: 이 리소스를 호출하는 구성에 대해 필요에 따라 **PsDscRunAsCredential**을 사용할 수 있습니다. 기본값입니다.
+- `Optional`: 이 리소스를 호출하는 구성에 대해 필요에 따라 **PsDscRunAsCredential**을 사용할 수 있습니다. 이것은 기본값입니다.
 - `Mandatory`: 이 리소스를 호출하는 모든 구성에 대해 **PsDscRunAsCredential**을 반드시 사용해야 합니다.
 - `NotSupported`: 이 리소스를 호출하는 구성에서 **PsDscRunAsCredential**을 사용할 수 없습니다.
 - `Default`: `Optional`과 동일합니다.

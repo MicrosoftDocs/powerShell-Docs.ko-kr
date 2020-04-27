@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC PackageManagementSource 리소스
 ms.openlocfilehash: 20b7851e44751d4bd0add718d2f7294d5215ab70
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954790"
 ---
 # <a name="dsc-packagemanagementsource-resource"></a>DSC PackageManagementSource 리소스
@@ -37,9 +37,9 @@ PackageManagementSource [String] #ResourceName
 
 ## <a name="properties"></a>속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
-|이름 |시스템에서 등록하거나 등록 취소할 패키지 원본의 이름을 지정합니다. |
+|속성 |시스템에서 등록하거나 등록 취소할 패키지 원본의 이름을 지정합니다. |
 |ProviderName |패키지 원본과 상호 운용할 수 있는 OneGet 공급자의 이름을 지정합니다. |
 |SourceLocation |패키지 원본의 URI를 지정합니다. |
 |InstallationPolicy |기본 제공 Nuget 공급자와 같은 공급자에서 사용됩니다. 패키지 원본을 신뢰할 수 있는지를 결정합니다. 다음 중 하나: **신뢰 안 함** 또는 **신뢰함**. |
@@ -47,7 +47,7 @@ PackageManagementSource [String] #ResourceName
 
 ## <a name="common-properties"></a>공용 속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
 |DependsOn |이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. |
 |Ensure |패키지 원본을 등록할지 또는 등록 취소할지를 결정합니다. 기본값은 **Present**입니다. |

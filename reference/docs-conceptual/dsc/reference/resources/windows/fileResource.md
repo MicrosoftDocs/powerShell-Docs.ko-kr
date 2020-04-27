@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC 파일 리소스
 ms.openlocfilehash: 4c6945d4cdcbc64ac6d52db563823efe8fd0247e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954680"
 ---
 # <a name="dsc-file-resource"></a>DSC 파일 리소스
@@ -38,7 +38,7 @@ File [string] #ResourceName
 
 ## <a name="properties"></a>속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
 |DestinationPath |확인하려는 대상 노드의 위치는 **Ensure** 상태의 **Present** 또는 **Absent**입니다. |
 |특성 |대상으로 지정된 파일 또는 디렉터리에 대한 특성의 필요한 상태입니다. 유효한 값은 _Archive_, _Hidden_, _ReadOnly_ 및 _System_입니다. |
@@ -48,7 +48,7 @@ File [string] #ResourceName
 |Force |오류가 발생하는 액세스 작업(예: 파일 덮어쓰기나 비어 있지 않은 디렉터리 삭제)을 재정의합니다. 기본값은 `$false`입니다. |
 |Recurse |**Type** **Directory** 형식과 함께 사용할 경우에만 유효합니다. 모든 하위 디렉터리에 대한 상태 작업을 재귀적으로 수행합니다. 기본값은 `$false`입니다. |
 |SourcePath |파일 또는 폴더 리소스를 복사할 원본 경로입니다. |
-|유형 |구성되는 리소스 종류입니다. 유효한 값은 **Directory** 및 **File**입니다. 기본값은 **File**입니다. |
+|Type |구성되는 리소스 종류입니다. 유효한 값은 **Directory** 및 **File**입니다. 기본값은 **File**입니다. |
 |MatchSource |리소스가 초기 복사 후에 소스 디렉터리에 추가된 새 파일을 모니터링해야 하는지 여부를 결정합니다. `$true` 값은 초기 복사 후에 새 원본 파일을 대상으로 복사해야 함을 나타냅니다. `$false`로 설정하면 리소스가 소스 디렉터리의 콘텐츠를 캐시하고 초기 복사 후에 추가된 모든 파일을 무시합니다. 기본값은 `$false`입니다. |
 
 > [!WARNING]
@@ -56,7 +56,7 @@ File [string] #ResourceName
 
 ## <a name="common-properties"></a>공용 속성
 
-|속성 |설명 |
+|속성 |Description |
 |---|---|
 |DependsOn |이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. |
 |Ensure |**Destination**에서 파일 및**콘텐츠**가 존재하는지 여부를 확인합니다. 해당 파일이 존재하도록 하려면 이 속성을 **Present**로 설정합니다. 내용이 없도록 하려면 이 속성을 **Absent**으로 설정합니다. 기본값은 **Present**입니다. |

@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: PowerShell 갤러리 시작
-ms.openlocfilehash: fd4185234136dd9f3e628df50954b6ebff637639
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: bae0af144e6f520142e7eaea3dd0e1039976dae4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995882"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81219696"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>PowerShell 갤러리 시작
 
@@ -85,6 +85,16 @@ PowerShell 갤러리에서 설치된 패키지를 업데이트하려면 [Update-
 PowerShell 갤러리에서 설치한 모듈을 찾으려면 [Get-InstalledModule][] cmdlet을 실행합니다. 이 명령은 PowerShell 갤러리에서 직접 설치된 시스템의 모듈을 모두 나열합니다.
 
 마찬가지로, PowerShell 갤러리에서 설치한 스크립트를 찾으려면 [Get-InstalledScript][] cmdlet을 실행합니다. 이 명령은 PowerShell 갤러리에서 직접 설치된 시스템의 스크립트를 모두 나열합니다.
+
+## <a name="network-access-to-the-powershell-gallery"></a>PowerShell 갤러리에 대한 네트워크 액세스
+
+PowerShell 갤러리는 다음 호스트 이름을 사용합니다.
+
+- `psg-prod-eastus.azureedge.net` - CDN 호스트 이름
+- `devopsgallerystorage.blob.core.windows.net` - 스토리지 계정 호스트 이름
+- `*.powershellgallery.com` - 웹 사이트
+
+이러한 호스트 이름은 네트워크 액세스를 제어하는 허용 목록에 추가해야 합니다.
 
 [Find-DscResource]: /powershell/module/powershellget/Find-DscResource
 [Find-Module]: /powershell/module/powershellget/Find-Module

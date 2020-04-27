@@ -3,12 +3,12 @@ title: PowerShell-Docs 스타일 가이드
 description: 이 문서에서는 PowerShell 설명서 작성을 위한 스타일 규칙을 제공합니다.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: 964536c5195c3bb8abd98b5996a96fc7b9362489
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 90dc93d608440ce7388614b552c0cd873a385cd9
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402580"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81624791"
 ---
 # <a name="powershell-docs-style-guide"></a>PowerShell-Docs 스타일 가이드
 
@@ -17,16 +17,20 @@ ms.locfileid: "79402580"
 ## <a name="product-terminology"></a>제품 용어
 
 PowerShell에는 몇 가지 변형이 있습니다.
-이 표에는 PowerShell을 설명하는 데 사용되는 몇 가지 다양한 용어가 정의되어 있습니다.
 
 - **PowerShell** - 기본값입니다. 앞으로는 PowerShell 7 이상이 유일한 정식 PowerShell로 간주됩니다.
-
 - **PowerShell Core** - .NET Core를 기반으로 빌드된 PowerShell입니다. 용어 **Core**는 Windows PowerShell과 구분해야 하는 경우에만 사용해야 합니다.
-
 - **Windows PowerShell** - .NET Framework를 기반으로 빌드된 PowerShell입니다. Windows PowerShell은 Windows에만 제공되며 전체 Framework가 필요합니다.
 
-일반적으로 설명서의 "Windows PowerShell"에 대한 참조는 "PowerShell"로 변경할 수 있습니다.
-Windows 관련 기술을 설명하는 경우 “Windows PowerShell”을 변경해서는 **안 됩니다**.
+  일반적으로 설명서의 "Windows PowerShell"에 대한 참조는 "PowerShell"로 변경할 수 있습니다.
+  "WindowsPowerShell" 관련 동작을 설명할 때는 "Windows PowerShell"을 사용해야 합니다.
+
+관련 제품
+
+- **Visual Studio Code(VS Code)** - Microsoft의 무료 오픈 소스 편집기입니다. 처음 언급할 때는 전체 이름을 사용해야 합니다. 그런 다음 **VS Code**라고 언급할 수 있습니다. "VSCode"를 사용하지 마세요.
+- **Visual Studio Code에 대한 Powershell 확장** - 확장은 VS Code를 PowerShell의 기본 IDE로 전환합니다. 처음 언급할 때는 전체 이름을 사용해야 합니다. 그런 다음 **PowerShell 확장**이라고 언급할 수 있습니다.
+- **Azure PowerShell** - Azure 서비스를 관리하는 데 사용되는 Powershell 모듈의 컬렉션입니다.
+- **Azure Stack PowerShell** - Microsoft의 하이브리드 클라우드 솔루션을 관리하는 데 사용되는 Powershell 모듈의 컬렉션입니다.
 
 ## <a name="markdown-specifics"></a>Markdown 세부보
 
@@ -36,12 +40,14 @@ Windows 관련 기술을 설명하는 경우 “Windows PowerShell”을 변경�
 
 ### <a name="blank-lines-spaces-and-tabs"></a>빈 줄, 공백, 탭
 
-중복된 빈 줄을 제거합니다. HTML에서는 여러 빈 줄이 하나의 빈 줄로 렌더링되므로 여러 빈 줄을 넣을 필요가 없습니다.
-
 또한 빈 줄은 Markdown에서 블록이 끝난다는 신호입니다. 서로 다른 형식의 Markdown 블록 사이(예: 단락과 목록 또는 헤더 사이)에는 빈 줄이 하나 있어야 합니다.
 
+중복된 빈 줄을 제거합니다. HTML에서는 여러 개의 빈 줄이 하나의 빈 줄로 렌더링되므로 빈 줄을 여러 개 넣을 필요가 없습니다. 코드 블록 내에 빈 줄이 여러 개 있으면 코드 블록이 중단됩니다.
+
+줄의 끝부분에서 추가 공백을 제거해야 합니다.
+
 > [!NOTE]
-> Markdown에서는 간격이 중요합니다. 항상 하드 탭 대신 공백을 사용하세요. 줄의 끝부분에서 추가 공백을 제거해야 합니다.
+> Markdown에서는 간격이 중요합니다. 항상 하드 탭 대신 공백을 사용하세요. 후행 공백은 Markdown이 렌더링하는 방식을 변경할 수 있습니다.
 
 ### <a name="titles-and-headings"></a>제목 및 머리글
 
@@ -56,10 +62,11 @@ Windows 관련 기술을 설명하는 경우 “Windows PowerShell”을 변경�
 
 ### <a name="limit-line-length-to-100-characters"></a>줄 길이는 100자로 제한합니다.
 
-이는 개념 문서와 cmdlet 참조에 적용됩니다. about_topics는 80자로 제한됩니다.
-줄 길이를 제한하면 git diff 가독성과 기록이 향상됩니다. 또한 다른 작성자가 보다 쉽게 기여할 수 있습니다.
+이는 개념 문서와 cmdlet 참조에 적용됩니다. 줄 길이를 제한하면 git diff의 가독성과 기록이 향상됩니다. 또한 다른 작성자가 보다 쉽게 기여할 수 있습니다.
 
 사전 설정된 줄 길이에 맞게 단락을 쉽게 재배치하려면 Visual Studio Code에서 [Reflow Markdown][reflow] 확장을 사용합니다.
+
+about_topics는 80자로 제한됩니다. 자세한 내용은 [참조 문서 편집](./editing-cmdlet-ref.md#formatting-about_-files)을 참조하세요.
 
 ### <a name="lists"></a>목록
 
@@ -129,56 +136,6 @@ This is a list that contain sub-elements under a bullet item.
 
 1. 다음 번호 매기기 항목은 여기에서 시작됩니다.
 
-### <a name="formatting-command-syntax-elements"></a>명령 구문 요소 서식 지정
-
-- cmdlet 및 매개 변수에는 항상 전체 이름을 사용합니다. 특별히 보여 주어야 하는 것이 아니라면 별칭을 사용하지 않습니다.
-
-- 단락 내에서 언어 키워드, cmdlet 이름, 변수, 파일 경로는 역따옴표(`` ` ``) 문자로 래핑해야 합니다. 속성, 매개 변수, 클래스 이름은 **굵게** 표시해야 합니다.
-
-  다음은 그 예입니다.
-
-  ~~~markdown
-  The following code uses `Get-ChildItem` to list the contents of `C:\Windows` and assigns
-  the output to the `$files` variable.
-
-  ```powershell
-  $files = Get-ChildItem C:\Windows
-  ```
-  ~~~
-
-- 이름으로 매개 변수를 참조하는 경우에는 이름을 **굵게** 표시해야 합니다. 하이픈 접두사를 사용하여 매개 변수 사용을 보여 주는 경우, 매개 변수를 역따옴표으로 래핑해야 합니다. 다음은 그 예입니다.
-
-  ```markdown
-  The parameter's name is **Name**, but it is typed as `-Name` when used on the command
-  line as a parameter.
-  ```
-
-- 외부 명령(EXE, 스크립트 등)을 참조하는 경우, 명령 이름은 모두 소문자(문장의 시작 부분인 경우 대문자)로 굵게 표시하고 적절한 파일 확장명을 포함해야 합니다. 다음은 그 예입니다.
-
-  ```markdown
-  For example, on Windows systems, you can use the `net start` and `net stop` commands
-  to start and stop a service. **Sc.exe** is another service control tool for Windows.
-  That name does not fit into the naming pattern for the **net.exe** service commands.
-  ```
-
-- 외부 명령의 사용 예제를 표시하는 경우, 예제를 역따옴표로 래핑해야 합니다.
-  이름이 별칭과 충돌하는 경우, 명령 예제에 파일 확장명을 포함해야 합니다. 다음은 그 예입니다.
-
-  ```markdown
-  To start the spooler service on a remote computer named DC01, you type `sc.exe \\DC01 start spooler`.
-  ```
-
-- 참조 콘텐츠가 아닌 개념 문서를 작성할 때, 처음으로 나오는 cmdlet 이름은 하이퍼링크로 cmdlet 설명서에 연결되어야 합니다. 하이퍼링크의 대괄호 안에는 역따옴표, 굵은 글꼴 또는 기타 태그를 사용하지 않습니다.
-
-  다음은 그 예입니다.
-
-  ```markdown
-  This [Write-Host](/powershell/module/Microsoft.PowerShell.Utility/Write-Host) cmdlet
-  uses the **Object** parameter to ...
-  ```
-
-  자세한 내용은 이 문서의 [하이퍼링크](#hyperlinks) 섹션을 참조하세요.
-
 ### <a name="images"></a>이미지
 
 이미지를 포함할 구문의 경우:
@@ -199,7 +156,7 @@ Example:
 
 ### <a name="markdown-extensions-supported-by-open-publishing"></a>Open Publishing이 지원하는 Markdown 확장
 
-[Microsoft Docs Authoring Pack](/contribute/how-to-write-docs-auth-pack)에는 Microsoft 게시 시스템에 고유한 기능을 지원하는 도구가 포함되어 있습니다. 경고는 콘텐츠의 중요도를 나타내는 색과 아이콘으로 docs.microsoft.com에서 렌더링되는 블록 따옴표를 만드는 Markdown 확장입니다. 다음 경고 유형이 지원됩니다.
+[Microsoft Docs Authoring Pack](/contribute/how-to-write-docs-auth-pack)에는 Microsoft 게시 시스템에 고유한 기능을 지원하는 도구가 포함되어 있습니다. 경고는 콘텐츠의 중요도를 강조하는 색과 아이콘으로 docs.microsoft.com에서 렌더링되는 블록 따옴표를 만드는 Markdown 확장입니다. 다음 경고 유형이 지원됩니다.
 
 ```markdown
 > [!NOTE]
@@ -220,80 +177,151 @@ Example:
 
 이러한 경고는 docs.microsoft.com에서 다음과 같이 표시됩니다.
 
+메모 블록
+
 > [!NOTE]
 > 훑어보는 경우에도 사용자가 주목해야 하는 정보입니다.
+
+팁 블록
 
 > [!TIP]
 > 사용자의 성공을 돕는 선택적 정보입니다.
 
+중요 블록
+
 > [!IMPORTANT]
 > 사용자의 성공에 필요한 필수 정보입니다.
+
+주의 블록
 
 > [!CAUTION]
 > 작업에서 발생할 수 있는 부정적 결과입니다.
 
+경고 블록
+
 > [!WARNING]
 > 작업의 위험한 특정 결과입니다.
 
-## <a name="hyperlinks"></a>하이퍼링크
+### <a name="hyperlinks"></a>하이퍼링크
 
-- URL을 그대로 사용하지 마세요. 링크는 Markdown 구문 `[friendlyname](url-or-path)`을 사용해야 합니다.
-- 필요한 경우 URL을 그대로 사용할 수 있지만 역따옴표로 묶어야 합니다. 다음은 그 예입니다.
+- 하이퍼링크는 Markdown 구문(`[friendlyname](url-or-path)`)을 사용해야 합니다.
+- 링크는 가능하면 HTTPS 형식이어야 합니다.
+- 링크에는 일반적으로 연결된 토픽의 제목인 식별 이름이 있어야 합니다.
+- 맨 아래의 "관련 링크" 섹션에 있는 항목은 모두 하이퍼링크로 처리해야 합니다.
+- 하이퍼링크의 대괄호 안에는 역따옴표, 굵은 글꼴 또는 기타 태그를 사용하지 않습니다.
+- 특정 URI에 대해 이야기할 때는 기본 URL을 사용할 수 있습니다. URI는 역따옴표로 묶어야 합니다. 다음은 그 예입니다.
 
   ```markdown
   By default, if you do not specify this parameter, the DMTF standard resource URI
   `http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/` is used and the class name is appended to it.
   ```
 
-- URL 링크는 가능하면 HTTPS 형식이어야 합니다.
-- 링크에는 일반적으로 연결된 토픽의 제목인 식별 이름이 있어야 합니다.
-- 맨 아래의 "관련 링크" 섹션에 있는 항목은 모두 하이퍼링크로 처리해야 합니다.
-- 하이퍼링크의 대괄호 안에는 역따옴표, 굵은 글꼴 또는 기타 태그를 사용하지 않습니다.
+#### <a name="linking-to-other-content"></a>다른 콘텐츠에 연결
 
-### <a name="linking-to-other-content"></a>다른 콘텐츠에 연결
+게시 시스템에서 지원하는 하이퍼링크의 유형은
 
-게시 시스템에서 지원하는 하이퍼링크의 유형은 두 가지(URL 링크와 파일 링크)입니다.
+**URL 링크**는 docs.microsoft.com의 루트를 기준으로 하는 URL 경로이거나 전체 URL 구문을 포함하는 절대 URL일 수 있습니다. 예: `https:/github.com/MicrosoftDocs/PowerShell-Docs`
 
-URL 링크는 docs.microsoft.com의 루트를 기준으로 하는 URL 경로이거나 전체 URL 구문을 포함하는 절대 URL일 수 있습니다. (예: `https:/github.com/MicrosoftDocs/PowerShell-Docs`)
-
-- PowerShell-Docs 외부 콘텐츠에 연결하거나 PowerShell-Docs 내의 cmdlet 참조와 개념 문서 사이를 연결하는 경우 URL 링크를 사용합니다.
-- 상대 링크를 만드는 가장 간단한 방법은 브라우저에서 URL을 복사한 다음 Markdown에 붙여넣는 값에서 `https://docs.microsoft.com/en-us`를 제거하는 것입니다.
-   - Microsoft 속성에서 URL에 로캘을 포함하지 마세요(예: URL에서 "/en-us"를 제거).
+- PowerShell-Docs 외부 콘텐츠에 연결하거나 PowerShell-Docs 내의 cmdlet 참조와 개념 문서 사이를 연결하는 경우 URL 링크를 사용합니다. 상대 링크를 만드는 가장 간단한 방법은 브라우저에서 URL을 복사한 다음 Markdown에 붙여넣는 값에서 `https://docs.microsoft.com/en-us`를 제거하는 것입니다.
+- Microsoft 속성에서 URL에 로캘을 포함하지 마세요(예: URL에서 `/en-us`를 제거).
+- 문서의 특정 버전에 연결해야 하는 경우가 아니면 URL에서 불필요한 쿼리 매개 변수를 제거합니다. 예제:
+  - `?view=powershell-5.1` - PowerShell의 특정 버전에 연결하는 데 사용됩니다.
+  - `?redirectedfrom=MSDN` - 이전 문서에서 새 위치로 리디렉션될 때 URL에 추가됩니다.
 - 외부 웹 사이트에 대한 모든 URL은 대상 사이트에 유효하지 않은 경우가 아니라면 HTTPS를 사용해야 합니다.
 
-파일 링크는 참조 문서를 다른 참조 문서로 또는 개념 문서를 다른 개념 문서로 연결하는 데 사용됩니다. 특정 PowerShell 버전의 참조 문서에 연결해야 하는 경우 URL 링크를 사용해야 합니다.
+**파일 링크**는 참조 문서를 다른 참조 문서로 또는 개념 문서를 다른 개념 문서로 연결하는 데 사용됩니다. 특정 PowerShell 버전의 참조 문서에 연결해야 하는 경우 URL 링크를 사용해야 합니다.
 
 - 파일 링크에는 상대 파일 경로가 포함됩니다(예: `../folder/file.md`).
 - 모든 파일 경로에는 슬래시(`/`) 문자를 사용합니다.
 
-## <a name="formatting-code-samples"></a>코드 샘플 서식 지정
+URL 및 파일 링크 모두에 딥 링크를 설정할 수 있습니다. 대상 경로의 끝에 앵커를 추가합니다.
+다음은 그 예입니다.
+
+- `[about_Splatting](about_Splatting.md#splatting-with-arrays)`
+- `[custom key bindings](https://code.visualstudio.com/docs/getstarted/keybindings#_custom-keybindings-for-refactorings)`
+
+자세한 내용은 [문서에서 링크 사용](https://docs.microsoft.com/contribute/how-to-write-links)을 참조하세요.
+
+## <a name="formatting-command-syntax-elements"></a>명령 구문 요소 서식 지정
+
+- cmdlet 및 매개 변수에는 항상 전체 이름을 사용합니다. 특별히 보여 주어야 하는 것이 아니라면 별칭을 사용하지 않습니다.
+
+- 속성, 매개 변수, 개체, 형식 이름, 클래스 이름, 클래스 메서드는 **굵게** 표시해야 합니다.
+  - 속성 및 매개 변수 값은 역따옴표(`` ` ``)로 래핑해야 합니다.
+  - 대괄호로 묶은 스타일을 사용하여 형식을 참조하는 경우에는 역따옴표를 사용합니다. 예: `[System.Io.FileInfo]`
+
+- 언어 키워드, cmdlet 이름, 함수, 변수, 기본 EXE, 파일 경로, 인라인 구문 예제는 역따옴표(`` ` ``) 문자로 래핑해야 합니다.
+
+  다음은 그 예입니다.
+
+  ~~~markdown
+  The following code uses `Get-ChildItem` to list the contents of `C:\Windows` and assigns
+  the output to the `$files` variable.
+
+  ```powershell
+  $files = Get-ChildItem C:\Windows
+  ```
+  ~~~
+
+  - 이름으로 매개 변수를 참조하는 경우에는 이름을 **굵게** 표시해야 합니다. 하이픈 접두사를 사용하여 매개 변수 사용을 보여 주는 경우, 매개 변수를 역따옴표으로 래핑해야 합니다. 다음은 그 예입니다.
+
+    ```markdown
+    The parameter's name is **Name**, but it is typed as `-Name` when used on the command
+    line as a parameter.
+    ```
+
+  - 외부 명령의 사용 예제를 표시하는 경우, 예제를 역따옴표로 래핑해야 합니다.
+    항상 기본 명령에 파일 확장명을 포함합니다. 다음은 그 예입니다.
+
+    ```markdown
+    To start the spooler service on a remote computer named DC01, you type `sc.exe \\DC01 start spooler`.
+    ```
+
+    파일 확장명을 포함하면 PowerShell의 명령 우선 순위에 따라 올바른 명령이 실행됩니다.
+
+- 참조 콘텐츠가 아닌 개념 문서를 작성할 때, 처음으로 나오는 cmdlet 이름은 하이퍼링크로 cmdlet 설명서에 연결되어야 합니다. 하이퍼링크의 대괄호 안에는 역따옴표, 굵은 글꼴 또는 기타 태그를 사용하지 않습니다.
+
+  다음은 그 예입니다.
+
+  ```markdown
+  This [Write-Host](/powershell/module/Microsoft.PowerShell.Utility/Write-Host) cmdlet
+  uses the **Object** parameter to ...
+  ```
+
+  자세한 내용은 이 문서의 [하이퍼링크](#hyperlinks) 섹션을 참조하세요.
+
+## <a name="markdown-for-code-samples"></a>코드 샘플용 Markdown
 
 Markdown은 다음 두 가지 코드 스타일을 지원합니다.
 
-- 코드 범위(인라인) - 단일 역따옴표(`` ` ``) 문자로 표시됩니다. 독립 실행형 블록으로 사용되지 않고 단락 내에서 사용됩니다.
-- 코드 블록 - 삼중 역따옴표(`` ``` ``) 문자열로 묶인 여러 줄의 블록입니다. 코드 블록에는 역따옴표 뒤에 언어 레이블이 있을 수 있습니다. 언어 레이블로 코드 블록의 내용에 구문 강조 표시를 사용할 수 있습니다.
+- **코드 범위(인라인)** - 단일 역따옴표(`` ` ``) 문자로 표시됩니다. 독립 실행형 블록으로 사용되지 않고 단락 내에서 사용됩니다.
+- **코드 블록** - 삼중 역따옴표(`` ``` ``) 문자열로 묶인 여러 줄의 블록입니다. 코드 블록에는 역따옴표 뒤에 언어 레이블이 있을 수 있습니다. 언어 레이블로 코드 블록의 내용에 구문 강조 표시를 사용할 수 있습니다.
 
-### <a name="using-code-blocks"></a>코드 블록 사용
+모든 코드 블록은 코드 펜스에 포함되어야 합니다. 코드 블록에는 절대 들여쓰기를 사용하지 마세요. Markdown은 이 패턴을 허용하지만 문제가 발생할 수 있으므로 피해야 합니다.
 
-Markdown에서는 코드 블록을 나타내기 위한 들여쓰기가 허용되지만 이 패턴은 문제가 될 수 있으므로 피해야 합니다. 모든 코드 블록은 코드 펜스에 포함되어야 합니다. 코드 펜스는 삼중 역따옴표(`` ``` ``) 문자열로 둘러싸인 코드 블록입니다. 코드 펜스 마커는 코드 샘플 앞뒤의 고유한 줄에 있어야 합니다. 코드 블록의 시작 부분에 있는 마커에는 선택적 언어 레이블이 있을 수 있습니다. Microsoft OPS(Open Publishing System)는 언어 레이블을 사용하여 구문 강조 표시 기능을 지원합니다.
+코드 블록은 삼중 역따옴표(`` ``` ``) 코드 펜스로 둘러싸인 하나 이상의 코드 줄입니다.
+코드 펜스 마커는 코드 샘플 앞뒤의 고유한 줄에 있어야 합니다. 코드 블록의 시작 부분에 있는 마커에는 선택적 언어 레이블이 있을 수 있습니다. Microsoft OPS(Open Publishing System)는 언어 레이블을 사용하여 구문 강조 표시 기능을 지원합니다.
 
-또한 OPS는 코드 블록의 내용을 클립보드에 복사하는 **복사** 단추를 추가합니다. 이를 통해 코드 예제 테스트를 위한 스크립트에 코드를 빠르게 붙여넣을 수 있습니다. 하지만 설명서의 모든 예제가 실행을 염두에 두고 제공되는 것은 아닙니다. 일부 코드 블록은 PowerShell 개념의 간단한 예시입니다.
+지원되는 언어 태그의 전체 목록은 중앙 참가자 가이드의 [펜스된 코드 블록](/contribute/code-in-docs#fenced-code-blocks)을 참조하세요.
 
-설명서에 사용되는 코드 블록에는 다음 두 가지 유형이 있습니다.
+또한 OPS는 코드 블록의 내용을 클립보드에 복사하는 **복사** 단추를 추가합니다. 그러면 스크립트에 코드를 빠르게 붙여넣어서 코드 샘플을 테스트할 수 있습니다. 하지만 설명서의 모든 예제가 그대로 실행된다고 간주하지 않습니다. 일부 코드 블록은 PowerShell 개념의 간단한 예시입니다.
 
+설명서에 사용되는 코드 블록에는 다음 세 가지 형식이 있습니다.
+
+1. 구문 블록
 1. 설명 예제
-2. 실행 파일 예제
+1. 실행 파일 예제
 
 ### <a name="syntax-code-blocks"></a>구문 코드 블록
 
-이 예제는 `Get-Command` cmdlet의 가능한 모든 매개 변수를 보여 줍니다.
+구문 코드 블록은 명령의 구문 구조를 설명하는 데 사용됩니다. 코드 펜스에서 언어 태그를 사용하지 마세요. 이 예제는 `Get-Command` cmdlet의 가능한 모든 매개 변수를 보여 줍니다.
 
 ~~~markdown
 ```
 Get-Command [-Verb <String[]>] [-Noun <String[]>] [-Module <String[]>]
-  [-FullyQualifiedModule <ModuleSpecification[]>] [-TotalCount <Int32>] [-Syntax] [-ShowCommandInfo]
-  [[-ArgumentList] <Object[]>] [-All] [-ListImported] [-ParameterName <String[]>]
-  [-ParameterType <PSTypeName[]>] [<CommonParameters>]
+  [-FullyQualifiedModule <ModuleSpecification[]>] [-TotalCount <Int32>] [-Syntax]
+  [-ShowCommandInfo] [[-ArgumentList] <Object[]>] [-All] [-ListImported]
+  [-ParameterName <String[]>] [-ParameterType <PSTypeName[]>] [<CommonParameters>]
 ```
 ~~~
 
@@ -308,10 +336,9 @@ for (<init>; <condition>; <repeat>)
 
 ### <a name="illustrative-examples"></a>설명 예제
 
-설명 예제는 PowerShell 개념을 설명하는 데 사용됩니다. 실행을 위해 클립보드로 복사하기 위한 예제가 아닙니다. 이 예제는 쉽게 입력할 수 있는 간단한 예제에 가장 흔히 사용되며
-명령의 구문을 설명하는 구문 예제에도 사용됩니다. 코드 블록에는 예시 명령의 예제 출력이 포함될 수 있습니다.
+설명 예제는 PowerShell 개념을 설명하는 데 사용됩니다. 실행을 위해 클립보드로 복사하기 위한 예제가 아닙니다. 이 예제는 쉽게 입력하고 이해할 수 있는 간단한 예제에 가장 흔히 사용됩니다. 코드 블록에는 PowerShell 프롬프트와 예제 출력이 포함될 수 있습니다.
 
-다음은 PowerShell 비교 연산자를 보여 주는 간단한 예제입니다.
+다음은 PowerShell 비교 연산자를 보여주는 간단한 예제입니다. 이 예제는 독자가 복사하고 실행하는 것이 아닙니다.
 
 ~~~markdown
 ```powershell
@@ -335,15 +362,13 @@ abc
 ```
 ~~~
 
-이 예제는 간단한 PowerShell 프롬프트를 포함하며 결과 출력을 보여 줍니다. 이 예제는 독자가 복사하고 실행하는 것이 아닙니다.
-
 ### <a name="executable-examples"></a>실행 파일 예제
 
-더 복잡한 예제나 복사 및 실행에 유용한 예제에는 다음 블록 스타일 태그를 사용해야 합니다.
+더 복잡한 예제나 복사 및 실행될 예제에는 다음 블록 스타일 표시를 사용해야 합니다.
 
 ~~~markdown
 ```powershell
-<PowerShell code goes here>
+<Your PowerShell code goes here>
 ```
 ~~~
 
@@ -412,7 +437,7 @@ GameConfigStore        GameDVR_Enabled                       : 1
 
 ### <a name="do-not-use-aliases-in-examples"></a>예제에서 별칭 사용 안 함
 
-별칭에 대해 구체적으로 이야기해야 하는 경우가 아니라면 항상 모든 cmdlet과 매개 변수의 전체 이름을 사용해야 합니다. cmdlet 및 매개 변수 이름은 코드에 정의된 적절한 철자를 사용해야 합니다.
+별칭에 대해 구체적으로 이야기해야 하는 경우가 아니라면 항상 모든 cmdlet과 매개 변수의 전체 이름을 사용해야 합니다. Cmdlet 및 매개 변수 이름은 적절한 파스칼식 대/소문자를 사용해야 합니다.
 
 ### <a name="using-parameters-in-examples"></a>예제에서 매개 변수 사용
 

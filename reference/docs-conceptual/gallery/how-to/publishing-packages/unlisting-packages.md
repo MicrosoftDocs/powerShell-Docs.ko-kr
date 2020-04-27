@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: 목록에서 패키지 제거
-ms.openlocfilehash: fb66fd23dae1d4640056a764c31426f61f56d910
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b7404420db531ac5d97debd46e1b84c6fdd49d9a
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328274"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978273"
 ---
 # <a name="unlisting-packages"></a>목록에서 패키지 제거
 
@@ -18,7 +18,7 @@ PowerShell 갤러리에서는 사용자가 패키지를 영구적으로 삭제�
 따라서 다른 사용자가 이후의 가능한 손상에 대해 염려하지 않고 패키지를 사용할 수 있습니다.
 예를 들어 Pester 모듈이 Azure 모듈을 사용하는데 Azure 모듈이 갤러리에서 제거되면 사용자가 Pester 모듈을 더 이상 사용할 수 없습니다.
 
-그러나 패키지를 제거하는 대신 목록에서 제거할 수 있습니다.
+패키지를 제거하는 대신 나열 취소할 수 있습니다.
 
 **PowerShell 갤러리의 목록에서 패키지를 제거하면 어떻게 될까요?**
 
@@ -26,7 +26,7 @@ PowerShell 갤러리의 목록에서 모듈 또는 스크립트와 같은 패키
 목록에 없는 패키지를 다운로드하려면 패키지의 정확한 이름 및 버전을 지정해야 합니다.
 이 때문에 목록에서 패키지를 제거하는 경우 해당 패키지를 사용하는 다른 모듈이나 스크립트가 손상되지 않습니다.
 
-목록에서 패키지를 제거하려면 패키지 세부 정보 페이지로 이동한 다음 '모듈 삭제'를 선택합니다. '목록에 표시' 확인란의 선택을 취소하고 저장을 클릭합니다.
+목록에서 패키지를 제거하려면 패키지 세부 정보 페이지로 이동한 다음 '모듈 삭제'를 선택합니다. '목록에 포함' 확인란의 선택을 취소하고 '저장'을 선택합니다.
 
 **패키지를 제거하려면 어떻게 하나요?**
 

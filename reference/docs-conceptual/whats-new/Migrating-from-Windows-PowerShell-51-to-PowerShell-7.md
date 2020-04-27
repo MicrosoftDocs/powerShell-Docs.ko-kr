@@ -2,12 +2,12 @@
 title: Windows PowerShell 5.1에서 PowerShell 7로 마이그레이션
 description: Windows 플랫폼의 PowerShell을 5.1에서 7로 업데이트.
 ms.date: 03/25/2020
-ms.openlocfilehash: e3881b1758f50119444969ad39541aec694cebe5
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: 8f19297bdb4825f3bbd50544dc5737997e3c83e3
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500495"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81440495"
 ---
 # <a name="migrating-from-windows-powershell-51-to-powershell-7"></a>Windows PowerShell 5.1에서 PowerShell 7로 마이그레이션
 
@@ -176,7 +176,7 @@ Windows PowerShell 원격 작업을 사용하려면 원격 관리를 위해 원�
 Enter-PSSession -HostName <Computer> -UserName <Username>
 ```
 
-또는 **HostName** 매개 변수를 사용할 때 사용자 이름 정보를 제공하세요. 이 이름 다음에는 '\@' 기호와 컴퓨터 이름이 차례로 나옵니다.
+또는 **HostName** 매개 변수를 사용할 때 사용자 이름 정보를 제공하세요. 이 이름 다음에는 `@` 기호와 컴퓨터 이름이 차례로 나옵니다.
 
 ```powershell
 Enter-PSSession -HostName <Username>@<Computer>

@@ -3,12 +3,12 @@ title: 편집 검사 목록
 description: PowerShell 설명서를 편집하기 위한 규칙의 요약된 목록입니다.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: 511e0c323e1a3256039e819d06f32f6e1ac42767
-ms.sourcegitcommit: 18d832858a7b8ea094763afa753e0f48f01372e7
+ms.openlocfilehash: b5baf7366239084779d34e23f218e5e6222ed1a3
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79060338"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81624740"
 ---
 # <a name="editors-checklist"></a>편집자 검사 목록
 
@@ -36,7 +36,8 @@ ms.locfileid: "79060338"
   - 구문 예제 `Verb-Noun -Parameter`
   - 파일 경로 `C:\Program Files\PowerShell`, `/usr/bin/pwsh`
   - 문서에서 클릭할 수 없는 URL
-- 속성 이름, 매개 변수 값, 매개 변수 이름, 클래스 이름, 모듈 이름, 엔터티 이름, 개체 또는 형식 이름을 굵게 표시
+  - 속성 또는 매개 변수 값
+- 속성 이름, 매개 변수 이름, 클래스 이름, 모듈 이름, 엔터티 이름, 개체 또는 형식 이름을 굵게 표시
   - 굵게는 강조 표시가 아니라 의미 체계 태그에 사용
   - 굵게 - 별표 `**` 사용
 - 기울임꼴 - 밑줄 `_` 사용
@@ -60,7 +61,7 @@ ms.locfileid: "79060338"
 - 앞뒤의 빈 줄
 - 태그가 지정된 코드 펜스를 사용 - **powershell**, **Output** 또는 기타 적절한 언어 ID
 - 태그가 없는 펜스 - 구문 블록 또는 기타 셸
-- 개별 코드 블록에 **Output**을 배치(독자가 **Copy** 단추를 사용할 필요가 없는 간단한 예제는 제외)
+- 개별 코드 블록에 출력을 배치(독자가 **Copy** 단추를 사용할 필요가 없는 간단한 예제는 제외)
 - [지원되는 언어](/contribute/code-in-docs#supported-languages) 목록 참조
 
 ### <a name="lists"></a>목록
