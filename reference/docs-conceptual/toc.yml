@@ -372,9 +372,9 @@
         - name: Nano에서 DSC 시작하기
           href: dsc/getting-started/nanoDSC.md
         - name: Azure Automation에서 DSC 시작하기
-          href: dsc/getting-started/azureDSC.md
-        - name: Azure Virtual Machines에서 DSC 시작하기
-          href: dsc/getting-started/azureDSCexthistory.md
+          href: /azure/automation/automation-dsc-getting-started
+        - name: Azure Policy 게스트 구성 시작
+          href: /azure/governance/policy/concepts/guest-configuration
     - name: 빠른 시작
       expanded: true
       items:
