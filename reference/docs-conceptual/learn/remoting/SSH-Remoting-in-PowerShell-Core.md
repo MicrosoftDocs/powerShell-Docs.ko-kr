@@ -2,12 +2,12 @@
 title: SSH를 통한 PowerShell 원격
 description: SSH를 사용하여 PowerShell Core에서 원격 작업
 ms.date: 09/30/2019
-ms.openlocfilehash: 0f2fb13010d62dec5b19b373a24a199bff22665d
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 9fe3e22c54a4695a1027f416acf113f2f7fd2cd7
+ms.sourcegitcommit: 7c7f8bb9afdc592d07bf7ff4179d000a48716f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "73444368"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82174139"
 ---
 # <a name="powershell-remoting-over-ssh"></a>SSH를 통한 PowerShell 원격
 
@@ -53,7 +53,7 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
    > [!NOTE]
    > PowerShell을 OpenSSH의 기본 셸로 설정하려면 [OpenSSH용 Windows 구성](/windows-server/administration/openssh/openssh_server_configuration)을 참조하세요.
 
-1. `sshd_config`에 있는 `$env:ProgramData\ssh` 파일을 편집합니다.
+1. `$env:ProgramData\ssh`에 있는 `sshd_config` 파일을 편집합니다.
 
    암호 인증이 활성화되었는지 확인합니다.
 
@@ -64,10 +64,12 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
    원격 컴퓨터에서 PowerShell 프로세스를 호스트하는 SSH 하위 시스템을 만듭니다.
 
    ```
-   Subsystem powershell c:/progra~1/powershell/6/pwsh.exe -sshs -NoLogo -NoProfile
+   Subsystem powershell c:/progra~1/powershell/7/pwsh.exe -sshs -NoLogo -NoProfile
    ```
 
    > [!NOTE]
+   > PowerShell 실행 파일의 기본 위치는 `c:/progra~1/powershell/7/pwsh.exe`입니다. 위치는 PowerShell을 설치한 방법에 따라 달라질 수 있습니다.
+   >
    > 공백이 포함된 파일 경로에는 짧은 이름(8.3)을 사용해야 합니다. 하위 시스템 실행 파일 경로의 작업에서 공백을 방지하는 Windows용 OpenSSH에 버그가 있습니다. 자세한 내용은 이 [GitHub 문제](https://github.com/PowerShell/Win32-OpenSSH/issues/784)를 참조하세요.
    >
    > Windows에서 `Program Files` 폴더의 짧은 이름(8.3)은 일반적으로 `Progra~1`입니다. 그러나 다음 명령을 사용하여 이를 수행할 수 있습니다.
@@ -109,7 +111,7 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
    sudo apt install openssh-server
    ```
 
-1. `sshd_config` 위치에서 `/etc/ssh` 파일을 편집합니다.
+1. `/etc/ssh` 위치에서 `sshd_config` 파일을 편집합니다.
 
    암호 인증이 활성화되었는지 확인합니다.
 
@@ -122,6 +124,9 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
    ```
    Subsystem powershell /usr/bin/pwsh -sshs -NoLogo -NoProfile
    ```
+
+   > [!NOTE]
+   > PowerShell 실행 파일의 기본 위치는 `/usr/bin/pwsh`입니다. 위치는 PowerShell을 설치한 방법에 따라 달라질 수 있습니다.
 
    필요에 따라 키 인증을 활성화합니다.
 
@@ -146,7 +151,7 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
    1. `Remote Login`을 선택하고 `Remote Login: On`으로 설정합니다.
    1. 적절한 사용자에게 액세스를 허용합니다.
 
-1. `sshd_config` 위치에서 `/private/etc/ssh/sshd_config` 파일을 편집합니다.
+1. `/private/etc/ssh/sshd_config` 위치에서 `sshd_config` 파일을 편집합니다.
 
    **nano**와 같은 텍스트 편집기를 사용합니다.
 
@@ -165,6 +170,9 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
    ```
    Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo -NoProfile
    ```
+
+   > [!NOTE]
+   > PowerShell 실행 파일의 기본 위치는 `/usr/local/bin/pwsh`입니다. 위치는 PowerShell을 설치한 방법에 따라 달라질 수 있습니다.
 
    필요에 따라 키 인증을 활성화합니다.
 
