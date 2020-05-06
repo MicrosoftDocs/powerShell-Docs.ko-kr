@@ -2,12 +2,12 @@
 title: Linux에 PowerShell 설치
 description: 다양한 Linux 배포에 PowerShell을 설치하는 방법에 대한 정보
 ms.date: 03/09/2020
-ms.openlocfilehash: 201bb693c3473f6b1f05d860562b1fc132912bb2
-ms.sourcegitcommit: 7c7f8bb9afdc592d07bf7ff4179d000a48716f13
+ms.openlocfilehash: 6ad637bd30e5e40ccc9532bae6f1171ecf79734a
+ms.sourcegitcommit: e0a737961280026832cff9c658ed1468dc904e80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82174140"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605852"
 ---
 # <a name="installing-powershell-on-linux"></a>Linux에 PowerShell 설치
 
@@ -530,7 +530,7 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/microsoft.repo
 
 # Update the list of products
-sudo dnf update
+sudo dnf check-update
 
 # Install a system component
 sudo dnf install compat-openssl10
