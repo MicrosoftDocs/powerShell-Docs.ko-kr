@@ -1,0 +1,61 @@
+### YamlMime:Landing
+title: 커뮤니티 업데이트
+summary: 리소스 목록과 새로운 문서 및 커뮤니티 기여에 대한 요약입니다.
+metadata:
+  title: 커뮤니티 업데이트
+  description: 리소스 목록과 새로운 문서 및 커뮤니티 기여에 대한 요약입니다.
+  ms.topic: landing-page
+  author: sdwheeler
+  ms.author: sewhee
+  ms.date: 04/29/2020
+  ms.openlocfilehash: 42d8de8ffedf9ac1b0bd7ee5df1483f8d1316da7
+  ms.sourcegitcommit: e6a9b13a4799667b74e0ba0f742dded4511d32b4
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82630889"
+landingContent:
+- title: 커뮤니티 리소스
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 커뮤니티 지원
+      url: community-support.md
+    - text: 디지털 아트
+      url: digital-art.md
+    - text: 기여자 명예의 전당
+      url: hall-of-fame.md
+- title: PowerShell Docs의 새로운 기능
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: 2020-Q2
+      url: ./2020-Q2.md
+    - text: 2020-Q1
+      url: ./2020-Q1.md
+- title: 참여하기 - PowerShell 문서에 기여하세요
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: PowerShell 기여자 가이드
+      url: contributing/overview.md
+    - text: 작성 시작하기
+      url: contributing/get-started-writing.md
+  - linkListType: how-to-guide
+    links:
+    - text: 문제 제출 방법
+      url: contributing/file-an-issue.md
+    - text: 끌어오기 요청 제출
+      url: contributing/pull-requests.md
+    - text: PowerShell-Docs 스타일 가이드
+      url: contributing/powershell-style-guide.md
+    - text: cmdlet 참조 편집
+      url: contributing/editing-cmdlet-ref.md
+  - linkListType: reference
+    links:
+    - text: 편집 검사 목록
+      url: contributing/editorial-checklist.md
+    - text: 이슈를 관리하는 방법
+      url: contributing/managing-issues.md
+    - text: 끌어오기 요청 관리 방법
+      url: contributing/managing-pull-requests.md
