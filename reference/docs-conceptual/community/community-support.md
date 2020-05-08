@@ -1,19 +1,17 @@
 ---
-title: PowerShell 커뮤니티 리소스
+title: PowerShell 커뮤니티 지원 리소스
 description: PowerShell 사용자를 위해, 그리고 사용자가 만든 리소스 목록
-ms.date: 03/04/2020
-ms.openlocfilehash: 50f5eaaef9ef30351fa605f74648a8efbce90af3
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.date: 04/29/2020
+ms.openlocfilehash: f35524c8a1a457ffd6cccf0d2165cc340f7519ca
+ms.sourcegitcommit: e6a9b13a4799667b74e0ba0f742dded4511d32b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80395011"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82630838"
 ---
-# <a name="powershell-community-resources"></a>PowerShell 커뮤니티 리소스
+# <a name="getting-support-from-the-community"></a>커뮤니티에서 지원 받기
 
 PowerShell 커뮤니티는 활기찬 공동 작업 사용자 그룹입니다. 이 문서는 커뮤니티의 다른 구성원과 연결하는 데 도움이 될 수 있습니다.
-
-## <a name="getting-support-from-the-community"></a>커뮤니티에서 지원 받기
 
 PowerShell 커뮤니티는 [GitHub](https://github.com/powershell/powershell/issues) 리포지토리에서 문제, 버그 또는 기능 요청을 제출할 수 있습니다. 질문이 있는 경우 다음 공개 포럼 중 하나에서 커뮤니티의 다른 구성원에게 도움을 얻을 수 있습니다.
 
@@ -27,9 +25,3 @@ PowerShell 커뮤니티는 [GitHub](https://github.com/powershell/powershell/iss
 - [PowerShell Discord](https://discord.gg/Ju25cw6)
 
 지원 정책에 대한 자세한 내용은 [PowerShell 지원 주기](/powershell/scripting/powershell-support-lifecycle)를 참조하세요.
-
-## <a name="looking-for-logos-and-other-digital-goodies"></a>로고 및 기타 디지털 아이템 찾기
-
-Microsoft에는 즐길 수 있는 디지털 아트워크 모음이 있습니다.
-
-[디지털 아트](/powershell/scripting/community/digital-art)
