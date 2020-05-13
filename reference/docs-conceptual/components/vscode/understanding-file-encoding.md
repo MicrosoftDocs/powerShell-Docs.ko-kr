@@ -2,12 +2,12 @@
 title: VS Code 및 PowerShell에서 파일 인코딩 이해
 description: VS Code 및 PowerShell에서 파일 인코딩 구성
 ms.date: 02/28/2019
-ms.openlocfilehash: b09c13374c28e88c66d1d84fbe56ca5c66b34c8c
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 991e3ccc95dd0dd2106cefe6c68371e59c031f35
+ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80978681"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83271868"
 ---
 # <a name="understanding-file-encoding-in-vs-code-and-powershell"></a>VS Code 및 PowerShell에서 파일 인코딩 이해
 
@@ -73,7 +73,7 @@ PowerShell 확장은 다음과 같은 여러 가지 방법으로 스크립트와
 2. 스크립트가 통합 콘솔에서 직접 실행되면 PowerShell이 직접 파일을 읽게 됩니다. PowerShell의 인코딩이 VS Code와 다를 경우 여기에서 문제가 발생할 수 있습니다.
 3. VS Code에서 열려 있는 스크립트가 VS Code에서 열려 있지 않은 다른 스크립트를 참조하는 경우 확장 프로그램은 파일 시스템에서 해당 스크립트의 내용을 로드하도록 대체됩니다. PowerShell 확장은 UTF-8 인코딩을 기본값으로 지정하지만 [바이트 순서 표시][](또는 BOM) 검색 기능을 사용하여 올바른 인코딩을 선택할 수도 있습니다.
 
-BOM이 없는 형식(예: BOM을 포함하지 않는 [UTF-8][] 및 [Windows-1252][])으로 인코딩한다고 가정하는 경우 이 문제가 발생합니다. PowerShell 확장은 UTF-8을 기본값으로 지정합니다. 확장 프로그램은 VS Code의 인코딩 설정을 변경할 수 없습니다. 자세한 내용은 [문제 #824](https://github.com/Microsoft/VS Code/issues/824)를 참조하세요.
+BOM이 없는 형식(예: BOM을 포함하지 않는 [UTF-8][] 및 [Windows-1252][])으로 인코딩한다고 가정하는 경우 이 문제가 발생합니다. PowerShell 확장은 UTF-8을 기본값으로 지정합니다. 확장 프로그램은 VS Code의 인코딩 설정을 변경할 수 없습니다. 자세한 내용은 [문제 #824](https://github.com/Microsoft/VSCode/issues/824)를 참조하세요.
 
 ## <a name="choosing-the-right-encoding"></a>맞는 인코딩 선택
 
@@ -255,11 +255,11 @@ PowerShell에서 인코딩 및 인코딩 구성에 대해 읽을 만한 몇 가�
 
 - [@mklement0][stackoverflow PowerShell 인코딩의 요약](https://stackoverflow.com/questions/40098771/changing-powershells-default-output-encoding-to-utf-8)
 - 인코딩 문제와 관련하여 VS Code-PowerShell에서 열린 이전 문제:
-  - [#1308](https://github.com/PowerShell/VS Code-powershell/issues/1308)
-  - [#1628](https://github.com/PowerShell/VS Code-powershell/issues/1628)
-  - [#1680](https://github.com/PowerShell/VS Code-powershell/issues/1680)
-  - [#1744](https://github.com/PowerShell/VS Code-powershell/issues/1744)
-  - [#1751](https://github.com/PowerShell/VS Code-powershell/issues/1751)
+  - [#1308](https://github.com/PowerShell/VSCode-powershell/issues/1308)
+  - [#1628](https://github.com/PowerShell/VSCode-powershell/issues/1628)
+  - [#1680](https://github.com/PowerShell/VSCode-powershell/issues/1680)
+  - [#1744](https://github.com/PowerShell/VSCode-powershell/issues/1744)
+  - [#1751](https://github.com/PowerShell/VSCode-powershell/issues/1751)
 - [유니코드에 대한 클래식 *Joel on Software* 논평](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
 - [.NET 표준으로 인코딩](https://github.com/dotnet/standard/issues/260#issuecomment-289549508)
 

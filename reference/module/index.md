@@ -9,19 +9,19 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: landing-page
 ms.manager: carmonm
-ms.date: 10/17/2019
+ms.date: 05/09/2020
 archive_url: ''
 layout: ApiBrowserPage
 apiPlatform: powershell
-quickFilterColumn1: powershell-6,win10-ps
-quickFilterColumn2: azps-2.8.0,win-mdop2-ps
-quickFilterColumn3: sqlserver-ps,systemcenter-ps-2016
-ms.openlocfilehash: 8a93fdd6e0bee1836913573154b04fca21ffb7fb
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+quickFilterColumn1: powershell-7,win10-ps
+quickFilterColumn2: azps-3.8.0,win-mdop2-ps
+quickFilterColumn3: sqlserver-ps,systemcenter-ps-2019
+ms.openlocfilehash: ac16bbc2bc3583e0aa0dd50784be726557e50a07
+ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "72561310"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83271817"
 ---
 # <a name="powershell-module-browser"></a>PowerShell 모듈 브라우저
 

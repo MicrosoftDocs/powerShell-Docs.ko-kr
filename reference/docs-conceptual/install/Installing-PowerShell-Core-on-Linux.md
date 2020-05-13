@@ -2,12 +2,12 @@
 title: Linux에 PowerShell 설치
 description: 다양한 Linux 배포에 PowerShell을 설치하는 방법에 대한 정보
 ms.date: 03/09/2020
-ms.openlocfilehash: 6ad637bd30e5e40ccc9532bae6f1171ecf79734a
-ms.sourcegitcommit: e0a737961280026832cff9c658ed1468dc904e80
+ms.openlocfilehash: e04d8a91999cd6e9b2d669230c7a1b412f11eeb8
+ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605852"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83271902"
 ---
 # <a name="installing-powershell-on-linux"></a>Linux에 PowerShell 설치
 
@@ -54,6 +54,10 @@ ms.locfileid: "82605852"
 - 맞춤 패키지
 - 이진 아카이브
 - .NET 글로벌 도구
+
+현재 지원되지 않음 
+
+- Ubuntu 20.04
 
 ## <a name="ubuntu-1604"></a>Ubuntu 16.04
 
@@ -165,6 +169,10 @@ sudo apt-get remove powershell
 
 > [!NOTE]
 > Ubuntu 19.04는 [중간 릴리스](https://www.ubuntu.com/about/release-cycle)로서 [커뮤니티 지원이 됩니다](../powershell-support-lifecycle.md).
+
+## <a name="ubuntu-2004"></a>Ubuntu 20.04
+
+Ubuntu 20.04는 LTS 릴리스입니다. PowerShell은 현재 이 버전을 지원하지 않습니다. 이 버전에 대한 지원은 PowerShell 7.1 릴리스에 대한 것으로 간주됩니다. Ubuntu 20.04에 대한 지원을 원하는 경우 이 [요청](https://github.com/PowerShell/PowerShell/issues/12626)에 찬성하세요.
 
 ## <a name="debian-8"></a>Debian 8
 
