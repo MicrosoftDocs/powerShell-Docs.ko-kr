@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: PowerShell 4.0에서 LCM 구성
-ms.openlocfilehash: 747b15c483c79a7ecbb62214ef5a59f8dc137bd4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4a9dedf67f9fb18fdd7f5adf70dbf1402fb3f918
+ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953830"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83271834"
 ---
 # <a name="configuring-the-lcm-in-powershell-40"></a>PowerShell 4.0에서 LCM 구성
 
@@ -24,11 +24,11 @@ ms.locfileid: "71953830"
 다음은 설정하거나 검색할 수 있는 로컬 구성 관리자 속성 목록입니다.
 
 - **AllowModuleOverwrite**: 구성 서비스에서 다운로드한 새 구성이 대상 노드에 있는 이전 구성을 덮어쓰도록 허용되는지 여부를 제어합니다. 가능한 값은 True와 False입니다.
-- **CertificateID**: 구성으로 전달된 자격 증명을 보호하는 데 사용되는 인증서의 지문입니다. 자세한 내용은 [Want to secure credentials in Windows PowerShell Desired State Configuration?(Windows PowerShell 필요한 상태 구성의 자격 증명 보호가 필요하세요?)](https://blogs.msdn.microsoft.com/powershell/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration/)을 참조하세요.
+- **CertificateID**: 구성으로 전달된 자격 증명을 보호하는 데 사용되는 인증서의 지문입니다. 자세한 내용은 [Want to secure credentials in Windows PowerShell Desired State Configuration?(Windows PowerShell 필요한 상태 구성의 자격 증명 보호가 필요하세요?)](https://devblogs.microsoft.com/powershell/want-to-secure-credentials-in-windows-powershell-desired-state-configuration/)을 참조하세요.
 - **ConfigurationID**: 풀 서비스에서 특정 구성 파일을 가져오는 데 사용되는 GUID를 나타냅니다. 이 GUID는 올바른 구성 파일에 액세스하도록 해줍니다.
 - **ConfigurationMode**: 로컬 구성 관리자가 실제로 구성을 대상 노드에 적용하는 방법을 지정합니다. 사용되는 값은 다음과 같습니다.
   - **ApplyOnly**: 이 옵션을 사용하면 새 구성을 대상 노드에 직접 전송하여 새 구성이 검색되지 않은 경우 또는 풀 서비스에 연결하고 풀 서비스에서 확인하면 DSC에서 새 구성을 검색하는 경우, DSC가 구성을 적용하는 작업만을 수행합니다. 대상 노드의 구성이 변경되지 않는 경우 아무 작업도 수행되지 않습니다.
-  - **ApplyAndMonitor**: 이 옵션(기본값)을 사용하면 대상 노드에 직접 전송했든지 아니면 풀 서비스에서 검색되었든지 관계없이 DSC에서 모든 새 구성을 적용합니다. 그 후 대상 노드의 구성이 구성 파일과 달라지면, DSC에서 로그 불일치를 보고합니다. DSC 로깅에 대한 자세한 내용은 [Using Event Logs to Diagnose Errors in Desired State Configuration(이벤트 로그를 사용하여 필요한 상태 구성에 있는 오류 진단)](https://blogs.msdn.com/b/powershell/archive/2014/01/03/using-event-logs-to-diagnose-errors-in-desired-state-configuration.aspx)을 참조하세요.
+  - **ApplyAndMonitor**: 이 옵션(기본값)을 사용하면 대상 노드에 직접 전송했든지 아니면 풀 서비스에서 검색되었든지 관계없이 DSC에서 모든 새 구성을 적용합니다. 그 후 대상 노드의 구성이 구성 파일과 달라지면, DSC에서 로그 불일치를 보고합니다. DSC 로깅에 대한 자세한 내용은 [Using Event Logs to Diagnose Errors in Desired State Configuration(이벤트 로그를 사용하여 필요한 상태 구성에 있는 오류 진단)](https://devblogs.microsoft.com/powershell/using-event-logs-to-diagnose-errors-in-desired-state-configuration/)을 참조하세요.
   - **ApplyAndAutoCorrect**: 이 옵션을 사용하면 작업자가 대상 노드에 직접 전송했든지, 아니면 풀 서비스에서 검색되었든지 관계없이 DSC에서 모든 새 구성을 적용합니다. 그 후 대상 노드의 구성이 구성 파일과 달라지면, DSC에서 로그 불일치를 보고한 다음, 구성 파일에 따라 가져올 대상 노드 구성에 대한 조정을 시도합니다.
 - **ConfigurationModeFrequencyMins**: DSC의 백그라운드 애플리케이션이 대상 노드에서 현재 구성을 구현하려고 시도하는 빈도(분)를 나타냅니다. 기본값은 15입니다. 이 값은 RefreshMode와 함께 설정할 수 있습니다. RefreshMode를 PULL로 설정하면 대상 노드에서는 RefreshFrequencyMins로 설정한 간격으로 구성 서비스에 연결하여 현재 구성을 다운로드합니다. RefreshMode 값에 관계없이 ConfigurationModeFrequencyMins로 설정한 간격으로, 대상 노드에 다운로드한 최신 구성을 일관성 엔진이 적용합니다. RefreshFrequencyMins는 ConfigurationModeFrequencyMins의 정수 배로 설정해야 합니다.
 - **Credential**: 구성 서비스 연결과 같이 원격 리소스에 액세스하는 데 필요한 자격 증명(Get-Credential과 마찬가지로)을 나타냅니다.
