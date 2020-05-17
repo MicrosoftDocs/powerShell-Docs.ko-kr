@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,리소스,갤러리,설정
 title: 구성에 매개 변수 추가
-ms.openlocfilehash: 9aa4c746042e89d7767e1b326233dcca1e5c4c24
-ms.sourcegitcommit: b80ce0396550d0896189d0205d6c4b4372ac2015
+ms.openlocfilehash: 9dd9f2be58c13840be2b24e7e21a0d4af79b67cc
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141394"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80263155"
 ---
 # <a name="add-parameters-to-a-configuration"></a>구성에 매개 변수 추가
 
@@ -96,7 +96,7 @@ Configuration TestConfig
 {
     param
     (
-        [String[]]
+        [String]
         $ComputerName="localhost"
     )
 
