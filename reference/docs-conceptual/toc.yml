@@ -755,22 +755,20 @@
               href: community/contributing/managing-pull-requests.md
     - name: 디지털 아트
       href: community/digital-art.md
-- name: PowerShell 개발자
+- name: 스크립팅 및 개발
   items:
-    - name: 교차 플랫폼 개발
+    - name: Visual Studio Code
       items:
-        - name: Visual Studio Code
-          items:
-            - name: Visual Studio Code 사용
-              href: components/vscode/using-vscode.md
-            - name: Visual Studio Code에서 ISE 환경을 복제하는 방법
-              href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
-            - name: Visual Studio Code를 사용하여 원격 편집 및 디버깅
-              href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
-            - name: VS Code 및 PowerShell에서 파일 인코딩 이해
-              href: components/vscode/understanding-file-encoding.md
-        - name: 이식 가능한 모듈 작성
-          href: learn/writing-portable-modules.md
+        - name: Visual Studio Code 사용
+          href: components/vscode/using-vscode.md
+        - name: Visual Studio Code에서 ISE 환경을 복제하는 방법
+          href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
+        - name: Visual Studio Code를 사용하여 원격 편집 및 디버깅
+          href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
+        - name: VS Code 및 PowerShell에서 파일 인코딩 이해
+          href: components/vscode/understanding-file-encoding.md
+    - name: 이식 가능한 모듈 작성
+      href: learn/writing-portable-modules.md
     - name: 레거시 PowerShell SDK
       items:
         - name: 개요
