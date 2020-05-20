@@ -38,7 +38,7 @@ Configuration ServiceState
 }
 ```
 
-또한 **루프를 사용하여 현재 머신에 있는 모든 서비스의**Service`foreach` 리소스 블록을 만들 수 있습니다.
+또한 `foreach` 루프를 사용하여 현재 머신에 있는 모든 서비스의 **Service** 리소스 블록을 만들 수 있습니다.
 
 ```powershell
 Configuration ServiceState
@@ -60,7 +60,7 @@ Configuration ServiceState
 }
 ```
 
-`Configuration` 문을 사용하여 온라인 상태인 컴퓨터에 대해서만 `if`을 만들 수도 있습니다.
+`if` 문을 사용하여 온라인 상태인 컴퓨터에 대해서만 `Configuration`을 만들 수도 있습니다.
 
 ```powershell
 Configuration ServiceState

@@ -37,7 +37,7 @@ DSC가 무엇이며 어떻게 작동하는지에 대한 개요는 [의사 결정
 </body>
 ```
 
-만들어 둔 `index.htm` 폴더에 `test`으로 저장합니다.
+만들어 둔 `test` 폴더에 `index.htm`으로 저장합니다.
 
 ## <a name="write-the-configuration"></a>구성 작성
 
@@ -76,7 +76,7 @@ Configuration WebsiteTest {
 
 **Node** 블록은 구성할 대상 노드를 지정합니다. 이 예제의 경우 `localhost`입니다.
 
-구성에서는 [WindowsFeature](../resources/resources.md) 및 **File**의 두 **리소스**를 호출합니다.
+구성에서는 **WindowsFeature** 및 **File**의 두 [리소스](../resources/resources.md)를 호출합니다.
 리소스는 대상 노드가 구성에 정의된 상태에 있는지 확인합니다.
 
 ## <a name="compile-the-configuration"></a>구성 컴파일

@@ -286,7 +286,7 @@ Set-DscLocalConfigurationManager -Path .\EnableSignatureValidation -Verbose
    - `<moduleName>.cat` 파일을 찾고 `Get-AuthenticodeSignature`를 사용하여 해당 서명을 확인합니다.
    - 서명자를 인증한 인증 기관을 신뢰할 수 있는지 확인합니다.
    - 새 `Test-FileCatalog` cmdlet을 사용하여 모듈의 콘텐츠가 변조되지 않았는지 확인합니다.
-5. `Install-Module`에 대한 `$env:ProgramFiles\WindowsPowerShell\Modules\`
+5. `$env:ProgramFiles\WindowsPowerShell\Modules\`에 대한 `Install-Module`
 6. 구성 처리
 
 > [!NOTE]

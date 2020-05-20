@@ -213,7 +213,7 @@ SharePointConfig.mof.checksum
 
 ### <a name="naming-and-placing-the-configuration-documents-on-the-pull-server-configurationid"></a>끌어오기 서버에서 구성 문서 이름 지정 및 배치(ConfigurationID)
 
-부분 구성 문서는 끌어오기 서버용의 **파일에서**ConfigurationPath`web.config`로 지정된 폴더에 배치해야 합니다(일반적으로 `C:\Program Files\WindowsPowerShell\DscService\Configuration`). 구성 문서 이름을 다음과 같이 지정해야 합니다. `<ConfigurationName>.<ConfigurationID>.mof`. 여기서 _ConfigurationName_은 부분 구성의 이름이고, _ConfigurationID_는 대상 노드의 LCM에 정의된 구성 ID입니다. 이 예에서 구성 문서의 이름은 다음과 같아야 합니다.
+부분 구성 문서는 끌어오기 서버용의 `web.config` 파일에서 **ConfigurationPath**로 지정된 폴더에 배치해야 합니다(일반적으로 `C:\Program Files\WindowsPowerShell\DscService\Configuration`). 구성 문서 이름을 다음과 같이 지정해야 합니다. `<ConfigurationName>.<ConfigurationID>.mof`. 여기서 _ConfigurationName_은 부분 구성의 이름이고, _ConfigurationID_는 대상 노드의 LCM에 정의된 구성 ID입니다. 이 예에서 구성 문서의 이름은 다음과 같아야 합니다.
 
 ```
 ServiceAccountConfig.1d545e3b-60c3-47a0-bf65-5afc05182fd0.mof
@@ -307,7 +307,7 @@ configuration PartialConfigDemo
 PartialConfigDemo
 ```
 
-Settings 블록에 지정된 **RefreshMode**는 "Pull"이지만, **부분 구성에 대한**RefreshMode`SharePointConfig`는 "Push"입니다.
+Settings 블록에 지정된 **RefreshMode**는 "Pull"이지만, `SharePointConfig` 부분 구성에 대한 **RefreshMode**는 "Push"입니다.
 
 각각의 새로 고침 모드에 대해 위에서 설명한 대로 구성 MOF 파일에 이름을 지정하고 배치합니다.
 `Publish-DSCConfiguration`을 호출하여 `SharePointConfig` 부분 구성을 게시하고, 끌어오기 서버에서 `ServiceAccountConfig` 구성을 끌어오기를 기다리거나 [Update-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Update-DscConfiguration)을 호출하여 새로 고침을 적용합니다.

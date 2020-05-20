@@ -314,7 +314,7 @@ $b.DoSomething(42)
 
 새로운 키워드 `Hidden`이 추가되었습니다. `Hidden`은 생성자를 비롯하여 속성 및 메서드에 적용할 수 있습니다.
 
-숨겨진 구성원은 공용이지만 `Get-Member` 매개 변수를 추가하지 않는 한 `-Force`의 출력에 표시되지 않습니다. 탭이 완료되거나 Intellisense를 사용할 때 숨겨진 멤버를 정의하는 클래스에서 완료되지 않으면 숨겨진 멤버가 포함되지 않습니다.
+숨겨진 구성원은 공용이지만 `-Force` 매개 변수를 추가하지 않는 한 `Get-Member`의 출력에 표시되지 않습니다. 탭이 완료되거나 Intellisense를 사용할 때 숨겨진 멤버를 정의하는 클래스에서 완료되지 않으면 숨겨진 멤버가 포함되지 않습니다.
 
 새로운 특성 **System.Management.Automation.HiddenAttribute**가 추가되어 C\# 코드가 PowerShell 내에서 동일한 의미 체계를 가질 수 있습니다.
 

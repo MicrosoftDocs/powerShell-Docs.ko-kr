@@ -64,7 +64,7 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true
 
 네트워크 어댑터 구성 개체의 기본 표시에는 매우 간단한 정보만 표시됩니다. 자세히 검사하고 문제를 해결하려면 `Select-Object` 또는 형식 지정 cmdlet(예: `Format-List`)을 사용하여 표시할 속성을 지정합니다.
 
-최신 TCP/IP 네트워크에서는 IPX 또는 WINS 속성이 중요하지 않을 수도 있습니다. **의** ExcludeProperty`Select-Object` 매개 변수를 사용하여 이름이 "WINS" 또는 "IPX"로 시작하는 속성을 숨길 수 있습니다.
+최신 TCP/IP 네트워크에서는 IPX 또는 WINS 속성이 중요하지 않을 수도 있습니다. `Select-Object`의 **ExcludeProperty** 매개 변수를 사용하여 이름이 "WINS" 또는 "IPX"로 시작하는 속성을 숨길 수 있습니다.
 
 ```powershell
 Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true |
@@ -81,7 +81,7 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true
 Get-CimInstance -Class Win32_PingStatus -Filter "Address='127.0.0.1'"
 ```
 
-이 출력을 보기 쉽게 요약하려면 다음 명령에 의해 생성되는 Address, ResponseTime 및 StatusCode 속성을 표시하면 됩니다. **의** Autosize`Format-Table` 매개 변수는 테이블 열 크기를 조정하여 Windows PowerShell에 올바로 표시되도록 합니다.
+이 출력을 보기 쉽게 요약하려면 다음 명령에 의해 생성되는 Address, ResponseTime 및 StatusCode 속성을 표시하면 됩니다. `Format-Table`의 **Autosize** 매개 변수는 테이블 열 크기를 조정하여 Windows PowerShell에 올바로 표시되도록 합니다.
 
 ```powershell
 Get-CimInstance -Class Win32_PingStatus -Filter "Address='127.0.0.1'" |
@@ -142,7 +142,7 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true
 
 TCP/IP만 사용하는 네트워크에 있는 컴퓨터의 몇 가지 네트워크 어댑터 구성이 실제 TCP/IP 어댑터가 아니므로 필터링 문 `IPEnabled=$true`가 필요합니다. 즉, 이 구성은 모든 어댑터에 대해 RAS, PPTP, QoS 및 기타 서비스를 지원하는 일반 소프트웨어 요소이기 때문에 자체 주소를 가지고 있지 않습니다.
 
-`Where-Object` 필터를 사용하는 대신 `Get-CimInstance` cmdlet을 사용하여 명령을 필터링할 수 있습니다.
+`Get-CimInstance` 필터를 사용하는 대신 `Where-Object` cmdlet을 사용하여 명령을 필터링할 수 있습니다.
 
 ```powershell
 Get-CimInstance -Class Win32_NetworkAdapterConfiguration |

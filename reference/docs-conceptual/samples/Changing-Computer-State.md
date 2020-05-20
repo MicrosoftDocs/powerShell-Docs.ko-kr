@@ -22,7 +22,7 @@ PowerShell에서 컴퓨터를 다시 설정하려면 표준 명령줄 도구 WMI
 rundll32.exe user32.dll,LockWorkStation
 ```
 
-이 명령은 워크스테이션을 즉시 잠급니다. Windows Dll을 실행(및 반복 사용을 위해 해당 라이브러리 저장)하여 Windows 관리 함수 라이브러리인 **을 실행하는** rundll32.exe`user32.dll`가 사용됩니다.
+이 명령은 워크스테이션을 즉시 잠급니다. Windows Dll을 실행(및 반복 사용을 위해 해당 라이브러리 저장)하여 Windows 관리 함수 라이브러리인 `user32.dll`을 실행하는 **rundll32.exe**가 사용됩니다.
 
 Windows XP 등에서 빠른 사용자 전환이 사용되는 동안 워크스테이션을 잠그면 컴퓨터에서 현재 사용자의 화면 보호기가 시작되는 대신 사용자 로그온 화면이 표시됩니다.
 

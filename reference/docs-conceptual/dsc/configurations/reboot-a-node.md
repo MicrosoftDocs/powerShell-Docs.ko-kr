@@ -15,7 +15,7 @@ ms.locfileid: "71954030"
 > 이 토픽에서는 노드를 다시 부팅하는 방법을 설명합니다. 다시 부팅에 성공하기 위해 **ActionAfterReboot** 및 **RebootNodeIfNeeded** LCM 설정을 올바르게 구성해야 합니다.
 > 로컬 구성 관리자 설정에 대해 알라보려면 [로컬 구성 관리자 구성](../managing-nodes/metaConfig.md) 또는 [로컬 구성 관리자 구성(v4)](../managing-nodes/metaConfig4.md)을 참조하세요.
 
-노드는 `$global:DSCMachineStatus` 플래그를 사용하여 리소스 내에서 다시 부팅될 수 있습니다. `1` 함수에서 이 플래그를 `Set-TargetResource`로 설정하면 현재 리소스의 **설정** 메서드 이후에 LCM가 노드를 직접 다시 부팅하도록 강제합니다. 이 플래그를 사용하여 **ComputerManagementDsc** DSC 리소스 모듈의 [PendingReboot](https://github.com/PowerShell/ComputerManagementDsc) 리소스는 재부팅이 DSC 외부에서 보류 중인지 탐지합니다.
+노드는 `$global:DSCMachineStatus` 플래그를 사용하여 리소스 내에서 다시 부팅될 수 있습니다. `Set-TargetResource` 함수에서 이 플래그를 `1`로 설정하면 현재 리소스의 **설정** 메서드 이후에 LCM가 노드를 직접 다시 부팅하도록 강제합니다. 이 플래그를 사용하여 [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) DSC 리소스 모듈의 **PendingReboot** 리소스는 재부팅이 DSC 외부에서 보류 중인지 탐지합니다.
 
 [구성](configurations.md)은 노드를 다시 부팅해야 하는 단계를 수행할 수 있습니다. 다음과 같은 작업을 포함할 수 있습니다.
 

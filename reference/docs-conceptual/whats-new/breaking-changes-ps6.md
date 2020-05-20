@@ -141,7 +141,7 @@ Windows Presentation Framework는 CoreCLR에서 지원되지 않습니다. 영�
 
 - `Show-Command`
 - `Out-GridView`
-- **의** showwindow`Get-Help` 매개 변수
+- `Get-Help`의 **showwindow** 매개 변수
 
 ### <a name="some-dsc-cmdlets-removed"></a>일부 DSC cmdlet이 제거됨
 
@@ -176,7 +176,7 @@ Windows PowerShell과 구분하여, Windows에서 PowerShell Core를 가리키�
 
 `Mandatory` 매개 변수와 `ValidateNotNull` 및 `ValidateNotNullOrEmpty` 특성에서, 컬렉션의 요소 유형이 값 형식인 경우 null 요소 검사를 건너뜁니다.
 
-### <a name="change-outputencoding-to-use-utf-8-nobom-encoding-rather-than-ascii-5369"></a>ASCII가 아니라 `$OutputEncoding` 인코딩을 사용하도록 `UTF-8 NoBOM` 변경 [#5369](https://github.com/PowerShell/PowerShell/issues/5369)
+### <a name="change-outputencoding-to-use-utf-8-nobom-encoding-rather-than-ascii-5369"></a>ASCII가 아니라 `UTF-8 NoBOM` 인코딩을 사용하도록 `$OutputEncoding` 변경 [#5369](https://github.com/PowerShell/PowerShell/issues/5369)
 
 이전 인코딩인 ASCII(7비트)에서는 출력이 잘못 변경되는 경우가 있었습니다. 이 변경은 `UTF-8 NoBOM`을 기본값으로 설정하기 위한 것으로, 대부분의 도구 및 운영 체제에서 지원되는 인코딩을 사용하여 유니코드 출력을 보존합니다.
 
@@ -192,9 +192,9 @@ Windows PowerShell과 구분하여, Windows에서 PowerShell Core를 가리키�
 
 ### <a name="invoke-restmethod-doesnt-return-useful-info-when-no-data-is-returned-5320"></a>반환된 데이터가 없을 때 Invoke-RestMethod에서 유용한 정보를 반환하지 않음 [#5320](https://github.com/PowerShell/PowerShell/issues/5320)
 
-API에서 `null`만 반환하는 경우 Invoke-RestMethod에서 이 값을 `"null"`이 아니라 `$null` 문자열로 직렬화했습니다. 이 변경으로, `Invoke-RestMethod`의 논리가 유효한 단일 값 JSON `null` 리터럴을 `$null`로 올바르게 직렬화하도록 수정됩니다.
+API에서 `null`만 반환하는 경우 Invoke-RestMethod에서 이 값을 `$null`이 아니라 `"null"` 문자열로 직렬화했습니다. 이 변경으로, `Invoke-RestMethod`의 논리가 유효한 단일 값 JSON `null` 리터럴을 `$null`로 올바르게 직렬화하도록 수정됩니다.
 
-### <a name="remove--protocol-from--computer-cmdlets-5277"></a>`-Protocol` cmdlet에서 `*-Computer` 제거 [#5277](https://github.com/PowerShell/PowerShell/issues/5277)
+### <a name="remove--protocol-from--computer-cmdlets-5277"></a>`*-Computer` cmdlet에서 `-Protocol` 제거 [#5277](https://github.com/PowerShell/PowerShell/issues/5277)
 
 CoreFX의 RPC 원격 관련 문제로 인해(특히 비 Windows 플랫폼) PowerShell에서 일관성 있는 원격 경험을 보장하기 위해 `-Protocol` 매개 변수가 `\*-Computer` cmdlet에서 제거되었습니다. DCOM은 더 이상 원격 작업을 지원하지 않습니다. 다음 cmdlet은 WSMAN 원격만 지원합니다.
 
@@ -202,17 +202,17 @@ CoreFX의 RPC 원격 관련 문제로 인해(특히 비 Windows 플랫폼) Power
 - Restart-Computer
 - Stop-Computer
 
-### <a name="remove--computername-from--service-cmdlets-5090"></a>`-ComputerName` cmdlet에서 `*-Service` 제거 [#5090](https://github.com/PowerShell/PowerShell/issues/5094)
+### <a name="remove--computername-from--service-cmdlets-5090"></a>`*-Service` cmdlet에서 `-ComputerName` 제거 [#5090](https://github.com/PowerShell/PowerShell/issues/5094)
 
 일관성 있는 PSRP 사용을 권장하기 위해 `-ComputerName` 매개 변수가 `*-Service` cmdlet에서 제거되었습니다.
 
-### <a name="fix-get-item--literalpath-ab-if-ab-doesnt-actually-exist-to-return-error-5197"></a>`Get-Item -LiteralPath a*b`가 실제로 존재하지 않을 경우 `a*b`에서 오류를 반환하도록 수정 [#5197](https://github.com/PowerShell/PowerShell/issues/5197)
+### <a name="fix-get-item--literalpath-ab-if-ab-doesnt-actually-exist-to-return-error-5197"></a>`a*b`가 실제로 존재하지 않을 경우 `Get-Item -LiteralPath a*b`에서 오류를 반환하도록 수정 [#5197](https://github.com/PowerShell/PowerShell/issues/5197)
 
 이전에는 `-LiteralPath`에 와일드카드를 지정할 경우, `-Path`와 동일하게 처리되고, 와일드카드를 통해 파일을 찾지 못할 경우 자동으로 종료되었습니다. 올바른 동작은 파일이 존재하지 않을 경우 오류가 발생하도록 `-LiteralPath`가 리터럴이 되어야 합니다. `-Literal`과 함께 사용된 와일드카드를 리터럴로 처리하도록 변경되었습니다.
 
 ### <a name="import-csv-should-apply-pstypenames-upon-import-when-type-information-is-present-in-the-csv-5134"></a>형식 정보가 CSV에 있는 경우 `Import-Csv`에서 가져올 때 `PSTypeNames`를 적용해야 함 [#5134](https://github.com/PowerShell/PowerShell/issues/5134)
 
-이전에는 `Export-CSV`를 사용하여 `TypeInformation`을 가져오고, `ConvertFrom-Csv`를 사용하여 내보낸 개체가 형식 정보를 보존하지 않았습니다. 이 변경으로, CSV 파일에서 사용 가능한 경우 형식 정보가 `PSTypeNames` 멤버에 추가됩니다.
+이전에는 `ConvertFrom-Csv`를 사용하여 `TypeInformation`을 가져오고, `Export-CSV`를 사용하여 내보낸 개체가 형식 정보를 보존하지 않았습니다. 이 변경으로, CSV 파일에서 사용 가능한 경우 형식 정보가 `PSTypeNames` 멤버에 추가됩니다.
 
 ### <a name="-notypeinformation-should-be-default-on-export-csv-5131"></a>`-NoTypeInformation`에서 `Export-Csv`이 기본값이어야 함 [#5131](https://github.com/PowerShell/PowerShell/issues/5131)
 
@@ -273,9 +273,9 @@ PowerShell의 이름 지정은 Microsoft의 이름 지정과 일치하는 동시
 
 Unix 규칙에 맞게 `pwsh.exe`의 종료 코드 변경
 
-### <a name="removal-of-localaccount-and-cmdlets-from--diagnostics-modules-4302-4303"></a>`LocalAccount` 모듈의 cmdlet 및 `Diagnostics` 제거 [#4302](https://github.com/PowerShell/PowerShell/issues/4302) [#4303](https://github.com/PowerShell/PowerShell/issues/4303)
+### <a name="removal-of-localaccount-and-cmdlets-from--diagnostics-modules-4302-4303"></a>`Diagnostics` 모듈의 cmdlet 및 `LocalAccount` 제거 [#4302](https://github.com/PowerShell/PowerShell/issues/4302) [#4303](https://github.com/PowerShell/PowerShell/issues/4303)
 
-지원되지 않는 API 때문에 `LocalAccounts` 모듈의 `Counter` cmdlet 및 `Diagnostics` 모듈이 더 나은 해결 방법을 찾을 때까지 제거되었습니다.
+지원되지 않는 API 때문에 `Diagnostics` 모듈의 `Counter` cmdlet 및 `LocalAccounts` 모듈이 더 나은 해결 방법을 찾을 때까지 제거되었습니다.
 
 ### <a name="executing-powershell-script-with-bool-parameter-does-not-work-4036"></a>부울 매개 변수를 포함한 PowerShell 스크립트를 실행할 경우 작동하지 않음 [#4036](https://github.com/PowerShell/PowerShell/issues/4036)
 
@@ -283,11 +283,11 @@ Unix 규칙에 맞게 `pwsh.exe`의 종료 코드 변경
 
 ### <a name="remove-clrversion-property-from-psversiontable-4027"></a>`ClrVersion`에서 `$PSVersionTable` 속성 제거 [#4027](https://github.com/PowerShell/PowerShell/issues/4027)
 
-`ClrVersion`의 `$PSVersionTable` 속성은 CoreCLR에서 유용하지 않습니다. 최종 사용자는 호환성을 확인하기 위해 이 값을 사용하면 안 됩니다.
+`$PSVersionTable`의 `ClrVersion` 속성은 CoreCLR에서 유용하지 않습니다. 최종 사용자는 호환성을 확인하기 위해 이 값을 사용하면 안 됩니다.
 
 ### <a name="change-positional-parameter-for-powershellexe-from--command-to--file-4019"></a>`powershell.exe`에 대한 위치 지정 매개 변수를 `-Command`에서 `-File`로 변경 [#4019](https://github.com/PowerShell/PowerShell/issues/4019)
 
-비 Windows 플랫폼에서 PowerShell의 구조를 사용할 수 있게 합니다. 즉, Unix 기반 시스템에서 `pwsh`를 명시적으로 호출하지 않고 PowerShell을 자동으로 호출하는 스크립트 실행 파일을 만들 수 있습니다. 이제 `powershell foo.ps1`을 지정하지 않고 `powershell fooScript` 또는 `-File`와 같은 작업을 수행할 수도 있습니다. 그러나 이 변경으로, 이제 `-c`와 같은 작업을 수행할 때 `-Command` 또는 `powershell.exe Get-Command`를 명시적으로 지정해야 합니다.
+비 Windows 플랫폼에서 PowerShell의 구조를 사용할 수 있게 합니다. 즉, Unix 기반 시스템에서 `pwsh`를 명시적으로 호출하지 않고 PowerShell을 자동으로 호출하는 스크립트 실행 파일을 만들 수 있습니다. 이제 `-File`을 지정하지 않고 `powershell foo.ps1` 또는 `powershell fooScript`와 같은 작업을 수행할 수도 있습니다. 그러나 이 변경으로, 이제 `powershell.exe Get-Command`와 같은 작업을 수행할 때 `-c` 또는 `-Command`를 명시적으로 지정해야 합니다.
 
 ### <a name="implement-unicode-escape-parsing-3958"></a>유니코드 이스케이프 구문 분석 구현 [#3958](https://github.com/PowerShell/PowerShell/issues/3958)
 
@@ -354,20 +354,20 @@ Unix에서는 셸이 대화형 셸을 나타내는 `-i`를 허용하는 것이 �
 
 ### <a name="buildversion-is-removed-from-psversiontable-1415"></a>`BuildVersion`에서 `$PSVersionTable` 제거 [#1415](https://github.com/PowerShell/PowerShell/issues/1415)
 
-`BuildVersion`에서 `$PSVersionTable` 속성이 제거되었습니다. 이 속성은 Windows 빌드 버전에 연결되어 있었습니다. 대신 `GitCommitId`를 사용하여 PowerShell Core의 정확한 빌드 버전을 검색하는 것이 좋습니다.
+`$PSVersionTable`에서 `BuildVersion` 속성이 제거되었습니다. 이 속성은 Windows 빌드 버전에 연결되어 있었습니다. 대신 `GitCommitId`를 사용하여 PowerShell Core의 정확한 빌드 버전을 검색하는 것이 좋습니다.
 
 ### <a name="changes-to-web-cmdlets"></a>웹 cmdlet 변경 내용
 
 웹 cmdlet의 기본 .NET API가 `System.Net.Http.HttpClient`로 변경되었습니다. 이 변경은 많은 이점을 제공합니다. 그러나 Internet Explorer와의 상호 운용성이 없다는 점과 결부되어, 이 변경으로 인해 `Invoke-WebRequest` 및 `Invoke-RestMethod` 내에서 호환성이 손상되는 여러 가지 변경이 발생했습니다.
 
 - 이제 `Invoke-WebRequest`에서 기본 HTML 구문 분석만 지원합니다. `Invoke-WebRequest`는 항상 `BasicHtmlWebResponseObject` 개체를 반환합니다. `ParsedHtml` 및 `Forms` 속성이 제거되었습니다.
-- 이제 `BasicHtmlWebResponseObject.Headers` 값이 `String[]`이 아니라 `String`입니다.
+- 이제 `BasicHtmlWebResponseObject.Headers` 값이 `String`이 아니라 `String[]`입니다.
 - 이제 `BasicHtmlWebResponseObject.BaseResponse`가 `System.Net.Http.HttpResponseMessage` 개체입니다.
 - 이제 웹 cmdlet 예외의 `Response` 속성이 `System.Net.Http.HttpResponseMessage` 개체입니다.
 - 이제 엄격한 RFC 헤더 구문 분석이 `-Headers` 및 `-UserAgent` 매개 변수의 기본값입니다. 이 설정은 `-SkipHeaderValidation`을 사용하여 무시할 수 있습니다.
 - `file://` 및 `ftp://` URI 체계가 더 이상 지원되지 않습니다.
 - `System.Net.ServicePointManager` 설정이 더 이상 적용되지 않습니다.
 - 현재 macOS에서 사용할 수 있는 인증서 기반 인증은 없습니다.
-- `-Credential` URI를 통해 `http://`을 사용하면 오류가 발생합니다. 오류를 표시하지 않으려면 `https://` URI를 사용하거나 `-AllowUnencryptedAuthentication` 매개 변수를 제공합니다.
+- `http://` URI를 통해 `-Credential`을 사용하면 오류가 발생합니다. 오류를 표시하지 않으려면 `https://` URI를 사용하거나 `-AllowUnencryptedAuthentication` 매개 변수를 제공합니다.
 - `-MaximumRedirection`은 이제 리디렉션이 마지막 리디렉션 결과를 반환하는 대신 제공된 제한을 초과하는 경우 종료 오류를 생성합니다.
 - PowerShell 6.2에서는 JSON 응답을 위해 UTF-8 인코딩으로 기본 변경 내용이 변경되었습니다. JSON 응답에 대해 문자 집합이 제공되지 않으면 RFC 8259에 따라 기본 인코딩이 UTF-8이어야 합니다.

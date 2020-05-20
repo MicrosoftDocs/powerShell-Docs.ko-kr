@@ -37,11 +37,11 @@ GenericConfig
 
 ## <a name="renaming-the-mof-file"></a>MOF 파일 이름 바꾸기
 
-`.mof`ConfigurationName**또는**ConfigurationID**를 통해 끌어오기 서버에서 구성**  파일을 저장할 수 있습니다. 끌어오기 클라이언트 설정을 어떻게 계획하는지에 따라 아래 섹션을 선택하여 컴파일된 `.mof` 파일의 이름을 제대로 바꿀 수 있습니다.
+**ConfigurationName** 또는 **ConfigurationID**를 통해 끌어오기 서버에서 구성 `.mof` 파일을 저장할 수 있습니다. 끌어오기 클라이언트 설정을 어떻게 계획하는지에 따라 아래 섹션을 선택하여 컴파일된 `.mof` 파일의 이름을 제대로 바꿀 수 있습니다.
 
 ### <a name="configuration-ids-guid"></a>구성 ID(GUID)
 
-파일의 이름을 `localhost.mof` 파일에서 `<GUID>.mof` 파일로 변경해야 합니다. 아래 예제 또는 **New-Guid** cmdlet을 사용하여 임의의 [Guid](/powershell/module/microsoft.powershell.utility/new-guid)를 만들 수 있습니다.
+파일의 이름을 `localhost.mof` 파일에서 `<GUID>.mof` 파일로 변경해야 합니다. 아래 예제 또는 [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet을 사용하여 임의의 **Guid**를 만들 수 있습니다.
 
 ```powershell
 [System.Guid]::NewGuid()
@@ -76,7 +76,7 @@ Rename-Item -Path .\localhost.mof -NewName 'GenericConfig.mof'
 끌어오기 서버에 저장된 각 `.mof` 파일 또는 SMB 공유에는 연결된 `.checksum` 파일이 있어야 합니다.
 이 파일을 통해 클라이언트는 연결된 `.mof` 파일이 변경되어 다시 다운로드되어야 하는 시기를 인식합니다.
 
-**New-DSCCheckSum** cmdlet을 사용하여 [CheckSum](/powershell/module/psdesiredstateconfiguration/new-dscchecksum)을 만들 수 있습니다. `New-DSCCheckSum` 매개 변수를 사용하여 파일 디렉터리에서 `-Path`을 실행할 수도 있습니다.
+[New-DSCCheckSum](/powershell/module/psdesiredstateconfiguration/new-dscchecksum) cmdlet을 사용하여 **CheckSum**을 만들 수 있습니다. `-Path` 매개 변수를 사용하여 파일 디렉터리에서 `New-DSCCheckSum`을 실행할 수도 있습니다.
 체크섬이 이미 있는 경우 `-Force` 매개 변수를 사용하여 체크섬을 다시 만들 수 있습니다. 다음 예제에서는 이전 섹션의 `.mof` 파일을 포함하는 디렉터리를 지정했고 `-Force` 매개 변수를 사용합니다.
 
 ```powershell

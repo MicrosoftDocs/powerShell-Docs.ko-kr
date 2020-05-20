@@ -17,7 +17,7 @@ ms.locfileid: "71328144"
 상위 수준의 시험판 모듈 기능은 다음과 같습니다.
 
 - 모듈 매니페스트의 PSData 섹션에 Prerelease 문자열을 추가하면 해당 모듈이 시험판 버전으로 식별됩니다. 모듈이 PowerShell 갤러리에 게시되면 매니페스트에서 이 데이터를 추출하여 시험판 패키지를 식별하는 데 사용합니다.
-- 시험판 패키지를 가져오려면 PowerShellGet 명령 `-AllowPrerelease`, `Find-Module`, `Install-Module` 및 `Update-Module`에 `Save-Module` 플래그를 추가해야 합니다. 플래그를 지정하지 않으면 시험판 패키지가 표시되지 않습니다.
+- 시험판 패키지를 가져오려면 PowerShellGet 명령 `Find-Module`, `Install-Module`, `Update-Module` 및 `Save-Module`에 `-AllowPrerelease` 플래그를 추가해야 합니다. 플래그를 지정하지 않으면 시험판 패키지가 표시되지 않습니다.
 - `Find-Module`, `Get-InstalledModule` 및 PowerShell 갤러리에 표시되는 모듈 버전은 2.5.0-alpha와 같이 Prerelease 문자열이 추가된 단일 문자열로 표시됩니다.
 
 기능에 대한 자세한 내용은 아래에 나와 있습니다.
@@ -123,7 +123,7 @@ Version         Name          Repository  Description
 1.9.0-alpha     TestPackage   PSGallery   Package used to validate changes to the PowerShe...
 ```
 
-지정된 시험판으로 인해서만 다른 모듈 버전을 나란히 설치하는 것은 지원되지 않습니다. PowerShellGet을 사용하여 모듈을 설치할 때 ModuleVersion을 사용하여 폴더 이름을 만들어 동일한 모듈의 다른 버전을 나란히 설치합니다. 시험판 문자열이 없는 ModuleVersion이 폴더 이름으로 사용됩니다. 사용자가 MyModule 버전 2.5.0-alpha를 설치하면 `MyModule\2.5.0` 폴더에 설치됩니다. 그런 다음 사용자가 2.5.0-beta를 설치하면 2.5.0-beta 버전은 **폴더의 내용을**덮어씁니다`MyModule\2.5.0`. 이 방법의 장점 중 하나는 프로덕션 준비 버전을 설치한 후에 시험판 버전을 제거할 필요가 없다는 것입니다. 아래 예제에서는 예상되는 항목을 보여 줍니다.
+지정된 시험판으로 인해서만 다른 모듈 버전을 나란히 설치하는 것은 지원되지 않습니다. PowerShellGet을 사용하여 모듈을 설치할 때 ModuleVersion을 사용하여 폴더 이름을 만들어 동일한 모듈의 다른 버전을 나란히 설치합니다. 시험판 문자열이 없는 ModuleVersion이 폴더 이름으로 사용됩니다. 사용자가 MyModule 버전 2.5.0-alpha를 설치하면 `MyModule\2.5.0` 폴더에 설치됩니다. 그런 다음 사용자가 2.5.0-beta를 설치하면 2.5.0-beta 버전은 `MyModule\2.5.0` 폴더의 내용을 **덮어씁니다**. 이 방법의 장점 중 하나는 프로덕션 준비 버전을 설치한 후에 시험판 버전을 제거할 필요가 없다는 것입니다. 아래 예제에서는 예상되는 항목을 보여 줍니다.
 
 ``` powershell
 C:\windows\system32> Get-InstalledModule TestPackage -AllVersions

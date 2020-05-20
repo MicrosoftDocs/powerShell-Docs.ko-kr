@@ -107,7 +107,7 @@ intelppm               Intel Processor Driver
 ...
 ```
 
-위의 명령에는 두 개의 `Where-Object` 요소가 있지만 다음과 같이`Where-Object` 논리 연산자를 사용하면 단일 `-and` 요소로 표시할 수 있습니다.
+위의 명령에는 두 개의 `Where-Object` 요소가 있지만 다음과 같이`-and` 논리 연산자를 사용하면 단일 `Where-Object` 요소로 표시할 수 있습니다.
 
 ```powershell
 Get-CimInstance -Class Win32_SystemDriver |

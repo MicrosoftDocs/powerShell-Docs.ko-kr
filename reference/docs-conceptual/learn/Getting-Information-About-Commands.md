@@ -28,7 +28,7 @@ Cmdlet          Add-Type                3.1.0.0    Microsoft.PowerShell.Utility
 ...
 ```
 
-이 출력은 내부 명령을 표 형식으로 요약하는 **cmd.exe**의 도움말 출력과 유사합니다. 위에 표시된 `Get-Command` 명령 출력의 발췌 부분에서 표시되는 모든 명령의 CommandType은 Cmdlet입니다. cmdlet은 PowerShell의 내장 명령 형식입니다. 이 형식은 `dir`cmd.exe`cd`의 **및**와 같은 명령이나 Unix 셸(예: bash)의 기본 제공 명령과 거의 일치합니다.
+이 출력은 내부 명령을 표 형식으로 요약하는 **cmd.exe**의 도움말 출력과 유사합니다. 위에 표시된 `Get-Command` 명령 출력의 발췌 부분에서 표시되는 모든 명령의 CommandType은 Cmdlet입니다. cmdlet은 PowerShell의 내장 명령 형식입니다. 이 형식은 **cmd.exe**의 `dir` 및 `cd`와 같은 명령이나 Unix 셸(예: bash)의 기본 제공 명령과 거의 일치합니다.
 
 `Get-Command` cmdlet에는 각 cmdlet의 구문을 반환하는 **Syntax** 매개 변수가 있습니다. 다음 예제에서는 `Get-Help` cmdlet의 구문을 가져오는 방법을 보여 줍니다.
 
@@ -72,7 +72,7 @@ Get-Command *
 > [!NOTE]
 > 별표(\*)는 PowerShell 명령 인수에서 와일드카드 일치에 사용됩니다. \*는 "하나 이상의 문자 일치"를 의미합니다. `Get-Command a*`를 입력하여 문자 "a"로 시작하는 모든 명령을 찾을 수 있습니다. **cmd.exe**의 와일드카드 일치와 달리 PowerShell의 와일드카드는 점(.)도 일치시킵니다.
 
-다른 형식의 네이티브 명령을 가져오려면 **의** CommandType`Get-Command` 매개 변수를 사용합니다.
+다른 형식의 네이티브 명령을 가져오려면 `Get-Command`의 **CommandType** 매개 변수를 사용합니다.
 cmdlet.
 
 명령에 할당된 애칭인 명령 별칭을 가져오려면 다음과 같이 입력하세요.

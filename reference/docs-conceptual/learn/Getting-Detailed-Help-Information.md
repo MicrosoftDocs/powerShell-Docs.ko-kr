@@ -54,25 +54,25 @@ man Get-ChildItem
 help Get-ChildItem
 ```
 
-자세한 정보를 표시하려면 **cmdlet의**Detailed`Get-Help` 매개 변수를 사용합니다. 예를 들어 `Get-ChildItem` cmdlet에 대한 자세한 정보를 보려면 다음과 같이 입력합니다.
+자세한 정보를 표시하려면 `Get-Help` cmdlet의 **Detailed** 매개 변수를 사용합니다. 예를 들어 `Get-ChildItem` cmdlet에 대한 자세한 정보를 보려면 다음과 같이 입력합니다.
 
 ```powershell
 Get-Help Get-ChildItem -Detailed
 ```
 
-도움말 문서의 모든 내용을 표시하려면 **cmdlet의**Full`Get-Help` 매개 변수를 사용합니다. 예를 들어 `Get-ChildItem` cmdlet에 대한 도움말 문서의 모든 내용을 표시하려면 다음과 같이 입력합니다.
+도움말 문서의 모든 내용을 표시하려면 `Get-Help` cmdlet의 **Full** 매개 변수를 사용합니다. 예를 들어 `Get-ChildItem` cmdlet에 대한 도움말 문서의 모든 내용을 표시하려면 다음과 같이 입력합니다.
 
 ```powershell
 Get-Help Get-ChildItem -Full
 ```
 
-cmdlet의 매개 변수에 대한 자세한 도움말을 보려면 **cmdlet의**Parameter`Get-Help` 매개 변수를 사용합니다. 예를 들어 `Get-ChildItem` cmdlet의 모든 매개 변수에 대한 자세한 도움말을 보려면 다음과 같이 입력합니다.
+cmdlet의 매개 변수에 대한 자세한 도움말을 보려면 `Get-Help` cmdlet의 **Parameter** 매개 변수를 사용합니다. 예를 들어 `Get-ChildItem` cmdlet의 모든 매개 변수에 대한 자세한 도움말을 보려면 다음과 같이 입력합니다.
 
 ```powershell
 Get-Help Get-ChildItem -Parameter *
 ```
 
-도움말 문서의 예제만 표시하려면 **의** Example`Get-Help` 매개 변수를 사용합니다.
+도움말 문서의 예제만 표시하려면 `Get-Help`의 **Example** 매개 변수를 사용합니다.
 예를 들어 `Get-ChildItem` cmdlet에 대한 도움말 문서의 예제만 표시하려면 다음과 같이 입력합니다.
 
 ```powershell
@@ -97,7 +97,7 @@ Get-Help about_*
 Get-Help about_command_syntax
 ```
 
-`Get-Help`Detailed **,** Parameter**및**Examples**와 같은** 의 매개 변수는 개념 도움말 문서의 표시에 영향을 주지 않습니다.
+**Detailed**, **Parameter** 및 **Examples**와 같은 `Get-Help`의 매개 변수는 개념 도움말 문서의 표시에 영향을 주지 않습니다.
 
 ## <a name="getting-help-about-providers"></a>공급자에 대한 도움말 보기
 
@@ -113,7 +113,7 @@ Get-Help registry
 Get-Help -Category provider
 ```
 
-`Get-Help`Detailed **,** Parameter**및**Examples**와 같은** 의 매개 변수는 공급자 도움말 문서의 표시에 영향을 주지 않습니다.
+**Detailed**, **Parameter** 및 **Examples**와 같은 `Get-Help`의 매개 변수는 공급자 도움말 문서의 표시에 영향을 주지 않습니다.
 
 ## <a name="getting-help-about-scripts-and-functions"></a>스크립트 및 함수에 대한 도움말 보기
 
@@ -145,10 +145,10 @@ cmdlet 도움말을 표시하도록 디자인된 매개 변수는 스크립트 �
 
 온라인 도움말 문서는 도움말을 보는 가장 좋은 방법 중 하나입니다. 온라인 문서는 업데이트하기가 더 쉽고 가장 최신 콘텐츠를 제공합니다.
 
-온라인 도움말을 보려면 **cmdlet의**Online`Get-Help` 매개 변수를 사용합니다. 공급자 도움말 및 개념(정보) 도움말을 포함하여 Powershell에 함께 제공되는 모든 도움말 문서는 온라인 [PowerShell](/powershell/scripting/powershell-scripting) 설명서에서 볼 수 있습니다.
+온라인 도움말을 보려면 `Get-Help` cmdlet의 **Online** 매개 변수를 사용합니다. 공급자 도움말 및 개념(정보) 도움말을 포함하여 Powershell에 함께 제공되는 모든 도움말 문서는 온라인 [PowerShell](/powershell/scripting/powershell-scripting) 설명서에서 볼 수 있습니다.
 
 > [!NOTE]
-> 개념(about_ **) 또는 공급자 도움말 문서에서는** Online\* 매개 변수를 사용할 수 없습니다.
+> 개념(about_\*) 또는 공급자 도움말 문서에서는 **Online** 매개 변수를 사용할 수 없습니다.
 > 온라인 도움말은 선택 항목이기 때문에 일부 cmdlet, 함수 또는 스크립트에는 작동하지 않습니다.
 
 예를 들어 `Get-ChildItem` cmdlet에 대한 온라인 버전의 도움말 문서를 보려면 다음과 같이 입력합니다.

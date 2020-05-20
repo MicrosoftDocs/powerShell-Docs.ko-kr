@@ -117,7 +117,7 @@ CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ...
 ```
 
-**의** Property`Get-CimInstance` 매개 변수는 PowerShell로 반환되는 개체가 아니라 WMI 클래스 인스턴스에서 반환되는 속성을 제한하기 때문에 추가 데이터가 반환됩니다. 출력을 줄이려면 `Select-Object`를 사용합니다.
+`Get-CimInstance`의 **Property** 매개 변수는 PowerShell로 반환되는 개체가 아니라 WMI 클래스 인스턴스에서 반환되는 속성을 제한하기 때문에 추가 데이터가 반환됩니다. 출력을 줄이려면 `Select-Object`를 사용합니다.
 
 ```powershell
 Get-CimInstance -ClassName Win32_QuickFixEngineering -Property HotFixId | Select-Object -Property HotFixId
@@ -242,7 +242,7 @@ PSComputerName :
 Get-CimInstance -ClassName Win32_Service | Select-Object -Property Status,Name,DisplayName
 ```
 
-이름이 매우 긴, 가끔 발생하는 서비스의 이름을 전체 표시하려면 `Format-Table`AutoSize**및**Wrap**매개 변수와 함께**을 사용하여 열 너비를 최적화하고 긴 이름이 잘리는 대신 줄 바꿈되도록 할 수 있습니다.
+이름이 매우 긴, 가끔 발생하는 서비스의 이름을 전체 표시하려면 **AutoSize** 및 **Wrap** 매개 변수와 함께 `Format-Table`을 사용하여 열 너비를 최적화하고 긴 이름이 잘리는 대신 줄 바꿈되도록 할 수 있습니다.
 
 ```powershell
 Get-CimInstance -ClassName Win32_Service | Format-Table -Property Status,Name,DisplayName -AutoSize -Wrap

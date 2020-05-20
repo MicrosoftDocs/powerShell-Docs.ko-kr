@@ -51,7 +51,7 @@ CMS 암호화 표준은 공개 키 암호화를 구현하는데, 여기서는 �
 - [Protect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/Protect-CmsMessage)
 - [Unprotect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/unprotect-CmsMessage)
 
-PowerShell에서 인증서가 데이터 암호화 인증서로 식별되려면 고유 키 사용 식별자(EKU)(예: ‘코드 서명' 또는 ‘암호화된 메일’)가 필요합니다. 인증서 공급자에서 문서 암호화 인증서를 보려면 **의** DocumentEncryptionCert`Get-ChildItem` 동적 매개 변수를 사용하면 됩니다.
+PowerShell에서 인증서가 데이터 암호화 인증서로 식별되려면 고유 키 사용 식별자(EKU)(예: ‘코드 서명' 또는 ‘암호화된 메일’)가 필요합니다. 인증서 공급자에서 문서 암호화 인증서를 보려면 `Get-ChildItem`의 **DocumentEncryptionCert** 동적 매개 변수를 사용하면 됩니다.
 
 ```powershell
 Get-ChildItem Cert:\CurrentUser -DocumentEncryptionCert -Recurse

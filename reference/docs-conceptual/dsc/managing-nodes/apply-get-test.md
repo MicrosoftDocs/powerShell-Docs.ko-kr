@@ -51,7 +51,7 @@ Mode                LastWriteTime     Length Name
 Start-DSCConfiguration -Path C:\Temp\ -Verbose
 ```
 
-`-Wait`를 지정하지 않으면 생성된 하나의 작업이 표시됩니다. 생성된 작업에는 **을 통해 처리된 각 ".mof" 파일에 대해 하나의** ChildJob`Start-DSCConfiguration`이 있습니다.
+`-Wait`를 지정하지 않으면 생성된 하나의 작업이 표시됩니다. 생성된 작업에는 `Start-DSCConfiguration`을 통해 처리된 각 ".mof" 파일에 대해 하나의 **ChildJob**이 있습니다.
 
 ```output
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
@@ -115,7 +115,7 @@ Start-DSCConfiguration -UseExisting -Verbose -Wait
 Test-DSCConfiguration
 ```
 
-PowerShell 5.0부터, `-Detailed`ResourcesInDesiredState**및**ResourcesNotInDesiredState**에 대한 컬렉션이 포함된 개체를 반환하는**  매개 변수가 추가되었습니다.
+PowerShell 5.0부터, **ResourcesInDesiredState** 및 **ResourcesNotInDesiredState**에 대한 컬렉션이 포함된 개체를 반환하는 `-Detailed` 매개 변수가 추가되었습니다.
 
 ```powershell
 Test-DSCConfiguration -Detailed

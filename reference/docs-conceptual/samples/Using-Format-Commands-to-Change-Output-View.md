@@ -155,7 +155,7 @@ Running  WinRM              Windows Remote Management (WS-Manag...
 
 ### <a name="improving-format-table-output-autosize"></a>Format-Table 출력 향상(AutoSize)
 
-테이블 형식 보기는 많은 정보를 표시하는 데 유용하지만 열이 너무 좁아 데이터를 모두 표시할 수 없는 경우에는 정보를 해석하기 어려울 수 있습니다. 이전 예에서는 출력이 잘립니다. **명령을 실행할 때**AutoSize`Format-Table` 매개 변수를 지정하면 PowerShell은 표시된 실제 데이터를 기준으로 열 너비를 계산합니다. 그러면 열을 읽을 수 있습니다.
+테이블 형식 보기는 많은 정보를 표시하는 데 유용하지만 열이 너무 좁아 데이터를 모두 표시할 수 없는 경우에는 정보를 해석하기 어려울 수 있습니다. 이전 예에서는 출력이 잘립니다. `Format-Table` 명령을 실행할 때 **AutoSize** 매개 변수를 지정하면 PowerShell은 표시된 실제 데이터를 기준으로 열 너비를 계산합니다. 그러면 열을 읽을 수 있습니다.
 
 ```powershell
 Get-Service -Name win* | Format-Table -AutoSize
@@ -190,7 +190,7 @@ WinRM               Running Automatic Windows Remote Management (WS-Management) 
 
 ### <a name="wrapping-format-table-output-in-columns-wrap"></a>열에 Format-Table 출력 래핑(Wrap)
 
-`Format-Table`Wrap**매개 변수를 사용하여 긴** 데이터를 해당 표시 열 내에서 래핑할 수 있습니다. 다음과 같이 **Wrap** 매개 변수를 사용하는 경우에도 **AutoSize**를 지정하지 않으면 기본 설정이 사용되기 때문에 예상되는 작업을 수행하지 않아도 됩니다.
+**Wrap** 매개 변수를 사용하여 긴 `Format-Table` 데이터를 해당 표시 열 내에서 래핑할 수 있습니다. 다음과 같이 **Wrap** 매개 변수를 사용하는 경우에도 **AutoSize**를 지정하지 않으면 기본 설정이 사용되기 때문에 예상되는 작업을 수행하지 않아도 됩니다.
 
 ```powershell
 Get-Service -Name win* | Format-Table -Property Name,Status,StartType,DisplayName,DependentServices -Wrap

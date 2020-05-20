@@ -98,7 +98,7 @@ WMF 5.1에서는 다음과 같습니다.
 
   **예제:** `using module @{ModuleName = 'PSReadLine'; RequiredVersion = '1.1'}`
 
-- 모듈의 여러 버전이 있는 경우 PowerShell에서는 **과** 동일한 해결 논리`Import-Module`를 사용하고 오류가 발생하지 않습니다. 동작은 `Import-Module` 및 `Import-DscResource`와 동일합니다.
+- 모듈의 여러 버전이 있는 경우 PowerShell에서는 `Import-Module`과 **동일한 해결 논리**를 사용하고 오류가 발생하지 않습니다. 동작은 `Import-Module` 및 `Import-DscResource`와 동일합니다.
 
 ## <a name="improvements-to-pester"></a>Pester의 향상된 기능
 

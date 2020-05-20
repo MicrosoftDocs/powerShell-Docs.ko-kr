@@ -53,7 +53,7 @@ Group [String] #ResourceName
 }
 ```
 
-이 예제에서는 [ 기본 제공 DSC 리소스 모듈의 ](../resources/resources.md)그룹`PSDesiredStateConfiguration` 리소스를 사용합니다. 로컬 그룹을 만들고 구성원을 추가 또는 제거할 수 있으며, `Credential` 속성 및 자동 `PsDscRunAsCredential` 속성도 둘 다 받습니다. 그러나 리소스는 `Credential` 속성만 사용합니다.
+이 예제에서는 `PSDesiredStateConfiguration` 기본 제공 DSC 리소스 모듈의 [그룹](../resources/resources.md) 리소스를 사용합니다. 로컬 그룹을 만들고 구성원을 추가 또는 제거할 수 있으며, `Credential` 속성 및 자동 `PsDscRunAsCredential` 속성도 둘 다 받습니다. 그러나 리소스는 `Credential` 속성만 사용합니다.
 
 `PsDscRunAsCredential` 속성에 대한 자세한 내용은 [사용자 자격 증명을 사용하여 DSC 실행](runAsUser.md)을 참조하세요.
 
@@ -61,7 +61,7 @@ Group [String] #ResourceName
 
 DSC는 `Local System`에서 실행되므로, DSC에는 이미 로컬 사용자 및 그룹을 변경할 권한이 있습니다. 추가된 구성원이 로컬 계정이라면 자격 증명이 필요하지 않습니다. `Group` 리소스에서 로컬 그룹에 도메인 계정을 추가한다면, 자격 증명이 필요합니다.
 
-Active Directory에 대한 익명 쿼리는 허용되지 않습니다. `Credential` 리소스의 `Group` 속성은 Active Directory에 대해 쿼리하는 데 사용된 도메인 계정입니다. 대부분의 경우 사용자는 기본적으로 Active Directory에 있는 대부분의 개체에 대해 *읽기*가 가능하므로 이것은 일반 사용자 계정일 수 있습니다.
+Active Directory에 대한 익명 쿼리는 허용되지 않습니다. `Group` 리소스의 `Credential` 속성은 Active Directory에 대해 쿼리하는 데 사용된 도메인 계정입니다. 대부분의 경우 사용자는 기본적으로 Active Directory에 있는 대부분의 개체에 대해 *읽기*가 가능하므로 이것은 일반 사용자 계정일 수 있습니다.
 
 ## <a name="example-configuration"></a>예제 구성
 
@@ -220,7 +220,7 @@ ModuleVersion = "1.0";
 
 **DSC 리소스에서 자격 증명을 사용할 경우 가능하면 도메인 계정보다는 로컬 계정을 사용하도록 합니다.**
 
-자격 증명의 \\ 속성에 '\@'또는'`Username`'가 없다면 DSC에서는 이것을 도메인 계정으로 처리합니다. 사용자 이름의 도메인 부분에 "localhost", "127.0.0.1" 및 "::1"에 대한 예외가 있습니다.
+자격 증명의 `Username` 속성에 '\\'또는'\@'가 없다면 DSC에서는 이것을 도메인 계정으로 처리합니다. 사용자 이름의 도메인 부분에 "localhost", "127.0.0.1" 및 "::1"에 대한 예외가 있습니다.
 
 ## <a name="psdscallowdomainuser"></a>PSDscAllowDomainUser
 

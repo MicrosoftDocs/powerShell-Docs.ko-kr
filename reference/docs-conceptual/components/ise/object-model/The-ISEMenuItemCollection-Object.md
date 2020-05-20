@@ -11,7 +11,7 @@ ms.locfileid: "75736175"
 ---
 # <a name="the-isemenuitemcollection-object"></a>ISEMenuItemCollection 개체
 
-**ISEMenuItemCollection** 개체는 **ISEMenuItem** 개체의 컬렉션이며, **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection** 클래스의 인스턴스입니다. 예제는 Windows PowerShell® ISE(통합 스크립팅 환경)에서 `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus`추가 기능**메뉴를 사용자 지정하는 데 사용되는** 개체입니다.
+**ISEMenuItemCollection** 개체는 **ISEMenuItem** 개체의 컬렉션이며, **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection** 클래스의 인스턴스입니다. 예제는 Windows PowerShell® ISE(통합 스크립팅 환경)에서 **추가 기능** 메뉴를 사용자 지정하는 데 사용되는 `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus` 개체입니다.
 
 ## <a name="method"></a>방법
 

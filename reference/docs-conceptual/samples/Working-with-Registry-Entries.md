@@ -85,11 +85,11 @@ ProgramFilesDir     : C:\Program Files
 ...
 ```
 
-경로 확장은 파일 시스템에서와 동일하게 작동하므로 이 위치에서 **를 사용하여** 에 대한 `HKLM:\SOFTWARE\Microsoft\Windows\Help`ItemProperty`Get-ItemProperty -Path ..\Help` 목록을 가져올 수 있습니다.
+경로 확장은 파일 시스템에서와 동일하게 작동하므로 이 위치에서 `Get-ItemProperty -Path ..\Help`를 사용하여 `HKLM:\SOFTWARE\Microsoft\Windows\Help`에 대한 **ItemProperty** 목록을 가져올 수 있습니다.
 
 ## <a name="getting-a-single-registry-entry"></a>단일 레지스트리 항목 가져오기
 
-레지스트리 키에서 특정 항목을 검색하려면 여러 가지 방법 중 하나를 사용할 수 있습니다. 이 예제에서는 **에서** DevicePath`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion`의 값을 찾습니다.
+레지스트리 키에서 특정 항목을 검색하려면 여러 가지 방법 중 하나를 사용할 수 있습니다. 이 예제에서는 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion`에서 **DevicePath**의 값을 찾습니다.
 
 `Get-ItemProperty`를 사용하면서, **Path** 매개 변수를 사용하여 키의 이름을 지정하고, **Name** 매개 변수를 사용하여 **DevicePath** 항목의 이름을 지정합니다.
 
@@ -138,9 +138,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion
 
 ## <a name="setting-a-single-registry-entry"></a>단일 레지스트리 항목 설정
 
-레지스트리 키에서 특정 항목을 변경하려면 여러 가지 방법 중 하나를 사용할 수 있습니다. 이 예제에서는 **아래의**Path`HKEY_CURRENT_USER\Environment` 항목을 수정합니다. **Path** 항목은 실행 파일을 찾는 위치를 지정합니다.
+레지스트리 키에서 특정 항목을 변경하려면 여러 가지 방법 중 하나를 사용할 수 있습니다. 이 예제에서는 `HKEY_CURRENT_USER\Environment` 아래의 **Path** 항목을 수정합니다. **Path** 항목은 실행 파일을 찾는 위치를 지정합니다.
 
-1. **를 사용하여** Path`Get-ItemProperty` 항목의 현재 값을 검색합니다.
+1. `Get-ItemProperty`를 사용하여 **Path** 항목의 현재 값을 검색합니다.
 2. `;`으로 구분하여 새 값을 추가합니다.
 3. 지정된 키, 항목 이름 및 값과 함께 `Set-ItemProperty`를 사용하여 레지스트리 항목을 수정합니다.
 

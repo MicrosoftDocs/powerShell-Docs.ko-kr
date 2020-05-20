@@ -121,7 +121,7 @@ ModuleVersion = "1.0";
 };
 ```
 
-적용되면 [로컬 구성 관리자](../managing-nodes/metaConfig.md)(LCM)가 ".mof" 파일에서 "Spooler" 값을 읽고 `-Name`Service**리소스의 "MyService" 인스턴스에 대한**Get **,** Test**및**Set**의**  매개 변수에 이 값을 전달합니다.
+적용되면 [로컬 구성 관리자](../managing-nodes/metaConfig.md)(LCM)가 ".mof" 파일에서 "Spooler" 값을 읽고 **Service** 리소스의 "MyService" 인스턴스에 대한 **Get**, **Test** 및 **Set**의 `-Name` 매개 변수에 이 값을 전달합니다.
 
 ## <a name="get"></a>가져오기
 
