@@ -37,13 +37,13 @@ PowerShell.exe -Version 2
 
 이는 일반적으로 시스템 관리자가 수행하는 고급 작업입니다.
 
-다음 절차에서는 **Register-PSSessionConfiguration** cmdlet의 [PSVersion](https://technet.microsoft.com/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) 매개 변수를 통해 Windows PowerShell 2.0 엔진을 사용하는 세션 구성을 만듭니다. **New-PSSessionConfigurationFile** cmdlet의 [PowerShellVersion](https://technet.microsoft.com/library/5f3e3633-6e90-479c-aea9-ba45a1954866) 매개 변수를 사용하여 Windows PowerShell 2.0 엔진을 로드하는 세션에 대한 세션 구성 파일을 만들 수도 있으며, **Set-PSSessionConfiguration** 매개 변수의 [PSVersion](https://technet.microsoft.com/library/b21fbad3-1759-4260-b206-dcb8431cd6ea) 매개 변수를 통해 Windows PowerShell 2.0 엔진을 사용하도록 세션 구성을 변경할 수 있습니다.
+다음 절차에서는 [Register-PSSessionConfiguration](https://technet.microsoft.com/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) cmdlet의 **PSVersion** 매개 변수를 통해 Windows PowerShell 2.0 엔진을 사용하는 세션 구성을 만듭니다. [New-PSSessionConfigurationFile](https://technet.microsoft.com/library/5f3e3633-6e90-479c-aea9-ba45a1954866) cmdlet의 **PowerShellVersion** 매개 변수를 사용하여 Windows PowerShell 2.0 엔진을 로드하는 세션에 대한 세션 구성 파일을 만들 수도 있으며, [Set-PSSessionConfiguration](https://technet.microsoft.com/library/b21fbad3-1759-4260-b206-dcb8431cd6ea) 매개 변수의 **PSVersion** 매개 변수를 통해 Windows PowerShell 2.0 엔진을 사용하도록 세션 구성을 변경할 수 있습니다.
 
 세션 구성 파일에 대한 자세한 내용은 [about_Session_Configuration_Files](https://technet.microsoft.com/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8)를 참조하세요. 설정 및 보안을 비롯한 세션 구성에 대한 자세한 내용은 [about_Session_Configurations[v4]](https://technet.microsoft.com/library/a2fbe12a-350c-4d04-be50-24102824e3ab)를 참조하세요.
 
 #### <a name="to-start-a-remote-windows-powershell-20-session"></a>원격 Windows PowerShell 2.0 세션을 시작하려면
 
-1. Windows PowerShell 2.0 엔진을 필요로 하는 세션 구성을 만들려면 **Register-PSSessionConfiguration** cmdlet의 [PSVersion](https://technet.microsoft.com/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) 매개 변수에 값 "2.0"을 사용합니다. 연결의 "서버 쪽" 또는 수신 끝에 있는 컴퓨터에서 이 명령을 실행합니다.
+1. Windows PowerShell 2.0 엔진을 필요로 하는 세션 구성을 만들려면 [Register-PSSessionConfiguration](https://technet.microsoft.com/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) cmdlet의 **PSVersion** 매개 변수에 값 "2.0"을 사용합니다. 연결의 "서버 쪽" 또는 수신 끝에 있는 컴퓨터에서 이 명령을 실행합니다.
 
    다음 샘플 명령은 Server01 컴퓨터에서 PS2 세션 구성을 만듭니다. 이 명령을 실행하려면 **관리자 권한으로 실행** 옵션을 사용하여 Windows PowerShell 4.0 또는 Windows PowerShell 3.0을 시작합니다.
 
@@ -51,7 +51,7 @@ PowerShell.exe -Version 2
    Register-PSSessionConfiguration -Name PS2 -PSVersion 2.0
    ```
 
-2. PS2 세션 구성을 사용하는 Server01 컴퓨터에서 세션을 만들려면 **New-PSSession** cmdlet과 같이 원격 세션을 만드는 cmdlet의 [ConfigurationName](https://technet.microsoft.com/library/76f6628c-054c-4eda-ba7a-a6f28daaa26f) 매개 변수를 사용합니다.
+2. PS2 세션 구성을 사용하는 Server01 컴퓨터에서 세션을 만들려면 [New-PSSession](https://technet.microsoft.com/library/76f6628c-054c-4eda-ba7a-a6f28daaa26f) cmdlet과 같이 원격 세션을 만드는 cmdlet의 **ConfigurationName** 매개 변수를 사용합니다.
 
    세션 구성을 사용하는 세션이 시작되면 Windows PowerShell 2.0 엔진이 자동으로 세션에 로드됩니다.
 
@@ -63,7 +63,7 @@ PowerShell.exe -Version 2
 
 ## <a name="how-to-start-a-background-job-with-the-windows-powershell-20-engine"></a>Windows PowerShell 2.0 엔진을 사용하여 백그라운드 작업을 시작하는 방법
 
-Windows PowerShell 2.0 엔진을 사용하여 백그라운드 작업을 시작하려면 **Start-Job** cmdlet의 [PSVersion](https://technet.microsoft.com/library/2bc04935-0deb-4ec0-b856-d7290cca6442) 매개 변수를 사용합니다.
+Windows PowerShell 2.0 엔진을 사용하여 백그라운드 작업을 시작하려면 [Start-Job](https://technet.microsoft.com/library/2bc04935-0deb-4ec0-b856-d7290cca6442) cmdlet의 **PSVersion** 매개 변수를 사용합니다.
 
 다음 명령은 Windows PowerShell 2.0 엔진을 사용하여 백그라운드 작업을 시작합니다.
 

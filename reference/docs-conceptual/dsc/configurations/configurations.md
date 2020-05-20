@@ -165,7 +165,7 @@ cmdlet인 [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-D
 **Import-DscResource**에서는 두 개의 매개 변수를 지원합니다.
 
 - **ModuleName**은 **Import-DscResource**를 사용하는 권장 방법입니다. 가져올 리소스를 포함하는 모듈의 이름을 받습니다(모듈 이름으로 이루어진 문자열 배열도 받음).
-- **Name**은 가져올 리소스의 이름입니다. 이 이름은 [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)에 의해 "Name"으로 반환한 친숙한 이름이 아니라, 리소스 스키마를 정의할 때 사용된 클래스 이름입니다(**Get-DscResource**에 의해 [ResourceType](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)으로 반환됨).
+- **Name**은 가져올 리소스의 이름입니다. 이 이름은 [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)에 의해 "Name"으로 반환한 친숙한 이름이 아니라, 리소스 스키마를 정의할 때 사용된 클래스 이름입니다([Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)에 의해 **ResourceType**으로 반환됨).
 
 `Import-DSCResource` 사용에 대한 자세한 내용은 [Import-DSCResource 사용](import-dscresource.md)을 참조하세요.
 

@@ -17,7 +17,7 @@ PowerShell 5.0에서 DSC 리소스의 개별 버전을 컴퓨터에 병렬로 �
 
 ## <a name="installing-separate-resource-versions-side-by-side"></a>개별 리소스 버전을 병렬로 설치
 
-**Install-Module** cmdlet의 **MinimumVersion**, **MaximumVersion** 및 [RequiredVersion](/powershell/module/PowershellGet/Install-Module)를 사용하여 설치할 모듈 버전을 지정할 수 있습니다. 버전을 지정하지 않고 **Install-Module**을 호출하면 가장 최근 버전이 설치됩니다.
+[Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet의 **MinimumVersion**, **MaximumVersion** 및 **RequiredVersion**를 사용하여 설치할 모듈 버전을 지정할 수 있습니다. 버전을 지정하지 않고 **Install-Module**을 호출하면 가장 최근 버전이 설치됩니다.
 
 예를 들어 **xFailOverCluster** 모듈의 여러 버전이 있고, 각 버전에는 **xCluster** 리소스가 포함되어 있습니다. 버전 번호를 지정하지 않고 **Install-Module**을 호출하면 가장 최근 버전의 모듈이 설치됩니다.
 

@@ -24,7 +24,7 @@ PowerShell DSC(필요한 상태 구성) 구성을 시행하는 방법에는 밀�
 구성을 만들고 컴파일한 후에는 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet을 호출하고 cmdlet의 -Path 매개 변수를 구성 MOF가 있는 경로로 설정하여 밀어넣기 모드에서 구성을 시행할 수 있습니다. 예를 들어 구성 MOF가 `C:\DSC\Configurations\localhost.mof`에 있으면, 다음 명령을 사용하여 로컬 컴퓨터에 적용합니다.`Start-DscConfiguration -Path 'C:\DSC\Configurations'`
 
 > [!NOTE]
-> 기본적으로 DSC는 구성을 백그라운드 작업으로 실행합니다. 구성을 대화형으로 실행하려면 [Wait](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) 매개 변수로 **Start-DscConfiguration**을 호출합니다.
+> 기본적으로 DSC는 구성을 백그라운드 작업으로 실행합니다. 구성을 대화형으로 실행하려면 **Wait** 매개 변수로 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration)을 호출합니다.
 
 ## <a name="pull-mode"></a>끌어오기 모드
 

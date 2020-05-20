@@ -120,8 +120,8 @@ Windows Server 2012 R2 또는 Windows Server 2012의 Server Core 설치 옵션�
   - [Show-ControlPanelItem](/powershell/module/Microsoft.PowerShell.Management/Show-ControlPanelItem)
   - [Show-EventLog](/powershell/module/Microsoft.PowerShell.Management/Show-EventLog)
 - 매개 변수
-  - **Get-Help** cmdlet의 [ShowWindow](/powershell/module/Microsoft.PowerShell.Core/Get-Help) 매개 변수
-  - **Register-PSSessionConfiguration** 및 [Set-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Register-PSSessionConfiguration) cmdlet의 [ShowSecurityDescriptorUI](/powershell/module/Microsoft.PowerShell.Core/Set-PSSessionConfiguration) 매개 변수
+  - [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet의 **ShowWindow** 매개 변수
+  - [Register-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Register-PSSessionConfiguration) 및 [Set-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Set-PSSessionConfiguration) cmdlet의 **ShowSecurityDescriptorUI** 매개 변수
 
 ## <a name="windows-powershell-engine-requirements"></a>Windows PowerShell 엔진 요구 사항
 

@@ -33,7 +33,7 @@ powershell.exe -Command {
 
 ## <a name="view-the-process"></a>프로세스 보기
 
-PowerShell이 실행 중인 명령의 본문은 **Win32_Process** 클래스의 [Win32_Process][] 속성에 저장됩니다. 명령이 인코딩된 명령인 경우 **CommandLine** 속성에는 문자열 "EncodedCommand"가 포함됩니다. 이 정보를 사용하면 다음 프로세스를 통해 인코딩된 명령의 난독 처리를 제거할 수 있습니다.
+PowerShell이 실행 중인 명령의 본문은 [Win32_Process][] 클래스의 **CommandLine** 속성에 저장됩니다. 명령이 인코딩된 명령인 경우 **CommandLine** 속성에는 문자열 "EncodedCommand"가 포함됩니다. 이 정보를 사용하면 다음 프로세스를 통해 인코딩된 명령의 난독 처리를 제거할 수 있습니다.
 
 관리자 권한으로 PowerShell을 시작합니다. PowerShell은 관리자 권한으로 실행 중이어야 합니다. 그렇지 않으면 실행 프로세스를 쿼리할 때 결과가 반환되지 않습니다.
 

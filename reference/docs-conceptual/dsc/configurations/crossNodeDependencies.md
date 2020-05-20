@@ -66,7 +66,7 @@ WaitForSome [String] #ResourceName
 ## <a name="using-waitforxxxx-resources"></a>WaitForXXXX 리소스 사용
 
 각 **WaitForXXXX** 리소스는 지정된 리소스가 지정된 노드에서 완료될 때까지 기다립니다.
-동일한 구성의 다른 리소스는 **DependsOn** 키를 사용하는 **WaitForXXXX** 리소스에 따라 ‘달라’질 수 있습니다. 
+동일한 구성의 다른 리소스는 **DependsOn** 키를 사용하는 **WaitForXXXX** 리소스에 따라 ‘달라’질 수 있습니다.
 
 예를 들어 다음 구성에서 대상 노드는 대상 노드가 도메인에 가입하기 전에 **xADDomain** 리소스가 **MyDC** 노드에서 최대 30번의 시도를 15초 간격으로 완료할 때까지 대기합니다.
 

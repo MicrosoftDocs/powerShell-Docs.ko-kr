@@ -61,7 +61,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 - 버전
 - Description
 - 작성자
-- 매니페스트의 **PrivateData** 섹션이나 **Publish-Module** cmdlet의 [Publish-Module][] 매개 변수에 포함된 모듈 사용 조건에 대한 URI입니다.
+- 매니페스트의 **PrivateData** 섹션이나 [Publish-Module][] cmdlet의 **LicenseUri** 매개 변수에 포함된 모듈 사용 조건에 대한 URI입니다.
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>올바른 형식의 모듈 매니페스트를 만들려면 어떻게 하나요?
 
@@ -78,7 +78,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 - 버전
 - Description
 - 작성자
-- 스크립트의 **PSScriptInfo** 섹션이나 **Publish-Script** cmdlet의 [Publish-Script][] 매개 변수에 포함된 모듈 사용 조건에 대한 URI입니다.
+- 스크립트의 **PSScriptInfo** 섹션이나 [Publish-Script][] cmdlet의 **LicenseUri** 매개 변수에 포함된 모듈 사용 조건에 대한 URI입니다.
 
 ## <a name="how-do-i-search"></a>검색하려면 어떻게 하나요?
 
