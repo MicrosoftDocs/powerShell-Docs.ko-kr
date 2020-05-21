@@ -148,20 +148,6 @@
               href: components/ise/object-model/the-powershelltabcollection-object.md
             - name: PowerShellTab 개체
               href: components/ise/object-model/the-powershelltab-object.md
-    - name: 웹 액세스
-      items:
-        - name: 권한 부여 규칙 및 보안 기능
-          href: components/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md
-        - name: 설치
-          href: components/web-access/install-and-use-windows-powershell-web-access.md
-        - name: 액세스 문제 해결
-          href: components/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md
-        - name: Windows PowerShell 웹 액세스 제거
-          href: components/web-access/uninstall-windows-powershell-web-access.md
-        - name: 웹 기반 PowerShell 콘솔 사용
-          href: components/web-access/use-the-web-based-windows-powershell-console.md
-    - name: 워크플로 가이드
-      href: components/workflows-guide.md
 - name: PowerShell 갤러리
   items:
     - name: 개요
