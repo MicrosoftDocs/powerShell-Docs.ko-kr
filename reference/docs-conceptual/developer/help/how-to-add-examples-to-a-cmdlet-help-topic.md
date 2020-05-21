@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f723b21-8f95-4981-8b6e-4f07c22d601a
 caps.latest.revision: 5
-ms.openlocfilehash: b6f8aef76a5f4b5dc1a60425541856ead9a9c77a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 82bee7b7bb0ef49203636f2a293075f3db924ce4
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368112"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557093"
 ---
 # <a name="how-to-add-examples-to-a-cmdlet-help-topic"></a>Cmdlet 도움말 항목에 예제를 추가하는 방법
 
@@ -58,7 +58,7 @@ ms.locfileid: "72368112"
 
 ## <a name="adding-preceding-characters"></a>선행 문자 추가
 
-다음 XML은 예 명령 바로 앞에 표시 되는 Windows PowerShell 프롬프트와 같은 문자를 추가 하는 방법을 보여 줍니다 (중간 공간 제외). Windows PowerShell®는 Windows PowerShell 프롬프트: C:\PS >를 사용 합니다.
+다음 XML은 예 명령 바로 앞에 표시 되는 Windows PowerShell 프롬프트와 같은 문자를 추가 하는 방법을 보여 줍니다 (중간 공간 제외). Windows PowerShell®는 Windows PowerShell 프롬프트: C:\PS>를 사용 합니다.
 
 ```xml
 <command:examples>
@@ -89,7 +89,7 @@ ms.locfileid: "72368112"
 
 ## <a name="adding-a-description"></a>설명 추가
 
-다음 XML은 예제에 대 한 설명을 추가 하는 방법을 보여 줍니다. 여러 \<maml: 단락 > 태그를 사용할 수 있는 경우에도 Windows PowerShell®는 설명에 대해 단일 \<maml: 단락 > 태그 집합을 사용 합니다.
+다음 XML은 예제에 대 한 설명을 추가 하는 방법을 보여 줍니다. \<여러 \< maml: 단락> 태그를 사용할 수 있는 경우에도 Windows PowerShell®는 설명에 대해 단일 maml: 단락> 태그 집합을 사용 합니다.
 
 ```xml
 <command:examples>
@@ -108,7 +108,7 @@ ms.locfileid: "72368112"
 
 ## <a name="adding-example-output"></a>예제 출력 추가
 
-다음 XML에서는 명령의 출력을 추가 하는 방법을 보여 줍니다. 명령 결과 정보는 선택 사항 이지만 경우에 따라 특정 매개 변수를 사용 하는 경우의 영향을 보여 주는 데 도움이 됩니다. Windows PowerShell®에서는 두 개의 빈 \<maml: 단락 > 태그 집합을 사용 하 여 명령 출력을 명령과 구분 합니다.
+다음 XML에서는 명령의 출력을 추가 하는 방법을 보여 줍니다. 명령 결과 정보는 선택 사항 이지만 경우에 따라 특정 매개 변수를 사용 하는 경우의 영향을 보여 주는 데 도움이 됩니다. Windows PowerShell®는 두 개의 빈 \< maml: 단락> 태그 집합을 사용 하 여 명령 출력을 명령과 구분 합니다.
 
 ```xml
 <command:examples>

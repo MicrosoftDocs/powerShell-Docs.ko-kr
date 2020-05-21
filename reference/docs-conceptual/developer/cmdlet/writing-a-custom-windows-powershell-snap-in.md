@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], specified in snap-ins
 ms.assetid: 55c8b5cb-8ee2-4080-afc4-3f09c9f20128
 caps.latest.revision: 6
-ms.openlocfilehash: aa6e4a4615f2681efa691008c86611f0df4e07d7
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 9cf4499ec2992c6cfea83fc5d0bf51d0bbfaa96a
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870492"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556855"
 ---
 # <a name="writing-a-custom-windows-powershell-snap-in"></a>사용자 지정 Windows PowerShell 스냅인 작성
 
@@ -31,7 +31,7 @@ ms.locfileid: "75870492"
 
    이 예제에서 클래스 이름은 "CustomPSSnapinTest"입니다.
 
-3. 스냅인 이름에 대 한 public 속성 (필수)을 추가 합니다. 스냅인의 이름을 지정할 때는 다음 문자를 사용 하지 마세요. `#`, `.`, `,`, `(`, `)`, `{`, `}`, `[`, `]`, `&`, `-`, `/`, `\`, `$`, `;`, `:`, `"`, `'`, `<`, `>`, `|`, `?`
+3. 스냅인 이름에 대 한 public 속성 (필수)을 추가 합니다. 스냅인의 이름을 지정할 때,,,,,,,,,,,,,,,,,,,,,,,, 등의 문자를 사용 하지 마십시오. `#` `.` `,` `(` `)` `{` `}` `[` `]` `&` `-` `/` `\` `$` `;` `:` `"` `'` `<` `>` `|` `?` `@` `` ` ```*`
 
    이 예제에서 스냅인의 이름은 "CustomPSSnapInTest"입니다.
 
@@ -45,7 +45,7 @@ ms.locfileid: "75870492"
 
 6. 스냅인에 대 한 설명에 대 한 public 속성 (필수)을 추가 합니다.
 
-   이 예제에서 설명은 "`Test-HelloWorld` 및 `Test-CustomSnapinTest` cmdlet을 포함 하는 사용자 지정 Windows PowerShell 스냅인"입니다.
+   이 예제에서 설명은 "이는 및 cmdlet을 포함 하는 사용자 지정 Windows PowerShell 스냅인입니다 `Test-HelloWorld` `Test-CustomSnapinTest` ."입니다.
 
 7. 스냅인의 설명 리소스에 대 한 public 속성을 추가 합니다 (선택 사항).
 
@@ -53,7 +53,7 @@ ms.locfileid: "75870492"
 
    > CustomPSSnapInTest,이 스냅인은 테스트-HelloWorld 및 CustomSnapinTest cmdlet이 포함 된 사용자 지정 Windows PowerShell 스냅인입니다.
 
-8. [Runspace](/dotnet/api/System.Management.Automation.Runspaces.CmdletConfigurationEntry) 클래스를 사용 하 여 사용자 지정 스냅인 (옵션)에 속하는 cmdlet을 지정 합니다. 여기에 추가 된 정보에는 cmdlet의 이름, 해당 .NET 유형 및 cmdlet 도움말 파일 이름 (cmdlet 도움말 파일 이름의 형식은` name.dll-help.xml`해야 함)이 포함 됩니다.
+8. [Runspace](/dotnet/api/System.Management.Automation.Runspaces.CmdletConfigurationEntry) 클래스를 사용 하 여 사용자 지정 스냅인 (옵션)에 속하는 cmdlet을 지정 합니다. 여기에 추가 된 정보에는 cmdlet의 이름, 해당 .NET 유형 및 cmdlet 도움말 파일 이름 (cmdlet 도움말 파일 이름의 형식)이 포함 됩니다 `name.dll-help.xml` .
 
    이 예제에서는 테스트-HelloWorld 및 TestCustomSnapinTest cmdlet을 추가 합니다.
 
@@ -69,9 +69,9 @@ ms.locfileid: "75870492"
 
     이 예에서는 형식을 지정 하지 않습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
-이 예제에서는 `Test-HelloWorld` 및 `Test-CustomSnapinTest` cmdlet을 등록 하는 데 사용할 수 있는 사용자 지정 Windows PowerShell 스냅인을 작성 하는 방법을 보여 줍니다. 이 예제에서 전체 어셈블리에는이 스냅인에서 등록 되지 않은 다른 cmdlet 및 공급자가 포함 될 수 있습니다.
+이 예제에서는 및 cmdlet을 등록 하는 데 사용할 수 있는 사용자 지정 Windows PowerShell 스냅인을 작성 하는 방법을 보여 줍니다 `Test-HelloWorld` `Test-CustomSnapinTest` . 이 예제에서 전체 어셈블리에는이 스냅인에서 등록 되지 않은 다른 cmdlet 및 공급자가 포함 될 수 있습니다.
 
 ```csharp
 [RunInstaller(true)]

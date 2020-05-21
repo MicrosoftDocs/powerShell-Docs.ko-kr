@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb55971a-4ea4-4c51-aeff-4e0bb05a51b2
 caps.latest.revision: 6
-ms.openlocfilehash: 7d399786b9b43ee302493359d9702981045212e9
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: 12b0b246b78142f3811f9f566cd94e4dabd40cc9
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78277470"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557468"
 ---
 # <a name="creating-a-workflow-with-windows-powershell-activities"></a>Windows PowerShell 활동을 사용하여 워크플로 만들기
 
@@ -31,21 +31,21 @@ Visual Studio 도구 상자에서 작업을 선택 하 고 워크플로 디자�
 
 1. 워크플로에 **시퀀스** 활동을 추가 합니다.
 
-2. 인수 형식이 `String[]`인 `ComputerName` 이라는 인수를 만듭니다. 이 인수는 확인 및 가입할 컴퓨터의 이름을 나타냅니다.
+2. `ComputerName`의 인수 형식을 사용 하 여 라는 인수를 만듭니다 `String[]` . 이 인수는 확인 및 가입할 컴퓨터의 이름을 나타냅니다.
 
-3. [System.object](/dotnet/api/System.Management.Automation.PSCredential)형식의 `DomainCred` 이라는 인수를 만듭니다. 이 인수는 도메인에 컴퓨터를 가입 시킬 수 있는 도메인 계정의 도메인 자격 증명을 나타냅니다.
+3. `DomainCred`형식이 [system.object](/dotnet/api/System.Management.Automation.PSCredential)인 인수를 만듭니다. 이 인수는 도메인에 컴퓨터를 가입 시킬 수 있는 도메인 계정의 도메인 자격 증명을 나타냅니다.
 
-4. [System.object](/dotnet/api/System.Management.Automation.PSCredential)형식의 `MachineCred` 이라는 인수를 만듭니다. 이 인수는 확인 및 가입할 컴퓨터의 관리자 자격 증명을 나타냅니다.
+4. `MachineCred`형식이 [system.object](/dotnet/api/System.Management.Automation.PSCredential)인 인수를 만듭니다. 이 인수는 확인 및 가입할 컴퓨터의 관리자 자격 증명을 나타냅니다.
 
-5. **Sequence** 활동 내에 **ParallelForEach** 활동을 추가 합니다. 루프에서 `ComputerName` 배열의 요소를 반복 하도록 텍스트 상자에 `comp` 및 `ComputerName`을 입력 합니다.
+5. **Sequence** 활동 내에 **ParallelForEach** 활동을 추가 합니다. `comp` `ComputerName` 루프에서 배열의 요소를 반복 하도록 텍스트 상자에 및을 입력 `ComputerName` 합니다.
 
-6. **ParallelForEach** 활동의 본문에 **시퀀스** 활동을 추가 합니다. 시퀀스의 **DisplayName** 속성을 `JoinDomain`로 설정 합니다.
+6. **ParallelForEach** 활동의 본문에 **시퀀스** 활동을 추가 합니다. 시퀀스의 **DisplayName** 속성을로 설정 `JoinDomain` 합니다.
 
 7. **JoinDomain** 시퀀스에 **GetWmiObject** 활동을 추가 합니다.
 
 8. 다음과 같이 **GetWmiObject** 활동의 속성을 편집 합니다.
 
-   |속성|값|
+   |속성|Value|
    |--------------|-----------|
    |**클래스**|"Win32_ComputerSystem"|
    |**PSComputerName**|생략|
@@ -55,19 +55,19 @@ Visual Studio 도구 상자에서 작업을 선택 하 고 워크플로 디자�
 
 10. 다음과 같이 **Addcomputer** 활동의 속성을 편집 합니다.
 
-    |속성|값|
+    |속성|Value|
     |--------------|-----------|
-    |**컴퓨터 이름**|생략|
+    |**컴퓨터**|생략|
     |**DomainCredential**|DomainCred|
 
 11. **Addcomputer** 활동 이후 **JoinDomain** 시퀀스에 **RestartComputer** 활동을 추가 합니다.
 
 12. 다음과 같이 **RestartComputer** 활동의 속성을 편집 합니다.
 
-    |속성|값|
+    |속성|Value|
     |--------------|-----------|
-    |**컴퓨터 이름**|생략|
-    |**자격 증명**|MachineCred|
+    |**컴퓨터**|생략|
+    |**증명서**|MachineCred|
     |**에 대 한**|Microsoft. PowerShell. WaitForServiceTypes. PowerShell|
     |**설정**|True|
     |연결 시도 간격|True|
@@ -77,5 +77,5 @@ Visual Studio 도구 상자에서 작업을 선택 하 고 워크플로 디자�
 
     절차를 완료 하면 워크플로 디자인 창이 다음과 같이 표시 됩니다.
 
-    workflow designer의 JoinDomain XAML ![workflow designer ![의 JOINDOMAIN xaml](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png "JoinDomainWorkflow")](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png)
-    
+    ![Workflow designer의 JoinDomain XAML ](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png)
+     ![JoinDomain xaml](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png "JoinDomainWorkflow")

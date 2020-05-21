@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5891467-8e13-484d-b7af-32e6bffab35d
 caps.latest.revision: 4
-ms.openlocfilehash: b2e8f272a82ee03de306fd8eac45e109142f6284
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c436ad017be72d97c26552c85d9fd212892ec731
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366052"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557519"
 ---
 # <a name="common-workflow-parameters"></a>일반 워크플로 매개 변수
 
@@ -23,7 +23,7 @@ Windows PowerShell cmdlet에서 생성 된 워크플로 작업은 모든 작업�
 
 ## <a name="connectivity-parameters"></a>연결 매개 변수
 
-|Name|유형|설명|실행 시간에 최종 사용자가 지정할 수 있나요?|제작 시 워크플로 작성자가 지정할 수 있나요?|인스턴스화할 때 워크플로 작성자가 지정할 수 있나요?|
+|이름|유형|설명|실행 시간에 최종 사용자가 지정할 수 있나요?|제작 시 워크플로 작성자가 지정할 수 있나요?|인스턴스화할 때 워크플로 작성자가 지정할 수 있나요?|
 |----------|----------|-----------------|-----------------------------------------------------|------------------------------------------------------------|-----------------------------------------------------------|
 |PSComputerName|String[]|작업을 시작할 컴퓨터 이름 목록입니다.|예|예|예|
 |PSCredential|[System.object. PSCredential](/dotnet/api/System.Management.Automation.PSCredential)|PSComputerName 매개 변수로 지정 된 컴퓨터에 로그인 하는 데 사용할 인증 자격 증명입니다. 이 매개 변수는 PSComputerName가 지정 된 경우에만 유효 합니다.|예|예|예|
@@ -34,7 +34,7 @@ Windows PowerShell cmdlet에서 생성 된 워크플로 작업은 모든 작업�
 |PSThrottleLimit|UInt32|워크플로를 실행 하기 위해 설정할 수 있는 최대 동시 연결 수입니다.|예|TBD|예|
 |PSConnectionURI|String[]|워크플로를 실행 하는 데 사용 되는 대화형 세션의 끝점을 지정 하는 정규화 된 Uri의 배열입니다.|예|예|예|
 |PSAllowRedirection|부울|워크플로를 실행 하기 위해이 연결을 대체 URI로 리디렉션할 수 있는지 여부를 지정 합니다.|예|예|예|
-|PSSessionOption|[System.object. a p.](/dotnet/api/System.Management.Automation.Remoting.PSSessionOption)|워크플로를 실행 하는 데 사용 되는 세션에 대 한 고급 옵션입니다.|예|예|예|
+|PSSessionOption|[System.object.. a p.](/dotnet/api/System.Management.Automation.Remoting.PSSessionOption)|워크플로를 실행 하는 데 사용 되는 세션에 대 한 고급 옵션입니다.|예|예|예|
 |PSAuthentication|[Runspace. Authenticationmechanism](/dotnet/api/System.Management.Automation.Runspaces.AuthenticationMechanism)|사용자의 자격 증명을 인증 하는 데 사용 되는 인증 메커니즘을 지정 하는 [runspace](/dotnet/api/System.Management.Automation.Runspaces.AuthenticationMechanism) 열거형의 값입니다.|예|예|예|
 |PSCertificateThumbprint|문자열|워크플로를 실행할 수 있는 권한이 있는 사용자 계정의 디지털 공개 키 인증서 (X509)입니다.|예|예|예|
 

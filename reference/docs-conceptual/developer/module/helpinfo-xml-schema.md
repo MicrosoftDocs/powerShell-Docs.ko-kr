@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 74dcb396-c295-4457-b84c-4432bdaa8df3
 caps.latest.revision: 7
-ms.openlocfilehash: 8142a620f0f71de3d2a6b33fc2e45092b5743a54
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 3e2a113e120c61fab1ba76c4fd897ded67d13319
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995996"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556624"
 ---
 # <a name="helpinfo-xml-schema"></a>HelpInfo XML 스키마
 

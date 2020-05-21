@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d35f233-5447-48a2-a961-9fbca763262b
 caps.latest.revision: 7
-ms.openlocfilehash: 9928a0b31a57d42eb39cea1af0509613c483caf7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 37b31aa77dde23c1bd57a9af67e2232ef0827005
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367332"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557587"
 ---
 # <a name="how-to-create-and-upload-cab-files"></a>CAB 파일을 만들고 업로드하는 방법
 
@@ -25,7 +25,7 @@ ms.locfileid: "72367332"
 
 1. UI 문화권에 따라 모듈에 대 한 도움말 파일을 구성 합니다. 각 업데이트할 수 있는 도움말 CAB 파일에는 한 가지 UI 문화권의 한 모듈에 대 한 도움말 파일이 포함 되어 있습니다. 각 모듈에 대해 서로 다른 UI 문화권에 대 한 여러 도움말 CAB 파일을 제공할 수 있습니다.
 
-2. 도움말 파일에 업데이트 가능한 도움말에 허용 된 파일 형식만 포함 되어 있는지 확인 하 고 도움말 파일 스키마에 대해 유효성 검사를 수행 합니다. `Update-Help` cmdlet이 잘못 되었거나 허용 되는 형식이 아닌 파일을 발견 하면 잘못 된 파일을 설치 하지 않고 CAB에서 파일 설치를 중지 합니다. 허용 되는 파일 형식 목록은 [업데이트할 수 있는 도움말 CAB 파일에서 허용 되는 파일 형식](./file-types-permitted-in-an-updatable-help-cab-file.md)을 참조 하세요.
+2. 도움말 파일에 업데이트 가능한 도움말에 허용 된 파일 형식만 포함 되어 있는지 확인 하 고 도움말 파일 스키마에 대해 유효성 검사를 수행 합니다. Cmdlet이 `Update-Help` 잘못 되었거나 허용 되는 형식이 아닌 파일을 발견 하는 경우 잘못 된 파일을 설치 하지 않고 CAB에서 파일 설치를 중지 합니다. 허용 되는 파일 형식 목록은 [업데이트할 수 있는 도움말 CAB 파일에서 허용 되는 파일 형식](./file-types-permitted-in-an-updatable-help-cab-file.md)을 참조 하세요.
 
 3. 도움말 파일에 디지털 서명 합니다. 디지털 서명은 필요 하지 않지만 모범 사례입니다.
 

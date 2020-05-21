@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 70532e7e-9cac-43c3-9687-e77011ecc878
 caps.latest.revision: 4
-ms.openlocfilehash: 5720200ce32f114cd4965d961b9e2804bd154b2e
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: cc613240e056e8443b075019cbff6dd15da3716f
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870849"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557451"
 ---
 # <a name="creating-a-workflow-by-using-a-windows-powershell-script"></a>Windows PowerShell 스크립트를 사용하여 워크플로 만들기
 
-Windows PowerShell 스크립트를 작성 하 여 워크플로를 만들 수 있습니다. 워크플로를 만들려면 스크립트 본문 앞에 워크플로 키워드와 워크플로 이름을 차례로 사용 합니다. 예:
+Windows PowerShell 스크립트를 작성 하 여 워크플로를 만들 수 있습니다. 워크플로를 만들려면 스크립트 본문 앞에 워크플로 키워드와 워크플로 이름을 차례로 사용 합니다. 다음은 그 예입니다.
 
 ```powershell
 
@@ -28,7 +28,7 @@ workflow Invoke-HelloWorld {"Hello World from workflow"}
 
 ## <a name="implementing-parallel-and-sequence"></a>병렬 및 시퀀스 구현
 
-[Windows Workflow Foundation](/previous-versions/dotnet/netframework-3.5/ms735967(v=vs.90)) 는 작업을 병렬로 실행할 수 있도록 지원 합니다. Windows PowerShell 스크립트에서이 기능을 구현 하려면 스크립트 블록 앞에 `parallel` 키워드를 사용 합니다. `foreach -parallel` 생성을 사용 하 여 개체 컬렉션을 병렬로 반복할 수도 있습니다. 병렬 블록 내에서 작업 그룹을 순서 대로 실행 하려면 해당 작업 그룹을 스크립트 블록으로 묶고 시퀀스 키워드를 사용 하 여 블록 앞에 옵니다.
+[Windows Workflow Foundation](/previous-versions/dotnet/netframework-3.5/ms735967(v=vs.90)) 는 작업을 병렬로 실행할 수 있도록 지원 합니다. Windows PowerShell 스크립트에서이 기능을 구현 하려면 `parallel` 스크립트 블록 앞에 키워드를 사용 합니다. 또한 생성을 사용 `foreach -parallel` 하 여 개체 컬렉션을 병렬로 반복할 수 있습니다. 병렬 블록 내에서 작업 그룹을 순서 대로 실행 하려면 해당 작업 그룹을 스크립트 블록으로 묶고 시퀀스 키워드를 사용 하 여 블록 앞에 옵니다.
 
 ## <a name="joining-computers-to-a-domain"></a>도메인에 컴퓨터 가입
 
