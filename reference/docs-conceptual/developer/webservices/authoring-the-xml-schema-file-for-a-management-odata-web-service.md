@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3e83c9d9-6d06-4247-94d9-e3bfd4013b11
 caps.latest.revision: 4
-ms.openlocfilehash: b830571418fe75bbfc68df02f20a6012efefd99a
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 7ccdeeb2833b79cabc7c77d1a400e0c9132b2dcd
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76996065"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561467"
 ---
 # <a name="authoring-the-xml-schema-file-for-a-management-odata-web-service"></a>관리 OData 웹 서비스용 XML 스키마 파일 작성
 
@@ -46,12 +46,12 @@ XML 파일의 첫 번째 부분에서는 MOF 스키마 파일에 정의 된 리�
 
 |CRUD 명령|XML 요소|
 |------------------|-----------------|
-|만들기|만들기|
+|생성|생성|
 |읽기|쿼리|
 |업데이트|업데이트|
-|삭제|삭제|
+|DELETE|삭제|
 
-다음 예에서는 `Service` 리소스에 대 한 만들기, 읽기 및 업데이트 작업에 대 한 매핑을 보여 줍니다.
+다음 예제에서는 리소스에 대 한 만들기, 읽기 및 업데이트 작업에 대 한 매핑을 보여 줍니다 `Service` .
 
 ```xml
 <ClassImplementations>

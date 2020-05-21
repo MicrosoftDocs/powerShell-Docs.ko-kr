@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e620bf6d-76be-47b0-a7a8-f43418f30c60
 caps.latest.revision: 6
-ms.openlocfilehash: b81a32b867795ae51c3f5308c2f82c31ed2747fa
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2f6ad8ee9f303d3dea92a633996e9248d2e87a21
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359822"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561903"
 ---
 # <a name="adding-resources-to-a-management-odata-web-service"></a>관리 OData 웹 서비스에 리소스 추가
 
 이 예제에서는 관리 OData 스키마 디자이너를 사용 하 여 기존 관리 OData 웹 서비스에 리소스를 추가 하는 방법을 보여 줍니다. [PswsRoleBasedPlugins](https://code.msdn.microsoft.com:443/windowsdesktop/PswsRoleBasedPlugins-9c79b75a) 샘플은 프로세스 및 서버 리소스를 노출 하는 웹 서비스를 만듭니다. 이 예제에서는 웹 서비스에 VM (가상 컴퓨터) 리소스를 추가 합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 항목에서는 [Windows PowerShell 웹 서비스 만들기](./creating-a-management-odata-web-service.md)에 설명 된 대로 [PswsRoleBasedPlugins](https://code.msdn.microsoft.com:443/windowsdesktop/PswsRoleBasedPlugins-9c79b75a) 샘플을 다운로드 하 여 설치 하 고 [관리 OData 스키마 디자이너](https://marketplace.visualstudio.com/items?itemName=jlisc0.ManagementODataSchemaDesigner)를 다운로드 하 여 설치 했다고 가정 합니다. 또한이 항목에서는 관리 Odata 끝점을 설정 하는 컴퓨터에 Hyper-v Windows PowerShell 모듈이 설치 되어 있다고 가정 합니다.
 
@@ -49,19 +49,19 @@ ms.locfileid: "72359822"
 
 2. **로컬 컴퓨터** 가 선택 되어 있는지 확인 하 고 **다음**을 클릭 합니다.
 
-3. 설치 된 Windows PowerShell 모듈이 선택 되어 있는지 확인 하 고 드롭다운 목록에서 Hyper-v를 선택 합니다. **다음**을 클릭합니다. 클릭 하 여 **다음**.
+3. 설치 된 Windows PowerShell 모듈이 선택 되어 있는지 확인 하 고 드롭다운 목록에서 Hyper-v를 선택 합니다. **다음**을 클릭합니다. **다음**을 클릭합니다.
 
 4. **Cmdlet 명사** 목록에서 **VM**을 선택 합니다. **다음**을 클릭합니다.
 
-5. 이 예에서는 cmdlet을 사용 하 여 Get 및 Delete 명령만 바인딩합니다. **만들기** 및 **업데이트** 확인란의 선택을 취소 하 고 **가져오기** 및 **삭제** 확인란을 선택 했는지 확인 합니다. **GET**에 `Get-VM` cmdlet을 선택 하 고 `Remove-VM` Cmdlet을 **삭제**하도록 선택 해야 합니다.
+5. 이 예에서는 cmdlet을 사용 하 여 Get 및 Delete 명령만 바인딩합니다. **만들기** 및 **업데이트** 확인란의 선택을 취소 하 고 **가져오기** 및 **삭제** 확인란을 선택 했는지 확인 합니다. `Get-VM` **GET**에 대해 cmdlet을 선택 하 고 cmdlet을 삭제 하도록 `Remove-VM` 선택 해야 합니다. **DELETE**
 
-6. VM cmdlet에 대 한 메타 데이터는 출력 유형을 지정 하지 않으므로 cmdlet을 실행 하 여 출력 유형을 지정 해야 합니다. **출력 유형 제공** 을 선택 하 고 **cmdlet 실행**을 클릭 합니다. **Cmdlet 실행** 대화 상자가 나타납니다. **실행**을 클릭합니다. **CLR 유형** 상자는 `VirtualMachine` 유형으로 채워집니다. **확인**을 클릭 한 후 **다음**을 클릭 합니다.
+6. VM cmdlet에 대 한 메타 데이터는 출력 유형을 지정 하지 않으므로 cmdlet을 실행 하 여 출력 유형을 지정 해야 합니다. **출력 유형 제공** 을 선택 하 고 **cmdlet 실행**을 클릭 합니다. **Cmdlet 실행** 대화 상자가 나타납니다. **실행**을 클릭합니다. **CLR 유형** 상자는 유형으로 채워집니다 `VirtualMachine` . **확인**을 클릭 한 후 **다음**을 클릭 합니다.
 
-7. 기본적으로 VirtualMachine 개체의 모든 속성이 선택 됩니다. 웹 서비스에서이 리소스를 요청할 때 반환 되는 데이터의 일부로 원하지 않는 속성은 모두 지울 수 있습니다. 클릭 하 여 **다음**.
+7. 기본적으로 VirtualMachine 개체의 모든 속성이 선택 됩니다. 웹 서비스에서이 리소스를 요청할 때 반환 되는 데이터의 일부로 원하지 않는 속성은 모두 지울 수 있습니다. **다음**을 클릭합니다.
 
 8. 키로 사용할 속성을 하나 이상 선택 해야 합니다. 목록에서 **이름** 을 선택 하 고 **다음**을 클릭 합니다.
 
-9. 다음 창에서는 관리 OData 리소스의 속성을 기본 cmdlet의 속성에 매핑할 수 있습니다. 마법사는 기본적으로 동일한 이름의 속성을 매핑합니다. 예를 들어 리소스의 `ComputerName` 속성은 cmdlet의 `ComputerName` 속성에 매핑됩니다.  이를 통해 웹 서비스에 대 한 요청에서 `ComputerName` 속성을 지정 하 고 지정 하는 값을 `Get-VM` cmdlet으로 전달할 수 있습니다. `Id` 및 `Name`도 기본적으로 매핑됩니다.
+9. 다음 창에서는 관리 OData 리소스의 속성을 기본 cmdlet의 속성에 매핑할 수 있습니다. 마법사는 기본적으로 동일한 이름의 속성을 매핑합니다. 예를 들어 `ComputerName` 리소스의 속성은 `ComputerName` cmdlet의 속성에 매핑됩니다.  이렇게 하면 `ComputerName` 웹 서비스에 대 한 요청에서 속성을 지정 하 고 지정 된 값을 cmdlet으로 전달할 수 있습니다 `Get-VM` . `Id`및 `Name` 도 기본적으로 매핑됩니다.
 
    10. **다음**을 클릭 한 다음 **마침**을 클릭 합니다.
 

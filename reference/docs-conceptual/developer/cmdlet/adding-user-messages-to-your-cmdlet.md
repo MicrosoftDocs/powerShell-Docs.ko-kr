@@ -31,12 +31,12 @@ helpviewer_keywords:
 - user notifications
 ms.assetid: 14c13acb-f0b7-4613-bc7d-c361d14da1a2
 caps.latest.revision: 8
-ms.openlocfilehash: 9079f40e75dae86c22fd8b4f8a45d501c6125498
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9b9a598b592d0ac60099020e564ec7fffa54e683
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416036"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561072"
 ---
 # <a name="adding-user-messages-to-your-cmdlet"></a>Cmdlet에 사용자 메시지 추가
 
@@ -56,7 +56,7 @@ Cmdlet에서 쓸 수 있는 메시지 수 나 cmdlet이 쓰는 메시지 유형�
 
 Cmdlet을 만드는 첫 번째 단계는 항상 cmdlet의 이름을 지정 하 고 cmdlet을 구현 하는 .NET 클래스를 선언 하는 것입니다. 모든 종류의 cmdlet은 입력 처리 메서드에서 사용자 알림을 쓸 수 있습니다. 따라서 일반적으로 cmdlet이 수행 하는 시스템 수정을 나타내는 동사를 사용 하 여이 cmdlet의 이름을 지정할 수 있습니다. 승인 된 cmdlet 동사에 대 한 자세한 내용은 [Cmdlet 동사 이름](./approved-verbs-for-windows-powershell-commands.md)을 참조 하세요.
 
-Stop Proc cmdlet은 시스템을 수정 하도록 디자인 되었습니다. 따라서 .NET 클래스에 대 한 [System.object 특성](/dotnet/api/System.Management.Automation.CmdletAttribute) 선언에는 `SupportsShouldProcess` attribute 키워드가 포함 되 고 `true`로 설정 되어야 합니다.
+Stop Proc cmdlet은 시스템을 수정 하도록 디자인 되었습니다. 따라서 .NET 클래스에 대 한 [System.object 특성](/dotnet/api/System.Management.Automation.CmdletAttribute) 선언에 attribute 키워드를 포함 하 `SupportsShouldProcess` 고로 설정 해야 합니다 `true` .
 
 다음 코드는이 Stop Proc cmdlet 클래스에 대 한 정의입니다. 이 정의에 대 한 자세한 내용은 [시스템을 수정 하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)를 참조 하세요.
 
@@ -68,7 +68,7 @@ public class StopProcCommand : Cmdlet
 
 ## <a name="defining-parameters-for-system-modification"></a>시스템 수정 매개 변수 정의
 
-Stop Proc cmdlet은 `Name`, `Force`및 `PassThru`의 세 가지 매개 변수를 정의 합니다. 이러한 매개 변수를 정의 하는 방법에 대 한 자세한 내용은 [시스템을 수정 하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)를 참조 하세요.
+Stop Proc cmdlet은 3 개의 매개 변수 `Name` , `Force` 및를 정의 `PassThru` 합니다. 이러한 매개 변수를 정의 하는 방법에 대 한 자세한 내용은 [시스템을 수정 하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)를 참조 하세요.
 
 다음은 Stop Proc cmdlet에 대 한 매개 변수 선언입니다.
 
@@ -143,7 +143,7 @@ WriteVerbose(message);
 이 cmdlet은 cmdlet의 작업 문제를 해결 하는 데 사용할 수 있는 디버그 메시지를 작성 하는 데 사용 [됩니다.](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 호출은 입력 처리 메서드에서 수행 됩니다.
 
 > [!NOTE]
-> Windows PowerShell은 자세한 정보와 디버그 정보를 모두 표시 하는 `Debug` 매개 변수도 정의 합니다. Cmdlet에서이 매개 변수를 지 원하는 경우에는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose)를 호출 하는 것과 같은 코드에서 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 를 호출할 필요가 없습니다.
+> Windows PowerShell은 자세한 정보와 `Debug` 디버그 정보를 모두 표시 하는 매개 변수도 정의 합니다. Cmdlet에서이 매개 변수를 지 원하는 경우에는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose)를 호출 하는 것과 같은 코드에서 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 를 호출할 필요가 없습니다.
 
 Sample Stop Proc cmdlet의 다음 두 섹션에서는 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드의 재정의에서 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 를 호출 하는 방법에 대해 설명 하는 다음 두 섹션을 보여 줍니다.
 
@@ -168,13 +168,13 @@ WriteObject(process);
 
 Windows PowerShell은 추적 인프라 및 cmdlet에 대 한 모든 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 를 자동으로 라우팅합니다. 이를 통해 cmdlet 내에서 추가 개발 작업을 수행 하지 않고도 호스팅 응용 프로그램, 파일 또는 디버거로 메서드 호출을 추적할 수 있습니다. 다음 명령줄 항목은 추적 작업을 구현 합니다.
 
-**PS > 추적 식-proc-file proc-command stop-proc notepad**
+**PS> 추적 식-proc-file proc-command stop-proc notepad**
 
 ## <a name="writing-a-warning-message"></a>경고 메시지 작성
 
 Cmdlet이 읽기 전용 파일을 덮어쓰는 등 예기치 않은 결과가 발생할 수 있는 작업을 수행 하려고 할 때 경고를 작성 하는 데 사용 [됩니다.](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning)
 
-샘플 Stop-Proc cmdlet의 다음 코드에서는 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드의 재정의에서 [System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning)를 호출하는 방법에 대해 설명하는 코드를 보여줍니다.
+샘플 ProcessRecord cmdlet의 다음 코드에서는 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드의 재정의에서 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) 를 호출 하는 방법에 대해 설명 하는 코드를 보여 줍니다.
 
 ```csharp
  if (criticalProcess)
@@ -208,7 +208,7 @@ WriteProgress(pr);
 
 ## <a name="code-sample"></a>코드 예제
 
-전체 C# 샘플 코드는 [StopProcessSample02 샘플](./stopprocesssample02-sample.md)을 참조 하세요.
+전체 c # 샘플 코드는 [StopProcessSample02 샘플](./stopprocesssample02-sample.md)을 참조 하세요.
 
 ## <a name="define-object-types-and-formatting"></a>개체 형식 및 서식 정의
 
@@ -228,7 +228,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     PS> stop-proc -Name notepad -Verbose -Debug
     ```
 
-다음 출력이 표시됩니다.
+    다음 출력이 표시됩니다.
 
     ```
     VERBOSE: Attempting to stop process " notepad ".

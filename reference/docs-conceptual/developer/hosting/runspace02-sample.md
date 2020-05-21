@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7630bb63-ef39-4abd-b795-8000f984c1e5
 caps.latest.revision: 9
-ms.openlocfilehash: 6352169cffbb8a8bf59a42f79979f5003c150fa4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 997b1d6841ff014093ba54bf7a1db7b0b7d746b8
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360982"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564809"
 ---
 # <a name="runspace02-sample"></a>Runspace02 샘플
 
-이 샘플에서는 [system.object](/dotnet/api/system.management.automation.powershell) 를 사용 하 여 [Get Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) 및 [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) cmdlet을 동기적으로 실행 하는 방법을 보여 줍니다. System.Diagnostics.Process.Id [cmdlet은](/powershell/module/Microsoft.PowerShell.Management/Get-Process) 로컬 컴퓨터에서 실행 중인 각 프로세스에 대해 [system.object](/dotnet/api/System.Diagnostics.Process) 개체를 반환 하 고, `Sort-Object`는 해당 [*](/dotnet/api/System.Diagnostics.Process.Id) 속성을 기준으로 개체를 정렬 합니다. 이러한 명령의 결과는 [Windows Forms](/dotnet/api/System.Windows.Forms.DataGridView) 컨트롤을 사용 하 여 표시 됩니다.
+이 샘플에서는 [system.object](/dotnet/api/system.management.automation.powershell) 를 사용 하 여 [Get Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) 및 [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) cmdlet을 동기적으로 실행 하는 방법을 보여 줍니다. System.Diagnostics.Process.Id [cmdlet은](/powershell/module/Microsoft.PowerShell.Management/Get-Process) 로컬 컴퓨터에서 실행 중인 각 프로세스에 대해 [system.object](/dotnet/api/System.Diagnostics.Process) 개체를 반환 하 고,는 해당 `Sort-Object` [*](/dotnet/api/System.Diagnostics.Process.Id) 속성을 기준으로 개체를 정렬 합니다. 이러한 명령의 결과는 [Windows Forms](/dotnet/api/System.Windows.Forms.DataGridView) 컨트롤을 사용 하 여 표시 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -116,4 +116,4 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 
 ## <a name="see-also"></a>참고 항목
 
-[Windows PowerShell 호스트 응용 프로그램 작성](./writing-a-windows-powershell-host-application.md)
+[Windows PowerShell 호스트 애플리케이션 작성](./writing-a-windows-powershell-host-application.md)

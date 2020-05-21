@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5aadb730-4eb7-4936-b8df-3b0c0ca04fd5
 caps.latest.revision: 5
-ms.openlocfilehash: aa46cbc5bfcfdfec9fcf9d2581ff641baa532860
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0a6403e2dea16d73e2fdcb8cf5df39b2aa5b5dae
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361222"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560273"
 ---
 # <a name="how-to-add-related-links-to-a-cmdlet-help-topic"></a>Cmdlet 도움말 항목에 관련 링크를 추가하는 방법
 
@@ -33,6 +33,3 @@ Windows PowerShell®에 포함 된 cmdlet 도움말 항목에서 이러한 링�
   </maml:navigationLink>
 </ maml:relatedLinks >
 ```
-
-
-

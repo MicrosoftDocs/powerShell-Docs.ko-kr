@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a7b2cc4d-292f-4714-888b-3b81536bef5d
 caps.latest.revision: 7
-ms.openlocfilehash: 3b00f0900325b4e95b2c129d93d03d6b5d60f77e
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 38cd295bd34c55fe0d68faeffcfb4c47f64f3b70
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995895"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560749"
 ---
 # <a name="resource-mapping-schema"></a>리소스 매핑 스키마
 

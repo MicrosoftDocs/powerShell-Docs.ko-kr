@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4497b64c-7875-4047-bf77-07e04c098ffe
 caps.latest.revision: 4
-ms.openlocfilehash: 376d90394b632e82322b848cb124f002ff91d8b3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d29a652b32d07b7825bc5bed5099daa67dd32ff4
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366182"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564598"
 ---
 # <a name="deploying-a-management-odata-web-service"></a>관리 OData 웹 서비스 배포
 
@@ -23,7 +23,7 @@ ms.locfileid: "72366182"
 
 관리 OData 웹 서비스를 배포 하려면 다음 단계를 완료 합니다.
 
-1. IIS `WWWRoot` 디렉터리에서 웹 응용 프로그램에 대 한 디렉터리를 만듭니다.
+1. IIS 디렉터리에서 웹 응용 프로그램에 대 한 디렉터리를 만듭니다 `WWWRoot` .
 
 2. MOF 스키마 파일, XML 스키마 파일, [Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) 및 [register-pssessionconfiguration](/dotnet/api/System.Management.Automation.Remoting.PSSessionConfiguration) 인터페이스를 내보내는 dll을 복사 하 고 web.config 파일을 응용 프로그램 디렉터리로 복사 하 여 복사 합니다.
 
@@ -427,14 +427,14 @@ Start-Sleep 10
 
 ## <a name="see-also"></a>참고 항목
 
-[관리 OData 웹 서비스에 대 한 사용자 지정 권한 부여 구현](./implementing-custom-authorization-for-a-management-odata-web-service.md)
+[관리 OData 웹 서비스에 대한 사용자 지정 권한 부여 구현](./implementing-custom-authorization-for-a-management-odata-web-service.md)
 
-[관리 OData 웹 서비스에 대 한 SessionConfiguration 구현](./implementing-sessionconfiguration-for-a-management-odata-web-service.md)
+[관리 OData 웹 서비스에 대한 SessionConfiguration 구현](./implementing-sessionconfiguration-for-a-management-odata-web-service.md)
 
 [관리 OData 웹 서비스용 MOF 스키마 파일 작성](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)
 
-[관리 OData 웹 서비스에 대 한 XML 스키마 파일 작성](./authoring-the-xml-schema-file-for-a-management-odata-web-service.md)
+[관리 OData 웹 서비스용 XML 스키마 파일 작성](./authoring-the-xml-schema-file-for-a-management-odata-web-service.md)
 
-[관리 OData 웹 서비스용 web.config 파일 작성](./authoring-the-web-config-file-for-a-management-odata-web-service.md)
+[관리 OData 웹 서비스용 Web.config 파일 작성](./authoring-the-web-config-file-for-a-management-odata-web-service.md)
 
 [관리 OData 웹 서비스 만들기](./creating-a-management-odata-web-service.md)

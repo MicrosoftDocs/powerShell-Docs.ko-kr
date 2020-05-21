@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 55908d67-7cbe-482a-a105-5a6da93c5311
 caps.latest.revision: 4
-ms.openlocfilehash: 8d692cf88d1d356886ef973f0989294d6b51ee6d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fd565e8bf8429d91d785664c8cc69d1843439219
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361072"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560596"
 ---
 # <a name="writing-help-for-powershell-cmdlets"></a>PowerShell Cmdlet에 대 한 도움말 작성
 
@@ -34,7 +34,7 @@ Cmdlet 도움말을 작성 한 적이 없는 경우에는 다음 지침을 검�
 
 ### <a name="write-simply"></a>쓰기 간단히
 간단한 단어와 구를 사용 합니다.
-전문 용어를 사용 하지 마세요.
+전문 용어를 사용하지 않습니다.
 대부분의 판독기는 외국어 사전과 도움말 항목에만 포함 되어 있다고 가정 합니다.
 
 ### <a name="write-consistently"></a>일관 되 게 쓰기
@@ -87,22 +87,22 @@ Url이 변경 되 면 사용 하지 마십시오.
 
  [Cmdlet 도움말 파일을 만드는 방법](./how-to-create-the-cmdlet-help-file.md)
 
- [Cmdlet 이름 및 개요를 Cmdlet 도움말 항목에 추가 하는 방법](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)
+ [Cmdlet 도움말 항목에 Cmdlet 이름 및 개요를 추가하는 방법](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)
 
  [Cmdlet 도움말 항목에 자세한 설명을 추가 하는 방법](./how-to-add-a-cmdlet-description.md)
 
- [Cmdlet 도움말 항목에 구문을 추가 하는 방법](./how-to-add-syntax-to-a-cmdlet-help-topic.md)
+ [Cmdlet 도움말 항목에 구문을 추가하는 방법](./how-to-add-syntax-to-a-cmdlet-help-topic.md)
 
  [Cmdlet 도움말 항목에 매개 변수를 추가 하는 방법](./how-to-add-parameter-information.md)
 
  [Cmdlet 도움말 항목에 입력 유형을 추가 하는 방법](./how-to-add-input-types-to-a-cmdlet-help-topic.md)
 
- [Cmdlet 도움말 항목에 반환 값을 추가 하는 방법](./how-to-add-return-values-to-a-cmdlet-help-topic.md)
+ [Cmdlet 도움말 항목에 반환 값을 추가하는 방법](./how-to-add-return-values-to-a-cmdlet-help-topic.md)
 
- [Cmdlet 도움말 항목에 메모를 추가 하는 방법](./how-to-add-notes-to-a-cmdlet-help-topic.md)
+ [Cmdlet 도움말 항목에 메모를 추가하는 방법](./how-to-add-notes-to-a-cmdlet-help-topic.md)
 
- [Cmdlet 도움말 항목에 예를 추가 하는 방법](./how-to-add-examples-to-a-cmdlet-help-topic.md)
+ [Cmdlet 도움말 항목에 예제를 추가하는 방법](./how-to-add-examples-to-a-cmdlet-help-topic.md)
 
- [Cmdlet 도움말 항목에 관련 링크를 추가 하는 방법](./how-to-add-related-links-to-a-cmdlet-help-topic.md)
+ [Cmdlet 도움말 항목에 관련 링크를 추가하는 방법](./how-to-add-related-links-to-a-cmdlet-help-topic.md)
 
  [Windows PowerShell SDK](../windows-powershell-reference.md)

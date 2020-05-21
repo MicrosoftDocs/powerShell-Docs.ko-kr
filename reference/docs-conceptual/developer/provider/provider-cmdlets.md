@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d2465420-0970-4408-9ee5-260cf444cb67
 caps.latest.revision: 8
-ms.openlocfilehash: e6a0711cff6a550100f584fb64ae7f59f71a3cfb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b266a22e3ab16762b22e9d630b968ee510ff1c49
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359982"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564192"
 ---
 # <a name="provider-cmdlets"></a>공급자 cmdlet
 
@@ -27,7 +27,7 @@ ms.locfileid: "72359982"
 
 - `Get-PSDrive`:이 cmdlet은 현재 세션의 Windows PowerShell 드라이브를 반환 합니다. 이 cmdlet을 지원 하기 위해 메서드를 덮어쓸 필요가 없습니다.
 
-- `New-PSDrive`:이 cmdlet을 사용 하면 사용자가 Windows PowerShell 드라이브를 만들어 데이터 저장소에 액세스할 수 있습니다. 이 cmdlet을 지원 하려면 [Newdrive](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) 및 [Newdrivedynamicparameters](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) 메서드를 덮어쓰십시오... d m d. n a m. n a m.
+- `New-PSDrive`:이 cmdlet을 사용 하면 사용자가 Windows PowerShell 드라이브를 만들어 데이터 저장소에 액세스할 수 있습니다. 이 cmdlet을 지원 하려면 [Newdrive](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) 및 [Newdrivedynamicparameters](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) 메서드를 덮어쓰십시오... d m d. n a m.. n a m.
 
 - `Remove-PSDrive`:이 cmdlet을 사용 하면 사용자가 데이터 저장소에 액세스 하는 Windows PowerShell 드라이브를 제거할 수 있습니다. 이 cmdlet을 지원 하려면 System.object를 덮어씁니다. [Removedrive](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) 메서드를 덮어씁니다.
 
@@ -35,7 +35,7 @@ ms.locfileid: "72359982"
 
 - `Clear-Item`:이 cmdlet을 사용 하면 사용자가 데이터 저장소에 있는 항목의 값을 제거할 수 있습니다. 이 cmdlet을 지원 하려면 [system.web](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ClearItem) . m a n a m a. m a g. m a m a. m [a g.](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ClearItemDynamicParameters)
 
-- `Copy-Item`:이 cmdlet을 사용 하면 사용자가 한 위치에서 다른 위치로 항목을 복사할 수 있습니다. 이 cmdlet을 지원 하려면 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 및 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) . m a n a m e. m a n a m e.
+- `Copy-Item`:이 cmdlet을 사용 하면 사용자가 한 위치에서 다른 위치로 항목을 복사할 수 있습니다. 이 cmdlet을 지원 하려면 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 및 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) .. m a n a m e. m a n a m e.
 
 - `Get-Item`:이 cmdlet을 사용 하면 사용자가 데이터 저장소에서 데이터를 검색할 수 있습니다. 이 cmdlet을 지원 하려면 [Getitem](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 및 [system.web](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItemDynamicParameters) . n a m a. i n g. i n g. i n g.
 
@@ -49,7 +49,7 @@ ms.locfileid: "72359982"
 
   - [Containercmdletprovider입니다. Getchildnamesdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters)
 
-- `Invoke-Item`:이 cmdlet을 사용 하면 사용자가 항목에 지정 된 기본 작업을 수행할 수 있습니다. 이 cmdlet을 지원 하려면 [Invokedefaultaction](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultAction) 및 Invokedefaultaction 메서드를 덮어쓰십시오. n a m. i n [g](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultAction) . m a.
+- `Invoke-Item`:이 cmdlet을 사용 하면 사용자가 항목에 지정 된 기본 작업을 수행할 수 있습니다. 이 cmdlet을 지원 하려면 [Invokedefaultaction](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultAction) 및 Invokedefaultaction 메서드를 덮어쓰십시오.. n a m.. i n [g](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultAction) . m a.
 
 - `Move-Item`:이 cmdlet을 사용 하면 사용자가 한 위치에서 다른 위치로 항목을 이동할 수 있습니다. 이 cmdlet을 지원 하려면 [Moveitem](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 및 system.webserver를 덮어씁니다. [Moveitemdynamicparameters](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters)s 메서드를 (를) 덮어씁니다 .이 경우.
 
@@ -59,7 +59,7 @@ ms.locfileid: "72359982"
 
 - `Rename-Item`:이 cmdlet을 사용 하면 사용자가 데이터 저장소에 있는 항목의 이름을 바꿀 수 있습니다. 이 cmdlet을 지원 하려면 Renameitem 및 Containercmdletprovider 메서드를 덮어씁니다. [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) . [Renameitemdynamicparameters](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItemDynamicParameters) 메서드를 지원 합니다.
 
-- `Set-Item`:이 cmdlet을 사용 하면 사용자가 데이터 저장소에 있는 항목의 값을 업데이트할 수 있습니다. 이 cmdlet을 지원하려면 [System.Management.Automation.Provider.Itemcmdletprovider.Setitem](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 및 [System.Management.Automation.Provider.Itemcmdletprovider.Setitemdynamicparameters](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItemDynamicParameters) 메서드를 덮어씁니다.
+- `Set-Item`:이 cmdlet을 사용 하면 사용자가 데이터 저장소에 있는 항목의 값을 업데이트할 수 있습니다. 이 cmdlet을 지원 하려면 Setitem 및 [System.Management.Automation.Provider.Itemcmdletprovider.Setitem](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 및 [system.object (Setitemdynamicparameters. Setitemdynamicparameters](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItemDynamicParameters) 메서드)를 덮어씁니다.
 
 ### <a name="item-content-cmdlets"></a>항목 콘텐츠 cmdlet
 
@@ -69,31 +69,31 @@ ms.locfileid: "72359982"
 
 - `Get-Content`:이 cmdlet을 사용 하면 사용자가 항목의 내용을 검색할 수 있습니다. 이 cmdlet을 지원 하려면 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) 을 덮어씁니다. [Icontentcmdletprovider 및. Getcontentreaderdynamicparameters](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters) 메서드 (영문)를 덮어씁니다. [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) 메서드는 콘텐츠를 읽는 데 사용 되는 메서드를 정의 하는 [Icontentreader](/dotnet/api/System.Management.Automation.Provider.IContentReader) 인터페이스를 반환 합니다 .이 인터페이스를 반환 합니다.
 
-- `Set-Content`:이 cmdlet을 사용 하면 사용자가 항목의 내용을 업데이트할 수 있습니다. 이 cmdlet을 지원 하려면 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) 을 덮어씁니다. [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters) . n a m a. n a m a. n a m a. [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) 메서드는 콘텐츠를 쓰는 데 사용 되는 메서드를 정의 하는 [Icontentwriter](/dotnet/api/System.Management.Automation.Provider.IContentWriter) 인터페이스를 반환 합니다 .이 인터페이스는 콘텐츠를 쓰는 데 사용 됩니다.
+- `Set-Content`:이 cmdlet을 사용 하면 사용자가 항목의 내용을 업데이트할 수 있습니다. 이 cmdlet을 지원 하려면 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) 을 덮어씁니다. [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters) .. n a m a. n a m a. n a m a. [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) 메서드는 콘텐츠를 쓰는 데 사용 되는 메서드를 정의 하는 [Icontentwriter](/dotnet/api/System.Management.Automation.Provider.IContentWriter) 인터페이스를 반환 합니다 .이 인터페이스는 콘텐츠를 쓰는 데 사용 됩니다.
 
 ### <a name="item-property-cmdlets"></a>Item 속성 cmdlet
 
 - `Clear-ItemProperty`:이 cmdlet을 사용 하면 사용자가 속성 값을 삭제할 수 있습니다. 이 cmdlet을 지원 하려면 System.object를 덮어씁니다. [Clearproperty](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) 및 system.object를 덮어씁니다. [Clearpropertydynamicparameters](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearPropertyDynamicParameters) 메서드를 사용할 수 있는 경우.
 
-- `Copy-ItemProperty`:이 cmdlet을 통해 사용자는 속성 및 해당 값을 한 위치에서 다른 위치로 복사할 수 있습니다. 이 cmdlet을 지원 하려면 [Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.CopyProperty) 및 [Idynamicpropertycmdletprovider와 dynamicparameters](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.CopyPropertyDynamicParameters) 메서드를 덮어씁니다 .이 메서드를 지원 하지 않습니다.
+- `Copy-ItemProperty`:이 cmdlet을 사용 하면 사용자가 한 위치에서 다른 위치로 속성 및 값을 복사할 수 있습니다. 이 cmdlet을 지원 하려면 [Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.CopyProperty) 및 [Idynamicpropertycmdletprovider와 dynamicparameters](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.CopyPropertyDynamicParameters) 메서드를 덮어씁니다 .이 메서드를 지원 하지 않습니다.
 
-- `Get-ItemProperty`:이 cmdlet은 항목의 속성을 검색 합니다. 이 cmdlet을 지원 하려면 [system.object](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.GetProperty) 를 덮어씁니다. x m p. i n g. i n g. [i n](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.GetPropertyDynamicParameters) d o d.
+- `Get-ItemProperty`:이 cmdlet은 항목의 속성을 검색 합니다. 이 cmdlet을 지원 하려면 [system.object](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.GetProperty) 를 덮어씁니다.. x m p. i n g. i n g. [i n](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.GetPropertyDynamicParameters) d o d.
 
 - `Move-ItemProperty`:이 cmdlet을 통해 사용자는 속성 및 해당 값을 한 위치에서 다른 위치로 이동할 수 있습니다. 이 cmdlet을 지원 하려면 [Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.MoveProperty) 및 [Idynamicpropertycmdletprovider 및 매개 변수](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.MovePropertyDynamicParameters) 메서드를 덮어씁니다 .이 매개 변수를 지원 합니다.
 
-- `New-ItemProperty`:이 cmdlet을 사용 하면 사용자가 새 속성을 만들고 해당 값을 설정할 수 있습니다. 이 cmdlet을 지원하려면 [System.Management.Automation.Provider.Idynamicpropertycmdletprovider.Newproperty](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.NewProperty) 및 [System.Management.Automation.Provider.Idynamicpropertycmdletprovider.Newpropertydynamicparameters](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.NewPropertyDynamicParameters) 메서드를 덮어씁니다.
+- `New-ItemProperty`:이 cmdlet을 사용 하면 사용자가 새 속성을 만들고 해당 값을 설정할 수 있습니다. 이 cmdlet을 지원 하려면 [Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.NewProperty) 및 Idynamicpropertycmdletprovider 및. n e t. n e t. [dynamicparameters](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.NewPropertyDynamicParameters) 메서드를 덮어씁니다.
 
 - `Remove-ItemProperty`:이 cmdlet을 통해 사용자는 속성과 해당 값을 삭제할 수 있습니다. 이 cmdlet을 지원 하려면 [Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RemoveProperty) 및 [Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RemovePropertyDynamicParameters) 및. m a p. i n p. n a m a.
 
 - `Rename-ItemProperty`:이 cmdlet을 사용 하면 사용자가 속성의 이름을 변경할 수 있습니다. 이 cmdlet을 지원 하려면 Renameproperty 및 Idynamicpropertycmdletprovider 메서드를 덮어씁니다. [Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RenameProperty) . [Renamepropertydynamicparameters](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RenamePropertyDynamicParameters) 메서드를 지원 합니다.
 
-- `Set-ItemProperty`:이 cmdlet을 사용 하면 사용자가 항목의 속성을 업데이트할 수 있습니다. 이 cmdlet을 지원 하려면 [system.object](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 를 덮어씁니다. d a t a. d a t a. d a t a. d a [t.](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetPropertyDynamicParameters)
+- `Set-ItemProperty`:이 cmdlet을 사용 하면 사용자가 항목의 속성을 업데이트할 수 있습니다. 이 cmdlet을 지원 하려면 [system.object](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 를 덮어씁니다.. d a t a. d a t a. d a t a. d a [t.](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetPropertyDynamicParameters)
 
 ### <a name="location-cmdlets"></a>위치 cmdlet
 
 - `Get-Location`: 현재 작업 위치에 대 한 정보를 검색 합니다. 이 cmdlet을 지원 하기 위해 메서드를 덮어쓸 필요가 없습니다.
 
-- `Pop-Location`:이 cmdlet은 현재 위치를 가장 최근에 스택으로 푸시되는 위치로 변경 합니다. 이 cmdlet을 지원 하기 위해 메서드를 덮어쓸 필요가 없습니다.
+- `Pop-Location`:이 cmdlet은 현재 위치를 가장 최근에 스택에 푸시한 위치로 변경 합니다. 이 cmdlet을 지원 하기 위해 메서드를 덮어쓸 필요가 없습니다.
 
 - `Push-Location`:이 cmdlet은 위치 목록 ("stack")의 맨 위에 현재 위치를 추가 합니다. 이 cmdlet을 지원 하기 위해 메서드를 덮어쓸 필요가 없습니다.
 
@@ -101,7 +101,7 @@ ms.locfileid: "72359982"
 
 ### <a name="path-cmdlets"></a>경로 cmdlet
 
-- `Join-Path`:이 cmdlet을 통해 사용자는 부모 및 자식 경로 세그먼트를 결합 하 여 공급자 내부 경로를 만들 수 있습니다. 이 cmdlet을 지원 하려면 [system.web](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) . n a m a.
+- `Join-Path`:이 cmdlet을 통해 사용자는 부모 및 자식 경로 세그먼트를 결합 하 여 공급자 내부 경로를 만들 수 있습니다. 이 cmdlet을 지원 하려면 [system.web](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) .. n a m a.
 
 - `Convert-Path`:이 cmdlet은 Windows PowerShell 경로에서 Windows PowerShell 공급자 경로로 경로를 변환 합니다.
 
@@ -109,7 +109,7 @@ ms.locfileid: "72359982"
 
 - `Resolve-Path`: 경로에서 와일드 카드 문자를 확인 하 고 경로 내용을 표시 합니다.
 
-- `Test-Path`:이 cmdlet은 경로의 모든 요소가 있는지 여부를 확인 합니다. 이 cmdlet을 지원 하려면 [Itemexistsdynamicparameters](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExistsDynamicParameters) 메서드를 덮어쓰십시오. i n g. i [n g.](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) m a n g.
+- `Test-Path`:이 cmdlet은 경로의 모든 요소가 있는지 여부를 확인 합니다. 이 cmdlet을 지원 하려면 [Itemexistsdynamicparameters](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExistsDynamicParameters) 메서드를 덮어쓰십시오.. i n g. i [n g.](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) m a n g.
 
 ### <a name="psprovider-cmdlets"></a>PSProvider cmdlet
 

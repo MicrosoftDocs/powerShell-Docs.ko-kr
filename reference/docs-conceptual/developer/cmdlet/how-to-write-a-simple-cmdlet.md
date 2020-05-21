@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 137543d8-0012-4cba-bcd6-98b25aac83bb
 caps.latest.revision: 9
-ms.openlocfilehash: 8271512d06047f3ff5e45f81d971ffe2c1f6afd7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9bd72e8f97c194c98adb1049f5a966549113fd12
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365472"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83563898"
 ---
 # <a name="how-to-write-a-cmdlet"></a>Cmdlet을 작성 하는 방법
 
-이 문서에서는 cmdlet을 작성 하는 방법을 보여 줍니다. `Send-Greeting` cmdlet은 단일 사용자 이름을 입력으로 사용 하 고 해당 사용자에 게 인사말을 작성 합니다. Cmdlet은 많은 작업을 수행 하지 않지만이 예에서는 cmdlet의 주요 섹션을 보여 줍니다.
+이 문서에서는 cmdlet을 작성 하는 방법을 보여 줍니다. `Send-Greeting`Cmdlet은 단일 사용자 이름을 입력으로 사용 하 고 해당 사용자에 게 인사말을 작성 합니다. Cmdlet은 많은 작업을 수행 하지 않지만이 예에서는 cmdlet의 주요 섹션을 보여 줍니다.
 
 ## <a name="steps-to-write-a-cmdlet"></a>Cmdlet을 작성 하는 단계
 
@@ -78,7 +78,7 @@ namespace SendGreeting
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [System.object.](/dotnet/api/System.Management.Automation.Cmdlet)
 
@@ -92,4 +92,4 @@ namespace SendGreeting
 
 [ParameterAttribute 선언](parameter-attribute-declaration.md)
 
-[Writing a Windows PowerShell Cmdlet](writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](writing-a-windows-powershell-cmdlet.md)

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 64e85b53-5aeb-4d6c-903c-af4ab62f11c1
 caps.latest.revision: 7
-ms.openlocfilehash: 462cd7bd486a5924bb2bc43e0ac8d1558e30e657
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 45e8a5bb0066f38c82cd3be8ec881383befd9c85
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367202"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560579"
 ---
 # <a name="how-to-name-a-helpinfo-xml-file"></a>HelpInfo XML 파일 이름을 지정하는 방법
 

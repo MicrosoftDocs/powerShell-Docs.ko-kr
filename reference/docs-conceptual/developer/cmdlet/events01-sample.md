@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27d0ee5e-2589-4530-92ef-c09996b80994
 caps.latest.revision: 10
-ms.openlocfilehash: 8f745cc0e5ef6db7a6bbdf39d826103f3b8a98ce
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 772f73793449856651ab6b03e1ccc14faed941fc
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369742"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561450"
 ---
 # <a name="events01-sample"></a>Events01 샘플
 
@@ -30,7 +30,7 @@ ms.locfileid: "72369742"
    그러면 Microsoft Visual Studio의 샘플 프로젝트가 열립니다.
 
 3. **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.
-   샘플에 대 한 라이브러리는 기본 `\bin` 또는 `\bin\debug` 폴더에 빌드됩니다.
+   샘플에 대 한 라이브러리는 기본 `\bin` 또는 `\bin\debug` 폴더로 빌드됩니다.
 
 ### <a name="how-to-run-the-sample"></a>샘플을 실행하는 방법
 
@@ -83,8 +83,8 @@ A file was created in the TEMP directory
 
 ### <a name="how-to-write-a-cmdlet-for-event-registration"></a>이벤트 등록을 위해 cmdlet을 작성 하는 방법
 
-Cmdlet은 `Register-*Event` cmdlet에 공통적인 매개 변수를 지 원하는 [ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 클래스에서 파생 됩니다.
-[ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 에서 파생 된 cmdlet은 특정 매개 변수만 정의 하 고 `GetSourceObject` 및 `GetSourceObjectEventName` 추상 메서드를 재정의 해야 합니다.
+Cmdlet은 cmdlet에 공통적인 매개 변수를 지 원하는 [ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 클래스에서 파생 됩니다. `Register-*Event`
+[ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 에서 파생 된 cmdlet은 특정 매개 변수만 정의 하 고 `GetSourceObject` 및 추상 메서드를 재정의 해야 합니다. `GetSourceObjectEventName`
 
 ## <a name="example"></a>예제
 
@@ -189,4 +189,4 @@ namespace Sample
 
 ## <a name="see-also"></a>참고 항목
 
-[Writing a Windows PowerShell Cmdlet](writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](writing-a-windows-powershell-cmdlet.md)

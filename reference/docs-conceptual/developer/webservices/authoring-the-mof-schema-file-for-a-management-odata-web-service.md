@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65fbac8b-07d0-4513-bc8d-79f1f389be0f
 caps.latest.revision: 5
-ms.openlocfilehash: 7aadee07b38d2e9d87c5f0c548d13a5cdad1939f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5c55ec1346e1f2a9a3fd59445ce267c80bdb5ae4
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366172"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561708"
 ---
 # <a name="authoring-the-mof-schema-file-for-a-management-odata-web-service"></a>관리 OData 웹 서비스용 MOF 스키마 파일 작성
 
@@ -23,7 +23,7 @@ ms.locfileid: "72366172"
 
 다음 파일은 서비스 및 프로세스 리소스를 정의 합니다. 이러한 각 리소스는 일련의 Windows PowerShell cmdlet을 통해 관리할 수 있는 개체에 해당 합니다. 속성은 해당 cmdlet에서 사용 하는 매개 변수에 해당 합니다.
 
-두 리소스 각각은 복합 유형인 속성을 포함 합니다. 복합 형식은 `ComplexType` 한정자로 수정 된 클래스로 정의 됩니다.
+두 리소스 각각은 복합 유형인 속성을 포함 합니다. 복합 형식은 한정자를 사용 하 여 수정 된 클래스로 정의 됩니다 `ComplexType` .
 
 ```csharp
 

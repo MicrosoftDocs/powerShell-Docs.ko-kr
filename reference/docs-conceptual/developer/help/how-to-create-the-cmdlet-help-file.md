@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4a88dd89-6beb-494f-9e2a-6b10baed1a8d
 caps.latest.revision: 17
-ms.openlocfilehash: 186a8ceecea47564503dc181a76cc314033b6d3f
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: cc77c0546de98e492c9724e051b9d72f1ebfdcb6
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76996042"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560171"
 ---
 # <a name="how-to-create-the-cmdlet-help-file"></a>Cmdlet 도움말 파일을 만드는 방법
 
@@ -36,7 +36,7 @@ ms.locfileid: "76996042"
 
    다음 표에는 각 노드에 대 한 XML 요소와 각 노드에 대 한 설명이 나와 있습니다.
 
-   |노드|Description|
+   |노드|설명|
    |----------|-----------------|
    |`<details>`|Cmdlet 도움말 항목의 NAME and 개요 섹션에 대 한 콘텐츠를 추가 합니다. 자세한 내용은 [Cmdlet 이름 및 개요를 추가 하는 방법](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)을 참조 하세요.|
    |`<maml:description>`|Cmdlet 도움말 항목의 설명 섹션에 대 한 콘텐츠를 추가 합니다. 자세한 내용은 [Cmdlet 도움말 항목에 자세한 설명을 추가](./how-to-add-a-cmdlet-description.md)하는 방법을 참조 하십시오.|
@@ -48,7 +48,7 @@ ms.locfileid: "76996042"
    |`<command:examples>`|Cmdlet 도움말 항목의 예제 섹션에 대 한 콘텐츠를 추가 합니다. 자세한 내용은 [Cmdlet 도움말 항목에 예를 추가 하는 방법](./how-to-add-examples-to-a-cmdlet-help-topic.md)을 참조 하세요.|
    |`<maml:relatedLinks>`|Cmdlet 도움말 항목의 관련 링크 섹션에 대 한 콘텐츠를 추가 합니다. 자세한 내용은 [Cmdlet 도움말 항목에 관련 링크를 추가 하는 방법](./how-to-add-related-links-to-a-cmdlet-help-topic.md)을 참조 하세요.|
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
  다음은 cmdlet 도움말 항목의 다양 한 섹션에 대 한 노드를 포함 하는 명령 노드의 예입니다.
 
@@ -93,18 +93,18 @@ ms.locfileid: "76996042"
 
  [Cmdlet 도움말 항목에 자세한 설명을 추가 하는 방법](./how-to-add-a-cmdlet-description.md)
 
- [Cmdlet 도움말 항목에 구문을 추가 하는 방법](./how-to-add-syntax-to-a-cmdlet-help-topic.md)
+ [Cmdlet 도움말 항목에 구문을 추가하는 방법](./how-to-add-syntax-to-a-cmdlet-help-topic.md)
 
  [Cmdlet 도움말 항목에 매개 변수를 추가 하는 방법](./how-to-add-parameter-information.md)
 
- [Cmdlet 도움말 항목에 입력 유형을 추가 하는 방법](./how-to-add-input-types-to-a-cmdlet-help-topic.md)
+ [Cmdlet 도움말 항목에 입력 형식을 추가하는 방법](./how-to-add-input-types-to-a-cmdlet-help-topic.md)
 
- [Cmdlet 도움말 항목에 반환 값을 추가 하는 방법](./how-to-add-return-values-to-a-cmdlet-help-topic.md)
+ [Cmdlet 도움말 항목에 반환 값을 추가하는 방법](./how-to-add-return-values-to-a-cmdlet-help-topic.md)
 
  [Cmdlet 도움말 항목에 메모를 추가 하는 방법](./how-to-add-notes-to-a-cmdlet-help-topic.md)
 
- [Cmdlet 도움말 항목에 예를 추가 하는 방법](./how-to-add-examples-to-a-cmdlet-help-topic.md)
+ [Cmdlet 도움말 항목에 예제를 추가하는 방법](./how-to-add-examples-to-a-cmdlet-help-topic.md)
 
- [Cmdlet 도움말 항목에 관련 링크를 추가 하는 방법](./how-to-add-related-links-to-a-cmdlet-help-topic.md)
+ [Cmdlet 도움말 항목에 관련 링크를 추가하는 방법](./how-to-add-related-links-to-a-cmdlet-help-topic.md)
 
  [Windows PowerShell SDK](../windows-powershell-reference.md)

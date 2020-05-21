@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 868194a2-17e9-4184-bc36-c04a33f26494
 caps.latest.revision: 4
-ms.openlocfilehash: 30e98bfcf06b1720005a73ee8294aeba7e1ae066
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fbaea91c12eede70d30e29dce3fd2d36d7f55994
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367822"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564843"
 ---
 # <a name="examples-of-comment-based-help"></a>설명 기반 도움말 예제
 
@@ -145,7 +145,7 @@ C:\PS> get-help add-extension -full
 
 다음 샘플 함수는 주석 기반 도움말을 포함 합니다.
 
-Closing **#>** 와 `Param` 문 사이에 빈 줄을 확인 합니다. `Param` 문이 없는 스크립트에서 도움말 항목의 마지막 주석과 첫 번째 함수 선언 사이에는 두 개 이상의 빈 줄이 있어야 합니다. 이러한 빈 줄이 없으면 Get-help는 스크립트 대신 도움말 항목을 함수와 연결 합니다.
+Closing 문과 문 사이에 빈 줄을 확인 **#>** `Param` 합니다. 문이 없는 스크립트에서 `Param` 도움말 항목의 마지막 주석과 첫 번째 함수 선언 사이에는 두 개 이상의 빈 줄이 있어야 합니다. 이러한 빈 줄이 없으면 Get-help는 스크립트 대신 도움말 항목을 함수와 연결 합니다.
 
 ```powershell
 <#
@@ -257,7 +257,7 @@ C:\PS> get-help c:\ps-test\update-month.ps1 -full
 
 ## <a name="example-3-parameter-descriptions-in-a-param-statement"></a>예 3: Param 문의 매개 변수 설명
 
-이 예에서는 함수나 스크립트의 `Param` 문에 parameterdescriptions을 삽입 하는 방법을 보여 줍니다. 이 형식은 매개 변수 설명이 간단한 경우에 가장 유용 합니다.
+이 예에서는 `Param` 함수나 스크립트의 문에 parameterdescriptions을 삽입 하는 방법을 보여 줍니다. 이 형식은 매개 변수 설명이 간단한 경우에 가장 유용 합니다.
 
 ```powershell
 function Add-Extension
@@ -282,11 +282,11 @@ function Add-Extension
     #>
 ```
 
-결과는 예 1의 결과와 같습니다. Get-help는 `.Parameter` 키워드가 함께 제공 된 것 처럼 매개 변수 설명을 해석 합니다.
+결과는 예 1의 결과와 같습니다. Get-help는 키워드와 함께 제공 된 것 처럼 매개 변수 설명을 해석 합니다 `.Parameter` .
 
 ## <a name="example-4--redirecting-to-an-xml-file"></a>예 4: XML 파일로 리디렉션
 
-함수 및 스크립트에 대 한 XML 기반 도움말 항목을 작성할 수 있습니다. 주석 기반 도움말을 구현 하는 것이 좋지만 도움말 콘텐츠를 보다 정확 하 게 제어 하거나 도움말 항목을 여러 언어로 번역 하려는 경우에는 XML 기반 도움말이 필요 합니다. 다음 예에서는 Update-Month 스크립트의 처음 몇 줄을 보여 줍니다. 스크립트는 `.ExternalHelp` 키워드를 사용 하 여 스크립트에 대 한 XML 기반 도움말 항목의 경로를 지정 합니다.
+함수 및 스크립트에 대 한 XML 기반 도움말 항목을 작성할 수 있습니다. 주석 기반 도움말을 구현 하는 것이 좋지만 도움말 콘텐츠를 보다 정확 하 게 제어 하거나 도움말 항목을 여러 언어로 번역 하려는 경우에는 XML 기반 도움말이 필요 합니다. 다음 예에서는 Update-Month 스크립트의 처음 몇 줄을 보여 줍니다. 스크립트는 키워드를 사용 하 여 `.ExternalHelp` 스크립트에 대 한 XML 기반 도움말 항목의 경로를 지정 합니다.
 
 ```powershell
 #  .ExternalHelp C:\MyScripts\Update-Month-Help.xml
@@ -296,7 +296,7 @@ function Add-Extension
     function Get-Data { }
 ```
 
-다음 예에서는 함수에서 `.ExternalHelp` 키워드를 사용 하는 방법을 보여 줍니다.
+다음 예에서는 함수에서 키워드를 사용 하는 방법을 보여 줍니다 `.ExternalHelp` .
 
 ```powershell
 function Add-Extension
@@ -311,7 +311,7 @@ function Add-Extension
 
 ## <a name="example-5--redirecting-to-a-different-help-topic"></a>예 5: 다른 도움말 항목으로 리디렉션
 
-다음 코드는 한 번에 하나의 도움말 텍스트 화면을 표시 하는 Windows PowerShell의 기본 제공 `Help` 함수 시작 부분에서 발췌 한 것입니다. Get-help cmdlet에 대 한 도움말 항목에서 도움말 함수를 설명 하므로 Help 함수는 `.ForwardHelpTargetName` 및 `.ForwardHelpCategory` 키워드를 사용 하 여 사용자를 Get-help cmdlet 도움말 항목으로 리디렉션합니다.
+다음 코드는 한 `Help` 번에 하나의 도움말 텍스트 화면을 표시 하는 Windows PowerShell의 기본 제공 함수 시작 부분에서 발췌 한 것입니다. Get-help cmdlet에 대 한 도움말 항목에서 도움말 함수를 설명 하므로 Help 함수는 및 키워드를 사용 하 여 `.ForwardHelpTargetName` `.ForwardHelpCategory` 사용자를 Get-help cmdlet 도움말 항목으로 리디렉션합니다.
 
 ```powershell
 function help

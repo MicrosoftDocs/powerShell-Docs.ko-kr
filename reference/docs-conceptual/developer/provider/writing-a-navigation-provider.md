@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98bcfda0-6ee2-46f5-bbc7-5fab8b780d6a
 caps.latest.revision: 5
-ms.openlocfilehash: edb4d9944a527391983e068ddf07f4fac415c3f9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c557a6ec51d52f529faaaa316c89da359cd97051
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359872"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83562512"
 ---
 # <a name="writing-a-navigation-provider"></a>탐색 공급자 작성
 
@@ -28,7 +28,7 @@ Windows PowerShell 공급자에 대 한 자세한 내용은 [Windows Powershell 
 [System.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 클래스는 중첩 된 컨테이너, 상대 경로 및 이동 항목을 지 원하는 메서드를 구현 합니다. 이러한 메서드의 전체 목록은 [Navigationcmdletprovider 메서드](/dotnet/api/system.management.automation.provider.navigationcmdletprovider?view=pscore-6.2.0#methods)를 참조 하세요.
 
 > [!NOTE]
-> 이 항목은 [Windows PowerShell 공급자 빠른](./windows-powershell-provider-quickstart.md)시작의 정보를 기반으로 합니다. 이 항목에서는 공급자 프로젝트를 설정 하는 방법에 대 한 기본 사항을 다루지 않으며, 드라이브를 만들고 제거 하는 [system.web](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . c a c. 이 항목에서는 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) [클래스에 의해](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 노출 되는 메서드를 구현 하는 방법에 대해서도 설명 하지 않습니다. 항목 cmdlet을 구현 하는 방법을 보여 주는 예제는 [항목 공급자 작성](./writing-an-item-provider.md)을 참조 하세요. 컨테이너 cmdlet을 구현 하는 방법을 보여 주는 예제는 [컨테이너 공급자 작성](./writing-a-container-provider.md)을 참조 하세요.
+> 이 항목은 [Windows PowerShell 공급자 빠른](./windows-powershell-provider-quickstart.md)시작의 정보를 기반으로 합니다. 이 항목에서는 공급자 프로젝트를 설정 하는 방법에 대 한 기본 사항을 다루지 않으며, 드라이브를 만들고 제거 하는 [system.web](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) .. c a c. 이 항목에서는 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) [클래스에 의해](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 노출 되는 메서드를 구현 하는 방법에 대해서도 설명 하지 않습니다. 항목 cmdlet을 구현 하는 방법을 보여 주는 예제는 [항목 공급자 작성](./writing-an-item-provider.md)을 참조 하세요. 컨테이너 cmdlet을 구현 하는 방법을 보여 주는 예제는 [컨테이너 공급자 작성](./writing-a-container-provider.md)을 참조 하세요.
 
 ### <a name="declaring-the-provider-class"></a>공급자 클래스 선언
 
@@ -77,7 +77,7 @@ protected override bool IsItemContainer(string path)
 
 ### <a name="implementing-getchildname"></a>GetChildName 구현
 
-[Getchildname *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetChildName) 메서드는 지정 된 경로에 있는 자식 항목의 name 속성을 가져옵니다. 지정 된 경로에 있는 항목이 컨테이너의 자식이 아닌 경우이 메서드는 경로를 반환 해야 합니다.
+[Getchildname *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetChildName) 메서드는 지정 된 경로에 있는 자식 항목의 name 속성을 가져옵니다.. 지정 된 경로에 있는 항목이 컨테이너의 자식이 아닌 경우이 메서드는 경로를 반환 해야 합니다.
 
 ```csharp
 protected override string GetChildName(string path)
@@ -191,7 +191,7 @@ protected override string MakePath(string parent, string child)
 
 ### <a name="implementing-normalizerelativepath"></a>NormalizeRelativePath 구현
 
-[Normalizerelativepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) 메서드는 `path` 및 `basepath` 매개 변수를 사용 하 고 `path` 매개 변수와 같으며 `basepath` 매개 변수에 상대적인 정규화 된 경로를 반환 합니다.
+[Normalizerelativepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) 메서드는 및 매개 변수를 사용 하 고 매개 변수에 `path` 해당 하 `basepath` `path` 고 매개 변수를 기준으로 하는 정규화 된 경로를 반환 합니다. `basepath`
 
 ```csharp
 protected override string NormalizeRelativePath(string path,

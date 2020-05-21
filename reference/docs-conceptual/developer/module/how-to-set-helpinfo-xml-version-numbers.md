@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 93a00463-af58-41c8-b088-450909fa1d05
 caps.latest.revision: 6
-ms.openlocfilehash: b98e6879bbfe0e3ec1a9ab37496dde44caf523a4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 864372bfb0f43922f6066ff3db19956a7942db49
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360682"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560528"
 ---
 # <a name="how-to-set-helpinfo-xml-version-numbers"></a>HelpInfo XML 버전 번호를 설정하는 방법
 

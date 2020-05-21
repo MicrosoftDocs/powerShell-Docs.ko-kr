@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 931ccace-c565-4a98-8dcc-df00f86394b1
 caps.latest.revision: 8
-ms.openlocfilehash: d210a852a90d94df2ab360dd86f0b83a396330e3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7c4098c6c670f22253fe7d463b33e45208d00790
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74415649"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560001"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>Cmdlet 매개 변수에 별칭, 와일드카드 확장 및 도움말 추가
 
@@ -35,13 +35,13 @@ public class StopProcCommand : Cmdlet
 
 ## <a name="defining-parameters-for-system-modification"></a>시스템 수정 매개 변수 정의
 
-Cmdlet은 시스템 수정과 사용자 피드백을 지 원하는 매개 변수를 정의 해야 합니다. Cmdlet은 특정 식별자로 시스템을 수정할 수 있도록 `Name` 매개 변수를 정의 해야 합니다. 또한 cmdlet은 `Force` 및 `PassThru` 매개 변수를 정의 해야 합니다. 이러한 매개 변수에 대 한 자세한 내용은 [시스템을 수정 하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)를 참조 하세요.
+Cmdlet은 시스템 수정과 사용자 피드백을 지 원하는 매개 변수를 정의 해야 합니다. Cmdlet은 매개 변수를 정의 해야 합니다 `Name` . 이렇게 하면 cmdlet이 일종의 식별자로 시스템을 수정할 수 있습니다. 또한 cmdlet은 `Force` 및 매개 변수를 정의 해야 합니다 `PassThru` . 이러한 매개 변수에 대 한 자세한 내용은 [시스템을 수정 하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)를 참조 하세요.
 
 ## <a name="defining-a-parameter-alias"></a>매개 변수 별칭 정의
 
 매개 변수 별칭은 cmdlet 매개 변수에 대 한 대체 이름 또는 잘 정의 된 1 자 또는 2 자 짧은 이름일 수 있습니다. 두 경우 모두 별칭을 사용 하는 것은 명령줄에서 사용자 입력을 단순화 하는 것입니다. Windows PowerShell은 선언 구문 [Alias ()]를 사용 하는 [Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) 특성을 통해 매개 변수 별칭을 지원 합니다.
 
-다음 코드는 `Name` 매개 변수에 별칭을 추가 하는 방법을 보여 줍니다.
+다음 코드는 매개 변수에 별칭을 추가 하는 방법을 보여 줍니다 `Name` .
 
 ```csharp
 /// <summary>
@@ -64,13 +64,13 @@ public string[] Name
 private string[] processNames;
 ```
 
-[Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) 특성을 사용 하는 것 외에도 Windows PowerShell 런타임은 별칭이 지정 되지 않은 경우에도 부분 이름 일치를 수행 합니다. 예를 들어 cmdlet에 `FileName` 매개 변수가 있고 `F`으로 시작 하는 유일한 매개 변수인 경우 사용자는 `Filename`, `Filenam`, `File`, `Fi`또는 `F`를 입력 하 여 해당 항목을 `FileName` 매개 변수로 계속 인식할 수 있습니다.
+[Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) 특성을 사용 하는 것 외에도 Windows PowerShell 런타임은 별칭이 지정 되지 않은 경우에도 부분 이름 일치를 수행 합니다. 예를 들어 cmdlet에 `FileName` 매개 변수가 있고로 시작 하는 유일한 매개 변수인 경우 `F` 사용자는,,, 또는를 입력 하 여 해당 `Filename` `Filenam` 항목을 `File` `Fi` `F` `FileName` 매개 변수로 계속 인식할 수 있습니다.
 
 ## <a name="creating-help-for-parameters"></a>매개 변수에 대 한 도움말 만들기
 
-Windows PowerShell을 사용 하 여 cmdlet 매개 변수에 대 한 도움말을 만들 수 있습니다. 시스템 수정 및 사용자 의견에 사용 되는 매개 변수에 대해이 작업을 수행 합니다. 도움말을 지 원하는 각 매개 변수에 대해 [system.object](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성 선언에서 `HelpMessage` attribute 키워드를 설정할 수 있습니다. 이 키워드는 매개 변수를 사용할 때 사용자에 게 표시 되는 텍스트를 정의 합니다. 또한 `HelpMessageBaseName` 키워드를 설정 하 여 메시지에 사용할 리소스의 기본 이름을 식별할 수 있습니다. 이 키워드를 설정 하는 경우에도 `HelpMessageResourceId` 키워드를 설정 하 여 리소스 식별자를 지정 해야 합니다.
+Windows PowerShell을 사용 하 여 cmdlet 매개 변수에 대 한 도움말을 만들 수 있습니다. 시스템 수정 및 사용자 의견에 사용 되는 매개 변수에 대해이 작업을 수행 합니다. 도움말을 지 원하는 각 매개 변수에 대해 `HelpMessage` [system.object](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성 선언에서 attribute 키워드를 설정할 수 있습니다. 이 키워드는 매개 변수를 사용할 때 사용자에 게 표시 되는 텍스트를 정의 합니다. 또한 키워드를 설정 `HelpMessageBaseName` 하 여 메시지에 사용할 리소스의 기본 이름을 식별할 수 있습니다. 이 키워드를 설정 하는 경우 키워드를 설정 `HelpMessageResourceId` 하 여 리소스 식별자도 지정 해야 합니다.
 
-이 Stop Proc cmdlet의 다음 코드는 `Name` 매개 변수에 대 한 `HelpMessage` attribute 키워드를 정의 합니다.
+이 Stop Proc cmdlet의 다음 코드는 `HelpMessage` 매개 변수에 대 한 attribute 키워드를 정의 합니다 `Name` .
 
 ```csharp
 /// <summary>
@@ -88,11 +88,11 @@ Windows PowerShell을 사용 하 여 cmdlet 매개 변수에 대 한 도움말�
 
 ## <a name="overriding-an-input-processing-method"></a>입력 처리 메서드 재정의
 
-Cmdlet은 입력 처리 메서드를 재정의 해야 합니다. 대부분은 일반적으로 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)입니다. 시스템을 수정 하는 경우 cmdlet은 변경 전에 사용자에 게 피드백을 제공할 수 있도록 [system.web](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) . n a m a. a m [a.](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 이러한 메서드에 대 한 자세한 내용은 시스템을 [수정 하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)를 참조 하세요.
+Cmdlet은 입력 처리 메서드를 재정의 해야 합니다. 대부분은 일반적으로 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)입니다. 시스템을 수정 하는 경우 cmdlet은 변경 전에 사용자에 게 피드백을 제공할 수 있도록 [system.web](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) .. n a m a. a m [a.](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 이러한 메서드에 대 한 자세한 내용은 시스템을 [수정 하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)를 참조 하세요.
 
 ## <a name="supporting-wildcard-expansion"></a>와일드 카드 확장 지원
 
-여러 개체를 선택할 수 있도록 cmdlet은 [Wildcardpattern](/dotnet/api/System.Management.Automation.WildcardPattern) 및 [Wildcardoptions](/dotnet/api/System.Management.Automation.WildcardOptions) 클래스를 사용 하 여 매개 변수 입력에 대 한 와일드 카드 확장 지원을 제공할 수 있습니다. 와일드 카드 패턴의 예로는 lsa *, \*.txt 및 [a-c]\*있습니다. 패턴에 리터럴로 사용 해야 하는 문자가 포함 된 경우에는 백슬래시 문자 (')를 이스케이프 문자로 사용 합니다.
+여러 개체를 선택할 수 있도록 cmdlet은 [Wildcardpattern](/dotnet/api/System.Management.Automation.WildcardPattern) 및 [Wildcardoptions](/dotnet/api/System.Management.Automation.WildcardOptions) 클래스를 사용 하 여 매개 변수 입력에 대 한 와일드 카드 확장 지원을 제공할 수 있습니다. 와일드 카드 패턴의 예로는 lsa *, \* .txt 및 [a-c]가 있습니다 \* . 패턴에 리터럴로 사용 해야 하는 문자가 포함 된 경우에는 백슬래시 문자 (')를 이스케이프 문자로 사용 합니다.
 
 파일 및 경로 이름의 와일드 카드 확장은 여러 개체를 선택 해야 하는 경우 cmdlet이 경로 입력 지원을 허용 하려는 일반적인 시나리오의 예입니다. 일반적인 경우는 사용자가 현재 폴더에 있는 모든 파일을 확인 하려는 파일 시스템에 있습니다.
 
@@ -100,7 +100,7 @@ Cmdlet은 입력 처리 메서드를 재정의 해야 합니다. 대부분은 �
 
 - **물음표 (?)를 표시 합니다.** 지정 된 위치에 있는 모든 문자를 찾습니다.
 
-- **별표 (\*).** 지정 된 위치에서 시작 하 여 0 개 이상의 문자를 찾습니다.
+- **별표 ( \* ).** 지정 된 위치에서 시작 하 여 0 개 이상의 문자를 찾습니다.
 
 - **여는 대괄호 ([).** 문자 또는 문자 범위를 포함할 수 있는 패턴 대괄호 식을 소개 합니다. 범위가 필요한 경우 범위를 나타내는 데 하이픈 (-)이 사용 됩니다.
 
@@ -111,7 +111,7 @@ Cmdlet은 입력 처리 메서드를 재정의 해야 합니다. 대부분은 �
 > [!NOTE]
 > 와일드 카드 패턴에 대 한 자세한 내용은 [Cmdlet 매개 변수에서 와일드 카드 지원](./supporting-wildcard-characters-in-cmdlet-parameters.md)을 참조 하세요.
 
-다음 코드에서는 와일드 카드 옵션을 설정 하 고이 cmdlet의 `Name` 매개 변수를 확인 하는 데 사용 되는 와일드 카드 패턴을 정의 하는 방법을 보여 줍니다.
+다음 코드에서는 와일드 카드 옵션을 설정 하 고 `Name` 이 cmdlet의 매개 변수를 확인 하는 데 사용 되는 와일드 카드 패턴을 정의 하는 방법을 보여 줍니다.
 
 ```csharp
 WildcardOptions options = WildcardOptions.IgnoreCase |
@@ -130,7 +130,7 @@ if (!wildcard.IsMatch(processName))
 
 ## <a name="code-sample"></a>코드 예제
 
-전체 C# 샘플 코드는 [StopProcessSample03 샘플](./stopprocesssample03-sample.md)을 참조 하세요.
+전체 c # 샘플 코드는 [StopProcessSample03 샘플](./stopprocesssample03-sample.md)을 참조 하세요.
 
 ## <a name="define-object-types-and-formatting"></a>개체 형식 및 서식 정의
 
@@ -144,13 +144,13 @@ Cmdlet을 구현한 후 Windows PowerShell 스냅인을 통해 Windows PowerShel
 
 Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 하 여 테스트할 수 있습니다. 샘플 중지-프로시저 cmdlet을 테스트해 보겠습니다. 명령줄에서 cmdlet을 사용 하는 방법에 대 한 자세한 내용은 [Windows PowerShell 시작](/powershell/scripting/getting-started/getting-started-with-windows-powershell)을 참조 하세요.
 
-- Windows PowerShell을 시작 하 고 ProcessName 별칭을 사용 하 여 `Name` 매개 변수에 프로세스를 중지 하려면 Stop Proc를 사용 합니다.
+- Windows PowerShell을 시작 하 고 ProcessName 별칭을 사용 하 여 매개 변수에 대 한 프로세스를 중지 하려면 Stop Proc를 사용 `Name` 합니다.
 
     ```powershell
     PS> stop-proc -ProcessName notepad
     ```
 
-다음 출력이 표시됩니다.
+    다음 출력이 표시됩니다.
 
     ```
     Confirm
@@ -165,7 +165,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     PS> stop-proc
     ```
 
-다음 출력이 표시됩니다.
+    다음 출력이 표시됩니다.
 
     ```
     Cmdlet stop-proc at command pipeline position 1
@@ -176,13 +176,13 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     Name[0]: notepad
     ```
 
-- 이제 다음 항목을 수행 하 여 와일드 카드 패턴과 일치 하는 모든 프로세스를 중지 합니다. "* note\*". 패턴과 일치 하는 각 프로세스를 중지 하기 전에 메시지가 표시 됩니다.
+- 이제 와일드 카드 패턴 "* note"와 일치 하는 모든 프로세스를 중지 하기 위해 다음 항목을 만듭니다 \* . 패턴과 일치 하는 각 프로세스를 중지 하기 전에 메시지가 표시 됩니다.
 
     ```powershell
     PS> stop-proc -Name *note*
     ```
 
-다음 출력이 표시됩니다.
+    다음 출력이 표시됩니다.
 
     ```
     Confirm
@@ -191,7 +191,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
     ```
 
-다음 출력이 표시됩니다.
+    다음 출력이 표시됩니다.
 
     ```
     Confirm
@@ -200,7 +200,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
     ```
 
-다음 출력이 표시됩니다.
+    다음 출력이 표시됩니다.
 
     ```
     Confirm

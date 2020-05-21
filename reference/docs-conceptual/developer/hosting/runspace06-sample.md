@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 471c85f3-9287-45c2-b4bc-833caa1b7634
 caps.latest.revision: 8
-ms.openlocfilehash: 3850aec88bc800718a82f51c91fbd0cb3c705089
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 49a938a5acd7817476b299deea465771b6a94985
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367592"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83563676"
 ---
 # <a name="runspace06-sample"></a>Runspace06 샘플
 
@@ -127,4 +127,4 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 
 ## <a name="see-also"></a>참고 항목
 
-[Windows PowerShell 호스트 응용 프로그램 작성](./writing-a-windows-powershell-host-application.md)
+[Windows PowerShell 호스트 애플리케이션 작성](./writing-a-windows-powershell-host-application.md)

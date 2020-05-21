@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9c8ef289-0659-42d1-9976-044b144201eb
 caps.latest.revision: 6
-ms.openlocfilehash: 2a8372d937fc3c959f7d829bb52495048423d506
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: ecd23d3eb722137bdda0498fc71e0e966c57a589
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359652"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561192"
 ---
 # <a name="adding-windows-powershell-activities-to-the-visual-studio-toolbox"></a>Visual Studio 도구 상자에 Windows PowerShell 활동 추가
 
@@ -43,4 +43,4 @@ ms.locfileid: "72359652"
 
 [Windows PowerShell 워크플로 작성](./writing-a-windows-powershell-workflow.md)
 
-[Windows PowerShell 작업으로 워크플로 만들기](./creating-a-workflow-with-windows-powershell-activities.md)
+[Windows PowerShell 활동을 사용하여 워크플로 만들기](./creating-a-workflow-with-windows-powershell-activities.md)

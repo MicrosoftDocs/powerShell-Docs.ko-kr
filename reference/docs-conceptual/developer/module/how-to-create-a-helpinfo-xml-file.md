@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3971ce1f-271c-4938-a9d3-47ff3aaf7219
 caps.latest.revision: 9
-ms.openlocfilehash: 7df9764fd573b75f285fec592448a550e481bea3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1f09146a9e6456584f67edb52407193d8a9330ce
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367322"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564792"
 ---
 # <a name="how-to-create-a-helpinfo-xml-file"></a>HelpInfo XML 파일을 만드는 방법
 
@@ -27,7 +27,7 @@ HelpInfo XML 파일은 모듈에 대 한 업데이트할 수 있는 도움말에
 
 HelpInfo XML 파일을 신중 하 게 유지 관리 하는 것이 중요 합니다. 새 파일을 업로드 하 고 버전 번호를 늘리는 경우 업데이트할 수 있는 도움말은 사용자의 컴퓨터에 새 파일을 다운로드 하지 않습니다. 새 UI 문화권에 대 한 도움말 파일을 추가 하지만 HelpInfo XML 파일을 업데이트 하지 않거나 올바른 위치에 배치 하지 않으면 업데이트할 수 있는 도움말이 새 파일을 다운로드 하지 않습니다.
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>단원 내용
 
 이 섹션에는 다음 항목이 포함됩니다.
 
@@ -35,10 +35,10 @@ HelpInfo XML 파일을 신중 하 게 유지 관리 하는 것이 중요 합니�
 
 - [HelpInfo XML 샘플 파일](./helpinfo-xml-sample-file.md)
 
-- [HelpInfo XML 파일의 이름을로 만드는 방법](./how-to-name-a-helpinfo-xml-file.md)
+- [HelpInfo XML 파일 이름을 지정하는 방법](./how-to-name-a-helpinfo-xml-file.md)
 
-- [HelpInfo XML 버전 번호를 설정 하는 방법](./how-to-set-helpinfo-xml-version-numbers.md)
+- [HelpInfo XML 버전 번호를 설정하는 방법](./how-to-set-helpinfo-xml-version-numbers.md)
 
 ## <a name="see-also"></a>참고 항목
 
-[업데이트할 수 있는 도움말 지원](./supporting-updatable-help.md)
+[업데이트 가능한 도움말 지원](./supporting-updatable-help.md)

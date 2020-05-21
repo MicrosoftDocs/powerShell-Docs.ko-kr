@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], output
 ms.assetid: 547e6695-e936-4cac-a90b-417d0dab393d
 caps.latest.revision: 12
-ms.openlocfilehash: 3efa98c7aa22fdaee8042bae99282aea0618ef5f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: de21d9ebfec4f23d3819695df225f7a230864a7b
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369292"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83561418"
 ---
 # <a name="types-of-cmdlet-output"></a>Cmdlet 출력의 유형
 
@@ -54,7 +54,7 @@ Cmdlet은 cmdlet 코드 문제를 해결할 때 유용한 디버그 메시지를
 
 Cmdlet은 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) 를 호출 하 여 경고 메시지를 표시할 수 있습니다.
 
-기본적으로 경고 메시지가 표시 됩니다. 그러나 cmdlet을 호출할 때 `$WarningPreference` 변수를 사용 하거나 **Verbose** 및 **Debug** 매개 변수를 사용 하 여 경고 메시지를 구성할 수 있습니다.
+기본적으로 경고 메시지가 표시 됩니다. 그러나 `$WarningPreference` cmdlet을 호출할 때 변수를 사용 하거나 **Verbose** 및 **Debug** 매개 변수를 사용 하 여 경고 메시지를 구성할 수 있습니다.
 
 ## <a name="displaying-output"></a>출력 표시
 
@@ -64,10 +64,10 @@ Cmdlet은 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteW
 
 PowerShell 런타임을 통해 호스트 응용 프로그램의 출력 기능에 직접 액세스 하는 cmdlet을 디자인할 수도 있습니다. [Console](/dotnet/api/System.Console) 또는 [system.web](/dotnet/api/System.Windows.Forms) 대신 PowerShell에서 제공 하는 호스트 api를 사용 하면 cmdlet이 다양 한 호스트에서 작동 합니다. 예를 들어, **powershell .exe** 콘솔 호스트, **powershell_ise** 그래픽 호스트, powershell 원격 호스트 및 타사 호스트가 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [오류 보고 개념](./error-reporting-concepts.md)
 
 [Cmdlet 개요](./cmdlet-overview.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
