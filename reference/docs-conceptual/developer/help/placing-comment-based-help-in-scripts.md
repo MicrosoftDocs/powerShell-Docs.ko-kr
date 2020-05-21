@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49f8267c-d887-4d7d-b9b7-80dc624b1261
 caps.latest.revision: 4
-ms.openlocfilehash: d199c53a748ac57bb2a5f998b5056e39d3e80c0d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1bebfbd822963830363012060067c656d7709543
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361182"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83565529"
 ---
 # <a name="placing-comment-based-help-in-scripts"></a>스크립트에 설명 기반 도움말 배치
 
-이 항목에서는 `Get-Help` cmdlet이 주석 기반 도움말 항목과 스크립트에 포함 될 수 있는 함수를 연결 하지 않도록 스크립트에 대 한 주석 기반 도움말을 넣을 위치에 대해 설명 합니다.
+이 항목에서는 스크립트 `Get-Help` 에서 주석 기반 도움말 항목을 스크립트에 연결 하 고 스크립트에 포함 될 수 있는 함수와 연결 하지 않도록 스크립트에 대 한 주석 기반 도움말을 넣을 위치에 대해 설명 합니다.
 
 ## <a name="where-to-place-comment-based-help-for-a-script"></a>스크립트에 대 한 주석 기반 도움말을 넣을 위치
 

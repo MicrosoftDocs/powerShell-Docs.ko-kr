@@ -12,12 +12,12 @@ helpviewer_keywords:
 - attributes, ValidateRange
 ms.assetid: 1f8066e6-e5d3-4f4e-8948-a90af5dace82
 caps.latest.revision: 11
-ms.openlocfilehash: 155a406b9855c435041fe175ac7d983a4b4eb8b7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 560fa105ac3f93ae6334df0112f5290dfa20576c
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369132"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692017"
 ---
 # <a name="validaterange-attribute-declaration"></a>ValidateRange 특성 선언
 
@@ -31,19 +31,19 @@ ValidateRange 특성은 cmdlet 매개 변수 인수에 대 한 최소값 및 최
 
 #### <a name="parameters"></a>매개 변수
 
-`MinRange` ([system.object](/dotnet/api/system.object))가 필요 합니다. 허용 되는 최소값을 지정 합니다.
+`MinRange`([System.object](/dotnet/api/system.object))가 필요 합니다. 허용 되는 최소값을 지정 합니다.
 
-`MaxRange` ([system.object](/dotnet/api/system.object))가 필요 합니다. 허용 되는 최대값을 지정 합니다.
+`MaxRange`([System.object](/dotnet/api/system.object))가 필요 합니다. 허용 되는 최대값을 지정 합니다.
 
 ## <a name="remarks"></a>설명
 
-- `MinRange` 매개 변수의 값이 `MaxRange` 매개 변수의 값 보다 크면 Windows PowerShell 런타임이 생성 오류를 throw 합니다.
+- Windows PowerShell 런타임에서는 `MinRange` 매개 변수 값이 매개 변수 값 보다 클 때 생성 오류를 throw 합니다 `MaxRange` .
 
 - Windows PowerShell 런타임은 다음과 같은 경우 유효성 검사 오류를 throw 합니다.
 
-    - 인수의 값이 `MinRange` 제한 보다 작거나 `MaxRange` 제한 보다 큽니다.
+  - 인수의 값이 제한 보다 작거나 한 `MinRange` 도 보다 큰 경우 `MaxRange`
 
-    - 인수가 `MinRange` 및 `MaxRange` 매개 변수와 동일한 형식이 아닌 경우
+  - 인수가 `MinRange` 및 매개 변수와 동일한 형식이 아닌 경우 `MaxRange`
 
 - ValidateRange 특성은 [Validaterangeattribute](/dotnet/api/System.Management.Automation.ValidateRangeAttribute) 클래스에 의해 정의 됩니다.
 
@@ -51,4 +51,4 @@ ValidateRange 특성은 cmdlet 매개 변수 인수에 대 한 최소값 및 최
 
 [Validaterangeattribute.](/dotnet/api/System.Management.Automation.ValidateRangeAttribute)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

@@ -8,38 +8,38 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9e576199-49c7-4355-9686-f9ed40c64a5f
 caps.latest.revision: 10
-ms.openlocfilehash: bea70ccf0dfbf65298890104a55e3cf472090887
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 87b6b82225354e77e908b4af2bad1039a29b2980
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80977583"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691970"
 ---
 # <a name="accessdbprovidersample03"></a>AccessDBProviderSample03
 
-이 샘플에서는 `Get-Item` 및 `Set-Item` cmdlet에 대 한 호출을 지원 하기 위해 [Getitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 및 [Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 메서드를 덮어쓰는 방법을 보여 줍니다 (예를 들면). 이 샘플의 공급자 클래스는 [system.web. Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 클래스에서 파생 됩니다.
+이 샘플에서는 및 cmdlet에 대 한 호출을 지원 하기 위해 [Getitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 및 [Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 메서드를 덮어쓰는 방법을 보여 줍니다 .이 샘플은 `Get-Item` 및 cmdlet에 대 한 호출을 지원 합니다. `Set-Item` 이 샘플의 공급자 클래스는 [system.web. Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 클래스에서 파생 됩니다.
 
 ## <a name="demonstrates"></a>데모
 
 > [!IMPORTANT]
 > 공급자 클래스는 다음 클래스 중 하나에서 파생 되 고 다른 공급자 인터페이스를 구현할 수 있습니다.
 >
-> -   [System.object. Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 클래스입니다.
-> -   [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 클래스를 제공 합니다. [AccessDBProviderSample04](./accessdbprovidersample04.md)를 참조 하세요.
-> -   [System.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 클래스를 제공 합니다. [AccessDBProviderSample05](./accessdbprovidersample05.md)를 참조 하세요.
+> - [System.object. Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 클래스입니다.
+> - [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 클래스를 제공 합니다. [AccessDBProviderSample04](./accessdbprovidersample04.md)를 참조 하세요.
+> - [System.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 클래스를 제공 합니다. [AccessDBProviderSample05](./accessdbprovidersample05.md)를 참조 하세요.
 >
 > 공급자 기능을 기반으로 파생 시킬 공급자 클래스를 선택 하는 방법에 대 한 자세한 내용은 [Windows PowerShell 공급자 디자인](./provider-types.md)을 참조 하세요.
 
 이 샘플은 다음을 보여 줍니다.
 
-- `CmdletProvider` 특성을 선언 합니다.
+- 특성 선언 `CmdletProvider`
 - [System.object](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 클래스에서 파생 되는 공급자 클래스를 정의 합니다.
-- `New-PSDrive` cmdlet의 동작을 변경 하 여 사용자가 새 드라이브를 만들 수 있도록 하는 [Newdrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) 메서드를 덮어씁니다.
-  (이 샘플은 `New-PSDrive` cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
+- Cmdlet의 동작을 변경 하 여 사용자가 새 드라이브를 만들 수 있도록 하는 [Newdrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) 메서드를 덮어씁니다. `New-PSDrive`
+  이 샘플에서는 cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다 `New-PSDrive` .
 - 기존 드라이브 제거를 지원 하기 위해 [Removedrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) 메서드를 덮어씁니다 (영문).
-- `Get-Item` cmdlet의 동작을 변경 하 여 사용자가 데이터 저장소에서 항목을 검색할 수 있도록 하는 [Getitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 메서드를 덮어씁니다. (이 샘플은 `Get-Item` cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
-- `Set-Item` cmdlet의 동작을 변경 하 여 사용자가 데이터 저장소의 항목을 업데이트할 수 있도록 하는 [Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 메서드를 덮어씁니다. (이 샘플은 `Get-Item` cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
-- `Test-Path` cmdlet의 동작을 변경 하는 메서드를 덮어쓰는 중. [Itemexists *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) 메서드를 덮어씁니다. (이 샘플은 `Test-Path` cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
+- [Getitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 메서드를 덮어써서 cmdlet의 동작을 변경 하 여 `Get-Item` 사용자가 데이터 저장소에서 항목을 검색할 수 있도록 합니다. 이 샘플에서는 cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다 `Get-Item` .
+- [Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 메서드를 덮어써서 cmdlet의 동작을 변경 하 여 `Set-Item` 사용자가 데이터 저장소의 항목을 업데이트할 수 있도록 합니다. 이 샘플에서는 cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다 `Get-Item` .
+- Cmdlet의 동작을 변경 하기 위해 System.object를 덮어쓰는 중입니다 [. Itemexists *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) 메서드. `Test-Path` 이 샘플에서는 cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다 `Test-Path` .
 - 제공 된 경로가 유효한 지 여부를 확인 하기 위해 [system.web. Itemcmdletprovider. Isvalid path *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) 메서드를 덮어씁니다.
 
 ## <a name="example"></a>예제
@@ -50,10 +50,10 @@ ms.locfileid: "80977583"
 
 ## <a name="see-also"></a>참고 항목
 
-[System.object. i n g.](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider)
+[System.object.. i n g.](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider)
 
 [Containercmdletprovider입니다.](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider)
 
-[System.object. i n.](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)
+[System.object.. i n.](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)
 
-[Windows PowerShell 공급자 디자인](./provider-types.md)
+[Windows PowerShell 공급자 설계](./provider-types.md)

@@ -8,37 +8,37 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a26661f2-a63c-4ca7-ad3e-dcb4d32ce5a1
 caps.latest.revision: 8
-ms.openlocfilehash: d7d6d3b377a0089bcf96d0ea46e866321441b537
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8c3974e272fe1032557b492c36504b0f16b3c9c1
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359972"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692483"
 ---
 # <a name="accessdbprovidersample05"></a>AccessDBProviderSample05
 
-이 샘플에서는 `Move-Item` 및 `Join-Path` cmdlet에 대 한 호출을 지원 하도록 컨테이너 메서드를 덮어쓰는 방법을 보여 줍니다. 이러한 메서드는 사용자가 컨테이너 내의 항목을 이동해야 하고 데이터 저장소에 중첩된 컨테이너가 포함되는 경우에 구현해야 합니다. 이 샘플의 공급자 클래스는 [system.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 에서 파생 된 공급자 클래스에서 파생 됩니다.
+이 샘플에서는 및 cmdlet에 대 한 호출을 지원 하도록 컨테이너 메서드를 덮어쓰는 방법을 보여 줍니다 `Move-Item` `Join-Path` . 이러한 메서드는 사용자가 컨테이너 내의 항목을 이동해야 하고 데이터 저장소에 중첩된 컨테이너가 포함되는 경우에 구현해야 합니다. 이 샘플의 공급자 클래스는 [system.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 에서 파생 된 공급자 클래스에서 파생 됩니다.
 
 ## <a name="demonstrates"></a>데모
 
 > [!IMPORTANT]
 > 공급자 클래스는 다음 클래스 중 하나에서 파생 되 고 다른 공급자 인터페이스를 구현할 수 있습니다.
 >
-> -   [System.object. Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 클래스입니다. [AccessDBProviderSample03](./accessdbprovidersample03.md)를 참조 하세요.
-> -   [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 클래스를 제공 합니다. [AccessDBProviderSample04](./accessdbprovidersample04.md)를 참조 하세요.
-> -   [System.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 클래스를 제공 합니다.
+> - [System.object. Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 클래스입니다. [AccessDBProviderSample03](./accessdbprovidersample03.md)를 참조 하세요.
+> - [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 클래스를 제공 합니다. [AccessDBProviderSample04](./accessdbprovidersample04.md)를 참조 하세요.
+> - [System.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 클래스를 제공 합니다.
 >
 > 공급자 기능을 기반으로 파생 시킬 공급자 클래스를 선택 하는 방법에 대 한 자세한 내용은 [Windows PowerShell 공급자 디자인](./provider-types.md)을 참조 하세요.
 
 이 샘플은 다음을 보여 줍니다.
 
-- `CmdletProvider` 특성을 선언 합니다.
+- 특성 선언 `CmdletProvider`
 
 - [System.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 클래스에서 파생 되는 공급자 클래스를 정의 합니다.
 
-- `Move-Item` cmdlet의 동작을 변경 하 여 사용자가 한 위치에서 다른 위치로 항목을 이동할 수 있도록 하는 [Moveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 메서드를 덮어씁니다. (이 샘플은 `Move-Item` cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
+- [Moveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 메서드를 덮어써서 cmdlet의 동작을 변경 하 여 `Move-Item` 사용자가 한 위치에서 다른 위치로 항목을 이동할 수 있도록 합니다. 이 샘플에서는 cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다 `Move-Item` .
 
-- `Join-Path` cmdlet의 동작을 변경 하기 위해 [System.web 경로 *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) 메서드를 덮어쓰고 있습니다.
+- Cmdlet의 동작을 변경 하는 메서드를 덮어쓰는 중입니다 [. Makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) 메서드를 덮어씁니다. `Join-Path`
 
 - System.object를 덮어씁니다. [Isitemcontainer *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) 메서드를 덮어씁니다.
 
@@ -2076,10 +2076,10 @@ namespace Microsoft.Samples.PowerShell.Providers
 
 ## <a name="see-also"></a>참고 항목
 
-[System.object. i n g.](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider)
+[System.object.. i n g.](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider)
 
 [Containercmdletprovider입니다.](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider)
 
-[System.object. i n.](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)
+[System.object.. i n.](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider)
 
-[Windows PowerShell 공급자 디자인](./provider-types.md)
+[Windows PowerShell 공급자 설계](./provider-types.md)

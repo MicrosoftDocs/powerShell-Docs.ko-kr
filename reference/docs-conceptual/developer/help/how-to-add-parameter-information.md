@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cf6c1442-60aa-477a-8f30-ab02b1b11039
 caps.latest.revision: 7
-ms.openlocfilehash: d4a5fc934a41b00f89862674e44e4540680674f7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b9ccca75c2d9126e84a7f486ffe803042a742b62
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361232"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83565563"
 ---
 # <a name="how-to-add-parameter-information"></a>매개 변수 정보를 추가하는 방법
 
@@ -157,7 +157,7 @@ ms.locfileid: "72361232"
 
 매개 변수를 추가할 때 기억할 몇 가지 사항은 다음과 같습니다.
 
-- 매개 변수의 특성은 cmdlet 도움말 항목의 모든 뷰에 표시 되지 않습니다. 그러나 사용자가 토픽의 전체 (Get-help \<cmdletname >) 또는 매개 변수 (Get-help \<cmdletname > 매개 변수) 보기를 요청 하면 매개 변수 설명 다음에 테이블에 표시 됩니다.
+- 매개 변수의 특성은 cmdlet 도움말 항목의 모든 뷰에 표시 되지 않습니다. 그러나 사용자가 토픽의 Full (Get-help \< cmdletname> full) 또는 매개 변수 (get-help \< cmdletname>-parameter) 보기를 요청 하면 매개 변수 설명 다음에 테이블에 표시 됩니다.
 
 - 매개 변수 설명은 cmdlet 도움말 항목의 가장 중요 한 부분 중 하나입니다. 설명은 간결 하 고 철저 하 게 설명 해야 합니다. 또한 두 매개 변수가 서로 상호 작용 하는 경우와 같이 매개 변수 설명이 너무 길면 cmdlet 도움말 항목의 참고 섹션에서 더 많은 내용을 추가할 수 있습니다.
 
@@ -171,11 +171,11 @@ ms.locfileid: "72361232"
 
 매개 변수의 기본값은 명령줄에서 매개 변수를 지정 하지 않은 경우에 사용 되는 값입니다. 기본값은 선택 사항이 며, 필수 매개 변수와 같은 일부 매개 변수에는 필요 하지 않습니다. 그러나 대부분의 선택적 매개 변수에는 기본값을 지정 해야 합니다.
 
-기본값을 사용 하면 사용자가 매개 변수를 사용 하지 않는 효과를 이해할 수 있습니다. 선택적인 경로에 대 한 "현재 디렉터리" 또는 "Windows PowerShell 설치 디렉터리 ($pshome)"와 같은 구체적으로 구체적으로 설명 합니다. `PassThru` 매개 변수에 사용 되는 다음 문장과 같이 기본값을 설명 하는 문장을 작성할 수도 있습니다. "PassThru를 지정 하지 않으면 cmdlet은 개체를 파이프라인으로 전달 하지 않습니다."  또한 값이 필드 이름 "**default value**"와 반대 되는 것으로 표시 되기 때문에 항목에 "default value" 라는 용어를 포함할 필요가 없습니다.
+기본값을 사용 하면 사용자가 매개 변수를 사용 하지 않는 효과를 이해할 수 있습니다. 선택적인 경로에 대 한 "현재 디렉터리" 또는 "Windows PowerShell 설치 디렉터리 ($pshome)"와 같은 구체적으로 구체적으로 설명 합니다. 매개 변수에 사용 되는 다음 문장과 같이 기본값을 설명 하는 문장을 작성할 수도 있습니다. `PassThru` "PassThru를 지정 하지 않으면 cmdlet은 개체를 파이프라인으로 전달 하지 않습니다."  또한 값이 필드 이름 "**default value**"와 반대 되는 것으로 표시 되기 때문에 항목에 "default value" 라는 용어를 포함할 필요가 없습니다.
 
-매개 변수의 기본값은 cmdlet 도움말 항목의 모든 뷰에 표시 되지 않습니다. 그러나이 속성은 사용자가 토픽의 전체 (Get-help \<cmdletname >) 또는 매개 변수 (Get-help \<cmdletname > 매개 변수) 보기를 요청 하는 경우 매개 변수 설명에 따라 매개 변수 특성을 사용 하 여 테이블에 표시 됩니다.
+매개 변수의 기본값은 cmdlet 도움말 항목의 모든 뷰에 표시 되지 않습니다. 그러나 항목의 전체 (Get-help \< cmdletname>-full) 또는 매개 변수 (get-help \< cmdletname> 매개 변수) 보기를 요청 하는 경우 매개 변수 설명 다음에 매개 변수 특성과 함께 테이블에 표시 됩니다.
 
-다음 XML에서는 `<command:parameter>` 노드에 추가 된 `<dev:defaultValue>` 태그 쌍을 보여 줍니다. 기본값은 닫는 `</command:parameterValue>` 태그 (매개 변수 값이 지정 된 경우) 또는 매개 변수 설명의 닫는 `</maml:description>` 태그 바로 다음에 옵니다. name.
+다음 XML에서는 노드에 추가 된 태그 쌍을 보여 줍니다 `<dev:defaultValue>` `<command:parameter>` . 기본값은 닫는 `</command:parameterValue>` 태그 (매개 변수 값이 지정 된 경우) 또는 `</maml:description>` 매개 변수 설명의 닫는 태그 바로 다음에 옵니다. name.
 
 ```xml
 <command:parameters>
@@ -195,11 +195,11 @@ ms.locfileid: "72361232"
 
 열거 형식에 대 한 값 추가
 
-매개 변수에 여러 값 또는 열거 형식의 값이 있는 경우 선택적 \<dev: possibleValues > 노드를 사용할 수 있습니다. 이 노드를 사용 하 여 여러 값의 이름과 설명을 지정할 수 있습니다.
+매개 변수에 여러 값 또는 열거 형식의 값이 있는 경우 선택적 \< dev: possibleValues> 노드를 사용할 수 있습니다. 이 노드를 사용 하 여 여러 값의 이름과 설명을 지정할 수 있습니다.
 
-열거 된 값에 대 한 설명은 `Get-Help` cmdlet에 표시 되는 기본 도움말 뷰에 표시 되지 않지만 다른 도움말 뷰어는 보기에이 콘텐츠를 표시할 수 있습니다.
+열거 된 값에 대 한 설명은 cmdlet에 표시 되는 기본 도움말 뷰에 표시 되지 `Get-Help` 않지만 다른 도움말 뷰어는 해당 보기에서이 콘텐츠를 표시할 수 있습니다.
 
-다음 XML에서는 두 개의 값이 지정 된 `<dev:possibleValues>` 노드를 보여 줍니다.
+다음 XML에서는 `<dev:possibleValues>` 두 개의 값이 지정 된 노드를 보여 줍니다.
 
 ```xml
 <command:parameters>

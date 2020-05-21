@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ValidateLength attribute
 ms.assetid: 82fe3a35-a94b-4bc1-ad9e-dfc5f1e788b3
 caps.latest.revision: 13
-ms.openlocfilehash: a25fa2410fcc6803563573596af1bc99052c3ffa
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a1a494534169b2da470286020dfacfa8e9084839
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369182"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692318"
 ---
 # <a name="validatelength-attribute-declaration"></a>ValidateLength 특성 선언
 
@@ -31,9 +31,9 @@ ValidateLength 특성은 cmdlet 매개 변수 인수에 대 한 최소 및 최�
 
 #### <a name="parameters"></a>매개 변수
 
-`MinLength` ([system.web](/dotnet/api/System.Int32))이 필요 합니다. 허용 되는 최소 문자 수를 지정 합니다.
+`MinLength`([System.web](/dotnet/api/System.Int32))이 필요 합니다. 허용 되는 최소 문자 수를 지정 합니다.
 
-`MaxLength` ([system.web](/dotnet/api/System.Int32))이 필요 합니다. 허용 되는 최대 문자 수를 지정 합니다.
+`MaxLength`([System.web](/dotnet/api/System.Int32))이 필요 합니다. 허용 되는 최대 문자 수를 지정 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -43,11 +43,11 @@ ValidateLength 특성은 cmdlet 매개 변수 인수에 대 한 최소 및 최�
 
 - Windows PowerShell 런타임은 다음과 같은 경우에 오류를 throw 합니다.
 
-    - `MaxLength` attribute 매개 변수의 값이 `MinLength` attribute 매개 변수의 값 보다 작은 경우
+  - `MaxLength`특성 매개 변수의 값이 attribute 매개 변수의 값 보다 작은 경우 `MinLength`
 
-    - `MaxLength` attribute 매개 변수가 0으로 설정 된 경우
+  - `MaxLength`특성 매개 변수가 0으로 설정 된 경우
 
-    - 인수가 문자열이 아닌 경우
+  - 인수가 문자열이 아닌 경우
 
 - ValidateLength 특성은 [Validatelengthattribute](/dotnet/api/System.Management.Automation.ValidateLengthAttribute) 클래스에 의해 정의 됩니다.
 
@@ -55,4 +55,4 @@ ValidateLength 특성은 cmdlet 매개 변수 인수에 대 한 최소 및 최�
 
 [Validatelengthattribute.](/dotnet/api/System.Management.Automation.ValidateLengthAttribute)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ValidateCount attribute
 ms.assetid: 516af1ef-2c2e-408d-84bc-865f5bccf761
 caps.latest.revision: 11
-ms.openlocfilehash: ffc45f6b80a2b7ed22f27d083d042b1de7f353f6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 3cae95fab30a4abe4e544ed5cb7dadc9f4debf02
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369232"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692380"
 ---
 # <a name="validatecount-attribute-declaration"></a>ValidateCount 특성 선언
 
@@ -31,9 +31,9 @@ ValidateCount 특성은 cmdlet 매개 변수에 허용 되는 인수의 최소 �
 
 #### <a name="parameters"></a>매개 변수
 
-`MinLength` ([System.Int32][])이 필요 합니다. 인수의 최소 개수를 지정 합니다.
+`MinLength`([System.web][])이 필요 합니다. 인수의 최소 개수를 지정 합니다.
 
-`MaxLength`([System.Int32][])이 필요 합니다. 최대 인수 수를 지정 합니다.
+`MaxLength`([System.web][])이 필요 합니다. 최대 인수 수를 지정 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -43,22 +43,22 @@ ValidateCount 특성은 cmdlet 매개 변수에 허용 되는 인수의 최소 �
 
 - Windows PowerShell 런타임은 다음과 같은 경우에 오류를 throw 합니다.
 
-    - `MinLength` 및 `MaxLength` 특성 매개 변수는 [System.Int32][]형식이 아닙니다.
+  - `MinLength`및 `MaxLength` 특성 매개 변수는 [system.object][]형식이 아닙니다.
 
-    - `MaxLength` attribute 매개 변수의 값이 `MinLength` attribute 매개 변수의 값 보다 작은 경우
+  - `MaxLength`특성 매개 변수의 값이 attribute 매개 변수의 값 보다 작은 경우 `MinLength`
 
-- ValidateCount 특성은 [ValidateCountAttribute.][] 클래스에 의해 정의 됩니다.
+- ValidateCount 특성은 [ValidateCountAttribute][] 클래스에 의해 정의 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 
 [ValidateCountAttribute.][]
 
-[인수 수의 유효성을 검사][]
+[인수 개수를 확인하는 방법][]
 
-[Writing a Windows PowerShell Cmdlet][](Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)][]
 
-[인수 수의 유효성을 검사]: how-to-validate-an-argument-count.md
-[Writing a Windows PowerShell Cmdlet]: writing-a-windows-powershell-cmdlet.md(Windows PowerShell Cmdlet 작성)
+[인수 개수를 확인하는 방법]: how-to-validate-an-argument-count.md
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)]: writing-a-windows-powershell-cmdlet.md
 
 [System.Int32]: /dotnet/api/System.Int32
 [ValidateCountAttribute.]: /dotnet/api/System.Management.Automation.ValidateCountAttribute
