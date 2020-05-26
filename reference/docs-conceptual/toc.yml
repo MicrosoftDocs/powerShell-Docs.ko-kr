@@ -1,57 +1,48 @@
 - name: 이 설명서를 사용하는 방법
   href: how-to-use-docs.md
 - name: 개요
-  href: overview.md
+  expanded: true
+  items:
+    - name: PowerShell이란?
+      href: overview.md
+    - name: PowerShell 지원 수명 주기
+      href: powershell-support-lifecycle.md
 - name: 설치
   items:
-    - name: 다양한 버전의 PowerShell 설치
+    - name: 개요
       href: install/installing-powershell.md
-    - name: PowerShell 설치
-      items:
-        - name: Windows에 PowerShell 설치
-          href: install/installing-powershell-core-on-windows.md
-        - name: Linux에 PowerShell 설치
-          href: install/installing-powershell-core-on-linux.md
-        - name: MacOS에 PowerShell 설치
-          href: install/installing-powershell-core-on-macos.md
-        - name: ARM에 PowerShell 설치
-          href: install/powershell-core-on-arm.md
-    - name: Windows PowerShell 5.1 설치
-      items:
-        - name: Windows PowerShell 설치
-          href: install/installing-windows-powershell.md
-        - name: Windows PowerShell 2.0 엔진 설치
-          href: install/installing-the-windows-powershell-2.0-engine.md
-        - name: Windows PowerShell 시스템 요구 사항
-          href: install/windows-powershell-system-requirements.md
+    - name: Windows PowerShell 5.1에서 PowerShell 7로 마이그레이션
+      href: install/Migrating-from-Windows-PowerShell-51-to-PowerShell-7.md
+    - name: Windows에 PowerShell 설치
+      href: install/installing-powershell-core-on-windows.md
+    - name: Linux에 PowerShell 설치
+      href: install/installing-powershell-core-on-linux.md
+    - name: MacOS에 PowerShell 설치
+      href: install/installing-powershell-core-on-macos.md
+    - name: ARM에 PowerShell 설치
+      href: install/powershell-core-on-arm.md
     - name: Docker에서 PowerShell 사용
       href: install/PowerShell-in-Docker.md
-- name: 시작하기
-  items:
-    - name: PowerShell 시작
-      href: getting-started/getting-started-with-windows-powershell.md
-    - name: Windows PowerShell 시작
-      href: getting-started/starting-windows-powershell.md
-    - name: Windows PowerShell 2.0 엔진 시작
-      href: getting-started/starting-the-windows-powershell-2.0-engine.md
 - name: PowerShell 학습
   items:
-    - name: 중요한 PowerShell 개념 이해
-      href: learn/understanding-important-powershell-concepts.md
-    - name: PowerShell 이름 학습
-      href: learn/learning-powershell-names.md
-    - name: 친숙한 명령 이름 사용
-      href: learn/using-familiar-command-names.md
-    - name: 자세한 도움말 정보 보기
-      href: learn/getting-detailed-help-information.md
-    - name: 명령에 대한 정보 가져오기
-      href: learn/getting-information-about-commands.md
-    - name: 변수를 사용하여 개체 저장
-      href: learn/using-variables-to-store-objects.md
-    - name: PowerShell 파이프라인 이해
-      href: learn/understanding-the-powershell-pipeline.md
-    - name: 추가 PowerShell 학습
-      href: learn/more-powershell-learning.md
+    - name: PowerShell 101
+      items:
+        - name: PowerShell 이름 학습
+          href: learn/ps101/learning-powershell-names.md
+        - name: 친숙한 명령 이름 사용
+          href: learn/ps101/using-familiar-command-names.md
+        - name: 자세한 도움말 정보 보기
+          href: learn/ps101/getting-detailed-help-information.md
+        - name: 명령에 대한 정보 가져오기
+          href: learn/ps101/getting-information-about-commands.md
+        - name: 변수를 사용하여 개체 저장
+          href: learn/ps101/using-variables-to-store-objects.md
+        - name: PowerShell 명령줄 옵션
+          href: learn/ps101/powershell.exe-command-line-help.md
+        - name: 탭 확장 사용
+          href: learn/ps101/using-tab-expansion.md
+    - name: 실험적 기능 사용
+      href: learn/experimental-features.md
     - name: PowerShell 원격 기능
       items:
         - name: JEA(Just Enough Administration)
@@ -82,167 +73,12 @@
           href: learn/remoting/winrmsecurity.md
         - name: PowerShell 원격에서 두 번째 홉 만들기
           href: learn/remoting/ps-remoting-second-hop.md
+    - name: 추가 리소스
+      href: learn/more-powershell-learning.md
     - name: 용어
-      href: learn/windows-powershell-glossary.md
-- name: 구성 요소
-  items:
-    - name: 콘솔
-      items:
-        - name: PowerShell 명령줄 옵션
-          href: components/console/powershell.exe-command-line-help.md
-        - name: 탭 확장 사용
-          href: components/console/using-tab-expansion.md
-    - name: ISE
-      items:
-        - name: Windows PowerShell ISE 소개
-          href: components/ise/introducing-the-windows-powershell-ise.md
-        - name: Windows PowerShell ISE 사용
-          items:
-            - name: Windows PowerShell ISE 탐색
-              href: components/ise/exploring-the-windows-powershell-ise.md
-            - name: Windows PowerShell ISE에서 PowerShell 탭을 만드는 방법
-              href: components/ise/how-to-create-a-powershell-tab-in-windows-powershell-ise.md
-            - name: Windows PowerShell ISE에서 스크립트를 디버깅하는 방법
-              href: components/ise/how-to-debug-scripts-in-windows-powershell-ise.md
-            - name: Windows PowerShell ISE에서 프로필을 사용하는 방법
-              href: components/ise/how-to-use-profiles-in-windows-powershell-ise.md
-            - name: 스크립트 및 콘솔 창에서 탭 완성 기능을 사용하는 방법
-              href: components/ise/how-to-use-tab-completion-in-the-script-pane-and-console-pane.md
-            - name: Windows PowerShell ISE에서 콘솔 창을 사용하는 방법
-              href: components/ise/how-to-use-the-console-pane-in-the-windows-powershell-ise.md
-            - name: Windows PowerShell ISE에서 스크립트를 작성 및 실행하는 방법
-              href: components/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise.md
-            - name: Windows PowerShell ISE 바로 가기 키
-              href: components/ise/keyboard-shortcuts-for-the-windows-powershell-ise.md
-            - name: Windows PowerShell ISE의 접근성
-              href: components/ise/accessibility-in-windows-powershell-ise.md
-        - name: ISE 스크립팅 개체 모델
-          items:
-            - name: Windows PowerShell ISE 스크립팅 개체 모델의 용도
-              href: components/ise/object-model/purpose-of-the-windows-powershell-ise-scripting-object-model.md
-            - name: ISE 개체 모델 계층 구조
-              href: components/ise/object-model/the-ise-object-model-hierarchy.md
-            - name: ObjectModelRoot 개체
-              href: components/ise/object-model/the-objectmodelroot-object.md
-            - name: ISEAddOnToolCollection 개체
-              href: components/ise/object-model/the-iseaddontoolcollection-object.md
-            - name: ISEAddOnTool 개체
-              href: components/ise/object-model/the-iseaddontool-object.md
-            - name: ISEEditor 개체
-              href: components/ise/object-model/the-iseeditor-object.md
-            - name: ISEFileCollection 개체
-              href: components/ise/object-model/the-isefilecollection-object.md
-            - name: ISEFile 개체
-              href: components/ise/object-model/the-isefile-object.md
-            - name: ISEMenuItemCollection 개체
-              href: components/ise/object-model/the-isemenuitemcollection-object.md
-            - name: ISEMenuItem 개체
-              href: components/ise/object-model/the-isemenuitem-object.md
-            - name: ISEOptions 개체
-              href: components/ise/object-model/the-iseoptions-object.md
-            - name: ISESnippetCollection 개체
-              href: components/ise/object-model/the-isesnippetcollection-object.md
-            - name: ISESnippet 개체
-              href: components/ise/object-model/the-isesnippetobject.md
-            - name: PowerShellTabCollection 개체
-              href: components/ise/object-model/the-powershelltabcollection-object.md
-            - name: PowerShellTab 개체
-              href: components/ise/object-model/the-powershelltab-object.md
-- name: PowerShell 갤러리
-  items:
-    - name: 개요
-      href: gallery/overview.md
-    - name: PowerShellGet 설치
-      href: gallery/installing-psget.md
-    - name: 시작하기
-      href: gallery/getting-started.md
-    - name: 사용 방법
-      items:
-        - name: 갤러리에서 패키지 찾기
-          items:
-            - name: 패키지 검색
-              href: gallery/how-to/finding-packages/search-syntax.md
-            - name: 호환성 기준 검색
-              href: gallery/how-to/finding-packages/searching-by-compatibility.md
-            - name: 검색 결과 필터링
-              href: gallery/how-to/finding-packages/filtering-packages.md
-        - name: 갤러리로 게시
-          items:
-            - name: 패키지 만들기 및 게시
-              href: gallery/how-to/publishing-packages/publishing-a-package.md
-            - name: PowerShell 갤러리 계정 만들기
-              href: gallery/how-to/publishing-packages/creating-an-account.md
-            - name: 목록에서 패키지 제거
-              href: gallery/how-to/publishing-packages/unlisting-packages.md
-            - name: 패키지 삭제
-              href: gallery/how-to/publishing-packages/deleting-packages.md
-            - name: 패키지 소유자 관리
-              href: gallery/how-to/publishing-packages/managing-package-owners.md
-        - name: 패키지 작업
-          items:
-            - name: FileList 보기
-              href: gallery/how-to/working-with-packages/filelist-view.md
-            - name: Azure 자동화에 배포
-              href: gallery/how-to/working-with-packages/deploy-to-azure-automation.md
-            - name: 수동 패키지 다운로드
-              href: gallery/how-to/working-with-packages/manual-download.md
-            - name: 라이선스 승인이 필요한 패키지
-              href: gallery/how-to/working-with-packages/packages-that-require-license-acceptance.md
-            - name: 패키지 소유자에게 문의
-              href: gallery/how-to/working-with-packages/contacting-package-owners.md
-            - name: 소셜 미디어나 댓글을 통해 피드백 제공
-              href: gallery/how-to/working-with-packages/social-media-feedback.md
-        - name: 계정 프로필 관리
-          items:
-            - name: PowerShell 갤러리 계정 설정
-              href: gallery/how-to/managing-profile/managing-account.md
-            - name: API 키 관리
-              href: gallery/how-to/managing-profile/creating-apikeys.md
-        - name: 프라이빗 PowerShellGet 리포지토리 작업
-          href: gallery/how-to/working-with-local-psrepositories.md
-    - name: 개념
-      items:
-        - name: 게시 지침 및 모범 사례
-          href: gallery/concepts/publishing-guidelines.md
-        - name: 패키지 매니페스트 및 갤러리 UI
-          href: gallery/concepts/package-manifest-affecting-ui.md
-        - name: 특정 PSEdition이 필요
-          items:
-            - name: PSEdition 지원 스크립트 쓰기
-              href: gallery/concepts/script-psedition-support.md
-            - name: PSEdition 지원 모듈 쓰기
-              href: gallery/concepts/module-psedition-support.md
-        - name: 라이선스 동의 필요
-          items:
-            - name: 스크립트에 대한 라이선스 동의 필요
-              href: gallery/concepts/script-license-acceptance.md
-            - name: 모듈에 대한 라이선스 동의 필요
-              href: gallery/concepts/module-license-acceptance.md
-        - name: 패키지를 PreRelease로 정의
-          items:
-            - name: 모듈을 PreRelease로 정의
-              href: gallery/concepts/module-prerelease-support.md
-            - name: 스크립트를 PreRelease로 정의
-              href: gallery/concepts/script-prerelease-support.md
-        - name: PSScriptAnalyzer 규칙 프로필
-          href: gallery/concepts/scriptanalyzer-rule-profile.md
-    - name: 지원 받기
-      items:
-        - name: 신고하기
-          href: gallery/how-to/getting-support/report-abuse.md
-        - name: 분쟁 해결
-          href: gallery/how-to/getting-support/dispute-resolution.md
-        - name: 관리자에게 문의
-          href: gallery/how-to/getting-support/contacting-administrators.md
-        - name: 문제 해결
-          href: gallery/how-to/getting-support/troubleshooting-cmdlets.md
-        - name: NuGet 공급자 및 NuGet.exe 부트스트래핑
-          href: gallery/how-to/getting-support/bootstrapping-nuget.md
-        - name: GDPR 규정 준수
-          href: gallery/how-to/getting-support/gdpr-dsr-policy.md
-    - name: 갤러리 FAQ
-      href: gallery/faqs.md
+      href: learn/glossary.md
 - name: What's New
+  expanded: true
   items:
     - name: PowerShell 7.x의 새로운 기능
       items:
@@ -260,71 +96,135 @@
           href: whats-new/breaking-changes-ps6.md
         - name: PowerShell Core 6.0의 알려진 문제
           href: whats-new/known-issues-ps6.md
-    - name: PowerShell 5.x의 새로운 기능
-      items:
-        - name: Windows PowerShell 5.x의 새로운 기능
-          href: whats-new/what-s-new-in-windows-powershell-50.md
-        - name: PowerShell 5.0 ISE의 새로운 기능
-          href: whats-new/what-s-new-in-the-powershell-50-ise.md
-    - name: Windows PowerShell 5.1에서 PowerShell 7로 마이그레이션
-      href: whats-new/Migrating-from-Windows-PowerShell-51-to-PowerShell-7.md
-    - name: 실험적 기능 사용
-      href: whats-new/experimental-features.md
     - name: 모듈 및 cmdlet 릴리스 기록
       href: whats-new/cmdlet-versions.md
     - name: 모듈 호환성 목록
       href: whats-new/module-compatibility.md
-- name: PowerShell 지원 수명 주기
-  href: powershell-support-lifecycle.md
-- name: WMF(Windows Management Framework)
+- name: Windows PowerShell
   items:
-    - name: 개요
-      href: wmf/overview.md
-    - name: 설치
+    - name: Windows PowerShell 5.1 설치
       items:
-        - name: WMF 5.1 설치 및 구성
-          href: wmf/setup/install-configure.md
-        - name: WMF 5.0 제거
-          href: wmf/setup/uninstall.md
-    - name: What's New
-      expanded: true
+        - name: Windows PowerShell 설치
+          href: windows-powershell/install/installing-windows-powershell.md
+        - name: Windows PowerShell 2.0 엔진 설치
+          href: windows-powershell/install/installing-the-windows-powershell-2.0-engine.md
+        - name: Windows PowerShell 시스템 요구 사항
+          href: windows-powershell/install/windows-powershell-system-requirements.md
+    - name: PowerShell 5.x의 새로운 기능
       items:
-        - name: WMF 5.x 릴리스 정보
-          href: wmf/whats-new/release-notes.md
-        - name: WMF 5.1의 버그 수정
-          href: wmf/whats-new/bugfixes.md
-        - name: 새로 제공되거나 업데이트된 cmdlet
-          href: wmf/whats-new/new-updated-cmdlets.md
-        - name: PowerShell 클래스를 사용하여 사용자 지정 형식 만들기
-          href: wmf/whats-new/class-overview.md
-        - name: WMF 5.1의 향상된 콘솔
-          href: wmf/whats-new/console-improvements.md
-        - name: PowerShell 스크립트 디버깅의 향상된 기능
-          href: wmf/whats-new/debug-overview.md
-        - name: 스크립트 추적 및 로깅
-          href: wmf/whats-new/script-logging.md
-        - name: WMF 5.1의 향상된 DSC
-          href: wmf/whats-new/DSC-improvements.md
-        - name: WMF 5.1의 향상된 PowerShell 엔진
-          href: wmf/whats-new/engine-improvements.md
-        - name: 정보 스트림
-          href: wmf/whats-new/informationstream-overview.md
-        - name: JEA(Just Enough Administration)에 대한 개선 사항
-          href: wmf/whats-new/jea-improvements.md
-        - name: WMF 5.1의 향상된 패키지 관리
-          href: wmf/whats-new/package-management-improvements.md
-        - name: 소프트웨어 인벤토리 로깅(SIL)
-          href: wmf/whats-new/sil-overview.md
-        - name: 제품 호환성 상태
-          href: wmf/whats-new/compatibility.md
-    - name: 알려진 문제
+        - name: Windows PowerShell 5.x의 새로운 기능
+          href: windows-powershell/whats-new/what-s-new-in-windows-powershell-50.md
+        - name: PowerShell 5.0 ISE의 새로운 기능
+          href: windows-powershell/whats-new/what-s-new-in-the-powershell-50-ise.md
+    - name: ISE
       items:
-        - name: WMF 5.0의 알려진 문제
-          href: wmf/known-issues/known-issues-50.md
-        - name: WMF 5.1의 알려진 문제
-          href: wmf/known-issues/known-issues-51.md
-        - name: DSC의 알려진 문제 및 제한 사항
-          href: wmf/known-issues/known-issues-dsc.md
+        - name: Windows PowerShell ISE 소개
+          href: windows-powershell/ise/introducing-the-windows-powershell-ise.md
+        - name: Windows PowerShell ISE 사용
+          items:
+            - name: Windows PowerShell ISE 탐색
+              href: windows-powershell/ise/exploring-the-windows-powershell-ise.md
+            - name: Windows PowerShell ISE에서 PowerShell 탭을 만드는 방법
+              href: windows-powershell/ise/how-to-create-a-powershell-tab-in-windows-powershell-ise.md
+            - name: Windows PowerShell ISE에서 스크립트를 디버깅하는 방법
+              href: windows-powershell/ise/how-to-debug-scripts-in-windows-powershell-ise.md
+            - name: Windows PowerShell ISE에서 프로필을 사용하는 방법
+              href: windows-powershell/ise/how-to-use-profiles-in-windows-powershell-ise.md
+            - name: 스크립트 및 콘솔 창에서 탭 완성 기능을 사용하는 방법
+              href: windows-powershell/ise/how-to-use-tab-completion-in-the-script-pane-and-console-pane.md
+            - name: Windows PowerShell ISE에서 콘솔 창을 사용하는 방법
+              href: windows-powershell/ise/how-to-use-the-console-pane-in-the-windows-powershell-ise.md
+            - name: Windows PowerShell ISE에서 스크립트를 작성 및 실행하는 방법
+              href: windows-powershell/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise.md
+            - name: Windows PowerShell ISE 바로 가기 키
+              href: windows-powershell/ise/keyboard-shortcuts-for-the-windows-powershell-ise.md
+            - name: Windows PowerShell ISE의 접근성
+              href: windows-powershell/ise/accessibility-in-windows-powershell-ise.md
+        - name: ISE 스크립팅 개체 모델
+          items:
+            - name: Windows PowerShell ISE 스크립팅 개체 모델의 용도
+              href: windows-powershell/ise/object-model/purpose-of-the-windows-powershell-ise-scripting-object-model.md
+            - name: ISE 개체 모델 계층 구조
+              href: windows-powershell/ise/object-model/the-ise-object-model-hierarchy.md
+            - name: ObjectModelRoot 개체
+              href: windows-powershell/ise/object-model/the-objectmodelroot-object.md
+            - name: ISEAddOnToolCollection 개체
+              href: windows-powershell/ise/object-model/the-iseaddontoolcollection-object.md
+            - name: ISEAddOnTool 개체
+              href: windows-powershell/ise/object-model/the-iseaddontool-object.md
+            - name: ISEEditor 개체
+              href: windows-powershell/ise/object-model/the-iseeditor-object.md
+            - name: ISEFileCollection 개체
+              href: windows-powershell/ise/object-model/the-isefilecollection-object.md
+            - name: ISEFile 개체
+              href: windows-powershell/ise/object-model/the-isefile-object.md
+            - name: ISEMenuItemCollection 개체
+              href: windows-powershell/ise/object-model/the-isemenuitemcollection-object.md
+            - name: ISEMenuItem 개체
+              href: windows-powershell/ise/object-model/the-isemenuitem-object.md
+            - name: ISEOptions 개체
+              href: windows-powershell/ise/object-model/the-iseoptions-object.md
+            - name: ISESnippetCollection 개체
+              href: windows-powershell/ise/object-model/the-isesnippetcollection-object.md
+            - name: ISESnippet 개체
+              href: windows-powershell/ise/object-model/the-isesnippetobject.md
+            - name: PowerShellTabCollection 개체
+              href: windows-powershell/ise/object-model/the-powershelltabcollection-object.md
+            - name: PowerShellTab 개체
+              href: windows-powershell/ise/object-model/the-powershelltab-object.md
+    - name: WMF(Windows Management Framework)
+      items:
+        - name: 개요
+          href: windows-powershell/wmf/overview.md
+        - name: 설치
+          items:
+            - name: WMF 5.1 설치 및 구성
+              href: windows-powershell/wmf/setup/install-configure.md
+            - name: WMF 5.0 제거
+              href: windows-powershell/wmf/setup/uninstall.md
+        - name: What's New
+          expanded: true
+          items:
+            - name: WMF 5.x 릴리스 정보
+              href: windows-powershell/wmf/whats-new/release-notes.md
+            - name: WMF 5.1의 버그 수정
+              href: windows-powershell/wmf/whats-new/bugfixes.md
+            - name: 새로 제공되거나 업데이트된 cmdlet
+              href: windows-powershell/wmf/whats-new/new-updated-cmdlets.md
+            - name: PowerShell 클래스를 사용하여 사용자 지정 형식 만들기
+              href: windows-powershell/wmf/whats-new/class-overview.md
+            - name: WMF 5.1의 향상된 콘솔
+              href: windows-powershell/wmf/whats-new/console-improvements.md
+            - name: PowerShell 스크립트 디버깅의 향상된 기능
+              href: windows-powershell/wmf/whats-new/debug-overview.md
+            - name: 스크립트 추적 및 로깅
+              href: windows-powershell/wmf/whats-new/script-logging.md
+            - name: WMF 5.1의 향상된 DSC
+              href: windows-powershell/wmf/whats-new/DSC-improvements.md
+            - name: WMF 5.1의 향상된 PowerShell 엔진
+              href: windows-powershell/wmf/whats-new/engine-improvements.md
+            - name: 정보 스트림
+              href: windows-powershell/wmf/whats-new/informationstream-overview.md
+            - name: JEA(Just Enough Administration)에 대한 개선 사항
+              href: windows-powershell/wmf/whats-new/jea-improvements.md
+            - name: WMF 5.1의 향상된 패키지 관리
+              href: windows-powershell/wmf/whats-new/package-management-improvements.md
+            - name: 소프트웨어 인벤토리 로깅(SIL)
+              href: windows-powershell/wmf/whats-new/sil-overview.md
+            - name: 제품 호환성 상태
+              href: windows-powershell/wmf/whats-new/compatibility.md
+            - name: 알려진 문제
+              items:
+                - name: WMF 5.0의 알려진 문제
+                  href: windows-powershell/wmf/known-issues/known-issues-50.md
+                - name: WMF 5.1의 알려진 문제
+                  href: windows-powershell/wmf/known-issues/known-issues-51.md
+                - name: DSC의 알려진 문제 및 제한 사항
+                  href: windows-powershell/wmf/known-issues/known-issues-dsc.md
+    - name: Windows PowerShell 시작
+      href: windows-powershell/starting-windows-powershell.md
+    - name: Windows PowerShell 2.0 엔진 시작
+      href: windows-powershell/starting-the-windows-powershell-2.0-engine.md
 - name: DSC(필요한 상태 구성)
   items:
     - name: 개요
@@ -618,6 +518,44 @@
       items:
         - name: 백서
           href: dsc/further-reading/whitepapers.md
+- name: 커뮤니티
+  items:
+    - name: 커뮤니티 업데이트
+      href: community/community-update.yml
+    - name: 커뮤니티 지원
+      href: community/community-support.md
+    - name: 기여자 명예의 전당
+      href: community/hall-of-fame.md
+    - name: Docs의 새로운 기능
+      items:
+        - name: 2020-Q2
+          href: community/2020-Q2.md
+        - name: 2020-Q1
+          href: community/2020-Q1.md
+    - name: 기여자 가이드
+      items:
+        - name: 개요
+          href: community/contributing/overview.md
+        - name: Docs 이슈를 제출하는 방법
+          href: community/contributing/file-an-issue.md
+        - name: 문서 작성 시작
+          href: community/contributing/get-started-writing.md
+        - name: 끌어오기 요청 제출
+          href: community/contributing/pull-requests.md
+        - name: PowerShell-Docs 스타일 가이드
+          href: community/contributing/powershell-style-guide.md
+        - name: cmdlet 참조 편집
+          href: community/contributing/editing-cmdlet-ref.md
+        - name: 추가 리소스
+          items:
+            - name: 편집 검사 목록
+              href: community/contributing/editorial-checklist.md
+            - name: 이슈를 관리하는 방법
+              href: community/contributing/managing-issues.md
+            - name: 끌어오기 요청 관리 방법
+              href: community/contributing/managing-pull-requests.md
+    - name: 디지털 아트
+      href: community/digital-art.md
 - name: 샘플 스크립트
   items:
     - name: 관리용 샘플 스크립트
@@ -702,124 +640,125 @@
           href: samples/appendix-1---compatibility-aliases.md
         - name: 부록 2 사용자 지정 PowerShell 바로 가기 만들기
           href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
-- name: 커뮤니티
-  expanded: true
+- name: PowerShell 갤러리
   items:
-    - name: 커뮤니티 업데이트
-      href: community/community-update.yml
-    - name: 커뮤니티 지원
-      href: community/community-support.md
-    - name: 기여자 명예의 전당
-      href: community/hall-of-fame.md
-    - name: Docs의 새로운 기능
+    - name: 개요
+      href: gallery/overview.md
+    - name: PowerShellGet 설치
+      href: gallery/installing-psget.md
+    - name: 시작하기
+      href: gallery/getting-started.md
+    - name: 사용 방법
       items:
-        - name: 2020-Q2
-          href: community/2020-Q2.md
-        - name: 2020-Q1
-          href: community/2020-Q1.md
-    - name: 기여자 가이드
-      items:
-        - name: 개요
-          href: community/contributing/overview.md
-        - name: Docs 이슈를 제출하는 방법
-          href: community/contributing/file-an-issue.md
-        - name: 문서 작성 시작
-          href: community/contributing/get-started-writing.md
-        - name: 끌어오기 요청 제출
-          href: community/contributing/pull-requests.md
-        - name: PowerShell-Docs 스타일 가이드
-          href: community/contributing/powershell-style-guide.md
-        - name: cmdlet 참조 편집
-          href: community/contributing/editing-cmdlet-ref.md
-        - name: 추가 리소스
+        - name: 갤러리에서 패키지 찾기
           items:
-            - name: 편집 검사 목록
-              href: community/contributing/editorial-checklist.md
-            - name: 이슈를 관리하는 방법
-              href: community/contributing/managing-issues.md
-            - name: 끌어오기 요청 관리 방법
-              href: community/contributing/managing-pull-requests.md
-    - name: 디지털 아트
-      href: community/digital-art.md
+            - name: 패키지 검색
+              href: gallery/how-to/finding-packages/search-syntax.md
+            - name: 호환성 기준 검색
+              href: gallery/how-to/finding-packages/searching-by-compatibility.md
+            - name: 검색 결과 필터링
+              href: gallery/how-to/finding-packages/filtering-packages.md
+        - name: 갤러리로 게시
+          items:
+            - name: 패키지 만들기 및 게시
+              href: gallery/how-to/publishing-packages/publishing-a-package.md
+            - name: PowerShell 갤러리 계정 만들기
+              href: gallery/how-to/publishing-packages/creating-an-account.md
+            - name: 목록에서 패키지 제거
+              href: gallery/how-to/publishing-packages/unlisting-packages.md
+            - name: 패키지 삭제
+              href: gallery/how-to/publishing-packages/deleting-packages.md
+            - name: 패키지 소유자 관리
+              href: gallery/how-to/publishing-packages/managing-package-owners.md
+        - name: 패키지 작업
+          items:
+            - name: FileList 보기
+              href: gallery/how-to/working-with-packages/filelist-view.md
+            - name: Azure 자동화에 배포
+              href: gallery/how-to/working-with-packages/deploy-to-azure-automation.md
+            - name: 수동 패키지 다운로드
+              href: gallery/how-to/working-with-packages/manual-download.md
+            - name: 라이선스 승인이 필요한 패키지
+              href: gallery/how-to/working-with-packages/packages-that-require-license-acceptance.md
+            - name: 패키지 소유자에게 문의
+              href: gallery/how-to/working-with-packages/contacting-package-owners.md
+            - name: 소셜 미디어나 댓글을 통해 피드백 제공
+              href: gallery/how-to/working-with-packages/social-media-feedback.md
+        - name: 계정 프로필 관리
+          items:
+            - name: PowerShell 갤러리 계정 설정
+              href: gallery/how-to/managing-profile/managing-account.md
+            - name: API 키 관리
+              href: gallery/how-to/managing-profile/creating-apikeys.md
+        - name: 프라이빗 PowerShellGet 리포지토리 작업
+          href: gallery/how-to/working-with-local-psrepositories.md
+    - name: 개념
+      items:
+        - name: 게시 지침 및 모범 사례
+          href: gallery/concepts/publishing-guidelines.md
+        - name: 패키지 매니페스트 및 갤러리 UI
+          href: gallery/concepts/package-manifest-affecting-ui.md
+        - name: 특정 PSEdition이 필요
+          items:
+            - name: PSEdition 지원 스크립트 쓰기
+              href: gallery/concepts/script-psedition-support.md
+            - name: PSEdition 지원 모듈 쓰기
+              href: gallery/concepts/module-psedition-support.md
+        - name: 라이선스 동의 필요
+          items:
+            - name: 스크립트에 대한 라이선스 동의 필요
+              href: gallery/concepts/script-license-acceptance.md
+            - name: 모듈에 대한 라이선스 동의 필요
+              href: gallery/concepts/module-license-acceptance.md
+        - name: 패키지를 PreRelease로 정의
+          items:
+            - name: 모듈을 PreRelease로 정의
+              href: gallery/concepts/module-prerelease-support.md
+            - name: 스크립트를 PreRelease로 정의
+              href: gallery/concepts/script-prerelease-support.md
+        - name: PSScriptAnalyzer 규칙 프로필
+          href: gallery/concepts/scriptanalyzer-rule-profile.md
+    - name: 지원 받기
+      items:
+        - name: 신고하기
+          href: gallery/how-to/getting-support/report-abuse.md
+        - name: 분쟁 해결
+          href: gallery/how-to/getting-support/dispute-resolution.md
+        - name: 관리자에게 문의
+          href: gallery/how-to/getting-support/contacting-administrators.md
+        - name: 문제 해결
+          href: gallery/how-to/getting-support/troubleshooting-cmdlets.md
+        - name: NuGet 공급자 및 NuGet.exe 부트스트래핑
+          href: gallery/how-to/getting-support/bootstrapping-nuget.md
+        - name: GDPR 규정 준수
+          href: gallery/how-to/getting-support/gdpr-dsr-policy.md
+    - name: 갤러리 FAQ
+      href: gallery/faqs.md
 - name: 스크립팅 및 개발
   items:
     - name: Visual Studio Code
       items:
         - name: Visual Studio Code 사용
-          href: components/vscode/using-vscode.md
+          href: dev-cross-plat/vscode/using-vscode.md
         - name: Visual Studio Code에서 ISE 환경을 복제하는 방법
-          href: components/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
+          href: dev-cross-plat/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
         - name: Visual Studio Code를 사용하여 원격 편집 및 디버깅
-          href: components/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
+          href: dev-cross-plat/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
         - name: VS Code 및 PowerShell에서 파일 인코딩 이해
-          href: components/vscode/understanding-file-encoding.md
+          href: dev-cross-plat/vscode/understanding-file-encoding.md
     - name: 이식 가능한 모듈 작성
-      href: learn/writing-portable-modules.md
+      href: dev-cross-plat/writing-portable-modules.md
     - name: 레거시 PowerShell SDK
       items:
         - name: 개요
           href: developer/windows-powershell.md
         - name: Windows PowerShell SDK 설치
           href: developer/installing-the-windows-powershell-sdk.md
-        - name: Windows PowerShell 모듈 작성
-          href: developer/module/writing-a-windows-powershell-module.md
-          items:
-            - name: Windows PowerShell 모듈 이해
-              href: developer/module/understanding-a-windows-powershell-module.md
-            - name: PowerShell 스크립트 모듈을 작성하는 방법
-              href: developer/module/how-to-write-a-powershell-script-module.md
-            - name: PowerShell 이진 모듈을 작성하는 방법
-              href: developer/module/how-to-write-a-powershell-binary-module.md
-            - name: PowerShell 모듈 매니페스트를 작성하는 방법
-              href: developer/module/how-to-write-a-powershell-module-manifest.md
-            - name: PowerShell 모듈 설치
-              href: developer/module/installing-a-powershell-module.md
-            - name: PSModulePath 설치 경로 수정
-              href: developer/module/modifying-the-psmodulepath-installation-path.md
-            - name: PowerShell 모듈 가져오기
-              href: developer/module/importing-a-powershell-module.md
-            - name: Windows PowerShell 모듈에 대한 도움말 작성
-              href: developer/module/writing-help-for-windows-powershell-modules.md
-              items:
-                - name: 도움말 파일 이름 지정
-                  href: developer/module/naming-help-files.md
-                - name: 업데이트 가능한 도움말 지원
-                  href: developer/module/supporting-updatable-help.md
-                  items:
-                    - name: 업데이트 가능한 도움말 개요
-                      href: developer/module/updatable-help-overview.md
-                    - name: '업데이트 가능한 도움말 작성: 단계별'
-                      href: developer/module/updatable-help-authoring-step-by-step.md
-                    - name: 업데이트 가능한 도움말 작동 방법
-                      href: developer/module/how-updatable-help-works.md
-                    - name: HelpInfo XML 파일을 만드는 방법
-                      href: developer/module/how-to-create-a-helpinfo-xml-file.md
-                      items:
-                        - name: HelpInfo XML 스키마
-                          href: developer/module/helpinfo-xml-schema.md
-                        - name: HelpInfo XML 샘플 파일
-                          href: developer/module/helpinfo-xml-sample-file.md
-                        - name: HelpInfo XML 파일 이름을 지정하는 방법
-                          href: developer/module/how-to-name-a-helpinfo-xml-file.md
-                        - name: HelpInfo XML 버전 번호를 설정하는 방법
-                          href: developer/module/how-to-set-helpinfo-xml-version-numbers.md
-                    - name: 업데이트 가능한 도움말 CAB 파일을 준비하는 방법
-                      href: developer/module/how-to-prepare-updatable-help-cab-files.md
-                      items:
-                        - name: CAB 파일을 만들고 업로드하는 방법
-                          href: developer/module/how-to-create-and-upload-cab-files.md
-                        - name: 업데이트 가능한 도움말 CAB 파일 이름을 지정하는 방법
-                          href: developer/module/how-to-name-an-updatable-help-cab-file.md
-                        - name: 업데이트 가능한 도움말 CAB 파일 이름에 허용되는 파일 형식
-                          href: developer/module/file-types-permitted-in-an-updatable-help-cab-file.md
-                    - name: 도움말 파일을 업데이트하는 방법
-                      href: developer/module/how-to-update-help-files.md
-                    - name: 업데이트 가능한 도움말을 테스트하는 방법
-                      href: developer/module/how-to-test-updatable-help.md
-                - name: 온라인 도움말 지원
-                  href: developer/module/supporting-online-help.md
+        - name: Windows PowerShell 참조
+          href: developer/windows-powershell-reference.md
+        - name: What's New
+          href: developer/windows-powershell-reference-whats-new.md
         - name: Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)
-          href: developer/cmdlet/writing-a-windows-powershell-cmdlet.md
           items:
             - name: Cmdlet 개요
               href: developer/cmdlet/cmdlet-overview.md
@@ -926,20 +865,6 @@
                           href: developer/cmdlet/defining-default-member-sets-for-objects.md
                     - name: 형식 지정 파일 사용자 지정
                       href: developer/cmdlet/custom-formatting-files.md
-                - name: Cmdlet 등록
-                  href: developer/cmdlet/registering-cmdlets.md
-                  items:
-                    - name: 모듈 및 스냅인
-                      href: developer/cmdlet/modules-and-snap-ins.md
-                    - name: 모듈을 사용하여 Cmdlet을 가져오는 방법
-                      href: developer/cmdlet/how-to-import-cmdlets-using-modules.md
-                    - name: Windows PowerShell 스냅인을 만드는 방법
-                      href: developer/cmdlet/how-to-create-a-windows-powershell-snap-in.md
-                      items:
-                        - name: Windows PowerShell 스냅인 작성
-                          href: developer/cmdlet/writing-a-windows-powershell-snap-in.md
-                        - name: 사용자 지정 Windows PowerShell 스냅인 작성
-                          href: developer/cmdlet/writing-a-custom-windows-powershell-snap-in.md
                 - name: 확인 요청
                   href: developer/cmdlet/requesting-confirmation.md
                   items:
@@ -1061,8 +986,41 @@
                   href: developer/cmdlet/stopprocesssample04-sample.md
                 - name: Events01 샘플
                   href: developer/cmdlet/events01-sample.md
+        - name: Windows PowerShell 모듈 작성
+          items:
+            - name: 개요
+              href: developer/module/writing-a-windows-powershell-module.md
+            - name: Windows PowerShell 모듈 이해
+              href: developer/module/understanding-a-windows-powershell-module.md
+            - name: PowerShell 스크립트 모듈을 작성하는 방법
+              href: developer/module/how-to-write-a-powershell-script-module.md
+            - name: PowerShell 이진 모듈을 작성하는 방법
+              href: developer/module/how-to-write-a-powershell-binary-module.md
+            - name: PowerShell 모듈 매니페스트를 작성하는 방법
+              href: developer/module/how-to-write-a-powershell-module-manifest.md
+            - name: PowerShell 모듈 설치
+              href: developer/module/installing-a-powershell-module.md
+            - name: PSModulePath 설치 경로 수정
+              href: developer/module/modifying-the-psmodulepath-installation-path.md
+            - name: Cmdlet 등록
+              items:
+                - name: 개요
+                  href: developer/module/registering-cmdlets.md
+                - name: 모듈 및 스냅인
+                  href: developer/module/modules-and-snap-ins.md
+                - name: 모듈을 사용하여 Cmdlet을 가져오는 방법
+                  href: developer/module/how-to-import-cmdlets-using-modules.md
+                - name: Windows PowerShell 스냅인을 만드는 방법
+                  items:
+                    - name: 개요
+                      href: developer/module/how-to-create-a-windows-powershell-snap-in.md
+                    - name: Windows PowerShell 스냅인 작성
+                      href: developer/module/writing-a-windows-powershell-snap-in.md
+                    - name: 사용자 지정 Windows PowerShell 스냅인 작성
+                      href: developer/module/writing-a-custom-windows-powershell-snap-in.md
+            - name: PowerShell 모듈 가져오기
+              href: developer/module/importing-a-powershell-module.md
         - name: Windows PowerShell 공급자 작성
-          href: developer/provider/writing-a-windows-powershell-provider.md
           items:
             - name: Windows PowerShell 공급자 빠른 시작
               href: developer/provider/windows-powershell-provider-quickstart.md
@@ -1099,7 +1057,6 @@
                 - name: AccessDBProviderSample06
                   href: developer/provider/accessdbprovidersample06.md
         - name: Windows PowerShell 호스트 애플리케이션 작성
-          href: developer/hosting/writing-a-windows-powershell-host-application.md
           items:
             - name: Windows PowerShell 호스트 빠른 시작
               href: developer/hosting/windows-powershell-host-quickstart.md
@@ -1176,13 +1133,13 @@
                     - name: RemoteRunspacePool01 샘플
                       href: developer/hosting/remoterunspacepool01-sample.md
         - name: PowerShell 형식 지정 파일 작성
-          href: developer/format/writing-a-powershell-formatting-file.md
           items:
             - name: 형식 지정 파일 개요
               href: developer/format/formatting-file-overview.md
             - name: 형식 지정 파일 개념
-              href: developer/format/formatting-file-concepts.md
               items:
+                - name: 개요
+                  href: developer/format/formatting-file-concepts.md
                 - name: 테이블 보기 만들기
                   href: developer/format/creating-a-table-view.md
                 - name: 목록 보기 만들기
@@ -1201,13 +1158,14 @@
                   href: developer/format/defining-conditions-for-displaying-data.md
                 - name: 표시되는 데이터 형식 지정
                   href: developer/format/formatting-displayed-data.md
-                - name: PowerShell 형식 지정 파일
-                  href: developer/format/powershell-formatting-files.md
-            - name: 형식 지정 파일 예제
-              href: developer/format/examples-of-formatting-files.md
+            - name: PowerShell 형식 지정 파일
               items:
+                - name: 개요
+                  href: developer/format/powershell-formatting-files.md
                 - name: 형식 지정 파일(.format.ps1xml)을 만드는 방법
                   href: developer/format/how-to-create-a-formatting-file-format-ps1xml.md
+            - name: 형식 지정 파일 예제
+              items:
                 - name: 넓게 보기(기본)
                   href: developer/format/wide-view-basic.md
                 - name: 넓게 보기(GroupBy)
@@ -1639,22 +1597,14 @@
                   href: developer/format/wrap-element-for-tablerowentry-for-tablecontrol-format.md
                 - name: WrapTables 요소(형식)
                   href: developer/format/wraptables-element-format.md
-        - name: 설명 기반 도움말 항목 작성
-          href: developer/help/writing-comment-based-help-topics.md
+        - name: Windows PowerShell에 대한 도움말 작성
           items:
-            - name: Windows PowerShell Cmdlet에 대한 도움말 작성
-              href: developer/help/writing-help-for-windows-powershell-cmdlets.md
-            - name: Windows PowerShell 공급자에 대한 도움말 작성
-              items:
-                - name: 공급자 도움말 항목에 동적 매개 변수를 추가하는 방법
-                  href: developer/help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
-                - name: 공급자 도움말 항목에 참고 항목 섹션을 추가하는 방법
-                  href: developer/help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
-            - name: Windows PowerShell 스크립트 및 함수에 대한 도움말 작성
+            - name: 개요
               href: developer/help/writing-help-for-windows-powershell-scripts-and-functions.md
             - name: 설명 기반 도움말 항목 작성
-              href: developer/help/writing-comment-based-help-topics.md
               items:
+                - name: 개요
+                  href: developer/help/writing-comment-based-help-topics.md
                 - name: 설명 기반 도움말 구문
                   href: developer/help/syntax-of-comment-based-help.md
                 - name: 설명 기반 도움말 키워드
@@ -1669,39 +1619,92 @@
                   href: developer/help/examples-of-comment-based-help.md
             - name: 명령에 대한 XML 기반 도움말 항목 작성
               items:
-                - name: Cmdlet 도움말 파일을 만드는 방법
-                  href: developer/help/how-to-create-the-cmdlet-help-file.md
-                - name: Cmdlet 도움말 항목에 Cmdlet 이름 및 개요를 추가하는 방법
-                  href: developer/help/how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md
-                - name: Cmdlet 설명을 추가하는 방법
-                  href: developer/help/how-to-add-a-cmdlet-description.md
-                - name: Cmdlet 도움말 항목에 구문을 추가하는 방법
-                  href: developer/help/how-to-add-syntax-to-a-cmdlet-help-topic.md
-                - name: 매개 변수 정보를 추가하는 방법
-                  href: developer/help/how-to-add-parameter-information.md
-                - name: Cmdlet 도움말 항목에 입력 형식을 추가하는 방법
-                  href: developer/help/how-to-add-input-types-to-a-cmdlet-help-topic.md
-                - name: Cmdlet 도움말 항목에 반환 값을 추가하는 방법
-                  href: developer/help/how-to-add-return-values-to-a-cmdlet-help-topic.md
-                - name: Cmdlet 도움말 항목에 메모를 추가하는 방법
-                  href: developer/help/how-to-add-notes-to-a-cmdlet-help-topic.md
-                - name: Cmdlet 도움말 항목에 예제를 추가하는 방법
-                  href: developer/help/how-to-add-examples-to-a-cmdlet-help-topic.md
-                - name: Cmdlet 도움말 항목에 관련 링크를 추가하는 방법
-                  href: developer/help/how-to-add-related-links-to-a-cmdlet-help-topic.md
+                - name: Windows PowerShell Cmdlet에 대한 도움말 작성
+                  items:
+                    - name: 개요
+                      href: developer/help/writing-help-for-windows-powershell-cmdlets.md
+                    - name: Cmdlet 도움말 파일을 만드는 방법
+                      href: developer/help/how-to-create-the-cmdlet-help-file.md
+                    - name: Cmdlet 도움말 항목에 Cmdlet 이름 및 개요를 추가하는 방법
+                      href: developer/help/how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md
+                    - name: Cmdlet 설명을 추가하는 방법
+                      href: developer/help/how-to-add-a-cmdlet-description.md
+                    - name: Cmdlet 도움말 항목에 구문을 추가하는 방법
+                      href: developer/help/how-to-add-syntax-to-a-cmdlet-help-topic.md
+                    - name: 매개 변수 정보를 추가하는 방법
+                      href: developer/help/how-to-add-parameter-information.md
+                    - name: Cmdlet 도움말 항목에 입력 형식을 추가하는 방법
+                      href: developer/help/how-to-add-input-types-to-a-cmdlet-help-topic.md
+                    - name: Cmdlet 도움말 항목에 반환 값을 추가하는 방법
+                      href: developer/help/how-to-add-return-values-to-a-cmdlet-help-topic.md
+                    - name: Cmdlet 도움말 항목에 메모를 추가하는 방법
+                      href: developer/help/how-to-add-notes-to-a-cmdlet-help-topic.md
+                    - name: Cmdlet 도움말 항목에 예제를 추가하는 방법
+                      href: developer/help/how-to-add-examples-to-a-cmdlet-help-topic.md
+                    - name: Cmdlet 도움말 항목에 관련 링크를 추가하는 방법
+                      href: developer/help/how-to-add-related-links-to-a-cmdlet-help-topic.md
+                - name: Windows PowerShell 모듈에 대한 도움말 작성
+                  href: developer/module/writing-help-for-windows-powershell-modules.md
+                  items:
+                    - name: 도움말 파일 이름 지정
+                      href: developer/help/naming-help-files.md
+                    - name: 업데이트 가능한 도움말 지원
+                      href: developer/help/supporting-updatable-help.md
+                      items:
+                        - name: 업데이트 가능한 도움말 개요
+                          href: developer/help/updatable-help-overview.md
+                        - name: '업데이트 가능한 도움말 작성: 단계별'
+                          href: developer/help/updatable-help-authoring-step-by-step.md
+                        - name: 업데이트 가능한 도움말 작동 방법
+                          href: developer/help/how-updatable-help-works.md
+                        - name: HelpInfo XML 파일을 만드는 방법
+                          href: developer/help/how-to-create-a-helpinfo-xml-file.md
+                          items:
+                            - name: HelpInfo XML 스키마
+                              href: developer/help/helpinfo-xml-schema.md
+                            - name: HelpInfo XML 샘플 파일
+                              href: developer/help/helpinfo-xml-sample-file.md
+                            - name: HelpInfo XML 파일 이름을 지정하는 방법
+                              href: developer/help/how-to-name-a-helpinfo-xml-file.md
+                            - name: HelpInfo XML 버전 번호를 설정하는 방법
+                              href: developer/help/how-to-set-helpinfo-xml-version-numbers.md
+                        - name: 업데이트 가능한 도움말 CAB 파일을 준비하는 방법
+                          href: developer/help/how-to-prepare-updatable-help-cab-files.md
+                          items:
+                            - name: CAB 파일을 만들고 업로드하는 방법
+                              href: developer/help/how-to-create-and-upload-cab-files.md
+                            - name: 업데이트 가능한 도움말 CAB 파일 이름을 지정하는 방법
+                              href: developer/help/how-to-name-an-updatable-help-cab-file.md
+                            - name: 업데이트 가능한 도움말 CAB 파일 이름에 허용되는 파일 형식
+                              href: developer/help/file-types-permitted-in-an-updatable-help-cab-file.md
+                            - name: 도움말 파일을 업데이트하는 방법
+                              href: developer/help/how-to-update-help-files.md
+                            - name: 업데이트 가능한 도움말을 테스트하는 방법
+                              href: developer/help/how-to-test-updatable-help.md
+                        - name: 온라인 도움말 지원
+                          href: developer/help/supporting-online-help.md
+                - name: Windows PowerShell 공급자에 대한 도움말 작성
+                  items:
+                    - name: 공급자 도움말 항목에 동적 매개 변수를 추가하는 방법
+                      href: developer/help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
+                    - name: 공급자 도움말 항목에 참고 항목 섹션을 추가하는 방법
+                      href: developer/help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
         - name: 관리 OData 웹 서비스 만들기
-          href: developer/webservices/creating-a-management-odata-web-service.md
           items:
+            - name: 개요
+              href: developer/webservices/creating-a-management-odata-web-service.md
             - name: 관리 OData 웹 서비스에 리소스 추가
               href: developer/webservices/adding-resources-to-a-management-odata-web-service.md
             - name: 관리 OData 웹 서비스에 대한 사용자 지정 권한 부여 구현
-              href: developer/webservices/implementing-custom-authorization-for-a-management-odata-web-service.md
               items:
+                - name: 개요
+                  href: developer/webservices/implementing-custom-authorization-for-a-management-odata-web-service.md
                 - name: 역할 기반 권한 부여 구성
                   href: developer/webservices/configuring-role-based-authorization.md
-                  items:
-                    - name: 역할 기반 권한 부여 구성 스키마
-                      href: developer/webservices/role-based-authorization-configuration-schema.md
+                - name: 역할 기반 권한 부여 구성 스키마
+                  href: developer/webservices/role-based-authorization-configuration-schema.md
+                - name: 관리 OData 웹 서비스를 사용하여 Windows PowerShell cmdlet 호출
+                  href: developer/webservices/invoking-windows-powershell-cmdlets-with-management-odata-web-services.md
             - name: 관리 OData 웹 서비스에 대한 SessionConfiguration 구현
               href: developer/webservices/implementing-sessionconfiguration-for-a-management-odata-web-service.md
             - name: 관리 OData 웹 서비스용 MOF 스키마 파일 작성
@@ -1714,32 +1717,32 @@
               href: developer/webservices/deploying-a-management-odata-web-service.md
             - name: 관리 OData 엔터티 연결
               href: developer/webservices/associating-management-odata-entities.md
-            - name: 관리 OData 웹 서비스를 사용하여 Windows PowerShell cmdlet 호출
-              href: developer/webservices/invoking-windows-powershell-cmdlets-with-management-odata-web-services.md
             - name: 관리 OData IIS 확장 스키마 파일
-              href: developer/webservices/management-odata-iis-extension-schema-files.md
               items:
+                - name: 개요
+                  href: developer/webservices/management-odata-iis-extension-schema-files.md
                 - name: 리소스 매핑 스키마
                   href: developer/webservices/resource-mapping-schema.md
                 - name: 공용 리소스 스키마
                   href: developer/webservices/public-resource-schema.md
         - name: Windows PowerShell 워크플로 작성
-          href: developer/workflow/writing-a-windows-powershell-workflow.md
           items:
+            - name: 개요
+              href: developer/workflow/writing-a-windows-powershell-workflow.md
             - name: Visual Studio 도구 상자에 Windows PowerShell 활동 추가
               href: developer/workflow/adding-windows-powershell-activities-to-the-visual-studio-toolbox.md
-            - name: 일반 워크플로 매개 변수
-              href: developer/workflow/common-workflow-parameters.md
-            - name: Windows PowerShell Cmdlet에서 워크플로 활동 만들기
-              href: developer/workflow/creating-a-workflow-activity-from-a-windows-powershell-cmdlet.md
-            - name: Windows PowerShell 스크립트를 사용하여 워크플로 만들기
-              href: developer/workflow/creating-a-workflow-by-using-a-windows-powershell-script.md
             - name: Windows PowerShell 활동을 사용하여 워크플로 만들기
               href: developer/workflow/creating-a-workflow-with-windows-powershell-activities.md
+            - name: Windows PowerShell 스크립트를 사용하여 워크플로 만들기
+              href: developer/workflow/creating-a-workflow-by-using-a-windows-powershell-script.md
             - name: Windows PowerShell 워크플로 가져오기 및 호출
               href: developer/workflow/importing-and-invoking-a-windows-powershell-workflow.md
+            - name: Windows PowerShell Cmdlet에서 워크플로 활동 만들기
+              href: developer/workflow/creating-a-workflow-activity-from-a-windows-powershell-cmdlet.md
             - name: Windows PowerShell API를 사용하여 작업 예약
               href: developer/workflow/scheduling-jobs-with-the-windows-powershell-api.md
+            - name: 일반 워크플로 매개 변수
+              href: developer/workflow/common-workflow-parameters.md
         - name: Windows PowerShell 프로그래머 가이드
           href: developer/prog-guide/windows-powershell-programmer-s-guide.md
           items:
@@ -1866,8 +1869,3 @@
                   href: developer/prog-guide/runspace09-code-sample.md
                 - name: RunSpace10 코드 샘플
                   href: developer/prog-guide/runspace10-code-sample.md
-        - name: Windows PowerShell 참조
-          href: developer/windows-powershell-reference.md
-          items:
-            - name: What's New
-              href: developer/windows-powershell-reference-whats-new.md
