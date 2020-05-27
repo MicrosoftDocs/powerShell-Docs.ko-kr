@@ -2,12 +2,12 @@
 ms.date: 08/09/2018
 keywords: 설치, windows, linux, macOS, ARM, raspbian
 title: PowerShell 설치
-ms.openlocfilehash: 22c88bfbbe4cd6b163e69ab5e599a98528caf9c8
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: fd62d33945e0253b43b80f294964d5e9b8ba03a0
+ms.sourcegitcommit: c752ae8d0fa47eaaf3c5eae2a5a770f06c63921c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78405065"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83841007"
 ---
 # <a name="installing-various-versions-of-powershell"></a>다양한 버전의 PowerShell 설치
 
@@ -24,4 +24,4 @@ PowerShell Core는 [GitHub](https://github.com/powershell/powershell)의 오픈 
 
 ## <a name="windows-powershell"></a>Windows PowerShell
 
-Windows에 PowerShell의 레거시 버전을 설치하는 방법에 대한 자세한 내용은 [Windows PowerShell 설치](installing-windows-powershell.md)를 참조하세요.
+Windows에 PowerShell의 레거시 버전을 설치하는 방법에 대한 자세한 내용은 [Windows PowerShell 설치](../windows-powershell/install/installing-windows-powershell.md)를 참조하세요.
