@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: 검색 결과 필터링
-ms.openlocfilehash: 13270a310613a974e1588a9f56d443a936cfebb8
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 51f8d243cb9b1f4ff7413eec8839697299e8dd52
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328044"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691475"
 ---
 # <a name="filtering-search-results"></a>검색 결과 필터링
 
@@ -20,12 +20,14 @@ ms.locfileid: "71328044"
 ## <a name="filter-by"></a>필터 기준
 
 “필터 기준” 아래의 드롭다운에서는 다음을 기준으로 결과를 필터링할 수 있습니다.
+
 - 시험판 포함
 - 안정적인 항목만
 
 “시험판” 및 “안정적인 항목”에 대한 내용은 PowerShell 팀 블로그의 [Prerelease Versioning Added to PowerShellGet and PowerShell Gallery](https://blogs.msdn.microsoft.com/powershell/2017/12/05/prerelease-versioning-added-to-powershellget-and-powershell-gallery/)(PowerShellGet 및 PowerShell 갤러리에 추가된 시험판 버전)를 참조하세요.
 
 드롭다운의 확인란을 사용하여 다음을 기준으로 결과를 필터링할 수 있습니다.
+
 - 패키지 종류
   - 모듈
   - 스크립트
@@ -49,6 +51,7 @@ PowerShell 갤러리의 모듈만 보려면 [패키지 종류]에서 [모듈]을
 ## <a name="sort-by"></a>정렬 기준
 
 [정렬 기준] 드롭다운에서 다음을 기준으로 결과를 정렬할 수 있습니다.
+
 - 인기도 - 인기도는 다운로드 횟수에 따라 결정됩니다.
 - A-Z - 패키지 이름을 기준으로 사전순으로 정렬됩니다.
 - 최근 - 게시 날짜순으로 패키지가 표시됩니다.

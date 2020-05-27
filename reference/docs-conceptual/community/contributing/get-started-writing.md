@@ -3,12 +3,12 @@ title: PowerShell 설명서에 기여 시작
 description: 이 문서는 PowerShell 설명서에 대한 기여자로 시작하는 방법을 간단히 설명합니다.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: fdf29feb75abb6592205aaf1726c07a60ce3a924
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 989605f21685decda5f916298a05ec7f5600e575
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81005519"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560681"
 ---
 # <a name="get-started-contributing-to-powershell-documentation"></a>PowerShell 설명서에 기여 시작
 

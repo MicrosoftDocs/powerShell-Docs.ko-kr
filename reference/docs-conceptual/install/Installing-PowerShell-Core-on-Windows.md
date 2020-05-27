@@ -1,13 +1,13 @@
 ---
 title: Windows에 PowerShell 설치
 description: Windows에서 PowerShell을 설치하는 방법에 대한 정보
-ms.date: 08/06/2018
-ms.openlocfilehash: a8543a91ad503364c5346a11c9c9d9f910547278
-ms.sourcegitcommit: b80ce0396550d0896189d0205d6c4b4372ac2015
+ms.date: 05/21/2020
+ms.openlocfilehash: 864f297e4f569030439bd6b581ef593d36f8b910
+ms.sourcegitcommit: fd6a33b9fac973b3554fecfea7f51475e650a606
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141392"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791492"
 ---
 # <a name="installing-powershell-on-windows"></a>Windows에 PowerShell 설치
 
@@ -30,8 +30,8 @@ Windows에서 PowerShell을 설치하려면 GitHub [릴리스][releases] 페이�
 
 MSI 파일은 `PowerShell-<version>-win-<os-arch>.msi`과 비슷합니다. 다음은 그 예입니다. 
 
-- `PowerShell-7.0.0-win-x64.msi`
-- `PowerShell-7.0.0-win-x86.msi`
+- `PowerShell-7.0.1-win-x64.msi`
+- `PowerShell-7.0.1-win-x86.msi`
 
 다운로드가 완료되면 설치 프로그램을 두 번 클릭하고 지시를 따릅니다.
 
@@ -60,7 +60,7 @@ MSI 파일은 `PowerShell-<version>-win-<os-arch>.msi`과 비슷합니다. 다�
 다음 예제에서는 PowerShell을 자동으로 설치할 때 모든 설치 옵션을 사용하도록 설정하는 방법을 보여 줍니다.
 
 ```powershell
-msiexec.exe /package PowerShell-7.0.0-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
+msiexec.exe /package PowerShell-7.0.1-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
 ```
 
 `Msiexec.exe`에 대한 명령줄 옵션의 전체 목록은 [명령줄 옵션](/windows/desktop/Msi/command-line-options)을 참조하세요.
@@ -128,6 +128,7 @@ Windows 10 IoT Enterprise는 PowerShell 7을 배포하는 데 사용할 수 있�
    # Be sure to use the -Configuration parameter.  If you omit it, you will connect to Windows PowerShell 5.1
    Enter-PSSession -ComputerName <deviceIp> -Credential Administrator -Configuration powershell.<version>
    ```
+
 ## <a name="deploying-on-windows-10-iot-core"></a>Windows 10 IoT Core에 배포
 
 Windows 10 IoT Core는 *IOT_POWERSHELL* 기능을 포함할 때 Windows PowerShell을 추가하여 PowerShell 7을 배포하는 데 사용할 수 있습니다.

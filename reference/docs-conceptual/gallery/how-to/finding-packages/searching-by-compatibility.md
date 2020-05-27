@@ -3,12 +3,12 @@ ms.date: 12/11/2018
 contributor: JKeithB, SydneyhSmith
 keywords: gallery,powershell,cmdlet,psgallery
 title: 호환 가능한 PowerShell 버전 또는 운영 체제가 있는 패키지
-ms.openlocfilehash: b414ce2c2b189e9da150cbe612e0bb2572d39e76
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: fce1383fa604a555a40b050ce92c5cc45ca7054c
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278375"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691456"
 ---
 # <a name="packages-with-compatible-powershell-editions-or-operating-systems"></a>호환 가능한 PowerShell 버전 또는 운영 체제가 있는 패키지
 
@@ -17,6 +17,7 @@ ms.locfileid: "78278375"
 ## <a name="searching-by-powershell-edition"></a>PowerShell 버전으로 검색
 
 두 버전의 PowerShell은 다음과 같습니다.
+
 - **Desktop Edition:** .NET Framework를 기반으로 구축되며 Server Core 및 Windows Desktop과 같은 전체 버전의 Windows에서 실행되는 PowerShell 버전을 대상으로 지정하는 스크립트 및 모듈과 호환성을 제공합니다.
 - **Core Edition:** .NET Framework를 기반으로 구축되며 Nano 서버 및 Windows IoT와 같은 축소된 버전의 Windows에서 실행되는 PowerShell 버전을 대상으로 지정하는 스크립트 및 모듈과 호환성을 제공합니다.
 

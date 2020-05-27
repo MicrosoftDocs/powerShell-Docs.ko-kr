@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 리소스 디자이너 도구 사용
-ms.openlocfilehash: 36eed0fc888380a03a3279e834748708f578d973
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 9e7488e922bdca70bb152e7e976077e43cfad7af
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500636"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692187"
 ---
 # <a name="using-the-resource-designer-tool"></a>리소스 디자이너 도구 사용
 
@@ -19,6 +19,7 @@ ms.locfileid: "80500636"
 가장 먼저 해야 할 일은 리소스가 노출할 속성에 대해 결정하는 것입니다. 이 예의 경우, 다음 속성으로 Active Directory 사용자를 정의하게 됩니다.
 
 매개 변수 이름 설명
+
 * **UserName**: 사용자를 고유하게 식별하는 주요 속성입니다.
 * **Ensure**: 사용자 계정이 있음인지 또는 없음인지 여부를 지정합니다. 이 매개 변수는 두 개의 가능한 값만 갖습니다.
 * **DomainCredential**: 사용자에 대한 도메인 암호입니다.

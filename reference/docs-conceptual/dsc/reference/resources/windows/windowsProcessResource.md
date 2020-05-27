@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC WindowsProcess 리소스
-ms.openlocfilehash: e168cdebb04f7ec83b73a537a5f188299f40d8b7
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 5c30af98bf7b99551396082630605c566a866697
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71952840"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560494"
 ---
 # <a name="dsc-windowsprocess-resource"></a>DSC WindowsProcess 리소스
 

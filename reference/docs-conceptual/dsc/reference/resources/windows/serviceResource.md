@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC 서비스 리소스
-ms.openlocfilehash: 0bef6aa6d3526c9d8d92187c1e738d5c46b5665a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: acd0710fb4b131876e3edece15b07cff8e9a8a9e
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953050"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557008"
 ---
 # <a name="dsc-service-resource"></a>DSC 서비스 리소스
 

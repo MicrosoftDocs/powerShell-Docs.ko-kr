@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: Linux용 DSC nxPackage 리소스
-ms.openlocfilehash: 4091cbbd5e34a84b9011870da4bda93281378347
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 49eef4adc9700a13bfb1e96457d90898a353d60d
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954820"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560834"
 ---
 # <a name="dsc-for-linux-nxpackage-resource"></a>Linux용 DSC nxPackage 리소스
 

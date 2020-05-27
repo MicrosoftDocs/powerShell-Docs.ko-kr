@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: 로컬 구성 관리자 구성
-ms.openlocfilehash: 5847a29efd165724ffe9f1f0e89cfaf358ade31c
-ms.sourcegitcommit: 4eda0bc902658d4a188159bd7310e64399f6e178
+ms.openlocfilehash: c736f1c6a7cd6740f9d777dd68559f29909bc5b6
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83271851"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691998"
 ---
 # <a name="configuring-the-local-configuration-manager"></a>로컬 구성 관리자 구성
 
@@ -125,6 +125,7 @@ LCM 구성에서는 다음 형식의 풀 서비스 엔드포인트를 정의할 
 |ProxyCredential*|pscredential|Http 프록시에 사용할 자격 증명입니다.|
 
 > [!NOTE]
+>
 > * Windows 버전 1809 이상에서 지원됩니다.
 
 온-프레미스 노드에 대해 ConfigurationRepositoryWeb 값 구성을 간소화하는 예제 스크립트를 사용할 수 있습니다([DSC 메타 구성 생성](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations) 참조).
@@ -152,6 +153,7 @@ SMB 기반 구성 서버를 정의하려면 **ConfigurationRepositoryShare** 블
 |ProxyCredential*|pscredential|Http 프록시에 사용할 자격 증명입니다.|
 
 > [!NOTE]
+>
 > * Windows 버전 1809 이상에서 지원됩니다.
 
 온-프레미스 노드에 대해 ResourceRepositoryWeb 값 구성을 간소화하는 예제 스크립트를 사용할 수 있습니다([DSC 메타 구성 생성](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations) 참조).
@@ -180,6 +182,7 @@ SMB 기반 리소스 서버를 정의하려면 **ResourceRepositoryShare** 블�
 |ProxyCredential*|pscredential|Http 프록시에 사용할 자격 증명입니다.|
 
 > [!NOTE]
+>
 > * Windows 버전 1809 이상에서 지원됩니다.
 
 온-프레미스 노드에 대해 ReportServerWeb 값 구성을 간소화하는 예제 스크립트를 사용할 수 있습니다([DSC 메타 구성 생성](https://docs.microsoft.com/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations) 참조).

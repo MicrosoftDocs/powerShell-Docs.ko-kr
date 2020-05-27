@@ -2,12 +2,12 @@
 title: PowerShell Docs의 새로운 기능
 description: PowerShell 설명서 변경 내용 목록
 ms.date: 04/29/2020
-ms.openlocfilehash: a3b99c4d98362f2509ca9974d32c1a4d4780b664
-ms.sourcegitcommit: e6a9b13a4799667b74e0ba0f742dded4511d32b4
+ms.openlocfilehash: 6f1e6bbc04efa13287154be45eceaab204fbdd7c
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82630909"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692514"
 ---
 # <a name="community-contributor-hall-of-fame"></a>커뮤니티 기여자 명예의 전당
 
@@ -15,7 +15,7 @@ PowerShell 커뮤니티는 활기찬 공동 작업 그룹입니다. Microsoft는
 
 2020년 4월 현재, 다음 GitHub 사용자는 역대 최상위 커뮤니티 기여자입니다.
 
-### <a name="pull-requests-opened"></a>끌어오기 요청 개설
+## <a name="pull-requests-opened"></a>끌어오기 요청 개설
 
 끌어오기 요청은 Microsoft가 문제를 수정하고 모든 사용자를 위해 설명서를 개선하는 데 도움이 됩니다.
 
@@ -40,7 +40,7 @@ PowerShell 커뮤니티는 활기찬 공동 작업 그룹입니다. Microsoft는
 | exchange12rocks    |      |    7 |    3 |      |      |          10 |
 | KirkMunro          |    1 |    1 |    2 |    6 |      |          10 |
 
-### <a name="github-issues-opened"></a>GitHub 문제 개설
+## <a name="github-issues-opened"></a>GitHub 문제 개설
 
 GitHub 문제는 Microsoft가 설명서에서 오류 및 실제 사례와의 격차를 식별하는 데 도움이 됩니다.
 

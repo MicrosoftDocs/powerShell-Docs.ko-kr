@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC WaitForAny 리소스
-ms.openlocfilehash: 61fee456d2652e08ed9bdbe64457627ff5b2e145
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 181760ba0a4f493c451dafb68e7881adda2d58c0
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953000"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560783"
 ---
 # <a name="dsc-waitforany-resource"></a>DSC WaitForAny 리소스
 

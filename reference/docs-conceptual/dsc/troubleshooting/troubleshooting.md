@@ -2,12 +2,12 @@
 ms.date: 10/30/2018
 keywords: dsc,powershell,configuration,setup
 title: DSC 문제 해결
-ms.openlocfilehash: 5cbe6496a6e0b9940f4b69e13d1e19e43b3915f0
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 83e59b9f7148b52071d4782522ca7642027d795a
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79402410"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692299"
 ---
 # <a name="troubleshooting-dsc"></a>DSC 문제 해결
 
@@ -36,6 +36,7 @@ Get-DscConfigurationStatus [-CimSession <CimSession[]>]
                            [-AsJob]
                            [<CommonParameters>]
 ```
+
 다음 매개 변수 집합은 모든 이전 구성 실행에 대한 상태 정보를 반환합니다.
 
 ```

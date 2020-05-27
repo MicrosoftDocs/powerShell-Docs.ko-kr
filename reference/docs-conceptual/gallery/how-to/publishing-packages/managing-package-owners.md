@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: 패키지 소유자 관리
-ms.openlocfilehash: 5cf26a7195ac446177cbb7f3a055e8e0a78569cc
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 72a3ff72818c5461c74d46de5689e2d6c59b19bf
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328264"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564672"
 ---
 # <a name="managing-package-owners"></a>패키지 소유자 관리
 
@@ -41,7 +41,6 @@ PowerShell 갤러리에 패키지를 게시한 후 추가 사용자를 패키지
 
 "Authors" 메타데이터는 순수 자유형 텍스트이며 "Owners"만 제어됩니다.
 
-
 ## <a name="removing-owners"></a>소유자 제거
 
 패키지에 여러 소유자가 있고 한 소유자를 제거해야 하는 경우 프로세스는 간단합니다.
@@ -50,8 +49,6 @@ PowerShell 갤러리에 패키지를 게시한 후 추가 사용자를 패키지
 2. '패키지' 탭을 사용하거나, 검색하거나, 사용자 이름, [**내 패키지 관리**](https://www.powershellgallery.com/account/Packages)를 차례로 클릭하여 패키지 페이지로 이동합니다.
 3. 패키지의 소유자로 로그온한 경우 왼쪽에 있는 '소유자 관리' 링크를 클릭할 수 있습니다.
 4. 제거할 소유자 옆에 있는 '제거' 링크를 클릭합니다.
-
-
 
 ## <a name="transferring-package-ownership"></a>패키지 소유권 이전
 
@@ -65,7 +62,6 @@ PowerShell 갤러리에 패키지를 게시한 후 추가 사용자를 패키지
 
 - 패키지 소유권이 한 개발자에서 다른 개발자로 변경되는 경우
 - 패키지가 실수로 잘못된 계정을 사용하여 게시된 경우
-
 
 ## <a name="orphaned-packages"></a>분리된 패키지
 

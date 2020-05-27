@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: Import-DSCResource 사용
-ms.openlocfilehash: a041169ad557becf7ca87641d9ce5222ee8f6beb
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 1b066e231d158fb5b6333e42c91d24690e9b0223
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79402450"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692467"
 ---
 # <a name="using-import-dscresource"></a>Import-DSCResource 사용
 
@@ -123,10 +123,12 @@ IntelliSense 및 스키마 유효성 검사를 사용하면 구문 분석 및 �
 
 > [!NOTE]
 > 각 DSC 리소스에는 이름 및 리소스 스키마에서 정의한 **FriendlyName**이 포함될 수 있습니다. "MSFT_ServiceResource.shema.mof"의 처음 두 줄은 다음과 같습니다.
+>
 > ```syntax
 > [ClassVersion("1.0.0"),FriendlyName("Service")]
 > class MSFT_ServiceResource : OMI_BaseResource
 > ```
+>
 > 구성에서 이 리소스를 사용하는 경우 **MSFT_ServiceResource** 또는 **Service**를 지정할 수 있습니다.
 
 ## <a name="powershell-v4-and-v5-differences"></a>PowerShell v4 및 v5의 차이

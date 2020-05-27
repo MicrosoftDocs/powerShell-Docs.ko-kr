@@ -3,12 +3,12 @@ ms.date: 09/05/2018
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: PowerShell 갤러리 계정 설정
-ms.openlocfilehash: db61c3fd8c73048b51f3411a8c1dab52fb03d08a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7f67311b42123f247a00a9c7a5bf775685b64d48
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278115"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560460"
 ---
 # <a name="powershell-gallery-account-settings"></a>PowerShell 갤러리 계정 설정
 
@@ -65,7 +65,6 @@ PowerShell 갤러리에서 제공하는 알림 옵션은 다음과 같습니다.
    ![로그인 계정 설정](media/managing-account/PSGallery_LoginAccountChange-3.png)
 
 4. 새 계정의 암호를 입력합니다. 암호가 입력되면 로그인 계정이 업데이트되었음을 보여 주는 [계정 설정] 페이지로 돌아갑니다.
-
 
 ## <a name="enable-two-factor-authentication-2fa"></a>2FA(2단계 인증) 사용
 

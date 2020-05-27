@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC 보관 리소스
-ms.openlocfilehash: ddabe1a623783fe213b8059f47851184d5253fc5
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 679de8b965304c149b10321e73e42b224f49ecc5
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954770"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560375"
 ---
 # <a name="dsc-archive-resource"></a>DSC 보관 리소스
 

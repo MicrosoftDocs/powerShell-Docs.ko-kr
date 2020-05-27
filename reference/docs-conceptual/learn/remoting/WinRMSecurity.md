@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: WinRMSecurity
-ms.openlocfilehash: 59717e4806857e6760de523335bbee6028da8e84
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: ec194a4cc5abba5061e43152e0cb851c22611445
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "62086368"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83564432"
 ---
 # <a name="powershell-remoting-security-considerations"></a>PowerShell Remoting 보안 고려 사항
 
@@ -69,11 +69,9 @@ NTLM 인증 프로토콜은 대상 서버의 ID를 보장하지 않으므로(사
 NTLM 연결을 위해 서버에 SSL 인증서를 배포할 수 없는 경우 서버를 WinRM **TrustedHosts** 목록에 추가하여 결과 ID 오류를 표시하지 않을 수 있습니다. 서버 이름을 TrustedHosts 목록에 추가한다고 호스트 자체를 신뢰할 수 있음을 나타내는 것은 아닙니다. NTLM 인증 프로토콜이 사용자가 연결하려는 호스트에 실제로 연결하는 중인지 보장할 수 없기 때문입니다.
 대신에 TrustedHosts 설정을 서버의 ID를 확인하지 못해 발생하는 오류를 숨기려는 호스트 목록으로 간주해야 합니다.
 
-
 ### <a name="ongoing-communication"></a>진행 중인 통신
 
 초기 인증이 완료되면 [PowerShell Remoting Protocol(PowerShell 원격 프로토콜)](https://msdn.microsoft.com/library/dd357801.aspx)이 모든 진행 중인 통신을 세션별 AES-256 대칭 키를 사용해 암호화합니다.
-
 
 ## <a name="making-the-second-hop"></a>두 번째 홉 만들기
 

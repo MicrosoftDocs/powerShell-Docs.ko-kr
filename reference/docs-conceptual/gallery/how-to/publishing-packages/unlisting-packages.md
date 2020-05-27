@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: 목록에서 패키지 제거
-ms.openlocfilehash: b7404420db531ac5d97debd46e1b84c6fdd49d9a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4291b910dcea65b2ca241e55838ea00d4ec53ee4
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80978273"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692355"
 ---
 # <a name="unlisting-packages"></a>목록에서 패키지 제거
 
@@ -32,6 +32,7 @@ PowerShell 갤러리의 목록에서 모듈 또는 스크립트와 같은 패키
 
 패키지를 삭제해야 하는 경우에는 PowerShell 갤러리 관리자에게 문의하세요.
 유효한 삭제 시나리오는 다음과 같습니다.
+
 - 저작권 침해 문제
 - 패키지에 잠재적으로 유해한 콘텐츠가 포함된 경우
 - 패키지에 중요한 데이터가 포함된 경우

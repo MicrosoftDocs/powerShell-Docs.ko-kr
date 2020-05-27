@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC 리소스 디버그
-ms.openlocfilehash: c088e13a25ba31ceebaf52b2d24b5d32b96ae2fc
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 53ee9ea5652ffb577f0c7fba2f240f63816281db
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954260"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83691966"
 ---
 # <a name="debugging-dsc-resources"></a>DSC 리소스 디버그
 
@@ -22,7 +22,6 @@ PowerShell 5.0에서는 구성이 적용됨에 따라 DSC 리소스를 디버그
 [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager)를 호출한 결과를 보면 디버그할 수 있도록 되어 있는지 확인할 수 있습니다.
 
 다음의 PowerShell 출력은 디버그 사용의 결과를 보여 줍니다.
-
 
 ```powershell
 PS C:\DebugTest> $LCM = Get-DscLocalConfigurationManager
@@ -40,7 +39,6 @@ ResourceScriptBreakAll
 
 PS C:\DebugTest>
 ```
-
 
 ## <a name="starting-a-configuration-with-debug-enabled"></a>디버그를 사용하도록 설정된 구성 시작
 DSC 리소스를 디버그하려면 해당 리소스를 호출하는 구성을 시작합니다.
@@ -61,6 +59,7 @@ Configuration PSWebAccess
     }
 PSWebAccess
 ```
+
 구성을 컴파일한 후에는 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration)을 호출하여 구성을 시작합니다.
 이 구성은 LCM(로컬 구성 관리자)이 구성의 첫 번째 리소스를 호출하면 중지됩니다.
 `-Verbose` 및 `-Wait` 매개 변수를 사용하는 경우, 출력에 디버그를 시작하려면 입력해야 하는 줄이 표시됩니다.
@@ -85,6 +84,7 @@ Enter-PSSession -ComputerName TEST-SRV -Credential <credentials>
 Enter-PSHostProcess -Id 9000 -AppDomainName DscPsPluginWkr_AppDomain
 Debug-Runspace -Id 9
 ```
+
 이 시점에서 LCM은 리소스를 호출하고 첫 번째 중단점으로 이동했습니다.
 출력의 마지막 세 줄에는 프로세스에 연결하여 리소스 스크립트의 디버그를 시작하는 방법이 나옵니다.
 
