@@ -2,18 +2,18 @@
 title: PowerShell Core에서 WSMan(WS-Management) 원격
 description: WSMan을 사용하여 PowerShell Core에서 원격 작업
 ms.date: 08/06/2018
-ms.openlocfilehash: 7b090e1463808ab10758bbd417d52fcc16c31366
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: e5f00128bc8ebc1b432cc77a5896a9e09d684109
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83564516"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "62058882"
 ---
 # <a name="ws-management-wsman-remoting-in-powershell-core"></a>PowerShell Core에서 WSMan(WS-Management) 원격
 
 ## <a name="instructions-to-create-a-remoting-endpoint"></a>원격 엔드포인트 만들기 지침
 
-Windows용 PowerShell Core 패키지의 `pwrshplugin.dll`에는 WinRM 플러그인(`Install-PowerShellRemoting.ps1`) 및 설치 스크립트(`$PSHome`)가 들어 있습니다.
+Windows용 PowerShell Core 패키지의 `$PSHome`에는 WinRM 플러그인(`pwrshplugin.dll`) 및 설치 스크립트(`Install-PowerShellRemoting.ps1`)가 들어 있습니다.
 이러한 파일은 엔드포인트가 지정된 경우에 PowerShell이 들어오는 PowerShell 원격 연결을 수락하도록 허용합니다.
 
 ### <a name="motivation"></a>동기
@@ -67,4 +67,4 @@ New-PSSession ... -ConfigurationName "powershell.6.0.0"
 Enter-PSSession ... -ConfigurationName "powershell.6.0.0"
 ```
 
-`New-PSSession`을 지정하지 않는 `Enter-PSSession` 및 `-ConfigurationName` 호출은 기본 PowerShell 엔드포인트인 `microsoft.powershell`을 대상으로 합니다.
+`-ConfigurationName`을 지정하지 않는 `New-PSSession` 및 `Enter-PSSession` 호출은 기본 PowerShell 엔드포인트인 `microsoft.powershell`을 대상으로 합니다.

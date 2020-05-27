@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC WindowsFeature 리소스
-ms.openlocfilehash: 7f9b200b4d10aef6c8a3f76c497f4d60e8062cb5
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d3384b1f45324df6b6b209f25b64d9d77615ad7f
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557400"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "71954630"
 ---
 # <a name="dsc-windowsfeature-resource"></a>DSC WindowsFeature 리소스
 
@@ -35,9 +35,9 @@ WindowsFeature [string] #ResourceName
 
 |속성 |Description |
 |---|---|
-|속성 |추가되었는지 또는 제거되었는지를 확인하려는 역할이나 기능의 이름을 나타냅니다. 이것은 **Get-WindowsFeature** cmdlet의 [Name](/powershell/module/servermanager/Get-WindowsFeature) 속성과 동일하며, 역할이나 기능의 표시 이름은 아닙니다. |
+|속성 |추가되었는지 또는 제거되었는지를 확인하려는 역할이나 기능의 이름을 나타냅니다. 이것은 [Get-WindowsFeature](/powershell/module/servermanager/Get-WindowsFeature) cmdlet의 **Name** 속성과 동일하며, 역할이나 기능의 표시 이름은 아닙니다. |
 |자격 증명 |역할 또는 기능을 추가 또는 제거하는 데 사용할 자격 증명을 나타냅니다. |
-|IncludeAllSubFeature |`$true`Name**속성으로 지정하는 기능의 상태와 함께 모든 필수 하위 기능의 상태를 보증하려면 이 속성을**로 설정하세요. |
+|IncludeAllSubFeature |**Name** 속성으로 지정하는 기능의 상태와 함께 모든 필수 하위 기능의 상태를 보증하려면 이 속성을 `$true`로 설정하세요. |
 |LogPath |리소스 공급자가 작업을 로그하기를 원하는 로그 파일의 경로를 나타냅니다. |
 |원본 |필요한 경우 설치에 사용할 소스 파일의 위치를 나타냅니다. |
 

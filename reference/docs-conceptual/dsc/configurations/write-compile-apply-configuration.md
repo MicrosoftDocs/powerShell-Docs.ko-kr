@@ -2,16 +2,16 @@
 ms.date: 12/12/2018
 keywords: DSC, PowerShell, 구성, 서비스, 설정
 title: 구성 작성, 컴파일 및 적용
-ms.openlocfilehash: eb61e518762b9f13e617ecd4711bfef7a86814ec
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 11de1d4552bc9c438adf9e3dea2059834e11e10c
+ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "76818161"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808302"
 ---
-> 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
-
 # <a name="write-compile-and-apply-a-configuration"></a>구성 작성, 컴파일 및 적용
+
+> 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 이 연습에서는 DSC(필요한 상태 구성) 구성을 만들고 적용하는 과정을 처음부터 끝까지 자세히 설명합니다.
 다음 예제에서는 매우 간단한 구성을 작성하고 적용하는 방법을 알아봅니다. 이 구성은 "HelloWorld.txt" 파일이 로컬 머신에 존재하는지 확인합니다. 해당 파일을 삭제하는 경우 DSC는 다음 업데이트 시 이를 다시 생성합니다.

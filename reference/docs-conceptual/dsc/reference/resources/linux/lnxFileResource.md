@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: Linux용 DSC nxFile 리소스
-ms.openlocfilehash: 71096b2d269340b3568c95071089e114ef5c5db9
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: be5f098d2fe1c8b354c07e6a8f882b8fdf00e1db
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560868"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "71954830"
 ---
 # <a name="dsc-for-linux-nxfile-resource"></a>Linux용 DSC nxFile 리소스
 
@@ -80,7 +80,7 @@ Linux 및 Windows에서는 텍스트 파일에서 기본적으로 서로 다른 
    }
    ```
 
-1. Linux 줄 바꿈 문자를 사용하도록 [$OFS](https://technet.microsoft.com/library/hh849787.aspx) 속성을 설정한 후 **Get-Content**로 PowerShell 스크립트에 있는 파일 내용을 읽습니다.
+1. Linux 줄 바꿈 문자를 사용하도록 **$OFS** 속성을 설정한 후 [Get-Content](https://technet.microsoft.com/library/hh849787.aspx)로 PowerShell 스크립트에 있는 파일 내용을 읽습니다.
 
    ```powershell
    Import-DSCResource -Module nx

@@ -187,9 +187,9 @@ $State="Running"
 ```
 
 > [!NOTE]
-> `parameter` 특성을 사용하는 경우 `validation` 특성을 지정할 필요가 없습니다.
+> `validation` 특성을 사용하는 경우 `parameter` 특성을 지정할 필요가 없습니다.
 
-`parameter`about_Functions_Advanced_Parameters[에서 ](/powershell/module/microsoft.powershell.core/about/about_Functions_Advanced_Parameters) 및 validation 특성에 대해 자세히 알아보세요.
+[about_Functions_Advanced_Parameters](/powershell/module/microsoft.powershell.core/about/about_Functions_Advanced_Parameters)에서 `parameter` 및 validation 특성에 대해 자세히 알아보세요.
 
 ## <a name="fully-parameterized-configuration"></a>완전 매개 변수화된 구성
 

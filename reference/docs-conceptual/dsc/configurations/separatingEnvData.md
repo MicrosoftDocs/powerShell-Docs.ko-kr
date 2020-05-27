@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 구성 및 환경 데이터 분리
-ms.openlocfilehash: 076e17054cfa20fad5ca925df126e239a77268db
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: b16243fc9096f786a25ed20868e94a3aa85e403e
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692426"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "71954440"
 ---
 # <a name="separating-configuration-and-environment-data"></a>구성 및 환경 데이터 분리
 
@@ -32,14 +32,14 @@ ms.locfileid: "83692426"
 ```powershell
 Configuration MyDscConfiguration {
 
-  Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
+    Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
     {
-  WindowsFeature IISInstall {
-    Ensure = 'Present'
-    Name   = 'Web-Server'
-  }
+        WindowsFeature IISInstall {
+            Ensure = 'Present'
+            Name   = 'Web-Server'
+        }
 
- }
+    }
     Node $AllNodes.Where{$_.Role -eq "VMHost"}.NodeName
     {
         WindowsFeature HyperVInstall {
@@ -82,7 +82,7 @@ Mode                LastWriteTime         Length Name
 -a----        3/31/2017   5:09 PM           1970 VM-2.mof
 ```
 
-`$MyData`는 각각 `NodeName` 및 `Role`을 가진 서로 다른 두 노드를 지정합니다. 구성에서는 **(특히**)로부터 받는 노드의 컬렉션을 받아 동적으로 `$MyData`Node`$AllNodes` 블록을 만들고 `Role` 속성을 기준으로 컬렉션을 필터링합니다.
+`$MyData`는 각각 `NodeName` 및 `Role`을 가진 서로 다른 두 노드를 지정합니다. 구성에서는 `$MyData` (특히 `$AllNodes`)로부터 받는 노드의 컬렉션을 받아 동적으로 **Node** 블록을 만들고 `Role` 속성을 기준으로 컬렉션을 필터링합니다.
 
 ## <a name="using-configuration-data-to-define-development-and-production-environments"></a>구성 데이터를 사용하여 개발 및 프로덕션 환경 정의
 
@@ -102,7 +102,7 @@ Mode                LastWriteTime         Length Name
             SQLServerName   = "MySQLServer"
             SqlSource       = "C:\Software\Sql"
             DotNetSrc       = "C:\Software\sxs"
-            WebSiteName     = "New website"
+        WebSiteName     = "New website"
         },
 
         @{
@@ -253,12 +253,11 @@ Mode                LastWriteTime         Length Name
 
 특수 변수 **$ConfigurationData**를 사용하여 추가 키에 액세스합니다.
 이 예에서 `ConfigFileContents`는 다음과 같은 줄로 액세스됩니다.
-
 ```powershell
  Contents = $ConfigurationData.NonNodeData.ConfigFileContents
  ```
-
  `File` 리소스 블록에서
+
 
 ```powershell
 $MyData =
@@ -312,8 +311,8 @@ configuration WebsiteConfig
 }
 ```
 
-## <a name="see-also"></a>참고 항목
 
+## <a name="see-also"></a>참고 항목
 - [구성 데이터 사용](configData.md)
 - [구성 데이터의 자격 증명 옵션](configDataCredentials.md)
 - [DSC 구성](configurations.md)

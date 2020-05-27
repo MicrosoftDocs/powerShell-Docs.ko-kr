@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC 환경 리소스
-ms.openlocfilehash: 5670646b6e94019f436d85296deff4de8da920f6
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d6d3b4a2086be28fbfa2bf200acef9b13b7b7825
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560358"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "71954720"
 ---
 # <a name="dsc-environment-resource"></a>DSC 환경 리소스
 
@@ -34,7 +34,7 @@ Environment [string] #ResourceName
 |속성 |Description |
 |---|---|
 |속성 |특정 상태를 확인하려는 환경 변수의 이름을 나타냅니다. |
-|경로 |구성 중인 환경 변수를 정의합니다. 변수가 `$true`Path**변수이면 이 속성을**로 설정하고, 그렇지 않으면 `$false`로 설정합니다. 기본값은 `$false`입니다. 구성되고 있는 변수가 **Path** 변수라면, **Value** 속성을 통해 제공된 값은 기존 값에 추가됩니다. |
+|경로 |구성 중인 환경 변수를 정의합니다. 변수가 **Path** 변수이면 이 속성을 `$true`로 설정하고, 그렇지 않으면 `$false`로 설정합니다. 기본값은 `$false`입니다. 구성되고 있는 변수가 **Path** 변수라면, **Value** 속성을 통해 제공된 값은 기존 값에 추가됩니다. |
 |값 |환경 변수에 할당할 값입니다. |
 
 ## <a name="common-properties"></a>공용 속성

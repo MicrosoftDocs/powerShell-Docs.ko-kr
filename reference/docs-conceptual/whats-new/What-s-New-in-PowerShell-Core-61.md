@@ -2,12 +2,12 @@
 title: PowerShell Core 6.1의 새로운 기능
 description: PowerShell Core 6.1에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 09/13/2018
-ms.openlocfilehash: 070ecb871003487e2f1ff7b0d56c44c562acaaf8
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 079d5a472c743ce94f2e93143c1dcb4ff406951f
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565083"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "78277745"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>PowerShell Core 6.1의 새로운 기능
 
@@ -92,7 +92,8 @@ Measure-Command {Get-Content .\foo.json | ConvertFrom-Json}
 
 Windows 10 1809 업데이트 및 Windows Server 2019에서 몇 가지 미해결 PowerShell 모듈을 업데이트하여 PowerShell Core와 호환되도록 표시했습니다.
 
-PowerShell Core 6.1이 시작되면 자동으로 `$windir\System32`가 `PSModulePath` 환경 변수의 일부로 포함됩니다. 단, 해당 `Get-Module`이 `Import-Module`와 호환되는 것으로 표시되는 경우 모듈을 `CompatiblePSEdition` 및 `Core`에만 노출합니다.
+PowerShell Core 6.1이 시작되면 자동으로 `$windir\System32`가 `PSModulePath` 환경 변수의 일부로 포함됩니다. 단, 해당 `CompatiblePSEdition`이 `Core`와 호환되는 것으로 표시되는 경우 모듈을 `Get-Module` 및 `Import-Module`에만 노출합니다.
+
 
 ```powershell
 Get-Module -ListAvailable
@@ -197,7 +198,7 @@ Markdown은 HTML로 렌더링할 수 있는 기본 서식의 읽을 수 있는 �
 
 [PowerShell Direct](/virtualization/hyper-v-on-windows/user-guide/powershell-direct)는 사용자가 네트워크 연결 또는 기타 원격 관리 서비스 없이 Hyper-V VM 또는 컨테이너에 연결할 수 있도록 허용하는 PowerShell 및 Hyper-V의 기능입니다.
 
-과거에 PowerShell Direct는 받은 편지함 Windows PowerShell 인스턴스를 사용하여 컨테이너에 연결되었습니다. 이제 PowerShell Direct는 먼저 `pwsh.exe` 환경 변수에서 사용 가능한 `PATH`를 사용하여 연결을 시도합니다. `pwsh.exe`를 사용할 수 없는 경우 PowerShell Direct는 `powershell.exe`를 다시 사용합니다.
+과거에 PowerShell Direct는 받은 편지함 Windows PowerShell 인스턴스를 사용하여 컨테이너에 연결되었습니다. 이제 PowerShell Direct는 먼저 `PATH` 환경 변수에서 사용 가능한 `pwsh.exe`를 사용하여 연결을 시도합니다. `pwsh.exe`를 사용할 수 없는 경우 PowerShell Direct는 `powershell.exe`를 다시 사용합니다.
 
 ### <a name="enable-psremoting-now-creates-separate-remoting-endpoints-for-preview-versions"></a>`Enable-PSRemoting`은 이제 별도의 원격 엔드포인트를 미리 보기 버전으로 만듭니다.
 
@@ -321,7 +322,7 @@ $PSCustomObject.Count
 1
 ```
 
-이 작업에는 `ForEach` 항목에서 작동하고 필터링할 수 있도록 허용하는 `Where` 및 `PSCustomObject` 메서드도 포함됩니다.
+이 작업에는 `PSCustomObject` 항목에서 작동하고 필터링할 수 있도록 허용하는 `ForEach` 및 `Where` 메서드도 포함됩니다.
 
 ```powershell
 $PSCustomObject.ForEach({$_.foo + 1})
@@ -408,7 +409,7 @@ $certThumbPrint = (Get-PfxCertificate -FilePath $certFile -Password $certPass ).
 
 ### <a name="removal-of-the-more-function"></a>`more` 함수 제거
 
-과거에 PowerShell은 Windows에서 `more`을 래핑한 `more.com`라는 함수를 제공했습니다. 해당 함수는 이제 제거되었습니다.
+과거에 PowerShell은 Windows에서 `more.com`을 래핑한 `more`라는 함수를 제공했습니다. 해당 함수는 이제 제거되었습니다.
 
 또한 `help` 함수가 Windows에서 `more.com`을 사용하거나 비Windows 플랫폼에서 `$env:PAGER`에 의해 지정된 시스템의 기본 호출기를 사용하도록 변경되었습니다.
 
@@ -467,7 +468,7 @@ Name                                Methods              Properties
 Win32_OperatingSystem               {Reboot, Shutdown... {BootDevice, BuildNumber, BuildType, Caption...}
 ```
 
-### <a name="-lp-alias-for-all--literalpath-parameters"></a>모든 `-lp` 매개 변수에 대한 `-LiteralPath` 별칭
+### <a name="-lp-alias-for-all--literalpath-parameters"></a>모든 `-LiteralPath` 매개 변수에 대한 `-lp` 별칭
 
 [@kvprasoon](https://github.com/kvprasoon) 덕분에 이제 `-lp` 매개 변수가 있는 모든 기본 제공 PowerShell cmdlet에 대해 매개 변수 별칭 `-LiteralPath`가 있습니다.
 

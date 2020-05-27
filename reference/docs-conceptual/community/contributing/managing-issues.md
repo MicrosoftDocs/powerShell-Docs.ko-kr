@@ -3,12 +3,12 @@ title: 문제 관리 방법
 description: 이 문서에서는 PowerShell-Docs 팀이 끌어오기 요청을 관리하는 방법을 설명합니다.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: cd7aba83d42a6a2eba1ce73910fdd34096342c21
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 018200f1a9384f1ea956c9b27a7605db21f2da9e
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79060278"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692522"
 ---
 # <a name="how-we-manage-issues"></a>문제 관리 방법
 
@@ -60,21 +60,25 @@ PowerShell Docs 팀은 매주 한 번 회의를 열고 마지막 회의 이후 �
 - 고객에게 해당 내용이 제품 피드백이라는 설명을 입력하고 적절한 피드백 채널에 대한 링크를 제공합니다.
 - 선택 사항: 문제를 적절한 제품 피드백 위치로 복사하고 복사된 항목에 대한 링크를 추가한 다음 문제를 종결합니다. 문제를 UserVoice로 복사하지 마세요.
 
-  | DocSet    | 제품 피드백 URL                                         |
-  | --------- | ------------------------------------------------------------ |
-  | developer | https://github.com/PowerShell/PowerShell/issues/new/choose   |
-  | dsc       | https://windowsserver.uservoice.com/forums/301869-powershell |
-  | gallery   | https://github.com/powershell/powershellgallery/issues/new   |
-  | jea       | https://github.com/powershell/jea/issues/new                 |
-  | reference | https://github.com/PowerShell/PowerShell/issues/new/choose   |
-  | wmf       | https://windowsserver.uservoice.com/forums/301869-powershell |
+  | DocSet    | 제품 피드백 URL                                           |
+  | --------- | -------------------------------------------------------------- |
+  | developer | `https://github.com/PowerShell/PowerShell/issues/new/choose`   |
+  | dsc       | `https://windowsserver.uservoice.com/forums/301869-powershell` |
+  | gallery   | `https://github.com/powershell/powershellgallery/issues/new`   |
+  | jea       | `https://github.com/powershell/jea/issues/new`                 |
+  | reference | `https://github.com/PowerShell/PowerShell/issues/new/choose`   |
+  | wmf       | `https://windowsserver.uservoice.com/forums/301869-powershell` |
 
 ### <a name="support-requests"></a>지원 요청
 
 - 지원 질문이 단순한 경우 정중히 답변하고 문제를 종결합니다.
 - 질문이 더 복잡하거나 제출자가 추가 질문으로 회신하는 경우 포럼 및 지원 채널로 리디렉션합니다. 포럼으로 리디렉션하기 위한 텍스트 제안:
 
-    > 이 포럼은 이러한 종류의 질문에 적합하지 않습니다. 커뮤니티 지원 포럼에 질문을 게시해 보세요. 커뮤니티 포럼 목록은 다음을 참조하세요. https://docs.microsoft.com/powershell/scripting/community/community-support
+  ```Markdown
+  > This is not the right forum for these kinds of questions. Try posting your question in a
+  > community support forum. For a list of community forums see:
+  > https://docs.microsoft.com/powershell/scripting/community/community-support
+  ```
 
 ### <a name="code-of-conduct-violations"></a>사용 규정 위반
 
