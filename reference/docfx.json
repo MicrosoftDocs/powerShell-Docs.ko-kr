@@ -134,7 +134,7 @@
         "7/**.md": "reference",
         "docs-conceptual/**.md": "conceptual"
       },
-            "manager": { "**/**.md": "carmonm" },
+            "manager": { "**/**.md": "daberry" },
             "ms.tgt_pltfr": { "**/**.md": "windows, macos, linux" },
       "author": {
         "**/CimCmdlets/**.md": "SteveL-MSFT",
@@ -158,6 +158,8 @@
         "**/PSScheduledJob/**.md": "SteveL-MSFT",
         "**/PSWorkflow/**.md": "SteveL-MSFT",
         "**/PSWorkflowUtility/**.md": "SteveL-MSFT",
+        "docs-conceptual/learn/deep-dive/**.md": "sdwheeler",
+        "docs-conceptual/learn/ps101/**.md": "mikefrobbins",
         "docs-conceptual/learn/remoting/jea/**.md": "rpsqrd",
         "docs-conceptual/gallery/**/**.md": "SydneyhSmith",
         "docs-conceptual/dsc/**/**.md": "mgreenegit",
@@ -187,6 +189,8 @@
         "**/PSWorkflow/**.md": "slee",
         "**/PSWorkflowUtility/**.md": "slee",
         "docs-conceptual/learn/remoting/jea/**/**.md": "ryanpu",
+        "docs-conceptual/learn/deep-dive/**.md": "sewhee",
+        "docs-conceptual/learn/ps101/**.md": "mirobb",
         "docs-conceptual/gallery/**/**.md": "sysmith",
         "docs-conceptual/dsc/**/**.md": "migreene",
         "docs-conceptual/developer/**/**.md": "jaiello",
