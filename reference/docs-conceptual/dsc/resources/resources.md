@@ -2,12 +2,12 @@
 ms.date: 02/28/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC 리소스
-ms.openlocfilehash: 863898d910cc3c75c3e5977a5b6b0657ba7ed512
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: bae08447763a3bdb6ee8fcdd4f8d49209a5de805
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278252"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692208"
 ---
 # <a name="dsc-resources"></a>DSC 리소스
 
@@ -22,9 +22,9 @@ DSC(필요한 상태 구성) 리소스에서는 DSC 구성에 대한 구성 요�
 각 리소스에는 [구성](../configurations/configurations.md)에서 리소스를 사용하는 데 필요한 구문을 결정하는 *스키마가 있습니다.
 리소스 스키마는 다음 방법으로 정의할 수 있습니다.
 
-- **'Schema.Mof'** 파일: 대부분의 리소스는 [Managed Object Format](/windows/desktop/wmisdk/managed-object-format--mof-)을 사용하여 'schema.mof' 파일에서 해당 ‘스키마’를 정의합니다. 
-- **'\<리소스 이름\>.schema.psm1'** 파일: [복합 리소스](../configurations/compositeConfigs.md)는 [매개 변수 블록](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters)을 사용하여 '<ResourceName>.schema.psm1' 파일에서 해당 ‘스키마’를 정의합니다. 
-- **'\<리소스 이름\>.psm1'** 파일: 클래스 기반 DSC 리소스는 클래스 정의에서 해당 ‘스키마’를 정의합니다.  구문 항목은 클래스 속성으로 표시됩니다. 자세한 내용은 [about_Classes](/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc)를 참조하세요.
+- `Schema.Mof` 파일: 대부분의 리소스는 [Managed Object Format](/windows/desktop/wmisdk/managed-object-format--mof-)을 사용하여 'schema.mof' 파일에서 해당 ‘스키마’를 정의합니다.
+- `<Resource Name>.schema.psm1`파일: [복합 리소스](../configurations/compositeConfigs.md)는 [매개 변수 블록](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters)을 사용하여 `<ResourceName>.schema.psm1` 파일에서 해당 ‘스키마’를 정의합니다.
+- `<Resource Name>.psm1` 파일: 클래스 기반 DSC 리소스는 클래스 정의에서 해당 ‘스키마’를 정의합니다. 구문 항목은 클래스 속성으로 표시됩니다. 자세한 내용은 [about_Classes](/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc)를 참조하세요.
 
 DSC 리소스의 구문을 검색하려면 [Get-DSCResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) cmdlet과 함께 `-Syntax` 매개 변수를 사용합니다. 이 사용법은 [Get-Command](/powershell/module/microsoft.powershell.core/get-command)와 함께 `-Syntax` 매개 변수를 사용하여 cmdlet 구문을 가져오는 것과 비슷합니다. 표시되는 출력은 지정하는 리소스의 리소스 블록에 사용되는 템플릿을 보여 줍니다.
 
@@ -32,7 +32,7 @@ DSC 리소스의 구문을 검색하려면 [Get-DSCResource](/powershell/module/
 Get-DscResource -Syntax Service
 ```
 
-표시되는 출력은 아래 출력과 비슷하지만, 이 리소스의 구문은 나중에 변경될 수 있습니다. cmdlet 구문과 같이 대괄호 안에 표시되는 ‘키’는 선택 사항입니다.  형식은 각 키에 필요한 데이터 형식을 지정합니다.
+표시되는 출력은 아래 출력과 비슷하지만, 이 리소스의 구문은 나중에 변경될 수 있습니다. cmdlet 구문과 같이 대괄호 안에 표시되는 ‘키’는 선택 사항입니다. 형식은 각 키에 필요한 데이터 형식을 지정합니다.
 
 > [!NOTE]
 > **Ensure** 키는 기본적으로 "Present"로 설정되므로 선택 사항입니다.
