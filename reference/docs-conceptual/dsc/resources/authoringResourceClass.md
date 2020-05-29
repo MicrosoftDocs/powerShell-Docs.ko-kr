@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: PowerShell 클래스를 사용하여 사용자 지정 DSC 리소스 작성
-ms.openlocfilehash: 34356f65bcb83153e7395a16d2a4a5cf2e507332
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: f96a567253ab4808381c004df243c96886948407
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71952830"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692221"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>PowerShell 클래스를 사용하여 사용자 지정 DSC 리소스 작성
 
@@ -500,7 +500,7 @@ class FileResource {
 
 모듈에서는 여러 클래스 기반 DSC 리소스를 정의할 수 있습니다. 다음 방법으로 폴더 구조를 만들 수 있습니다.
 
-1. "<ModuleName>.psm1" 파일에서 첫 번째 리소스를 정의하고 **DSCResources** 폴더 아래에서 후속 리소스를 정의합니다.
+1. `<ModuleName>.psm1` 파일에서 첫 번째 리소스를 정의하고 **DSCResources** 폴더 아래에서 후속 리소스를 정의합니다.
 
    ```
    $env:ProgramFiles\WindowsPowerShell\Modules (folder)

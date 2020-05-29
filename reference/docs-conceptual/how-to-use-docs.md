@@ -1,13 +1,13 @@
 ---
-ms.date: 10/20/2019
+ms.date: 05/22/2020
 keywords: powershell,cmdlet
 title: PowerShell 설명서를 사용하는 방법
-ms.openlocfilehash: 50b054ddc21d55946969414688306fc0d15a5adf
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 259eb1eea1dc7e8b5ae5730f97c938b838a320bf
+ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80082827"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808268"
 ---
 # <a name="how-to-use-the-powershell-documentation"></a>PowerShell 설명서를 사용하는 방법
 
@@ -38,3 +38,15 @@ Major  Minor  Build  Revision
 -----  -----  -----  --------
 5      1      18362  145
 ```
+
+## <a name="finding-articles-for-previous-versions"></a>이전 버전에 대한 문서 찾기
+
+이전 버전의 PowerShell에 대한 설명서는 [이전 버전](https://aka.ms/PSLegacyDocs) 사이트에서 보관되어 있습니다.
+
+이 사이트에는 다음 항목에 대한 설명서가 포함되어 있습니다.
+
+- PowerShell 3.0
+- PowerShell 4.0
+- PowerShell 5.0
+- PowerShell 워크플로
+- PowerShell 웹 액세스

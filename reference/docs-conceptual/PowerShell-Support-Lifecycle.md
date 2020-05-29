@@ -2,12 +2,12 @@
 title: PowerShell Core 지원 수명 주기
 description: PowerShell Core에 대한 정책 관리 지원
 ms.date: 03/09/2020
-ms.openlocfilehash: c319371778eb4615559ae12e0cd153a535ed22bf
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: e7ec0fd9a702b7d23a784eff6e730fc3a6c30467
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500983"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83560732"
 ---
 # <a name="powershell-support-lifecycle"></a>PowerShell 지원 수명 주기
 
@@ -23,7 +23,7 @@ PowerShell은 [유료 지원][], [Microsoft 기업계약][enterprise-agreement] 
 
 ## <a name="lifecycle-of-powershell-7"></a>PowerShell 7의 수명 주기
 
-PowerShell 7 릴리스에서 PowerShell은 [Microsoft 최신 수명 주기 정책][modern]에 따라 계속 지원되며 지원 날짜는 [.NET Core의 지원 수명 주기][Long-Term]와 관련됩니다. 이 서비스 방식에서 고객은 LTS(장기 지원) 릴리스 또는 현재 릴리스를 선택할 수 있습니다. PowerShell 7.0은 LTS 릴리스입니다. 해당 지원은 .NET Core 3.1 지원을 마지막으로 종료됩니다. 다음 LTS 릴리스는 다음 .NET Core LTS 릴리스를 따릅니다. 현재 종료 지원 날짜에 대한 자세한 내용은 [PowerShell 릴리스 수명 종료 표](#powershell-releases-end-of-life)을 참조하세요. LTS 릴리스 업데이트에는 기존 워크로드에 대 한 영향을 방지하거나 최소화하도록 설계된 중요 보안 및 서비스 업데이트/수정 사항만 포함됩니다.
+PowerShell 7 릴리스에서 PowerShell은 [Microsoft 최신 수명 주기 정책][modern]에 따라 계속 지원되며 지원 날짜는 [.NET Core의 지원 수명 주기][Long-Term]와 관련됩니다. 이 서비스 방식에서 고객은 LTS(장기 지원) 릴리스 또는 현재 릴리스를 선택할 수 있습니다. PowerShell 7.0은 LTS 릴리스입니다. 해당 지원은 .NET Core 3.1 지원을 마지막으로 종료됩니다. 다음 LTS 릴리스는 다음 .NET Core LTS 릴리스를 따릅니다. 현재 종료 지원 날짜에 대한 자세한 내용은 [PowerShell 릴리스 수명 종료 표](#powershell-releases-end-of-life)를 참조하세요. LTS 릴리스 업데이트에는 기존 워크로드에 대 한 영향을 방지하거나 최소화하도록 설계된 중요 보안 및 서비스 업데이트/수정 사항만 포함됩니다.
 
 현재 릴리스는 LTS 릴리스 간에 발생하는 릴리스입니다. 현재 릴리스에는 중요 수정 사항, 혁신 및 새 기능이 포함될 수 있습니다. 현재 릴리스는 다음 현재 릴리스 또는 LTS 릴리스 이후 3개월 동안 지원됩니다.
 
@@ -139,6 +139,17 @@ PowerShell 7은 Windows PowerShell용으로 작성 된 기존 PowerShell 모듈�
 
 [실험적 기능][]은 [커뮤니티 지원](#community-support)으로 제한됩니다.
 
+## <a name="security-servicing-criteria"></a>보안 서비스 기준
+
+PowerShell은 [Windows에 대한 Microsoft 보안 서비스 기준][]을 따릅니다.
+아래 표에서는 서비스 조건을 충족하는 기능과 그렇지 않은 기능을 간략하게 설명합니다.
+
+| 기능                          | Type             |
+|----------------------------------|------------------|
+| 실행 정책                 | 심층 방어 |
+| 시스템 잠금 - AppLocker 사용 | 심층 방어 |
+| 시스템 잠금 - WDAC 사용      | 보안 기능 |
+
 ## <a name="release-history"></a>릴리스 기록
 
 다음 표에는 PowerShell의 주요 릴리스 일정이 포함되어 있습니다. 이 표는 기록 참조 목적으로 제공되는 것으로, 지원 수명 주기를 결정하는 데 사용하기 위한 것이 아닙니다.
@@ -172,3 +183,4 @@ PowerShell 7은 Windows PowerShell용으로 작성 된 기존 PowerShell 모듈�
 [모듈 호환성 목록]: /powershell/scripting/whats-new/module-compatibility
 [WindowsPSModulePath]: https://www.powershellgallery.com/packages/WindowsPSModulePath/
 [실험적 기능]: /powershell/module/microsoft.powershell.core/about/about_powershell_config#experimentalfeatures
+[Windows에 대한 Microsoft 보안 서비스 기준]: https://www.microsoft.com/en-us/msrc/windows-security-servicing-criteria

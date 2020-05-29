@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: MOF를 사용하여 사용자 지정 DSC 리소스 작성
-ms.openlocfilehash: 24e9d15bcbe1eddd297daeb04e0713c443e52c38
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7dd107431e756e5cbfc2d6babec41331b89743cc
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71952900"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83692233"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>MOF를 사용하여 사용자 지정 DSC 리소스 작성
 
@@ -67,7 +67,7 @@ class Demo_IISWebsite : OMI_BaseResource
 
 ### <a name="writing-the-resource-script"></a>리소스 스크립트 작성
 
-리소스 스크립트는 리소스의 논리를 구현합니다. 이 모듈에서는 **Get-TargetResource**, **Set-TargetResource** 및 **Test-TargetResource**라는 세 가지 함수를 포함해야 합니다. 세 함수는 모두 리소스용으로 만든 MOF 스키마에 정의된 속성 집합과 동일한 매개 변수 집합을 사용해야 합니다. 이 문서에서는 이 속성 세트를 "리소스 속성"이라고 합니다. 이 세 개의 함수를 <ResourceName>.psm1이라는 파일에 저장합니다. 다음 예제에서는 이 함수들이 Demo_IISWebsite.psm1이라는 파일에 저장됩니다.
+리소스 스크립트는 리소스의 논리를 구현합니다. 이 모듈에서는 **Get-TargetResource**, **Set-TargetResource** 및 **Test-TargetResource**라는 세 가지 함수를 포함해야 합니다. 세 함수는 모두 리소스용으로 만든 MOF 스키마에 정의된 속성 집합과 동일한 매개 변수 집합을 사용해야 합니다. 이 문서에서는 이 속성 세트를 "리소스 속성"이라고 합니다. 이 세 개의 함수를 `<ResourceName>.psm1`이라는 파일에 저장합니다. 다음 예제에서는 이 함수들이 Demo_IISWebsite.psm1이라는 파일에 저장됩니다.
 
 > [!NOTE]
 > 리소스에서 동일한 구성 스크립트를 두 번 이상 실행해도 오류가 표시되지 않고 리소스는 스크립트를 한 번 실행하는 것과 동일한 상태로 유지되어야 합니다. 이 작업을 해내려면 **Get-TargetResource** 및 **Test-TargetResource** 함수가 리소스를 변경하지 않고 그대로 두고, **Set-TargetResource** 함수를 동일한 매개 변수 값으로 순서대로 두 번 이상 호출하는 것은 한 번 호출하는 것과 항상 동일한지 확인합니다.
@@ -221,7 +221,7 @@ $result
 
 ### <a name="creating-the-module-manifest"></a>모듈 매니페스트 만들기
 
-마지막으로, **New-ModuleManifest** cmdlet을 사용하여 사용자 지정 리소스 모듈에 대한 <ResourceName>.psd1 파일을 정의하세요. 이 cmdlet을 호출할 때에는 이전 섹션에서 설명한 스크립트 모듈(.psm1) 파일을 참조합니다. 내보낼 함수 목록에 **Get-TargetResource**, **Set-TargetResource** 및 **Test-TargetResource**를 포함하세요. 다음은 매니페스트 파일의 예입니다.
+마지막으로, **New-ModuleManifest** cmdlet을 사용하여 사용자 지정 리소스 모듈에 대한 `<ResourceName>.psd1` 파일을 정의하세요. 이 cmdlet을 호출할 때에는 이전 섹션에서 설명한 스크립트 모듈(.psm1) 파일을 참조합니다. 내보낼 함수 목록에 **Get-TargetResource**, **Set-TargetResource** 및 **Test-TargetResource**를 포함하세요. 다음은 매니페스트 파일의 예입니다.
 
 ```powershell
 # Module manifest for module 'Demo.IIS.Website'

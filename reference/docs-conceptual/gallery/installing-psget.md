@@ -3,12 +3,12 @@ ms.date: 09/19/2019
 contributor: manikb
 keywords: gallery,powershell,cmdlet,psget
 title: PowerShellGet 설치
-ms.openlocfilehash: 69dc851c54089b47fb19e5b32990d579d26effb9
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: f42eb0df101eb63a5dc267196fa9f666747b8e35
+ms.sourcegitcommit: 23ea4a36ee85f923684657de5313a5adf0b6b094
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328204"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83727798"
 ---
 # <a name="installing-powershellget"></a>PowerShellGet 설치
 
@@ -48,7 +48,12 @@ Exit
 
 이러한 지침은 **PackageManagement 미리 보기**가 설치되어 있거나 **PowerShellGet** 버전이 설치되어 있지 않은 컴퓨터에 적용됩니다.
 
-`Save-Module` cmdlet은 두 명령 세트에 모두 사용됩니다. `Save-Module`은 등록된 리포지토리에서 모듈 및 모든 종속성을 다운로드하여 저장합니다. 모듈의 최신 버전은 로컬 컴퓨터의 지정된 경로에 저장되지만 설치되지는 않습니다. 자세한 내용은 [Save-Module](/powershell/module/PowershellGet/Save-Module)을 참조하세요.
+`Save-Module` cmdlet은 두 명령 세트에 모두 사용됩니다. `Save-Module`은 등록된 리포지토리에서 모듈 및 모든 종속성을 다운로드하여 저장합니다. 모듈의 최신 버전은 로컬 컴퓨터의 지정된 경로에 저장되지만 설치되지는 않습니다. PowerShell 3.0 또는 4.0에서 모듈을 설치하려면 모듈이 저장된 폴더를 `$env:ProgramFiles\WindowsPowerShell\Modules`에 복사합니다.
+
+자세한 내용은 [Save-Module](/powershell/module/PowershellGet/Save-Module)을 참조하세요.
+
+> [!NOTE]
+> PowerShell 3.0 및 PowerShell 4.0은 한 가지 버전의 모듈만 지원합니다. PowerShell 5.0부터 모듈은 `<modulename>\<version>`에 설치됩니다. 이렇게 하면 여러 버전을 함께 설치할 수 있습니다. `Save-Module`을 사용하여 모듈을 다운로드한 후 파일을 `<modulename>\<version>`에서 대상 머신의 `<modulename>` 폴더로 복사해야 합니다.
 
 #### <a name="computers-with-the-packagemanagement-preview-installed"></a>PackageManagement 미리 보기가 설치된 컴퓨터
 
@@ -63,8 +68,8 @@ Exit
 1. 관리자 권한으로 PowerShell 콘솔을 다시 열고 다음 명령을 실행합니다.
 
    ```powershell
-   Copy-Item "C:\LocalFolder\PowerShellGet\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\" -Recurse -Force
-   Copy-Item "C:\LocalFolder\PackageManagement\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\" -Recurse -Force
+   Copy-Item "C:\LocalFolder\PowerShellGet\<version>\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\" -Recurse -Force
+   Copy-Item "C:\LocalFolder\PackageManagement\<version>\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\" -Recurse -Force
    ```
 
 #### <a name="computers-without-powershellget"></a>PowerShellGet이 없는 컴퓨터

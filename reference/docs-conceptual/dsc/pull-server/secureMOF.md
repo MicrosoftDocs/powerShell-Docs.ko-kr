@@ -2,12 +2,12 @@
 ms.date: 10/31/2017
 keywords: dsc,powershell,configuration,setup
 title: MOF 파일 보안
-ms.openlocfilehash: ab03db8bf4ed7d412691ae87fd12da5131607886
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 30b7ff276781b398aeae94e710c810f5fccafdfb
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278473"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556390"
 ---
 # <a name="securing-the-mof-file"></a>MOF 파일 보안
 
@@ -40,14 +40,14 @@ DSC 구성을 보호하는 데 사용되는 자격 증명을 적절히 암호화
 
 ## <a name="certificate-requirements"></a>인증서 요구 사항
 
-자격 증명 암호화를 적용하려면 DSC 구성을 작성하는 데 사용되는 컴퓨터에서 _신뢰할 수 있는_**대상 노드**에서 공개 키 인증서를 사용할 수 있어야 합니다. 이 공개 키 인증서를 DSC 자격 증명 암호화에 사용하려면 다음과 같은 특정 요구 사항을 충족해야 합니다.
+자격 증명 암호화를 적용하려면 DSC 구성을 작성하는 데 사용되는 컴퓨터에서 **신뢰할 수 있는**_대상 노드_에서 공개 키 인증서를 사용할 수 있어야 합니다. 이 공개 키 인증서를 DSC 자격 증명 암호화에 사용하려면 다음과 같은 특정 요구 사항을 충족해야 합니다.
 
 1. **키 사용**:
-   - 'KeyEncipherment' 및 'DataEncipherment'를 포함해야 합니다.
-   - '디지털 서명'을 포함하지 _않아야_ 합니다.
+   - 포함해야 함: 'KeyEncipherment' 및 'DataEncipherment'.
+   - 포함하지 _않아야_ 함: 'Digital Signature'.
 2. **확장된 키 사용**:
-   - 문서 암호화(1.3.6.1.4.1.311.80.1)를 포함해야 합니다.
-   - 클라이언트 인증(1.3.6.1.5.5.7.3.2) 및 서버 인증(1.3.6.1.5.5.7.3.1)을 포함하지 _않아야_ 합니다.
+   - 포함해야 함: 문서 암호화(1.3.6.1.4.1.311.80.1).
+   - 포함하지 _않아야_ 함: 클라이언트 인증(1.3.6.1.5.5.7.3.2) 및 서버 인증(1.3.6.1.5.5.7.3.1).
 3. 인증서에 대한 프라이빗 키를 *대상 노드_에서 사용할 수 있어야 합니다.
 4. 인증서의 **공급자**는 "Microsoft RSA SChannel Cryptographic Provider"여야 합니다.
 
@@ -303,8 +303,8 @@ configuration CredentialEncryptionExample
 
 이 시점에서 두 개의 파일을 출력하는 구성을 실행할 수 있습니다.
 
-- 로컬 컴퓨터 저장소에 저장되어 있고 지문으로 식별되는 인증서를 사용하여 자격 증명을 해독하도록 로컬 구성 관리자를 구성하는 *.meta.mof 파일.
-  [`Set-DscLocalConfigurationManager`](https://technet.microsoft.com/library/dn521621.aspx)가 *.meta.mof 파일을 적용합니다.
+- 로컬 머신 저장소에 저장되어 있고 지문으로 식별되는 인증서를 사용하여 자격 증명을 해독하도록 로컬 구성 관리자를 구성하는 \*.meta.mof 파일.
+  [`Set-DscLocalConfigurationManager`](https://technet.microsoft.com/library/dn521621.aspx)가 \*.meta.mof 파일을 적용합니다.
 - 실제로 구성을 적용하는 MOF 파일. Start-DscConfiguration이 구성을 적용합니다.
 
 다음 명령들은 해당 단계를 수행합니다.

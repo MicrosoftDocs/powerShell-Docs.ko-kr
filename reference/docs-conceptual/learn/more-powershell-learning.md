@@ -1,25 +1,25 @@
 ---
 ms.date: 06/18/2019
 keywords: powershell,cmdlet
-title: 추가 PowerShell 학습
-ms.openlocfilehash: 9d756d24e46215bea5cb9530c2628b996327cb87
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+title: PowerShell 학습 리소스
+ms.openlocfilehash: 5681fd903b323ab3cf87dc212ba64dbfdf2d78e7
+ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74416736"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808438"
 ---
-# <a name="more-powershell-learning"></a>추가 PowerShell 학습
+# <a name="powershell-learning-resources"></a>PowerShell 학습 리소스
 
-PowerShell에 대해 알 수 있는 기타 소스
+PowerShell을 알아보기 위한 추가 리소스입니다.
 
-## <a name="resources-for-powershell-users"></a>PowerShell 사용자를 위한 리소스
+## <a name="blogs-and-community"></a>블로그 및 커뮤니티
 
 명령줄에서 사용할 수 있는 도움말 외에도 PowerShell을 실행하려는 사용자는 다음 리소스를 통해 추가 정보를 얻을 수 있습니다.
 
 - [PowerShell 팀 블로그](https://devblogs.microsoft.com/powershell/). PowerShell 제품 팀에서 직접 학습하는 데 가장 적합한 리소스입니다.
 - [The Hey, Scripting Guy!(스크립팅 이용자 여러분!) 블로그](https://devblogs.microsoft.com/scripting/) 문서는 시나리오를 기반으로 매력적이고 역동적인 방식으로 작성되어 있습니다.
-- PowerShell 사용에 관해 궁금한 사항이 있나요? [PowerShell 커뮤니티](/powershell/#pivot=main&panel=community) 페이지에 등록된 많은 커뮤니티 포럼 중 하나에서 관심사가 비슷한 수많은 다른 사용자와 교류하세요.
+- PowerShell 사용에 관해 궁금한 사항이 있나요? [PowerShell 커뮤니티](/powershell/scripting/community/community-support) 페이지에 등록된 많은 커뮤니티 포럼 중 하나에서 관심사가 비슷한 수많은 다른 사용자와 교류하세요.
 
 ## <a name="channel-9-videos"></a>Channel 9 동영상
 

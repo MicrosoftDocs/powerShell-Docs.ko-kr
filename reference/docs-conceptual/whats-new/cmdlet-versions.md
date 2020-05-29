@@ -2,12 +2,12 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: 모듈 및 cmdlet의 릴리스 기록
-ms.openlocfilehash: 824380c7aa732e6a2027d86be33cbde901ab11e1
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4cb69e9d53151a0a221654f76ad7eb5eeb8fa218
+ms.sourcegitcommit: cae9885e01c13690268151d33efac168536e9287
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80082728"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83751337"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>모듈 및 cmdlet의 릴리스 기록
 
@@ -77,7 +77,6 @@ ms.locfileid: "80082728"
 | Get-IseSnippet    | &check; |      |       |       | Windows만 해당 |
 | Import-IseSnippet | &check; |      |       |       | Windows만 해당 |
 | New-IseSnippet    | &check; |      |       |       | Windows만 해당 |
-
 
 ### <a name="microsoftpowershellarchive"></a>Microsoft.PowerShell.Archive
 
@@ -260,7 +259,7 @@ ms.locfileid: "80082728"
 | Rename-ItemProperty           | &check; | &check; | &check; | &check; |                                  |
 | ComputerMachinePassword 재설정 | &check; |         |         |         | Windows만 해당                     |
 | Resolve-Path                  | &check; | &check; | &check; | &check; |                                  |
-| Restart-Computer              | &check; | &check; | &check; | &check; |                                  |
+| Restart-Computer              | &check; | &check; | &check; | &check; | 7\.1에 추가된 Linux/macOS 지원 |
 | Restart-Service               | &check; | &check; | &check; | &check; | Windows만 해당                     |
 | Restore-Computer              | &check; |         |         |         | Windows만 해당                     |
 | Resume-Service                | &check; | &check; | &check; | &check; | Windows만 해당                     |
@@ -278,7 +277,7 @@ ms.locfileid: "80082728"
 | Start-Process                 | &check; | &check; | &check; | &check; |                                  |
 | Start-Service                 | &check; | &check; | &check; | &check; | Windows만 해당                     |
 | Start-Transaction             | &check; |         |         |         | Windows만 해당                     |
-| Stop-Computer                 | &check; | &check; | &check; | &check; | 7\.0에 추가된 Linux/macOS 지원 |
+| Stop-Computer                 | &check; | &check; | &check; | &check; | 7\.1에 추가된 Linux/macOS 지원 |
 | Stop-Process                  | &check; | &check; | &check; | &check; |                                  |
 | Stop-Service                  | &check; | &check; | &check; | &check; | Windows만 해당                     |
 | Suspend-Service               | &check; | &check; | &check; | &check; | Windows만 해당                     |

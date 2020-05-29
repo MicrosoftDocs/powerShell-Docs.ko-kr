@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: gallery,powershell,cmdlet,psget
 title: NuGet 부트스트랩
-ms.openlocfilehash: 70403006c7a48ac70a6766de3aa52d80cebbd86a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 139b2c5a9e742eca8f5ac36c9acd721216584335
+ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78935169"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690872"
 ---
 # <a name="bootstrap-the-nuget-provider-and-nugetexe"></a>NuGet 공급자 및 NuGet.exe 부트스트래프
 
@@ -146,7 +146,7 @@ Import-PackageProvider -Name NuGet
 
 첫 번째 옵션은 인터넷에 연결된 컴퓨터를 부트스트래핑하고 신뢰할 수 있는 프로세스를 사용하여 오프라인 컴퓨터에 파일을 복사하는 것입니다. 인터넷에 연결된 컴퓨터를 부트스트래핑하고 나면 NuGet.exe 이진 파일이 두 폴더 중 하나에 저장됩니다.
 
- - `Publish-Module` 또는 `Publish-Script` cmdlet을 관리자 권한으로 실행한 경우
+- `Publish-Module` 또는 `Publish-Script` cmdlet을 관리자 권한으로 실행한 경우
 
    ```powershell
    $env:ProgramData\Microsoft\Windows\PowerShell\PowerShellGet
@@ -158,7 +158,7 @@ Import-PackageProvider -Name NuGet
   $env:userprofile\AppData\Local\Microsoft\Windows\PowerShell\PowerShellGet\
   ```
 
-두 번째 옵션은 NuGet.Org 웹 사이트([https://dist.nuget.org/index.html](https://www.nuget.org/downloads))에서 NuGet.exe를 다운로드하는 것입니다. 프로덕션 컴퓨터용 NuGet 버전을 선택할 때는 "권장" 레이블이 있는 2.8.5.208 이상 버전을 선택해야 합니다. 브라우저를 사용하여 다운로드한 파일의 경우 차단을 해제해야 합니다. `Unblock-File` cmdlet을 사용하여 차단을 해제할 수 있습니다.
+두 번째 옵션은 NuGet.Org 웹 사이트 [https://dist.nuget.org/index.html](https://www.nuget.org/downloads)에서 NuGet.exe를 다운로드하는 것입니다. 프로덕션 컴퓨터용 NuGet 버전을 선택할 때는 "권장" 레이블이 있는 2.8.5.208 이상 버전을 선택해야 합니다. 브라우저를 사용하여 다운로드한 파일의 경우 차단을 해제해야 합니다. `Unblock-File` cmdlet을 사용하여 차단을 해제할 수 있습니다.
 
 두 가지 방법 중 어떤 쪽을 사용하든 `$env:path`의 모든 위치에 NuGet.exe 파일을 복사할 수 있지만, 표준 위치는 다음과 같습니다.
 

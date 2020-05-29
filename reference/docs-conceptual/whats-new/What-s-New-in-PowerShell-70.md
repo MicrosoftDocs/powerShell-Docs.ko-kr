@@ -2,12 +2,12 @@
 title: PowerShell 7.0의 새로운 기능
 description: PowerShell 7.0에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 03/04/2020
-ms.openlocfilehash: 84631d9fa169c8d1b4cd4dd23eb3d7c1bca120bb
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 313ed2b663262b57abd52bfc7378e1f4661dc03a
+ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80263138"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808404"
 ---
 # <a name="whats-new-in-powershell-70"></a>PowerShell 7.0의 새로운 기능
 
@@ -53,7 +53,8 @@ PowerShell 7은 현재 다음과 같은 x64 운영 체제를 지원합니다.
 
 ## <a name="running-powershell-7"></a>PowerShell 7 실행
 
-PowerShell 7은 새 디렉터리에 설치되고 Windows PowerShell 5.1과 나란히 실행됩니다. PowerShell Core 6.x의 경우 PowerShell 7은 PowerShell Core 6.x를 제거하는 현재 위치 업그레이드입니다.
+PowerShell 7은 Windows PowerShell과 별도로 디렉터리에 설치됩니다.
+이를 통해 Windows PowerShell 5.1과 함께 PowerShell 7을 나란히 실행할 수 있습니다. PowerShell Core 6.x의 경우 PowerShell 7은 PowerShell Core 6.x를 제거하는 현재 위치 업그레이드입니다.
 
 - PowerShell 7은 `%programfiles%\PowerShell\7`에 설치됩니다.
 - `%programfiles%\PowerShell\7` 폴더가 `$env:PATH`에 추가됩니다.
@@ -65,7 +66,7 @@ PowerShell 7 설치 관리자 패키지는 이전 버전의 PowerShell Core 6.x�
 - macOS: `/usr/local/microsoft/powershell/6`이 `/usr/local/microsoft/powershell/7`로 대체됩니다.
 
 > [!NOTE]
-> Windows PowerShell에서 PowerShell을 시작하는 실행 파일의 이름은 `powershell.exe`입니다. 버전 6 이상에서는 실행 파일이 병렬 실행을 지원하도록 변경되었습니다. PowerShell 7을 시작하는 새 실행 파일은 `pwsh.exe`입니다. 미리 보기 빌드는 7-preview 디렉터리 아래에 `pwsh` 대신 `pwsh-preview`로 그대로 유지됩니다.
+> Windows PowerShell에서 PowerShell을 시작하는 실행 파일의 이름은 `powershell.exe`입니다. 버전 6 이상에서는 실행 파일 이름이 Side-by-Side 실행을 지원하도록 변경되었습니다. PowerShell 7을 시작하는 새 실행 파일 이름은 `pwsh.exe`입니다. 미리 보기 빌드는 7-preview 디렉터리 아래에 `pwsh` 대신 `pwsh-preview`로 그대로 유지됩니다.
 
 ## <a name="improved-backwards-compatibility-with-windows-powershell"></a>Windows PowerShell과의 이전 버전 호환성 개선
 
@@ -266,7 +267,7 @@ ${a}?[0]
 
 ## <a name="new-view-conciseview-and-cmdlet-get-error"></a>새로운 보기 ConciseView 및 cmdlet Get-Error
 
-새로운 기본 보기 **ConciseView**를 사용하여 대화형 및 스크립트 오류를 쉽게 읽을 수 있도록 오류 메시지의 표시 기능이 향상되었습니다. 보기는 기본 설정 변수 `$ErrorView`를 통해 사용자가 선택할 수 있습니다.
+PowerShell 7.0에서는 새로운 기본 보기 **ConciseView**를 사용하여 대화형 및 스크립트 오류를 쉽게 읽을 수 있도록 오류 메시지의 표시 기능이 향상되었습니다. 보기는 기본 설정 변수 `$ErrorView`를 통해 사용자가 선택할 수 있습니다.
 
 **ConciseView**를 사용하는 경우, 오류가 스크립트 또는 파서에서 발생하지 않은 한 다음과 같은 한 줄 오류 메시지입니다.
 
@@ -282,8 +283,8 @@ Get-ChildItem: Cannot find path 'C:\NotReal' because it does not exist
 
 ![스크립트의 오류 표시](./media/What-s-New-in-PowerShell-70/myscript-error.png)
 
-PowerShell 7의 기본 보기는 **ConciseView**입니다. 이전의 기본 보기는 **NormalView**였으며 기본 설정 변수 `$ErrorView`를 설정하여 사용자가 선택할 수 있습니다.
-
+PowerShell 7의 기본 보기는 **ConciseView**입니다. 이전의 기본 보기는 **NormalView**였으며 기본 설정 변수 `$ErrorView`를 설정하여 선택할 수 있습니다.
+ 
 ```powershell
 $ErrorView = 'NormalView' # Sets the error view to NormalView
 $ErrorView = 'ConciseView' # Sets the error view to ConciseView
@@ -517,7 +518,7 @@ Invoke-DscResource -Name Log -Method Set -ModuleName PSDesiredStateConfiguration
 - 지난달의 커밋에서 발생하는 CodeFactor 스타일 문제를 정리(#10591)(@iSazonov에게 감사드립니다!)
 - PSTernaryOperator 실험적 기능에 대한 설명에서 오타를 수정(#10586)(@bergmeister에게 감사드립니다!)
 - ActionPreference.Suspend 열거형 값을 지원되지 않는 예약된 상태로 전환하고 기본 설정 변수에서 ActionPreference.Ignore 사용에 대한 제한을 제거(#10317)(@KirkMunro에게 감사드립니다!)
-- ArrayList를 List<T>로 바꿔 기능 변경 없이 코드를 더 읽기 쉽고 안정적으로 개선(#10333)(@iSazonov에게 감사드립니다!)
+- ArrayList를 List\<T>로 바꿔 기능 변경 없이 코드를 더 읽기 쉽고 안정적으로 개선(#10333)(@iSazonov에게 감사드립니다!)
 - TestConnectionCommand 코드 스타일을 수정(#10439)(@vexx32에게 감사드립니다!)
 - AutomationEngine을 정리하고 불필요한 SetSessionStateDrive 메서드 호출을 제거(#10416)(@iSazonov에게 감사드립니다!)
 - ConvertTo-Csv 및 ConvertFrom-Csv에 대한 기본 ParameterSetName의 이름을 다시 Delimiter로 변경(#10425)

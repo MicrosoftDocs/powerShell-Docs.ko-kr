@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC 스크립트 리소스
-ms.openlocfilehash: e09e86011fa7dbb2a4d7f28b5032b4328b6f6ec2
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 50d4667396c8c619079288ec51599152ed2d6cd5
+ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953070"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83557025"
 ---
 # <a name="dsc-script-resource"></a>DSC 스크립트 리소스
 
@@ -136,4 +136,63 @@ Configuration ScriptTest
         }
     }
 }
+```
+
+### <a name="example-3-utilizing-parameters-in-a-script-resource"></a>예 3: 스크립트 리소스에서 매개 변수 활용
+
+이 예제에서는 `using` 범위를 사용하여 스크립트 리소스 내에서 매개 변수에 액세스합니다. **ConfigurationData**는 비슷한 방법으로 액세스할 수 있습니다. 예제 2와 같이 버전은 대상 노드의 로컬 파일 내에 저장되어야 합니다. 그러나 로컬 파일 경로와 버전은 모두 구성 가능하며 구성 데이터에서 코드를 분리합니다.
+
+```powershell
+Configuration ScriptTest
+{
+    param
+    (
+        [Version]
+        $Version,
+
+        [string]
+        $FilePath
+    )
+
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+
+    Node localhost
+    {
+        Script UpdateConfigurationVersion
+        {
+            GetScript = {
+                $currentVersion = Get-Content -Path $using:FilePath
+                return @{ 'Result' = "$currentVersion" }
+            }
+            TestScript = {
+                # Create and invoke a scriptblock using the $GetScript automatic variable, which contains a string representation of the GetScript.
+                $state = [scriptblock]::Create($GetScript).Invoke()
+
+                if( $state['Result'] -eq $using:Version )
+                {
+                    Write-Verbose -Message ('{0} -eq {1}' -f $state['Result'],$using:version)
+                    return $true
+                }
+
+                Write-Verbose -Message ('Version up-to-date: {0}' -f $using:version)
+                return $false
+            }
+            SetScript = {
+                Set-Content -Path $using:FilePath -Value $using:Version
+            }
+        }
+    }
+}
+```
+
+결과인 MOF 파일에는 `using` 범위를 통해 액세스 되는 변수와 해당 값이 포함되며
+변수를 사용하는 각 scriptblock에 삽입됩니다. 간결성을 위해 테스트 및 설정 스크립트가 제거되었습니다.
+
+```Output
+instance of MSFT_ScriptResource as $MSFT_ScriptResource1ref
+{
+ GetScript = "$FilePath ='C:\\Config.ini'\n\n $currentVersion = Get-Content -Path $FilePath\n return @{ 'Result' = \"$currentVersion\" }\n";
+ TestScript = ...;
+ SetScript = ...;
+};
 ```
