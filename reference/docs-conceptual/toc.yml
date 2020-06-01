@@ -41,8 +41,28 @@
           href: learn/ps101/powershell.exe-command-line-help.md
         - name: 탭 확장 사용
           href: learn/ps101/using-tab-expansion.md
-    - name: 실험적 기능 사용
-      href: learn/experimental-features.md
+    - name: 심층 조사
+      items:
+        - name: 개요
+          href: learn/deep-dives/overview.md
+        - name: 배열에 대해 알고 싶은 모든 것
+          href: learn/deep-dives/everything-about-arrays.md
+        - name: 해시 테이블에 대해 알고 싶은 모든 것
+          href: learn/deep-dives/everything-about-hashtable.md
+        - name: PSCustomObject에 대해 알고 싶은 모든 것
+          href: learn/deep-dives/everything-about-pscustomobject.md
+        - name: 문자열 대체에 대해 알고 싶은 모든 것
+          href: learn/deep-dives/everything-about-string-substitutions.md
+        - name: if/then/else에 대해 알고 싶은 모든 것
+          href: learn/deep-dives/everything-about-if.md
+        - name: 전환에 대해 알고 싶은 모든 것
+          href: learn/deep-dives/everything-about-switch.md
+        - name: 예외에 대해 알고 싶은 모든 것
+          href: learn/deep-dives/everything-about-exceptions.md
+        - name: $null에 대해 알고 싶은 모든 것
+          href: learn/deep-dives/everything-about-null.md
+        - name: ShouldProcess에 대해 알고 싶은 모든 것
+          href: learn/deep-dives/everything-about-shouldprocess.md
     - name: PowerShell 원격 기능
       items:
         - name: JEA(Just Enough Administration)
@@ -73,6 +93,8 @@
           href: learn/remoting/winrmsecurity.md
         - name: PowerShell 원격에서 두 번째 홉 만들기
           href: learn/remoting/ps-remoting-second-hop.md
+    - name: 실험적 기능 사용
+      href: learn/experimental-features.md
     - name: 추가 리소스
       href: learn/more-powershell-learning.md
     - name: 용어
@@ -748,6 +770,8 @@
           href: dev-cross-plat/vscode/understanding-file-encoding.md
     - name: 이식 가능한 모듈 작성
       href: dev-cross-plat/writing-portable-modules.md
+    - name: 표준 라이브러리 이진 모듈을 만드는 방법
+      href: dev-cross-plat/create-standard-library-binary-module.md
     - name: 레거시 PowerShell SDK
       items:
         - name: 개요
