@@ -27,20 +27,30 @@
   items:
     - name: PowerShell 101
       items:
-        - name: PowerShell 이름 학습
-          href: learn/ps101/learning-powershell-names.md
-        - name: 친숙한 명령 이름 사용
-          href: learn/ps101/using-familiar-command-names.md
-        - name: 자세한 도움말 정보 보기
-          href: learn/ps101/getting-detailed-help-information.md
-        - name: 명령에 대한 정보 가져오기
-          href: learn/ps101/getting-information-about-commands.md
-        - name: 변수를 사용하여 개체 저장
-          href: learn/ps101/using-variables-to-store-objects.md
-        - name: PowerShell 명령줄 옵션
-          href: learn/ps101/powershell.exe-command-line-help.md
-        - name: 탭 확장 사용
-          href: learn/ps101/using-tab-expansion.md
+        - name: 소개
+          href: learn/ps101/00-introduction.md
+        - name: PowerShell 시작
+          href: learn/ps101/01-getting-started.md
+        - name: 도움말 시스템
+          href: learn/ps101/02-help-system.md
+        - name: '개체 검색, 속성 및 메서드'
+          href: learn/ps101/03-discovering-objects.md
+        - name: 원라이너 및 파이프라인
+          href: learn/ps101/04-pipelines.md
+        - name: '서식 지정, 별칭, 공급자 및 비교'
+          href: learn/ps101/05-formatting-aliases-providers-comparison.md
+        - name: 흐름 제어
+          href: learn/ps101/06-flow-control.md
+        - name: WMI 작업
+          href: learn/ps101/07-working-with-wmi.md
+        - name: PowerShell 원격 기능
+          href: learn/ps101/08-powershell-remoting.md
+        - name: Functions
+          href: learn/ps101/09-functions.md
+        - name: 스크립트 모듈
+          href: learn/ps101/10-script-modules.md
+        - name: 부록 A - 도움말 구문
+          href: learn/ps101/appendix-a.md
     - name: 심층 조사
       items:
         - name: 개요
@@ -69,7 +79,7 @@
           items:
             - name: 개요
               href: learn/remoting/jea/overview.md
-            - name: 사전 요구 사항
+            - name: 필수 구성 요소
               href: learn/remoting/jea/prerequisites.md
             - name: 역할 기능
               href: learn/remoting/jea/role-capabilities.md
@@ -95,6 +105,8 @@
           href: learn/remoting/ps-remoting-second-hop.md
     - name: 실험적 기능 사용
       href: learn/experimental-features.md
+    - name: 탭 확장 사용
+      href: learn/using-tab-expansion.md
     - name: 추가 리소스
       href: learn/more-powershell-learning.md
     - name: 용어
