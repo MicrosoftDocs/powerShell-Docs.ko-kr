@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC 레지스트리 리소스
-ms.openlocfilehash: 9f65815cbe6a94831b88cb3425bf688e1a99a9c0
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 3acd79fa81bc731f344d810371b961dc3af3a11d
+ms.sourcegitcommit: 1ab59991c18e1b9692333d5e58ce649eaa75594f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83559905"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203650"
 ---
 # <a name="dsc-registry-resource"></a>DSC 레지스트리 리소스
 
@@ -54,9 +54,11 @@ Registry [string] #ResourceName
 > [!NOTE]
 > **PsDscRunAsCredential** 공용 속성은 다른 자격 증명의 컨텍스트에서 DSC 리소스를 실행할 수 있도록 WMF 5.0에 추가되었습니다. 자세한 내용은 [ DSC 리소스로 자격 증명 사용](../../../configurations/runasuser.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="examples"></a>예
 
-이 예제에서는 "ExampleKey"라는 키가 **HKEY\_LOCAL\_MACHINE** 하이브에 있는지 확인합니다.
+### <a name="example-1-ensure-specified-value-and-data-under-specified-registry-key"></a>예제 1: 지정된 값과 데이터가 지정된 레지스트리 키에 있는지 확인
+
+이 예에서는 "ExampleKey1" 라는 키에 속하는 레지스트리 값 "TestValue"가 `HKEY\_LOCAL\_MACHINE` 하이브에 있고 데이터 "TestData"가 있는지 확인합니다.
 
 ```powershell
 Configuration RegistryTest
@@ -64,9 +66,25 @@ Configuration RegistryTest
     Registry RegistryExample
     {
         Ensure      = "Present"  # You can also set Ensure to "Absent"
-        Key         = "HKEY_LOCAL_MACHINE\SOFTWARE\ExampleKey"
+        Key         = "HKEY_LOCAL_MACHINE\SOFTWARE\ExampleKey1"
         ValueName   = "TestValue"
         ValueData   = "TestData"
+    }
+}
+```
+
+### <a name="example-2-ensure-specified-registry-key-exists"></a>예제 2: 지정된 레지스트리 키가 존재하는지 확인
+
+이 예제에서는 "ExampleKe2"라는 키가 **HKEY\_LOCAL\_MACHINE** 하이브에 있는지 확인합니다.
+
+```powershell
+Configuration RegistryTest
+{
+    Registry RegistryExample
+    {
+        Ensure      = "Present"  # You can also set Ensure to "Absent"
+        Key         = "HKEY_LOCAL_MACHINE\SOFTWARE\ExampleKey2"
+        ValueName   = ""
     }
 }
 ```
