@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9e576199-49c7-4355-9686-f9ed40c64a5f
 caps.latest.revision: 10
-ms.openlocfilehash: 87b6b82225354e77e908b4af2bad1039a29b2980
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 86daab97236ca4be94669f107d5a03abea6f6c91
+ms.sourcegitcommit: 109f132360e8adbbdaf5dbc42a270be73d9dfa9b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83691970"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84633399"
 ---
 # <a name="accessdbprovidersample03"></a>AccessDBProviderSample03
 
@@ -46,7 +46,7 @@ ms.locfileid: "83691970"
 
 이 샘플에서는 Microsoft Access 데이터 베이스에서 항목을 가져오고 설정 하는 데 필요한 메서드를 덮어쓰는 방법을 보여 줍니다.
 
-:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs" range="11-976":::
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs" range="11-976":::
 
 ## <a name="see-also"></a>참고 항목
 
