@@ -3,12 +3,12 @@ title: 해시 테이블에 대해 알고 싶은 모든 것
 description: 해시 테이블은 PowerShell에서 대단히 중요하기 때문에 확실하게 이해해야 합니다.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 60a5172485b9caf6343f54194563cd048648206e
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 336c32cca351cc7d87f3300364c075ba7bd8aaeb
+ms.sourcegitcommit: 0b9268e7b92fb76b47169b72e28de43e4bfe7fbf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149516"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307132"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>해시 테이블에 대해 알고 싶은 모든 것
 
@@ -541,10 +541,9 @@ $person = @{
 ```powershell
 $person.location.city
 Austin
-```powershell
+```
 
-There are many ways to approach the structure of your objects. Here is a second way to look at a
-nested hashtable.
+개체의 구조체에 접근하는 방법은 여러 가지가 있습니다. 다음은 중첩된 해시 테이블을 확인하는 두 번째 방법입니다.
 
 ```powershell
 $people = @{
@@ -671,6 +670,36 @@ $people = Get-Content -Path $path -Raw | ConvertFrom-JSON
 
 이 방법에는 두 가지 중요한 점이 있습니다. 첫 번째는 JSON은 여러 줄로 작성되므로 `-Raw` 옵션을 사용하여 다시 단일 문자열로 읽어야 한다는 점입니다. 두 번째는 가져온 개체는 더 이상 `[hashtable]`이 아니라는 점입니다. 가져온 개체는 `[pscustomobject]`가 되며 이를 예상하지 못하면 문제가 발생할 수 있습니다.
 
+많이 중첩된 해시 테이블을 살펴봅니다. 많이 중첩된 해시 테이블을 JSON으로 변환하면 원하는 결과를 얻지 못할 수 있습니다.
+
+```powershell
+@{ a = @{ b = @{ c = @{ d = "e" }}}} | ConvertTo-Json
+
+{
+  "a": {
+    "b": {
+      "c": "System.Collections.Hashtable"
+    }
+  }
+}
+```
+
+**Depth** 매개 변수를 사용하여 중첩된 모든 해시 테이블을 확장하도록 합니다.
+
+```powershell
+@{ a = @{ b = @{ c = @{ d = "e" }}}} | ConvertTo-Json -Depth 3
+
+{
+  "a": {
+    "b": {
+      "c": {
+        "d": "e"
+      }
+    }
+  }
+}
+```
+
 가져올 때 이것이 `[hashtable]`이어야 한다면 `Export-CliXml`과 `Import-CliXml` 명령을 사용해야 합니다.
 
 ### <a name="converting-json-to-hashtable"></a>JSON을 해시 테이블로 변환
@@ -682,6 +711,18 @@ JSON을 `[hashtable]`로 변환해야 한다면 제가 아는 한 가지 방법�
 $JSSerializer = [System.Web.Script.Serialization.JavaScriptSerializer]::new()
 $JSSerializer.Deserialize($json,'Hashtable')
 ```
+
+PowerShell v6부터 JSON 지원에서는 NewtonSoft JSON.NET가 사용되고 해시 테이블 지원이 추가됩니다.
+
+```powershell
+'{ "a": "b" }' | ConvertFrom-Json -AsHashtable
+
+Name      Value
+----      -----
+a         b
+```
+
+PowerShell 6.2에서 **Depth** 매개 변수가 `ConvertFrom-Json`에 추가되었습니다. 기본 **Depth**는 1024입니다.
 
 ### <a name="reading-directly-from-a-file"></a>파일에서 직접 읽기
 
@@ -698,9 +739,9 @@ $hashtable = ( & $scriptBlock )
 
 그러고 보니, 모듈 매니페스트(psd1 파일)가 단순한 해시 테이블이라는 사실을 아셨나요?
 
-## <a name="keys-are-just-strings"></a>키는 문자열일 뿐입니다
+## <a name="keys-can-be-any-object"></a>키는 모든 개체가 될 수 있음
 
-주제에서 벗어나는 것 같아 지금까지는 말하지 않았지만, 키는 문자열일 뿐입니다. 따라서 어느 부분이든 따옴표를 붙이면 키로 만들 수 있습니다.
+대부분의 경우 키는 단순히 문자열입니다. 따라서 어느 부분이든 따옴표를 붙이면 키로 만들 수 있습니다.
 
 ```powershell
 $person = @{
@@ -721,13 +762,34 @@ $person.$key
 
 하지만 할 수 있다고 해서 반드시 해야 하는 것은 아닙니다. 마지막 항목은 일어나기를 기다리는 버그처럼 보이며 코드를 읽는 사람이라면 누구나 오해하게 될 것입니다.
 
-엄밀히 말하면 키는 문자열이 아니어도 되지만 사람들은 문자열만 사용했다고 생각하곤 합니다.
+엄밀히 말하면 키는 문자열이 아니어도 되지만 사람들은 문자열만 사용했다고 생각하곤 합니다. 그러나 인덱싱은 복잡한 키에서는 제대로 작동하지 않습니다.
+
+```powershell
+$ht = @{ @(1,2,3) = "a" }
+$ht
+
+Name                           Value
+----                           -----
+{1, 2, 3}                      a
+```
+
+키를 사용하여 해시 테이블의 값에 액세스하는 것은 항상 작동하지 않습니다. 예를 들면 다음과 같습니다.
+
+```powershell
+$key = $ht.keys[0]
+$ht.$key
+$ht[$key]
+a
+```
+
+멤버 액세스(`.`) 표기법을 사용하면 아무것도 반환되지 않습니다. 그러나 배열 인덱스(`[]`) 표기법을 사용하면 작동합니다.
 
 ## <a name="use-in-automatic-variables"></a>자동 변수에서 사용
 
 ### <a name="psboundparameters"></a>$PSBoundParameters
 
-[$PSBoundParameters][]는 함수의 컨텍스트 내에만 존재하는 자동 변수입니다. 함수를 호출한 모든 매개 변수를 포함합니다. 해시 테이블은 아니지만 해시 테이블처럼 처리해도 될 정도로 비슷합니다.
+[$PSBoundParameters][]는 함수의 컨텍스트 내에만 존재하는 자동 변수입니다.
+함수를 호출한 모든 매개 변수를 포함합니다. 해시 테이블은 아니지만 해시 테이블처럼 처리해도 될 정도로 비슷합니다.
 
 키 제거 및 다른 함수에 스플래팅 같은 작업도 마찬가지입니다. 프록시 함수를 작성한다면 이 내용을 더 자세히 살펴보세요.
 
@@ -893,8 +955,6 @@ function Get-DeepClone
 ## <a name="anything-else"></a>다른 내용을 알고 싶으신가요?
 
 지금까지 많은 내용을 빠르게 살펴보았습니다. 이 문서를 읽을 때마다 새로운 내용을 배우거나 기존 지식이 깊어지길 바랍니다. 이 기능의 모든 특징을 살펴보았기 때문에 지금 당장은 적용되지 않는 측면이 있을 것입니다. 지극히 정상적인 현상이며 PowerShell을 많이 이용한다면 필연적인 일이기도 합니다.
-
-지금까지 다룬 모든 내용을 정리한 다음 목록을 이용하면 원하는 항목을 바로 살펴볼 수 있습니다. 보통은 처음부터 작성하지만, 여기서는 위에서 시작해 아래쪽으로 진행하며 예제는 이전 항목의 내용을 바탕으로 구성됩니다.
 
 <!-- link references -->
 [원래 버전]: https://powershellexplained.com/2016-11-06-powershell-hashtable-everything-you-wanted-to-know-about/
