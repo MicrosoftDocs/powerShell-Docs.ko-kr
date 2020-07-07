@@ -8,12 +8,11 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 868194a2-17e9-4184-bc36-c04a33f26494
 caps.latest.revision: 4
-ms.openlocfilehash: fbaea91c12eede70d30e29dce3fd2d36d7f55994
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
-ms.translationtype: MT
+ms.openlocfilehash: 30f7a52adaebac9373279b6edc4480277ba183e4
+ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83564843"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86035436"
 ---
 # <a name="examples-of-comment-based-help"></a>설명 기반 도움말 예제
 
@@ -185,7 +184,7 @@ param ([string]$InputPath, [string]$OutPutPath)
 function Get-Data { }
 ```
 
-다음 명령은 스크립트 도움말을 가져옵니다. 스크립트가 Path 환경 변수에 나열 된 디렉터리를 n이 아니기 때문에 스크립트 도움말을 가져오는 Get-help 명령은 스크립트 경로를 지정 해야 합니다.
+다음 명령은 스크립트 도움말을 가져옵니다. 스크립트가 Path 환경 변수에 나열 된 디렉터리에 있지 않기 때문에 스크립트 도움말을 가져오는 Get-help 명령은 스크립트 경로를 지정 해야 합니다.
 
 ```powershell
 C:\PS> get-help c:\ps-test\update-month.ps1 -full
@@ -257,7 +256,7 @@ C:\PS> get-help c:\ps-test\update-month.ps1 -full
 
 ## <a name="example-3-parameter-descriptions-in-a-param-statement"></a>예 3: Param 문의 매개 변수 설명
 
-이 예에서는 `Param` 함수나 스크립트의 문에 parameterdescriptions을 삽입 하는 방법을 보여 줍니다. 이 형식은 매개 변수 설명이 간단한 경우에 가장 유용 합니다.
+이 예에서는 `Param` 함수 또는 스크립트의 문에 매개 변수 설명을 삽입 하는 방법을 보여 줍니다. 이 형식은 매개 변수 설명이 간단한 경우에 가장 유용 합니다.
 
 ```powershell
 function Add-Extension
@@ -286,7 +285,7 @@ function Add-Extension
 
 ## <a name="example-4--redirecting-to-an-xml-file"></a>예 4: XML 파일로 리디렉션
 
-함수 및 스크립트에 대 한 XML 기반 도움말 항목을 작성할 수 있습니다. 주석 기반 도움말을 구현 하는 것이 좋지만 도움말 콘텐츠를 보다 정확 하 게 제어 하거나 도움말 항목을 여러 언어로 번역 하려는 경우에는 XML 기반 도움말이 필요 합니다. 다음 예에서는 Update-Month 스크립트의 처음 몇 줄을 보여 줍니다. 스크립트는 키워드를 사용 하 여 `.ExternalHelp` 스크립트에 대 한 XML 기반 도움말 항목의 경로를 지정 합니다.
+함수 및 스크립트에 대 한 XML 기반 도움말 항목을 작성할 수 있습니다. 주석 기반 도움말을 구현 하는 것이 좋지만 도움말 콘텐츠를 보다 정확 하 게 제어 하거나 도움말 항목을 여러 언어로 번역 하려는 경우에는 XML 기반 도움말이 필요 합니다. 다음 예에서는 Update-Month.ps1 스크립트의 처음 몇 줄을 보여 줍니다. 스크립트는 키워드를 사용 하 여 `.ExternalHelp` 스크립트에 대 한 XML 기반 도움말 항목의 경로를 지정 합니다.
 
 ```powershell
 #  .ExternalHelp C:\MyScripts\Update-Month-Help.xml
