@@ -1,26 +1,20 @@
 ---
-title: 주석 기반 도움말의 예 | Microsoft Docs
-ms.custom: ''
+title: 설명 기반 도움말 예제
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 868194a2-17e9-4184-bc36-c04a33f26494
-caps.latest.revision: 4
-ms.openlocfilehash: 30f7a52adaebac9373279b6edc4480277ba183e4
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 3858fa7f15d71c505dacaf9679910d45ef4640e5
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86035436"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893495"
 ---
-# <a name="examples-of-comment-based-help"></a><span data-ttu-id="71315-102">설명 기반 도움말 예제</span><span class="sxs-lookup"><span data-stu-id="71315-102">Examples of Comment-Based Help</span></span>
+# <a name="examples-of-comment-based-help"></a><span data-ttu-id="04c8e-102">설명 기반 도움말 예제</span><span class="sxs-lookup"><span data-stu-id="04c8e-102">Examples of Comment-Based Help</span></span>
 
-<span data-ttu-id="71315-103">이 항목에는 스크립트 및 함수에 대 한 주석 기반 도움말을 사용 하는 방법을 보여 주는 예제가 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="71315-103">This topic includes example that demonstrate how to use comment-based help for scripts and functions.</span></span>
+<span data-ttu-id="04c8e-103">이 항목에는 스크립트 및 함수에 대 한 주석 기반 도움말을 사용 하는 방법을 보여 주는 예제가 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="04c8e-103">This topic includes example that demonstrate how to use comment-based help for scripts and functions.</span></span>
 
-## <a name="example-1-comment-based-help-for-a-function"></a><span data-ttu-id="71315-104">예제 1: 함수에 대 한 주석 기반 도움말</span><span class="sxs-lookup"><span data-stu-id="71315-104">Example 1: Comment-Based Help for a Function</span></span>
+## <a name="example-1-comment-based-help-for-a-function"></a><span data-ttu-id="04c8e-104">예제 1: 함수에 대 한 주석 기반 도움말</span><span class="sxs-lookup"><span data-stu-id="04c8e-104">Example 1: Comment-Based Help for a Function</span></span>
 
- <span data-ttu-id="71315-105">다음 샘플 함수는 주석 기반 도움말을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="71315-105">The following sample function includes comment-based Help.</span></span>
+ <span data-ttu-id="04c8e-105">다음 샘플 함수는 주석 기반 도움말을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="04c8e-105">The following sample function includes comment-based Help.</span></span>
 
 ```powershell
 function Add-Extension
@@ -70,13 +64,13 @@ function Add-Extension
 }
 ```
 
-<span data-ttu-id="71315-106">다음 출력은 추가 확장 기능에 대 한 도움말을 표시 하는 Get-help 명령의 결과를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="71315-106">The following output shows the results of a Get-Help command that displays the help for the Add-Extension function.</span></span>
+<span data-ttu-id="04c8e-106">다음 출력은 `Get-Help` 함수에 대 한 도움말을 표시 하는 명령의 결과를 보여 줍니다 `Add-Extension` .</span><span class="sxs-lookup"><span data-stu-id="04c8e-106">The following output shows the results of a `Get-Help` command that displays the help for the `Add-Extension` function.</span></span>
 
 ```powershell
 C:\PS> get-help add-extension -full
 ```
 
-```output
+```Output
         NAME
             Add-Extension
 
@@ -140,11 +134,11 @@ C:\PS> get-help add-extension -full
             Set-Item
 ```
 
-## <a name="example-2-comment-based-help-for-a-script"></a><span data-ttu-id="71315-107">예제 2: 스크립트에 대 한 주석 기반 도움말</span><span class="sxs-lookup"><span data-stu-id="71315-107">Example 2: Comment-Based Help for a Script</span></span>
+## <a name="example-2-comment-based-help-for-a-script"></a><span data-ttu-id="04c8e-107">예제 2: 스크립트에 대 한 주석 기반 도움말</span><span class="sxs-lookup"><span data-stu-id="04c8e-107">Example 2: Comment-Based Help for a Script</span></span>
 
-<span data-ttu-id="71315-108">다음 샘플 함수는 주석 기반 도움말을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="71315-108">The following sample function includes comment-based Help.</span></span>
+<span data-ttu-id="04c8e-108">다음 샘플 함수는 주석 기반 도움말을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="04c8e-108">The following sample function includes comment-based Help.</span></span>
 
-<span data-ttu-id="71315-109">Closing 문과 문 사이에 빈 줄을 확인 **#>** `Param` 합니다.</span><span class="sxs-lookup"><span data-stu-id="71315-109">Notice the blank lines between the closing **#>** and the `Param` statement.</span></span> <span data-ttu-id="71315-110">문이 없는 스크립트에서 `Param` 도움말 항목의 마지막 주석과 첫 번째 함수 선언 사이에는 두 개 이상의 빈 줄이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="71315-110">In a script that does not have a `Param` statement, there must be at least two blank lines between the final comment in the Help topic and the first function declaration.</span></span> <span data-ttu-id="71315-111">이러한 빈 줄이 없으면 Get-help는 스크립트 대신 도움말 항목을 함수와 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="71315-111">Without these blank lines, Get-Help associates the Help topic with the function, instead of the script.</span></span>
+<span data-ttu-id="04c8e-109">Closing 문과 문 사이에 빈 줄을 확인 **#>** `Param` 합니다.</span><span class="sxs-lookup"><span data-stu-id="04c8e-109">Notice the blank lines between the closing **#>** and the `Param` statement.</span></span> <span data-ttu-id="04c8e-110">문이 없는 스크립트에서 `Param` 도움말 항목의 마지막 주석과 첫 번째 함수 선언 사이에는 두 개 이상의 빈 줄이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="04c8e-110">In a script that does not have a `Param` statement, there must be at least two blank lines between the final comment in the Help topic and the first function declaration.</span></span> <span data-ttu-id="04c8e-111">이러한 빈 줄이 없으면는 `Get-Help` 스크립트 대신 도움말 항목을 함수와 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="04c8e-111">Without these blank lines, `Get-Help` associates the Help topic with the function, instead of the script.</span></span>
 
 ```powershell
 <#
@@ -184,13 +178,13 @@ param ([string]$InputPath, [string]$OutPutPath)
 function Get-Data { }
 ```
 
-<span data-ttu-id="71315-112">다음 명령은 스크립트 도움말을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="71315-112">The following command gets the script Help.</span></span> <span data-ttu-id="71315-113">스크립트가 Path 환경 변수에 나열 된 디렉터리에 있지 않기 때문에 스크립트 도움말을 가져오는 Get-help 명령은 스크립트 경로를 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="71315-113">Because the script is not in a directory that is listed in the Path environment variable, the Get-Help command that gets the script Help must specify the script path.</span></span>
+<span data-ttu-id="04c8e-112">다음 명령은 스크립트 도움말을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="04c8e-112">The following command gets the script Help.</span></span> <span data-ttu-id="04c8e-113">스크립트가 Path 환경 변수에 나열 된 디렉터리에 있지 않기 때문에 스크립트 `Get-Help` 도움말을 가져오는 명령은 스크립트 경로를 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="04c8e-113">Because the script is not in a directory that is listed in the Path environment variable, the `Get-Help` command that gets the script Help must specify the script path.</span></span>
 
 ```powershell
 C:\PS> get-help c:\ps-test\update-month.ps1 -full
 ```
 
-```output
+```Output
             NAME
                 C:\ps-test\Update-Month.ps1
 
@@ -254,9 +248,9 @@ C:\PS> get-help c:\ps-test\update-month.ps1 -full
             RELATED LINKS
 ```
 
-## <a name="example-3-parameter-descriptions-in-a-param-statement"></a><span data-ttu-id="71315-114">예 3: Param 문의 매개 변수 설명</span><span class="sxs-lookup"><span data-stu-id="71315-114">Example 3: Parameter Descriptions in a Param Statement</span></span>
+## <a name="example-3-parameter-descriptions-in-a-param-statement"></a><span data-ttu-id="04c8e-114">예 3: Param 문의 매개 변수 설명</span><span class="sxs-lookup"><span data-stu-id="04c8e-114">Example 3: Parameter Descriptions in a Param Statement</span></span>
 
-<span data-ttu-id="71315-115">이 예에서는 `Param` 함수 또는 스크립트의 문에 매개 변수 설명을 삽입 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="71315-115">This example shows how to insert parameter descriptions in the `Param` statement of a function or script.</span></span> <span data-ttu-id="71315-116">이 형식은 매개 변수 설명이 간단한 경우에 가장 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="71315-116">This format is most useful when the parameter descriptions are brief.</span></span>
+<span data-ttu-id="04c8e-115">이 예에서는 `Param` 함수 또는 스크립트의 문에 매개 변수 설명을 삽입 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="04c8e-115">This example shows how to insert parameter descriptions in the `Param` statement of a function or script.</span></span> <span data-ttu-id="04c8e-116">이 형식은 매개 변수 설명이 간단한 경우에 가장 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="04c8e-116">This format is most useful when the parameter descriptions are brief.</span></span>
 
 ```powershell
 function Add-Extension
@@ -281,11 +275,11 @@ function Add-Extension
     #>
 ```
 
-<span data-ttu-id="71315-117">결과는 예 1의 결과와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="71315-117">The results are the same as the results for Example 1.</span></span> <span data-ttu-id="71315-118">Get-help는 키워드와 함께 제공 된 것 처럼 매개 변수 설명을 해석 합니다 `.Parameter` .</span><span class="sxs-lookup"><span data-stu-id="71315-118">Get-Help interprets the parameter descriptions as though they were accompanied by the `.Parameter` keyword.</span></span>
+<span data-ttu-id="04c8e-117">결과는 예 1의 결과와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="04c8e-117">The results are the same as the results for Example 1.</span></span> <span data-ttu-id="04c8e-118">`Get-Help`키워드와 함께 제공 된 것 처럼 매개 변수 설명을 해석 합니다 `.Parameter` .</span><span class="sxs-lookup"><span data-stu-id="04c8e-118">`Get-Help` interprets the parameter descriptions as though they were accompanied by the `.Parameter` keyword.</span></span>
 
-## <a name="example-4--redirecting-to-an-xml-file"></a><span data-ttu-id="71315-119">예 4: XML 파일로 리디렉션</span><span class="sxs-lookup"><span data-stu-id="71315-119">Example 4:  Redirecting to an XML File</span></span>
+## <a name="example-4--redirecting-to-an-xml-file"></a><span data-ttu-id="04c8e-119">예 4: XML 파일로 리디렉션</span><span class="sxs-lookup"><span data-stu-id="04c8e-119">Example 4:  Redirecting to an XML File</span></span>
 
-<span data-ttu-id="71315-120">함수 및 스크립트에 대 한 XML 기반 도움말 항목을 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="71315-120">You can write XML-based Help topics for functions and scripts.</span></span> <span data-ttu-id="71315-121">주석 기반 도움말을 구현 하는 것이 좋지만 도움말 콘텐츠를 보다 정확 하 게 제어 하거나 도움말 항목을 여러 언어로 번역 하려는 경우에는 XML 기반 도움말이 필요 합니다. 다음 예에서는 Update-Month.ps1 스크립트의 처음 몇 줄을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="71315-121">Although comment-based Help is easier to implement, XML-based Help is required if you want more precise control over Help content or if you are translating Help topics into multiple languages.The following example shows the first few lines of the Update-Month.ps1 script.</span></span> <span data-ttu-id="71315-122">스크립트는 키워드를 사용 하 여 `.ExternalHelp` 스크립트에 대 한 XML 기반 도움말 항목의 경로를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="71315-122">The script uses the `.ExternalHelp` keyword to specify the path to an XML-based Help topic for the script.</span></span>
+<span data-ttu-id="04c8e-120">함수 및 스크립트에 대 한 XML 기반 도움말 항목을 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="04c8e-120">You can write XML-based Help topics for functions and scripts.</span></span> <span data-ttu-id="04c8e-121">주석 기반 도움말을 구현 하는 것이 좋지만 도움말 콘텐츠를 보다 정확 하 게 제어 하거나 도움말 항목을 여러 언어로 번역 하려는 경우에는 XML 기반 도움말이 필요 합니다. 다음 예에서는 스크립트의 처음 몇 줄을 보여 줍니다 `Update-Month.ps1` .</span><span class="sxs-lookup"><span data-stu-id="04c8e-121">Although comment-based Help is easier to implement, XML-based Help is required if you want more precise control over Help content or if you are translating Help topics into multiple languages.The following example shows the first few lines of the `Update-Month.ps1` script.</span></span> <span data-ttu-id="04c8e-122">스크립트는 키워드를 사용 하 여 `.ExternalHelp` 스크립트에 대 한 XML 기반 도움말 항목의 경로를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="04c8e-122">The script uses the `.ExternalHelp` keyword to specify the path to an XML-based Help topic for the script.</span></span>
 
 ```powershell
 #  .ExternalHelp C:\MyScripts\Update-Month-Help.xml
@@ -295,7 +289,7 @@ function Add-Extension
     function Get-Data { }
 ```
 
-<span data-ttu-id="71315-123">다음 예에서는 함수에서 키워드를 사용 하는 방법을 보여 줍니다 `.ExternalHelp` .</span><span class="sxs-lookup"><span data-stu-id="71315-123">The following example shows the use of the `.ExternalHelp` keyword in a function.</span></span>
+<span data-ttu-id="04c8e-123">다음 예에서는 함수에서 키워드를 사용 하는 방법을 보여 줍니다 `.ExternalHelp` .</span><span class="sxs-lookup"><span data-stu-id="04c8e-123">The following example shows the use of the `.ExternalHelp` keyword in a function.</span></span>
 
 ```powershell
 function Add-Extension
@@ -308,9 +302,9 @@ function Add-Extension
 }
 ```
 
-## <a name="example-5--redirecting-to-a-different-help-topic"></a><span data-ttu-id="71315-124">예 5: 다른 도움말 항목으로 리디렉션</span><span class="sxs-lookup"><span data-stu-id="71315-124">Example 5:  Redirecting to a Different Help Topic</span></span>
+## <a name="example-5--redirecting-to-a-different-help-topic"></a><span data-ttu-id="04c8e-124">예 5: 다른 도움말 항목으로 리디렉션</span><span class="sxs-lookup"><span data-stu-id="04c8e-124">Example 5:  Redirecting to a Different Help Topic</span></span>
 
-<span data-ttu-id="71315-125">다음 코드는 한 `Help` 번에 하나의 도움말 텍스트 화면을 표시 하는 Windows PowerShell의 기본 제공 함수 시작 부분에서 발췌 한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="71315-125">The following code is an excerpt from the beginning of the built-in `Help` function in Windows PowerShell, which displays one screen of Help text at a time.</span></span> <span data-ttu-id="71315-126">Get-help cmdlet에 대 한 도움말 항목에서 도움말 함수를 설명 하므로 Help 함수는 및 키워드를 사용 하 여 `.ForwardHelpTargetName` `.ForwardHelpCategory` 사용자를 Get-help cmdlet 도움말 항목으로 리디렉션합니다.</span><span class="sxs-lookup"><span data-stu-id="71315-126">Because the Help topic for the Get-Help cmdlet describes the Help function, the Help function uses the `.ForwardHelpTargetName` and `.ForwardHelpCategory` keywords to redirect the user to the Get-Help cmdlet Help topic.</span></span>
+<span data-ttu-id="04c8e-125">다음 코드는 한 `Help` 번에 하나의 도움말 텍스트 화면을 표시 하는 PowerShell의 기본 제공 함수 시작 부분에서 발췌 한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="04c8e-125">The following code is an excerpt from the beginning of the built-in `Help` function in PowerShell, which displays one screen of Help text at a time.</span></span> <span data-ttu-id="04c8e-126">Get-help cmdlet에 대 한 도움말 항목에서 도움말 함수를 설명 하므로 Help 함수는 및 키워드를 사용 하 여 `.ForwardHelpTargetName` `.ForwardHelpCategory` 사용자를 Get-help cmdlet 도움말 항목으로 리디렉션합니다.</span><span class="sxs-lookup"><span data-stu-id="04c8e-126">Because the Help topic for the Get-Help cmdlet describes the Help function, the Help function uses the `.ForwardHelpTargetName` and `.ForwardHelpCategory` keywords to redirect the user to the Get-Help cmdlet Help topic.</span></span>
 
 ```powershell
 function help
@@ -328,13 +322,13 @@ function help
     ...
 ```
 
-<span data-ttu-id="71315-127">다음 명령은이 기능을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="71315-127">The following command uses this feature.</span></span> <span data-ttu-id="71315-128">사용자가 Help 함수에 대 한 Get-help 명령을 입력 하면 get-help는 get-help cmdlet에 대 한 도움말 항목을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="71315-128">When a user types a Get-Help command for the Help function, Get-Help displays the Help topic for the Get-Help cmdlet.</span></span>
+<span data-ttu-id="04c8e-127">다음 명령은이 기능을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="04c8e-127">The following command uses this feature.</span></span> <span data-ttu-id="04c8e-128">사용자가 `Get-Help` 함수에 대 한 명령을 입력 하면 `Help` 에서 `Get-Help` cmdlet에 대 한 도움말 항목을 표시 합니다 `Get-Help` .</span><span class="sxs-lookup"><span data-stu-id="04c8e-128">When a user types a `Get-Help` command for the `Help` function, `Get-Help` displays the Help topic for the `Get-Help` cmdlet.</span></span>
 
 ```powershell
 C:\PS> get-help help
 ```
 
-```output
+```Output
             NAME
                 Get-Help
 
