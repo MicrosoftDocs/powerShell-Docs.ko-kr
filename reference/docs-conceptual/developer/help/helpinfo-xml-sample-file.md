@@ -1,19 +1,12 @@
 ---
-title: HelpInfo XML 샘플 파일 | Microsoft Docs
-ms.custom: ''
+title: HelpInfo XML 샘플 파일
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 6544070f-5549-407f-8603-5df60fe9e013
-caps.latest.revision: 7
-ms.openlocfilehash: 3cf4790be3e26c8b55335da32152a4e2c1ee67b6
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: ccd1f61d8d40232a3e6d2228d382ef4895e13d3d
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811532"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893512"
 ---
 # <a name="helpinfo-xml-sample-file"></a>HelpInfo XML 샘플 파일
 

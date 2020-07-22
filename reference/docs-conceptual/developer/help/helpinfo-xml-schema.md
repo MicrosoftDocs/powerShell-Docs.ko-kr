@@ -1,19 +1,12 @@
 ---
-title: HelpInfo XML 스키마 | Microsoft Docs
-ms.custom: ''
+title: HelpInfo XML 스키마
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 74dcb396-c295-4457-b84c-4432bdaa8df3
-caps.latest.revision: 7
-ms.openlocfilehash: 3e2a113e120c61fab1ba76c4fd897ded67d13319
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: e894c1f2695ddbc5a386f8fec96054a7b31e7778
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811522"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893257"
 ---
 # <a name="helpinfo-xml-schema"></a>HelpInfo XML 스키마
 
@@ -54,12 +47,12 @@ HelpInfo XML 파일은 다음 XML 스키마를 기반으로 합니다.
 
 HelpInfo XML 파일에는 다음 요소가 포함 되어 있습니다.
 
-HelpContentURI에는 모듈에 대 한 도움말 CAB 파일 위치의 URI가 포함 됩니다. URI는 "http" 또는 "https"로 시작 해야 합니다. URI는 인터넷 위치를 지정 해야 하지만 CAB 파일 이름을 포함 하지 않아야 합니다. **Helpcontenturi** 값은 **HelpInfoURI** 값과 같거나 다를 수 있습니다.
+- **Helpcontenturi** -모듈의 도움말 CAB 파일 위치에 대 한 uri를 포함 합니다. URI는 "http" 또는 "https"로 시작 해야 합니다. URI는 인터넷 위치를 지정 해야 하지만 CAB 파일 이름을 포함 하지 않아야 합니다. **Helpcontenturi** 값은 **HelpInfoURI** 값과 같거나 다를 수 있습니다.
 
-SupportedUICultures는 모든 UI 문화권의 모듈 도움말 파일을 나타냅니다. 각각 지정 된 UI 문화권의 모듈에 대 한 도움말 파일 집합을 나타내는 **UICulture** 요소를 포함 합니다.
+- **SupportedUICultures** -모든 UI 문화권의 모듈 도움말 파일을 나타냅니다. 각각 지정 된 UI 문화권의 모듈에 대 한 도움말 파일 집합을 나타내는 **UICulture** 요소를 포함 합니다.
 
-UICulture는 지정 된 UI 문화권의 모듈에 대 한 도움말 파일 집합을 나타냅니다. 도움말 파일이 작성 되는 각 UI 문화권에 대 한 **UICulture** 요소를 추가 합니다.
+- **UICulture** -지정 된 UI 문화권의 모듈에 대 한 도움말 파일 집합을 나타냅니다. 도움말 파일이 작성 되는 각 UI 문화권에 대 한 **UICulture** 요소를 추가 합니다.
 
-UICultureName에는 도움말 파일이 작성 되는 UI 문화권에 대 한 언어 코드가 포함 되어 있습니다.
+- **UICultureName** -도움말 파일이 작성 되는 UI 문화권에 대 한 언어 코드를 포함 합니다.
 
-UICultureVersion에는 "N1. N2. N3. N4 "UI 문화권에서 도움말 CAB 파일의 버전을 나타내는 형식입니다. **UICultureName**로 지정 된 UI 문화권에 새 도움말 CAB 파일을 업로드할 때마다이 버전 번호를 늘립니다. 이 값에 대 한 자세한 내용은 MSDN의 "버전 클래스 (시스템)"를 참조 하십시오.
+- **UICultureVersion** -"N1에서 4 부분으로 구성 된 버전 번호를 포함 합니다. N2. N3. N4 "UI 문화권에서 도움말 CAB 파일의 버전을 나타내는 형식입니다. **UICultureName**로 지정 된 UI 문화권에 새 도움말 CAB 파일을 업로드할 때마다이 버전 번호를 늘립니다. 이 값에 대 한 자세한 내용은 [버전 클래스](/dotnet/api/system.version)를 참조 하세요.

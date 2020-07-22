@@ -1,18 +1,12 @@
 ---
-title: 주석 기반 도움말의 예 | Microsoft Docs
-ms.custom: ''
+title: 설명 기반 도움말 예제
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 868194a2-17e9-4184-bc36-c04a33f26494
-caps.latest.revision: 4
-ms.openlocfilehash: 30f7a52adaebac9373279b6edc4480277ba183e4
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 3858fa7f15d71c505dacaf9679910d45ef4640e5
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86035436"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893495"
 ---
 # <a name="examples-of-comment-based-help"></a>설명 기반 도움말 예제
 
@@ -70,13 +64,13 @@ function Add-Extension
 }
 ```
 
-다음 출력은 추가 확장 기능에 대 한 도움말을 표시 하는 Get-help 명령의 결과를 보여 줍니다.
+다음 출력은 `Get-Help` 함수에 대 한 도움말을 표시 하는 명령의 결과를 보여 줍니다 `Add-Extension` .
 
 ```powershell
 C:\PS> get-help add-extension -full
 ```
 
-```output
+```Output
         NAME
             Add-Extension
 
@@ -144,7 +138,7 @@ C:\PS> get-help add-extension -full
 
 다음 샘플 함수는 주석 기반 도움말을 포함 합니다.
 
-Closing 문과 문 사이에 빈 줄을 확인 **#>** `Param` 합니다. 문이 없는 스크립트에서 `Param` 도움말 항목의 마지막 주석과 첫 번째 함수 선언 사이에는 두 개 이상의 빈 줄이 있어야 합니다. 이러한 빈 줄이 없으면 Get-help는 스크립트 대신 도움말 항목을 함수와 연결 합니다.
+Closing 문과 문 사이에 빈 줄을 확인 **#>** `Param` 합니다. 문이 없는 스크립트에서 `Param` 도움말 항목의 마지막 주석과 첫 번째 함수 선언 사이에는 두 개 이상의 빈 줄이 있어야 합니다. 이러한 빈 줄이 없으면는 `Get-Help` 스크립트 대신 도움말 항목을 함수와 연결 합니다.
 
 ```powershell
 <#
@@ -184,13 +178,13 @@ param ([string]$InputPath, [string]$OutPutPath)
 function Get-Data { }
 ```
 
-다음 명령은 스크립트 도움말을 가져옵니다. 스크립트가 Path 환경 변수에 나열 된 디렉터리에 있지 않기 때문에 스크립트 도움말을 가져오는 Get-help 명령은 스크립트 경로를 지정 해야 합니다.
+다음 명령은 스크립트 도움말을 가져옵니다. 스크립트가 Path 환경 변수에 나열 된 디렉터리에 있지 않기 때문에 스크립트 `Get-Help` 도움말을 가져오는 명령은 스크립트 경로를 지정 해야 합니다.
 
 ```powershell
 C:\PS> get-help c:\ps-test\update-month.ps1 -full
 ```
 
-```output
+```Output
             NAME
                 C:\ps-test\Update-Month.ps1
 
@@ -281,11 +275,11 @@ function Add-Extension
     #>
 ```
 
-결과는 예 1의 결과와 같습니다. Get-help는 키워드와 함께 제공 된 것 처럼 매개 변수 설명을 해석 합니다 `.Parameter` .
+결과는 예 1의 결과와 같습니다. `Get-Help`키워드와 함께 제공 된 것 처럼 매개 변수 설명을 해석 합니다 `.Parameter` .
 
 ## <a name="example-4--redirecting-to-an-xml-file"></a>예 4: XML 파일로 리디렉션
 
-함수 및 스크립트에 대 한 XML 기반 도움말 항목을 작성할 수 있습니다. 주석 기반 도움말을 구현 하는 것이 좋지만 도움말 콘텐츠를 보다 정확 하 게 제어 하거나 도움말 항목을 여러 언어로 번역 하려는 경우에는 XML 기반 도움말이 필요 합니다. 다음 예에서는 Update-Month.ps1 스크립트의 처음 몇 줄을 보여 줍니다. 스크립트는 키워드를 사용 하 여 `.ExternalHelp` 스크립트에 대 한 XML 기반 도움말 항목의 경로를 지정 합니다.
+함수 및 스크립트에 대 한 XML 기반 도움말 항목을 작성할 수 있습니다. 주석 기반 도움말을 구현 하는 것이 좋지만 도움말 콘텐츠를 보다 정확 하 게 제어 하거나 도움말 항목을 여러 언어로 번역 하려는 경우에는 XML 기반 도움말이 필요 합니다. 다음 예에서는 스크립트의 처음 몇 줄을 보여 줍니다 `Update-Month.ps1` . 스크립트는 키워드를 사용 하 여 `.ExternalHelp` 스크립트에 대 한 XML 기반 도움말 항목의 경로를 지정 합니다.
 
 ```powershell
 #  .ExternalHelp C:\MyScripts\Update-Month-Help.xml
@@ -310,7 +304,7 @@ function Add-Extension
 
 ## <a name="example-5--redirecting-to-a-different-help-topic"></a>예 5: 다른 도움말 항목으로 리디렉션
 
-다음 코드는 한 `Help` 번에 하나의 도움말 텍스트 화면을 표시 하는 Windows PowerShell의 기본 제공 함수 시작 부분에서 발췌 한 것입니다. Get-help cmdlet에 대 한 도움말 항목에서 도움말 함수를 설명 하므로 Help 함수는 및 키워드를 사용 하 여 `.ForwardHelpTargetName` `.ForwardHelpCategory` 사용자를 Get-help cmdlet 도움말 항목으로 리디렉션합니다.
+다음 코드는 한 `Help` 번에 하나의 도움말 텍스트 화면을 표시 하는 PowerShell의 기본 제공 함수 시작 부분에서 발췌 한 것입니다. Get-help cmdlet에 대 한 도움말 항목에서 도움말 함수를 설명 하므로 Help 함수는 및 키워드를 사용 하 여 `.ForwardHelpTargetName` `.ForwardHelpCategory` 사용자를 Get-help cmdlet 도움말 항목으로 리디렉션합니다.
 
 ```powershell
 function help
@@ -328,13 +322,13 @@ function help
     ...
 ```
 
-다음 명령은이 기능을 사용 합니다. 사용자가 Help 함수에 대 한 Get-help 명령을 입력 하면 get-help는 get-help cmdlet에 대 한 도움말 항목을 표시 합니다.
+다음 명령은이 기능을 사용 합니다. 사용자가 `Get-Help` 함수에 대 한 명령을 입력 하면 `Help` 에서 `Get-Help` cmdlet에 대 한 도움말 항목을 표시 합니다 `Get-Help` .
 
 ```powershell
 C:\PS> get-help help
 ```
 
-```output
+```Output
             NAME
                 Get-Help
 

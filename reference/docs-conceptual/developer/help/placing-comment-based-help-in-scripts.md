@@ -1,19 +1,12 @@
 ---
-title: 스크립트에 주석 기반 도움말 배치 | Microsoft Docs
-ms.custom: ''
+title: 스크립트에 설명 기반 도움말 배치
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 49f8267c-d887-4d7d-b9b7-80dc624b1261
-caps.latest.revision: 4
-ms.openlocfilehash: 1bebfbd822963830363012060067c656d7709543
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: a3ade6c3138826b924939056b9d1ffb233006d44
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565529"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893189"
 ---
 # <a name="placing-comment-based-help-in-scripts"></a>스크립트에 설명 기반 도움말 배치
 
@@ -21,7 +14,9 @@ ms.locfileid: "83565529"
 
 ## <a name="where-to-place-comment-based-help-for-a-script"></a>스크립트에 대 한 주석 기반 도움말을 넣을 위치
 
-- 스크립트 파일의 시작 부분에 있습니다. 스크립트 도움말은 주석 및 빈 줄만 스크립트에 추가할 수 있습니다.
+- 스크립트 파일의 시작 부분에 있습니다.
+
+  스크립트 도움말은 주석 및 빈 줄만 스크립트에 추가할 수 있습니다.
 
 - 스크립트 파일의 끝에 있습니다.
 
@@ -29,13 +24,13 @@ ms.locfileid: "83565529"
 
 ## <a name="examples-of-help-placement-in-a-script"></a>스크립트의 도움말 배치 예
 
- 다음 예에서는 스크립트에 대 한 주석 기반 도움말의 각 배치 옵션을 보여 줍니다.
+다음 예에서는 스크립트에 대 한 주석 기반 도움말의 각 배치 옵션을 보여 줍니다.
 
 ### <a name="help-at-the-beginning-of-a-script"></a>스크립트의 시작 부분에 있는 도움말
 
- 다음 예에서는 스크립트의 시작 부분에 있는 주석 기반을 보여 줍니다.
+다음 예에서는 스크립트의 시작 부분에 있는 주석 기반을 보여 줍니다.
 
-```
+```powershell
 <#
 .Description
 This script performs a series of network connection tests.
@@ -57,5 +52,4 @@ function Ping { Test-Connection -ComputerName $ComputerName }
 .Description
 This script performs a series of network connection tests.
 #>
-
 ```

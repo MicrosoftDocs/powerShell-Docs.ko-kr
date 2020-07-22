@@ -1,23 +1,16 @@
 ---
-title: Windows PowerShell 도움말 작성 | Microsoft Docs
-ms.custom: ''
+title: Windows PowerShell 도움말 작성
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 20cbf009-9633-476e-b0b3-5604117ef2dd
-caps.latest.revision: 4
-ms.openlocfilehash: adde7c205f26c9bb87307f7eaa56988cefccdeaf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8807fe48c6354022900738de0b912c55dec9febb
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367672"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86892900"
 ---
 # <a name="writing-windows-powershell-help"></a>Windows PowerShell 도움말 작성
 
-이 문서는 `Get-Help` cmdlet을 사용 하 여 명령줄에서 볼 수 있는 Windows PowerShell cmdlet, 공급자 및 개념에 대 한 도움말 콘텐츠를 작성 하는 모든 사용자를 위해 작성 되었습니다.
+이 문서는 cmdlet을 사용 하 여 명령줄에서 볼 수 있는 PowerShell cmdlet, 공급자 및 개념 정보 항목에 대 한 도움말 콘텐츠를 작성 하는 모든 사용자를 위해 작성 되었습니다 `Get-Help` .
 
 ## <a name="cmdlet-help"></a>Cmdlet 도움말
 

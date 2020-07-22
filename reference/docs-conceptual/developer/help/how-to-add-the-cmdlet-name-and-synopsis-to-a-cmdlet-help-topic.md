@@ -1,32 +1,26 @@
 ---
-title: Cmdlet 이름 및 개요를 Cmdlet 도움말 항목에 추가 하는 방법 | Microsoft Docs
-ms.custom: ''
+title: Cmdlet 도움말 항목에 Cmdlet 이름 및 개요를 추가하는 방법
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1d0e1eb1-a962-4406-9625-175cfa3364ad
-caps.latest.revision: 10
-ms.openlocfilehash: 5b4c04a14c3d86c7a3b94b768e8fb59116d8c6f5
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 399defcb596ff9e9a596f4cd25ebcb6bcb7c34d2
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560630"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86892883"
 ---
 # <a name="how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic"></a>Cmdlet 도움말 항목에 Cmdlet 이름 및 개요를 추가하는 방법
 
-이 섹션에서는 cmdlet 도움말의 NAME 및 개요 섹션에 표시 되는 콘텐츠를 추가 하는 방법에 대해 설명 합니다. 도움말 파일에서이 콘텐츠는 각 cmdlet에 대 한 명령 노드에 추가 됩니다.
+이 섹션에서는 cmdlet 도움말의 **NAME** 및 **개요** 섹션에 표시 되는 콘텐츠를 추가 하는 방법에 대해 설명 합니다. 도움말 파일에서이 콘텐츠는 각 cmdlet에 대 한 명령 노드에 추가 됩니다.
 
 > [!NOTE]
-> 도움말 파일의 전체 보기를 보려면 Windows PowerShell 설치 디렉터리에 있는 dll-Help 파일 중 하나를 엽니다. 예를 들어 dll-Help 파일에는 몇 가지 Windows PowerShell cmdlet에 대 한 내용이 포함 되어 있습니다.
+> 도움말 파일의 전체 보기를 보려면 `dll-Help.xml` PowerShell 설치 디렉터리에 있는 파일 중 하나를 엽니다. 예를 `Microsoft.PowerShell.Commands.Management.dll-Help.xml` 들어 파일에는 몇 가지 PowerShell cmdlet에 대 한 내용이 포함 되어 있습니다.
 
-### <a name="to-add-the-cmdlet-name-and-a-synopsis"></a>Cmdlet 이름 및 개요를 추가 하려면
+## <a name="to-add-the-cmdlet-name-and-a-synopsis"></a>Cmdlet 이름 및 개요를 추가 하려면
 
-- Cmdlet 도움말에는 cmdlet에 대 한 두 가지 설명이 표시 될 수 있습니다. 첫 번째 설명은 개요 이라고 하는 간단한 설명입니다. 두 번째 설명은 [Cmdlet 도움말 항목에](./how-to-add-a-cmdlet-description.md)대 한 자세한 설명을 추가 하는 방법에서 설명 하는 자세한 설명입니다. 두 설명을 모두 단일 단락으로 작성 해야 합니다.
+- Cmdlet 도움말에는 cmdlet에 대 한 두 가지 설명이 표시 될 수 있습니다. 첫 번째 설명은 개요 이라고 하는 간단한 설명입니다. 두 번째 설명은 [Cmdlet 도움말 항목에](./how-to-add-a-cmdlet-description.md)대 한 자세한 설명을 추가 하는 방법에서 설명 하는 자세한 설명입니다.
+  두 설명을 모두 단일 단락으로 작성 해야 합니다.
 
-- 개요 cmdlet 이름을 반복 하지 않습니다. 사용자에 게 Get Server cmdlet이 서버를 가져오지만 정보는 없다는 사실을 알려 줍니다. 대신 동의어를 사용 하 고 설명에 세부 정보를 추가 합니다.
+- 개요 cmdlet 이름을 반복 하지 않습니다. `Get-Server`Cmdlet이 서버를 가져오지만 정보를 제공 하지 않는다는 사실을 사용자에 게 알립니다. 대신 동의어를 사용 하 고 설명에 세부 정보를 추가 합니다.
 
   예: "로컬 또는 원격 컴퓨터를 나타내는 개체를 가져옵니다."
 
@@ -40,4 +34,4 @@ ms.locfileid: "83560630"
 
 ## <a name="see-also"></a>참고 항목
 
- [Windows PowerShell SDK](../windows-powershell-reference.md)
+[Windows PowerShell SDK](../windows-powershell-reference.md)

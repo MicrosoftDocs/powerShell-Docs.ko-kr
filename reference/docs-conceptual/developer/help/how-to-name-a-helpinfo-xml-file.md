@@ -1,19 +1,12 @@
 ---
-title: HelpInfo XML 파일의 이름을 Microsoft Docs
-ms.custom: ''
+title: HelpInfo XML 파일 이름을 지정하는 방법
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 64e85b53-5aeb-4d6c-903c-af4ab62f11c1
-caps.latest.revision: 7
-ms.openlocfilehash: 45e8a5bb0066f38c82cd3be8ec881383befd9c85
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 9505a7f66852a569d25ac0c1be86e68f870a7930
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811412"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86892934"
 ---
 # <a name="how-to-name-a-helpinfo-xml-file"></a>HelpInfo XML 파일 이름을 지정하는 방법
 
@@ -27,9 +20,9 @@ HelpInfo XML 파일의 이름은 다음과 같은 형식 이어야 합니다.
 
 이름의 요소는 다음과 같습니다.
 
-ModuleName [import-module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet이 반환 하는 **Moduleinfo** 개체의 **Name** 속성 값입니다.
+- `<ModuleName>`- [Import-module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet이 반환 하는 **Moduleinfo** 개체의 **Name** 속성 값입니다.
 
-ModuleGUID 모듈 매니페스트의 **guid** 키 값입니다.
+- `<ModuleGUID>`-모듈 매니페스트의 **GUID** 키 값입니다.
 
 예를 들어 모듈 이름이 "TestModule"이 고 모듈 GUID가 9cabb9ad-4914-a46b-bfc1bebf07f9 인 경우 모듈의 HelpInfo XML 파일 이름은 다음과 같습니다.
 

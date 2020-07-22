@@ -1,19 +1,12 @@
 ---
-title: 함수에 주석 기반 도움말 배치 | Microsoft Docs
-ms.custom: ''
+title: 함수에 설명 기반 도움말 배치
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 5ec7159e-e4e9-4b21-95df-94244432f679
-caps.latest.revision: 5
-ms.openlocfilehash: 898225a582c7ed25f746dec7f84012db1ae60b98
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: c7a8f8db6c71fa2ef12aaa4df0f78815626ec8d6
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557070"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893206"
 ---
 # <a name="placing-comment-based-help-in-functions"></a>함수에 설명 기반 도움말 배치
 
@@ -29,14 +22,13 @@ ms.locfileid: "83557070"
 
 ## <a name="examples-of-help-placement-in-a-function"></a>함수의 도움말 배치 예
 
- 다음 예제에서는 함수에 대 한 주석 기반 도움말의 세 가지 배치 옵션을 각각 보여 줍니다.
+다음 예제에서는 함수에 대 한 주석 기반 도움말의 세 가지 배치 옵션을 각각 보여 줍니다.
 
 ### <a name="help-at-the-beginning-of-a-function-body"></a>함수 본문의 시작 부분에 있는 도움말
 
- 다음 예제에서는 함수 본문의 시작 부분에 있는 주석 기반을 보여 줍니다.
+다음 예제에서는 함수 본문의 시작 부분에 있는 주석 기반을 보여 줍니다.
 
 ```powershell
-
 function MyProcess
 {
     <#
@@ -46,7 +38,6 @@ function MyProcess
 
     Get-Process powershell
 }
-
 ```
 
 ### <a name="help-at-the-end-of-a-function-body"></a>함수 본문의 끝에 있는 도움말
@@ -54,7 +45,6 @@ function MyProcess
  다음 예제에서는 함수 본문의 끝에 있는 주석 기반을 보여 줍니다.
 
 ```powershell
-
 function MyFunction
 {
     Get-Process powershell
@@ -64,7 +54,6 @@ function MyFunction
        The MyProcess function gets the Windows PowerShell process.
     #>
 }
-
 ```
 
 ### <a name="help-before-the-function-keyword"></a>Function 키워드 앞의 도움말
@@ -72,11 +61,9 @@ function MyFunction
  다음 예제에서는 함수 키워드 앞의 줄을 기반으로 하는 주석 기반을 보여 줍니다.
 
 ```powershell
-
 <#
     .Description
     The MyProcess function gets the Windows PowerShell process.
 #>
 function MyFunction { Get-Process powershell}
-
 ```

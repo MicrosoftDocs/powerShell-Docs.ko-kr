@@ -1,23 +1,16 @@
 ---
-title: HelpInfo XML 파일을 만드는 방법 | Microsoft Docs
-ms.custom: ''
+title: HelpInfo XML 파일을 만드는 방법
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 3971ce1f-271c-4938-a9d3-47ff3aaf7219
-caps.latest.revision: 9
-ms.openlocfilehash: 1f09146a9e6456584f67edb52407193d8a9330ce
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: e395746e51309477bbcbff51b4591de3f73ce0db
+ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811772"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86893308"
 ---
 # <a name="how-to-create-a-helpinfo-xml-file"></a>HelpInfo XML 파일을 만드는 방법
 
-이 섹션의이 항목에서는 Windows PowerShell 업데이트할 수 있는 도움말 기능에 대 한 도움말 정보 파일 (일반적으로 "HelpInfo XML file" 이라고 함)을 만들고 채우는 방법을 설명 합니다.
+이 섹션의이 항목에서는 PowerShell 업데이트할 수 있는 도움말 기능에 대 한 도움말 정보 파일 (일반적으로 "HelpInfo XML file" 이라고 함)을 만들고 채우는 방법을 설명 합니다.
 
 ## <a name="helpinfo-xml-file-overview"></a>HelpInfo XML 파일 개요
 
@@ -27,7 +20,7 @@ HelpInfo XML 파일은 모듈에 대 한 업데이트할 수 있는 도움말에
 
 HelpInfo XML 파일을 신중 하 게 유지 관리 하는 것이 중요 합니다. 새 파일을 업로드 하 고 버전 번호를 늘리는 경우 업데이트할 수 있는 도움말은 사용자의 컴퓨터에 새 파일을 다운로드 하지 않습니다. 새 UI 문화권에 대 한 도움말 파일을 추가 하지만 HelpInfo XML 파일을 업데이트 하지 않거나 올바른 위치에 배치 하지 않으면 업데이트할 수 있는 도움말이 새 파일을 다운로드 하지 않습니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 이 섹션에는 다음 항목이 포함됩니다.
 
