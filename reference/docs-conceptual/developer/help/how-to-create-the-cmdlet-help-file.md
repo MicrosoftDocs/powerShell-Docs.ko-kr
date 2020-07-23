@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4a88dd89-6beb-494f-9e2a-6b10baed1a8d
 caps.latest.revision: 17
-ms.openlocfilehash: b5a5f3e187634b38ba3ce3da18a7ad64ccc09ce2
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.openlocfilehash: 652e095bcce606e47cb97658f79eaca34033b239
+ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893019"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86953304"
 ---
 # <a name="how-to-create-the-cmdlet-help-file"></a>Cmdlet 도움말 파일을 만드는 방법
 
@@ -54,9 +54,9 @@ ms.locfileid: "86893019"
 
 ```xml
 <command:command
-  xmlns:maml="https://schemas.microsoft.com/maml/2004/10"
-  xmlns:command="https://schemas.microsoft.com/maml/dev/command/2004/10"
-  xmlns:dev="https://schemas.microsoft.com/maml/dev/2004/10">
+  xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+  xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10"
+  xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
   <command:details>
     <!--Add name an synopsis here-->
   </command:details>

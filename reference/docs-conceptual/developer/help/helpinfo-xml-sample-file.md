@@ -1,12 +1,12 @@
 ---
 title: HelpInfo XML 샘플 파일
 ms.date: 09/12/2016
-ms.openlocfilehash: ccd1f61d8d40232a3e6d2228d382ef4895e13d3d
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.openlocfilehash: ec9a2a1afed4f22be00900cbc80b580ff99f8f38
+ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893512"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86953270"
 ---
 # <a name="helpinfo-xml-sample-file"></a>HelpInfo XML 샘플 파일
 
@@ -17,7 +17,7 @@ ms.locfileid: "86893512"
 ```xml
 
 <?xml version="1.0" encoding="utf-8"?>
-<HelpInfo xmlns="https://schemas.microsoft.com/powershell/help/2010/05">
+<HelpInfo xmlns="http://schemas.microsoft.com/powershell/help/2010/05">
    <HelpContentURI>https://go.microsoft.com/fwlink/?LinkID=141553</HelpContentURI>
    <SupportedUICultures>
     <UICulture>
