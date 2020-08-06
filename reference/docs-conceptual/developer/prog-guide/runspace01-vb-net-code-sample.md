@@ -1,25 +1,18 @@
 ---
 title: Runspace01 (VB.NET) 코드 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 12ee5382-95ba-41c7-8291-7f69a6f63514
-caps.latest.revision: 7
-ms.openlocfilehash: ce6bdec379a7ba9bf9b088c79a08ad5cef5da80b
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d40424283057b389d8a4aafeb8ddfa44284f3ba1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560307"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87778657"
 ---
-# <a name="runspace01-vbnet-code-sample"></a><span data-ttu-id="7097b-102">Runspace01(VB.NET) 코드 샘플</span><span class="sxs-lookup"><span data-stu-id="7097b-102">Runspace01 (VB.NET) Code Sample</span></span>
+# <a name="runspace01-vbnet-code-sample"></a><span data-ttu-id="aa9e6-102">Runspace01(VB.NET) 코드 샘플</span><span class="sxs-lookup"><span data-stu-id="aa9e6-102">Runspace01 (VB.NET) Code Sample</span></span>
 
-<span data-ttu-id="7097b-103">다음은 [지정 된 명령을 실행 하는 콘솔 응용 프로그램 만들기](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program)에서 설명 하는 runspace에 대 한 코드 샘플입니다.</span><span class="sxs-lookup"><span data-stu-id="7097b-103">Here are the code samples for the runspace described in [Creating a Console Application That Runs a Specified Command](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program).</span></span> <span data-ttu-id="7097b-104">이렇게 하기 위해 응용 프로그램은 runspace를 호출한 다음 명령을 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="7097b-104">To do this, the application invokes a runspace, and then invokes a command.</span></span> <span data-ttu-id="7097b-105">이 응용 프로그램은 runspace 구성 정보를 지정 하지 않으며 파이프라인을 명시적으로 만들지 않습니다. 호출 되는 명령은 `Get-Process` cmdlet입니다.</span><span class="sxs-lookup"><span data-stu-id="7097b-105">(Note that this application does not specify runspace configuration information, nor does it explicitly create a pipeline.) The command that is invoked is the `Get-Process` cmdlet.</span></span>
+<span data-ttu-id="aa9e6-103">다음은 [지정 된 명령을 실행 하는 콘솔 응용 프로그램 만들기](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program)에서 설명 하는 runspace에 대 한 코드 샘플입니다.</span><span class="sxs-lookup"><span data-stu-id="aa9e6-103">Here are the code samples for the runspace described in [Creating a Console Application That Runs a Specified Command](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program).</span></span> <span data-ttu-id="aa9e6-104">이렇게 하기 위해 응용 프로그램은 runspace를 호출한 다음 명령을 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="aa9e6-104">To do this, the application invokes a runspace, and then invokes a command.</span></span> <span data-ttu-id="aa9e6-105">이 응용 프로그램은 runspace 구성 정보를 지정 하지 않으며 파이프라인을 명시적으로 만들지 않습니다. 호출 되는 명령은 `Get-Process` cmdlet입니다.</span><span class="sxs-lookup"><span data-stu-id="aa9e6-105">(Note that this application does not specify runspace configuration information, nor does it explicitly create a pipeline.) The command that is invoked is the `Get-Process` cmdlet.</span></span>
 
-## <a name="code-sample"></a><span data-ttu-id="7097b-106">코드 예제</span><span class="sxs-lookup"><span data-stu-id="7097b-106">Code Sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="aa9e6-106">코드 예제</span><span class="sxs-lookup"><span data-stu-id="aa9e6-106">Code Sample</span></span>
 
 ```vb
 Imports System
@@ -71,6 +64,6 @@ End Namespace
 
 <!-- TODO!!!: [!code-csharp[Runspace01.vb](../../powershell-sdk-samples/SDK-2.0/vb/Runspace01/Runspace01.vb#L09-L53 "Runspace01.vb")] -->
 
-## <a name="see-also"></a><span data-ttu-id="7097b-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7097b-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aa9e6-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="aa9e6-107">See Also</span></span>
 
-[<span data-ttu-id="7097b-108">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="7097b-108">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="aa9e6-108">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="aa9e6-108">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
