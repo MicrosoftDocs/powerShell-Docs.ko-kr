@@ -1,19 +1,12 @@
 ---
 title: GroupBy (Format)의 Label 요소 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 3351d237-e8c2-4ec5-9500-4eceadb407c2
-caps.latest.revision: 11
-ms.openlocfilehash: e7158711c60d13c745bbdfab9b1b9fc7d98b34e2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 07b4d037472a9dd2329e94576ec10f5b82f46b34
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365202"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785781"
 ---
 # <a name="label-element-for-groupby-format"></a>GroupBy에 대한 Label 요소(형식)
 
@@ -29,7 +22,7 @@ ms.locfileid: "72365202"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `Label` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다 `Label` .
 
 ### <a name="attributes"></a>특성
 
@@ -43,7 +36,7 @@ ms.locfileid: "72365202"
 
 |요소|설명|
 |-------------|-----------------|
-|[보기에 대 한 GroupBy 요소 (형식)](./groupby-element-for-view-format.md)|새 개체 그룹을 표시 하는 방법을 정의 합니다.|
+|[View에 대한 GroupBy 요소(형식)](./groupby-element-for-view-format.md)|새 개체 그룹을 표시 하는 방법을 정의 합니다.|
 
 ## <a name="text-value"></a>텍스트 값
 
@@ -55,7 +48,7 @@ Windows PowerShell에서 새 속성이 나 스크립트 값을 발견할 때마�
 
 ## <a name="example"></a>예제
 
-다음 예에서는 새 그룹의 레이블을 보여 줍니다. 표시 되는 레이블은 다음과 유사 합니다. `Service Type: NewValueofProperty`
+다음 예에서는 새 그룹의 레이블을 보여 줍니다. 표시 되는 레이블은 다음과 유사 합니다.`Service Type: NewValueofProperty`
 
 ```xml
 <GroupBy>
@@ -69,6 +62,6 @@ Windows PowerShell에서 새 속성이 나 스크립트 값을 발견할 때마�
 
 ## <a name="see-also"></a>참고 항목
 
-[보기에 대 한 GroupBy 요소 (형식)](./groupby-element-for-view-format.md)
+[View에 대한 GroupBy 요소(형식)](./groupby-element-for-view-format.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

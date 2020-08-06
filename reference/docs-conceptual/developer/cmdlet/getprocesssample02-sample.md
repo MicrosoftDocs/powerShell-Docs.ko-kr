@@ -1,23 +1,16 @@
 ---
 title: GetProcessSample02 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 481f557d-3344-4d33-b2da-4736a0165181
-caps.latest.revision: 7
-ms.openlocfilehash: fa4cd8a724793e71b615c84a5c5a833aa92c93fc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fa10774508b70f4aab4546cf4d6fbe8978032f1b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364572"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784234"
 ---
 # <a name="getprocesssample02-sample"></a>GetProcessSample02 샘플
 
-이 샘플에서는 로컬 컴퓨터의 프로세스를 검색 하는 cmdlet을 작성 하는 방법을 보여 줍니다. 이 클래스는 검색할 프로세스를 지정 하는 데 사용할 수 있는 `Name` 매개 변수를 제공 합니다. 이 cmdlet은 Windows PowerShell 2.0에서 제공 하는 `Get-Process` cmdlet의 단순화 된 버전입니다.
+이 샘플에서는 로컬 컴퓨터의 프로세스를 검색 하는 cmdlet을 작성 하는 방법을 보여 줍니다. `Name`검색할 프로세스를 지정 하는 데 사용할 수 있는 매개 변수를 제공 합니다. 이 cmdlet은 `Get-Process` Windows PowerShell 2.0에서 제공 되는 cmdlet의 단순화 된 버전입니다.
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.
 
@@ -65,7 +58,7 @@ ms.locfileid: "72364572"
 
 ## <a name="example"></a>예제
 
-이 샘플은 `Name` 매개 변수를 포함 하는 Get Proc cmdlet의 구현을 보여 줍니다.
+이 샘플에서는 매개 변수를 포함 하는 Get Proc cmdlet의 구현을 보여 줍니다 `Name` .
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands
@@ -137,4 +130,4 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 ## <a name="see-also"></a>참고 항목
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

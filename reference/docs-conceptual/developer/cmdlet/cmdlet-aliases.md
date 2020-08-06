@@ -1,25 +1,18 @@
 ---
 title: Cmdlet 별칭 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d0d70864-33fb-49ce-8054-c41ba19fd554
-caps.latest.revision: 11
-ms.openlocfilehash: 32f45702cc0d28e6652ef61ebdbe085291013408
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fed4055f09e01c5f3fa87584d48551918606f4eb
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369982"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784540"
 ---
 # <a name="cmdlet-aliases"></a>Cmdlet 별칭
 
 Cmdlet 별칭을 사용 하 여 cmdlet 사용자 환경을 개선할 수 있습니다. 자주 사용 하는 cmdlet에 별칭을 추가 하 여 입력을 줄이고 신속 하 게 작업을 더 쉽게 완료할 수 있습니다. Cmdlet에 기본 제공 별칭을 포함 하거나 사용자가 고유한 사용자 지정 별칭을 정의할 수 있습니다.
 
-예를 들어, [Get Command](/powershell/module/microsoft.powershell.core/get-command) cmdlet에는 기본 제공 `gcm` 별칭이 있습니다. 사용자가 새 명령을 학습할 필요가 없도록 별칭을 사용 하 여 다른 언어의 명령 이름을 추가할 수도 있습니다.
+예를 들어, [Get Command](/powershell/module/microsoft.powershell.core/get-command) cmdlet에는 기본 제공 별칭이 있습니다 `gcm` . 사용자가 새 명령을 학습할 필요가 없도록 별칭을 사용 하 여 다른 언어의 명령 이름을 추가할 수도 있습니다.
 
 ## <a name="alias-guidelines"></a>별칭 지침
 
@@ -27,7 +20,7 @@ Cmdlet에 대 한 기본 제공 별칭을 만드는 경우 다음 지침을 따�
 
 - 별칭을 할당 하기 전에 Windows PowerShell을 시작 하 고, [Get Alias](/powershell/module/Microsoft.PowerShell.Utility/Get-Alias) cmdlet을 실행 하 여 이미 사용 된 별칭을 확인 합니다.
 
-- Cmdlet 이름의 동사를 참조 하는 별칭 접두사와 cmdlet 이름의 명사를 참조 하는 별칭 접미사를 포함 합니다. 예를 들어 `Import-Module` cmdlet의 별칭은 "ipmo"입니다. 모든 동사 및 해당 별칭 목록은 [Cmdlet 동사](./approved-verbs-for-windows-powershell-commands.md)를 참조 하세요.
+- Cmdlet 이름의 동사를 참조 하는 별칭 접두사와 cmdlet 이름의 명사를 참조 하는 별칭 접미사를 포함 합니다. 예를 들어 cmdlet의 별칭은 `Import-Module` "ipmo"입니다. 모든 동사 및 해당 별칭 목록은 [Cmdlet 동사](./approved-verbs-for-windows-powershell-commands.md)를 참조 하세요.
 
 - 동일한 동사가 있는 cmdlet의 경우 동일한 별칭 접두사를 포함 합니다. 예를 들어 이름에 "Get" 동사가 있는 모든 Windows PowerShell cmdlet의 별칭은 "g" 접두사를 사용 합니다.
 
@@ -39,4 +32,4 @@ Cmdlet에 대 한 기본 제공 별칭을 만드는 경우 다음 지침을 따�
 
 ## <a name="see-also"></a>참고 항목
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

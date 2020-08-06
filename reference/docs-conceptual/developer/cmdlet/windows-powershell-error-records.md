@@ -1,24 +1,17 @@
 ---
 title: Windows PowerShell 오류 레코드 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - error category [PowerShell SDK]
 - error identifier [PowerShell SDK]
 - error records [PowerShell SDK]
 - error category string [PowerShell SDK]
-ms.assetid: bdd66fea-eb63-4bb6-9cbe-9a799e5e0db5
-caps.latest.revision: 9
-ms.openlocfilehash: 5412d88b690a1f5f1ef387416e3bf9da3a32c95d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 52243916adf18b4f3a1e00f1fb4199c2619946e9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369112"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783979"
 ---
 # <a name="windows-powershell-error-records"></a>Windows PowerShell 오류 레코드
 
@@ -38,7 +31,7 @@ Cmdlet이 예외를 catch 하지 않으면 새 예외를 만들고 오류 조건
 
 - 오류를 throw 한 cmdlet에 대 한 선택적 호출 정보입니다. 이 정보는 Windows PowerShell에서 지정 됩니다 (호출 메시지 참조).
 
-- 오류가 발생 했을 때 처리 중 이었던 대상 개체입니다. 이는 입력 개체 일 수도 있고 cmdlet이 처리 하는 다른 개체 일 수도 있습니다. 예를 들어 명령 `remove-item -recurse c:\somedirectory`의 경우 오류는 "c:\somedirectory\lockedfile"에 대 한 FileInfo 개체의 인스턴스일 수 있습니다. 대상 개체 정보는 선택 사항입니다.
+- 오류가 발생 했을 때 처리 중 이었던 대상 개체입니다. 이는 입력 개체 일 수도 있고 cmdlet이 처리 하는 다른 개체 일 수도 있습니다. 예를 들어 명령의 경우 `remove-item -recurse c:\somedirectory` 오류는 "c:\somedirectory\lockedfile"에 대 한 FileInfo 개체의 인스턴스일 수 있습니다. 대상 개체 정보는 선택 사항입니다.
 
 ## <a name="error-identifier"></a>오류 식별자
 
@@ -60,7 +53,7 @@ Cmdlet이 예외를 catch 하지 않으면 새 예외를 만들고 오류 조건
 
 ## <a name="error-category"></a>오류 범주
 
-오류 레코드를 만들 때 [ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) 열거형에 정의 된 상수 중 하나를 사용 하 여 오류 범주를 지정 합니다. Windows PowerShell은 사용자가 `$ErrorView` 변수를 `"CategoryView"`로 설정 하면 오류 범주를 사용 하 여 오류 정보를 표시 합니다.
+오류 레코드를 만들 때 [ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) 열거형에 정의 된 상수 중 하나를 사용 하 여 오류 범주를 지정 합니다. Windows PowerShell은 사용자가 변수를로 설정 하는 경우 오류 범주를 사용 하 여 오류 정보를 표시 합니다 `$ErrorView` `"CategoryView"` .
 
 [ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) **NotSpecified** 상수를 사용 하지 마십시오. 오류 또는 오류를 발생 시킨 작업에 대 한 정보가 있는 경우 해당 범주가 완벽 하 게 일치 하지 않는 경우에도 오류 또는 작업을 가장 잘 설명 하는 범주를 선택 합니다.
 
@@ -94,7 +87,7 @@ Cmdlet에 대 한 오류 레코드를 개발 하는 경우 오류에 대 한 기
 
 대체 메시지는 약간의 차이를 제외 하 고 예외 메시지를 작성 하기 위한 .NET Framework 디자인 지침을 따라야 합니다. 지침에서는 개발자를 위해 예외 메시지를 작성 해야 합니다. 이러한 대체 메시지는 cmdlet 사용자에 대해 작성 해야 합니다.
 
-[WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 또는 [Throwterminatingerror *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 메서드를 호출 하기 전에 대체 오류 메시지를 추가 해야 합니다 (대체 오류 메시지). 대체 메시지를 추가 하려면 오류 레코드의 [ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord.ErrorDetails) 속성을 설정 합니다. 이 속성을 설정 하면 Windows PowerShell에서 기본 메시지 텍스트 대신 [system.object](/dotnet/api/System.Management.Automation.ErrorDetails.Message) 를 표시 합니다.
+[WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 또는 [Throwterminatingerror *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 메서드를 호출 하기 전에 대체 오류 메시지를 추가 해야 합니다 (대체 오류 메시지). 대체 메시지를 추가 하려면 오류 레코드의 [ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord.ErrorDetails) 속성을 설정 합니다. 이 속성을 설정 하면 Windows PowerShell에서 기본 메시지 텍스트 대신 [system.object](/dotnet/api/System.Management.Automation.ErrorDetails.Message) 를 표시 합니다..
 
 ## <a name="recommended-action-information"></a>권장 작업 정보
 
@@ -122,4 +115,4 @@ Cmdlet에서 [WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteE
 
 [Windows PowerShell 오류 보고](./error-reporting-concepts.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

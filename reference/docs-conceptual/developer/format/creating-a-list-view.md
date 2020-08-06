@@ -1,19 +1,12 @@
 ---
 title: 목록 뷰 만들기 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8c7a40ca-1786-46f0-bab5-6ce229daa7ee
-caps.latest.revision: 14
-ms.openlocfilehash: 25d24063501196d44e0f806a55bb699c82f771ce
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 24eb673e0db011a1439fa5ba1f2966fcc3bdc338
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368982"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783775"
 ---
 # <a name="creating-a-list-view"></a>목록 보기 만들기
 
@@ -99,7 +92,7 @@ ServiceType         : Win32OwnProcess
 
 - [Name](./name-element-for-view-format.md) 요소는 뷰의 이름을 지정 합니다. 이 요소는 모든 뷰에 필요 합니다.
 
-- [Viewselectedby](./viewselectedby-element-format.md) 요소는 뷰를 사용 하는 개체를 정의 합니다. 필수적 요소로,
+- [Viewselectedby](./viewselectedby-element-format.md) 요소는 뷰를 사용 하는 개체를 정의 합니다. 이 요소는 필수 요소입니다.
 
 - [GroupBy](./groupby-element-for-view-format.md) 요소는 새 개체 그룹이 표시 되는 시기를 정의 합니다. 특정 속성 또는 스크립트의 값이 변경 될 때마다 새 그룹이 시작 됩니다. 이 요소는 선택적입니다.
 
@@ -141,7 +134,7 @@ ServiceType         : Win32OwnProcess
 
 - [이 listcontrol](./listcontrol-element-format.md) 요소 및 해당 자식 요소는 뷰에 표시 되는 내용을 정의 합니다.
 
-- [ListEntries](./listentries-element-for-listcontrol-format.md) 요소는 뷰의 정의를 제공 합니다. 대부분의 경우 보기에는 하나의 정의만 있습니다. 필수적 요소로,
+- [ListEntries](./listentries-element-for-listcontrol-format.md) 요소는 뷰의 정의를 제공 합니다. 대부분의 경우 보기에는 하나의 정의만 있습니다. 이 요소는 필수 요소입니다.
 
 - [ListEntry](./listentry-element-for-listcontrol-format.md) 요소는 뷰의 정의를 제공 합니다. 하나 이상의 [ListEntry](./listentry-element-for-listcontrol-format.md) 가 필요 합니다. 그러나 추가할 수 있는 요소 수에 대 한 최대 제한은 없습니다. 대부분의 경우 보기에는 하나의 정의만 있습니다.
 
@@ -255,7 +248,7 @@ ServiceType         : Win32OwnProcess
 
 ## <a name="using-format-strings"></a>서식 문자열 사용
 
-서식 문자열을 뷰에 추가 하 여 데이터 표시 방법을 추가로 정의할 수 있습니다. 다음 예제에서는 `StartTime` 속성의 값에 대 한 서식 문자열을 정의 하는 방법을 보여 줍니다.
+서식 문자열을 뷰에 추가 하 여 데이터 표시 방법을 추가로 정의할 수 있습니다. 다음 예제에서는 속성의 값에 대 한 서식 문자열을 정의 하는 방법을 보여 줍니다 `StartTime` .
 
 ```xml
 <ListItem>
@@ -274,7 +267,7 @@ ServiceType         : Win32OwnProcess
 
 - [ScriptBlock](./scriptblock-element-for-listitem-for-listcontrol-format.md) 요소 (표시 되지 않음)는 값이 뷰에 표시 되는 스크립트를 지정 합니다. 스크립트나 속성 중 하나를 지정 해야 하지만 둘 다 지정할 수는 없습니다.
 
-다음 예제에서는 스크립트의 값에 대 한 서식을 지정 하기 위해 `ToString` 메서드를 호출 합니다. 스크립트는 개체의 메서드를 호출할 수 있습니다. 따라서 개체에 형식 지정 매개 변수가 있는 `ToString`와 같은 메서드가 있는 경우 스크립트는 해당 메서드를 호출 하 여 스크립트의 출력 값에 대 한 형식을 지정할 수 있습니다.
+다음 예제에서는 `ToString` 메서드를 호출 하 여 스크립트의 값에 대 한 형식을 지정 합니다. 스크립트는 개체의 메서드를 호출할 수 있습니다. 따라서 개체에 `ToString` 형식 매개 변수를 포함 하는 등의 메서드가 있는 경우 스크립트는 해당 메서드를 호출 하 여 스크립트의 출력 값에 대 한 형식을 지정할 수 있습니다.
 
 ```xml
 <ListItem>
@@ -285,7 +278,7 @@ ServiceType         : Win32OwnProcess
 </ListItem>
 ```
 
-다음 XML 요소를 사용 하 여 `ToString` 메서드를 호출할 수 있습니다.
+다음 XML 요소를 사용 하 여 메서드를 호출할 수 있습니다 `ToString` .
 
 - [ListItem](./listitem-element-for-listitems-for-listcontrol-format.md) 요소는 뷰에 표시 되는 데이터를 지정 합니다.
 
@@ -293,4 +286,4 @@ ServiceType         : Win32OwnProcess
 
 ## <a name="see-also"></a>참고 항목
 
-[Writing a Windows PowerShell Cmdlet](../cmdlet/writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](../cmdlet/writing-a-windows-powershell-cmdlet.md)

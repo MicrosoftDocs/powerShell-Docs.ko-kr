@@ -1,27 +1,20 @@
 ---
 title: 출력 개체 확장 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a252e0ec-d456-42d7-bd49-d6b8bc57f388
-caps.latest.revision: 11
-ms.openlocfilehash: 12a826363221b8a7ce06245c787a7bd0529e42f8
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 48f4f2996159d84257ad72d499e3a796aeaa9116
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690908"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784319"
 ---
 # <a name="extending-output-objects"></a>출력 개체 확장
 
-형식 파일 (. types.ps1xml)을 사용 하 여 cmdlet, 함수 및 스크립트에 의해 반환 되는 .NET Framework 개체를 확장할 수 있습니다. 형식 파일은 기존 개체에 속성 및 메서드를 추가할 수 있는 XML 기반 파일입니다. 예를 들어 Windows PowerShell은 몇 가지 기존 .NET Framework 개체에 요소를 추가 하는 types.ps1xml 파일을 제공 합니다. Types.ps1xml 파일은 Windows PowerShell 설치 디렉터리 ()에 있습니다 `$pshome` . 사용자 고유의 형식 파일을 만들어 이러한 개체를 추가로 확장 하거나 다른 개체를 확장할 수 있습니다. 형식 파일을 사용 하 여 개체를 확장 하는 경우 개체의 모든 인스턴스가 새 요소로 확장 됩니다.
+형식 파일 (. types.ps1xml)을 사용 하 여 cmdlet, 함수 및 스크립트에 의해 반환 되는 .NET Framework 개체를 확장할 수 있습니다. 형식 파일은 기존 개체에 속성 및 메서드를 추가할 수 있는 XML 기반 파일입니다. 예를 들어 Windows PowerShell은 몇 가지 기존 .NET Framework 개체에 요소를 추가 하는 Types.ps1xml 파일을 제공 합니다. Types.ps1xml 파일은 Windows PowerShell 설치 디렉터리 ()에 있습니다 `$pshome` . 사용자 고유의 형식 파일을 만들어 이러한 개체를 추가로 확장 하거나 다른 개체를 확장할 수 있습니다. 형식 파일을 사용 하 여 개체를 확장 하는 경우 개체의 모든 인스턴스가 새 요소로 확장 됩니다.
 
 ## <a name="extending-the-systemarray-object"></a>System.object 개체 확장
 
-다음 예제에서는 Windows PowerShell에서 types.ps1xml 파일의 [system.object](/dotnet/api/System.Array) 개체를 확장 하는 방법을 보여 줍니다. 기본적으로 [system.object](/dotnet/api/System.Array) 개체에는 `Length` 배열의 개체 수를 나열 하는 속성이 있습니다. 그러나 이름 "length"는 속성을 명확 하 게 설명 하지 않으므로 Windows PowerShell은 속성의 `Count` 값과 동일한 값을 표시 하는 alias 속성을 추가 합니다 `Length` . 다음 XML은 `Count` [system.object](/dotnet/api/System.Array) 형식에 속성을 추가 합니다.
+다음 예에서는 Windows PowerShell이 Types.ps1xml 파일에서 [system.object](/dotnet/api/System.Array) 개체를 확장 하는 방법을 보여 줍니다. 기본적으로 [system.object](/dotnet/api/System.Array) 개체에는 `Length` 배열의 개체 수를 나열 하는 속성이 있습니다. 그러나 이름 "length"는 속성을 명확 하 게 설명 하지 않으므로 Windows PowerShell은 속성의 `Count` 값과 동일한 값을 표시 하는 alias 속성을 추가 합니다 `Length` . 다음 XML은 `Count` [system.object](/dotnet/api/System.Array) 형식에 속성을 추가 합니다.
 
 ```xml
 <Type>
@@ -57,7 +50,7 @@ Get            Method        System.Object Get(Int32 )
 Length         Property      System.Int32 Length {get;}
 ```
 
-`Count`속성 또는 속성 중 하나 `Length` 를 사용 하 여 배열에 있는 개체 수를 확인할 수 있습니다. 다음은 그 예입니다.
+`Count`속성 또는 속성 중 하나 `Length` 를 사용 하 여 배열에 있는 개체 수를 확인할 수 있습니다. 예를 들어:
 
 ```powershell
 PS> (1, 2, 3, 4).Count
@@ -89,7 +82,7 @@ PS> (1, 2, 3, 4).Length
 
 사용자 고유의 확장 형식을 정의한 후 다음 방법 중 하나를 사용 하 여 확장 개체를 사용할 수 있도록 합니다.
 
-- 확장 형식 파일을 현재 세션에서 사용할 수 있도록 설정 하려면 [update-typedata](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) cmdlet을 사용 하 여 새 파일을 추가 합니다. 형식이 다른 형식 파일 (types.ps1xml 파일 포함)에 정의 된 형식 보다 우선적으로 적용 되도록 하려면 `PrependData` [update-typedata](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) cmdlet의 매개 변수를 사용 합니다.
+- 확장 형식 파일을 현재 세션에서 사용할 수 있도록 설정 하려면 [update-typedata](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) cmdlet을 사용 하 여 새 파일을 추가 합니다. 형식이 다른 형식 파일 (Types.ps1xml 파일 포함)에 정의 된 형식 보다 우선적으로 적용 되도록 하려면 `PrependData` [update-typedata](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) cmdlet의 매개 변수를 사용 합니다.
 - 모든 이후 세션에서 확장 형식 파일을 사용할 수 있도록 하려면 형식 파일을 모듈에 추가 하 고 현재 세션을 내보내거나 [update-typedata](/powershell/module/Microsoft.PowerShell.Utility/Update-TypeData) 명령을 Windows PowerShell 프로필에 추가 합니다.
 
 ## <a name="signing-types-files"></a>형식 파일 서명

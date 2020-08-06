@@ -1,19 +1,12 @@
 ---
 title: 구성에 대 한 컨트롤 요소 (형식) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: bddf7ffa-04d3-4354-90b9-5e714e096260
-caps.latest.revision: 13
-ms.openlocfilehash: 26fe417c9ca60dda22bdc23d9d339d40135a0c9b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9447efac84cff3cc33468aeebc97a8bdd6137518
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369012"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783826"
 ---
 # <a name="control-element-for-controls-for-configuration-format"></a>Configuration의 Controls에 대한 Control 요소(형식)
 
@@ -32,7 +25,7 @@ ms.locfileid: "72369012"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `Control` 요소에 대 한 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 각 자식 요소 중 하나만 지정 해야 합니다.
+다음 섹션에서는 요소에 대 한 특성, 자식 요소 및 부모 요소에 대해 설명 합니다 `Control` . 각 자식 요소 중 하나만 지정 해야 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -42,7 +35,7 @@ ms.locfileid: "72369012"
 
 |요소|설명|
 |-------------|-----------------|
-|[구성에 대 한 컨트롤에 대 한 CustomControl 요소 (형식)](./customcontrol-element-for-control-for-controls-for-configuration-format.md)|필수적 요소입니다.<br /><br /> 컨트롤을 정의 합니다.|
+|[Configuration에 대한 Controls의 Control에 대한 CustomControl 요소(형식)](./customcontrol-element-for-control-for-controls-for-configuration-format.md)|필수적 요소입니다.<br /><br /> 컨트롤을 정의 합니다.|
 |[구성에 대 한 컨트롤의 Name 요소 (형식)](./name-element-for-control-for-controls-for-configuration-format.md)|필수적 요소입니다.<br /><br /> 컨트롤을 참조 하는 데 사용 되는 이름을 지정 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
@@ -69,6 +62,6 @@ ms.locfileid: "72369012"
 
 [보기에 대 한 GroupBy 요소 (형식)](./groupby-element-for-view-format.md)
 
-[구성 컨트롤에 대 한 컨트롤의 Name 요소 (형식)](./name-element-for-control-for-controls-for-configuration-format.md)
+[Configuration에 대한 Controls의 Control에 대한 Name 요소(형식)](./name-element-for-control-for-controls-for-configuration-format.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

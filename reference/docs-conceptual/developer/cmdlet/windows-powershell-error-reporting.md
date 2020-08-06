@@ -1,25 +1,18 @@
 ---
 title: Windows PowerShell 오류 보고 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 61b7773a-c346-4835-a928-7212dc4c85bc
-caps.latest.revision: 7
-ms.openlocfilehash: 259de341fd2fcce2b0c4629f806b4348cba1ff2c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7f7afcf5186732734976304c8e58e4d940156e1e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364272"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783962"
 ---
 # <a name="windows-powershell-error-reporting"></a>Windows PowerShell 오류 보고
 
 이 섹션의 항목에서는 cmdlet에서 오류를 보고 하는 방법에 대해 설명 합니다.
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [오류 보고 개념](./error-reporting-concepts.md) Cmdlet에서 오류를 보고 하는 데 사용할 수 있는 두 가지 메커니즘을 설명 합니다.
 
@@ -35,4 +28,4 @@ ms.locfileid: "72364272"
 
 ## <a name="see-also"></a>참고 항목
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

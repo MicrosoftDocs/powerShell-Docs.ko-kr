@@ -1,13 +1,12 @@
 ---
 title: Cmdlet 개요
 ms.date: 06/11/2020
-ms.topic: article
-ms.openlocfilehash: e179bf371c26781cf1c8db641c46c0329036c8ea
-ms.sourcegitcommit: 56463fb628a7d83dec4364e89417d83316c3e53b
+ms.openlocfilehash: 576df03f35dff80479d1fce18cf4306c9219d42f
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84722833"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784404"
 ---
 # <a name="cmdlet-overview"></a>Cmdlet 개요
 

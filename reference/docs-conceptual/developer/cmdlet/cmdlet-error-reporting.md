@@ -1,25 +1,18 @@
 ---
 title: Cmdlet 오류 보고 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - error records [PowerShell], terminating
 - non-terminating errors [PowerShell]
 - error records [PowerShell]
 - terminating errors [PowerShell]
 - error records [PowerShell], non-terminating
-ms.assetid: 0b014035-52ea-44cb-ab38-bbe463c5465a
-caps.latest.revision: 8
-ms.openlocfilehash: 5dfec318438ca139518c596011ac5e56445738ea
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 30b19914253db5f517f5ab76623b54aced0c0598
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365922"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784472"
 ---
 # <a name="cmdlet-error-reporting"></a>Cmdlet 오류 보고
 
@@ -82,12 +75,12 @@ PowerShell은이 식별자와 cmdlet 식별자를 결합 하 여 나중에 오�
 
 사용할 수 있는 오류 범주에 대 한 설명은 [ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) 열거를 참조 하세요. 일반적으로 가능한 경우 **noerror**, **UndefinedError**및 **genericerror** 를 사용 하지 않도록 해야 합니다.
 
-사용자는 범주 **보기**에 `$ErrorView` 설정 된 범주에 따라 오류를 볼 수 있습니다.
+사용자는 `$ErrorView` **categoryview**로 설정 된 범주에 따라 오류를 볼 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [Cmdlet 개요](./cmdlet-overview.md)
 
-[Cmdlet 출력의 유형](./types-of-cmdlet-output.md)
+[Cmdlet 출력 형식](./types-of-cmdlet-output.md)
 
 [Windows PowerShell 참조](../windows-powershell-reference.md)

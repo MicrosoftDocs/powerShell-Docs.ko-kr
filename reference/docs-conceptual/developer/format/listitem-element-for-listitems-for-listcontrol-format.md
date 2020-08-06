@@ -1,25 +1,18 @@
 ---
 title: 이 listcontrol (형식)에 대 한 ListItems의 ListItem 요소 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0f96f4f5-8bd5-43ed-95e7-a7358115999a
-caps.latest.revision: 11
-ms.openlocfilehash: 1e0a1b2d20853650328b8cfd1513a08f7e167cd6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e72a887e8bd1f93bacb663e3079eeaec34bdfa51
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365132"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785679"
 ---
 # <a name="listitem-element-for-listitems-for-listcontrol-format"></a>ListControl의 ListItems에 대한 ListItem 요소(형식)
 
 목록 뷰의 행에 값이 표시 되는 속성 또는 스크립트를 정의 합니다.
 
-Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (format)이 listcontrol Element (format) ListEntries 요소에 대 한이 listcontrol (format) ListEntry 요소의이 listcontrol (format) ListItems 요소 (형식) 이 listcontrol 요소에 대 한 ListItem (형식)
+Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (format)이 listcontrol Element (format) ListEntries 요소에 대 한이 listcontrol (format) ListEntry Element for이 listcontrol (format) ListItem for ListItems 요소 (format)
 
 ## <a name="syntax"></a>구문
 
@@ -35,7 +28,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `ListItem` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 하나의 속성 또는 스크립트만 지정할 수 있습니다.
+다음 섹션에서는 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다 `ListItem` . 하나의 속성 또는 스크립트만 지정할 수 있습니다.
 
 ### <a name="attributes"></a>특성
 
@@ -46,10 +39,10 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 |요소|설명|
 |-------------|-----------------|
 |[이 listcontrol의 ListItem 요소에 대 한 FormatString 요소 (형식)](./formatstring-element-for-listitem-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 속성 또는 스크립트 값이 표시 되는 방법을 정의 하는 서식 문자열을 지정 합니다.|
-|[이 listcontrol의 ListItem에 대 한 ItemSelectionCondition 요소 (형식)](./itemselectioncondition-element-for-listitem-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 이 목록 항목을 사용 하기 위해 있어야 하는 조건을 정의 합니다.|
-|[이 listcontrol (형식)의 ListItem에 대 한 Label 요소](./label-element-for-listitem-for-listcontrol-format.md)|선택적 요소<br /><br /> 행에서 속성 또는 스크립트 값의 왼쪽에 표시 되는 레이블을 지정 합니다.|
-|[이 listcontrol의 ListItem 요소에 대 한 PropertyName 요소 (형식)](./propertyname-element-for-listitem-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 해당 값이 행에 표시 되는 .NET 속성을 지정 합니다.|
-|[이 listcontrol (형식)의 ListItem 요소에 대 한 ScriptBlock 요소](./scriptblock-element-for-listitem-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 행에 값이 표시 되는 스크립트를 지정 합니다.|
+|[ListControl의 ListItem에 대한 ItemSelectionCondition 요소(형식)](./itemselectioncondition-element-for-listitem-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 이 목록 항목을 사용 하기 위해 있어야 하는 조건을 정의 합니다.|
+|[ListControl의 ListItem에 대한 Label 요소(형식)](./label-element-for-listitem-for-listcontrol-format.md)|선택적 요소<br /><br /> 행에서 속성 또는 스크립트 값의 왼쪽에 표시 되는 레이블을 지정 합니다.|
+|[ListControl의 ListItem에 대한 PropertyName 요소(형식)](./propertyname-element-for-listitem-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 해당 값이 행에 표시 되는 .NET 속성을 지정 합니다.|
+|[ListControl의 ListItem에 대한 ScriptBlock 요소(형식)](./scriptblock-element-for-listitem-for-listcontrol-format.md)|선택적 요소입니다.<br /><br /> 행에 값이 표시 되는 스크립트를 지정 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 

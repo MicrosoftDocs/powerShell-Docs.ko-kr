@@ -1,11 +1,6 @@
 ---
 title: 명령줄 입력을 처리 하는 매개 변수 추가 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - cmdlets [PowerShell Programmer's Guide], parameters
 - Get-Proc cmdlet [PowerShell Programmer's Guide]
@@ -13,24 +8,22 @@ helpviewer_keywords:
 - command line input [PowerShell Programmer's Guide]
 - parameters [PowerShell Programmer's Guide]
 - cmdlets [PowerShell Programmer's Guide], creating
-ms.assetid: da0b32f8-7b51-440e-a061-3177b5759e0e
-caps.latest.revision: 9
-ms.openlocfilehash: b8ade5607595fd4453b2a4d69a6345880e58192b
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 6ccc873d9c6b93546b3dae8c0d2e406763fdfb8a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870458"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784574"
 ---
 # <a name="adding-parameters-that-process-command-line-input"></a>명령줄 입력을 처리하는 매개 변수 추가
 
-Cmdlet에 대 한 입력의 한 소스는 명령줄입니다. 이 항목에서는 cmdlet이 cmdlet에 전달 된 명시적 개체에 따라 로컬 컴퓨터의 입력을 처리할 수 있도록 `Get-Proc` cmdlet에 매개 변수를 추가 하는 방법에 대해 설명 합니다 ( [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)에 설명 되어 있음). 여기에 설명 된 `Get-Proc` cmdlet은 이름에 따라 프로세스를 검색 한 다음 명령 프롬프트에서 프로세스에 대 한 정보를 표시 합니다.
+Cmdlet에 대 한 입력의 한 소스는 명령줄입니다. 이 항목에서는 cmdlet에 매개 변수를 추가 하는 방법에 대해 설명 합니다 .이 cmdlet은 cmdlet에 `Get-Proc` 전달 된 명시적 개체를 기반으로 하 여 로컬 컴퓨터의 입력을 처리할 수 있도록 cmdlet에 매개 변수를 추가 하는 [방법에 대해](./creating-a-cmdlet-without-parameters.md)설명 합니다. `Get-Proc`여기에 설명 된 cmdlet은 이름에 따라 프로세스를 검색 한 다음 명령 프롬프트에서 프로세스에 대 한 정보를 표시 합니다.
 
 ## <a name="defining-the-cmdlet-class"></a>Cmdlet 클래스 정의
 
 Cmdlet 생성의 첫 번째 단계는 cmdlet 이름 및 cmdlet을 구현 하는 .NET Framework 클래스의 선언입니다. 이 cmdlet은 프로세스 정보를 검색 하므로 여기서 선택한 동사 이름은 "Get"입니다. 정보를 검색할 수 있는 거의 모든 종류의 cmdlet은 명령줄 입력을 처리할 수 있습니다. 승인 된 cmdlet 동사에 대 한 자세한 내용은 [Cmdlet 동사 이름](./approved-verbs-for-windows-powershell-commands.md)을 참조 하세요.
 
-`Get-Proc` cmdlet에 대 한 클래스 선언은 다음과 같습니다. 이 정의에 대 한 세부 정보는 [첫 번째 Cmdlet을 만들](./creating-a-cmdlet-without-parameters.md)때 제공 됩니다.
+다음은 cmdlet에 대 한 클래스 선언 `Get-Proc` 입니다. 이 정의에 대 한 세부 정보는 [첫 번째 Cmdlet을 만들](./creating-a-cmdlet-without-parameters.md)때 제공 됩니다.
 
 ```csharp
 [Cmdlet(VerbsCommon.Get, "proc")]
@@ -45,13 +38,13 @@ Public Class GetProcCommand
 
 ## <a name="declaring-parameters"></a>매개 변수 선언
 
-Cmdlet 매개 변수를 사용 하면 사용자가 cmdlet에 입력을 제공할 수 있습니다. 다음 예제에서 `Get-Proc` 및 `Get-Member`은 파이프라인 cmdlet의 이름이 고 `MemberType`는 `Get-Member` cmdlet에 대 한 매개 변수입니다. 매개 변수의 인수는 "property"입니다.
+Cmdlet 매개 변수를 사용 하면 사용자가 cmdlet에 입력을 제공할 수 있습니다. 다음 예에서 `Get-Proc` 및는 `Get-Member` 파이프라인 cmdlet의 이름이 고 `MemberType` 는 cmdlet에 대 한 매개 변수입니다 `Get-Member` . 매개 변수의 인수는 "property"입니다.
 
-**PS > get-proc; `get-member`-membertype 속성**
+**PS> get-proc; `get-member`-membertype 속성**
 
-cmdlet의 매개 변수를 선언하려면 매개 변수를 나타내는 속성을 먼저 정의해야 합니다. `Get-Proc` cmdlet에서 유일한 매개 변수는 `Name`이며이 경우 검색할 .NET Framework 프로세스 개체의 이름을 나타냅니다. 따라서 cmdlet 클래스는 이름 배열을 허용 하는 문자열 형식의 속성을 정의 합니다.
+Cmdlet에 대 한 매개 변수를 선언 하려면 먼저 매개 변수를 나타내는 속성을 정의 해야 합니다. Cmdlet에서 `Get-Proc` 유일한 매개 변수는입니다 `Name` .이 경우는 검색할 .NET Framework 프로세스 개체의 이름을 나타냅니다. 따라서 cmdlet 클래스는 이름 배열을 허용 하는 문자열 형식의 속성을 정의 합니다.
 
-다음은 `Get-Proc` cmdlet의 `Name` 매개 변수에 대 한 매개 변수 선언입니다.
+다음은 cmdlet의 매개 변수에 대 한 매개 변수 선언 `Name` `Get-Proc` 입니다.
 
 ```csharp
 /// <summary>
@@ -83,20 +76,20 @@ Public Property Name() As String()
 End Property
 ```
 
-Windows PowerShell 런타임에이 속성이 `Name` 매개 변수 임을 알리려면, 속성 정의에 [system.object](/dotnet/api/System.Management.Automation.ParameterAttribute) 를 추가 합니다. 이 특성을 선언 하는 기본 구문은 `[Parameter()]`입니다.
+Windows PowerShell 런타임에이 속성이 `Name` 매개 변수 임을 알리려면, 속성 정의에 [system.object](/dotnet/api/System.Management.Automation.ParameterAttribute) 를 추가 합니다. 이 특성을 선언 하는 기본 구문은 `[Parameter()]` 입니다.
 
 > [!NOTE]
 > 매개 변수는 명시적으로 public으로 표시 되어야 합니다. 공용으로 표시 되지 않는 매개 변수는 Windows PowerShell 런타임에서 찾을 수 없습니다.
 
-이 cmdlet은 `Name` 매개 변수에 대 한 문자열 배열을 사용 합니다. 가능 하면 cmdlet은 매개 변수를 배열로도 정의 해야 합니다. 이렇게 하면 cmdlet이 둘 이상의 항목을 허용할 수 있습니다.
+이 cmdlet은 매개 변수에 대 한 문자열 배열을 사용 `Name` 합니다. 가능 하면 cmdlet은 매개 변수를 배열로도 정의 해야 합니다. 이렇게 하면 cmdlet이 둘 이상의 항목을 허용할 수 있습니다.
 
 #### <a name="things-to-remember-about-parameter-definitions"></a>매개 변수 정의에 대해 기억할 사항
 
 - 미리 정의 된 Windows PowerShell 매개 변수 이름 및 데이터 형식은 cmdlet이 Windows PowerShell cmdlet과 호환 되도록 가능한 한 많이 다시 사용 해야 합니다. 예를 들어 모든 cmdlet이 미리 정의 된 `Id` 매개 변수 이름을 사용 하 여 리소스를 식별 하는 경우 사용자는 사용 중인 cmdlet에 관계 없이 매개 변수의 의미를 쉽게 이해할 수 있습니다. 기본적으로 매개 변수 이름은 CLR (공용 언어 런타임)의 변수 이름에 사용 되는 것과 동일한 규칙을 따릅니다. 매개 변수 명명에 대 한 자세한 내용은 [Cmdlet 매개 변수 이름](/previous-versions/ms714468(v=vs.85))을 참조 하세요.
 
-- Windows PowerShell은 일관 된 사용자 환경을 제공 하기 위해 몇 가지 매개 변수 이름을 예약 합니다. `WhatIf`, `Confirm`, `Verbose`, `Debug`, `Warn`, `ErrorAction`, `ErrorVariable`, `OutVariable`및 `OutBuffer`매개 변수 이름을 사용 하지 마십시오. 또한 이러한 매개 변수 이름에 대 한 다음 별칭은 예약 되어 있습니다: `vb`, `db`, `ea`, `ev`, `ov`및 `ob`.
+- Windows PowerShell은 일관 된 사용자 환경을 제공 하기 위해 몇 가지 매개 변수 이름을 예약 합니다. ,,,,,,, `WhatIf` `Confirm` `Verbose` `Debug` `Warn` `ErrorAction` `ErrorVariable` `OutVariable` 및 `OutBuffer` 매개 변수 이름을 사용 하지 마십시오. 또한 이러한 매개 변수 이름에 대 한 다음 별칭은 예약 되어 있습니다.,, `vb` `db` ,, `ea` `ev` `ov` 및 `ob`
 
-- `Name`은 단순 하 고 일반적인 매개 변수 이름이 며 cmdlet에 사용 하는 것이 좋습니다. 특정 cmdlet에 고유 하 고 기억할 수 없는 복잡 한 이름과 같은 매개 변수 이름을 선택 하는 것이 좋습니다.
+- `Name`는 단순 하 고 일반적인 매개 변수 이름으로, cmdlet에서 사용 하기 위해 권장 됩니다. 특정 cmdlet에 고유 하 고 기억할 수 없는 복잡 한 이름과 같은 매개 변수 이름을 선택 하는 것이 좋습니다.
 
 - 매개 변수는 Windows PowerShell에서 대/소문자를 구분 하지 않지만 기본적으로 셸에서는 대/소문자를 유지 합니다. 인수에 대 한 대/소문자 구분은 cmdlet의 작업에 따라 달라 집니다. 인수는 명령줄에서 지정 된 매개 변수로 전달 됩니다.
 
@@ -104,21 +97,21 @@ Windows PowerShell 런타임에이 속성이 `Name` 매개 변수 임을 알리�
 
 ## <a name="declaring-parameters-as-positional-or-named"></a>매개 변수를 위치 또는 이름으로 선언
 
-Cmdlet은 각 매개 변수를 위치 또는 명명 된 매개 변수로 설정 해야 합니다. 두 종류의 매개 변수 모두 단일 인수, 쉼표로 구분 된 여러 인수 및 부울 설정을 허용 합니다. 부울 매개 변수 ( *스위치*라고도 함)는 부울 설정만 처리 합니다. 스위치는 매개 변수가 있는지 확인 하는 데 사용 됩니다. 권장 되는 기본값은 `false`입니다.
+Cmdlet은 각 매개 변수를 위치 또는 명명 된 매개 변수로 설정 해야 합니다. 두 종류의 매개 변수 모두 단일 인수, 쉼표로 구분 된 여러 인수 및 부울 설정을 허용 합니다. 부울 매개 변수 ( *스위치*라고도 함)는 부울 설정만 처리 합니다. 스위치는 매개 변수가 있는지 확인 하는 데 사용 됩니다. 권장 되는 기본값은 `false` 입니다.
 
-샘플 `Get-Proc` cmdlet은 위치가 있는 위치 매개 변수로 `Name` 매개 변수를 정의 합니다.
-0. 즉, 사용자가 명령줄에 입력 하는 첫 번째 인수가이 매개 변수에 대해 자동으로 삽입 됩니다. 사용자가 명령줄에서 매개 변수 이름을 지정 해야 하는 명명 된 매개 변수를 정의 하려면 특성 선언에서 `Position` 키워드를 그대로 둡니다.
+샘플 `Get-Proc` cmdlet은 `Name` 매개 변수를 위치가 인 위치 매개 변수로 정의 합니다.
+0. 즉, 사용자가 명령줄에 입력 하는 첫 번째 인수가이 매개 변수에 대해 자동으로 삽입 됩니다. 사용자가 명령줄에서 매개 변수 이름을 지정 해야 하는 명명 된 매개 변수를 정의 하려면 `Position` 키워드를 특성 선언 밖으로 그대로 둡니다.
 
 > [!NOTE]
 > 매개 변수 이름을 지정 하지 않는 한 사용자가 매개 변수 이름을 입력할 필요가 없도록 가장 많이 사용 하는 매개 변수 위치를 만드는 것이 좋습니다.
 
 ## <a name="declaring-parameters-as-mandatory-or-optional"></a>매개 변수를 필수 또는 선택 사항으로 선언
 
-Cmdlet은 각 매개 변수를 선택적 또는 필수 매개 변수로 설정 해야 합니다. `Mandatory` 키워드가 특성 선언에 설정 되어 있지 않으므로 sample `Get-Proc` cmdlet에서 `Name` 매개 변수는 선택 사항으로 정의 됩니다.
+Cmdlet은 각 매개 변수를 선택적 또는 필수 매개 변수로 설정 해야 합니다. 샘플 cmdlet에서는 `Get-Proc` `Name` `Mandatory` 특성이 특성 선언에 설정 되어 있지 않으므로 매개 변수가 선택 사항으로 정의 됩니다.
 
 ## <a name="supporting-parameter-validation"></a>매개 변수 유효성 검사 지원
 
-`Get-Proc` cmdlet은 입력 유효성 검사 특성 [Validatenotnulloremptyattribute](/dotnet/api/System.Management.Automation.ValidateNotNullOrEmptyAttribute)를 `Name` 매개 변수에 추가 하 여 입력이 `null` 되거나 비어 있지 않은 경우 유효성 검사를 수행할 수 있도록 합니다. 이 특성은 Windows PowerShell에서 제공 하는 여러 유효성 검사 특성 중 하나입니다. 다른 유효성 검사 특성의 예제는 [매개 변수 입력 유효성 검사](./validating-parameter-input.md)를 참조 하세요.
+이 샘플 `Get-Proc` cmdlet은 입력 유효성 검사 특성 [Validatenotnulloremptyattribute](/dotnet/api/System.Management.Automation.ValidateNotNullOrEmptyAttribute)을 매개 변수에 추가 하 여 입력이 아니고 비어 있지도 `Name` 않은 유효성 검사를 사용 하도록 설정 합니다. `null` 이 특성은 Windows PowerShell에서 제공 하는 여러 유효성 검사 특성 중 하나입니다. 다른 유효성 검사 특성의 예제는 [매개 변수 입력 유효성 검사](./validating-parameter-input.md)를 참조 하세요.
 
 ```
 [Parameter(Position = 0)]
@@ -130,7 +123,7 @@ public string[] Name
 
 Cmdlet이 명령줄 입력을 처리 하려면 적절 한 입력 처리 메서드를 재정의 해야 합니다. 기본 입력 처리 방법은 [첫 번째 Cmdlet을 만드는 데](./creating-a-cmdlet-without-parameters.md)도입 되었습니다.
 
-`Get-Proc` cmdlet은 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 재정의 하 여 사용자 또는 스크립트에서 제공 하는 `Name` 매개 변수 입력을 처리 합니다. 이 메서드는 요청 된 각 프로세스 이름에 대 한 프로세스를 가져오거나, 이름이 제공 되지 않은 경우에는 모든 프로세스에 대 한 프로세스를 가져옵니다. [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)에서 [WriteObject% 28System% 2csystem %29](/dotnet/api/system.management.automation.cmdlet.writeobject?view=powershellsdk-1.1.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) 을 (를) 호출 하면 출력 개체를 파이프라인으로 전송 하는 데 사용할 수 있는 출력 메커니즘이 표시 됩니다. 이 호출의 두 번째 매개 변수 `enumerateCollection`는 Windows PowerShell 런타임에 알리고 프로세스 개체의 출력 배열을 열거 하 고 명령줄에 프로세스를 한 번에 하나씩 기록 하도록 `true`로 설정 됩니다.
+`Get-Proc`Cmdlet은 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 재정의 하 여 `Name` 사용자 또는 스크립트에서 제공 하는 매개 변수 입력을 처리 합니다. 이 메서드는 요청 된 각 프로세스 이름에 대 한 프로세스를 가져오거나, 이름이 제공 되지 않은 경우에는 모든 프로세스에 대 한 프로세스를 가져옵니다. [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)에서 [WriteObject% 28System% 2csystem %29](/dotnet/api/system.management.automation.cmdlet.writeobject?view=powershellsdk-1.1.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) 을 (를) 호출 하면 출력 개체를 파이프라인으로 전송 하는 데 사용할 수 있는 출력 메커니즘이 표시 됩니다. 이 호출의 두 번째 매개 변수는 `enumerateCollection` `true` 프로세스 개체의 출력 배열을 열거 하 고 명령줄에 프로세스를 한 번에 하나씩 쓰도록 Windows PowerShell 런타임에 알리기 위해로 설정 됩니다.
 
 ```csharp
 protected override void ProcessRecord()
@@ -179,7 +172,7 @@ End Sub 'ProcessRecord
 
 ## <a name="code-sample"></a>코드 예제
 
-전체 C# 샘플 코드는 [GetProcessSample02 샘플](./getprocesssample02-sample.md)을 참조 하세요.
+전체 c # 샘플 코드는 [GetProcessSample02 샘플](./getprocesssample02-sample.md)을 참조 하세요.
 
 ## <a name="defining-object-types-and-formatting"></a>개체 형식 및 서식 정의
 
@@ -227,7 +220,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
 
 ## <a name="see-also"></a>참고 항목
 
-[파이프라인 입력을 처리 하는 매개 변수 추가](./adding-parameters-that-process-pipeline-input.md)
+[파이프라인 입력을 처리하는 매개 변수 추가](./adding-parameters-that-process-pipeline-input.md)
 
 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)
 

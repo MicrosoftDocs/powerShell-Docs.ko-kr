@@ -1,19 +1,12 @@
 ---
 title: PowerShell 모듈 매니페스트를 작성 하는 방법 | Microsoft Docs
-ms.custom: ''
 ms.date: 10/16/2019
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: e082c2e3-12ce-4032-9caf-bf6b2e0dcf81
-caps.latest.revision: 23
-ms.openlocfilehash: 992148c9e39b6edbfa26907de03a5ae57691d831
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 734adab5ce26df6e26353de8e0bc9084e0fd3f3b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84148399"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784914"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>PowerShell 모듈 매니페스트를 작성 하는 방법
 
@@ -88,7 +81,7 @@ PowerShell 모듈을 작성 한 후 모듈에 대 한 정보를 포함 하는 �
 |**ModuleList**<br /> 형식: `Object[]`|`@()`|이 모듈을 사용 하 여 패키지 된 모든 모듈을 지정 합니다. 이러한 모듈은 이름으로 입력 하거나 쉼표로 구분 된 문자열을 사용 하 여 입력 하거나 **ModuleName** 및 **GUID** 키가 포함 된 해시 테이블로 입력할 수 있습니다. 해시 테이블에는 선택적 **ModuleVersion** 키도 있을 수 있습니다. **Modulelist** 키는 모듈 인벤토리 역할을 하도록 디자인 되었습니다. 이러한 모듈은 자동으로 처리 되지 않습니다. <br /> 예: `ModuleList = @("SampleModule", "MyModule", @{ModuleName="MyModule"; ModuleVersion="1.0.0.0"; GUID="50cdb55f-5ab7-489f-9e94-4ec21ff51e59"})`|
 |**FileList**<br /> 형식: `String[]`|`@()`|이 모듈과 함께 패키지 된 모든 파일의 목록입니다. **Modulelist**와 마찬가지로 **FileList** 는 인벤토리 목록이 며 달리 처리 되지 않습니다. <br /> 예: `FileList = @("File1", "File2", "File3")`|
 |**PrivateData**<br /> 형식: `Object`|`@{...}`|**RootModule** (Alias: **ModuleToProcess**) 키로 지정 된 루트 모듈에 전달 되어야 하는 개인 데이터를 지정 합니다. **PrivateData** 는 **Tags**, **LicenseUri**, **ProjectURI**, **IconUri**, **ReleaseNotes**, **시험판**, **RequireLicenseAcceptance**및 **ExternalModuleDependencies**등 여러 요소로 구성 된 해시 테이블입니다. |
-|**Tags** <br /> 형식: `String[]` |`@()`| 태그는 온라인 갤러리의 모듈 검색에 도움이 됩니다. <br /> 예: `Tags = "PackageManagement", "PowerShell", "Manifest"`|
+|**태그** <br /> 형식: `String[]` |`@()`| 태그는 온라인 갤러리의 모듈 검색에 도움이 됩니다. <br /> 예: `Tags = "PackageManagement", "PowerShell", "Manifest"`|
 |**LicenseUri**<br /> 형식: `Uri` |`<empty string>`| 이 모듈의 라이선스에 대 한 URL입니다. <br /> 예: `LicenseUri = 'https://www.contoso.com/license'`|
 |**ProjectUri**<br /> 형식: `Uri` |`<empty string>`| 이 프로젝트의 기본 웹 사이트에 대 한 URL입니다. <br /> 예: `ProjectUri = 'https://www.contoso.com/project'`|
 |**IconUri**<br /> 형식: `Uri` |`<empty string>`| 이 모듈을 나타내는 아이콘의 URL입니다. <br /> 예: `IconUri = 'https://www.contoso.com/icons/icon.png'`|
@@ -239,13 +232,13 @@ PrivateData = @{
 
 ## <a name="see-also"></a>참조
 
-[about_comparison_operators](/powershell/module/microsoft.powershell.core/about/about_comparison_operators)
+[about_Comparison_Operators](/powershell/module/microsoft.powershell.core/about/about_comparison_operators)
 
 [about_If](/powershell/module/microsoft.powershell.core/about/about_if)
 
 [전역 어셈블리 캐시](/dotnet/framework/app-domains/gac)
 
-[Import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)
+[모듈 가져오기](/powershell/module/Microsoft.PowerShell.Core/Import-Module)
 
 [New-ModuleManifest](/powershell/module/microsoft.powershell.core/new-modulemanifest)
 

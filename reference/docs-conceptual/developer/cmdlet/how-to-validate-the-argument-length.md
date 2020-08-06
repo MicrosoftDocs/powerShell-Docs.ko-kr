@@ -1,21 +1,14 @@
 ---
 title: 인수의 길이를 확인 하는 방법 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - ValidateLength attribute, example
-ms.assetid: d5ddaa6e-4904-46da-beb0-0295a8f38332
-caps.latest.revision: 12
-ms.openlocfilehash: 8a21675acd087df93f93c25952c78931255d60b3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: aa0545def6d9628f6b41090a425f0c5af25f6ad7
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365492"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784081"
 ---
 # <a name="how-to-validate-the-argument-length"></a>인수 길이 유효성을 검사하는 방법
 
@@ -45,4 +38,4 @@ ms.locfileid: "72365492"
 
 [ValidateLength 특성 선언](./validatelength-attribute-declaration.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

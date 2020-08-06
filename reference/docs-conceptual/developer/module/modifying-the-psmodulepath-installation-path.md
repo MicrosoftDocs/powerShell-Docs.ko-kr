@@ -1,19 +1,12 @@
 ---
 title: PSModulePath 설치 경로 수정 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: dc5ce5a2-50e9-4c88-abf1-ac148a8a6b7b
-caps.latest.revision: 15
-ms.openlocfilehash: 02e9868fc5c536629f7abc319df06f9a4a394ac8
-ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
+ms.openlocfilehash: 795f2bd52aeceddd3c0ca092d0c0cf2ef44bcf23
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85837497"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784846"
 ---
 # <a name="modifying-the-psmodulepath-installation-path"></a>PSModulePath 설치 경로 수정
 

@@ -1,19 +1,12 @@
 ---
 title: RunSpace08 코드 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0f286201-8a02-4b00-9a2c-1b833ccdbdbf
-caps.latest.revision: 7
-ms.openlocfilehash: 21d7c4fe69e5026089676c43ad69a4263732cc34
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 67172a0f8d6daf2f5b9965d1a18f7698daddbe1a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978256"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784693"
 ---
 # <a name="runspace08-code-sample"></a>RunSpace08 코드 샘플
 

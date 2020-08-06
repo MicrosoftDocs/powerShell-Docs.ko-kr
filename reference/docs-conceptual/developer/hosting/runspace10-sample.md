@@ -1,23 +1,16 @@
 ---
 title: Runspace10 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7c265084-e072-46ca-9844-c3c0e275d6b0
-caps.latest.revision: 7
-ms.openlocfilehash: 1a73c0b6731073b1bac941e323416e8c45d2c252
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 4d858c432c6221f2347f6de664d1e4ee299f5801
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565243"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784948"
 ---
 # <a name="runspace10-sample"></a>Runspace10 샘플
 
-이 샘플에서는 기본 초기 세션 상태를 만드는 방법, Runspace에 cmdlet을 추가 하는 방법, 초기 세션 상태를 사용 하는 runspace를 만드는 방법 및 [Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) [개체를](/dotnet/api/system.management.automation.powershell) 사용 하 여 명령을 실행 하는 방법을 보여 줍니다.
+이 샘플에서는 기본 초기 세션 상태를 만드는 방법, [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)에 cmdlet을 추가 하는 방법, 초기 세션 상태를 사용 하는 runspace를 만드는 방법 및 [개체를](/dotnet/api/system.management.automation.powershell) 사용 하 여 명령을 실행 하는 방법을 보여 줍니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -27,9 +20,9 @@ ms.locfileid: "83565243"
 
 이 샘플에서는 다음을 보여 줍니다.
 
-- [Runspace Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 만듭니다.
+- [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 만듭니다.
 
-- [Runspace Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체에 Cmdlet (호스트 응용 프로그램에서 정의 됨)을 추가 합니다.
+- [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체에 Cmdlet (호스트 응용 프로그램에서 정의 됨)을 추가 합니다.
 
 - 개체를 사용 하는 [runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) 개체를 만듭니다.
 
@@ -41,7 +34,7 @@ ms.locfileid: "83565243"
 
 ## <a name="example"></a>예제
 
-이 샘플은 Initialsessionstate 개체를 사용 하 여 runspace를 열 때 사용할 수 있는 요소를 정의 하는 runspace를 만듭니다 [runspace](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) . 이 샘플에서는 호스트 응용 프로그램에 의해 정의 된 Get Proc cmdlet이 초기 세션 상태에 추가 되 고 cmdlet은 [system.object](/dotnet/api/system.management.automation.powershell) 를 사용 하 여 동기적으로 실행 됩니다.
+이 샘플에서는 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 사용 하 여 runspace를 열 때 사용할 수 있는 요소를 정의 하는 runspace를 만듭니다. 이 샘플에서는 호스트 응용 프로그램에 의해 정의 된 Get Proc cmdlet이 초기 세션 상태에 추가 되 고 cmdlet은 [system.object](/dotnet/api/system.management.automation.powershell) 를 사용 하 여 동기적으로 실행 됩니다.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces

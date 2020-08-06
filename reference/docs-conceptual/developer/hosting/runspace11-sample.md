@@ -1,19 +1,12 @@
 ---
 title: Runspace11 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 9c90d268-730b-4e73-9dfd-5f288c27aed0
-caps.latest.revision: 8
-ms.openlocfilehash: 606f06339d0bbec3393c6b2602df3636c1f4e458
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 6e8a4080bb4fb33f7e0d428e24483b5cfac5c70e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565386"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784931"
 ---
 # <a name="runspace11-sample"></a>Runspace11 샘플
 
@@ -29,11 +22,11 @@ ms.locfileid: "83565386"
 
 - 기존 cmdlet의 메타 데이터를 설명 하는 [system.web 메타 데이터](/dotnet/api/System.Management.Automation.CommandMetadata) 개체를 만듭니다.
 
-- [Runspace Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 만듭니다.
+- [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 만듭니다.
 
 - Cmdlet 메타 데이터를 수정 하 여 cmdlet의 매개 변수를 제거 합니다.
 
-- [Runspace Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체에 cmdlet을 추가 하 고이 cmdlet을 전용으로 만듭니다.
+- [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체에 cmdlet을 추가 하 고 cmdlet을 전용으로 만듭니다.
 
 - 기존 cmdlet을 호출 하지만 제한 된 매개 변수 집합만 노출 하는 프록시 함수를 만드는 경우
 

@@ -1,19 +1,12 @@
 ---
 title: PowerShell 모듈 설치 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fb82827e-fdb7-4cbf-b3d4-093e72b3ff0e
-caps.latest.revision: 28
-ms.openlocfilehash: 60ac4bf9089232a9fa879e835e32da53422489fd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6a4e9ac2884d0b300b5c1ad8b6156525438a1650
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367072"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784863"
 ---
 # <a name="installing-a-powershell-module"></a>PowerShell 모듈 설치
 
@@ -31,14 +24,14 @@ PowerShell 모듈을 만든 후에는 사용자 또는 다른 사용자가 사�
 
 기본적으로 **PSModulePath** 환경 변수 값에는 다음 시스템 및 사용자 모듈 디렉터리가 포함 되지만 값을 추가 하 고 편집할 수 있습니다.
 
-- `$PSHome\Modules` (%Windir%\System32\WindowsPowerShell\v1.0\Modules)
+- `$PSHome\Modules`%Windir%\System32\WindowsPowerShell\v1.0\Modules
 
   > [!WARNING]
   > 이 위치는 Windows와 함께 제공 되는 모듈에 대해 예약 되어 있습니다. 이 위치에 모듈을 설치 하지 마세요.
 
-- `$Home\Documents\WindowsPowerShell\Modules` (%UserProfile%\Documents\WindowsPowerShell\Modules)
+- `$Home\Documents\WindowsPowerShell\Modules`(%UserProfile%\Documents\WindowsPowerShell\Modules)
 
-- `$Env:ProgramFiles\WindowsPowerShell\Modules` (%ProgramFiles%\WindowsPowerShell\Modules)
+- `$Env:ProgramFiles\WindowsPowerShell\Modules`(%ProgramFiles%\WindowsPowerShell\Modules)
 
   **PSModulePath** 환경 변수의 값을 가져오려면 다음 명령 중 하나를 사용 합니다.
 
@@ -62,7 +55,7 @@ PowerShell 모듈을 만든 후에는 사용자 또는 다른 사용자가 사�
   ```
 
   > [!IMPORTANT]
-  > **PSModulePath**에 대 한 경로를 추가한 후에는 변경 내용에 대 한 환경 메시지를 브로드캐스트합니다. 변경을 브로드캐스팅 하면 셸과 같은 다른 응용 프로그램에서 변경 내용을 선택할 수 있습니다. 변경을 브로드캐스트하려면 제품 설치 코드에서 `lParam`가 "환경" 문자열로 설정 된 **WM_SETTINGCHANGE** 메시지를 전송 하도록 합니다. 모듈 설치 코드에서 **PSModulePath**를 업데이트 한 후 메시지를 보내야 합니다.
+  > **PSModulePath**에 대 한 경로를 추가한 후에는 변경 내용에 대 한 환경 메시지를 브로드캐스트합니다. 변경을 브로드캐스팅 하면 셸과 같은 다른 응용 프로그램에서 변경 내용을 선택할 수 있습니다. 변경을 브로드캐스트하려면 제품 설치 코드에서를 **WM_SETTINGCHANGE** `lParam` "환경" 문자열로 설정 하 여 WM_SETTINGCHANGE 메시지를 보냅니다. 모듈 설치 코드에서 **PSModulePath**를 업데이트 한 후 메시지를 보내야 합니다.
 
 ### <a name="use-the-correct-module-directory-name"></a>올바른 모듈 디렉터리 이름 사용
 
@@ -70,7 +63,7 @@ PowerShell 모듈을 만든 후에는 사용자 또는 다른 사용자가 사�
 
 파일의 "기본 이름"은 파일 이름 확장명이 없는 이름입니다. 잘 구성 된 모듈에서 모듈 파일을 포함 하는 디렉터리의 이름은 모듈에 있는 하나 이상의 파일에 대 한 기본 이름과 일치 해야 합니다.
 
-예를 들어 sample Fabrikam 모듈에서 모듈 파일을 포함 하는 디렉터리의 이름은 "Fabrikam"이 고 하나 이상의 파일에는 "Fabrikam" 기본 이름이 있습니다. 이 경우 psd1 및 Fabrikam .dll에는 모두 "Fabrikam" 기본 이름이 있습니다.
+예를 들어 sample Fabrikam 모듈에서 모듈 파일을 포함 하는 디렉터리의 이름은 "Fabrikam"이 고 하나 이상의 파일에는 "Fabrikam" 기본 이름이 있습니다. 이 경우 Fabrikam.psd1과 Fabrikam.dll에 모두 "Fabrikam" 기본 이름이 있습니다.
 
 ```
 C:\Program Files
@@ -89,7 +82,7 @@ C:\Program Files
 
 - 모듈 자동 로드 기능은 모듈을 자동으로 가져올 수 없습니다.
 
-- [Import-module cmdlet의](/powershell/module/Microsoft.PowerShell.Core/Get-Module) `ListAvailable` 매개 변수는 모듈을 찾을 수 없습니다.
+- `ListAvailable`Import-module cmdlet의 매개 [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) 변수는 모듈을 찾을 수 없습니다.
 
 - Import-module [cmdlet은](/powershell/module/Microsoft.PowerShell.Core/Import-Module) 모듈을 찾을 수 없습니다. 모듈을 가져오려면 루트 모듈 파일 또는 모듈 매니페스트 파일의 전체 경로를 제공 해야 합니다.
 
@@ -101,7 +94,7 @@ C:\Program Files
 
 - [표시 명령](/powershell/module/Microsoft.PowerShell.Utility/Show-Command) cmdlet은 모듈의 명령을 찾아 표시할 수 없습니다.
 
-  Windows PowerShell ISE (통합 스크립팅 환경)의 `Show-Command` 창에 모듈의 명령이 없습니다.
+  `Show-Command`Windows POWERSHELL ISE (통합 스크립팅 환경)의 창에 모듈의 명령이 없습니다.
 
 ## <a name="where-to-install-modules"></a>모듈을 설치 하는 위치
 
@@ -153,7 +146,7 @@ $p += ";C:\Program Files\Fabrikam Technologies\Fabrikam Manager\Modules\"
 
 제품의 여러 구성 요소 또는 여러 버전의 제품에서 모듈을 사용 하는 경우%ProgramFiles%\Common Files\Modules 하위 디렉터리의 모듈별 하위 디렉터리에 모듈을 설치 합니다.
 
-다음 예제에서 Fabrikam 모듈은 `%ProgramFiles%\Common Files\Modules` 하위 디렉터리의 Fabrikam 하위 디렉터리에 설치 됩니다. 각 모듈은 Modules 하위 디렉터리에 있는 자체 하위 디렉터리에 있습니다.
+다음 예제에서 Fabrikam 모듈은 하위 디렉터리의 Fabrikam 하위 디렉터리에 설치 됩니다 `%ProgramFiles%\Common Files\Modules` . 각 모듈은 Modules 하위 디렉터리에 있는 자체 하위 디렉터리에 있습니다.
 
 ```
 C:\Program Files
@@ -185,7 +178,7 @@ $p = $q -join ';'
 2. 모듈의 각 버전에 대 한 모듈 매니페스트를 만듭니다. 매니페스트의 **ModuleVersion** 키 값에 모듈 버전 번호를 입력 합니다. 모듈에 대 한 버전별 디렉터리에 매니페스트 파일 (. psd1)을 저장 합니다.
 3. 다음 예제에 표시 된 것 처럼 **PSModulePath** 환경 변수의 값에 module root 폴더 경로를 추가 합니다.
 
-모듈의 특정 버전을 가져오기 위해 최종 사용자는 [import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet의 `MinimumVersion` 또는 `RequiredVersion` 매개 변수를 사용할 수 있습니다.
+모듈의 특정 버전을 가져오기 위해 최종 사용자는 `MinimumVersion` `RequiredVersion` [import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet의 또는 매개 변수를 사용할 수 있습니다.
 
 예를 들어 Fabrikam 모듈을 버전 8.0 및 9.0에서 사용할 수 있는 경우 Fabrikam 모듈 디렉터리 구조는 다음과 유사할 수 있습니다.
 
@@ -210,7 +203,7 @@ $p += ";C:\Program Files\Fabrikam\Fabrikam8;C:\Program Files\Fabrikam\Fabrikam9"
 [Environment]::SetEnvironmentVariable("PSModulePath",$p)
 ```
 
-이러한 단계가 완료 되 면 ListAvailable [cmdlet의](/powershell/module/Microsoft.PowerShell.Core/Get-Module) 매개 변수가 Fabrikam 모듈을 모두 가져옵니다. 특정 모듈을 가져오려면 [import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet의 `MinimumVersion` 또는 `RequiredVersion` 매개 변수를 사용 합니다.
+이러한 단계가 완료 되 면 ListAvailable [cmdlet의](/powershell/module/Microsoft.PowerShell.Core/Get-Module) **ListAvailable** 매개 변수가 Fabrikam 모듈을 모두 가져옵니다. 특정 모듈을 가져오려면 `MinimumVersion` `RequiredVersion` [import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet의 또는 매개 변수를 사용 합니다.
 
 두 모듈을 동일한 세션으로 가져올 때 모듈에 동일한 이름의 cmdlet이 포함 된 경우 마지막으로 가져온 cmdlet은 세션에서 적용 됩니다.
 
@@ -220,7 +213,7 @@ $p += ";C:\Program Files\Fabrikam\Fabrikam8;C:\Program Files\Fabrikam\Fabrikam9"
 
 세션에 이름이 같은 두 개의 명령이 포함 된 경우 Windows PowerShell은 우선 순위가 높은 명령 유형을 실행 합니다. 세션에 이름과 형식이 같은 명령이 두 개 포함 된 경우 Windows PowerShell은 가장 최근에 세션에 추가 된 명령을 실행 합니다. 기본적으로 실행 되지 않는 명령을 실행 하려면 사용자가 모듈 이름으로 명령 이름을 한정할 수 있습니다.
 
-예를 들어 세션에 `Get-Date` 함수와 `Get-Date` cmdlet이 포함 되어 있으면 Windows PowerShell은 기본적으로 함수를 실행 합니다. Cmdlet을 실행 하려면 명령 앞에 모듈 이름 (예:)을 사용 합니다.
+예를 들어 세션에 함수 및 cmdlet이 포함 되어 있으면 `Get-Date` `Get-Date` Windows PowerShell은 기본적으로 함수를 실행 합니다. Cmdlet을 실행 하려면 명령 앞에 모듈 이름 (예:)을 사용 합니다.
 
 ```powershell
 Microsoft.PowerShell.Utility\Get-Date
@@ -228,7 +221,7 @@ Microsoft.PowerShell.Utility\Get-Date
 
 이름 충돌을 방지 하기 위해 모듈 작성자는 모듈 매니페스트의 **Defaultcommandprefix** 키를 사용 하 여 모듈에서 내보낸 모든 명령의 명사 접두사를 지정할 수 있습니다.
 
-사용자는 `Import-Module` cmdlet의 **prefix** 매개 변수를 사용 하 여 대체 접두사를 사용할 수 있습니다. **Prefix** 매개 변수 값은 **defaultcommandprefix** 키의 값 보다 우선 합니다.
+사용자는 cmdlet의 **prefix** 매개 변수를 사용 `Import-Module` 하 여 대체 접두사를 사용할 수 있습니다. **Prefix** 매개 변수 값은 **defaultcommandprefix** 키의 값 보다 우선 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

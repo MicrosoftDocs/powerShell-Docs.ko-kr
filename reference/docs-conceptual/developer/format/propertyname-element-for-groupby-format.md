@@ -1,19 +1,12 @@
 ---
 title: GroupBy (형식)에 대 한 PropertyName 요소 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: ddcecc46-ac75-43fa-b03a-802a68524ec3
-caps.latest.revision: 10
-ms.openlocfilehash: da6ac5abe7acbbee8f57b3e81529664f81800b86
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e83ebd49e4f3087c817b3cc8772889dbe85113aa
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362522"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785611"
 ---
 # <a name="propertyname-element-for-groupby-format"></a>GroupBy에 대한 PropertyName 요소(형식)
 
@@ -29,7 +22,7 @@ ms.locfileid: "72362522"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 `PropertyName` 요소의 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 요소의 부모 요소에 대해 설명 합니다 `PropertyName` .
 
 ### <a name="attributes"></a>특성
 
@@ -43,7 +36,7 @@ ms.locfileid: "72362522"
 
 |요소|설명|
 |-------------|-----------------|
-|[보기에 대 한 GroupBy 요소 (형식)](./groupby-element-for-view-format.md)|.NET 개체 그룹이 표시 되는 방법을 정의 합니다.|
+|[View에 대한 GroupBy 요소(형식)](./groupby-element-for-view-format.md)|.NET 개체 그룹이 표시 되는 방법을 정의 합니다.|
 
 ## <a name="text-value"></a>텍스트 값
 
@@ -71,8 +64,8 @@ Windows PowerShell은이 속성 값이 변경 될 때마다 새 그룹을 시작
 
 ## <a name="see-also"></a>참고 항목
 
-[보기에 대 한 GroupBy 요소 (형식)](./groupby-element-for-view-format.md)
+[View에 대한 GroupBy 요소(형식)](./groupby-element-for-view-format.md)
 
-[GroupBy (형식)에 대 한 ScriptBlock 요소](./scriptblock-element-for-groupby-format.md)
+[GroupBy에 대한 ScriptBlock 요소(형식)](./scriptblock-element-for-groupby-format.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

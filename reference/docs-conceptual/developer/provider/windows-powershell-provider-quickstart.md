@@ -1,19 +1,12 @@
 ---
 title: Windows PowerShell 공급자 빠른 시작 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 3e879ba7-c334-460b-94a1-3e9b63d3d8de
-caps.latest.revision: 5
-ms.openlocfilehash: 4693a2ec02a8f010f900bebf5a50853edef88cb1
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 048812d1a4765b2ff0069698615453f91ee95409
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560936"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783129"
 ---
 # <a name="windows-powershell-provider-quickstart"></a>Windows PowerShell 공급자 빠른 시작
 
@@ -35,7 +28,7 @@ Visual Studio에서 AccessDBProviderSample 이라는 클래스 라이브러리 �
 
 1. 프로젝트에 대 한 참조로 System.web 어셈블리를 추가 합니다.
 
-2. **Project > AccessDBProviderSample 속성 > 디버그**를 클릭 합니다. **시작 프로젝트**에서 **시작 외부 프로그램**을 클릭 하 고 Windows PowerShell 실행 파일 (일반적으로 c:\Windows\System32\WindowsPowerShell\v1.0)로 이동 합니다. \\
+2. **Project > AccessDBProviderSample 속성 > 디버그**를 클릭 합니다. **시작 프로젝트**에서 **시작 외부 프로그램**을 클릭 하 고 Windows PowerShell 실행 파일 (일반적으로 c:\Windows\System32\WindowsPowerShell\v1.0 \\.powershell.exe)로 이동 합니다.
 
 3. **시작 옵션**아래에서 **명령줄 인수** 상자에 다음을 입력 합니다.`-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
 

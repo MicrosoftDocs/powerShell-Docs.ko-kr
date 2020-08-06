@@ -1,24 +1,17 @@
 ---
 title: PowerShell 모듈 가져오기 | Microsoft Docs
-ms.custom: ''
 ms.date: 02/03/2020
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 697791b3-2135-4a39-b9d7-8566ed67acf2
-caps.latest.revision: 13
-ms.openlocfilehash: d5ce61a1cba1d91c130394c5cf7249021e95f485
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 8cd1938d0a7b49b4a594753d8ce5ebe60625025d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76996022"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784880"
 ---
 # <a name="importing-a-powershell-module"></a>PowerShell 모듈 가져오기
 
 시스템에 모듈을 설치한 후에는 모듈을 가져올 수 있습니다. 가져오기는 사용자가 PowerShell 세션에서 해당 모듈에 액세스할 수 있도록 모듈을 활성 메모리에 로드 하는 프로세스입니다. PowerShell 2.0에서는 [import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet에 대 한 호출을 사용 하 여 새로 설치 된 PowerShell 모듈을 가져올 수 있습니다. PowerShell 3.0에서 PowerShell은 모듈의 함수 또는 cmdlet 중 하나를 사용자가 호출 하는 경우 모듈을 암시적으로 가져올 수 있습니다. 두 버전 모두 PowerShell에서 찾을 수 있는 위치에 모듈을 설치 한다고 가정 합니다. 자세한 내용은 [PowerShell 모듈 설치](./installing-a-powershell-module.md)를 참조 하세요.
-모듈 매니페스트를 사용 하 여 내보낼 모듈 부분을 제한할 수 있으며, `Import-Module` 호출의 매개 변수를 사용 하 여 가져올 파트를 제한할 수 있습니다.
+모듈 매니페스트를 사용 하 여 내보낼 모듈 부분을 제한할 수 있으며 호출 매개 변수를 사용 하 여 `Import-Module` 가져올 파트를 제한할 수 있습니다.
 
 ## <a name="importing-a-snap-in-powershell-10"></a>스냅인 가져오기 (PowerShell 1.0)
 
@@ -26,20 +19,20 @@ PowerShell 1.0에 모듈이 없습니다. 대신 스냅인을 등록 하 고 사
 
 ## <a name="importing-a-module-with-import-module-powershell-20"></a>Import-module을 사용 하 여 모듈 가져오기 (PowerShell 2.0)
 
-PowerShell 2.0은 적절 하 게 명명 된 [import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet을 사용 하 여 모듈을 가져옵니다. 이 cmdlet을 실행 하면 Windows PowerShell은 `PSModulePath` 변수에 지정 된 디렉터리에서 지정 된 모듈을 검색 합니다. 지정 된 디렉터리가 있으면 Windows PowerShell은 모듈 매니페스트 파일 (. psd1), 스크립트 모듈 파일 (. .psm1), 이진 모듈 파일 (.dll) 순서로 파일을 검색 합니다. 검색에 디렉터리를 추가 하는 방법에 대 한 자세한 내용은 [PSModulePath 설치 경로 수정](./modifying-the-psmodulepath-installation-path.md)을 참조 하세요.
+PowerShell 2.0은 적절 하 게 명명 된 [import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet을 사용 하 여 모듈을 가져옵니다. 이 cmdlet을 실행 하면 Windows PowerShell은 변수에 지정 된 디렉터리에서 지정 된 모듈을 검색 합니다 `PSModulePath` . 지정 된 디렉터리가 있으면 Windows PowerShell은 모듈 매니페스트 파일 (. psd1), 스크립트 모듈 파일 (. .psm1), 이진 모듈 파일 (.dll) 순서로 파일을 검색 합니다. 검색에 디렉터리를 추가 하는 방법에 대 한 자세한 내용은 [PSModulePath 설치 경로 수정](./modifying-the-psmodulepath-installation-path.md)을 참조 하세요.
 다음 코드에서는 모듈을 가져오는 방법을 설명 합니다.
 
 ```powershell
 Import-Module myModule
 ```
 
-MyModule가 `PSModulePath`에 있는 것으로 가정 하면 PowerShell은 myModule를 활성 메모리에 로드 합니다. MyModule가 `PSModulePath` 경로에 없는 경우 PowerShell에서 찾을 위치를 명시적으로 지정할 수 있습니다.
+MyModule이에 있는 것으로 가정 하면 `PSModulePath` PowerShell은 myModule를 활성 메모리에 로드 합니다. MyModule가 경로에 없는 경우 `PSModulePath` PowerShell에서 찾을 위치를 명시적으로 알 수 있습니다.
 
 ```powershell
 Import-Module -Name C:\myRandomDirectory\myModule -Verbose
 ```
 
-`-Verbose` 매개 변수를 사용 하 여 모듈에서 내보낸 항목 및 활성 메모리로 가져오는 항목을 식별할 수도 있습니다. 내보내기와 가져오기는 모두 사용자에 게 노출 되는 항목을 제한 합니다. 차이점은 표시 여부를 제어 하는 사용자입니다. 기본적으로 내보내기는 모듈 내의 코드에 의해 제어 됩니다. 이와 대조적으로 가져오기는 `Import-Module` 호출에 의해 제어 됩니다. 자세한 내용은 아래의 **가져오는 구성원 제한**을 참조 하세요.
+매개 변수를 사용 하 여 `-Verbose` 모듈에서 내보내지는 항목 및 활성 메모리로 가져오는 항목을 식별할 수도 있습니다. 내보내기와 가져오기는 모두 사용자에 게 노출 되는 항목을 제한 합니다. 차이점은 표시 여부를 제어 하는 사용자입니다. 기본적으로 내보내기는 모듈 내의 코드에 의해 제어 됩니다. 이와 대조적으로 가져오기는 호출에 의해 제어 됩니다 `Import-Module` . 자세한 내용은 아래의 **가져오는 구성원 제한**을 참조 하세요.
 
 ## <a name="implicitly-importing-a-module-powershell-30"></a>암시적으로 모듈 가져오기 (PowerShell 3.0)
 
@@ -47,13 +40,13 @@ Windows PowerShell 3.0부터 모듈은 명령에서 cmdlet 또는 모듈의 함�
 
 다음 작업은 모듈의 자동 가져오기를 트리거하 며 "모듈 자동 로드" 라고도 합니다.
 
-- 명령에서 cmdlet 사용 예를 들어 `Get-ExecutionPolicy`를 입력 하면 `Get-ExecutionPolicy` cmdlet을 포함 하는 Microsoft. PowerShell.
+- 명령에서 cmdlet 사용 예를 들어를 입력 하면 `Get-ExecutionPolicy` cmdlet이 포함 된 Microsoft. PowerShell. Security 모듈이 가져오기 됩니다. `Get-ExecutionPolicy`
 
-- 명령을 사용 하 [여 명령을 가져옵니다](/powershell/module/Microsoft.PowerShell.Core/Get-Command) . 예를 들어 `Get-Command Get-JobTrigger`를 입력 하면 `Get-JobTrigger` cmdlet을 포함 하는 **PSScheduledJob** 모듈을 가져옵니다. 와일드 카드 문자를 포함 하는 `Get-Command` 명령은 검색으로 간주 되며 모듈 가져오기를 트리거하지 않습니다.
+- 명령을 사용 하 [여 명령을 가져옵니다](/powershell/module/Microsoft.PowerShell.Core/Get-Command) . 예를 들어를 입력 하면 `Get-Command Get-JobTrigger` cmdlet이 포함 된 **PSScheduledJob** 모듈을 가져옵니다 `Get-JobTrigger` . `Get-Command`와일드 카드 문자를 포함 하는 명령은 검색으로 간주 되며 모듈 가져오기를 트리거하지 않습니다.
 
-- [Get help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet을 사용 하 여 cmdlet에 대 한 도움말을 가져옵니다. 예를 들어 `Get-Help Get-WinEvent`를 입력 하면 `Get-WinEvent` cmdlet을 포함 하는 Microsoft. PowerShell 진단 모듈을 가져옵니다.
+- [Get help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet을 사용 하 여 cmdlet에 대 한 도움말을 가져옵니다. 예를 들어를 입력 하면 `Get-Help Get-WinEvent` cmdlet이 포함 된 Microsoft. PowerShell 진단 모듈이 가져오기 됩니다. `Get-WinEvent`
 
-모듈의 자동 가져오기를 지원 하기 위해 `Get-Command` cmdlet은 모듈을 세션으로 가져오지 않은 경우에도 설치 된 모든 모듈의 모든 cmdlet 및 함수를 가져옵니다. 자세한 내용은 [get-help](/powershell/module/Microsoft.PowerShell.Core/Get-Command) cmdlet에 대 한 도움말 항목을 참조 하세요.
+모듈의 자동 가져오기를 지원 하기 위해 `Get-Command` cmdlet은 모듈을 세션으로 가져오지 않은 경우에도 모든 설치 된 모듈의 모든 cmdlet 및 함수를 가져옵니다. 자세한 내용은 [get-help](/powershell/module/Microsoft.PowerShell.Core/Get-Command) cmdlet에 대 한 도움말 항목을 참조 하세요.
 
 ## <a name="the-importing-process"></a>가져오기 프로세스
 
@@ -69,7 +62,7 @@ Windows PowerShell 3.0부터 모듈은 명령에서 cmdlet 또는 모듈의 함�
 ## <a name="restricting--the-members-that-are-imported"></a>가져오는 구성원 제한
 
 [Import-module cmdlet을](/powershell/module/Microsoft.PowerShell.Core/Import-Module) 사용 하 여 모듈을 가져올 때 기본적으로 내보낸 모든 모듈 멤버는 중첩 된 모듈에 의해 모듈로 내보낸 모든 명령을 포함 하 여 세션으로 가져옵니다. 기본적으로 변수 및 별칭은 내보내지지 않습니다. 내보내는 멤버를 제한 하려면 [모듈 매니페스트](./how-to-write-a-powershell-module-manifest.md)를 사용 합니다.
-가져오는 멤버를 제한 하려면 `Import-Module` cmdlet의 다음 매개 변수를 사용 합니다.
+가져오는 멤버를 제한 하려면 cmdlet의 다음 매개 변수를 사용 합니다 `Import-Module` .
 
 - **Function**:이 매개 변수는 내보내는 함수를 제한 합니다. 모듈 매니페스트를 사용 하는 경우 FunctionsToExport 키를 참조 하세요.
 

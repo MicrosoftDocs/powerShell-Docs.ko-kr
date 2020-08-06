@@ -1,19 +1,12 @@
 ---
 title: Runspace08 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1100d91d-249d-4af7-9854-2d6a423ac2f4
-caps.latest.revision: 7
-ms.openlocfilehash: e99b2936520c00150fe7ba55a9b7ef7ca8d63258
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 4fcf58eceb415f9f02391c22d2719e9140c77ea9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560256"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783163"
 ---
 # <a name="runspace08-sample"></a>Runspace08 샘플
 

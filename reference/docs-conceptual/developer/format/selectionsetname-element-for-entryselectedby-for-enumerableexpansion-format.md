@@ -1,25 +1,18 @@
 ---
 title: EnumerableExpansion (형식)에 대 한 EntrySelectedBy의 SelectionSetName 요소 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 936d09f2-2c48-49e8-ab2d-0c8729199a2e
-caps.latest.revision: 8
-ms.openlocfilehash: 8ba8931ea5e34f610878351396cad42023393ad6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8745ef9e6f326c3e8a5dbf185a595bbe93e92414
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368332"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785322"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-enumerableexpansion-format"></a>EnumerableExpansion의 EntrySelectedBy에 대한 SelectionSetName 요소(형식)
 
 이 정의에 의해 확장 되는 .NET 형식 집합을 지정 합니다.
 
-Configuration 요소 (Format) DefaultSettings 요소 (format) EnumerableExpansions element (format) enumerableexpansions 요소 (format) EntrySelectedBy 요소에 대 한 SelectionSetName 요소에 대 한 EnumerableExpansion (형식)
+Configuration 요소 (Format) DefaultSettings 요소 (format) enumerableexpansions 요소 (format) enumerableexpansions 요소 (format) SelectionSetName 요소에 대 한 enumerableexpansions (format) EntrySelectedBy 요소 (형식)
 
 ## <a name="syntax"></a>구문
 
@@ -30,7 +23,7 @@ Configuration 요소 (Format) DefaultSettings 요소 (format) EnumerableExpansio
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 `SelectionSetName` 요소의 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 요소의 부모 요소에 대해 설명 합니다 `SelectionSetName` .
 
 ### <a name="attributes"></a>특성
 
@@ -44,7 +37,7 @@ Configuration 요소 (Format) DefaultSettings 요소 (format) EnumerableExpansio
 
 |요소|설명|
 |-------------|-----------------|
-|[EnumerableExpansion (형식)에 대 한 EntrySelectedBy 요소](./entryselectedby-element-for-enumerableexpansion-format.md)|이 정의에 의해 확장 되는 .NET 컬렉션 개체를 정의 합니다.|
+|[EnumerableExpansion에 대한 EntrySelectedBy 요소(형식)](./entryselectedby-element-for-enumerableexpansion-format.md)|이 정의에 의해 확장 되는 .NET 컬렉션 개체를 정의 합니다.|
 
 ## <a name="text-value"></a>텍스트 값
 
@@ -58,8 +51,8 @@ Configuration 요소 (Format) DefaultSettings 요소 (format) EnumerableExpansio
 
 ## <a name="see-also"></a>참고 항목
 
-[선택 집합 정의](./defining-selection-sets.md)
+[선택 영역 집합 정의](./defining-selection-sets.md)
 
-[EnumerableExpansion (형식)에 대 한 EntrySelectedBy 요소](./entryselectedby-element-for-enumerableexpansion-format.md)
+[EnumerableExpansion에 대한 EntrySelectedBy 요소(형식)](./entryselectedby-element-for-enumerableexpansion-format.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

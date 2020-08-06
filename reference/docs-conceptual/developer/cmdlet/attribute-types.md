@@ -1,19 +1,12 @@
 ---
 title: 특성 유형 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 9b1026ad-f072-4fca-8052-a2d8eb491c2a
-caps.latest.revision: 6
-ms.openlocfilehash: 52c75b3ca73706da39029d5b3ead52ff7197a5f1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 96fdd38ba10eb748ab0762f0c910463dd472494d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364582"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782381"
 ---
 # <a name="attribute-types"></a>특성 유형
 
@@ -22,7 +15,7 @@ Cmdlet 특성은 기능별로 그룹화 할 수 있습니다.
 
 ## <a name="cmdlet-attributes"></a>Cmdlet 특성
 
-### <a name="cmdlet"></a>Cmdlet
+### <a name="cmdlet"></a>cmdlet
 
 .NET Framework 클래스를 cmdlet으로 식별 합니다.
 필수 기본 특성입니다.
@@ -35,7 +28,7 @@ Cmdlet 특성은 기능별로 그룹화 할 수 있습니다.
 Cmdlet 클래스에서 공용 속성을 cmdlet 매개 변수로 식별 합니다.
 자세한 내용은 [매개 변수 특성 선언](./parameter-attribute-declaration.md)을 참조 하세요.
 
-### <a name="alias"></a>별칭
+### <a name="alias"></a>Alias
 
 매개 변수에 대 한 별칭을 하나 이상 지정 합니다.
 자세한 내용은 [Alias 특성 선언](./alias-attribute-declaration.md)을 참조 하세요.

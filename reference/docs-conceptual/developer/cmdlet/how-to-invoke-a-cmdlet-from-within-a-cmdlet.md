@@ -1,23 +1,16 @@
 ---
 title: Cmdlet에서 Cmdlet을 호출 하는 방법 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: efa4dc9c-ddee-46a3-978a-9dbb61e9bb6f
-caps.latest.revision: 12
-ms.openlocfilehash: 57543a88d04eb66c9d109249a99ddd272b02ef9d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2d5b0788d3310d0dd7b311f86c497afe8eec9d11
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365552"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784149"
 ---
 # <a name="how-to-invoke-a-cmdlet-from-within-a-cmdlet"></a>Cmdlet 내에서 Cmdlet을 호출하는 방법
 
-이 예에서는 다른 cmdlet 내에서 cmdlet을 호출 하는 방법을 보여 줍니다 .이 cmdlet을 사용 하면 호출 되는 cmdlet의 기능을 개발 중인 cmdlet에 추가할 수 있습니다. 이 예제에서는 로컬 컴퓨터에서 실행 중인 프로세스를 가져오기 위해 `Get-Process` cmdlet이 호출 됩니다. `Get-Process` cmdlet에 대 한 호출은 다음 명령과 동일 합니다. 이 명령은 이름이 "a"에서 "t" 까지의 문자로 시작 하는 모든 프로세스를 검색 합니다.
+이 예에서는 다른 cmdlet 내에서 cmdlet을 호출 하는 방법을 보여 줍니다 .이 cmdlet을 사용 하면 호출 되는 cmdlet의 기능을 개발 중인 cmdlet에 추가할 수 있습니다. 이 예제에서는 cmdlet을 `Get-Process` 호출 하 여 로컬 컴퓨터에서 실행 중인 프로세스를 가져옵니다. Cmdlet에 대 한 호출은 `Get-Process` 다음 명령과 동일 합니다. 이 명령은 이름이 "a"에서 "t" 까지의 문자로 시작 하는 모든 프로세스를 검색 합니다.
 
 ```powershell
 Get-Process -name [a-t]
@@ -43,7 +36,7 @@ Get-Process -name [a-t]
     gp.Name = new string[] { "[a-t]*" };
     ```
 
-3. `Get-Process` Cmdlet을 호출 하려면 [system.web. invoke *](/dotnet/api/System.Management.Automation.Cmdlet.Invoke) 메서드를 호출 합니다.
+3. Cmdlet을 호출 하려면 [system.web. invoke *](/dotnet/api/System.Management.Automation.Cmdlet.Invoke) 메서드를 호출 합니다. `Get-Process`
 
     ```csharp
       foreach (Process p in gp.Invoke<Process>())
@@ -55,7 +48,7 @@ Get-Process -name [a-t]
 
 ## <a name="example"></a>예제
 
-이 예제에서 `Get-Process` cmdlet은 cmdlet의 system.xml [처리](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 메서드 내에서 호출 됩니다.
+이 예제에서 cmdlet은 `Get-Process` cmdlet의 system.object를 실행 하는 [프로세스](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 에서 호출 됩니다.
 
 ```csharp
 using System;
@@ -105,4 +98,4 @@ namespace SendGreeting
 
 ## <a name="see-also"></a>참고 항목
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

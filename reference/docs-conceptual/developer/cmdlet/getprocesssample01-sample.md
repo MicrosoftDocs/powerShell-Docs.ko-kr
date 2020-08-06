@@ -1,19 +1,12 @@
 ---
 title: GetProcessSample01 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7b48bf80-cbf0-4cb1-8d5b-3b8d06196598
-caps.latest.revision: 10
-ms.openlocfilehash: 27f1c346863458920b310c6c4ce1403b3aab69ba
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 84956fbafdd58623ca4f332efc940fb93b421c6e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563796"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784251"
 ---
 # <a name="getprocesssample01-sample"></a>GetProcessSample01 샘플
 
@@ -35,7 +28,7 @@ ms.locfileid: "83563796"
 
 2. 샘플 .dll 파일이 포함 된 디렉터리로 이동 합니다.
 
-3. Installutil.exe "GetProcessSample01"를 실행 합니다.
+3. Installutil.exe "GetProcessSample01.dll"를 실행 합니다.
 
 4. Windows PowerShell을 시작합니다.
 

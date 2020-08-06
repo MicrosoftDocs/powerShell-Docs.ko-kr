@@ -1,25 +1,18 @@
 ---
 title: 이 listcontrol (형식)의 ListItem 요소에 대 한 ScriptBlock 요소 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 74e30938-00ef-46fd-84e5-f0a83706a50e
-caps.latest.revision: 11
-ms.openlocfilehash: 76b600256af3f957f7fe0578f9fef810262aa5d5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 249d3e36b4246b7baa410815122f8e30340f1862
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364812"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785458"
 ---
 # <a name="scriptblock-element-for-listitem-for-listcontrol-format"></a>ListControl의 ListItem에 대한 ScriptBlock 요소(형식)
 
 행에 값이 표시 되는 스크립트를 지정 합니다.
 
-Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (format)이 listcontrol Element (format) ListEntries 요소에 대 한이 listcontrol (format) ListEntry 요소 ListEntries의이 listcontrol (Format) ListItems 요소 이 listcontrol (Format)의 ListItem 요소에 대 한 ListItems for이 listcontrol (format)이 listcontrol 요소에 대 한 for (format) ListItem 요소
+Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (format)이 listcontrol Element (format) ListEntries 요소에 대 한 ListEntries의 경우이 listcontrol에 대 한 ListItems (format) ListItem 요소의 ListEntry for이 listcontrol (format) 요소
 
 ## <a name="syntax"></a>구문
 
@@ -29,7 +22,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 `ScriptBlock` 요소의 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다 `ScriptBlock` .
 
 ### <a name="attributes"></a>특성
 
@@ -68,10 +61,10 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="see-also"></a>참고 항목
 
-[이 listcontrol의 ListItem 요소에 대 한 PropertyName 요소 (형식)](./propertyname-element-for-listitem-for-listcontrol-format.md)
+[ListControl의 ListItem에 대한 PropertyName 요소(형식)](./propertyname-element-for-listitem-for-listcontrol-format.md)
 
 [목록 보기 만들기](./creating-a-list-view.md)
 
-[이 listcontrol에 대 한 ListItems의 ListItem 요소 (형식)](./listitem-element-for-listitems-for-listcontrol-format.md)
+[ListControl의 ListItems에 대한 ListItem 요소(형식)](./listitem-element-for-listitems-for-listcontrol-format.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

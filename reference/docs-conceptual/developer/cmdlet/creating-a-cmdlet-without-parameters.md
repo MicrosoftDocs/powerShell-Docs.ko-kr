@@ -1,22 +1,15 @@
 ---
 title: 매개 변수를 사용 하지 않고 Cmdlet 만들기 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - cmdlets [PowerShell Programmers Guide], creating
 - cmdlets [PowerShell Programmers Guide], basic cmdlet
-ms.assetid: 54236ef3-82db-45f8-9114-1ecb7ff65d3e
-caps.latest.revision: 8
-ms.openlocfilehash: af41c2c9855310d047404114a07b27180a7aa8fc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a14d25660d596ebd12cd7d74b607eab6ac9fd1be
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74415679"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784387"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>매개 변수 없이 Cmdlet 만들기
 
@@ -29,11 +22,11 @@ ms.locfileid: "74415679"
 
 Cmdlet 이름은 cmdlet이 수행 하는 동작을 나타내는 동사와 cmdlet이 작동 하는 항목을 나타내는 명사로 구성 됩니다. 이 샘플 실행 cmdlet은 프로세스 개체를 검색 하기 때문에 [Verbscommon](/dotnet/api/System.Management.Automation.VerbsCommon) 열거에 의해 정의 된 동사 "Get"을 사용 하 고, cmdlet이 프로세스 항목에서 작동 함을 나타내는 명사 "Proc"를 사용 합니다.
 
-Cmdlet의 이름을 지정할 때는 다음 문자를 사용 하지 마세요. #, () {} [] &-/\ $; : "' < > &#124; ? @ ` .
+Cmdlet의 이름을 지정할 때는 다음 문자를 사용 하지 마세요. #, () {} [] &-/\ $;: "' <> &#124; ? @ ` .
 
 ### <a name="choosing-a-noun"></a>명사 선택
 
-특정 명사를 선택 해야 합니다. 제품 이름의 축약 된 버전이 포함 된 단 수 명사를 사용 하는 것이 가장 좋습니다. 이 유형의 cmdlet 이름 예는 "`Get-SQLServer`"입니다.
+특정 명사를 선택 해야 합니다. 제품 이름의 축약 된 버전이 포함 된 단 수 명사를 사용 하는 것이 가장 좋습니다. 이 유형의 cmdlet 이름 예는 " `Get-SQLServer` "입니다.
 
 ### <a name="choosing-a-verb"></a>동사 선택
 
@@ -54,7 +47,7 @@ Public Class GetProcCommand
     Inherits Cmdlet
 ```
 
-클래스 정의의 이전에는 `[Cmdlet(verb, noun, ...)]`구문을 사용 하 여이 클래스를 cmdlet으로 식별 하는 데 사용 [됩니다.](/dotnet/api/System.Management.Automation.CmdletAttribute) 이는 모든 cmdlet에 대해 유일 하 게 필요한 특성이 며 Windows PowerShell 런타임에서 올바르게 호출할 수 있습니다. 필요한 경우 특성 키워드를 설정 하 여 클래스를 추가로 선언할 수 있습니다. 샘플 GetProcCommand 클래스에 대 한 특성 선언은 Get Proc cmdlet에 대 한 명사 및 verb 이름만 선언 합니다.
+클래스 정의의 이전에는 구문을 사용 하 [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) 여 `[Cmdlet(verb, noun, ...)]` 이 클래스를 cmdlet으로 식별 하는 데 사용 됩니다. 이는 모든 cmdlet에 대해 유일 하 게 필요한 특성이 며 Windows PowerShell 런타임에서 올바르게 호출할 수 있습니다. 필요한 경우 특성 키워드를 설정 하 여 클래스를 추가로 선언할 수 있습니다. 샘플 GetProcCommand 클래스에 대 한 특성 선언은 Get Proc cmdlet에 대 한 명사 및 verb 이름만 선언 합니다.
 
 > [!NOTE]
 > 모든 Windows PowerShell 특성 클래스에 대해 설정할 수 있는 키워드는 특성 클래스의 속성에 해당 합니다.
@@ -78,11 +71,11 @@ Windows PowerShell은 cmdlet 클래스에 대해 [Microsoft. powershell](/dotnet
 > [!NOTE]
 > Windows PowerShell은 "record" 라는 용어를 사용 하 여 cmdlet이 호출 될 때 제공 되는 매개 변수 값 집합을 설명 합니다.
 
-Cmdlet이 파이프라인 입력을 허용 하는 경우 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 재정의 하 고 필요에 따라 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 를 재정의 해야 합니다. 예를 들어, cmdlet은 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 를 사용 하 여 모든 입력을 수집한 다음 `Sort-Object` cmdlet이 수행 하는 것 처럼 한 번에 하나의 요소 대신 전체 입력에서 작동 하는 경우 두 메서드를 재정의할 수 있습니다.
+Cmdlet이 파이프라인 입력을 허용 하는 경우 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 재정의 하 고 필요에 따라 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 를 재정의 해야 합니다. 예를 들어 cmdlet은 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 를 사용 하 여 모든 입력을 수집한 다음, cmdlet과 같이 한 번에 하나의 요소가 아닌 전체적으로 입력에 대해 작동 하는 경우 두 메서드를 재정의할 수 있습니다. `Sort-Object`
 
 Cmdlet이 파이프라인 입력을 사용 하지 않는 경우에는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 를 재정의 해야 합니다. 이 메서드는 정렬 cmdlet의 경우와 같이 한 번에 하나의 요소에 대해 실행 될 수 [없는 경우에](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 는이 메서드를 사용 하는 것이 일반적입니다.
 
-이 Get-Proc cmdlet 샘플은 파이프라인 입력을 수신해야 하므로, [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 재정의 하고, [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 및 [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)를 기본 구현에 사용합니다. [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 재정의는 프로세스를 검색 하 고 [WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드를 사용 하 여이를 명령줄에 기록 합니다.
+이 샘플은 파이프라인 입력을 수신 해야 하기 때문에 ProcessRecord 메서드를 재정의 하 고 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) [에 대 한](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 기본 구현을 사용 하 고,. p s e. p r e [s.](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 재정의는 프로세스를 검색 하 고 [WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드를 사용 하 여이를 명령줄에 기록 합니다.
 
 ```csharp
 protected override void ProcessRecord()
@@ -131,7 +124,7 @@ End Sub 'ProcessRecord
 
 ## <a name="code-sample"></a>코드 예제
 
-전체 C# 샘플 코드는 [GetProcessSample01 샘플](./getprocesssample01-sample.md)을 참조 하세요.
+전체 c # 샘플 코드는 [GetProcessSample01 샘플](./getprocesssample01-sample.md)을 참조 하세요.
 
 ## <a name="defining-object-types-and-formatting"></a>개체 형식 및 서식 정의
 
@@ -233,7 +226,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     ...
     ```
 
-7. `Get-Member` cmdlet을 사용 하 여 각 프로세스에 사용할 수 있는 속성을 나열 합니다.
+7. Cmdlet을 사용 `Get-Member` 하 여 각 프로세스에 사용할 수 있는 속성을 나열 합니다.
 
     ```powershell
     $p | Get-Member -MemberType property

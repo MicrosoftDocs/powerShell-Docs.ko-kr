@@ -1,19 +1,12 @@
 ---
 title: SelectionSets 요소 (형식) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: ebbac73a-1c99-4388-9f47-703cd024dc6d
-caps.latest.revision: 18
-ms.openlocfilehash: a9356635d60d5f8c5d4dec4ec8b7d0aea2b037dd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 718b08e02220f285ef215fdca727492fd4407466
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361872"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785203"
 ---
 # <a name="selectionsets-element-format"></a>SelectionSets 요소(형식)
 
@@ -31,7 +24,7 @@ ms.locfileid: "72361872"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `SelectionSets` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 각 자식 요소는 집합의 이름으로 참조할 수 있는 개체 집합을 정의 합니다. 자식 요소의 순서는 중요 하지 않습니다.
+다음 섹션에서는 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다 `SelectionSets` . 각 자식 요소는 집합의 이름으로 참조할 수 있는 개체 집합을 정의 합니다. 자식 요소의 순서는 중요 하지 않습니다.
 
 ### <a name="attributes"></a>특성
 
@@ -41,7 +34,7 @@ ms.locfileid: "72361872"
 
 |요소|설명|
 |-------------|-----------------|
-|[SelectionSet 요소 (형식)](./selectionset-element-format.md)|필수적 요소입니다.<br /><br /> 집합의 이름으로 참조할 수 있는 단일 .NET 개체 집합을 정의 합니다.|
+|[SelectionSet 요소(형식)](./selectionset-element-format.md)|필수적 요소입니다.<br /><br /> 집합의 이름으로 참조할 수 있는 단일 .NET 개체 집합을 정의 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
@@ -53,14 +46,14 @@ ms.locfileid: "72361872"
 
 상속을 통해 관련 된 개체 집합과 같이 단일 이름을 사용 하 여 참조 하려는 관련 개체 집합이 있는 경우 선택 집합을 사용할 수 있습니다. 뷰를 정의할 때 각 보기 내에 모든 개체를 나열 하는 대신 선택 집합의 이름을 사용 하 여 개체 집합을 지정할 수 있습니다.
 
-일반 선택 집합은 형식 지정 파일의 뷰나 뷰의 정의를 정의할 때 이름으로 지정 됩니다. 이러한 경우 `ViewSelectedBy` 및 `EntrySelectedBy` 요소의 `SelectionSetName` 자식 요소는 사용할 집합을 지정 합니다. 선택 집합에 대 한 자세한 내용은 [개체 집합 정의](./defining-selection-sets.md)를 참조 하세요.
+일반 선택 집합은 형식 지정 파일의 뷰나 뷰의 정의를 정의할 때 이름으로 지정 됩니다. 이러한 경우 `SelectionSetName` 및 요소의 자식 요소는 `ViewSelectedBy` `EntrySelectedBy` 사용할 집합을 지정 합니다. 선택 집합에 대 한 자세한 내용은 [개체 집합 정의](./defining-selection-sets.md)를 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 
 [구성 요소](./configuration-element-format.md)
 
-[선택 집합 정의](./defining-selection-sets.md)
+[선택 영역 집합 정의](./defining-selection-sets.md)
 
-[SelectionSet 요소 (형식)](./selectionset-element-format.md)
+[SelectionSet 요소(형식)](./selectionset-element-format.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

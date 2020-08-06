@@ -1,25 +1,18 @@
 ---
 title: CustomControl (형식)에 대 한 EntrySelectedBy의 SelectionCondition 요소 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 231e9c6d-09ec-4e68-80ee-0c8f7fe1b9f5
-caps.latest.revision: 7
-ms.openlocfilehash: 49e2c0cf09dfa55b535effcd431e980daf12fac3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 52858dba5c7a5222b5410835f3374546ce8b88a2
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368442"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785356"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-customcontrol-format"></a>CustomControl의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
 
 컨트롤 정의를 사용 하기 위해 있어야 하는 조건을 정의 합니다. 이 요소는 사용자 지정 컨트롤 뷰를 정의할 때 사용 됩니다.
 
-Configuration 요소 (Format) ViewDefinitions element (Format) View 요소 (format) CustomControl 요소에 대 한 view (format) CustomEntries 요소에 대 한 CustomControl Format) CustomItem 요소 CustomControl for view (format) EntrySelectedBy for view (format) CustomControl for view (format) SelectionCondition Element for CustomControl for view (Format)
+Configuration 요소 (Format) ViewDefinitions element (Format) View 요소 (format) CustomControl 요소에 대 한 view (format) CustomEntries 요소에 대 한 CustomControl Format) Customentries 요소 CustomControl for view (format) EntrySelectedBy for view (format) CustomControl for view (format) SelectionCondition Element for CustomControl for view (Format)
 
 ## <a name="syntax"></a>구문
 
@@ -34,7 +27,7 @@ Configuration 요소 (Format) ViewDefinitions element (Format) View 요소 (form
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 `SelectionCondition` 요소의 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 요소의 부모 요소에 대해 설명 합니다 `SelectionCondition` .
 
 ### <a name="attributes"></a>특성
 
@@ -44,16 +37,16 @@ Configuration 요소 (Format) ViewDefinitions element (Format) View 요소 (form
 
 |요소|설명|
 |-------------|-----------------|
-|[CustomControl에 대 한 SelectionCondition의 PropertyName 요소 (형식)](./propertyname-element-for-selectioncondition-for-customcontrol-for-view-format.md)|선택적 요소입니다.<br /><br /> 조건을 트리거하는 .NET 속성을 지정 합니다.|
-|[CustomControl에 대 한 SelectionCondition의 ScriptBlock 요소 (형식)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md)|선택적 요소입니다.<br /><br /> 조건을 트리거하는 스크립트를 지정 합니다.|
+|[View에 대한 CustomControl의 SelectionCondition에 대한 PropertyName 요소(형식)](./propertyname-element-for-selectioncondition-for-customcontrol-for-view-format.md)|선택적 요소입니다.<br /><br /> 조건을 트리거하는 .NET 속성을 지정 합니다.|
+|[View에 대한 CustomControl의 SelectionCondition에 대한 ScriptBlock 요소(형식)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md)|선택적 요소입니다.<br /><br /> 조건을 트리거하는 스크립트를 지정 합니다.|
 |[보기에 대 한 사용자 지정 컨트롤의 SelectionCondition에 대 한 SelectionSetName 요소 (형식)](./selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format.md)|선택적 요소입니다.<br /><br /> 조건을 트리거하는 .NET 형식 집합을 지정 합니다.|
-|[CustomControl에 대 한 SelectionCondition의 TypeName 요소 (형식)](./typename-element-for-selectioncondition-for-customcontrol-for-view-format.md)|선택적 요소입니다.<br /><br /> 조건을 트리거하는 .NET 유형을 지정 합니다.|
+|[View에 대한 CustomControl의 SelectionCondition에 대한 TypeName 요소(형식)](./typename-element-for-selectioncondition-for-customcontrol-for-view-format.md)|선택적 요소입니다.<br /><br /> 조건을 트리거하는 .NET 유형을 지정 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
 |요소|설명|
 |-------------|-----------------|
-|[CustomControl에 대 한 CustomEntry의 EntrySelectedBy 요소 (형식)](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)|이 컨트롤 정의를 사용 하는 .NET 형식 또는이 정의를 사용 하기 위해 존재 해야 하는 조건을 정의 합니다.|
+|[View에 대한 CustomControl의 CustomEntry에 대한 EntrySelectedBy 요소(형식)](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)|이 컨트롤 정의를 사용 하는 .NET 형식 또는이 정의를 사용 하기 위해 존재 해야 하는 조건을 정의 합니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -67,14 +60,14 @@ Configuration 요소 (Format) ViewDefinitions element (Format) View 요소 (form
 
 ## <a name="see-also"></a>참고 항목
 
-[CustomControl에 대 한 SelectionCondition의 PropertyName 요소 (형식)](./propertyname-element-for-selectioncondition-for-customcontrol-for-view-format.md)
+[View에 대한 CustomControl의 SelectionCondition에 대한 PropertyName 요소(형식)](./propertyname-element-for-selectioncondition-for-customcontrol-for-view-format.md)
 
-[CustomControl에 대 한 SelectionCondition의 ScriptBlock 요소 (형식)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md)
+[View에 대한 CustomControl의 SelectionCondition에 대한 ScriptBlock 요소(형식)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md)
 
 [보기에 대 한 사용자 지정 컨트롤의 SelectionCondition에 대 한 SelectionSetName 요소 (형식)](./selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format.md)
 
-[CustomControl에 대 한 SelectionCondition의 TypeName 요소 (형식)](./typename-element-for-selectioncondition-for-customcontrol-for-view-format.md)
+[View에 대한 CustomControl의 SelectionCondition에 대한 TypeName 요소(형식)](./typename-element-for-selectioncondition-for-customcontrol-for-view-format.md)
 
-[CustomControl에 대 한 CustomEntry의 EntrySelectedBy 요소 (형식)](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)
+[View에 대한 CustomControl의 CustomEntry에 대한 EntrySelectedBy 요소(형식)](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

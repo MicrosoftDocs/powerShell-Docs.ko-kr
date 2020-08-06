@@ -1,28 +1,21 @@
 ---
 title: Cmdlet 특성 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - attributes [PowerShell SDK]
 - attributes [PowerShell SDK], described
-ms.assetid: d3f4f652-d929-4c27-9358-9baa390a094c
-caps.latest.revision: 14
-ms.openlocfilehash: 326cd408e86402974569fc76d5e473be5a56f0b6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: f22c2882fbe5b2f51ca5ea218b921192b0a7d41f
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369962"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784523"
 ---
 # <a name="cmdlet-attributes"></a>Cmdlet 특성
 
-Windows PowerShell은 사용자 코드 내에서 해당 기능을 구현 하지 않고 cmdlet에 일반적인 기능을 추가 하는 데 사용할 수 있는 여러 특성을 정의 합니다. 여기에는 cmdlet 클래스로 Microsoft .NET Framework 클래스를 식별 하는 Cmdlet 특성, cmdlet에서 반환 되는 .NET Framework 형식을 지정 하는 OutputType 특성, 공용 속성을 cmdlet으로 식별 하는 매개 변수 특성이 포함 됩니다. 매개 변수 등
+Windows PowerShell은 사용자 코드 내에서 해당 기능을 구현 하지 않고 cmdlet에 일반적인 기능을 추가 하는 데 사용할 수 있는 여러 특성을 정의 합니다. 여기에는 cmdlet 클래스로 Microsoft .NET Framework 클래스를 식별 하는 Cmdlet 특성, cmdlet에서 반환 되는 .NET Framework 형식을 지정 하는 OutputType 특성, cmdlet 매개 변수로 공용 속성을 식별 하는 매개 변수 특성 등이 포함 됩니다.
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [Cmdlet 코드의 특성](./attributes-in-cmdlet-code.md) Cmdlet 코드에서 특성을 사용 하는 경우의 이점을 설명 합니다.
 
@@ -50,4 +43,4 @@ Windows PowerShell은 사용자 코드 내에서 해당 기능을 구현 하지 
 
 ## <a name="reference"></a>참조
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

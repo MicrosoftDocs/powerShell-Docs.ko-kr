@@ -1,19 +1,12 @@
 ---
 title: 자격 증명 특성 선언 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 96a5dcad-faed-44d8-8c80-321f10499710
-caps.latest.revision: 6
-ms.openlocfilehash: 49a62ccb09f06f77862d4737199e58293e7fbe0a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a6deca52fa6c9e46138ae92401f58ac5dbd15852
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369892"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784370"
 ---
 # <a name="credential-attribute-declaration"></a>Credential 증명 특성 선언
 
@@ -39,6 +32,6 @@ Credential 특성은 문자열을 매개 변수에 대 한 인수로 전달할 �
 
 [매개 변수 별칭](./parameter-aliases.md)
 
-[매개 변수 특성 선언](./parameter-attribute-declaration.md)
+[Parameter 특성 선언](./parameter-attribute-declaration.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

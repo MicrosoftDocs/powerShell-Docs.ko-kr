@@ -1,19 +1,12 @@
 ---
-title: Cmdlet 매개 변수 집합 | Microsoft Docs
-ms.custom: ''
+title: Cmdlet 매개 변수 집합
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f902fd4d-8f6e-4ef1-b07f-59983039a0d1
-caps.latest.revision: 10
-ms.openlocfilehash: 41cb32735091f065a0835378428de190d08f3160
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: 202cdd354693b9b7edaca5c127ae1f7d88ff4a28
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78278989"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784421"
 ---
 # <a name="cmdlet-parameter-sets"></a>Cmdlet 매개 변수 집합
 
@@ -31,7 +24,7 @@ PowerShell은 매개 변수 집합을 사용 하 여 다양 한 시나리오에 
 
 다음 그림에서 왼쪽 열에는 세 개의 유효한 매개 변수 집합이 표시 됩니다. **A 매개 변수는** 첫 번째 매개 변수 집합에 대해 고유 하며, **매개 변수 B** 는 두 번째 매개 변수 집합에 고유 하며, **C 매개 변수** 는 세 번째 매개 변수 집합에 대해 고유 합니다. 오른쪽 열에서 매개 변수 집합에는 고유한 매개 변수가 없습니다.
 
-![ps_parametersets](media/cmdlet-parameter-sets/ps-parametersets.gif)
+![매개 변수 집합의 그림](media/cmdlet-parameter-sets/ps-parametersets.gif)
 
 ## <a name="parameter-set-requirements"></a>매개 변수 집합 요구 사항
 
@@ -41,8 +34,8 @@ PowerShell은 매개 변수 집합을 사용 하 여 다양 한 시나리오에 
 
 - 여러 위치 매개 변수를 포함 하는 매개 변수 집합은 각 매개 변수에 대해 고유한 위치를 정의 해야 합니다. 두 위치 매개 변수는 같은 위치를 지정할 수 없습니다.
 
-- 집합에 있는 하나의 매개 변수만 `true`값을 사용 하 여 `ValueFromPipeline` 키워드를 선언할 수 있습니다.
-  여러 매개 변수는 `true`값을 사용 하 여 `ValueFromPipelineByPropertyName` 키워드를 정의할 수 있습니다.
+- 집합에 있는 하나의 매개 변수만 `ValueFromPipeline` 값을 사용 하 여 키워드를 선언할 수 있습니다 `true` .
+  여러 매개 변수는 `ValueFromPipelineByPropertyName` 값을 사용 하 여 키워드를 정의할 수 있습니다 `true` .
 
 - 매개 변수에 대 한 매개 변수 집합이 지정 되지 않은 경우 매개 변수는 모든 매개 변수 집합에 속합니다.
 
@@ -51,13 +44,13 @@ PowerShell은 매개 변수 집합을 사용 하 여 다양 한 시나리오에 
 
 ## <a name="default-parameter-sets"></a>기본 매개 변수 집합
 
-여러 매개 변수 집합을 정의 하는 경우 **Cmdlet** 특성의 `DefaultParameterSetName` 키워드를 사용 하 여 기본 매개 변수 집합을 지정할 수 있습니다. 명령에서 제공 하는 정보에 따라 사용할 매개 변수 집합을 확인할 수 없는 경우 PowerShell은 기본 매개 변수 집합을 사용 합니다. **Cmdlet** 특성에 대 한 자세한 내용은 [cmdlet 특성 선언](./cmdlet-attribute-declaration.md)을 참조 하세요.
+여러 매개 변수 집합을 정의 하는 경우 `DefaultParameterSetName` **Cmdlet** 특성의 키워드를 사용 하 여 기본 매개 변수 집합을 지정할 수 있습니다. 명령에서 제공 하는 정보에 따라 사용할 매개 변수 집합을 확인할 수 없는 경우 PowerShell은 기본 매개 변수 집합을 사용 합니다. **Cmdlet** 특성에 대 한 자세한 내용은 [cmdlet 특성 선언](./cmdlet-attribute-declaration.md)을 참조 하세요.
 
 ## <a name="declaring-parameter-sets"></a>매개 변수 집합 선언
 
-매개 변수 집합을 만들려면 매개 변수 집합의 모든 매개 변수에 대해 **매개 변수** 특성을 선언할 때 `ParameterSetName` 키워드를 지정 해야 합니다. 여러 매개 변수 집합에 속하는 매개 변수의 경우 각 매개 변수 집합에 대 한 **매개 변수** 특성을 추가 합니다. 이 특성을 사용 하면 매개 변수 집합 마다 매개 변수를 다르게 정의할 수 있습니다. 예를 들어 매개 변수를 한 집합에서 필수로 정의 하 고 다른 집합에서는 선택적으로 정의할 수 있습니다. 그러나 각 매개 변수 집합에는 하나의 고유 매개 변수가 포함 되어야 합니다. 자세한 내용은 [매개 변수 특성 선언](parameter-attribute-declaration.md)을 참조 하세요.
+매개 변수 집합을 만들려면 매개 변수 `ParameterSetName` 집합의 모든 매개 변수에 대 한 **매개 변수** 특성을 선언할 때 키워드를 지정 해야 합니다. 여러 매개 변수 집합에 속하는 매개 변수의 경우 각 매개 변수 집합에 대 한 **매개 변수** 특성을 추가 합니다. 이 특성을 사용 하면 매개 변수 집합 마다 매개 변수를 다르게 정의할 수 있습니다. 예를 들어 매개 변수를 한 집합에서 필수로 정의 하 고 다른 집합에서는 선택적으로 정의할 수 있습니다. 그러나 각 매개 변수 집합에는 하나의 고유 매개 변수가 포함 되어야 합니다. 자세한 내용은 [매개 변수 특성 선언](parameter-attribute-declaration.md)을 참조 하세요.
 
-다음 예의 **UserName** 매개 변수는 `Test01` 매개 변수 집합의 고유한 매개 변수이 고 **ComputerName** 매개 변수는 `Test02` 매개 변수 집합의 고유한 매개 변수입니다. **Sharedparam** 매개 변수는 두 집합에 속하며 `Test01` 매개 변수 집합에 필수 이지만 `Test02` 매개 변수 집합의 경우 선택 사항입니다.
+다음 예제에서 **UserName** 매개 변수는 매개 변수 집합의 고유한 매개 변수이 `Test01` 고 **ComputerName** 매개 변수는 `Test02` 매개 변수 집합의 고유한 매개 변수입니다. **Sharedparam** 매개 변수는 두 집합에 속하며 매개 변수 집합에는 필수 `Test01` 이지만 `Test02` 매개 변수 집합의 경우 선택 사항입니다.
 
 ```csharp
 [Parameter(Position = 0, Mandatory = true, ParameterSetName = "Test01")]

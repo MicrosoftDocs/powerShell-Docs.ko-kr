@@ -1,25 +1,18 @@
 ---
 title: Cmdlet에 종료 되지 않는 오류 보고 추가 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f2a1531a-a92a-4606-9d54-c5df80d34f33
-caps.latest.revision: 8
-ms.openlocfilehash: ec29d1cffa083e4cce667d3e1efbd4eeecbffb51
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 6421d510f3701c12807568ad8786459123e80223
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870118"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784591"
 ---
 # <a name="adding-non-terminating-error-reporting-to-your-cmdlet"></a>Cmdlet에 종료되지 않는 오류 보고 추가
 
-Cmdlet은 [WriteError입니다.][] 메서드를 호출 하 여 종료 되지 않는 오류를 보고할 수 있으며, 계속 해 서 현재 입력 개체 또는 추가로 들어오는 파이프라인 개체에서 작동 합니다. 이 섹션에서는 입력 처리 방법에서 종료 되지 않는 오류를 보고 하는 cmdlet을 만드는 방법을 설명 합니다.
+Cmdlet은 [WriteError][] 메서드를 호출 하 여 종료 되지 않는 오류를 보고할 수 있으며, 계속 해 서 현재 입력 개체 또는 추가로 들어오는 파이프라인 개체에서 작동 합니다. 이 섹션에서는 입력 처리 방법에서 종료 되지 않는 오류를 보고 하는 cmdlet을 만드는 방법을 설명 합니다.
 
-종료 오류 (및 종료 오류)의 경우 cmdlet은 오류를 식별 하는 [ErrorRecord.][] 개체를 전달 해야 합니다. 각 오류 레코드는 "오류 식별자" 라는 고유한 문자열로 식별 됩니다. 식별자 외에도 각 오류의 범주는 [ErrorCategory.][] 열거형에 정의 된 상수로 지정 됩니다. 사용자는 `$ErrorView` 변수를 "CategoryView"로 설정 하 여 해당 범주에 따라 오류를 볼 수 있습니다.
+종료 오류 (및 종료 오류)의 경우 cmdlet은 오류를 식별 하는 [ErrorRecord][] 개체를 전달 해야 합니다. 각 오류 레코드는 "오류 식별자" 라는 고유한 문자열로 식별 됩니다. 식별자 외에도 각 오류의 범주는 [ErrorCategory][] 열거형에 정의 된 상수로 지정 됩니다. 사용자는 `$ErrorView` 변수를 "CategoryView"로 설정 하 여 해당 범주에 따라 오류를 볼 수 있습니다.
 
 오류 레코드에 대 한 자세한 내용은 [Windows PowerShell 오류 레코드](./windows-powershell-error-records.md)를 참조 하십시오.
 
@@ -27,7 +20,7 @@ Cmdlet은 [WriteError입니다.][] 메서드를 호출 하 여 종료 되지 않
 
 Cmdlet을 만드는 첫 번째 단계는 항상 cmdlet의 이름을 지정 하 고 cmdlet을 구현 하는 .NET 클래스를 선언 하는 것입니다. 이 cmdlet은 프로세스 정보를 검색 하므로 여기에서 선택한 동사 이름은 "Get"입니다. 정보를 검색할 수 있는 거의 모든 종류의 cmdlet은 명령줄 입력을 처리할 수 있습니다. 승인 된 cmdlet 동사에 대 한 자세한 내용은 [Cmdlet 동사 이름](approved-verbs-for-windows-powershell-commands.md)을 참조 하세요.
 
-다음은이 `Get-Proc` cmdlet에 대 한 정의입니다. 이 정의에 대 한 세부 정보는 [첫 번째 Cmdlet을 만들](creating-a-cmdlet-without-parameters.md)때 제공 됩니다.
+다음은이 cmdlet에 대 한 정의입니다 `Get-Proc` . 이 정의에 대 한 세부 정보는 [첫 번째 Cmdlet을 만들](creating-a-cmdlet-without-parameters.md)때 제공 됩니다.
 
 ```csharp
 [Cmdlet(VerbsCommon.Get, "proc")]
@@ -78,16 +71,16 @@ End Property
 
 ## <a name="overriding-input-processing-methods"></a>입력 처리 메서드 재정의
 
-모든 cmdlet은 [System.object.][] 클래스에서 제공 하는 입력 처리 메서드를 하나 이상 재정의 해야 합니다. 이러한 방법은 [첫 번째 Cmdlet 만들기](creating-a-cmdlet-without-parameters.md)에서 설명 합니다.
+모든 cmdlet은 [system.object][] 클래스에서 제공 하는 입력 처리 메서드를 하나 이상 재정의 해야 합니다. 이러한 방법은 [첫 번째 Cmdlet 만들기](creating-a-cmdlet-without-parameters.md)에서 설명 합니다.
 
 > [!NOTE]
 > Cmdlet은 각 레코드를 가능한 한 독립적으로 처리 해야 합니다.
 
-이 Get-Proc cmdlet 메서드는 사용자 또는 스크립트에서 제공하는 입력에 대한 **Name** 매개 변수를 처리하기 위해 [ProcessRecord입니다.][] 메서드를 재정의합니다. 이 메서드는 요청 된 각 프로세스 이름 또는 모든 프로세스에 대 한 프로세스를 가져옵니다. 이름이 제공 되지 않은 경우에는입니다. 이 재정의에 대 한 세부 정보는 [첫 번째 Cmdlet을 만들](creating-a-cmdlet-without-parameters.md)때 제공 됩니다.
+이 ProcessRecord 메서드는 사용자 또는 스크립트에서 제공 하는 입력에 대 한 **Name** 매개 변수를 처리 하기 위해 [System.Management.Automation.Cmdlet.ProcessRecord][] 메서드를 재정의 합니다. 이 메서드는 요청 된 각 프로세스 이름 또는 모든 프로세스에 대 한 프로세스를 가져옵니다. 이름이 제공 되지 않은 경우에는입니다. 이 재정의에 대 한 세부 정보는 [첫 번째 Cmdlet을 만들](creating-a-cmdlet-without-parameters.md)때 제공 됩니다.
 
 ### <a name="things-to-remember-when-reporting-errors"></a>오류를 보고할 때 기억할 사항
 
-오류를 기록할 때 cmdlet이 전달 하는 [ErrorRecord.][] 개체에는 코어의 예외가 필요 합니다. 사용할 예외를 결정할 때 .NET 지침을 따릅니다.
+오류를 기록할 때 cmdlet이 전달 하는 [ErrorRecord][] 개체에는 코어의 예외가 필요 합니다. 사용할 예외를 결정할 때 .NET 지침을 따릅니다.
 기본적으로 오류가 기존 예외와 의미상 동일 하면 cmdlet은 해당 예외를 사용 하거나이를 파생 해야 합니다. 그렇지 않은 경우에는 [system.object][] 클래스에서 직접 새 예외 또는 예외 계층 구조를 파생 시켜야 합니다.
 
 ErrorRecord 클래스의 FullyQualifiedErrorId 속성을 통해 액세스 되는 오류 식별자를 만들 때 다음 사항을 염두에 두어야 합니다.
@@ -115,9 +108,9 @@ Cmdlet은 특정 오류 식별자를 다른 코드 경로에 할당 해야 합�
 
 ## <a name="reporting-nonterminating-errors"></a>종료 되지 않는 오류 보고
 
-입력 처리 방법 중 하나는 [WriteError입니다.][] 메서드를 사용 하 여 출력 스트림에 종료 되지 않는 오류를 보고할 수 있습니다.
+입력 처리 방법 중 하나는 [WriteError][] 메서드를 사용 하 여 출력 스트림에 종료 되지 않는 오류를 보고할 수 있습니다.
 
-[ProcessRecord입니다.][] 메서드 재정의 내에서 [WriteError입니다.][]에 대한 호출을 보여 주는이 Get-Proc cmdlet의 코드 예제는 다음과 같습니다. 이 경우 cmdlet에서 지정 된 프로세스 식별자에 대 한 프로세스를 찾을 수 없는 경우 호출이 수행 됩니다.
+ProcessRecord 메서드 재정의 내에서 WriteError에 대 한 호출을 보여 주는이 [System.Management.Automation.Cmdlet.WriteError][] cmdlet의 코드 예제는 다음과 같습니다. [System.Management.Automation.Cmdlet.ProcessRecord][] 메서드를 재정의 합니다. 이 경우 cmdlet에서 지정 된 프로세스 식별자에 대 한 프로세스를 찾을 수 없는 경우 호출이 수행 됩니다.
 
 ```csharp
 protected override void ProcessRecord()
@@ -161,13 +154,13 @@ protected override void ProcessRecord()
 
 종료 되지 않는 오류의 경우 cmdlet은 각 특정 입력 개체에 대해 특정 오류 식별자를 생성 해야 합니다.
 
-Cmdlet은 종료 되지 않는 오류에 의해 생성 된 PowerShell 작업을 수정 해야 하는 경우가 많습니다. `ErrorAction` 및 `ErrorVariable` 매개 변수를 정의 하 여이 작업을 수행할 수 있습니다. `ErrorAction` 매개 변수를 정의 하는 경우 cmdlet은 [System.object 기본 설정][], `$ErrorActionPreference` 변수를 설정 하 여 작업에 직접 영향을 줄 수 있습니다.
+Cmdlet은 종료 되지 않는 오류에 의해 생성 된 PowerShell 작업을 수정 해야 하는 경우가 많습니다. `ErrorAction`및 매개 변수를 정의 하 여이 작업을 수행할 수 있습니다 `ErrorVariable` . 매개 변수를 정의 하는 경우 `ErrorAction` cmdlet은 사용자 옵션 [System.Management.Automation.ActionPreference][]을 표시 합니다. 즉, 변수를 설정 하 여 작업에 직접 영향을 줄 수 있습니다 `$ErrorActionPreference` .
 
-Cmdlet은 `ErrorAction`설정의 영향을 받지 않는 `ErrorVariable` 매개 변수를 사용 하 여 종료 되지 않는 오류를 변수에 저장할 수 있습니다. 변수 이름 앞에 더하기 기호 (+)를 추가 하 여 기존 오류 변수에 오류를 추가할 수 있습니다.
+Cmdlet은 `ErrorVariable` 의 설정에 의해 영향을 받지 않는 매개 변수를 사용 하 여 종료 되지 않는 오류를 변수에 저장할 수 있습니다 `ErrorAction` . 변수 이름 앞에 더하기 기호 (+)를 추가 하 여 기존 오류 변수에 오류를 추가할 수 있습니다.
 
 ## <a name="code-sample"></a>코드 예제
 
-전체 C# 샘플 코드는 [GetProcessSample04 샘플](./getprocesssample04-sample.md)을 참조 하세요.
+전체 c # 샘플 코드는 [GetProcessSample04 샘플](./getprocesssample04-sample.md)을 참조 하세요.
 
 ## <a name="define-object-types-and-formatting"></a>개체 형식 및 서식 정의
 
@@ -197,7 +190,7 @@ PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 
 
 ## <a name="see-also"></a>참고 항목
 
-[파이프라인 입력을 처리 하는 매개 변수 추가](./adding-parameters-that-process-pipeline-input.md)
+[파이프라인 입력을 처리하는 매개 변수 추가](./adding-parameters-that-process-pipeline-input.md)
 
 [명령줄 입력을 처리 하는 매개 변수 추가](./adding-parameters-that-process-command-line-input.md)
 
@@ -211,7 +204,7 @@ PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 
 
 [Cmdlet 샘플](./cmdlet-samples.md)
 
-[system.object]: /dotnet/api/System.Exception
+[시스템 예외]: /dotnet/api/System.Exception
 [System.object 기본 설정]: /dotnet/api/System.Management.Automation.ActionPreference
 [ProcessRecord입니다.]: /dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord
 [WriteError입니다.]: /dotnet/api/System.Management.Automation.Cmdlet.WriteError

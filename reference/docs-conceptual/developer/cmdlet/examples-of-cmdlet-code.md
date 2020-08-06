@@ -1,19 +1,12 @@
 ---
 title: Cmdlet 코드의 예 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 6fed2f68-ce6d-4a8f-bf21-f94f27a155c2
-caps.latest.revision: 9
-ms.openlocfilehash: 936728d64f30a08fb9e2fa9ccef103683594aa3e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2d2597d3d3f64cae1c1494eb2f05873f6feae5e0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364502"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784336"
 ---
 # <a name="examples-of-cmdlet-code"></a>Cmdlet 코드 예제
 
@@ -22,7 +15,7 @@ ms.locfileid: "72364502"
 > [!IMPORTANT]
 > Cmdlet을 작성 하는 방법에 대 한 단계별 지침은 [Cmdlet 작성을 위한 자습서](./tutorials-for-writing-cmdlets.md)를 참조 하세요.
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [간단한 Cmdlet을 작성 하는 방법](./how-to-write-a-simple-cmdlet.md) 이 예제에서는 cmdlet 코드의 기본 구조를 보여 줍니다.
 
@@ -48,4 +41,4 @@ ms.locfileid: "72364502"
 
 ## <a name="see-also"></a>참고 항목
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

@@ -1,23 +1,16 @@
 ---
 title: Alias 특성 선언 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Alias attribute
 - attributes, Alias
 - Alias attribute, described
-ms.assetid: d0df3a46-b1cc-42b9-beb1-e16bce254007
-caps.latest.revision: 10
-ms.openlocfilehash: 4d20672c5181c994c1b53624f6c42a301db11f26
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4c1ff34a244611173ca919a44d6598189b19dc98
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72370022"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782415"
 ---
 # <a name="alias-attribute-declaration"></a>Alias 특성 선언
 
@@ -31,7 +24,7 @@ Alias 특성을 사용 하면 사용자가 cmdlet 매개 변수에 대해 다른
 
 #### <a name="parameters"></a>매개 변수
 
-`aliasName` (String [])이 필요 합니다. Cmdlet 매개 변수에 대 한 쉼표로 구분 된 별칭 이름 집합을 지정 합니다.
+`aliasName`(String []) 필수. Cmdlet 매개 변수에 대 한 쉼표로 구분 된 별칭 이름 집합을 지정 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -47,4 +40,4 @@ Alias 특성을 사용 하면 사용자가 cmdlet 매개 변수에 대해 다른
 
 [매개 변수 별칭](./parameter-aliases.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
