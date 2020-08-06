@@ -1,19 +1,12 @@
 ---
 title: 공급자 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: c4933dad-fec9-4337-a1a9-9dc16ee87cc3
-caps.latest.revision: 9
-ms.openlocfilehash: 7fabd251b2a9ae7704493681d1502fdc0f0a73cb
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 9eb8eb64bbe585ebd8024c0215853ff04a5c3e54
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560970"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87778436"
 ---
 # <a name="provider-samples"></a>공급자 샘플
 

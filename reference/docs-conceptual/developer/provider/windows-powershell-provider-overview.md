@@ -1,19 +1,12 @@
 ---
 title: Windows PowerShell 공급자 개요 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 82244fbd-07b9-47f3-805c-3fb90ebbf58a
-caps.latest.revision: 13
-ms.openlocfilehash: 9f1b94e722e59e707a26547949c661b5098d29e0
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: c248f1c337e96a1b83cbeb5fb486147504777eb1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560953"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87778235"
 ---
 # <a name="windows-powershell-provider-overview"></a>Windows PowerShell 공급자 개요
 
@@ -39,7 +32,7 @@ Windows PowerShell 공급자를 사용 하면 모든 데이터 저장소가 탑�
 
 ### <a name="drive-qualified-paths"></a>드라이브 정규화 된 경로
 
-드라이브 정규화 된 경로는 항목 이름, 항목이 있는 컨테이너 및 하위 컨테이너, 항목에 액세스 하는 데 사용할 Windows PowerShell 드라이브의 조합입니다. (드라이브는 데이터 저장소에 액세스 하는 데 사용 되는 공급자에 의해 정의 됩니다. 이 경로는 드라이브 이름 뒤에 콜론 (:)으로 시작 합니다. 예: `get-childitem C:`
+드라이브 정규화 된 경로는 항목 이름, 항목이 있는 컨테이너 및 하위 컨테이너, 항목에 액세스 하는 데 사용할 Windows PowerShell 드라이브의 조합입니다. (드라이브는 데이터 저장소에 액세스 하는 데 사용 되는 공급자에 의해 정의 됩니다. 이 경로는 드라이브 이름 뒤에 콜론 (:)으로 시작 합니다. 예를 들면 다음과 같습니다. `get-childitem C:`
 
 ### <a name="provider-qualified-paths"></a>공급자 정규화 경로
 
