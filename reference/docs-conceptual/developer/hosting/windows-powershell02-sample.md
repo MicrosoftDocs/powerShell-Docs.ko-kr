@@ -1,19 +1,12 @@
 ---
 title: Windows PowerShell02 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 92492a7e-257d-47d3-b119-89df3c5545e8
-caps.latest.revision: 9
-ms.openlocfilehash: 4d697e73ff4ab4cc4b88593f814d589f89005663
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: a82366a88addb08e186eede79e621d90d915c50f
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978647"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779389"
 ---
 # <a name="windows-powershell02-sample"></a>Windows PowerShell02 샘플
 
@@ -41,4 +34,4 @@ ms.locfileid: "80978647"
 
 ## <a name="see-also"></a>참고 항목
 
-[Windows PowerShell 호스트 응용 프로그램 작성](./writing-a-windows-powershell-host-application.md)
+[Windows PowerShell 호스트 애플리케이션 작성](./writing-a-windows-powershell-host-application.md)

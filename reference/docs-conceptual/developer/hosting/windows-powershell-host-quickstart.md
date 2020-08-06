@@ -1,19 +1,12 @@
 ---
 title: Windows PowerShell 호스트 빠른 시작 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 5a134b81-bd0c-4e1c-a2f0-9acbe852745a
-caps.latest.revision: 9
-ms.openlocfilehash: 390eb2d0153c65967d8c0711c852aa6e13fe4660
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fea6bd5ae49ecf552c583271ee9d869b1ccebae8
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360822"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779406"
 ---
 # <a name="windows-powershell-host-quickstart"></a>Windows PowerShell 호스트 빠른 시작
 
@@ -58,7 +51,7 @@ ms.locfileid: "72360822"
 
 이전 예제에서는 매개 변수 없이 단일 명령을 실행 합니다.
 명령을 사용 하 여 매개 변수를 추가할 수 있습니다. [AddParameter](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) 메서드.
-예를 들어 다음 코드는 컴퓨터에서 실행 되 `PowerShell` 이름이 지정 된 모든 프로세스 목록을 가져옵니다.
+예를 들어 다음 코드는 `PowerShell` 컴퓨터에서 실행 되는 이라는 모든 프로세스 목록을 가져옵니다.
 
 ```csharp
 PowerShell.Create().AddCommand("Get-Process")
@@ -91,7 +84,7 @@ PowerShell.Create().AddCommand("Get-Process")
 ### <a name="addstatement"></a>AddStatement
 
 파이프라인의 끝에 문을 추가 하는 [system.object](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) 를 사용 하 여 일괄 처리를 시뮬레이션할 수 있습니다.
-다음 코드는 `PowerShell`이름이 인 실행 중인 프로세스 목록을 가져온 다음 실행 중인 서비스 목록을 가져옵니다.
+다음 코드는 이름이 인 실행 중인 프로세스 목록을 가져온 `PowerShell` 다음 실행 중인 서비스 목록을 가져옵니다.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -104,15 +97,15 @@ ps.Invoke();
 
 [System.object](/dotnet/api/System.Management.Automation.PowerShell.AddScript) 메서드를 호출 하 여 기존 스크립트를 실행할 수 있습니다.
 다음 예제에서는 스크립트를 파이프라인에 추가 하 고 실행 합니다.
-이 예에서는 `D:\PSScripts`라는 폴더에 `MyScript.ps1` 라는 스크립트가 이미 있다고 가정 합니다.
+이 예에서는 라는 폴더에 라는 스크립트가 이미 있다고 가정 `MyScript.ps1` `D:\PSScripts` 합니다.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
 ps.AddScript("D:\PSScripts\MyScript.ps1").Invoke();
 ```
 
-또한 `useLocalScope`라는 부울 매개 변수를 사용 하는 AddScript 메서드의 버전이 있습니다.
-이 매개 변수가 `true`로 설정 된 경우 스크립트는 로컬 범위에서 실행 됩니다.
+라는 부울 매개 변수를 사용 하는 AddScript 메서드의 버전도 있습니다 `useLocalScope` .
+이 매개 변수를로 설정 하면 `true` 스크립트는 로컬 범위에서 실행 됩니다.
 다음 코드에서는 로컬 범위에서 스크립트를 실행 합니다.
 
 ```csharp
@@ -125,11 +118,11 @@ ps.AddScript(@"D:\PSScripts\MyScript.ps1", true).Invoke();
 이전 예제에서 사용 된 기본 runspace는 모든 핵심 Windows PowerShell 명령을 로드 하지만 모든 명령의 지정 된 하위 집합만 로드 하는 사용자 지정 runspace를 만들 수 있습니다.
 이 작업을 수행 하 여 성능을 향상 시키거나 (많은 수의 명령을 로드 하 여 성능이 저하 됨) 사용자가 작업을 수행 하는 기능을 제한할 수 있습니다.
 제한 된 개수의 명령만 노출 하는 runspace를 제한 된 runspace 라고 합니다.
-제약 된 runspace를 만들려면 [runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) 및 runspace 클래스를 사용 합니다. [InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 클래스를 사용 합니다.
+제한 된 runspace를 만들려면 [runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) 및 [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 클래스를 사용 합니다.
 
 ### <a name="creating-an-initialsessionstate-object"></a>InitialSessionState 개체 만들기
 
-사용자 지정 runspace를 만들려면 먼저 [Runspace InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 만들어야 합니다.
+사용자 지정 runspace를 만들려면 먼저 [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 만들어야 합니다.
 다음 예제에서는 기본 InitialSessionState 개체를 만든 후 [runspace. RunspaceFactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) 를 사용 하 여 runspace를 만듭니다.
 
 ```csharp
@@ -144,14 +137,14 @@ ps.Invoke();
 
 ### <a name="constraining-the-runspace"></a>Runspace 제한
 
-이전 예제에서는 기본 제공 핵심 Windows PowerShell을 모두 로드 하는 기본 [Runspace InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 만들었습니다.
-Runspace 스냅인의 명령만 로드 하는 InitialSessionState 개체를 만들기 위해 Initialsessionstate.createdefault2 메서드를 호출 했을 수도 있습니다. [InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) 를 호출 했습니다.
-더 제한 된 runspace를 만들려면 [runspace](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) 메서드를 호출 하 여 빈 InitialSessionState 개체를 만든 다음 InitialSessionState에 명령을 추가 해야 합니다.
+이전 예제에서는 기본 제공 핵심 Windows PowerShell을 모두 로드 하는 기본 [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 만들었습니다.
+[System.Management.Automation.Runspaces.Iniinitialsessionstate.createdefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) 메서드를 호출 하 여 tialSessionState 스냅인의 명령만 로드 하는 InitialSessionState 개체를 만들 수도 있습니다.
+더 제한 된 runspace를 만들려면 [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) 메서드를 호출 하 여 빈 InitialSessionState 개체를 만든 다음 InitialSessionState에 명령을 추가 해야 합니다.
 
 지정 하는 명령만 로드 하는 runspace를 사용 하면 성능이 크게 향상 됩니다.
 
 [Runspace](/dotnet/api/System.Management.Automation.Runspaces.SessionStateCmdletEntry) 의 메서드를 사용 하 여 초기 세션 상태에 대 한 cmdlet을 정의 합니다.
-다음 예에서는 빈 초기 세션 상태를 만든 다음 `Get-Command` 및 `Import-Module` 명령을 정의 하 고 초기 세션 상태에 추가 합니다.
+다음 예에서는 빈 초기 세션 상태를 만든 다음 및 명령을 정의 하 고 `Get-Command` `Import-Module` 초기 세션 상태에 추가 합니다.
 그런 다음 해당 초기 세션 상태에 의해 제한 되는 runspace를 만들고 해당 runspace에서 명령을 실행 합니다.
 
 초기 세션 상태를 만듭니다.

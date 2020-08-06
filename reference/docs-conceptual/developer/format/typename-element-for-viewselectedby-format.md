@@ -1,19 +1,12 @@
 ---
 title: ViewSelectedBy (형식)에 대 한 TypeName 요소 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0ad807a9-d7d8-4e96-b799-9c6a7677cc2d
-caps.latest.revision: 12
-ms.openlocfilehash: e2028c479103cc414295dc24a0f9bb69190bfc66
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e9a391565c3e66041dd9a340455dccfce9ce929b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361442"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780035"
 ---
 # <a name="typename-element-for-viewselectedby-format"></a>ViewSelectedBy에 대한 TypeName 요소(형식)
 
@@ -29,7 +22,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 `TypeName` 요소의 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다 `TypeName` .
 
 ### <a name="attributes"></a>특성
 
@@ -43,11 +36,11 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 |요소|설명|
 |-------------|-----------------|
-|[ViewSelectedBy 요소 (형식)](./viewselectedby-element-format.md)|뷰에 표시 되는 .NET 개체를 정의 합니다.|
+|[ViewSelectedBy 요소(형식)](./viewselectedby-element-format.md)|뷰에 표시 되는 .NET 개체를 정의 합니다.|
 
 ## <a name="text-value"></a>텍스트 값
 
-`System.IO.DirectoryInfo`와 같은 .NET 형식의 정규화 된 이름을 지정 합니다.
+.NET 형식의 정규화 된 이름 (예:)을 지정 합니다 `System.IO.DirectoryInfo` .
 
 ## <a name="remarks"></a>설명
 
@@ -71,12 +64,12 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 [목록 보기 만들기](./creating-a-list-view.md)
 
-[테이블 뷰 만들기](./creating-a-table-view.md)
+[테이블 보기 만들기](./creating-a-table-view.md)
 
-[넓은 뷰 만들기](./creating-a-wide-view.md)
+[넓게 보기 만들기](./creating-a-wide-view.md)
 
 [사용자 지정 컨트롤 만들기](./creating-custom-controls.md)
 
-[ViewSelectedBy 요소 (형식)](./viewselectedby-element-format.md)
+[ViewSelectedBy 요소(형식)](./viewselectedby-element-format.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

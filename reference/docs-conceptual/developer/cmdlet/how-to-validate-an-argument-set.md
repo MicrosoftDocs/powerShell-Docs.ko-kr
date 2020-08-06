@@ -1,21 +1,14 @@
 ---
 title: 인수 집합의 유효성을 검사 하는 방법 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - ValidateSet attribute, example
-ms.assetid: 55f0f664-d2ad-4501-a3dc-9f7a27c8ab11
-caps.latest.revision: 8
-ms.openlocfilehash: 6d8b189ed6311efd5a7348ab1e58934e9bff12a3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6173f1380583f5b27e2b188990a5ea041f447c57
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365512"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782007"
 ---
 # <a name="how-to-validate-an-argument-set"></a>인수 집합을 확인하는 방법
 
@@ -26,7 +19,7 @@ ms.locfileid: "72365512"
 
 ## <a name="to-validate-an-argument-set"></a>인수 집합의 유효성을 검사 하려면
 
-- 다음 코드와 같이 ValidateSet 특성을 추가 합니다. 이 예에서는 `UserName` 매개 변수에 대 한 세 가지 가능한 값 집합을 지정 합니다.
+- 다음 코드와 같이 ValidateSet 특성을 추가 합니다. 이 예에서는 매개 변수에 사용할 수 있는 세 가지 값 집합을 지정 합니다 `UserName` .
 
     ```csharp
     [ValidateSet("Steve", "Mary", "Carl", IgnoreCase = true)]
@@ -48,4 +41,4 @@ ms.locfileid: "72365512"
 
 [ValidateSet 특성 선언](./validateset-attribute-declaration.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

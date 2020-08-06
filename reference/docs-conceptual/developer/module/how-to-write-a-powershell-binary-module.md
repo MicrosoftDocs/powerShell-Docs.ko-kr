@@ -1,19 +1,12 @@
 ---
 title: PowerShell 이진 모듈을 작성 하는 방법 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: eb4e72e6-24c4-42b6-b7b9-a62585c17f26
-caps.latest.revision: 15
-ms.openlocfilehash: ed614de125f78cbcf8411cc334baf3c95933dd47
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 92395bd6b8be1bd3741888eb3716d62f0253e213
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367122"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779270"
 ---
 # <a name="how-to-write-a-powershell-binary-module"></a>PowerShell 이진 모듈을 작성하는 방법
 
@@ -23,7 +16,7 @@ ms.locfileid: "72367122"
 
 #### <a name="how-to-create-and-install-a-powershell-binary-module"></a>PowerShell 이진 모듈을 만들고 설치 하는 방법
 
-1. 필요한 기능을 사용 하 여 이진 PowerShell 솔루션 (예: C#에서 작성 한 cmdlet)을 만들고 제대로 실행 되는지 확인 합니다.
+1. 필요한 기능이 포함 된 이진 PowerShell 솔루션 (예: c #으로 작성 된 cmdlet)을 만들고 제대로 실행 되는지 확인 합니다.
 
    코드 관점에서 이진 모듈의 핵심은 단순히 cmdlet 어셈블리입니다. 실제로 PowerShell은 로드 및 언로드 측면에서 단일 cmdlet 어셈블리를 모듈로 처리 하며 개발자의 추가 작업은 필요 하지 않습니다. Cmdlet을 작성 하는 방법에 대 한 자세한 내용은 [Windows PowerShell Cmdlet 작성](../cmdlet/writing-a-windows-powershell-cmdlet.md)을 참조 하세요.
 
@@ -34,7 +27,7 @@ ms.locfileid: "72367122"
    따라서 모듈 매니페스트는 주로 여러 파일을 단일 패키지로 결합 하거나 지정 된 어셈블리에 대 한 게시를 명시적으로 제어 하는 데 유용 합니다.
    자세한 내용은 [PowerShell 모듈 매니페스트를 작성 하는 방법](how-to-write-a-powershell-module-manifest.md)을 참조 하세요.
 
-   다음 코드는 모듈로 사용할 수 있는 C# 동일한 파일에 세 개의 cmdlet이 포함 된 매우 간단한 코드 블록입니다.
+   다음 코드는 모듈로 사용할 수 있는 동일한 파일에 세 개의 cmdlet이 포함 된 매우 간단한 c # 코드 블록입니다.
 
    ```csharp
    using System.Management.Automation;           // Windows PowerShell namespace.
@@ -73,9 +66,9 @@ ms.locfileid: "72367122"
 
 3. 솔루션을 패키지 하 고 PowerShell 모듈 경로의 어딘가에 패키지를 저장 합니다.
 
-   `PSModulePath` 전역 환경 변수는 PowerShell이 모듈을 찾는 데 사용 하는 기본 경로를 설명 합니다. 예를 들어 시스템에 모듈을 저장 하는 일반적인 경로는 `%SystemRoot%\users\<user>\Documents\WindowsPowerShell\Modules\<moduleName>`됩니다. 기본 경로를 사용 하지 않는 경우 설치 하는 동안 모듈의 위치를 명시적으로 명시 해야 합니다. 솔루션에 대 한 여러 어셈블리와 파일을 저장 하는 폴더가 필요할 수 있으므로 모듈을 저장할 폴더를 만들어야 합니다.
+   `PSModulePath`전역 환경 변수는 PowerShell이 모듈을 찾는 데 사용 하는 기본 경로를 설명 합니다. 예를 들어 시스템에 모듈을 저장 하는 일반적인 경로는 `%SystemRoot%\users\<user>\Documents\WindowsPowerShell\Modules\<moduleName>` 입니다. 기본 경로를 사용 하지 않는 경우 설치 하는 동안 모듈의 위치를 명시적으로 명시 해야 합니다. 솔루션에 대 한 여러 어셈블리와 파일을 저장 하는 폴더가 필요할 수 있으므로 모듈을 저장할 폴더를 만들어야 합니다.
 
-   기술적으로는 `PSModulePath` 어디에 나 모듈을 설치할 필요가 없습니다 .이는 단순히 PowerShell이 모듈을 찾을 기본 위치입니다. 그러나 모듈을 다른 위치에 저장 해야 하는 경우를 제외 하 고이 작업을 수행 하는 것이 좋습니다. 자세한 내용은 [Powershell 모듈](./installing-a-powershell-module.md) 설치 및 [Powershell 모듈 설치 경로 수정](./modifying-the-psmodulepath-installation-path.md)을 참조 하세요.
+   기술적으로는의 어디에 나 모듈을 설치할 필요가 없습니다. 즉, `PSModulePath` PowerShell이 모듈을 찾을 기본 위치입니다. 그러나 모듈을 다른 위치에 저장 해야 하는 경우를 제외 하 고이 작업을 수행 하는 것이 좋습니다. 자세한 내용은 [Powershell 모듈](./installing-a-powershell-module.md) 설치 및 [Powershell 모듈 설치 경로 수정](./modifying-the-psmodulepath-installation-path.md)을 참조 하세요.
 
 4. [Import-module에 대 한](/powershell/module/Microsoft.PowerShell.Core/Import-Module)호출을 사용 하 여 모듈을 PowerShell로 가져옵니다.
 

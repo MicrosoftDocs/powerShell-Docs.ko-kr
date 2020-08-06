@@ -1,19 +1,12 @@
 ---
 title: Cmdlet 등록 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 6215a651-100c-49bb-863f-edc6984dd634
-caps.latest.revision: 7
-ms.openlocfilehash: 44161bc9fb5597c439e59ebc9a6f190eaa4e9836
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 75853a818b119fbd3335e2fe3889f8ab006cc355
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811642"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779253"
 ---
 # <a name="registering-cmdlets"></a>Cmdlet 등록
 

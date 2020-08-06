@@ -1,25 +1,18 @@
 ---
 title: GroupBy (형식)에 대 한 EntrySelectedBy의 TypeName 요소 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b8b6739b-770c-432a-95ab-551c7507c51f
-caps.latest.revision: 6
-ms.openlocfilehash: 3b5ce60d3a0d76988af48f49445a5478a415d498
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e62762cf142bd2d20b21ad8f4249285bd3679280
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361672"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780270"
 ---
 # <a name="typename-element-for-entryselectedby-for-groupby-format"></a>GroupBy의 EntrySelectedBy에 대한 TypeName 요소(형식)
 
 사용자 지정 컨트롤의이 정의를 사용 하는 .NET 형식을 지정 합니다. 이 요소는 새 개체 그룹이 표시 되는 방법을 정의 하는 데 사용 됩니다.
 
-Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (format)의 groupby 요소 (groupby (format) CustomEntries 요소에 대 한 CustomControl 요소에 대 한 groupby (format) Customentries 요소에 대 한 CustomControl Groupby (format) EntrySelectedBy 요소에 대 한 CustomControl 요소에 대 한 CustomEntry for groupby (형식)의 경우 EntrySelectedBy
+Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (Format)의 groupby 요소 (format) CustomControl 요소에 대 한 CustomControl의 경우 CustomControl에 대 한 customentries 요소에 대 한 customentries 요소에 대 한 Customentries 요소에 대 한 Customentries for groupby (형식)에 대 한 CustomEntries 요소에 대 한 참조
 
 ## <a name="syntax"></a>구문
 
@@ -29,7 +22,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 `TypeName` 요소의 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 요소의 부모 요소에 대해 설명 합니다 `TypeName` .
 
 ### <a name="attributes"></a>특성
 
@@ -43,11 +36,11 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 |요소|설명|
 |-------------|-----------------|
-|[GroupBy (형식)에 대 한 CustomEntry의 EntrySelectedBy 요소](./entryselectedby-element-for-customentry-for-groupby-format.md)|이 컨트롤 정의를 사용 하는 .NET 형식 또는이 정의를 사용 하기 위해 존재 해야 하는 조건을 정의 합니다.|
+|[GroupBy의 CustomEntry에 대한 EntrySelectedBy 요소(형식)](./entryselectedby-element-for-customentry-for-groupby-format.md)|이 컨트롤 정의를 사용 하는 .NET 형식 또는이 정의를 사용 하기 위해 존재 해야 하는 조건을 정의 합니다.|
 
 ## <a name="text-value"></a>텍스트 값
 
-`System.IO.DirectoryInfo`와 같은 .NET 형식의 정규화 된 이름을 지정 합니다.
+.NET 형식의 정규화 된 이름 (예:)을 지정 합니다 `System.IO.DirectoryInfo` .
 
 ## <a name="remarks"></a>설명
 
@@ -59,6 +52,6 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 [사용자 지정 컨트롤 만들기](./creating-custom-controls.md)
 
-[GroupBy (형식)에 대 한 CustomEntry의 EntrySelectedBy 요소](./entryselectedby-element-for-customentry-for-groupby-format.md)
+[GroupBy의 CustomEntry에 대한 EntrySelectedBy 요소(형식)](./entryselectedby-element-for-customentry-for-groupby-format.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

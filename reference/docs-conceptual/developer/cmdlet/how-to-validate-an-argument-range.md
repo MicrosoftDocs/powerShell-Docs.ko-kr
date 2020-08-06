@@ -1,21 +1,14 @@
 ---
 title: 인수 범위의 유효성을 검사 하는 방법 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - ValidateRange attribute, example
-ms.assetid: 3cba3ab7-c3b6-4d17-aa17-88377496551b
-caps.latest.revision: 9
-ms.openlocfilehash: a39e34d1f1c333185f09b4a934819e1368d29a48
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b48b1b87425add51e855c48ec700c78c3ae296c1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365522"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782075"
 ---
 # <a name="how-to-validate-an-argument-range"></a>인수 범위를 확인하는 방법
 
@@ -26,7 +19,7 @@ ms.locfileid: "72365522"
 
 ### <a name="to-validate-an-argument-range"></a>인수 범위의 유효성을 검사 하려면
 
-- 다음 코드와 같이 ValidateRange 특성을 추가 합니다. 이 예에서는 `InputData` 매개 변수에 대해 0에서 5 사이의 범위를 지정 합니다.
+- 다음 코드와 같이 ValidateRange 특성을 추가 합니다. 이 예에서는 매개 변수에 대해 0에서 5 사이의 범위를 지정 합니다 `InputData` .
 
     ```csharp
     [ValidateRange(0, 5)]
@@ -45,4 +38,4 @@ ms.locfileid: "72365522"
 
 [ValidateRange 특성 선언](./validaterange-attribute-declaration.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

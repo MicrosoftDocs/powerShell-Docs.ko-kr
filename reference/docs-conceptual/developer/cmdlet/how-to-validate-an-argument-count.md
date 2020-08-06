@@ -1,21 +1,14 @@
 ---
 title: 인수 개수를 확인 하는 방법 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - ValidateCount attribute, example
-ms.assetid: 4e6b6ac4-1003-4e7e-9d4a-9f1cf74fc4af
-caps.latest.revision: 8
-ms.openlocfilehash: b6ddb8185f21a65b2e3142ebb640962047e11763
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e7c0eb364a6975cec089b984c2100d476631a12d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365532"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782126"
 ---
 # <a name="how-to-validate-an-argument-count"></a>인수 개수를 확인하는 방법
 
@@ -46,4 +39,4 @@ ms.locfileid: "72365532"
 
 [ValidateCount 특성 선언](./validatecount-attribute-declaration.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

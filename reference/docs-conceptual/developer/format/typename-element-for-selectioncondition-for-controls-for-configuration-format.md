@@ -1,25 +1,18 @@
 ---
 title: 구성 (형식)에 대 한 컨트롤의 SelectionCondition에 대 한 TypeName 요소 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 477c8711-fffc-4f92-af45-6d4f80990474
-caps.latest.revision: 7
-ms.openlocfilehash: 60f02f3240c5574e1b1f9027b060bd9af89a11d2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2db856d1b84dded315204d8c8574ae86acb63515
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361612"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780069"
 ---
 # <a name="typename-element-for-selectioncondition-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 SelectionCondition에 대한 TypeName 요소(형식)
 
 조건을 트리거하는 .NET 유형을 지정 합니다. 이 요소는 서식 파일의 모든 뷰에서 사용할 수 있는 공용 컨트롤을 정의 하는 데 사용 됩니다.
 
-구성 요소 (format) 컨트롤 요소에 대 한 컨트롤 요소 구성 (format) CustomControl 요소에 대 한 컨트롤 요소에 대 한 CustomControl의 CustomEntries 요소에 대 한 컨트롤의 요소 구성 (형식)에 대 한 CustomControl 구성 요소에 대 한 구성 (형식) EntrySelectedBy의 컨트롤에 대 한 customentry의 구성 (형식)에 대 한 컨트롤의 SelectionCondition에 대 한 구성 (형식) TypeName 요소
+Configuration 요소 (format) 컨트롤의 요소 구성 (format) CustomControl 요소에 대 한 컨트롤의 요소 구성 (format) CustomEntries 요소에 대 한 CustomControl 요소에 대 한 구성 (형식) Customentries 요소 구성에 대 한 컨트롤 (형식) EntrySelectedBy 요소 구성 (형식)에 대 한 컨트롤에 대 한 customentries에 대 한 컨트롤에 대 한 Customentries에 대 한 컨트롤에 대 한 SelectionCondition 요소
 
 ## <a name="syntax"></a>구문
 
@@ -30,7 +23,7 @@ ms.locfileid: "72361612"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 `TypeName` 요소의 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 요소의 부모 요소에 대해 설명 합니다 `TypeName` .
 
 ### <a name="attributes"></a>특성
 
@@ -48,7 +41,7 @@ ms.locfileid: "72361612"
 
 ## <a name="text-value"></a>텍스트 값
 
-`System.IO.DirectoryInfo`와 같은 .NET 형식의 정규화 된 이름을 지정 합니다.
+.NET 형식의 정규화 된 이름 (예:)을 지정 합니다 `System.IO.DirectoryInfo` .
 
 ## <a name="remarks"></a>설명
 
@@ -56,4 +49,4 @@ ms.locfileid: "72361612"
 
 [구성 (형식)에 대 한 CustomEntry에 대해 EntrySelectedBy의 SelectionCondition 요소](./selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

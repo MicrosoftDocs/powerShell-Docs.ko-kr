@@ -1,19 +1,12 @@
 ---
 title: ListEntry의이 listcontrol 요소에 대 한 ListItems 요소 (형식) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d2c1da6d-acc7-4fe8-9e7d-6dcddc2787cd
-caps.latest.revision: 9
-ms.openlocfilehash: c25f18489d9c7abd8889758499dbbacd6ee29304
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 03b89a3df2ab0498533d0c00f303f643e0039b25
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362742"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781140"
 ---
 # <a name="listitems-element-for-listentry-for-listcontrol-format"></a>ListControl의 ListEntry에 대한 ListItems 요소(형식)
 
@@ -31,7 +24,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (form
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `ListItems` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 지정할 수 있는 자식 요소 수에는 제한이 없습니다. 자식 요소의 순서는 목록 보기에 값이 표시 되는 순서를 정의 합니다.
+다음 섹션에서는 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다 `ListItems` . 지정할 수 있는 자식 요소 수에는 제한이 없습니다. 자식 요소의 순서는 목록 보기에 값이 표시 되는 순서를 정의 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -47,7 +40,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (form
 
 |요소|설명|
 |-------------|-----------------|
-|[이 listcontrol에 대 한 ListEntry 요소 (형식)](./listentry-element-for-listcontrol-format.md)|목록 뷰의 정의를 제공 합니다.|
+|[ListControl에 대한 ListEntry 요소(형식)](./listentry-element-for-listcontrol-format.md)|목록 뷰의 정의를 제공 합니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -75,10 +68,10 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (form
 
 ## <a name="see-also"></a>참고 항목
 
-[이 listcontrol에 대 한 ListEntry 요소 (형식)](./listentry-element-for-listcontrol-format.md)
+[ListControl에 대한 ListEntry 요소(형식)](./listentry-element-for-listcontrol-format.md)
 
 [이 listcontrol에 대 한 ListItem 요소 (형식)](./listitem-element-for-listitems-for-listcontrol-format.md)
 
 [목록 보기 만들기](./creating-a-list-view.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

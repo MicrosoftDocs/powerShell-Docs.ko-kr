@@ -1,26 +1,19 @@
 ---
 title: 일반 매개 변수 이름 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0db9f54c-4014-4450-9e81-c9f5fe562a0e
-caps.latest.revision: 12
-ms.openlocfilehash: c65deeda6b2ef1b52de55035dc606259a7f2d232
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d0939cfa5bf90ec55f0c0afcdeff56223d9dc78d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365742"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782228"
 ---
 # <a name="common-parameter-names"></a>일반 매개 변수 이름
 
 이 항목에서 설명 하는 매개 변수는 *일반 매개 변수*라고 합니다. 이러한 cmdlet은 Windows PowerShell 런타임에 의해 cmdlet에 추가 되며 cmdlet으로 선언할 수 없습니다.
 
 > [!NOTE]
-> 이러한 매개 변수는 공급자 cmdlet 및 `CmdletBinding` 특성으로 데코레이팅된 함수에도 추가 됩니다.
+> 이러한 매개 변수는 공급자 cmdlet에 추가 되 고 특성을 사용 하 여 데코레이팅된 함수에도 추가 됩니다 `CmdletBinding` .
 
 ## <a name="general-common-parameters"></a>일반 일반 매개 변수
 
@@ -108,6 +101,6 @@ ms.locfileid: "72365742"
 
 [System.object 매개 변수를](/dotnet/api/System.Management.Automation.Internal.TransactionParameters)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)

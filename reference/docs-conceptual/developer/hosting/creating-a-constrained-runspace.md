@@ -1,23 +1,16 @@
 ---
 title: 제한 된 runspace 만들기 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 59125e65-7030-40bb-9926-756120b2d952
-caps.latest.revision: 5
-ms.openlocfilehash: 20ac1e2af8e047b8b572d86a55439676aa8df25c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 30ecb80dbd96278ee9aa5a609d27bfc4eaa423e9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367652"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779814"
 ---
 # <a name="creating-a-constrained-runspace"></a>제한된 runspace 만들기
 
-성능 또는 보안상의 이유로, 호스트 응용 프로그램에 사용할 수 있는 Windows PowerShell 명령을 제한 하는 것이 좋습니다. 이렇게 하려면 [runspace *](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) 메서드를 호출 하 여 빈 Initialsessionstate를 만든 다음 사용할 수 있는 명령만 추가 합니다. [runspace](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) * 메서드를 호출 합니다.
+성능 또는 보안상의 이유로, 호스트 응용 프로그램에 사용할 수 있는 Windows PowerShell 명령을 제한 하는 것이 좋습니다. 이렇게 하려면System.Management.Automation.Runspaces.Initialsessionstate를 호출 하 여 빈 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 를 만듭니다 [. *](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) 메서드를 만든 다음 사용 하려는 명령만 추가 합니다.
 
  지정 하는 명령만 로드 하는 runspace를 사용 하면 성능이 크게 향상 됩니다.
 

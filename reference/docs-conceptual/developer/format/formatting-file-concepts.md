@@ -1,25 +1,18 @@
 ---
 title: 서식 파일 개념 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1804dbe4-69eb-4b0b-bc40-cbb2f00bb083
-caps.latest.revision: 10
-ms.openlocfilehash: 81b035f3cb44dcb672f5951511d03542e694cc42
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6849a61ab1796ae49c73550b48e78de6f787274e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362982"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781497"
 ---
 # <a name="formatting-file-concepts"></a>형식 지정 파일 개념
 
 이 섹션의 항목에서는 사용자가 정의할 수 있는 다양 한 보기 유형 및 해당 보기의 특수 구성 요소와 같은 사용자 고유의 서식 지정 파일을 만들 때 알아야 할 정보를 제공 합니다.
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [테이블 뷰 만들기](./creating-a-table-view.md) 뷰를 정의 하는 데 사용 되는 XML 요소와 표시 된 테이블 뷰의 예를 제공 합니다.
 
@@ -29,7 +22,7 @@ ms.locfileid: "72362982"
 
 [사용자 지정 컨트롤 만들기](./creating-custom-controls.md) 사용자 지정 컨트롤의 예제를 제공 합니다.
 
-[일반 구성 기능 정의](./defining-common-configuration-features.md)
+[일반적 구성 기능 정의](./defining-common-configuration-features.md)
 
 [선택 집합 정의](./defining-selection-sets.md) 선택 집합을 만드는 데 사용 되는 XML 요소에 대 한 설명 및 예를 제공 합니다.
 

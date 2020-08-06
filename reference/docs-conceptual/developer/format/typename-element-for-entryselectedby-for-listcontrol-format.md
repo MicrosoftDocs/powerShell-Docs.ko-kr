@@ -1,25 +1,18 @@
 ---
 title: 이 listcontrol (형식)에 대 한 EntrySelectedBy의 TypeName 요소 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 33c7345c-b808-4c1e-bd54-cb870b407432
-caps.latest.revision: 14
-ms.openlocfilehash: 0f7216d4dcc0380bceb47ea7c15b3d4a7e5ceeb2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5e7b73db5aa597d96141454008c5c58b1827df24
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361662"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780222"
 ---
 # <a name="typename-element-for-entryselectedby-for-listcontrol-format"></a>ListControl의 EntrySelectedBy에 대한 TypeName 요소(형식)
 
 목록 뷰의이 항목을 사용 하는 .NET 형식을 지정 합니다. 목록 항목에 대해 지정할 수 있는 형식 수에는 제한이 없습니다.
 
-Configuration 요소 (Format) ViewDefinitions 요소 (format)이 listcontrol Element (format) ListEntries Element (format) ListEntry Element (format) EntrySelectedBy 요소에 대 한 ListEntry (형식) TypeName 요소 이 listcontrol에 대 한 EntrySelectedBy (형식)
+Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (format)이 listcontrol Element (format) ListEntries Element (format) ListEntry Element (format) EntrySelectedBy 요소에 대 한 ListEntry (형식) TypeName 요소에 대해이 listcontrol (형식)에 대해 EntrySelectedBy
 
 ## <a name="syntax"></a>구문
 
@@ -29,7 +22,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format)이 listcontrol Ele
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 `TypeName` 요소의 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 요소의 부모 요소에 대해 설명 합니다 `TypeName` .
 
 ### <a name="attributes"></a>특성
 
@@ -47,7 +40,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format)이 listcontrol Ele
 
 ## <a name="text-value"></a>텍스트 값
 
-`System.IO.DirectoryInfo`와 같은 .NET 형식의 정규화 된 이름을 지정 합니다.
+같은 .NET 형식의 정규화 된 이름을 지정 `System.IO.DirectoryInfo` 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -76,4 +69,4 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format)이 listcontrol Ele
 
 [ListEntry (형식)에 대 한 EntrySelectedBy의 SelectionSetName 요소](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

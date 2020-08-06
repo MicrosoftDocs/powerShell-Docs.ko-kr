@@ -1,19 +1,12 @@
 ---
 title: 서식 지정 데이터 로드 및 내보내기 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2a48de31-7961-4b0e-b58b-93466e38370b
-caps.latest.revision: 6
-ms.openlocfilehash: 5c5168ffd74c15066b914ad1b39d9ead947c5e7f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b449b280ccee561679d58f2f2a8b467c83150766
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365122"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781123"
 ---
 # <a name="loading-and-exporting-formatting-data"></a>형식 지정 데이터 로드 및 내보내기
 
@@ -31,11 +24,11 @@ ms.locfileid: "72365122"
 
 - 명령을 프로그래밍 방식으로 호출 하는 경우 명령이 실행 되는 runspace의 초기 세션 상태에 서식 파일 항목을 추가할 수 있습니다. 형식 지정 파일을 추가 하는 데 사용 되는 .NET 형식에 대 한 자세한 내용은 Runspace를 참조 하세요. [ Displayproperty = Fullname](/dotnet/api/System.Management.Automation.Runspaces.SessionStateFormatEntry) 클래스입니다.
 
-서식 파일이 로드 되 면 Windows PowerShell에서 명령줄에 개체를 표시할 때 사용할 뷰를 결정 하는 데 사용 하는 내부 목록에 추가 됩니다. 서식 파일 앞에 서식 파일을 추가 하거나 목록의 끝에 추가할 수 있습니다. Windows PowerShell core cmdlet에서 반환 되는 개체를 변경 하려는 경우와 같이 기존 보기가 정의 된 개체에 대 한 뷰를 정의 하는 형식 지정 파일을 로드 하는 경우 서식 파일을이 목록에 추가 하는 것이 중요 합니다.  표시할지. 개체에 대 한 유일한 뷰를 정의 하는 서식 파일을 로드 하는 경우 앞에서 설명한 방법 중 하나를 사용할 수 있습니다.  개체에 대 한 다른 뷰를 정의 하는 서식 파일을 로드 하는 경우에는 [업데이트 FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) cmdlet을 사용 하 고 파일 앞에 파일을 추가 해야 합니다.
+서식 파일이 로드 되 면 Windows PowerShell에서 명령줄에 개체를 표시할 때 사용할 뷰를 결정 하는 데 사용 하는 내부 목록에 추가 됩니다. 서식 파일 앞에 서식 파일을 추가 하거나 목록의 끝에 추가할 수 있습니다. Windows PowerShell core cmdlet에 의해 반환 되는 개체가 표시 되는 방법을 변경 하려는 경우와 같이 기존 보기가 정의 된 개체에 대 한 뷰를 정의 하는 서식 파일을 로드 하는 경우 서식 파일을이 목록에 추가 하는 것이 중요 합니다. 개체에 대 한 유일한 뷰를 정의 하는 서식 파일을 로드 하는 경우 앞에서 설명한 방법 중 하나를 사용할 수 있습니다.  개체에 대 한 다른 뷰를 정의 하는 서식 파일을 로드 하는 경우에는 [업데이트 FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) cmdlet을 사용 하 고 파일 앞에 파일을 추가 해야 합니다.
 
 ## <a name="storing-your-formatting-file"></a>서식 파일 저장
 
-포맷 파일이 디스크에 저장 되는 위치에 대 한 요구 사항은 없습니다. 그러나 다음 폴더에 저장 하는 것이 좋습니다. `user\documents\windowspowershell\`
+포맷 파일이 디스크에 저장 되는 위치에 대 한 요구 사항은 없습니다. 그러나 다음 폴더에 저장 하는 것이 좋습니다.`user\documents\windowspowershell\`
 
 #### <a name="loading-a-format-file-using-import-formatdata"></a>Formatformatdata를 사용 하 여 서식 파일 로드
 
@@ -59,4 +52,4 @@ ms.locfileid: "72365122"
 
 ## <a name="exporting-format-data"></a>서식 데이터 내보내기
 
-여기에 섹션 본문을 삽입합니다.
+여기에 본문 섹션을 삽입합니다.

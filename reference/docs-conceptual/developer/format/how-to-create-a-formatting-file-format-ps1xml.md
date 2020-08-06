@@ -1,28 +1,21 @@
 ---
-title: 형식 지정 파일 (. types.ps1xml)을 만드는 방법 | Microsoft Docs
-ms.custom: ''
+title: 서식 파일을 만드는 방법 (.format.ps1xml) | Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: eb568878-f63e-4561-98e2-16ee2ac7559d
-caps.latest.revision: 8
-ms.openlocfilehash: 7a578dd63a53562f992b2970573258b8676e2a52
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: abdbd4e15b0c4cb1dafcde087d24ed5792c86c3d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692277"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781259"
 ---
 # <a name="how-to-create-a-formatting-file-formatps1xml"></a>형식 지정 파일(.format.ps1xml)을 만드는 방법
 
-이 항목에서는 형식 지정 파일 (. types.ps1xml)을 만드는 방법에 대해 설명 합니다.
+이 항목에서는 서식 파일 (.format.ps1xml)을 만드는 방법에 대해 설명 합니다.
 
 > [!NOTE]
 > Windows PowerShell에서 제공 하는 파일 중 하나를 복사 하 여 서식 파일을 만들 수도 있습니다. 기존 파일의 복사본을 만드는 경우 기존 디지털 서명을 삭제 하 고 새 파일에 고유한 서명을 추가 합니다.
 
-### <a name="to-create-a-formatps1xml-file"></a>. Types.ps1xml 파일을 만듭니다.
+### <a name="to-create-a-formatps1xml-file"></a>.format.ps1xml 파일을 만듭니다.
 
 1. 메모장과 같은 텍스트 편집기를 사용 하 여 텍스트 파일 (.txt)을 만듭니다.
 

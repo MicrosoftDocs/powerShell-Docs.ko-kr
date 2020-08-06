@@ -1,25 +1,18 @@
 ---
 title: 필수 개발 지침 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 41d2b308-a36a-496f-8542-666b6a21eedc
-caps.latest.revision: 19
-ms.openlocfilehash: e68e43a91f9139e8d3dc636b5740121515aab2e6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: ca0168050e3c1c2e7537036f96da62f52d50982e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369522"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781701"
 ---
 # <a name="required-development-guidelines"></a>필수 개발 지침
 
 Cmdlet을 작성할 때는 다음 지침을 따라야 합니다. Cmdlet을 디자인 하기 위한 지침과 cmdlet 코드를 작성 하기 위한 지침으로 구분 됩니다. 이러한 지침을 따르지 않으면 cmdlet이 실패 하 고 사용자가 cmdlet을 사용 하는 경우 사용자에 게 좋지 않은 경험이 있을 수 있습니다.
 
-## <a name="in-this-topic"></a>이 항목의 내용
+## <a name="in-this-topic"></a>항목 내용
 
 ### <a name="design-guidelines"></a>디자인 지침
 
@@ -75,13 +68,13 @@ Cmdlet 특성에 지정 된 동사는 Windows PowerShell에서 제공 하는 인
 
 승인 된 동사 이름에 대 한 자세한 내용은 [Cmdlet 동사](./approved-verbs-for-windows-powershell-commands.md)를 참조 하세요.
 
-사용자에 게는 검색 가능 하 고 필요한 cmdlet 이름 집합이 필요 합니다. 사용자가 cmdlet이 수행 하는 작업을 신속 하 게 평가 하 고 시스템의 기능을 쉽게 검색할 수 있도록 적절 한 동사를 사용 합니다. 예를 들어 다음 명령줄 명령은 이름이 "start"로 시작 하는 시스템의 모든 명령 목록을 가져옵니다: `get-command start-*`. Cmdlet에서 명사를 사용 하 여 cmdlet을 다른 cmdlet과 구분 합니다. 명사는 작업이 수행 되는 리소스를 나타냅니다. 작업 자체는 동사로 표시 됩니다.
+사용자에 게는 검색 가능 하 고 필요한 cmdlet 이름 집합이 필요 합니다. 사용자가 cmdlet이 수행 하는 작업을 신속 하 게 평가 하 고 시스템의 기능을 쉽게 검색할 수 있도록 적절 한 동사를 사용 합니다. 예를 들어 다음 명령줄 명령은 시스템에서 이름이 "start"로 시작 하는 모든 명령 목록을 `get-command start-*` 가져옵니다. Cmdlet에서 명사를 사용 하 여 cmdlet을 다른 cmdlet과 구분 합니다. 명사는 작업이 수행 되는 리소스를 나타냅니다. 작업 자체는 동사로 표시 됩니다.
 
 ### <a name="cmdlet-names-characters-that-cannot-be-used-rd02"></a>Cmdlet 이름: 사용할 수 없는 문자 (RD02)
 
 Cmdlet의 이름을 입력할 때 다음 특수 문자를 사용 하지 마십시오.
 
-|문자|Name|
+|문자|이름|
 |---------------|----------|
 |#|숫자 기호|
 |,|쉼표|
@@ -93,7 +86,7 @@ Cmdlet의 이름을 입력할 때 다음 특수 문자를 사용 하지 마십�
 |/|슬래시 표시|
 |\\| 백슬래시|
 |$|달러 기호|
-|^|caret|
+|^|캐럿|
 |;|세미콜론|
 |:|탑재|
 |"|큰따옴표|
@@ -117,12 +110,12 @@ Windows PowerShell은 모든 cmdlet에 매개 변수를 설정 하 고 특정 �
 
 시스템을 수정 하는 작업을 수행 하는 cmdlet의 경우에는 확인을 요청 하기 위해 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 를 호출 하 고 특수 한 경우에 [는 system.object를](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 호출 해야 합니다. System.object를 호출한 후에만 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 를 호출 해야 합니다 .이 메서드 [는 system.object를](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 호출한 후에만 호출 해야 합니다.
 
-이러한 호출을 수행 하려면 cmdlet에서 Cmdlet 특성의 `SupportsShouldProcess` 키워드를 설정 하 여 확인 요청을 지원 하도록 지정 해야 합니다. 이 특성을 설정 하는 방법에 대 한 자세한 내용은 [Cmdlet 특성 선언](./cmdlet-attribute-declaration.md)을 참조 하세요.
+이러한 호출을 수행 하려면 cmdlet에서 `SupportsShouldProcess` cmdlet 특성의 키워드를 설정 하 여 확인 요청을 지원 하도록 지정 해야 합니다. 이 특성을 설정 하는 방법에 대 한 자세한 내용은 [Cmdlet 특성 선언](./cmdlet-attribute-declaration.md)을 참조 하세요.
 
 > [!NOTE]
 > Cmdlet 클래스의 Cmdlet 특성에서 cmdlet이 해당 cmdlet에 대 한 호출을 지원 하 고 cmdlet [이 system.object를](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 호출 하는 데 실패 하는 경우에는 사용자 [가 시스템을](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 예기치 않게 수정할 수 있음을 나타냅니다.
 
-시스템 수정에는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 를 사용 하 여 시스템을 수정 합니다. 사용자 기본 설정 및 `WhatIf` 매개 변수는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 를 제어 합니다. 이와 대조적으로, 잠재적으로 위험할 [수 있는 수정](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 에 대 한 추가 검사를 수행 합니다. 이 메서드는 사용자 기본 설정 또는 `WhatIf` 매개 변수에 의해 제어 되지 않습니다. Cmdlet이 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 를 호출 하는 경우이 메서드는 이러한 두 메서드에 대 한 호출을 무시 하 고 작업을 진행 하는 `Force` 매개 변수를 사용 해야 합니다. 이는 cmdlet을 비 대화형 스크립트 및 호스트에서 사용할 수 있기 때문에 중요 합니다.
+시스템 수정에는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 를 사용 하 여 시스템을 수정 합니다. 사용자 기본 설정 및 `WhatIf` 매개 변수는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 를 제어 합니다. 이와 대조적으로, 잠재적으로 위험할 [수 있는 수정](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 에 대 한 추가 검사를 수행 합니다. 이 메서드는 사용자 기본 설정 또는 매개 변수를 통해 제어 되지 않습니다 `WhatIf` . Cmdlet이 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 를 호출 하는 경우이 메서드는 `Force` 이러한 두 메서드에 대 한 호출을 무시 하 고 작업을 진행 하는 매개 변수를 포함 해야 합니다. 이는 cmdlet을 비 대화형 스크립트 및 호스트에서 사용할 수 있기 때문에 중요 합니다.
 
 Cmdlet이 이러한 호출을 지 원하는 경우 사용자는 작업을 실제로 수행할지 여부를 결정할 수 있습니다. 예를 들어, [Stop Process](/powershell/module/microsoft.powershell.management/stop-process) cmdlet은 시스템, Winlogon 및 spoolsv.exe 프로세스를 포함 하 여 중요 한 프로세스 집합을 중지 하기 전에 [System.Management.Automation.Cmdlet.ShouldContinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 를 호출 합니다.
 
@@ -200,7 +193,7 @@ Cmdlet은 [WriteObject *](/dotnet/api/System.Management.Automation.Cmdlet.WriteO
 
 - [System.Management.Automation.Cmdlet.ThrowTerminatingError*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 및 [System.Management.Automation.Cmdlet.WriteError*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 메서드에서 참조하는 [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) 개체에는 다음이 필요합니다 핵심에 예외가 있습니다. 사용할 예외를 결정할 때 .NET Framework 디자인 지침을 따릅니다. 오류가 기존 예외와 의미상 동일한 경우 해당 예외를 사용 하거나 해당 예외에서 파생 합니다. 그렇지 않으면 [system.object](/dotnet/api/System.Exception) 형식에서 직접 새 예외 또는 예외 계층을 파생 시킵니다.
 
-[ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) 개체에는 사용자에 대 한 오류를 그룹화 하는 오류 범주도 필요 합니다. 사용자는 `$ErrorView` shell 변수 값을 CategoryView로 설정 하 여 범주를 기반으로 오류를 볼 수 있습니다. 가능한 범주는 [ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) 열거형에 의해 정의 됩니다.
+[ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) 개체에는 사용자에 대 한 오류를 그룹화 하는 오류 범주도 필요 합니다. 사용자는 shell 변수 값을 CategoryView로 설정 하 여 범주를 기반으로 오류를 볼 수 있습니다 `$ErrorView` . 가능한 범주는 [ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) 열거형에 의해 정의 됩니다.
 
 - Cmdlet이 새 스레드를 만드는 경우 해당 스레드에서 실행 중인 코드가 처리 되지 않은 예외를 throw 하는 경우 Windows PowerShell에서 오류를 catch 하지 않고 프로세스를 종료 합니다.
 
@@ -212,8 +205,8 @@ Cmdlet을 패키지 하 고 배포 하는 Windows PowerShell 모듈을 만듭니
 
 ## <a name="see-also"></a>참고 항목
 
-[권장 되는 개발 지침](./strongly-encouraged-development-guidelines.md)
+[적극 권장되는 개발 지침](./strongly-encouraged-development-guidelines.md)
 
-[자문 개발 지침](./advisory-development-guidelines.md)
+[권장되는 개발 지침](./advisory-development-guidelines.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

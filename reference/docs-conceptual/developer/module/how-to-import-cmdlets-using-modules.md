@@ -1,19 +1,12 @@
 ---
 title: 모듈을 사용 하 여 Cmdlet을 가져오는 방법 | Microsoft Docs
-ms.custom: ''
 ms.date: 08/28/2019
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a41d9e5f-de6f-47b7-9601-c108609320d0
-caps.latest.revision: 8
-ms.openlocfilehash: 840c5bc92d718ec4e54d864dc5e012cd33f83905
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: fa8d629c14b06e3f9e9d6151cf09aa6b4acce358
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811322"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779372"
 ---
 # <a name="how-to-import-cmdlets-using-modules"></a>모듈을 사용하여 Cmdlet을 가져오는 방법
 
@@ -40,13 +33,13 @@ ms.locfileid: "83811322"
 
    이 절차를 사용 하 여 cmdlet을 테스트할 수 있습니다. 어셈블리의 모든 cmdlet을 세션에 추가 합니다. 모듈에 대 한 자세한 내용은 [Windows PowerShell 모듈 작성](../module/writing-a-windows-powershell-module.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [PowerShell 모듈 매니페스트를 작성하는 방법](../module/how-to-write-a-powershell-module-manifest.md)
 
 [PowerShell 모듈 가져오기](../module/importing-a-powershell-module.md)
 
-[Import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)
+[모듈 가져오기](/powershell/module/Microsoft.PowerShell.Core/Import-Module)
 
 [모듈 설치](../module/installing-a-powershell-module.md)
 

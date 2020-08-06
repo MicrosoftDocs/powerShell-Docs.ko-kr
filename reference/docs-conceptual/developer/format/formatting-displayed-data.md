@@ -1,19 +1,12 @@
 ---
 title: 표시 된 데이터 서식 지정 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 38971643-2a3d-4f5b-a1fa-6334c162b8ed
-caps.latest.revision: 4
-ms.openlocfilehash: 9f3a3176ae16ac7c014cadce6b4e856f9bd3b5da
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 97d23b3079b2779e518b6b6d2f2ac0c5e9d1f3a3
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560392"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781514"
 ---
 # <a name="formatting-displayed-data"></a>표시되는 데이터 형식 지정
 

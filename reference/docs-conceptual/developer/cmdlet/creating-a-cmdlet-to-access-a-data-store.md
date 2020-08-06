@@ -1,23 +1,18 @@
 ---
 title: 데이터 저장소에 액세스하는 Cmdlet 만들기
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.openlocfilehash: 3096965ba9f99f70994f2fb5b180cc58691b04f8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a595805a820c355937e581f0e00fa2a9a9fc3df0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74415704"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782143"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>데이터 저장소에 액세스하는 Cmdlet 만들기
 
 이 섹션에서는 Windows PowerShell 공급자를 통해 저장 된 데이터에 액세스 하는 cmdlet을 만드는 방법에 대해 설명 합니다. 이 유형의 cmdlet은 windows PowerShell 런타임의 Windows PowerShell 공급자 인프라를 사용 하므로 cmdlet 클래스가 [PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 기본 클래스에서 파생 되어야 합니다.
 
-여기에 설명 된 Select Str cmdlet은 파일 또는 개체에서 문자열을 찾아 선택할 수 있습니다. 문자열을 식별 하는 데 사용 되는 패턴은 cmdlet의 `Path` 매개 변수를 통해 명시적으로 지정 하거나 `Script` 매개 변수를 통해 암시적으로 지정할 수 있습니다.
+여기에 설명 된 Select Str cmdlet은 파일 또는 개체에서 문자열을 찾아 선택할 수 있습니다. 문자열을 식별 하는 데 사용 되는 패턴은 cmdlet의 매개 변수를 통해 명시적으로 지정 `Path` 하거나 매개 변수를 통해 암시적으로 지정할 수 있습니다 `Script` .
 
 Cmdlet은 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider)에서 파생 되는 모든 Windows PowerShell 공급자를 사용 하도록 설계 되었습니다. 예를 들어 cmdlet은 Windows PowerShell에서 제공 하는 파일 시스템 공급자 또는 변수 공급자를 지정할 수 있습니다. PowerShell 공급자 aboutWindows 자세한 내용은 [Windows powershell 공급자 디자인](../prog-guide/designing-your-windows-powershell-provider.md)을 참조 하세요.
 
@@ -34,18 +29,18 @@ Cmdlet을 만드는 첫 번째 단계는 항상 cmdlet의 이름을 지정 하 �
 public class SelectStringCommand : PSCmdlet
 ```
 
-이 cmdlet은 `DefaultParameterSetName` attribute 키워드를 클래스 선언에 추가 하 여 기본 매개 변수 집합을 정의 합니다. `Script` 매개 변수를 지정 하지 않으면 기본 매개 변수 집합 `PatternParameterSet` 사용 됩니다. 이 매개 변수 집합에 대 한 자세한 내용은 다음 섹션의 `Pattern` 및 `Script` 매개 변수 설명을 참조 하십시오.
+이 cmdlet은 attribute 키워드를 클래스 선언에 추가 하 여 기본 매개 변수 집합을 정의 `DefaultParameterSetName` 합니다. 기본 매개 변수 집합은 `PatternParameterSet` `Script` 매개 변수가 지정 되지 않은 경우에 사용 됩니다. 이 매개 변수 집합에 대 한 자세한 내용은 `Pattern` `Script` 다음 섹션에서 및 매개 변수 설명을 참조 하십시오.
 
 ## <a name="defining-parameters-for-data-access"></a>데이터 액세스를 위한 매개 변수 정의
 
-이 cmdlet은 사용자가 저장 된 데이터에 액세스 하 고 검사할 수 있도록 하는 몇 가지 매개 변수를 정의 합니다. 이러한 매개 변수에는 데이터 저장소의 위치를 나타내는 `Path` 매개 변수, 검색에 사용할 패턴을 지정 하는 `Pattern` 매개 변수 및 검색 수행 방법을 지 원하는 몇 가지 다른 매개 변수가 포함 됩니다.
+이 cmdlet은 사용자가 저장 된 데이터에 액세스 하 고 검사할 수 있도록 하는 몇 가지 매개 변수를 정의 합니다. 이러한 매개 변수에는 `Path` 데이터 저장소의 위치를 나타내는 매개 변수, `Pattern` 검색에 사용할 패턴을 지정 하는 매개 변수 및 검색 수행 방법을 지 원하는 몇 가지 다른 매개 변수가 포함 됩니다.
 
 > [!NOTE]
 > 매개 변수 정의에 대 한 자세한 내용은 [명령줄 입력을 처리 하는 매개 변수 추가](./adding-parameters-that-process-command-line-input.md)를 참조 하세요.
 
 ### <a name="declaring-the-path-parameter"></a>Path 매개 변수 선언
 
-이 cmdlet은 데이터 저장소를 찾기 위해 Windows PowerShell 경로를 사용 하 여 데이터 저장소에 액세스 하도록 디자인 된 Windows PowerShell 공급자를 확인 해야 합니다. 따라서 공급자의 위치를 나타내는 string 배열 형식의 `Path` 매개 변수를 정의 합니다.
+이 cmdlet은 데이터 저장소를 찾기 위해 Windows PowerShell 경로를 사용 하 여 데이터 저장소에 액세스 하도록 디자인 된 Windows PowerShell 공급자를 확인 해야 합니다. 따라서 `Path` 공급자의 위치를 나타내는 문자열 배열 형식의 매개 변수를 정의 합니다.
 
 ```csharp
 [Parameter(
@@ -68,13 +63,13 @@ private string[] paths;
 
 이 매개 변수는 두 개의 서로 다른 매개 변수 집합에 속하고 별칭이 있음을 확인 합니다.
 
-두 개의 [system.object](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성 특성은 `Path` 매개 변수가 `ScriptParameterSet` 및 `PatternParameterSet`에 속하도록 선언 합니다. 매개 변수 집합에 대 한 자세한 내용은 [Cmdlet에 매개 변수 집합 추가](./adding-parameter-sets-to-a-cmdlet.md)를 참조 하세요.
+두 개의 [system.object](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성 특성은 `Path` 매개 변수가 및에 속하도록 선언 `ScriptParameterSet` `PatternParameterSet` 합니다. 매개 변수 집합에 대 한 자세한 내용은 [Cmdlet에 매개 변수 집합 추가](./adding-parameter-sets-to-a-cmdlet.md)를 참조 하세요.
 
-[Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) 특성은 `Path` 매개 변수에 대 한 `PSPath` 별칭을 선언 합니다. Windows PowerShell 공급자에 액세스 하는 다른 cmdlet과의 일관성을 위해이 별칭을 선언 하는 것이 좋습니다. PowerShell 경로에 대 한 자세한 내용은 [Windows powershell의 작동 방식](/previous-versions//ms714658(v=vs.85))에서 "Powershell 경로 개념"을 참조 하세요.
+[Aliasattribute](/dotnet/api/System.Management.Automation.AliasAttribute) 특성은 `PSPath` 매개 변수에 대 한 별칭을 선언 합니다. `Path` Windows PowerShell 공급자에 액세스 하는 다른 cmdlet과의 일관성을 위해이 별칭을 선언 하는 것이 좋습니다. PowerShell 경로에 대 한 자세한 내용은 [Windows powershell의 작동 방식](/previous-versions//ms714658(v=vs.85))에서 "Powershell 경로 개념"을 참조 하세요.
 
 ### <a name="declaring-the-pattern-parameter"></a>패턴 매개 변수 선언
 
-검색할 패턴을 지정 하기 위해이 cmdlet은 문자열 배열인 `Pattern` 매개 변수를 선언 합니다. 데이터 저장소에서 패턴을 찾을 때 긍정 결과가 반환 됩니다. 이러한 패턴은 컴파일된 정규식의 배열 또는 리터럴 검색에 사용 되는 와일드 카드 패턴의 배열로 컴파일될 수 있습니다.
+검색할 패턴을 지정 하기 위해이 cmdlet `Pattern` 은 문자열 배열인 매개 변수를 선언 합니다. 데이터 저장소에서 패턴을 찾을 때 긍정 결과가 반환 됩니다. 이러한 패턴은 컴파일된 정규식의 배열 또는 리터럴 검색에 사용 되는 와일드 카드 패턴의 배열로 컴파일될 수 있습니다.
 
 ```csharp
 [Parameter(
@@ -91,13 +86,13 @@ private Regex[] regexPattern;
 private WildcardPattern[] wildcardPattern;
 ```
 
-이 매개 변수를 지정 하면 cmdlet은 `PatternParameterSet`기본 매개 변수 집합을 사용 합니다. 이 경우 cmdlet은 여기에 지정 된 패턴을 사용 하 여 문자열을 선택 합니다. 반대로 `Script` 매개 변수를 사용 하 여 패턴을 포함 하는 스크립트를 제공할 수도 있습니다. `Script` 및 `Pattern` 매개 변수는 두 개의 개별 매개 변수 집합을 정의 하므로 함께 사용할 수 없습니다.
+이 매개 변수를 지정 하면 cmdlet은 기본 매개 변수 집합을 사용 합니다 `PatternParameterSet` . 이 경우 cmdlet은 여기에 지정 된 패턴을 사용 하 여 문자열을 선택 합니다. 반면 `Script` 매개 변수는 패턴을 포함 하는 스크립트를 제공 하는 데에도 사용할 수 있습니다. `Script`및 `Pattern` 매개 변수는 두 개의 개별 매개 변수 집합을 정의 하므로 함께 사용할 수 없습니다.
 
 ### <a name="declaring-search-support-parameters"></a>검색 지원 매개 변수 선언
 
 이 cmdlet은 cmdlet의 검색 기능을 수정 하는 데 사용할 수 있는 다음 지원 매개 변수를 정의 합니다.
 
-`Script` 매개 변수는 cmdlet에 대 한 대체 검색 메커니즘을 제공 하는 데 사용할 수 있는 스크립트 블록을 지정 합니다. 스크립트에는 [system.object](/dotnet/api/System.Management.Automation.PSObject) 를 일치 하 고 반환 하는 데 사용 되는 패턴이 포함 되어야 합니다. 이 매개 변수는 `ScriptParameterSet` 매개 변수 집합을 식별 하는 고유한 매개 변수 이기도 합니다. 이 매개 변수는 Windows PowerShell 런타임에서 볼 때 `ScriptParameterSet` 매개 변수 집합에 속하는 매개 변수만 사용 합니다.
+`Script`매개 변수는 cmdlet에 대 한 대체 검색 메커니즘을 제공 하는 데 사용할 수 있는 스크립트 블록을 지정 합니다. 스크립트에는 [system.object](/dotnet/api/System.Management.Automation.PSObject) 를 일치 하 고 반환 하는 데 사용 되는 패턴이 포함 되어야 합니다. 이 매개 변수는 매개 변수 집합을 식별 하는 고유한 매개 변수 이기도 합니다 `ScriptParameterSet` . 이 매개 변수는 Windows PowerShell 런타임에서 볼 때 매개 변수 집합에 속하는 매개 변수만 사용 `ScriptParameterSet` 합니다.
 
 ```csharp
 [Parameter(
@@ -112,7 +107,7 @@ public ScriptBlock Script
 ScriptBlock script;
 ```
 
-`SimpleMatch` 매개 변수는 제공 된 패턴과 명시적으로 일치 하는지 여부를 나타내는 스위치 매개 변수입니다. 사용자가 명령줄에서 매개 변수를 지정 하는 경우 (`true`) cmdlet은 제공 된 대로 패턴을 사용 합니다. 매개 변수가 지정 되지 않은 경우 (`false`) cmdlet은 정규식을 사용 합니다. 이 매개 변수에 대 한 기본값은 `false`입니다.
+`SimpleMatch`매개 변수는 제공 된 패턴과 일치 하는지 여부를 지정 하는 스위치 매개 변수입니다. 사용자가 명령줄 ()에서 매개 변수를 지정 하면 `true` cmdlet은 제공 된 패턴을 사용 합니다. 매개 변수가 지정 되지 않은 경우 ( `false` ) cmdlet은 정규식을 사용 합니다. 이 매개 변수에 대 한 기본값은 `false` 입니다.
 
 ```csharp
 [Parameter]
@@ -124,7 +119,7 @@ public SwitchParameter SimpleMatch
 private bool simpleMatch;
 ```
 
-`CaseSensitive` 매개 변수는 대/소문자를 구분 하는 검색을 수행할지 여부를 지정 하는 스위치 매개 변수입니다. 사용자가 명령줄에서 매개 변수를 지정 하는 경우 (`true`) cmdlet은 패턴을 비교할 때 문자의 대문자 및 소문자를 확인 합니다. 매개 변수가 지정 되지 않은 경우 (`false`) cmdlet은 대/소문자를 구분 하지 않습니다. 예를 들어 "MyFile" 및 "myfile"은 모두 긍정 적중 횟수로 반환 됩니다. 이 매개 변수에 대 한 기본값은 `false`입니다.
+`CaseSensitive`매개 변수는 대/소문자를 구분 하는 검색을 수행할지 여부를 지정 하는 스위치 매개 변수입니다. 사용자가 명령줄 ()에서 매개 변수를 지정 하면 `true` cmdlet은 패턴을 비교할 때 문자의 대문자 및 소문자를 확인 합니다. 매개 변수가 지정 되지 않은 경우 ( `false` ) cmdlet은 대/소문자를 구분 하지 않습니다. 예를 들어 "MyFile" 및 "myfile"은 모두 긍정 적중 횟수로 반환 됩니다. 이 매개 변수에 대 한 기본값은 `false` 입니다.
 
 ```csharp
 [Parameter]
@@ -136,7 +131,7 @@ public SwitchParameter CaseSensitive
 private bool caseSensitive;
 ```
 
-`Exclude` 및 `Include` 매개 변수는 검색에서 명시적으로 제외 되거나 검색에 포함 되는 항목을 식별 합니다. 기본적으로 cmdlet은 데이터 저장소에 있는 모든 항목을 검색 합니다. 그러나 cmdlet에서 수행 하는 검색을 제한 하기 위해 이러한 매개 변수를 사용 하 여 검색에 포함 되거나 생략 된 항목을 명시적으로 지정할 수 있습니다.
+`Exclude`및 `Include` 매개 변수는 검색에서 명시적으로 제외 되거나 검색에 포함 되는 항목을 식별 합니다. 기본적으로 cmdlet은 데이터 저장소에 있는 모든 항목을 검색 합니다. 그러나 cmdlet에서 수행 하는 검색을 제한 하기 위해 이러한 매개 변수를 사용 하 여 검색에 포함 되거나 생략 된 항목을 명시적으로 지정할 수 있습니다.
 
 ```csharp
 [Parameter]
@@ -175,7 +170,7 @@ internal WildcardPattern[] include = null;
 
 ### <a name="declaring-parameter-sets"></a>매개 변수 집합 선언
 
-이 cmdlet은 데이터 액세스에 사용 되는 두 매개 변수 집합의 이름으로 두 개의 매개 변수 집합 (기본값은`ScriptParameterSet` 및 `PatternParameterSet`)을 사용 합니다. `PatternParameterSet` 기본 매개 변수 집합이 며 `Pattern` 매개 변수를 지정할 때 사용 됩니다. 사용자가 `Script` 매개 변수를 통해 대체 검색 메커니즘을 지정 하는 경우 `ScriptParameterSet` 사용 됩니다. 매개 변수 집합에 대 한 자세한 내용은 [Cmdlet에 매개 변수 집합 추가](./adding-parameter-sets-to-a-cmdlet.md)를 참조 하세요.
+이 cmdlet은 `ScriptParameterSet` `PatternParameterSet` 데이터 액세스에 사용 되는 두 매개 변수 집합의 이름으로 두 개의 매개 변수 집합 (기본값은)을 사용 합니다. `PatternParameterSet`는 기본 매개 변수 집합이 며 매개 변수를 지정할 때 사용 됩니다 `Pattern` . `ScriptParameterSet`사용자가 매개 변수를 통해 대체 검색 메커니즘을 지정할 때 사용 됩니다 `Script` . 매개 변수 집합에 대 한 자세한 내용은 [Cmdlet에 매개 변수 집합 추가](./adding-parameter-sets-to-a-cmdlet.md)를 참조 하세요.
 
 ## <a name="overriding-input-processing-methods"></a>입력 처리 메서드 재정의
 
@@ -1115,7 +1110,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
     Pattern      : .NET
     ```
 
-2. "Over" 단어와 기타 텍스트가 있는 줄의 발생에 대 한 노트 파일을 검색 합니다. `SimpleMatch` 매개 변수는 `false`기본값을 사용 합니다. `CaseSensitive` 매개 변수가 `false`로 설정 되어 있으므로 검색은 대/소문자를 구분 하지 않습니다.
+2. "Over" 단어와 기타 텍스트가 있는 줄의 발생에 대 한 노트 파일을 검색 합니다. `SimpleMatch`매개 변수는의 기본값을 사용 합니다 `false` . 매개 변수가로 설정 되어 있으므로 검색은 대/소문자를 구분 `CaseSensitive` 하지 않습니다 `false` .
 
     ```powershell
     select-str -Path notes -Pattern "over*" -SimpleMatch -CaseSensitive:$false
@@ -1216,7 +1211,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
 
 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)
 
-[시스템을 수정 하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)
+[시스템을 수정하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)
 
 [Windows PowerShell 공급자 디자인](../prog-guide/designing-your-windows-powershell-provider.md)
 

@@ -1,23 +1,16 @@
 ---
 title: 매개 변수 별칭 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7c9096a1-46fa-48ea-9b8a-a583484b9d68
-caps.latest.revision: 13
-ms.openlocfilehash: 6545e71ea18d10621ee9c203e70f64dece460ef5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e320eeb4d2ab91acf2116fdc817a50e93c82aead
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369592"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781990"
 ---
 # <a name="parameter-aliases"></a>매개 변수 별칭
 
-cmdlet 매개 변수에는 별칭을 사용할 수도 있습니다. 명령에서 매개 변수를 입력 하거나 지정 하는 경우 매개 변수 이름 대신 별칭을 사용할 수 있습니다.
+Cmdlet 매개 변수에는 별칭을 사용할 수도 있습니다. 명령에서 매개 변수를 입력 하거나 지정 하는 경우 매개 변수 이름 대신 별칭을 사용할 수 있습니다.
 
 ## <a name="benefits-of-using-aliases"></a>별칭 사용의 이점
 
@@ -52,6 +45,6 @@ private string userName;
 
 [일반 매개 변수 이름](./common-parameter-names.md)
 
-[Cmdlet 매개 변수를 선언 하는 방법](./how-to-declare-cmdlet-parameters.md)
+[Cmdlet 매개 변수를 선언하는 방법](./how-to-declare-cmdlet-parameters.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

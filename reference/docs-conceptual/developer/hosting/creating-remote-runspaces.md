@@ -1,19 +1,12 @@
 ---
 title: 원격 runspace 만들기 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 057a666f-731b-423d-9d80-7be6b1836244
-caps.latest.revision: 5
-ms.openlocfilehash: 964320108d7aff24d59905028fb976e0f75642e7
-ms.sourcegitcommit: 08e9ed4bc9bffc7af82b3130e74ec7763db74e4f
+ms.openlocfilehash: 2b3c76eeae70de9ef116851313953bba1a1d890f
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83382629"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779593"
 ---
 # <a name="creating-remote-runspaces"></a>원격 runspace 만들기
 

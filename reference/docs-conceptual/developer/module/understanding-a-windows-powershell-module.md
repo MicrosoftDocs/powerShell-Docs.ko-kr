@@ -1,19 +1,12 @@
 ---
 title: Windows PowerShell 모듈 이해 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d4e38235-9987-4347-afd2-0f7d1dc8f64a
-caps.latest.revision: 19
-ms.openlocfilehash: b42ba6b2bf42a74213eb78f2db22e16de7e90583
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 9308ad0fd41aa67ffa8510ae7a3c9cd6a13f4220
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79407156"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779236"
 ---
 # <a name="understanding-a-windows-powershell-module"></a>Windows PowerShell 모듈 이해
 
@@ -45,17 +38,17 @@ ms.locfileid: "79407156"
 
 ### <a name="binary-modules"></a>이진 모듈
 
-*이진 모듈* 은와 C#같은 컴파일된 코드를 포함 하는 .NET Framework 어셈블리 (.dll)입니다. Cmdlet 개발자는이 유형의 모듈을 사용 하 여 cmdlet, 공급자 등을 공유할 수 있습니다. (기존 스냅인을 이진 모듈로 사용할 수도 있습니다.) 스크립트 모듈과 비교할 때 이진 모듈을 사용 하면 Windows PowerShell 스크립트에서 코드를 사용 하는 것이 쉽지 않은 더 빠른 cmdlet (예: 다중 스레딩)을 만들 수 있습니다.
+*이진 모듈* 은 c #과 같은 컴파일된 코드를 포함 하는 .NET Framework 어셈블리 (.dll)입니다. Cmdlet 개발자는이 유형의 모듈을 사용 하 여 cmdlet, 공급자 등을 공유할 수 있습니다. (기존 스냅인을 이진 모듈로 사용할 수도 있습니다.) 스크립트 모듈과 비교할 때 이진 모듈을 사용 하면 Windows PowerShell 스크립트에서 코드를 사용 하는 것이 쉽지 않은 더 빠른 cmdlet (예: 다중 스레딩)을 만들 수 있습니다.
 
 스크립트 모듈과 마찬가지로 매니페스트 파일을 포함 하 여 모듈에서 사용 하는 추가 리소스를 설명 하 고 모듈에 대 한 메타 데이터를 추적할 수 있습니다. 마찬가지로, PowerShell 모듈 경로를 따라 어딘가에 있는 폴더에 이진 모듈을 설치 해야 할 수도 있습니다. 자세한 내용은 [PowerShell 이진 모듈을 작성](./how-to-write-a-powershell-binary-module.md)하는 방법을 참조 하세요.
 
 ### <a name="manifest-modules"></a>매니페스트 모듈
 
-*매니페스트 모듈* 은 매니페스트 파일을 사용 하 여 모든 구성 요소를 설명 하지만 어떠한 종류의 핵심 어셈블리나 스크립트도 포함 하지 않는 모듈입니다. (공식적으로 매니페스트 모듈은 매니페스트의 `ModuleToProcess` 또는 `RootModule` 요소를 비워 둡니다.) 그러나 종속 어셈블리를 로드 하거나 특정 전처리 스크립트를 자동으로 실행 하는 기능과 같은 모듈의 다른 기능을 계속 사용할 수 있습니다. 매니페스트 모듈을 사용 하 여 다른 모듈에서 사용할 리소스 (예: 중첩 모듈, 어셈블리, 형식 또는 형식)를 패키지할 수도 있습니다. 자세한 내용은 [PowerShell 모듈 매니페스트를 작성 하는 방법](./how-to-write-a-powershell-module-manifest.md)을 참조 하세요.
+*매니페스트 모듈* 은 매니페스트 파일을 사용 하 여 모든 구성 요소를 설명 하지만 어떠한 종류의 핵심 어셈블리나 스크립트도 포함 하지 않는 모듈입니다. (공식적으로 매니페스트 모듈은 `ModuleToProcess` `RootModule` 매니페스트의 또는 요소를 비워 둡니다.) 그러나 종속 어셈블리를 로드 하거나 특정 전처리 스크립트를 자동으로 실행 하는 기능과 같은 모듈의 다른 기능을 계속 사용할 수 있습니다. 매니페스트 모듈을 사용 하 여 다른 모듈에서 사용할 리소스 (예: 중첩 모듈, 어셈블리, 형식 또는 형식)를 패키지할 수도 있습니다. 자세한 내용은 [PowerShell 모듈 매니페스트를 작성 하는 방법](./how-to-write-a-powershell-module-manifest.md)을 참조 하세요.
 
 ### <a name="dynamic-modules"></a>동적 모듈
 
-*동적 모듈* 은 파일에서 로드 되거나 파일에 저장 되지 않은 모듈입니다. 대신, [새 모듈](/powershell/module/Microsoft.PowerShell.Core/New-Module) cmdlet을 사용 하 여 스크립트에 의해 동적으로 만들어집니다. 이 유형의 모듈을 사용 하면 스크립트를 사용 하 여 영구 저장소에 로드 하거나 저장할 필요가 없는 모듈을 주문형으로 만들 수 있습니다. 이러한 특성을 사용 하는 경우 동적 모듈은 수명이 짧아야 하므로 `Get-Module` cmdlet으로 액세스할 수 없습니다. 마찬가지로 일반적으로 모듈 매니페스트가 필요 하지 않으며 관련 어셈블리를 저장 하는 데 영구적인 폴더가 필요할 수 있습니다.
+*동적 모듈* 은 파일에서 로드 되거나 파일에 저장 되지 않은 모듈입니다. 대신, [새 모듈](/powershell/module/Microsoft.PowerShell.Core/New-Module) cmdlet을 사용 하 여 스크립트에 의해 동적으로 만들어집니다. 이 유형의 모듈을 사용 하면 스크립트를 사용 하 여 영구 저장소에 로드 하거나 저장할 필요가 없는 모듈을 주문형으로 만들 수 있습니다. 이러한 특성을 사용 하는 경우 동적 모듈은 수명이 짧아야 하므로 cmdlet에서 액세스할 수 없습니다 `Get-Module` . 마찬가지로 일반적으로 모듈 매니페스트가 필요 하지 않으며 관련 어셈블리를 저장 하는 데 영구적인 폴더가 필요할 수 있습니다.
 
 ## <a name="module-manifests"></a>모듈 매니페스트
 
@@ -67,7 +60,7 @@ ms.locfileid: "79407156"
 
 - 구성 요소를 처리 하는 방법을 결정 합니다.
 
-  매니페스트는 모듈에 필요하지 않습니다. 모듈은 스크립트 파일 (ps1), 스크립트 모듈 파일 (. .psm1), 매니페스트 파일 (. psd1), 형식 지정 및 형식 파일 (. types.ps1xml), cmdlet 및 공급자 어셈블리 (.dll), 리소스 파일, 도움말 파일, 지역화 파일 또는 기타 형식의 파일 또는 리소스를 참조할 수 있습니다. 는 모듈의 일부로 번들로 제공 됩니다. 국제화 된 스크립트의 경우 module 폴더에도 메시지 카탈로그 파일 집합이 포함 되어 있습니다. 모듈 폴더에 매니페스트 파일을 추가 하는 경우 매니페스트를 참조 하 여 여러 파일을 단일 단위로 참조할 수 있습니다.
+  매니페스트는 모듈에 필요하지 않습니다. 모듈은 스크립트 파일 (ps1), 스크립트 모듈 파일 (.psm1), 매니페스트 파일 (. psd1), 형식 지정 및 형식 파일 (. types.ps1xml), cmdlet 및 공급자 어셈블리 (.dll), 리소스 파일, 도움말 파일, 지역화 파일 또는 모듈의 일부로 번들로 제공 되는 다른 형식의 파일 또는 리소스를 참조할 수 있습니다. 국제화 된 스크립트의 경우 module 폴더에도 메시지 카탈로그 파일 집합이 포함 되어 있습니다. 모듈 폴더에 매니페스트 파일을 추가 하는 경우 매니페스트를 참조 하 여 여러 파일을 단일 단위로 참조할 수 있습니다.
 
   매니페스트 자체는 다음과 같은 범주의 정보를 설명 합니다.
 
@@ -85,13 +78,13 @@ ms.locfileid: "79407156"
 
 스크립트, 이진 또는 매니페스트 모듈을 만든 후에는 다른 사용자가 액세스할 수 있는 위치에 작업을 저장할 수 있습니다. 예를 들어 Windows PowerShell이 설치 된 시스템 폴더에 모듈을 저장 하거나 사용자 폴더에 저장할 수 있습니다.
 
-일반적으로 `$ENV:PSModulePath` 변수에 저장 된 경로 중 하나를 사용 하 여 모듈을 설치 해야 하는 위치를 결정할 수 있습니다. 이러한 경로 중 하나를 사용 하면 사용자가 코드에서 모듈을 호출할 때 PowerShell에서 자동으로 모듈을 찾아 로드할 수 있습니다. 다른 위치에 모듈을 저장 하는 경우 `Install-Module`를 호출할 때 모듈의 위치를 매개 변수로 전달 하 여 PowerShell이 명시적으로 표시 되도록 할 수 있습니다.
+일반적으로 변수에 저장 된 경로 중 하나를 사용 하 여 모듈을 설치 해야 하는 위치를 결정할 수 있습니다 `$ENV:PSModulePath` . 이러한 경로 중 하나를 사용 하면 사용자가 코드에서 모듈을 호출할 때 PowerShell에서 자동으로 모듈을 찾아 로드할 수 있습니다. 다른 위치에 모듈을 저장 하는 경우를 호출할 때 모듈의 위치를 매개 변수로 전달 하 여 PowerShell에서 명시적으로 알 수 있습니다 `Install-Module` .
 
 폴더 경로는 모듈 (ModuleBase)의 *기반* 으로 참조 되며 스크립트, 이진 또는 매니페스트 모듈 파일의 이름은 모듈 폴더 이름과 동일 해야 합니다. 단, 다음과 같은 경우는 예외입니다.
 
-- Cmdlet의 `Name` 매개 변수를 사용 하 여 `New-Module` cmdlet에서 만든 동적 모듈의 이름을 지정할 수 있습니다.
+- Cmdlet에서 생성 된 동적 모듈은 `New-Module` cmdlet의 매개 변수를 사용 하 여 이름을 지정할 수 있습니다 `Name` .
 
-- 어셈블리 개체에서 가져온 모듈은 다음 구문에 따라 이름이 지정 됩니다. `"dynamic_code_module_" + assembly.GetName()` **`Import-Module`** .
+- 어셈블리 개체에서 가져온 ** `Import-Module` 모듈은 다음** 구문에 따라 이름이 지정 `"dynamic_code_module_" + assembly.GetName()` 됩니다.
 
   자세한 내용은 [PowerShell 모듈 설치](./installing-a-powershell-module.md) 및 [PSModulePath 설치 경로 수정](./modifying-the-psmodulepath-installation-path.md)을 참조 하세요.
 
@@ -107,7 +100,7 @@ ms.locfileid: "79407156"
 
 [Import-module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet이 cmdlet은 현재 세션으로 가져올 수 있거나 현재 세션으로 가져올 수 있는 모듈에 대 한 정보를 검색 합니다.
 
-[Export-modulemember](/powershell/module/Microsoft.PowerShell.Core/Export-ModuleMember) cmdlet이 cmdlet은 스크립트 모듈 (.psm1) 파일 또는 `New-Module` cmdlet을 사용 하 여 만든 동적 모듈에서 내보낸 모듈 멤버 (예: cmdlet, 함수, 변수 및 별칭)를 지정 합니다.
+[Export-modulemember](/powershell/module/Microsoft.PowerShell.Core/Export-ModuleMember) cmdlet이 cmdlet은 스크립트 모듈 (.psm1) 파일이 나 cmdlet을 사용 하 여 만든 동적 모듈에서 내보낸 모듈 멤버 (예: cmdlet, 함수, 변수 및 별칭)를 지정 합니다 `New-Module` .
 
 이 cmdlet은 [모듈을 제거](/powershell/module/Microsoft.PowerShell.Core/Remove-Module) 합니다 .이 cmdlet은 현재 세션에서 모듈을 제거 합니다.
 
