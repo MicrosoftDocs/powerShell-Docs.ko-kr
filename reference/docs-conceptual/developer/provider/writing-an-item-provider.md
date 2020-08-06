@@ -1,19 +1,12 @@
 ---
 title: 항목 공급자 작성 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 606c880c-6cf1-4ea6-8730-dbf137bfabff
-caps.latest.revision: 5
-ms.openlocfilehash: 12d2cb8c40c9fd6278bb964a6259d03167536195
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1df30e7af1b534756f797b9b5d4e29b689cbc782
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359882"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786767"
 ---
 # <a name="writing-an-item-provider"></a>항목 공급자 작성
 
@@ -28,7 +21,7 @@ Windows PowerShell 공급자에 대 한 자세한 내용은 [Windows Powershell 
 [System.object](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 는 데이터 저장소의 항목에 액세스 하 고 조작 하는 데 사용할 수 있는 여러 메서드를 노출 합니다. 이러한 메서드의 전체 목록은 [Itemcmdletprovider 메서드](/dotnet/api/system.management.automation.provider.itemcmdletprovider?view=pscore-6.2.0#methods)를 참조 하세요. 이 예제에서는 네 가지 메서드를 구현 합니다. [Getitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 지정 된 경로에 있는 항목을 가져오거나 지정 합니다. [Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 지정 된 항목의 값을 설정 하는입니다. [System.object. Itemexists *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) 지정 된 경로에 항목이 있는지 여부를 확인 합니다. [System.object. isvalidpath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) 는 경로를 확인 하 여 데이터 저장소의 특정 위치에 매핑되는지 여부를 확인 합니다.
 
 > [!NOTE]
-> 이 항목은 [Windows PowerShell 공급자 빠른](./windows-powershell-provider-quickstart.md)시작의 정보를 기반으로 합니다. 이 항목에서는 공급자 프로젝트를 설정 하는 방법에 대 한 기본 사항을 다루지 않으며, 드라이브를 만들고 제거 하는 [system.web](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . c a c.
+> 이 항목은 [Windows PowerShell 공급자 빠른](./windows-powershell-provider-quickstart.md)시작의 정보를 기반으로 합니다. 이 항목에서는 공급자 프로젝트를 설정 하는 방법에 대 한 기본 사항을 다루지 않으며, 드라이브를 만들고 제거 하는 [system.web](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) .. c a c.
 
 ### <a name="declaring-the-provider-class"></a>공급자 클래스 선언
 

@@ -1,13 +1,12 @@
 ---
 title: Windows PowerShell 참조-새로운 기능
 ms.date: 09/13/2016
-ms.topic: article
-ms.openlocfilehash: 364d081ddf2f87ceeaa47732266a35f4a126246f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4e87fce34f74e0fcbfe25939e1555df308a7f7d0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366092"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786699"
 ---
 # <a name="whats-new"></a>새로운 기능
 

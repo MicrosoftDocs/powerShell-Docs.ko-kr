@@ -1,19 +1,12 @@
 ---
 title: 모듈 및 스냅인 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2d342f91-23e0-467f-8de2-f9657d820693
-caps.latest.revision: 6
-ms.openlocfilehash: b3d8209ea7e3e8353e73ebce1531991ec9519c74
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 07cdc55fd6d1462130f1a81deb30056623a525e6
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811662"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787311"
 ---
 # <a name="modules-and-snap-ins"></a>모듈 및 스냅인
 

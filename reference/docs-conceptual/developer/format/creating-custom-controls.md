@@ -1,19 +1,12 @@
 ---
 title: 사용자 지정 컨트롤 만들기 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: c3baa406-cd33-4420-be5a-07ef09d93480
-caps.latest.revision: 8
-ms.openlocfilehash: 3504ab1d974c55e9279172d0e851961474ccb926
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c36fa9b778e01501a3c88f735cdefdfbb04411a0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363382"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786121"
 ---
 # <a name="creating-custom-controls"></a>사용자 지정 컨트롤 만들기
 
@@ -21,7 +14,7 @@ ms.locfileid: "72363382"
 
 ## <a name="custom-control-example"></a>사용자 지정 컨트롤 예제
 
-다음 예제에서는 types.ps1xml 파일에 정의 된 사용자 지정 컨트롤을 보여 줍니다. 이 사용자 지정 컨트롤을 사용 하 여 테이블 뷰에 표시 되는 [system.web. Signature](/dotnet/api/System.Management.Automation.Signature) 개체를 구분 합니다.
+다음 예제에서는 Certificates.Format.ps1xml 파일에 정의 된 사용자 지정 컨트롤을 보여 줍니다. 이 사용자 지정 컨트롤을 사용 하 여 테이블 뷰에 표시 되는 [system.web. Signature](/dotnet/api/System.Management.Automation.Signature) 개체를 구분 합니다.
 
 ```xml
 <Controls>
@@ -53,4 +46,4 @@ ms.locfileid: "72363382"
 
 ## <a name="see-also"></a>참고 항목
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

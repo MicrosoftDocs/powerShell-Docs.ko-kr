@@ -1,13 +1,12 @@
 ---
 title: 확장 유형 시스템 클래스 멤버
 ms.date: 07/09/2020
-ms.topic: conceptual
-ms.openlocfilehash: c066bd69c0ab20cceff96aa789654e80443758e5
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+ms.openlocfilehash: 24a57b7fd0b3db47d0d7138859aa0502ca9016f0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217986"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786274"
 ---
 # <a name="extended-type-system-class-members"></a>확장 유형 시스템 클래스 멤버
 

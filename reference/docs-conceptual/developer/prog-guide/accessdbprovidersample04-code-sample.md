@@ -1,19 +1,12 @@
 ---
 title: AccessDbProviderSample04 코드 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f9374c4a-e499-4516-9eb6-107c59df98d9
-caps.latest.revision: 7
-ms.openlocfilehash: 60f0ed4e3d39ee93ab63023161d09a6c7b914798
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 05509c5b36475bcd3f91c9ab7413974994d668d6
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978579"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787277"
 ---
 # <a name="accessdbprovidersample04-code-sample"></a>AccessDbProviderSample04 코드 샘플
 

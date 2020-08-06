@@ -1,19 +1,12 @@
 ---
 title: StopProc 자습서 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a142aeb6-9c11-44a0-b34f-1f9470fa347b
-caps.latest.revision: 5
-ms.openlocfilehash: 27c8e2c7525aba38e69e50b2b7fd3b18b8e54989
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e298c729b7ac59141638052d19b95ab77aa25cd6
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369412"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786478"
 ---
 # <a name="stopproc-tutorial"></a>StopProc 자습서
 
@@ -33,11 +26,11 @@ ms.locfileid: "72369412"
 
 ## <a name="see-also"></a>참고 항목
 
-[시스템을 수정 하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)
+[시스템을 수정하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)
 
 [Cmdlet에 사용자 메시지 추가](./adding-user-messages-to-your-cmdlet.md)
 
-[별칭, 와일드 카드 확장 및 Cmdlet 매개 변수에 대 한 도움말 추가](./adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters.md)
+[Cmdlet 매개 변수에 별칭, 와일드카드 확장 및 도움말 추가](./adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters.md)
 
 [Cmdlet에 매개 변수 집합 추가](./adding-parameter-sets-to-a-cmdlet.md)
 

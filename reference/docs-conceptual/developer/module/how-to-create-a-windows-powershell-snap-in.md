@@ -1,21 +1,14 @@
 ---
 title: Windows PowerShell 스냅인을 만드는 방법 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - snap-ins [PowerShell SDK], examples
-ms.assetid: 71bd9b2c-5f2e-4aa8-b5fe-08c956540d37
-caps.latest.revision: 10
-ms.openlocfilehash: 43199544dc02ccae4b61053c30d6ed36576adfcf
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 4150ba582544d1daa4a898f0ff20b169c24a0ee0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811332"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787328"
 ---
 # <a name="how-to-create-a-windows-powershell-snap-in"></a>Windows PowerShell 스냅인을 만드는 방법
 

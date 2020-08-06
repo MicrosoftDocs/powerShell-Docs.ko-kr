@@ -1,23 +1,16 @@
 ---
 title: StopProcessSample03 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 31298f1b-8b76-4637-8406-863f5ad27e53
-caps.latest.revision: 8
-ms.openlocfilehash: 91b56a78f878e0d9c0fc11e4b882399bdfb108ac
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 76a74c099a3c82cfb55e93e5b6173d728ac88b93
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369372"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787838"
 ---
 # <a name="stopprocesssample03-sample"></a>StopProcessSample03 샘플
 
-이 샘플에서는 매개 변수에 별칭이 있고 해당 매개 변수에서 와일드 카드 문자를 지 원하는 cmdlet을 작성 하는 방법을 보여 줍니다. 이 cmdlet은 Windows PowerShell 2.0에서 제공 하는 `Stop-Process` cmdlet과 비슷합니다.
+이 샘플에서는 매개 변수에 별칭이 있고 해당 매개 변수에서 와일드 카드 문자를 지 원하는 cmdlet을 작성 하는 방법을 보여 줍니다. 이 cmdlet은 `Stop-Process` Windows PowerShell 2.0에서 제공 하는 cmdlet과 유사 합니다.
 
 ### <a name="how-to-build-the-sample-by-using-visual-studio"></a>Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.
 
@@ -352,4 +345,4 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 ## <a name="see-also"></a>참고 항목
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

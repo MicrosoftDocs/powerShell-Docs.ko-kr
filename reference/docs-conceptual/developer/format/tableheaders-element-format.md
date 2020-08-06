@@ -1,19 +1,12 @@
 ---
 title: TableHeaders 요소 (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f9fa2b6f-b99a-42de-9779-44e9cb583f71
-caps.latest.revision: 15
-ms.openlocfilehash: bd44fcf4878c858afe81fb071ce72f627ac465dc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b3176cbe1316d5b30cb61831d9915a80389709a5
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361822"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787430"
 ---
 # <a name="tableheaders-element-format"></a>TableHeaders 요소(형식)
 
@@ -32,7 +25,7 @@ ViewDefinitions 요소 (Format) View 요소 (format) TableControl Element (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `TableHeaders` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다. 표시 될 개체의 각 속성에 대 한 자식 요소가 있어야 합니다. 열 머리글 정보는 자식 요소가 지정 된 순서 대로 표시 됩니다.
+다음 섹션에서는 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다 `TableHeaders` . 표시 될 개체의 각 속성에 대 한 자식 요소가 있어야 합니다. 열 머리글 정보는 자식 요소가 지정 된 순서 대로 표시 됩니다.
 
 ### <a name="attributes"></a>특성
 
@@ -42,13 +35,13 @@ ViewDefinitions 요소 (Format) View 요소 (format) TableControl Element (forma
 
 |요소|설명|
 |-------------|-----------------|
-|[TableColumnHeader 요소 (Format)](./tablecolumnheader-element-format.md)|선택적 요소입니다.<br /><br /> 테이블 뷰의 열에 대 한 레이블, 너비 및 데이터 맞춤을 정의 합니다.|
+|[TableColumnHeader 요소(형식)](./tablecolumnheader-element-format.md)|선택적 요소입니다.<br /><br /> 테이블 뷰의 열에 대 한 레이블, 너비 및 데이터 맞춤을 정의 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
 |요소|설명|
 |-------------|-----------------|
-|[TableControl 요소 (Format)](./tablecontrol-element-format.md)|뷰의 테이블 형식을 정의 합니다.|
+|[TableControl 요소(형식)](./tablecontrol-element-format.md)|뷰의 테이블 형식을 정의 합니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -56,7 +49,7 @@ ViewDefinitions 요소 (Format) View 요소 (format) TableControl Element (forma
 
 ## <a name="example"></a>예제
 
-이 예제에서는 두 개의 열 머리글을 정의 하는 `TableHeaders` 요소를 보여 줍니다.
+이 예제에서는 `TableHeaders` 두 개의 열 머리글을 정의 하는 요소를 보여 줍니다.
 
 ```xml
 <TableHeaders>
@@ -75,10 +68,10 @@ ViewDefinitions 요소 (Format) View 요소 (format) TableControl Element (forma
 
 ## <a name="see-also"></a>참고 항목
 
-[테이블 뷰 만들기](./creating-a-table-view.md)
+[테이블 보기 만들기](./creating-a-table-view.md)
 
-[TableColumnHeader 요소 (Format)](./tablecolumnheader-element-format.md)
+[TableColumnHeader 요소(형식)](./tablecolumnheader-element-format.md)
 
-[TableControl 요소 (Format)](./tablecontrol-element-format.md)
+[TableControl 요소(형식)](./tablecontrol-element-format.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

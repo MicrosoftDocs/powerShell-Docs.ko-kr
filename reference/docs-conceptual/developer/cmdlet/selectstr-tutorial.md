@@ -1,16 +1,12 @@
 ---
 title: SelectStr 자습서
-ms.custom: ''
 ms.date: 09/13/2016
-ms.topic: article
-ms.assetid: e81c0920-d696-4355-aaf7-eb20a6f79b6d
-caps.latest.revision: 5
-ms.openlocfilehash: 53e9c91c6f123a2a30f32cf5b2396d2fa19074ec
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 500cf055afe1ccc04f6a4a28f92abb80886dfa43
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369462"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786495"
 ---
 # <a name="selectstr-tutorial"></a>SelectStr 자습서
 
@@ -22,6 +18,6 @@ ms.locfileid: "72369462"
 
 ## <a name="see-also"></a>참고 항목
 
-[Cmdlet을 만들어 데이터 저장소 액세스](./creating-a-cmdlet-to-access-a-data-store.md)
+[데이터 저장소에 액세스하는 Cmdlet 만들기](./creating-a-cmdlet-to-access-a-data-store.md)
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)

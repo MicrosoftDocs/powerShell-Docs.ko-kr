@@ -1,19 +1,12 @@
 ---
 title: ErrorRecord 개체 해석 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2a65b964-5bc6-4ade-a66b-b6afa7351ce7
-caps.latest.revision: 9
-ms.openlocfilehash: 32ebf2531237bfd1042310ccc4155193a58401fd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 249fff7d14023806d75aeca40f4d9b7231e14311
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365422"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786597"
 ---
 # <a name="interpreting-errorrecord-objects"></a>ErrorRecord 개체 해석
 
@@ -52,7 +45,7 @@ Cmdlet은 CloseError, OpenError, InvalidType, ReadError 및 WriteError 범주와
 
 오류 레코드에 포함 된 예외는 cmdlet에 의해 제공 되며 [ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) 개체의 [ErrorRecord *](/dotnet/api/System.Management.Automation.ErrorRecord.Exception) 속성을 통해 액세스할 수 있습니다 ().
 
-호스트 응용 프로그램은 `is` 키워드를 사용 하 여 예외가 특정 클래스 인지 또는 파생 클래스 인지를 식별할 수 있습니다. 다음 예제와 같이 예외 형식에 대해 분기 하는 것이 좋습니다.
+호스트 응용 프로그램은 키워드를 사용 하 여 `is` 예외가 특정 클래스 인지 또는 파생 클래스 인지를 식별할 수 있습니다. 다음 예제와 같이 예외 형식에 대해 분기 하는 것이 좋습니다.
 
 `if (MyNonTerminatingError.Exception is AccessDeniedException)`
 
@@ -90,8 +83,8 @@ FQID는 단일 문자열로 검사 되도록 설계 되었습니다. 그러나 �
 
 [Throwterminatingerror *입니다.](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError)
 
-[Cmdlet에 종료 되지 않는 오류 보고 추가](./adding-non-terminating-error-reporting-to-your-cmdlet.md)
+[Cmdlet에 종료되지 않는 오류 보고 추가](./adding-non-terminating-error-reporting-to-your-cmdlet.md)
 
 [Windows PowerShell 오류 보고](./error-reporting-concepts.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

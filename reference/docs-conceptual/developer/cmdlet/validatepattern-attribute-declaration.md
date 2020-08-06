@@ -1,23 +1,16 @@
 ---
 title: ValidatePattern 특성 선언 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - attributes, ValidatePattern
 - ValidatePattern attribute, described
 - ValidatePattern attribute
-ms.assetid: 87b811be-6d93-4e7d-b9d0-c567a19bb0ef
-caps.latest.revision: 13
-ms.openlocfilehash: 5edcb65a6fbe1cb2fe2d0efe3f763fb84628b049
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 713fa7a46a8eeefdbfd679a5e8436285fac085f8
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369162"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787804"
 ---
 # <a name="validatepattern-attribute-declaration"></a>ValidatePattern 특성 선언
 
@@ -34,7 +27,7 @@ Cmdlet 내에서 ValidatePattern가 호출 되 면 Windows PowerShell 런타임�
 
 #### <a name="parameters"></a>매개 변수
 
-`RegexString` ([system.string](/dotnet/api/System.String))이 필요 합니다. 매개 변수 인수의 유효성을 검사 하는 정규식을 지정 합니다.
+`RegexString`([System.string](/dotnet/api/System.String))이 필요 합니다. 매개 변수 인수의 유효성을 검사 하는 정규식을 지정 합니다.
 
 옵션 ([system.text.regularexpressions.regex>. system.text.regularexpressions.regexoptions](/dotnet/api/System.Text.RegularExpressions.RegexOptions))은 선택적으로 명명 된 매개 변수입니다. 정규식 옵션을 지정 하는 [system.text.regularexpressions.regex>. system.text.regularexpressions.regexoptions](/dotnet/api/System.Text.RegularExpressions.RegexOptions) 플래그의 비트 조합을 지정 합니다.
 
@@ -42,7 +35,7 @@ Cmdlet 내에서 ValidatePattern가 호출 되 면 Windows PowerShell 런타임�
 
 - 이 특성은 매개 변수 당 한 번만 사용할 수 있습니다.
 
-- 특성의 `Option` 매개 변수를 사용 하 여 패턴을 추가로 정의할 수 있습니다. 예를 들어 대/소문자를 구분 하는 패턴을 만들 수 있습니다.
+- `Option`특성의 매개 변수를 사용 하 여 패턴을 추가로 정의할 수 있습니다. 예를 들어 대/소문자를 구분 하는 패턴을 만들 수 있습니다.
 
 - 이 특성이 컬렉션에 적용 되는 경우 컬렉션의 각 요소가 패턴과 일치 해야 합니다.
 
@@ -52,4 +45,4 @@ Cmdlet 내에서 ValidatePattern가 호출 되 면 Windows PowerShell 런타임�
 
 [Validatepatternattribute.](/dotnet/api/System.Management.Automation.ValidatePatternAttribute)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

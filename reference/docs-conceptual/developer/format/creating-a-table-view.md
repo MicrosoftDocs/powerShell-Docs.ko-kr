@@ -1,19 +1,12 @@
 ---
 title: 테이블 뷰 만들기 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1f405afb-70b5-4fe0-9986-bc07401d93fd
-caps.latest.revision: 23
-ms.openlocfilehash: 862f942facafff6cea66c4f8f1040772c6a62ec3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: cbe81962a0f68d64506062898a8f21a1596cc29a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363412"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786155"
 ---
 # <a name="creating-a-table-view"></a>테이블 보기 만들기
 
@@ -21,7 +14,7 @@ ms.locfileid: "72363412"
 
 ## <a name="a-table-view-display"></a>테이블 보기 표시
 
-다음 예제에서는 Windows PowerShell에서 [Get-Service](/powershell/module/microsoft.powershell.management/get-service) cmdlet이 반환하는 [System.Serviceprocess.Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) 개체를 표시하는 방법을 보여줍니다. 이 개체의 경우 Windows PowerShell은 `Status` 속성, `Name` 속성 (이 속성은 `ServiceName` 속성의 별칭 속성) 및 `DisplayName` 속성을 표시 하는 테이블 뷰를 정의 했습니다. 테이블의 각 행은 cmdlet에서 반환 된 개체를 나타냅니다.
+다음 예제에서는 Windows [PowerShell에서 Servicecontroller cmdlet이](/powershell/module/microsoft.powershell.management/get-service) 반환 하는 [System.Serviceprocess.Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) 개체를 표시 하는 방법을 보여 줍니다. 이 개체의 경우 Windows PowerShell은 속성 `Status` , 속성 `Name` (이 속성은 속성의 별칭 속성 `ServiceName` ) 및 속성을 표시 하는 테이블 뷰를 정의 했습니다 `DisplayName` . 테이블의 각 행은 cmdlet에서 반환 된 개체를 나타냅니다.
 
 ```output
 Status   Name               DisplayName
@@ -79,7 +72,7 @@ Running  Appinfo            Application Information
 
 - [Name](./name-element-for-view-format.md) 요소는 뷰의 이름을 지정 합니다. 이 요소는 모든 뷰에 필요 합니다.
 
-- [Viewselectedby](./viewselectedby-element-format.md) 요소는 뷰를 사용 하는 개체를 정의 합니다. 필수적 요소로,
+- [Viewselectedby](./viewselectedby-element-format.md) 요소는 뷰를 사용 하는 개체를 정의 합니다. 이 요소는 필수 요소입니다.
 
 - [GroupBy](./groupby-element-for-view-format.md) 요소 (이 예제에는 표시 되지 않음)는 새 개체 그룹이 표시 되는 시점을 정의 합니다. 특정 속성 또는 스크립트의 값이 변경 될 때마다 새 그룹이 시작 됩니다. 이 요소는 선택적입니다.
 
@@ -215,7 +208,7 @@ Running  Appinfo            Application Information
 
 ## <a name="using-format-strings"></a>서식 문자열 사용
 
-서식 문자열을 뷰에 추가 하 여 데이터 표시 방법을 추가로 정의할 수 있습니다. 다음 예제에서는 `StartTime` 속성의 값에 대 한 서식 문자열을 정의 하는 방법을 보여 줍니다.
+서식 문자열을 뷰에 추가 하 여 데이터 표시 방법을 추가로 정의할 수 있습니다. 다음 예제에서는 속성의 값에 대 한 서식 문자열을 정의 하는 방법을 보여 줍니다 `StartTime` .
 
 ```xml
 <TableColumnItem>
@@ -232,7 +225,7 @@ Running  Appinfo            Application Information
 
 - [FormatString](./label-element-for-listitem-for-listcontrol-format.md) 요소는 속성 또는 스크립트 값이 표시 되는 방법을 정의 하는 형식 패턴을 지정 합니다.
 
-다음 예제에서는 스크립트의 값에 대 한 서식을 지정 하기 위해 `ToString` 메서드를 호출 합니다. 스크립트는 개체의 메서드를 호출할 수 있습니다. 따라서 개체에 형식 지정 매개 변수가 있는 `ToString`와 같은 메서드가 있는 경우 스크립트는 해당 메서드를 호출 하 여 스크립트의 출력 값에 대 한 형식을 지정할 수 있습니다.
+다음 예제에서는 `ToString` 메서드를 호출 하 여 스크립트의 값에 대 한 형식을 지정 합니다. 스크립트는 개체의 메서드를 호출할 수 있습니다. 따라서 개체에 `ToString` 형식 매개 변수를 포함 하는 등의 메서드가 있는 경우 스크립트는 해당 메서드를 호출 하 여 스크립트의 출력 값에 대 한 형식을 지정할 수 있습니다.
 
 ```xml
 <ListItem>
@@ -243,7 +236,7 @@ Running  Appinfo            Application Information
 </ListItem>
 ```
 
-다음 XML 요소를 사용 하 여 `ToString` 메서드를 호출할 수 있습니다.
+다음 XML 요소를 사용 하 여 메서드를 호출할 수 있습니다 `ToString` .
 
 - [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md) 요소는 행의 열에 값이 표시 되는 속성이 나 스크립트를 정의 합니다. 행의 각 열에는 [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md) 요소가 필요 합니다. 첫 번째 항목이 첫 번째 열에 표시 되 고 두 번째 열에 두 번째 항목이 표시 됩니다.
 
@@ -251,4 +244,4 @@ Running  Appinfo            Application Information
 
 ## <a name="see-also"></a>참고 항목
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

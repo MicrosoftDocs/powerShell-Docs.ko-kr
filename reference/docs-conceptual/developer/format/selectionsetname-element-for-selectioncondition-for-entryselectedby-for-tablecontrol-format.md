@@ -1,25 +1,18 @@
 ---
 title: TableControl (형식)에 대 한 EntrySelectedBy의 SelectionCondition에 대 한 SelectionSetName 요소 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 17ae4d6b-dc95-4a1d-8e32-31ff084a951f
-caps.latest.revision: 10
-ms.openlocfilehash: edb163f2b0b5129bd741677dce882888d9bbfd89
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: db751c40b22db52985bc7cd9f8f4296a64a523f0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361922"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787464"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format"></a>TableControl에 대한 EntrySelectedBy의 SelectionCondition에 대한 SelectionSetName 요소(형식)
 
 조건을 트리거하는 .NET 형식 집합을 지정 합니다. 이 집합의 형식 중 하나라도 있으면 조건이 충족 되 고 테이블 뷰의이 정의를 사용 하 여 개체가 표시 됩니다.
 
-Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (format) TableControl Element (format) TableRowEntries Element (format) TableRowEntry Element (format) EntrySelectedBy 요소 (형식) TableRowEntry (Format)에 대해 EntrySelectedBy TableRowEntry (Format) SelectionSetName 요소의 SelectionCondition 요소에 대 한 selectioncondition 요소
+Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (format) TableControl Element (format) TableRowEntries Element (format) TableRowEntry Element (format) EntrySelectedBy 요소에 대 한 TableRowEntry (format) SelectionCondition 요소에 대 한 요소 (형식)의 selectioncondition 요소에 대 한 SelectionCondition for TableRowEntry (형식)에 대 한 SelectionCondition의 selectioncondition 요소
 
 ## <a name="syntax"></a>구문
 
@@ -29,7 +22,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (form
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 `SelectionSetName` 요소의 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 요소의 부모 요소에 대해 설명 합니다 `SelectionSetName` .
 
 ### <a name="attributes"></a>특성
 
@@ -59,7 +52,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (form
 
 ## <a name="see-also"></a>참고 항목
 
-[테이블 뷰 만들기](./creating-a-table-view.md)
+[테이블 보기 만들기](./creating-a-table-view.md)
 
 [데이터가 표시 되는 시점에 대 한 조건 정의](./defining-conditions-for-displaying-data.md)
 
@@ -67,4 +60,4 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (form
 
 [TableRowEntry (형식)에 대 한 EntrySelectedBy의 SelectionCondition 요소](./selectioncondition-element-for-entryselectedby-for-tablecontrol-format.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

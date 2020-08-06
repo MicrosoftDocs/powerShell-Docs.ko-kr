@@ -1,23 +1,16 @@
 ---
 title: Windows PowerShell 공급자를 만드는 방법 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - providers [PowerShell Programmer's Guide]
 - providers [PowerShellProgrammer's Guide], creating
 - Windows PowerShell Programmer's Guide, providers
-ms.assetid: 863e48e9-7206-4c6a-a59a-2ab2d30396bc
-caps.latest.revision: 5
-ms.openlocfilehash: 4c84d015aba327c0ab039558414c5777d43ec4ba
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 5e7424c035d22d0f5eb154b369427a6da80b1c49
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870883"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787107"
 ---
 # <a name="how-to-create-a-windows-powershell-provider"></a>Windows PowerShell 공급자를 만드는 방법
 
@@ -29,7 +22,7 @@ ms.locfileid: "75870883"
 
 Windows PowerShell은 알려진 데이터 저장소에 액세스 하는 데 사용 되는 여러 공급자 (예: 파일 시스템 공급자, 레지스트리 공급자 및 별칭 공급자)를 제공 합니다. Windows PowerShell에서 제공 하는 공급자에 대 한 자세한 내용은 다음 명령을 사용 하 여 온라인 도움말에 액세스 합니다.
 
-**PS > get-help about_providers**
+**PS>get-help about_providers**
 
 ## <a name="accessing-the-stored-data-using-windows-powershell-paths"></a>Windows PowerShell 경로를 사용 하 여 저장 된 데이터에 액세스
 
@@ -45,13 +38,13 @@ Windows PowerShell은 Windows PowerShell 드라이브에 대해 다음 규칙을
 - 파일 시스템 뿐만 아니라 저장 된 모든 데이터에 대해 드라이브를 구현할 수 있습니다.
 - 각 드라이브는 자신의 현재 작업 위치를 유지 하므로 사용자는 드라이브 간을 이동할 때 컨텍스트를 유지할 수 있습니다.
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>섹션 내용
 
-다음 표에서는 서로를 구성 하는 코드 예제를 포함 하는 항목을 보여 줍니다. 두 번째 항목부터 Windows PowerShell 런타임으로 기본 Windows PowerShell 공급자를 초기화 하 고 초기화할 수 있습니다. 다음 항목에서는 데이터에 액세스 하는 기능을 추가 합니다. 다음 항목에서는 데이터를 조작 하는 기능을 추가 합니다. 저장 된 데이터의 항목 등).
+다음 표에서는 서로를 구성 하는 코드 예제를 포함 하는 항목을 보여 줍니다. 두 번째 항목부터 Windows PowerShell 런타임으로 기본 Windows PowerShell 공급자를 초기화 하 고 초기화 하지 않을 수 있습니다. 다음 항목에서는 데이터에 액세스 하는 기능을 추가 하 고, 다음 항목에서는 데이터 조작을 위한 기능 (저장 된 데이터의 항목)을 추가 합니다.
 
 |                                                    항목                                                    |                                                                                         정의                                                                                          |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Windows PowerShell 공급자 디자인](./designing-your-windows-powershell-provider.md)               | 이 항목에서는 Windows PowerShell 공급자를 구현 하기 전에 고려해 야 할 사항에 대해 설명 합니다. 사용 되는 Windows PowerShell 공급자 기본 클래스 및 인터페이스를 요약 합니다. |
+| [Windows PowerShell 공급자 설계](./designing-your-windows-powershell-provider.md)               | 이 항목에서는 Windows PowerShell 공급자를 구현 하기 전에 고려해 야 할 사항에 대해 설명 합니다. 사용 되는 Windows PowerShell 공급자 기본 클래스 및 인터페이스를 요약 합니다. |
 | [기본 Windows PowerShell 공급자 만들기](./creating-a-basic-windows-powershell-provider.md)           | 이 항목에서는 Windows PowerShell 런타임에서 공급자를 초기화 하 고 초기화 하지 않도록 허용 하는 Windows PowerShell 공급자를 만드는 방법을 보여 줍니다.                                        |
 | [Windows PowerShell 드라이브 공급자 만들기](./creating-a-windows-powershell-drive-provider.md)           | 이 항목에서는 사용자가 Windows PowerShell 드라이브를 통해 데이터 저장소에 액세스할 수 있도록 하는 Windows PowerShell 공급자를 만드는 방법을 보여 줍니다.                                                |
 | [Windows PowerShell 항목 공급자 만들기](./creating-a-windows-powershell-item-provider.md)             | 이 항목에서는 사용자가 데이터 저장소의 항목을 조작할 수 있도록 하는 Windows PowerShell 공급자를 만드는 방법을 보여 줍니다.                                                                  |

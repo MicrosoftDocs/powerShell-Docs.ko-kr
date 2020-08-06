@@ -1,19 +1,12 @@
 ---
 title: CustomControl (형식)에 대 한 Customentry의 CustomEntry 요소 Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: ac3c0a25-f2ca-4e28-b3dc-9cb06a76d92a
-caps.latest.revision: 11
-ms.openlocfilehash: 7804155bffeb1f0df8339f797bf59f8def56a3fc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a13e83ec941bed80eaab02e40131054432fcce00
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364022"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785883"
 ---
 # <a name="customentry-element-for-customentries-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 CustomEntries에 대한 CustomEntry 요소(형식)
 
@@ -32,7 +25,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 `CustomEntry` 요소의 부모 요소에 대해 설명 합니다. 정의에 표시 되는 항목을 지정 해야 합니다.
+다음 섹션에서는 특성, 자식 요소 및 요소의 부모 요소에 대해 설명 합니다 `CustomEntry` . 정의에 표시 되는 항목을 지정 해야 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -49,7 +42,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 |요소|설명|
 |-------------|-----------------|
-|[CustomControl에 대 한 CustomEntries 요소 (형식)](./customentries-element-for-customcontrol-for-view-format.md)|사용자 지정 컨트롤 뷰의 정의를 제공 합니다. 사용자 지정 컨트롤 뷰에서 하나 이상의 정의를 지정 해야 합니다.|
+|[View의 CustomControl에 대한 CustomEntries 요소(형식)](./customentries-element-for-customcontrol-for-view-format.md)|사용자 지정 컨트롤 뷰의 정의를 제공 합니다. 사용자 지정 컨트롤 뷰에서 하나 이상의 정의를 지정 해야 합니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -57,10 +50,10 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="see-also"></a>참고 항목
 
-[보기에 대 한 CustomControl 요소 (형식)](./customcontrol-element-for-view-format.md)
+[View에 대한 CustomControl 요소(형식)](./customcontrol-element-for-view-format.md)
 
 [View 항목에 대 한 CustomItem 요소 (형식)](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)
 
 [View의 CustomEntry에 대 한 EntrySelectedBy 요소 (형식)](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

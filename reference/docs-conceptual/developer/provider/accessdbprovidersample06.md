@@ -1,19 +1,12 @@
 ---
 title: AccessDBProviderSample06 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 46dc0657-110f-4367-8bb6-a95dca2c5016
-caps.latest.revision: 8
-ms.openlocfilehash: 52c1fac134f7184462842a56f466f634aec1222c
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 893eb80574c7f142f92906961588e22b1ced0052
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692440"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786835"
 ---
 # <a name="accessdbprovidersample06"></a>AccessDBProviderSample06
 

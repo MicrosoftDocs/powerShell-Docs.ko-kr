@@ -1,19 +1,12 @@
 ---
 title: DefaultSettings 요소 (Format) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 41c56499-ee20-4821-830a-478fdcc33f83
-caps.latest.revision: 11
-ms.openlocfilehash: bc95c62222eb2806f92499257a397c2e4ec5dbab
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7da7948fc0814e38a8f3910596e223470ec27d75
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363872"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787736"
 ---
 # <a name="defaultsettings-element-format"></a>DefaultSettings 요소(형식)
 
@@ -35,7 +28,7 @@ Configuration 요소 (Format) DefaultSettings 요소 (Format)
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 `DefaultSettings` 요소의 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 요소의 부모 요소에 대해 설명 합니다 `DefaultSettings` .
 
 ### <a name="attributes"></a>특성
 
@@ -45,11 +38,11 @@ Configuration 요소 (Format) DefaultSettings 요소 (Format)
 
 |요소|설명|
 |-------------|-----------------|
-|[DisplayError 요소 (Format)](./displayerror-element-format.md)|선택적 요소입니다.<br /><br /> 데이터의 일부를 표시 하는 동안 오류가 발생 하는 경우 문자열 #ERR 표시 되도록 지정 합니다.|
-|[EnumerableExpansions 요소 (형식)](./enumerableexpansions-element-format.md)|선택적 요소입니다.<br /><br /> .NET 개체가 뷰에 표시 될 때 확장 되는 다양 한 방법을 정의 합니다.|
+|[DisplayError 요소(형식)](./displayerror-element-format.md)|선택적 요소입니다.<br /><br /> 데이터의 일부를 표시 하는 동안 오류가 발생 하는 경우 문자열 #ERR 표시 되도록 지정 합니다.|
+|[EnumerableExpansions 요소(형식)](./enumerableexpansions-element-format.md)|선택적 요소입니다.<br /><br /> .NET 개체가 뷰에 표시 될 때 확장 되는 다양 한 방법을 정의 합니다.|
 |[PropertyCountForTable (형식)](./propertycountfortable-element-format.md)|선택적 요소입니다.<br /><br /> 개체가 테이블 뷰에 개체를 표시 하는 데 필요한 최소 속성 수를 지정 합니다.|
-|[ShowError 요소 (Format)](./showerror-element-format.md)|선택적 요소입니다.<br /><br /> 데이터 조각을 표시 하는 동안 오류가 발생 하면 전체 오류 레코드가 표시 되도록 지정 합니다.|
-|[WrapTables 요소 (Format)](./wraptables-element-format.md)|선택적 요소입니다.<br /><br /> 열의 너비에 맞지 않는 경우 테이블의 데이터를 다음 줄로 이동 하도록 지정 합니다.|
+|[ShowError 요소(형식)](./showerror-element-format.md)|선택적 요소입니다.<br /><br /> 데이터 조각을 표시 하는 동안 오류가 발생 하면 전체 오류 레코드가 표시 되도록 지정 합니다.|
+|[WrapTables 요소(형식)](./wraptables-element-format.md)|선택적 요소입니다.<br /><br /> 열의 너비에 맞지 않는 경우 테이블의 데이터를 다음 줄로 이동 하도록 지정 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
@@ -63,14 +56,14 @@ Configuration 요소 (Format) DefaultSettings 요소 (Format)
 
 [구성 요소](./configuration-element-format.md)
 
-[DisplayError 요소 (Format)](./displayerror-element-format.md)
+[DisplayError 요소(형식)](./displayerror-element-format.md)
 
-[EnumerableExpansions 요소 (형식)](./enumerableexpansions-element-format.md)
+[EnumerableExpansions 요소(형식)](./enumerableexpansions-element-format.md)
 
 [PropertyCountForTable (형식)](./propertycountfortable-element-format.md)
 
-[ShowError 요소 (Format)](./showerror-element-format.md)
+[ShowError 요소(형식)](./showerror-element-format.md)
 
-[WrapTables 요소 (Format)](./wraptables-element-format.md)
+[WrapTables 요소(형식)](./wraptables-element-format.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

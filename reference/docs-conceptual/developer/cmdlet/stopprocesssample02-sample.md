@@ -1,23 +1,16 @@
 ---
 title: StopProcessSample02 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 213ca1a4-e9fe-4969-b7d0-2fca070c6142
-caps.latest.revision: 10
-ms.openlocfilehash: 594c06367baedd1f9bfdbfff9f0e072d579b4099
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: bab32f5a2544905bd858bcecf5b0b2e2d127e642
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369382"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786444"
 ---
 # <a name="stopprocesssample02-sample"></a>StopProcessSample02 샘플
 
-이 샘플에서는 로컬 컴퓨터에서 프로세스를 중지 하는 동안 디버그 (WriteDebug), 자세한 정보 표시 (Writedebug) 및 경고 (Writedebug) 메시지를 기록 하는 cmdlet을 작성 하는 방법을 보여 줍니다. 이 cmdlet은 Windows PowerShell 2.0에서 제공 하는 `Stop-Process` cmdlet과 비슷합니다.
+이 샘플에서는 로컬 컴퓨터에서 프로세스를 중지 하는 동안 디버그 (WriteDebug), 자세한 정보 표시 (Writedebug) 및 경고 (Writedebug) 메시지를 기록 하는 cmdlet을 작성 하는 방법을 보여 줍니다. 이 cmdlet은 `Stop-Process` Windows PowerShell 2.0에서 제공 하는 cmdlet과 유사 합니다.
 
 ### <a name="how-to-build-the-sample-by-using-visual-studio"></a>Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.
 
@@ -69,7 +62,7 @@ ms.locfileid: "72369382"
 
 ## <a name="example"></a>예제
 
-이 샘플에서는 `WriteDebug`, `WriteVerbose`및 `WriteWarning` 메서드를 사용 하 여 디버그, 자세한 정보 및 경고 메시지를 작성 하는 방법을 보여 줍니다.
+이 샘플에서는 `WriteDebug` , 및 메서드를 사용 하 여 디버그, 자세한 정보 및 경고 메시지를 작성 하는 방법을 보여 줍니다 `WriteVerbose` `WriteWarning` .
 
 ```csharp
 using System;
@@ -312,4 +305,4 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 ## <a name="see-also"></a>참고 항목
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

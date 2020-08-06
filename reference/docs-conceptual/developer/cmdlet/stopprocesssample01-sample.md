@@ -1,23 +1,16 @@
 ---
 title: StopProcessSample01 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b7bed607-369b-4507-87fa-f6011c2f1970
-caps.latest.revision: 9
-ms.openlocfilehash: 2ce146df05ef876d9c17f560628ebac2c39e57bf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6d4737d0526a7d142b4a986986974bcbdc12ec7e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365302"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786461"
 ---
 # <a name="stopprocesssample01-sample"></a>StopProcessSample01 샘플
 
-이 샘플에서는 프로세스를 중지 하기 전에 사용자에 게 피드백을 요청 하는 cmdlet을 작성 하는 방법과 사용자가 cmdlet을 사용 하 여 개체를 반환 하도록 하는 `PassThru` 매개 변수를 구현 하는 방법을 보여 줍니다. 이 cmdlet은 Windows PowerShell 2.0에서 제공 하는 `Stop-Process` cmdlet과 비슷합니다.
+이 샘플에서는 프로세스를 중지 하기 전에 사용자에 게 피드백을 요청 하는 cmdlet을 작성 하는 방법과 사용자가 cmdlet을 사용 하 여 개체를 반환 하도록 하는 매개 변수를 구현 하는 방법을 보여 줍니다 `PassThru` . 이 cmdlet은 `Stop-Process` Windows PowerShell 2.0에서 제공 하는 cmdlet과 유사 합니다.
 
 ### <a name="how-to-build-the-sample-by-using-visual-studio"></a>Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.
 
@@ -61,11 +54,11 @@ ms.locfileid: "72365302"
 
 - 확인을 요청 하는 ShouldProcess 메서드를 호출 합니다.
 
-- 사용자가 cmdlet을 사용 하 여 개체를 반환 하려고 하는지 여부를 나타내는 `PassThru` 매개 변수를 구현 합니다. 기본적으로이 cmdlet은 개체를 파이프라인에 반환 하지 않습니다.
+- `PassThru`사용자가 cmdlet을 사용 하 여 개체를 반환 하려고 하는지 여부를 나타내는 매개 변수를 구현 합니다. 기본적으로이 cmdlet은 개체를 파이프라인에 반환 하지 않습니다.
 
 ## <a name="example"></a>예제
 
-이 샘플에서는 사용자가 cmdlet을 사용 하 여 개체를 반환 하 고 `ShouldProcess` 및 `ShouldContinue` 메서드를 호출 하 여 사용자 피드백을 요청 하는 방법을 나타내는 `PassThru` 매개 변수를 구현 하는 방법을 보여 줍니다.
+이 샘플에서는 `PassThru` 사용자가 cmdlet에서 개체를 반환 하 고 및 메서드를 호출 하 여 사용자 피드백을 요청 하는 방법을 지정 하는 매개 변수를 구현 하는 방법을 보여 줍니다 `ShouldProcess` `ShouldContinue` .
 
 ```csharp
 using System;
@@ -265,4 +258,4 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 ## <a name="see-also"></a>참고 항목
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

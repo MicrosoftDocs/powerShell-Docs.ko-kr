@@ -1,26 +1,19 @@
 ---
 title: Windows PowerShell 샘플 코드 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1106829a-8ddc-454e-bbdd-ade15d4bffb4
-caps.latest.revision: 7
-ms.openlocfilehash: 76b4195eb33a1058109df8f6174a89708ba039d1
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 8dcbe6d8760d77666a8191ca78416ef63dfebdeb
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563253"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786937"
 ---
 # <a name="windows-powershell-sample-code"></a>Windows PowerShell 코드 샘플
 
 Windows SDK를 통해 Windows PowerShell® 샘플을 사용할 수 있습니다. 이 섹션에는 Windows SDK 샘플에 포함 된 샘플 코드가 포함 되어 있습니다.
 
 > [!NOTE]
-> Windows SDK 설치 되 면 모든 Windows PowerShell 샘플을 사용할 수 있는 **samples** 디렉터리가 만들어집니다. 일반적인 설치 디렉터리는 **C:\Program Files\Microsoft SDKs\Windows\v6.0**입니다. Windows PowerShell을 시작 하 고 **"cd Samples\SysMgmt\PowerShell"** 를 입력 하 여 Windows powershell Samples 디렉터리를 찾습니다. 이 문서에서는 Windows PowerShell Samples 디렉터리를 ** \< powershell 샘플>** 이라고 합니다.
+> Windows SDK 설치 되 면 모든 Windows PowerShell 샘플을 사용할 수 있는 **samples** 디렉터리가 만들어집니다. 일반적인 설치 디렉터리는 **C:\Program Files\Microsoft SDKs\Windows\v6.0**입니다. Windows PowerShell을 시작 하 고 **"cd Samples\SysMgmt\PowerShell"** 를 입력 하 여 Windows powershell Samples 디렉터리를 찾습니다. 이 문서에서는 Windows PowerShell Samples 디렉터리를 라고 **\<PowerShell Samples>** 합니다.
 
 ## <a name="sample-code-listing"></a>샘플 코드 목록
 

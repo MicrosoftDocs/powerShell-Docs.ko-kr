@@ -1,25 +1,18 @@
 ---
 title: CustomControl의 SelectionCondition에 대 한 SelectionSetName 요소 (형식) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a52b05a9-762e-4f1c-ad57-9d1710149722
-caps.latest.revision: 10
-ms.openlocfilehash: 25d46665ca5df3ddf49af5718d513b84c77988c8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c7fdd92475ba24d27e61371d1c6b54fa1a55647c
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368272"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787515"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 SelectionCondition에 대한 SelectionSetName 요소(형식)
 
 조건을 트리거하는 .NET 형식 집합을 지정 합니다. 이 집합에 있는 형식이 있으면 조건이 충족 되 고이 컨트롤을 사용 하 여 개체가 표시 됩니다. 이 요소는 사용자 지정 컨트롤 뷰를 정의할 때 사용 됩니다.
 
-Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (format) CustomControl Element (format) Customentries 요소에 대 한 CustomControl의 customentries 요소 view (형식) EntrySelectedBy View의 CustomEntry 요소 (Format)
+Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (format) CustomControl Element (format) customentries 요소에 대 한 customentries 요소에 대 한 CustomEntries 요소 (format)
 
 ## <a name="syntax"></a>구문
 
@@ -29,7 +22,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 `SelectionSetName` 요소의 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 요소의 부모 요소에 대해 설명 합니다 `SelectionSetName` .
 
 ### <a name="attributes"></a>특성
 
@@ -61,6 +54,6 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 [데이터가 표시 되는 시점에 대 한 조건 정의](./defining-conditions-for-displaying-data.md)
 
-[선택 집합 정의](./defining-selection-sets.md)
+[선택 영역 집합 정의](./defining-selection-sets.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

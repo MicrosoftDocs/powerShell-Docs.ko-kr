@@ -1,21 +1,14 @@
 ---
 title: Cmdlet 출력의 유형 | Microsoft Docs
-ms.custom: ''
 ms.date: 01/18/2019
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - cmdlets [PowerShell SDK], output
-ms.assetid: 547e6695-e936-4cac-a90b-417d0dab393d
-caps.latest.revision: 12
-ms.openlocfilehash: de21d9ebfec4f23d3819695df225f7a230864a7b
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 8f761fdddd264b7c580c4a860081fdc5d2776ee7
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83561418"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786359"
 ---
 # <a name="types-of-cmdlet-output"></a>Cmdlet 출력의 유형
 
@@ -62,7 +55,7 @@ Cmdlet은 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteW
 
 ## <a name="accessing-the-output-functionality-of-a-host-application"></a>호스트 응용 프로그램의 출력 기능에 액세스
 
-PowerShell 런타임을 통해 호스트 응용 프로그램의 출력 기능에 직접 액세스 하는 cmdlet을 디자인할 수도 있습니다. [Console](/dotnet/api/System.Console) 또는 [system.web](/dotnet/api/System.Windows.Forms) 대신 PowerShell에서 제공 하는 호스트 api를 사용 하면 cmdlet이 다양 한 호스트에서 작동 합니다. 예를 들어, **powershell .exe** 콘솔 호스트, **powershell_ise** 그래픽 호스트, powershell 원격 호스트 및 타사 호스트가 있습니다.
+PowerShell 런타임을 통해 호스트 응용 프로그램의 출력 기능에 직접 액세스 하는 cmdlet을 디자인할 수도 있습니다. [Console](/dotnet/api/System.Console) 또는 [system.web](/dotnet/api/System.Windows.Forms) 대신 PowerShell에서 제공 하는 호스트 api를 사용 하면 cmdlet이 다양 한 호스트에서 작동 합니다. 예: **powershell.exe** 콘솔 호스트, **powershell_ise.exe** 그래픽 호스트, PowerShell 원격 호스트 및 타사 호스트입니다.
 
 ## <a name="see-also"></a>참조
 

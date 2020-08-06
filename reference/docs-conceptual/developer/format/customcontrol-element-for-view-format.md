@@ -1,19 +1,12 @@
 ---
 title: View (Format)의 CustomControl 요소 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2edac16c-0b30-4985-ac84-0821aa9a9f6d
-caps.latest.revision: 12
-ms.openlocfilehash: bd0f7ca4de8dede97d1553cd62884ea45876e0c7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 660e8fd6531862790a2af7ab27a82e073c230693
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363362"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786053"
 ---
 # <a name="customcontrol-element-for-view-format"></a>View에 대한 CustomControl 요소(형식)
 
@@ -31,7 +24,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 `CustomControl` 요소의 부모 요소에 대해 설명 합니다. 하나의 자식 요소를 지정 해야 합니다.
+다음 섹션에서는 특성, 자식 요소 및 요소의 부모 요소에 대해 설명 합니다 `CustomControl` . 하나의 자식 요소를 지정 해야 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -41,13 +34,13 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 |요소|설명|
 |-------------|-----------------|
-|[CustomControl에 대 한 CustomEntries 요소 (형식)](./customentries-element-for-customcontrol-for-view-format.md)|필수적 요소입니다.<br /><br /> 사용자 지정 컨트롤 뷰의 정의를 제공 합니다.|
+|[View의 CustomControl에 대한 CustomEntries 요소(형식)](./customentries-element-for-customcontrol-for-view-format.md)|필수적 요소입니다.<br /><br /> 사용자 지정 컨트롤 뷰의 정의를 제공 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
 |요소|설명|
 |-------------|-----------------|
-|[View 요소 (Format)](./view-element-format.md)|하나 이상의 .NET 개체를 표시 하는 데 사용 되는 뷰를 정의 합니다.|
+|[View 요소(형식)](./view-element-format.md)|하나 이상의 .NET 개체를 표시 하는 데 사용 되는 뷰를 정의 합니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -55,8 +48,8 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ## <a name="see-also"></a>참고 항목
 
-[CustomControl에 대 한 CustomEntries 요소 (형식)](./customentries-element-for-customcontrol-for-view-format.md)
+[View의 CustomControl에 대한 CustomEntries 요소(형식)](./customentries-element-for-customcontrol-for-view-format.md)
 
-[View 요소 (Format)](./view-element-format.md)
+[View 요소(형식)](./view-element-format.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

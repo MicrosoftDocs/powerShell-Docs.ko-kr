@@ -1,21 +1,14 @@
 ---
 title: Windows PowerShell 참조 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows PowerShell SDK
-ms.assetid: cbba4879-bcac-484a-9906-4bbe2cd1eb33
-caps.latest.revision: 11
-ms.openlocfilehash: c00590df4d07e0f5ed9e93fd84a2780329753e39
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 1c1a3a4de2df2043fe12cad6a69b7bc36ab9d3d7
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870866"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786682"
 ---
 # <a name="windows-powershell-reference"></a>Windows PowerShell 참조
 

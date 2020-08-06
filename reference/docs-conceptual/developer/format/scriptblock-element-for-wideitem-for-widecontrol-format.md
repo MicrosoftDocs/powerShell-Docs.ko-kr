@@ -1,19 +1,12 @@
 ---
 title: WideControl (Format)의 WideItem에 대 한 ScriptBlock 요소 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: e00e8f36-76f2-49a0-9b02-3a2a7fceb2dd
-caps.latest.revision: 8
-ms.openlocfilehash: 6534e9dbfbe0dedf60dadd6467cff9ad9b447ba4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: be649d6de0d2dfa6bad14f2d7476cced9cd6cb6d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362032"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787600"
 ---
 # <a name="scriptblock-element-for-wideitem-for-widecontrol-format"></a>WideControl의 WideItem에 대한 ScriptBlock 요소(형식)
 
@@ -29,7 +22,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (form
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 `ScriptBlock` 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다 `ScriptBlock` .
 
 ### <a name="attributes"></a>특성
 
@@ -55,7 +48,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (form
 
 ## <a name="example"></a>예제
 
-이 예제에서는 값이 뷰에 표시 되는 스크립트를 정의 하는 `WideItem` 요소를 보여 줍니다.
+이 예제에서는 `WideItem` 값이 뷰에 표시 되는 스크립트를 정의 하는 요소를 보여 줍니다.
 
 ```xml
 <WideItem>
@@ -67,6 +60,6 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View Element (form
 
 [WideItem 요소 (Format)](./wideitem-element-for-widecontrol-format.md)
 
-[넓은 뷰 만들기](./creating-a-wide-view.md)
+[넓게 보기 만들기](./creating-a-wide-view.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

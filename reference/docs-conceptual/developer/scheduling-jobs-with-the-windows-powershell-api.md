@@ -1,13 +1,12 @@
 ---
 title: Windows PowerShell API를 사용하여 작업 예약
 ms.date: 09/13/2016
-ms.topic: article
-ms.openlocfilehash: 4e1d4ed6bffd858b92bf29b1dc6d8503454fafda
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 19962d3140b6e20164c378e63a317b888120e13b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359832"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786733"
 ---
 # <a name="scheduling-jobs-with-the-windows-powershell-api"></a>Windows PowerShell API를 사용하여 작업 예약
 
@@ -33,7 +32,7 @@ ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
 
 |매개 변수 이름|설명|
 |---|---|
-|Name|작업의 이름입니다.|
+|이름|작업의 이름입니다.|
 |ScriptBock|작업에서 수행 하는 작업을 지정 하는 Windows PowerShell 스크립트 블록입니다.|
 |FilePath|작업에서 수행 하는 작업을 지정 하는 Windows PowerShell 스크립트 블록을 포함 하는 파일에 대 한 경로입니다.|
 |또한 initializationscript|작업을 초기화 하는 Windows PowerShell 스크립트 블록입니다.|

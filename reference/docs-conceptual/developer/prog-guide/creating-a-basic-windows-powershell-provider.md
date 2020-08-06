@@ -1,22 +1,15 @@
 ---
 title: 기본 Windows PowerShell 공급자 만들기 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - base provider [PowerShell Programmer's Guide]
 - providers [PowerShell Programmer's Guide], base provider
-ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
-caps.latest.revision: 7
-ms.openlocfilehash: 0f8621cd22ca402f3a564ccdfb36c97da68dac6a
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 16cadb6099bb4f315bacda4aea617b89f9af5626
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978511"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787226"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>기본 Windows PowerShell 공급자 만들기
 
@@ -29,9 +22,9 @@ ms.locfileid: "80978511"
 
 ## <a name="defining-the-windows-powershell-provider-class"></a>Windows PowerShell 공급자 클래스 정의
 
-Windows PowerShell 공급자를 만드는 첫 번째 단계는 해당 .NET 클래스를 정의 하는 것입니다. 이 기본 공급자는 System.object 클래스를 정의 합니다 .이 클래스는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) 의 기본 클래스에서 파생 되는 `AccessDBProvider` 클래스를 정의 합니다.
+Windows PowerShell 공급자를 만드는 첫 번째 단계는 해당 .NET 클래스를 정의 하는 것입니다. 이 기본 공급자는 `AccessDBProvider` [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) 클래스에서 파생 되는 이라는 클래스를 정의 합니다.
 
-API 네임 스페이스의 `Providers` 네임 스페이스에 공급자 클래스를 추가 하는 것이 좋습니다 (예: xxx). PowerShell. 공급자. 이 공급자는 모든 Windows PowerShell 공급자 샘플이 실행 되는 `Microsoft.Samples.PowerShell.Provider` 네임 스페이스를 사용 합니다.
+`Providers`API 네임 스페이스 (예: xxx)의 네임 스페이스에 공급자 클래스를 추가 하는 것이 좋습니다. PowerShell. 공급자. 이 공급자는 `Microsoft.Samples.PowerShell.Provider` 모든 Windows PowerShell 공급자 샘플이 실행 되는 네임 스페이스를 사용 합니다.
 
 > [!NOTE]
 > Windows PowerShell 공급자에 대 한 클래스는 명시적으로 public으로 표시 되어야 합니다. Public으로 표시 되지 않은 클래스는 기본적으로 내부로 표시 되 고 Windows PowerShell 런타임에서 찾을 수 없습니다.
@@ -42,7 +35,7 @@ API 네임 스페이스의 `Providers` 네임 스페이스에 공급자 클래�
 
 클래스 정의 바로 앞에 [CmdletProvider ()] 구문을 사용 하 여 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 특성을 선언 해야 합니다.
 
-필요한 경우 특성 키워드를 설정 하 여 클래스를 추가로 선언할 수 있습니다. 여기에 선언 된 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 특성에는 두 개의 매개 변수가 포함 됩니다. 첫 번째 특성 매개 변수는 사용자가 나중에 수정할 수 있는 공급자의 기본 이름을 지정 합니다. 두 번째 매개 변수는 명령을 처리 하는 동안 공급자가 Windows PowerShell 런타임에 노출 하는 Windows PowerShell 정의 기능을 지정 합니다. 공급자 기능에 사용할 수 있는 값은 [system.web](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . x m m. 이 공급자는 기본 공급자 이므로 기능을 지원 하지 않습니다.
+필요한 경우 특성 키워드를 설정 하 여 클래스를 추가로 선언할 수 있습니다. 여기에 선언 된 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 특성에는 두 개의 매개 변수가 포함 됩니다. 첫 번째 특성 매개 변수는 사용자가 나중에 수정할 수 있는 공급자의 기본 이름을 지정 합니다. 두 번째 매개 변수는 명령을 처리 하는 동안 공급자가 Windows PowerShell 런타임에 노출 하는 Windows PowerShell 정의 기능을 지정 합니다. 공급자 기능에 사용할 수 있는 값은 [system.web](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) .. x m m. 이 공급자는 기본 공급자 이므로 기능을 지원 하지 않습니다.
 
 > [!NOTE]
 > Windows PowerShell 공급자의 정규화 된 이름에는 공급자를 등록할 때 Windows PowerShell에서 결정 한 어셈블리 이름 및 기타 특성이 포함 됩니다.
@@ -55,7 +48,7 @@ Windows PowerShell 공급자는 연결 기반 상태를 유지할 수도 있습�
 
 ## <a name="initializing-the-provider"></a>공급자 초기화
 
-Windows powershell이 시작 될 때 공급자를 초기화 하기 위해 Windows PowerShell 런타임에서는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) 를 호출 합니다. 대부분의 경우 공급자는이 메서드의 기본 구현을 사용할 수 있습니다 .이 메서드는 공급자를 설명 하는 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 개체를 반환 하기만 합니다. 그러나 추가 초기화 정보를 추가 하려는 경우에는 공급자에 전달 되는 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 개체의 수정 된 버전을 반환 하는 고유한 [system.web](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) . n a m a. i n a m. 일반적으로이 메서드는 전달 된 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 개체 또는 다른 초기화 정보를 포함 하는 수정 된 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 개체를 반환 해야 합니다.
+Windows powershell이 시작 될 때 공급자를 초기화 하기 위해 Windows PowerShell 런타임에서는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) 를 호출 합니다. 대부분의 경우 공급자는이 메서드의 기본 구현을 사용할 수 있습니다 .이 메서드는 공급자를 설명 하는 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 개체를 반환 하기만 합니다. 그러나 추가 초기화 정보를 추가 하려는 경우에는 공급자에 전달 되는 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 개체의 수정 된 버전을 반환 하는 고유한 [system.web](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) .. n a m a. i n a m. 일반적으로이 메서드는 전달 된 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 개체 또는 다른 초기화 정보를 포함 하는 수정 된 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 개체를 반환 해야 합니다.
 
 이 기본 공급자는이 메서드를 재정의 하지 않습니다. 그러나 다음 코드는이 메서드의 기본 구현을 보여 줍니다.
 
@@ -85,7 +78,7 @@ Windows PowerShell 공급자가 사용 하는 리소스를 해제 하려면 공�
 
 ## <a name="testing-the-windows-powershell-provider"></a>Windows PowerShell 공급자 테스트
 
-Windows powershell 공급자를 Windows PowerShell에 등록 한 후에는 명령줄에서 지원 되는 cmdlet을 실행 하 여 테스트할 수 있습니다. 이 기본 공급자의 경우 새 셸을 실행 하 고 `Get-PSProvider` cmdlet을 사용 하 여 공급자 목록을 검색 하 고 AccessDb 공급자가 있는지 확인 합니다.
+Windows powershell 공급자를 Windows PowerShell에 등록 한 후에는 명령줄에서 지원 되는 cmdlet을 실행 하 여 테스트할 수 있습니다. 이 기본 공급자의 경우 새 셸을 실행 하 고 cmdlet을 사용 `Get-PSProvider` 하 여 공급자 목록을 검색 하 고 AccessDb 공급자가 있는지 확인 합니다.
 
 ```powershell
 Get-PSProvider
@@ -108,4 +101,4 @@ Registry             ShouldProcess                 {HKLM, HKCU}
 
 [Windows PowerShell 공급자 만들기](./how-to-create-a-windows-powershell-provider.md)
 
-[Windows PowerShell 공급자 디자인](./designing-your-windows-powershell-provider.md)
+[Windows PowerShell 공급자 설계](./designing-your-windows-powershell-provider.md)

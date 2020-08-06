@@ -1,19 +1,12 @@
 ---
 title: 컨테이너 공급자 작성 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 524fd900-c0fe-4d13-87f2-14903a8fd5a4
-caps.latest.revision: 5
-ms.openlocfilehash: 48ab9102e8f1b17b3b533cc3b0aa1dacef0e2076
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: da91f18226d6e6c236c6a6e469db0f692af48abf
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366242"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786801"
 ---
 # <a name="writing-a-container-provider"></a>컨테이너 공급자 작성
 
@@ -28,7 +21,7 @@ Windows PowerShell 공급자에 대 한 자세한 내용은 [Windows Powershell 
 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 클래스는 컨테이너를 지원 하 고 항목을 만들고, 복사 하 고, 제거 하는 메서드를 구현 합니다. 이러한 메서드의 전체 목록을 보려면 [ContainerCmdletProvider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider?view=pscore-6.2.0#methods)를 참조 하십시오.
 
 > [!NOTE]
-> 이 항목은 [Windows PowerShell 공급자 빠른](./windows-powershell-provider-quickstart.md)시작의 정보를 기반으로 합니다. 이 항목에서는 공급자 프로젝트를 설정 하는 방법에 대 한 기본 사항을 다루지 않으며, 드라이브를 만들고 제거 하는 [system.web](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . c a c. 또한이 항목에서는 [system.object](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 에서 노출 하는 메서드를 구현 하는 방법에 대해서는 설명 하지 않습니다. 항목 cmdlet을 구현 하는 방법을 보여 주는 예제는 [항목 공급자 작성](./writing-an-item-provider.md)을 참조 하세요.
+> 이 항목은 [Windows PowerShell 공급자 빠른](./windows-powershell-provider-quickstart.md)시작의 정보를 기반으로 합니다. 이 항목에서는 공급자 프로젝트를 설정 하는 방법에 대 한 기본 사항을 다루지 않으며, 드라이브를 만들고 제거 하는 [system.web](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) .. c a c. 또한이 항목에서는 [system.object](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 에서 노출 하는 메서드를 구현 하는 방법에 대해서는 설명 하지 않습니다. 항목 cmdlet을 구현 하는 방법을 보여 주는 예제는 [항목 공급자 작성](./writing-an-item-provider.md)을 참조 하세요.
 
 ### <a name="declaring-the-provider-class"></a>공급자 클래스 선언
 

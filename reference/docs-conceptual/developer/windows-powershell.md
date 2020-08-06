@@ -1,13 +1,12 @@
 ---
 title: Windows PowerShell SDK
 ms.date: 09/13/2016
-ms.topic: article
-ms.openlocfilehash: 7627ab336ddc40ab47c3017eed77c78bbdac4e7f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0501f511499bc5de35fad5d7798f0d16e2d3b36b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366062"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786665"
 ---
 # <a name="windows-powershell"></a>Windows PowerShell
 

@@ -1,19 +1,12 @@
 ---
 title: Provider cmdlet 동적 매개 변수 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8f1069f7-8fa8-4622-9e2c-af29b0b961c2
-caps.latest.revision: 6
-ms.openlocfilehash: 9e70fbeaef61d04e66f16d06519742ff2f679df6
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 4aaa5ee39e98de9a9925fc65cac3cc6c32d9c2bc
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83564243"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786818"
 ---
 # <a name="provider-cmdlet-dynamic-parameters"></a>공급자 cmdlet 동적 매개 변수
 
@@ -89,7 +82,7 @@ Containercmdletprovider cmdlet을 구현 하 여 cmdlet의 및 매개 변수를 
 
 `New-ItemProperty`cmdlet `Path` `Name` `PropertyType` `Value` `New-ItemProperty` [Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.NewPropertyDynamicParameters) 을 구현 하 여 cmdlet의,, 및 매개 변수를 통해 트리거되는 동적 매개 변수를 정의할 수 있습니다.
 
-`New-PSDrive`cmdlet [PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) 개체에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다 .이 매개 변수는 cmdlet에서 반환 하는 `New-PSDrive` [Newdrivedynamicparameters *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) 메서드를 구현 합니다.
+`New-PSDrive`cmdlet [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) `New-PSDrive` [Newdrivedynamicparameters *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) 메서드를 구현 하 여 cmdlet에서 반환 하는System.Management.Automation.PSDriveinfo 개체에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다.
 
 `Remove-Item`Cmdlet의 및 매개 변수를 통해 트리거되는 동적 매개 변수는 `Path` `Recurse` `Remove-Item` [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters) 를 구현 하 여 정의할 수 있습니다.
 

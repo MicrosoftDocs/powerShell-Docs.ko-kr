@@ -1,19 +1,12 @@
 ---
 title: 작업을 지 원하는 방법 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 5eac452c-eae2-4193-b4da-0b618bef3677
-caps.latest.revision: 9
-ms.openlocfilehash: 65f6b3d44910a0a3e848b4d2cd3e619186e5ed25
-ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
+ms.openlocfilehash: 7ae4e6c118965c73ba6b3d4d38b1bd3171d2b3da
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77706243"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786631"
 ---
 # <a name="how-to-support-jobs"></a>작업을 지원하는 방법
 
@@ -21,7 +14,7 @@ ms.locfileid: "77706243"
 
 ## <a name="to-support-jobs"></a>작업을 지원 하려면
 
-1. 사용자가 cmdlet을 작업으로 실행할지 여부를 결정할 수 있도록 `AsJob` 스위치 매개 변수를 정의 합니다.
+1. `AsJob`사용자가 cmdlet을 작업으로 실행할지 여부를 결정할 수 있도록 스위치 매개 변수를 정의 합니다.
 
     다음 예제에서는 AsJob 매개 변수 선언을 보여 줍니다.
 
@@ -47,7 +40,7 @@ ms.locfileid: "77706243"
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06JobObject](msh_samplesGetProc06#GetProc06JobObject)]  -->
 
-3. 레코드 처리 방법에서 cmdlet을 작업으로 실행할지 여부를 검색 하는 `if` 문을 추가 합니다. 다음 코드는 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 사용 합니다.
+3. 레코드 처리 방법에서 `if` 문을 추가 하 여 cmdlet을 작업으로 실행할지 여부를 검색 합니다. 다음 코드는 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 사용 합니다.
 
     ```csharp
     protected override void ProcessRecord()

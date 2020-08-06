@@ -1,19 +1,12 @@
 ---
 title: GroupBy (형식)에 대 한 ScriptBlock 요소 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 30183927-6f0e-4717-b6f5-f07a6e134cfb
-caps.latest.revision: 6
-ms.openlocfilehash: 37a297228eb33ff75daf94a12635d42b52c6cc9f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e761e02a7910cd598449d564e827889162da9f25
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364932"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787685"
 ---
 # <a name="scriptblock-element-for-groupby-format"></a>GroupBy에 대한 ScriptBlock 요소(형식)
 
@@ -29,7 +22,7 @@ ms.locfileid: "72364932"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 `ScriptBlock` 요소의 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 요소의 부모 요소에 대해 설명 합니다 `ScriptBlock` .
 
 ### <a name="attributes"></a>특성
 
@@ -43,7 +36,7 @@ ms.locfileid: "72364932"
 
 |요소|설명|
 |-------------|-----------------|
-|[보기에 대 한 GroupBy 요소 (형식)](./groupby-element-for-view-format.md)|.NET 개체 그룹이 표시 되는 방법을 정의 합니다.|
+|[View에 대한 GroupBy 요소(형식)](./groupby-element-for-view-format.md)|.NET 개체 그룹이 표시 되는 방법을 정의 합니다.|
 
 ## <a name="text-value"></a>텍스트 값
 
@@ -57,8 +50,8 @@ PowerShell은이 스크립트의 값이 변경 될 때마다 새 그룹을 시�
 
 ## <a name="see-also"></a>참고 항목
 
-[GroupBy (형식)에 대 한 PropertyName 요소](propertyname-element-for-groupby-format.md)
+[GroupBy에 대한 PropertyName 요소(형식)](propertyname-element-for-groupby-format.md)
 
-[보기에 대 한 GroupBy 요소 (형식)](groupby-element-for-view-format.md)
+[View에 대한 GroupBy 요소(형식)](groupby-element-for-view-format.md)
 
-[PowerShell 서식 파일 작성](writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](writing-a-powershell-formatting-file.md)

@@ -1,13 +1,12 @@
 ---
 title: 확장 형식 시스템 형식 변환기
 ms.date: 07/09/2020
-ms.topic: conceptual
-ms.openlocfilehash: f709a64febe68733b79ed8af804714d3f3ddeaac
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+ms.openlocfilehash: 0d04293fffde9901ed2e33a9bab21e6612ce9cd5
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217975"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786189"
 ---
 # <a name="ets-type-converters"></a>형식 변환기
 
@@ -19,7 +18,7 @@ ms.locfileid: "86217975"
 
 | From (valueToConvert) |  대상 (resultType)  |                                                                               반환                                                                               |
 | --------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Null                  | 문자열            | ""                                                                                                                                                                  |
+| Null                  | String            | ""                                                                                                                                                                  |
 | Null                  | Char              | '\0'                                                                                                                                                                |
 | Null                  | 숫자           | `0`**resultType** 매개 변수에 지정 된 형식의입니다.                                                                                                          |
 | Null                  | 부울           | 메서드에 대 한 호출의 결과입니다 `IsTrue(System.Object)(Null)` .                                                                                                        |
@@ -28,16 +27,16 @@ ms.locfileid: "86217975"
 | Null                  | Nullable &lt; T&gt; | N.                                                                                                                                                               |
 | 파생 클래스         | 기본 클래스        | **valueToConvert**                                                                                                                                                  |
 | 방해가              | Void              | **AutomationNull. 값**                                                                                                                                            |
-| 방해가              | 문자열            | `ToString`메커니즘을 호출 합니다.                                                                                                                                         |
+| 방해가              | String            | `ToString`메커니즘을 호출 합니다.                                                                                                                                         |
 | 방해가              | 부울           | `IsTrue(System.Object) (valueToConvert)`                                                                                                                            |
 | 방해가              | PSObject          | 메서드에 대 한 호출의 결과입니다 `AsPSObject(System.Object) (valueToConvert)` .                                                                                         |
 | 방해가              | Xml 문서      | **Valuetoconvert** 를 문자열로 변환 하 고 **XMLDocument** 생성자를 호출 합니다.                                                                                      |
-| 배열                 | 배열             | 배열의 각 요소를 변환 하려고 시도 합니다.                                                                                                                      |
-| Singleton             | 배열             | `Array[0]`배열의 요소 형식으로 변환 **되는 요소 형식으로 변환** 됩니다.                                                                            |
+| Array                 | Array             | 배열의 각 요소를 변환 하려고 시도 합니다.                                                                                                                      |
+| Singleton             | Array             | `Array[0]`배열의 요소 형식으로 변환 **되는 요소 형식으로 변환** 됩니다.                                                                            |
 | IDictionary           | 해시 테이블        | Hashtable (valueToConvert) 호출의 결과입니다.                                                                                                                       |
-| 문자열                | Char[]            | `valueToConvert.ToCharArray`                                                                                                                                        |
-| 문자열                | RegEx             | 에 대 한 호출의 결과입니다 `Regx(valueToConvert)` .                                                                                                                          |
-| 문자열                | 형식              | **RunspaceConfiguration**를 검색 하기 위해 **valuetoconvert** 매개 변수를 사용 하 여 적절 한 형식을 반환 합니다.                                                 |
+| String                | Char[]            | `valueToConvert.ToCharArray`                                                                                                                                        |
+| String                | RegEx             | 에 대 한 호출의 결과입니다 `Regx(valueToConvert)` .                                                                                                                          |
+| String                | 형식              | **RunspaceConfiguration**를 검색 하기 위해 **valuetoconvert** 매개 변수를 사용 하 여 적절 한 형식을 반환 합니다.                                                 |
 | String                | 숫자           | **Valuetoconvert** 가 "" 인 경우 resultType을 반환 합니다 `0` . **resultType** 그렇지 않으면 문화권 "문화권 고정"을 사용 하 여 숫자 값을 생성 합니다.                       |
 | 정수               | System.Enum       | 열거형에서 정수를 정의한 경우 정수를 상수로 변환 합니다. 정수가 정의 되지 않은 경우 **PSInvalidCastException** 예외가 throw 됩니다. |
 
