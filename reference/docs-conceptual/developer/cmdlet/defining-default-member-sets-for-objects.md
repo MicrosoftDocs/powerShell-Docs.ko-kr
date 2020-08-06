@@ -1,19 +1,12 @@
 ---
 title: 개체에 대 한 기본 멤버 집합 정의 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 77f94326-8ffe-4d40-bd2a-b79fb0b4a4e5
-caps.latest.revision: 8
-ms.openlocfilehash: 2d634e7638ec0e0117d65ca0b2d08e68f0068a03
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 80e1f54890d3aac1702414699ead16fcf38271e1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369782"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774629"
 ---
 # <a name="defining-default-member-sets-for-objects"></a>개체에 대한 기본 멤버 집합 정의
 
@@ -43,7 +36,7 @@ PSStandardMembers 멤버 집합은 Windows PowerShell에서 개체에 대 한 �
   </MemberSet>
 ```
 
-다음 출력은 [Format-List](/powershell/module/Microsoft.PowerShell.Utility/Format-List) cmdlet에서 반환 되는 기본 속성을 보여 줍니다. 각 프로세스 개체에 대해 `Id`, `Handles`, `CPU`및 `Name` 속성만 반환 됩니다.
+다음 출력은 [Format-List](/powershell/module/Microsoft.PowerShell.Utility/Format-List) cmdlet에서 반환 되는 기본 속성을 보여 줍니다. `Id` `Handles` `CPU` `Name` 각 프로세스 개체에 대해,, 및 속성만 반환 됩니다.
 
 ```powershell
 Get-Process | format-list
@@ -64,4 +57,4 @@ Name    : agrsmsvc
 
 ## <a name="see-also"></a>참고 항목
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

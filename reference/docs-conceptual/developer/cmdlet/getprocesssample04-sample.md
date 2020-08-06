@@ -1,23 +1,16 @@
 ---
 title: GetProcessSample04 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: aa2aa4c4-3457-4601-806a-801afe3dcc80
-caps.latest.revision: 6
-ms.openlocfilehash: 095bebf868efd00f8eeaec979a5606f140714cb1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4858c44302f7315625be02dd0dc1d335b9c3f158
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365712"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774425"
 ---
 # <a name="getprocesssample04-sample"></a>GetProcessSample04 샘플
 
-이 샘플에서는 로컬 컴퓨터의 프로세스를 검색 하는 cmdlet을 구현 하는 방법을 보여 줍니다. 프로세스를 검색 하는 동안 오류가 발생 하는 경우 종료 되지 않는 오류를 생성 합니다. 이 cmdlet은 Windows PowerShell 2.0에서 제공 하는 `Get-Process` cmdlet의 단순화 된 버전입니다.
+이 샘플에서는 로컬 컴퓨터의 프로세스를 검색 하는 cmdlet을 구현 하는 방법을 보여 줍니다. 프로세스를 검색 하는 동안 오류가 발생 하는 경우 종료 되지 않는 오류를 생성 합니다. 이 cmdlet은 `Get-Process` Windows PowerShell 2.0에서 제공 되는 cmdlet의 단순화 된 버전입니다.
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.
 
@@ -164,4 +157,4 @@ namespace Microsoft.Samples.PowerShell.Commands
 
 ## <a name="see-also"></a>참고 항목
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

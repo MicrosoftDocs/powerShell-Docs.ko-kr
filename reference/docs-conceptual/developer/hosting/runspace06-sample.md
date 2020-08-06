@@ -1,23 +1,16 @@
 ---
 title: Runspace06 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 471c85f3-9287-45c2-b4bc-833caa1b7634
-caps.latest.revision: 8
-ms.openlocfilehash: 49a938a5acd7817476b299deea465771b6a94985
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: c16324c61ee3c7123777294952999f75b2f7aef2
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563676"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771994"
 ---
 # <a name="runspace06-sample"></a>Runspace06 샘플
 
-이 샘플에서는 [runspace](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체에 모듈을 추가 하 여 runspace를 열 때 모듈이 로드 되도록 하는 방법을 보여 줍니다. 이 모듈은 GetProcessSample02 개체를 사용 하 여 동기적으로 실행 되는 Get Proc cmdlet ( [샘플](../cmdlet/getprocesssample02-sample.md)에서 정의 됨)을 제공 [합니다.](/dotnet/api/system.management.automation.powershell)
+이 샘플에서는 runspace를 열 때 모듈이 로드 되도록 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체에 모듈을 추가 하는 방법을 보여 줍니다. 이 모듈은 GetProcessSample02 개체를 사용 하 여 동기적으로 실행 되는 Get Proc cmdlet ( [샘플](../cmdlet/getprocesssample02-sample.md)에서 정의 됨)을 제공 [합니다.](/dotnet/api/system.management.automation.powershell)
 
 ## <a name="requirements"></a>요구 사항
 
@@ -27,11 +20,11 @@ ms.locfileid: "83563676"
 
 이 샘플에서는 다음을 보여 줍니다.
 
-- [Runspace Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 만듭니다.
+- [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 만듭니다.
 
-- [Runspace Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체에 모듈을 추가 합니다.
+- [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체에 모듈을 추가 합니다.
 
-- Initialsessionstate 개체를 사용 하는 [runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) 개체 만들기. [runspace](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 사용 합니다.
+- [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 사용 하는 [runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) 개체를 만듭니다.
 
 - Runspace를 사용 하는 [system.web. Powershell](/dotnet/api/system.management.automation.powershell) 개체를 만듭니다.
 
@@ -43,7 +36,7 @@ ms.locfileid: "83563676"
 
 ## <a name="example"></a>예제
 
-이 샘플은 Initialsessionstate 개체를 사용 하 여 runspace를 열 때 사용할 수 있는 요소를 정의 하는 runspace를 만듭니다 [runspace](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) . 이 샘플에서는 Get Proc cmdlet을 정의 하는 모듈이 초기 세션 상태에 추가 됩니다.
+이 샘플에서는 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 사용 하 여 runspace를 열 때 사용할 수 있는 요소를 정의 하는 runspace를 만듭니다. 이 샘플에서는 Get Proc cmdlet을 정의 하는 모듈이 초기 세션 상태에 추가 됩니다.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces

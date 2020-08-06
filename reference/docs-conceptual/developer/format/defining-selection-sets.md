@@ -1,23 +1,16 @@
 ---
 title: 선택 집합 정의 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 00dbb5ee-93d4-4914-a082-ef4d8b236b5c
-caps.latest.revision: 16
-ms.openlocfilehash: 95eeb037b3b9190fec1212a68029624993f3fd9f
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 58c812b69f92c33304bf7fc7b2891cc2a0227918
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692288"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774306"
 ---
 # <a name="defining-selection-sets"></a>선택 영역 집합 정의
 
-여러 뷰와 컨트롤을 만들 때 선택 집합으로 참조 되는 개체 집합을 정의할 수 있습니다. 선택 집합을 사용 하면 각 뷰나 컨트롤에 대해 반복적으로 정의 하지 않고도 개체를 한 번 정의할 수 있습니다. 일반적으로 선택 집합은 관련 된 .NET 개체 집합이 있는 경우 사용 됩니다. 예를 들어 형식 `FileSystem` 지정 파일 (types.ps1xml)은 여러 뷰에서 사용 하는 파일 시스템 형식의 선택 집합을 정의 합니다.
+여러 뷰와 컨트롤을 만들 때 선택 집합으로 참조 되는 개체 집합을 정의할 수 있습니다. 선택 집합을 사용 하면 각 뷰나 컨트롤에 대해 반복적으로 정의 하지 않고도 개체를 한 번 정의할 수 있습니다. 일반적으로 선택 집합은 관련 된 .NET 개체 집합이 있는 경우 사용 됩니다. 예를 들어 `FileSystem` 형식 지정 파일 (FileSystem.format.ps1xml)은 여러 보기에서 사용 하는 파일 시스템 형식의 선택 집합을 정의 합니다.
 
 ## <a name="where-selection-sets-are-defined-and-referenced"></a>선택 집합이 정의 되 고 참조 되는 위치
 
@@ -140,7 +133,7 @@ ms.locfileid: "83692288"
 
 [이름](./name-element-for-selectionset-format.md)
 
-[유형](./types-element-for-selectionset-format.md)
+[형식](./types-element-for-selectionset-format.md)
 
 [PowerShell 형식 지정 파일](./powershell-formatting-files.md)
 

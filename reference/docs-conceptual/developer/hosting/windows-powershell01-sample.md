@@ -1,23 +1,16 @@
 ---
 title: Windows PowerShell01 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f607a5ad-5372-4392-b2dc-ef3532fabd0f
-caps.latest.revision: 9
-ms.openlocfilehash: c82f0a123c190c778166e3648b46e97e6257a2b6
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 6e799f35c0c5e3820c6471b49c8b0d8c47b1c6b2
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83561004"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771943"
 ---
 # <a name="windows-powershell01-sample"></a>Windows PowerShell01 샘플
 
-이 샘플에서는 [Runspace Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 사용 하 여 runspace의 기능을 제한 하는 방법을 보여 줍니다. 이 샘플의 출력에서는 runspace의 언어 모드를 제한 하는 방법, cmdlet을 비공개로 표시 하는 방법, cmdlet 및 공급자를 추가 및 제거 하는 방법, 프록시 명령을 추가 하는 방법 등을 보여 줍니다. 이 샘플에서는 프로그래밍 방식으로 runspace를 제한 하는 방법을 집중적으로 설명 합니다. Runspace를 제한 하는 스크립팅 대안에는 $ExecutionContext SessionState LanguageMode 및 Register-pssessionconfiguration 명령이 포함 됩니다.
+이 샘플에서는 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 사용 하 여 runspace의 기능을 제한 하는 방법을 보여 줍니다. 이 샘플의 출력에서는 runspace의 언어 모드를 제한 하는 방법, cmdlet을 비공개로 표시 하는 방법, cmdlet 및 공급자를 추가 및 제거 하는 방법, 프록시 명령을 추가 하는 방법 등을 보여 줍니다. 이 샘플에서는 프로그래밍 방식으로 runspace를 제한 하는 방법을 집중적으로 설명 합니다. Runspace를 제한 하는 스크립팅 대안에는 $ExecutionContext SessionState LanguageMode 및 Register-pssessionconfiguration 명령이 포함 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -27,17 +20,17 @@ ms.locfileid: "83561004"
 
 이 샘플은 다음을 보여 줍니다.
 
-- [Runspace. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) 속성을 설정 하 여 언어를 제한 합니다.
+- System.Management.Automation.Runspaces.Initialsessionstate를 설정 하 여 언어를 제한 [합니다. Languagemode](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) 속성입니다.
 
 - Runspace를 사용 하 여 초기 세션 상태에 별칭을 추가 하는 중입니다. [Sessionstatealiasentry? Displayproperty = Fullname](/dotnet/api/System.Management.Automation.Runspaces.SessionStateAliasEntry) 개체입니다.
 
 - 명령을 비공개로 표시 합니다.
 
-- [Runspace. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) 속성을 사용 하 여 초기 세션 상태에서 공급자를 제거 합니다.
+- System.Management.Automation.Runspaces.Initialsessionstate를 사용 하 여 초기 세션 상태에서 공급자를 제거 [합니다. Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) 속성입니다.
 
-- [Runspace. Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands) 속성을 사용 하 여 초기 세션 상태에서 명령을 제거 합니다.
+- [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands) 속성을 사용 하 여 초기 세션 상태에서 명령을 제거 합니다.
 
-- [Runspace Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체에 명령 및 공급자를 추가 합니다.
+- [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체에 명령 및 공급자를 추가 합니다.
 
 ## <a name="example"></a>예제
 

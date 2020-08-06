@@ -1,19 +1,12 @@
 ---
 title: 백그라운드 작업 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a0ef5ac9-8254-4832-ace8-84b356c10f08
-caps.latest.revision: 13
-ms.openlocfilehash: ff4fe159eedc47fc69f4d783cd90d2b0e888c0d5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2a1297b8dfe087474564078cca2a5a0526ed0f36
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363562"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774850"
 ---
 # <a name="background-jobs"></a>백그라운드 작업
 
@@ -35,11 +28,11 @@ Cmdlet은 내부적으로 또는 Windows PowerShell*백그라운드 작업*으�
 
 백그라운드 작업으로 실행할 수 있는 cmdlet을 작성 하려면 다음 작업을 완료 해야 합니다.
 
-- 사용자가 cmdlet을 백그라운드 작업으로 실행할지 여부를 결정할 수 있도록 `asJob` 스위치 매개 변수를 정의 합니다.
+- `asJob`사용자가 cmdlet을 백그라운드 작업으로 실행할지 여부를 결정할 수 있도록 switch 매개 변수를 정의 합니다.
 
 - [System.object](/dotnet/api/System.Management.Automation.Job) 클래스에서 파생 되는 개체를 만듭니다. 이 개체는 사용자 지정 작업 개체 이거나 Windows PowerShell에서 제공 하는 작업 개체 (예: [Pseventjob](/dotnet/api/System.Management.Automation.PSEventJob) 개체) 일 수 있습니다.
 
-- 레코드 처리 방법에서 cmdlet을 백그라운드 작업으로 실행할지 여부를 검색 하는 `if` 문을 추가 합니다.
+- 레코드 처리 방법에서 `if` cmdlet을 백그라운드 작업으로 실행할지 여부를 검색 하는 문을 추가 합니다.
 
 - 사용자 지정 작업 개체의 경우 작업 클래스를 구현 합니다.
 
@@ -91,4 +84,4 @@ Windows PowerShell 백그라운드 작업을 중지합니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

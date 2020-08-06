@@ -1,19 +1,12 @@
 ---
 title: 형식에 대 한 TypeName 요소 (형식) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0595b99e-b438-4240-b47b-555cf0316f33
-caps.latest.revision: 15
-ms.openlocfilehash: bd5baa03c2050b2c3bbe1d7697c253d923175d39
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 40fad73c66124d6c3b0d969b4268713a492c963a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368032"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772538"
 ---
 # <a name="typename-element-for-types-format"></a>Types에 대한 TypeName 요소(형식)
 
@@ -29,7 +22,7 @@ Configuration 요소 (Format) SelectionSets 요소 (Format) Selectionsets 요소
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 `TypeName` 요소의 부모 요소에 대해 설명 합니다. 하나 이상의 `TypeName` 요소가 선택 집합에 포함 되어야 합니다.
+다음 섹션에서는 요소의 특성, 자식 요소 및 부모 요소에 대해 설명 합니다 `TypeName` . 하나 이상의 `TypeName` 요소가 선택 집합에 포함 되어야 합니다.
 
 ### <a name="attributes"></a>특성
 
@@ -53,11 +46,11 @@ Configuration 요소 (Format) SelectionSets 요소 (Format) Selectionsets 요소
 
 상속을 통해 관련 된 개체 집합과 같이 단일 이름을 사용 하 여 참조 하려는 관련 개체 집합이 있는 경우 선택 집합을 사용할 수 있습니다. 뷰를 정의할 때 각 보기 내에 모든 개체를 나열 하는 대신 선택 집합의 이름을 사용 하 여 개체 집합을 지정할 수 있습니다.
 
-일반 선택 집합은 형식 지정 파일의 뷰를 정의할 때 이름으로 지정 됩니다. 이러한 경우 뷰에 대 한 `ViewSelectedBy` 요소의 `SelectionSetName` 자식 요소는 집합을 지정 합니다. 그러나 뷰의 다른 항목은 뷰의 해당 항목에만 적용 되는 선택 집합을 지정할 수도 있습니다. 선택 집합에 대 한 자세한 내용은 [개체 집합 정의](./defining-selection-sets.md)를 참조 하세요.
+일반 선택 집합은 형식 지정 파일의 뷰를 정의할 때 이름으로 지정 됩니다. 이러한 경우 `SelectionSetName` 뷰에서 요소의 자식 요소는 집합을 `ViewSelectedBy` 지정 합니다. 그러나 뷰의 다른 항목은 뷰의 해당 항목에만 적용 되는 선택 집합을 지정할 수도 있습니다. 선택 집합에 대 한 자세한 내용은 [개체 집합 정의](./defining-selection-sets.md)를 참조 하세요.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 네 가지 .NET 형식을 정의 하는 `SelectionSet` 요소를 보여 줍니다.
+다음 예제에서는 `SelectionSet` 네 가지 .net 형식을 정의 하는 요소를 보여 줍니다.
 
 ```
 <SelectionSets>
@@ -75,12 +68,12 @@ Configuration 요소 (Format) SelectionSets 요소 (Format) Selectionsets 요소
 
 ## <a name="see-also"></a>참고 항목
 
-[선택 집합 정의](./defining-selection-sets.md)
+[선택 영역 집합 정의](./defining-selection-sets.md)
 
-[SelectionSet 요소 (형식)](./selectionset-element-format.md)
+[SelectionSet 요소(형식)](./selectionset-element-format.md)
 
-[SelectionSets 요소 (형식)](./selectionsets-element-format.md)
+[SelectionSets 요소(형식)](./selectionsets-element-format.md)
 
 [Types 요소 (Format)](./types-element-for-selectionset-format.md)
 
-[Windows PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[Windows PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

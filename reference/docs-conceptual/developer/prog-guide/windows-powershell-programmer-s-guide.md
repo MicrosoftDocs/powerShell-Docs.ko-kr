@@ -1,23 +1,16 @@
 ---
-title: Windows PowerShell 프로그래머&#39;가이드 | Microsoft Docs
-ms.custom: ''
+title: Windows PowerShell 프로그래머&#39;s 가이드 | Microsoft Docs
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows PowerShell Programmer's Guide
-ms.assetid: f3aaf667-af84-4ea8-a5ad-d454d0d700b8
-caps.latest.revision: 9
-ms.openlocfilehash: f8cbaf464345b8f2b693e72f3dbe781a47605b28
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 64feb66b8e42ab12b279025ebe6c86d7f91ecae5
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417784"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771569"
 ---
-# <a name="windows-powershell-programmer39s-guide"></a>Windows PowerShell 프로그래머&#39;가이드
+# <a name="windows-powershell-programmer39s-guide"></a>Windows PowerShell 프로그래머&#39;s 가이드
 
 이 프로그래머 가이드는 시스템 관리자를 위한 명령줄 관리 환경을 제공 하는 데 관심이 있는 개발자를 대상으로 합니다. Windows PowerShell은 Windows PowerShell에서 대부분의 작업을 수행할 수 있도록 하는 동시에 .NET 개체를 노출 하는 관리 명령을 빌드하는 간단한 방법을 제공 합니다.
 
@@ -37,9 +30,9 @@ ms.locfileid: "74417784"
 
 Windows PowerShell은 개발에 사용할 수 있는 여러 가지 유형의 명령을 정의 합니다. 이러한 명령에는 함수, 필터, 스크립트, 별칭 및 실행 파일 (응용 프로그램)이 포함 됩니다. 이 가이드에서 설명 하는 기본 명령 유형은 "cmdlet" 이라는 간단한 작은 명령입니다. Windows PowerShell은 cmdlet 집합을 furnishes 하 고 사용자 환경에 맞게 cmdlet 사용자 지정을 완벽 하 게 지원 합니다. Windows PowerShell 런타임은 파이프라인을 사용 하 여 cmdlet과 마찬가지로 모든 명령 유형을 처리 합니다.
 
-명령 외에도 Windows PowerShell은 특정 cmdlet 집합을 사용할 수 있도록 하는 다양 한 사용자 지정 가능 Windows PowerShell 공급자를 지원 합니다. Shell은 Windows PowerShell에서 제공 하는 호스트 응용 프로그램 (Windows PowerShell .exe) 내에서 작동 하지만 특정 요구 사항을 충족 하기 위해 개발할 수 있는 사용자 지정 호스트 응용 프로그램 에서도 동일 하 게 액세스할 수 있습니다. 자세한 내용은 [Windows PowerShell의 작동 방식](/previous-versions//ms714658(v=vs.85))을 참조 하세요.
+명령 외에도 Windows PowerShell은 특정 cmdlet 집합을 사용할 수 있도록 하는 다양 한 사용자 지정 가능 Windows PowerShell 공급자를 지원 합니다. Shell은 Windows PowerShell에서 제공 하는 호스트 응용 프로그램 (Windows PowerShell.exe) 내에서 작동 하지만 특정 요구 사항을 충족 하기 위해 개발할 수 있는 사용자 지정 호스트 응용 프로그램 에서도 동일 하 게 액세스할 수 있습니다. 자세한 내용은 [Windows PowerShell의 작동 방식](/previous-versions//ms714658(v=vs.85))을 참조 하세요.
 
-### <a name="windows-powershell-cmdlets"></a>Windows PowerShell Cmdlet
+### <a name="windows-powershell-cmdlets"></a>Windows PowerShell cmdlet
 
 Cmdlet은 Windows PowerShell 환경에서 사용 되는 간단한 명령입니다. Windows powershell 런타임은 명령줄에서 제공 되는 자동화 스크립트의 컨텍스트 내에서 이러한 cmdlet을 호출 하 고 windows powershell 런타임은 Windows PowerShell Api를 통해 프로그래밍 방식으로 호출 합니다.
 
@@ -55,7 +48,7 @@ Windows PowerShell은 몇 가지 기본 Windows PowerShell 공급자를 제공 �
 
 ### <a name="host-application"></a>호스트 응용 프로그램
 
-Windows PowerShell에는 사용자와 상호 작용 하 고 콘솔 창을 사용 하 여 Windows PowerShell 런타임을 호스트 하는 콘솔 응용 프로그램에 해당 하는 기본 호스트 응용 프로그램 wsdl.exe가 포함 되어 있습니다.
+Windows PowerShell에는 사용자와 상호 작용 하 고 콘솔 창을 사용 하 여 Windows PowerShell 런타임을 호스트 하는 콘솔 응용 프로그램 powershell.exe 기본 호스트 응용 프로그램이 포함 되어 있습니다.
 
 사용자 지정이 지원 되기는 하지만 Windows PowerShell에 대 한 고유한 호스트 응용 프로그램을 작성 해야 하는 경우는 거의 없습니다. 사용자 고유의 응용 프로그램이 필요할 수 있는 한 가지 경우는 기본 호스트 응용 프로그램에서 제공 하는 인터페이스 보다 풍부한 GUI 인터페이스를 요구 하는 경우입니다. 명령줄에서 GUI를 기반으로 하는 경우 사용자 지정 응용 프로그램을 사용할 수도 있습니다. 자세한 내용은 [Windows PowerShell 호스트 응용 프로그램을 만드는 방법](/powershell/scripting/developer/hosting/writing-a-windows-powershell-host-application)을 참조 하세요.
 
@@ -79,7 +72,7 @@ Windows PowerShell은 .NET 및 XML 개체와 같은 다양 한 개체에 대 한
 
 - 사용자 지정 개체 작성
 
-  사용자를 사용 하 여 Windows PowerShell 언어와 호환 되는 유연한 새 "형식"을 만들 수 있습니다. .NET 개발자 인 경우 스크립트에 적용 되는 것과 같은 의미 체계를 사용 하 여 개체 작업을 수행할 수 있습니다. 예를 들어, 개체가 `true`로 평가 되는지 확인 합니다.
+  사용자를 사용 하 여 Windows PowerShell 언어와 호환 되는 유연한 새 "형식"을 만들 수 있습니다. .NET 개발자 인 경우 스크립트에 적용 되는 것과 같은 의미 체계를 사용 하 여 개체를 사용할 수 있습니다. 예를 들어 개체가로 평가 되는지 여부를 확인할 수 있습니다 `true` .
 
   추가 정보 및 Windows PowerShell에서 개체를 사용 하는 방법에 대 한 자세한 내용은 [Windows Powershell 개체 개념](/powershell/scripting/learn/understanding-important-powershell-concepts?view=powershell-6)을 참조 하십시오.
 

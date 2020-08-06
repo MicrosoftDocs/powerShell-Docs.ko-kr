@@ -1,19 +1,12 @@
 ---
 title: Runspace02 (VB.NET) 코드 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 9bd9d599-faa7-4154-ac36-1f35ccf8e320
-caps.latest.revision: 7
-ms.openlocfilehash: 38e022012bc5302fb28cd2e3d9f3a8d2859d72f6
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 922d1e8568dad8c02f77e4b76342418bb3b54469
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83559882"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771654"
 ---
 # <a name="runspace02-vbnet-code-sample"></a>Runspace02(VB.NET) 코드 샘플
 

@@ -1,25 +1,18 @@
 ---
 title: TableControl (형식)에 대 한 EntrySelectedBy의 SelectionSetName 요소 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 5dd0bd5d-f206-4cc6-a0f8-70700ee2c4b7
-caps.latest.revision: 8
-ms.openlocfilehash: 819906127e81355c45103ede85ef3608e1c1cfeb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e68aa74b201abf345e87411db6cb2787ddd4f72b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368322"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772691"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-tablecontrol-format"></a>TableControl의 EntrySelectedBy에 대한 SelectionSetName 요소(형식)
 
 테이블 뷰의이 항목을 사용 하는 .NET 형식 집합을 지정 합니다. 항목에 지정할 수 있는 선택 집합 수에는 제한이 없습니다.
 
-Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (format) TableControl Element (format) TableRowEntries Element (format) TableRowEntry Element (format) EntrySelectedBy 요소 (format) SelectionSetName 요소 TableRowEntry에 대 한 EntrySelectedBy (형식)
+Configuration 요소 (Format) ViewDefinitions 요소 (format) TableControl Element (format) TableRowEntries Element (format) TableRowEntry Element (format) EntrySelectedBy 요소 (format) SelectionSetName 요소에 대 한 EntrySelectedBy TableRowEntry (형식)
 
 ## <a name="syntax"></a>구문
 
@@ -63,6 +56,6 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 [보기에 대 한 개체 집합 정의](./defining-selection-sets.md)
 
-[테이블 뷰 만들기](./creating-a-table-view.md)
+[테이블 보기 만들기](./creating-a-table-view.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

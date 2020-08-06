@@ -1,19 +1,12 @@
 ---
 title: 공급자 cmdlet | Microsoft Docs
-ms.custom: ''
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d2465420-0970-4408-9ee5-260cf444cb67
-caps.latest.revision: 8
-ms.openlocfilehash: b266a22e3ab16762b22e9d630b968ee510ff1c49
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 24838eeec8e2d59ff3cc549c8659d5afb1c8f92f
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83564192"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771688"
 ---
 # <a name="provider-cmdlets"></a>공급자 cmdlet
 

@@ -1,19 +1,12 @@
 ---
 title: Provider cmdlet 매개 변수 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b3d09eaa-924f-4e2b-adfb-14bb729090dd
-caps.latest.revision: 8
-ms.openlocfilehash: 8ce13032a55d164121a073ef94086dc1de09b902
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 04ce4f3dc2b4549b0ff0f0b7e92a4d2b4f383996
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83564209"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771603"
 ---
 # <a name="provider-cmdlet-parameters"></a>공급자 cmdlet 매개 변수
 

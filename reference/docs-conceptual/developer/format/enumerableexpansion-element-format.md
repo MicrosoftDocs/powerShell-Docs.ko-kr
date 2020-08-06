@@ -1,19 +1,12 @@
 ---
 title: EnumerableExpansion 요소 (형식) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 93d27173-9ae4-46e5-bb78-90525915cd70
-caps.latest.revision: 9
-ms.openlocfilehash: bc1e58c00ca8419f9204076f0a46050281e704db
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 81a8959c19502a2e56f4cfa48a1e480509d84b6e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368752"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774051"
 ---
 # <a name="enumerableexpansion-element-format"></a>EnumerableExpansion 요소(형식)
 
@@ -32,7 +25,7 @@ Configuration 요소 (Format) DefaultSettings 요소 (Format) EnumerableExpansio
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 `EnumerableExpansion` 요소의 부모 요소에 대해 설명 합니다.
+다음 섹션에서는 특성, 자식 요소 및 요소의 부모 요소에 대해 설명 합니다 `EnumerableExpansion` .
 
 ### <a name="attributes"></a>특성
 
@@ -42,14 +35,14 @@ Configuration 요소 (Format) DefaultSettings 요소 (Format) EnumerableExpansio
 
 |요소|설명|
 |-------------|-----------------|
-|[EnumerableExpansion (형식)에 대 한 EntrySelectedBy 요소](./entryselectedby-element-for-enumerableexpansion-format.md)|선택적 요소입니다.<br /><br /> 이 정의에 의해 확장 되는 .NET 컬렉션 개체를 정의 합니다.|
-|[Expand 요소 (Format)](./expand-element-format.md)|이 정의에 대해 컬렉션 개체를 확장 하는 방법을 지정 합니다.|
+|[EnumerableExpansion에 대한 EntrySelectedBy 요소(형식)](./entryselectedby-element-for-enumerableexpansion-format.md)|선택적 요소입니다.<br /><br /> 이 정의에 의해 확장 되는 .NET 컬렉션 개체를 정의 합니다.|
+|[Expand 요소(형식)](./expand-element-format.md)|이 정의에 대해 컬렉션 개체를 확장 하는 방법을 지정 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
 |요소|설명|
 |-------------|-----------------|
-|[EnumerableExpansions 요소 (형식)](./enumerableexpansions-element-format.md)|.NET 컬렉션 개체가 뷰에 표시 될 때 확장 되는 다양 한 방법을 정의 합니다.|
+|[EnumerableExpansions 요소(형식)](./enumerableexpansions-element-format.md)|.NET 컬렉션 개체가 뷰에 표시 될 때 확장 되는 다양 한 방법을 정의 합니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -59,4 +52,4 @@ Configuration 요소 (Format) DefaultSettings 요소 (Format) EnumerableExpansio
 
 ## <a name="see-also"></a>참고 항목
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

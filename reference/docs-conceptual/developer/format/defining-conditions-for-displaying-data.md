@@ -1,19 +1,12 @@
 ---
 title: 데이터 표시 조건 정의 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: c1e05821-6aec-437b-84a5-218a5727f88b
-caps.latest.revision: 10
-ms.openlocfilehash: 6036f30816e253b3f0c40c6b916279d0643acdb8
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 13de078e681708b02e378b2c7d531032b2ffdc05
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692494"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774340"
 ---
 # <a name="defining-conditions-for-displaying-data"></a>데이터 표시 조건 정의
 

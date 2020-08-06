@@ -1,25 +1,18 @@
 ---
 title: 속성을 매개 변수로 선언 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f71ea35d-cff5-4e44-a5c6-3a747ed4c4d9
-caps.latest.revision: 9
-ms.openlocfilehash: 6f6640afb15b3608669538f9b5f53d7a8a5c380d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 63113f541df534b1f720ceb06e14b5031f2311b2
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365752"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774646"
 ---
 # <a name="declaring-properties-as-parameters"></a>매개 변수로 속성 선언
 
 이 항목에서는 cmdlet의 매개 변수를 선언 하기 전에 이해 해야 하는 기본적인 정보를 제공 합니다.
 
-Cmdlet 클래스 내에서 cmdlet의 매개 변수를 선언 하려면 각 매개 변수를 나타내는 공용 속성을 정의한 다음 각 속성에 하나 이상의 매개 변수 특성을 추가 합니다. Windows PowerShell 런타임에서는 매개 변수 특성을 사용 하 여 속성을 cmdlet 매개 변수로 식별 합니다. 매개 변수 특성을 선언 하는 기본 구문은 `[Parameter()]`입니다.
+Cmdlet 클래스 내에서 cmdlet의 매개 변수를 선언 하려면 각 매개 변수를 나타내는 공용 속성을 정의한 다음 각 속성에 하나 이상의 매개 변수 특성을 추가 합니다. Windows PowerShell 런타임에서는 매개 변수 특성을 사용 하 여 속성을 cmdlet 매개 변수로 식별 합니다. 매개 변수 특성을 선언 하는 기본 구문은 `[Parameter()]` 입니다.
 
 필수 매개 변수로 정의 된 속성의 예는 다음과 같습니다.
 
@@ -51,4 +44,4 @@ private string userName;
 
 [Cmdlet 매개 변수의 유형](./types-of-cmdlet-parameters.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

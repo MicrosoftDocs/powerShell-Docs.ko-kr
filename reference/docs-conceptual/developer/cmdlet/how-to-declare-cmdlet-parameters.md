@@ -1,19 +1,12 @@
 ---
 title: Cmdlet 매개 변수를 선언 하는 방법 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0c0509cc-5a50-49ad-a74f-5527023d0270
-caps.latest.revision: 10
-ms.openlocfilehash: 80e3e27bcf72b078c192525a843a3b3afb306529
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 97e86a1eb715f149a8383a1a4529c00da4f0eba8
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365682"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774391"
 ---
 # <a name="how-to-declare-cmdlet-parameters"></a>Cmdlet 매개 변수를 선언하는 방법
 
@@ -21,7 +14,7 @@ ms.locfileid: "72365682"
 
 ## <a name="how-to-declare-a-named-parameter"></a>명명 된 매개 변수를 선언 하는 방법
 
-- 다음 코드와 같이 공용 속성을 정의 합니다. 매개 변수 특성을 추가 하는 경우 특성에서 `Position` 키워드를 생략 합니다.
+- 다음 코드와 같이 공용 속성을 정의 합니다. 매개 변수 특성을 추가 하는 경우 `Position` 특성에서 키워드를 생략 합니다.
 
     ```csharp
     [Parameter()]
@@ -37,7 +30,7 @@ ms.locfileid: "72365682"
 
 ## <a name="how-to-declare-a-positional-parameter"></a>위치 매개 변수를 선언 하는 방법
 
-- 다음 코드와 같이 공용 속성을 정의 합니다. 매개 변수 특성을 추가할 때 `Position` 키워드를 인수 위치로 설정 합니다. 값 0은 첫 번째 위치를 나타냅니다.
+- 다음 코드와 같이 공용 속성을 정의 합니다. 매개 변수 특성을 추가 하는 경우 `Position` 키워드를 인수 위치로 설정 합니다. 값 0은 첫 번째 위치를 나타냅니다.
 
     ```csharp
     [Parameter(Position = 0)]
@@ -53,7 +46,7 @@ ms.locfileid: "72365682"
 
 ## <a name="how-to-declare-a-mandatory-parameter"></a>필수 매개 변수를 선언 하는 방법
 
-- 다음 코드와 같이 공용 속성을 정의 합니다. 매개 변수 특성을 추가할 때 `Mandatory` 키워드를 `true`로 설정 합니다.
+- 다음 코드와 같이 공용 속성을 정의 합니다. 매개 변수 특성을 추가 하는 경우 `Mandatory` 키워드를로 설정 `true` 합니다.
 
     ```csharp
     [Parameter(Position = 0, Mandatory = true)]
@@ -69,7 +62,7 @@ ms.locfileid: "72365682"
 
 ## <a name="how-to-declare-an-optional-parameter"></a>선택적 매개 변수를 선언 하는 방법
 
-- 다음 코드와 같이 공용 속성을 정의 합니다. 매개 변수 특성을 추가할 때 `Mandatory` 키워드를 생략 합니다.
+- 다음 코드와 같이 공용 속성을 정의 합니다. 매개 변수 특성을 추가 하는 경우 키워드를 생략 `Mandatory` 합니다.
 
     ```csharp
     [Parameter(Position = 0)]
@@ -116,10 +109,10 @@ Alias 특성에 대 한 자세한 내용은 [Alias 특성 선언](./alias-attrib
 
 ## <a name="see-also"></a>참고 항목
 
-[System.object. SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)
+[System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)
 
-[매개 변수 특성 선언](./parameter-attribute-declaration.md)
+[Parameter 특성 선언](./parameter-attribute-declaration.md)
 
-[별칭 특성 선언](./alias-attribute-declaration.md)
+[Alias 특성 선언](./alias-attribute-declaration.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

@@ -1,23 +1,16 @@
 ---
 title: Cmdlet 코드의 특성 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: aea8d293-c45b-41eb-8385-548f7c9b280b
-caps.latest.revision: 10
-ms.openlocfilehash: 14505c4f7cc8490418ca463e3b81902f29d4f90b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1f92e329d304754d5596cef0c95dc597aca3a538
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72370002"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774918"
 ---
 # <a name="attributes-in-cmdlet-code"></a>Cmdlet 코드의 특성
 
-Windows PowerShell에서 제공 하는 공통 기능을 사용 하기 위해 cmdlet 코드에 정의 된 클래스 및 공용 속성은 특성으로 데코 레이트 됩니다. 예를 들어, 다음 클래스 정의에서는 Cmdlet 특성을 사용 하 여 **Get Proc** cmdlet이 구현 된 Microsoft .NET Framework 클래스를 식별 합니다. 이 cmdlet은이 문서의 예로 사용 되며 Windows PowerShell에서 제공 하는 `Get-Process` cmdlet과 비슷합니다.
+Windows PowerShell에서 제공 하는 공통 기능을 사용 하기 위해 cmdlet 코드에 정의 된 클래스 및 공용 속성은 특성으로 데코 레이트 됩니다. 예를 들어, 다음 클래스 정의에서는 Cmdlet 특성을 사용 하 여 **Get Proc** cmdlet이 구현 된 Microsoft .NET Framework 클래스를 식별 합니다. 이 cmdlet은이 문서의 예로 사용 되며 `Get-Process` Windows PowerShell에서 제공 하는 cmdlet과 유사 합니다.
 
 ```csharp
 [Cmdlet(VerbsCommon.Get, "Proc")]
@@ -34,4 +27,4 @@ Cmdlet에서 선언할 수 있는 다양 한 특성에 대 한 자세한 내용�
 
 [특성 유형](./attribute-types.md)
 
-[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
+[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

@@ -1,19 +1,12 @@
 ---
 title: Host02 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 9ab83bcb-2d31-4744-a8bc-2ee22e48fc1b
-caps.latest.revision: 17
-ms.openlocfilehash: cb21a4dd9bbc9ccd0f93ae6f7ecbc09cd89c29d3
-ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
+ms.openlocfilehash: ed95cdcdcf20de6687f463b9d560a69510638c79
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76818093"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772265"
 ---
 # <a name="host02-sample"></a>Host02 샘플
 
@@ -25,7 +18,7 @@ ms.locfileid: "76818093"
 
 ## <a name="demonstrates"></a>데모
 
-- [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스, [System.Management.Automation.Host.Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 클래스 및 [System.Management.Automation.Host.Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) 클래스에서 파생 되는 클래스의 사용자 지정 호스트를 만들고 있습니다. 이 클래스는  클래스와 같은 클래스입니다.
+- [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스, Pshostuserinterface 클래스 및 클래스에서 파생 되는 클래스의 사용자 지정 호스트를 만들고 있습니다. [이 클래스는](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) [System.Management.Automation.Host.Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 클래스와 같은 클래스입니다.
 
 - 사용자 지정 호스트를 사용 하는 runspace 만들기
 
@@ -33,7 +26,7 @@ ms.locfileid: "76818093"
 
 - 스크립트를 실행 하 여 프로세스를 검색 하 고 정렬 한 다음 독일어로 표시 되는 현재 날짜를 검색 하는 [system.object](/dotnet/api/system.management.automation.powershell) 개체를 만듭니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
  다음 코드에서는 사용자 지정 호스트를 사용 하는 호스트 응용 프로그램의 구현을 보여 줍니다.
 
@@ -132,7 +125,7 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
  다음 코드는이 호스트 응용 프로그램에서 사용 하는 [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스의 구현입니다. 구현 되지 않은 요소는 예외를 throw 하거나 아무 것도 반환 하지 않습니다.
 
@@ -314,7 +307,7 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
  다음 코드는이 호스트 응용 프로그램에서 사용 하는 [Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 클래스의 구현입니다.
 
@@ -565,7 +558,7 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
  다음 코드는이 호스트 응용 프로그램에서 사용 하는 [system.web](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) 클래스의 구현입니다. 구현 되지 않은 요소는 예외를 throw 하거나 아무 것도 반환 하지 않습니다.
 

@@ -1,23 +1,16 @@
 ---
 title: 파일 서식 지정 개요 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fe888fee-1fe9-459f-9d62-35732c19a7f8
-caps.latest.revision: 13
-ms.openlocfilehash: d418cff70c1197aa3c331eed909f49198da139e9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: efdd3eed15c5f3c88636fcbe7a39f6c6cfb20ced
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363692"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773507"
 ---
 # <a name="formatting-file-overview"></a>형식 지정 파일 개요
 
-명령 (cmdlet, 함수 및 스크립트)에서 반환 되는 개체에 대 한 표시 형식은 형식 지정 파일 (types.ps1xml 파일)을 사용 하 여 정의 됩니다. 이러한 파일 중 몇 가지는 powershell에서 제공 하는 명령 (예: `Get-Process` cmdlet에서 반환 된 [진단](/dotnet/api/System.Diagnostics.Process) 제공 명령)에서 반환 되는 개체의 표시 형식을 정의 하기 위해 powershell에서 제공 됩니다. 그러나 사용자 고유의 사용자 지정 서식 파일을 만들어 기본 표시 형식을 덮어쓰거나 사용자 지정 서식 파일을 작성 하 여 사용자의 명령에서 반환 하는 개체의 표시를 정의할 수도 있습니다.
+명령 (cmdlet, 함수 및 스크립트)에서 반환 되는 개체에 대 한 표시 형식은 형식 지정 파일 (format.ps1xml 파일)을 사용 하 여 정의 됩니다. 이러한 파일 중 몇 가지는 PowerShell에서 반환 하는 개체에 대 한 표시 형식을 정의 하기 위해 PowerShell에서 제공 됩니다 .이는 cmdlet에서 반환 되는 [system.object](/dotnet/api/System.Diagnostics.Process) 개체와 같이 powershell에서 제공 하는 명령에 의해 반환 됩니다. `Get-Process` 그러나 사용자 고유의 사용자 지정 서식 파일을 만들어 기본 표시 형식을 덮어쓰거나 사용자 지정 서식 파일을 작성 하 여 사용자의 명령에서 반환 하는 개체의 표시를 정의할 수도 있습니다.
 
 > [!IMPORTANT]
 > 파일 서식 지정은 파이프라인에 반환 되는 개체의 요소를 결정 하지 않습니다. 개체를 파이프라인으로 반환 하면 일부 표시 되지 않은 경우에도 해당 개체의 모든 멤버를 사용할 수 있습니다.
@@ -38,19 +31,19 @@ PowerShell에서는 이러한 서식 파일의 데이터를 사용 하 여 표�
 
 서식 보기에서는 개체를 테이블 형식, 목록 형식, 넓은 형식 및 사용자 지정 형식으로 표시할 수 있습니다. 대부분의 경우 각 서식 지정 정의는 뷰를 설명 하는 XML 태그 집합으로 설명 됩니다. 각 뷰에는 뷰 이름, 뷰를 사용 하는 개체 및 뷰의 요소 (예: 테이블 뷰의 열 및 행 정보)가 포함 됩니다.
 
-테이블 뷰 하나 이상의 열에 있는 개체 또는 스크립트 블록 값의 속성을 나열 합니다. 각 열은 개체의 단일 속성 또는 스크립트 값을 나타냅니다. 개체의 모든 속성, 개체 속성의 하위 집합 또는 속성 및 스크립트 값의 조합을 표시 하는 테이블 뷰를 정의할 수 있습니다. 테이블의 각 행은 반환 된 개체를 나타냅니다. 테이블 뷰를 만드는 것은 개체를 `Format-Table` cmdlet으로 파이프 하는 경우와 매우 비슷합니다. 이 보기에 대 한 자세한 내용은 [테이블 뷰](./creating-a-table-view.md)를 참조 하세요.
+테이블 뷰 하나 이상의 열에 있는 개체 또는 스크립트 블록 값의 속성을 나열 합니다. 각 열은 개체의 단일 속성 또는 스크립트 값을 나타냅니다. 개체의 모든 속성, 개체 속성의 하위 집합 또는 속성 및 스크립트 값의 조합을 표시 하는 테이블 뷰를 정의할 수 있습니다. 테이블의 각 행은 반환 된 개체를 나타냅니다. 테이블 뷰를 만드는 것은 개체를 cmdlet으로 파이프 하는 경우와 매우 비슷합니다 `Format-Table` . 이 보기에 대 한 자세한 내용은 [테이블 뷰](./creating-a-table-view.md)를 참조 하세요.
 
-목록 뷰 단일 열에 있는 개체 또는 스크립트 값의 속성을 나열 합니다. 목록의 각 행에는 선택적 레이블 또는 속성 이름과 속성 또는 스크립트의 값이 표시 됩니다. 목록 뷰를 만드는 것은 개체를 `Format-List` cmdlet으로 파이프 하는 것과 매우 비슷합니다. 이 보기에 대 한 자세한 내용은 [목록 뷰](./creating-a-list-view.md)를 참조 하세요.
+목록 뷰 단일 열에 있는 개체 또는 스크립트 값의 속성을 나열 합니다. 목록의 각 행에는 선택적 레이블 또는 속성 이름과 속성 또는 스크립트의 값이 표시 됩니다. 목록 뷰를 만드는 것은 개체를 cmdlet으로 파이프 하는 것과 매우 비슷합니다 `Format-List` . 이 보기에 대 한 자세한 내용은 [목록 뷰](./creating-a-list-view.md)를 참조 하세요.
 
-넓은 뷰 하나 이상의 열에 있는 단일 개체 속성 또는 스크립트 값을 나열 합니다. 이 보기에 대 한 레이블이나 머리글이 없습니다. 넓은 뷰를 만드는 것은 개체를 `Format-Wide` cmdlet으로 파이프 하는 것과 매우 비슷합니다. 이 보기에 대 한 자세한 내용은 [Wide view](./creating-a-wide-view.md)를 참조 하세요.
+넓은 뷰 하나 이상의 열에 있는 단일 개체 속성 또는 스크립트 값을 나열 합니다. 이 보기에 대 한 레이블이나 머리글이 없습니다. 넓은 뷰를 만드는 것은 개체를 cmdlet으로 파이프 하는 것과 매우 비슷합니다 `Format-Wide` . 이 보기에 대 한 자세한 내용은 [Wide view](./creating-a-wide-view.md)를 참조 하세요.
 
-사용자 지정 보기에는 테이블 뷰, 목록 뷰 또는 넓은 보기의 고정 구조를 준수 하지 않는 개체 속성 또는 스크립트 값을 사용자 지정할 수 있는 뷰가 표시 됩니다. 독립 실행형 사용자 지정 뷰를 정의 하거나 다른 보기에서 사용 되는 사용자 지정 보기 (예: 테이블 뷰 또는 목록 보기)를 정의할 수 있습니다. 사용자 지정 뷰를 만드는 것은 개체를 `Format-Custom` cmdlet으로 파이프 하는 것과 매우 비슷합니다. 이 보기에 대 한 자세한 내용은 [사용자 지정 뷰](./creating-custom-controls.md)를 참조 하세요.
+사용자 지정 보기에는 테이블 뷰, 목록 뷰 또는 넓은 보기의 고정 구조를 준수 하지 않는 개체 속성 또는 스크립트 값을 사용자 지정할 수 있는 뷰가 표시 됩니다. 독립 실행형 사용자 지정 뷰를 정의 하거나 다른 보기에서 사용 되는 사용자 지정 보기 (예: 테이블 뷰 또는 목록 보기)를 정의할 수 있습니다. 사용자 지정 뷰를 만드는 것은 개체를 cmdlet으로 파이프 하는 것과 매우 비슷합니다 `Format-Custom` . 이 보기에 대 한 자세한 내용은 [사용자 지정 뷰](./creating-custom-controls.md)를 참조 하세요.
 
 ## <a name="components-of-a-view"></a>뷰의 구성 요소
 
 다음 XML 예제에서는 뷰의 기본 XML 구성 요소를 보여 줍니다. 개별 XML 요소는 만들려는 뷰에 따라 다르지만 뷰의 기본 구성 요소는 모두 동일 합니다.
 
-먼저 각 뷰에는 뷰를 참조 하는 데 사용 되는 사용자에 게 친숙 한 이름을 지정 하는 `Name` 요소가 있습니다. 뷰에 표시 되는 .NET 개체와 뷰를 정의 하는 *컨트롤* 요소를 정의 하는 `ViewSelectedBy` 요소입니다.
+먼저 각 뷰에는 `Name` 뷰를 참조 하는 데 사용 되는 사용자에 게 친숙 한 이름을 지정 하는 요소가 있습니다. `ViewSelectedBy`뷰가 표시 하는 .net 개체와 뷰를 정의 하는 *컨트롤* 요소를 정의 하는 요소입니다.
 
 ```xml
 <ViewDefinitions>
@@ -116,7 +109,7 @@ PowerShell에서는 이러한 서식 파일의 데이터를 사용 하 여 표�
 
 ## <a name="example-of-a-table-view"></a>테이블 뷰의 예
 
-다음 예에서는 두 개의 열이 포함 된 테이블 뷰를 정의 하는 데 사용 되는 XML 태그를 보여 줍니다. [Viewdefinitions](./viewdefinitions-element-format.md) 요소는 서식 파일에 정의 된 모든 뷰에 대 한 컨테이너 요소입니다. [View](./view-element-format.md) 요소는 특정 테이블, 목록, 전체 또는 사용자 지정 뷰를 정의 합니다. 각 [뷰](./view-element-format.md) 요소 내에서 [name](./name-element-for-view-format.md) 요소는 뷰의 이름을 지정 하 고 [viewselectedby](./viewselectedby-element-format.md) 요소는 뷰를 사용 하는 개체를 정의 하며, 다음 예제에 표시 된 `TableControl` 요소와 같은 다양 한 컨트롤 요소는 뷰의 유형을 정의 합니다.
+다음 예에서는 두 개의 열이 포함 된 테이블 뷰를 정의 하는 데 사용 되는 XML 태그를 보여 줍니다. [Viewdefinitions](./viewdefinitions-element-format.md) 요소는 서식 파일에 정의 된 모든 뷰에 대 한 컨테이너 요소입니다. [View](./view-element-format.md) 요소는 특정 테이블, 목록, 전체 또는 사용자 지정 뷰를 정의 합니다. 각 [뷰](./view-element-format.md) 요소 내에서 [name](./name-element-for-view-format.md) 요소는 뷰의 이름을 지정 하 고 [viewselectedby](./viewselectedby-element-format.md) 요소는 뷰를 사용 하는 개체를 정의 하며 다음 예제에 표시 된 요소와 같은 다른 컨트롤 요소는 `TableControl` 뷰의 형식을 정의 합니다.
 
 ```xml
 <ViewDefinitions>
@@ -157,9 +150,9 @@ PowerShell에서는 이러한 서식 파일의 데이터를 사용 하 여 표�
 
 [목록 보기 만들기](./creating-a-list-view.md)
 
-[테이블 뷰 만들기](./creating-a-table-view.md)
+[테이블 보기 만들기](./creating-a-table-view.md)
 
-[넓은 뷰 만들기](./creating-a-wide-view.md)
+[넓게 보기 만들기](./creating-a-wide-view.md)
 
 [사용자 지정 컨트롤 만들기](./creating-custom-controls.md)
 

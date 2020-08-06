@@ -1,19 +1,12 @@
 ---
 title: 목록 뷰 (GroupBy) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a2e66c86-83a7-4148-8575-c28d6d429d4f
-caps.latest.revision: 6
-ms.openlocfilehash: c178c4a48f9595001bcc249d5f55886fa54bb9f2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7956d13e196454a3f6da185e9be74f9d3cb8ef63
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365142"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773405"
 ---
 # <a name="list-view-groupby"></a>목록 보기(GroupBy)
 
@@ -23,12 +16,12 @@ ms.locfileid: "72365142"
 
 1. 이 항목의 예제 섹션에서 XML을 텍스트 파일로 복사 합니다.
 
-2. 텍스트 파일을 저장합니다. 파일에 `format.ps1xml` 확장을 추가 하 여 서식 파일 인지 확인 해야 합니다.
+2. 텍스트 파일을 저장합니다. 파일에 확장명을 추가 하 여 `format.ps1xml` 서식 파일을 식별 해야 합니다.
 
-3. Windows PowerShell을 열고 다음 명령을 실행 하 여 현재 세션에 형식 지정 파일을 로드 합니다. `Update-formatdata -prependpath PathToFormattingFile`.
+3. Windows PowerShell을 열고 다음 명령을 실행 하 여 현재 세션에 형식 지정 파일을 로드 `Update-formatdata -prependpath PathToFormattingFile` 합니다.
 
    > [!WARNING]
-   > 이 서식 파일은 Windows PowerShell 서식 파일에 의해 이미 정의 된 개체의 표시를 정의 합니다. Cmdlet을 실행할 때 `prependPath` 매개 변수를 사용 해야 하며,이 서식 파일을 모듈로 로드할 수 없습니다.
+   > 이 서식 파일은 Windows PowerShell 서식 파일에 의해 이미 정의 된 개체의 표시를 정의 합니다. `prependPath`Cmdlet을 실행할 때 매개 변수를 사용 해야 하며,이 서식 파일을 모듈로 로드할 수 없습니다.
 
 ## <a name="demonstrates"></a>데모
 
@@ -138,6 +131,6 @@ ServiceType : Win32OwnProcess
 
 ## <a name="see-also"></a>참고 항목
 
-[서식 파일의 예](./examples-of-formatting-files.md)
+[형식 지정 파일 예제](./examples-of-formatting-files.md)
 
-[PowerShell 서식 파일 작성](./writing-a-powershell-formatting-file.md)
+[PowerShell 형식 지정 파일 작성](./writing-a-powershell-formatting-file.md)

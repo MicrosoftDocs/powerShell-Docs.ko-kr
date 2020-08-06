@@ -1,11 +1,6 @@
 ---
 title: Cmdlet 매개 변수 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - optional parameters [PowerShell SDK]
 - aliases [PowerShell SDK]
@@ -14,20 +9,18 @@ helpviewer_keywords:
 - mandatory parameters [PowerShell SDK]
 - positional parameters [PowerShell SDK]
 - cmdlets [PowerShell SDK], parameters
-ms.assetid: 3f1cca5f-5b95-4bce-94a6-a22db1aefd47
-caps.latest.revision: 23
-ms.openlocfilehash: c1d8984f4aad7bae6f9be66a2222e2c74c8afa3d
-ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
+ms.openlocfilehash: 98b1d5fd0e7ffbf2d4d161f1bed73fb96a737bd4
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022217"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774765"
 ---
 # <a name="cmdlet-parameters"></a>Cmdlet 매개 변수
 
 Cmdlet 매개 변수는 cmdlet이 입력을 받을 수 있도록 하는 메커니즘을 제공 합니다. 매개 변수는 명령줄에서 직접 입력을 받을 수 있고 파이프라인을 통해 cmdlet에 전달 된 개체에서 이러한 매개 변수의 인수 ( *값*이 라고도 함)는 cmdlet이 허용 하는 입력, cmdlet에서 해당 작업을 수행 하는 방법 및 cmdlet이 파이프라인으로 반환 하는 데이터를 지정할 수 있습니다.
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [속성을 매개 변수로 선언](./declaring-properties-as-parameters.md) Cmdlet의 매개 변수를 선언 하기 전에 이해 해야 하는 기본적인 정보를 제공 합니다.
 
@@ -47,14 +40,14 @@ Cmdlet 매개 변수는 cmdlet이 입력을 받을 수 있도록 하는 메커�
 
 [매개 변수 입력 유효성 검사](./validating-parameter-input.md) Windows PowerShell에서 cmdlet 매개 변수에 전달 된 인수의 유효성을 검사 하는 방법을 설명 합니다.
 
-[입력 필터 매개 변수](./input-filter-parameters.md) Cmdlet에서 적용 하는 입력 개체 집합을 필터링 하는 `Filter`, `Include`및 `Exclude` 매개 변수에 대해 설명 합니다.
+[입력 필터 매개 변수](./input-filter-parameters.md) `Filter` `Include` `Exclude` Cmdlet이 적용 되는 입력 개체 집합을 필터링 하는, 및 매개 변수에 대해 설명 합니다.
 
-## <a name="related-sections"></a>관련 섹션
+## <a name="related-sections"></a>관련 단원
 
-[매개 변수 입력의 유효성을 검사 하는 방법](./how-to-validate-parameter-input.md)
+[매개 변수 입력 유효성을 검사하는 방법](./how-to-validate-parameter-input.md)
 
 ## <a name="see-also"></a>참고 항목
 
-[매개 변수 특성 선언](./parameter-attribute-declaration.md)
+[Parameter 특성 선언](./parameter-attribute-declaration.md)
 
-[Windows PowerShell Cmdlet](./cmdlet-overview.md)
+[Windows PowerShell cmdlet](./cmdlet-overview.md)
