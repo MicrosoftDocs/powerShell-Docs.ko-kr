@@ -1,75 +1,68 @@
 ---
 title: StopProcessSample02 샘플 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 213ca1a4-e9fe-4969-b7d0-2fca070c6142
-caps.latest.revision: 10
-ms.openlocfilehash: 594c06367baedd1f9bfdbfff9f0e072d579b4099
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: bab32f5a2544905bd858bcecf5b0b2e2d127e642
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369382"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786444"
 ---
-# <a name="stopprocesssample02-sample"></a><span data-ttu-id="179b2-102">StopProcessSample02 샘플</span><span class="sxs-lookup"><span data-stu-id="179b2-102">StopProcessSample02 Sample</span></span>
+# <a name="stopprocesssample02-sample"></a><span data-ttu-id="c6b4e-102">StopProcessSample02 샘플</span><span class="sxs-lookup"><span data-stu-id="c6b4e-102">StopProcessSample02 Sample</span></span>
 
-<span data-ttu-id="179b2-103">이 샘플에서는 로컬 컴퓨터에서 프로세스를 중지 하는 동안 디버그 (WriteDebug), 자세한 정보 표시 (Writedebug) 및 경고 (Writedebug) 메시지를 기록 하는 cmdlet을 작성 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-103">This sample shows how to write a cmdlet that writes debug (WriteDebug), verbose (WriteVerbose), and warning (WriteWarning) messages while stopping processes on the local computer.</span></span> <span data-ttu-id="179b2-104">이 cmdlet은 Windows PowerShell 2.0에서 제공 하는 `Stop-Process` cmdlet과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-104">This cmdlet is similar to the `Stop-Process` cmdlet provided by Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="c6b4e-103">이 샘플에서는 로컬 컴퓨터에서 프로세스를 중지 하는 동안 디버그 (WriteDebug), 자세한 정보 표시 (Writedebug) 및 경고 (Writedebug) 메시지를 기록 하는 cmdlet을 작성 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-103">This sample shows how to write a cmdlet that writes debug (WriteDebug), verbose (WriteVerbose), and warning (WriteWarning) messages while stopping processes on the local computer.</span></span> <span data-ttu-id="c6b4e-104">이 cmdlet은 `Stop-Process` Windows PowerShell 2.0에서 제공 하는 cmdlet과 유사 합니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-104">This cmdlet is similar to the `Stop-Process` cmdlet provided by Windows PowerShell 2.0.</span></span>
 
-### <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="179b2-105">Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-105">How to build the sample by using Visual Studio.</span></span>
+### <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="c6b4e-105">Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-105">How to build the sample by using Visual Studio.</span></span>
 
-1. <span data-ttu-id="179b2-106">Windows Internet Explorer를 열고 Samples 디렉터리 아래의 StopProcessSample02 디렉터리로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-106">Open Windows Internet Explorer and navigate to the StopProcessSample02 directory under the Samples directory.</span></span>
+1. <span data-ttu-id="c6b4e-106">Windows Internet Explorer를 열고 Samples 디렉터리 아래의 StopProcessSample02 디렉터리로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-106">Open Windows Internet Explorer and navigate to the StopProcessSample02 directory under the Samples directory.</span></span>
 
-    <span data-ttu-id="179b2-107">Windows PowerShell 2.0 SDK가 설치 된 상태에서 StopProcessSample02 폴더로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-107">With the Windows PowerShell 2.0 SDK installed, navigate to the StopProcessSample02 folder.</span></span> <span data-ttu-id="179b2-108">기본 위치는 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample02.</span><span class="sxs-lookup"><span data-stu-id="179b2-108">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample02.</span></span>
+    <span data-ttu-id="c6b4e-107">Windows PowerShell 2.0 SDK가 설치 된 상태에서 StopProcessSample02 폴더로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-107">With the Windows PowerShell 2.0 SDK installed, navigate to the StopProcessSample02 folder.</span></span> <span data-ttu-id="c6b4e-108">기본 위치는 C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample02.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-108">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\StopProcessSample02.</span></span>
 
-2. <span data-ttu-id="179b2-109">솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-109">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="179b2-110">그러면 Microsoft Visual Studio의 샘플 프로젝트가 열립니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-110">This opens the sample project in Microsoft Visual Studio.</span></span>
+2. <span data-ttu-id="c6b4e-109">솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-109">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="c6b4e-110">그러면 Microsoft Visual Studio의 샘플 프로젝트가 열립니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-110">This opens the sample project in Microsoft Visual Studio.</span></span>
 
-3. <span data-ttu-id="179b2-111">**빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-111">In the **Build** menu, select **Build Solution**.</span></span>
+3. <span data-ttu-id="c6b4e-111">**빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-111">In the **Build** menu, select **Build Solution**.</span></span>
 
-    <span data-ttu-id="179b2-112">샘플에 대 한 라이브러리는 기본 \bin 또는 \bin\debug 폴더에 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-112">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
+    <span data-ttu-id="c6b4e-112">샘플에 대 한 라이브러리는 기본 \bin 또는 \bin\debug 폴더에 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-112">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
 
-### <a name="how-to-run-the-sample"></a><span data-ttu-id="179b2-113">샘플을 실행하는 방법</span><span class="sxs-lookup"><span data-stu-id="179b2-113">How to run the sample</span></span>
+### <a name="how-to-run-the-sample"></a><span data-ttu-id="c6b4e-113">샘플을 실행하는 방법</span><span class="sxs-lookup"><span data-stu-id="c6b4e-113">How to run the sample</span></span>
 
-1. <span data-ttu-id="179b2-114">다음 모듈 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-114">Create the following module folder:</span></span>
+1. <span data-ttu-id="c6b4e-114">다음 모듈 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-114">Create the following module folder:</span></span>
 
     `[user]/documents/windowspowershell/modules/StopProcessSample02`
 
-2. <span data-ttu-id="179b2-115">모듈 폴더에 샘플 어셈블리를 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-115">Copy the sample assembly to the module folder.</span></span>
+2. <span data-ttu-id="c6b4e-115">모듈 폴더에 샘플 어셈블리를 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-115">Copy the sample assembly to the module folder.</span></span>
 
-3. <span data-ttu-id="179b2-116">Windows PowerShell을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-116">Start Windows PowerShell.</span></span>
+3. <span data-ttu-id="c6b4e-116">Windows PowerShell을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-116">Start Windows PowerShell.</span></span>
 
-4. <span data-ttu-id="179b2-117">다음 명령을 실행 하 여 Windows PowerShell에 어셈블리를 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-117">Run the following command to load the assembly into Windows PowerShell:</span></span>
+4. <span data-ttu-id="c6b4e-117">다음 명령을 실행 하 여 Windows PowerShell에 어셈블리를 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-117">Run the following command to load the assembly into Windows PowerShell:</span></span>
 
     `import-module stopprossessample02`
 
-5. <span data-ttu-id="179b2-118">다음 명령을 실행 하 여 cmdlet을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-118">Run the following command to run the cmdlet:</span></span>
+5. <span data-ttu-id="c6b4e-118">다음 명령을 실행 하 여 cmdlet을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-118">Run the following command to run the cmdlet:</span></span>
 
     `stop-proc`
 
-## <a name="requirements"></a><span data-ttu-id="179b2-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="179b2-119">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="c6b4e-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c6b4e-119">Requirements</span></span>
 
-<span data-ttu-id="179b2-120">이 샘플에는 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-120">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="c6b4e-120">이 샘플에는 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-120">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="179b2-121">데모</span><span class="sxs-lookup"><span data-stu-id="179b2-121">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="c6b4e-121">데모</span><span class="sxs-lookup"><span data-stu-id="c6b4e-121">Demonstrates</span></span>
 
-<span data-ttu-id="179b2-122">이 샘플에서는 다음을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-122">This sample demonstrates the following.</span></span>
+<span data-ttu-id="c6b4e-122">이 샘플에서는 다음을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-122">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="179b2-123">Cmdlet 특성을 사용 하 여 cmdlet 클래스 선언</span><span class="sxs-lookup"><span data-stu-id="179b2-123">Declaring a cmdlet class by using the Cmdlet attribute.</span></span>
+- <span data-ttu-id="c6b4e-123">Cmdlet 특성을 사용 하 여 cmdlet 클래스 선언</span><span class="sxs-lookup"><span data-stu-id="c6b4e-123">Declaring a cmdlet class by using the Cmdlet attribute.</span></span>
 
-- <span data-ttu-id="179b2-124">매개 변수 특성을 사용 하 여 cmdlet 매개 변수 선언</span><span class="sxs-lookup"><span data-stu-id="179b2-124">Declaring a cmdlet parameters by using the Parameter attribute.</span></span>
+- <span data-ttu-id="c6b4e-124">매개 변수 특성을 사용 하 여 cmdlet 매개 변수 선언</span><span class="sxs-lookup"><span data-stu-id="c6b4e-124">Declaring a cmdlet parameters by using the Parameter attribute.</span></span>
 
-- <span data-ttu-id="179b2-125">자세한 정보 메시지를 작성 합니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-125">Writing verbose messages.</span></span> <span data-ttu-id="179b2-126">자세한 메시지를 작성 하는 데 사용 되는 방법에 대 한 자세한 내용은 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose)를 참조 하십시오.</span><span class="sxs-lookup"><span data-stu-id="179b2-126">For more information about the method used to write verbose messages, see [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose).</span></span>
+- <span data-ttu-id="c6b4e-125">자세한 정보 메시지를 작성 합니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-125">Writing verbose messages.</span></span> <span data-ttu-id="c6b4e-126">자세한 메시지를 작성 하는 데 사용 되는 방법에 대 한 자세한 내용은 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose)를 참조 하십시오.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-126">For more information about the method used to write verbose messages, see [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose).</span></span>
 
-- <span data-ttu-id="179b2-127">오류 메시지를 씁니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-127">Writing error messages.</span></span> <span data-ttu-id="179b2-128">오류 메시지를 작성 하는 데 사용 되는 방법에 대 한 자세한 내용은 [WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="179b2-128">For more information about the method used to write error messages, see [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError).</span></span>
+- <span data-ttu-id="c6b4e-127">오류 메시지를 씁니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-127">Writing error messages.</span></span> <span data-ttu-id="c6b4e-128">오류 메시지를 작성 하는 데 사용 되는 방법에 대 한 자세한 내용은 [WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-128">For more information about the method used to write error messages, see [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError).</span></span>
 
-- <span data-ttu-id="179b2-129">경고 메시지를 씁니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-129">Writing warning messages.</span></span> <span data-ttu-id="179b2-130">경고 메시지를 작성 하는 데 사용 되는 방법에 대 한 자세한 내용은 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning)를 참조 하십시오.</span><span class="sxs-lookup"><span data-stu-id="179b2-130">For more information about the method used to write warning messages, see [System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning).</span></span>
+- <span data-ttu-id="c6b4e-129">경고 메시지를 씁니다.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-129">Writing warning messages.</span></span> <span data-ttu-id="c6b4e-130">경고 메시지를 작성 하는 데 사용 되는 방법에 대 한 자세한 내용은 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning)를 참조 하십시오.</span><span class="sxs-lookup"><span data-stu-id="c6b4e-130">For more information about the method used to write warning messages, see [System.Management.Automation.Cmdlet.WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning).</span></span>
 
-## <a name="example"></a><span data-ttu-id="179b2-131">예제</span><span class="sxs-lookup"><span data-stu-id="179b2-131">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c6b4e-131">예제</span><span class="sxs-lookup"><span data-stu-id="c6b4e-131">Example</span></span>
 
-<span data-ttu-id="179b2-132">이 샘플에서는 `WriteDebug`, `WriteVerbose`및 `WriteWarning` 메서드를 사용 하 여 디버그, 자세한 정보 및 경고 메시지를 작성 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="179b2-132">This sample shows how to write debug, verbose, and warning messages by using the `WriteDebug`, `WriteVerbose`, and `WriteWarning` methods.</span></span>
+<span data-ttu-id="c6b4e-132">이 샘플에서는 `WriteDebug` , 및 메서드를 사용 하 여 디버그, 자세한 정보 및 경고 메시지를 작성 하는 방법을 보여 줍니다 `WriteVerbose` `WriteWarning` .</span><span class="sxs-lookup"><span data-stu-id="c6b4e-132">This sample shows how to write debug, verbose, and warning messages by using the `WriteDebug`, `WriteVerbose`, and `WriteWarning` methods.</span></span>
 
 ```csharp
 using System;
@@ -310,6 +303,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="179b2-133">참고 항목</span><span class="sxs-lookup"><span data-stu-id="179b2-133">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c6b4e-133">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c6b4e-133">See Also</span></span>
 
-<span data-ttu-id="179b2-134">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="179b2-134">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>
+[<span data-ttu-id="c6b4e-134">Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="c6b4e-134">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
