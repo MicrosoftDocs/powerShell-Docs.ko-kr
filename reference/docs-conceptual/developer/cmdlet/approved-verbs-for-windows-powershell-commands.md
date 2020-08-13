@@ -5,12 +5,12 @@ helpviewer_keywords:
 - action names [PowerShell SDK]
 - verb names [PowerShell SDK]
 - cmdlets [PowerShell SDK], verb names
-ms.openlocfilehash: 1cdfed5727c0b93bd1d4008fd0d6c03c448c6aed
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.openlocfilehash: f065610b6e54c9a6a927948bc6b2ffe5a1671e0c
+ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782398"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88162480"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>PowerShell 명령에 대해 승인 된 동사
 
@@ -18,6 +18,14 @@ PowerShell에서는 cmdlet 및 해당 파생 Microsoft .NET 프레임 워크 클
 
 > [!NOTE]
 > PowerShell은 용어 _동사_ 를 사용 하 여 단어가 영어의 표준 동사가 아닌 경우에도 동작을 의미 하는 단어를 설명 합니다. 예를 들어 _New_ 라는 용어는 영어의 동사가 아닌 경우에도 작업을 암시 하기 때문에 유효한 PowerShell 동사 이름입니다.
+
+<!--
+01234567890123456789012345678901234567890123456789012345678901234567890123456789
+-->
+
+승인 된 각 동사에는 해당 하는 _별칭 접두사가_ 정의 되어 있습니다.
+이 별칭 접두사는 일반적으로 해당 동사를 사용 하는 명령에 대 한 별칭의 이름을 나타내는 데 사용 됩니다.
+예를 들어의 별칭 접두사는 `Import` `ip` 이며, 그에 따라에 대 한 별칭은입니다 `Import-Module` `ipmo` .  이는 권장 사항 이지만 규칙은 아닙니다. 특히 다른 환경에서 잘 알려진 명령 모방 명령 별칭에는 적용 하지 않아도 됩니다.
 
 ## <a name="verb-naming-rules"></a>동사 명명 규칙
 
