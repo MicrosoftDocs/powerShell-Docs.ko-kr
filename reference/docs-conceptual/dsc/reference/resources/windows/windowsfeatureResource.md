@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC WindowsFeature 리소스
-ms.openlocfilehash: d3384b1f45324df6b6b209f25b64d9d77615ad7f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: b15b267c6898697816b386a381e5a6d59acd492a
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954630"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464114"
 ---
 # <a name="dsc-windowsfeature-resource"></a>DSC WindowsFeature 리소스
 
@@ -24,7 +24,6 @@ WindowsFeature [string] #ResourceName
     [ Credential = [PSCredential] ]
     [ IncludeAllSubFeature = [bool] ]
     [ LogPath = [string] ]
-    [ Source = [string] ]
     [ DependsOn = [string[]] ]
     [ Ensure = [string] { Absent | Present }  ]
     [ PsDscRunAsCredential = [PSCredential] ]
@@ -39,7 +38,6 @@ WindowsFeature [string] #ResourceName
 |자격 증명 |역할 또는 기능을 추가 또는 제거하는 데 사용할 자격 증명을 나타냅니다. |
 |IncludeAllSubFeature |**Name** 속성으로 지정하는 기능의 상태와 함께 모든 필수 하위 기능의 상태를 보증하려면 이 속성을 `$true`로 설정하세요. |
 |LogPath |리소스 공급자가 작업을 로그하기를 원하는 로그 파일의 경로를 나타냅니다. |
-|원본 |필요한 경우 설치에 사용할 소스 파일의 위치를 나타냅니다. |
 
 ## <a name="common-properties"></a>공용 속성
 

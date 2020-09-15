@@ -3,12 +3,12 @@ title: Switch 문에 대해 알고 싶은 모든 것
 description: PowerShell의 switch 문은 다른 언어에서 찾을 수 없는 기능을 제공합니다.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: ebf6191d56374273465ae6bee49ef82a02cc1580
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 685a5691599408a0d54ca99bf383bcd7702322a6
+ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149426"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86469721"
 ---
 # <a name="everything-you-ever-wanted-to-know-about-the-switch-statement"></a>Switch 문에 대해 알고 싶은 모든 것
 
@@ -17,7 +17,7 @@ ms.locfileid: "84149426"
 > [!NOTE]
 > 이 문서의 [원래 버전][]은 [@KevinMarquette][]가 작성한 블로그에 나옵니다. PowerShell 팀은 이 콘텐츠를 공유해 준 Kevin에게 감사의 말을 전합니다. [PowerShellExplained.com][]에 있는 그의 블로그를 확인하세요.
 
-## <a name="if-statement"></a>If 문
+## <a name="the-if-statement"></a>`if` 문
 
 `if` 문은 가장 먼저 배우는 문에 속합니다. 문이 `$true`라면 스크립트 블록을 실행할 수 있습니다.
 

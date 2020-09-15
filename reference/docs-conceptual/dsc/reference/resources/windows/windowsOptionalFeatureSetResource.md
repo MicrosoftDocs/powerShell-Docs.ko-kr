@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC WindowsOptionalFeatureSet 리소스
-ms.openlocfilehash: 0930bd0c6d1955005ea607b610e004818c0ad06f
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: e4f88f1cae6d7ddb3596ab4f27eb3766259f1a31
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560154"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464165"
 ---
 # <a name="dsc-windowsoptionalfeatureset-resource"></a>DSC WindowsOptionalFeatureSet 리소스
 
@@ -23,7 +23,6 @@ Windows PowerShell DSC(필요한 상태 구성)의 **WindowsOptionalFeatureSet**
 WindowsOptionalFeatureSet [string] #ResourceName
 {
     Name = [string[]]
-    [ Source = [string] ]
     [ RemoveFilesOnDisable = [bool] ]
     [ LogPath = [string] ]
     [ NoWindowsUpdateCheck = [bool] ]
@@ -39,9 +38,8 @@ WindowsOptionalFeatureSet [string] #ResourceName
 |속성 |Description |
 |---|---|
 |속성 |사용 또는 사용하지 않도록 설정하려는 기능의 이름을 나타냅니다. |
-|원본 |구현되지 않았습니다. |
 |NoWindowsUpdateCheck |기능을 사용하도록 설정하기 위해 원본 파일을 검색할 때 DISM에서 WU(Windows 업데이트)에 연결하는지 여부를 지정합니다. `$true`이면 DISM에서 WU에 연결하지 않습니다. |
-|RemoveFilesOnDisable |`$true`Ensure**가** Absent**로 설정되어 있을 경우** 로 설정하여 기능과 관련된 모든 파일을 제거합니다. |
+|RemoveFilesOnDisable |`$true`Ensure**가 **Absent**로 설정되어 있을 경우 **로 설정하여 기능과 관련된 모든 파일을 제거합니다. |
 |LogLevel |로그에 표시되는 최대 출력 수준입니다. 허용되는 값은 **ErrorsOnly**, **ErrorsAndWarning** 및 **ErrorsAndWarningAndInformation**. |
 |LogPath |리소스 공급자가 작업을 기록할 로그 파일의 경로입니다. |
 

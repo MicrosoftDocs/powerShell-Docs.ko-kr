@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC WaitForAll 리소스
-ms.openlocfilehash: b756bad2c49659d983c58ba8d0c989888674722e
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: a0cf553af96ecc3df4968581f8f393b72fc3dabf
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560800"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464369"
 ---
 # <a name="dsc-waitforall-resource"></a>DSC WaitForAll 리소스
 

@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/15/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC PackageManagement 리소스
-ms.openlocfilehash: ba8ab1e6c2d79e98084a52e3cffec39d57d800c9
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 983a288398f710ecc5d2bc557028282ccd58561b
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557161"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464267"
 ---
 # <a name="dsc-packagemanagement-resource"></a>DSC PackageManagement 리소스
 
@@ -25,15 +25,15 @@ PackageManagement [string] #ResourceName
 {
     Name = [string]
     [ AdditionalParameters = [HashTable] ]
+    [ DependsOn = [string[]] ]
+    [ Ensure = [string]{ Absent | Present } ]
     [ MaximumVersion = [string] ]
     [ MinimumVersion = [string] ]
     [ ProviderName = [string] ]
+    [ PsDscRunAsCredential = [PSCredential] ]
     [ RequiredVersion = [string] ]
     [ Source = [string] ]
     [ SourceCredential = [PSCredential] ]
-    [ DependsOn = [string[]] ]
-    [ Ensure = [string]{ Absent | Present } ]
-    [ PsDscRunAsCredential = [PSCredential] ]
 }
 ```
 

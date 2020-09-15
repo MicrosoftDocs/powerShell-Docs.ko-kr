@@ -2,12 +2,12 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA 사용
-ms.openlocfilehash: 1c424eb4a476dd0db3cc69c0e6f14c89a3c523ba
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 46d0cc3d1cbad7454a8723f34d6a0aa34af3277f
+ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500507"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86953287"
 ---
 # <a name="using-jea"></a>JEA 사용
 
@@ -126,7 +126,7 @@ WSManConnectionInfo connectionInfo = new WSManConnectionInfo(
     5985,                  // WSMan Port
     "/wsman",              // WSMan Path
                            // Connection URI with config name
-    string.Format(CultureInfo.InvariantCulture, "https://schemas.microsoft.com/powershell/{0}", configName),
+    string.Format(CultureInfo.InvariantCulture, "http://schemas.microsoft.com/powershell/{0}", configName),
     creds);                // Credentials
 
 // Now, use the connection info to create a runspace where you can run the commands

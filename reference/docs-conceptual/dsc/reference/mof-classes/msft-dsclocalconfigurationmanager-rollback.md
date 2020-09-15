@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,configuration,setup
 title: RollBack 메서드
-ms.openlocfilehash: 6452bdffd5160d9956576fb59c98e2f9ff7ddbbb
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 301b8926d2ebf1ebe524f52a67928d34e26d860e
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954940"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464335"
 ---
 # <a name="rollback-method"></a>RollBack 메서드
 
@@ -23,7 +23,7 @@ uint32 RollBack(
 
 ## <a name="parameters"></a>매개 변수
 
-*configurationNumber* \[in\] 요청된 구성을 지정합니다.
+**configurationNumber** \[in\] 요청된 구성을 지정합니다.
 
 ## <a name="return-value"></a>반환 값
 

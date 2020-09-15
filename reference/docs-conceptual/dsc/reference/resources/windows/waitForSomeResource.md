@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC WaitForSome 리소스
-ms.openlocfilehash: 37c73ed4a42975194938f78de04096a988cf9846
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: ea2618fbb77dd24a0c73fd9357e87862da514b66
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83561089"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464386"
 ---
 # <a name="dsc-waitforsome-resource"></a>DSC WaitForSome 리소스
 

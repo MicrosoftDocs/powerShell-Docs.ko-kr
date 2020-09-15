@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,configuration,setup
 title: RemoveConfiguration 메서드
-ms.openlocfilehash: aacbed96beb960d7e0d449423a4de9a27f0a287e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: ef15c873d8dfaf28e5cdeb611b72a70921c099be
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953400"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464352"
 ---
 # <a name="removeconfiguration-method"></a>RemoveConfiguration 메서드
 
@@ -24,7 +24,7 @@ uint32 RemoveConfiguration(
 
 ## <a name="parameters"></a>매개 변수
 
-*Stage* \[in\] 제거할 구성 문서를 지정합니다. 유효한 값은
+**Stage** \[in\] 제거할 구성 문서를 지정합니다. 유효한 값은
 
 |값 |Description |
 |:--- |:---|

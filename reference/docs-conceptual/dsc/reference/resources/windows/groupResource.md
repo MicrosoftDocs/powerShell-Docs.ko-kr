@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC 그룹 리소스
-ms.openlocfilehash: b71e66e09b0af0faf252ce85f8f8746d8489b4ff
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 5570d46d872e205917eef49bfa869419b20a77b0
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83559865"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464216"
 ---
 # <a name="dsc-group-resource"></a>DSC 그룹 리소스
 

@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,configuration,setup
 title: GetConfigurationResultOutput 메서드
-ms.openlocfilehash: 480e710ce1a208253f0e664474c3e9bab296066a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 9c81082c28b2ffcc329264d29784782deaa9779d
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953420"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464080"
 ---
 # <a name="getconfigurationresultoutput-method"></a>GetConfigurationResultOutput 메서드
 
@@ -25,11 +25,11 @@ uint32 GetConfigurationResultOutput(
 
 ## <a name="parameters"></a>매개 변수
 
-*jobId* \[in\] 출력 데이터를 가져올 작업의 ID입니다.
+**jobId** \[in\] 출력 데이터를 가져올 작업의 ID입니다.
 
-*resumeOutputBookmark* \[in\] 출력이 이전 책갈피의 연속이어야 함을 지정합니다.
+**resumeOutputBookmark** \[in\] 출력이 이전 책갈피의 연속이어야 함을 지정합니다.
 
-*output* \[out\] 지정된 작업의 출력입니다.
+**output** \[out\] 지정된 작업의 출력입니다.
 
 ## <a name="return-value"></a>반환 값
 

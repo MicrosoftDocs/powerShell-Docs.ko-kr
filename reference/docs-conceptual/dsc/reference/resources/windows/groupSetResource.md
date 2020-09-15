@@ -3,12 +3,12 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 description: 대상 노드에 있는 로컬 그룹을 관리하는 메커니즘을 제공합니다.
 title: DSC GroupSet 리소스
-ms.openlocfilehash: 99b9cafdd4d799e18e1b9b1f08d7dd41ec435711
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 90e0c3f0e09c6a300988869265dfdb432ed5d217
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560341"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464198"
 ---
 # <a name="dsc-groupset-resource"></a>DSC GroupSet 리소스
 
@@ -24,8 +24,6 @@ Windows PowerShell DSC(필요한 상태 구성)의 **GroupSet** 리소스에서�
 Group [string] #ResourceName
 {
     GroupName = [string[]]
-    [ Members = [string[]] ]
-    [ Description = [string[]] ]
     [ MembersToInclude = [string[]] ]
     [ MembersToExclude = [string[]] ]
     [ Credential = [PSCredential] ]
@@ -41,7 +39,6 @@ Group [string] #ResourceName
 |---|---|
 |GroupName |상태를 확인하려는 그룹의 이름입니다. |
 |구성원 |현재 그룹 구성원 자격을 지정된 구성원으로 바꾸려면 이 속성을 사용합니다. 이 속성의 값은 `Domain\UserName` 형식의 문자열 배열입니다. 구성에서 이 속성을 설정하는 경우 **MembersToExclude** 또는 **MembersToInclude** 속성을 사용하지 마세요. 사용할 경우 오류가 발생합니다. |
-|Description |그룹에 대한 설명입니다. |
 |MembersToInclude |그룹의 기존 구성원 자격에 구성원을 추가하려면 이 속성을 사용합니다. 이 속성의 값은 `Domain\UserName` 형식의 문자열 배열입니다. 구성에서 이 속성을 설정하는 경우 **Members** 속성을 사용하지 마세요. 사용할 경우 오류가 발생합니다. |
 |MembersToExclude |그룹의 기존 구성원 자격에서 구성원을 제거하려면 이 속성을 사용합니다. 이 속성의 값은 `Domain\UserName` 형식의 문자열 배열입니다. 구성에서 이 속성을 설정하는 경우 **Members** 속성을 사용하지 마세요. 사용할 경우 오류가 발생합니다. |
 |자격 증명 |원격 리소스에 액세스하는 데 필요한 자격 증명입니다. 이 계정에는 로컬이 아닌 모든 계정을 그룹에 추가할 수 있는 Active Directory 사용 권한이 있어야 합니다. 그렇지 않으면 오류가 발생합니다. |

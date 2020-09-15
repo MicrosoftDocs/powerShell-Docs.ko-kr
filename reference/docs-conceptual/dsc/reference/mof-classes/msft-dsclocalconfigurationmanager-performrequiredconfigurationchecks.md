@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,configuration,setup
 title: PerformRequiredConfigurationChecks 메서드
-ms.openlocfilehash: 909e3a48d08e0220ab0efc6a03bea7ead5d9843e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: ea4294ffdcb2580fa7b39b18966b642d58073eb6
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71955010"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464454"
 ---
 # <a name="performrequiredconfigurationchecks-method"></a>PerformRequiredConfigurationChecks 메서드
 
@@ -23,7 +23,7 @@ uint32 PerformRequiredConfigurationChecks(
 
 ## <a name="parameters"></a>매개 변수
 
-*Flags* \[in\] 실행할 일관성 확인 형식을 지정하는 비트 마스크입니다. 다음 값은 올바르며, 비트 **OR** 작업을 사용해 조합할 수 있습니다.
+**Flags** \[in\] 실행할 일관성 확인 형식을 지정하는 비트 마스크입니다. 다음 값은 올바르며, 비트 **OR** 작업을 사용해 조합할 수 있습니다.
 
 |값 |Description |
 |:--- |:---|
