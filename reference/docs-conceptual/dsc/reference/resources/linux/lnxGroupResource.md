@@ -1,19 +1,19 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/17/2020
 keywords: dsc,powershell,configuration,setup
 title: Linux용 DSC nxGroup 리소스
-ms.openlocfilehash: 3682cb728d314d00b4a64a93b93018e8a6d12a21
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: f196c74b94ec27818d58b59d1e489facd8ab0a65
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560851"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464437"
 ---
-# <a name="dsc-for-linux-nxgroup-resource"></a><span data-ttu-id="5be48-103">Linux용 DSC nxGroup 리소스</span><span class="sxs-lookup"><span data-stu-id="5be48-103">DSC for Linux nxGroup Resource</span></span>
+# <a name="dsc-for-linux-nxgroup-resource"></a><span data-ttu-id="e61e5-103">Linux용 DSC nxGroup 리소스</span><span class="sxs-lookup"><span data-stu-id="e61e5-103">DSC for Linux nxGroup Resource</span></span>
 
-<span data-ttu-id="5be48-104">PowerShell DSC(필요한 상태 구성)의 **nxGroup** 리소스에서는 Linux 노드에 있는 로컬 그룹을 관리하는 메커니즘을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5be48-104">The **nxGroup** resource in PowerShell Desired State Configuration (DSC) provides a mechanism to manage local groups on a Linux node.</span></span>
+<span data-ttu-id="e61e5-104">PowerShell DSC(필요한 상태 구성)의 **nxGroup** 리소스에서는 Linux 노드에 있는 로컬 그룹을 관리하는 메커니즘을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e61e5-104">The **nxGroup** resource in PowerShell Desired State Configuration (DSC) provides a mechanism to manage local groups on a Linux node.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="5be48-105">구문</span><span class="sxs-lookup"><span data-stu-id="5be48-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="e61e5-105">구문</span><span class="sxs-lookup"><span data-stu-id="e61e5-105">Syntax</span></span>
 
 ```Syntax
 nxGroup <string> #ResourceName
@@ -28,26 +28,26 @@ nxGroup <string> #ResourceName
 }
 ```
 
-## <a name="properties"></a><span data-ttu-id="5be48-106">속성</span><span class="sxs-lookup"><span data-stu-id="5be48-106">Properties</span></span>
+## <a name="properties"></a><span data-ttu-id="e61e5-106">속성</span><span class="sxs-lookup"><span data-stu-id="e61e5-106">Properties</span></span>
 
-|<span data-ttu-id="5be48-107">속성</span><span class="sxs-lookup"><span data-stu-id="5be48-107">Property</span></span> |<span data-ttu-id="5be48-108">Description</span><span class="sxs-lookup"><span data-stu-id="5be48-108">Description</span></span> |
+|<span data-ttu-id="e61e5-107">속성</span><span class="sxs-lookup"><span data-stu-id="e61e5-107">Property</span></span> |<span data-ttu-id="e61e5-108">Description</span><span class="sxs-lookup"><span data-stu-id="e61e5-108">Description</span></span> |
 |---|---|
-|<span data-ttu-id="5be48-109">GroupName</span><span class="sxs-lookup"><span data-stu-id="5be48-109">GroupName</span></span> |<span data-ttu-id="5be48-110">특정 상태를 확인하려는 그룹의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="5be48-110">Specifies the name of the group for which you want to ensure a specific state.</span></span> |
-|<span data-ttu-id="5be48-111">구성원</span><span class="sxs-lookup"><span data-stu-id="5be48-111">Members</span></span> |<span data-ttu-id="5be48-112">그룹을 형성하는 구성원을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="5be48-112">Specifies the members that form the group.</span></span> |
-|<span data-ttu-id="5be48-113">MembersToInclude</span><span class="sxs-lookup"><span data-stu-id="5be48-113">MembersToInclude</span></span> |<span data-ttu-id="5be48-114">이 그룹의 구성원이 되도록 할 사용자를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="5be48-114">Specifies the users who you want to ensure are members of the group.</span></span> |
-|<span data-ttu-id="5be48-115">MembersToExclude</span><span class="sxs-lookup"><span data-stu-id="5be48-115">MembersToExclude</span></span> |<span data-ttu-id="5be48-116">이 그룹의 구성원이 되지 않도록 할 사용자를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="5be48-116">Specifies the users who you want to ensure are not members of the group.</span></span> |
-|<span data-ttu-id="5be48-117">PreferredGroupID</span><span class="sxs-lookup"><span data-stu-id="5be48-117">PreferredGroupID</span></span> |<span data-ttu-id="5be48-118">가능한 경우 그룹 ID를 제공된 값으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="5be48-118">Sets the group id to the provided value if possible.</span></span> <span data-ttu-id="5be48-119">현재 그룹 ID가 사용 중이라면 다음의 사용 가능한 그룹 ID가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="5be48-119">If the group id is currently in use, the next available group id is used.</span></span> |
+|<span data-ttu-id="e61e5-109">GroupName</span><span class="sxs-lookup"><span data-stu-id="e61e5-109">GroupName</span></span> |<span data-ttu-id="e61e5-110">특정 상태를 확인하려는 그룹의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e61e5-110">Specifies the name of the group for which you want to ensure a specific state.</span></span> |
+|<span data-ttu-id="e61e5-111">구성원</span><span class="sxs-lookup"><span data-stu-id="e61e5-111">Members</span></span> |<span data-ttu-id="e61e5-112">그룹을 형성하는 구성원을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e61e5-112">Specifies the members that form the group.</span></span> |
+|<span data-ttu-id="e61e5-113">MembersToInclude</span><span class="sxs-lookup"><span data-stu-id="e61e5-113">MembersToInclude</span></span> |<span data-ttu-id="e61e5-114">이 그룹의 구성원이 되도록 할 사용자를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e61e5-114">Specifies the users who you want to ensure are members of the group.</span></span> |
+|<span data-ttu-id="e61e5-115">MembersToExclude</span><span class="sxs-lookup"><span data-stu-id="e61e5-115">MembersToExclude</span></span> |<span data-ttu-id="e61e5-116">이 그룹의 구성원이 되지 않도록 할 사용자를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e61e5-116">Specifies the users who you want to ensure are not members of the group.</span></span> |
+|<span data-ttu-id="e61e5-117">PreferredGroupID</span><span class="sxs-lookup"><span data-stu-id="e61e5-117">PreferredGroupID</span></span> |<span data-ttu-id="e61e5-118">가능한 경우 그룹 ID를 제공된 값으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="e61e5-118">Sets the group id to the provided value if possible.</span></span> <span data-ttu-id="e61e5-119">현재 그룹 ID가 사용 중이라면 다음의 사용 가능한 그룹 ID가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="e61e5-119">If the group id is currently in use, the next available group id is used.</span></span> |
 
-## <a name="common-properties"></a><span data-ttu-id="5be48-120">공용 속성</span><span class="sxs-lookup"><span data-stu-id="5be48-120">Common properties</span></span>
+## <a name="common-properties"></a><span data-ttu-id="e61e5-120">공용 속성</span><span class="sxs-lookup"><span data-stu-id="e61e5-120">Common properties</span></span>
 
-|<span data-ttu-id="5be48-121">속성</span><span class="sxs-lookup"><span data-stu-id="5be48-121">Property</span></span> |<span data-ttu-id="5be48-122">Description</span><span class="sxs-lookup"><span data-stu-id="5be48-122">Description</span></span> |
+|<span data-ttu-id="e61e5-121">속성</span><span class="sxs-lookup"><span data-stu-id="e61e5-121">Property</span></span> |<span data-ttu-id="e61e5-122">Description</span><span class="sxs-lookup"><span data-stu-id="e61e5-122">Description</span></span> |
 |---|---|
-|<span data-ttu-id="5be48-123">DependsOn</span><span class="sxs-lookup"><span data-stu-id="5be48-123">DependsOn</span></span> |<span data-ttu-id="5be48-124">이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5be48-124">Indicates that the configuration of another resource must run before this resource is configured.</span></span> <span data-ttu-id="5be48-125">예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다.</span><span class="sxs-lookup"><span data-stu-id="5be48-125">For example, if the ID of the resource configuration script block that you want to run first is ResourceName and its type is ResourceType, the syntax for using this property is `DependsOn = "[ResourceType]ResourceName"`.</span></span> |
-|<span data-ttu-id="5be48-126">Ensure</span><span class="sxs-lookup"><span data-stu-id="5be48-126">Ensure</span></span> |<span data-ttu-id="5be48-127">해당 그룹이 존재하는지를 확인할지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="5be48-127">Determines whether to check if the group exists.</span></span> <span data-ttu-id="5be48-128">해당 그룹이 존재하도록 하려면 이 속성을 **Present**로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="5be48-128">Set this property to **Present** to ensure the group exists.</span></span> <span data-ttu-id="5be48-129">해당 그룹이 존재하지 않도록 하려면 이 속성을 **Absent**로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="5be48-129">Set it to **Absent** to ensure the group does not exist.</span></span> <span data-ttu-id="5be48-130">기본값은 **Present**입니다.</span><span class="sxs-lookup"><span data-stu-id="5be48-130">The default value is **Present**.</span></span> |
+|<span data-ttu-id="e61e5-123">DependsOn</span><span class="sxs-lookup"><span data-stu-id="e61e5-123">DependsOn</span></span> |<span data-ttu-id="e61e5-124">이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e61e5-124">Indicates that the configuration of another resource must run before this resource is configured.</span></span> <span data-ttu-id="e61e5-125">예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다.</span><span class="sxs-lookup"><span data-stu-id="e61e5-125">For example, if the ID of the resource configuration script block that you want to run first is ResourceName and its type is ResourceType, the syntax for using this property is `DependsOn = "[ResourceType]ResourceName"`.</span></span> |
+|<span data-ttu-id="e61e5-126">Ensure</span><span class="sxs-lookup"><span data-stu-id="e61e5-126">Ensure</span></span> |<span data-ttu-id="e61e5-127">해당 그룹이 존재하는지를 확인할지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="e61e5-127">Determines whether to check if the group exists.</span></span> <span data-ttu-id="e61e5-128">해당 그룹이 존재하도록 하려면 이 속성을 **Present**로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="e61e5-128">Set this property to **Present** to ensure the group exists.</span></span> <span data-ttu-id="e61e5-129">해당 그룹이 존재하지 않도록 하려면 이 속성을 **Absent**로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="e61e5-129">Set it to **Absent** to ensure the group does not exist.</span></span> <span data-ttu-id="e61e5-130">기본값은 **Present**입니다.</span><span class="sxs-lookup"><span data-stu-id="e61e5-130">The default value is **Present**.</span></span> |
 
-## <a name="example"></a><span data-ttu-id="5be48-131">예제</span><span class="sxs-lookup"><span data-stu-id="5be48-131">Example</span></span>
+## <a name="example"></a><span data-ttu-id="e61e5-131">예제</span><span class="sxs-lookup"><span data-stu-id="e61e5-131">Example</span></span>
 
-<span data-ttu-id="5be48-132">다음 예제에서는 사용자 ‘monuser’가 존재하고 ‘DBusers’ 그룹의 구성원임을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="5be48-132">The following example ensures that the user 'monuser' exists and is a member of the group 'DBusers'.</span></span>
+<span data-ttu-id="e61e5-132">다음 예제에서는 사용자 ‘monuser’가 존재하고 ‘DBusers’ 그룹의 구성원임을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="e61e5-132">The following example ensures that the user 'monuser' exists and is a member of the group 'DBusers'.</span></span>
 
 ```powershell
 Import-DSCResource -Module nx
