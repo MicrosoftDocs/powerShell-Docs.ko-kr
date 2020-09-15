@@ -1,13 +1,13 @@
 ---
-ms.date: 06/18/2019
+ms.date: 06/11/2020
 keywords: powershell,cmdlet
 title: PowerShell 학습 리소스
-ms.openlocfilehash: 5681fd903b323ab3cf87dc212ba64dbfdf2d78e7
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: d9d2f77090a7da7a5bef0c6d0c2af80c3a07be46
+ms.sourcegitcommit: 56463fb628a7d83dec4364e89417d83316c3e53b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808438"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84722850"
 ---
 # <a name="powershell-learning-resources"></a>PowerShell 학습 리소스
 
@@ -23,7 +23,7 @@ PowerShell을 알아보기 위한 추가 리소스입니다.
 
 ## <a name="channel-9-videos"></a>Channel 9 동영상
 
-Channel 9은 동영상 게시 플랫폼입니다. PowerShell에 대한 수백 개의 동영상을 사용할 수 있습니다. [“PowerShell”을 검색](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated)하여 사용 가능한 동영상을 확인합니다.
+Channel 9은 동영상 게시 플랫폼입니다. PowerShell에 대한 수백 개의 동영상을 사용할 수 있습니다. [“PowerShell”을 검색](https://channel9.msdn.com/Tags/powershell)하여 사용 가능한 동영상을 확인합니다.
 
 ### <a name="microsoft-virtual-academy"></a>Microsoft Virtual Academy
 

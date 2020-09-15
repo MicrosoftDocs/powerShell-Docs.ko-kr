@@ -1,19 +1,20 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: dsc,powershell,configuration,setup
 title: 복합 리소스--DSC 구성을 리소스로 사용
-ms.openlocfilehash: 79fe94bd5bab8fa460714e5994d2e2487f302410
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 1baa5e4ca5dfa808edc4452db4874a83aa78107e
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75415898"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217545"
 ---
 # <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>복합 리소스: DSC 구성을 자원으로 사용
 
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-실제 상황에서, 구성은 다양 한 리소스를 호출하고 무수한 속성을 설정하므로 길고 복잡해질 수 있습니다. 이러한 복잡성을 해결하는 데 도움이 되도록 Windows PowerShell DSC(필요한 상태 구성) 구성을 다른 구성에 대한 리소스로 사용할 수 있습니다. 이것을 복합 리소스라고 합니다. 복합 리소스는 매개 변수를 사용하는 DSC 구성입니다. 구성의 매개 변수는 리소스의 속성으로서 작동합니다. 구성은 `.schema.psm1` 확장을 사용하여 파일로 저장됩니다. MOF 스키마와 일반적인 DSC 리소스의 리소스 스크립트를 모두 대신합니다. DSC 리소스에 대한 자세한 내용은 [Windows PowerShell 필요한 상태 구성 리소스](resources.md)를 참조하세요.
+실제 상황에서, 구성은 다양 한 리소스를 호출하고 무수한 속성을 설정하므로 길고 복잡해질 수 있습니다. 이러한 복잡성을 해결하는 데 도움이 되도록 Windows PowerShell DSC(필요한 상태 구성) 구성을 다른 구성에 대한 리소스로 사용할 수 있습니다. 이것을 복합 리소스라고 합니다. 복합 리소스는 매개 변수를 사용하는 DSC 구성입니다. 구성의 매개 변수는 리소스의 속성으로서 작동합니다.
+구성은 `.schema.psm1` 확장을 사용하여 파일로 저장됩니다. MOF 스키마와 일반적인 DSC 리소스의 리소스 스크립트를 모두 대신합니다. DSC 리소스에 대한 자세한 내용은 [Windows PowerShell 필요한 상태 구성 리소스](resources.md)를 참조하세요.
 
 ## <a name="creating-the-composite-resource"></a>복합 리소스 만들기
 

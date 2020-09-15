@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC 레지스트리 리소스
-ms.openlocfilehash: 3acd79fa81bc731f344d810371b961dc3af3a11d
-ms.sourcegitcommit: 1ab59991c18e1b9692333d5e58ce649eaa75594f
+ms.openlocfilehash: da4be9152a58d9945051f9c811270e871612ca0d
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203650"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463621"
 ---
 # <a name="dsc-registry-resource"></a>DSC 레지스트리 리소스
 

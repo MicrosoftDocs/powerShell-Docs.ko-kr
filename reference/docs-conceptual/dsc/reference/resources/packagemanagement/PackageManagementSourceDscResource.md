@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/15/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC PackageManagementSource 리소스
-ms.openlocfilehash: 4a4219f3c4ad7e547025a2b9cde442c7b69eeac4
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: b24558574f192347aace5a809d57385e01d9acb3
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557144"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463893"
 ---
 # <a name="dsc-packagemanagementsource-resource"></a>DSC PackageManagementSource 리소스
 

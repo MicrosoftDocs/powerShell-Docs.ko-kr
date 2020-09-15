@@ -2,12 +2,12 @@
 ms.date: 01/08/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC 끌어오기 서비스
-ms.openlocfilehash: 821f183c91e805154323f9f6a42f7f5006499182
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: c4e725569db776fe0dbd5395b2f0f8b8e70cbbeb
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500717"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837480"
 ---
 # <a name="desired-state-configuration-pull-service"></a>원하는 상태 구성 끌어오기 서비스
 
@@ -278,5 +278,5 @@ DSC 커뮤니티는 끌어오기 서비스 프로토콜을 구현하는 여러 �
 - [Windows PowerShell Desired State Configuration 개요](../overview/overview.md)
 - [구성 시행](enactingConfigurations.md)
 - [DSC 보고서 서버 사용](reportServer.md)
-- [[MS-DSCPM]: Desired State Configuration 끌어오기 모델 프로토콜](https://docs.microsoft.com/openspecs/windows_protocols/ms-dscpm/ea744c01-51a2-4000-9ef2-312711dcc8c9)
-- [[MS-DSCPM]: Desired State Configuration 끌어오기 모델 프로토콜 오류](https://docs.microsoft.com/openspecs/windows_protocols/ms-winerrata/f5fc7ae3-9172-41e8-ac6a-2a5a5b7bfaf5)
+- [[MS-DSCPM]: Desired State Configuration 끌어오기 모델 프로토콜](/openspecs/windows_protocols/ms-dscpm/ea744c01-51a2-4000-9ef2-312711dcc8c9)
+- [[MS-DSCPM]: Desired State Configuration 끌어오기 모델 프로토콜 오류](/openspecs/windows_protocols/ms-winerrata/f5fc7ae3-9172-41e8-ac6a-2a5a5b7bfaf5)

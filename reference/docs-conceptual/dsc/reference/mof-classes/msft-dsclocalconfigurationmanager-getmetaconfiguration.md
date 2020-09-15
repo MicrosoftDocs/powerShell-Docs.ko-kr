@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,configuration,setup
 title: GetMetaConfiguration 메서드
-ms.openlocfilehash: bd280cb8ebd7b0522e4e01cbd24bd9bdcfddf4c2
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 5111cb3b15e0fba0bf71b412580efdd3cd95b2dc
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953410"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463978"
 ---
 # <a name="getmetaconfiguration-method"></a>GetMetaConfiguration 메서드
 
@@ -23,7 +23,7 @@ uint32 GetMetaConfiguration(
 
 ## <a name="parameters"></a>매개 변수
 
-*MetaConfiguration* \[out\] 반환 시, 설정을 정의하는 **MSFT_DSCMetaConfiguration** 클래스의 포함 인스턴스가 들어 있습니다.
+**MetaConfiguration** \[out\] 반환 시, 설정을 정의하는 **MSFT_DSCMetaConfiguration** 클래스의 포함 인스턴스가 들어 있습니다.
 
 ## <a name="return-value"></a>반환 값
 

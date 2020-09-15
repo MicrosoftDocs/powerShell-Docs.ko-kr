@@ -2,12 +2,12 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: PowerShell 6.0의 주요 변경 내용
-ms.openlocfilehash: 47ed14cceed86e4dd04a8e0079af00f6a98988ea
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 9ead635232930598634141369fd2cc299f0b1799
+ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "76995455"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158193"
 ---
 # <a name="breaking-changes-for-powershell-6x"></a>PowerShell 6.x의 호환성이 손상되는 변경
 
@@ -35,8 +35,8 @@ ms.locfileid: "76995455"
 
 OS를 다시 시작한 후에도 검사점을 사용하여 스크립트를 다시 시작해야하는 경우에는 작업 스케줄러를 사용하여 OS를 시작할 때 스크립트를 실행하는 것이 좋습니다. 하지만 스크립트는 자체 상태를 유지해야 합니다(예: 파일에 유지).
 
-[workflow]: /powershell/scripting/components/workflows-guide
-[workflow-foundation]: https://docs.microsoft.com/dotnet/framework/windows-workflow-foundation/
+[workflow]: /previous-versions/powershell/scripting/components/workflows-guide
+[workflow-foundation]: /dotnet/framework/windows-workflow-foundation/
 
 ### <a name="custom-snap-ins"></a>사용자 지정 스냅인
 
@@ -46,7 +46,7 @@ OS를 다시 시작한 후에도 검사점을 사용하여 스크립트를 다�
 
 이로 인해, 현재 Windows와 Windows Server의 `ActiveDirectory` 및 `DnsClient` 모듈이 중단됩니다.
 
-[snapin]: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pssnapins
+[snapin]: /powershell/module/microsoft.powershell.core/about/about_pssnapins
 
 ### <a name="wmi-v1-cmdlets"></a>WMI v1 cmdlet
 
@@ -246,8 +246,8 @@ HTTP를 사용하는 경우 암호를 포함하는 콘텐츠가 일반 텍스트
 
 이전에는 API를 사용하여 프로그래밍 방식으로 PowerShell Runspace를 만들 때 레거시 [`RunspaceConfiguration`][runspaceconfig] 또는 최신 [`InitialSessionState`][iss]를 사용할 수 있었습니다. 이 변경으로, `RunspaceConfiguration` 지원이 제거되었으며 `InitialSessionState`만 지원됩니다.
 
-[runspaceconfig]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.runspaceconfiguration
-[iss]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.initialsessionstate
+[runspaceconfig]: /dotnet/api/system.management.automation.runspaces.runspaceconfiguration
+[iss]: /dotnet/api/system.management.automation.runspaces.initialsessionstate
 
 ### <a name="commandinvocationintrinsicsinvokescript-bind-arguments-to-input-instead-of-args-4923"></a>`CommandInvocationIntrinsics.InvokeScript`에서 인수를 `$input`가 아니라 `$args`에 바인딩함 [#4923](https://github.com/PowerShell/PowerShell/issues/4923)
 

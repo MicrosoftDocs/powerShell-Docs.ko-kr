@@ -3,12 +3,12 @@ title: PowerShell-Docs 스타일 가이드
 description: 이 문서에서는 PowerShell 설명서 작성을 위한 스타일 규칙을 제공합니다.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: b60ad9a4965e75cc5f68309604f1893e5757f351
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 32df641f7cafa2a5bfcf1bcbf94be594aa77c7d0
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690852"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837446"
 ---
 # <a name="powershell-docs-style-guide"></a>PowerShell-Docs 스타일 가이드
 
@@ -240,7 +240,7 @@ URL 및 파일 링크 모두에 딥 링크를 설정할 수 있습니다. 대상
 - `[about_Splatting](about_Splatting.md#splatting-with-arrays)`
 - `[custom key bindings](https://code.visualstudio.com/docs/getstarted/keybindings#_custom-keybindings-for-refactorings)`
 
-자세한 내용은 [문서에서 링크 사용](https://docs.microsoft.com/contribute/how-to-write-links)을 참조하세요.
+자세한 내용은 [문서에서 링크 사용](/contribute/how-to-write-links)을 참조하세요.
 
 ## <a name="formatting-command-syntax-elements"></a>명령 구문 요소 서식 지정
 

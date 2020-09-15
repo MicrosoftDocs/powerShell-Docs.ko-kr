@@ -2,12 +2,12 @@
 ms.date: 01/02/2020
 keywords: powershell,cmdlet
 title: Windows PowerShell ISE 바로 가기 키
-ms.openlocfilehash: ee1b5961f8528d44330345bc49368e61970861ca
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 36fa3f983dc2d8440dd3b87aefd92eb49c028dc9
+ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809769"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86092119"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Windows PowerShell ISE 바로 가기 키
 
@@ -75,7 +75,7 @@ Windows PowerShell ISE에서 보기를 사용자 지정할 때 다음과 같은 
 | **실행/계속**           | <kbd>F5</kbd>                                  | 스크립트 창, 스크립트를 디버그할 때 |
 | **한 단계씩 코드 실행**              | <kbd>F11</kbd>                                 | 스크립트 창, 스크립트를 디버그할 때 |
 | **프로시저 단위 실행**              | <kbd>F10</kbd>                                 | 스크립트 창, 스크립트를 디버그할 때 |
-| **프로시저 나가기**               | <kbd>Shift</kbd>+<kbd><kbd>F11</kbd></kbd>     | 스크립트 창, 스크립트를 디버그할 때 |
+| **프로시저 나가기**               | <kbd>Shift</kbd>+<kbd>F11</kbd>                | 스크립트 창, 스크립트를 디버그할 때 |
 | **호출 스택 표시**     | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>  | 스크립트 창, 스크립트를 디버그할 때 |
 | **중단점 표시**       | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd>  | 스크립트 창, 스크립트를 디버그할 때 |
 | **중단점 설정/해제**      | <kbd>F9</kbd>                                  | 스크립트 창, 스크립트를 디버그할 때 |

@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,configuration,setup
 title: SendMetaConfigurationApply 메서드
-ms.openlocfilehash: b2e420bafb8ea22aea43800f6e429d3ed785d1e8
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 896afe2f3370e108b48583aafb33ee7b0eb1301b
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954880"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463723"
 ---
 # <a name="sendmetaconfigurationapply-method"></a>SendMetaConfigurationApply 메서드
 
@@ -24,9 +24,9 @@ uint32 SendMetaConfigurationApply(
 
 ## <a name="parameters"></a>매개 변수
 
-*ConfigurationData* \[in\] 구성에 대한 환경 데이터입니다.
+**ConfigurationData** \[in\] 구성에 대한 환경 데이터입니다.
 
-*force* \[in\] **true**이면 구성을 강제로 중지합니다.
+**force** \[in\] **true**이면 구성을 강제로 중지합니다.
 
 ## <a name="return-value"></a>반환 값
 

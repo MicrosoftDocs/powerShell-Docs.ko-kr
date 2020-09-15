@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,configuration,setup
 title: GetConfiguration 메서드
-ms.openlocfilehash: eabc536cfe69abe1144ff031a6f64c09a772e638
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 989aeef4cd9aa5d55741b48c8565c657c4b6512c
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71955050"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463825"
 ---
 # <a name="getconfiguration-method"></a>GetConfiguration 메서드
 
@@ -24,9 +24,9 @@ uint32 GetConfiguration(
 
 ## <a name="parameters"></a>매개 변수
 
-*configurationData* \[in\] 보낼 구성 데이터를 지정합니다.
+**configurationData** \[in\] 보낼 구성 데이터를 지정합니다.
 
-*configurations* \[out\] 반환 시, 구성의 포함 인스턴스가 들어 있습니다.
+**configurations** \[out\] 반환 시, 구성의 포함 인스턴스가 들어 있습니다.
 
 ## <a name="return-value"></a>반환 값
 

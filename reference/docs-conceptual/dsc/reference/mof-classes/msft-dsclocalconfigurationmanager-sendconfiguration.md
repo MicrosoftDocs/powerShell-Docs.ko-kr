@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,configuration,setup
 title: SendConfiguration 메서드
-ms.openlocfilehash: 4feba090bc58844659c2329a304dd9805255564f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: afd6e8d7acc969df16fad1d0ba15c9fe0b1a26fd
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953390"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463944"
 ---
 # <a name="sendconfiguration-method"></a>SendConfiguration 메서드
 
@@ -24,9 +24,9 @@ uint32 SendConfiguration(
 
 ## <a name="parameters"></a>매개 변수
 
-*ConfigurationData* \[in\] 구성에 대한 환경 데이터입니다.
+**ConfigurationData** \[in\] 구성에 대한 환경 데이터입니다.
 
-*force* \[in\] **true**이면 구성을 강제로 중지합니다.
+**force** \[in\] **true**이면 구성을 강제로 중지합니다.
 
 ## <a name="return-value"></a>반환 값
 

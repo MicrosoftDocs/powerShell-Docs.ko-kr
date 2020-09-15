@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,configuration,setup
 title: SendConfigurationApplyAsync 메서드
-ms.openlocfilehash: c0e6dc9418757ee719e848fa8e7006dd73d91ad8
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4cfac5edb5fed94ee69deb98d7aa6be56b51c5b3
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953380"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463740"
 ---
 # <a name="sendconfigurationapplyasync-method"></a>SendConfigurationApplyAsync 메서드
 
@@ -25,11 +25,11 @@ uint32 SendConfigurationApplyAsync(
 
 ## <a name="parameters"></a>매개 변수
 
-*ConfigurationData* \[in\] 구성에 대한 환경 데이터입니다.
+**ConfigurationData** \[in\] 구성에 대한 환경 데이터입니다.
 
-*force* \[in\] **true**이면 구성을 강제로 중지합니다.
+**force** \[in\] **true**이면 구성을 강제로 중지합니다.
 
-*jobId* \[in\] 구성을 보낼 작업의 ID입니다.
+**jobId** \[in\] 구성을 보낼 작업의 ID입니다.
 
 ## <a name="return-value"></a>반환 값
 
