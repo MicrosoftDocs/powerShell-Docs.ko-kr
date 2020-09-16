@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 초기 부팅 시 DSC를 사용하여 가상 컴퓨터 구성
-ms.openlocfilehash: f9634c330832e23fb2c6f08c5b299b55a5505ac9
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 48f5e30bed0b97b80724fbf95ec604ede9f2ea5d
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954610"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236291"
 ---
 # <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>초기 부팅 시 DSC를 사용하여 가상 컴퓨터 구성
 
@@ -22,7 +22,7 @@ ms.locfileid: "71954610"
 
 이러한 예제를 실행하려면 다음이 필요합니다.
 
-- 작업할 부팅 가능한 VHD. [TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016)에서 Windows Server 2016 평가판이 포함된 ISO를 다운로드할 수 있습니다.
+- 작업할 부팅 가능한 VHD. [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016)에서 Windows Server 2016 평가판이 포함된 ISO를 다운로드할 수 있습니다.
   ISO 이미지에서 VHD를 만드는 방법에 지침은 [Creating Bootable Virtual Hard Disks](/previous-versions/windows/it-pro/windows-7/gg318049(v=ws.10))(부팅 가능한 가상 하드 디스크 만들기)에서 확인할 수 있습니다.
 - Hyper-V 사용하도록 설정한 호스트 컴퓨터. 자세한 내용은 [Hyper-V 개요](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11))를 참조하세요.
 

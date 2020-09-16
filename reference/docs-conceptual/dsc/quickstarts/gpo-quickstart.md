@@ -2,12 +2,12 @@
 ms.date: 07/09/2019
 keywords: dsc,gpo,powershell,configuration,setup
 title: 빠른 시작 - 그룹 정책을 DSC로 변환
-ms.openlocfilehash: a9ce9cecd71fe00d2908024a3ee474ec836af3ba
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 852710f261ea1d57228c05d4093c1d78584e0ca5
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808251"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236240"
 ---
 # <a name="quickstart-convert-group-policy-into-dsc"></a>빠른 시작: 그룹 정책을 DSC로 변환
 
@@ -23,7 +23,7 @@ ms.locfileid: "83808251"
 
 위에 나열된 cmdlet은 기준선을 DSC `.mof` 파일로 변환합니다. 편집하고 다시 컴파일할 수 있는 구성 스크립트(`.ps1`)를 출력하도록 선택할 수도 있습니다. cmdlet은 누락된 리소스 또는 중복된 리소스 블록에 대한 컴파일 오류를 검색합니다. 컴파일 오류를 발생시키는 리소스 블록은 주석 처리됩니다.
 
-다음 예제에서는 [Microsoft Security 기준선](https://www.microsoft.com/en-us/download/details.aspx?id=55319)을 DSC 구성 스크립트(`.ps1`) 및 `.mof` 파일로 변환합니다.
+다음 예제에서는 [Microsoft Security 기준선](https://www.microsoft.com/download/details.aspx?id=55319)을 DSC 구성 스크립트(`.ps1`) 및 `.mof` 파일로 변환합니다.
 
 ```powershell
 Install-Module BaselineManagement

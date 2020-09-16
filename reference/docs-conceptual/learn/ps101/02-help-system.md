@@ -5,12 +5,12 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 43d2de7e1f59ce5e980c192decb5309d3f6d0ff8
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+ms.openlocfilehash: 8325a32ad8ec137781300e9d46cab52705f0805a
+ms.sourcegitcommit: eaac7af89171379df2e20464ebee9fc7e7d7674a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438114"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89493660"
 ---
 # <a name="chapter-2---the-help-system"></a>2장 - 도움말 시스템
 
@@ -50,7 +50,7 @@ PowerShell의 도움말 시스템에 대해 가장 먼저 알아야 할 사항�
 Get-Help -Name Get-Help
 ```
 
-```Outpout
+```Output
 Do you want to run Update-Help?
 The Update-Help cmdlet downloads the most current Help files for Windows PowerShell
 modules, and installs them on your computer. For more information about the Update-Help

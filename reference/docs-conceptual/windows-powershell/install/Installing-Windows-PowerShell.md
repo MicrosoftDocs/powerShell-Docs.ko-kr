@@ -2,12 +2,12 @@
 ms.date: 08/09/2017
 keywords: powershell,cmdlet,다운로드,설치,설정,windows 10, windows 8.1, windows 8.0,windows 7
 title: Windows PowerShell 설치
-ms.openlocfilehash: c94ef8493c7d41bcb26c39010591319a8df8da9a
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 26675eb0b213818eaa72e148f0814545ee9f960e
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808669"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236223"
 ---
 # <a name="installing-windows-powershell"></a>Windows PowerShell 설치
 
@@ -66,9 +66,9 @@ Windows에서 기존 PowerShell 버전을 업데이트해야 할 경우 다음 �
 |                    Windows                     |                                  PS 3.0                                   |                                  PS 4.0                                   |                                  PS 5.0                                   |                                  PS 5.1                                   |
 | ---------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | Windows 10(참고 1 참조)<br/>Windows Server 2016 | -                                                                         | -                                                                         | -                                                                         | 설치됨                                                                 |
-| Windows 8.1<br/>Windows Server 2012 R2         | -                                                                         | 설치됨                                                                 | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616) |
-| Windows 8<br/>Windows Server 2012              | 설치됨                                                                 | [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616) |
-| Windows 7 SP1<br/>Windows Server 2008 R2 SP1   | [WMF 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) | [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616) |
+| Windows 8.1<br/>Windows Server 2012 R2         | -                                                                         | 설치됨                                                                 | [WMF 5.0](https://www.microsoft.com/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/download/details.aspx?id=54616) |
+| Windows 8<br/>Windows Server 2012              | 설치됨                                                                 | [WMF 4.0](https://www.microsoft.com/download/details.aspx?id=40855) | [WMF 5.0](https://www.microsoft.com/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/download/details.aspx?id=54616) |
+| Windows 7 SP1<br/>Windows Server 2008 R2 SP1   | [WMF 3.0](https://www.microsoft.com/download/details.aspx?id=34595) | [WMF 4.0](https://www.microsoft.com/download/details.aspx?id=40855) | [WMF 5.0](https://www.microsoft.com/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/download/details.aspx?id=54616) |
 
 > [!NOTE]
 > 자동으로 업데이트되도록 설정된 Windows 10의 초기 릴리스에서는 PowerShell이 버전 5.0에서 5.1로 업데이트됩니다. Windows 업데이트를 통해 Windows 10의 원래 버전이 업데이트되지 않으면 PowerShell 버전은 5.0입니다.

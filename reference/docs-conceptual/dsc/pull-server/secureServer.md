@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 끌어오기 서버 모범 사례
-ms.openlocfilehash: 2d707dc64c327cf30d09104aee140e5b78ee7c29
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 7b717e9e3bd753ef287701f3e2406e3fde1e2542
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692262"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236257"
 ---
 # <a name="pull-server-best-practices"></a>끌어오기 서버 모범 사례
 
@@ -64,7 +64,7 @@ Windows 업데이트에서 최신 콘텐츠를 설치하는 것 외에도 DSC �
 ### <a name="wmf"></a>WMF
 
 Windows Server 2012 R2에는 DSC 서비스라는 기능이 포함되어 있습니다. DSC 서비스 기능은 OData 엔드포인트를 지원하는 이진 파일을 비롯한 끌어오기 서버 기능을 제공합니다. WMF는 Windows Server에 포함되어 있으며 Windows Server 릴리스 사이에 빠른 주기로 업데이트됩니다.
-[WMF 5.0의 새 버전](https://www.microsoft.com/en-us/download/details.aspx?id=54616)에는 DSC 서비스 기능에 대한 업데이트가 포함될 수 있습니다. 따라서 WMF의 최신 릴리스를 다운로드하고 릴리스 정보를 검토하여 해당 릴리스에 DSC 서비스 기능에 대한 업데이트가 포함되어 있는지 확인하는 것이 좋습니다. 업데이트 또는 시나리오의 디자인 상태가 안정적 또는 실험적으로 나열되는지를 나타내는 릴리스 정보 섹션도 검토해야 합니다. 빠른 릴리스 주기를 달성하기 위해 WMF가 미리 보기로 릴리스된 동안에도 기능을 프로덕션 환경에서 사용할 수 있도록 개별 기능을 안정적이라고 선언할 수 있습니다. 지금까지 WMF 릴리스에서 업데이트된 다른 기능은 다음과 같습니다(자세한 내용은 WMF 릴리스 정보 참조).
+[WMF 5.0의 새 버전](https://www.microsoft.com/download/details.aspx?id=54616)에는 DSC 서비스 기능에 대한 업데이트가 포함될 수 있습니다. 따라서 WMF의 최신 릴리스를 다운로드하고 릴리스 정보를 검토하여 해당 릴리스에 DSC 서비스 기능에 대한 업데이트가 포함되어 있는지 확인하는 것이 좋습니다. 업데이트 또는 시나리오의 디자인 상태가 안정적 또는 실험적으로 나열되는지를 나타내는 릴리스 정보 섹션도 검토해야 합니다. 빠른 릴리스 주기를 달성하기 위해 WMF가 미리 보기로 릴리스된 동안에도 기능을 프로덕션 환경에서 사용할 수 있도록 개별 기능을 안정적이라고 선언할 수 있습니다. 지금까지 WMF 릴리스에서 업데이트된 다른 기능은 다음과 같습니다(자세한 내용은 WMF 릴리스 정보 참조).
 
 - Windows PowerShell, Windows PowerShell ISE(통합 스크립팅
 - 환경), Windows PowerShell 웹 서비스(관리 OData

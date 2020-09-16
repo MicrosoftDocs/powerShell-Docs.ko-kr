@@ -2,12 +2,12 @@
 ms.date: 08/15/2019
 keywords: dsc,powershell,configuration,setup
 title: Windows용 DSC(필요한 상태 구성) 시작
-ms.openlocfilehash: 2add2c936e60c0c9446bf4b398fbf7b4bd6407f7
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 00e1cf545b19f054b4b1ff468c9f6ad94e5cef55
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75416170"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236325"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-windows"></a>Windows용 DSC(필요한 상태 구성) 시작
 
@@ -31,7 +31,7 @@ DSC에 대한 일반적인 내용은 [Windows PowerShell 필요한 상태 구성
 
 ## <a name="installing-dsc"></a>DSC 설치
 
-PowerShell 필요한 상태 구성은 Windows에 포함되어 있으며 Windows Management Framework를 통해 업데이트됩니다. 최신 버전은 [Windows Management Framework 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)입니다.
+PowerShell 필요한 상태 구성은 Windows에 포함되어 있으며 Windows Management Framework를 통해 업데이트됩니다. 최신 버전은 [Windows Management Framework 5.1](https://www.microsoft.com/download/details.aspx?id=54616)입니다.
 
 > [!NOTE]
 > DSC를 사용하여 머신을 관리하기 위해 Windows Server 기능 ' DSC-서비스'를 사용하도록 설정할 필요는 없습니다.
