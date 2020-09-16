@@ -73,13 +73,15 @@
           href: learn/deep-dives/everything-about-null.md
         - name: ShouldProcess에 대해 알고 싶은 모든 것
           href: learn/deep-dives/everything-about-shouldprocess.md
+        - name: 다중 스레딩 중 Write-Progress
+          href: learn/deep-dives/write-progress-across-multiple-threads.md
     - name: PowerShell 원격 기능
       items:
         - name: JEA(Just Enough Administration)
           items:
             - name: 개요
               href: learn/remoting/jea/overview.md
-            - name: 필수 구성 요소
+            - name: 사전 요구 사항
               href: learn/remoting/jea/prerequisites.md
             - name: 역할 기능
               href: learn/remoting/jea/role-capabilities.md
@@ -225,7 +227,7 @@
               href: windows-powershell/wmf/whats-new/bugfixes.md
             - name: 새로 제공되거나 업데이트된 cmdlet
               href: windows-powershell/wmf/whats-new/new-updated-cmdlets.md
-            - name: PowerShell 클래스를 사용하여 사용자 지정 형식 만들기
+            - name: PowerShell 5.0의 새로운 언어 기능
               href: windows-powershell/wmf/whats-new/class-overview.md
             - name: WMF 5.1의 향상된 콘솔
               href: windows-powershell/wmf/whats-new/console-improvements.md
@@ -358,7 +360,7 @@
               href: dsc/resources/authoringResourceClass.md
             - name: PowerShell에서 복합 리소스 작성
               href: dsc/resources/authoringResourceComposite.md
-            - name: 'C#에서 MOF 기반 리소스 작성'
+            - name: C#에서 MOF 기반 리소스 작성
               href: dsc/resources/authoringResourceMofCS.md
             - name: 리소스 디자이너 도구 사용
               href: dsc/resources/authoringResourceMofDesigner.md
@@ -562,6 +564,8 @@
       href: community/hall-of-fame.md
     - name: Docs의 새로운 기능
       items:
+        - name: 2020-Q3
+          href: community/2020-Q3.md
         - name: 2020-Q2
           href: community/2020-Q2.md
         - name: 2020-Q1
@@ -626,7 +630,7 @@
           href: samples/managing-processes-with-process-cmdlets.md
         - name: 서비스 관리
           href: samples/managing-services.md
-        - name: Windows PowerShell 드라이브 관리
+        - name: PowerShell 드라이브 관리
           href: samples/managing-windows-powershell-drives.md
         - name: 프린터 작업
           href: samples/working-with-printers.md
@@ -782,8 +786,14 @@
           href: dev-cross-plat/vscode/understanding-file-encoding.md
     - name: 이식 가능한 모듈 작성
       href: dev-cross-plat/writing-portable-modules.md
+    - name: PlatyPS를 사용하여 모듈 도움말 만들기
+      href: dev-cross-plat/create-help-using-platyps.md
     - name: 표준 라이브러리 이진 모듈을 만드는 방법
       href: dev-cross-plat/create-standard-library-binary-module.md
+    - name: .NET 프로젝트에 적합한 NuGet 패키지 선택
+      href: dev-cross-plat/choosing-the-right-nuget-package.md
+    - name: 모듈 어셈블리 종속성 충돌 해결
+      href: dev-cross-plat/resolving-dependency-conflicts.md
     - name: 레거시 PowerShell SDK
       items:
         - name: 개요
@@ -794,11 +804,11 @@
           href: developer/windows-powershell-reference.md
         - name: What's New
           href: developer/windows-powershell-reference-whats-new.md
-        - name: Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)
+        - name: PowerShell cmdlet 작성
           items:
             - name: Cmdlet 개요
               href: developer/cmdlet/cmdlet-overview.md
-            - name: Windows PowerShell Cmdlet 개념
+            - name: PowerShell cmdlet 개념
               href: developer/cmdlet/windows-powershell-cmdlet-concepts.md
               items:
                 - name: Cmdlet 개발 지침
@@ -812,7 +822,7 @@
                       href: developer/cmdlet/advisory-development-guidelines.md
                 - name: Cmdlet 클래스 선언
                   href: developer/cmdlet/cmdlet-class-declaration.md
-                - name: Windows PowerShell 명령에 승인된 동사
+                - name: PowerShell 명령에 승인된 동사
                   href: developer/cmdlet/approved-verbs-for-windows-powershell-commands.md
                 - name: Cmdlet 입력 처리 메서드
                   href: developer/cmdlet/cmdlet-input-processing-methods.md
@@ -910,7 +920,7 @@
                       href: developer/cmdlet/users-requesting-confirmation.md
                     - name: 확인 메시지
                       href: developer/cmdlet/confirmation-messages.md
-                - name: Windows PowerShell 오류 보고
+                - name: PowerShell 오류 보고
                   href: developer/cmdlet/windows-powershell-error-reporting.md
                   items:
                     - name: 오류 보고 개념
@@ -921,7 +931,7 @@
                       href: developer/cmdlet/non-terminating-errors.md
                     - name: 오류 정보 표시
                       href: developer/cmdlet/displaying-error-information.md
-                    - name: Windows PowerShell 오류 레코드
+                    - name: PowerShell 오류 레코드
                       href: developer/cmdlet/windows-powershell-error-records.md
                     - name: ErrorRecord 개체 해석
                       href: developer/cmdlet/interpreting-errorrecord-objects.md
@@ -931,7 +941,7 @@
                   href: developer/cmdlet/invoking-cmdlets-and-scripts-within-a-cmdlet.md
                 - name: Cmdlet 집합
                   href: developer/cmdlet/cmdlet-sets.md
-                - name: Windows PowerShell 세션 상태
+                - name: PowerShell 세션 상태
                   href: developer/cmdlet/windows-powershell-session-state.md
             - name: Cmdlet 코드 예제
               href: developer/cmdlet/examples-of-cmdlet-code.md
@@ -1022,11 +1032,11 @@
                   href: developer/cmdlet/stopprocesssample04-sample.md
                 - name: Events01 샘플
                   href: developer/cmdlet/events01-sample.md
-        - name: Windows PowerShell 모듈 작성
+        - name: PowerShell 모듈 작성
           items:
             - name: 개요
               href: developer/module/writing-a-windows-powershell-module.md
-            - name: Windows PowerShell 모듈 이해
+            - name: PowerShell 모듈 이해
               href: developer/module/understanding-a-windows-powershell-module.md
             - name: PowerShell 스크립트 모듈을 작성하는 방법
               href: developer/module/how-to-write-a-powershell-script-module.md
@@ -1050,17 +1060,17 @@
                   items:
                     - name: 개요
                       href: developer/module/how-to-create-a-windows-powershell-snap-in.md
-                    - name: Windows PowerShell 스냅인 작성
+                    - name: PowerShell 스냅인 작성
                       href: developer/module/writing-a-windows-powershell-snap-in.md
-                    - name: 사용자 지정 Windows PowerShell 스냅인 작성
+                    - name: 사용자 지정 PowerShell 스냅인 작성
                       href: developer/module/writing-a-custom-windows-powershell-snap-in.md
             - name: PowerShell 모듈 가져오기
               href: developer/module/importing-a-powershell-module.md
-        - name: Windows PowerShell 공급자 작성
+        - name: PowerShell 공급자 작성
           items:
-            - name: Windows PowerShell 공급자 빠른 시작
+            - name: PowerShell 공급자 빠른 시작
               href: developer/provider/windows-powershell-provider-quickstart.md
-            - name: Windows PowerShell 공급자 개요
+            - name: PowerShell 공급자 개요
               href: developer/provider/windows-powershell-provider-overview.md
               items:
                 - name: 공급자 유형
@@ -1092,9 +1102,9 @@
                   href: developer/provider/accessdbprovidersample05.md
                 - name: AccessDBProviderSample06
                   href: developer/provider/accessdbprovidersample06.md
-        - name: Windows PowerShell 호스트 애플리케이션 작성
+        - name: PowerShell 호스트 애플리케이션 작성
           items:
-            - name: Windows PowerShell 호스트 빠른 시작
+            - name: PowerShell 호스트 빠른 시작
               href: developer/hosting/windows-powershell-host-quickstart.md
             - name: runspace 만들기
               href: developer/hosting/creating-runspaces.md
@@ -1114,12 +1124,12 @@
             - name: 호스트 애플리케이션 샘플
               href: developer/hosting/host-application-samples.md
               items:
-                - name: Windows PowerShell API 샘플
+                - name: PowerShell API 샘플
                   href: developer/hosting/windows-powershell-api-samples.md
                   items:
-                    - name: Windows PowerShell01 샘플
+                    - name: PowerShell01 샘플
                       href: developer/hosting/windows-powershell01-sample.md
-                    - name: Windows PowerShell02 샘플
+                    - name: PowerShell02 샘플
                       href: developer/hosting/windows-powershell02-sample.md
                 - name: 사용자 지정 호스트 샘플
                   href: developer/hosting/custom-host-samples.md
@@ -1633,7 +1643,7 @@
                   href: developer/format/wrap-element-for-tablerowentry-for-tablecontrol-format.md
                 - name: WrapTables 요소(형식)
                   href: developer/format/wraptables-element-format.md
-        - name: Windows PowerShell에 대한 도움말 작성
+        - name: PowerShell에 대한 도움말 작성
           items:
             - name: 개요
               href: developer/help/writing-help-for-windows-powershell-scripts-and-functions.md
@@ -1655,7 +1665,7 @@
                   href: developer/help/examples-of-comment-based-help.md
             - name: 명령에 대한 XML 기반 도움말 항목 작성
               items:
-                - name: Windows PowerShell Cmdlet에 대한 도움말 작성
+                - name: PowerShell cmdlet에 대한 도움말 작성
                   items:
                     - name: 개요
                       href: developer/help/writing-help-for-windows-powershell-cmdlets.md
@@ -1679,9 +1689,10 @@
                       href: developer/help/how-to-add-examples-to-a-cmdlet-help-topic.md
                     - name: Cmdlet 도움말 항목에 관련 링크를 추가하는 방법
                       href: developer/help/how-to-add-related-links-to-a-cmdlet-help-topic.md
-                - name: Windows PowerShell 모듈에 대한 도움말 작성
-                  href: developer/module/writing-help-for-windows-powershell-modules.md
+                - name: PowerShell 모듈에 대한 도움말 작성
                   items:
+                    - name: 개요
+                      href: developer/help/writing-help-for-windows-powershell-modules.md
                     - name: 도움말 파일 이름 지정
                       href: developer/help/naming-help-files.md
                     - name: 업데이트 가능한 도움말 지원
@@ -1719,93 +1730,55 @@
                               href: developer/help/how-to-test-updatable-help.md
                         - name: 온라인 도움말 지원
                           href: developer/help/supporting-online-help.md
-                - name: Windows PowerShell 공급자에 대한 도움말 작성
+                - name: PowerShell 공급자에 대한 도움말 작성
                   items:
                     - name: 공급자 도움말 항목에 동적 매개 변수를 추가하는 방법
                       href: developer/help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
                     - name: 공급자 도움말 항목에 참고 항목 섹션을 추가하는 방법
                       href: developer/help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
-        - name: 관리 OData 웹 서비스 만들기
+        - name: ETS(확장 형식 시스템)
           items:
-            - name: 개요
-              href: developer/webservices/creating-a-management-odata-web-service.md
-            - name: 관리 OData 웹 서비스에 리소스 추가
-              href: developer/webservices/adding-resources-to-a-management-odata-web-service.md
-            - name: 관리 OData 웹 서비스에 대한 사용자 지정 권한 부여 구현
-              items:
-                - name: 개요
-                  href: developer/webservices/implementing-custom-authorization-for-a-management-odata-web-service.md
-                - name: 역할 기반 권한 부여 구성
-                  href: developer/webservices/configuring-role-based-authorization.md
-                - name: 역할 기반 권한 부여 구성 스키마
-                  href: developer/webservices/role-based-authorization-configuration-schema.md
-                - name: 관리 OData 웹 서비스를 사용하여 Windows PowerShell cmdlet 호출
-                  href: developer/webservices/invoking-windows-powershell-cmdlets-with-management-odata-web-services.md
-            - name: 관리 OData 웹 서비스에 대한 SessionConfiguration 구현
-              href: developer/webservices/implementing-sessionconfiguration-for-a-management-odata-web-service.md
-            - name: 관리 OData 웹 서비스용 MOF 스키마 파일 작성
-              href: developer/webservices/authoring-the-mof-schema-file-for-a-management-odata-web-service.md
-            - name: 관리 OData 웹 서비스용 XML 스키마 파일 작성
-              href: developer/webservices/authoring-the-xml-schema-file-for-a-management-odata-web-service.md
-            - name: 관리 OData 웹 서비스용 Web.config 파일 작성
-              href: developer/webservices/authoring-the-web-config-file-for-a-management-odata-web-service.md
-            - name: 관리 OData 웹 서비스 배포
-              href: developer/webservices/deploying-a-management-odata-web-service.md
-            - name: 관리 OData 엔터티 연결
-              href: developer/webservices/associating-management-odata-entities.md
-            - name: 관리 OData IIS 확장 스키마 파일
-              items:
-                - name: 개요
-                  href: developer/webservices/management-odata-iis-extension-schema-files.md
-                - name: 리소스 매핑 스키마
-                  href: developer/webservices/resource-mapping-schema.md
-                - name: 공용 리소스 스키마
-                  href: developer/webservices/public-resource-schema.md
-        - name: Windows PowerShell 워크플로 작성
-          items:
-            - name: 개요
-              href: developer/workflow/writing-a-windows-powershell-workflow.md
-            - name: Visual Studio 도구 상자에 Windows PowerShell 활동 추가
-              href: developer/workflow/adding-windows-powershell-activities-to-the-visual-studio-toolbox.md
-            - name: Windows PowerShell 활동을 사용하여 워크플로 만들기
-              href: developer/workflow/creating-a-workflow-with-windows-powershell-activities.md
-            - name: Windows PowerShell 스크립트를 사용하여 워크플로 만들기
-              href: developer/workflow/creating-a-workflow-by-using-a-windows-powershell-script.md
-            - name: Windows PowerShell 워크플로 가져오기 및 호출
-              href: developer/workflow/importing-and-invoking-a-windows-powershell-workflow.md
-            - name: Windows PowerShell Cmdlet에서 워크플로 활동 만들기
-              href: developer/workflow/creating-a-workflow-activity-from-a-windows-powershell-cmdlet.md
-            - name: Windows PowerShell API를 사용하여 작업 예약
-              href: developer/workflow/scheduling-jobs-with-the-windows-powershell-api.md
-            - name: 일반 워크플로 매개 변수
-              href: developer/workflow/common-workflow-parameters.md
+            - name: ETS 개요
+              href: developer/ets/overview.md
+            - name: ETS 멤버
+              href: developer/ets/members.md
+            - name: ETS 멤버 집합
+              href: developer/ets/membersets.md
+            - name: ETS 속성
+              href: developer/ets/properties.md
+            - name: ETS 메서드
+              href: developer/ets/methods.md
+            - name: ETS 형식 변환기
+              href: developer/ets/typeconverters.md
+            - name: ETS의 오류 및 예외
+              href: developer/ets/errors-exceptions.md
         - name: Windows PowerShell 프로그래머 가이드
           href: developer/prog-guide/windows-powershell-programmer-s-guide.md
           items:
-            - name: Windows PowerShell 공급자를 만드는 방법
+            - name: PowerShell 공급자를 만드는 방법
               href: developer/prog-guide/how-to-create-a-windows-powershell-provider.md
               items:
-                - name: Windows PowerShell 공급자 설계
+                - name: PowerShell 공급자 설계
                   href: developer/prog-guide/designing-your-windows-powershell-provider.md
-                - name: 기본 Windows PowerShell 공급자 만들기
+                - name: 기본 PowerShell 공급자 만들기
                   href: developer/prog-guide/creating-a-basic-windows-powershell-provider.md
-                - name: Windows PowerShell 드라이브 공급자 만들기
+                - name: PowerShell 드라이브 공급자 만들기
                   href: developer/prog-guide/creating-a-windows-powershell-drive-provider.md
-                - name: Windows PowerShell 항목 공급자 만들기
+                - name: PowerShell 항목 공급자 만들기
                   href: developer/prog-guide/creating-a-windows-powershell-item-provider.md
-                - name: Windows PowerShell 컨테이너 공급자 만들기
+                - name: PowerShell 컨테이너 공급자 만들기
                   href: developer/prog-guide/creating-a-windows-powershell-container-provider.md
-                - name: Windows PowerShell 탐색 공급자 만들기
+                - name: PowerShell 탐색 공급자 만들기
                   href: developer/prog-guide/creating-a-windows-powershell-navigation-provider.md
-                - name: Windows PowerShell 콘텐츠 공급자 만들기
+                - name: PowerShell 콘텐츠 공급자 만들기
                   href: developer/prog-guide/creating-a-windows-powershell-content-provider.md
-                - name: Windows PowerShell 속성 공급자 만들기
+                - name: PowerShell 속성 공급자 만들기
                   href: developer/prog-guide/creating-a-windows-powershell-property-provider.md
             - name: 콘솔 셸을 만드는 방법
               href: developer/prog-guide/how-to-create-a-console-shell.md
-            - name: Windows PowerShell 개념
+            - name: PowerShell 개념
               href: developer/prog-guide/windows-powershell-concepts.md
-            - name: Windows PowerShell 코드 샘플
+            - name: PowerShell 샘플 코드
               href: developer/prog-guide/windows-powershell-sample-code.md
               items:
                 - name: AccessDbProviderSample01 코드 샘플
@@ -1823,68 +1796,68 @@
                 - name: GetProc01 코드 샘플
                   href: developer/prog-guide/getproc01-code-samples.md
                   items:
-                    - name: 'GetProc01(C#) 코드 샘플'
+                    - name: GetProc01(C#) 코드 샘플
                       href: developer/prog-guide/getproc01-csharp-sample-code.md
                     - name: GetProc01(VB.NET) 코드 샘플
                       href: developer/prog-guide/getproc01-vb-net-sample-code.md
                 - name: GetProc02 코드 샘플
                   href: developer/prog-guide/getproc02-code-samples.md
                   items:
-                    - name: 'GetProc02(C#) 코드 샘플'
+                    - name: GetProc02(C#) 코드 샘플
                       href: developer/prog-guide/getproc02-csharp-sample-code.md
                     - name: GetProc02(VB.NET) 코드 샘플
                       href: developer/prog-guide/getproc02-vb-net-sample-code.md
                 - name: GetProc03 코드 샘플
                   href: developer/prog-guide/getproc03-code-samples.md
                   items:
-                    - name: 'GetProc03(C#) 코드 샘플'
+                    - name: GetProc03(C#) 코드 샘플
                       href: developer/prog-guide/getproc03-csharp-sample-code.md
                     - name: GetProc03(VB.NET) 코드 샘플
                       href: developer/prog-guide/getproc03-vb-net-sample-code.md
                 - name: GetProc04 코드 샘플
                   href: developer/prog-guide/getproc04-code-samples.md
                   items:
-                    - name: 'GetProc04(C#) 코드 샘플'
+                    - name: GetProc04(C#) 코드 샘플
                       href: developer/prog-guide/getproc04-csharp-sample-code.md
                     - name: GetProc04(VB.NET) 코드 샘플
                       href: developer/prog-guide/getproc04-vb-net-sample-code.md
                 - name: GetProc05 코드 샘플
                   href: developer/prog-guide/getproc05-code-samples.md
                   items:
-                    - name: 'GetProc05(C#) 코드 샘플'
+                    - name: GetProc05(C#) 코드 샘플
                       href: developer/prog-guide/getproc05-csharp-sample-code.md
                     - name: GetProc05(VB.NET) 코드 샘플
                       href: developer/prog-guide/getproc05-vb-net-sample-code.md
                 - name: StopProc01 코드 샘플
                   href: developer/prog-guide/stopproc01-code-samples.md
                   items:
-                    - name: 'StopProc01(C#) 코드 샘플'
+                    - name: StopProc01(C#) 코드 샘플
                       href: developer/prog-guide/stopproc01-csharp-sample-code.md
                 - name: StopProcessSample04 코드 샘플
                   href: developer/prog-guide/stopprocesssample04-code-samples.md
                   items:
-                    - name: 'StopProcessSample04(C#) 코드 샘플'
+                    - name: StopProcessSample04(C#) 코드 샘플
                       href: developer/prog-guide/stopprocesssample04-csharp-sample-code.md
                     - name: StopProcessSample04(VB.NET) 코드 샘플
                       href: developer/prog-guide/stopprocesssample04-vb-net-sample-code.md
                 - name: Runspace01 코드 샘플
                   href: developer/prog-guide/runspace01-code-samples.md
                   items:
-                    - name: 'Runspace01(C#) 코드 샘플'
+                    - name: Runspace01(C#) 코드 샘플
                       href: developer/prog-guide/runspace01-csharp-code-sample.md
                     - name: Runspace01(VB.NET) 코드 샘플
                       href: developer/prog-guide/runspace01-vb-net-code-sample.md
                 - name: Runspace02 코드 샘플
                   href: developer/prog-guide/runspace02-code-samples.md
                   items:
-                    - name: 'Runspace02(C#) 코드 샘플'
+                    - name: Runspace02(C#) 코드 샘플
                       href: developer/prog-guide/runspace02-csharp-code-sample.md
                     - name: Runspace02(VB.NET) 코드 샘플
                       href: developer/prog-guide/runspace02-vb-net-code-sample.md
                 - name: RunSpace03 코드 샘플
                   href: developer/prog-guide/runspace03-code-samples.md
                   items:
-                    - name: 'RunSpace03(C#) 코드 샘플'
+                    - name: RunSpace03(C#) 코드 샘플
                       href: developer/prog-guide/runspace03-csharp-code-sample.md
                     - name: RunSpace03(VB.NET) 코드 샘플
                       href: developer/prog-guide/runspace03-vb-net-code-sample.md
