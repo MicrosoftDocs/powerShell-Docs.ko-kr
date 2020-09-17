@@ -1,13 +1,13 @@
 ---
 title: Windows에 PowerShell 설치
 description: Windows에서 PowerShell을 설치하는 방법에 대한 정보
-ms.date: 05/21/2020
-ms.openlocfilehash: 864f297e4f569030439bd6b581ef593d36f8b910
-ms.sourcegitcommit: fd6a33b9fac973b3554fecfea7f51475e650a606
+ms.date: 09/14/2020
+ms.openlocfilehash: 8f1b60ef6bfef5c2434b0affabb5e0e7af392b96
+ms.sourcegitcommit: 30c0c1563f8e840f24b65297e907f3583d90e677
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791492"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574456"
 ---
 # <a name="installing-powershell-on-windows"></a>Windows에 PowerShell 설치
 
@@ -30,8 +30,8 @@ Windows에서 PowerShell을 설치하려면 GitHub [릴리스][releases] 페이�
 
 MSI 파일은 `PowerShell-<version>-win-<os-arch>.msi`과 비슷합니다. 다음은 그 예입니다. 
 
-- `PowerShell-7.0.1-win-x64.msi`
-- `PowerShell-7.0.1-win-x86.msi`
+- `PowerShell-7.0.3-win-x64.msi`
+- `PowerShell-7.0.3-win-x86.msi`
 
 다운로드가 완료되면 설치 프로그램을 두 번 클릭하고 지시를 따릅니다.
 
@@ -60,12 +60,28 @@ MSI 파일은 `PowerShell-<version>-win-<os-arch>.msi`과 비슷합니다. 다�
 다음 예제에서는 PowerShell을 자동으로 설치할 때 모든 설치 옵션을 사용하도록 설정하는 방법을 보여 줍니다.
 
 ```powershell
-msiexec.exe /package PowerShell-7.0.1-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
+msiexec.exe /package PowerShell-7.0.3-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
 ```
 
 `Msiexec.exe`에 대한 명령줄 옵션의 전체 목록은 [명령줄 옵션](/windows/desktop/Msi/command-line-options)을 참조하세요.
 
+### <a name="registry-keys-created-during-installation"></a>설치 중 생성되는 레지스트리 키
+
+PowerShell 7.1부터 MSI 패키지는 PowerShell의 설치 위치 및 버전을 저장하는 레지스트리 키를 만듭니다. 이러한 값은 `HKLM\Software\Microsoft\PowerShellCore\InstalledVersions\<GUID>`에 있습니다. `<GUID>`의 값은 각 빌드 형식(릴리스 또는 미리 보기), 주 버전 및 아키텍처에 대해 고유합니다.
+
+|    해제    | Architecture |                                          레지스트리 키                                           |
+| ------------- | :----------: | ----------------------------------------------------------------------------------------------- |
+| 7.1.x 릴리스 |     x86      | `HKLM\Software\Microsoft\PowerShellCore\InstalledVersions\1d00683b-0f84-4db8-a64f-2f98ad42fe06` |
+| 7.1.x 릴리스 |     X64      | `HKLM\Software\Microsoft\PowerShellCore\InstalledVersions\31ab5147-9a97-4452-8443-d9709f0516e1` |
+| 7.1.x 미리 보기 |     x86      | `HKLM\Software\Microsoft\PowerShellCore\InstalledVersions\86abcfbd-1ccc-4a88-b8b2-0facfde29094` |
+| 7.1.x 미리 보기 |     X64      | `HKLM\Software\Microsoft\PowerShellCore\InstalledVersions\39243d76-adaf-42b1-94fb-16ecf83237c8` |
+
+관리자 및 개발자가 PowerShell 경로를 찾는 데 사용할 수 있습니다. `<GUID>` 값은 모든 미리 보기 및 부 버전 릴리스에서 동일합니다. `<GUID>` 값은 주 릴리스마다 변경됩니다.
+
 ## <a name="installing-the-msix-package"></a><a id="msix" />MSIX 패키지 설치
+
+> [!NOTE]
+> MSIX 패키지는 현재 공식적으로 지원되지 않습니다. Microsoft는 내부 테스트 용도로만 이 패키지를 계속 빌드합니다.
 
 Windows 10 클라이언트에 MSIX 패키지를 수동으로 설치하려면 GitHub [릴리스][releases] 페이지에서 MSIX 패키지를 다운로드합니다. 설치하려는 릴리스의 **Assets** 섹션까지 아래로 스크롤합니다. Assets 섹션이 축소되어 있으면 클릭해서 확장합니다.
 
@@ -76,9 +92,6 @@ MSIX 파일은 다음과 같습니다. `PowerShell-<version>-win-<os-arch>.msix`
 ```powershell
 Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
 ```
-
-> [!NOTE]
-> MSIX 패키지는 아직 릴리스되지 않았습니다. 릴리스되면 Microsoft Store 및 GitHub [릴리스][releases] 페이지에서 확인할 수 있습니다.
 
 ## <a name="installing-the-zip-package"></a><a id="zip" />ZIP 패키지 설치
 
@@ -95,7 +108,7 @@ Windows 10 IoT Enterprise는 PowerShell 7을 배포하는 데 사용할 수 있�
    $S = New-PSSession -ComputerName <deviceIp> -Credential Administrator
    ```
 
-2. 디바이스에 ZIP 패키지 복사
+1. 디바이스에 ZIP 패키지 복사
 
    ```powershell
    # change the destination to however you had partitioned it with sufficient
@@ -104,7 +117,7 @@ Windows 10 IoT Enterprise는 PowerShell 7을 배포하는 데 사용할 수 있�
    Copy-Item .\PowerShell-<version>-win-<os-arch>.zip -Destination u:\users\administrator\Downloads -ToSession $s
    ```
 
-3. 디바이스에 연결하고 보관 확장
+1. 디바이스에 연결하고 보관 확장
 
    ```powershell
    Enter-PSSession $s
@@ -112,7 +125,7 @@ Windows 10 IoT Enterprise는 PowerShell 7을 배포하는 데 사용할 수 있�
    Expand-Archive .\PowerShell-<version>-win-<os-arch>.zip
    ```
 
-4. PowerShell 7에 대한 원격 설정
+1. PowerShell 7에 대한 원격 설정
 
    ```powershell
    Set-Location .\PowerShell-<version>-win-<os-arch>
@@ -122,7 +135,7 @@ Windows 10 IoT Enterprise는 PowerShell 7을 배포하는 데 사용할 수 있�
    # You'll get an error message and will be disconnected from the device because it has to restart WinRM
    ```
 
-5. 디바이스에서 PowerShell 7 엔드포인트에 연결
+1. 디바이스에서 PowerShell 7 엔드포인트에 연결
 
    ```powershell
    # Be sure to use the -Configuration parameter.  If you omit it, you will connect to Windows PowerShell 5.1
@@ -147,22 +160,22 @@ IoT Core에 대해서도 위에서 정의한 Windows 10 IoT Enterprise 단계를
 두 가지 방법으로 PowerShell 이진 파일을 배포할 수 있습니다.
 
 1. 오프라인 - Nano 서버 VHD를 탑재하고 zip 파일의 내용을 탑재된 이미지 내의 선택한 위치에 압축을 풉니다.
-2. 온라인 - PowerShell 세션을 통해 zip 파일을 전송하고 선택한 위치에서 압축을 풉니다.
+1. 온라인 - PowerShell 세션을 통해 zip 파일을 전송하고 선택한 위치에서 압축을 풉니다.
 
 두 경우 모두 Windows 10 x64 ZIP 릴리스 패키지가 필요합니다. PowerShell의 "관리자" 인스턴스 내에서 명령을 실행합니다.
 
 ### <a name="offline-deployment-of-powershell"></a>PowerShell의 오프라인 배포
 
 1. 자주 사용하는 zip 유틸리티로 패키지를 탑재된 Nano 서버 이미지 내의 디렉터리에 압축을 풉니다.
-2. 이미지를 탑재 해제하고 부팅합니다.
-3. Windows PowerShell의 받은 편지함 인스턴스에 연결합니다.
-4. 지침에 따라 [“다른 인스턴스 기법”](../learn/remoting/wsman-remoting-in-powershell-core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register)을 사용하여 원격 엔드포인트를 만듭니다.
+1. 이미지를 탑재 해제하고 부팅합니다.
+1. Windows PowerShell의 기본 제공 인스턴스에 연결합니다.
+1. 지침에 따라 [“다른 인스턴스 기법”](../learn/remoting/wsman-remoting-in-powershell-core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register)을 사용하여 원격 엔드포인트를 만듭니다.
 
 ### <a name="online-deployment-of-powershell"></a>PowerShell의 온라인 배포
 
 다음 단계에 따라 PowerShell을 Nano 서버로 배포하세요.
 
-- Windows PowerShell의 받은 편지함 인스턴스에 연결
+- Windows PowerShell의 기본 제공 인스턴스에 연결
 
   ```powershell
   $session = New-PSSession -ComputerName <Nano Server IP address> -Credential <An Administrator account on the system>
@@ -199,6 +212,36 @@ dotnet tool install --global PowerShell
 
 dotnet 도구 설치 프로그램은 `$env:PATH` 환경 변수에 `$env:USERPROFILE\dotnet\tools`를 추가합니다. 그러나 현재 실행 중인 셸에는 업데이트된 `$env:PATH`가 없습니다. 새 셸에서 `pwsh`를 입력하여 PowerShell을 시작할 수 있습니다.
 
+## <a name="install-powershell-via-winget"></a>Winget을 통해 PowerShell 설치
+
+개발자는 `winget` 명령줄 도구를 사용하여 Windows 10 컴퓨터에서 애플리케이션을 검색, 설치, 업그레이드, 제거 및 구성할 수 있습니다. 이 도구는 Windows 패키지 관리자 서비스에 대한 클라이언트 인터페이스입니다.
+
+> [!NOTE]
+> `winget` 도구는 현재 미리 보기입니다. 계획된 기능을 모두 지금 사용할 수 있는 것은 아닙니다.
+> 이 도구의 옵션 및 기능은 변경될 수 있습니다. 프로덕션 배포 시나리오에서는 이 방법을 사용하지 않아야 합니다. 시스템 요구 사항 및 설치 지침 목록은 [winget] 설명서를 참조하세요.
+
+게시된 `winget` 패키지로 PowerShell을 설치하는 데 다음 명령을 사용할 수 있습니다.
+
+1. PowerShell 최신 버전 검색
+
+   ```powershell
+   winget search Microsoft.PowerShell
+   ```
+
+   ```Output
+   Name               Id                           Version
+   ---------------------------------------------------------------
+   PowerShell         Microsoft.PowerShell         7.0.3
+   PowerShell-Preview Microsoft.PowerShell-Preview 7.1.0-preview.5
+   ```
+
+1. `--exact` 매개 변수를 사용하여 특정 버전의 PowerShell 설치
+
+   ```powershell
+   winget install --name PowerShell --exact
+   winget install --name PowerShell-Preview --exact
+   ```
+
 ## <a name="how-to-create-a-remoting-endpoint"></a>원격 엔드포인트를 만드는 방법
 
 PowerShell은 WSMan 및 SSH와 함께 PowerShell Remoting Protocol(PSRP)을 지원합니다. 자세한 내용은 다음을 참조하세요.
@@ -206,9 +249,14 @@ PowerShell은 WSMan 및 SSH와 함께 PowerShell Remoting Protocol(PSRP)을 지�
 - [PowerShell Core에서의 SSH 원격 작업][ssh-remoting]
 - [PowerShell Core에서의 WSMan 원격 작업][wsman-remoting]
 
-<!-- [download-center]: TODO -->
+## <a name="installation-support"></a>설치 지원
+
+Microsoft는 이 문서의 설치 방법을 지원합니다. 다른 소스에서 사용 가능한 다른 설치 방법을 제공할 수도 있습니다. 그러한 도구 및 방법이 유효하더라도 Microsoft에서는 해당 방법을 지원할 수 없습니다.
+
+<!-- link references -->
 
 [releases]: https://github.com/PowerShell/PowerShell/releases
 [ssh-remoting]: ../learn/remoting/SSH-Remoting-in-PowerShell-Core.md
 [wsman-remoting]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md
 [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
+[winget]: /windows/package-manager/winget

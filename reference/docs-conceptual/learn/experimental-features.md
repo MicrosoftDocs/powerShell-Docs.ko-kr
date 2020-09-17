@@ -1,13 +1,13 @@
 ---
-ms.date: 04/28/2020
+ms.date: 09/14/2020
 title: PowerShell에서 실험적 기능 사용
 description: 현재 사용 가능한 실험적 기능과 사용 방법을 나열합니다.
-ms.openlocfilehash: 72a4309d6eeede4cd2ff7c38ce8e99ce3ace30eb
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 74623240bfb19022ae342a5d23e2ed4f455afa45
+ms.sourcegitcommit: 30c0c1563f8e840f24b65297e907f3583d90e677
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809189"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574473"
 ---
 # <a name="using-experimental-features-in-powershell"></a>PowerShell에서 실험적 기능 사용
 
@@ -24,22 +24,46 @@ PowerShell의 실험적 기능 지원에서는 PowerShell 또는 PowerShell 모�
 
 이 문서에서는 사용 가능한 실험적 기능과 해당 기능을 사용하는 방법을 설명합니다.
 
-|                            속성                            |   6.2   |   7.0   | 7.1(미리 보기) |
-| ---------------------------------------------------------- | :-----: | :-----: | :-----------: |
-| PSTempDrive(PS 7.0 이상에서 일반)                        | &check; |         |               |
-| PSUseAbbreviationExpansion(PS 7.0 이상에서 일반)         | &check; |         |               |
-| PSCommandNotFoundSuggestion                                | &check; | &check; |    &check;    |
-| PSImplicitRemotingBatching                                 | &check; | &check; |    &check;    |
-| Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace |         | &check; |    &check;    |
-| PSDesiredStateConfiguration.InvokeDscResource              |         | &check; |    &check;    |
-| PSNullConditionalOperators                                 |         | &check; |    &check;    |
-| PSUnixFileStat(Windows가 아닌 경우만 해당)                          |         | &check; |    &check;    |
-| PSNativePSPathResolution                                   |         |         |    &check;    |
-| PSCultureInvariantReplaceOperator                          |         |         |    &check;    |
+|                            속성                            |   6.2   |   7.0   |   7.1   |
+| ---------------------------------------------------------- | :-----: | :-----: | :-----: |
+| PSTempDrive(PS 7.0 이상에서 일반)                        | &check; |         |         |
+| PSUseAbbreviationExpansion(PS 7.0 이상에서 일반)         | &check; |         |         |
+| PSCommandNotFoundSuggestion                                | &check; | &check; | &check; |
+| PSImplicitRemotingBatching                                 | &check; | &check; | &check; |
+| Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace |         | &check; | &check; |
+| PSDesiredStateConfiguration.InvokeDscResource              |         | &check; | &check; |
+| PSNullConditionalOperators(PS 7.1 이상에서 주요 기능)         |         | &check; |         |
+| PSUnixFileStat(Windows가 아닌 경우만 해당)                          |         | &check; | &check; |
+| PSNativePSPathResolution(PS 7.1 이상에서 주요 기능)           |         |         |         |
+| PSCultureInvariantReplaceOperator                          |         |         | &check; |
+| PSNotApplyErrorActionToStderr                              |         |         | &check; |
 
 ## <a name="microsoftpowershellutilitypsmanagebreakpointsinrunspace"></a>Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace
 
-사용자가 디버거를 연결할 때 PowerShell이 현재 위치에서 즉시 중단할지 여부를 결정할 수 있도록 `Debug-Runspace` 및 `Debug-Job` cmdlet에서 **BreakAll** 매개 변수를 활성화합니다.
+PowerShell 7.0에서 이 실험은 사용자가 디버거를 연결할 때 PowerShell이 현재 위치에서 즉시 중단할지 여부를 결정할 수 있도록 `Debug-Runspace` 및 `Debug-Job` cmdlet에서 **BreakAll** 매개 변수를 활성화합니다.
+
+PowerShell 7.1에서 이 실험은 `*-PSBreakpoint` cmdlet에 **Runspace** 매개 변수도 추가합니다.
+
+- `Disable-PSBreakpoint`
+- `Enable-PSBreakpoint`
+- `Get-PSBreakpoint`
+- `Remove-PSBreakpoint`
+- `Set-PSBreakpoint`
+
+**Runspace** 매개 변수는 지정된 Runspace에서 중단점과 상호 작용할 **Runspace** 개체를 지정합니다.
+
+```powershell
+Start-Job -ScriptBlock {
+    Set-PSBreakpoint -Command Start-Sleep
+    Start-Sleep -Seconds 10
+}
+
+$runspace = Get-Runspace -Id 1
+
+$breakpoint = Get-PSBreakPoint -Runspace $runspace
+```
+
+이 예제에서는 작업이 시작되고 `Set-PSBreakPoint`가 실행될 때 중단되도록 중단점이 설정되어 있습니다. Runspace는 변수에 저장되고 **Runspace** 매개 변수를 사용하여 `Get-PSBreakPoint` 명령에 전달됩니다. 그런 다음 `$breakpoint` 변수에서 중단점을 검사할 수 있습니다.
 
 ## <a name="pscommandnotfoundsuggestion"></a>PSCommandNotFoundSuggestion
 
@@ -129,6 +153,17 @@ FileSystem 공급자를 사용하는 PSDrive 경로를 네이티브 명령에 �
 - 경로가 PSDrive 또는 `~`(Windows)가 아닌 경우 경로 정규화가 발생하지 않습니다.
 - 경로가 작은따옴표로 묶여 있으면 이를 확인하여 리터럴로 처리하지 않습니다.
 
+> [!NOTE]
+> 이 기능은 실험적 단계를 벗어났으며 PowerShell 7.1 이상에서 주요 기능입니다.
+
+## <a name="psnotapplyerroractiontostderr"></a>PSNotApplyErrorActionToStderr
+
+이 실험적 기능을 사용하는 경우 리디렉션 연산자(`2>&1`)를 사용하는 경우처럼 네이티브 명령에서 리디렉션된 오류 레코드는 `$Error` 변수에 기록되지 않으며 기본 설정 변수 `$ErrorActionPreference`는 리디렉션된 출력에 영향을 주지 않습니다.
+
+많은 네이티브 명령이 추가 정보에 대한 대체 스트림으로 `stderr`에 기록합니다. 이 동작은 오류를 살펴볼 때 혼동을 일으킬 수 있으며, `$ErrorActionPreference`가 출력에서 알림을 차단하는 상태로 설정된 경우 사용자에 대한 추가 출력 정보가 손실될 수 있습니다.
+
+네이티브 명령에 0이 아닌 종료 코드가 있으면 `$?`가 `$false`로 설정됩니다. 종료 코드가 0인 경우 `$?`가 `$true`로 설정됩니다.
+
 ## <a name="psnullconditionaloperators"></a>PSNullConditionalOperators
 
 Null 조건부 멤버 액세스 연산자 `?.` 및 `?[]`에 대한 새 연산자를 도입합니다. Null 멤버 액세스 연산자는 스칼라 형식 및 배열 형식에 사용할 수 있습니다. 변수가 null이 아닌 경우 액세스한 멤버의 값을 반환합니다. 변수 값이 null이면 null을 반환합니다.
@@ -150,6 +185,9 @@ ${x}?.MyMethod()
 
 PowerShell에서는 변수 이름의 일부로 `?`를 허용하므로 변수 이름과 연산자 사이에 공백 없이 연산자를 사용하는 경우 명확성이 필요합니다. 명확성을 위해 변수는 변수 이름 주위에 `{}`를 사용해야 합니다(예: `${x?}?.propertyName` 또는 `${y}?[0]`).
 
+> [!NOTE]
+> 이 기능은 실험적 단계를 벗어났으며 PowerShell 7.1 이상에서 주요 기능입니다.
+
 ## <a name="pstempdrive"></a>PSTempDrive
 
 사용자의 임시 디렉터리 경로에 매핑된 `TEMP:` PSDrive를 만듭니다.
@@ -164,7 +202,7 @@ PowerShell에서는 변수 이름의 일부로 `?`를 허용하므로 변수 이
 `Get-ChildItem`의 출력은 다음과 비슷합니다.
 
 ```powershell
-PS> dir | select -first 4 -skip 5
+dir | select -first 4 -skip 5
 
 
     Directory: /Users/jimtru/src/github/forks/JamesWTruher/PowerShell-1
