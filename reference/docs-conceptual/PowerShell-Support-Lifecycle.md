@@ -2,12 +2,12 @@
 title: PowerShell Core 지원 수명 주기
 description: PowerShell Core에 대한 정책 관리 지원
 ms.date: 03/09/2020
-ms.openlocfilehash: e7ec0fd9a702b7d23a784eff6e730fc3a6c30467
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 717fd5c4845835f314eaf7c3617d5123318da2dc
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560732"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236206"
 ---
 # <a name="powershell-support-lifecycle"></a>PowerShell 지원 수명 주기
 
@@ -34,7 +34,7 @@ PowerShell 7 릴리스에서 PowerShell은 [Microsoft 최신 수명 주기 정�
 
 PowerShell Core는 [Microsoft 최신 수명 주기 정책][modern]을 사용합니다. 이 지원 수명 주기는 고객이 항상 최신 버전을 사용할 수 있도록 합니다.
 
-PowerShell Core의 6.x 버전은 약 6개월 단위의 분기별로 업데이트되었습니다(예: 6.0, 6.1, 6.2 등). 그러나 PowerShell 7 릴리스에서는 더 이상 6.x 릴리스의 부 버전 릴리스가 없습니다. PowerShell 6.2.x는 여전히 지원되며 계속해서 서비스 업데이트를 받습니다.
+PowerShell Core의 6.x 버전은 약 6개월 단위의 분기별로 업데이트되었습니다(예: 6.0, 6.1, 6.2 등). 그러나 PowerShell 7 릴리스에서는 더 이상 6.x의 부 버전 릴리스가 없습니다. PowerShell 6.2.x는 여전히 지원되며 계속해서 서비스 업데이트를 받습니다.
 
 > [!IMPORTANT]
 > 지원을 계속 받으려면 부 버전이 새로 릴리스될 때마다 6개월 이내에 업데이트해야 합니다.
@@ -96,6 +96,9 @@ PowerShell Core의 플랫폼과 버전이 공식적으로 지원되는지 확인
 |   6.2   | 2020년 9월 4일  |
 |   6.1   | 2019년 9월 28일 |
 |   6.0   | 2019년 2월 13일  |
+
+> [!NOTE]
+> 이 문서는 PowerShell Core 6 및 PowerShell 7에 관한 지원 정보입니다. Windows PowerShell(1.0~5.1)은 Windows OS의 구성 요소입니다. 구성 요소는 부모 제품 또는 플랫폼과 동일한 지원을 받습니다. 자세한 내용은 [제품 및 서비스 수명 주기 정보](/lifecycle/products/)를 참조하세요.
 
 ## <a name="unsupported-platforms"></a>지원되지 않는 플랫폼
 
@@ -183,4 +186,4 @@ PowerShell은 [Windows에 대한 Microsoft 보안 서비스 기준][]을 따릅�
 [모듈 호환성 목록]: /powershell/scripting/whats-new/module-compatibility
 [WindowsPSModulePath]: https://www.powershellgallery.com/packages/WindowsPSModulePath/
 [실험적 기능]: /powershell/module/microsoft.powershell.core/about/about_powershell_config#experimentalfeatures
-[Windows에 대한 Microsoft 보안 서비스 기준]: https://www.microsoft.com/en-us/msrc/windows-security-servicing-criteria
+[Windows에 대한 Microsoft 보안 서비스 기준]: https://www.microsoft.com/msrc/windows-security-servicing-criteria

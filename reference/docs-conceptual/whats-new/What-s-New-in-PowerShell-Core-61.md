@@ -2,12 +2,12 @@
 title: PowerShell Core 6.1의 새로운 기능
 description: PowerShell Core 6.1에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 09/13/2018
-ms.openlocfilehash: 079d5a472c743ce94f2e93143c1dcb4ff406951f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7a50bc3a909df38d21a604399d590a2805359593
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78277745"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837547"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>PowerShell Core 6.1의 새로운 기능
 
@@ -34,9 +34,9 @@ Windows 호환 기능 팩을 PowerShell Core 6.1 릴리스에 추가하였으므
 
 Windows 호환 기능 책을 통해 PowerShell Core는 **Windows 10 2018년 10월 업데이트 및 Windows Server 2019와 제공되는 1900개 이상의 cmdlet**을 사용할 수 있습니다.
 
-## <a name="support-for-application-whitelisting"></a>애플리케이션 허용 목록에 대한 지원
+## <a name="support-for-application-allow-lists"></a>애플리케이션 허용 목록 지원
 
-PowerShell Core 6.1에는 [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) 및 [Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) 애플리케이션 허용 목록을 지원하는 Windows PowerShell 5.1을 사용한 패리티가 있습니다. 애플리케이션 허용 목록은 PowerShell [제한된 언어 모드](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/)와 함께 사용되어 실행할 수 있도록 허용된 바이너리의 세부적 제어를 허용합니다.
+PowerShell Core 6.1에는 [AppLocker](/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) 및 [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) 애플리케이션 허용 목록을 지원하는 Windows PowerShell 5.1을 사용한 패리티가 있습니다. 애플리케이션 허용 목록은 PowerShell [제한된 언어 모드](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/)와 함께 사용되어 실행할 수 있도록 허용된 이진 파일의 세부적 제어를 허용합니다.
 
 ## <a name="performance-improvements"></a>성능 향상
 
@@ -88,12 +88,11 @@ Measure-Command {Get-Content .\foo.json | ConvertFrom-Json}
 | 시간(초)   | 0.259                  | 0.577               | 0.125                  |
 | 속도 증가(%) | 해당 없음                    | -122.8%             | 78.3%(WPS에서 51.7%) |
 
-## <a name="check-system32-for-compatible-in-box-modules-on-windows"></a>Windows에서 호환 미해결 모듈에 대한 `system32` 확인
+## <a name="check-system32-for-compatible-built-in-modules-on-windows"></a>Windows에서 호환되는 기본 제공 모듈의 `system32` 확인
 
-Windows 10 1809 업데이트 및 Windows Server 2019에서 몇 가지 미해결 PowerShell 모듈을 업데이트하여 PowerShell Core와 호환되도록 표시했습니다.
+Windows 10 1809 업데이트 및 Windows Server 2019에서 몇 가지 기본 제공 PowerShell 모듈을 업데이트하여 PowerShell Core와 호환되도록 표시했습니다.
 
 PowerShell Core 6.1이 시작되면 자동으로 `$windir\System32`가 `PSModulePath` 환경 변수의 일부로 포함됩니다. 단, 해당 `CompatiblePSEdition`이 `Core`와 호환되는 것으로 표시되는 경우 모듈을 `Get-Module` 및 `Import-Module`에만 노출합니다.
-
 
 ```powershell
 Get-Module -ListAvailable
@@ -198,7 +197,7 @@ Markdown은 HTML로 렌더링할 수 있는 기본 서식의 읽을 수 있는 �
 
 [PowerShell Direct](/virtualization/hyper-v-on-windows/user-guide/powershell-direct)는 사용자가 네트워크 연결 또는 기타 원격 관리 서비스 없이 Hyper-V VM 또는 컨테이너에 연결할 수 있도록 허용하는 PowerShell 및 Hyper-V의 기능입니다.
 
-과거에 PowerShell Direct는 받은 편지함 Windows PowerShell 인스턴스를 사용하여 컨테이너에 연결되었습니다. 이제 PowerShell Direct는 먼저 `PATH` 환경 변수에서 사용 가능한 `pwsh.exe`를 사용하여 연결을 시도합니다. `pwsh.exe`를 사용할 수 없는 경우 PowerShell Direct는 `powershell.exe`를 다시 사용합니다.
+과거에 PowerShell Direct는 기본 제공 Windows PowerShell 인스턴스를 사용하여 컨테이너에 연결되었습니다. 이제 PowerShell Direct는 먼저 `PATH` 환경 변수에서 사용 가능한 `pwsh.exe`를 사용하여 연결을 시도합니다. `pwsh.exe`를 사용할 수 없는 경우 PowerShell Direct는 `powershell.exe`를 다시 사용합니다.
 
 ### <a name="enable-psremoting-now-creates-separate-remoting-endpoints-for-preview-versions"></a>`Enable-PSRemoting`은 이제 별도의 원격 엔드포인트를 미리 보기 버전으로 만듭니다.
 

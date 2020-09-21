@@ -2,12 +2,12 @@
 title: Visual Studio Code를 사용하여 원격 편집 및 디버깅
 description: Visual Studio Code를 사용하여 원격 편집 및 디버깅
 ms.date: 06/13/2019
-ms.openlocfilehash: 5ce7f575d90ff47fd6b8a0a2b567e972ec3a9fef
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 0394348b4dfbe813549c02035e9d3b035cba72e4
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809279"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784642"
 ---
 # <a name="using-visual-studio-code-for-remote-editing-and-debugging"></a>Visual Studio Code를 사용하여 원격 편집 및 디버깅
 
@@ -51,7 +51,7 @@ VSCode용 PowerShell 확장을 시작하고 PowerShell 통합 콘솔을 연 상�
 
 - F5 키를 눌러 PowerShell 스크립트를 디버깅합니다.
 
-  ![PowerShell 로컬 스크립트 디버깅](media/Using-VSCode-for-Remote-Editing-and-Debugging/3-local-debug.png)
+  ![로컬 PowerShell 스크립트 디버깅](media/Using-VSCode-for-Remote-Editing-and-Debugging/3-local-debug.png)
 
 디버깅하는 동안 디버그 콘솔을 조작하고, 왼쪽 범위의 변수 및 모든 기타 표준 디버깅 도구를 확인할 수 있습니다.
 
@@ -73,13 +73,13 @@ macOS에서 Azure의 Ubuntu VM로 이동 중이므로 원격에 SSH를 사용합
 
 첫째, 통합 콘솔에서 `Enter-PSSession`을 실행합니다. `[<hostname>]`이 프롬프트 왼쪽에 표시되면 원격 세션에 연결된 것입니다.
 
-![Enter-PSSession 호출](media/Using-VSCode-for-Remote-Editing-and-Debugging/4-enter-pssession.png)
+![Enter-PSSession을 호출하여 원격 세션에 연결](media/Using-VSCode-for-Remote-Editing-and-Debugging/4-enter-pssession.png)
 
 이제 로컬 스크립트를 편집하는 것처럼 같은 단계를 수행할 수 있습니다.
 
 1. `Open-EditorFile test.ps1` 또는 `psedit test.ps1`을 실행하여 원격 `test.ps1` 파일을 엽니다.
 
-  ![Open-EditorFile test.ps1 파일](media/Using-VSCode-for-Remote-Editing-and-Debugging/5-open-remote-file.png)
+  ![원격 시스템에서 스크립트 편집](media/Using-VSCode-for-Remote-Editing-and-Debugging/5-open-remote-file.png)
 
 1. 파일 편집/중단점 설정
 
@@ -87,6 +87,6 @@ macOS에서 Azure의 Ubuntu VM로 이동 중이므로 원격에 SSH를 사용합
 
 1. 원격 파일 디버그 시작(F5)
 
-   ![원격 파일 디버깅](media/Using-VSCode-for-Remote-Editing-and-Debugging/7-start-debugging.png)
+   ![원격 스크립트 디버깅](media/Using-VSCode-for-Remote-Editing-and-Debugging/7-start-debugging.png)
 
 문제가 있는 경우 [GitHub 리포지토리](https://github.com/powershell/vscode-powershell)에서 문제를 시작할 수 있습니다.

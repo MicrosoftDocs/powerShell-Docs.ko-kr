@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: 리소스 패키지 및 끌어오기 서버에 업로드
-ms.openlocfilehash: 8aac343d7495ecda94ed76d1d97079397eecd65f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: d0e070b7aa43acbbbf087729d53f06dbc7e7734a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278507"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782891"
 ---
 # <a name="package-and-upload-resources-to-a-pull-server"></a>리소스 패키지 및 끌어오기 서버에 업로드
 
@@ -20,14 +20,14 @@ ms.locfileid: "78278507"
 
 ## <a name="package-resource-modules"></a>패키지 리소스 모듈
 
-다운로드할 클라이언트에 사용 가능한 각 리소스는 ".zip" 파일에 저장해야 합니다. 아래 예제에서는 [xPSDesiredStateConfiguration](https://www.powershellgallery.com/packages/xPSDesiredStateConfiguration/8.4.0.0) 리소스를 사용하여 필요한 단계를 보여 줍니다.
+다운로드할 클라이언트에 사용 가능한 각 리소스는 `.zip` 파일에 저장해야 합니다. 아래 예제에서는 [xPSDesiredStateConfiguration](https://www.powershellgallery.com/packages/xPSDesiredStateConfiguration/8.4.0.0) 리소스를 사용하여 필요한 단계를 보여 줍니다.
 
 > [!NOTE]
 > 클라이언트에서 PowerShell 4.0을 사용하는 경우 리소스 폴더 구조를 평면화하고 모든 버전 폴더를 제거해야 합니다. 자세한 내용은 [여러 리소스 버전](../configurations/import-dscresource.md#multiple-resource-versions)을 참조하세요.
 
-원하는 유틸리티, 스크립트 또는 메서드를 사용하여 리소스 디렉터리를 압축할 수 있습니다. Windows에서는 "xPSDesiredStateConfiguration" 디렉터리를 ‘마우스 오른쪽 단추로 클릭’하고 "보내기", "압축 폴더"를 차례로 선택합니다. 
+원하는 유틸리티, 스크립트 또는 메서드를 사용하여 리소스 디렉터리를 압축할 수 있습니다. Windows의 경우 `xPSDesiredStateConfiguration` 디렉터리에서 파일을 ‘마우스 오른쪽 단추로 클릭’하고 **보내기**를 선택한 다음, **압축 폴더**를 선택할 수 있습니다.
 
-![마우스 오른쪽 단추로 클릭](media/package-upload-resources/right-click.gif)
+![마우스 오른쪽 단추 클릭 - 보내기 - 압축된 폴더](media/package-upload-resources/right-click.gif)
 
 ### <a name="naming-the-resource-archive"></a>리소스 보관 파일 이름 지정
 
@@ -37,11 +37,11 @@ ms.locfileid: "78278507"
 {ModuleName}_{Version}.zip
 ```
 
-위의 예제에서 "xPSDesiredStateConfiguration.zip"의 이름을 "xPSDesiredStateConfiguration_8.4.4.0.zip"으로 바꿔야 합니다.
+위 예제에서 `xPSDesiredStateConfiguration.zip`은 이름을 `xPSDesiredStateConfiguration_8.4.4.0.zip`으로 바꿔야 합니다.
 
 ### <a name="create-checksums"></a>CheckSum 만들기
 
-리소스 모듈이 압축되고 이름이 바뀐 후 **CheckSum**을 만들어야 합니다.  **CheckSum**은 클라이언트의 LCM에서 리소스가 변경되었고 다시 다운로드되어야 하는지 확인하는 데 사용됩니다. 아래 예제와 같이 [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum) cmdlet을 사용하여 **CheckSum**을 만들 수 있습니다.
+리소스 모듈이 압축되고 이름이 바뀐 후 **CheckSum**을 만들어야 합니다. **CheckSum**은 클라이언트의 LCM에서 리소스가 변경되었고 다시 다운로드되어야 하는지 확인하는 데 사용됩니다. 아래 예제와 같이 [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum) cmdlet을 사용하여 **CheckSum**을 만들 수 있습니다.
 
 ```powershell
 New-DscChecksum -Path .\xPSDesiredStateConfiguration_8.4.4.0.zip

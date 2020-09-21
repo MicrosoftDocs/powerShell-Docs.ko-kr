@@ -2,12 +2,12 @@
 title: PowerShell 7.0의 새로운 기능
 description: PowerShell 7.0에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 03/04/2020
-ms.openlocfilehash: 313ed2b663262b57abd52bfc7378e1f4661dc03a
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: d52b536efd9d7a1f8e6b01a58952f08ca49016b1
+ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808404"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88162463"
 ---
 # <a name="whats-new-in-powershell-70"></a>PowerShell 7.0의 새로운 기능
 
@@ -284,7 +284,7 @@ Get-ChildItem: Cannot find path 'C:\NotReal' because it does not exist
 ![스크립트의 오류 표시](./media/What-s-New-in-PowerShell-70/myscript-error.png)
 
 PowerShell 7의 기본 보기는 **ConciseView**입니다. 이전의 기본 보기는 **NormalView**였으며 기본 설정 변수 `$ErrorView`를 설정하여 선택할 수 있습니다.
- 
+
 ```powershell
 $ErrorView = 'NormalView' # Sets the error view to NormalView
 $ErrorView = 'ConciseView' # Sets the error view to ConciseView
@@ -357,11 +357,12 @@ $Env:POWERSHELL_UPDATECHECK = 'Default'
 
 이 cmdlet은 구성 문서를 만들지 않고 DSC 리소스를 직접 호출합니다. 이 cmdlet을 사용하면 구성 관리 제품이 DSC 리소스를 사용하여 Windows 또는 Linux를 관리할 수 있습니다. 이 cmdlet을 사용하면 디버깅을 사용하도록 설정한 상태에서 DSC 엔진이 실행 중일 때에도 리소스를 디버그할 수 있습니다.
 
-이 명령은 Log라는 리소스의 **Set** 메서드를 호출하고 **Message** 속성을 지정합니다.
+해당 명령은 **WindowsProcess**라는 리소스의 **Set** 메서드를 호출하고 필수 **Path** 및 **Arguments** 속성을 제공하여 지정된 Windows 프로세스를 시작합니다.
 
 ```powershell
-Invoke-DscResource -Name Log -Method Set -ModuleName PSDesiredStateConfiguration -Property @{
-  Message = 'Hello World'
+Invoke-DscResource -Name WindowsProcess -Method Set -ModuleName PSDesiredStateConfiguration -Property @{
+  Path = 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe'
+  Arguments = ''
 }
 ```
 

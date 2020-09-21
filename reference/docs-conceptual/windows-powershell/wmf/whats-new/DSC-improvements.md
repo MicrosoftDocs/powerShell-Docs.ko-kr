@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: WMF 5.1의 향상된 DSC
-ms.openlocfilehash: 78c15f453977384ba437b0bd69cd620eb1a29fbd
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 445d0f7bb54c6b21b6af26c4174f3d6422caf6dd
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809099"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771552"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>WMF 5.1에서 DSC(필요한 상태 구성)의 개선 사항
 
@@ -80,7 +80,7 @@ WMF 5.0에서 PowerShell 디버거는 클래스 기반 리소스 메서드(Get/S
 
 - 생성된 MOF 파일에 포함된 ‘ConfigurationName’
 
-  ![생성된 mof 파일 샘플](media/DSC-improvements/PartialGeneratedMof.png)
+  ![생성된 MOF 파일 샘플](media/DSC-improvements/PartialGeneratedMof.png)
 
 - 풀 구성 리포지토리의 FileName
 
@@ -345,12 +345,12 @@ Set-DscLocalConfigurationManager -Path .\EnableSignatureValidation -Verbose
   Start-DscConfiguration -Path .\Test -Wait -Verbose -Force
   ```
 
-  ![ErrorUnsignedMofPushed](media/DSC-improvements/PushUnsignedMof.png)
+  ![오류 - 서명되지 않은 MOF 파일이 푸시됨](media/DSC-improvements/PushUnsignedMof.png)
 
 - 코드 서명 인증서를 사용하여 구성 파일에 서명합니다.
 
-  ![SignMofFile](media/DSC-improvements/SignMofFile.png)
+  ![MOF 파일에 서명](media/DSC-improvements/SignMofFile.png)
 
 - 서명된 MOF 파일을 푸시해 봅니다.
 
-  ![PushSignedMofFile](media/DSC-improvements/PushSignedMof.png)
+  ![서명된 MOF 파일 푸시](media/DSC-improvements/PushSignedMof.png)

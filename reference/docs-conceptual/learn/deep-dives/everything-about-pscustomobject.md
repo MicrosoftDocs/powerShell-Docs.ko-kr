@@ -1,14 +1,14 @@
 ---
 title: PSCustomObject에 대해 알고 싶은 모든 것
 description: PSCustomObject는 구조화된 데이터를 만드는 단순한 방법입니다.
-ms.date: 05/23/2020
+ms.date: 07/29/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: fbc8b5b6d2cfafaa75fa820f420762a1804074ac
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 9a5cab7e662ef89b6565a29079ce1d5a657f94d0
+ms.sourcegitcommit: 339e5fc8a4cc18b4ff6956fe5180343588e40e30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149496"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410141"
 ---
 # <a name="everything-you-wanted-to-know-about-pscustomobject"></a>PSCustomObject에 대해 알고 싶은 모든 것
 
@@ -71,7 +71,7 @@ $myObject = New-Object -TypeName PSObject -Property $myHashtable
 
 ### <a name="saving-to-a-file"></a>폴더에 저장
 
-해시 테이블을 파일에 저장하는 가장 좋은 방법은 JSON으로 저장하는 것입니다. `[PSCusomObject]`로 다시 가져오면 됩니다.
+해시 테이블을 파일에 저장하는 가장 좋은 방법은 JSON으로 저장하는 것입니다. `[PSCustomObject]`로 다시 가져오면 됩니다.
 
 ```powershell
 $myObject | ConvertTo-Json -depth 1- | Set-Content -Path $Path
@@ -139,7 +139,7 @@ $myObject.$property
 
 이상하게 보이겠지만 작동에는 문제가 없습니다.
 
-### <a name="convert-pscustomboject-into-a-hashtable"></a>pscustomboject를 해시 테이블로 변환
+### <a name="convert-pscustombobject-into-a-hashtable"></a>PSCustombObject를 해시 테이블로 변환
 
 마지막 섹션에서 계속 진행하려면 속성을 동적으로 탐색하고 해당 속성에서 해시 테이블을 만들어야 합니다.
 
@@ -254,6 +254,9 @@ $myObject = [PSCustomObject]@{
 ```
 
 언어에도 아주 잘 어울리는 방법입니다. 이제 적절한 형식 이름을 가진 개체가 있으니 더 많은 작업을 수행할 수 있습니다.
+
+> [!NOTE]
+> PowerShell 클래스를 사용하여 사용자 지정 PowerShell 형식을 만들 수도 있습니다. 자세한 내용은 [PowerShell 클래스 개요](/powershell/module/Microsoft.PowerShell.Core/About/about_Classes)를 참조하세요.
 
 ## <a name="using-defaultpropertyset-the-long-way"></a>DefaultPropertySet 사용(긴 방식)
 

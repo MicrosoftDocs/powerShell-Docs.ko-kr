@@ -1,15 +1,15 @@
 ---
-ms.date: 06/12/2017
+ms.date: 06/10/2020
 ms.topic: conceptual
 keywords: wmf,powershell,setup
 contributor: keithb
 title: WMF 5.1 설치 및 구성
-ms.openlocfilehash: 241f52be011e1afc87d25c9a934db0c1e0361b76
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 9e0b4b6ed387b0a0d7fcf62a913677986d70de92
+ms.sourcegitcommit: 4a283fe5419f47102e6c1de7060880a934842ee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808479"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84671396"
 ---
 # <a name="install-and-configure-wmf-51"></a>WMF 5.1 설치 및 구성
 
@@ -51,18 +51,17 @@ Windows Server 2008 R2 SP1 또는 Windows 7 SP1에서 WMF 5.1을 설치하려면
 
 - 최신 서비스 팩이 설치되어 있어야 합니다.
 - WMF 3.0이 설치되어 있어서는 **안 됩니다**. WMF 3.0 위에 WMF 5.1을 설치하면 **PSModulePath**(`$env:PSModulePath`)가 손실되어 다른 애플리케이션이 작동하지 않을 수 있습니다. WMF 5.1을 설치하기 전에 WMF 3.0을 제거하거나, **PSModulePath**를 저장한 다음 WMF 5.1 설치가 완료된 후에 수동으로 복원해야 합니다.
-- WMF 5.1을 사용 하려면 적어도 [.NET Framework 4.5.2](https://www.microsoft.com/download/details.aspx?id=42642)합니다.
-  다운로드 위치에 있는 지침에 따라 Microsoft .NET Framework 4.5.2을 설치할 수 있습니다.
+- WMF 5.1을 사용 하려면 적어도 [.NET Framework 4.5.2](https://www.microsoft.com/download/details.aspx?id=42642)합니다. 다운로드 위치에 있는 지침에 따라 Microsoft .NET Framework 4.5.2을 설치할 수 있습니다.
 
 ### <a name="installing-wmf-51-on-windows-server-2008-r2-and-windows-7"></a>Windows Server 2008 R2 및 Windows 7에 WMF 5.1 설치
 
 1. ZIP 파일을 다운로드한 폴더로 이동합니다.
 
-2. ZIP 파일을 마우스 오른쪽 단추로 클릭하고 **압축 풀기...** 를 선택합니다. ZIP 파일에는 두 파일, 즉 MSU 및 `Install-WMF5.1.ps1` 스크립트 파일이 포함되어 있습니다. ZIP 파일의 압축을 푼 후 Windows 7 또는 Windows Server 2008 R2를 실행하는 모든 컴퓨터에 콘텐츠를 복사할 수 있습니다.
+1. ZIP 파일을 마우스 오른쪽 단추로 클릭하고 **압축 풀기...** 를 선택합니다. ZIP 파일에는 두 파일, 즉 MSU 및 `Install-WMF5.1.ps1` 스크립트 파일이 포함되어 있습니다. ZIP 파일의 압축을 푼 후 Windows 7 또는 Windows Server 2008 R2를 실행하는 모든 컴퓨터에 콘텐츠를 복사할 수 있습니다.
 
-3. ZIP 파일 내용을 추출한 후 관리자 권한으로 PowerShell을 연 다음 ZIP 파일의 내용이 포함된 폴더로 이동합니다.
+1. ZIP 파일 내용을 추출한 후 관리자 권한으로 PowerShell을 연 다음 ZIP 파일의 내용이 포함된 폴더로 이동합니다.
 
-4. 해당 폴더의 `Install-WMF5.1.ps1` 스크립트를 실행하고 지침을 따릅니다. 이 스크립트는 로컬 컴퓨터에서 필수 조건을 확인하고 필수 조건을 충족한 경우 WMF 5.1을 설치합니다. 필수 조건은 다음과 같습니다.
+1. 해당 폴더의 `Install-WMF5.1.ps1` 스크립트를 실행하고 지침을 따릅니다. 이 스크립트는 로컬 컴퓨터에서 필수 조건을 확인하고 필수 조건을 충족한 경우 WMF 5.1을 설치합니다. 필수 조건은 다음과 같습니다.
 
    `Install-WMF5.1.ps1`은 다음 매개 변수를 사용하여 Windows Server 2008 R2 및 Windows 7에서 쉽게 설치를 자동화합니다.
 
@@ -78,16 +77,16 @@ Windows PowerShell DSC(원하는 상태 구성)는 WinRM에 종속됩니다. Win
 ### <a name="install-from-windows-file-explorer"></a>Windows 파일 탐색기에서 설치
 
 1. MSU 파일을 다운로드한 폴더로 이동합니다.
-2. MSU를 두 번 클릭하여 실행합니다.
+1. MSU를 두 번 클릭하여 실행합니다.
 
 ### <a name="installing-from-the-command-prompt"></a>명령 프롬프트에서 설치
 
 1. 컴퓨터의 아키텍처에 맞는 올바른 패키지를 다운로드한 후 관리자 권한(관리자 권한으로 실행)으로 명령 프롬프트 창을 엽니다. Windows Server 2012 R2, Windows Server 2012 또는 Windows Server 2008 R2 SP1의 Server Core 설치 옵션에서는 명령 프롬프트가 기본적으로 관리자 권한으로 열립니다.
-2. WMF 5.1 설치 패키지를 다운로드하거나 복사한 폴더로 디렉터리를 변경합니다.
-3. 다음 명령 중 하나를 실행합니다.
-   - Windows Server 2012 R2 또는 Windows 8.1 x64를 실행하는 컴퓨터에서 `Win8.1AndW2K12R2-KB3191564-x64.msu /quiet`를 실행합니다.
-   - Windows Server 2012를 실행하는 컴퓨터에서 `W2K12-KB3191565-x64.msu /quiet`를 실행합니다.
-   - Windows 8.1 X86을 실행하는 컴퓨터에서 `Win8.1-KB3191564-x86.msu /quiet`를 실행합니다.
+1. WMF 5.1 설치 패키지를 다운로드하거나 복사한 폴더로 디렉터리를 변경합니다.
+1. 다음 명령 중 하나를 실행합니다.
+   - Windows Server 2012 R2 또는 Windows 8.1 x64를 실행하는 컴퓨터에서 `Win8.1AndW2K12R2-KB3191564-x64.msu /quiet /norestart`를 실행합니다.
+   - Windows Server 2012를 실행하는 컴퓨터에서 `W2K12-KB3191565-x64.msu /quiet /norestart`를 실행합니다.
+   - Windows 8.1 X86을 실행하는 컴퓨터에서 `Win8.1-KB3191564-x86.msu /quiet /norestart`를 실행합니다.
 
-> [!NOTE]
-> WMF 5.1을 설치하려면 다시 부팅해야 합니다. `/quiet` 옵션을 사용하면 경고 없이 시스템이 다시 부팅됩니다. 다시 부팅되지 않도록 하려면 `/norestart` 옵션을 사용하세요. 그러나 다시 부팅될 때까지 WMF 5.1이 설치되지 않습니다.
+   > [!NOTE]
+   > WMF 5.1을 설치하려면 다시 부팅해야 합니다. `/quiet` 옵션만 사용하면 경고 없이 시스템이 다시 부팅됩니다. 다시 부팅되지 않도록 하려면 `/norestart` 옵션을 사용하세요. 그러나 다시 부팅될 때까지 WMF 5.1이 설치되지 않습니다.

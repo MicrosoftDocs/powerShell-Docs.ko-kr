@@ -3,12 +3,12 @@ title: 표준 라이브러리 이진 모듈을 만드는 방법
 description: PowerShell Standard Library를 사용하면 PowerShell Core와 Windows PowerShell 5.1 모두에서 작동하는 플랫폼 간 모듈을 만들 수 있습니다.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 51734fd9232e7c33b11c6c5a6abddbcc1f28413c
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: ff6a49f70a3fb77f5a30cc909d53bb77b3cd7d43
+ms.sourcegitcommit: 8c01e56f0c10ff2637955dc892ea78432d563a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149416"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88702748"
 ---
 # <a name="how-to-create-a-standard-library-binary-module"></a>표준 라이브러리 이진 모듈을 만드는 방법
 

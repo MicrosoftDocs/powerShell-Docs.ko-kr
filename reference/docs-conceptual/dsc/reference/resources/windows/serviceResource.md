@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,configuration,setup
 title: DSC 서비스 리소스
-ms.openlocfilehash: acd0710fb4b131876e3edece15b07cff8e9a8a9e
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: f936f58ffd00f84d8c6d5d41d93378eaa8db5879
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557008"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463587"
 ---
 # <a name="dsc-service-resource"></a>DSC 서비스 리소스
 
@@ -23,14 +23,18 @@ Service [string] #ResourceName
     Name = [string]
     [ BuiltInAccount = [string] { LocalService | LocalSystem | NetworkService }  ]
     [ Credential = [PSCredential] ]
+    [ StartupTimeout = [uint32]]
     [ StartupType = [string] { Automatic | Disabled | Manual }  ]
-    [ State = [string] { Running | Stopped }  ]
+    [ State = [string] { Ignore | Running | Stopped }  ]
+    [ Dependencies = [string[]] ]
     [ Description = [string] ]
+    [ DesktopInteract = [boolean]]
     [ DisplayName = [string] ]
     [ Path = [string] ]
     [ DependsOn = [string[]] ]
     [ Ensure = [string] { Absent | Present } ]
     [ PsDscRunAsCredential = [PSCredential] ]
+    [ TerminateTimeout = [uint32] ]
 }
 ```
 
@@ -41,9 +45,13 @@ Service [string] #ResourceName
 |속성 |서비스 이름을 나타냅니다. 이 속성은 경우에 따라 표시 이름과 다릅니다. `Get-Service` cmdlet으로 서비스 목록과 현재 상태를 가져올 수 있습니다. |
 |BuiltInAccount |서비스에 사용할 로그인 계정을 나타냅니다. 이 속성에 허용된 값은 **LocalService**, **LocalSystem** 및 **NetworkService**입니다. |
 |자격 증명 |서비스가 실행되는 계정에 대한 자격 증명을 나타냅니다. 이 속성과 **BuiltinAccount** 속성은 함께 사용할 수 없습니다. |
+|StartupTimeout | 서비스가 실행될 때까지 대기하는 시간(밀리초)입니다.|
 |StartupType |서비스의 시작 유형을 나타냅니다. 이 속성에 허용된 값은 **Automatic**, **Disabled** 및 **Manual**입니다. |
 |시스템 상태 |서비스에 대해 확인하려는 상태를 나타냅니다. 값은 다음과 같습니다. **실행 중** 또는 **중지됨**. |
-|Description |대상 서비스에 대한 설명을 나타냅니다. |
+|TerminateTimeout |서비스가 중지될 때까지 대기하는 시간(밀리초)입니다.|
+|종속성 | 서비스에 포함되어야 하는 종속성 이름의 배열입니다. |
+|설명 |대상 서비스에 대한 설명을 나타냅니다. |
+|DesktopInteract | 서비스가 데스크톱의 창과 통신할 수 있는지 여부를 나타냅니다. LocalSystem으로 실행되지 않는 서비스의 경우 false여야 합니다.|
 |DisplayName |대상 서비스에 대한 표시 이름을 나타냅니다. |
 |경로 |새 서비스에 대한 이진 파일의 경로를 나타냅니다. |
 

@@ -1,20 +1,20 @@
 ---
-ms.date: 12/12/2018
+ms.date: 06/22/2020
 keywords: DSC, PowerShell, 구성, 서비스, 설정
 title: 구성 작성, 컴파일 및 적용
-ms.openlocfilehash: 11de1d4552bc9c438adf9e3dea2059834e11e10c
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 9acb2db882795d7150326fadb2964deb1105b2cc
+ms.sourcegitcommit: 7eea0885dd7ac90ab36e5664501438a292217f7f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808302"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295678"
 ---
 # <a name="write-compile-and-apply-a-configuration"></a>구성 작성, 컴파일 및 적용
 
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-이 연습에서는 DSC(필요한 상태 구성) 구성을 만들고 적용하는 과정을 처음부터 끝까지 자세히 설명합니다.
-다음 예제에서는 매우 간단한 구성을 작성하고 적용하는 방법을 알아봅니다. 이 구성은 "HelloWorld.txt" 파일이 로컬 머신에 존재하는지 확인합니다. 해당 파일을 삭제하는 경우 DSC는 다음 업데이트 시 이를 다시 생성합니다.
+이 연습에서는 DSC(필요한 상태 구성) 구성을 만들고 적용하는 과정을 처음부터 끝까지 자세히 설명합니다. 다음 예제에서는 매우 간단한 구성을 작성하고 적용하는 방법을 알아봅니다. 이 구성은 "HelloWorld.txt" 파일이 로컬 머신에 존재하는지 확인합니다.
+해당 파일을 삭제하는 경우 DSC는 다음 업데이트 시 이를 다시 생성합니다.
 
 DSC가 무엇이며 어떻게 작동하는지에 대한 개요는 [개발자를 위한 필요한 상태 구성 개요](../overview/overview.md)를 참조하세요.
 
@@ -34,10 +34,12 @@ Configuration HelloWorld {
     # Import the module that contains the File resource.
     Import-DscResource -ModuleName PsDesiredStateConfiguration
 
-    # The Node statement specifies which targets to compile MOF files for, when this configuration is executed.
+    # The Node statement specifies which targets to compile MOF files for, when
+    # this configuration is executed.
     Node 'localhost' {
 
-        # The File resource can ensure the state of files, or copy them from a source to a destination with persistent updates.
+        # The File resource can ensure the state of files, or copy them from a
+        # source to a destination with persistent updates.
         File HelloWorld {
             DestinationPath = "C:\Temp\HelloWorld.txt"
             Ensure = "Present"
@@ -47,8 +49,8 @@ Configuration HelloWorld {
 }
 ```
 
-> !중요 여러 DSC 리소스를 작업할 수 있도록 여러 모듈을 가져와야 하는 고급 시나리오에서는 `Import-DscResource`를 사용하여 각 모듈을 별도의 줄에 둡니다.
-> 이는 소스 제어에서 관리하기가 쉽고 Azure State Configuration에서 DSC를 작업할 때 필요합니다.
+> [!IMPORTANT]
+> 여러 DSC 리소스를 작업할 수 있도록 여러 모듈을 가져와야 하는 고급 시나리오에서는 `Import-DscResource`를 사용하여 각 모듈을 별도의 줄에 둡니다. 이는 소스 제어에서 관리하기가 쉽고 Azure State Configuration에서 DSC를 작업할 때 필요합니다.
 >
 > ```powershell
 >  Configuration HelloWorld {
@@ -67,13 +69,10 @@ Configuration HelloWorld {
 
 ## <a name="compile-the-configuration"></a>구성 컴파일
 
-노드에 DSC 구성을 적용하려면 먼저 MOF 파일로 컴파일해야 합니다.
-함수처럼 구성을 실행하면 `Node` 블록에 의해 정의된 모든 노드에서 하나의 ".mof" 파일을 컴파일합니다.
-구성을 실행하기 위해 "HelloWorld.ps1" 스크립트를 현재 범위로 *도트 소스*해야 합니다.
-자세한 내용은 [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing)를 참조하세요.
+노드에 DSC 구성을 적용하려면 먼저 MOF 파일로 컴파일해야 합니다. 함수처럼 구성을 실행하면 `Node` 블록에 의해 정의된 모든 노드에서 하나의 `.mof` 파일을 컴파일합니다. 구성을 실행하기 위해 `HelloWorld.ps1`스크립트를 현재 범위로 ‘도트 소싱’해야 합니다. 자세한 내용은 [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing)를 참조하세요.
 
 <!-- markdownlint-disable MD038 -->
-‘점, 공백’ 뒤에 "HelloWorld.ps1" 스크립트를 저장한 경로를 입력하여 `. `(도트 소스)합니다. 그런 다음, 함수처럼 구성을 호출하여 실행합니다.
+`. `(점, 공백) 뒤에 `HelloWorld.ps1` 스크립트를 저장한 경로를 입력하여 ‘도트 소싱’합니다. 그런 다음, 함수처럼 구성을 호출하여 실행합니다. 도트 소싱할 필요가 없도록 스크립트 아래쪽에서 구성 함수를 호출할 수도 있습니다.
 <!-- markdownlint-enable MD038 -->
 
 ```powershell
@@ -83,7 +82,7 @@ HelloWorld
 
 그러면 다음과 같은 출력이 생성됩니다.
 
-```output
+```Output
 Directory: C:\Scripts\HelloWorld
 
 
@@ -96,10 +95,9 @@ Mode                LastWriteTime         Length Name
 
 이제 MOF를 컴파일했으므로 [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) cmdlet을 호출하여 구성을 대상 노드(이 경우 로컬 컴퓨터)에 적용할 수 있습니다.
 
-`Start-DscConfiguration` cmdlet은 DSC의 엔진인 [LCM(로컬 구성 관리자)](../managing-nodes/metaConfig.md)에 구성을 적용하라고 지시합니다.
-LCM은 DSC 리소스를 호출하여 구성을 적용합니다.
+`Start-DscConfiguration` cmdlet은 DSC의 엔진인 [LCM(로컬 구성 관리자)](../managing-nodes/metaConfig.md)에 구성을 적용하라고 지시합니다. LCM은 DSC 리소스를 호출하여 구성을 적용합니다.
 
-아래 코드를 사용하여 `Start-DSCConfiguration` cmdlet을 실행합니다. "localhost.mof"가 저장된 디렉터리 경로를 `-Path` 매개 변수로 지정합니다. `Start-DSCConfiguration` cmdlet은 "\<computername\>.mof" 파일에서 지정된 디렉터리를 살펴봅니다. `Start-DSCConfiguration` cmdlet은 파일 이름별로 지정된 컴퓨터 이름에 찾은 ".mof" 파일을 적용하려고 합니다("localhost", "server01", "dc-02" 등).
+아래 코드를 사용하여 `Start-DSCConfiguration` cmdlet을 실행합니다. `localhost.mof`가 **Path** 매개 변수에 저장되는 디렉터리 경로를 지정합니다. `Start-DSCConfiguration` cmdlet은 `<computername>.mof` 파일에서 지정된 디렉터리를 살펴봅니다. `Start-DSCConfiguration` cmdlet은 파일 이름별로 지정된 `computername`에 찾은 `.mof` 파일을 적용하려고 합니다(“localhost”, “server01”, “dc-02” 등).
 
 > [!NOTE]
 > `-Wait` 매개 변수가 지정되지 않으면 `Start-DSCConfiguration`은 백그라운드 작업을 만들어서 작업을 수행합니다. `-Verbose` 매개 변수를 지정하면 작업의 **자세한 정보 표시** 출력을 볼 수 있습니다. `-Wait` 및 `-Verbose`는 모두 선택적 매개 변수입니다.
@@ -110,17 +108,17 @@ Start-DscConfiguration -Path C:\Scripts\HelloWorld -Verbose -Wait
 
 ## <a name="test-the-configuration"></a>구성 테스트
 
-`Start-DSCConfiguration` cmdlet이 완료되면 지정한 위치에서 "HelloWorld.txt" 파일을 표시합니다. [Get-Content](/powershell/module/microsoft.powershell.management/get-content) cmdlet을 사용하여 콘텐츠를 확인할 수 있습니다.
+`Start-DSCConfiguration` cmdlet이 완료되면 지정한 위치에서 `HelloWorld.txt` 파일을 표시합니다. [Get-Content](/powershell/module/microsoft.powershell.management/get-content) cmdlet을 사용하여 콘텐츠를 확인할 수 있습니다.
 
-[Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)을 사용하여 현재 상태를 *테스트*할 수도 있습니다.
+[Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)을 사용하여 현재 상태를 _테스트_할 수도 있습니다.
 
-노드가 현재 적용된 구성을 준수하는 경우 출력은 "True"여야 합니다.
+노드가 현재 적용된 구성을 준수하는 경우 출력은 `True`여야 합니다.
 
 ```powershell
 Test-DSCConfiguration
 ```
 
-```output
+```Output
 True
 ```
 
@@ -128,7 +126,7 @@ True
 Get-Content -Path C:\Temp\HelloWorld.txt
 ```
 
-```output
+```Output
 Hello World from DSC!
 ```
 

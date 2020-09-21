@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,configuration,setup
 title: TestConfiguration 메서드
-ms.openlocfilehash: 384134212e3b29b63dc045aee4b708c87c970302
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 0611c4d5543c49b879bef9b60cafdd0b055c9b86
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954870"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464301"
 ---
 # <a name="testconfiguration-method"></a>TestConfiguration 메서드
 
@@ -26,13 +26,13 @@ uint32 TestConfiguration(
 
 ## <a name="parameters"></a>매개 변수
 
-*configurationData* \[in\] 구성에 대한 환경 데이터입니다.
+**configurationData** \[in\] 구성에 대한 환경 데이터입니다.
 
-*InDesiredState* \[out\] 반환 시, 관리 노드가 구성 문서에서 지정한 상태인지 여부를 지정합니다.
+**InDesiredState** \[out\] 반환 시, 관리 노드가 구성 문서에서 지정한 상태인지 여부를 지정합니다.
 
-*ResourcesInDesiredState* \[out\] 반환 시, 원하는 상태인 리소스를 지정하는 **MSFT_ResourceInDesiredState** 클래스의 포함 인스턴스가 들어 있습니다.
+**ResourcesInDesiredState** \[out\] 반환 시, 원하는 상태인 리소스를 지정하는 **MSFT_ResourceInDesiredState** 클래스의 포함 인스턴스가 들어 있습니다.
 
-*ResourcesNotInDesiredState* \[out\] 반환 시, 원하는 상태가 아닌 리소스를 지정하는 **MSFT_ResourceNotInDesiredState** 클래스의 포함 인스턴스가 들어 있습니다.
+**ResourcesNotInDesiredState** \[out\] 반환 시, 원하는 상태가 아닌 리소스를 지정하는 **MSFT_ResourceNotInDesiredState** 클래스의 포함 인스턴스가 들어 있습니다.
 
 ## <a name="return-value"></a>반환 값
 

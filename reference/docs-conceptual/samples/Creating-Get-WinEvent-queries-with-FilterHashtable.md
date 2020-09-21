@@ -1,12 +1,12 @@
 ---
 ms.date: 09/13/2019
 title: FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기
-ms.openlocfilehash: 485b0cf05489d9add201c71c01fe2ed0c48db387
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 002d84515368663e0e807f48ffe883bd533be1d9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563932"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786648"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기
 
@@ -127,7 +127,7 @@ Get-WinEvent -FilterHashtable @{
 **Windows 이벤트 뷰어**를 열고 **작업** 창에서 **현재 로그 필터링**을 클릭합니다.
 **Keywords** 드롭다운 메뉴는 다음 스크린샷에 표시된 것처럼 사용할 수 있는 키워드를 표시합니다.
 
-![Windows 이벤트 뷰어 Keywords의 이미지입니다.](./media/creating-get-winEvent-queries-with-filterhashtable/keywords.png)
+![Windows 이벤트 뷰어 키워드 이미지](./media/creating-get-winEvent-queries-with-filterhashtable/keywords.png)
 
 다음 명령을 사용하여 `StandardEventKeywords` 속성 이름을 표시합니다.
 

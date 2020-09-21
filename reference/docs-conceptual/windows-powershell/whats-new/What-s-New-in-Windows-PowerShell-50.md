@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 5.0의 새로운 기능
-ms.openlocfilehash: dba016546fe034684f6b7afe43ec2e7a1b793d96
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 314be1d4da2d3df967ac8898745b7b1aaf69de2a
+ms.sourcegitcommit: 3e343f005fe76960c998ef1869a1a093d37ef349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809219"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216008"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Windows PowerShell 5.0의 새로운 기능
 
@@ -187,7 +187,7 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 
 ### <a name="new-features-in-windows-powershell-ise"></a>Windows PowerShell ISE의 새로운 기능
 
-- 이제 편집할 파일이 저장되어 있는 컴퓨터에서 원격 세션을 시작한 다음, 원격 컴퓨터에서 **PSEdit \<경로 및 파일 이름\>** 을 실행하기 위해 Enter-PSSession을 실행하여 Windows PowerShell ISE의 로컬 복사본에서 원격 Windows PowerShell 스크립트와 파일을 편집할 수 있습니다. 이 기능을 사용하면 Windows PowerShell ISE를 실행할 수 없는 Windows Server의 Server Core 설치 옵션에 저장되어 있는 Windows PowerShell 파일을 쉽게 편집할 수 있습니다.
+- 이제 Enter-PSSession을 실행하여 편집할 파일이 저장된 컴퓨터에서 원격 세션을 시작한 다음, **PSEdit \<path and file name on the remote computer\>** 를 실행하여 Windows PowerShell ISE의 로컬 복사본에서 원격 Windows PowerShell 스크립트와 파일을 편집할 수 있습니다. 이 기능을 사용하면 Windows PowerShell ISE를 실행할 수 없는 Windows Server의 Server Core 설치 옵션에 저장되어 있는 Windows PowerShell 파일을 쉽게 편집할 수 있습니다.
 - 이제 Windows PowerShell ISE에서 Start-Transcript cmdlet이 지원됩니다.
 - 이제 Windows PowerShell ISE에서 원격 스크립트를 디버그할 수 있습니다.
 - 새 메뉴 명령인 **모두 중단**(Ctrl+B)은 로컬 스크립트와 원격으로 실행 중인 스크립트 둘 다에 대해 디버거를 시작합니다.
@@ -353,7 +353,7 @@ XAML 또는 Windows PowerShell 언어로 워크플로를 작성한 후 cmdlet을
 
 Windows PowerShell 웹 액세스는 웹 기반 콘솔에서 Windows PowerShell 명령 및 스크립트를 실행할 수 있는 Windows Server 2012 기능입니다. 웹 기반 콘솔을 사용하는 디바이스에서는 Windows PowerShell, 원격 관리 소프트웨어 또는 브라우저 플러그 인 설치가 필요하지 않습니다. 올바르게 구성된 Windows PowerShell 웹 액세스 게이트웨이와 JavaScript를 지원하고 쿠키를 적용하는 클라이언트 디바이스 브라우저만 있으면 됩니다.
 
-자세한 내용은 [Windows PowerShell 웹 액세스 배포](/powershell/scripting/components/web-access/install-and-use-windows-powershell-web-access)를 참조하세요.
+자세한 내용은 [Windows PowerShell 웹 액세스 배포](/previous-versions/powershell/scripting/components/web-access/install-and-use-windows-powershell-web-access)를 참조하세요.
 
 ### <a name="new-windows-powershell-ise-features"></a>Windows PowerShell ISE의 새로운 기능
 

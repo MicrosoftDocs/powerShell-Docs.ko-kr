@@ -1,12 +1,12 @@
 ---
 title: PowerShell 7 모듈 호환성
 ms.date: 02/03/2020
-ms.openlocfilehash: 273e25e3b7cd48e09b63e50c34ed0b98a4e766f0
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d618f9e55f5997bfd724a4e58bb94c348bd681ce
+ms.sourcegitcommit: 56463fb628a7d83dec4364e89417d83316c3e53b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565066"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84722816"
 ---
 # <a name="powershell-7-module-compatibility"></a>PowerShell 7 모듈 호환성
 
@@ -69,13 +69,14 @@ Windows 10에서는 Windows 관리 모듈이 **Windows 선택적 기능** 또는
 | 모듈 이름                        | 상태                               | 지원되는 OS                       |
 | ---------------------------------- | ------------------------------------ | ---------------------------------- |
 | ActiveDirectory                    | 기본적으로 호환                  | RSAT-AD-PowerShell이 있는 Windows Server 1809 이상 버전<br>Rsat.ActiveDirectory.DS-LDS.Tools가 있는 Windows 10 1809 이상 버전 |
+| ADDSDeployment                     | 호환성 계층에서 작업       |  Windows Server 2019 1809 이상 버전         |
 | ADFS                               | 호환성 계층으로 테스트되지 않음    |                                    |
 | AppBackgroundTask                  | 기본적으로 호환                  | Windows 10 1903 이상 버전                   |
 | AppLocker                          | 호환성 계층으로 테스트되지 않음    |                                    |
 | AppvClient                         | 호환성 계층으로 테스트되지 않음    |                                    |
 | Appx                               | 기본적으로 호환                  | Windows Server 1809 이상 버전<br>Windows 10 1809 이상 버전 |
 | AssignedAccess                     | 기본적으로 호환                  | Windows 10 1809 이상 버전                   |
-| BestPractices                      | 호환성 계층으로 테스트되지 않음    |                                    |
+| BestPractices                      | 호환성 계층에서 지원되지 않음 |                                    |
 | BitLocker                          | 기본적으로 호환                  | BitLocker가 있는 Windows Server 1809 이상 버전<br>Windows 10 1809 이상 버전 |
 | BitsTransfer                       | 기본적으로 호환                  | Windows Server 20H1<br>Windows 10 20H1 |
 | BootEventCollector                 | 호환성 계층으로 테스트되지 않음    |                                        |
@@ -148,7 +149,7 @@ Windows 10에서는 Windows 관리 모듈이 **Windows 선택적 기능** 또는
 | 프로비전                       | 호환성 계층으로 테스트되지 않음    |                                               |
 | PSDesiredStateConfiguration        | 부분적으로                            | PowerShell 7에 기본 제공                       |
 | PSDiagnostics                      | 기본적으로 호환                  | PowerShell 7에 기본 제공                       |
-| PSScheduledJob                     | 호환성 계층에서 작동하지 않음 | PowerShell 5.1에 기본 제공                     |
+| PSScheduledJob                     | 호환성 계층에서 지원되지 않음 | PowerShell 5.1에 기본 제공                     |
 | PSWorkflow                         | 호환성 계층으로 테스트되지 않음    |                                               |
 | PSWorkflowUtility                  | 호환성 계층으로 테스트되지 않음    |                                               |
 | RemoteAccess                       | 호환성 계층으로 테스트되지 않음    |                                               |
@@ -156,7 +157,7 @@ Windows 10에서는 Windows 관리 모듈이 **Windows 선택적 기능** 또는
 | ScheduledTasks                     | 기본적으로 호환                  | Windows Server 1809 이상 버전<br>Windows 10 1809 이상 버전      |
 | SecureBoot                         | 기본적으로 호환                  | Windows Server 1809 이상 버전<br>Windows 10 1809 이상 버전      |
 | ServerCore                         | 호환성 계층으로 테스트되지 않음    |                                               |
-| ServerManager                      | 호환성 계층으로 테스트되지 않음    |                                               |
+| ServerManager                      | 기본적으로 호환                  | Windows Server 1809 이상 버전<br>Rsat.ServerManager.Tools가 있는 Windows 10 1809 이상 버전<br>‘아래 참고 참조’ |
 | ServerManagerTasks                 | 호환성 계층으로 테스트되지 않음    |                                               |
 | ShieldedVMDataFile                 | 기본적으로 호환                  | RSAT-Shielded-VM-Tools가 있는 Windows Server 1903 이상 버전<br>Rsat.Shielded.VM.Tools가 있는 Windows 10 1903 이상 버전 |
 | ShieldedVMProvisioning             | 기본적으로 호환                  | HostGuardian이 있는 Windows Server 1809 이상 버전<br>HostGuardian이 있는 Windows 10 1809 이상 버전  |
@@ -164,7 +165,7 @@ Windows 10에서는 Windows 관리 모듈이 **Windows 선택적 기능** 또는
 | SmbShare                           | 기본적으로 호환                  | Windows Server 1809 이상 버전<br>Windows 10 1809 이상 버전      |
 | SmbWitness                         | 기본적으로 호환                  | Windows Server 1809 이상 버전<br>Windows 10 1809 이상 버전      |
 | SMISConfig                         | 기본적으로 호환                  | WindowsStorageManagementService가 있는 Windows Server 1903 이상 버전 |
-| sms                                | 호환성 계층으로 테스트되지 않음    |                                               |
+| SMS                                | 호환성 계층으로 테스트되지 않음    |                                               |
 | SoftwareInventoryLogging           | 기본적으로 호환                  | Windows Server 1809 이상 버전                          |
 | StartLayout                        | 기본적으로 호환                  | Desktop Experience가 있는 Windows Server 1809 이상 버전<br>Windows 10 1809 이상 버전 |
 | 스토리지                            | 기본적으로 호환                  | Windows Server 1809 이상 버전<br>Windows 10 1809 이상 버전      |
@@ -178,7 +179,7 @@ Windows 10에서는 Windows 관리 모듈이 **Windows 선택적 기능** 또는
 | TroubleshootingPack                | 기본적으로 호환                  | Windows 10 1903 이상 버전                              |
 | TrustedPlatformModule              | 기본적으로 호환                  | Windows Server 1809 이상 버전<br>Windows 10 1809 이상 버전      |
 | UEV                                | 기본적으로 호환                  | Windows Server ??Future version of Server with Desktop Experience??<br>Windows 10 1903 이상 버전 |
-| UpdateServices                     | 호환성 계층에서 작동하지 않음 |                                               |
+| UpdateServices                     | 호환성 계층에서 지원되지 않음 |                                               |
 | VpnClient                          | 기본적으로 호환                  | Windows Server 1809 이상 버전<br>Windows 10 1809 이상 버전      |
 | Wdac                               | 기본적으로 호환                  | Windows Server 1809 이상 버전<br>Windows 10 1809 이상 버전      |
 | WebAdministration                  | 호환성 계층으로 테스트되지 않음    |                                               |
@@ -189,3 +190,10 @@ Windows 10에서는 Windows 관리 모듈이 **Windows 선택적 기능** 또는
 | WindowsServerBackup                | 기본적으로 호환                  | Windows-Server-Backup이 있는 Windows Server 19H2 |
 | WindowsUpdate                      | 기본적으로 호환                  | Windows Server 1809 이상 버전<br>Windows 10 1809 이상 버전       |
 | WindowsUpdateProvider              | 기본적으로 호환                  | Windows Server 1809 이상 버전<br>Windows 10 1809 이상 버전       |
+
+## <a name="notes"></a>메모
+
+### <a name="servermanager-module"></a>ServerManager 모듈
+
+해당 모듈은 PowerShell 7의 형식이 지정된 출력에 사소한 호환성 문제가 있습니다. 예를 들어 `Get-WindowsFeature` cmdlet은 모든 속성이 포함된 적절한 개체를 반환하지만 기본 표시 형식을 사용하면 일부 속성이 비어 있는 것처럼 표시됩니다. `Select-Object` 또는 직접 멤버 액세스를 사용하여 개체 속성에서 실제 값을 사용할 수 있습니다.
+

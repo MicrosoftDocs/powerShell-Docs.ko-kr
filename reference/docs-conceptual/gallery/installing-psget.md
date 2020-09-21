@@ -3,12 +3,12 @@ ms.date: 09/19/2019
 contributor: manikb
 keywords: gallery,powershell,cmdlet,psget
 title: PowerShellGet 설치
-ms.openlocfilehash: f42eb0df101eb63a5dc267196fa9f666747b8e35
-ms.sourcegitcommit: 23ea4a36ee85f923684657de5313a5adf0b6b094
+ms.openlocfilehash: 4a10699be9ff2b64e5848c6749bdd3dedf55e3c7
+ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83727798"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88162514"
 ---
 # <a name="installing-powershellget"></a>PowerShellGet 설치
 
@@ -25,7 +25,6 @@ ms.locfileid: "83727798"
 
 ```powershell
 Install-PackageProvider -Name NuGet -Force
-Exit
 ```
 
 ### <a name="for-systems-with-powershell-50-or-newer-you-can-install-the-latest-powershellget"></a>PowerShell 5.0 이상이 설치된 시스템에 최신 PowerShellGet을 설치할 수 있습니다.
@@ -34,7 +33,6 @@ Windows 10, Windows Server 2016, WMF 5.0/5.1이 설치된 시스템 또는 Power
 
 ```powershell
 Install-Module -Name PowerShellGet -Force
-Exit
 ```
 
 `Update-Module`을 사용하여 최신 버전을 가져옵니다.
@@ -53,28 +51,50 @@ Exit
 자세한 내용은 [Save-Module](/powershell/module/PowershellGet/Save-Module)을 참조하세요.
 
 > [!NOTE]
-> PowerShell 3.0 및 PowerShell 4.0은 한 가지 버전의 모듈만 지원합니다. PowerShell 5.0부터 모듈은 `<modulename>\<version>`에 설치됩니다. 이렇게 하면 여러 버전을 함께 설치할 수 있습니다. `Save-Module`을 사용하여 모듈을 다운로드한 후 파일을 `<modulename>\<version>`에서 대상 머신의 `<modulename>` 폴더로 복사해야 합니다.
+> PowerShell 3.0 및 PowerShell 4.0은 한 가지 버전의 모듈만 지원합니다. PowerShell 5.0부터 모듈은 `<modulename>\<version>`에 설치됩니다. 이렇게 하면 여러 버전을 나란히 설치할 수 있습니다. `Save-Module`을 사용하여 모듈을 다운로드한 후 아래 지침에 표시된 대로 파일을 `<modulename>\<version>`에서 대상 머신의 `<modulename>` 폴더로 복사해야 합니다.
+
+#### <a name="preparatory-step-on-computers-running-powershell-30"></a>PowerShell 3.0을 실행하는 컴퓨터에서 준비 단계
+
+아래 섹션의 지침은 디렉터리 `$env:ProgramFiles\WindowsPowerShell\Modules`에 모듈을 설치합니다.
+PowerShell 3.0에서 해당 디렉터리는 기본적으로 `$env:PSModulePath`에 나열되지 않으므로 모듈을 자동으로 로드하려면 해당 디렉터리를 추가해야 합니다. 
+
+관리자 권한 PowerShell 세션을 열고 다음 명령(이후 세션에서 적용됨)을 실행합니다.
+
+```powershell
+[Environment]::SetEnvironmentVariable(
+  'PSModulePath',
+  ((([Environment]::GetEnvironmentVariable('PSModulePath', 'Machine') -split ';') + "$env:ProgramFiles\WindowsPowerShell\Modules") -join ';'),
+  'Machine'
+)
+```
 
 #### <a name="computers-with-the-packagemanagement-preview-installed"></a>PackageManagement 미리 보기가 설치된 컴퓨터
 
-1. PowerShell 세션에서 `Save-Module`을 사용하여 로컬 디렉터리에 모듈을 저장합니다.
+> [!NOTE] 
+> PackageManagement 미리 보기는 PowerShell 버전 3 및 4에서 PowerShellGet을 사용할 수 있게 만든 다운로드 가능한 구성 요소이지만 더 이상 사용할 수 없습니다.
+> 지정된 컴퓨터에 설치되었는지 테스트하려면 `Get-Module -ListAvailable PowerShellGet`을 실행합니다.
+
+1. PowerShell 세션에서 `Save-Module`을 사용하여 **PowerShellGet**의 현재 버전을 다운로드합니다. 다운로드되는 폴더는 다음의 두 가지입니다. **PowerShellGet** 및 **PackageManagement**. 각 폴더에는 버전 번호가 있는 하위 폴더가 있습니다.
 
    ```powershell
    Save-Module -Name PowerShellGet -Path C:\LocalFolder -Repository PSGallery
    ```
 
 1. **PowerShellGet** 및 **PackageManagement** 모듈이 다른 프로세스에서 로드되지 않았는지 확인합니다.
-1. `$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\` 및 `$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\` 폴더에서 콘텐츠 내용을 삭제합니다.
+
 1. 관리자 권한으로 PowerShell 콘솔을 다시 열고 다음 명령을 실행합니다.
 
    ```powershell
-   Copy-Item "C:\LocalFolder\PowerShellGet\<version>\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\" -Recurse -Force
-   Copy-Item "C:\LocalFolder\PackageManagement\<version>\*" "$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\" -Recurse -Force
+   'PowerShellGet', 'PackageManagement' | % { 
+     $targetDir = "$env:ProgramFiles\WindowsPowerShell\Modules\$_"
+     Remove-Item $targetDir\* -Recurse -Force
+     Copy-Item C:\LocalFolder\$_\*\* $targetDir\ -Recurse -Force
+   }
    ```
 
 #### <a name="computers-without-powershellget"></a>PowerShellGet이 없는 컴퓨터
 
-**PowerShellGet** 버전이 설치되어 있지 않은 컴퓨터의 경우 모듈을 다운로드하려면 **PowerShellGet**이 설치된 컴퓨터가 필요합니다.
+**PowerShellGet** 버전이 설치되어 있지 않은 컴퓨터의 경우(`Get-Module -ListAvailable PowerShellGet`으로 테스트) 모듈을 다운로드하려면 **PowerShellGet**이 설치된 컴퓨터가 필요합니다.
 
 1. **PowerShellGet**이 설치된 컴퓨터에서 `Save-Module`를 사용하여 현재 버전의 **PowerShellGet**를 다운로드합니다. 다운로드되는 폴더는 다음의 두 가지입니다. **PowerShellGet** 및 **PackageManagement**. 각 폴더에는 버전 번호가 있는 하위 폴더가 있습니다.
 
@@ -82,6 +102,16 @@ Exit
    Save-Module -Name PowerShellGet -Path C:\LocalFolder -Repository PSGallery
    ```
 
-1. **PowerShellGet** 및 **PackageManagement** 폴더를 **PowerShellGet**가 설치되지 않은 컴퓨터에 복사합니다.
+1. **PowerShellGet**이 설치되지 않은 컴퓨터에 대한 **PowerShellGet** 및 **PackageManagement** 폴더의 각 `<version>` 하위 폴더를 관리자 권한 세션이 필요한 `$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\` 및 `$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\` 폴더로 각각 복사합니다.
+   
+1. 예를 들어 다른 컴퓨터의 다운로드 폴더(예: `ws1`)에 액세스할 수 있는 경우 UNC 경로(예: `\\ws1\C$\LocalFolder`)를 통해 대상 컴퓨터에서 관리자 권한으로 PowerShell 콘솔을 열고 다음 명령을 실행합니다.
 
-   대상 디렉터리는 `$env:ProgramFiles\WindowsPowerShell\Modules`입니다.
+   ```powershell
+   'PowerShellGet', 'PackageManagement' | % {
+     $targetDir = "$env:ProgramFiles\WindowsPowerShell\Modules\$_"
+     $null = New-Item -Type Directory -Force $targetDir
+     $fromComputer = 'ws1'  # Specify the name of the other computer here.
+     Copy-Item \\$fromComputer\C$\LocalFolder\$_\*\* $targetDir -Recurse -Force
+     if (-not (Get-ChildItem $targetDir)) { Throw "Copying failed." }
+   }
+   ```

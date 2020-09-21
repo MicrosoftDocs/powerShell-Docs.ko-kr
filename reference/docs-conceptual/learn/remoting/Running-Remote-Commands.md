@@ -1,19 +1,19 @@
 ---
-ms.date: 08/14/2018
+ms.date: 08/21/2020
 keywords: powershell,cmdlet
 title: 원격 명령 실행
-ms.openlocfilehash: d6609deafd8dec4f34a8412439d87dacd20d46f1
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: ab6d464c31144349ee38cd01e82a2cf1470aaa95
+ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030322"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88799624"
 ---
 # <a name="running-remote-commands"></a>원격 명령 실행
 
 단일 PowerShell 명령으로 한 대 이상의 컴퓨터에서 명령을 실행할 수 있습니다. Windows PowerShell에서는 WMI, RPC, WS-Management 등과 같은 다양한 기술을 사용하여 원격 컴퓨팅을 지원합니다.
 
-PowerShell Core는 WMI, WS-Management 및 SSH 원격 기능을 지원합니다. RPC는 더 이상 지원되지 않습니다.
+PowerShell Core는 WMI, WS-Management 및 SSH 원격 기능을 지원합니다. PowerShell 6에서 RPC는 더 이상 지원되지 않습니다. PowerShell 7 이상에서 RPC는 Windows에서만 지원됩니다.
 
 PowerShell Core의 원격 작업에 대한 자세한 내용은 다음 문서를 참조하세요.
 
@@ -55,8 +55,7 @@ Windows PowerShell 원격 작업을 구성한 후 다양한 원격 전략을 사
 
 ### <a name="start-an-interactive-session"></a>대화형 세션 시작
 
-단일 원격 컴퓨터와 대화형 세션을 시작하려면 [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession) cmdlet을 사용합니다.
-예를 들어 Server01 원격 컴퓨터와 대화형 세션을 시작하려면 다음과 같이 입력합니다.
+단일 원격 컴퓨터와 대화형 세션을 시작하려면 [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession) cmdlet을 사용합니다. 예를 들어 Server01 원격 컴퓨터와 대화형 세션을 시작하려면 다음과 같이 입력합니다.
 
 ```powershell
 Enter-PSSession Server01
@@ -118,7 +117,7 @@ $s = New-PSSession -ComputerName Server01, Server02
 Invoke-Command -Session $s {$h = Get-HotFix}
 ```
 
-이제 동일한 세션에서 다른 명령에 `$h` 변수의 데이터를 사용할 수 있습니다. 결과는 로컬 컴퓨터에 표시됩니다. 다음은 그 예입니다.
+이제 동일한 세션에서 다른 명령에 `$h` 변수의 데이터를 사용할 수 있습니다. 결과는 로컬 컴퓨터에 표시됩니다. 예를 들면 다음과 같습니다.
 
 ```powershell
 Invoke-Command -Session $s {$h | where {$_.InstalledBy -ne "NTAUTHORITY\SYSTEM"}}

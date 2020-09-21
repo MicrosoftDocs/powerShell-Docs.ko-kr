@@ -3,12 +3,12 @@ title: 해시 테이블에 대해 알고 싶은 모든 것
 description: 해시 테이블은 PowerShell에서 대단히 중요하기 때문에 확실하게 이해해야 합니다.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 336c32cca351cc7d87f3300364c075ba7bd8aaeb
-ms.sourcegitcommit: 0b9268e7b92fb76b47169b72e28de43e4bfe7fbf
+ms.openlocfilehash: c67f00911b6c9d05fa9b5b5a700bbae795cf9244
+ms.sourcegitcommit: d0461273abb6db099c5e784ef00f57fd551be4a6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85353824"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>해시 테이블에 대해 알고 싶은 모든 것
 
@@ -777,12 +777,13 @@ Name                           Value
 
 ```powershell
 $key = $ht.keys[0]
-$ht.$key
+$ht.$($key)
+a
 $ht[$key]
 a
 ```
 
-멤버 액세스(`.`) 표기법을 사용하면 아무것도 반환되지 않습니다. 그러나 배열 인덱스(`[]`) 표기법을 사용하면 작동합니다.
+키가 배열인 경우 멤버 액세스(`.`) 표기법으로 사용할 수 있도록 `$key` 변수를 하위 식으로 래핑해야 합니다. 또는 배열 인덱스(`[]`) 표기법을 사용할 수 있습니다.
 
 ## <a name="use-in-automatic-variables"></a>자동 변수에서 사용
 
@@ -962,7 +963,7 @@ function Get-DeepClone
 [@KevinMarquette]: https://twitter.com/KevinMarquette
 [해시 테이블]: /powershell/module/microsoft.powershell.core/about/about_hash_tables
 [배열]: /powershell/module/microsoft.powershell.core/about/about_arrays
-[성능이 중요하다면 테스트하라]: https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Best%20Practices/Performance.md
+[성능이 중요하다면 테스트하라]: https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Best-Practices/Performance.md
 [스플래팅]: /powershell/module/microsoft.powershell.core/about/about_splatting
 [pscustomobject]: everything-about-pscustomobject.md
 [JavaScriptSerializer]: /dotnet/api/system.web.script.serialization.javascriptserializer?view=netframework-4.8

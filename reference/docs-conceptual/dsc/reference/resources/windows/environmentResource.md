@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC 환경 리소스
-ms.openlocfilehash: d6d3b4a2086be28fbfa2bf200acef9b13b7b7825
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: d8519a66d457767dcbc0e08b01a69a9264997479
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954720"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464420"
 ---
 # <a name="dsc-environment-resource"></a>DSC 환경 리소스
 
@@ -22,6 +22,7 @@ Environment [string] #ResourceName
 {
     Name = [string]
     [ Path = [bool] ]
+    [ Target = [string] { Process | Machine } ]
     [ Value = [string] ]
     [ DependsOn = [string[]] ]
     [ Ensure = [string] { Absent | Present }  ]
@@ -35,6 +36,7 @@ Environment [string] #ResourceName
 |---|---|
 |속성 |특정 상태를 확인하려는 환경 변수의 이름을 나타냅니다. |
 |경로 |구성 중인 환경 변수를 정의합니다. 변수가 **Path** 변수이면 이 속성을 `$true`로 설정하고, 그렇지 않으면 `$false`로 설정합니다. 기본값은 `$false`입니다. 구성되고 있는 변수가 **Path** 변수라면, **Value** 속성을 통해 제공된 값은 기존 값에 추가됩니다. |
+|Target| 변수를 검색할 위치를 나타냅니다. 머신 또는 프로세스입니다. 둘 다 지정된 경우 머신의 값이 반환됩니다. 둘 다가 나머지 리소스의 기본값이기 기본값은 둘 다입니다. |
 |값 |환경 변수에 할당할 값입니다. |
 
 ## <a name="common-properties"></a>공용 속성

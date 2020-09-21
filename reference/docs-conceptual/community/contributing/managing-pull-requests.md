@@ -3,12 +3,12 @@ title: 끌어오기 요청 관리 방법
 description: 이 문서에서는 PowerShell-Docs 팀이 끌어오기 요청을 관리하는 방법을 설명합니다.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: b9b37816dfdf38e4d8b7c2d66799164d0e97d257
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: af5280e91aa3744b6172dc3555df6989cb0ce1a2
+ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79060388"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158176"
 ---
 # <a name="managing-pull-requests"></a>끌어오기 요청 관리
 

@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: PowerShell 갤러리 FAQ
-ms.openlocfilehash: 035681e108e1a3e05fe5d659d527ae1ad1c64cf4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 29f930cf552abec8acbbf02f5570c6ac0a14066d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500581"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87777820"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
@@ -24,8 +24,8 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 
 일반적으로 모듈이 공유에 더 효과적이지만 워크플로와 스크립트를 커뮤니티에 기여하기 쉽도록 스크립트 공유를 설정합니다. 자세한 내용은 다음 블로그를 참조하세요.
 
-- [Don't Write Scripts, Write PowerShell Modules](https://blogs.technet.microsoft.com/heyscriptingguy/2011/06/27/dont-write-scripts-write-powershell-modules/)(스크립트가 아니라 PowerShell 모듈을 작성하세요.)
-- [Understanding PowerShell Modules](https://blogs.technet.microsoft.com/heyscriptingguy/2015/07/10/understanding-powershell-modules/)(PowerShell 모듈 이해)
+- [Don't Write Scripts, Write PowerShell Modules(스크립트가 아니라 PowerShell 모듈을 작성하세요.)](https://blogs.technet.microsoft.com/heyscriptingguy/2011/06/27/dont-write-scripts-write-powershell-modules/)
+- [Understanding PowerShell Modules(PowerShell 모듈 이해)](https://blogs.technet.microsoft.com/heyscriptingguy/2015/07/10/understanding-powershell-modules/)
 
 ## <a name="how-can-i-publish-to-the-powershell-gallery"></a>PowerShell 갤러리에 게시하려면 어떻게 하나요?
 
@@ -36,7 +36,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 
 **패키지를 설치하거나 저장하기 위해 갤러리에 등록 또는 로그인할 필요는 없습니다.**
 
-## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>PowerShell 갤러리에 항목을 게시하려고 했을 때 "요청을 처리하지 못했습니다. '지정된 API 키가 잘못되었거나 지정된 패키지에 액세스할 수 있는 권한이 없습니다.' 원격 서버에서 (403) 사용할 수 없음 오류를 반환했습니다."라는 오류가 발생했습니다. 이는 무엇을 의미하나요?
+## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>PowerShell 갤러리에 항목을 게시하려고 했을 때 "요청을 처리하지 못했습니다. '지정된 API 키가 잘못되었거나 지정된 패키지에 액세스할 수 있는 권한이 없습니다.' 원격 서버에서 (403) 사용할 수 없음 오류를 반환했습니다."라는 오류가 발생했습니다. 어떤 의미인가요?
 
 이 오류는 다음과 같은 이유로 발생할 수 있습니다.
 
@@ -59,7 +59,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 모든 종류의 PowerShell 모듈(스크립트 모듈, 이진 모듈 또는 매니페스트 모듈)을 갤러리에 게시할 수 있습니다. 모듈을 게시하려면 PowerShellGet에 버전, 설명, 작성자, 사용 허가 방법 등의 몇 가지 정보가 필요합니다. 이 정보는 게시 프로세스의 일부로 *모듈 매니페스트*(.psd1) 파일 또는 [Publish-Module][] cmdlet의 **LicenseUri** 매개 변수 값에서 읽어옵니다. 갤러리에 게시된 모든 모듈에는 모듈 매니페스트가 있어야 합니다. 매니페스트에 다음 정보가 포함된 모든 모듈을 갤러리에 게시할 수 있습니다.
 
 - 버전
-- Description
+- 설명
 - 작성자
 - 매니페스트의 **PrivateData** 섹션이나 [Publish-Module][] cmdlet의 **LicenseUri** 매개 변수에 포함된 모듈 사용 조건에 대한 URI입니다.
 
@@ -76,7 +76,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 모든 종류의 PowerShell 스크립트(스크립트 또는 워크플로)를 갤러리에 게시할 수 있습니다. 스크립트를 게시하려면 PowerShellGet에 버전, 설명, 작성자, 사용 허가 방법 등의 몇 가지 정보가 필요합니다. 이 정보는 게시 프로세스의 일부로 스크립트 파일의 *PSScriptInfo* 섹션이나 [Publish-Script][] cmdlet의 **LicenseUri** 매개 변수 값에서 읽어옵니다. 갤러리에 게시된 모든 스크립트에는 메타데이터 정보가 있어야 합니다. PSScriptInfo 섹션에 다음 정보가 포함된 모든 스크립트를 갤러리에 게시할 수 있습니다.
 
 - 버전
-- Description
+- 설명
 - 작성자
 - 스크립트의 **PSScriptInfo** 섹션이나 [Publish-Script][] cmdlet의 **LicenseUri** 매개 변수에 포함된 모듈 사용 조건에 대한 URI입니다.
 
@@ -137,7 +137,7 @@ PowerShell cmdlet 계층에서 [Install-Module][]은 실제로 `Install-Package 
 
 PackageManagement 패키지 공급자 계층에서 PSModule 패키지 공급자는 실제로 다른 PackageManagement 패키지 공급자를 호출합니다. 예를 들어 NuGet 기반 갤러리(예: PowerShell 갤러리)로 작업하는 경우 PSModule 패키지 공급자는 NuGet 패키지 공급자를 사용하여 리포지토리에서 작업합니다.
 
-![PowerShellGet 아키텍처](media/faqs/powershellgetArchitecture.png)
+![PowerShellGet 아키텍처의 다이어그램](media/faqs/powershellgetArchitecture.png)
 
 그림 1: PowerShellGet 아키텍처
 

@@ -2,12 +2,12 @@
 title: Visual Studio Code에서 ISE 환경을 복제하는 방법
 description: Visual Studio Code에서 ISE 환경을 복제하는 방법
 ms.date: 08/06/2018
-ms.openlocfilehash: 899e1c393fd49b0659631b88d610e80ec885e69e
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 6b0b8ce054695d6cc0fc578290c554e2dc1472bc
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809599"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784625"
 ---
 # <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>Visual Studio Code에서 ISE 환경을 복제하는 방법
 
@@ -25,7 +25,7 @@ Visual Studio Code에서 ISE 환경을 복제하는 가장 쉬운 방법은 "ISE
 
 이 명령은 아래에 설명된 설정을 자동으로 적용합니다. 결과는 다음과 같습니다.
 
-![ISE 모드](media/How-To-Replicate-the-ISE-Experience-In-VSCode/3-ise-mode.png)
+![ISE 모드의 Visual Studio Code](media/How-To-Replicate-the-ISE-Experience-In-VSCode/3-ise-mode.png)
 
 ## <a name="ise-mode-configuration-settings"></a>ISE 모드 구성 설정
 
@@ -53,7 +53,7 @@ ISE 모드를 사용하면 VS Code 설정이 다음과 같이 변경됩니다.
 
   이러한 설정은 빨간색 상자 내부 아래에 있는 "작업 표시줄" 및 "디버그 사이드 막대" 섹션을 숨깁니다.
 
-  ![강조 표시된 섹션에는 작업 표시줄과 디버그 사이드 막대가 포함됩니다.](media/How-To-Replicate-the-ISE-Experience-In-VSCode/1-highlighted-sidebar.png)
+  ![강조 표시된 섹션에는 작업 표시줄과 디버그 사이드 막대가 포함됨](media/How-To-Replicate-the-ISE-Experience-In-VSCode/1-highlighted-sidebar.png)
 
   최종 결과는 다음과 같습니다.
 
@@ -122,7 +122,7 @@ ISE 모드를 사용하면 VS Code 설정이 다음과 같이 변경됩니다.
 
 - 4sysops에는 VS Code를 ISE와 더 유사하게 구성하는 방법에 대한 [유용한 문서][4sysops]가 있습니다.
 - Mike F Robbins는 VS Code 설정에 대한 [유용한 게시물][mikefrobbins]을 제공합니다.
-- PowerShell에 있는 PowerShell 설정에 대한 [유용한 문서][learnpwsh]를 알아봅니다.
+<!-- - Learn PowerShell has [an excellent write up][learnpwsh] setup for PowerShell. -->
 
 ## <a name="vs-code-tips"></a>VS Code 팁
 
@@ -145,7 +145,7 @@ PR 및 참여도 언제든지 환영합니다.
 <!-- link references -->
 [vsc-docs]: https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette
 [명령 팔레트]: #vs-code-tips
-[문제를 열고]: https://github.com/PowerShell/VSCode-powershell/issues/new/choose
+[문제 열기]: https://github.com/PowerShell/VSCode-powershell/issues/new/choose
 
 [4sysops]: https://4sysops.com/archives/make-visual-studio-code-look-and-behave-like-powershell-ise/
 [mikefrobbins]: https://mikefrobbins.com/2017/08/24/how-to-install-visual-studio-code-and-configure-it-as-a-replacement-for-the-powershell-ise/

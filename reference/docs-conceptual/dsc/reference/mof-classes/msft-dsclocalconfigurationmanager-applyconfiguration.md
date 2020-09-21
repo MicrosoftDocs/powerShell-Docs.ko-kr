@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/14/2020
 keywords: dsc,powershell,configuration,setup
 title: ApplyConfiguration 메서드
-ms.openlocfilehash: 0425b9a7db37e421830ba37da8f5c0a4877a1b72
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: bec74ccd6f75448484adfd26bf8a4af4e224eb3f
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953460"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463842"
 ---
 # <a name="applyconfiguration-method"></a>ApplyConfiguration 메서드
 
@@ -25,7 +25,9 @@ uint32 ApplyConfiguration(
 
 ## <a name="parameters"></a>매개 변수
 
-*force* \[in\] **true**인 경우 현재 구성이 다시 적용됩니다. 보류 중인 구성이 있더라도 마찬가지입니다.
+### <a name="force"></a>force
+
+**true**인 경우 현재 구성이 다시 적용됩니다. 보류 중인 구성이 있더라도 마찬가지입니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -41,6 +43,6 @@ uint32 ApplyConfiguration(
 
 **네임스페이스**: Root\Microsoft\Windows\DesiredStateConfiguration
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

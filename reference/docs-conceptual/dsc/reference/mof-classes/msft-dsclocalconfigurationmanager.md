@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/14/2020
 keywords: dsc,powershell,configuration,setup
 title: MSFT_DSCLocalConfigurationManager 클래스
-ms.openlocfilehash: 09b30edd48384c0e8412e0e6ee926a719249c5b8
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 20c9ac5128fcfbbcb2113b89d9e5b53693744b45
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953270"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464284"
 ---
 # <a name="msft_dsclocalconfigurationmanager-class"></a>MSFT_DSCLocalConfigurationManager 클래스
 
@@ -34,12 +34,12 @@ class MSFT_DSCLocalConfigurationManager
 
 **MSFT_DSCLocalConfigurationManager** 클래스에 다음 메서드가 있습니다.
 
-|방법 |Description |
+|메서드 |Description |
 |:--- |:---|
-| [ApplyConfiguration](msft-dsclocalconfigurationmanager-applyconfiguration.md)| 구성 에이전트를 사용해 보류 중인 구성을 적용합니다.|
-| [DisableDebugConfiguration](msft-dsclocalconfigurationmanager-disabledebugconfiguration.md)| DSC 리소스 디버깅을 사용하지 않도록 설정합니다.|
-| [EnableDebugConfiguration](msft-dsclocalconfigurationmanager-enabledebugconfiguration.md)| DSC 리소스 디버깅을 사용하도록 설정합니다.|
-| [GetConfiguration](msft-dsclocalconfigurationmanager-getconfiguration.md)| 구성 문서를 관리 노드로 보내고, 구성 에이전트의 **Get** 메서드를 사용해 구성을 적용합니다.|
+| [ApplyConfiguration(부울)](msft-dsclocalconfigurationmanager-applyconfiguration.md)| 구성 에이전트를 사용해 보류 중인 구성을 적용합니다.|
+| [DisableDebugConfiguration()](msft-dsclocalconfigurationmanager-disabledebugconfiguration.md)| DSC 리소스 디버깅을 사용하지 않도록 설정합니다.|
+| [EnableDebugConfiguration(부울)](msft-dsclocalconfigurationmanager-enabledebugconfiguration.md)| DSC 리소스 디버깅을 사용하도록 설정합니다.|
+| [GetConfiguration()](msft-dsclocalconfigurationmanager-getconfiguration.md)| 구성 문서를 관리 노드로 보내고, 구성 에이전트의 **Get** 메서드를 사용해 구성을 적용합니다.|
 | [GetConfigurationResultOutput](msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md)| 특정 작업과 관련된 구성 에이전트 출력을 가져옵니다.|
 | [GetConfigurationStatus](msft-dsclocalconfigurationmanager-getconfigurationstatus.md)| 구성 상태 기록을 가져옵니다.|
 | [GetMetaConfiguration](msft-dsclocalconfigurationmanager-getmetaconfiguration.md)| 구성 에이전트를 제어하는 데 사용되는 LCM 설정을 가져옵니다.|

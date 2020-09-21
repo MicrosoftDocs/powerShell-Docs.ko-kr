@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 레지스트리 항목 작업
-ms.openlocfilehash: c1fd6f57f13240eb2039f2d5756796678800aee0
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7f8ee87cebb8b220570bcb969445071a72a68526
+ms.sourcegitcommit: d3f78120bdc9096c72aa0dfdbdd91efaf254c738
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030723"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758485"
 ---
 # <a name="working-with-registry-entries"></a>레지스트리 항목 작업
 
@@ -111,7 +111,7 @@ DevicePath   : C:\WINDOWS\inf
 이 명령은 표준 Windows PowerShell 속성과 **DevicePath** 속성을 반환합니다.
 
 > [!NOTE]
-> `Get-ItemProperty`에는 **Filter**, **Include** 및 **Exclude** 매개 변수가 있지만 속성 이름을 기준으로 필터링하는 데 사용할 수 없습니다. 이러한 매개 변수를 레지스트리 키(항목 경로)라고 하며 레지스트리 항목이 아닙니다. 레지스트리 항목은 항목 속성입니다.
+> `Get-ItemProperty`에는 **Filter**, **Include** 및 **Exclude** 매개 변수가 있지만 속성 이름을 기준으로 필터링하는 데 사용할 수 없습니다. 해당 매개 변수를 레지스트리 키(항목 경로)라고 하며 레지스트리 항목(항목 속성)이 아닙니다.
 
 다른 옵션으로 Reg.exe 명령줄 도구를 사용합니다. reg.exe에 대한 도움말을 보려면 명령 프롬프트에 `reg.exe /?`를 입력합니다. DevicePath 항목을 찾으려면 다음 명령에 표시된 대로 reg.exe를 사용합니다.
 

@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: dsc,powershell,configuration,setup
 title: ResourceTest 메서드
-ms.openlocfilehash: ff06fd645a94055e79aa0f8d20f2f06e16483720
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7ef65227342091cb2a5063aaf95a2780d217f85a
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954950"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463808"
 ---
 # <a name="resourcetest-method"></a>ResourceTest 메서드
 
@@ -26,13 +26,13 @@ uint32 ResourceTest(
 
 ## <a name="parameters"></a>매개 변수
 
-*ResourceType* \[in\] 호출할 리소스의 이름입니다.
+**ResourceType** \[in\] 호출할 리소스의 이름입니다.
 
-*ModuleName* \[in\] 호출할 리소스를 포함하는 모듈의 이름입니다.
+**ModuleName** \[in\] 호출할 리소스를 포함하는 모듈의 이름입니다.
 
-*resourceProperty* \[in\] 해시 테이블의 리소스 속성 이름과 해당 값을 각각 키와 값으로 지정합니다. [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) cmdlet을 사용하여 리소스 속성 및 해당 종류를 검색합니다.
+***resourceProperty** \[in\] 해시 테이블의 리소스 속성 이름과 해당 값을 각각 키와 값으로 지정합니다. [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) cmdlet을 사용하여 리소스 속성 및 해당 종류를 검색합니다.
 
-*InDesiredState* \[out\] 반환 시, 대상 노드가 원하는 상태이면 이 속성이 **true**로 설정됩니다.
+*InDesiredState** \[out\] 반환 시, 대상 노드가 원하는 상태이면 해당 속성이 **true**로 설정됩니다.
 
 ## <a name="return-value"></a>반환 값
 

@@ -3,12 +3,12 @@ title: 예외에 대해 알고 싶은 모든 것
 description: 코드 작성에서 오류 처리는 일상적인 일입니다.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 3ecb1669fa8d58bc742d4e8e77051b3ace4452a0
-ms.sourcegitcommit: 4a40e3ea3601c02366be3495a5dcc7f4cac9f1ea
+ms.openlocfilehash: cd17ae6b5ded052c93923b648155a4dda8956b34
+ms.sourcegitcommit: 94c39b0d36b948d3a62707ae8a3be00efe606434
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84337185"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012564"
 ---
 # <a name="everything-you-wanted-to-know-about-exceptions"></a>예외에 대해 알고 싶은 모든 것
 
@@ -82,7 +82,7 @@ At line:1 char:1
 Write-Error -Message "Houston, we have a problem." -ErrorAction Stop
 ```
 
-이 방법으로 `-ErrorAction Stop`을 사용할 수 있음을 알려준 Lee Daily에게 감사의 말을 전합니다.
+이 방법으로 `-ErrorAction Stop`을 사용할 수 있음을 알려준 Lee Dailey에게 감사의 말을 전합니다.
 
 #### <a name="cmdlet--erroraction-stop"></a>Cmdlet -ErrorAction Stop
 
@@ -583,5 +583,5 @@ throw [System.Exception]::new('third')
 [@KevinMarquette]: https://twitter.com/KevinMarquette
 [Reddit/r/PowerShell 커뮤니티]: https://www.reddit.com/r/PowerShell/comments/64866o/kevmar_all_net_46_exceptions_list_for_use_with/
 [.NET 예외 종합 목록]: https://powershellexplained.com/2017-04-07-all-dotnet-exception-list
-[FileNotFoundException]: https://docs.microsoft.com/dotnet/api/System.IO.FileNotFoundException
-[.NET 설명서]: https://docs.microsoft.com/dotnet/api
+[FileNotFoundException]: /dotnet/api/System.IO.FileNotFoundException
+[.NET 설명서]: /dotnet/api

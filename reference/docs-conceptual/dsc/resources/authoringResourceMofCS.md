@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: dsc,powershell,configuration,setup
 title: C#에서 DSC 리소스 작성
-ms.openlocfilehash: a19559c225dd91eceed397df91dd584a577cd7d4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4652d5d99c32685e124f2cd1b718f973380ab16a
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74417688"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217511"
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>C\#에서 DSC 리소스 작성
 
@@ -18,6 +18,7 @@ ms.locfileid: "74417688"
 C#에서 리소스를 cmdlet으로 구현하는 것 외에 MOF 스키마 만들기, 폴더 구조 만들기, 사용자 지정 DSC 리소스 가져오기 및 사용 프로세스는 [MOF를 사용하여 사용자 지정 DSC 리소스 작성](authoringResourceMOF.md)에 설명된 것과 동일합니다.
 
 ## <a name="writing-a-cmdlet-based-resource"></a>cmdlet 기반 리소스 작성
+
 이 예의 경우, 텍스트 파일과 그 내용을 관리하는 간단한 리소스를 구현하게 됩니다.
 
 ### <a name="writing-the-mof-schema"></a>MOF 스키마 작성
@@ -35,6 +36,7 @@ class MSFT_XDemoFile : OMI_BaseResource
 ```
 
 ### <a name="setting-up-the-visual-studio-project"></a>Visual Studio 프로젝트 설정
+
 #### <a name="setting-up-a-cmdlet-project"></a>cmdlet 프로젝트 설정
 
 1. Visual Studio를 엽니다.
@@ -46,11 +48,9 @@ class MSFT_XDemoFile : OMI_BaseResource
 
 ### <a name="writing-the-cmdlet-code"></a>cmdlet 코드 작성
 
-다음 C# 코드는 **Get-TargetResource**, **Set-TargetResource** 및 **Test-TargetResource** cmdlet을 구현합니다.
+다음 C# 코드는 `Get-TargetResource`, `Set-TargetResource` 및 `Test-TargetResource` cmdlet을 구현합니다.
 
 ```C#
-
-
 namespace cSharpDSCResourceExample
 {
     using System;
@@ -278,7 +278,11 @@ $env: psmodulepath (folder)
 ```
 
 ### <a name="see-also"></a>참고 항목
+
 #### <a name="concepts"></a>개념
+
 [Writing a custom DSC resource with MOF(MOF를 사용하여 사용자 지정 DSC 리소스 작성)](authoringResourceMOF.md)
+
 #### <a name="other-resources"></a>관련 자료
+
 [Writing a Windows PowerShell Cmdlet](/powershell/scripting/developer/windows-powershell)(Windows PowerShell Cmdlet 작성)

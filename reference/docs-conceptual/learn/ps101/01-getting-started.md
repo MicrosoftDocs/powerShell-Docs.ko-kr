@@ -5,12 +5,12 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 0f72fb5baf5b829142b18ed774261e9b3b66291b
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+ms.openlocfilehash: e8938a5d36cd1c9c5a74eed1c22cd5d0e1a91966
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438024"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786750"
 ---
 # <a name="chapter-1---getting-started-with-powershell"></a>1장 - PowerShell 시작
 
@@ -29,7 +29,7 @@ ms.locfileid: "84438024"
 
 Windows 10에서 PowerShell을 찾는 가장 쉬운 방법은 그림 1-1처럼 검색 창에 **PowerShell**를 입력하는 것입니다.
 
-![그림 1-1](media/figure1-1.png)
+![그림 1-1 - 시작 메뉴에서 PowerShell 검색](media/figure1-1.png)
 
 그림 1-1에는 PowerShell을 여는 네 가지 바로 가기가 있습니다. 이 책에서 시연 목적으로 사용하는 컴퓨터는 Windows 10 64비트 버전을 실행하고 있습니다. 따라서 64비트 버전의 PowerShell 콘솔과 PowerShell ISE(통합 스크립팅 환경)가 있으며, 각 항목의 32비트 버전은 바로 가기에 (x86) 접미사가 붙습니다. Windows 10 32비트 버전을 실행해야 한다면 두 가지 바로 가기만 사용할 수 있습니다. 두 바로 가기는 (x86) 접미사가 없지만 32비트 버전입니다. 64비트 운영 체제를 이용한다면, 32비트 버전을 실행해야 하는 특별한 이유가 없는 한 PowerShell 64비트 버전을 실행하는 것이 좋습니다.
 
@@ -41,7 +41,7 @@ Windows 10에서 PowerShell을 찾는 가장 쉬운 방법은 그림 1-1처럼 �
 
 그리고 그림 1-1처럼 "Windows PowerShell" 바로 가기를 클릭하여 PowerShell 콘솔을 시작했습니다.
 
-![그림 1-4](media/figure1-4.png)
+![그림 1-4 - PowerShell 창의 제목 표시줄](media/figure1-4.png)
 
 그림 1-4처럼 PowerShell 콘솔의 제목 표시줄에 "Windows PowerShell"이 표시된다는 점에 주목하세요. 일부 명령은 정상적으로 실행되지만 PowerShell은 UAC(사용자 계정 컨트롤)에는 참여할 수 없습니다. 관리자의 승인이 필요한 작업에 대해 권한 승격을 요청할 수 없다는 뜻입니다.
 다음 오류 메시지가 생성됩니다.
@@ -66,7 +66,7 @@ At line:1 char:29
 
 PowerShell을 닫습니다. PowerShell 콘솔을 다시 실행합니다. 이번에는 **Windows PowerShell** 바로 가기를 마우스 오른쪽 단추로 클릭하고 그림 1-5처럼 **관리자 권한으로 실행**을 선택합니다.
 
-![그림 1-5](media/figure1-5.png)
+![그림 1-5 - 상황에 맞는 메뉴 - 관리자 권한으로 실행](media/figure1-5.png)
 
 일반 사용자로 Windows에 로그인했다면 자격 증명을 입력하라는 메시지가 표시됩니다. 그림 1-6처럼 도메인 사용자이자 로컬 관리자인 필자 사용자 계정의 자격 증명을 입력하겠습니다.
 
@@ -86,11 +86,11 @@ PowerShell을 다시 검색하되, 이번에는 마우스 오른쪽 단추로 �
 
 작업 표시줄에 고정된 PowerShell 바로 가기를 마우스 오른쪽 단추로 클릭하고 그림 1-9처럼 속성을 선택합니다.
 
-![그림 1-9](media/figure1-9.png)
+![그림 1-9 - 사용자 계정 컨트롤 - 자격 증명 입력](media/figure1-9.png)
 
 그림 1-10에 #1로 표시된 “고급”을 클릭하고 그림 1-10에 #2로 표시된 “관리자 권한으로 실행” 확인란을 선택한 다음, 확인을 두 번 클릭하여 변경사항을 수락하고 대화 상자 2개를 모두 종료합니다.
 
-![그림 1-10](media/figure1-10.png)
+![그림 1-10 - “관리자”를 표시하는 제목 표시줄](media/figure1-10.png)
 
 PowerShell을 찾거나 관리자 권한으로 다시 실행하는 일은 걱정하지 않아도 됩니다.
 
@@ -217,13 +217,15 @@ Start-Service -Name w32time
 이 장에서 다루는 항목에 대한 자세한 정보를 확인하려면 다음 PowerShell 도움말 항목을 참조하세요.
 
 - [about_Automatic_Variables][]
+- [about_Hash_Tables][]
 - [about_Execution_Policies][]
 
 다음 장에서는 PowerShell 명령의 검색 기능을 알아봅니다. 대표적인 주제는 PowerShell을 업데이트하여 이러한 도움말 항목을 인터넷이 아닌 PowerShell에서 바로 확인하는 방법입니다.
 
 <!-- link references -->
 [about_Automatic_Variables]: /powershell/module/microsoft.powershell.core/about/about_automatic_variables
-[about_Execution_Policies]: /powershell//powershell/module/microsoft.powershell.core/about/about_execution_policies
+[about_Hash_Tables]: /powershell/module/microsoft.powershell.core/about/about_hash_tables
+[about_Execution_Policies]: /powershell/module/microsoft.powershell.core/about/about_execution_policies
 [기존 Windows PowerShell 업그레이드]: /powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell
 [PowerShell 설치]: /powershell/scripting/install/installing-powershell
 [Windows PowerShell 시작]: /powershell/scripting/windows-powershell/starting-windows-powershell

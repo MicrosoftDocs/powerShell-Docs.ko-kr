@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: CI/CD 파이프라인에서 DSC의 역할 이해
-ms.openlocfilehash: 8d7244a6e5e2c215d9d3ada959b716df2cce0b83
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 6df621f45caed3ac8a8b4dd1afa575d413259e0d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500818"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783112"
 ---
 # <a name="understanding-dscs-role-in-a-cicd-pipeline"></a>CI/CD 파이프라인에서 DSC의 역할 이해
 
 이 문서에서는 구성 및 리소스를 결합 하는 데 사용할 수 있는 방법의 유형을 설명합니다.
 각 시나리오의 목표는 서버 배포 최종 상태에 연결하기 위해 여러 구성을 사용하는 경우 복잡성을 줄이기 위한 것으로 동일합니다. 이에 대한 예제로는 애플리케이션 상태를 유지하는 애플리케이션 소유자 및 보안 기준의 변경을 해제하는 중앙 팀과 같이 서버 배포의 결과에 기여하는 여러 팀이 있습니다. 장점 및 위험을 포함하여 각 접근 방식의 미묘한 차이는 여기에 자세히 설명돼 있습니다.
 
-![파이프라인](media/authoringAdvanced/Pipeline.jpg)
+![CI/CD 파이프라인의 프로세스 흐름](media/authoringAdvanced/Pipeline.jpg)
 
 ## <a name="types-of-collaborative-authoring-techniques"></a>공동 작업 제작 기술의 유형
 
@@ -33,7 +33,7 @@ ms.locfileid: "80500818"
 
 부분 구성을 사용하는 경우 로컬 Configuration Manager는 여러 구성을 독립적으로 관리하도록 구성됩니다. 구성은 개별적으로 컴파일된 다음, 노드에 할당됩니다. 이렇게 하려면 LCM이 미리 각 구성의 이름으로 구성되어야 합니다.
 
-![PartialConfiguration](media/authoringAdvanced/PartialConfiguration.jpg)
+![부분 구성의 다이어그램](media/authoringAdvanced/PartialConfiguration.jpg)
 
 부분 구성은 종종 커뮤니케이션 또는 협업의 이점 없이 둘 이상의 팀에 서버의 구성에 대한 완벽한 제어를 제공합니다.
 
@@ -45,7 +45,7 @@ ms.locfileid: "80500818"
 
 아래 그림에서 B 팀은 A 팀에 해당 부분 구성을 릴리스한 다음, A 팀은 두 구성이 모두 적용된 서버에 대해 해당 테스트를 실행합니다. 이 모델에서 하나의 기관에만 프로덕션 환경에서 변경할 권한이 있습니다.
 
-![PartialSinglePipeline](media/authoringAdvanced/PartialSinglePipeline.jpg)
+![부분 단일 파이프라인의 다이어그램](media/authoringAdvanced/PartialSinglePipeline.jpg)
 
 B 팀에서 변경이 필요할 경우 A 팀의 원본 제어 환경에 대해 끌어오기 요청을 제출해야 합니다. 그런 다음, A 팀은 변경이 서버에서 호스팅된 서비스 또는 애플리케이션에서 오류를 일으키지 않을 것이라는 확신이 있는 경우 프로덕션 환경에 대한 릴리스 및 테스트 자동화를 사용하여 변경 내용을 검토합니다.
 
@@ -53,7 +53,7 @@ B 팀에서 변경이 필요할 경우 A 팀의 원본 제어 환경에 대해 �
 
 복합 리소스는 단순히 리소스로 패키지된 DSC 구성입니다. 복합 리소스를 허용하기 위해 LCM 구성에 대한 특별한 요구 사항은 없습니다. 이 리소스는 하나의 MOF 파일의 새 구성 및 단일 컴파일 결과 내에서 사용됩니다.
 
-![CompositeResource](media/authoringAdvanced/CompositeResource.jpg)
+![복합 리소스의 다이어그램](media/authoringAdvanced/CompositeResource.jpg)
 
 복한 리소스에 대한 일반적인 시나리오는 두 개가 있습니다. 첫 번째 시나리오는 복잡성 및 고유한 추상 개념을 줄이는 것입니다. 두 번째는 모든 테스트를 통과한 후 애플리케이션 팀이 해당 릴리스 파이프라인을 통해 프로덕션 환경에 안전하게 배포하도록 패키지된 기준을 허용하는 것입니다.
 

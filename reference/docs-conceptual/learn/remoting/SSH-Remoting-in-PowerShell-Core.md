@@ -1,13 +1,13 @@
 ---
 title: SSH를 통한 PowerShell 원격
 description: SSH를 사용하여 PowerShell Core에서 원격 작업
-ms.date: 09/30/2019
-ms.openlocfilehash: 9fe3e22c54a4695a1027f416acf113f2f7fd2cd7
-ms.sourcegitcommit: 7c7f8bb9afdc592d07bf7ff4179d000a48716f13
+ms.date: 07/23/2020
+ms.openlocfilehash: cc65db481fcedcafec16093dbf7e6af4975c73db
+ms.sourcegitcommit: 9dddf1d2e91ebcd347fcfb7bf6ef670d49a12ab7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82174139"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87133472"
 ---
 # <a name="powershell-remoting-over-ssh"></a>SSH를 통한 PowerShell 원격
 
@@ -25,7 +25,7 @@ SSH 원격 기능을 사용하면 Windows 및 Linux 컴퓨터 간에 기본적�
 [-HostName <string>]  [-UserName <string>]  [-KeyFilePath <string>]
 ```
 
-원격 세션을 만들려면 `HostName` 매개 변수를 사용하여 대상 컴퓨터를 지정하고 `UserName`을 사용하여 사용자 이름을 제공합니다. cmdlet을 대화형으로 실행하면 암호를 묻는 메시지가 나타납니다. `KeyFilePath` 매개 변수와 함께 프라이빗 키 파일을 사용하여 SSH 키 인증을 사용할 수도 있습니다.
+원격 세션을 만들려면 **HostName** 매개 변수를 사용하여 대상 컴퓨터를 지정하고 **UserName**을 사용하여 사용자 이름을 제공합니다. cmdlet을 대화형으로 실행하면 암호를 묻는 메시지가 나타납니다. **KeyFilePath** 매개 변수와 함께 프라이빗 키 파일을 사용하여 SSH 키 인증을 사용할 수도 있습니다.
 
 ## <a name="general-setup-information"></a>일반적인 설치 정보
 
@@ -64,7 +64,7 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
    원격 컴퓨터에서 PowerShell 프로세스를 호스트하는 SSH 하위 시스템을 만듭니다.
 
    ```
-   Subsystem powershell c:/progra~1/powershell/7/pwsh.exe -sshs -NoLogo -NoProfile
+   Subsystem powershell c:/progra~1/powershell/7/pwsh.exe -sshs -NoLogo
    ```
 
    > [!NOTE]
@@ -122,7 +122,7 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
    PowerShell 하위 시스템 항목을 추가합니다.
 
    ```
-   Subsystem powershell /usr/bin/pwsh -sshs -NoLogo -NoProfile
+   Subsystem powershell /usr/bin/pwsh -sshs -NoLogo
    ```
 
    > [!NOTE]
@@ -168,7 +168,7 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
    PowerShell 하위 시스템 항목을 추가합니다.
 
    ```
-   Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo -NoProfile
+   Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo
    ```
 
    > [!NOTE]
@@ -191,12 +191,14 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
 
 SSH를 통한 PowerShell 원격 기능은 SSH 클라이언트 및 SSH 서비스 간에 인증 교환을 필요로 하며 어떤 인증 체계도 구현하지 않습니다. 그 결과 다단계 인증을 비롯한 모든 구성된 인증 체계는 SSH에서 처리하며 PowerShell과는 독립적입니다. 예를 들어 보안 강화를 위해 일회용 암호 및 공개 키 인증이 필요하도록 SSH 서비스를 구성할 수 있습니다. 다단계 인증의 구성은 이 설명서의 범위를 벗어납니다. PowerShell 원격 기능에서 다단계 인증을 사용하기 전에 올바르게 다단계 인증을 구성하고 PowerShell 외부에서 작동하는지 유효성 검사를 하는 방법은 SSH에 대한 설명서를 참조하세요.
 
+> [!NOTE]
+> 사용자는 원격 세션에서 동일한 권한을 보유합니다. 즉, 관리자는 관리자 권한 셸에 액세스할 수 있으며 일반 사용자는 액세스할 수 없습니다.
+
 ## <a name="powershell-remoting-example"></a>PowerShell 원격 기능 예제
 
 원격 기능을 테스트하는 가장 쉬운 방법은 단일 컴퓨터에서 사용해 보는 것입니다. 이 예제에서는 동일한 Linux 컴퓨터에 원격 세션을 다시 만듭니다. SSH에서 호스트 컴퓨터를 확인하도록 요구하고 암호를 묻는 메시지를 표시하도록 대화형으로 PowerShell cmdlet을 사용합니다. Windows 컴퓨터에서도 동일한 작업을 수행하여 원격 기능이 작동하는지 확인할 수 있습니다. 그런 다음, 호스트 이름을 변경하여 컴퓨터 간을 원격으로 이동합니다.
 
 ```powershell
-#
 # Linux to Linux
 #
 $session = New-PSSession -HostName UbuntuVM1 -UserName TestUser
@@ -249,7 +251,7 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName           
 Enter-PSSession -HostName WinVM1 -UserName PTestName
 ```
 
-```Output
+```
 PTestName@WinVM1s password:
 ```
 
@@ -318,9 +320,13 @@ GitCommitId                    v6.0.0-alpha.17
 [WinVM2]: PS C:\Users\PSRemoteUser\Documents>
 ```
 
-### <a name="known-issues"></a>알려진 문제
+### <a name="limitations"></a>제한 사항
 
-**sudo** 명령은 Linux 컴퓨터에 대한 원격 세션에서 작동하지 않습니다.
+- **sudo** 명령은 Linux 컴퓨터에 대한 원격 세션에서 작동하지 않습니다.
+
+- PSRemoting over SSH는 프로필을 지원하지 않으며 `$PROFILE`에 대한 액세스 권한이 없습니다. 세션에 있을 때 전체 파일 경로를 사용하여 프로필을 도트 소싱하여 프로필을 로드할 수 있습니다. SSH 프로필과는 관련이 없습니다. PowerShell을 기본 셸로 사용하고 SSH를 통해 프로필을 로드하도록 SSH 서버를 구성할 수 있습니다. 자세한 내용은 SSH 설명서를 참조하세요.
+
+- PowerShell 7.1 이전에는 SSH를 통한 원격 기능이 두 번째 홉 원격 세션을 지원하지 않았습니다. 해당 기능은 WinRM을 사용하는 세션으로 제한되었습니다. PowerShell 7.1을 사용하면 `Enter-PSSession` 및 `Enter-PSHostProcess`가 대화형 원격 세션 내에서 작동할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 

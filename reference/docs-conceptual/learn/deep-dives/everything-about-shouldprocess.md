@@ -3,12 +3,12 @@ title: ShouldProcess에 대해 알고 싶은 모든 것
 description: ShouldProcess는 자주 간과되는 중요 기능입니다. WhatIf 및 Confirm 매개 변수를 사용하면 함수에 쉽게 추가할 수 있습니다.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 1d9110302a191b90bd11bdf742f77704a8c9d6f0
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 6bd4dbd5255203f2daf804163aa2a84d992d6697
+ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149486"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86469738"
 ---
 # <a name="everything-you-wanted-to-know-about-shouldprocess"></a>ShouldProcess에 대해 알고 싶은 모든 것
 
@@ -481,7 +481,7 @@ if ($PSCmdlet.ShouldProcess('TARGET')){
 
 사용자가 `-Force`와 `-WhatIf`를 모두 지정한다면 `-WhatIf`가 우선해야 합니다. 이 방법은 `ShouldProcess` 처리를 유지하는데 `-WhatIf`는 항상 처리되기 때문입니다.
 
-`ShouldProcess`가 있는 if 문에 `$Force` 값에 대한 검사를 추가하면 안 됩니다. 이 시나리오에는 안티 패턴에 해당하지만 `ShouldContinue`에 관한 다음 섹션에서 보여드리겠습니다.
+`ShouldProcess`가 있는 `if` 문에 `$Force` 값에 대한 검사를 추가하면 안 됩니다. 이 시나리오에는 안티 패턴에 해당하지만 `ShouldContinue`에 관한 다음 섹션에서 보여드리겠습니다.
 
 ### <a name="shouldcontinue--force"></a>ShouldContinue -Force
 

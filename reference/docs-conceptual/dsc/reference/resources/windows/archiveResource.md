@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC 보관 리소스
-ms.openlocfilehash: 679de8b965304c149b10321e73e42b224f49ecc5
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: cbe32012c2035fb3e145bd06fadd73cdba93fd3e
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560375"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463791"
 ---
 # <a name="dsc-archive-resource"></a>DSC 보관 리소스
 
@@ -23,6 +23,7 @@ Archive [string] #ResourceName
     Destination = [string]
     Path = [string]
     [ Checksum = [string] { CreatedDate | ModifiedDate | SHA-1 | SHA-256 | SHA-512 } ]
+    [ Credential = [PSCredential] ]
     [ Force = [bool] ]
     [ Validate = [bool] ]
     [ Ensure = [string] { Absent | Present } ]
@@ -35,11 +36,12 @@ Archive [string] #ResourceName
 
 |속성 |Description |
 |---|---|
-|대상 |보관 파일 내용을 추출해 놓을 위치를 지정합니다. |
-|경로 |보관 파일의 원본 경로를 지정합니다. |
-|체크섬 |두 파일이 동일한 것인지 결정할 때 사용할 형식을 정의합니다. **Checksum**을 지정하지 않은 경우 비교에 파일 또는 디렉터리 이름만 사용됩니다. 유효한 값은 다음과 같습니다. **SHA-1**, **SHA-256**, **SHA-512**, **createdDate**, **modifiedDate**. **Validate** 없이 **Checksum**을 지정하는 경우, 구성이 실패합니다. |
-|Force |특정 파일 작업(예: 파일 덮어쓰기나 비어 있지 않은 디렉터리 삭제)을 수행하면 오류가 발생합니다. **Force** 속성을 사용하면 이러한 오류가 무시됩니다. 기본값은 **False**입니다. |
-|유효성 검사| 보관 파일이 서명과 일치하는지 여부를 결정하려면 **체크섬** 속성을 사용합니다. **Validate** 없이 **Checksum**을 지정하는 경우, 구성이 실패합니다. **Checksum** 없이**Validate**를 지정하면 기본적으로 _SHA-256_ **Checksum**이 사용됩니다. |
+| 대상 | 보관 파일 내용을 추출해 놓을 위치를 지정합니다. |
+| 경로 | 보관 파일의 원본 경로를 지정합니다. |
+| 체크섬 | 두 파일이 동일한 것인지 결정할 때 사용할 형식을 정의합니다. **Checksum**을 지정하지 않은 경우 비교에 파일 또는 디렉터리 이름만 사용됩니다. 유효한 값은 다음과 같습니다. **SHA-1**, **SHA-256**, **SHA-512**, **createdDate**, **modifiedDate**. **Validate** 없이 **Checksum**을 지정하는 경우, 구성이 실패합니다. |
+| 자격 증명 | 필요한 경우 지정된 보관 경로 및 대상에 액세스할 권한이 있는 사용자 계정의 자격 증명입니다. |
+| Force | 특정 파일 작업(예: 파일 덮어쓰기나 비어 있지 않은 디렉터리 삭제)을 수행하면 오류가 발생합니다. **Force** 속성을 사용하면 이러한 오류가 무시됩니다. 기본값은 **False**입니다. |
+| 유효성 검사| 보관 파일이 서명과 일치하는지 여부를 결정하려면 **체크섬** 속성을 사용합니다. **Validate** 없이 **Checksum**을 지정하는 경우, 구성이 실패합니다. **체크섬** 없이 **유효성 검사**를 지정하면 기본적으로 _SHA-256_ **체크섬**이 사용됩니다. |
 
 ## <a name="common-properties"></a>공용 속성
 
@@ -54,7 +56,7 @@ Archive [string] #ResourceName
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 Archive 리소스를 사용하여 `Test.zip`이라는 보관 파일의 내용이 존재하고 지정된 대상에 압축이 풀리도록 하는 방법을 보여줍니다.
+다음 예제에서는 Archive 리소스를 사용하여 `Test.zip`이라는 보관 파일의 내용이 존재하고 사용하고 권한 부여되는 지정된 대상에 압축이 풀리도록 하는 방법을 보여 줍니다.
 
 ```powershell
 Archive ArchiveExample {

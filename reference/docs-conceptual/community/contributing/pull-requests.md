@@ -3,12 +3,12 @@ title: 끌어오기 요청 제출 방법
 description: 이 문서에서는 PowerShell-Docs 리포지토리에 끌어오기 요청을 제출하는 방법을 설명합니다.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: b56911dd4703530f31dd077a8d85ac131c82ee65
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 8b392a36c9469b83cf4f088c1799720a091434b4
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690950"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782653"
 ---
 # <a name="how-to-submit-pull-requests"></a>끌어오기 요청 제출 방법
 
@@ -56,9 +56,9 @@ Docs platform, so the values set in these 3 places will be ignored. Please remov
 다음 동작을 확인할 수 있습니다.
 
 1. PR을 제출합니다.
-1. PR의 상태를 나타내는 GitHub 설명에서 리포지토리에서 사용하도록 설정된 "검사"의 상태를 볼 수 있습니다. 이 예제에서는 "Commit Validation" 및 "OpenPublishing.Build"의 두 가지 검사가 사용하도록 설정되어 있습니다.
+1. PR의 상태를 나타내는 GitHub 설명에서 리포지토리에서 사용하도록 설정된 “검사”의 상태를 볼 수 있습니다. 이 예제에서는 "Commit Validation" 및 "OpenPublishing.Build"의 두 가지 검사가 사용하도록 설정되어 있습니다.
 
-   ![일부 검사 실패](media/pull-requests/validation-failed.png)
+   ![유효성 검사 상태 - 일부 검사가 실패함](media/pull-requests/validation-failed.png)
 
    커밋 유효성 검사에 실패한 경우에도 빌드가 통과할 수 있습니다.
 
@@ -66,7 +66,7 @@ Docs platform, so the values set in these 3 places will be ignored. Please remov
 1. 세부 정보 페이지에는 문제를 해결하는 방법에 대한 정보와 함께 실패한 모든 유효성 검사가 표시됩니다.
 1. 유효성 검사에 성공하면 다음과 같은 주석이 PR에 추가됩니다.
 
-   ![빌드 유효성 검사](media/pull-requests/build-validation.png)
+   ![유효성 검사 상태: 성공](media/pull-requests/build-validation.png)
 
 > [!NOTE]
 > 외부(Microsoft 직원이 아닌) 기여자인 경우에는 자세한 빌드 보고서 또는 미리 보기 링크에 액세스할 수 없습니다.

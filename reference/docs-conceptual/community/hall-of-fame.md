@@ -1,13 +1,13 @@
 ---
 title: PowerShell Docs의 새로운 기능
 description: PowerShell 설명서 변경 내용 목록
-ms.date: 04/29/2020
-ms.openlocfilehash: eaf42c0464b6d25e70df0fe8ff5bd51531ea0a06
-ms.sourcegitcommit: 582391eadc7687a8f625c959ea97b8a71963b9a2
+ms.date: 09/14/2020
+ms.openlocfilehash: 35d59e2922591af8bb31d95e26a911a87b138d28
+ms.sourcegitcommit: 758e6dbb428295698d4852b3e19f5d03deade037
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84250403"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100573"
 ---
 # <a name="community-contributor-hall-of-fame"></a>커뮤니티 기여자 명예의 전당
 
@@ -21,24 +21,24 @@ PowerShell 커뮤니티는 활기찬 공동 작업 그룹입니다. Microsoft는
 
 | 문서 PR 병합됨 | 2016 | 2017 | 2018 | 2019 | 2020 | 총합계 |
 | --------------- | ---: | ---: | ---: | ---: | ---: | ----------: |
-| 커뮤니티       |  198 |  448 |  468 |  322 |   59 |        1495 |
+| 커뮤니티       |  198 |  448 |  468 |  322 |  127 |        1566 |
 | matt9ucci       |      |  157 |   80 |   30 |      |         267 |
 | nschonni        |      |      |   14 |  138 |   10 |         162 |
 | kiazhi          |   25 |   79 |   12 |      |      |         116 |
 | alexandair      |   59 |    8 |   26 |    2 |    1 |          96 |
-| doctordns       |    5 |   32 |   20 |    7 |    3 |          67 |
-| sethvs          |      |    1 |   44 |      |      |          45 |
+| doctordns       |    5 |   32 |   20 |    7 |    4 |          68 |
+| sethvs          |      |    1 |   44 |      |   20 |          55 |
 | Dan1el42        |   20 |      |      |      |      |          20 |
+| yecril71pl      |      |      |      |      |   20 |          20 |
 | NReilingh       |    2 |      |   13 |    3 |      |          18 |
 | it-praktyk      |      |      |   16 |    1 |      |          17 |
-| vors            |   15 |    1 |      |      |      |          16 |
 | markekraus      |      |   11 |    5 |      |      |          16 |
 | purdo17         |      |      |   13 |      |      |          13 |
 | k-takai         |      |      |    5 |    1 |    7 |          13 |
 | kvprasoon       |    2 |    1 |    7 |    2 |      |          12 |
 | PlagueHO        |   10 |      |      |    1 |      |          11 |
-| exchange12rocks |      |    7 |    3 |      |      |          10 |
 | KirkMunro       |    1 |    1 |    2 |    6 |      |          10 |
+| exchange12rocks |      |    7 |    3 |      |      |          10 |
 
 ## <a name="github-issues-opened"></a>GitHub 문제 개설
 
@@ -46,14 +46,14 @@ GitHub 문제는 Microsoft가 설명서에서 오류 및 실제 사례와의 격
 
 | 문서 문제 개설 | 2016 | 2017 | 2018 | 2019 | 2020 | 총합계 |
 | ------------------ | ---: | ---: | ---: | ---: | ---: | ----------: |
-| 커뮤니티          |   54 |   95 |  213 |  575 |  261 |        1198 |
-| mklement0          |      |   19 |   60 |   56 |   31 |         166 |
-| iSazonov           |      |    1 |    4 |   10 |    5 |          20 |
-| jszabo98           |      |      |    2 |   15 |    3 |          20 |
+| 커뮤니티          |   54 |   95 |  213 |  575 |  420 |        1360 |
+| mklement0          |      |   19 |   60 |   56 |   46 |         181 |
+| jszabo98           |      |      |    2 |   15 |    6 |          23 |
+| iSazonov           |      |    1 |    4 |   10 |    7 |          22 |
 | doctordns          |      |    5 |    3 |    5 |    4 |          17 |
+| KirkMunro          |      |      |    7 |    7 |    1 |          15 |
 | alexandair         |    9 |    4 |    2 |      |      |          15 |
 | vexx32             |      |      |    3 |   11 |      |          14 |
-| KirkMunro          |      |      |    7 |    7 |      |          14 |
 
 <!-- Link references -->
 [contrib]: contributing/overview.md

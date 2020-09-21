@@ -3,12 +3,12 @@ ms.date: 11/06/2018
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery,psget,갤러리
 title: 로컬 PSRepository 작업
-ms.openlocfilehash: c1bd905674ae76a3badd3eff50780f0e1bb5fc64
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 421b73c141c7551224e2298f51464a19bc736d0e
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75415831"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837582"
 ---
 # <a name="working-with-private-powershellget-repositories"></a>프라이빗 PowerShellGet 리포지토리 작업
 
@@ -109,16 +109,16 @@ Register-PSRepository -Default
 
 ```powershell
 # Publish to a NuGet Server repository using my NuGetAPI key
-Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey 'oy2bi4avlkjolp6bme6azdyssn6ps3iu7ib2qpiudrtbji'
+Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey $nuGetApiKey
 ```
+
+> [!IMPORTANT]
+> 보안을 적용하려면 API 키가 스크립트에서 하드 코드되지 않아야 합니다. 보안 키 관리 시스템을 사용합니다. 명령을 수동으로 실행하는 경우 기록을 방지하기 위해 API 키를 일반 텍스트로 전달하면 안 됩니다. `Read-Host` cmdlet을 사용하여 API 키 값을 안전하게 전달할 수 있습니다.
 
 ```powershell
 # Publish to a file share repo - the NuGet API key must be a non-blank string
 Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey 'AnyStringWillDo'
 ```
-
-> [!IMPORTANT]
-> 보안을 적용하려면 API 키가 스크립트에서 하드 코드되지 않아야 합니다. 보안 키 관리 시스템을 사용합니다.
 
 ### <a name="publishing-a-module-from-the-psgallery"></a>PSGallery에서 모듈 게시
 
@@ -129,7 +129,7 @@ PSGallery의 모듈을 로컬 PSRepository에 게시하려면 'Save-Package' cmd
 - PSGallery 위치를 원본으로 지정(https://www.powershellgallery.com/api/v2)
 - 로컬 리포지토리의 경로 지정
 
-예제:
+예:
 
 ```powershell
 # Publish from the PSGallery to your local Repository
@@ -179,18 +179,20 @@ Install-PowerShellGetOffline -LocalFolder 'F:\OfflinePowerShellGet'
 
 ```powershell
 # Publish to a NuGet Server repository using my NuGetAPI key
-Publish-Module -Path 'F:\OfflinePowershellGet' -Repository LocalPsRepo -NuGetApiKey 'oy2bi4avlkjolp6bme6azdyssn6ps3iu7ib2qpiudrtbji'
+Publish-Module -Path 'F:\OfflinePowershellGet' -Repository LocalPsRepo -NuGetApiKey $nuGetApiKey
+```
 
+> [!IMPORTANT]
+> 보안을 적용하려면 API 키가 스크립트에서 하드 코드되지 않아야 합니다. 보안 키 관리 시스템을 사용합니다. 명령을 수동으로 실행하는 경우 기록을 방지하기 위해 API 키를 일반 텍스트로 전달하면 안 됩니다. `Read-Host` cmdlet을 사용하여 API 키 값을 안전하게 전달할 수 있습니다.
+
+```powershell
 # Publish to a file share repo - the NuGet API key must be a non-blank string
 Publish-Module -Path 'F:\OfflinePowerShellGet' -Repository LocalPsRepo -NuGetApiKey 'AnyStringWillDo'
 ```
 
 ## <a name="use-packaging-solutions-to-host-powershellget-repositories"></a>패키지 솔루션을 사용하여 PowerShellGet 리포지토리 호스트
 
-Azure Artifacts와 같은 패키지 솔루션을 사용하여 프라이빗 또는 퍼블릭 PowerShellGet 리포지토리를 호스트할 수도 있습니다. 자세한 내용 및 지침은 [Azure Artifacts 설명서](https://docs.microsoft.com/azure/devops/artifacts/tutorials/private-powershell-library)를 참조하세요.
-
-> [!IMPORTANT]
-> 보안을 적용하려면 API 키가 스크립트에서 하드 코드되지 않아야 합니다. 보안 키 관리 시스템을 사용합니다.
+Azure Artifacts와 같은 패키지 솔루션을 사용하여 프라이빗 또는 퍼블릭 PowerShellGet 리포지토리를 호스트할 수도 있습니다. 자세한 내용 및 지침은 [Azure Artifacts 설명서](/azure/devops/artifacts/tutorials/private-powershell-library)를 참조하세요.
 
 <!-- external links -->
 [OfflinePowerShellGetDeploy]: https://www.powershellgallery.com/packages/OfflinePowerShellGetDeploy/0.1.1

@@ -3,12 +3,12 @@ title: 문자열의 변수 대체에 대해 알고 싶은 모든 것
 description: 문자열에서 다양한 방법으로 변수를 사용하여 서식 있는 텍스트를 만들 수 있습니다.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 1e65e90ffa09b34f62bc49ad64b062d429483c33
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 786526fb98dbf1b3ec7c5c6c985ac95b85a96259
+ms.sourcegitcommit: 4bb44f183dcbfa8dced57f075812e02d3b45fd70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149466"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301321"
 ---
 # <a name="everything-you-wanted-to-know-about-variable-substitution-in-strings"></a>문자열의 변수 대체에 대해 알고 싶은 모든 것
 

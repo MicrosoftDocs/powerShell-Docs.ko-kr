@@ -1,13 +1,13 @@
 ---
-ms.date: 05/22/2020
+ms.date: 07/29/2020
 keywords: powershell,cmdlet
 title: PowerShell 설명서를 사용하는 방법
-ms.openlocfilehash: 259eb1eea1dc7e8b5ae5730f97c938b838a320bf
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 1cfeb9eea564e7618062e1b8ada4948bd9e22969
+ms.sourcegitcommit: 9f9eb95bc859e9e0fed48101327a602b2ced351d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808268"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87821532"
 ---
 # <a name="how-to-use-the-powershell-documentation"></a>PowerShell 설명서를 사용하는 방법
 
@@ -25,9 +25,9 @@ PowerShell 온라인 설명서에 오신 것을 환영합니다. 이 사이트�
 
 페이지 위쪽의 버전 선택기를 사용하여 원하는 PowerShell 버전을 선택합니다.
 
-![버전 선택기](media/how-to-use-docs/version-search.gif)
+![버전 선택기 사용](media/how-to-use-docs/version-search.gif)
 
-사용 중인 PowerShell의 버전은 `$PSversionTable.PSVersion` 값을 검사해서 확인할 수 있습니다. 다음 예제에서는 Windows PowerShell v5.1의 출력을 보여줍니다.
+사용 중인 PowerShell의 버전은 `$PSversionTable.PSVersion` 값을 검사해서 확인할 수 있습니다. 다음 예제에서는 Windows PowerShell v5.1의 출력을 보여 줍니다.
 
 ```powershell
 $PSVersionTable.PSVersion
@@ -36,8 +36,10 @@ $PSVersionTable.PSVersion
 ```Output
 Major  Minor  Build  Revision
 -----  -----  -----  --------
-5      1      18362  145
+5      1      19041  1
 ```
+
+PowerShell을 처음 사용하고 명령 구문을 이해하는 데 도움이 필요하면 [about_Command_Syntax](/powershell/module/microsoft.powershell.core/about/about_command_syntax)를 참조하세요.
 
 ## <a name="finding-articles-for-previous-versions"></a>이전 버전에 대한 문서 찾기
 

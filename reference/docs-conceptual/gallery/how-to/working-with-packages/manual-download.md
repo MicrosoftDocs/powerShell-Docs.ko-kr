@@ -3,12 +3,12 @@ ms.date: 09/11/2018
 contributor: JKeithB
 keywords: gallery,powershell,psgallery
 title: 수동 패키지 다운로드
-ms.openlocfilehash: e562f5b94b4d2caa7d31269a324e417d1a9e844a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 3e29437c4e35e47ab2028a7eea9f408daf1a59e1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278722"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782857"
 ---
 # <a name="manual-package-download"></a>수동 패키지 다운로드
 
@@ -22,7 +22,7 @@ PowerShell 갤러리는 PowerShellGet cmdlet을 사용하지 않고 웹 사이�
 
 각 페이지에는 다음과 같은 [수동 다운로드] 링크가 있습니다.
 
-![수동 다운로드](media/manual-download/packagedisplaypagewithpseditions.png)
+![설치 옵션이 있는 패키지 표시 페이지](media/manual-download/packagedisplaypagewithpseditions.png)
 
 수동으로 다운로드하려면 **원시 nupkg 파일 다운로드**를 클릭합니다. 이 패키지의 복사본은 이름이 `<name>.<version>.nupkg`인 브라우저의 다운로드 폴더에 복사됩니다.
 

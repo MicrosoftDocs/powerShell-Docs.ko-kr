@@ -1,18 +1,18 @@
 ---
-title: IF 문 관련 세부 사항
+title: if 문 관련 세부 사항
 description: 다른 많은 언어와 마찬가지로 PowerShell에는 스크립트에서 조건부로 코드를 실행하기 위한 문이 있습니다.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 6ffb70af694e80430d31991045b9fadc1a2cc3f0
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: b6bafb99bfb8ecd0152bae841e5c58d4c27ccd3e
+ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149526"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86469755"
 ---
-# <a name="everything-you-wanted-to-know-about-the-if-statement"></a>IF 문 관련 세부 사항
+# <a name="everything-you-wanted-to-know-about-the-if-statement"></a>`if` 문 관련 세부 사항
 
-다른 많은 언어와 마찬가지로 PowerShell에는 스크립트에서 조건부로 코드를 실행하기 위한 문이 있습니다. 이러한 문 중 하나가 [If][] 문입니다. 오늘은 PowerShell에서 가장 기본적인 명령 중 하나를 자세히 살펴보겠습니다.
+다른 많은 언어와 마찬가지로 PowerShell에는 스크립트에서 조건부로 코드를 실행하기 위한 문이 있습니다. 해당 문 중 하나가 [If][] 문입니다. 오늘은 PowerShell에서 가장 기본적인 명령 중 하나를 자세히 살펴보겠습니다.
 
 > [!NOTE]
 > 현재 문서의 [원본 버전][]은 [@KevinMarquette][]가 작성한 블로그에 있습니다. PowerShell 팀은 콘텐츠를 공유해 준 Kevin에게 감사의 말을 전합니다. [PowerShellExplained.com][]에 있는 해당 블로그를 확인하세요.
@@ -22,7 +22,7 @@ ms.locfileid: "84149526"
 스크립트에서는 결정을 내리고 이러한 결정에 따라 다른 논리를 실행해야 하는 경우가 많습니다.
 이것은 조건부 실행을 의미합니다. 평가할 문이나 값이 하나 있으면 해당 평가에 따라 코드의 다른 섹션을 실행합니다. 이것은 정확히 `if` 문이 수행하는 작업입니다.
 
-## <a name="the-if-statement"></a>IF 문
+## <a name="the-if-statement"></a>`if` 문
 
 `if` 문의 기본 예는 다음과 같습니다.
 
@@ -533,7 +533,7 @@ else
 }
 ```
 
-각 스크립트 블록은 명령의 결과 또는 값을 파이프라인에 배치합니다. 그런 다음 If 문의 결과를 `$discount` 변수에 할당합니다. 이 예제에서는 각 scriptblock에서 직접 `$discount` 변수에 해당 값을 간편하게 할당할 수 있습니다. 이것을 `if` 문에 자주 사용한다고 말할 수 없지만 최근에 사용한 적이 있습니다.
+각 스크립트 블록은 명령의 결과 또는 값을 파이프라인에 배치합니다. 그런 다음, `if` 문의 결과를 `$discount` 변수에 할당합니다. 이 예제에서는 각 scriptblock에서 직접 `$discount` 변수에 해당 값을 간편하게 할당할 수 있습니다. 이것을 `if` 문에 자주 사용한다고 말할 수 없지만 최근에 사용한 적이 있습니다.
 
 ### <a name="array-inline"></a>배열 인라인
 
@@ -567,7 +567,7 @@ $snowSqlParam = @(
 
 ## <a name="simplify-complex-operations"></a>복잡한 작업의 간소화
 
-확인할 비교 사항이 너무 많고 If 문이 화면 오른쪽에서 멀리 스크롤되는 상황이 발생하는 것은 피하기 어렵습니다.
+확인할 비교 사항이 너무 많고 `If` 문이 화면 오른쪽에서 멀리 스크롤되는 상황이 발생하는 것은 피하기 어렵습니다.
 
 ```powershell
 $user = Get-ADUser -Identity $UserName
@@ -599,7 +599,7 @@ if ($null -ne $user -and
 
 ### <a name="pre-calculating-results"></a>결과 미리 계산
 
-If 문에서 해당 문을 분리하고 결과만 확인할 수 있습니다.
+`if` 문에서 해당 문을 분리하고 결과만 확인할 수 있습니다.
 
 ```powershell
 $needsSecureHomeDrive = $null -ne $user -and
@@ -691,11 +691,11 @@ if ( -not (Test-Path -Path $folder) )
 `if` 문은 간단한 문이며 PowerShell의 중요한 부분입니다. 작성하는 거의 모든 스크립트에서 이 문을 여러 번 사용하게 될 것입니다. 이전보다 더 잘 이해하게 되셨길 바랍니다.
 
 <!-- link references -->
-[원본 버전]: https://powershellexplained.com/2019-08-11-PowerShell-if-then-else-equals-operator/
+[원본 버전]: https://powershellexplained.com/2019-08-11-Powershell-if-then-else-equals-operator/
 [powershellexplained.com]: https://powershellexplained.com/
 [@KevinMarquette]: https://twitter.com/KevinMarquette
 [if]: /powershell/module/microsoft.powershell.core/about/about_if
-[비트 연산자]: https://powershellexplained.com/powershell/module/microsoft.powershell.core/about/about_arithmetic_operators#bitwise-operators
+[비트 연산자]: /powershell/module/microsoft.powershell.core/about/about_arithmetic_operators#bitwise-operators
 [regex를 사용하는 여러 방법]: https://powershellexplained.com/2017-07-31-Powershell-regex-regular-expression/
 [Everything you ever wanted to know about exceptions(예외 관련 세부 사항)]: everything-about-exceptions.md
 [$null 관련 세부 사항]: everything-about-null.md

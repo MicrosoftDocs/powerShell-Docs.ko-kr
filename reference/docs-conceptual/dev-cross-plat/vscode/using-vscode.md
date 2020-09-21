@@ -2,12 +2,12 @@
 title: PowerShell 개발에 Visual Studio 코드 사용
 description: PowerShell 개발에 Visual Studio 코드 사용
 ms.date: 11/07/2019
-ms.openlocfilehash: b492e59f340f4cec92c177ad44bbab9dc95da5da
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 181746e7d3df2880223d1f15a0c8b99b324f5b98
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808859"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782534"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>PowerShell 개발에 Visual Studio 코드 사용
 
@@ -54,7 +54,7 @@ ms.locfileid: "83808859"
    1. 사이드바에 **확장** 보기가 열립니다. Microsoft의 PowerShell 확장을 선택합니다.
       다음 이미지와 비슷한 Visual Studio Code 화면이 표시됩니다.
 
-      ![Visual Studio Code](media/using-vscode/vscode.png)
+      ![Visual Studio Code - PowerShell 확장 보기](media/using-vscode/vscode.png)
 
    1. Microsoft의 PowerShell 확장에서 **설치** 단추를 클릭합니다.
    1. 설치 후 **설치** 단추가 **다시 로드**로 바뀌면 **다시 로드**를 클릭합니다.
@@ -190,7 +190,7 @@ Windows PowerShell과 함께 PowerShell Core를 side-by-side 설치하면 PowerS
 
 먼저 확장 창을 열고 `PowerShell`을 검색합니다. 그런 다음 기어 아이콘을 클릭하고 **다른 버전 설치...** 를 선택합니다.
 
-![다른 버전 설치...](media/using-vscode/install-another-version.png)
+![메뉴 항목 - 다른 버전 설치...](media/using-vscode/install-another-version.png)
 
 그런 다음 **2020.1.0** 버전을 선택합니다. 이 확장 버전은 마지막으로 v3 및 v4를 지원한 버전이었습니다. 확장 버전이 자동으로 업데이트되지 않도록 다음 설정을 추가합니다.
 

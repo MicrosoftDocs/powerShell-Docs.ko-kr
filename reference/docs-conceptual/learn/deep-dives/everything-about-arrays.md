@@ -1,14 +1,14 @@
 ---
 title: 배열에 대해 알고 싶은 모든 것
 description: 배열은 대부분의 프로그래밍 언어가 제공하는 기본적인 언어 기능입니다.
-ms.date: 05/23/2020
+ms.date: 07/07/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 5cab354a99b122401f8f8119de24e075cf9d21f8
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: e744878844a3cfd32d6124538a44a29ba90798ab
+ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149606"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86092102"
 ---
 # <a name="everything-you-wanted-to-know-about-arrays"></a>배열에 대해 알고 싶은 모든 것
 
@@ -241,6 +241,8 @@ Lee Dailey는 `$data.GetUpperBound(0)`를 사용하면 최대 인덱스 번호�
 
 ```powershell
 PS> $data.GetUpperBound(0)
+3
+PS> $data[ $data.GetUpperBound(0) ]
 Three
 ```
 

@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 08/28/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC WindowsOptionalFeature 리소스
-ms.openlocfilehash: bca6294db74c92a2c1940cfbe00305542a1c5d19
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: f24173c1a9ed605bac43767a9da2d4dbded78883
+ms.sourcegitcommit: 06b6f4012e4eca71d414733cdba23ef75535223c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565369"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093253"
 ---
 # <a name="dsc-windowsoptionalfeature-resource"></a>DSC WindowsOptionalFeature 리소스
 
@@ -15,13 +15,15 @@ ms.locfileid: "83565369"
 
 PowerShell DSC(필요한 상태 구성)의 **WindowsOptionalFeature** 리소스에서는 대상 노드에서 선택적 기능을 사용할 수 있도록 설정하는 메커니즘을 제공합니다.
 
+> [!NOTE]
+> **WindowsOptionalFeature**는 Windows 10과 같은 Windows 클라이언트 머신에서만 작동합니다.
+
 ## <a name="syntax"></a>구문
 
 ```Syntax
 WindowsOptionalFeature [string] #ResourceName
 {
     Name = [string]
-    [ Source = [string[]] ]
     [ NoWindowsUpdateCheck = [bool] ]
     [ RemoveFilesOnDisable = [bool] ]
     [ LogLevel = [string] { ErrorsOnly | ErrorsAndWarning | ErrorsAndWarningAndInformation }  ]
@@ -34,12 +36,11 @@ WindowsOptionalFeature [string] #ResourceName
 
 ## <a name="properties"></a>속성
 
-|속성 |Description |
+|속성 |설명 |
 |---|---|
-|속성 |사용 또는 사용하지 않도록 설정하려는 기능의 이름을 나타냅니다. |
-|원본 |구현되지 않았습니다. |
+|이름 |사용 또는 사용하지 않도록 설정하려는 기능의 이름을 나타냅니다. |
 |NoWindowsUpdateCheck |기능을 사용하도록 설정하기 위해 원본 파일을 검색할 때 DISM에서 WU(Windows 업데이트)에 연결하는지 여부를 지정합니다. `$true`이면 DISM에서 WU에 연결하지 않습니다. |
-|RemoveFilesOnDisable |`$true`Ensure**가** Absent**로 설정되어 있을 경우** 로 설정하여 기능과 관련된 모든 파일을 제거합니다. |
+|RemoveFilesOnDisable |`$true`Ensure**가 **Absent**로 설정되어 있을 경우 **로 설정하여 기능과 관련된 모든 파일을 제거합니다. |
 |LogLevel |로그에 표시되는 최대 출력 수준입니다. 허용되는 값은 **ErrorsOnly**, **ErrorsAndWarning** 및 **ErrorsAndWarningAndInformation**. |
 |LogPath |리소스 공급자가 작업을 기록할 로그 파일의 경로입니다. |
 

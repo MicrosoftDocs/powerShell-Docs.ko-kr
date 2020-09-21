@@ -3,12 +3,12 @@ ms.date: 09/10/2018
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: API 키 관리
-ms.openlocfilehash: 0f44a080415f1acf13680771b6e9db5b805f8f45
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: c428689d065c63716db6bc546434623e9375f8ba
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278308"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87777585"
 ---
 # <a name="managing-api-keys"></a>API 키 관리
 
@@ -59,7 +59,7 @@ PowerShell 갤러리는 다양한 API 요구 사항을 지원하기 위해 여�
 
 기존 키의 일부 설정은 변경할 수 있습니다. 앞에서 설명한 대로 기존 API 키에 대한 보안 범위를 수정하거나 만료 시간을 변경할 수 없습니다. 변경할 수 있는 옵션은 다음 스크린샷과 같습니다.
 
-![새 API 키 값 가져오기](media/creating-APIkeys/PSGallery_EditAPIKey.png)
+![API 키 값 편집](media/creating-APIkeys/PSGallery_EditAPIKey.png)
 
 키로 제어되는 패키지를 변경하려면 목록에서 개별 패키지를 선택하거나 GLOB 패턴을 변경할 수 있습니다.
 
