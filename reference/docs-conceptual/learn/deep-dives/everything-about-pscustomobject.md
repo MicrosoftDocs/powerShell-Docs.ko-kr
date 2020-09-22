@@ -3,12 +3,12 @@ title: PSCustomObject에 대해 알고 싶은 모든 것
 description: PSCustomObject는 구조화된 데이터를 만드는 단순한 방법입니다.
 ms.date: 07/29/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 9a5cab7e662ef89b6565a29079ce1d5a657f94d0
-ms.sourcegitcommit: 339e5fc8a4cc18b4ff6956fe5180343588e40e30
+ms.openlocfilehash: 52620fd628d03f62db574210a2a5758c3bf29135
+ms.sourcegitcommit: a1886ba2cf35aebd650aafb3e5d7437c4e381781
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410141"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90804783"
 ---
 # <a name="everything-you-wanted-to-know-about-pscustomobject"></a>PSCustomObject에 대해 알고 싶은 모든 것
 
@@ -139,7 +139,7 @@ $myObject.$property
 
 이상하게 보이겠지만 작동에는 문제가 없습니다.
 
-### <a name="convert-pscustombobject-into-a-hashtable"></a>PSCustombObject를 해시 테이블로 변환
+### <a name="convert-pscustomobject-into-a-hashtable"></a>PSCustomObject를 해시 테이블로 변환
 
 마지막 섹션에서 계속 진행하려면 속성을 동적으로 탐색하고 해당 속성에서 해시 테이블을 만들어야 합니다.
 
