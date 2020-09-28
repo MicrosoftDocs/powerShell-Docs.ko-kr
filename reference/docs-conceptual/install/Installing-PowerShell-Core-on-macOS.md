@@ -1,13 +1,13 @@
 ---
 title: MacOS에 PowerShell 설치
 description: macOS에서 PowerShell을 설치하는 방법에 대한 정보
-ms.date: 08/24/2020
-ms.openlocfilehash: 8f38d573d9d67276dbc95cfb70f1fde80af62bb6
-ms.sourcegitcommit: ea9270bacee7dd1b9df2519384de277576357ce2
+ms.date: 09/23/2020
+ms.openlocfilehash: 86647888910fb27528fb78c46a457fa1da856eb0
+ms.sourcegitcommit: 51104c7932a185b4d3293dbca306625369687468
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88857898"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91224687"
 ---
 # <a name="installing-powershell-on-macos"></a>MacOS에 PowerShell 설치
 
@@ -48,7 +48,7 @@ PowerShell의 새 버전이 릴리스되면 Homebrew의 Formula를 업데이트�
 
 ```sh
 brew update
-brew cask upgrade powershell
+brew upgrade powershell --cask
 ```
 
 > [!NOTE]
@@ -80,7 +80,7 @@ PowerShell의 새 버전이 릴리스되면 Homebrew의 Formula를 업데이트�
 
 ```sh
 brew update
-brew cask upgrade powershell-preview
+brew upgrade powershell-preview --cask
 ```
 
 > [!NOTE]
