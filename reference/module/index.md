@@ -14,14 +14,14 @@ archive_url: ''
 layout: ApiBrowserPage
 apiPlatform: powershell
 quickFilterColumn1: powershell-7,win10-ps
-quickFilterColumn2: azps-4.6.1,win-mdop2-ps
+quickFilterColumn2: azps-4.7.0,win-mdop2-ps
 quickFilterColumn3: sqlserver-ps,systemcenter-ps-2019
-ms.openlocfilehash: b91f47bd900276194aaa706f5f21c10d263efa29
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+ms.openlocfilehash: 74ce6500984b3c3874a4ea8955bfc76984f4688e
+ms.sourcegitcommit: e170a4f6b8893903ecc187b8c0032ed184d7c4ed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236019"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636259"
 ---
 # <a name="powershell-module-browser"></a>PowerShell 모듈 브라우저
 
