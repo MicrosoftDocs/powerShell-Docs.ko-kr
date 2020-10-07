@@ -3,12 +3,12 @@ title: 배열에 대해 알고 싶은 모든 것
 description: 배열은 대부분의 프로그래밍 언어가 제공하는 기본적인 언어 기능입니다.
 ms.date: 07/07/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: e744878844a3cfd32d6124538a44a29ba90798ab
-ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
+ms.openlocfilehash: 307189bf27d383159d34181eca4dac1f77792e51
+ms.sourcegitcommit: c8d1ffeab215e74e87ea1b0af8cd606c1a6a80ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86092102"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91543375"
 ---
 # <a name="everything-you-wanted-to-know-about-arrays"></a>배열에 대해 알고 싶은 모든 것
 
@@ -752,7 +752,10 @@ if ( -not ( $results -ne 'Passed') )
 
 ## <a name="adding-to-arrays"></a>배열에 추가
 
-이제 배열에 항목을 추가하는 방법이 궁금하실 겁니다. 결론부터 말하자면 불가능합니다. 배열은 메모리에서 크기가 고정되어 있습니다. 크기를 늘리거나 단일 항목을 추가하려면 새 배열을 만들고 기존 배열의 모든 값을 복사해야 합니다. 비용과 수고가 많이 들 것 같지만 PowerShell에서는 새 배열을 간단하게 만들 수 있습니다.
+이제 배열에 항목을 추가하는 방법이 궁금하실 겁니다. 결론부터 말하자면 불가능합니다. 배열은 메모리에서 크기가 고정되어 있습니다. 크기를 늘리거나 단일 항목을 추가하려면 새 배열을 만들고 기존 배열의 모든 값을 복사해야 합니다. 이렇게 하면 작업량이 많을 것 같지만 PowerShell에서는 새 배열을 간단하게 만들 수 있습니다. PowerShell은 배열에 대해 더하기 연산자(`+`)를 구현합니다.
+
+> [!NOTE]
+> PowerShell은 빼기 연산을 구현하지 않습니다. 배열을 유연하게 대체하려면 [일반 `List`](#generic-list) 개체를 사용해야 합니다.
 
 ### <a name="array-addition"></a>배열 추가
 
@@ -814,8 +817,6 @@ $array = foreach ( $node in (1..5))
     "ATX-SQL-$node"
 }
 ```
-
-`foreach`의 결과를 변수에 할당하면 모든 개체를 캡처하고 단일 배열을 만들게 됩니다.
 
 ## <a name="array-types"></a>배열 유형
 
