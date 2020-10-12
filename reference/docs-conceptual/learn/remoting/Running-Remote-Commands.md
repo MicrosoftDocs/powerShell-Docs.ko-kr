@@ -2,12 +2,12 @@
 ms.date: 08/21/2020
 keywords: powershell,cmdlet
 title: 원격 명령 실행
-ms.openlocfilehash: ab6d464c31144349ee38cd01e82a2cf1470aaa95
-ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
+ms.openlocfilehash: f12d08b03757b24d1de50402b301faff193f27be
+ms.sourcegitcommit: 9d95532afe81c235c8094eae28ab84b2f77f8c48
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88799624"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91814738"
 ---
 # <a name="running-remote-commands"></a>원격 명령 실행
 
@@ -129,7 +129,7 @@ Windows PowerShell 원격 관리가 여기에서 시작됩니다. Windows PowerS
 
 Windows PowerShell에는 WSMan 공급자가 포함됩니다. 공급자는 로컬 컴퓨터와 원격 컴퓨터에서 구성 설정 계층을 탐색할 수 있는 `WSMAN:` 드라이브를 만듭니다.
 
-WSMan 공급자에 대한 자세한 내용을 보려면 [WSMan 공급자](https://technet.microsoft.com/library/dd819476.aspx) 및 [WS-Management Cmdlet 정보](/powershell/module/microsoft.powershell.core/about/about_ws-management_cmdlets)를 참조하거나 Windows PowerShell 콘솔에서 "`Get-Help wsman`"을 입력하세요.
+WSMan 공급자에 대한 자세한 내용을 보려면 [WSMan 공급자](https://technet.microsoft.com/library/dd819476.aspx) 및 [WS-Management Cmdlet 정보](/powershell/module/microsoft.wsman.management/about/about_ws-management_cmdlets)를 참조하거나 Windows PowerShell 콘솔에서 "`Get-Help wsman`"을 입력하세요.
 
 자세한 내용은 다음을 참조하세요.
 
