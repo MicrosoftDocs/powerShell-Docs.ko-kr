@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: PowerShell
 title: PowerShell 갤러리 UI에 영향을 주는 패키지 매니페스트 값
-ms.openlocfilehash: 460b1c67af0af81dd993a45c4f988b825dc2f3eb
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d5e0b85a635c4090f8ccb814277a1a6dd6a951e2
+ms.sourcegitcommit: 1695df0d241c0390cac71a7401e61198fc6ff756
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560426"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91772306"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>PowerShell 갤러리 UI에 영향을 주는 패키지 매니페스트 값
 
@@ -44,7 +44,7 @@ ms.locfileid: "83560426"
 | **버전 기록** | 버전 기록은 PowerShell 갤러리의 모듈에 대한 업데이트를 반영합니다. 삭제 기능을 사용하여 패키지의 버전이 숨겨져 있으면 패키지 소유자에게만 표시되고 버전 기록에는 표시되지 않습니다. | 예 | 예 |
 | **프로젝트 사이트** | 프로젝트 사이트는 ProjectURI를 지정하여 모듈 매니페스트의 Privatedata\PSData 섹션의 모듈에 대해 제공됩니다. 스크립트 매니페스트에서는 .PROJECTURI를 지정하여 제어됩니다. | yes | yes |
 | **라이선스** | 라이선스 링크는 LicenseURI를 지정하여 모듈 매니페스트의 Privatedata\PSData 섹션의 모듈에 대해 제공됩니다. 스크립트 매니페스트에서는 .LICENSEURI를 지정하여 제어됩니다. 라이선스가 LicenseURI를 통해 제공되지 않거나 모듈 내에서 제공되지 않는 경우, PowerShell 갤러리에 대한 사용 약관에 패키지에 대한 사용 약관이 명시됩니다. 자세한 내용은 사용 약관을 참조하세요. | yes | yes |
-| **아이콘** | 스크립트 매니페스트에서 또는 모듈 매니페스트의 Privatedata-PSData 섹션에서 IconURI 플래그를 제공하여 PowerShell 갤러리의 패키지에 대한 아이콘을 지정할 수 있습니다. IconURI는 배경이 투명한 32x32 이미지를 가리켜야 합니다. URI는 **반드시** 직접 이미지 URL이어야 하며, 이미지가 포함된 웹 페이지 또는 PowerShell 갤러리 패키지의 파일로 이동하면 **안 됩니다**. | yes | yes |
+| **아이콘** | 스크립트 매니페스트에서 또는 모듈 매니페스트의 Privatedata-PSData 섹션에서 IconURI 플래그를 제공하여 PowerShell 갤러리의 패키지에 대한 아이콘을 지정할 수 있습니다. IconURI는 배경이 투명한 85x85 이미지를 가리켜야 합니다. URI는 **반드시** 직접 이미지 URL이어야 하며, 이미지가 포함된 웹 페이지 또는 PowerShell 갤러리 패키지의 파일로 이동하면 **안 됩니다**. | yes | yes |
 
 ## <a name="editing-package-details"></a>패키지 세부 정보 편집
 

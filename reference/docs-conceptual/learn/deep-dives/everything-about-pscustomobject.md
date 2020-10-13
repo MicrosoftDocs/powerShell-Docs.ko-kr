@@ -1,14 +1,14 @@
 ---
 title: PSCustomObject에 대해 알고 싶은 모든 것
 description: PSCustomObject는 구조화된 데이터를 만드는 단순한 방법입니다.
-ms.date: 07/29/2020
+ms.date: 10/05/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 52620fd628d03f62db574210a2a5758c3bf29135
-ms.sourcegitcommit: a1886ba2cf35aebd650aafb3e5d7437c4e381781
+ms.openlocfilehash: ccbdcdae5ad38f555233dffbed7e8a6ec2b0726b
+ms.sourcegitcommit: 1695df0d241c0390cac71a7401e61198fc6ff756
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90804783"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91772323"
 ---
 # <a name="everything-you-wanted-to-know-about-pscustomobject"></a>PSCustomObject에 대해 알고 싶은 모든 것
 
@@ -159,10 +159,10 @@ foreach( $property in $myobject.psobject.properties.name )
 if( $null -ne $myObject.ID )
 ```
 
-하지만 값이 `$null`이며 이를 확인해야 한다면 `psobject.properties`를 확인하면 됩니다.
+그러나 값이 `$null`일 수 있는 경우 해당 `psobject.properties`를 확인하여 속성이 존재하는지 확인할 수 있습니다.
 
 ```powershell
-if( $myobject.psobject.properties.match('ID') )
+if( $myobject.psobject.properties.match('ID').Count )
 ```
 
 ## <a name="adding-object-methods"></a>개체 메서드 추가
@@ -264,7 +264,7 @@ PowerShell은 사용자를 대신하여 기본적으로 표시할 속성을 결�
 
 ```powershell
 $defaultDisplaySet = 'Name','Language'
-$defaultDisplayPropertySet = New-Object System.Management.Automation.PSPropertySet(‘DefaultDisplayPropertySet’,[string[]]$defaultDisplaySet)
+$defaultDisplayPropertySet = New-Object System.Management.Automation.PSPropertySet('DefaultDisplayPropertySet',[string[]]$defaultDisplaySet)
 $PSStandardMembers = [System.Management.Automation.PSMemberInfo[]]@($defaultDisplayPropertySet)
 $MyObject | Add-Member MemberSet PSStandardMembers $PSStandardMembers
 ```
