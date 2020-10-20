@@ -1,13 +1,13 @@
 ---
-ms.date: 09/14/2020
+ms.date: 10/15/2020
 title: PowerShell에서 실험적 기능 사용
 description: 현재 사용 가능한 실험적 기능과 사용 방법을 나열합니다.
-ms.openlocfilehash: 74623240bfb19022ae342a5d23e2ed4f455afa45
-ms.sourcegitcommit: 30c0c1563f8e840f24b65297e907f3583d90e677
+ms.openlocfilehash: e98b1222755f3d4ffbd432af6b01d56f63307bb2
+ms.sourcegitcommit: 108686b166672cc08817c637dd93eb1ad830511d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574473"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92156578"
 ---
 # <a name="using-experimental-features-in-powershell"></a>PowerShell에서 실험적 기능 사용
 
@@ -34,9 +34,10 @@ PowerShell의 실험적 기능 지원에서는 PowerShell 또는 PowerShell 모�
 | PSDesiredStateConfiguration.InvokeDscResource              |         | &check; | &check; |
 | PSNullConditionalOperators(PS 7.1 이상에서 주요 기능)         |         | &check; |         |
 | PSUnixFileStat(Windows가 아닌 경우만 해당)                          |         | &check; | &check; |
-| PSNativePSPathResolution(PS 7.1 이상에서 주요 기능)           |         |         |         |
+| PSNativePSPathResolution                                   |         |         | &check; |
 | PSCultureInvariantReplaceOperator                          |         |         | &check; |
 | PSNotApplyErrorActionToStderr                              |         |         | &check; |
+| PSSubsystemPluginModel                                     |         |         | &check; |
 
 ## <a name="microsoftpowershellutilitypsmanagebreakpointsinrunspace"></a>Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace
 
@@ -153,9 +154,6 @@ FileSystem 공급자를 사용하는 PSDrive 경로를 네이티브 명령에 �
 - 경로가 PSDrive 또는 `~`(Windows)가 아닌 경우 경로 정규화가 발생하지 않습니다.
 - 경로가 작은따옴표로 묶여 있으면 이를 확인하여 리터럴로 처리하지 않습니다.
 
-> [!NOTE]
-> 이 기능은 실험적 단계를 벗어났으며 PowerShell 7.1 이상에서 주요 기능입니다.
-
 ## <a name="psnotapplyerroractiontostderr"></a>PSNotApplyErrorActionToStderr
 
 이 실험적 기능을 사용하는 경우 리디렉션 연산자(`2>&1`)를 사용하는 경우처럼 네이티브 명령에서 리디렉션된 오류 레코드는 `$Error` 변수에 기록되지 않으며 기본 설정 변수 `$ErrorActionPreference`는 리디렉션된 출력에 영향을 주지 않습니다.
@@ -228,3 +226,11 @@ drwxr-xr-x jimtru    staff         11/8/2019 10:37         896 tools
 
 > [!NOTE]
 > 이 기능은 실험적 단계를 벗어났으며 PowerShell 7 이상에서 주요 기능입니다.
+
+## <a name="pssubsystempluginmodel"></a>PSSubsystemPluginModel
+
+이 기능은 PowerShell에서 하위 시스템 플러그 인 모델을 사용하도록 설정합니다. 기능을 사용하면 `System.Management.Automation.dll` 구성 요소를 자체 어셈블리에 있는 개별 하위 시스템으로 분리할 수 있습니다. 이렇게 분리하면 핵심 PowerShell 엔진의 디스크 공간이 줄어들고 이 구성 요소가 최소 PowerShell 설치에 대한 선택적 기능이 될 수 있습니다.
+
+현재 **CommandPredictor** 하위 시스템만 지원됩니다. 이 하위 시스템은 사용자 지정 예측 플러그 인을 제공하는 데 PSReadLine 모듈과 함께 사용됩니다. 나중에 **Job**, **CommandCompleter**, **Remoting** 및 기타 구성 요소를 `System.Management.Automation.dll` 외부의 하위 시스템 어셈블리로 분리할 수 있습니다.
+
+실험적 기능으로는 새로운 cmdlet [Get-PSSubsystem](xref:Microsoft.PowerShell.Core.Get-PSSubsystem)이 있습니다. 이 cmdlet은 이 기능을 사용하도록 설정한 경우에만 사용할 수 있습니다. 이 cmdlet은 시스템에서 사용할 수 있는 하위 시스템에 대한 정보를 반환합니다.

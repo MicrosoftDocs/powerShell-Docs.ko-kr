@@ -2,13 +2,14 @@
 author: sdwheeler
 ms.author: sewhee
 ms.date: 02/14/2020
+description: PowerShell 관련 아트워크 및 포스터 다운로드
 title: PowerShell 디지털 아트
-ms.openlocfilehash: e67cafa274ca1720661aa24953278c13444d7698
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: efc246af2ae946c10d4ce9d759bd42d041663e98
+ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79060318"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91980158"
 ---
 # <a name="powershell-digital-art"></a>PowerShell 디지털 아트
 
@@ -26,7 +27,7 @@ ms.locfileid: "79060318"
 - [PowerShell 히어로 만화(인쇄 해상도)](https://aka.ms/powershellherocomic_print)
 - [PowerShell 히어로 만화(웹 해상도)](https://aka.ms/powershellherocomic_web)
 
-## <a name="wallpaper"></a>배경 화면
+## <a name="wallpaper"></a>배경 무늬
 
 - [PowerShell 히어로 만화 배경 화면(4k 해상도)](https://aka.ms/powershellherowallpaper)
 - [PowerShell 히어로 핑크 배경 화면(4k 해상도)](https://aka.ms/powershellherowallpaper1)

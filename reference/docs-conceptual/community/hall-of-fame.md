@@ -1,13 +1,13 @@
 ---
-title: PowerShell Docs의 새로운 기능
-description: PowerShell 설명서 변경 내용 목록
+title: 커뮤니티 기여자 명예의 전당
+description: PowerShell-Doc 프로젝트에 가장 많은 기여를 한 GitHub 사용자의 목록입니다.
 ms.date: 09/14/2020
-ms.openlocfilehash: 35d59e2922591af8bb31d95e26a911a87b138d28
-ms.sourcegitcommit: 758e6dbb428295698d4852b3e19f5d03deade037
+ms.openlocfilehash: 19099005676be14f7ceef5348bf28e46a65378dc
+ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100573"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91980073"
 ---
 # <a name="community-contributor-hall-of-fame"></a>커뮤니티 기여자 명예의 전당
 
@@ -21,13 +21,13 @@ PowerShell 커뮤니티는 활기찬 공동 작업 그룹입니다. Microsoft는
 
 | 문서 PR 병합됨 | 2016 | 2017 | 2018 | 2019 | 2020 | 총합계 |
 | --------------- | ---: | ---: | ---: | ---: | ---: | ----------: |
-| 커뮤니티       |  198 |  448 |  468 |  322 |  127 |        1566 |
+| 커뮤니티       |  198 |  448 |  468 |  322 |  136 |        1575 |
 | matt9ucci       |      |  157 |   80 |   30 |      |         267 |
 | nschonni        |      |      |   14 |  138 |   10 |         162 |
 | kiazhi          |   25 |   79 |   12 |      |      |         116 |
 | alexandair      |   59 |    8 |   26 |    2 |    1 |          96 |
-| doctordns       |    5 |   32 |   20 |    7 |    4 |          68 |
-| sethvs          |      |    1 |   44 |      |   20 |          55 |
+| doctordns       |    5 |   32 |   20 |    7 |    5 |          69 |
+| sethvs          |      |    1 |   44 |      |   20 |          65 |
 | Dan1el42        |   20 |      |      |      |      |          20 |
 | yecril71pl      |      |      |      |      |   20 |          20 |
 | NReilingh       |    2 |      |   13 |    3 |      |          18 |
@@ -35,8 +35,9 @@ PowerShell 커뮤니티는 활기찬 공동 작업 그룹입니다. Microsoft는
 | markekraus      |      |   11 |    5 |      |      |          16 |
 | purdo17         |      |      |   13 |      |      |          13 |
 | k-takai         |      |      |    5 |    1 |    7 |          13 |
-| kvprasoon       |    2 |    1 |    7 |    2 |      |          12 |
+| kvprasoon       |    2 |    1 |    7 |    2 |    1 |          13 |
 | PlagueHO        |   10 |      |      |    1 |      |          11 |
+| skycommand      |      |    1 |    3 |    3 |    3 |          10 |
 | KirkMunro       |    1 |    1 |    2 |    6 |      |          10 |
 | exchange12rocks |      |    7 |    3 |      |      |          10 |
 
@@ -46,8 +47,8 @@ GitHub 문제는 Microsoft가 설명서에서 오류 및 실제 사례와의 격
 
 | 문서 문제 개설 | 2016 | 2017 | 2018 | 2019 | 2020 | 총합계 |
 | ------------------ | ---: | ---: | ---: | ---: | ---: | ----------: |
-| 커뮤니티          |   54 |   95 |  213 |  575 |  420 |        1360 |
-| mklement0          |      |   19 |   60 |   56 |   46 |         181 |
+| 커뮤니티          |   54 |   95 |  213 |  575 |  464 |        1404 |
+| mklement0          |      |   19 |   60 |   56 |   56 |         191 |
 | jszabo98           |      |      |    2 |   15 |    6 |          23 |
 | iSazonov           |      |    1 |    4 |   10 |    7 |          22 |
 | doctordns          |      |    5 |    3 |    5 |    4 |          17 |
