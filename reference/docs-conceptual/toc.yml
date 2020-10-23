@@ -778,12 +778,14 @@
       items:
         - name: Visual Studio Code 사용
           href: dev-cross-plat/vscode/using-vscode.md
-        - name: Visual Studio Code에서 ISE 환경을 복제하는 방법
+        - name: VS Code에서 ISE 환경을 복제하는 방법
           href: dev-cross-plat/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
-        - name: Visual Studio Code를 사용하여 원격 편집 및 디버깅
+        - name: VS Code를 사용하여 원격 편집 및 디버깅
           href: dev-cross-plat/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
         - name: VS Code 및 PowerShell에서 파일 인코딩 이해
           href: dev-cross-plat/vscode/understanding-file-encoding.md
+        - name: VS Code를 사용하여 컴파일된 cmdlet 디버그
+          href: dev-cross-plat/vscode/using-vscode-for-debugging-compiled-cmdlets.md
     - name: 이식 가능한 모듈 작성
       href: dev-cross-plat/writing-portable-modules.md
     - name: PlatyPS를 사용하여 모듈 도움말 만들기
