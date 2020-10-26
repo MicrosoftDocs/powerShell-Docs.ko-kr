@@ -2,12 +2,13 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA에 대한 감사 및 보고
-ms.openlocfilehash: 2afefe83acecc1fc3643d49766120ffecc25378f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 감사를 통해 올바른 사용자에게 JEA 엔드포인트에 대한 액세스 권한이 있는지와 할당된 해당 역할이 여전히 적절한지를 평가할 수 있습니다.
+ms.openlocfilehash: 2140d6b756ae38d82e4943c373e8a75beea30e28
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "70017794"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500014"
 ---
 # <a name="auditing-and-reporting-on-jea"></a>JEA에 대한 감사 및 보고
 
@@ -83,18 +84,18 @@ Get-PSSessionCapability -ConfigurationName 'JEAMaintenance' -Username 'CONTOSO\A
 
 ## <a name="powershell-event-logs"></a>PowerShell 이벤트 로그
 
-시스템에서 모듈 또는 스크립트 블록 로깅을 사용하도록 설정한 경우 사용자가 JEA 세션에서 실행한 각 명령에 대한 이벤트를 Windows 이벤트 로그에서 볼 수 있습니다. 이러한 이벤트를 찾으려면 **Microsoft-Windows-PowerShell/Operational** 이벤트 로그를 열고 이벤트 ID가 **4104**인 이벤트를 찾습니다.
+시스템에서 모듈 또는 스크립트 블록 로깅을 사용하도록 설정한 경우 사용자가 JEA 세션에서 실행한 각 명령에 대한 이벤트를 Windows 이벤트 로그에서 볼 수 있습니다. 이러한 이벤트를 찾으려면 **Microsoft-Windows-PowerShell/Operational** 이벤트 로그를 열고 이벤트 ID가 **4104** 인 이벤트를 찾습니다.
 
-각 이벤트 로그 항목에는 명령이 실행된 세션에 대한 정보가 포함됩니다. JEA 세션의 경우 이벤트에 **ConnectedUser** 및 **RunAsUser**에 대한 정보가 포함됩니다. **ConnectedUser**는 JEA 세션을 만든 실제 사용자입니다. **RunAsUser**는 JEA가 명령을 실행하는 데 사용한 계정입니다.
+각 이벤트 로그 항목에는 명령이 실행된 세션에 대한 정보가 포함됩니다. JEA 세션의 경우 이벤트에 **ConnectedUser** 및 **RunAsUser** 에 대한 정보가 포함됩니다. **ConnectedUser** 는 JEA 세션을 만든 실제 사용자입니다. **RunAsUser** 는 JEA가 명령을 실행하는 데 사용한 계정입니다.
 
-애플리케이션 이벤트 로그는 **RunAsUser**에 의해 변경된 내용을 표시합니다. 따라서 모듈 및 스크립트 로깅을 사용하도록 설정하면 **ConnectedUser**로 특정 명령 호출을 다시 추적해야 합니다.
+애플리케이션 이벤트 로그는 **RunAsUser** 에 의해 변경된 내용을 표시합니다. 따라서 모듈 및 스크립트 로깅을 사용하도록 설정하면 **ConnectedUser** 로 특정 명령 호출을 다시 추적해야 합니다.
 
 ## <a name="application-event-logs"></a>애플리케이션 이벤트 로그
 
 외부 애플리케이션 또는 서비스와 상호 작용하는 JEA 세션에서 실행되는 명령은 이벤트를 자체 이벤트 로그에 기록할 수 있습니다. PowerShell 로그 및 스크립트와 달리 다른 로깅 메커니즘은 JEA 세션의 연결된 사용자를 캡처하지 않습니다. 대신 이러한 애플리케이션은 가상 실행 사용자만 기록합니다.
 명령을 실행한 사용자를 확인하려면 [세션 기록](#session-transcripts)을 확인하거나 애플리케이션 이벤트 로그에 표시된 시간 및 사용자와 PowerShell 이벤트 로그의 상관 관계를 지정해야 합니다.
 
-WinRM 로그는 애플리케이션 이벤트 로그에서 연결한 사용자와 실행 사용자를 연결하는 데 도움을 줄 수도 있습니다. **Microsoft-Windows-Windows Remote Management/Operational** 로그의 이벤트 ID **193**은 새 JEA 세션마다 연결하는 사용자와 실행하는 사용자의 SID(보안 식별자) 및 계정 이름을 기록합니다.
+WinRM 로그는 애플리케이션 이벤트 로그에서 연결한 사용자와 실행 사용자를 연결하는 데 도움을 줄 수도 있습니다. **Microsoft-Windows-Windows Remote Management/Operational** 로그의 이벤트 ID **193** 은 새 JEA 세션마다 연결하는 사용자와 실행하는 사용자의 SID(보안 식별자) 및 계정 이름을 기록합니다.
 
 ## <a name="session-transcripts"></a>세션 기록
 
@@ -131,10 +132,10 @@ PS>CommandInvocation(Get-Service): "Get-Service"
 Running  Dns                DNS Server
 ```
 
-**CommandInvocation** 줄은 사용자가 실행하는 각 명령에 대해 작성됩니다. **ParameterBindings**는 명령과 함께 제공된 각 매개 변수와 값을 기록합니다. 이전 예제에서 매개 변수 **Name**이 `Get-Service` cmdlet에 대한 값 **Dns**와 함께 제공되었음을 알 수 있습니다.
+**CommandInvocation** 줄은 사용자가 실행하는 각 명령에 대해 작성됩니다. **ParameterBindings** 는 명령과 함께 제공된 각 매개 변수와 값을 기록합니다. 이전 예제에서 매개 변수 **Name** 이 `Get-Service` cmdlet에 대한 값 **Dns** 와 함께 제공되었음을 알 수 있습니다.
 
-또한 각 명령의 출력은 일반적으로 `Out-Default`로 **CommandInvocation**을 트리거합니다. `Out-Default`의 **InputObject**는 명령에서 반환되는 PowerShell 개체입니다. 해당 개체의 세부 정보가 몇 줄 아래에 출력되어 사용자가 보게 되는 내용과 매우 비슷한 내용을 표시합니다.
+또한 각 명령의 출력은 일반적으로 `Out-Default`로 **CommandInvocation** 을 트리거합니다. `Out-Default`의 **InputObject** 는 명령에서 반환되는 PowerShell 개체입니다. 해당 개체의 세부 정보가 몇 줄 아래에 출력되어 사용자가 보게 되는 내용과 매우 비슷한 내용을 표시합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
-[보안에 관한 *PowerShell ♥ the Blue Team*(PowerShell ♥ Blue Team) 블로그 게시물](https://devblogs.microsoft.com/powershell/powershell-the-blue-team/)
+[보안에 관한 *PowerShell ♥ the Blue Team* (PowerShell ♥ Blue Team) 블로그 게시물](https://devblogs.microsoft.com/powershell/powershell-the-blue-team/)

@@ -3,12 +3,13 @@ ms.date: 11/13/2018
 keywords: powershell,cmdlet
 title: 실행 중인 프로세스에서 PowerShell 명령 디코딩
 author: randomnote1
-ms.openlocfilehash: a6c01d8edf67aba6c47350a97cc0ceec4801ad29
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 PowerShell 프로세스가 현재 실행 중인 스크립트 블록을 디코드하는 방법을 보여 줍니다.
+ms.openlocfilehash: 95b4b806665bf8137712ebb183329039bc1e1deb
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "66470974"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500490"
 ---
 # <a name="decode-a-powershell-command-from-a-running-process"></a>실행 중인 프로세스에서 PowerShell 명령 디코딩
 
@@ -81,7 +82,7 @@ $commandDetails[0]
 
 이제 디코드된 명령 속성을 선택하여 디코드된 명령을 검토할 수 있습니다.
 
-```output
+```Output
 ProcessId      : 8752
 EncodedCommand : IAAKAAoACgAgAAoAIAAgACAAIAAkAGkAIAA9ACAAMQAgAAoACgAKACAACgAgACAAIAAgAHcAaABpAGwAZQAgACgAIAAkAGkAIAAtAG
                  wAZQAgADEAMAAgACkAIAAKAAoACgAgAAoAIAAgACAAIAB7ACAACgAKAAoAIAAKACAAIAAgACAAIAAgACAAIABXAHIAaQB0AGUALQBP
@@ -104,6 +105,6 @@ DecodedCommand :
                      }
 ```
 
-[작업 스케줄러]: /windows/desktop/TaskSchd/task-scheduler-start-page
+[작업 Scheduler]: /windows/desktop/TaskSchd/task-scheduler-start-page
 [SQL Server 에이전트]: /sql/ssms/agent/sql-server-agent
 [Win32_Process]: /windows/desktop/CIMWin32Prov/win32-process
