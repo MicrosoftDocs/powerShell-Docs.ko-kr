@@ -2,16 +2,17 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: 모듈 및 cmdlet의 릴리스 기록
-ms.openlocfilehash: 4cb69e9d53151a0a221654f76ad7eb5eeb8fa218
-ms.sourcegitcommit: cae9885e01c13690268151d33efac168536e9287
+description: 이 문서에는 다양한 버전의 PowerShell에 포함된 모듈 및 cmdlet이 나열되어 있습니다.
+ms.openlocfilehash: cefd84c5d3785d19670ee649f5af951d5975912c
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83751337"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501663"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>모듈 및 cmdlet의 릴리스 기록
 
-이 문서에서는 다양한 버전의 PowerShell과 함께 제공되는 모듈 및 cmdlet을 나열합니다. 릴리스 정보에 있는 내용에 대한 요약이 제공되며 자세한 내용은 다음 릴리스 정보에서 찾을 수 있습니다.
+이 문서에는 다양한 버전의 PowerShell에 포함된 모듈 및 cmdlet이 나열되어 있습니다. 릴리스 정보에 있는 내용에 대한 요약이 제공되며 자세한 내용은 다음 릴리스 정보에서 찾을 수 있습니다.
 
 - [PowerShell Core 6.2의 새로운 기능](what-s-new-in-powershell-core-62.md)
 - [PowerShell Core 6.1의 새로운 기능](what-s-new-in-powershell-core-61.md)

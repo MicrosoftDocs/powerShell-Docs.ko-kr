@@ -1,20 +1,19 @@
 ---
 title: PowerShell Core 지원 수명 주기
-description: PowerShell Core에 대한 정책 관리 지원
+description: PowerShell 지원을 제어하는 정책에 대해 자세히 설명합니다.
 ms.date: 03/09/2020
-ms.openlocfilehash: 717fd5c4845835f314eaf7c3617d5123318da2dc
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+ms.openlocfilehash: 1681df188d03a1115b13518fb88c21ebf79701d4
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236206"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501748"
 ---
 # <a name="powershell-support-lifecycle"></a>PowerShell 지원 수명 주기
 
 PowerShell은 Windows PowerShell과 별개로 제공, 설치 및 구성되는 도구 및 구성 요소의 고유 집합입니다. PowerShell은 Windows 라이선스 계약에 포함 되지 않습니다.
 
-PowerShell은 [유료 지원][], [Microsoft 기업계약][enterprise-agreement] 및 [Microsoft Software Assurance][assurance]를 포함한 기존 Microsoft 지원 계약으로 지원받을 수 있습니다.
-또한 문제가 있는 경우 지원 요청서를 작성하여 PowerShell에 대한 [보조 지원][]을 유료로 이용할 수 있습니다.
+PowerShell은 [유료 지원][], [Microsoft 기업계약][enterprise-agreement] 및 [Microsoft Software Assurance][assurance]를 포함한 기존 Microsoft 지원 계약으로 지원받을 수 있습니다. 또한 문제가 있는 경우 지원 요청서를 작성하여 PowerShell에 대한 [보조 지원][]을 유료로 이용할 수 있습니다.
 
 ## <a name="community-support"></a>커뮤니티 지원
 

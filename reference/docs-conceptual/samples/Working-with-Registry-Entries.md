@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 레지스트리 항목 작업
-ms.openlocfilehash: 7f8ee87cebb8b220570bcb969445071a72a68526
-ms.sourcegitcommit: d3f78120bdc9096c72aa0dfdbdd91efaf254c738
+description: 이 문서에서는 PowerShell을 사용하여 레지스트리 항목을 처리하는 방법을 설명합니다.
+ms.openlocfilehash: 65f8b4ed7b2f9af26bfd22f34577a4bd52f35e70
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758485"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501459"
 ---
 # <a name="working-with-registry-entries"></a>레지스트리 항목 작업
 
@@ -57,7 +58,7 @@ PF_AccessoriesName  : Accessories
 (default)           :
 ```
 
-키의 Windows PowerShell 관련 속성은 모두 "PS" 접두사가 붙어 있습니다(예: **PSPath**, **PSParentPath**, **PSChildName** 및 **PSProvider**).
+키의 Windows PowerShell 관련 속성은 모두 "PS" 접두사가 붙어 있습니다(예: **PSPath** , **PSParentPath** , **PSChildName** 및 **PSProvider** ).
 
 `*.*` 표기법을 사용하여 현재 위치를 나타낼 수 있습니다. 먼저 `Set-Location`을 사용하여 **CurrentVersion** 레지스트리 컨테이너로 변경할 수 있습니다.
 
@@ -89,7 +90,7 @@ ProgramFilesDir     : C:\Program Files
 
 ## <a name="getting-a-single-registry-entry"></a>단일 레지스트리 항목 가져오기
 
-레지스트리 키에서 특정 항목을 검색하려면 여러 가지 방법 중 하나를 사용할 수 있습니다. 이 예제에서는 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion`에서 **DevicePath**의 값을 찾습니다.
+레지스트리 키에서 특정 항목을 검색하려면 여러 가지 방법 중 하나를 사용할 수 있습니다. 이 예제에서는 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion`에서 **DevicePath** 의 값을 찾습니다.
 
 `Get-ItemProperty`를 사용하면서, **Path** 매개 변수를 사용하여 키의 이름을 지정하고, **Name** 매개 변수를 사용하여 **DevicePath** 항목의 이름을 지정합니다.
 
@@ -111,7 +112,7 @@ DevicePath   : C:\WINDOWS\inf
 이 명령은 표준 Windows PowerShell 속성과 **DevicePath** 속성을 반환합니다.
 
 > [!NOTE]
-> `Get-ItemProperty`에는 **Filter**, **Include** 및 **Exclude** 매개 변수가 있지만 속성 이름을 기준으로 필터링하는 데 사용할 수 없습니다. 해당 매개 변수를 레지스트리 키(항목 경로)라고 하며 레지스트리 항목(항목 속성)이 아닙니다.
+> `Get-ItemProperty`에는 **Filter** , **Include** 및 **Exclude** 매개 변수가 있지만 속성 이름을 기준으로 필터링하는 데 사용할 수 없습니다. 해당 매개 변수를 레지스트리 키(항목 경로)라고 하며 레지스트리 항목(항목 속성)이 아닙니다.
 
 다른 옵션으로 Reg.exe 명령줄 도구를 사용합니다. reg.exe에 대한 도움말을 보려면 명령 프롬프트에 `reg.exe /?`를 입력합니다. DevicePath 항목을 찾으려면 다음 명령에 표시된 대로 reg.exe를 사용합니다.
 
@@ -151,7 +152,7 @@ Set-ItemProperty -Path HKCU:\Environment -Name Path -Value $newpath
 ```
 
 > [!NOTE]
-> `Set-ItemProperty`에는 **Filter**, **Include** 및 **Exclude** 매개 변수가 있지만 속성 이름을 기준으로 필터링하는 데 사용할 수 없습니다. 이러한 매개 변수를 레지스트리 키(항목 경로)라고 하며 레지스트리 항목(항목 속성)이 아닙니다.
+> `Set-ItemProperty`에는 **Filter** , **Include** 및 **Exclude** 매개 변수가 있지만 속성 이름을 기준으로 필터링하는 데 사용할 수 없습니다. 이러한 매개 변수를 레지스트리 키(항목 경로)라고 하며 레지스트리 항목(항목 속성)이 아닙니다.
 
 다른 옵션으로 Reg.exe 명령줄 도구를 사용합니다. reg.exe에 대한 도움말을 보려면 명령 프롬프트에서 **reg.exe /?** 를 입력합니다.
 .
@@ -188,7 +189,7 @@ PSProvider     : Microsoft.PowerShell.Core\Registry
 PowerShellPath : C:\Program Files\Windows PowerShell\v1.0
 ```
 
-**PropertyType**은 다음 표에서 **Microsoft.Win32.RegistryValueKind** 열거형 멤버의 이름이어야 합니다.
+**PropertyType** 은 다음 표에서 **Microsoft.Win32.RegistryValueKind** 열거형 멤버의 이름이어야 합니다.
 
 |PropertyType 값|의미|
 |----------------------|-----------|

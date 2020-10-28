@@ -2,16 +2,17 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 파일 및 폴더 작업
-ms.openlocfilehash: 8876ff70adbd10c9019f6d80ce7ad327f2932c74
-ms.sourcegitcommit: 08acbea14c69a347f2f46aafcb215a5233c7d830
+description: 이 문서에서는 PowerShell을 사용하여 특정 파일 및 폴더 조작 작업을 처리하는 방법을 설명합니다.
+ms.openlocfilehash: c0c3abb082b05296daa480ac06bcbfa3a784e0c9
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82691497"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500031"
 ---
 # <a name="working-with-files-and-folders"></a>파일 및 폴더 작업
 
-Windows PowerShell 드라이브를 탐색하고 드라이브 항목을 조작하는 것은 Windows의 실제 디스크 드라이브에 있는 파일 및 폴더를 조작하는 것과 유사합니다. 이 섹션에서는 PowerShell을 사용하여 특정 파일 및 폴더 조작 작업을 처리하는 방법을 설명합니다.
+Windows PowerShell 드라이브를 탐색하고 드라이브 항목을 조작하는 것은 Windows의 실제 디스크 드라이브에 있는 파일 및 폴더를 조작하는 것과 유사합니다. 이 문서에서는 PowerShell을 사용하여 특정 파일 및 폴더 조작 작업을 처리하는 방법을 설명합니다.
 
 ## <a name="listing-all-the-files-and-folders-within-a-folder"></a>폴더 내의 모든 파일 및 폴더 표시
 
@@ -27,7 +28,7 @@ Get-ChildItem -Path C:\ -Force
 Get-ChildItem -Path C:\ -Force -Recurse
 ```
 
-`Get-ChildItem`은 **Path**, **Filter**, **Include** 및 **Exclude** 매개 변수로 항목을 필터링할 수 있지만 이러한 변수는 일반적으로 이름을 기반으로 합니다. `Where-Object`를 사용하여 항목의 다른 속성을 기반으로 복잡한 필터링을 수행할 수 있습니다.
+`Get-ChildItem`은 **Path** , **Filter** , **Include** 및 **Exclude** 매개 변수로 항목을 필터링할 수 있지만 이러한 변수는 일반적으로 이름을 기반으로 합니다. `Where-Object`를 사용하여 항목의 다른 속성을 기반으로 복잡한 필터링을 수행할 수 있습니다.
 
 다음 명령은Program Files 폴더 내에서 2005년 10월 1일 이후 마지막으로 수정되었고 1MB보다 작거나 10MB보다 크지 않은 모든 실행 파일을 찾습니다.
 
@@ -63,7 +64,7 @@ Copy-Item C:\temp\test1 -Recurse C:\temp\DeleteMe
 Copy-Item -Filter *.txt -Path c:\data -Recurse -Destination C:\temp\text
 ```
 
-다른 도구를 사용하여 계속 파일 시스템 복사를 수행할 수 있습니다. Windows PowerShell에서는 **Scripting.FileSystemObject**와 같은 XCOPY, ROBOCOPY 및 COM 개체를 모두 사용할 수 있습니다. 예를 들어 다음과 같이 Windows 스크립트 호스트인 **Scripting.FileSystem COM** 클래스를 사용하여 `C:\boot.ini`를 `C:\boot.bak`에 백업할 수 있습니다.
+다른 도구를 사용하여 계속 파일 시스템 복사를 수행할 수 있습니다. Windows PowerShell에서는 **Scripting.FileSystemObject** 와 같은 XCOPY, ROBOCOPY 및 COM 개체를 모두 사용할 수 있습니다. 예를 들어 다음과 같이 Windows 스크립트 호스트인 **Scripting.FileSystem COM** 클래스를 사용하여 `C:\boot.ini`를 `C:\boot.bak`에 백업할 수 있습니다.
 
 ```powershell
 (New-Object -ComObject Scripting.FileSystemObject).CopyFile('C:\boot.ini', 'C:\boot.bak')
@@ -86,7 +87,7 @@ New-Item -Path 'C:\temp\New Folder\file.txt' -ItemType File
 ```
 
 > [!IMPORTANT]
-> **Force** 스위치를 `New-Item` 명령과 함께 사용하여 폴더를 만들 때 폴더가 이미 있으면 폴더를 덮어쓰거나 바꾸지 _않습니다_. 단지 기존 폴더 개체를 반환합니다. 그러나 이미 존재하는 파일에 `New-Item -Force`를 사용하는 경우 파일을 완전히 _덮어쓰게 됩니다_.
+> **Force** 스위치를 `New-Item` 명령과 함께 사용하여 폴더를 만들 때 폴더가 이미 있으면 폴더를 덮어쓰거나 바꾸지 _않습니다_ . 단지 기존 폴더 개체를 반환합니다. 그러나 이미 존재하는 파일에 `New-Item -Force`를 사용하는 경우 파일을 완전히 _덮어쓰게 됩니다_ .
 
 ## <a name="removing-all-files-and-folders-within-a-folder"></a>폴더 내의 모든 파일 및 폴더 제거
 
@@ -135,7 +136,7 @@ multi(0)disk(0)rdisk(0)partition(1)\WINDOWS=" Microsoft Windows XP Professional
 with Data Execution Prevention" /noexecute=optin /fastdetect
 ```
 
-`Get-Content`는 파일에서 읽은 데이터를 한 줄에 하나의 요소가 표시된 배열로 취급합니다. 다음과 같이 반환된 내용의 **Length**를 확인하면 이를 확인할 수 있습니다.
+`Get-Content`는 파일에서 읽은 데이터를 한 줄에 하나의 요소가 표시된 배열로 취급합니다. 다음과 같이 반환된 내용의 **Length** 를 확인하면 이를 확인할 수 있습니다.
 
 ```
 PS> (Get-Content -Path C:\boot.ini).Length

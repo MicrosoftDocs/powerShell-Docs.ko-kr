@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 컴퓨터에 대한 정보 수집
-ms.openlocfilehash: 9407ff15b3c3ca6b3adab60d4d01d957c599e79e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 WMI 및 CIM cmdlet을 사용하여 컴퓨터 구성 정보를 수집하는 방법을 보여줍니다.
+ms.openlocfilehash: 5088960ab7c049085a9d7c05ec4571b6fd7e3545
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75737239"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500592"
 ---
 # <a name="collecting-information-about-computers"></a>컴퓨터에 대한 정보 수집
 
@@ -26,7 +27,7 @@ Get-CimInstance -ClassName Win32_Desktop
 > [!NOTE]
 > 일부 WMI 클래스에서 반환되는 정보는 매우 자세할 수 있으며, WMI 클래스에 대한 메타데이터가 포함된 경우도 있습니다.
 
-이러한 메타데이터 속성에는 대부분 **Cim**으로 시작하는 이름이 있으므로 `Select-Object`를 사용하여 속성을 필터링할 수 있습니다. "Cim*"를 사용하여 값으로 **-ExcludeProperty** 매개 변수를 지정합니다. 다음은 그 예입니다.
+이러한 메타데이터 속성에는 대부분 **Cim** 으로 시작하는 이름이 있으므로 `Select-Object`를 사용하여 속성을 필터링할 수 있습니다. "Cim*"를 사용하여 값으로 **-ExcludeProperty** 매개 변수를 지정합니다. 예를 들면 다음과 같습니다.
 
 ```powershell
 Get-CimInstance -ClassName Win32_Desktop | Select-Object -ExcludeProperty "CIM*"
@@ -62,7 +63,7 @@ X86-based PC
 
 ## <a name="listing-computer-manufacturer-and-model"></a>컴퓨터 제조업체 및 모델 표시
 
-**Win32_ComputerSystem**을 통해 컴퓨터 모델 정보를 확인할 수도 있습니다. OEM 데이터를 제공하기 위해 표시되는 표준 출력을 필터링하지 않아도 됩니다.
+**Win32_ComputerSystem** 을 통해 컴퓨터 모델 정보를 확인할 수도 있습니다. OEM 데이터를 제공하기 위해 표시되는 표준 출력을 필터링하지 않아도 됩니다.
 
 ```powershell
 Get-CimInstance -ClassName Win32_ComputerSystem
@@ -78,7 +79,7 @@ MyPC Jane Doe         WORKGROUP 804765696           DA243A-ABA 6415cl NA910 Comp
 
 ## <a name="listing-installed-hotfixes"></a>설치된 핫픽스 표시
 
-**Win32_QuickFixEngineering**을 사용하여 설치된 모든 핫픽스를 표시할 수 있습니다.
+**Win32_QuickFixEngineering** 을 사용하여 설치된 모든 핫픽스를 표시할 수 있습니다.
 
 ```powershell
 Get-CimInstance -ClassName Win32_QuickFixEngineering
@@ -92,7 +93,7 @@ Source Description     HotFixID  InstalledBy   InstalledOn PSComputerName
        Security Update KB4048951 Administrator 12/16/2017  .
 ```
 
-더 간결한 출력을 위해 일부 속성을 제외할 수도 있습니다. `Get-CimInstance`의 **Property** 매개 변수를 사용하여 **HotFixID**만 선택할 수도 있지만, 이렇게 하면 기본적으로 모든 메타데이터가 표시되기 때문에 실제로 자세한 정보가 반환됩니다.
+더 간결한 출력을 위해 일부 속성을 제외할 수도 있습니다. `Get-CimInstance`의 **Property** 매개 변수를 사용하여 **HotFixID** 만 선택할 수도 있지만, 이렇게 하면 기본적으로 모든 메타데이터가 표시되기 때문에 실제로 자세한 정보가 반환됩니다.
 
 ```powershell
 Get-CimInstance -ClassName Win32_QuickFixEngineering -Property HotFixID
@@ -131,14 +132,14 @@ KB4048951
 
 ## <a name="listing-operating-system-version-information"></a>운영 체제 버전 정보 표시
 
-**Win32_OperatingSystem** 클래스 속성에는 버전 및 서비스 팩 정보가 포함되어 있습니다. 이러한 속성만 명시적으로 선택하여 **Win32_OperatingSystem**에서 버전 정보 요약을 가져올 수 있습니다.
+**Win32_OperatingSystem** 클래스 속성에는 버전 및 서비스 팩 정보가 포함되어 있습니다. 이러한 속성만 명시적으로 선택하여 **Win32_OperatingSystem** 에서 버전 정보 요약을 가져올 수 있습니다.
 
 ```powershell
 Get-CimInstance -ClassName Win32_OperatingSystem |
   Select-Object -Property BuildNumber,BuildType,OSType,ServicePackMajorVersion,ServicePackMinorVersion
 ```
 
-`Select-Object`의 **Property** 매개 변수와 함께 와일드카드를 사용할 수도 있습니다. **Build** 또는 **ServicePack**으로 시작하는 모든 속성을 여기서 사용하는 것이 중요하기 때문에 다음과 같은 형태로 축약할 수 있습니다.
+`Select-Object`의 **Property** 매개 변수와 함께 와일드카드를 사용할 수도 있습니다. **Build** 또는 **ServicePack** 으로 시작하는 모든 속성을 여기서 사용하는 것이 중요하기 때문에 다음과 같은 형태로 축약할 수 있습니다.
 
 ```powershell
 Get-CimInstance -ClassName Win32_OperatingSystem | Select-Object -Property Build*,OSType,ServicePack*
@@ -236,7 +237,7 @@ PSComputerName :
 
 ## <a name="displaying-service-status"></a>서비스 상태 표시
 
-특정 컴퓨터에서 모든 서비스의 상태를 보려면 앞에서 설명한 대로 `Get-Service` cmdlet을 로컬에서 사용할 수 있습니다. 원격 시스템의 경우 **Win32_Service** WMI 클래스를 사용할 수 있습니다. 또한 `Select-Object`를 사용하여 결과를 **Status**, **Name** 및 **DisplayName**으로 필터링하는 경우 출력 형식이 `Get-Service`의 출력 형식과 거의 동일합니다.
+특정 컴퓨터에서 모든 서비스의 상태를 보려면 앞에서 설명한 대로 `Get-Service` cmdlet을 로컬에서 사용할 수 있습니다. 원격 시스템의 경우 **Win32_Service** WMI 클래스를 사용할 수 있습니다. 또한 `Select-Object`를 사용하여 결과를 **Status** , **Name** 및 **DisplayName** 으로 필터링하는 경우 출력 형식이 `Get-Service`의 출력 형식과 거의 동일합니다.
 
 ```powershell
 Get-CimInstance -ClassName Win32_Service | Select-Object -Property Status,Name,DisplayName

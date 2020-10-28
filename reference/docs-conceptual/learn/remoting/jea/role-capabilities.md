@@ -2,12 +2,13 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA 역할 기능
-ms.openlocfilehash: 5b5b5977d4fec1ed850f1146fe7c09463908651b
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 역할 기능은 연결하는 사용자에게 제공되어야 하는 모든 cmdlet, 함수, 공급자 및 외부 프로그램을 나열하는 PowerShell 데이터 파일이며 확장명은 .psrc입니다.
+ms.openlocfilehash: 233d9081f4a8f977f0959addb5573c4566f885d0
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79402400"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499997"
 ---
 # <a name="jea-role-capabilities"></a>JEA 역할 기능
 
@@ -19,11 +20,11 @@ JEA 엔드포인트를 만들 때 사용자가 JEA 세션에서 수행할 수 �
 
 이 프로세스를 진행하는 방법은 조직과 목표에 따라 달라집니다. 다음 팁이 올바른 경로인지 확인하는 데 도움을 줍니다.
 
-1. **식별**: 사용자가 작업을 수행하는 데 사용하는 명령을 식별합니다. 이 과정에는 IT 직원을 대상으로 설문 조사를 진행하거나 자동화 스크립트를 확인하거나 PowerShell 세션 기록 및 로그를 분석하는 작업이 포함될 수 있습니다.
-2. 최상의 감사 및 JEA 사용자 지정 환경을 위해 가능한 경우 PowerShell에 해당하는 명령줄 도구를 **업데이트**합니다. 외부 프로그램은 JEA의 네이티브 PowerShell cmdlet 및 함수만큼 세부적으로 제한할 수 없습니다.
-3. 특정 매개 변수 또는 매개 변수 값만 허용하도록 cmdlet의 범위를 **제한**합니다. 이는 사용자가 시스템의 일부만 관리해야 하는 경우에 특히 중요합니다.
-4. 복잡한 명령이나 JEA에서 제한하기 어려운 명령을 대체할 사용자 지정 함수를 **만듭니다**. 복잡한 명령을 래핑하거나 추가 유효성 검사 논리를 적용하는 간단한 함수는 관리자 및 최종 사용자의 편의를 위한 추가 제어를 제공할 수 있습니다.
-5. 사용자 또는 자동화 서비스로 허용되는 명령의 범위가 지정된 목록을 **테스트**하고 필요에 따라 조정합니다.
+1. **식별** : 사용자가 작업을 수행하는 데 사용하는 명령을 식별합니다. 이 과정에는 IT 직원을 대상으로 설문 조사를 진행하거나 자동화 스크립트를 확인하거나 PowerShell 세션 기록 및 로그를 분석하는 작업이 포함될 수 있습니다.
+2. 최상의 감사 및 JEA 사용자 지정 환경을 위해 가능한 경우 PowerShell에 해당하는 명령줄 도구를 **업데이트** 합니다. 외부 프로그램은 JEA의 네이티브 PowerShell cmdlet 및 함수만큼 세부적으로 제한할 수 없습니다.
+3. 특정 매개 변수 또는 매개 변수 값만 허용하도록 cmdlet의 범위를 **제한** 합니다. 이는 사용자가 시스템의 일부만 관리해야 하는 경우에 특히 중요합니다.
+4. 복잡한 명령이나 JEA에서 제한하기 어려운 명령을 대체할 사용자 지정 함수를 **만듭니다** . 복잡한 명령을 래핑하거나 추가 유효성 검사 논리를 적용하는 간단한 함수는 관리자 및 최종 사용자의 편의를 위한 추가 제어를 제공할 수 있습니다.
+5. 사용자 또는 자동화 서비스로 허용되는 명령의 범위가 지정된 목록을 **테스트** 하고 필요에 따라 조정합니다.
 
 ### <a name="examples-of-potentially-dangerous-commands"></a>잠재적으로 위험한 명령의 예
 
@@ -41,7 +42,7 @@ JEA 엔드포인트에서 사용자가 자신의 권한을 상승시킬 수 없�
 
 ## <a name="create-a-role-capability-file"></a>역할 기능 파일 만들기
 
-[New-PSRoleCapabilityFile](/powershell/module/microsoft.powershell.core/new-psrolecapabilityfile?view=powershell-6) cmdlet을 사용하여 새 PowerShell 역할 기능 파일을 만들 수 있습니다.
+[New-PSRoleCapabilityFile](/powershell/module/microsoft.powershell.core/new-psrolecapabilityfile) cmdlet을 사용하여 새 PowerShell 역할 기능 파일을 만들 수 있습니다.
 
 ```powershell
 New-PSRoleCapabilityFile -Path .\MyFirstJEARole.psrc
@@ -90,11 +91,11 @@ VisibleCmdlets = @{ Name = 'Restart-Service'; Parameters = @{ Name = 'Name'; Val
 > [!WARNING]
 > 최상의 보안 방식을 위해 표시되는 cmdlet 또는 함수를 정의할 때 와일드카드는 사용하지 않는 것이 좋습니다. 대신 신뢰할 수 있는 각 명령을 명시적으로 나열하여 같은 이름 지정 체계를 공유하는 다른 명령에 의도치 않게 권한이 부여되지 않도록 해야 합니다.
 
-동일한 cmdlet 또는 함수에 **ValidatePattern**과 **ValidateSet**를 둘 다 적용할 수는 없습니다.
+동일한 cmdlet 또는 함수에 **ValidatePattern** 과 **ValidateSet** 를 둘 다 적용할 수는 없습니다.
 
-둘 다 적용할 경우 **ValidatePattern**이 **ValidateSet**를 재정의합니다.
+둘 다 적용할 경우 **ValidatePattern** 이 **ValidateSet** 를 재정의합니다.
 
-**ValidatePattern**에 대한 자세한 내용은 [이 *Hey, Scripting Guy!* 게시물](https://devblogs.microsoft.com/scripting/validate-powershell-parameters-before-running-the-script/) 및 [PowerShell 정규식](/powershell/module/microsoft.powershell.core/about/about_regular_expressions) 참조 콘텐츠를 확인하세요.
+**ValidatePattern** 에 대한 자세한 내용은 [이 *Hey, Scripting Guy!* 게시물](https://devblogs.microsoft.com/scripting/validate-powershell-parameters-before-running-the-script/) 및 [PowerShell 정규식](/powershell/module/microsoft.powershell.core/about/about_regular_expressions) 참조 콘텐츠를 확인하세요.
 
 ### <a name="allowing-external-commands-and-powershell-scripts"></a>외부 명령 및 PowerShell 스크립트 허용
 
@@ -108,7 +109,7 @@ PowerShell cmdlet 및 함수에서 허용되는 매개 변수를 제어할 수 �
 
 많은 실행 파일을 통해 현재 상태를 읽은 다음, 다른 매개 변수를 제공하여 변경할 수 있습니다.
 
-예를 들어 시스템에서 호스팅되는 네트워크 공유를 관리하는 파일 서버 관리자의 역할을 고려합니다. 공유를 관리하는 한 가지 방법은 `net share`를 사용하는 것입니다. 그러나 사용자가 명령을 사용하여 `net group Administrators unprivilegedjeauser /add`로 관리자 권한을 얻을 수 있으므로 **net.exe**를 허용하는 것은 위험합니다. 더 안전한 옵션은 [Get-SmbShare](/powershell/module/smbshare/get-smbshare)를 허용하는 것으로, 결과는 동일하지만 범위는 훨씬 제한적입니다.
+예를 들어 시스템에서 호스팅되는 네트워크 공유를 관리하는 파일 서버 관리자의 역할을 고려합니다. 공유를 관리하는 한 가지 방법은 `net share`를 사용하는 것입니다. 그러나 사용자가 명령을 사용하여 `net group Administrators unprivilegedjeauser /add`로 관리자 권한을 얻을 수 있으므로 **net.exe** 를 허용하는 것은 위험합니다. 더 안전한 옵션은 [Get-SmbShare](/powershell/module/smbshare/get-smbshare)를 허용하는 것으로, 결과는 동일하지만 범위는 훨씬 제한적입니다.
 
 JEA 세션에서 사용자가 외부 명령을 사용할 수 있게 하려면 항상 실행 파일의 전체 경로를 지정합니다. 이렇게 하면 시스템의 다른 위치에 있는 이름이 비슷하거나 잠재적으로 악의적인 프로그램이 실행되는 것을 방지합니다.
 
@@ -161,7 +162,7 @@ JEA 세션에서 탭 완료가 제대로 작동하려면 **VisibleFunctions** �
 
 PowerShell 6 이전의 경우 PowerShell에서 역할 기능 파일을 찾으려면 역할 기능 파일을 PowerShell 모듈의 **RoleCapabilities** 폴더에 저장해야 합니다. 모듈은 `$env:PSModulePath` 환경 변수에 포함된 모든 폴더에 저장할 수 있지만, `$env:SystemRoot\System32` 또는 신뢰할 수 없는 사용자가 파일을 수정할 수 있는 폴더에 배치해서는 안 됩니다.
 
-다음 예에서는 역할 기능 파일을 호스트하기 위해 `$env:ProgramFiles` 경로에 **ContosoJEA**라는 PowerShell 스크립트 모듈을 만듭니다.
+다음 예에서는 역할 기능 파일을 호스트하기 위해 `$env:ProgramFiles` 경로에 **ContosoJEA** 라는 PowerShell 스크립트 모듈을 만듭니다.
 
 ```powershell
 # Create a folder for the module

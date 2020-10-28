@@ -2,12 +2,13 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: PowerShell 6.0의 주요 변경 내용
-ms.openlocfilehash: 9ead635232930598634141369fd2cc299f0b1799
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
+description: 이 문서에서는 Windows PowerShell 5.1과 PowerShell 6.0의 차이점을 요약합니다.
+ms.openlocfilehash: 7ed6e811b9136cb1c35422a9d682ba2bfaa136a0
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158193"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501697"
 ---
 # <a name="breaking-changes-for-powershell-6x"></a>PowerShell 6.x의 호환성이 손상되는 변경
 
@@ -27,7 +28,7 @@ ms.locfileid: "86158193"
 
 ### <a name="powershell-workflow"></a>PowerShell 워크플로
 
-[PowerShell 워크플로][workflow]는 [Windows WF(Workflow Foundation)][workflow-foundation]을 토대로 빌드되는 Windows PowerShell의 기능으로, 장기 실행 또는 병렬 처리 작업을 위한 강력한 Runbook을 만들 수 있습니다.
+[PowerShell][workflow]는 [Windows WF(Workflow Foundation)][workflow-foundation]을 토대로 빌드되는 Windows PowerShell의 기능으로, 장기 실행 또는 병렬 처리 작업을 위한 강력한 Runbook을 만들 수 있습니다.
 
 .NET Core에 Windows Workflow Foundation 지원이 없으므로 PowerShell Core에서는 이후에도 PowerShell 워크플로를 지원하지 않을 것입니다.
 
@@ -162,7 +163,7 @@ Windows Presentation Framework는 CoreCLR에서 지원되지 않습니다. 영�
 
 ## <a name="enginelanguage-changes"></a>엔진/언어 변경 내용
 
-### <a name="rename-powershellexe-to-pwshexe-5101"></a>`powershell.exe`의 이름을 `pwsh.exe`로 바꿈 [#5101](https://github.com/PowerShell/PowerShell/issues/5101)
+### <a name="rename-powershellexe-to-pwshexe-5101"></a>`powershell.exe`의 이름을 로 바꿈 `pwsh.exe` [#5101](https://github.com/PowerShell/PowerShell/issues/5101)
 
 Windows PowerShell과 구분하여, Windows에서 PowerShell Core를 가리키는 확실한 방법을 사용자에게 제공하기 위해 PowerShell Core 이진이 Windows에서는 `pwsh.exe`, 비 Windows 플랫폼에서는 `pwsh`로 변경되었습니다.
 
@@ -184,7 +185,7 @@ Windows PowerShell과 구분하여, Windows에서 PowerShell Core를 가리키�
 
 범위를 빨리 만들 수 있도록 `AllScope`가 대부분의 기본 별칭에서 제거되었습니다. 자주 사용하는 몇 가지 별칭에 대해서는 조회 속도가 더 빠른 `AllScope`가 유지되었습니다.
 
-### <a name="-verbose-and--debug-no-longer-overrides-erroractionpreference-5113"></a>`-Verbose` 및 `-Debug`가 더 이상 `$ErrorActionPreference`를 재정의하지 않음 [#5113](https://github.com/PowerShell/PowerShell/issues/5113)
+### <a name="-verbose-and--debug-no-longer-overrides-erroractionpreference-5113"></a>`-Verbose` 및 `-Debug`가 더 이상 를 재정의하지 않음 `$ErrorActionPreference` [#5113](https://github.com/PowerShell/PowerShell/issues/5113)
 
 이전에는 `-Verbose` 또는 `-Debug`가 지정된 경우 `$ErrorActionPreference`의 동작을 재정의했습니다. 이 변경으로, `-Verbose` 및 `-Debug`가 더 이상 `$ErrorActionPreference`의 동작에 영향을 주지 않습니다.
 
@@ -214,7 +215,7 @@ CoreFX의 RPC 원격 관련 문제로 인해(특히 비 Windows 플랫폼) Power
 
 이전에는 `ConvertFrom-Csv`를 사용하여 `TypeInformation`을 가져오고, `Export-CSV`를 사용하여 내보낸 개체가 형식 정보를 보존하지 않았습니다. 이 변경으로, CSV 파일에서 사용 가능한 경우 형식 정보가 `PSTypeNames` 멤버에 추가됩니다.
 
-### <a name="-notypeinformation-should-be-default-on-export-csv-5131"></a>`-NoTypeInformation`에서 `Export-Csv`이 기본값이어야 함 [#5131](https://github.com/PowerShell/PowerShell/issues/5131)
+### <a name="-notypeinformation-should-be-default-on-export-csv-5131"></a>에서 `-NoTypeInformation`이 기본값이어야 함 `Export-Csv` [#5131](https://github.com/PowerShell/PowerShell/issues/5131)
 
 이 변경은 형식 정보를 포함하는 `Export-CSV`의 기본 동작에 대한 고객 피드백을 반영하기 위한 것입니다.
 
@@ -224,13 +225,13 @@ CoreFX의 RPC 원격 관련 문제로 인해(특히 비 Windows 플랫폼) Power
 
 HTTP를 사용하는 경우 암호를 포함하는 콘텐츠가 일반 텍스트로 전송됩니다. 이 변경은 이 동작을 기본적으로 허용하지 않고 자격 증명이 비보안 방식으로 전달될 경우 오류를 반환하기 위한 것입니다. 사용자는 `-AllowUnencryptedAuthentication` 스위치를 사용하여 이 변경을 무시할 수 있습니다.
 
-## <a name="api-changes"></a>API 변경
+## <a name="api-changes"></a>API 변경 내용
 
 ### <a name="remove-addtypecommandbase-class-5407"></a>`AddTypeCommandBase` 클래스 제거 [#5407](https://github.com/PowerShell/PowerShell/issues/5407)
 
 성능 향상을 위해 `AddTypeCommandBase` 클래스가 `Add-Type`에서 제거되었습니다. 이 클래스는 Add-Type cmdlet에서만 사용되며 사용자에게 영향을 주면 안 됩니다.
 
-### <a name="unify-cmdlets-with-parameter--encoding-to-be-of-type-systemtextencoding-5080"></a>`-Encoding` 형식이 되도록 `System.Text.Encoding` 매개 변수와 cmdlet 통합 [#5080](https://github.com/PowerShell/PowerShell/issues/5080)
+### <a name="unify-cmdlets-with-parameter--encoding-to-be-of-type-systemtextencoding-5080"></a> 형식이 되도록 `-Encoding` 매개 변수와 cmdlet 통합 `System.Text.Encoding` [#5080](https://github.com/PowerShell/PowerShell/issues/5080)
 
 `-Encoding` 값 `Byte`가 파일 시스템 공급자 cmdlet에서 제거되었습니다. 이제 새 매개 변수 `-AsByteStream`을 사용하여 바이트 스트림이 입력으로 필요한 경우나 출력이 바이트 스트림인 경우를 지정합니다.
 
@@ -249,15 +250,15 @@ HTTP를 사용하는 경우 암호를 포함하는 콘텐츠가 일반 텍스트
 [runspaceconfig]: /dotnet/api/system.management.automation.runspaces.runspaceconfiguration
 [iss]: /dotnet/api/system.management.automation.runspaces.initialsessionstate
 
-### <a name="commandinvocationintrinsicsinvokescript-bind-arguments-to-input-instead-of-args-4923"></a>`CommandInvocationIntrinsics.InvokeScript`에서 인수를 `$input`가 아니라 `$args`에 바인딩함 [#4923](https://github.com/PowerShell/PowerShell/issues/4923)
+### <a name="commandinvocationintrinsicsinvokescript-bind-arguments-to-input-instead-of-args-4923"></a>`CommandInvocationIntrinsics.InvokeScript`에서 인수를 가 아니라 `$input`에 바인딩함 `$args` [#4923](https://github.com/PowerShell/PowerShell/issues/4923)
 
 잘못된 매개 변수 위치로 인해 인수가 아니라 입력으로 인수가 전달되었습니다.
 
-### <a name="remove-unsupported--showwindow-switch-from-get-help-4903"></a>`-showwindow`에서 지원되지 않는 `Get-Help` 스위치 제거 [#4903](https://github.com/PowerShell/PowerShell/issues/4903)
+### <a name="remove-unsupported--showwindow-switch-from-get-help-4903"></a>에서 지원되지 않는 `-showwindow` 스위치 제거 `Get-Help` [#4903](https://github.com/PowerShell/PowerShell/issues/4903)
 
 `-showwindow`는 CoreCLR에서 지원되지 않는 WPF를 사용합니다.
 
-### <a name="allow--to-be-used-in-registry-path-for-remove-item-4866"></a>`Remove-Item`의 레지스트리 경로에 *를 사용할 수 있도록 허용 [#4866](https://github.com/PowerShell/PowerShell/issues/4866)
+### <a name="allow--to-be-used-in-registry-path-for-remove-item-4866"></a>의 레지스트리 경로에 *를 사용할 수 있도록 허용 `Remove-Item` [#4866](https://github.com/PowerShell/PowerShell/issues/4866)
 
 이전에는 `-LiteralPath`에 와일드카드를 지정할 경우, `-Path`와 동일하게 처리되고, 와일드카드를 통해 파일을 찾지 못할 경우 자동으로 종료되었습니다. 올바른 동작은 파일이 존재하지 않을 경우 오류가 발생하도록 `-LiteralPath`가 리터럴이 되어야 합니다. `-Literal`과 함께 사용된 와일드카드를 리터럴로 처리하도록 변경되었습니다.
 
@@ -265,7 +266,7 @@ HTTP를 사용하는 경우 암호를 포함하는 콘텐츠가 일반 텍스트
 
 이전에는 `New-Service -StartupType foo`를 사용할 경우, `foo`가 무시되고 기본 시작 유형으로 서비스가 생성되었습니다. 이 변경은 잘못된 시작 유형에 대해 명시적으로 오류를 throw하기 위한 것입니다.
 
-### <a name="rename-isosx-to-ismacos-4700"></a>`$IsOSX`의 이름을 `$IsMacOS`로 바꿈 [#4700](https://github.com/PowerShell/PowerShell/issues/4700)
+### <a name="rename-isosx-to-ismacos-4700"></a>`$IsOSX`의 이름을 로 바꿈 `$IsMacOS` [#4700](https://github.com/PowerShell/PowerShell/issues/4700)
 
 PowerShell의 이름 지정은 Microsoft의 이름 지정과 일치하는 동시에 OSX가 아니라 Apple의 macOS 사용을 준수해야 합니다. 그러나 가독성과 일관성을 위해 파스칼식 대/소문자를 유지하고 있습니다.
 
@@ -279,13 +280,13 @@ Unix 규칙에 맞게 `pwsh.exe`의 종료 코드 변경
 
 ### <a name="executing-powershell-script-with-bool-parameter-does-not-work-4036"></a>부울 매개 변수를 포함한 PowerShell 스크립트를 실행할 경우 작동하지 않음 [#4036](https://github.com/PowerShell/PowerShell/issues/4036)
 
-이전에는 **powershell.exe**(현재 **pwsh.exe**)를 사용하여 `-File`을 사용하는 PowerShell 스크립트를 실행할 경우 `$true`/`$false`를 매개 변수 값으로 전달할 수 없었습니다. 매개 변수에 대한 구문 분석된 값으로 `$true`/`$false` 지원이 추가되었습니다. 현재 문서화된 구문이 작동하지 않으므로 스위치 값도 지원됩니다.
+이전에는 **powershell.exe** (현재 **pwsh.exe** )를 사용하여 `-File`을 사용하는 PowerShell 스크립트를 실행할 경우 `$true`/`$false`를 매개 변수 값으로 전달할 수 없었습니다. 매개 변수에 대한 구문 분석된 값으로 `$true`/`$false` 지원이 추가되었습니다. 현재 문서화된 구문이 작동하지 않으므로 스위치 값도 지원됩니다.
 
-### <a name="remove-clrversion-property-from-psversiontable-4027"></a>`ClrVersion`에서 `$PSVersionTable` 속성 제거 [#4027](https://github.com/PowerShell/PowerShell/issues/4027)
+### <a name="remove-clrversion-property-from-psversiontable-4027"></a>에서 `ClrVersion` 속성 제거 `$PSVersionTable` [#4027](https://github.com/PowerShell/PowerShell/issues/4027)
 
 `$PSVersionTable`의 `ClrVersion` 속성은 CoreCLR에서 유용하지 않습니다. 최종 사용자는 호환성을 확인하기 위해 이 값을 사용하면 안 됩니다.
 
-### <a name="change-positional-parameter-for-powershellexe-from--command-to--file-4019"></a>`powershell.exe`에 대한 위치 지정 매개 변수를 `-Command`에서 `-File`로 변경 [#4019](https://github.com/PowerShell/PowerShell/issues/4019)
+### <a name="change-positional-parameter-for-powershellexe-from--command-to--file-4019"></a>`powershell.exe`에 대한 위치 지정 매개 변수를 `-Command`에서 로 변경 `-File` [#4019](https://github.com/PowerShell/PowerShell/issues/4019)
 
 비 Windows 플랫폼에서 PowerShell의 구조를 사용할 수 있게 합니다. 즉, Unix 기반 시스템에서 `pwsh`를 명시적으로 호출하지 않고 PowerShell을 자동으로 호출하는 스크립트 실행 파일을 만들 수 있습니다. 이제 `-File`을 지정하지 않고 `powershell foo.ps1` 또는 `powershell fooScript`와 같은 작업을 수행할 수도 있습니다. 그러나 이 변경으로, 이제 `powershell.exe Get-Command`와 같은 작업을 수행할 때 `-c` 또는 `-Command`를 명시적으로 지정해야 합니다.
 
@@ -344,7 +345,7 @@ Unix에서는 셸이 대화형 셸을 나타내는 `-i`를 허용하는 것이 �
 - `Get-WmiObject -Class`
 - `Get-WmiObject -Property`
 
-### <a name="add-support-w3c-extended-log-file-format-in-import-csv-2482"></a>`Import-Csv`에서 W3C 확장 로그 파일 형식 지원 추가 [#2482](https://github.com/PowerShell/PowerShell/issues/2482)
+### <a name="add-support-w3c-extended-log-file-format-in-import-csv-2482"></a>에서 W3C 확장 로그 파일 형식 지원 추가 `Import-Csv` [#2482](https://github.com/PowerShell/PowerShell/issues/2482)
 
 이전에는 `Import-Csv` cmdlet을 사용하여 W3C 확장 로그 형식의 로그 파일을 직접 가져올 수 없었으며, 추가 작업이 필요했습니다. 이 변경으로, W3C 확장 로그 형식이 지원됩니다.
 
@@ -352,7 +353,7 @@ Unix에서는 셸이 대화형 셸을 나타내는 `-i`를 허용하는 것이 �
 
 이제 `ValueFromRemainingArguments`에서 그 자체가 배열인 단일 값이 아니라 배열로 값을 반환합니다.
 
-### <a name="buildversion-is-removed-from-psversiontable-1415"></a>`BuildVersion`에서 `$PSVersionTable` 제거 [#1415](https://github.com/PowerShell/PowerShell/issues/1415)
+### <a name="buildversion-is-removed-from-psversiontable-1415"></a>에서 `BuildVersion` 제거 `$PSVersionTable` [#1415](https://github.com/PowerShell/PowerShell/issues/1415)
 
 `$PSVersionTable`에서 `BuildVersion` 속성이 제거되었습니다. 이 속성은 Windows 빌드 버전에 연결되어 있었습니다. 대신 `GitCommitId`를 사용하여 PowerShell Core의 정확한 빌드 버전을 검색하는 것이 좋습니다.
 

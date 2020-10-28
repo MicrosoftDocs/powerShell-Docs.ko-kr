@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 프린터 작업
-ms.openlocfilehash: 1d6b9a57ec61f06af694757dc8017d50b4dd40fe
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 WMI 개체 및 COM 인터페이스를 사용하여 Windows에서 프린터를 관리하는 방법을 보여줍니다.
+ms.openlocfilehash: 2606753783043eeae8e9d461e56f0901149cb8e3
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78935205"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501085"
 ---
 # <a name="working-with-printers-in-windows"></a>Windows에서 프린터 작업
 
@@ -31,7 +32,7 @@ Get-CimInstance -Class Win32_Printer
 
 ## <a name="adding-a-network-printer"></a>네트워크 프린터 추가
 
-새 네트워크 프린터를 추가하려면 다음과 같이 **WScript.Network**를 사용합니다.
+새 네트워크 프린터를 추가하려면 다음과 같이 **WScript.Network** 를 사용합니다.
 
 ```powershell
 (New-Object -ComObject WScript.Network).AddWindowsPrinterConnection("\\Printserver01\Xerox5")
@@ -46,7 +47,7 @@ $printer = Get-CimInstance -Class Win32_Printer -Filter "Name='HP LaserJet 5Si'"
 Invoke-CimMethod -InputObject $printer -MethodName SetDefaultPrinter
 ```
 
-**WScript.Network**가 좀더 사용하기 쉽습니다. 프린터 이름만 인수로 받아들이는 **SetDefaultPrinter** 메서드가 있기 때문입니다.
+**WScript.Network** 가 좀더 사용하기 쉽습니다. 프린터 이름만 인수로 받아들이는 **SetDefaultPrinter** 메서드가 있기 때문입니다.
 
 ```powershell
 (New-Object -ComObject WScript.Network).SetDefaultPrinter('HP LaserJet 5Si')

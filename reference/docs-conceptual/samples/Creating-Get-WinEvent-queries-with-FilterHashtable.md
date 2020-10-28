@@ -1,12 +1,13 @@
 ---
 ms.date: 09/13/2019
 title: FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기
-ms.openlocfilehash: 002d84515368663e0e807f48ffe883bd533be1d9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: 이 문서에서는 Get-WinEvent의 FilterHashtable을 사용하여 Windows 이벤트 로그를 쿼리하는 방법을 설명합니다.
+ms.openlocfilehash: 8e080f17436d97adda277600cd202a0e6e9283e0
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786648"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500609"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>FilterHashtable를 사용하여 Get-WinEvent 쿼리 만들기
 
@@ -39,11 +40,11 @@ Get-WinEvent -FilterHashtable @{
 ## <a name="hash-table-key-value-pairs"></a>해시 테이블 키-값 쌍
 
 효율적인 쿼리를 작성하려면 `Get-WinEvent` cmdlet과 **FilterHashtable** 매개 변수를 함께 사용합니다.
-**FilterHashtable**은 Windows 이벤트 로그에서 특정 정보를 가져오기 위한 필터로 해시 테이블을 사용합니다. 해시 테이블은 **키-값** 쌍을 사용합니다. 해시 테이블에 대한 자세한 내용은 [about_Hash_Tables](/powershell/module/microsoft.powershell.core/about/about_hash_tables)를 참조하세요.
+**FilterHashtable** 은 Windows 이벤트 로그에서 특정 정보를 가져오기 위한 필터로 해시 테이블을 사용합니다. 해시 테이블은 **키-값** 쌍을 사용합니다. 해시 테이블에 대한 자세한 내용은 [about_Hash_Tables](/powershell/module/microsoft.powershell.core/about/about_hash_tables)를 참조하세요.
 
 **키-값** 쌍이 같은 줄에 있으면 세미콜론으로 구분해야 합니다. 각 **키-값** 쌍이 서로 다른 줄에 있으면 세미콜론이 필요하지 않습니다. 예를 들어 이 문서에서는 **키-값** 쌍을 서로 다른 줄에 배치하며 세미콜론을 사용하지 않습니다.
 
-이 샘플에서는 몇 가지 **FilterHashtable** 매개 변수의 **키-값** 쌍을 사용합니다. 완료된 쿼리에는 **LogName**, **ProviderName**, **Keywords**, **ID** 및 **Level**이 포함됩니다.
+이 샘플에서는 몇 가지 **FilterHashtable** 매개 변수의 **키-값** 쌍을 사용합니다. 완료된 쿼리에는 **LogName** , **ProviderName** , **Keywords** , **ID** 및 **Level** 이 포함됩니다.
 
 허용되는 **키-값** 쌍은 다음 표에 표시되며 [Get-WinEvent](/powershell/module/microsoft.powershell.diagnostics/Get-WinEvent)
 **FilterHashtable** 매개 변수에 대한 설명서에 포함되어 있습니다.
@@ -87,7 +88,7 @@ Get-WinEvent -FilterHashtable @{LogName='Application'; 'Service'='Bits'}
 
 결과를 확인하고 문제를 해결하려는 경우 **키-값** 쌍을 한 번에 하나씩 사용해서 해시 테이블을 빌드하는 것이 좋습니다. 쿼리는 **애플리케이션** 로그에서 데이터를 가져옵니다. 해시 테이블은 `Get-WinEvent –LogName Application`과 같습니다.
 
-시작하려면 `Get-WinEvent` 쿼리를 만듭니다. **FilterHashtable** 매개 변수의 **키-값** 쌍(키: **LogName**, 값: **Application**)을 사용합니다.
+시작하려면 `Get-WinEvent` 쿼리를 만듭니다. **FilterHashtable** 매개 변수의 **키-값** 쌍(키: **LogName** , 값: **Application** )을 사용합니다.
 
 ```powershell
 Get-WinEvent -FilterHashtable @{
@@ -95,11 +96,11 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-**ProviderName** 키를 사용해서 해시 테이블을 계속 작성합니다. **ProviderName**은 **Windows 이벤트 뷰어**의 **원본** 필드에 표시되는 이름입니다. 예를 들어, 다음 스크린샷에서 **.NET Runtime**입니다.
+**ProviderName** 키를 사용해서 해시 테이블을 계속 작성합니다. **ProviderName** 은 **Windows 이벤트 뷰어** 의 **원본** 필드에 표시되는 이름입니다. 예를 들어, 다음 스크린샷에서 **.NET Runtime** 입니다.
 
 ![Windows 이벤트 뷰어 원본 이미지](./media/creating-get-winEvent-queries-with-filterhashtable/providername.png)
 
-해시 테이블을 업데이트하고 **키-값** 쌍(키: **ProviderName**, 값: **NET Runtime**)을 포함합니다.
+해시 테이블을 업데이트하고 **키-값** 쌍(키: **ProviderName** , 값: **NET Runtime** )을 포함합니다.
 
 ```powershell
 Get-WinEvent -FilterHashtable @{
@@ -112,7 +113,7 @@ Get-WinEvent -FilterHashtable @{
 
 ## <a name="using-enumerated-values-in-a-hash-table"></a>해시 테이블에서 열거된 값 사용
 
-**Keywords**는 해시 테이블의 다음 키입니다. **Keywords** 데이터 형식은 큰 숫자를 포함하는 `[long]` 값 형식의 배열입니다. 다음 명령을 사용하여 `[long]`의 최대 값을 찾습니다.
+**Keywords** 는 해시 테이블의 다음 키입니다. **Keywords** 데이터 형식은 큰 숫자를 포함하는 `[long]` 값 형식의 배열입니다. 다음 명령을 사용하여 `[long]`의 최대 값을 찾습니다.
 
 ```powershell
 [long]::MaxValue
@@ -122,9 +123,9 @@ Get-WinEvent -FilterHashtable @{
 9223372036854775807
 ```
 
-**Keywords** 키의 경우 PowerShell은 **Security**와 같은 문자열이 아니라 숫자를 사용합니다. **Windows 이벤트 뷰어**는 **Keywords**를 문자열로 표시하지만 열거형 값입니다. 해시 테이블에서 문자열 값에 **Keywords** 키를 사용하면 오류 메시지가 표시됩니다.
+**Keywords** 키의 경우 PowerShell은 **Security** 와 같은 문자열이 아니라 숫자를 사용합니다. **Windows 이벤트 뷰어** 는 **Keywords** 를 문자열로 표시하지만 열거형 값입니다. 해시 테이블에서 문자열 값에 **Keywords** 키를 사용하면 오류 메시지가 표시됩니다.
 
-**Windows 이벤트 뷰어**를 열고 **작업** 창에서 **현재 로그 필터링**을 클릭합니다.
+**Windows 이벤트 뷰어** 를 열고 **작업** 창에서 **현재 로그 필터링** 을 클릭합니다.
 **Keywords** 드롭다운 메뉴는 다음 스크린샷에 표시된 것처럼 사용할 수 있는 키워드를 표시합니다.
 
 ![Windows 이벤트 뷰어 키워드 이미지](./media/creating-get-winEvent-queries-with-filterhashtable/keywords.png)
@@ -151,7 +152,7 @@ WdiContext       Property   static System.Diagnostics.Eventing.Reader.StandardEv
 WdiDiagnostic    Property   static System.Diagnostics.Eventing.Reader.StandardEventKey…
 ```
 
-열거형 값은 **.NET Framework**에 설명되어 있습니다. 자세한 내용은 [StandardEventKeywords 열거형](/dotnet/api/system.diagnostics.eventing.reader.standardeventkeywords?redirectedfrom=MSDN&view=netframework-4.7.2)을 참조하세요.
+열거형 값은 **.NET Framework** 에 설명되어 있습니다. 자세한 내용은 [StandardEventKeywords 열거형](/dotnet/api/system.diagnostics.eventing.reader.standardeventkeywords)을 참조하세요.
 
 **Keywords** 이름 및 열거형 값은 다음과 같습니다.
 
@@ -195,9 +196,9 @@ Get-WinEvent -FilterHashtable @{
 
 ## <a name="filtering-by-event-id"></a>이벤트 ID 기준으로 필터링
 
-보다 구체적인 데이터를 가져오기 위해 쿼리 결과가 **이벤트 ID**를 기준으로 필터링됩니다. **이벤트 ID**는 해시 테이블에서 키 **ID**로 참조되고 해당 값은 특정 **이벤트 ID**입니다. **Windows 이벤트 뷰어**는 **이벤트 ID**를 표시합니다. 이 예제에서는 **이벤트 ID 1023**을 사용합니다.
+보다 구체적인 데이터를 가져오기 위해 쿼리 결과가 **이벤트 ID** 를 기준으로 필터링됩니다. **이벤트 ID** 는 해시 테이블에서 키 **ID** 로 참조되고 해당 값은 특정 **이벤트 ID** 입니다. **Windows 이벤트 뷰어** 는 **이벤트 ID** 를 표시합니다. 이 예제에서는 **이벤트 ID 1023** 을 사용합니다.
 
-해시 테이블을 업데이트하고 **키-값** 쌍(키: **ID**, 값: **1023**)을 포함합니다.
+해시 테이블을 업데이트하고 **키-값** 쌍(키: **ID** , 값: **1023** )을 포함합니다.
 
 ```powershell
 Get-WinEvent -FilterHashtable @{
@@ -211,9 +212,9 @@ Get-WinEvent -FilterHashtable @{
 ## <a name="filtering-by-level"></a>수준 기준 필터링
 
 결과를 구체화하고 오류가 있는 이벤트만 포함하려면 **Level** 키를 사용합니다.
-**Windows 이벤트 뷰어**는 **Level**을 문자열 값으로 표시하지만, 열거형 값입니다. 해시 테이블에서 문자열 값에 **Level** 키를 사용하면 오류 메시지가 표시됩니다.
+**Windows 이벤트 뷰어** 는 **Level** 을 문자열 값으로 표시하지만, 열거형 값입니다. 해시 테이블에서 문자열 값에 **Level** 키를 사용하면 오류 메시지가 표시됩니다.
 
-**Level**에는 **Error**, **Warning** 또는 **Informational**과 같은 값이 지정됩니다. 다음 명령을 사용하여 `StandardEventLevel` 속성 이름을 표시합니다.
+**Level** 에는 **Error** , **Warning** 또는 **Informational** 과 같은 값이 지정됩니다. 다음 명령을 사용하여 `StandardEventLevel` 속성 이름을 표시합니다.
 
 ```powershell
 [System.Diagnostics.Eventing.Reader.StandardEventLevel] | Get-Member -Static -MemberType Property
@@ -232,7 +233,7 @@ Verbose       Property   static System.Diagnostics.Eventing.Reader.StandardEvent
 Warning       Property   static System.Diagnostics.Eventing.Reader.StandardEventLevel Warning {get;}
 ```
 
-열거형 값은 **.NET Framework**에 설명되어 있습니다. 자세한 내용은 [StandardEventLevel 열거형](/dotnet/api/system.diagnostics.eventing.reader.standardeventlevel?redirectedfrom=MSDN&view=netframework-4.7.2)을 참조하세요.
+열거형 값은 **.NET Framework** 에 설명되어 있습니다. 자세한 내용은 [StandardEventLevel 열거형](/dotnet/api/system.diagnostics.eventing.reader.standardeventlevel)을 참조하세요.
 
 **Level** 키의 이름 및 열거형 값은 다음과 같습니다.
 
@@ -245,7 +246,7 @@ Warning       Property   static System.Diagnostics.Eventing.Reader.StandardEvent
 | 위험       |   1   |
 | LogAlways      |   0   |
 
-완료된 쿼리에 대한 해시 테이블은 키, **Level** 및 값, **2**를 포함합니다.
+완료된 쿼리에 대한 해시 테이블은 키, **Level** 및 값, **2** 를 포함합니다.
 
 ```powershell
 Get-WinEvent -FilterHashtable @{

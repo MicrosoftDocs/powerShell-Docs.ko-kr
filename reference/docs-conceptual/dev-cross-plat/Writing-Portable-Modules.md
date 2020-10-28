@@ -1,13 +1,14 @@
 ---
-ms.date: 01/10/2020
+ms.date: 10/21/2020
 keywords: powershell,cmdlet
 title: 이식 가능한 모듈 작성
-ms.openlocfilehash: a6b2f8b263e71b6c9dbd50900536cb5072597e71
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
+description: 이 문서에서는 PowerShell에서 지원하는 플랫폼에서 작동하도록 모듈을 새로 만들거나 기존 모듈을 업데이트하는 방법을 설명합니다.
+ms.openlocfilehash: 6d5c36263c3c6d1219f963cea2e94ae92b07e863
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158125"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500796"
 ---
 # <a name="portable-modules"></a>이식 가능한 모듈
 
@@ -17,10 +18,9 @@ Windows PowerShell은 [.NET Framework][]용으로 작성되지만 PowerShell Cor
 
 ### <a name="porting-a-pssnapin"></a>PSSnapIn 이식
 
-PowerShell [스냅인](/powershell/scripting/developer/cmdlet/modules-and-snap-ins)은 PowerShell Core에서 지원되지 않습니다. 그러나 PSSnapIn을 PowerShell 모듈로 변환하는 것은 간단합니다. 일반적으로 PSSnapIn 등록 코드는 [PSSnapIn][]에서 파생되는 클래스의 단일 원본 파일에 있습니다.
-빌드에서 이 원본 파일을 제거하세요. 이 파일은 더 이상 필요하지 않습니다.
+PowerShell [스냅인](/powershell/scripting/developer/cmdlet/modules-and-snap-ins)은 PowerShell Core에서 지원되지 않습니다. 그러나 PSSnapIn을 PowerShell 모듈로 변환하는 것은 간단합니다. 일반적으로 PSSnapIn 등록 코드는 [PSSnapIn][]에서 파생되는 클래스의 단일 원본 파일에 있습니다. 빌드에서 이 원본 파일을 제거하세요. 이 파일은 더 이상 필요하지 않습니다.
 
-[New-ModuleManifest][]를 사용하여 PSSnapIn 등록 코드를 사용할 필요가 없는 새 모듈 매니페스트를 만듭니다. **PSSnapIn**의 일부 값(예: **Description**)은 모듈 매니페스트 내에서 다시 사용할 수 있습니다.
+[New-ModuleManifest][]를 사용하여 PSSnapIn 등록 코드를 사용할 필요가 없는 새 모듈 매니페스트를 만듭니다. **PSSnapIn** 의 일부 값(예: **Description** )은 모듈 매니페스트 내에서 다시 사용할 수 있습니다.
 
 모듈 매니페스트의 **RootModule** 속성은 cmdlet을 구현하는 어셈블리(dll)의 이름으로 설정해야 합니다.
 
@@ -65,11 +65,11 @@ Options:
   -lang, --language   Filters templates based on language and specifies the language of the template to create.
 
 
-Templates                                         Short Name         Language          Tags
-----------------------------------------------------------------------------------------------------------------------------
-Console Application                               console            [C#], F#, VB      Common/Console
-Class library                                     classlib           [C#], F#, VB      Common/Library
-PowerShell Standard Module                        psmodule           [C#]              Library/PowerShell/Module
+Templates                        Short Name         Language          Tags
+-----------------------------------------------------------------------------------------------
+Console Application              console            [C#], F#, VB      Common/Console
+Class library                    classlib           [C#], F#, VB      Common/Library
+PowerShell Standard Module       psmodule           [C#]              Library/PowerShell/Module
 ...
 ```
 
@@ -156,9 +156,15 @@ FavoriteNumber FavoritePet
              7 Cat
 ```
 
+### <a name="debugging-the-module"></a>모듈 디버깅
+
+모듈을 디버그하도록 Visual Studio Code를 설정하는 방법은 [컴파일된 cmdlet 디버깅에 Visual Studio Code 사용][]을 참조하세요.
+
+## <a name="supporting-technologies"></a>지원 기술
+
 다음 섹션에서는 이 템플릿에서 사용되는 일부 기술을 자세히 설명합니다.
 
-## <a name="net-standard-library"></a>.NET Standard 라이브러리
+### <a name="net-standard-library"></a>.NET Standard 라이브러리
 
 [.NET Standard][]는 모든 .NET 구현에서 사용할 수 있는 .NET API의 공식 사양입니다. .NET Standard를 대상으로 하는 관리 코드는 .NET Standard의 해당 버전과 호환되는 .NET Framework 및 .NET Core 버전에서 작동합니다.
 
@@ -170,7 +176,7 @@ FavoriteNumber FavoritePet
 
 그러나 호환되는 API를 사용한다면 모듈을 Windows PowerShell 및 PowerShell Core에서 모두 작동하기 위해 .NET Standard를 대상으로 지정할 필요가 없습니다. IL(중간 언어)은 두 런타임 간에 호환됩니다. .NET Standard 2.0과 호환되는 .NET Framework 4.6.1을 대상으로 지정할 수 있습니다. .NET Standard 2.0 외부에서 API를 사용하지 않는 경우에는 다시 컴파일하지 않고도 모듈이 PowerShell Core 6에서 작동합니다.
 
-## <a name="powershell-standard-library"></a>PowerShell Standard Library
+### <a name="powershell-standard-library"></a>PowerShell Standard Library
 
 [PowerShell Standard][] 라이브러리는 해당 표준 버전 이상의 모든 PowerShell 버전에서 사용할 수 있는 PowerShell API의 공식 사양입니다.
 
@@ -179,9 +185,9 @@ FavoriteNumber FavoritePet
 PowerShell Standard Library를 사용하여 모듈을 컴파일하는 것이 좋습니다. 라이브러리를 사용하면 API가 Windows PowerShell 및 PowerShell Core 6에서 모두 사용 가능하고 구현됩니다.
 PowerShell Standard는 항상 상위 버전과 호환됩니다. PowerShell Standard Library 5.1을 사용하여 구축된 모듈은 항상 PowerShell의 상위 버전과 호환됩니다.
 
-## <a name="module-manifest"></a>모듈 매니페스트
+### <a name="module-manifest"></a>모듈 매니페스트
 
-### <a name="indicating-compatibility-with-windows-powershell-and-powershell-core"></a>Windows PowerShell 및 PowerShell Core와의 호환성 표시
+#### <a name="indicating-compatibility-with-windows-powershell-and-powershell-core"></a>Windows PowerShell 및 PowerShell Core와의 호환성 표시
 
 모듈이 Windows PowerShell 및 PowerShell Core에서 모두 작동하는지 유효성을 검사한 후 모듈 매니페스트에서 [CompatiblePSEditions][] 속성을 사용하여 호환성을 명시적으로 표시해야 합니다. `Desktop` 값은 모듈이 Windows PowerShell과 호환됨을 의미하지만, `Core` 값은 모듈이 PowerShell Core와 호환됨을 의미합니다. `Desktop` 및 `Core`를 둘 다 포함하면 모듈이 Windows PowerShell 및 PowerShell Core와 모두 호환됨을 의미합니다.
 
@@ -195,7 +201,7 @@ PowerShell Standard는 항상 상위 버전과 호환됩니다. PowerShell Stand
 
 모듈 매니페스트 내에서 `PrivateData` 속성에는 `PSData` 하위 속성이 있습니다. `PSData`의 선택적 `Tags` 속성은 PowerShell 갤러리에 표시되는 값 배열을 사용합니다. PowerShell 갤러리는 다음 호환성 값을 지원합니다.
 
-| 태그               | Description                                |
+| 태그               | 설명                                |
 |-------------------|--------------------------------------------|
 | PSEdition_Core    | PowerShell Core 6과 호환 가능          |
 | PSEdition_Desktop | Windows PowerShell과 호환 가능         |
@@ -249,7 +255,7 @@ PowerShell Standard는 항상 상위 버전과 호환됩니다. PowerShell Stand
 }
 ```
 
-## <a name="dependency-on-native-libraries"></a>네이티브 라이브러리에 대한 종속성
+### <a name="dependency-on-native-libraries"></a>네이티브 라이브러리에 대한 종속성
 
 여러 운영 체제 또는 프로세서 아키텍처에서 사용하기 위한 모듈은 자체적으로 일부 네이티브 라이브러리에 종속된 관리되는 라이브러리에 종속될 수 있습니다.
 
@@ -259,33 +265,33 @@ PowerShell 7에서는 [.NET RID 카탈로그][] 표기법의 하위 집합에 �
 
 ```
 managed.dll folder
-                |
-                |--- 'win-x64' folder
-                |       |--- native.dll
-                |
-                |--- 'win-x86' folder
-                |       |--- native.dll
-                |
-                |--- 'win-arm' folder
-                |       |--- native.dll
-                |
-                |--- 'win-arm64' folder
-                |       |--- native.dll
-                |
-                |--- 'linux-x64' folder
-                |       |--- native.so
-                |
-                |--- 'linux-x86' folder
-                |       |--- native.so
-                |
-                |--- 'linux-arm' folder
-                |       |--- native.so
-                |
-                |--- 'linux-arm64' folder
-                |       |--- native.so
-                |
-                |--- 'osx-x64' folder
-                |       |--- native.dylib
+    |
+    |--- 'win-x64' folder
+    |       |--- native.dll
+    |
+    |--- 'win-x86' folder
+    |       |--- native.dll
+    |
+    |--- 'win-arm' folder
+    |       |--- native.dll
+    |
+    |--- 'win-arm64' folder
+    |       |--- native.dll
+    |
+    |--- 'linux-x64' folder
+    |       |--- native.so
+    |
+    |--- 'linux-x86' folder
+    |       |--- native.so
+    |
+    |--- 'linux-arm' folder
+    |       |--- native.so
+    |
+    |--- 'linux-arm64' folder
+    |       |--- native.so
+    |
+    |--- 'osx-x64' folder
+    |       |--- native.dylib
 ```
 
 <!-- reference links -->
@@ -295,6 +301,7 @@ managed.dll folder
 [New-ModuleManifest]: /powershell/module/microsoft.powershell.core/new-modulemanifest
 [런타임 검사]: /dotnet/api/system.runtime.interopservices.runtimeinformation.frameworkdescription#System_Runtime_InteropServices_RuntimeInformation_FrameworkDescription
 [.NET CLI]: /dotnet/core/tools/?tabs=netcore2x
+[컴파일된 cmdlet 디버깅에 Visual Studio Code 사용]: vscode/using-vscode-for-debugging-compiled-cmdlets.md
 [.NET Standard]: /dotnet/standard/net-standard
 [PowerShell Standard]: https://github.com/PowerShell/PowerShellStandard
 [PowerShell Standard 5.1]: https://www.nuget.org/packages/PowerShellStandard.Library/5.1.0

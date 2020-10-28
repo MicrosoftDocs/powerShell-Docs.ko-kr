@@ -2,27 +2,28 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 컴퓨터 상태 변경
-ms.openlocfilehash: 9278df55ba027134a61c8ed4e89b5b839d460b29
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 예제에서는 PowerShell에서 외부 명령을 사용하여 컴퓨터의 구성을 관리하는 방법을 보여줍니다.
+ms.openlocfilehash: 341f29f24d7e4bd341ccc0954b16d4b75880678b
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75736916"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500677"
 ---
 # <a name="changing-computer-state"></a>컴퓨터 상태 변경
 
-PowerShell에서 컴퓨터를 다시 설정하려면 표준 명령줄 도구 WMI 또는 CIM 클래스를 사용합니다.
+PowerShell에서 컴퓨터를 다시 설정하려면 표준 명령줄 도구인 WMI 또는 CIM 클래스를 사용합니다.
 도구를 실행하기 위해서만 PowerShell을 사용하는 경우에도 PowerShell에서 컴퓨터의 전원 상태를 변경하는 방법을 알면 PowerShell에서 외부 도구를 사용하는 방법에 대한 몇 가지 중요한 세부 정보를 얻을 수 있습니다.
 
 ## <a name="locking-a-computer"></a>컴퓨터 잠금
 
-사용 가능한 표준 도구를 통해 직접 컴퓨터를 잠그는 유일한 방법은 **user32.dll**에서 **LockWorkstation()** 함수를 호출하는 것입니다.
+사용 가능한 표준 도구를 통해 직접 컴퓨터를 잠그는 유일한 방법은 **user32.dll** 에서 **LockWorkstation()** 함수를 호출하는 것입니다.
 
 ```powershell
 rundll32.exe user32.dll,LockWorkStation
 ```
 
-이 명령은 워크스테이션을 즉시 잠급니다. Windows Dll을 실행(및 반복 사용을 위해 해당 라이브러리 저장)하여 Windows 관리 함수 라이브러리인 `user32.dll`을 실행하는 **rundll32.exe**가 사용됩니다.
+이 명령은 워크스테이션을 즉시 잠급니다. Windows Dll을 실행(및 반복 사용을 위해 해당 라이브러리 저장)하여 Windows 관리 함수 라이브러리인 `user32.dll`을 실행하는 **rundll32.exe** 가 사용됩니다.
 
 Windows XP 등에서 빠른 사용자 전환이 사용되는 동안 워크스테이션을 잠그면 컴퓨터에서 현재 사용자의 화면 보호기가 시작되는 대신 사용자 로그온 화면이 표시됩니다.
 
@@ -30,7 +31,7 @@ Windows XP 등에서 빠른 사용자 전환이 사용되는 동안 워크스테
 
 ## <a name="logging-off-the-current-session"></a>현재 세션 로그오프
 
-여러 가지 방법을 사용하여 로컬 시스템에서 세션을 로그오프할 수 있습니다. 가장 간단한 방법은 원격 데스크톱/터미널 서비스 명령줄 도구인 **logoff.exe**를 사용하는 것입니다. 자세한 내용을 보려면 PowerShell 프롬프트에서 `logoff /?`를 입력합니다. 현재 활성 세션을 로그오프하려면 인수 없이 `logoff`를 입력합니다.
+여러 가지 방법을 사용하여 로컬 시스템에서 세션을 로그오프할 수 있습니다. 가장 간단한 방법은 원격 데스크톱/터미널 서비스 명령줄 도구인 **logoff.exe** 를 사용하는 것입니다. 자세한 내용을 보려면 PowerShell 프롬프트에서 `logoff /?`를 입력합니다. 현재 활성 세션을 로그오프하려면 인수 없이 `logoff`를 입력합니다.
 
 **shutdown.exe** 도구와 해당 로그오프 옵션을 사용할 수도 있습니다.
 

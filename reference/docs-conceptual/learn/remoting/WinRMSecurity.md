@@ -1,15 +1,16 @@
 ---
 ms.date: 06/11/2020
 keywords: powershell,cmdlet
-title: WinRMSecurity
-ms.openlocfilehash: ee7e5f2c9c9a863e29c9278c40703a05c1943246
-ms.sourcegitcommit: fd223afa50092839c74d8d5fbba791869665455f
+title: WinRM을 사용하는 PowerShell Remoting의 보안 고려 사항
+description: 이 문서에서는 PowerShell 원격을 사용할 때의 보안 문제, 권장 사항, 모범 사례 등을 설명합니다.
+ms.openlocfilehash: 48167bd297905883b3d75caf9a07d06e6a9fc467
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353841"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501476"
 ---
-# <a name="powershell-remoting-security-considerations"></a>PowerShell Remoting 보안 고려 사항
+# <a name="security-considerations-for-powershell-remoting-using-winrm"></a>WinRM을 사용하는 PowerShell Remoting의 보안 고려 사항
 
 PowerShell Remoting을 사용해 Windows 시스템을 관리하는 것이 좋습니다. Windows Server 2012 R2에서는 PowerShell Remoting이 기본적으로 사용됩니다. 이 문서에서는 PowerShell 원격을 사용할 때의 보안 문제, 권장 사항, 모범 사례 등을 설명합니다.
 

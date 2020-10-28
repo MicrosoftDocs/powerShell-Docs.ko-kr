@@ -2,16 +2,17 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 직접 항목 조작
-ms.openlocfilehash: 50aed569cf6b876297abe3cf1544eba70f6279ce
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShell은 로컬 및 원격 컴퓨터에서 항목을 관리하는 데 도움이 되는 여러 cmdlet을 제공합니다. 항목은 파일 시스템, 레지스트리, 인증서 등과 같은 PowerShell 공급자가 제공하는 개체입니다.
+ms.openlocfilehash: 20132b63a8ff4ef24b1d8346066315dbb053e59c
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030136"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500320"
 ---
 # <a name="manipulating-items-directly"></a>직접 항목 조작
 
-Windows PowerShell 드라이브에 표시되는 요소(예: 파일 시스템 드라이브의 파일 및 폴더, Windows PowerShell 레지스트리 드라이브의 레지스트리 키)를 Windows PowerShell에서는 *항목*이라고 합니다. 이러한 항목 작업을 위한 cmdlet은 이름에 명사 **Item**이 포함되어 있습니다.
+Windows PowerShell 드라이브에 표시되는 요소(예: 파일 시스템 드라이브의 파일 및 폴더, Windows PowerShell 레지스트리 드라이브의 레지스트리 키)를 Windows PowerShell에서는 *항목* 이라고 합니다. 이러한 항목 작업을 위한 cmdlet은 이름에 명사 **Item** 이 포함되어 있습니다.
 
 **Get-Command -Noun Item** 명령의 출력에는 9개의 Windows PowerShell 항목 cmdlet이 표시됩니다.
 
@@ -80,7 +81,7 @@ SKC  VC Name                           Property
 
 예를 들어 **HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run** 레지스트리 키에는 일반적으로 시스템을 시작할 때 실행되는 애플리케이션을 나타내는 여러 레지스트리 항목이 포함되어 있습니다.
 
-하지만 **Get-ChildItem**을 사용하여 키의 하위 항목을 찾을 경우 키의 **OptionalComponents** 하위 키만 표시됩니다.
+하지만 **Get-ChildItem** 을 사용하여 키의 하위 항목을 찾을 경우 키의 **OptionalComponents** 하위 키만 표시됩니다.
 
 ```
 PS> Get-ChildItem HKLM:\Software\Microsoft\Windows\CurrentVersion\Run
@@ -96,7 +97,7 @@ SKC  VC Name                           Property
 
 ## <a name="renaming-existing-items-rename-item"></a>기존 항목 이름 바꾸기(Rename-Item)
 
-파일 또는 폴더의 이름을 변경하려면 **Rename-Item** cmdlet을 사용합니다. 다음 명령은 **file1.txt** 파일의 이름을 **fileOne.txt**로 변경합니다.
+파일 또는 폴더의 이름을 변경하려면 **Rename-Item** cmdlet을 사용합니다. 다음 명령은 **file1.txt** 파일의 이름을 **fileOne.txt** 로 변경합니다.
 
 ```powershell
 Rename-Item -Path C:\temp\New.Directory\file1.txt fileOne.txt
@@ -115,7 +116,7 @@ At line:1 char:12
 
 파일 또는 폴더를 이동하려면 **Move-Item** cmdlet을 사용합니다.
 
-예를 들어 다음 명령은 New.Directory 디렉터리를 C:\\temp 디렉터리에서 C: 드라이브의 루트로 이동합니다. 항목이 이동되었는지 확인하려면 **Move-Item** cmdlet의 **PassThru** 매개 변수를 포함합니다. **Passthru**가 없을 경우 **Move-Item** cmdlet은 결과를 표시하지 않습니다.
+예를 들어 다음 명령은 New.Directory 디렉터리를 C:\\temp 디렉터리에서 C: 드라이브의 루트로 이동합니다. 항목이 이동되었는지 확인하려면 **Move-Item** cmdlet의 **PassThru** 매개 변수를 포함합니다. **Passthru** 가 없을 경우 **Move-Item** cmdlet은 결과를 표시하지 않습니다.
 
 ```
 PS> Move-Item -Path C:\temp\New.Directory -Destination C:\ -PassThru
@@ -137,7 +138,7 @@ d----        2006-05-18  12:14 PM            New.Directory
 Copy-Item -Path C:\New.Directory -Destination C:\temp
 ```
 
-**C:\\temp\\New.Directory**의 내용을 표시하면 파일이 포함되지 않은 것을 확인할 수 있습니다.
+**C:\\temp\\New.Directory** 의 내용을 표시하면 파일이 포함되지 않은 것을 확인할 수 있습니다.
 
 ```
 PS> Get-ChildItem -Path C:\temp\New.Directory
@@ -168,7 +169,7 @@ Mode                LastWriteTime     Length Name
 
 ## <a name="deleting-items-remove-item"></a>항목 삭제(Remove-Item)
 
-파일 및 폴더를 삭제하려면 **Remove-Item** cmdlet을 사용합니다. 되돌릴 수 없는 중요한 변경을 수행하는 Windows PowerShell cmdlet(예: **Remove-Item**)은 명령을 입력할 때 종종 확인 메시지를 표시합니다. 예를 들어 **New.Directory** 폴더를 제거하려는 경우 폴더에 파일이 포함되어 있으므로 명령을 확인하는 메시지가 표시됩니다.
+파일 및 폴더를 삭제하려면 **Remove-Item** cmdlet을 사용합니다. 되돌릴 수 없는 중요한 변경을 수행하는 Windows PowerShell cmdlet(예: **Remove-Item** )은 명령을 입력할 때 종종 확인 메시지를 표시합니다. 예를 들어 **New.Directory** 제거하려는 경우 폴더에 파일이 포함되어 있으므로 명령을 확인하는 메시지가 표시됩니다.
 
 ```
 PS> Remove-Item C:\New.Directory
@@ -181,7 +182,7 @@ specified. If you continue, all children will be removed with the item. Are you
 (default is "Y"):
 ```
 
-**예**가 기본 응답이므로 폴더와 해당 파일을 삭제하려면 **Enter** 키를 누릅니다. 확인하지 않고 폴더를 제거하려면 **-Recurse** 매개 변수를 사용합니다.
+**예** 가 기본 응답이므로 폴더와 해당 파일을 삭제하려면 **Enter** 키를 누릅니다. 확인하지 않고 폴더를 제거하려면 **-Recurse** 매개 변수를 사용합니다.
 
 ```powershell
 Remove-Item C:\temp\New.Directory -Recurse

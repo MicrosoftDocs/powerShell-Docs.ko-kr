@@ -1,12 +1,13 @@
 ---
 title: PowerShell 7 모듈 호환성
 ms.date: 02/03/2020
-ms.openlocfilehash: d618f9e55f5997bfd724a4e58bb94c348bd681ce
-ms.sourcegitcommit: 56463fb628a7d83dec4364e89417d83316c3e53b
+description: 이 문서에는 다른 Microsoft 제품에 대한 Powershell 모듈이 게시된 PowerShell 7의 상태가 나열되어 있습니다.
+ms.openlocfilehash: f845b33881c93fa076d97adf101f4f3e006df73b
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84722816"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501629"
 ---
 # <a name="powershell-7-module-compatibility"></a>PowerShell 7 모듈 호환성
 
@@ -24,7 +25,7 @@ Windows Server에서는 관리자 권한으로 [Install-WindowsFeature](/powersh
 Install-WindowsFeature -Name ActiveDirectory
 ```
 
-Windows 10에서는 Windows 관리 모듈이 **Windows 선택적 기능** 또는 **Windows 기능**으로 제공됩니다. **관리자 권한으로 실행**을 사용하여 관리자 권한 세션에서 다음 명령을 실행해야 합니다.
+Windows 10에서는 Windows 관리 모듈이 **Windows 선택적 기능** 또는 **Windows 기능** 으로 제공됩니다. **관리자 권한으로 실행** 을 사용하여 관리자 권한 세션에서 다음 명령을 실행해야 합니다.
 
 - Windows 선택적 기능:
 

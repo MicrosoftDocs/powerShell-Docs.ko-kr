@@ -2,12 +2,13 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: PowerShell 6.0의 알려진 문제
-ms.openlocfilehash: e9550e3db53865cfc2713d1d80665cced6f0d47a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShell 6의 알려진 문제 또는 제한 사항에 대한 요약 정보입니다.
+ms.openlocfilehash: 528315eff660167513045542227dce335355a7b8
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "76996114"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501680"
 ---
 # <a name="known-issues-for-powershell-60"></a>PowerShell 6.0의 알려진 문제
 
@@ -102,7 +103,7 @@ PowerShell에서 일반적으로 사용할 수 있는 많은 명령(cmdlet)이 L
 
 다음 표에는 Linux/macOS의 PowerShell에서 작동하지 않는 것으로 알려진 명령이 나와 있습니다.
 
-|명령|작동 상태|메모|
+|명령|작동 상태|참고|
 |--------|-----------------|-----|
 |`Get-Service`, `New-Service`, `Restart-Service`, `Resume-Service`, `Set-Service`, `Start-Service`, `Stop-Service`, `Suspend-Service`|사용할 수 없음.|이러한 명령은 인식되지 않습니다. 이 문제는 향후 릴리스에서 해결되어야 합니다.|
 |`Get-Acl`, `Get-AuthenticodeSignature`, `Get-CmsMessage`, `New-FileCatalog`, `Protect-CmsMessage`, `Set-Acl`, `Set-AuthenticodeSignature`, `Test-FileCatalog`, `Unprotect-CmsMessage`|사용할 수 없습니다.|이러한 명령은 인식되지 않습니다. 이 문제는 향후 릴리스에서 해결되어야 합니다.|

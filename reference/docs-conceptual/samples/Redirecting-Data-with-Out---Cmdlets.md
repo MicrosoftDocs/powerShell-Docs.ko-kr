@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Out Cmdlet을 사용하여 데이터 리디렉션
-ms.openlocfilehash: d4cc14e26bdef0f973f948177d0c1e68929605fa
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 PowerShell에서 출력을 관리하는 cmdlet을 사용하는 방법을 보여줍니다.
+ms.openlocfilehash: 3a9e3b1ac06f5be4e6f3bbc52a15c4afb5b12cef
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030087"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500218"
 ---
 # <a name="redirecting-data-with-out--cmdlets"></a>Out-* Cmdlet을 사용하여 데이터 리디렉션
 
@@ -15,7 +16,7 @@ Windows PowerShell에는 데이터 출력을 직접 제어할 수 있는 여러 
 
 첫째, 일반적으로 이러한 cmdlet은 데이터를 특정 텍스트 형식으로 변환합니다. 이는 텍스트 입력을 필요로 하는 시스템 구성 요소에 데이터를 출력하기 위한 것입니다. 즉, 개체를 텍스트로 표시해야 합니다. 따라서 Windows PowerShell 콘솔 창에 표시되는 대로 텍스트의 형식이 지정됩니다.
 
-둘째, 이러한 cmdlet은 Windows PowerShell에서 다른 위치로 정보를 내보내기 때문에 Windows PowerShell의 동사 **Out**을 사용합니다. **Out-Host** cmdlet은 항상 호스트 창을 Windows PowerShell의 외부에 표시합니다. 이는 Windows PowerShell에서 데이터를 내보내면 실제로 데이터가 제거되기 때문에 중요합니다. 다음과 같이 데이터를 호스트 창으로 페이징하는 파이프라인을 만든 다음 목록 형식으로 지정해 보면 이 동작을 재현할 수 있습니다.
+둘째, 이러한 cmdlet은 Windows PowerShell에서 다른 위치로 정보를 내보내기 때문에 Windows PowerShell의 동사 **Out** 을 사용합니다. **Out-Host** cmdlet은 항상 호스트 창을 Windows PowerShell의 외부에 표시합니다. 이는 Windows PowerShell에서 데이터를 내보내면 실제로 데이터가 제거되기 때문에 중요합니다. 다음과 같이 데이터를 호스트 창으로 페이징하는 파이프라인을 만든 다음 목록 형식으로 지정해 보면 이 동작을 재현할 수 있습니다.
 
 ```powershell
 Get-Process | Out-Host -Paging | Format-List
@@ -75,7 +76,7 @@ Name    : explorer
 Get-Command | Out-Host -Paging
 ```
 
-**more** 함수를 사용하여 데이터를 페이징할 수도 있습니다. Windows PowerShell에서 **more**는 **Out-Host -Paging**을 호출하는 함수입니다. 다음 명령은 **more** 함수를 사용하여 Get-Command의 출력을 페이징하는 방법을 보여 줍니다.
+**more** 함수를 사용하여 데이터를 페이징할 수도 있습니다. Windows PowerShell에서 **more** 는 **Out-Host -Paging** 을 호출하는 함수입니다. 다음 명령은 **more** 함수를 사용하여 Get-Command의 출력을 페이징하는 방법을 보여 줍니다.
 
 ```powershell
 Get-Command | more
@@ -134,7 +135,7 @@ Get-Process | Out-File -FilePath C:\temp\processlist.txt
 Get-Process | Out-File -FilePath C:\temp\processlist.txt -Encoding ASCII
 ```
 
-**Out-file**은 콘솔에 표시되는 것처럼 파일 내용의 형식을 지정하기 때문에 대부분의 경우 콘솔 창에서처럼 출력이 잘립니다. 예를 들어 다음 명령을 실행할 수 있습니다.
+**Out-file** 은 콘솔에 표시되는 것처럼 파일 내용의 형식을 지정하기 때문에 대부분의 경우 콘솔 창에서처럼 출력이 잘립니다. 예를 들어 다음 명령을 실행할 수 있습니다.
 
 ```powershell
 Get-Command | Out-File -FilePath c:\temp\output.txt
@@ -150,7 +151,7 @@ Cmdlet          Add-History                     Add-History [[-InputObject] ...
 ...
 ```
 
-출력할 때 화면 너비에 맞추기 위해 강제로 줄을 바꾸지 않으려면 **Width** 매개 변수를 사용하여 줄 너비를 지정하면 됩니다. **Width**는 32비트 정수 매개 변수이기 때문에 에 지정할 수 있는 최대값은 2147483647입니다. 줄 길이를 최대값으로 설정하려면 다음과 같이 입력합니다.
+출력할 때 화면 너비에 맞추기 위해 강제로 줄을 바꾸지 않으려면 **Width** 매개 변수를 사용하여 줄 너비를 지정하면 됩니다. **Width** 는 32비트 정수 매개 변수이기 때문에 에 지정할 수 있는 최대값은 2147483647입니다. 줄 길이를 최대값으로 설정하려면 다음과 같이 입력합니다.
 
 ```powershell
 Get-Command | Out-File -FilePath c:\temp\output.txt -Width 2147483647

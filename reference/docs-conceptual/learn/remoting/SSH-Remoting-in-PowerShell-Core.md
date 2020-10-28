@@ -1,13 +1,13 @@
 ---
 title: SSH를 통한 PowerShell 원격
-description: SSH를 사용하여 PowerShell Core에서 원격 작업
-ms.date: 07/23/2020
-ms.openlocfilehash: cc65db481fcedcafec16093dbf7e6af4975c73db
-ms.sourcegitcommit: 9dddf1d2e91ebcd347fcfb7bf6ef670d49a12ab7
+ms.date: 10/19/2020
+description: PowerShell 원격 기능을 사용하기 위해 SSH 프로토콜을 설정하는 방법을 설명합니다.
+ms.openlocfilehash: c3373ac30fd915d42e8c9fb7f1eae348a2aee7f1
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87133472"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501340"
 ---
 # <a name="powershell-remoting-over-ssh"></a>SSH를 통한 PowerShell 원격
 
@@ -25,7 +25,7 @@ SSH 원격 기능을 사용하면 Windows 및 Linux 컴퓨터 간에 기본적�
 [-HostName <string>]  [-UserName <string>]  [-KeyFilePath <string>]
 ```
 
-원격 세션을 만들려면 **HostName** 매개 변수를 사용하여 대상 컴퓨터를 지정하고 **UserName**을 사용하여 사용자 이름을 제공합니다. cmdlet을 대화형으로 실행하면 암호를 묻는 메시지가 나타납니다. **KeyFilePath** 매개 변수와 함께 프라이빗 키 파일을 사용하여 SSH 키 인증을 사용할 수도 있습니다.
+원격 세션을 만들려면 **HostName** 매개 변수를 사용하여 대상 컴퓨터를 지정하고 **UserName** 을 사용하여 사용자 이름을 제공합니다. cmdlet을 대화형으로 실행하면 암호를 묻는 메시지가 나타납니다. **KeyFilePath** 매개 변수와 함께 프라이빗 키 파일을 사용하여 SSH 키 인증을 사용할 수도 있습니다. SSH 인증용 키 만들기는 플랫폼에 따라 다릅니다.
 
 ## <a name="general-setup-information"></a>일반적인 설치 정보
 
@@ -33,9 +33,9 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
 
 ## <a name="set-up-on-a-windows-computer"></a>Windows 컴퓨터에서 설정하기
 
-1. 최신 버전의 PowerShell을 설치하고 [Windows에서 PowerShell Core 설치하기](../../install/installing-powershell-core-on-windows.md#msi)를 참조하세요.
+1. 최신 버전의 PowerShell을 설치합니다. 자세한 내용은 [Windows에서 PowerShell Core 설치](../../install/installing-powershell-core-on-windows.md#msi)를 참조하세요.
 
-   `New-PSSession` 매개 변수 집합을 나열하여 PowerShell에 SSH 원격 지원이 있는지 확인할 수 있습니다. **SSH**로 시작하는 매개 변수 집합 이름이 있는 것을 볼 수 있습니다. 이러한 매개 변수 집합은 **SSH** 매개 변수를 포함합니다.
+   `New-PSSession` 매개 변수 집합을 나열하여 PowerShell에 SSH 원격 지원이 있는지 확인할 수 있습니다. **SSH** 로 시작하는 매개 변수 집합 이름이 있는 것을 볼 수 있습니다. 이러한 매개 변수 집합은 **SSH** 매개 변수를 포함합니다.
 
    ```powershell
    (Get-Command New-PSSession).ParameterSets.Name
@@ -119,6 +119,14 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
    PasswordAuthentication yes
    ```
 
+   필요에 따라 키 인증을 활성화합니다.
+
+   ```
+   PubkeyAuthentication yes
+   ```
+
+   Ubuntu에서 SSH 키를 만드는 방법에 대한 자세한 내용은 [ssh-keygen](http://manpages.ubuntu.com/manpages/xenial/man1/ssh-keygen.1.html) 설명서 페이지를 참조하세요.
+
    PowerShell 하위 시스템 항목을 추가합니다.
 
    ```
@@ -134,15 +142,15 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
    PubkeyAuthentication yes
    ```
 
-1. **sshd** 서비스를 다시 시작합니다.
+1. **ssh** 서비스를 다시 시작합니다.
 
    ```bash
-   sudo service sshd restart
+   sudo service ssh restart
    ```
 
 ## <a name="set-up-on-a-macos-computer"></a>MacOS 컴퓨터에서 설정하기
 
-1. 최신 버전의 PowerShell을 설치하는 방법에 대한 자세한 내용은 [macOS에서 PowerShell Core 설치하기](../../install/installing-powershell-core-on-macos.md)를 참조하세요.
+1. 최신 버전의 PowerShell을 설치합니다. 자세한 내용은 [macOS에서 PowerShell Core 설치](../../install/installing-powershell-core-on-macos.md)를 참조하세요.
 
    다음 단계를 수행하여 SSH 원격 기능이 활성화되어 있는지 확인합니다.
 
@@ -153,7 +161,7 @@ PowerShell 6 이상 및 SSH를 모든 컴퓨터에 설치해야 합니다. 컴�
 
 1. `/private/etc/ssh/sshd_config` 위치에서 `sshd_config` 파일을 편집합니다.
 
-   **nano**와 같은 텍스트 편집기를 사용합니다.
+   **nano** 와 같은 텍스트 편집기를 사용합니다.
 
    ```bash
    sudo nano /private/etc/ssh/sshd_config

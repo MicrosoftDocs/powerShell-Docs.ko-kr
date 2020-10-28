@@ -4,12 +4,13 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: c48340b2fa6141d207c3f7948063f81971183780
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+description: Mike F. Robbins의 저서 PowerShell 101을 소개합니다.
+ms.openlocfilehash: d85590c2ef34c4e8b5cb7f2707bd9d6dd9b84b89
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438224"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501510"
 ---
 # <a name="introduction"></a>소개
 
@@ -38,7 +39,7 @@ PowerShell을 배우길 원하는 모든 사용자를 위한 초보자용 책입
 
 ## <a name="about-the-author"></a>저자 정보
 
-Mike F Robbins는 전 Microsoft MVP이자 _Windows PowerShell TFM 4th Edition_의 공동 저자이며, _PowerShell Deep Dives_ 도서의 기여 저자입니다. Mike는 PowerShell 커뮤니티의 열성적인 후원자이며 Microsoft [Azure PowerShell][] 수석 저자이기도 합니다. [mikefrobbins.com][]에 글을 올리며 Twitter [@mikefrobbins][]에서도 활동합니다.
+Mike F Robbins는 전 Microsoft MVP이자 _Windows PowerShell TFM 4th Edition_ 의 공동 저자이며, _PowerShell Deep Dives_ 도서의 기여 저자입니다. Mike는 PowerShell 커뮤니티의 열성적인 후원자이며 Microsoft [Azure PowerShell][] 수석 저자이기도 합니다. [mikefrobbins.com][]에 글을 올리며 Twitter [@mikefrobbins][]에서도 활동합니다.
 
 ## <a name="lab-environment"></a>랩 환경
 

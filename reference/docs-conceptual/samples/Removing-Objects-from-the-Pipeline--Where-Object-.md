@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 파이프라인에서 개체 제거(Where Object)
-ms.openlocfilehash: 370e7745341b70c0794352a690d5750d21f53ac2
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Where-Object cmdlet을 사용하면 파이프라인에서 전달된 개체를 필터링할 수 있습니다.
+ms.openlocfilehash: e744dc671303711f1cbe8cc724a97c3327c1da85
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75737188"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500116"
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>파이프라인에서 개체 제거(Where-Object)
 
@@ -17,7 +18,7 @@ PowerShell에는 파이프라인에 있는 각 개체를 테스트하고 특정 
 
 ## <a name="performing-simple-tests-with-where-object"></a>Where-Object를 사용하여 간단한 테스트 수행
 
-**FilterScript**의 값은 true 또는 false로 계산되는 하나의 *스크립트 블록*(하나 이상의 PowerShell 명령이 중괄호(`{}`)로 묶여 있음)입니다. 이러한 스크립트 블록은 매우 간단할 수 있지만 비교 연산자와 같은 다른 PowerShell 개념을 알고 있어야 만들 수 있습니다. 비교 연산자는 자신을 중심으로 양쪽에 표시되는 두 항목을 비교합니다. 비교 연산자의 이름은 하이픈 문자(`-`)로 시작되고 뒤에 이름이 옵니다. 기본 비교 연산자는 거의 모든 유형의 개체에서 작동하지만 고급 비교 연산자는 텍스트나 배열에서만 작동할 수 있습니다.
+**FilterScript** 의 값은 true 또는 false로 계산되는 하나의 *스크립트 블록* (하나 이상의 PowerShell 명령이 중괄호(`{}`)로 묶여 있음)입니다. 이러한 스크립트 블록은 매우 간단할 수 있지만 비교 연산자와 같은 다른 PowerShell 개념을 알고 있어야 만들 수 있습니다. 비교 연산자는 자신을 중심으로 양쪽에 표시되는 두 항목을 비교합니다. 비교 연산자의 이름은 하이픈 문자(`-`)로 시작되고 뒤에 이름이 옵니다. 기본 비교 연산자는 거의 모든 유형의 개체에서 작동하지만 고급 비교 연산자는 텍스트나 배열에서만 작동할 수 있습니다.
 
 > [!NOTE]
 > 기본적으로 PowerShell 비교 연산자는 텍스트를 비교할 때 대/소문자를 구분합니다.
@@ -49,7 +50,7 @@ PowerShell에는 파이프라인에 있는 각 개체를 테스트하고 특정 
 
 `$_`가 현재 파이프라인 개체를 참조하므로 테스트를 위해 이 개체의 속성에 액세스할 수 있습니다.
 
-예를 들어 WMI에서 **Win32_SystemDriver** 클래스를 살펴보면 특정 시스템에 수백 개의 시스템 드라이버가 있을 수 있지만 현재 실행 중인 드라이버와 같은 특정 시스템 드라이버 집합만 사용할 수 있습니다. **Win32_SystemDriver** 클래스의 경우 관련 속성이 **State**입니다. 다음과 같이 입력하면 시스템 드라이버를 필터링하여 실행 중인 드라이버만 선택할 수 있습니다.
+예를 들어 WMI에서 **Win32_SystemDriver** 클래스를 살펴보면 특정 시스템에 수백 개의 시스템 드라이버가 있을 수 있지만 현재 실행 중인 드라이버와 같은 특정 시스템 드라이버 집합만 사용할 수 있습니다. **Win32_SystemDriver** 클래스의 경우 관련 속성이 **State** 입니다. 다음과 같이 입력하면 시스템 드라이버를 필터링하여 실행 중인 드라이버만 선택할 수 있습니다.
 
 ```powershell
 Get-CimInstance -Class Win32_SystemDriver |

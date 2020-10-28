@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 여러 개체에 대해 작업 반복(ForEach Object)
-ms.openlocfilehash: bf89070fd9b006fa9b0b262ab63ffadd81072ecc
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: ForEach-Object를 사용하면 파이프라인을 통해 전달된 각 개체에 대해 명령 세트를 반복할 수 있습니다.
+ms.openlocfilehash: 7353be833dc8bf77dd18b7fc45bdd97e092ff6ef
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75736882"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499960"
 ---
 # <a name="repeating-a-task-for-multiple-objects-foreach-object"></a>여러 개체에 대해 작업 반복(ForEach-Object)
 
@@ -36,7 +37,7 @@ Get-CimInstance -Class Win32_LogicalDisk |
 48318.01171875
 ```
 
-그러나 이 출력에는 데이터를 나타내는 레이블이 포함되지 않습니다. 이러한 WMI 속성은 읽기 전용이므로 직접 **FreeSpace**를 변환할 수 없습니다. 예를 들어 다음과 같이 입력할 수 있습니다.
+그러나 이 출력에는 데이터를 나타내는 레이블이 포함되지 않습니다. 이러한 WMI 속성은 읽기 전용이므로 직접 **FreeSpace** 를 변환할 수 없습니다. 예를 들어 다음과 같이 입력할 수 있습니다.
 
 ```powershell
 Get-CimInstance -Class Win32_LogicalDisk |

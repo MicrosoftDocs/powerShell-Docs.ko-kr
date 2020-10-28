@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 레지스트리 키 작업
-ms.openlocfilehash: 3feaf6d26db51a507434a6cec1f1095c9013efc8
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 PowerShell을 사용하여 레지스트리 키를 처리하는 방법을 설명합니다.
+ms.openlocfilehash: 90e8417fc3454b959dc2a86fc63e722832bdab23
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75736848"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501391"
 ---
 # <a name="working-with-registry-keys"></a>레지스트리 키 작업
 
@@ -57,13 +58,13 @@ Get-ChildItem -Path Microsoft.PowerShell.Core\Registry::HKCU
 Get-ChildItem HKCU:
 ```
 
-이 명령은 **Cmd.exe**의 `DIR` 명령이나 UNIX 셸의 `ls`를 사용하는 것과 매우 유사한 방법으로 바로 아래에 포함된 항목만 보여 줍니다. 포함된 항목을 모두 보려면 **Recurse** 매개 변수를 지정해야 합니다. `HKCU:`의 모든 레지스트리 키를 나열하려면 다음 명령을 사용합니다.
+이 명령은 **Cmd.exe** 의 `DIR` 명령이나 UNIX 셸의 `ls`를 사용하는 것과 매우 유사한 방법으로 바로 아래에 포함된 항목만 보여 줍니다. 포함된 항목을 모두 보려면 **Recurse** 매개 변수를 지정해야 합니다. `HKCU:`의 모든 레지스트리 키를 나열하려면 다음 명령을 사용합니다.
 
 ```powershell
 Get-ChildItem -Path HKCU:\ -Recurse
 ```
 
-`Get-ChildItem`은 **Path**, **Filter**, **Include** 및 **Exclude** 매개 변수로 복잡한 필터링 기능을 수행할 수 있지만 이러한 변수는 일반적으로 이름을 기준으로 합니다. `Where-Object` cmdlet을 사용하여 항목의 다른 속성을 기반으로 복잡한 필터링을 수행할 수 있습니다. 다음 명령은 `HKCU:\Software` 내에서 정확히 한 개의 하위 키와 네 개의 값을 갖는 모든 키를 찾습니다.
+`Get-ChildItem`은 **Path** , **Filter** , **Include** 및 **Exclude** 매개 변수로 복잡한 필터링 기능을 수행할 수 있지만 이러한 변수는 일반적으로 이름을 기준으로 합니다. `Where-Object` cmdlet을 사용하여 항목의 다른 속성을 기반으로 복잡한 필터링을 수행할 수 있습니다. 다음 명령은 `HKCU:\Software` 내에서 정확히 한 개의 하위 키와 네 개의 값을 갖는 모든 키를 찾습니다.
 
 ```powershell
 Get-ChildItem -Path HKCU:\Software -Recurse |
@@ -84,7 +85,7 @@ Copy-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Destination H
 Copy-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Destination HKCU: -Recurse
 ```
 
-파일 시스템 복사를 위해 이전부터 사용하던 다른 도구를 계속 사용할 수 있습니다. 예를 들어 **reg.exe**, **regini.exe**, **regedit.exe** 같은 레지스트리 편집 도구와 **WScript.Shell** 및 WMI의 **StdRegProv** 클래스와 같이 레지스트리 편집을 지원하는 COM 개체를 Windows PowerShell에서 사용할 수 있습니다.
+파일 시스템 복사를 위해 이전부터 사용하던 다른 도구를 계속 사용할 수 있습니다. 예를 들어 **reg.exe** , **regini.exe** , **regedit.exe** 같은 레지스트리 편집 도구와 **WScript.Shell** 및 WMI의 **StdRegProv** 클래스와 같이 레지스트리 편집을 지원하는 COM 개체를 Windows PowerShell에서 사용할 수 있습니다.
 
 ## <a name="creating-keys"></a>키 만들기
 

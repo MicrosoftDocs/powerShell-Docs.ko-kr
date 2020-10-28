@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Process Cmdlet으로 프로세스 관리
-ms.openlocfilehash: 8de0cbae508958bf7970ce69e03257ea0a8dca6f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShell은 로컬 및 원격 컴퓨터에서 프로세스를 관리하는 데 도움이 되는 여러 cmdlet을 제공합니다.
+ms.openlocfilehash: 977a3459eeac22536341753ccd59357d718745f2
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75870747"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500439"
 ---
 # <a name="managing-processes-with-process-cmdlets"></a>Process Cmdlet으로 프로세스 관리
 
@@ -15,7 +16,7 @@ Windows PowerShell에서 Process cmdlet을 사용하여 Windows PowerShell의 �
 
 ## <a name="getting-processes-get-process"></a>프로세스 가져오기(Get-Process)
 
-로컬 컴퓨터에서 실행 중인 프로세스를 가져오려면 **Get-Process**를 매개 변수 없이 실행합니다.
+로컬 컴퓨터에서 실행 중인 프로세스를 가져오려면 **Get-Process** 를 매개 변수 없이 실행합니다.
 
 프로세스 이름 또는 프로세스 ID를 지정하여 특정 프로세스를 가져올 수 있습니다. 다음 명령은 Idle 프로세스를 가져옵니다.
 
@@ -27,7 +28,7 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
       0       0        0         16     0               0 Idle
 ```
 
-일반적으로 cmdlet이 데이터를 반환하지 않아도 오류 메시지가 나타나지 않지만 ProcessId를 사용하여 프로세스를 지정한 경우 **Get-Process**가 일치하는 항목을 찾지 못하면 오류 메시지가 나타납니다. 이 cmdlet의 기본 목적이 실행 중인 프로세스를 검색하는 것이기 때문입니다. 해당 Id를 가진 프로세스가 없으면 Id가 잘못되었거나 해당 프로세스가 이미 종료된 것일 수 있습니다.
+일반적으로 cmdlet이 데이터를 반환하지 않아도 오류 메시지가 나타나지 않지만 ProcessId를 사용하여 프로세스를 지정한 경우 **Get-Process** 가 일치하는 항목을 찾지 못하면 오류 메시지가 나타납니다. 이 cmdlet의 기본 목적이 실행 중인 프로세스를 검색하는 것이기 때문입니다. 해당 Id를 가진 프로세스가 없으면 Id가 잘못되었거나 해당 프로세스가 이미 종료된 것일 수 있습니다.
 
 ```
 PS> Get-Process -Id 99
@@ -52,7 +53,7 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 
 .NET System.Diagnostics.Process 클래스는 Windows PowerShell 프로세스의 기초이므로 System.Diagnostics.Process가 사용하는 일부 규칙을 따릅니다. 이러한 규칙 중 하나는 실행 파일의 프로세스 이름에 ".exe" 확장명을 포함하지 않는 것입니다.
 
-또한 **Get-Process**는 Name 매개 변수에 대해 여러 값을 허용합니다.
+또한 **Get-Process** 는 Name 매개 변수에 대해 여러 값을 허용합니다.
 
 ```
 PS> Get-Process -Name exp*,power*
@@ -143,7 +144,7 @@ Performing operation "Stop-Process" on Target "taskmgr (4072)".
 Get-Process | Where-Object -FilterScript {$_.Responding -eq $false} | Stop-Process
 ```
 
-위와 동일한 방법을 다른 경우에 사용할 수도 있습니다. 예를 들어 다른 애플리케이션을 시작하면 보조 알림 영역 애플리케이션이 자동으로 실행된다고 가정할 경우 이 보조 알림 영역 응용 프로그램이 터미널 서비스 세션에서 올바로 작동하지 않는 것을 알았지만 실제 컴퓨터 콘솔에서 실행되는 세션에서 이 응용 프로그램을 계속 실행할 수 있습니다. 실제 컴퓨터의 데스크톱에 연결된 세션에는 항상 세션 ID로 0이 지정되므로 다음과 같이 **Where-Object**와 **SessionId** 프로세스를 사용하여 다른 세션에 있는 프로세스의 인스턴스를 모두 중지할 수 있습니다.
+위와 동일한 방법을 다른 경우에 사용할 수도 있습니다. 예를 들어 다른 애플리케이션을 시작하면 보조 알림 영역 애플리케이션이 자동으로 실행된다고 가정할 경우 이 보조 알림 영역 응용 프로그램이 터미널 서비스 세션에서 올바로 작동하지 않는 것을 알았지만 실제 컴퓨터 콘솔에서 실행되는 세션에서 이 응용 프로그램을 계속 실행할 수 있습니다. 실제 컴퓨터의 데스크톱에 연결된 세션에는 항상 세션 ID로 0이 지정되므로 다음과 같이 **Where-Object** 와 **SessionId** 프로세스를 사용하여 다른 세션에 있는 프로세스의 인스턴스를 모두 중지할 수 있습니다.
 
 ```powershell
 Get-Process -Name BadApp | Where-Object -FilterScript {$_.SessionId -neq 0} | Stop-Process

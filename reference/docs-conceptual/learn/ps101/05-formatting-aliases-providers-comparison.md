@@ -4,12 +4,13 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: eb23b048a50f10ea83d156c0499772b1be439336
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+description: 이 챕터에서는 출력 형식 지정, 명령 별칭, 공급자 및 비교 작업의 개념을 소개합니다.
+ms.openlocfilehash: efe70d2d220f8451e781603b6000c3553dda910c
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438004"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501612"
 ---
 # <a name="chapter-5---formatting-aliases-providers-comparison"></a>5장 - 서식 지정, 별칭, 공급자 및 비교
 
@@ -393,7 +394,7 @@ False
 False
 ```
 
-이전 예제에서 크거나 같음을 사용하면 5는 5와 같기 때문에 **부울**이 true를 반환합니다.
+이전 예제에서 크거나 같음을 사용하면 5는 5와 같기 때문에 **부울** 이 true를 반환합니다.
 
 ```powershell
 5 -ge 5
@@ -472,7 +473,7 @@ $Numbers -notcontains 15
 True
 ```
 
-이전 예제에서는 `$Numbers` 변수에 15가 포함되지 않기 때문에 **부울**이 true를 반환합니다. 하지만 숫자 10을 포함하므로 테스트하면 false 값을 반환합니다.
+이전 예제에서는 `$Numbers` 변수에 15가 포함되지 않기 때문에 **부울** 이 true를 반환합니다. 하지만 숫자 10을 포함하므로 테스트하면 false 값을 반환합니다.
 
 ```powershell
 $Numbers -notcontains 10
@@ -524,7 +525,7 @@ False
 
 이전 예제에서는 `$Numbers` 배열에 10이 포함되어 있고 조건이 10이 포함되지 않은 것을 확인하는 테스트였기 때문에 false를 반환합니다.
 
-15는 `$Numbers` 배열 "내에 없으므로" **부울**은 true를 반환합니다.
+15는 `$Numbers` 배열 "내에 없으므로" **부울** 은 true를 반환합니다.
 
 ```powershell
 15 -notin $Numbers

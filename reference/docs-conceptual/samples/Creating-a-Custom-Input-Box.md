@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 사용자 지정 입력란 만들기
-ms.openlocfilehash: ff0588b44169bc276e2833254cec60eda759e2c8
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 Windows PowerShell의 .NET Framework 양식 작성 기능을 사용하여 사용자 지정 입력 상자를 만드는 방법을 보여줍니다.
+ms.openlocfilehash: 18fba743b169010936d2ea83dca4e95203664fe9
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "77706192"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500558"
 ---
 # <a name="creating-a-custom-input-box"></a>사용자 지정 입력란 만들기
 
@@ -65,7 +66,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-두 .NET Framework 클래스 **System.Drawing** 및 **System.Windows.Forms**를 로드하여 스크립트가 시작됩니다. 그런 다음 .NET Framework 클래스의 새 인스턴스인 **System.Windows.Forms.Form**을 시작하면 컨트롤을 추가할 수 있는 새 양식 또는 창이 제공됩니다.
+두 .NET Framework 클래스 **System.Drawing** 및 **System.Windows.Forms** 를 로드하여 스크립트가 시작됩니다. 그런 다음 .NET Framework 클래스의 새 인스턴스인 **System.Windows.Forms.Form** 을 시작하면 컨트롤을 추가할 수 있는 새 양식 또는 창이 제공됩니다.
 
 ```powershell
 $form = New-Object System.Windows.Forms.Form
@@ -77,8 +78,8 @@ Form 클래스의 인스턴스를 만든 후 이 클래스의 세 속성에 값�
 
 - **Size.** 양식의 크기(픽셀)입니다. 이전 스크립트는 너비가 300픽셀이고 높이가 200픽셀인 양식을 만듭니다.
 
-- **StartingPosition.** 이전 스크립트에서는 이 선택적 속성이 **CenterScreen**으로 설정되어 있습니다.
-  이 속성을 추가하지 않은 경우 양식을 열 때 위치가 자동으로 선택됩니다. **StartingPosition**을 **CenterScreen**으로 설정하면 양식이 로드할 때마다 화면 가운데 자동으로 표시됩니다.
+- **StartingPosition.** 이전 스크립트에서는 이 선택적 속성이 **CenterScreen** 으로 설정되어 있습니다.
+  이 속성을 추가하지 않으면 양식을 열 때 위치가 자동으로 선택됩니다. **StartingPosition** 을 **CenterScreen** 으로 설정하면 로드할 때마다 화면 가운데 양식이 자동으로 표시됩니다.
 
 ```powershell
 $form.Text = 'Data Entry Form'
@@ -120,7 +121,7 @@ $label.Text = 'Please enter the information in the space below:'
 $form.Controls.Add($label)
 ```
 
-사용자가 레이블 텍스트에 설명된 정보를 입력할 수 있는 컨트롤(이 경우 텍스트 상자)을 추가합니다. 세부적인 제어를 위해 텍스트 상자 이외에 다른 여러 컨트롤을 추가할 수 있습니다. 자세한 내용은 MSDN에서 [System.Windows.Forms 네임스페이스](/dotnet/api/system.windows.forms)를 참조하세요.
+사용자가 레이블 텍스트에 설명된 정보를 입력할 수 있는 컨트롤(여기서는 텍스트 상자)을 추가합니다. 세부적인 제어를 위해 텍스트 상자 이외에 다른 여러 컨트롤을 추가할 수 있습니다. 자세한 내용은 MSDN에서 [System.Windows.Forms 네임스페이스](/dotnet/api/system.windows.forms)를 참조하세요.
 
 ```powershell
 $textBox = New-Object System.Windows.Forms.TextBox
@@ -129,7 +130,7 @@ $textBox.Size = New-Object System.Drawing.Size(260,20)
 $form.Controls.Add($textBox)
 ```
 
-창을 다른 열린 창 및 대화 상자 위에 표시하려면 **Topmost** 속성을 **$true**로 설정합니다.
+창을 다른 열린 창 및 대화 상자 위에 표시하려면 **Topmost** 속성을 **$true** 로 설정합니다.
 
 ```powershell
 $form.Topmost = $true
@@ -152,8 +153,8 @@ $result = $form.ShowDialog()
 ```powershell
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 {
-    $x = $textBox.Text
-    $x
+    $x = $textBox.Text
+    $x
 }
 ```
 

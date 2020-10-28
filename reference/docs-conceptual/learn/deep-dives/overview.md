@@ -1,12 +1,13 @@
 ---
 title: 심층 조사
 ms.date: 05/23/2020
-ms.openlocfilehash: 9ba687c81f5bdc64881fa78a6e4ebbe051320358
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+description: 설명서의 심층 조사 섹션에는 cmdlet 참조보다 자세한 정보와 예제를 제공하는 문서가 포함되어 있습니다.
+ms.openlocfilehash: da42df8ff4590d12be88132ebc98278821d4f9ee
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149406"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501068"
 ---
 # <a name="deep-dive-articles"></a>심층 조사 문서
 

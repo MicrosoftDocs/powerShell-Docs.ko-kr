@@ -2,17 +2,18 @@
 ms.date: 07/28/2020
 keywords: powershell,cmdlet
 title: 파일, 폴더 및 레지스트리 키 작업
-ms.openlocfilehash: 7ead5d0e82feb852845468fb3a012a0908a4ce75
-ms.sourcegitcommit: 339e5fc8a4cc18b4ff6956fe5180343588e40e30
+description: 이 문서에서는 PowerShell을 사용하여 레지스트리 키 조작 작업을 처리하는 방법을 설명합니다.
+ms.openlocfilehash: 6f653c1fb409a238aa05658e89261a12e96f6fe1
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410192"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499980"
 ---
 # <a name="working-with-files-folders-and-registry-keys"></a>파일, 폴더 및 레지스트리 키 작업
 
-Windows PowerShell에서는 명사 **Item**을 사용하여 Windows PowerShell 드라이브에 있는 항목을 나타냅니다.
-Windows PowerShell FileSystem 공급자를 처리할 때 **Item**은 파일, 폴더 또는 Windows PowerShell 드라이브일 수 있습니다. 이러한 항목을 나열하고 사용하는 것은 대부분의 관리 설정의 기본적인 작업이므로 이러한 작업에 대해 자세히 살펴보겠습니다.
+Windows PowerShell에서는 명사 **Item** 을 사용하여 Windows PowerShell 드라이브에 있는 항목을 나타냅니다.
+Windows PowerShell FileSystem 공급자를 처리할 때 **Item** 은 파일, 폴더 또는 Windows PowerShell 드라이브일 수 있습니다. 이러한 항목을 나열하고 사용하는 것은 대부분의 관리 설정의 기본적인 작업이므로 이러한 작업에 대해 자세히 살펴보겠습니다.
 
 ## <a name="enumerating-files-folders-and-registry-keys-get-childitem"></a>파일, 폴더 및 레지스트리 키 열거(Get-ChildItem)
 
@@ -32,7 +33,7 @@ Mode                LastWriteTime     Length Name
 ...
 ```
 
-목록은 **Cmd.exe**에서 `dir` 명령을 입력하거나 UNIX 명령 셸에서 `ls` 명령을 입력할 때 표시되는 것과 비슷합니다.
+목록은 **Cmd.exe** 에서 `dir` 명령을 입력하거나 UNIX 명령 셸에서 `ls` 명령을 입력할 때 표시되는 것과 비슷합니다.
 
 `Get-ChildItem` cmdlet의 매개 변수를 사용하여 매우 복잡한 목록을 표시할 수 있습니다. 이제 몇 가지 시나리오를 살펴보겠습니다. 다음과 같이 입력하여 `Get-ChildItem` cmdlet의 구문을 표시할 수 있습니다.
 

@@ -2,12 +2,13 @@
 ms.date: 05/22/2020
 keywords: powershell,cmdlet
 title: PowerShell이란?
-ms.openlocfilehash: 267b2938a0892c99c3a961bc7107f573df40a683
-ms.sourcegitcommit: 38215ad49e237b219e62bb5a5f0eb3b6b048df1e
+description: 이 문서에서는 PowerShell 스크립팅 환경 및 해당 기능을 소개합니다.
+ms.openlocfilehash: 91fc580af9a3adf43a24c40b4aaf3f1843882705
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868482"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500779"
 ---
 # <a name="what-is-powershell"></a>PowerShell이란?
 
@@ -44,7 +45,7 @@ PowerShell은 명령줄 셸 및 스크립팅 언어로 구성된 플랫폼 간 �
 
 `cmd.exe`와 같은 인터페이스에서는 기본 제공 명령 세트를 직접 확장할 수 없습니다. `cmd.exe`에서 실행되는 외부 명령줄 도구를 만들 수 있습니다. 하지만 이러한 외부 도구에는 도움말 통합과 같은 서비스가 없습니다. `cmd.exe`는 이러한 외부 도구가 유효한 명령이라는 사실을 자동으로 알지 못합니다.
 
-PowerShell의 명령을 _cmdlets_라고 합니다. 각 cmdlet을 개별적으로 사용할 수 있지만, 조합하여 복잡한 작업을 수행할 때 그 능력이 실현됩니다. 많은 셸과 마찬가지로, PowerShell을 통해 컴퓨터의 파일 시스템에 액세스할 수 있습니다. PowerShell ‘공급자’를 통해 레지스트리 및 인증서 스토리지와 같은 다른 데이터 스토리지를 파일 시스템처럼 쉽게 액세스할 수 있습니다.
+PowerShell의 명령을 _cmdlets_ 라고 합니다. 각 cmdlet을 개별적으로 사용할 수 있지만, 조합하여 복잡한 작업을 수행할 때 그 능력이 실현됩니다. 많은 셸과 마찬가지로, PowerShell을 통해 컴퓨터의 파일 시스템에 액세스할 수 있습니다. PowerShell ‘공급자’를 통해 레지스트리 및 인증서 스토리지와 같은 다른 데이터 스토리지를 파일 시스템처럼 쉽게 액세스할 수 있습니다.
 
 컴파일된 코드 또는 스크립트를 사용하여 사용자 고유의 cmdlet 및 함수 모듈을 만들 수 있습니다. 모듈은 셸에 cmdlet 및 공급자를 추가할 수 있습니다. 또한 PowerShell은 UNIX 셸 스크립트 및 `cmd.exe` 배치 파일과 유사한 스크립트를 지원합니다.
 

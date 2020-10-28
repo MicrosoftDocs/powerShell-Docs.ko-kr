@@ -2,21 +2,23 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 개체 정렬
-ms.openlocfilehash: ed78e7e333f3468781c9cd96df2194fbdfebe753
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Sort-Object cmdlet을 사용하면 하나 이상의 속성에 대한 개체 컬렉션을 정렬할 수 있습니다.
+ms.openlocfilehash: 836207adfc566003e9714e45920d9b4e24a677e9
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030776"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501017"
 ---
 # <a name="sorting-objects"></a>개체 정렬
 
-`Sort-Object` cmdlet을 사용하여 표시된 데이터를 검색하기 쉽게 구성할 수 있습니다. `Sort-Object`는 정렬 기준으로 사용할 하나 이상의 속성 이름을 선택하고 이러한 속성의 값을 기준으로 정렬된 데이터를 반환합니다.
+`Sort-Object` cmdlet을 사용하여 표시된 데이터를 검색하기 쉽게 구성할 수 있습니다.
+`Sort-Object`는 정렬 기준으로 사용할 하나 이상의 속성 이름을 선택하고 이러한 속성의 값을 기준으로 정렬된 데이터를 반환합니다.
 
 ## <a name="basic-sorting"></a>기본 정렬
 
 현재 디렉터리의 하위 디렉터리 및 파일 나열 관련 문제를 살펴보겠습니다.
-정렬 기준으로 **LastWriteTime**과 **Name**을 차례로 사용하여 정렬하려면 다음과 같이 입력하면 됩니다.
+정렬 기준으로 **LastWriteTime** 과 **Name** 을 차례로 사용하여 정렬하려면 다음과 같이 입력하면 됩니다.
 
 ```powershell
 Get-ChildItem |
@@ -71,7 +73,7 @@ LastWriteTime          Name
 **Expression** 키는 필수입니다.
 **Ascending** 또는 **Descending** 키는 선택 사항입니다.
 
-다음 예제에서는 내림차순 **LastWriteTime** 및 오름차순 **Name**으로 개체를 정렬합니다.
+다음 예제에서는 내림차순 **LastWriteTime** 및 오름차순 **Name** 으로 개체를 정렬합니다.
 
 ```powershell
 Get-ChildItem |
@@ -136,7 +138,7 @@ sort LastWriteTime, Name
 Sort-Object @{ e = 'LastWriteTime'; d = $true }, @{ e = 'Name'; a = $true }
 ```
 
-이 예제에서 **e**는 **Expression**을 나타내고, **d**는 **Descending**을 나타내고, **a**는 **Ascending**을 나타냅니다.
+이 예제에서 **e** 는 **Expression** 을 나타내고, **d** 는 **Descending** 을 나타내고, **a** 는 **Ascending** 을 나타냅니다.
 
 가독성을 개선하기 위해 해시 테이블을 개별 변수에 넣을 수 있습니다.
 

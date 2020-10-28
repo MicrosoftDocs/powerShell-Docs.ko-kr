@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: .NET 및 COM 개체 만들기(New-Object)
-ms.openlocfilehash: 6e98a159451bc7da4ba3b37eaeb813eb71590d2b
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 개체 지향 스크립팅 언어인 PowerShell은 .NET 및 COM 기반 개체를 모두 지원합니다. 이 문서에서는 이러한 개체를 만들고 상호 작용하는 방법을 보여줍니다.
+ms.openlocfilehash: e6189ba465749dd045add7015fc82223c31c7e32
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71325160"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500575"
 ---
 # <a name="creating-net-and-com-objects-new-object"></a>.NET 및 COM 개체 만들기(New-Object)
 
@@ -28,7 +29,7 @@ PS> New-Object -TypeName System.Diagnostics.EventLog
 
 ### <a name="using-constructors-with-new-object"></a>New-Object와 함께 생성자 사용
 
-특정 이벤트 로그를 참조하려면 로그 이름을 지정해야 합니다. **New-Object**에는 **ArgumentList** 매개 변수가 있습니다. 이 매개 변수에 값으로 전달하는 인수는 개체의 특수 시작 메서드에서 사용됩니다. 메서드는 개체를 생성하는 데 사용되기 때문에 *생성자*라고 합니다. 예를 들어 애플리케이션 로그에 대한 참조를 가져오려면 'Application' 문자열을 인수로 지정합니다.
+특정 이벤트 로그를 참조하려면 로그 이름을 지정해야 합니다. **New-Object** 에는 **ArgumentList** 매개 변수가 있습니다. 이 매개 변수에 값으로 전달하는 인수는 개체의 특수 시작 메서드에서 사용됩니다. 메서드는 개체를 생성하는 데 사용되기 때문에 *생성자* 라고 합니다. 예를 들어 애플리케이션 로그에 대한 참조를 가져오려면 'Application' 문자열을 인수로 지정합니다.
 
 ```
 PS> New-Object -TypeName System.Diagnostics.EventLog -ArgumentList Application
@@ -78,7 +79,7 @@ PS> $RemoteAppLog
 
 ### <a name="clearing-an-event-log-with-object-methods"></a>개체 메서드를 사용하여 이벤트 로그 지우기
 
-개체에 작업을 수행하기 위해 호출할 수 있는 메서드가 있는 경우가 많습니다. **Get-Member**를 사용하여 개체와 연결된 메서드를 표시할 수 있습니다. 다음 명령과 선택한 출력은 EventLog 클래스의 일부 메서드를 보여 줍니다.
+개체에 작업을 수행하기 위해 호출할 수 있는 메서드가 있는 경우가 많습니다. **Get-Member** 를 사용하여 개체와 연결된 메서드를 표시할 수 있습니다. 다음 명령과 선택한 출력은 EventLog 클래스의 일부 메서드를 보여 줍니다.
 
 ```
 PS> $RemoteAppLog | Get-Member -MemberType Method
@@ -118,11 +119,11 @@ PS> $RemoteAppLog
 ```
 
 ## <a name="creating-com-objects-with-new-object"></a>New-Object를 사용하여 COM 개체 만들기
-**New-Object**를 사용하여 COM(구성 요소 개체 모델) 구성 요소로 작업할 수 있습니다. 구성 요소는 WSH(Windows 스크립트 호스트)에 포함된 다양한 라이브러리부터 대부분의 시스템에 설치되어 있는 Internet Explorer와 같은 ActiveX 애플리케이션에 이르기까지 다양합니다.
+**New-Object** 를 사용하여 COM(구성 요소 개체 모델) 구성 요소로 작업할 수 있습니다. 구성 요소는 WSH(Windows 스크립트 호스트)에 포함된 다양한 라이브러리부터 대부분의 시스템에 설치되어 있는 Internet Explorer와 같은 ActiveX 애플리케이션에 이르기까지 다양합니다.
 
-**New-Object**는 .NET Framework 런타임 호출 가능 래퍼를 사용하여 COM 개체를 만들기 때문에 .NET Framework에서 COM 개체를 호출할 때와 동일한 제한 사항이 있습니다. COM 개체를 만들려면 사용하려는 COM 클래스의 *ProgId* 또는 프로그래밍 방식 식별자와 함께 **ComObject** 매개 변수를 지정해야 합니다. COM 사용의 제한 사항과 시스템에서 사용할 수 있는 ProgId 확인 방법에 대한 자세한 설명은 이 사용자 가이드의 범위를 벗어나지만 WSH와 같은 환경에서 잘 알려진 대부분의 개체는 Windows PowerShell 내에서 사용할 수 있습니다.
+**New-Object** 는 .NET Framework 런타임 호출 가능 래퍼를 사용하여 COM 개체를 만들기 때문에 .NET Framework에서 COM 개체를 호출할 때와 동일한 제한 사항이 있습니다. COM 개체를 만들려면 사용하려는 COM 클래스의 *ProgId* 또는 프로그래밍 방식 식별자와 함께 **ComObject** 매개 변수를 지정해야 합니다. COM 사용의 제한 사항과 시스템에서 사용할 수 있는 ProgId 확인 방법에 대한 자세한 설명은 이 사용자 가이드의 범위를 벗어나지만 WSH와 같은 환경에서 잘 알려진 대부분의 개체는 Windows PowerShell 내에서 사용할 수 있습니다.
 
-**WScript.Shell**, **WScript.Network**, **Scripting.Dictionary**, **Scripting.FileSystemObject** 등의 progid를 지정하여 WSH 개체를 만들 수 있습니다. 이러한 개체를 만드는 명령은 다음과 같습니다.
+**WScript.Shell** , **WScript.Network** , **Scripting.Dictionary** , **Scripting.FileSystemObject** 등의 progid를 지정하여 WSH 개체를 만들 수 있습니다. 이러한 개체를 만드는 명령은 다음과 같습니다.
 
 ```powershell
 New-Object -ComObject WScript.Shell
@@ -155,7 +156,7 @@ CreateShortcut           Method                IDispatch CreateShortcut (str...
 ...
 ```
 
-**Get-Member**에는 파이프 대신 사용하여 **Get-Member**에 입력을 제공할 수 있는 선택적 **InputObject** 매개 변수가 있습니다. **Get-Member -InputObject $WshShell** 명령을 대신 사용한 경우 위와 동일한 출력이 표시됩니다. **InputObject**를 사용하는 경우 해당 인수가 단일 항목으로 처리됩니다. 즉, 변수에 여러 개체가 있는 경우 **Get-Member**는 개체 배열로 처리합니다. 다음은 그 예입니다.
+**Get-Member** 에는 파이프 대신 사용하여 **Get-Member** 에 입력을 제공할 수 있는 선택적 **InputObject** 매개 변수가 있습니다. **Get-Member -InputObject $WshShell** 명령을 대신 사용한 경우 위와 동일한 출력이 표시됩니다. **InputObject** 를 사용하는 경우 해당 인수가 단일 항목으로 처리됩니다. 즉, 변수에 여러 개체가 있는 경우 **Get-Member** 는 개체 배열로 처리합니다. 예를 들면 다음과 같습니다.
 
 ```
 PS> $a = 1,2,"three"
@@ -182,7 +183,7 @@ PS> '$Home\Desktop\PSHome.lnk'
 $Home\Desktop\PSHome.lnk
 ```
 
-이제 새 바로 가기 참조를 포함하는 **$lnk** 변수가 있습니다. 해당 멤버를 확인하려는 경우 **Get-Member**에 파이프할 수 있습니다. 아래 출력은 바로 가기 만들기를 완료하는 데 사용해야 하는 멤버를 보여 줍니다.
+이제 새 바로 가기 참조를 포함하는 **$lnk** 변수가 있습니다. 해당 멤버를 확인하려는 경우 **Get-Member** 에 파이프할 수 있습니다. 아래 출력은 바로 가기 만들기를 완료하는 데 사용해야 하는 멤버를 보여 줍니다.
 
 ```
 PS> $lnk | Get-Member
@@ -195,7 +196,7 @@ Save             Method       void Save ()
 TargetPath       Property     string TargetPath () {get} {set}
 ```
 
-Windows PowerShell의 애플리케이션 폴더인 **TargetPath**를 지정한 다음 **Save** 메서드를 호출하여 **$lnk** 바로 가기를 저장해야 합니다. Windows PowerShell 애플리케이션 폴더 경로는 **$PSHome** 변수에 저장되므로 다음과 같이 입력하면 됩니다.
+Windows PowerShell의 애플리케이션 폴더인 **TargetPath** 를 지정한 다음 **Save** 메서드를 호출하여 **$lnk** 바로 가기를 저장해야 합니다. Windows PowerShell 애플리케이션 폴더 경로는 **$PSHome** 변수에 저장되므로 다음과 같이 입력하면 됩니다.
 
 ```powershell
 $lnk.TargetPath = $PSHome
@@ -206,7 +207,7 @@ $lnk.Save()
 
 COM을 사용하여 많은 애플리케이션(Microsoft Office 애플리케이션 제품군 및 Internet Explorer 포함)을 자동화할 수 있습니다. Internet Explorer는 COM 기반 애플리케이션 작업과 관련된 몇 가지 일반적인 방법과 문제를 보여 줍니다.
 
-Internet Explorer ProgId인 **InternetExplorer.Application**을 지정하여 Internet Explorer 인스턴스를 만듭니다.
+Internet Explorer ProgId인 **InternetExplorer.Application** 을 지정하여 Internet Explorer 인스턴스를 만듭니다.
 
 ```powershell
 $ie = New-Object -ComObject InternetExplorer.Application
@@ -215,9 +216,9 @@ $ie = New-Object -ComObject InternetExplorer.Application
 이 명령은 Internet Explorer를 시작하지만 표시하지는 않습니다. Get-Process를 입력하면 iexplore라는 프로세스가 실행되고 있는 것을 확인할 수 있습니다. 실제로 Windows PowerShell을 종료해도 프로세스는 계속 실행됩니다. iexplore 프로세스를 종료하려면 컴퓨터를 다시 부팅하거나 작업 관리자와 같은 도구를 사용해야 합니다.
 
 > [!NOTE]
-> 별도 프로세스로 시작되며, 흔히 *ActiveX 실행 파일*이라고 불리는 COM 개체는 시작될 때 사용자 인터페이스 창을 표시할 수도 있고, 표시하지 않을 수도 있습니다. Internet Explorer처럼 창을 만들지만 표시하지 않는 경우 일반적으로 포커스가 Windows 바탕 화면으로 이동하며, 창을 조작하려면 표시해야 합니다.
+> 별도 프로세스로 시작되며, 흔히 *ActiveX 실행 파일* 이라고 불리는 COM 개체는 시작될 때 사용자 인터페이스 창을 표시할 수도 있고, 표시하지 않을 수도 있습니다. Internet Explorer처럼 창을 만들지만 표시하지 않는 경우 일반적으로 포커스가 Windows 바탕 화면으로 이동하며, 창을 조작하려면 표시해야 합니다.
 
-**$ie | Get-Member**를 입력하면 Internet Explorer의 속성과 메서드를 볼 수 있습니다. Internet Explorer 창을 보려면 다음과 같이 입력하여 Visible 속성을 $true로 설정합니다.
+**$ie | Get-Member** 를 입력하면 Internet Explorer의 속성과 메서드를 볼 수 있습니다. Internet Explorer 창을 보려면 다음과 같이 입력하여 Visible 속성을 $true로 설정합니다.
 
 ```powershell
 $ie.Visible = $true
@@ -263,7 +264,7 @@ Remove-Variable ie
 
 ## <a name="getting-warnings-about-net-framework-wrapped-com-objects"></a>.NET Framework-Wrapped COM 개체에 대한 경고 보기
 
-경우에 따라 COM 개체에는 **New-Object**가 사용하는 .NET Framework RCW(*런타임 호출 가능 래퍼*)가 포함되어 있을 수 있습니다. RCW의 동작이 일반적인 COM 개체와 다를 수 있기 때문에 **New-Object**에는 RCW 액세스에 대해 경고하는 **Strict** 매개 변수가 포함되어 있습니다. **Strict** 매개 변수를 지정한 다음 RCW를 사용하는 COM 개체를 만들면 다음과 같은 경고 메시지가 나타납니다.
+경우에 따라 COM 개체에는 **New-Object** 가 사용하는 .NET Framework RCW( *런타임 호출 가능 래퍼* )가 포함되어 있을 수 있습니다. RCW의 동작이 일반적인 COM 개체와 다를 수 있기 때문에 **New-Object** 에는 RCW 액세스에 대해 경고하는 **Strict** 매개 변수가 포함되어 있습니다. **Strict** 매개 변수를 지정한 다음 RCW를 사용하는 COM 개체를 만들면 다음과 같은 경고 메시지가 나타납니다.
 
 ```
 PS> $xl = New-Object -ComObject Excel.Application -Strict

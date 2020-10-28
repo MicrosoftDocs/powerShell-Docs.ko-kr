@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 네트워킹 작업 수행
-ms.openlocfilehash: e0aa3b8ef3d911ab0fe851f6621d70e1265c5bd4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 PowerShell에서 WMI 클래스를 사용하여 Windows의 네트워크 구성 설정을 관리하는 방법을 보여줍니다.
+ms.openlocfilehash: 95b05c193f4168cdcdf8414399c4f8c569bff754
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75737205"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500252"
 ---
 # <a name="performing-networking-tasks"></a>네트워킹 작업 수행
 
@@ -52,7 +53,7 @@ Name      MemberType Definition
 IPAddress Property   string[] IPAddress {get;}
 ```
 
-각 네트워크 어댑터의 IP주소 속성은 실제 배열입니다. 정의에 있는 중괄호는 **IPAddress**가 **System.String** 값이 아니라 **System.String** 값의 배열임을 나타냅니다.
+각 네트워크 어댑터의 IP주소 속성은 실제 배열입니다. 정의에 있는 중괄호는 **IPAddress** 가 **System.String** 값이 아니라 **System.String** 값의 배열임을 나타냅니다.
 
 ## <a name="listing-ip-configuration-data"></a>IP 구성 데이터 표시
 
@@ -75,7 +76,7 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true
 
 ## <a name="pinging-computers"></a>컴퓨터에 대해 ping 수행
 
-**Win32_PingStatus**를 사용하여 컴퓨터에 대해 간단한 ping을 수행할 수 있습니다. 다음 명령은 ping을 수행하지만 긴 출력 결과를 반환합니다.
+**Win32_PingStatus** 를 사용하여 컴퓨터에 대해 간단한 ping을 수행할 수 있습니다. 다음 명령은 ping을 수행하지만 긴 출력 결과를 반환합니다.
 
 ```powershell
 Get-CimInstance -Class Win32_PingStatus -Filter "Address='127.0.0.1'"
@@ -133,7 +134,7 @@ Get-CimInstance -Class Win32_NetworkAdapter -ComputerName .
 
 ## <a name="assigning-the-dns-domain-for-a-network-adapter"></a>네트워크 어댑터의 DNS 도메인 할당
 
-자동 이름 확인에 사용할 DNS 도메인을 할당하려면 **Win32_NetworkAdapterConfiguration**의 **SetDNSDomain** 메서드를 사용합니다. 각 네트워크 어댑터 구성에 대해 개별적으로 DNS 도메인을 할당하기 때문에 다음과 같이 `ForEach-Object` 문을 사용하여 각 어댑터에 도메인을 할당해야 합니다.
+자동 이름 확인에 사용할 DNS 도메인을 할당하려면 **Win32_NetworkAdapterConfiguration** 의 **SetDNSDomain** 메서드를 사용합니다. 각 네트워크 어댑터 구성에 대해 개별적으로 DNS 도메인을 할당하기 때문에 다음과 같이 `ForEach-Object` 문을 사용하여 각 어댑터에 도메인을 할당해야 합니다.
 
 ```powershell
 Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true |
@@ -211,7 +212,7 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$tru
 
 ### <a name="releasing-and-renewing-dhcp-leases-on-all-adapters"></a>모든 어댑터에서 DHCP 임대 해제 및 갱신
 
-**Win32_NetworkAdapterConfiguration** 메서드, **ReleaseDHCPLeaseAll** 및 **RenewDHCPLeaseAll**을 사용하여 모든 어댑터에서 DHCP 주소를 한꺼번에 임대 해제 또는 갱신할 수 있습니다.
+**Win32_NetworkAdapterConfiguration** 메서드, **ReleaseDHCPLeaseAll** 및 **RenewDHCPLeaseAll** 을 사용하여 모든 어댑터에서 DHCP 주소를 한꺼번에 임대 해제 또는 갱신할 수 있습니다.
 그러나 특정 어댑터 대신 WMI 클래스에서 한꺼번에 임대 해제하고 갱신하므로 이 명령을 특정 어댑터가 아니라 WMI 클래스에 적용해야 합니다.
 
 WMI 클래스를 모두 표시하고 원하는 클래스만 이름으로 선택하여 클래스 인스턴스 대신 WMI 클래스에 대한 참조를 사용할 수 있습니다. 예를 들어 다음 명령은 **Win32_NetworkAdapterConfiguration** 클래스를 반환합니다.
@@ -236,7 +237,7 @@ Get-CimInstance -List | Where-Object {$_.Name -eq 'Win32_NetworkAdapterConfigura
 
 ## <a name="creating-a-network-share"></a>네트워크 공유 만들기
 
-네트워크 공유를 만들려면 다음과 같이 **Win32_Share**의 **Create** 메서드를 사용합니다.
+네트워크 공유를 만들려면 다음과 같이 **Win32_Share** 의 **Create** 메서드를 사용합니다.
 
 ```powershell
 (Get-CimInstance -List |
@@ -253,7 +254,7 @@ net share tempshare=c:\temp /users:25 /remark:"test share of the temp folder"
 
 ## <a name="removing-a-network-share"></a>네트워크 공유 제거
 
-**Win32_Share**와 함께 네트워크 공유를 제거할 수 있지만 **Win32_Share** 클래스 대신 제거할 특정 공유를 검색해야 하므로 제거 프로세스는 공유 만들기와 약간 다릅니다. 다음 문은 **TempShare** 공유를 삭제합니다.
+**Win32_Share** 와 함께 네트워크 공유를 제거할 수 있지만 **Win32_Share** 클래스 대신 제거할 특정 공유를 검색해야 하므로 제거 프로세스는 공유 만들기와 약간 다릅니다. 다음 문은 **TempShare** 공유를 삭제합니다.
 
 ```powershell
 (Get-CimInstance -Class Win32_Share -Filter "Name='TempShare'").Delete()

@@ -2,16 +2,17 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 정적 클래스 및 메서드 사용
-ms.openlocfilehash: 437e7b430f37224de7c617e120e37c3efcd7787a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 .NET 정적 클래스의 속성 및 메서드를 식별하고 사용하는 방법을 설명합니다.
+ms.openlocfilehash: 2e83fe442f7b3fdf62ceaab587450251ac4e7958
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030740"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501255"
 ---
 # <a name="using-static-classes-and-methods"></a>정적 클래스 및 메서드 사용
 
-일부 .NET Framework 클래스는 **New-Object**를 사용하여 만들 수 없습니다. 예를 들어 **New-Object**를 사용하여 **System.Environment** 또는 **System.Math** 개체를 만들려고 하면 다음과 같은 오류 메시지가 나타납니다.
+일부 .NET Framework 클래스는 **New-Object** 를 사용하여 만들 수 없습니다. 예를 들어 **New-Object** 를 사용하여 **System.Environment** 또는 **System.Math** 개체를 만들려고 하면 다음과 같은 오류 메시지가 나타납니다.
 
 ```
 PS> New-Object System.Environment
@@ -27,7 +28,7 @@ At line:1 char:11
 + New-Object  <<<< System.Math
 ```
 
-이러한 오류는 .NET Framework 클래스에서 새 개체를 만들 수 없기 때문에 발생합니다. .NET Framework 클래스는 상태가 바뀌지 않는 메서드와 속성의 참조 라이브러리로, 직접 만들지 않아도 사용할 수 있습니다. 만들거나, 제거하거나, 변경할 수 없으므로 이러한 클래스와 메서드를 *정적 클래스*라고 합니다. 이해를 돕기 위해 이 설명서에서는 정적 클래스를 사용하는 예제를 제공합니다.
+이러한 오류는 .NET Framework 클래스에서 새 개체를 만들 수 없기 때문에 발생합니다. .NET Framework 클래스는 상태가 바뀌지 않는 메서드와 속성의 참조 라이브러리로, 직접 만들지 않아도 사용할 수 있습니다. 만들거나, 제거하거나, 변경할 수 없으므로 이러한 클래스와 메서드를 *정적 클래스* 라고 합니다. 이해를 돕기 위해 이 설명서에서는 정적 클래스를 사용하는 예제를 제공합니다.
 
 ## <a name="getting-environment-data-with-systemenvironment"></a>System.Environment를 사용하여 환경 데이터 보기
 
@@ -35,7 +36,7 @@ At line:1 char:11
 
 ### <a name="referring-to-the-static-systemenvironment-class"></a>정적 System.Environment 클래스 참조
 
-클래스 이름을 대괄호로 묶으면 정적 클래스를 참조할 수 있습니다. 예를 들어 대괄호 안에 이름을 입력하여 **System.Environment**를 참조할 수 있습니다. 이렇게 하면 다음과 같은 일반적인 유형 정보가 표시됩니다.
+클래스 이름을 대괄호로 묶으면 정적 클래스를 참조할 수 있습니다. 예를 들어 대괄호 안에 이름을 입력하여 **System.Environment** 를 참조할 수 있습니다. 이렇게 하면 다음과 같은 일반적인 유형 정보가 표시됩니다.
 
 ```
 PS> [System.Environment]
@@ -46,11 +47,11 @@ True     False    Environment                              System.Object
 ```
 
 > [!NOTE]
-> 앞에서 언급한 것처럼 Windows PowerShell에서 **New Object** 를 사용하면 자동으로 유형 이름 앞에 '**System.** '이 추가됩니다. 대괄호로 묶은 유형 이름을 사용하는 경우에도 마찬가지이므로 **\[System.Environment]** 를 **\[Environment]** 로 지정할 수 있습니다.
+> 앞에서 언급한 것처럼 Windows PowerShell에서 **New Object** 를 사용하면 자동으로 유형 이름 앞에 ' **System.** '이 추가됩니다. 대괄호로 묶은 유형 이름을 사용하는 경우에도 마찬가지이므로 **\[System.Environment]** 를 **\[Environment]** 로 지정할 수 있습니다.
 
 **System.Environment** 클래스에는 현재 프로세스(Windows PowerShell에서 작업하는 경우 powershell.exe임)의 작업 환경에 대한 일반적인 정보가 포함되어 있습니다.
 
-**\[System.Environment] | Get-Member**를 입력하여 이 클래스에 대한 세부 정보를 표시하면 다음과 같이 개체 유형이 **System.Environment**가 아니라 **System.RuntimeType**으로 표시됩니다.
+**\[System.Environment] | Get-Member** 를 입력하여 이 클래스에 대한 세부 정보를 표시하면 다음과 같이 개체 유형이 **System.Environment** 가 아니라 **System.RuntimeType** 으로 표시됩니다.
 
 ```
 PS> [System.Environment] | Get-Member
@@ -119,7 +120,7 @@ False
 
 ## <a name="doing-math-with-systemmath"></a>System.Math를 사용하여 산술 연산 수행
 
-System.Math 정적 클래스는 일부 산술 연산을 수행하는 데 유용합니다. **System.Math**의 중요한 멤버는 대부분 **Get-Member**를 사용하여 표시할 수 있는 메서드입니다.
+System.Math 정적 클래스는 일부 산술 연산을 수행하는 데 유용합니다. **System.Math** 의 중요한 멤버는 대부분 **Get-Member** 를 사용하여 표시할 수 있는 메서드입니다.
 
 > [!NOTE]
 > System.Math에는 동일한 이름을 가진 메서드가 여러 개 있지만 유형이 서로 다릅니다.

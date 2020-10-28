@@ -2,16 +2,17 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: 소프트웨어 설치 작업
-ms.openlocfilehash: f3023d8819d6cdcc9f55befcfedb21e6ff9d282c
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 WMI를 사용하여 Windows에 설치된 소프트웨어를 관리하는 방법을 보여줍니다.
+ms.openlocfilehash: 3cf8e3c58e9f2814e2551b3602bd7b47b375aed8
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "76996117"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500881"
 ---
 # <a name="working-with-software-installations"></a>소프트웨어 설치 작업
 
-Windows Installer를 사용하도록 설계된 애플리케이션은 WMI의 **Win32_Product** 클래스를 통해 액세스할 수 있지만, 현재 출시된 일부 애플리케이션에서는 Windows Installer를 사용하지 않습니다.
+Windows Installer를 사용하도록 설계된 응용 프로그램은 WMI의 **Win32_Product** 클래스를 통해 액세스할 수 있지만, 현재 출시된 일부 응용 프로그램에서는 Windows Installer를 사용하지 않습니다.
 대체 설치 루틴을 사용하는 애플리케이션은 일반적으로 Windows Installer에서 관리하지 않습니다.
 이러한 애플리케이션으로 작업하기 위한 구체적인 기술은 설치 관리자 소프트웨어와 애플리케이션 개발자의 결정에 따라 다릅니다. 예를 들어, 파일을 폴더에 복사하여 컴퓨터에 설치하는 애플리케이션은 일반적으로 여기에 설명된 기술을 사용하여 관리할 수 없습니다. 이러한 애플리케이션은 [파일 및 폴더 작업0](Working-with-Files-and-Folders.md) 섹션에 설명된 기술을 사용하여 파일 및 폴더로 관리할 수 있습니다.
 
@@ -75,7 +76,7 @@ CimInstanceProperties : {Caption, Description, IdentifyingNumber, Name...}
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ```
 
-또는 `Get-CimInstance` **Filter** 매개 변수를 사용하여 Microsoft .NET 2.0 Runtime만 선택할 수 있습니다. **Filter** 매개 변수 값은 Windows PowerShell 구문이 아니라 WQL(WMI 쿼리 언어) 구문을 사용합니다. 다음은 그 예입니다.
+또는 `Get-CimInstance` **Filter** 매개 변수를 사용하여 Microsoft .NET 2.0 Runtime만 선택할 수 있습니다. **Filter** 매개 변수 값은 Windows PowerShell 구문이 아니라 WQL(WMI 쿼리 언어) 구문을 사용합니다. 예를 들면 다음과 같습니다.
 
 ```powershell
 Get-CimInstance -Class Win32_Product -Filter "Name='Microsoft .NET Core Runtime - 2.1.5 (x64)'" |
@@ -101,9 +102,9 @@ IdentifyingNumber : {ACC73072-9AD5-416C-94BF-D82DDCEA0F1B}
 
 ## <a name="listing-all-uninstallable-applications"></a>모든 제거 가능한 애플리케이션 나열
 
-대부분의 표준 애플리케이션에서는 Windows에 제거 프로그램을 등록하므로 Windows 레지스트리에서 제거 프로그램을 찾아서 로컬로 작업할 수 있습니다. 시스템에서 모든 애플리케이션을 찾을 수 있는 확실한 방법은 없습니다. 그러나 다음 레지스트리 키에서 **프로그램 추가 또는 제거**에 목록이 표시된 모든 프로그램을 찾을 수 있습니다.
+대부분의 표준 애플리케이션에서는 Windows에 제거 프로그램을 등록하므로 Windows 레지스트리에서 제거 프로그램을 찾아서 로컬로 작업할 수 있습니다. 시스템에서 모든 애플리케이션을 찾을 수 있는 확실한 방법은 없습니다. 그러나 다음 레지스트리 키에서 **프로그램 추가 또는 제거** 에 목록이 표시된 모든 프로그램을 찾을 수 있습니다.
 
-`HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall`입니다.
+`HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall`.
 
 이 키를 조사하여 애플리케이션을 찾을 수도 있습니다. 제거 키를 눈에 잘 띄게 하려면 Windows PowerShell 드라이브를 이 레지스트리 위치에 매핑할 수 있습니다.
 
@@ -199,13 +200,13 @@ Windows Installer 기술을 사용하지 않는 애플리케이션의 경우 애
 
 ## <a name="removing-applications"></a>애플리케이션 제거
 
-PowerShell을 사용하여 Windows Installer 패키지를 제거하는 작업은 패키지를 설치하는 방법과 거의 동일합니다. 다음 예에서는 이름을 기반으로 제거할 패키지를 선택합니다. 경우에 따라 **IdentifyingNumber**를 사용하여 필터링하는 것이 더 쉬울 수도 있습니다.
+PowerShell을 사용하여 Windows Installer 패키지를 제거하는 작업은 패키지를 설치하는 방법과 거의 동일합니다. 다음 예에서는 이름을 기반으로 제거할 패키지를 선택합니다. 경우에 따라 **IdentifyingNumber** 를 사용하여 필터링하는 것이 더 쉬울 수도 있습니다.
 
 ```powershell
 Get-CimInstance -Class Win32_Product -Filter "Name='ILMerge'" | Invoke-CimMethod -MethodName Uninstall
 ```
 
-로컬에서 수행하더라도 다른 애플리케이션을 제거하는 것은 그리 간단하지 않습니다. **UninstallString** 속성을 추출하여 이러한 애플리케이션에 대한 명령줄 제거 문자열을 찾을 수 있습니다.
+로컬에서 수행하더라도 다른 애플리케이션을 제거하는 것은 그리 간단하지 않습니다. **UninstallString** 속성을 추출하여 이러한 응용 프로그램에 대한 명령줄 제거 문자열을 찾을 수 있습니다.
 이 방법은 Windows Installer 애플리케이션과 Uninstall 키 아래에 표시되는 이전 프로그램에 적용됩니다.
 
 ```powershell

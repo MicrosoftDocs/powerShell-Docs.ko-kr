@@ -2,27 +2,22 @@
 title: PowerShell Core에서 WSMan(WS-Management) 원격
 description: WSMan을 사용하여 PowerShell Core에서 원격 작업
 ms.date: 08/06/2018
-ms.openlocfilehash: e5f00128bc8ebc1b432cc77a5896a9e09d684109
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: fdc4159279db28b8ee60bc0853e19512a1f9ec14
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "62058882"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501306"
 ---
 # <a name="ws-management-wsman-remoting-in-powershell-core"></a>PowerShell Core에서 WSMan(WS-Management) 원격
 
 ## <a name="instructions-to-create-a-remoting-endpoint"></a>원격 엔드포인트 만들기 지침
 
-Windows용 PowerShell Core 패키지의 `$PSHome`에는 WinRM 플러그인(`pwrshplugin.dll`) 및 설치 스크립트(`Install-PowerShellRemoting.ps1`)가 들어 있습니다.
-이러한 파일은 엔드포인트가 지정된 경우에 PowerShell이 들어오는 PowerShell 원격 연결을 수락하도록 허용합니다.
+Windows용 PowerShell Core 패키지의 `$PSHome`에는 WinRM 플러그인(`pwrshplugin.dll`) 및 설치 스크립트(`Install-PowerShellRemoting.ps1`)가 들어 있습니다. 이러한 파일은 엔드포인트가 지정된 경우에 PowerShell이 들어오는 PowerShell 원격 연결을 수락하도록 허용합니다.
 
 ### <a name="motivation"></a>동기
 
-PowerShell을 설치하면 `New-PSSession` 및 `Enter-PSSession`을 사용하여 원격 컴퓨터에 대한 PowerShell 세션을 설정할 수 있습니다.
-들어오는 PowerShell 원격 연결을 수락하도록 허용하려면 사용자가 WinRM 원격 기능 엔드포인트를 만들어야 합니다.
-이는 사용자가 Install-PowerShellRemoting.ps1을 실행하여 WinRM 엔드포인트를 만드는 명시적인 옵트인 시나리오입니다.
-설치 스크립트는 `Enable-PSRemoting`에 추가 기능을 추가하여 동일한 동작을 수행할 때까지 단기적인 솔루션입니다.
-자세한 내용은 [#1193](https://github.com/PowerShell/PowerShell/issues/1193) 문제를 참조하세요.
+PowerShell을 설치하면 `New-PSSession` 및 `Enter-PSSession`을 사용하여 원격 컴퓨터에 대한 PowerShell 세션을 설정할 수 있습니다. 들어오는 PowerShell 원격 연결을 수락하도록 허용하려면 사용자가 WinRM 원격 기능 엔드포인트를 만들어야 합니다. 이는 사용자가 Install-PowerShellRemoting.ps1을 실행하여 WinRM 엔드포인트를 만드는 명시적인 옵트인 시나리오입니다. 설치 스크립트는 `Enable-PSRemoting`에 추가 기능을 추가하여 동일한 동작을 수행할 때까지 단기적인 솔루션입니다. 자세한 내용은 [#1193](https://github.com/PowerShell/PowerShell/issues/1193) 문제를 참조하세요.
 
 ### <a name="script-actions"></a>스크립트 동작
 
@@ -56,7 +51,8 @@ Set-Location -Path 'C:\Program Files\PowerShell\6.0.0\'
 .\Install-PowerShellRemoting.ps1 -PowerShellHome "C:\Program Files\PowerShell\6.0.0\"
 ```
 
-**참고:** 원격 기능 등록 스크립트는 WinRM을 다시 시작하므로 스크립트가 실행된 후 기존의 모든 PSRP 세션이 즉시 종료됩니다. 원격 세션 중에 실행될 경우 연결이 종료됩니다.
+> [!NOTE]
+> 원격 등록 스크립트가 WinRM을 다시 시작합니다. 스크립트가 실행되는 즉시 모든 기존 PSRP 세션이 종료됩니다. 원격 세션 중에 실행될 경우 스크립트가 연결을 종료합니다.
 
 ## <a name="how-to-connect-to-the-new-endpoint"></a>새 엔드포인트에 연결하는 방법
 

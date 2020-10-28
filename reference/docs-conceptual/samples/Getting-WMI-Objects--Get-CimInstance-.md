@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: WMI 개체 가져오기 Get CimInstance
-ms.openlocfilehash: 4ff47844fd367a49f554c7c05c491bdddf28eabc
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 컴퓨터 시스템에서 WMI 개체의 인스턴스를 가져오는 방법에 대한 몇 가지 예를 보여줍니다.
+ms.openlocfilehash: f7a005bbf39cf141e6474815d3e050314830453c
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "77002653"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500456"
 ---
 # <a name="getting-wmi-objects-get-ciminstance"></a>WMI 개체 가져오기(Get-CimInstance)
 
@@ -57,7 +58,7 @@ Get-CimClass -Namespace root/CIMV2 -ComputerName 192.168.1.29
 
 ### <a name="displaying-wmi-class-details"></a>WMI 클래스 세부 정보 표시
 
-WMI 클래스의 이름을 알고 있으면 이 이름을 사용하여 정보를 즉시 볼 수 있습니다. 예를 들어 컴퓨터에 대한 정보를 검색하는 데 일반적으로 사용되는 WMI 클래스 중 하나는 **Win32_OperatingSystem**입니다.
+WMI 클래스의 이름을 알고 있으면 이 이름을 사용하여 정보를 즉시 볼 수 있습니다. 예를 들어 컴퓨터에 대한 정보를 검색하는 데 일반적으로 사용되는 WMI 클래스 중 하나는 **Win32_OperatingSystem** 입니다.
 
 ```powershell
 Get-CimInstance -Class Win32_OperatingSystem
@@ -70,7 +71,7 @@ C:\WINDOWS\system32 Microsoft    18362       USER1          00330-80000-00000-AA
 ```
 
 이 명령에는 매개 변수가 모두 나와 있지만 불필요한 매개 변수를 표시하지 않을 수 있습니다.
-로컬 시스템에 연결할 때는 **ComputerName** 매개 변수가 필요하지 않습니다. 여기에 이 매개 변수를 표시한 것은 가장 일반적인 경우를 보여 주고 이 매개 변수가 있다는 것을 알려 주기 위한 것입니다. **Namespace**는 기본적으로 `root/CIMV2`로 설정되며 마찬가지로 생략될 수 있습니다. 마지막으로 대부분의 cmdlet에서는 일반적인 매개 변수의 이름을 생략할 수 있습니다. `Get-CimInstance`를 사용할 때 첫 번째 매개 변수의 이름을 지정하지 않으면 PowerShell은 이 매개 변수를 **Class** 매개 변수로 처리합니다. 즉, 다음과 같이 입력하여 위 명령을 실행할 수도 있습니다.
+로컬 시스템에 연결할 때는 **ComputerName** 매개 변수가 필요하지 않습니다. 여기에 이 매개 변수를 표시한 것은 가장 일반적인 경우를 보여 주고 이 매개 변수가 있다는 것을 알려 주기 위한 것입니다. **Namespace** 는 기본적으로 `root/CIMV2`로 설정되며 마찬가지로 생략될 수 있습니다. 마지막으로 대부분의 cmdlet에서는 일반적인 매개 변수의 이름을 생략할 수 있습니다. `Get-CimInstance`를 사용할 때 첫 번째 매개 변수의 이름을 지정하지 않으면 PowerShell은 이 매개 변수를 **Class** 매개 변수로 처리합니다. 즉, 다음과 같이 입력하여 위 명령을 실행할 수도 있습니다.
 
 ```powershell
 Get-CimInstance Win32_OperatingSystem

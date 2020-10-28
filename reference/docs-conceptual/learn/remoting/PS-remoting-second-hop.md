@@ -2,21 +2,22 @@
 ms.date: 05/14/2020
 keywords: powershell,cmdlet
 title: PowerShell 원격에서 두 번째 홉 만들기
-ms.openlocfilehash: 3a9db11726d4c02dc69e52c45da304f7422def39
-ms.sourcegitcommit: 843756c8277e7afb874867703963248abc8a6c91
+description: 이 문서에서는 보안 관련 사항 및 권장 사항을 포함하여 PowerShell 원격에 대한 두 번째 홉 인증을 구성하는 다양한 방법을 설명합니다.
+ms.openlocfilehash: 905b27b4e6c612249c945a741bbe0d2ba9ae28aa
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83439379"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501374"
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>PowerShell 원격에서 두 번째 홉 만들기
 
 "두 번째 홉 문제"는 다음과 같은 상황을 말합니다.
 
-1. _ServerA_에 로그인되어 있습니다.
-2. _ServerA_에서 원격 PowerShell 세션을 시작하여 _ServerB_에 연결합니다.
-3. PowerShell 원격 세션을 통해 _ServerB_에서 실행하는 명령이 _ServerC_에 있는 리소스에 액세스하려고 합니다.
-4. PowerShell 원격 세션을 만드는 데 사용한 자격 증명이 _ServerB_에서 _ServerC_로 전달되지 않았으므로 _ServerC_에 있는 리소스에 대한 액세스가 거부됩니다.
+1. _ServerA_ 에 로그인되어 있습니다.
+2. _ServerA_ 에서 원격 PowerShell 세션을 시작하여 _ServerB_ 에 연결합니다.
+3. PowerShell 원격 세션을 통해 _ServerB_ 에서 실행하는 명령이 _ServerC_ 에 있는 리소스에 액세스하려고 합니다.
+4. PowerShell 원격 세션을 만드는 데 사용한 자격 증명이 _ServerB_ 에서 _ServerC_ 로 전달되지 않았으므로 _ServerC_ 에 있는 리소스에 대한 액세스가 거부됩니다.
 
 이 문제를 해결하는 방법은 여러 가지가 있습니다. 다음 표에서는 기본 설정 순서대로 메서드를 보여 줍니다.
 
@@ -33,7 +34,7 @@ ms.locfileid: "83439379"
 ## <a name="credssp"></a>CredSSP
 
 인증에 [Credential Security Support Provider (CredSSP)][credssp](CredSSP(자격 증명 보안 지원 공급자))를 사용할 수 있습니다.
-CredSSP는 원격 서버(_ServerB_)에 자격 증명을 캐시하므로, 이를 사용하면 자격 증명 도난 공격을 받을 수 있습니다. 원격 컴퓨터의 보안이 손상되면 공격자가 사용자의 자격 증명에 액세스할 수 있습니다. 기본적으로 CredSSP는 클라이언트 및 서버 컴퓨터 모두에서 사용하지 않도록 설정됩니다. 가장 신뢰할 수 있는 환경에서만 CredSSP를 사용하도록 설정해야 합니다. 예를 들어 도메인 컨트롤러는 매우 신뢰할 수 있으므로 도메인 관리자는 도메인 컨트롤러에 연결합니다.
+CredSSP는 원격 서버( _ServerB_ )에 자격 증명을 캐시하므로, 이를 사용하면 자격 증명 도난 공격을 받을 수 있습니다. 원격 컴퓨터의 보안이 손상되면 공격자가 사용자의 자격 증명에 액세스할 수 있습니다. 기본적으로 CredSSP는 클라이언트 및 서버 컴퓨터 모두에서 사용하지 않도록 설정됩니다. 가장 신뢰할 수 있는 환경에서만 CredSSP를 사용하도록 설정해야 합니다. 예를 들어 도메인 컨트롤러는 매우 신뢰할 수 있으므로 도메인 관리자는 도메인 컨트롤러에 연결합니다.
 
 PowerShell 원격에 CredSSP 사용 시의 보안 우려 사항에 대한 자세한 내용은 [Accidental Sabotage: Beware of CredSSP][beware](고의적 파괴: CredSSP 조심)를 참조하세요.
 
@@ -64,17 +65,17 @@ PowerShell 원격에 대해 CredSSP를 사용하도록 설정하고 사용하는
 
 - WinRM에 대한 두 번째 홉을 지원하지 않습니다.
 - 구성하려면 도메인 관리자 액세스 권한이 필요합니다.
-- 원격 서버(_ServerB_)의 Active Directory 개체에 대해 구성해야 합니다.
+- 원격 서버( _ServerB_ )의 Active Directory 개체에 대해 구성해야 합니다.
 - 도메인 하나로 제한됩니다. 도메인 또는 포리스트를 벗어날 수 없습니다.
 - 개체 및 SPN(서비스 사용자 이름)을 업데이트할 수 있는 권한이 필요합니다.
-- _ServerB_는 사용자 개입 없이 사용자를 대신하여 _ServerC_로 Kerberos 티켓을 가져올 수 있습니다.
+- _ServerB_ 는 사용자 개입 없이 사용자를 대신하여 _ServerC_ 로 Kerberos 티켓을 가져올 수 있습니다.
 
 > [!NOTE]
 > **계정이 민감하여 위임할 수 없음** 속성이 설정된 Active Directory 계정은 위임할 수 없습니다. 자세한 내용은 [Security Focus: Analysing 'Account is sensitive and cannot be delegated' for Privileged Accounts][blog](보안 초점: 권한 있는 계정에 대한 '계정이 민감하여 위임할 수 없음' 분석) 및 [Kerberos Authentication Tools and Settings][ktools](Kerberos 인증 도구 및 설정)를 참조하세요.
 
 ## <a name="resource-based-kerberos-constrained-delegation"></a>리소스 기반 Kerberos 제한 위임
 
-리소스 기반 Kerberos 제한 위임(Windows Server 2012에 도입됨)을 사용하여 리소스가 있는 서버 개체에 대한 자격 증명 위임을 구성합니다. 위에서 설명한 두 번째 홉 시나리오에서 위임된 자격 증명을 허용할 위치를 지정하도록 _ServerC_를 구성합니다.
+리소스 기반 Kerberos 제한 위임(Windows Server 2012에 도입됨)을 사용하여 리소스가 있는 서버 개체에 대한 자격 증명 위임을 구성합니다. 위에서 설명한 두 번째 홉 시나리오에서 위임된 자격 증명을 허용할 위치를 지정하도록 _ServerC_ 를 구성합니다.
 
 **장점**
 
@@ -94,7 +95,7 @@ PowerShell 원격에 대해 CredSSP를 사용하도록 설정하고 사용하는
 
 ### <a name="example"></a>예제
 
-_ServerB_의 위임된 자격 증명을 허용하도록 _ServerC_에 대해 리소스 기반 제한 위임을 구성하는 PowerShell 예제를 살펴보겠습니다. 이 예제에서는 모든 서버가 Windows Server 2012 이상을 실행하고 있으며 서버가 속하는 각 도메인에 하나 이상의 Windows Server 2012 도메인 컨트롤러가 있다고 가정합니다.
+_ServerB_ 의 위임된 자격 증명을 허용하도록 _ServerC_ 에 대해 리소스 기반 제한 위임을 구성하는 PowerShell 예제를 살펴보겠습니다. 이 예제에서는 모든 서버가 Windows Server 2012 이상을 실행하고 있으며 서버가 속하는 각 도메인에 하나 이상의 Windows Server 2012 도메인 컨트롤러가 있다고 가정합니다.
 
 제한 위임을 구성하기 전에 먼저 `RSAT-AD-PowerShell` 기능을 추가하여 Active Directory PowerShell 모듈을 설치한 다음 해당 모듈을 세션으로 가져와야 합니다.
 
@@ -117,7 +118,7 @@ Cmdlet      Set-ADServiceAccount ActiveDirectory
 Cmdlet      Set-ADUser           ActiveDirectory
 ```
 
-**PrincipalsAllowedToDelegateToAccount** 매개 변수는 Active Directory 개체 특성 **msDS-AllowedToActOnBehalfOfOtherIdentity**를 설정합니다. 이 특성은 자격 증명을 연결된 계정(이 예제에서는 _ServerA_의 머신 계정이 됨)에 위임할 수 있는 권한이 있는 계정을 지정하는 ACL(액세스 제어 목록)을 포함합니다.
+**PrincipalsAllowedToDelegateToAccount** 매개 변수는 Active Directory 개체 특성 **msDS-AllowedToActOnBehalfOfOtherIdentity** 를 설정합니다. 이 특성은 자격 증명을 연결된 계정(이 예제에서는 _ServerA_ 의 머신 계정이 됨)에 위임할 수 있는 권한이 있는 계정을 지정하는 ACL(액세스 제어 목록)을 포함합니다.
 
 이제 서버를 나타내는 데 사용할 변수를 설정하겠습니다.
 
@@ -140,7 +141,7 @@ StartName
 NT AUTHORITY\NetworkService
 ```
 
-_ServerC_가 _ServerB_의 PowerShell 원격 세션으로부터의 위임을 허용하도록 _ServerC_에 대한 **PrincipalsAllowedToDelegateToAccount** 매개 변수를 _ServerB_의 컴퓨터 개체로 설정해야 합니다.
+_ServerC_ 가 _ServerB_ 의 PowerShell 원격 세션으로부터의 위임을 허용하도록 _ServerC_ 에 대한 **PrincipalsAllowedToDelegateToAccount** 매개 변수를 _ServerB_ 의 컴퓨터 개체로 설정해야 합니다.
 
 ```powershell
 # Grant resource-based Kerberos constrained delegation
@@ -154,7 +155,7 @@ $x.'msDS-AllowedToActOnBehalfOfOtherIdentity'.Access
 Get-ADComputer -Identity $ServerC -Properties PrincipalsAllowedToDelegateToAccount
 ```
 
-Kerberos [KDC(키 배포 센터)](/windows/win32/secauthn/key-distribution-center)는 15분마다 거부된 액세스 시도(부정 캐시)를 캐시합니다. _ServerB_가 이전에 _ServerC_에 액세스하려고 시도한 경우 다음 명령을 호출하여 _ServerB_의 캐시를 지워야 합니다.
+Kerberos [KDC(키 배포 센터)](/windows/win32/secauthn/key-distribution-center)는 15분마다 거부된 액세스 시도(부정 캐시)를 캐시합니다. _ServerB_ 가 이전에 _ServerC_ 에 액세스하려고 시도한 경우 다음 명령을 호출하여 _ServerB_ 의 캐시를 지워야 합니다.
 
 ```powershell
 Invoke-Command -ComputerName $ServerB.Name -Credential $cred -ScriptBlock {
@@ -164,7 +165,7 @@ Invoke-Command -ComputerName $ServerB.Name -Credential $cred -ScriptBlock {
 
 캐시를 지우기 위해 컴퓨터를 다시 시작하거나 15분 이상 기다려야 할 수도 있습니다.
 
-캐시를 지운 후 _ServerA_에서 _ServerB_를 거쳐 _ServerC_까지 코드를 실행할 수 있습니다.
+캐시를 지운 후 _ServerA_ 에서 _ServerB_ 를 거쳐 _ServerC_ 까지 코드를 실행할 수 있습니다.
 
 ```powershell
 # Capture a credential
@@ -178,10 +179,10 @@ Invoke-Command -ComputerName $ServerB.Name -Credential $cred -ScriptBlock {
 }
 ```
 
-이 예제에서 `$using` 변수는 `$ServerC` 변수가 _ServerB_에 표시되도록 하는 데 사용됩니다.
+이 예제에서 `$using` 변수는 `$ServerC` 변수가 _ServerB_ 에 표시되도록 하는 데 사용됩니다.
 `$using` 변수에 대한 자세한 내용은 [about_Remote_Variables](/powershell/module/Microsoft.PowerShell.Core/About/about_Remote_Variables)를 참조하세요.
 
-여러 서버가 _ServerC_에 자격 증명을 위임할 수 있도록 하려면 _ServerC_에 대한 **PrincipalsAllowedToDelegateToAccount** 매개 변수 값을 배열로 설정합니다.
+여러 서버가 _ServerC_ 에 자격 증명을 위임할 수 있도록 하려면 _ServerC_ 에 대한 **PrincipalsAllowedToDelegateToAccount** 매개 변수 값을 배열로 설정합니다.
 
 ```powershell
 # Set up variables for each server
@@ -195,7 +196,7 @@ Set-ADComputer -Identity $ServerC `
     -PrincipalsAllowedToDelegateToAccount @($ServerB1,$ServerB2,$ServerB3)
 ```
 
-도메인에 걸쳐 두 번째 홉을 만들려는 경우 _ServerB_가 속하는 도메인의 도메인 컨트롤러에 대한 FQDN(정규화된 도메인 이름)을 추가합니다.
+도메인에 걸쳐 두 번째 홉을 만들려는 경우 _ServerB_ 가 속하는 도메인의 도메인 컨트롤러에 대한 FQDN(정규화된 도메인 이름)을 추가합니다.
 
 ```powershell
 # For ServerC in Contoso domain and ServerB in other domain
@@ -204,7 +205,7 @@ $ServerC = Get-ADComputer -Identity ServerC
 Set-ADComputer -Identity $ServerC -PrincipalsAllowedToDelegateToAccount $ServerB
 ```
 
-ServerC에 자격 증명을 위임하는 기능을 제거하려면 _ServerC_에 대한 **PrincipalsAllowedToDelegateToAccount** 매개 변수 값을 `$null`로 설정합니다.
+ServerC에 자격 증명을 위임하는 기능을 제거하려면 _ServerC_ 에 대한 **PrincipalsAllowedToDelegateToAccount** 매개 변수 값을 `$null`로 설정합니다.
 
 ```powershell
 Set-ADComputer -Identity $ServerC -PrincipalsAllowedToDelegateToAccount $null
@@ -240,13 +241,13 @@ JEA에 대한 자세한 내용은 [Just Enough Administration](/powershell/scrip
 **단점**
 
 - WMF 5.0 이상이 필요합니다.
-- 모든 중간 서버(_ServerB_)에 대한 구성이 필요합니다.
+- 모든 중간 서버( _ServerB_ )에 대한 구성이 필요합니다.
 
 ## <a name="pssessionconfiguration-using-runas"></a>RunAs를 사용한 PSSessionConfiguration
 
-_ServerB_에 대한 세션 구성을 만들고 해당 **RunAsCredential** 매개 변수를 설정할 수 있습니다.
+_ServerB_ 에 대한 세션 구성을 만들고 해당 **RunAsCredential** 매개 변수를 설정할 수 있습니다.
 
-**PSSessionConfiguration** 및 **RunAs**를 사용하여 두 번째 홉 문제를 해결하는 방법에 대한 자세한 내용은 [다중 홉 PowerShell 원격에 대한 다른 해결 방법][pssessionconfig]을 참조하세요.
+**PSSessionConfiguration** 및 **RunAs** 를 사용하여 두 번째 홉 문제를 해결하는 방법에 대한 자세한 내용은 [다중 홉 PowerShell 원격에 대한 다른 해결 방법][pssessionconfig]을 참조하세요.
 
 **장점**
 
@@ -254,7 +255,7 @@ _ServerB_에 대한 세션 구성을 만들고 해당 **RunAsCredential** 매개
 
 **단점**
 
-- 모든 중간 서버(_ServerB_)에 대해 **PSSessionConfiguration** 및 **RunAs**를 구성해야 합니다.
+- 모든 중간 서버( _ServerB_ )에 대해 **PSSessionConfiguration** 및 **RunAs** 를 구성해야 합니다.
 - 도메인 **RunAs** 계정을 사용할 경우 암호를 유지 관리해야 합니다.
 
 ## <a name="pass-credentials-inside-an-invoke-command-script-block"></a>Invoke-Command 스크립트 블록 내에 자격 증명 전달

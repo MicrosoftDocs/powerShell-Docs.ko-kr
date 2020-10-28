@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 탭 확장 사용
-ms.openlocfilehash: d96cbf848f464aff29a7bed9b70d0b6a000aa808
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+description: PowerShell에서 탭 확장 기능을 사용하는 방법을 설명합니다.
+ms.openlocfilehash: d3408aac8cc9325666082577a7b00bc3362bfca3
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438274"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500048"
 ---
 # <a name="using-tab-expansion"></a>탭 확장 사용
 

@@ -2,12 +2,13 @@
 ms.date: 11/22/2019
 keywords: powershell,cmdlet
 title: 형식 명령을 사용하여 출력 보기 변경
-ms.openlocfilehash: f270d5ec5efe5caf506d6a8a45285990996f6ae6
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShell은 목록, 테이블 또는 사용자 지정 레이아웃에 출력을 표시하는 데 사용할 수 있는 확장 가능한 형식 지정 시스템을 갖추고 있습니다.
+ms.openlocfilehash: ebb285a19c7fe1bc80608385f9e2842469e95817
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74417598"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500949"
 ---
 # <a name="using-format-commands-to-change-output-view"></a>형식 명령을 사용하여 출력 보기 변경
 
@@ -190,7 +191,7 @@ WinRM               Running Automatic Windows Remote Management (WS-Management) 
 
 ### <a name="wrapping-format-table-output-in-columns-wrap"></a>열에 Format-Table 출력 래핑(Wrap)
 
-**Wrap** 매개 변수를 사용하여 긴 `Format-Table` 데이터를 해당 표시 열 내에서 래핑할 수 있습니다. 다음과 같이 **Wrap** 매개 변수를 사용하는 경우에도 **AutoSize**를 지정하지 않으면 기본 설정이 사용되기 때문에 예상되는 작업을 수행하지 않아도 됩니다.
+**Wrap** 매개 변수를 사용하여 긴 `Format-Table` 데이터를 해당 표시 열 내에서 래핑할 수 있습니다. 다음과 같이 **Wrap** 매개 변수를 사용하는 경우에도 **AutoSize** 를 지정하지 않으면 기본 설정이 사용되기 때문에 예상되는 작업을 수행하지 않아도 됩니다.
 
 ```powershell
 Get-Service -Name win* | Format-Table -Property Name,Status,StartType,DisplayName,DependentServices -Wrap
@@ -210,9 +211,9 @@ Winmgmt             Running Automatic Windows Management Instrumentation        
 WinRM               Running Automatic Windows Remote Management (WS-Management) {}
 ```
 
-**Wrap** 매개 변수를 단독으로 사용하면 프로세스 속도가 크게 느려지지 않습니다. 그러나 **AutoSize**를 사용하여 큰 디렉터리 구조의 재귀 파일 목록 서식을 지정하면 첫 번째 출력 항목을 표시할 때까지 시간이 오래 걸리고 많은 메모리가 사용될 수 있습니다.
+**Wrap** 매개 변수를 단독으로 사용하면 프로세스 속도가 크게 느려지지 않습니다. 그러나 **AutoSize** 를 사용하여 큰 디렉터리 구조의 재귀 파일 목록 서식을 지정하면 첫 번째 출력 항목을 표시할 때까지 시간이 오래 걸리고 많은 메모리가 사용될 수 있습니다.
 
-시스템 로드에 신경 쓰지 않아도 되는 경우에는 **AutoSize**가 **Wrap** 매개 변수와 함께 정상적으로 작동합니다.
+시스템 로드에 신경 쓰지 않아도 되는 경우에는 **AutoSize** 가 **Wrap** 매개 변수와 함께 정상적으로 작동합니다.
 초기 열은 한 줄에 항목을 표시하는 데 필요한 만큼의 너비를 여전히 사용하지만 필요한 경우 마지막 열이 래핑됩니다.
 
 > [!NOTE]
@@ -240,7 +241,7 @@ FileVersion                          Path                                       
 
 ### <a name="organizing-table-output--groupby"></a>표 형식의 출력 구성(-GroupBy)
 
-표 형식의 출력을 제어하는 데 사용할 수 있는 또 다른 유용한 매개 변수는 **GroupBy**입니다. 특히 긴 표 형식의 목록은 비교하기 어려울 수 있지만 **GroupBy** 매개 변수를 사용하면 속성 값을 기준으로 출력을 그룹화할 수 있습니다. 예를 들어 서비스를 더 쉽게 검사하기 위해 다음과 같이 속성 목록에서 **StartType** 값을 제거하여 해당 서비스를 **StartType**별로 그룹화할 수 있습니다.
+표 형식의 출력을 제어하는 데 사용할 수 있는 또 다른 유용한 매개 변수는 **GroupBy** 입니다. 특히 긴 표 형식의 목록은 비교하기 어려울 수 있지만 **GroupBy** 매개 변수를 사용하면 속성 값을 기준으로 출력을 그룹화할 수 있습니다. 예를 들어 서비스를 더 쉽게 검사하기 위해 다음과 같이 속성 목록에서 **StartType** 값을 제거하여 해당 서비스를 **StartType** 별로 그룹화할 수 있습니다.
 
 ```powershell
 Get-Service -Name win* | Sort-Object StartType | Format-Table -GroupBy StartType

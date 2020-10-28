@@ -2,16 +2,17 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 개체 구조 보기(Get Member)
-ms.openlocfilehash: 80b36abd303a708195f12d96511e616178d11b5a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Get-Member는 PowerShell에서 개체의 형식 및 구조를 볼 수 있는 강력한 도구입니다.
+ms.openlocfilehash: 3c294fe47294e2cf8daf125aac55661dd38cf9bb
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030708"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501221"
 ---
 # <a name="viewing-object-structure-get-member"></a>개체 구조 보기(Get-Member)
 
-Windows PowerShell에서 개체는 중요한 역할을 하므로 임의의 개체 유형에 사용할 여러 개의 기본 명령이 설계되어 있습니다. 이러한 명령 중 가장 중요한 명령은 **Get-Member**입니다.
+Windows PowerShell에서 개체는 중요한 역할을 하므로 임의의 개체 유형에 사용할 여러 개의 기본 명령이 설계되어 있습니다. 이러한 명령 중 가장 중요한 명령은 **Get-Member** 입니다.
 
 명령이 반환하는 개체를 분석하는 가장 간단한 방법은 명령의 출력을 **Get-Member** cmdlet에 파이프하는 것입니다. **Get-Member** cmdlet은 개체 유형의 정식 이름과 해당 멤버의 전체 목록을 보여 줍니다. 이때 매우 많은 요소가 반환될 수도 있습니다. 예를 들어 프로세스 개체에는 100개 이상의 멤버가 있습니다.
 
@@ -23,7 +24,7 @@ Get-Process | Get-Member | Out-Host -Paging
 
 이 명령을 실행하면 다음과 같은 내용이 출력됩니다.
 
-```output
+```Output
 TypeName: System.Diagnostics.Process
 
 Name                           MemberType     Definition
@@ -38,7 +39,7 @@ add_Disposed                   Method         System.Void add_Disposed(Event...
 ...
 ```
 
-이 긴 정보 목록은 원하는 요소만 표시되도록 필터링하여 보다 간단하게 만들 수 있습니다. **Get-Member** 명령을 사용하면 속성 멤버만 표시할 수 있습니다. 속성에는 여러 가지 유형이 있는데, **Get-Member MemberType** 매개 변수를 값 **Properties**로 설정하면 이 cmdlet이 모든 유형의 속성을 표시합니다. 결과 목록은 다음과 같이 아직도 매우 길지만 읽기가 조금 더 쉬워집니다.
+이 긴 정보 목록은 원하는 요소만 표시되도록 필터링하여 보다 간단하게 만들 수 있습니다. **Get-Member** 명령을 사용하면 속성 멤버만 표시할 수 있습니다. 속성에는 여러 가지 유형이 있는데, **Get-Member MemberType** 매개 변수를 값 **Properties** 로 설정하면 이 cmdlet이 모든 유형의 속성을 표시합니다. 결과 목록은 다음과 같이 아직도 매우 길지만 읽기가 조금 더 쉬워집니다.
 
 ```
 PS> Get-Process | Get-Member -MemberType Properties
