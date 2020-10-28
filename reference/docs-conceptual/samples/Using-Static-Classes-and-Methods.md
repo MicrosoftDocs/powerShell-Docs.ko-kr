@@ -2,16 +2,17 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 정적 클래스 및 메서드 사용
-ms.openlocfilehash: 437e7b430f37224de7c617e120e37c3efcd7787a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 .NET 정적 클래스의 속성 및 메서드를 식별하고 사용하는 방법을 설명합니다.
+ms.openlocfilehash: 2e83fe442f7b3fdf62ceaab587450251ac4e7958
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030740"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501255"
 ---
-# <a name="using-static-classes-and-methods"></a><span data-ttu-id="2b466-103">정적 클래스 및 메서드 사용</span><span class="sxs-lookup"><span data-stu-id="2b466-103">Using Static Classes and Methods</span></span>
+# <a name="using-static-classes-and-methods"></a><span data-ttu-id="d131e-104">정적 클래스 및 메서드 사용</span><span class="sxs-lookup"><span data-stu-id="d131e-104">Using Static Classes and Methods</span></span>
 
-<span data-ttu-id="2b466-104">일부 .NET Framework 클래스는 **New-Object**를 사용하여 만들 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-104">Not all .NET Framework classes can be created by using **New-Object**.</span></span> <span data-ttu-id="2b466-105">예를 들어 **New-Object**를 사용하여 **System.Environment** 또는 **System.Math** 개체를 만들려고 하면 다음과 같은 오류 메시지가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-105">For example, if you try to create a **System.Environment** or a **System.Math** object with **New-Object**, you will get the following error messages:</span></span>
+<span data-ttu-id="d131e-105">일부 .NET Framework 클래스는 **New-Object** 를 사용하여 만들 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-105">Not all .NET Framework classes can be created by using **New-Object** .</span></span> <span data-ttu-id="d131e-106">예를 들어 **New-Object** 를 사용하여 **System.Environment** 또는 **System.Math** 개체를 만들려고 하면 다음과 같은 오류 메시지가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-106">For example, if you try to create a **System.Environment** or a **System.Math** object with **New-Object** , you will get the following error messages:</span></span>
 
 ```
 PS> New-Object System.Environment
@@ -27,15 +28,15 @@ At line:1 char:11
 + New-Object  <<<< System.Math
 ```
 
-<span data-ttu-id="2b466-106">이러한 오류는 .NET Framework 클래스에서 새 개체를 만들 수 없기 때문에 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-106">These errors occur because there is no way to create a new object from these classes.</span></span> <span data-ttu-id="2b466-107">.NET Framework 클래스는 상태가 바뀌지 않는 메서드와 속성의 참조 라이브러리로,</span><span class="sxs-lookup"><span data-stu-id="2b466-107">These classes are reference libraries of methods and properties that do not change state.</span></span> <span data-ttu-id="2b466-108">직접 만들지 않아도 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-108">You don't need to create them, you simply use them.</span></span> <span data-ttu-id="2b466-109">만들거나, 제거하거나, 변경할 수 없으므로 이러한 클래스와 메서드를 *정적 클래스*라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-109">Classes and methods such as these are called *static classes* because they are not created, destroyed, or changed.</span></span> <span data-ttu-id="2b466-110">이해를 돕기 위해 이 설명서에서는 정적 클래스를 사용하는 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-110">To make this clear we will provide examples that use static classes.</span></span>
+<span data-ttu-id="d131e-107">이러한 오류는 .NET Framework 클래스에서 새 개체를 만들 수 없기 때문에 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-107">These errors occur because there is no way to create a new object from these classes.</span></span> <span data-ttu-id="d131e-108">.NET Framework 클래스는 상태가 바뀌지 않는 메서드와 속성의 참조 라이브러리로,</span><span class="sxs-lookup"><span data-stu-id="d131e-108">These classes are reference libraries of methods and properties that do not change state.</span></span> <span data-ttu-id="d131e-109">직접 만들지 않아도 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-109">You don't need to create them, you simply use them.</span></span> <span data-ttu-id="d131e-110">만들거나, 제거하거나, 변경할 수 없으므로 이러한 클래스와 메서드를 *정적 클래스* 라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-110">Classes and methods such as these are called *static classes* because they are not created, destroyed, or changed.</span></span> <span data-ttu-id="d131e-111">이해를 돕기 위해 이 설명서에서는 정적 클래스를 사용하는 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-111">To make this clear we will provide examples that use static classes.</span></span>
 
-## <a name="getting-environment-data-with-systemenvironment"></a><span data-ttu-id="2b466-111">System.Environment를 사용하여 환경 데이터 보기</span><span class="sxs-lookup"><span data-stu-id="2b466-111">Getting Environment Data with System.Environment</span></span>
+## <a name="getting-environment-data-with-systemenvironment"></a><span data-ttu-id="d131e-112">System.Environment를 사용하여 환경 데이터 보기</span><span class="sxs-lookup"><span data-stu-id="d131e-112">Getting Environment Data with System.Environment</span></span>
 
-<span data-ttu-id="2b466-112">일반적으로 Windows PowerShell에서 개체를 사용할 때 수행하는 첫 단계는 Get-Member를 사용하여 해당 개체 안에 들어 있는 멤버를 확인하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-112">Usually, the first step in working with an object in Windows PowerShell is to use Get-Member to find out what members it contains.</span></span> <span data-ttu-id="2b466-113">정적 클래스를 사용할 경우 실제 클래스가 개체가 아니므로 약간 다른 방식으로 이 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-113">With static classes, the process is a little different because the actual class is not an object.</span></span>
+<span data-ttu-id="d131e-113">일반적으로 Windows PowerShell에서 개체를 사용할 때 수행하는 첫 단계는 Get-Member를 사용하여 해당 개체 안에 들어 있는 멤버를 확인하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-113">Usually, the first step in working with an object in Windows PowerShell is to use Get-Member to find out what members it contains.</span></span> <span data-ttu-id="d131e-114">정적 클래스를 사용할 경우 실제 클래스가 개체가 아니므로 약간 다른 방식으로 이 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-114">With static classes, the process is a little different because the actual class is not an object.</span></span>
 
-### <a name="referring-to-the-static-systemenvironment-class"></a><span data-ttu-id="2b466-114">정적 System.Environment 클래스 참조</span><span class="sxs-lookup"><span data-stu-id="2b466-114">Referring to the Static System.Environment Class</span></span>
+### <a name="referring-to-the-static-systemenvironment-class"></a><span data-ttu-id="d131e-115">정적 System.Environment 클래스 참조</span><span class="sxs-lookup"><span data-stu-id="d131e-115">Referring to the Static System.Environment Class</span></span>
 
-<span data-ttu-id="2b466-115">클래스 이름을 대괄호로 묶으면 정적 클래스를 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-115">You can refer to a static class by surrounding the class name with square brackets.</span></span> <span data-ttu-id="2b466-116">예를 들어 대괄호 안에 이름을 입력하여 **System.Environment**를 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-116">For example, you can refer to **System.Environment** by typing the name within brackets.</span></span> <span data-ttu-id="2b466-117">이렇게 하면 다음과 같은 일반적인 유형 정보가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-117">Doing so displays some generic type information:</span></span>
+<span data-ttu-id="d131e-116">클래스 이름을 대괄호로 묶으면 정적 클래스를 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-116">You can refer to a static class by surrounding the class name with square brackets.</span></span> <span data-ttu-id="d131e-117">예를 들어 대괄호 안에 이름을 입력하여 **System.Environment** 를 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-117">For example, you can refer to **System.Environment** by typing the name within brackets.</span></span> <span data-ttu-id="d131e-118">이렇게 하면 다음과 같은 일반적인 유형 정보가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-118">Doing so displays some generic type information:</span></span>
 
 ```
 PS> [System.Environment]
@@ -46,11 +47,11 @@ True     False    Environment                              System.Object
 ```
 
 > [!NOTE]
-> <span data-ttu-id="2b466-118">앞에서 언급한 것처럼 Windows PowerShell에서 **New Object** 를 사용하면</span><span class="sxs-lookup"><span data-stu-id="2b466-118">As we mentioned previously, Windows PowerShell automatically prepends '**System.**'</span></span> <span data-ttu-id="2b466-119">자동으로 유형 이름 앞에 '**System.** '이 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-119">to type names when you use **New-Object**.</span></span> <span data-ttu-id="2b466-120">대괄호로 묶은 유형 이름을 사용하는 경우에도 마찬가지이므로 **\[System.Environment]** 를 **\[Environment]** 로 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-120">The same thing happens when using a bracketed type name, so you can specify **\[System.Environment]** as **\[Environment]**.</span></span>
+> <span data-ttu-id="d131e-119">앞에서 언급한 것처럼 Windows PowerShell에서 **New Object** 를 사용하면</span><span class="sxs-lookup"><span data-stu-id="d131e-119">As we mentioned previously, Windows PowerShell automatically prepends ' **System.** '</span></span> <span data-ttu-id="d131e-120">자동으로 유형 이름 앞에 ' **System.** '이 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-120">to type names when you use **New-Object** .</span></span> <span data-ttu-id="d131e-121">대괄호로 묶은 유형 이름을 사용하는 경우에도 마찬가지이므로 **\[System.Environment]** 를 **\[Environment]** 로 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-121">The same thing happens when using a bracketed type name, so you can specify **\[System.Environment]** as **\[Environment]** .</span></span>
 
-<span data-ttu-id="2b466-121">**System.Environment** 클래스에는 현재 프로세스(Windows PowerShell에서 작업하는 경우 powershell.exe임)의 작업 환경에 대한 일반적인 정보가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-121">The **System.Environment** class contains general information about the working environment for the current process, which is powershell.exe when working within Windows PowerShell.</span></span>
+<span data-ttu-id="d131e-122">**System.Environment** 클래스에는 현재 프로세스(Windows PowerShell에서 작업하는 경우 powershell.exe임)의 작업 환경에 대한 일반적인 정보가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-122">The **System.Environment** class contains general information about the working environment for the current process, which is powershell.exe when working within Windows PowerShell.</span></span>
 
-<span data-ttu-id="2b466-122">**\[System.Environment] | Get-Member**를 입력하여 이 클래스에 대한 세부 정보를 표시하면 다음과 같이 개체 유형이 **System.Environment**가 아니라 **System.RuntimeType**으로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-122">If you try to view details of this class by typing **\[System.Environment] | Get-Member**, the object type is reported as being **System.RuntimeType** , not **System.Environment**:</span></span>
+<span data-ttu-id="d131e-123">**\[System.Environment] | Get-Member** 를 입력하여 이 클래스에 대한 세부 정보를 표시하면 다음과 같이 개체 유형이 **System.Environment** 가 아니라 **System.RuntimeType** 으로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-123">If you try to view details of this class by typing **\[System.Environment] | Get-Member** , the object type is reported as being **System.RuntimeType** , not **System.Environment** :</span></span>
 
 ```
 PS> [System.Environment] | Get-Member
@@ -58,7 +59,7 @@ PS> [System.Environment] | Get-Member
    TypeName: System.RuntimeType
 ```
 
-<span data-ttu-id="2b466-123">Get-Member를 사용하여 정적 멤버를 보려면 다음과 같이 **Static** 매개 변수를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-123">To view static members with Get-Member, specify the **Static** parameter:</span></span>
+<span data-ttu-id="d131e-124">Get-Member를 사용하여 정적 멤버를 보려면 다음과 같이 **Static** 매개 변수를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-124">To view static members with Get-Member, specify the **Static** parameter:</span></span>
 
 ```
 PS> [System.Environment] | Get-Member -Static
@@ -89,18 +90,18 @@ WorkingSet                 Property   static System.Int64 WorkingSet {get;}
 TickCount                               ExitCode
 ```
 
-<span data-ttu-id="2b466-124">이제 System.Environment를 사용하여 표시할 속성을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-124">We can now select properties to view from System.Environment.</span></span>
+<span data-ttu-id="d131e-125">이제 System.Environment를 사용하여 표시할 속성을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-125">We can now select properties to view from System.Environment.</span></span>
 
-### <a name="displaying-static-properties-of-systemenvironment"></a><span data-ttu-id="2b466-125">System.Environment의 정적 속성 표시</span><span class="sxs-lookup"><span data-stu-id="2b466-125">Displaying Static Properties of System.Environment</span></span>
+### <a name="displaying-static-properties-of-systemenvironment"></a><span data-ttu-id="d131e-126">System.Environment의 정적 속성 표시</span><span class="sxs-lookup"><span data-stu-id="d131e-126">Displaying Static Properties of System.Environment</span></span>
 
-<span data-ttu-id="2b466-126">System.Environment의 속성도 정적이므로 일반적인 속성과 다른 방식으로 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-126">The properties of System.Environment are also static, and must be specified in a different way than normal properties.</span></span> <span data-ttu-id="2b466-127">Windows PowerShell에서는 **::** 을 사용하여 작업할 정적 메서드나 속성을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-127">We use **::** to indicate to Windows PowerShell that we want to work with a static method or property.</span></span> <span data-ttu-id="2b466-128">Windows PowerShell을 시작하는 데 사용된 명령을 보려면 다음과 같이 입력하여 **CommandLine** 속성을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-128">To see the command that was used to launch Windows PowerShell, we check the **CommandLine** property by typing:</span></span>
+<span data-ttu-id="d131e-127">System.Environment의 속성도 정적이므로 일반적인 속성과 다른 방식으로 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-127">The properties of System.Environment are also static, and must be specified in a different way than normal properties.</span></span> <span data-ttu-id="d131e-128">Windows PowerShell에서는 **::** 을 사용하여 작업할 정적 메서드나 속성을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-128">We use **::** to indicate to Windows PowerShell that we want to work with a static method or property.</span></span> <span data-ttu-id="d131e-129">Windows PowerShell을 시작하는 데 사용된 명령을 보려면 다음과 같이 입력하여 **CommandLine** 속성을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-129">To see the command that was used to launch Windows PowerShell, we check the **CommandLine** property by typing:</span></span>
 
 ```
 PS> [System.Environment]::Commandline
 "C:\Program Files\Windows PowerShell\v1.0\powershell.exe"
 ```
 
-<span data-ttu-id="2b466-129">운영 체제 버전을 확인하려면 다음과 같이 입력하여 OSVersion 속성을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-129">To check the operating system version, display the OSVersion property by typing:</span></span>
+<span data-ttu-id="d131e-130">운영 체제 버전을 확인하려면 다음과 같이 입력하여 OSVersion 속성을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-130">To check the operating system version, display the OSVersion property by typing:</span></span>
 
 ```
 PS> [System.Environment]::OSVersion
@@ -110,21 +111,21 @@ PS> [System.Environment]::OSVersion
             Win32NT Service Pack 2      5.1.2600.131072     Microsoft Windows...
 ```
 
-<span data-ttu-id="2b466-130">다음과 같이 **HasShutdownStarted** 속성을 표시하면 컴퓨터가 종료 중인지 여부를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-130">We can check whether the computer is in the process of shutting down by displaying the **HasShutdownStarted** property:</span></span>
+<span data-ttu-id="d131e-131">다음과 같이 **HasShutdownStarted** 속성을 표시하면 컴퓨터가 종료 중인지 여부를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-131">We can check whether the computer is in the process of shutting down by displaying the **HasShutdownStarted** property:</span></span>
 
 ```
 PS> [System.Environment]::HasShutdownStarted
 False
 ```
 
-## <a name="doing-math-with-systemmath"></a><span data-ttu-id="2b466-131">System.Math를 사용하여 산술 연산 수행</span><span class="sxs-lookup"><span data-stu-id="2b466-131">Doing Math with System.Math</span></span>
+## <a name="doing-math-with-systemmath"></a><span data-ttu-id="d131e-132">System.Math를 사용하여 산술 연산 수행</span><span class="sxs-lookup"><span data-stu-id="d131e-132">Doing Math with System.Math</span></span>
 
-<span data-ttu-id="2b466-132">System.Math 정적 클래스는 일부 산술 연산을 수행하는 데 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-132">The System.Math static class is useful for performing some mathematical operations.</span></span> <span data-ttu-id="2b466-133">**System.Math**의 중요한 멤버는 대부분 **Get-Member**를 사용하여 표시할 수 있는 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-133">The important members of **System.Math** are mostly methods, which we can display by using **Get-Member**.</span></span>
+<span data-ttu-id="d131e-133">System.Math 정적 클래스는 일부 산술 연산을 수행하는 데 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-133">The System.Math static class is useful for performing some mathematical operations.</span></span> <span data-ttu-id="d131e-134">**System.Math** 의 중요한 멤버는 대부분 **Get-Member** 를 사용하여 표시할 수 있는 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-134">The important members of **System.Math** are mostly methods, which we can display by using **Get-Member** .</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="2b466-134">System.Math에는 동일한 이름을 가진 메서드가 여러 개 있지만 유형이 서로 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-134">System.Math has several methods with the same name, but they are distinguished by the type of their parameters.</span></span>
+> <span data-ttu-id="d131e-135">System.Math에는 동일한 이름을 가진 메서드가 여러 개 있지만 유형이 서로 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-135">System.Math has several methods with the same name, but they are distinguished by the type of their parameters.</span></span>
 
-<span data-ttu-id="2b466-135">다음 명령을 입력하면 **System.Math** 클래스의 메서드를 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-135">Type the following command to list the methods of the **System.Math** class.</span></span>
+<span data-ttu-id="d131e-136">다음 명령을 입력하면 **System.Math** 클래스의 메서드를 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-136">Type the following command to list the methods of the **System.Math** class.</span></span>
 
 ```
 PS> [System.Math] | Get-Member -Static -MemberType Methods
@@ -163,7 +164,7 @@ Tanh            Method     static System.Double Tanh(Double value)
 Truncate        Method     static System.Decimal Truncate(Decimal d), static...
 ```
 
-<span data-ttu-id="2b466-136">여기에는 여러 가지 산술 메서드가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-136">This displays several mathematical methods.</span></span> <span data-ttu-id="2b466-137">다음은 일반적인 메서드의 작동 방법을 보여 주는 명령 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="2b466-137">Here is a list of commands that demonstrate how some of the common methods work:</span></span>
+<span data-ttu-id="d131e-137">여기에는 여러 가지 산술 메서드가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-137">This displays several mathematical methods.</span></span> <span data-ttu-id="d131e-138">다음은 일반적인 메서드의 작동 방법을 보여 주는 명령 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="d131e-138">Here is a list of commands that demonstrate how some of the common methods work:</span></span>
 
 ```
 PS> [System.Math]::Sqrt(9)
