@@ -1,16 +1,14 @@
 ---
-title: PowerShell 명령에 승인된 동사 | Microsoft Docs
 ms.date: 09/07/2018
-helpviewer_keywords:
-- action names [PowerShell SDK]
-- verb names [PowerShell SDK]
-- cmdlets [PowerShell SDK], verb names
-ms.openlocfilehash: 96ba7397f46bfcb7036f0242da1367c3df5d3de9
-ms.sourcegitcommit: 0e18be0a2869beaa711ba3eca7a8a15514e5e962
+ms.topic: reference
+title: PowerShell 명령에 승인된 동사
+description: PowerShell 명령에 승인된 동사
+ms.openlocfilehash: 237355ba9729cfe16c335b39f19ab20e40999457
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91899859"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92655834"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>PowerShell 명령에 승인된 동사
 
@@ -18,13 +16,13 @@ PowerShell은 cmdlet 이름 및 파생된 .NET 클래스에 동사-명사 쌍을
 이름의 동사 부분은 cmdlet이 수행하는 작업을 식별합니다. 이름의 명사 부분은 작업을 수행하는 엔터티를 식별합니다. 예를 들어 `Get-Command` cmdlet은 PowerShell에 등록된 모든 명령을 검색합니다.
 
 > [!NOTE]
-> PowerShell은 영어의 표준 동사가 아닌 경우에도 작업을 의미하는 단어를 설명하기 위해 _동사_라는 용어를 사용합니다. 예를 들어 _New_라는 용어는 영어의 동사가 아니지만 작업을 암시하므로 유효한 PowerShell 동사 이름입니다.
+> PowerShell은 영어의 표준 동사가 아닌 경우에도 작업을 의미하는 단어를 설명하기 위해 _동사_ 라는 용어를 사용합니다. 예를 들어 _New_ 라는 용어는 영어의 동사가 아니지만 작업을 암시하므로 유효한 PowerShell 동사 이름입니다.
 
 <!--
 01234567890123456789012345678901234567890123456789012345678901234567890123456789
 -->
 
-승인된 각 동사에는 해당하는 _별칭 접두사_가 정의되어 있습니다.
+승인된 각 동사에는 해당하는 _별칭 접두사_ 가 정의되어 있습니다.
 이 별칭 접두사는 해당 동사를 사용하는 명령의 별칭으로 사용됩니다.
 예를 들어 `Import`의 별칭 접두사는 `ip`이며, 따라서 `Import-Module`의 별칭 접두사는 `ipmo`입니다.  이는 권장 사항이지 규칙은 아닙니다. 특히 다른 환경에서 잘 알려진 명령을 모방하는 명령 별칭에는 이 권장 사항을 사용할 필요가 없습니다.
 

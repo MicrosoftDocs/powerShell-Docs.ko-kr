@@ -1,12 +1,14 @@
 ---
-title: 업데이트 가능한 도움말 지원
 ms.date: 10/28/2012
-ms.openlocfilehash: bc5f08d2989b1031806c91acf43dd6a3b2646f04
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+ms.topic: reference
+title: 업데이트 가능한 도움말 지원
+description: 업데이트 가능한 도움말 지원
+ms.openlocfilehash: 671365303b403942d6085bd4dfe1244552a4c5ec
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236342"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658095"
 ---
 # <a name="supporting-updatable-help"></a>업데이트 가능한 도움말 지원
 
