@@ -720,8 +720,6 @@
               href: gallery/how-to/working-with-packages/packages-that-require-license-acceptance.md
             - name: 패키지 소유자에게 문의
               href: gallery/how-to/working-with-packages/contacting-package-owners.md
-            - name: 소셜 미디어나 댓글을 통해 피드백 제공
-              href: gallery/how-to/working-with-packages/social-media-feedback.md
         - name: 계정 프로필 관리
           items:
             - name: PowerShell 갤러리 계정 설정
