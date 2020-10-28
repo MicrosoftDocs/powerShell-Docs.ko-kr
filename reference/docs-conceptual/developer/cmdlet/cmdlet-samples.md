@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 7a4fb91cb316bf4231df0bb4446b9a7cd54cf647
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+ms.topic: reference
+title: Cmdlet 샘플
+description: Cmdlet 샘플
+ms.openlocfilehash: 6ee149f611e5af5c45a62363e19e66bf200c0c0a
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89235985"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92668255"
 ---
 # <a name="cmdlet-samples"></a>Cmdlet 샘플
 
