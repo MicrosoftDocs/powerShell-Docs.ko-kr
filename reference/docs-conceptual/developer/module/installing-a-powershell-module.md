@@ -1,12 +1,14 @@
 ---
-title: PowerShell 모듈 설치 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 201679c97acdccae9aa4c2be641ee1da09a8275c
-ms.sourcegitcommit: d073e69708bd499ea42642b4b923ce5f11cca295
+ms.topic: reference
+title: PowerShell 모듈 설치
+description: PowerShell 모듈 설치
+ms.openlocfilehash: 3c7a4413168934ca4de1912c9615a6ae0fc45788
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197828"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645335"
 ---
 # <a name="installing-a-powershell-module"></a>PowerShell 모듈 설치
 
@@ -55,7 +57,7 @@ PowerShell 모듈을 만든 후에는 사용자가 사용할 수 있도록 시�
   ```
 
   > [!IMPORTANT]
-  > **PSModulePath**에 경로를 추가한 후에는 변경 내용에 대한 환경 메시지를 브로드캐스트해야 합니다. 변경 내용을 브로드캐스트하면 셸과 같은 다른 애플리케이션에서 변경 내용을 반영할 수 있습니다. 변경 내용을 브로드캐스트하려면 제품 설치 코드에서 `lParam`를 문자열 "Environment"로 설정하여 **WM_SETTINGCHANGE** 메시지를 보냅니다. 메시지는 모듈 설치 코드가 **PSModulePath**를 업데이트한 후에 보내야 합니다.
+  > **PSModulePath** 에 경로를 추가한 후에는 변경 내용에 대한 환경 메시지를 브로드캐스트해야 합니다. 변경 내용을 브로드캐스트하면 셸과 같은 다른 애플리케이션에서 변경 내용을 반영할 수 있습니다. 변경 내용을 브로드캐스트하려면 제품 설치 코드에서 `lParam`를 문자열 "Environment"로 설정하여 **WM_SETTINGCHANGE** 메시지를 보냅니다. 메시지는 모듈 설치 코드가 **PSModulePath** 를 업데이트한 후에 보내야 합니다.
 
 ### <a name="use-the-correct-module-directory-name"></a>올바른 모듈 디렉터리 이름 사용
 
