@@ -1,13 +1,13 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,cmdlet
 title: ISEEditor 개체
-ms.openlocfilehash: cb63acebc1a8bb9fa6cc07199088ae0d5441bc91
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: ISEEditor 개체는 Microsoft.PowerShell.Host.ISE.ISEEditor 클래스의 인스턴스입니다. 콘솔 창은 ISEEditor 개체입니다.
+ms.openlocfilehash: ffcb6e35e1160beab6efb29cc84847fa9ffd012b
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809699"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654058"
 ---
 # <a name="the-iseeditor-object"></a>ISEEditor 개체
 
@@ -90,7 +90,7 @@ Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 
 Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 
-**startLine**, **startColumn**, **endLine** 및 **endColumn** 매개 변수에서 텍스트를 선택합니다.
+**startLine** , **startColumn** , **endLine** 및 **endColumn** 매개 변수에서 텍스트를 선택합니다.
 
 **startLine** - Integer 선택이 시작되는 줄입니다.
 

@@ -1,13 +1,13 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,cmdlet
 title: ISESnippetCollection 개체
-ms.openlocfilehash: 6cdc43dd1d82e94f66122d7f7b313c02e755fed7
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: ISESnippetCollection 개체는 ISESnippet 개체의 컬렉션입니다. PowerShellTab 개체와 연결되어 있는 파일 컬렉션이 이 클래스의 멤버입니다.
+ms.openlocfilehash: e6170ddf72d5ead840aa3015d4de1dcb21dbfeff
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808579"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92655982"
 ---
 # <a name="the-isesnippetcollection-object"></a>ISESnippetCollection 개체
 

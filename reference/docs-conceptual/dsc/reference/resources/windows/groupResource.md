@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: DSC 그룹 리소스
-ms.openlocfilehash: 5570d46d872e205917eef49bfa869419b20a77b0
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC 그룹 리소스
+ms.openlocfilehash: 8e2d1139c9573d7e310fec2410b14df04b79e1b2
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464216"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142449"
 ---
 # <a name="dsc-group-resource"></a>DSC 그룹 리소스
 
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 Windows PowerShell DSC(필요한 상태 구성)의 **그룹** 리소스에서는 대상 노드에 있는 로컬 그룹을 관리하는 메커니즘을 제공합니다.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>구문
 
@@ -48,7 +51,7 @@ Group [string] #ResourceName
 |속성 |Description |
 |---|---|
 |DependsOn |이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. |
-|Ensure |그룹이 존재하는지 여부를 나타냅니다. 그룹이 존재하지 않도록 하려면 이 속성을 **Absent**로 설정합니다. 그룹이 존재하도록 하려면 이 속성을 **Present**로 설정합니다. 기본값은 **Present**입니다. |
+|Ensure |그룹이 존재하는지 여부를 나타냅니다. 그룹이 존재하지 않도록 하려면 이 속성을 **Absent** 로 설정합니다. 그룹이 존재하도록 하려면 이 속성을 **Present** 로 설정합니다. 기본값은 **Present** 입니다. |
 |PsDscRunAsCredential |전체 리소스를 실행하기 위한 자격 증명을 설정합니다. |
 
 > [!NOTE]

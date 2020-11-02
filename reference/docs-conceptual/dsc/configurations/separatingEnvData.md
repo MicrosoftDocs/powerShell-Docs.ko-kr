@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 구성 및 환경 데이터 분리
-ms.openlocfilehash: b16243fc9096f786a25ed20868e94a3aa85e403e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 구성 데이터를 사용하여 구성 자체에서 DSC 구성에 사용된 데이터를 분리하는 것이 유용할 수 있습니다. 이 작업을 수행하면 여러 환경에 단일 구성을 사용할 수 있습니다.
+ms.openlocfilehash: 84ca4e4945a36111d23116524fd8f98c04e16d32
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954440"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645058"
 ---
 # <a name="separating-configuration-and-environment-data"></a>구성 및 환경 데이터 분리
 
->적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
+> 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-구성 데이터를 사용하여 구성 자체에서 DSC 구성에 사용된 데이터를 분리하는 것이 유용할 수 있습니다.
-이 작업을 수행하면 여러 환경에 단일 구성을 사용할 수 있습니다.
+구성 데이터를 사용하여 구성 자체에서 DSC 구성에 사용된 데이터를 분리하는 것이 유용할 수 있습니다. 이 작업을 수행하면 여러 환경에 단일 구성을 사용할 수 있습니다.
 
 예를 들어 애플리케이션을 개발할 경우 한 구성을 개발 및 프로덕션 환경 모두에 사용하고 구성 데이터를 사용하여 각 환경의 데이터를 지정할 수 있습니다.
 
@@ -26,20 +26,19 @@ ms.locfileid: "71954440"
 
 ## <a name="a-simple-example"></a>간단한 예
 
-간단한 예를 통해 이 과정을 알아보겠습니다.
-일부 노드에 **IIS**가 있고 다른 노드에 **Hyper-V**가 있도록 하는 단일 구성을 만들려고 합니다.
+간단한 예를 통해 이 과정을 알아보겠습니다. 일부 노드에 **IIS** 가 있고 다른 노드에 **Hyper-V** 가 있도록 하는 단일 구성을 만들려고 합니다.
 
 ```powershell
 Configuration MyDscConfiguration {
 
-    Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
+  Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
     {
-        WindowsFeature IISInstall {
-            Ensure = 'Present'
-            Name   = 'Web-Server'
-        }
+  WindowsFeature IISInstall {
+    Ensure = 'Present'
+    Name   = 'Web-Server'
+  }
 
-    }
+ }
     Node $AllNodes.Where{$_.Role -eq "VMHost"}.NodeName
     {
         WindowsFeature HyperVInstall {
@@ -102,7 +101,7 @@ Mode                LastWriteTime         Length Name
             SQLServerName   = "MySQLServer"
             SqlSource       = "C:\Software\Sql"
             DotNetSrc       = "C:\Software\sxs"
-        WebSiteName     = "New website"
+            WebSiteName     = "New website"
         },
 
         @{
@@ -129,13 +128,11 @@ Mode                LastWriteTime         Length Name
 
 ### <a name="configuration-script-file"></a>구성 스크립트 파일
 
-이제 `.ps1` 파일에 정의된 구성으로 가서 `DevProdEnvData.psd1`에 정의된 노드를 역할(`MSSQL`, `Dev` 또는 둘 모두)에 따라 필터링하고 적절하게 구성합니다.
-개발 환경은 SQL Server와 IIS가 모두 한 노드에 있고, 프로덕션 환경은 두 가지가 서로 다른 노드에 있습니다.
-`SiteContents` 속성으로 지정된 것처럼 사이트 내용도 서로 다릅니다.
+이제 `.ps1` 파일에 정의된 구성으로 가서 `DevProdEnvData.psd1`에 정의된 노드를 역할(`MSSQL`, `Dev` 또는 둘 모두)에 따라 필터링하고 적절하게 구성합니다. 개발 환경은 SQL Server와 IIS가 모두 한 노드에 있고, 프로덕션 환경은 두 가지가 서로 다른 노드에 있습니다. `SiteContents` 속성으로 지정된 것처럼 사이트 내용도 서로 다릅니다.
 
 구성 스크립트의 끝 부분에서 구성을 호출하며(MOF 문서로 컴파일) `DevProdEnvData.psd1`을 `$ConfigurationData` 매개 변수로 전달합니다.
 
->**참고:** 이 구성을 사용하려면 `xSqlPs` 및 `xWebAdministration` 모듈을 대상 노드에 설치해야 합니다.
+> **참고:** 이 구성을 사용하려면 `xSqlPs` 및 `xWebAdministration` 모듈을 대상 노드에 설치해야 합니다.
 
 다음과 같이 이름이 `MyWebApp.ps1`인 파일에서 구성을 정의하겠습니다.
 
@@ -244,75 +241,70 @@ Mode                LastWriteTime         Length Name
 
 ## <a name="using-non-node-data"></a>비노드 데이터 사용
 
-노드와 관련되지 않은 데이터에 대한 추가 키를 **ConfigurationData** 해시 테이블에 추가할 수 있습니다.
-다음 구성은 두 웹 사이트의 존재를 확인합니다.
-각 웹 사이트에 대한 데이터는 **AllNodes** 배열에 정의됩니다.
-`Config.xml` 파일은 두 웹 사이트 모두에 사용되므로 `NonNodeData` 이름을 사용하여 추가 키에서 해당 파일을 정의합니다.
-원하는 만큼 추가 키를 사용할 수 있으며 원하는 이름을 지정할 수 있습니다.
-`NonNodeData`는 예약어가 아니며, 단지 추가 키 이름을 지정하는 데 사용된 것입니다.
+노드와 관련되지 않은 데이터에 대한 추가 키를 **ConfigurationData** 해시 테이블에 추가할 수 있습니다. 다음 구성은 두 웹 사이트의 존재를 확인합니다. 각 웹 사이트에 대한 데이터는 **AllNodes** 배열에 정의됩니다. `Config.xml` 파일은 두 웹 사이트 모두에 사용되므로 `NonNodeData` 이름을 사용하여 추가 키에서 해당 파일을 정의합니다. 원하는 만큼 추가 키를 사용할 수 있으며 원하는 이름을 지정할 수 있습니다. `NonNodeData`는 예약어가 아니며, 단지 추가 키 이름을 지정하는 데 사용된 것입니다.
 
-특수 변수 **$ConfigurationData**를 사용하여 추가 키에 액세스합니다.
-이 예에서 `ConfigFileContents`는 다음과 같은 줄로 액세스됩니다.
+특수 변수 **$ConfigurationData** 를 사용하여 추가 키에 액세스합니다. 이 예에서 `ConfigFileContents`는 다음과 같은 줄로 액세스됩니다.
+
 ```powershell
  Contents = $ConfigurationData.NonNodeData.ConfigFileContents
  ```
- `File` 리소스 블록에서
 
+ `File` 리소스 블록에서
 
 ```powershell
 $MyData =
 @{
-    AllNodes =
-    @(
-        @{
-            NodeName           = "*"
-            LogPath            = "C:\Logs"
-        },
+    AllNodes =
+    @(
+        @{
+            NodeName           = "*"
+            LogPath            = "C:\Logs"
+        },
 
-        @{
-            NodeName = "VM-1"
-            SiteContents = "C:\Site1"
-            SiteName = "Website1"
-        },
+        @{
+            NodeName = "VM-1"
+            SiteContents = "C:\Site1"
+            SiteName = "Website1"
+        },
 
 
-        @{
-            NodeName = "VM-2"
-            SiteContents = "C:\Site2"
-            SiteName = "Website2"
-        }
-    );
+        @{
+            NodeName = "VM-2"
+            SiteContents = "C:\Site2"
+            SiteName = "Website2"
+        }
+    );
 
-    NonNodeData =
-    @{
-        ConfigFileContents = (Get-Content C:\Template\Config.xml)
-     }
+    NonNodeData =
+    @{
+        ConfigFileContents = (Get-Content C:\Template\Config.xml)
+     }
 }
 
 configuration WebsiteConfig
 {
-    Import-DscResource -ModuleName xWebAdministration -Name MSFT_xWebsite
+    Import-DscResource -ModuleName xWebAdministration -Name MSFT_xWebsite
 
-    node $AllNodes.NodeName
-    {
-        xWebsite Site
-        {
-            Name         = $Node.SiteName
-            PhysicalPath = $Node.SiteContents
-            Ensure       = "Present"
-        }
+    node $AllNodes.NodeName
+    {
+        xWebsite Site
+        {
+            Name         = $Node.SiteName
+            PhysicalPath = $Node.SiteContents
+            Ensure       = "Present"
+        }
 
-        File ConfigFile
-        {
-            DestinationPath = $Node.SiteContents + "\\config.xml"
-            Contents = $ConfigurationData.NonNodeData.ConfigFileContents
-        }
-    }
+        File ConfigFile
+        {
+            DestinationPath = $Node.SiteContents + "\\config.xml"
+            Contents = $ConfigurationData.NonNodeData.ConfigFileContents
+        }
+    }
 }
 ```
 
-
 ## <a name="see-also"></a>참고 항목
+
 - [구성 데이터 사용](configData.md)
 - [구성 데이터의 자격 증명 옵션](configDataCredentials.md)
 - [DSC 구성](configurations.md)

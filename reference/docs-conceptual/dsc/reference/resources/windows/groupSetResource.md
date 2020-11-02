@@ -1,14 +1,14 @@
 ---
 ms.date: 09/20/2019
-keywords: dsc,powershell,configuration,setup
-description: 대상 노드에 있는 로컬 그룹을 관리하는 메커니즘을 제공합니다.
+ms.topic: reference
 title: DSC GroupSet 리소스
-ms.openlocfilehash: 90e0c3f0e09c6a300988869265dfdb432ed5d217
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC GroupSet 리소스
+ms.openlocfilehash: a9d1803aca40ac3571d42a5fd762489c03ed274e
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464198"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142891"
 ---
 # <a name="dsc-groupset-resource"></a>DSC GroupSet 리소스
 
@@ -18,10 +18,12 @@ Windows PowerShell DSC(필요한 상태 구성)의 **GroupSet** 리소스에서�
 
 두 개 이상의 그룹에서 동일한 구성원 목록을 추가 및/또는 제거하거나 두 개 이상의 그룹을 제거하거나 구성원 목록이 동일한 두 개 이상의 그룹을 추가하려는 경우 이 리소스를 사용합니다.
 
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
+
 ## <a name="syntax"></a>구문
 
 ```Syntax
-Group [string] #ResourceName
+GroupSet [string] #ResourceName
 {
     GroupName = [string[]]
     [ MembersToInclude = [string[]] ]
@@ -48,7 +50,7 @@ Group [string] #ResourceName
 |속성 |Description |
 |---|---|
 |DependsOn |이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. |
-|Ensure |그룹이 있는지 여부를 나타냅니다. 그룹이 존재하지 않도록 하려면 이 속성을 **Absent**로 설정합니다. **Present**로 설정하면 그룹이 존재합니다. 기본값은 **Present**입니다. |
+|Ensure |그룹이 있는지 여부를 나타냅니다. 그룹이 존재하지 않도록 하려면 이 속성을 **Absent** 로 설정합니다. **Present** 로 설정하면 그룹이 존재합니다. 기본값은 **Present** 입니다. |
 |PsDscRunAsCredential |전체 리소스를 실행하기 위한 자격 증명을 설정합니다. |
 
 > [!NOTE]

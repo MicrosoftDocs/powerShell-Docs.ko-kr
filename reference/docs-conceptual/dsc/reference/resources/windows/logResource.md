@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: DSC 로그 리소스
-ms.openlocfilehash: bc59bb2670561306a039d024fcff5e0746a659f2
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC 로그 리소스
+ms.openlocfilehash: 281d1f8aeeb4d075f073419ac02a0f81888ed2b5
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464029"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142466"
 ---
 # <a name="dsc-log-resource"></a>DSC 로그 리소스
 
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 Windows PowerShell DSC(필요한 상태 구성)의 **Log** 리소스에서는 메시지를 Microsoft-Windows-필요한 상태 구성/분석 이벤트 로그에 쓰는 메커니즘을 제공합니다.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>구문
 
@@ -50,7 +53,7 @@ Log [string] #ResourceName
 다음 예제에서는 Microsoft-Windows-필요한 상태 구성/분석 이벤트 로그에 메시지를 포함하는 방법을 보여 줍니다.
 
 > [!NOTE]
-> 이 리소스를 구성한 상태에서 [Test-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/test-dscconfiguration?view=powershell-5.1)을 실행하는 경우 항상 **$false**를 반환합니다.
+> 이 리소스를 구성한 상태에서 [Test-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/test-dscconfiguration)을 실행하는 경우 항상 **$false** 를 반환합니다.
 
 ```powershell
 Configuration logResourceTest

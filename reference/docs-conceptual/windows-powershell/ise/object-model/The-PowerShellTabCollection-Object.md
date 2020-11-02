@@ -1,13 +1,13 @@
 ---
 ms.date: 06/05/2017
-keywords: powershell,cmdlet
 title: PowerShellTabCollection 개체
-ms.openlocfilehash: 0aad885afd3ba3ae3b00f5c11d2c62a9ff303798
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: PowerShellTab 컬렉션 개체는 PowerShellTab 개체의 컬렉션입니다. 각 PowerShellTab 개체는 별도의 런타임 환경으로 작동합니다.
+ms.openlocfilehash: 60f8001f096b50bd8433a5685f1f70a350f07f61
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808569"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658270"
 ---
 # <a name="the-powershelltabcollection-object"></a>PowerShellTabCollection 개체
 

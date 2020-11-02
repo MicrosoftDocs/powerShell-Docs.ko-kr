@@ -2,12 +2,13 @@
 ms.date: 10/11/2019
 keywords: dsc,powershell,configuration,setup
 title: 의사 결정자를 위한 필요한 상태 구성 개요
-ms.openlocfilehash: bb73ee8fe636272f99989aa45712fe34fedad617
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 PowerShell DSC(Desired State Configuration) 사용의 비즈니스 혜택에 대해 설명하며, 기술 가이드가 아닙니다.
+ms.openlocfilehash: fc28c9290c993131fc7bf2046eb64b144d3da609
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75870798"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654138"
 ---
 # <a name="desired-state-configuration-overview-for-decision-makers"></a>의사 결정자를 위한 필요한 상태 구성 개요
 

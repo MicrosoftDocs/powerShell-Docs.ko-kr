@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: DSC WindowsFeature 리소스
-ms.openlocfilehash: b15b267c6898697816b386a381e5a6d59acd492a
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC WindowsFeature 리소스
+ms.openlocfilehash: 0089e1d2a045e9398aa53a3cedc3f64285c7cd58
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464114"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142993"
 ---
 # <a name="dsc-windowsfeature-resource"></a>DSC WindowsFeature 리소스
 
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 PowerShell DSC(필요한 상태 구성)의 **WindowsFeature** 리소스에서는 대상 노드에서 역할 및 기능이 추가 또는 제거되었는지를 확인하는 메커니즘을 제공합니다.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>구문
 
@@ -44,7 +47,7 @@ WindowsFeature [string] #ResourceName
 |속성 |Description |
 |---|---|
 |DependsOn |이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. |
-|Ensure |역할이나 기능이 추가되었는지 여부를 나타냅니다. 역할이나 기능이 추가되도록 하려면 이 속성을 **Present**로 설정합니다. 역할이나 기능이 제거되도록 하려면 이 속성을 **Absent**로 설정합니다. 기본값은 **Present**입니다. |
+|Ensure |역할이나 기능이 추가되었는지 여부를 나타냅니다. 역할이나 기능이 추가되도록 하려면 이 속성을 **Present** 로 설정합니다. 역할이나 기능이 제거되도록 하려면 이 속성을 **Absent** 로 설정합니다. 기본값은 **Present** 입니다. |
 |PsDscRunAsCredential |전체 리소스를 실행하기 위한 자격 증명을 설정합니다. |
 
 > [!NOTE]

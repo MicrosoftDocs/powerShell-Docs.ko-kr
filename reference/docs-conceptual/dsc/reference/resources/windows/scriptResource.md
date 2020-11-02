@@ -1,13 +1,14 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: DSC 스크립트 리소스
-ms.openlocfilehash: 9b89981c17e87b3681c6416c7dee44a75c432ea1
-ms.sourcegitcommit: eb6a7c01e6385809656ac828b9211683e0b1a6fe
+description: DSC 스크립트 리소스
+ms.openlocfilehash: f404bf3137caa9f57ad56034895cb15c8944ec07
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89041132"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142976"
 ---
 # <a name="dsc-script-resource"></a>DSC 스크립트 리소스
 
@@ -15,6 +16,8 @@ ms.locfileid: "89041132"
 
 Windows PowerShell DSC(필요한 상태 구성)의 `Script` 리소스에서는 대상 노드에서 Windows PowerShell 스크립트 블록을 실행하는 메커니즘을 제공합니다. `Script` 리소스는 사용자가 정의하는 스크립트 블록이 포함되는 `GetScript`
 `SetScript` 및 `TestScript` 속성을 사용하여 해당 DSC 상태 작업을 수행합니다.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>구문
 
@@ -141,7 +144,7 @@ Configuration ScriptTest
 ### <a name="example-3-utilizing-parameters-in-a-script-resource"></a>예 3: 스크립트 리소스에서 매개 변수 활용
 
 이 예제에서는 `using` 범위를 사용하여 스크립트 리소스 내에서 매개 변수에 액세스합니다.
-**ConfigurationData**는 비슷한 방법으로 액세스할 수 있습니다. 예제 2와 같이 버전은 대상 노드의 로컬 파일 내에 저장되어야 합니다. 그러나 로컬 파일 경로와 버전은 모두 구성 가능하며 구성 데이터에서 코드를 분리합니다.
+**ConfigurationData** 는 비슷한 방법으로 액세스할 수 있습니다. 예제 2와 같이 버전은 대상 노드의 로컬 파일 내에 저장되어야 합니다. 그러나 로컬 파일 경로와 버전은 모두 구성 가능하며 구성 데이터에서 코드를 분리합니다.
 
 ```powershell
 Configuration ScriptTest

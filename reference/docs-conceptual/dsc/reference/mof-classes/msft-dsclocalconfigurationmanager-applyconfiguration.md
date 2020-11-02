@@ -1,13 +1,14 @@
 ---
 ms.date: 07/14/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: ApplyConfiguration 메서드
-ms.openlocfilehash: bec74ccd6f75448484adfd26bf8a4af4e224eb3f
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: ApplyConfiguration 메서드
+ms.openlocfilehash: aa99221b33d39c3ecc70156a11eaee10b540e2dc
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463842"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664278"
 ---
 # <a name="applyconfiguration-method"></a>ApplyConfiguration 메서드
 
@@ -19,7 +20,7 @@ ms.locfileid: "86463842"
 
 ```mof
 uint32 ApplyConfiguration(
-  [in] boolean force
+  [in] boolean force
 );
 ```
 
@@ -27,7 +28,7 @@ uint32 ApplyConfiguration(
 
 ### <a name="force"></a>force
 
-**true**인 경우 현재 구성이 다시 적용됩니다. 보류 중인 구성이 있더라도 마찬가지입니다.
+**true** 인 경우 현재 구성이 다시 적용됩니다. 보류 중인 구성이 있더라도 마찬가지입니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -41,7 +42,7 @@ uint32 ApplyConfiguration(
 
 **MOF:** DscCore.mof
 
-**네임스페이스**: Root\Microsoft\Windows\DesiredStateConfiguration
+**네임스페이스** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>참조
 

@@ -1,13 +1,14 @@
 ---
 ms.date: 07/16/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: DSC WaitForAll 리소스
-ms.openlocfilehash: a0cf553af96ecc3df4968581f8f393b72fc3dabf
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC WaitForAll 리소스
+ms.openlocfilehash: a477584cf97a56815bda9973cb2befc9b71d14d1
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464369"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93143112"
 ---
 # <a name="dsc-waitforall-resource"></a>DSC WaitForAll 리소스
 
@@ -15,10 +16,12 @@ ms.locfileid: "86464369"
 
 **WaitForAll** DSC(Desired State Configuration) 리소스를 [DSC 구성](../../../configurations/configurations.md)의 노드 블록 내에서 사용하면 다른 노드의 구성에 대한 종속성을 지정할 수 있습니다.
 
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
+
 **ResourceName** 속성으로 지정된 리소스가 **NodeName** 속성으로 정의된 모든 대상 노드에서 필요한 상태이면 이 리소스가 정상적으로 적용됩니다.
 
 > [!NOTE]
-> **WaitForAll** 리소스는 Windows 원격 관리를 사용하여 다른 노드의 상태를 확인합니다. WinRM에 대한 포트 및 보안 요구 사항에 대한 자세한 내용은 [PowerShell Remoting 보안 고려 사항](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6)을 참조하세요.
+> **WaitForAll** 리소스는 Windows 원격 관리를 사용하여 다른 노드의 상태를 확인합니다. WinRM에 대한 포트 및 보안 요구 사항에 대한 자세한 내용은 [PowerShell Remoting 보안 고려 사항](/powershell/scripting/learn/remoting/winrmsecurity)을 참조하세요.
 
 ## <a name="syntax"></a>구문
 
