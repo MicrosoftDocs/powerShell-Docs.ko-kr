@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,setup
 title: WMF 5.0의 알려진 문제
-ms.openlocfilehash: 1db656884736c742ef78354b7452879e319d4a0a
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: WMF 5.0의 알려진 문제
+ms.openlocfilehash: 3f8dcf0f7aab27ff9d3c3a17377959988844a430
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809089"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663357"
 ---
 # <a name="known-issues-in-wmf-50"></a>WMF 5.0의 알려진 문제
 
@@ -24,7 +24,7 @@ ms.locfileid: "83809089"
 
 Windows 7에서 PowerShell 모듈 및 DSC 리소스를 사용하면 ExecutionPolicy에 대해 오류가 보고될 수 있습니다.
 
-**해결 방법:** 다음 명령을 관리자 PowerShell 세션에서 실행(관리자 권한으로 실행)하여 ExecutionPolicy를 **RemoteSigned**로 설정하세요.
+**해결 방법:** 다음 명령을 관리자 PowerShell 세션에서 실행(관리자 권한으로 실행)하여 ExecutionPolicy를 **RemoteSigned** 로 설정하세요.
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned
@@ -54,7 +54,7 @@ SIL이 이미 실행되고 있는 Windows Server 2012 R2에 WMF 5.0을 설치하
 
 **해결 방법:**
 
-- **Windows Server 2008 R2**를 실행 중인 시스템의 경우
+- **Windows Server 2008 R2** 를 실행 중인 시스템의 경우
   1. 관리자 권한으로 PowerShell을 엽니다.
   2. 다음 명령을 실행합니다.
 
@@ -76,7 +76,7 @@ SIL이 이미 실행되고 있는 Windows Server 2012 R2에 WMF 5.0을 설치하
 
   5. 모든 사용 가능한 중요 Windows 업데이트를 설치하고 Sysyprep 작업을 정상적으로 시작합니다.
 
-- **Windows Server 2012**를 실행 중인 시스템의 경우
+- **Windows Server 2012** 를 실행 중인 시스템의 경우
   1. Sysprep을 실행할 서버에서 WMF 5.0을 설치한 후 관리자로 로그인합니다.
   2. `\Windows\System32\Sysprep\ActionFiles\` 디렉터리의 Generize.xml을 Windows 디렉터리 외부 위치(예: `C:\`)에 복사합니다.
   3. Generalize.xml 복사본을 메모장으로 엽니다.

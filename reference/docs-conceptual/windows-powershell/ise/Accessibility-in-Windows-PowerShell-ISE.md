@@ -1,13 +1,13 @@
 ---
 ms.date: 12/19/2019
-keywords: powershell,cmdlet
 title: Windows PowerShell ISE의 접근성
-ms.openlocfilehash: 89eff839d69fdbd5a1fa48b61dab627ef83f751b
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: 이 항목에서는 유용한 Windows PowerShell ISE(통합 스크립팅 환경)의 접근성 기능에 대해 설명합니다.
+ms.openlocfilehash: 18acf447965eaaa7f93bb4c443a304b37216a9ba
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808519"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663847"
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Windows PowerShell ISE의 접근성
 
@@ -46,11 +46,11 @@ Microsoft Windows의 접근성 기능 및 유틸리티 외에, 다음과 같은 
 
 다음 중 하나를 수행합니다.
 
-- 스크립트 창을 콘솔 창 위로 이동하려면 <kbd>Ctrl</kbd>+<kbd>1</kbd>을 누르거나, 도구 모음에서 **위쪽에 스크립트 창 표시** 아이콘을 클릭하거나, **보기** 메뉴에서 **위쪽에 스크립트 창 표시**를 클릭합니다.
+- 스크립트 창을 콘솔 창 위로 이동하려면 <kbd>Ctrl</kbd>+<kbd>1</kbd>을 누르거나, 도구 모음에서 **위쪽에 스크립트 창 표시** 아이콘을 클릭하거나, **보기** 메뉴에서 **위쪽에 스크립트 창 표시** 를 클릭합니다.
 
-- 스크립트 창을 콘솔 창 오른쪽으로 이동하려면 <kbd>Ctrl</kbd>+<kbd>2</kbd>를 누르거나, 도구 모음에서 **오른쪽에 스크립트 창 표시** 아이콘을 클릭하거나, **보기** 메뉴에서 **오른쪽에 스크립트 창 표시**를 클릭합니다.
+- 스크립트 창을 콘솔 창 오른쪽으로 이동하려면 <kbd>Ctrl</kbd>+<kbd>2</kbd>를 누르거나, 도구 모음에서 **오른쪽에 스크립트 창 표시** 아이콘을 클릭하거나, **보기** 메뉴에서 **오른쪽에 스크립트 창 표시** 를 클릭합니다.
 
-- 스크립트 창을 최대화하려면 <kbd>Ctrl</kbd>+<kbd>3</kbd>을 누르거나, 도구 모음에서 **스크립트 창 최대 표시** 아이콘을 클릭하거나, **보기** 메뉴에서 **스크립트 창 최대 표시**를 클릭합니다.
+- 스크립트 창을 최대화하려면 <kbd>Ctrl</kbd>+<kbd>3</kbd>을 누르거나, 도구 모음에서 **스크립트 창 최대 표시** 아이콘을 클릭하거나, **보기** 메뉴에서 **스크립트 창 최대 표시** 를 클릭합니다.
 
 - 콘솔 창을 최대화하고 스크립트 창을 숨기려면 탭 행의 맨 오른쪽 가장자리에 있는 **스크립트 창 숨기기** 아이콘을 클릭하고 **보기** 메뉴에서 **스크립트 창 표시** 메뉴 옵션을 클릭하여 선택 취소합니다.
 
@@ -129,7 +129,7 @@ Windows PowerShell ISE에서 보기를 사용자 지정할 때 다음과 같은 
 | **한 단계씩 코드 실행**                           | <kbd>S</kbd>                 | 콘솔 창, 스크립트를 디버그할 때 |
 | **프로시저 단위 실행**                           | <kbd>V</kbd>                 | 콘솔 창, 스크립트를 디버그할 때 |
 | **프로시저 나가기**                            | <kbd>O</kbd>                 | 콘솔 창, 스크립트를 디버그할 때 |
-| **마지막 명령 반복**(한 단계씩 코드 실행/프로시저 단위 실행) | <kbd>Enter</kbd>             | 콘솔 창, 스크립트를 디버그할 때 |
+| **마지막 명령 반복** (한 단계씩 코드 실행/프로시저 단위 실행) | <kbd>Enter</kbd>             | 콘솔 창, 스크립트를 디버그할 때 |
 | **호출 스택 표시**                  | <kbd>K</kbd>                 | 콘솔 창, 스크립트를 디버그할 때 |
 | **디버깅 중지**                      | <kbd>Q</kbd>                 | 콘솔 창, 스크립트를 디버그할 때 |
 | **스크립트 표시**                     | <kbd>L</kbd>                 | 콘솔 창, 스크립트를 디버그할 때 |
@@ -148,7 +148,7 @@ Windows PowerShell 탭을 사용할 때 다음과 같은 바로 가기 키를 �
 
 ## <a name="keyboard-shortcuts-for-starting-and-exiting"></a>시작 및 종료 바로 가기 키
 
-다음과 같은 바로 가기 키를 사용하여 Windows PowerShell 콘솔(**PowerShell.exe**)을 시작하거나 Windows PowerShell ISE를 종료할 수 있습니다.
+다음과 같은 바로 가기 키를 사용하여 Windows PowerShell 콘솔( **PowerShell.exe** )을 시작하거나 Windows PowerShell ISE를 종료할 수 있습니다.
 
 |                        작업                         |               바로 가기 키               |
 | ----------------------------------------------------- | --------------------------------------------- |

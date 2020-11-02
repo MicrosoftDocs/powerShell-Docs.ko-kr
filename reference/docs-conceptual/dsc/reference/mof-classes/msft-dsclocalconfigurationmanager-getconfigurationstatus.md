@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: GetConfigurationStatus 메서드
-ms.openlocfilehash: c2c478151428052d656832fb4079f12d666a910d
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: GetConfigurationStatus 메서드
+ms.openlocfilehash: fe25d17069d9011e931ac50fec27cb9ebafba365
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464056"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650856"
 ---
 # <a name="getconfigurationstatus-method"></a>GetConfigurationStatus 메서드
 
@@ -17,14 +18,14 @@ ms.locfileid: "86464056"
 
 ```mof
 uint32 GetConfigurationStatus(
-  [in]  boolean                     All,
-  [out] MSFT_DSCConfigurationStatus configurationStatus[]
+  [in]  boolean                     All,
+  [out] MSFT_DSCConfigurationStatus configurationStatus[]
 );
 ```
 
 ## <a name="parameters"></a>매개 변수
 
-이 메서드가 구성 애플리케이션 및 일관성 확인을 포함하여 컴퓨터에서 실행되는 모든 구성에 관한 정보를 반환하면 **All** \[in\] **true**입니다.
+이 메서드가 구성 애플리케이션 및 일관성 확인을 포함하여 컴퓨터에서 실행되는 모든 구성에 관한 정보를 반환하면 **All** \[in\] **true** 입니다.
 
 **configurationStatus** \[out\] 반환 시, 설정을 정의하는 **MSFT_DSCConfigurationStatus** 클래스의 포함 인스턴스가 들어 있습니다.
 
@@ -40,7 +41,7 @@ uint32 GetConfigurationStatus(
 
 **MOF:** DscCore.mof
 
-**네임스페이스**: Root\Microsoft\Windows\DesiredStateConfiguration
+**네임스페이스** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>참고 항목
 

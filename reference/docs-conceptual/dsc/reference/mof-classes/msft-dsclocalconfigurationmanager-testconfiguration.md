@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: TestConfiguration 메서드
-ms.openlocfilehash: 0611c4d5543c49b879bef9b60cafdd0b055c9b86
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: TestConfiguration 메서드
+ms.openlocfilehash: ed26fcad2286ca753fb4b1845b8c6ad0741d491b
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464301"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92648919"
 ---
 # <a name="testconfiguration-method"></a>TestConfiguration 메서드
 
@@ -17,10 +18,10 @@ ms.locfileid: "86464301"
 
 ```mof
 uint32 TestConfiguration(
-  [in]  uint8                          configurationData[],
-  [out] boolean                        InDesiredState,
-  [out] MSFT_ResourceInDesiredState    ResourcesInDesiredState[],
-  [out] MSFT_ResourceNotInDesiredState ResourcesNotInDesiredState[]
+  [in]  uint8                          configurationData[],
+  [out] boolean                        InDesiredState,
+  [out] MSFT_ResourceInDesiredState    ResourcesInDesiredState[],
+  [out] MSFT_ResourceNotInDesiredState ResourcesNotInDesiredState[]
 );
 ```
 
@@ -46,7 +47,7 @@ uint32 TestConfiguration(
 
 **MOF:** DscCore.mof
 
-**네임스페이스**: Root\Microsoft\Windows\DesiredStateConfiguration
+**네임스페이스** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>참고 항목
 

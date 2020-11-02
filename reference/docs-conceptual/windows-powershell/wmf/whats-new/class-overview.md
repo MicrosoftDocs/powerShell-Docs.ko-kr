@@ -1,12 +1,13 @@
 ---
 ms.date: 07/29/2020
 title: PowerShell 5.0의 새로운 언어 기능
-ms.openlocfilehash: dada39c4121a810c7ce87a642f232934152104e5
-ms.sourcegitcommit: 339e5fc8a4cc18b4ff6956fe5180343588e40e30
+description: PowerShell 5.0에서는 다른 개체 지향 프로그래밍 언어와 유사한 형식 구문 및 의미 체계를 사용하여 클래스 및 기타 사용자 정의 형식을 정의하는 기능을 추가했습니다.
+ms.openlocfilehash: 31ff54ba6f2800a0680c1a2db3832ca97246973d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410175"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663314"
 ---
 # <a name="new-language-features-in-powershell-50"></a>PowerShell 5.0의 새로운 언어 기능
 
@@ -61,7 +62,7 @@ enum OtherEnum { Max = [SomeEnum]::Max + 1 }
 
 ### <a name="implementingassembly"></a>ImplementingAssembly
 
-새 필드인 **ImplementingAssembly**가 **ModuleInfo**에 추가되었습니다. 이 필드는 스크립트에서 클래스를 정의하는 경우 스크립트 모듈에 대해 만들어진 동적 어셈블리 또는 이진 모듈에 대해 로드된 어셈블리로 설정됩니다. **ModuleType**이 **Manifest**인 경우에는 설정되지 않습니다.
+새 필드인 **ImplementingAssembly** 가 **ModuleInfo** 에 추가되었습니다. 이 필드는 스크립트에서 클래스를 정의하는 경우 스크립트 모듈에 대해 만들어진 동적 어셈블리 또는 이진 모듈에 대해 로드된 어셈블리로 설정됩니다. **ModuleType** 이 **Manifest** 인 경우에는 설정되지 않습니다.
 
 **ImplementingAssembly** 필드에서 리플렉션하면 모듈에서 리소스를 검색합니다. 즉, PowerShell이나 다른 관리 언어로 작성된 리소스를 검색할 수 있습니다.
 

@@ -1,14 +1,13 @@
 ---
 ms.date: 11/06/2018
-contributor: JKeithB
-keywords: gallery,powershell,cmdlet,psgallery,psget,갤러리
 title: 로컬 PSRepository 작업
-ms.openlocfilehash: 421b73c141c7551224e2298f51464a19bc736d0e
-ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
+description: PowerShellGet 모듈은 PowerShell 갤러리 이외의 리포지토리를 지원합니다. 이 문서에서는 로컬 PowerShell 리포지토리를 설정하는 방법을 설명합니다.
+ms.openlocfilehash: 24a2fd23124b3897952d64a347d103d9ee10248f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85837582"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662360"
 ---
 # <a name="working-with-private-powershellget-repositories"></a>프라이빗 PowerShellGet 리포지토리 작업
 
@@ -62,7 +61,7 @@ PowerShellGet은 하나의 유형을 사용하고 버전 찾기 및 종속성 �
 ## <a name="registering-a-local-repository"></a>로컬 리포지토리 등록
 
 리포지토리를 사용하려면 먼저 `Register-PSRepository` 명령을 사용하여 리포지토리를 등록해야 합니다.
-아래 예제에서는 고유한 리포지토리를 신뢰한다고 가정하여 **InstallationPolicy**가 *Trusted*로 설정됩니다.
+아래 예제에서는 고유한 리포지토리를 신뢰한다고 가정하여 **InstallationPolicy** 가 *Trusted* 로 설정됩니다.
 
 ```powershell
 # Register a NuGet-based server
@@ -72,7 +71,7 @@ Register-PSRepository -Name LocalPSRepo -SourceLocation http://MyLocalNuget/Api/
 Register-PSRepository -Name LocalPSRepo -SourceLocation '\\localhost\PSRepoLocal\' -ScriptSourceLocation '\\localhost\PSRepoLocal\' -InstallationPolicy Trusted
 ```
 
-두 가지 명령이 **ScriptSourceLocation**을 처리하는 방식의 차이에 주의하세요. 파일 공유 기반 리포지토리의 경우 **SourceLocation** 및 **ScriptSourceLocation**이 일치해야 합니다. 웹 기반 리포지토리의 경우 두 항목이 달라야 하므로, 이 예제에서는 후행 "/"가 **SourceLocation**에 추가됩니다.
+두 가지 명령이 **ScriptSourceLocation** 을 처리하는 방식의 차이에 주의하세요. 파일 공유 기반 리포지토리의 경우 **SourceLocation** 및 **ScriptSourceLocation** 이 일치해야 합니다. 웹 기반 리포지토리의 경우 두 항목이 달라야 하므로, 이 예제에서는 후행 "/"가 **SourceLocation** 에 추가됩니다.
 
 새로 생성된 PSRepository를 기본 리포지토리로 설정하려면 모든 다른 PSRepository를 등록 취소해야 합니다. 다음은 그 예입니다.
 

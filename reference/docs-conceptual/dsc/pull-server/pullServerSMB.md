@@ -2,19 +2,20 @@
 ms.date: 04/11/2018
 keywords: dsc,powershell,configuration,setup
 title: DSC SMB 끌어오기 서버 설정
-ms.openlocfilehash: be41f7a708f1a129919fae8300fc4307441097f7
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: DSC SMB 끌어오기 서버는 대상 노드에서 DSC 구성 파일 및/또는 DSC 리소스를 요청 시 사용할 수 있게 해주는 SMB 파일 공유를 호스트하는 컴퓨터입니다.
+ms.openlocfilehash: 4ac1b0db719fa124d6fa9a654acb64ec24d9ea41
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500698"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658435"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>DSC SMB 끌어오기 서버 설정
 
 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> 끌어오기 서버(Windows 기능 *DSC-Service*)는 Windows Server의 지원되는 구성 요소이지만 새로운 기능을 제공할 계획은 없습니다. 관리되는 클라우드를 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)(Windows Server에 끌어오기 서버 이외의 기능 포함) 또는 [여기](pullserver.md#community-solutions-for-pull-service)에 나열된 커뮤니티 솔루션 중 하나로 전환하기 시작하는 것이 좋습니다.
+> 끌어오기 서버(Windows 기능 *DSC-Service* )는 Windows Server의 지원되는 구성 요소이지만 새로운 기능을 제공할 계획은 없습니다. 관리되는 클라우드를 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)(Windows Server에 끌어오기 서버 이외의 기능 포함) 또는 [여기](pullserver.md#community-solutions-for-pull-service)에 나열된 커뮤니티 솔루션 중 하나로 전환하기 시작하는 것이 좋습니다.
 
 DSC [SMB](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11)) 끌어오기 서버는 대상 노드에서 DSC 구성 파일 및/또는 DSC 리소스를 요청 시 사용할 수 있게 해주는 SMB 파일 공유를 호스트하는 컴퓨터입니다.
 
@@ -33,7 +34,7 @@ DSC에 대해 SMB 끌어오기 서버를 사용하려면 다음을 수행해야 
 
 > [!NOTE]
 > `Install-Module`은 PowerShell 5.0에 포함된 **PowerShellGet** 모듈에 포함되어 있습니다.
-> **xSmbShare**에는 SMB 파일 공유를 만드는 데 사용할 수 있는 DSC 리소스 **xSmbShare**가 포함되어 있습니다.
+> **xSmbShare** 에는 SMB 파일 공유를 만드는 데 사용할 수 있는 DSC 리소스 **xSmbShare** 가 포함되어 있습니다.
 
 ### <a name="create-the-directory-and-file-share"></a>디렉터리 및 파일 공유 만들기
 
@@ -69,14 +70,14 @@ Configuration SmbShare
 }
 ```
 
-이 구성은 아직 없는 경우 `C:\DscSmbShare` 디렉터리를 만든 다음, 해당 디렉터리를 SMB 파일 공유로 사용합니다. **FullAccess**는 파일 공유에서 작성하거나 삭제해야 하는 계정에 부여되어야 합니다. **ReadAccess**는 공유로부터 구성 및/또는 DSC 리소스를 가져오는 클라이언트 노드에 제공되어야 합니다.
+이 구성은 아직 없는 경우 `C:\DscSmbShare` 디렉터리를 만든 다음, 해당 디렉터리를 SMB 파일 공유로 사용합니다. **FullAccess** 는 파일 공유에서 작성하거나 삭제해야 하는 계정에 부여되어야 합니다. **ReadAccess** 는 공유로부터 구성 및/또는 DSC 리소스를 가져오는 클라이언트 노드에 제공되어야 합니다.
 
 > [!NOTE]
 > DSC는 기본적으로 시스템 계정으로 실행되므로 컴퓨터 자체가 공유에 액세스할 수 있어야 합니다.
 
 ### <a name="give-file-system-access-to-the-pull-client"></a>파일 시스템에 끌어오기 클라이언트에 대한 액세스 권한 부여
 
-클라이언트 노드에 **ReadAccess**를 부여하면 해당 노드에서 SMB 공유에 액세스할 수 있지만 해당 공유 내의 파일이나 폴더에는 액세스할 수 없습니다. SMB 공유 폴더 및 하위 폴더에 대한 액세스 권한을 클라이언트 노드에 명시적으로 부여해야 합니다. DSC에서 [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0) 모듈에 포함된 **cNtfsPermissionEntry** 리소스 사용을 추가하여 이렇게 할 수 있습니다.
+클라이언트 노드에 **ReadAccess** 를 부여하면 해당 노드에서 SMB 공유에 액세스할 수 있지만 해당 공유 내의 파일이나 폴더에는 액세스할 수 없습니다. SMB 공유 폴더 및 하위 폴더에 대한 액세스 권한을 클라이언트 노드에 명시적으로 부여해야 합니다. DSC에서 [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0) 모듈에 포함된 **cNtfsPermissionEntry** 리소스 사용을 추가하여 이렇게 할 수 있습니다.
 다음 구성에서는 끌어오기 클라이언트에 ReadAndExecute 액세스를 부여하는 **cNtfsPermissionEntry** 블록을 추가합니다.
 
 ```powershell
@@ -131,7 +132,7 @@ Configuration DSCSMB
 
 클라이언트 노드가 SMB 공유 폴더에서 끌어올 모든 구성 MOF 파일 및/또는 DSC 리소스를 저장합니다.
 
-모든 구성 MOF 파일의 이름은 *ConfigurationID*.mof로 지정해야 합니다. 여기서 *ConfigurationID*는 대상 노드의 LCM의 **ConfigurationID** 속성의 값입니다. 끌어오기 클라이언트 구성에 대한 자세한 내용은 [구성 ID를 사용하여 끌어오기 클라이언트 설정](pullClientConfigID.md)을 참조하세요.
+모든 구성 MOF 파일의 이름은 *ConfigurationID* .mof로 지정해야 합니다. 여기서 *ConfigurationID* 는 대상 노드의 LCM의 **ConfigurationID** 속성의 값입니다. 끌어오기 클라이언트 구성에 대한 자세한 내용은 [구성 ID를 사용하여 끌어오기 클라이언트 설정](pullClientConfigID.md)을 참조하세요.
 
 > [!NOTE]
 > SMB 끌어오기 서버를 사용하는 경우 구성 ID를 사용해야 합니다. SMB에서는 구성 이름이 지원되지 않습니다.
@@ -159,7 +160,7 @@ SMB 공유에서 구성 및/또는 리소스를 끌어오는 클라이언트를 
 LCM 구성에 대한 자세한 내용은 [구성 ID를 사용하여 끌어오기 클라이언트 설정](pullClientConfigID.md)을 참조하세요.
 
 > [!NOTE]
-> 편의상 이 예제에서는 **PSDscAllowPlainTextPassword**를 사용하여 일반 텍스트 암호를 **Credential** 매개 변수에 전달하는 것을 허용합니다. 자격 증명을 더 안전하게 전달하는 방법에 대한 자세한 내용은 [구성 데이터의 자격 증명 옵션](../configurations/configDataCredentials.md)을 참조하세요. 리소스를 끌어오기만 하는 경우에도 SMB 끌어오기 서버에 대한 메타 구성의 **Settings** 블록에 **ConfigurationID**를 지정**해야** 합니다.
+> 편의상 이 예제에서는 **PSDscAllowPlainTextPassword** 를 사용하여 일반 텍스트 암호를 **Credential** 매개 변수에 전달하는 것을 허용합니다. 자격 증명을 더 안전하게 전달하는 방법에 대한 자세한 내용은 [구성 데이터의 자격 증명 옵션](../configurations/configDataCredentials.md)을 참조하세요. 리소스를 끌어오기만 하는 경우에도 SMB 끌어오기 서버에 대한 메타 구성의 **Settings** 블록에 **ConfigurationID** 를 지정 **해야** 합니다.
 
 ```powershell
 $secpasswd = ConvertTo-SecureString "Pass1Word" -AsPlainText -Force

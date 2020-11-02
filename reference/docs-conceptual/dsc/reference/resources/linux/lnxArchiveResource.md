@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: Linux nxArchive 리소스용 DSC
-ms.openlocfilehash: 386378fa6e1608117d6934b983dcebe23e55d60d
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Linux nxArchive 리소스용 DSC
+ms.openlocfilehash: 2705829ccae0c1baa27324030433340e7f3949c1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464250"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92648857"
 ---
 # <a name="dsc-for-linux-nxarchive-resource"></a>Linux nxArchive 리소스용 DSC
 
@@ -33,7 +34,7 @@ nxArchive <string> #ResourceName
 |---|---|
 |SourcePath |보관 파일의 원본 경로를 지정합니다. .tar, .zip 또는 .tar.gz 파일이어야 합니다. |
 |DestinationPath |보관 파일 내용을 추출해 놓을 위치를 지정합니다. |
-|체크섬 |소스 보관 파일이 업데이트되었는지 결정할 때 사용할 형식을 정의합니다. 값은 **ctime**, **mtime** 또는 **md5**입니다. 기본값은 **md5**입니다. |
+|체크섬 |소스 보관 파일이 업데이트되었는지 결정할 때 사용할 형식을 정의합니다. 값은 **ctime** , **mtime** 또는 **md5** 입니다. 기본값은 **md5** 입니다. |
 |Force |특정 파일 작업(예: 파일 덮어쓰기나 비어 있지 않은 디렉터리 삭제)을 수행하면 오류가 발생합니다. **Force** 속성을 사용하면 이러한 오류가 무시됩니다. 기본값은 `$false`입니다. |
 
 ## <a name="common-properties"></a>공용 속성
@@ -41,7 +42,7 @@ nxArchive <string> #ResourceName
 |속성 |Description |
 |---|---|
 |DependsOn |이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 ResourceName이고 해당 형식이 ResourceType일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. |
-|Ensure |보관 파일의 내용이 **Destination**에 있는지 확인할지 여부를 결정합니다. 내용이 있도록 하려면 이 속성을 **Present**으로 설정합니다. 내용이 없도록 하려면 이 속성을 **Absent**으로 설정합니다. 기본값은 **Present**입니다. |
+|Ensure |보관 파일의 내용이 **Destination** 에 있는지 확인할지 여부를 결정합니다. 내용이 있도록 하려면 이 속성을 **Present** 으로 설정합니다. 내용이 없도록 하려면 이 속성을 **Absent** 으로 설정합니다. 기본값은 **Present** 입니다. |
 
 ## <a name="example"></a>예제
 

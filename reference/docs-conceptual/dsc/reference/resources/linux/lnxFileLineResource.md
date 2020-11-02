@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: Linux nxFileLine 리소스용 DSC
-ms.openlocfilehash: c87054ec7039923bcb5e7c5c5d58f9221a12c9ca
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Linux nxFileLine 리소스용 DSC
+ms.openlocfilehash: b342021176e4d8584afec82173f31bf5191ad264
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463672"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644751"
 ---
 # <a name="dsc-for-linux-nxfileline-resource"></a>Linux nxFileLine 리소스용 DSC
 
@@ -30,7 +31,7 @@ nxFileLine <string> #ResourceName
 |속성 |Description |
 |---|---|
 |FilePath |대상 노드에서 줄을 관리하는 파일의 전체 경로입니다. |
-|ContainsLine |파일에 존재하도록 할 줄입니다. 이 줄은 파일에 존재하지 않는 경우 파일에 추가됩니다. **ContainsLine**은 필수지만 필요하지 않은 경우 빈 문자열(`ContainsLine = ""`)로 설정할 수 있습니다. |
+|ContainsLine |파일에 존재하도록 할 줄입니다. 이 줄은 파일에 존재하지 않는 경우 파일에 추가됩니다. **ContainsLine** 은 필수지만 필요하지 않은 경우 빈 문자열(`ContainsLine = ""`)로 설정할 수 있습니다. |
 |DoesNotContainPattern |파일에 존재할 수 없는 줄에 대한 정규식 패턴입니다. 파일에 존재하고 이 정규식과 일치하는 모든 줄의 경우 파일에서 제거됩니다. |
 
 ## <a name="common-properties"></a>공용 속성

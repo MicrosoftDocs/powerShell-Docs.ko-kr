@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: RemoveConfiguration 메서드
-ms.openlocfilehash: ef15c873d8dfaf28e5cdeb611b72a70921c099be
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: RemoveConfiguration 메서드
+ms.openlocfilehash: d5988ac014c457407c56a097c9a376427376eb3f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464352"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650721"
 ---
 # <a name="removeconfiguration-method"></a>RemoveConfiguration 메서드
 
@@ -17,8 +18,8 @@ ms.locfileid: "86464352"
 
 ```mof
 uint32 RemoveConfiguration(
-  [in] uint32  Stage,
-  [in] boolean Force
+  [in] uint32  Stage,
+  [in] boolean Force
 );
 ```
 
@@ -32,7 +33,7 @@ uint32 RemoveConfiguration(
 |**2** | **보류 중인** 구성 문서(pending.mof)입니다.  |
 |**4** | **이전** 구성 문서(previous.mof)입니다. |
 
-*Force* \[in\] **true**이면 구성을 강제로 제거합니다.
+*Force* \[in\] **true** 이면 구성을 강제로 제거합니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -46,7 +47,7 @@ uint32 RemoveConfiguration(
 
 **MOF:** DscCore.mof
 
-**네임스페이스**: Root\Microsoft\Windows\DesiredStateConfiguration
+**네임스페이스** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>참고 항목
 

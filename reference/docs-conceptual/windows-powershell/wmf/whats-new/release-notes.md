@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,setup
 title: WMF 5.x 릴리스 정보
-ms.openlocfilehash: 3fc712dbcbe184c60ae248b260c8f6800f111fdd
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: WMF 5.x 릴리스 정보
+ms.openlocfilehash: d783592104262b08815b12bd8de01adf13b60372
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809879"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92655845"
 ---
 # <a name="windows-management-framework-wmf-5x-release-notes"></a>WMF(Windows Management Framework) 5.x 릴리스 정보
 
@@ -45,7 +44,7 @@ WMF 5.1에는 Windows Server 2016과 함께 릴리스된 PowerShell, WMI, WinRM 
 > [!IMPORTANT]
 > Windows Server 2008 또는 Windows 7에 WMF 5.1을 설치하기 전에 WMF 3.0이 설치되어 있지 않은지 확인합니다. 자세한 내용은 [Windows Server 2008 R2 SP1 및 Windows 7 SP1에 대한 WMF 5.1 필수 조건](../setup/install-configure.md#wmf-51-prerequisites-for-windows-server-2008-r2-sp1-and-windows-7-sp1)을 참조하세요.
 
-## <a name="powershell-editions"></a>PowerShell 버전
+## <a name="powershell-editions"></a>PowerShell Edition
 
 버전 5.1부터 PowerShell은 다양한 기능 집합 및 플랫폼 호환성을 나타내는 다양한 버전으로 사용 가능합니다.
 
@@ -92,13 +91,13 @@ WMF 5.1에서 `using module`은 PowerShell에서 다른 모듈 관련 생성과 
 
 WMF 5.1에서는 다음과 같습니다.
 
-- [ModuleSpecification Constructor (Hashtable)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor?view=powershellsdk-1.1.0#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_)(ModuleSpecification 생성자(해시 테이블))를 사용할 수 있습니다.
+- [ModuleSpecification Constructor (Hashtable)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_)(ModuleSpecification 생성자(해시 테이블))를 사용할 수 있습니다.
 
   이 해시 테이블은 `Get-Module -FullyQualifiedName`과 형식이 같습니다.
 
   **예제:** `using module @{ModuleName = 'PSReadLine'; RequiredVersion = '1.1'}`
 
-- 모듈의 여러 버전이 있는 경우 PowerShell에서는 `Import-Module`과 **동일한 해결 논리**를 사용하고 오류가 발생하지 않습니다. 동작은 `Import-Module` 및 `Import-DscResource`와 동일합니다.
+- 모듈의 여러 버전이 있는 경우 PowerShell에서는 `Import-Module`과 **동일한 해결 논리** 를 사용하고 오류가 발생하지 않습니다. 동작은 `Import-Module` 및 `Import-DscResource`와 동일합니다.
 
 ## <a name="improvements-to-pester"></a>Pester의 향상된 기능
 

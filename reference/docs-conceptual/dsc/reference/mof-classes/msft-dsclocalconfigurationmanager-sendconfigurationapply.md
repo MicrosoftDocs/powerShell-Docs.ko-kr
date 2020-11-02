@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: SendConfigurationApply 메서드
-ms.openlocfilehash: 9b684790e5a7d6c7bdf074caca6040e13807f1ca
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: SendConfigurationApply 메서드
+ms.openlocfilehash: 9bd63220644e096b348f71ee9d4ac216af6a7ccc
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464318"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92648973"
 ---
 # <a name="sendconfigurationapply-method"></a>SendConfigurationApply 메서드
 
@@ -17,8 +18,8 @@ ms.locfileid: "86464318"
 
 ```mof
 uint32 SendConfigurationApply(
-  [in] uint8   ConfigurationData[],
-  [in] boolean force
+  [in] uint8   ConfigurationData[],
+  [in] boolean force
 );
 ```
 
@@ -26,7 +27,7 @@ uint32 SendConfigurationApply(
 
 **ConfigurationData** \[in\] 구성에 대한 환경 데이터입니다.
 
-**force** \[in\] **true**이면 구성을 강제로 중지합니다.
+**force** \[in\] **true** 이면 구성을 강제로 중지합니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -40,7 +41,7 @@ uint32 SendConfigurationApply(
 
 **MOF:** DscCore.mof
 
-**네임스페이스**: Root\Microsoft\Windows\DesiredStateConfiguration
+**네임스페이스** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>참고 항목
 

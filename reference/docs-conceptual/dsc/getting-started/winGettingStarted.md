@@ -2,17 +2,17 @@
 ms.date: 08/15/2019
 keywords: dsc,powershell,configuration,setup
 title: Windows용 DSC(필요한 상태 구성) 시작
-ms.openlocfilehash: 00e1cf545b19f054b4b1ff468c9f6ad94e5cef55
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: 이 항목에서는 Windows용 PowerShell DSC(필요한 상태 구성) 사용 방법에 대해 설명합니다.
+ms.openlocfilehash: 2b9ddba2023a3933e3ad70d7bfee798ff07f0484
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236325"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662812"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-windows"></a>Windows용 DSC(필요한 상태 구성) 시작
 
-이 항목에서는 Windows용 PowerShell DSC(필요한 상태 구성) 사용 방법에 대해 설명합니다.
-DSC에 대한 일반적인 내용은 [Windows PowerShell 필요한 상태 구성 시작](../overview/overview.md)을 참조하세요.
+이 항목에서는 Windows용 PowerShell DSC(필요한 상태 구성) 사용 방법에 대해 설명합니다. DSC에 대한 일반적인 내용은 [Windows PowerShell 필요한 상태 구성 시작](../overview/overview.md)을 참조하세요.
 
 ## <a name="supported-windows-operation-system-versions"></a>지원되는 Windows 운영 체제 버전
 
@@ -115,8 +115,7 @@ Remove-DscConfigurationDocument -Stage Current -Verbose
 
 #### <a name="configure-settings-in-local-configuration-manager"></a>로컬 구성 관리자에서 설정 구성
 
-[Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager) cmdlet을 사용하여 메타 구성 MOF 파일을 머신에 적용합니다.
-메타 구성 MOF의 경로가 필요합니다.
+[Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager) cmdlet을 사용하여 메타 구성 MOF 파일을 머신에 적용합니다. 메타 구성 MOF의 경로가 필요합니다.
 
 ```powershell
 Set-DSCLocalConfigurationManager -Path 'c:\metaconfig\localhost.meta.mof' -Verbose

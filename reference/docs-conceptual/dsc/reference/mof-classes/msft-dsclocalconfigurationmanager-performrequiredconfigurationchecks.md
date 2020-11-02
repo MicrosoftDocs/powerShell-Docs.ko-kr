@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: PerformRequiredConfigurationChecks 메서드
-ms.openlocfilehash: ea4294ffdcb2580fa7b39b18966b642d58073eb6
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: PerformRequiredConfigurationChecks 메서드
+ms.openlocfilehash: c5e847cda6376f4266cc771dc947032a279e25f4
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464454"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650827"
 ---
 # <a name="performrequiredconfigurationchecks-method"></a>PerformRequiredConfigurationChecks 메서드
 
@@ -17,7 +18,7 @@ ms.locfileid: "86464454"
 
 ```mof
 uint32 PerformRequiredConfigurationChecks(
-  [in] uint32 Flags
+  [in] uint32 Flags
 );
 ```
 
@@ -29,7 +30,7 @@ uint32 PerformRequiredConfigurationChecks(
 |:--- |:---|
 |**1** | 일반 일관성 확인입니다. |
 |**2** | 다시 부팅한 후 일관성 확인의 연속입니다. 이 값은 다른 값과 결합하면 안 됩니다. |
-|**4** | 구성은 노드의 메타 구성에 지정된 끌어오기 서버에서 끌어와야 합니다. **5** 값인 경우 이 값은 항상 **1**과 결합되어야 합니다. |
+|**4** | 구성은 노드의 메타 구성에 지정된 끌어오기 서버에서 끌어와야 합니다. **5** 값인 경우 이 값은 항상 **1** 과 결합되어야 합니다. |
 |**8** | 보고서 서버에 상태를 보냅니다. |
 
 ## <a name="return-value"></a>반환 값
@@ -44,7 +45,7 @@ uint32 PerformRequiredConfigurationChecks(
 
 **MOF:** DscCore.mof
 
-**네임스페이스**: Root\Microsoft\Windows\DesiredStateConfiguration
+**네임스페이스** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>참고 항목
 

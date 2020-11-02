@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: EnableDebugConfiguration 메서드
-ms.openlocfilehash: be75b1012f49db79eb75a68c6912ffd5772bf16f
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: EnableDebugConfiguration 메서드
+ms.openlocfilehash: 536366e6e1627a249f3bc2dc19bfd8ff3de42117
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464097"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644784"
 ---
 # <a name="enabledebugconfiguration-method"></a>EnableDebugConfiguration 메서드
 
@@ -17,7 +18,7 @@ DSC 리소스 디버깅을 사용하도록 설정합니다.
 
 ```mof
 uint32 EnableDebugConfiguration(
-  [in] boolean BreakAll
+  [in] boolean BreakAll
 );
 ```
 
@@ -37,7 +38,7 @@ uint32 EnableDebugConfiguration(
 
 **MOF:** DscCore.mof
 
-**네임스페이스**: Root\Microsoft\Windows\DesiredStateConfiguration
+**네임스페이스** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>참고 항목
 

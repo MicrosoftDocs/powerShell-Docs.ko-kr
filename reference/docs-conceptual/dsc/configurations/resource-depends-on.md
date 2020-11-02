@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: DependsOn을 사용하는 리소스 종속성
-ms.openlocfilehash: 5ea08c76c203188f41513ad0cc1f4571579b4172
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 구성이 더 크고 복잡해지면 리소스가 다른 리소스에 종속되도록 지정하여 리소스의 적용된 순서를 변경하는 데 `DependsOn` 키를 사용할 수 있습니다.
+ms.openlocfilehash: 18f19a3606834ede0737213930e6af0e251225ab
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954480"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645101"
 ---
 # <a name="resource-dependencies-using-dependson"></a>DependsOn을 사용하는 리소스 종속성
 
@@ -141,6 +142,6 @@ VERBOSE: Time taken for configuration job to complete is 15.385 seconds
         }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [노드 간 종속성 사용](./crossNodeDependencies.md)

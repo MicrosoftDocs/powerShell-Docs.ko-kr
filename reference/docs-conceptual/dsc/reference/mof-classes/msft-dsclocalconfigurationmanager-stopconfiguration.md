@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: StopConfiguration 메서드
-ms.openlocfilehash: 76e50c98b09dca86983320918c6899082580672a
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: StopConfiguration 메서드
+ms.openlocfilehash: 854c0dbe8554c08413735a5a7bc872776e0b0a6c
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463706"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644628"
 ---
 # <a name="stopconfiguration-method"></a>StopConfiguration 메서드
 
@@ -17,13 +18,13 @@ ms.locfileid: "86463706"
 
 ```mof
 uint32 StopConfiguration(
-  [in] boolean force
+  [in] boolean force
 );
 ```
 
 ## <a name="parameters"></a>매개 변수
 
-**force** \[in\] **true**이면 구성을 강제로 중지합니다.
+**force** \[in\] **true** 이면 구성을 강제로 중지합니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -37,7 +38,7 @@ uint32 StopConfiguration(
 
 **MOF:** DscCore.mof
 
-**네임스페이스**: Root\Microsoft\Windows\DesiredStateConfiguration
+**네임스페이스** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>참고 항목
 

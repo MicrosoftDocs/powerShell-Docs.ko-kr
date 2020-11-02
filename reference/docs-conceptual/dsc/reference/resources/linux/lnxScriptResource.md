@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: Linux용 DSC nxScript 리소스
-ms.openlocfilehash: e39808e110d5ee4bf9d0ccd418ca3b15ac9fe420
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Linux용 DSC nxScript 리소스
+ms.openlocfilehash: c92d7ac76323d39167512734ef743c299857c9a6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463655"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92648813"
 ---
 # <a name="dsc-for-linux-nxscript-resource"></a>Linux용 DSC nxScript 리소스
 
@@ -32,8 +33,8 @@ nxScript <string> #ResourceName
 |속성 |Description |
 |---|---|
 |GetScript |머신의 현재 상태를 반환하는 스크립트를 제공합니다. 이 스크립트는 [GetDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) 스크립트를 호출할 때 실행됩니다. 스크립트는 `#!/bin/bash`와 같은 구조로 시작해야 합니다. |
-|SetScript |머신을 올바른 상태로 전환하는 스크립트를 제공합니다. [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) 스크립트를 호출하면 **TestScript**가 먼저 실행됩니다. **TestScript** 블록에서 0이 아닌 종료 코드를 반환한다면, **SetScript** 블록이 실행됩니다. **TestScript**에서 0이라는 종료 코드를 반환한다면, **SetScript**가 실행되지 않습니다. 스크립트는 `#!/bin/bash`와 같은 구조로 시작해야 합니다. |
-|TestScript |현재 노드가 올바른 상태인지 여부를 평가하는 스크립트를 제공합니다. [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) 스크립트를 호출하면 이 스크립트가 실행됩니다. 이 스크립트에서 0이 아닌 종료 코드를 반환한다면, **SetScript**가 실행됩니다. 이 스크립트에서 0이라는 종료 코드를 반환한다면, **SetScript**가 실행되지 않습니다. [Test-DscConfiguration](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) 스크립트를 호출하면 **TestScript**도 실행됩니다. 그러나 이 경우에서는 **TestScript**에서 어떤 종료 코드가 반환되는지 관계없이 **SetScript**가 실행되지 않습니다. 실제 구성이 현재 필요한 상태 구성과 일치하는 경우 **TestScript**는 콘텐츠를 포함하고 종료 코드 0을 반환해야 하며, 일치하지 않는 경우에는 0이 아닌 종료 코드를 반환해야 합니다. 현재 필요한 상태 구성은 DSC를 사용하는 노드에서 시행된 마지막 구성입니다. 스크립트는 `#!/bin/bash`와 같은 구조로 시작해야 합니다. |
+|SetScript |머신을 올바른 상태로 전환하는 스크립트를 제공합니다. [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) 스크립트를 호출하면 **TestScript** 가 먼저 실행됩니다. **TestScript** 블록에서 0이 아닌 종료 코드를 반환한다면, **SetScript** 블록이 실행됩니다. **TestScript** 에서 0이라는 종료 코드를 반환한다면, **SetScript** 가 실행되지 않습니다. 스크립트는 `#!/bin/bash`와 같은 구조로 시작해야 합니다. |
+|TestScript |현재 노드가 올바른 상태인지 여부를 평가하는 스크립트를 제공합니다. [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) 스크립트를 호출하면 이 스크립트가 실행됩니다. 이 스크립트에서 0이 아닌 종료 코드를 반환한다면, **SetScript** 가 실행됩니다. 이 스크립트에서 0이라는 종료 코드를 반환한다면, **SetScript** 가 실행되지 않습니다. [Test-DscConfiguration](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) 스크립트를 호출하면 **TestScript** 도 실행됩니다. 그러나 이 경우에서는 **TestScript** 에서 어떤 종료 코드가 반환되는지 관계없이 **SetScript** 가 실행되지 않습니다. 실제 구성이 현재 필요한 상태 구성과 일치하는 경우 **TestScript** 는 콘텐츠를 포함하고 종료 코드 0을 반환해야 하며, 일치하지 않는 경우에는 0이 아닌 종료 코드를 반환해야 합니다. 현재 필요한 상태 구성은 DSC를 사용하는 노드에서 시행된 마지막 구성입니다. 스크립트는 `#!/bin/bash`와 같은 구조로 시작해야 합니다. |
 |사용자 |스크립트를 실행할 권한이 있는 사용자입니다. |
 |그룹 |스크립트를 실행할 권한이 있는 그룹입니다. |
 

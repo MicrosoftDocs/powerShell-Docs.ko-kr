@@ -2,12 +2,13 @@
 ms.date: 10/13/2017
 keywords: dsc,powershell,configuration,setup
 title: 엔지니어를 위한 필요한 상태 구성 개요
-ms.openlocfilehash: dbed274d5333c216970247b88d2a0956025e969d
-ms.sourcegitcommit: a5e945e0889d0635b7af767d80d6a13bc5526269
+description: 이 문서는 개발자 및 운영 팀에게 PowerShell DSC(필요한 상태 구성)의 혜택을 설명하기 위해 작성되었습니다.
+ms.openlocfilehash: c98295d0e78f4dc89e5df429e3c1de9a0c024054
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82584516"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646939"
 ---
 # <a name="desired-state-configuration-overview-for-engineers"></a>엔지니어를 위한 필요한 상태 구성 개요
 
@@ -67,7 +68,7 @@ else
 }
 ```
 
-이 스크립트는 많은 논리 및 오류 처리가 포함되어 더 복잡합니다. 이 스크립트는 수행하려는 작업은 더 이상 지정하지 않지만 _수행하는 방법_을 지정하므로 더 복잡합니다.
+이 스크립트는 많은 논리 및 오류 처리가 포함되어 더 복잡합니다. 이 스크립트는 수행하려는 작업은 더 이상 지정하지 않지만 _수행하는 방법_ 을 지정하므로 더 복잡합니다.
 
 DSC를 사용하면 수행할 작업을 지정할 수 있고 기본 논리는 일반화됩니다.
 

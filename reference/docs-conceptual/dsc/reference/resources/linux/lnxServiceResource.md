@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: dsc,powershell,configuration,setup
+ms.topic: reference
 title: Linux용 DSC nxService 리소스
-ms.openlocfilehash: 2aec8b943d386fad33dfc1cfdd916c5e18039eaa
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: Linux용 DSC nxService 리소스
+ms.openlocfilehash: 4eefe491c491c9245732def1cc85260f368ef9e1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463638"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92648786"
 ---
 # <a name="dsc-for-linux-nxservice-resource"></a>Linux용 DSC nxService 리소스
 
@@ -33,7 +34,7 @@ nxService <string> #ResourceName
 |속성 |구성할 서비스/데몬의 이름입니다. |
 |컨트롤러 |서비스를 구성할 때 사용할 서비스 컨트롤러의 형식입니다. |
 |사용 |부팅 시 서비스가 시작되는지 여부를 나타냅니다. |
-|시스템 상태 |서비스가 실행되고 있는지를 나타냅니다. 서비스가 실행 중이 아니도록 설정하려면 이 속성을 **Stopped**로 설정합니다. 서비스가 실행 중이도록 하려면 이 속성을 **Running**으로 설정합니다. |
+|시스템 상태 |서비스가 실행되고 있는지를 나타냅니다. 서비스가 실행 중이 아니도록 설정하려면 이 속성을 **Stopped** 로 설정합니다. 서비스가 실행 중이도록 하려면 이 속성을 **Running** 으로 설정합니다. |
 
 ## <a name="common-properties"></a>공용 속성
 

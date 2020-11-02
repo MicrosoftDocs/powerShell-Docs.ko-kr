@@ -1,13 +1,13 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,cmdlet
 title: ISEAddOnToolCollection 개체
-ms.openlocfilehash: e07a47169381307b50ac190165307c926b4ad94e
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: ISEAddOnToolCollection 개체는 **ISEAddOnTool** 개체의 컬렉션입니다.
+ms.openlocfilehash: ba08ffd82a7ff2fa469540a5ea542abee8d4dc82
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809719"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658313"
 ---
 # <a name="the-iseaddontoolcollection-object"></a>ISEAddOnToolCollection 개체
 
