@@ -1,0 +1,280 @@
+---
+external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
+keywords: powershell,cmdlet
+Locale: en-US
+Module Name: Microsoft.PowerShell.Management
+ms.date: 10/25/2019
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-service?view=powershell-6&WT.mc_id=ps-gethelp
+schema: 2.0.0
+title: New-Service
+ms.openlocfilehash: 04a2d18b9d663f612e8819c1d81bbfe490f4931a
+ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "93213146"
+---
+# <span data-ttu-id="28b3c-103">New-Service</span><span class="sxs-lookup"><span data-stu-id="28b3c-103">New-Service</span></span>
+
+## <span data-ttu-id="28b3c-104">개요</span><span class="sxs-lookup"><span data-stu-id="28b3c-104">SYNOPSIS</span></span>
+<span data-ttu-id="28b3c-105">새 Windows 서비스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-105">Creates a new Windows service.</span></span>
+
+## <span data-ttu-id="28b3c-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="28b3c-106">SYNTAX</span></span>
+
+```
+New-Service [-Name] <String> [-BinaryPathName] <String> [-DisplayName <String>] [-Description <String>]
+ [-StartupType <ServiceStartupType>] [-Credential <PSCredential>] [-DependsOn <String[]>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="28b3c-107">설명</span><span class="sxs-lookup"><span data-stu-id="28b3c-107">DESCRIPTION</span></span>
+
+<span data-ttu-id="28b3c-108">`New-Service`Cmdlet은 레지스트리 및 서비스 데이터베이스에 Windows 서비스에 대 한 새 항목을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-108">The `New-Service` cmdlet creates a new entry for a Windows service in the registry and in the service database.</span></span> <span data-ttu-id="28b3c-109">새 서비스에는 서비스 중 실행 되는 실행 파일이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-109">A new service requires an executable file that runs during the service.</span></span>
+
+<span data-ttu-id="28b3c-110">이 cmdlet의 매개 변수를 사용하면 서비스의 표시 이름, 설명, 시작 유형 및 종속성을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-110">The parameters of this cmdlet let you set the display name, description, startup type, and dependencies of the service.</span></span>
+
+## <span data-ttu-id="28b3c-111">예제</span><span class="sxs-lookup"><span data-stu-id="28b3c-111">EXAMPLES</span></span>
+
+### <span data-ttu-id="28b3c-112">예제 1: 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="28b3c-112">Example 1: Create a service</span></span>
+
+```powershell
+New-Service -Name "TestService" -BinaryPathName "C:\WINDOWS\System32\svchost.exe -k netsvcs"
+```
+
+<span data-ttu-id="28b3c-113">이 명령은 TestService 라는 서비스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-113">This command creates a service named TestService.</span></span>
+
+### <span data-ttu-id="28b3c-114">예제 2: 설명, 시작 유형 및 표시 이름을 포함 하는 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="28b3c-114">Example 2: Create a service that includes description, startup type, and display name</span></span>
+
+```powershell
+$params = @{
+  Name = "TestService"
+  BinaryPathName = "C:\WINDOWS\System32\svchost.exe -k netsvcs"
+  DependsOn = "NetLogon"
+  DisplayName = "Test Service"
+  StartupType = "Manual"
+  Description = "This is a test service."
+}
+New-Service @params
+```
+
+<span data-ttu-id="28b3c-115">이 명령은 TestService 라는 서비스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-115">This command creates a service named TestService.</span></span> <span data-ttu-id="28b3c-116">의 매개 변수를 사용 하 여 `New-Service` 새 서비스의 설명, 시작 유형 및 표시 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-116">It uses the parameters of `New-Service` to specify a description, startup type, and display name for the new service.</span></span>
+
+### <span data-ttu-id="28b3c-117">예 3: 새 서비스 보기</span><span class="sxs-lookup"><span data-stu-id="28b3c-117">Example 3: View the new service</span></span>
+
+```powershell
+Get-CimInstance -ClassName Win32_Service -Filter "Name='testservice'"
+```
+
+```Output
+ExitCode  : 0
+Name      : testservice
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+```
+
+<span data-ttu-id="28b3c-118">이 명령은 `Get-CimInstance` 를 사용 하 여 새 서비스에 대 한 **Win32_Service** 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-118">This command uses `Get-CimInstance` to get the **Win32_Service** object for the new service.</span></span> <span data-ttu-id="28b3c-119">이 개체에는 시작 모드와 서비스 설명이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-119">This object includes the start mode and the service description.</span></span>
+
+## <span data-ttu-id="28b3c-120">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="28b3c-120">PARAMETERS</span></span>
+
+### <span data-ttu-id="28b3c-121">-BinaryPathName</span><span class="sxs-lookup"><span data-stu-id="28b3c-121">-BinaryPathName</span></span>
+
+<span data-ttu-id="28b3c-122">서비스의 실행 파일 경로를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-122">Specifies the path of the executable file for the service.</span></span> <span data-ttu-id="28b3c-123">이 매개 변수는 필수적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-123">This parameter is required.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: Path
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="28b3c-124">-Credential</span><span class="sxs-lookup"><span data-stu-id="28b3c-124">-Credential</span></span>
+
+<span data-ttu-id="28b3c-125">서비스에서 [서비스 로그온 계정](/windows/desktop/ad/about-service-logon-accounts)으로 사용 하는 계정을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-125">Specifies the account used by the service as the [Service Logon Account](/windows/desktop/ad/about-service-logon-accounts).</span></span>
+
+<span data-ttu-id="28b3c-126">**User01** 또는 **Domain01\User01** 과 같은 사용자 이름을 입력 하거나, cmdlet에 의해 생성 된 것과 같은 **PSCredential** 개체를 입력 합니다 `Get-Credential` .</span><span class="sxs-lookup"><span data-stu-id="28b3c-126">Type a user name, such as **User01** or **Domain01\User01** , or enter a **PSCredential** object, such as one generated by the `Get-Credential` cmdlet.</span></span> <span data-ttu-id="28b3c-127">사용자 이름을 입력 하는 경우이 cmdlet은 암호를 묻는 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-127">If you type a user name, this cmdlet prompts you for a password.</span></span>
+
+<span data-ttu-id="28b3c-128">자격 증명은 [PSCredential](/dotnet/api/system.management.automation.pscredential) 개체에 저장 되 고 암호는 [SecureString](/dotnet/api/system.security.securestring)으로 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-128">Credentials are stored in a [PSCredential](/dotnet/api/system.management.automation.pscredential) object and the password is stored as a [SecureString](/dotnet/api/system.security.securestring).</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="28b3c-129">**Securestring** 데이터 보호에 대 한 자세한 [내용은 참조 하십시오](/dotnet/api/system.security.securestring#how-secure-is-securestring).</span><span class="sxs-lookup"><span data-stu-id="28b3c-129">For more information about **SecureString** data protection, see [How secure is SecureString?](/dotnet/api/system.security.securestring#how-secure-is-securestring).</span></span>
+
+```yaml
+Type: System.Management.Automation.PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="28b3c-130">-DependsOn</span><span class="sxs-lookup"><span data-stu-id="28b3c-130">-DependsOn</span></span>
+
+<span data-ttu-id="28b3c-131">새 서비스가 종속되는 다른 서비스의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-131">Specifies the names of other services upon which the new service depends.</span></span> <span data-ttu-id="28b3c-132">여러 서비스 이름을 입력하려면 쉼표를 사용하여 이름을 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-132">To enter multiple service names, use a comma to separate the names.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="28b3c-133">-Description</span><span class="sxs-lookup"><span data-stu-id="28b3c-133">-Description</span></span>
+
+<span data-ttu-id="28b3c-134">서비스에 대한 설명을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-134">Specifies a description of the service.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="28b3c-135">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="28b3c-135">-DisplayName</span></span>
+
+<span data-ttu-id="28b3c-136">서비스의 표시 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-136">Specifies a display name for the service.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="28b3c-137">-Name</span><span class="sxs-lookup"><span data-stu-id="28b3c-137">-Name</span></span>
+
+<span data-ttu-id="28b3c-138">서비스의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-138">Specifies the name of the service.</span></span>
+<span data-ttu-id="28b3c-139">이 매개 변수는 필수적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-139">This parameter is required.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: ServiceName
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="28b3c-140">-StartupType</span><span class="sxs-lookup"><span data-stu-id="28b3c-140">-StartupType</span></span>
+
+<span data-ttu-id="28b3c-141">서비스의 시작 유형을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-141">Sets the startup type of the service.</span></span> <span data-ttu-id="28b3c-142">이 매개 변수에 허용되는 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-142">The acceptable values for this parameter are:</span></span>
+
+- <span data-ttu-id="28b3c-143">**자동** -시스템이 시작 되거나 운영 체제에서 서비스를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-143">**Automatic** - The service is started or was started by the operating system, at system start-up.</span></span>
+  <span data-ttu-id="28b3c-144">자동으로 시작된 서비스가 수동으로 시작된 서비스에 따라 달라지는 경우, 시스템 시작 시 수동으로 시작된 서비스도 자동으로 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-144">If an automatically started service depends on a manually started service, the manually started service is also started automatically at system startup.</span></span>
+- <span data-ttu-id="28b3c-145">자동 **Delayedstart** -시스템이 부팅 된 후 바로 시작 됩니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-145">**AutomaticDelayedStart** - Starts shortly after the system boots.</span></span>
+- <span data-ttu-id="28b3c-146">**사용 안 함** -서비스를 사용할 수 없으며 사용자 또는 응용 프로그램에서 시작할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-146">**Disabled** - The service is disabled and cannot be started by a user or application.</span></span>
+- <span data-ttu-id="28b3c-147">**Invalidvalue** -이 값은 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-147">**InvalidValue** - This value is not supported.</span></span> <span data-ttu-id="28b3c-148">이 값을 사용 하면 오류가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-148">Using this value results in an error.</span></span>
+- <span data-ttu-id="28b3c-149">**수동** -서비스 제어 관리자 또는 응용 프로그램을 사용 하 여 수동으로 또는 사용자가 서비스를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-149">**Manual** - The service is started only manually, by a user, using the Service Control Manager, or by an application.</span></span>
+
+ <span data-ttu-id="28b3c-150">기본값은 **Automatic** 입니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-150">The default value is **Automatic** .</span></span>
+
+```yaml
+Type: Microsoft.PowerShell.Commands.ServiceStartupType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Automatic, Manual, Disabled, AutomaticDelayedStart, InvalidValue
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="28b3c-151">-Confirm</span><span class="sxs-lookup"><span data-stu-id="28b3c-151">-Confirm</span></span>
+
+<span data-ttu-id="28b3c-152">cmdlet을 실행하기 전에 확인을 요청합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-152">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="28b3c-153">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="28b3c-153">-WhatIf</span></span>
+
+<span data-ttu-id="28b3c-154">cmdlet을 실행할 경우 발생하는 일을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-154">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="28b3c-155">cmdlet은 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-155">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="28b3c-156">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="28b3c-156">CommonParameters</span></span>
+
+<span data-ttu-id="28b3c-157">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="28b3c-157">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="28b3c-158">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="28b3c-158">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="28b3c-159">입력</span><span class="sxs-lookup"><span data-stu-id="28b3c-159">INPUTS</span></span>
+
+### <span data-ttu-id="28b3c-160">없음</span><span class="sxs-lookup"><span data-stu-id="28b3c-160">None</span></span>
+
+<span data-ttu-id="28b3c-161">이 cmdlet에 입력을 파이프할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-161">You cannot pipe input to this cmdlet.</span></span>
+
+## <span data-ttu-id="28b3c-162">출력</span><span class="sxs-lookup"><span data-stu-id="28b3c-162">OUTPUTS</span></span>
+
+### <span data-ttu-id="28b3c-163">System.ServiceProcess.ServiceController</span><span class="sxs-lookup"><span data-stu-id="28b3c-163">System.ServiceProcess.ServiceController</span></span>
+
+<span data-ttu-id="28b3c-164">이 cmdlet은 새 서비스를 나타내는 개체를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-164">This cmdlet returns an object that represents the new service.</span></span>
+
+## <span data-ttu-id="28b3c-165">참고</span><span class="sxs-lookup"><span data-stu-id="28b3c-165">NOTES</span></span>
+
+<span data-ttu-id="28b3c-166">Windows Vista 이상 버전의 Windows 운영 체제에서이 cmdlet을 실행 하려면 관리자 권한으로 실행 옵션을 사용 하 여 PowerShell을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="28b3c-166">To run this cmdlet on Windows Vista and later versions of the Windows operating system, start PowerShell by using the Run as administrator option.</span></span>
+
+## <span data-ttu-id="28b3c-167">관련 링크</span><span class="sxs-lookup"><span data-stu-id="28b3c-167">RELATED LINKS</span></span>
+
+[<span data-ttu-id="28b3c-168">Get-Service</span><span class="sxs-lookup"><span data-stu-id="28b3c-168">Get-Service</span></span>](Get-Service.md)
+
+[<span data-ttu-id="28b3c-169">Restart-Service</span><span class="sxs-lookup"><span data-stu-id="28b3c-169">Restart-Service</span></span>](Restart-Service.md)
+
+[<span data-ttu-id="28b3c-170">Resume-Service</span><span class="sxs-lookup"><span data-stu-id="28b3c-170">Resume-Service</span></span>](Resume-Service.md)
+
+[<span data-ttu-id="28b3c-171">Set-Service</span><span class="sxs-lookup"><span data-stu-id="28b3c-171">Set-Service</span></span>](Set-Service.md)
+
+[<span data-ttu-id="28b3c-172">Start-Service</span><span class="sxs-lookup"><span data-stu-id="28b3c-172">Start-Service</span></span>](Start-Service.md)
+
+[<span data-ttu-id="28b3c-173">Stop-Service</span><span class="sxs-lookup"><span data-stu-id="28b3c-173">Stop-Service</span></span>](Stop-Service.md)
+
+[<span data-ttu-id="28b3c-174">Suspend-Service</span><span class="sxs-lookup"><span data-stu-id="28b3c-174">Suspend-Service</span></span>](Suspend-Service.md)
+
+[<span data-ttu-id="28b3c-175">Remove-Service</span><span class="sxs-lookup"><span data-stu-id="28b3c-175">Remove-Service</span></span>](Remove-Service.md)

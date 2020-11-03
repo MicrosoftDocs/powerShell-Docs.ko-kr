@@ -1,0 +1,303 @@
+---
+external help file: Microsoft.PowerShell.PackageManagement.dll-Help.xml
+keywords: powershell,cmdlet
+Locale: en-US
+Module Name: PackageManagement
+ms.date: 03/29/2019
+online version: https://docs.microsoft.com/powershell/module/packagemanagement/get-packagesource?view=powershell-5.1&WT.mc_id=ps-gethelp
+schema: 2.0.0
+title: Get-PackageSource
+ms.openlocfilehash: 77e5ba9954b70c053541648b5d8d2bd8e7237f75
+ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "93213297"
+---
+# <span data-ttu-id="24c7f-103">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="24c7f-103">Get-PackageSource</span></span>
+
+## <span data-ttu-id="24c7f-104">개요</span><span class="sxs-lookup"><span data-stu-id="24c7f-104">SYNOPSIS</span></span>
+<span data-ttu-id="24c7f-105">패키지 공급자에 대해 등록 된 패키지 소스 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-105">Gets a list of package sources that are registered for a package provider.</span></span>
+
+## <span data-ttu-id="24c7f-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="24c7f-106">SYNTAX</span></span>
+
+### <span data-ttu-id="24c7f-107">NuGet</span><span class="sxs-lookup"><span data-stu-id="24c7f-107">NuGet</span></span>
+
+```
+Get-PackageSource [[-Name] <String>] [-Location <String>] [-Force] [-ForceBootstrap]
+ [-ProviderName <String[]>] [-ConfigFile <String>] [-SkipValidate] [<CommonParameters>]
+```
+
+### <span data-ttu-id="24c7f-108">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="24c7f-108">PowerShellGet</span></span>
+
+```
+Get-PackageSource [[-Name] <String>] [-Location <String>] [-Force] [-ForceBootstrap]
+ [-ProviderName <String[]>] [-PackageManagementProvider <String>] [-PublishLocation <String>]
+ [-ScriptSourceLocation <String>] [-ScriptPublishLocation <String>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="24c7f-109">설명</span><span class="sxs-lookup"><span data-stu-id="24c7f-109">DESCRIPTION</span></span>
+
+<span data-ttu-id="24c7f-110">`Get-PackageSource`Cmdlet은 로컬 컴퓨터의 **PackageManagement** 에 등록 된 패키지 원본 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-110">The `Get-PackageSource` cmdlet gets a list of package sources that are registered with **PackageManagement** on the local computer.</span></span> <span data-ttu-id="24c7f-111">패키지 공급자를 지정 하는 경우 `Get-PackageSource` 지정 된 공급자와 연결 된 원본만 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-111">If you specify a package provider, `Get-PackageSource` gets only those sources that are associated with the specified provider.</span></span> <span data-ttu-id="24c7f-112">그렇지 않으면이 명령은 **PackageManagement** 에 등록 된 모든 패키지 원본을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-112">Otherwise, the command returns all package sources that are registered with **PackageManagement** .</span></span>
+
+## <span data-ttu-id="24c7f-113">예제</span><span class="sxs-lookup"><span data-stu-id="24c7f-113">EXAMPLES</span></span>
+
+### <span data-ttu-id="24c7f-114">예제 1: 모든 패키지 소스 가져오기</span><span class="sxs-lookup"><span data-stu-id="24c7f-114">Example 1: Get all package sources</span></span>
+
+<span data-ttu-id="24c7f-115">`Get-PackageSource`Cmdlet은 로컬 컴퓨터의 **PackageManagement** 에 등록 된 모든 패키지 원본을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-115">The `Get-PackageSource` cmdlet gets all package sources that are registered with **PackageManagement** on the local computer.</span></span>
+
+```powershell
+Get-PackageSource
+```
+
+```Output
+Name                 ProviderName     IsTrusted  Location
+----                 ------------     ---------  --------
+LocalPackages        NuGet            False      C:\LocalPkg\
+MyNuget              NuGet            False      https://www.nuget.org/api/v2
+PSGallery            PowerShellGet    False      https://www.powershellgallery.com/api/v2
+```
+
+### <span data-ttu-id="24c7f-116">예 2: 특정 공급자에 대 한 모든 패키지 원본 가져오기</span><span class="sxs-lookup"><span data-stu-id="24c7f-116">Example 2: Get all package sources for a specific provider</span></span>
+
+<span data-ttu-id="24c7f-117">이 명령은 특정 공급자에 대해 등록 된 패키지 원본을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-117">This command gets package sources that are registered for a specific provider.</span></span>
+
+```powershell
+Get-PackageSource -ProviderName NuGet
+```
+
+```Output
+Name                 ProviderName     IsTrusted  Location
+----                 ------------     ---------  --------
+LocalPackages        NuGet            False      C:\LocalPkg\
+MyNuget              NuGet            False      https://www.nuget.org/api/v2
+```
+
+<span data-ttu-id="24c7f-118">`Get-PackageSource`**ProviderName** 매개 변수를 사용 하 여 **NuGet** 공급자에 대해 등록 된 패키지 원본을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-118">`Get-PackageSource` uses the **ProviderName** parameter to get package sources that are registered for the **NuGet** provider.</span></span>
+
+### <span data-ttu-id="24c7f-119">예제 3: 패키지 공급자에서 원본 가져오기</span><span class="sxs-lookup"><span data-stu-id="24c7f-119">Example 3: Get sources from a package provider</span></span>
+
+<span data-ttu-id="24c7f-120">이 명령은 패키지 공급자를 사용 하 여 패키지 원본을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-120">This command uses a package provider to get package sources.</span></span>
+
+```powershell
+Get-PackageProvider -Name NuGet | Get-PackageSource
+```
+
+```Output
+Name                 ProviderName     IsTrusted  Location
+----                 ------------     ---------  --------
+LocalPackages        NuGet            False      C:\LocalPkg\
+MyNuget              NuGet            False      https://www.nuget.org/api/v2
+```
+
+<span data-ttu-id="24c7f-121">`Get-PackageProvider`**name** 매개 변수를 사용 하 여 공급자 이름인 **NuGet** 을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-121">`Get-PackageProvider` uses the **Name** parameter specify the provider name, **NuGet** .</span></span> <span data-ttu-id="24c7f-122">개체는 파이프라인에서로 전송 됩니다 `Get-PackageSource` .</span><span class="sxs-lookup"><span data-stu-id="24c7f-122">The object is sent down the pipeline to `Get-PackageSource`.</span></span>
+
+## <span data-ttu-id="24c7f-123">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="24c7f-123">PARAMETERS</span></span>
+
+### <span data-ttu-id="24c7f-124">-Smi-s</span><span class="sxs-lookup"><span data-stu-id="24c7f-124">-ConfigFile</span></span>
+
+<span data-ttu-id="24c7f-125">구성 파일을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-125">Specifies a configuration file.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: NuGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="24c7f-126">-Force</span><span class="sxs-lookup"><span data-stu-id="24c7f-126">-Force</span></span>
+
+<span data-ttu-id="24c7f-127">사용자 확인을 요청하지 않고 명령을 강제 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-127">Forces the command to run without asking for user confirmation.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="24c7f-128">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="24c7f-128">-ForceBootstrap</span></span>
+
+<span data-ttu-id="24c7f-129">이 cmdlet이 **PackageManagement** 가 패키지 공급자를 자동으로 설치 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-129">Indicates that this cmdlet forces **PackageManagement** to automatically install a package provider.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="24c7f-130">-Location</span><span class="sxs-lookup"><span data-stu-id="24c7f-130">-Location</span></span>
+
+<span data-ttu-id="24c7f-131">패키지 관리 원본 또는 리포지토리의 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-131">Specifies the location of a package management source or repository.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="24c7f-132">-Name</span><span class="sxs-lookup"><span data-stu-id="24c7f-132">-Name</span></span>
+
+<span data-ttu-id="24c7f-133">패키지 관리 원본의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-133">Specifies the name of a package management source.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="24c7f-134">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="24c7f-134">-PackageManagementProvider</span></span>
+
+<span data-ttu-id="24c7f-135">패키지 관리 공급자를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-135">Specifies a package management provider.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PowerShellGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="24c7f-136">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="24c7f-136">-ProviderName</span></span>
+
+<span data-ttu-id="24c7f-137">패키지 공급자 이름을 하나 이상 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-137">Specifies one or more package provider names.</span></span> <span data-ttu-id="24c7f-138">여러 패키지 공급자 이름을 쉼표로 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-138">Separate multiple package provider names with commas.</span></span>
+<span data-ttu-id="24c7f-139">사용 `Get-PackageProvider` 가능한 패키지 공급자 목록을 가져오는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-139">Use `Get-PackageProvider` to get a list of available package providers.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases: Provider
+Accepted values: Bootstrap, NuGet, PowerShellGet
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="24c7f-140">-PublishLocation</span><span class="sxs-lookup"><span data-stu-id="24c7f-140">-PublishLocation</span></span>
+
+<span data-ttu-id="24c7f-141">패키지 원본에 대 한 게시 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-141">Specifies the publish location for the package source.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PowerShellGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="24c7f-142">-ScriptPublishLocation</span><span class="sxs-lookup"><span data-stu-id="24c7f-142">-ScriptPublishLocation</span></span>
+
+<span data-ttu-id="24c7f-143">스크립트 게시 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-143">Specifies the script publish location.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PowerShellGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="24c7f-144">-ScriptSourceLocation</span><span class="sxs-lookup"><span data-stu-id="24c7f-144">-ScriptSourceLocation</span></span>
+
+<span data-ttu-id="24c7f-145">스크립트 원본 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-145">Specifies the script source location.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PowerShellGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="24c7f-146">-SkipValidate</span><span class="sxs-lookup"><span data-stu-id="24c7f-146">-SkipValidate</span></span>
+
+<span data-ttu-id="24c7f-147">패키지 원본에 대 한 자격 증명의 유효성 검사를 건너뛰는 스위치입니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-147">Switch that skips validating the credentials of a package source.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: NuGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="24c7f-148">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="24c7f-148">CommonParameters</span></span>
+
+<span data-ttu-id="24c7f-149">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="24c7f-149">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="24c7f-150">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="24c7f-150">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="24c7f-151">입력</span><span class="sxs-lookup"><span data-stu-id="24c7f-151">INPUTS</span></span>
+
+## <span data-ttu-id="24c7f-152">출력</span><span class="sxs-lookup"><span data-stu-id="24c7f-152">OUTPUTS</span></span>
+
+### <span data-ttu-id="24c7f-153">Register-packagesource []</span><span class="sxs-lookup"><span data-stu-id="24c7f-153">PackageSource[]</span></span>
+
+<span data-ttu-id="24c7f-154">패키지 소스를 하나 이상 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="24c7f-154">Specifies one or more package sources.</span></span>
+
+## <span data-ttu-id="24c7f-155">참고</span><span class="sxs-lookup"><span data-stu-id="24c7f-155">NOTES</span></span>
+
+## <span data-ttu-id="24c7f-156">관련 링크</span><span class="sxs-lookup"><span data-stu-id="24c7f-156">RELATED LINKS</span></span>
+
+[<span data-ttu-id="24c7f-157">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="24c7f-157">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
+
+[<span data-ttu-id="24c7f-158">Find-Package</span><span class="sxs-lookup"><span data-stu-id="24c7f-158">Find-Package</span></span>](Find-Package.md)
+
+[<span data-ttu-id="24c7f-159">Get-Package</span><span class="sxs-lookup"><span data-stu-id="24c7f-159">Get-Package</span></span>](Get-Package.md)
+
+[<span data-ttu-id="24c7f-160">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="24c7f-160">Get-PackageProvider</span></span>](Get-PackageProvider.md)
+
+[<span data-ttu-id="24c7f-161">Register-PackageSource</span><span class="sxs-lookup"><span data-stu-id="24c7f-161">Register-PackageSource</span></span>](Register-PackageSource.md)
+
+[<span data-ttu-id="24c7f-162">Set-PackageSource</span><span class="sxs-lookup"><span data-stu-id="24c7f-162">Set-PackageSource</span></span>](Set-PackageSource.md)
+
+[<span data-ttu-id="24c7f-163">Unregister-PackageSource</span><span class="sxs-lookup"><span data-stu-id="24c7f-163">Unregister-PackageSource</span></span>](Unregister-PackageSource.md)
