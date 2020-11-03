@@ -75,13 +75,15 @@
           href: learn/deep-dives/everything-about-shouldprocess.md
         - name: 다중 스레딩 중 Write-Progress
           href: learn/deep-dives/write-progress-across-multiple-threads.md
+        - name: PowerShell 함수에 자격 증명 지원 추가
+          href: learn/deep-dives/add-credentials-to-powershell-functions.md
     - name: PowerShell 원격 기능
       items:
         - name: JEA(Just Enough Administration)
           items:
             - name: 개요
               href: learn/remoting/jea/overview.md
-            - name: 사전 요구 사항
+            - name: 필수 구성 요소
               href: learn/remoting/jea/prerequisites.md
             - name: 역할 기능
               href: learn/remoting/jea/role-capabilities.md
@@ -564,6 +566,8 @@
       href: community/hall-of-fame.md
     - name: Docs의 새로운 기능
       items:
+        - name: 2020-Q4
+          href: community/2020-Q4.md
         - name: 2020-Q3
           href: community/2020-Q3.md
         - name: 2020-Q2
