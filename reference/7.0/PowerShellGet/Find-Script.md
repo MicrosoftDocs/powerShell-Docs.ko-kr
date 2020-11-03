@@ -14,12 +14,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/03/2020
 ms.locfileid: "93210249"
 ---
-# <span data-ttu-id="3559d-103">Find-Script</span><span class="sxs-lookup"><span data-stu-id="3559d-103">Find-Script</span></span>
+# <span data-ttu-id="29d7c-103">Find-Script</span><span class="sxs-lookup"><span data-stu-id="29d7c-103">Find-Script</span></span>
 
-## <span data-ttu-id="3559d-104">개요</span><span class="sxs-lookup"><span data-stu-id="3559d-104">SYNOPSIS</span></span>
-<span data-ttu-id="3559d-105">스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-105">Finds a script.</span></span>
+## <span data-ttu-id="29d7c-104">개요</span><span class="sxs-lookup"><span data-stu-id="29d7c-104">SYNOPSIS</span></span>
+<span data-ttu-id="29d7c-105">스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-105">Finds a script.</span></span>
 
-## <span data-ttu-id="3559d-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="3559d-106">SYNTAX</span></span>
+## <span data-ttu-id="29d7c-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="29d7c-106">SYNTAX</span></span>
 
 ```
 Find-Script [[-Name] <String[]>] [-MinimumVersion <String>] [-MaximumVersion <String>]
@@ -28,13 +28,13 @@ Find-Script [[-Name] <String[]>] [-MinimumVersion <String>] [-MaximumVersion <St
  [-Repository <String[]>] [-Credential <PSCredential>] [-AllowPrerelease] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="3559d-107">설명</span><span class="sxs-lookup"><span data-stu-id="3559d-107">DESCRIPTION</span></span>
+## <span data-ttu-id="29d7c-107">설명</span><span class="sxs-lookup"><span data-stu-id="29d7c-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="3559d-108">**찾기-스크립트** cmdlet은 등록 된 리포지토리에서 지정 된 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-108">The **Find-Script** cmdlet finds a specified script in registered repositories.</span></span>
+<span data-ttu-id="29d7c-108">**찾기-스크립트** cmdlet은 등록 된 리포지토리에서 지정 된 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-108">The **Find-Script** cmdlet finds a specified script in registered repositories.</span></span>
 
-## <span data-ttu-id="3559d-109">예제</span><span class="sxs-lookup"><span data-stu-id="3559d-109">EXAMPLES</span></span>
+## <span data-ttu-id="29d7c-109">예제</span><span class="sxs-lookup"><span data-stu-id="29d7c-109">EXAMPLES</span></span>
 
-### <span data-ttu-id="3559d-110">예제 1: 사용 가능한 모든 스크립트 찾기</span><span class="sxs-lookup"><span data-stu-id="3559d-110">Example 1: Find all available scripts</span></span>
+### <span data-ttu-id="29d7c-110">예제 1: 사용 가능한 모든 스크립트 찾기</span><span class="sxs-lookup"><span data-stu-id="29d7c-110">Example 1: Find all available scripts</span></span>
 
 ```
 PS C:\> Find-Script
@@ -54,9 +54,9 @@ Version    Name                                Type       Repository           D
 1.0        TestRunbook                         Script     LocalRepo1           Contoso Script example
 ```
 
-<span data-ttu-id="3559d-111">이 명령은 사용 가능한 모든 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-111">This command finds all available scripts.</span></span>
+<span data-ttu-id="29d7c-111">이 명령은 사용 가능한 모든 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-111">This command finds all available scripts.</span></span>
 
-### <span data-ttu-id="3559d-112">예제 2: 이름을 기준으로 스크립트 찾기</span><span class="sxs-lookup"><span data-stu-id="3559d-112">Example 2: Find a script by name</span></span>
+### <span data-ttu-id="29d7c-112">예제 2: 이름을 기준으로 스크립트 찾기</span><span class="sxs-lookup"><span data-stu-id="29d7c-112">Example 2: Find a script by name</span></span>
 
 ```
 PS C:\> Find-Script -Name "Start-WFContosoServer"
@@ -65,17 +65,17 @@ Version    Name                                Type       Repository           D
 2.0        Start-WFContosoServer               Script     LocalRepo1           Start-WFContosoServer Script example
 ```
 
-<span data-ttu-id="3559d-113">이 명령은 WFContosoServer 라는 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-113">This command find the script named Start-WFContosoServer.</span></span>
+<span data-ttu-id="29d7c-113">이 명령은 WFContosoServer 라는 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-113">This command find the script named Start-WFContosoServer.</span></span>
 
-### <span data-ttu-id="3559d-114">예 3: 이름, 필요한 버전 및 지정 된 리포지토리에서 스크립트 찾기</span><span class="sxs-lookup"><span data-stu-id="3559d-114">Example 3: Find a script by name, required version, and from a specified repository</span></span>
+### <span data-ttu-id="29d7c-114">예 3: 이름, 필요한 버전 및 지정 된 리포지토리에서 스크립트 찾기</span><span class="sxs-lookup"><span data-stu-id="29d7c-114">Example 3: Find a script by name, required version, and from a specified repository</span></span>
 
 ```
 PS C:\> Find-Script -Name "Required-Script2" -RequiredVersion 2.0 -Repository "LocalRepo01"
 ```
 
-<span data-ttu-id="3559d-115">이 명령은 LocalRepo01 리포지토리에서 이름 및 필요한 버전으로 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-115">This command finds a script by name and required version in the LocalRepo01 repository.</span></span>
+<span data-ttu-id="29d7c-115">이 명령은 LocalRepo01 리포지토리에서 이름 및 필요한 버전으로 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-115">This command finds a script by name and required version in the LocalRepo01 repository.</span></span>
 
-### <span data-ttu-id="3559d-116">예제 4: 스크립트 찾기 및 출력을 목록으로 서식 지정</span><span class="sxs-lookup"><span data-stu-id="3559d-116">Example 4: Find a script and format the output as a list</span></span>
+### <span data-ttu-id="29d7c-116">예제 4: 스크립트 찾기 및 출력을 목록으로 서식 지정</span><span class="sxs-lookup"><span data-stu-id="29d7c-116">Example 4: Find a script and format the output as a list</span></span>
 
 ```
 PS C:\> Find-Script -Name "Required-Script2" -RequiredVersion 2.0 -Repository "LocalRepo1" | Format-List * -Force
@@ -100,9 +100,9 @@ Repository                 : LocalRepo01
 PackageManagementProvider  : NuGet
 ```
 
-<span data-ttu-id="3559d-117">이 명령은 LocalRepo1 리포지토리에서 Required-Script2를 찾은 다음 결과 **PSRepositoryItemInfo** 개체를 Format-List cmdlet에 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-117">This command finds Required-Script2 in the LocalRepo1 repository, and then passes the resulting **PSRepositoryItemInfo** object to the Format-List cmdlet.</span></span>
+<span data-ttu-id="29d7c-117">이 명령은 LocalRepo1 리포지토리에서 Required-Script2를 찾은 다음 결과 **PSRepositoryItemInfo** 개체를 Format-List cmdlet에 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-117">This command finds Required-Script2 in the LocalRepo1 repository, and then passes the resulting **PSRepositoryItemInfo** object to the Format-List cmdlet.</span></span>
 
-### <span data-ttu-id="3559d-118">예 5: 지정 된 버전 범위에서 스크립트 찾기</span><span class="sxs-lookup"><span data-stu-id="3559d-118">Example 5: Find a script in the specified version range</span></span>
+### <span data-ttu-id="29d7c-118">예 5: 지정 된 버전 범위에서 스크립트 찾기</span><span class="sxs-lookup"><span data-stu-id="29d7c-118">Example 5: Find a script in the specified version range</span></span>
 
 ```
 PS C:\> Find-Script -Name "Required-Script2" -MinimumVersion 2.1 -MaximumVersion 2.5 -Repository "LocalRepo1"
@@ -111,9 +111,9 @@ Version    Name                                Type       Repository           D
 2.5        Required-Script2                    Script     LocalRepo1           Description for the Required-Script2 script
 ```
 
-<span data-ttu-id="3559d-119">이 명령은 LocalRepo1 리포지토리에서 버전 2.1과 2.5 사이의 모든 버전의 RequiredScript2를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-119">This command finds all versions of RequiredScript2 between versions 2.1 and 2.5 in the LocalRepo1 respository.</span></span>
+<span data-ttu-id="29d7c-119">이 명령은 LocalRepo1 리포지토리에서 버전 2.1과 2.5 사이의 모든 버전의 RequiredScript2를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-119">This command finds all versions of RequiredScript2 between versions 2.1 and 2.5 in the LocalRepo1 respository.</span></span>
 
-### <span data-ttu-id="3559d-120">예제 6: 스크립트의 모든 버전 찾기</span><span class="sxs-lookup"><span data-stu-id="3559d-120">Example 6: Find all versions of a script</span></span>
+### <span data-ttu-id="29d7c-120">예제 6: 스크립트의 모든 버전 찾기</span><span class="sxs-lookup"><span data-stu-id="29d7c-120">Example 6: Find all versions of a script</span></span>
 
 ```
 PS C:\> Find-Script -Name "Required-Script02" -AllVersions
@@ -125,9 +125,9 @@ Version    Name                                Type       Repository           D
 2.5        Required-Script2                    Script     LocalRepo1           Description for the Required-Script2 script
 ```
 
-<span data-ttu-id="3559d-121">이 명령은 필요한 모든 버전의 Script02를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-121">This command finds all versions of Required-Script02.</span></span>
+<span data-ttu-id="29d7c-121">이 명령은 필요한 모든 버전의 Script02를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-121">This command finds all versions of Required-Script02.</span></span>
 
-### <span data-ttu-id="3559d-122">예 7: 스크립트 및 해당 종속성 찾기</span><span class="sxs-lookup"><span data-stu-id="3559d-122">Example 7: Find a script and its dependencies</span></span>
+### <span data-ttu-id="29d7c-122">예 7: 스크립트 및 해당 종속성 찾기</span><span class="sxs-lookup"><span data-stu-id="29d7c-122">Example 7: Find a script and its dependencies</span></span>
 
 ```
 PS C:\> Find-Script -Name "Script-WithDependencies1" -IncludeDependencies -Repository "LocalRepo1"
@@ -139,9 +139,9 @@ Version    Name                                Type       Repository           D
 2.5        Required-Script2                    Script     LocalRepo1           Description for the Required-Script2 script
 ```
 
-<span data-ttu-id="3559d-123">이 명령은 스크립트와 해당 종속성을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-123">This command finds a script and its dependencies.</span></span>
+<span data-ttu-id="29d7c-123">이 명령은 스크립트와 해당 종속성을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-123">This command finds a script and its dependencies.</span></span>
 
-### <span data-ttu-id="3559d-124">예 8: 지정 된 태그를 사용 하 여 스크립트 찾기</span><span class="sxs-lookup"><span data-stu-id="3559d-124">Example 8: Find scripts with the specified tag</span></span>
+### <span data-ttu-id="29d7c-124">예 8: 지정 된 태그를 사용 하 여 스크립트 찾기</span><span class="sxs-lookup"><span data-stu-id="29d7c-124">Example 8: Find scripts with the specified tag</span></span>
 
 ```
 PS C:\> Find-Script -Tag "Tag1" -Repository "LocalRepo1"
@@ -150,9 +150,9 @@ Version    Name                                Type       Repository           D
 1.0        Fabrikam-ClientScript               Script     LocalRepo1           Description for the Fabrikam-ClientScript script
 ```
 
-<span data-ttu-id="3559d-125">이 명령은 LocalRepo1 리포지토리에서 태그가 Tag1 인 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-125">This command finds scripts that have the tag Tag1 in the LocalRepo1 repository</span></span>
+<span data-ttu-id="29d7c-125">이 명령은 LocalRepo1 리포지토리에서 태그가 Tag1 인 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-125">This command finds scripts that have the tag Tag1 in the LocalRepo1 repository</span></span>
 
-### <span data-ttu-id="3559d-126">예 9: 지정 된 명령 이름의 스크립트 찾기</span><span class="sxs-lookup"><span data-stu-id="3559d-126">Example 9: Find scripts with specified command name</span></span>
+### <span data-ttu-id="29d7c-126">예 9: 지정 된 명령 이름의 스크립트 찾기</span><span class="sxs-lookup"><span data-stu-id="29d7c-126">Example 9: Find scripts with specified command name</span></span>
 
 ```
 PS C:\> Find-Script -Command Test-FunctionFromScript_Required-Script3 -Repository "LocalRepo1"
@@ -161,9 +161,9 @@ Version    Name                                Type       Repository           D
 2.5        Required-Script3                    Script     LocalRepo1           Description for the Required-Script3 script
 ```
 
-<span data-ttu-id="3559d-127">이 명령은 지정 된 명령 이름을 포함 하는 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-127">This command finds a script that contains the specified command name.</span></span>
+<span data-ttu-id="29d7c-127">이 명령은 지정 된 명령 이름을 포함 하는 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-127">This command finds a script that contains the specified command name.</span></span>
 
-### <span data-ttu-id="3559d-128">예 10: 워크플로를 사용 하 여 스크립트 찾기</span><span class="sxs-lookup"><span data-stu-id="3559d-128">Example 10: Find scripts with workflows</span></span>
+### <span data-ttu-id="29d7c-128">예 10: 워크플로를 사용 하 여 스크립트 찾기</span><span class="sxs-lookup"><span data-stu-id="29d7c-128">Example 10: Find scripts with workflows</span></span>
 
 ```
 PS C:\> Find-Script -Includes "Workflow" -Repository "LocalRepo1"
@@ -173,9 +173,9 @@ Version    Name                                Type       Repository           D
 1.0        Fabrikam-Script                     Script     LocalRepo1           Description for the Fabrikam-Script script
 ```
 
-<span data-ttu-id="3559d-129">이 명령은 LocalRepo1 리포지토리에서 워크플로 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-129">This command finds workflow scripts in the LocalRepo1 repository.</span></span>
+<span data-ttu-id="29d7c-129">이 명령은 LocalRepo1 리포지토리에서 워크플로 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-129">This command finds workflow scripts in the LocalRepo1 repository.</span></span>
 
-### <span data-ttu-id="3559d-130">예 11: 와일드 카드를 사용 하 여 스크립트 찾기</span><span class="sxs-lookup"><span data-stu-id="3559d-130">Example 11: Find scripts using wildcards</span></span>
+### <span data-ttu-id="29d7c-130">예 11: 와일드 카드를 사용 하 여 스크립트 찾기</span><span class="sxs-lookup"><span data-stu-id="29d7c-130">Example 11: Find scripts using wildcards</span></span>
 
 ```
 PS C:\> Find-Script -Name "Required-Script*" -Repository "LocalRepo1"
@@ -186,29 +186,13 @@ Version    Name                                Type       Repository           D
 2.5        Required-Script3                    Script     local1               Description for the Required-Script3 script
 ```
 
-<span data-ttu-id="3559d-131">이 명령은 와일드 카드 문자 (\*)를 사용 하 여 필수 스크립트로 시작 하는 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-131">This command uses the wildcard character (\*) to find scripts that begin with Required-Script.</span></span>
+<span data-ttu-id="29d7c-131">이 명령은 와일드 카드 문자 (\*)를 사용 하 여 필수 스크립트로 시작 하는 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-131">This command uses the wildcard character (\*) to find scripts that begin with Required-Script.</span></span>
 
-## <span data-ttu-id="3559d-132">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="3559d-132">PARAMETERS</span></span>
+## <span data-ttu-id="29d7c-132">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="29d7c-132">PARAMETERS</span></span>
 
-### <span data-ttu-id="3559d-133">-AllowPrerelease</span><span class="sxs-lookup"><span data-stu-id="3559d-133">-AllowPrerelease</span></span>
+### <span data-ttu-id="29d7c-133">-AllowPrerelease</span><span class="sxs-lookup"><span data-stu-id="29d7c-133">-AllowPrerelease</span></span>
 
-<span data-ttu-id="3559d-134">시험판으로 표시 된 결과 스크립트에를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-134">Includes in the results scripts marked as a prerelease.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="3559d-135">-Allversions)</span><span class="sxs-lookup"><span data-stu-id="3559d-135">-AllVersions</span></span>
-
-<span data-ttu-id="3559d-136">이 작업에서 모든 스크립트 버전을 검색 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-136">Indicates that this operation finds all script versions.</span></span>
+<span data-ttu-id="29d7c-134">시험판으로 표시 된 결과 스크립트에를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-134">Includes in the results scripts marked as a prerelease.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -222,10 +206,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3559d-137">-Command</span><span class="sxs-lookup"><span data-stu-id="3559d-137">-Command</span></span>
+### <span data-ttu-id="29d7c-135">-Allversions)</span><span class="sxs-lookup"><span data-stu-id="29d7c-135">-AllVersions</span></span>
 
-<span data-ttu-id="3559d-138">스크립트에서 찾을 명령의 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-138">Specifies an array of commands to find in scripts.</span></span>
-<span data-ttu-id="3559d-139">명령은 함수 또는 워크플로가 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-139">A command can be a function or workflow.</span></span>
+<span data-ttu-id="29d7c-136">이 작업에서 모든 스크립트 버전을 검색 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-136">Indicates that this operation finds all script versions.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="29d7c-137">-Command</span><span class="sxs-lookup"><span data-stu-id="29d7c-137">-Command</span></span>
+
+<span data-ttu-id="29d7c-138">스크립트에서 찾을 명령의 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-138">Specifies an array of commands to find in scripts.</span></span>
+<span data-ttu-id="29d7c-139">명령은 함수 또는 워크플로가 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-139">A command can be a function or workflow.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -239,7 +239,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3559d-140">-Credential</span><span class="sxs-lookup"><span data-stu-id="3559d-140">-Credential</span></span>
+### <span data-ttu-id="29d7c-140">-Credential</span><span class="sxs-lookup"><span data-stu-id="29d7c-140">-Credential</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -253,9 +253,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3559d-141">-Filter</span><span class="sxs-lookup"><span data-stu-id="3559d-141">-Filter</span></span>
+### <span data-ttu-id="29d7c-141">-Filter</span><span class="sxs-lookup"><span data-stu-id="29d7c-141">-Filter</span></span>
 
-<span data-ttu-id="3559d-142">PackageManagement 공급자별 검색 구문을 기반으로 하 여 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-142">Finds scripts based on the PackageManagement provider-specific search syntax.</span></span>
+<span data-ttu-id="29d7c-142">PackageManagement 공급자별 검색 구문을 기반으로 하 여 스크립트를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-142">Finds scripts based on the PackageManagement provider-specific search syntax.</span></span>
 
 ```yaml
 Type: System.String
@@ -269,9 +269,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3559d-143">-IncludeDependencies</span><span class="sxs-lookup"><span data-stu-id="3559d-143">-IncludeDependencies</span></span>
+### <span data-ttu-id="29d7c-143">-IncludeDependencies</span><span class="sxs-lookup"><span data-stu-id="29d7c-143">-IncludeDependencies</span></span>
 
-<span data-ttu-id="3559d-144">이 작업에서 *Name* 매개 변수에 지정 된 스크립트에 종속 된 모든 스크립트를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-144">Indicates that this operation gets all scripts that are dependent upon the script specified in the *Name* parameter.</span></span>
+<span data-ttu-id="29d7c-144">이 작업에서 *Name* 매개 변수에 지정 된 스크립트에 종속 된 모든 스크립트를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-144">Indicates that this operation gets all scripts that are dependent upon the script specified in the *Name* parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -285,10 +285,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3559d-145">-포함</span><span class="sxs-lookup"><span data-stu-id="3559d-145">-Includes</span></span>
+### <span data-ttu-id="29d7c-145">-포함</span><span class="sxs-lookup"><span data-stu-id="29d7c-145">-Includes</span></span>
 
-<span data-ttu-id="3559d-146">가져올 스크립트의 유형을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-146">Specifies type of script to get.</span></span>
-<span data-ttu-id="3559d-147">이 매개 변수에 사용할 수 있는 값은 함수, 워크플로입니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-147">The acceptable values for this parameter are: Function, Workflow.</span></span>
+<span data-ttu-id="29d7c-146">가져올 스크립트의 유형을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-146">Specifies type of script to get.</span></span>
+<span data-ttu-id="29d7c-147">이 매개 변수에 사용할 수 있는 값은 함수, 워크플로입니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-147">The acceptable values for this parameter are: Function, Workflow.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -303,27 +303,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3559d-148">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="3559d-148">-MaximumVersion</span></span>
+### <span data-ttu-id="29d7c-148">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="29d7c-148">-MaximumVersion</span></span>
 
-<span data-ttu-id="3559d-149">찾을 스크립트의 최대 또는 최신 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-149">Specifies the maximum, or newest, version of the script to find.</span></span>
-<span data-ttu-id="3559d-150">*MaximumVersion* 및 *RequiredVersion* 매개 변수는 함께 사용할 수 없습니다. 동일한 명령에 두 매개 변수를 함께 사용할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-150">The *MaximumVersion* and *RequiredVersion* parameters are mutually exclusive; you cannot use both parameters in the same command.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="3559d-151">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="3559d-151">-MinimumVersion</span></span>
-
-<span data-ttu-id="3559d-152">찾을 스크립트의 최소 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-152">Specifies the minimum version of the script to find.</span></span>
-<span data-ttu-id="3559d-153">*MinimumVersion* 및 *RequiredVersion* 매개 변수는 함께 사용할 수 없습니다. 동일한 명령에 두 매개 변수를 함께 사용할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-153">The *MinimumVersion* and *RequiredVersion* parameters are mutually exclusive; you cannot use both parameters in the same command.</span></span>
+<span data-ttu-id="29d7c-149">찾을 스크립트의 최대 또는 최신 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-149">Specifies the maximum, or newest, version of the script to find.</span></span>
+<span data-ttu-id="29d7c-150">*MaximumVersion* 및 *RequiredVersion* 매개 변수는 함께 사용할 수 없습니다. 동일한 명령에 두 매개 변수를 함께 사용할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-150">The *MaximumVersion* and *RequiredVersion* parameters are mutually exclusive; you cannot use both parameters in the same command.</span></span>
 
 ```yaml
 Type: System.String
@@ -337,9 +320,26 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3559d-154">-Name</span><span class="sxs-lookup"><span data-stu-id="3559d-154">-Name</span></span>
+### <span data-ttu-id="29d7c-151">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="29d7c-151">-MinimumVersion</span></span>
 
-<span data-ttu-id="3559d-155">찾을 스크립트의 이름 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-155">Specifies an array of names of scripts to find.</span></span>
+<span data-ttu-id="29d7c-152">찾을 스크립트의 최소 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-152">Specifies the minimum version of the script to find.</span></span>
+<span data-ttu-id="29d7c-153">*MinimumVersion* 및 *RequiredVersion* 매개 변수는 함께 사용할 수 없습니다. 동일한 명령에 두 매개 변수를 함께 사용할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-153">The *MinimumVersion* and *RequiredVersion* parameters are mutually exclusive; you cannot use both parameters in the same command.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="29d7c-154">-Name</span><span class="sxs-lookup"><span data-stu-id="29d7c-154">-Name</span></span>
+
+<span data-ttu-id="29d7c-155">찾을 스크립트의 이름 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-155">Specifies an array of names of scripts to find.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -353,9 +353,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="3559d-156">-프록시</span><span class="sxs-lookup"><span data-stu-id="3559d-156">-Proxy</span></span>
+### <span data-ttu-id="29d7c-156">-프록시</span><span class="sxs-lookup"><span data-stu-id="29d7c-156">-Proxy</span></span>
 
-<span data-ttu-id="3559d-157">인터넷 리소스에 직접 연결 하는 대신 요청에 대 한 프록시 서버를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-157">Specifies a proxy server for the request, rather than connecting directly to the Internet resource.</span></span>
+<span data-ttu-id="29d7c-157">인터넷 리소스에 직접 연결 하는 대신 요청에 대 한 프록시 서버를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-157">Specifies a proxy server for the request, rather than connecting directly to the Internet resource.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -369,9 +369,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3559d-158">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="3559d-158">-ProxyCredential</span></span>
+### <span data-ttu-id="29d7c-158">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="29d7c-158">-ProxyCredential</span></span>
 
-<span data-ttu-id="3559d-159">**Proxy** 매개 변수에 지정된 프록시 서버를 사용할 권한이 있는 사용자 계정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-159">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
+<span data-ttu-id="29d7c-159">**Proxy** 매개 변수에 지정된 프록시 서버를 사용할 권한이 있는 사용자 계정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-159">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -385,9 +385,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3559d-160">-리포지토리</span><span class="sxs-lookup"><span data-stu-id="3559d-160">-Repository</span></span>
+### <span data-ttu-id="29d7c-160">-리포지토리</span><span class="sxs-lookup"><span data-stu-id="29d7c-160">-Repository</span></span>
 
-<span data-ttu-id="3559d-161">Set-psrepository를 실행 하 여 등록 된 리포지토리의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-161">Specifies the friendly name of a repository that has been registered by running Register-PSRepository.</span></span>
+<span data-ttu-id="29d7c-161">Set-psrepository를 실행 하 여 등록 된 리포지토리의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-161">Specifies the friendly name of a repository that has been registered by running Register-PSRepository.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -401,9 +401,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3559d-162">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="3559d-162">-RequiredVersion</span></span>
+### <span data-ttu-id="29d7c-162">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="29d7c-162">-RequiredVersion</span></span>
 
-<span data-ttu-id="3559d-163">찾을 스크립트의 정확한 버전 번호를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-163">Specifies the exact version number of the script to find.</span></span>
+<span data-ttu-id="29d7c-163">찾을 스크립트의 정확한 버전 번호를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-163">Specifies the exact version number of the script to find.</span></span>
 
 ```yaml
 Type: System.String
@@ -417,9 +417,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3559d-164">-Tag</span><span class="sxs-lookup"><span data-stu-id="3559d-164">-Tag</span></span>
+### <span data-ttu-id="29d7c-164">-Tag</span><span class="sxs-lookup"><span data-stu-id="29d7c-164">-Tag</span></span>
 
-<span data-ttu-id="3559d-165">태그의 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="3559d-165">Specifies an array of tags.</span></span>
+<span data-ttu-id="29d7c-165">태그의 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="29d7c-165">Specifies an array of tags.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -433,34 +433,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3559d-166">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="3559d-166">CommonParameters</span></span>
+### <span data-ttu-id="29d7c-166">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="29d7c-166">CommonParameters</span></span>
 
-<span data-ttu-id="3559d-167">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="3559d-167">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="3559d-168">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3559d-168">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="29d7c-167">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="29d7c-167">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="29d7c-168">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="29d7c-168">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="3559d-169">입력</span><span class="sxs-lookup"><span data-stu-id="3559d-169">INPUTS</span></span>
+## <span data-ttu-id="29d7c-169">입력</span><span class="sxs-lookup"><span data-stu-id="29d7c-169">INPUTS</span></span>
 
-### <span data-ttu-id="3559d-170">System.String[]</span><span class="sxs-lookup"><span data-stu-id="3559d-170">System.String[]</span></span>
+### <span data-ttu-id="29d7c-170">System.String[]</span><span class="sxs-lookup"><span data-stu-id="29d7c-170">System.String[]</span></span>
 
-### <span data-ttu-id="3559d-171">System.String</span><span class="sxs-lookup"><span data-stu-id="3559d-171">System.String</span></span>
+### <span data-ttu-id="29d7c-171">System.String</span><span class="sxs-lookup"><span data-stu-id="29d7c-171">System.String</span></span>
 
-### <span data-ttu-id="3559d-172">System.Uri</span><span class="sxs-lookup"><span data-stu-id="3559d-172">System.Uri</span></span>
+### <span data-ttu-id="29d7c-172">System.Uri</span><span class="sxs-lookup"><span data-stu-id="29d7c-172">System.Uri</span></span>
 
-### <span data-ttu-id="3559d-173">System.object. PSCredential</span><span class="sxs-lookup"><span data-stu-id="3559d-173">System.Management.Automation.PSCredential</span></span>
+### <span data-ttu-id="29d7c-173">System.object. PSCredential</span><span class="sxs-lookup"><span data-stu-id="29d7c-173">System.Management.Automation.PSCredential</span></span>
 
-## <span data-ttu-id="3559d-174">출력</span><span class="sxs-lookup"><span data-stu-id="3559d-174">OUTPUTS</span></span>
+## <span data-ttu-id="29d7c-174">출력</span><span class="sxs-lookup"><span data-stu-id="29d7c-174">OUTPUTS</span></span>
 
-### <span data-ttu-id="3559d-175">PSRepositoryItemInfo</span><span class="sxs-lookup"><span data-stu-id="3559d-175">PSRepositoryItemInfo</span></span>
+### <span data-ttu-id="29d7c-175">PSRepositoryItemInfo</span><span class="sxs-lookup"><span data-stu-id="29d7c-175">PSRepositoryItemInfo</span></span>
 
-## <span data-ttu-id="3559d-176">참고</span><span class="sxs-lookup"><span data-stu-id="3559d-176">NOTES</span></span>
+## <span data-ttu-id="29d7c-176">참고</span><span class="sxs-lookup"><span data-stu-id="29d7c-176">NOTES</span></span>
 
-## <span data-ttu-id="3559d-177">관련 링크</span><span class="sxs-lookup"><span data-stu-id="3559d-177">RELATED LINKS</span></span>
+## <span data-ttu-id="29d7c-177">관련 링크</span><span class="sxs-lookup"><span data-stu-id="29d7c-177">RELATED LINKS</span></span>
 
-[<span data-ttu-id="3559d-178">Install-Script</span><span class="sxs-lookup"><span data-stu-id="3559d-178">Install-Script</span></span>](Install-Script.md)
+[<span data-ttu-id="29d7c-178">Install-Script</span><span class="sxs-lookup"><span data-stu-id="29d7c-178">Install-Script</span></span>](Install-Script.md)
 
-[<span data-ttu-id="3559d-179">Publish-Script</span><span class="sxs-lookup"><span data-stu-id="3559d-179">Publish-Script</span></span>](Publish-Script.md)
+[<span data-ttu-id="29d7c-179">Publish-Script</span><span class="sxs-lookup"><span data-stu-id="29d7c-179">Publish-Script</span></span>](Publish-Script.md)
 
-[<span data-ttu-id="3559d-180">Save-Script</span><span class="sxs-lookup"><span data-stu-id="3559d-180">Save-Script</span></span>](Save-Script.md)
+[<span data-ttu-id="29d7c-180">Save-Script</span><span class="sxs-lookup"><span data-stu-id="29d7c-180">Save-Script</span></span>](Save-Script.md)
 
-[<span data-ttu-id="3559d-181">Uninstall-Script</span><span class="sxs-lookup"><span data-stu-id="3559d-181">Uninstall-Script</span></span>](Uninstall-Script.md)
+[<span data-ttu-id="29d7c-181">Uninstall-Script</span><span class="sxs-lookup"><span data-stu-id="29d7c-181">Uninstall-Script</span></span>](Uninstall-Script.md)
 
-[<span data-ttu-id="3559d-182">Update-Script</span><span class="sxs-lookup"><span data-stu-id="3559d-182">Update-Script</span></span>](Update-Script.md)
+[<span data-ttu-id="29d7c-182">Update-Script</span><span class="sxs-lookup"><span data-stu-id="29d7c-182">Update-Script</span></span>](Update-Script.md)

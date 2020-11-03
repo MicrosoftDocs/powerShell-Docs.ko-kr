@@ -14,26 +14,26 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "93214905"
 ---
-# <span data-ttu-id="d13fe-103">Get-PSReadLineKeyHandler</span><span class="sxs-lookup"><span data-stu-id="d13fe-103">Get-PSReadLineKeyHandler</span></span>
+# <span data-ttu-id="c2f2c-103">Get-PSReadLineKeyHandler</span><span class="sxs-lookup"><span data-stu-id="c2f2c-103">Get-PSReadLineKeyHandler</span></span>
 
-## <span data-ttu-id="d13fe-104">개요</span><span class="sxs-lookup"><span data-stu-id="d13fe-104">SYNOPSIS</span></span>
-<span data-ttu-id="d13fe-105">PSReadLine 모듈에 대 한 키 바인딩을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d13fe-105">Gets the key bindings for the PSReadLine module.</span></span>
+## <span data-ttu-id="c2f2c-104">개요</span><span class="sxs-lookup"><span data-stu-id="c2f2c-104">SYNOPSIS</span></span>
+<span data-ttu-id="c2f2c-105">PSReadLine 모듈에 대 한 키 바인딩을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="c2f2c-105">Gets the key bindings for the PSReadLine module.</span></span>
 
-## <span data-ttu-id="d13fe-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="d13fe-106">SYNTAX</span></span>
+## <span data-ttu-id="c2f2c-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="c2f2c-106">SYNTAX</span></span>
 
 ```
 Get-PSReadLineKeyHandler [-Bound] [-Unbound] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="d13fe-107">설명</span><span class="sxs-lookup"><span data-stu-id="d13fe-107">DESCRIPTION</span></span>
+## <span data-ttu-id="c2f2c-107">설명</span><span class="sxs-lookup"><span data-stu-id="c2f2c-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="d13fe-108">**Get PSReadLineKeyHandler** cmdlet은 현재 바인딩된 키 바인딩을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d13fe-108">The **Get-PSReadLineKeyHandler** cmdlet returns the currently bound key bindings.</span></span>
+<span data-ttu-id="c2f2c-108">**Get PSReadLineKeyHandler** cmdlet은 현재 바인딩된 키 바인딩을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="c2f2c-108">The **Get-PSReadLineKeyHandler** cmdlet returns the currently bound key bindings.</span></span>
 
-## <span data-ttu-id="d13fe-109">예제</span><span class="sxs-lookup"><span data-stu-id="d13fe-109">EXAMPLES</span></span>
+## <span data-ttu-id="c2f2c-109">예제</span><span class="sxs-lookup"><span data-stu-id="c2f2c-109">EXAMPLES</span></span>
 
-### <span data-ttu-id="d13fe-110">예제 1: 모든 키 매핑 가져오기</span><span class="sxs-lookup"><span data-stu-id="d13fe-110">Example 1: Get all key mappings</span></span>
+### <span data-ttu-id="c2f2c-110">예제 1: 모든 키 매핑 가져오기</span><span class="sxs-lookup"><span data-stu-id="c2f2c-110">Example 1: Get all key mappings</span></span>
 
-<span data-ttu-id="d13fe-111">이 명령은 모든 키 매핑, 바인딩 및 바인딩 해제를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d13fe-111">This command returns all key mappings, bound and unbound.</span></span>
+<span data-ttu-id="c2f2c-111">이 명령은 모든 키 매핑, 바인딩 및 바인딩 해제를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="c2f2c-111">This command returns all key mappings, bound and unbound.</span></span>
 
 ```powershell
 Get-PSReadLineKeyHandler -Bound -Unbound
@@ -72,9 +72,9 @@ Ctrl+r                ReverseSearchHistory    Search history backwards interacti
 ...
 ```
 
-### <span data-ttu-id="d13fe-112">예제 2: 바인딩된 키 가져오기</span><span class="sxs-lookup"><span data-stu-id="d13fe-112">Example 2: Get bound keys</span></span>
+### <span data-ttu-id="c2f2c-112">예제 2: 바인딩된 키 가져오기</span><span class="sxs-lookup"><span data-stu-id="c2f2c-112">Example 2: Get bound keys</span></span>
 
-<span data-ttu-id="d13fe-113">이 명령은 바인딩된 키와 키 조합만 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d13fe-113">This command returns only bound keys and key combinations.</span></span>
+<span data-ttu-id="c2f2c-113">이 명령은 바인딩된 키와 키 조합만 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="c2f2c-113">This command returns only bound keys and key combinations.</span></span>
 
 ```powershell
 Get-PSReadLineKeyHandler
@@ -107,27 +107,11 @@ Tab                   TabCompleteNext         Complete the input using the next 
 ...
 ```
 
-## <span data-ttu-id="d13fe-114">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="d13fe-114">PARAMETERS</span></span>
+## <span data-ttu-id="c2f2c-114">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="c2f2c-114">PARAMETERS</span></span>
 
-### <span data-ttu-id="d13fe-115">-바인딩</span><span class="sxs-lookup"><span data-stu-id="d13fe-115">-Bound</span></span>
+### <span data-ttu-id="c2f2c-115">-바인딩</span><span class="sxs-lookup"><span data-stu-id="c2f2c-115">-Bound</span></span>
 
-<span data-ttu-id="d13fe-116">이 cmdlet이 바인딩된 함수를 반환 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d13fe-116">Indicates that this cmdlet returns functions that are bound.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: True
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="d13fe-117">-바인딩되지 않음</span><span class="sxs-lookup"><span data-stu-id="d13fe-117">-Unbound</span></span>
-
-<span data-ttu-id="d13fe-118">이 cmdlet은 바인딩되지 않은 함수를 반환 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d13fe-118">Indicates that this cmdlet returns functions that are unbound.</span></span>
+<span data-ttu-id="c2f2c-116">이 cmdlet이 바인딩된 함수를 반환 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="c2f2c-116">Indicates that this cmdlet returns functions that are bound.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -141,28 +125,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d13fe-119">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="d13fe-119">CommonParameters</span></span>
+### <span data-ttu-id="c2f2c-117">-바인딩되지 않음</span><span class="sxs-lookup"><span data-stu-id="c2f2c-117">-Unbound</span></span>
 
-<span data-ttu-id="d13fe-120">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="d13fe-120">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="d13fe-121">자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d13fe-121">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="c2f2c-118">이 cmdlet은 바인딩되지 않은 함수를 반환 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="c2f2c-118">Indicates that this cmdlet returns functions that are unbound.</span></span>
 
-## <span data-ttu-id="d13fe-122">입력</span><span class="sxs-lookup"><span data-stu-id="d13fe-122">INPUTS</span></span>
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
-### <span data-ttu-id="d13fe-123">없음</span><span class="sxs-lookup"><span data-stu-id="d13fe-123">None</span></span>
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
-<span data-ttu-id="d13fe-124">이 cmdlet에 개체를 파이프할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d13fe-124">You cannot pipe objects to this cmdlet.</span></span>
+### <span data-ttu-id="c2f2c-119">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="c2f2c-119">CommonParameters</span></span>
 
-## <span data-ttu-id="d13fe-125">출력</span><span class="sxs-lookup"><span data-stu-id="d13fe-125">OUTPUTS</span></span>
+<span data-ttu-id="c2f2c-120">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="c2f2c-120">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="c2f2c-121">자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c2f2c-121">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-### <span data-ttu-id="d13fe-126">Microsoft. PowerShell. KeyHandler</span><span class="sxs-lookup"><span data-stu-id="d13fe-126">Microsoft.PowerShell.KeyHandler</span></span>
+## <span data-ttu-id="c2f2c-122">입력</span><span class="sxs-lookup"><span data-stu-id="c2f2c-122">INPUTS</span></span>
 
-## <span data-ttu-id="d13fe-127">참고</span><span class="sxs-lookup"><span data-stu-id="d13fe-127">NOTES</span></span>
+### <span data-ttu-id="c2f2c-123">없음</span><span class="sxs-lookup"><span data-stu-id="c2f2c-123">None</span></span>
 
-## <span data-ttu-id="d13fe-128">관련 링크</span><span class="sxs-lookup"><span data-stu-id="d13fe-128">RELATED LINKS</span></span>
+<span data-ttu-id="c2f2c-124">이 cmdlet에 개체를 파이프할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="c2f2c-124">You cannot pipe objects to this cmdlet.</span></span>
 
-[<span data-ttu-id="d13fe-129">Remove-PSReadLineKeyHandler</span><span class="sxs-lookup"><span data-stu-id="d13fe-129">Remove-PSReadLineKeyHandler</span></span>](Remove-PSReadLineKeyHandler.md)
+## <span data-ttu-id="c2f2c-125">출력</span><span class="sxs-lookup"><span data-stu-id="c2f2c-125">OUTPUTS</span></span>
 
-[<span data-ttu-id="d13fe-130">Get-PSReadLineOption</span><span class="sxs-lookup"><span data-stu-id="d13fe-130">Get-PSReadLineOption</span></span>](Get-PSReadLineOption.md)
+### <span data-ttu-id="c2f2c-126">Microsoft. PowerShell. KeyHandler</span><span class="sxs-lookup"><span data-stu-id="c2f2c-126">Microsoft.PowerShell.KeyHandler</span></span>
 
-[<span data-ttu-id="d13fe-131">Set-PSReadLineOption</span><span class="sxs-lookup"><span data-stu-id="d13fe-131">Set-PSReadLineOption</span></span>](Set-PSReadLineOption.md)
+## <span data-ttu-id="c2f2c-127">참고</span><span class="sxs-lookup"><span data-stu-id="c2f2c-127">NOTES</span></span>
 
-[<span data-ttu-id="d13fe-132">Set-PSReadLineKeyHandler</span><span class="sxs-lookup"><span data-stu-id="d13fe-132">Set-PSReadLineKeyHandler</span></span>](Set-PSReadLineKeyHandler.md)
+## <span data-ttu-id="c2f2c-128">관련 링크</span><span class="sxs-lookup"><span data-stu-id="c2f2c-128">RELATED LINKS</span></span>
+
+[<span data-ttu-id="c2f2c-129">Remove-PSReadLineKeyHandler</span><span class="sxs-lookup"><span data-stu-id="c2f2c-129">Remove-PSReadLineKeyHandler</span></span>](Remove-PSReadLineKeyHandler.md)
+
+[<span data-ttu-id="c2f2c-130">Get-PSReadLineOption</span><span class="sxs-lookup"><span data-stu-id="c2f2c-130">Get-PSReadLineOption</span></span>](Get-PSReadLineOption.md)
+
+[<span data-ttu-id="c2f2c-131">Set-PSReadLineOption</span><span class="sxs-lookup"><span data-stu-id="c2f2c-131">Set-PSReadLineOption</span></span>](Set-PSReadLineOption.md)
+
+[<span data-ttu-id="c2f2c-132">Set-PSReadLineKeyHandler</span><span class="sxs-lookup"><span data-stu-id="c2f2c-132">Set-PSReadLineKeyHandler</span></span>](Set-PSReadLineKeyHandler.md)
