@@ -4,15 +4,15 @@ keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 05/06/2020
-online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-member?view=powershell-6&WT.mc_id=ps-gethelp
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-member?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Member
-ms.openlocfilehash: 56f5d62115474a9791e139646383b1ae725664bc
+ms.openlocfilehash: 290d19cb2bf04e22bf7855cb88467ed26ad42fe7
 ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/07/2020
-ms.locfileid: "93216657"
+ms.locfileid: "93213962"
 ---
 # Get-Member
 
@@ -45,7 +45,7 @@ Get-Service | Get-Member
 ```
 
 ```Output
-   TypeName: System.Service.ServiceController#StartupType
+   TypeName: System.ServiceProcess.ServiceController
 
 Name                      MemberType    Definition
 ----                      ----------    ----------
@@ -54,6 +54,7 @@ RequiredServices          AliasProperty RequiredServices = ServicesDependedOn
 Disposed                  Event         System.EventHandler Disposed(System.Object, System.EventArgs)
 Close                     Method        void Close()
 Continue                  Method        void Continue()
+CreateObjRef              Method        System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)
 Dispose                   Method        void Dispose(), void IDisposable.Dispose()
 Equals                    Method        bool Equals(System.Object obj)
 ExecuteCommand            Method        void ExecuteCommand(int command)
@@ -66,14 +67,11 @@ Refresh                   Method        void Refresh()
 Start                     Method        void Start(), void Start(string[] args)
 Stop                      Method        void Stop()
 WaitForStatus             Method        void WaitForStatus(System.ServiceProcess.ServiceControllerSt...
-BinaryPathName            Property      System.String {get;set;}
 CanPauseAndContinue       Property      bool CanPauseAndContinue {get;}
 CanShutdown               Property      bool CanShutdown {get;}
 CanStop                   Property      bool CanStop {get;}
 Container                 Property      System.ComponentModel.IContainer Container {get;}
-DelayedAutoStart          Property      System.Boolean {get;set;}
 DependentServices         Property      System.ServiceProcess.ServiceController[] DependentServices {get;}
-Description               Property      System.String {get;set;}
 DisplayName               Property      string DisplayName {get;set;}
 MachineName               Property      string MachineName {get;set;}
 ServiceHandle             Property      System.Runtime.InteropServices.SafeHandle ServiceHandle {get;}
@@ -82,9 +80,7 @@ ServicesDependedOn        Property      System.ServiceProcess.ServiceController[
 ServiceType               Property      System.ServiceProcess.ServiceType ServiceType {get;}
 Site                      Property      System.ComponentModel.ISite Site {get;set;}
 StartType                 Property      System.ServiceProcess.ServiceStartMode StartType {get;}
-StartupType               Property      Microsoft.PowerShell.Commands.ServiceStartupType {get;set;}
 Status                    Property      System.ServiceProcess.ServiceControllerStatus Status {get;}
-UserName                  Property      System.String {get;set;}
 ToString                  ScriptMethod  System.Object ToString();
 ```
 
@@ -108,7 +104,7 @@ Get-Service | Get-Member -View Extended
 ```
 
 ```Output
-   TypeName: System.Service.ServiceController#StartupType
+   TypeName: System.ServiceProcess.ServiceController
 
 Name             MemberType    Definition
 ----             ----------    ----------
@@ -157,7 +153,7 @@ Name        MemberType Definition
 ----        ---------- ----------
 MachineName Property   string MachineName {get;}
 
-   TypeName: System.Service.ServiceController#StartupType
+   TypeName: System.ServiceProcess.ServiceController
 
 Name        MemberType Definition
 ----        ---------- ----------

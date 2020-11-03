@@ -207,7 +207,7 @@ Accept wildcard characters: False
 
 이 매개 변수 값은 구독자 개체 및 이 구독과 연결된 모든 이벤트 개체의 **SourceIdentifier** 속성 값에 표시됩니다.
 
-값은 이벤트의 원본에만 적용 됩니다. Cmdlet에서 사용 하기 위해 만든 임의의 값일 수 있습니다 `New-Event` . PowerShell 엔진은 **register-engineevent** values powershell을 지원 합니다 **. 종료** 및 **powershell. OnIdle** .
+값은 이벤트의 원본에만 적용 됩니다. Cmdlet에서 사용 하기 위해 만든 임의의 값일 수 있습니다 `New-Event` . PowerShell 엔진은 **register-engineevent** values powershell을 지원 합니다 **. 종료** 및 **powershell. OnIdle**.
 
 ```yaml
 Type: System.String

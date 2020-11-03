@@ -361,7 +361,7 @@ Accept wildcard characters: False
 
 이 매개 변수에 허용되는 값은 다음과 같습니다.
 
-- 오류
+- Error
 - 정보
 - FailureAudit
 - SuccessAudit

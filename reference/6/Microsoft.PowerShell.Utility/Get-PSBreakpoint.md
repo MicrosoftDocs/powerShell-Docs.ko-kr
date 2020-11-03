@@ -39,7 +39,7 @@ Get-PSBreakpoint [-Script <String[]>] -Variable <String[]> [<CommonParameters>]
 Get-PSBreakpoint [-Script <String[]>] -Command <String[]> [<CommonParameters>]
 ```
 
-### 유형
+### Type
 
 ```
 Get-PSBreakpoint [-Script <String[]>] [-Type] <BreakpointType[]> [<CommonParameters>]

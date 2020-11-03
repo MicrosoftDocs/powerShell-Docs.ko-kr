@@ -15,7 +15,7 @@ ms.locfileid: "93218866"
 ---
 # ThreadJob 모듈
 
-## Description
+## 설명
 이 모듈은 새 스레드 기반 **Threadjob** 작업을 포함 하도록 기존 PowerShell BackgroundJob를 확장 합니다. 이는 기존 PowerShell 작업 인프라 내에서 작동 하는 동시 PowerShell 스크립트를 실행 하는 데 사용할 수 있는 더 간단한 솔루션입니다.
 
 ## ThreadJob Cmdlet

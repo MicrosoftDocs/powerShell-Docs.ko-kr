@@ -194,7 +194,7 @@ Three
 
 ### -ArgumentList
 
-.NET Framework 클래스의 생성자에 전달할 인수의 배열을 지정 합니다. 생성자가 배열인 단일 매개 변수를 사용 하는 경우 해당 매개 변수를 다른 배열 내에 래핑해야 합니다. 다음은 그 예입니다. 
+.NET Framework 클래스의 생성자에 전달할 인수의 배열을 지정 합니다. 생성자가 배열인 단일 매개 변수를 사용 하는 경우 해당 매개 변수를 다른 배열 내에 래핑해야 합니다. 예를 들어:
 
 `$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate -ArgumentList (,$bytes)`
 
