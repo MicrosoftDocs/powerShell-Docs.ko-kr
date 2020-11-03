@@ -1,0 +1,646 @@
+---
+external help file: System.Management.Automation.dll-Help.xml
+keywords: powershell,cmdlet
+Locale: en-US
+Module Name: Microsoft.PowerShell.Core
+ms.date: 12/20/2019
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssession?view=powershell-5.1&WT.mc_id=ps-gethelp
+schema: 2.0.0
+title: New-PSSession
+ms.openlocfilehash: 1835d0bd4294161f83728a63e8da8fc64c2bf9e0
+ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "93218193"
+---
+# <span data-ttu-id="69279-103">New-PSSession</span><span class="sxs-lookup"><span data-stu-id="69279-103">New-PSSession</span></span>
+
+## <span data-ttu-id="69279-104">개요</span><span class="sxs-lookup"><span data-stu-id="69279-104">SYNOPSIS</span></span>
+<span data-ttu-id="69279-105">로컬 또는 원격 컴퓨터에 대한 영구 연결을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69279-105">Creates a persistent connection to a local or remote computer.</span></span>
+
+## <span data-ttu-id="69279-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="69279-106">SYNTAX</span></span>
+
+### <span data-ttu-id="69279-107">ComputerName (기본값)</span><span class="sxs-lookup"><span data-stu-id="69279-107">ComputerName (Default)</span></span>
+
+```
+New-PSSession [[-ComputerName] <String[]>] [-Credential <PSCredential>] [-Name <String[]>]
+ [-EnableNetworkAccess] [-ConfigurationName <String>] [-Port <Int32>] [-UseSSL]
+ [-ApplicationName <String>] [-ThrottleLimit <Int32>] [-SessionOption <PSSessionOption>]
+ [-Authentication <AuthenticationMechanism>] [-CertificateThumbprint <String>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="69279-108">URI</span><span class="sxs-lookup"><span data-stu-id="69279-108">Uri</span></span>
+
+```
+New-PSSession [-Credential <PSCredential>] [-Name <String[]>] [-EnableNetworkAccess]
+ [-ConfigurationName <String>] [-ThrottleLimit <Int32>] [-ConnectionUri] <Uri[]> [-AllowRedirection]
+ [-SessionOption <PSSessionOption>] [-Authentication <AuthenticationMechanism>]
+ [-CertificateThumbprint <String>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="69279-109">VMId</span><span class="sxs-lookup"><span data-stu-id="69279-109">VMId</span></span>
+
+```
+New-PSSession -Credential <PSCredential> [-Name <String[]>] [-ConfigurationName <String>]
+ [-VMId] <Guid[]> [-ThrottleLimit <Int32>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="69279-110">VMName</span><span class="sxs-lookup"><span data-stu-id="69279-110">VMName</span></span>
+
+```
+New-PSSession -Credential <PSCredential> [-Name <String[]>] [-ConfigurationName <String>]
+ -VMName <String[]> [-ThrottleLimit <Int32>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="69279-111">세션</span><span class="sxs-lookup"><span data-stu-id="69279-111">Session</span></span>
+
+```
+New-PSSession [[-Session] <PSSession[]>] [-Name <String[]>] [-EnableNetworkAccess]
+ [-ThrottleLimit <Int32>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="69279-112">ContainerId</span><span class="sxs-lookup"><span data-stu-id="69279-112">ContainerId</span></span>
+
+```
+New-PSSession [-Name <String[]>] [-ConfigurationName <String>] -ContainerId <String[]>
+ [-RunAsAdministrator] [-ThrottleLimit <Int32>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="69279-113">설명</span><span class="sxs-lookup"><span data-stu-id="69279-113">DESCRIPTION</span></span>
+
+<span data-ttu-id="69279-114">`New-PSSession`Cmdlet은 로컬 또는 원격 컴퓨터에 PowerShell 세션 ( **PSSession** )을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69279-114">The `New-PSSession` cmdlet creates a PowerShell session ( **PSSession** ) on a local or remote computer.</span></span> <span data-ttu-id="69279-115">**PSSession** 을 만들 때 PowerShell은 원격 컴퓨터에 대 한 영구 연결을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-115">When you create a **PSSession** , PowerShell establishes a persistent connection to the remote computer.</span></span>
+
+<span data-ttu-id="69279-116">**PSSession** 을 사용 하 여 함수 또는 변수 값과 같은 데이터를 공유 하는 여러 명령을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-116">Use a **PSSession** to run multiple commands that share data, such as a function or the value of a variable.</span></span> <span data-ttu-id="69279-117">**PSSession** 에서 명령을 실행 하려면 cmdlet을 사용 `Invoke-Command` 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-117">To run commands in a **PSSession** , use the `Invoke-Command` cmdlet.</span></span> <span data-ttu-id="69279-118">**PSSession** 을 사용 하 여 원격 컴퓨터와 직접 상호 작용 하려면 cmdlet을 사용 `Enter-PSSession` 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-118">To use the **PSSession** to interact directly with a remote computer, use the `Enter-PSSession` cmdlet.</span></span> <span data-ttu-id="69279-119">자세한 내용은 [about_PSSessions](about/about_PSSessions.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="69279-119">For more information, see [about_PSSessions](about/about_PSSessions.md).</span></span>
+
+<span data-ttu-id="69279-120">또는의 **ComputerName** 매개 변수를 사용 하 여 **PSSession** 을 만들지 않고 원격 컴퓨터에서 명령을 실행할 수 있습니다 `Enter-PSSession` `Invoke-Command` .</span><span class="sxs-lookup"><span data-stu-id="69279-120">You can run commands on a remote computer without creating a **PSSession** by using the **ComputerName** parameters of `Enter-PSSession` or `Invoke-Command`.</span></span> <span data-ttu-id="69279-121">**ComputerName** 매개 변수를 사용 하는 경우 PowerShell은 명령에 사용 되는 임시 연결을 만든 다음 닫힙니다.</span><span class="sxs-lookup"><span data-stu-id="69279-121">When you use the **ComputerName** parameter, PowerShell creates a temporary connection that is used for the command and is then closed.</span></span>
+
+## <span data-ttu-id="69279-122">예제</span><span class="sxs-lookup"><span data-stu-id="69279-122">EXAMPLES</span></span>
+
+### <span data-ttu-id="69279-123">예 1: 로컬 컴퓨터에서 세션 만들기</span><span class="sxs-lookup"><span data-stu-id="69279-123">Example 1: Create a session on the local computer</span></span>
+
+```powershell
+$s = New-PSSession
+```
+
+<span data-ttu-id="69279-124">이 명령은 로컬 컴퓨터에 새 **pssession** 을 만든 다음 변수에 **pssession** 을 저장 합니다 `$s` .</span><span class="sxs-lookup"><span data-stu-id="69279-124">This command creates a new **PSSession** on the local computer and saves the **PSSession** in the `$s` variable.</span></span>
+
+<span data-ttu-id="69279-125">이제이 **PSSession** 을 사용 하 여 로컬 컴퓨터에서 명령을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-125">You can now use this **PSSession** to run commands on the local computer.</span></span>
+
+### <span data-ttu-id="69279-126">예 2: 원격 컴퓨터에서 세션 만들기</span><span class="sxs-lookup"><span data-stu-id="69279-126">Example 2: Create a session on a remote computer</span></span>
+
+```powershell
+$Server01 = New-PSSession -ComputerName Server01
+```
+
+<span data-ttu-id="69279-127">이 명령은 Server01 컴퓨터에 새 **PSSession** 을 만든 다음 `$Server01` 변수에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-127">This command creates a new **PSSession** on the Server01 computer and saves it in the `$Server01` variable.</span></span>
+
+<span data-ttu-id="69279-128">여러 **PSSession** 개체를 만들 때 유용한 이름의 변수에 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-128">When creating multiple **PSSession** objects, assign them to variables with useful names.</span></span> <span data-ttu-id="69279-129">이렇게 하면 이후 명령에서 **PSSession** 개체를 관리 하는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-129">This will help you manage the **PSSession** objects in subsequent commands.</span></span>
+
+### <span data-ttu-id="69279-130">예 3: 여러 컴퓨터에서 세션 만들기</span><span class="sxs-lookup"><span data-stu-id="69279-130">Example 3: Create sessions on multiple computers</span></span>
+
+```powershell
+$s1, $s2, $s3 = New-PSSession -ComputerName Server01,Server02,Server03
+```
+
+<span data-ttu-id="69279-131">이 명령은 **ComputerName** 매개 변수로 지정 된 각 컴퓨터에 하나씩 세 개의 **PSSession** 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69279-131">This command creates three **PSSession** objects, one on each of the computers specified by the **ComputerName** parameter.</span></span>
+
+<span data-ttu-id="69279-132">이 명령은 대입 연산자 (=)를 사용 하 여 새 **PSSession** 개체를 변수에 할당 합니다. `$s1` , `$s2` , `$s3`</span><span class="sxs-lookup"><span data-stu-id="69279-132">The command uses the assignment operator (=) to assign the new **PSSession** objects to variables: `$s1`, `$s2`, `$s3`.</span></span> <span data-ttu-id="69279-133">Server01 **pssession** 을에 할당 하 `$s1` 고, Server02 **Pssession** 을에 `$s2` , Server03 **pssession** 을에 할당 `$s3` 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-133">It assigns the Server01 **PSSession** to `$s1`, the Server02 **PSSession** to `$s2`, and the Server03 **PSSession** to `$s3`.</span></span>
+
+<span data-ttu-id="69279-134">여러 개체를 일련의 변수에 할당 하면 PowerShell에서 각 개체를 계열의 변수에 각각 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-134">When you assign multiple objects to a series of variables, PowerShell assigns each object to a variable in the series respectively.</span></span> <span data-ttu-id="69279-135">변수보다 개체가 많은 경우에는 나머지 모든 개체가 마지막 변수에 할당됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-135">If there are more objects than variables, all remaining objects are assigned to the last variable.</span></span> <span data-ttu-id="69279-136">개체보다 변수가 많은 경우에는 나머지 변수가 비어 있습니다(null).</span><span class="sxs-lookup"><span data-stu-id="69279-136">If there are more variables than objects, the remaining variables are empty (null).</span></span>
+
+### <span data-ttu-id="69279-137">예제 4: 지정 된 포트를 사용 하 여 세션 만들기</span><span class="sxs-lookup"><span data-stu-id="69279-137">Example 4: Create a session with a specified port</span></span>
+
+```powershell
+New-PSSession -ComputerName Server01 -Port 8081 -UseSSL -ConfigurationName E12
+```
+
+<span data-ttu-id="69279-138">이 명령은 서버 포트 8081에 연결 되 고 SSL 프로토콜을 사용 하는 Server01 컴퓨터에 새 **PSSession** 을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69279-138">This command creates a new **PSSession** on the Server01 computer that connects to server port 8081 and uses the SSL protocol.</span></span> <span data-ttu-id="69279-139">새 **PSSession** 은 E12 라는 대체 세션 구성을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-139">The new **PSSession** uses an alternative session configuration called E12.</span></span>
+
+<span data-ttu-id="69279-140">포트를 설정하기 전에 포트 8081에서 수신 대기하도록 원격 컴퓨터의 WinRM 수신기를 구성해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-140">Before setting the port, you must configure the WinRM listener on the remote computer to listen on port 8081.</span></span> <span data-ttu-id="69279-141">자세한 내용은 **Port** 매개 변수에 대 한 설명을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="69279-141">For more information, see the description of the **Port** parameter.</span></span>
+
+### <span data-ttu-id="69279-142">예 5: 기존 세션을 기반으로 세션 만들기</span><span class="sxs-lookup"><span data-stu-id="69279-142">Example 5: Create a session based on an existing session</span></span>
+
+```powershell
+New-PSSession -Session $s -Credential Domain01\User01
+```
+
+<span data-ttu-id="69279-143">이 명령은 기존 **pssession** 과 동일한 속성을 사용 하 여 **PSSession** 을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69279-143">This command creates a **PSSession** with the same properties as an existing **PSSession**.</span></span> <span data-ttu-id="69279-144">기존 **pssession** 의 리소스가 모두 소모 되 고 일부 수요를 오프 로드 하는 데 새 **pssession** 이 필요한 경우이 명령 형식을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-144">You can use this command format when the resources of an existing **PSSession** are exhausted and a new **PSSession** is needed to offload some of the demand.</span></span>
+
+<span data-ttu-id="69279-145">이 명령은의 **Session** 매개 변수를 사용 하 여 `New-PSSession` 변수에 저장 된 **PSSession** 을 지정 합니다 `$s` .</span><span class="sxs-lookup"><span data-stu-id="69279-145">The command uses the **Session** parameter of `New-PSSession` to specify the **PSSession** saved in the `$s` variable.</span></span> <span data-ttu-id="69279-146">Domain1\Admin01 사용자의 자격 증명이 이 명령을 완료하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-146">It uses the credentials of the Domain1\Admin01 user to complete the command.</span></span>
+
+### <span data-ttu-id="69279-147">예 6: 다른 도메인에서 전역 범위를 사용 하 여 세션 만들기</span><span class="sxs-lookup"><span data-stu-id="69279-147">Example 6: Create a session with a global scope in a different domain</span></span>
+
+```powershell
+$global:s = New-PSSession -ComputerName Server1.Domain44.Corpnet.Fabrikam.com -Credential Domain01\Admin01
+```
+
+<span data-ttu-id="69279-148">이 예제에서는 다른 도메인의 컴퓨터에 전역 범위를 사용 하 여 **PSSession** 을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="69279-148">This example shows how to create a **PSSession** with a global scope on a computer in a different domain.</span></span>
+
+<span data-ttu-id="69279-149">기본적으로 명령줄에서 생성 된 **pssession** 개체는 로컬 범위를 사용 하 여 생성 되 고 스크립트에서 생성 된 **pssession** 개체에는 스크립트 범위가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-149">By default, **PSSession** objects created at the command line are created with local scope and **PSSession** objects created in a script have script scope.</span></span>
+
+<span data-ttu-id="69279-150">전역 범위를 사용 하 여 **pssession** 을 만들려면 새 **pssession** 을 만든 다음 전역 범위로 캐스팅 되는 변수에 **pssession** 을 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-150">To create a **PSSession** with global scope, create a new **PSSession** and then store the **PSSession** in a variable that is cast to a global scope.</span></span> <span data-ttu-id="69279-151">이 경우 `$s` 변수는 전역 범위로 캐스팅 됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-151">In this case, the `$s` variable is cast to a global scope.</span></span>
+
+<span data-ttu-id="69279-152">이 명령은 **ComputerName** 매개 변수를 사용하여 원격 컴퓨터를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-152">The command uses the **ComputerName** parameter to specify the remote computer.</span></span> <span data-ttu-id="69279-153">컴퓨터가 사용자 계정과 다른 도메인에 있기 때문에 컴퓨터의 전체 이름은 사용자의 자격 증명과 함께 지정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-153">Because the computer is in a different domain than the user account, the full name of the computer is specified together with the credentials of the user.</span></span>
+
+### <span data-ttu-id="69279-154">예 7: 많은 컴퓨터에 대 한 세션 만들기</span><span class="sxs-lookup"><span data-stu-id="69279-154">Example 7: Create sessions for many computers</span></span>
+
+```powershell
+$rs = Get-Content C:\Test\Servers.txt | New-PSSession -ThrottleLimit 50
+```
+
+<span data-ttu-id="69279-155">이 명령은 Servers.txt 파일에 나열 된 각 200 컴퓨터에 **pssession** 을 만들고 결과 **pssession** 을 변수에 저장 합니다 `$rs` .</span><span class="sxs-lookup"><span data-stu-id="69279-155">This command creates a **PSSession** on each of the 200 computers listed in the Servers.txt file and it stores the resulting **PSSession** in the `$rs` variable.</span></span> <span data-ttu-id="69279-156">**PSSession** 개체의 스로틀 제한은 50입니다.</span><span class="sxs-lookup"><span data-stu-id="69279-156">The **PSSession** objects have a throttle limit of 50.</span></span>
+
+<span data-ttu-id="69279-157">컴퓨터의 이름이 데이터베이스, 스프레드시트, 텍스트 파일 또는 다른 텍스트 변환 가능 형식에 저장된 경우 이 명령 형식을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-157">You can use this command format when the names of computers are stored in a database, spreadsheet, text file, or other text-convertible format.</span></span>
+
+### <span data-ttu-id="69279-158">예 8: URI를 사용 하 여 세션 만들기</span><span class="sxs-lookup"><span data-stu-id="69279-158">Example 8: Create a session by using a URI</span></span>
+
+```powershell
+$s = New-PSSession -URI http://Server01:91/NewSession -Credential Domain01\User01
+```
+
+<span data-ttu-id="69279-159">이 명령은 Server01 컴퓨터에 **PSSession** 을 만들어 `$s` 변수에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-159">This command creates a **PSSession** on the Server01 computer and stores it in the `$s` variable.</span></span> <span data-ttu-id="69279-160">**URI** 매개 변수를 사용 하 여 전송 프로토콜, 원격 컴퓨터, 포트 및 대체 세션 구성을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-160">It uses the **URI** parameter to specify the transport protocol, the remote computer, the port, and an alternate session configuration.</span></span> <span data-ttu-id="69279-161">또한 **Credential** 매개 변수를 사용 하 여 원격 컴퓨터에서 세션을 만들 수 있는 권한을 가진 사용자 계정을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-161">It also uses the **Credential** parameter to specify a user account that has permission to create a session on the remote computer.</span></span>
+
+### <span data-ttu-id="69279-162">예 9: 세션 집합에서 백그라운드 작업 실행</span><span class="sxs-lookup"><span data-stu-id="69279-162">Example 9: Run a background job in a set of sessions</span></span>
+
+```powershell
+$s = New-PSSession -ComputerName (Get-Content Servers.txt) -Credential Domain01\Admin01 -ThrottleLimit 16
+Invoke-Command -Session $s -ScriptBlock {Get-Process PowerShell} -AsJob
+```
+
+<span data-ttu-id="69279-163">이러한 명령은 **pssession** 개체 집합을 만든 다음 각 **pssession** 개체에서 백그라운드 작업을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-163">These commands create a set of **PSSession** objects and then run a background job in each of the **PSSession** objects.</span></span>
+
+<span data-ttu-id="69279-164">첫 번째 명령은 Servers.txt 파일에 나열 된 각 컴퓨터에 새 **PSSession** 을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69279-164">The first command creates a new **PSSession** on each of the computers listed in the Servers.txt file.</span></span> <span data-ttu-id="69279-165">Cmdlet을 사용 하 여 `New-PSSession` **PSSession** 을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69279-165">It uses the `New-PSSession` cmdlet to create the **PSSession**.</span></span> <span data-ttu-id="69279-166">**ComputerName** 매개 변수 값은 cmdlet을 사용 하 여 `Get-Content` Servers.txt 파일의 컴퓨터 이름 목록을 가져오는 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="69279-166">The value of the **ComputerName** parameter is a command that uses the `Get-Content` cmdlet to get the list of computer names the Servers.txt file.</span></span>
+
+<span data-ttu-id="69279-167">이 명령은 **Credential** 매개 변수를 사용 하 여 도메인 관리자의 권한이 있는 **PSSession** 개체를 만들고 **ThrottleLimit** 매개 변수를 사용 하 여 명령을 동시 연결 16 개로 제한 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-167">The command uses the **Credential** parameter to create the **PSSession** objects that have the permission of a domain administrator, and it uses the **ThrottleLimit** parameter to limit the command to 16 concurrent connections.</span></span> <span data-ttu-id="69279-168">이 명령은 **PSSession** 개체를 변수에 저장 합니다 `$s` .</span><span class="sxs-lookup"><span data-stu-id="69279-168">The command saves the **PSSession** objects in the `$s` variable.</span></span>
+
+<span data-ttu-id="69279-169">두 번째 명령은 cmdlet의 **AsJob** 매개 변수를 사용 하 여 `Invoke-Command` `Get-Process PowerShell` 의 각 **PSSession** 개체에서 명령을 실행 하는 백그라운드 작업을 시작 합니다 `$s` .</span><span class="sxs-lookup"><span data-stu-id="69279-169">The second command uses the **AsJob** parameter of the `Invoke-Command` cmdlet to start a background job that runs a `Get-Process PowerShell` command in each of the **PSSession** objects in `$s`.</span></span>
+
+<span data-ttu-id="69279-170">PowerShell 백그라운드 작업에 대 한 자세한 내용은 [about_Jobs](About/about_Jobs.md) 및 [about_Remote_Jobs](About/about_Remote_Jobs.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="69279-170">For more information about PowerShell background jobs, see [about_Jobs](About/about_Jobs.md) and [about_Remote_Jobs](About/about_Remote_Jobs.md).</span></span>
+
+### <span data-ttu-id="69279-171">예 10: 해당 URI를 사용 하 여 컴퓨터에 대 한 세션 만들기</span><span class="sxs-lookup"><span data-stu-id="69279-171">Example 10: Create a session for a computer by using its URI</span></span>
+
+```powershell
+New-PSSession -ConnectionURI https://management.exchangelabs.com/Management
+```
+
+<span data-ttu-id="69279-172">이 명령은 컴퓨터 이름이 아닌 URI로 지정 된 컴퓨터에 연결 하는 **PSSession** 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69279-172">This command creates a **PSSession** objects that connects to a computer that is specified by a URI instead of a computer name.</span></span>
+
+### <span data-ttu-id="69279-173">예 11: 세션 옵션 만들기</span><span class="sxs-lookup"><span data-stu-id="69279-173">Example 11: Create a session option</span></span>
+
+```powershell
+$so = New-PSSessionOption -SkipCACheck
+New-PSSession -ConnectionUri https://management.exchangelabs.com/Management -SessionOption $so -Credential Server01\Admin01
+```
+
+<span data-ttu-id="69279-174">이 예에서는 세션 옵션 개체를 만들고 **sessionoption** 매개 변수를 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="69279-174">This example shows how to create a session option object and use the **SessionOption** parameter.</span></span>
+
+<span data-ttu-id="69279-175">첫 번째 명령은 cmdlet을 사용 하 여 `New-PSSessionOption` 세션 옵션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69279-175">The first command uses the `New-PSSessionOption` cmdlet to create a session option.</span></span> <span data-ttu-id="69279-176">결과 **Sessionoption** 개체를 `$so` 변수에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-176">It saves the resulting **SessionOption** object in the `$so` variable.</span></span>
+
+<span data-ttu-id="69279-177">두 번째 명령은 새 세션의 옵션을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-177">The second command uses the option in a new session.</span></span> <span data-ttu-id="69279-178">이 명령은 cmdlet을 사용 하 여 `New-PSSession` 새 세션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69279-178">The command uses the `New-PSSession` cmdlet to create a new session.</span></span> <span data-ttu-id="69279-179">SessionOption 매개 변수 값은 변수의 **sessionoption** 개체입니다 `$so` .</span><span class="sxs-lookup"><span data-stu-id="69279-179">The value of the SessionOption parameter is the **SessionOption** object in the `$so` variable.</span></span>
+
+## <span data-ttu-id="69279-180">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="69279-180">PARAMETERS</span></span>
+
+### <span data-ttu-id="69279-181">-AllowRedirection</span><span class="sxs-lookup"><span data-stu-id="69279-181">-AllowRedirection</span></span>
+
+<span data-ttu-id="69279-182">이 cmdlet이이 연결을 대체 URI (Uniform Resource Identifier)로 리디렉션할 수 있음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="69279-182">Indicates that this cmdlet allows redirection of this connection to an alternate Uniform Resource Identifier (URI).</span></span>
+
+<span data-ttu-id="69279-183">**ConnectionURI** 매개 변수를 사용하면 원격 대상에서 다른 URI로 리디렉션하는 명령을 반환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-183">When you use the **ConnectionURI** parameter, the remote destination can return an instruction to redirect to a different URI.</span></span> <span data-ttu-id="69279-184">기본적으로 PowerShell은 연결을 리디렉션하지 않지만이 매개 변수를 사용 하 여 연결을 리디렉션할 수 있도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-184">By default, PowerShell does not redirect connections, but you can use this parameter to enable it to redirect the connection.</span></span>
+
+<span data-ttu-id="69279-185">또한 **MaximumConnectionRedirectionCount** 세션 옵션 값을 변경하여 연결이 리디렉션되는 횟수를 제한할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-185">You can also limit the number of times the connection is redirected by changing the **MaximumConnectionRedirectionCount** session option value.</span></span> <span data-ttu-id="69279-186">Cmdlet의 **Maximumredirection** 매개 변수를 사용 `New-PSSessionOption` 하거나 **$PSSessionOption** 기본 설정 변수의 **MaximumConnectionRedirectionCount** 속성을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-186">Use the **MaximumRedirection** parameter of the `New-PSSessionOption` cmdlet or set the **MaximumConnectionRedirectionCount** property of the **$PSSessionOption** preference variable.</span></span> <span data-ttu-id="69279-187">기본값은 5입니다.</span><span class="sxs-lookup"><span data-stu-id="69279-187">The default value is 5.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: Uri
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-188">-ApplicationName</span><span class="sxs-lookup"><span data-stu-id="69279-188">-ApplicationName</span></span>
+
+<span data-ttu-id="69279-189">연결 URI의 애플리케이션 이름 세그먼트를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-189">Specifies the application name segment of the connection URI.</span></span> <span data-ttu-id="69279-190">명령에서 **ConnectionURI**  매개 변수를 사용하지 않는 경우 이 매개 변수를 사용하여 응용 프로그램 이름을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-190">Use this parameter to specify the application name when you are not using the **ConnectionURI** parameter in the command.</span></span>
+
+<span data-ttu-id="69279-191">기본값은 `$PSSessionApplicationName` 로컬 컴퓨터의 기본 설정 변수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="69279-191">The default value is the value of the `$PSSessionApplicationName` preference variable on the local computer.</span></span> <span data-ttu-id="69279-192">이 기본 설정 변수를 정의하지 않으면 WSMAN이 기본값으로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-192">If this preference variable is not defined, the default value is WSMAN.</span></span> <span data-ttu-id="69279-193">이 값은 대부분의 사용에 적합합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-193">This value is appropriate for most uses.</span></span> <span data-ttu-id="69279-194">자세한 내용은 [about_Preference_Variables](About/about_Preference_Variables.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="69279-194">For more information, see [about_Preference_Variables](About/about_Preference_Variables.md).</span></span>
+
+<span data-ttu-id="69279-195">WinRM 서비스는 애플리케이션 이름을 사용하여 연결 요청을 제공하는 수신기를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-195">The WinRM service uses the application name to select a listener to service the connection request.</span></span>
+<span data-ttu-id="69279-196">이 매개 변수 값은 원격 컴퓨터에 있는 수신기의 **URLPrefix** 속성 값과 일치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-196">The value of this parameter should match the value of the **URLPrefix** property of a listener on the remote computer.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ComputerName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-197">-인증</span><span class="sxs-lookup"><span data-stu-id="69279-197">-Authentication</span></span>
+
+<span data-ttu-id="69279-198">사용자 자격 증명을 인증하는 데 사용되는 메커니즘을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-198">Specifies the mechanism that is used to authenticate the user's credentials.</span></span>
+<span data-ttu-id="69279-199">이 매개 변수에 허용되는 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-199">The acceptable values for this parameter are:</span></span>
+
+- <span data-ttu-id="69279-200">기본값</span><span class="sxs-lookup"><span data-stu-id="69279-200">Default</span></span>
+- <span data-ttu-id="69279-201">Basic</span><span class="sxs-lookup"><span data-stu-id="69279-201">Basic</span></span>
+- <span data-ttu-id="69279-202">Credssp</span><span class="sxs-lookup"><span data-stu-id="69279-202">Credssp</span></span>
+- <span data-ttu-id="69279-203">다이제스트</span><span class="sxs-lookup"><span data-stu-id="69279-203">Digest</span></span>
+- <span data-ttu-id="69279-204">Kerberos</span><span class="sxs-lookup"><span data-stu-id="69279-204">Kerberos</span></span>
+- <span data-ttu-id="69279-205">Negotiate</span><span class="sxs-lookup"><span data-stu-id="69279-205">Negotiate</span></span>
+- <span data-ttu-id="69279-206">NegotiateWithImplicitCredential</span><span class="sxs-lookup"><span data-stu-id="69279-206">NegotiateWithImplicitCredential</span></span>
+
+<span data-ttu-id="69279-207">기본값은 Default입니다.</span><span class="sxs-lookup"><span data-stu-id="69279-207">The default value is Default.</span></span>
+
+<span data-ttu-id="69279-208">이 매개 변수 값에 대 한 자세한 내용은 [Authenticationmechanism 열거](/dotnet/api/system.management.automation.runspaces.authenticationmechanism)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="69279-208">For more information about the values of this parameter, see [AuthenticationMechanism Enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).</span></span>
+
+> [!CAUTION]
+> <span data-ttu-id="69279-209">사용자 자격 증명이 인증을 위해 원격 컴퓨터에 전달 되는 CredSSP (자격 증명 보안 지원 공급자) 인증은 둘 이상의 리소스 (예: 원격 네트워크 공유 액세스)에 대 한 인증이 필요한 명령에 대해 설계 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-209">Credential Security Support Provider (CredSSP) authentication, in which the user credentials are passed to a remote computer to be authenticated, is designed for commands that require authentication on more than one resource, such as accessing a remote network share.</span></span> <span data-ttu-id="69279-210">이렇게 하면 원격 작업의 보안 위험이 커집니다.</span><span class="sxs-lookup"><span data-stu-id="69279-210">This mechanism increases the security risk of the remote operation.</span></span> <span data-ttu-id="69279-211">원격 컴퓨터가 손상된 경우 이 컴퓨터로 전달된 자격 증명을 사용하여 네트워크 세션을 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-211">If the remote computer is compromised, the credentials that are passed to it can be used to control the network session.</span></span>
+
+```yaml
+Type: System.Management.Automation.Runspaces.AuthenticationMechanism
+Parameter Sets: ComputerName, Uri
+Aliases:
+Accepted values: Default, Basic, Negotiate, NegotiateWithImplicitCredential, Credssp, Digest, Kerberos
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-212">-CertificateThumbprint</span><span class="sxs-lookup"><span data-stu-id="69279-212">-CertificateThumbprint</span></span>
+
+<span data-ttu-id="69279-213">이 작업을 수행할 권한이 있는 사용자 계정의 디지털 공개 키 인증서(X509)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-213">Specifies the digital public key certificate (X509) of a user account that has permission to perform this action.</span></span> <span data-ttu-id="69279-214">인증서의 인증서 지문을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-214">Enter the certificate thumbprint of the certificate.</span></span>
+
+<span data-ttu-id="69279-215">인증서는 클라이언트 인증서 기반 인증에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-215">Certificates are used in client certificate-based authentication.</span></span> <span data-ttu-id="69279-216">인증서는 로컬 사용자 계정에만 매핑할 수 있으며 도메인 계정에는 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-216">They can be mapped only to local user accounts; they do not work with domain accounts.</span></span>
+
+<span data-ttu-id="69279-217">인증서를 가져오려면 `Get-Item` `Get-ChildItem` PowerShell Cert: 드라이브에서 또는 명령을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-217">To get a certificate, use the `Get-Item` or `Get-ChildItem` command in the PowerShell Cert: drive.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ComputerName, Uri
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-218">-ComputerName</span><span class="sxs-lookup"><span data-stu-id="69279-218">-ComputerName</span></span>
+
+<span data-ttu-id="69279-219">컴퓨터 이름 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-219">Specifies an array of names of computers.</span></span> <span data-ttu-id="69279-220">이 cmdlet은 지정 된 컴퓨터에 대 한 영구 연결 ( **PSSession** )을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69279-220">This cmdlet creates a persistent connection ( **PSSession** ) to the specified computer.</span></span> <span data-ttu-id="69279-221">여러 컴퓨터 이름을 입력 하면에서 `New-PSSession` 각 컴퓨터에 대해 하나씩 여러 **PSSession** 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69279-221">If you enter multiple computer names, `New-PSSession` creates multiple **PSSession** objects, one for each computer.</span></span> <span data-ttu-id="69279-222">기본값은 로컬 컴퓨터입니다.</span><span class="sxs-lookup"><span data-stu-id="69279-222">The default is the local computer.</span></span>
+
+<span data-ttu-id="69279-223">하나 이상의 원격 컴퓨터의 NetBIOS 이름, IP 주소 또는 정규화된 도메인 이름을 입력하세요.</span><span class="sxs-lookup"><span data-stu-id="69279-223">Type the NetBIOS name, an IP address, or a fully qualified domain name of one or more remote computers.</span></span> <span data-ttu-id="69279-224">로컬 컴퓨터를 지정 하려면 컴퓨터 이름, localhost 또는 점 (.)을 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-224">To specify the local computer, type the computer name, localhost, or a dot (.).</span></span> <span data-ttu-id="69279-225">컴퓨터가 사용자와 다른 도메인에 있는 경우 정규화된 도메인 이름이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-225">When the computer is in a different domain than the user, the fully qualified domain name is required.</span></span> <span data-ttu-id="69279-226">컴퓨터 이름을 따옴표로 파이프 할 수도 있습니다 `New-PSSession` .</span><span class="sxs-lookup"><span data-stu-id="69279-226">You can also pipe a computer name, in quotation marks, to `New-PSSession`.</span></span>
+
+<span data-ttu-id="69279-227">**ComputerName** 매개 변수 값에 IP 주소를 사용 하려면 명령에 **Credential** 매개 변수를 포함 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-227">To use an IP address in the value of the **ComputerName** parameter, the command must include the **Credential** parameter.</span></span> <span data-ttu-id="69279-228">또한 HTTPS 전송을 사용하도록 컴퓨터를 구성하거나 원격 컴퓨터의 IP 주소를 로컬 컴퓨터의 WinRM TrustedHosts 목록에 포함해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-228">Also, the computer must be configured for HTTPS transport or the IP address of the remote computer must be included in the WinRM TrustedHosts list on the local computer.</span></span> <span data-ttu-id="69279-229">TrustedHosts 목록에 컴퓨터 이름을 추가 하는 방법에 대 한 지침은 [about_Remote_Troubleshooting](about/about_Remote_Troubleshooting.md)의 "신뢰할 수 있는 호스트 목록에 컴퓨터를 추가 하는 방법"을 참조 하십시오.</span><span class="sxs-lookup"><span data-stu-id="69279-229">For instructions for adding a computer name to the TrustedHosts list, see "How to Add a Computer to the Trusted Host List" in [about_Remote_Troubleshooting](about/about_Remote_Troubleshooting.md).</span></span>
+
+<span data-ttu-id="69279-230">**ComputerName** 매개 변수 값에 로컬 컴퓨터를 포함 하려면 관리자 권한으로 실행 옵션을 사용 하 여 Windows PowerShell을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-230">To include the local computer in the value of the **ComputerName** parameter, start Windows PowerShell by using the Run as administrator option.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: ComputerName
+Aliases: Cn
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-231">-ConfigurationName</span><span class="sxs-lookup"><span data-stu-id="69279-231">-ConfigurationName</span></span>
+
+<span data-ttu-id="69279-232">새 **PSSession** 에 사용 되는 세션 구성을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-232">Specifies the session configuration that is used for the new **PSSession**.</span></span>
+
+<span data-ttu-id="69279-233">세션 구성의 구성 이름 또는 정규화된 리소스 URI를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-233">Enter a configuration name or the fully qualified resource URI for a session configuration.</span></span> <span data-ttu-id="69279-234">구성 이름만 지정 하는 경우에는 다음 스키마 URI가 앞에와 야 `http://schemas.microsoft.com/PowerShell` 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-234">If you specify only the configuration name, the following schema URI is prepended: `http://schemas.microsoft.com/PowerShell`.</span></span>
+
+<span data-ttu-id="69279-235">세션의 세션 구성은 원격 컴퓨터에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-235">The session configuration for a session is located on the remote computer.</span></span> <span data-ttu-id="69279-236">지정된 세션 구성이 원격 컴퓨터에 없으면 명령이 실패합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-236">If the specified session configuration does not exist on the remote computer, the command fails.</span></span>
+
+<span data-ttu-id="69279-237">기본값은 `$PSSessionConfigurationName` 로컬 컴퓨터의 기본 설정 변수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="69279-237">The default value is the value of the `$PSSessionConfigurationName` preference variable on the local computer.</span></span> <span data-ttu-id="69279-238">이 기본 설정 변수를 설정하지 않으면 Microsoft.PowerShell이 기본값으로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-238">If this preference variable is not set, the default is Microsoft.PowerShell.</span></span> <span data-ttu-id="69279-239">자세한 내용은 [about_Preference_Variables](About/about_Preference_Variables.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="69279-239">For more information, see [about_Preference_Variables](About/about_Preference_Variables.md).</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ComputerName, Uri, VMId, VMName, ContainerId
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-240">-ConnectionUri</span><span class="sxs-lookup"><span data-stu-id="69279-240">-ConnectionUri</span></span>
+
+<span data-ttu-id="69279-241">세션에 대 한 연결 끝점을 정의 하는 URI를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-241">Specifies a URI that defines the connection endpoint for the session.</span></span> <span data-ttu-id="69279-242">URI는 정규화된 URI여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-242">The URI must be fully qualified.</span></span> <span data-ttu-id="69279-243">이 문자열의 형식은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-243">The format of this string is as follows:</span></span>
+
+`<Transport>://<ComputerName>:<Port>/<ApplicationName>`
+
+<span data-ttu-id="69279-244">기본값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-244">The default value is as follows:</span></span>
+
+`http://localhost:5985/WSMAN`
+
+<span data-ttu-id="69279-245">**ConnectionURI** 를 지정하지 않은 경우 **UseSSL** , **ComputerName** , **Port** 및 **ApplicationName** 매개 변수를 사용하여 **ConnectionURI** 값을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-245">If you do not specify a **ConnectionURI** , you can use the **UseSSL** , **ComputerName** , **Port** , and **ApplicationName** parameters to specify the **ConnectionURI** values.</span></span>
+
+<span data-ttu-id="69279-246">URI의 전송 세그먼트에 유효한 값은 HTTP 및 HTTPS입니다.</span><span class="sxs-lookup"><span data-stu-id="69279-246">Valid values for the Transport segment of the URI are HTTP and HTTPS.</span></span> <span data-ttu-id="69279-247">전송 세그먼트를 사용 하 여 연결 URI를 지정 하 고 포트를 지정 하지 않으면 세션은 표준 포트 80 (HTTP의 경우, HTTPS의 경우 443)를 사용 하 여 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="69279-247">If you specify a connection URI with a Transport segment, but do not specify a port, the session is created with standards ports: 80 for HTTP and 443 for HTTPS.</span></span> <span data-ttu-id="69279-248">PowerShell 원격을 위한 기본 포트를 사용 하려면 HTTP의 경우 포트 5985을, HTTPS의 경우 5986을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-248">To use the default ports for PowerShell remoting, specify port 5985 for HTTP or 5986 for HTTPS.</span></span>
+
+<span data-ttu-id="69279-249">대상 컴퓨터에서 연결을 다른 URI로 리디렉션하는 경우 명령에서 **allowredirection** 매개 변수를 사용 하지 않으면 PowerShell에서 리디렉션을 방지 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-249">If the destination computer redirects the connection to a different URI, PowerShell prevents the redirection unless you use the **AllowRedirection** parameter in the command.</span></span>
+
+```yaml
+Type: System.Uri[]
+Parameter Sets: Uri
+Aliases: URI, CU
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-250">-ContainerId</span><span class="sxs-lookup"><span data-stu-id="69279-250">-ContainerId</span></span>
+
+<span data-ttu-id="69279-251">컨테이너의 Id 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-251">Specifies an array of IDs of containers.</span></span> <span data-ttu-id="69279-252">이 cmdlet은 지정 된 각 컨테이너와 대화형 세션을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-252">This cmdlet starts an interactive session with each of the specified containers.</span></span> <span data-ttu-id="69279-253">명령을 사용 `docker ps` 하 여 컨테이너 id 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="69279-253">Use the `docker ps` command to get a list of container IDs.</span></span> <span data-ttu-id="69279-254">자세한 내용은 [docker ps](https://docs.docker.com/engine/reference/commandline/ps/) 명령에 대 한 도움말을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="69279-254">For more information, see the help for the [docker ps](https://docs.docker.com/engine/reference/commandline/ps/) command.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: ContainerId
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-255">-Credential</span><span class="sxs-lookup"><span data-stu-id="69279-255">-Credential</span></span>
+
+<span data-ttu-id="69279-256">이 작업을 수행할 수 있는 권한이 있는 사용자 계정을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-256">Specifies a user account that has permission to do this action.</span></span> <span data-ttu-id="69279-257">기본값은 현재 사용자입니다.</span><span class="sxs-lookup"><span data-stu-id="69279-257">The default is the current user.</span></span>
+
+<span data-ttu-id="69279-258">**User01** 또는 **Domain01\User01** 과 같은 사용자 이름을 입력 하거나 cmdlet에 의해 생성 된 **PSCredential** 개체를 입력 합니다 `Get-Credential` .</span><span class="sxs-lookup"><span data-stu-id="69279-258">Type a user name, such as **User01** or **Domain01\User01** , or enter a **PSCredential** object generated by the `Get-Credential` cmdlet.</span></span> <span data-ttu-id="69279-259">사용자 이름을 입력 하면 암호를 입력 하 라는 메시지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-259">If you type a user name, you're prompted to enter the password.</span></span>
+
+<span data-ttu-id="69279-260">자격 증명은 [PSCredential](/dotnet/api/system.management.automation.pscredential) 개체에 저장 되 고 암호는 [SecureString](/dotnet/api/system.security.securestring)으로 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-260">Credentials are stored in a [PSCredential](/dotnet/api/system.management.automation.pscredential) object and the password is stored as a [SecureString](/dotnet/api/system.security.securestring).</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="69279-261">**Securestring** 데이터 보호에 대 한 자세한 [내용은 참조 하십시오](/dotnet/api/system.security.securestring#how-secure-is-securestring).</span><span class="sxs-lookup"><span data-stu-id="69279-261">For more information about **SecureString** data protection, see [How secure is SecureString?](/dotnet/api/system.security.securestring#how-secure-is-securestring).</span></span>
+
+```yaml
+Type: System.Management.Automation.PSCredential
+Parameter Sets: ComputerName, Uri, VMId, VMName
+Aliases:
+
+Required: True (VMId, VMName), False (ComputerName, Uri)
+Position: Named
+Default value: Current user
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-262">-EnableNetworkAccess</span><span class="sxs-lookup"><span data-stu-id="69279-262">-EnableNetworkAccess</span></span>
+
+<span data-ttu-id="69279-263">이 cmdlet이 루프백 세션에 대화형 보안 토큰을 추가 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="69279-263">Indicates that this cmdlet adds an interactive security token to loopback sessions.</span></span> <span data-ttu-id="69279-264">대화형 토큰을 사용하면 다른 컴퓨터에서 데이터를 가져오는 명령을 루프백 세션에서 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-264">The interactive token lets you run commands in the loopback session that get data from other computers.</span></span> <span data-ttu-id="69279-265">예를 들어 원격 컴퓨터에서 로컬 컴퓨터로 XML 파일을 복사하는 세션에서 명령을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-265">For example, you can run a command in the session that copies XML files from a remote computer to the local computer.</span></span>
+
+<span data-ttu-id="69279-266">루프백 세션은 동일한 컴퓨터에서 시작 하 여 종료 되는 **PSSession** 입니다.</span><span class="sxs-lookup"><span data-stu-id="69279-266">A loopback session is a **PSSession** that originates and ends on the same computer.</span></span> <span data-ttu-id="69279-267">루프백 세션을 만들려면 **ComputerName** 매개 변수를 생략 하거나 해당 값을 점 (.), localhost 또는 로컬 컴퓨터 이름으로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-267">To create a loopback session, omit the **ComputerName** parameter or set its value to dot (.), localhost, or the name of the local computer.</span></span>
+
+<span data-ttu-id="69279-268">기본적으로이 cmdlet은 원격 컴퓨터를 인증 하는 데 충분 한 권한을 제공 하지 않을 수 있는 네트워크 토큰을 사용 하 여 루프백 세션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69279-268">By default, this cmdlet creates loopback sessions by using a network token, which might not provide sufficient permission to authenticate to remote computers.</span></span>
+
+<span data-ttu-id="69279-269">**EnableNetworkAccess** 매개 변수는 루프백 세션에서만 유효합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-269">The **EnableNetworkAccess** parameter is effective only in loopback sessions.</span></span> <span data-ttu-id="69279-270">원격 컴퓨터에서 세션을 만들 때 **EnableNetworkAccess** 를 사용 하는 경우 명령은 성공 하지만 매개 변수는 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-270">If you use **EnableNetworkAccess** when you create a session on a remote computer, the command succeeds, but the parameter is ignored.</span></span>
+
+<span data-ttu-id="69279-271">또한 세션 자격 증명을 다른 컴퓨터에 위임 하는 **인증** 매개 변수의 CredSSP 값을 사용 하 여 루프백 세션에서 원격 액세스를 사용 하도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-271">You can also enable remote access in a loopback session by using the CredSSP value of the **Authentication** parameter, which delegates the session credentials to other computers.</span></span>
+
+<span data-ttu-id="69279-272">악의적인 액세스 로부터 컴퓨터를 보호 하기 위해 **EnableNetworkAccess** 매개 변수를 사용 하 여 만든 대화형 토큰을 포함 하는 분리 된 루프백 세션은 세션을 만든 컴퓨터 에서만 다시 연결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-272">To protect the computer from malicious access, disconnected loopback sessions that have interactive tokens, which are those created by using the **EnableNetworkAccess** parameter, can be reconnected only from the computer on which the session was created.</span></span> <span data-ttu-id="69279-273">CredSSP 인증을 사용하는 연결이 끊어진 세션은 다른 컴퓨터에서 다시 연결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-273">Disconnected sessions that use CredSSP authentication can be reconnected from other computers.</span></span> <span data-ttu-id="69279-274">자세한 내용은 `Disconnect-PSSession`를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="69279-274">For more information, see `Disconnect-PSSession`.</span></span>
+
+<span data-ttu-id="69279-275">이 매개 변수는 PowerShell 3.0에서 도입 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-275">This parameter was introduced in PowerShell 3.0.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: ComputerName, Uri, Session
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-276">-Name</span><span class="sxs-lookup"><span data-stu-id="69279-276">-Name</span></span>
+
+<span data-ttu-id="69279-277">**PSSession** 의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-277">Specifies a friendly name for the **PSSession**.</span></span>
+
+<span data-ttu-id="69279-278">및 등의 다른 cmdlet을 사용 하는 경우 이름을 사용 하 여 **PSSession** 을 참조할 수 `Get-PSSession` 있습니다 `Enter-PSSession` .</span><span class="sxs-lookup"><span data-stu-id="69279-278">You can use the name to refer to the **PSSession** when you use other cmdlets, such as `Get-PSSession` and `Enter-PSSession`.</span></span> <span data-ttu-id="69279-279">이 이름은 컴퓨터나 현재 세션에서 고유하지 않아도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-279">The name is not required to be unique to the computer or the current session.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-280">-Port</span><span class="sxs-lookup"><span data-stu-id="69279-280">-Port</span></span>
+
+<span data-ttu-id="69279-281">이 명령에 사용되는 원격 컴퓨터의 네트워크 포트를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-281">Specifies the network port on the remote computer that is used for this connection.</span></span> <span data-ttu-id="69279-282">원격 컴퓨터에 연결하려면 원격 컴퓨터가 연결에서 사용하는 포트에서 수신 대기하고 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-282">To connect to a remote computer, the remote computer must be listening on the port that the connection uses.</span></span> <span data-ttu-id="69279-283">기본 포트는 HTTP의 WinRM 포트인 5985이 고, HTTPS의 경우 WinRM 포트인 5986입니다.</span><span class="sxs-lookup"><span data-stu-id="69279-283">The default ports are 5985, which is the WinRM port for HTTP, and 5986, which is the WinRM port for HTTPS.</span></span>
+
+<span data-ttu-id="69279-284">다른 포트를 사용 하기 전에 해당 포트에서 수신 대기 하도록 원격 컴퓨터의 WinRM 수신기를 구성 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-284">Before using another port, you must configure the WinRM listener on the remote computer to listen at that port.</span></span> <span data-ttu-id="69279-285">다음 명령을 사용하여 수신기를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-285">Use the following commands to configure the listener:</span></span>
+
+1. `winrm delete winrm/config/listener?Address=*+Transport=HTTP`
+2. `winrm create winrm/config/listener?Address=*+Transport=HTTP @{Port="\<port-number\>"}`
+
+<span data-ttu-id="69279-286">필요한 경우가 아니면 **Port** 매개 변수를 사용하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="69279-286">Do not use the **Port** parameter unless you must.</span></span> <span data-ttu-id="69279-287">명령의 포트 설정은 이 명령이 실행되는 모든 컴퓨터나 세션에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-287">The port setting in the command applies to all computers or sessions on which the command runs.</span></span> <span data-ttu-id="69279-288">대체 포트 설정을 사용하면 일부 컴퓨터에서 명령이 실행되지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-288">An alternate port setting might prevent the command from running on all computers.</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: ComputerName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-289">-RunAsAdministrator</span><span class="sxs-lookup"><span data-stu-id="69279-289">-RunAsAdministrator</span></span>
+
+<span data-ttu-id="69279-290">**PSSession** 이 관리자 권한으로 실행 됨을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="69279-290">Indicates that the **PSSession** runs as administrator.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: ContainerId
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-291">-Session</span><span class="sxs-lookup"><span data-stu-id="69279-291">-Session</span></span>
+
+<span data-ttu-id="69279-292">이 cmdlet이 새 **pssession** 의 모델로 사용 하는 **PSSession** 개체의 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-292">Specifies an array of **PSSession** objects that this cmdlet uses as a model for the new **PSSession**.</span></span> <span data-ttu-id="69279-293">이 매개 변수는 지정 된 **pssession** 개체와 동일한 속성을 가진 새 **pssession** 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69279-293">This parameter creates new **PSSession** objects that have the same properties as the specified **PSSession** objects.</span></span>
+
+<span data-ttu-id="69279-294">**Pssession** 개체를 포함 하는 변수를 입력 하거나 **pssession** 개체를 만들거나 가져오는 명령 (예: 또는 명령)을 입력 합니다 `New-PSSession` `Get-PSSession` .</span><span class="sxs-lookup"><span data-stu-id="69279-294">Enter a variable that contains the **PSSession** objects or a command that creates or gets the **PSSession** objects, such as a `New-PSSession` or `Get-PSSession` command.</span></span>
+
+<span data-ttu-id="69279-295">결과로 생성 된 **PSSession** 개체의 컴퓨터 이름, 응용 프로그램 이름, 연결 URI, 포트, 구성 이름, 제한 한도 및 SSL(SECURE SOCKETS LAYER) (SSL) 값이 원본과 동일 하지만 표시 이름, ID 및 인스턴스 ID (GUID)는 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="69279-295">The resulting **PSSession** objects have the same computer name, application name, connection URI, port, configuration name, throttle limit, and Secure Sockets Layer (SSL) value as the originals, but they have a different display name, ID, and instance ID (GUID).</span></span>
+
+```yaml
+Type: System.Management.Automation.Runspaces.PSSession[]
+Parameter Sets: Session
+Aliases:
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-296">-SessionOption</span><span class="sxs-lookup"><span data-stu-id="69279-296">-SessionOption</span></span>
+
+<span data-ttu-id="69279-297">세션에 대 한 고급 옵션을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-297">Specifies advanced options for the session.</span></span> <span data-ttu-id="69279-298">Cmdlet을 사용 하 여 만든 것과 같은 **sessionoption** 개체를 입력 `New-PSSessionOption` 하거나 키가 세션 옵션 이름이 고 값이 session 옵션 값인 해시 테이블을 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-298">Enter a **SessionOption** object, such as one that you create by using the `New-PSSessionOption` cmdlet, or a hash table in which the keys are session option names and the values are session option values.</span></span>
+
+<span data-ttu-id="69279-299">옵션의 기본값은 기본 설정 `$PSSessionOption` 변수의 값 (설정 된 경우)에 따라 결정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-299">The default values for the options are determined by the value of the `$PSSessionOption` preference variable, if it is set.</span></span> <span data-ttu-id="69279-300">그러지 않으면 기본값은 세션 구성에 설정된 옵션에 따라 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-300">Otherwise, the default values are established by options set in the session configuration.</span></span>
+
+<span data-ttu-id="69279-301">세션 옵션 값은 기본 설정 변수 및 세션 구성에 설정 된 세션의 기본값 보다 우선 적용 `$PSSessionOption` 됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-301">The session option values take precedence over default values for sessions set in the `$PSSessionOption` preference variable and in the session configuration.</span></span> <span data-ttu-id="69279-302">그러나 이러한 값은 세션 구성에 설정된 최대값, 할당량 또는 제한보다 우선하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-302">However, they do not take precedence over maximum values, quotas or limits set in the session configuration.</span></span>
+
+<span data-ttu-id="69279-303">기본값을 포함 하는 세션 옵션에 대 한 설명은를 참조 하십시오 `New-PSSessionOption` .</span><span class="sxs-lookup"><span data-stu-id="69279-303">For a description of the session options that includes the default values, see `New-PSSessionOption`.</span></span> <span data-ttu-id="69279-304">기본 설정 변수에 대 한 자세한 내용은 `$PSSessionOption` [about_Preference_Variables](About/about_Preference_Variables.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="69279-304">For information about the `$PSSessionOption` preference variable, see [about_Preference_Variables](About/about_Preference_Variables.md).</span></span> <span data-ttu-id="69279-305">세션 구성에 대 한 자세한 내용은 [about_Session_Configurations](About/about_Session_Configurations.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="69279-305">For more information about session configurations, see [about_Session_Configurations](About/about_Session_Configurations.md).</span></span>
+
+```yaml
+Type: System.Management.Automation.Remoting.PSSessionOption
+Parameter Sets: ComputerName, Uri
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-306">-ThrottleLimit</span><span class="sxs-lookup"><span data-stu-id="69279-306">-ThrottleLimit</span></span>
+
+<span data-ttu-id="69279-307">이 명령을 실행하도록 설정할 수 있는 최대 동시 연결 수를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-307">Specifies the maximum number of concurrent connections that can be established to run this command.</span></span>
+<span data-ttu-id="69279-308">이 매개 변수를 생략하거나 값 0을 입력하면 기본값 32가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="69279-308">If you omit this parameter or enter a value of 0 (zero), the default value, 32, is used.</span></span>
+
+<span data-ttu-id="69279-309">제한 한도는 현재 명령에만 적용되며 세션이나 컴퓨터에는 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-309">The throttle limit applies only to the current command, not to the session or to the computer.</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-310">-UseSSL</span><span class="sxs-lookup"><span data-stu-id="69279-310">-UseSSL</span></span>
+
+<span data-ttu-id="69279-311">이 cmdlet이 SSL 프로토콜을 사용 하 여 원격 컴퓨터에 대 한 연결을 설정 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="69279-311">Indicates that this cmdlet uses the SSL protocol to establish a connection to the remote computer.</span></span>
+<span data-ttu-id="69279-312">기본적으로 SSL은 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-312">By default, SSL is not used.</span></span>
+
+<span data-ttu-id="69279-313">WS-Management는 네트워크를 통해 전송 되는 모든 PowerShell 콘텐츠를 암호화 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-313">WS-Management encrypts all PowerShell content transmitted over the network.</span></span> <span data-ttu-id="69279-314">**UseSSL** 매개 변수는 HTTP 연결 대신 HTTPS 연결을 통해 데이터를 전송 하는 추가 보호 기능을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-314">The **UseSSL** parameter offers an additional protection that sends the data across an HTTPS connection instead of an HTTP connection.</span></span>
+
+<span data-ttu-id="69279-315">이 매개 변수를 사용 하지만 명령에 사용 되는 포트에서 SSL을 사용할 수 없는 경우 명령이 실패 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-315">If you use this parameter, but SSL is not available on the port that is used for the command, the command fails.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: ComputerName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-316">-VMId</span><span class="sxs-lookup"><span data-stu-id="69279-316">-VMId</span></span>
+
+<span data-ttu-id="69279-317">가상 컴퓨터의 ID 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-317">Specifies an array of ID of virtual machines.</span></span> <span data-ttu-id="69279-318">이 cmdlet은 지정 된 각 가상 컴퓨터와 대화형 세션을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-318">This cmdlet starts an interactive session with each of the specified virtual machines.</span></span> <span data-ttu-id="69279-319">사용할 수 있는 가상 컴퓨터를 보려면 다음 명령을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-319">To see the virtual machines that are available to you, use the following command:</span></span>
+
+`Get-VM | Select-Object -Property Name, ID`
+
+```yaml
+Type: System.Guid[]
+Parameter Sets: VMId
+Aliases: VMGuid
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-320">-VMName</span><span class="sxs-lookup"><span data-stu-id="69279-320">-VMName</span></span>
+
+<span data-ttu-id="69279-321">가상 컴퓨터의 이름 배열을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-321">Specifies an array of names of virtual machines.</span></span> <span data-ttu-id="69279-322">이 cmdlet은 지정 된 각 가상 컴퓨터와 대화형 세션을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-322">This cmdlet starts an interactive session with each of the specified virtual machines.</span></span> <span data-ttu-id="69279-323">사용할 수 있는 가상 컴퓨터를 확인 하려면 cmdlet을 사용 합니다 `Get-VM` .</span><span class="sxs-lookup"><span data-stu-id="69279-323">To see the virtual machines that are available to you, use the `Get-VM` cmdlet.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: VMName
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69279-324">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="69279-324">CommonParameters</span></span>
+
+<span data-ttu-id="69279-325">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="69279-325">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="69279-326">자세한 내용은 about_CommonParameters(https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="69279-326">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="69279-327">입력</span><span class="sxs-lookup"><span data-stu-id="69279-327">INPUTS</span></span>
+
+### <span data-ttu-id="69279-328">System.string, SYSTEM.URI, Runspace. n a m a.</span><span class="sxs-lookup"><span data-stu-id="69279-328">System.String, System.URI, System.Management.Automation.Runspaces.PSSession</span></span>
+
+<span data-ttu-id="69279-329">문자열, URI 또는 세션 개체를이 cmdlet으로 파이프 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="69279-329">You can pipe a string, URI, or session object to this cmdlet.</span></span>
+
+## <span data-ttu-id="69279-330">출력</span><span class="sxs-lookup"><span data-stu-id="69279-330">OUTPUTS</span></span>
+
+### <span data-ttu-id="69279-331">Runspace입니다.</span><span class="sxs-lookup"><span data-stu-id="69279-331">System.Management.Automation.Runspaces.PSSession</span></span>
+
+## <span data-ttu-id="69279-332">참고</span><span class="sxs-lookup"><span data-stu-id="69279-332">NOTES</span></span>
+
+- <span data-ttu-id="69279-333">이 cmdlet은 PowerShell 원격 인프라를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-333">This cmdlet uses the PowerShell remoting infrastructure.</span></span> <span data-ttu-id="69279-334">이 cmdlet을 사용 하려면 PowerShell 원격을 사용 하도록 로컬 컴퓨터와 모든 원격 컴퓨터를 구성 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-334">To use this cmdlet, the local computer and any remote computers must be configured for PowerShell remoting.</span></span> <span data-ttu-id="69279-335">자세한 내용은 [about_Remote_Requirements](About/about_Remote_Requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="69279-335">For more information, see [about_Remote_Requirements](About/about_Remote_Requirements.md).</span></span>
+- <span data-ttu-id="69279-336">로컬 컴퓨터에서 **PSSession** 을 만들려면 관리자 권한으로 실행 옵션을 사용 하 여 PowerShell을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-336">To create a **PSSession** on the local computer, start PowerShell with the Run as administrator option.</span></span>
+- <span data-ttu-id="69279-337">**Pssession** 을 마친 후에는 cmdlet을 사용 `Remove-PSSession` 하 여 **pssession** 을 삭제 하 고 해당 리소스를 해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="69279-337">When you are finished with the **PSSession** , use the `Remove-PSSession` cmdlet to delete the **PSSession** and release its resources.</span></span>
+
+## <span data-ttu-id="69279-338">관련 링크</span><span class="sxs-lookup"><span data-stu-id="69279-338">RELATED LINKS</span></span>
+
+[<span data-ttu-id="69279-339">Connect-PSSession</span><span class="sxs-lookup"><span data-stu-id="69279-339">Connect-PSSession</span></span>](Connect-PSSession.md)
+
+[<span data-ttu-id="69279-340">Disconnect-PSSession</span><span class="sxs-lookup"><span data-stu-id="69279-340">Disconnect-PSSession</span></span>](Disconnect-PSSession.md)
+
+[<span data-ttu-id="69279-341">Enter-PSSession</span><span class="sxs-lookup"><span data-stu-id="69279-341">Enter-PSSession</span></span>](Enter-PSSession.md)
+
+[<span data-ttu-id="69279-342">Exit-PSSession</span><span class="sxs-lookup"><span data-stu-id="69279-342">Exit-PSSession</span></span>](Exit-PSSession.md)
+
+[<span data-ttu-id="69279-343">Get-PSSession</span><span class="sxs-lookup"><span data-stu-id="69279-343">Get-PSSession</span></span>](Get-PSSession.md)
+
+[<span data-ttu-id="69279-344">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="69279-344">Invoke-Command</span></span>](Invoke-Command.md)
+
+[<span data-ttu-id="69279-345">Receive-PSSession</span><span class="sxs-lookup"><span data-stu-id="69279-345">Receive-PSSession</span></span>](Receive-PSSession.md)
+
+[<span data-ttu-id="69279-346">Remove-PSSession</span><span class="sxs-lookup"><span data-stu-id="69279-346">Remove-PSSession</span></span>](Remove-PSSession.md)
