@@ -4,15 +4,15 @@ keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 06/09/2017
-online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-variable?view=powershell-7.1&WT.mc_id=ps-gethelp
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-variable?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Variable
-ms.openlocfilehash: c175fce3df41a3860a54ccb13a280955dce4a55c
+ms.openlocfilehash: 876129fc8df9a78df257bf95220fc6587e68b9a2
 ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239894"
+ms.locfileid: "93239844"
 ---
 # Set-Variable
 
