@@ -61,7 +61,7 @@
         "version": 0
     }],
     "git_repository_branch_open_to_public_contributors": "live",
-    "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/powerShell-Docs.ko-kr",
+    "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/PowerShell-Docs.ko-kr",
     "branches_to_filter": [
        "live"
     ],
