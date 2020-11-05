@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 구성 데이터의 자격 증명 옵션
-ms.openlocfilehash: aac27f1ff4b4287b53745fa3b946fb3de84771c2
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: DSC를 사용하면 자격 증명을 제공하여 로컬 시스템 계정이 아닌 특정 사용자 계정의 컨텍스트에서 구성 설정을 적용할 수 있습니다.
+ms.openlocfilehash: 41478dc042ca59fb70aa033de81b589a4a8c09c7
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75870560"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658627"
 ---
 # <a name="credentials-options-in-configuration-data"></a>구성 데이터의 자격 증명 옵션
 
@@ -61,7 +62,7 @@ Group [String] #ResourceName
 
 DSC는 `Local System`에서 실행되므로, DSC에는 이미 로컬 사용자 및 그룹을 변경할 권한이 있습니다. 추가된 구성원이 로컬 계정이라면 자격 증명이 필요하지 않습니다. `Group` 리소스에서 로컬 그룹에 도메인 계정을 추가한다면, 자격 증명이 필요합니다.
 
-Active Directory에 대한 익명 쿼리는 허용되지 않습니다. `Group` 리소스의 `Credential` 속성은 Active Directory에 대해 쿼리하는 데 사용된 도메인 계정입니다. 대부분의 경우 사용자는 기본적으로 Active Directory에 있는 대부분의 개체에 대해 *읽기*가 가능하므로 이것은 일반 사용자 계정일 수 있습니다.
+Active Directory에 대한 익명 쿼리는 허용되지 않습니다. `Group` 리소스의 `Credential` 속성은 Active Directory에 대해 쿼리하는 데 사용된 도메인 계정입니다. 대부분의 경우 사용자는 기본적으로 Active Directory에 있는 대부분의 개체에 대해 *읽기* 가 가능하므로 이것은 일반 사용자 계정일 수 있습니다.
 
 ## <a name="example-configuration"></a>예제 구성
 
@@ -125,7 +126,7 @@ At C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguratio
 1. 오류에서는 일반 텍스트 암호는 권장되지 않는다고 설명합니다.
 2. 경고에서는 도메인 자격 증명을 사용하지 말라고 합니다.
 
-플래그 **PSDSCAllowPlainTextPassword** 및 **PSDSCAllowDomainUser**는 사용자에게 관련된 위험을 알리는 오류 및 경고를 표시하지 않습니다.
+플래그 **PSDSCAllowPlainTextPassword** 및 **PSDSCAllowDomainUser** 는 사용자에게 관련된 위험을 알리는 오류 및 경고를 표시하지 않습니다.
 
 ## <a name="psdscallowplaintextpassword"></a>PSDSCAllowPlainTextPassword
 
@@ -167,7 +168,7 @@ DomainCredentialExample -ConfigurationData $cd
 
 ### <a name="localhostmof"></a>localhost.mof
 
-**PSDSCAllowPlainTextPassword** 플래그는 사용자가 MOF 파일에 일반 텍스트 암호를 저장할 경우의 위험을 확인하도록 합니다. 생성된 MOF 파일에서는 **SecureString**을 포함하는 **PSCredential** 개체가 사용된 경우에도 암호가 일반 텍스트로 나타납니다. 유일하게 자격 증명이 공개되는 경우입니다. 이 MOF 파일에 대한 액세스 권한을 얻으면 누구나 관리자 계정에 액세스할 수 있습니다.
+**PSDSCAllowPlainTextPassword** 플래그는 사용자가 MOF 파일에 일반 텍스트 암호를 저장할 경우의 위험을 확인하도록 합니다. 생성된 MOF 파일에서는 **SecureString** 을 포함하는 **PSCredential** 개체가 사용된 경우에도 암호가 일반 텍스트로 나타납니다. 유일하게 자격 증명이 공개되는 경우입니다. 이 MOF 파일에 대한 액세스 권한을 얻으면 누구나 관리자 계정에 액세스할 수 있습니다.
 
 ```
 /*

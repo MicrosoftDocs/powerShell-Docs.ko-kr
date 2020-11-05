@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,setup
 title: PowerShell 스크립트 디버깅의 향상된 기능
-ms.openlocfilehash: f1771a451ba671da2371fcfc95374e6131573ddc
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: WMF 5.0은 Windows PowerShell에 새 디버깅 기능을 추가합니다.
+ms.openlocfilehash: 5703343e1b85024931638e8b04a09f7208ea123c
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808949"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646731"
 ---
 # <a name="improvements-in-powershell-script-debugging"></a>PowerShell 스크립트 디버깅의 향상된 기능
 
@@ -48,7 +49,7 @@ PowerShell을 로드한 로컬 컴퓨터 프로세스에 연결하고 해당 프
 
 ### <a name="attach-to-process-hosting-powershell"></a>PowerShell을 호스트하는 프로세스에 연결
 
-이제 PowerShell이 로드된 모든 컴퓨터 프로세스에 연결할 수 있습니다. 호스트 프로세스를 통해 대화형 세션을 시작하여 이 작업을 수행합니다. 자세한 내용은 다음을 참조하세요.
+이제 PowerShell이 로드된 모든 컴퓨터 프로세스에 연결할 수 있습니다. 호스트 프로세스를 통해 대화형 세션을 시작하여 이 작업을 수행합니다. 자세한 내용은 다음을 참조하십시오.
 
 - [Enter-PSHostProcess](/powershell/module/Microsoft.PowerShell.Core/Enter-PSHostProcess)
 - [Exit-PSHostProcess](/powershell/module/Microsoft.PowerShell.Core/Exit-PSHostProcess)

@@ -2,19 +2,19 @@
 ms.date: 07/08/2020
 keywords: dsc,powershell,configuration,setup
 title: 리소스 디자이너 도구 사용
-ms.openlocfilehash: 04fd2fbcc5afd9f1c7cbfaa44d6bdfde93bca399
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: 리소스 디자이너 도구는 xDscResourceDesigner 모듈에 의해 노출되고 PowerShell DSC 리소스를 더 쉽게 만들 수 있는 cmdlet 집합입니다.
+ms.openlocfilehash: efe36d045ac3fba3823cb1f812bb5761d238fdf1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217494"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656486"
 ---
 # <a name="using-the-resource-designer-tool"></a>리소스 디자이너 도구 사용
 
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-리소스 디자이너 도구는 Windows PowerShell DSC(필요한 상태 구성) 리소스를 만드는 작업을 더 쉽게 해주고 **xDscResourceDesigner** 모듈에 의해 노출된 cmdlet 집합입니다. 이 리소스의 cmdlet은 MOF 스키마, 스크립트 모듈 및 새 리소스에 대한 디렉터리 구조를 만드는 데 도움이 됩니다. DSC 리소스에 대한 자세한 내용은 [Build Custom Windows PowerShell Desired State Configuration Resources(사용자 지정 Windows PowerShell 필요한 상태 구성 리소스 빌드)](authoringResource.md)를 참조하세요.
-이 항목에서는 Active Directory 사용자를 관리하는 DSC 리소스를 만듭니다. [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet을 사용하여 **xDscResourceDesigner** 모듈을 설치하세요.
+리소스 디자이너 도구는 Windows PowerShell DSC(필요한 상태 구성) 리소스를 만드는 작업을 더 쉽게 해주고 **xDscResourceDesigner** 모듈에 의해 노출된 cmdlet 집합입니다. 이 리소스의 cmdlet은 MOF 스키마, 스크립트 모듈 및 새 리소스에 대한 디렉터리 구조를 만드는 데 도움이 됩니다. DSC 리소스에 대한 자세한 내용은 [Build Custom Windows PowerShell Desired State Configuration Resources(사용자 지정 Windows PowerShell 필요한 상태 구성 리소스 빌드)](authoringResource.md)를 참조하세요. 이 문서에서는 Active Directory 사용자를 관리하는 DSC 리소스를 만듭니다. [Install-Module](/powershell/module/PowershellGet/Install-Module) cmdlet을 사용하여 **xDscResourceDesigner** 모듈을 설치하세요.
 
 ## <a name="creating-resource-properties"></a>리소스 속성 만들기
 
@@ -22,10 +22,10 @@ ms.locfileid: "86217494"
 
 매개 변수 이름 설명
 
-- **UserName**: 사용자를 고유하게 식별하는 주요 속성입니다.
-- **Ensure**: 사용자 계정이 있음인지 또는 없음인지 여부를 지정합니다. 이 매개 변수는 두 개의 가능한 값만 갖습니다.
-- **DomainCredential**: 사용자에 대한 도메인 암호입니다.
-- **암호**: 필요한 경우 구성으로 사용자 암호를 변경할 수 있도록 해주는 사용자에 대한 원하는 암호입니다.
+- **UserName** : 사용자를 고유하게 식별하는 주요 속성입니다.
+- **Ensure** : 사용자 계정이 있음인지 또는 없음인지 여부를 지정합니다. 이 매개 변수는 두 개의 가능한 값만 갖습니다.
+- **DomainCredential** : 사용자에 대한 도메인 암호입니다.
+- **암호** : 필요한 경우 구성으로 사용자 암호를 변경할 수 있도록 해주는 사용자에 대한 원하는 암호입니다.
 
 속성을 만들기 위해 `New-xDscResourceProperty` cmdlet을 사용합니다. 다음 PowerShell 명령을 사용하면 위에서 설명한 속성이 만들어집니다.
 

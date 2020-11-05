@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: manikb
-keywords: gallery,powershell,cmdlet,psget
 title: cmdlet 문제 해결
-ms.openlocfilehash: d87c680472c2588efbfe8b3c4d6f2dbee6883a0c
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 PowerShell 갤러리를 사용하여 오류를 해결하는 데 필요한 정보 및 단계를 제공합니다.
+ms.openlocfilehash: db9e58c185c6f3bca26ff3639af85fa2dba48909
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "72352105"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661060"
 ---
 # <a name="troubleshooting-cmdlets"></a>cmdlet 문제 해결
 

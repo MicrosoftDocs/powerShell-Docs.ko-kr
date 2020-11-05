@@ -1,13 +1,13 @@
 ---
 ms.date: 01/02/2020
-keywords: powershell,cmdlet
 title: Windows PowerShell ISE에서 스크립트를 디버깅하는 방법
-ms.openlocfilehash: 6fbe340cbff832b5d0e2a5515ef432cec574a3c1
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: 이 문서에서는 Windows PowerShell ISE 시각적 디버깅 기능을 사용하여 로컬 컴퓨터에서 스크립트를 디버그하는 방법을 설명합니다.
+ms.openlocfilehash: c2e45e3b165e16c9dcd6852550d13fc2426986fa
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809349"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663800"
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Windows PowerShell ISE에서 스크립트를 디버깅하는 방법
 
@@ -30,7 +30,7 @@ Windows PowerShell ISE 디버깅 환경에서는 이 중에서 줄 중단점만 
 
 ### <a name="to-set-a-breakpoint"></a>중단점을 설정하려면
 
-스크립트를 저장한 후에만 스크립트에 중단점을 설정할 수 있습니다. 줄 중단점을 설정할 줄을 마우스 오른쪽 단추로 클릭한 다음 **중단점 설정/해제**를 클릭합니다. 또는 줄 중단점을 설정할 줄을 클릭한 다음 <kbd>F9</kbd> 키를 누르거나 **디버그** 메뉴에서 **중단점 설정/해제**를 클릭합니다.
+스크립트를 저장한 후에만 스크립트에 중단점을 설정할 수 있습니다. 줄 중단점을 설정할 줄을 마우스 오른쪽 단추로 클릭한 다음 **중단점 설정/해제** 를 클릭합니다. 또는 줄 중단점을 설정할 줄을 클릭한 다음 <kbd>F9</kbd> 키를 누르거나 **디버그** 메뉴에서 **중단점 설정/해제** 를 클릭합니다.
 
 다음 스크립트는 [Set-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Set-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 변수 중단점을 설정하는 방법의 예입니다.
 
@@ -43,7 +43,7 @@ Set-PSBreakpoint -Script sample.ps1 -Variable Server
 
 현재 Windows PowerShell 세션에 있는 중단점을 모두 표시합니다.
 
-**디버그** 메뉴에서 **중단점 목록**을 클릭합니다. 다음 스크립트는 [Get-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Get-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 모든 중단점을 표시하는 방법의 예입니다.
+**디버그** 메뉴에서 **중단점 목록** 을 클릭합니다. 다음 스크립트는 [Get-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Get-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 모든 중단점을 표시하는 방법의 예입니다.
 
 ```powershell
 # This command lists all breakpoints in the current session.
@@ -54,8 +54,8 @@ Get-PSBreakpoint
 
 중단점을 제거하면 삭제됩니다.
 
-나중에 다시 사용할 수도 있는 경우 대신 [중단점을 사용하지 않도록 설정](#disable-a-breakpoint)하는 것이 좋습니다. 중단점을 제거할 줄을 마우스 오른쪽 단추로 클릭한 다음, **ToggleBreakpoint**를 클릭합니다.
-또는 중단점을 제거할 줄을 클릭한 다음 **디버그** 메뉴에서 **중단점 설정/해제**를 클릭합니다. 다음 스크립트는 [Remove-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Remove-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 지정된 ID의 중단점을 제거하는 방법의 예입니다.
+나중에 다시 사용할 수도 있는 경우 대신 [중단점을 사용하지 않도록 설정](#disable-a-breakpoint)하는 것이 좋습니다. 중단점을 제거할 줄을 마우스 오른쪽 단추로 클릭한 다음, **ToggleBreakpoint** 를 클릭합니다.
+또는 중단점을 제거할 줄을 클릭한 다음 **디버그** 메뉴에서 **중단점 설정/해제** 를 클릭합니다. 다음 스크립트는 [Remove-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Remove-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 지정된 ID의 중단점을 제거하는 방법의 예입니다.
 
 ```powershell
 # This command deletes the breakpoint with breakpoint ID 2.
@@ -64,7 +64,7 @@ Remove-PSBreakpoint -Id 2
 
 ### <a name="remove-all-breakpoints"></a>모든 중단점 제거
 
-현재 세션에서 정의된 모든 중단점을 제거하려면 **디버그** 메뉴에서 **모든 중단점 제거**를 클릭합니다.
+현재 세션에서 정의된 모든 중단점을 제거하려면 **디버그** 메뉴에서 **모든 중단점 제거** 를 클릭합니다.
 
 다음 스크립트는 [Remove-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Remove-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 모든 중단점을 제거하는 방법의 예입니다.
 
@@ -75,7 +75,7 @@ Get-PSBreakpoint | Remove-PSBreakpoint
 
 ### <a name="disable-a-breakpoint"></a>중단점 사용 안 함
 
-중단점을 사용하지 않도록 설정할 경우 중단점이 제거되지 않고, 사용하도록 설정할 때까지 해제됩니다. 특정 줄 중단점을 사용하지 않도록 설정하려면 중단점을 사용하지 않도록 설정할 줄을 마우스 오른쪽 단추로 클릭한 다음 **중단점 사용 안 함**을 클릭합니다. 또는 중단점을 사용하지 않도록 설정할 줄을 클릭한 다음 <kbd>F9</kbd> 키를 누르거나 **디버그** 메뉴에서 **중단점 사용 안 함**을 클릭합니다. 다음 스크립트는 [Disable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Disable-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 지정된 ID의 중단점을 제거하는 방법의 예입니다.
+중단점을 사용하지 않도록 설정할 경우 중단점이 제거되지 않고, 사용하도록 설정할 때까지 해제됩니다. 특정 줄 중단점을 사용하지 않도록 설정하려면 중단점을 사용하지 않도록 설정할 줄을 마우스 오른쪽 단추로 클릭한 다음 **중단점 사용 안 함** 을 클릭합니다. 또는 중단점을 사용하지 않도록 설정할 줄을 클릭한 다음 <kbd>F9</kbd> 키를 누르거나 **디버그** 메뉴에서 **중단점 사용 안 함** 을 클릭합니다. 다음 스크립트는 [Disable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Disable-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 지정된 ID의 중단점을 제거하는 방법의 예입니다.
 
 ```powershell
 # This command disables the breakpoint with breakpoint ID 0.
@@ -84,7 +84,7 @@ Disable-PSBreakpoint -Id 0
 
 ### <a name="disable-all-breakpoints"></a>모든 중단점 사용 안 함
 
-중단점을 사용하지 않도록 설정할 경우 중단점이 제거되지 않고, 사용하도록 설정할 때까지 해제됩니다. 현재 세션의 모든 중단점을 사용하지 않도록 설정하려면 **디버그** 메뉴에서 **모든 중단점 사용 안 함**을 클릭합니다. 다음 스크립트는 [Disable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Disable-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 모든 중단점을 사용하지 않도록 설정하는 방법의 예입니다.
+중단점을 사용하지 않도록 설정할 경우 중단점이 제거되지 않고, 사용하도록 설정할 때까지 해제됩니다. 현재 세션의 모든 중단점을 사용하지 않도록 설정하려면 **디버그** 메뉴에서 **모든 중단점 사용 안 함** 을 클릭합니다. 다음 스크립트는 [Disable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Disable-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 모든 중단점을 사용하지 않도록 설정하는 방법의 예입니다.
 
 ```powershell
 # This command disables all breakpoints in the current session.
@@ -94,7 +94,7 @@ Get-PSBreakpoint | Disable-PSBreakpoint
 
 ### <a name="enable-a-breakpoint"></a>중단점 사용
 
-특정 중단점을 사용하도록 설정하려면 중단점을 사용하도록 설정할 줄을 마우스 오른쪽 단추로 클릭한 다음 **중단점 사용**을 클릭합니다. 또는 중단점을 사용하도록 설정할 줄을 클릭한 다음 <kbd>F9</kbd> 키를 누르거나 **디버그** 메뉴에서 **중단점 사용**을 클릭합니다. 다음 스크립트는 [Enable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Enable-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 특정 중단점을 사용하도록 설정하는 방법의 예입니다.
+특정 중단점을 사용하도록 설정하려면 중단점을 사용하도록 설정할 줄을 마우스 오른쪽 단추로 클릭한 다음 **중단점 사용** 을 클릭합니다. 또는 중단점을 사용하도록 설정할 줄을 클릭한 다음 <kbd>F9</kbd> 키를 누르거나 **디버그** 메뉴에서 **중단점 사용** 을 클릭합니다. 다음 스크립트는 [Enable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Enable-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 특정 중단점을 사용하도록 설정하는 방법의 예입니다.
 
 ```powershell
 # This command enables breakpoints with breakpoint IDs 0, 1, and 5.
@@ -103,7 +103,7 @@ Enable-PSBreakpoint -Id 0, 1, 5
 
 ### <a name="enable-all-breakpoints"></a>모든 중단점 사용
 
-현재 세션에서 정의된 모든 중단점을 사용하도록 설정하려면 **디버그** 메뉴에서 **모든 중단점 사용**을 클릭합니다. 다음 스크립트는 [Enable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Enable-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 모든 중단점을 사용하도록 설정하는 방법의 예입니다.
+현재 세션에서 정의된 모든 중단점을 사용하도록 설정하려면 **디버그** 메뉴에서 **모든 중단점 사용** 을 클릭합니다. 다음 스크립트는 [Enable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Enable-PSBreakpoint) cmdlet을 사용하여 콘솔 창에서 모든 중단점을 사용하도록 설정하는 방법의 예입니다.
 
 ```powershell
 # This command enables all breakpoints in the current session.
@@ -118,21 +118,21 @@ Get-PSBreakpoint | Enable-PSBreakpoint
 
 ### <a name="to-start-debugging"></a>디버깅을 시작하려면
 
-<kbd>F5</kbd> 키를 누르거나, 도구 모음에서 **스크립트 실행** 아이콘을 클릭하거나, **디버그** 메뉴에서 **실행/계속**을 클릭합니다. 스크립트가 첫 번째 중단점에 도달할 때까지 실행됩니다. 여기서 작업이 일시 중지되고, 일시 중지된 줄이 강조 표시됩니다.
+<kbd>F5</kbd> 키를 누르거나, 도구 모음에서 **스크립트 실행** 아이콘을 클릭하거나, **디버그** 메뉴에서 **실행/계속** 을 클릭합니다. 스크립트가 첫 번째 중단점에 도달할 때까지 실행됩니다. 여기서 작업이 일시 중지되고, 일시 중지된 줄이 강조 표시됩니다.
 
 ### <a name="to-continue-debugging"></a>디버깅을 계속하려면
 
-<kbd>F5</kbd> 키를 누르거나, 도구 모음에서 **스크립트 실행** 아이콘을 클릭하거나, **디버그** 메뉴에서 **실행/계속**을 클릭하거나, 콘솔 창에서 `C`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다. 이렇게 하면 스크립트가 다음 중단점이나 더 이상 중단점이 없는 경우 스크립트의 끝까지 계속 실행됩니다.
+<kbd>F5</kbd> 키를 누르거나, 도구 모음에서 **스크립트 실행** 아이콘을 클릭하거나, **디버그** 메뉴에서 **실행/계속** 을 클릭하거나, 콘솔 창에서 `C`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다. 이렇게 하면 스크립트가 다음 중단점이나 더 이상 중단점이 없는 경우 스크립트의 끝까지 계속 실행됩니다.
 
 ### <a name="to-view-the-call-stack"></a>호출 스택을 보려면
 
 호출 스택은 스크립트에서 현재 실행 위치를 표시합니다. 다른 함수에 의해 호출된 함수에서 스크립트를 실행하는 경우 출력에서 추가 행으로 표시됩니다. 맨 아래에 있는 행은 원래 스크립트와 함수가 호출된 스크립트의 줄을 표시합니다. 위에 있는 다음 줄은 해당 함수와 다른 함수가 호출되었을 수 있는 함수의 줄을 보여 줍니다. 맨 위에 있는 행은 중단점이 설정된 현재 줄의 현재 컨텍스트를 보여 줍니다.
 
-일시 중지된 동안 현재 호출 스택을 보려면 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>를 누르거나, **디버그** 메뉴에서 **호출 스택 표시**를 클릭하거나, 콘솔 창에서 `K`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다.
+일시 중지된 동안 현재 호출 스택을 보려면 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>를 누르거나, **디버그** 메뉴에서 **호출 스택 표시** 를 클릭하거나, 콘솔 창에서 `K`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다.
 
 ### <a name="to-stop-debugging"></a>디버깅을 중지하려면
 
-<kbd>Shift</kbd>+<kbd>F5</kbd>를 누르거나, **디버그** 메뉴에서 **디버거 중지**를 클릭하거나, 콘솔 창에서 `Q`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다.
+<kbd>Shift</kbd>+<kbd>F5</kbd>를 누르거나, **디버그** 메뉴에서 **디버거 중지** 를 클릭하거나, 콘솔 창에서 `Q`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다.
 
 ## <a name="how-to-step-over-step-into-and-step-out-while-debugging"></a>디버그하는 동안 프로시저 단위 실행, 한 단계씩 코드 실행 및 프로시저 나가기를 수행하는 방법
 
@@ -140,10 +140,10 @@ Get-PSBreakpoint | Enable-PSBreakpoint
 
 | 디버깅 작업 |                                                                                                                   Description                                                                                                                    |                                                      PowerShell ISE에서 작업을 수행하는 방법                                                       |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **한 단계씩 코드 실행**  | 현재 문을 실행하고 다음 문에서 중지합니다. 현재 문이 함수 또는 스크립트 호출이면 디버거가 해당 함수나 스크립트로 한 단계씩 코드를 실행하고, 그렇지 않으면 다음 문에서 중지합니다.                      | <kbd>F11</kbd> 키를 누르거나, **디버그** 메뉴에서 **한 단계씩 코드 실행**을 클릭하거나, 콘솔 창에서 `S`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다.                 |
-| **프로시저 단위 실행**  | 현재 문을 실행하고 다음 문에서 중지합니다. 현재 문이 함수 또는 스크립트 호출이면 디버거가 전체 함수나 스크립트를 실행하고, 함수 호출 후 다음 문에서 중지합니다. | <kbd>F10</kbd> 키를 누르거나, **디버그** 메뉴에서 **프로시저 단위 실행**을 클릭하거나, 콘솔 창에서 `V`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다.                 |
-| **프로시저 나가기**   | 현재 함수에서 나가고, 함수가 중첩된 경우에는 한 수준 위로 올라갑니다. 본문에 있는 경우 스크립트가 끝 또는 다음 중단점까지 실행됩니다. 건너뛴 문은 실행되지만 단계별로 실행되지는 않습니다.                   | <kbd>Shift</kbd>+<kbd>F11</kbd>을 누르거나, **디버그** 메뉴에서 **프로시저 나가기**를 클릭하거나, 콘솔 창에서 `O`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다. |
-| **계속**   | 끝이나 다음 중단점까지 실행을 계속합니다. 건너뛴 함수 및 호출은 실행되지만 단계별로 실행되지는 않습니다.                                                                                                          | <kbd>F5</kbd> 키를 누르거나, **디버그** 메뉴에서 **실행/계속**을 클릭하거나, 콘솔 창에서 `C`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다.               |
+| **한 단계씩 코드 실행**  | 현재 문을 실행하고 다음 문에서 중지합니다. 현재 문이 함수 또는 스크립트 호출이면 디버거가 해당 함수나 스크립트로 한 단계씩 코드를 실행하고, 그렇지 않으면 다음 문에서 중지합니다.                      | <kbd>F11</kbd> 키를 누르거나, **디버그** 메뉴에서 **한 단계씩 코드 실행** 을 클릭하거나, 콘솔 창에서 `S`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다.                 |
+| **프로시저 단위 실행**  | 현재 문을 실행하고 다음 문에서 중지합니다. 현재 문이 함수 또는 스크립트 호출이면 디버거가 전체 함수나 스크립트를 실행하고, 함수 호출 후 다음 문에서 중지합니다. | <kbd>F10</kbd> 키를 누르거나, **디버그** 메뉴에서 **프로시저 단위 실행** 을 클릭하거나, 콘솔 창에서 `V`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다.                 |
+| **프로시저 나가기**   | 현재 함수에서 나가고, 함수가 중첩된 경우에는 한 수준 위로 올라갑니다. 본문에 있는 경우 스크립트가 끝 또는 다음 중단점까지 실행됩니다. 건너뛴 문은 실행되지만 단계별로 실행되지는 않습니다.                   | <kbd>Shift</kbd>+<kbd>F11</kbd>을 누르거나, **디버그** 메뉴에서 **프로시저 나가기** 를 클릭하거나, 콘솔 창에서 `O`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다. |
+| **계속**   | 끝이나 다음 중단점까지 실행을 계속합니다. 건너뛴 함수 및 호출은 실행되지만 단계별로 실행되지는 않습니다.                                                                                                          | <kbd>F5</kbd> 키를 누르거나, **디버그** 메뉴에서 **실행/계속** 을 클릭하거나, 콘솔 창에서 `C`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다.               |
 
 ## <a name="how-to-display-the-values-of-variables-while-debugging"></a>디버그하는 동안 변수 값을 표시하는 방법
 

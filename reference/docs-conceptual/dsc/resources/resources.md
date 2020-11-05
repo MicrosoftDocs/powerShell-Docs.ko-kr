@@ -2,12 +2,13 @@
 ms.date: 07/23/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC 리소스
-ms.openlocfilehash: 6ab831c9d423c6189951b43bfab92f800366ceca
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: DSC 리소스는 DSC 구성을 위한 구성 요소를 제공합니다. 리소스는 구성할 수 있는 속성(스키마)을 노출하고, LCM이 구성 적용에 사용하는 PowerShell 스크립트 함수를 포함합니다.
+ms.openlocfilehash: 1634db84deff8de3b33c941ad738dc21cf3017ac
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87777918"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658449"
 ---
 # <a name="dsc-resources"></a>DSC 리소스
 
@@ -19,11 +20,10 @@ DSC(필요한 상태 구성) 리소스에서는 DSC 구성에 대한 구성 요�
 
 리소스는 파일만큼 일반적이거나 IIS 서버만큼 특별한 것을 모델링할 수 있습니다. 같은 리소스들의 그룹은 모든 필수 파일을 이식 가능한 구조로 정리하고, 리소스를 사용하려고 한 방법을 식별하는 메타데이터를 포함하는 DSC 모듈에 결합됩니다.
 
-각 리소스에는 [구성](../configurations/configurations.md)에서 리소스를 사용하는 데 필요한 구문을 결정하는 *스키마가 있습니다.
-리소스 스키마는 다음 방법으로 정의할 수 있습니다.
+각 리소스에는 [구성](../configurations/configurations.md)에서 리소스를 사용하는 데 필요한 구문을 결정하는 *스키마가 있습니다. 리소스 스키마는 다음 방법으로 정의할 수 있습니다.
 
 - `Schema.Mof` 파일: 대부분의 리소스는 [Managed Object Format](/windows/desktop/wmisdk/managed-object-format--mof-)을 사용하여 `schema.mof` 파일에서 해당 ‘스키마’를 정의합니다.
-- `<Resource Name>.schema.psm1`파일: [복합 리소스](../configurations/compositeConfigs.md)는 [매개 변수 블록](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters)을 사용하여 `<ResourceName>.schema.psm1` 파일에서 해당 ‘스키마’를 정의합니다.
+- `<Resource Name>.schema.psm1`파일: [복합 리소스](../configurations/compositeConfigs.md)는 [매개 변수 블록](/powershell/module/microsoft.powershell.core/about/about_functions#functions-with-parameters)을 사용하여 `<ResourceName>.schema.psm1` 파일에서 해당 ‘스키마’를 정의합니다.
 - `<Resource Name>.psm1` 파일: 클래스 기반 DSC 리소스는 클래스 정의에서 해당 ‘스키마’를 정의합니다. 구문 항목은 클래스 속성으로 표시됩니다. 자세한 내용은 [about_Classes](/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc)를 참조하세요.
 
 DSC 리소스의 구문을 검색하려면 [Get-DSCResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) cmdlet과 함께 **Syntax** 매개 변수를 사용합니다. 이 사용법은 [Get-Command](/powershell/module/microsoft.powershell.core/get-command)와 함께 **Syntax** 매개 변수를 사용하여 cmdlet 구문을 가져오는 것과 비슷합니다. 표시되는 출력은 지정하는 리소스의 리소스 블록에 사용되는 템플릿을 보여 줍니다.
@@ -58,7 +58,7 @@ Service [String] #ResourceName
 > [!NOTE]
 > 7\.0 이전 PowerShell 버전에서 `Get-DscResource`는 클래스 기반 DSC 리소스를 찾지 않습니다.
 
-구성 내부에 있는 **Service** 리소스 블록은 Spooler 서비스가 실행 중인지 **확인**하기 위해 이와 같이 표시될 수 있습니다.
+구성 내부에 있는 **Service** 리소스 블록은 Spooler 서비스가 실행 중인지 **확인** 하기 위해 이와 같이 표시될 수 있습니다.
 
 > [!NOTE]
 > 구성에서 리소스를 사용하기 전에 [Import-DSCResource](../configurations/import-dscresource.md)를 사용하여 리소스를 가져와야 합니다.
@@ -66,11 +66,13 @@ Service [String] #ResourceName
 ```powershell
 Configuration TestConfig
 {
-    # It is best practice to always directly import resources, even if the resource is a built-in resource.
+    # It is best practice to always directly import resources, even if the
+    # resource is a built-in resource.
     Import-DSCResource -Name Service
     Node localhost
     {
-        # The name of this resource block, can be anything you choose, as long as it is of type [String] as indicated by the schema.
+        # The name of this resource block, can be anything you choose, as l
+        # ong as it is of type [String] as indicated by the schema.
         Service "Spooler:Running"
         {
             Name = "Spooler"
@@ -85,18 +87,21 @@ Configuration TestConfig
 ```powershell
 Configuration TestConfig
 {
-    # It is best practice to always directly import resources, even if the resource is a built-in resource.
+    # It is best practice to always directly import resources, even if the
+    # resource is a built-in resource.
     Import-DSCResource -Name Service
     Node localhost
     {
-        # The name of this resource block, can be anything you choose, as long as it is of type [String] as indicated by the schema.
+        # The name of this resource block, can be anything you choose, as
+        # long as it is of type [String] as indicated by the schema.
         Service "Spooler:Running"
         {
             Name = "Spooler"
             State = "Running"
         }
 
-        # To configure a second service resource block, add another Service resource block and use a unique name.
+        # To configure a second service resource block, add another Service
+        # resource block and use a unique name.
         Service "DHCP:Running"
         {
             Name = "DHCP"
@@ -113,7 +118,7 @@ Configuration TestConfig
 
 ## <a name="types-of-resources"></a>리소스 유형
 
-Windows에는 기본 제공 리소스가 제공되며 Linux에는 OS 관련 리소스가 있습니다. [노드 간 종속성](../configurations/crossNodeDependencies.md) 리소스, 패키지 관리 리소스뿐만 아니라 [커뮤니티 소유 및 유지 관리 리소스](https://github.com/dsccommunity)도 제공됩니다. 위의 단계를 사용하여 이 리소스의 구문 및 리소스 사용 방법을 확인할 수 있습니다. 이 리소스를 제공하는 페이지는 **참조**아래에 보관되었습니다.
+Windows에는 기본 제공 리소스가 제공되며 Linux에는 OS 관련 리소스가 있습니다. [노드 간 종속성](../configurations/crossNodeDependencies.md) 리소스, 패키지 관리 리소스뿐만 아니라 [커뮤니티 소유 및 유지 관리 리소스](https://github.com/dsccommunity)도 제공됩니다. 위의 단계를 사용하여 이 리소스의 구문 및 리소스 사용 방법을 확인할 수 있습니다. 이 리소스를 제공하는 페이지는 **참조** 아래에 보관되었습니다.
 
 ### <a name="windows-built-in-resources"></a>Windows 기본 제공 리소스
 

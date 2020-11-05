@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,리소스,갤러리,설정
 title: 추가 DSC 리소스 설치
-ms.openlocfilehash: 7a6a935349358e11a77d2f00c0bf88e0ad18c097
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에는 PSDesiredStateConfiguration 모듈에 포함된 DSC 리소스가 나와 있습니다. PowerShell 갤러리에서 리소스를 찾고 설치하는 방법도 다룹니다.
+ms.openlocfilehash: e75561ed539e06716c9a103f905b9d1e4f3e71d3
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74417803"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645130"
 ---
 # <a name="install-additional-dsc-resources"></a>추가 DSC 리소스 설치
 
@@ -18,20 +19,20 @@ PowerShell 4.0에 포함된 OOB 리소스 및 리소스 기능에 대한 설명�
 > [!NOTE]
 > OOB 리소스 수가 PowerShell의 각 버전과 함께 증가하므로 불완전한 목록입니다.
 
-|리소스  |Description  |
-|---------|---------|
-|**최근에 사용한 파일**|파일 및 디렉터리의 상태를 제어합니다. **원본**에서 **대상**으로 파일을 복사하고 날짜, 체크섬 및 해시를 비교하여 **원본**이 변경되면 파일을 업데이트합니다.|
-|**보관**|지정된 위치에 보관 파일의 압축을 풉니다. 지정된 **체크섬**을 사용하여 보관 파일의 유효성을 검사합니다.|
-|**환경**|환경 변수를 관리합니다.|
-|**그룹**|로컬 그룹을 관리하고 그룹 멤버 자격을 제어합니다.|
-|**Log**|`Microsoft-Windows-Desired State Configuration/Analytic` 이벤트 로그에 메시지를 씁니다.|
-|**패키지**|**Arguments**, **LogPath**, **ReturnCode**, 기타 설정을 사용하여 패키지를 설치하거나 제거합니다.|
-|**Registry**|레지스트리 키 및 값을 관리합니다.|
-|**스크립트**|고유한 [get-test-set](../resources/get-test-set.md) script 블록을 디자인할 수 있습니다.|
-|**서비스**|Windows 서비스를 구성합니다.|
-|**사용자** |로컬 사용자 및 특성을 관리합니다.|
-|**WindowsFeature**|역할 및 기능을 관리합니다.|
-|**WindowsProcess**|Windows 프로세스를 구성합니다.|
+|      리소스      |                                                                                       Description                                                                                        |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **최근에 사용한 파일**           | 파일 및 디렉터리의 상태를 제어합니다. **원본** 에서 **대상** 으로 파일을 복사하고 날짜, 체크섬 및 해시를 비교하여 **원본** 이 변경되면 파일을 업데이트합니다. |
+| **보관**        | 지정된 위치에 보관 파일의 압축을 풉니다. 지정된 **체크섬** 을 사용하여 보관 파일의 유효성을 검사합니다.                                                                                         |
+| **환경**    | 환경 변수를 관리합니다.                                                                                                                                                           |
+| **그룹**          | 로컬 그룹을 관리하고 그룹 멤버 자격을 제어합니다.                                                                                                                                      |
+| **Log**            | `Microsoft-Windows-Desired State Configuration/Analytic` 이벤트 로그에 메시지를 씁니다.                                                                                               |
+| **패키지**        | **Arguments** , **LogPath** , **ReturnCode** , 기타 설정을 사용하여 패키지를 설치하거나 제거합니다.                                                                                        |
+| **레지스트리**       | 레지스트리 키 및 값을 관리합니다.                                                                                                                                                        |
+| **스크립트**         | 고유한 [get-test-set](../resources/get-test-set.md) script 블록을 디자인할 수 있습니다.                                                                                                |
+| **서비스**        | Windows 서비스를 구성합니다.                                                                                                                                                             |
+| **사용자**           | 로컬 사용자 및 특성을 관리합니다.                                                                                                                                                      |
+| **WindowsFeature** | 역할 및 기능을 관리합니다.                                                                                                                                                              |
+| **WindowsProcess** | Windows 프로세스를 구성합니다.                                                                                                                                                            |
 
 OOB 리소스는 일반적인 작업을 위한 좋은 시작점입니다. OOB 리소스가 필요에 맞지 않으면 고유한 [사용자 지정 리소스](../resources/authoringResource.md)를 작성할 수 있습니다. 문제를 해결하기 위한 사용자 지정 리소스를 작성하기 전에 Microsoft 및 PowerShell 커뮤니티에서 이미 만들어진 수많은 DSC 리소스를 살펴보아야 합니다.
 
@@ -39,11 +40,11 @@ OOB 리소스는 일반적인 작업을 위한 좋은 시작점입니다. OOB �
 
 ## <a name="installing-powershellget"></a>PowerShellGet 설치
 
-**PowerShell**을 이미 다운로드했는지 확인하거나 설치하는 데 도움이 필요하면 다음 가이드를 참조하세요. [PowerShellGet 설치](/powershell/scripting/gallery/installing-psget).
+**PowerShell** 을 이미 다운로드했는지 확인하거나 설치하는 데 도움이 필요하면 다음 가이드를 참조하세요. [PowerShellGet 설치](/powershell/scripting/gallery/installing-psget).
 
 ## <a name="finding-dsc-resources-using-powershellget"></a>PowerShellGet을 사용하여 DSC 리소스 찾기
 
-**PowerShellGet**이 시스템에 설치되면 [PowerShell 갤러리](https://www.powershellgallery.com/)에서 호스트되는 DSC 리소스를 찾고 설치할 수 있습니다.
+**PowerShellGet** 이 시스템에 설치되면 [PowerShell 갤러리](https://www.powershellgallery.com/)에서 호스트되는 DSC 리소스를 찾고 설치할 수 있습니다.
 
 먼저, [Find-DSCResource](/powershell/module/powershellget/find-dscresource) cmdlet을 사용하여 DSC 리소스를 찾습니다. `Find-DSCResource`를 처음 실행하면 “NuGet 공급자”를 설치하라는 다음 메시지가 표시됩니다.
 
@@ -51,11 +52,11 @@ OOB 리소스는 일반적인 작업을 위한 좋은 시작점입니다. OOB �
 PS> Find-DSCResource
 
 NuGet provider is required to continue
-PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based repositories. The
-NuGet provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies' or
-'C:\Users\xAdministrator\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install the NuGet provider
- by running 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force'. Do you want PowerShellGet to
-install and import the NuGet provider now?
+PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based
+repositories. The NuGet provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies'
+or 'C:\Users\xAdministrator\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install
+the NuGet provider by running 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201
+-Force'. Do you want PowerShellGet to install and import the NuGet provider now?
 [Y] Yes  [N] No  [?] Help (default is "Y"):
 ```
 
@@ -115,9 +116,9 @@ DSC 리소스를 설치하려면 [Install-Module](/powershell/module/PowershellG
 PS> Install-Module -Name ComputerManagementDSC
 
 Untrusted repository
-You are installing the modules from an untrusted repository. If you trust this repository, change its
-InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to install the modules from
-'PSGallery'?
+You are installing the modules from an untrusted repository. If you trust this repository, change
+its InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to
+install the modules from 'PSGallery'?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
 ```
 
@@ -151,6 +152,6 @@ PowerShell      TimeZone                  ComputerManagementDsc          6.0.0.0
 PowerShell      VirtualMemory             ComputerManagementDsc          6.0.0.0    {Drive, Type, DependsOn, Initi...
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [리소스란?](../resources/resources.md)

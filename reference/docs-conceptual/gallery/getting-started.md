@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: gallery,powershell,cmdlet,psgallery
 title: PowerShell 갤러리 시작
-ms.openlocfilehash: bae0af144e6f520142e7eaea3dd0e1039976dae4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 PowerShell 갤러리 및 PowerShellGet cmdlet 사용을 시작하는 방법을 설명합니다.
+ms.openlocfilehash: 02d84c64e39245b2a16c03029982796a74301bd6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81219696"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661424"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>PowerShell 갤러리 시작
 
@@ -23,7 +22,7 @@ PowerShell 갤러리의 [홈페이지](https://www.powershellgallery.com)에서 
 
 다음 매개 변수를 사용하여 갤러리의 결과를 필터링할 수 있습니다.
 
-- 속성
+- 이름
 - AllVersions
 - MinimumVersion
 - RequiredVersion
@@ -32,7 +31,7 @@ PowerShell 갤러리의 [홈페이지](https://www.powershellgallery.com)에서 
 - DscResource
 - RoleCapability
 - 명령
-- Assert
+- 필터
 
 갤러리에서 특정 DSC 리소스를 검색하는 데만 관심이 있는 경우 [Find-DscResource][] cmdlet을 실행할 수 있습니다. Find-DscResource는 갤러리에 포함된 DSC 리소스에 대한 데이터를 반환합니다. DSC 리소스는 항상 모듈의 일부로 제공되기 때문에 여전히 [Install-Module][]을 실행하여 이러한 DSC 리소스를 설치해야 합니다.
 
@@ -40,7 +39,7 @@ PowerShell 갤러리의 [홈페이지](https://www.powershellgallery.com)에서 
 
 관심 있는 패키지를 찾았으면 자세히 알아보는 것이 좋습니다. 이렇게 하려면 갤러리에서 해당 패키지의 페이지를 살펴봅니다. 이 페이지에서 패키지와 함께 업로드된 메타데이터를 모두 볼 수 있습니다. 이 메타데이터는 패키지의 작성자가 제공하며 Microsoft에서 확인하지 않습니다. 패키지의 소유자는 패키지를 게시하는 데 사용되는 갤러리 계정에 강하게 연결되어 있으며 작성자 필드보다 더 신뢰할 수 있습니다.
 
-좋은 의도로 게시되지 않은 것 같은 패키지를 발견할 경우 해당 패키지의 페이지에서 **신고하기**를 클릭합니다.
+좋은 의도로 게시되지 않은 것 같은 패키지를 발견할 경우 해당 패키지의 페이지에서 **신고하기** 를 클릭합니다.
 
 [Find-Module][] 또는 [Find-Script][]를 실행하는 경우 반환된 PSGetModuleInfo 개체에서 이 데이터를 볼 수 있습니다. 예를 들어 `Find-Module -Name PSReadLine -Repository PSGallery |Get-Member`를 실행하면 갤러리의 PSReadLine 모듈에 대한 데이터가 반환됩니다.
 
@@ -54,7 +53,7 @@ PowerShell 갤러리에서 패키지를 다운로드하려면 다음 프로세�
 
 이러한 패키지 중 일부는 Microsoft에서 작성되었으며 다른 항목은 PowerShell 커뮤니티에서 작성되었습니다. 설치 전에 이 갤러리에 있는 패키지의 내용과 코드를 검토하는 것이 좋습니다.
 
-좋은 의도로 게시되지 않은 것 같은 패키지를 발견할 경우 해당 패키지의 페이지에서 **신고하기**를 클릭합니다.
+좋은 의도로 게시되지 않은 것 같은 패키지를 발견할 경우 해당 패키지의 페이지에서 **신고하기** 를 클릭합니다.
 
 ### <a name="install"></a>설치
 
@@ -70,7 +69,7 @@ PowerShell 갤러리에서 패키지를 다운로드하려면 다음 프로세�
 
 ### <a name="deploy"></a>배포
 
-PowerShell 갤러리의 패키지를 Azure Automation에 배포하려면 **Azure Automation**을 클릭한 후 패키지 세부 정보 페이지에서 **Azure Automation에 배포**를 클릭합니다. Azure 관리 포털로 리디렉션되며, 여기서 Azure 계정 자격 증명을 사용하여 로그인합니다. 종속성과 함께 패키지를 배포하면 모든 종속성이 Azure Automation에 배포됩니다. 패키지 메타데이터에 **AzureAutomationNotSupported** 태그를 추가하면 Azure Automation에 배포 단추를 해제할 수 있습니다.
+PowerShell 갤러리의 패키지를 Azure Automation에 배포하려면 **Azure Automation** 을 클릭한 후 패키지 세부 정보 페이지에서 **Azure Automation에 배포** 를 클릭합니다. Azure 관리 포털로 리디렉션되며, 여기서 Azure 계정 자격 증명을 사용하여 로그인합니다. 종속성과 함께 패키지를 배포하면 모든 종속성이 Azure Automation에 배포됩니다. 패키지 메타데이터에 **AzureAutomationNotSupported** 태그를 추가하면 Azure Automation에 배포 단추를 해제할 수 있습니다.
 
 Azure Automation에 대한 자세한 내용은 [Azure Automation](/azure/automation) 설명서를 참조하세요.
 

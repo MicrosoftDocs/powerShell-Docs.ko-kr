@@ -2,18 +2,18 @@
 ms.date: 01/17/2019
 keywords: dsc,powershell,configuration,setup
 title: 노드 다시 부팅
-ms.openlocfilehash: 22c63fab9b6646f522f8531b46a43a94ff883552
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 많은 구성 설정에서는 컴퓨터를 다시 부팅해야 구성 변경을 완료할 수 있습니다. 이 문서에서는 구성에서 다시 부팅을 관리하는 방법을 설명합니다.
+ms.openlocfilehash: d2b0f77c34ebcb006821da1f4f8d7c4b046f7a95
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954030"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645114"
 ---
 # <a name="reboot-a-node"></a>노드 다시 부팅
 
 > [!NOTE]
-> 이 토픽에서는 노드를 다시 부팅하는 방법을 설명합니다. 다시 부팅에 성공하기 위해 **ActionAfterReboot** 및 **RebootNodeIfNeeded** LCM 설정을 올바르게 구성해야 합니다.
-> 로컬 구성 관리자 설정에 대해 알라보려면 [로컬 구성 관리자 구성](../managing-nodes/metaConfig.md) 또는 [로컬 구성 관리자 구성(v4)](../managing-nodes/metaConfig4.md)을 참조하세요.
+> 이 토픽에서는 노드를 다시 부팅하는 방법을 설명합니다. 다시 부팅에 성공하기 위해 **ActionAfterReboot** 및 **RebootNodeIfNeeded** LCM 설정을 올바르게 구성해야 합니다. 로컬 구성 관리자 설정에 대해 알라보려면 [로컬 구성 관리자 구성](../managing-nodes/metaConfig.md) 또는 [로컬 구성 관리자 구성(v4)](../managing-nodes/metaConfig4.md)을 참조하세요.
 
 노드는 `$global:DSCMachineStatus` 플래그를 사용하여 리소스 내에서 다시 부팅될 수 있습니다. `Set-TargetResource` 함수에서 이 플래그를 `1`로 설정하면 현재 리소스의 **설정** 메서드 이후에 LCM가 노드를 직접 다시 부팅하도록 강제합니다. 이 플래그를 사용하여 [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) DSC 리소스 모듈의 **PendingReboot** 리소스는 재부팅이 DSC 외부에서 보류 중인지 탐지합니다.
 
@@ -47,21 +47,20 @@ PendingReboot [String] #ResourceName
 
 ## <a name="properties"></a>속성
 
-| 속성 | Description |
+| 속성 | 설명 |
 | --- | --- |
-| 속성| 구성 내에서 리소스의 인스턴스마다 고유해야 하는 필수 매개 변수입니다.|
+| 이름| 구성 내에서 리소스의 인스턴스마다 고유해야 하는 필수 매개 변수입니다.|
 | SkipComponentBasedServicing | 구성 요소 기반 서비스 구성 요소에 의해 트리거되는 다시 부팅을 건너뜁니다. |
 | SkipWindowsUpdate | Windows 업데이트에 의해 트리거되는 다시 부팅을 건너뜁니다.|
 | SkipPendingFileRename | 보류 중인 파일 이름 바꾸기 다시 부팅을 건너뜁니다. |
 | SkipCcmClientSDK | ConfigMgr 클라이언트에 의해 트리거되는 다시 부팅을 건너뜁니다. |
 | SkipComputerRename | 컴퓨터 이름 바꾸기에 의해 트리거되는 다시 부팅을 건너뜁니다. |
 | PSDSCRunAsCredential | v5에서 지원됩니다. 지정된 사용자로 리소스를 실행합니다. |
-| DependsOn | 이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 **ResourceName**이고 해당 형식이 **ResourceType**일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. 자세한 내용은 [DependsOn 사용](resource-depends-on.md)을 참조하세요.|
+| DependsOn | 이 리소스를 구성하려면 먼저 다른 리소스의 구성을 실행해야 함을 나타냅니다. 예를 들어, 먼저 실행하려는 리소스 구성 스크립트 블록의 ID가 **ResourceName** 이고 해당 형식이 **ResourceType** 일 경우, 이 속성을 사용하기 위한 구문은 `DependsOn = "[ResourceType]ResourceName"`입니다. 자세한 내용은 [DependsOn 사용](resource-depends-on.md)을 참조하세요.|
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-다음 예제에서는 [xExchange](https://github.com/PowerShell/xExchange) 리소스를 사용하여 Microsoft Exchange를 설치합니다.
-설치에서 **PendingReboot** 리소스는 노드를 다시 부팅하는 데 사용됩니다.
+다음 예제에서는 [xExchange](https://github.com/PowerShell/xExchange) 리소스를 사용하여 Microsoft Exchange를 설치합니다. 설치에서 **PendingReboot** 리소스는 노드를 다시 부팅하는 데 사용됩니다.
 
 > [!NOTE]
 > 이 예제에는 포리스트에 Exchange Server를 추가할 권한이 있는 계정의 자격 증명이 필요합니다. DSC에서 자격 증명을 사용하는 방법에 대한 자세한 내용은 [DSC에서 자격 증명 처리](../configurations/configDataCredentials.md)를 참조하세요.

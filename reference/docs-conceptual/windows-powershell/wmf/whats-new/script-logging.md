@@ -1,19 +1,19 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,setup
 title: 스크립트 추적 및 로깅
-ms.openlocfilehash: dd18453c041428d5a6537c413c3ebe324a62dfee
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Windows PowerShell 5.x는 스크립트 블록 실행을 감사할 수 있는 새 이벤트 로깅을 추가합니다.
+ms.openlocfilehash: d47fb6fdd1ee4b9372fab7b81e6dc94fb45b8880
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809869"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663120"
 ---
 # <a name="script-tracing-and-logging"></a>스크립트 추적 및 로깅
 
-PowerShell에는 cmdlet의 호출을 기록하는 **LogPipelineExecutionDetails** 그룹 정책 설정이 이미 있지만 PowerShell의 스크립트 언어는 기록 및 감사할 수 있는 여러 기능을 제공합니다. 새로운 세부 스크립트 추적 기능을 사용하여 시스템에서 PowerShell 스크립트 작업을 자세히 추적하고 분석할 수 있습니다. 세부 스크립트 추적을 사용하도록 설정하면 PowerShell에서 모든 스크립트 블록을 ETW 이벤트 로그 **Microsoft-Windows-PowerShell/Operational**에 기록합니다. 스크립트 블록에서 다른 스크립트 블록을 만드는 경우(예: `Invoke-Expression` 호출) 호출된 스크립트 블록도 기록됩니다.
+PowerShell에는 cmdlet의 호출을 기록하는 **LogPipelineExecutionDetails** 그룹 정책 설정이 이미 있지만 PowerShell의 스크립트 언어는 기록 및 감사할 수 있는 여러 기능을 제공합니다. 새로운 세부 스크립트 추적 기능을 사용하여 시스템에서 PowerShell 스크립트 작업을 자세히 추적하고 분석할 수 있습니다. 세부 스크립트 추적을 사용하도록 설정하면 PowerShell에서 모든 스크립트 블록을 ETW 이벤트 로그 **Microsoft-Windows-PowerShell/Operational** 에 기록합니다. 스크립트 블록에서 다른 스크립트 블록을 만드는 경우(예: `Invoke-Expression` 호출) 호출된 스크립트 블록도 기록됩니다.
 
-로깅은 **관리 템플릿** -> **Windows 구성 요소** -> **Windows PowerShell**에서 **PowerShell 스크립트 블록 로깅 켜기** 그룹 정책 설정을 통해 사용할 수 있습니다.
+로깅은 **관리 템플릿** -> **Windows 구성 요소** -> **Windows PowerShell** 에서 **PowerShell 스크립트 블록 로깅 켜기** 그룹 정책 설정을 통해 사용할 수 있습니다.
 
 이벤트는 다음과 같습니다.
 

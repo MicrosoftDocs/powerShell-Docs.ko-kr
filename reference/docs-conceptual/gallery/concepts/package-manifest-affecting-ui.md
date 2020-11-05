@@ -1,14 +1,13 @@
 ---
 ms.date: 06/09/2017
-schema: 2.0.0
-keywords: PowerShell
 title: PowerShell 갤러리 UI에 영향을 주는 패키지 매니페스트 값
-ms.openlocfilehash: d5e0b85a635c4090f8ccb814277a1a6dd6a951e2
-ms.sourcegitcommit: 1695df0d241c0390cac71a7401e61198fc6ff756
+description: 이 문서에서는 PowerShell 갤러리에서 사용하는 모듈 매니페스트의 값에 대해 설명합니다.
+ms.openlocfilehash: c59f65e72874a8a4ef946c954e1e8f12aad62b29
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91772306"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664138"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>PowerShell 갤러리 UI에 영향을 주는 패키지 매니페스트 값
 

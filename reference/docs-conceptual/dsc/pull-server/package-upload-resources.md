@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: 리소스 패키지 및 끌어오기 서버에 업로드
-ms.openlocfilehash: d0e070b7aa43acbbbf087729d53f06dbc7e7734a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: 이 문서에서는 DSC가 관리하는 노드의 구성이 다운로드할 수 있도록 끌어오기 서버에 리소스를 업로드하는 방법을 보여 줍니다.
+ms.openlocfilehash: a19d04346a0ae546cfcaf70701fde870d3839f65
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782891"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661699"
 ---
 # <a name="package-and-upload-resources-to-a-pull-server"></a>리소스 패키지 및 끌어오기 서버에 업로드
 
@@ -16,7 +17,7 @@ ms.locfileid: "87782891"
 - [DSC SMB 끌어오기 서버 설정](pullServerSmb.md)
 - [DSC HTTP 끌어오기 서버 설정](pullServer.md)
 
-구성, 리소스를 다운로드하고 해당 상태를 보고하도록 각 대상 노드를 구성할 수 있습니다. 이 문서에서는 다운로드할 수 있도록 리소스를 업로드하고 자동으로 리소스를 다운로드하도록 클라이언트를 구성하는 방법을 보여 줍니다. 노드가 할당된 구성을 받으면 **끌어오기** 또는 **밀어넣기**(v5)를 통해 LCM에 지정된 위치에서 구성에 필요한 모든 리소스를 자동으로 다운로드합니다.
+구성, 리소스를 다운로드하고 해당 상태를 보고하도록 각 대상 노드를 구성할 수 있습니다. 이 문서에서는 다운로드할 수 있도록 리소스를 업로드하고 자동으로 리소스를 다운로드하도록 클라이언트를 구성하는 방법을 보여 줍니다. 노드가 할당된 구성을 받으면 **끌어오기** 또는 **밀어넣기** (v5)를 통해 LCM에 지정된 위치에서 구성에 필요한 모든 리소스를 자동으로 다운로드합니다.
 
 ## <a name="package-resource-modules"></a>패키지 리소스 모듈
 
@@ -25,7 +26,7 @@ ms.locfileid: "87782891"
 > [!NOTE]
 > 클라이언트에서 PowerShell 4.0을 사용하는 경우 리소스 폴더 구조를 평면화하고 모든 버전 폴더를 제거해야 합니다. 자세한 내용은 [여러 리소스 버전](../configurations/import-dscresource.md#multiple-resource-versions)을 참조하세요.
 
-원하는 유틸리티, 스크립트 또는 메서드를 사용하여 리소스 디렉터리를 압축할 수 있습니다. Windows의 경우 `xPSDesiredStateConfiguration` 디렉터리에서 파일을 ‘마우스 오른쪽 단추로 클릭’하고 **보내기**를 선택한 다음, **압축 폴더**를 선택할 수 있습니다.
+원하는 유틸리티, 스크립트 또는 메서드를 사용하여 리소스 디렉터리를 압축할 수 있습니다. Windows의 경우 `xPSDesiredStateConfiguration` 디렉터리에서 파일을 ‘마우스 오른쪽 단추로 클릭’하고 **보내기** 를 선택한 다음, **압축 폴더** 를 선택할 수 있습니다.
 
 ![마우스 오른쪽 단추 클릭 - 보내기 - 압축된 폴더](media/package-upload-resources/right-click.gif)
 
@@ -41,7 +42,7 @@ ms.locfileid: "87782891"
 
 ### <a name="create-checksums"></a>CheckSum 만들기
 
-리소스 모듈이 압축되고 이름이 바뀐 후 **CheckSum**을 만들어야 합니다. **CheckSum**은 클라이언트의 LCM에서 리소스가 변경되었고 다시 다운로드되어야 하는지 확인하는 데 사용됩니다. 아래 예제와 같이 [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum) cmdlet을 사용하여 **CheckSum**을 만들 수 있습니다.
+리소스 모듈이 압축되고 이름이 바뀐 후 **CheckSum** 을 만들어야 합니다. **CheckSum** 은 클라이언트의 LCM에서 리소스가 변경되었고 다시 다운로드되어야 하는지 확인하는 데 사용됩니다. 아래 예제와 같이 [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum) cmdlet을 사용하여 **CheckSum** 을 만들 수 있습니다.
 
 ```powershell
 New-DscChecksum -Path .\xPSDesiredStateConfiguration_8.4.4.0.zip
@@ -53,7 +54,7 @@ New-DscChecksum -Path .\xPSDesiredStateConfiguration_8.4.4.0.zip
 
 #### <a name="on-a-dsc-http-pull-server"></a>DSC HTTP 끌어오기 서버
 
-HTTP 끌어오기 서버를 설정할 때 [DSC HTTP 끌어오기 서버 설정](pullServer.md)에 설명된 대로 **ModulePath** 및 **ConfigurationPath** 키의 디렉터리를 지정합니다. **ConfigurationPath** 키는 ".mof" 파일을 저장해야 하는 위치를 나타냅니다. **ModulePath**는 DSC 리소스 모듈을 저장해야 하는 위치를 나타냅니다.
+HTTP 끌어오기 서버를 설정할 때 [DSC HTTP 끌어오기 서버 설정](pullServer.md)에 설명된 대로 **ModulePath** 및 **ConfigurationPath** 키의 디렉터리를 지정합니다. **ConfigurationPath** 키는 ".mof" 파일을 저장해야 하는 위치를 나타냅니다. **ModulePath** 는 DSC 리소스 모듈을 저장해야 하는 위치를 나타냅니다.
 
 ```powershell
     xDscWebService PSDSCPullServer
@@ -68,7 +69,7 @@ HTTP 끌어오기 서버를 설정할 때 [DSC HTTP 끌어오기 서버 설정](
 
 #### <a name="on-an-smb-share"></a>SMB 공유
 
-**ResourceRepositoryShare**를 지정한 경우 끌어오기 클라이언트를 설정할 때 **ResourceRepositoryShare** 블록의 **SourcePath** 디렉터리에 보관 파일과 체크섬을 저장합니다.
+**ResourceRepositoryShare** 를 지정한 경우 끌어오기 클라이언트를 설정할 때 **ResourceRepositoryShare** 블록의 **SourcePath** 디렉터리에 보관 파일과 체크섬을 저장합니다.
 
 ```powershell
 ConfigurationRepositoryShare SMBPullServer
@@ -82,7 +83,7 @@ ResourceRepositoryShare SMBResourceServer
 }
 ```
 
-**ConfigurationRepositoryShare**만 지정한 경우 끌어오기 클라이언트를 설정할 때 **ConfigurationRepositoryShare** 블록의 **SourcePath** 디렉터리에 보관 파일과 체크섬을 저장합니다.
+**ConfigurationRepositoryShare** 만 지정한 경우 끌어오기 클라이언트를 설정할 때 **ConfigurationRepositoryShare** 블록의 **SourcePath** 디렉터리에 보관 파일과 체크섬을 저장합니다.
 
 ```powershell
 ConfigurationRepositoryShare SMBPullServer

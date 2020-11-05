@@ -2,12 +2,13 @@
 ms.date: 07/09/2019
 keywords: dsc,gpo,powershell,configuration,setup
 title: 빠른 시작 - 그룹 정책을 DSC로 변환
-ms.openlocfilehash: 852710f261ea1d57228c05d4093c1d78584e0ca5
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: 이 빠른 시작에서는 Windows 그룹 정책을 DSC 구성으로 변환하는 데 필요한 단계를 보여 줍니다.
+ms.openlocfilehash: b67f6dd2cf6c91d90fa6ac5b6367f9efc7f40ee0
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236240"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644709"
 ---
 # <a name="quickstart-convert-group-policy-into-dsc"></a>빠른 시작: 그룹 정책을 DSC로 변환
 
@@ -16,7 +17,7 @@ ms.locfileid: "89236240"
 그룹 정책 또는 Azure Security Center 기준에서 DSC 구성을 생성할 수 있습니다. [BaselineManagement](https://www.powershellgallery.com/packages/BaselineManagement) 모듈에는 이 작업을 수행하기 위한 다음 명령이 포함되어 있습니다.
 
 - `ConvertFrom-GPO` - 파일로 저장된 그룹 정책을 변환합니다. 하나의 구성으로 결합될 여러 정책을 포함하는 디렉터리를 지정할 수도 있습니다.
-  - 환경에서 그룹 정책을 내보내려면 [GPO 백업](/powershell/module/grouppolicy/backup-gpo?view=win10-ps) cmdlet을 사용하거나 [파일로 GPO 내보내기](/microsoft-desktop-optimization-pack/agpm/export-a-gpo-to-a-file)의 지침을 따릅니다.
+  - 환경에서 그룹 정책을 내보내려면 [GPO 백업](/powershell/module/grouppolicy/backup-gpo) cmdlet을 사용하거나 [파일로 GPO 내보내기](/microsoft-desktop-optimization-pack/agpm/export-a-gpo-to-a-file)의 지침을 따릅니다.
 - `ConvertFrom-SCM` - `.xml` 파일로 저장된 Security Compliance Manager 기준선을 변환합니다.
 - `ConvertFrom-ASC` - `.json` 파일로 저장된 Azure Security Center 기준선을 변환합니다.
 - `Merge-GPOs` - 대상 컴퓨터에 적용된 그룹 정책을 변환합니다.
@@ -52,7 +53,7 @@ Mode                LastWriteTime     Length Name
 - [AuditPolicyDSC](https://www.powershellgallery.com/packages/AuditPolicyDsc)
 
 > [!NOTE]
-> **BaselineManagement**는 Microsoft가 아닌 프로젝트 유지 관리자로부터 커뮤니티 솔루션에 대한 지원을 DSC가 더 쉽게 검색할 수 있도록 커뮤니터에서 개발한 솔루션입니다. [GitHub](https://github.com/microsoft/BaselineManagement)의 **BaselineManagement**에 대한 새로운 이슈를 열 수 있습니다.
+> **BaselineManagement** 는 Microsoft가 아닌 프로젝트 유지 관리자로부터 커뮤니티 솔루션에 대한 지원을 DSC가 더 쉽게 검색할 수 있도록 커뮤니터에서 개발한 솔루션입니다. [GitHub](https://github.com/microsoft/BaselineManagement)의 **BaselineManagement** 에 대한 새로운 이슈를 열 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -1,13 +1,13 @@
 ---
 title: Windows에 PowerShell 설치
 description: Windows에서 PowerShell을 설치하는 방법에 대한 정보
-ms.date: 09/14/2020
-ms.openlocfilehash: 8f1b60ef6bfef5c2434b0affabb5e0e7af392b96
-ms.sourcegitcommit: 30c0c1563f8e840f24b65297e907f3583d90e677
+ms.date: 10/30/2020
+ms.openlocfilehash: 1b341b496cef34a2a98afeac9d24f0a51e8dbda0
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574456"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142789"
 ---
 # <a name="installing-powershell-on-windows"></a>Windows에 PowerShell 설치
 
@@ -95,7 +95,16 @@ Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
 
 ## <a name="installing-the-zip-package"></a><a id="zip" />ZIP 패키지 설치
 
-고급 배포 시나리오를 지원하기 위해 PowerShell 이진 ZIP 아카이브가 제공됩니다. ZIP 보관 파일 설치는 MSI 패키지처럼 필수 조건을 확인하지는 않습니다. [releases][releases] 페이지에서 ZIP 보관 파일을 다운로드합니다. 파일을 다운로드하는 방법에 따라 `Unblock-File` cmdlet을 사용하여 파일의 차단을 해제해야 할 수도 있습니다. 원하는 위치에 콘텐츠의 압축을 풀고, 여기서 `pwsh.exe`를 실행합니다. WSMan에서 원격 기능이 제대로 작동하도록 하려면 [필수 조건](#prerequisites)을 충족했는지 확인하세요.
+고급 배포 시나리오를 지원하기 위해 PowerShell 이진 ZIP 아카이브가 제공됩니다. [릴리스][releases] 페이지에서 다음 ZIP 보관 파일 중 하나를 다운로드합니다.
+
+- PowerShell-7.0.3-win-x64.zip
+- PowerShell-7.0.3-win-x86.zip
+- PowerShell-7.0.3-win-arm64.zip
+- PowerShell-7.0.3-win-arm32.zip
+
+파일을 다운로드하는 방법에 따라 `Unblock-File` cmdlet을 사용하여 파일의 차단을 해제해야 할 수도 있습니다. 원하는 위치에 콘텐츠의 압축을 풀고, 여기서 `pwsh.exe`를 실행합니다. MSI 패키지 설치와 달리 ZIP 보관 파일 설치는 필수 조건을 확인하지 않습니다. WSMan에서 원격 기능이 제대로 작동하도록 하려면 [필수 조건](#prerequisites)을 충족했는지 확인하세요.
+
+이 방법을 사용하여 Microsoft Surface Pro X와 같은 컴퓨터에 ARM 기반 버전의 PowerShell을 설치합니다. 최상의 결과를 위해서는 `$env:ProgramFiles\PowerShell\7` 폴더에 PowerShell을 설치하세요.
 
 ## <a name="deploying-on-windows-10-iot-enterprise"></a>Windows 10 IoT Enterprise에 배포
 
@@ -132,26 +141,25 @@ Windows 10 IoT Enterprise는 PowerShell 7을 배포하는 데 사용할 수 있�
    # Be sure to use the -PowerShellHome parameter otherwise it'll try to create a new
    # endpoint with Windows PowerShell 5.1
    .\Install-PowerShellRemoting.ps1 -PowerShellHome .
-   # You'll get an error message and will be disconnected from the device because it has to restart WinRM
+   # You'll get an error message and will be disconnected from the device because
+   # it has to restart WinRM
    ```
 
 1. 디바이스에서 PowerShell 7 엔드포인트에 연결
 
    ```powershell
-   # Be sure to use the -Configuration parameter.  If you omit it, you will connect to Windows PowerShell 5.1
+   # Be sure to use the -Configuration parameter. If you omit it, you will connect to Windows PowerShell 5.1
    Enter-PSSession -ComputerName <deviceIp> -Credential Administrator -Configuration powershell.<version>
    ```
 
 ## <a name="deploying-on-windows-10-iot-core"></a>Windows 10 IoT Core에 배포
 
-Windows 10 IoT Core는 *IOT_POWERSHELL* 기능을 포함할 때 Windows PowerShell을 추가하여 PowerShell 7을 배포하는 데 사용할 수 있습니다.
-IoT Core에 대해서도 위에서 정의한 Windows 10 IoT Enterprise 단계를 따를 수 있습니다.
+Windows 10 IoT Core는 _IOT_POWERSHELL_ 기능을 포함할 때 Windows PowerShell을 추가하여 PowerShell 7을 배포하는 데 사용할 수 있습니다. IoT Core에 대해서도 위에서 정의한 Windows 10 IoT Enterprise 단계를 따를 수 있습니다.
 
-배송 이미지에 최신 powershell을 추가하려면 [Import-PSCoreRelease](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/IoTCoreImaging/Docs/Import-PSCoreRelease.md#Import-PSCoreRelease) 명령을 사용하여 패키지를 워크 영역에 포함하고 *OPENSRC_POWERSHELL* 기능을 이미지에 추가합니다.
+배송 이미지에 최신 PowerShell을 추가하려면 [Import-PSCoreRelease][] 명령을 사용하여 패키지를 작업 영역에 포함하고 _OPENSRC_POWERSHELL_ 기능을 이미지에 추가합니다.
 
 > [!NOTE]
-> ARM64 아키텍처의 경우 *IOT_POWERSHELL*을 포함할 때 Windows Powershell이 추가되지 않습니다. 따라서 zip 기반 설치가 작동하지 않습니다.
-> Import-PSCoreRelease 명령을 사용하여 이미지에 추가해야 합니다.
+> ARM64 아키텍처의 경우 _IOT_POWERSHELL_ 을 포함할 때 Windows PowerShell이 추가되지 않습니다. 따라서 zip 기반 설치가 작동하지 않습니다. `Import-PSCoreRelease` 명령을 사용하여 이미지에 추가해야 합니다.
 
 ## <a name="deploying-on-nano-server"></a>Nano 서버에 배포
 
@@ -169,7 +177,7 @@ IoT Core에 대해서도 위에서 정의한 Windows 10 IoT Enterprise 단계를
 1. 자주 사용하는 zip 유틸리티로 패키지를 탑재된 Nano 서버 이미지 내의 디렉터리에 압축을 풉니다.
 1. 이미지를 탑재 해제하고 부팅합니다.
 1. Windows PowerShell의 기본 제공 인스턴스에 연결합니다.
-1. 지침에 따라 [“다른 인스턴스 기법”](../learn/remoting/wsman-remoting-in-powershell-core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register)을 사용하여 원격 엔드포인트를 만듭니다.
+1. 지침에 따라 [“다른 인스턴스 기법”][]을 사용하여 원격 엔드포인트를 만듭니다.
 
 ### <a name="online-deployment-of-powershell"></a>PowerShell의 온라인 배포
 
@@ -200,7 +208,7 @@ IoT Core에 대해서도 위에서 정의한 Windows 10 IoT Enterprise 단계를
   Expand-Archive -Path C:\powershell-<version>-win-x64.zip -DestinationPath "C:\PowerShell_<version>"
   ```
 
-- WSMan 기반 원격 작업이 필요한 경우 지침에 따라 [“다른 인스턴스 기법”](../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register)을 사용하여 원격 엔드포인트를 만듭니다.
+- WSMan 기반 원격 작업이 필요한 경우 지침에 따라 [“다른 인스턴스 기법”][]을 사용하여 원격 엔드포인트를 만듭니다.
 
 ## <a name="install-as-a-net-global-tool"></a>.NET 전역 도구로 설치
 
@@ -218,7 +226,7 @@ dotnet 도구 설치 프로그램은 `$env:PATH` 환경 변수에 `$env:USERPROF
 
 > [!NOTE]
 > `winget` 도구는 현재 미리 보기입니다. 계획된 기능을 모두 지금 사용할 수 있는 것은 아닙니다.
-> 이 도구의 옵션 및 기능은 변경될 수 있습니다. 프로덕션 배포 시나리오에서는 이 방법을 사용하지 않아야 합니다. 시스템 요구 사항 및 설치 지침 목록은 [winget] 설명서를 참조하세요.
+> 프로덕션 배포 시나리오에서는 이 방법을 사용하지 않아야 합니다. 시스템 요구 사항 및 설치 지침 목록은 [winget] 설명서를 참조하세요.
 
 게시된 `winget` 패키지로 PowerShell을 설치하는 데 다음 명령을 사용할 수 있습니다.
 
@@ -249,9 +257,13 @@ PowerShell은 WSMan 및 SSH와 함께 PowerShell Remoting Protocol(PSRP)을 지�
 - [PowerShell Core에서의 SSH 원격 작업][ssh-remoting]
 - [PowerShell Core에서의 WSMan 원격 작업][wsman-remoting]
 
+## <a name="upgrading-an-existing-installation"></a>기존 설치 업그레이드
+
+업그레이드할 때 최상의 결과를 위해서는 PowerShell을 처음 설치할 때 사용한 것과 동일한 설치 방법을 사용해야 합니다. 설치 방법마다 PowerShell이 설치되는 위치가 다릅니다. PowerShell이 설치되었는지 확실하지 않은 경우 설치된 위치를 이 문서의 패키지 정보와 비교하면 됩니다. MSI 패키지를 통해 설치한 경우 **프로그램 및 기능** 제어판에 해당 정보가 표시됩니다.
+
 ## <a name="installation-support"></a>설치 지원
 
-Microsoft는 이 문서의 설치 방법을 지원합니다. 다른 소스에서 사용 가능한 다른 설치 방법을 제공할 수도 있습니다. 그러한 도구 및 방법이 유효하더라도 Microsoft에서는 해당 방법을 지원할 수 없습니다.
+Microsoft는 이 문서의 설치 방법을 지원합니다. 다른 원본에서 사용 가능한 다른 설치 방법이 있을 수 있습니다. 그러한 도구 및 방법이 유효하더라도 Microsoft에서는 해당 방법을 지원할 수 없습니다.
 
 <!-- link references -->
 
@@ -260,3 +272,5 @@ Microsoft는 이 문서의 설치 방법을 지원합니다. 다른 소스에서
 [wsman-remoting]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md
 [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
 [winget]: /windows/package-manager/winget
+["다른 인스턴스 방법"]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register
+[Import-PSCoreRelease]: https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/IoTCoreImaging/Docs/Import-PSCoreRelease.md#Import-PSCoreRelease

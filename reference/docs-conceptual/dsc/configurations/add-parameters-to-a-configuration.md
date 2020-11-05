@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,리소스,갤러리,설정
 title: 구성에 매개 변수 추가
-ms.openlocfilehash: 9dd9f2be58c13840be2b24e7e21a0d4af79b67cc
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 사용자 입력에 따라 더 동적인 구성을 허용하도록 DSC 구성을 매개 변수화할 수 있습니다.
+ms.openlocfilehash: aea230d34994a7b20076559c44990abe554d5395
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80263155"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656812"
 ---
 # <a name="add-parameters-to-a-configuration"></a>구성에 매개 변수 추가
 
@@ -36,7 +37,7 @@ Configuration TestConfig
 
 함수와 달리 [CmdletBinding](/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute) 특성은 기능을 추가하지 않습니다. [일반 매개 변수](/powershell/module/microsoft.powershell.core/about/about_commonparameters) 외에도 구성에서는 매개 변수를 정의할 필요 없이 다음 기본 제공 매개 변수를 사용할 수도 있습니다.
 
-|        매개 변수        |                                         Description                                          |
+|        매개 변수        |                                         설명                                          |
 | ----------------------- | -------------------------------------------------------------------------------------------- |
 | `-InstanceName`         | [복합 구성](compositeconfigs.md)을 정의하는 데 사용됩니다.                             |
 | `-DependsOn`            | [복합 구성](compositeconfigs.md)을 정의하는 데 사용됩니다.                             |
@@ -96,7 +97,7 @@ Configuration TestConfig
 {
     param
     (
-        [String]
+        [String[]]
         $ComputerName="localhost"
     )
 
@@ -119,7 +120,7 @@ TestConfig -ComputerName "server01", "server02", "server03"
 ## <a name="advanced-parameters-in-configurations"></a>구성의 고급 매개 변수
 
 `-ComputerName` 매개 변수 외에도 서비스 이름 및 상태에 대한 매개 변수를 추가할 수 있습니다.
-다음 예제에서는 `-ServiceName`을 사용하여 매개 변수 블록을 추가하고 이 매개 변수를 **Service** 리소스 블록을 동적으로 정의하는 데 사용합니다. 또한 `-State` 매개 변수를 추가하여 **Service** 리소스 블록에서 **State**를 동적으로 정의합니다.
+다음 예제에서는 `-ServiceName`을 사용하여 매개 변수 블록을 추가하고 이 매개 변수를 **Service** 리소스 블록을 동적으로 정의하는 데 사용합니다. 또한 `-State` 매개 변수를 추가하여 **Service** 리소스 블록에서 **State** 를 동적으로 정의합니다.
 
 ```powershell
 Configuration TestConfig
@@ -178,7 +179,7 @@ $ServiceName
 $ServiceName
 ```
 
-`$State` 매개 변수의 경우 사용자가 미리 정의된 세트(예: Running, Stopped) 외부 값을 지정하지 못하도록 합니다. `ValidationSet*` 특성은 사용자가 미리 정의된 세트(예: Running, Stopped) 외부 값을 지정하지 못하도록 합니다. 다음 예제에서는 `ValidationSet` 특성을 `$State` 매개 변수에 추가합니다. `$State` 매개 변수를 **Mandatory**로 설정하지 않을 것이므로 기본값을 추가해야 합니다.
+`$State` 매개 변수의 경우 사용자가 미리 정의된 세트(예: Running, Stopped) 외부 값을 지정하지 못하도록 합니다. `ValidationSet*` 특성은 사용자가 미리 정의된 세트(예: Running, Stopped) 외부 값을 지정하지 못하도록 합니다. 다음 예제에서는 `ValidationSet` 특성을 `$State` 매개 변수에 추가합니다. `$State` 매개 변수를 **Mandatory** 로 설정하지 않을 것이므로 기본값을 추가해야 합니다.
 
 ```powershell
 [ValidateSet("Running", "Stopped")]
@@ -226,7 +227,7 @@ Configuration TestConfig
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [DSC 구성에 대한 도움말 작성](configHelp.md)
 - [동적 구성](flow-control-in-configurations.md)

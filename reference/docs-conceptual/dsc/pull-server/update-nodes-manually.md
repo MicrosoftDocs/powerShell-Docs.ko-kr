@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: 끌어오기 서버에서 노드 업데이트
-ms.openlocfilehash: fa59a2f6574db2dbc96621be4326f1d5a55e5de9
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 끌어오기 서버에서 DSC 관리 노드를 업데이트하는 방법을 설명합니다.
+ms.openlocfilehash: 7256a0e1fdfaa8e56150c4f7299640bc95b82cee
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500669"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656758"
 ---
 # <a name="update-nodes-from-a-pull-server"></a>끌어오기 서버에서 노드 업데이트
 
@@ -16,7 +17,7 @@ ms.locfileid: "80500669"
 - [DSC SMB 끌어오기 서버 설정](pullServerSmb.md)
 - [DSC HTTP 끌어오기 서버 설정](pullServer.md)
 
-구성, 리소스를 다운로드하고 해당 상태를 보고하도록 각 대상 노드를 구성할 수 있습니다. 이 문서에서는 다운로드할 수 있도록 리소스를 업로드하고 자동으로 리소스를 다운로드하도록 클라이언트를 구성하는 방법을 보여 줍니다. 노드가 할당된 구성을 받으면 **끌어오기** 또는 **밀어넣기**(v5)를 통해 LCM에 지정된 위치에서 구성에 필요한 모든 리소스를 자동으로 다운로드합니다.
+구성, 리소스를 다운로드하고 해당 상태를 보고하도록 각 대상 노드를 구성할 수 있습니다. 이 문서에서는 다운로드할 수 있도록 리소스를 업로드하고 자동으로 리소스를 다운로드하도록 클라이언트를 구성하는 방법을 보여 줍니다. 노드가 할당된 구성을 받으면 **끌어오기** 또는 **밀어넣기** (v5)를 통해 LCM에 지정된 위치에서 구성에 필요한 모든 리소스를 자동으로 다운로드합니다.
 
 ## <a name="using-the-update-dscconfiguration-cmdlet"></a>Update-DSCConfiguration cmdlet 사용
 

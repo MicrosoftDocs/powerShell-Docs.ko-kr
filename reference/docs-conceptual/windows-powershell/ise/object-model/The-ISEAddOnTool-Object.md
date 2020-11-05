@@ -1,17 +1,17 @@
 ---
 ms.date: 06/05/2017
-keywords: powershell,cmdlet
 title: ISEAddOnTool 개체
-ms.openlocfilehash: a5357005ec1a883f5a14882a42e3150e09ff33a2
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: ISEAddonTool 개체는 Windows PowerShell ISE에 추가적인 기능을 제공하는 설치된 추가 항목 도구를 나타냅니다.
+ms.openlocfilehash: cc2d50881b7d0033e08de9af5d4cc9e1a9aa55db
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809729"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667133"
 ---
 # <a name="the-iseaddontool-object"></a>ISEAddOnTool 개체
 
-**ISEAddonTool** 개체는 Windows PowerShell ISE에 추가적인 기능을 제공하는 설치된 추가 기능 도구를 나타냅니다. 예제는 **보기**를 클릭한 다음, **명령 추가 기능 표시**를 클릭하여 표시할 수 있는 **명령** 도구입니다. 그런 다음 사용 가능한 다양한 **ISEAddOnTool** 개체를 조작하여 이 도구에 액세스할 수 있습니다.
+**ISEAddonTool** 개체는 Windows PowerShell ISE에 추가적인 기능을 제공하는 설치된 추가 항목 도구를 나타냅니다. 예제는 **보기** 를 클릭한 다음, **명령 추가 기능 표시** 를 클릭하여 표시할 수 있는 **명령** 도구입니다. 그런 다음 사용 가능한 다양한 **ISEAddOnTool** 개체를 조작하여 이 도구에 액세스할 수 있습니다.
 
 각 추가 기능 도구는 세로 창이나 가로 창과 연결할 수 있습니다. 세로 창은 Windows PowerShell ISE의 오른쪽 가장자리에 도킹됩니다. 가로 창은 아래쪽 가장자리에 도킹됩니다.
 

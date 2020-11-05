@@ -2,16 +2,17 @@
 ms.date: 09/06/2019
 keywords: powershell,cmdlet
 title: PowerShell 5.0 ISE의 새로운 기능
-ms.openlocfilehash: 1f5d32d583165ff8ead0a95b1c882386cf654326
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: 이 문서에서는 Windows PowerShell ISE(통합 스크립팅 환경)의 5.0 버전에서 도입된 새로운 기능과 업데이트된 기능에 대해 설명합니다.
+ms.openlocfilehash: 75d37d0dafe381c84898ac48343336cd525d2dd1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809139"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660819"
 ---
 # <a name="whats-new-in-the-windows-powershell-50-ise"></a>Windows PowerShell 5.0 ISE의 새로운 기능
 
-이 항목에서는 Windows PowerShell ISE(통합 스크립팅 환경)의 5.0 버전에서 도입된 새로운 기능과 업데이트된 기능에 대해 설명합니다.
+이 문서에서는 Windows PowerShell ISE(통합 스크립팅 환경)의 5.0 버전에서 도입된 새로운 기능과 업데이트된 기능에 대해 설명합니다.
 
 > [!NOTE]
 > PowerShell ISE는 더 이상 활성 기능 개발에 필요하지 않습니다. Windows의 배송 구성 요소로서 보안 및 우선 순위가 높은 서비스 수정 사항을 위해 공식적으로 계속 지원됩니다.
@@ -46,7 +47,7 @@ Windows PowerShell ISE에서 cmdlet을 입력하면 스크롤 및 클릭 가능�
 
 > ISE 3.0에서 추가되었습니다.
 
-*코드 조각*은 Windows PowerShell ISE에서 만든 스크립트에 삽입할 수 있는 Windows PowerShell 코드의 짧은 부분입니다. Windows PowerShell ISE에는 기본 코드 조각 집합이 포함되어 있습니다. Windows PowerShell ISE에서 작업하는 동안 `New-Snippet` cmdlet을 사용하여 코드 조각을 추가할 수 있습니다.
+*코드 조각* 은 Windows PowerShell ISE에서 만든 스크립트에 삽입할 수 있는 Windows PowerShell 코드의 짧은 부분입니다. Windows PowerShell ISE에는 기본 코드 조각 집합이 포함되어 있습니다. Windows PowerShell ISE에서 작업하는 동안 `New-Snippet` cmdlet을 사용하여 코드 조각을 추가할 수 있습니다.
 
 **이와 같은 변경을 통해 더해지는 가치**
 
@@ -54,7 +55,7 @@ Windows PowerShell ISE에서 cmdlet을 입력하면 스크롤 및 클릭 가능�
 
 **달라진 기능**
 
-Windows PowerShell 3.0 이상에서 코드 조각을 사용하려면 **편집** 메뉴에서 **조각 시작**을 클릭하거나 <kbd>Ctrl</kbd>+<kbd>J</kbd>를 누릅니다.
+Windows PowerShell 3.0 이상에서 코드 조각을 사용하려면 **편집** 메뉴에서 **조각 시작** 을 클릭하거나 <kbd>Ctrl</kbd>+<kbd>J</kbd>를 누릅니다.
 
 ## <a name="add-on-tools"></a>추가 기능 도구
 
@@ -135,7 +136,7 @@ Windows PowerShell ISE 2.0에는 별도의 명령 창과 출력 창이 있습니
 
 > PowerShell 3.0에서 추가되었습니다.
 
-**powershell_ise.exe**를 입력하여 명령줄에서 Windows PowerShell ISE를 시작하면 다음과 같은 새 명령줄 스위치를 추가할 수 있습니다.
+**powershell_ise.exe** 를 입력하여 명령줄에서 Windows PowerShell ISE를 시작하면 다음과 같은 새 명령줄 스위치를 추가할 수 있습니다.
 
 - `-NoProfile`: `$profile`을 실행하지 않고 Windows PowerShell ISE를 시작합니다.
 - `-Help`: 도움말 창을 표시합니다.
@@ -205,6 +206,6 @@ Windows PowerShell 스크립트에서 `Show-Command`를 사용하면 익숙한 �
 
 `Show-Command`는 새로운 Windows PowerShell ISE 3.0입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 Windows PowerShell ISE 사용에 대한 자세한 내용은 [Windows PowerShell 통합 스크립팅 환경 탐색](../ise/exploring-the-windows-powershell-ise.md)을 참조하세요.

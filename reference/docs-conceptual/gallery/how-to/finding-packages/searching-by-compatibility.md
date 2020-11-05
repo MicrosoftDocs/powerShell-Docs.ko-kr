@@ -1,14 +1,13 @@
 ---
 ms.date: 12/11/2018
-contributor: JKeithB, SydneyhSmith
-keywords: gallery,powershell,cmdlet,psgallery
 title: 호환 가능한 PowerShell 버전 또는 운영 체제가 있는 패키지
-ms.openlocfilehash: fce1383fa604a555a40b050ce92c5cc45ca7054c
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+description: 이 문서에서는 특정 플랫폼 또는 버전과의 호환성을 기준으로 PowerShell 갤러리를 검색하는 방법을 설명합니다.
+ms.openlocfilehash: 9806c09c85febfd74bb69adf3d294fb4f559ff23
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83691456"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661253"
 ---
 # <a name="packages-with-compatible-powershell-editions-or-operating-systems"></a>호환 가능한 PowerShell 버전 또는 운영 체제가 있는 패키지
 
@@ -32,18 +31,17 @@ PowerShell을 사용하여 호환 가능한 패키지를 검색할 수도 있습
 
 Tags:"PSEdition_Desktop" 및 Tags:"PSEdition_Core"를 사용하여 PowerShell 갤러리에 있는 패키지를 필터링합니다.
 
-### <a name="use-tagspsedition_core-to-search-items-compatible-with-powershell-core-edition"></a>Tags:"PSEdition_Core"를 사용하여 PowerShell Core Edition과 호환되는 항목을 검색합니다.
+### <a name="use-tagspsedition_core-to-search-items-compatible-with-powershell-core-edition"></a>Tags:"PSEdition_Core"를 사용하여 PowerShell Core Edition과 호환되는 항목을 검색
 
 ![Core PSEdition과 호환되는 항목에 대한 검색 결과](media/searching-by-compatibility/searchresultswithpseditions.PNG)
 
-### <a name="use-tagspsedition_desktop-to-search-items-compatible-with-powershell-desktop-edition"></a>Tags:"PSEdition_Desktop"을 사용하여 PowerShell Desktop Edition과 호환되는 항목을 검색합니다.
+### <a name="use-tagspsedition_desktop-to-search-items-compatible-with-powershell-desktop-edition"></a>Tags:"PSEdition_Desktop"을 사용하여 PowerShell Desktop Edition과 호환되는 항목을 검색
 
 ![Desktop PSEdition과 호환되는 항목에 대한 검색 결과](media/searching-by-compatibility/searchresultswithpseditionsdesktop.PNG)
 
 ### <a name="search-for-packages-to-find-compatible-editions-using-powershell"></a>패키지를 검색하여 PowerShell을 사용하여 호환 가능한 버전 찾기
-PowerShell 버전 및 OS에서 필터링할 태그를 지정할 수 있습니다.
-`-Tag` 매개 변수를 지정하는 `Find-Package` cmdlet을 사용하여 대상으로 지정한 버전(및 OS)를 지정합니다.
-다음과 같이:
+
+PowerShell 버전 및 OS에서 필터링할 태그를 지정할 수 있습니다. `-Tag` 매개 변수를 지정하는 `Find-Package` cmdlet을 사용하여 대상으로 지정한 버전(및 OS)를 지정합니다. 다음과 같이:
 
 ```powershell
 # Find modules compatible with PowerShell Core:

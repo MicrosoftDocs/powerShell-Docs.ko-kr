@@ -1,15 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB, SydneyhSmith
-keywords: gallery,powershell,cmdlet,psgallery
-description: 게시자용 지침
+description: 이 문서에서는 PowerShell 갤러리에 게시된 패키지가 널리 채택되고 사용자에게 높은 가치를 제공할 수 있는 권장 단계를 설명합니다.
 title: PowerShell 갤러리 게시 지침 및 모범 사례
-ms.openlocfilehash: c58b23b0021e0745ee690a78f7e42c821d59cdb0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.openlocfilehash: 949340aeba36df26c68f92422b8c11869ed3bf11
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87777862"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656143"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>PowerShell 갤러리 게시 지침 및 모범 사례
 
@@ -43,7 +41,7 @@ PowerShell 갤러리에 있는 패키지를 게시하는 방법은 [패키지 �
 
 ## <a name="use-psscriptanalyzer"></a>PSScriptAnalyzer 사용
 
-[PSScriptAnalyzer](https://www.powershellgallery.com/packages/PSScriptAnalyzer)는 PowerShell 코드에서 작동하는 무료 정적 코드 분석 도구입니다. **PSScriptAnalyzer**는 PowerShell 코드에서 가장 흔히 발생하는 문제를 식별하며, 종종 권장 문제 해결 방법을 제공합니다. 손쉽게 사용할 수 있는 이 도구는 문제를 오류(해결해야 하는 심각한 문제), 경고(검토하여 해결해야 하는 문제) 및 정보(모범 사례를 확인하면 좋은 문제)로 분류합니다. PowerShell 갤러리에 게시하는 모든 패키지는 **PSScriptAnalyzer**를 사용하여 검토되며, 모든 오류는 소유자에게 다시 보고되 소유자는 오류를 해결해야 합니다.
+[PSScriptAnalyzer](https://www.powershellgallery.com/packages/PSScriptAnalyzer)는 PowerShell 코드에서 작동하는 무료 정적 코드 분석 도구입니다. **PSScriptAnalyzer** 는 PowerShell 코드에서 가장 흔히 발생하는 문제를 식별하며, 종종 권장 문제 해결 방법을 제공합니다. 손쉽게 사용할 수 있는 이 도구는 문제를 오류(해결해야 하는 심각한 문제), 경고(검토하여 해결해야 하는 문제) 및 정보(모범 사례를 확인하면 좋은 문제)로 분류합니다. PowerShell 갤러리에 게시하는 모든 패키지는 **PSScriptAnalyzer** 를 사용하여 검토되며, 모든 오류는 소유자에게 다시 보고되 소유자는 오류를 해결해야 합니다.
 
 `-Recurse` 및 `-Severity` 경고를 포함하여 `Invoke-ScriptAnalyzer`를 실행하는 것이 모범 사례입니다.
 
@@ -52,7 +50,7 @@ PowerShell 갤러리에 있는 패키지를 게시하는 방법은 [패키지 �
 - 설명서에서 모든 오류를 수정했거나 해결했습니다.
 - 모든 경고를 검토했으며, 해당한느 경우 해결했습니다.
 
-PowerShell 갤러리에서 패키지를 다운로드한 사용자는 **PSScriptAnalyzer**를 실행하여 모든 오류와 경고를 평가하는 것이 좋습니다. **PSScriptAnalyzer**에서 보고하는 오류가 있음을 확인한 사용자는 패키지 소유자에게 문의할 가능성이 매우 높습니다. 패키지에서 오류로 플래그가 지정된 코드를 유지해야 하는 강력한 이유가 있다면 같은 질문에 여러 번 대답하지 않아도 되도록 설명서에 해당 정보를 추가하세요.
+PowerShell 갤러리에서 패키지를 다운로드한 사용자는 **PSScriptAnalyzer** 를 실행하여 모든 오류와 경고를 평가하는 것이 좋습니다. **PSScriptAnalyzer** 에서 보고하는 오류가 있음을 확인한 사용자는 패키지 소유자에게 문의할 가능성이 매우 높습니다. 패키지에서 오류로 플래그가 지정된 코드를 유지해야 하는 강력한 이유가 있다면 같은 질문에 여러 번 대답하지 않아도 되도록 설명서에 해당 정보를 추가하세요.
 
 ## <a name="include-documentation-and-examples"></a>설명서와 예제 포함
 
@@ -73,7 +71,7 @@ PowerShell 갤러리에서 패키지를 다운로드한 사용자는 **PSScriptA
 
 ## <a name="manage-dependencies"></a>종속성 관리
 
-모듈 매니페스트에서 모듈이 종속되는 모듈을 지정하는 것이 중요합니다. 이렇게 하면 최종 사용자는 해당 모듈이 종속성을 가지는 모듈의 적절한 버전을 설치할 걱정을 하지 않아도 됩니다. 종속 모듈을 지정하려면 모듈 매니페스트에서 필수 모듈 필드를 사용해야 합니다. 모듈이 아직 로드되어 있지 않은 경우 모듈을 가져오기 전에 나열된 모든 모듈이 전역 환경에 로드됩니다. 예를 들어 일부 모듈은 다른 모듈에 의해 이미 로드되어 있을 수 있습니다. 또한 **ModuleVersion** 필드가 아닌 **RequiredVersion** 필드를 사용하여 로드할 특정 버전을 지정할 수도 있습니다. **ModuleVersion**을 사용하는 경우 지정된 최소 버전에서 사용 가능한 최신 버전이 로드됩니다. **RequiredVersion** 필드를 사용하여 특정 버전을 지정하지 않는 경우 필수 모듈의 버전 업데이트를 모니터링하는 것이 중요합니다. 모듈의 사용자 환경에 영향을 미칠 수 있는 호환성이 손상되는 변경을 파악하는 것이 특히 중요합니다.
+모듈 매니페스트에서 모듈이 종속되는 모듈을 지정하는 것이 중요합니다. 이렇게 하면 최종 사용자는 해당 모듈이 종속성을 가지는 모듈의 적절한 버전을 설치할 걱정을 하지 않아도 됩니다. 종속 모듈을 지정하려면 모듈 매니페스트에서 필수 모듈 필드를 사용해야 합니다. 모듈이 아직 로드되어 있지 않은 경우 모듈을 가져오기 전에 나열된 모든 모듈이 전역 환경에 로드됩니다. 예를 들어 일부 모듈은 다른 모듈에 의해 이미 로드되어 있을 수 있습니다. 또한 **ModuleVersion** 필드가 아닌 **RequiredVersion** 필드를 사용하여 로드할 특정 버전을 지정할 수도 있습니다. **ModuleVersion** 을 사용하는 경우 지정된 최소 버전에서 사용 가능한 최신 버전이 로드됩니다. **RequiredVersion** 필드를 사용하여 특정 버전을 지정하지 않는 경우 필수 모듈의 버전 업데이트를 모니터링하는 것이 중요합니다. 모듈의 사용자 환경에 영향을 미칠 수 있는 호환성이 손상되는 변경을 파악하는 것이 특히 중요합니다.
 
 ```powershell
 Example: RequiredModules = @(@{ModuleName="myDependentModule"; ModuleVersion="2.0"; Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})
@@ -85,10 +83,9 @@ Example: RequiredModules = @(@{ModuleName="myDependentModule"; RequiredVersion="
 
 피드백에 적절하게 응답하는 패키지 소유자는 커뮤니티에서 높은 평가를 받습니다. 특정 패키지에 관심이 많아 패키지 개선을 지원하고자 하여 건설적인 피드백을 제공하는 사용자에게는 적절하게 응답을 해야 합니다.
 
-PowerShell 갤러리에서는 두 가지 피드백 방법이 제공됩니다.
+PowerShell 갤러리에서 사용할 수 있는 피드백 방법은 한 가지입니다.
 
 - 소유자에게 문의: 사용자가 패키지 소유자에게 이메일을 보낼 수 있습니다. 패키지 소유자는 PowerShell 갤러리 패키지에 사용하는 이메일 주소를 모니터링하여 제기되는 문제에 응답을 해야 합니다. 이 방법의 한 가지 단점은, 사용자와 소유자만이 교환하는 의견을 확인할 수 있으므로 소유자가 같은 질문에 여러 번 대답해야 할 수도 있다는 것입니다.
-- 주석: 패키지 페이지의 맨 아래에는 **주석** 필드가 있습니다. 이 시스템의 장점은 다른 사용자들도 댓글과 응답을 볼 수 있으므로 질문 하나에 대답해야 하는 횟수를 줄일 수 있다는 것입니다. 패키지 소유자는 각 패키지에 대한 댓글을 팔로우하는 것이 좋습니다. 자세한 방법은 [소셜 미디어나 댓글을 통해 피드백 제공](../how-to/working-with-packages/social-media-feedback.md)을 참조하세요.
 
 피드백에 건설적인 방식으로 응답하는 소유자는 커뮤니티에서 높은 평가를 받습니다. 보고서에서의 기회를 통해 더 많은 정보를 요청하세요. 필요한 경우 해결 방법을 제공하거나 업데이트가 문제를 해결하는지 확인하세요.
 
@@ -142,7 +139,7 @@ PowerShell 전용으로 설계된 Pester 테스트 프레임워크를 활용할 
 
 ## <a name="include-andor-link-to-license-terms"></a>사용 조건 포함 및/또는 링크 제공
 
-PowerShell 갤러리에 게시하는 모든 패키지는 사용 조건을 지정하거나 **증 A** 아래의 [사용 약관](https://www.powershellgallery.com/policies/Terms)에 포함된 라이선스에 따라 사용해야 합니다. 다른 라이선스를 지정하는 가장 효율적인 방식은 **PSData**의 **LicenseURI**를 사용하여 라이선스 링크를 제공하는 것입니다. 자세한 내용은 [패키지 매니페스트 및 갤러리 UI](package-manifest-affecting-ui.md)를 참조하세요.
+PowerShell 갤러리에 게시하는 모든 패키지는 사용 조건을 지정하거나 **증 A** 아래의 [사용 약관](https://www.powershellgallery.com/policies/Terms)에 포함된 라이선스에 따라 사용해야 합니다. 다른 라이선스를 지정하는 가장 효율적인 방식은 **PSData** 의 **LicenseURI** 를 사용하여 라이선스 링크를 제공하는 것입니다. 자세한 내용은 [패키지 매니페스트 및 갤러리 UI](package-manifest-affecting-ui.md)를 참조하세요.
 
 ```powershell
 PrivateData = @{
@@ -193,15 +190,15 @@ PowerShell 갤러리는 게시 프로세스를 테스트하기 위한 대상으�
 - GitHub의 [PS 전용 갤러리 프로젝트](https://github.com/PowerShell/PSPrivateGallery)를 사용하여 로컬 PowerShell 갤러리 인스턴스를 설정합니다. 이 미리 보기 프로젝트는 제어하고 테스트에 사용할 수 있는 PowerShell 갤러리 인스턴스를 설정하는 데 도움이 됩니다.
 - [내부 Nuget 리포지토리](https://blogs.msdn.microsoft.com/powershell/2014/05/20/setting-up-an-internal-powershellget-repository/)를 설정합니다.
   이렇게 하려면 설정하기 위해 수행할 작업이 더 많지만, 더 많은 요구 사항의 유효성을 검사할 수 있는 이점이 있으며, 특히 API 키 사용 유효성 검사가 가능하며 게시할 때 대상에 종속성이 있는지를 확인할 수 있습니다.
-- 파일 공유를 테스트 **리포지토리**로 설정합니다. 이 설정은 쉽지만, 파일 공유이므로 위에서 설명한 유효성 검사가 수행되지 않습니다. 이 경우의 한 가지 잠재적 이점은 파일 공유에서 필수 API 키를 확인하지 않으므로 PowerShell 갤러리에 게시하는 데 사용하는 키와 같은 키를 사용할 수 있다는 점입니다.
+- 파일 공유를 테스트 **리포지토리** 로 설정합니다. 이 설정은 쉽지만, 파일 공유이므로 위에서 설명한 유효성 검사가 수행되지 않습니다. 이 경우의 한 가지 잠재적 이점은 파일 공유에서 필수 API 키를 확인하지 않으므로 PowerShell 갤러리에 게시하는 데 사용하는 키와 같은 키를 사용할 수 있다는 점입니다.
 
-이러한 솔루션에서는 `Register-PSRepository`를 사용하여 `Publish-Module`에 대한 `-Repository` 매개 변수에 사용하는 새 **리포지토리**를 정의합니다.
+이러한 솔루션에서는 `Register-PSRepository`를 사용하여 `Publish-Module`에 대한 `-Repository` 매개 변수에 사용하는 새 **리포지토리** 를 정의합니다.
 
 게시 테스트에 대한 한 가지 추가 사항: PowerShell 갤러리에 게시하는 모든 패키지는 게시하려는 패키지에 종속된 항목이 없음을 확인할 운영 팀의 도움 없이는 삭제할 수 없습니다. 이러한 이유로 Microsoft에서는 PowerShell 갤러리를 테스트 대상으로 지원하지 않으며 이렇게 하는 게시자에게 연락합니다.
 
 ## <a name="use-powershellget-to-publish"></a>PowerShellGet을 사용하여 게시
 
-게시자는 PowerShell 갤러리 작업할 때 `Publish-Module` 및 `Publish-Script` cmdlet을 사용하는 것이 좋습니다. **PowerShellGet** 은 PowerShell 갤러리에서 설치하고 이 갤러리에 게시하는 데 대한 중요한 세부 정보를 저장하지 않아도 되도록 지원하기 위해 고안되었습니다. 경우에 따라 게시자는 **PowerShellGet**을 건너뛰고, `Publish-Module` 대신 **NuGet** 클라이언트 또는 **PackageManagement** cmdlet을 사용하도록 선택합니다. 여러 세부 사항이 쉽게 누락되면서 다양한 지원 요청을 초래합니다.
+게시자는 PowerShell 갤러리 작업할 때 `Publish-Module` 및 `Publish-Script` cmdlet을 사용하는 것이 좋습니다. **PowerShellGet** 은 PowerShell 갤러리에서 설치하고 이 갤러리에 게시하는 데 대한 중요한 세부 정보를 저장하지 않아도 되도록 지원하기 위해 고안되었습니다. 경우에 따라 게시자는 **PowerShellGet** 을 건너뛰고, `Publish-Module` 대신 **NuGet** 클라이언트 또는 **PackageManagement** cmdlet을 사용하도록 선택합니다. 여러 세부 사항이 쉽게 누락되면서 다양한 지원 요청을 초래합니다.
 
 `Publish-Module` 또는`Publish-Script`를 사용할 수 없는 이유가 있으면 알려주세요.
 **PowerShellGet** GitHub 리포지토리에서 문제를 정리하고 **NuGet** 또는 **PackageManagement** 중에서 선택하는 데 도움이 되는 세부 정보를 제공하세요.

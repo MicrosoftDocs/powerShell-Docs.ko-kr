@@ -1,14 +1,13 @@
 ---
 ms.date: 09/05/2018
-contributor: JKeithB
-keywords: gallery,powershell,cmdlet,psgallery
 title: PowerShell 갤러리 계정 설정
-ms.openlocfilehash: b71c7f0658c24ec2eeddb050e48b777a37c11917
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: 이 문서에서는 PowerShell 갤러리의 계정 프로필 설정을 설명합니다.
+ms.openlocfilehash: ab0e09aae6fea26ac6d85a35e30c8d06f31b121a
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771790"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662743"
 ---
 # <a name="powershell-gallery-account-settings"></a>PowerShell 갤러리 계정 설정
 
@@ -51,16 +50,16 @@ PowerShell 갤러리에서 제공하는 알림 옵션은 다음과 같습니다.
 
 ![로그인 계정 설정 변경](media/managing-account/PSGallery_LoginAccountSettings.png)
 
-1. **계정 변경**을 클릭합니다. 팝업 창에서 로그인 계정을 변경하면 PowerShell 갤러리에 있는 해당 계정의 모든 사용에 적용된다고 설명합니다. 정보를 검토한 다음, **확인**을 클릭하여 계속합니다.
+1. **계정 변경** 을 클릭합니다. 팝업 창에서 로그인 계정을 변경하면 PowerShell 갤러리에 있는 해당 계정의 모든 사용에 적용된다고 설명합니다. 정보를 검토한 다음, **확인** 을 클릭하여 계속합니다.
 
    ![변경 확인 - 확인/취소](media/managing-account/PSGallery_LoginAccountChange-1.png)
 
-2. 그런 다음, _새 계정_을 사용하여 로그인하라는 메시지가 표시됩니다.
+2. 그런 다음, _새 계정_ 을 사용하여 로그인하라는 메시지가 표시됩니다.
 
    ![새 계정으로 로그인](media/managing-account/PSGallery_LoginAccountChange-2.png)
 
-3. **다음**을 클릭하면 현재 계정을 사용하여 로그인했다는 메시지가 표시됩니다.
-   **다른 계정으로 로그아웃 및 로그인**을 클릭합니다.
+3. **다음** 을 클릭하면 현재 계정을 사용하여 로그인했다는 메시지가 표시됩니다.
+   **다른 계정으로 로그아웃 및 로그인** 을 클릭합니다.
 
    ![다른 계정으로 로그아웃 및 로그인](media/managing-account/PSGallery_LoginAccountChange-3.png)
 

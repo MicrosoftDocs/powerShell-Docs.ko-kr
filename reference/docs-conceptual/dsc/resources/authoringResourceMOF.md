@@ -2,18 +2,20 @@
 ms.date: 07/08/2020
 keywords: dsc,powershell,configuration,setup
 title: MOF를 사용하여 사용자 지정 DSC 리소스 작성
-ms.openlocfilehash: ba857fa504bfd84accfd7f260b1fff1228db40ba
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: 이 문서에서는 MOF 파일에 DSC 사용자 지정 리소스의 스키마를 정의하고 PowerShell 스크립트 파일에 리소스를 구현합니다.
+ms.openlocfilehash: e79a37699c468b2c55c307c96f1c193a2c1595b3
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217528"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667184"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>MOF를 사용하여 사용자 지정 DSC 리소스 작성
 
 > 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-이 항목에서는 MOF 파일에 Windows PowerShell DSC(필요한 상태 구성) 사용자 지정 리소스에 대한 스키마를 정의하고 Windows PowerShell 스크립트 파일에 리소스를 구현합니다. 이 사용자 지정 리소스는 웹 사이트를 만들고 유지 관리하기 위한 것입니다.
+이 문서에서는 MOF 파일에 Windows PowerShell DSC(Desired State Configuration) 사용자 지정 리소스의 스키마를 정의하고 Windows PowerShell 스크립트 파일에 리소스를 구현합니다.
+이 사용자 지정 리소스는 웹 사이트를 만들고 유지 관리하기 위한 것입니다.
 
 ## <a name="creating-the-mof-schema"></a>MOF 스키마 만들기
 
@@ -68,8 +70,7 @@ class Demo_IISWebsite : OMI_BaseResource
 
 ### <a name="writing-the-resource-script"></a>리소스 스크립트 작성
 
-리소스 스크립트는 리소스의 논리를 구현합니다. 이 모듈에서는 `Get-TargetResource`, `Set-TargetResource` 및 `Test-TargetResource`라는 세 가지 함수를 포함해야 합니다. 세 함수는 모두 리소스용으로 만든 MOF 스키마에 정의된 속성 집합과 동일한 매개 변수 집합을 사용해야 합니다. 이 문서에서는 이 속성 세트를 "리소스 속성"이라고 합니다. 이 세 개의 함수를 `<ResourceName>.psm1`이라는 파일에 저장합니다.
-다음 예제에서는 해당 함수가 `Demo_IISWebsite.psm1`이라는 파일에 저장됩니다.
+리소스 스크립트는 리소스의 논리를 구현합니다. 이 모듈에서는 `Get-TargetResource`, `Set-TargetResource` 및 `Test-TargetResource`라는 세 가지 함수를 포함해야 합니다. 세 함수는 모두 리소스용으로 만든 MOF 스키마에 정의된 속성 집합과 동일한 매개 변수 집합을 사용해야 합니다. 이 문서에서는 이 속성 세트를 "리소스 속성"이라고 합니다. 이 세 개의 함수를 `<ResourceName>.psm1`이라는 파일에 저장합니다. 다음 예제에서는 해당 함수가 `Demo_IISWebsite.psm1`이라는 파일에 저장됩니다.
 
 > [!NOTE]
 > 리소스에서 동일한 구성 스크립트를 두 번 이상 실행해도 오류가 표시되지 않고 리소스는 스크립트를 한 번 실행하는 것과 동일한 상태로 유지되어야 합니다. 이 작업을 해내려면 `Get-TargetResource` 및 `Test-TargetResource` 함수가 리소스를 변경하지 않고 그대로 두고, `Set-TargetResource` 함수를 동일한 매개 변수 값으로 순서대로 두 번 이상 호출하는 것은 한 번 호출하는 것과 항상 동일한지 확인합니다.
@@ -77,7 +78,8 @@ class Demo_IISWebsite : OMI_BaseResource
 `Get-TargetResource` 함수 구현에서는 매개 변수로 제공되는 주요 리소스 속성 값을 사용하여 지정된 리소스 인스턴스 상태를 확인합니다. 이 함수는 모든 리소스 속성을 키로 나열하고, 이러한 속성의 실제 값을 그에 대한 해당 값으로 나열하는 해시 테이블을 반환해야 합니다. 다음 코드에 예가 나와 있습니다.
 
 ```powershell
-# DSC uses the Get-TargetResource function to fetch the status of the resource instance specified in the parameters for the target machine
+# DSC uses the Get-TargetResource function to fetch the status of the resource instance
+# specified in the parameters for the target machine
 function Get-TargetResource
 {
     param
@@ -105,8 +107,11 @@ function Get-TargetResource
 
         $getTargetResourceResult = $null;
 
-        <# Insert logic that uses the mandatory parameter values to get the website and assign it to a variable called $Website #>
-        <# Set $ensureResult to "Present" if the requested website exists and to "Absent" otherwise #>
+        <#
+          Insert logic that uses the mandatory parameter values to get the website and
+          assign it to a variable called $Website
+          Set $ensureResult to "Present" if the requested website exists and to "Absent" otherwise
+        #>
 
         # Add all Website properties to the hash table
         # This simple example assumes that $Website is not null
@@ -161,10 +166,14 @@ function Set-TargetResource
         [string[]]$Protocol
     )
 
-    <# If Ensure is set to "Present" and the website specified in the mandatory input parameters does not exist, then create it using the specified parameter values #>
-    <# Else, if Ensure is set to "Present" and the website does exist, then update its properties to match the values provided in the non-mandatory parameter values #>
-    <# Else, if Ensure is set to "Absent" and the website does not exist, then do nothing #>
-    <# Else, if Ensure is set to "Absent" and the website does exist, then delete the website #>
+    <#
+        If Ensure is set to "Present" and the website specified in the mandatory input parameters
+          does not exist, then create it using the specified parameter values
+        Else, if Ensure is set to "Present" and the website does exist, then update its properties
+          to match the values provided in the non-mandatory parameter values
+        Else, if Ensure is set to "Absent" and the website does not exist, then do nothing
+        Else, if Ensure is set to "Absent" and the website does exist, then delete the website
+    #>
 }
 ```
 
@@ -208,18 +217,19 @@ function Test-TargetResource
     # Get the current state
     $currentState = Get-TargetResource -Ensure $Ensure -Name $Name -PhysicalPath $PhysicalPath -State $State -ApplicationPool $ApplicationPool -BindingInfo $BindingInfo -Protocol $Protocol
 
-    #Write-Verbose "Use this cmdlet to deliver information about command processing."
+    # Write-Verbose "Use this cmdlet to deliver information about command processing."
 
-    #Write-Debug "Use this cmdlet to write debug information while troubleshooting."
+    # Write-Debug "Use this cmdlet to write debug information while troubleshooting."
 
-    #Include logic to
+    # Include logic to
     $result = [System.Boolean]
-    #Add logic to test whether the website is present and its status matches the supplied parameter values. If it does, return true. If it does not, return false.
+    # Add logic to test whether the website is present and its status matches the supplied
+    # parameter values. If it does, return true. If it does not, return false.
     $result
 }
 ```
 
-> [!Note]
+> [!NOTE]
 > 보다 쉽게 디버깅하려면 이전 세 개의 함수를 구현할 때 `Write-Verbose` cmdlet을 사용합니다. 이 cmdlet은 자세한 정보 메시지 스트림에 텍스트를 씁니다. 자세한 정보 메시지 스트림은 기본적으로 표시되지 않지만 **$VerbosePreference** 변수 값을 변경하거나 DSC cmdlets = new에 **Verbose** 매개 변수를 사용하여 표시할 수 있습니다.
 
 ### <a name="creating-the-module-manifest"></a>모듈 매니페스트 만들기
@@ -281,7 +291,7 @@ FunctionsToExport = @("Get-TargetResource", "Set-TargetResource", "Test-TargetRe
 ## <a name="supporting-psdscrunascredential"></a>PsDscRunAsCredential 지원
 
 > [!Note]
-> **PsDscRunAsCredential**은 PowerShell 5.0이상에서 지원됩니다.
+> **PsDscRunAsCredential** 은 PowerShell 5.0이상에서 지원됩니다.
 
 **PsDscRunAsCredential** 속성을 [DSC 구성](../configurations/configurations.md) 리소스 블록에서 사용하면 지정된 자격 증명 집합으로 리소스를 실행해야 함을 지정할 수 있습니다. 자세한 내용은 [사용자 자격 증명을 사용하여 DSC 실행](../configurations/runAsUser.md)을 참조하세요.
 
@@ -307,4 +317,4 @@ $global:DSCMachineStatus = 1
 ```
 
 LCM이 노드를 다시 부팅하기 위해 **RebootNodeIfNeeded** 플래그는 `$true`로 설정되어야 합니다.
-**ActionAfterReboot** 설정도 기본값인 **ContinueConfiguration**으로 설정되어야 합니다. LCM 구성에 대한 자세한 내용은 [로컬 구성 관리자 구성](../managing-nodes/metaConfig.md) 또는 [로컬 구성 관리자 구성(v4)](../managing-nodes/metaConfig4.md)을 참조하세요.
+**ActionAfterReboot** 설정도 기본값인 **ContinueConfiguration** 으로 설정되어야 합니다. LCM 구성에 대한 자세한 내용은 [로컬 구성 관리자 구성](../managing-nodes/metaConfig.md) 또는 [로컬 구성 관리자 구성(v4)](../managing-nodes/metaConfig4.md)을 참조하세요.

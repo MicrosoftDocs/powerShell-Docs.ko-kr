@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: gallery,powershell,cmdlet,psgallery
 title: Azure 자동화에 배포
-ms.openlocfilehash: 5d09a0777c59b642400d683c8cb6f881319fb881
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 PowerShell 갤러리를 사용하여 Azure Automation에 패키지를 배포하는 방법을 설명합니다.
+ms.openlocfilehash: e9de079ee6cc950c8a268423b9eabd515959b718
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278746"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662373"
 ---
 # <a name="deploy-to-azure-automation"></a>Azure 자동화에 배포
 
@@ -16,13 +15,12 @@ ms.locfileid: "78278746"
 
 ![Azure Automation에 배포](media/deploy-to-azure-automation/DeployToAzureAutomationButton.png)
 
-클릭하면 Azure 관리 포털로 리디렉션되며, 여기서 Azure 계정 자격 증명을 사용하여 로그인합니다.
-패키지에 종속성이 포함된 경우 모든 종속성도 Azure Automation에 배포됩니다.
+클릭하면 Azure 관리 포털로 리디렉션되며, 여기서 Azure 계정 자격 증명을 사용하여 로그인합니다. 패키지에 종속성이 포함된 경우 모든 종속성도 Azure Automation에 배포됩니다.
 
 > [!WARNING]
 > Automation 계정에 동일한 패키지와 버전이 이미 있는 경우 PowerShell 갤러리에서 다시 배포하면 Automation 계정의 패키지를 덮어씁니다.
 
-모듈을 배포하는 경우 Azure Automation의 Modules 섹션에 표시됩니다.  스크립트를 배포하는 경우 Azure Automation의 Runbook 섹션에 표시됩니다.
+모듈을 배포하는 경우 Azure Automation의 Modules 섹션에 표시됩니다. 스크립트를 배포하는 경우 Azure Automation의 Runbook 섹션에 표시됩니다.
 
 패키지 메타데이터에 AzureAutomationNotSupported 태그를 추가하면 Azure Automation에 배포 단추를 해제할 수 있습니다.
 

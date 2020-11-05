@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: gallery,powershell,cmdlet,psgallery
 title: 갤러리에 대한 ScriptAnazlyer 규칙 프로필
-ms.openlocfilehash: 939f01dece56b283dbe6e03c888f42ff866707af
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShell ScriptAnalyzer가 PowerShell 갤러리와 통합되는 방법을 설명합니다.
+ms.openlocfilehash: 3af710e8811f0fabfb02f5317d5b4ff9c320f29a
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328474"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646758"
 ---
 # <a name="scriptanalyzer-rule-profile-for-gallery"></a>갤러리에 대한 ScriptAnazlyer 규칙 프로필
 

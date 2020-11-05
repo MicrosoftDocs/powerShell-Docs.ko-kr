@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,setup
 title: 새로 제공되거나 업데이트된 cmdlet
-ms.openlocfilehash: ffd5db2d4fc9bf8f67ef5e352633ad3209f72c87
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Windows PowerShell 5.1에는 새로 제공되거나 업데이트된 cmdlet이 여러 개 포함되어 있습니다.
+ms.openlocfilehash: bdfbe5a263864a172aefb0aa5731f59b95ab43ca
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809119"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663227"
 ---
 # <a name="new-and-updated-cmdlets"></a>새로 제공되거나 업데이트된 cmdlet
 
@@ -102,11 +102,11 @@ ProductVersion    : 10.0.17763.1
 
 ## <a name="get-childitem-has--depth-parameter"></a>Get-ChildItem의 -Depth 매개 변수
 
-이제 `Get-ChildItem`은 **Recurse**와 함께 사용되어 재귀를 제한하는 **Depth** 매개 변수를 제공합니다.
+이제 `Get-ChildItem`은 **Recurse** 와 함께 사용되어 재귀를 제한하는 **Depth** 매개 변수를 제공합니다.
 
 ## <a name="modules-support-for-declaring-version-ranges-1-etc"></a>모듈의 버전 범위 선언(1.* 등) 지원
 
-이제 **MinimumVersion** 및 **MaximumVersion**을 결합하여 특정 범위 내의 모듈을 가져올 수 있습니다. 또한 매개 변수는 와일드 카드를 지원합니다.
+이제 **MinimumVersion** 및 **MaximumVersion** 을 결합하여 특정 범위 내의 모듈을 가져올 수 있습니다. 또한 매개 변수는 와일드 카드를 지원합니다.
 
 ```powershell
 Import-Module psreadline -Verbose -MinimumVersion 1.0 -MaximumVersion 1.2.*
@@ -151,7 +151,7 @@ Get-Content .\Example.txt
 This is a single sentence.
 ```
 
-**NoNewline**을 지정하지 않으면 각 조각이 별도의 줄에 있게 됩니다.
+**NoNewline** 을 지정하지 않으면 각 조각이 별도의 줄에 있게 됩니다.
 
 ```powershell
 "This is " | Out-File -FilePath Example.txt
@@ -192,7 +192,7 @@ New-Item -ItemType SymbolicLink -Name C:\Temp\MySymLinkDir -Value $pshome
 
 ### <a name="hard-links"></a>하드 링크
 
-위에서 설명한 대로 허용되는 **경로** 및 **이름**의 동일한 조합입니다.
+위에서 설명한 대로 허용되는 **경로** 및 **이름** 의 동일한 조합입니다.
 
 ```powershell
 New-Item -ItemType HardLink -Path C:\Temp -Name MyHardLinkFile.txt -Value $pshome\profile.ps1
@@ -200,7 +200,7 @@ New-Item -ItemType HardLink -Path C:\Temp -Name MyHardLinkFile.txt -Value $pshom
 
 ### <a name="directory-junctions"></a>디렉터리 연결
 
-위에서 설명한 대로 허용되는 **경로** 및 **이름**의 동일한 조합입니다.
+위에서 설명한 대로 허용되는 **경로** 및 **이름** 의 동일한 조합입니다.
 
 ```powershell
 New-Item -ItemType Junction -Path C:\Temp\MyJunctionDir -Value $pshome

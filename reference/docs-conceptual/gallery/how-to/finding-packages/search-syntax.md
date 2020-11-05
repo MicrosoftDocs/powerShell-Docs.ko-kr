@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: gallery,powershell,cmdlet,psgallery
 title: 갤러리 검색 구문
-ms.openlocfilehash: 9eaabc22090655076dabe177f04130738e081179
-ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
+description: 이 문서에서는 PowerShell 갤러리에서 콘텐츠를 검색하는 데 사용되는 사용자 인터페이스에 대해 설명합니다.
+ms.openlocfilehash: 7ad486095647f99056b37c2ca1a50db099a166c0
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90847003"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661367"
 ---
 # <a name="gallery-search-syntax"></a>갤러리 검색 구문
 

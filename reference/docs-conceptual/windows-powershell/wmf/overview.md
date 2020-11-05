@@ -2,12 +2,13 @@
 ms.date: 04/19/2019
 keywords: wmf,powershell,setup
 title: WMF(Windows Management Framework)
-ms.openlocfilehash: d581370fd602e03c86aa549eb8b273ff4d01b4e5
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: WMF는 Windows PowerShell의 필수 구성 요소입니다. 이 문서에서는 WMF 버전 기록을 보여 주고 WMF를 찾고 설치하는 방법에 대한 정보를 제공합니다.
+ms.openlocfilehash: 339b140325befea0b28aa470d4249170937f2c37
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808689"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654034"
 ---
 # <a name="windows-management-framework"></a>Windows Management Framework
 
@@ -51,8 +52,8 @@ PowerShell 및 지정된 WMF의 다른 구성 요소에서 향상된 다양한 �
 | Windows Server 2003<br>‘지원되지 않음’ |              |                             |              |              | 예          |
 | Windows XP<br>‘지원되지 않음’          |              |                             |              | 예          | 예          |
 
-- **함께 제공**: 지정된 버전의 WMF 기능은 표시된 버전의 Windows 클라이언트 및 Windows Server에 제공되었습니다.
-- **지원되지 않음**: 이 제품은 더 이상 Microsoft에서 지원되지 않습니다. 지원되는 새 버전으로 업그레이드해야 합니다. 자세한 내용은 [Microsoft 수명 주기 정책][] 페이지를 참조하세요.
+- **함께 제공** : 지정된 버전의 WMF 기능은 표시된 버전의 Windows 클라이언트 및 Windows Server에 제공되었습니다.
+- **지원되지 않음** : 이 제품은 더 이상 Microsoft에서 지원되지 않습니다. 지원되는 새 버전으로 업그레이드해야 합니다. 자세한 내용은 [Microsoft 수명 주기 정책][] 페이지를 참조하세요.
 
 > [!NOTE]
 > WMF 5.0 설치 관리자는 더 이상 제공 또는 지원되지 않습니다. WMF 5.1에서 바뀌었습니다.

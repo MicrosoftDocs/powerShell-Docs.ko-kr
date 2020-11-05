@@ -1,14 +1,14 @@
 ---
 ms.date: 10/17/2017
-contributor: keithb
-keywords: gallery,powershell,cmdlet,psget
 title: 시험판 스크립트 버전
-ms.openlocfilehash: c0198c2f575d2c004949ccebab49d93ce54716be
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShellGet 모듈은 의미 체계 버전 관리를 사용하여 1.0.0보다 큰 버전에 스크립트 태그 지정 지원을 시험판으로 제공합니다.
+ms.openlocfilehash: e9873a69148fd80553e566b31c7455a4ecaee5ce
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328484"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661470"
+---
 ---
 # <a name="prerelease-versions-of-scripts"></a>시험판 스크립트 버전
 

@@ -1,14 +1,13 @@
 ---
 ms.date: 09/26/2017
-contributor: keithb
-keywords: gallery,powershell,cmdlet,psget
 title: 시험판 모듈 버전
-ms.openlocfilehash: eced067dd21082de0db653daf3b838217154f1dd
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShellGet 모듈은 의미 체계 버전 관리를 사용하여 1.0.0보다 큰 버전에 모듈 태그 지정을 시험판으로 지원합니다.
+ms.openlocfilehash: f794722f0a89f98f8f445ecd45dad9d3d2d7f3cb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328144"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661518"
 ---
 # <a name="prerelease-module-versions"></a>시험판 모듈 버전
 

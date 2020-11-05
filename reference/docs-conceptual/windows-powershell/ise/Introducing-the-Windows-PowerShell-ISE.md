@@ -1,13 +1,13 @@
 ---
 ms.date: 08/14/2018
-keywords: powershell,cmdlet
 title: Windows PowerShell ISE 소개
-ms.openlocfilehash: 3e4471d0982ba4d7ef1a9d59906a9ff297f6f7cb
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: PowerShell ISE는 단일 Windows 기반 그래픽 사용자 인터페이스에서 명령을 실행하고 스크립트를 작성, 테스트, 디버그할 수 있는 Windows PowerShell의 호스트 애플리케이션입니다.
+ms.openlocfilehash: ab2b11e5d81933b166d404c0b24c96aa73253895
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808719"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663606"
 ---
 # <a name="the-windows-powershell-ise"></a>Windows PowerShell ISE
 
@@ -35,9 +35,9 @@ Windows PowerShell ISE를 사용하여 해당 모양의 일부 측면을 사용�
 
 ## <a name="to-start-the-windows-powershell-ise"></a>Windows PowerShell ISE를 시작하려면
 
-**시작**을 클릭하고 **Windows PowerShell**을 선택한 후 고 **Windows PowerShell ISE**를 클릭합니다.
+**시작** 을 클릭하고 **Windows PowerShell** 을 선택한 후 고 **Windows PowerShell ISE** 를 클릭합니다.
 또는 임의 명령 셸이나 실행 상자에 `powershell_ise.exe`를 입력할 수 있습니다.
 
 ## <a name="to-get-help-in-the-windows-powershell-ise"></a>Windows PowerShell ISE에서 도움말을 가져오려면
 
-**도움말** 메뉴에서 **Windows PowerShell 도움말**을 클릭합니다. 또는 <kbd>F1</kbd> 키를 누릅니다. 열린 파일에는 `Get-Help` cmdlet에서 사용 가능한 모든 도움말을 비롯하여 Windows PowerShell ISE 및 Windows PowerShell이 설명되어 있습니다.
+**도움말** 메뉴에서 **Windows PowerShell 도움말** 을 클릭합니다. 또는 <kbd>F1</kbd> 키를 누릅니다. 열린 파일에는 `Get-Help` cmdlet에서 사용 가능한 모든 도움말을 비롯하여 Windows PowerShell ISE 및 Windows PowerShell이 설명되어 있습니다.

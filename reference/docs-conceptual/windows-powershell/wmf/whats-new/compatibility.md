@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,setup
 title: 제품 호환성 상태
-ms.openlocfilehash: c740b2560162ecdab40daac2f9ae36c29811ac13
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: 이 문서에는 WMF 5.1과 호환되는 소프트웨어가 나와 있습니다.
+ms.openlocfilehash: 5610c668059b07f7c2f6e832b6ed1bd2eb9719b2
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808999"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660654"
 ---
 # <a name="product-compatibility-status"></a>제품 호환성 상태
 
@@ -17,7 +16,7 @@ ms.locfileid: "83808999"
 다음과 같은 서버 애플리케이션이 실행되는 시스템은 Windows Management Framework 5.1을 **실행할 수** 있습니다.
 
 - Microsoft SharePoint Server 2013
-- 비즈니스용 Skype 서버 2015
+- Business Server 2015용 Skype
 - Microsoft Lync Server 2013
 - System Center 2012 Configuration Manager
 

@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,setup
 title: WMF 5.1의 향상된 DSC
-ms.openlocfilehash: 445d0f7bb54c6b21b6af26c4174f3d6422caf6dd
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: 이 문서에는 WMF 5.1에 포함된 DSC(Desired State Configuration)의 개선 사항이 나와 있습니다.
+ms.openlocfilehash: 564cf0e8321b6b2b2e5d856acd4d3644d6566100
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771552"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667290"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>WMF 5.1에서 DSC(필요한 상태 구성)의 개선 사항
 
@@ -149,7 +148,7 @@ WMF 5.0에서 PowerShell 디버거는 클래스 기반 리소스 메서드(Get/S
 
 [PsDscRunAsCredential](/powershell/scripting/dsc/configurations/runAsUser)을 DSC [복합](/powershell/scripting/dsc/resources/authoringresourcecomposite) 리소스와 함께 사용할 수 있도록 지원을 추가했습니다.
 
-이제 구성 내에서 복합 리소스를 사용할 때 **PsDscRunAsCredential** 값을 지정할 수 있습니다. 이 값을 지정할 경우 모든 리소스가 복합 리소스 내에서 RunAs 사용자로 실행됩니다. 복합 리소스가 다른 복합 리소스를 호출하는 경우에도 해당 리소스가 모두 RunAs 사용자로 실행됩니다. RunAs 자격 증명은 복합 리소스 계층 구조의 모든 수준에 전파됩니다. 복합 리소스 내의 리소스가 **PsDscRunAsCredential**의 고유한 값을 지정하는 경우 구성 컴파일 중 병합 오류가 발생합니다.
+이제 구성 내에서 복합 리소스를 사용할 때 **PsDscRunAsCredential** 값을 지정할 수 있습니다. 이 값을 지정할 경우 모든 리소스가 복합 리소스 내에서 RunAs 사용자로 실행됩니다. 복합 리소스가 다른 복합 리소스를 호출하는 경우에도 해당 리소스가 모두 RunAs 사용자로 실행됩니다. RunAs 자격 증명은 복합 리소스 계층 구조의 모든 수준에 전파됩니다. 복합 리소스 내의 리소스가 **PsDscRunAsCredential** 의 고유한 값을 지정하는 경우 구성 컴파일 중 병합 오류가 발생합니다.
 
 이 예제에서는 PSDesiredStateConfiguration 모듈에 포함된 [WindowsFeatureSet](/powershell/scripting/dsc/reference/resources/windows/windowsfeaturesetresource) 복합 리소스와 함께 사용하는 방법입니다.
 

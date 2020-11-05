@@ -2,12 +2,13 @@
 ms.date: 07/08/2020
 keywords: dsc,powershell,configuration,setup
 title: PowerShell 클래스를 사용하여 사용자 지정 DSC 리소스 작성
-ms.openlocfilehash: b7f6d3135cb1da7ade106f8a4cc41e3afb7306af
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: 이 문서에서는 지정된 경로에 있는 파일을 관리하는 간단한 리소스를 만드는 방법을 보여 줍니다.
+ms.openlocfilehash: 72a828795c29e10ff66f164b8871b0fea7a1e0a8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217562"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667320"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>PowerShell 클래스를 사용하여 사용자 지정 DSC 리소스 작성
 
@@ -17,7 +18,7 @@ Windows PowerShell 5.0의 PowerShell 클래스 도입으로 이제 클래스를 
 
 클래스 기반 DSC 리소스에서 스키마는 속성 유형을 지정하는 특성으로 수정할 수 있는 클래스의 속성으로 정의됩니다. 리소스는 스크립트 리소스에 있는 `Get()` , `Set()` 및 `Test()` 메서드(`Get-TargetResource`, `Set-TargetResource` 및 `Test-TargetResource`) 함수에 의해 구현됩니다.
 
-이 항목에서는 지정된 경로에 있는 파일을 관리하는 **FileResource**라는 간단한 리소스를 만듭니다.
+이 문서에서는 지정된 경로에 있는 파일을 관리하는 **FileResource** 라는 간단한 리소스를 만듭니다.
 
 DSC 리소스에 대한 자세한 내용은 [Build Custom Windows PowerShell Desired State Configuration Resources(사용자 지정 Windows PowerShell 필요한 상태 구성 리소스 빌드)](authoringResource.md)를 참조하세요.
 
@@ -475,17 +476,17 @@ Start-DscConfiguration -Wait -Force Test
 
 ## <a name="supporting-psdscrunascredential"></a>PsDscRunAsCredential 지원
 
-> [참고] **PsDscRunAsCredential**은 PowerShell 5.0이상에서 지원됩니다.
+> [참고] **PsDscRunAsCredential** 은 PowerShell 5.0이상에서 지원됩니다.
 
 **PsDscRunAsCredential** 속성을 [DSC 구성](../configurations/configurations.md) 리소스 블록에서 사용하면 지정된 자격 증명 집합으로 리소스를 실행해야 함을 지정할 수 있습니다. 자세한 내용은 [사용자 자격 증명을 사용하여 DSC 실행](../configurations/runAsUser.md)을 참조하세요.
 
 ### <a name="require-or-disallow-psdscrunascredential-for-your-resource"></a>리소스에 대해 PsDscRunAsCredential을 필수 항목으로 지정하거나 사용 차단
 
-`DscResource()` 특성은 선택적 매개 변수 **RunAsCredential**을 사용합니다. 이 매개 변수는 다음의 3개 값 중 하나를 사용합니다.
+`DscResource()` 특성은 선택적 매개 변수 **RunAsCredential** 을 사용합니다. 이 매개 변수는 다음의 3개 값 중 하나를 사용합니다.
 
-- `Optional`: 이 리소스를 호출하는 구성에 대해 필요에 따라 **PsDscRunAsCredential**을 사용할 수 있습니다. 이것은 기본값입니다.
-- `Mandatory`: 이 리소스를 호출하는 모든 구성에 대해 **PsDscRunAsCredential**을 반드시 사용해야 합니다.
-- `NotSupported`: 이 리소스를 호출하는 구성에서 **PsDscRunAsCredential**을 사용할 수 없습니다.
+- `Optional`: 이 리소스를 호출하는 구성에 대해 필요에 따라 **PsDscRunAsCredential** 을 사용할 수 있습니다. 이것은 기본값입니다.
+- `Mandatory`: 이 리소스를 호출하는 모든 구성에 대해 **PsDscRunAsCredential** 을 반드시 사용해야 합니다.
+- `NotSupported`: 이 리소스를 호출하는 구성에서 **PsDscRunAsCredential** 을 사용할 수 없습니다.
 - `Default`: `Optional`과 동일합니다.
 
 예를 들어 사용자 지정 리소스가 **PsDscRunAsCredential** 사용을 지원하지 않도록 지정하려면 다음 특성을 사용합니다.

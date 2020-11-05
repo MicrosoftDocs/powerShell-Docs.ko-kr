@@ -1,21 +1,19 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: gallery,powershell,cmdlet,psgallery
 title: 검색 결과 필터링
-ms.openlocfilehash: 51f8d243cb9b1f4ff7413eec8839697299e8dd52
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+description: 이 문서에서는 PowerShell 갤러리에서 콘텐츠를 필터링하는 데 사용되는 사용자 인터페이스에 대해 설명합니다.
+ms.openlocfilehash: cc375f3ddb35c95ed134776500bd326bc3db6b1a
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83691475"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661402"
 ---
 # <a name="filtering-search-results"></a>검색 결과 필터링
 
 [패키지 탭](https://www.powershellgallery.com/packages)에는 PowerShell 갤러리에서 사용 가능한 모든 패키지가 표시됩니다.
 
-패키지를 필터링, 정렬 및 검색하는 방법에는 여러 가지가 있습니다.
-특정 패키지에 대한 자세한 정보를 보려면 해당 패키지를 클릭합니다.
+패키지를 필터링, 정렬 및 검색하는 방법에는 여러 가지가 있습니다. 특정 패키지에 대한 자세한 정보를 보려면 해당 패키지를 클릭합니다.
 
 ## <a name="filter-by"></a>필터 기준
 
@@ -38,15 +36,10 @@ ms.locfileid: "83691475"
   - 역할 기능
   - 워크플로
 
-PowerShell 갤러리의 모듈만 보려면 [패키지 종류]에서 [모듈]을 선택합니다.
-마찬가지로 PowerShell 갤러리에서 스크립트만 보려면 [패키지 종류]에서 [스크립트]를 선택합니다.
+PowerShell 갤러리의 모듈만 보려면 [패키지 종류]에서 [모듈]을 선택합니다. 마찬가지로 PowerShell 갤러리에서 스크립트만 보려면 [패키지 종류]에서 [스크립트]를 선택합니다.
 
 > [!NOTE]
-> 필터가 포함됩니다.
-> 예제: cmdlet과 함수를 둘 다 포함하는 패키지는 [Cmdlet] 또는 [함수] \(또는 둘 다)를 선택한 경우에 표시됩니다.
-> 둘 다 선택하지 않으면 패키지가 표시되지 않습니다.
-> 마찬가지로, 모든 범주를 선택하면 이러한 범주 중 하나를 포함하는 패키지만 표시됩니다.
-> **이러한 범주에 속하지 않는 패키지는 표시되지 않습니다.**
+> 필터가 포함됩니다. 예제: cmdlet과 함수를 둘 다 포함하는 패키지는 [Cmdlet] 또는 [함수] \(또는 둘 다)를 선택한 경우에 표시됩니다. 둘 다 선택하지 않으면 패키지가 표시되지 않습니다. 마찬가지로, 모든 범주를 선택하면 이러한 범주 중 하나를 포함하는 패키지만 표시됩니다. **이러한 범주에 속하지 않는 패키지는 표시되지 않습니다.**
 
 ## <a name="sort-by"></a>정렬 기준
 

@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,setup
 title: WMF 5.1의 버그 수정
-ms.openlocfilehash: 8edf295eb6304dc04de2fa5d3792b1c2fc4b01f3
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: 이 문서에는 WMF 5.1 릴리스에서 수정된 버그가 나와 있습니다.
+ms.openlocfilehash: 2673860852ecd6e0b6582f6f69076f8c463eeccc
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809309"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660771"
 ---
 # <a name="bug-fixes-in-wmf-51"></a>WMF 5.1의 버그 수정
 
@@ -49,7 +48,7 @@ $obj = New-Object -ComObject WScript.Shell
 $obj.SendKeys([char]173)
 ```
 
-**SendKeys** 메서드에는 문자열이 필요하지만 PowerShell은 문자를 문자열로 변환하지 않고 **IDispatch::Invoke**에서 **VariantChangeType**을 사용하여 변환을 수행합니다. 이 예제에서는 필요한 **Volume.Mute** 키 대신 '1', '7' 및 '3' 키가 전송되었습니다.
+**SendKeys** 메서드에는 문자열이 필요하지만 PowerShell은 문자를 문자열로 변환하지 않고 **IDispatch::Invoke** 에서 **VariantChangeType** 을 사용하여 변환을 수행합니다. 이 예제에서는 필요한 **Volume.Mute** 키 대신 '1', '7' 및 '3' 키가 전송되었습니다.
 
 #### <a name="enumerable-com-objects-not-always-handled-correctly"></a>열거 가능 COM 개체가 올바로 처리되지 않을 수도 있음
 
@@ -67,7 +66,7 @@ function Get-COMDictionary
 $x = Get-COMDictionary
 ```
 
-위 예제에서 WMF 5.0은 키/값 쌍을 열거하지 않고 **Scripting.Dictionary**를 파이프라인에 잘못 썼습니다.
+위 예제에서 WMF 5.0은 키/값 쌍을 열거하지 않고 **Scripting.Dictionary** 를 파이프라인에 잘못 썼습니다.
 
 ### <a name="ordered-was-not-allowed-inside-classes"></a>[ordered]는 클래스 내에서 허용되지 않았음
 
@@ -99,4 +98,4 @@ WMF 5.1에서는 항목의 최신 버전에 대한 도움말을 반환하여 이
 
 ### <a name="powershellexe-creates-spike-in-cpu-usage-on-startup"></a>시작 시 powershell.exe의 CPU 사용량이 급증함
 
-PowerShell은 로그인에 지연이 발생하지 않도록 WMI 쿼리를 사용하여 그룹 정책을 통해 시작되었는지를 확인합니다. WMI **Win32_Process** 클래스는 현지 표준 시간대 정보를 검색하려고 시도하므로 WMI 쿼리는 시스템의 모든 프로세스로 tzres.mui.dll을 삽입하게 됩니다. 따라서 **wmiprvse**(WMI 공급자 호스트)에서 CPU 사용량이 엄청나게 급증하게 됩니다. 해결 방법은 WMI를 사용하는 대신 Win32 API 호출을 사용하여 같은 정보를 가져오는 것입니다.
+PowerShell은 로그인에 지연이 발생하지 않도록 WMI 쿼리를 사용하여 그룹 정책을 통해 시작되었는지를 확인합니다. WMI **Win32_Process** 클래스는 현지 표준 시간대 정보를 검색하려고 시도하므로 WMI 쿼리는 시스템의 모든 프로세스로 tzres.mui.dll을 삽입하게 됩니다. 따라서 **wmiprvse** (WMI 공급자 호스트)에서 CPU 사용량이 엄청나게 급증하게 됩니다. 해결 방법은 WMI를 사용하는 대신 Win32 API 호출을 사용하여 같은 정보를 가져오는 것입니다.

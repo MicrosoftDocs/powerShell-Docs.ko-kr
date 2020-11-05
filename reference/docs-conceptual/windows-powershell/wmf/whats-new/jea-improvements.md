@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,setup
 title: JEA(Just Enough Administration)에 대한 개선 사항
-ms.openlocfilehash: 9bb45ad2ddd459b99fc58610dfd8145992093624
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: JEA는 PowerShell 원격을 통한 역할 기반 관리가 가능한 WMF 5.0의 새로운 기능입니다. 이 기능은 관리자가 아닌 사용자가 특정 명령, 스크립트 및 실행 파일을 관리자 권한으로 실행할 수 있도록 허용하여 기존의 제한된 엔드포인트 인프라를 확장합니다.
+ms.openlocfilehash: f255d0ecbd4bbd9a5ade4b6e19f066cc007481fb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808919"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654027"
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>JEA(Just Enough Administration)에 대한 개선 사항
 
@@ -65,7 +65,7 @@ RunAsVirtualAccount = $false
 
 ## <a name="conditional-access-policies"></a>조건부 액세스 정책
 
-JEA는 사용자가 JEA를 관리할 시스템에 연결된 경우 수행할 수 있는 작업을 제한하는 데 유용하지만, 사용자가 JEA를 사용할 수 있는 *시기*도 제한하려면 어떻게 하나요? 사용자가 JEA 세션을 설정하려면 속해 있어야 하는 보안 그룹을 지정할 수 있는 구성 옵션이 세션 구성 파일(.pssc)에 추가되었습니다. 이 옵션은 환경에 JIT(Just In Time) 시스템이 있고 사용자가 높은 권한의 JEA 엔드포인트에 액세스하기 전에 권한을 높이도록 하려는 경우에 특히 유용합니다.
+JEA는 사용자가 JEA를 관리할 시스템에 연결된 경우 수행할 수 있는 작업을 제한하는 데 유용하지만, 사용자가 JEA를 사용할 수 있는 *시기* 도 제한하려면 어떻게 하나요? 사용자가 JEA 세션을 설정하려면 속해 있어야 하는 보안 그룹을 지정할 수 있는 구성 옵션이 세션 구성 파일(.pssc)에 추가되었습니다. 이 옵션은 환경에 JIT(Just In Time) 시스템이 있고 사용자가 높은 권한의 JEA 엔드포인트에 액세스하기 전에 권한을 높이도록 하려는 경우에 특히 유용합니다.
 
 PSSC 파일의 새 *RequiredGroups* 필드를 사용하여 사용자가 JEA에 연결할 수 있는지 여부를 결정하는 논리를 지정할 수 있습니다. 이를 위해서는 'And' 및 'Or' 키를 사용하는 해시테이블(필요에 따라 중첩됨)을 지정하여 규칙을 만듭니다. 다음은 이 필드를 사용하는 방법의 몇 가지 예입니다.
 

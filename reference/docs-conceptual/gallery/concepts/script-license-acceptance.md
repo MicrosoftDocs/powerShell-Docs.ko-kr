@@ -1,20 +1,19 @@
 ---
 ms.date: 06/09/2017
-schema: 2.0.0
-keywords: PowerShell
 title: 스크립트에 대한 라이선스 동의 필요
-ms.openlocfilehash: e7101eb6a480dd87965b7b9be9d49583042b603f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 PowerShell 갤러리에 게시되고 최종 사용자 라이선스 동의가 필요한 스크립트를 사용하는 방법을 설명합니다.
+ms.openlocfilehash: d82974810fd1e73ef8d9e5771fc430d0f7964e87
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71328084"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656084"
 ---
 # <a name="requiring-license-acceptance-for-scripts"></a>스크립트에 대한 라이선스 동의 필요
 
 스크립트에 대한 라이선스 동의가 지원되지 않습니다. 그러나 라이선스 동의가 필요한 모듈에서 스크립트가 사용되는 시나리오는 지원됩니다.
 
-스크립트 명령(Install-Script/Save-Script/Update-Script)은 새 매개 변수인 -AcceptLicense(사용자가 라이선스를 확인한 것처럼 동작)를 지원합니다. -AcceptLicense가 지정되지 않으면 종속 모듈에 대한 license.txt가 사용자에게 표시되고 라이선스에 동의하라는 메시지가 표시됩니다.
+PowerShellGet 스크립트 명령은 사용자가 라이선스를 확인한 것처럼 동작하는 매개 변수 **AcceptLicense** 를 지원합니다. **AcceptLicense** 가 지정되지 않으면 종속 모듈에 대한 `license.txt` 파일이 사용자에게 표시되고 라이선스에 동의하라는 메시지가 표시됩니다.
 
 ## <a name="examples"></a>예제
 

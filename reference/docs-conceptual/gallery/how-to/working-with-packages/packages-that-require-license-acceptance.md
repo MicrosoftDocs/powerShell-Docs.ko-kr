@@ -1,18 +1,17 @@
 ---
 ms.date: 06/12/2017
-contributor: Farehar
-keywords: gallery,powershell,psgallery
 title: 라이선스 동의 필요
-ms.openlocfilehash: 4b293ea693062cf9717fa4ca913c3eb9abaf7014
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 항목 세부 정보 페이지에서 패키지 라이선스를 확인하는 방법
+ms.openlocfilehash: 0d8a9ed671f7993726bc3fa41d11159b366e5a28
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278659"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662309"
 ---
 # <a name="require-license-acceptance"></a>라이선스 동의 필요
 
-라이선스 동의가 필요한 모듈에 대해 항목 세부 정보 페이지에 라이선스 동의 필요 텍스트가 표시됩니다. 모듈에 대한 라이선스는 ‘License.txt 보기’ 링크를 클릭하여 볼 수 있습니다.
+라이선스 동의가 필요한 모듈에 대해 항목 세부 정보 페이지에 라이선스 동의 필요 텍스트가 표시됩니다. 모듈의 라이선스는 **License.txt 보기** 링크를 클릭하여 볼 수 있습니다.
 
 ![라이선스 동의 필요](media/packages-that-require-license-acceptance/RequireLicenseAcceptance.png)
 

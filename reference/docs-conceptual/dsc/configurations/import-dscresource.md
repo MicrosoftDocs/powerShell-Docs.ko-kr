@@ -2,17 +2,17 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: Import-DSCResource 사용
-ms.openlocfilehash: 0fa11755558510b986ac24df120579ea15a43689
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: Import-DSCResource는 구성 스크립트 블록 내에서만 사용할 수 있는 동적 키워드입니다. 구성에 필요한 리소스 모듈을 가져오는 데 사용됩니다.
+ms.openlocfilehash: f6dcad2c56848ec25eb79332c96fe6b0d438fe95
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786716"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658519"
 ---
 # <a name="using-import-dscresource"></a>Import-DSCResource 사용
 
-`Import-DScResource`는 구성 스크립트 블록 내부에서만 사용할 수 있는 동적 키워드입니다. 구성에 필요한 모든 리소스를 가져오기 위한 `Import-DSCResource` 키워드입니다.
-`$pshome` 아래에 있는 리소스를 자동으로 가져오지만, [구성](Configurations.md)에서 사용된 모든 리소스를 명시적으로 가져오는 것이 좋습니다.
+`Import-DSCResource`는 구성에 필요한 리소스를 가져오기 위해 구성 스크립트 블록 내에서만 사용할 수 있는 동적 키워드입니다. `$PSHOME` 아래에 있는 리소스를 자동으로 가져오지만, [구성](Configurations.md)에서 사용된 모든 리소스를 명시적으로 가져오는 것이 좋습니다.
 
 `Import-DSCResource`의 구문은 다음과 같습니다. 이름으로 모듈을 지정하는 경우 각 모듈을 새 줄에 나열해야 합니다.
 
@@ -125,14 +125,14 @@ Present, Absent.
 IntelliSense 및 스키마 유효성 검사를 사용하면 구문 분석 및 컴파일 시간에 더 많은 오류를 catch할 수 있어 런타임에 컴플리케이션이 방지됩니다.
 
 > [!NOTE]
-> 각 DSC 리소스에는 이름 및 리소스 스키마에서 정의한 **FriendlyName**이 포함될 수 있습니다. "MSFT_ServiceResource.shema.mof"의 처음 두 줄은 다음과 같습니다.
+> 각 DSC 리소스에는 이름 및 리소스 스키마에서 정의한 **FriendlyName** 이 포함될 수 있습니다. "MSFT_ServiceResource.shema.mof"의 처음 두 줄은 다음과 같습니다.
 >
 > ```syntax
 > [ClassVersion("1.0.0"),FriendlyName("Service")]
 > class MSFT_ServiceResource : OMI_BaseResource
 > ```
 >
-> 구성에서 이 리소스를 사용하는 경우 **MSFT_ServiceResource** 또는 **Service**를 지정할 수 있습니다.
+> 구성에서 이 리소스를 사용하는 경우 **MSFT_ServiceResource** 또는 **Service** 를 지정할 수 있습니다.
 
 ## <a name="powershell-v4-and-v5-differences"></a>PowerShell v4 및 v5의 차이
 

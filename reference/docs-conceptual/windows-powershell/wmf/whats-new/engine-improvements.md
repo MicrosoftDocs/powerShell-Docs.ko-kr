@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,setup
 title: WMF 5.1의 향상된 PowerShell 엔진
-ms.openlocfilehash: cccfcf8872ac60e0902669bcc797d0ed250317ba
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: 이 문서에는 Windows PowerShell 5.1의 성능 개선 사항이 나와 있습니다.
+ms.openlocfilehash: 34a4ed1ae4b00f5763848deaf2edad895e70c59a
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808939"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92655854"
 ---
 # <a name="powershell-engine-improvements"></a>향상된 PowerShell 엔진
 

@@ -1,27 +1,26 @@
 ---
 ms.date: 09/11/2018
-contributor: JKeithB
-keywords: gallery,powershell,cmdlet,psgallery
 title: PowerShell 갤러리 계정 만들기
-ms.openlocfilehash: f43d7e65bb8bf9a9bbdda9790cc622786377fa38
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 PowerShell 갤러리의 사용자 계정 요구 사항을 설명합니다.
+ms.openlocfilehash: 24c7531e61128415a284d1b438b43f3af0d1053a
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278786"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662610"
 ---
 # <a name="creating-a-powershell-gallery-account"></a>PowerShell 갤러리 계정 만들기
 
 PowerShell 갤러리 계정은 PowerShell 갤러리에 게시하기 전에 만들어야 합니다.
 PowerShell 갤러리 계정은 이메일을 사용하도록 설정된 로그인 계정에 연결해야 합니다. 이 계정은 Azure Active Directory 계정 또는 Microsoft ID(예: outlook.com 또는 hotmail.com의 이메일 계정)일 수 있습니다.
 
-PowerShell 갤러리 계정을 만들려면 [https://PowerShellGallery.com](https://PowerShellGallery.com)으로 이동하고, 다음 이미지와 같이 **로그인**을 클릭합니다.
+PowerShell 갤러리 계정을 만들려면 [https://PowerShellGallery.com](https://PowerShellGallery.com)으로 이동하고, 다음 이미지와 같이 **로그인** 을 클릭합니다.
 
 ![새 계정 등록](media/creating-an-account/CreateAccount-Register.png)
 
-Azure Active Directory 계정을 사용하려면 **회사 또는 학교 계정**을 선택하고 자신의 계정으로 로그인합니다. Microsoft ID를 사용하려면 **개인 계정**을 선택하고 로그인합니다.
+Azure Active Directory 계정을 사용하려면 **회사 또는 학교 계정** 을 선택하고 자신의 계정으로 로그인합니다. Microsoft ID를 사용하려면 **개인 계정** 을 선택하고 로그인합니다.
 
-다음으로, PowerShell 갤러리에 대한 사용자 이름을 만들라는 메시지가 표시됩니다. 사용 약관 및 개인 정보 처리 방침을 검토하고, 사용자 이름을 입력한 다음, **등록**을 클릭합니다.
+다음으로, PowerShell 갤러리에 대한 사용자 이름을 만들라는 메시지가 표시됩니다. 사용 약관 및 개인 정보 처리 방침을 검토하고, 사용자 이름을 입력한 다음, **등록** 을 클릭합니다.
 
 > [!NOTE]
 > 계정 이름은 만들고 나면 변경할 수 없습니다. 자세한 내용은 [패키지 소유자 관리](managing-package-owners.md)를 참조하세요.

@@ -2,18 +2,19 @@
 ms.date: 10/30/2018
 keywords: dsc,powershell,configuration,setup
 title: DSC 문제 해결
-ms.openlocfilehash: 83e59b9f7148b52071d4782522ca7642027d795a
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+description: 이 문서에서는 일반적인 오류의 문제 해결 지침을 제공합니다.
+ms.openlocfilehash: 2ac86689fa2695add247995bfb91c0ea85e22d60
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692299"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656259"
 ---
 # <a name="troubleshooting-dsc"></a>DSC 문제 해결
 
-‘적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0’ 
+> 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-이 항목에서는 문제가 발생할 때 DSC 문제를 해결하는 방법을 설명합니다.
+이 문서에서는 일반적인 오류의 문제 해결 지침을 제공합니다.
 
 ## <a name="winrm-dependency"></a>WinRM 종속성
 
@@ -47,7 +48,7 @@ Get-DscConfigurationStatus -All
                            [<CommonParameters>]
 ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```powershell
 PS C:\> $Status = Get-DscConfigurationStatus
@@ -82,12 +83,12 @@ PSComputerName        :
 
 ## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>스크립트가 실행되지 않음: DSC 로그를 사용하여 스크립트 오류 진단
 
-모든 Windows 소프트웨어와 마찬가지로, DSC에서는 [이벤트 뷰어](https://support.microsoft.com/hub/4338813/windows-help)에서 볼 수 있는 [로그](/windows/desktop/EventLog/about-event-logging)에 오류와 이벤트를 기록합니다.
-이러한 로그를 검사하면 특정 작업이 실패한 이유와 나중에 오류를 방지하는 방법을 이해하는 데 도움이 될 수 있습니다. 구성 스크립트 작성은 까다로울 수 있으므로, 작성자로서 오류 추적을 보다 쉽게 하려면, DSC 로그 리소스를 사용하여 분석 DSC 이벤트 로그에 있는 구성의 진행률을 추적합니다.
+모든 Windows 소프트웨어와 마찬가지로, DSC에서는 [이벤트 뷰어](https://support.microsoft.com/hub/4338813/windows-help)에서 볼 수 있는 [로그](/windows/desktop/EventLog/about-event-logging)에 오류와 이벤트를 기록합니다. 이러한 로그를 검사하면 특정 작업이 실패한 이유와 나중에 오류를 방지하는 방법을 이해하는 데 도움이 될 수 있습니다.
+구성 스크립트 작성은 까다로울 수 있으므로, 작성자로서 오류 추적을 보다 쉽게 하려면, DSC 로그 리소스를 사용하여 분석 DSC 이벤트 로그에 있는 구성의 진행률을 추적합니다.
 
 ## <a name="where-are-dsc-event-logs"></a>DSC 이벤트 로그는 어디에 있나요?
 
-이벤트 뷰어에서 DSC 이벤트는 **애플리케이션 및 서비스 로그/Microsoft/Windows/필요한 상태 구성**에 있습니다.
+이벤트 뷰어에서 DSC 이벤트는 **애플리케이션 및 서비스 로그/Microsoft/Windows/필요한 상태 구성** 에 있습니다.
 
 해당 PowerShell cmdlet인 [Get-WinEvent](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent)를 실행해도 이벤트 로그를 볼 수도 있습니다.
 
@@ -101,8 +102,9 @@ TimeCreated                     Id LevelDisplayName Message
 11/17/2014 10:27:23 PM        4102 Information      Job {02C38626-D95A-47F1-9DA2-C1D44A7128E7} :
 ```
 
-위와 같이 DSC의 기본 로그 이름은 **Microsoft->Windows->DSC**(Windows 아래의 다른 로그 이름은 간결하게 하기 위해 표시하지 않음)입니다. 기본 이름을 채널 이름에 추가하여 전체 로그 이름이 만들어집니다. DSC 엔진은 [작업, 분석 및 디버그 로그](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11)), 이렇게 주로 세 가지 유형의 로그에 기록합니다. 분석 및 디버그 로그는 기본적으로 해제 되어 있으므로, 이벤트 뷰어에서 설정해야 합니다. 이렇게 하려면 Windows PowerShell에서 Show-EventLog를 입력하여 이벤트 뷰어를 엽니다. 또는 **시작** 단추, **제어판**, **관리 도구**, **이벤트 뷰어**를 차례로 클릭합니다.
-이벤트 뷰어의 **보기** 메뉴에서 **분석 및 디버그 로그 표시**를 클릭합니다. 분석 채널에 대한 로그 이름은 **Microsoft-Windows-Dsc/Analytic**이고, 디버그 채널은 **Microsoft-Windows-Dsc/Debug**입니다. 다음 예에서 보듯이, [wevtutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)) 유틸리티를 사용하여 로그를 사용할 수도 있습니다.
+위와 같이 DSC의 기본 로그 이름은 **Microsoft->Windows->DSC** (Windows 아래의 다른 로그 이름은 간결하게 하기 위해 표시하지 않음)입니다. 기본 이름을 채널 이름에 추가하여 전체 로그 이름이 만들어집니다. DSC 엔진은 [작업, 분석 및 디버그 로그](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11)), 이렇게 주로 세 가지 유형의 로그에 기록합니다.
+분석 및 디버그 로그는 기본적으로 해제 되어 있으므로, 이벤트 뷰어에서 설정해야 합니다.
+이렇게 하려면 Windows PowerShell에서 Show-EventLog를 입력하여 이벤트 뷰어를 엽니다. 또는 **시작** 단추, **제어판** , **관리 도구** , **이벤트 뷰어** 를 차례로 클릭합니다. 이벤트 뷰어의 **보기** 메뉴에서 **분석 및 디버그 로그 표시** 를 클릭합니다. 분석 채널에 대한 로그 이름은 **Microsoft-Windows-Dsc/Analytic** 이고, 디버그 채널은 **Microsoft-Windows-Dsc/Debug** 입니다. 다음 예에서 보듯이, [wevtutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)) 유틸리티를 사용하여 로그를 사용할 수도 있습니다.
 
 ```powershell
 wevtutil.exe set-log "Microsoft-Windows-Dsc/Analytic" /q:true /e:true
@@ -254,8 +256,8 @@ PS C:\> $myFailedEvent.Message
 
 Job {5BCA8BE7-5BB6-11E3-BF41-00155D553612} :
 DSC Engine Error :
- Error Message Current configuration does not exist. Execute Start-DscConfiguration command with -Path pa
-rameter to specify a configuration file and create a current configuration first.
+ Error Message Current configuration does not exist. Execute Start-DscConfiguration command with
+ -Path parameter to specify a configuration file and create a current configuration first.
 Error Code : 1
 ```
 
@@ -278,7 +280,7 @@ TimeCreated                     Id LevelDisplayName Message
 
 ## <a name="using-xdscdiagnostics-to-analyze-dsc-logs"></a>xDscDiagnostics를 사용하여 DSC 로그 분석
 
-**xDscDiagnostics**는 컴퓨터에서 DSC 실패를 분석하는 데 도움이 되는 여러 함수로 구성된 PowerShell 모듈입니다. 이 함수들은 지난 DSC 작업의 모든 로컬 이벤트나 원격 컴퓨터의 DSC 이벤트(유효한 자격 증명 사용)를 식별하는 데 유용할 수 있습니다. 여기에서 DSC 작업이라는 용어는 시작부터 끝까지 하나의 고유한 DSC 실행을 정의하는 데 사용됩니다. 예를 들어 `Test-DscConfiguration`은 별도의 DSC 작업입니다. 마찬가지로, DSC에 있는 모든 다른 cmdlet(예: `Get-DscConfiguration`, `Start-DscConfiguration` 등)은 각각 별도의 DSC 작업으로 식별될 수 있습니다. 함수에 대한 설명은 [xDscDiagnostics](https://github.com/PowerShell/xDscDiagnostics)에 나와 있습니다. `Get-Help <cmdlet name>`을 실행하여 도움말을 사용할 수 있습니다.
+**xDscDiagnostics** 는 컴퓨터에서 DSC 실패를 분석하는 데 도움이 되는 여러 함수로 구성된 PowerShell 모듈입니다. 이 함수들은 지난 DSC 작업의 모든 로컬 이벤트나 원격 컴퓨터의 DSC 이벤트(유효한 자격 증명 사용)를 식별하는 데 유용할 수 있습니다. 여기에서 DSC 작업이라는 용어는 시작부터 끝까지 하나의 고유한 DSC 실행을 정의하는 데 사용됩니다. 예를 들어 `Test-DscConfiguration`은 별도의 DSC 작업입니다. 마찬가지로, DSC에 있는 모든 다른 cmdlet(예: `Get-DscConfiguration`, `Start-DscConfiguration` 등)은 각각 별도의 DSC 작업으로 식별될 수 있습니다. 함수에 대한 설명은 [xDscDiagnostics](https://github.com/PowerShell/xDscDiagnostics)에 나와 있습니다. `Get-Help <cmdlet name>`을 실행하여 도움말을 사용할 수 있습니다.
 
 ### <a name="getting-details-of-dsc-operations"></a>DSC 작업의 세부 정보 가져오기
 
@@ -328,7 +330,7 @@ SRV1   OPERATIONAL  6/24/2016 10:51:54 AM Job runs under the following LCM setti
 SRV1   OPERATIONAL  6/24/2016 10:51:54 AM Operation Consistency Check or Pull completed successfully.
 ```
 
-`Get-xDscOperation` cmldet에서 반환하는 특정 DSC 작업에 할당된 **GUID**를 전달하여 해당 DSC 작업에 대한 이벤트 세부 정보를 가져옵니다.
+`Get-xDscOperation` cmldet에서 반환하는 특정 DSC 작업에 할당된 **GUID** 를 전달하여 해당 DSC 작업에 대한 이벤트 세부 정보를 가져옵니다.
 
 ```powershell
 PS C:\DiagnosticsTest> Trace-xDscOperation -JobID 9e0bfb6b-3a3a-11e6-9165-00155d390509
@@ -471,7 +473,7 @@ DSC 엔진은 효율성 향상을 위해 PowerShell 모듈로서 구현하는 �
 
 다시 부팅하지 않고도 구성을 성공적으로 재활용하고, 캐시를 지우려면, 호스트 프로세스를 중지했다가 다시 시작해야 합니다. 이 작업은 인스턴스별로 수행할 수 있으며, 그에 따라 프로세스를 식별, 중지 및 다시 시작할 수 있습니다. 또는 아래 설명된 대로 `DebugMode`를 사용하여 PowerShell DSC 리소스를 다시 로드할 수 있습니다.
 
-인스턴스별로 DSC 엔진을 호스트하고 중지하는 프로세스를 식별하기 위해 DSC 엔진을 호스팅하는 WmiPrvSE의 프로세스 ID를 나열할 수 있습니다. 그런 다음 공급자를 업데이트하려면, 아래 명령을 사용하여 WmiPrvSE 프로세스를 중지한 다음, **Start-DscConfiguration**을 다시 실행합니다.
+인스턴스별로 DSC 엔진을 호스트하고 중지하는 프로세스를 식별하기 위해 DSC 엔진을 호스팅하는 WmiPrvSE의 프로세스 ID를 나열할 수 있습니다. 그런 다음 공급자를 업데이트하려면, 아래 명령을 사용하여 WmiPrvSE 프로세스를 중지한 다음, **Start-DscConfiguration** 을 다시 실행합니다.
 
 ```powershell
 ###
@@ -489,7 +491,7 @@ Get-Process -Id $dscProcessID | Stop-Process
 
 ## <a name="using-debugmode"></a>DebugMode 사용
 
-호스트 프로세스를 다시 시작할 때 항상 캐시가 지워지도록 하기 위해 `DebugMode`를 사용하도록 DSC LCM(로컬 구성 관리자)를 구성할 수 있습니다. **TRUE**로 설정하면, 엔진이 항상 PowerShell DSC 리소스를 다시 로드합니다. 리소스를 작성을 완료하면, 다시 **FALSE**로 설정할 수 있으며, 엔진은 모듈을 캐싱하는 동작으로 되돌아갑니다.
+호스트 프로세스를 다시 시작할 때 항상 캐시가 지워지도록 하기 위해 `DebugMode`를 사용하도록 DSC LCM(로컬 구성 관리자)를 구성할 수 있습니다. **TRUE** 로 설정하면, 엔진이 항상 PowerShell DSC 리소스를 다시 로드합니다. 리소스를 작성을 완료하면, 다시 **FALSE** 로 설정할 수 있으며, 엔진은 모듈을 캐싱하는 동작으로 되돌아갑니다.
 
 다음은 `DebugMode`가 캐시를 자동으로 새로 고칠 수 있는 방법을 보여 주는 데모입니다. 우선, 기본 구성을 살펴보겠습니다.
 
@@ -565,7 +567,7 @@ Configuration ConfigTestDebugMode
 ConfigTestDebugMode
 ```
 
-파일 내용: `$env:SystemDrive\OutputFromTestProviderDebugMode.txt`가 **1**임을 알 수 있습니다.
+파일 내용: `$env:SystemDrive\OutputFromTestProviderDebugMode.txt`가 **1** 임을 알 수 있습니다.
 
 이제, 다음 스크립트를 사용하여 공급자 코드를 업데이트합니다.
 
@@ -602,7 +604,7 @@ function Test-TargetResource
 "@ | Out-File -FilePath "C:\Program Files\WindowsPowerShell\Modules\MyPowerShellModules\DSCResources\TestProviderDebugMode\TestProviderDebugMode.psm1
 ```
 
-이 스크립트는 난수를 생성하고 그에 따라 공급자 코드를 업데이트합니다. `DebugMode`가 false로 설정되면 파일 내용 “ **$env:SystemDrive\OutputFromTestProviderDebugMode.txt**”가 변경되지 않습니다.
+이 스크립트는 난수를 생성하고 그에 따라 공급자 코드를 업데이트합니다. `DebugMode`가 false로 설정되면 `$env:SystemDrive\OutputFromTestProviderDebugMode.txt` 파일의 내용이 변경되지 않습니다.
 
 이제, 구성 스크립트에서 `DebugMode`를 **"ForceModuleImport"** 로 설정합니다.
 
@@ -633,16 +635,15 @@ onlyProperty                            PSComputerName
 
 서버에 메타 구성을 적용하여 Windows Pull Server 인스턴스에 등록할 때 다음과 같은 오류가 발생할 수 있습니다.
 
-```PowerShell
-Registration of the Dsc Agent with the server https://<serverfqdn>:8080/PSDSCPullServer.svc failed. The underlying error is: The attempt to register Dsc Agent with AgentId <ID> with the server 
+```
+Registration of the Dsc Agent with the server https://<serverfqdn>:8080/PSDSCPullServer.svc failed. The underlying error is: The attempt to register Dsc Agent with AgentId <ID> with the server
 https://<serverfqdn>:8080/PSDSCPullServer.svc/Nodes(AgentId='<ID>') returned unexpected response code InternalServerError. .
     + CategoryInfo          : InvalidResult: (root/Microsoft/...gurationManager:String) [], CimException
     + FullyQualifiedErrorId : RegisterDscAgentUnsuccessful,Microsoft.PowerShell.DesiredStateConfiguration.Commands.RegisterDscAgentCommand
     + PSComputerName        : <computername>
 ```
 
-이는 서버에서 트래픽을 암호화하는 데 사용되는 인증서에 노드에서 URL을 확인하기 위해 사용하는 DNS 이름과 다른 CN(일반 이름)이 있을 때 발생할 수 있습니다.
-수정된 이름의 인증서를 사용하도록 Windows Pull Server 인스턴스를 업데이트합니다.
+이는 서버에서 트래픽을 암호화하는 데 사용되는 인증서에 노드에서 URL을 확인하기 위해 사용하는 DNS 이름과 다른 CN(일반 이름)이 있을 때 발생할 수 있습니다. 수정된 이름의 인증서를 사용하도록 Windows Pull Server 인스턴스를 업데이트합니다.
 
 ## <a name="error-when-running-sysprep-after-applying-a-dsc-configuration"></a>DSC 구성을 적용한 후 Sysprep을 실행하는 동안 오류 발생
 
@@ -652,7 +653,7 @@ DSC 구성을 적용한 후 Sysprep을 실행하여 Windows Server를 범용화�
 SYSPRP LaunchDll:Failure occurred while executing 'DscCore.dll,SysPrep_Cleanup', returned error code 0x2
 ```
 
-Windows PowerShell Desired State Configuration을 사용하여 서버를 구성한 후 범용화하는 것은 지원되지 않는 시나리오입니다.  대신 Windows 설치 프로그램의 특수화 단계를 완료한 후에 Windows에 구성을 적용합니다.
+Windows PowerShell Desired State Configuration을 사용하여 서버를 구성한 후 범용화하는 것은 지원되지 않는 시나리오입니다. 대신 Windows 설치 프로그램의 특수화 단계를 완료한 후에 Windows에 구성을 적용합니다.
 
 ## <a name="see-also"></a>참고 항목
 

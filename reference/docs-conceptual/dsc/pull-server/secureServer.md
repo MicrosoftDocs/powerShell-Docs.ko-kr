@@ -3,19 +3,19 @@ ms.date: 06/12/2017
 description: 이 문서는 DSC 끌어오기 서버를 배포하는 엔지니어를 지원할 모범 사례를 제공합니다.
 keywords: dsc,powershell,configuration,setup
 title: 끌어오기 서버 모범 사례
-ms.openlocfilehash: 99009fd73ea08ca4ac42832a055e914a3ce6dbcf
-ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
+ms.openlocfilehash: 0021baa219a0936405eccf2cc7741e042f8bf09f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90846952"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664324"
 ---
 # <a name="pull-server-best-practices"></a>끌어오기 서버 모범 사례
 
 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> 끌어오기 서버(Windows 기능 *DSC-Service*)는 Windows Server의 지원되는 구성 요소이지만 새로운 기능을 제공할 계획은 없습니다. 관리되는 클라우드를 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)(Windows Server에 끌어오기 서버 이외의 기능 포함) 또는 [여기](pullserver.md#community-solutions-for-pull-service)에 나열된 커뮤니티 솔루션 중 하나로 전환하기 시작하는 것이 좋습니다.
+> 끌어오기 서버(Windows 기능 *DSC-Service* )는 Windows Server의 지원되는 구성 요소이지만 새로운 기능을 제공할 계획은 없습니다. 관리되는 클라우드를 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)(Windows Server에 끌어오기 서버 이외의 기능 포함) 또는 [여기](pullserver.md#community-solutions-for-pull-service)에 나열된 커뮤니티 솔루션 중 하나로 전환하기 시작하는 것이 좋습니다.
 
 요약: 이 문서는 솔루션을 준비하고 있는 엔지니어를 지원할 프로세스 및 확장성을 포함하기 위해 작성되었습니다. 세부 내용에서는 고객이 식별하고 제품 팀이 검증을 통해 미래에 대비하고 안정적이라고 간주되는 권장 사항으로 확인한 모범 사례를 제공합니다.
 
@@ -72,7 +72,7 @@ Windows Server 2012 R2에는 DSC 서비스라는 기능이 포함되어 있습�
 
 ### <a name="dsc-resource"></a>DSC 리소스
 
-DSC 구성 스크립트를 사용하여 서비스를 프로비전하면 끌어오기 서버 배포를 간소화할 수 있습니다. 이 문서에는 프로덕션 준비가 된 서버 노드를 배포하는 데 사용할 수 있는 구성 스크립트가 포함되어 있습니다. 구성 스크립트를 사용하려면 Windows Server에 포함되지 않은 DSC 모듈이 필요합니다. 필요한 모듈 이름은 DSC 리소스 **xDscWebService**를 포함하는 **xPSDesiredStateConfiguration**입니다. XPSDesiredStateConfiguration 모듈은 [여기](https://gallery.technet.microsoft.com/xPSDesiredStateConfiguratio-417dc71d)에서 다운로드할 수 있습니다.
+DSC 구성 스크립트를 사용하여 서비스를 프로비전하면 끌어오기 서버 배포를 간소화할 수 있습니다. 이 문서에는 프로덕션 준비가 된 서버 노드를 배포하는 데 사용할 수 있는 구성 스크립트가 포함되어 있습니다. 구성 스크립트를 사용하려면 Windows Server에 포함되지 않은 DSC 모듈이 필요합니다. 필요한 모듈 이름은 DSC 리소스 **xDscWebService** 를 포함하는 **xPSDesiredStateConfiguration** 입니다. XPSDesiredStateConfiguration 모듈은 [여기](https://gallery.technet.microsoft.com/xPSDesiredStateConfiguratio-417dc71d)에서 다운로드할 수 있습니다.
 
 **PowerShellGet** 모듈에서 `Install-Module` cmdlet을 사용합니다.
 
@@ -119,8 +119,7 @@ Install-Module xPSDesiredStateConfiguration
 
 DNS CNAME을 사용하면 호스트(A) 레코드를 참조하는 별칭을 만들 수 있습니다. 추가 이름 레코드는 나중에 변경이 필요한 경우 유연성을 높이기 위한 것입니다. CNAME은 클라이언트 구성을 격리할 수 있으므로 끌어오기 서버를 교체하거나 끌어오기 서버를 추가하는 등 서버 환경을 변경할 때 해당하는 클라이언트 구성을 변경할 필요가 없습니다.
 
-DNS 레코드의 이름을 선택할 때는 항상 솔루션 아키텍처를 고려하세요.
-부하 분산을 사용하는 경우 HTTPS를 통한 트래픽을 보호하는 데 사용되는 인증서가 DNS 레코드와 동일한 이름을 공유해야 합니다.
+DNS 레코드의 이름을 선택할 때는 항상 솔루션 아키텍처를 고려하세요. 부하 분산을 사용하는 경우 HTTPS를 통한 트래픽을 보호하는 데 사용되는 인증서가 DNS 레코드와 동일한 이름을 공유해야 합니다.
 
 |       시나리오        |                                                                                         모범 사례
 |:--------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -140,7 +139,7 @@ DNS 레코드의 이름을 선택할 때는 항상 솔루션 아키텍처를 고
 ### <a name="public-key-infrastructure"></a>공개 키 인프라
 
 오늘날의 대부분의 조직에서는 네트워크 트래픽 특히, 서버 구성 방법과 같은 중요한 데이터를 포함하는 트래픽을 전송 중 유효성을 검사하거나 암호화해야 합니다.
-일반 텍스트의 클라이언트 요청을 지원하는 HTTP를 사용하여 끌어오기 서버를 배포할 수도 있지만 HTTPS를 사용하여 트래픽 보안을 유지하는 것이 좋습니다. DSC 리소스 **xPSDesiredStateConfiguration**에 있는 매개 변수 집합을 사용하여 HTTPS를 사용하도록 서비스를 구성할 수 있습니다.
+일반 텍스트의 클라이언트 요청을 지원하는 HTTP를 사용하여 끌어오기 서버를 배포할 수도 있지만 HTTPS를 사용하여 트래픽 보안을 유지하는 것이 좋습니다. DSC 리소스 **xPSDesiredStateConfiguration** 에 있는 매개 변수 집합을 사용하여 HTTPS를 사용하도록 서비스를 구성할 수 있습니다.
 
 끌어오기 서버의 HTTPS 트래픽 보안을 설정하는 데 필요한 인증서 요구 사항은 다른 HTTPS 웹 사이트 보안 설정과 다르지 않습니다. Windows Server 인증서 서비스의 **웹 서버** 템플릿은 필요한 기능을 제공합니다.
 
@@ -203,7 +202,7 @@ New-DscChecksum -ConfigurationPath .\ -OutPath .\
 
 #### <a name="dsc-configurations"></a>DSC 구성
 
-끌어오기 서버의 용도는 DSC 구성을 클라이언트 노드에 배포하기 위한 중앙 집중식 메커니즘을 제공하는 것입니다. 구성은 서버에 MOF 문서로 저장됩니다. 각 문서의 이름은 고유한 **GUID**를 사용하여 지정됩니다. 클라이언트가 끌어오기 서버와 연결하도록 구성된 경우 요청해야 하는 구성의 **GUID**도 제공받습니다. **GUID**로 구성을 참조하는 이 시스템은 글로벌 고유성을 보장하며 구성을 노드별로 세부적으로 적용하거나 구성이 동일한 여러 서버에 걸친 역할 구성으로 적용할 수 있습니다.
+끌어오기 서버의 용도는 DSC 구성을 클라이언트 노드에 배포하기 위한 중앙 집중식 메커니즘을 제공하는 것입니다. 구성은 서버에 MOF 문서로 저장됩니다. 각 문서의 이름은 고유한 **GUID** 를 사용하여 지정됩니다. 클라이언트가 끌어오기 서버와 연결하도록 구성된 경우 요청해야 하는 구성의 **GUID** 도 제공받습니다. **GUID** 로 구성을 참조하는 이 시스템은 글로벌 고유성을 보장하며 구성을 노드별로 세부적으로 적용하거나 구성이 동일한 여러 서버에 걸친 역할 구성으로 적용할 수 있습니다.
 
 #### <a name="guids"></a>GUID
 
@@ -212,7 +211,7 @@ New-DscChecksum -ConfigurationPath .\ -OutPath .\
 - **서버당 GUID 할당** - 모든 서버 구성을 개별적으로 확실히 제어할 수 있습니다. 서버 수가 적은 환경에서 효과적인 이 접근 방식을 채택하면 정확하게 업데이트할 수 있습니다.
 - **서버 역할당 GUID 할당** - 웹 서버와 같이 동일한 기능을 수행하는 모든 서버가 동일한 GUID를 사용하여 필요한 구성 데이터를 참조합니다. 여러 서버가 동일한 GUID를 공유하는 경우 구성이 변경되면 이들 서버가 모두 동시에 업데이트됩니다.
 
-  GUID는 악의적인 의도를 가진 사람에 의해 환경의 서버 배포 및 구성 방법에 대한 정보를 얻는 데 활용될 수 있으므로 중요한 데이터로 고려해야 합니다. 자세한 내용은 [PowerShell 필요한 상태 구성 끌어오기 모드에서 GUID 안전하게 할당](https://blogs.msdn.microsoft.com/powershell/2014/12/31/securely-allocating-guids-in-powershell-desired-state-configuration-pull-mode/)을 참조하세요.
+  GUID는 악의적인 의도를 가진 사람에 의해 환경의 서버 배포 및 구성 방법에 대한 정보를 얻는 데 활용될 수 있으므로 중요한 데이터로 고려해야 합니다. 자세한 내용은 [PowerShell 필요한 상태 구성 끌어오기 모드에서 GUID 안전하게 할당](https://devblogs.microsoft.com/powershell/securely-allocating-guids-in-powershell-desired-state-configuration-pull-mode/)을 참조하세요.
 
 계획 작업
 
@@ -537,7 +536,7 @@ Update-DscConfiguration –Wait -Verbose
 
 OData 웹 서비스를 포함하는 끌어오기 서버 배포 중 정보를 만들기 위해 데이터 파일이 저장됩니다. 파일 형식은 아래 설명된 대로 운영 체제에 따라 다릅니다.
 
-- **Windows Server 2012** 파일 형식은 항상 .mdb입니다.
-- **Windows Server 2012 R2** 구성에 .mdb를 지정하지 않은 경우 파일 형식은 기본적으로 .edb입니다.
+- **Windows Server 2012** - 파일 형식은 항상 `.mdb`입니다.
+- **Windows Server 2012 R2** - 구성에서 `.mdb`를 지정하지 않은 경우 파일 형식은 기본적으로 `.edb`입니다.
 
 끌어오기 서버를 설치하기 위한 [고급 예제 스크립트](https://github.com/mgreenegit/Whitepapers/blob/Dev/PullServerCPIG.md#installation-and-configuration-scripts)에서는 web.config 파일 설정을 자동으로 제어하여 파일 형식으로 인한 오류 발생을 방지하는 방법에 대한 예제도 찾을 수 있습니다.

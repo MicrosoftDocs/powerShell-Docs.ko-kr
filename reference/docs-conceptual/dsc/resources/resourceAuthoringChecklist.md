@@ -2,12 +2,13 @@
 ms.date: 07/08/2020
 keywords: dsc,powershell,configuration,setup
 title: 리소스 작성 검사 목록
-ms.openlocfilehash: f21e2e8563880e0c10cf50b044e9c56ca09fe0fa
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: 이 문서에는 새 DSC 리소스를 작성할 때 사용해야 하는 모범 사례의 검사 목록이 포함되어 있습니다.
+ms.openlocfilehash: 5b618511f730c80104620c84e693c13ae4f536ac
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217647"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656331"
 ---
 # <a name="resource-authoring-checklist"></a>리소스 작성 검사 목록
 
@@ -16,7 +17,7 @@ ms.locfileid: "86217647"
 ## <a name="resource-module-contains-psd1-file-and-schemamof-for-every-resource"></a>리소스 모듈에 모든 리소스에 대한 .psd1 파일과 schema.mof가 포함되어 있음
 
 리소스가 올바른 구조이고 필요한 파일을 모두 포함하는지 확인합니다. 모든 리소스 모듈에 .psd1 파일이 포함되어 있고 모든 비복합 리소스에 schema.mof 파일이 있어야 합니다.
-스키마가 포함되지 않은 리소스는 `Get-DscResource`로 나열되지 않고 사용자는 ISE에서 해당 모듈에 대해 코드를 작성할 때 intellisense를 사용할 수 없습니다. [xPSDesiredStateConfiguration 리소스 모듈](https://github.com/PowerShell/xPSDesiredStateConfiguration)의 일부인 xRemoteFile 리소스에 대한 디렉터리 구조는 다음과 같이 표시됩니다.
+스키마가 포함되지 않은 리소스는 `Get-DscResource`로 나열되지 않고, 사용자는 ISE에서 해당 모듈에 대해 코드를 작성할 때 IntelliSense를 사용할 수 없습니다. [xPSDesiredStateConfiguration 리소스 모듈](https://github.com/PowerShell/xPSDesiredStateConfiguration)의 일부인 xRemoteFile 리소스에 대한 디렉터리 구조는 다음과 같이 표시됩니다.
 
 ```
 xPSDesiredStateConfiguration

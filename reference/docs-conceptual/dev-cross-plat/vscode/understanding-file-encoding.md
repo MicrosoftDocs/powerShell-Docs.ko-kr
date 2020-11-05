@@ -2,12 +2,12 @@
 title: VS Code 및 PowerShell에서 파일 인코딩 이해
 description: VS Code 및 PowerShell에서 파일 인코딩 구성
 ms.date: 02/28/2019
-ms.openlocfilehash: a4b13bcfbe5cffc4e015a37a5fd64fbb8b91f949
-ms.sourcegitcommit: 01a1c253f48b61c943f6d6aca4e603118014015f
+ms.openlocfilehash: afad189ff20a4e73d25f15c48d6c4982b18f29a3
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87900013"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142551"
 ---
 # <a name="understanding-file-encoding-in-vs-code-and-powershell"></a>VS Code 및 PowerShell에서 파일 인코딩 이해
 
@@ -15,7 +15,7 @@ VS Code를 사용하여 PowerShell 스크립트를 편집할 때 올바른 문�
 
 ## <a name="what-is-file-encoding-and-why-is-it-important"></a>파일 인코딩의 정의 및 중요한 이유는 무엇인가요?
 
-VS Code는 버퍼에 사람이 입력한 문자의 문자열과 파일 시스템에 대한 바이트의 읽기/쓰기 블록 간의 인터페이스를 관리합니다. VS Code는 파일을 저장할 때 텍스트 인코딩을 사용하여 각 문자가 되는 바이트를 결정합니다.
+VS Code는 버퍼에 사람이 입력한 문자의 문자열과 파일 시스템에 대한 바이트의 읽기/쓰기 블록 간의 인터페이스를 관리합니다. VS Code는 파일을 저장할 때 텍스트 인코딩을 사용하여 각 문자가 되는 바이트를 결정합니다. 자세한 내용은 [about_Character_Encoding](/powershell/module/microsoft.powershell.core/about/about_character_encoding)을 참조하세요.
 
 마찬가지로, PowerShell이 스크립트를 실행할 때 파일의 바이트를 문자로 변환하여 파일을 PowerShell 프로그램으로 다시 구성해야 합니다. VS Code가 파일을 작성하고 PowerShell이 파일을 읽게 되므로 둘 다 동일한 인코딩 시스템을 사용해야 합니다. PowerShell 스크립트를 구문 분석하는 이 프로세스는 다음과 같은 순서로 이루어집니다. _바이트_ -> _문자_ -> _토큰_ -> _추상 구문 트리_ -> _실행_
 
@@ -41,27 +41,27 @@ VS Code를 인코딩하거나 스크립트 파일이 예상되는 PowerShell 인
 
 ### <a name="how-to-tell-when-you-have-encoding-issues"></a>인코딩 문제가 발생하는 경우를 구별하는 방법
 
-종종 인코딩 오류는 스크립트에서 구문 분석 오류로 표시됩니다. 스크립트에서 이상한 문자 시퀀스를 찾으면 이 경우에 문제가 발생할 수 있습니다. 아래 예제에서는 대시 부호(`–`)가 `â€"` 문자로 표시됩니다.
+종종 인코딩 오류는 스크립트에서 구문 분석 오류로 표시됩니다. 스크립트에서 이상한 문자 시퀀스를 찾으면 이 경우에 문제가 발생할 수 있습니다. 아래 예제에서는 대시 부호(`–`)가 `â&euro;"` 문자로 표시됩니다.
 
 ```Output
 Send-MailMessage : A positional parameter cannot be found that accepts argument 'Testing FuseMail SMTP...'.
 At C:\Users\<User>\<OneDrive>\Development\PowerShell\Scripts\Send-EmailUsingSmtpRelay.ps1:6 char:1
-+ Send-MailMessage â€"From $from â€"To $recipient1 â€"Subject $subject  ...
++ Send-MailMessage â&euro;"From $from â&euro;"To $recipient1 â&euro;"Subject $subject  ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : InvalidArgument: (:) [Send-MailMessage], ParameterBindingException
     + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.SendMailMessage
 ```
 
-VS Code가 UTF-8인 `–` 문자를 `0xE2 0x80 0x93` 바이트로 인코딩하기 때문에 이 문제가 발생합니다. 이러한 바이트가 Windows-1252로 디코딩되면 `â€"` 문자로 해석됩니다.
+VS Code가 UTF-8인 `–` 문자를 `0xE2 0x80 0x93` 바이트로 인코딩하기 때문에 이 문제가 발생합니다. 이러한 바이트가 Windows-1252로 디코딩되면 `â&euro;"` 문자로 해석됩니다.
 
 표시될 수 있는 몇 가지 이상한 문자 시퀀스는 다음과 같습니다.
 
 <!-- markdownlint-disable MD038 -->
-- `â€"` 대신 `–`
-- `â€"` 대신 `—`
+- `â&euro;"` 대신 `–`
+- `â&euro;"` 대신 `—`
 - `Ã„2` 대신 `Ä`
-- ` `(줄 바꿈하지 않는 공백) 대신 `Â`
-- `Ã©` 대신 `é`
+- ` `(줄 바꿈하지 않는 공백) 대신 `Â`
+- `Ã&copy;` 대신 `é`
 <!-- markdownlint-enable MD038 -->
 
 이 유용한 [참조](https://www.i18nqa.com/debug/utf8-debug.html)에서는 UTF-8/Windows-1252 인코딩 문제를 나타내는 일반적인 패턴을 나열합니다.
@@ -88,7 +88,7 @@ BOM이 없는 형식(예: BOM을 포함하지 않는 [UTF-8][] 및 [Windows-1252
 
 UTF-8이라는 신뢰할 수 있는 규칙이 어디서나 사용되기 때문에 BOM은 선택 사항이며 Linux 분야에서 널리 사용되지 않습니다. 대부분의 Linux 애플리케이션에서는 텍스트 입력이 UTF-8로 인코딩된다고 가정합니다. 대부분의 Linux 애플리케이션에서는 BOM을 제대로 인식하고 처리하지만 일부는 그렇지 않으므로 텍스트에서 해당 애플리케이션으로 조작된 아티팩트가 발생합니다.
 
-**따라서 다음 작업을 수행하세요**:
+**따라서 다음 작업을 수행하세요** :
 
 - 주로 Windows 애플리케이션 및 Windows PowerShell으로 작업하는 경우 BOM이 포함된 UTF-8 또는 UTF-16과 같은 인코딩을 사용하는 것이 좋습니다.
 - 플랫폼에서 작업하는 경우 BOM이 포함된 UTF-8을 사용하는 것이 좋습니다.
@@ -131,6 +131,8 @@ GUI 보기로 이에 대한 드롭다운 또는 JSON 보기로 이에 대한 완
     "files.autoGuessEncoding": true
 }
 ```
+
+Visual Studio Code용 [Gremlins 추적기][]를 설치하는 것도 생각해 볼 수 있습니다. 이 확장은 보이지 않거나 다른 일반 문자처럼 보이기 때문에 쉽게 손상되는 특정 유니코드 문자를 드러냅니다.
 
 ## <a name="configuring-powershell"></a>PowerShell 구성
 
@@ -194,7 +196,7 @@ PowerShell이 특정 입력 인코딩을 사용하도록 강제할 수 없습니
 
 ### <a name="existing-scripts"></a>기존 스크립트
 
-파일 시스템에 이미 있는 스크립트를 새로 선택된 인코딩으로 다시 인코딩해야 합니다. VS Code의 아래쪽 막대에서 UTF-8 레이블이 표시됩니다. 해당 항목을 클릭하여 작업 모음을 열고 **인코딩하여 저장**을 선택합니다. 이제 해당 파일에서 새 인코딩을 선택할 수 있습니다. 전체 지침은 [VS Code 인코딩][]을 참조하세요.
+파일 시스템에 이미 있는 스크립트를 새로 선택된 인코딩으로 다시 인코딩해야 합니다. VS Code의 아래쪽 막대에서 UTF-8 레이블이 표시됩니다. 해당 항목을 클릭하여 작업 모음을 열고 **인코딩하여 저장** 을 선택합니다. 이제 해당 파일에서 새 인코딩을 선택할 수 있습니다. 전체 지침은 [VS Code 인코딩][]을 참조하세요.
 
 여러 파일을 다시 인코딩해야 하는 경우 다음 스크립트를 사용하면 됩니다.
 
@@ -254,6 +256,7 @@ PowerShell 스크립트를 읽거나 작성하는 다른 프로그램이 해당 
 
 PowerShell에서 인코딩 및 인코딩 구성에 대해 읽을 만한 몇 가지 다른 유용한 게시물은 다음과 같습니다.
 
+- [about_Character_Encoding](/powershell/module/microsoft.powershell.core/about/about_character_encoding)
 - [@mklement0][stackoverflow PowerShell 인코딩의 요약](https://stackoverflow.com/questions/40098771/changing-powershells-default-output-encoding-to-utf-8)
 - 인코딩 문제와 관련하여 VS Code-PowerShell에서 열린 이전 문제:
   - [#1308](https://github.com/PowerShell/VSCode-powershell/issues/1308)
@@ -273,3 +276,4 @@ PowerShell에서 인코딩 및 인코딩 구성에 대해 읽을 만한 몇 가�
 [UTF-16]: https://wikipedia.org/wiki/UTF-16
 [언어 서버 프로토콜]: https://microsoft.github.io/language-server-protocol/
 [VS Code 인코딩]: https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support
+[Gremlins 추적기]: https://marketplace.visualstudio.com/items?itemName=nhoizey.gremlins

@@ -2,12 +2,13 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: CI/CD 파이프라인에서 DSC의 역할 이해
-ms.openlocfilehash: 6df621f45caed3ac8a8b4dd1afa575d413259e0d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: 이 문서에서는 CI/CD 파이프라인에서 구성과 리소스를 결합하는 데 사용할 수 있는 방법의 유형을 설명합니다.
+ms.openlocfilehash: 8d06b86724eb25e657687e6518c01bb29d984264
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783112"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92647035"
 ---
 # <a name="understanding-dscs-role-in-a-cicd-pipeline"></a>CI/CD 파이프라인에서 DSC의 역할 이해
 
@@ -82,7 +83,7 @@ Configuration Name
 
 복합 리소스는 작업 완성도를 빌드하면서 파이프라인을 사용하여 컴퍼지션 및 협업 둘 다의 수준을 올립니다.
 
-인식하지 않으면서 이미 복합 리소스를 사용할 수 있습니다. 예제는 **ServiceSet**입니다.
+인식하지 않으면서 이미 복합 리소스를 사용할 수 있습니다. 예제는 **ServiceSet** 입니다.
 이 리소스는 개별적으로 나열하지 않고 여러 Windows 서비스의 상태를 관리합니다. Name 속성은 각 서비스의 이름을 제공하려면 문자열 배열을 허용합니다. 구성을 컴파일하면 MOF에는 ServiceSet에 전달된 각 Name에 대한 고유한 서비스 섹션이 포함됩니다.
 
 조직에는 모든 서버에 설치해야 하는 "에이전트" 또는 "미들웨어"가 있을 수 있습니다. 복합 리소스는 종속성, 설정 및 이러한 모든 도구 및 유틸리티의 구성을 관리하기 위한 최상의 해결책입니다.

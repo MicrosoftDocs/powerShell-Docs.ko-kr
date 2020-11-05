@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: gallery,powershell,cmdlet,psgallery
 title: 항목 만들기 및 게시
-ms.openlocfilehash: 1aa9cc84f259869ca6f8b8e2f6952e43eaac14df
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 스크립트 또는 모듈을 준비하여 PowerShell 갤러리에 게시하는 방법과 중요한 단계에 대해 설명합니다.
+ms.openlocfilehash: be846799aff71d38bdd0c98b3f43eaee5aef7798
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71327924"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662515"
 ---
 # <a name="creating-and-publishing-an-item"></a>항목 만들기 및 게시
 
@@ -67,7 +66,8 @@ PowerShell 갤러리 항목의 작성자와 소유자는 서로 관련된 개념
 
 [PowerShell 스크립트 분석기](https://www.powershellgallery.com/packages/PSScriptAnalyzer/)는 코드를 검사하여 기본적인 PowerShell 코딩 지침을 충족하는지를 확인하는 정적 코드 분석 도구입니다. 이 도구는 코드에서 흔히 발생하는 중요한 문제를 파악하므로 개발 중에 정기적으로 실행하여 항목이 게시할 수 있는 상태인지를 확인해야 합니다. PowerShell 스크립트 분석기는 오류, 경고 및 정보로 식별된 문제 목록을 제공합니다. 모든 오류는 항목을 PowerShell 갤러리에 게시하기 전에 해결해야 합니다. 경고는 검토해야 하며 대다수는 해결해야 합니다. PowerShell 갤러리에서 항목을 게시하거나 업데이트할 때마다 PowerShell 스크립트 분석기가 실행됩니다. 그런 후에 갤러리 운영 팀이 확인된 오류 해결을 위해 항목 소유자에게 연락을 합니다.
 
-항목의 매니페스트 정보를 PowerShell 갤러리 인프라에서 읽을 수 없는 경우에는 항목을 게시할 수 없습니다. [Test-ModuleManifest](/powershell/module/microsoft.powershell.core/test-modulemanifest)는 설치 시 모듈을 사용할 수 없게 만드는 일반적인 문제를 찾아냅니다. 모든 모듈을 PowerShell 갤러리에 게시하기 전에 이 cmdlet을 실행해야 합니다.
+항목의 매니페스트 정보를 PowerShell 갤러리 인프라에서 읽을 수 없는 경우에는 항목을 게시할 수 없습니다.
+[Test-ModuleManifest](/powershell/module/microsoft.powershell.core/test-modulemanifest)는 설치 시 모듈을 사용할 수 없게 만드는 일반적인 문제를 찾아냅니다. 모든 모듈을 PowerShell 갤러리에 게시하기 전에 이 cmdlet을 실행해야 합니다.
 
 마찬가지로 [Test-ScriptFileInfo](/powershell/module/PowerShellGet/test-scriptfileinfo)는 스크립트의 메타데이터 유효성을 검사합니다. 모듈과 별도로 게시하는 모든 스크립트를 PowerShell 갤러리에 게시하기 전에 이 cmdlet을 실행해야 합니다.
 
@@ -94,4 +94,3 @@ PowerShell 갤러리에서는 게시하는 모든 항목에 대해 바이러스�
 PowerShell 갤러리에 항목을 게시한 후에는 항목에 대한 피드백을 확인해야 합니다.
 
 - 게시할 때 사용한 계정과 연결된 전자 메일 주소를 모니터링합니다. PowerShell 갤러리 운영 팀과 사용자들이 해당 계정을 통해 PSSA 또는 바이러스 백신 검사 시에 발생하는 문제를 비롯한 피드백을 제공합니다. 전자 메일 계정이 잘못되었거나 심각한 문제가 계정으로 보고되었는데 장기간 해결되지 않는 경우에는 항목 유지 관리가 중단된 것으로 간주되어 [사용 약관](https://www.powershellgallery.com/policies/Terms)의 설명에 따라 PowerShell 갤러리에서 제거됩니다.
-- 게시하는 각 PowerShell 갤러리 항목의 댓글을 구독하는 것이 좋습니다. 이 경우 PowerShell 갤러리에서 소유한 항목에 댓글이 달리면 알림을 받을 수 있습니다. 댓글을 구독하려면 LiveFyre에서 계정을 만들어야 하므로, 원하는 경우에만 구독을 설정하면 됩니다.

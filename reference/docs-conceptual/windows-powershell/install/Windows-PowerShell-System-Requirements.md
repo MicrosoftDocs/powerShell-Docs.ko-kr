@@ -2,18 +2,19 @@
 ms.date: 12/06/2019
 keywords: powershell,cmdlet
 title: Windows PowerShell 시스템 요구 사항
-ms.openlocfilehash: 883da2f91c4a0b46e4bccbacd9933a52f8f476f6
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: 이 문서에는 Windows PowerShell 3.0, Windows PowerShell 4.0, Windows PowerShell 5.0 및 Windows PowerShell 5.1에 대한 시스템 요구 사항이 나열되어 있습니다.
+ms.openlocfilehash: a82c0b1d6bf53e4a97db8414050a122ae5b7745d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236087"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663832"
 ---
 # <a name="windows-powershell-system-requirements"></a>Windows PowerShell 시스템 요구 사항
 
 이 문서에는 Windows PowerShell 3.0, Windows PowerShell 4.0, Windows PowerShell 5.0 및 Windows PowerShell 5.1에 대한 시스템 요구 사항이 나열되어 있습니다. Windows PowerShell ISE(통합 스크립팅 환경), CIM(Common Information Model) 명령 및 워크플로와 같은 특수 기능을 제공합니다.
 
-Windows® 8.1 및 Windows Server® 2012 R2에는 필요한 모든 프로그램이 포함되어 있습니다. 이 문서는 이전 릴리스의 Windows 사용자를 위한 것입니다.
+Windows&reg; 8.1 및 Windows Server&reg; 2012 R2에는 필요한 모든 프로그램이 포함되어 있습니다. 이 문서는 이전 릴리스의 Windows 사용자를 위한 것입니다.
 
 ## <a name="operating-system-requirements"></a>운영 체제 요구 사항
 
@@ -57,8 +58,8 @@ Windows PowerShell 4.0은 다음 버전의 Windows에서 실행됩니다. Window
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Windows 8.1                                 | 기본적으로 설치됨                                                                                       |
 | Windows Server 2012 R2                      | 기본적으로 설치됨                                                                                       |
-| Windows® 7(서비스 팩 1)              | [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) 설치 |
-| Windows Server® 2008 R2(서비스 팩 1) | [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) 설치 |
+| Windows&reg; 7 서비스 팩 1              | [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) 설치 |
+| Windows Server&reg; 2008 R2 서비스 팩 1 | [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) 설치 |
 
 ### <a name="windows-powershell-30"></a>Windows Powershell 3.0
 
@@ -68,8 +69,8 @@ Windows PowerShell 3.0은 다음 버전의 Windows에서 실행됩니다. Window
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Windows 8                                   | 기본적으로 설치됨                                                                                       |
 | Windows Server 2012                         | 기본적으로 설치됨                                                                                       |
-| Windows® 7(서비스 팩 1)              | [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) 설치 |
-| Windows Server® 2008 R2(서비스 팩 1) | [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) 설치 |
+| Windows&reg; 7 서비스 팩 1              | [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) 설치 |
+| Windows Server&reg; 2008 R2 서비스 팩 1 | [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) 설치 |
 | Windows Server 2008(서비스 팩 2)     | [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) 설치 |
 
 ## <a name="microsoft-net-framework-requirements"></a>Microsoft .NET Framework 요구 사항
@@ -137,7 +138,7 @@ Windows PowerShell 2.0 엔진을 추가 또는 설치하는 방법과 필수 버
 
 Windows PowerShell 2.0, Windows PowerShell 3.0 및 Windows PowerShell 4.0은 Winows PE(Windows 사전 설치 환경)에서 실행됩니다. 그러나 다음 cmdlet은 지원되지 않습니다.
 
-- BITS(Background Intelligent Transfer Service) cmdlet. 자세한 내용은 [BitsTransfer](/powershell/module/bitstransfer/?view=win10-ps)를 참조하세요.
+- BITS(Background Intelligent Transfer Service) cmdlet. 자세한 내용은 [BitsTransfer](/powershell/module/bitstransfer/)를 참조하세요.
 - [Get-EventLog](/powershell/module/Microsoft.PowerShell.Management/Get-EventLog)
 - [Get-WinEvent](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent)
 - [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help)

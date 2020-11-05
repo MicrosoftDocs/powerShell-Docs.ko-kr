@@ -1,15 +1,13 @@
 ---
 ms.date: 06/10/2020
-ms.topic: conceptual
-keywords: wmf,powershell,setup
-contributor: keithb
 title: WMF 5.1 설치 및 구성
-ms.openlocfilehash: 9e0b4b6ed387b0a0d7fcf62a913677986d70de92
-ms.sourcegitcommit: 4a283fe5419f47102e6c1de7060880a934842ee9
+description: 이 문서에서는 WMF 5.1 및 해당 필수 구성 요소를 설치하는 방법을 설명합니다.
+ms.openlocfilehash: 0e076bfab684b6c83d62d236eea3bbd7ab2ad411
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84671396"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660849"
 ---
 # <a name="install-and-configure-wmf-51"></a>WMF 5.1 설치 및 구성
 
@@ -50,7 +48,7 @@ ms.locfileid: "84671396"
 Windows Server 2008 R2 SP1 또는 Windows 7 SP1에서 WMF 5.1을 설치하려면 다음이 필요합니다.
 
 - 최신 서비스 팩이 설치되어 있어야 합니다.
-- WMF 3.0이 설치되어 있어서는 **안 됩니다**. WMF 3.0 위에 WMF 5.1을 설치하면 **PSModulePath**(`$env:PSModulePath`)가 손실되어 다른 애플리케이션이 작동하지 않을 수 있습니다. WMF 5.1을 설치하기 전에 WMF 3.0을 제거하거나, **PSModulePath**를 저장한 다음 WMF 5.1 설치가 완료된 후에 수동으로 복원해야 합니다.
+- WMF 3.0이 설치되어 있어서는 **안 됩니다**. WMF 3.0 위에 WMF 5.1을 설치하면 **PSModulePath** (`$env:PSModulePath`)가 손실되어 다른 애플리케이션이 작동하지 않을 수 있습니다. WMF 5.1을 설치하기 전에 WMF 3.0을 제거하거나, **PSModulePath** 를 저장한 다음 WMF 5.1 설치가 완료된 후에 수동으로 복원해야 합니다.
 - WMF 5.1을 사용 하려면 적어도 [.NET Framework 4.5.2](https://www.microsoft.com/download/details.aspx?id=42642)합니다. 다운로드 위치에 있는 지침에 따라 Microsoft .NET Framework 4.5.2을 설치할 수 있습니다.
 
 ### <a name="installing-wmf-51-on-windows-server-2008-r2-and-windows-7"></a>Windows Server 2008 R2 및 Windows 7에 WMF 5.1 설치
@@ -65,8 +63,8 @@ Windows Server 2008 R2 SP1 또는 Windows 7 SP1에서 WMF 5.1을 설치하려면
 
    `Install-WMF5.1.ps1`은 다음 매개 변수를 사용하여 Windows Server 2008 R2 및 Windows 7에서 쉽게 설치를 자동화합니다.
 
-   - **AcceptEula**: 이 매개 변수가 포함된 경우 EULA에 자동으로 동의하게 되고 EULA가 표시되지 않습니다.
-   - **AllowRestart**: 이 매개 변수는 AcceptEula가 지정된 경우에만 사용할 수 있습니다. 이 매개 변수가 포함된 경우 WMF 5.1을 설치한 후 다시 시작해야 하면 설치가 완료된 직후 메시지가 표시되지 않고 다시 시작됩니다.
+   - **AcceptEula** : 이 매개 변수가 포함된 경우 EULA에 자동으로 동의하게 되고 EULA가 표시되지 않습니다.
+   - **AllowRestart** : 이 매개 변수는 AcceptEula가 지정된 경우에만 사용할 수 있습니다. 이 매개 변수가 포함된 경우 WMF 5.1을 설치한 후 다시 시작해야 하면 설치가 완료된 직후 메시지가 표시되지 않고 다시 시작됩니다.
 
 ## <a name="winrm-dependency"></a>WinRM 종속성
 

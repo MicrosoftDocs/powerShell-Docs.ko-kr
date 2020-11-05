@@ -2,12 +2,13 @@
 ms.date: 06/22/2020
 keywords: DSC, PowerShell, 구성, 서비스, 설정
 title: 구성 작성, 컴파일 및 적용
-ms.openlocfilehash: 9acb2db882795d7150326fadb2964deb1105b2cc
-ms.sourcegitcommit: 7eea0885dd7ac90ab36e5664501438a292217f7f
+description: 이 연습에서는 DSC 구성을 만들고 적용하는 과정을 처음부터 끝까지 안내합니다. 다음 예제에서는 매우 간단한 구성을 작성하고 적용하는 방법을 알아봅니다.
+ms.openlocfilehash: f173fe0dc6cd73e2b49bb8c44a9ee1a53eab475f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295678"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645028"
 ---
 # <a name="write-compile-and-apply-a-configuration"></a>구성 작성, 컴파일 및 적용
 
@@ -69,7 +70,7 @@ Configuration HelloWorld {
 
 ## <a name="compile-the-configuration"></a>구성 컴파일
 
-노드에 DSC 구성을 적용하려면 먼저 MOF 파일로 컴파일해야 합니다. 함수처럼 구성을 실행하면 `Node` 블록에 의해 정의된 모든 노드에서 하나의 `.mof` 파일을 컴파일합니다. 구성을 실행하기 위해 `HelloWorld.ps1`스크립트를 현재 범위로 ‘도트 소싱’해야 합니다. 자세한 내용은 [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing)를 참조하세요.
+노드에 DSC 구성을 적용하려면 먼저 MOF 파일로 컴파일해야 합니다. 함수처럼 구성을 실행하면 `Node` 블록에 의해 정의된 모든 노드에서 하나의 `.mof` 파일을 컴파일합니다. 구성을 실행하기 위해 `HelloWorld.ps1`스크립트를 현재 범위로 ‘도트 소싱’해야 합니다. 자세한 내용은 [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing)를 참조하세요.
 
 <!-- markdownlint-disable MD038 -->
 `. `(점, 공백) 뒤에 `HelloWorld.ps1` 스크립트를 저장한 경로를 입력하여 ‘도트 소싱’합니다. 그런 다음, 함수처럼 구성을 호출하여 실행합니다. 도트 소싱할 필요가 없도록 스크립트 아래쪽에서 구성 함수를 호출할 수도 있습니다.
@@ -110,7 +111,7 @@ Start-DscConfiguration -Path C:\Scripts\HelloWorld -Verbose -Wait
 
 `Start-DSCConfiguration` cmdlet이 완료되면 지정한 위치에서 `HelloWorld.txt` 파일을 표시합니다. [Get-Content](/powershell/module/microsoft.powershell.management/get-content) cmdlet을 사용하여 콘텐츠를 확인할 수 있습니다.
 
-[Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)을 사용하여 현재 상태를 _테스트_할 수도 있습니다.
+[Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)을 사용하여 현재 상태를 _테스트_ 할 수도 있습니다.
 
 노드가 현재 적용된 구성을 준수하는 경우 출력은 `True`여야 합니다.
 

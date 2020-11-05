@@ -2,18 +2,19 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configuration,setup
 title: DSC on Nano Server 사용
-ms.openlocfilehash: fb826455c21833ae4c8dc2ecd731ffce6bf7eaba
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: DSC는 Windows Nano Server용 VHD를 만들 때 설치할 수 있는 선택적 패키지입니다.
+ms.openlocfilehash: 18585323359abd85515d4db194dae4adbad7c3d8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953860"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92647078"
 ---
 # <a name="using-dsc-on-nano-server"></a>DSC on Nano Server 사용
 
 > 적용 대상: Windows PowerShell 5.0
 
-**DSC on Nano Server**는 Windows Server 2016 미디어의 `NanoServer\Packages` 폴더에 있는 선택적 패키지입니다. 이 패키지는 **Microsoft-NanoServer-DSC-Package**를 **New-NanoServerImage** 함수의 **Packages** 매개 변수 값으로 지정하여 Nano Server에 대한 VHD를 만들 때 설치할 수 있습니다. 예를 들어 가상 컴퓨터에 대한 VHD를 만드는 경우 다음과 같은 명령을 사용합니다.
+**DSC on Nano Server** 는 Windows Server 2016 미디어의 `NanoServer\Packages` 폴더에 있는 선택적 패키지입니다. 이 패키지는 **Microsoft-NanoServer-DSC-Package** 를 **New-NanoServerImage** 함수의 **Packages** 매개 변수 값으로 지정하여 Nano Server에 대한 VHD를 만들 때 설치할 수 있습니다. 예를 들어 가상 컴퓨터에 대한 VHD를 만드는 경우 다음과 같은 명령을 사용합니다.
 
 ```powershell
 New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -BasePath .\Base -TargetPath .\Nano1\Nano.vhd -ComputerName Nano1 -Packages Microsoft-NanoServer-DSC-Package
@@ -30,7 +31,7 @@ Nano Server는 처음 사용자용 Windows Server에 비해 제한된 일부 API
 밀어넣기 및 끌어오기 모드
 
 - 다음을 포함하여 Windows Server 전체 버전에 있는 모든 DSC cmdlet:
-- [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager)
+- [Get DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager)
 - [Set-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager)
 - [Enable-DscDebug](/powershell/module/PSDesiredStateConfiguration/Enable-DscDebug)
 - [Disable-DscDebug](/powershell/module/PSDesiredStateConfiguration/Disable-DscDebug)
@@ -44,13 +45,13 @@ Nano Server는 처음 사용자용 Windows Server에 비해 제한된 일부 API
 - [Remove-DscConfigurationDocument](/powershell/module/PSDesiredStateConfiguration/Remove-DscConfigurationDocument)
 - [Get-DscConfigurationStatus](/powershell/module/PSDesiredStateConfiguration/Get-DscConfigurationStatus)
 - [Invoke-DscResource](/powershell/module/PSDesiredStateConfiguration/Invoke-DscResource)
-- [Find-DscResource](/powershell/module/powershellget/find-dscresource?view=powershell-6)
+- [Find-DscResource](/powershell/module/powershellget/find-dscresource)
 - [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)
 - [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum)
 
 - 구성 컴파일([DSC 구성](../configurations/configurations.md) 참조)
 
-  **문제:** 구성 컴파일 중 암호 암호화([MOF 파일 보안](../pull-server/secureMOF.md) 참조)가 작동하지 않습니다.
+  **문제:** 구성 컴파일 중 암호 암호화( [MOF 파일 보안](../pull-server/secureMOF.md) 참조)가 작동하지 않습니다.
 
 - 메타 구성 컴파일([로컬 구성 관리자 구성](../managing-nodes/metaConfig.md) 참조)
 
@@ -80,34 +81,38 @@ Nano Server는 처음 사용자용 Windows Server에 비해 제한된 일부 API
 
 - 올바르게 작동하는 리소스
 
-- **보관**
-- **환경**
-- **최근에 사용한 파일**
-- **Log**
-- **ProcessSet**
-- **Registry**
-- **스크립트**
-- **WindowsPackageCab**
-- **WindowsProcess**
-- **WaitForAll**([노드 간 종속성 지정](../configurations/crossNodeDependencies.md) 참조)
-- **WaitForAny**([노드 간 종속성 지정](../configurations/crossNodeDependencies.md) 참조)
-- **WaitForSome**([노드 간 종속성 지정](../configurations/crossNodeDependencies.md) 참조)
+  - **보관**
+  - **환경**
+  - **파일**
+  - **Log**
+  - **ProcessSet**
+  - **레지스트리**
+  - **스크립트**
+  - **WindowsPackageCab**
+  - **WindowsProcess**
+  - **WaitForAll** ([노드 간 종속성 지정](../configurations/crossNodeDependencies.md) 참조)
+  - **WaitForAny** ([노드 간 종속성 지정](../configurations/crossNodeDependencies.md) 참조)
+  - **WaitForSome** ([노드 간 종속성 지정](../configurations/crossNodeDependencies.md) 참조)
 
 - 부분적으로 작동하는 리소스
-- **그룹**
-- **GroupSet**
 
-  **문제:** 특정 인스턴스를 두 번 호출하는 경우(동일한 구성을 두 번 실행) 위 리소스가 실패합니다.
+  - **그룹**
+  - **GroupSet**
 
-- **서비스**
-- **ServiceSet**
+    **문제:** 특정 인스턴스를 두 번 호출하는 경우(동일한 구성을 두 번 실행) 위 리소스가 실패합니다.
 
-  **문제:** 서비스 시작/중지(상태)에 대해서만 작동합니다. 시작 유형, 자격 증명, 설명 등과 같은 다른 서비스 특성을 변경하려고 하면 실패합니다. 발생하는 오류는 다음과 같습니다.
+  - **서비스**
+  - **ServiceSet**
 
-  *유형[management.managementobject]을 찾을 수 없습니다. 이 유형이 포함된 어셈블리가 로드되어 있는지 검증하세요.*
+    **문제:** 서비스 시작/중지(상태)에 대해서만 작동합니다. 시작 유형, 자격 증명, 설명 등과 같은 다른 서비스 특성을 변경하려고 하면 실패합니다. 발생하는 오류는 다음과 같습니다.
+
+    ```
+    Cannot find type [management.managementobject]: verify that the assembly containing this type is loaded.
+    ```
 
 - 작동하지 않는 리소스
-- **사용자**
+
+  - **사용자**
 
 ## <a name="dsc-features-not-available-on-nano-server"></a>Nano Server에서 사용할 수 없는 DSC 기능
 

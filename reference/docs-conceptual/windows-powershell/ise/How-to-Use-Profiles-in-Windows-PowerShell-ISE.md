@@ -1,17 +1,17 @@
 ---
 ms.date: 01/02/2020
-keywords: powershell,cmdlet
 title: Windows PowerShell ISE에서 프로필을 사용하는 방법
-ms.openlocfilehash: da7dc2f234ad0c2968fbb213e9e57da875f456e4
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: 이 문서에서는 Windows PowerShell ISE에서 프로필을 사용하는 방법을 설명합니다.
+ms.openlocfilehash: e677a4aaa3b2b8b76f289b0797aaa75c80c2b370
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808819"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663749"
 ---
 # <a name="how-to-use-profiles-in-windows-powershell-ise"></a>Windows PowerShell ISE에서 프로필을 사용하는 방법
 
-이 항목에서는 Windows PowerShell® ISE(통합 스크립팅 환경)에서 프로필을 사용하는 방법을 설명합니다. 이 섹션의 작업을 수행하기 전에 [about_Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles)를 검토하거나, 콘솔 창에서 `Get-Help about_Profiles`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다.
+이 문서에서는 Windows PowerShell&reg; ISE(통합 스크립팅 환경)에서 프로필을 사용하는 방법을 설명합니다. 이 섹션의 작업을 수행하기 전에 [about_Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles)를 검토하거나, 콘솔 창에서 `Get-Help about_Profiles`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다.
 
 프로필은 새 세션을 시작할 때 자동으로 실행되는 Windows PowerShell ISE 스크립트입니다.
 Windows PowerShell ISE용 Windows PowerShell 프로필을 하나 이상 만든 다음 이 프로필을 사용하여 제공하려는 변수, 별칭, 함수, 색 및 글꼴 기본 설정으로 Windows PowerShell 또는 Windows PowerShell ISE 환경을 구성하고 사용하도록 준비할 수 있습니다. 프로필은 시작하는 모든 Windows PowerShell ISE 세션에 영향을 줍니다.
@@ -72,7 +72,7 @@ if (!(Test-Path -Path $PROFILE.AllUsersAllHosts))
 
 ## <a name="to-edit-a-profile"></a>프로필을 편집하려면
 
-1. 프로필을 열려면 편집할 프로필을 지정하는 변수와 함께 `psEdit` 명령을 실행합니다. 예를 들어 "현재 사용자, Windows PowerShell ISE" 프로필을 열려면 다음과 같이 입력합니다. `psEdit $PROFILE`
+1. 프로필을 열려면 편집할 프로필을 지정하는 변수와 함께 `psEdit` 명령을 실행합니다. 예를 들어 "현재 사용자, Windows PowerShell ISE" 프로필을 열려면 `psEdit $PROFILE`을 입력합니다.
 
 2. 프로필에 몇 개의 항목을 추가합니다. 다음은 시작하기 위한 몇 가지 예입니다.
 
@@ -80,7 +80,7 @@ if (!(Test-Path -Path $PROFILE.AllUsersAllHosts))
 
    - 글꼴 크기를 20으로 변경하려면 프로필 파일에서 다음과 같이 입력합니다. `$psISE.Options.FontSize =20`
 
-3. 프로필 파일을 저장하려면 **파일** 메뉴에서 **저장**을 클릭합니다. 다음에 Windows PowerShell ISE를 열면 사용자 지정이 적용됩니다.
+3. 프로필 파일을 저장하려면 **파일** 메뉴에서 **저장** 을 클릭합니다. 다음에 Windows PowerShell ISE를 열면 사용자 지정이 적용됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

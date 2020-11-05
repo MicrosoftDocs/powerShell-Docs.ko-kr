@@ -1,13 +1,13 @@
 ---
 ms.date: 06/05/2017
-keywords: powershell,cmdlet
 title: PowerShellTab 개체
-ms.openlocfilehash: 55e3678a8285f0ec7e8131d98c87478216c26f37
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: PowerShellTab 개체는 Windows PowerShell 런타임 환경을 나타냅니다.
+ms.openlocfilehash: ac89875e408a41a92d7e3d1a83a849466296c3c6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809559"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663391"
 ---
 # <a name="the-powershelltab-object"></a>PowerShellTab 개체
 
@@ -45,8 +45,8 @@ PowerShell 탭에서 지정된 스크립트를 실행합니다.
 
 **\[useNewScope\]** - 기본적으로 `$true`로 설정되는 선택적 부울. `$true`로 설정된 경우 명령을 실행할 새 범위가 만들어집니다. 명령으로 지정되는 PowerShell 탭의 런타임 환경을 수정하지는 않습니다.
 
-**\[millisecondsTimeout\]** - 기본값이 **500**인 선택적 정수.
-이 명령이 지정된 시간 안에 완료되지 않으면 이 명령은 "작업 시간이 초과되었습니다"라는 메시지와 함께 **TimeoutException**을 생성합니다.
+**\[millisecondsTimeout\]** - 기본값이 **500** 인 선택적 정수.
+이 명령이 지정된 시간 안에 완료되지 않으면 이 명령은 "작업 시간이 초과되었습니다"라는 메시지와 함께 **TimeoutException** 을 생성합니다.
 
 ```powershell
 # Create a new PowerShell tab and then switch back to the first
@@ -109,7 +109,7 @@ $secondTab.CanInvoke
 
 ### <a name="consolepane"></a>ConsolePane
 
-Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다. Windows PowerShell ISE 2.0에서는 이 속성의 이름이 **CommandPane**이었습니다.
+Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다. Windows PowerShell ISE 2.0에서는 이 속성의 이름이 **CommandPane** 이었습니다.
 
 콘솔 창 [editor](The-ISEEditor-Object.md) 개체를 가져오는 읽기 전용 속성입니다.
 
@@ -169,7 +169,7 @@ $psISE.CurrentPowerShellTab.output.clear()
 
 Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 
-현재 프롬프트 텍스트를 가져오는 읽기 전용 속성입니다. 참고: **Prompt** 함수는 사용자 프로필로 재정의할 수 있습니다. 결과가 단순 문자열이 아니라면 이 속성은 아무 것도 반환하지 않습니다.
+현재 프롬프트 텍스트를 가져오는 읽기 전용 속성입니다. 참고: **Prompt** 함수는 사용자&trade;의 프로필로 재정의할 수 있습니다. 결과가 단순 문자열이 아니라면 이 속성은 아무 것도 반환하지 않습니다.
 
 ```powershell
 # Gets the current prompt text.

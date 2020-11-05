@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: gallery,powershell,cmdlet,psgallery,psget,갤러리
 title: PowerShell 갤러리
-ms.openlocfilehash: e489d2dd4db087b53eb07d2a8793c8f586c9b210
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShell 갤러리는 PowerShell 모듈, 스크립트 및 DSC 리소스의 중앙 리포지토리입니다.
+ms.openlocfilehash: 1aa3d351e71211259cac4e6d6f0ebd68c0df6ff1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500573"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662109"
 ---
 # <a name="the-powershell-gallery"></a>PowerShell 갤러리
 
@@ -23,19 +22,19 @@ PowerShellGet 모듈에는 [PowerShell 갤러리](https://www.PowerShellGallery.
 
 갤러리에서 패키지를 설치하려면 최신 버전의 PowerShellGet 모듈이 필요합니다. 자세한 지침은 [PowerShellGet](installing-psget.md) 설치를 참조하세요.
 
-갤러리와 함께 PowerShellGet 명령을 사용하는 방법에 대한 자세한 내용은 [시작](getting-started.md) 페이지를 참조하세요. *Update-Help -Module PowerShellGet*을 실행하여 이러한 명령에 대한 로컬 도움말을 설치할 수도 있습니다.
+갤러리와 함께 PowerShellGet 명령을 사용하는 방법에 대한 자세한 내용은 [시작](getting-started.md) 페이지를 참조하세요. *Update-Help -Module PowerShellGet* 을 실행하여 이러한 명령에 대한 로컬 도움말을 설치할 수도 있습니다.
 
 ## <a name="supported-operating-systems"></a>지원되는 운영 체제
 
-**PowerShellGet** 모듈을 사용하려면 **PowerShell 3.0 이상**이 있어야 합니다.
+**PowerShellGet** 모듈을 사용하려면 **PowerShell 3.0 이상** 이 있어야 합니다.
 
-**PowerShellGet**을 사용하려면 .NET Framework 4.5 이상이 필요합니다. .NET Framework 4.5 이상은 [여기](https://msdn.microsoft.com/library/5a4x27ek.aspx)에서 설치할 수 있습니다.
+**PowerShellGet** 을 사용하려면 .NET Framework 4.5 이상이 필요합니다. .NET Framework 4.5 이상은 [여기](https://msdn.microsoft.com/library/5a4x27ek.aspx)에서 설치할 수 있습니다.
 
-**PowerShell Core**는 교차 플랫폼이므로 Windows, Linux 및 MacOS에서 작동하며, 그 결과 **PowerShellGet**을 이러한 시스템에서 사용할 수 있습니다. **PowerShell Core**가 지원하는 전체 시스템 목록은 [PowerShell 설치](/powershell/scripting/install/installing-powershell)를 참조하세요.
+**PowerShell Core** 는 교차 플랫폼이므로 Windows, Linux 및 MacOS에서 작동하며, 그렇기 때문에 **PowerShellGet** 을 이러한 시스템들에서 사용할 수 있습니다. **PowerShell Core** 가 지원하는 전체 시스템 목록은 [PowerShell 설치](/powershell/scripting/install/installing-powershell)를 참조하세요.
 
 갤러리에 호스트된 많은 모듈은 각기 다른 OS를 지원하며 추가 요구 사항이 있습니다.
 자세한 내용은 모듈 설명서를 참조하세요.
 
-## <a name="got-a-question-have-feedback"></a>궁금한 점이 있나요? 피드백이 있습니까?
+## <a name="got-a-question-have-feedback"></a>궁금한 점이 있나요? 의견이 있으신가요?
 
 PowerShell 갤러리 및 PowerShellGet에 대한 자세한 내용은 [시작](getting-started.md) 페이지에서 확인할 수 있습니다. [UserVoice](http://windowsserver.uservoice.com/forums/301869-powershell)를 사용하여 피드백을 제공하고 문제를 신고하세요.

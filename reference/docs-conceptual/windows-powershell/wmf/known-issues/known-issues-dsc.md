@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,setup
 title: DSC(원하는 상태 구성)의 알려진 문제 및 제한 사항
-ms.openlocfilehash: a76c5bb336804c5b384e6b6ba6a705c6049ef7fb
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Windows PowerShell 5.x에서 DSC의 알려진 문제 및 제한 사항
+ms.openlocfilehash: 1163ed9e130430f6bbca98405a8993bb054dd1a8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808699"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662048"
 ---
 # <a name="desired-state-configuration-dsc-known-issues-and-limitations"></a>DSC(원하는 상태 구성)의 알려진 문제 및 제한 사항
 
@@ -56,9 +56,9 @@ LCM이 DebugMode인 경우 `Get-DscConfiguration`으로 시작한 작업을 중�
 
 ## <a name="no-verbose-error-messages-are-shown-in-debugmode"></a>DebugMode에 자세한 오류 메시지가 표시되지 않음
 
-LCM이 **DebugMode**인 경우 DSC 리소스에서 자세한 오류 메시지가 표시되지 않습니다.
+LCM이 **DebugMode** 인 경우 DSC 리소스에서 자세한 오류 메시지가 표시되지 않습니다.
 
-**해결 방법:** 리소스에서 자세한 정보 메시지를 표시하려면 **DebugMode**를 사용하지 않도록 설정하세요.
+**해결 방법:** 리소스에서 자세한 정보 메시지를 표시하려면 **DebugMode** 를 사용하지 않도록 설정하세요.
 
 ## <a name="invoke-dscresource-operations-cannot-be-retrieved-by-get-dscconfigurationstatus-cmdlet"></a>Get-DscConfigurationStatus cmdlet에서 Invoke-DscResource 작업을 검색할 수 없음
 
@@ -68,7 +68,7 @@ LCM이 **DebugMode**인 경우 DSC 리소스에서 자세한 오류 메시지가
 
 ## <a name="get-dscconfigurationstatus-returns-pull-cycle-operations-as-type-consistency"></a>Get-DscConfigurationStatus에서 끌어오기 주기 작업을 **Consistency** 형식으로 반환함
 
-노드가 PULL 새로 고침 모드로 설정된 경우 수행된 각 끌어오기 작업에 대해 `Get-DscConfigurationStatus` cmdlet은 작업 유형을 *Initial*이 아닌 **Consistency**로 보고합니다.
+노드가 PULL 새로 고침 모드로 설정된 경우 수행된 각 끌어오기 작업에 대해 `Get-DscConfigurationStatus` cmdlet은 작업 유형을 *Initial* 이 아닌 **Consistency** 로 보고합니다.
 
 **해결 방법:** 없음
 
@@ -156,7 +156,7 @@ Start-DscConfiguration -UseExisting -CimSession $session
 
 ## <a name="get-dscresource--syntax-does-not-reflect-psdscrunascredential-correctly"></a>Get-DscResource -Syntax에 PsDscRunAsCredential이 올바르게 반영되지 않음
 
-리소스에서 필수로 표시하거나 지원하지 않는 경우 **Syntax** 매개 변수는 **PsDscRunAsCredential**을 올바르게 반영하지 않습니다.
+리소스에서 필수로 표시하거나 지원하지 않는 경우 **Syntax** 매개 변수는 **PsDscRunAsCredential** 을 올바르게 반영하지 않습니다.
 
 **해결 방법:** 없음 그러나 ISE에서 구성을 작성하면 IntelliSense를 사용할 때 **PsDscRunAsCredential** 속성에 대한 올바른 메타데이터가 반영됩니다.
 

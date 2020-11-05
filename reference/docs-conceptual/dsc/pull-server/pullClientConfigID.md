@@ -2,19 +2,20 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configuration,setup
 title: PowerShell 5.0 이상에서 구성 ID를 사용하여 끌어오기 클라이언트 설정
-ms.openlocfilehash: a014e04fc5fbf2e813d9b0d79f39fe5aa3836f86
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: 이 문서에서는 PowerShell 5.0 이상에서 구성 ID를 사용하여 끌어오기 클라이언트를 설정하는 방법을 설명합니다.
+ms.openlocfilehash: 601858c08ce9a893a8941823d27fef3a60882b48
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500728"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664305"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-50-and-later"></a>PowerShell 5.0 이상에서 구성 ID를 사용하여 끌어오기 클라이언트 설정
 
 > 적용 대상: Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> 끌어오기 서버(Windows 기능 *DSC-Service*)는 Windows Server의 지원되는 구성 요소이지만 새로운 기능을 제공할 계획은 없습니다. 관리되는 클라우드를 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)(Windows Server에 끌어오기 서버 이외의 기능 포함) 또는 [여기](pullserver.md#community-solutions-for-pull-service)에 나열된 커뮤니티 솔루션 중 하나로 전환하기 시작하는 것이 좋습니다.
+> 끌어오기 서버(Windows 기능 *DSC-Service* )는 Windows Server의 지원되는 구성 요소이지만 새로운 기능을 제공할 계획은 없습니다. 관리되는 클라우드를 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)(Windows Server에 끌어오기 서버 이외의 기능 포함) 또는 [여기](pullserver.md#community-solutions-for-pull-service)에 나열된 커뮤니티 솔루션 중 하나로 전환하기 시작하는 것이 좋습니다.
 
 끌어오기 클라이언트를 설정하기 전에 끌어오기 서버를 설정해야 합니다. 이 순서가 필요하지 않더라도 문제 해결에 도움이 되고 등록에 성공했는지 확인할 수 있습니다. 끌어오기 서버를 설정하려면 다음 가이드를 사용하면 됩니다.
 
@@ -28,9 +29,9 @@ ms.locfileid: "80500728"
 
 ## <a name="configure-the-pull-client-lcm"></a>끌어오기 클라이언트 LCM 구성
 
-아래 예제 중 하나가 실행되면 **PullClientConfigID**라는 새 출력 폴더가 생성되고, 거기에 메타 구성 MOF 파일을 만듭니다. 이 경우 메타 구성 MOF 파일의 이름은 `localhost.meta.mof`로 지정됩니다.
+아래 예제 중 하나가 실행되면 **PullClientConfigID** 라는 새 출력 폴더가 생성되고, 거기에 메타 구성 MOF 파일을 만듭니다. 이 경우 메타 구성 MOF 파일의 이름은 `localhost.meta.mof`로 지정됩니다.
 
-구성을 적용하려면 메타 구성 MOF 파일의 위치로 설정된 **Path**와 함께 **Set-DscLocalConfigurationManager** cmdlet을 호출합니다. 다음은 그 예입니다.
+구성을 적용하려면 메타 구성 MOF 파일의 위치로 설정된 **Path** 와 함께 **Set-DscLocalConfigurationManager** cmdlet을 호출합니다. 예를 들어:
 
 ```powershell
 Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientConfigId –Verbose.
@@ -38,15 +39,15 @@ Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientC
 
 ## <a name="configuration-id"></a>구성 ID
 
-아래 예제에서는 이전에 이 목적으로 만들어진 LCM의 **ConfigurationID** 속성을 **Guid**로 설정합니다. **ConfigurationID**는 LCM이 끌어오기 서버에서 적절한 구성의 찾는 데 사용하는 ID입니다. 끌어오기 서버의 구성 MOF 파일의 이름은 `ConfigurationID.mof`로 지정해야 합니다. 여기서 *ConfigurationID*는 대상 노드의 LCM의 **ConfigurationID** 속성의 값입니다. 자세한 내용은 [끌어오기 서버에 구성 게시(v4/v5)](publishConfigs.md)를 참조하세요.
+아래 예제에서는 이전에 이 목적으로 만들어진 LCM의 **ConfigurationID** 속성을 **Guid** 로 설정합니다. **ConfigurationID** 는 LCM이 끌어오기 서버에서 적절한 구성의 찾는 데 사용하는 ID입니다. 끌어오기 서버의 구성 MOF 파일의 이름은 `ConfigurationID.mof`로 지정해야 합니다. 여기서 *ConfigurationID* 는 대상 노드의 LCM의 **ConfigurationID** 속성의 값입니다. 자세한 내용은 [끌어오기 서버에 구성 게시(v4/v5)](publishConfigs.md)를 참조하세요.
 
-아래 예제 또는 [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet을 사용하여 임의의 **Guid**를 만들 수 있습니다.
+아래 예제 또는 [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet을 사용하여 임의의 **Guid** 를 만들 수 있습니다.
 
 ```powershell
 [System.Guid]::NewGuid()
 ```
 
-환경에서 **Guid**를 사용하는 방법에 대한 자세한 내용은 [Guid에 대한 계획](secureserver.md#guids)을 참조하세요.
+환경에서 **Guid** 를 사용하는 방법에 대한 자세한 내용은 [Guid에 대한 계획](secureserver.md#guids)을 참조하세요.
 
 ## <a name="set-up-a-pull-client-to-download-configurations"></a>구성을 다운로드하도록 끌어오기 클라이언트 설정
 
@@ -80,7 +81,7 @@ configuration PullClientConfigID
 PullClientConfigID
 ```
 
-스크립트에서 **ConfigurationRepositoryWeb** 블록은 끌어오기 서버를 정의합니다. **ServerUrl**은 DSC 끌어오기의 URL을 지정합니다.
+스크립트에서 **ConfigurationRepositoryWeb** 블록은 끌어오기 서버를 정의합니다. **ServerUrl** 은 DSC 끌어오기의 URL을 지정합니다.
 
 ### <a name="smb-share"></a>SMB 공유
 
@@ -116,11 +117,11 @@ PullClientConfigID
 앞의 예와 같이 LCM 구성에서 **ConfigurationRepositoryWeb** 또는 **ConfigurationRepositoryShare** 블록만 지정하는 경우 끌어오기 클라이언트는 해당 구성을 가져온 것과 동일한 위치에서 리소스를 끌어옵니다. 리소스에 대해 별도 위치를 지정할 수도 있습니다. 별도 서버로 리소스 위치를 지정하려면 **ResourceRepositoryWeb** 블록을 사용합니다. SMB 공유로 리소스 위치를 지정하려면 **ResourceRepositoryShare** 블록을 사용합니다.
 
 > [!NOTE]
-> **ConfigurationRepositoryWeb**을 **ResourceRepositoryShare**와 결합하거나 **ConfigurationRepositoryShare**를 **ResourceRepositoryWeb** 과 결합할 수 있습니다. 이 예제가 아래에 표시되지 않았습니다.
+> **ConfigurationRepositoryWeb** 을 **ResourceRepositoryShare** 와 결합하거나 **ConfigurationRepositoryShare** 를 **ResourceRepositoryWeb** 과 결합할 수 있습니다. 이 예제가 아래에 표시되지 않았습니다.
 
 ### <a name="http-dsc-pull-server"></a>HTTP DSC 끌어오기 서버
 
-다음 메타 구성은 **CONTOSO-PullSrv**로부터 구성을 가져오고 **CONTOSO-ResourceSrv**로부터 리소스를 가져오도록 끌어오기 클라이언트를 구성합니다.
+다음 메타 구성은 **CONTOSO-PullSrv** 로부터 구성을 가져오고 **CONTOSO-ResourceSrv** 로부터 리소스를 가져오도록 끌어오기 클라이언트를 구성합니다.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -185,7 +186,7 @@ PullClientConfigID
 
 #### <a name="automatically-download-resources-in-push-mode"></a>푸시 모드에서 자동으로 리소스 다운로드
 
-PowerShell 5.0부터 끌어오기 클라이언트는 **푸시** 모드로 구성된 경우에도 SMB 공유로부터 모듈을 다운로드할 수 있습니다. 이 기능은 끌어오기 서버를 설정하지 않으려는 시나리오에서 특히 유용합니다. **ResourceRepositoryShare** 블록은 **ConfigurationRepositoryShare**를 지정하지 않고 사용할 수 있습니다. 다음 예제에서는 SMB 공유 `\\SMBPullServer\Resources`로부터 리소스를 끌어오도록 클라이언트를 설정하는 메타 구성을 보여줍니다. 노드가 **PUSHED** 구성이면 지정된 공유로부터 모든 필수 리소스를 자동으로 다운로드합니다.
+PowerShell 5.0부터 끌어오기 클라이언트는 **푸시** 모드로 구성된 경우에도 SMB 공유로부터 모듈을 다운로드할 수 있습니다. 이 기능은 끌어오기 서버를 설정하지 않으려는 시나리오에서 특히 유용합니다. **ResourceRepositoryShare** 블록은 **ConfigurationRepositoryShare** 를 지정하지 않고 사용할 수 있습니다. 다음 예제에서는 SMB 공유 `\\SMBPullServer\Resources`로부터 리소스를 끌어오도록 클라이언트를 설정하는 메타 구성을 보여줍니다. 노드가 **PUSHED** 구성이면 지정된 공유로부터 모든 필수 리소스를 자동으로 다운로드합니다.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -244,7 +245,7 @@ configuration PullClientConfigID
 PullClientConfigID
 ```
 
-보고서 서버를 지정하려면 **ReportRepositoryWeb** 블록을 사용합니다. 보고서 서버는 SMB 서버일 수 없습니다. 해당 메타 구성은 **CONTOSO-PullSrv**에서 구성을 가져오고 **CONTOSO-ResourceSrv**에서 리소스를 가져오고, **CONTOSO-ReportSrv**에 상태 보고서를 보내도록 끌어오기 클라이언트를 구성합니다.
+보고서 서버를 지정하려면 **ReportRepositoryWeb** 블록을 사용합니다. 보고서 서버는 SMB 서버일 수 없습니다. 다음 메타 구성은 **CONTOSO-PullSrv** 에서 구성을 가져오고 **CONTOSO-ResourceSrv** 에서 리소스를 가져오고, **CONTOSO-ReportSrv** 에 상태 보고서를 보내도록 끌어오기 클라이언트를 구성합니다.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -293,4 +294,4 @@ PullClientConfigID
 
 ## <a name="see-also"></a>참고 항목
 
-* [Setting up a pull client with configuration names(구성 이름을 사용하여 끌어오기 클라이언트 설정)](pullClientConfigNames.md)
+- [Setting up a pull client with configuration names(구성 이름을 사용하여 끌어오기 클라이언트 설정)](pullClientConfigNames.md)

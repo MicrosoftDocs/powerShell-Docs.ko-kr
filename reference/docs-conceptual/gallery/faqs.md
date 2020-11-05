@@ -1,16 +1,15 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: gallery,powershell,cmdlet,psgallery
 title: PowerShell 갤러리 FAQ
-ms.openlocfilehash: 29f930cf552abec8acbbf02f5570c6ac0a14066d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: PowerShell 갤러리에 대한 질문과 대답
+ms.openlocfilehash: 045db04d49e0c65f807fef254a17bf20bb877ff6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87777820"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654161"
 ---
-# <a name="frequently-asked-questions"></a>질문과 대답
+# <a name="frequently-asked-questions-about-the-powershell-gallery"></a>PowerShell 갤러리에 대한 질문과 대답
 
 ## <a name="what-is-a-powershell-module"></a>PowerShell 모듈이란?
 
@@ -56,7 +55,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 
 ## <a name="what-are-the-requirements-to-publish-a-module-to-the-powershell-gallery"></a>PowerShell 갤러리에 모듈을 게시하기 위한 요구 사항은 무엇인가요?
 
-모든 종류의 PowerShell 모듈(스크립트 모듈, 이진 모듈 또는 매니페스트 모듈)을 갤러리에 게시할 수 있습니다. 모듈을 게시하려면 PowerShellGet에 버전, 설명, 작성자, 사용 허가 방법 등의 몇 가지 정보가 필요합니다. 이 정보는 게시 프로세스의 일부로 *모듈 매니페스트*(.psd1) 파일 또는 [Publish-Module][] cmdlet의 **LicenseUri** 매개 변수 값에서 읽어옵니다. 갤러리에 게시된 모든 모듈에는 모듈 매니페스트가 있어야 합니다. 매니페스트에 다음 정보가 포함된 모든 모듈을 갤러리에 게시할 수 있습니다.
+모든 종류의 PowerShell 모듈(스크립트 모듈, 이진 모듈 또는 매니페스트 모듈)을 갤러리에 게시할 수 있습니다. 모듈을 게시하려면 PowerShellGet에 버전, 설명, 작성자, 사용 허가 방법 등의 몇 가지 정보가 필요합니다. 이 정보는 게시 프로세스의 일부로 *모듈 매니페스트* (.psd1) 파일 또는 [Publish-Module][] cmdlet의 **LicenseUri** 매개 변수 값에서 읽어옵니다. 갤러리에 게시된 모든 모듈에는 모듈 매니페스트가 있어야 합니다. 매니페스트에 다음 정보가 포함된 모든 모듈을 갤러리에 게시할 수 있습니다.
 
 - 버전
 - 설명
@@ -65,7 +64,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>올바른 형식의 모듈 매니페스트를 만들려면 어떻게 하나요?
 
-모듈 매니페스트를 만드는 가장 쉬운 방법은 [New-ModuleManifest][] cmdlet을 실행하는 것입니다. PowerShell 5.0 이상에서 New-ModuleManifest는 **ProjectUri**, **LicenseUri**, **Tags** 등의 유용한 메타데이터에 빈 필드를 사용하여 올바른 형식의 모듈 매니페스트를 생성합니다. 단순히 빈 칸을 채우거나 생성된 매니페스트를 올바른 형식의 예로 사용합니다.
+모듈 매니페스트를 만드는 가장 쉬운 방법은 [New-ModuleManifest][] cmdlet을 실행하는 것입니다. PowerShell 5.0 이상에서 New-ModuleManifest는 **ProjectUri** , **LicenseUri** , **Tags** 등의 유용한 메타데이터에 빈 필드를 사용하여 올바른 형식의 모듈 매니페스트를 생성합니다. 단순히 빈 칸을 채우거나 생성된 매니페스트를 올바른 형식의 예로 사용합니다.
 
 모든 필수 메타데이터 필드가 올바르게 채워졌는지 확인하려면 [Test-ModuleManifest][] cmdlet을 사용합니다.
 
@@ -94,7 +93,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 
 ## <a name="how-do-i-create-a-correctly-formatted-script-file"></a>올바른 형식의 스크립트 파일을 만들려면 어떻게 하나요?
 
-올바르 형식의 스크립트 파일을 만드는 가장 쉬운 방법은 [New-ScriptFileInfo][] cmdlet을 실행하는 것입니다. PowerShell 5.0에서 New-ScriptFileInfo는 **ProjectUri**, **LicenseUri**, **Tags** 등의 유용한 메타데이터에 빈 필드를 사용하여 올바른 형식의 스크립트 파일을 생성합니다. 단순히 빈 칸을 채우거나 생성된 스크립트 파일을 올바른 형식의 예로 사용합니다.
+올바르 형식의 스크립트 파일을 만드는 가장 쉬운 방법은 [New-ScriptFileInfo][] cmdlet을 실행하는 것입니다. PowerShell 5.0에서 New-ScriptFileInfo는 **ProjectUri** , **LicenseUri** , **Tags** 등의 유용한 메타데이터에 빈 필드를 사용하여 올바른 형식의 스크립트 파일을 생성합니다. 단순히 빈 칸을 채우거나 생성된 스크립트 파일을 올바른 형식의 예로 사용합니다.
 
 모든 필수 메타데이터 필드가 올바르게 채워졌는지 확인하려면 [Test-ScriptFileInfo][] cmdlet을 사용합니다.
 
@@ -145,9 +144,9 @@ PackageManagement 패키지 공급자 계층에서 PSModule 패키지 공급자�
 
 일반적으로 최신 버전의 PowerShellGet 모듈을 선택하는 것이 좋습니다(.NET 4.5가 필요함).
 
-**PowerShellGet** 모듈을 사용하려면 **PowerShell 3.0 이상**이 있어야 합니다.
+**PowerShellGet** 모듈을 사용하려면 **PowerShell 3.0 이상** 이 있어야 합니다.
 
-따라서 **PowerShellGet**에는 다음 운영 체제 중 하나가 필요합니다.
+따라서 **PowerShellGet** 에는 다음 운영 체제 중 하나가 필요합니다.
 
 - 윈도우 10
 - Windows 8.1 Pro
@@ -157,7 +156,7 @@ PackageManagement 패키지 공급자 계층에서 PSModule 패키지 공급자�
 - Windows Server 2012 R2
 - Windows Server 2008 R2 SP1
 
-**PowerShellGet**을 사용하려면 .NET Framework 4.5 이상도 있어야 합니다. .NET Framework 4.5 이상은 [여기](https://msdn.microsoft.com/library/5a4x27ek.aspx)에서 설치할 수 있습니다.
+**PowerShellGet** 을 사용하려면 .NET Framework 4.5 이상도 있어야 합니다. .NET Framework 4.5 이상은 [여기](https://msdn.microsoft.com/library/5a4x27ek.aspx)에서 설치할 수 있습니다.
 
 ## <a name="is-it-possible-to-reserve-names-for-packages-that-will-be-published-in-future"></a>나중에 게시할 패키지의 이름을 예약할 수 있나요?
 

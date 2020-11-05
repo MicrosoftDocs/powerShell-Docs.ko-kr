@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 2.0 엔진 사용
-ms.openlocfilehash: c5ac92159d63e5669643908016186ed32dfb46db
-ms.sourcegitcommit: 3e343f005fe76960c998ef1869a1a093d37ef349
+description: Windows PowerShell 2.0 엔진은 Windows PowerShell 2.0용으로 작성되고 CLR 2.0으로 컴파일된 호스트 프로그램을 수정 없이 실행할 수 없기 때문에 기존 스크립트 또는 호스트 프로그램을 실행할 수 없을 때만 사용해야 합니다.
+ms.openlocfilehash: 214b87b7314f31974801bb07f98ddea3b68008f0
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216025"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663996"
 ---
 # <a name="using-the-windows-powershell-20-engine"></a>Windows PowerShell 2.0 엔진 사용
 

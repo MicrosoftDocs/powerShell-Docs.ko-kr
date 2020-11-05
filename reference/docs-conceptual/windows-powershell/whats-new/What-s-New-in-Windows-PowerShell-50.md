@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Windows PowerShell 5.0의 새로운 기능
-ms.openlocfilehash: 59ccc83c7d4736181f13b72c4d3725694f80c1c8
-ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
+description: 이 릴리스 정보에서는 Windows PowerShell 5.x의 새로운 기능 및 변경 내용에 대해 설명합니다.
+ms.openlocfilehash: 82d3e10fa417085911242241dcfc54e931df8eb4
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90847037"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663365"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Windows PowerShell 5.0의 새로운 기능
 
@@ -55,10 +56,10 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 
 - 향상된 끌어오기 모드
   - 이제 끌어오기 모드에서 모든 ZIP 파일을 지원합니다.
-  - 이제 **AllowModuleOverwrite**가 올바르게 작동합니다.
+  - 이제 **AllowModuleOverwrite** 가 올바르게 작동합니다.
 
 - 향상된 복원력
-  - 새 **DebugMode**를 사용하면 리소스 모듈을 다시 로드할 수 있습니다.
+  - 새 **DebugMode** 를 사용하면 리소스 모듈을 다시 로드할 수 있습니다.
   - 구성 오류가 발생할 경우 pending.mof 파일이 삭제되지 않습니다.
   - 이제 메타 구성 설정이 손상되었을 때 LCM(로컬 구성 관리자)의 복원력이 향상되었습니다.
 
@@ -67,7 +68,7 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
   - 이제 오류 로그 파일에 Windows PowerShell 리소스에 대한 호출 스택이 포함됩니다.
 
 - 향상된 유연성
-  - LocalConfigurationManager 리소스에 **ActionAfterReboot**라는 새 속성이 있습니다.
+  - LocalConfigurationManager 리소스에 **ActionAfterReboot** 라는 새 속성이 있습니다.
     - ContinueConfiguration(기본값): 대상 노드가 다시 시작된 후에 자동으로 구성을 다시 시작합니다.
     - StopConfiguration: 노드가 다시 시작된 후에 자동으로 구성을 다시 시작하지 않습니다.
   - 이제 일관성 실행이 PULL 작업보다 더 자주 발생하거나 그 반대의 경우가 발생할 수 있습니다.
@@ -75,10 +76,10 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 
 - 향상된 오류 방지
   - 이제 구성을 적용하기 전에 모듈 버전이 적용됩니다.
-  - 이제 Get-, Set- 또는 Test-TargetResource 호출에 대해 **DebugPreference**가 올바르게 설정됩니다.
+  - 이제 Get-, Set- 또는 Test-TargetResource 호출에 대해 **DebugPreference** 가 올바르게 설정됩니다.
 
 - 향상된 자격 증명 처리
-  - 이제 **Certificate**와 **PSDscAllowPlainTextPassword**를 둘 다 지정할 경우 인증서가 사용됩니다.
+  - 이제 **Certificate** 와 **PSDscAllowPlainTextPassword** 를 둘 다 지정할 경우 인증서가 사용됩니다.
   - Get-TargetResource에 대해서도 자격 증명의 암호가 해독됩니다.
   - 메타 구성 자격 증명이 암호화 및 암호 해독됩니다.
   - 이제 PSCredentials가 포함된 개체에 있을 때 암호가 해독됩니다.
@@ -100,7 +101,7 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 
 ### <a name="new-features-in-windows-powershell"></a>Windows PowerShell의 새로운 기능
 
-- Windows PowerShell 5.0 이상에서는 다른 개체 지향 프로그래밍 언어와 유사한 형식 구문 및 의미 체계를 사용하여 클래스를 통해 개발할 수 있습니다. **Class**, **Enum** 및 기타 키워드가 새로운 기능을 지원하기 위해 Windows PowerShell 언어에 추가되었습니다.
+- Windows PowerShell 5.0 이상에서는 다른 개체 지향 프로그래밍 언어와 유사한 형식 구문 및 의미 체계를 사용하여 클래스를 통해 개발할 수 있습니다. **Class** , **Enum** 및 기타 키워드가 새로운 기능을 지원하기 위해 Windows PowerShell 언어에 추가되었습니다.
   클래스 작업에 대한 자세한 내용은 about_Classes를 참조하세요.
 
 - Windows PowerShell 5.0에서는 스크립트와 해당 호출자(또는 호스팅 환경) 간에 구조화된 데이터를 전송하는 데 사용할 수 있는 새 구조화된 정보 스트림이 도입되었습니다. 이제 Write-Host를 사용하여 출력을 정보 스트림으로 내보낼 수 있습니다. 정보 스트림은 PowerShell.Streams, 작업, 예약된 작업 및 워크플로에 대해서도 작동합니다. 정보 스트림을 지원하는 기능은 다음과 같습니다.
@@ -116,13 +117,13 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 - 새 PackageManagement 모듈을 사용하면 인터넷에서 소프트웨어 패키지를 검색하고 설치할 수 있습니다.
   PackageManagement(이전의 OneGet) 모듈은 Windows 패키지 관리를 단일 Windows PowerShell 인터페이스와 통합하는 기존 패키지 관리자(패키지 공급자라고도 함)의 관리자 또는 멀티플렉서입니다.
 - 새 PowerShellGet 모듈을 사용하면 [PowerShell 갤러리](https://www.powershellgallery.com/) 또는 내부 모듈 리포지토리에서 Register-PSRepository cmdlet을 실행하여 설정할 수 있는 모듈과 DSC 리소스를 찾고 설치, 게시 및 업데이트할 수 있습니다.
-- -Force 매개 변수를 추가하지 않을 경우 기본적으로 Get-Member 결과에 멤버(속성 또는 메서드)가 표시되지 않도록 지정하기 위해 새 언어 키워드인 **Hidden**이 추가되었습니다.
+- -Force 매개 변수를 추가하지 않을 경우 기본적으로 Get-Member 결과에 멤버(속성 또는 메서드)가 표시되지 않도록 지정하기 위해 새 언어 키워드인 **Hidden** 이 추가되었습니다.
   멤버가 표시되어야 하는 컨텍스트가 아닐 경우 숨김으로 표시된 속성이나 메서드는 IntelliSense 결과에도 표시되지 않습니다. 예를 들어 자동 변수 $This는 클래스 메서드에 있을 경우 숨겨진 멤버를 표시해야 합니다.
-- New-Item, Remove-Item 및 Get-ChildItem이 [바로 가기 링크](https://en.wikipedia.org/wiki/Symbolic_link) 만들기 및 관리를 지원하도록 향상되었습니다. New-Item의 **ItemType** 매개 변수가 새 값인 **SymbolicLink**를 허용합니다. 이제 New-Item cmdlet을 실행하여 한 줄에 바로 가기 링크를 만들 수 있습니다.
+- New-Item, Remove-Item 및 Get-ChildItem이 [바로 가기 링크](https://en.wikipedia.org/wiki/Symbolic_link) 만들기 및 관리를 지원하도록 향상되었습니다. New-Item의 **ItemType** 매개 변수가 새 값인 **SymbolicLink** 를 허용합니다. 이제 New-Item cmdlet을 실행하여 한 줄에 바로 가기 링크를 만들 수 있습니다.
 - Get-ChildItem에 있는 새 –Depth 매개 변수를 –Recurse 매개 변수와 함께 사용하면 재귀를 제한할 수 있습니다. 예를 들어 Get-ChildItem –Recurse –Depth 2는 현재 폴더, 현재 폴더 내의 모든 자식 폴더 및 자식 폴더 내의 모든 폴더에서 결과를 반환합니다.
 - 이제 Copy-Item을 사용하여 Windows PowerShell 세션 간에 파일이나 폴더를 복사할 수 있으므로 원격 컴퓨터(Nano 서버를 실행하며 다른 인터페이스가 없는 컴퓨터 포함)에 연결된 세션에 파일을 복사할 수 있습니다. 파일을 복사하려면 PSSession ID를 새 -FromSession 및 -ToSession 매개 변수의 값으로 지정하고 –Path 및 –Destination을 추가하여 각각 원래 경로와 대상을 지정합니다. 예를 들면 Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder와 같습니다.
-- Windows PowerShell 기록이 콘솔 호스트(**powershell.exe**)뿐 아니라 모든 호스팅 애플리케이션(예: Windows PowerShell ISE)에 적용되도록 향상되었습니다. 시스템 차원의 기록 사용을 포함한 기록 옵션은 관리 템플릿\Windows 구성 요소\Windows PowerShell에 있는 **PowerShell 기록 켜기** 그룹 정책 설정을 사용하도록 설정하여 구성할 수 있습니다.
-- 새로운 세부 스크립트 추적 기능을 사용하면 시스템에서 Windows PowerShell 스크립트 사용을 자세히 추적하고 분석할 수 있습니다. 세부 스크립트 추적을 사용하도록 설정하면 Windows PowerShell에서 모든 스크립트 블록을 ETW(Windows용 이벤트 추적) 이벤트 로그 **Microsoft-Windows-PowerShell/Operational**에 로깅합니다.
+- Windows PowerShell 기록이 콘솔 호스트( **powershell.exe** )뿐 아니라 모든 호스팅 애플리케이션(예: Windows PowerShell ISE)에 적용되도록 향상되었습니다. 시스템 차원의 기록 사용을 포함한 기록 옵션은 관리 템플릿\Windows 구성 요소\Windows PowerShell에 있는 **PowerShell 기록 켜기** 그룹 정책 설정을 사용하도록 설정하여 구성할 수 있습니다.
+- 새로운 세부 스크립트 추적 기능을 사용하면 시스템에서 Windows PowerShell 스크립트 사용을 자세히 추적하고 분석할 수 있습니다. 세부 스크립트 추적을 사용하도록 설정하면 Windows PowerShell에서 모든 스크립트 블록을 ETW(Windows용 이벤트 추적) 이벤트 로그 **Microsoft-Windows-PowerShell/Operational** 에 로깅합니다.
 - Windows PowerShell 5.0 이상에서는 새 암호화 메시지 구문 cmdlet이 [RFC5652](https://tools.ietf.org/html/rfc5652) 문서에 기록된 대로 메시지를 암호로 보호하기 위해 IETF 표준 형식을 사용하는 콘텐츠의 암호화 및 암호 해독을 지원합니다. Get-CmsMessage, Protect-CmsMessage 및 Unprotect-CmsMessage cmdlet이 [Microsoft.PowerShell.Security](/powershell/module/Microsoft.PowerShell.Security) 모듈에 추가되었습니다.
 - [Microsoft.PowerShell.Utility](/powershell/module/Microsoft.PowerShell.Utility) 모듈의 새 cmdlet인 Get-Runspace, Debug-Runspace, Get-RunspaceDebug, Enable-RunspaceDebug 및 Disable-RunspaceDebug를 사용하면 Runspace에 디버그 옵션을 설정하고 Runspace에서 디버깅을 시작 및 중지할 수 있습니다. 임의의 Runspace(즉, Windows PowerShell 콘솔 또는 Windows PowerShell ISE 세션의 기본 Runspace가 아닌 Runspace)를 디버그하기 위해 Windows PowerShell에서는 스크립트에 중단점을 설정하고, 디버거를 연결하여 Runspace 스크립트를 디버그할 수 있을 때까지 추가된 중단점이 스크립트 실행을 중지하도록 할 수 있습니다. 임의의 Runspace에 대한 중첩된 디버깅 지원이 Runspace에 대한 Windows PowerShell 스크립트 디버거에 추가되었습니다.
 - 새 Format-Hex cmdlet이 [Microsoft.PowerShell.Utility](/powershell/module/Microsoft.PowerShell.Utility) 모듈에 추가되었습니다.
@@ -135,14 +136,14 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 - 파일 버전 정보는 특히 파일이 패치된 후 잘못될 수 있으므로 FileInfo 개체에 대한 새 FileVersionRaw 및 ProductVersionRaw 스크립트 속성을 사용할 수 있습니다. 예를 들어 다음 명령을 실행하여 powershell.exe의 이러한 속성 값을 표시할 수 있습니다. 여기서 $pid는 Windows PowerShell의 실행 중 세션에 대한 프로세스 ID를 포함합니다. `Get-Process -Id $pid -FileVersionInfo | Format-List *version* -Force`
 - 새 Enter-PSHostProcess 및 Exit-PSHostProcess cmdlet을 사용하면 Windows PowerShell 콘솔에서 실행 중인 현재 프로세스와 별개인 프로세스에서 Windows PowerShell 스크립트를 디버그할 수 있습니다. Enter-PSHostProcess를 실행하여 특정 프로세스 ID를 입력하거나 연결한 다음 Get-Runspace를 실행하여 프로세스 내의 활성 Runspace를 반환합니다. 프로세스 내에서 스크립트 디버그를 마쳤으면 Exit-PSHostProcess를 실행하여 프로세스에서 분리합니다.
 - 새 Wait-Debugger cmdlet이 [Microsoft.PowerShell.Utility](/powershell/module/Microsoft.PowerShell.Utility) 모듈에 추가되었습니다. Wait-Debugger를 실행하면 스크립트에서 다음 문을 실행하기 전에 디버거에서 스크립트를 중지할 수 있습니다.
-- 이제 Windows PowerShell 워크플로 디버거에서 명령 또는 탭 완성 기능을 지원하며 중첩된 워크플로 함수를 디버그할 수 있습니다. 이제 **Ctrl+Break**를 눌러 실행 중인 스크립트, 로컬 및 원격 세션, 워크플로 스크립트에서 디버거를 시작할 수 있습니다.
+- 이제 Windows PowerShell 워크플로 디버거에서 명령 또는 탭 완성 기능을 지원하며 중첩된 워크플로 함수를 디버그할 수 있습니다. 이제 **Ctrl+Break** 를 눌러 실행 중인 스크립트, 로컬 및 원격 세션, 워크플로 스크립트에서 디버거를 시작할 수 있습니다.
 - Windows PowerShell 워크플로, 백그라운드 및 원격 세션에서 실행되는 작업에 대해 실행 중인 작업 스크립트를 디버그할 수 있도록 Debug-Job cmdlet이 [Microsoft.PowerShell.Core](/powershell/module/Microsoft.PowerShell.Core) 모듈에 추가되었습니다.
 - Windows PowerShell 작업에 대해 새 AtBreakpoint 상태가 추가되었습니다. AtBreakpoint 상태는 작업이 중단점 설정을 포함하는 스크립트를 실행하고 스크립트가 중단점에 도달했을 때 적용됩니다. 디버그 중단점에서 작업이 중지되면 Debug-Job cmdlet을 실행하여 작업을 디버그해야 합니다.
 - Windows PowerShell 5.0에서는 $PSModulePath의 동일한 폴더에서 단일 Windows PowerShell 모듈의 여러 버전에 대한 지원을 구현합니다. 모듈의 원하는 버전을 가져올 수 있도록 RequiredVersion 속성이 ModuleSpecification 클래스에 추가되었습니다. 이 속성은 ModuleVersion 속성과 함께 사용할 수 없습니다. 이제 RequiredVersion이 Get-Module, Import-Module 및 Remove-Module cmdlet에 대한 FullyQualifiedName 매개 변수 값의 일부로 지원됩니다.
 - 이제 Test-ModuleManifest cmdlet을 실행하여 모듈 버전 유효성 검사를 수행할 수 있습니다.
 - 이제 Get-Command cmdlet의 결과에 Version 열이 표시됩니다. 새 Version 속성이 CommandInfo 클래스에 추가되었습니다. Get-Command는 동일한 모듈의 여러 버전에 포함된 명령을 보여 줍니다. 또한 Version 속성은 CmdletInfo의 파생 클래스인 CmdletInfo 및 ApplicationInfo의 일부입니다.
 - Get-Command에는 ShowCommand 정보를 PSObjects로 반환하는 새 매개 변수 -ShowCommandInfo가 있습니다. 이 매개 변수는 Windows PowerShell ISE에서 Windows PowerShell 원격 기능을 사용하여 Show-Command를 실행할 때 특히 유용한 기능입니다. –ShowCommandInfo 매개 변수는 Microsoft.PowerShell.Utility 모듈의 기존 Get-SerializedCommand 함수를 대체하지만 하위 수준 스크립팅을 지원하기 위해 Get-SerializedCommand 스크립트를 계속 사용할 수 있습니다.
-- 새 Get-ItemPropertyValue cmdlet을 사용하면 점 표기법을 사용하지 않고 속성 값을 가져올 수 있습니다. 예를 들어 이전 Windows PowerShell 릴리스에서는 다음 명령을 실행하여 PowerShellEngine 레지스트리 키의 Application Base 속성 값을 가져올 수 있습니다. **(Get-ItemProperty -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase).ApplicationBase** Windows PowerShell 5.0 이상에서는 **Get-ItemPropertyValue -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase**를 실행할 수 있습니다.
+- 새 Get-ItemPropertyValue cmdlet을 사용하면 점 표기법을 사용하지 않고 속성 값을 가져올 수 있습니다. 예를 들어 이전 Windows PowerShell 릴리스에서는 다음 명령을 실행하여 PowerShellEngine 레지스트리 키의 Application Base 속성 값을 가져올 수 있습니다. **(Get-ItemProperty -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase).ApplicationBase** Windows PowerShell 5.0 이상에서는 **Get-ItemPropertyValue -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase** 를 실행할 수 있습니다.
 - 이제 Windows PowerShell 콘솔이 Windows PowerShell ISE와 같이 구문 색 지정을 사용합니다.
 - 새 NetworkSwitch 모듈에 포함된 cmdlet을 사용하면 스위치, VLAN(가상 LAN) 및 기본 계층 2 네트워크 스위치 포트 구성을 Windows Server 2012 R2 로고 인증 네트워크 스위치에 적용할 수 있습니다.
 - 단일 모듈의 여러 버전을 저장할 수 있도록 FullyQualifiedName 매개 변수가 Import-Module 및 Remove-Module cmdlet에 추가되었습니다.
@@ -166,7 +167,7 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
   - Update-DscConfiguration
 - 중앙 집중식 DSC 오류 보고를 사용하면 자세한 오류 정보가 이벤트 로그에 기록될 뿐 아니라 나중에 분석하기 위해 중앙 위치로 보낼 수 있습니다. 이 중앙 위치를 사용하여 해당 환경의 모든 서버에 대해 발생한 DSC 구성 오류를 저장할 수 있습니다. 메타 구성에서 보고서 서버를 정의하면 모든 오류가 보고서 서버로 전송된 후 데이터베이스에 저장됩니다. 끌어오기 서버에서 구성을 가져올 대상 노드를 구성했는지 여부에 관계없이 이 기능을 설정할 수 있습니다.
 - 향상된 Windows PowerShell ISE를 사용하여 DSC 리소스를 쉽게 작성할 수 있습니다. 이제 다음을 수행할 수 있습니다.
-  - **구성** 블록이나 **노드** 블록 내 빈 줄에 **Ctrl+Space**를 입력하여 해당 블록 내의 모든 DSC 리소스 나열
+  - **구성** 블록이나 **노드** 블록 내 빈 줄에 **Ctrl+Space** 를 입력하여 해당 블록 내의 모든 DSC 리소스 나열
   - **열거형** 형식인 리소스 속성 자동 완성
   - 구성에 있는 다른 리소스 인스턴스에 따라 DSC 리소스의 **DependsOn** 속성 자동 완성
   - 리소스 속성 값의 탭 완성 기능 향상
@@ -175,7 +176,7 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 - 이제 생성된 구성 함수에 \[CmdletBinding()]을 추가하여 정의된 DSC 구성에 대한 사용자 지정 도움말 지원이 Windows PowerShell에 포함됩니다.
 - 새 **DscLocalConfigurationManager** 특성은 DSC 로컬 구성 관리자를 구성하는 데 사용되는 구성 블록을 메타 구성으로 지정합니다. 이 특성은 DSC 로컬 구성 관리자를 구성하는 항목만 포함하도록 구성을 제한합니다. 처리하는 동안 이 구성은 \*.meta.mof 파일을 생성하며, 이 파일은 Set-DscLocalConfigurationManager cmdlet을 실행하여 적절한 대상 노드로 전송됩니다.
 - 이제 Windows PowerShell 5.0에서 부분 구성이 허용됩니다. 구성 문서를 조각으로 노드에 전달할 수 있습니다. 노드에서 여러 조각의 구성 문서를 받으려면 노드의 로컬 구성 관리자를 먼저 설정하여 필요한 조각을 지정해야 합니다.
-- 컴퓨터 간 동기화는 Windows PowerShell 5.0의 DSC에 추가된 새로운 기능입니다. 이제 기본 제공 WaitFor\* 리소스(**WaitForAll**, **WaitForAny** 및 **WaitForSome**)를 사용하여 외부 오케스트레이션 없이 구성 실행 중 컴퓨터 간에 종속성을 지정할 수 있습니다. 이러한 리소스는 WS-Man 프로토콜을 통한 CIM 연결을 사용하여 노드 간 동기화를 제공합니다.
+- 컴퓨터 간 동기화는 Windows PowerShell 5.0의 DSC에 추가된 새로운 기능입니다. 이제 기본 제공 WaitFor\* 리소스( **WaitForAll** , **WaitForAny** 및 **WaitForSome** )를 사용하여 외부 오케스트레이션 없이 구성 실행 중 컴퓨터 간에 종속성을 지정할 수 있습니다. 이러한 리소스는 WS-Man 프로토콜을 통한 CIM 연결을 사용하여 노드 간 동기화를 제공합니다.
   구성은 다른 컴퓨터의 특정 리소스 상태가 변경될 때까지 대기할 수 있습니다.
 - 새로운 위임 보안 기능인 JEA(Just Enough Administration)는 DSC 및 Windows PowerShell 제약 Runspace를 이용하여 의도적이든 아니든 간에 직원에 의한 데이터 손실이나 손상으로부터 기업을 보호합니다. xJEA DSC 리소스를 다운로드할 수 있는 위치 등 JEA에 대한 자세한 내용은 [Just Enough Administration](/powershell/scripting/learn/remoting/jea/overview)을 참조하세요.
 - 다음과 같은 새 cmdlet이 PSDesiredStateConfiguration 모듈에 추가되었습니다.
@@ -190,7 +191,7 @@ Windows Server 2012 R2, Windows 8.1 Enterprise 또는 Windows 8.1 Pro에서 Wind
 - 이제 Enter-PSSession을 실행하여 편집할 파일이 저장된 컴퓨터에서 원격 세션을 시작한 다음, **PSEdit \<path and file name on the remote computer\>** 를 실행하여 Windows PowerShell ISE의 로컬 복사본에서 원격 Windows PowerShell 스크립트와 파일을 편집할 수 있습니다. 이 기능을 사용하면 Windows PowerShell ISE를 실행할 수 없는 Windows Server의 Server Core 설치 옵션에 저장되어 있는 Windows PowerShell 파일을 쉽게 편집할 수 있습니다.
 - 이제 Windows PowerShell ISE에서 Start-Transcript cmdlet이 지원됩니다.
 - 이제 Windows PowerShell ISE에서 원격 스크립트를 디버그할 수 있습니다.
-- 새 메뉴 명령인 **모두 중단**(Ctrl+B)은 로컬 스크립트와 원격으로 실행 중인 스크립트 둘 다에 대해 디버거를 시작합니다.
+- 새 메뉴 명령인 **모두 중단** (Ctrl+B)은 로컬 스크립트와 원격으로 실행 중인 스크립트 둘 다에 대해 디버거를 시작합니다.
 
 ### <a name="new-features-in-windows-powershell-web-services-management-odata-iis-extension"></a>Windows PowerShell 웹 서비스의 새로운 기능(관리 OData IIS 확장)
 
@@ -218,22 +219,22 @@ Windows PowerShell 4.0에는 다음과 같은 새로운 기능이 있습니다.
 
 ### <a name="new-features-in-windows-powershell"></a><a name="new-features-in-windows-powershell-1" />Windows PowerShell의 새로운 기능
 
-- **Windows PowerShell DSC**(필요한 상태 구성)는 Windows PowerShell 4.0에서 소프트웨어 서비스와 해당 서비스가 실행되는 환경에 대한 구성 데이터를 배포 및 관리하는 데 사용되는 새로운 관리 시스템입니다. DSC에 대한 자세한 내용은 [Windows PowerShell 필요한 상태 구성 시작](/powershell/scripting/dsc/getting-started/wingettingstarted)을 참조하세요.
-- 이제 **Save-Help**를 사용하여 원격 컴퓨터에 설치되는 모듈에 대한 도움말을 저장할 수 있습니다. Save-Help를 사용하여 인터넷에 연결된 클라이언트에서 도움말 모듈을 다운로드한 다음(도움말이 필요한 일부 모듈은 반드시 설치해야 함) 저장된 도움말을 인터넷에 액세스할 수 없는 원격 컴퓨터 또는 원격 공유 폴더에 복사할 수 있습니다.
+- **Windows PowerShell DSC** (필요한 상태 구성)는 Windows PowerShell 4.0에서 소프트웨어 서비스와 해당 서비스가 실행되는 환경에 대한 구성 데이터를 배포 및 관리하는 데 사용되는 새로운 관리 시스템입니다. DSC에 대한 자세한 내용은 [Windows PowerShell 필요한 상태 구성 시작](/powershell/scripting/dsc/getting-started/wingettingstarted)을 참조하세요.
+- 이제 **Save-Help** 를 사용하여 원격 컴퓨터에 설치되는 모듈에 대한 도움말을 저장할 수 있습니다. Save-Help를 사용하여 인터넷에 연결된 클라이언트에서 도움말 모듈을 다운로드한 다음(도움말이 필요한 일부 모듈은 반드시 설치해야 함) 저장된 도움말을 인터넷에 액세스할 수 없는 원격 컴퓨터 또는 원격 공유 폴더에 복사할 수 있습니다.
 - 원격 컴퓨터에서 실행 중인 스크립트와 Windows PowerShell 워크플로를 디버그할 수 있도록 Windows PowerShell 디버거가 향상되었습니다. 이제 Windows PowerShell 명령줄 또는 Windows PowerShell ISE에서 Windows PowerShell 워크플로를 스크립트 수준으로 디버그할 수 있습니다. 이제 원격 세션을 통해 Windows PowerShell 스크립트(스크립트 워크플로 포함)를 디버그할 수 있습니다. 원격 디버깅 세션은 연결이 끊어졌다가 나중에 다시 연결하면 Windows PowerShell 원격 세션을 통해 유지됩니다.
-- **Register-ScheduledJob** 및 **Set-ScheduledJob**의 **RunNow** 매개 변수를 사용하면 **Trigger** 매개 변수를 사용하여 작업에 대한 즉시 시작 날짜와 시간을 설정할 필요가 없습니다.
-- 이제 **Invoke-RestMethod** 및 **Invoke-WebRequest**에서 Headers 매개 변수를 사용하여 모든 헤더를 설정할 수 있습니다. 이 매개 변수는 이전에도 있었지만 예외 또는 오류를 발생하는 웹 cmdlet의 여러 매개 변수 중 하나였습니다.
-- **Get-Module**에 **ModuleSpecification\[]** 형식의 새로운 매개 변수인 **FullyQualifiedName**이 있습니다. 이제 Get-Module의 **FullyQualifiedName** 매개 변수에서 모듈의 이름, 버전 및 GUID(선택 사항)를 사용하여 모듈을 지정할 수 있습니다.
-- Windows Server 2012 R2에 대한 기본 실행 정책 설정은 **RemoteSigned**입니다. Windows 8.1에서는 기본 설정이 변경되지 않았습니다.
+- **Register-ScheduledJob** 및 **Set-ScheduledJob** 의 **RunNow** 매개 변수를 사용하면 **Trigger** 매개 변수를 사용하여 작업에 대한 즉시 시작 날짜와 시간을 설정할 필요가 없습니다.
+- 이제 **Invoke-RestMethod** 및 **Invoke-WebRequest** 에서 Headers 매개 변수를 사용하여 모든 헤더를 설정할 수 있습니다. 이 매개 변수는 이전에도 있었지만 예외 또는 오류를 발생하는 웹 cmdlet의 여러 매개 변수 중 하나였습니다.
+- **Get-Module** 에 **ModuleSpecification\[]** 형식의 새로운 매개 변수인 **FullyQualifiedName** 이 있습니다. 이제 Get-Module의 **FullyQualifiedName** 매개 변수에서 모듈의 이름, 버전 및 GUID(선택 사항)를 사용하여 모듈을 지정할 수 있습니다.
+- Windows Server 2012 R2에 대한 기본 실행 정책 설정은 **RemoteSigned** 입니다. Windows 8.1에서는 기본 설정이 변경되지 않았습니다.
 - Windows PowerShell 4.0 이상에서는 동적 메서드 이름을 사용한 메서드 호출이 지원됩니다.
   변수를 사용하여 메서드 이름을 저장한 다음 변수를 호출하여 메서드를 동적으로 호출할 수 있습니다.
 - **PSElapsedTimeoutSec** 워크플로 일반 매개 변수로 지정한 시간 제한 기간이 경과해도 비동기 워크플로는 더 이상 삭제되지 않습니다.
-- 새 매개 변수 **RepeatIndefinitely**가 **New-JobTrigger** 및 **Set-JobTrigger** cmdlet에 추가되었습니다. 이 매개 변수를 사용하면 예약된 작업을 무기한 동안 되풀이해서 실행하기 위해 **RepetitionDuration** 매개 변수에 **TimeSpan.MaxValue** 값을 지정할 필요가 없습니다.
+- 새 매개 변수 **RepeatIndefinitely** 가 **New-JobTrigger** 및 **Set-JobTrigger** cmdlet에 추가되었습니다. 이 매개 변수를 사용하면 예약된 작업을 무기한 동안 되풀이해서 실행하기 위해 **RepetitionDuration** 매개 변수에 **TimeSpan.MaxValue** 값을 지정할 필요가 없습니다.
 - **Passthru** 매개 변수가 **Enable-JobTrigger** 및 **Disable-JobTrigger** cmdlet에 추가되었습니다. Passthru 매개 변수는 명령에서 만들었거나 수정한 개체를 표시합니다.
 - **Add-Computer** 및 **Remove-Computer** cmdlet에서 작업 그룹을 지정하는 매개 변수 이름이 이제 일치합니다. 이제 두 cmdlet 모두 **WorkgroupName** 매개 변수를 사용합니다.
-- 새 일반 매개 변수 **PipelineVariable**이 추가되었습니다. PipelineVariable을 사용하여 파이프된 명령의 결과 또는 파이프된 명령의 일부를 나머지 파이프라인을 통해 전달할 수 있는 변수로 저장할 수 있습니다.
+- 새 일반 매개 변수 **PipelineVariable** 이 추가되었습니다. PipelineVariable을 사용하여 파이프된 명령의 결과 또는 파이프된 명령의 일부를 나머지 파이프라인을 통해 전달할 수 있는 변수로 저장할 수 있습니다.
 - 이제 메서드 구문을 사용한 컬렉션 필터링이 지원됩니다. 즉, Where() 또는 Where-Object의 경우처럼 메서드 호출로 서식 지정된 간소화된 구문을 사용하여 개체 모음을 필터링할 수 있습니다. 다음은 이에 대한 예입니다. (Get-Process).where({$_.Name -match 'powershell'})
-- **Get-Process** cmdlet에는 **IncludeUserName**이라는 새 스위치 매개 변수가 있습니다.
+- **Get-Process** cmdlet에는 **IncludeUserName** 이라는 새 스위치 매개 변수가 있습니다.
 - 지정된 파일에 대한 여러 형식 중 하나로 파일 해시를 반환하는 새 **Get-FileHash** cmdlet이 추가되었습니다.
 - Windows PowerShell 4.0에서는 모듈의 매니페스트에서 **DefaultCommandPrefix** 키를 사용하거나 사용자가 **Prefix** 매개 변수를 사용하여 모듈을 가져올 경우 모듈의 **ExportedCommands** 속성은 모듈의 명령을 접두사와 함께 표시합니다. 모듈의 정규화된 구문 ModuleName\\CommandName을 사용하여 명령을 실행할 경우 명령 이름에 접두사를 포함해야 합니다.
 - **$PSVersionTable.PSVersion** 값이 4.0으로 업데이트되었습니다.
@@ -249,10 +250,10 @@ Windows PowerShell 4.0에는 다음과 같은 새로운 기능이 있습니다.
 
 - System Center Orchestrator에 사용된 것과 같은 반복 파이프라인 즉, 스트리밍을 사용하여 섞어서 실행하지 않고 왼쪽에서 오른쪽으로 실행하는 파이프라인의 컨텍스트에서 새 **PipelineVariable** 일반 매개 변수에 대한 지원이 추가되었습니다.
 - 현재 runspace에 없는 명령을 사용하는 경우처럼 탭 완성 시나리오를 벗어나서 작동하도록 매개 변수 바인딩이 크게 향상되었습니다.
-- 사용자 지정 컨테이너 활동 지원이 Windows PowerShell 워크플로에 추가되었습니다. 활동 매개 변수가 **Activity**, **Activity\[]** 형식(또는 활동의 제네릭 컬렉션)이고 사용자가 스크립트 블록을 인수로 제공한 경우 Windows PowerShell 워크플로는 일반 Windows PowerShell 스크립트-워크플로 컴파일을 사용할 때와 마찬가지로 스크립트 블록을 XAML로 변환합니다.
+- 사용자 지정 컨테이너 활동 지원이 Windows PowerShell 워크플로에 추가되었습니다. 활동 매개 변수가 **Activity** , **Activity\[]** 형식(또는 활동의 제네릭 컬렉션)이고 사용자가 스크립트 블록을 인수로 제공한 경우 Windows PowerShell 워크플로는 일반 Windows PowerShell 스크립트-워크플로 컴파일을 사용할 때와 마찬가지로 스크립트 블록을 XAML로 변환합니다.
 - 충돌이 발생한 후에 Windows PowerShell 워크플로는 관리되는 노드에 자동으로 다시 연결됩니다.
 - 이제 **ThrottleLimit** 속성을 사용하여 **Foreach -Parallel** 활동 문을 제한할 수 있습니다.
-- **ErrorAction** 일반 매개 변수는 워크플로에 국한되는 새 유효한 값 **Suspend**가 있습니다.
+- **ErrorAction** 일반 매개 변수는 워크플로에 국한되는 새 유효한 값 **Suspend** 가 있습니다.
 - 이제 활성 세션, 진행 중인 작업 및 보류 중인 작업이 없는 경우 워크플로 엔드포인트가 자동으로 닫힙니다. 자동 종료 조건이 충족될 경우 이 기능은 워크플로 서버 역할을 하는 컴퓨터의 리소스를 절약합니다.
 
 ### <a name="new-features-in-windows-powershell-web-services"></a>Windows PowerShell 웹 서비스의 새로운 기능
@@ -260,11 +261,11 @@ Windows PowerShell 4.0에는 다음과 같은 새로운 기능이 있습니다.
 - cmdlet을 실행하는 중에 Windows PowerShell 웹 서비스(PSWS, 관리 OData IIS 확장이라고도 함)에서 오류가 발생할 경우 자세한 오류 메시지가 호출자에게 반환됩니다. 또한 오류 코드는 [Microsoft Azure REST API 오류 코드 지침](/rest/api/storageservices/Common-REST-API-Error-Codes)을 따릅니다.
 - 이제 엔드포인트에서 API 버전을 정의하고 특정 API 버전을 강제로 사용할 수 있습니다. 클라이언트와 서버의 버전이 일치하지 않을 경우 항상 클라이언트와 서버 모두에 오류가 표시됩니다.
 - 스키마에서 누락된 필드에 대한 값을 자동으로 생성하여 디스패치 스키마 관리를 간소화했습니다. 디스패치 스키마가 없는 경우에도 유용한 시작점으로 생성됩니다.
-- Windows PowerShell의 **PSTypeConverter**와 비슷하게 동작하여 기본 생성자가 아닌 다른 생성자를 사용하는 형식을 지원하도록 PSWS의 형식 처리가 향상되었습니다. 따라서 PSWS에서 복잡한 형식을 사용할 수 있습니다.
+- Windows PowerShell의 **PSTypeConverter** 와 비슷하게 동작하여 기본 생성자가 아닌 다른 생성자를 사용하는 형식을 지원하도록 PSWS의 형식 처리가 향상되었습니다. 따라서 PSWS에서 복잡한 형식을 사용할 수 있습니다.
 - 이제 쿼리를 실행하는 동안 PSWS에서 연결된 인스턴스를 확장할 수 있습니다. 대용량 이진 콘텐츠(예: 이미지, 오디오, 비디오)의 경우 높은 전송 비용이 발생하므로 인코딩하지 않고 이진 데이터를 전송하는 것이 좋습니다. PSWS에서는 인코딩하지 않고 전송하기 위해 명명된 리소스 스트림을 사용합니다.
   명명된 리소스 스트림은 **Edm.Stream** 형식 엔터티의 속성입니다. 각 명명된 리소스 스트림에서는 GET 또는 UPDATE 작업에 대해 별도의 URI를 사용합니다.
 - 이제 OData 작업을 사용하여 리소스에서 CRUD(Create, Read, Update, Delete) 이외의 메서드를 호출할 수 있습니다. HTTP POST 요청을 작업에 대해 정의된 URI에 전송하여 작업을 호출할 수 있습니다. 작업에 대한 매개 변수를 POST 요청의 본문에 정의되어 있습니다.
-- Microsoft Azure 지침을 준수하려면 모든 URL을 간소화해야 합니다. **Key As Segment**에 포함된 변경에 따라 단일 키를 세그먼트로 표시할 수 있습니다. 앞에 표시된 것처럼 여러 키 값을 사용하는 참조에서는 쉼표로 구분된 값을 괄호로 묶어서 표기해야 합니다.
+- Microsoft Azure 지침을 준수하려면 모든 URL을 간소화해야 합니다. **Key As Segment** 에 포함된 변경에 따라 단일 키를 세그먼트로 표시할 수 있습니다. 앞에 표시된 것처럼 여러 키 값을 사용하는 참조에서는 쉼표로 구분된 값을 괄호로 묶어서 표기해야 합니다.
 - 이 PSWS 이전 릴리스에서는 만들기, 업데이트 또는 삭제 작업을 수행하려면 최상위 리소스에서 Post, Put 또는 Delete를 호출해야 했습니다. 이 PSWS 릴리스의 새로운 기능인 포함된 리소스 작업을 사용하면 동일한 리소스에 직접 연결하지 않은 상태에서도 해당 리소스가 포함된 경우와 동일한 결과를 얻을 수 있습니다.
 
 ### <a name="new-features-in-windows-powershell-web-access"></a>Windows PowerShell 웹 액세스의 새로운 기능
@@ -276,20 +277,20 @@ Windows PowerShell 4.0에는 다음과 같은 새로운 기능이 있습니다.
 
 ### <a name="notable-bug-fixes-in-windows-powershell-40"></a>Windows PowerShell 4.0의 중요한 버그 수정
 
-- 이제 **Get-Counter**가 프랑스어 버전 Windows에서 아포스트로피 문자를 포함하는 카운터를 반환할 수 있습니다.
+- 이제 **Get-Counter** 가 프랑스어 버전 Windows에서 아포스트로피 문자를 포함하는 카운터를 반환할 수 있습니다.
 - 이제 역직렬화된 개체에서 **GetType** 메서드를 볼 수 있습니다.
 - 이제 필요한 경우 **#Requires** 문을 사용하여 관리자 액세스 권한을 요청할 수 있습니다.
 - 이제 **Import-Csv** cmdlet이 빈 줄을 무시합니다.
 - **Invoke-WebRequest** 명령을 실행 중일 때 Windows PowerShell ISE에서 너무 많은 메모리를 사용하는 문제가 수정되었습니다.
-- 이제 **Get-Module**이 **Version** 열에 모듈 버전을 표시합니다.
+- 이제 **Get-Module** 이 **Version** 열에 모듈 버전을 표시합니다.
 - Remove-Item –Recurse는 이제 예상대로 하위 폴더에서 항목을 제거합니다.
 - **UserName** 속성이 **Get-Process** 출력 개체에 추가되었습니다.
 - 이제 **Invoke-RestMethod** cmdlet이 사용 가능한 모든 결과를 반환합니다.
-- 이제 해시 테이블에 아직 액세스하지 않은 경우에도 **Add-Member**가 해시 테이블에 적용됩니다.
-- 속성 값이 null이거나 비어 있는 경우에 **Select-Object –Expand**가 더 이상 실패하거나 예외를 생성하지 않습니다.
-- 이제 개체에서 **ComputerName** 속성을 가져오는 다른 명령과 함께 **Get-Process**를 파이프라인에서 사용할 수 있습니다.
-- 이제 **ConvertTo-Json** 및 **ConvertFrom-Json**이 큰따옴표 안의 용어를 허용하고 해당 오류 메시지를 지역화할 수 있습니다.
-- 이제 **Get-Job**이 새 세션에서도 완료된 예약 작업을 모두 반환합니다.
+- 이제 해시 테이블에 아직 액세스하지 않은 경우에도 **Add-Member** 가 해시 테이블에 적용됩니다.
+- 속성 값이 null이거나 비어 있는 경우에 **Select-Object –Expand** 가 더 이상 실패하거나 예외를 생성하지 않습니다.
+- 이제 개체에서 **ComputerName** 속성을 가져오는 다른 명령과 함께 **Get-Process** 를 파이프라인에서 사용할 수 있습니다.
+- 이제 **ConvertTo-Json** 및 **ConvertFrom-Json** 이 큰따옴표 안의 용어를 허용하고 해당 오류 메시지를 지역화할 수 있습니다.
+- 이제 **Get-Job** 이 새 세션에서도 완료된 예약 작업을 모두 반환합니다.
 - Windows PowerShell 4.0에서 **FileSystem** 공급자를 사용하여 VHD 탑재 및 탑재 해제 문제를 수정했습니다. 이제 Windows PowerShell에서 동일한 세션에 탑재된 새로운 드라이브를 검색할 수 있습니다.
 - 이제 작업 유형을 사용하기 위해 더 이상 **ScheduledJob** 또는 **Workflow** 모듈을 명시적으로 로드할 필요가 없습니다.
 - 중첩된 워크플로를 정의하는 워크플로를 가져오는 프로세스의 성능이 향상되어, 이제 프로세스가 더 빨라졌습니다.
@@ -340,9 +341,9 @@ XAML 또는 Windows PowerShell 언어로 워크플로를 작성한 후 cmdlet을
 - 순차화된 장기 실행 작업의 자동화.
 - **장기 실행 작업 원격 모니터링**. 활동의 상태 및 진행률을 언제든지 볼 수 있습니다.
 - **다중 컴퓨터 관리.** 동시에 수백 개의 관리되는 노드에서 작업을 워크플로로 실행합니다.
-  Windows PowerShell 워크플로에는 다중 컴퓨터 관리 시나리오를 지원하는 일반 관리 매개 변수의 기본 제공 라이브러리(예: **PSComputerName**)가 포함되어 있습니다.
+  Windows PowerShell 워크플로에는 다중 컴퓨터 관리 시나리오를 지원하는 일반 관리 매개 변수의 기본 제공 라이브러리(예: **PSComputerName** )가 포함되어 있습니다.
 - **복잡한 프로세스의 단일 작업 실행.** 전체 엔드투엔드 시나리오를 단일 워크플로로 구현하는 관련 스크립트를 결합할 수 있습니다.
-- **지속성**: 워크플로를 처음부터 다시 시작하지 않고 마지막 지속성 작업 또는 검사점에서 워크플로를 다시 시작할 수 있도록 작성자가 정의한 특정 지점에서 워크플로를 저장하거나 검사점을 지정합니다.
+- **지속성** : 워크플로를 처음부터 다시 시작하지 않고 마지막 지속성 작업 또는 검사점에서 워크플로를 다시 시작할 수 있도록 작성자가 정의한 특정 지점에서 워크플로를 저장하거나 검사점을 지정합니다.
 - **견고성.** 자동화된 오류 복구. 워크플로가 계획되거나 계획되지 않은 다시 시작 후에 유지됩니다. 워크플로 실행을 일시 중지한 다음 마지막 지속성 지점에서 워크플로를 다시 시작할 수 있습니다.
   워크플로 작성자는 하나 이상의 관리되는 노드에서 오류가 발생한 경우 특정 활동을 다시 실행하도록 지정할 수 있습니다.
 - **연결을 끊고, 다시 연결하여 연결이 끊긴 세션에서 실행할 수 있습니다.** 사용자는 워크플로 서버에서 연결하고 연결을 끊을 수 있지만 워크플로는 지속적으로 실행됩니다. 워크플로를 중단하지 않고 클라이언트 컴퓨터에서 로그오프하거나 클라이언트 컴퓨터를 다시 시작하고 다른 컴퓨터에서 워크플로 실행을 모니터링할 수 있습니다.
@@ -460,7 +461,7 @@ Windows PowerShell 백그라운드 작업과 마찬가지로 예약된 작업은
 
 예약된 작업은 관리하는 데 필요한 사용자 지정된 cmdlet 집합과 함께 제공됩니다. cmdlet을 사용하여 예약된 작업을 작성, 편집 또는 관리하거나 사용하지 않도록 지정한 다음 다시 사용하도록 지정하고, 예약된 작업 트리거를 만들고, 예약된 작업 옵션을 설정할 수 있습니다.
 
-예약된 작업에 대한 자세한 내용은 [about_Scheduled_Jobs](/powershell/module/psscheduledjob/about/about_scheduled_jobs?view=powershell-5.1)를 참조하세요.
+예약된 작업에 대한 자세한 내용은 [about_Scheduled_Jobs](/powershell/module/psscheduledjob/about/about_scheduled_jobs)를 참조하세요.
 
 ### <a name="windows-powershell-language-enhancements"></a>Windows PowerShell 언어 향상
 
@@ -577,7 +578,7 @@ Windows PowerShell 3.0에서는 다음과 같은 새로운 기능을 비롯하�
 6. 향상된 모듈 요구 사항(예: 버전 및 GUID를 포함하는 정규화된 필수 모듈, 필수 모듈 자동으로 가져오기)
 7. 더 조용해지고 간소화된 `New-ModuleManifest` cmdlet 작업.
 8. &#35;Requires에 대한 새 **Module** 매개 변수
-9. 향상된 `Import-Module` cmdlet(**MinimumVersion** 및 **RequiredVersion** 매개 변수와 함께 사용).
+9. 향상된 `Import-Module` cmdlet( **MinimumVersion** 및 **RequiredVersion** 매개 변수와 함께 사용).
 
 ### <a name="simplified-command-discovery"></a>간소화된 명령 검색
 
@@ -619,5 +620,5 @@ Windows PowerShell 3.0에서는 RunAs 및 공유 호스트 기능을 지원합�
 
 ## <a name="see-also"></a>참고 항목
 
-- [about_Windows_PowerShell_5.0](/previous-versions/powershell/module/microsoft.powershell.core/about/about_windows_powershell_5.0?view=powershell-5.0)
-- [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=107116)
+- [about_Windows_PowerShell_5.0](/previous-versions/powershell/module/microsoft.powershell.core/about/about_windows_powershell_5.0)
+- [Windows PowerShell](/powershell/)

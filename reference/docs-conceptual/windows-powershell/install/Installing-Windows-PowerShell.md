@@ -1,13 +1,13 @@
 ---
 ms.date: 08/09/2017
-keywords: powershell,cmdlet,다운로드,설치,설정,windows 10, windows 8.1, windows 8.0,windows 7
 title: Windows PowerShell 설치
-ms.openlocfilehash: 26675eb0b213818eaa72e148f0814545ee9f960e
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: 이 문서에서는 다양한 Windows 버전에 Windows PowerShell을 설치하는 방법을 설명합니다.
+ms.openlocfilehash: 04e6d791e6895dd50825c58c905ff9cf8fa86ca8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236223"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663991"
 ---
 # <a name="installing-windows-powershell"></a>Windows PowerShell 설치
 
@@ -17,7 +17,7 @@ PowerShell 6 이상에 관심이 있는 경우 Windows PowerShell 대신 PowerSh
 
 ## <a name="finding-powershell-in-windows-10-81-80-and-7"></a>Windows 10, 8.1, 8.0 및 7에서 PowerShell 찾기
 
-Windows 버전에 따라 위치가 바뀌므로 때때로 Windows에서 PowerShell 콘솔 또는 ISE(통합 스크립팅 환경)를 찾기가 어려울 수 있습니다.
+Windows 버전에 따라 위치가 바뀌므로 때때로 Windows에서 PowerShell 콘솔 또는 통합 스크립팅 환경(ISE)을 찾기가 어려울 수 있습니다.
 
 다음 표는 사용 중인 Windows 버전에서 PowerShell을 찾는 데 도움이 됩니다. 여기에 나열된 모든 버전은 업데이트가 포함되지 않은 릴리스된 원래 버전입니다.
 
@@ -34,12 +34,12 @@ Windows 버전에 따라 위치가 바뀌므로 때때로 Windows에서 PowerShe
 |     버전      |                                                            위치                                                            |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | 윈도우 10       | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 ISE 입력을 시작합니다.                                                                         |
-| Windows 8.1, 8.0 | 시작 화면에서 **PowerShell ISE**를 입력합니다.<br/>바탕 화면에 있는 경우 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 **PowerShell ISE**를 입력합니다. |
+| Windows 8.1, 8.0 | 시작 화면에서 **PowerShell ISE** 를 입력합니다.<br/>바탕 화면에 있는 경우 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 **PowerShell ISE** 를 입력합니다. |
 | Windows 7 SP1    | 왼쪽 아래 모서리에 있는 Windows 아이콘을 클릭하고 검색 상자에서 PowerShell 입력을 시작합니다.                                                |
 
 ## <a name="finding-powershell-in-windows-server-versions"></a>Windows Server 버전에서 PowerShell 찾기
 
-Windows Server 2008 R2부터 GUI(그래픽 사용자 인터페이스) 없이 Windows 운영 체제를 설치할 수 있습니다. GUI가 없는 Windows Server 버전은 이름이 **Core** 버전으로 지정되고 GUI가 있는 버전은 이름이 **Desktop**으로 지정됩니다.
+Windows Server 2008 R2부터 GUI(그래픽 사용자 인터페이스) 없이 Windows 운영 체제를 설치할 수 있습니다. GUI가 없는 Windows Server 버전은 이름이 **Core** 버전으로 지정되고 GUI가 있는 버전은 이름이 **Desktop** 으로 지정됩니다.
 
 ### <a name="windows-server-core-editions"></a>Windows Server Core 버전
 
@@ -75,7 +75,7 @@ Windows에서 기존 PowerShell 버전을 업데이트해야 할 경우 다음 �
 
 ## <a name="need-azure-powershell"></a>Azure PowerShell 필요
 
-**Azure PowerShell**을 찾는 경우 [Overview of Azure PowerShell](/powershell/azure/overview)(Azure PowerShell 개요)에서 시작할 수 있습니다.
+**Azure PowerShell** 을 찾는 경우 [Overview of Azure PowerShell](/powershell/azure/overview)(Azure PowerShell 개요)에서 시작할 수 있습니다.
 
 그러지 않으면 [Install and configure Azure PowerShell](/powershell/azure/install-az-ps)(Azure PowerShell 설치 및 구성)이 필요할 수 있습니다.
 

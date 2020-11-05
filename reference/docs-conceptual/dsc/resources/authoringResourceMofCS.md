@@ -2,12 +2,13 @@
 ms.date: 07/08/2020
 keywords: dsc,powershell,configuration,setup
 title: C#에서 DSC 리소스 작성
-ms.openlocfilehash: 4652d5d99c32685e124f2cd1b718f973380ab16a
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: 이 문서에서는 C#으로 작성된 cmdlet으로 DSC 리소스를 만드는 방법을 보여 줍니다.
+ms.openlocfilehash: 61c4d1e332a22f97a89cd740e03235ddfdcfabd2
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217511"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92667167"
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>C\#에서 DSC 리소스 작성
 
@@ -29,9 +30,9 @@ C#에서 리소스를 cmdlet으로 구현하는 것 외에 MOF 스키마 만들�
 [ClassVersion("1.0.0"), FriendlyName("xDemoFile")]
 class MSFT_XDemoFile : OMI_BaseResource
 {
-                [Key, Description("path")] String Path;
-                [Write, Description("Should the file be present"), ValueMap{"Present","Absent"}, Values{"Present","Absent"}] String Ensure;
-                [Write, Description("Contentof file.")] String Content;
+     [Key, Description("path")] String Path;
+     [Write, Description("Should the file be present"), ValueMap{"Present","Absent"}, Values{"Present","Absent"}] String Ensure;
+     [Write, Description("Contentof file.")] String Content;
 };
 ```
 
@@ -41,10 +42,10 @@ class MSFT_XDemoFile : OMI_BaseResource
 
 1. Visual Studio를 엽니다.
 1. C# 프로젝트를 만들고 이름을 입력합니다.
-1. 사용 가능한 프로젝트 템플릿에서 **클래스 라이브러리**를 선택합니다.
-1. **Ok**를 클릭합니다.
+1. 사용 가능한 프로젝트 템플릿에서 **클래스 라이브러리** 를 선택합니다.
+1. **Ok** 를 클릭합니다.
 1. System.Automation.Management.dll에 대한 어셈블리 참조를 프로젝트에 추가합니다.
-1. 어셈블리 이름을 리소스 이름과 일치하도록 변경합니다. 이 경우 어셈블리의 이름은 **MSFT_XDemoFile**로 지정해야 합니다.
+1. 어셈블리 이름을 리소스 이름과 일치하도록 변경합니다. 이 경우 어셈블리의 이름은 **MSFT_XDemoFile** 로 지정해야 합니다.
 
 ### <a name="writing-the-cmdlet-code"></a>cmdlet 코드 작성
 
@@ -68,8 +69,9 @@ namespace cSharpDSCResourceExample
         public string Path { get; set; }
 
         /// <summary>
-        /// Implement the logic to return the current state of the resource as a hashtable with keys being the resource properties
-        /// and the values are the corresponding current value on the machine.
+        /// Implement the logic to return the current state of the resource as a hashtable with
+        /// keys being the resource properties and the values are the corresponding current
+        /// value on the machine.
         /// </summary>
         protected override void ProcessRecord()
         {

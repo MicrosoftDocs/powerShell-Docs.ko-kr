@@ -2,12 +2,13 @@
 ms.date: 10/16/2017
 keywords: dsc,powershell,configuration,setup
 title: 구성 시행
-ms.openlocfilehash: 1437521471d95fd80dc6a6cec62a0b75df4224ec
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: PowerShell DSC 구성을 시행하는 방법에는 밀어넣기 모드와 끌어오기 모드의 두 가지가 있습니다.
+ms.openlocfilehash: 466eb43cd266ceb4ae81cc997a7b338e041f8a15
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783078"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661718"
 ---
 # <a name="enacting-configurations"></a>구성 시행
 
@@ -41,5 +42,5 @@ Windows Server에서 풀 서비스 설정에 대한 자세한 내용은 [DSC 웹
 다음 항목에서는 풀 서비스 및 클라이언트를 설명합니다.
 
 - [Azure Automation DSC 개요](/azure/automation/automation-dsc-overview)
-- [Setting up an SMB pull server(SMB 끌어오기 서버 설정)](pullServerSMB.md)
+- [SMB 끌어오기 서버 설정](pullServerSMB.md)
 - [Configuring a pull client(끌어오기 클라이언트 구성)](pullClientConfigID.md)
