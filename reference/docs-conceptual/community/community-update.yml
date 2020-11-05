@@ -7,13 +7,13 @@ metadata:
   ms.topic: landing-page
   author: sdwheeler
   ms.author: sewhee
-  ms.date: 06/11/2020
-  ms.openlocfilehash: 5a09f71c912b4facf02cf1094674ef39da8df23c
-  ms.sourcegitcommit: 4fc8cf397cb725ae973751d1d5d542f34f0db2d7
+  ms.date: 10/31/2020
+  ms.openlocfilehash: 51beb8af6cad6c7cd8163216915f42b3e9f173fe
+  ms.sourcegitcommit: 0942a6de384f4a1c624e89b1889434a30d22f4d6
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/03/2020
-  ms.locfileid: "87538653"
+  ms.lasthandoff: 11/01/2020
+  ms.locfileid: "93143283"
 landingContent:
 - title: 참여하기
   linkLists:
@@ -45,6 +45,8 @@ landingContent:
   linkLists:
   - linkListType: whats-new
     links:
+    - text: 2020-Q4
+      url: ./2020-Q4.md
     - text: 2020-Q3
       url: ./2020-Q3.md
     - text: 2020-Q2
