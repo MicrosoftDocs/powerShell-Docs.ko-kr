@@ -19,16 +19,16 @@
 
             { "files": ["bread/toc.yml"], "dest": "scripting" },
             { "files": ["**/*.md", "**/**.yml"], "group": "conceptual", "src": "docs-conceptual", "dest": "scripting"},
-            
+
             { "files": ["toc.yml"], "src": "5.1", "group": "powershell-5.1", "dest": "module/psdocs" },
             { "files": ["**/*.yml", "**/About/*.md"], "src": "5.1", "group": "powershell-5.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
-			
+
             { "files": ["toc.yml"], "src": "6", "group": "powershell-6", "dest": "module/psdocs" },
             { "files": ["**/*.yml", "**/About/*.md"], "src": "6", "group": "powershell-6", "exclude": ["docs-conceptual/**"], "dest": "module" },
-			
+
             { "files": ["toc.yml"], "src": "7.0", "group": "powershell-7", "dest": "module/psdocs" },
             { "files": ["**/*.yml", "**/About/*.md"], "src": "7.0", "group": "powershell-7", "exclude": ["docs-conceptual/**"], "dest": "module" },
-			
+
             { "files": ["toc.yml"], "src": "7.1", "group": "powershell-7.1", "dest": "module/psdocs" },
             { "files": ["**/*.yml", "**/About/*.md"], "src": "7.1", "group": "powershell-7.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
 
@@ -40,22 +40,21 @@
                 "exclude": ["**/obj/**", "**/includes/**"]
             }
         ],
-
-"globalMetadata": {
-      "bilingual_type": "hover over",
-      "toc_preview": true,
-      "archive_url": "https://docs.microsoft.com/previous-versions/powershell/scripting/overview",
+        "globalMetadata": {
+            "toc_preview": true,
+            "archive_url": "https://docs.microsoft.com/previous-versions/powershell/scripting/overview",
             "searchScope": ["PowerShell"],
-      "hideScope": false,
-      "breadcrumb_path": "/powershell/scripting/bread/toc.json",
-      "uhfHeaderId": "MSDocsHeader-Powershell",
-      "apiPlatform": "powershell",
-      "ms.devlang": "powershell",
-      "titleSuffix": "PowerShell",
-      "ROBOTS": "INDEX, FOLLOW",
-      "feedback_system": "None",
-      "disable_contribution_on_translation_quality": ["MT","MTE75","MTE95","Blank"],
-"_op_documentIdPathDepotMapping": {
+            "hideScope": false,
+            "breadcrumb_path": "/powershell/scripting/bread/toc.json",
+            "uhfHeaderId": "MSDocsHeader-Powershell",
+            "apiPlatform": "powershell",
+            "ms.devlang": "powershell",
+            "titleSuffix": "PowerShell",
+            "ROBOTS": "INDEX, FOLLOW",
+            "feedback_system": "None",
+            "disable_contribution_on_translation_quality": ["MT","MTE75","MTE95","Blank"],
+
+            "_op_documentIdPathDepotMapping": {
                 "reference/docs-conceptual/wmf/": {
                     "folder_relative_path_in_docset": "wmf/"
                 },
@@ -69,8 +68,12 @@
                     "folder_relative_path_in_docset": "gallery/"
                 }
             }
-    },
-    "fileMetadata": {
+        },
+        "fileMetadata": {
+            "social_image_url": {
+                "**/**.md": "https://docs.microsoft.com/media/logos/logo-powershell-social.png",
+                "**/**.yml": "https://docs.microsoft.com/media/logos/logo-powershell-social.png"
+            },
             "ms.prod": {
                 "**/**.md": "powershell",
                 "**/**.yml": "powershell"
