@@ -2,16 +2,16 @@
 description: PowerShell의 범위에 대 한 개념을 설명 하 고 요소의 범위를 설정 하 고 변경 하는 방법을 보여 줍니다.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 03/13/2020
+ms.date: 11/04/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_scopes?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_scopes
-ms.openlocfilehash: 2149a1dec14e4de9c6ff1021e98689ca93307cb8
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 33a849d9dcd2c8f6d02f771630b718f0978b2ada
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93220617"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354561"
 ---
 # <a name="about-scopes"></a>범위 정보
 
@@ -36,7 +36,7 @@ PowerShell은 읽고 변경할 수 있는 위치를 제한 하 여 변수, 별�
 
 PowerShell은 다음과 같은 범위를 지원 합니다.
 
-- Global: PowerShell이 시작 될 때 적용 되는 범위입니다. PowerShell이 시작 될 때 제공 되는 변수 및 함수는 자동 변수 및 기본 설정 변수와 같은 전역 범위에 생성 됩니다. PowerShell 프로필의 변수, 별칭 및 함수도 전역 범위에 만들어집니다.
+- Global: PowerShell이 시작 되거나 새 세션 또는 runspace를 만들 때 적용 되는 범위입니다. PowerShell이 시작 될 때 제공 되는 변수 및 함수는 자동 변수 및 기본 설정 변수와 같은 전역 범위에 생성 됩니다. PowerShell 프로필의 변수, 별칭 및 함수도 전역 범위에 만들어집니다. 전역 범위는 세션의 루트 부모 범위입니다.
 
 - Local: 현재 범위입니다. 로컬 범위는 전역 범위 또는 다른 범위 일 수 있습니다.
 
@@ -47,11 +47,15 @@ PowerShell은 다음과 같은 범위를 지원 합니다.
 
 ## <a name="parent-and-child-scopes"></a>부모 및 자식 범위
 
-스크립트나 함수를 실행 하거나, 세션을 만들거나, PowerShell의 새 인스턴스를 시작 하 여 새 범위를 만들 수 있습니다. 새 범위를 만들 때 결과는 부모 범위 (원래 범위)와 자식 범위 (만든 범위)입니다.
-
-PowerShell에서 모든 범위는 전역 범위의 자식 범위 이지만 많은 범위와 많은 재귀 범위를 만들 수 있습니다.
+스크립트나 함수를 호출 하 여 새 자식 범위를 만들 수 있습니다. 호출 범위는 부모 범위입니다. 호출 된 스크립트나 함수는 자식 범위입니다.
+호출 하는 함수 또는 스크립트는 다른 함수를 호출 하 여 루트 범위가 전역 범위인 자식 범위의 계층 구조를 만들 수 있습니다.
 
 항목을 비공개로 명시적으로 설정 하지 않으면 부모 범위의 항목을 자식 범위에서 사용할 수 있습니다. 그러나 항목을 만들 때 범위를 명시적으로 지정 하지 않는 한 자식 범위에서 만들고 변경 하는 항목은 부모 범위에 영향을 주지 않습니다.
+
+> [!NOTE]
+> 모듈의 함수는 호출 범위의 자식 범위에서 실행 되지 않습니다.
+> 모듈에는 전역 범위에 연결 되는 자체 세션 상태가 있습니다.
+> 모든 모듈 코드는 자체 루트 범위가 있는 모듈별 범위 계층에서 실행 됩니다.
 
 ## <a name="inheritance"></a>상속
 
@@ -85,7 +89,7 @@ Get-Variable -Scope global
 - `using:` -및와 같은 cmdlet을 통해 스크립트를 실행 하는 동안 다른 범위에 정의 된 변수에 액세스 하는 데 사용 `Start-Job` `Invoke-Command` 됩니다.
 - `workflow:` -이름이 워크플로 내에 존재 하도록 지정 합니다. 참고: 워크플로는 PowerShell Core에서 지원 되지 않습니다.
 - `<variable-namespace>` -PowerShell PSDrive 공급자가 만든 한정자입니다.
-  다음은 그 예입니다. 
+  예를 들면 다음과 같습니다.
 
   |  네임스페이스  |                    Description                     |
   | ----------- | -------------------------------------------------- |
@@ -319,7 +323,7 @@ $global:a = Goodbye
 
 및 cmdlet을 사용 `New-Variable` `Set-Variable` 하 여 개인 표시 유형을 포함 하는 변수를 만들 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="example-1-change-a-variable-value-only-in-a-script"></a>예제 1: 스크립트 에서만 변수 값 변경
 

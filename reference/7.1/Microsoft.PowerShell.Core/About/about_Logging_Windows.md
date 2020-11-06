@@ -1,23 +1,22 @@
 ---
-description: PowerShell은 엔진, 공급자 및 cmdlet에서 내부 작업을 기록 합니다.
+description: PowerShell은 엔진, 공급자 및 cmdlet의 내부 작업을 Windows 이벤트 로그에 기록 합니다.
 keywords: PowerShell
 Locale: en-US
 ms.date: 03/30/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logging_windows?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Logging-Windows
-ms.openlocfilehash: dbc11e15642673d3159d4f02a40147e68fbf1d7d
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 960394838097e4bfad1af5f4f0af7a813a50e761
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93220457"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93355020"
 ---
 # <a name="about-logging-windows"></a>Windows 로깅 정보
 
 ## <a name="short-description"></a>간단한 설명
-
-PowerShell은 엔진, 공급자 및 cmdlet에서 내부 작업을 기록 합니다.
+PowerShell은 엔진, 공급자 및 cmdlet의 내부 작업을 Windows 이벤트 로그에 기록 합니다.
 
 ## <a name="long-description"></a>자세한 설명입니다.
 
@@ -32,14 +31,14 @@ PowerShell 로그는 Windows 이벤트 뷰어를 사용 하 여 볼 수 있습�
 
 스크립트 블록 로깅을 사용 하는 경우 PowerShell은 다음 이벤트를 로그에 기록 합니다 `PowerShellCore/Operational` .
 
-|필드| 값|
-|-|-|
-|EventId|`4104` / `0x1008`|
-|채널|`Operational`|
-|Level|`Verbose`|
-|Opcode|`Create`|
-|작업|`CommandStart`|
-|키워드|`Runspace`|
+|  필드  |       값       |
+| ------- | ----------------- |
+| EventId | `4104` / `0x1008` |
+| 채널 | `Operational`     |
+| Level   | `Verbose`         |
+| Opcode  | `Create`          |
+| Task    | `CommandStart`    |
+| 키워드 | `Runspace`        |
 
 ### <a name="registering-the-powershell-event-provider-on-windows"></a>Windows에서 PowerShell 이벤트 공급자 등록
 
@@ -144,4 +143,3 @@ Get-WinEvent Microsoft-Windows-PowerShell/Operational |
 
 <!-- link references -->
 [SIEM]: https://wikipedia.org/wiki/Security_information_and_event_management
-

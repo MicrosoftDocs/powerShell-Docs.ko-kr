@@ -6,17 +6,16 @@ ms.date: 03/30/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logging_non-windows?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Logging_Non-Windows
-ms.openlocfilehash: 5face386a479a0264f5ff2ba3f6665cb1e218a4a
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: f70e2cb2c04287e36ecdf21a97dd099fcfd23d65
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93220458"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93355496"
 ---
 # <a name="about-logging-non-windows"></a>비 Windows 로깅 정보
 
 ## <a name="short-description"></a>간단한 설명
-
 PowerShell은 엔진, 공급자 및 cmdlet에서 내부 작업을 기록 합니다.
 
 ## <a name="long-description"></a>자세한 설명입니다.
@@ -214,7 +213,7 @@ PowerShell 로깅 구성에 대 한 속성은 다음 표에 나와 있습니다.
 |`LogChannels`|주기와  |사용할 채널입니다. 값 구분|
 |           |Analytic      |하나 이상의을 지정할 때 쉼표를 사용 합니다.  |
 |`LogLevel`   |Always        |단일 값을 지정 합니다. 이 값을 사용 하면  |
-|           |중요      |그리고 그 위에 있는 모든 값은        |
+|           |위험      |그리고 그 위에 있는 모든 값은        |
 |           |오류         |왼쪽에 나열 됩니다.                            |
 |           |경고       |                                             |
 |           |위해서|                                             |
@@ -242,4 +241,3 @@ MacOS **os_log** 내용은 [os_log 개발자 설명서](https://developer.apple.
 
 <!-- link references -->
 [SIEM]: https://wikipedia.org/wiki/Security_information_and_event_management
-

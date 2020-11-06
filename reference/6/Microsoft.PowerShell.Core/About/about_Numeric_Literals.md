@@ -5,12 +5,12 @@ ms.date: 04/09/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_numeric_literals?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: 숫자 리터럴 정보
-ms.openlocfilehash: 62f00ae9f3643724808146134fd03b6f01c29bce
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: dc1a55dbec1f0de99e06011645e6884b37480233
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93224689"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354832"
 ---
 # <a name="about-numeric-literals"></a>숫자 리터럴 정보
 
@@ -150,11 +150,11 @@ PS> [bigint]'111111111111111111111111111111111111111111111111111111'
 111111111111111111111111111111111111111111111111111111
 ```
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 다음 표에서는 숫자 리터럴의 몇 가지 예를 포함 하 고 해당 형식 및 값을 나열 합니다.
 
-|  숫자  |  유형   |    값     |
+|  번호  |  Type   |    값     |
 | -------: | ------- | -----------: |
 |      100 | Int32   |          100 |
 |     100D | Decimal |          100 |
@@ -210,4 +210,4 @@ Int32
 PowerShell 파서는 숫자 리터럴이 끝나고 **GetType** 메서드가 시작 되는 위치를 결정할 수 있기 때문에 처음 두 예제는 괄호 안에 리터럴 값을 포함 하지 않고 작동 합니다.
 
 <!-- reference links -->
-[bigint]: /dotnet/api/system.numerics.biginteger?view=netcore-2.2
+[bigint]: /dotnet/api/system.numerics.biginteger

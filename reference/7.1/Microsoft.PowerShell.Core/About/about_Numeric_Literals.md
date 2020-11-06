@@ -5,12 +5,12 @@ ms.date: 04/12/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_numeric_literals?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: 숫자 리터럴 정보
-ms.openlocfilehash: 25518b80f87c90c59829bb575b059f0efcadd566
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 19ed71c2571a6cd343adf622a8cf71d6e5589aff
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93224113"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354986"
 ---
 # <a name="about-numeric-literals"></a>숫자 리터럴 정보
 
@@ -137,11 +137,11 @@ PowerShell은 다음과 같은 유형 가속기를 지원 합니다.
 > [!NOTE]
 > PowerShell 6.2에 추가 된 형식 액셀러레이터는 `[short]` , `[ushort]` , `[uint]` , `[ulong]` 입니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 다음 표에서는 숫자 리터럴의 몇 가지 예를 포함 하 고 해당 형식 및 값을 나열 합니다.
 
-|   숫자    |    유형    |    값     |
+|   번호    |    Type    |    값     |
 | ----------: | ---------- | -----------: |
 |         100 | Int32      |          100 |
 |        100u | UInt32     |          100 |
@@ -179,7 +179,7 @@ PowerShell 7.1에서는 이제 16 진수 리터럴에 형식 접미사를 사용
 PowerShell 7.1은이를 `-1` 형식으로 해석 `[int16]` 합니다.
 
 을 사용 하 여 리터럴을 접두사로 사용 `0` 하면이를 무시 하 고 unsigned로 처리 됩니다.
-예: `0b011111111` 이는 범위의 리터럴을 사용할 때 `[bigint]` 와 접미사를 결합할 수 없기 때문에 필요할 수 있습니다 `u` `n` .
+예를 들면 `0b011111111`과 다음과 같습니다. 이는 범위의 리터럴을 사용할 때 `[bigint]` 와 접미사를 결합할 수 없기 때문에 필요할 수 있습니다 `u` `n` .
 
 접두사를 사용 하 여 이진 및 16 진 리터럴을 부정할 수도 있습니다 `-` . 그러면 부호 비트가 허용 되므로 양수가 반환 될 수 있습니다.
 
@@ -271,7 +271,7 @@ PowerShell v 7.0은 새 기능을 사용할 수 있도록 숫자 리터럴이 �
 
 ### <a name="parsing-large-value-literals"></a>대량 값 리터럴 구문 분석
 
-이전에는 더 높은 정수 값이 다른 형식으로 캐스팅 되기 전에 double로 구문 분석 되었습니다. 이로 인해 더 높은 범위의 전체 자릿수가 손실 됩니다. 다음은 그 예입니다. 
+이전에는 더 높은 정수 값이 다른 형식으로 캐스팅 되기 전에 double로 구문 분석 되었습니다. 이로 인해 더 높은 범위의 전체 자릿수가 손실 됩니다. 예를 들면 다음과 같습니다.
 
 ```
 PS> [bigint]111111111111111111111111111111111111111111111111111111
@@ -295,4 +295,4 @@ PS> 111111111111111111111111111111111111111111111111111111n
 또한 및 사이의 값은 `[ulong]::MaxValue` `[decimal]::MaxValue` `D` 정확도를 유지 하기 위해 10 진수 접미사를 사용 하 여 표시 되어야 합니다. 접미사가 없으면 이러한 값은 `[Double]` 실제 구문 분석 모드를 사용 하 여 구문 분석 됩니다.
 
 <!-- reference links -->
-[bigint]: /dotnet/api/system.numerics.biginteger?view=netcore-2.2
+[bigint]: /dotnet/api/system.numerics.biginteger

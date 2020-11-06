@@ -3,12 +3,12 @@ ms.date: 09/07/2018
 ms.topic: reference
 title: PowerShell 명령에 승인된 동사
 description: PowerShell 명령에 승인된 동사
-ms.openlocfilehash: 237355ba9729cfe16c335b39f19ab20e40999457
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: fc1ff989ae86862e0f9cc24d8bcba2ff02ef68cc
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92655834"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93355105"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>PowerShell 명령에 승인된 동사
 
@@ -18,13 +18,7 @@ PowerShell은 cmdlet 이름 및 파생된 .NET 클래스에 동사-명사 쌍을
 > [!NOTE]
 > PowerShell은 영어의 표준 동사가 아닌 경우에도 작업을 의미하는 단어를 설명하기 위해 _동사_ 라는 용어를 사용합니다. 예를 들어 _New_ 라는 용어는 영어의 동사가 아니지만 작업을 암시하므로 유효한 PowerShell 동사 이름입니다.
 
-<!--
-01234567890123456789012345678901234567890123456789012345678901234567890123456789
--->
-
-승인된 각 동사에는 해당하는 _별칭 접두사_ 가 정의되어 있습니다.
-이 별칭 접두사는 해당 동사를 사용하는 명령의 별칭으로 사용됩니다.
-예를 들어 `Import`의 별칭 접두사는 `ip`이며, 따라서 `Import-Module`의 별칭 접두사는 `ipmo`입니다.  이는 권장 사항이지 규칙은 아닙니다. 특히 다른 환경에서 잘 알려진 명령을 모방하는 명령 별칭에는 이 권장 사항을 사용할 필요가 없습니다.
+승인된 각 동사에는 해당하는 _별칭 접두사_ 가 정의되어 있습니다. 이 별칭 접두사는 해당 동사를 사용하는 명령의 별칭으로 사용됩니다. 예를 들어 `Import`의 별칭 접두사는 `ip`이며, 따라서 `Import-Module`의 별칭 접두사는 `ipmo`입니다. 이는 권장 사항이지 규칙은 아닙니다. 특히 다른 환경에서 잘 알려진 명령을 모방하는 명령 별칭에는 이 권장 사항을 사용할 필요가 없습니다.
 
 ## <a name="verb-naming-recommendations"></a>동사 명명 권장 사항
 
@@ -35,13 +29,13 @@ PowerShell은 cmdlet 이름 및 파생된 .NET 클래스에 동사-명사 쌍을
 - 승인된 동사의 동의어를 사용하지 않습니다. 예를 들어 항상 `Remove`를 사용하되, `Delete` 또는 `Eliminate`를 사용하지 않습니다.
 - 이 항목에 나열된 각 동사의 형식만 사용합니다. 예를 들어 `Get`을 사용하되, `Getting` 또는 `Gets`를 사용하지 않습니다.
 - 다음과 같은 예약된 동사 또는 별칭을 사용하지 않습니다. PowerShell 언어 또는 드물지만 이 cmdlet 중 일부는 예외적인 상황에서 이러한 동사를 사용합니다.
-    - ForEach(foreach)
-    - [Format](/dotnet/api/System.Management.Automation.VerbsCommon.Format)(f): 지정된 양식 또는 레이아웃의 개체를 정렬합니다.
-    - [Group](/dotnet/api/System.Management.Automation.VerbsData.Group)(gp): 하나 이상의 리소스를 정렬하거나 연결합니다.
-    - [Ping](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Ping)(pi)
-    - Sort(sr)
-    - Tee(te)
-    - Where(wh)
+  - ForEach(foreach)
+  - [Format](/dotnet/api/System.Management.Automation.VerbsCommon.Format)(f): 지정된 양식 또는 레이아웃의 개체를 정렬합니다.
+  - [Group](/dotnet/api/System.Management.Automation.VerbsData.Group)(gp): 하나 이상의 리소스를 정렬하거나 연결합니다.
+  - [Ping](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Ping)(pi)
+  - Sort(sr)
+  - Tee(te)
+  - Where(wh)
 
 동사의 전체 목록을 보려면 `Get-Verb` cmdlet을 사용할 수 있습니다.
 
@@ -174,7 +168,7 @@ PowerShell은 [System.Management.Automation.VerbsLifeCycle](/dotnet/api/System.M
 |[Approve](/dotnet/api/System.Management.Automation.VerbsLifecycle.Approve)(ap)|리소스 또는 프로세스의 상태를 확인하거나 동의합니다.||
 |[Assert](/dotnet/api/System.Management.Automation.VerbsLifecycle.Assert)(as)|리소스의 상태를 확인합니다.|Certify|
 |[Build](/dotnet/api/System.Management.Automation.VerbsLifecycle.Build)(bd)|몇몇 입력 파일 집합(일반적으로 소스 코드 또는 선언적 문서)에서 하나의 아티팩트(일반적으로 이진 또는 문서)를 만듭니다. 이 동사는 PowerShell 6에서 추가되었습니다.||
-|[Complete](/dotnet/api/system.management.automation.host.buffercelltype?view=powershellsdk-1.1.0)(cp)|작업을 종결합니다.||
+|[Complete](/dotnet/api/system.management.automation.host.buffercelltype)(cp)|작업을 종결합니다.||
 |[Confirm](/dotnet/api/System.Management.Automation.VerbsLifecycle.Confirm)(cn)|리소스 또는 프로세스의 상태를 승인 또는 확인하거나 유효성을 검사합니다.|Acknowledge, Agree, Certify, Validate, Verify|
 |[Deny](/dotnet/api/System.Management.Automation.VerbsLifecycle.Deny)(dn)|리소스 또는 프로세스의 상태를 거부, 반대 또는 차단합니다.|Block, Object, Refuse, Reject|
 |[Deploy](/dotnet/api/System.Management.Automation.VerbsLifecycle.Deploy)(dp)|배포가 완료된 후 해당 솔루션의 소비자가 액세스할 수 있는 방식으로 애플리케이션, 웹 사이트 또는 솔루션을 원격 대상으로 보냅니다. 이 동사는 PowerShell 6에서 추가되었습니다.||
