@@ -7,52 +7,52 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-computerinfo?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ComputerInfo
-ms.openlocfilehash: c8f24d7b020a75bae121c054550c8aed2c55074f
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4a39714995c31a4d44177312dd8e5dad9ab43712
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217650"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342334"
 ---
-# <span data-ttu-id="2b3cc-103">Get-ComputerInfo</span><span class="sxs-lookup"><span data-stu-id="2b3cc-103">Get-ComputerInfo</span></span>
+# <span data-ttu-id="cf787-103">Get-ComputerInfo</span><span class="sxs-lookup"><span data-stu-id="cf787-103">Get-ComputerInfo</span></span>
 
-## <span data-ttu-id="2b3cc-104">개요</span><span class="sxs-lookup"><span data-stu-id="2b3cc-104">SYNOPSIS</span></span>
-<span data-ttu-id="2b3cc-105">시스템 및 운영 체제 속성의 통합 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="2b3cc-105">Gets a consolidated object of system and operating system properties.</span></span>
+## <span data-ttu-id="cf787-104">개요</span><span class="sxs-lookup"><span data-stu-id="cf787-104">SYNOPSIS</span></span>
+<span data-ttu-id="cf787-105">시스템 및 운영 체제 속성의 통합 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="cf787-105">Gets a consolidated object of system and operating system properties.</span></span>
 
-## <span data-ttu-id="2b3cc-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="2b3cc-106">SYNTAX</span></span>
+## <span data-ttu-id="cf787-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="cf787-106">SYNTAX</span></span>
 
 ```
 Get-ComputerInfo [[-Property] <String[]>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="2b3cc-107">설명</span><span class="sxs-lookup"><span data-stu-id="2b3cc-107">DESCRIPTION</span></span>
+## <span data-ttu-id="cf787-107">설명</span><span class="sxs-lookup"><span data-stu-id="cf787-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="2b3cc-108">`Get-ComputerInfo`Cmdlet은 시스템 및 운영 체제 속성의 통합 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="2b3cc-108">The `Get-ComputerInfo` cmdlet gets a consolidated object of system and operating system properties.</span></span>
-<span data-ttu-id="2b3cc-109">이 cmdlet은 Windows PowerShell 5.1에서 도입 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="2b3cc-109">This cmdlet was introduced in Windows PowerShell 5.1.</span></span>
+<span data-ttu-id="cf787-108">`Get-ComputerInfo`Cmdlet은 시스템 및 운영 체제 속성의 통합 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="cf787-108">The `Get-ComputerInfo` cmdlet gets a consolidated object of system and operating system properties.</span></span>
+<span data-ttu-id="cf787-109">이 cmdlet은 Windows PowerShell 5.1에서 도입 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="cf787-109">This cmdlet was introduced in Windows PowerShell 5.1.</span></span>
 
-## <span data-ttu-id="2b3cc-110">예제</span><span class="sxs-lookup"><span data-stu-id="2b3cc-110">EXAMPLES</span></span>
+## <span data-ttu-id="cf787-110">예제</span><span class="sxs-lookup"><span data-stu-id="cf787-110">EXAMPLES</span></span>
 
-### <span data-ttu-id="2b3cc-111">예제 1: 모든 컴퓨터 속성 가져오기</span><span class="sxs-lookup"><span data-stu-id="2b3cc-111">Example 1: Get all computer properties</span></span>
+### <span data-ttu-id="cf787-111">예제 1: 모든 컴퓨터 속성 가져오기</span><span class="sxs-lookup"><span data-stu-id="cf787-111">Example 1: Get all computer properties</span></span>
 
 ```powershell
 Get-ComputerInfo
 ```
 
-<span data-ttu-id="2b3cc-112">이 명령은 컴퓨터에서 모든 시스템 및 운영 체제 속성을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="2b3cc-112">This command gets all system and operating system properties from the computer.</span></span>
+<span data-ttu-id="cf787-112">이 명령은 컴퓨터에서 모든 시스템 및 운영 체제 속성을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="cf787-112">This command gets all system and operating system properties from the computer.</span></span>
 
-### <span data-ttu-id="2b3cc-113">예제 2: 모든 컴퓨터 운영 체제 속성 가져오기</span><span class="sxs-lookup"><span data-stu-id="2b3cc-113">Example 2: Get all computer operating system properties</span></span>
+### <span data-ttu-id="cf787-113">예제 2: 모든 컴퓨터 운영 체제 속성 가져오기</span><span class="sxs-lookup"><span data-stu-id="cf787-113">Example 2: Get all computer operating system properties</span></span>
 
 ```powershell
 Get-ComputerInfo -Property "os*"
 ```
 
-<span data-ttu-id="2b3cc-114">이 명령은 컴퓨터에서 모든 운영 체제 속성을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="2b3cc-114">This command gets all operating system properties from the computer.</span></span>
+<span data-ttu-id="cf787-114">이 명령은 컴퓨터에서 모든 운영 체제 속성을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="cf787-114">This command gets all operating system properties from the computer.</span></span>
 
-## <span data-ttu-id="2b3cc-115">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="2b3cc-115">PARAMETERS</span></span>
+## <span data-ttu-id="cf787-115">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="cf787-115">PARAMETERS</span></span>
 
-### <span data-ttu-id="2b3cc-116">-속성</span><span class="sxs-lookup"><span data-stu-id="2b3cc-116">-Property</span></span>
+### <span data-ttu-id="cf787-116">-속성</span><span class="sxs-lookup"><span data-stu-id="cf787-116">-Property</span></span>
 
-<span data-ttu-id="2b3cc-117">이 cmdlet이 표시 되는 컴퓨터 속성을 문자열 배열로 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b3cc-117">Specifies, as a string array, the computer properties in which this cmdlet displays.</span></span>
+<span data-ttu-id="cf787-117">이 cmdlet이 표시 되는 컴퓨터 속성을 문자열 배열로 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf787-117">Specifies, as a string array, the computer properties in which this cmdlet displays.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -66,19 +66,20 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="2b3cc-118">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="2b3cc-118">CommonParameters</span></span>
+### <span data-ttu-id="cf787-118">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="cf787-118">CommonParameters</span></span>
 
-<span data-ttu-id="2b3cc-119">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="2b3cc-119">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="2b3cc-120">자세한 내용은 [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2b3cc-120">For more information, see [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span></span>
+<span data-ttu-id="cf787-119">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="cf787-119">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="cf787-120">자세한 내용은 [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cf787-120">For more information, see [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span></span>
 
-## <span data-ttu-id="2b3cc-121">입력</span><span class="sxs-lookup"><span data-stu-id="2b3cc-121">INPUTS</span></span>
+## <span data-ttu-id="cf787-121">입력</span><span class="sxs-lookup"><span data-stu-id="cf787-121">INPUTS</span></span>
 
-### <span data-ttu-id="2b3cc-122">System.String[]</span><span class="sxs-lookup"><span data-stu-id="2b3cc-122">System.String[]</span></span>
+### <span data-ttu-id="cf787-122">System.String[]</span><span class="sxs-lookup"><span data-stu-id="cf787-122">System.String[]</span></span>
 
-## <span data-ttu-id="2b3cc-123">출력</span><span class="sxs-lookup"><span data-stu-id="2b3cc-123">OUTPUTS</span></span>
+## <span data-ttu-id="cf787-123">출력</span><span class="sxs-lookup"><span data-stu-id="cf787-123">OUTPUTS</span></span>
 
-### <span data-ttu-id="2b3cc-124">Microsoft. PowerShell. 관리 정보</span><span class="sxs-lookup"><span data-stu-id="2b3cc-124">Microsoft.PowerShell.Management.ComputerInfo</span></span>
+### <span data-ttu-id="cf787-124">Microsoft. PowerShell. 관리 정보</span><span class="sxs-lookup"><span data-stu-id="cf787-124">Microsoft.PowerShell.Management.ComputerInfo</span></span>
 
-## <span data-ttu-id="2b3cc-125">참고</span><span class="sxs-lookup"><span data-stu-id="2b3cc-125">NOTES</span></span>
+## <span data-ttu-id="cf787-125">참고</span><span class="sxs-lookup"><span data-stu-id="cf787-125">NOTES</span></span>
 
-## <span data-ttu-id="2b3cc-126">관련 링크</span><span class="sxs-lookup"><span data-stu-id="2b3cc-126">RELATED LINKS</span></span>
+<span data-ttu-id="cf787-126">이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf787-126">This cmdlet is only available on Windows platforms.</span></span>
 
+## <span data-ttu-id="cf787-127">관련 링크</span><span class="sxs-lookup"><span data-stu-id="cf787-127">RELATED LINKS</span></span>
