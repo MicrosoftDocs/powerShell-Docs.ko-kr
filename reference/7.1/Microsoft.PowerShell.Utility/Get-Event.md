@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-event?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Event
-ms.openlocfilehash: 81244e9c32ca1f1d4824bdb8559607b44222c7bd
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 0ab2c32fe81f2e5ffa6c292ce0fd00e05685bd2a
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213097"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347706"
 ---
 # Get-Event
 
@@ -35,15 +35,11 @@ Get-Event [-EventIdentifier] <Int32> [<CommonParameters>]
 
 ## 설명
 
-**Get 이벤트** cmdlet은 현재 세션에 대 한 PowerShell 이벤트 큐의 이벤트를 가져옵니다.
-모든 이벤트를 가져오거나 *EventIdentifier* 또는 *SourceIdentifier* 매개 변수를 사용 하 여 이벤트를 지정할 수 있습니다.
+`Get-Event`Cmdlet은 현재 세션에 대 한 PowerShell 이벤트 큐의 이벤트를 가져옵니다. 모든 이벤트를 가져오거나 **EventIdentifier** 또는 **SourceIdentifier** 매개 변수를 사용 하 여 이벤트를 지정할 수 있습니다.
 
-이벤트가 발생하면 이벤트 큐에 추가됩니다.
-이벤트 큐에는 등록 한 이벤트, New-Event cmdlet을 사용 하 여 만든 이벤트 및 PowerShell이 종료 될 때 발생 하는 이벤트가 포함 됩니다.
-이벤트를 가져오려면 **Get 이벤트** 또는 Wait-Event를 사용할 수 있습니다.
+이벤트가 발생하면 이벤트 큐에 추가됩니다. 이벤트 큐에는 등록 한 이벤트, cmdlet을 사용 하 여 만든 이벤트 `New-Event` 및 PowerShell이 종료 될 때 발생 하는 이벤트가 포함 됩니다. `Get-Event`또는를 사용 하 여 이벤트를 가져올 수 있습니다 `Wait-Event` .
 
-이 명령은 이벤트 뷰어 로그에서 이벤트를 가져오지 않습니다.
-이러한 이벤트를 가져오려면 Get-WinEvent 또는 Get-EventLog를 사용하세요.
+이 명령은 이벤트 뷰어 로그에서 이벤트를 가져오지 않습니다. 이러한 이벤트를 가져오려면 또는를 `Get-WinEvent` 사용 `Get-EventLog` 합니다.
 
 ## 예제
 
@@ -90,13 +86,11 @@ MessageData      :
 
 이 예제는 SourceIdentifier 이외의 속성을 사용하여 이벤트를 가져오는 방법을 보여 줍니다.
 
-첫 번째 명령은 이벤트 큐의 모든 이벤트를 가져와 $Events 변수에 저장 합니다.
+첫 번째 명령은 이벤트 큐의 모든 이벤트를 가져와 변수에 저장 합니다 `$Events` .
 
-두 번째 명령은 배열 표기법을 사용 하 여 $Events 변수에 있는 배열의 첫 번째 (0 인덱스) 이벤트를 가져옵니다.
-파이프라인 연산자(|)를 사용하여 이벤트를 Format-List 명령으로 보내면 이 명령은 목록에 있는 이벤트의 모든 속성을 표시합니다.
-이를 통해 이벤트 개체의 속성을 검사할 수 있습니다.
+두 번째 명령은 배열 표기법을 사용 하 여 변수에 있는 배열의 첫 번째 (0 인덱스) 이벤트를 가져옵니다 `$Events` . 파이프라인 연산자 ()를 사용 하 여 이벤트를 `|` 명령으로 보냅니다 .이 명령은 `Format-List` 이벤트의 모든 속성을 목록으로 표시 합니다. 이를 통해 이벤트 개체의 속성을 검사할 수 있습니다.
 
-세 번째 명령은 Where-Object cmdlet을 사용 하 여 생성 된 시간을 기준으로 이벤트를 가져오는 방법을 보여 줍니다.
+세 번째 명령은 cmdlet을 사용 하 여 `Where-Object` 생성 된 시간을 기준으로 이벤트를 가져오는 방법을 보여 줍니다.
 
 ### 예제 4: 해당 식별자로 이벤트 가져오기
 
@@ -126,9 +120,7 @@ Accept wildcard characters: False
 
 ### -SourceIdentifier
 
-이 cmdlet이 이벤트를 가져오는 원본 식별자를 지정 합니다.
-기본값은 이벤트 큐의 모든 이벤트입니다.
-와일드카드는 사용할 수 없습니다.
+이 cmdlet이 이벤트를 가져오는 원본 식별자를 지정 합니다. 기본값은 이벤트 큐의 모든 이벤트입니다. 와일드카드는 사용할 수 없습니다.
 
 ```yaml
 Type: System.String
@@ -156,52 +148,34 @@ Accept wildcard characters: False
 
 ### PSEventArgs.
 
-**Get 이벤트** 는 각 이벤트에 대 한 **PSEventArgs** 개체를 반환 합니다.
-이 개체에 대 한 설명을 보려면를 입력 하 `Get-Help Get-Event -Full` 고 도움말 항목의 참고 섹션을 참조 하세요.
+`Get-Event` 각 이벤트에 대 한 **PSEventArgs** 개체를 반환 합니다. 이 개체에 대 한 설명을 보려면를 입력 하 `Get-Help Get-Event -Full` 고 도움말 항목의 참고 섹션을 참조 하세요.
 
 ## 참고
 
-* 이벤트, 이벤트 구독 및 이벤트 큐는 현재 세션에만 있습니다. 현재 세션을 닫으면 이벤트 큐가 삭제되고 이벤트 구독이 취소됩니다.
+Linux 또는 macOS 플랫폼에서 사용할 수 있는 이벤트 원본이 없습니다.
 
-  PSEventArgs **cmdlet은** 다음 속성을 사용 하 여 **PSEventArgs** 개체 ( **PSEventArgs** )를 반환 합니다.
+이벤트, 이벤트 구독 및 이벤트 큐는 현재 세션에만 있습니다. 현재 세션을 닫으면 이벤트 큐가 삭제되고 이벤트 구독이 취소됩니다.
 
-  - 컴퓨터.
-이벤트가 발생한 컴퓨터의 이름입니다.
-이 속성 값은 이벤트가 원격 컴퓨터에서 전달된 경우에만 채워집니다.
+`Get-Event`Cmdlet은 다음 속성을 사용 하 여 **PSEventArgs** 개체 ( **PSEventArgs** )를 반환 합니다.
 
-  - RunspaceId.
-이벤트가 발생한 세션을 고유하게 식별하는 GUID입니다.
-이 속성 값은 이벤트가 원격 컴퓨터에서 전달된 경우에만 채워집니다.
+- 컴퓨터. 이벤트가 발생한 컴퓨터의 이름입니다. 이 속성 값은 이벤트가 원격 컴퓨터에서 전달된 경우에만 채워집니다.
 
-  - EventIdentifier.
-현재 세션에서 이벤트 알림을 고유하게 식별하는 정수(Int32)입니다.
+- RunspaceId. 이벤트가 발생한 세션을 고유하게 식별하는 GUID입니다. 이 속성 값은 이벤트가 원격 컴퓨터에서 전달된 경우에만 채워집니다.
 
-  - 으로부터.
-이벤트를 생성한 개체입니다.
-*Action* 매개 변수 값에서 $Sender 자동 변수는 Sender 개체를 포함 합니다.
+- EventIdentifier. 현재 세션에서 이벤트 알림을 고유하게 식별하는 정수(Int32)입니다.
 
-  - SourceEventArgs.
-EventArgs에서 파생된 첫 번째 매개 변수입니다(있는 경우).
-예를 들어, 시그니처에 Object sender, Timers.elapsedeventargs가 e 형식이 있는 타이머 경과 이벤트에서 SourceEventArgs 속성에는 Timers.elapsedeventargs가가 포함 됩니다.
-*Action* 매개 변수 값에서 $EventArgs 자동 변수에이 값이 포함 됩니다.
+- 으로부터. 이벤트를 생성한 개체입니다. **Action** 매개 변수 값에서 `$Sender` 자동 변수는 sender 개체를 포함 합니다.
 
-  - SourceArgs입니다.
-원래 이벤트 서명의 모든 매개 변수입니다.
-표준 이벤트 시그니처의 경우 \[ 0 $Args 발신자를 \] 나타내고 $Args \[ 1은 \] sourceeventargs를 나타냅니다.
-*Action* 매개 변수 값에서 $Args 자동 변수에이 값이 포함 됩니다.
+- SourceEventArgs. EventArgs에서 파생된 첫 번째 매개 변수입니다(있는 경우). 예를 들어, 시그니처에 Object sender, **timers.elapsedeventargs가** e 형식이 있는 타이머 경과 이벤트에서 **sourceeventargs** 속성에는 **timers.elapsedeventargs가** 가 포함 됩니다. **Action** 매개 변수 값에서 `$EventArgs` 자동 변수에이 값이 포함 됩니다.
 
-  - SourceIdentifier.
-이벤트 구독을 식별하는 문자열입니다.
-*Action* 매개 변수 값에서 $Event 자동 변수의 SourceIdentifier 속성은이 값을 포함 합니다.
+- SourceArgs입니다. 원래 이벤트 서명의 모든 매개 변수입니다. 표준 이벤트 시그니처의 경우 `$Args[0]` 는 보낸 사람을 나타내며 `$Args[1]` **sourceeventargs** 를 나타냅니다. **Action** 매개 변수 값에서 `$Args` 자동 변수에이 값이 포함 됩니다.
 
-  - TimeGenerated.
-이벤트가 생성 된 시간을 나타내는 **DateTime** 개체입니다.
-*Action* 매개 변수 값에서 $Event 자동 변수의 timegenerated 속성에이 값이 포함 됩니다.
+- SourceIdentifier. 이벤트 구독을 식별하는 문자열입니다. **Action** 매개 변수 값에서 자동 변수의 **SourceIdentifier** 속성은 `$Event` 이 값을 포함 합니다.
 
-  - MessageData.
-이벤트 구독과 연결된 데이터입니다.
-사용자는 이벤트를 등록할 때 이 데이터를 지정합니다.
-*Action* 매개 변수 값에서 $Event 자동 변수의 messagedata 속성에이 값이 포함 됩니다.
+- TimeGenerated. 이벤트가 생성 된 시간을 나타내는 **DateTime** 개체입니다.
+  **Action** 매개 변수 값에서 자동 변수의 **timegenerated** 속성에 `$Event` 이 값이 포함 됩니다.
+
+- MessageData. 이벤트 구독과 연결된 데이터입니다. 사용자는 이벤트를 등록할 때 이 데이터를 지정합니다. **Action** 매개 변수 값에서 자동 변수의 **messagedata** 속성에 `$Event` 이 값이 포함 됩니다.
 
 ## 관련 링크
 
@@ -216,4 +190,3 @@ EventArgs에서 파생된 첫 번째 매개 변수입니다(있는 경우).
 [Unregister-Event](Unregister-Event.md)
 
 [Wait-Event](Wait-Event.md)
-

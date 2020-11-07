@@ -7,12 +7,12 @@ ms.date: 09/18/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-timezone?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-TimeZone
-ms.openlocfilehash: 618f2ceca435e836a0c733f98533b62dfc86290b
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4bade5a583533c3156fb923a5257ebb7a4453a2b
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217865"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347536"
 ---
 # Set-TimeZone
 
@@ -183,7 +183,8 @@ Accept wildcard characters: False
 
 ## 참고
 
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
+
 ## 관련 링크
 
 [Get-TimeZone](Get-TimeZone.md)
-

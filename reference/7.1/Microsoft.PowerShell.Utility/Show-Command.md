@@ -7,12 +7,12 @@ ms.date: 10/29/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/show-command?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Show-Command
-ms.openlocfilehash: 86253a8a0bd02a60980cc3655af7bb961acf88ac
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: b5758fdb9fc3e8f604b24fb9c64cad3f95047ec3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93211762"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347774"
 ---
 # Show-Command
 
@@ -40,7 +40,7 @@ Show-Command [[-Name] <String>] [-Height <Double>] [-Width <Double>] [-NoCommonP
 
 PowerShell ISE (통합 스크립팅 환경)에서는 `Show-Command` 기본적으로 창의 변형이 표시 됩니다. 이 명령 창을 사용 하는 방법에 대 한 자세한 내용은 PowerShell ISE 도움말 항목을 참조 하세요.
 
-이 cmdlet은 PowerShell 7에서 다시 도입 되었습니다. 
+이 cmdlet은 PowerShell 7에서 다시 도입 되었습니다.
 
 이 cmdlet은 사용자 인터페이스를 필요로 하기 때문에 Windows Server Core 또는 Windows Nano Server에서는 작동 하지 않습니다. 이 cmdlet은 Windows 데스크톱을 지 원하는 Windows 시스템 에서만 사용할 수 있습니다.
 
@@ -272,7 +272,8 @@ Accept wildcard characters: False
 
 ## 참고
 
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
+
 `Show-Command` 는 원격 세션에서 작동 하지 않습니다.
 
 ## 관련 링크
-

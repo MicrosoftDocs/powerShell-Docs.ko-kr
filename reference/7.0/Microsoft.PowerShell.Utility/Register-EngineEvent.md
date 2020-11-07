@@ -7,12 +7,12 @@ ms.date: 02/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/register-engineevent?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-EngineEvent
-ms.openlocfilehash: 26a8ef5bfb9fd520fabc836ca1e5da40558e0e8a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: cff52e9a321428cde31977f6d91e2d1047faa2ee
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210305"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346856"
 ---
 # Register-EngineEvent
 
@@ -256,6 +256,8 @@ Accept wildcard characters: False
 **Action** 매개 변수를 사용 하는 경우 `Register-EngineEvent` **PSEventJob** 개체를 반환 합니다. 그러지 않으면 출력이 생성되지 않습니다.
 
 ## 참고
+
+Linux 또는 macOS 플랫폼에서 사용할 수 있는 이벤트 원본이 없습니다.
 
 이벤트, 이벤트 구독 및 이벤트 큐는 현재 세션에만 있습니다. 현재 세션을 닫으면 이벤트 큐가 삭제되고 이벤트 구독이 취소됩니다.
 

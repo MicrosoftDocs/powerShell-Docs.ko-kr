@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/disconnect-pssession?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disconnect-PSSession
-ms.openlocfilehash: b3ee9ce8f699e66a091a017eb8c1b0c49f1b7636
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: e4036924c45a5fd1b031fa33c8b9226aa5a66c30
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93218513"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347400"
 ---
 # Disconnect-PSSession
 
@@ -29,7 +29,7 @@ Disconnect-PSSession [-Session] <PSSession[]> [-IdleTimeoutSec <Int32>]
  [<CommonParameters>]
 ```
 
-### 속성
+### Name
 
 ```
 Disconnect-PSSession [-IdleTimeoutSec <Int32>] [-OutputBufferingMode <OutputBufferingMode>]
@@ -443,6 +443,8 @@ Accept wildcard characters: False
 `Disconnect-PSSession` 연결을 끊은 세션을 나타내는 개체를 반환 합니다.
 
 ## 참고
+
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
 
 - `Disconnect-PSSession`이 cmdlet은 로컬 및 원격 컴퓨터에서 PowerShell 3.0 이상을 실행 하는 경우에만 작동 합니다.
 - 연결 되지 않은 세션에서 cmdlet을 사용 하는 경우이 `Disconnect-PSSession` 명령은 세션에 영향을 주지 않으며 오류를 생성 하지 않습니다.

@@ -7,12 +7,12 @@ ms.date: 03/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-acl?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Acl
-ms.openlocfilehash: 0a247be8c7a8067455e3153ac48cacde78eaa26d
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 118c3e563743cee03dc7a75ca68e0979c1522f07
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217529"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347077"
 ---
 # Get-Acl
 
@@ -241,6 +241,8 @@ Accept wildcard characters: False
 
 ## 참고
 
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
+
 기본적으로 리소스에 `Get-Acl` `<provider>::<resource-path>` 대 한 DACL (임의 액세스 제어 목록)에 있는 액세스 제어 항목의 목록 (배열), 리소스의 소유자 및 리소스에 대 한 PowerShell 경로를 표시 합니다. DACL 목록은 리소스 소유자가 제어합니다.
 
 결과를 목록 ()으로 지정 하면 `Get-Acl | Format-List` 경로, 소유자 및 액세스 목록 뿐만 아니라 PowerShell에서 다음과 같은 속성 및 속성 값이 표시 됩니다.
@@ -254,4 +256,3 @@ Accept wildcard characters: False
 ## 관련 링크
 
 [Set-Acl](Set-Acl.md)
-

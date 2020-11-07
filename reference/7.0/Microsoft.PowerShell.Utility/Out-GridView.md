@@ -7,12 +7,12 @@ ms.date: 10/28/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/out-gridview?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Out-GridView
-ms.openlocfilehash: 73a2685947ac5980adab99a3f101a0c1f7f809d2
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 37b5349c8ed39ff70453b59fe6758c57880f0087
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210330"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346941"
 ---
 # Out-GridView
 
@@ -148,7 +148,7 @@ pwsh -Command "Get-Service | Out-GridView -Wait"
 
 Cmdlet이에 대 한 입력으로 허용 하는 개체를 지정 합니다 `Out-GridView` .
 
-**InputObject** 매개 변수를 사용 하 여 개체 컬렉션을로 보내는 경우 `Out-GridView` 는 `Out-GridView` 컬렉션을 하나의 컬렉션 개체로 처리 하 고 컬렉션을 나타내는 행 하나를 표시 합니다. 컬렉션의 각 개체를 표시 하려면 파이프라인 연산자 (|)를 사용 하 여 개체를로 보냅니다 `Out-GridView` .
+**InputObject** 매개 변수를 사용 하 여 개체 컬렉션을로 보내는 경우 `Out-GridView` 는 `Out-GridView` 컬렉션을 하나의 컬렉션 개체로 처리 하 고 컬렉션을 나타내는 행 하나를 표시 합니다. 컬렉션의 각 개체를 표시 하려면 파이프라인 연산자 ()를 사용 `|` 하 여 개체를로 보냅니다 `Out-GridView` .
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -255,6 +255,8 @@ Accept wildcard characters: False
 일반적으로는 `Out-GridView` 개체를 반환 하지 않습니다. **PassThru** 매개 변수를 사용 하는 경우 선택한 행을 나타내는 개체가 파이프라인으로 반환 됩니다.
 
 ## 참고
+
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
 
 원격 명령을 사용하여 다른 컴퓨터에서 그리드 뷰 창을 열 수는 없습니다.
 

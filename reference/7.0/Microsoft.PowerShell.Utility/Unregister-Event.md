@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/unregister-event?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Unregister-Event
-ms.openlocfilehash: b132e842167bb6684519bfd196a3f4a03d078a62
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: b7aab2ef1e97ae1cc19d42b07145bd7a057f33fc
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93211377"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347757"
 ---
 # Unregister-Event
 
@@ -34,13 +34,12 @@ Unregister-Event [-SubscriptionId] <Int32> [-Force] [-WhatIf] [-Confirm] [<Commo
 ```
 
 ## 설명
-Register-engineevent, Register-ObjectEvent 또는 Register-WmiEvent cmdlet을 사용 하 여 생성 된 이벤트 등록을 취소 **하는 이벤트를 취소** 합니다.
 
-이벤트 구독을 취소하면 이벤트 구독자가 세션에서 삭제되고 가입된 이벤트는 더 이상 이벤트 큐에 추가되지 않습니다.
-New-Event cmdlet을 사용하여 만든 이벤트에 대한 가입을 취소하면 새 이벤트도 세션에서 삭제됩니다.
+`Unregister-Event`Cmdlet은 `Register-EngineEvent` , 또는 cmdlet을 사용 하 여 만든 이벤트 구독을 취소 합니다 `Register-ObjectEvent` `Register-WmiEvent` .
 
-**등록 취소** 이벤트는 이벤트 큐에서 이벤트를 삭제 하지 않습니다.
-이벤트를 삭제하려면 Remove-Event cmdlet을 사용합니다.
+이벤트 구독을 취소하면 이벤트 구독자가 세션에서 삭제되고 가입된 이벤트는 더 이상 이벤트 큐에 추가되지 않습니다. Cmdlet을 사용 하 여 만든 이벤트에 대 한 구독을 취소 하면 `New-Event` 새 이벤트도 세션에서 삭제 됩니다.
+
+`Unregister-Event` 이벤트 큐에서 이벤트를 삭제 하지 않습니다. 이벤트를 삭제 하려면 cmdlet을 사용 `Remove-Event` 합니다.
 
 ## 예제
 
@@ -52,8 +51,7 @@ PS C:\> Unregister-Event -SourceIdentifier "ProcessStarted"
 
 이 명령은 ProcessStarted의 원본 식별자를 가진 이벤트 구독을 취소 합니다.
 
-이벤트의 원본 식별자를 찾으려면 Get-Event cmdlet을 사용합니다.
-이벤트 구독의 원본 식별자를 찾으려면 **Get EventSubscriber** cmdlet을 사용 합니다.
+이벤트의 원본 식별자를 찾으려면 cmdlet을 사용 합니다 `Get-Event` . 이벤트 구독의 원본 식별자를 찾으려면 cmdlet을 사용 합니다 `Get-EventSubscriber` .
 
 ### 예제 2: 구독 식별자로 이벤트 구독 취소
 
@@ -63,7 +61,7 @@ PS C:\> Unregister-Event -SubscriptionId 2
 
 이 명령은 가입 식별자가 2인 이벤트 구독을 취소합니다.
 
-이벤트 구독의 구독 식별자를 찾으려면 **Get EventSubscriber** cmdlet을 사용 합니다.
+이벤트 구독의 구독 식별자를 찾으려면 cmdlet을 사용 합니다 `Get-EventSubscriber` .
 
 ### 예 3: 모든 이벤트 구독 취소
 
@@ -73,15 +71,15 @@ PS C:\> Get-EventSubscriber -Force | Unregister-Event -Force
 
 이 명령은 세션에서 모든 이벤트 구독을 취소합니다.
 
-이 명령은 이벤트 등록 cmdlet의 *supportevent* 매개 변수를 사용 하 여 숨겨진 구독자를 포함 하 여 세션의 모든 이벤트 구독자 개체 **를 가져오는 데** 사용 됩니다.
+이 명령은 cmdlet을 사용 하 여 `Get-EventSubscriber` 이벤트 등록 cmdlet의 **supportevent** 매개 변수를 사용 하 여 숨겨진 구독자를 비롯 한 세션의 모든 이벤트 구독자 개체를 가져옵니다.
 
-파이프라인 연산자 (|)를 사용 하 여 구독자 개체를 **등록 취소** 로 보내면이 이벤트는 세션에서 해당 개체를 삭제 합니다.
-작업을 완료 하려면 **이벤트 등록 취소** 에도 *Force* 매개 변수가 필요 합니다.
+파이프라인 연산자 ()를 사용 하 여 `|` 구독자 개체를에 보냅니다. 그러면이 개체를 `Unregister-Event` 세션에서 삭제 합니다. 작업을 완료 하기 위해에서 **Force** 매개 변수도 필요 `Unregister-Event` 합니다.
 
 ## PARAMETERS
 
 ### -Force
-**Register-wmievent** 및 **Register-engineevent** 의 *supportevent* 매개 **변수를 사용** 하 여 숨겨진 구독을 포함 하 여 모든 이벤트 구독을 취소 합니다.
+
+, 및의 **supportevent** 매개 변수를 사용 하 여 숨겨진 구독을 비롯 하 여 모든 이벤트 구독을 취소 `Register-ObjectEvent` `Register-WmiEvent` `Register-EngineEvent` 합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -96,9 +94,10 @@ Accept wildcard characters: False
 ```
 
 ### -SourceIdentifier
+
 이 cmdlet이 이벤트 구독을 취소 하는 원본 식별자를 지정 합니다.
 
-*SourceIdentifier* 또는 *SubscriptionId* 매개 변수는 모든 명령에 포함 되어야 합니다.
+**SourceIdentifier** 또는 **SubscriptionId** 매개 변수는 모든 명령에 포함 되어야 합니다.
 
 ```yaml
 Type: System.String
@@ -113,9 +112,10 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
+
 이 cmdlet이 이벤트 구독을 취소 하는 원본 식별자 ID를 지정 합니다.
 
-*SourceIdentifier* 또는 *SubscriptionId* 매개 변수는 모든 명령에 포함 되어야 합니다.
+**SourceIdentifier** 또는 **SubscriptionId** 매개 변수는 모든 명령에 포함 되어야 합니다.
 
 ```yaml
 Type: System.Int32
@@ -130,6 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 cmdlet을 실행하기 전에 확인을 요청합니다.
 
 ```yaml
@@ -145,8 +146,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-cmdlet을 실행할 경우 발생하는 일을 표시합니다.
-cmdlet은 실행되지 않습니다.
+
+cmdlet을 실행할 경우 발생하는 일을 표시합니다. cmdlet은 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -161,26 +162,28 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.
 
 ## 입력
 
 ### PSEventSubscriber.
-Get-EventSubscriber 출력을 **이벤트 등록 취소** 로 파이프 할 수 있습니다.
+
+출력을에서로 파이프 할 수 있습니다 `Get-EventSubscriber` `Unregister-Event` .
 
 ## 출력
 
 ### 없음
+
 이 cmdlet은 어떠한 출력도 반환되지 않습니다.
 
 ## 참고
 
-* 이벤트, 이벤트 구독 및 이벤트 큐는 현재 세션에만 있습니다. 현재 세션을 닫으면 이벤트 큐가 삭제되고 이벤트 구독이 취소됩니다.
+Linux 또는 macOS 플랫폼에서 사용할 수 있는 이벤트 원본이 없습니다.
 
-  **Register-engineevent** cmdlet을 사용 하 여 이벤트를 구독 하지 않은 경우 **이벤트 등록 취소** 는 New-Event cmdlet을 사용 하 여 만든 이벤트를 삭제할 수 없습니다.
-세션에서 사용자 지정 이벤트를 삭제하려면 프로그래밍 방식으로 제거하거나 세션을 닫아야 합니다.
+이벤트, 이벤트 구독 및 이벤트 큐는 현재 세션에만 있습니다. 현재 세션을 닫으면 이벤트 큐가 삭제되고 이벤트 구독이 취소됩니다.
 
-*
+`Unregister-Event` cmdlet을 사용 하 여 `New-Event` 이벤트를 구독 하지 않은 경우에는 cmdlet을 사용 하 여 만든 이벤트를 삭제할 수 없습니다 `Register-EngineEvent` . 세션에서 사용자 지정 이벤트를 삭제하려면 프로그래밍 방식으로 제거하거나 세션을 닫아야 합니다.
 
 ## 관련 링크
 

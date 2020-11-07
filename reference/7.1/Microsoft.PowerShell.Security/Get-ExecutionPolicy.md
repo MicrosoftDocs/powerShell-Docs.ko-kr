@@ -7,12 +7,12 @@ ms.date: 3/22/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-executionpolicy?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ExecutionPolicy
-ms.openlocfilehash: d33961d9c0b1980d84d35a33c45d965e84231914
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 347ffa733068d4e7f4896eb18358c7a852c88d0a
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217497"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347281"
 ---
 # Get-ExecutionPolicy
 
@@ -205,6 +205,8 @@ Accept wildcard characters: False
 
 ### Microsoft.PowerShell.Exe이상 정책
 
+Cmdlet은 항상 Linux 및 macOS 플랫폼에서 **무제한** 을 반환 합니다.
+
 ## 참고
 
 실행 정책은 PowerShell 보안 전략의 일부입니다. 실행 정책은 PowerShell 프로필과 같은 구성 파일을 로드 하거나 스크립트를 실행할 수 있는지 여부를 결정 합니다. 스크립트를 실행 하기 전에 디지털로 서명 해야 하는지 여부를 지정 합니다.
@@ -220,4 +222,3 @@ Accept wildcard characters: False
 [Set-AuthenticodeSignature](Set-AuthenticodeSignature.md)
 
 [Set-ExecutionPolicy](Set-ExecutionPolicy.md)
-

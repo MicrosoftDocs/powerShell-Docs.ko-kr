@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/start-service?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-Service
-ms.openlocfilehash: d5a7588022331aac6315b1e37159bdbd6994b64a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 02c0b7e699b386a36b962517901a381d45ccaeff
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210594"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346363"
 ---
 # Start-Service
 
@@ -252,12 +252,14 @@ Accept wildcard characters: False
 
 ## 참고
 
-* 의 기본 제공 별칭인를 참조할 수도 있습니다 `Start-Service` `sasv` . 자세한 내용은 [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md)를 참조 하세요.
-* `Start-Service` 현재 사용자에 게이 작업을 수행할 수 있는 권한이 있는 경우에만 서비스를 제어할 수 있습니다. 따라서 명령이 제대로 작동하지 않는 경우 필요한 권한이 없을 수 있습니다.
-* 시스템에서 서비스의 서비스 이름 및 표시 이름을 찾으려면를 입력 `Get-Service` 합니다.
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
+
+- 의 기본 제공 별칭인를 참조할 수도 있습니다 `Start-Service` `sasv` . 자세한 내용은 [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md)를 참조 하세요.
+- `Start-Service` 현재 사용자에 게이 작업을 수행할 수 있는 권한이 있는 경우에만 서비스를 제어할 수 있습니다. 따라서 명령이 제대로 작동하지 않는 경우 필요한 권한이 없을 수 있습니다.
+- 시스템에서 서비스의 서비스 이름 및 표시 이름을 찾으려면를 입력 `Get-Service` 합니다.
   서비스 이름은 **Name** 열에 나타나고 표시 이름은 **DisplayName** 열에 나타납니다.
-* 시작 유형이 수동, 자동 또는 자동 (지연 된 시작) 인 서비스만 시작할 수 있습니다. 시작 유형이 Disabled 인 서비스는 시작할 수 없습니다. `Start-Service`메시지와 함께 명령이 실패 하는 경우를 `Cannot start service \<service-name\> on computer` 사용 `Get-CimInstance` 하 여 서비스의 시작 유형을 찾고, 필요 하면 cmdlet을 사용 하 여 `Set-Service` 서비스의 시작 유형을 변경 합니다.
-* 성능 로그 및 경고 (SysmonLog)와 같은 일부 서비스는 수행할 작업이 없는 경우 자동으로 중지 됩니다. PowerShell이 거의 즉시 중지 하는 서비스를 시작 하면 다음과 같은 메시지가 표시 됩니다. `Service \<display-name\> start failed.`
+- 시작 유형이 수동, 자동 또는 자동 (지연 된 시작) 인 서비스만 시작할 수 있습니다. 시작 유형이 Disabled 인 서비스는 시작할 수 없습니다. `Start-Service`메시지와 함께 명령이 실패 하는 경우를 `Cannot start service \<service-name\> on computer` 사용 `Get-CimInstance` 하 여 서비스의 시작 유형을 찾고, 필요 하면 cmdlet을 사용 하 여 `Set-Service` 서비스의 시작 유형을 변경 합니다.
+- 성능 로그 및 경고 (SysmonLog)와 같은 일부 서비스는 수행할 작업이 없는 경우 자동으로 중지 됩니다. PowerShell이 거의 즉시 중지 하는 서비스를 시작 하면 다음과 같은 메시지가 표시 됩니다. `Service \<display-name\> start failed.`
 
 ## 관련 링크
 

@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/wait-process?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Wait-Process
-ms.openlocfilehash: 07986e4c7e8ead25e99ffc67ff8f9ffa2241af9b
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 1325b1e604bc450f0aaec3ec4e99afa281aa1d91
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93209738"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346193"
 ---
 # Wait-Process
 
@@ -183,9 +183,9 @@ Accept wildcard characters: False
 
 ## 참고
 
-* 이 cmdlet은 System.object 클래스의 **Waitforexit** 메서드를 사용 합니다. 이 메서드에 대한 자세한 내용은 Microsoft .NET Framework SDK를 참조하세요.
+Cmdlet은 Windows 플랫폼 에서만 지원 됩니다.
 
-*
+이 cmdlet은 **system.object** 클래스의 **waitforexit** 메서드를 사용 합니다.
 
 ## 관련 링크
 

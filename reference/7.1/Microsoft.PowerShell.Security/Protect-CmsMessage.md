@@ -7,12 +7,12 @@ ms.date: 02/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/protect-cmsmessage?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Protect-CmsMessage
-ms.openlocfilehash: d7f58bb8dc496b13db264ae0bbc275723f367047
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4a181c68527c7b9d3a698ec31bbcadbe36762376
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212362"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347230"
 ---
 # Protect-CmsMessage
 
@@ -213,4 +213,3 @@ Accept wildcard characters: False
 [Get-CmsMessage](Get-CmsMessage.md)
 
 [Unprotect-CmsMessage](Unprotect-CmsMessage.md)
-

@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/remove-service?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-Service
-ms.openlocfilehash: b23e263c2d6ff64ca2a799614d213f1e549cdfe3
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: dbe084b553587ba09a2ce4b76b0c662915c59808
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93211545"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347349"
 ---
 # Remove-Service
 
@@ -141,6 +141,8 @@ Accept wildcard characters: False
 
 ## 참고
 
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
+
 이 cmdlet을 실행 하려면 **관리자 권한으로 실행** 옵션을 사용 하 여 PowerShell을 시작 합니다.
 
 ## 관련 링크
@@ -158,4 +160,3 @@ Accept wildcard characters: False
 [Stop-Service](Stop-Service.md)
 
 [Suspend-Service](Suspend-Service.md)
-

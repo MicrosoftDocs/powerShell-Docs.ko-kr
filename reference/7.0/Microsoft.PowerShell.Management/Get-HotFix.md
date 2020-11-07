@@ -7,12 +7,12 @@ ms.date: 05/20/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-hotfix?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-HotFix
-ms.openlocfilehash: 355257d0e403143d6983886de592d491241c6253
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 277dd2678b54c9e708d09f6ca27d82ab9afd4c1c
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212474"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347621"
 ---
 # Get-HotFix
 
@@ -28,7 +28,7 @@ Get-HotFix [[-Id] <String[]>] [-ComputerName <String[]>] [-Credential <PSCredent
 [<CommonParameters>]
 ```
 
-### Description
+### 설명
 
 ```
 Get-HotFix [-Description <String[]>] [-ComputerName <String[]>] [-Credential <PSCredential>]
@@ -183,6 +183,8 @@ Accept wildcard characters: False
 `Get-HotFix` 컴퓨터의 핫픽스를 나타내는 개체를 반환 합니다.
 
 ## 참고
+
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
 
 **Win32_QuickFixEngineering** [WMI 클래스](/windows/desktop/WmiSdk/retrieving-a-class) 는 현재 운영 체제에 적용 되는, 일반적으로 QFE (quick fix 공학적) 업데이트 라고 하는 작은 시스템 차원 업데이트를 나타냅니다. 이 클래스는 CBS (구성 요소 기반 서비스)에서 제공 하는 업데이트만 반환 합니다. 이러한 업데이트는 레지스트리에 나열 되지 않습니다. MSI (Microsoft Windows Installer) 또는 [Windows 업데이트](https://update.microsoft.com) 사이트에서 제공 하는 업데이트는 **Win32_QuickFixEngineering** 에서 반환 되지 않습니다. 자세한 내용은 [Win32_QuickFixEngineering 클래스](/windows/desktop/CIMWin32Prov/win32-quickfixengineering)를 참조 하세요.
 

@@ -7,12 +7,12 @@ ms.date: 01/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/disable-psremoting?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-PSRemoting
-ms.openlocfilehash: 82db14f6819a003f4f51a35844a9fcce7a146f03
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: f2f9fb5ac13413b1ace74a995db9c3e78ac22d41
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217770"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347009"
 ---
 # Disable-PSRemoting
 
@@ -475,6 +475,8 @@ Accept wildcard characters: False
 
 ## 참고
 
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
+
 - 세션 구성을 사용 하지 않도록 설정 해도 또는 cmdlet에서 수행한 모든 변경 내용은 실행 취소 되지 않습니다 `Enable-PSRemoting` `Enable-PSSessionConfiguration` . 다음 변경 작업을 수동으로 실행 취소해야 할 수 있습니다.
 
   1. WinRM 서비스를 중지하고 사용하지 않도록 설정합니다.
@@ -502,4 +504,3 @@ Accept wildcard characters: False
 [Unregister-PSSessionConfiguration](Unregister-PSSessionConfiguration.md)
 
 [WSMan 공급자](../Microsoft.WsMan.Management/About/about_WSMan_Provider.md)
-

@@ -7,12 +7,12 @@ ms.date: 02/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/unprotect-cmsmessage?view=powershell-7.x&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Unprotect-CmsMessage
-ms.openlocfilehash: 63d979f1d48da4805111b77c5d1c68d7fc4d0fac
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 394e8c1b18d7ba0f4b65e1681faffe795592b97d
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93211217"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347672"
 ---
 # Unprotect-CmsMessage
 
@@ -197,6 +197,8 @@ Accept wildcard characters: False
 암호화 되지 않은 메시지입니다.
 
 ## 참고
+
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
 
 ## 관련 링크
 

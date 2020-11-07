@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-computerinfo?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ComputerInfo
-ms.openlocfilehash: 876ce5ff32863281ba9bc1ae94ece8b0a12c9efd
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: e9170a8023977f485a99e5e7fc59fb2280a8081e
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210370"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347587"
 ---
 # Get-ComputerInfo
 
@@ -79,5 +79,7 @@ Accept wildcard characters: True
 ### Microsoft. PowerShell. 관리 정보
 
 ## 참고
+
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
 
 ## 관련 링크
