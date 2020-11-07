@@ -7,93 +7,84 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/suspend-service?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Suspend-Service
-ms.openlocfilehash: 8455592f6b919da04603470262c134593f74877c
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: c68b9f5d145c190cc786ee5da7a98e0fc6170ead
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212185"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347553"
 ---
-# <span data-ttu-id="c4966-103">Suspend-Service</span><span class="sxs-lookup"><span data-stu-id="c4966-103">Suspend-Service</span></span>
+# <span data-ttu-id="41f5d-103">Suspend-Service</span><span class="sxs-lookup"><span data-stu-id="41f5d-103">Suspend-Service</span></span>
 
-## <span data-ttu-id="c4966-104">개요</span><span class="sxs-lookup"><span data-stu-id="c4966-104">SYNOPSIS</span></span>
-<span data-ttu-id="c4966-105">실행 중인 하나 이상의 서비스를 일시 중단(일시 중지)합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-105">Suspends (pauses) one or more running services.</span></span>
+## <span data-ttu-id="41f5d-104">개요</span><span class="sxs-lookup"><span data-stu-id="41f5d-104">SYNOPSIS</span></span>
+<span data-ttu-id="41f5d-105">실행 중인 하나 이상의 서비스를 일시 중단(일시 중지)합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-105">Suspends (pauses) one or more running services.</span></span>
 
-## <span data-ttu-id="c4966-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="c4966-106">SYNTAX</span></span>
+## <span data-ttu-id="41f5d-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="41f5d-106">SYNTAX</span></span>
 
-### <span data-ttu-id="c4966-107">InputObject (기본값)</span><span class="sxs-lookup"><span data-stu-id="c4966-107">InputObject (Default)</span></span>
+### <span data-ttu-id="41f5d-107">InputObject (기본값)</span><span class="sxs-lookup"><span data-stu-id="41f5d-107">InputObject (Default)</span></span>
 
 ```
 Suspend-Service [-InputObject] <ServiceController[]> [-PassThru] [-Include <String[]>] [-Exclude <String[]>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c4966-108">기본값</span><span class="sxs-lookup"><span data-stu-id="c4966-108">Default</span></span>
+### <span data-ttu-id="41f5d-108">기본값</span><span class="sxs-lookup"><span data-stu-id="41f5d-108">Default</span></span>
 
 ```
 Suspend-Service [-Name] <String[]> [-PassThru] [-Include <String[]>] [-Exclude <String[]>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
-### <span data-ttu-id="c4966-109">DisplayName</span><span class="sxs-lookup"><span data-stu-id="c4966-109">DisplayName</span></span>
+### <span data-ttu-id="41f5d-109">DisplayName</span><span class="sxs-lookup"><span data-stu-id="41f5d-109">DisplayName</span></span>
 
 ```
 Suspend-Service [-PassThru] -DisplayName <String[]> [-Include <String[]>] [-Exclude <String[]>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="c4966-110">설명</span><span class="sxs-lookup"><span data-stu-id="c4966-110">DESCRIPTION</span></span>
+## <span data-ttu-id="41f5d-110">설명</span><span class="sxs-lookup"><span data-stu-id="41f5d-110">DESCRIPTION</span></span>
 
-<span data-ttu-id="c4966-111">**Suspend-service** cmdlet은 지정 된 각 서비스에 대 한 일시 중단 메시지를 Windows 서비스 컨트롤러로 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-111">The **Suspend-Service** cmdlet sends a suspend message to the Windows Service Controller for each of the specified services.</span></span>
-<span data-ttu-id="c4966-112">일시 중단 된 동안 서비스는 계속 실행 되지만 사용 Resume-Service cmdlet 등의 작업은 다시 시작할 때까지 중지 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-112">While suspended, the service is still running, but its action is stopped until resumed, such as by usingthe Resume-Service cmdlet.</span></span>
-<span data-ttu-id="c4966-113">서비스 이름 또는 표시 이름으로 서비스를 지정 하거나 *InputObject* 매개 변수를 사용 하 여 일시 중단할 서비스를 나타내는 서비스 개체를 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-113">You can specify the services by their service names or display names, or you can use the *InputObject* parameter to pass a service object that represents the services that you want to suspend.</span></span>
+<span data-ttu-id="41f5d-111">`Suspend-Service`Cmdlet은 지정 된 각 서비스에 대 한 일시 중단 메시지를 Windows 서비스 컨트롤러로 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-111">The `Suspend-Service` cmdlet sends a suspend message to the Windows Service Controller for each of the specified services.</span></span> <span data-ttu-id="41f5d-112">일시 중단 된 동안 서비스는 계속 실행 되지만 사용 cmdlet 등의 작업은 다시 시작할 때까지 중지 됩니다 `Resume-Service` .</span><span class="sxs-lookup"><span data-stu-id="41f5d-112">While suspended, the service is still running, but its action is stopped until resumed, such as by usingthe `Resume-Service` cmdlet.</span></span> <span data-ttu-id="41f5d-113">서비스 이름 또는 표시 이름으로 서비스를 지정 하거나 **InputObject** 매개 변수를 사용 하 여 일시 중단할 서비스를 나타내는 서비스 개체를 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-113">You can specify the services by their service names or display names, or you can use the **InputObject** parameter to pass a service object that represents the services that you want to suspend.</span></span>
 
-## <span data-ttu-id="c4966-114">예제</span><span class="sxs-lookup"><span data-stu-id="c4966-114">EXAMPLES</span></span>
+## <span data-ttu-id="41f5d-114">예제</span><span class="sxs-lookup"><span data-stu-id="41f5d-114">EXAMPLES</span></span>
 
-### <span data-ttu-id="c4966-115">예제 1: 서비스 일시 중단</span><span class="sxs-lookup"><span data-stu-id="c4966-115">Example 1: Suspend a service</span></span>
+### <span data-ttu-id="41f5d-115">예제 1: 서비스 일시 중단</span><span class="sxs-lookup"><span data-stu-id="41f5d-115">Example 1: Suspend a service</span></span>
 
 ```
 PS C:\> Suspend-Service -DisplayName "Telnet"
 ```
 
-<span data-ttu-id="c4966-116">이 명령은 로컬 컴퓨터의 텔넷 서비스(Tlntsvr)를 일시 중단합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-116">This command suspends the Telnet service (Tlntsvr) service on the local computer.</span></span>
+<span data-ttu-id="41f5d-116">이 명령은 로컬 컴퓨터의 텔넷 서비스(Tlntsvr)를 일시 중단합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-116">This command suspends the Telnet service (Tlntsvr) service on the local computer.</span></span>
 
-### <span data-ttu-id="c4966-117">예 2: 서비스를 일시 중단할 경우 발생 하는 상황 표시</span><span class="sxs-lookup"><span data-stu-id="c4966-117">Example 2: Display what would happen if you suspend services</span></span>
+### <span data-ttu-id="41f5d-117">예 2: 서비스를 일시 중단할 경우 발생 하는 상황 표시</span><span class="sxs-lookup"><span data-stu-id="41f5d-117">Example 2: Display what would happen if you suspend services</span></span>
 
 ```
 PS C:\> Suspend-Service -Name lanman* -WhatIf
 ```
 
-<span data-ttu-id="c4966-118">이 명령은 서비스 이름이 lanman로 시작 하는 서비스를 일시 중지 한 경우 발생 하는 상황을 알려 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-118">This command tells what would happen if you suspended the services that have a service name that starts with lanman.</span></span>
-<span data-ttu-id="c4966-119">서비스를 일시 중단 하려면 *WhatIf* 매개 변수 없이 명령을 다시 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-119">To suspend the services, rerun the command without the *WhatIf* parameter.</span></span>
+<span data-ttu-id="41f5d-118">이 명령은 서비스 이름이 lanman로 시작 하는 서비스를 일시 중지 한 경우 발생 하는 상황을 알려 줍니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-118">This command tells what would happen if you suspended the services that have a service name that starts with lanman.</span></span> <span data-ttu-id="41f5d-119">서비스를 일시 중단 하려면 **WhatIf** 매개 변수 없이 명령을 다시 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-119">To suspend the services, rerun the command without the **WhatIf** parameter.</span></span>
 
-### <span data-ttu-id="c4966-120">예제 3: 서비스 가져오기 및 일시 중단</span><span class="sxs-lookup"><span data-stu-id="c4966-120">Example 3: Get and suspend a service</span></span>
+### <span data-ttu-id="41f5d-120">예제 3: 서비스 가져오기 및 일시 중단</span><span class="sxs-lookup"><span data-stu-id="41f5d-120">Example 3: Get and suspend a service</span></span>
 
 ```
 PS C:\> Get-Service schedule | Suspend-Service
 ```
 
-<span data-ttu-id="c4966-121">이 명령은 **get-help** cmdlet을 사용 하 여 컴퓨터의 작업 스케줄러 (Schedule) 서비스를 나타내는 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-121">This command uses the **Get-Service** cmdlet to get an object that represents the Task Scheduler (Schedule) service on the computer.</span></span>
-<span data-ttu-id="c4966-122">파이프라인 연산자 (|)가 결과를 **일시 중단 서비스** 에 전달 하 여 서비스를 일시 중단 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-122">The pipeline operator (|) passes the result to **Suspend-Service** , which suspends the service.</span></span>
+<span data-ttu-id="41f5d-121">이 명령은 cmdlet을 사용 하 여 `Get-Service` 컴퓨터의 작업 스케줄러 (Schedule) 서비스를 나타내는 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-121">This command uses the `Get-Service` cmdlet to get an object that represents the Task Scheduler (Schedule) service on the computer.</span></span> <span data-ttu-id="41f5d-122">파이프라인 연산자 ( `|` )는 결과를에 전달 하 여 서비스를 `Suspend-Service` 일시 중단 합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-122">The pipeline operator (`|`) passes the result to `Suspend-Service`, which suspends the service.</span></span>
 
-### <span data-ttu-id="c4966-123">예제 4: 일시 중단할 수 있는 모든 서비스 일시 중단</span><span class="sxs-lookup"><span data-stu-id="c4966-123">Example 4: Suspend all services that can be suspended</span></span>
+### <span data-ttu-id="41f5d-123">예제 4: 일시 중단할 수 있는 모든 서비스 일시 중단</span><span class="sxs-lookup"><span data-stu-id="41f5d-123">Example 4: Suspend all services that can be suspended</span></span>
 
 ```
 PS C:\> Get-Service | Where-Object {$_.CanPauseAndContinue -eq "True"} | Suspend-Service -Confirm
 ```
 
-<span data-ttu-id="c4966-124">이 명령은 일시 중단할 수 있는 컴퓨터의 모든 서비스를 일시 중단합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-124">This command suspends all of the services on the computer that can be suspended.</span></span>
-<span data-ttu-id="c4966-125">**서비스** 를 사용 하 여 컴퓨터의 서비스를 나타내는 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-125">It uses **Get-Service** to get objects that represent the services on the computer.</span></span>
-<span data-ttu-id="c4966-126">파이프라인 연산자는 결과를 Where-Object cmdlet으로 전달 합니다 .이 cmdlet은 **Canpauseandcontinue** 속성의 $True 값이 있는 서비스만 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-126">The pipeline operator passes the results to the Where-Object cmdlet, which selects only the services that have a value of $True for the **CanPauseAndContinue** property.</span></span>
-<span data-ttu-id="c4966-127">다른 파이프라인 연산자가 결과를 **일시 중단 서비스** 에 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-127">Another pipeline operator passes the results to **Suspend-Service** .</span></span>
-<span data-ttu-id="c4966-128">*Confirm* 매개 변수는 각 서비스를 일시 중단 하기 전에 확인 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-128">The *Confirm* parameter prompts you for confirmation before suspending each of the services.</span></span>
+<span data-ttu-id="41f5d-124">이 명령은 일시 중단할 수 있는 컴퓨터의 모든 서비스를 일시 중단합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-124">This command suspends all of the services on the computer that can be suspended.</span></span> <span data-ttu-id="41f5d-125">를 사용 `Get-Service` 하 여 컴퓨터의 서비스를 나타내는 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-125">It uses `Get-Service` to get objects that represent the services on the computer.</span></span> <span data-ttu-id="41f5d-126">파이프라인 연산자는 결과를 cmdlet으로 전달 합니다 `Where-Object` .이 cmdlet은 `$True` **Canpauseandcontinue** 속성의 값이 인 서비스만 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-126">The pipeline operator passes the results to the `Where-Object` cmdlet, which selects only the services that have a value of `$True` for the **CanPauseAndContinue** property.</span></span> <span data-ttu-id="41f5d-127">다른 파이프라인 연산자는 결과를에 전달 `Suspend-Service` 합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-127">Another pipeline operator passes the results to `Suspend-Service`.</span></span> <span data-ttu-id="41f5d-128">**Confirm** 매개 변수는 각 서비스를 일시 중단 하기 전에 확인 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-128">The **Confirm** parameter prompts you for confirmation before suspending each of the services.</span></span>
 
-## <span data-ttu-id="c4966-129">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="c4966-129">PARAMETERS</span></span>
+## <span data-ttu-id="41f5d-129">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="41f5d-129">PARAMETERS</span></span>
 
-### <span data-ttu-id="c4966-130">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="c4966-130">-DisplayName</span></span>
+### <span data-ttu-id="41f5d-130">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="41f5d-130">-DisplayName</span></span>
 
-<span data-ttu-id="c4966-131">일시 중단할 서비스의 표시 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-131">Specifies the display names of the services to be suspended.</span></span>
-<span data-ttu-id="c4966-132">와일드카드 문자를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-132">Wildcard characters are permitted.</span></span>
+<span data-ttu-id="41f5d-131">일시 중단할 서비스의 표시 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-131">Specifies the display names of the services to be suspended.</span></span> <span data-ttu-id="41f5d-132">와일드카드 문자를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-132">Wildcard characters are permitted.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -107,12 +98,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="c4966-133">-제외</span><span class="sxs-lookup"><span data-stu-id="c4966-133">-Exclude</span></span>
+### <span data-ttu-id="41f5d-133">-제외</span><span class="sxs-lookup"><span data-stu-id="41f5d-133">-Exclude</span></span>
 
-<span data-ttu-id="c4966-134">지정 된 서비스에서 생략 하는 서비스를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-134">Specifies services to omit from the specified services.</span></span>
-<span data-ttu-id="c4966-135">이 매개 변수 값은 *Name* 매개 변수를 한정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-135">The value of this parameter qualifies the *Name* parameter.</span></span>
-<span data-ttu-id="c4966-136">이름 요소 또는 패턴(예: "*s*")을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-136">Enter a name element or pattern, such as "s\*".</span></span>
-<span data-ttu-id="c4966-137">와일드카드 문자를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-137">Wildcard characters are permitted.</span></span>
+<span data-ttu-id="41f5d-134">지정 된 서비스에서 생략 하는 서비스를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-134">Specifies services to omit from the specified services.</span></span> <span data-ttu-id="41f5d-135">이 매개 변수 값은 **Name** 매개 변수를 한정 합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-135">The value of this parameter qualifies the **Name** parameter.</span></span> <span data-ttu-id="41f5d-136">이름 요소 또는 패턴(예: "*s*")을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-136">Enter a name element or pattern, such as "s\*".</span></span> <span data-ttu-id="41f5d-137">와일드카드 문자를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-137">Wildcard characters are permitted.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -126,12 +114,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="c4966-138">-포함</span><span class="sxs-lookup"><span data-stu-id="c4966-138">-Include</span></span>
+### <span data-ttu-id="41f5d-138">-포함</span><span class="sxs-lookup"><span data-stu-id="41f5d-138">-Include</span></span>
 
-<span data-ttu-id="c4966-139">일시 중단할 서비스를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-139">Specifies services to suspend.</span></span>
-<span data-ttu-id="c4966-140">이 매개 변수 값은 *Name* 매개 변수를 한정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-140">The value of this parameter qualifies the *Name* parameter.</span></span>
-<span data-ttu-id="c4966-141">이름 요소 또는 패턴(예: "*s*")을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-141">Enter a name element or pattern, such as "s\*".</span></span>
-<span data-ttu-id="c4966-142">와일드카드 문자를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-142">Wildcard characters are permitted.</span></span>
+<span data-ttu-id="41f5d-139">일시 중단할 서비스를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-139">Specifies services to suspend.</span></span> <span data-ttu-id="41f5d-140">이 매개 변수 값은 **Name** 매개 변수를 한정 합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-140">The value of this parameter qualifies the **Name** parameter.</span></span> <span data-ttu-id="41f5d-141">이름 요소 또는 패턴(예: "*s*")을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-141">Enter a name element or pattern, such as "s\*".</span></span> <span data-ttu-id="41f5d-142">와일드카드 문자를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-142">Wildcard characters are permitted.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -145,10 +130,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="c4966-143">-InputObject</span><span class="sxs-lookup"><span data-stu-id="c4966-143">-InputObject</span></span>
+### <span data-ttu-id="41f5d-143">-InputObject</span><span class="sxs-lookup"><span data-stu-id="41f5d-143">-InputObject</span></span>
 
-<span data-ttu-id="c4966-144">일시 중단할 서비스를 나타내는 **ServiceController** 개체를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-144">Specifies **ServiceController** objects that represent the services to suspend.</span></span>
-<span data-ttu-id="c4966-145">개체를 포함하는 변수를 입력하거나 개체를 가져오는 명령 또는 식을 입력하세요.</span><span class="sxs-lookup"><span data-stu-id="c4966-145">Enter a variable that contains the objects, or type a command or expression that gets the objects.</span></span>
+<span data-ttu-id="41f5d-144">일시 중단할 서비스를 나타내는 **ServiceController** 개체를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-144">Specifies **ServiceController** objects that represent the services to suspend.</span></span> <span data-ttu-id="41f5d-145">개체를 포함하는 변수를 입력하거나 개체를 가져오는 명령 또는 식을 입력하세요.</span><span class="sxs-lookup"><span data-stu-id="41f5d-145">Enter a variable that contains the objects, or type a command or expression that gets the objects.</span></span>
 
 ```yaml
 Type: System.ServiceProcess.ServiceController[]
@@ -162,13 +146,11 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c4966-146">-Name</span><span class="sxs-lookup"><span data-stu-id="c4966-146">-Name</span></span>
+### <span data-ttu-id="41f5d-146">-Name</span><span class="sxs-lookup"><span data-stu-id="41f5d-146">-Name</span></span>
 
-<span data-ttu-id="c4966-147">일시 중단할 서비스의 서비스 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-147">Specifies the service names of the services to suspend.</span></span>
-<span data-ttu-id="c4966-148">와일드카드 문자를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-148">Wildcard characters are permitted.</span></span>
+<span data-ttu-id="41f5d-147">일시 중단할 서비스의 서비스 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-147">Specifies the service names of the services to suspend.</span></span> <span data-ttu-id="41f5d-148">와일드카드 문자를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-148">Wildcard characters are permitted.</span></span>
 
-<span data-ttu-id="c4966-149">매개 변수 이름은 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-149">The parameter name is optional.</span></span>
-<span data-ttu-id="c4966-150">*이름* 또는 별칭, *ServiceName* 을 사용 하거나 매개 변수 이름을 생략할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-150">You can use *Name* or its alias, *ServiceName* , or you can omit the parameter name.</span></span>
+<span data-ttu-id="41f5d-149">매개 변수 이름은 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-149">The parameter name is optional.</span></span> <span data-ttu-id="41f5d-150">**이름** 또는 별칭, **ServiceName** 을 사용 하거나 매개 변수 이름을 생략할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-150">You can use **Name** or its alias, **ServiceName** , or you can omit the parameter name.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -182,10 +164,9 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="c4966-151">-PassThru</span><span class="sxs-lookup"><span data-stu-id="c4966-151">-PassThru</span></span>
+### <span data-ttu-id="41f5d-151">-PassThru</span><span class="sxs-lookup"><span data-stu-id="41f5d-151">-PassThru</span></span>
 
-<span data-ttu-id="c4966-152">작업 중인 항목을 나타내는 개체를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-152">Returns an object representing the item with which you are working.</span></span>
-<span data-ttu-id="c4966-153">기본적으로 이 cmdlet은 출력을 생성하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-153">By default, this cmdlet does not generate any output.</span></span>
+<span data-ttu-id="41f5d-152">작업 중인 항목을 나타내는 개체를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-152">Returns an object representing the item with which you are working.</span></span> <span data-ttu-id="41f5d-153">기본적으로 이 cmdlet은 출력을 생성하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-153">By default, this cmdlet does not generate any output.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -199,9 +180,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c4966-154">-Confirm</span><span class="sxs-lookup"><span data-stu-id="c4966-154">-Confirm</span></span>
+### <span data-ttu-id="41f5d-154">-Confirm</span><span class="sxs-lookup"><span data-stu-id="41f5d-154">-Confirm</span></span>
 
-<span data-ttu-id="c4966-155">cmdlet을 실행하기 전에 확인을 요청합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-155">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="41f5d-155">cmdlet을 실행하기 전에 확인을 요청합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-155">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -215,10 +196,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c4966-156">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="c4966-156">-WhatIf</span></span>
+### <span data-ttu-id="41f5d-156">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="41f5d-156">-WhatIf</span></span>
 
-<span data-ttu-id="c4966-157">cmdlet을 실행할 경우 발생하는 일을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-157">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="c4966-158">cmdlet은 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-158">The cmdlet is not run.</span></span>
+<span data-ttu-id="41f5d-157">cmdlet을 실행할 경우 발생하는 일을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-157">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="41f5d-158">cmdlet은 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-158">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -232,44 +213,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c4966-159">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="c4966-159">CommonParameters</span></span>
+### <span data-ttu-id="41f5d-159">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="41f5d-159">CommonParameters</span></span>
 
-<span data-ttu-id="c4966-160">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="c4966-160">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="c4966-161">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c4966-161">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="41f5d-160">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="41f5d-160">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="41f5d-161">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="41f5d-161">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="c4966-162">입력</span><span class="sxs-lookup"><span data-stu-id="c4966-162">INPUTS</span></span>
+## <span data-ttu-id="41f5d-162">입력</span><span class="sxs-lookup"><span data-stu-id="41f5d-162">INPUTS</span></span>
 
-### <span data-ttu-id="c4966-163">ServiceController, System.string입니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-163">System.ServiceProcess.ServiceController, System.String</span></span>
+### <span data-ttu-id="41f5d-163">ServiceController, System.string입니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-163">System.ServiceProcess.ServiceController, System.String</span></span>
 
-<span data-ttu-id="c4966-164">서비스 개체 또는 서비스 이름이 포함 된 문자열을이 cmdlet으로 파이프 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-164">You can pipe a service object or a string that contains a service name to this cmdlet.</span></span>
+<span data-ttu-id="41f5d-164">서비스 개체 또는 서비스 이름이 포함 된 문자열을이 cmdlet으로 파이프 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-164">You can pipe a service object or a string that contains a service name to this cmdlet.</span></span>
 
-## <span data-ttu-id="c4966-165">출력</span><span class="sxs-lookup"><span data-stu-id="c4966-165">OUTPUTS</span></span>
+## <span data-ttu-id="41f5d-165">출력</span><span class="sxs-lookup"><span data-stu-id="41f5d-165">OUTPUTS</span></span>
 
-### <span data-ttu-id="c4966-166">None, ServiceController</span><span class="sxs-lookup"><span data-stu-id="c4966-166">None, System.ServiceProcess.ServiceController</span></span>
+### <span data-ttu-id="41f5d-166">None, ServiceController</span><span class="sxs-lookup"><span data-stu-id="41f5d-166">None, System.ServiceProcess.ServiceController</span></span>
 
-<span data-ttu-id="c4966-167">이 cmdlet은 *PassThru* 매개 변수를 지정 하는 경우 서비스를 나타내는 **ServiceController** 개체를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-167">This cmdlet generates a **System.ServiceProcess.ServiceController** object that represents the service, if you specify the *PassThru* parameter.</span></span>
-<span data-ttu-id="c4966-168">그러지 않으면 이 cmdlet에서 출력이 생성되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-168">Otherwise, this cmdlet does not generate any output.</span></span>
+<span data-ttu-id="41f5d-167">이 cmdlet은 **PassThru** 매개 변수를 지정 하는 경우 서비스를 나타내는 **ServiceController** 개체를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-167">This cmdlet generates a **System.ServiceProcess.ServiceController** object that represents the service, if you specify the **PassThru** parameter.</span></span> <span data-ttu-id="41f5d-168">그러지 않으면 이 cmdlet에서 출력이 생성되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-168">Otherwise, this cmdlet does not generate any output.</span></span>
 
-## <span data-ttu-id="c4966-169">참고</span><span class="sxs-lookup"><span data-stu-id="c4966-169">NOTES</span></span>
+## <span data-ttu-id="41f5d-169">참고</span><span class="sxs-lookup"><span data-stu-id="41f5d-169">NOTES</span></span>
 
-* <span data-ttu-id="c4966-170">**일시 중단-** 현재 사용자에 게이 작업을 수행할 수 있는 권한이 있는 경우에만 서비스를 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-170">**Suspend-Service** can control services only when the current user has permission to do this.</span></span> <span data-ttu-id="c4966-171">따라서 명령이 제대로 작동하지 않는 경우 필요한 권한이 없을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-171">If a command does not work correctly, you might not have the required permissions.</span></span>
-* <span data-ttu-id="c4966-172">**일시 중단-서비스** 는 일시 중단 및 다시 시작을 지 원하는 서비스만 일시 중단할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-172">**Suspend-Service** can suspend only services that support being suspended and resumed.</span></span> <span data-ttu-id="c4966-173">특정 서비스를 일시 중단할 수 있는지 확인 하려면 **Canpauseandcontinue** 속성과 함께 Get-Service cmdlet을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-173">To determine whether a particular service can be suspended, use the Get-Service cmdlet together with the **CanPauseAndContinue** property.</span></span> <span data-ttu-id="c4966-174">예들 들어 `Get-Service wmi | Format-List Name, CanPauseAndContinue`입니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-174">For example, `Get-Service wmi | Format-List Name, CanPauseAndContinue`.</span></span> <span data-ttu-id="c4966-175">일시 중단할 수 있는 컴퓨터의 모든 서비스를 찾으려면를 입력 `Get-Service | Where-Object {$_.CanPauseAndContinue -eq $true}` 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-175">To find all services on the computer that can be suspended, type `Get-Service | Where-Object {$_.CanPauseAndContinue -eq $true}`.</span></span>
-* <span data-ttu-id="c4966-176">시스템에서 서비스의 서비스 이름 및 표시 이름을 찾으려면 **get-help** 를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-176">To find the service names and display names of the services on your system, type **Get-Service** .</span></span> <span data-ttu-id="c4966-177">서비스 이름은 **Name** 열에 나타나고 표시 이름은 **DisplayName** 열에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="c4966-177">The service names appear in the **Name** column, and the display names appear in the **DisplayName** column.</span></span>
+<span data-ttu-id="41f5d-170">이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-170">This cmdlet is only available on Windows platforms.</span></span>
 
-## <span data-ttu-id="c4966-178">관련 링크</span><span class="sxs-lookup"><span data-stu-id="c4966-178">RELATED LINKS</span></span>
+- <span data-ttu-id="41f5d-171">`Suspend-Service` 현재 사용자에 게이 작업을 수행할 수 있는 권한이 있는 경우에만 서비스를 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-171">`Suspend-Service` can control services only when the current user has permission to do this.</span></span> <span data-ttu-id="41f5d-172">따라서 명령이 제대로 작동하지 않는 경우 필요한 권한이 없을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-172">If a command does not work correctly, you might not have the required permissions.</span></span>
+- <span data-ttu-id="41f5d-173">`Suspend-Service` 는 일시 중단 및 다시 시작을 지 원하는 서비스만 일시 중단할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-173">`Suspend-Service` can suspend only services that support being suspended and resumed.</span></span> <span data-ttu-id="41f5d-174">특정 서비스를 일시 중단할 수 있는지 확인 하려면 `Get-Service` **Canpauseandcontinue** 속성과 함께 cmdlet을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-174">To determine whether a particular service can be suspended, use the `Get-Service` cmdlet together with the **CanPauseAndContinue** property.</span></span> <span data-ttu-id="41f5d-175">예를 들어 `Get-Service wmi | Format-List Name, CanPauseAndContinue`.</span><span class="sxs-lookup"><span data-stu-id="41f5d-175">For example, `Get-Service wmi | Format-List Name, CanPauseAndContinue`.</span></span> <span data-ttu-id="41f5d-176">일시 중단할 수 있는 컴퓨터의 모든 서비스를 찾으려면를 입력 `Get-Service | Where-Object {$_.CanPauseAndContinue -eq $true}` 합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-176">To find all services on the computer that can be suspended, type `Get-Service | Where-Object {$_.CanPauseAndContinue -eq $true}`.</span></span>
+- <span data-ttu-id="41f5d-177">시스템에서 서비스의 서비스 이름 및 표시 이름을 찾으려면를 입력 `Get-Service` 합니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-177">To find the service names and display names of the services on your system, type `Get-Service`.</span></span>
+  <span data-ttu-id="41f5d-178">서비스 이름은 **Name** 열에 나타나고 표시 이름은 **DisplayName** 열에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="41f5d-178">The service names appear in the **Name** column, and the display names appear in the **DisplayName** column.</span></span>
 
-[<span data-ttu-id="c4966-179">Get-Service</span><span class="sxs-lookup"><span data-stu-id="c4966-179">Get-Service</span></span>](Get-Service.md)
+## <span data-ttu-id="41f5d-179">관련 링크</span><span class="sxs-lookup"><span data-stu-id="41f5d-179">RELATED LINKS</span></span>
 
-[<span data-ttu-id="c4966-180">New-Service</span><span class="sxs-lookup"><span data-stu-id="c4966-180">New-Service</span></span>](New-Service.md)
+[<span data-ttu-id="41f5d-180">Get-Service</span><span class="sxs-lookup"><span data-stu-id="41f5d-180">Get-Service</span></span>](Get-Service.md)
 
-[<span data-ttu-id="c4966-181">Restart-Service</span><span class="sxs-lookup"><span data-stu-id="c4966-181">Restart-Service</span></span>](Restart-Service.md)
+[<span data-ttu-id="41f5d-181">New-Service</span><span class="sxs-lookup"><span data-stu-id="41f5d-181">New-Service</span></span>](New-Service.md)
 
-[<span data-ttu-id="c4966-182">Resume-Service</span><span class="sxs-lookup"><span data-stu-id="c4966-182">Resume-Service</span></span>](Resume-Service.md)
+[<span data-ttu-id="41f5d-182">Restart-Service</span><span class="sxs-lookup"><span data-stu-id="41f5d-182">Restart-Service</span></span>](Restart-Service.md)
 
-[<span data-ttu-id="c4966-183">Set-Service</span><span class="sxs-lookup"><span data-stu-id="c4966-183">Set-Service</span></span>](Set-Service.md)
+[<span data-ttu-id="41f5d-183">Resume-Service</span><span class="sxs-lookup"><span data-stu-id="41f5d-183">Resume-Service</span></span>](Resume-Service.md)
 
-[<span data-ttu-id="c4966-184">Start-Service</span><span class="sxs-lookup"><span data-stu-id="c4966-184">Start-Service</span></span>](Start-Service.md)
+[<span data-ttu-id="41f5d-184">Set-Service</span><span class="sxs-lookup"><span data-stu-id="41f5d-184">Set-Service</span></span>](Set-Service.md)
 
-[<span data-ttu-id="c4966-185">Stop-Service</span><span class="sxs-lookup"><span data-stu-id="c4966-185">Stop-Service</span></span>](Stop-Service.md)
+[<span data-ttu-id="41f5d-185">Start-Service</span><span class="sxs-lookup"><span data-stu-id="41f5d-185">Start-Service</span></span>](Start-Service.md)
 
-[<span data-ttu-id="c4966-186">Remove-Service</span><span class="sxs-lookup"><span data-stu-id="c4966-186">Remove-Service</span></span>](Remove-Service.md)
+[<span data-ttu-id="41f5d-186">Stop-Service</span><span class="sxs-lookup"><span data-stu-id="41f5d-186">Stop-Service</span></span>](Stop-Service.md)
 
+[<span data-ttu-id="41f5d-187">Remove-Service</span><span class="sxs-lookup"><span data-stu-id="41f5d-187">Remove-Service</span></span>](Remove-Service.md)
