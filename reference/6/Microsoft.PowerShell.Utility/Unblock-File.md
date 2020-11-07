@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/unblock-file?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Unblock-File
-ms.openlocfilehash: 617d36f61434d8b779d1161610cc7757c6a7725d
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4774c87c4f6ebe7f374f30139ead833bde7074e3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93216201"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343405"
 ---
 # Unblock-File
 
@@ -35,13 +35,11 @@ Unblock-File -LiteralPath <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 
 ## 설명
 
-**Unblock-File** cmdlet을 사용하면 인터넷에서 다운로드한 파일을 열 수 있습니다.
-PowerShell 실행 정책이 **RemoteSigned** 때에도 실행할 수 있도록 인터넷에서 다운로드 된 powershell 스크립트 파일을 차단 해제 합니다.
-기본적으로 이러한 파일은 신뢰할 수 없는 파일로부터 컴퓨터를 보호하도록 차단됩니다.
+`Unblock-File`Cmdlet을 사용 하면 인터넷에서 다운로드 한 파일을 열 수 있습니다. PowerShell 실행 정책이 **RemoteSigned** 때에도 실행할 수 있도록 인터넷에서 다운로드 된 powershell 스크립트 파일을 차단 해제 합니다. 기본적으로 이러한 파일은 신뢰할 수 없는 파일로부터 컴퓨터를 보호하도록 차단됩니다.
 
-**Unblock-File** cmdlet을 사용하기 전에 파일 및 해당 소스를 검토하여 열어도 되는지 확인합니다.
+Cmdlet을 사용 하기 전에 `Unblock-File` 파일 및 소스를 검토 하 고 열어도 안전한 지 확인 합니다.
 
-내부적으로 **Unblock-File** cmdlet은 Zone.Identifier 대체 데이터 스트림을 제거합니다. "3"의 값은 인터넷에서 다운로드했음을 나타냅니다.
+내부적으로 `Unblock-File` cmdlet은 값이 "3" 인 영역을 제거 하 여 인터넷에서 다운로드 되었음을 표시 합니다.
 
 PowerShell 실행 정책에 대 한 자세한 내용은 [about_Execution_Policies](../Microsoft.PowerShell.Core/about/about_Execution_Policies.md)를 참조 하세요.
 
@@ -51,25 +49,31 @@ PowerShell 실행 정책에 대 한 자세한 내용은 [about_Execution_Policie
 
 ### 예제 1: 파일 차단 해제
 
+이 명령은 PowerShellTips.chm 파일을 차단 해제합니다.
+
 ```
 PS C:\> Unblock-File -Path C:\Users\User01\Documents\Downloads\PowerShellTips.chm
 ```
 
-이 명령은 PowerShellTips.chm 파일을 차단 해제합니다.
-
 ### 예 2: 여러 파일 차단 해제
+
+이 명령은 이름에 "PowerShell"이 포함 된 디렉터리의 모든 파일을 차단 해제 `C:\Downloads` 합니다. 모든 파일이 안전한지 확인할 때까지 이와 같은 명령을 실행하지 마세요.
 
 ```
 PS C:\> dir C:\Downloads\*PowerShell* | Unblock-File
 ```
 
-이 명령은 C:\Downloads 디렉터리에서 이름에 "PowerShell"이 포함된 모든 파일을 차단 해제합니다.
-모든 파일이 안전한지 확인할 때까지 이와 같은 명령을 실행하지 마세요.
-
 ### 예제 3: 스크립트 찾기 및 차단 해제
 
+이 명령은 PowerShell 스크립트를 찾아 차단 해제 하는 방법을 보여 줍니다.
+
+첫 번째 명령은 *get-help* Cmdlet의 **Stream** 매개 변수를 사용 하 여 Zone. Identifier Stream으로 파일을 가져옵니다.
+
+두 번째 명령은 실행 정책이 **RemoteSigned** PowerShell 세션에서 차단 된 스크립트를 실행할 때 발생 하는 상황을 보여 줍니다. RemoteSigned 정책은 디지털 서명되지 않은 경우 인터넷에서 다운로드한 스크립트를 실행할 수 없도록 차단합니다.
+
+세 번째 명령은 cmdlet을 사용 하 여 `Unblock-File` 세션에서 실행할 수 있도록 스크립트를 차단 해제 합니다.
+
 ```
-The first command uses the *Stream* parameter of the Get-Item cmdlet get files with the Zone.Identifier stream.Although you could pipe the output directly to the **Unblock-File** cmdlet (Get-Item * -Stream "Zone.Identifier" -ErrorAction SilentlyContinue | ForEach {Unblock-File $_.FileName}), it is prudent to review the file and confirm that it is safe before unblocking.
 PS C:\> Get-Item * -Stream "Zone.Identifier" -ErrorAction SilentlyContinue
    FileName: C:\ps-test\Start-ActivityTracker.ps1
 
@@ -77,7 +81,6 @@ Stream                   Length
 ------                   ------
 Zone.Identifier              26
 
-The second command shows what happens when you run a blocked script in a PowerShell session in which the execution policy is **RemoteSigned**. The RemoteSigned policy prevents you from running scripts that are downloaded from the Internet unless they are digitally signed.
 PS C:\> C:\ps-test\Start-ActivityTracker.ps1
 c:\ps-test\Start-ActivityTracker.ps1 : File c:\ps-test\Start-ActivityTracker.ps1 cannot
 be loaded. The file c:\ps-test\Start-ActivityTracker.ps1 is not digitally signed. The script
@@ -89,20 +92,14 @@ At line:1 char:1
     + CategoryInfo          : SecurityError: (:) [], PSSecurityException
     + FullyQualifiedErrorId : UnauthorizedAccess
 
-The third command uses the **Unblock-File** cmdlet to unblock the script so it can run in the session.
 PS C:\> Get-Item C:\ps-test\Start-ActivityTracker.ps1 | Unblock-File
 ```
-
-이 명령은 PowerShell 스크립트를 찾아 차단 해제 하는 방법을 보여 줍니다.
 
 ## PARAMETERS
 
 ### -LiteralPath
-차단을 해제할 파일을 지정합니다.
-*Path* 와 달리 *LiteralPath* 매개 변수 값은 입력한 대로 사용됩니다.
-어떠한 문자도 와일드카드로 해석되지 않습니다.
-이스케이프 문자가 포함된 경로는 작은따옴표로 묶으세요.
-작은따옴표는 모든 문자를 이스케이프 시퀀스로 해석 하지 않도록 PowerShell에 지시 합니다.
+
+차단을 해제할 파일을 지정합니다. **Path** 와 달리 **LiteralPath** 매개 변수 값은 입력한 대로 사용됩니다. 어떠한 문자도 와일드카드로 해석되지 않습니다. 이스케이프 문자가 포함된 경로는 작은따옴표로 묶으세요. 작은따옴표는 모든 문자를 이스케이프 시퀀스로 해석 하지 않도록 PowerShell에 지시 합니다.
 
 ```yaml
 Type: System.String[]
@@ -117,8 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-차단을 해제할 파일을 지정합니다.
-와일드카드 문자가 지원됩니다.
+
+차단을 해제할 파일을 지정합니다. 와일드카드 문자가 지원됩니다.
 
 ```yaml
 Type: System.String[]
@@ -150,8 +147,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-cmdlet을 실행할 경우 발생하는 일을 표시합니다.
-cmdlet은 실행되지 않습니다.
+cmdlet을 실행할 경우 발생하는 일을 표시합니다. cmdlet은 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -173,7 +169,7 @@ Accept wildcard characters: False
 
 ### System.String
 
-파일의 경로를 **Unblock-File** 로 파이프할 수 있습니다.
+파일 경로를로 파이프 할 수 있습니다 `Unblock-File` .
 
 ## 출력
 
@@ -183,9 +179,11 @@ Accept wildcard characters: False
 
 ## 참고
 
-* **Unblock-File** cmdlet은 파일 시스템 드라이브에서만 작동합니다.
-* **파일 차단 해제-** 파일 탐색기의 **속성** 대화 상자에 있는 **차단 해제** 단추와 동일한 작업을 수행 합니다.
-* 차단되지 않은 파일에서 **Unblock-File** cmdlet을 사용하는 경우 명령은 차단되지 않은 파일에는 어떤 영향도 미치지 않으며 cmdlet에서도 오류를 생성하지 않습니다.
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
+
+- `Unblock-File`Cmdlet은 파일 시스템 드라이브 에서만 작동 합니다.
+- `Unblock-File`파일 탐색기의 **속성** 대화 상자에 있는 **차단 해제** 단추와 동일한 작업을 수행 합니다.
+- 차단 되지 않은 파일에서 cmdlet을 사용 하는 경우 `Unblock-File` 명령은 차단 해제 된 파일에 영향을 주지 않으며 cmdlet은 오류를 생성 하지 않습니다.
 
 ## 관련 링크
 

@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-acl?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Acl
-ms.openlocfilehash: 3c8f26884ac0eda1ece799bbd49a7863b6d2239c
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 56a9625a42062cf787f0c92aaa319a0a344b5919
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93211233"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342538"
 ---
 # Set-Acl
 
@@ -135,11 +135,9 @@ Set-Acl -Path "C:\Pets\Dog.txt" -AclObject $NewAcl
 
 첫 번째 명령은 cmdlet을 사용 하 여 `Get-Acl` Dog.txt 파일의 보안 설명자를 가져옵니다.
 
-다음 변수는 **BUILTIN\Administrators** 그룹에 Dog.txt 파일에 대 한 모든 권한을 부여 하기 위해 생성 됩니다. `$identity` [사용자 계정](/dotnet/api/system.security.accesscontrol.filesystemaccessrule.-ctor)이름으로 설정 된 변수입니다.
-`$fileSystemRights`FullControl로 설정 된 변수는 액세스 규칙에 연결 된 작업 유형을 지정 하는 [FileSystemRights](/dotnet/api/system.security.accesscontrol.filesystemrights) 값 중 하나일 수 있습니다. `$type`"Allow"로 설정 된 변수는 작업을 허용할지 또는 거부할지를 지정 합니다. `$fileSystemAccessRuleArgumentList`변수는 새 **FileSystemAccessRule** 개체를 만들 때 전달 되는 인수 목록입니다. 그런 다음 새 **FileSystemAccessRule** 개체를 만들고 **FileSystemAccessRule** 개체가 **setaccessrule ()** 메서드에 전달 되 고 새 액세스 규칙을 추가 합니다.
+다음 변수는 **BUILTIN\Administrators** 그룹에 Dog.txt 파일에 대 한 모든 권한을 부여 하기 위해 생성 됩니다. `$identity` [사용자 계정](/dotnet/api/system.security.accesscontrol.filesystemaccessrule.-ctor)이름으로 설정 된 변수입니다. `$fileSystemRights`FullControl로 설정 된 변수는 액세스 규칙에 연결 된 작업 유형을 지정 하는 [FileSystemRights](/dotnet/api/system.security.accesscontrol.filesystemrights) 값 중 하나일 수 있습니다. `$type`"Allow"로 설정 된 변수는 작업을 허용할지 또는 거부할지를 지정 합니다. `$fileSystemAccessRuleArgumentList`변수는 새 **FileSystemAccessRule** 개체를 만들 때 전달 되는 인수 목록입니다. 그런 다음 새 **FileSystemAccessRule** 개체를 만들고 **FileSystemAccessRule** 개체가 **setaccessrule ()** 메서드에 전달 되 고 새 액세스 규칙을 추가 합니다.
 
-마지막 명령은를 사용 하 여 `Set-Acl` Dog.txt에의 보안 설명자를 적용 합니다.
-명령이 완료 되 면 **BUILTIN\Administrators** 그룹은 Dog.txt에 대 한 모든 권한을 갖게 됩니다.
+마지막 명령은를 사용 하 여 `Set-Acl` Dog.txt에의 보안 설명자를 적용 합니다. 명령이 완료 되 면 **BUILTIN\Administrators** 그룹은 Dog.txt에 대 한 모든 권한을 갖게 됩니다.
 
 ## PARAMETERS
 
@@ -349,13 +347,13 @@ ACL 개체 또는 보안 설명자를로 파이프 할 수 있습니다 `Set-Acl
 
 ### Accesscontrol-namespace. System.security.accesscontrol.filesecurity
 
-기본적으로는 `Set-Acl` 출력을 생성 하지 않습니다.
-그러나 **Passthru** 매개 변수를 사용할 경우 보안 개체를 생성합니다.
-보안 개체 유형은 항목 유형에 따라 달라집니다.
+기본적으로는 `Set-Acl` 출력을 생성 하지 않습니다. 그러나 **Passthru** 매개 변수를 사용할 경우 보안 개체를 생성합니다. 보안 개체 유형은 항목 유형에 따라 달라집니다.
 
 ## 참고
 
- `Set-Acl`Cmdlet은 PowerShell 파일 시스템 및 레지스트리 공급자에서 지원 됩니다. 따라서 Set-Acl cmdlet을 사용하여 파일, 디렉터리 및 레지스트리 키의 보안 설명자를 변경할 수 있습니다.
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
+
+`Set-Acl`Cmdlet은 PowerShell 파일 시스템 및 레지스트리 공급자에서 지원 됩니다. 따라서 Set-Acl cmdlet을 사용하여 파일, 디렉터리 및 레지스트리 키의 보안 설명자를 변경할 수 있습니다.
 
 ## 관련 링크
 

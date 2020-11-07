@@ -7,12 +7,12 @@ ms.date: 5/1/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/rename-computer?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Rename-Computer
-ms.openlocfilehash: 860a5ec4f75136bd53fa5c9621504b1613e9c511
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4028978b7d2d5353b7250acac3a3454b2f9d8ee1
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214529"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343218"
 ---
 # Rename-Computer
 
@@ -292,8 +292,7 @@ Accept wildcard characters: False
 
 ### 없음
 
-이 cmdlet에는 값으로 입력을 사용하는 매개 변수가 없습니다.
-그러나 개체의 **ComputerName** 및 **NewName** 속성 값을 이 cmdlet으로 파이프할 수 있습니다.
+이 cmdlet에는 값으로 입력을 사용하는 매개 변수가 없습니다. 그러나 개체의 **ComputerName** 및 **NewName** 속성 값을 이 cmdlet으로 파이프할 수 있습니다.
 
 ## 출력
 

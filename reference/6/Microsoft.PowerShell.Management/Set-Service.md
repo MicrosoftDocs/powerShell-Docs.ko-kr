@@ -7,12 +7,12 @@ ms.date: 10/25/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-service?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Service
-ms.openlocfilehash: ad1fd47291cbe8977bd2f2ada4981589714c93a3
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: a5c156dcf83b3c60123b0bdde002c8657081602e
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212258"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343762"
 ---
 # Set-Service
 
@@ -341,9 +341,9 @@ Accept wildcard characters: False
 
 이 매개 변수에 허용 되는 값은 다음과 같습니다.
 
-- **일시 중지 됨** . 서비스를 일시 중단합니다.
-- **실행 중** . 서비스를 시작합니다.
-- **중지 됨** . 서비스를 중지합니다.
+- **일시 중지 됨**. 서비스를 일시 중단합니다.
+- **실행 중**. 서비스를 시작합니다.
+- **중지 됨**. 서비스를 중지합니다.
 
 ```yaml
 Type: System.String
@@ -391,6 +391,8 @@ Accept wildcard characters: False
 기본적으로는 `Set-Service` 개체를 반환 하지 않습니다. **PassThru** 매개 변수를 사용 하 여 **ServiceController** 개체를 출력 합니다.
 
 ## 참고
+
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
 
 `Set-Service` 높은 권한이 필요 합니다. **관리자 권한으로 실행** 옵션을 사용 합니다.
 

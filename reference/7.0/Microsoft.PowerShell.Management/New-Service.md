@@ -7,12 +7,12 @@ ms.date: 10/25/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-service?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Service
-ms.openlocfilehash: 17b28b14a9610dd48a03cc8c654806e75d3d97e3
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 0963e90f1f994a9bd6f3f61e80bf56eebff09384
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210954"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343116"
 ---
 # New-Service
 
@@ -186,8 +186,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-서비스의 이름을 지정합니다.
-이 매개 변수는 필수적 요소입니다.
+서비스의 이름을 지정합니다. 이 매개 변수는 필수적 요소입니다.
 
 ```yaml
 Type: System.String
@@ -261,8 +260,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-cmdlet을 실행할 경우 발생하는 일을 표시합니다.
-cmdlet은 실행되지 않습니다.
+cmdlet을 실행할 경우 발생하는 일을 표시합니다. cmdlet은 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -294,7 +292,9 @@ Accept wildcard characters: False
 
 ## 참고
 
-Windows Vista 이상 버전의 Windows 운영 체제에서이 cmdlet을 실행 하려면 관리자 권한으로 실행 옵션을 사용 하 여 PowerShell을 시작 합니다.
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
+
+이 cmdlet을 실행 하려면 **관리자 권한으로 실행** 옵션을 사용 하 여 PowerShell을 시작 합니다.
 
 ## 관련 링크
 

@@ -7,12 +7,12 @@ ms.date: 09/18/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-timezone?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-TimeZone
-ms.openlocfilehash: bfeb838ca8f67bac7c257ef3485eff9b55753933
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 3acf02b567c1fecd8089b12fac7c32b42abfec77
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214418"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343184"
 ---
 # Set-TimeZone
 

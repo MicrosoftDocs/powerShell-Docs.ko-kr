@@ -7,12 +7,12 @@ ms.date: 09/21/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-clipboard?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Clipboard
-ms.openlocfilehash: da1df360d7c471d925bd2f57f5258ecb2d60e631
-ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
+ms.openlocfilehash: 5fce0c872871006dd760ee8df2fb692faaa1aab9
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239984"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342368"
 ---
 # Get-Clipboard
 
@@ -30,7 +30,7 @@ Get-Clipboard [-Raw] [<CommonParameters>]
 `Get-Clipboard`Cmdlet은 클립보드의 내용을 텍스트로 가져옵니다. 텍스트의 여러 줄은와 유사한 문자열 배열로 반환 됩니다 `Get-Content` .
 
 > [!NOTE]
-> Linux에서이 cmdlet을 사용 `xclip` 하려면 유틸리티가 경로에 있어야 합니다.
+> Linux에서이 cmdlet을 사용 `xclip` 하려면 유틸리티가 경로에 있어야 합니다. 이 cmdlet은 macOS에서 지원 되지 않습니다.
 
 ## 예제
 
@@ -79,4 +79,3 @@ Accept wildcard characters: False
 ## 관련 링크
 
 [Set-Clipboard](Set-Clipboard.md)
-

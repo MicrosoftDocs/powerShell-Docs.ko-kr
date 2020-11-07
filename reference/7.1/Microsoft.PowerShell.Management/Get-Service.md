@@ -7,12 +7,12 @@ ms.date: 10/30/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-service?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Service
-ms.openlocfilehash: 7f44f1d363c5fae79722fdfb5bd894cb24e00d0c
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 1cbecd37217c4c0113079dfa9ac7008dd0d91823
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217881"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342232"
 ---
 # Get-Service
 
@@ -298,6 +298,8 @@ Accept wildcard characters: True
 
 ## 참고
 
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
+
 PowerShell 6.0부터 다음 속성이 **ServiceController** 개체에 추가 됩니다. **사용자 이름** , **설명** , **Delayedautostart** 시작, **BinaryPathName** 및 **startuptype** .
 
 의 기본 제공 별칭인를 참조할 수도 있습니다 `Get-Service` `gsv` . 자세한 내용은 [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md)를 참조 하세요.
@@ -325,4 +327,3 @@ PowerShell 6.0부터 다음 속성이 **ServiceController** 개체에 추가 됩
 [Suspend-Service](Suspend-Service.md)
 
 [Remove-Service](Remove-Service.md)
-

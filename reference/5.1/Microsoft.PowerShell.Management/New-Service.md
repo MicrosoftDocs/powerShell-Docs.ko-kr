@@ -7,12 +7,12 @@ ms.date: 10/25/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-service?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Service
-ms.openlocfilehash: 3249ce91a63417f2790997d37e2420c6fcb374d8
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 5647f9bfa909cba9740e7be17f262b6be0e5c8e9
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214602"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342929"
 ---
 # New-Service
 
@@ -177,8 +177,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-서비스의 이름을 지정합니다.
-이 매개 변수는 필수적 요소입니다.
+서비스의 이름을 지정합니다. 이 매개 변수는 필수적 요소입니다.
 
 ```yaml
 Type: System.String
@@ -236,8 +235,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-cmdlet을 실행할 경우 발생하는 일을 표시합니다.
-cmdlet은 실행되지 않습니다.
+cmdlet을 실행할 경우 발생하는 일을 표시합니다. cmdlet은 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -269,7 +267,7 @@ Accept wildcard characters: False
 
 ## 참고
 
-Windows Vista 이상 버전의 Windows 운영 체제에서이 cmdlet을 실행 하려면 관리자 권한으로 실행 옵션을 사용 하 여 PowerShell을 시작 합니다.
+이 cmdlet을 실행 하려면 **관리자 권한으로 실행** 옵션을 사용 하 여 PowerShell을 시작 합니다.
 
 서비스를 삭제 하려면 Sc.exe를 사용 하거나 cmdlet을 사용 `Get-CimInstance` 하 여 서비스를 나타내는 **Win32_Service** 개체를 가져온 다음 **delete** 메서드를 사용 하 여 서비스를 삭제 합니다. 을 반환 하는 개체에는 `Get-Service` 삭제 메서드가 없습니다.
 

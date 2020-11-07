@@ -7,12 +7,12 @@ ms.date: 07/16/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-PSRemoting
-ms.openlocfilehash: 893031f197f0be8996fdbec4bd316b70cf354825
-ms.sourcegitcommit: 0e0f45d0d8deb8c9088a4f4a32218edde052b686
+ms.openlocfilehash: 5b69a1ec6945f910815d5469fad77213b517d7b6
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "93218026"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342300"
 ---
 # Enable-PSRemoting
 
@@ -267,6 +267,8 @@ Accept wildcard characters: False
 이 cmdlet은 결과를 설명 하는 문자열을 반환 합니다.
 
 ## 참고
+
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
 
 서버 버전의 Windows 운영 체제에서는 `Enable-PSRemoting` 원격 액세스를 허용 하는 개인 및 도메인 네트워크에 대 한 방화벽 규칙을 만들고, 동일한 로컬 서브넷에 있는 컴퓨터의 원격 액세스만 허용 하는 공용 네트워크에 대 한 방화벽 규칙을 만듭니다.
 

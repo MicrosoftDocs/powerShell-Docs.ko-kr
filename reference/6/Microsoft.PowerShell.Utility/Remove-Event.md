@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/remove-event?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-Event
-ms.openlocfilehash: cf7236d31ccd248701a0464c84e94d0d910cc26f
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: fb5c6761427ea3c79075a18e551bfa7b39f72dc3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93216057"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343422"
 ---
 # Remove-Event
 
@@ -34,10 +34,10 @@ Remove-Event [-EventIdentifier] <Int32> [-WhatIf] [-Confirm] [<CommonParameters>
 ```
 
 ## 설명
-**Remove 이벤트** cmdlet은 현재 세션의 이벤트 큐에서 이벤트를 삭제 합니다.
 
-이 cmdlet은 현재 큐에 있는 이벤트만 삭제합니다.
-이벤트 등록이나 가입을 취소하려면 Unregister-Event cmdlet을 사용하세요.
+`Remove-Event`Cmdlet은 현재 세션의 이벤트 큐에서 이벤트를 삭제 합니다.
+
+이 cmdlet은 현재 큐에 있는 이벤트만 삭제합니다. 이벤트 등록을 취소 하거나 구독을 취소 하려면 `Unregister-Event` cmdlet을 사용 합니다.
 
 ## 예제
 
@@ -68,8 +68,8 @@ PS C:\> Get-Event | Remove-Event
 ## PARAMETERS
 
 ### -EventIdentifier
-Cmdlet이 삭제 하는 이벤트 식별자를 지정 합니다.
-*EventIdentifier* 또는 *SourceIdentifier* 매개 변수는 모든 명령에 필요 합니다.
+
+Cmdlet이 삭제 하는 이벤트 식별자를 지정 합니다. **EventIdentifier** 또는 **SourceIdentifier** 매개 변수는 모든 명령에 필요 합니다.
 
 ```yaml
 Type: System.Int32
@@ -84,9 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -SourceIdentifier
-이 cmdlet이 이벤트를 삭제할 원본 식별자를 지정 합니다.
-와일드카드는 사용할 수 없습니다.
-*EventIdentifier* 또는 *SourceIdentifier* 매개 변수는 모든 명령에 필요 합니다.
+
+이 cmdlet이 이벤트를 삭제할 원본 식별자를 지정 합니다. 와일드카드는 사용할 수 없습니다. **EventIdentifier** 또는 **SourceIdentifier** 매개 변수는 모든 명령에 필요 합니다.
 
 ```yaml
 Type: System.String
@@ -101,6 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 cmdlet을 실행하기 전에 확인을 요청합니다.
 
 ```yaml
@@ -116,8 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-cmdlet을 실행할 경우 발생하는 일을 표시합니다.
-cmdlet은 실행되지 않습니다.
+
+cmdlet을 실행할 경우 발생하는 일을 표시합니다. cmdlet은 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -132,23 +132,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.
 
 ## 입력
 
 ### PSEventArgs.
-Get-Event에서 **이벤트를 제거** 로 파이프 할 수 있습니다.
+
+에서로 이벤트를 파이프 할 수 있습니다 `Get-Event` `Remove-Event` .
 
 ## 출력
 
 ### 없음
+
 이 cmdlet에서 어떠한 출력도 생성되지 않습니다.
 
 ## 참고
 
-* 이벤트, 이벤트 구독 및 이벤트 큐는 현재 세션에만 있습니다. 현재 세션을 닫으면 이벤트 큐가 삭제되고 이벤트 구독이 취소됩니다.
+Linux 또는 macOS 플랫폼에서 사용할 수 있는 이벤트 원본이 없습니다.
 
-*
+이벤트, 이벤트 구독 및 이벤트 큐는 현재 세션에만 있습니다. 현재 세션을 닫으면 이벤트 큐가 삭제되고 이벤트 구독이 취소됩니다.
 
 ## 관련 링크
 
