@@ -7,12 +7,12 @@ ms.date: 02/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-cmsmessage?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-CmsMessage
-ms.openlocfilehash: 30e70549b648f7fb63bb250744cf52f0979c201f
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: fcc4305ee5a7198f78eb7b6ce735cf45b90bbf6f
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214986"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344860"
 ---
 # Get-CmsMessage
 
@@ -149,6 +149,8 @@ Accept wildcard characters: False
 ## 출력
 
 ## 참고
+
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
 
 ## 관련 링크
 

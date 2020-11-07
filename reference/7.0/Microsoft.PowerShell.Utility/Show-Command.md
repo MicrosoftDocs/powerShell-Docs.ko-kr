@@ -7,12 +7,12 @@ ms.date: 10/29/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/show-command?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Show-Command
-ms.openlocfilehash: 976a9ba6047d79bc1ac6225896c7285702daf38a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: e6995da1e9ff2a1678c5703b79223481533bc9a5
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210162"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346159"
 ---
 # Show-Command
 
@@ -40,7 +40,7 @@ Show-Command [[-Name] <String>] [-Height <Double>] [-Width <Double>] [-NoCommonP
 
 PowerShell ISE (통합 스크립팅 환경)에서는 `Show-Command` 기본적으로 창의 변형이 표시 됩니다. 이 명령 창을 사용 하는 방법에 대 한 자세한 내용은 PowerShell ISE 도움말 항목을 참조 하세요.
 
-이 cmdlet은 PowerShell 7에서 다시 도입 되었습니다. 
+이 cmdlet은 PowerShell 7에서 다시 도입 되었습니다.
 
 이 cmdlet은 사용자 인터페이스를 필요로 하기 때문에 Windows Server Core 또는 Windows Nano Server에서는 작동 하지 않습니다. 이 cmdlet은 Windows 데스크톱을 지 원하는 Windows 시스템 에서만 사용할 수 있습니다.
 
@@ -271,6 +271,8 @@ Accept wildcard characters: False
 **PassThru** 매개 변수를 사용 하는 경우는 `Show-Command` 명령 문자열을 반환 합니다. **Errorpopup** 매개 변수를 사용 하는 경우 `Show-Command` 명령 출력 (모든 개체)을 반환 합니다. 그렇지 않으면에서 `Show-Command` 출력을 생성 하지 않습니다.
 
 ## 참고
+
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
 
 `Show-Command` 는 원격 세션에서 작동 하지 않습니다.
 

@@ -7,12 +7,12 @@ ms.date: 10/30/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-service?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Service
-ms.openlocfilehash: ce91313d1b581e3d666c131caaa1cf7ecad0c04f
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 15bfe1123ba005a7b326c234fad360d6d9d6cc4d
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210553"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345734"
 ---
 # Get-Service
 
@@ -297,6 +297,8 @@ Accept wildcard characters: True
 이 cmdlet은 컴퓨터의 서비스를 나타내는 개체를 반환 합니다.
 
 ## 참고
+
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
 
 PowerShell 6.0부터 다음 속성이 **ServiceController** 개체에 추가 됩니다. **사용자 이름** , **설명** , **Delayedautostart** 시작, **BinaryPathName** 및 **startuptype** .
 

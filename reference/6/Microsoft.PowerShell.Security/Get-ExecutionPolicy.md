@@ -7,12 +7,12 @@ ms.date: 3/22/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-executionpolicy?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ExecutionPolicy
-ms.openlocfilehash: a846c3605c4adf469b12bfadaa3f90e585558dea
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: f798aaef7032db450a13d79589eb7dd0ca762cd6
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93216937"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344833"
 ---
 # Get-ExecutionPolicy
 
@@ -172,11 +172,11 @@ Accept wildcard characters: False
 
 유효한 실행 정책은 다음과 같이 우선 순위에 따라 결정 됩니다.
 
-- **MachinePolicy** . 컴퓨터의 모든 사용자에 대해 그룹 정책 설정 합니다.
-- **Userpolicy** . 컴퓨터의 현재 사용자에 대 한 그룹 정책 설정 합니다.
-- **프로세스** . 현재 PowerShell 세션에만 영향을 줍니다.
-- **CurrentUser** . 현재 사용자 에게만 영향을 줍니다.
-- **LocalMachine** . 컴퓨터의 모든 사용자에 게 영향을 주는 기본 범위입니다.
+- **MachinePolicy**. 컴퓨터의 모든 사용자에 대해 그룹 정책 설정 합니다.
+- **Userpolicy**. 컴퓨터의 현재 사용자에 대 한 그룹 정책 설정 합니다.
+- **프로세스**. 현재 PowerShell 세션에만 영향을 줍니다.
+- **CurrentUser**. 현재 사용자 에게만 영향을 줍니다.
+- **LocalMachine**. 컴퓨터의 모든 사용자에 게 영향을 주는 기본 범위입니다.
 
 ```yaml
 Type: Microsoft.PowerShell.ExecutionPolicyScope
@@ -204,6 +204,8 @@ Accept wildcard characters: False
 ## 출력
 
 ### Microsoft.PowerShell.Exe이상 정책
+
+Cmdlet은 항상 Linux 및 macOS 플랫폼에서 **무제한** 을 반환 합니다.
 
 ## 참고
 

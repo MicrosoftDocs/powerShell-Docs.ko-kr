@@ -7,12 +7,12 @@ ms.date: 10/28/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/out-printer?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Out-Printer
-ms.openlocfilehash: 69d78550d68457c92deb3e4d690483bf742544b0
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: bc16c7129dff2f2982d1756d5642d86481cd573d
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217369"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344357"
 ---
 # Out-Printer
 
@@ -117,6 +117,8 @@ Accept wildcard characters: False
 
 ## 참고
 
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
+
 동사를 포함 하는 cmdlet은 `Out` 개체의 형식을 지정 하지 않습니다. 단지 렌더링 하 여 지정 된 표시 대상으로 보냅니다. 포맷 되지 않은 개체를 cmdlet에 보내면 `Out` cmdlet이 해당 개체를 렌더링 하기 전에 형식 지정 cmdlet으로 보냅니다.
 
 `Out-Printer` 데이터를 프린터로 보내지만 출력 개체를 파이프라인으로 내보내지 않습니다. 의 출력을로 파이프 하는 경우는 `Out-Printer` `Get-Member` 지정 된 개체가 없다는 `Get-Member` 것을 보고 합니다.
@@ -126,4 +128,3 @@ Accept wildcard characters: False
 [Out-File](Out-File.md)
 
 [Out-String](Out-String.md)
-

@@ -7,12 +7,12 @@ ms.date: 06/24/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionconfigurationfile?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-PSSessionConfigurationFile
-ms.openlocfilehash: f7cad4b85a8501081152768c2e3bfdf7fb3e59fd
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 939dc011307b4c98340bb376032b96289e1c1bc3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217442"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345955"
 ---
 # New-PSSessionConfigurationFile
 
@@ -951,6 +951,8 @@ Accept wildcard characters: True
 이 cmdlet은 어떠한 출력도 생성하지 않습니다.
 
 ## 참고
+
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
 
 - **VisibleCmdlets** 및 **VisibleProviders** 와 같은 매개 변수는 항목을 세션으로 가져오지 않습니다. 대신, 세션으로 가져온 항목 중에서 선택합니다. 예를 들어 **VisibleProviders** 매개 변수 값이 인증서 공급자 이지만 **ModulesToImport** 매개 변수는 인증서 공급자를 포함 하는 **Microsoft. PowerShell. Security** 모듈을 지정 하지 않으면 세션에 인증서 공급자가 표시 되지 않습니다.
 - `New-PSSessionConfigurationFile`**path** 매개 변수에 지정 하는 경로에 .psc 파일 이름 확장명을 가진 세션 구성 파일을 만듭니다. 세션 구성 파일을 사용 하 여 세션 구성을 만드는 경우 `Register-PSSessionConfiguration` cmdlet은 구성 파일을 복사 하 고 파일의 활성 복사본을 디렉터리의 **sessionconfig** 하위 디렉터리에 저장 `$PSHOME` 합니다.

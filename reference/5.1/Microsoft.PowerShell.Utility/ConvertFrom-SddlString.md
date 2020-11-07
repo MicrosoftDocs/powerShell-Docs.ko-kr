@@ -7,17 +7,16 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertfrom-sddlstring?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertFrom-SddlString
-ms.openlocfilehash: 128a86312f424eaf9dcfb6cdc97ebd3e148c7886
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+ms.openlocfilehash: dbb6263c628c08876f64335b420f76d5ecc8f59b
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "93219809"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344374"
 ---
 # ConvertFrom-SddlString
 
 ## 개요
-
 SDDL 문자열을 사용자 지정 개체로 변환 합니다.
 
 ## SYNTAX
@@ -145,6 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.
 
 ## 입력

@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertfrom-sddlstring?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertFrom-SddlString
-ms.openlocfilehash: a63386356542f7753d3f1b840da9629fba13dc80
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+ms.openlocfilehash: 7ec2c3025f62a64cd24298c0749d40fa5eff4904
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "93219817"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346091"
 ---
 # ConvertFrom-SddlString
 
@@ -146,7 +146,8 @@ SDDL 문자열을로 파이프 할 수 있습니다 `ConvertFrom-SddlString` .
 
 ## 참고
 
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
+
 ## 관련 링크
 
 [보안 설명자 정의 언어](/windows/win32/secauthz/security-descriptor-definition-language)
-

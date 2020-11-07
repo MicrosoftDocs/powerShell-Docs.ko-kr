@@ -7,12 +7,12 @@ ms.date: 03/28/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/disable-pssessionconfiguration?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-PSSessionConfiguration
-ms.openlocfilehash: 4e551c42c0ae6e447906c5541fb100ef0ef82681
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 075071f83e8443d186dcc99e13fa102504dc23af
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93215058"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345530"
 ---
 # Disable-PSSessionConfiguration
 
@@ -206,6 +206,8 @@ Accept wildcard characters: False
 이 cmdlet은 개체를 반환하지 않습니다.
 
 ## 참고
+
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
 
 이 cmdlet을 실행 하려면 **관리자 권한으로 실행** 옵션을 사용 하 여 PowerShell을 시작 해야 합니다.
 

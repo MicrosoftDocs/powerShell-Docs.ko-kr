@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/disconnect-pssession?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disconnect-PSSession
-ms.openlocfilehash: efe80ab22af8552860e3dfa8f9e2766b07bcfd5d
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 2588d0d0a8d7ce9cddf65c94dcc79700df9deeb7
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93218666"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345564"
 ---
 # Disconnect-PSSession
 
@@ -29,7 +29,7 @@ Disconnect-PSSession [-Session] <PSSession[]> [-IdleTimeoutSec <Int32>]
  [<CommonParameters>]
 ```
 
-### 속성
+### Name
 
 ```
 Disconnect-PSSession [-IdleTimeoutSec <Int32>] [-OutputBufferingMode <OutputBufferingMode>]
@@ -444,6 +444,8 @@ Accept wildcard characters: False
 
 ## 참고
 
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
+
 - `Disconnect-PSSession`이 cmdlet은 로컬 및 원격 컴퓨터에서 PowerShell 3.0 이상을 실행 하는 경우에만 작동 합니다.
 - 연결 되지 않은 세션에서 cmdlet을 사용 하는 경우이 `Disconnect-PSSession` 명령은 세션에 영향을 주지 않으며 오류를 생성 하지 않습니다.
 - 대화형 보안 토큰이 있는 연결이 끊긴 루프백 세션( **EnableNetworkAccess** 매개 변수로 만든 세션)은 세션을 만든 컴퓨터에서만 다시 연결할 수 있습니다. 이 제한은 악의적인 액세스로부터 컴퓨터를 보호합니다.
@@ -486,4 +488,3 @@ Accept wildcard characters: False
 [about_Remote](About/about_Remote.md)
 
 [about_Remote_Disconnected_Sessions](About/about_Remote_Disconnected_Sessions.md)
-

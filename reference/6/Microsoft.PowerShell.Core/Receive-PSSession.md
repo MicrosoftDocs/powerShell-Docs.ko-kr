@@ -7,12 +7,12 @@ ms.date: 12/11/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/receive-pssession?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Receive-PSSession
-ms.openlocfilehash: 266c12224ee579add22715f47a9047d400fab255
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: d40c6074c792ed8d5e094a3e9c1b3784a1c7670d
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93218418"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345462"
 ---
 # Receive-PSSession
 
@@ -758,6 +758,8 @@ Cmdlet에서 반환 된 개체와 같이 session 개체를이 cmdlet으로 파�
 이 cmdlet은 연결 되지 않은 세션에서 실행 된 명령의 결과를 반환 합니다 (있는 경우). **Outtarget** 매개 변수의 값 또는 기본값이 job 인 경우은 `Receive-PSSession` 작업 개체를 반환 합니다. 그러지 않으면 해당 명령 결과를 나타내는 개체를 반환합니다.
 
 ## 참고
+
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
 
 `Receive-PSSession` 연결을 끊은 세션 에서만 결과를 가져옵니다. PowerShell 3.0 이상 버전을 실행 하는 컴퓨터에서는 연결 또는 종료 된 세션만 연결을 끊고 다시 연결할 수 있습니다.
 

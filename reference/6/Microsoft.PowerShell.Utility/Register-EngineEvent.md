@@ -7,12 +7,12 @@ ms.date: 02/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/register-engineevent?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-EngineEvent
-ms.openlocfilehash: 005e495ff5f532cc947edf894a67c078e524a72c
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 35218a3860db9746b99ec441e122fcd5e2370f72
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93216050"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344765"
 ---
 # Register-EngineEvent
 
@@ -44,7 +44,9 @@ Register-EngineEvent [-SourceIdentifier] <String> [[-Action] <ScriptBlock>] [-Me
 
 ```powershell
 $S = New-PSSession -ComputerName "Server01, Server02"
-Invoke-Command -Session $S { Register-EngineEvent -SourceIdentifier ([System.Management.Automation.PsEngineEvent]::Exiting) -Forward }
+Invoke-Command -Session $S {
+Register-EngineEvent -SourceIdentifier ([System.Management.Automation.PsEngineEvent]::Exiting) -Forward
+}
 ```
 
 `New-PSSession` 각 원격 컴퓨터에 사용자 관리 세션 (PSSession)을 만듭니다. `Invoke-Command` Cmdlet은 `Register-EngineEvent` 원격 세션에서 명령을 실행 합니다.
@@ -207,7 +209,7 @@ Accept wildcard characters: False
 
 이 매개 변수 값은 구독자 개체 및 이 구독과 연결된 모든 이벤트 개체의 **SourceIdentifier** 속성 값에 표시됩니다.
 
-값은 이벤트의 원본에만 적용 됩니다. Cmdlet에서 사용 하기 위해 만든 임의의 값일 수 있습니다 `New-Event` . PowerShell 엔진은 **register-engineevent** values powershell을 지원 합니다 **. 종료** 및 **powershell. OnIdle** .
+값은 이벤트의 원본에만 적용 됩니다. Cmdlet에서 사용 하기 위해 만든 임의의 값일 수 있습니다 `New-Event` . PowerShell 엔진은 **register-engineevent** values powershell을 지원 합니다 **. 종료** 및 **powershell. OnIdle**.
 
 ```yaml
 Type: System.String
@@ -256,6 +258,8 @@ Accept wildcard characters: False
 **Action** 매개 변수를 사용 하는 경우 `Register-EngineEvent` **PSEventJob** 개체를 반환 합니다. 그러지 않으면 출력이 생성되지 않습니다.
 
 ## 참고
+
+Linux 또는 macOS 플랫폼에서 사용할 수 있는 이벤트 원본이 없습니다.
 
 이벤트, 이벤트 구독 및 이벤트 큐는 현재 세션에만 있습니다. 현재 세션을 닫으면 이벤트 큐가 삭제되고 이벤트 구독이 취소됩니다.
 

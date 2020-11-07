@@ -7,12 +7,12 @@ ms.date: 03/28/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/register-pssessionconfiguration?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-PSSessionConfiguration
-ms.openlocfilehash: ce52714d93cfce55ca36f89f16e37092b35c6b24
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 6417881880cb7f317e7a42d6749b8b7f2cb712fb
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217185"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345479"
 ---
 # Register-PSSessionConfiguration
 
@@ -458,7 +458,7 @@ Accept wildcard characters: False
 세션 구성을 사용하여 만들어진 세션의 유형을 지정합니다. 이 매개 변수에 허용되는 값은 다음과 같습니다.
 
 - 비어 있음. 기본적으로 세션에는 모듈이 추가 되지 않습니다. 이 cmdlet의 매개 변수를 사용하여 모듈, 함수, 스크립트 및 기타 기능을 세션에 추가할 수 있습니다.
-- 기본. 세션에 Microsoft. PowerShell을 추가 합니다. 이 모듈에는 `Import-Module` cmdlet을 명시적으로 금지 하지 않는 한 사용자가 다른 모듈을 가져오는 데 사용할 수 있는 cmdlet이 포함 되어 있습니다.
+- 기본값 세션에 Microsoft. PowerShell을 추가 합니다. 이 모듈에는 `Import-Module` cmdlet을 명시적으로 금지 하지 않는 한 사용자가 다른 모듈을 가져오는 데 사용할 수 있는 cmdlet이 포함 되어 있습니다.
 - RestrictedRemoteServer. 에는,,,, `Exit-PSSession` , `Get-Command` `Get-FormatData` `Get-Help` `Measure-Object` `Out-Default` 및 `Select-Object` cmdlet만 포함 됩니다. 스크립트 또는 어셈블리나 세션 구성 파일의 키를 사용하여 모듈, 함수, 스크립트 및 기타 기능을 세션에 추가할 수 있습니다.
 
 기본값은 Default입니다.
@@ -647,6 +647,8 @@ Accept wildcard characters: False
 ### 에서 wsmanconfigcontainerelement가.
 
 ## 참고
+
+이 cmdlet은 Windows 플랫폼 에서만 사용할 수 있습니다.
 
 이 cmdlet을 실행 하려면 **관리자 권한으로 실행** 옵션을 사용 하 여 PowerShell을 시작 해야 합니다.
 
