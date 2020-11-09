@@ -3,12 +3,12 @@ title: 해시 테이블에 대해 알고 싶은 모든 것
 description: 해시 테이블은 PowerShell에서 대단히 중요하기 때문에 확실하게 이해해야 합니다.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: c67f00911b6c9d05fa9b5b5a700bbae795cf9244
-ms.sourcegitcommit: d0461273abb6db099c5e784ef00f57fd551be4a6
+ms.openlocfilehash: 1539cf6444cab718c1108384c640193d66c85daf
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85353824"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354425"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>해시 테이블에 대해 알고 싶은 모든 것
 
@@ -19,11 +19,11 @@ ms.locfileid: "85353824"
 
 ## <a name="hashtable-as-a-collection-of-things"></a>해시 테이블은 다양한 요소의 컬렉션입니다
 
-먼저 기본적으로 **해시 테이블**은 컬렉션으로 정의된다는 사실을 아셔야 합니다. 이 정의를 알아야 나중에 고급 작업에서 사용할 때 해시 테이블의 기본적인 작동 방식을 이해할 수 있습니다. 이를 이해하지 않으면 혼란을 겪게 됩니다.
+먼저 기본적으로 **해시 테이블** 은 컬렉션으로 정의된다는 사실을 아셔야 합니다. 이 정의를 알아야 나중에 고급 작업에서 사용할 때 해시 테이블의 기본적인 작동 방식을 이해할 수 있습니다. 이를 이해하지 않으면 혼란을 겪게 됩니다.
 
 ## <a name="what-is-an-array"></a>배열이란 무엇일까요?
 
-**해시 테이블**이 무엇인지 살펴보기 전에 먼저 [배열][]을 설명해야 합니다. 여기서 말하는 배열은 값 또는 개체의 목록 또는 컬렉션입니다.
+**해시 테이블** 이 무엇인지 살펴보기 전에 먼저 [배열][]을 설명해야 합니다. 여기서 말하는 배열은 값 또는 개체의 목록 또는 컬렉션입니다.
 
 ```powershell
 $array = @(1,2,3,5,7,11)
@@ -722,7 +722,7 @@ Name      Value
 a         b
 ```
 
-PowerShell 6.2에서 **Depth** 매개 변수가 `ConvertFrom-Json`에 추가되었습니다. 기본 **Depth**는 1024입니다.
+PowerShell 6.2에서 **Depth** 매개 변수가 `ConvertFrom-Json`에 추가되었습니다. 기본 **Depth** 는 1024입니다.
 
 ### <a name="reading-directly-from-a-file"></a>파일에서 직접 읽기
 
@@ -966,7 +966,7 @@ function Get-DeepClone
 [성능이 중요하다면 테스트하라]: https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Best-Practices/Performance.md
 [스플래팅]: /powershell/module/microsoft.powershell.core/about/about_splatting
 [pscustomobject]: everything-about-pscustomobject.md
-[JavaScriptSerializer]: /dotnet/api/system.web.script.serialization.javascriptserializer?view=netframework-4.8
+[JavaScriptSerializer]: /dotnet/api/system.web.script.serialization.javascriptserializer?view=netframework-4.8&preserve-view=true
 [PSBoundParameters]: https://tommymaynard.com/the-psboundparameters-automatic-variable-2016/
 [about_Automatic_Variables]: /powershell/module/microsoft.powershell.core/about/about_automatic_variables
 [자동 기본값]: https://www.simple-talk.com/sysadmin/PowerShell/PowerShell-time-saver-automatic-defaults/

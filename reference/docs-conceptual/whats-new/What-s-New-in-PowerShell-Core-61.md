@@ -2,12 +2,12 @@
 title: PowerShell Core 6.1의 새로운 기능
 description: PowerShell Core 6.1에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 09/13/2018
-ms.openlocfilehash: 16159059285f89c2ddd85b506b0920f0aa8748ae
-ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
+ms.openlocfilehash: 4ff70be239197c7a4f64019d2aab42433f82f36c
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90846918"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354663"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>PowerShell Core 6.1의 새로운 기능
 
@@ -19,24 +19,24 @@ PowerShell을 더 빠르고 더 안정적으로 만들어주는 “지루한 작
 
 ## <a name="net-core-21"></a>.NET Core 2.1
 
-[5월에 출시](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/)된 후 PowerShell Core 6.1이 .NET Core 2.1로 이동되어 다음을 포함한 다양한 항목이 PowerShell에서 개선되었습니다.
+[5월에 출시](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-1/)된 후 PowerShell Core 6.1이 .NET Core 2.1로 이동되어 다음을 포함한 다양한 항목이 PowerShell에서 개선되었습니다.
 
 - 성능 향상([아래](#performance-improvements) 참조)
 - Alpine Linux 지원(미리 보기)
 - [.NET 글로벌 도구 지원](/dotnet/core/tools/global-tools) - PowerShell 곧 예정
-- [`Span<T>`](/dotnet/api/system.span-1?view=netcore-2.1)
+- [`Span<T>`](/dotnet/api/system.span-1)
 
 ## <a name="windows-compatibility-pack-for-net-core"></a>.NET Core용 Windows 호환 기능 팩
 
-Windows에서 .NET 팀은 제거된 많은 API를 다시 Windows의 .NET Core로 추가하는 어셈블리 집합인 [.NET Core용 Windows 호환 기능 팩](https://blogs.msdn.microsoft.com/dotnet/2017/11/16/announcing-the-windows-compatibility-pack-for-net-core/)을 제공합니다.
+Windows에서 .NET 팀은 제거된 많은 API를 다시 Windows의 .NET Core로 추가하는 어셈블리 집합인 [.NET Core용 Windows 호환 기능 팩](https://devblogs.microsoft.com/dotnet/announcing-the-windows-compatibility-pack-for-net-core/)을 제공합니다.
 
 Windows 호환 기능 팩을 PowerShell Core 6.1 릴리스에 추가하였으므로 이러한 API를 사용하는 모든 모듈 또는 스크립트는 사용 가능한 항목에 의존할 수 있습니다.
 
-Windows 호환 기능 책을 통해 PowerShell Core는 **Windows 10 2018년 10월 업데이트 및 Windows Server 2019와 제공되는 1900개 이상의 cmdlet**을 사용할 수 있습니다.
+Windows 호환 기능 책을 통해 PowerShell Core는 **Windows 10 2018년 10월 업데이트 및 Windows Server 2019와 제공되는 1900개 이상의 cmdlet** 을 사용할 수 있습니다.
 
 ## <a name="support-for-application-allow-lists"></a>애플리케이션 허용 목록 지원
 
-PowerShell Core 6.1에는 [AppLocker](/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) 및 [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) 애플리케이션 허용 목록을 지원하는 Windows PowerShell 5.1을 사용한 패리티가 있습니다. 애플리케이션 허용 목록은 PowerShell [제한된 언어 모드](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/)와 함께 사용되어 실행할 수 있도록 허용된 이진 파일의 세부적 제어를 허용합니다.
+PowerShell Core 6.1에는 [AppLocker](/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) 및 [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) 애플리케이션 허용 목록을 지원하는 Windows PowerShell 5.1을 사용한 패리티가 있습니다. 애플리케이션 허용 목록은 PowerShell [제한된 언어 모드](https://devblogs.microsoft.com/powershell/powershell-constrained-language-mode/)와 함께 사용되어 실행할 수 있도록 허용된 이진 파일의 세부적 제어를 허용합니다.
 
 ## <a name="performance-improvements"></a>성능 향상
 

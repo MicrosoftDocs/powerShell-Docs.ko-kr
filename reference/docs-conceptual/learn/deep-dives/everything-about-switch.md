@@ -3,12 +3,12 @@ title: Switch 문에 대해 알고 싶은 모든 것
 description: PowerShell의 switch 문은 다른 언어에서 찾을 수 없는 기능을 제공합니다.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 685a5691599408a0d54ca99bf383bcd7702322a6
-ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
+ms.openlocfilehash: c2e77aa5fb36d04fec1bc86f751291205120c729
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86469721"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93355122"
 ---
 # <a name="everything-you-ever-wanted-to-know-about-the-switch-statement"></a>Switch 문에 대해 알고 싶은 모든 것
 
@@ -657,9 +657,14 @@ Show-Animation
 
 `switch`는 관련 값을 처리할 때 열거자를 만들고 `$switch`라고 부릅니다. 이것은 PowerShell에서 자동으로 생성되는 변수이며 사용자가 직접 조작할 수 있습니다.
 
-이 방법은 [/u/frmadsen](https://www.reddit.com/user/frmadsen) 님이 알려주었습니다.
+```powershell
+$a = 1, 2, 3, 4
 
-<div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-parent="false" data-embed-live="false" data-embed-uuid="8f6edbf1-abc6-4513-971e-ccd1d202889d" data-embed-created="2018-12-25T22:05:33.986Z"><a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/">(IT 학생인) 제가 PowerShell을 마스터하려면 무엇을 배워야 할까요?</a>라는 토론의 <a href="https://www.reddit.com/r/PowerShell/comments/a90rx2/what_should_i_it_student_learn_to_master/ecj2kji/">댓글</a>에서 알려준 사실입니다.</div><script async src="https://www.redditstatic.com/comment-embed.js"></script>
+switch($a) {
+    1 { [void]$switch.MoveNext(); $switch.Current }
+    3 { [void]$switch.MoveNext(); $switch.Current }
+}
+```
 
 다음과 같은 결과가 도출됩니다.
 
