@@ -7,242 +7,227 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/wait-job?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Wait-Job
-ms.openlocfilehash: acf01415c9722b6da95e70a8db1b558c3e14662b
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 0e2888ca7d0b601b1d67fb0a8dd756b653ad8dbc
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212713"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388385"
 ---
-# <span data-ttu-id="2c929-103">Wait-Job</span><span class="sxs-lookup"><span data-stu-id="2c929-103">Wait-Job</span></span>
+# <span data-ttu-id="d8c6f-103">Wait-Job</span><span class="sxs-lookup"><span data-stu-id="d8c6f-103">Wait-Job</span></span>
 
-## <span data-ttu-id="2c929-104">개요</span><span class="sxs-lookup"><span data-stu-id="2c929-104">SYNOPSIS</span></span>
-<span data-ttu-id="2c929-105">세션에서 실행 중인 Windows PowerShell 백그라운드 작업 중 하나 또는 모두가 완료 될 때까지 명령 프롬프트를 표시 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-105">Suppresses the command prompt until one or all of the Windows PowerShell background jobs running in the session are completed.</span></span>
+## <span data-ttu-id="d8c6f-104">개요</span><span class="sxs-lookup"><span data-stu-id="d8c6f-104">SYNOPSIS</span></span>
+<span data-ttu-id="d8c6f-105">세션에서 실행 중인 PowerShell 백그라운드 작업 중 하나 또는 모두가 완료 될 때까지 명령 프롬프트를 표시 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-105">Suppresses the command prompt until one or all of the PowerShell background jobs running in the session are completed.</span></span>
 
-## <span data-ttu-id="2c929-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="2c929-106">SYNTAX</span></span>
+## <span data-ttu-id="d8c6f-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="d8c6f-106">SYNTAX</span></span>
 
-### <span data-ttu-id="2c929-107">SessionIdParameterSet (기본값)</span><span class="sxs-lookup"><span data-stu-id="2c929-107">SessionIdParameterSet (Default)</span></span>
+### <span data-ttu-id="d8c6f-107">SessionIdParameterSet (기본값)</span><span class="sxs-lookup"><span data-stu-id="d8c6f-107">SessionIdParameterSet (Default)</span></span>
 
 ```
 Wait-Job [-Any] [-Timeout <Int32>] [-Force] [-Id] <Int32[]> [<CommonParameters>]
 ```
 
-### <span data-ttu-id="2c929-108">JobParameterSet</span><span class="sxs-lookup"><span data-stu-id="2c929-108">JobParameterSet</span></span>
+### <span data-ttu-id="d8c6f-108">JobParameterSet</span><span class="sxs-lookup"><span data-stu-id="d8c6f-108">JobParameterSet</span></span>
 
 ```
 Wait-Job [-Job] <Job[]> [-Any] [-Timeout <Int32>] [-Force] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="2c929-109">NameParameterSet</span><span class="sxs-lookup"><span data-stu-id="2c929-109">NameParameterSet</span></span>
+### <span data-ttu-id="d8c6f-109">NameParameterSet</span><span class="sxs-lookup"><span data-stu-id="d8c6f-109">NameParameterSet</span></span>
 
 ```
 Wait-Job [-Any] [-Timeout <Int32>] [-Force] [-Name] <String[]> [<CommonParameters>]
 ```
 
-### <span data-ttu-id="2c929-110">InstanceIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="2c929-110">InstanceIdParameterSet</span></span>
+### <span data-ttu-id="d8c6f-110">InstanceIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="d8c6f-110">InstanceIdParameterSet</span></span>
 
 ```
 Wait-Job [-Any] [-Timeout <Int32>] [-Force] [-InstanceId] <Guid[]> [<CommonParameters>]
 ```
 
-### <span data-ttu-id="2c929-111">StateParameterSet</span><span class="sxs-lookup"><span data-stu-id="2c929-111">StateParameterSet</span></span>
+### <span data-ttu-id="d8c6f-111">StateParameterSet</span><span class="sxs-lookup"><span data-stu-id="d8c6f-111">StateParameterSet</span></span>
 
 ```
 Wait-Job [-Any] [-Timeout <Int32>] [-Force] [-State] <JobState> [<CommonParameters>]
 ```
 
-### <span data-ttu-id="2c929-112">FilterParameterSet</span><span class="sxs-lookup"><span data-stu-id="2c929-112">FilterParameterSet</span></span>
+### <span data-ttu-id="d8c6f-112">FilterParameterSet</span><span class="sxs-lookup"><span data-stu-id="d8c6f-112">FilterParameterSet</span></span>
 
 ```
 Wait-Job [-Any] [-Timeout <Int32>] [-Force] [-Filter] <Hashtable> [<CommonParameters>]
 ```
 
-## <span data-ttu-id="2c929-113">설명</span><span class="sxs-lookup"><span data-stu-id="2c929-113">DESCRIPTION</span></span>
-<span data-ttu-id="2c929-114">**대기 작업** cmdlet은 명령 프롬프트를 표시 하기 전에 Windows PowerShell 백그라운드 작업이 완료 될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-114">The **Wait-Job** cmdlet waits for Windows PowerShell background jobs to finish before it displays the command prompt.</span></span>
-<span data-ttu-id="2c929-115">백그라운드 작업 중 하나가 완료되거나 모든 백그라운드 작업이 완료될 때까지 기다릴 수 있으며 작업의 최대 대기 시간을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-115">You can wait until any background job is complete, or until all background jobs are complete, and you can set a maximum wait time for the job.</span></span>
+## <span data-ttu-id="d8c6f-113">설명</span><span class="sxs-lookup"><span data-stu-id="d8c6f-113">DESCRIPTION</span></span>
 
-<span data-ttu-id="2c929-116">작업의 명령이 완료되면 **Wait-Job** 은 명령 프롬프트를 표시하고 다른 명령으로 파이프할 수 있도록 작업 개체를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-116">When the commands in the job are complete, **Wait-Job** displays the command prompt and returns a job object so that you can pipe it to another command.</span></span>
+<span data-ttu-id="d8c6f-114">`Wait-Job`Cmdlet은 명령 프롬프트를 표시 하기 전에 Windows PowerShell 백그라운드 작업이 완료 될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-114">The `Wait-Job` cmdlet waits for Windows PowerShell background jobs to finish before it displays the command prompt.</span></span> <span data-ttu-id="d8c6f-115">백그라운드 작업 중 하나가 완료되거나 모든 백그라운드 작업이 완료될 때까지 기다릴 수 있으며 작업의 최대 대기 시간을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-115">You can wait until any background job is complete, or until all background jobs are complete, and you can set a maximum wait time for the job.</span></span>
 
-<span data-ttu-id="2c929-117">**Wait-Job** cmdlet을 사용 하 여 Start-Job cmdlet 또는 Invoke-Command Cmdlet의 *AsJob* 매개 변수를 사용 하 여 시작한 것과 같은 백그라운드 작업을 기다릴 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-117">You can use **Wait-Job** cmdlet to wait for background jobs, such as those that were started by using the Start-Job cmdlet or the *AsJob* parameter of the Invoke-Command cmdlet.</span></span>
-<span data-ttu-id="2c929-118">Windows PowerShell 백그라운드 작업에 대한 자세한 내용은 about_Jobs를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2c929-118">For more information about Windows PowerShell background jobs, see about_Jobs.</span></span>
+<span data-ttu-id="d8c6f-116">작업의 명령이 완료 되 면에서 `Wait-Job` 명령 프롬프트를 표시 하 고 작업 개체를 반환 하 여 다른 명령으로 파이프 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-116">When the commands in the job are complete, `Wait-Job` displays the command prompt and returns a job object so that you can pipe it to another command.</span></span>
 
-<span data-ttu-id="2c929-119">Windows PowerShell 3.0부터 **대기 작업** cmdlet은 워크플로 작업, 예약 된 작업 인스턴스 등의 사용자 지정 작업 유형도 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-119">Starting in Windows PowerShell 3.0, the **Wait-Job** cmdlet also waits for custom job types, such as workflow jobs and instances of scheduled jobs.</span></span>
-<span data-ttu-id="2c929-120">**대기 작업이** 특정 형식의 작업을 대기 하도록 설정 하려면 Import-Module cmdlet을 사용 하거나 모듈에서 cmdlet을 사용 하 여 Get-Job cmdlet을 실행 하기 전에 사용자 지정 작업 유형을 지 원하는 모듈을 세션으로 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-120">To enable **Wait-Job** to wait for jobs of a particular type, import the module that supports the custom job type into the session before you run the Get-Job cmdlet, either by using the Import-Module cmdlet or by using or getting a cmdlet in the module.</span></span>
-<span data-ttu-id="2c929-121">특정한 사용자 지정 작업 유형에 대한 자세한 내용은 사용자 지정 작업 유형 기능에 대한 설명서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2c929-121">For information about a particular custom job type, see the documentation of the custom job type feature.</span></span>
+<span data-ttu-id="d8c6f-117">Cmdlet을 사용 하 여 cmdlet `Wait-Job` `Start-Job` 또는 Cmdlet의 **AsJob** 매개 변수를 사용 하 여 시작한 것과 같은 백그라운드 작업을 기다릴 수 있습니다 `Invoke-Command` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-117">You can use `Wait-Job` cmdlet to wait for background jobs, such as those that were started by using the `Start-Job` cmdlet or the **AsJob** parameter of the `Invoke-Command` cmdlet.</span></span> <span data-ttu-id="d8c6f-118">Windows PowerShell 백그라운드 작업에 대한 자세한 내용은 [about_Jobs](./about/about_Jobs.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-118">For more information about Windows PowerShell background jobs, see [about_Jobs](./about/about_Jobs.md).</span></span>
 
-## <span data-ttu-id="2c929-122">예제</span><span class="sxs-lookup"><span data-stu-id="2c929-122">EXAMPLES</span></span>
+<span data-ttu-id="d8c6f-119">Windows PowerShell 3.0부터 `Wait-Job` cmdlet은 워크플로 작업, 예약 된 작업 인스턴스 등의 사용자 지정 작업 유형도 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-119">Starting in Windows PowerShell 3.0, the `Wait-Job` cmdlet also waits for custom job types, such as workflow jobs and instances of scheduled jobs.</span></span> <span data-ttu-id="d8c6f-120">를 사용 하 여 `Wait-Job` 특정 형식의 작업을 대기 하려면 cmdlet `Get-Job` 을 사용 `Import-Module` 하거나 모듈에서 cmdlet을 사용 하 여 cmdlet을 실행 하기 전에 사용자 지정 작업 유형을 지 원하는 모듈을 세션으로 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-120">To enable `Wait-Job` to wait for jobs of a particular type, import the module that supports the custom job type into the session before you run the `Get-Job` cmdlet, either by using the `Import-Module` cmdlet or by using or getting a cmdlet in the module.</span></span> <span data-ttu-id="d8c6f-121">특정한 사용자 지정 작업 유형에 대한 자세한 내용은 사용자 지정 작업 유형 기능에 대한 설명서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-121">For information about a particular custom job type, see the documentation of the custom job type feature.</span></span>
 
-### <span data-ttu-id="2c929-123">예 1: 모든 작업 대기</span><span class="sxs-lookup"><span data-stu-id="2c929-123">Example 1: Wait for all jobs</span></span>
+## <span data-ttu-id="d8c6f-122">예제</span><span class="sxs-lookup"><span data-stu-id="d8c6f-122">EXAMPLES</span></span>
 
-```
-PS C:\> Get-Job | Wait-Job
+### <span data-ttu-id="d8c6f-123">예 1: 모든 작업 대기</span><span class="sxs-lookup"><span data-stu-id="d8c6f-123">Example 1: Wait for all jobs</span></span>
+
+```powershell
+Get-Job | Wait-Job
 ```
 
-<span data-ttu-id="2c929-124">이 명령은 세션에서 실행 중인 모든 백그라운드 작업이 완료 될 때까지 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-124">This command waits for all of the background jobs running in the session to finish.</span></span>
+<span data-ttu-id="d8c6f-124">이 명령은 세션에서 실행 중인 모든 백그라운드 작업이 완료 될 때까지 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-124">This command waits for all of the background jobs running in the session to finish.</span></span>
 
-### <span data-ttu-id="2c929-125">예 2: Start-Job을 사용 하 여 원격 컴퓨터에서 시작 된 작업 대기</span><span class="sxs-lookup"><span data-stu-id="2c929-125">Example 2: Wait for jobs started on remote computers by using Start-Job</span></span>
+### <span data-ttu-id="d8c6f-125">예 2: Start-Job을 사용 하 여 원격 컴퓨터에서 시작 된 작업 대기</span><span class="sxs-lookup"><span data-stu-id="d8c6f-125">Example 2: Wait for jobs started on remote computers by using Start-Job</span></span>
 
+```powershell
+$s = New-PSSession Server01, Server02, Server03
+Invoke-Command -Session $s -ScriptBlock {Start-Job -Name Date1 -ScriptBlock {Get-Date}}
+$done = Invoke-Command -Session $s -Command {Wait-Job -Name Date1}
+$done.Count
 ```
-PS C:\> $s = New-PSSession Server01, Server02, Server03
-PS C:\> Invoke-Command -Session $s -ScriptBlock {Start-Job -Name Date1 -ScriptBlock {Get-Date}}
-PS C:\> $done = Invoke-Command -Session $s -Command {Wait-Job -Name Date1}
-PS C:\> $done.Count
+
+```Output
 3
 ```
 
-<span data-ttu-id="2c929-126">이 예제에서는 **시작-** 작업 cmdlet을 사용 하 여 원격 컴퓨터에서 시작 된 작업과 함께 **대기 작업** cmdlet을 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-126">This example shows how to use the **Wait-Job** cmdlet with jobs started on remote computers by using the **Start-Job** cmdlet.</span></span>
-<span data-ttu-id="2c929-127">**시작-작업** 및 **대기 작업** 명령은 모두 **호출 명령** cmdlet을 사용 하 여 원격 컴퓨터에 전송 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-127">Both **Start-Job** and **Wait-Job** commands are submitted to the remote computer by using the **Invoke-Command** cmdlet.</span></span>
+<span data-ttu-id="d8c6f-126">이 예에서는 cmdlet을 사용 하 `Wait-Job` 여 원격 컴퓨터에서 시작 된 작업과 cmdlet을 사용 하는 방법을 보여 줍니다 `Start-Job` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-126">This example shows how to use the `Wait-Job` cmdlet with jobs started on remote computers by using the `Start-Job` cmdlet.</span></span> <span data-ttu-id="d8c6f-127">`Start-Job`및 `Wait-Job` 명령은 모두 cmdlet을 사용 하 여 원격 컴퓨터에 전송 됩니다 `Invoke-Command` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-127">Both `Start-Job` and `Wait-Job` commands are submitted to the remote computer by using the `Invoke-Command` cmdlet.</span></span>
 
-<span data-ttu-id="2c929-128">이 예에서는 **대기 작업** 을 사용 하 여 서로 다른 세 컴퓨터에서 백그라운드 작업으로 실행 되는 Get-Date 명령이 완료 되었는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-128">This example uses **Wait-Job** to determine whether a Get-Date command running as a background job on three different computers is finished.</span></span>
+<span data-ttu-id="d8c6f-128">이 예에서는 `Wait-Job` 를 사용 하 여 `Get-Date` 3 개의 다른 컴퓨터에서 백그라운드 작업으로 실행 되는 명령을 완료 했는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-128">This example uses `Wait-Job` to determine whether a `Get-Date` command running as a background job on three different computers is finished.</span></span>
 
-<span data-ttu-id="2c929-129">첫 번째 명령은 각 원격 컴퓨터에 Windows PowerShell 세션 ( **PSSession** )을 만든 다음 $s 변수에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-129">The first command creates a Windows PowerShell session ( **PSSession** ) on each of the three remote computers and stores them in the $s variable.</span></span>
+<span data-ttu-id="d8c6f-129">첫 번째 명령은 각 원격 컴퓨터에 Windows PowerShell 세션 ( **PSSession** )을 만든 다음 변수에 저장 합니다 `$s` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-129">The first command creates a Windows PowerShell session ( **PSSession** ) on each of the three remote computers and stores them in the `$s` variable.</span></span>
 
-<span data-ttu-id="2c929-130">두 번째 명령은 **Invoke 명령을** 사용 하 여 $s에 있는 세 개의 세션에서 각각 **시작 작업** 을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-130">The second command uses **Invoke-Command** to run **Start-Job** in each of the three sessions in $s.</span></span>
-<span data-ttu-id="2c929-131">모든 작업은 날짜 1로 지정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-131">All of the jobs are named Date1.</span></span>
+<span data-ttu-id="d8c6f-130">두 번째 명령은 `Invoke-Command` 를 사용 하 여 `Start-Job` 에 있는 세 개의 세션에서를 실행 `$s` 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-130">The second command uses `Invoke-Command` to run `Start-Job` in each of the three sessions in `$s`.</span></span>
+<span data-ttu-id="d8c6f-131">모든 작업은 날짜 1로 지정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-131">All of the jobs are named Date1.</span></span>
 
-<span data-ttu-id="2c929-132">세 번째 명령은 **Invoke 명령을** 사용 하 여 **Wait 작업** 을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-132">The third command uses **Invoke-Command** to run **Wait-Job** .</span></span>
-<span data-ttu-id="2c929-133">이 명령은 각 컴퓨터에서 Date1 작업이 완료 될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-133">This command waits for the Date1 jobs on each computer to finish.</span></span>
-<span data-ttu-id="2c929-134">작업 개체로 이루어진 결과 컬렉션(배열)을 $done 변수에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-134">It stores the resulting collection (array) of job objects in the $done variable.</span></span>
+<span data-ttu-id="d8c6f-132">세 번째 명령은 `Invoke-Command` 를 사용 하 여를 실행 `Wait-Job` 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-132">The third command uses `Invoke-Command` to run `Wait-Job`.</span></span> <span data-ttu-id="d8c6f-133">이 명령은 각 컴퓨터에서 Date1 작업이 완료 될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-133">This command waits for the Date1 jobs on each computer to finish.</span></span> <span data-ttu-id="d8c6f-134">작업 개체의 결과 컬렉션 (배열)을 `$done` 변수에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-134">It stores the resulting collection (array) of job objects in the `$done` variable.</span></span>
 
-<span data-ttu-id="2c929-135">네 번째 명령은 $done 변수에 있는 작업 개체 배열의 **Count** 속성을 사용 하 여 완료 된 작업의 수를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-135">The fourth command uses the **Count** property of the array of job objects in the $done variable to determine how many of the jobs are finished.</span></span>
+<span data-ttu-id="d8c6f-135">네 번째 명령은 변수에 작업 개체 배열의 **Count** 속성을 사용 하 여 `$done` 완료 된 작업의 수를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-135">The fourth command uses the **Count** property of the array of job objects in the `$done` variable to determine how many of the jobs are finished.</span></span>
 
-### <span data-ttu-id="2c929-136">예 3: 첫 번째 백그라운드 작업이 완료 되는 시점 결정</span><span class="sxs-lookup"><span data-stu-id="2c929-136">Example 3: Determine when the first background job finishes</span></span>
+### <span data-ttu-id="d8c6f-136">예 3: 첫 번째 백그라운드 작업이 완료 되는 시점 결정</span><span class="sxs-lookup"><span data-stu-id="d8c6f-136">Example 3: Determine when the first background job finishes</span></span>
 
-```
-PS C:\> $s = New-PSSession (Get-Content Machines.txt)
-PS C:\> $c = 'Get-EventLog -LogName System | where {$_.EntryType -eq "error" --and $_.Source -eq "LSASRV"} | Out-File Errors.txt'
-PS C:\> Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {$Using:c}
-PS C:\> Invoke-Command -Session $s -ScriptBlock {Wait-Job -Any}
+```powershell
+$s = New-PSSession (Get-Content Machines.txt)
+$c = 'Get-EventLog -LogName System | where {$_.EntryType -eq "error" --and $_.Source -eq "LSASRV"} | Out-File Errors.txt'
+Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {$Using:c}
+Invoke-Command -Session $s -ScriptBlock {Wait-Job -Any}
 ```
 
-<span data-ttu-id="2c929-137">이 예에서는 **대기 작업** 의 *Any* 매개 변수를 사용 하 여 현재 세션에서 실행 되는 여러 백그라운드 작업의 첫 번째 작업이 완료 된 시기를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-137">This example uses the *Any* parameter of **Wait-Job** to determine when the first of many background jobs running in the current session are completed.</span></span>
-<span data-ttu-id="2c929-138">또한 **대기 작업** cmdlet을 사용 하 여 원격 작업이 완료 될 때까지 대기 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-138">It also shows how to use the **Wait-Job** cmdlet to wait for remote jobs to finish.</span></span>
+<span data-ttu-id="d8c6f-137">이 예제에서는의 **Any** 매개 변수를 사용 하 여 `Wait-Job` 현재 세션에서 실행 중인 많은 백그라운드 작업 중 첫 번째 작업이 완료 된 시기를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-137">This example uses the **Any** parameter of `Wait-Job` to determine when the first of many background jobs running in the current session are completed.</span></span> <span data-ttu-id="d8c6f-138">또한 cmdlet을 사용 하 여 `Wait-Job` 원격 작업이 완료 될 때까지 대기 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-138">It also shows how to use the `Wait-Job` cmdlet to wait for remote jobs to finish.</span></span>
 
-<span data-ttu-id="2c929-139">첫 번째 명령은 Machines.txt 파일에 나열 된 각 컴퓨터에 **pssession** 을 만든 다음 $S 변수에 **pssession** 개체를 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-139">The first command creates a **PSSession** on each of the computers listed in the Machines.txt file and stores the **PSSession** objects in the $s variable.</span></span>
-<span data-ttu-id="2c929-140">이 명령은 Get-Content cmdlet을 사용 하 여 파일의 내용을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-140">The command uses the Get-Content cmdlet to get the contents of the file.</span></span>
-<span data-ttu-id="2c929-141">**Get Content** 명령은 New-PSSession 명령 전에 실행 되도록 괄호로 묶습니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-141">The **Get-Content** command is enclosed in parentheses to make sure that it runs before the New-PSSession command.</span></span>
+<span data-ttu-id="d8c6f-139">첫 번째 명령은 Machines.txt 파일에 나열 된 각 컴퓨터에 **pssession** 을 만들고 **pssession** 개체를 변수에 저장 합니다 `$s` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-139">The first command creates a **PSSession** on each of the computers listed in the Machines.txt file and stores the **PSSession** objects in the `$s` variable.</span></span> <span data-ttu-id="d8c6f-140">이 명령은 cmdlet을 사용 하 여 `Get-Content` 파일의 내용을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-140">The command uses the `Get-Content` cmdlet to get the contents of the file.</span></span> <span data-ttu-id="d8c6f-141">명령은 `Get-Content` 명령 전에 실행 되도록 괄호로 묶습니다 `New-PSSession` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-141">The `Get-Content` command is enclosed in parentheses to make sure that it runs before the `New-PSSession` command.</span></span>
 
-<span data-ttu-id="2c929-142">두 번째 명령은 **Get EventLog** 명령 문자열을 따옴표로 묶어 $c 변수에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-142">The second command stores a **Get-EventLog** command string, in quotation marks, in the $c variable.</span></span>
+<span data-ttu-id="d8c6f-142">두 번째 명령은 `Get-EventLog` 변수에 명령 문자열 (따옴표)을 저장 합니다 `$c` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-142">The second command stores a `Get-EventLog` command string, in quotation marks, in the `$c` variable.</span></span>
 
-<span data-ttu-id="2c929-143">세 번째 명령은 Invoke-Command cmdlet을 사용 하 여 $s의 각 세션에서 **시작 작업** 을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-143">The third command uses Invoke-Command cmdlet to run **Start-Job** in each of the sessions in $s.</span></span>
-<span data-ttu-id="2c929-144">**시작-작업** 명령은 $C 변수의 **Get EventLog** 명령을 실행 하는 백그라운드 작업을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-144">The **Start-Job** command starts a background job that runs the **Get-EventLog** command in the $c variable.</span></span>
+<span data-ttu-id="d8c6f-143">세 번째 명령은 cmdlet을 사용 하 여의 `Invoke-Command` `Start-Job` 각 세션에서를 실행 `$s` 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-143">The third command uses `Invoke-Command` cmdlet to run `Start-Job` in each of the sessions in `$s`.</span></span>
+<span data-ttu-id="d8c6f-144">`Start-Job`명령은 `Get-EventLog` 변수에서 명령을 실행 하는 백그라운드 작업을 시작 합니다 `$c` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-144">The `Start-Job` command starts a background job that runs the `Get-EventLog` command in the `$c` variable.</span></span>
 
-<span data-ttu-id="2c929-145">**Using** 범위 한정자를 사용하여 $c 변수가 로컬 컴퓨터에서 정의되었음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-145">The command uses the **Using** scope modifier to indicate that the $c variable was defined on the local computer.</span></span>
-<span data-ttu-id="2c929-146">**Using** 범위 한정자는 Windows PowerShell 3.0에서 도입되었습니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-146">The **Using** scope modifier is introduced in Windows PowerShell 3.0.</span></span>
-<span data-ttu-id="2c929-147">**Using** 범위 한정자에 대 한 자세한 내용은 about_Remote_Variables ()를 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=252653) .</span><span class="sxs-lookup"><span data-stu-id="2c929-147">For more information about the **Using** scope modifier, see about_Remote_Variables (https://go.microsoft.com/fwlink/?LinkID=252653).</span></span>
+<span data-ttu-id="d8c6f-145">이 명령은 **Using** 범위 한정자를 사용 하 여 `$c` 변수가 로컬 컴퓨터에 정의 되어 있음을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-145">The command uses the **Using** scope modifier to indicate that the `$c` variable was defined on the local computer.</span></span> <span data-ttu-id="d8c6f-146">**Using** 범위 한정자는 Windows PowerShell 3.0에서 도입되었습니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-146">The **Using** scope modifier is introduced in Windows PowerShell 3.0.</span></span> <span data-ttu-id="d8c6f-147">**Using** 범위 한정자에 대 한 자세한 내용은 [about_Remote_Variables](./about/about_Remote_Variables.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-147">For more information about the **Using** scope modifier, see [about_Remote_Variables](./about/about_Remote_Variables.md).</span></span>
 
-<span data-ttu-id="2c929-148">네 번째 명령은 **Invoke 명령을** 사용 하 여 세션에서 **대기 작업** 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-148">The fourth command uses **Invoke-Command** to run a **Wait-Job** command in the sessions.</span></span>
-<span data-ttu-id="2c929-149">*모든* 매개 변수를 사용 하 여 원격 컴퓨터의 첫 번째 작업이 완료 될 때까지 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-149">It uses the *Any* parameter to wait until the first job on the remote computers is completed.</span></span>
+<span data-ttu-id="d8c6f-148">네 번째 명령은 `Invoke-Command` 를 사용 하 여 `Wait-Job` 세션에서 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-148">The fourth command uses `Invoke-Command` to run a `Wait-Job` command in the sessions.</span></span> <span data-ttu-id="d8c6f-149">**모든** 매개 변수를 사용 하 여 원격 컴퓨터의 첫 번째 작업이 완료 될 때까지 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-149">It uses the **Any** parameter to wait until the first job on the remote computers is completed.</span></span>
 
-### <span data-ttu-id="2c929-150">예제 4: 원격 컴퓨터에서 작업에 대 한 대기 시간 설정</span><span class="sxs-lookup"><span data-stu-id="2c929-150">Example 4: Set a wait time for jobs on remote computers</span></span>
+### <span data-ttu-id="d8c6f-150">예제 4: 원격 컴퓨터에서 작업에 대 한 대기 시간 설정</span><span class="sxs-lookup"><span data-stu-id="d8c6f-150">Example 4: Set a wait time for jobs on remote computers</span></span>
 
-```
-PS C:\> $s = New-PSSession Server01, Server02, Server03
-PS C:\> $jobs = Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {Get-Date}}
-PS C:\> $done = Invoke-Command -Session $s -ScriptBlock {Wait-Job -Timeout 30}
+```powershell
+$s = New-PSSession Server01, Server02, Server03
+$jobs = Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {Get-Date}}
+$done = Invoke-Command -Session $s -ScriptBlock {Wait-Job -Timeout 30}
 ```
 
-<span data-ttu-id="2c929-151">이 예제에서는 **Wait 작업** 의 *Timeout* 매개 변수를 사용 하 여 원격 컴퓨터에서 실행 되는 작업의 최대 대기 시간을 설정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-151">This example shows how to use the *Timeout* parameter of **Wait-Job** to set a maximum wait time for the jobs running on remote computers.</span></span>
+<span data-ttu-id="d8c6f-151">이 예제에서는의 **Timeout** 매개 변수를 사용 하 여 `Wait-Job` 원격 컴퓨터에서 실행 되는 작업의 최대 대기 시간을 설정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-151">This example shows how to use the **Timeout** parameter of `Wait-Job` to set a maximum wait time for the jobs running on remote computers.</span></span>
 
-<span data-ttu-id="2c929-152">첫 번째 명령은 원격 컴퓨터 3 개 (Server01, Server02 및 Server03) 각각에 **pssession** 을 만든 다음 $S 변수에 **pssession** 개체를 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-152">The first command creates a **PSSession** on each of three remote computers (Server01, Server02, and Server03), and then stores the **PSSession** objects in the $s variable.</span></span>
+<span data-ttu-id="d8c6f-152">첫 번째 명령은 원격 컴퓨터 3 개 (Server01, Server02 및 Server03) 각각에 **pssession** 을 만든 다음, **pssession** 개체를 변수에 저장 합니다 `$s` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-152">The first command creates a **PSSession** on each of three remote computers (Server01, Server02, and Server03), and then stores the **PSSession** objects in the `$s` variable.</span></span>
 
-<span data-ttu-id="2c929-153">두 번째 명령은 **Invoke 명령을** 사용 하 여 $s의 각 **PSSession** 개체에서 **시작 작업** 을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-153">The second command uses **Invoke-Command** to run **Start-Job** in each of the **PSSession** objects in $s.</span></span>
-<span data-ttu-id="2c929-154">결과 작업 개체를 $jobs 변수에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-154">It stores the resulting job objects in the $jobs variable.</span></span>
+<span data-ttu-id="d8c6f-153">두 번째 명령은를 사용 하 여의 `Invoke-Command` `Start-Job` 각 **PSSession** 개체에서를 실행 합니다 `$s` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-153">The second command uses `Invoke-Command` to run `Start-Job` in each of the **PSSession** objects in `$s`.</span></span> <span data-ttu-id="d8c6f-154">결과 작업 개체를 `$jobs` 변수에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-154">It stores the resulting job objects in the `$jobs` variable.</span></span>
 
-<span data-ttu-id="2c929-155">세 번째 명령은 $s의 각 세션에서 **호출 명령을** 사용 하 여 **대기 작업** 을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-155">The third command uses **Invoke-Command** to run **Wait-Job** in each of the sessions in $s.</span></span>
-<span data-ttu-id="2c929-156">**대기 작업** 명령은 모든 명령이 30 초 이내에 완료 되었는지 여부를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-156">The **Wait-Job** command determines whether all of the commands have completed within 30 seconds.</span></span>
-<span data-ttu-id="2c929-157">*시간 제한* 매개 변수를 30 값으로 사용 하 여 최대 대기 시간을 설정 하 고 명령 결과를 $done 변수에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-157">It uses the *Timeout* parameter with a value of 30 to establish the maximum wait time, and then stores the results of the command in the $done variable.</span></span>
+<span data-ttu-id="d8c6f-155">세 번째 명령은를 사용 하 여의 `Invoke-Command` `Wait-Job` 각 세션에서를 실행 합니다 `$s` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-155">The third command uses `Invoke-Command` to run `Wait-Job` in each of the sessions in `$s`.</span></span> <span data-ttu-id="d8c6f-156">`Wait-Job`명령은 모든 명령이 30 초 이내에 완료 되었는지 여부를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-156">The `Wait-Job` command determines whether all of the commands have completed within 30 seconds.</span></span> <span data-ttu-id="d8c6f-157">**시간 제한** 매개 변수를 30 값으로 사용 하 여 최대 대기 시간을 설정 하 고 명령의 결과를 `$done` 변수에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-157">It uses the **Timeout** parameter with a value of 30 to establish the maximum wait time, and then stores the results of the command in the `$done` variable.</span></span>
 
-<span data-ttu-id="2c929-158">이 경우 30초 후에 Server02 컴퓨터의 명령만 완료됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-158">In this case, after 30 seconds, only the command on the Server02 computer has completed.</span></span>
-<span data-ttu-id="2c929-159">**대기 작업이** 대기를 종료 하 고 명령 프롬프트를 표시 한 다음 완료 된 작업을 나타내는 개체를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-159">**Wait-Job** ends the wait, displays the command prompt, and returns the object that represents the job that was completed.</span></span>
+<span data-ttu-id="d8c6f-158">이 경우 30초 후에 Server02 컴퓨터의 명령만 완료됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-158">In this case, after 30 seconds, only the command on the Server02 computer has completed.</span></span> <span data-ttu-id="d8c6f-159">`Wait-Job` 대기를 종료 하 고 명령 프롬프트를 표시 한 다음 완료 된 작업을 나타내는 개체를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-159">`Wait-Job` ends the wait, displays the command prompt, and returns the object that represents the job that was completed.</span></span>
 
-<span data-ttu-id="2c929-160">$done 변수에는 Server02에서 실행된 작업을 나타내는 작업 개체가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-160">The $done variable contains a job object that represents the job that ran on Server02.</span></span>
+<span data-ttu-id="d8c6f-160">`$done`변수에는 Server02에서 실행 된 작업을 나타내는 작업 개체가 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-160">The `$done` variable contains a job object that represents the job that ran on Server02.</span></span>
 
-### <span data-ttu-id="2c929-161">예 5: 여러 작업 중 하나가 완료 될 때까지 대기</span><span class="sxs-lookup"><span data-stu-id="2c929-161">Example 5: Wait until one of several jobs finishes</span></span>
+### <span data-ttu-id="d8c6f-161">예 5: 여러 작업 중 하나가 완료 될 때까지 대기</span><span class="sxs-lookup"><span data-stu-id="d8c6f-161">Example 5: Wait until one of several jobs finishes</span></span>
 
-```
-PS C:\> Wait-Job -id 1,2,5 -Any
+```powershell
+Wait-Job -id 1,2,5 -Any
 ```
 
-<span data-ttu-id="2c929-162">이 명령은 Id로 세 가지 작업을 식별 하 고 그 중 하나가 완료 될 때까지 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-162">This command identifies three jobs by their IDs and waits until any one of them are completed.</span></span>
-<span data-ttu-id="2c929-163">첫 번째 작업이 완료 되 면 명령 프롬프트가 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-163">The command prompt returns when the first job finishes.</span></span>
+<span data-ttu-id="d8c6f-162">이 명령은 Id로 세 가지 작업을 식별 하 고 그 중 하나가 완료 될 때까지 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-162">This command identifies three jobs by their IDs and waits until any one of them are completed.</span></span>
+<span data-ttu-id="d8c6f-163">첫 번째 작업이 완료 되 면 명령 프롬프트가 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-163">The command prompt returns when the first job finishes.</span></span>
 
-### <span data-ttu-id="2c929-164">예 6: 일정 기간 동안 기다린 후 작업이 백그라운드에서 계속 되도록 허용</span><span class="sxs-lookup"><span data-stu-id="2c929-164">Example 6: Wait for a period, then allow job to continue in background</span></span>
+### <span data-ttu-id="d8c6f-164">예 6: 일정 기간 동안 기다린 후 작업이 백그라운드에서 계속 되도록 허용</span><span class="sxs-lookup"><span data-stu-id="d8c6f-164">Example 6: Wait for a period, then allow job to continue in background</span></span>
 
-```
-PS C:\> Wait-Job -Name "DailyLog" -Timeout 120
-```
-
-<span data-ttu-id="2c929-165">이 명령은 DailyLog 작업이 완료 될 때까지 120 초 (2 분) 동안 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-165">This command waits 120 seconds (two minutes) for the DailyLog job to finish.</span></span>
-<span data-ttu-id="2c929-166">작업이 다음 2 분 이내에 완료 되지 않으면 명령 프롬프트가 반환 되 고 작업은 백그라운드에서 계속 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-166">If the job does not finish in the next two minutes, the command prompt returns anyway, and the job continues to run in the background.</span></span>
-
-### <span data-ttu-id="2c929-167">예 7: 이름으로 작업 대기</span><span class="sxs-lookup"><span data-stu-id="2c929-167">Example 7: Wait for a job by name</span></span>
-
-```
-PS C:\> Wait-Job -Name "Job3"
+```powershell
+Wait-Job -Name "DailyLog" -Timeout 120
 ```
 
-<span data-ttu-id="2c929-168">이 명령은 작업 이름을 사용 하 여 기다릴 작업을 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-168">This command uses the job name to identify the job for which to wait.</span></span>
+<span data-ttu-id="d8c6f-165">이 명령은 DailyLog 작업이 완료 될 때까지 120 초 (2 분) 동안 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-165">This command waits 120 seconds (two minutes) for the DailyLog job to finish.</span></span> <span data-ttu-id="d8c6f-166">작업이 다음 2 분 이내에 완료 되지 않으면 명령 프롬프트가 반환 되 고 작업은 백그라운드에서 계속 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-166">If the job does not finish in the next two minutes, the command prompt returns anyway, and the job continues to run in the background.</span></span>
 
-### <span data-ttu-id="2c929-169">예 8: Start-Job 시작 하 여 로컬 컴퓨터에서 작업 대기</span><span class="sxs-lookup"><span data-stu-id="2c929-169">Example 8: Wait for jobs on local computer started with Start-Job</span></span>
+### <span data-ttu-id="d8c6f-167">예 7: 이름으로 작업 대기</span><span class="sxs-lookup"><span data-stu-id="d8c6f-167">Example 7: Wait for a job by name</span></span>
 
-```
-PS C:\> $j = Start-Job -ScriptBlock {Get-ChildItem *.ps1| where {$_lastwritetime -gt ((Get-Date) - (New-TimeSpan -Days 7))}}
-PS C:\> $j | Wait-Job
-```
-
-<span data-ttu-id="2c929-170">이 예제에서는 **시작 작업** 을 사용 하 여 로컬 컴퓨터에서 시작 된 작업과 함께 **대기 작업** cmdlet을 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-170">This example shows how to use the **Wait-Job** cmdlet with jobs started on the local computer by using **Start-Job** .</span></span>
-
-<span data-ttu-id="2c929-171">이 명령은 지난주에 추가 또는 업데이트된 Windows PowerShell 스크립트 파일을 가져오는 작업을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-171">These commands start a job that gets the Windows PowerShell script files that were added or updated in the last week.</span></span>
-
-<span data-ttu-id="2c929-172">첫 번째 명령은 **시작 작업** 을 사용 하 여 로컬 컴퓨터에서 백그라운드 작업을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-172">The first command uses **Start-Job** to start a background job on the local computer.</span></span>
-<span data-ttu-id="2c929-173">작업은 지난 주에 추가 되거나 업데이트 된 파일 이름 확장명이 ps1 인 파일을 모두 가져오는 Get-ChildItem 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-173">The job runs a Get-ChildItem command that gets all of the files that have a .ps1 file name extension that were added or updated in the last week.</span></span>
-
-<span data-ttu-id="2c929-174">세 번째 명령은 **대기 작업** 을 사용 하 여 작업이 완료 될 때까지 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-174">The third command uses **Wait-Job** to wait until the job is completed.</span></span>
-<span data-ttu-id="2c929-175">작업이 완료 되 면 명령에서 작업에 대 한 정보가 포함 된 작업 개체를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-175">When the job finishes, the command displays the job object, which contains information about the job.</span></span>
-
-### <span data-ttu-id="2c929-176">예 9: Invoke-Command을 사용 하 여 원격 컴퓨터에서 시작 된 작업 대기</span><span class="sxs-lookup"><span data-stu-id="2c929-176">Example 9: Wait for jobs started on remote computers by using Invoke-Command</span></span>
-
-```
-PS C:\> $s = New-PSSession Server01, Server02, Server03
-PS C:\> $j = Invoke-Command -Session $s -ScriptBlock {Get-Process} -AsJob
-PS C:\> $j | Wait-Job
+```powershell
+Wait-Job -Name "Job3"
 ```
 
-<span data-ttu-id="2c929-177">이 예제에서는 **호출 명령의** *AsJob* 매개 변수를 사용 하 여 원격 컴퓨터에서 시작 된 작업과 함께 **대기 작업** 을 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-177">This example shows how to use **Wait-Job** with jobs started on remote computers by using the *AsJob* parameter of **Invoke-Command** .</span></span>
-<span data-ttu-id="2c929-178">*AsJob* 을 사용할 경우 작업이 원격 컴퓨터에서 실행 되는 경우에도 로컬 컴퓨터에 작업이 만들어지고 결과가 로컬 컴퓨터에 자동으로 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-178">When using *AsJob* , the job is created on the local computer and the results are automatically returned to the local computer, even though the job runs on the remote computers.</span></span>
+<span data-ttu-id="d8c6f-168">이 명령은 작업 이름을 사용 하 여 기다릴 작업을 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-168">This command uses the job name to identify the job for which to wait.</span></span>
 
-<span data-ttu-id="2c929-179">이 예에서는 **대기 작업** 을 사용 하 여 원격 컴퓨터 3 대의 세션에서 실행 중인 **Get Process** 명령이 완료 되었는지 여부를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-179">This example uses **Wait-Job** to determine whether a **Get-Process** command running in the sessions on three remote computers is completed.</span></span>
+### <span data-ttu-id="d8c6f-169">예 8: Start-Job 시작 하 여 로컬 컴퓨터에서 작업 대기</span><span class="sxs-lookup"><span data-stu-id="d8c6f-169">Example 8: Wait for jobs on local computer started with Start-Job</span></span>
 
-<span data-ttu-id="2c929-180">첫 번째 명령은 3 대의 컴퓨터에 **PSSession** 개체를 만들어 $s 변수에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-180">The first command creates **PSSession** objects on three computers and stores them in the $s variable.</span></span>
-
-<span data-ttu-id="2c929-181">두 번째 명령은 **Invoke 명령을** 사용 하 여 $s에 있는 세 개의 세션에서 각각 **Get Process** 를 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-181">The second command uses **Invoke-Command** to run **Get-Process** in each of the three sessions in $s.</span></span>
-<span data-ttu-id="2c929-182">이 명령은 *AsJob* 매개 변수를 사용 하 여 백그라운드 작업으로 비동기적으로 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-182">The command uses the *AsJob* parameter to run the command asynchronously as a background job.</span></span>
-<span data-ttu-id="2c929-183">이 명령은 **시작 작업** 을 사용 하 여 시작 된 작업과 마찬가지로 작업 개체를 반환 하 고, 작업 개체는 $j 변수에 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-183">The command returns a job object, just like the jobs started by using **Start-Job** , and the job object is stored in the $j variable.</span></span>
-
-<span data-ttu-id="2c929-184">세 번째 명령은 파이프라인 연산자 (|)를 사용 하 여 $j의 작업 개체를 **대기 작업** cmdlet으로 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-184">The third command uses a pipeline operator (|) to send the job object in $j to the **Wait-Job** cmdlet.</span></span>
-<span data-ttu-id="2c929-185">작업이 로컬 컴퓨터에 있기 때문에이 경우에는 **명령 호출** 명령이 필요 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-185">An **Invoke-Command** command is not required in this case, because the job resides on the local computer.</span></span>
-
-### <span data-ttu-id="2c929-186">예 10: ID가 있는 작업 대기</span><span class="sxs-lookup"><span data-stu-id="2c929-186">Example 10: Wait for a job that has an ID</span></span>
-
+```powershell
+$j = Start-Job -ScriptBlock {Get-ChildItem *.ps1| where {$_lastwritetime -gt ((Get-Date) - (New-TimeSpan -Days 7))}}
+$j | Wait-Job
 ```
-PS C:\> Get-Job
 
+<span data-ttu-id="d8c6f-170">이 예에서는를 `Wait-Job` 사용 하 여 로컬 컴퓨터에서 시작 된 작업에 cmdlet을 사용 하는 방법을 보여 줍니다 `Start-Job` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-170">This example shows how to use the `Wait-Job` cmdlet with jobs started on the local computer by using `Start-Job`.</span></span>
+
+<span data-ttu-id="d8c6f-171">이 명령은 지난주에 추가 또는 업데이트된 Windows PowerShell 스크립트 파일을 가져오는 작업을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-171">These commands start a job that gets the Windows PowerShell script files that were added or updated in the last week.</span></span>
+
+<span data-ttu-id="d8c6f-172">첫 번째 명령은 `Start-Job` 를 사용 하 여 로컬 컴퓨터에서 백그라운드 작업을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-172">The first command uses `Start-Job` to start a background job on the local computer.</span></span> <span data-ttu-id="d8c6f-173">작업은 `Get-ChildItem` 지난 주에 추가 되거나 업데이트 된 ps1 파일 이름 확장명을 가진 모든 파일을 가져오는 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-173">The job runs a `Get-ChildItem` command that gets all of the files that have a .ps1 file name extension that were added or updated in the last week.</span></span>
+
+<span data-ttu-id="d8c6f-174">세 번째 명령은를 사용 하 여 `Wait-Job` 작업이 완료 될 때까지 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-174">The third command uses `Wait-Job` to wait until the job is completed.</span></span> <span data-ttu-id="d8c6f-175">작업이 완료 되 면 명령에서 작업에 대 한 정보가 포함 된 작업 개체를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-175">When the job finishes, the command displays the job object, which contains information about the job.</span></span>
+
+### <span data-ttu-id="d8c6f-176">예 9: Invoke-Command을 사용 하 여 원격 컴퓨터에서 시작 된 작업 대기</span><span class="sxs-lookup"><span data-stu-id="d8c6f-176">Example 9: Wait for jobs started on remote computers by using Invoke-Command</span></span>
+
+```powershell
+$s = New-PSSession Server01, Server02, Server03
+$j = Invoke-Command -Session $s -ScriptBlock {Get-Process} -AsJob
+$j | Wait-Job
+```
+
+<span data-ttu-id="d8c6f-177">이 예에서는 `Wait-Job` 의 **AsJob** 매개 변수를 사용 하 여 원격 컴퓨터에서 시작 된 작업과 함께를 사용 하는 방법을 보여 줍니다 `Invoke-Command` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-177">This example shows how to use `Wait-Job` with jobs started on remote computers by using the **AsJob** parameter of `Invoke-Command`.</span></span> <span data-ttu-id="d8c6f-178">**AsJob** 을 사용할 경우 작업이 원격 컴퓨터에서 실행 되는 경우에도 로컬 컴퓨터에 작업이 만들어지고 결과가 로컬 컴퓨터에 자동으로 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-178">When using **AsJob** , the job is created on the local computer and the results are automatically returned to the local computer, even though the job runs on the remote computers.</span></span>
+
+<span data-ttu-id="d8c6f-179">이 예에서는 `Wait-Job` 를 사용 하 여 `Get-Process` 원격 컴퓨터 3 대의 세션에서 실행 중인 명령이 완료 되었는지 여부를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-179">This example uses `Wait-Job` to determine whether a `Get-Process` command running in the sessions on three remote computers is completed.</span></span>
+
+<span data-ttu-id="d8c6f-180">첫 번째 명령은 3 대의 컴퓨터에 **PSSession** 개체를 만든 후 변수에 저장 합니다 `$s` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-180">The first command creates **PSSession** objects on three computers and stores them in the `$s` variable.</span></span>
+
+<span data-ttu-id="d8c6f-181">두 번째 명령은 `Invoke-Command` 를 사용 하 여 `Get-Process` 에 있는 세 개의 세션에서를 실행 `$s` 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-181">The second command uses `Invoke-Command` to run `Get-Process` in each of the three sessions in `$s`.</span></span>
+<span data-ttu-id="d8c6f-182">이 명령은 **AsJob** 매개 변수를 사용 하 여 백그라운드 작업으로 비동기적으로 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-182">The command uses the **AsJob** parameter to run the command asynchronously as a background job.</span></span> <span data-ttu-id="d8c6f-183">를 사용 하 여 시작 된 작업과 마찬가지로 작업 개체가 반환 `Start-Job` 되 고 작업 개체가 변수에 저장 됩니다 `$j` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-183">The command returns a job object, just like the jobs started by using `Start-Job`, and the job object is stored in the `$j` variable.</span></span>
+
+<span data-ttu-id="d8c6f-184">세 번째 명령은 파이프라인 연산자 ()를 사용 하 여 `|` 작업 개체를 `$j` cmdlet으로 보냅니다 `Wait-Job` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-184">The third command uses a pipeline operator (`|`) to send the job object in `$j` to the `Wait-Job` cmdlet.</span></span> <span data-ttu-id="d8c6f-185">`Invoke-Command`작업이 로컬 컴퓨터에 있기 때문에이 경우에는 명령이 필요 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-185">An `Invoke-Command` command is not required in this case, because the job resides on the local computer.</span></span>
+
+### <span data-ttu-id="d8c6f-186">예 10: ID가 있는 작업 대기</span><span class="sxs-lookup"><span data-stu-id="d8c6f-186">Example 10: Wait for a job that has an ID</span></span>
+
+```powershell
+Get-Job
+```
+
+```Output
 Id   Name     State      HasMoreData     Location             Command
 --   ----     -----      -----------     --------             -------
 1    Job1     Completed  True            localhost,Server01.. get-service
 4    Job4     Completed  True            localhost            dir | where
-
-PS C:\> Wait-Job -Id 1
 ```
 
-<span data-ttu-id="2c929-187">이 명령은 ID 값이 1인 작업이 완료될 때까지 대기합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-187">This command waits for the job with an ID value of 1.</span></span>
+```powershell
+Wait-Job -Id 1
+```
 
-## <span data-ttu-id="2c929-188">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="2c929-188">PARAMETERS</span></span>
+<span data-ttu-id="d8c6f-187">이 명령은 ID 값이 1인 작업이 완료될 때까지 대기합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-187">This command waits for the job with an ID value of 1.</span></span>
 
-### <span data-ttu-id="2c929-189">-Any</span><span class="sxs-lookup"><span data-stu-id="2c929-189">-Any</span></span>
-<span data-ttu-id="2c929-190">작업이 완료 되 면이 cmdlet이 명령 프롬프트를 표시 하 고 작업 개체를 반환 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-190">Indicates that this cmdlet displays the command prompt, and returns the job object, when any job finishes.</span></span>
-<span data-ttu-id="2c929-191">기본적으로 **대기 작업** 은 지정 된 모든 작업이 완료 될 때까지 대기한 후 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-191">By default, **Wait-Job** waits until all of the specified jobs are complete before it displays the prompt.</span></span>
+## <span data-ttu-id="d8c6f-188">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="d8c6f-188">PARAMETERS</span></span>
+
+### <span data-ttu-id="d8c6f-189">-Any</span><span class="sxs-lookup"><span data-stu-id="d8c6f-189">-Any</span></span>
+
+<span data-ttu-id="d8c6f-190">작업이 완료 되 면이 cmdlet이 명령 프롬프트를 표시 하 고 작업 개체를 반환 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-190">Indicates that this cmdlet displays the command prompt, and returns the job object, when any job finishes.</span></span> <span data-ttu-id="d8c6f-191">기본적으로는 `Wait-Job` 지정 된 모든 작업이 완료 될 때까지 기다렸다가 프롬프트가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-191">By default, `Wait-Job` waits until all of the specified jobs are complete before it displays the prompt.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -256,16 +241,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2c929-192">-Filter</span><span class="sxs-lookup"><span data-stu-id="2c929-192">-Filter</span></span>
-<span data-ttu-id="2c929-193">조건에 대 한 해시 테이블을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-193">Specifies a hash table of conditions.</span></span>
-<span data-ttu-id="2c929-194">이 cmdlet은 해시 테이블의 모든 조건을 충족 하는 작업을 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-194">This cmdlet waits for jobs that satisfy all of the conditions in the hash table.</span></span>
-<span data-ttu-id="2c929-195">키는 작업 속성이고 값은 작업 속성 값인 해시 테이블을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-195">Enter a hash table where the keys are job properties and the values are job property values.</span></span>
+### <span data-ttu-id="d8c6f-192">-Filter</span><span class="sxs-lookup"><span data-stu-id="d8c6f-192">-Filter</span></span>
 
-<span data-ttu-id="2c929-196">이 매개 변수는 워크플로 작업, 예약된 작업 등의 사용자 지정 작업 유형에서만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-196">This parameter works only on custom job types, such as workflow jobs and scheduled jobs.</span></span>
-<span data-ttu-id="2c929-197">**시작 작업** cmdlet을 사용 하 여 만든 것과 같은 표준 백그라운드 작업에서는 작동 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-197">It does not work on standard background jobs, such as those created by using the **Start-Job** cmdlet.</span></span>
-<span data-ttu-id="2c929-198">이 매개 변수 지원에 대한 자세한 내용은 작업 유형 도움말 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2c929-198">For information about support for this parameter, see the help topic for the job type.</span></span>
+<span data-ttu-id="d8c6f-193">조건에 대 한 해시 테이블을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-193">Specifies a hash table of conditions.</span></span> <span data-ttu-id="d8c6f-194">이 cmdlet은 해시 테이블의 모든 조건을 충족 하는 작업을 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-194">This cmdlet waits for jobs that satisfy all of the conditions in the hash table.</span></span> <span data-ttu-id="d8c6f-195">키는 작업 속성이고 값은 작업 속성 값인 해시 테이블을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-195">Enter a hash table where the keys are job properties and the values are job property values.</span></span>
 
-<span data-ttu-id="2c929-199">이 매개 변수는 Windows PowerShell 3.0에서 도입 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-199">This parameter was introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="d8c6f-196">이 매개 변수는 워크플로 작업, 예약된 작업 등의 사용자 지정 작업 유형에서만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-196">This parameter works only on custom job types, such as workflow jobs and scheduled jobs.</span></span> <span data-ttu-id="d8c6f-197">Cmdlet을 사용 하 여 만든 것과 같은 표준 백그라운드 작업에서는 작동 하지 않습니다 `Start-Job` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-197">It does not work on standard background jobs, such as those created by using the `Start-Job` cmdlet.</span></span> <span data-ttu-id="d8c6f-198">이 매개 변수 지원에 대한 자세한 내용은 작업 유형 도움말 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-198">For information about support for this parameter, see the help topic for the job type.</span></span>
+
+<span data-ttu-id="d8c6f-199">이 매개 변수는 Windows PowerShell 3.0에서 도입 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-199">This parameter was introduced in Windows PowerShell 3.0.</span></span>
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -279,17 +261,17 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2c929-200">-Force</span><span class="sxs-lookup"><span data-stu-id="2c929-200">-Force</span></span>
-<span data-ttu-id="2c929-201">이 cmdlet이 일시 중단 되었거나 연결 되지 않은 상태의 작업을 계속 대기 하 고 있음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-201">Indicates that this cmdlet continues to wait for jobs in the Suspended or Disconnected state.</span></span>
-<span data-ttu-id="2c929-202">기본적으로 **Wait 작업** 은 작업이 다음 상태 중 하나일 때 대기를 반환 하거나 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-202">By default, **Wait-Job** returns, or ends  the wait, when jobs are in one of the following states:</span></span>
+### <span data-ttu-id="d8c6f-200">-Force</span><span class="sxs-lookup"><span data-stu-id="d8c6f-200">-Force</span></span>
 
-- <span data-ttu-id="2c929-203">Completed</span><span class="sxs-lookup"><span data-stu-id="2c929-203">Completed</span></span>
-- <span data-ttu-id="2c929-204">실패</span><span class="sxs-lookup"><span data-stu-id="2c929-204">Failed</span></span>
-- <span data-ttu-id="2c929-205">중지됨</span><span class="sxs-lookup"><span data-stu-id="2c929-205">Stopped</span></span>
-- <span data-ttu-id="2c929-206">일시 중단</span><span class="sxs-lookup"><span data-stu-id="2c929-206">Suspended</span></span>
-- <span data-ttu-id="2c929-207">연결 끊김</span><span class="sxs-lookup"><span data-stu-id="2c929-207">Disconnected</span></span>
+<span data-ttu-id="d8c6f-201">이 cmdlet이 일시 중단 되었거나 연결 되지 않은 상태의 작업을 계속 대기 하 고 있음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-201">Indicates that this cmdlet continues to wait for jobs in the Suspended or Disconnected state.</span></span> <span data-ttu-id="d8c6f-202">기본적으로는 `Wait-Job` 작업이 다음 상태 중 하나일 때 대기를 반환 하거나 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-202">By default, `Wait-Job` returns, or ends the wait, when jobs are in one of the following states:</span></span>
 
-<span data-ttu-id="2c929-208">이 매개 변수는 Windows PowerShell 3.0에서 도입 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-208">This parameter was introduced in Windows PowerShell 3.0.</span></span>
+- <span data-ttu-id="d8c6f-203">Completed</span><span class="sxs-lookup"><span data-stu-id="d8c6f-203">Completed</span></span>
+- <span data-ttu-id="d8c6f-204">실패</span><span class="sxs-lookup"><span data-stu-id="d8c6f-204">Failed</span></span>
+- <span data-ttu-id="d8c6f-205">중지됨</span><span class="sxs-lookup"><span data-stu-id="d8c6f-205">Stopped</span></span>
+- <span data-ttu-id="d8c6f-206">일시 중단</span><span class="sxs-lookup"><span data-stu-id="d8c6f-206">Suspended</span></span>
+- <span data-ttu-id="d8c6f-207">연결 끊김</span><span class="sxs-lookup"><span data-stu-id="d8c6f-207">Disconnected</span></span>
+
+<span data-ttu-id="d8c6f-208">이 매개 변수는 Windows PowerShell 3.0에서 도입 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-208">This parameter was introduced in Windows PowerShell 3.0.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -303,13 +285,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2c929-209">-Id</span><span class="sxs-lookup"><span data-stu-id="2c929-209">-Id</span></span>
-<span data-ttu-id="2c929-210">이 cmdlet이 대기 하는 작업의 Id 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-210">Specifies an array of IDs of jobs for which this cmdlet waits.</span></span>
+### <span data-ttu-id="d8c6f-209">-Id</span><span class="sxs-lookup"><span data-stu-id="d8c6f-209">-Id</span></span>
 
-<span data-ttu-id="2c929-211">ID는 현재 세션에서 작업을 고유 하 게 식별 하는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-211">The ID is an integer that uniquely identifies the job in the current session.</span></span>
-<span data-ttu-id="2c929-212">인스턴스 ID 보다 더 쉽게 기억할 수 있으며, 입력은 현재 세션 에서만 고유 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-212">It is easier to remember and type than the instance ID, but it is unique only in the current session.</span></span>
-<span data-ttu-id="2c929-213">하나 이상의 Id를 쉼표로 구분 하 여 입력할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-213">You can type one or more IDs, separated by commas.</span></span>
-<span data-ttu-id="2c929-214">작업 ID를 찾으려면를 입력 `Get-Job` 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-214">To find the ID of a job, type `Get-Job`.</span></span>
+<span data-ttu-id="d8c6f-210">이 cmdlet이 대기 하는 작업의 Id 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-210">Specifies an array of IDs of jobs for which this cmdlet waits.</span></span>
+
+<span data-ttu-id="d8c6f-211">ID는 현재 세션에서 작업을 고유 하 게 식별 하는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-211">The ID is an integer that uniquely identifies the job in the current session.</span></span> <span data-ttu-id="d8c6f-212">인스턴스 ID 보다 더 쉽게 기억할 수 있으며, 입력은 현재 세션 에서만 고유 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-212">It is easier to remember and type than the instance ID, but it is unique only in the current session.</span></span> <span data-ttu-id="d8c6f-213">하나 이상의 Id를 쉼표로 구분 하 여 입력할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-213">You can type one or more IDs, separated by commas.</span></span> <span data-ttu-id="d8c6f-214">작업 ID를 찾으려면를 입력 `Get-Job` 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-214">To find the ID of a job, type `Get-Job`.</span></span>
 
 ```yaml
 Type: System.Int32[]
@@ -323,12 +303,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2c929-215">-InstanceId</span><span class="sxs-lookup"><span data-stu-id="2c929-215">-InstanceId</span></span>
-<span data-ttu-id="2c929-216">이 cmdlet이 대기 하는 작업의 인스턴스 Id 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-216">Specifies an array of instance IDs of jobs for which this cmdlet waits.</span></span>
-<span data-ttu-id="2c929-217">기본값은 모든 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-217">The default is all jobs.</span></span>
+### <span data-ttu-id="d8c6f-215">-InstanceId</span><span class="sxs-lookup"><span data-stu-id="d8c6f-215">-InstanceId</span></span>
 
-<span data-ttu-id="2c929-218">인스턴스 ID는 컴퓨터에서 작업을 고유하게 식별하는 GUID입니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-218">An instance ID is a GUID that uniquely identifies the job on the computer.</span></span>
-<span data-ttu-id="2c929-219">작업의 인스턴스 ID를 찾으려면 **Get-Job** 을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-219">To find the instance ID of a job, use **Get-Job** .</span></span>
+<span data-ttu-id="d8c6f-216">이 cmdlet이 대기 하는 작업의 인스턴스 Id 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-216">Specifies an array of instance IDs of jobs for which this cmdlet waits.</span></span> <span data-ttu-id="d8c6f-217">기본값은 모든 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-217">The default is all jobs.</span></span>
+
+<span data-ttu-id="d8c6f-218">인스턴스 ID는 컴퓨터에서 작업을 고유하게 식별하는 GUID입니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-218">An instance ID is a GUID that uniquely identifies the job on the computer.</span></span> <span data-ttu-id="d8c6f-219">작업의 인스턴스 ID를 찾으려면를 사용 `Get-Job` 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-219">To find the instance ID of a job, use `Get-Job`.</span></span>
 
 ```yaml
 Type: System.Guid[]
@@ -342,11 +321,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2c929-220">-Job</span><span class="sxs-lookup"><span data-stu-id="2c929-220">-Job</span></span>
-<span data-ttu-id="2c929-221">이 cmdlet이 대기 하는 작업을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-221">Specifies the jobs for which this cmdlet waits.</span></span>
-<span data-ttu-id="2c929-222">작업 개체가 포함된 변수 또는 작업 개체를 가져오는 명령을 입력하세요.</span><span class="sxs-lookup"><span data-stu-id="2c929-222">Enter a variable that contains the job objects or a command that gets the job objects.</span></span>
-<span data-ttu-id="2c929-223">파이프라인 연산자를 사용 하 여 작업 개체를 **대기 작업** cmdlet으로 보낼 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-223">You can also use a pipeline operator to send job objects to the **Wait-Job** cmdlet.</span></span>
-<span data-ttu-id="2c929-224">기본적으로 **대기 작업** 은 현재 세션에서 생성 된 모든 작업을 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-224">By default, **Wait-Job** waits for all jobs created in the current session.</span></span>
+### <span data-ttu-id="d8c6f-220">-Job</span><span class="sxs-lookup"><span data-stu-id="d8c6f-220">-Job</span></span>
+
+<span data-ttu-id="d8c6f-221">이 cmdlet이 대기 하는 작업을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-221">Specifies the jobs for which this cmdlet waits.</span></span> <span data-ttu-id="d8c6f-222">작업 개체가 포함된 변수 또는 작업 개체를 가져오는 명령을 입력하세요.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-222">Enter a variable that contains the job objects or a command that gets the job objects.</span></span> <span data-ttu-id="d8c6f-223">파이프라인 연산자를 사용 하 여 작업 개체를 cmdlet으로 보낼 수도 있습니다 `Wait-Job` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-223">You can also use a pipeline operator to send job objects to the `Wait-Job` cmdlet.</span></span> <span data-ttu-id="d8c6f-224">기본적으로는 `Wait-Job` 현재 세션에서 생성 된 모든 작업을 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-224">By default, `Wait-Job` waits for all jobs created in the current session.</span></span>
 
 ```yaml
 Type: System.Management.Automation.Job[]
@@ -360,8 +337,9 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2c929-225">-Name</span><span class="sxs-lookup"><span data-stu-id="2c929-225">-Name</span></span>
-<span data-ttu-id="2c929-226">이 cmdlet이 대기 하는 작업의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-226">Specifies friendly names of jobs for which this cmdlet waits.</span></span>
+### <span data-ttu-id="d8c6f-225">-Name</span><span class="sxs-lookup"><span data-stu-id="d8c6f-225">-Name</span></span>
+
+<span data-ttu-id="d8c6f-226">이 cmdlet이 대기 하는 작업의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-226">Specifies friendly names of jobs for which this cmdlet waits.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -375,23 +353,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2c929-227">-상태</span><span class="sxs-lookup"><span data-stu-id="2c929-227">-State</span></span>
-<span data-ttu-id="2c929-228">작업 상태를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-228">Specifies a job state.</span></span>
-<span data-ttu-id="2c929-229">이 cmdlet은 지정 된 상태의 작업만 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-229">This cmdlet waits only for jobs in the specified state.</span></span>
-<span data-ttu-id="2c929-230">이 매개 변수에 허용되는 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-230">The acceptable values for this parameter are:</span></span>
+### <span data-ttu-id="d8c6f-227">-상태</span><span class="sxs-lookup"><span data-stu-id="d8c6f-227">-State</span></span>
 
-- <span data-ttu-id="2c929-231">NotStarted</span><span class="sxs-lookup"><span data-stu-id="2c929-231">NotStarted</span></span>
-- <span data-ttu-id="2c929-232">실행 중</span><span class="sxs-lookup"><span data-stu-id="2c929-232">Running</span></span>
-- <span data-ttu-id="2c929-233">완료됨</span><span class="sxs-lookup"><span data-stu-id="2c929-233">Completed</span></span>
-- <span data-ttu-id="2c929-234">실패</span><span class="sxs-lookup"><span data-stu-id="2c929-234">Failed</span></span>
-- <span data-ttu-id="2c929-235">중지됨</span><span class="sxs-lookup"><span data-stu-id="2c929-235">Stopped</span></span>
-- <span data-ttu-id="2c929-236">차단</span><span class="sxs-lookup"><span data-stu-id="2c929-236">Blocked</span></span>
-- <span data-ttu-id="2c929-237">일시 중단</span><span class="sxs-lookup"><span data-stu-id="2c929-237">Suspended</span></span>
-- <span data-ttu-id="2c929-238">연결 끊김</span><span class="sxs-lookup"><span data-stu-id="2c929-238">Disconnected</span></span>
-- <span data-ttu-id="2c929-239">Suspending</span><span class="sxs-lookup"><span data-stu-id="2c929-239">Suspending</span></span>
-- <span data-ttu-id="2c929-240">중지 중</span><span class="sxs-lookup"><span data-stu-id="2c929-240">Stopping</span></span>
+<span data-ttu-id="d8c6f-228">작업 상태를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-228">Specifies a job state.</span></span> <span data-ttu-id="d8c6f-229">이 cmdlet은 지정 된 상태의 작업만 대기 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-229">This cmdlet waits only for jobs in the specified state.</span></span> <span data-ttu-id="d8c6f-230">이 매개 변수에 허용되는 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-230">The acceptable values for this parameter are:</span></span>
 
-<span data-ttu-id="2c929-241">작업 상태에 대 한 자세한 내용은 MSDN library에서 [JobState 열거](https://msdn.microsoft.com/library/system.management.automation.jobstate) 를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="2c929-241">For more information about job states, see [JobState Enumeration](https://msdn.microsoft.com/library/system.management.automation.jobstate) in the MSDN library.</span></span>
+- <span data-ttu-id="d8c6f-231">NotStarted</span><span class="sxs-lookup"><span data-stu-id="d8c6f-231">NotStarted</span></span>
+- <span data-ttu-id="d8c6f-232">실행 중</span><span class="sxs-lookup"><span data-stu-id="d8c6f-232">Running</span></span>
+- <span data-ttu-id="d8c6f-233">완료됨</span><span class="sxs-lookup"><span data-stu-id="d8c6f-233">Completed</span></span>
+- <span data-ttu-id="d8c6f-234">실패</span><span class="sxs-lookup"><span data-stu-id="d8c6f-234">Failed</span></span>
+- <span data-ttu-id="d8c6f-235">중지됨</span><span class="sxs-lookup"><span data-stu-id="d8c6f-235">Stopped</span></span>
+- <span data-ttu-id="d8c6f-236">차단</span><span class="sxs-lookup"><span data-stu-id="d8c6f-236">Blocked</span></span>
+- <span data-ttu-id="d8c6f-237">일시 중단</span><span class="sxs-lookup"><span data-stu-id="d8c6f-237">Suspended</span></span>
+- <span data-ttu-id="d8c6f-238">연결 끊김</span><span class="sxs-lookup"><span data-stu-id="d8c6f-238">Disconnected</span></span>
+- <span data-ttu-id="d8c6f-239">Suspending</span><span class="sxs-lookup"><span data-stu-id="d8c6f-239">Suspending</span></span>
+- <span data-ttu-id="d8c6f-240">중지 중</span><span class="sxs-lookup"><span data-stu-id="d8c6f-240">Stopping</span></span>
+
+<span data-ttu-id="d8c6f-241">작업 상태에 대 한 자세한 내용은 [JobState 열거](/dotnet/api/system.management.automation.jobstate)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-241">For more information about job states, see [JobState Enumeration](/dotnet/api/system.management.automation.jobstate).</span></span>
 
 ```yaml
 Type: System.Management.Automation.JobState
@@ -406,13 +383,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2c929-242">-시간 제한</span><span class="sxs-lookup"><span data-stu-id="2c929-242">-Timeout</span></span>
-<span data-ttu-id="2c929-243">각 백그라운드 작업에 대 한 최대 대기 시간 (초)을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-243">Specifies the maximum wait time for each background job, in seconds.</span></span>
-<span data-ttu-id="2c929-244">기본값-1은 작업이 완료 될 때까지 cmdlet이 대기 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-244">The default value, -1, indicates that the cmdlet waits until the job finishes.</span></span>
-<span data-ttu-id="2c929-245">타이밍은 **시작-** 작업 명령이 아닌 **대기 작업** 명령을 제출할 때 시작 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-245">The timing starts when you submit the **Wait-Job** command, not the **Start-Job** command.</span></span>
+### <span data-ttu-id="d8c6f-242">-시간 제한</span><span class="sxs-lookup"><span data-stu-id="d8c6f-242">-Timeout</span></span>
 
-<span data-ttu-id="2c929-246">이 시간을 초과할 경우 작업이 여전히 실행 중이어도 대기가 종료되고 명령 프롬프트가 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-246">If this time is exceeded, the wait ends and the command prompt returns, even if the job is still running.</span></span>
-<span data-ttu-id="2c929-247">이 명령은 오류 메시지를 표시 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-247">The command does not display any error message.</span></span>
+<span data-ttu-id="d8c6f-243">각 백그라운드 작업에 대 한 최대 대기 시간 (초)을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-243">Specifies the maximum wait time for each background job, in seconds.</span></span> <span data-ttu-id="d8c6f-244">기본값-1은 작업이 완료 될 때까지 cmdlet이 대기 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-244">The default value, -1, indicates that the cmdlet waits until the job finishes.</span></span> <span data-ttu-id="d8c6f-245">타이밍은 명령이 아니라 명령을 제출할 때 시작 됩니다 `Wait-Job` `Start-Job` .</span><span class="sxs-lookup"><span data-stu-id="d8c6f-245">The timing starts when you submit the `Wait-Job` command, not the `Start-Job` command.</span></span>
+
+<span data-ttu-id="d8c6f-246">이 시간을 초과할 경우 작업이 여전히 실행 중이어도 대기가 종료되고 명령 프롬프트가 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-246">If this time is exceeded, the wait ends and the command prompt returns, even if the job is still running.</span></span> <span data-ttu-id="d8c6f-247">이 명령은 오류 메시지를 표시 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-247">The command does not display any error message.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -426,44 +401,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2c929-248">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="2c929-248">CommonParameters</span></span>
-<span data-ttu-id="2c929-249">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="2c929-249">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="2c929-250">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2c929-250">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="d8c6f-248">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="d8c6f-248">CommonParameters</span></span>
 
-## <span data-ttu-id="2c929-251">입력</span><span class="sxs-lookup"><span data-stu-id="2c929-251">INPUTS</span></span>
+<span data-ttu-id="d8c6f-249">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-249">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="d8c6f-250">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-250">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-### <span data-ttu-id="2c929-252">System.web. Remorererea 작업</span><span class="sxs-lookup"><span data-stu-id="2c929-252">System.Management.Automation.RemotingJob</span></span>
-<span data-ttu-id="2c929-253">작업 개체를이 cmdlet으로 파이프 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-253">You can pipe a job object to this cmdlet.</span></span>
+## <span data-ttu-id="d8c6f-251">입력</span><span class="sxs-lookup"><span data-stu-id="d8c6f-251">INPUTS</span></span>
 
-## <span data-ttu-id="2c929-254">출력</span><span class="sxs-lookup"><span data-stu-id="2c929-254">OUTPUTS</span></span>
+### <span data-ttu-id="d8c6f-252">System.web. Remorererea 작업</span><span class="sxs-lookup"><span data-stu-id="d8c6f-252">System.Management.Automation.RemotingJob</span></span>
 
-### <span data-ttu-id="2c929-255">System.web. a p.</span><span class="sxs-lookup"><span data-stu-id="2c929-255">System.Management.Automation.PSRemotingJob</span></span>
-<span data-ttu-id="2c929-256">이 cmdlet은 완료 된 작업을 나타내는 작업 개체를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-256">This cmdlet returns job objects that represent the completed jobs.</span></span>
-<span data-ttu-id="2c929-257">*Timeout* 매개 변수의 값이 초과 되어 대기가 종료 되 면 **wait-Job** 은 개체를 반환 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-257">If the wait ends because the value of the *Timeout* parameter is exceeded, **Wait-Job** does not return any objects.</span></span>
+<span data-ttu-id="d8c6f-253">작업 개체를이 cmdlet으로 파이프 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-253">You can pipe a job object to this cmdlet.</span></span>
 
-## <span data-ttu-id="2c929-258">참고</span><span class="sxs-lookup"><span data-stu-id="2c929-258">NOTES</span></span>
+## <span data-ttu-id="d8c6f-254">출력</span><span class="sxs-lookup"><span data-stu-id="d8c6f-254">OUTPUTS</span></span>
 
-* <span data-ttu-id="2c929-259">기본적으로 **Wait 작업** 은 작업이 다음 상태 중 하나일 때 대기를 반환 하거나 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-259">By default, **Wait-Job** returns, or ends the wait, when jobs are in one of the following states:</span></span>
+### <span data-ttu-id="d8c6f-255">System.web. a p.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-255">System.Management.Automation.PSRemotingJob</span></span>
 
-- <span data-ttu-id="2c929-260">Completed</span><span class="sxs-lookup"><span data-stu-id="2c929-260">Completed</span></span>
-- <span data-ttu-id="2c929-261">실패</span><span class="sxs-lookup"><span data-stu-id="2c929-261">Failed</span></span>
-- <span data-ttu-id="2c929-262">중지됨</span><span class="sxs-lookup"><span data-stu-id="2c929-262">Stopped</span></span>
-- <span data-ttu-id="2c929-263">일시 중단</span><span class="sxs-lookup"><span data-stu-id="2c929-263">Suspended</span></span>
-- <span data-ttu-id="2c929-264">일시 중단 된 작업 및 연결 되지 않은 작업을 계속 대기 하기 위해 직접 **대기 작업** 으로의 연결을 끊었습니다. *Force* 매개 변수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c929-264">Disconnected To direct **Wait-Job** to continue to wait for Suspended and Disconnected jobs, use the *Force* parameter.</span></span>
+<span data-ttu-id="d8c6f-256">이 cmdlet은 완료 된 작업을 나타내는 작업 개체를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-256">This cmdlet returns job objects that represent the completed jobs.</span></span> <span data-ttu-id="d8c6f-257">**Timeout** 매개 변수의 값이 초과 되어 대기가 종료 되는 경우는 `Wait-Job` 개체를 반환 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-257">If the wait ends because the value of the **Timeout** parameter is exceeded, `Wait-Job` does not return any objects.</span></span>
 
-## <span data-ttu-id="2c929-265">관련 링크</span><span class="sxs-lookup"><span data-stu-id="2c929-265">RELATED LINKS</span></span>
+## <span data-ttu-id="d8c6f-258">참고</span><span class="sxs-lookup"><span data-stu-id="d8c6f-258">NOTES</span></span>
 
-[<span data-ttu-id="2c929-266">Get-Job</span><span class="sxs-lookup"><span data-stu-id="2c929-266">Get-Job</span></span>](Get-Job.md)
+<span data-ttu-id="d8c6f-259">기본적으로는 `Wait-Job` 작업이 다음 상태 중 하나일 때 대기를 반환 하거나 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-259">By default, `Wait-Job` returns, or ends the wait, when jobs are in one of the following states:</span></span>
 
-[<span data-ttu-id="2c929-267">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="2c929-267">Invoke-Command</span></span>](Invoke-Command.md)
+- <span data-ttu-id="d8c6f-260">Completed</span><span class="sxs-lookup"><span data-stu-id="d8c6f-260">Completed</span></span>
+- <span data-ttu-id="d8c6f-261">실패</span><span class="sxs-lookup"><span data-stu-id="d8c6f-261">Failed</span></span>
+- <span data-ttu-id="d8c6f-262">중지됨</span><span class="sxs-lookup"><span data-stu-id="d8c6f-262">Stopped</span></span>
+- <span data-ttu-id="d8c6f-263">일시 중단</span><span class="sxs-lookup"><span data-stu-id="d8c6f-263">Suspended</span></span>
+- <span data-ttu-id="d8c6f-264">직접 이동 하 여 `Wait-Job` 일시 중단 되 고 연결 되지 않은 작업을 계속 대기 하려면 **Force** 매개 변수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c6f-264">Disconnected To direct `Wait-Job` to continue to wait for Suspended and Disconnected jobs, use the **Force** parameter.</span></span>
 
-[<span data-ttu-id="2c929-268">Receive-Job</span><span class="sxs-lookup"><span data-stu-id="2c929-268">Receive-Job</span></span>](Receive-Job.md)
+## <span data-ttu-id="d8c6f-265">관련 링크</span><span class="sxs-lookup"><span data-stu-id="d8c6f-265">RELATED LINKS</span></span>
 
-[<span data-ttu-id="2c929-269">Remove-Job</span><span class="sxs-lookup"><span data-stu-id="2c929-269">Remove-Job</span></span>](Remove-Job.md)
+[<span data-ttu-id="d8c6f-266">Get-Job</span><span class="sxs-lookup"><span data-stu-id="d8c6f-266">Get-Job</span></span>](Get-Job.md)
 
-[<span data-ttu-id="2c929-270">Resume-Job</span><span class="sxs-lookup"><span data-stu-id="2c929-270">Resume-Job</span></span>](Resume-Job.md)
+[<span data-ttu-id="d8c6f-267">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="d8c6f-267">Invoke-Command</span></span>](Invoke-Command.md)
 
-[<span data-ttu-id="2c929-271">Start-Job</span><span class="sxs-lookup"><span data-stu-id="2c929-271">Start-Job</span></span>](Start-Job.md)
+[<span data-ttu-id="d8c6f-268">Receive-Job</span><span class="sxs-lookup"><span data-stu-id="d8c6f-268">Receive-Job</span></span>](Receive-Job.md)
 
-[<span data-ttu-id="2c929-272">Stop-Job</span><span class="sxs-lookup"><span data-stu-id="2c929-272">Stop-Job</span></span>](Stop-Job.md)
+[<span data-ttu-id="d8c6f-269">Remove-Job</span><span class="sxs-lookup"><span data-stu-id="d8c6f-269">Remove-Job</span></span>](Remove-Job.md)
 
-[<span data-ttu-id="2c929-273">Suspend-Job</span><span class="sxs-lookup"><span data-stu-id="2c929-273">Suspend-Job</span></span>](Suspend-Job.md)
+[<span data-ttu-id="d8c6f-270">Resume-Job</span><span class="sxs-lookup"><span data-stu-id="d8c6f-270">Resume-Job</span></span>](Resume-Job.md)
+
+[<span data-ttu-id="d8c6f-271">Start-Job</span><span class="sxs-lookup"><span data-stu-id="d8c6f-271">Start-Job</span></span>](Start-Job.md)
+
+[<span data-ttu-id="d8c6f-272">Stop-Job</span><span class="sxs-lookup"><span data-stu-id="d8c6f-272">Stop-Job</span></span>](Stop-Job.md)
+
+[<span data-ttu-id="d8c6f-273">Suspend-Job</span><span class="sxs-lookup"><span data-stu-id="d8c6f-273">Suspend-Job</span></span>](Suspend-Job.md)
