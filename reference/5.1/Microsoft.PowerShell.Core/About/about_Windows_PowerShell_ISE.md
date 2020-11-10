@@ -6,12 +6,12 @@ ms.date: 01/03/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_windows_powershell_ise?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Windows_PowerShell_ISE
-ms.openlocfilehash: ec99dec9ea5012b41c10a56a688b23a6fa2c9dd8
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: ff543024d7c62c70217eeaf3ded192a5a24c4757
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93223169"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388844"
 ---
 # <a name="about-windows-powershell-ise"></a>Windows PowerShell ISE 정보
 
@@ -121,7 +121,7 @@ Windows PowerShell ISE은 Windows의 클라이언트 및 서버 버전에서 기
 Windows PowerShell ISE에는 사용자 인터페이스가 필요 하므로 Windows Server의 Server Core 설치에서는 작동 하지 않습니다. 그러나 Windows PowerShell ISE 기능을 추가 하는 경우 설치는 GUI 포함 서버를 자동으로 변환 합니다.
 
 Windows PowerShell ISE는 WPF(Windows Presentation Foundation)를 기반으로 합니다.
-Windows PowerShell ISE의 그래픽 요소가 시스템에서 제대로 렌더링 되지 않는 경우 시스템에서 "WPF 하드웨어 가속 사용 안 함" 그래픽 렌더링 설정을 추가 하거나 조정 하 여 문제를 해결할 수 있습니다. 자세한 내용은 MSDN library의 [그래픽 렌더링 레지스트리 설정](/dotnet/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings) 을 참조 하세요.
+Windows PowerShell ISE의 그래픽 요소가 시스템에서 제대로 렌더링 되지 않는 경우 시스템에서 "WPF 하드웨어 가속 사용 안 함" 그래픽 렌더링 설정을 추가 하거나 조정 하 여 문제를 해결할 수 있습니다. 자세한 내용은 [그래픽 렌더링 레지스트리 설정](/dotnet/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

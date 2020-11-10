@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/add-pssnapin?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-PSSnapin
-ms.openlocfilehash: 5adba912d91369250ee9891ee2bb2ca0f8cba796
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: a21c2974fd66a9b02929752ae487c8995579b8a7
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212122"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388827"
 ---
 # Add-PSSnapin
 
@@ -136,15 +136,15 @@ Accept wildcard characters: False
 
 ## 참고
 
-* Windows PowerShell 3.0부터 Windows PowerShell과 함께 설치된 핵심 명령이 모듈에 패키지됩니다. Windows PowerShell 2.0 및 이후 버전의 Windows PowerShell에서 이전 스타일의 세션을 만드는 호스트 프로그램에서 핵심 명령은 스냅인 (PSSnapins)으로 패키지 됩니다. 예외는 항상 스냅인 인 **Microsoft. PowerShell. Core** 입니다. 또한 New-PSSession cmdlet에서 시작한 것과 같은 원격 세션은 코어 스냅인을 포함 하는 이전 스타일의 세션입니다.
+- Windows PowerShell 3.0부터 Windows PowerShell과 함께 설치된 핵심 명령이 모듈에 패키지됩니다. Windows PowerShell 2.0 및 이후 버전의 Windows PowerShell에서 이전 스타일의 세션을 만드는 호스트 프로그램에서 핵심 명령은 스냅인 (PSSnapins)으로 패키지 됩니다. 예외는 항상 스냅인 인 **Microsoft. PowerShell. Core** 입니다. 또한 New-PSSession cmdlet에서 시작한 것과 같은 원격 세션은 코어 스냅인을 포함 하는 이전 스타일의 세션입니다.
 
-  핵심 모듈을 사용 하 여 최신 스타일의 세션을 만드는 **initialsessionstate.createdefault2** 메서드에 대 한 자세한 내용은 MSDN Library의 [initialsessionstate.createdefault2 메서드](https://msdn.microsoft.com/library/system.management.automation.runspaces.initialsessionstate.createdefault2) 를 참조 하세요.
+  핵심 모듈과 함께 최신 스타일의 세션을 만드는 **initialsessionstate.createdefault2** 메서드에 대 한 자세한 내용은 [initialsessionstate.createdefault2 메서드](/dotnet/api/system.management.automation.runspaces.initialsessionstate.createdefault2#System_Management_Automation_Runspaces_InitialSessionState_CreateDefault2)를 참조 하세요.
 
-* 스냅인에 대 한 자세한 내용은 [about_PSSnapins](About/about_PSSnapins.md) 및 [Windows PowerShell 스냅인을 만드는 방법](/powershell/scripting/developer/cmdlet/how-to-create-a-windows-powershell-snap-in)을 참조 하세요.
-* `Add-PSSnapin` 현재 세션에만 스냅인을 추가 합니다. 모든 Windows PowerShell 세션에 스냅인을 추가하려면 스냅인을 Windows PowerShell 프로필에 추가합니다. 자세한 내용은 about_Profiles를 참조하세요.
-* Microsoft .NET Framework 설치 유틸리티를 사용 하 여 등록 된 모든 스냅인을 추가할 수 있습니다. 자세한 내용은 [cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](/previous-versions//ms714644(v=vs.85))을 참조 하세요.
-* 컴퓨터에 등록 된 스냅인 목록을 가져오려면를 입력 `Get-PSSnapin -Registered` 합니다.
-* 스냅인을 추가 하기 전에는 `Add-PSSnapin` 스냅인의 버전을 확인 하 여 현재 버전의 Windows PowerShell과 호환 되는지 확인 합니다. 스냅인이 버전 확인에 실패하면 Windows PowerShell에서 오류를 보고합니다.
+- 스냅인에 대 한 자세한 내용은 [about_PSSnapins](About/about_PSSnapins.md) 및 [Windows PowerShell 스냅인을 만드는 방법](/powershell/scripting/developer/cmdlet/how-to-create-a-windows-powershell-snap-in)을 참조 하세요.
+- `Add-PSSnapin` 현재 세션에만 스냅인을 추가 합니다. 모든 Windows PowerShell 세션에 스냅인을 추가하려면 스냅인을 Windows PowerShell 프로필에 추가합니다. 자세한 내용은 about_Profiles를 참조하세요.
+- Microsoft .NET Framework 설치 유틸리티를 사용 하 여 등록 된 모든 스냅인을 추가할 수 있습니다. 자세한 내용은 [cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](/previous-versions//ms714644(v=vs.85))을 참조 하세요.
+- 컴퓨터에 등록 된 스냅인 목록을 가져오려면를 입력 `Get-PSSnapin -Registered` 합니다.
+- 스냅인을 추가 하기 전에는 `Add-PSSnapin` 스냅인의 버전을 확인 하 여 현재 버전의 Windows PowerShell과 호환 되는지 확인 합니다. 스냅인이 버전 확인에 실패하면 Windows PowerShell에서 오류를 보고합니다.
 
 ## 관련 링크
 

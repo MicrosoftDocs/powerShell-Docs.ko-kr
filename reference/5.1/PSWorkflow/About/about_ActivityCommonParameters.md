@@ -6,12 +6,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/psworkflow/about/about_activitycommonparameters?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_ActivityCommonParameters
-ms.openlocfilehash: b745bf17e4ae26156042ecdc25211830177bc692
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 93fdcdb9c5afe0b73e843baf2474ec7d3f96a6cf
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93221914"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387807"
 ---
 # <a name="about-activitycommonparameters"></a>ActivityCommonParameters 정보
 
@@ -150,7 +150,7 @@ WinRM 서비스는 애플리케이션 이름을 사용하여 연결 요청을 �
 
 대상 컴퓨터에 연결할 때 사용자의 자격 증명을 인증 하는 데 사용 되는 메커니즘을 지정 합니다. 유효한 값은 Default, Basic, Credssp, Digest, Kerberos, Negotiate 및 NegotiateWithImplicitCredential입니다. 기본값은 Default입니다. 이 활동 일반 매개 변수는 워크플로 일반 매개 변수 이기도 합니다.
 
-이 매개 변수 값에 대한 자세한 내용은 MSDN의 **System.Management.Automation.Runspaces.AuthenticationMechanism** 열거형 설명을 참조하세요.
+이 매개 변수 값에 대 한 자세한 내용은 PowerShell SDK의 **runspace** 열거에 대 한 설명을 참조 하세요.
 
 > [!WARNING]
 > 사용자 자격 증명이 인증할 원격 컴퓨터로 전달되는 CredSSP(Credential Security Service Provider) 인증은 원격 네트워크 공유 액세스 등 두 개 이상의 리소스에서 인증이 필요한 명령에 사용됩니다. 이렇게 하면 원격 작업의 보안 위험이 커집니다. 원격 컴퓨터가 손상된 경우 이 컴퓨터로 전달된 자격 증명을 사용하여 네트워크 세션을 제어할 수 있습니다.

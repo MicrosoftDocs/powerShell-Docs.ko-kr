@@ -6,12 +6,12 @@ ms.date: 07/23/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_desiredstateconfiguration?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_DesiredStateConfiguration
-ms.openlocfilehash: 2f043104c67078b98355b3e54171a8993e534837
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: 5d088934ffc953ad19be401bce72f6287f0fde07
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93224889"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387025"
 ---
 # <a name="about_desiredstateconfiguration"></a>about_DesiredStateConfiguration
 
@@ -27,12 +27,12 @@ DSC는 소프트웨어 환경의 상태를 구성 하는 방법을 선언적으�
 
 DSC는 PowerShell 4.0에서 도입 되었습니다.
 
-DSC에 대 한 자세한 내용은 TechNet 라이브러리에서 [PowerShell 필요한 상태 구성 개요](/powershell/scripting/dsc/overview/overview) 를 참조 하세요.
+DSC에 대 한 자세한 내용은 [PowerShell 필요한 상태 구성 개요](/powershell/scripting/dsc/overview/overview)를 참조 하세요.
 
 ## <a name="developing-dsc-resources-with-classes"></a>클래스를 사용 하 여 DSC 리소스 개발
 
 PowerShell 5.0부터 클래스를 사용 하 여 DSC 리소스를 개발할 수 있습니다.
-자세한 내용은 [about_Classes](about_Classes.md)및 Microsoft TechNet의 [PowerShell 클래스를 사용 하 여 사용자 지정 DSC 리소스 작성](/previous-versions//dn948461(v=technet.10)) 을 참조 하세요.
+자세한 내용은 [about_Classes](about_Classes.md)및 [PowerShell 클래스를 사용 하 여 사용자 지정 DSC 리소스 작성](/powershell/scripting/dsc/resources/authoringresourceclass)을 참조 하세요.
 
 ## <a name="using-dsc"></a>DSC 사용
 
@@ -102,7 +102,7 @@ Test-DscConfiguration -CimSession $session
 
 구성 스크립트에서 다음과 같은 기본 제공 리소스를 사용할 수 있습니다.
 
-|속성                  |속성                                         |
+|name                  |속성                                         |
 |----------------------|---------------------------------------------------|
 |파일                  |{DestinationPath, Attributes, Checksum, Content ...}|
 |보관               |{Destination, Path, Checksum, Credential ...}       |

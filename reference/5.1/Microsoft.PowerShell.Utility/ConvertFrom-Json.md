@@ -7,12 +7,12 @@ ms.date: 10/10/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertFrom-Json
-ms.openlocfilehash: f2159a2de3432aec14fb395b93ed476f349616a8
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: e1bab9250269dadf0d899f9e172e8a4a8387271d
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214145"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388130"
 ---
 # ConvertFrom-Json
 

@@ -6,16 +6,17 @@ ms.date: 10/18/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_filesystem_provider?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: 파일 시스템 공급자
-ms.openlocfilehash: 24c30e311ba43842e759e884424ce3abfb92aae7
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 3464dbcbc1a7f357cdbc5368dc7a1e4d21f5ed5e
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93221665"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387609"
 ---
 # <a name="filesystem-provider"></a>파일 시스템 공급자
 
 ## <a name="provider-name"></a>공급자 이름
+
 FileSystem
 
 ## <a name="drives"></a>드라이브
@@ -205,7 +206,7 @@ $e[0]
 Get-Acl -Path test.txt | Format-List -Property *
 ```
 
-이 개체에 대 한 자세한 내용은 명령을 [Get Member](xref:Microsoft.PowerShell.Utility.Get-Member) cmdlet에 파이프 합니다. 또는 MSDN (Microsoft Developer Network) 라이브러리의 "[System.security.accesscontrol.filesecurity](/dotnet/api/system.security.accesscontrol.filesecurity) 클래스"를 참조 하십시오.
+이 개체에 대 한 자세한 내용은 명령을 [Get Member](xref:Microsoft.PowerShell.Utility.Get-Member) cmdlet에 파이프 합니다. 또는 [System.security.accesscontrol.filesecurity](/dotnet/api/system.security.accesscontrol.filesecurity) 클래스를 참조 하세요.
 
 ### <a name="modify-the-acl-for-a-file"></a>파일에 대 한 ACL 수정
 
@@ -367,7 +368,7 @@ Get-ChildItem -Attributes Compressed,Encrypted
 
 > [!NOTE]
 > 현재 `-Delimiter` 매개 변수 값이 빈 문자열인 경우 [Get Content](xref:Microsoft.PowerShell.Management.Get-Content) 는 아무것도 반환 하지 않습니다.
-> 이것은 알려진 문제입니다. 강제로 [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content)가 전체 파일을 구분되지 않은 단일 문자열로 반환하게 하려면 파일에 존재하지 않는 값을 입력합니다.
+> 이것은 알려진 문제이며 강제로 [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content)가 전체 파일을 구분되지 않은 단일 문자열로 반환하게 하려면 파일에 존재하지 않는 값을 입력합니다.
 
 #### <a name="cmdlets-supported"></a>Cmdlet 지원
 
@@ -558,6 +559,6 @@ Get-Help Get-ChildItem
 Get-Help Get-ChildItem -Path c:
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [about_Providers](../About/about_Providers.md)

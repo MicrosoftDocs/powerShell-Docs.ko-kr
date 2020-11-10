@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/select-xml?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Select-Xml
-ms.openlocfilehash: 62d88dc105121ea0f6194dcdcfe3a234b654c6ee
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: d3cadbc6ca08741f8e747ad59456e5b6924e1688
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93218609"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94386940"
 ---
 # Select-Xml
 
@@ -327,7 +327,7 @@ Accept wildcard characters: False
 
 ## 참고
 
-* XPath는 XML 문서의 부분을 식별하도록 설계된 표준 언어입니다. XPath 언어에 대 한 자세한 내용은 MSDN library에서 [이벤트 선택](https://msdn.microsoft.com/library/aa385231) 의 [Xpath 참조](https://msdn.microsoft.com/library/ms256115) 및 선택 필터 섹션을 참조 하십시오.
+XPath는 XML 문서의 부분을 식별하도록 설계된 표준 언어입니다. XPath 언어에 대 한 자세한 내용은 [이벤트 선택](/previous-versions//aa385231(v=vs.85))의 [Xpath 참조](/dotnet/standard/data/xml/select-nodes-using-xpath-navigation) 및 선택 필터 섹션을 참조 하십시오.
 
 ## 관련 링크
 

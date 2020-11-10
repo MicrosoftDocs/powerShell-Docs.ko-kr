@@ -6,12 +6,12 @@ ms.date: 04/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_methods?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_methods
-ms.openlocfilehash: 45a57efdf16779cfed0df627976270871068ed1f
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 1acbe79deefbc21c4ce42bfc651eeb04ac189879
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93221505"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387620"
 ---
 # <a name="about-methods"></a>메서드 정보
 
@@ -81,7 +81,7 @@ PowerShell 4.0부터 동적 메서드 이름을 사용한 메서드 호출이 �
 
 ### <a name="learning-about-methods"></a>메서드 학습
 
-개체의 메서드에 대 한 정의를 찾으려면 MSDN에서 개체 형식에 대 한 도움말 항목으로 이동 하 여 해당 메서드 페이지를 찾습니다. 예를 들어 다음 페이지 [에서는 개체를](/dotnet/api/system.diagnostics.process#methods)처리 하는 프로세스의 메서드를 설명 합니다.
+개체의 메서드에 대 한 정의를 찾으려면 개체 형식에 대 한 도움말 항목으로 이동 하 여 해당 메서드 페이지를 찾습니다. 예를 들어 다음 페이지 [에서는 개체를](/dotnet/api/system.diagnostics.process#methods)처리 하는 프로세스의 메서드를 설명 합니다.
 
 메서드의 인수를 확인 하려면 PowerShell cmdlet의 구문 다이어그램과 같은 메서드 정의를 검토 합니다.
 

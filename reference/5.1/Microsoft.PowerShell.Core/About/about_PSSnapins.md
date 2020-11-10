@@ -6,12 +6,12 @@ ms.date: 01/03/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pssnapins?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_PSSnapins
-ms.openlocfilehash: cc22f8de0b9d8a55dcfa12f3b47f3852d891e67b
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 494b3275e4fe8a3aacdc358317950542962957cf
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222665"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388895"
 ---
 # <a name="about-pssnapins"></a>PSSnapins 정보
 
@@ -57,7 +57,7 @@ Get-Command -Module <snap-in_name>
 
 Windows PowerShell 스냅인은 .dll 파일로 컴파일되는 .NET Framework 언어로 작성 된 프로그램입니다. 스냅인에서 공급자 및 cmdlet을 사용 하려면 먼저 스냅인을 등록 해야 합니다 (레지스트리에 추가).
 
-대부분의 스냅인에는 .dll 파일을 등록 하는 설치 프로그램 (.exe 또는 .msi 파일)이 포함 되어 있습니다. 그러나 스냅인을 .dll 파일로 받는 경우 시스템에 등록할 수 있습니다. 자세한 내용은 MSDN library에서 [cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](https://go.microsoft.com/fwlink/?LinkID=143619) 을 참조 하십시오.
+대부분의 스냅인에는 .dll 파일을 등록 하는 설치 프로그램 (.exe 또는 .msi 파일)이 포함 되어 있습니다. 그러나 스냅인을 .dll 파일로 받는 경우 시스템에 등록할 수 있습니다. 자세한 내용은 [cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](/previous-versions//ms714644(v=vs.85))을 참조 하세요.
 
 시스템에서 등록 된 모든 스냅인을 가져오거나 스냅인이 등록 되었는지 확인 하려면 다음을 입력 합니다.
 

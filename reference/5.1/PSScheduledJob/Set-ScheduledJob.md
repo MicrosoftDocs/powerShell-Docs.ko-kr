@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/psscheduledjob/set-scheduledjob?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ScheduledJob
-ms.openlocfilehash: 99dbdc84430c0a8b5cf505a22b139cd07236e160
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 6144d9f19b86727bc09d07e94f4bcf158e3b7071
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213369"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387909"
 ---
 # Set-ScheduledJob
 
@@ -149,8 +149,7 @@ Accept wildcard characters: False
 - Negotiate
 - NegotiateWithImplicitCredential
 
-기본값은 Default입니다.
-이 매개 변수 값에 대 한 자세한 내용은 MSDN library에서 [Authenticationmechanism 열거](https://msdn.microsoft.com/library/system.management.automation.runspaces.authenticationmechanism) 를 참조 하세요.
+기본값은 Default입니다. 이 매개 변수 값에 대 한 자세한 내용은 PowerShell SDK에서 [Authenticationmechanism 열거](/dotnet/api/system.management.automation.runspaces.authenticationmechanism) 를 참조 하세요.
 
 주의: 사용자의 자격 증명이 인증을 위해 원격 컴퓨터에 전달 되는 CredSSP (자격 증명 보안 지원 공급자) 인증은 원격 네트워크 공유에 액세스 하는 것과 같이 둘 이상의 리소스에서 인증이 필요한 명령에 대해 설계 되었습니다.
 이렇게 하면 원격 작업의 보안 위험이 커집니다.

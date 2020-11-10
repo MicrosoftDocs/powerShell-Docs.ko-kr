@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/write-eventlog?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Write-EventLog
-ms.openlocfilehash: cae34c4cf942d9aa4abb9a2d716ef9854f70de2e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4044453cb46b407344619f1edd3227213bf67250
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214297"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388249"
 ---
 # Write-EventLog
 
@@ -27,12 +27,11 @@ Write-EventLog [-LogName] <String> [-Source] <String> [[-EntryType] <EventLogEnt
 ```
 
 ## 설명
-**EventLog** cmdlet은 이벤트 로그에 이벤트를 기록 합니다.
+Cmdlet은 이벤트 `Write-EventLog` 로그에 이벤트를 기록 합니다.
 
 이벤트 로그에 이벤트를 쓰려면 컴퓨터에 이벤트 로그가 있어야 하고 이벤트 로그의 원본이 등록되어 있어야 합니다.
 
-**Eventlog** 명사를 포함 하는 Cmdlet ( **eventlog** cmdlet)은 클래식 이벤트 로그 에서만 작동 합니다.
-Windows Vista 이상 버전의 windows 운영 체제에서 Windows 이벤트 로그 기술을 사용 하는 로그에서 이벤트를 가져오려면 Get-WinEvent cmdlet을 사용 합니다.
+**Eventlog** 명사를 포함 하는 Cmdlet ( **eventlog** cmdlet)은 클래식 이벤트 로그 에서만 작동 합니다. Windows Vista 이상 버전의 windows 운영 체제에서 Windows 이벤트 로그 기술을 사용 하는 로그에서 이벤트를 가져오려면 cmdlet을 사용 `Get-WinEvent` 합니다.
 
 ## 예제
 
@@ -55,8 +54,8 @@ PS C:\> Write-EventLog -ComputerName "Server01" -LogName Application -Source "My
 ## PARAMETERS
 
 ### -범주
-이벤트의 작업 범주를 지정합니다.
-이벤트 로그에 대한 범주 메시지 파일의 문자열과 연결된 정수를 입력합니다.
+
+이벤트의 작업 범주를 지정합니다. 이벤트 로그에 대한 범주 메시지 파일의 문자열과 연결된 정수를 입력합니다.
 
 ```yaml
 Type: System.Int16
@@ -71,13 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-원격 컴퓨터를 지정합니다.
-기본값은 로컬 컴퓨터입니다.
+
+원격 컴퓨터를 지정합니다. 기본값은 로컬 컴퓨터입니다.
 
 원격 컴퓨터의 NetBIOS 이름, IP 주소 또는 정규화된 도메인 이름을 입력하세요.
 
-이 매개 변수는 Windows PowerShell 원격 기능을 사용하지 않습니다.
-컴퓨터가 원격 명령을 실행 하도록 구성 되지 않은 경우에도 Get-EventLog cmdlet의 *ComputerName* 매개 변수를 사용할 수 있습니다.
+이 매개 변수는 Windows PowerShell 원격 기능을 사용하지 않습니다. **ComputerName** `Get-EventLog` 컴퓨터에서 원격 명령을 실행 하도록 구성 되지 않은 경우에도 cmdlet의 ComputerName 매개 변수를 사용할 수 있습니다.
 
 ```yaml
 Type: System.String
@@ -92,11 +90,10 @@ Accept wildcard characters: False
 ```
 
 ### -Entrytype 관련이
-이벤트의 항목 유형을 지정합니다.
-이 매개 변수에 허용 되는 값은 Error, Warning, Information, SuccessAudit 및 FailureAudit입니다.
-기본값은 Information입니다.
 
-값에 대 한 설명은 MSDN library에서 [EventLogEntryType 열거](https://go.microsoft.com/fwlink/?LinkId=143599) 를 참조 하세요.
+이벤트의 항목 유형을 지정합니다. 이 매개 변수에 허용 되는 값은 Error, Warning, Information, SuccessAudit 및 FailureAudit입니다. 기본값은 Information입니다.
+
+값에 대 한 설명은 [EventLogEntryType 열거](/dotnet/api/system.diagnostics.eventlogentrytype)를 참조 하세요.
 
 ```yaml
 Type: System.Diagnostics.EventLogEntryType
@@ -112,9 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -EventId
-이벤트 식별자를 지정합니다.
-이 매개 변수는 필수적 요소입니다.
-*EventId* 매개 변수의 최대값은 65535입니다.
+
+이벤트 식별자를 지정합니다. 이 매개 변수는 필수적 요소입니다. **EventId** 매개 변수의 최대값은 65535입니다.
 
 ```yaml
 Type: System.Int32
@@ -129,10 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -LogName
-이벤트가 기록되는 로그의 이름을 지정합니다.
-로그 이름을 입력 합니다.
-로그 이름은 **Logdisplayname** 이 아닌 **log** 속성의 값입니다.
-와일드카드 문자는 사용할 수 없습니다.
+
+이벤트가 기록되는 로그의 이름을 지정합니다. 로그 이름을 입력 합니다. 로그 이름은 **Logdisplayname** 이 아닌 **log** 속성의 값입니다. 와일드카드 문자는 사용할 수 없습니다.
 이 매개 변수는 필수적 요소입니다.
 
 ```yaml
@@ -148,8 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -메시지
-이벤트 메시지를 지정합니다.
-이 매개 변수는 필수적 요소입니다.
+
+이벤트 메시지를 지정합니다. 이 매개 변수는 필수적 요소입니다.
 
 ```yaml
 Type: System.String
@@ -164,6 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -RawData
+
 이벤트와 연결된 이진 데이터를 바이트 단위로 지정합니다.
 
 ```yaml
@@ -179,6 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -Source
+
 이벤트 원본을 지정합니다. 일반적으로 로그에 이벤트를 쓰는 애플리케이션의 이름입니다.
 
 ```yaml
@@ -194,6 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.
 
 ## 입력
@@ -208,9 +205,7 @@ Accept wildcard characters: False
 
 ## 참고
 
-* **쓰기 이벤트** 를 사용 하려면 관리자 권한으로 실행 옵션을 사용 하 여 Windows PowerShell을 시작 합니다.
-
-*
+을 사용 하려면 `Write-EventLog` 관리자 권한으로 실행 옵션을 사용 하 여 Windows PowerShell을 시작 합니다.
 
 ## 관련 링크
 

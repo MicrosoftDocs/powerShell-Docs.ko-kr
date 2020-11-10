@@ -7,12 +7,12 @@ ms.date: 5/15/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/connect-pssession?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Connect-PSSession
-ms.openlocfilehash: 8aff8a2b3962b3bf09d158247c06b36f99eaf527
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: 3352055e9c77dd944ffd66fa5db9863166ad7e95
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94342521"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388810"
 ---
 # Connect-PSSession
 
@@ -213,7 +213,6 @@ Id Name            ComputerName    State         ConfigurationName     Availabil
 **ConnectionURI** 매개 변수를 사용하면 원격 대상에서 다른 URI로 리디렉션하는 명령을 반환할 수 있습니다. 기본적으로 PowerShell은 연결을 리디렉션하지 않지만이 매개 변수를 사용 하 여 연결을 리디렉션할 수 있습니다.
 
 또한 **MaximumConnectionRedirectionCount** 세션 옵션 값을 변경하여 연결이 리디렉션되는 횟수를 제한할 수도 있습니다. Cmdlet의 **Maximumredirection** 매개 변수를 사용 `New-PSSessionOption` 하거나 **$PSSessionOption** 기본 설정 변수의 **MaximumConnectionRedirectionCount** 속성을 설정 합니다. 기본값은 5입니다.
-기본값은 5입니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -261,7 +260,7 @@ Accept wildcard characters: False
 
 기본값은 Default입니다.
 
-이 매개 변수 값에 대 한 자세한 내용은 MSDN library에서 [Authenticationmechanism 열거](https://msdn.microsoft.com/library/system.management.automation.runspaces.authenticationmechanism) 를 참조 하세요.
+이 매개 변수 값에 대 한 자세한 내용은 [Authenticationmechanism 열거](/dotnet/api/system.management.automation.runspaces.authenticationmechanism)를 참조 하세요.
 
 > [!CAUTION]
 > 사용자의 자격 증명이 인증을 위해 원격 컴퓨터로 전달되는 CredSSP(자격 증명 보안 지원 공급자) 인증은 둘 이상의 리소스에서 인증이 필요한 명령(예: 원격 네트워크 공유 액세스)에 사용됩니다. 이렇게 하면 원격 작업의 보안 위험이 커집니다. 원격 컴퓨터가 손상된 경우 이 컴퓨터로 전달된 자격 증명을 사용하여 네트워크 세션을 제어할 수 있습니다.
@@ -611,9 +610,9 @@ Accept wildcard characters: False
 
   **가용성** 값 None은 세션에 연결할 수 있음을 나타냅니다. 사용 중 값은 다른 세션에 연결 되어 있으므로 **PSSession** 에 연결할 수 없음을 나타냅니다.
 
-  세션의 **State** 속성 값에 대 한 자세한 내용은 MSDN Library에서 [RunspaceState 열거](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspacestate) 를 참조 하세요.
+  세션의 **State** 속성 값에 대 한 자세한 내용은 [RunspaceState 열거형](/dotnet/api/system.management.automation.runspaces.runspacestate)을 참조 하세요.
 
-  세션의 **Availability** 속성 값에 대 한 자세한 내용은 MSDN Library에서 [RunspaceAvailability 열거](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspaceavailability) 를 참조 하세요.
+  세션의 **Availability** 속성 값에 대 한 자세한 내용은 [RunspaceAvailability 열거형](/dotnet/api/system.management.automation.runspaces.runspaceavailability)을 참조 하세요.
 
 - **Pssession** 에 연결할 때 **pssession** 의 유휴 시간 제한 값은 변경할 수 없습니다. 의 **sessionoption** 매개 변수는 `Connect-PSSession` **IdleTimeout** 값을 포함 하는 **sessionoption** 개체를 사용 합니다. 그러나 PSSession에 연결 하는 경우 **Sessionoption** 개체의 **idletimeout** 값과 해당 변수의 **idletimeout** 값은 `$PSSessionOption` **PSSession** 무시 됩니다.
 

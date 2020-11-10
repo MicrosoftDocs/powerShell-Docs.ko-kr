@@ -6,12 +6,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/psworkflow/about/about_workflowcommonparameters?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_WorkflowCommonParameters
-ms.openlocfilehash: 386200475c1dab9735921edd60abbde20ee354c4
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: c371666d4f58386848e7ef715b7c804dc1e8f28e
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93221857"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387790"
 ---
 # <a name="about-workflowcommonparameters"></a>WorkflowCommonParameters 정보
 
@@ -79,7 +79,7 @@ WinRM 서비스는 애플리케이션 이름을 사용하여 연결 요청을 �
 
 기본값은 **Default** 입니다.
 
-이 매개 변수 값에 대 한 자세한 내용은 `System.Management.Automation.Runspaces.AuthenticationMechanism` MSDN의 열거 설명을 참조 하십시오.
+이 매개 변수 값에 대 한 자세한 내용은 PowerShell SDK의 열거에 대 한 설명을 참조 하세요 `System.Management.Automation.Runspaces.AuthenticationMechanism` .
 
 > [!WARNING]
 > 사용자 자격 증명이 인증할 원격 컴퓨터로 전달되는 CredSSP(Credential Security Service Provider) 인증은 원격 네트워크 공유 액세스 등 두 개 이상의 리소스에서 인증이 필요한 명령에 사용됩니다. 이렇게 하면 원격 작업의 보안 위험이 커집니다. 원격 컴퓨터가 손상된 경우 이 컴퓨터로 전달된 자격 증명을 사용하여 네트워크 세션을 제어할 수 있습니다.
@@ -166,7 +166,7 @@ URI의 전송 세그먼트에 유효한 값은 **HTTP** 및 **HTTPS** 입니다.
 
 각 대상 컴퓨터에 대해 하나의 해시 테이블을 사용 하 여 쉼표로 구분 된 해시 테이블 목록을 입력 합니다. 각 해시 테이블에서 첫 번째 키는이 `PSComputerName` 고 해당 값은 대상 컴퓨터의 이름입니다. 컴퓨터 이름에 와일드 카드 문자를 사용할 수 있습니다. 해시 테이블의 나머지 키에 대 한 키는 매개 변수 이름이 고 값은 매개 변수 값입니다.
 
-다음은 그 예입니다. 
+예를 들어:
 
 ```powershell
 -PSParameterCollection @{PSComputerName="*"; PSElapsedTimeoutSec=20},

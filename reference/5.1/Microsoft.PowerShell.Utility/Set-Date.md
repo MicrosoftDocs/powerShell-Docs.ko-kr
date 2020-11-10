@@ -7,12 +7,12 @@ ms.date: 4/30/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-date?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Date
-ms.openlocfilehash: c3cc162fdb8b3d04236f2186438fa14b8a0b42b3
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 36e49d36ffe7e4000926cf821767dfb158efcf46
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213698"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387977"
 ---
 # Set-Date
 
@@ -131,12 +131,9 @@ Accept wildcard characters: False
 
 표시 되는 날짜 및 시간 요소를 지정 합니다. 이 매개 변수에 허용 되는 값은 다음과 같습니다.
 
-- **날짜** .
-  날짜만 표시 합니다.
-- **시간** .
-  시간만 표시 합니다.
-- **DateTime** .
-  날짜와 시간을 표시 합니다.
+- **날짜** -날짜만 표시 합니다.
+- **시간** -시간만 표시 합니다.
+- 날짜 **/시간-날짜** 및 시간을 표시 합니다.
 
 이 매개 변수는 표시에만 영향을 주고
 을 검색 하는 **DateTime** 개체에는 영향을 주지 않습니다 `Get-Date` .
@@ -208,7 +205,7 @@ Accept wildcard characters: False
 - 컴퓨터의 날짜 및 시간을 변경할 때이 cmdlet을 사용 하면 주의 해야 합니다. 이 변경 내용으로 인해 컴퓨터가 날짜 또는 시간에 의해 트리거되는 시스템 전체 이벤트 및 업데이트를 받지 못할 수 있습니다. 오류를 방지 하려면 **WhatIf** 및 **Confirm** 매개 변수를 사용 합니다.
 - **DateTime** **TimeSpan** `Set-Date` **AddDays** , **addmonths** 및 **fromfiletime** 과 같이와 함께 사용 되는 DateTime 및 TimeSpan 개체에 표준 .net 메서드를 사용할 수 있습니다. 자세한 내용은 [DateTime 메서드](/dotnet/api/system.datetime) 및를 참조 하세요.
 
-  MSDN library의 [TimeSpan 메서드](/dotnet/api/system.timespan) .
+  .NET SDK의 [TimeSpan 메서드](/dotnet/api/system.timespan) .
 
 ## 관련 링크
 
