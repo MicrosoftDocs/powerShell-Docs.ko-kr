@@ -7,12 +7,12 @@ ms.date: 04/23/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-pssession?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-PSSession
-ms.openlocfilehash: 2fda80c934db3e868f0e49e131e6721c7b899f7c
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
+ms.openlocfilehash: 5d5841720c6187863902a929632e15d1687685e1
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "93218009"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389405"
 ---
 # Export-PSSession
 
@@ -213,7 +213,7 @@ Accept wildcard characters: True
 - ExternalScript. Path 환경 변수 ()에 나열 된 경로에 있는 모든 ps1 파일 `$env:path`
 - 필터 및 함수 모든 PowerShell 함수입니다.
 - 스크립트. 현재 세션에 있는 스크립트 블록입니다.
-- 워크플로. PowerShell 워크플로입니다. 자세한 내용은 [about_Workflows](/powershell/module/psworkflow/about/about_workflows?view=powershell-5.1)를 참조 하세요.
+- 워크플로. PowerShell 워크플로입니다. 자세한 내용은 [about_Workflows](/powershell/module/PSWorkflow/About/about_Workflows)를 참조 하세요.
 
 ```yaml
 Type: System.Management.Automation.CommandTypes
@@ -300,14 +300,12 @@ Accept wildcard characters: False
 
 ### -변수인 fullyqualifiedmodule
 
-**ModuleSpecification** 개체 형식으로 지정 된 이름을 사용 하 여 모듈을 지정 합니다.
-[ModuleSpecification 생성자 (Hashtable)](https://msdn.microsoft.com/library/jj136290)의 설명 섹션을 참조 하세요.
+**ModuleSpecification** 개체 형식으로 지정 된 이름을 사용 하 여 모듈을 지정 합니다. [ModuleSpecification 생성자 (Hashtable)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_)의 설명 섹션을 참조 하세요.
 
 예를 들어 **변수인 fullyqualifiedmodule** 매개 변수는 다음 형식 중 하나로 지정 된 모듈 이름을 허용 합니다.
 
-`@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
-
-`@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
 
 **ModuleName** 및 **ModuleVersion** 은 필수이지만 **Guid** 는 선택 사항입니다. **모듈** 매개 변수와 동일한 명령에 **변수인 fullyqualifiedmodule** 매개 변수를 지정할 수 없습니다. 두 매개 변수는 함께 사용할 수 없습니다.
 

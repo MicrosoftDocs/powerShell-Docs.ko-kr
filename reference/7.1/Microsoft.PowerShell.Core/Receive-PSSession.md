@@ -7,12 +7,12 @@ ms.date: 12/11/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/receive-pssession?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Receive-PSSession
-ms.openlocfilehash: e9b99b824a0ffe59e4572a57998010667788b59d
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: 3c22bb28357a5dd0a5e402eafe1597cabdc3ed84
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94345938"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390697"
 ---
 # Receive-PSSession
 
@@ -789,7 +789,7 @@ Cmdlet을 사용 하 여 `Invoke-Command` `Start-Job` 원격 세션에서 명령
 - **State** 속성 값은 현재 세션을 기준으로 합니다. 연결 끊김 값은 **PSSession** 이 현재 세션에 연결 되지 않았음을 의미 합니다. 그러나 모든 세션에서 **PSSession** 의 연결이 끊어졌음을 의미 하는 것은 아닙니다. 다른 세션에 연결되어 있을 수도 있습니다.
   세션에 연결하거나 다시 연결할 수 있는지 확인하려면 **Availability** 속성을 사용합니다.
 - **가용성** 값 None은 세션에 연결할 수 있음을 나타냅니다. 사용 중 값은 다른 세션에 연결 되어 있으므로 **PSSession** 에 연결할 수 없음을 나타냅니다.
-- 세션의 **State** 속성 값에 대 한 자세한 내용은 MSDN Library에서 [RunspaceState](/dotnet/api/system.management.automation.runspaces.runspacestate) 을 참조 하십시오.
+- 세션의 **State** 속성 값에 대 한 자세한 내용은 [RunspaceState](/dotnet/api/system.management.automation.runspaces.runspacestate)를 참조 하세요.
 - 세션의 **Availability** 속성 값에 대 한 자세한 내용은 [RunspaceAvailability](/dotnet/api/system.management.automation.runspaces.runspaceavailability)를 참조 하십시오.
 
 ## 관련 링크
@@ -819,4 +819,3 @@ Cmdlet을 사용 하 여 `Invoke-Command` `Start-Job` 원격 세션에서 명령
 [New-PSTransportOption](New-PSTransportOption.md)
 
 [Remove-PSSession](Remove-PSSession.md)
-

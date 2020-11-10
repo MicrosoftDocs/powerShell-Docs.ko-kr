@@ -6,12 +6,12 @@ ms.date: 01/04/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.wsman.management/about/about_ws-management_cmdlets?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_WS Management_Cmdlets
-ms.openlocfilehash: 5188ad9e1bbf8c2bcbfbedc08f73751c5330d3f6
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: c9d89d0559bf844927976c78bde6fca58ffa8855
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93220473"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390510"
 ---
 # <a name="about-ws-management-cmdlets"></a>WS-Management Cmdlet 정보
 
@@ -90,7 +90,7 @@ WS-Management 기능은 cmdlet 및 WSMan 공급자 집합을 포함 하는 모�
 
 ## <a name="additional-ws-management-information"></a>추가 WS-Management 정보
 
-WS 관리에 대 한 자세한 내용은 MSDN (Microsoft Developer Network) 라이브러리의 다음 항목을 참조 하십시오.
+WS 관리에 대 한 자세한 내용은 Windows 설명서에서 다음 항목을 참조 하세요.
 
 [Windows 원격 관리](/windows/win32/winrm/portal)
 

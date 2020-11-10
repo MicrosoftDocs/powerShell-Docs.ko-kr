@@ -7,12 +7,12 @@ ms.date: 4/26/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/add-member?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-Member
-ms.openlocfilehash: 29a39e88d6d39659df1dd9d2e05318351dc47f3a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 8c27ebe1c5f1a0c53f5012f1faa17a9fdb1cdcff
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210361"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391037"
 ---
 # Add-Member
 
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 - ScriptMethod
 - CodeMethod
 
-이러한 값에 대 한 자세한 내용은 MSDN library에서 [PSMemberTypes 열거](/dotnet/api/system.management.automation.psmembertypes) 를 참조 하세요.
+이러한 값에 대 한 자세한 내용은 PowerShell SDK의 [PSMemberTypes 열거](/dotnet/api/system.management.automation.psmembertypes) 를 참조 하세요.
 
 모든 개체가 모든 멤버 유형을 포함하는 것은 아닙니다.
 개체에 포함 되지 않은 멤버 유형을 지정 하면 PowerShell에서 오류를 반환 합니다.

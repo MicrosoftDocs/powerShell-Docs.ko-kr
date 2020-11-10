@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertTo-Json
-ms.openlocfilehash: b4d65b5013ba3e3f172d0780e7c8a3ad31c740a1
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: acfeae4025b3a32d2a04307609597cf30332d708
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93215865"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389456"
 ---
 # ConvertTo-Json
 
@@ -306,4 +306,3 @@ Accept wildcard characters: False
 [Invoke-RestMethod](Invoke-RestMethod.md)
 
 [NewtonSoft.Js합니다. StringEscapeHandling](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_StringEscapeHandling.htm)
-

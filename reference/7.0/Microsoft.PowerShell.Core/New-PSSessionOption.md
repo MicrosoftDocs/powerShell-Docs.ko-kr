@@ -7,12 +7,12 @@ ms.date: 02/07/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-PSSessionOption
-ms.openlocfilehash: 3a9336fedece67c2c84532f226cec01de14cbb2a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 6002003b413cede3cbdb0eeeb40646facb566f61
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210673"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389762"
 ---
 # New-PSSessionOption
 
@@ -532,7 +532,7 @@ Accept wildcard characters: False
 
 기본값은 None입니다.
 
-이 매개 변수 값에 대 한 자세한 내용은 [System.management.automation.remoting.proxyaccesstype 열거형](/dotnet/api/system.management.automation.remoting.proxyaccesstype?redirectedfrom=MSDN&view=powershellsdk-1.1.0)을 참조 하세요.
+이 매개 변수 값에 대 한 자세한 내용은 [System.management.automation.remoting.proxyaccesstype 열거형](/dotnet/api/system.management.automation.remoting.proxyaccesstype)을 참조 하세요.
 
 ```yaml
 Type: System.Management.Automation.Remoting.ProxyAccessType
@@ -551,7 +551,7 @@ Accept wildcard characters: False
 
 프록시 확인에 사용되는 인증 방법을 지정합니다. 이 매개 변수에 허용 되는 값은 **Basic** , **Digest** 및 **Negotiate** 입니다. 기본값은 **Negotiate** 입니다.
 
-이 매개 변수 값에 대 한 자세한 내용은 [Authenticationmechanism 열거](/dotnet/api/system.management.automation.runspaces.authenticationmechanism?redirectedfrom=MSDN&view=powershellsdk-1.1.0)를 참조 하세요.
+이 매개 변수 값에 대 한 자세한 내용은 [Authenticationmechanism 열거](/dotnet/api/system.management.automation.runspaces.authenticationmechanism)를 참조 하세요.
 
 ```yaml
 Type: System.Management.Automation.Runspaces.AuthenticationMechanism

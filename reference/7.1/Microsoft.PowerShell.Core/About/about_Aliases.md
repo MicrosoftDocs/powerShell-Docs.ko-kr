@@ -6,12 +6,12 @@ ms.date: 11/27/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_aliases?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Aliases
-ms.openlocfilehash: e0a1fa357e591dd17986a8dd685a1818751ab355
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 9213bd41af6d5383c7e67d33b8909736a6e380bb
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93224082"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391292"
 ---
 # <a name="about-aliases"></a>별칭 정보
 
@@ -171,10 +171,10 @@ Get-Help about_Functions
 
 ## <a name="alias-objects"></a>별칭 개체
 
-PowerShell 별칭은 System.management.automation.aliasinfo 클래스의 인스턴스인 개체로 표현 됩니다. 이 형식의 개체에 대 한 자세한 내용은 MSDN (Microsoft Developer Network) 라이브러리의 [System.management.automation.aliasinfo 클래스][aliasinfo] 를 참조 하세요.
+PowerShell 별칭은 System.management.automation.aliasinfo 클래스의 인스턴스인 개체로 표현 됩니다. 이 형식의 개체에 대 한 자세한 내용은 PowerShell SDK의 [System.management.automation.aliasinfo 클래스][aliasinfo] 를 참조 하세요.
 
 별칭 개체의 속성 및 메서드를 보려면 별칭을 가져옵니다.
-그런 다음 Get-Member cmdlet으로 파이프 합니다. 다음은 그 예입니다. 
+그런 다음 Get-Member cmdlet으로 파이프 합니다. 예를 들어:
 
 ```powershell
 Get-Alias | Get-Member
@@ -202,7 +202,7 @@ Set-Location Alias:
 Get-ChildItem
 ```
 
-다른 PowerShell 드라이브에서 드라이브의 내용을 보려면 드라이브 이름으로 경로를 시작 합니다. 콜론 (:)을 포함 합니다. 다음은 그 예입니다. 
+다른 PowerShell 드라이브에서 드라이브의 내용을 보려면 드라이브 이름으로 경로를 시작 합니다. 콜론 (:)을 포함 합니다. 예를 들어:
 
 ```powershell
 Get-ChildItem -Path Alias:
@@ -235,4 +235,3 @@ Get-Help Alias
 
 <!-- External links -->
 [aliasinfo]: /dotnet/api/system.management.automation.aliasinfo
-

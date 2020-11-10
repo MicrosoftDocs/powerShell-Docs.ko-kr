@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/debug-process?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Debug-Process
-ms.openlocfilehash: a2d7a6d10e9dcc132defd7297c2255ab47dab112
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 05075a00074eb69a0fe492da95c28c2ad912c291
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212545"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389048"
 ---
 # Debug-Process
 
@@ -41,11 +41,10 @@ Debug-Process -InputObject <Process[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 
 ## 설명
 
-**디버그 프로세스** cmdlet은 로컬 컴퓨터에서 실행 중인 하나 이상의 프로세스에 디버거를 연결 합니다.
+`Debug-Process`Cmdlet은 로컬 컴퓨터에서 실행 중인 하나 이상의 프로세스에 디버거를 연결 합니다.
 프로세스 이름 또는 프로세스 ID (PID)로 프로세스를 지정 하거나 프로세스 개체를이 cmdlet으로 파이프 할 수 있습니다.
 
-이 cmdlet은 프로세스에 대해 현재 등록 된 디버거를 연결 합니다.
-이 cmdlet을 사용하기 전에 디버거가 다운로드되었으며 올바르게 구성되었는지 확인합니다.
+이 cmdlet은 프로세스에 대해 현재 등록 된 디버거를 연결 합니다. 이 cmdlet을 사용하기 전에 디버거가 다운로드되었으며 올바르게 구성되었는지 확인합니다.
 
 ## 예제
 
@@ -87,10 +86,9 @@ PS C:\> Debug-Process -Id 1132, 2028
 PS C:\> Get-Process "Windows PowerShell" | Debug-Process
 ```
 
-이 명령은 컴퓨터의 PowerShell 프로세스에 디버거를 연결합니다.
-이 cmdlet은 **Get Process** cmdlet을 사용 하 여 컴퓨터의 PowerShell 프로세스를 가져온 다음 파이프라인 연산자 (|)를 사용 하 여 프로세스를 **디버그 프로세스** cmdlet으로 보냅니다.
+이 명령은 컴퓨터의 PowerShell 프로세스에 디버거를 연결합니다. Cmdlet을 사용 하 여 `Get-Process` 컴퓨터의 PowerShell 프로세스를 가져온 다음 파이프라인 연산자 ()를 사용 하 여 `|` 프로세스를 cmdlet으로 보냅니다 `Debug-Process` .
 
-특정 PowerShell 프로세스를 지정 하려면 **Get process** 의 ID 매개 변수를 사용 합니다.
+특정 PowerShell 프로세스를 지정 하려면의 ID 매개 변수를 사용 `Get-Process` 합니다.
 
 ### 예제 6: 로컬 컴퓨터의 현재 프로세스에 디버거 연결
 
@@ -100,10 +98,9 @@ PS C:\> $PID | Debug-Process
 
 이 명령은 컴퓨터의 현재 PowerShell 프로세스에 디버거를 연결합니다.
 
-이 명령은 현재 PowerShell 프로세스의 프로세스 ID를 포함 하는 $PID 자동 변수를 사용 합니다.
-그런 다음 파이프라인 연산자 (|)를 사용 하 여 프로세스 ID를 **디버그 프로세스** cmdlet으로 보냅니다.
+`$PID`이 명령은 현재 PowerShell 프로세스의 프로세스 ID가 포함 된 자동 변수를 사용 합니다. 그런 다음 파이프라인 연산자 ()를 사용 하 여 `|` 프로세스 ID를 cmdlet으로 보냅니다 `Debug-Process` .
 
-$PID 자동 변수에 대 한 자세한 내용은 about_Automatic_Variables을 참조 하세요.
+자동 변수에 대 한 자세한 내용은 `$PID` about_Automatic_Variables를 참조 하세요.
 
 ### 예 7: InputObject 매개 변수를 사용 하는 프로세스에 디버거 연결
 
@@ -114,17 +111,15 @@ PS C:\> Debug-Process -InputObject $P
 
 이 명령은 로컬 컴퓨터의 PowerShell 프로세스에 디버거를 연결합니다.
 
-첫 번째 명령은 **Get Process** cmdlet을 사용 하 여 컴퓨터의 PowerShell 프로세스를 가져옵니다.
-결과 프로세스 개체를 $P 라는 변수에 저장 합니다.
+첫 번째 명령은 cmdlet을 사용 하 여 `Get-Process` 컴퓨터의 PowerShell 프로세스를 가져옵니다. 결과 프로세스 개체를 이라는 변수에 저장 `$P` 합니다.
 
-두 번째 명령은 **디버그 프로세스** Cmdlet의 *InputObject* 매개 변수를 사용 하 여 $P 변수에 프로세스 개체를 제출 합니다.
+두 번째 명령은 cmdlet의 **InputObject** 매개 변수를 사용 하 여 `Debug-Process` 변수의 프로세스 개체를 제출 `$P` 합니다.
 
 ## PARAMETERS
 
 ### -Id
 
-디버그할 프로세스의 프로세스 ID를 지정합니다.
-*Id* 매개 변수 이름은 선택 사항입니다.
+디버그할 프로세스의 프로세스 ID를 지정합니다. **Id** 매개 변수 이름은 선택 사항입니다.
 
 프로세스의 프로세스 ID를 찾으려면를 입력 `Get-Process` 합니다.
 
@@ -142,9 +137,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-디버그할 프로세스를 나타내는 프로세스 개체를 지정합니다.
-프로세스 개체가 포함 된 변수를 입력 하거나 프로세스 개체를 가져오는 명령 (예: Get-Process cmdlet)을 입력 합니다.
-프로세스 개체를이 cmdlet으로 파이프 할 수도 있습니다.
+디버그할 프로세스를 나타내는 프로세스 개체를 지정합니다. 프로세스 개체가 포함 된 변수를 입력 하거나 프로세스 개체를 가져오는 명령 (예: cmdlet)을 입력 합니다 `Get-Process` . 프로세스 개체를이 cmdlet으로 파이프 할 수도 있습니다.
 
 ```yaml
 Type: System.Diagnostics.Process[]
@@ -160,9 +153,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-디버그할 프로세스의 이름을 지정합니다.
-이름이 같은 프로세스가 둘 이상 있는 경우이 cmdlet은 해당 이름을 가진 모든 프로세스에 디버거를 연결 합니다.
-*Name* 매개 변수는 선택 사항입니다.
+디버그할 프로세스의 이름을 지정합니다. 이름이 같은 프로세스가 둘 이상 있는 경우이 cmdlet은 해당 이름을 가진 모든 프로세스에 디버거를 연결 합니다. **Name** 매개 변수는 선택 사항입니다.
 
 ```yaml
 Type: System.String[]
@@ -194,8 +185,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-cmdlet을 실행할 경우 발생하는 일을 표시합니다.
-cmdlet은 실행되지 않습니다.
+cmdlet을 실행할 경우 발생하는 일을 표시합니다. cmdlet은 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -227,7 +217,7 @@ Accept wildcard characters: False
 
 ## 참고
 
-* 이 cmdlet은 WMI(Windows Management Instrumentation) Win32_Process 클래스의 AttachDebugger 메서드를 사용합니다. 이 메서드에 대 한 자세한 내용은 MSDN library에서 [AttachDebugger 메서드](https://go.microsoft.com/fwlink/?LinkId=143640) 를 참조 하세요.
+이 cmdlet은 WMI(Windows Management Instrumentation) Win32_Process 클래스의 AttachDebugger 메서드를 사용합니다. 이 메서드에 대 한 자세한 내용은 MSDN library에서 [AttachDebugger 메서드](https://go.microsoft.com/fwlink/?LinkId=143640) 를 참조 하세요.
 
 ## 관련 링크
 

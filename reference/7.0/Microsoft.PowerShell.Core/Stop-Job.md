@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/stop-job?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-Job
-ms.openlocfilehash: 1f00d08ec97d20c3d353c22e8f7abfee7c88621a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 77982029240727ff5c7c90866d1a67cf7cae794d
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93209842"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391309"
 ---
 # Stop-Job
 
@@ -59,19 +59,13 @@ Stop-Job [-PassThru] [-Filter] <Hashtable> [-WhatIf] [-Confirm] [<CommonParamete
 
 ## 설명
 
-**중지-작업** cmdlet은 진행 중인 PowerShell 백그라운드 작업을 중지 합니다.
-이 cmdlet을 사용 하 여 모든 작업을 중지 하거나 이름, ID, 인스턴스 ID 또는 상태를 기준으로 또는 작업 개체를 **중지 작업** 으로 전달 하 여 선택한 작업을 중지할 수 있습니다.
+`Stop-Job`Cmdlet은 진행 중인 PowerShell 백그라운드 작업을 중지 합니다. 이 cmdlet을 사용 하 여 모든 작업을 중지 하거나 이름, ID, 인스턴스 ID 또는 상태를 기준으로 또는 작업 개체를에 전달 하 여 선택한 작업을 중지할 수 있습니다 `Stop-Job` .
 
-**작업 중지** 를 사용 하 여 Start-Job cmdlet 또는 Cmdlet의 *AsJob* 매개 변수를 사용 하 여 시작한 것과 같은 백그라운드 작업을 중지할 수 있습니다.
-백그라운드 작업을 중지 하면 PowerShell은 해당 작업 큐에서 보류 중인 모든 작업을 완료 한 다음 작업을 종료 합니다.
-이 명령을 제출한 후에는 새 작업이 큐에 추가되지 않습니다.
+Cmdlet을 사용 하 여 `Stop-Job` 시작한 것과 같은 백그라운드 작업 `Start-Job` 또는 Cmdlet의 **AsJob** 매개 변수를 사용 하 여 작업을 중지할 수 있습니다. 백그라운드 작업을 중지 하면 PowerShell은 해당 작업 큐에서 보류 중인 모든 작업을 완료 한 다음 작업을 종료 합니다. 이 명령을 제출한 후에는 새 작업이 큐에 추가되지 않습니다.
 
-이 cmdlet은 백그라운드 작업을 삭제하지 않습니다.
-작업을 삭제 하려면 Remove-Job cmdlet을 사용 합니다.
+이 cmdlet은 백그라운드 작업을 삭제하지 않습니다. 작업을 삭제 하려면 cmdlet을 사용 `Remove-Job` 합니다.
 
-Windows PowerShell 3.0부터 **중지 작업** 은 워크플로 작업, 예약 된 작업 인스턴스 등의 사용자 지정 작업 유형도 중지 합니다.
-작업 중지 **작업에서** 사용자 지정 작업 유형을 사용 하 여 작업을 중지 하도록 설정 하려면 Import-Module cmdlet을 사용 하거나 모듈에서 cmdlet을 사용 하 여 **작업 중지** 명령을 실행 하기 전에 사용자 지정 작업 유형을 지 원하는 모듈을 세션으로 가져옵니다.
-특정한 사용자 지정 작업 유형에 대한 자세한 내용은 사용자 지정 작업 유형 기능에 대한 설명서를 참조하세요.
+Windows PowerShell 3.0부터에서는 `Stop-Job` 워크플로 작업 및 예약 된 작업 인스턴스 등의 사용자 지정 작업 유형도 중지 합니다. 에서 `Stop-Job` 사용자 지정 작업 유형을 사용 하 여 작업을 중지 하려면 `Stop-Job` cmdlet을 사용 `Import-Module` 하거나 모듈에서 cmdlet을 사용 하 여 명령을 실행 하기 전에 사용자 지정 작업 유형을 지 원하는 모듈을 세션으로 가져옵니다. 특정한 사용자 지정 작업 유형에 대한 자세한 내용은 사용자 지정 작업 유형 기능에 대한 설명서를 참조하세요.
 
 ## 예제
 
@@ -83,25 +77,18 @@ $j = Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {Get-EventL
 Invoke-Command -Session $s -ScriptBlock { Stop-job -Job $Using:j }
 ```
 
-이 예제에서는 **Stop-Job** cmdlet을 사용하여 원격 컴퓨터에서 실행 중인 작업을 중지하는 방법을 보여 줍니다.
+이 예에서는 cmdlet을 사용 하 여 `Stop-Job` 원격 컴퓨터에서 실행 중인 작업을 중지 하는 방법을 보여 줍니다.
 
-작업은 **시작 작업** 명령을 원격으로 실행 하기 위해 Invoke-Command cmdlet을 사용 하 여 시작 되었으므로 작업 개체가 원격 컴퓨터에 저장 됩니다.
-다른 **Invoke** 명령을 사용 하 여 원격으로 **작업 중지** 명령을 실행 해야 합니다.
-원격 백그라운드 작업에 대한 자세한 내용은 about_Remote_Jobs를 참조하세요.
+작업은 cmdlet을 사용 하 여 원격으로 명령을 실행 하 여 시작 되었으므로 `Invoke-Command` `Start-Job` 작업 개체가 원격 컴퓨터에 저장 됩니다. `Invoke-Command`명령을 원격으로 실행 하려면 다른 명령을 사용 해야 합니다 `Stop-Job` . 원격 백그라운드 작업에 대한 자세한 내용은 about_Remote_Jobs를 참조하세요.
 
-첫 번째 명령은 Server01 컴퓨터에 PowerShell 세션 ( **PSSession** )을 만든 다음 세션 개체를 $s 변수에 저장 합니다.
-이 명령은 도메인 관리자의 자격 증명을 사용합니다.
+첫 번째 명령은 Server01 컴퓨터에 PowerShell 세션 ( **PSSession** )을 만든 다음 세션 개체를 변수에 저장 합니다 `$s` . 이 명령은 도메인 관리자의 자격 증명을 사용합니다.
 
-두 번째 명령은 **Invoke-Command** cmdlet을 사용하여 세션에서 **Start-Job** 명령을 실행합니다.
-작업의 명령은 시스템 이벤트 로그에 있는 모든 이벤트를 가져옵니다.
-결과 작업 개체는 $j 변수에 저장됩니다.
+두 번째 명령은 cmdlet을 사용 하 여 `Invoke-Command` `Start-Job` 세션에서 명령을 실행 합니다. 작업의 명령은 시스템 이벤트 로그에 있는 모든 이벤트를 가져옵니다. 결과 작업 개체는 변수에 저장 됩니다 `$j` .
 
-세 번째 명령은 작업을 중지합니다.
-이 **명령은 Server01 cmdlet을** 사용 하 여 PSSession의 **PSSession** 에서 **작업 중지** 명령을 실행 합니다.
-작업 개체가 로컬 컴퓨터의 변수인 $j에 저장되므로 명령에서 Using 범위 한정자를 사용하여 $j를 지역 변수로 식별합니다.
+세 번째 명령은 작업을 중지합니다. Cmdlet을 사용 하 여 `Invoke-Command` `Stop-Job` Server01의 **PSSession** 에서 명령을 실행 합니다. 작업 개체는 `$j` 로컬 컴퓨터의 변수인에 저장 되므로 명령에서 Using 범위 한정자를 사용 하 여을 `$j` 지역 변수로 식별 합니다.
 Using 범위 한정자에 대 한 자세한 내용은 [about_Remote_Variables](about/about_Remote_Variables.md)를 참조 하세요.
 
-명령이 완료 되 면 작업이 중지 되 고 $s의 **PSSession** 을 사용할 수 있습니다.
+명령이 완료 되 면 작업이 중지 되 고의 **PSSession** 을 `$s` 사용할 수 있습니다.
 
 ### 예 2: 백그라운드 작업 중지
 
@@ -157,12 +144,9 @@ Stop-Job -InstanceId e3bbfed1-9c53-401a-a2c3-a8db34336adf
 
 이 명령은 해당 인스턴스 ID를 기준으로 작업을 중지하는 방법을 보여 줍니다.
 
-첫 번째 명령은 Get-Job cmdlet을 사용 하 여 현재 세션의 작업을 가져옵니다.
-이 명령은 파이프라인 연산자 (|)를 사용 하 여 작업을 Format-Table 명령으로 보냅니다 .이 명령은 각 작업의 지정 된 속성 테이블을 표시 합니다.
-테이블에는 각 작업의 인스턴스 ID가 포함되어 있습니다.
-또한 계산된 속성을 사용하여 작업 상태를 표시합니다.
+첫 번째 명령은 cmdlet을 사용 하 여 `Get-Job` 현재 세션의 작업을 가져옵니다. 이 명령은 파이프라인 연산자 ()를 사용 하 여 `|` 작업을 명령으로 보냅니다 `Format-Table` .이 명령은 각 작업의 지정 된 속성 테이블을 표시 합니다. 테이블에는 각 작업의 인스턴스 ID가 포함되어 있습니다. 또한 계산된 속성을 사용하여 작업 상태를 표시합니다.
 
-두 번째 명령은 *InstanceID* 매개 변수가 있는 **작업 중지** 명령을 사용 하 여 선택한 작업을 중지 합니다.
+두 번째 명령은 `Stop-Job` **InstanceID** 매개 변수가 있는 명령을 사용 하 여 선택한 작업을 중지 합니다.
 
 ### 예 7: 원격 컴퓨터에서 작업 중지
 
@@ -177,20 +161,16 @@ Id    Name    State      HasMoreData     Location         Command
 5     Job5    Stopped    True            user01-tablet    get-eventlog system
 ```
 
-이 예제에서는 **Stop-Job** cmdlet을 사용하여 원격 컴퓨터에서 실행 중인 작업을 중지하는 방법을 보여 줍니다.
+이 예에서는 cmdlet을 사용 하 여 `Stop-Job` 원격 컴퓨터에서 실행 중인 작업을 중지 하는 방법을 보여 줍니다.
 
-작업은 **호출 명령** Cmdlet의 *AsJob* 매개 변수를 사용 하 여 시작 되었기 때문에 작업이 원격 컴퓨터에서 실행 되더라도 작업 개체는 로컬 컴퓨터에 있습니다.
-따라서 로컬 **중지 작업** 명령을 사용 하 여 작업을 중지할 수 있습니다.
+Cmdlet의 **AsJob** 매개 변수를 사용 하 여 작업을 시작 했으므로 작업이 `Invoke-Command` 원격 컴퓨터에서 실행 되더라도 작업 개체는 로컬 컴퓨터에 있습니다. 따라서 로컬 명령을 사용 하 여 작업을 중지할 수 있습니다 `Stop-Job` .
 
-첫 번째 명령은 **Invoke-Command** cmdlet을 사용하여 Server01 컴퓨터에서 백그라운드 작업을 시작합니다.
-*AsJob* 매개 변수를 사용하여 원격 명령을 백그라운드 작업으로 실행합니다.
+첫 번째 명령은 cmdlet을 사용 하 여 `Invoke-Command` Server01 컴퓨터에서 백그라운드 작업을 시작 합니다. **AsJob** 매개 변수를 사용하여 원격 명령을 백그라운드 작업으로 실행합니다.
 
-이 명령은 작업 개체를 반환 합니다 .이 개체는 **시작-작업** cmdlet이 반환 하는 작업과 동일 합니다.
-$j 변수에 작업 개체를 저장합니다.
+이 명령은 cmdlet이 반환 하는 것과 동일한 작업 개체인 작업 개체를 반환 `Start-Job` 합니다.
+이 명령은 작업 개체를 `$j` 변수에 저장 합니다.
 
-두 번째 명령은 파이프라인 연산자를 사용하여 $j 변수의 작업을 Stop-Job으로 보냅니다.
-*PassThru* 매개 변수를 사용하여 **Stop-Job** 에 작업 개체를 반환하도록 지정합니다.
-작업 개체 표시는 작업 상태가 중지 됨 인지 확인 합니다.
+두 번째 명령은 파이프라인 연산자를 사용 하 여 변수에서 작업을 `$j` 로 보냅니다 `Stop-Job` . 이 명령은 **PassThru** 매개 변수를 사용 하 여 `Stop-Job` 작업 개체를 반환 하도록 지시 합니다. 작업 개체 표시는 작업 상태가 중지 됨 인지 확인 합니다.
 
 원격 백그라운드 작업에 대한 자세한 내용은 about_Remote_Jobs를 참조하세요.
 
@@ -198,13 +178,10 @@ $j 변수에 작업 개체를 저장합니다.
 
 ### -Filter
 
-조건에 대 한 해시 테이블을 지정 합니다.
-이 cmdlet은 모든 조건을 충족 하는 작업을 중지 합니다.
+조건에 대 한 해시 테이블을 지정 합니다. 이 cmdlet은 모든 조건을 충족 하는 작업을 중지 합니다.
 키는 작업 속성이고 값은 작업 속성 값인 해시 테이블을 입력합니다.
 
-이 매개 변수는 워크플로 작업, 예약된 작업 등의 사용자 지정 작업 유형에서만 적용됩니다.
-**시작 작업** cmdlet을 사용 하 여 만든 것과 같은 표준 백그라운드 작업에서는 작동 하지 않습니다.
-이 매개 변수 지원에 대한 자세한 내용은 작업 유형 도움말 항목을 참조하세요.
+이 매개 변수는 워크플로 작업, 예약된 작업 등의 사용자 지정 작업 유형에서만 적용됩니다. Cmdlet을 사용 하 여 만든 것과 같은 표준 백그라운드 작업에서는 작동 하지 않습니다 `Start-Job` . 이 매개 변수 지원에 대한 자세한 내용은 작업 유형 도움말 항목을 참조하세요.
 
 이 매개 변수는 Windows PowerShell 3.0에서 도입 되었습니다.
 
@@ -222,13 +199,9 @@ Accept wildcard characters: False
 
 ### -Id
 
-이 cmdlet이 중지 하는 작업의 Id를 지정 합니다.
-기본값은 현재 세션의 모든 작업입니다.
+이 cmdlet이 중지 하는 작업의 Id를 지정 합니다. 기본값은 현재 세션의 모든 작업입니다.
 
-ID는 현재 세션에서 작업을 고유 하 게 식별 하는 정수입니다.
-인스턴스 ID 보다 더 쉽게 기억할 수 있으며, 입력은 현재 세션 에서만 고유 합니다.
-하나 이상의 Id를 쉼표로 구분 하 여 입력할 수 있습니다.
-작업 ID를 찾으려면를 입력 `Get-Job` 합니다.
+ID는 현재 세션에서 작업을 고유 하 게 식별 하는 정수입니다. 인스턴스 ID 보다 더 쉽게 기억할 수 있으며, 입력은 현재 세션 에서만 고유 합니다. 하나 이상의 Id를 쉼표로 구분 하 여 입력할 수 있습니다. 작업 ID를 찾으려면를 입력 `Get-Job` 합니다.
 
 ```yaml
 Type: System.Int32[]
@@ -244,11 +217,9 @@ Accept wildcard characters: False
 
 ### -InstanceId
 
-이 cmdlet이 중지 하는 작업의 인스턴스 Id를 지정 합니다.
-기본값은 모든 작업입니다.
+이 cmdlet이 중지 하는 작업의 인스턴스 Id를 지정 합니다. 기본값은 모든 작업입니다.
 
-인스턴스 ID는 컴퓨터에서 작업을 고유하게 식별하는 GUID입니다.
-작업의 인스턴스 ID를 찾으려면 Get-Job을 사용합니다.
+인스턴스 ID는 컴퓨터에서 작업을 고유하게 식별하는 GUID입니다. 작업의 인스턴스 ID를 찾으려면를 사용 `Get-Job` 합니다.
 
 ```yaml
 Type: System.Guid[]
@@ -264,10 +235,7 @@ Accept wildcard characters: False
 
 ### -Job
 
-이 cmdlet이 중지 하는 작업을 지정 합니다.
-작업이 포함된 변수 또는 작업을 가져오는 명령을 입력합니다.
-파이프라인 연산자를 사용 하 여 작업을 **job** cmdlet에 제출할 수도 있습니다.
-기본적으로 **중지 작업** 은 현재 세션에서 시작 된 모든 작업을 삭제 합니다.
+이 cmdlet이 중지 하는 작업을 지정 합니다. 작업이 포함된 변수 또는 작업을 가져오는 명령을 입력합니다. 파이프라인 연산자를 사용 하 여 작업을 cmdlet에 제출할 수도 있습니다 `Stop-Job` . 기본적으로는 `Stop-Job` 현재 세션에서 시작 된 모든 작업을 삭제 합니다.
 
 ```yaml
 Type: System.Management.Automation.Job[]
@@ -283,11 +251,9 @@ Accept wildcard characters: False
 
 ### -Name
 
-이 cmdlet이 중지 하는 작업의 이름을 지정 합니다.
-쉼표로 구분된 목록으로 작업 이름을 입력하거나 와일드카드 문자(*)를 사용하여 작업 이름 패턴을 입력합니다.
-기본적으로 **중지 작업** 은 현재 세션에서 만든 모든 작업을 중지 합니다.
+이 cmdlet이 중지 하는 작업의 이름을 지정 합니다. 쉼표로 구분된 목록으로 작업 이름을 입력하거나 와일드카드 문자(*)를 사용하여 작업 이름 패턴을 입력합니다. 기본적으로는 `Stop-Job` 현재 세션에서 만든 모든 작업을 중지 합니다.
 
-이름이 고유 하지 않을 수 있으므로 작업을 이름별로 중지할 때 *WhatIf* 및 *Confirm* 매개 변수를 사용 합니다.
+이름이 고유 하지 않을 수 있으므로 작업을 이름별로 중지할 때 **WhatIf** 및 **Confirm** 매개 변수를 사용 합니다.
 
 ```yaml
 Type: System.String[]
@@ -303,8 +269,7 @@ Accept wildcard characters: True
 
 ### -PassThru
 
-작업 중인 항목을 나타내는 개체를 반환합니다.
-기본적으로 이 cmdlet은 출력을 생성하지 않습니다.
+작업 중인 항목을 나타내는 개체를 반환합니다. 기본적으로 이 cmdlet은 출력을 생성하지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -320,9 +285,7 @@ Accept wildcard characters: False
 
 ### -상태
 
-작업 상태를 지정 합니다.
-이 cmdlet은 지정 된 상태의 작업만 중지 합니다.
-이 매개 변수에 허용되는 값은 다음과 같습니다.
+작업 상태를 지정 합니다. 이 cmdlet은 지정 된 상태의 작업만 중지 합니다. 이 매개 변수에 허용되는 값은 다음과 같습니다.
 
 - NotStarted
 - 실행 중
@@ -335,7 +298,7 @@ Accept wildcard characters: False
 - Suspending
 - 중지 중
 
-작업 상태에 대 한 자세한 내용은 MSDN library에서 [JobState 열거](https://msdn.microsoft.com/library/system.management.automation.jobstate) 를 참조 하세요.
+작업 상태에 대 한 자세한 내용은 [JobState 열거](/dotnet/api/system.management.automation.jobstate)를 참조 하세요.
 
 ```yaml
 Type: System.Management.Automation.JobState
@@ -397,8 +360,7 @@ Accept wildcard characters: False
 
 ### 없음, 시스템 관리.
 
-*PassThru* 매개 변수를 지정 하는 경우이 cmdlet은 작업 개체를 반환 합니다.
-그러지 않으면 이 cmdlet에서 출력이 생성되지 않습니다.
+**PassThru** 매개 변수를 지정 하는 경우이 cmdlet은 작업 개체를 반환 합니다. 그러지 않으면 이 cmdlet에서 출력이 생성되지 않습니다.
 
 ## 참고
 

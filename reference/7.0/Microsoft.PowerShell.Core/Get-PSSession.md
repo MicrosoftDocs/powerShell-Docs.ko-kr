@@ -7,12 +7,12 @@ ms.date: 5/15/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-pssession?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PSSession
-ms.openlocfilehash: 2f233dad23a8dead5e6fe0d072d71f0e2528551d
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 5e7fdf1eeee1360777f801ae140d013bf9194977
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93218690"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388980"
 ---
 # Get-PSSession
 
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 
 기본값은 Default입니다.
 
-이 매개 변수 값에 대 한 자세한 내용은 MSDN library에서 [Authenticationmechanism 열거](https://msdn.microsoft.com/library/system.management.automation.runspaces.authenticationmechanism) 를 참조 하세요.
+이 매개 변수 값에 대 한 자세한 내용은 [Authenticationmechanism 열거](/dotnet/api/system.management.automation.runspaces.authenticationmechanism)를 참조 하세요.
 
 주의: 사용자의 자격 증명이 인증을 위해 원격 컴퓨터에 전달 되는 CredSSP (자격 증명 보안 지원 공급자) 인증은 원격 네트워크 공유에 액세스 하는 것과 같이 둘 이상의 리소스에서 인증이 필요한 명령에 대해 설계 되었습니다. 이렇게 하면 원격 작업의 보안 위험이 커집니다. 원격 컴퓨터가 손상된 경우 이 컴퓨터로 전달된 자격 증명을 사용하여 네트워크 세션을 제어할 수 있습니다.
 
@@ -691,9 +691,9 @@ Accept wildcard characters: False
 
 **Availability** 값이 **None** 이면 세션에 연결할 수 있습니다. **사용 중** 값은 다른 세션에 연결 되어 있으므로 **PSSession** 에 연결할 수 없음을 나타냅니다.
 
-세션의 **State** 속성 값에 대 한 자세한 내용은 [RunspaceState 열거형](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspacestate)을 참조 하세요.
+세션의 **State** 속성 값에 대 한 자세한 내용은 [RunspaceState 열거형](/dotnet/api/system.management.automation.runspaces.runspacestate)을 참조 하세요.
 
-세션의 **Availability** 속성 값에 대 한 자세한 내용은 [RunspaceAvailability 열거형](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspaceavailability)을 참조 하세요.
+세션의 **Availability** 속성 값에 대 한 자세한 내용은 [RunspaceAvailability 열거형](/dotnet/api/system.management.automation.runspaces.runspaceavailability)을 참조 하세요.
 
 ## 관련 링크
 
