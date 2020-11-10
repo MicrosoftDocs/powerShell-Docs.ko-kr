@@ -6,12 +6,12 @@ ms.date: 11/28/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Hash_Tables
-ms.openlocfilehash: 0c4c54ea0ac017f0238ea5766c3489a1918d8fdd
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 26d5aad01833bc564ad65f2dcd141c7f57042431
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93220897"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391394"
 ---
 # <a name="about-hash-tables"></a>해시 테이블 정보
 
@@ -157,7 +157,7 @@ $hashtable.<key>
 <value>
 ```
 
-다음은 그 예입니다. 
+예를 들어:
 
 ```powershell
 C:\PS> $hash.Number
@@ -183,7 +183,7 @@ C:\PS> $hash.count
 해시 테이블 테이블은 배열이 아니므로 해시 테이블에 대 한 인덱스로 정수를 사용할 수 없지만 키 이름을 사용 하 여 해시 테이블로 인덱싱할 수 있습니다.
 키가 문자열 값 이면 키 이름을 따옴표로 묶으십시오.
 
-다음은 그 예입니다. 
+예를 들어:
 
 ```powershell
 C:\PS> $hash["Number"]
@@ -245,20 +245,20 @@ Remove(Key)
 $hash.Remove("Time")
 ```
 
-Contains, Clear, Clone 및 CopyTo를 포함 하 여 PowerShell에서 해시 테이블 개체의 모든 속성 및 메서드를 사용할 수 있습니다. 해시 테이블 개체에 대 한 자세한 내용은 MSDN의 "System.object"를 참조 하십시오.
+Contains, Clear, Clone 및 CopyTo를 포함 하 여 PowerShell에서 해시 테이블 개체의 모든 속성 및 메서드를 사용할 수 있습니다. 해시 테이블 개체에 대 한 자세한 내용은 [system.object](/dotnet/api/system.collections.hashtable)를 참조 하십시오.
 
 ### <a name="object-types-in-hashtables"></a>해시 테이블의 개체 형식
 
 해시 테이블의 키와 값은 모든 .NET 개체 유형을 포함할 수 있으며, 단일 해시 테이블에는 여러 유형의 키와 값이 있을 수 있습니다.
 
-다음 문은 프로세스 이름 문자열의 해시 테이블을 만들고 개체 값을 처리 한 다음 p 변수에 저장 합니다 \$ .
+다음 문은 프로세스 이름 문자열의 해시 테이블을 만들고 개체 값을 처리 한 다음 변수에 저장 합니다 `$p` .
 
 ```powershell
 $p = @{"PowerShell" = (Get-Process PowerShell);
 "Notepad" = (Get-Process notepad)}
 ```
 
-P에 해시 테이블을 표시 \$ 하 고 키-이름 속성을 사용 하 여 값을 표시할 수 있습니다.
+에서 해시 테이블을 표시 `$p` 하 고 키 이름 속성을 사용 하 여 값을 표시할 수 있습니다.
 
 ```powershell
 C:\PS> $p
@@ -279,7 +279,7 @@ C:\PS> $p.keys | foreach {$p.$_.handles}
 251
 ```
 
-해시 테이블의 키는 .NET 형식일 수도 있습니다. 다음 문은 p 변수의 해시 테이블에 키/값 쌍을 추가 합니다 \$ . 키는 WinRM 서비스를 나타내는 서비스 개체이 고 값은 서비스의 현재 상태입니다.
+해시 테이블의 키는 .NET 형식일 수도 있습니다. 다음 문은 변수의 해시 테이블에 키/값 쌍을 추가 합니다 `$p` . 키는 WinRM 서비스를 나타내는 서비스 개체이 고 값은 서비스의 현재 상태입니다.
 
 ```powershell
 C:\PS> $p = $p + @{(Get-Service WinRM) = ((Get-Service WinRM).Status)}
@@ -308,7 +308,7 @@ C:\PS> $p.keys | foreach {$_.name}
 winrm
 ```
 
-해시 테이블의 키와 값은 해시 테이블 개체 일 수도 있습니다. 다음 문은 키가 문자열인 p 변수의 해시 테이블에 키/값 쌍을 추가 하 \$ 고, 값은 3 개의 키/값 쌍이 있는 해시 테이블에 추가 합니다.
+해시 테이블의 키와 값은 해시 테이블 개체 일 수도 있습니다. 다음 문은 키가 문자열인 변수의 해시 테이블에 키/값 쌍을 추가 하 `$p` 고, 값은 3 개의 키/값 쌍이 있는 해시 테이블을 Hash2 합니다.
 
 ```powershell
 C:\PS> $p = $p + @{"Hash2"= @{a=1; b=2; c=3}}
@@ -344,7 +344,7 @@ C:\PS> $p.Hash2.b
 
 해시 테이블을 정렬할 수는 없지만, 해시 테이블의 GetEnumerator 메서드를 사용 하 여 키 및 값을 열거 한 다음 Sort-Object cmdlet을 사용 하 여 표시를 위해 열거 된 값을 정렬할 수 있습니다.
 
-예를 들어 다음 명령은 p 변수에서 해시 테이블의 키와 값을 열거 한 \$ 다음 키를 알파벳 순서로 정렬 합니다.
+예를 들어 다음 명령은 변수에 있는 해시 테이블의 키와 값을 열거 한 `$p` 다음 키를 알파벳 순서로 정렬 합니다.
 
 ```powershell
 C:\PS> $p.GetEnumerator() | Sort-Object -Property key
@@ -432,4 +432,3 @@ Msg1                           Type "Windows".
 [Import-LocalizedData](xref:Microsoft.PowerShell.Utility.Import-LocalizedData)
 
 [System.Collections.Hashtable](/dotnet/api/system.collections.hashtable)
-

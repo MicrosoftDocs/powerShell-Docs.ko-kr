@@ -6,12 +6,12 @@ ms.date: 2/27/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Functions
-ms.openlocfilehash: bef1f9f0b672f45c30626a1bbe4f2c6a7dfa540b
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 2e1a94659b3a0b8368b0b2611f470a0e676edd55
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93224089"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391462"
 ---
 # <a name="about-functions"></a>함수 정보
 
@@ -486,9 +486,9 @@ Get-Help Get-MyDisks
 
   함수를 XML 기반 도움말 항목과 연결 하려면 `.ExternalHelp` 주석 기반 도움말 키워드를 사용 합니다. 이 키워드가 없으면 `Get-Help` 함수 도움말 항목을 찾을 수 없습니다 `Get-Help` . 함수에 대 한 호출은 자동 생성 된 도움말만 반환 합니다.
 
-  키워드에 대 한 자세한 내용은 `ExternalHelp` [about_Comment_Based_Help](about_Comment_Based_Help.md)를 참조 하세요. XML 기반 도움말에 대 한 자세한 내용은 MSDN library에서 [Cmdlet 도움말을 작성 하는 방법](https://go.microsoft.com/fwlink/?LinkID=123415) 을 참조 하십시오.
+  키워드에 대 한 자세한 내용은 `ExternalHelp` [about_Comment_Based_Help](about_Comment_Based_Help.md)를 참조 하세요. XML 기반 도움말에 대 한 자세한 내용은 [Cmdlet 도움말을 작성 하는 방법](/powershell/scripting/developer/help/writing-help-for-windows-powershell-cmdlets)을 참조 하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [about_Automatic_Variables](about_Automatic_Variables.md)
 
@@ -513,4 +513,3 @@ Get-Help Get-MyDisks
 [about_Script_Blocks](about_Script_Blocks.md)
 
 [about_Function_provider](about_Function_provider.md)
-
