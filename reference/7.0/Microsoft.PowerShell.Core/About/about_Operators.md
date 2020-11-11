@@ -2,16 +2,16 @@
 description: PowerShell에서 지 원하는 연산자에 대해 설명 합니다.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 10/28/2020
+ms.date: 11/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Operators
-ms.openlocfilehash: d442a64be77934cef4636e905c098d9630451b8f
-ms.sourcegitcommit: c1e4739f5d52282fb05a8cff92b0f5d10e2edac1
+ms.openlocfilehash: 736ca53ff4992ea430ec89ad1795dcf278b0da41
+ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "93225305"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94483131"
 ---
 # <a name="about-operators"></a>연산자 정보
 
@@ -89,7 +89,7 @@ PowerShell은 값을 조작 하는 데 도움이 되는 여러 유형의 연산�
 
 그러나 PowerShell에는 추가 동작이 있습니다.
 
-- `(...)`_명령의_ 출력이 식에 참여할 수 있도록 합니다. 다음은 그 예입니다. 
+- `(...)`_명령의_ 출력이 식에 참여할 수 있도록 합니다. 예를 들면 다음과 같습니다.
 
   ```powershell
   PS> (Get-Item *.txt).Count -gt 10
@@ -117,6 +117,11 @@ Folder list: Program Files, Program Files (x86), Users, Windows
 ```powershell
 @(Get-CimInstance win32_logicalDisk)
 ```
+
+#### <a name="hash-table-literal-syntax-"></a>해시 테이블 리터럴 구문 `@{}`
+
+배열 하위 식과 마찬가지로이 구문은 해시 테이블을 선언 하는 데 사용 됩니다.
+자세한 내용은 [about_Hash_Tables](about_Hash_Tables.md)를 참조 하세요.
 
 #### <a name="call-operator-"></a>Call 연산자 `&`
 
@@ -498,8 +503,6 @@ $todaysDate ??= (Get-Date).ToShortDateString()
 
 Null 조건 연산자는 해당 `?.` `?[]` 피연산자가 null이 아닌 값으로 계산 되는 경우에만 해당 피연산자에 대 한 멤버 액세스, 또는 요소 액세스를 적용 합니다. 그렇지 않으면 null을 반환 합니다.
 
-PowerShell을 사용하면 `?`를 변수 이름에 포함할 수 있으므로 이러한 연산자를 사용하려면 변수 이름의 공식적인 사양이 필요합니다. 따라서 `{}`를 `${a}`와 같이 변수 이름 주위에 사용하거나 `?`이 변수 이름의 일부인 경우(`${a?}`)에 사용해야 합니다.
-
 다음 예에서는 **속성 속성** 의 값이 반환 됩니다.
 
 ```powershell
@@ -536,7 +539,12 @@ $a = $null
 ${a}?[0]
 ```
 
-## <a name="see-also"></a>참고 항목
+> [!NOTE]
+> PowerShell을 사용하면 `?`를 변수 이름에 포함할 수 있으므로 이러한 연산자를 사용하려면 변수 이름의 공식적인 사양이 필요합니다. 따라서 `{}`를 `${a}`와 같이 변수 이름 주위에 사용하거나 `?`이 변수 이름의 일부인 경우(`${a?}`)에 사용해야 합니다.
+>
+> 의 변수 이름 구문은 하위 `${<name>}` 식 연산자와 혼동 해서는 안 됩니다 `$()` . 자세한 내용은 [about_Variables](about_Variables.md#Variable-names-that-include-special-characters)의 변수 이름 섹션을 참조 하세요.
+
+## <a name="see-also"></a>참조
 
 [about_arithmetic_operators](about_Arithmetic_Operators.md)
 

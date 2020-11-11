@@ -2,16 +2,16 @@
 description: 변수가 PowerShell에서 사용할 수 있는 값을 저장 하는 방법에 대해 설명 합니다.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 03/19/2020
+ms.date: 11/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_variables?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Variables
-ms.openlocfilehash: 910d09d0606c10679df342092e8fbc3ecb068ecf
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: e1eee80740d1f59ab9a96122c09ba81ef99d35cc
+ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222177"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94483031"
 ---
 # <a name="about-variables"></a>변수 정보
 
@@ -45,7 +45,7 @@ PowerShell에는 여러 가지 유형의 변수가 있습니다.
 
 PowerShell 세션의 모든 변수 목록을 가져오려면를 입력 `Get-Variable` 합니다. 변수 이름은 `$` 변수를 참조 하는 데 사용 되는 앞에 달러 () 기호 없이 표시 됩니다.
 
-다음은 그 예입니다. 
+예를 들면 다음과 같습니다.
 
 ```powershell
 $MyVariable = 1, 2, 3
@@ -55,7 +55,7 @@ $Path = "C:\Windows\System32"
 
 변수는 명령 결과를 저장 하는 데 유용 합니다.
 
-다음은 그 예입니다. 
+예를 들면 다음과 같습니다.
 
 ```powershell
 $Processes = Get-Process
@@ -65,7 +65,7 @@ $Today = (Get-Date).DateTime
 
 변수의 값을 표시 하려면 변수 이름 앞에 달러 기호 ()를 입력 `$` 합니다.
 
-다음은 그 예입니다. 
+예를 들면 다음과 같습니다.
 
 ```powershell
 $MyVariable
@@ -137,7 +137,7 @@ PowerShell 변수는 느슨하게 형식화 됩니다. 즉, 특정 유형의 개
 
 변수의 데이터 형식은 변수의 값에 대 한 .NET 형식에 의해 결정 됩니다. 변수의 개체 유형을 보려면 [Get 멤버](xref:Microsoft.PowerShell.Utility.Get-Member)를 사용 합니다.
 
-다음은 그 예입니다. 
+예를 들면 다음과 같습니다.
 
 ```powershell
 $a = 12                         # System.Int32
@@ -395,7 +395,7 @@ Get-Command -Noun Variable
 Get-Help <cmdlet-name>
 ```
 
-| Cmdlet 이름       | Description                                |
+| Cmdlet 이름       | 설명                                |
 | ---------------   | ------------------------------------------ |
 | `Clear-Variable`  | 변수 값을 삭제합니다.           |
 | `Get-Variable`    | 현재 콘솔에 있는 변수를 가져옵니다. |
@@ -403,7 +403,7 @@ Get-Help <cmdlet-name>
 | `Remove-Variable` | 변수와 그 값을 삭제합니다.          |
 | `Set-Variable`    | 변수의 값을 변경 합니다.           |
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [about_Automatic_Variables](about_Automatic_Variables.md)
 

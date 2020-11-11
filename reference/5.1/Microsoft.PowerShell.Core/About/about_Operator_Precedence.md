@@ -2,16 +2,16 @@
 description: PowerShell 연산자를 우선 순위 대로 나열 합니다.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 10/08/2020
+ms.date: 11/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operator_precedence?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Operator_Precedence
-ms.openlocfilehash: 602a99d6acee63177d45425d90f8fcd47766fb93
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 27cc1be95067a38e6c210b37a3398416d0845846
+ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93223409"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94483040"
 ---
 # <a name="about-operator-precedence"></a>연산자 우선 순위 정보
 
@@ -32,7 +32,7 @@ PowerShell 연산자를 사용 하 여 간단 하지만 강력한 식을 생성�
 
 |         OPERATOR         |           참조            |
 | ------------------------ | ------------------------------ |
-| `$() @() ()`             | [about_Operators][]            |
+| `$() @() () @{}`         | [about_Operators][]            |
 | `.` (멤버 액세스)      | [about_Operators][]            |
 | `::` 정적인            | [about_Operators][]            |
 | `[0]` (인덱스 연산자)   | [about_Operators][]            |

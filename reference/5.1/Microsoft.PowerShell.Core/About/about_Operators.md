@@ -2,16 +2,16 @@
 description: PowerShell에서 지 원하는 연산자에 대해 설명 합니다.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 10/28/2020
+ms.date: 11/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Operators
-ms.openlocfilehash: a8c9c60c9c1513e1ee4ce71c8c880e20bf1df7b3
-ms.sourcegitcommit: c1e4739f5d52282fb05a8cff92b0f5d10e2edac1
+ms.openlocfilehash: b783d2cb76fe8a0a66ec77b67ef915f3b78def04
+ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "93225281"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94483005"
 ---
 # <a name="about-operators"></a>연산자 정보
 
@@ -89,7 +89,7 @@ PowerShell은 값을 조작 하는 데 도움이 되는 여러 유형의 연산�
 
 그러나 PowerShell에는 추가 동작이 있습니다.
 
-- `(...)`_명령의_ 출력이 식에 참여할 수 있도록 합니다. 다음은 그 예입니다. 
+- `(...)`_명령의_ 출력이 식에 참여할 수 있도록 합니다. 예를 들면 다음과 같습니다.
 
   ```powershell
   PS> (Get-Item *.txt).Count -gt 10
@@ -121,6 +121,11 @@ Folder list: Program Files, Program Files (x86), Users, Windows
 ```powershell
 @(Get-CimInstance win32_logicalDisk)
 ```
+
+#### <a name="hash-table-literal-syntax-"></a>해시 테이블 리터럴 구문 `@{}`
+
+배열 하위 식과 마찬가지로이 구문은 해시 테이블을 선언 하는 데 사용 됩니다.
+자세한 내용은 [about_Hash_Tables](about_Hash_Tables.md)를 참조 하세요.
 
 #### <a name="call-operator-"></a>Call 연산자 `&`
 
@@ -336,7 +341,7 @@ $myProcess.peakWorkingSet
 'MinValue', 'MaxValue' | Foreach-Object { [int]:: $_ }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [about_arithmetic_operators](about_Arithmetic_Operators.md)
 
