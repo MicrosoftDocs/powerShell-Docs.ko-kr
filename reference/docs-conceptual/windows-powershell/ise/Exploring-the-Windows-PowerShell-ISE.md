@@ -2,30 +2,28 @@
 ms.date: 01/02/2020
 title: Windows PowerShell ISE 탐색
 description: 이 문서에서는 Windows PowerShell ISE를 간략히 설명합니다.
-ms.openlocfilehash: f389ac60da13141329d81baf08e9100b144022c3
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.topic: landing-page
+ms.custom: ISE-F1-page
+ms.openlocfilehash: 4ef3f471f11c2f1de818491a193fcf34201cb04a
+ms.sourcegitcommit: 109ff625773389be56e98e994b7e56146f2b9d93
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92663820"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93296358"
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>Windows PowerShell ISE 탐색
 
-Windows PowerShell&reg; ISE(통합 스크립팅 환경)를 사용하여 명령 및 스크립트를 만들고, 실행하고, 디버그할 수 있습니다. Windows PowerShell ISE는 메뉴 모음, Windows PowerShell 탭, 도구 모음, 스크립트 탭, 스크립트 창, 콘솔 창, 상태 표시줄, 텍스트 크기 슬라이더, 상황에 맞는 도움말 등으로 구성됩니다.
-
-> [!NOTE]
-> Windows PowerShell ISE 3.0부터는 명령 창과 출력 창이 단일 콘솔 창으로 결합되었습니다.
+Windows PowerShell ISE(통합 스크립팅 환경)를 사용하여 명령 및 스크립트를 만들고, 실행하고, 디버그할 수 있습니다. Windows PowerShell ISE는 메뉴 모음, Windows PowerShell 탭, 도구 모음, 스크립트 탭, 스크립트 창, 콘솔 창, 상태 표시줄, 텍스트 크기 슬라이더, 상황에 맞는 도움말 등으로 구성됩니다.
 
 ## <a name="menu-bar"></a>메뉴 모음
 
 메뉴 모음에는 **파일** , **편집** , **보기** , **도구** , **디버그** , **추가 기능** 및 **도움말** 메뉴가 있습니다. 메뉴의 단추를 사용하여 Windows PowerShell ISE에서 스크립트를 작성 및 실행하고 명령을 실행하는 것과 관련된 작업을 수행할 수 있습니다. 또한 [ISE 개체 모델 계층 구조](object-model/The-ISE-Object-Model-Hierarchy.md)를 사용하는 스크립트를 실행하여 메뉴 모음에 [추가 기능 도구](object-model/The-ISEAddOnTool-Object.md)를 배치할 수 있습니다.
 
-> [!NOTE]
-> Windows PowerShell ISE 2.0에는 **도구** 및 **추가 기능** 메뉴가 없었습니다.
-
 ## <a name="windows-powershell-tabs"></a>Windows PowerShell 탭
 
 Windows PowerShell 탭은 Windows PowerShell 스크립트가 실행되는 환경입니다. Windows PowerShell ISE에서 새 Windows PowerShell 탭을 열어 로컬 컴퓨터나 원격 컴퓨터에 별도의 환경을 만들 수 있습니다. 최대 8개의 PowerShell 탭을 동시에 열 수 있습니다.
+
+자세한 내용은 [Windows PowerShell ISE에서 PowerShell 탭을 만드는 방법](How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md)을 참조하세요.
 
 ## <a name="toolbar"></a>도구 모음
 
@@ -59,15 +57,17 @@ Windows PowerShell 탭은 Windows PowerShell 스크립트가 실행되는 환경
 
 ## <a name="script-pane"></a>스크립트 창
 
-스크립트를 만들고 실행할 수 있습니다. 스크립트 창에서 기존 스크립트를 열고, 편집하고, 실행할 수 있습니다.
+스크립트를 만들고 실행할 수 있습니다. 스크립트 창에서 기존 스크립트를 열고, 편집하고, 실행할 수 있습니다. 자세한 내용은 [Windows PowerShell ISE에서 스크립트를 작성 및 실행하는 방법](How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md)을 참조하세요.
 
-## <a name="output-pane"></a>출력 창
+## <a name="console-pane"></a>콘솔 창
 
-실행한 명령 및 스크립트의 결과를 표시합니다. 출력 창에서 내용을 복사하고 지울 수도 있습니다.
+실행한 명령 및 스크립트의 결과를 표시합니다. 콘솔 창에서 명령을 실행할 수 있습니다. 콘솔 창에서 내용을 복사하고 지울 수도 있습니다.
 
-## <a name="command-pane"></a>명령 창
+자세한 내용은 다음 문서를 참조하세요.
 
-명령을 작성할 수 있습니다. 명령 창에서 한 줄 명령이나 여러 줄 명령을 실행할 수 있습니다. <kbd>Shift</kbd>+<kbd>Enter</kbd>를 눌러 여러 줄 명령의 각 줄을 입력하고 마지막 줄 다음에 <kbd>Enter</kbd> 키를 눌러 여러 줄 명령을 실행합니다. 명령 창 맨 위에 표시된 프롬프트에는 현재 작업 디렉터리의 경로가 표시됩니다.
+- [Windows PowerShell ISE에서 콘솔 창을 사용하는 방법](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
+- [Windows PowerShell ISE에서 스크립트를 디버그하는 방법](How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)
+- [스크립트 창 및 콘솔 창에서 탭 완성 기능을 사용하는 방법](How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md)
 
 ## <a name="status-bar"></a>상태 표시줄
 
@@ -79,9 +79,11 @@ Windows PowerShell 탭은 Windows PowerShell 스크립트가 실행되는 환경
 
 ## <a name="help"></a>도움말
 
-Windows PowerShell ISE에 대한 도움말을 웹의 TechNet 라이브러리에서 확인할 수 있습니다. **도움말** 메뉴에서 **Windows PowerShell ISE 도움말** 을 클릭하거나 스크립트 창이나 콘솔 창에서 커서가 cmdlet 이름에 있는 경우를 제외하고 아무 곳에서나 <kbd>F1</kbd> 키를 누르면 도움말을 열 수 있습니다.
-**도움말** 메뉴에서 `Update-Help` cmdlet을 실행하여 cmdlet에 대한 모든 매개 변수를 표시하고 사용하기 쉬운 형태로 매개 변수를 입력할 수 있게 하여 명령 생성을 지원하는 명령 창을 표시할 수도 있습니다.
+Windows PowerShell ISE에 대한 도움말을 웹의 TechNet 라이브러리에서 확인할 수 있습니다. **도움말** 메뉴에서 **Windows PowerShell ISE 도움말** 을 클릭하거나 스크립트 창이나 콘솔 창에서 커서가 cmdlet 이름에 있는 경우를 제외하고 아무 곳에서나 <kbd>F1</kbd> 키를 누르면 도움말을 열 수 있습니다. **도움말** 메뉴에서 `Update-Help` cmdlet을 실행하여 cmdlet에 대한 모든 매개 변수를 표시하고 사용하기 쉬운 형태로 매개 변수를 입력할 수 있게 하여 명령 생성을 지원하는 명령 창을 표시할 수도 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
 - [Windows PowerShell ISE 소개](Introducing-the-Windows-PowerShell-ISE.md)
+- [Windows PowerShell ISE에서 프로필을 사용하는 방법](How-to-Use-Profiles-in-Windows-PowerShell-ISE.md)
+- [Windows PowerShell ISE의 접근성](Accessibility-in-Windows-PowerShell-ISE.md)
+- [Windows PowerShell ISE 바로 가기 키](Keyboard-Shortcuts-for-the-Windows-PowerShell-ISE.md)

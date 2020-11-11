@@ -2,12 +2,12 @@
 title: Windows에 PowerShell 설치
 description: Windows에서 PowerShell을 설치하는 방법에 대한 정보
 ms.date: 10/30/2020
-ms.openlocfilehash: 1b341b496cef34a2a98afeac9d24f0a51e8dbda0
-ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
+ms.openlocfilehash: 825c9066d0a4e4734b9255514520b32f0876ecea
+ms.sourcegitcommit: 109ff625773389be56e98e994b7e56146f2b9d93
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93142789"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93296381"
 ---
 # <a name="installing-powershell-on-windows"></a>Windows에 PowerShell 설치
 
@@ -24,7 +24,7 @@ WSMan을 통한 PowerShell 원격 기능을 사용하려면 다음 전제 조건
 
 ## <a name="download-the-installer-package"></a>설치 프로그램 패키지 다운로드
 
-Windows에서 PowerShell을 설치하려면 GitHub [릴리스][releases] 페이지에서 설치 패키지를 다운로드합니다. 릴리스 페이지의 **Assets** 섹션이 나올 때까지 아래로 스크롤합니다. **Assets** 섹션이 축소되어 있으면 클릭하여 확장합니다.
+Windows에서 PowerShell을 설치하려면 GitHub에서 [최신][] 패키지 설치를 다운로드합니다. [릴리스][] 페이지에서 최신 미리 보기 버전을 찾을 수도 있습니다. 릴리스 페이지의 **Assets** 섹션이 나올 때까지 아래로 스크롤합니다. **Assets** 섹션이 축소되어 있으면 클릭하여 확장합니다.
 
 ## <a name="installing-the-msi-package"></a><a id="msi" />MSI 패키지 설치
 
@@ -83,7 +83,7 @@ PowerShell 7.1부터 MSI 패키지는 PowerShell의 설치 위치 및 버전을 
 > [!NOTE]
 > MSIX 패키지는 현재 공식적으로 지원되지 않습니다. Microsoft는 내부 테스트 용도로만 이 패키지를 계속 빌드합니다.
 
-Windows 10 클라이언트에 MSIX 패키지를 수동으로 설치하려면 GitHub [릴리스][releases] 페이지에서 MSIX 패키지를 다운로드합니다. 설치하려는 릴리스의 **Assets** 섹션까지 아래로 스크롤합니다. Assets 섹션이 축소되어 있으면 클릭해서 확장합니다.
+Windows 10 클라이언트에 MSIX 패키지를 수동으로 설치하려면 GitHub [릴리스][릴리스] 페이지에서 MSIX 패키지를 다운로드합니다. 설치하려는 릴리스의 **Assets** 섹션까지 아래로 스크롤합니다. Assets 섹션이 축소되어 있으면 클릭해서 확장합니다.
 
 MSIX 파일은 다음과 같습니다. `PowerShell-<version>-win-<os-arch>.msix`
 
@@ -95,7 +95,7 @@ Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
 
 ## <a name="installing-the-zip-package"></a><a id="zip" />ZIP 패키지 설치
 
-고급 배포 시나리오를 지원하기 위해 PowerShell 이진 ZIP 아카이브가 제공됩니다. [릴리스][releases] 페이지에서 다음 ZIP 보관 파일 중 하나를 다운로드합니다.
+고급 배포 시나리오를 지원하기 위해 PowerShell 이진 ZIP 아카이브가 제공됩니다. [릴리스][릴리스] 페이지에서 다음 ZIP 보관 파일 중 하나를 다운로드합니다.
 
 - PowerShell-7.0.3-win-x64.zip
 - PowerShell-7.0.3-win-x86.zip
@@ -263,11 +263,12 @@ PowerShell은 WSMan 및 SSH와 함께 PowerShell Remoting Protocol(PSRP)을 지�
 
 ## <a name="installation-support"></a>설치 지원
 
-Microsoft는 이 문서의 설치 방법을 지원합니다. 다른 원본에서 사용 가능한 다른 설치 방법이 있을 수 있습니다. 그러한 도구 및 방법이 유효하더라도 Microsoft에서는 해당 방법을 지원할 수 없습니다.
+Microsoft는 이 문서의 설치 방법을 지원합니다. 다른 원본에서 사용 가능한 다른 설치 방법이 있을 수 있습니다. 관련 도구 및 방법이 유효하더라도 Microsoft에서는 해당 방법을 지원할 수 없습니다.
 
 <!-- link references -->
 
-[releases]: https://github.com/PowerShell/PowerShell/releases
+[릴리스]: https://github.com/PowerShell/PowerShell/releases
+[최신]: https://github.com/PowerShell/PowerShell/releases/latest
 [ssh-remoting]: ../learn/remoting/SSH-Remoting-in-PowerShell-Core.md
 [wsman-remoting]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md
 [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell

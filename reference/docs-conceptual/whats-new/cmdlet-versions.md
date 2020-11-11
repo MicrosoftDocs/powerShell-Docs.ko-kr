@@ -3,22 +3,23 @@ ms.date: 02/03/2020
 keywords: powershell,core
 title: 모듈 및 cmdlet의 릴리스 기록
 description: 이 문서에는 다양한 버전의 PowerShell에 포함된 모듈 및 cmdlet이 나열되어 있습니다.
-ms.openlocfilehash: cefd84c5d3785d19670ee649f5af951d5975912c
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: 43ea0cde106e9f0aafe9c18726589f931724b35f
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501663"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342861"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>모듈 및 cmdlet의 릴리스 기록
 
 이 문서에는 다양한 버전의 PowerShell에 포함된 모듈 및 cmdlet이 나열되어 있습니다. 릴리스 정보에 있는 내용에 대한 요약이 제공되며 자세한 내용은 다음 릴리스 정보에서 찾을 수 있습니다.
 
-- [PowerShell Core 6.2의 새로운 기능](what-s-new-in-powershell-core-62.md)
-- [PowerShell Core 6.1의 새로운 기능](what-s-new-in-powershell-core-61.md)
-- [PowerShell Core 6.0의 새로운 기능](what-s-new-in-powershell-core-60.md)
-- [PowerShell Core 6.0의 호환성이 손상되는 변경](breaking-changes-ps6.md)
-- [PowerShell Core 6.0의 알려진 문제](known-issues-ps6.md)
+- [PowerShell 7.0의 새로운 기능](what-s-new-in-powershell-70.md)
+- [PowerShell 6.2의 새로운 기능](what-s-new-in-powershell-core-62.md)
+- [PowerShell 6.1의 새로운 기능](what-s-new-in-powershell-core-61.md)
+- [PowerShell 6.0의 새로운 기능](what-s-new-in-powershell-core-60.md)
+- [PowerShell 6.0의 호환성이 손상되는 변경](breaking-changes-ps6.md)
+- [PowerShell 6.0의 알려진 문제](known-issues-ps6.md)
 
 진행 중인 작업입니다. 이 정보를 최신 상태로 유지할 수 있도록 도와주세요.
 
@@ -216,7 +217,7 @@ ms.locfileid: "92501663"
 | Enable-ComputerRestore        | &check; |         |         |         | Windows만 해당                     |
 | Get-ChildItem                 | &check; | &check; | &check; | &check; |                                  |
 | Get-Clipboard                 | &check; |         | &check; | &check; | macOS에서는 지원되지 않음           |
-| Get-ComputerInfo              | &check; | &check; | &check; | &check; |                                  |
+| Get-ComputerInfo              | &check; | &check; | &check; | &check; | Windows만 해당                     |
 | Get-ComputerRestorePoint      | &check; |         |         |         | Windows만 해당                     |
 | Get-Content                   | &check; | &check; | &check; | &check; |                                  |
 | Get-ControlPanelItem          | &check; |         |         |         | Windows만 해당                     |
@@ -230,7 +231,7 @@ ms.locfileid: "92501663"
 | Get-PSDrive                   | &check; | &check; | &check; | &check; |                                  |
 | Get-PSProvider                | &check; | &check; | &check; | &check; |                                  |
 | Get-Service                   | &check; | &check; | &check; | &check; | Windows만 해당                     |
-| Get-TimeZone                  | &check; | &check; | &check; | &check; |                                  |
+| Get-TimeZone                  | &check; | &check; | &check; | &check; | Windows만 해당                     |
 | Get-Transaction               | &check; |         |         |         | Windows만 해당                     |
 | Get-WmiObject                 | &check; |         |         |         | Windows만 해당                     |
 | Invoke-Item                   | &check; | &check; | &check; | &check; |                                  |
@@ -255,7 +256,7 @@ ms.locfileid: "92501663"
 | Remove-PSDrive                | &check; | &check; | &check; | &check; |                                  |
 | Remove-Service                |         | &check; | &check; | &check; | Windows만 해당                     |
 | Remove-WmiObject              | &check; |         |         |         | Windows만 해당                     |
-| Rename-Computer               | &check; | &check; | &check; | &check; |                                  |
+| Rename-Computer               | &check; | &check; | &check; | &check; | Windows만 해당                     |
 | Rename-Item                   | &check; | &check; | &check; | &check; |                                  |
 | Rename-ItemProperty           | &check; | &check; | &check; | &check; |                                  |
 | ComputerMachinePassword 재설정 | &check; |         |         |         | Windows만 해당                     |
@@ -270,7 +271,7 @@ ms.locfileid: "92501663"
 | Set-ItemProperty              | &check; | &check; | &check; | &check; |                                  |
 | Set-Location                  | &check; | &check; | &check; | &check; |                                  |
 | Set-Service                   | &check; | &check; | &check; | &check; | Windows만 해당                     |
-| Set-TimeZone                  | &check; | &check; | &check; | &check; |                                  |
+| Set-TimeZone                  | &check; | &check; | &check; | &check; | Windows만 해당                     |
 | Set-WmiInstance               | &check; |         |         |         | Windows만 해당                     |
 | Show-ControlPanelItem         | &check; |         |         |         | Windows만 해당                     |
 | Show-EventLog                 | &check; |         |         |         | Windows만 해당                     |
@@ -334,7 +335,7 @@ ms.locfileid: "92501663"
 | ConvertFrom-Csv           | &check; | &check; | &check; | &check; |                                           |
 | ConvertFrom-Json          | &check; | &check; | &check; | &check; |                                           |
 | ConvertFrom-Markdown      |         |   6.1   | &check; | &check; |                                           |
-| ConvertFrom-SddlString    | &check; | &check; | &check; | &check; |                                           |
+| ConvertFrom-SddlString    | &check; | &check; | &check; | &check; | Windows만 해당                              |
 | ConvertFrom-String        | &check; |         |         |         |                                           |
 | ConvertFrom-StringData    | &check; | &check; | &check; | &check; |                                           |
 | Convert-String            | &check; |         |         |         |                                           |
@@ -379,7 +380,7 @@ ms.locfileid: "92501663"
 | Get-Unique                | &check; | &check; | &check; | &check; |                                           |
 | Get-Uptime                |         | &check; | &check; | &check; |                                           |
 | Get-Variable              | &check; | &check; | &check; | &check; |                                           |
-| Get-Verb                  |         | &check; | &check; | &check; |                                           |
+| Get-Verb                  |         | &check; | &check; | &check; | Microsoft.PowerShelll.Core에서 이동됨     |
 | Group-Object              | &check; | &check; | &check; | &check; |                                           |
 | Import-Alias              | &check; | &check; | &check; | &check; |                                           |
 | Import-Clixml             | &check; | &check; | &check; | &check; |                                           |
@@ -402,7 +403,7 @@ ms.locfileid: "92501663"
 | New-Variable              | &check; | &check; | &check; | &check; |                                           |
 | Out-File                  | &check; | &check; | &check; | &check; |                                           |
 | Out-GridView              | &check; |         | &check; | &check; | Windows만 해당                              |
-| Out-Printer               | &check; |         | &check; | &check; |                                           |
+| Out-Printer               | &check; |         | &check; | &check; | Windows만 해당                              |
 | Out-String                | &check; | &check; | &check; | &check; |                                           |
 | Read-Host                 | &check; | &check; | &check; | &check; |                                           |
 | Register-EngineEvent      | &check; | &check; | &check; | &check; | Linux/macOS에서 사용할 수 있는 이벤트 원본이 없음 |
@@ -422,7 +423,7 @@ ms.locfileid: "92501663"
 | Set-PSBreakpoint          | &check; | &check; | &check; | &check; |                                           |
 | Set-TraceSource           | &check; | &check; | &check; | &check; |                                           |
 | Set-Variable              | &check; | &check; | &check; | &check; |                                           |
-| Show-Command              | &check; |         | &check; | &check; |                                           |
+| Show-Command              | &check; |         | &check; | &check; | Windows만 해당                              |
 | Show-Markdown             |         |   6.1   | &check; | &check; |                                           |
 | Sort-Object               | &check; | &check; | &check; | &check; |                                           |
 | Start-Sleep               | &check; | &check; | &check; | &check; |                                           |

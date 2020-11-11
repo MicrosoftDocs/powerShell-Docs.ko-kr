@@ -1,14 +1,14 @@
 ---
 title: PowerShell 설명서에 기여하기
-description: 이 문서는 PowerShell 설명서의 기여자로 시작하는 방법을 간단히 설명합니다.
+description: 이 문서에서는 PowerShell 설명서에 참여하는 데 필요한 단계를 간략하게 설명합니다.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: 3ea08c3acf4a31cbb7262aac57bf28b75388275d
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
+ms.openlocfilehash: 255b74a75b8412ed509f6da930eb722d54233711
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158159"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354408"
 ---
 # <a name="contributing-to-powershell-documentation"></a>PowerShell 설명서에 기여하기
 

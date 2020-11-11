@@ -2,12 +2,12 @@
 title: PowerShell 7.0의 새로운 기능
 description: PowerShell 7.0에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 03/04/2020
-ms.openlocfilehash: d52b536efd9d7a1f8e6b01a58952f08ca49016b1
-ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
+ms.openlocfilehash: 3a5a1aaa0bd9dd1e0df7d6f5e6021678ed21dce4
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88162463"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93355275"
 ---
 # <a name="whats-new-in-powershell-70"></a>PowerShell 7.0의 새로운 기능
 
@@ -42,14 +42,14 @@ PowerShell 7은 현재 다음과 같은 x64 운영 체제를 지원합니다.
 
 또한 PowerShell 7.0은 Debian, Ubuntu 및 ARM64 Alpine Linux의 ARM32 및 ARM64 버전을 지원합니다.
 
-기본 운영 체제 [Windows](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7), [macOS](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7) 또는 [Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7)에 대한 설치 지침을 확인하세요.
+기본 운영 체제 [Windows](/powershell/scripting/install/installing-powershell-core-on-windows), [macOS](/powershell/scripting/install/installing-powershell-core-on-macos) 또는 [Linux](/powershell/scripting/install/installing-powershell-core-on-linux)에 대한 설치 지침을 확인하세요.
 
 공식적으로 지원되는 것은 아니지만 커뮤니티는 [Arch](https://aur.archlinux.org/packages/powershell/) 및 Kali Linux에 대한 패키지도 제공했습니다.
 
 > [!NOTE]
-> Debian 10 및 CentOS 8은 현재 WinRM 원격을 지원하지 않습니다. SSH 기반 원격을 설정하는 방법에 대한 자세한 내용은 [SSH를 통한 PowerShell 원격](/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7)을 참조하세요.
+> Debian 10 및 CentOS 8은 현재 WinRM 원격을 지원하지 않습니다. SSH 기반 원격을 설정하는 방법에 대한 자세한 내용은 [SSH를 통한 PowerShell 원격](/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core)을 참조하세요.
 
-지원되는 운영 체제 및 지원 주기에 대한 최신 정보는 [PowerShell 지원 수명 주기](/powershell/scripting/powershell-support-lifecycle?view=powershell-7)를 참조하세요.
+지원되는 운영 체제 및 지원 주기에 대한 최신 정보는 [PowerShell 지원 수명 주기](/powershell/scripting/powershell-support-lifecycle)를 참조하세요.
 
 ## <a name="running-powershell-7"></a>PowerShell 7 실행
 
@@ -72,7 +72,7 @@ PowerShell 7 설치 관리자 패키지는 이전 버전의 PowerShell Core 6.x�
 
 PowerShell 7.0은 .NET Core 3.1로 전환하여 기존 Windows PowerShell 모듈과 훨씬 향상된 이전 버전 호환성을 지원합니다. 여기에는 Windows의 일부로 제공되는 다양한 역할 관리 모듈뿐만 아니라 Windows에서 `Out-GridView` 및 `Show-Command` 같은 GUI 기능이 필요한 많은 모듈이 포함됩니다.
 
-Windows의 경우 새 스위치 매개 변수 **UseWindowsPowerShell**이 `Import-Module`에 추가됩니다. 이 스위치는 로컬 Windows PowerShell 프로세스를 사용하여 해당 모듈에 포함된 모든 cmdlet을 암시적으로 실행하는 PowerShell 7의 프록시 모듈을 만듭니다. 자세한 내용은 [Import-Module](/powershell/module/microsoft.powershell.core/import-module?view=powershell-7)을 참조하세요.
+Windows의 경우 새 스위치 매개 변수 **UseWindowsPowerShell** 이 `Import-Module`에 추가됩니다. 이 스위치는 로컬 Windows PowerShell 프로세스를 사용하여 해당 모듈에 포함된 모든 cmdlet을 암시적으로 실행하는 PowerShell 7의 프록시 모듈을 만듭니다. 자세한 내용은 [Import-Module](/powershell/module/microsoft.powershell.core/import-module?view=powershell-7&preserve-view=true)을 참조하세요.
 
 Microsoft 모듈에서 PowerShell 7.0을 사용하는 방법에 대한 자세한 내용은 [모듈 호환성 표](https://aka.ms/PSModuleCompat)를 참조하세요.
 
@@ -102,7 +102,7 @@ $logEntries.Count
 
 `$_` 변수를 사용하여 스크립트 블록 내의 현재 입력 개체를 나타냅니다. `$using:` 범위를 사용하여 실행 중인 스크립트 블록에 변수 참조를 전달합니다.
 
-자세한 내용은 [ForEach-Object](/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-7)를 참조하세요.
+자세한 내용은 [ForEach-Object](/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-7&preserve-view=true)를 참조하세요.
 
 ## <a name="ternary-operator"></a>삼항 연산자
 
@@ -113,7 +113,7 @@ PowerShell의 삼항 연산자는 C# 삼항 연산자 구문에서 유사하게 
 <condition> ? <if-true> : <if-false>
 ```
 
-조건 식이 항상 평가되고 그 결과가 **부울**로 변환되어 다음에 평가되는 분기를 결정합니다.
+조건 식이 항상 평가되고 그 결과가 **부울** 로 변환되어 다음에 평가되는 분기를 결정합니다.
 
 - `<condition>` 식이 true인 경우 `<if-true>` 식이 실행됩니다.
 - `<condition>` 식이 false인 경우 `<if-false>` 식이 실행됩니다.
@@ -124,13 +124,13 @@ PowerShell의 삼항 연산자는 C# 삼항 연산자 구문에서 유사하게 
 $message = (Test-Path $path) ? "Path exists" : "Path not found"
 ```
 
-이 예제에서는 경로가 존재하는 경우 **Path exists**가 표시됩니다. 경로가 존재하지 않는 경우 **Path not found**가 표시됩니다.
+이 예제에서는 경로가 존재하는 경우 **Path exists** 가 표시됩니다. 경로가 존재하지 않는 경우 **Path not found** 가 표시됩니다.
 
-자세한 내용은 [About If](/powershell/module/microsoft.powershell.core/about/about_if?view=powershell-7)를 참조하세요.
+자세한 내용은 [About If](/powershell/module/microsoft.powershell.core/about/about_if)를 참조하세요.
 
 ## <a name="pipeline-chain-operators"></a>파이프라인 체인 연산자
 
-PowerShell 7은 `&&` 및 `||` 연산자를 구현하여 조건부로 파이프라인을 연결합니다. 이러한 연산자는 PowerShell에서 "파이프라인 체인 연산자"로 알려져 있으며 **Bash** 및 **Zsh**와 같은 셸에서 AND 및 OR 목록과 비슷하고 Windows 명령 셸(**cmd.exe**)에서 조건 처리 기호와 비슷합니다.
+PowerShell 7은 `&&` 및 `||` 연산자를 구현하여 조건부로 파이프라인을 연결합니다. 이러한 연산자는 PowerShell에서 "파이프라인 체인 연산자"로 알려져 있으며 **Bash** 및 **Zsh** 와 같은 셸에서 AND 및 OR 목록과 비슷하고 Windows 명령 셸( **cmd.exe** )에서 조건 처리 기호와 비슷합니다.
 
 `&&` 연산자는 왼쪽 파이프라인이 성공한 경우 오른쪽 파이프라인을 실행합니다. 반대로, `||` 연산자는 왼쪽 파이프라인이 실패한 경우 오른쪽 파이프라인을 실행합니다.
 
@@ -179,7 +179,7 @@ Write-Error 'Bad'
 Second
 ```
 
-자세한 내용은 [파이프라인 체인 연산자](/powershell/module/microsoft.powershell.core/about/about_pipeline_chain_operators?view=powershell-7)를 참조하세요.
+자세한 내용은 [파이프라인 체인 연산자](/powershell/module/microsoft.powershell.core/about/about_pipeline_chain_operators?view=powershell-7&preserve-view=true)를 참조하세요.
 
 ## <a name="null-coalescing-assignment-and-conditional-operators"></a>Null 병합, 할당 및 조건 연산자
 
@@ -226,14 +226,14 @@ $todaysDate ??= (Get-Date).ToShortDateString()
 ### <a name="null-conditional-member-access-operators--and--experimental"></a>Null 조건 멤버 액세스 ?. 및 ?[] (실험적)
 
 > [!NOTE]
-> **PSNullConditionalOperators**라는 실험적 기능입니다. 자세한 내용은 [실험적 기능](/powershell/module/microsoft.powershell.core/about/about_experimental_features?view=powershell-7)을 참조하세요.
+> **PSNullConditionalOperators** 라는 실험적 기능입니다. 자세한 내용은 [실험적 기능 사용](/powershell/scripting/learn/experimental-features)을 참조하세요.
 
 Null 조건 연산자는 해당 피연산자가 null이 아닌 것으로 평가되는 경우에만 멤버 액세스 `?.` 또는 요소 액세스 `?[]`를 해당 피연산자로 사용할 수 있습니다. 그렇지 않으면 null을 반환합니다.
 
 > [!NOTE]
 > PowerShell을 사용하면 `?`를 변수 이름에 포함할 수 있으므로 이러한 연산자를 사용하려면 변수 이름의 공식적인 사양이 필요합니다. 따라서 `{}`를 `${a}`와 같이 변수 이름 주위에 사용하거나 `?`이 변수 이름의 일부인 경우(`${a?}`)에 사용해야 합니다.
 
-다음 예제에서는 멤버 속성 **Status**의 값이 반환됩니다.
+다음 예제에서는 멤버 속성 **Status** 의 값이 반환됩니다.
 
 ```powershell
 $Service = Get-Service -Name 'bits'
@@ -241,7 +241,7 @@ ${Service}?.status
 Stopped
 ```
 
-다음 예제에서는 멤버 이름 **Status**에 액세스하지 않고 null을 반환합니다.
+다음 예제에서는 멤버 이름 **Status** 에 액세스하지 않고 null을 반환합니다.
 
 ```powershell
 $service = $Null
@@ -263,13 +263,13 @@ $a = $null
 ${a}?[0]
 ```
 
-자세한 내용은 [About_Operators](/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7)를 참조하세요.
+자세한 내용은 [About_Operators](/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7&preserve-view=true)를 참조하세요.
 
 ## <a name="new-view-conciseview-and-cmdlet-get-error"></a>새로운 보기 ConciseView 및 cmdlet Get-Error
 
-PowerShell 7.0에서는 새로운 기본 보기 **ConciseView**를 사용하여 대화형 및 스크립트 오류를 쉽게 읽을 수 있도록 오류 메시지의 표시 기능이 향상되었습니다. 보기는 기본 설정 변수 `$ErrorView`를 통해 사용자가 선택할 수 있습니다.
+PowerShell 7.0에서는 새로운 기본 보기 **ConciseView** 를 사용하여 대화형 및 스크립트 오류를 쉽게 읽을 수 있도록 오류 메시지의 표시 기능이 향상되었습니다. 보기는 기본 설정 변수 `$ErrorView`를 통해 사용자가 선택할 수 있습니다.
 
-**ConciseView**를 사용하는 경우, 오류가 스크립트 또는 파서에서 발생하지 않은 한 다음과 같은 한 줄 오류 메시지입니다.
+**ConciseView** 를 사용하는 경우, 오류가 스크립트 또는 파서에서 발생하지 않은 한 다음과 같은 한 줄 오류 메시지입니다.
 
 ```powershell
 Get-Childitem -Path c:\NotReal
@@ -283,7 +283,7 @@ Get-ChildItem: Cannot find path 'C:\NotReal' because it does not exist
 
 ![스크립트의 오류 표시](./media/What-s-New-in-PowerShell-70/myscript-error.png)
 
-PowerShell 7의 기본 보기는 **ConciseView**입니다. 이전의 기본 보기는 **NormalView**였으며 기본 설정 변수 `$ErrorView`를 설정하여 선택할 수 있습니다.
+PowerShell 7의 기본 보기는 **ConciseView** 입니다. 이전의 기본 보기는 **NormalView** 였으며 기본 설정 변수 `$ErrorView`를 설정하여 선택할 수 있습니다.
 
 ```powershell
 $ErrorView = 'NormalView' # Sets the error view to NormalView
@@ -291,7 +291,7 @@ $ErrorView = 'ConciseView' # Sets the error view to ConciseView
 ```
 
 > [!NOTE]
-> 새로운 속성 **ErrorAccentColor**가 `$Host.PrivateData`에 추가되어 오류 메시지의 강조 색 변경을 지원합니다.
+> 새로운 속성 **ErrorAccentColor** 가 `$Host.PrivateData`에 추가되어 오류 메시지의 강조 색 변경을 지원합니다.
 
 새로운 cmdlet `Get-Error`는 원하는 경우 정규화된 오류에 대한 전체 세부 보기를 제공합니다.
 기본적으로 이 cmdlet은 발생한 마지막 오류의 내부 예외를 비롯한 전체 세부 정보를 표시합니다.
@@ -311,7 +311,7 @@ $Error | Get-Error
 Get-Error -Newest 3 # Displays the lst three errors that occurred in the session
 ```
 
-자세한 내용은 [Get-Error](/powershell/module/microsoft.powershell.utility/get-error?view=powershell-7)를 참조하세요.
+자세한 내용은 [Get-Error](/powershell/module/microsoft.powershell.utility/get-error?view=powershell-7&preserve-view=true)를 참조하세요.
 
 ## <a name="new-version-notification"></a>새 버전 알림
 
@@ -325,11 +325,11 @@ PowerShell은 하루 한 번 온라인 서비스를 쿼리하여 최신 버전�
 
 업데이트 알림 동작은 `$Env:POWERSHELL_UPDATECHECK` 환경 변수를 사용하여 변경할 수 있습니다. 지원되는 값은 다음과 같습니다.
 
-- **Default**는 `$Env:POWERSHELL_UPDATECHECK`을 정의 하지 않는 것과 같습니다.
+- **Default** 는 `$Env:POWERSHELL_UPDATECHECK`을 정의 하지 않는 것과 같습니다.
   - GA 릴리스는 GA 릴리스 업데이트를 알림
   - 미리 보기/RC 릴리스는 GA 및 미리 보기 릴리스 업데이트를 알림
-- **Off**는 업데이트 알림 기능을 해제합니다.
-- **LTS**는 LTS(장기 서비스) GA 릴리스 업데이트만 알립니다.
+- **Off** 는 업데이트 알림 기능을 해제합니다.
+- **LTS** 는 LTS(장기 서비스) GA 릴리스 업데이트만 알립니다.
 
 > [!NOTE]
 > 환경 변수 `$Env:POWERSHELL_UPDATECHECK`는 처음으로 설정될 때까지 존재하지 않습니다.
@@ -346,18 +346,18 @@ $Env:POWERSHELL_UPDATECHECK = 'LTS'
 $Env:POWERSHELL_UPDATECHECK = 'Default'
 ```
 
-자세한 내용은 [업데이트 알림](/powershell/module/microsoft.powershell.core/about/about_update_notifications?view=powershell-7)을 참조하세요.
+자세한 내용은 [업데이트 알림](/powershell/module/microsoft.powershell.core/about/about_update_notifications)을 참조하세요.
 
 ## <a name="new-dsc-resource-support-with-invoke-dscresource-experimental"></a>Invoke-DSCResource를 사용한 새로운 DSC 리소스 지원(실험적)
 
 > [!NOTE]
-> **PSDesiredStateConfiguration.InvokeDscResource**라는 실험적 기능입니다. 자세한 내용은 [실험적 기능](/powershell/module/microsoft.powershell.core/about/about_experimental_features?view=powershell-7)을 참조하세요.
+> **PSDesiredStateConfiguration.InvokeDscResource** 라는 실험적 기능입니다. 자세한 내용은 [실험적 기능 사용](/powershell/scripting/learn/experimental-features)을 참조하세요.
 
 `Invoke-DscResource` cmdlet은 지정된 PowerShell DSC(Desired State Configuration) 리소스의 메서드를 실행합니다.
 
 이 cmdlet은 구성 문서를 만들지 않고 DSC 리소스를 직접 호출합니다. 이 cmdlet을 사용하면 구성 관리 제품이 DSC 리소스를 사용하여 Windows 또는 Linux를 관리할 수 있습니다. 이 cmdlet을 사용하면 디버깅을 사용하도록 설정한 상태에서 DSC 엔진이 실행 중일 때에도 리소스를 디버그할 수 있습니다.
 
-해당 명령은 **WindowsProcess**라는 리소스의 **Set** 메서드를 호출하고 필수 **Path** 및 **Arguments** 속성을 제공하여 지정된 Windows 프로세스를 시작합니다.
+해당 명령은 **WindowsProcess** 라는 리소스의 **Set** 메서드를 호출하고 필수 **Path** 및 **Arguments** 속성을 제공하여 지정된 Windows 프로세스를 시작합니다.
 
 ```powershell
 Invoke-DscResource -Name WindowsProcess -Method Set -ModuleName PSDesiredStateConfiguration -Property @{
@@ -366,7 +366,7 @@ Invoke-DscResource -Name WindowsProcess -Method Set -ModuleName PSDesiredStateCo
 }
 ```
 
-자세한 내용은 [Invoke-DSCResource](/powershell/module/psdesiredstateconfiguration/invoke-dscresource?view=powershell-7)를 참조하세요.
+자세한 내용은 [Invoke-DSCResource](/powershell/module/psdesiredstateconfiguration/invoke-dscresource?view=powershell-7&preserve-view=true)를 참조하세요.
 
 ## <a name="breaking-changes-and-improvements"></a>주요 변경 내용 및 개선 사항
 
