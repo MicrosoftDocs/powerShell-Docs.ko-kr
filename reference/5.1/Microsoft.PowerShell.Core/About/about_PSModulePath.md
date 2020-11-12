@@ -2,20 +2,20 @@
 description: PSModulePath 환경 변수는 모듈 및 리소스를 찾기 위해 검색 되는 폴더 위치 목록을 포함 합니다.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 04/13/2020
+ms.date: 11/11/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_PSModulePath?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_PSModulePath
-ms.openlocfilehash: 60373e534fb319195c187b8cb26c6aabc0f3b8b7
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 6e0307996bf619bc887b076a1f8c0faa619964fe
+ms.sourcegitcommit: aac365f7813756e16b59322832a904e703e0465b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222666"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94524478"
 ---
 # <a name="about-psmodulepath"></a>PSModulePath 정보
 
-`$env:PSModulePath`환경 변수는 모듈 및 리소스를 찾기 위해 검색 되는 폴더 위치 목록을 포함 합니다.
+`$env:PSModulePath`환경 변수는 모듈 및 리소스를 찾기 위해 검색 되는 폴더 위치 목록을 포함 합니다. PowerShell은 모듈 (또는) 파일의 각 폴더를 재귀적으로 검색 `.psd1` `.psm1` 합니다.
 
 기본적으로에 할당 되는 유효 위치는 `$env:PSModulePath` 다음과 같습니다.
 
@@ -130,6 +130,21 @@ PowerShell Core 6은 `$env:PSModulePath` 를 덮어씁니다. 변경 내용이 �
 ### <a name="starting-powershell-7-from-powershell-6"></a>PowerShell 6에서 PowerShell 7 시작
 
 Powershell 7 시작은 PowerShell Core 6이 추가 된 상속 경로를 추가 하 여 그대로 계속 유지 됩니다. PS7 경로는 접두사로 지정 되므로 기능 문제가 없습니다.
+
+## <a name="module-search-behavior"></a>모듈 검색 동작
+
+PowerShell은 모듈 (또는) 파일에 대 한 **PSModulePath** 의 각 폴더를 재귀적으로 검색 `.psd1` `.psm1` 합니다. 이 검색 패턴을 사용 하면 동일한 모듈의 여러 버전을 서로 다른 폴더에 설치할 수 있습니다. 다음은 그 예입니다. 
+
+```Output
+    Directory: C:\Program Files\WindowsPowerShell\Modules\PowerShellGet
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/14/2020  5:56 PM                1.0.0.1
+d----           9/13/2019  3:53 PM                2.1.2
+```
+
+기본적으로 PowerShell은 여러 버전이 발견 될 때 모듈의 가장 높은 버전 번호를 로드 합니다. 특정 버전을 로드 하려면 `Import-Module` **FullyQualifiedName** 매개 변수와 함께를 사용 합니다. 자세한 내용은 [Import-Module](xref:Microsoft.PowerShell.Core.Import-Module)을 참조하십시오.
 
 ## <a name="see-also"></a>참고 항목
 

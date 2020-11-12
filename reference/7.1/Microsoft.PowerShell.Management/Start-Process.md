@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 08/03/2020
+ms.date: 11/11/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/start-process?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-Process
-ms.openlocfilehash: ade80115f85cb241fdf0dc4e829daa5b381644ef
-ms.sourcegitcommit: 4fc8cf397cb725ae973751d1d5d542f34f0db2d7
+ms.openlocfilehash: 75f0b0bed808efbe31254fcd04662ddef2f3a22c
+ms.sourcegitcommit: aac365f7813756e16b59322832a904e703e0465b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "93219089"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94524742"
 ---
 # Start-Process
 
@@ -117,6 +117,19 @@ runasuser
 Start-Process -FilePath "$env:comspec" -ArgumentList "/c dir `"%systemdrive%\program files`""
 Start-Process -FilePath "$env:comspec" -ArgumentList "/c","dir","`"%systemdrive%\program files`""
 ```
+
+### 예 8: Linux에서 분리 된 프로세스 만들기
+
+Windows에서 시작 하는 `Start-Process` 셸에서 독립적으로 실행 되는 독립 프로세스를 만듭니다. Windows가 아닌 플랫폼에서 새로 시작 된 프로세스는 시작 된 셸에 연결 됩니다. 시작 셸을 닫으면 자식 프로세스가 종료 됩니다.
+
+Unix와 같은 플랫폼에서 자식 프로세스가 종료 되지 않도록 하려면와 결합 하면 `Start-Process` `nohup` 됩니다. 다음 예제에서는 시작 세션을 닫은 후에도 활성 상태로 유지 되는 Linux에서 PowerShell의 백그라운드 인스턴스를 시작 합니다. `nohup`명령은 현재 디렉터리의 파일에서 출력을 수집 합니다 `nohup.out` .
+
+```powershell
+# Runs for 2 minutes and appends output to ./nohup.out
+Start-Process nohup 'pwsh -noprofile -c "1..120 | % { Write-Host . -NoNewline; sleep 1 }"'
+```
+
+이 예제에서는 `Start-Process` 가 분리 된 프로세스로 시작 하는 Linux 명령을 실행 하 고 `nohup` `pwsh` 있습니다. 자세한 내용은 [nohup](https://linux.die.net/man/1/nohup)의 man 페이지를 참조 하세요.
 
 ## PARAMETERS
 
@@ -367,7 +380,7 @@ Accept wildcard characters: False
 
 ### -WorkingDirectory
 
-새 프로세스를 시작할 위치를 지정 합니다. 기본값은 시작 되는 실행 파일 또는 문서의 위치입니다. 제공 된 경로는 리터럴 경로로 처리 됩니다. 와일드카드는 지원되지 않습니다. `'`경로 이름에 와일드 카드로 해석 될 문자가 포함 된 경우 경로를 작은따옴표 ()로 묶어야 합니다.
+새 프로세스를 시작할 위치를 지정 합니다. 기본값은 시작 되는 실행 파일 또는 문서의 위치입니다. 와일드카드는 지원되지 않습니다. 경로 이름에는 와일드 카드로 해석 될 문자를 포함 하면 안 됩니다.
 
 ```yaml
 Type: System.String
