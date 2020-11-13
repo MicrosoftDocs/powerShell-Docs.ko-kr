@@ -55,24 +55,26 @@
       items:
         - name: 개요
           href: learn/deep-dives/overview.md
-        - name: 배열에 대해 알고 싶은 모든 것
-          href: learn/deep-dives/everything-about-arrays.md
-        - name: 해시 테이블에 대해 알고 싶은 모든 것
-          href: learn/deep-dives/everything-about-hashtable.md
-        - name: PSCustomObject에 대해 알고 싶은 모든 것
-          href: learn/deep-dives/everything-about-pscustomobject.md
-        - name: 문자열 대체에 대해 알고 싶은 모든 것
-          href: learn/deep-dives/everything-about-string-substitutions.md
-        - name: if/then/else에 대해 알고 싶은 모든 것
-          href: learn/deep-dives/everything-about-if.md
-        - name: 전환에 대해 알고 싶은 모든 것
-          href: learn/deep-dives/everything-about-switch.md
-        - name: 예외에 대해 알고 싶은 모든 것
-          href: learn/deep-dives/everything-about-exceptions.md
-        - name: $null에 대해 알고 싶은 모든 것
-          href: learn/deep-dives/everything-about-null.md
-        - name: ShouldProcess에 대해 알고 싶은 모든 것
-          href: learn/deep-dives/everything-about-shouldprocess.md
+        - name: ...에 대해 알고 싶은 모든 것
+          items:
+            - name: 배열에 대해 알고 싶은 모든 것
+              href: learn/deep-dives/everything-about-arrays.md
+            - name: 해시 테이블에 대해 알고 싶은 모든 것
+              href: learn/deep-dives/everything-about-hashtable.md
+            - name: PSCustomObject에 대해 알고 싶은 모든 것
+              href: learn/deep-dives/everything-about-pscustomobject.md
+            - name: 문자열 대체에 대해 알고 싶은 모든 것
+              href: learn/deep-dives/everything-about-string-substitutions.md
+            - name: if/then/else에 대해 알고 싶은 모든 것
+              href: learn/deep-dives/everything-about-if.md
+            - name: 전환에 대해 알고 싶은 모든 것
+              href: learn/deep-dives/everything-about-switch.md
+            - name: 예외에 대해 알고 싶은 모든 것
+              href: learn/deep-dives/everything-about-exceptions.md
+            - name: $null에 대해 알고 싶은 모든 것
+              href: learn/deep-dives/everything-about-null.md
+            - name: ShouldProcess에 대해 알고 싶은 모든 것
+              href: learn/deep-dives/everything-about-shouldprocess.md
         - name: 다중 스레딩 중 Write-Progress
           href: learn/deep-dives/write-progress-across-multiple-threads.md
         - name: PowerShell 함수에 자격 증명 지원 추가
@@ -83,7 +85,7 @@
           items:
             - name: 개요
               href: learn/remoting/jea/overview.md
-            - name: 필수 구성 요소
+            - name: 사전 요구 사항
               href: learn/remoting/jea/prerequisites.md
             - name: 역할 기능
               href: learn/remoting/jea/role-capabilities.md
@@ -120,6 +122,8 @@
   items:
     - name: PowerShell 7.x의 새로운 기능
       items:
+        - name: PowerShell 7.1의 새로운 기능
+          href: whats-new/what-s-new-in-powershell-71.md
         - name: PowerShell 7.0의 새로운 기능
           href: whats-new/what-s-new-in-powershell-70.md
     - name: PowerShell Core 6.x의 새로운 기능
