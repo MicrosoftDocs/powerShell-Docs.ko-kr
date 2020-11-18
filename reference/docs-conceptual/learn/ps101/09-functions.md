@@ -5,12 +5,12 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: ca48f3020fa306f8a24328bd18648d5954c48a94
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+ms.openlocfilehash: 9554c0b4d3932b7371201f7b08c8b9d26a567f5e
+ms.sourcegitcommit: e85e56d6614cbd30e01965a5cf03fb3f5ca78103
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438204"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94589137"
 ---
 # <a name="chapter-9---functions"></a>9장 - 함수
 
@@ -247,7 +247,7 @@ function Test-MrParameter {
 }
 ```
 
-매개 변수 이름에 **Computer**, **ServerName** 또는 **Host**가 아니라 **ComputerName**을 사용한 이유가 무엇일까요? 기본 cmdlet과 같이 함수를 표준화하려고 했기 때문입니다.
+매개 변수 이름에 **Computer**, **ServerName** 또는 **Host** 가 아니라 **ComputerName** 을 사용한 이유가 무엇일까요? 기본 cmdlet과 같이 함수를 표준화하려고 했기 때문입니다.
 
 시스템의 모든 명령을 쿼리하고 특정 매개 변수 이름이 있는 값을 반환하는 함수를 만들겠습니다.
 
@@ -439,7 +439,7 @@ function Test-MrParameterValidation {
 }
 ```
 
-이전 예제에서는 **ComputerName** 매개 변수의 데이터 형식으로 **String**을 지정했습니다. 이렇게 하면 단일 컴퓨터 이름만 지정할 수 있습니다. 쉼표로 구분된 목록을 통해 둘 이상의 컴퓨터 이름을 지정하면 오류가 발생합니다.
+이전 예제에서는 **ComputerName** 매개 변수의 데이터 형식으로 **String** 을 지정했습니다. 이렇게 하면 단일 컴퓨터 이름만 지정할 수 있습니다. 쉼표로 구분된 목록을 통해 둘 이상의 컴퓨터 이름을 지정하면 오류가 발생합니다.
 
 ```powershell
 Test-MrParameterValidation -ComputerName Server01, Server02
@@ -473,7 +473,7 @@ function Test-MrParameterValidation {
 ```
 
 이전 예제에 사용된 구문은 PowerShell 버전 3.0 이상과 호환됩니다.
-`[Parameter(Mandatory=$true)]`를 대신 지정하면 함수를 PowerShell 버전 2.0 이상과 호환되도록 만들 수 있습니다. **ComputerName**은 필수이므로 값이 하나 지정되지 않으면 함수는 값을 묻는 메시지를 표시합니다.
+`[Parameter(Mandatory=$true)]`를 대신 지정하면 함수를 PowerShell 버전 2.0 이상과 호환되도록 만들 수 있습니다. **ComputerName** 은 필수이므로 값이 하나 지정되지 않으면 함수는 값을 묻는 메시지를 표시합니다.
 
 ```powershell
 Test-MrParameterValidation
@@ -577,9 +577,9 @@ Test-MrVerboseOutput -ComputerName Server01, Server02 -Verbose
 
 ## <a name="pipeline-input"></a>파이프라인 입력
 
-함수에서 파이프라인 입력을 허용하도록 하려면 몇 가지 추가 코딩이 필요합니다. 이 책의 앞부분에서 설명한 것처럼 명령은 **값 기준**(형식 기준) 또는 **속성 이름 기준**으로 파이프라인 입력을 허용할 수 있습니다. 네이티브 명령과 마찬가지로 함수를 작성하여 이러한 유형의 입력 중 하나 또는 둘 모두를 허용할 수 있습니다.
+함수에서 파이프라인 입력을 허용하도록 하려면 몇 가지 추가 코딩이 필요합니다. 이 책의 앞부분에서 설명한 것처럼 명령은 **값 기준**(형식 기준) 또는 **속성 이름 기준** 으로 파이프라인 입력을 허용할 수 있습니다. 네이티브 명령과 마찬가지로 함수를 작성하여 이러한 유형의 입력 중 하나 또는 둘 모두를 허용할 수 있습니다.
 
-**값 기준**으로 파이프라인 입력을 허용하려면 해당 매개 변수에 `ValueFromPipeline` 매개 변수 특성을 지정합니다. 각 데이터 형식 중 하나에서만 **값 기준**으로 파이프라인 입력을 수락할 수 있다는 데 유의해야 합니다. 예를 들어 문자열 입력을 허용하는 두 개의 매개 변수가 있는 경우 이 중 하나만 **값 기준**으로 파이프라인 입력을 허용할 수 있습니다. 두 문자열 매개 변수 모두에 지정할 경우 파이프라인 입력이 어느 매개 변수에 바인딩할지 알 수 없기 때문입니다. 이것이 필자가 이 유형의 파이프라인 입력을 **값 기준** 대신 _형식 기준_으로 부르는 또 다른 이유입니다.
+**값 기준** 으로 파이프라인 입력을 허용하려면 해당 매개 변수에 `ValueFromPipeline` 매개 변수 특성을 지정합니다. 각 데이터 형식 중 하나에서만 **값 기준** 으로 파이프라인 입력을 수락할 수 있다는 데 유의해야 합니다. 예를 들어 문자열 입력을 허용하는 두 개의 매개 변수가 있는 경우 이 중 하나만 **값 기준** 으로 파이프라인 입력을 허용할 수 있습니다. 두 문자열 매개 변수 모두에 지정할 경우 파이프라인 입력이 어느 매개 변수에 바인딩할지 알 수 없기 때문입니다. 이것이 필자가 이 유형의 파이프라인 입력을 **값 기준** 대신 _형식 기준_ 으로 부르는 또 다른 이유입니다.
 
 파이프라인 입력은 `foreach` 루프에서 항목이 처리되는 방식과 비슷하게 한 번에 한 항목으로 제공됩니다.
 배열을 입력으로 허용하는 경우 최소한 `process` 블록이 이들 각 항목을 처리하는 데 필요합니다. 단일 값만 입력으로 허용하는 경우에는 `process` 블록이 필요하지 않지만 일관성을 위해 지정하는 것이 좋습니다.
@@ -601,7 +601,7 @@ function Test-MrPipelineInput {
 }
 ```
 
-**속성 이름 기준**으로 파이프라인 입력을 허용하는 것은 비슷하지만 `ValueFromPipelineByPropertyName` 매개 변수 특성을 사용하여 지정되고 데이터 형식에 관계없이 원하는 수의 매개 변수에 지정될 수 있다는 점만 다릅니다. 핵심은 파이프되는 명령의 출력이 매개 변수 이름 또는 함수의 매개 변수 별칭과 일치하는 속성 이름을 포함해야 한다는 점입니다.
+**속성 이름 기준** 으로 파이프라인 입력을 허용하는 것은 비슷하지만 `ValueFromPipelineByPropertyName` 매개 변수 특성을 사용하여 지정되고 데이터 형식에 관계없이 원하는 수의 매개 변수에 지정될 수 있다는 점만 다릅니다. 핵심은 파이프되는 명령의 출력이 매개 변수 이름 또는 함수의 매개 변수 별칭과 일치하는 속성 이름을 포함해야 한다는 점입니다.
 
 ```powershell
 function Test-MrPipelineInput {
@@ -673,7 +673,7 @@ function Test-MrErrorHandling {
 }
 ```
 
-이전 예제에 표시된 함수는 오류 처리를 사용하지만 처리되지 않은 예외도 생성합니다. 명령이 종료 오류를 생성하지 않기 때문입니다. 이를 이해하는 것도 중요합니다. 종료 오류만 catch됩니다. 종료되지 않는 오류를 종료하는 오류로 설정하려면 **Stop**을 값으로 사용하여 **ErrorAction** 매개 변수를 지정합니다.
+이전 예제에 표시된 함수는 오류 처리를 사용하지만 처리되지 않은 예외도 생성합니다. 명령이 종료 오류를 생성하지 않기 때문입니다. 이를 이해하는 것도 중요합니다. 종료 오류만 catch됩니다. 종료되지 않는 오류를 종료하는 오류로 설정하려면 **Stop** 을 값으로 사용하여 **ErrorAction** 매개 변수를 지정합니다.
 
 ```powershell
 function Test-MrErrorHandling {
@@ -700,7 +700,7 @@ function Test-MrErrorHandling {
 }
 ```
 
-반드시 필요한 경우가 아니면 전역 `$ErrorActionPreference` 변수를 수정하지 마세요. PowerShell 함수 내에서 직접 .NET과 같은 항목을 사용하는 경우 명령 자체에서 **ErrorAction**을 지정할 수 없습니다. 이 시나리오에서는 전역 `$ErrorActionPreference` 변수를 변경해야 할 수 있지만, 변경하는 경우 명령을 시도해본 후 즉시 다시 변경하세요.
+반드시 필요한 경우가 아니면 전역 `$ErrorActionPreference` 변수를 수정하지 마세요. PowerShell 함수 내에서 직접 .NET과 같은 항목을 사용하는 경우 명령 자체에서 **ErrorAction** 을 지정할 수 없습니다. 이 시나리오에서는 전역 `$ErrorActionPreference` 변수를 변경해야 할 수 있지만, 변경하는 경우 명령을 시도해본 후 즉시 다시 변경하세요.
 
 ## <a name="comment-based-help"></a>주석 기반 도움말
 
@@ -793,4 +793,5 @@ PowerShell에서 함수를 작성하는 모든 구문은 특히 이제 막 시�
 [about_Functions_Advanced]: /powershell/module/microsoft.powershell.core/about/about_functions_advanced
 [about_Try_Catch_Finally]: /powershell/module/microsoft.powershell.core/about/about_try_catch_finally
 [about_Comment_Based_Help]: /powershell/module/microsoft.powershell.core/about/about_comment_based_help
-[비디오: 고급 함수 및 스크립트 모듈을 사용하여 PowerShell 도구 작성]: https://mikefrobbins.com/2016/05/26/video-powershell-toolmaking-with-advanced-functions-and-script-modules/) [파스칼식 대/소문자]: /dotnet/standard/design-guidelines/capitalization-conventionss
+[비디오: 고급 함수 및 스크립트 모듈을 사용하여 PowerShell 도구 작성]: https://mikefrobbins.com/2016/05/26/video-powershell-toolmaking-with-advanced-functions-and-script-modules/
+[파스칼식 대/소문자]: /dotnet/standard/design-guidelines/capitalization-conventions
