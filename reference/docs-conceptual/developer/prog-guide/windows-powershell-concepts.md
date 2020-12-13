@@ -1,12 +1,14 @@
 ---
-title: Windows PowerShell 개념 | Microsoft Docs
-ms.date: 6/12/2019
-ms.openlocfilehash: a31c1df784b7b5f872c4647aece8fafa535db66b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.date: 06/12/2019
+ms.topic: reference
+title: Windows PowerShell 개념
+description: Windows PowerShell 개념
+ms.openlocfilehash: a9b88a2e575b7ff7c036ce0fcbc035f0b55d0f5f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786954"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355361"
 ---
 # <a name="windows-powershell-concepts"></a>Windows PowerShell 개념
 
@@ -22,13 +24,13 @@ ms.locfileid: "87786954"
 |[RuntimeDefinedParameter 클래스](/dotnet/api/system.management.automation.runtimedefinedparameter)|런타임 매개 변수 선언입니다.|
 |[System.web. Automation 네임 스페이스](/dotnet/api/System.Management.Automation)|PowerShell API 네임 스페이스 개요.|
 |[Windows PowerShell 공급자 개요](../provider/windows-powershell-provider-overview.md)|데이터 저장소에 액세스 하는 데 사용 되는 PowerShell 공급자에 대 한 개요입니다.|
-|[PowerShell Cmdlet에 대 한 도움말 작성](../help/writing-help-for-windows-powershell-cmdlets.md)|PowerShell cmdlet 도움말을 작성 하는 방법입니다.|
+|[PowerShell cmdlet에 대한 도움말 작성](../help/writing-help-for-windows-powershell-cmdlets.md)|PowerShell cmdlet 도움말을 작성 하는 방법입니다.|
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [PowerShell 클래스](/dotnet/api/system.management.automation.powershell)
 
-[PowerShell Core API 참조](/dotnet/api/?view=pscore-6.2.0)
+[PowerShell Core API 참조](/dotnet/api/?view=pscore-6.2.0&preserve-view=true)
 
 [Windows PowerShell 프로그래머 가이드](windows-powershell-programmer-s-guide.md)
 
@@ -36,6 +38,6 @@ ms.locfileid: "87786954"
 
 [Windows Powershell 공급자 작성](../provider/writing-a-windows-powershell-provider.md)
 
-[Windows PowerShell API 참조](/dotnet/api/?view=powershellsdk-1.1.0)
+[Windows PowerShell API 참조](/dotnet/api/?view=powershellsdk-1.1.0&preserve-view=true)
 
 [Windows PowerShell 참조](../windows-powershell-reference.md)

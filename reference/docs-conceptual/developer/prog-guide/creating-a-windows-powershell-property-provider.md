@@ -1,15 +1,14 @@
 ---
-title: Windows PowerShell 속성 공급자 만들기 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- property providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], property provider
-ms.openlocfilehash: e8ef92629fe036154cdd2f0facbe0cbe8add7533
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 속성 공급자 만들기
+description: Windows PowerShell 속성 공급자 만들기
+ms.openlocfilehash: 5370624afa784598ca784b201f7e7345eb958ff9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778939"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94390918"
 ---
 # <a name="creating-a-windows-powershell-property-provider"></a>Windows PowerShell 속성 공급자 만들기
 
@@ -52,7 +51,7 @@ System.object [를](/dotnet/api/System.Management.Automation.Provider.IPropertyC
 
 - 기본적으로이 메서드의 재정의는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 가로 설정 된 경우를 제외 하 고 사용자 로부터 숨겨진 개체에 대 한 판독기를 검색 하면 안 됩니다. `true` 경로가 사용자 및 시스템에서 숨겨진 항목을 나타내는 경우 오류를 작성 해야 합니다 [. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 는로 설정 됩니다. `false`
 
-## <a name="attaching-dynamic-parameters-to-the-get-itemproperty-cmdlet"></a>동적 매개 변수를 Get-itemproperty Cmdlet에 연결
+## <a name="attaching-dynamic-parameters-to-the-get-itemproperty-cmdlet"></a>Get-ItemProperty Cmdlet에 동적 매개 변수 연결
 
 Cmdlet에는 `Get-ItemProperty` 런타임에 동적으로 지정 되는 추가 매개 변수가 필요할 수 있습니다. 이러한 동적 매개 변수를 제공 하려면 Windows PowerShell 속성 공급자가 System.object를 구현 해야 합니다. [Getpropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.GetPropertyDynamicParameters) 메서드. 매개 변수는 정규화 된 `path` 공급자 내부 경로를 나타내고 `providerSpecificPickList` 매개 변수는 명령줄에 입력 된 공급자별 속성을 지정 합니다. `null`속성이 cmdlet으로 파이프 되 면이 매개 변수가 이거나 비어 있을 수 있습니다. 이 경우이 메서드는 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환 합니다. Windows PowerShell 런타임은 반환 된 개체를 사용 하 여 cmdlet에 매개 변수를 추가 합니다.
 
@@ -69,7 +68,7 @@ Cmdlet에는 `Get-ItemProperty` 런타임에 동적으로 지정 되는 추가 �
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testcmdletspropertyprovidersetproperty](Msh_samplestestcmdlets#testcmdletspropertyprovidersetproperty)]  -->
 
-#### <a name="things-to-remember-about-implementing-set-itemproperty"></a>Get-itemproperty 구현에 대해 기억할 사항
+#### <a name="things-to-remember-about-implementing-set-itemproperty"></a>Set-ItemProperty 구현에 대해 기억할 사항
 
 다음 조건은 System.object의 구현에 적용 될 수 있습니다. [Setproperty * *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty):
 
@@ -82,7 +81,7 @@ Cmdlet에는 `Get-ItemProperty` 런타임에 동적으로 지정 되는 추가 �
 
   [System.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 를 호출 하 고 나면, 잠재적으로 위험할 수 있는 시스템을 수정할 수 있는 경우에는 system.object를 호출 해야 합니다. 즉,. n a m p. i n p. i n d. p a n `true` [*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) 메서드는 [system.object를](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 호출 해야 합니다. 이 메서드는 사용자에 게 확인 메시지를 보내 작업을 계속 해야 함을 나타내는 추가 피드백을 허용 합니다.
 
-## <a name="attaching-dynamic-parameters-for-the-set-itemproperty-cmdlet"></a>Get-itemproperty Cmdlet에 대 한 동적 매개 변수 연결
+## <a name="attaching-dynamic-parameters-for-the-set-itemproperty-cmdlet"></a>Set-ItemProperty Cmdlet에 대 한 동적 매개 변수 연결
 
 Cmdlet에는 `Set-ItemProperty` 런타임에 동적으로 지정 되는 추가 매개 변수가 필요할 수 있습니다. 이러한 동적 매개 변수를 제공 하려면 Windows PowerShell 속성 공급자가 System.object를 구현 해야 합니다. [Setpropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetPropertyDynamicParameters) 메서드. 이 메서드는 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환 합니다. `null`동적 매개 변수를 추가할 수 없는 경우 값을 반환할 수 있습니다.
 
@@ -111,7 +110,7 @@ Cmdlet에는 `Set-ItemProperty` 런타임에 동적으로 지정 되는 추가 �
 
   System.object를 호출 하면 [ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 가 반환 `true` 되 고 잠재적으로 위험한 시스템을 수정할 수 있는 경우에는 system.object를 다시 만들 수 있습니다. [Clearproperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) 메서드는 system.object를 호출 해야 합니다. [shouldprocess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 호출 해야 합니다. 이 메서드는 사용자에 게 확인 메시지를 보내 잠재적으로 위험한 작업을 계속 해야 함을 나타낼 수 있습니다.
 
-## <a name="attaching-dynamic-parameters-to-the-clear-itemproperty-cmdlet"></a>Get-itemproperty Cmdlet에 동적 매개 변수 연결
+## <a name="attaching-dynamic-parameters-to-the-clear-itemproperty-cmdlet"></a>Clear-ItemProperty Cmdlet에 동적 매개 변수 연결
 
 Cmdlet에는 `Clear-ItemProperty` 런타임에 동적으로 지정 되는 추가 매개 변수가 필요할 수 있습니다. 이러한 동적 매개 변수를 제공 하기 위해 Windows PowerShell 속성 공급자는 System.object를 구현 해야 합니다. [Clearpropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearPropertyDynamicParameters) 메서드. 이 메서드는 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환 합니다. `null`동적 매개 변수를 추가할 수 없는 경우 값을 반환할 수 있습니다.
 
@@ -121,7 +120,7 @@ Cmdlet에는 `Clear-ItemProperty` 런타임에 동적으로 지정 되는 추가
 
 ## <a name="building-the-windows-powershell-provider"></a>Windows PowerShell 공급자 빌드
 
-[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법을](https://msdn.microsoft.com/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)참조 하세요.
+[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법을](/previous-versions//ms714644(v=vs.85))참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -129,6 +128,6 @@ Cmdlet에는 `Clear-ItemProperty` 런타임에 동적으로 지정 되는 추가
 
 [Windows PowerShell 공급자 디자인](./designing-your-windows-powershell-provider.md)
 
-[개체 형식 및 서식 확장](https://msdn.microsoft.com/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[개체 형식 및 서식 확장](/previous-versions//ms714665(v=vs.85))
 
-[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](https://msdn.microsoft.com/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Cmdlet, 공급자 및 호스트 응용 프로그램을 등록 하는 방법](/previous-versions//ms714644(v=vs.85))

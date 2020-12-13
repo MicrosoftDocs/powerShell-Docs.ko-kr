@@ -4,10 +4,10 @@ ms.topic: reference
 title: Cmdlet 샘플
 description: Cmdlet 샘플
 ms.openlocfilehash: 6ee149f611e5af5c45a62363e19e66bf200c0c0a
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92668255"
 ---
 # <a name="cmdlet-samples"></a>Cmdlet 샘플

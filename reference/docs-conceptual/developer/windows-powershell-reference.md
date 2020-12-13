@@ -1,14 +1,14 @@
 ---
-title: Windows PowerShell 참조 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- Windows PowerShell SDK
-ms.openlocfilehash: 1c1a3a4de2df2043fe12cad6a69b7bc36ab9d3d7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 참조
+description: Windows PowerShell 참조
+ms.openlocfilehash: 9c1547ac5ec5134c99aa9213e6aaca1af8d5b3e9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786682"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94390238"
 ---
 # <a name="windows-powershell-reference"></a>Windows PowerShell 참조
 
@@ -30,7 +30,7 @@ Windows PowerShell SDK 외에도 다음 리소스에서 추가 정보를 제공 
 
 [Windows PowerShell Cmdlet 작성](./cmdlet/writing-a-windows-powershell-cmdlet.md) Cmdlet을 디자인 하는 프로그램 관리자와 cmdlet 코드를 구현 하는 개발자를 위한 정보 및 코드 예제를 제공 합니다.
 
-[Windows PowerShell 팀 블로그](https://blogs.msdn.microsoft.com/PowerShell/) 다른 Windows PowerShell 사용자의 학습 및 공동 작업에 가장 적합 한 리소스입니다. Windows PowerShell 팀 블로그를 읽은 다음 Windows PowerShell 사용자 포럼 (microsoft. w i m.
+[Windows PowerShell 팀 블로그](https://devblogs.microsoft.com/powershell/) 다른 Windows PowerShell 사용자의 학습 및 공동 작업에 가장 적합 한 리소스입니다. Windows PowerShell 팀 블로그를 읽은 다음 Windows PowerShell 사용자 포럼 (microsoft. w i m.
 Windows 실시간 검색을 사용 하 여 다른 Windows PowerShell 블로그 및 리소스를 찾을 수 있습니다. 그런 다음 전문 지식을 개발 하면서 아이디어를 자유롭게 기여 하세요.
 
 [PowerShell 모듈 브라우저](/powershell/module/) 명령줄 도움말 항목의 최신 버전을 제공 합니다.
@@ -41,7 +41,7 @@ Windows 실시간 검색을 사용 하 여 다른 Windows PowerShell 블로그 �
 
 [System.object](/dotnet/api/System.Management.Automation.Provider) 이 네임 스페이스는 Windows PowerShell 공급자를 구현 하는 데 필요한 클래스, 열거형 및 인터페이스를 포함 합니다. 특히, [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) 클래스는 모든 Windows PowerShell 공급자 클래스가 파생 되어야 하는 기본 클래스입니다.
 
-[Microsoft](/dotnet/api/Microsoft.PowerShell.Commands) powershell .이 네임 스페이스에는 Windows PowerShell에서 구현 하는 cmdlet 및 공급자에 대 한 클래스가 포함 되어 있습니다. 마찬가지로 *YourName*를 만드는 것이 좋습니다. 구현 하는 cmdlet에 대 한 명령 네임 스페이스입니다.
+[Microsoft](/dotnet/api/Microsoft.PowerShell.Commands) powershell .이 네임 스페이스에는 Windows PowerShell에서 구현 하는 cmdlet 및 공급자에 대 한 클래스가 포함 되어 있습니다. 마찬가지로 *YourName* 를 만드는 것이 좋습니다. 구현 하는 cmdlet에 대 한 명령 네임 스페이스입니다.
 
 [이 네임](/dotnet/api/System.Management.Automation.Host) 스페이스는 cmdlet이 사용자와 Windows PowerShell 간의 상호 작용을 정의 하는 데 사용 하는 클래스, 열거형 및 인터페이스를 포함 합니다.
 

@@ -1,27 +1,26 @@
 ---
-title: 파이프라인 입력을 처리 하는 매개 변수 추가 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- cmdlets [PowerShell Programmer's Guide], pipeline input
-- parameters [PowerShell Programmer's Guide], pipeline input
-ms.openlocfilehash: a678df30a13086b317d5680ee0fbc4d3c3391235
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 파이프라인 입력을 처리하는 매개 변수 추가
+description: 파이프라인 입력을 처리하는 매개 변수 추가
+ms.openlocfilehash: b150d5be93207d9c010a6d2d4de901b4526f1d79
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784557"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668357"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>파이프라인 입력을 처리하는 매개 변수 추가
 
-Cmdlet에 대 한 입력의 한 원본은 업스트림 cmdlet에서 발생 하는 파이프라인의 개체입니다. 이 섹션에서는 cmdlet이 파이프라인 개체를 처리할 수 있도록 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)에 설명 된 대로 매개 변수를 Get Proc cmdlet에 추가 하는 방법에 대해 설명 합니다.
+Cmdlet에 대 한 입력의 한 원본은 업스트림 cmdlet에서 발생 하는 파이프라인의 개체입니다. 이 섹션에서는 cmdlet이 파이프라인 개체를 처리할 수 있도록 Get-Proc cmdlet에 매개 변수를 추가 하는 방법에 대해 설명 합니다 ( [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)참조).
 
-이 cmdlet은 `Name` 파이프라인 개체의 입력을 허용 하는 매개 변수를 사용 하 고, 제공 된 이름에 따라 로컬 컴퓨터에서 프로세스 정보를 검색 한 다음, 명령줄에서 프로세스에 대 한 정보를 표시 합니다.
+이 Get-Proc cmdlet은 `Name` 파이프라인 개체의 입력을 허용 하는 매개 변수를 사용 하 고, 제공 된 이름에 따라 로컬 컴퓨터에서 프로세스 정보를 검색 한 다음, 명령줄에서 프로세스에 대 한 정보를 표시 합니다.
 
 ## <a name="defining-the-cmdlet-class"></a>Cmdlet 클래스 정의
 
 Cmdlet을 만드는 첫 번째 단계는 항상 cmdlet의 이름을 지정 하 고 cmdlet을 구현 하는 .NET 클래스를 선언 하는 것입니다. 이 cmdlet은 프로세스 정보를 검색 하므로 여기에서 선택한 동사 이름은 "Get"입니다. 정보를 검색할 수 있는 거의 모든 종류의 cmdlet은 명령줄 입력을 처리할 수 있습니다. 승인 된 cmdlet 동사에 대 한 자세한 내용은 [Cmdlet 동사 이름](./approved-verbs-for-windows-powershell-commands.md)을 참조 하세요.
 
-다음은이 In-proc cmdlet에 대 한 정의입니다. 이 정의에 대 한 세부 정보는 [첫 번째 Cmdlet을 만들](./creating-a-cmdlet-without-parameters.md)때 제공 됩니다.
+다음은이 Get-Proc cmdlet에 대 한 정의입니다. 이 정의에 대 한 세부 정보는 [첫 번째 Cmdlet을 만들](./creating-a-cmdlet-without-parameters.md)때 제공 됩니다.
 
 ```csharp
 [Cmdlet(VerbsCommon.Get, "proc")]
@@ -36,12 +35,12 @@ Public Class GetProcCommand
 
 ## <a name="defining-input-from-the-pipeline"></a>파이프라인에서 입력 정의
 
-이 섹션에서는 cmdlet에 대 한 파이프라인에서 입력을 정의 하는 방법을 설명 합니다. 이 Proc cmdlet은 `Name` [명령줄 입력을 처리 하는 매개 변수 추가](./adding-parameters-that-process-command-line-input.md)에 설명 된 대로 매개 변수를 나타내는 속성을 정의 합니다.
+이 섹션에서는 cmdlet에 대 한 파이프라인에서 입력을 정의 하는 방법을 설명 합니다. 이 Get-Proc cmdlet은 `Name` [명령줄 입력을 처리 하는 매개 변수 추가](./adding-parameters-that-process-command-line-input.md)에 설명 된 대로 매개 변수를 나타내는 속성을 정의 합니다.
 매개 변수 선언에 대 한 일반 정보는 해당 항목을 참조 하세요.
 
 그러나 cmdlet이 파이프라인 입력을 처리 해야 하는 경우에는 Windows PowerShell 런타임에서 입력 값에 바인딩된 매개 변수를 포함 해야 합니다. 이렇게 하려면 키워드를 추가 `ValueFromPipeline` 하거나 `ValueFromPipelineByProperty` 키워드를 System.web. [parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성 선언에 추가 해야 합니다. `ValueFromPipeline`Cmdlet이 전체 입력 개체에 액세스 하는 경우 키워드를 지정 합니다. `ValueFromPipelineByProperty`Cmdlet이 개체의 속성에만 액세스 하는 경우를 지정 합니다.
 
-다음은 `Name` 파이프라인 입력을 허용 하는이 in-proc cmdlet의 매개 변수에 대 한 매개 변수 선언입니다.
+다음은 `Name` 파이프라인 입력을 허용 하는이 Get-Proc cmdlet의 매개 변수에 대 한 매개 변수 선언입니다.
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample03/GetProcessSample03.cs" range="35-44":::
 
@@ -71,7 +70,7 @@ End Property
 
 Cmdlet이 파이프라인 입력을 처리 하려면 적절 한 입력 처리 메서드를 재정의 해야 합니다. 기본 입력 처리 방법은 [첫 번째 Cmdlet을 만드는 데](./creating-a-cmdlet-without-parameters.md)도입 되었습니다.
 
-이 cmdlet은 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 재정의 하 여 `Name` 사용자 또는 스크립트에서 제공 하는 매개 변수 입력을 처리 합니다. 이 메서드는 요청 된 각 프로세스 이름 또는 모든 프로세스에 대 한 프로세스를 가져옵니다. 이름이 제공 되지 않은 경우에는입니다. [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)내에서 [WriteObject (system.string, system.string)](/dotnet/api/system.management.automation.cmdlet.writeobject#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) 호출은 파이프라인에 출력 개체를 전송 하는 데 필요한 출력 메커니즘을 가집니다. 이 호출의 두 번째 매개 변수는 `enumerateCollection` 로 설정 되어 `true` 프로세스 개체의 배열을 열거 하도록 Windows PowerShell 런타임에 지시 하 고 명령줄에 프로세스를 한 번에 하나씩 작성 합니다.
+이 Get-Proc cmdlet은 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 재정의 하 여 `Name` 사용자 또는 스크립트에서 제공 하는 매개 변수 입력을 처리 합니다. 이 메서드는 요청 된 각 프로세스 이름 또는 모든 프로세스에 대 한 프로세스를 가져옵니다. 이름이 제공 되지 않은 경우에는입니다. [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)내에서 [WriteObject (system.string, system.string)](/dotnet/api/system.management.automation.cmdlet.writeobject#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) 호출은 파이프라인에 출력 개체를 전송 하는 데 필요한 출력 메커니즘을 가집니다. 이 호출의 두 번째 매개 변수는 `enumerateCollection` 로 설정 되어 `true` 프로세스 개체의 배열을 열거 하도록 Windows PowerShell 런타임에 지시 하 고 명령줄에 프로세스를 한 번에 하나씩 작성 합니다.
 
 ```csharp
 protected override void ProcessRecord()

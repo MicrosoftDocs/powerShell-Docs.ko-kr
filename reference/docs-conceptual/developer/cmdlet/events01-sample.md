@@ -1,29 +1,26 @@
 ---
-title: Events01 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c7b0f759ca6f3c078649a462eac1713e8214a237
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Events01 샘플
+description: Events01 샘플
+ms.openlocfilehash: ed8b7903537504609602e27693351847d322f904
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774460"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94390408"
 ---
 # <a name="events01-sample"></a>Events01 샘플
 
-이 샘플에서는 사용자가 [system.web](/dotnet/api/System.IO.FileSystemWatcher)에 의해 발생 한 이벤트를 등록할 수 있도록 하는 cmdlet을 만드는 방법을 보여 줍니다.
-이 cmdlet을 사용 하면 사용자가 특정 디렉터리에서 파일을 만들 때 실행할 작업을 등록할 수 있습니다.
-이 샘플은 [ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 기본 클래스에서 파생 됩니다.
+이 샘플에서는 사용자가 [system.web](/dotnet/api/System.IO.FileSystemWatcher)에 의해 발생 한 이벤트를 등록할 수 있도록 하는 cmdlet을 만드는 방법을 보여 줍니다. 이 cmdlet을 사용 하면 사용자가 특정 디렉터리에서 파일을 만들 때 실행할 작업을 등록할 수 있습니다. 이 샘플은 [ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 기본 클래스에서 파생 됩니다.
 
 ## <a name="how-to-build-the-sample-by-using-visual-studio"></a>Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.
 
-1. Windows PowerShell 2.0 SDK가 설치 된 상태에서 Events01 폴더로 이동 합니다.
-   기본 위치는 `C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01`입니다.
+1. Windows PowerShell 2.0 SDK가 설치 된 상태에서 Events01 폴더로 이동 합니다. 기본 위치는 `C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\Events01`입니다.
 
-2. 솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다.
-   그러면 Microsoft Visual Studio의 샘플 프로젝트가 열립니다.
+2. 솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다. 그러면 Microsoft Visual Studio의 샘플 프로젝트가 열립니다.
 
-3. **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.
-   샘플에 대 한 라이브러리는 기본 `\bin` 또는 `\bin\debug` 폴더로 빌드됩니다.
+3. **빌드** 메뉴에서 **솔루션 빌드** 를 선택합니다. 샘플에 대 한 라이브러리는 기본 `\bin` 또는 `\bin\debug` 폴더로 빌드됩니다.
 
 ### <a name="how-to-run-the-sample"></a>샘플을 실행하는 방법
 
@@ -41,7 +38,7 @@ ms.locfileid: "87774460"
     import-module events01
     ```
 
-5. FileSystemEvent cmdlet을 사용 하 여 임시 디렉터리에서 파일을 만들 때 메시지를 기록 하는 작업을 등록할 수 있습니다.
+5. Register-FileSystemEvent cmdlet을 사용 하 여 임시 디렉터리에서 파일을 만들 때 메시지를 기록 하는 작업을 등록할 수 있습니다.
 
     ```powershell
     Register-FileSystemEvent $env:temp Created -filter "*.txt" -action { Write-Host "A file was created in the TEMP directory" }
@@ -76,8 +73,7 @@ A file was created in the TEMP directory
 
 ### <a name="how-to-write-a-cmdlet-for-event-registration"></a>이벤트 등록을 위해 cmdlet을 작성 하는 방법
 
-Cmdlet은 cmdlet에 공통적인 매개 변수를 지 원하는 [ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 클래스에서 파생 됩니다. `Register-*Event`
-[ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 에서 파생 된 cmdlet은 특정 매개 변수만 정의 하 고 `GetSourceObject` 및 추상 메서드를 재정의 해야 합니다. `GetSourceObjectEventName`
+Cmdlet은 cmdlet에 공통적인 매개 변수를 지 원하는 [ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 클래스에서 파생 됩니다. `Register-*Event` [ObjectEventRegistrationBase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) 에서 파생 된 cmdlet은 특정 매개 변수만 정의 하 고 `GetSourceObject` 및 추상 메서드를 재정의 해야 합니다. `GetSourceObjectEventName`
 
 ## <a name="example"></a>예제
 
@@ -122,7 +118,7 @@ namespace Sample
         /// Gets or sets the name of the event to which the cmdlet registers.
         /// <para>
         /// Currently System.IO.FileSystemWatcher exposes 6 events: Changed, Created,
-        /// Deleted, Disposed, Error, and Renamed. Check the MSDN documentation of
+        /// Deleted, Disposed, Error, and Renamed. Check the documentation of
         /// FileSystemWatcher for details on each event.
         /// </para>
         /// </summary>
@@ -180,6 +176,6 @@ namespace Sample
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](writing-a-windows-powershell-cmdlet.md)

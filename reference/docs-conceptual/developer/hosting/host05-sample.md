@@ -1,12 +1,14 @@
 ---
-title: Host05 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 043d359fe6db6ebfa68d97002bdb8e5842e4aca5
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Host05 샘플
+description: Host05 샘플
+ms.openlocfilehash: 87769fc3b3c4991cd4f94e97415ac5ab0b81f6da
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783265"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355411"
 ---
 # <a name="host05-sample"></a>Host05 샘플
 
@@ -20,27 +22,24 @@ ms.locfileid: "87783265"
 
 ## <a name="demonstrates"></a>데모
 
-- [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스, Pshostuserinterface 클래스 및 클래스에서 파생 되는 클래스의 사용자 지정 호스트를 만들고 있습니다. [이 클래스는](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) [System.Management.Automation.Host.Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 클래스와 같은 클래스입니다.
+- [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스, Pshostuserinterface 클래스 및 클래스에서 파생 되는 클래스의 사용자 지정 호스트를 만들고 있습니다. [이 클래스는](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) [](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 클래스와 같은 클래스입니다.
 
 - 이러한 호스트 클래스를 사용 하 여 대화형 Windows PowerShell 셸을 빌드하는 콘솔 응용 프로그램 빌드
 
 - 변수를 만들고 `$profile` 다음 프로필을 로드 하는 중입니다.
 
   - 현재 사용자, 현재 호스트
-
   - 현재 사용자, 모든 호스트
-
   - 모든 사용자, 현재 호스트
-
   - 모든 사용자, 모든 호스트
 
-- [Ihostuisupportsmultiplechoiceselection](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) 인터페이스를 구현 합니다.
+- [IHostUISupportsMultipleChoiceSelection](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) 인터페이스를 구현 합니다.
 
-- [Ihostsupportsinteractivesession](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) 인터페이스를 구현 하 여 [Enter-PsSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) 및 [종료 pssession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) cmdlet을 사용 하 여 대화형 원격을 지원 합니다.
+- [IHostSupportsInteractiveSession](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) 인터페이스를 구현 하 여 [Enter-PsSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) 및 [종료 pssession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) cmdlet을 사용 하 여 대화형 원격을 지원 합니다.
 
-## <a name="example"></a>예제
+## <a name="example-1"></a>예 1
 
- 이 예제에서는 사용자가 명령줄에서 명령을 입력 하 고 해당 명령을 처리 한 다음 결과를 출력 합니다.
+이 예제에서는 사용자가 명령줄에서 명령을 입력 하 고 해당 명령을 처리 한 다음 결과를 출력 합니다.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -394,9 +393,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>예제
+## <a name="example-2"></a>예제 2
 
- 다음 코드는이 호스트 응용 프로그램에서 사용 하는 [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스의 구현입니다. 구현 되지 않은 요소는 예외를 throw 하거나 아무 것도 반환 하지 않습니다.
+다음 코드는이 호스트 응용 프로그램에서 사용 하는 [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스의 구현입니다. 구현 되지 않은 요소는 예외를 throw 하거나 아무 것도 반환 하지 않습니다.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -627,9 +626,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>예제
+## <a name="example-3"></a>예제 3
 
- 다음 코드는이 호스트 응용 프로그램에서 사용 하는 [Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 클래스의 구현입니다.
+다음 코드는이 호스트 응용 프로그램에서 사용 하는 [Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 클래스의 구현입니다.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -1146,9 +1145,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>예제
+## <a name="example-4"></a>예제 4
 
- 다음 코드는이 호스트 응용 프로그램에서 사용 하는 [system.web](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) 클래스의 구현입니다. 구현 되지 않은 요소는 예외를 throw 하거나 아무 것도 반환 하지 않습니다.
+다음 코드는이 호스트 응용 프로그램에서 사용 하는 [system.web](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) 클래스의 구현입니다. 구현 되지 않은 요소는 예외를 throw 하거나 아무 것도 반환 하지 않습니다.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host

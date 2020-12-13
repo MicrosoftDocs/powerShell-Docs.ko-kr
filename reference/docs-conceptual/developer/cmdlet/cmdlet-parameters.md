@@ -1,24 +1,18 @@
 ---
-title: Cmdlet 매개 변수 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- optional parameters [PowerShell SDK]
-- aliases [PowerShell SDK]
-- parameter sets [PowerShell SDK]
-- parameters [PowerShell SDK]
-- mandatory parameters [PowerShell SDK]
-- positional parameters [PowerShell SDK]
-- cmdlets [PowerShell SDK], parameters
-ms.openlocfilehash: 98b1d5fd0e7ffbf2d4d161f1bed73fb96a737bd4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 매개 변수
+description: Cmdlet 매개 변수
+ms.openlocfilehash: 1ab495cb674f6b2cd769c3f64d899aec67704216
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774765"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668272"
 ---
 # <a name="cmdlet-parameters"></a>Cmdlet 매개 변수
 
-Cmdlet 매개 변수는 cmdlet이 입력을 받을 수 있도록 하는 메커니즘을 제공 합니다. 매개 변수는 명령줄에서 직접 입력을 받을 수 있고 파이프라인을 통해 cmdlet에 전달 된 개체에서 이러한 매개 변수의 인수 ( *값*이 라고도 함)는 cmdlet이 허용 하는 입력, cmdlet에서 해당 작업을 수행 하는 방법 및 cmdlet이 파이프라인으로 반환 하는 데이터를 지정할 수 있습니다.
+Cmdlet 매개 변수는 cmdlet이 입력을 받을 수 있도록 하는 메커니즘을 제공 합니다. 매개 변수는 명령줄에서 직접 입력을 받을 수 있고 파이프라인을 통해 cmdlet에 전달 된 개체에서 이러한 매개 변수의 인수 ( *값* 이 라고도 함)는 cmdlet이 허용 하는 입력, cmdlet에서 해당 작업을 수행 하는 방법 및 cmdlet이 파이프라인으로 반환 하는 데이터를 지정할 수 있습니다.
 
 ## <a name="in-this-section"></a>섹션 내용
 

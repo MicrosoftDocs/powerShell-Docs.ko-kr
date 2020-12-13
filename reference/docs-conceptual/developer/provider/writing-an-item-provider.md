@@ -1,12 +1,14 @@
 ---
-title: 항목 공급자 작성 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 1df30e7af1b534756f797b9b5d4e29b689cbc782
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 항목 공급자 작성
+description: 항목 공급자 작성
+ms.openlocfilehash: f70c6ee50277988c4e3b7c255dc4548bc30319dd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786767"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355207"
 ---
 # <a name="writing-an-item-provider"></a>항목 공급자 작성
 
@@ -18,7 +20,13 @@ Windows PowerShell 공급자에 대 한 자세한 내용은 [Windows Powershell 
 
 ## <a name="implementing-item-methods"></a>항목 메서드 구현
 
-[System.object](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 는 데이터 저장소의 항목에 액세스 하 고 조작 하는 데 사용할 수 있는 여러 메서드를 노출 합니다. 이러한 메서드의 전체 목록은 [Itemcmdletprovider 메서드](/dotnet/api/system.management.automation.provider.itemcmdletprovider?view=pscore-6.2.0#methods)를 참조 하세요. 이 예제에서는 네 가지 메서드를 구현 합니다. [Getitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 지정 된 경로에 있는 항목을 가져오거나 지정 합니다. [Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 지정 된 항목의 값을 설정 하는입니다. [System.object. Itemexists *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) 지정 된 경로에 항목이 있는지 여부를 확인 합니다. [System.object. isvalidpath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) 는 경로를 확인 하 여 데이터 저장소의 특정 위치에 매핑되는지 여부를 확인 합니다.
+[System.object](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 는 데이터 저장소의 항목에 액세스 하 고 조작 하는 데 사용할 수 있는 여러 메서드를 노출 합니다.
+이러한 메서드의 전체 목록은 [Itemcmdletprovider 메서드](/dotnet/api/system.management.automation.provider.itemcmdletprovider#methods)를 참조 하세요.
+이 예제에서는 네 가지 메서드를 구현 합니다.
+[Getitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 지정 된 경로에 있는 항목을 가져오거나 지정 합니다.
+[Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 지정 된 항목의 값을 설정 하는입니다.
+[System.object. Itemexists *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) 지정 된 경로에 항목이 있는지 여부를 확인 합니다.
+[System.object. isvalidpath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) 는 경로를 확인 하 여 데이터 저장소의 특정 위치에 매핑되는지 여부를 확인 합니다.
 
 > [!NOTE]
 > 이 항목은 [Windows PowerShell 공급자 빠른](./windows-powershell-provider-quickstart.md)시작의 정보를 기반으로 합니다. 이 항목에서는 공급자 프로젝트를 설정 하는 방법에 대 한 기본 사항을 다루지 않으며, 드라이브를 만들고 제거 하는 [system.web](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) .. c a c.
@@ -80,7 +88,7 @@ protected override void GetItem(string path)
 
 [Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 메서드는 사용자가 [SetItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.setitemcommand) Cmdlet을 호출할 때 powershell 엔진 호출에 의해 호출 됩니다 (영문) (영문). 지정 된 경로에 있는 항목의 값을 설정 합니다.
 
-Access 데이터베이스 예제에서는 항목이 행 인 경우에만 항목의 값을 설정 하는 것이 좋습니다. 따라서 항목이 행이 아닐 때 메서드는 [NotSupportedException](/dotnet/api/system.notsupportedexception?view=netframework-4.8) 을 throw 합니다.
+Access 데이터베이스 예제에서는 항목이 행 인 경우에만 항목의 값을 설정 하는 것이 좋습니다. 따라서 항목이 행이 아닐 때 메서드는 [NotSupportedException](/dotnet/api/system.notsupportedexception) 을 throw 합니다.
 
 ```csharp
 protected override void SetItem(string path, object values)

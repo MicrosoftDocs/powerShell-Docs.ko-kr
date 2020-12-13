@@ -6,12 +6,12 @@ ms.date: 09/09/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_language_modes?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Language_Modes
-ms.openlocfilehash: c560101dd70c94c131e3ca9d8e9958d3a278de40
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 2cf232fd170ee9175f40693579cca60f69ccbcdd
+ms.sourcegitcommit: fb1a4bc4b249afd3513663de2e1ba3025d63467e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222210"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94625740"
 ---
 # <a name="about-language-modes"></a>언어 모드 정보
 
@@ -182,7 +182,7 @@ FullLanguage
 
 세션 상태의 LanguageMode 속성 값을 가져와 FullLanguage 또는 ConstrainedLanguage 세션의 언어 모드를 찾을 수 있습니다.
 
-다음은 그 예입니다. 
+예를 들어:
 
 ```powershell
 $ExecutionContext.SessionState.LanguageMode
@@ -199,13 +199,6 @@ ConstrainedLanguage
 `$ExecutionContext.SessionState.LanguageMode`NoLanguage 세션에서 명령을 실행 하면 PowerShell에서 ScriptsNotAllowed 오류 메시지를 반환 합니다.
 
 - ScriptsNotAllowed:이 runspace에서 구문을 지원 하지 않습니다. 언어가 언어 모드에 있지 않기 때문일 수 있습니다.
-
-## <a name="keywords"></a>어
-
-- about_ConstrainedLanguage
-- about_FullLanguage
-- about_NoLanguage
-- about_RestrictedLanguage
 
 ## <a name="see-also"></a>참고 항목
 

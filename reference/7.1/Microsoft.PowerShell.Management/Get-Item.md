@@ -7,12 +7,12 @@ ms.date: 03/27/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-item?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Item
-ms.openlocfilehash: 25d07028430d6ad6719136bd484d39e116d81516
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: d9c8d13f992e6631ff5982b4a33542c661991562
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93216473"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661361"
 ---
 # Get-Item
 
@@ -130,9 +130,9 @@ PowerShell 6.2에서 hardlink create 정보를 가져오기 위해 대체 뷰가
 Get-Item -Path C:\PathWhichIsAHardLink | Format-Table -View childrenWithHardlink
 ```
 
-### 예 9: 실험적 기능 PSUnixFileStat에 대 한 출력
+### 예 9: Windows 이외의 운영 체제에 대 한 출력
 
-Unix 시스템의 PowerShell 7에서 실험적 기능 **PSUnixFileStat** 는 unix와 비슷한 출력을 제공 합니다.
+Unix 시스템의 PowerShell 7.1에서 cmdlet은 `Get-Item` unix와 비슷한 출력을 제공 합니다.
 
 ```powershell
 PS> Get-Item /Users
@@ -152,6 +152,9 @@ drwxr-xr-x  root  admin   12/20/2019 11:46   192   Users
 - **사용자** 가 파일 소유자입니다.
 - **그룹이 그룹 소유자입니다.**
 - **크기** 는 Unix 시스템에 표시 되는 파일 또는 디렉터리의 크기입니다.
+
+> [!NOTE]
+> 이 기능은 PowerShell 7.1의 실험적에서 일반으로 이동 되었습니다.
 
 ## PARAMETERS
 
@@ -315,7 +318,7 @@ Accept wildcard characters: True
 항목의 내용을 재귀적으로 가져오려면를 사용 `Get-ChildItem` 합니다.
 
 레지스트리를 탐색 하려면이 cmdlet을 사용 하 여 레지스트리 키와 `Get-ItemProperty` 레지스트리 값 및 데이터를 가져옵니다. 레지스트리 값은 레지스트리 키의 속성으로 간주됩니다.
-  
+
 이 cmdlet은 모든 공급자가 제공 하는 데이터에 사용할 수 있습니다. 세션에서 사용할 수 있는 공급자를 나열 하려면을 입력 `Get-PsProvider` 합니다. 자세한 내용은 [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md)를 참조하세요.
 
 ## 관련 링크

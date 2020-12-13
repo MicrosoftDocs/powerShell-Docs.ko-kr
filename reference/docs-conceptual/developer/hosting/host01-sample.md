@@ -1,22 +1,24 @@
 ---
-title: Host01 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a2ef53d36697d5637dff3de8a286902984f3c5a1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Host01 샘플
+description: Host01 샘플
+ms.openlocfilehash: b4f1a81044a51855ad7decc25e1f5b1215ab0d62
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772255"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355479"
 ---
 # <a name="host01-sample"></a>Host01 샘플
 
 이 샘플에서는 사용자 지정 호스트를 사용 하는 호스트 응용 프로그램을 구현 하는 방법을 보여 줍니다. 이 샘플에서는 사용자 지정 호스트를 사용 하는 runspace가 생성 된 다음 "종료"를 호출 하는 스크립트를 실행 하는 데 사용 [됩니다.](/dotnet/api/System.Management.Automation.PowerShell) 호스트 애플리케이션은 스크립트의 출력을 살펴보고 결과를 출력합니다.
 
- 이 샘플에서는 Windows PowerShell에서 제공 하는 기본 UI 기능을 사용 합니다. 사용자 지정 호스트의 UI 기능을 구현 하는 방법에 대 한 자세한 내용은 [Host02 샘플](./host02-sample.md)을 참조 하세요.
+이 샘플에서는 Windows PowerShell에서 제공 하는 기본 UI 기능을 사용 합니다. 사용자 지정 호스트의 UI 기능을 구현 하는 방법에 대 한 자세한 내용은 [Host02 샘플](./host02-sample.md)을 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
- 이 샘플에는 Windows PowerShell 2.0이 필요 합니다.
+이 샘플에는 Windows PowerShell 2.0이 필요 합니다.
 
 ## <a name="demonstrates"></a>데모
 
@@ -28,9 +30,9 @@ ms.locfileid: "87772255"
 
 - 종료 프로세스에 올바른 종료 코드가 사용 되었는지 확인 하는 중입니다.
 
-## <a name="example"></a>예제
+## <a name="example-1"></a>예 1
 
- 다음 코드에서는 간단한 사용자 지정 호스트 인터페이스를 사용 하는 호스트 응용 프로그램의 구현을 보여 줍니다.
+다음 코드에서는 간단한 사용자 지정 호스트 인터페이스를 사용 하는 호스트 응용 프로그램의 구현을 보여 줍니다.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -130,9 +132,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>예제
+## <a name="example-2"></a>예제 2
 
- 다음 코드는이 호스트 응용 프로그램에서 사용 하는 [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스의 구현입니다. 구현 되지 않은 요소는 예외를 throw 하거나 아무 것도 반환 하지 않습니다.
+다음 코드는이 호스트 응용 프로그램에서 사용 하는 [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스의 구현입니다. 구현 되지 않은 요소는 예외를 throw 하거나 아무 것도 반환 하지 않습니다.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host

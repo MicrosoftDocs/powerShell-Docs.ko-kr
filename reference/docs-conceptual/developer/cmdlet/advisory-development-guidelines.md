@@ -1,12 +1,14 @@
 ---
-title: 자문 개발 지침 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: dc8ef586954106f6d7fbce550dc22cd935018936
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 권장되는 개발 지침
+description: 권장되는 개발 지침
+ms.openlocfilehash: 1ac18925bbc2506e6a03810d24f58c2f3113fd55
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782432"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668323"
 ---
 # <a name="advisory-development-guidelines"></a>권장되는 개발 지침
 
@@ -18,7 +20,7 @@ Cmdlet을 디자인할 때 다음 지침을 고려해 야 합니다. 상황에 �
 
 ### <a name="support-an-inputobject-parameter-ad01"></a>InputObject 매개 변수 지원 (AD01)
 
-Windows PowerShell은 Microsoft .NET Framework 개체와 직접 연동 되므로 사용자가 특정 작업을 수행 하는 데 필요한 형식과 정확히 일치 하는 .NET Framework 개체를 사용할 수 있습니다. `InputObject`는 이러한 개체를 입력으로 사용 하는 매개 변수의 표준 이름입니다. 예를 들어 [Stopproc 자습서](./stopproc-tutorial.md) 의 샘플 **Stop proc** cmdlet은 `InputObject` 파이프라인에서 입력을 지 원하는 Process 형식의 매개 변수를 정의 합니다. 사용자는 프로세스 개체 집합을 가져온 다음이를 조작 하 여 중지할 정확한 개체를 선택 하 고이를 **중지 프로시저** cmdlet에 직접 전달할 수 있습니다.
+Windows PowerShell은 Microsoft .NET Framework 개체와 직접 연동 되므로 사용자가 특정 작업을 수행 하는 데 필요한 형식과 정확히 일치 하는 .NET Framework 개체를 사용할 수 있습니다. `InputObject` 는 이러한 개체를 입력으로 사용 하는 매개 변수의 표준 이름입니다. 예를 들어 [Stopproc 자습서](./stopproc-tutorial.md) 의 샘플 **Stop proc** cmdlet은 `InputObject` 파이프라인에서 입력을 지 원하는 Process 형식의 매개 변수를 정의 합니다. 사용자는 프로세스 개체 집합을 가져온 다음이를 조작 하 여 중지할 정확한 개체를 선택 하 고이를 **중지 프로시저** cmdlet에 직접 전달할 수 있습니다.
 
 ### <a name="support-the-force-parameter-ad02"></a>Force 매개 변수 지원 (AD02)
 
@@ -66,7 +68,7 @@ Cmdlet이 stop 신호를 처리할 수 있도록 [system.object](/dotnet/api/Sys
 
 Cmdlet에 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 통해 삭제 되지 않는 개체 (파이프라인에 기록)가 있는 경우 cmdlet에서 추가 개체를 삭제 해야 할 수 있습니다. 예를 들어 cmdlet이 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드에서 파일 핸들을 [열고 해당 핸들](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 을 계속 열려 있는 상태로 유지 하는 경우에는 처리가 끝날 때이 핸들을 닫아야 합니다 .이 작업을 수행 합니다.
 
-Windows PowerShell 런타임에서는 항상 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드를 호출 하지 않습니다. 예를 들어 cmdlet이 작업을 통해 중간에 취소 되거나 cmdlet의 일부에서 종료 오류가 발생 하는 경우에는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 를 호출할 수 없습니다. 따라서 개체 정리를 필요로 하는 cmdlet에 대 한 .NET Framework 클래스는 종료자를 비롯 [한 전체 system.string](/dotnet/api/System.IDisposable) 인터페이스 패턴을 구현 해야 합니다. 이렇게 하면 Windows PowerShell 런타임에서 처리가 끝날 때 [system.web](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . c s p. i n s. i n s. i n s. i n s. i n c. c o n [*](/dotnet/api/System.IDisposable.Dispose) 메서드를 모두 호출할 수 있습니다.
+Windows PowerShell 런타임에서는 항상  [system.object](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 메서드를 호출 하지 않습니다. 예를 들어 cmdlet이 작업을 통해 중간에 취소 되거나 cmdlet의 일부에서 종료 오류가 발생 하는 경우에는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 를 호출할 수 없습니다. 따라서 개체 정리를 필요로 하는 cmdlet에 대 한 .NET Framework 클래스는 종료자를 비롯  [한 전체 system.string](/dotnet/api/System.IDisposable) 인터페이스 패턴을 구현 해야 합니다. 이렇게 하면 Windows PowerShell 런타임에서 처리가 끝날 때 [system.web](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . c s p. i n s. i n s. i n s. i n s. i n c. c o n [*](/dotnet/api/System.IDisposable.Dispose) 메서드를 모두 호출할 수 있습니다.
 
 ### <a name="use-serialization-friendly-parameter-types-ac05"></a>Serialization 친화적인 매개 변수 형식 사용 (AC05)
 
@@ -114,4 +116,4 @@ Windows PowerShell 런타임에서는 항상 [system.object](/dotnet/api/System.
 
 [적극 권장되는 개발 지침](./strongly-encouraged-development-guidelines.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

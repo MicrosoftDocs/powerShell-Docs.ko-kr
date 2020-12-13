@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 title: PowerShell 갤러리 FAQ
 description: PowerShell 갤러리에 대한 질문과 대답
-ms.openlocfilehash: 045db04d49e0c65f807fef254a17bf20bb877ff6
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 52c89d570041e1fce3466f574af7de25f05ec4c5
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92654161"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389898"
 ---
 # <a name="frequently-asked-questions-about-the-powershell-gallery"></a>PowerShell 갤러리에 대한 질문과 대답
 
@@ -17,14 +17,14 @@ PowerShell 모듈은 일부 PowerShell 기능을 포함하는 재사용 가능�
 
 ## <a name="what-is-a-powershell-script"></a>PowerShell 스크립트란?
 
-PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일에 저장된 일련의 명령입니다. PowerShell 워크플로도 일련의 작업을 간략하게 설명하고 해당 작업 순서를 제공하는 PowerShell 스크립트입니다. 자세한 내용은 [PowerShell 워크플로 시작](https://technet.microsoft.com/library/jj134242.aspx)을 참조하세요.
+PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일에 저장된 일련의 명령입니다. PowerShell 워크플로도 일련의 작업을 간략하게 설명하고 해당 작업 순서를 제공하는 PowerShell 스크립트입니다. 자세한 내용은 [PowerShell 워크플로 시작](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134242(v=ws.11))을 참조하세요.
 
 ## <a name="how-are-powershell-scripts-different-from-powershell-modules"></a>PowerShell 스크립트와 PowerShell 모듈의 차이점은 무엇인가요?
 
 일반적으로 모듈이 공유에 더 효과적이지만 워크플로와 스크립트를 커뮤니티에 기여하기 쉽도록 스크립트 공유를 설정합니다. 자세한 내용은 다음 블로그를 참조하세요.
 
-- [Don't Write Scripts, Write PowerShell Modules(스크립트가 아니라 PowerShell 모듈을 작성하세요.)](https://blogs.technet.microsoft.com/heyscriptingguy/2011/06/27/dont-write-scripts-write-powershell-modules/)
-- [Understanding PowerShell Modules(PowerShell 모듈 이해)](https://blogs.technet.microsoft.com/heyscriptingguy/2015/07/10/understanding-powershell-modules/)
+- [Don't Write Scripts, Write PowerShell Modules(스크립트가 아니라 PowerShell 모듈을 작성하세요.)](https://devblogs.microsoft.com/scripting/dont-write-scripts-write-powershell-modules/)
+- [Understanding PowerShell Modules(PowerShell 모듈 이해)](https://devblogs.microsoft.com/scripting/understanding-powershell-modules/)
 
 ## <a name="how-can-i-publish-to-the-powershell-gallery"></a>PowerShell 갤러리에 게시하려면 어떻게 하나요?
 
@@ -55,7 +55,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 
 ## <a name="what-are-the-requirements-to-publish-a-module-to-the-powershell-gallery"></a>PowerShell 갤러리에 모듈을 게시하기 위한 요구 사항은 무엇인가요?
 
-모든 종류의 PowerShell 모듈(스크립트 모듈, 이진 모듈 또는 매니페스트 모듈)을 갤러리에 게시할 수 있습니다. 모듈을 게시하려면 PowerShellGet에 버전, 설명, 작성자, 사용 허가 방법 등의 몇 가지 정보가 필요합니다. 이 정보는 게시 프로세스의 일부로 *모듈 매니페스트* (.psd1) 파일 또는 [Publish-Module][] cmdlet의 **LicenseUri** 매개 변수 값에서 읽어옵니다. 갤러리에 게시된 모든 모듈에는 모듈 매니페스트가 있어야 합니다. 매니페스트에 다음 정보가 포함된 모든 모듈을 갤러리에 게시할 수 있습니다.
+모든 종류의 PowerShell 모듈(스크립트 모듈, 이진 모듈 또는 매니페스트 모듈)을 갤러리에 게시할 수 있습니다. 모듈을 게시하려면 PowerShellGet에 버전, 설명, 작성자, 사용 허가 방법 등의 몇 가지 정보가 필요합니다. 이 정보는 게시 프로세스의 일부로 *모듈 매니페스트*(.psd1) 파일 또는 [Publish-Module][] cmdlet의 **LicenseUri** 매개 변수 값에서 읽어옵니다. 갤러리에 게시된 모든 모듈에는 모듈 매니페스트가 있어야 합니다. 매니페스트에 다음 정보가 포함된 모든 모듈을 갤러리에 게시할 수 있습니다.
 
 - 버전
 - 설명
@@ -64,7 +64,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>올바른 형식의 모듈 매니페스트를 만들려면 어떻게 하나요?
 
-모듈 매니페스트를 만드는 가장 쉬운 방법은 [New-ModuleManifest][] cmdlet을 실행하는 것입니다. PowerShell 5.0 이상에서 New-ModuleManifest는 **ProjectUri** , **LicenseUri** , **Tags** 등의 유용한 메타데이터에 빈 필드를 사용하여 올바른 형식의 모듈 매니페스트를 생성합니다. 단순히 빈 칸을 채우거나 생성된 매니페스트를 올바른 형식의 예로 사용합니다.
+모듈 매니페스트를 만드는 가장 쉬운 방법은 [New-ModuleManifest][] cmdlet을 실행하는 것입니다. PowerShell 5.0 이상에서 New-ModuleManifest는 **ProjectUri**, **LicenseUri**, **Tags** 등의 유용한 메타데이터에 빈 필드를 사용하여 올바른 형식의 모듈 매니페스트를 생성합니다. 단순히 빈 칸을 채우거나 생성된 매니페스트를 올바른 형식의 예로 사용합니다.
 
 모든 필수 메타데이터 필드가 올바르게 채워졌는지 확인하려면 [Test-ModuleManifest][] cmdlet을 사용합니다.
 
@@ -93,7 +93,7 @@ PowerShell 스크립트는 다시 사용 및 공유할 수 있도록 .ps1 파일
 
 ## <a name="how-do-i-create-a-correctly-formatted-script-file"></a>올바른 형식의 스크립트 파일을 만들려면 어떻게 하나요?
 
-올바르 형식의 스크립트 파일을 만드는 가장 쉬운 방법은 [New-ScriptFileInfo][] cmdlet을 실행하는 것입니다. PowerShell 5.0에서 New-ScriptFileInfo는 **ProjectUri** , **LicenseUri** , **Tags** 등의 유용한 메타데이터에 빈 필드를 사용하여 올바른 형식의 스크립트 파일을 생성합니다. 단순히 빈 칸을 채우거나 생성된 스크립트 파일을 올바른 형식의 예로 사용합니다.
+올바르 형식의 스크립트 파일을 만드는 가장 쉬운 방법은 [New-ScriptFileInfo][] cmdlet을 실행하는 것입니다. PowerShell 5.0에서 New-ScriptFileInfo는 **ProjectUri**, **LicenseUri**, **Tags** 등의 유용한 메타데이터에 빈 필드를 사용하여 올바른 형식의 스크립트 파일을 생성합니다. 단순히 빈 칸을 채우거나 생성된 스크립트 파일을 올바른 형식의 예로 사용합니다.
 
 모든 필수 메타데이터 필드가 올바르게 채워졌는지 확인하려면 [Test-ScriptFileInfo][] cmdlet을 사용합니다.
 
@@ -156,7 +156,7 @@ PackageManagement 패키지 공급자 계층에서 PSModule 패키지 공급자�
 - Windows Server 2012 R2
 - Windows Server 2008 R2 SP1
 
-**PowerShellGet** 을 사용하려면 .NET Framework 4.5 이상도 있어야 합니다. .NET Framework 4.5 이상은 [여기](https://msdn.microsoft.com/library/5a4x27ek.aspx)에서 설치할 수 있습니다.
+**PowerShellGet** 을 사용하려면 .NET Framework 4.5 이상도 있어야 합니다. 자세한 내용은 [개발자용 .NET Framework 설치](/dotnet/framework/install/guide-for-developers)를 참조하세요.
 
 ## <a name="is-it-possible-to-reserve-names-for-packages-that-will-be-published-in-future"></a>나중에 게시할 패키지의 이름을 예약할 수 있나요?
 

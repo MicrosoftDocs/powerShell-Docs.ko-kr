@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 도움말 항목에 입력 형식을 추가하는 방법
 ms.date: 09/12/2016
-ms.openlocfilehash: d41c49ff48cf361c2ba694d11576e84a9367eef5
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Cmdlet 도움말 항목에 입력 형식을 추가하는 방법
+description: Cmdlet 도움말 항목에 입력 형식을 추가하는 방법
+ms.openlocfilehash: f2ad87c54230bcdd7e0ea708e9a1869daef7495f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893427"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94391105"
 ---
 # <a name="how-to-add-input-types-to-a-cmdlet-help-topic"></a>Cmdlet 도움말 항목에 입력 형식을 추가하는 방법
 
@@ -43,8 +45,8 @@ PowerShell 3.0부터 `Get-Help` cmdlet은 요소의 내용을 표시 합니다 `
 <command:inputTypes>
   <command:inputType>
     <dev:type>
-      <maml:name> System.DateTime </maml:name>
-      <maml:uri>  https://msdn.microsoft.com/library/system.datetime.aspx </maml:uri>
+      <maml:name>System.DateTime</maml:name>
+      <maml:uri>https://docs.microsoft.com/dotnet/api/system.datetime</maml:uri>
       <maml:description/>
     </dev:type>
     <maml:description>

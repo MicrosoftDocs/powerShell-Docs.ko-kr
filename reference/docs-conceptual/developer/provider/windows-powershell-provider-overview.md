@@ -1,12 +1,14 @@
 ---
-title: Windows PowerShell 공급자 개요 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c248f1c337e96a1b83cbeb5fb486147504777eb1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 공급자 개요
+description: Windows PowerShell 공급자 개요
+ms.openlocfilehash: 2f1c5f5991a64fb2b85ece7feba915164ebd34ee
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778235"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355513"
 ---
 # <a name="windows-powershell-provider-overview"></a>Windows PowerShell 공급자 개요
 
@@ -20,7 +22,8 @@ Windows PowerShell 공급자를 사용 하면 모든 데이터 저장소가 탑�
 
 ## <a name="type-of-providers"></a>공급자 유형
 
-각각 서로 다른 수준의 기능을 제공 하는 여러 유형의 공급자가 있습니다. 공급자는 [SessionStateCategory](/dotnet/api/system.management.automation.sessionstatecategory?view=pscore-6.2.0) **cmdletprovider** 클래스의 하위 항목 중 하나에서 파생 되는 클래스로 구현 됩니다. 다양 한 공급자 유형에 대 한 자세한 내용은 [공급자 유형](./provider-types.md)을 참조 하세요.
+각각 서로 다른 수준의 기능을 제공 하는 여러 유형의 공급자가 있습니다. 공급자는 [SessionStateCategory](/dotnet/api/system.management.automation.sessionstatecategory) 
+ **cmdletprovider** 클래스의 하위 항목 중 하나에서 파생 되는 클래스로 구현 됩니다. 다양 한 공급자 유형에 대 한 자세한 내용은 [공급자 유형](./provider-types.md)을 참조 하세요.
 
 ## <a name="provider-cmdlets"></a>공급자 cmdlet
 
@@ -32,7 +35,7 @@ Windows PowerShell 공급자를 사용 하면 모든 데이터 저장소가 탑�
 
 ### <a name="drive-qualified-paths"></a>드라이브 정규화 된 경로
 
-드라이브 정규화 된 경로는 항목 이름, 항목이 있는 컨테이너 및 하위 컨테이너, 항목에 액세스 하는 데 사용할 Windows PowerShell 드라이브의 조합입니다. (드라이브는 데이터 저장소에 액세스 하는 데 사용 되는 공급자에 의해 정의 됩니다. 이 경로는 드라이브 이름 뒤에 콜론 (:)으로 시작 합니다. 예를 들면 다음과 같습니다. `get-childitem C:`
+드라이브 정규화 된 경로는 항목 이름, 항목이 있는 컨테이너 및 하위 컨테이너, 항목에 액세스 하는 데 사용할 Windows PowerShell 드라이브의 조합입니다. (드라이브는 데이터 저장소에 액세스 하는 데 사용 되는 공급자에 의해 정의 됩니다. 이 경로는 드라이브 이름 뒤에 콜론 (:)으로 시작 합니다. 예: `get-childitem C:`
 
 ### <a name="provider-qualified-paths"></a>공급자 정규화 경로
 
@@ -56,7 +59,9 @@ Windows PowerShell 공급자에 대 한 원격 액세스를 허용 하려면 현
 
 ## <a name="provider-capabilities"></a>공급자 기능
 
-[System.object](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) 는 공급자가 지원할 수 있는 많은 기능을 정의 합니다. 여기에는 와일드 카드, 필터 항목 및 지원 트랜잭션을 사용 하는 기능이 포함 됩니다. 공급자에 대 한 기능을 지정 하려면 [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) `OR` 공급자 클래스에 대 한 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 특성의 [Cmdletproviderattribute *](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) 속성 (특성의 두 번째 매개 변수)으로 논리 작업과 함께 사용 되는 system.object의 값 목록을 추가 합니다 (특성의 두 번째 매개 변수를 사용 하는 방법) .입니다. 예를 들어 다음 특성은 공급자가 [system.object](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) 를 지원 하는지 여부를 지정 하 고, **Shouldprocess** 및 [system.object](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) 의 **트랜잭션** 기능을 지원 합니다.
+[System.object](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) 는 공급자가 지원할 수 있는 많은 기능을 정의 합니다. 여기에는 와일드 카드, 필터 항목 및 지원 트랜잭션을 사용 하는 기능이 포함 됩니다. 공급자에 대 한 기능을 지정 하려면 [](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) `OR` 공급자 클래스에 대 한 [Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) 특성의 [Cmdletproviderattribute *](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) 속성 (특성의 두 번째 매개 변수)으로 논리 작업과 함께 사용 되는 system.object의 값 목록을 추가 합니다 (특성의 두 번째 매개 변수를 사용 하는 방법) .입니다. 예를 들어 다음 특성은 공급자가 [system.object](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities)를 지원 하는지 여부를 지정 하 고, 
+ **shouldprocess** 및 [system.object](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities)의 
+ **트랜잭션** 기능을 지원 합니다.
 
 ```csharp
 [CmdletProvider(RegistryProvider.ProviderName, ProviderCapabilities.ShouldProcess | ProviderCapabilities.Transactions)]
@@ -65,9 +70,11 @@ Windows PowerShell 공급자에 대 한 원격 액세스를 허용 하려면 현
 
 ## <a name="provider-cmdlet-help"></a>공급자 cmdlet 도움말
 
-공급자를 작성할 때 지원 되는 공급자 cmdlet에 대 한 고유한 도움말을 구현할 수 있습니다. 여기에는 동적 매개 변수 사용에 따라 공급자 cmdlet이 다르게 작동 하는 경우에 대 한 도움말 항목의 각 공급자 cmdlet 또는 여러 버전에 대 한 단일 도움말 항목이 포함 됩니다. 공급자 cmdlet에 대 한 도움말을 지원 하려면 공급자가 [Icmdletprovidersupportshelp](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp) 인터페이스를 구현 해야 합니다.
+공급자를 작성할 때 지원 되는 공급자 cmdlet에 대 한 고유한 도움말을 구현할 수 있습니다.
+여기에는 동적 매개 변수 사용에 따라 공급자 cmdlet이 다르게 작동 하는 경우에 대 한 도움말 항목의 각 공급자 cmdlet 또는 여러 버전에 대 한 단일 도움말 항목이 포함 됩니다. 공급자 cmdlet에 대 한 도움말을 지원 하려면 공급자가 [Icmdletprovidersupportshelp](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp) 인터페이스를 구현 해야 합니다.
 
-Windows PowerShell 엔진은 [Icmdletprovidersupportshelp. Gethelpmaml *](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml) 메서드를 호출 하 여 공급자 cmdlet에 대 한 도움말 항목을 표시 합니다. 엔진은 사용자가 cmdlet을 실행할 때 지정한 cmdlet의 이름과 `Get-Help` 사용자의 현재 경로를 제공 합니다. 현재 경로는 공급자가 다른 드라이브에 대해 동일한 공급자 cmdlet의 다른 버전을 구현 하는 경우에 필요 합니다. 메서드는 cmdlet 도움말의 XML이 포함 된 문자열을 반환 해야 합니다.
+Windows PowerShell 엔진은 [Icmdletprovidersupportshelp. Gethelpmaml *](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml) 메서드를 호출 하 여 공급자 cmdlet에 대 한 도움말 항목을 표시 합니다. 엔진은 사용자가 cmdlet을 실행할 때 지정한 cmdlet의 이름과 `Get-Help` 사용자의 현재 경로를 제공 합니다.
+현재 경로는 공급자가 다른 드라이브에 대해 동일한 공급자 cmdlet의 다른 버전을 구현 하는 경우에 필요 합니다. 메서드는 cmdlet 도움말의 XML이 포함 된 문자열을 반환 해야 합니다.
 
 도움말 파일의 콘텐츠는 PSMAML XML을 사용 하 여 작성 됩니다. 이는 독립 실행형 cmdlet에 대 한 도움말 콘텐츠를 작성 하는 데 사용 되는 XML 스키마와 동일 합니다. 사용자 지정 cmdlet 도움말의 콘텐츠를 요소의 공급자에 대 한 도움말 파일에 추가 합니다 `CmdletHelpPaths` . 다음 예에서는 `command` 단일 공급자 cmdlet에 대 한 요소를 보여 주고 공급자의 공급자 cmdlet 이름을 지정 하는 방법을 보여 줍니다. 에서는 앱 스토어의 앱, 웹 응용 프로그램 및 회사 내부에서 직접 작성한 앱 등
 

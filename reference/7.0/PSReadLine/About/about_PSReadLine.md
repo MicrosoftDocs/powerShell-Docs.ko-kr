@@ -6,12 +6,12 @@ ms.date: 02/10/2020
 online version: https://docs.microsoft.com/powershell/module/psreadline/about/about_psreadline?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: PSReadLine 정보
-ms.openlocfilehash: 890f8e92172f2d492b6b817b558d4f25c70e8949
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: f5ae99a7c8bdae82372423a3e4d8261d95ab83d5
+ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93220546"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94692210"
 ---
 # <a name="psreadline"></a>PSReadLine
 
@@ -35,10 +35,10 @@ PSReadLine 2.0은 PowerShell 콘솔에 대 한 강력한 명령줄 편집 환경
 - Emacs yank/kill
 - PowerShell 토큰 기반 "word" 이동 및 중지
 
-다음 함수는 **[PSConsoleReadLine]** 클래스에서 사용할 수 있습니다.
-
 > [!NOTE]
 > PowerShell 7.0부터 PowerShell은 화면 판독기 프로그램이 검색 된 경우 Windows에서 PSReadLine 자동 로드를 건너뜁니다. 현재 PSReadLine은 화면 판독기에서 제대로 작동 하지 않습니다. Windows에서 PowerShell 7.0의 기본 렌더링 및 형식이 제대로 작동 합니다. 필요한 경우 모듈을 수동으로 로드할 수 있습니다.
+
+다음 함수는 **[PSConsoleReadLine]** 클래스에서 사용할 수 있습니다.
 
 ## <a name="basic-editing-functions"></a>기본 편집 함수
 
@@ -1288,10 +1288,6 @@ bool TryGetArgAsInt(System.Object arg, [ref] int numericArg,
 ```
 
 ## <a name="note"></a>참고
-
-### <a name="powershell-compatibility"></a>POWERSHELL 호환성
-
-PSReadLine에는 PowerShell 3.0 이상 및 콘솔 호스트가 필요 합니다. PowerShell ISE에서는 작동 하지 않습니다. Visual Studio Code 콘솔에서 작동 합니다.
 
 ### <a name="command-history"></a>명령 기록
 

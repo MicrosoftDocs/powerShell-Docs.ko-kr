@@ -2,12 +2,12 @@
 title: PowerShell 개발에 Visual Studio 코드 사용
 description: PowerShell 개발에 Visual Studio 코드 사용
 ms.date: 11/07/2019
-ms.openlocfilehash: 181746e7d3df2880223d1f15a0c8b99b324f5b98
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.openlocfilehash: 8a4ceb3da669716915449af2d211aaf2ae61bb4f
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782534"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390303"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>PowerShell 개발에 Visual Studio 코드 사용
 
@@ -49,18 +49,18 @@ ms.locfileid: "87782534"
 1. PowerShell 확장을 설치합니다.
 
    1. 콘솔 또는 `code-insiders`(Visual Studio Code Insiders를 설치한 경우)에 `code`를 입력하여 Visual Studio Code 앱을 시작합니다.
-   1. <kbd>Ctrl</kbd>+<kbd>P</kbd>를 눌러 Windows 또는 Linux에서 **Quick Open**을 시작합니다. macOS에서 <kbd>Cmd</kbd>+<kbd>P</kbd>를 누릅니다.
-   1. Quick Open에서 `ext install powershell`을 입력하고**Enter** 키를 누릅니다.
+   1. <kbd>Ctrl</kbd>+<kbd>P</kbd>를 눌러 Windows 또는 Linux에서 **Quick Open** 을 시작합니다. macOS에서 <kbd>Cmd</kbd>+<kbd>P</kbd>를 누릅니다.
+   1. Quick Open에서 `ext install powershell`을 입력하고 **Enter** 키를 누릅니다.
    1. 사이드바에 **확장** 보기가 열립니다. Microsoft의 PowerShell 확장을 선택합니다.
       다음 이미지와 비슷한 Visual Studio Code 화면이 표시됩니다.
 
       ![Visual Studio Code - PowerShell 확장 보기](media/using-vscode/vscode.png)
 
    1. Microsoft의 PowerShell 확장에서 **설치** 단추를 클릭합니다.
-   1. 설치 후 **설치** 단추가 **다시 로드**로 바뀌면 **다시 로드**를 클릭합니다.
+   1. 설치 후 **설치** 단추가 **다시 로드** 로 바뀌면 **다시 로드** 를 클릭합니다.
    1. Visual Studio Code가 다시 로드되면 편집할 준비가 된 것입니다.
 
-예를 들어 새 파일을 만들려면 **파일 > 새로 만들기**를 클릭합니다. 저장하려면 **파일 > 저장**을 클릭한 후 파일 이름을 제공합니다(예: `HelloWorld.ps1`). 파일을 닫으려면 파일 이름 옆에 있는 `X`를 클릭합니다. Visual Studio Code를 종료하려면 **파일 > 종료**를 누릅니다.
+예를 들어 새 파일을 만들려면 **파일 > 새로 만들기** 를 클릭합니다. 저장하려면 **파일 > 저장** 을 클릭한 후 파일 이름을 제공합니다(예: `HelloWorld.ps1`). 파일을 닫으려면 파일 이름 옆에 있는 `X`를 클릭합니다. Visual Studio Code를 종료하려면 **파일 > 종료** 를 누릅니다.
 
 ### <a name="installing-the-powershell-extension-on-restricted-systems"></a>제한된 시스템에 PowerShell 확장 설치
 
@@ -87,9 +87,9 @@ Windows PowerShell과 함께 PowerShell Core를 side-by-side 설치하면 PowerS
 
 다음 단계에 따라 해당 버전을 선택합니다.
 
-1. Windows 또는 Linux에서 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>를 눌러 **명령 팔레트**를 엽니다. macOS에서 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>를 누릅니다.
-1. **세션**을 검색합니다.
-1. **PowerShell: 세션 메뉴 표시**를 클릭합니다.
+1. Windows 또는 Linux에서 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>를 눌러 **명령 팔레트** 를 엽니다. macOS에서 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>를 누릅니다.
+1. **세션** 을 검색합니다.
+1. **PowerShell: 세션 메뉴 표시** 를 클릭합니다.
 1. 목록에서 사용하려는 PowerShell 버전을 선택합니다(예: **PowerShell Core**).
 
 일반적이지 않은 위치에 PowerShell을 설치한 경우 처음에 PowerShell이 세션 메뉴에 표시되지 않을 수 있습니다. 아래 설명된 대로 [사용자 지정 경로를 추가](#adding-your-own-powershell-paths-to-the-session-menu)하여 세션 메뉴를 확장할 수 있습니다.
@@ -174,7 +174,7 @@ Windows PowerShell과 함께 PowerShell Core를 side-by-side 설치하면 PowerS
 }
 ```
 
-이 설정을 구성한 후에는 Visual Studio Code를 다시 시작합니다. 또는 **명령 팔레트**에서 현재 Visual Studio Code 창을 다시 로드하려면 **Developer: Reload Window**를 입력합니다.
+이 설정을 구성한 후에는 Visual Studio Code를 다시 시작합니다. 또는 **명령 팔레트** 에서 현재 Visual Studio Code 창을 다시 로드하려면 **Developer: Reload Window** 를 입력합니다.
 
 세션 메뉴를 열면 이제 추가 PowerShell 버전이 표시됩니다.
 
@@ -225,7 +225,7 @@ Visual Studio Code 버전 1.9 이상에서는 PowerShell 스크립트가 포함�
 
 1. <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>를 눌러 Windows 또는 Linux에서 **디버그** 보기를 엽니다. macOS에서 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>를 누릅니다.
 1. **launch.json 파일 만들기** 링크를 클릭합니다.
-1. **환경 선택** 프롬프트에서 **PowerShell**을 선택합니다.
+1. **환경 선택** 프롬프트에서 **PowerShell** 을 선택합니다.
 1. 사용할 디버깅 형식을 선택합니다.
 
    - **현재 파일 시작** - 현재 활성화된 편집기 창에서 파일을 시작 및 디버그
@@ -264,7 +264,7 @@ Visual Studio Code는 작업 영역 폴더의 루트에 디렉터리와 파일 `
 }
 ```
 
-이 파일은 일반적인 디버그 시나리오를 나타냅니다. 편집기에서 이 파일을 열면 **구성 추가...** 단추가 표시됩니다. 이 단추를 클릭하여 더 많은 PowerShell 디버그 구성을 추가할 수 있습니다. 한 가지 유용한 구성은 **PowerShell: 스크립트 시작**입니다. 이 구성을 사용하면 편집기에서 어떤 파일이 활성화되어 있는지 관계없이 <kbd>F5</kbd> 키를 누를 때마다 사용되는 선택적 인수를 포함한 파일을 지정할 수 있습니다.
+이 파일은 일반적인 디버그 시나리오를 나타냅니다. 편집기에서 이 파일을 열면 **구성 추가...** 단추가 표시됩니다. 이 단추를 클릭하여 더 많은 PowerShell 디버그 구성을 추가할 수 있습니다. 한 가지 유용한 구성은 **PowerShell: 스크립트 시작** 입니다. 이 구성을 사용하면 편집기에서 어떤 파일이 활성화되어 있는지 관계없이 <kbd>F5</kbd> 키를 누를 때마다 사용되는 선택적 인수를 포함한 파일을 지정할 수 있습니다.
 
 디버그 구성이 설정된 후에 디버그 세션 중에 사용하려는 구성을 선택할 수 있습니다. **디버그** 보기의 도구 모음에 있는 디버그 구성 드롭다운에서 구성을 선택합니다.
 
@@ -317,7 +317,7 @@ PowerShell 확장의 소스 코드는 [GitHub][psext-src]에서 확인할 수 �
 [getting-started]:        https://devblogs.microsoft.com/scripting/get-started-with-powershell-development-in-visual-studio-code/
 [psdbgblog]:              https://johnpapa.net/debugging-with-visual-studio-code/
 [psdbg-gh]:               https://github.com/PowerShell/vscode-powershell/tree/master/examples
-[pscdn]:                  https://blogs.msdn.microsoft.com/cdndevs/2015/12/11/visual-studio-code-powershell-extension/
+[pscdn]:                  https://docs.microsoft.com/archive/blogs/cdndevs/visual-studio-code-powershell-extension
 
 <!-- issues -->
 [GitHub 문제]:          https://github.com/PowerShell/vscode-powershell/issues

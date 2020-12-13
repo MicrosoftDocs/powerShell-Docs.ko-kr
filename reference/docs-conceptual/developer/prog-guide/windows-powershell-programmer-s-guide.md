@@ -1,14 +1,14 @@
 ---
-title: Windows PowerShell 프로그래머&#39;s 가이드 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- Windows PowerShell Programmer's Guide
-ms.openlocfilehash: 64feb66b8e42ab12b279025ebe6c86d7f91ecae5
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 프로그래머&#39;s 가이드
+description: Windows PowerShell 프로그래머&#39;s 가이드
+ms.openlocfilehash: 446be2241bb7b05b4bd7ffe8b7797214a7564944
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771569"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355292"
 ---
 # <a name="windows-powershell-programmer39s-guide"></a>Windows PowerShell 프로그래머&#39;s 가이드
 
@@ -60,9 +60,10 @@ Windows PowerShell runtime은 명령 처리를 구현 하는 실행 엔진입니
 
 Windows PowerShell 언어는 명령을 호출 하는 스크립팅 함수 및 메커니즘을 제공 합니다. 전체 스크립팅 정보는 windows PowerShell과 함께 제공 되는 Windows PowerShell 언어 참조를 참조 하세요.
 
-### <a name="extended-type-system-ets"></a>확장 유형 시스템 (추가)
+### <a name="extended-type-system-ets"></a>ETS(확장 형식 시스템)
 
-Windows PowerShell은 .NET 및 XML 개체와 같은 다양 한 개체에 대 한 액세스를 제공 합니다. 결과적으로 모든 개체 형식에 대 한 일반적인 추상화를 제공 하기 위해 셸에서는 해당 확장 유형 시스템 (추가)을 사용 합니다. 대부분의 작업 기능은 사용자에 게 투명 하지만 스크립트나 .NET 개발자는 다음 용도로 사용 됩니다.
+Windows PowerShell은 .NET 및 XML 개체와 같은 다양 한 개체에 대 한 액세스를 제공 합니다.
+결과적으로 모든 개체 형식에 대 한 일반적인 추상화를 제공 하기 위해 셸에서는 해당 확장 유형 시스템 (추가)을 사용 합니다. 대부분의 작업 기능은 사용자에 게 투명 하지만 스크립트나 .NET 개발자는 다음 용도로 사용 됩니다.
 
 - 특정 개체의 멤버 하위 집합 보기 Windows PowerShell은 몇 가지 특정 개체 유형에 대 한 "조정 된" 보기를 제공 합니다.
 
@@ -74,7 +75,7 @@ Windows PowerShell은 .NET 및 XML 개체와 같은 다양 한 개체에 대 한
 
   사용자를 사용 하 여 Windows PowerShell 언어와 호환 되는 유연한 새 "형식"을 만들 수 있습니다. .NET 개발자 인 경우 스크립트에 적용 되는 것과 같은 의미 체계를 사용 하 여 개체를 사용할 수 있습니다. 예를 들어 개체가로 평가 되는지 여부를 확인할 수 있습니다 `true` .
 
-  추가 정보 및 Windows PowerShell에서 개체를 사용 하는 방법에 대 한 자세한 내용은 [Windows Powershell 개체 개념](/powershell/scripting/learn/understanding-important-powershell-concepts?view=powershell-6)을 참조 하십시오.
+  추가 정보 및 Windows PowerShell에서 개체를 사용 하는 방법에 대 한 자세한 내용은 [Windows Powershell 개체 개념](/powershell/scripting/learn/understanding-important-powershell-concepts)을 참조 하십시오.
 
 ## <a name="programming-for-windows-powershell"></a>Windows PowerShell 프로그래밍
 

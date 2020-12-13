@@ -3,19 +3,19 @@ ms.date: 06/12/2017
 description: 이 문서는 DSC 끌어오기 서버를 배포하는 엔지니어를 지원할 모범 사례를 제공합니다.
 keywords: dsc,powershell,configuration,setup
 title: 끌어오기 서버 모범 사례
-ms.openlocfilehash: 0021baa219a0936405eccf2cc7741e042f8bf09f
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 6c754e6d035cc714a86da86ec916ba2c7f833268
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92664324"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389388"
 ---
 # <a name="pull-server-best-practices"></a>끌어오기 서버 모범 사례
 
 적용 대상: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> 끌어오기 서버(Windows 기능 *DSC-Service* )는 Windows Server의 지원되는 구성 요소이지만 새로운 기능을 제공할 계획은 없습니다. 관리되는 클라우드를 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)(Windows Server에 끌어오기 서버 이외의 기능 포함) 또는 [여기](pullserver.md#community-solutions-for-pull-service)에 나열된 커뮤니티 솔루션 중 하나로 전환하기 시작하는 것이 좋습니다.
+> 끌어오기 서버(Windows 기능 *DSC-Service*)는 Windows Server의 지원되는 구성 요소이지만 새로운 기능을 제공할 계획은 없습니다. 관리되는 클라우드를 [Azure Automation DSC](/azure/automation/automation-dsc-getting-started)(Windows Server에 끌어오기 서버 이외의 기능 포함) 또는 [여기](pullserver.md#community-solutions-for-pull-service)에 나열된 커뮤니티 솔루션 중 하나로 전환하기 시작하는 것이 좋습니다.
 
 요약: 이 문서는 솔루션을 준비하고 있는 엔지니어를 지원할 프로세스 및 확장성을 포함하기 위해 작성되었습니다. 세부 내용에서는 고객이 식별하고 제품 팀이 검증을 통해 미래에 대비하고 안정적이라고 간주되는 권장 사항으로 확인한 모범 사례를 제공합니다.
 
@@ -72,7 +72,7 @@ Windows Server 2012 R2에는 DSC 서비스라는 기능이 포함되어 있습�
 
 ### <a name="dsc-resource"></a>DSC 리소스
 
-DSC 구성 스크립트를 사용하여 서비스를 프로비전하면 끌어오기 서버 배포를 간소화할 수 있습니다. 이 문서에는 프로덕션 준비가 된 서버 노드를 배포하는 데 사용할 수 있는 구성 스크립트가 포함되어 있습니다. 구성 스크립트를 사용하려면 Windows Server에 포함되지 않은 DSC 모듈이 필요합니다. 필요한 모듈 이름은 DSC 리소스 **xDscWebService** 를 포함하는 **xPSDesiredStateConfiguration** 입니다. XPSDesiredStateConfiguration 모듈은 [여기](https://gallery.technet.microsoft.com/xPSDesiredStateConfiguratio-417dc71d)에서 다운로드할 수 있습니다.
+DSC 구성 스크립트를 사용하여 서비스를 프로비전하면 끌어오기 서버 배포를 간소화할 수 있습니다. 이 문서에는 프로덕션 준비가 된 서버 노드를 배포하는 데 사용할 수 있는 구성 스크립트가 포함되어 있습니다. 구성 스크립트를 사용하려면 Windows Server에 포함되지 않은 DSC 모듈이 필요합니다. 필요한 모듈 이름은 DSC 리소스 **xDscWebService** 를 포함하는 **xPSDesiredStateConfiguration** 입니다. XPSDesiredStateConfiguration 모듈은 [여기](https://github.com/dsccommunity/xPSDesiredStateConfiguration)에서 다운로드할 수 있습니다.
 
 **PowerShellGet** 모듈에서 `Install-Module` cmdlet을 사용합니다.
 

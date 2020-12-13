@@ -1,19 +1,14 @@
 ---
-title: 명령줄 입력을 처리 하는 매개 변수 추가 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- cmdlets [PowerShell Programmer's Guide], parameters
-- Get-Proc cmdlet [PowerShell Programmer's Guide]
-- cmdlets [PowerShell Programmer's Guide], command line input
-- command line input [PowerShell Programmer's Guide]
-- parameters [PowerShell Programmer's Guide]
-- cmdlets [PowerShell Programmer's Guide], creating
-ms.openlocfilehash: 6ccc873d9c6b93546b3dae8c0d2e406763fdfb8a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 명령줄 입력을 처리하는 매개 변수 추가
+description: 명령줄 입력을 처리하는 매개 변수 추가
+ms.openlocfilehash: f20469d366330aa787fbc16e4f0a76e67fc7c6db
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784574"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93354612"
 ---
 # <a name="adding-parameters-that-process-command-line-input"></a>명령줄 입력을 처리하는 매개 변수 추가
 
@@ -40,7 +35,7 @@ Public Class GetProcCommand
 
 Cmdlet 매개 변수를 사용 하면 사용자가 cmdlet에 입력을 제공할 수 있습니다. 다음 예에서 `Get-Proc` 및는 `Get-Member` 파이프라인 cmdlet의 이름이 고 `MemberType` 는 cmdlet에 대 한 매개 변수입니다 `Get-Member` . 매개 변수의 인수는 "property"입니다.
 
-**PS> get-proc; `get-member`-membertype 속성**
+**PS> get-proc; `get-member` -membertype 속성**
 
 Cmdlet에 대 한 매개 변수를 선언 하려면 먼저 매개 변수를 나타내는 속성을 정의 해야 합니다. Cmdlet에서 `Get-Proc` 유일한 매개 변수는입니다 `Name` .이 경우는 검색할 .NET Framework 프로세스 개체의 이름을 나타냅니다. 따라서 cmdlet 클래스는 이름 배열을 허용 하는 문자열 형식의 속성을 정의 합니다.
 
@@ -89,7 +84,7 @@ Windows PowerShell 런타임에이 속성이 `Name` 매개 변수 임을 알리�
 
 - Windows PowerShell은 일관 된 사용자 환경을 제공 하기 위해 몇 가지 매개 변수 이름을 예약 합니다. ,,,,,,, `WhatIf` `Confirm` `Verbose` `Debug` `Warn` `ErrorAction` `ErrorVariable` `OutVariable` 및 `OutBuffer` 매개 변수 이름을 사용 하지 마십시오. 또한 이러한 매개 변수 이름에 대 한 다음 별칭은 예약 되어 있습니다.,, `vb` `db` ,, `ea` `ev` `ov` 및 `ob`
 
-- `Name`는 단순 하 고 일반적인 매개 변수 이름으로, cmdlet에서 사용 하기 위해 권장 됩니다. 특정 cmdlet에 고유 하 고 기억할 수 없는 복잡 한 이름과 같은 매개 변수 이름을 선택 하는 것이 좋습니다.
+- `Name` 는 단순 하 고 일반적인 매개 변수 이름으로, cmdlet에서 사용 하기 위해 권장 됩니다. 특정 cmdlet에 고유 하 고 기억할 수 없는 복잡 한 이름과 같은 매개 변수 이름을 선택 하는 것이 좋습니다.
 
 - 매개 변수는 Windows PowerShell에서 대/소문자를 구분 하지 않지만 기본적으로 셸에서는 대/소문자를 유지 합니다. 인수에 대 한 대/소문자 구분은 cmdlet의 작업에 따라 달라 집니다. 인수는 명령줄에서 지정 된 매개 변수로 전달 됩니다.
 
@@ -97,7 +92,7 @@ Windows PowerShell 런타임에이 속성이 `Name` 매개 변수 임을 알리�
 
 ## <a name="declaring-parameters-as-positional-or-named"></a>매개 변수를 위치 또는 이름으로 선언
 
-Cmdlet은 각 매개 변수를 위치 또는 명명 된 매개 변수로 설정 해야 합니다. 두 종류의 매개 변수 모두 단일 인수, 쉼표로 구분 된 여러 인수 및 부울 설정을 허용 합니다. 부울 매개 변수 ( *스위치*라고도 함)는 부울 설정만 처리 합니다. 스위치는 매개 변수가 있는지 확인 하는 데 사용 됩니다. 권장 되는 기본값은 `false` 입니다.
+Cmdlet은 각 매개 변수를 위치 또는 명명 된 매개 변수로 설정 해야 합니다. 두 종류의 매개 변수 모두 단일 인수, 쉼표로 구분 된 여러 인수 및 부울 설정을 허용 합니다. 부울 매개 변수 ( *스위치* 라고도 함)는 부울 설정만 처리 합니다. 스위치는 매개 변수가 있는지 확인 하는 데 사용 됩니다. 권장 되는 기본값은 `false` 입니다.
 
 샘플 `Get-Proc` cmdlet은 `Name` 매개 변수를 위치가 인 위치 매개 변수로 정의 합니다.
 0. 즉, 사용자가 명령줄에 입력 하는 첫 번째 인수가이 매개 변수에 대해 자동으로 삽입 됩니다. 사용자가 명령줄에서 매개 변수 이름을 지정 해야 하는 명명 된 매개 변수를 정의 하려면 `Position` 키워드를 특성 선언 밖으로 그대로 둡니다.
@@ -123,7 +118,7 @@ public string[] Name
 
 Cmdlet이 명령줄 입력을 처리 하려면 적절 한 입력 처리 메서드를 재정의 해야 합니다. 기본 입력 처리 방법은 [첫 번째 Cmdlet을 만드는 데](./creating-a-cmdlet-without-parameters.md)도입 되었습니다.
 
-`Get-Proc`Cmdlet은 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 재정의 하 여 `Name` 사용자 또는 스크립트에서 제공 하는 매개 변수 입력을 처리 합니다. 이 메서드는 요청 된 각 프로세스 이름에 대 한 프로세스를 가져오거나, 이름이 제공 되지 않은 경우에는 모든 프로세스에 대 한 프로세스를 가져옵니다. [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)에서 [WriteObject% 28System% 2csystem %29](/dotnet/api/system.management.automation.cmdlet.writeobject?view=powershellsdk-1.1.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) 을 (를) 호출 하면 출력 개체를 파이프라인으로 전송 하는 데 사용할 수 있는 출력 메커니즘이 표시 됩니다. 이 호출의 두 번째 매개 변수는 `enumerateCollection` `true` 프로세스 개체의 출력 배열을 열거 하 고 명령줄에 프로세스를 한 번에 하나씩 쓰도록 Windows PowerShell 런타임에 알리기 위해로 설정 됩니다.
+`Get-Proc`Cmdlet은 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 재정의 하 여 `Name` 사용자 또는 스크립트에서 제공 하는 매개 변수 입력을 처리 합니다. 이 메서드는 요청 된 각 프로세스 이름에 대 한 프로세스를 가져오거나, 이름이 제공 되지 않은 경우에는 모든 프로세스에 대 한 프로세스를 가져옵니다. [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)에서 [WriteObject% 28System% 2csystem %29](/dotnet/api/system.management.automation.cmdlet.writeobject#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) 을 (를) 호출 하면 출력 개체를 파이프라인으로 전송 하는 데 사용할 수 있는 출력 메커니즘이 표시 됩니다. 이 호출의 두 번째 매개 변수는 `enumerateCollection` `true` 프로세스 개체의 출력 배열을 열거 하 고 명령줄에 프로세스를 한 번에 하나씩 쓰도록 Windows PowerShell 런타임에 알리기 위해로 설정 됩니다.
 
 ```csharp
 protected override void ProcessRecord()

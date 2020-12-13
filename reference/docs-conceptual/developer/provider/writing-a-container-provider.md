@@ -1,12 +1,14 @@
 ---
-title: 컨테이너 공급자 작성 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: da91f18226d6e6c236c6a6e469db0f692af48abf
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 컨테이너 공급자 작성
+description: 컨테이너 공급자 작성
+ms.openlocfilehash: 17ec3e11258ee77a8e569df1af3a0e9bcd9798b6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786801"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93354935"
 ---
 # <a name="writing-a-container-provider"></a>컨테이너 공급자 작성
 
@@ -18,7 +20,7 @@ Windows PowerShell 공급자에 대 한 자세한 내용은 [Windows Powershell 
 
 ## <a name="implementing-container-methods"></a>컨테이너 메서드 구현
 
-[Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 클래스는 컨테이너를 지원 하 고 항목을 만들고, 복사 하 고, 제거 하는 메서드를 구현 합니다. 이러한 메서드의 전체 목록을 보려면 [ContainerCmdletProvider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider?view=pscore-6.2.0#methods)를 참조 하십시오.
+[Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 클래스는 컨테이너를 지원 하 고 항목을 만들고, 복사 하 고, 제거 하는 메서드를 구현 합니다. 이러한 메서드의 전체 목록을 보려면 [ContainerCmdletProvider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider#methods)를 참조 하십시오.
 
 > [!NOTE]
 > 이 항목은 [Windows PowerShell 공급자 빠른](./windows-powershell-provider-quickstart.md)시작의 정보를 기반으로 합니다. 이 항목에서는 공급자 프로젝트를 설정 하는 방법에 대 한 기본 사항을 다루지 않으며, 드라이브를 만들고 제거 하는 [system.web](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) .. c a c. 또한이 항목에서는 [system.object](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 에서 노출 하는 메서드를 구현 하는 방법에 대해서는 설명 하지 않습니다. 항목 cmdlet을 구현 하는 방법을 보여 주는 예제는 [항목 공급자 작성](./writing-an-item-provider.md)을 참조 하세요.
@@ -531,7 +533,8 @@ protected override void RemoveItem(string path, bool recurse)
 
 ## <a name="next-steps"></a>다음 단계
 
-일반적인 실제 공급자는 드라이브 내에서 한 경로에서 다른 경로로 항목을 이동할 수 있습니다. 항목 이동을 지 원하는 공급자의 예는 [탐색 공급자 작성](./writing-a-navigation-provider.md)을 참조 하세요.
+일반적인 실제 공급자는 드라이브 내에서 한 경로에서 다른 경로로 항목을 이동할 수 있습니다.
+항목 이동을 지 원하는 공급자의 예는 [탐색 공급자 작성](./writing-a-navigation-provider.md)을 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 

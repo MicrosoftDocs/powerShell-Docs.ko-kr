@@ -1,12 +1,14 @@
 ---
-title: 탐색 공급자 작성 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2fd27314a2b8547a15dd1bb72aa8f970d40b18cc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 탐색 공급자 작성
+description: 탐색 공급자 작성
+ms.openlocfilehash: 3123672d3365c97714557bd0e72a6e444ac228a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786784"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355224"
 ---
 # <a name="writing-a-navigation-provider"></a>탐색 공급자 작성
 
@@ -18,7 +20,7 @@ Windows PowerShell 공급자에 대 한 자세한 내용은 [Windows Powershell 
 
 ## <a name="implementing-navigation-methods"></a>탐색 메서드 구현
 
-[System.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 클래스는 중첩 된 컨테이너, 상대 경로 및 이동 항목을 지 원하는 메서드를 구현 합니다. 이러한 메서드의 전체 목록은 [Navigationcmdletprovider 메서드](/dotnet/api/system.management.automation.provider.navigationcmdletprovider?view=pscore-6.2.0#methods)를 참조 하세요.
+[System.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 클래스는 중첩 된 컨테이너, 상대 경로 및 이동 항목을 지 원하는 메서드를 구현 합니다. 이러한 메서드의 전체 목록은 [Navigationcmdletprovider 메서드](/dotnet/api/system.management.automation.provider.navigationcmdletprovider#methods)를 참조 하세요.
 
 > [!NOTE]
 > 이 항목은 [Windows PowerShell 공급자 빠른](./windows-powershell-provider-quickstart.md)시작의 정보를 기반으로 합니다. 이 항목에서는 공급자 프로젝트를 설정 하는 방법에 대 한 기본 사항을 다루지 않으며, 드라이브를 만들고 제거 하는 [system.web](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) .. c a c. 이 항목에서는 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) [클래스에 의해](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 노출 되는 메서드를 구현 하는 방법에 대해서도 설명 하지 않습니다. 항목 cmdlet을 구현 하는 방법을 보여 주는 예제는 [항목 공급자 작성](./writing-an-item-provider.md)을 참조 하세요. 컨테이너 cmdlet을 구현 하는 방법을 보여 주는 예제는 [컨테이너 공급자 작성](./writing-a-container-provider.md)을 참조 하세요.

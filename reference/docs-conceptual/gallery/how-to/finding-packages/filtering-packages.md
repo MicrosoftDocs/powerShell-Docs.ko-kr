@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 title: 검색 결과 필터링
 description: 이 문서에서는 PowerShell 갤러리에서 콘텐츠를 필터링하는 데 사용되는 사용자 인터페이스에 대해 설명합니다.
-ms.openlocfilehash: cc375f3ddb35c95ed134776500bd326bc3db6b1a
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: a769daae903e614b96be1056e3ff14eca41970bd
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661402"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389830"
 ---
 # <a name="filtering-search-results"></a>검색 결과 필터링
 
@@ -22,7 +22,7 @@ ms.locfileid: "92661402"
 - 시험판 포함
 - 안정적인 항목만
 
-“시험판” 및 “안정적인 항목”에 대한 내용은 PowerShell 팀 블로그의 [Prerelease Versioning Added to PowerShellGet and PowerShell Gallery](https://blogs.msdn.microsoft.com/powershell/2017/12/05/prerelease-versioning-added-to-powershellget-and-powershell-gallery/)(PowerShellGet 및 PowerShell 갤러리에 추가된 시험판 버전)를 참조하세요.
+“시험판” 및 “안정적인 항목”에 대한 내용은 PowerShell 팀 블로그의 [Prerelease Versioning Added to PowerShellGet and PowerShell Gallery](https://devblogs.microsoft.com/powershell/prerelease-versioning-added-to-powershellget-and-powershell-gallery/)(PowerShellGet 및 PowerShell 갤러리에 추가된 시험판 버전)를 참조하세요.
 
 드롭다운의 확인란을 사용하여 다음을 기준으로 결과를 필터링할 수 있습니다.
 

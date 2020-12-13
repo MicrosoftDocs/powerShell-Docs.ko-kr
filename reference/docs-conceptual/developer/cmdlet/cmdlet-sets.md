@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 집합 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9595c9ca09148de05c69d60a2ede5688c3db61b0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 집합
+description: Cmdlet 집합
+ms.openlocfilehash: b4bcb6548f9d64a8cc5e3fc3a66c671a5566001d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774816"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668238"
 ---
 # <a name="cmdlet-sets"></a>Cmdlet 집합
 
@@ -26,7 +28,7 @@ Cmdlet을 디자인할 때 동일한 데이터에 대해 여러 작업을 수행
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 동일한 기본 클래스에서 파생 되는 동일한 기본 클래스에서 파생 되는 기본 클래스를 구현 하는 방법을 보여 줍니다.
+다음 예제에서는 동일한 기본 클래스에서 파생 되는 Get-Proc 및 Stop-Proc cmdlet에 사용 되는 기본 클래스의 구현을 보여 줍니다.
 
 ```csharp
 using System;
@@ -163,6 +165,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

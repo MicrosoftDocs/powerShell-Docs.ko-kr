@@ -2,16 +2,16 @@
 description: FileSystem
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 06/18/2019
+ms.date: 11/13/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_filesystem_provider?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: 파일 시스템 공급자
-ms.openlocfilehash: fb4135663d368867661e87327aa52a9213757d08
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: a1ea71d8ce402c71ae872260e8a38b03de89cf1d
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94391479"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661412"
 ---
 # <a name="filesystem-provider"></a>파일 시스템 공급자
 
@@ -25,7 +25,7 @@ FileSystem
 
 ## <a name="capabilities"></a>기능
 
-**필터** , **shouldprocess**
+**필터**, **shouldprocess**
 
 ## <a name="short-description"></a>간단한 설명
 
@@ -35,12 +35,12 @@ FileSystem
 
 PowerShell **FileSystem** 공급자를 사용 하 여 powershell에서 파일 및 디렉터리를 가져오고 추가, 변경 및 삭제할 수 있습니다.
 
-**FileSystem** 드라이브는 컴퓨터의 디렉터리와 파일을 포함 하는 계층적 네임 스페이스입니다. **FileSystem** 드라이브는 논리적 또는 물리적 드라이브, 디렉터리 또는 매핑된 네트워크 공유 일 수 있습니다.
+**FileSystem** 드라이브는 컴퓨터의 디렉터리와 파일을 포함 하는 계층적 네임 스페이스입니다. **파일 시스템** 드라이브는 논리적 또는 물리적 드라이브, 디렉터리 또는 매핑된 네트워크 공유 일 수 있습니다.
 
 이라는 드라이브가 `TEMP:` 사용자의 임시 디렉터리 경로에 매핑됩니다.
 
 >[!NOTE]
-> TEMP: 드라이브의 내용은 PowerShell에서 자동으로 제거 되지 않으며 관리할 사용자 또는 운영 체제에 따라 설정 됩니다.
+> TEMP: 드라이브의 내용은 PowerShell에서 자동으로 제거 되지 않으며 관리할 사용자 또는 운영 체제에 따라 설정 됩니다. 이 기능은 PowerShell 버전 7.0의 실험적 기능 밖으로 이동 되었습니다.
 
 **FileSystem** 공급자는이 문서에서 설명 하는 다음과 같은 cmdlet을 지원 합니다.
 
@@ -65,7 +65,7 @@ PowerShell **FileSystem** 공급자를 사용 하 여 powershell에서 파일 �
 
 ## <a name="types-exposed-by-this-provider"></a>이 공급자가 노출 하는 형식
 
-파일은 [system.object](/dotnet/api/system.io.fileinfo) 클래스의 인스턴스입니다.  디렉터리는 [system.io.directoryinfo](/dotnet/api/system.io.directoryinfo) 클래스의 인스턴스입니다.
+파일은 [system.object](/dotnet/api/system.io.fileinfo) 클래스의 인스턴스입니다. 디렉터리는 [system.io.directoryinfo](/dotnet/api/system.io.directoryinfo) 클래스의 인스턴스입니다.
 
 ## <a name="navigating-the-filesystem-drives"></a>파일 시스템 드라이브 탐색
 
@@ -340,18 +340,18 @@ Get-ChildItem -Attributes Compressed,Encrypted
 
 파일 인코딩을 지정합니다. 기본값은 ASCII입니다.
 
-- **Ascii** : ascii (7 비트) 문자 집합에 대 한 인코딩을 사용 합니다.
-- **BigEndianUnicode** : 빅 endian 바이트 순서를 사용 하 여 utf-16 형식으로 인코딩합니다.
-- **문자열** : 문자열에 인코딩 형식을 사용 합니다.
-- **Unicode** : 작은 endian 바이트 순서를 사용 하 여 utf-16 형식으로 인코딩합니다.
-- **UTF7** : u t f-7 형식으로 인코딩합니다.
-- **UTF8** : utf-8 형식으로 인코딩합니다.
-- **UTF8BOM** : 바이트 순서 표시 (BOM)를 사용 하 여 utf-8 형식으로 인코딩합니다.
-- **UF8NOBOM** : BOM (바이트 순서 표시) 없이 utf-8 형식으로 인코딩합니다.
-- **UTF32** : u t f-32 형식으로 인코딩합니다.
-- **기본값** : 설치 된 기본 코드 페이지에서 인코딩합니다.
-- **OEM** : MS-DOS 및 콘솔 프로그램에 기본 인코딩을 사용 합니다.
-- **알 수 없음** : 인코딩 유형을 알 수 없거나 잘못 되었습니다. 데이터가 Binary로 처리될 수 있습니다.
+- **Ascii**: ascii (7 비트) 문자 집합에 대 한 인코딩을 사용 합니다.
+- **BigEndianUnicode**: 빅 endian 바이트 순서를 사용 하 여 utf-16 형식으로 인코딩합니다.
+- **문자열**: 문자열에 인코딩 형식을 사용 합니다.
+- **Unicode**: 작은 endian 바이트 순서를 사용 하 여 utf-16 형식으로 인코딩합니다.
+- **UTF7**: u t f-7 형식으로 인코딩합니다.
+- **UTF8**: utf-8 형식으로 인코딩합니다.
+- **UTF8BOM**: 바이트 순서 표시 (BOM)를 사용 하 여 utf-8 형식으로 인코딩합니다.
+- **UF8NOBOM**: BOM (바이트 순서 표시) 없이 utf-8 형식으로 인코딩합니다.
+- **UTF32**: u t f-32 형식으로 인코딩합니다.
+- **기본값**: 설치 된 기본 코드 페이지에서 인코딩합니다.
+- **OEM**: MS-DOS 및 콘솔 프로그램에 기본 인코딩을 사용 합니다.
+- **알 수 없음**: 인코딩 유형을 알 수 없거나 잘못 되었습니다. 데이터가 Binary로 처리될 수 있습니다.
 
 #### <a name="cmdlets-supported"></a>Cmdlet 지원
 
@@ -373,7 +373,7 @@ Get-ChildItem -Attributes Compressed,Encrypted
 
 > [!NOTE]
 > 현재 `-Delimiter` 매개 변수 값이 빈 문자열인 경우 [Get Content](xref:Microsoft.PowerShell.Management.Get-Content) 는 아무것도 반환 하지 않습니다.
-> 이것은 알려진 문제이며 강제로 [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content)가 전체 파일을 구분되지 않은 단일 문자열로 반환하게 하려면 파일에 존재하지 않는 값을 입력합니다.
+> 이것은 알려진 문제입니다. 강제로 [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content)가 전체 파일을 구분되지 않은 단일 문자열로 반환하게 하려면 파일에 존재하지 않는 값을 입력합니다.
 
 #### <a name="cmdlets-supported"></a>Cmdlet 지원
 
@@ -405,11 +405,11 @@ Get-ChildItem -Attributes Compressed,Encrypted
 - **숨김**
 - **보통**
 - **NotContentIndexed**
-- **라인인**
+- **오프라인**
 - **읽기 전용**
 - **ReparsePoint**
 - **SparseFile**
-- **시스템**
+- **System**
 - **임시**
 
 이러한 특성에 대 한 설명은 [Fileattributes](/dotnet/api/system.io.fileattributes) 열거를 참조 하세요.
@@ -488,7 +488,7 @@ Get-ChildItem -Attributes Compressed,Encrypted
 
 ### <a name="newerthan-systemdatetime"></a>NewerThan \<System.DateTime\>
 
-`$True` `LastWriteTime` 파일의 값이 지정 된 날짜 보다 크면를 반환 합니다. 그 외의 경우 `$False`를 반환합니다.
+`$True` `LastWriteTime` 파일의 값이 지정 된 날짜 보다 크면를 반환 합니다. 그렇지 않으면 `$False`을 반환합니다.
 
 날짜/시간 개체와 같은 [datetime](/dotnet/api/system.datetime) 개체를 입력 합니다. 예를 들어, 날짜/ [시간](/dotnet/api/system.datetime) 개체 (예: [)](xref:Microsoft.PowerShell.Utility.Get-Date) 로 변환할 수 있는 문자열 `"August 10, 2011 2:00 PM"` 입니다.
 
@@ -498,7 +498,7 @@ Get-ChildItem -Attributes Compressed,Encrypted
 
 ### <a name="olderthan-systemdatetime"></a>OlderThan \<System.DateTime\>
 
-`$True` `LastWriteTime` 파일의 값이 지정 된 날짜 보다 작은 경우를 반환 합니다. 그 외의 경우 `$False`를 반환합니다.
+`$True` `LastWriteTime` 파일의 값이 지정 된 날짜 보다 작은 경우를 반환 합니다. 그렇지 않으면 `$False`을 반환합니다.
 
 날짜/시간 개체와 같은 [datetime](/dotnet/api/system.datetime) 개체를 입력 합니다. 예를 들어, 날짜/ [시간](/dotnet/api/system.datetime) 개체 (예: [)](xref:Microsoft.PowerShell.Utility.Get-Date) 로 변환할 수 있는 문자열 `"August 10, 2011 2:00 PM"` 입니다.
 
@@ -564,6 +564,6 @@ Get-Help Get-ChildItem
 Get-Help Get-ChildItem -Path c:
 ```
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 [about_Providers](../About/about_Providers.md)
