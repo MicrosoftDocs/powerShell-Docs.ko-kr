@@ -1,12 +1,14 @@
 ---
-title: 뷰의 컨트롤에 대 한 CustomItem 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 747ea14e7118be62ebee00e7d80af2dccb5c8353
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 Controls의 CustomEntry에 대한 CustomItem 요소(형식)
+description: View에 대한 Controls의 CustomEntry에 대한 CustomItem 요소(형식)
+ms.openlocfilehash: 67bff97c27cfedf046b17eea438efcd66ae2ee4a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785849"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666759"
 ---
 # <a name="customitem-element-for-customentry-for-controls-for-view-format"></a>View에 대한 Controls의 CustomEntry에 대한 CustomItem 요소(형식)
 

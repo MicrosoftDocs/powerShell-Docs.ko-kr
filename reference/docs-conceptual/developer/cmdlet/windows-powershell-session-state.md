@@ -1,15 +1,14 @@
 ---
-title: Windows PowerShell 세션 상태 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- Cmdlets [PowerShell], session state
-- session state [PowerShell]
-ms.openlocfilehash: 7436e3ebd0e099ead81f9fea01a0a2994b982213
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 세션 상태
+description: Windows PowerShell 세션 상태
+ms.openlocfilehash: 51de92f1f392f708cf49c7ccb4a6808fd628076c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783945"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668136"
 ---
 # <a name="windows-powershell-session-state"></a>Windows PowerShell 세션 상태
 
@@ -21,7 +20,7 @@ ms.locfileid: "87783945"
 
 모듈 세션 상태는 모듈 또는 중첩 된 모듈 중 하나를 세션으로 가져올 때마다 생성 됩니다. 모듈에서 cmdlet, 함수 또는 스크립트와 같은 요소를 내보내는 경우 해당 요소에 대 한 참조가 세션의 전역 세션 상태에 추가 됩니다. 그러나 요소를 실행 하면 모듈의 세션 상태 내에서 실행 됩니다.
 
-## <a name="session-state-data"></a>세션 상태 데이터
+## <a name="session-state-data"></a>Session-State 데이터
 
 세션 상태 데이터는 공개 또는 비공개 일 수 있습니다. 공용 데이터는 세션 상태 외부에서 호출 하는 데 사용할 수 있지만, 전용 데이터는 세션 상태 내의 호출에만 사용할 수 있습니다. 예를 들어 모듈은 모듈에 의해서만 호출 되거나 내보낸 public 요소에 의해서만 내부적으로 호출 될 수 있는 전용 함수를 포함할 수 있습니다. 이는 .NET Framework 형식의 private 및 public 멤버와 비슷합니다.
 
@@ -37,7 +36,7 @@ ms.locfileid: "87783945"
 
 - 세션 상태 변수 정보
 
-## <a name="accessing-session-state-data-within-cmdlets"></a>Cmdlet 내 세션 상태 데이터 액세스
+## <a name="accessing-session-state-data-within-cmdlets"></a>Cmdlet 내의 Session-State 데이터에 액세스
 
 Cmdlet은 cmdlet 클래스의 [PSCmdlet. Sessionstate *](/dotnet/api/System.Management.Automation.PSCmdlet.SessionState) 속성을 통해 간접적으로 또는 [Sessionstate](/dotnet/api/System.Management.Automation.SessionState) 클래스를 통해 직접 세션 상태 데이터에 액세스할 수 있습니다. [Sessionstate](/dotnet/api/System.Management.Automation.SessionState) 클래스는 여러 유형의 세션 상태 데이터를 조사 하는 데 사용할 수 있는 속성을 제공 합니다.
 
@@ -49,6 +48,6 @@ Cmdlet은 cmdlet 클래스의 [PSCmdlet. Sessionstate *](/dotnet/api/System.Mana
 
 [Windows PowerShell cmdlet](./cmdlet-overview.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
 
 [Windows PowerShell Shell SDK](../windows-powershell-reference.md)

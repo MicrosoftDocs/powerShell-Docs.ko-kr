@@ -1,12 +1,14 @@
 ---
-title: 입력 처리 메서드를 재정의 하는 방법 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: b245dc56b78ce9b7f1dea80b5d4988057c2f125f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 입력 처리 메서드를 재정의하는 방법
+description: 입력 처리 메서드를 재정의하는 방법
+ms.openlocfilehash: 4e8d71a34a1480ce63435ac6cc5dce60d4219c03
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784115"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667014"
 ---
 # <a name="how-to-override-input-processing-methods"></a>입력 처리 메서드를 재정의하는 방법
 
@@ -96,4 +98,4 @@ public class TestEndProcessingClassTemplate : Cmdlet
 
 [ProcessRecord입니다.](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

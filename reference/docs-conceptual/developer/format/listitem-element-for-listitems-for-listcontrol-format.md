@@ -1,12 +1,14 @@
 ---
-title: 이 listcontrol (형식)에 대 한 ListItems의 ListItem 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e72a887e8bd1f93bacb663e3079eeaec34bdfa51
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ListControl의 ListItems에 대한 ListItem 요소(형식)
+description: ListControl의 ListItems에 대한 ListItem 요소(형식)
+ms.openlocfilehash: 999491b7851aa4fa21667ad376d7e9853500ca08
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785679"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666555"
 ---
 # <a name="listitem-element-for-listitems-for-listcontrol-format"></a>ListControl의 ListItems에 대한 ListItem 요소(형식)
 
@@ -32,7 +34,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ### <a name="attributes"></a>특성
 
-없음
+None
 
 ### <a name="child-elements"></a>자식 요소
 

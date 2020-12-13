@@ -1,12 +1,14 @@
 ---
-title: 뷰 (형식) 컨트롤의 ExpressionBinding에 대 한 ScriptBlock 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 42946ed9f3241912366192b2ab2fdfb8f8582d83
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 Controls의 ExpressionBinding에 대한 ScriptBlock 요소(형식)
+description: View에 대한 Controls의 ExpressionBinding에 대한 ScriptBlock 요소(형식)
+ms.openlocfilehash: a68d6ecd4a9e1ff1d614d32325e99831be88e516
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785492"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665287"
 ---
 # <a name="scriptblock-element-for-expressionbinding-for-controls-for-view-format"></a>View에 대한 Controls의 ExpressionBinding에 대한 ScriptBlock 요소(형식)
 

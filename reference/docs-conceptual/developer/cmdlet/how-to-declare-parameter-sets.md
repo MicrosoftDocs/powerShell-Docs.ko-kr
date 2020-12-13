@@ -1,12 +1,14 @@
 ---
-title: 매개 변수 집합을 선언 하는 방법 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e6d06a9a78356693fe7a338dc5c9207044b23441
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 매개 변수 집합을 선언하는 방법
+description: 매개 변수 집합을 선언하는 방법
+ms.openlocfilehash: bd4d504a9fe6c7f7626901c49bc08851244f0995
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784166"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667065"
 ---
 # <a name="how-to-declare-parameter-sets"></a>매개 변수 집합을 선언하는 방법
 
@@ -60,4 +62,4 @@ ms.locfileid: "87784166"
 
 [Cmdlet 매개 변수 집합](./cmdlet-parameter-sets.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

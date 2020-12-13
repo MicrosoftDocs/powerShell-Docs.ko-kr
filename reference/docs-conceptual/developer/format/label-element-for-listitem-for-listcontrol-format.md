@@ -1,12 +1,14 @@
 ---
-title: 이 listcontrol (형식)의 ListItem에 대 한 Label 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ad80cc0478e7567b12d264ab661d843248ba48e1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ListControl의 ListItem에 대한 Label 요소(형식)
+description: ListControl의 ListItem에 대한 Label 요소(형식)
+ms.openlocfilehash: 01ff34c4129abe2c76a0a21794e756b77bff12bf
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783639"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666657"
 ---
 # <a name="label-element-for-listitem-for-listcontrol-format"></a>ListControl의 ListItem에 대한 Label 요소(형식)
 

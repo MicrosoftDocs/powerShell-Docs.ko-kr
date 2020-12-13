@@ -1,14 +1,14 @@
 ---
-title: 인수 패턴의 유효성을 검사 하는 방법 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidatePattern attribute, example
-ms.openlocfilehash: 35104e786d4b809a711d97fea52ae0e348dd5ca3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 인수 패턴 유효성을 검사하는 방법
+description: 인수 패턴 유효성을 검사하는 방법
+ms.openlocfilehash: ab5777c918a53c0a3900f87c52e7f14f9cb9b726
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782092"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666912"
 ---
 # <a name="how-to-validate-an-argument-pattern"></a>인수 패턴 유효성을 검사하는 방법
 
@@ -39,4 +39,4 @@ ms.locfileid: "87782092"
 
 [ValidatePattern 특성 선언](./validatepattern-attribute-declaration.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

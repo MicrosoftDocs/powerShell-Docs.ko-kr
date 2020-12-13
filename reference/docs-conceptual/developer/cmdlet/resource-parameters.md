@@ -1,12 +1,14 @@
 ---
-title: 리소스 매개 변수 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e618951d57ff1cf303b38f0278858144df31afaf
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 리소스 매개 변수
+description: 리소스 매개 변수
+ms.openlocfilehash: 7533f91b6d5858bcefca289eabc7854d6d5d1f2b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786529"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668153"
 ---
 # <a name="resource-parameters"></a>리소스 매개 변수
 
@@ -16,14 +18,14 @@ ms.locfileid: "87786529"
 |---|---|
 |**애플리케이션**<br>데이터 형식: 문자열|이 매개 변수를 구현 하 여 사용자가 응용 프로그램을 지정할 수 있도록 합니다.|
 |**어셈블리**<br>데이터 형식: 문자열|사용자가 어셈블리를 지정할 수 있도록이 매개 변수를 구현 합니다.|
-|**특성**<br>데이터 형식: 문자열|이 매개 변수를 구현 하 여 사용자가 특성을 지정할 수 있도록 합니다.|
+|**Attribute**<br>데이터 형식: 문자열|이 매개 변수를 구현 하 여 사용자가 특성을 지정할 수 있도록 합니다.|
 |**클래스**<br>데이터 형식: 문자열|사용자가 Microsoft .NET Framework 클래스를 지정할 수 있도록이 매개 변수를 구현 합니다.|
 |**Cluster**<br>데이터 형식: 문자열|이 매개 변수를 구현 하 여 사용자가 클러스터를 지정할 수 있도록 합니다.|
-|**문화권**.<br>데이터 형식: 문자열|이 매개 변수를 구현 하 여 사용자가 cmdlet을 실행할 문화권을 지정할 수 있도록 합니다.|
+|**문화권**<br>데이터 형식: 문자열|이 매개 변수를 구현 하 여 사용자가 cmdlet을 실행할 문화권을 지정할 수 있도록 합니다.|
 |**도메인**<br>데이터 형식: 문자열|이 매개 변수를 구현 하 여 사용자가 도메인 이름을 지정할 수 있도록 합니다.|
 |**드라이브**<br>데이터 형식: 문자열|사용자가 드라이브 이름을 지정할 수 있도록이 매개 변수를 구현 합니다.|
 |**이벤트**<br>데이터 형식: 문자열|이 매개 변수를 구현 하 여 사용자가 이벤트 이름을 지정할 수 있도록 합니다.|
-|**감열재**<br>데이터 형식: 문자열|이 매개 변수를 구현 하 여 사용자가 네트워크 인터페이스 이름을 지정할 수 있도록 합니다.|
+|**인터페이스**<br>데이터 형식: 문자열|이 매개 변수를 구현 하 여 사용자가 네트워크 인터페이스 이름을 지정할 수 있도록 합니다.|
 |**\**<br>데이터 형식: 문자열|사용자가 IP 주소를 지정할 수 있도록이 매개 변수를 구현 합니다.|
 |**작업**<br>데이터 형식: 문자열|사용자가 작업을 지정할 수 있도록이 매개 변수를 구현 합니다.|
 |**LiteralPath**<br>데이터 형식: 문자열|와일드 카드 문자가 지원 되지 않는 경우 사용자가 리소스에 대 한 경로를 지정할 수 있도록이 매개 변수를 구현 합니다. 와일드 카드 문자를 지 원하는 경우 **Path** 매개 변수를 사용 합니다.|
@@ -34,7 +36,7 @@ ms.locfileid: "87786529"
 |**프린터**<br>데이터 형식: 정수, 문자열|사용자가 cmdlet에서 사용할 프린터를 지정할 수 있도록이 매개 변수를 구현 합니다.|
 |**크기**<br>데이터 형식: Int32|사용자가 크기를 지정할 수 있도록이 매개 변수를 구현 합니다.|
 |**TID**<br>데이터 형식: 문자열|사용자가 cmdlet에 대 한 TID (트랜잭션 식별자)를 지정할 수 있도록이 매개 변수를 구현 합니다.|
-|**형식**<br>데이터 형식: 문자열|사용자가 작업할 리소스의 형식을 지정할 수 있도록이 매개 변수를 구현 합니다.|
+|**유형**<br>데이터 형식: 문자열|사용자가 작업할 리소스의 형식을 지정할 수 있도록이 매개 변수를 구현 합니다.|
 |**URL**<br>데이터 형식: 문자열|이 매개 변수를 구현 하 여 사용자가 URL (Uniform Resource Locator)을 지정할 수 있도록 합니다.|
 |**사용자**<br>데이터 형식: 문자열|사용자가 다른 사용자의 이름 또는 이름을 지정할 수 있도록이 매개 변수를 구현 합니다.|
 
@@ -42,6 +44,6 @@ ms.locfileid: "87786529"
 
 [Cmdlet 매개 변수](./cmdlet-parameters.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)

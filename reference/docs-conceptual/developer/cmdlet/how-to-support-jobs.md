@@ -1,12 +1,14 @@
 ---
-title: 작업을 지 원하는 방법 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 7ae4e6c118965c73ba6b3d4d38b1bd3171d2b3da
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 작업을 지원하는 방법
+description: 작업을 지원하는 방법
+ms.openlocfilehash: d755093e941aa660032f8d283cb43ba5eeec8c4b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786631"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666980"
 ---
 # <a name="how-to-support-jobs"></a>작업을 지원하는 방법
 

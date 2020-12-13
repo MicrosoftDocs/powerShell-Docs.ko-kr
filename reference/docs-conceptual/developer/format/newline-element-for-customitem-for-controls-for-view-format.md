@@ -1,12 +1,14 @@
 ---
-title: 보기에 대 한 컨트롤 CustomItem의 줄 바꿈 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e55e07ede3c394cabbda25aa1ec3bf03683c1c6b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 Controls의 CustomItem에 대한 NewLine 요소(형식)
+description: View에 대한 Controls의 CustomItem에 대한 NewLine 요소(형식)
+ms.openlocfilehash: 3b368f021fcbd2ecabf2032b951afe2979a3d027
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785662"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666436"
 ---
 # <a name="newline-element-for-customitem-for-controls-for-view-format"></a>View에 대한 Controls의 CustomItem에 대한 NewLine 요소(형식)
 

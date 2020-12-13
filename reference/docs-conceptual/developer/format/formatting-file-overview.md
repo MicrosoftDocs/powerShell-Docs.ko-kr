@@ -1,12 +1,14 @@
 ---
-title: 파일 서식 지정 개요 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: efdd3eed15c5f3c88636fcbe7a39f6c6cfb20ced
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 형식 지정 파일 개요
+description: 형식 지정 파일 개요
+ms.openlocfilehash: b86119c304c895ec08ac67de693b3a052bc7a2a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773507"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667830"
 ---
 # <a name="formatting-file-overview"></a>형식 지정 파일 개요
 
@@ -23,7 +25,7 @@ PowerShell에서는 이러한 서식 파일의 데이터를 사용 하 여 표�
 
 - 데이터가 열의 너비 보다 길면 다음 줄에 테이블 행에 표시 되는 데이터를 표시할지 여부와 같은 기본 구성 설정입니다. 이러한 설정에 대 한 자세한 내용은 [공통 구성 설정 정의](./defining-common-configuration-features.md)를 참조 하세요.
 
-- 서식 파일의 모든 보기에서 표시할 수 있는 개체 집합입니다. 이러한 집합 ( *선택 집합*이라고 함)에 대 한 자세한 내용은 [개체 집합 정의](./defining-selection-sets.md)를 참조 하세요.
+- 서식 파일의 모든 보기에서 표시할 수 있는 개체 집합입니다. 이러한 집합 ( *선택 집합* 이라고 함)에 대 한 자세한 내용은 [개체 집합 정의](./defining-selection-sets.md)를 참조 하세요.
 
 - 서식 파일의 모든 뷰에서 사용할 수 있는 공용 컨트롤입니다. 컨트롤을 통해 데이터가 표시 되는 방법을 보다 세밀 하 게 제어할 수 있습니다. 컨트롤에 대 한 자세한 내용은 [사용자 지정 컨트롤 정의](./creating-custom-controls.md)를 참조 하세요.
 

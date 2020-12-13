@@ -1,12 +1,14 @@
 ---
-title: GroupBy (형식)에 대 한 ExpressionBinding의 ScriptBlock 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 24268e871e6bc66ad235113b262c60208e74b61c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GroupBy의 ExpressionBinding에 대한 ScriptBlock 요소(형식)
+description: GroupBy의 ExpressionBinding에 대한 ScriptBlock 요소(형식)
+ms.openlocfilehash: db946a4c2fca7543d98f0859a2c102c829aa0e04
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772929"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665261"
 ---
 # <a name="scriptblock-element-for-expressionbinding-for-groupby-format"></a>GroupBy의 ExpressionBinding에 대한 ScriptBlock 요소(형식)
 

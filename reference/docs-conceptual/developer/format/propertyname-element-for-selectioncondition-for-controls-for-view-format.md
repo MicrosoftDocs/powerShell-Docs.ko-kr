@@ -1,12 +1,14 @@
 ---
-title: View 컨트롤의 SelectionCondition에 대 한 PropertyName 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 251fc129896cfa4a6255330e23854b014675ac5f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 Controls의 SelectionCondition에 대한 PropertyName 요소(형식)
+description: View에 대한 Controls의 SelectionCondition에 대한 PropertyName 요소(형식)
+ms.openlocfilehash: 7783e5a9b7f8ec3d3077d87778e9f77ffe858a7f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780817"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665875"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-controls-for-view-format"></a>View에 대한 Controls의 SelectionCondition에 대한 PropertyName 요소(형식)
 

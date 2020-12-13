@@ -1,12 +1,14 @@
 ---
-title: 구성에 대 한 컨트롤의 프레임에 대 한 왼쪽 들여쓰기 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 8de21173780047cb8af6bb76ea51c092b38d30a9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Configuration에 대한 Controls의 Frame에 대한 LeftIndent 요소(형식)
+description: Configuration에 대한 Controls의 Frame에 대한 LeftIndent 요소(형식)
+ms.openlocfilehash: 9a6b2832b8c06d4217e743a2a13958b883959b57
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783588"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667779"
 ---
 # <a name="leftindent-element-for-frame-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 Frame에 대한 LeftIndent 요소(형식)
 

@@ -1,12 +1,14 @@
 ---
-title: WideControl (형식)의 WideItem에 대 한 FormatString 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4f1f0826a1cebb1526858875df640baac9d4ce48
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: WideControl의 WideItem에 대한 FormatString 요소(형식)
+description: WideControl의 WideItem에 대한 FormatString 요소(형식)
+ms.openlocfilehash: f67a18e3ec4f1323e7f9be8904db518c679d53e5
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781531"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667881"
 ---
 # <a name="formatstring-element-for-wideitem-for-widecontrol-format"></a>WideControl의 WideItem에 대한 FormatString 요소(형식)
 

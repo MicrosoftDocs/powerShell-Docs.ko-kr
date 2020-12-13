@@ -1,12 +1,14 @@
 ---
-title: 이 listcontrol (형식)의 ListItem 요소에 대 한 ScriptBlock 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 249d3e36b4246b7baa410815122f8e30340f1862
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ListControl의 ListItem에 대한 ScriptBlock 요소(형식)
+description: ListControl의 ListItem에 대한 ScriptBlock 요소(형식)
+ms.openlocfilehash: 0635ac2622cc203a2dc895873621901d956f87da
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785458"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664973"
 ---
 # <a name="scriptblock-element-for-listitem-for-listcontrol-format"></a>ListControl의 ListItem에 대한 ScriptBlock 요소(형식)
 

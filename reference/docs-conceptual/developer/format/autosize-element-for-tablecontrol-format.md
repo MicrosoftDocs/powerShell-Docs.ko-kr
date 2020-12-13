@@ -1,12 +1,14 @@
 ---
-title: TableControl (Format)의 AutoSize 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f29b3eb278fd9ff29d2f6f4fbd000513dcaeec7b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TableControl에 대한 AutoSize 요소(형식)
+description: TableControl에 대한 AutoSize 요소(형식)
+ms.openlocfilehash: 39d2f6f10796266cb6e9f1613b68337fb489278a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783894"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668119"
 ---
 # <a name="autosize-element-for-tablecontrol-format"></a>TableControl에 대한 AutoSize 요소(형식)
 

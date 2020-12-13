@@ -1,12 +1,14 @@
 ---
-title: 서식 지정 데이터 로드 및 내보내기 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: b449b280ccee561679d58f2f2a8b467c83150766
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 형식 지정 데이터 로드 및 내보내기
+description: 형식 지정 데이터 로드 및 내보내기
+ms.openlocfilehash: 38857526801051bf6d31d300d5be1a3fd2c80391
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781123"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666521"
 ---
 # <a name="loading-and-exporting-formatting-data"></a>형식 지정 데이터 로드 및 내보내기
 
@@ -28,9 +30,9 @@ ms.locfileid: "87781123"
 
 ## <a name="storing-your-formatting-file"></a>서식 파일 저장
 
-포맷 파일이 디스크에 저장 되는 위치에 대 한 요구 사항은 없습니다. 그러나 다음 폴더에 저장 하는 것이 좋습니다.`user\documents\windowspowershell\`
+포맷 파일이 디스크에 저장 되는 위치에 대 한 요구 사항은 없습니다. 그러나 다음 폴더에 저장 하는 것이 좋습니다. `user\documents\windowspowershell\`
 
-#### <a name="loading-a-format-file-using-import-formatdata"></a>Formatformatdata를 사용 하 여 서식 파일 로드
+#### <a name="loading-a-format-file-using-import-formatdata"></a>Import-FormatData를 사용 하 여 서식 파일 로드
 
 1. 포맷 파일을 디스크에 저장 합니다.
 

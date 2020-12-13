@@ -1,12 +1,14 @@
 ---
-title: 특성 유형 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 96fdd38ba10eb748ab0762f0c910463dd472494d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 특성 유형
+description: 특성 유형
+ms.openlocfilehash: 65640f2f8449887dedb9fae137eb16b6252f1d57
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782381"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667116"
 ---
 # <a name="attribute-types"></a>특성 유형
 
@@ -15,7 +17,7 @@ Cmdlet 특성은 기능별로 그룹화 할 수 있습니다.
 
 ## <a name="cmdlet-attributes"></a>Cmdlet 특성
 
-### <a name="cmdlet"></a>cmdlet
+### <a name="cmdlet"></a>Cmdlet
 
 .NET Framework 클래스를 cmdlet으로 식별 합니다.
 필수 기본 특성입니다.

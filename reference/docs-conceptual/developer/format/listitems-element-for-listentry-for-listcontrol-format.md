@@ -1,12 +1,14 @@
 ---
-title: ListEntry의이 listcontrol 요소에 대 한 ListItems 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 03b89a3df2ab0498533d0c00f303f643e0039b25
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ListControl의 ListEntry에 대한 ListItems 요소(형식)
+description: ListControl의 ListEntry에 대한 ListItems 요소(형식)
+ms.openlocfilehash: 1553c81bc559020223a3c1fea10336baf017c9a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781140"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666538"
 ---
 # <a name="listitems-element-for-listentry-for-listcontrol-format"></a>ListControl의 ListEntry에 대한 ListItems 요소(형식)
 

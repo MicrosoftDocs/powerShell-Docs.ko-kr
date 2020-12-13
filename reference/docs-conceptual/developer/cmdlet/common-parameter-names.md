@@ -1,16 +1,18 @@
 ---
-title: 일반 매개 변수 이름 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d0939cfa5bf90ec55f0c0afcdeff56223d9dc78d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 일반 매개 변수 이름
+description: 일반 매개 변수 이름
+ms.openlocfilehash: cf39dd3b04660076718336857d79d55c3784ccd1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782228"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668221"
 ---
 # <a name="common-parameter-names"></a>일반 매개 변수 이름
 
-이 항목에서 설명 하는 매개 변수는 *일반 매개 변수*라고 합니다. 이러한 cmdlet은 Windows PowerShell 런타임에 의해 cmdlet에 추가 되며 cmdlet으로 선언할 수 없습니다.
+이 항목에서 설명 하는 매개 변수는 *일반 매개 변수* 라고 합니다. 이러한 cmdlet은 Windows PowerShell 런타임에 의해 cmdlet에 추가 되며 cmdlet으로 선언할 수 없습니다.
 
 > [!NOTE]
 > 이러한 매개 변수는 공급자 cmdlet에 추가 되 고 특성을 사용 하 여 데코레이팅된 함수에도 추가 됩니다 `CmdletBinding` .
@@ -67,7 +69,7 @@ ms.locfileid: "87782228"
 
 이 매개 변수는 경고 메시지를 저장할 수 있는 변수를 지정 합니다. 이 변수에 추가 하려면 변수를 지우고 설정 하는 대신 +*varname* 을 사용 합니다.
 
-## <a name="risk-mitigation-parameters"></a>위험-완화 매개 변수
+## <a name="risk-mitigation-parameters"></a>Risk-Mitigation 매개 변수
 
 다음 매개 변수는 작업을 수행 하기 전에 확인을 요청 하는 cmdlet에 추가 됩니다. 확인 요청에 대 한 자세한 내용은 [확인 요청](./requesting-confirmation-from-cmdlets.md)을 참조 하세요. 이러한 매개 변수는 [Shouldprocessparameters](/dotnet/api/System.Management.Automation.Internal.ShouldProcessParameters) 클래스에 의해 정의 됩니다.
 
@@ -101,6 +103,6 @@ ms.locfileid: "87782228"
 
 [System.object 매개 변수를](/dotnet/api/System.Management.Automation.Internal.TransactionParameters)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)

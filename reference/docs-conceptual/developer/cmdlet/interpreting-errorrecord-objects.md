@@ -1,12 +1,14 @@
 ---
-title: ErrorRecord 개체 해석 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 249fff7d14023806d75aeca40f4d9b7231e14311
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ErrorRecord 개체 해석
+description: ErrorRecord 개체 해석
+ms.openlocfilehash: 5a8556e0ba83e54dd197ed03665a119f0b565f2b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786597"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666878"
 ---
 # <a name="interpreting-errorrecord-objects"></a>ErrorRecord 개체 해석
 
@@ -87,4 +89,4 @@ FQID는 단일 문자열로 검사 되도록 설계 되었습니다. 그러나 �
 
 [Windows PowerShell 오류 보고](./error-reporting-concepts.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

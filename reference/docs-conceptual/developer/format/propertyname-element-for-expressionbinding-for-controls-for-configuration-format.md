@@ -1,12 +1,14 @@
 ---
-title: 구성 (형식)의 컨트롤에 대 한 ExpressionBinding의 PropertyName 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f4343eeb157a1e3fc94a43c610ca5bdc94a5f667
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Configuration에 대한 Controls의 ExpressionBinding에 대한 PropertyName 요소(형식)
+description: Configuration에 대한 Controls의 ExpressionBinding에 대한 PropertyName 요소(형식)
+ms.openlocfilehash: 1deb49c92a9457d8e1032c1ce698d7d9488edd8e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780913"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666249"
 ---
 # <a name="propertyname-element-for-expressionbinding-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 ExpressionBinding에 대한 PropertyName 요소(형식)
 

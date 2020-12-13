@@ -1,12 +1,14 @@
 ---
-title: CustomControl for View (Format)의 ExpressionBinding에 대 한 CustomControlName 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6f1ffca045b7efcecb4dce4e788a8c508fa6ef08
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 CustomControl의 ExpressionBinding에 대한 CustomControlName 요소(형식)
+description: View에 대한 CustomControl의 ExpressionBinding에 대한 CustomControlName 요소(형식)
+ms.openlocfilehash: 24b27428c07d7178f0069f6d0e5b7ffc555efe34
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783758"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666810"
 ---
 # <a name="customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 ExpressionBinding에 대한 CustomControlName 요소(형식)
 

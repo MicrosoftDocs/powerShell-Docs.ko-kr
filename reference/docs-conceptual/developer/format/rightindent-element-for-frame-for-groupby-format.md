@@ -1,12 +1,14 @@
 ---
-title: GroupBy (형식)의 프레임에 대 한 RightIndent 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6e1d451c2a6f0e3e0a122589efc32f2b55b430e6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GroupBy의 Frame에 대한 RightIndent 요소(형식)
+description: GroupBy의 Frame에 대한 RightIndent 요소(형식)
+ms.openlocfilehash: 9a2734eee3d4c3c27fa6fa7db7ce47fa126304a6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785526"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665535"
 ---
 # <a name="rightindent-element-for-frame-for-groupby-format"></a>GroupBy의 Frame에 대한 RightIndent 요소(형식)
 

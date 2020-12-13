@@ -1,12 +1,14 @@
 ---
-title: 형식 스키마 XML 참조 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 111f90269e669aa6f8f97082ccc6063a62ddc7b1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 형식 스키마 XML 참조
+description: 형식 스키마 XML 참조
+ms.openlocfilehash: f59016df91fe458393655853b9eada0875a8dcb1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785798"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667932"
 ---
 # <a name="format-schema-xml-reference"></a>형식 스키마 XML 참조
 

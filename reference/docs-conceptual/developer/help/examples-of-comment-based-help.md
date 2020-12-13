@@ -1,18 +1,20 @@
 ---
-title: 설명 기반 도움말 예제
 ms.date: 09/12/2016
-ms.openlocfilehash: fe5d054c84952367a4e7c2d5d9e32551a4e5c3a8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 설명 기반 도움말 예제
+description: 설명 기반 도움말 예제
+ms.openlocfilehash: 35fe9103a261483c56af629f620dbd6b3c642e68
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772300"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667643"
 ---
 # <a name="examples-of-comment-based-help"></a>설명 기반 도움말 예제
 
 이 항목에는 스크립트 및 함수에 대 한 주석 기반 도움말을 사용 하는 방법을 보여 주는 예제가 포함 되어 있습니다.
 
-## <a name="example-1-comment-based-help-for-a-function"></a>예제 1: 함수에 대 한 주석 기반 도움말
+## <a name="example-1-comment-based-help-for-a-function"></a>예제 1: 함수에 대 한 도움말 Comment-Based
 
  다음 샘플 함수는 주석 기반 도움말을 포함 합니다.
 
@@ -134,7 +136,7 @@ C:\PS> get-help add-extension -full
             Set-Item
 ```
 
-## <a name="example-2-comment-based-help-for-a-script"></a>예제 2: 스크립트에 대 한 주석 기반 도움말
+## <a name="example-2-comment-based-help-for-a-script"></a>예제 2: 스크립트에 대 한 도움말 Comment-Based
 
 다음 샘플 함수는 주석 기반 도움말을 포함 합니다.
 
@@ -275,7 +277,7 @@ function Add-Extension
     #>
 ```
 
-결과는 예 1의 결과와 같습니다. `Get-Help`키워드와 함께 제공 된 것 처럼 매개 변수 설명을 해석 합니다 `.Parameter` .
+결과는 예 1의 결과와 같습니다. `Get-Help` 키워드와 함께 제공 된 것 처럼 매개 변수 설명을 해석 합니다 `.Parameter` .
 
 ## <a name="example-4--redirecting-to-an-xml-file"></a>예 4: XML 파일로 리디렉션
 
@@ -304,7 +306,7 @@ function Add-Extension
 
 ## <a name="example-5--redirecting-to-a-different-help-topic"></a>예 5: 다른 도움말 항목으로 리디렉션
 
-다음 코드는 한 `Help` 번에 하나의 도움말 텍스트 화면을 표시 하는 PowerShell의 기본 제공 함수 시작 부분에서 발췌 한 것입니다. Get-help cmdlet에 대 한 도움말 항목에서 도움말 함수를 설명 하므로 Help 함수는 및 키워드를 사용 하 여 `.ForwardHelpTargetName` `.ForwardHelpCategory` 사용자를 Get-help cmdlet 도움말 항목으로 리디렉션합니다.
+다음 코드는 한 `Help` 번에 하나의 도움말 텍스트 화면을 표시 하는 PowerShell의 기본 제공 함수 시작 부분에서 발췌 한 것입니다. Get-Help cmdlet에 대 한 도움말 항목에서 도움말 함수를 설명 하므로 Help 함수는 및 키워드를 사용 하 여 `.ForwardHelpTargetName` `.ForwardHelpCategory` 사용자를 Get-Help cmdlet 도움말 항목으로 리디렉션합니다.
 
 ```powershell
 function help

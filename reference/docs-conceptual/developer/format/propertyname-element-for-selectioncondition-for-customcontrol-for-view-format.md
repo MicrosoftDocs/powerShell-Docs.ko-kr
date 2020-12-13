@@ -1,12 +1,14 @@
 ---
-title: CustomControl에 대 한 SelectionCondition의 PropertyName 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: aa3955b84b8de9901f394e8108f31440fcb6c942
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 CustomControl의 SelectionCondition에 대한 PropertyName 요소(형식)
+description: View에 대한 CustomControl의 SelectionCondition에 대한 PropertyName 요소(형식)
+ms.openlocfilehash: 1dd325a58b29a0f13b1341559c2a7dfe251c6b36
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780800"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665858"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 SelectionCondition에 대한 PropertyName 요소(형식)
 

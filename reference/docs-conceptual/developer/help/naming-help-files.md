@@ -1,12 +1,14 @@
 ---
-title: 도움말 파일 이름 지정
 ms.date: 09/12/2016
-ms.openlocfilehash: ea95e6d6c87e553ed11fe6e3f058fc9a1b3d03f8
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 도움말 파일 이름 지정
+description: 도움말 파일 이름 지정
+ms.openlocfilehash: b77af8f9b9510785a4198fed9da1263184a27b99
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893274"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667592"
 ---
 # <a name="naming-help-files"></a>도움말 파일 이름 지정
 
@@ -55,10 +57,10 @@ CIM 명령은 모듈에 중첩 모듈로 포함 될 수 있는 CDXML 파일에 �
 
 ## <a name="script-workflow-help-files"></a>워크플로 도움말 파일 스크립팅
 
-모듈에 포함 된 스크립트 워크플로는 XML 기반 도움말 파일로 문서화할 수 있습니다. 도움말 파일의 이름에 대 한 기술 요구 사항은 없습니다. 그러나 스크립트 워크플로가 정의 된 스크립트 모듈에 대 한 도움말 파일의 이름을 지정 하는 것이 가장 좋습니다. 예:
+모듈에 포함 된 스크립트 워크플로는 XML 기반 도움말 파일로 문서화할 수 있습니다. 도움말 파일의 이름에 대 한 기술 요구 사항은 없습니다. 그러나 스크립트 워크플로가 정의 된 스크립트 모듈에 대 한 도움말 파일의 이름을 지정 하는 것이 가장 좋습니다. 예를 들어:
 
 `<ScriptModule>.psm1-help.xml`
 
-다른 스크립팅된 명령과 달리 스크립트 워크플로에는 `.ExternalHelp` 설명 키워드를 사용 하 여 도움말 파일에 연결할 수 없습니다. 대신 PowerShell은 모듈 디렉터리의 UI 문화권 관련 하위 디렉터리에서 XML 기반 도움말 파일을 검색 하 고 모든 파일의 스크립트 워크플로에 대 한 도움말을 찾습니다. `.ExternalHelp`comment 키워드는 무시 됩니다.
+다른 스크립팅된 명령과 달리 스크립트 워크플로에는 `.ExternalHelp` 설명 키워드를 사용 하 여 도움말 파일에 연결할 수 없습니다. 대신 PowerShell은 모듈 디렉터리의 UI 문화권 관련 하위 디렉터리에서 XML 기반 도움말 파일을 검색 하 고 모든 파일의 스크립트 워크플로에 대 한 도움말을 찾습니다. `.ExternalHelp` comment 키워드는 무시 됩니다.
 
 `.ExternalHelp`Comment 키워드는 무시 되므로 `Get-Help` cmdlet은 모듈에 포함 된 경우에만 스크립트 워크플로에 대 한 도움말을 찾을 수 있습니다.

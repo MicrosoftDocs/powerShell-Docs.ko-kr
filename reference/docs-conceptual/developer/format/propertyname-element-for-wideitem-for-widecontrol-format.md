@@ -1,12 +1,14 @@
 ---
-title: WideControl (형식)의 WideItem에 대 한 PropertyName 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 7728f960a67faa99eaafb4a4934674e119b8af27
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: WideControl의 WideItem에 대한 PropertyName 요소(형식)
+description: WideControl의 WideItem에 대한 PropertyName 요소(형식)
+ms.openlocfilehash: 1d4d5eaf7708dfbd7997122fac156a36487538ea
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780477"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665620"
 ---
 # <a name="propertyname-element-for-wideitem-for-widecontrol-format"></a>WideControl의 WideItem에 대한 PropertyName 요소(형식)
 

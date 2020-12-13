@@ -1,12 +1,14 @@
 ---
-title: View 컨트롤의 컨트롤에 대 한 Name 요소 (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 109f3a40606dbe82322decf0c69d2367c75175f6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 Controls의 Control에 대한 Name 요소(형식)
+description: View에 대한 Controls의 Control에 대한 Name 요소(형식)
+ms.openlocfilehash: 52b7170777a35596767c34f2d58106dfa6479567
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781089"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666487"
 ---
 # <a name="name-element-for-control-for-controls-for-view-format"></a>View에 대한 Controls의 Control에 대한 Name 요소(형식)
 

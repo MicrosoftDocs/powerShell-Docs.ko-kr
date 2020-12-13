@@ -1,14 +1,14 @@
 ---
-title: 인수 범위의 유효성을 검사 하는 방법 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateRange attribute, example
-ms.openlocfilehash: b48b1b87425add51e855c48ec700c78c3ae296c1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 인수 범위를 확인하는 방법
+description: 인수 범위를 확인하는 방법
+ms.openlocfilehash: 1c1c53d43350a38beb2193200de3bd6b689366a4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782075"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666929"
 ---
 # <a name="how-to-validate-an-argument-range"></a>인수 범위를 확인하는 방법
 
@@ -38,4 +38,4 @@ ms.locfileid: "87782075"
 
 [ValidateRange 특성 선언](./validaterange-attribute-declaration.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

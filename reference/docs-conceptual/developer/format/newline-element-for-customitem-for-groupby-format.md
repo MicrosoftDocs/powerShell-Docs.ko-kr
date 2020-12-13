@@ -1,12 +1,14 @@
 ---
-title: GroupBy (형식)에 대 한 CustomItem의 줄 바꿈 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 0c998c9a85238feaa8bc48fd3eb4f66b4f7f8d66
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GroupBy의 CustomItem에 대한 NewLine 요소(형식)
+description: GroupBy의 CustomItem에 대한 NewLine 요소(형식)
+ms.openlocfilehash: 7068288e40bf4b7539290ab5deb5f8fe086c4c9e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783520"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666402"
 ---
 # <a name="newline-element-for-customitem-for-groupby-format"></a>GroupBy의 CustomItem에 대한 NewLine 요소(형식)
 

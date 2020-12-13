@@ -1,12 +1,14 @@
 ---
-title: 확장 유형 시스템 클래스 멤버
 ms.date: 07/09/2020
-ms.openlocfilehash: 24a57b7fd0b3db47d0d7138859aa0502ca9016f0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 확장 유형 시스템 클래스 멤버
+description: 확장 유형 시스템 클래스 멤버
+ms.openlocfilehash: 06488ce423f363a285ab53b21ab45989654346dc
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786274"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666844"
 ---
 # <a name="extended-type-system-class-members"></a>확장 유형 시스템 클래스 멤버
 
@@ -22,13 +24,13 @@ ms.locfileid: "87786274"
 
 ## <a name="accessing-members"></a>멤버 액세스
 
-멤버 컬렉션은 **PSObject** 개체의 **멤버**, **메서드**및 **속성** 속성을 통해 액세스할 수 있습니다.
+멤버 컬렉션은 **PSObject** 개체의 **멤버**, **메서드** 및 **속성** 속성을 통해 액세스할 수 있습니다.
 
-## <a name="ets-properties"></a>속성 속성
+## <a name="ets-properties"></a>ETS 속성
 
 속성은 속성으로 처리 될 수 있는 멤버입니다. 기본적으로 식의 왼쪽에 표시 될 수 있습니다. 별칭 속성, 코드 속성, PowerShell 속성, 메모 속성 및 스크립트 속성을 포함 합니다. 이러한 속성 유형에 대 한 자세한 내용은 속성 [속성](properties.md)을 참조 하세요.
 
-## <a name="ets-methods"></a>메서드
+## <a name="ets-methods"></a>ETS 메서드
 
 인수는 인수를 사용 하 고 결과를 반환할 수 있으며 식의 왼쪽에 표시 될 수 없는 멤버입니다. 여기에는 코드 메서드, PowerShell 메서드 및 스크립트 메서드가 포함 됩니다.
 이러한 메서드 형식에 대 한 자세한 [내용은 메서드를 참조 하세요](methods.md).

@@ -1,12 +1,14 @@
 ---
-title: 확인을 요청 하는 방법 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ebe928724f1b750afc11c1e3c1207375f4ec8e42
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 확인을 요청하는 방법
+description: 확인을 요청하는 방법
+ms.openlocfilehash: 3e29803407bd9fbf13e6db0d0a02239c34e9c4fa
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784098"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666997"
 ---
 # <a name="how-to-request-confirmations"></a>확인을 요청하는 방법
 
@@ -36,7 +38,7 @@ ms.locfileid: "87784098"
     private bool force;
     ```
 
-3. System.object `if` 의 반환 값을 사용 하는 문을 추가 [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 하 여 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 를 호출 하는지 여부를 확인 합니다 .이 메서드는.
+3. System.object `if` 의 반환 값을 사용 하는 문을 추가 [](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 하 여 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 를 호출 하는지 여부를 확인 합니다 .이 메서드는.
 
 4. `if` [System.object](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) 의 반환 값 및 매개 변수 값을 사용 하 여 작업을 수행할지 여부를 결정 하는 두 번째 문을 추가 합니다 `Force` .
 
@@ -57,6 +59,6 @@ protected override void ProcessRecord()
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

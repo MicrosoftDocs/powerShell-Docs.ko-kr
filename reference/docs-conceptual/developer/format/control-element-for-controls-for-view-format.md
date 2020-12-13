@@ -1,12 +1,14 @@
 ---
-title: 보기에 대 한 컨트롤 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 13ea2f09aec7fea8e5460197f133b5f5219cd369
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View의 Controls에 대한 Control 요소(형식)
+description: View의 Controls에 대한 Control 요소(형식)
+ms.openlocfilehash: c48b8b7ecaebfde5e6ed2123b837d92561551766
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783809"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668085"
 ---
 # <a name="control-element-for-controls-for-view--format"></a>View의 Controls에 대한 Control 요소(형식)
 

@@ -1,12 +1,14 @@
 ---
-title: 공급자 도움말 항목에 참고 항목 섹션을 추가하는 방법
 ms.date: 09/12/2016
-ms.openlocfilehash: 54adf4bb941888583eb749b7b5322b27d84c7af7
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 공급자 도움말 항목에 참고 항목 섹션을 추가하는 방법
+description: 공급자 도움말 항목에 참고 항목 섹션을 추가하는 방법
+ms.openlocfilehash: df0b14ba84e04baf404081944ef62ef6745d74b2
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893478"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667660"
 ---
 # <a name="how-to-add-a-see-also-section-to-a-provider-help-topic"></a>공급자 도움말 항목에 참고 항목 섹션을 추가하는 방법
 
@@ -23,7 +25,7 @@ ms.locfileid: "86893478"
 
 1. 파일의 `<AssemblyName>.dll-help.xml` 요소 내에 `providerHelp` 요소를 추가 `RelatedLinks` 합니다. 요소는 `RelatedLinks` 요소의 마지막 요소 여야 합니다 `providerHelp` . `RelatedLinks`각 공급자 도움말 항목에는 하나의 요소만 허용 됩니다.
 
-   예:
+   예를 들어:
 
     ```xml
     <providerHelp>
@@ -34,7 +36,7 @@ ms.locfileid: "86893478"
 
 1. **참고** 항목 섹션의 각 항목에 대해 요소 내에서 `RelatedLinks` 요소를 추가 `navigationLink` 합니다. 그런 다음 각 요소 내에서 `navigationLink` 요소 하 나와 요소 하나를 추가 `linkText` `uri` 합니다. 요소를 사용 하지 않는 경우 `uri` 빈 요소 ()로 추가할 수 있습니다 \<uri/> .
 
-   예:
+   예를 들어:
 
     ```xml
     <providerHelp>

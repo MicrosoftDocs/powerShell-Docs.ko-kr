@@ -1,12 +1,14 @@
 ---
-title: 목록 뷰 (레이블) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: da45bd8dce7ac2149de6a34c11d5419d6cb4ddb0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 목록 보기(레이블)
+description: 목록 보기(레이블)
+ms.openlocfilehash: 2d341ae95d025e0f95b5d88b96afb846b62b092f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773388"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666691"
 ---
 # <a name="list-view-labels"></a>목록 보기(레이블)
 

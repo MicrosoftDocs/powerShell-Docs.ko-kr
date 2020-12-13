@@ -1,12 +1,14 @@
 ---
-title: 트랜잭션 지원 방법 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6fda27394091195b589afef5ee53c6d3bec4efc0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 트랜잭션을 지원하는 방법
+description: 트랜잭션을 지원하는 방법
+ms.openlocfilehash: 5691c246830dab9f4808801c04353ebfb2c3e981
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786614"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666963"
 ---
 # <a name="how-to-support-transactions"></a>트랜잭션을 지원하는 방법
 
@@ -38,7 +40,7 @@ ms.locfileid: "87786614"
     }
     ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
 

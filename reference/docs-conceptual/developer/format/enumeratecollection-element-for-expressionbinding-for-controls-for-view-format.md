@@ -1,12 +1,14 @@
 ---
-title: 뷰 (형식)의 컨트롤에 대 한 ExpressionBinding의 EnumerateCollection 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 72c4528b79569f5065ea87696d1a08e501219ede
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 Controls의 ExpressionBinding에 대한 EnumerateCollection 요소(형식)
+description: View에 대한 Controls의 ExpressionBinding에 대한 EnumerateCollection 요소(형식)
+ms.openlocfilehash: c7b15ee701252b310f79d272452f6ffd1c62d268
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773949"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668000"
 ---
 # <a name="enumeratecollection-element-for-expressionbinding-for-controls-for-view-format"></a>View에 대한 Controls의 ExpressionBinding에 대한 EnumerateCollection 요소(형식)
 

@@ -1,12 +1,14 @@
 ---
-title: 이 listcontrol (형식)의 ListItem 요소에 대 한 FormatString 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9ec73aa1c2e8180258722627e30344de4e67bda5
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ListControl의 ListItem에 대한 FormatString 요소(형식)
+description: ListControl의 ListItem에 대한 FormatString 요소(형식)
+ms.openlocfilehash: 1c16da92928ea632241942f4f2c63390c4fea706
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781582"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667915"
 ---
 # <a name="formatstring-element-for-listitem-for-listcontrol--format"></a>ListControl의 ListItem에 대한 FormatString 요소(형식)
 

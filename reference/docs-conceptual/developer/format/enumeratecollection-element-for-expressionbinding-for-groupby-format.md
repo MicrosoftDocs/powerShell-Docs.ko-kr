@@ -1,12 +1,14 @@
 ---
-title: GroupBy (형식)에 대 한 ExpressionBinding의 EnumerateCollection 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 414626dcd54ebeff608fe0908b9a45a1ad2d943f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GroupBy의 ExpressionBinding에 대한 EnumerateCollection 요소(형식)
+description: GroupBy의 ExpressionBinding에 대한 EnumerateCollection 요소(형식)
+ms.openlocfilehash: 7c8258df879a5386b1eae4b5ad4b6bd7f7d17b8e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774221"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667966"
 ---
 # <a name="enumeratecollection-element-for-expressionbinding-for-groupby-format"></a>GroupBy의 ExpressionBinding에 대한 EnumerateCollection 요소(형식)
 

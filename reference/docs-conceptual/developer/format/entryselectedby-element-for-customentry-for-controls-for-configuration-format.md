@@ -1,12 +1,14 @@
 ---
-title: 구성 (형식)의 컨트롤에 대 한 CustomEntry의 EntrySelectedBy 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e9467c8c2d80e46c0a47c31569efbddbabe25bb1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Configuration에 대한 Controls의 CustomEntry에 대한 EntrySelectedBy 요소(형식)
+description: Configuration에 대한 Controls의 CustomEntry에 대한 EntrySelectedBy 요소(형식)
+ms.openlocfilehash: fadcdb69ac71269ba2f2f80baf139bb363d4acba
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774272"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666674"
 ---
 # <a name="entryselectedby-element-for-customentry-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 CustomEntry에 대한 EntrySelectedBy 요소(형식)
 

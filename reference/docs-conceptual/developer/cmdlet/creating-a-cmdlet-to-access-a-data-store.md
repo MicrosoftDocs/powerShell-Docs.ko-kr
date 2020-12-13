@@ -1,18 +1,20 @@
 ---
-title: 데이터 저장소에 액세스하는 Cmdlet 만들기
 ms.date: 09/13/2016
-ms.openlocfilehash: a595805a820c355937e581f0e00fa2a9a9fc3df0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 데이터 저장소에 액세스하는 Cmdlet 만들기
+description: 데이터 저장소에 액세스하는 Cmdlet 만들기
+ms.openlocfilehash: d6ae4779a96b0789f11952a1d66bb96a394c3211
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782143"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668187"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>데이터 저장소에 액세스하는 Cmdlet 만들기
 
 이 섹션에서는 Windows PowerShell 공급자를 통해 저장 된 데이터에 액세스 하는 cmdlet을 만드는 방법에 대해 설명 합니다. 이 유형의 cmdlet은 windows PowerShell 런타임의 Windows PowerShell 공급자 인프라를 사용 하므로 cmdlet 클래스가 [PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 기본 클래스에서 파생 되어야 합니다.
 
-여기에 설명 된 Select Str cmdlet은 파일 또는 개체에서 문자열을 찾아 선택할 수 있습니다. 문자열을 식별 하는 데 사용 되는 패턴은 cmdlet의 매개 변수를 통해 명시적으로 지정 `Path` 하거나 매개 변수를 통해 암시적으로 지정할 수 있습니다 `Script` .
+여기에 설명 된 Select-Str cmdlet은 파일 또는 개체에서 문자열을 찾아 선택할 수 있습니다. 문자열을 식별 하는 데 사용 되는 패턴은 cmdlet의 매개 변수를 통해 명시적으로 지정 `Path` 하거나 매개 변수를 통해 암시적으로 지정할 수 있습니다 `Script` .
 
 Cmdlet은 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider)에서 파생 되는 모든 Windows PowerShell 공급자를 사용 하도록 설계 되었습니다. 예를 들어 cmdlet은 Windows PowerShell에서 제공 하는 파일 시스템 공급자 또는 변수 공급자를 지정할 수 있습니다. PowerShell 공급자 aboutWindows 자세한 내용은 [Windows powershell 공급자 디자인](../prog-guide/designing-your-windows-powershell-provider.md)을 참조 하세요.
 
@@ -22,7 +24,7 @@ Cmdlet을 만드는 첫 번째 단계는 항상 cmdlet의 이름을 지정 하 �
 
 이 cmdlet에 대 한 .NET 클래스는 windows powershell 공급자 인프라를 표시 하는 Windows PowerShell 런타임에서 필요한 지원을 제공 하기 때문에 [PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 기본 클래스에서 파생 되어야 합니다. 이 cmdlet은 .NET Framework 정규식 클래스 (예: [system.text.regularexpressions.regex>](/dotnet/api/System.Text.RegularExpressions.Regex))도 사용 합니다.
 
-다음 코드는이 선택 Str cmdlet에 대 한 클래스 정의입니다.
+다음 코드는이 Select-Str cmdlet에 대 한 클래스 정의입니다.
 
 ```csharp
 [Cmdlet(VerbsCommon.Select, "Str", DefaultParameterSetName="PatternParameterSet")]
@@ -170,7 +172,7 @@ internal WildcardPattern[] include = null;
 
 ### <a name="declaring-parameter-sets"></a>매개 변수 집합 선언
 
-이 cmdlet은 `ScriptParameterSet` `PatternParameterSet` 데이터 액세스에 사용 되는 두 매개 변수 집합의 이름으로 두 개의 매개 변수 집합 (기본값은)을 사용 합니다. `PatternParameterSet`는 기본 매개 변수 집합이 며 매개 변수를 지정할 때 사용 됩니다 `Pattern` . `ScriptParameterSet`사용자가 매개 변수를 통해 대체 검색 메커니즘을 지정할 때 사용 됩니다 `Script` . 매개 변수 집합에 대 한 자세한 내용은 [Cmdlet에 매개 변수 집합 추가](./adding-parameter-sets-to-a-cmdlet.md)를 참조 하세요.
+이 cmdlet은 `ScriptParameterSet` `PatternParameterSet` 데이터 액세스에 사용 되는 두 매개 변수 집합의 이름으로 두 개의 매개 변수 집합 (기본값은)을 사용 합니다. `PatternParameterSet` 는 기본 매개 변수 집합이 며 매개 변수를 지정할 때 사용 됩니다 `Pattern` . `ScriptParameterSet` 사용자가 매개 변수를 통해 대체 검색 메커니즘을 지정할 때 사용 됩니다 `Script` . 매개 변수 집합에 대 한 자세한 내용은 [Cmdlet에 매개 변수 집합 추가](./adding-parameter-sets-to-a-cmdlet.md)를 참조 하세요.
 
 ## <a name="overriding-input-processing-methods"></a>입력 처리 메서드 재정의
 
@@ -368,11 +370,11 @@ protected override void ProcessRecord()
 
 Cmdlet은 데이터에 액세스할 수 있도록 Windows PowerShell 경로로 표시 된 공급자를 열어야 합니다. Runspace에 대 한 [Sessionstate](/dotnet/api/System.Management.Automation.SessionState) 개체는 공급자에 대 한 액세스에 사용 되는 반면, Cmdlet의 [PSCmdlet. Invokeprovider *](/dotnet/api/System.Management.Automation.PSCmdlet.InvokeProvider) 속성은 공급자를 여는 데 사용 됩니다. 콘텐츠에 대 한 액세스는 열려 있는 공급자에 대 한 [System.object 내장](/dotnet/api/System.Management.Automation.ProviderIntrinsics) 개체의 검색을 통해 제공 됩니다.
 
-이 샘플 선택-Str cmdlet은 [system.web. content *](/dotnet/api/System.Management.Automation.ProviderIntrinsics.Content) 속성을 사용 하 여 검색할 콘텐츠를 노출 합니다. 그런 다음 필요한 Windows PowerShell 경로를 전달 하 여 [system.object](/dotnet/api/System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader) 를 호출 하 고,이 메서드를 호출 합니다.
+이 샘플 Select-Str cmdlet에서는 [system.object *](/dotnet/api/System.Management.Automation.ProviderIntrinsics.Content) 속성을 사용 하 여 검색할 콘텐츠를 노출 합니다. 그런 다음 필요한 Windows PowerShell 경로를 전달 하 여 [system.object](/dotnet/api/System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader) 를 호출 하 고,이 메서드를 호출 합니다.
 
 ## <a name="code-sample"></a>코드 예제
 
-다음 코드에서는이 Select Str cmdlet의이 버전을 구현 하는 방법을 보여 줍니다. 이 코드에는 cmdlet 클래스, cmdlet에서 사용 되는 전용 메서드 및 cmdlet을 등록 하는 데 사용 되는 Windows PowerShell 스냅인 코드가 포함 됩니다. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 [Cmdlet 빌드](#defining-the-cmdlet-class)를 참조 하세요.
+다음 코드에서는이 Select-Str cmdlet의이 버전을 구현 하는 방법을 보여 줍니다. 이 코드에는 cmdlet 클래스, cmdlet에서 사용 되는 전용 메서드 및 cmdlet을 등록 하는 데 사용 되는 Windows PowerShell 스냅인 코드가 포함 됩니다. Cmdlet을 등록 하는 방법에 대 한 자세한 내용은 [Cmdlet 빌드](#defining-the-cmdlet-class)를 참조 하세요.
 
 ```csharp
 //
@@ -1087,7 +1089,7 @@ Cmdlet을 구현한 후 Windows PowerShell 스냅인을 통해 Windows PowerShel
 
 ## <a name="testing-the-cmdlet"></a>Cmdlet 테스트
 
-Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 하 여 테스트할 수 있습니다. 다음 절차를 사용 하 여 샘플 선택 Str cmdlet을 테스트할 수 있습니다.
+Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 하 여 테스트할 수 있습니다. 다음 절차를 사용 하 여 샘플 Select-Str cmdlet을 테스트할 수 있습니다.
 
 1. Windows PowerShell을 시작 하 고 ".NET" 식으로 노트 파일에서 줄의 발생을 검색 합니다. 경로 이름을 둘러싼 따옴표는 경로가 둘 이상의 단어로 구성 된 경우에만 필요 합니다.
 

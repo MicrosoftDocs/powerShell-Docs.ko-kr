@@ -1,12 +1,14 @@
 ---
-title: 보기 (형식)의 컨트롤에 대 한 ItemSelectionCondition의 ScriptBlock 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 74b3e23005f595c4c550320849cac5b196e9d479
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 Controls의 ItemSelectionCondition에 대한 ScriptBlock 요소(형식)
+description: View에 대한 Controls의 ItemSelectionCondition에 대한 ScriptBlock 요소(형식)
+ms.openlocfilehash: c005215f7b7984541806d2f5de47372d536787ff
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787668"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665197"
 ---
 # <a name="scriptblock-element-for-itemselectioncondition-for-controls-for-view-format"></a>View에 대한 Controls의 ItemSelectionCondition에 대한 ScriptBlock 요소(형식)
 

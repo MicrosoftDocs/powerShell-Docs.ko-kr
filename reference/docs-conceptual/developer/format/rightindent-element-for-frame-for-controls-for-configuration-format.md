@@ -1,12 +1,14 @@
 ---
-title: 구성에 대 한 컨트롤의 프레임에 대 한 RightIndent 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: edd299f4a39a8f2f55385b750b530de50ffff203
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Configuration에 대한 Controls의 Frame에 대한 RightIndent 요소(형식)
+description: Configuration에 대한 Controls의 Frame에 대한 RightIndent 요소(형식)
+ms.openlocfilehash: 99a3653fb744df9b17bbc60b75d4d3932c672106
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772997"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665552"
 ---
 # <a name="rightindent-element-for-frame-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 Frame에 대한 RightIndent 요소(형식)
 

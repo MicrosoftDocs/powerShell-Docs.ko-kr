@@ -1,12 +1,14 @@
 ---
-title: Cmdlet에서 Cmdlet을 호출 하는 방법 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2d5b0788d3310d0dd7b311f86c497afe8eec9d11
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 내에서 Cmdlet을 호출하는 방법
+description: Cmdlet 내에서 Cmdlet을 호출하는 방법
+ms.openlocfilehash: d137ac895f66000329de76a2c16a74b02c0e82ca
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784149"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667048"
 ---
 # <a name="how-to-invoke-a-cmdlet-from-within-a-cmdlet"></a>Cmdlet 내에서 Cmdlet을 호출하는 방법
 
@@ -96,6 +98,6 @@ namespace SendGreeting
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

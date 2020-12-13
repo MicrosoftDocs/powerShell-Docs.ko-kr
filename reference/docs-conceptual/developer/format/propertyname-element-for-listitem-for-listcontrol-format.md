@@ -1,12 +1,14 @@
 ---
-title: 이 listcontrol의 ListItem 요소에 대 한 PropertyName 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9ee466d7f73e53b129f8d46f49a21549683bb32c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ListControl의 ListItem에 대한 PropertyName 요소(형식)
+description: ListControl의 ListItem에 대한 PropertyName 요소(형식)
+ms.openlocfilehash: 30cd48f9549e1a091776cd5f8395e1a71314ea1b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780834"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665977"
 ---
 # <a name="propertyname-element-for-listitem-for-listcontrol-format"></a>ListControl의 ListItem에 대한 PropertyName 요소(형식)
 

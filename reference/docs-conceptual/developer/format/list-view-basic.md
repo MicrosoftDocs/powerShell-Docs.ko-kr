@@ -1,12 +1,14 @@
 ---
-title: 목록 뷰 (기본) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 74ff8f6eee0a9358c123455aa00736a11e7f085d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 목록 보기(기본)
+description: 목록 보기(기본)
+ms.openlocfilehash: d80ac9c6143b976d8bc13e2b184e4f5a2f8a37ab
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783554"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666640"
 ---
 # <a name="list-view-basic"></a>목록 보기(기본)
 

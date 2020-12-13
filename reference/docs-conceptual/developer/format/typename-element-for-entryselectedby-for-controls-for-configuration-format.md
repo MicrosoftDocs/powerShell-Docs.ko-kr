@@ -1,12 +1,14 @@
 ---
-title: 구성 (형식)의 컨트롤에 대 한 EntrySelectedBy의 TypeName 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 994cd368872392abe47b4e9422c661cd8c03e05c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Configuration에 대한 Controls의 EntrySelectedBy에 대한 TypeName 요소(형식)
+description: Configuration에 대한 Controls의 EntrySelectedBy에 대한 TypeName 요소(형식)
+ms.openlocfilehash: ce74c23ca35597902c6b94fdccd44324ba8e0233
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783350"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667745"
 ---
 # <a name="typename-element-for-entryselectedby-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 EntrySelectedBy에 대한 TypeName 요소(형식)
 
