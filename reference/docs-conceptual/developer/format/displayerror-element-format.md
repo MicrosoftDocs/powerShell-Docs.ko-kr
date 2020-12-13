@@ -1,12 +1,14 @@
 ---
-title: DisplayError 요소 (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 5d46c2fbd48f592db5ba1b33eb6cead8dc1c4698
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: DisplayError 요소(형식)
+description: DisplayError 요소(형식)
+ms.openlocfilehash: fb54df86a3558263687a8c417870495b7066f563
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774289"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649928"
 ---
 # <a name="displayerror-element-format"></a>DisplayError 요소(형식)
 

@@ -1,14 +1,14 @@
 ---
-title: Cmdlet에 매개 변수 집합 추가 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- parameter sets [PowerShell Programmer's Guide]
-ms.openlocfilehash: b1e808694b02676d81101a2678cbea341c7bd52c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet에 매개 변수 집합 추가
+description: Cmdlet에 매개 변수 집합 추가
+ms.openlocfilehash: dd5ee2a880a4d516ea82e5afe0ced12369197243
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774986"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648648"
 ---
 # <a name="adding-parameter-sets-to-a-cmdlet"></a>Cmdlet에 매개 변수 집합 추가
 
@@ -20,7 +20,7 @@ Windows PowerShell은 함께 작동 하는 매개 변수 그룹으로 매개 변
 
 매개 변수 집합에 대해 기억해 야 하는 두 가지 중요 한 사항은 Windows PowerShell 런타임이 특정 입력에 대해 하나의 매개 변수 집합만 사용 하 고 각 매개 변수 집합에 해당 매개 변수 집합에 대해 고유한 매개 변수를 하나 이상 포함 해야 한다는 것입니다.
 
-마지막 지점을 설명 하기 위해이 Stop Proc cmdlet은, 및의 세 가지 매개 변수 집합을 사용 `ProcessName` `ProcessId` `InputObject` 합니다. 이러한 각 매개 변수 집합에는 다른 매개 변수 집합에 없는 매개 변수가 하나 있습니다. 매개 변수 집합은 다른 매개 변수를 공유할 수 있지만 cmdlet은 고유한 매개 변수, 및를 사용 하 여 `ProcessName` `ProcessId` `InputObject` Windows PowerShell 런타임에서 사용 해야 하는 매개 변수 집합을 식별 합니다.
+이 Stop-Proc cmdlet은 마지막 지점을 보여 주기 위해, 및의 세 가지 매개 변수 집합을 사용 `ProcessName` `ProcessId` `InputObject` 합니다. 이러한 각 매개 변수 집합에는 다른 매개 변수 집합에 없는 매개 변수가 하나 있습니다. 매개 변수 집합은 다른 매개 변수를 공유할 수 있지만 cmdlet은 고유한 매개 변수, 및를 사용 하 여 `ProcessName` `ProcessId` `InputObject` Windows PowerShell 런타임에서 사용 해야 하는 매개 변수 집합을 식별 합니다.
 
 ## <a name="declaring-the-cmdlet-class"></a>Cmdlet 클래스 선언
 
@@ -29,7 +29,7 @@ Cmdlet을 만드는 첫 번째 단계는 항상 cmdlet의 이름을 지정 하 �
 > [!NOTE]
 > 승인 된 cmdlet 동사 이름에 대 한 자세한 내용은 [Cmdlet 동사 이름](./approved-verbs-for-windows-powershell-commands.md)을 참조 하세요.
 
-다음 코드는이 Stop Proc cmdlet에 대 한 클래스 정의입니다.
+다음 코드는이 Stop-Proc cmdlet에 대 한 클래스 정의입니다.
 
 ```csharp
 [Cmdlet(VerbsLifecycle.Stop, "Proc",
@@ -51,7 +51,7 @@ Public Class StopProcCommand
 
 ### <a name="declaring-the-name-parameter"></a>Name 매개 변수 선언
 
-사용자는이 입력 매개 변수를 사용 하 여 중지할 프로세스의 이름을 지정할 수 있습니다. `ParameterSetName` [System.Management.Automation.Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) `ProcessName` 이 매개 변수에 대 한 매개 변수 집합을 지정 하는 특성의 특성 키워드입니다.
+사용자는이 입력 매개 변수를 사용 하 여 중지할 프로세스의 이름을 지정할 수 있습니다. `ParameterSetName` [](/dotnet/api/System.Management.Automation.ParameterAttribute) `ProcessName` 이 매개 변수에 대 한 매개 변수 집합을 지정 하는 특성의 특성 키워드입니다.
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/StopProcessSample04/StopProcessSample04.cs" range="44-58":::
 
@@ -115,7 +115,7 @@ Private processIds() As Integer
 
 ### <a name="declaring-the-inputobject-parameter"></a>InputObject 매개 변수 선언
 
-사용자는이 입력 매개 변수를 사용 하 여 중지할 프로세스에 대 한 정보를 포함 하는 입력 개체를 지정할 수 있습니다. `ParameterSetName` [System.Management.Automation.Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) `InputObject` 이 매개 변수에 대 한 매개 변수 집합을 지정 하는 특성의 특성 키워드입니다.
+사용자는이 입력 매개 변수를 사용 하 여 중지할 프로세스에 대 한 정보를 포함 하는 입력 개체를 지정할 수 있습니다. `ParameterSetName` [](/dotnet/api/System.Management.Automation.ParameterAttribute) `InputObject` 이 매개 변수에 대 한 매개 변수 집합을 지정 하는 특성의 특성 키워드입니다.
 
 ```csharp
 [Parameter(
@@ -220,7 +220,7 @@ Cmdlet을 구현한 후 Windows PowerShell 스냅인을 통해 Windows PowerShel
 
 Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 하 여 테스트 합니다. 다음은 및 매개 변수를 사용 하 `ProcessId` 여 `InputObject` 프로세스를 중지 하는 매개 변수 집합을 테스트 하는 방법을 보여 주는 몇 가지 테스트입니다.
 
-- Windows PowerShell이 시작 되 면 매개 변수 집합을 사용 하 여 Stop Proc cmdlet을 실행 `ProcessId` 하 여 해당 식별자에 따라 프로세스를 중지 합니다. 이 경우 cmdlet은 매개 변수 집합을 사용 하 여 `ProcessId` 프로세스를 중지 합니다.
+- Windows PowerShell이 시작 되 면 매개 변수 집합을 사용 하 여 Stop-Proc cmdlet을 실행 `ProcessId` 하 고 해당 식별자를 기반으로 프로세스를 중지 합니다. 이 경우 cmdlet은 매개 변수 집합을 사용 하 여 `ProcessId` 프로세스를 중지 합니다.
 
   ```
   PS> stop-proc -Id 444
@@ -230,7 +230,7 @@ Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서
   [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
   ```
 
-- Windows PowerShell이 시작 되 면 `InputObject` 명령으로 검색 된 메모장 개체에서 프로세스를 중지 하도록 설정 된 매개 변수를 사용 하 여 Stop Proc cmdlet을 실행 `Get-Process` 합니다.
+- Windows PowerShell이 시작 되 면 `InputObject` 명령으로 검색 된 메모장 개체에서 프로세스를 중지 하도록 설정 된 매개 변수를 사용 하 여 Stop-Proc cmdlet을 실행 합니다 `Get-Process` .
 
   ```
   PS> get-process notepad | stop-proc

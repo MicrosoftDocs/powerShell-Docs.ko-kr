@@ -1,12 +1,14 @@
 ---
-title: 매개 변수 별칭 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e320eeb4d2ab91acf2116fdc817a50e93c82aead
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 매개 변수 별칭
+description: 매개 변수 별칭
+ms.openlocfilehash: 0895e2c4df3a149ae75a9741fb65134a8e1122c1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781990"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648513"
 ---
 # <a name="parameter-aliases"></a>매개 변수 별칭
 
@@ -47,4 +49,4 @@ private string userName;
 
 [Cmdlet 매개 변수를 선언하는 방법](./how-to-declare-cmdlet-parameters.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

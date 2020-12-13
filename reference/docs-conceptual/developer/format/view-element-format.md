@@ -1,12 +1,14 @@
 ---
-title: View 요소 (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c0c6fa373cfca3a55a62f201e1eabc6a1e308ef7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View 요소(형식)
+description: View 요소(형식)
+ms.openlocfilehash: 6fed1304d94339cc90b6ae53e06483c08d937c12
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785033"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649733"
 ---
 # <a name="view-element-format"></a>View 요소(형식)
 

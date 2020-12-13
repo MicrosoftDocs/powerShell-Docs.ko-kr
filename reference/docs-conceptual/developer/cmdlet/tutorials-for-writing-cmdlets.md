@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 작성 자습서 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 991cceef2b1d18c0cdaad4f092c4affb5c632b0e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 작성 자습서
+description: Cmdlet 작성 자습서
+ms.openlocfilehash: 7ec20b845f8547d346c3777bd52984337d37b83a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784013"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646382"
 ---
 # <a name="tutorials-for-writing-cmdlets"></a>Cmdlet 작성 자습서
 

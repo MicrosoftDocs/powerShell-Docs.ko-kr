@@ -1,12 +1,14 @@
 ---
-title: Cmdlet에 종료 되지 않는 오류 보고 추가 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6421d510f3701c12807568ad8786459123e80223
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet에 종료되지 않는 오류 보고 추가
+description: Cmdlet에 종료되지 않는 오류 보고 추가
+ms.openlocfilehash: 883ff2d522266495e409fb0d45f29713baa6f047
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784591"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648673"
 ---
 # <a name="adding-non-terminating-error-reporting-to-your-cmdlet"></a>Cmdlet에 종료되지 않는 오류 보고 추가
 
@@ -35,9 +37,9 @@ Public Class GetProcCommand
 
 ## <a name="defining-parameters"></a>매개 변수 정의
 
-필요한 경우 cmdlet은 입력 처리를 위한 매개 변수를 정의 해야 합니다. 이 cmdlet은 [명령줄 입력을 처리 하는 매개 변수 추가](adding-parameters-that-process-command-line-input.md)에 설명 된 대로 **Name** 매개 변수를 정의 합니다.
+필요한 경우 cmdlet은 입력 처리를 위한 매개 변수를 정의 해야 합니다. 이 Get-Proc cmdlet은 [Command-Line 입력을 처리 하는 매개 변수 추가](adding-parameters-that-process-command-line-input.md)에 설명 된 대로 **Name** 매개 변수를 정의 합니다.
 
-다음은이 In-proc cmdlet의 **Name** 매개 변수에 대 한 매개 변수 선언입니다.
+다음은이 Get-Proc cmdlet의 **Name** 매개 변수에 대 한 매개 변수 선언입니다.
 
 ```csharp
 [Parameter(
@@ -76,7 +78,7 @@ End Property
 > [!NOTE]
 > Cmdlet은 각 레코드를 가능한 한 독립적으로 처리 해야 합니다.
 
-이 ProcessRecord 메서드는 사용자 또는 스크립트에서 제공 하는 입력에 대 한 **Name** 매개 변수를 처리 하기 위해 [System.Management.Automation.Cmdlet.ProcessRecord][] 메서드를 재정의 합니다. 이 메서드는 요청 된 각 프로세스 이름 또는 모든 프로세스에 대 한 프로세스를 가져옵니다. 이름이 제공 되지 않은 경우에는입니다. 이 재정의에 대 한 세부 정보는 [첫 번째 Cmdlet을 만들](creating-a-cmdlet-without-parameters.md)때 제공 됩니다.
+이 Get-Proc cmdlet은 [ProcessRecord][] 메서드를 재정의 하 여 사용자 또는 스크립트에서 제공 하는 입력에 대 한 **Name** 매개 변수를 처리 합니다. 이 메서드는 요청 된 각 프로세스 이름 또는 모든 프로세스에 대 한 프로세스를 가져옵니다. 이름이 제공 되지 않은 경우에는입니다. 이 재정의에 대 한 세부 정보는 [첫 번째 Cmdlet을 만들](creating-a-cmdlet-without-parameters.md)때 제공 됩니다.
 
 ### <a name="things-to-remember-when-reporting-errors"></a>오류를 보고할 때 기억할 사항
 
@@ -110,7 +112,7 @@ Cmdlet은 특정 오류 식별자를 다른 코드 경로에 할당 해야 합�
 
 입력 처리 방법 중 하나는 [WriteError][] 메서드를 사용 하 여 출력 스트림에 종료 되지 않는 오류를 보고할 수 있습니다.
 
-ProcessRecord 메서드 재정의 내에서 WriteError에 대 한 호출을 보여 주는이 [System.Management.Automation.Cmdlet.WriteError][] cmdlet의 코드 예제는 다음과 같습니다. [System.Management.Automation.Cmdlet.ProcessRecord][] 메서드를 재정의 합니다. 이 경우 cmdlet에서 지정 된 프로세스 식별자에 대 한 프로세스를 찾을 수 없는 경우 호출이 수행 됩니다.
+ProcessRecord 메서드 재정의 내에서 [WriteError][] 에 대 한 호출을 보여 주는이 Get-Proc cmdlet의 코드 예제는 다음과 같습니다. [][] 메서드를 재정의 합니다. 이 경우 cmdlet에서 지정 된 프로세스 식별자에 대 한 프로세스를 찾을 수 없는 경우 호출이 수행 됩니다.
 
 ```csharp
 protected override void ProcessRecord()
@@ -154,7 +156,7 @@ protected override void ProcessRecord()
 
 종료 되지 않는 오류의 경우 cmdlet은 각 특정 입력 개체에 대해 특정 오류 식별자를 생성 해야 합니다.
 
-Cmdlet은 종료 되지 않는 오류에 의해 생성 된 PowerShell 작업을 수정 해야 하는 경우가 많습니다. `ErrorAction`및 매개 변수를 정의 하 여이 작업을 수행할 수 있습니다 `ErrorVariable` . 매개 변수를 정의 하는 경우 `ErrorAction` cmdlet은 사용자 옵션 [System.Management.Automation.ActionPreference][]을 표시 합니다. 즉, 변수를 설정 하 여 작업에 직접 영향을 줄 수 있습니다 `$ErrorActionPreference` .
+Cmdlet은 종료 되지 않는 오류에 의해 생성 된 PowerShell 작업을 수정 해야 하는 경우가 많습니다. `ErrorAction`및 매개 변수를 정의 하 여이 작업을 수행할 수 있습니다 `ErrorVariable` . 매개 변수를 정의 하는 경우 `ErrorAction` cmdlet은 사용자 옵션 [][]을 표시 합니다. 즉, 변수를 설정 하 여 작업에 직접 영향을 줄 수 있습니다 `$ErrorActionPreference` .
 
 Cmdlet은 `ErrorVariable` 의 설정에 의해 영향을 받지 않는 매개 변수를 사용 하 여 종료 되지 않는 오류를 변수에 저장할 수 있습니다 `ErrorAction` . 변수 이름 앞에 더하기 기호 (+)를 추가 하 여 기존 오류 변수에 오류를 추가할 수 있습니다.
 
@@ -172,9 +174,9 @@ Cmdlet을 구현한 후 Windows PowerShell 스냅인을 통해 Windows PowerShel
 
 ## <a name="testing-the-cmdlet"></a>Cmdlet 테스트
 
-PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 하 여 테스트할 수 있습니다. 샘플 cmdlet을 테스트 하 여 오류를 보고 하는지 확인 합니다.
+PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 하 여 테스트할 수 있습니다. 샘플 Get-Proc cmdlet을 테스트 하 여 오류를 보고 하는지 확인 합니다.
 
-- PowerShell을 시작 하 고, Get-help cmdlet을 사용 하 여 "TEST" 라는 프로세스를 검색 합니다.
+- PowerShell을 시작 하 고 Get-Proc cmdlet을 사용 하 여 "TEST" 라는 프로세스를 검색 합니다.
 
   ```powershell
   get-proc -name test
@@ -192,7 +194,7 @@ PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 
 
 [파이프라인 입력을 처리하는 매개 변수 추가](./adding-parameters-that-process-pipeline-input.md)
 
-[명령줄 입력을 처리 하는 매개 변수 추가](./adding-parameters-that-process-command-line-input.md)
+[Command-Line 입력을 처리 하는 매개 변수 추가](./adding-parameters-that-process-command-line-input.md)
 
 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)
 

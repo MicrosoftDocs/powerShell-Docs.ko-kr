@@ -1,14 +1,16 @@
 ---
-title: 확장 유형 시스템 속성
 ms.date: 07/09/2020
-ms.openlocfilehash: c0a994e5b946117dcc1a2d647d07ae62af883861
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 확장 유형 시스템 속성
+description: 확장 유형 시스템 속성
+ms.openlocfilehash: cccd3c400a8822ee25c44e8e1625e35571420259
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786206"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646142"
 ---
-# <a name="ets-properties"></a>속성 속성
+# <a name="ets-properties"></a>ETS 속성
 
 속성은 속성으로 처리 될 수 있는 멤버입니다. 기본적으로 식의 왼쪽에 표시 될 수 있습니다. 사용할 수 있는 속성에는 별칭, 코드, 메모 및 스크립트 속성이 있습니다.
 

@@ -4,10 +4,10 @@ description: 코드 작성에서 오류 처리는 일상적인 일입니다.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
 ms.openlocfilehash: cd17ae6b5ded052c93923b648155a4dda8956b34
-ms.sourcegitcommit: 94c39b0d36b948d3a62707ae8a3be00efe606434
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "90012564"
 ---
 # <a name="everything-you-wanted-to-know-about-exceptions"></a>예외에 대해 알고 싶은 모든 것

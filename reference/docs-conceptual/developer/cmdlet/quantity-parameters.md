@@ -1,12 +1,14 @@
 ---
-title: Quantity 매개 변수 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 7ff6562380bb6336b08879b31d8d9fed47bfb6a7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 수량 매개 변수수량 매개 변수
+description: 수량 매개 변수수량 매개 변수
+ms.openlocfilehash: 3f7c23eec34a709b1f2d59f611c93909b20f4124
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781820"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650302"
 ---
 # <a name="quantity-parameters"></a>수량 매개 변수수량 매개 변수
 
@@ -17,13 +19,13 @@ ms.locfileid: "87781820"
 |**모두**<br>데이터 형식: Boolean|이 매개 변수를 구현 하 여 `true` 모든 리소스가 리소스의 기본 하위 집합 대신 처리 되어야 함을 나타냅니다. 이 매개 변수를 구현 하 여 `false` 리소스의 하위 집합을 나타냅니다.|
 |**Allocation**<br>데이터 형식: Int32|사용자가 할당할 항목 수를 지정할 수 있도록이 매개 변수를 구현 합니다.|
 |**블록 수**<br>데이터 형식: Int64|사용자가 블록 수를 지정할 수 있도록이 매개 변수를 구현 합니다.|
-|**Count**<br>데이터 형식: Int64|이 매개 변수를 구현 하 여 사용자가 수를 지정할 수 있도록 합니다.|
+|**개수**<br>데이터 형식: Int64|이 매개 변수를 구현 하 여 사용자가 수를 지정할 수 있도록 합니다.|
 |**범위**<br>데이터 형식: 키워드|사용자가 작동할 범위를 지정할 수 있도록이 매개 변수를 구현 합니다.|
 
 ## <a name="see-also"></a>참고 항목
 
 [Cmdlet 매개 변수](./cmdlet-parameters.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)

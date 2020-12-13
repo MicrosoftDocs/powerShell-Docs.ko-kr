@@ -1,12 +1,14 @@
 ---
-title: InitialSessionState 만들기 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 946adf1006d1afcad2810c85e39f14514e837327
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: InitialSessionState 만들기
+description: InitialSessionState 만들기
+ms.openlocfilehash: d58a32c2ae8a22132f3095d093e3cb322f65c486
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779729"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649413"
 ---
 # <a name="creating-an-initialsessionstate"></a>InitialSessionState 만들기
 
@@ -23,7 +25,7 @@ InitialSessionState는 runspace의 특성을 지정 합니다. 예를 들어 run
 호스트 응용 프로그램에서 사용할 수 있는 명령을 추가로 제한 하려면 제한 된 runspace를 만들어야 합니다.
 자세한 내용은 [제한 된 Runspace 만들기](creating-a-constrained-runspace.md)를 참조 하세요.
 
-다음 코드에서는 **InitialSessionState**을 만들고 runspace에 할당 하 고 해당 runspace에서 파이프라인에 명령을 추가 하 고 명령을 호출 하는 방법을 보여 줍니다.
+다음 코드에서는 **InitialSessionState** 을 만들고 runspace에 할당 하 고 해당 runspace에서 파이프라인에 명령을 추가 하 고 명령을 호출 하는 방법을 보여 줍니다.
 명령 추가 및 호출에 대 한 자세한 내용은 [명령 추가 및 호출](adding-and-invoking-commands.md)을 참조 하세요.
 
 ```csharp

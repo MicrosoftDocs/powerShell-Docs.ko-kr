@@ -1,12 +1,14 @@
 ---
-title: 선택 집합 정의 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 58c812b69f92c33304bf7fc7b2891cc2a0227918
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 선택 영역 집합 정의
+description: 선택 영역 집합 정의
+ms.openlocfilehash: d709a368a45623d56fdbf4e98a11a5e5f8a193fa
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774306"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648259"
 ---
 # <a name="defining-selection-sets"></a>선택 영역 집합 정의
 
@@ -133,7 +135,7 @@ ms.locfileid: "87774306"
 
 [이름](./name-element-for-selectionset-format.md)
 
-[형식](./types-element-for-selectionset-format.md)
+[유형](./types-element-for-selectionset-format.md)
 
 [PowerShell 형식 지정 파일](./powershell-formatting-files.md)
 

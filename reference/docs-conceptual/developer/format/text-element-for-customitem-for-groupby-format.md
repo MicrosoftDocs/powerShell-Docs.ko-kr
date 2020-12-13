@@ -1,12 +1,14 @@
 ---
-title: GroupBy (형식)의 CustomItem에 대 한 텍스트 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 811dc3a6f83f93513bd8380a7c3b66a813fe7801
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GroupBy의 CustomItem에 대한 Text 요소(형식)
+description: GroupBy의 CustomItem에 대한 Text 요소(형식)
+ms.openlocfilehash: 4c8158c9c8e77044732e473f57291194280f4e79
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783367"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649752"
 ---
 # <a name="text-element-for-customitem-for-groupby-format"></a>GroupBy의 CustomItem에 대한 Text 요소(형식)
 

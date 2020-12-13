@@ -1,18 +1,20 @@
 ---
-title: 스크립트에 설명 기반 도움말 배치
 ms.date: 09/12/2016
-ms.openlocfilehash: a3ade6c3138826b924939056b9d1ffb233006d44
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 스크립트에 설명 기반 도움말 배치
+description: 스크립트에 설명 기반 도움말 배치
+ms.openlocfilehash: b0d32b7ab063269085899a643b0c3a17da2073fc
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893189"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645447"
 ---
 # <a name="placing-comment-based-help-in-scripts"></a>스크립트에 설명 기반 도움말 배치
 
 이 항목에서는 스크립트 `Get-Help` 에서 주석 기반 도움말 항목을 스크립트에 연결 하 고 스크립트에 포함 될 수 있는 함수와 연결 하지 않도록 스크립트에 대 한 주석 기반 도움말을 넣을 위치에 대해 설명 합니다.
 
-## <a name="where-to-place-comment-based-help-for-a-script"></a>스크립트에 대 한 주석 기반 도움말을 넣을 위치
+## <a name="where-to-place-comment-based-help-for-a-script"></a>스크립트에 대 한 Comment-Based 도움말 위치
 
 - 스크립트 파일의 시작 부분에 있습니다.
 

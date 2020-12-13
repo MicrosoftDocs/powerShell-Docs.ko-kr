@@ -1,16 +1,14 @@
 ---
-title: ValidatePattern 특성 선언 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- attributes, ValidatePattern
-- ValidatePattern attribute, described
-- ValidatePattern attribute
-ms.openlocfilehash: 713fa7a46a8eeefdbfd679a5e8436285fac085f8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ValidatePattern 특성 선언
+description: ValidatePattern 특성 선언
+ms.openlocfilehash: 364f63d2c52563eaefe64bcbb2bbae511bccb074
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787804"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646178"
 ---
 # <a name="validatepattern-attribute-declaration"></a>ValidatePattern 특성 선언
 
@@ -27,7 +25,7 @@ Cmdlet 내에서 ValidatePattern가 호출 되 면 Windows PowerShell 런타임�
 
 #### <a name="parameters"></a>매개 변수
 
-`RegexString`([System.string](/dotnet/api/System.String))이 필요 합니다. 매개 변수 인수의 유효성을 검사 하는 정규식을 지정 합니다.
+`RegexString` ([System.string](/dotnet/api/System.String))이 필요 합니다. 매개 변수 인수의 유효성을 검사 하는 정규식을 지정 합니다.
 
 옵션 ([system.text.regularexpressions.regex>. system.text.regularexpressions.regexoptions](/dotnet/api/System.Text.RegularExpressions.RegexOptions))은 선택적으로 명명 된 매개 변수입니다. 정규식 옵션을 지정 하는 [system.text.regularexpressions.regex>. system.text.regularexpressions.regexoptions](/dotnet/api/System.Text.RegularExpressions.RegexOptions) 플래그의 비트 조합을 지정 합니다.
 
@@ -45,4 +43,4 @@ Cmdlet 내에서 ValidatePattern가 호출 되 면 Windows PowerShell 런타임�
 
 [Validatepatternattribute.](/dotnet/api/System.Management.Automation.ValidatePatternAttribute)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

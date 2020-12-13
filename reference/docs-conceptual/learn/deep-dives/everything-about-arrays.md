@@ -4,10 +4,10 @@ description: 배열은 대부분의 프로그래밍 언어가 제공하는 기�
 ms.date: 10/08/2020
 ms.custom: contributor-KevinMarquette
 ms.openlocfilehash: b26aa11aadbeea1984b2754cfcad061c7fa3ff1e
-ms.sourcegitcommit: 3445a343e0683124652f64abef6fe911f9eb989f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "91852564"
 ---
 # <a name="everything-you-wanted-to-know-about-arrays"></a>배열에 대해 알고 싶은 모든 것

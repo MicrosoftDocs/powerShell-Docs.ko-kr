@@ -3,10 +3,10 @@ title: Windows PowerShell 5.1에서 PowerShell 7로 마이그레이션
 description: Windows 플랫폼의 PowerShell을 5.1에서 7로 업데이트.
 ms.date: 03/25/2020
 ms.openlocfilehash: cb14a4f159b6dc33f31386da4264c0ebb640aef8
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "83809209"
 ---
 # <a name="migrating-from-windows-powershell-51-to-powershell-7"></a>Windows PowerShell 5.1에서 PowerShell 7로 마이그레이션
@@ -159,7 +159,7 @@ Windows PowerShell 원격 작업을 사용하려면 원격 관리를 위해 원�
 
 #### <a name="ssh-based-remoting"></a>SSH 기반 원격 기능
 
-**WinRM**과 같은 Windows 네이티브 구성 요소를 사용할 수 없는 다른 운영 체제를 지원하기 위해 PowerShell Core 6.x에 SSH 기반 원격 기능을 추가하였습니다. SSH 원격 기능은 대상 컴퓨터에 SSH 하위 시스템으로 PowerShell 호스트 프로세스를 만듭니다. Windows 또는 Linux에서 SSH 기반 원격 기능을 설정하는 방법에 대한 자세한 내용과 예를 보려면 다음을 참조하세요. [SSH를 통한 PowerShell 원격 작업](/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core).
+**WinRM** 과 같은 Windows 네이티브 구성 요소를 사용할 수 없는 다른 운영 체제를 지원하기 위해 PowerShell Core 6.x에 SSH 기반 원격 기능을 추가하였습니다. SSH 원격 기능은 대상 컴퓨터에 SSH 하위 시스템으로 PowerShell 호스트 프로세스를 만듭니다. Windows 또는 Linux에서 SSH 기반 원격 기능을 설정하는 방법에 대한 자세한 내용과 예를 보려면 다음을 참조하세요. [SSH를 통한 PowerShell 원격 작업](/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core).
 
 > [!NOTE]
 > PowerShell 갤러리(PSGallery)에는 SSH 기반 원격 기능을 자동으로 구성하는 모듈 및 cmdlet이 포함되어 있습니다. [PSGallery](https://www.powershellgallery.com/packages/Microsoft.PowerShell.RemotingTools/0.1.0)에서 `Microsoft.PowerShell.RemotingTools` 모듈을 설치하고 `Enable-SSH` cmdlet을 실행하세요.
@@ -170,7 +170,7 @@ Windows PowerShell 원격 작업을 사용하려면 원격 관리를 위해 원�
 [-HostName <string>]  [-UserName <string>]  [-KeyFilePath <string>]
 ```
 
-원격 세션을 만들려면 **HostName** 매개 변수를 사용하여 대상 컴퓨터를 지정하고 **UserName**을 사용하여 사용자 이름을 제공하세요. cmdlet을 대화형으로 실행하면 암호를 묻는 메시지가 나타납니다.
+원격 세션을 만들려면 **HostName** 매개 변수를 사용하여 대상 컴퓨터를 지정하고 **UserName** 을 사용하여 사용자 이름을 제공하세요. cmdlet을 대화형으로 실행하면 암호를 묻는 메시지가 나타납니다.
 
 ```powershell
 Enter-PSSession -HostName <Computer> -UserName <Username>
@@ -238,11 +238,11 @@ Get-WinEvent -ListLog *PowerShell*
 - 새로운 CodeLens 통합
 - 향상된 경로 자동 완성 기능
 
-Visual Studio로 더 쉽게 전환하려면 **명령 팔레트**에서 제공하는 **ISE 모드 사용** 함수를 사용하세요. 이 함수를 통해 VSCode가 ISE 스타일 레이아웃으로 전환됩니다. ISE 스타일 레이아웃은 친숙한 사용자 환경에서 PowerShell의 모든 새로운 기능을 제공합니다.
+Visual Studio로 더 쉽게 전환하려면 **명령 팔레트** 에서 제공하는 **ISE 모드 사용** 함수를 사용하세요. 이 함수를 통해 VSCode가 ISE 스타일 레이아웃으로 전환됩니다. ISE 스타일 레이아웃은 친숙한 사용자 환경에서 PowerShell의 모든 새로운 기능을 제공합니다.
 
-새로운 ISE 레이아웃으로 전환하려면 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>를 눌러 **명령 팔레트**를 열고, `PowerShell`을 입력한 후 **PowerShell: ISE 모드 사용**을 선택하세요.
+새로운 ISE 레이아웃으로 전환하려면 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>를 눌러 **명령 팔레트** 를 열고, `PowerShell`을 입력한 후 **PowerShell: ISE 모드 사용** 을 선택하세요.
 
-레이아웃을 원본 레이아웃으로 설정하려면 **명령 팔레트**를 열고, **PowerShell: ISE 모드 사용 안 함(기본값으로 복원)** 을 선택하세요.
+레이아웃을 원본 레이아웃으로 설정하려면 **명령 팔레트** 를 열고, **PowerShell: ISE 모드 사용 안 함(기본값으로 복원)** 을 선택하세요.
 
 ISE에 맞게 VSCode 레이아웃을 사용자 지정하는 방법에 대한 자세한 내용은 [Visual Studio Code에서 ISE 환경을 복제하는 방법](/powershell/scripting/components/vscode/how-to-replicate-the-ise-experience-in-vscode)을 참조하세요.
 

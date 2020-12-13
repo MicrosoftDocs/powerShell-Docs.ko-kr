@@ -1,12 +1,14 @@
 ---
-title: Windows PowerShell 오류 보고 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 7f7afcf5186732734976304c8e58e4d940156e1e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 오류 보고
+description: Windows PowerShell 오류 보고
+ms.openlocfilehash: 438e3d96bf52d8ac1f770c0550ae49b356d616eb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783962"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650119"
 ---
 # <a name="windows-powershell-error-reporting"></a>Windows PowerShell 오류 보고
 
@@ -26,6 +28,6 @@ ms.locfileid: "87783962"
 
 [ErrorRecord 개체 해석](./interpreting-errorrecord-objects.md) ErrorRecord 개체가 해석 되는 방법에 대해 설명 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

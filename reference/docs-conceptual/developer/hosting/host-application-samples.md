@@ -1,18 +1,20 @@
 ---
-title: 호스트 응용 프로그램 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 260f813c8c8c8f699c6af209d64ad71f18c91c7a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 호스트 애플리케이션 샘플
+description: 호스트 애플리케이션 샘플
+ms.openlocfilehash: eee5fd2952cfbd1e577b9d0d79cbc956efc602d8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772283"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649277"
 ---
 # <a name="host-application-samples"></a>호스트 애플리케이션 샘플
 
 이 섹션에는 Windows PowerShell 2.0 SDK에서 제공 되는 샘플 코드가 포함 되어 있습니다.
 
- 이 섹션의 항목에서 전체 샘플 코드를 복사 하거나 SDK와 함께 설치 된 소스 파일을 사용할 수 있습니다. [Windows PowerShell 2.0 SDK (소프트웨어 개발 키트)](https://www.microsoft.com/download/details.aspx?id=2560) 는 각 샘플에 대 한 추가 정보 파일, 소스 파일 및 Visual Studio 프로젝트 파일을 제공 합니다.
+ 이 섹션의 항목에서 전체 샘플 코드를 복사 하거나 SDK와 함께 설치 된 소스 파일을 사용할 수 있습니다. [Windows PowerShell 2.0 SDK(소프트웨어 개발 키트)](https://www.microsoft.com/download/details.aspx?id=2560)에서는 각 샘플에 대한 추가 정보 파일, 소스 파일 및 Visual Studio 프로젝트 파일을 제공합니다.
 
 ## <a name="in-this-section"></a>섹션 내용
 

@@ -1,12 +1,14 @@
 ---
-title: 구성 (형식)의 컨트롤에 대해 EntrySelectedBy의 SelectionCondition 요소 Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 748aa1aa0ba603a44334d9401e9e2c0e68f14e03
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Configuration에 대한 Controls의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
+description: Configuration에 대한 Controls의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
+ms.openlocfilehash: ce00cdf868a3075875043aeb59f2cb8a17d049a9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783418"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645778"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
 

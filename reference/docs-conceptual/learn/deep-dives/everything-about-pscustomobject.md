@@ -4,10 +4,10 @@ description: PSCustomObject는 구조화된 데이터를 만드는 단순한 방
 ms.date: 10/05/2020
 ms.custom: contributor-KevinMarquette
 ms.openlocfilehash: ccbdcdae5ad38f555233dffbed7e8a6ec2b0726b
-ms.sourcegitcommit: 1695df0d241c0390cac71a7401e61198fc6ff756
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "91772323"
 ---
 # <a name="everything-you-wanted-to-know-about-pscustomobject"></a>PSCustomObject에 대해 알고 싶은 모든 것
@@ -333,7 +333,7 @@ function Get-MyObject
 
 출력 유형을 사용하는 주된 이유는 함수의 메타데이터 정보 사용자의 의도를 반영한다는 점입니다. 개발 환경에서 `Get-Command`와 `Get-Help` 같은 요소를 활용할 수 있습니다. 추가 정보가 필요하다면 도움말인 [about_Functions_OutputTypeAttribute][]를 참조하세요.
 
-말이 나온 김에 설명하자면, Pester를 사용하여 함수를 단위 테스트하는 경우에는 **OutputType**과 일치하는 출력 개체의 유효성을 검사하는 것이 좋습니다. 이렇게 하면 잘못된 변수가 파이프에 속하는지를 확인할 수 있습니다.
+말이 나온 김에 설명하자면, Pester를 사용하여 함수를 단위 테스트하는 경우에는 **OutputType** 과 일치하는 출력 개체의 유효성을 검사하는 것이 좋습니다. 이렇게 하면 잘못된 변수가 파이프에 속하는지를 확인할 수 있습니다.
 
 ## <a name="closing-thoughts"></a>맺음말
 

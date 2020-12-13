@@ -1,12 +1,14 @@
 ---
-title: 입력 필터 매개 변수 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ccaf6c4859d2a4f14866ec1252b999e90e1a830f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 입력 필터 매개 변수
+description: 입력 필터 매개 변수
+ms.openlocfilehash: 419ffea2afb4aa534a3e19ecdfce6d6af1da46a6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784047"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648539"
 ---
 # <a name="input-filter-parameters"></a>입력 필터 매개 변수
 
@@ -16,7 +18,7 @@ Cmdlet은 cmdlet이 `Filter` `Include` `Exclude` 적용 되는 입력 개체 집
 
 ## <a name="include-and-exclude-parameters"></a>매개 변수 포함 및 제외
 
-`Include`및 `Exclude` 매개 변수는 cmdlet으로 전달 되는 입력 개체 집합에서 제외 되거나 포함 되는 개체를 식별 합니다. 표준 와일드 카드 언어로 필터를 표현할 수 있는 경우이 매개 변수를 사용 합니다. 와일드 카드 문자에 대 한 자세한 내용은 [Cmdlet 매개 변수에서 와일드 카드 지원](./supporting-wildcard-characters-in-cmdlet-parameters.md)을 참조 하세요. `Include`매개 변수는 이름이 포함 필터와 일치 하는 모든 개체를 포함 합니다. `Exclude`매개 변수는 이름이 필터와 일치 하는 모든 개체를 제외 합니다.
+`Include`및 `Exclude` 매개 변수는 cmdlet으로 전달 되는 입력 개체 집합에서 제외 되거나 포함 되는 개체를 식별 합니다. 표준 와일드 카드 언어로 필터를 표현할 수 있는 경우이 매개 변수를 사용 합니다. 와일드 카드 문자에 대 한 자세한 내용은 [Cmdlet 매개 변수에서 와일드 카드 지원](./supporting-wildcard-characters-in-cmdlet-parameters.md)을 참조 하세요. `Include` 매개 변수는 이름이 포함 필터와 일치 하는 모든 개체를 포함 합니다. `Exclude`매개 변수는 이름이 필터와 일치 하는 모든 개체를 제외 합니다.
 
 ## <a name="filter-parameter"></a>필터 매개 변수
 
@@ -26,6 +28,6 @@ Cmdlet은 cmdlet이 `Filter` `Include` `Exclude` 적용 되는 입력 개체 집
 
 입력 개체 집합이 지정 되지 않은 경우 일반적으로 모든 개체에 대해 필터링 하는 것입니다. 자세한 내용은[Get Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process)를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

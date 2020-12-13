@@ -1,16 +1,18 @@
 ---
-title: StopProc 자습서 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e298c729b7ac59141638052d19b95ab77aa25cd6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: StopProc 자습서
+description: StopProc 자습서
+ms.openlocfilehash: 95229ee3c4905d295bd6991fe8ccf8c9840c3cdd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786478"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646422"
 ---
 # <a name="stopproc-tutorial"></a>StopProc 자습서
 
-이 섹션에서는 Windows PowerShell에서 제공 하는 [중지-프로세스](/powershell/module/Microsoft.PowerShell.Management/Stop-Process) cmdlet과 매우 유사한 중지-프로시저 cmdlet을 만드는 방법에 대 한 자습서를 제공 합니다. 이 자습서에서는 cmdlet을 구현 하는 방법과 코드에 대 한 설명을 보여 주는 코드 조각을 제공 합니다.
+이 섹션에서는 Windows PowerShell에서 제공 하는 [중지 프로세스](/powershell/module/Microsoft.PowerShell.Management/Stop-Process) cmdlet과 매우 유사한 Stop-Proc cmdlet을 만드는 방법에 대 한 자습서를 제공 합니다. 이 자습서에서는 cmdlet을 구현 하는 방법과 코드에 대 한 설명을 보여 주는 코드 조각을 제공 합니다.
 
 ## <a name="topics-in-this-tutorial"></a>이 자습서의 항목
 

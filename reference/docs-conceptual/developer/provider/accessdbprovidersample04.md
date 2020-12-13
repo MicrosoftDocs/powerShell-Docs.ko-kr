@@ -1,12 +1,14 @@
 ---
-title: AccessDBProviderSample04 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 097591528fd12cdf9f134a0fd8a0bd278f216fab
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: AccessDBProviderSample04
+description: AccessDBProviderSample04
+ms.openlocfilehash: 962d0ab673ff797a60b56ccae7a16a810cc43c58
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786869"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649035"
 ---
 # <a name="accessdbprovidersample04"></a>AccessDBProviderSample04
 
@@ -21,9 +23,9 @@ ms.locfileid: "87786869"
 
 - 특성 선언 `CmdletProvider`
 - [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 클래스에서 파생 되는 공급자 클래스를 정의 합니다.
-- [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) `Copy-Item` 사용자가 한 위치에서 다른 위치로 항목을 복사할 수 있도록 하는 cmdlet의 동작을 변경 하는 ContainerCmdletProvider 메서드를 덮어씁니다. 이 샘플에서는 cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다 `Copy-Item` .
-- [Containercmdletprovider Getchilditems *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 메서드를 덮어써서 사용자가 부모 항목의 자식 항목을 검색할 수 있도록 하는 Get childitems cmdlet의 동작을 변경 합니다. (이 샘플은 동적 매개 변수를 Get ChildItems cmdlet에 추가 하는 방법을 보여 주지 않습니다.)
-- Cmdlet의 매개 변수가 지정 된 경우 [Containercmdletprovider. Getchildnames *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) 메서드를 덮어써서 Get childitems cmdlet의 동작을 변경 합니다 `Name` .
+- [](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) `Copy-Item` 사용자가 한 위치에서 다른 위치로 항목을 복사할 수 있도록 하는 cmdlet의 동작을 변경 하는 ContainerCmdletProvider 메서드를 덮어씁니다. 이 샘플에서는 cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다 `Copy-Item` .
+- Get-ChildItems cmdlet의 동작을 변경 하 여 사용자가 부모 항목의 자식 항목을 검색할 수 있도록 하는 [Getchilditems *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 메서드를 덮어씁니다. (이 샘플은 Get-ChildItems cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다.)
+- Cmdlet의 매개 변수를 지정할 때 Get-ChildItems cmdlet의 동작을 변경 하려면 [Getchildnames *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) 메서드를 덮어씁니다 `Name` .
 - 사용자가 데이터 저장소에 항목을 추가할 수 있도록 하는 cmdlet의 동작을 변경 하기 위해 [Containercmdletprovider. Newitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드를 덮어씁니다 `New-Item` . 이 샘플에서는 cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다 `New-Item` .
 - Cmdlet의 동작을 변경 하기 위해 [Containercmdletprovider. Removeitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 메서드를 덮어씁니다. `Remove-Item` 이 샘플에서는 cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다 `Remove-Item` .
 

@@ -1,12 +1,14 @@
 ---
-title: TableControl (형식)에 대 한 EntrySelectedBy의 SelectionCondition 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4a829f9daef22c4b3fd6b21dfb3af2f8539bdeb3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TableControl의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
+description: TableControl의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
+ms.openlocfilehash: 22f304615c6433ffb67f3b4046b645d0c37be8a4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780290"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645756"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-tablecontrol-format"></a>TableControl의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
 

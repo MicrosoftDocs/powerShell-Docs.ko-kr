@@ -1,12 +1,14 @@
 ---
-title: HelpInfo XML 파일을 만드는 방법
 ms.date: 09/13/2016
-ms.openlocfilehash: e395746e51309477bbcbff51b4591de3f73ce0db
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: HelpInfo XML 파일을 만드는 방법
+description: HelpInfo XML 파일을 만드는 방법
+ms.openlocfilehash: d5a24306aa6488fdefad0b7b1ea9e2978a93a7b5
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893308"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647715"
 ---
 # <a name="how-to-create-a-helpinfo-xml-file"></a>HelpInfo XML 파일을 만드는 방법
 

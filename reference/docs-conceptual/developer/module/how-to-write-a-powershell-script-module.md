@@ -1,12 +1,14 @@
 ---
-title: PowerShell 스크립트 모듈을 작성 하는 방법 | Microsoft Docs
 ms.date: 11/21/2019
-ms.openlocfilehash: dc387909a9e55df9f1846b02755e284c408f7dc6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: PowerShell 스크립트 모듈을 작성하는 방법
+description: PowerShell 스크립트 모듈을 작성하는 방법
+ms.openlocfilehash: c44b09a915501fb10773ab11cf13136d5035ba69
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784897"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649146"
 ---
 # <a name="how-to-write-a-powershell-script-module"></a>PowerShell 스크립트 모듈을 작성하는 방법
 
@@ -80,9 +82,9 @@ ms.locfileid: "87784897"
 7. 현재 PowerShell 세션의 활성 서비스에서 모듈을 제거 하려면 [모듈 제거](/powershell/module/Microsoft.PowerShell.Core/Remove-Module)를 사용 합니다.
 
    > [!NOTE]
-   > `Remove-Module`현재 PowerShell 세션에서 모듈을 제거 하지만 모듈을 제거 하거나 모듈의 파일을 삭제 하지는 않습니다.
+   > `Remove-Module` 현재 PowerShell 세션에서 모듈을 제거 하지만 모듈을 제거 하거나 모듈의 파일을 삭제 하지는 않습니다.
 
-## <a name="show-calendar-code-example"></a>표시-일정 코드 예제
+## <a name="show-calendar-code-example"></a>Show-Calendar 코드 예제
 
 다음 예제는 라는 단일 함수를 포함 하는 스크립트 모듈입니다 `Show-Calendar` . 이 함수는 달력의 시각적 표시를 표시 합니다. 이 샘플에는 개요, 설명, 매개 변수 값 및 코드에 대 한 PowerShell 도움말 문자열이 포함 되어 있습니다. 모듈을 가져올 때 `Export-ModuleMember` 명령은 `Show-Calendar` 함수를 모듈 멤버로 내보내도록 합니다.
 

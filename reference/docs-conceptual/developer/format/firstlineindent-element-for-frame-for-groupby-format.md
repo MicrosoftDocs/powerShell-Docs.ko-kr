@@ -1,12 +1,14 @@
 ---
-title: GroupBy (Format)의 프레임에 대 한 FirstLineIndent 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: def5b4e9ca98a15edbb36675ca506e886de567dc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GroupBy의 Frame에 대한 FirstLineIndent 요소(형식)
+description: GroupBy의 Frame에 대한 FirstLineIndent 요소(형식)
+ms.openlocfilehash: 391a6f338e264fd9fdd1948ded74bf022cb114d1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781667"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645795"
 ---
 # <a name="firstlineindent-element-for-frame-for-groupby-format"></a>GroupBy의 Frame에 대한 FirstLineIndent 요소(형식)
 

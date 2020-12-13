@@ -1,16 +1,18 @@
 ---
-title: GetProcessSample05 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2332d260c6f470d435234c847a59e59fe56f809a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GetProcessSample05 샘플
+description: GetProcessSample05 샘플
+ms.openlocfilehash: d4bfaf52b00bb68cf11d8bbebf72487472d73f6e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784200"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646518"
 ---
 # <a name="getprocesssample05-sample"></a>GetProcessSample05 샘플
 
-이 샘플은 전체 버전의 Get Proc cmdlet을 보여 줍니다.
+이 샘플에서는 Get-Proc cmdlet의 전체 버전을 보여 줍니다.
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>Visual Studio를 사용 하 여 샘플을 빌드하는 방법입니다.
 
@@ -20,7 +22,7 @@ ms.locfileid: "87784200"
 
 2. 솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다. 그러면 Visual Studio에서 샘플 프로젝트가 열립니다.
 
-3. **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.
+3. **빌드** 메뉴에서 **솔루션 빌드** 를 선택합니다.
 
    샘플에 대 한 라이브러리는 기본 \bin 또는 \bin\debug 디렉터리에 빌드됩니다.
 
@@ -472,6 +474,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

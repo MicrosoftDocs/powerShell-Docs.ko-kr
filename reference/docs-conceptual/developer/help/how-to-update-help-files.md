@@ -1,12 +1,14 @@
 ---
-title: 도움말 파일을 업데이트하는 방법
 ms.date: 09/12/2016
-ms.openlocfilehash: 80f7c8865729515de98648765fa36ce540e00162
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 도움말 파일을 업데이트하는 방법
+description: 도움말 파일을 업데이트하는 방법
+ms.openlocfilehash: 19bf501cf91b1eb5dabb334c2179953590b40232
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86892951"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649595"
 ---
 # <a name="how-to-update-help-files"></a>도움말 파일을 업데이트하는 방법
 

@@ -1,12 +1,14 @@
 ---
-title: OutputType 특성 선언 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a4cc874031bba092cfef6041bef0e19e6af3f09c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: OutputType 특성 선언
+description: OutputType 특성 선언
+ms.openlocfilehash: b5e33346e9ac29c13323781d62daffab892573a4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786546"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646452"
 ---
 # <a name="outputtype-attribute-declaration"></a>OutputType 특성 선언
 
@@ -29,6 +31,6 @@ ParameterSetName (string []) 선택 사항입니다. 매개 변수에 지정 된
 
 providerCmdlet 옵션입니다. 매개 변수에 지정 된 형식을 반환 하는 공급자 cmdlet을 지정 합니다 `type` .
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

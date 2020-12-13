@@ -1,12 +1,14 @@
 ---
-title: StopProcessSample04 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a256d29b9e0be878d805a82ddf5a538461d283d6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: StopProcessSample04 샘플
+description: StopProcessSample04 샘플
+ms.openlocfilehash: 65588b4d60034d1e6a1e17441a4a640caaacdce8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786427"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650139"
 ---
 # <a name="stopprocesssample04-sample"></a>StopProcessSample04 샘플
 
@@ -18,7 +20,7 @@ ms.locfileid: "87786427"
 
 2. 솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다. 그러면 Microsoft Visual Studio의 샘플 프로젝트가 열립니다.
 
-3. **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.
+3. **빌드** 메뉴에서 **솔루션 빌드** 를 선택합니다.
 
     샘플에 대 한 라이브러리는 기본 \bin 또는 \bin\debug 폴더에 빌드됩니다.
 
@@ -60,7 +62,7 @@ ms.locfileid: "87786427"
 
 ## <a name="example"></a>예제
 
-다음 코드에서는 매개 변수 집합을 선언 하 고, 기본 매개 변수 집합을 지정 하 고, 입력 개체를 허용할 수 있는 Stop Proc cmdlet의 구현을 보여 줍니다.
+다음 코드에서는 매개 변수 집합을 선언 하 고, 기본 매개 변수 집합을 지정 하 고, 입력 개체를 사용할 수 있는 Stop-Proc cmdlet의 구현을 보여 줍니다.
 
 이 샘플에서는 입력 개체, 매개 변수 집합을 선언 하는 방법 및 사용할 기본 매개 변수 집합을 지정 하는 방법을 보여 줍니다.
 
@@ -483,6 +485,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

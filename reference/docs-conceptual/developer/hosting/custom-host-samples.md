@@ -1,12 +1,14 @@
 ---
-title: 사용자 지정 호스트 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6a10d3da6d8bf93986a3f5b029fdae3afb23a903
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 사용자 지정 호스트 샘플
+description: 사용자 지정 호스트 샘플
+ms.openlocfilehash: 939b9f5d6bbc3ccf1ac95343e897ecffef0a2f42
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779525"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649312"
 ---
 # <a name="custom-host-samples"></a>사용자 지정 호스트 샘플
 

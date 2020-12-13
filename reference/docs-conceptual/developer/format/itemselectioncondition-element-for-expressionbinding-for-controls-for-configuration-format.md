@@ -1,12 +1,14 @@
 ---
-title: 구성 (형식)의 컨트롤에 대 한 ExpressionBinding의 ItemSelectionCondition 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 3bfd3efe916b4d88c024de8f959482cab515f777
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Configuration에 대한 Controls의 ExpressionBinding에 대한 ItemSelectionCondition 요소(형식)
+description: Configuration에 대한 Controls의 ExpressionBinding에 대한 ItemSelectionCondition 요소(형식)
+ms.openlocfilehash: 6bd3d386ba64b33a1744fcc9e602cf13404765a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781225"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648088"
 ---
 # <a name="itemselectioncondition-element-for-expressionbinding-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 ExpressionBinding에 대한 ItemSelectionCondition 요소(형식)
 

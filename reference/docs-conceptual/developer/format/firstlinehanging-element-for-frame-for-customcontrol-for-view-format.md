@@ -1,12 +1,14 @@
 ---
-title: 보기에 대 한 CustomControl Frame의 FirstLineHanging 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: fa428c1fbe4cd8070e40cf0bc732eb335489ba4e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 CustomControl의 Frame에 대한 FirstLineHanging 요소(형식)
+description: View에 대한 CustomControl의 Frame에 대한 FirstLineHanging 요소(형식)
+ms.openlocfilehash: 8b9601b2afd7ab5523e339fb45119f5cf9f4a535
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773643"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648138"
 ---
 # <a name="firstlinehanging-element-for-frame-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 Frame에 대한 FirstLineHanging 요소(형식)
 

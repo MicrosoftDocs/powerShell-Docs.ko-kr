@@ -1,19 +1,21 @@
 ---
-title: Cmdlet 매개 변수에서 와일드카드 문자 지원
 ms.date: 08/26/2019
-ms.openlocfilehash: 062e3d50dddd0bc84e57f5254a93289acbabe38b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 매개 변수에서 와일드카드 문자 지원
+description: Cmdlet 매개 변수에서 와일드카드 문자 지원
+ms.openlocfilehash: 06693c62cd2613050bdeb9d6b12ad6e9597a9894
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786410"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646399"
 ---
 # <a name="supporting-wildcard-characters-in-cmdlet-parameters"></a>Cmdlet 매개 변수에서 와일드카드 문자 지원
 
 단일 리소스 대신 리소스 그룹에 대해 실행 되도록 cmdlet을 디자인 해야 하는 경우가 종종 있습니다. 예를 들어 cmdlet은 이름이 나 확장명이 같은 데이터 저장소의 모든 파일을 찾아야 할 수 있습니다. 리소스 그룹에 대해 실행 될 cmdlet을 디자인할 때 와일드 카드 문자에 대 한 지원을 제공 해야 합니다.
 
 > [!NOTE]
-> *와일드 카드 사용*라고도 하는 와일드 카드 문자를 사용 합니다.
+> *와일드 카드 사용* 라고도 하는 와일드 카드 문자를 사용 합니다.
 
 ## <a name="windows-powershell-cmdlets-that-use-wildcards"></a>와일드 카드를 사용 하는 Windows PowerShell Cmdlet
 
@@ -71,7 +73,7 @@ True
 Cmdlet 매개 변수가 와일드 카드 문자를 지 원하는 경우이 작업은 일반적으로 배열 출력을 생성 합니다.
 사용자가 단일 항목만 사용할 수 있기 때문에 경우에 따라 배열 출력을 지 원하는 것은 바람직하지 않습니다. 예를 들어 `Set-Location` 사용자가 단일 위치만 설정 하므로 cmdlet은 배열 출력을 지원 하지 않습니다. 이 인스턴스에서 cmdlet은 여전히 와일드 카드 문자를 지원 하지만 단일 위치에 대해 해상도를 강제 적용 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
 

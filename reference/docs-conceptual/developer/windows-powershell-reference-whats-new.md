@@ -1,14 +1,16 @@
 ---
-title: Windows PowerShell 참조-새로운 기능
 ms.date: 09/13/2016
-ms.openlocfilehash: 4e87fce34f74e0fcbfe25939e1555df308a7f7d0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 참조-새로운 기능
+description: Windows PowerShell 참조-새로운 기능
+ms.openlocfilehash: b6fa97eacd476f055dd0c69eed2e547c450b85e1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786699"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647115"
 ---
-# <a name="whats-new"></a>새로운 기능
+# <a name="whats-new"></a>What's New
 
 Windows PowerShell 2.0에는 cmdlet, 공급자 및 호스트 응용 프로그램을 작성할 때 사용할 새 기능이 다음과 같이 제공 됩니다.
 

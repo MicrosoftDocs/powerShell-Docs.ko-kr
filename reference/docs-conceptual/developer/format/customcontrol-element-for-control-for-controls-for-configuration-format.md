@@ -1,12 +1,14 @@
 ---
-title: 구성 (형식)의 컨트롤에 대 한 CustomControl 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 5aacf824421dfce19f1f495fc0a95e766cdbaf8b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Configuration에 대한 Controls의 Control에 대한 CustomControl 요소(형식)
+description: Configuration에 대한 Controls의 Control에 대한 CustomControl 요소(형식)
+ms.openlocfilehash: 631995c6a50c0f020cb2e991cfbf58a09a75cc72
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786087"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649995"
 ---
 # <a name="customcontrol-element-for-control-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 Control에 대한 CustomControl 요소(형식)
 

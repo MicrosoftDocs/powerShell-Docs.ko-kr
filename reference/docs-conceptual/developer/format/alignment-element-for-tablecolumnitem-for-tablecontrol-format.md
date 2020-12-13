@@ -1,12 +1,14 @@
 ---
-title: TableControl (형식)의 TableColumnItem에 대 한 Alignment 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: baa858b7c15b5afcc7f6087e8a9eace8d8fb67bb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TableControl의 TableColumnItem에 대한 Alignment 요소(형식)
+description: TableControl의 TableColumnItem에 대한 Alignment 요소(형식)
+ms.openlocfilehash: d2bb81ff894cad44e16212891faffd22ee627383
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783911"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646115"
 ---
 # <a name="alignment-element-for-tablecolumnitem-for-tablecontrol-format"></a>TableControl의 TableColumnItem에 대한 Alignment 요소(형식)
 

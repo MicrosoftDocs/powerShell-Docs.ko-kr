@@ -1,16 +1,14 @@
 ---
-title: ValidateCount 특성 선언 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- attributes, ValidateCount
-- ValidateCount attribute, described
-- ValidateCount attribute
-ms.openlocfilehash: c013a354ee339bd14508fe30549673bc79d5c616
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ValidateCount 특성 선언
+description: ValidateCount 특성 선언
+ms.openlocfilehash: 6acdd02a10ecc1bc2be0e6be88cf2f42a3673eb8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786325"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646276"
 ---
 # <a name="validatecount-attribute-declaration"></a>ValidateCount 특성 선언
 
@@ -24,7 +22,7 @@ ValidateCount 특성은 cmdlet 매개 변수에 허용 되는 인수의 최소 �
 
 #### <a name="parameters"></a>매개 변수
 
-`MinLength`([System.web][])이 필요 합니다. 인수의 최소 개수를 지정 합니다.
+`MinLength` ([System.web][])이 필요 합니다. 인수의 최소 개수를 지정 합니다.
 
 `MaxLength`([System.web][])이 필요 합니다. 최대 인수 수를 지정 합니다.
 
@@ -48,10 +46,10 @@ ValidateCount 특성은 cmdlet 매개 변수에 허용 되는 인수의 최소 �
 
 [인수 개수를 확인하는 방법][]
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)][]
+[Writing a Windows PowerShell Cmdlet][](Windows PowerShell Cmdlet 작성)
 
 [인수 개수를 확인하는 방법]: how-to-validate-an-argument-count.md
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)]: writing-a-windows-powershell-cmdlet.md
+[Writing a Windows PowerShell Cmdlet]: writing-a-windows-powershell-cmdlet.md(Windows PowerShell Cmdlet 작성)
 
 [System.Int32]: /dotnet/api/System.Int32
 [ValidateCountAttribute.]: /dotnet/api/System.Management.Automation.ValidateCountAttribute

@@ -1,15 +1,14 @@
 ---
-title: 기본 Windows PowerShell 공급자 만들기 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- base provider [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], base provider
-ms.openlocfilehash: 16cadb6099bb4f315bacda4aea617b89f9af5626
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 기본 Windows PowerShell 공급자 만들기
+description: 기본 Windows PowerShell 공급자 만들기
+ms.openlocfilehash: 03b5784fd063b5457fc64d92a32e286e3bf9cce4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787226"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647516"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>기본 Windows PowerShell 공급자 만들기
 
@@ -24,7 +23,7 @@ ms.locfileid: "87787226"
 
 Windows PowerShell 공급자를 만드는 첫 번째 단계는 해당 .NET 클래스를 정의 하는 것입니다. 이 기본 공급자는 `AccessDBProvider` [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) 클래스에서 파생 되는 이라는 클래스를 정의 합니다.
 
-`Providers`API 네임 스페이스 (예: xxx)의 네임 스페이스에 공급자 클래스를 추가 하는 것이 좋습니다. PowerShell. 공급자. 이 공급자는 `Microsoft.Samples.PowerShell.Provider` 모든 Windows PowerShell 공급자 샘플이 실행 되는 네임 스페이스를 사용 합니다.
+`Providers`API 네임 스페이스의 네임 스페이스 (예: xxx. PowerShell)에 공급자 클래스를 추가 하는 것이 좋습니다. 이 공급자는 `Microsoft.Samples.PowerShell.Provider` 모든 Windows PowerShell 공급자 샘플이 실행 되는 네임 스페이스를 사용 합니다.
 
 > [!NOTE]
 > Windows PowerShell 공급자에 대 한 클래스는 명시적으로 public으로 표시 되어야 합니다. Public으로 표시 되지 않은 클래스는 기본적으로 내부로 표시 되 고 Windows PowerShell 런타임에서 찾을 수 없습니다.
@@ -40,7 +39,7 @@ Windows PowerShell 공급자를 만드는 첫 번째 단계는 해당 .NET 클�
 > [!NOTE]
 > Windows PowerShell 공급자의 정규화 된 이름에는 공급자를 등록할 때 Windows PowerShell에서 결정 한 어셈블리 이름 및 기타 특성이 포함 됩니다.
 
-## <a name="defining-provider-specific-state-information"></a>공급자별 상태 정보 정의
+## <a name="defining-provider-specific-state-information"></a>Provider-Specific 상태 정보 정의
 
 Windows PowerShell 런타임이 필요한 경우에만 공급자 인스턴스를 만들기 때문에 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) 및 모든 파생 클래스는 상태 비저장으로 간주 됩니다. 따라서 공급자에 게 공급자별 데이터에 대 한 모든 권한 및 상태 유지 관리가 필요한 경우 [Providerinfo](/dotnet/api/System.Management.Automation.ProviderInfo) 클래스에서 클래스를 파생 해야 합니다. 파생 된 클래스는 상태를 유지 관리 하는 데 필요한 멤버를 정의 해야 합니다. 이렇게 하면 Windows PowerShell 런타임에서 공급자를 초기화할 때 공급자 특정 데이터에 액세스할 수 [있습니다.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start)
 
@@ -84,7 +83,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 후에는 명�
 Get-PSProvider
 ```
 
-다음 출력이 표시됩니다.
+다음과 같은 출력이 표시됩니다.
 
 ```Output
 Name                 Capabilities                  Drives

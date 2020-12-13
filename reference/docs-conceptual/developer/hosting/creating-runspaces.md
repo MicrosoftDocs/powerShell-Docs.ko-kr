@@ -1,12 +1,14 @@
 ---
-title: Runspace 만들기 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 0c27e2bf54e16a3bdc93c4b91629893bb1cc1e3e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: runspace 만들기
+description: runspace 만들기
+ms.openlocfilehash: c6b2c577e435ec88364b189a0c3d065f54f02525
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779576"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649343"
 ---
 # <a name="creating-runspaces"></a>runspace 만들기
 

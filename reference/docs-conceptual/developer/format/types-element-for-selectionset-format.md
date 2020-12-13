@@ -1,12 +1,14 @@
 ---
-title: SelectionSet (Format)의 Types 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9978daefb3e97ab131774ca4dff633dde6b4dfbf
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: SelectionSet에 대한 Types 요소(형식)
+description: SelectionSet에 대한 Types 요소(형식)
+ms.openlocfilehash: ff3c24e7f52f862dc416b88d50983196ce907012
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772521"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645458"
 ---
 # <a name="types-element-for-selectionset-format"></a>SelectionSet에 대한 Types 요소(형식)
 

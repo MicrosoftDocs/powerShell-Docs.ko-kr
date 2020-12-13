@@ -1,26 +1,25 @@
 ---
-title: 매개 변수를 사용 하지 않고 Cmdlet 만들기 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- cmdlets [PowerShell Programmers Guide], creating
-- cmdlets [PowerShell Programmers Guide], basic cmdlet
-ms.openlocfilehash: a14d25660d596ebd12cd7d74b607eab6ac9fd1be
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 매개 변수 없이 Cmdlet 만들기
+description: 매개 변수 없이 Cmdlet 만들기
+ms.openlocfilehash: 5df27ac4c1f6dfcc3e7596d93f8db0f97aae71c1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784387"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646544"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>매개 변수 없이 Cmdlet 만들기
 
-이 섹션에서는 매개 변수를 사용 하지 않고 로컬 컴퓨터에서 정보를 검색 한 다음 파이프라인에 정보를 기록 하는 cmdlet을 만드는 방법을 설명 합니다. 여기에 설명 된 cmdlet은 로컬 컴퓨터의 프로세스에 대 한 정보를 검색 한 다음 명령줄에 해당 정보를 표시 하는 cmdlet입니다.
+이 섹션에서는 매개 변수를 사용 하지 않고 로컬 컴퓨터에서 정보를 검색 한 다음 파이프라인에 정보를 기록 하는 cmdlet을 만드는 방법을 설명 합니다. 여기서 설명 하는 cmdlet은 로컬 컴퓨터의 프로세스에 대 한 정보를 검색 한 다음 명령줄에 해당 정보를 표시 하는 Get-Proc cmdlet입니다.
 
 > [!NOTE]
 > Cmdlet을 작성할 때 Windows PowerShell® 참조 어셈블리가 디스크에 다운로드 됩니다 (기본적으로 C:\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0). GAC (전역 어셈블리 캐시)에 설치 되지 않습니다.
 
 ## <a name="naming-the-cmdlet"></a>Cmdlet 이름 지정
 
-Cmdlet 이름은 cmdlet이 수행 하는 동작을 나타내는 동사와 cmdlet이 작동 하는 항목을 나타내는 명사로 구성 됩니다. 이 샘플 실행 cmdlet은 프로세스 개체를 검색 하기 때문에 [Verbscommon](/dotnet/api/System.Management.Automation.VerbsCommon) 열거에 의해 정의 된 동사 "Get"을 사용 하 고, cmdlet이 프로세스 항목에서 작동 함을 나타내는 명사 "Proc"를 사용 합니다.
+Cmdlet 이름은 cmdlet이 수행 하는 동작을 나타내는 동사와 cmdlet이 작동 하는 항목을 나타내는 명사로 구성 됩니다. 이 샘플 Get-Proc cmdlet은 프로세스 개체를 검색 하기 때문에 [Verbscommon](/dotnet/api/System.Management.Automation.VerbsCommon) 열거에 의해 정의 된 동사 "Get"을 사용 하 고 cmdlet이 프로세스 항목에서 작동 함을 나타내는 명사 "Proc"를 사용 합니다.
 
 Cmdlet의 이름을 지정할 때는 다음 문자를 사용 하지 마세요. #, () {} [] &-/\ $;: "' <> &#124; ? @ ` .
 
@@ -34,7 +33,7 @@ Cmdlet의 이름을 지정할 때는 다음 문자를 사용 하지 마세요. #
 
 ## <a name="defining-the-cmdlet-class"></a>Cmdlet 클래스 정의
 
-Cmdlet 이름을 선택한 후에는 cmdlet을 구현 하는 .NET 클래스를 정의 합니다. 다음은이 샘플의 Get-help cmdlet에 대 한 클래스 정의입니다.
+Cmdlet 이름을 선택한 후에는 cmdlet을 구현 하는 .NET 클래스를 정의 합니다. 다음은이 샘플 Get-Proc cmdlet에 대 한 클래스 정의입니다.
 
 ```csharp
 [Cmdlet(VerbsCommon.Get, "Proc")]
@@ -47,12 +46,12 @@ Public Class GetProcCommand
     Inherits Cmdlet
 ```
 
-클래스 정의의 이전에는 구문을 사용 하 [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) 여 `[Cmdlet(verb, noun, ...)]` 이 클래스를 cmdlet으로 식별 하는 데 사용 됩니다. 이는 모든 cmdlet에 대해 유일 하 게 필요한 특성이 며 Windows PowerShell 런타임에서 올바르게 호출할 수 있습니다. 필요한 경우 특성 키워드를 설정 하 여 클래스를 추가로 선언할 수 있습니다. 샘플 GetProcCommand 클래스에 대 한 특성 선언은 Get Proc cmdlet에 대 한 명사 및 verb 이름만 선언 합니다.
+클래스 정의의 이전에는 구문을 사용 하 [](/dotnet/api/System.Management.Automation.CmdletAttribute) 여 `[Cmdlet(verb, noun, ...)]` 이 클래스를 cmdlet으로 식별 하는 데 사용 됩니다. 이는 모든 cmdlet에 대해 유일 하 게 필요한 특성이 며 Windows PowerShell 런타임에서 올바르게 호출할 수 있습니다. 필요한 경우 특성 키워드를 설정 하 여 클래스를 추가로 선언할 수 있습니다. 샘플 GetProcCommand 클래스에 대 한 특성 선언은 Get-Proc cmdlet에 대 한 명사 및 verb 이름만 선언 합니다.
 
 > [!NOTE]
 > 모든 Windows PowerShell 특성 클래스에 대해 설정할 수 있는 키워드는 특성 클래스의 속성에 해당 합니다.
 
-Cmdlet의 클래스 이름을 지정할 때는 클래스 이름에 cmdlet 이름을 반영 하는 것이 좋습니다. 이렇게 하려면 "VerbNounCommand" 형식을 사용 하 고 cmdlet 이름에 사용 되는 동사 및 명사로 "Verb" 및 "명사"를 바꿉니다. 위의 클래스 정의에 표시 된 것 처럼 샘플 Get Proc cmdlet은 GetProcCommand 라는 클래스를 정의 합니다 .이 클래스는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet) 기본 클래스에서 파생 됩니다.
+Cmdlet의 클래스 이름을 지정할 때는 클래스 이름에 cmdlet 이름을 반영 하는 것이 좋습니다. 이렇게 하려면 "VerbNounCommand" 형식을 사용 하 고 cmdlet 이름에 사용 되는 동사 및 명사로 "Verb" 및 "명사"를 바꿉니다. 위의 클래스 정의에 표시 된 것 처럼 샘플 Get-Proc cmdlet은 GetProcCommand 라는 클래스를 정의 합니다 .이 클래스는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet) 기본 클래스에서 파생 됩니다.
 
 > [!IMPORTANT]
 > Windows PowerShell 런타임에 액세스 하는 cmdlet을 직접 정의 하려면 .NET 클래스가 [PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) 기본 클래스에서 파생 되어야 합니다. 이 클래스에 대 한 자세한 내용은 [매개 변수 집합을 정의 하는 Cmdlet 만들기](./adding-parameter-sets-to-a-cmdlet.md)를 참조 하세요.
@@ -75,7 +74,7 @@ Cmdlet이 파이프라인 입력을 허용 하는 경우 [ProcessRecord](/dotnet
 
 Cmdlet이 파이프라인 입력을 사용 하지 않는 경우에는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) 를 재정의 해야 합니다. 이 메서드는 정렬 cmdlet의 경우와 같이 한 번에 하나의 요소에 대해 실행 될 수 [없는 경우에](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 는이 메서드를 사용 하는 것이 일반적입니다.
 
-이 샘플은 파이프라인 입력을 수신 해야 하기 때문에 ProcessRecord 메서드를 재정의 하 고 [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) [에 대 한](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 기본 구현을 사용 하 고,. p s e. p r e [s.](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 재정의는 프로세스를 검색 하 고 [WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드를 사용 하 여이를 명령줄에 기록 합니다.
+이 샘플 Get-Proc cmdlet은 파이프라인 입력을 수신 해야 하기 때문에 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 재정의 하 고에 대 한 기본 구현을 [사용 하며,](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)이 [는 system.object를](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 사용 합니다. [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 재정의는 프로세스를 검색 하 고 [WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드를 사용 하 여이를 명령줄에 기록 합니다.
 
 ```csharp
 protected override void ProcessRecord()
@@ -136,7 +135,7 @@ Cmdlet을 구현한 후 Windows PowerShell 스냅인을 통해 Windows PowerShel
 
 ## <a name="testing-the-cmdlet"></a>Cmdlet 테스트
 
-Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 하 여 테스트할 수 있습니다. 샘플 실행 cmdlet에 대 한 코드는 작지만 Windows PowerShell 런타임과 기존 .NET 개체를 계속 사용 하므로 유용 하 게 사용할 수 있습니다. 이를 테스트 하 여 실행 가능한 프로세스와 해당 출력을 사용할 수 있는 방법을 더 잘 이해할 수 있습니다. 명령줄에서 cmdlet을 사용 하는 방법에 대 한 자세한 내용은 [Windows PowerShell 시작](/powershell/scripting/getting-started/getting-started-with-windows-powershell)을 참조 하세요.
+Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 하 여 테스트할 수 있습니다. 샘플 Get-Proc cmdlet에 대 한 코드는 작지만 Windows PowerShell 런타임과 기존 .NET 개체를 계속 사용 하므로 유용 하 게 사용할 수 있습니다. Get-Proc 수행할 수 있는 작업과 출력을 사용 하는 방법을 더 잘 이해 하도록 테스트 해 보겠습니다. 명령줄에서 cmdlet을 사용 하는 방법에 대 한 자세한 내용은 [Windows PowerShell 시작](/powershell/scripting/getting-started/getting-started-with-windows-powershell)을 참조 하세요.
 
 1. Windows PowerShell을 시작 하 고 컴퓨터에서 실행 중인 현재 프로세스를 가져옵니다.
 

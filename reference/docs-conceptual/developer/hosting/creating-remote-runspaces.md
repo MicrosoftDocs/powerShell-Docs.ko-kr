@@ -1,16 +1,18 @@
 ---
-title: 원격 runspace 만들기 | Microsoft Docs
 ms.date: 09/12/2016
-ms.openlocfilehash: 2b3c76eeae70de9ef116851313953bba1a1d890f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 원격 runspace 만들기
+description: 원격 runspace 만들기
+ms.openlocfilehash: 4a2af4094ff2503fc12ee460d49565f035f0e4fe
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779593"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649372"
 ---
 # <a name="creating-remote-runspaces"></a>원격 runspace 만들기
 
-**ComputerName** 매개 변수를 사용 하는 PowerShell 명령은 powershell을 실행 하는 모든 컴퓨터에서 실행할 수 있습니다. **ComputerName** 매개 변수를 사용 하지 않는 명령을 실행 하려면 ws-management를 사용 하 여 지정 된 컴퓨터에 연결 되는 runspace를 구성 하 고 해당 컴퓨터에서 명령을 실행 합니다.
+**ComputerName** 매개 변수를 사용 하는 PowerShell 명령은 powershell을 실행 하는 모든 컴퓨터에서 실행할 수 있습니다. **ComputerName** 매개 변수를 사용 하지 않는 명령을 실행 하려면 WS-Management를 사용 하 여 지정 된 컴퓨터에 연결 되는 runspace를 구성 하 고 해당 컴퓨터에서 명령을 실행 합니다.
 
 ## <a name="using-a-wsmanconnection-to-create-a-remote-runspace"></a>WSManConnection을 사용 하 여 원격 runspace 만들기
 

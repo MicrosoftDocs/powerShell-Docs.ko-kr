@@ -1,12 +1,14 @@
 ---
-title: HideTableHeaders 요소 (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 529a3ebbbc1be17131c17e537311c2c041326393
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: HideTableHeaders 요소(형식)
+description: HideTableHeaders 요소(형식)
+ms.openlocfilehash: fefd296757ba190151f1ce592e6609c5f3f070e2
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781361"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648126"
 ---
 # <a name="hidetableheaders-element-format"></a>HideTableHeaders 요소(형식)
 

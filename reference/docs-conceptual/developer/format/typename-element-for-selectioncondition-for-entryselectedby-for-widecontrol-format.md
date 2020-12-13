@@ -1,12 +1,14 @@
 ---
-title: WideControl (형식)에 대해 EntrySelectedBy의 SelectionCondition에 대 한 TypeName 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 5021f665b994581f9ff982e13af922d7940ebf2b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: WideControl에 대한 EntrySelectedBy의 SelectionCondition에 대한 TypeName 요소(형식)
+description: WideControl에 대한 EntrySelectedBy의 SelectionCondition에 대한 TypeName 요소(형식)
+ms.openlocfilehash: af6e4782c345b43e16bce59c333bdaaceba0d845
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783316"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645500"
 ---
 # <a name="typename-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format"></a>WideControl에 대한 EntrySelectedBy의 SelectionCondition에 대한 TypeName 요소(형식)
 

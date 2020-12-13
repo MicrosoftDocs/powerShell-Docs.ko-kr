@@ -1,12 +1,14 @@
 ---
-title: 확인 요청 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 42ab001e3e8894f2ca17332634214af108fc5918
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 확인 요청
+description: 확인 요청
+ms.openlocfilehash: fd7b9eb9f697e15577d1836b8d8b689f231d33a1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781786"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648485"
 ---
 # <a name="requesting-confirmation"></a>확인 요청
 
@@ -20,6 +22,6 @@ ms.locfileid: "87781786"
 
 [확인 메시지](./confirmation-messages.md) 표시 될 수 있는 다양 한 확인 메시지의 샘플을 제공 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

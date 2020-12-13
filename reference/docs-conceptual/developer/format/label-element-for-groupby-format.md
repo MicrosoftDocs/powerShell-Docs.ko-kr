@@ -1,12 +1,14 @@
 ---
-title: GroupBy (Format)의 Label 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 07b4d037472a9dd2329e94576ec10f5b82f46b34
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GroupBy에 대한 Label 요소(형식)
+description: GroupBy에 대한 Label 요소(형식)
+ms.openlocfilehash: ff4b0dec01bb5b472b1813540661791b91568eed
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785781"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649793"
 ---
 # <a name="label-element-for-groupby-format"></a>GroupBy에 대한 Label 요소(형식)
 
@@ -48,7 +50,7 @@ Windows PowerShell에서 새 속성이 나 스크립트 값을 발견할 때마�
 
 ## <a name="example"></a>예제
 
-다음 예에서는 새 그룹의 레이블을 보여 줍니다. 표시 되는 레이블은 다음과 유사 합니다.`Service Type: NewValueofProperty`
+다음 예에서는 새 그룹의 레이블을 보여 줍니다. 표시 되는 레이블은 다음과 유사 합니다. `Service Type: NewValueofProperty`
 
 ```xml
 <GroupBy>

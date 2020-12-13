@@ -1,12 +1,14 @@
 ---
-title: GroupBy (형식)에 대 한 CustomControl의 CustomEntry 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4df8e5b96868b3814c6d84fa329950bb5345ef6e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GroupBy의 CustomControl에 대한 CustomEntry 요소(형식)
+description: GroupBy의 CustomControl에 대한 CustomEntry 요소(형식)
+ms.openlocfilehash: 0df2ff9c15308939e6d2552f51e2961bdabc59fb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785917"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646062"
 ---
 # <a name="customentry-element-for-customcontrol-for-groupby-format"></a>GroupBy의 CustomControl에 대한 CustomEntry 요소(형식)
 

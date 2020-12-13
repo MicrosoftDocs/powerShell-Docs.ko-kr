@@ -1,12 +1,14 @@
 ---
-title: PowerShell 모듈 매니페스트를 작성 하는 방법 | Microsoft Docs
 ms.date: 10/16/2019
-ms.openlocfilehash: 734adab5ce26df6e26353de8e0bc9084e0fd3f3b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: PowerShell 모듈 매니페스트를 작성하는 방법
+description: PowerShell 모듈 매니페스트를 작성하는 방법
+ms.openlocfilehash: 42db71968ccac1cc3c1c05c5be2e72327e5e28d9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784914"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647703"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>PowerShell 모듈 매니페스트를 작성 하는 방법
 
@@ -20,11 +22,11 @@ PowerShell 모듈을 작성 한 후 모듈에 대 한 정보를 포함 하는 �
 
 ### <a name="to-create-and-use-a-module-manifest"></a>모듈 매니페스트를 만들고 사용 하려면
 
-1. 모듈 매니페스트를 만드는 가장 좋은 방법은 [new-modulemanifest](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) cmdlet을 사용 하는 것입니다. 매개 변수를 사용 하 여 매니페스트의 기본 키 및 값 중 하나 이상을 지정할 수 있습니다. 유일한 요구 사항은 파일의 이름을로 하는 것입니다. `New-ModuleManifest`지정 된 값을 사용 하 여 모듈 매니페스트를 만들고 나머지 키와 해당 기본값을 포함 합니다. 여러 모듈을 만들어야 하는 경우를 사용 `New-ModuleManifest` 하 여 다른 모듈에 대해 수정할 수 있는 모듈 매니페스트 템플릿을 만듭니다. 기본 모듈 매니페스트의 예제는 [샘플 모듈 매니페스트](#sample-module-manifest)를 참조 하세요.
+1. 모듈 매니페스트를 만드는 가장 좋은 방법은 [new-modulemanifest](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) cmdlet을 사용 하는 것입니다. 매개 변수를 사용 하 여 매니페스트의 기본 키 및 값 중 하나 이상을 지정할 수 있습니다. 유일한 요구 사항은 파일의 이름을로 하는 것입니다. `New-ModuleManifest` 지정 된 값을 사용 하 여 모듈 매니페스트를 만들고 나머지 키와 해당 기본값을 포함 합니다. 여러 모듈을 만들어야 하는 경우를 사용 `New-ModuleManifest` 하 여 다른 모듈에 대해 수정할 수 있는 모듈 매니페스트 템플릿을 만듭니다. 기본 모듈 매니페스트의 예제는 [샘플 모듈 매니페스트](#sample-module-manifest)를 참조 하세요.
 
    `New-ModuleManifest -Path C:\myModuleName.psd1 -ModuleVersion "2.0" -Author "YourNameHere"`
 
-   대신, 필요한 최소한의 정보 인 **ModuleVersion**을 사용 하 여 모듈 매니페스트의 해시 테이블을 수동으로 만들 수 있습니다. 모듈과 동일한 이름으로 파일을 저장 하 고 파일 확장명을 사용 합니다 `.psd1` . 그런 다음 파일을 편집 하 고 적절 한 키 및 값을 추가할 수 있습니다.
+   대신, 필요한 최소한의 정보 인 **ModuleVersion** 을 사용 하 여 모듈 매니페스트의 해시 테이블을 수동으로 만들 수 있습니다. 모듈과 동일한 이름으로 파일을 저장 하 고 파일 확장명을 사용 합니다 `.psd1` . 그런 다음 파일을 편집 하 고 적절 한 키 및 값을 추가할 수 있습니다.
 
 1. 매니페스트 파일에 원하는 추가 요소를 추가 합니다.
 
@@ -52,14 +54,14 @@ PowerShell 모듈을 작성 한 후 모듈에 대 한 정보를 포함 하는 �
 
 다음 표에서는 모듈 매니페스트에 포함할 수 있는 요소에 대해 설명 합니다.
 
-|요소|기본값|Description|
+|요소|기본값|설명|
 |-------------|-------------|-----------------|
-|**RootModule**<br /> 형식: `String`|`<empty string>`|이 매니페스트와 연결 된 스크립트 모듈 또는 이진 모듈 파일입니다. 이전 버전의 PowerShell에서는이 요소를 **ModuleToProcess**합니다.<br /> 루트 모듈에 사용할 수 있는 형식은 **매니페스트** 모듈, 스크립트 모듈 이름 ( `.psm1` ) 또는 이진 모듈 (또는)의 이름을 만드는 비어 있을 수 있습니다 `.exe` `.dll` . `.psd1`이 요소에 모듈 매니페스트 () 또는 스크립트 파일 ()의 이름을 배치 `.ps1` 하면 오류가 발생 합니다. <br /> 예: `RootModule = 'ScriptModule.psm1'`|
-|**ModuleVersion**<br /> 형식: `Version`|`'0.0.1'`|이 모듈의 버전 번호입니다. 값을 지정 하지 않으면는 `New-ModuleManifest` 기본값을 사용 합니다. 문자열은 예를 들어 형식으로 변환할 수 있어야 합니다 `Version` `#.#.#.#.#` . `Import-Module`이름에 일치 하는 **$PSModulePath** 에서 찾은 첫 번째 모듈을 로드 하 고, 적어도 **ModuleVersion**을 **MinimumVersion** 매개 변수로 포함 합니다. 특정 버전을 가져오려면 `Import-Module` cmdlet의 **RequiredVersion** 매개 변수를 사용 합니다.<br /> 예: `ModuleVersion = '1.0'`|
-|**GUID**<br /> 형식: `GUID`|`'<GUID>'`|이 모듈을 고유 하 게 식별 하는 데 사용 되는 ID입니다. 값을 지정 하지 않으면 `New-ModuleManifest` 경로도는 값을 지정 합니다. 현재는 **GUID**로 모듈을 가져올 수 없습니다. <br /> 예: `GUID = 'cfc45206-1e49-459d-a8ad-5b571ef94857'`|
-|**Author**<br /> 형식: `String`|`'<Current user>'`|이 모듈의 작성자입니다. 값을 지정 하지 않으면는 `New-ModuleManifest` 현재 사용자를 사용 합니다. <br /> 예: `Author = 'AuthorNameHere'`|
+|**RootModule**<br /> 형식: `String`|`<empty string>`|이 매니페스트와 연결 된 스크립트 모듈 또는 이진 모듈 파일입니다. 이전 버전의 PowerShell에서는이 요소를 **ModuleToProcess** 합니다.<br /> 루트 모듈에 사용할 수 있는 형식은 **매니페스트** 모듈, 스크립트 모듈 이름 ( `.psm1` ) 또는 이진 모듈 (또는)의 이름을 만드는 비어 있을 수 있습니다 `.exe` `.dll` . `.psd1`이 요소에 모듈 매니페스트 () 또는 스크립트 파일 ()의 이름을 배치 `.ps1` 하면 오류가 발생 합니다. <br /> 예: `RootModule = 'ScriptModule.psm1'`|
+|**ModuleVersion**<br /> 형식: `Version`|`'0.0.1'`|이 모듈의 버전 번호입니다. 값을 지정 하지 않으면는 `New-ModuleManifest`   기본값을 사용 합니다. 문자열은 예를 들어 형식으로 변환할 수 있어야 합니다 `Version` `#.#.#.#.#` . `Import-Module` 이름에 일치 하는 **$PSModulePath** 에서 찾은 첫 번째 모듈을 로드 하 고, 적어도 **ModuleVersion** 을 **MinimumVersion** 매개 변수로 포함 합니다. 특정 버전을 가져오려면 `Import-Module` cmdlet의 **RequiredVersion** 매개 변수를 사용 합니다.<br /> 예: `ModuleVersion = '1.0'`|
+|**GUID**<br /> 형식: `GUID`|`'<GUID>'`|이 모듈을 고유 하 게 식별 하는 데 사용 되는 ID입니다. 값을 지정 하지 않으면 `New-ModuleManifest` 경로도는 값을 지정 합니다. 현재는 **GUID** 로 모듈을 가져올 수 없습니다. <br /> 예: `GUID = 'cfc45206-1e49-459d-a8ad-5b571ef94857'`|
+|**작성자**<br /> 형식: `String`|`'<Current user>'`|이 모듈의 작성자입니다. 값을 지정 하지 않으면는 `New-ModuleManifest` 현재 사용자를 사용 합니다. <br /> 예: `Author = 'AuthorNameHere'`|
 |**CompanyName**<br /> 형식: `String`|`'Unknown'`|이 모듈의 회사 또는 공급 업체입니다. 값을 지정 하지 않으면는 `New-ModuleManifest` 기본값을 사용 합니다.<br /> 예: `CompanyName = 'Fabrikam'`|
-|**저작권이**<br /> 형식: `String`|`'(c) <Author>. All rights reserved.'`| 이 모듈에 대 한 Copyright 문입니다. 값을 지정 하지 않으면 `New-ModuleManifest` 는 현재 사용자를으로 사용 하 여 기본값을 사용 합니다 `<Author>` . 작성자를 지정 하려면 **author** 매개 변수를 사용 합니다. <br /> 예: `Copyright = '2019 AuthorName. All rights reserved.'`|
+|**Copyright**<br /> 형식: `String`|`'(c) <Author>. All rights reserved.'`| 이 모듈에 대 한 Copyright 문입니다. 값을 지정 하지 않으면 `New-ModuleManifest` 는 현재 사용자를으로 사용 하 여 기본값을 사용 합니다 `<Author>` . 작성자를 지정 하려면 **author** 매개 변수를 사용 합니다. <br /> 예: `Copyright = '2019 AuthorName. All rights reserved.'`|
 |**설명**<br /> 형식: `String`|`<empty string>`|이 모듈에서 제공 하는 기능에 대 한 설명입니다.<br /> 예: `Description = 'This is the module's description.'`|
 |**PowerShellVersion**<br /> 형식: `Version`|`<empty string>`|이 모듈에 필요한 PowerShell 엔진의 최소 버전입니다. 유효한 값은 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6 및 7입니다.<br /> 예: `PowerShellVersion = '5.0'`|
 |**PowerShellHostName**<br /> 형식: `String`|`<empty string>`|이 모듈에 필요한 PowerShell 호스트의 이름입니다. 이 이름은 PowerShell에서 제공 됩니다. 프로그램에서 호스트 프로그램의 이름을 찾으려면를 입력 `$host.name` 합니다.<br /> 예: `PowerShellHostName = 'ConsoleHost'`|
@@ -79,8 +81,8 @@ PowerShell 모듈을 작성 한 후 모듈에 대 한 정보를 포함 하는 �
 |**AliasesToExport**<br /> 형식: `String[]`|`@()`|이 모듈에서 내보낼 별칭을 지정 합니다. 최상의 성능을 위해 와일드 카드를 사용 하지 않고 항목을 삭제 하지 마세요. 내보낼 별칭이 없으면 빈 배열을 사용 하십시오. 기본적으로 별칭은 내보내지지 않습니다. 이 키를 사용 하 여 모듈에서 내보내는 별칭을 나열할 수 있습니다.<br /> 모듈이 호출자의 세션 상태로 별칭을 내보냅니다. 호출자의 세션 상태는 전역 세션 상태 이거나 중첩 된 모듈의 경우 다른 모듈의 세션 상태 일 수 있습니다. 중첩 된 모듈을 연결 하는 경우 체인의 모듈이 **AliasesToExport** 키를 사용 하 여 별칭을 제한 하지 않는 한 중첩 된 모듈에서 내보낸 모든 별칭은 궁극적으로 전역 세션 상태로 내보내집니다. <br /> 예: `AliasesToExport = @("MyAlias1", "MyAlias2", "MyAlias3")`|
 |**DscResourcesToExport**<br /> 형식: `String[]`|`@()`|이 모듈에서 내보낼 DSC 리소스를 지정 합니다. 와일드카드가 지원됩니다. <br /> 예: `DscResourcesToExport = @("DscResource1", "DscResource2", "DscResource3")`|
 |**ModuleList**<br /> 형식: `Object[]`|`@()`|이 모듈을 사용 하 여 패키지 된 모든 모듈을 지정 합니다. 이러한 모듈은 이름으로 입력 하거나 쉼표로 구분 된 문자열을 사용 하 여 입력 하거나 **ModuleName** 및 **GUID** 키가 포함 된 해시 테이블로 입력할 수 있습니다. 해시 테이블에는 선택적 **ModuleVersion** 키도 있을 수 있습니다. **Modulelist** 키는 모듈 인벤토리 역할을 하도록 디자인 되었습니다. 이러한 모듈은 자동으로 처리 되지 않습니다. <br /> 예: `ModuleList = @("SampleModule", "MyModule", @{ModuleName="MyModule"; ModuleVersion="1.0.0.0"; GUID="50cdb55f-5ab7-489f-9e94-4ec21ff51e59"})`|
-|**FileList**<br /> 형식: `String[]`|`@()`|이 모듈과 함께 패키지 된 모든 파일의 목록입니다. **Modulelist**와 마찬가지로 **FileList** 는 인벤토리 목록이 며 달리 처리 되지 않습니다. <br /> 예: `FileList = @("File1", "File2", "File3")`|
-|**PrivateData**<br /> 형식: `Object`|`@{...}`|**RootModule** (Alias: **ModuleToProcess**) 키로 지정 된 루트 모듈에 전달 되어야 하는 개인 데이터를 지정 합니다. **PrivateData** 는 **Tags**, **LicenseUri**, **ProjectURI**, **IconUri**, **ReleaseNotes**, **시험판**, **RequireLicenseAcceptance**및 **ExternalModuleDependencies**등 여러 요소로 구성 된 해시 테이블입니다. |
+|**FileList**<br /> 형식: `String[]`|`@()`|이 모듈과 함께 패키지 된 모든 파일의 목록입니다. **Modulelist** 와 마찬가지로 **FileList** 는 인벤토리 목록이 며 달리 처리 되지 않습니다. <br /> 예: `FileList = @("File1", "File2", "File3")`|
+|**PrivateData**<br /> 형식: `Object`|`@{...}`|**RootModule** (Alias: **ModuleToProcess**) 키로 지정 된 루트 모듈에 전달 되어야 하는 개인 데이터를 지정 합니다. **PrivateData** 는 **Tags**, **LicenseUri**, **ProjectURI**, **IconUri**, **ReleaseNotes**, **시험판**, **RequireLicenseAcceptance** 및 **ExternalModuleDependencies** 등 여러 요소로 구성 된 해시 테이블입니다. |
 |**태그** <br /> 형식: `String[]` |`@()`| 태그는 온라인 갤러리의 모듈 검색에 도움이 됩니다. <br /> 예: `Tags = "PackageManagement", "PowerShell", "Manifest"`|
 |**LicenseUri**<br /> 형식: `Uri` |`<empty string>`| 이 모듈의 라이선스에 대 한 URL입니다. <br /> 예: `LicenseUri = 'https://www.contoso.com/license'`|
 |**ProjectUri**<br /> 형식: `Uri` |`<empty string>`| 이 프로젝트의 기본 웹 사이트에 대 한 URL입니다. <br /> 예: `ProjectUri = 'https://www.contoso.com/project'`|
@@ -230,7 +232,7 @@ PrivateData = @{
 }
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [about_Comparison_Operators](/powershell/module/microsoft.powershell.core/about/about_comparison_operators)
 

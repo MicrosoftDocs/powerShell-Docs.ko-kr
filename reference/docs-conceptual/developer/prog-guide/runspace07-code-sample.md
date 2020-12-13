@@ -1,12 +1,14 @@
 ---
-title: RunSpace07 코드 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 615bb237d26bf3a314ea7fb21e983ba2b000d105
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: RunSpace07 코드 샘플
+description: RunSpace07 코드 샘플
+ms.openlocfilehash: 6e8c9f48a6e9c5a642ecf93bca8a85003b3cfbf8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784710"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647390"
 ---
 # <a name="runspace07-code-sample"></a>RunSpace07 코드 샘플
 

@@ -1,12 +1,14 @@
 ---
-title: CustomControl (형식)에 대 한 Customentry의 CustomEntry 요소 Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a13e83ec941bed80eaab02e40131054432fcce00
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 CustomControl의 CustomEntries에 대한 CustomEntry 요소(형식)
+description: View에 대한 CustomControl의 CustomEntries에 대한 CustomEntry 요소(형식)
+ms.openlocfilehash: ff481f13e6f16267bdda4c3053faebc96d9a6d3a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785883"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646052"
 ---
 # <a name="customentry-element-for-customentries-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 CustomEntries에 대한 CustomEntry 요소(형식)
 

@@ -3,16 +3,16 @@ title: 다중 스레딩 중에 진행률 표시
 description: Foreach-Object -Parallel을 통해 여러 스레드에서 Write-Progress를 사용하는 방법
 ms.date: 08/02/2020
 ms.openlocfilehash: 909fc1bbdeded8845b1955e3384fb55db7173030
-ms.sourcegitcommit: 640646992955116def23d16dd12c221857d37b68
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "89410845"
 ---
 # <a name="writing-progress-across-multiple-threads-with-foreach-parallel"></a>Foreach Parallel을 사용하여 여러 스레드에서 진행률 기록
 
 PowerShell 7.0부터, [Foreach-Object](/powershell/module/Microsoft.PowerShell.Core/Foreach-Object) cmdlet에서 **Parallel** 매개 변수를 사용하여 여러 스레드에서 동시에 작업할 수 있습니다. 그렇지만 스레드의 진행률을 모니터링하는 것이 문제일 수 있습니다. 일반적으로 [Write-Progress](/powershell/module/Microsoft.PowerShell.Utility/Write-Progress)를 사용하여 프로세스의 진행률을 모니터링할 수 있습니다.
-그러나 **Parallel**을 사용하면 PowerShell에서 각 스레드에 별도의 runspace를 사용하기 때문에 진행률을 다시 호스트에 보고하는 것이 일반적인 `Write-Progress` 사용만큼 간단하지 않습니다.
+그러나 **Parallel** 을 사용하면 PowerShell에서 각 스레드에 별도의 runspace를 사용하기 때문에 진행률을 다시 호스트에 보고하는 것이 일반적인 `Write-Progress` 사용만큼 간단하지 않습니다.
 
 ## <a name="using-a-synced-hashtable-to-track-progress"></a>동기화된 해시 테이블을 사용하여 진행률 추적
 
@@ -95,7 +95,7 @@ $job = $dataset | Foreach-Object -ThrottleLimit 3 -AsJob -Parallel {
 }
 ```
 
-모의 프로세스는 `Foreach-Object`로 전송되고 작업으로 시작됩니다. **ThrottleLimit**를 **3**으로 설정하여 큐에서 여러 프로세스 실행을 강조 표시합니다. 작업은 `$job` 변수에 저장되며 나중에 모든 프로세스가 완료된 시기를 알려 줄 수 있습니다.
+모의 프로세스는 `Foreach-Object`로 전송되고 작업으로 시작됩니다. **ThrottleLimit** 를 **3** 으로 설정하여 큐에서 여러 프로세스 실행을 강조 표시합니다. 작업은 `$job` 변수에 저장되며 나중에 모든 프로세스가 완료된 시기를 알려 줄 수 있습니다.
 
 `using:` 문을 사용하여 PowerShell에서 부모 범위 변수를 참조하는 경우 동적으로 설정하는 데 식을 사용할 수 없습니다. 예를 들어 `$process = $using:sync.$($PSItem.id)`와 같이 `$process` 변수를 만들려고 시도하면 여기에 식을 사용할 수 없다는 오류 메시지가 표시됩니다. 따라서 실패할 위험 없이 `$sync` 변수를 참조 및 수정할 수 있는 `$syncCopy` 변수를 만듭니다.
 
@@ -127,7 +127,7 @@ while($job.State -eq 'Running')
 }
 ```
 
-`$job` 변수는 부모 **작업**을 포함하며 각 모의 프로세스의 자식 **작업**을 포함합니다. 자식 작업이 계속 실행되는 동안 부모 작업 **상태**는 “실행 중”으로 유지됩니다. 따라서 `while` 루프를 사용하여 모든 프로세스가 완료될 때까지 모든 프로세스의 진행률을 지속적으로 업데이트할 수 있습니다.
+`$job` 변수는 부모 **작업** 을 포함하며 각 모의 프로세스의 자식 **작업** 을 포함합니다. 자식 작업이 계속 실행되는 동안 부모 작업 **상태** 는 “실행 중”으로 유지됩니다. 따라서 `while` 루프를 사용하여 모든 프로세스가 완료될 때까지 모든 프로세스의 진행률을 지속적으로 업데이트할 수 있습니다.
 
 while 루프 내에서 `$sync` 변수의 각 키를 반복합니다. 이는 동기화된 해시 테이블이므로 지속적으로 업데이트되지만 오류를 throw하지 않고 계속 액세스할 수 있습니다.
 

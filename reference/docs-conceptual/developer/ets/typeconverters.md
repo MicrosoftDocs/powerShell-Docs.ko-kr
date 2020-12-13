@@ -1,14 +1,16 @@
 ---
-title: 확장 형식 시스템 형식 변환기
 ms.date: 07/09/2020
-ms.openlocfilehash: 0d04293fffde9901ed2e33a9bab21e6612ce9cd5
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 확장 형식 시스템 형식 변환기
+description: 확장 형식 시스템 형식 변환기
+ms.openlocfilehash: 0774e9eaae1187162b3d55cc45b902f7411a1f18
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786189"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648433"
 ---
-# <a name="ets-type-converters"></a>형식 변환기
+# <a name="ets-type-converters"></a>ETS 형식 변환기
 
 작업은 메서드를 호출할 때 두 가지 기본 형식의 형식 변환기를 사용 `LanguagePrimitives.ConvertTo(System.Object, System.Type)` 합니다. 이 메서드가 호출 되 면 PowerShell은 표준 PowerShell 언어 변환기 또는 사용자 지정 변환기를 사용 하 여 형식 변환을 수행 하려고 합니다. PowerShell에서 변환을 수행할 수 없는 경우 **PSInvalidCastException** 예외가 throw 됩니다.
 
@@ -22,9 +24,9 @@ ms.locfileid: "87786189"
 | Null                  | Char              | '\0'                                                                                                                                                                |
 | Null                  | 숫자           | `0`**resultType** 매개 변수에 지정 된 형식의입니다.                                                                                                          |
 | Null                  | 부울           | 메서드에 대 한 호출의 결과입니다 `IsTrue(System.Object)(Null)` .                                                                                                        |
-| Null                  | PSObject          | **PSObject**형식의 새 개체입니다.                                                                                                                                    |
-| Null                  | 값이 아닌 형식    | N.                                                                                                                                                               |
-| Null                  | Nullable &lt; T&gt; | N.                                                                                                                                                               |
+| Null                  | PSObject          | **PSObject** 형식의 새 개체입니다.                                                                                                                                    |
+| Null                  | 값이 아닌 형식    | null                                                                                                                                                               |
+| Null                  | Nullable &lt; T&gt; | null                                                                                                                                                               |
 | 파생 클래스         | 기본 클래스        | **valueToConvert**                                                                                                                                                  |
 | 방해가              | Void              | **AutomationNull. 값**                                                                                                                                            |
 | 방해가              | String            | `ToString`메커니즘을 호출 합니다.                                                                                                                                         |
@@ -32,12 +34,12 @@ ms.locfileid: "87786189"
 | 방해가              | PSObject          | 메서드에 대 한 호출의 결과입니다 `AsPSObject(System.Object) (valueToConvert)` .                                                                                         |
 | 방해가              | Xml 문서      | **Valuetoconvert** 를 문자열로 변환 하 고 **XMLDocument** 생성자를 호출 합니다.                                                                                      |
 | Array                 | Array             | 배열의 각 요소를 변환 하려고 시도 합니다.                                                                                                                      |
-| Singleton             | Array             | `Array[0]`배열의 요소 형식으로 변환 **되는 요소 형식으로 변환** 됩니다.                                                                            |
+| Singleton             | 배열             | `Array[0]` 배열의 요소 형식으로 변환 **되는 요소 형식으로 변환** 됩니다.                                                                            |
 | IDictionary           | 해시 테이블        | Hashtable (valueToConvert) 호출의 결과입니다.                                                                                                                       |
 | String                | Char[]            | `valueToConvert.ToCharArray`                                                                                                                                        |
 | String                | RegEx             | 에 대 한 호출의 결과입니다 `Regx(valueToConvert)` .                                                                                                                          |
-| String                | 형식              | **RunspaceConfiguration**를 검색 하기 위해 **valuetoconvert** 매개 변수를 사용 하 여 적절 한 형식을 반환 합니다.                                                 |
-| String                | 숫자           | **Valuetoconvert** 가 "" 인 경우 resultType을 반환 합니다 `0` . **resultType** 그렇지 않으면 문화권 "문화권 고정"을 사용 하 여 숫자 값을 생성 합니다.                       |
+| String                | 형식              | **RunspaceConfiguration** 를 검색 하기 위해 **valuetoconvert** 매개 변수를 사용 하 여 적절 한 형식을 반환 합니다.                                                 |
+| String                | 숫자           | **Valuetoconvert** 가 "" 인 경우 resultType을 반환 합니다 `0` .  그렇지 않으면 문화권 "문화권 고정"을 사용 하 여 숫자 값을 생성 합니다.                       |
 | 정수               | System.Enum       | 열거형에서 정수를 정의한 경우 정수를 상수로 변환 합니다. 정수가 정의 되지 않은 경우 **PSInvalidCastException** 예외가 throw 됩니다. |
 
 ## <a name="custom-conversions"></a>사용자 지정 변환
@@ -72,8 +74,8 @@ PowerShell 형식 변환기는 **system.enum** 클래스에서 파생 되는 모
 
 ## <a name="implicit-cast-operator-converter"></a>암시적 캐스트 연산자 변환기
 
-**Valuetoconvert** 매개 변수에 **resultType**으로 변환 되는 암시적 캐스트 연산자가 있는 경우 해당 캐스트 연산자가 호출 됩니다. **ResultType** 매개 변수에 **valuetoconvert**에서 변환 하는 암시적 캐스트 연산자가 있는 경우 해당 캐스트 연산자가 호출 됩니다.
+**Valuetoconvert** 매개 변수에 **resultType** 으로 변환 되는 암시적 캐스트 연산자가 있는 경우 해당 캐스트 연산자가 호출 됩니다. **ResultType** 매개 변수에 **valuetoconvert** 에서 변환 하는 암시적 캐스트 연산자가 있는 경우 해당 캐스트 연산자가 호출 됩니다.
 
 ## <a name="explicit-cast-operator-converter"></a>명시적 캐스트 연산자 변환기
 
-**Valuetoconvert** 매개 변수에 **resultType**으로 변환 하는 명시적 캐스트 연산자가 있는 경우 해당 캐스트 연산자가 호출 됩니다. **ResultType** 매개 변수에 **valuetoconvert**에서 변환 하는 명시적 캐스트 연산자가 있는 경우 해당 cast 연산자가 호출 됩니다.
+**Valuetoconvert** 매개 변수에 **resultType** 으로 변환 하는 명시적 캐스트 연산자가 있는 경우 해당 캐스트 연산자가 호출 됩니다. **ResultType** 매개 변수에 **valuetoconvert** 에서 변환 하는 명시적 캐스트 연산자가 있는 경우 해당 cast 연산자가 호출 됩니다.

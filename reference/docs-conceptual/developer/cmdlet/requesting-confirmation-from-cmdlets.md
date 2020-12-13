@@ -1,18 +1,14 @@
 ---
-title: Cmdlet에서 확인 요청 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ConfirmImpact [PowerShell Programmer's Guide], described
-- ShouldContinue [PowerShell Programmer's Guide], described
-- user feedback [PowerShell Programmer's Guide], requesting
-- ShouldProcess [PowerShell Programmer's Guide], described
-- ConfirmPreference [PowerShell Programmer's Guide], described
-ms.openlocfilehash: bcc4c766d0012e7173550e3b6cb3ef058baa06bb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet에서 확인 요청
+description: Cmdlet에서 확인 요청
+ms.openlocfilehash: fd869d50b185cb4d38269640df58ec284a32da50
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781803"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646403"
 ---
 # <a name="requesting-confirmation-from-cmdlets"></a>Cmdlet에서 확인 요청
 
@@ -83,6 +79,6 @@ Cmdlet 및 공급자는 먼저 다음 메서드를 호출 하 여 Windows PowerS
 
 사용자가 명령을 호출 하는 방법에 따라 작업을 확인 하 라는 메시지를 표시 하는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) 를 호출 하 여이 작업을 수행 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

@@ -1,12 +1,14 @@
 ---
-title: 보기 (형식)의 CustomEntry에 대해 EntrySelectedBy의 TypeName 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f8dc2c808e6eb3d6a7873cdbddc936b95d94c541
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 CustomEntry의 EntrySelectedBy에 대한 TypeName 요소(형식)
+description: View에 대한 CustomEntry의 EntrySelectedBy에 대한 TypeName 요소(형식)
+ms.openlocfilehash: 72bb88bccc2bbd62f7ed160b820cf9169cb69341
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785101"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645737"
 ---
 # <a name="typename-element-for-entryselectedby-for-customentry-for-view-format"></a>View에 대한 CustomEntry의 EntrySelectedBy에 대한 TypeName 요소(형식)
 
