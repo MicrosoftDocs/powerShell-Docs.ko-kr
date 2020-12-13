@@ -1,23 +1,25 @@
 ---
-title: AccessDbProviderSample03 코드 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6eddbec6369fd861a3a67bbbebe3d6f98c4bc164
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: AccessDbProviderSample03 코드 샘플
+description: AccessDbProviderSample03 코드 샘플
+ms.openlocfilehash: 2a8ae91a96fc9d2f123709480234296c2d75392b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787294"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667558"
 ---
-# <a name="accessdbprovidersample03-code-sample"></a><span data-ttu-id="bf2fb-102">AccessDbProviderSample03 코드 샘플</span><span class="sxs-lookup"><span data-stu-id="bf2fb-102">AccessDbProviderSample03 Code Sample</span></span>
+# <a name="accessdbprovidersample03-code-sample"></a><span data-ttu-id="fc9fa-103">AccessDbProviderSample03 코드 샘플</span><span class="sxs-lookup"><span data-stu-id="fc9fa-103">AccessDbProviderSample03 Code Sample</span></span>
 
-<span data-ttu-id="bf2fb-103">다음 코드는 [Windows Powershell 항목 공급자 만들기](./creating-a-windows-powershell-item-provider.md)에서 설명 하는 windows powershell 공급자의 구현을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bf2fb-103">The following code shows the implementation of the Windows PowerShell provider described in [Creating a Windows PowerShell Item Provider](./creating-a-windows-powershell-item-provider.md).</span></span>
-<span data-ttu-id="bf2fb-104">이 공급자는 데이터 저장소의 데이터를 조작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bf2fb-104">This provider that can manipulate the data in a data store.</span></span>
+<span data-ttu-id="fc9fa-104">다음 코드는 [Windows Powershell 항목 공급자 만들기](./creating-a-windows-powershell-item-provider.md)에서 설명 하는 windows powershell 공급자의 구현을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fc9fa-104">The following code shows the implementation of the Windows PowerShell provider described in [Creating a Windows PowerShell Item Provider](./creating-a-windows-powershell-item-provider.md).</span></span>
+<span data-ttu-id="fc9fa-105">이 공급자는 데이터 저장소의 데이터를 조작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc9fa-105">This provider that can manipulate the data in a data store.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="bf2fb-105">Windows Vista 및 .NET Framework 3.0 런타임 구성 요소에 대 한 Microsoft Windows 소프트웨어 개발 키트를 사용 하 여이 공급자에 대 한 c # 소스 파일 (AccessDBSampleProvider03.cs)을 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bf2fb-105">You can download the C# source file (AccessDBSampleProvider03.cs) for this provider using the Microsoft Windows Software Development Kit for Windows Vista and .NET Framework 3.0 Runtime Components.</span></span> <span data-ttu-id="bf2fb-106">다운로드 지침은 [Windows powershell을 설치 하 고 Windows POWERSHELL SDK를 다운로드 하는 방법](/powershell/scripting/developer/installing-the-windows-powershell-sdk)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="bf2fb-106">For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).</span></span>
-> <span data-ttu-id="bf2fb-107">다운로드 된 원본 파일은 디렉터리에서 사용할 수 있습니다 **\<PowerShell Samples>** .</span><span class="sxs-lookup"><span data-stu-id="bf2fb-107">The downloaded source files are available in the **\<PowerShell Samples>** directory.</span></span> <span data-ttu-id="bf2fb-108">다른 Windows PowerShell 공급자 구현에 대 한 자세한 내용은 [Windows Powershell 공급자 디자인](./designing-your-windows-powershell-provider.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="bf2fb-108">For more information about other Windows PowerShell provider implementations, see [Designing Your Windows PowerShell Provider](./designing-your-windows-powershell-provider.md).</span></span>
+> <span data-ttu-id="fc9fa-106">Windows Vista 및 .NET Framework 3.0 런타임 구성 요소에 대 한 Microsoft Windows 소프트웨어 개발 키트를 사용 하 여이 공급자에 대 한 c # 소스 파일 (AccessDBSampleProvider03.cs)을 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc9fa-106">You can download the C# source file (AccessDBSampleProvider03.cs) for this provider using the Microsoft Windows Software Development Kit for Windows Vista and .NET Framework 3.0 Runtime Components.</span></span> <span data-ttu-id="fc9fa-107">다운로드 지침은 [Windows powershell을 설치 하 고 Windows POWERSHELL SDK를 다운로드 하는 방법](/powershell/scripting/developer/installing-the-windows-powershell-sdk)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="fc9fa-107">For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).</span></span>
+> <span data-ttu-id="fc9fa-108">다운로드 된 원본 파일은 디렉터리에서 사용할 수 있습니다 **\<PowerShell Samples>** .</span><span class="sxs-lookup"><span data-stu-id="fc9fa-108">The downloaded source files are available in the **\<PowerShell Samples>** directory.</span></span> <span data-ttu-id="fc9fa-109">다른 Windows PowerShell 공급자 구현에 대 한 자세한 내용은 [Windows Powershell 공급자 디자인](./designing-your-windows-powershell-provider.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="fc9fa-109">For more information about other Windows PowerShell provider implementations, see [Designing Your Windows PowerShell Provider](./designing-your-windows-powershell-provider.md).</span></span>
 
-## <a name="code-sample"></a><span data-ttu-id="bf2fb-109">코드 예제</span><span class="sxs-lookup"><span data-stu-id="bf2fb-109">Code Sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="fc9fa-110">코드 예제</span><span class="sxs-lookup"><span data-stu-id="fc9fa-110">Code Sample</span></span>
 
 ```csharp
 using System;
@@ -990,8 +992,8 @@ namespace Microsoft.Samples.PowerShell.Providers
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs" range="11-976":::
 
-## <a name="see-also"></a><span data-ttu-id="bf2fb-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bf2fb-110">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fc9fa-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fc9fa-111">See Also</span></span>
 
-[<span data-ttu-id="bf2fb-111">Windows PowerShell 프로그래머 가이드</span><span class="sxs-lookup"><span data-stu-id="bf2fb-111">Windows PowerShell Programmer's Guide</span></span>](./windows-powershell-programmer-s-guide.md)
+[<span data-ttu-id="fc9fa-112">Windows PowerShell 프로그래머 가이드</span><span class="sxs-lookup"><span data-stu-id="fc9fa-112">Windows PowerShell Programmer's Guide</span></span>](./windows-powershell-programmer-s-guide.md)
 
-[<span data-ttu-id="bf2fb-112">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="bf2fb-112">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="fc9fa-113">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="fc9fa-113">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)

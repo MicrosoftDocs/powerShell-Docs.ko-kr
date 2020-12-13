@@ -1,106 +1,108 @@
 ---
-title: 일반 매개 변수 이름 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d0939cfa5bf90ec55f0c0afcdeff56223d9dc78d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 일반 매개 변수 이름
+description: 일반 매개 변수 이름
+ms.openlocfilehash: cf39dd3b04660076718336857d79d55c3784ccd1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782228"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668221"
 ---
-# <a name="common-parameter-names"></a><span data-ttu-id="dcedf-102">일반 매개 변수 이름</span><span class="sxs-lookup"><span data-stu-id="dcedf-102">Common Parameter Names</span></span>
+# <a name="common-parameter-names"></a><span data-ttu-id="7448e-103">일반 매개 변수 이름</span><span class="sxs-lookup"><span data-stu-id="7448e-103">Common Parameter Names</span></span>
 
-<span data-ttu-id="dcedf-103">이 항목에서 설명 하는 매개 변수는 *일반 매개 변수*라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-103">The parameters described in this topic are referred to as *common parameters*.</span></span> <span data-ttu-id="dcedf-104">이러한 cmdlet은 Windows PowerShell 런타임에 의해 cmdlet에 추가 되며 cmdlet으로 선언할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-104">They are added to cmdlets by the Windows PowerShell runtime and cannot be declared by the cmdlet.</span></span>
+<span data-ttu-id="7448e-104">이 항목에서 설명 하는 매개 변수는 *일반 매개 변수* 라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-104">The parameters described in this topic are referred to as *common parameters*.</span></span> <span data-ttu-id="7448e-105">이러한 cmdlet은 Windows PowerShell 런타임에 의해 cmdlet에 추가 되며 cmdlet으로 선언할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-105">They are added to cmdlets by the Windows PowerShell runtime and cannot be declared by the cmdlet.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="dcedf-105">이러한 매개 변수는 공급자 cmdlet에 추가 되 고 특성을 사용 하 여 데코레이팅된 함수에도 추가 됩니다 `CmdletBinding` .</span><span class="sxs-lookup"><span data-stu-id="dcedf-105">These parameters are also added to provider cmdlets and to functions that are decorated with the `CmdletBinding` attribute.</span></span>
+> <span data-ttu-id="7448e-106">이러한 매개 변수는 공급자 cmdlet에 추가 되 고 특성을 사용 하 여 데코레이팅된 함수에도 추가 됩니다 `CmdletBinding` .</span><span class="sxs-lookup"><span data-stu-id="7448e-106">These parameters are also added to provider cmdlets and to functions that are decorated with the `CmdletBinding` attribute.</span></span>
 
-## <a name="general-common-parameters"></a><span data-ttu-id="dcedf-106">일반 일반 매개 변수</span><span class="sxs-lookup"><span data-stu-id="dcedf-106">General Common Parameters</span></span>
+## <a name="general-common-parameters"></a><span data-ttu-id="7448e-107">일반 일반 매개 변수</span><span class="sxs-lookup"><span data-stu-id="7448e-107">General Common Parameters</span></span>
 
-<span data-ttu-id="dcedf-107">다음 매개 변수는 모든 cmdlet에 추가 되며 cmdlet이 실행 될 때마다 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-107">The following parameters are added to all cmdlets and can be accessed whenever the cmdlet is run.</span></span> <span data-ttu-id="dcedf-108">이러한 매개 변수는 [Commonparameters](/dotnet/api/System.Management.Automation.Internal.CommonParameters) 클래스에 의해 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-108">These parameters are defined by the [System.Management.Automation.Internal.Commonparameters](/dotnet/api/System.Management.Automation.Internal.CommonParameters) class.</span></span>
+<span data-ttu-id="7448e-108">다음 매개 변수는 모든 cmdlet에 추가 되며 cmdlet이 실행 될 때마다 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-108">The following parameters are added to all cmdlets and can be accessed whenever the cmdlet is run.</span></span> <span data-ttu-id="7448e-109">이러한 매개 변수는 [Commonparameters](/dotnet/api/System.Management.Automation.Internal.CommonParameters) 클래스에 의해 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-109">These parameters are defined by the [System.Management.Automation.Internal.Commonparameters](/dotnet/api/System.Management.Automation.Internal.CommonParameters) class.</span></span>
 
-### <a name="debug-alias-db"></a><span data-ttu-id="dcedf-109">디버그 (별칭: db)</span><span class="sxs-lookup"><span data-stu-id="dcedf-109">Debug (alias: db)</span></span>
+### <a name="debug-alias-db"></a><span data-ttu-id="7448e-110">디버그 (별칭: db)</span><span class="sxs-lookup"><span data-stu-id="7448e-110">Debug (alias: db)</span></span>
 
-<span data-ttu-id="dcedf-110">데이터 형식: SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="dcedf-110">Data type: SwitchParameter</span></span>
+<span data-ttu-id="7448e-111">데이터 형식: SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="7448e-111">Data type: SwitchParameter</span></span>
 
-<span data-ttu-id="dcedf-111">이 매개 변수는 명령줄에 표시 될 수 있는 프로그래머 수준의 디버깅 메시지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-111">This parameter specifies whether programmer-level debugging messages that can be displayed at the command line.</span></span> <span data-ttu-id="dcedf-112">이러한 메시지는 cmdlet의 작업 문제를 해결 하기 위한 것 이며,이는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 를 호출 하 여 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-112">These messages are intended for troubleshooting the operation of the cmdlet, and are generated by calls to the [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) method.</span></span> <span data-ttu-id="dcedf-113">디버그 메시지는 지역화할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-113">Debug messages do not need to be localized.</span></span>
+<span data-ttu-id="7448e-112">이 매개 변수는 명령줄에 표시 될 수 있는 프로그래머 수준의 디버깅 메시지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-112">This parameter specifies whether programmer-level debugging messages that can be displayed at the command line.</span></span> <span data-ttu-id="7448e-113">이러한 메시지는 cmdlet의 작업 문제를 해결 하기 위한 것 이며,이는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) 를 호출 하 여 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-113">These messages are intended for troubleshooting the operation of the cmdlet, and are generated by calls to the [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) method.</span></span> <span data-ttu-id="7448e-114">디버그 메시지는 지역화할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-114">Debug messages do not need to be localized.</span></span>
 
-### <a name="erroraction-alias-ea"></a><span data-ttu-id="dcedf-114">ErrorAction (별칭: ea)</span><span class="sxs-lookup"><span data-stu-id="dcedf-114">ErrorAction (alias: ea)</span></span>
+### <a name="erroraction-alias-ea"></a><span data-ttu-id="7448e-115">ErrorAction (별칭: ea)</span><span class="sxs-lookup"><span data-stu-id="7448e-115">ErrorAction (alias: ea)</span></span>
 
-<span data-ttu-id="dcedf-115">데이터 형식: Enumeration</span><span class="sxs-lookup"><span data-stu-id="dcedf-115">Data type: Enumeration</span></span>
+<span data-ttu-id="7448e-116">데이터 형식: Enumeration</span><span class="sxs-lookup"><span data-stu-id="7448e-116">Data type: Enumeration</span></span>
 
-<span data-ttu-id="dcedf-116">이 매개 변수는 오류가 발생할 때 수행할 동작을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-116">This parameter specifies what action should take place when an error occurs.</span></span> <span data-ttu-id="dcedf-117">이 매개 변수에 사용할 수 있는 값은 System.web. [Actionpreference 설정](/dotnet/api/System.Management.Automation.ActionPreference) 열거형에 의해 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-117">The possible values for this parameter are defined by the [System.Management.Automation.Actionpreference](/dotnet/api/System.Management.Automation.ActionPreference) enumeration.</span></span>
+<span data-ttu-id="7448e-117">이 매개 변수는 오류가 발생할 때 수행할 동작을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-117">This parameter specifies what action should take place when an error occurs.</span></span> <span data-ttu-id="7448e-118">이 매개 변수에 사용할 수 있는 값은 System.web. [Actionpreference 설정](/dotnet/api/System.Management.Automation.ActionPreference) 열거형에 의해 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-118">The possible values for this parameter are defined by the [System.Management.Automation.Actionpreference](/dotnet/api/System.Management.Automation.ActionPreference) enumeration.</span></span>
 
-### <a name="errorvariable-alias-ev"></a><span data-ttu-id="dcedf-118">ErrorVariable (alias: ev)</span><span class="sxs-lookup"><span data-stu-id="dcedf-118">ErrorVariable (alias: ev)</span></span>
+### <a name="errorvariable-alias-ev"></a><span data-ttu-id="7448e-119">ErrorVariable (alias: ev)</span><span class="sxs-lookup"><span data-stu-id="7448e-119">ErrorVariable (alias: ev)</span></span>
 
-<span data-ttu-id="dcedf-119">데이터 형식: 문자열</span><span class="sxs-lookup"><span data-stu-id="dcedf-119">Data type: String</span></span>
+<span data-ttu-id="7448e-120">데이터 형식: 문자열</span><span class="sxs-lookup"><span data-stu-id="7448e-120">Data type: String</span></span>
 
-<span data-ttu-id="dcedf-120">이 매개 변수는 오류가 발생 하는 경우 개체를 저장할 변수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-120">This parameter specifies the variable in which to place objects when an error occurs.</span></span> <span data-ttu-id="dcedf-121">이 변수에 추가 하려면 변수를 지우고 설정 하는 대신 +*varname* 을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-121">To append to this variable, use +*varname* rather than clearing and setting the variable.</span></span>
+<span data-ttu-id="7448e-121">이 매개 변수는 오류가 발생 하는 경우 개체를 저장할 변수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-121">This parameter specifies the variable in which to place objects when an error occurs.</span></span> <span data-ttu-id="7448e-122">이 변수에 추가 하려면 변수를 지우고 설정 하는 대신 +*varname* 을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-122">To append to this variable, use +*varname* rather than clearing and setting the variable.</span></span>
 
-### <a name="outvariable-alias-ov"></a><span data-ttu-id="dcedf-122">OutVariable (별칭: ov-es)</span><span class="sxs-lookup"><span data-stu-id="dcedf-122">OutVariable (alias: ov)</span></span>
+### <a name="outvariable-alias-ov"></a><span data-ttu-id="7448e-123">OutVariable (별칭: ov-es)</span><span class="sxs-lookup"><span data-stu-id="7448e-123">OutVariable (alias: ov)</span></span>
 
-<span data-ttu-id="dcedf-123">데이터 형식: 문자열</span><span class="sxs-lookup"><span data-stu-id="dcedf-123">Data type: String</span></span>
+<span data-ttu-id="7448e-124">데이터 형식: 문자열</span><span class="sxs-lookup"><span data-stu-id="7448e-124">Data type: String</span></span>
 
-<span data-ttu-id="dcedf-124">이 매개 변수는 cmdlet에 의해 생성 된 모든 출력 개체를 저장할 변수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-124">This parameter specifies the variable in which to place all output objects generated by the cmdlet.</span></span> <span data-ttu-id="dcedf-125">이 변수에 추가 하려면 변수를 지우고 설정 하는 대신 +*varname* 을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-125">To append to this variable, use +*varname* rather than clearing and setting the variable.</span></span>
+<span data-ttu-id="7448e-125">이 매개 변수는 cmdlet에 의해 생성 된 모든 출력 개체를 저장할 변수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-125">This parameter specifies the variable in which to place all output objects generated by the cmdlet.</span></span> <span data-ttu-id="7448e-126">이 변수에 추가 하려면 변수를 지우고 설정 하는 대신 +*varname* 을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-126">To append to this variable, use +*varname* rather than clearing and setting the variable.</span></span>
 
-### <a name="outbuffer-alias-ob"></a><span data-ttu-id="dcedf-126">OutBuffer (별칭: ob)</span><span class="sxs-lookup"><span data-stu-id="dcedf-126">OutBuffer (alias: ob)</span></span>
+### <a name="outbuffer-alias-ob"></a><span data-ttu-id="7448e-127">OutBuffer (별칭: ob)</span><span class="sxs-lookup"><span data-stu-id="7448e-127">OutBuffer (alias: ob)</span></span>
 
-<span data-ttu-id="dcedf-127">데이터 형식: Int32</span><span class="sxs-lookup"><span data-stu-id="dcedf-127">Data type: Int32</span></span>
+<span data-ttu-id="7448e-128">데이터 형식: Int32</span><span class="sxs-lookup"><span data-stu-id="7448e-128">Data type: Int32</span></span>
 
-<span data-ttu-id="dcedf-128">이 매개 변수는 개체를 파이프라인으로 전달 하기 전에 출력 버퍼에 저장할 개체의 수를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-128">This parameter defines the number of objects to store in the output buffer before any objects are passed down the pipeline.</span></span> <span data-ttu-id="dcedf-129">기본적으로 개체는 즉시 파이프라인으로 전달 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-129">By default, objects are passed immediately down the pipeline.</span></span>
+<span data-ttu-id="7448e-129">이 매개 변수는 개체를 파이프라인으로 전달 하기 전에 출력 버퍼에 저장할 개체의 수를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-129">This parameter defines the number of objects to store in the output buffer before any objects are passed down the pipeline.</span></span> <span data-ttu-id="7448e-130">기본적으로 개체는 즉시 파이프라인으로 전달 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-130">By default, objects are passed immediately down the pipeline.</span></span>
 
-### <a name="verbose-alias-vb"></a><span data-ttu-id="dcedf-130">Verbose (별칭: vb)</span><span class="sxs-lookup"><span data-stu-id="dcedf-130">Verbose (alias: vb)</span></span>
+### <a name="verbose-alias-vb"></a><span data-ttu-id="7448e-131">Verbose (별칭: vb)</span><span class="sxs-lookup"><span data-stu-id="7448e-131">Verbose (alias: vb)</span></span>
 
-<span data-ttu-id="dcedf-131">데이터 형식: SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="dcedf-131">Data type: SwitchParameter</span></span>
+<span data-ttu-id="7448e-132">데이터 형식: SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="7448e-132">Data type: SwitchParameter</span></span>
 
-<span data-ttu-id="dcedf-132">이 매개 변수는 cmdlet이 명령줄에 표시 될 수 있는 설명 메시지를 기록할지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-132">This parameter specifies whether the cmdlet writes explanatory messages that can be displayed at the command line.</span></span> <span data-ttu-id="dcedf-133">이러한 메시지는 사용자에 게 추가 도움말을 제공 하기 위한 것 이며,이는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) 를 호출 하 여 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-133">These messages are intended to provide additional help to the user, and are generated by calls to the [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) method.</span></span>
+<span data-ttu-id="7448e-133">이 매개 변수는 cmdlet이 명령줄에 표시 될 수 있는 설명 메시지를 기록할지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-133">This parameter specifies whether the cmdlet writes explanatory messages that can be displayed at the command line.</span></span> <span data-ttu-id="7448e-134">이러한 메시지는 사용자에 게 추가 도움말을 제공 하기 위한 것 이며,이는 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) 를 호출 하 여 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-134">These messages are intended to provide additional help to the user, and are generated by calls to the [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) method.</span></span>
 
-### <a name="warningaction-alias-wa"></a><span data-ttu-id="dcedf-134">WarningAction (별칭: wa)</span><span class="sxs-lookup"><span data-stu-id="dcedf-134">WarningAction (alias: wa)</span></span>
+### <a name="warningaction-alias-wa"></a><span data-ttu-id="7448e-135">WarningAction (별칭: wa)</span><span class="sxs-lookup"><span data-stu-id="7448e-135">WarningAction (alias: wa)</span></span>
 
-<span data-ttu-id="dcedf-135">데이터 형식: Enumeration</span><span class="sxs-lookup"><span data-stu-id="dcedf-135">Data type: Enumeration</span></span>
+<span data-ttu-id="7448e-136">데이터 형식: Enumeration</span><span class="sxs-lookup"><span data-stu-id="7448e-136">Data type: Enumeration</span></span>
 
-<span data-ttu-id="dcedf-136">이 매개 변수는 cmdlet이 경고 메시지를 쓸 때 발생 하는 동작을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-136">This parameter specifies what action should take place when the cmdlet writes a warning message.</span></span> <span data-ttu-id="dcedf-137">이 매개 변수에 사용할 수 있는 값은 System.web. [Actionpreference 설정](/dotnet/api/System.Management.Automation.ActionPreference) 열거형에 의해 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-137">The possible values for this parameter are defined by the [System.Management.Automation.Actionpreference](/dotnet/api/System.Management.Automation.ActionPreference) enumeration.</span></span>
+<span data-ttu-id="7448e-137">이 매개 변수는 cmdlet이 경고 메시지를 쓸 때 발생 하는 동작을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-137">This parameter specifies what action should take place when the cmdlet writes a warning message.</span></span> <span data-ttu-id="7448e-138">이 매개 변수에 사용할 수 있는 값은 System.web. [Actionpreference 설정](/dotnet/api/System.Management.Automation.ActionPreference) 열거형에 의해 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-138">The possible values for this parameter are defined by the [System.Management.Automation.Actionpreference](/dotnet/api/System.Management.Automation.ActionPreference) enumeration.</span></span>
 
-### <a name="warningvariable-alias-wv"></a><span data-ttu-id="dcedf-138">WarningVariable (별칭: wv)</span><span class="sxs-lookup"><span data-stu-id="dcedf-138">WarningVariable (alias: wv)</span></span>
+### <a name="warningvariable-alias-wv"></a><span data-ttu-id="7448e-139">WarningVariable (별칭: wv)</span><span class="sxs-lookup"><span data-stu-id="7448e-139">WarningVariable (alias: wv)</span></span>
 
-<span data-ttu-id="dcedf-139">데이터 형식: 문자열</span><span class="sxs-lookup"><span data-stu-id="dcedf-139">Data type: String</span></span>
+<span data-ttu-id="7448e-140">데이터 형식: 문자열</span><span class="sxs-lookup"><span data-stu-id="7448e-140">Data type: String</span></span>
 
-<span data-ttu-id="dcedf-140">이 매개 변수는 경고 메시지를 저장할 수 있는 변수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-140">This parameter specifies the variable in which warning messages can be saved.</span></span> <span data-ttu-id="dcedf-141">이 변수에 추가 하려면 변수를 지우고 설정 하는 대신 +*varname* 을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-141">To append to this variable, use +*varname* rather than clearing and setting the variable.</span></span>
+<span data-ttu-id="7448e-141">이 매개 변수는 경고 메시지를 저장할 수 있는 변수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-141">This parameter specifies the variable in which warning messages can be saved.</span></span> <span data-ttu-id="7448e-142">이 변수에 추가 하려면 변수를 지우고 설정 하는 대신 +*varname* 을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-142">To append to this variable, use +*varname* rather than clearing and setting the variable.</span></span>
 
-## <a name="risk-mitigation-parameters"></a><span data-ttu-id="dcedf-142">위험-완화 매개 변수</span><span class="sxs-lookup"><span data-stu-id="dcedf-142">Risk-Mitigation Parameters</span></span>
+## <a name="risk-mitigation-parameters"></a><span data-ttu-id="7448e-143">Risk-Mitigation 매개 변수</span><span class="sxs-lookup"><span data-stu-id="7448e-143">Risk-Mitigation Parameters</span></span>
 
-<span data-ttu-id="dcedf-143">다음 매개 변수는 작업을 수행 하기 전에 확인을 요청 하는 cmdlet에 추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-143">The following parameters are added to cmdlets that requests confirmation before they perform their action.</span></span> <span data-ttu-id="dcedf-144">확인 요청에 대 한 자세한 내용은 [확인 요청](./requesting-confirmation-from-cmdlets.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="dcedf-144">For more information about confirmation requests, see [Requesting Confirmation](./requesting-confirmation-from-cmdlets.md).</span></span> <span data-ttu-id="dcedf-145">이러한 매개 변수는 [Shouldprocessparameters](/dotnet/api/System.Management.Automation.Internal.ShouldProcessParameters) 클래스에 의해 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-145">These parameters are defined by the [System.Management.Automation.Internal.Shouldprocessparameters](/dotnet/api/System.Management.Automation.Internal.ShouldProcessParameters) class.</span></span>
+<span data-ttu-id="7448e-144">다음 매개 변수는 작업을 수행 하기 전에 확인을 요청 하는 cmdlet에 추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-144">The following parameters are added to cmdlets that requests confirmation before they perform their action.</span></span> <span data-ttu-id="7448e-145">확인 요청에 대 한 자세한 내용은 [확인 요청](./requesting-confirmation-from-cmdlets.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="7448e-145">For more information about confirmation requests, see [Requesting Confirmation](./requesting-confirmation-from-cmdlets.md).</span></span> <span data-ttu-id="7448e-146">이러한 매개 변수는 [Shouldprocessparameters](/dotnet/api/System.Management.Automation.Internal.ShouldProcessParameters) 클래스에 의해 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-146">These parameters are defined by the [System.Management.Automation.Internal.Shouldprocessparameters](/dotnet/api/System.Management.Automation.Internal.ShouldProcessParameters) class.</span></span>
 
-### <a name="confirm-alias-cf"></a><span data-ttu-id="dcedf-146">확인 (별칭: cf)</span><span class="sxs-lookup"><span data-stu-id="dcedf-146">Confirm (alias: cf)</span></span>
+### <a name="confirm-alias-cf"></a><span data-ttu-id="7448e-147">확인 (별칭: cf)</span><span class="sxs-lookup"><span data-stu-id="7448e-147">Confirm (alias: cf)</span></span>
 
-<span data-ttu-id="dcedf-147">데이터 형식: SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="dcedf-147">Data type: SwitchParameter</span></span>
+<span data-ttu-id="7448e-148">데이터 형식: SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="7448e-148">Data type: SwitchParameter</span></span>
 
-<span data-ttu-id="dcedf-148">이 매개 변수는 cmdlet에서 사용자에 게 계속할지 묻는 메시지를 표시할지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-148">This parameter specifies whether the cmdlet displays a prompt that asks if the user is sure that they want to continue.</span></span>
+<span data-ttu-id="7448e-149">이 매개 변수는 cmdlet에서 사용자에 게 계속할지 묻는 메시지를 표시할지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-149">This parameter specifies whether the cmdlet displays a prompt that asks if the user is sure that they want to continue.</span></span>
 
-### <a name="whatif-alias-wi"></a><span data-ttu-id="dcedf-149">WhatIf (별칭: wi)</span><span class="sxs-lookup"><span data-stu-id="dcedf-149">WhatIf (alias: wi)</span></span>
+### <a name="whatif-alias-wi"></a><span data-ttu-id="7448e-150">WhatIf (별칭: wi)</span><span class="sxs-lookup"><span data-stu-id="7448e-150">WhatIf (alias: wi)</span></span>
 
-<span data-ttu-id="dcedf-150">데이터 형식: SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="dcedf-150">Data type: SwitchParameter</span></span>
+<span data-ttu-id="7448e-151">데이터 형식: SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="7448e-151">Data type: SwitchParameter</span></span>
 
-<span data-ttu-id="dcedf-151">이 매개 변수는 cmdlet이 실제로 아무 동작도 수행 하지 않고 cmdlet을 실행 한 결과를 설명 하는 메시지를 기록할지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-151">This parameter specifies whether the cmdlet writes a message that describes the effects of running the cmdlet without actually performing any action.</span></span>
+<span data-ttu-id="7448e-152">이 매개 변수는 cmdlet이 실제로 아무 동작도 수행 하지 않고 cmdlet을 실행 한 결과를 설명 하는 메시지를 기록할지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-152">This parameter specifies whether the cmdlet writes a message that describes the effects of running the cmdlet without actually performing any action.</span></span>
 
-## <a name="transaction-parameters"></a><span data-ttu-id="dcedf-152">트랜잭션 매개 변수</span><span class="sxs-lookup"><span data-stu-id="dcedf-152">Transaction Parameters</span></span>
+## <a name="transaction-parameters"></a><span data-ttu-id="7448e-153">트랜잭션 매개 변수</span><span class="sxs-lookup"><span data-stu-id="7448e-153">Transaction Parameters</span></span>
 
-<span data-ttu-id="dcedf-153">다음 매개 변수는 트랜잭션을 지 원하는 cmdlet에 추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-153">The following parameter is added to cmdlets that support transactions.</span></span> <span data-ttu-id="dcedf-154">이러한 매개 변수는 [system.object](/dotnet/api/System.Management.Automation.Internal.TransactionParameters) 를 통해 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-154">These parameters are defined by the [System.Management.Automation.Internal.Transactionparameters](/dotnet/api/System.Management.Automation.Internal.TransactionParameters) class.</span></span>
+<span data-ttu-id="7448e-154">다음 매개 변수는 트랜잭션을 지 원하는 cmdlet에 추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-154">The following parameter is added to cmdlets that support transactions.</span></span> <span data-ttu-id="7448e-155">이러한 매개 변수는 [system.object](/dotnet/api/System.Management.Automation.Internal.TransactionParameters) 를 통해 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-155">These parameters are defined by the [System.Management.Automation.Internal.Transactionparameters](/dotnet/api/System.Management.Automation.Internal.TransactionParameters) class.</span></span>
 
-### <a name="usetransaction-alias-usetx"></a><span data-ttu-id="dcedf-155">UseTransaction (별칭: usetx)</span><span class="sxs-lookup"><span data-stu-id="dcedf-155">UseTransaction (alias: usetx)</span></span>
+### <a name="usetransaction-alias-usetx"></a><span data-ttu-id="7448e-156">UseTransaction (별칭: usetx)</span><span class="sxs-lookup"><span data-stu-id="7448e-156">UseTransaction (alias: usetx)</span></span>
 
-<span data-ttu-id="dcedf-156">데이터 형식: SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="dcedf-156">Data type: SwitchParameter</span></span>
+<span data-ttu-id="7448e-157">데이터 형식: SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="7448e-157">Data type: SwitchParameter</span></span>
 
-<span data-ttu-id="dcedf-157">이 매개 변수는 cmdlet이 현재 트랜잭션을 사용 하 여 해당 작업을 수행할지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-157">This parameter specifies whether the cmdlet will use the current transaction to perform its action.</span></span>
+<span data-ttu-id="7448e-158">이 매개 변수는 cmdlet이 현재 트랜잭션을 사용 하 여 해당 작업을 수행할지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-158">This parameter specifies whether the cmdlet will use the current transaction to perform its action.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="dcedf-158">참고 항목</span><span class="sxs-lookup"><span data-stu-id="dcedf-158">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7448e-159">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7448e-159">See Also</span></span>
 
-[<span data-ttu-id="dcedf-159">Commonparameters입니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-159">System.Management.Automation.Internal.Commonparameters</span></span>](/dotnet/api/System.Management.Automation.Internal.CommonParameters)
+[<span data-ttu-id="7448e-160">Commonparameters입니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-160">System.Management.Automation.Internal.Commonparameters</span></span>](/dotnet/api/System.Management.Automation.Internal.CommonParameters)
 
-[<span data-ttu-id="dcedf-160">Shouldprocessparameters입니다.</span><span class="sxs-lookup"><span data-stu-id="dcedf-160">System.Management.Automation.Internal.Shouldprocessparameters</span></span>](/dotnet/api/System.Management.Automation.Internal.ShouldProcessParameters)
+[<span data-ttu-id="7448e-161">Shouldprocessparameters입니다.</span><span class="sxs-lookup"><span data-stu-id="7448e-161">System.Management.Automation.Internal.Shouldprocessparameters</span></span>](/dotnet/api/System.Management.Automation.Internal.ShouldProcessParameters)
 
-[<span data-ttu-id="dcedf-161">System.object 매개 변수를</span><span class="sxs-lookup"><span data-stu-id="dcedf-161">System.Management.Automation.Internal.Transactionparameters</span></span>](/dotnet/api/System.Management.Automation.Internal.TransactionParameters)
+[<span data-ttu-id="7448e-162">System.object 매개 변수를</span><span class="sxs-lookup"><span data-stu-id="7448e-162">System.Management.Automation.Internal.Transactionparameters</span></span>](/dotnet/api/System.Management.Automation.Internal.TransactionParameters)
 
-[<span data-ttu-id="dcedf-162">Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="dcedf-162">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
+<span data-ttu-id="7448e-163">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="7448e-163">[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)</span></span>
 
-[<span data-ttu-id="dcedf-163">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="dcedf-163">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="7448e-164">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="7448e-164">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)

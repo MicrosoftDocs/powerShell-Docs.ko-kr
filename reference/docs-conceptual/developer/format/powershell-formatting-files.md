@@ -1,31 +1,33 @@
 ---
-title: Windows PowerShell 서식 지정 파일 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 54fae12163f8d439c2acc24df17ed140a556cba0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 형식 지정 파일
+description: Windows PowerShell 형식 지정 파일
+ms.openlocfilehash: 7fa58a3463dc4b2a23d38d161d83387744334d44
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783503"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666368"
 ---
-# <a name="windows-powershell-formatting-files"></a><span data-ttu-id="366a0-102">Windows PowerShell 형식 지정 파일</span><span class="sxs-lookup"><span data-stu-id="366a0-102">Windows PowerShell Formatting Files</span></span>
+# <a name="windows-powershell-formatting-files"></a><span data-ttu-id="d04c9-103">Windows PowerShell 형식 지정 파일</span><span class="sxs-lookup"><span data-stu-id="d04c9-103">Windows PowerShell Formatting Files</span></span>
 
-<span data-ttu-id="366a0-103">Windows PowerShell에서는 설치 디렉터리 ()에 있는 여러 서식 파일 (.format.ps1xml)을 제공 `$pshome` 합니다.</span><span class="sxs-lookup"><span data-stu-id="366a0-103">Windows PowerShell provides several formatting files (.format.ps1xml) that are located in the installation directory (`$pshome`).</span></span> <span data-ttu-id="366a0-104">이러한 각 파일은 특정 .NET 개체 집합에 대 한 기본 표시를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="366a0-104">Each of these files defines the default display for a specific set of .NET objects.</span></span> <span data-ttu-id="366a0-105">이러한 파일은 변경 하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="366a0-105">These files should never be changed.</span></span> <span data-ttu-id="366a0-106">그러나 사용자 지정 서식 파일을 만들기 위한 참조로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="366a0-106">However, you can use them as a reference for creating your own custom formatting files.</span></span>
+<span data-ttu-id="d04c9-104">Windows PowerShell에서는 설치 디렉터리 ()에 있는 여러 서식 파일 (.format.ps1xml)을 제공 `$pshome` 합니다.</span><span class="sxs-lookup"><span data-stu-id="d04c9-104">Windows PowerShell provides several formatting files (.format.ps1xml) that are located in the installation directory (`$pshome`).</span></span> <span data-ttu-id="d04c9-105">이러한 각 파일은 특정 .NET 개체 집합에 대 한 기본 표시를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="d04c9-105">Each of these files defines the default display for a specific set of .NET objects.</span></span> <span data-ttu-id="d04c9-106">이러한 파일은 변경 하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d04c9-106">These files should never be changed.</span></span> <span data-ttu-id="d04c9-107">그러나 사용자 지정 서식 파일을 만들기 위한 참조로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d04c9-107">However, you can use them as a reference for creating your own custom formatting files.</span></span>
 
-<span data-ttu-id="366a0-107">`Certificate.Format.ps1xml`인증서 저장소에 있는 개체 (예: x.509 인증서 및 인증서 저장소)의 표시를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="366a0-107">`Certificate.Format.ps1xml` Defines the display of objects in the Certificate store such as x.509 certificates and certificate stores.</span></span>
+<span data-ttu-id="d04c9-108">`Certificate.Format.ps1xml` 인증서 저장소에 있는 개체 (예: x.509 인증서 및 인증서 저장소)의 표시를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="d04c9-108">`Certificate.Format.ps1xml` Defines the display of objects in the Certificate store such as x.509 certificates and certificate stores.</span></span>
 
-<span data-ttu-id="366a0-108">`DotNetTypes.Format.ps1xml`CultureInfo, FileVersionInfo 및 EventLogEntry 개체와 같은 기타 .NET 개체의 표시를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="366a0-108">`DotNetTypes.Format.ps1xml` Defines the display of miscellaneous .NET objects such as CultureInfo, FileVersionInfo, and EventLogEntry objects.</span></span>
+<span data-ttu-id="d04c9-109">`DotNetTypes.Format.ps1xml` CultureInfo, FileVersionInfo 및 EventLogEntry 개체와 같은 기타 .NET 개체의 표시를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="d04c9-109">`DotNetTypes.Format.ps1xml` Defines the display of miscellaneous .NET objects such as CultureInfo, FileVersionInfo, and EventLogEntry objects.</span></span>
 
-<span data-ttu-id="366a0-109">`FileSystem.Format.ps1xml`파일 및 디렉터리 개체와 같은 파일 시스템 개체의 표시를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="366a0-109">`FileSystem.Format.ps1xml` Defines the display of file system objects such as file and directory objects.</span></span>
+<span data-ttu-id="d04c9-110">`FileSystem.Format.ps1xml` 파일 및 디렉터리 개체와 같은 파일 시스템 개체의 표시를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="d04c9-110">`FileSystem.Format.ps1xml` Defines the display of file system objects such as file and directory objects.</span></span>
 
-<span data-ttu-id="366a0-110">`Help.Format.ps1xml`Detailed, full, parameters 및 example 뷰와 같이 [get-help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet에서 사용 하는 다양 한 뷰를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="366a0-110">`Help.Format.ps1xml` Defines the different views used by the [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet, such as the detailed, full, parameters, and example views.</span></span>
+<span data-ttu-id="d04c9-111">`Help.Format.ps1xml` Detailed, full, parameters 및 example 뷰와 같이 [get-help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet에서 사용 하는 다양 한 뷰를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="d04c9-111">`Help.Format.ps1xml` Defines the different views used by the [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet, such as the detailed, full, parameters, and example views.</span></span>
 
-<span data-ttu-id="366a0-111">`PowerShellCore.Format.ps1xml`Windows PowerShell 핵심 cmdlet에 의해 생성 된 개체의 표시를 정의 합니다 (예: [Get Member](/powershell/module/Microsoft.PowerShell.Utility/Get-Member) 및 [get History](/powershell/module/Microsoft.PowerShell.Core/Get-History) cmdlet에서 반환 된 개체).</span><span class="sxs-lookup"><span data-stu-id="366a0-111">`PowerShellCore.Format.ps1xml` Defines the display of the objects generated by Windows PowerShell core cmdlets, such as the objects returned by the [Get-Member](/powershell/module/Microsoft.PowerShell.Utility/Get-Member) and [Get-History](/powershell/module/Microsoft.PowerShell.Core/Get-History) cmdlets.</span></span>
+<span data-ttu-id="d04c9-112">`PowerShellCore.Format.ps1xml` Windows PowerShell 핵심 cmdlet에 의해 생성 된 개체의 표시를 정의 합니다 (예: [Get Member](/powershell/module/Microsoft.PowerShell.Utility/Get-Member) 및 [get History](/powershell/module/Microsoft.PowerShell.Core/Get-History) cmdlet에서 반환 된 개체).</span><span class="sxs-lookup"><span data-stu-id="d04c9-112">`PowerShellCore.Format.ps1xml` Defines the display of the objects generated by Windows PowerShell core cmdlets, such as the objects returned by the [Get-Member](/powershell/module/Microsoft.PowerShell.Utility/Get-Member) and [Get-History](/powershell/module/Microsoft.PowerShell.Core/Get-History) cmdlets.</span></span>
 
-<span data-ttu-id="366a0-112">`PowerShellTrace.Format.ps1xml`추적 [명령](/powershell/module/Microsoft.PowerShell.Utility/Trace-Command) cmdlet에 의해 생성 된 것과 같은 추적 개체의 표시를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="366a0-112">`PowerShellTrace.Format.ps1xml` Defines the display of trace objects such as those generated by the [Trace-Command](/powershell/module/Microsoft.PowerShell.Utility/Trace-Command) cmdlet.</span></span>
+<span data-ttu-id="d04c9-113">`PowerShellTrace.Format.ps1xml` 추적 [명령](/powershell/module/Microsoft.PowerShell.Utility/Trace-Command) cmdlet에 의해 생성 된 것과 같은 추적 개체의 표시를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="d04c9-113">`PowerShellTrace.Format.ps1xml` Defines the display of trace objects such as those generated by the [Trace-Command](/powershell/module/Microsoft.PowerShell.Utility/Trace-Command) cmdlet.</span></span>
 
-<span data-ttu-id="366a0-113">`Registry.Format.ps1xml`키 및 항목 개체와 같은 레지스트리 개체의 표시를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="366a0-113">`Registry.Format.ps1xml` Defines the display of registry objects such as key and entry objects.</span></span>
+<span data-ttu-id="d04c9-114">`Registry.Format.ps1xml` 키 및 항목 개체와 같은 레지스트리 개체의 표시를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="d04c9-114">`Registry.Format.ps1xml` Defines the display of registry objects such as key and entry objects.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="366a0-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="366a0-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d04c9-115">관련 항목</span><span class="sxs-lookup"><span data-stu-id="d04c9-115">See Also</span></span>
 
-[<span data-ttu-id="366a0-115">Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="366a0-115">Writing a Windows PowerShell Cmdlet</span></span>](../cmdlet/writing-a-windows-powershell-cmdlet.md)
+[<span data-ttu-id="d04c9-116">Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="d04c9-116">Writing a Windows PowerShell Cmdlet</span></span>](../cmdlet/writing-a-windows-powershell-cmdlet.md)
