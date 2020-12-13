@@ -1,12 +1,14 @@
 ---
-title: Cmdlet에서 cmdlet 및 스크립트 호출 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 3d5f76242c02763c41b81215bbb031e19869066a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 내에서 Cmdlet 및 호출
+description: Cmdlet 내에서 Cmdlet 및 호출
+ms.openlocfilehash: 246c61661f2d290e7e7ac62a8ad303b05bdc7582
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786580"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652653"
 ---
 # <a name="invoking-cmdlets-and-scripts-within-a-cmdlet"></a>Cmdlet 내에서 Cmdlet 및 호출
 
@@ -22,13 +24,13 @@ System.object.. n a m. [Invoke *](/dotnet/api/System.Management.Automation.Cmdle
 
 Emumerator cmdlet 개체를 호출 하 고 강력한 형식의를 반환 [합니다.](/dotnet/api/System.Management.Automation.Cmdlet.Invoke) 이 변형을 사용 하면 사용자가 컬렉션의 개체를 사용 하 여 사용자 지정 작업을 수행할 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 |예제|설명|
 |-------------|-----------------|
 |[Cmdlet에서 cmdlet 호출](./how-to-invoke-a-cmdlet-from-within-a-cmdlet.md)|이 예에서는 다른 cmdlet 내에서 cmdlet을 호출 하는 방법을 보여 줍니다.|
 |[Cmdlet 내에서 스크립트 호출](./how-to-invoke-scripts-within-a-cmdlet.md)|이 예에서는 다른 cmdlet 내에서 cmdlet에 제공 된 스크립트를 호출 하는 방법을 보여 줍니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

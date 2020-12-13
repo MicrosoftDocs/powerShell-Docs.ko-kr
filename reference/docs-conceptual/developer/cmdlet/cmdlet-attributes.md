@@ -1,15 +1,14 @@
 ---
-title: Cmdlet 특성 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- attributes [PowerShell SDK]
-- attributes [PowerShell SDK], described
-ms.openlocfilehash: f22c2882fbe5b2f51ca5ea218b921192b0a7d41f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 특성
+description: Cmdlet 특성
+ms.openlocfilehash: 6a106f33cb34c6c33b88a981815543bc9af4e4ba
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784523"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653519"
 ---
 # <a name="cmdlet-attributes"></a>Cmdlet 특성
 
@@ -43,4 +42,4 @@ Windows PowerShell은 사용자 코드 내에서 해당 기능을 구현 하지 
 
 ## <a name="reference"></a>참조
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

@@ -1,12 +1,14 @@
 ---
-title: 이 listcontrol (형식)에 대 한 EntrySelectedBy의 SelectionSetName 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4315d81da4ceeb7a5b171087434ae15fb09e6592
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ListControl의 EntrySelectedBy에 대한 SelectionSetName 요소(형식)
+description: ListControl의 EntrySelectedBy에 대한 SelectionSetName 요소(형식)
+ms.openlocfilehash: 413a77f7ba06fe952e574061e58d0b5d80c5b3c4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785271"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651831"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-listcontrol-format"></a>ListControl의 EntrySelectedBy에 대한 SelectionSetName 요소(형식)
 

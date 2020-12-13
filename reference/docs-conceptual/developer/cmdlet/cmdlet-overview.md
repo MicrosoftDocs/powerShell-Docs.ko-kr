@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 개요
 ms.date: 06/11/2020
-ms.openlocfilehash: 576df03f35dff80479d1fce18cf4306c9219d42f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 개요
+description: Cmdlet 개요
+ms.openlocfilehash: ed3082e1a821bb9643ea2eef13b7348eb48488e4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784404"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653226"
 ---
 # <a name="cmdlet-overview"></a>Cmdlet 개요
 
@@ -15,7 +17,7 @@ Cmdlet은 PowerShell 환경에서 사용 되는 간단한 명령입니다. Power
 ## <a name="cmdlets"></a>Cmdlet
 
 Cmdlet은 작업을 수행 하 고 일반적으로 파이프라인의 다음 명령에 Microsoft .NET 개체를 반환 합니다. Cmdlet은 PowerShell의 파이프라인 의미 체계에 참여 하는 단일 명령입니다.
-여기에는 이진 (c #) cmdlet, 고급 스크립트 함수, CDXML 및 워크플로가 포함 됩니다.
+여기에는 이진(C#) cmdlet, 고급 스크립트 함수, CDXML 및 워크플로가 포함됩니다.
 
 이 SDK 설명서에서는 c #으로 작성 된 이진 cmdlet을 만드는 방법을 설명 합니다. 스크립트 기반 cmdlet에 대 한 자세한 내용은 다음을 참조 하세요.
 
@@ -115,8 +117,8 @@ Cmdlet을 작성 하는 방법에 대 한 자세한 내용은 [Cmdlet 개발 지
 
 ## <a name="see-also"></a>참고 항목
 
-[PowerShell Cmdlet 개념](./windows-powershell-cmdlet-concepts.md)
+[PowerShell cmdlet 개념](./windows-powershell-cmdlet-concepts.md)
 
-[PowerShell Cmdlet 작성](./writing-a-windows-powershell-cmdlet.md)
+[PowerShell cmdlet 작성](./writing-a-windows-powershell-cmdlet.md)
 
 [PowerShell SDK](../windows-powershell-reference.md)

@@ -1,12 +1,14 @@
 ---
-title: 종료 되지 않는 오류 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d74c248e6ef54151400b8060d76524e89d87352c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 종료되지 않는 오류
+description: 종료되지 않는 오류
+ms.openlocfilehash: d23642103e005c6d3a6168b317b11f40001b6bbe
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786563"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655745"
 ---
 # <a name="non-terminating-errors"></a>종료되지 않는 오류
 
@@ -28,4 +30,4 @@ Cmdlet은 입력 처리 메서드 내에서 필요에 따라 [WriteError](/dotne
 
 [Windows PowerShell 오류 레코드](./windows-powershell-error-records.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

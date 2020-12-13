@@ -1,12 +1,14 @@
 ---
-title: 오류 정보 표시 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e542110e9c35a74c5d4c112b0a831f7f8ad9242e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 오류 정보 표시
+description: 오류 정보 표시
+ms.openlocfilehash: 37a3adb91d0e616a5c7f27bcab866f8da139f969
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774578"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653054"
 ---
 # <a name="displaying-error-information"></a>오류 정보 표시
 
@@ -33,4 +35,4 @@ CloseError: (System.ServiceProcess.ServiceController:ServiceController) [stop-se
 
 [Windows PowerShell 오류 레코드](./windows-powershell-error-records.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

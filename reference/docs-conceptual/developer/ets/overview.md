@@ -1,12 +1,14 @@
 ---
-title: 확장 유형 시스템 개요
 ms.date: 07/09/2020
-ms.openlocfilehash: 5c190f0d9b852a4b5658227085092f33d71453c9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 확장 유형 시스템 개요
+description: 확장 유형 시스템 개요
+ms.openlocfilehash: f4a789f779fa8a52f0fe524abff7ec3311e93b6c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786223"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655729"
 ---
 # <a name="extended-type-system-overview"></a>확장 유형 시스템 개요
 
@@ -94,6 +96,6 @@ Cmdlet 개발자의 경우에는 다음을 지원 합니다.
 
 기본 개체에서 사용 가능한 멤버나 PowerShell에서 만든 해당 멤버 외에도 **PSObject** 는 원래 기본 개체를 스크립팅 환경에 유용한 추가 정보로 확장 하는 확장 멤버를 정의할 수 있습니다.
 
-예를 들어, PowerShell에서 제공 하는 모든 핵심 cmdlet (예: Get Content 및 Set-Content cmdlet)은 path 매개 변수를 사용 합니다. 이러한 cmdlet 및 기타가 다른 형식의 개체에 대해 작동할 수 있도록 하기 위해 해당 개체에 경로 멤버를 추가 하 여 해당 정보를 모두 일반적인 방식으로 지정할 수 있습니다. 이 확장 된 경로 멤버를 사용 하면 기본 클래스에 경로 멤버가 없는 경우에도 cmdlet이 모든 형식에 대해 작동할 수 있습니다.
+예를 들어 Get-Content 및 Set-Content cmdlet과 같이 PowerShell에서 제공 하는 모든 핵심 cmdlet은 path 매개 변수를 사용 합니다. 이러한 cmdlet 및 기타가 다른 형식의 개체에 대해 작동할 수 있도록 하기 위해 해당 개체에 경로 멤버를 추가 하 여 해당 정보를 모두 일반적인 방식으로 지정할 수 있습니다. 이 확장 된 경로 멤버를 사용 하면 기본 클래스에 경로 멤버가 없는 경우에도 cmdlet이 모든 형식에 대해 작동할 수 있습니다.
 
 확장 멤버, 적용 된 멤버 및 기본 개체 멤버는 모두 Members 속성을 통해 액세스 됩니다.

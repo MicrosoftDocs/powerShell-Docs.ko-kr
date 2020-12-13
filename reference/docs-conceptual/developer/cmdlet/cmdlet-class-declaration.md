@@ -1,15 +1,14 @@
 ---
-title: Cmdlet 클래스 선언 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- cmdlets [PowerShell SDK], declaring
-- declaring cmdlets [PowerShell SDK]
-ms.openlocfilehash: 96ce8144795346b6f46878ee6163ce69cdb1799a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 클래스 선언
+description: Cmdlet 클래스 선언
+ms.openlocfilehash: 854b0a4ca9f6c87c4fad3b71ee726beade585e02
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784506"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653505"
 ---
 # <a name="cmdlet-class-declaration"></a>Cmdlet 클래스 선언
 
@@ -23,7 +22,7 @@ Microsoft .NET Framework 클래스는 cmdlet 특성을 클래스의 메타 데�
 
 Cmdlet의 명사는 cmdlet이 작동 하는 리소스를 지정 합니다. 명사는 다른 cmdlet에서 cmdlet을 구별 합니다.
 
-Cmdlet 이름의 명사는 특정 해야 하며, *서버*와 같은 일반적인 명사의 경우 리소스를 다른 비슷한 리소스와 구별 하는 짧은 접두사를 추가 하는 것이 가장 좋습니다. 예를 들어 접두사가 포함 된 명사를 포함 하는 cmdlet 이름은 `Get-SQLServer` 입니다. 특정 명사를 보다 일반적인 동사로 조합 하면 사용자가 해당 작업으로 cmdlet을 빠르게 찾은 다음 불필요 한 cmdlet 이름 중복을 방지 하는 동시에 해당 리소스에서 cmdlet을 식별할 수 있습니다.
+Cmdlet 이름의 명사는 특정 해야 하며, *서버* 와 같은 일반적인 명사의 경우 리소스를 다른 비슷한 리소스와 구별 하는 짧은 접두사를 추가 하는 것이 가장 좋습니다. 예를 들어 접두사가 포함 된 명사를 포함 하는 cmdlet 이름은 `Get-SQLServer` 입니다. 특정 명사를 보다 일반적인 동사로 조합 하면 사용자가 해당 작업으로 cmdlet을 빠르게 찾은 다음 불필요 한 cmdlet 이름 중복을 방지 하는 동시에 해당 리소스에서 cmdlet을 식별할 수 있습니다.
 
 Cmdlet 이름에 사용할 수 없는 특수 문자 목록은 [필수 개발 지침](./required-development-guidelines.md)을 참조 하세요.
 
@@ -57,6 +56,6 @@ Cmdlet의 이름을 사용할 때는 파스칼식 대/소문자를 사용 합니
 
 [Cmdlet 동사 이름](./approved-verbs-for-windows-powershell-commands.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)

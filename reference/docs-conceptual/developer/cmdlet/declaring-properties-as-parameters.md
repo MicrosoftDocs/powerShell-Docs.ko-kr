@@ -1,12 +1,14 @@
 ---
-title: 속성을 매개 변수로 선언 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 63113f541df534b1f720ceb06e14b5031f2311b2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 매개 변수로 속성 선언
+description: 매개 변수로 속성 선언
+ms.openlocfilehash: ade7928e2ca277da8bbd1a5e04997bd1d05f1e5d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774646"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653152"
 ---
 # <a name="declaring-properties-as-parameters"></a>매개 변수로 속성 선언
 
@@ -44,4 +46,4 @@ private string userName;
 
 [Cmdlet 매개 변수의 유형](./types-of-cmdlet-parameters.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

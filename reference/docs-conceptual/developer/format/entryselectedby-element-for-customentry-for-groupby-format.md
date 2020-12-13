@@ -1,12 +1,14 @@
 ---
-title: GroupBy (형식)에 대 한 CustomEntry의 EntrySelectedBy 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 75a0f42e7722b54791a873200a35c8fcbbd665b1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GroupBy의 CustomEntry에 대한 EntrySelectedBy 요소(형식)
+description: GroupBy의 CustomEntry에 대한 EntrySelectedBy 요소(형식)
+ms.openlocfilehash: 5af4abe081ca268699d281a1b586a584107b9a83
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774136"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652354"
 ---
 # <a name="entryselectedby-element-for-customentry-for-groupby-format"></a>GroupBy의 CustomEntry에 대한 EntrySelectedBy 요소(형식)
 

@@ -1,12 +1,14 @@
 ---
-title: TableControl (형식)에 대 한 EntrySelectedBy의 SelectionSetName 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e68aa74b201abf345e87411db6cb2787ddd4f72b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TableControl의 EntrySelectedBy에 대한 SelectionSetName 요소(형식)
+description: TableControl의 EntrySelectedBy에 대한 SelectionSetName 요소(형식)
+ms.openlocfilehash: a5a395f718d0e1a2d7f33d120ce4fd2ff787cc34
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772691"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651784"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-tablecontrol-format"></a>TableControl의 EntrySelectedBy에 대한 SelectionSetName 요소(형식)
 

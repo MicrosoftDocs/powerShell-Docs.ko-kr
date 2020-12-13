@@ -1,12 +1,14 @@
 ---
-title: TableColumnHeader 요소 (Format) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6296aea5c567663b1c3c0a2cf0a57b21aa5394de
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TableColumnHeader 요소(형식)
+description: TableColumnHeader 요소(형식)
+ms.openlocfilehash: 30368512875b7c5c4cf3c686f3d09540dea1bd26
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785186"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651523"
 ---
 # <a name="tablecolumnheader-element-format"></a>TableColumnHeader 요소(형식)
 

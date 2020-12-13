@@ -1,12 +1,14 @@
 ---
-title: CustomControl에 대 한 CustomEntry의 EntrySelectedBy 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4d4900cefb0d499397fc9dff7e037ce0a541f72f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 CustomControl의 CustomEntry에 대한 EntrySelectedBy 요소(형식)
+description: View에 대한 CustomControl의 CustomEntry에 대한 EntrySelectedBy 요소(형식)
+ms.openlocfilehash: 4821f22560f35034f90d018e5a109004f331441f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783690"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655355"
 ---
 # <a name="entryselectedby-element-for-customentry-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 CustomEntry에 대한 EntrySelectedBy 요소(형식)
 
@@ -34,7 +36,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[CustomEntry (형식)에 대 한 EntrySelectedBy의 SelectionCondition 요소](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)|선택적 요소입니다.<br /><br /> 이 정의를 사용 하기 위해 있어야 하는 조건을 정의 합니다.|
 |[CustomEntry (형식)에 대 한 EntrySelectedBy 요소](./selectionsetname-element-for-entryselectedby-for-customcontrol-for-view-format.md)|선택적 요소입니다.<br /><br /> 컨트롤 뷰의이 정의를 사용 하는 .NET 형식 집합을 지정 합니다.|
@@ -42,7 +44,7 @@ Configuration 요소 (Format) ViewDefinitions 요소 (format) View 요소 (forma
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[뷰의 Customentry 요소에 대 한 CustomEntry 요소 (형식)](./customentry-element-for-customentries-for-customcontrol-for-view-format.md)|특정 .NET 개체에서 사용 하는 컨트롤을 정의 합니다.|
 

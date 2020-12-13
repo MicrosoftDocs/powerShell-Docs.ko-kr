@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 설명을 추가하는 방법
 ms.date: 09/13/2016
-ms.openlocfilehash: 2b98c4cefc3a55eccfeb7eba5a290e7d93a6088b
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Cmdlet 설명을 추가하는 방법
+description: Cmdlet 설명을 추가하는 방법
+ms.openlocfilehash: 08d21a281881678423bbe3c382279875ed2868db
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893240"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651227"
 ---
 # <a name="how-to-add-a-cmdlet-description"></a>Cmdlet 설명을 추가하는 방법
 

@@ -1,12 +1,14 @@
 ---
-title: ViewSelectedBy (형식)에 대 한 SelectionSetName 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f6410b463bcb00d2758849c2f7e13cd839277e50
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ViewSelectedBy에 대한 SelectionSetName 요소(형식)
+description: ViewSelectedBy에 대한 SelectionSetName 요소(형식)
+ms.openlocfilehash: a1a1816761715a138bcb3c2bd4cb9dbbb2f9cb92
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772606"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654913"
 ---
 # <a name="selectionsetname-element-for-viewselectedby-format"></a>ViewSelectedBy에 대한 SelectionSetName 요소(형식)
 

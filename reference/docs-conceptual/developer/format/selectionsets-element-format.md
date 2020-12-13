@@ -1,12 +1,14 @@
 ---
-title: SelectionSets 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 718b08e02220f285ef215fdca727492fd4407466
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: SelectionSets 요소(형식)
+description: SelectionSets 요소(형식)
+ms.openlocfilehash: e5c928dfb82bc6963b4a87aef9ec06d34cacfdcb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785203"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654925"
 ---
 # <a name="selectionsets-element-format"></a>SelectionSets 요소(형식)
 

@@ -1,12 +1,14 @@
 ---
-title: 구성 (형식)에 대 한 컨트롤의 SelectionCondition에 대 한 SelectionSetName 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 62f186be9e4b1dd5a297add0ce82011bc1ccdcd1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Configuration에 대한 Controls의 SelectionCondition에 대한 SelectionSetName 요소(형식)
+description: Configuration에 대한 Controls의 SelectionCondition에 대한 SelectionSetName 요소(형식)
+ms.openlocfilehash: 4177aace5a6a9374900e7339167c69b531c1e2e7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785237"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651654"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 SelectionCondition에 대한 SelectionSetName 요소(형식)
 

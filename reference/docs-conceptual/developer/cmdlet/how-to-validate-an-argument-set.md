@@ -1,14 +1,14 @@
 ---
-title: 인수 집합의 유효성을 검사 하는 방법 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateSet attribute, example
-ms.openlocfilehash: 6173f1380583f5b27e2b188990a5ea041f447c57
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 인수 집합을 확인하는 방법
+description: 인수 집합을 확인하는 방법
+ms.openlocfilehash: 50ec0a48277893584d896e14ad6aa843682a28cc
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782007"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650373"
 ---
 # <a name="how-to-validate-an-argument-set"></a>인수 집합을 확인하는 방법
 
@@ -41,4 +41,4 @@ ms.locfileid: "87782007"
 
 [ValidateSet 특성 선언](./validateset-attribute-declaration.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

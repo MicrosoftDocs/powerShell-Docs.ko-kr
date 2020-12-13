@@ -1,12 +1,14 @@
 ---
-title: PowerShell 스크립트 및 함수에 대 한 도움말 작성
 ms.date: 09/13/2016
-ms.openlocfilehash: 381c501d87b7381075f89412f654c6121493856e
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: PowerShell 스크립트 및 함수에 대 한 도움말 작성
+description: PowerShell 스크립트 및 함수에 대 한 도움말 작성
+ms.openlocfilehash: f72742e2a131f41ba8ffdcec4901c7c3ea1da1ad
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86892917"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654637"
 ---
 # <a name="writing-help-for-powershell-scripts-and-functions"></a>PowerShell 스크립트 및 함수에 대 한 도움말 작성
 
@@ -23,7 +25,7 @@ PowerShell 스크립트에는 스크립트에 대 한 도움말 항목과 스크
 
 스크립트나 함수를 설명 하는 도움말 항목을 스크립트나 함수 내의 주석 집합으로 구현할 수 있습니다. 스크립트 및 스크립트의 함수에 대 한 주석 기반 도움말을 작성 하는 경우 주석 기반 도움말을 저장 하는 규칙에 주의 해야 합니다. 배치는 `Get-Help` cmdlet이 도움말 항목과 스크립트 또는 함수를 연결 하는지 여부를 결정 합니다. 주석 기반 도움말 항목을 작성 하는 방법에 대 한 자세한 내용은 [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help)를 참조 하세요.
 
-### <a name="xml-based-command-help"></a>XML 기반 명령 도움말
+### <a name="xml-based-command-help"></a>XML-Based 명령 도움말
 
 스크립트나 함수를 설명 하는 도움말 항목은 명령 도움말 스키마를 사용 하는 XML 파일에서 구현할 수 있습니다. 스크립트나 함수를 XML 파일에 연결 하려면 `ExternalHelp` comment 키워드와 xml 파일의 경로 및 이름을 차례로 사용 합니다.
 
@@ -42,10 +44,10 @@ PowerShell 스크립트에는 스크립트에 대 한 도움말 항목과 스크
 
 - 모든 설명에서 스크립트 또는 함수로 명령을 참조 하세요. 이 정보는 사용자가 명령을 이해 하 고 관리 하는 데 도움이 됩니다.
 
-  예를 들어, 다음의 자세한 설명은 새 항목 명령이 스크립트 라는 것을 설명 합니다.
+  예를 들어, 다음의 자세한 설명은 New-Topic 명령이 스크립트 임을 명시 합니다.
   이를 통해 사용자에 게 경로 및 전체 이름을 지정 해야 함을 사용자에 게 알려 줍니다.
 
-  > "새 항목 스크립트는 입력 파일의 각 항목 이름에 대 한 빈 개념 항목을 만듭니다."
+  > "New-Topic 스크립트는 입력 파일의 각 항목 이름에 대 한 빈 개념 항목을 만듭니다."
 
   다음은 함수에 대 한 자세한 설명입니다 `Disable-PSRemoting` . 이 정보는 세션에 이름이 같은 명령이 여러 개 포함 되어 있는 경우 사용자에 게 특히 유용 합니다 .이 중 일부는 우선 순위가 높은 명령에 의해 숨겨질 수 있습니다.
 
@@ -58,7 +60,7 @@ PowerShell 스크립트에는 스크립트에 대 한 도움말 항목과 스크
 
 - 함수 도움말 항목에서 현재 세션에만 존재 하는 함수를 사용자에 게 알려 서 다른 세션에서 사용 하려면 해당 함수를 추가 하거나 PowerShell 프로필을 추가 해야 합니다.
 
-- `Get-Help`스크립트 파일 및 도움말 항목 파일을 올바른 위치에 저장 한 경우에만 스크립트나 함수에 대 한 도움말 항목을 표시 합니다. 따라서 PowerShell 설치에 대 한 지침을 포함 하거나 스크립트나 함수 도움말 항목에서 스크립트나 함수를 저장 하거나 설치 하는 데 대 한 지침을 포함 하는 것은 유용 하지 않습니다. 대신 스크립트나 함수를 배포 하는 데 사용 하는 문서에 설치 지침을 포함 합니다.
+- `Get-Help` 스크립트 파일 및 도움말 항목 파일을 올바른 위치에 저장 한 경우에만 스크립트나 함수에 대 한 도움말 항목을 표시 합니다. 따라서 PowerShell 설치에 대 한 지침을 포함 하거나 스크립트나 함수 도움말 항목에서 스크립트나 함수를 저장 하거나 설치 하는 데 대 한 지침을 포함 하는 것은 유용 하지 않습니다. 대신 스크립트나 함수를 배포 하는 데 사용 하는 문서에 설치 지침을 포함 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

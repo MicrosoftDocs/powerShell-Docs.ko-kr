@@ -1,12 +1,14 @@
 ---
-title: 구성에 대 한 컨트롤 CustomItem의 ExpressionBinding 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 1ad83fa9d915822eaefb490658f8a219defdddf2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Configuration에 대한 Controls의 CustomItem에 대한 ExpressionBinding 요소(형식)
+description: Configuration에 대한 Controls의 CustomItem에 대한 ExpressionBinding 요소(형식)
+ms.openlocfilehash: 1abcf2173e18d45839161b4c7e59f1ad238f81a1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773915"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655337"
 ---
 # <a name="expressionbinding-element-for-customitem-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 CustomItem에 대한 ExpressionBinding 요소(형식)
 

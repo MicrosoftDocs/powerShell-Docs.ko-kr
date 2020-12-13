@@ -1,12 +1,14 @@
 ---
-title: 속성 매개 변수 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 0ded22dcda2b4eb957834ec092466767a4121f0e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 속성 매개 변수
+description: 속성 매개 변수
+ms.openlocfilehash: eff51fcd395e5f9570193ea91684f9e70030bc7d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781837"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652597"
 ---
 # <a name="property-parameters"></a>속성 매개 변수
 
@@ -14,7 +16,7 @@ ms.locfileid: "87781837"
 
 |매개 변수|기능|
 |---|---|
-|**Count**<br>데이터 형식: Int32|사용자가 처리할 개체의 수를 지정할 수 있도록이 매개 변수를 구현 합니다.|
+|**개수**<br>데이터 형식: Int32|사용자가 처리할 개체의 수를 지정할 수 있도록이 매개 변수를 구현 합니다.|
 |**설명**<br>데이터 형식: 문자열|이 매개 변수를 구현 하 여 사용자가 리소스에 대 한 설명을 지정할 수 있습니다.|
 |**From**<br>데이터 형식: 문자열|사용자가 정보를 가져올 참조 개체를 지정할 수 있도록이 매개 변수를 구현 합니다.|
 |**ID**<br>데이터 형식: 리소스 종속|사용자가 리소스의 식별자를 지정할 수 있도록이 매개 변수를 구현 합니다.|
@@ -28,14 +30,14 @@ ms.locfileid: "87781837"
 |**이유**<br>데이터 형식: 문자열|이 매개 변수를 구현 하 여 사용자가이 cmdlet이 호출 되는 이유를 지정할 수 있도록 합니다.|
 |**Regex**<br>데이터 형식: SwitchParameter|매개 변수를 지정할 때 정규식을 사용 하도록이 매개 변수를 구현 합니다. 이 매개 변수를 지정 하면 와일드 카드 문자를 확인할 수 없습니다.|
 |**속도**<br>데이터 형식: Int32|이 매개 변수를 구현 하 여 사용자가 전송 속도를 지정할 수 있도록 합니다. 사용자는이 매개 변수를 리소스의 속도로 설정 합니다.|
-|**State**<br>데이터 형식: 키워드 배열|사용자가 KEYDOWN과 같은 상태 이름을 지정할 수 있도록이 매개 변수를 구현 합니다.|
+|**상태**<br>데이터 형식: 키워드 배열|사용자가 KEYDOWN과 같은 상태 이름을 지정할 수 있도록이 매개 변수를 구현 합니다.|
 |**값**<br>데이터 형식: Object|사용자가 cmdlet에 제공할 값을 지정할 수 있도록이 매개 변수를 구현 합니다.|
-|**버전**<br>데이터 형식: 문자열|이 매개 변수를 구현 하 여 사용자가 속성의 버전을 지정할 수 있도록 합니다.|
+|**Version**<br>데이터 형식: 문자열|이 매개 변수를 구현 하 여 사용자가 속성의 버전을 지정할 수 있도록 합니다.|
 
 ## <a name="see-also"></a>참고 항목
 
 [Cmdlet 매개 변수](./cmdlet-parameters.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)

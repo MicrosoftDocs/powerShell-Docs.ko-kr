@@ -1,16 +1,18 @@
 ---
-title: 확장 유형 시스템에서 발생 하는 오류 및 예외
 ms.date: 07/09/2020
-ms.openlocfilehash: f60c53e33c031168eda53726e0d296bf91139fda
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 확장 유형 시스템에서 발생 하는 오류 및 예외
+description: 확장 유형 시스템에서 발생 하는 오류 및 예외
+ms.openlocfilehash: 295c16ad9abb67b0c4967bf32125bfc7ee0a35da
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786291"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652485"
 ---
 # <a name="errors-and-exceptions-in-the-extended-type-system"></a>확장 유형 시스템에서 발생 하는 오류 및 예외
 
-오류는 형식 데이터를 초기화 하는 동안 그리고 **PSObject** 개체의 멤버에 액세스 하거나 **languageprimitives.physicalhash**와 같은 유틸리티 클래스 중 하나를 사용 하는 경우에 발생할 수 있습니다.
+오류는 형식 데이터를 초기화 하는 동안 그리고 **PSObject** 개체의 멤버에 액세스 하거나 **languageprimitives.physicalhash** 와 같은 유틸리티 클래스 중 하나를 사용 하는 경우에 발생할 수 있습니다.
 
 ## <a name="runtime-errors"></a>런타임 오류
 
@@ -18,20 +20,20 @@ ms.locfileid: "87786291"
 
 ## <a name="errors-getting-member-values"></a>멤버 값을 가져오는 중 오류 발생
 
-GetValueInvocationException 멤버 (속성, 메서드 또는 매개 변수가 있는 속성)의 값을 가져올 때 발생 하는 모든 오류는 **Getvalueexception** 또는 **GetValueInvocationException** exception을 throw 합니다.
+GetValueInvocationException 멤버 (속성, 메서드 또는 매개 변수가 있는 속성)의 값을 가져올 때 발생 하는 모든 오류는 **Getvalueexception** 또는  exception을 throw 합니다.
 오류가 발생 했음을 인식 하면 **Getvalueexception** 예외가 throw 됩니다. 참조 된 멤버의 기본 getter가 오류가 발생 한 것을 인식 하는 경우 get 호출 오류를 발생 시킨 내부 예외를 포함 하거나 포함 하지 않을 수 있는 **GetValueInvocationException** 예외가 throw 됩니다.
 
 ## <a name="errors-setting-member-values"></a>오류 설정 멤버 값
 
-SetValueInvocationException 속성 값을 설정할 때 발생 하는 모든 오류는 **Setvalueexception** 또는 **SetValueInvocationException** exception을 throw 합니다. 오류가 발생 했음을 인식 하면 **Setvalueexception** 예외가 throw 됩니다. 참조 된 속성의 기본 setter가 오류가 발생 한 것을 인식 하면 set 호출 오류를 발생 시킨 내부 예외를 포함 하거나 포함 하지 않을 수 있는 **SetValueInvocationException** 예외가 throw 됩니다.
+SetValueInvocationException 속성 값을 설정할 때 발생 하는 모든 오류는 **Setvalueexception** 또는  exception을 throw 합니다. 오류가 발생 했음을 인식 하면 **Setvalueexception** 예외가 throw 됩니다. 참조 된 속성의 기본 setter가 오류가 발생 한 것을 인식 하면 set 호출 오류를 발생 시킨 내부 예외를 포함 하거나 포함 하지 않을 수 있는 **SetValueInvocationException** 예외가 throw 됩니다.
 
 ## <a name="errors-invoking-a-method"></a>메서드를 호출 하는 오류
 
-MethodInvocationException 메서드를 호출할 때 발생 하는 모든 오류는 **MethodException** 또는 **MethodInvocationException** 예외를 throw 합니다. **MethodException** 에서 오류가 발생 한 것으로 인식 되 면 예외가 throw 됩니다. 참조 된 메서드에서 오류가 발생 한 것을 인식 하면 호출 오류를 발생 시킨 내부 예외를 포함 하거나 포함 하지 않을 수 있는 **MethodInvocationException** 예외가 throw 됩니다.
+MethodInvocationException 메서드를 호출할 때 발생 하는 모든 오류는 **MethodException** 또는  예외를 throw 합니다. **MethodException** 에서 오류가 발생 한 것으로 인식 되 면 예외가 throw 됩니다. 참조 된 메서드에서 오류가 발생 한 것을 인식 하면 호출 오류를 발생 시킨 내부 예외를 포함 하거나 포함 하지 않을 수 있는 **MethodInvocationException** 예외가 throw 됩니다.
 
 ## <a name="casting-errors"></a>캐스팅 오류
 
-잘못 된 캐스팅을 시도 하면 **PSInvalidCastException** 이 throw 됩니다. 이 예외는 **InvalidCastException**에서 파생 되기 때문에 스크립트에서 직접 트랩할 수 없습니다. 캐스팅을 시도 하는 엔터티는 **이를** **PSInvalidCastException** 로 래핑하여 스크립트에서 트래핑할 수 있도록 해야 합니다. **PSPropertySet**, **psmemberset**, **psmemberset**또는 **ReadOnlyPSMemberInfoCollection ' 1**의 멤버의 값을 설정 하려고 하면 **NotSupportedException** 이 throw 됩니다.
+잘못 된 캐스팅을 시도 하면 **PSInvalidCastException** 이 throw 됩니다. 이 예외는 **InvalidCastException** 에서 파생 되기 때문에 스크립트에서 직접 트랩할 수 없습니다. 캐스팅을 시도 하는 엔터티는 **이를** **PSInvalidCastException** 로 래핑하여 스크립트에서 트래핑할 수 있도록 해야 합니다. **PSPropertySet**, **psmemberset**, **psmemberset** 또는 **ReadOnlyPSMemberInfoCollection ' 1** 의 멤버의 값을 설정 하려고 하면 **NotSupportedException** 이 throw 됩니다.
 
 ## <a name="common-runtime-errors"></a>일반적인 런타임 오류
 

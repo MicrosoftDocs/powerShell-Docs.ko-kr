@@ -1,12 +1,14 @@
 ---
-title: EnumerableExpansion (형식)에 대 한 EntrySelectedBy의 SelectionSetName 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 8745ef9e6f326c3e8a5dbf185a595bbe93e92414
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: EnumerableExpansion의 EntrySelectedBy에 대한 SelectionSetName 요소(형식)
+description: EnumerableExpansion의 EntrySelectedBy에 대한 SelectionSetName 요소(형식)
+ms.openlocfilehash: 074f810f5a3cbad61ee8be69408967758f0591df
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785322"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651885"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-enumerableexpansion-format"></a>EnumerableExpansion의 EntrySelectedBy에 대한 SelectionSetName 요소(형식)
 

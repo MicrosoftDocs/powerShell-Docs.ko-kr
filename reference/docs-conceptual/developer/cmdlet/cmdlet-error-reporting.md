@@ -1,18 +1,14 @@
 ---
-title: Cmdlet 오류 보고 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- error records [PowerShell], terminating
-- non-terminating errors [PowerShell]
-- error records [PowerShell]
-- terminating errors [PowerShell]
-- error records [PowerShell], non-terminating
-ms.openlocfilehash: 30b19914253db5f517f5ab76623b54aced0c0598
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 오류 보고
+description: Cmdlet 오류 보고
+ms.openlocfilehash: f06cf98183d56249080623895bd1f5a3e070cefd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784472"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653408"
 ---
 # <a name="cmdlet-error-reporting"></a>Cmdlet 오류 보고
 
@@ -40,7 +36,7 @@ Cmdlet은 오류 종료 오류 또는 종료 되지 않는 오류에 따라 오�
 
 ## <a name="reporting-terminating-errors"></a>종료 오류 보고
 
-종료 오류는 예외를 throw 하거나 [ThrowTerminatingError](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 메서드를 호출 하 여 보고 됩니다. 또한 cmdlet은 **OutOfMemory**와 같은 예외를 catch 하 고 다시 throw 할 수 있지만, PowerShell 런타임이 이러한 예외를 catch 하는 것 처럼 예외를 다시 throw 하는 것은 필요 하지 않습니다.
+종료 오류는 예외를 throw 하거나 [ThrowTerminatingError](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 메서드를 호출 하 여 보고 됩니다. 또한 cmdlet은 **OutOfMemory** 와 같은 예외를 catch 하 고 다시 throw 할 수 있지만, PowerShell 런타임이 이러한 예외를 catch 하는 것 처럼 예외를 다시 throw 하는 것은 필요 하지 않습니다.
 
 상황과 관련 된 문제에 대 한 사용자 고유의 예외를 정의 하거나 해당 오류 레코드를 사용 하 여 기존 예외에 추가 정보를 추가할 수도 있습니다.
 
@@ -73,11 +69,11 @@ PowerShell은이 식별자와 cmdlet 식별자를 결합 하 여 나중에 오�
 
 오류 범주는 사용자에 대 한 오류를 그룹화 하는 데 사용 됩니다. PowerShell은 이러한 범주 및 cmdlet을 정의 하 고 PowerShell 공급자는 오류 레코드를 생성할 때 이러한 범주와 cmdlet 중 하나를 선택 해야 합니다.
 
-사용할 수 있는 오류 범주에 대 한 설명은 [ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) 열거를 참조 하세요. 일반적으로 가능한 경우 **noerror**, **UndefinedError**및 **genericerror** 를 사용 하지 않도록 해야 합니다.
+사용할 수 있는 오류 범주에 대 한 설명은 [ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) 열거를 참조 하세요. 일반적으로 가능한 경우 **noerror**, **UndefinedError** 및 **genericerror** 를 사용 하지 않도록 해야 합니다.
 
-사용자는 `$ErrorView` **categoryview**로 설정 된 범주에 따라 오류를 볼 수 있습니다.
+사용자는 `$ErrorView` **categoryview** 로 설정 된 범주에 따라 오류를 볼 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [Cmdlet 개요](./cmdlet-overview.md)
 

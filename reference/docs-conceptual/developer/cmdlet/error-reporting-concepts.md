@@ -1,21 +1,18 @@
 ---
-title: 오류 보고 개념 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- non-terminating errors [PowerShell SDK]
-- errors [PowerShell SDK], described
-- terminating errors [PowerShell SDK]
-- errors [PowerShell SDK]
-ms.openlocfilehash: ff010bbe1a87daa351ec13ed249ffc899781a8c3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 오류 보고 개념
+description: 오류 보고 개념
+ms.openlocfilehash: 353e628c63667a2db010556b2ed9169809b742f4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774510"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653039"
 ---
 # <a name="error-reporting-concepts"></a>오류 보고 개념
 
-Windows PowerShell은 오류를 보고 하는 두 가지 메커니즘인 오류를 *종료* 하는 메커니즘과 *종료 되지 않는 오류*에 대 한 다른 메커니즘을 제공 합니다. Cmdlet에서 오류를 올바르게 보고 하 여 cmdlet을 실행 하는 호스트 응용 프로그램이 적절 한 방식으로 반응할 수 있도록 하는 것이 중요 합니다.
+Windows PowerShell은 오류를 보고 하는 두 가지 메커니즘인 오류를 *종료* 하는 메커니즘과 *종료 되지 않는 오류* 에 대 한 다른 메커니즘을 제공 합니다. Cmdlet에서 오류를 올바르게 보고 하 여 cmdlet을 실행 하는 호스트 응용 프로그램이 적절 한 방식으로 반응할 수 있도록 하는 것이 중요 합니다.
 
 Cmdlet이 해당 입력 개체를 계속 처리할 수 없는 오류가 발생 하는 경우 cmdlet은 [Throwterminatingerror *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) 메서드를 호출 해야 합니다. Cmdlet은 입력 개체를 계속 처리할 수 있는 경우 [WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) 메서드를 호출 하 여 종료 되지 않는 오류를 보고 해야 합니다. 두 방법 모두 호스트 응용 프로그램에서 오류의 원인을 조사 하는 데 사용할 수 있는 오류 레코드를 제공 합니다.
 
@@ -39,4 +36,4 @@ Cmdlet이 해당 입력 개체를 계속 처리할 수 없는 오류가 발생 �
 
 [Windows PowerShell 오류 레코드](./windows-powershell-error-records.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

@@ -1,12 +1,14 @@
 ---
-title: WideControl (형식)에 대 한 EntrySelectedBy의 SelectionSetName 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 546225b0619ebec83d04a7e27bbc298ffef0a14d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: WideControl의 EntrySelectedBy에 대한 SelectionSetName 요소(형식)
+description: WideControl의 EntrySelectedBy에 대한 SelectionSetName 요소(형식)
+ms.openlocfilehash: bf6a44bb733421f36a9140d0ec10e61aedfbda6a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785254"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651688"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-widecontrol-format"></a>WideControl의 EntrySelectedBy에 대한 SelectionSetName 요소(형식)
 

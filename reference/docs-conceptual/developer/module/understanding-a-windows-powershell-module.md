@@ -1,12 +1,14 @@
 ---
-title: Windows PowerShell 모듈 이해 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9308ad0fd41aa67ffa8510ae7a3c9cd6a13f4220
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 모듈 이해
+description: Windows PowerShell 모듈 이해
+ms.openlocfilehash: 882e9db59dc1bc8570676d1da7ce84c808d076e8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779236"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651145"
 ---
 # <a name="understanding-a-windows-powershell-module"></a>Windows PowerShell 모듈 이해
 
@@ -84,7 +86,7 @@ ms.locfileid: "87779236"
 
 - Cmdlet에서 생성 된 동적 모듈은 `New-Module` cmdlet의 매개 변수를 사용 하 여 이름을 지정할 수 있습니다 `Name` .
 
-- 어셈블리 개체에서 가져온 ** `Import-Module` 모듈은 다음** 구문에 따라 이름이 지정 `"dynamic_code_module_" + assembly.GetName()` 됩니다.
+- 어셈블리 개체에서 가져온 **`Import-Module` 모듈은 다음** 구문에 따라 이름이 지정 `"dynamic_code_module_" + assembly.GetName()` 됩니다.
 
   자세한 내용은 [PowerShell 모듈 설치](./installing-a-powershell-module.md) 및 [PSModulePath 설치 경로 수정](./modifying-the-psmodulepath-installation-path.md)을 참조 하세요.
 

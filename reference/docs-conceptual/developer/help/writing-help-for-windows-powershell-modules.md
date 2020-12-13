@@ -1,14 +1,16 @@
 ---
-title: PowerShell 모듈에 대 한 도움말 작성
 ms.date: 04/10/2020
-ms.openlocfilehash: 115ea3f3c5941e74ed6ddbc8480d4a21576bc5c6
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: PowerShell 모듈에 대한 도움말 작성
+description: PowerShell 모듈에 대한 도움말 작성
+ms.openlocfilehash: 3bef45c0dd8a7e63bc419bb3e5a7a1783810105b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893070"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654647"
 ---
-# <a name="writing-help-for-powershell-modules"></a>PowerShell 모듈에 대 한 도움말 작성
+# <a name="writing-help-for-powershell-modules"></a>PowerShell 모듈에 대한 도움말 작성
 
 PowerShell 모듈에는 모듈에 대 한 도움말 항목과 cmdlet, 공급자, 함수 및 스크립트와 같은 모듈 멤버가 포함 될 수 있습니다. `Get-Help`Cmdlet은 다른 PowerShell 항목에 대 한 도움말을 표시 하는 것과 같은 형식으로 모듈 도움말 항목을 표시 하 고, 사용자 `Get-Help` 는 표준 명령을 사용 하 여 도움말 항목을 가져옵니다.
 
@@ -26,7 +28,7 @@ PowerShell 모듈에는 모듈에 대 한 도움말 항목과 cmdlet, 공급자,
 
 - **스크립트 도움말**. 모듈의 스크립트를 설명 하는 도움말 항목은 스크립트 또는 스크립트 모듈의 명령 도움말 스키마 또는 주석 기반 도움말 항목을 사용 하는 XML 파일 일 수 있습니다.
 
-- **개념 ("About") 도움말을 참조**하십시오. 개념 ("about") 도움말 항목을 사용 하 여 모듈과 해당 멤버를 설명 하 고 멤버를 함께 사용 하 여 작업을 수행할 수 있는 방법을 설명할 수 있습니다.
+- **개념 ("About") 도움말을 참조** 하십시오. 개념 ("about") 도움말 항목을 사용 하 여 모듈과 해당 멤버를 설명 하 고 멤버를 함께 사용 하 여 작업을 수행할 수 있는 방법을 설명할 수 있습니다.
   개념 도움말 항목은 유니코드 (UTF-8) 인코딩을 사용 하는 텍스트 파일입니다. 파일 이름에는 형식을 사용 해야 합니다 `about_<name>.help.txt` `about_MyModule.help.txt` . 기본적으로 PowerShell에는 이러한 개념 정보 도움말 항목의 100이 포함 되어 있으며 다음 예제와 같이 형식이 지정 됩니다.
 
   ```Output

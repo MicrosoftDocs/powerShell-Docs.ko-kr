@@ -1,12 +1,14 @@
 ---
-title: 서식 파일을 만드는 방법 (.format.ps1xml) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: abdbd4e15b0c4cb1dafcde087d24ed5792c86c3d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 형식 지정 파일(.format.ps1xml)을 만드는 방법
+description: 형식 지정 파일(.format.ps1xml)을 만드는 방법
+ms.openlocfilehash: 5bbc1ba40bfccf13636abc0f0751938aa724b761
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781259"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652001"
 ---
 # <a name="how-to-create-a-formatting-file-formatps1xml"></a>형식 지정 파일(.format.ps1xml)을 만드는 방법
 
@@ -33,7 +35,7 @@ ms.locfileid: "87781259"
 
    - `<ViewDefinitions></ViewDefinitions>`태그는 노드를 정의 합니다 `ViewDefinitions` . 모든 뷰는이 노드 내에 정의 됩니다.
 
-3. Windows PowerShell 설치 폴더, 모듈 폴더 또는 모듈 폴더의 하위 폴더에 파일을 저장 합니다. 파일을 저장할 때 다음 이름 형식을 사용 `MyFile.format.ps1xml` 합니다.. 서식 파일은 확장명을 사용 해야 합니다 `.format.ps1xml` .
+3. Windows PowerShell 설치 폴더, 모듈 폴더 또는 모듈 폴더의 하위 폴더에 파일을 저장 합니다. 파일을 저장할 때 다음 이름 형식을 사용  `MyFile.format.ps1xml` 합니다.. 서식 파일은 확장명을 사용 해야 합니다 `.format.ps1xml` .
 
    이제 서식 파일에 뷰를 추가할 준비가 되었습니다. 서식 파일에서 정의할 수 있는 뷰 수에는 제한이 없습니다. 각 개체에 대해 단일 뷰를 추가 하거나, 동일한 개체에 대 한 여러 뷰를 추가 하거나, 여러 개체에서 사용 하는 단일 뷰를 추가할 수 있습니다.
 

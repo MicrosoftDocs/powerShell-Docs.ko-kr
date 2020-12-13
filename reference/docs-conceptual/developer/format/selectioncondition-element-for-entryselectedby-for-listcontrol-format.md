@@ -1,12 +1,14 @@
 ---
-title: 이 listcontrol (형식)에 대 한 EntrySelectedBy의 SelectionCondition 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 29626b181f21d168e1ebf973e01afeb411d9ef54
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ListControl의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
+description: ListControl의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
+ms.openlocfilehash: e93499691dd0046265e43abd26497b2974546083
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772776"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655093"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-listcontrol-format"></a>ListControl의 EntrySelectedBy에 대한 SelectionCondition 요소(형식)
 

@@ -1,12 +1,14 @@
 ---
-title: 이 listcontrol (형식)의 ListEntry에 대 한 EntrySelectedBy 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d6ab1c08dd353da74d1a7d27c569d2fa86e083c3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ListControl의 ListEntry에 대한 EntrySelectedBy 요소(형식)
+description: ListControl의 ListEntry에 대한 EntrySelectedBy 요소(형식)
+ms.openlocfilehash: 1981c8fae65f494504d6cdd9f59337d555350b07
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774119"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652287"
 ---
 # <a name="entryselectedby-element-for-listentry-for-listcontrol-format"></a>ListControl의 ListEntry에 대한 EntrySelectedBy 요소(형식)
 

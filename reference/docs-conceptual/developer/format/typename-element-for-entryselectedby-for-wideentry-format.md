@@ -1,12 +1,14 @@
 ---
-title: WideEntry (형식)에 대 한 EntrySelectedBy의 TypeName 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9af443067467f590df824b28636f57b807a4fc94
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: WideEntry의 EntrySelectedBy에 대한 TypeName 요소(형식)
+description: WideEntry의 EntrySelectedBy에 대한 TypeName 요소(형식)
+ms.openlocfilehash: 2e0facd6ff7c6fec96dabf488449a8502429bcff
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780188"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654787"
 ---
 # <a name="typename-element-for-entryselectedby-for-wideentry-format"></a>WideEntry의 EntrySelectedBy에 대한 TypeName 요소(형식)
 

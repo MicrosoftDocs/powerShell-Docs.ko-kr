@@ -1,12 +1,14 @@
 ---
-title: 구성 (형식)에 대 한 CustomControl의 CustomEntries 요소 Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: b1f494cf1a254d71362830ba9eb0f4905a2a484d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Configuration에 대한 Controls의 CustomControl에 대한 CustomEntries 요소(형식)
+description: Configuration에 대한 Controls의 CustomControl에 대한 CustomEntries 요소(형식)
+ms.openlocfilehash: 86c2b517d0d7075a355a3190a14e25d9dd4fe374
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785985"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655391"
 ---
 # <a name="customentries-element-for-customcontrol-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 CustomControl에 대한 CustomEntries 요소(형식)
 

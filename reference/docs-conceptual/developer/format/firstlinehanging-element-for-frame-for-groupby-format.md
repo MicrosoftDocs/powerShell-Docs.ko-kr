@@ -1,12 +1,14 @@
 ---
-title: GroupBy (형식)의 프레임에 대 한 FirstLineHanging 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 3def56e918810d9e201d7a9ae73776d90646d8b3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GroupBy의 Frame에 대한 FirstLineHanging 요소(형식)
+description: GroupBy의 Frame에 대한 FirstLineHanging 요소(형식)
+ms.openlocfilehash: 6a4ded9cced484440636aee694cd8381b2889ba8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773609"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652265"
 ---
 # <a name="firstlinehanging-element-for-frame-for-groupby-format"></a>GroupBy의 Frame에 대한 FirstLineHanging 요소(형식)
 

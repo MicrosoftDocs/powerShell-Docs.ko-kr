@@ -1,12 +1,14 @@
 ---
-title: CustomControl의 SelectionCondition에 대 한 SelectionSetName 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c7fdd92475ba24d27e61371d1c6b54fa1a55647c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 CustomControl의 SelectionCondition에 대한 SelectionSetName 요소(형식)
+description: View에 대한 CustomControl의 SelectionCondition에 대한 SelectionSetName 요소(형식)
+ms.openlocfilehash: 839032048739e529057d7066fb3bc6aa2fbc5037
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787515"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651608"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 SelectionCondition에 대한 SelectionSetName 요소(형식)
 

@@ -1,12 +1,14 @@
 ---
-title: 개체에 대 한 기본 멤버 집합 정의 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 80e1f54890d3aac1702414699ead16fcf38271e1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 개체에 대한 기본 멤버 집합 정의
+description: 개체에 대한 기본 멤버 집합 정의
+ms.openlocfilehash: 919f7ba65322c6a56a27e046fb211bde151abf7d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774629"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653127"
 ---
 # <a name="defining-default-member-sets-for-objects"></a>개체에 대한 기본 멤버 집합 정의
 
@@ -55,6 +57,6 @@ Name    : agrsmsvc
 ...
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

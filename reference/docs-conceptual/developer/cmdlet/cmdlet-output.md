@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 출력 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 7697db01c8c4d1c831202c07256559bf638aeaef
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 출력
+description: Cmdlet 출력
+ms.openlocfilehash: 37606e57d9dff3ed9fa25b2b99eb07efa0147127
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784438"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653251"
 ---
 # <a name="cmdlet-output"></a>Cmdlet 출력
 
@@ -24,6 +26,6 @@ ms.locfileid: "87784438"
 
 [사용자 지정 서식 파일](./custom-formatting-files.md) 사용자 고유의 사용자 지정 서식 파일을 만들어 기본 표시 형식을 덮어쓰거나 사용자의 명령으로 반환 되는 개체의 표시를 정의 하는 방법을 설명 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

@@ -1,12 +1,14 @@
 ---
-title: GroupBy (형식)에 대 한 CustomControlName 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4e3102f12cd37fa72a2de1bf1db5d1f82db31222
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GroupBy에 대한 CustomControlName 요소(형식)
+description: GroupBy에 대한 CustomControlName 요소(형식)
+ms.openlocfilehash: 03664fe4d5559312e2720a3892493c90c15f7501
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783741"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655415"
 ---
 # <a name="customcontrolname-element-for-groupby-format"></a>GroupBy에 대한 CustomControlName 요소(형식)
 

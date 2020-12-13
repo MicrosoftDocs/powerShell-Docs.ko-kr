@@ -1,12 +1,14 @@
 ---
-title: 개체에 대 한 속성 확장 | Microsoft Docs
 ms.date: 08/21/2019
-ms.openlocfilehash: acd20c7e2b6ef84a9c932538eb8e167d68c8a660
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 개체 속성 확장
+description: 개체 속성 확장
+ms.openlocfilehash: 37803d9fd87319204565c2abde62f269744481b9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784302"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652884"
 ---
 # <a name="extending-properties-for-objects"></a>개체 속성 확장
 
@@ -58,7 +60,7 @@ ms.locfileid: "87784302"
 
 Note 속성은 정적 값이 있는 속성을 정의 합니다.
 
-다음 예제에서 값이 항상 **Success**인 **Status** 속성은 [system.io.directoryinfo](/dotnet/api/System.IO.DirectoryInfo) 형식에 추가 됩니다. [Note property](/dotnet/api/system.management.automation.psnoteproperty) 요소는 확장 속성을 note 속성으로 정의 합니다. [Name](/dotnet/api/system.management.automation.psmemberinfo.name) 요소는 확장 속성의 이름을 지정 합니다. [Value](/dotnet/api/system.management.automation.psnoteproperty.value) 요소는 확장 속성의 정적 값을 지정 합니다. `NoteProperty`요소는 [MemberSets](/dotnet/api/system.management.automation.psmemberset) 요소의 멤버에도 추가할 수 있습니다.
+다음 예제에서 값이 항상 **Success** 인 **Status** 속성은 [system.io.directoryinfo](/dotnet/api/System.IO.DirectoryInfo) 형식에 추가 됩니다. [Note property](/dotnet/api/system.management.automation.psnoteproperty) 요소는 확장 속성을 note 속성으로 정의 합니다. [Name](/dotnet/api/system.management.automation.psmemberinfo.name) 요소는 확장 속성의 이름을 지정 합니다. [Value](/dotnet/api/system.management.automation.psnoteproperty.value) 요소는 확장 속성의 정적 값을 지정 합니다. `NoteProperty`요소는 [MemberSets](/dotnet/api/system.management.automation.psmemberset) 요소의 멤버에도 추가할 수 있습니다.
 
 ```xml
 <Type>
@@ -98,7 +100,7 @@ Note 속성은 정적 값이 있는 속성을 정의 합니다.
 예를 들어 [형식-테이블](/powershell/module/Microsoft.PowerShell.Utility/Format-Table) 
  **속성** 매개 변수는 표시할 특정 속성 집합을 지정할 수 있습니다. 속성 집합을 지정 하면 해당 집합에 속한 속성만 표시 됩니다.
 
-개체에 대해 정의할 수 있는 속성 집합의 수에는 제한이 없습니다. 그러나 개체의 기본 표시 속성을 정의 하는 데 사용 되는 속성 집합은 **Psstandardmembers** 멤버 집합 내에서 지정 해야 합니다. `Types.ps1xml`Types 파일에서 기본 속성 집합 이름에는 **Defaultdisplayproperty**, **DefaultDisplayPropertySet**및 **DefaultKeyPropertySet**가 포함 됩니다. **Psstandardmembers** 멤버 집합에 추가 하는 모든 추가 속성 집합은 무시 됩니다.
+개체에 대해 정의할 수 있는 속성 집합의 수에는 제한이 없습니다. 그러나 개체의 기본 표시 속성을 정의 하는 데 사용 되는 속성 집합은 **Psstandardmembers** 멤버 집합 내에서 지정 해야 합니다. `Types.ps1xml`Types 파일에서 기본 속성 집합 이름에는 **Defaultdisplayproperty**, **DefaultDisplayPropertySet** 및 **DefaultKeyPropertySet** 가 포함 됩니다. **Psstandardmembers** 멤버 집합에 추가 하는 모든 추가 속성 집합은 무시 됩니다.
 
 다음 예제에서는 **DefaultDisplayPropertySet** 속성 집합이 [Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) 형식의 **psstandardmembers** 멤버 집합에 추가 됩니다. [PropertySet](/dotnet/api/system.management.automation.pspropertyset) 요소는 속성의 그룹을 정의 합니다. [Name](/dotnet/api/system.management.automation.psmemberinfo.name) 요소는 속성 집합의 이름을 지정 합니다. 그리고 [Referencedproperties](/dotnet/api/system.management.automation.pspropertyset.referencedpropertynames) 요소는 집합의 속성을 지정 합니다. 또한 `PropertySet` 요소를 [Type](/dotnet/api/system.management.automation.pstypename) 요소의 멤버에 추가할 수 있습니다.
 
@@ -123,10 +125,10 @@ Note 속성은 정적 값이 있는 속성을 정의 합니다.
 </Type>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [Types.ps1xml 정보](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)
 
-[시스템 관리. 자동화](/dotnet/api/System.Management.Automation)
+[System.Management.Automation](/dotnet/api/System.Management.Automation)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

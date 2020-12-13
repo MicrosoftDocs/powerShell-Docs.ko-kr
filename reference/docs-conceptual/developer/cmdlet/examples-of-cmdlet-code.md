@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 코드의 예 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2d2597d3d3f64cae1c1494eb2f05873f6feae5e0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 코드 예제
+description: Cmdlet 코드 예제
+ms.openlocfilehash: 91dd2019300504697ad9a7a0c155a04600d09c58
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784336"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652927"
 ---
 # <a name="examples-of-cmdlet-code"></a>Cmdlet 코드 예제
 
@@ -39,6 +41,6 @@ ms.locfileid: "87784336"
 
 [Cmdlet에서 cmdlet을 호출 하는 방법](./how-to-invoke-a-cmdlet-from-within-a-cmdlet.md) 이 예에서는 다른 cmdlet 내에서 cmdlet을 호출 하는 방법을 보여 줍니다 .이 cmdlet을 사용 하면 호출 되는 cmdlet의 기능을 개발 중인 cmdlet에 추가할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

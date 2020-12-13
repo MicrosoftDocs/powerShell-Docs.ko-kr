@@ -1,12 +1,14 @@
 ---
-title: 출력 개체 확장 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 48f4f2996159d84257ad72d499e3a796aeaa9116
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 출력 개체 확장
+description: 출력 개체 확장
+ms.openlocfilehash: 9fea476e3032002bd206609313581cc6373dfddc
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784319"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652907"
 ---
 # <a name="extending-output-objects"></a>출력 개체 확장
 
@@ -97,4 +99,4 @@ XML에 스크립트 블록이 포함 될 수 있으므로 변조를 방지 하�
 
 [개체에 대한 기본 멤버 집합 정의](./defining-default-member-sets-for-objects.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

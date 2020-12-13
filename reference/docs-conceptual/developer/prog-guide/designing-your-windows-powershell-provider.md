@@ -1,14 +1,14 @@
 ---
-title: Windows PowerShell 공급자 디자인 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- providers [PowerShell Programmer's Guide], designing
-ms.openlocfilehash: dec6c71a2d7bbe5636f96dc140e701213d6f6487
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 공급자 설계
+description: Windows PowerShell 공급자 설계
+ms.openlocfilehash: 89e1fa9cfc0a2e5928a358aad4244c8e9152fe1a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778936"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654526"
 ---
 # <a name="designing-your-windows-powershell-provider"></a>Windows PowerShell 공급자 설계
 
@@ -20,19 +20,19 @@ Windows powershell 런타임은 windows PowerShell 경로를 사용 하 여 적�
 
 Windows PowerShell 경로에 대 한 자세한 내용은 Windows PowerShell의 작동 방식을 참조 하세요.
 
-### <a name="defining-a-drive-qualified-path"></a>드라이브 정규화 된 경로 정의
+### <a name="defining-a-drive-qualified-path"></a>Drive-Qualified 경로 정의
 
 사용자가 실제 드라이브에 있는 데이터에 액세스할 수 있도록 하려면 Windows PowerShell 공급자가 드라이브 한정 경로를 지원 해야 합니다. 이 경로는 드라이브 이름 뒤에 콜론 (:) (예: mydrive: \ abc\bar.)으로 시작 합니다.
 
-### <a name="defining-a-provider-qualified-path"></a>공급자 한정 경로 정의
+### <a name="defining-a-provider-qualified-path"></a>Provider-Qualified 경로 정의
 
 Windows PowerShell 런타임에서 공급자를 초기화 하 고 초기화 하지 못하게 하려면 Windows PowerShell 공급자가 공급자 한정 경로를 지원 해야 합니다. 예를 들어 FileSystem:: \\ \uncshare\abc\bar은 Windows PowerShell에서 제공 하는 filesystem 공급자의 공급자 한정 경로입니다.
 
-### <a name="defining-a-provider-direct-path"></a>공급자 직접 경로 정의
+### <a name="defining-a-provider-direct-path"></a>Provider-Direct 경로 정의
 
 Windows PowerShell 공급자에 대 한 원격 액세스를 허용 하려면 현재 위치에 대 한 Windows PowerShell 공급자에 직접 전달 하는 공급자 직접 경로를 지원 해야 합니다. 예를 들어 레지스트리 Windows PowerShell 공급자는 \server\regkeypath를 \\ 공급자 직접 경로로 사용할 수 있습니다.
 
-### <a name="defining-a-provider-internal-path"></a>공급자 정의-내부 경로
+### <a name="defining-a-provider-internal-path"></a>Provider-Internal 경로 정의
 
 공급자 cmdlet이 비 Windows PowerShell Api (응용 프로그래밍 인터페이스)를 사용 하 여 데이터에 액세스할 수 있도록 하려면 Windows PowerShell 공급자가 공급자 내부 경로를 지원 해야 합니다. 이 경로는 공급자 정규화 경로의 "::" 뒤에 표시 됩니다. 예를 들어 filesystem Windows PowerShell 공급자에 대 한 공급자 내부 경로는 \uncshare\abc\bar.입니다. \\
 
@@ -63,7 +63,7 @@ Windows powershell 런타임은 세션 상태를 사용 하 여 `Get-Location` ,
 
 이 클래스는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) 의 기본 클래스에서 파생 됩니다. 다음 표에서는이 클래스에서 제공 하는 cmdlet을 보여 줍니다. 나열 되는 것 외에도 `Get-PSDrive` cmdlet은 사용 가능한 드라이브를 검색 하는 데 사용 되는 관련 cmdlet입니다.
 
-|      cmdlet      |                             정의                              |
+|      Cmdlet      |                             정의                              |
 | ---------------- | ------------------------------------------------------------------- |
 | `New-PSDrive`    | 세션에 대 한 새 드라이브를 만들고 드라이브 정보를 스트리밍합니다. |
 | `Remove-PSDrive` | 세션에서 드라이브를 제거 합니다.                                   |
@@ -72,7 +72,7 @@ Windows powershell 런타임은 세션 상태를 사용 하 여 `Get-Location` ,
 
 [System.object](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 는 데이터 저장소의 개별 항목에 대 한 작업을 수행 하는 Windows PowerShell 항목 공급자를 정의 하며 컨테이너 또는 탐색 기능을 가정 하지 않습니다. 이 클래스는 System.object에서 파생 된 [공급자](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) 기본 클래스입니다. 다음 표에서는이 클래스에서 제공 하는 cmdlet을 보여 줍니다.
 
-|     cmdlet     |                                                                                                                                                            정의                                                                                                                                                            |
+|     Cmdlet     |                                                                                                                                                            정의                                                                                                                                                            |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Clear-Item`   | 지정 된 위치에 있는 항목의 현재 내용을 지우고 공급자가 지정한 "clear" 값으로 바꿉니다. 매개 변수를 지정 하지 않으면이 cmdlet은 파이프라인을 통해 출력 개체를 전달 하지 않습니다 `PassThru` .                                                                                   |
 | `Get-Item`     | 지정 된 위치에서 항목을 검색 하 고 결과 개체를 스트리밍합니다.                                                                                                                                                                                                                                                  |
@@ -87,7 +87,7 @@ Windows powershell 런타임은 세션 상태를 사용 하 여 `Get-Location` ,
 
 이 클래스는 [system.object](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) 의 클래스에서 파생 됩니다. 다음 표에서는이 클래스에서 구현 하는 cmdlet을 정의 합니다.
 
-|     cmdlet      |                                                                        정의                                                                        |
+|     Cmdlet      |                                                                        정의                                                                        |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Copy-Item`     | 항목을 한 위치에서 다른 위치로 복사 합니다. 매개 변수를 지정 하지 않으면이 cmdlet은 파이프라인을 통해 출력 개체를 전달 하지 않습니다 `PassThru` . |
 | `Get-Childitem` | 지정 된 위치에 있는 자식 항목을 검색 하 여 개체로 스트리밍합니다.                                                                        |
@@ -99,12 +99,12 @@ Windows powershell 런타임은 세션 상태를 사용 하 여 `Get-Location` ,
 
 [System.object](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 클래스는 둘 이상의 컨테이너를 사용 하는 항목에 대 한 작업을 수행 하는 Windows PowerShell 탐색 공급자를 정의 합니다. 이 클래스는 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) 기본 클래스에서 파생 됩니다. 다음 표에서는이 클래스에서 제공 하는 cmdlet을 나열 합니다.
 
-|    cmdlet    |                                                                      정의                                                                      |
+|    Cmdlet    |                                                                      정의                                                                      |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 결합-경로 | 경로 사이에 공급자별 구분 기호를 사용 하 여 두 개의 경로를 단일 경로로 결합 합니다. 이 cmdlet은 문자열을 스트리밍합니다.                               |
+| Combine-Path | 경로 사이에 공급자별 구분 기호를 사용 하 여 두 개의 경로를 단일 경로로 결합 합니다. 이 cmdlet은 문자열을 스트리밍합니다.                               |
 | `Move-Item`  | 항목을 지정 된 위치로 이동 합니다. 매개 변수를 지정 하지 않으면이 cmdlet은 파이프라인을 통해 출력 개체를 전달 하지 않습니다 `PassThru` . |
 
-관련 cmdlet은 Windows PowerShell에서 제공 하는 기본 구문 분석 경로 cmdlet입니다. 이 cmdlet을 사용 하 여 매개 변수를 지원 하기 위해 Windows PowerShell 경로를 구문 분석할 수 있습니다 `Parent` . 부모 경로 문자열을 스트리밍합니다.
+관련 cmdlet은 Windows PowerShell에서 제공 하는 기본 Parse-Path cmdlet입니다. 이 cmdlet을 사용 하 여 매개 변수를 지원 하기 위해 Windows PowerShell 경로를 구문 분석할 수 있습니다 `Parent` . 부모 경로 문자열을 스트리밍합니다.
 
 ## <a name="select-provider-interfaces-to-support"></a>지원할 공급자 인터페이스 선택
 
@@ -114,7 +114,7 @@ Windows powershell 공급자는 Windows PowerShell 기본 클래스 중 하나�
 
 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider) 인터페이스는 데이터 항목의 내용에 대 한 작업을 수행 하는 콘텐츠 공급자를 정의 합니다. 다음 표에서는이 인터페이스에서 노출 하는 cmdlet을 보여 줍니다.
 
-|     cmdlet      |                                                                                        정의                                                                                        |
+|     Cmdlet      |                                                                                        정의                                                                                        |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Add-Content`   | 지정 된 항목의 내용에 지정 된 값 길이를 추가 합니다. 매개 변수를 지정 하지 않으면이 cmdlet은 파이프라인을 통해 출력 개체를 전달 하지 않습니다 `PassThru` . |
 | `Clear-Content` | 지정 된 항목의 내용을 "clear" 값으로 설정 합니다. 매개 변수를 지정 하지 않으면이 cmdlet은 파이프라인을 통해 출력 개체를 전달 하지 않습니다 `PassThru` .               |
@@ -128,7 +128,7 @@ Windows powershell 공급자는 Windows PowerShell 기본 클래스 중 하나�
 > [!NOTE]
 > `Path`이러한 cmdlet의 매개 변수는 속성을 식별 하는 대신 항목에 대 한 경로를 나타냅니다.
 
-|        cmdlet        |                                                                                   정의                                                                                    |
+|        Cmdlet        |                                                                                   정의                                                                                    |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Clear-ItemProperty` | 지정 된 항목의 속성을 "clear" 값으로 설정 합니다. 매개 변수를 지정 하지 않으면이 cmdlet은 파이프라인을 통해 출력 개체를 전달 하지 않습니다 `PassThru` .      |
 | `Get-ItemProperty`   | 지정 된 항목에서 속성을 검색 하 고 결과 개체를 스트리밍합니다.                                                                                                |
@@ -139,7 +139,7 @@ Windows powershell 공급자는 Windows PowerShell 기본 클래스 중 하나�
 [System.object](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider)에서 파생 된 [Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider) 인터페이스는 지원 되는 cmdlet에 대 한 동적 매개 변수를 지정 하는 공급자를 정의 합니다. 이 형식의 공급자는 런타임에 속성을 정의할 수 있는 작업 (예: 새 속성 작업)을 처리 합니다. 정적으로 정의 된 속성을 가진 항목에서는 이러한 작업을 수행할 수 없습니다.
 다음 표에서는이 인터페이스에서 노출 하는 cmdlet을 보여 줍니다.
 
-|        cmdlet         |                                                                                정의                                                                                |
+|        Cmdlet         |                                                                                정의                                                                                |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `Copy-ItemProperty`   | 지정 된 항목의 속성을 다른 항목에 복사 합니다. 매개 변수를 지정 하지 않으면이 cmdlet은 파이프라인을 통해 출력 개체를 전달 하지 않습니다 `PassThru` . |
 | `Move-ItemProperty`   | 지정 된 항목에서 다른 항목으로 속성을 이동 합니다. 매개 변수를 지정 하지 않으면이 cmdlet은 파이프라인을 통해 출력 개체를 전달 하지 않습니다 `PassThru` .  |
@@ -151,7 +151,7 @@ Windows powershell 공급자는 Windows PowerShell 기본 클래스 중 하나�
 
 [Isecuritydescriptorcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ISecurityDescriptorCmdletProvider) 인터페이스는 공급자에 보안 설명자 기능을 추가 합니다. 이 인터페이스를 사용 하면 사용자가 데이터 저장소의 항목에 대 한 보안 설명자 정보를 가져오고 설정할 수 있습니다. 다음 표에서는이 인터페이스에서 노출 하는 cmdlet을 보여 줍니다.
 
-|  cmdlet   |                                                                                                                                                                                                          정의                                                                                                                                                                                                          |
+|  Cmdlet   |                                                                                                                                                                                                          정의                                                                                                                                                                                                          |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Get-Acl` | 운영 체제 리소스 (예: 파일 또는 개체)를 보호 하는 데 사용 되는 보안 설명자의 일부인 ACL (액세스 제어 목록)에 포함 된 정보를 검색 합니다.                                                                                                                                                                                                                                      |
 | `Set-Acl` | ACL에 대 한 정보를 설정 합니다. 지정 된 경로에 대해 지정 된 항목에 대 한 [accesscontrol-namespace](/dotnet/api/System.Security.AccessControl.ObjectSecurity) 의 인스턴스 형식으로 되어 있습니다. Windows PowerShell 공급자가 보안 정보 설정을 지 원하는 경우이 cmdlet은 레지스트리의 파일, 키 및 하위 키에 대 한 정보를 설정할 수 있습니다. |

@@ -1,12 +1,14 @@
 ---
-title: 목록 뷰 만들기 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 24eb673e0db011a1439fa5ba1f2966fcc3bdc338
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 목록 보기 만들기
+description: 목록 보기 만들기
+ms.openlocfilehash: c34c4fddc27d4fd016fba37fc465924d693756a5
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783775"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655633"
 ---
 # <a name="creating-a-list-view"></a>목록 보기 만들기
 
@@ -284,6 +286,6 @@ ServiceType         : Win32OwnProcess
 
 - [ScriptBlock](./scriptblock-element-for-listitem-for-listcontrol-format.md) 요소 (표시 되지 않음)는 값이 뷰에 표시 되는 스크립트를 지정 합니다. 스크립트나 속성 중 하나를 지정 해야 하지만 둘 다 지정할 수는 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](../cmdlet/writing-a-windows-powershell-cmdlet.md)

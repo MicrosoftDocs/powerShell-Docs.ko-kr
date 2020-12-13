@@ -1,12 +1,14 @@
 ---
-title: 구성에 대 한 컨트롤의 프레임에 대 한 FirstLineHanging 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6c0429a5caa5d20370acff72fa5707ed8cf7ad01
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Configuration에 대한 Controls의 Frame에 대한 FirstLineHanging 요소(형식)
+description: Configuration에 대한 Controls의 Frame에 대한 FirstLineHanging 요소(형식)
+ms.openlocfilehash: 94d59ef7b54e036f76e38a3b06b769700443b9fb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773745"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655223"
 ---
 # <a name="firstlinehanging-element-for-frame-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 Frame에 대한 FirstLineHanging 요소(형식)
 

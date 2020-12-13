@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 도움말 항목에 예제를 추가하는 방법
 ms.date: 09/12/2016
-ms.openlocfilehash: 33a1726f9d52b5a368d5df7962cc17ba9c45246a
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Cmdlet 도움말 항목에 예제를 추가하는 방법
+description: Cmdlet 도움말 항목에 예제를 추가하는 방법
+ms.openlocfilehash: 6b72e29c93740b7953d9b68fc8e68c02eb2f4dee
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893444"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654725"
 ---
 # <a name="how-to-add-examples-to-a-cmdlet-help-topic"></a>Cmdlet 도움말 항목에 예제를 추가하는 방법
 

@@ -1,12 +1,14 @@
 ---
-title: View 컨트롤의 CustomItem에 대 한 Frame 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 5ade36c183a026cb9001a2abbe91d31638a87108
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 Controls의 CustomItem에 대한 Frame 요소(형식)
+description: View에 대한 Controls의 CustomItem에 대한 Frame 요소(형식)
+ms.openlocfilehash: 6f26e19a6894ac213b924108a56cb80f9ffd1143
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773456"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652212"
 ---
 # <a name="frame-element-for-customitem-for-controls-for-view-format"></a>View에 대한 Controls의 CustomItem에 대한 Frame 요소(형식)
 

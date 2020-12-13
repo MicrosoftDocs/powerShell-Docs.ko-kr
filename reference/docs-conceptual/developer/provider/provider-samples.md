@@ -1,12 +1,14 @@
 ---
-title: 공급자 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9eb8eb64bbe585ebd8024c0215853ff04a5c3e54
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 공급자 샘플
+description: 공급자 샘플
+ms.openlocfilehash: e6b1e8ce603092a3fd9dd44d7be428587544466b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778436"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651139"
 ---
 # <a name="provider-samples"></a>공급자 샘플
 

@@ -1,12 +1,14 @@
 ---
-title: 활동 매개 변수 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c3014b21aca85f3efa161c185e691bdd1f19f79b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 활동 매개 변수
+description: 활동 매개 변수
+ms.openlocfilehash: 241fb8a7796d1c9dc10e8410d6daef4db70c9b4e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784608"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653702"
 ---
 # <a name="activity-parameters"></a>활동 매개 변수
 
@@ -26,12 +28,12 @@ ms.locfileid: "87784608"
 |**방전**<br>데이터 형식: SwitchParameter|매개 변수가 지정 된 경우 cmdlet이 새 데이터를 처리 하기 전에 처리 중인 작업 항목이 처리 됨을 나타내려면이 매개 변수를 구현 합니다. 매개 변수를 지정 하지 않으면 작업 항목이 즉시 처리 됩니다.|
 |**지우는**<br>데이터 형식: Int32|사용자가 리소스를 삭제 하기 전에 삭제 되는 횟수를 지정할 수 있도록이 매개 변수를 구현 합니다.|
 |**ErrorLevel**<br>데이터 형식: Int32|사용자가 보고할 오류 수준을 지정할 수 있도록이 매개 변수를 구현 합니다.|
-|**제외**<br>데이터 형식: String []|사용자가 활동에서 항목을 제외할 수 있도록이 매개 변수를 구현 합니다. 입력 필터를 사용 하는 방법에 대 한 자세한 내용은 [입력 필터 매개 변수](input-filter-parameters.md)를 참조 하세요.|
+|**시키고**<br>데이터 형식: String []|사용자가 활동에서 항목을 제외할 수 있도록이 매개 변수를 구현 합니다. 입력 필터를 사용 하는 방법에 대 한 자세한 내용은 [입력 필터 매개 변수](input-filter-parameters.md)를 참조 하세요.|
 |**Filter**<br>데이터 형식: 키워드|이 매개 변수를 구현 하 여 사용자가 cmdlet 작업을 수행할 리소스를 선택 하는 필터를 지정할 수 있도록 합니다. 입력 필터를 사용 하는 방법에 대 한 자세한 내용은 [입력 필터 매개 변수](./input-filter-parameters.md)를 참조 하세요.|
 |**팔로우**<br>데이터 형식: SwitchParameter|매개 변수가 지정 된 경우 진행률이 추적 되도록이 매개 변수를 구현 합니다.|
 |**설정**<br>데이터 형식: SwitchParameter|매개 변수를 지정할 때 제한이 발생 하더라도 사용자가 작업을 수행할 수 있음을 나타내려면이 매개 변수를 구현 합니다. 매개 변수는 보안이 손상 되는 것을 허용 하지 않습니다. 예를 들어이 매개 변수를 사용 하면 사용자가 읽기 전용 파일을 덮어쓸 수 있습니다.|
 |**되어야**<br>데이터 형식: String []|사용자가 활동에 항목을 포함할 수 있도록이 매개 변수를 구현 합니다. 입력 필터를 사용 하는 방법에 대 한 자세한 내용은 [입력 필터 매개 변수](input-filter-parameters.md)를 참조 하세요.|
-|**대비**<br>데이터 형식: SwitchParameter|이 매개 변수를 구현 하 여 매개 변수가 지정 될 때 처리가 증분 수행 됨을 표시 합니다. 예를 들어이 매개 변수를 통해 사용자는 마지막 백업 이후에만 파일을 백업 하는 증분 백업을 수행할 수 있습니다.|
+|**증분**<br>데이터 형식: SwitchParameter|이 매개 변수를 구현 하 여 매개 변수가 지정 될 때 처리가 증분 수행 됨을 표시 합니다. 예를 들어이 매개 변수를 통해 사용자는 마지막 백업 이후에만 파일을 백업 하는 증분 백업을 수행할 수 있습니다.|
 |**InputObject**<br>데이터 형식: Object|Cmdlet이 다른 cmdlet의 입력을 사용 하는 경우이 매개 변수를 구현 합니다. **InputObject** 매개 변수를 정의할 때 **매개 변수** 특성을 선언할 때 항상 **ValueFromPipeline** 키워드를 지정 합니다. 입력 필터를 사용 하는 방법에 대 한 자세한 내용은 [입력 필터 매개 변수](./input-filter-parameters.md)를 참조 하세요.|
 |**삽입**<br>데이터 형식: SwitchParameter|매개 변수가 지정 된 경우 cmdlet이 항목을 삽입 하도록이 매개 변수를 구현 합니다.|
 |**대화형**<br>데이터 형식: SwitchParameter|매개 변수가 지정 된 경우 cmdlet이 사용자와 대화형으로 작동 하도록이 매개 변수를 구현 합니다.|
@@ -61,6 +63,6 @@ ms.locfileid: "87784608"
 
 [Cmdlet 매개 변수](./cmdlet-parameters.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)
