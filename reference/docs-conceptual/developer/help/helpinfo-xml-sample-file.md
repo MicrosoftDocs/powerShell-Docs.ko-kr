@@ -1,18 +1,20 @@
 ---
-title: HelpInfo XML 샘플 파일
 ms.date: 09/12/2016
-ms.openlocfilehash: ec9a2a1afed4f22be00900cbc80b580ff99f8f38
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.topic: reference
+title: HelpInfo XML 샘플 파일
+description: HelpInfo XML 샘플 파일
+ms.openlocfilehash: 321793d61ab5df3cccc7c353b6c93f5a7275b533
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86953270"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647776"
 ---
-# <a name="helpinfo-xml-sample-file"></a><span data-ttu-id="53ff2-102">HelpInfo XML 샘플 파일</span><span class="sxs-lookup"><span data-stu-id="53ff2-102">HelpInfo XML Sample File</span></span>
+# <a name="helpinfo-xml-sample-file"></a><span data-ttu-id="42f2d-103">HelpInfo XML 샘플 파일</span><span class="sxs-lookup"><span data-stu-id="42f2d-103">HelpInfo XML Sample File</span></span>
 
-<span data-ttu-id="53ff2-103">이 항목에서는 일반적으로 "HelpInfo XML file" 이라고 하는 올바른 형식의 업데이트할 수 있는 도움말 정보 파일의 샘플을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="53ff2-103">This topic displays a sample of a well-formed Updatable Help Information file, commonly known as "HelpInfo XML file."</span></span> <span data-ttu-id="53ff2-104">이 샘플 파일에서 UI 문화권 요소는 UI 문화권 이름에 따라 사전순으로 정렬 됩니다.</span><span class="sxs-lookup"><span data-stu-id="53ff2-104">In this sample file, the UI culture elements are arranged in alphabetical order by UI culture name.</span></span> <span data-ttu-id="53ff2-105">사전순으로 정렬 하는 것이 좋지만 필수는 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="53ff2-105">Alphabetical ordering is a best practice, but it is not required.</span></span>
+<span data-ttu-id="42f2d-104">이 항목에서는 일반적으로 "HelpInfo XML file" 이라고 하는 올바른 형식의 업데이트할 수 있는 도움말 정보 파일의 샘플을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="42f2d-104">This topic displays a sample of a well-formed Updatable Help Information file, commonly known as "HelpInfo XML file."</span></span> <span data-ttu-id="42f2d-105">이 샘플 파일에서 UI 문화권 요소는 UI 문화권 이름에 따라 사전순으로 정렬 됩니다.</span><span class="sxs-lookup"><span data-stu-id="42f2d-105">In this sample file, the UI culture elements are arranged in alphabetical order by UI culture name.</span></span> <span data-ttu-id="42f2d-106">사전순으로 정렬 하는 것이 좋지만 필수는 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="42f2d-106">Alphabetical ordering is a best practice, but it is not required.</span></span>
 
-## <a name="helpinfo-xml-sample-file"></a><span data-ttu-id="53ff2-106">HelpInfo XML 샘플 파일</span><span class="sxs-lookup"><span data-stu-id="53ff2-106">HelpInfo XML Sample File</span></span>
+## <a name="helpinfo-xml-sample-file"></a><span data-ttu-id="42f2d-107">HelpInfo XML 샘플 파일</span><span class="sxs-lookup"><span data-stu-id="42f2d-107">HelpInfo XML Sample File</span></span>
 
 ```xml
 
