@@ -1,38 +1,40 @@
 ---
-title: Runspace08 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4fcf58eceb415f9f02391c22d2719e9140c77ea9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace08 샘플
+description: Runspace08 샘플
+ms.openlocfilehash: ce60e85919a78143f26ff695a9c9104c86cd4f6a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783163"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657653"
 ---
-# <a name="runspace08-sample"></a><span data-ttu-id="8a25e-102">Runspace08 샘플</span><span class="sxs-lookup"><span data-stu-id="8a25e-102">Runspace08 Sample</span></span>
+# <a name="runspace08-sample"></a><span data-ttu-id="e202f-103">Runspace08 샘플</span><span class="sxs-lookup"><span data-stu-id="e202f-103">Runspace08 Sample</span></span>
 
-<span data-ttu-id="8a25e-103">이 샘플에서는 명령과 인수를 [system.object](/dotnet/api/system.management.automation.powershell) 의 파이프라인에 추가 하는 방법과 명령을 동기적으로 실행 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8a25e-103">This sample shows how to add commands and arguments to the pipeline of a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object and how to run the commands synchronously.</span></span>
+<span data-ttu-id="e202f-104">이 샘플에서는 명령과 인수를 [system.object](/dotnet/api/system.management.automation.powershell) 의 파이프라인에 추가 하는 방법과 명령을 동기적으로 실행 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e202f-104">This sample shows how to add commands and arguments to the pipeline of a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object and how to run the commands synchronously.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="8a25e-104">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8a25e-104">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="e202f-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e202f-105">Requirements</span></span>
 
-<span data-ttu-id="8a25e-105">이 샘플에는 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a25e-105">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="e202f-106">이 샘플에는 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="e202f-106">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="8a25e-106">데모</span><span class="sxs-lookup"><span data-stu-id="8a25e-106">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="e202f-107">데모</span><span class="sxs-lookup"><span data-stu-id="e202f-107">Demonstrates</span></span>
 
-<span data-ttu-id="8a25e-107">이 샘플에서는 다음을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8a25e-107">This sample demonstrates the following.</span></span>
+<span data-ttu-id="e202f-108">이 샘플에서는 다음을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e202f-108">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="8a25e-108">Runspacefactory 클래스를 사용 하 여 [runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) 개체를 만듭니다. [runspace](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) 클래스를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a25e-108">Creating a [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object by using the [System.Management.Automation.Runspaces.Runspacefactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) class.</span></span>
+- <span data-ttu-id="e202f-109">Runspacefactory 클래스를 사용 하 여 [runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) 개체를 만듭니다. [runspace](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) 클래스를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="e202f-109">Creating a [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object by using the [System.Management.Automation.Runspaces.Runspacefactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) class.</span></span>
 
-- <span data-ttu-id="8a25e-109">Runspace를 사용 하는 [system.web. Powershell](/dotnet/api/system.management.automation.powershell) 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8a25e-109">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the runspace.</span></span>
+- <span data-ttu-id="e202f-110">Runspace를 사용 하는 [system.web. Powershell](/dotnet/api/system.management.automation.powershell) 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="e202f-110">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the runspace.</span></span>
 
-- <span data-ttu-id="8a25e-110">Cmdlet을 [system.web. Powershell](/dotnet/api/system.management.automation.powershell) 개체의 파이프라인에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a25e-110">Adding cmdlets to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+- <span data-ttu-id="e202f-111">Cmdlet을 [system.web. Powershell](/dotnet/api/system.management.automation.powershell) 개체의 파이프라인에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="e202f-111">Adding cmdlets to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-- <span data-ttu-id="8a25e-111">Cmdlet을 동기적으로 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a25e-111">Running the cmdlets synchronously.</span></span>
+- <span data-ttu-id="e202f-112">Cmdlet을 동기적으로 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="e202f-112">Running the cmdlets synchronously.</span></span>
 
-- <span data-ttu-id="8a25e-112">명령에 의해 반환 되는 [system.web. PSObject](/dotnet/api/System.Management.Automation.PSObject) 개체에서 속성을 추출 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a25e-112">Extracting properties from the [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects returned by the command.</span></span>
+- <span data-ttu-id="e202f-113">명령에 의해 반환 되는 [system.web. PSObject](/dotnet/api/System.Management.Automation.PSObject) 개체에서 속성을 추출 합니다.</span><span class="sxs-lookup"><span data-stu-id="e202f-113">Extracting properties from the [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects returned by the command.</span></span>
 
-## <a name="example"></a><span data-ttu-id="8a25e-113">예제</span><span class="sxs-lookup"><span data-stu-id="8a25e-113">Example</span></span>
+## <a name="example"></a><span data-ttu-id="e202f-114">예제</span><span class="sxs-lookup"><span data-stu-id="e202f-114">Example</span></span>
 
-<span data-ttu-id="8a25e-114">이 샘플에서는 [system.object](/dotnet/api/system.management.automation.powershell) 및 [Sort](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) 개체 cmdlet을 사용 하 여 [프로세스](/powershell/module/Microsoft.PowerShell.Management/Get-Process) 를 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a25e-114">This sample runs the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) cmdlets by using a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+<span data-ttu-id="e202f-115">이 샘플에서는 [system.object](/dotnet/api/system.management.automation.powershell) 및 [Sort](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) 개체 cmdlet을 사용 하 여 [프로세스](/powershell/module/Microsoft.PowerShell.Management/Get-Process) 를 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="e202f-115">This sample runs the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) cmdlets by using a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -113,6 +115,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="8a25e-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8a25e-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e202f-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e202f-116">See Also</span></span>
 
-[<span data-ttu-id="8a25e-116">Windows PowerShell 호스트 애플리케이션 작성</span><span class="sxs-lookup"><span data-stu-id="8a25e-116">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
+[<span data-ttu-id="e202f-117">Windows PowerShell 호스트 애플리케이션 작성</span><span class="sxs-lookup"><span data-stu-id="e202f-117">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
