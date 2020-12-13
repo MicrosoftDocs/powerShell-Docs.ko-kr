@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 매개 변수의 유형 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e704aae6e23568be9935e228752f652929863a98
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 매개 변수 형식
+description: Cmdlet 매개 변수 형식
+ms.openlocfilehash: 8daaa3c778396e06a826de3b93e0610c51160fb4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786376"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660484"
 ---
 # <a name="types-of-cmdlet-parameters"></a>Cmdlet 매개 변수 형식
 
@@ -84,7 +86,7 @@ private string userName;
 
 ## <a name="switch-parameters"></a>스위치 매개 변수
 
-Windows PowerShell은 cmdlet [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) 을 `false` 호출할 때 매개 변수가 지정 되지 않은 경우 값이 자동으로로 설정 되는 매개 변수를 정의할 수 있도록 하는 system.object를 제공 합니다. 가능 하면 부울 매개 변수 대신 스위치 매개 변수를 사용 합니다.
+Windows PowerShell은 cmdlet [](/dotnet/api/System.Management.Automation.SwitchParameter) 을 `false` 호출할 때 매개 변수가 지정 되지 않은 경우 값이 자동으로로 설정 되는 매개 변수를 정의할 수 있도록 하는 system.object를 제공 합니다. 가능 하면 부울 매개 변수 대신 스위치 매개 변수를 사용 합니다.
 
 다음 샘플을 참조 하세요. 기본적으로 여러 Windows PowerShell cmdlet은 출력 개체를 파이프라인 아래로 전달 하지 않습니다. 그러나 이러한 cmdlet에는 `PassThru` 기본 동작을 재정의 하는 스위치 매개 변수가 있습니다. `PassThru`이러한 cmdlet을 호출할 때 매개 변수가 지정 된 경우 cmdlet은 출력 개체를 파이프라인에 반환 합니다.
 
@@ -115,6 +117,6 @@ protected override void ProcessRecord()
 } // End ProcessRecord
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

@@ -1,12 +1,14 @@
 ---
-title: 공급자 cmdlet | Microsoft Docs
 ms.date: 09/12/2016
-ms.openlocfilehash: 24838eeec8e2d59ff3cc549c8659d5afb1c8f92f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 공급자 cmdlet
+description: 공급자 cmdlet
+ms.openlocfilehash: 522dacfe4d7190c12ea0de148fe83bf6b5fed10f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771688"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92662898"
 ---
 # <a name="provider-cmdlets"></a>공급자 cmdlet
 
@@ -52,7 +54,7 @@ ms.locfileid: "87771688"
 
 - `Rename-Item`:이 cmdlet을 사용 하면 사용자가 데이터 저장소에 있는 항목의 이름을 바꿀 수 있습니다. 이 cmdlet을 지원 하려면 Renameitem 및 Containercmdletprovider 메서드를 덮어씁니다. [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) . [Renameitemdynamicparameters](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItemDynamicParameters) 메서드를 지원 합니다.
 
-- `Set-Item`:이 cmdlet을 사용 하면 사용자가 데이터 저장소에 있는 항목의 값을 업데이트할 수 있습니다. 이 cmdlet을 지원 하려면 Setitem 및 [System.Management.Automation.Provider.Itemcmdletprovider.Setitem](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 및 [system.object (Setitemdynamicparameters. Setitemdynamicparameters](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItemDynamicParameters) 메서드)를 덮어씁니다.
+- `Set-Item`:이 cmdlet을 사용 하면 사용자가 데이터 저장소에 있는 항목의 값을 업데이트할 수 있습니다. 이 cmdlet을 지원 하려면 Setitem 및 [](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 및 [system.object (Setitemdynamicparameters. Setitemdynamicparameters](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItemDynamicParameters) 메서드)를 덮어씁니다.
 
 ### <a name="item-content-cmdlets"></a>항목 콘텐츠 cmdlet
 

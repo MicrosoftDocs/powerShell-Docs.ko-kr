@@ -1,15 +1,14 @@
 ---
-title: 사용자 지정 Windows PowerShell 스냅인 작성 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- snap-ins [PowerShell SDK], custom PSSnapin example
-- cmdlets [PowerShell SDK], specified in snap-ins
-ms.openlocfilehash: 3672dcc2e962b6795888ab5be3d461380e379315
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 사용자 지정 Windows PowerShell 스냅인 작성
+description: 사용자 지정 Windows PowerShell 스냅인 작성
+ms.openlocfilehash: e79c0c3db583fa0add9287745e97958a71360592
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779219"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659533"
 ---
 # <a name="writing-a-custom-windows-powershell-snap-in"></a>사용자 지정 Windows PowerShell 스냅인 작성
 
@@ -44,11 +43,11 @@ ms.locfileid: "87779219"
 
    이 예제에서 공급 업체 리소스는 다음과 같습니다.
 
-   > CustomPSSnapInTest,이 스냅인은 테스트-HelloWorld 및 CustomSnapinTest cmdlet이 포함 된 사용자 지정 Windows PowerShell 스냅인입니다.
+   > CustomPSSnapInTest Test-HelloWorld 및 Test-CustomSnapinTest cmdlet "을 포함 하는 사용자 지정 Windows PowerShell 스냅인입니다.
 
 8. [Runspace](/dotnet/api/System.Management.Automation.Runspaces.CmdletConfigurationEntry) 클래스를 사용 하 여 사용자 지정 스냅인 (옵션)에 속하는 cmdlet을 지정 합니다. 여기에 추가 된 정보에는 cmdlet의 이름, 해당 .NET 유형 및 cmdlet 도움말 파일 이름 (cmdlet 도움말 파일 이름의 형식)이 포함 됩니다 `name.dll-help.xml` .
 
-   이 예제에서는 테스트-HelloWorld 및 TestCustomSnapinTest cmdlet을 추가 합니다.
+   이 예제에서는 Test-HelloWorld 및 TestCustomSnapinTest cmdlet을 추가 합니다.
 
 9. 사용자 지정 스냅인에 속하는 공급자를 지정 합니다 (선택 사항).
 

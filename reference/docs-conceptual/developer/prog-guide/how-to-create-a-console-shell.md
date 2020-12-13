@@ -1,39 +1,39 @@
 ---
-title: 콘솔 셸을 만드는 방법 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- Make-Shell [PowerShell Programmer's Guide]
-ms.openlocfilehash: 5d8231363ab804bfd7113ef69f0bdede445149a2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 콘솔 셸을 만드는 방법
+description: 콘솔 셸을 만드는 방법
+ms.openlocfilehash: 9ea67c43b1ee35b1fbfc553b22a1423419317ca2
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771620"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657224"
 ---
 # <a name="how-to-create-a-console-shell"></a>콘솔 셸을 만드는 방법
 
-Windows PowerShell은 확장 가능 하지 않은 콘솔 셸을 만드는 데 사용 되는 셸 만들기 도구 ("키트" 라고도 함)를 제공 합니다. 이 새로운 도구를 사용 하 여 만든 셸을 나중에 Windows PowerShell 스냅인을 통해 확장할 수 없습니다.
+Windows PowerShell은 확장 가능 하지 않은 콘솔 셸을 만드는 데 사용 되는 "키트" 라고도 하는 Make-Shell 도구를 제공 합니다. 이 새로운 도구를 사용 하 여 만든 셸을 나중에 Windows PowerShell 스냅인을 통해 확장할 수 없습니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
-다음은 파일에서 만들기-셸을 실행 하는 데 사용 되는 구문입니다.
+다음은 파일 내에서 Make-Shell를 실행 하는 데 사용 되는 구문입니다.
 
 ```
 make-shell
-  -out n.exe
-  -namespace ns
-  [ -lib libdirectory1[,libdirectory2,..] ]
-  [ -reference ca1.dll[,ca2.dll,...] ]
-  [ -formatdata fd1.format.ps1xml[,fd2.format.ps1xml,...] ]
-  [ -typedata td1.type.ps1xml[,td2.type.ps1xml,...] ]
-  [ -source c1.cs [,c2.cs,...] ]
-  [ -authorizationmanager authorizationManagerType ]
-  [ -win32icon i.ico ]
-  [ -initscript p.ps1 ]
-  [ -builtinscript s1.ps1[,s2.ps1,...] ]
-  [ -resource resourcefile.txt ]
-  [ -cscflags cscFlags ]
-  [ -? | -help ]
+  -out n.exe
+  -namespace ns
+  [ -lib libdirectory1[,libdirectory2,..] ]
+  [ -reference ca1.dll[,ca2.dll,...] ]
+  [ -formatdata fd1.format.ps1xml[,fd2.format.ps1xml,...] ]
+  [ -typedata td1.type.ps1xml[,td2.type.ps1xml,...] ]
+  [ -source c1.cs [,c2.cs,...] ]
+  [ -authorizationmanager authorizationManagerType ]
+  [ -win32icon i.ico ]
+  [ -initscript p.ps1 ]
+  [ -builtinscript s1.ps1[,s2.ps1,...] ]
+  [ -resource resourcefile.txt ]
+  [ -cscflags cscFlags ]
+  [ -? | -help ]
 ```
 
 ## <a name="parameters"></a>매개 변수
@@ -45,7 +45,7 @@ make-shell
 
 |매개 변수|설명|
 |---------------|-----------------|
-|-out n.exe|필수 요소. 생성할 셸의 이름입니다. 이 매개 변수의 일부로 경로가 지정 됩니다.<br /><br /> 지정 하지 않으면 shell은이 값에 ".exe"를 추가 합니다. **주의:**  참조 된 .dll 파일과 동일한 이름의 출력 파일을 만들지 마십시오. 이 작업을 수행 하는 경우 셸 도구는 동일한 이름으로 .cs 파일을 만듭니다 .이 파일은 cmdlet 소스 코드가 포함 된 .cs 파일을 덮어씁니다.|
+|-out n.exe|필수 요소. 생성할 셸의 이름입니다. 이 매개 변수의 일부로 경로가 지정 됩니다.<br /><br /> 지정 하지 않으면 shell은이 값에 ".exe"를 추가 합니다. **주의:**  참조 된 .dll 파일과 동일한 이름의 출력 파일을 만들지 마십시오. 이를 시도 하면 Make-Shell 도구는 동일한 이름으로 .cs 파일을 만듭니다 .이 파일은 cmdlet 소스 코드가 포함 된 .cs 파일을 덮어씁니다.|
 |-namespace ns|필수 요소. Runspace가 생성 하 고 컴파일하는 파생 된 [Runspaceconfiguration](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConfiguration) 클래스에 사용할 네임 스페이스입니다.|
 |-lib libdirectory1 [, libdirectory2,..]|Windows PowerShell 어셈블리, 매개 변수로 지정 된 어셈블리, `reference` 다른 어셈블리에서 간접적으로 참조 하는 어셈블리 및 .net 시스템 어셈블리를 포함 하 여 .net 어셈블리를 검색 하는 디렉터리입니다.|
 |-reference ca1.dll [, ca2.dll,...]|셸에 포함할 어셈블리를 쉼표로 구분한 목록입니다. 이러한 어셈블리에는 모든 cmdlet 및 공급자 어셈블리와 함께 로드 해야 하는 리소스 어셈블리가 포함 됩니다. 이 매개 변수를 지정 하지 않으면 Windows PowerShell에서 제공 하는 핵심 cmdlet 및 공급자만 포함 된 셸이 생성 됩니다.<br /><br /> 어셈블리는 전체 경로를 사용 하 여 지정할 수 있으며, 그렇지 않으면 매개 변수로 지정 된 경로를 사용 하 여 검색 됩니다 `lib` .|
@@ -58,7 +58,7 @@ make-shell
 |-builtinscript s1.ps1 [, s2.ps1,...]|셸에 대 한 기본 제공 스크립트 목록입니다. 이러한 스크립트는 경로의 스크립트 이전에 검색 되며, 셸을 빌드한 후에는 해당 콘텐츠를 변경할 수 없습니다.<br /><br /> 파일은 "있는 그대로" 포함 되어 있습니다. -셸에서 유효성 검사를 수행 하지 않습니다.|
 |-리소스 resourcefile.txt|셸에 대 한 도움말 및 배너 리소스를 포함 하는 .txt 파일입니다. 첫 번째 리소스는 ShellHelp로 이름이 지정 되 고, 매개 변수를 사용 하 여 셸을 호출 하는 경우 표시 되는 텍스트를 포함 합니다 `help` . 두 번째 리소스는 ShellBanner 이름이 지정 되 고, 대화형 모드에서 셸이 시작 될 때 표시 되는 텍스트 및 저작권 정보를 포함 합니다.<br /><br /> 이 매개 변수를 제공 하지 않거나 이러한 리소스가 없으면 일반 도움말과 배너가 사용 됩니다.|
 |-cscflags cscFlags|C # 컴파일러 (csc.exe)에 전달 되어야 하는 플래그입니다. 이러한 기능은 변경 되지 않은 상태로 전달 됩니다. 이 매개 변수에 공백이 포함 되어 있으면 큰따옴표로 묶어야 합니다.|
-|-?<br /><br /> -help|저작권 메시지와 셸 명령줄 옵션을 표시 합니다.|
+|-?<br /><br /> -help|저작권 메시지와 Make-Shell 명령줄 옵션을 표시 합니다.|
 |-verbose|셸이 만들어지는 동안 자세한 정보를 표시 합니다.|
 
 ## <a name="see-also"></a>참고 항목

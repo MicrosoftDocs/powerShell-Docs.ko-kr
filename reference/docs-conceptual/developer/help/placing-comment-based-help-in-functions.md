@@ -1,18 +1,20 @@
 ---
-title: 함수에 설명 기반 도움말 배치
 ms.date: 09/12/2016
-ms.openlocfilehash: c7a8f8db6c71fa2ef12aaa4df0f78815626ec8d6
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 함수에 설명 기반 도움말 배치
+description: 함수에 설명 기반 도움말 배치
+ms.openlocfilehash: 3bd72f0c71d8f6ad54c43c99f044423c072fdeeb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893206"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658202"
 ---
 # <a name="placing-comment-based-help-in-functions"></a>함수에 설명 기반 도움말 배치
 
 이 항목에서는 `Get-Help` cmdlet이 주석 기반 도움말 항목과 올바른 함수를 연결 하는 함수에 대 한 주석 기반 도움말을 넣을 위치에 대해 설명 합니다.
 
-## <a name="where-to-place-comment-based-help-for-a-function"></a>함수에 대 한 주석 기반 도움말을 넣을 위치
+## <a name="where-to-place-comment-based-help-for-a-function"></a>함수에 대 한 Comment-Based 도움말 위치
 
 - 함수 본문의 시작 부분에 있습니다.
 

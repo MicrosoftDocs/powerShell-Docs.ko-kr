@@ -1,12 +1,14 @@
 ---
-title: Runspace02 (VB.NET) 코드 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 922d1e8568dad8c02f77e4b76342418bb3b54469
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace02(VB.NET) 코드 샘플
+description: Runspace02(VB.NET) 코드 샘플
+ms.openlocfilehash: 07197886a062881128655379e4a4b28aaec17163
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771654"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657046"
 ---
 # <a name="runspace02-vbnet-code-sample"></a>Runspace02(VB.NET) 코드 샘플
 

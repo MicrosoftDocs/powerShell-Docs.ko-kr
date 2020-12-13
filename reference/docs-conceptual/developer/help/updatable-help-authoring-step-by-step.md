@@ -1,12 +1,14 @@
 ---
-title: 업데이트할 수 있는 도움말 제작-단계별
 ms.date: 09/13/2016
-ms.openlocfilehash: c9214be3c3363a4e6354595b50cf76a17d49aa67
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 업데이트할 수 있는 도움말 제작-단계별
+description: 업데이트할 수 있는 도움말 제작-단계별
+ms.openlocfilehash: c4aecdb801cac16c9cb07853317835fd87e6a0a8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893121"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658811"
 ---
 # <a name="updatable-help-authoring-step-by-step"></a>업데이트 가능한 도움말 작성: 단계별
 
@@ -26,7 +28,7 @@ ms.locfileid: "86893121"
 
 모듈 매니페스트에 **HelpInfoURI** 키를 추가 합니다. 키의 값은 모듈에 대 한 HelpInfo XML 정보 파일의 위치에 대 한 URI (Uniform Resource Identifier)입니다. 보안을 위해 주소는 "http" 또는 "https"로 시작 해야 합니다. URI는 인터넷 위치를 지정 해야 하지만 HelpInfo XML 파일 이름을 포함 하지 않아야 합니다.
 
-예:
+예를 들어:
 
 ```powershell
 

@@ -1,12 +1,14 @@
 ---
-title: Provider cmdlet 동적 매개 변수 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4aaa5ee39e98de9a9925fc65cac3cc6c32d9c2bc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 공급자 cmdlet 동적 매개 변수
+description: 공급자 cmdlet 동적 매개 변수
+ms.openlocfilehash: ac05a847afb0729c34d733fa4ba8da11f46746fe
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786818"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92662991"
 ---
 # <a name="provider-cmdlet-dynamic-parameters"></a>공급자 cmdlet 동적 매개 변수
 
@@ -58,47 +60,47 @@ internal sealed class CertificateProviderDynamicParameters
 
 동적 매개 변수를 추가 하는 데 사용할 수 있는 정적 매개 변수 목록은 다음과 같습니다.
 
-`Clear-Content`cmdlet `Path` [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContentDynamicParameters) 을 구현 하 여 clear cmdlet의 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다 (메서드를 구현 합니다.
+`Clear-Content`cmdlet Icontentcmdletprovider cmdlet Clear-Clear의 매개 변수를 통해 트리거되는 동적 매개 변수를 정의할 수 있습니다 .이 매개 변수는 `Path` [](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContentDynamicParameters) 를 구현 하는 방법입니다.
 
-`Clear-Item`cmdlet을 `Path` `Clear-Item` 구현 하 여 cmdlet의 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 [System.Management.Automation.Provider.Itemcmdletprovider.Clearitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ClearItemDynamicParameters) 있습니다.-. a m g.
+`Clear-Item`cmdlet을 `Path` `Clear-Item` 구현 하 여 cmdlet의 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 [](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ClearItemDynamicParameters) 있습니다.-. a m g.
 
-`Clear-ItemProperty`cmdlet을 구현 하 여 cmdlet의 매개 변수로 트리거되는 동적 매개 변수를 정의할 수 있습니다. `Path` `Clear-ItemProperty` [Clearpropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearPropertyDynamicParameters) 메서드.
+`Clear-ItemProperty` cmdlet을 구현 하 여 cmdlet의 매개 변수로 트리거되는 동적 매개 변수를 정의할 수 있습니다. `Path` `Clear-ItemProperty` [Clearpropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearPropertyDynamicParameters) 메서드.
 
-`Copy-Item`cmdlet `Path` `Destination` `Recurse` `Copy-Item` [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) 을 구현 하 여 cmdlet의, 및 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다 (예를 들어,
+`Copy-Item` cmdlet `Path` `Destination` `Recurse` `Copy-Item` [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) 을 구현 하 여 cmdlet의, 및 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다 (예를 들어,
 
-Containercmdletprovider cmdlet을 구현 하 여 cmdlet의 및 매개 변수를 통해 트리거되는 동적 매개 변수를 정의할 수 있습니다. `Path` `Recurse` `Get-ChildItem` [Getchilditemsdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) 및 [Containercmdletprovider. Getchildnamesdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) 메서드를 구현 합니다.
+Get-ChildItems cmdlet `Path` `Recurse` `Get-ChildItem` [Containercmdletprovider * 및 Getchilditemsdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) 및 Containercmdletprovider 메서드를 구현 하 여 cmdlet의 및 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다. [Getchildnamesdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) .
 
-`Get-Content`cmdlet `Path` `Get-Content` [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters) 을 구현 하 여 cmdlet의 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다 (메서드를 구현 합니다.
+`Get-Content` cmdlet `Path` `Get-Content` [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters) 을 구현 하 여 cmdlet의 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다 (메서드를 구현 합니다.
 
-`Get-Item`cmdlet을 `Path` `Get-Item` 구현 하 여 cmdlet의 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 [System.Management.Automation.Provider.Itemcmdletprovider.Getitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItemDynamicParameters) 있습니다... x m g.
+`Get-Item`cmdlet을 `Path` `Get-Item` 구현 하 여 cmdlet의 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 [](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItemDynamicParameters) 있습니다... x m g.
 
-`Get-ItemProperty`cmdlet을 구현 하 여 cmdlet의 및 매개 변수로 트리거되는 동적 매개 변수를 정의할 수 있습니다. `Path` `Name` `Get-ItemProperty` [getpropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.GetPropertyDynamicParameters) 메서드.
+`Get-ItemProperty` cmdlet을 구현 하 여 cmdlet의 및 매개 변수로 트리거되는 동적 매개 변수를 정의할 수 있습니다. `Path` `Name` `Get-ItemProperty` [getpropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.GetPropertyDynamicParameters) 메서드.
 
-`Invoke-Item`cmdlet `Path` `Invoke-Item` [Invokedefaultactiondynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultActionDynamicParameters) 메서드를 구현 하 여 cmdlet의 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다.
+`Invoke-Item` cmdlet `Path` `Invoke-Item` [Invokedefaultactiondynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultActionDynamicParameters) 메서드를 구현 하 여 cmdlet의 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다.
 
-`Move-Item`cmdlet을 구현 하 여 cmdlet의 및 매개 변수를 통해 트리거되는 동적 매개 변수를 정의할 수 있습니다. `Path` `Destination` `Move-Item` [system.webserver cmdletdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters) 메서드.
+`Move-Item` cmdlet을 구현 하 여 cmdlet의 및 매개 변수를 통해 트리거되는 동적 매개 변수를 정의할 수 있습니다. `Path` `Destination` `Move-Item` [system.webserver cmdletdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters) 메서드.
 
-`New-Item`cmdlet `Path` `ItemType` `Value` `New-Item` [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItemDynamicParameters) 을 구현 하 여 cmdlet의, 및 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다 (예를 들어,
+`New-Item` cmdlet `Path` `ItemType` `Value` `New-Item` [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItemDynamicParameters) 을 구현 하 여 cmdlet의, 및 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다 (예를 들어,
 
-`New-ItemProperty`cmdlet `Path` `Name` `PropertyType` `Value` `New-ItemProperty` [Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.NewPropertyDynamicParameters) 을 구현 하 여 cmdlet의,, 및 매개 변수를 통해 트리거되는 동적 매개 변수를 정의할 수 있습니다.
+`New-ItemProperty` cmdlet `Path` `Name` `PropertyType` `Value` `New-ItemProperty` [Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.NewPropertyDynamicParameters) 을 구현 하 여 cmdlet의,, 및 매개 변수를 통해 트리거되는 동적 매개 변수를 정의할 수 있습니다.
 
-`New-PSDrive`cmdlet [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) `New-PSDrive` [Newdrivedynamicparameters *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) 메서드를 구현 하 여 cmdlet에서 반환 하는System.Management.Automation.PSDriveinfo 개체에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다.
+`New-PSDrive`cmdlet [](/dotnet/api/System.Management.Automation.PSDriveInfo) `New-PSDrive` [Newdrivedynamicparameters *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) 메서드를 구현 하 여 cmdlet에서 반환 하는System.Management.Automation.PSDriveinfo 개체에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다.
 
-`Remove-Item`Cmdlet의 및 매개 변수를 통해 트리거되는 동적 매개 변수는 `Path` `Recurse` `Remove-Item` [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters) 를 구현 하 여 정의할 수 있습니다.
+`Remove-Item` Cmdlet의 및 매개 변수를 통해 트리거되는 동적 매개 변수는 `Path` `Recurse` `Remove-Item` [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters) 를 구현 하 여 정의할 수 있습니다.
 
-`Remove-ItemProperty`Cmdlet의 및 매개 변수를 통해 트리거되는 동적 매개 변수는 `Path` `Name` `Remove-ItemProperty` [Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RemovePropertyDynamicParameters) 를 구현 하 여 정의할 수 있습니다.
+`Remove-ItemProperty` Cmdlet의 및 매개 변수를 통해 트리거되는 동적 매개 변수는 `Path` `Name` `Remove-ItemProperty` [Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RemovePropertyDynamicParameters) 를 구현 하 여 정의할 수 있습니다.
 
-`Rename-Item`cmdlet `Path` `NewName` `Rename-Item` [Containercmdletprovider. Renameitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItemDynamicParameters) 메서드를 구현 하 여 cmdlet의 및 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다.
+`Rename-Item` cmdlet `Path` `NewName` `Rename-Item` [Containercmdletprovider. Renameitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItemDynamicParameters) 메서드를 구현 하 여 cmdlet의 및 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다.
 
 `Rename-ItemProperty``Path` `Name` `NewName` `Rename-ItemProperty` [Idynamicpropertycmdletprovider. Renamepropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RenamePropertyDynamicParameters) 메서드를 구현 하 여 cmdlet의, 및 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다.
 
-`Set-Content`cmdlet `Path` `Set-Content` [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters) 을 구현 하 여 cmdlet의 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다 (메서드를 구현 합니다.
+`Set-Content` cmdlet `Path` `Set-Content` [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters) 을 구현 하 여 cmdlet의 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다 (메서드를 구현 합니다.
 
-`Set-Item`cmdlet은 `Path` cmdlet의 및 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다 .이는 `Value` `Set-Item` [system.object](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItemDynamicParameters) 를 구현 하는 방법입니다.
+`Set-Item` cmdlet은 `Path` cmdlet의 및 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다 .이는 `Value` `Set-Item` [system.object](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItemDynamicParameters) 를 구현 하는 방법입니다.
 
-`Set-ItemProperty`cmdlet을 `Path` `Value` `Set-Item` 구현 하 여 cmdlet [System.Management.Automation.Provider.Ipropertycmdletprovider.Setpropertydynamicparameters*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetPropertyDynamicParameters) 의 및 매개 변수를 통해 트리거되는 동적 매개 변수를 정의할 수 있습니다....
+`Set-ItemProperty`cmdlet을 `Path` `Value` `Set-Item` 구현 하 여 cmdlet [](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetPropertyDynamicParameters) 의 및 매개 변수를 통해 트리거되는 동적 매개 변수를 정의할 수 있습니다....
 
-`Test-Path`cmdlet `Path` `Test-Path` [Invokedefaultactiondynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultActionDynamicParameters) 메서드를 구현 하 여 cmdlet의 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다.
+`Test-Path` cmdlet `Path` `Test-Path` [Invokedefaultactiondynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultActionDynamicParameters) 메서드를 구현 하 여 cmdlet의 매개 변수에 의해 트리거되는 동적 매개 변수를 정의할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 

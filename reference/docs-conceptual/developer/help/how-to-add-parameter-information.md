@@ -1,12 +1,14 @@
 ---
-title: 매개 변수 정보를 추가하는 방법
 ms.date: 09/12/2016
-ms.openlocfilehash: 15d0194a1d5449c65977703faf245e449d75d176
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 매개 변수 정보를 추가하는 방법
+description: 매개 변수 정보를 추가하는 방법
+ms.openlocfilehash: 8f4fc46ef256a77b058df4ba506124f80732cb39
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893393"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92663047"
 ---
 # <a name="how-to-add-parameter-information"></a>매개 변수 정보를 추가하는 방법
 
@@ -165,7 +167,7 @@ ms.locfileid: "86893393"
 
 매개 변수의 기본값은 명령줄에서 매개 변수를 지정 하지 않은 경우에 사용 되는 값입니다. 기본값은 선택 사항이 며, 필수 매개 변수와 같은 일부 매개 변수에는 필요 하지 않습니다. 그러나 대부분의 선택적 매개 변수에는 기본값을 지정 해야 합니다.
 
-기본값을 사용 하면 사용자가 매개 변수를 사용 하지 않는 효과를 이해할 수 있습니다. 선택적인 경로에 대 한 "현재 디렉터리" 또는 "PowerShell 설치 디렉터리 ()"와 같이 특별히 구체적 값을 설명 합니다 `$PSHOME` . **Passthru** 매개 변수에 사용 되는 다음 문장과 같이 기본값을 설명 하는 문장을 작성할 수도 있습니다. "passthru를 지정 하지 않으면 cmdlet은 개체를 파이프라인으로 전달 하지 않습니다." 또한 값이 필드 이름 **기본값과**반대로 표시 되기 때문에 항목에 "Default value" 라는 용어를 포함할 필요가 없습니다.
+기본값을 사용 하면 사용자가 매개 변수를 사용 하지 않는 효과를 이해할 수 있습니다. 선택적인 경로에 대 한 "현재 디렉터리" 또는 "PowerShell 설치 디렉터리 ()"와 같이 특별히 구체적 값을 설명 합니다 `$PSHOME` . **Passthru** 매개 변수에 사용 되는 다음 문장과 같이 기본값을 설명 하는 문장을 작성할 수도 있습니다. "passthru를 지정 하지 않으면 cmdlet은 개체를 파이프라인으로 전달 하지 않습니다." 또한 값이 필드 이름 **기본값과** 반대로 표시 되기 때문에 항목에 "Default value" 라는 용어를 포함할 필요가 없습니다.
 
 매개 변수의 기본값은 cmdlet 도움말 항목의 모든 뷰에 표시 되지 않습니다. 그러나 사용자가 토픽의 **전체** ( `Get-Help <cmdletname> -full` ) 또는 **매개 변수** () 보기를 요청 하는 경우 매개 변수 설명에 따라 매개 변수 특성을 사용 하 여 테이블에 표시 됩니다 `Get-Help
 <cmdletname> -parameter` .

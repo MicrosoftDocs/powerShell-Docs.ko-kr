@@ -1,12 +1,14 @@
 ---
-title: 모듈을 사용 하 여 Cmdlet을 가져오는 방법 | Microsoft Docs
 ms.date: 08/28/2019
-ms.openlocfilehash: fa8d629c14b06e3f9e9d6151cf09aa6b4acce358
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 모듈을 사용하여 Cmdlet을 가져오는 방법
+description: 모듈을 사용하여 Cmdlet을 가져오는 방법
+ms.openlocfilehash: 485a4be4d2accaf050a6536e7f92a0673f62a30b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779372"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657287"
 ---
 # <a name="how-to-import-cmdlets-using-modules"></a>모듈을 사용하여 Cmdlet을 가져오는 방법
 
@@ -33,7 +35,7 @@ ms.locfileid: "87779372"
 
    이 절차를 사용 하 여 cmdlet을 테스트할 수 있습니다. 어셈블리의 모든 cmdlet을 세션에 추가 합니다. 모듈에 대 한 자세한 내용은 [Windows PowerShell 모듈 작성](../module/writing-a-windows-powershell-module.md)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [PowerShell 모듈 매니페스트를 작성하는 방법](../module/how-to-write-a-powershell-module-manifest.md)
 
@@ -45,4 +47,4 @@ ms.locfileid: "87779372"
 
 [PSModulePath 설치 경로 수정](../module/modifying-the-psmodulepath-installation-path.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](../cmdlet/cmdlet-overview.md)
+[Writing a Windows PowerShell Cmdlet](../cmdlet/cmdlet-overview.md)(Windows PowerShell Cmdlet 작성)

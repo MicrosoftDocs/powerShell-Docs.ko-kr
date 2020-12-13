@@ -1,12 +1,14 @@
 ---
-title: Windows PowerShell02 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: a82366a88addb08e186eede79e621d90d915c50f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell02 샘플
+description: Windows PowerShell02 샘플
+ms.openlocfilehash: 61dedd72d93d4000edf9a12f12bbb49fbaeb9f3c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779389"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657364"
 ---
 # <a name="windows-powershell02-sample"></a>Windows PowerShell02 샘플
 

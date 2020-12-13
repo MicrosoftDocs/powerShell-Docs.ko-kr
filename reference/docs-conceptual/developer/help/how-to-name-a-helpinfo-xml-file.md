@@ -1,12 +1,14 @@
 ---
-title: HelpInfo XML 파일 이름을 지정하는 방법
 ms.date: 09/12/2016
-ms.openlocfilehash: 9505a7f66852a569d25ac0c1be86e68f870a7930
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: HelpInfo XML 파일 이름을 지정하는 방법
+description: HelpInfo XML 파일 이름을 지정하는 방법
+ms.openlocfilehash: 55bc2ef9530fc457e4d9ddf18e79e7226c991663
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86892934"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659039"
 ---
 # <a name="how-to-name-a-helpinfo-xml-file"></a>HelpInfo XML 파일 이름을 지정하는 방법
 
@@ -22,7 +24,7 @@ HelpInfo XML 파일의 이름은 다음과 같은 형식 이어야 합니다.
 
 - `<ModuleName>`- [Import-module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet이 반환 하는 **Moduleinfo** 개체의 **Name** 속성 값입니다.
 
-- `<ModuleGUID>`-모듈 매니페스트의 **GUID** 키 값입니다.
+- `<ModuleGUID>` -모듈 매니페스트의 **GUID** 키 값입니다.
 
 예를 들어 모듈 이름이 "TestModule"이 고 모듈 GUID가 9cabb9ad-4914-a46b-bfc1bebf07f9 인 경우 모듈의 HelpInfo XML 파일 이름은 다음과 같습니다.
 

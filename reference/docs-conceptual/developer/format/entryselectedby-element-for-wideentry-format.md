@@ -1,12 +1,14 @@
 ---
-title: WideEntry (형식)에 대 한 EntrySelectedBy 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ba0a776839c39d753d12859335388c5326639fd4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: WideEntry에 대한 EntrySelectedBy 요소(형식)
+description: WideEntry에 대한 EntrySelectedBy 요소(형식)
+ms.openlocfilehash: 246a1967300ab0551f376c4799deac275068308c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774085"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660250"
 ---
 # <a name="entryselectedby-element-for-wideentry-format"></a>WideEntry에 대한 EntrySelectedBy 요소(형식)
 

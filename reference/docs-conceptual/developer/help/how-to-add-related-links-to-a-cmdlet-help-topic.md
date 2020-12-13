@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 도움말 항목에 관련 링크를 추가하는 방법
 ms.date: 09/12/2016
-ms.openlocfilehash: 7557b3856d8470434070dd286cd7e30c9ba015c5
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Cmdlet 도움말 항목에 관련 링크를 추가하는 방법
+description: Cmdlet 도움말 항목에 관련 링크를 추가하는 방법
+ms.openlocfilehash: 7f1baefea69310bdf835c52461f8d3f49c4d94e8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893376"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92662004"
 ---
 # <a name="how-to-add-related-links-to-a-cmdlet-help-topic"></a>Cmdlet 도움말 항목에 관련 링크를 추가하는 방법
 

@@ -1,12 +1,14 @@
 ---
-title: Windows PowerShell 탐색 공급자 만들기
 ms.date: 09/13/2016
-ms.openlocfilehash: 0c9714c396a023516cd1c409e598d61bb6cda3ce
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 탐색 공급자 만들기
+description: Windows PowerShell 탐색 공급자 만들기
+ms.openlocfilehash: 73d4971fb91acaef9e1f20226e7b9b883730e394
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778985"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658661"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Windows PowerShell 탐색 공급자 만들기
 
@@ -43,7 +45,7 @@ Windows PowerShell 드라이브를 통해 데이터 저장소에 대 한 액세�
 
 ## <a name="creating-a-windows-powershell-path"></a>Windows PowerShell 경로 만들기
 
-Windows PowerShell 탐색 공급자는 공급자 내부 Windows PowerShell 경로를 사용 하 여 데이터 저장소의 항목을 탐색 합니다. 공급자 내부 경로를 만들려면 공급자가 Combine 경로 [*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) 메서드를 구현 하 여 Combine path cmdlet의 호출을 지원 해야 합니다. 이 메서드는 부모 및 자식 경로 사이에 공급자별 경로 구분 기호를 사용 하 여 부모 및 자식 경로를 공급자 내부 경로로 결합 합니다.
+Windows PowerShell 탐색 공급자는 공급자 내부 Windows PowerShell 경로를 사용 하 여 데이터 저장소의 항목을 탐색 합니다. 공급자 내부 경로를 만들려면 공급자가 Combine-Path cmdlet의 호출을 지원 하기 위해 System.object를 구현 해야 합니다. [makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) 메서드를 구현 해야 합니다. 이 메서드는 부모 및 자식 경로 사이에 공급자별 경로 구분 기호를 사용 하 여 부모 및 자식 경로를 공급자 내부 경로로 결합 합니다.
 
 기본 구현에서는 경로 구분 기호로 "/" 또는 ""를 사용 하 여 경로를 사용 하 고, \\ 경로 구분 기호를 ""로 정규화 하 고 \\ , 부모 및 자식 경로 부분을 구분 기호와 결합 한 다음 조합 된 경로를 포함 하는 문자열을 반환 합니다.
 
@@ -117,9 +119,9 @@ Windows PowerShell 탐색 공급자는 표시 된 전체 또는 부분 공급자
 [Moveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 메서드를 구현 하는 경우에는 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 것이 좋습니다. 이 메서드는 시스템 상태가 변경 될 때 (예: 파일 삭제) 작업 실행을 확인 하는 데 사용 됩니다.
 Windows PowerShell 런타임이 사용자에 게 표시 되는 항목을 확인 하는 데 필요한 명령줄 설정이 나 기본 설정 변수를 고려 하 여 사용자에 게 변경할 리소스의 [이름을 보냅니다.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess)
 
-Moveitem * 메서드는 [system.object를 호출한](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 후에를 호출 하 여를 호출한 후에는 `true` [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 를 [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 호출 해야 합니다 .이 메서드를 호출 하는 경우에는 system.object를 호출 해야 합니다. 이 메서드는 사용자에 게 작업을 계속 해야 하는 경우 사용자에 게 메시지를 보내 사용자에 게 피드백을 보냅니다. 공급자는 System.object를 호출 해야 합니다 [. shouldcontinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 잠재적으로 위험한 시스템 수정에 대 한 추가 검사로 계속 합니다.
+Moveitem * 메서드는 [system.object를 호출한](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 후에를 호출 하 여를 호출한 후에는 `true` [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 를 [](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) 호출 해야 합니다 .이 메서드를 호출 하는 경우에는 system.object를 호출 해야 합니다. 이 메서드는 사용자에 게 작업을 계속 해야 하는 경우 사용자에 게 메시지를 보내 사용자에 게 피드백을 보냅니다. 공급자는 System.object를 호출 해야 합니다 [. shouldcontinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 잠재적으로 위험한 시스템 수정에 대 한 추가 검사로 계속 합니다.
 
-## <a name="attaching-dynamic-parameters-to-the-move-item-cmdlet"></a>동적 매개 변수를 Move Item Cmdlet에 연결
+## <a name="attaching-dynamic-parameters-to-the-move-item-cmdlet"></a>Move-Item Cmdlet에 동적 매개 변수 연결
 
 경우에 따라 cmdlet에는 `Move-Item` 런타임에 동적으로 제공 되는 추가 매개 변수가 필요 합니다. 이러한 동적 매개 변수를 제공 하기 위해 탐색 공급자는 지정 된 경로의 항목에서 필수 매개 변수 값을 가져오고 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성을 가진 속성 및 필드가 있는 개체를 반환 하기 위해 system.web. c a g. c a n [g](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters) .
 
@@ -129,7 +131,7 @@ Moveitem * 메서드는 [system.object를 호출한](/dotnet/api/System.Manageme
 
 ## <a name="normalizing-a-relative-path"></a>상대 경로 정규화
 
-탐색 공급자는 매개 변수에 [System.Management.Automation.Provider.Navigationcmdletprovider.Normalizerelativepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) `path` 지정 된 경로를 기준으로 매개 변수에 지정 된 정규화 된 경로를 정규화 하는 Normalizerelativepath * 메서드를 구현 합니다. `basePath` 메서드는 정규화 된 경로에 대 한 문자열 표현을 반환 합니다. `path`매개 변수가 존재 하지 않는 경로를 지정 하는 경우 오류를 기록 합니다.
+탐색 공급자는 매개 변수에 [](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) `path` 지정 된 경로를 기준으로 매개 변수에 지정 된 정규화 된 경로를 정규화 하는 Normalizerelativepath * 메서드를 구현 합니다. `basePath` 메서드는 정규화 된 경로에 대 한 문자열 표현을 반환 합니다. `path`매개 변수가 존재 하지 않는 경로를 지정 하는 경우 오류를 기록 합니다.
 
 샘플 탐색 공급자는이 메서드를 재정의 하지 않습니다. 다음은 기본 구현입니다.
 

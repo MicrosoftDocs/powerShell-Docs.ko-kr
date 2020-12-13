@@ -1,12 +1,14 @@
 ---
-title: GroupBy (형식)를 위해 EntrySelectedBy의 SelectionCondition에 대 한 ScriptBlock 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: e70e1555a8f2fe0d15d3e864d80d35527af81b03
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GroupBy에 대한 EntrySelectedBy의 SelectionCondition에 대한 ScriptBlock 요소(형식)
+description: GroupBy에 대한 EntrySelectedBy의 SelectionCondition에 대한 ScriptBlock 요소(형식)
+ms.openlocfilehash: cc92aa642b42fa3e4c4f974e954d5eac73179de3
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785390"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664895"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format"></a>GroupBy에 대한 EntrySelectedBy의 SelectionCondition에 대한 ScriptBlock 요소(형식)
 

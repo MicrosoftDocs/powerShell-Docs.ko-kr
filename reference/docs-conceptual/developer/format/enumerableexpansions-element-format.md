@@ -1,12 +1,14 @@
 ---
-title: EnumerableExpansions 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2b536b1ab9b34b0089d0a38d3c5dc7a937176443
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: EnumerableExpansions 요소(형식)
+description: EnumerableExpansions 요소(형식)
+ms.openlocfilehash: 789599e6ff368b4685c7937d5b6eb38618752f9e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774017"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660185"
 ---
 # <a name="enumerableexpansions-element-format"></a>EnumerableExpansions 요소(형식)
 
@@ -44,7 +46,7 @@ Configuration 요소 (Format) DefaultSettings 요소 (format) EnumerableExpansio
 
 ## <a name="remarks"></a>설명
 
-이 요소는 컬렉션 개체와 컬렉션의 개체가 표시 되는 방식을 정의 하는 데 사용 됩니다. 이 경우 컬렉션 개체는 **Collections** 인터페이스를 지 원하는 개체를 참조 합니다.
+이 요소는 컬렉션 개체와 컬렉션의 개체가 표시 되는 방식을 정의 하는 데 사용 됩니다. 이 경우 컬렉션 개체는  **Collections** 인터페이스를 지 원하는 개체를 참조 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

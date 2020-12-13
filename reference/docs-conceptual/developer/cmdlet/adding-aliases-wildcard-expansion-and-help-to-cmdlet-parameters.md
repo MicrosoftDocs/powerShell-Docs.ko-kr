@@ -1,24 +1,26 @@
 ---
-title: 별칭, 와일드 카드 확장 및 Cmdlet 매개 변수에 대 한 도움말 추가 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 244c50c73972c2760e0029c7fa4f4b5764b066da
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 매개 변수에 별칭, 와일드카드 확장 및 도움말 추가
+description: Cmdlet 매개 변수에 별칭, 와일드카드 확장 및 도움말 추가
+ms.openlocfilehash: f0f07796370b4613b1ca0ad17b16c6598bfa438d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774969"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660631"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>Cmdlet 매개 변수에 별칭, 와일드카드 확장 및 도움말 추가
 
-이 섹션에서는 진단, 와일드 카드 확장 및 도움말 메시지를 Stop Proc cmdlet의 매개 변수에 추가 하는 방법에 대해 설명 합니다 ( [시스템을 수정 하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)참조).
+이 섹션에서는 Stop-Proc cmdlet의 매개 변수에 별칭, 와일드 카드 확장 및 도움말 메시지를 추가 하는 방법에 대해 설명 합니다 ( [시스템을 수정 하는 Cmdlet 만들기](./creating-a-cmdlet-that-modifies-the-system.md)참조).
 
-이 Stop Proc cmdlet은 [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)에 설명 된 것 처럼 Get-proc cmdlet을 사용 하 여 검색 된 프로세스를 중지 하려고 시도 합니다.
+이 Stop-Proc cmdlet은 Get-Proc cmdlet을 사용 하 여 검색 된 프로세스를 중지 하려고 합니다 ( [첫 번째 Cmdlet 만들기](./creating-a-cmdlet-without-parameters.md)참조).
 
 ## <a name="defining-the-cmdlet"></a>Cmdlet 정의
 
 Cmdlet을 만드는 첫 번째 단계는 항상 cmdlet의 이름을 지정 하 고 cmdlet을 구현 하는 .NET 클래스를 선언 하는 것입니다. 시스템을 변경 하는 cmdlet을 작성 하 고 있으므로 이름을 적절 하 게 지정 해야 합니다. 이 cmdlet은 시스템 프로세스를 중지 하므로 [Verbslifecycle](/dotnet/api/System.Management.Automation.VerbsLifeCycle) 클래스에 정의 된 동사 "Stop"을 사용 하 여 프로세스를 나타내는 명사 "Proc"를 사용 합니다. 승인 된 cmdlet 동사에 대 한 자세한 내용은 [Cmdlet 동사 이름](./approved-verbs-for-windows-powershell-commands.md)을 참조 하세요.
 
-다음 코드는이 Stop Proc cmdlet에 대 한 클래스 정의입니다.
+다음 코드는이 Stop-Proc cmdlet에 대 한 클래스 정의입니다.
 
 ```csharp
 [Cmdlet(VerbsLifecycle.Stop, "proc",
@@ -63,7 +65,7 @@ private string[] processNames;
 
 Windows PowerShell을 사용 하 여 cmdlet 매개 변수에 대 한 도움말을 만들 수 있습니다. 시스템 수정 및 사용자 의견에 사용 되는 매개 변수에 대해이 작업을 수행 합니다. 도움말을 지 원하는 각 매개 변수에 대해 `HelpMessage` [system.object](/dotnet/api/System.Management.Automation.ParameterAttribute) 특성 선언에서 attribute 키워드를 설정할 수 있습니다. 이 키워드는 매개 변수를 사용할 때 사용자에 게 표시 되는 텍스트를 정의 합니다. 또한 키워드를 설정 `HelpMessageBaseName` 하 여 메시지에 사용할 리소스의 기본 이름을 식별할 수 있습니다. 이 키워드를 설정 하는 경우 키워드를 설정 `HelpMessageResourceId` 하 여 리소스 식별자도 지정 해야 합니다.
 
-이 Stop Proc cmdlet의 다음 코드는 `HelpMessage` 매개 변수에 대 한 attribute 키워드를 정의 합니다 `Name` .
+이 Stop-Proc cmdlet의 다음 코드는 `HelpMessage` 매개 변수에 대 한 attribute 키워드를 정의 합니다 `Name` .
 
 ```csharp
 /// <summary>
@@ -135,9 +137,9 @@ Cmdlet을 구현한 후 Windows PowerShell 스냅인을 통해 Windows PowerShel
 
 ## <a name="testing-the-cmdlet"></a>Cmdlet 테스트
 
-Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 하 여 테스트할 수 있습니다. 샘플 중지-프로시저 cmdlet을 테스트해 보겠습니다. 명령줄에서 cmdlet을 사용 하는 방법에 대 한 자세한 내용은 [Windows PowerShell 시작](/powershell/scripting/getting-started/getting-started-with-windows-powershell)을 참조 하세요.
+Windows PowerShell을 사용 하 여 cmdlet을 등록 한 경우 명령줄에서 실행 하 여 테스트할 수 있습니다. 샘플 Stop-Proc cmdlet을 테스트 하겠습니다. 명령줄에서 cmdlet을 사용 하는 방법에 대 한 자세한 내용은 [Windows PowerShell 시작](/powershell/scripting/getting-started/getting-started-with-windows-powershell)을 참조 하세요.
 
-- Windows PowerShell을 시작 하 고 ProcessName 별칭을 사용 하 여 매개 변수에 대 한 프로세스를 중지 하려면 Stop Proc를 사용 `Name` 합니다.
+- Windows PowerShell을 시작 하 고 Stop-Proc를 사용 하 여 매개 변수에 대 한 ProcessName 별칭을 사용 하 여 프로세스를 중지 `Name` 합니다.
 
     ```powershell
     PS> stop-proc -ProcessName notepad

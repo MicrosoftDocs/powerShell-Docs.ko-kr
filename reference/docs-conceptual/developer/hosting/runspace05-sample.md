@@ -1,16 +1,18 @@
 ---
-title: Runspace05 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 2d274028d2357a26cd75cf70a033abbf907f5c4d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace05 샘플
+description: Runspace05 샘플
+ms.openlocfilehash: 67a372eecba30452587471328412e8a2bdd9ec5a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772164"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657731"
 ---
 # <a name="runspace05-sample"></a>Runspace05 샘플
 
-이 샘플에서는 runspace를 열 때 스냅인의 cmdlet을 사용할 수 있도록 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체에 스냅인을 추가 하는 방법을 보여 줍니다. 이 스냅인은 GetProcessSample01 개체를 사용 하 여 동기적으로 실행 되는 Get Proc cmdlet ( [샘플](../cmdlet/getprocesssample01-sample.md)에서 정의 됨)을 제공 [합니다.](/dotnet/api/system.management.automation.powershell)
+이 샘플에서는 runspace를 열 때 스냅인의 cmdlet을 사용할 수 있도록 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체에 스냅인을 추가 하는 방법을 보여 줍니다. 스냅인은 GetProcessSample01 개체를 사용 하 여 동기적으로 실행 되는 Get-Proc cmdlet ( [샘플](../cmdlet/getprocesssample01-sample.md)에서 정의 됨)을 제공 [합니다.](/dotnet/api/system.management.automation.powershell)
 
 ## <a name="requirements"></a>요구 사항
 
@@ -36,7 +38,7 @@ ms.locfileid: "87772164"
 
 ## <a name="example"></a>예제
 
-이 샘플에서는 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 사용 하 여 runspace를 열 때 사용할 수 있는 요소를 정의 하는 runspace를 만듭니다. 이 샘플에서는 Get Proc cmdlet을 정의 하는 스냅인이 초기 세션 상태에 추가 됩니다.
+이 샘플에서는 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 사용 하 여 runspace를 열 때 사용할 수 있는 요소를 정의 하는 runspace를 만듭니다. 이 샘플에서는 Get-Proc cmdlet을 정의 하는 스냅인을 초기 세션 상태에 추가 합니다.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces

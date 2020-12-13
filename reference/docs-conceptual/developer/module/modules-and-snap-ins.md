@@ -1,12 +1,14 @@
 ---
-title: 모듈 및 스냅인 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 07cdc55fd6d1462130f1a81deb30056623a525e6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 모듈 및 스냅인
+description: 모듈 및 스냅인
+ms.openlocfilehash: de4ff1de9a29b78d7783fe7ed0265f5516db1fb4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787311"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658683"
 ---
 # <a name="modules-and-snap-ins"></a>모듈 및 스냅인
 
@@ -24,4 +26,4 @@ Cmdlet은 모듈 (Windows PowerShell 2.0에서 도입) 또는 스냅인을 사�
 
 [Windows PowerShell 모듈 작성](writing-a-windows-powershell-module.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](../cmdlet/cmdlet-overview.md)
+[Writing a Windows PowerShell Cmdlet](../cmdlet/cmdlet-overview.md)(Windows PowerShell Cmdlet 작성)

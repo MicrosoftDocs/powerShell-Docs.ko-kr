@@ -1,12 +1,14 @@
 ---
-title: 설명 기반 도움말 항목 작성
 ms.date: 09/13/2016
-ms.openlocfilehash: f29a30d27eba2b84883c4c2bd3cee68349c94e19
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 설명 기반 도움말 항목 작성
+description: 설명 기반 도움말 항목 작성
+ms.openlocfilehash: 11bbadfde27a74bde29d336b91516939e7265b3b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893104"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658804"
 ---
 # <a name="writing-comment-based-help-topics"></a>설명 기반 도움말 항목 작성
 
@@ -18,10 +20,10 @@ ms.locfileid: "86893104"
 
 ## <a name="in-this-section"></a>섹션 내용
 
- [주석 기반 도움말의 구문](./syntax-of-comment-based-help.md) 주석 기반 도움말의 구문에 대해 설명 합니다.
+ [Comment-Based 도움말 구문](./syntax-of-comment-based-help.md) 주석 기반 도움말의 구문에 대해 설명 합니다.
 
  [주석 기반 도움말 키워드](./comment-based-help-keywords.md) 주석 기반 도움말의 키워드를 나열 합니다.
 
- [함수에 주석 기반 도움말 배치](./placing-comment-based-help-in-functions.md) 함수에 대 한 주석 기반 도움말을 넣을 위치를 보여 줍니다.
+ [함수에 Comment-Based 도움말 배치](./placing-comment-based-help-in-functions.md) 함수에 대 한 주석 기반 도움말을 넣을 위치를 보여 줍니다.
 
- [스크립트에 주석 기반 도움말 배치](./placing-comment-based-help-in-scripts.md) 스크립트에 대 한 주석 기반 도움말을 넣을 위치를 표시 합니다.
+ [스크립트에 Comment-Based 도움말 배치](./placing-comment-based-help-in-scripts.md) 스크립트에 대 한 주석 기반 도움말을 넣을 위치를 표시 합니다.

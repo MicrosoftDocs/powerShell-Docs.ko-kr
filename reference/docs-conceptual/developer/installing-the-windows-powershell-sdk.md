@@ -1,12 +1,14 @@
 ---
-title: Windows PowerShell SDK 설치
 ms.date: 03/30/2020
-ms.openlocfilehash: 91cf57510bb7f44799cfdaf7cadcc7bcd505c977
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell SDK 설치
+description: Windows PowerShell SDK 설치
+ms.openlocfilehash: 07108ede640b8c6c02bea6d9e2b63116b5b8f969
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771977"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657301"
 ---
 # <a name="installing-the-windows-powershell-sdk"></a>Windows PowerShell SDK 설치
 
@@ -74,8 +76,8 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\` 다음 섹션에서는 각
 - Runspace02-PowerShell 클래스를 사용 하 여 및 cmdlet을 동기적으로 실행 하는 방법을 보여 줍니다 `Get-Process` `Sort-Object` . `Get-Process`Cmdlet은 로컬 컴퓨터에서 실행 되는 각 프로세스에 대 한 프로세스 개체를 반환 하 고는 해당 `Sort-Object` Id 속성을 기준으로 개체를 정렬 합니다. 이러한 명령의 결과는 DataGridView 컨트롤을 사용하여 표시됩니다.
 - Runspace03-PowerShell 클래스를 사용 하 여 스크립트를 동기적으로 실행 하는 방법과 종료 되지 않는 오류를 처리 하는 방법을 보여 줍니다. 스크립트는 프로세스 이름 목록을 받은 다음 해당 프로세스를 검색합니다. 스크립트를 실행할 때 생성된 종료되지 않는 오류를 포함하여 스크립트의 결과가 콘솔 창에 표시됩니다.
 - Runspace04-PowerShell 클래스를 사용 하 여 명령을 실행 하는 방법과 명령을 실행할 때 throw 되는 종료 오류를 catch 하는 방법을 보여 줍니다. 두 개의 명령이 실행되는데, 마지막 명령은 유효하지 않은 매개 변수 인수를 전달받습니다. 따라서 개체가 반환되지 않고 종료 오류가 발생합니다.
-- Runspace05-runspace를 열 때 스냅인의 cmdlet을 사용할 수 있도록 InitialSessionState 개체에 스냅인을 추가 하는 방법을 보여 줍니다. 스냅인은 PowerShell 개체를 사용 하 여 동기적으로 실행 되는 GetProcessSample01 샘플로 정의 된 Get Proc cmdlet을 제공 합니다.
-- Runspace06-runspace를 열 때 모듈이 로드 되도록 InitialSessionState 개체에 모듈을 추가 하는 방법을 보여 줍니다. 이 모듈은 PowerShell 개체를 사용 하 여 동기적으로 실행 되는 GetProcessSample02 샘플에 의해 정의 된 Get Proc cmdlet을 제공 합니다.
+- Runspace05-runspace를 열 때 스냅인의 cmdlet을 사용할 수 있도록 InitialSessionState 개체에 스냅인을 추가 하는 방법을 보여 줍니다. 스냅인은 PowerShell 개체를 사용 하 여 동기적으로 실행 되는 Get-Proc cmdlet (GetProcessSample01 샘플에서 정의 됨)을 제공 합니다.
+- Runspace06-runspace를 열 때 모듈이 로드 되도록 InitialSessionState 개체에 모듈을 추가 하는 방법을 보여 줍니다. 모듈은 PowerShell 개체를 사용 하 여 동기적으로 실행 되는 Get-Proc cmdlet (GetProcessSample02 샘플에서 정의 됨)을 제공 합니다.
 - Runspace07-runspace를 만든 다음이 runspace를 사용 하 여 PowerShell 개체를 사용 하 여 두 개의 cmdlet을 동기적으로 실행 하는 방법을 보여 줍니다.
 - Runspace08-PowerShell 개체의 파이프라인에 명령 및 인수를 추가 하는 방법과 동기적으로 명령을 실행 하는 방법을 보여 줍니다.
 - Runspace09-PowerShell 개체의 파이프라인에 스크립트를 추가 하는 방법과 비동기식으로 스크립트를 실행 하는 방법을 보여 줍니다. 이벤트는 스크립트의 출력을 처리하는 데 사용됩니다.

@@ -1,16 +1,14 @@
 ---
-title: ValidateRange 특성 선언 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateRange, described
-- ValidateRange attribute
-- attributes, ValidateRange
-ms.openlocfilehash: 9aeaa6f03c170389ff61a058b505dbcf74df6958
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: ValidateRange 특성 선언
+description: ValidateRange 특성 선언
+ms.openlocfilehash: 1fec9d1bd36cd21b7f0f23bf6d72338d276dce91
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787787"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660599"
 ---
 # <a name="validaterange-attribute-declaration"></a>ValidateRange 특성 선언
 
@@ -24,9 +22,9 @@ ValidateRange 특성은 cmdlet 매개 변수 인수에 대 한 최소값 및 최
 
 #### <a name="parameters"></a>매개 변수
 
-`MinRange`([System.object](/dotnet/api/system.object))가 필요 합니다. 허용 되는 최소값을 지정 합니다.
+`MinRange` ([System.object](/dotnet/api/system.object))가 필요 합니다. 허용 되는 최소값을 지정 합니다.
 
-`MaxRange`([System.object](/dotnet/api/system.object))가 필요 합니다. 허용 되는 최대값을 지정 합니다.
+`MaxRange` ([System.object](/dotnet/api/system.object))가 필요 합니다. 허용 되는 최대값을 지정 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -44,4 +42,4 @@ ValidateRange 특성은 cmdlet 매개 변수 인수에 대 한 최소값 및 최
 
 [Validaterangeattribute.](/dotnet/api/System.Management.Automation.ValidateRangeAttribute)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

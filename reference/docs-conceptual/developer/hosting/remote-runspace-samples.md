@@ -1,12 +1,14 @@
 ---
-title: Remote Runspace 샘플
 ms.date: 09/13/2016
-ms.openlocfilehash: 68248f0ba9e816865b6b92dbf6e7686e2d871370
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Remote Runspace 샘플
+description: Remote Runspace 샘플
+ms.openlocfilehash: ba8f89d0369147a96a4f9f518b0784b4ebe7e80e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783231"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658038"
 ---
 # <a name="remote-runspace-samples"></a>Remote Runspace 샘플
 

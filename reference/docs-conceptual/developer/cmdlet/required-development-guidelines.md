@@ -1,12 +1,14 @@
 ---
-title: 필수 개발 지침 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ca0168050e3c1c2e7537036f96da62f52d50982e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 필수 개발 지침
+description: 필수 개발 지침
+ms.openlocfilehash: 98db075b314eb7f54f2deb56022799d9f830f9ef
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781701"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655763"
 ---
 # <a name="required-development-guidelines"></a>필수 개발 지침
 
@@ -52,19 +54,19 @@ Cmdlet을 사용할 때와 다른 cmdlet을 사용할 때 일관 된 사용자 �
 
 Cmdlet 특성에 지정 된 동사는 Windows PowerShell에서 제공 하는 인식 된 동사 집합에서 가져와야 합니다. 금지 된 동의어 중 하나가 아니어야 합니다. 다음 열거형으로 정의 된 상수 문자열을 사용 하 여 cmdlet 동사를 지정 합니다.
 
-- [VerbsCommon.](/dotnet/api/System.Management.Automation.VerbsCommon)
+- [System.Management.Automation.VerbsCommon](/dotnet/api/System.Management.Automation.VerbsCommon)
 
-- [VerbsCommunications.](/dotnet/api/System.Management.Automation.VerbsCommunications)
+- [System.Management.Automation.VerbsCommunications](/dotnet/api/System.Management.Automation.VerbsCommunications)
 
-- [VerbsData.](/dotnet/api/System.Management.Automation.VerbsData)
+- [System.Management.Automation.VerbsData](/dotnet/api/System.Management.Automation.VerbsData)
 
-- [VerbsDiagnostic.](/dotnet/api/System.Management.Automation.VerbsDiagnostic)
+- [System.Management.Automation.VerbsDiagnostic](/dotnet/api/System.Management.Automation.VerbsDiagnostic)
 
-- [VerbsLifeCycle.](/dotnet/api/System.Management.Automation.VerbsLifeCycle)
+- [System.Management.Automation.VerbsLifeCycle](/dotnet/api/System.Management.Automation.VerbsLifeCycle)
 
-- [VerbsSecurity.](/dotnet/api/System.Management.Automation.VerbsSecurity)
+- [System.Management.Automation.VerbsSecurity](/dotnet/api/System.Management.Automation.VerbsSecurity)
 
-- [VerbsOther.](/dotnet/api/System.Management.Automation.VerbsOther)
+- [System.Management.Automation.VerbsOther](/dotnet/api/System.Management.Automation.VerbsOther)
 
 승인 된 동사 이름에 대 한 자세한 내용은 [Cmdlet 동사](./approved-verbs-for-windows-powershell-commands.md)를 참조 하세요.
 
@@ -74,7 +76,7 @@ Cmdlet 특성에 지정 된 동사는 Windows PowerShell에서 제공 하는 인
 
 Cmdlet의 이름을 입력할 때 다음 특수 문자를 사용 하지 마십시오.
 
-|문자|이름|
+|문자|Name|
 |---------------|----------|
 |#|숫자 기호|
 |,|쉼표|
@@ -82,7 +84,7 @@ Cmdlet의 이름을 입력할 때 다음 특수 문자를 사용 하지 마십�
 |{}|묶습니다|
 |[]|각괄호|
 |&|안에서|
-|-|하이픈 **메모:** 동사를 명사와 구분 하는 데 사용할 수 있지만 명사 나 동사 내에서 사용할 수는 없습니다.|
+|-|하이픈 **메모:**  동사를 명사와 구분 하는 데 사용할 수 있지만 명사 나 동사 내에서 사용할 수는 없습니다.|
 |/|슬래시 표시|
 |\\| 백슬래시|
 |$|달러 기호|
@@ -167,7 +169,7 @@ Cmdlet 특성을 선언 하는 방법에 대 한 자세한 내용은 [Cmdletattr
 
 ### <a name="override-an-input-processing-method-rc03"></a>입력 처리 메서드 재정의 (RC03)
 
-Cmdlet이 Windows PowerShell 환경에 참여 하려면 다음 *입력 처리 방법*중 하나 이상을 재정의 해야 합니다.
+Cmdlet이 Windows PowerShell 환경에 참여 하려면 다음 *입력 처리 방법* 중 하나 이상을 재정의 해야 합니다.
 
 [이 메서드](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) 는 한 번만 호출 되며 전처리 기능을 제공 하는 데 사용 됩니다.
 
@@ -209,4 +211,4 @@ Cmdlet을 패키지 하 고 배포 하는 Windows PowerShell 모듈을 만듭니
 
 [권장되는 개발 지침](./advisory-development-guidelines.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

@@ -1,12 +1,14 @@
 ---
-title: Windows PowerShell 모듈 작성 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d2398a8111a9832af2465d045be0bdefc3cf927a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 모듈 작성
+description: Windows PowerShell 모듈 작성
+ms.openlocfilehash: 307241f0fb4d12c1a5cbd651a0ae4d5303098b27
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779151"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659427"
 ---
 # <a name="writing-a-windows-powershell-module"></a>Windows PowerShell 모듈 작성
 
@@ -20,7 +22,7 @@ Windows PowerShell 모듈을 사용 하 여 Windows PowerShell 코드를 독립�
 
 모듈을 사용 하 여 일반적인 작업을 수행 하는 함수에 대 한 긴밀 한 라이브러리를 패키지 하 고 배포할 수 있습니다. 일반적으로 이러한 함수의 이름은 일반적으로 사용 되는 작업을 반영 하는 하나 이상의 명사를 공유 합니다. 이러한 함수는 public 및 private 멤버를 가질 수 있다는 점에서 .NET Framework 클래스와 유사할 수도 있습니다. 예를 들어 라이브러리에 파일 전송에 대 한 함수 집합이 포함 될 수 있습니다. 이 경우 공통 작업을 반영 하는 명사는 "file" 일 수 있습니다.
 
-### <a name="configuration"></a>구성
+### <a name="configuration"></a>Configuration
 
 모듈은 특정 cmdlet, 공급자, 함수 및 변수를 추가 하 여 환경을 사용자 지정 하는 데 사용할 수 있습니다.
 

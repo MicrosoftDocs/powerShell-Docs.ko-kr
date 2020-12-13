@@ -1,14 +1,14 @@
 ---
-title: Windows PowerShell 스냅인 작성 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- snap-ins [PowerShell SDK], PSSnapin example
-ms.openlocfilehash: 02603c54fb9852a8b78ecf68e3ee387d1fd418fc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 스냅인 작성
+description: Windows PowerShell 스냅인 작성
+ms.openlocfilehash: f658c2fa1211bfb77d2e8edd3999ce7f92df13bb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779094"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659449"
 ---
 # <a name="writing-a-windows-powershell-snap-in"></a>Windows PowerShell 스냅인 작성
 
@@ -46,7 +46,7 @@ ms.locfileid: "87779094"
 
 ## <a name="example"></a>예제
 
-이 예제에서는 Windows PowerShell 셸에서 Get Proc cmdlet을 등록 하는 데 사용할 수 있는 Windows PowerShell 스냅인을 작성 하는 방법을 보여 줍니다. 이 예제에서 전체 어셈블리는 GetProcPSSnapIn01 스냅인 클래스와 `Get-Proc` cmdlet 클래스만 포함 합니다.
+이 예제에서는 Windows powershell 셸에서 Get-Proc cmdlet을 등록 하는 데 사용할 수 있는 Windows PowerShell 스냅인을 작성 하는 방법을 보여 줍니다. 이 예제에서 전체 어셈블리는 GetProcPSSnapIn01 스냅인 클래스와 `Get-Proc` cmdlet 클래스만 포함 합니다.
 
 ```csharp
 [RunInstaller(true)]

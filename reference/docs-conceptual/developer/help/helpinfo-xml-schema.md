@@ -1,12 +1,14 @@
 ---
-title: HelpInfo XML 스키마
 ms.date: 09/12/2016
-ms.openlocfilehash: f94d053b8fc558d9efc13e6b9fbd597287970e38
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.topic: reference
+title: HelpInfo XML 스키마
+description: HelpInfo XML 스키마
+ms.openlocfilehash: 157fd9c0f47c57efbaa9b7888fa174a34ad9567d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86953253"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92662010"
 ---
 # <a name="helpinfo-xml-schema"></a>HelpInfo XML 스키마
 
@@ -55,4 +57,4 @@ HelpInfo XML 파일에는 다음 요소가 포함 되어 있습니다.
 
 - **UICultureName** -도움말 파일이 작성 되는 UI 문화권에 대 한 언어 코드를 포함 합니다.
 
-- **UICultureVersion** -"N1에서 4 부분으로 구성 된 버전 번호를 포함 합니다. N2. N3. N4 "UI 문화권에서 도움말 CAB 파일의 버전을 나타내는 형식입니다. **UICultureName**로 지정 된 UI 문화권에 새 도움말 CAB 파일을 업로드할 때마다이 버전 번호를 늘립니다. 이 값에 대 한 자세한 내용은 [버전 클래스](/dotnet/api/system.version)를 참조 하세요.
+- **UICultureVersion** -"N1에서 4 부분으로 구성 된 버전 번호를 포함 합니다. N2. N3. N4 "UI 문화권에서 도움말 CAB 파일의 버전을 나타내는 형식입니다. **UICultureName** 로 지정 된 UI 문화권에 새 도움말 CAB 파일을 업로드할 때마다이 버전 번호를 늘립니다. 이 값에 대 한 자세한 내용은 [버전 클래스](/dotnet/api/system.version)를 참조 하세요.

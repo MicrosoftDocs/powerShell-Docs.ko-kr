@@ -1,12 +1,14 @@
 ---
-title: Runspace 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: f7c11101a570f89657f9ffc4d52fa6ebce3a91e1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace 샘플
+description: Runspace 샘플
+ms.openlocfilehash: 0171622f3ade3b341bc226f14398d6d293262f0c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772215"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657947"
 ---
 # <a name="runspace-samples"></a>Runspace 샘플
 
@@ -25,9 +27,9 @@ ms.locfileid: "87772215"
 
  [Runspace04 샘플](./runspace04-sample.md) 이 샘플에서는 [system.object](/dotnet/api/system.management.automation.powershell) 를 사용 하 여 명령을 실행 하는 방법과 명령을 실행할 때 throw 되는 종료 오류를 파악 하는 방법을 보여 줍니다. 두 개의 명령이 실행되는데, 마지막 명령은 유효하지 않은 매개 변수 인수를 전달받습니다. 따라서 개체가 반환 되지 않고 종료 오류가 throw 됩니다.
 
- [Runspace05 샘플](./runspace05-sample.md) 이 샘플에서는 runspace를 열 때 스냅인의 cmdlet을 사용할 수 있도록 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체에 스냅인을 추가 하는 방법을 보여 줍니다. 스냅인은 GetProcessSample01 개체를 사용 하 여 동기적으로 실행 되는 Get Proc cmdlet ( [샘플](../cmdlet/getprocesssample01-sample.md)에서 정의 됨)을 제공 [합니다.](/dotnet/api/system.management.automation.powershell)
+ [Runspace05 샘플](./runspace05-sample.md) 이 샘플에서는 runspace를 열 때 스냅인의 cmdlet을 사용할 수 있도록 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체에 스냅인을 추가 하는 방법을 보여 줍니다. 스냅인은 GetProcessSample01 개체를 사용 하 여 동기적으로 실행 되는 Get-Proc cmdlet ( [샘플](../cmdlet/getprocesssample01-sample.md)에서 정의 됨)을 제공 [합니다.](/dotnet/api/system.management.automation.powershell)
 
- [Runspace06 샘플](./runspace06-sample.md) 이 샘플에서는 runspace를 열 때 모듈이 로드 되도록 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체에 모듈을 추가 하는 방법을 보여 줍니다. 이 모듈은 GetProcessSample02 개체를 사용 하 여 동기적으로 실행 되는 Get Proc cmdlet ( [샘플](../cmdlet/getprocesssample02-sample.md)에서 정의 됨)을 제공 [합니다.](/dotnet/api/system.management.automation.powershell)
+ [Runspace06 샘플](./runspace06-sample.md) 이 샘플에서는 runspace를 열 때 모듈이 로드 되도록 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체에 모듈을 추가 하는 방법을 보여 줍니다. 이 모듈은 GetProcessSample02 개체를 사용 하 여 동기적으로 실행 되는 Get-Proc cmdlet ( [샘플](../cmdlet/getprocesssample02-sample.md)에서 정의 됨)을 제공 [합니다.](/dotnet/api/system.management.automation.powershell)
 
  [Runspace07 샘플](./runspace07-sample.md) 이 샘플은 runspace를 만든 다음이 runspace를 사용 하 여 두 개의 cmdlet을 동기적으로 실행 하는 방법을 보여 [줍니다.](/dotnet/api/system.management.automation.powershell)
 

@@ -1,12 +1,14 @@
 ---
-title: StopProcessSample01 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6d4737d0526a7d142b4a986986974bcbdc12ec7e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: StopProcessSample01 샘플
+description: StopProcessSample01 샘플
+ms.openlocfilehash: 9024f5c66330f3a1748c28b82e91b3915e956207
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786461"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660536"
 ---
 # <a name="stopprocesssample01-sample"></a>StopProcessSample01 샘플
 
@@ -18,7 +20,7 @@ ms.locfileid: "87786461"
 
 2. 솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다. 그러면 Microsoft Visual Studio의 샘플 프로젝트가 열립니다.
 
-3. **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.
+3. **빌드** 메뉴에서 **솔루션 빌드** 를 선택합니다.
 
     샘플에 대 한 라이브러리는 기본 \bin 또는 \bin\debug 폴더에 빌드됩니다.
 
@@ -256,6 +258,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

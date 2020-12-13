@@ -1,12 +1,14 @@
 ---
-title: Runspace10 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 4d858c432c6221f2347f6de664d1e4ee299f5801
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace10 샘플
+description: Runspace10 샘플
+ms.openlocfilehash: fd58cea553e6b830a56df7edfa7901d39f46a06c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784948"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657569"
 ---
 # <a name="runspace10-sample"></a>Runspace10 샘플
 
@@ -34,7 +36,7 @@ ms.locfileid: "87784948"
 
 ## <a name="example"></a>예제
 
-이 샘플에서는 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 사용 하 여 runspace를 열 때 사용할 수 있는 요소를 정의 하는 runspace를 만듭니다. 이 샘플에서는 호스트 응용 프로그램에 의해 정의 된 Get Proc cmdlet이 초기 세션 상태에 추가 되 고 cmdlet은 [system.object](/dotnet/api/system.management.automation.powershell) 를 사용 하 여 동기적으로 실행 됩니다.
+이 샘플에서는 [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) 개체를 사용 하 여 runspace를 열 때 사용할 수 있는 요소를 정의 하는 runspace를 만듭니다. 이 샘플에서는 호스트 응용 프로그램에 정의 된 Get-Proc cmdlet이 초기 세션 상태에 추가 되 고 cmdlet은 [system.object](/dotnet/api/system.management.automation.powershell) 를 사용 하 여 동기적으로 실행 됩니다.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces

@@ -1,14 +1,14 @@
 ---
-title: Windows PowerShell 스냅인을 만드는 방법 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- snap-ins [PowerShell SDK], examples
-ms.openlocfilehash: 4150ba582544d1daa4a898f0ff20b169c24a0ee0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 스냅인을 만드는 방법
+description: Windows PowerShell 스냅인을 만드는 방법
+ms.openlocfilehash: 29394ebcd2f7c4a547aabcb88685ff494b2c381d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787328"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657269"
 ---
 # <a name="how-to-create-a-windows-powershell-snap-in"></a>Windows PowerShell 스냅인을 만드는 방법
 
@@ -20,7 +20,7 @@ Windows PowerShell 스냅인은 cmdlet의 집합과 다른 Windows PowerShell �
 
 모든 Windows PowerShell 스냅인 클래스는 [add-pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn) 또는 [Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) 클래스에서 파생 됩니다 .이 클래스는
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 [Windows PowerShell 스냅인 작성](./writing-a-windows-powershell-snap-in.md):이 예제에서는 어셈블리의 모든 cmdlet 및 공급자를 등록 하는 데 사용 되는 스냅인을 만드는 방법을 보여 줍니다.
 

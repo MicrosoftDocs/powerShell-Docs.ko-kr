@@ -1,12 +1,14 @@
 ---
-title: 테이블 뷰 만들기 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: cbe81962a0f68d64506062898a8f21a1596cc29a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 테이블 보기 만들기
+description: 테이블 보기 만들기
+ms.openlocfilehash: 035d42f7968a9e8babec692a7a5873e24b36cd97
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786155"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660296"
 ---
 # <a name="creating-a-table-view"></a>테이블 보기 만들기
 
@@ -14,7 +16,7 @@ ms.locfileid: "87786155"
 
 ## <a name="a-table-view-display"></a>테이블 보기 표시
 
-다음 예제에서는 Windows [PowerShell에서 Servicecontroller cmdlet이](/powershell/module/microsoft.powershell.management/get-service) 반환 하는 [System.Serviceprocess.Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) 개체를 표시 하는 방법을 보여 줍니다. 이 개체의 경우 Windows PowerShell은 속성 `Status` , 속성 `Name` (이 속성은 속성의 별칭 속성 `ServiceName` ) 및 속성을 표시 하는 테이블 뷰를 정의 했습니다 `DisplayName` . 테이블의 각 행은 cmdlet에서 반환 된 개체를 나타냅니다.
+다음 예제에서는 Windows [PowerShell에서 Servicecontroller cmdlet이](/powershell/module/microsoft.powershell.management/get-service) 반환 하는 [](/dotnet/api/System.ServiceProcess.ServiceController) 개체를 표시 하는 방법을 보여 줍니다. 이 개체의 경우 Windows PowerShell은 속성 `Status` , 속성 `Name` (이 속성은 속성의 별칭 속성 `ServiceName` ) 및 속성을 표시 하는 테이블 뷰를 정의 했습니다 `DisplayName` . 테이블의 각 행은 cmdlet에서 반환 된 개체를 나타냅니다.
 
 ```output
 Status   Name               DisplayName

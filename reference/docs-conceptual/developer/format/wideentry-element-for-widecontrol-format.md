@@ -1,12 +1,14 @@
 ---
-title: WideControl에 대 한 WideEntry 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 13dd1f6ad7ac1e9d8d0524f0a0f18fe80ffaf8e2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: WideControl에 대한 WideEntry 요소(형식)
+description: WideControl에 대한 WideEntry 요소(형식)
+ms.openlocfilehash: 3faaf767d11914792effd6765beed956a502c642
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780018"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664554"
 ---
 # <a name="wideentry-element-for-widecontrol-format"></a>WideControl에 대한 WideEntry 요소(형식)
 

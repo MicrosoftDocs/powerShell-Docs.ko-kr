@@ -1,14 +1,14 @@
 ---
-title: Cmdlet 출력의 유형 | Microsoft Docs
 ms.date: 01/18/2019
-helpviewer_keywords:
-- cmdlets [PowerShell SDK], output
-ms.openlocfilehash: 8f761fdddd264b7c580c4a860081fdc5d2776ee7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 출력 형식
+description: Cmdlet 출력 형식
+ms.openlocfilehash: 591b7699e951db9016e48d5ef623265e23791e11
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786359"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660500"
 ---
 # <a name="types-of-cmdlet-output"></a>Cmdlet 출력의 유형
 
@@ -57,10 +57,10 @@ Cmdlet은 [system.object](/dotnet/api/System.Management.Automation.Cmdlet.WriteW
 
 PowerShell 런타임을 통해 호스트 응용 프로그램의 출력 기능에 직접 액세스 하는 cmdlet을 디자인할 수도 있습니다. [Console](/dotnet/api/System.Console) 또는 [system.web](/dotnet/api/System.Windows.Forms) 대신 PowerShell에서 제공 하는 호스트 api를 사용 하면 cmdlet이 다양 한 호스트에서 작동 합니다. 예: **powershell.exe** 콘솔 호스트, **powershell_ise.exe** 그래픽 호스트, PowerShell 원격 호스트 및 타사 호스트입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [오류 보고 개념](./error-reporting-concepts.md)
 
 [Cmdlet 개요](./cmdlet-overview.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 등록 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 75853a818b119fbd3335e2fe3889f8ab006cc355
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 등록
+description: Cmdlet 등록
+ms.openlocfilehash: 4b48aae4bdd358ec39f482f4a1bd29ed0295cbde
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779253"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664530"
 ---
 # <a name="registering-cmdlets"></a>Cmdlet 등록
 
@@ -20,6 +22,6 @@ ms.locfileid: "87779253"
 
 [Windows PowerShell 스냅인을 만드는 방법](./how-to-create-a-windows-powershell-snap-in.md) 스냅인을 사용 하 여 cmdlet을 등록 하는 방법을 설명 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](../cmdlet/cmdlet-overview.md)

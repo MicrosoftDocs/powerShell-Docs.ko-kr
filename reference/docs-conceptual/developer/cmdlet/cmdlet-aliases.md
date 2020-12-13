@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 별칭 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: fed4055f09e01c5f3fa87584d48551918606f4eb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 별칭
+description: Cmdlet 별칭
+ms.openlocfilehash: 734553a9911aef256df563afa6abcdb23d7a62e6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784540"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660798"
 ---
 # <a name="cmdlet-aliases"></a>Cmdlet 별칭
 
@@ -30,6 +32,6 @@ Cmdlet에 대 한 기본 제공 별칭을 만드는 경우 다음 지침을 따�
 
 - 일반적으로 별칭을 가능한 한 짧게 만듭니다. 별칭에 동사에 대해 하나 이상의 고유 문자 및 명사에 대 한 고유 문자가 하나 이상 있는지 확인 합니다. 필요에 따라 더 많은 문자를 추가 하 여 별칭을 고유 하 게 만듭니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

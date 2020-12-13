@@ -1,12 +1,14 @@
 ---
-title: 데이터 표시 조건 정의 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 13de078e681708b02e378b2c7d531032b2ffdc05
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 데이터 표시 조건 정의
+description: 데이터 표시 조건 정의
+ms.openlocfilehash: 9a8b7a618da8c64de978c13b527435a2d7793677
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774340"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660312"
 ---
 # <a name="defining-conditions-for-displaying-data"></a>데이터 표시 조건 정의
 

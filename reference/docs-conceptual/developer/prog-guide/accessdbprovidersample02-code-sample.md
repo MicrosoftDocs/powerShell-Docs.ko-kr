@@ -1,12 +1,14 @@
 ---
-title: AccessDbProviderSample02 코드 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: ca7674ba5cff601394af4df20f0dda8794c14d22
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: AccessDbProviderSample02 코드 샘플
+description: AccessDbProviderSample02 코드 샘플
+ms.openlocfilehash: f467ee59b36027e80852ae1f7b2f1af5c9aa8569
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784812"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659399"
 ---
 # <a name="accessdbprovidersample02-code-sample"></a>AccessDbProviderSample02 코드 샘플
 

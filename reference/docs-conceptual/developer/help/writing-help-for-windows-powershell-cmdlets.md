@@ -1,14 +1,16 @@
 ---
-title: PowerShell Cmdlet에 대 한 도움말 작성
 ms.date: 09/13/2016
-ms.openlocfilehash: 4e1070e90cf3ed83c1d97a3b620e00f65d09989e
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: PowerShell cmdlet에 대한 도움말 작성
+description: PowerShell cmdlet에 대한 도움말 작성
+ms.openlocfilehash: b1deaa5998dbc54add93764db785d57afcc0a779
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893087"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658109"
 ---
-# <a name="writing-help-for-powershell-cmdlets"></a>PowerShell Cmdlet에 대 한 도움말 작성
+# <a name="writing-help-for-powershell-cmdlets"></a>PowerShell cmdlet에 대한 도움말 작성
 
 PowerShell cmdlet은 유용할 수 있지만, 도움말 항목에서 cmdlet이 수행 하는 작업 및 사용 방법에 대해 명확 하 게 설명 하지 않는 한, cmdlet을 사용 하지 못할 수도 있습니다. 그렇지 않으면 사용자가 불편 수 있습니다. XML 기반 cmdlet 도움말 파일 형식을 사용 하면 일관성을 향상 시킬 수 있지만 매우 많은 도움이 됩니다.
 
@@ -26,7 +28,7 @@ Cmdlet 도움말을 작성 한 적이 없는 경우에는 다음 지침을 검�
 
 ### <a name="write-consistently"></a>일관 되 게 쓰기
 
-관련 cmdlet에 대 한 도움말은 유사 해야 합니다 (예: get x 및 set-x). **Force** 및 **InputObject**와 같은 표준 매개 변수에 대 한 표준 설명을 사용 합니다. 핵심 cmdlet에 대 한 도움말에서 복사 합니다. 표준 용어를 사용 합니다. 예를 들어 "argument"가 아닌 "parameter"를 사용 하 고 "command" 또는 "command-let"이 아닌 "cmdlet"을 사용 합니다.
+관련 cmdlet에 대 한 도움말은 유사 해야 합니다 (예: get x 및 set-x). **Force** 및 **InputObject** 와 같은 표준 매개 변수에 대 한 표준 설명을 사용 합니다. 핵심 cmdlet에 대 한 도움말에서 복사 합니다. 표준 용어를 사용 합니다. 예를 들어 "argument"가 아닌 "parameter"를 사용 하 고 "command" 또는 "command-let"이 아닌 "cmdlet"을 사용 합니다.
 
 ### <a name="start-the-synopsis-with-a-verb"></a>동사를 사용 하 여 개요 시작
 
@@ -42,7 +44,7 @@ Cmdlet 도움말을 작성 한 적이 없는 경우에는 다음 지침을 검�
 
 ### <a name="use-conventional-syntax"></a>기본 구문 사용
 
-Windows 및 UNIX 명령줄 도움말에 일반적으로 사용 되는 표준 Backus-Backus-naur 형식을 사용 합니다.
+Windows 및 UNIX 명령줄 도움말에 일반적으로 사용 되는 표준 Backus-Naur 형식을 사용 합니다.
 
 ### <a name="use-microsoft-net-types-for-parameter-values"></a>매개 변수 값에 Microsoft .NET 형식 사용
 

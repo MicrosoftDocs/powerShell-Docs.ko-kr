@@ -1,12 +1,14 @@
 ---
-title: CustomControl에 대 한 SelectionCondition의 ScriptBlock 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d3506188d32ce85ad6345dc0d0866dd789a1f293
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 CustomControl의 SelectionCondition에 대한 ScriptBlock 요소(형식)
+description: View에 대한 CustomControl의 SelectionCondition에 대한 ScriptBlock 요소(형식)
+ms.openlocfilehash: 78b977548243b6f3a658f15a0249d8cad12e2f1b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785407"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664914"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 SelectionCondition에 대한 ScriptBlock 요소(형식)
 

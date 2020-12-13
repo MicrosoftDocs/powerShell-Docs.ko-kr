@@ -1,16 +1,14 @@
 ---
-title: Windows PowerShell 드라이브 공급자 만들기 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- drive providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], drive provider
-- drives [PowerShell Programmer's Guide]
-ms.openlocfilehash: 2a2178714ed548986fe1a1a4de8828e8e0a938cb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 드라이브 공급자 만들기
+description: Windows PowerShell 드라이브 공급자 만들기
+ms.openlocfilehash: 639518fce27d941b7529b091364c5905c91a5c0c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787192"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92663027"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Windows PowerShell 드라이브 공급자 만들기
 
@@ -99,9 +97,9 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
 
 1. Cmdlet을 실행 `Get-PSProvider` 하 여 공급자 목록을 검색 하 고, AccessDB 드라이브 공급자가 있는지 확인 합니다.
 
-   **PS>`Get-PSProvider`**
+   **PS> `Get-PSProvider`**
 
-   다음 출력이 표시됩니다.
+   다음과 같은 출력이 표시됩니다.
 
    ```Output
    Name                 Capabilities                  Drives
@@ -122,7 +120,7 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
    new-psdrive -name mydb -root c:\ps\northwind.mdb -psprovider AccessDb`
    ```
 
-   다음 출력이 표시됩니다.
+   다음과 같은 출력이 표시됩니다.
 
    ```Output
    Name     Provider     Root                   CurrentLocation
@@ -130,14 +128,14 @@ Windows powershell 공급자를 Windows PowerShell에 등록 한 경우에는 �
    mydb     AccessDB     c:\ps\northwind.mdb
    ```
 
-4. 연결의 유효성을 검사 합니다. 연결은 드라이브의 멤버로 정의 되므로 Get-help Drive cmdlet을 사용 하 여 확인할 수 있습니다.
+4. 연결의 유효성을 검사 합니다. 연결은 드라이브의 멤버로 정의 되므로 Get-PDDrive cmdlet을 사용 하 여 확인할 수 있습니다.
 
    > [!NOTE]
    > 공급자에 게 해당 상호 작용에 대 한 컨테이너 기능이 필요 하므로 사용자는 아직 공급자와의 상호 작용을 수행할 수 없습니다. 자세한 내용은 [Windows PowerShell 컨테이너 공급자 만들기](./creating-a-windows-powershell-container-provider.md)를 참조 하세요.
 
    **PS> (psdrive mydb). 연결**
 
-   다음 출력이 표시됩니다.
+   다음과 같은 출력이 표시됩니다.
 
    ```Output
    ConnectionString  : Driver={Microsoft Access Driver (*.mdb)};DBQ=c:\ps\northwind.mdb

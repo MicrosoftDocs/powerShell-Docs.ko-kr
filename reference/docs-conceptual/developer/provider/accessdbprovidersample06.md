@@ -1,12 +1,14 @@
 ---
-title: AccessDBProviderSample06 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 893eb80574c7f142f92906961588e22b1ced0052
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: AccessDBProviderSample06
+description: AccessDBProviderSample06
+ms.openlocfilehash: a2037c6f13ba24ba2dcb4ffecbd802566452d64e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786835"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92656927"
 ---
 # <a name="accessdbprovidersample06"></a>AccessDBProviderSample06
 
@@ -28,7 +30,7 @@ ms.locfileid: "87786835"
 - 특성 선언 `CmdletProvider`
 - [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider) 인터페이스를 선언 하 고 system.object 클래스에서 파생 되는 [공급자 클래스를](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) 정의 하는 것입니다 (.
 - 사용자가 항목에서 콘텐츠를 제거할 수 있도록 cmdlet의 동작을 변경 하기 위해 [Icontentcmdletprovider. Clearcontent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) 메서드를 덮어씁니다. `Clear-Content` 이 샘플에서는 cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다 `Clear-Content` .
-- Cmdlet의 [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentreader*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) 동작을 변경 하 여 `Get-Content` 사용자가 항목의 콘텐츠를 검색할 수 있도록 하는 Icontentcmdletprovider을 덮어쓰는 경우. 이 샘플에서는 cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다 `Get-Content` .
+- Cmdlet의 [](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) 동작을 변경 하 여 `Get-Content` 사용자가 항목의 콘텐츠를 검색할 수 있도록 하는 Icontentcmdletprovider을 덮어쓰는 경우. 이 샘플에서는 cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다 `Get-Content` .
 - Cmdlet의 동작을 변경 하 여 사용자가 항목의 내용을 업데이트할 수 있도록 하는 Filesystemprovider. [Getcontentwriter *](/dotnet/api/Microsoft.PowerShell.Commands.FileSystemProvider.GetContentWriter) 메서드를 덮어씁니다. `Set-Content` 이 샘플에서는 cmdlet에 동적 매개 변수를 추가 하는 방법을 보여 주지 않습니다 `Set-Content` .
 
 ## <a name="example"></a>예제

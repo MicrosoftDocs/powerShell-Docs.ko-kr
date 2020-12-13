@@ -1,12 +1,14 @@
 ---
-title: 공급자 유형 | Microsoft Docs
 ms.date: 08/21/2019
-ms.openlocfilehash: 03b6b2d02d603632399ea455c2832742e0964d62
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 공급자 유형
+description: 공급자 유형
+ms.openlocfilehash: 9d3b458d7647a297fcda086db3540a0c15c576db
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778242"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92661764"
 ---
 # <a name="provider-types"></a>공급자 유형
 
@@ -39,7 +41,7 @@ ms.locfileid: "87778242"
 
 - [SetItem](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 및 system.web. d a t a. d a t a. d a t a. d a t [parameters](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItemDynamicParameters) 메서드는 공급자가 `Set-Item` 공급자 cmdlet을 지 원하는 방법을 정의 합니다. 이 cmdlet을 사용 하면 사용자가 데이터 저장소에 있는 항목의 값을 업데이트할 수 있습니다.
 
-- [InvokeDefaultAction](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultAction) 및 InvokeDefaultActionDynamicParameters 메서드는 공급자가 공급자 cmdlet을 지 원하는 방법을 정의 합니다. [System.Management.Automation.Provider.Itemcmdletprovider.InvokeDefaultActionDynamicParameters](/dotnet/api/system.management.automation.provider.itemcmdletprovider.invokedefaultactiondynamicparameters) 메서드는 공급자가 cmdlet을 지 원하는 방법을 정의 합니다. `Invoke-Item` 이 cmdlet을 사용 하면 사용자가 항목에 지정 된 기본 작업을 수행할 수 있습니다.
+- [InvokeDefaultAction](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.InvokeDefaultAction) 및 InvokeDefaultActionDynamicParameters 메서드는 공급자가 공급자 cmdlet을 지 원하는 방법을 정의 합니다. [](/dotnet/api/system.management.automation.provider.itemcmdletprovider.invokedefaultactiondynamicparameters) 메서드는 공급자가 cmdlet을 지 원하는 방법을 정의 합니다. `Invoke-Item` 이 cmdlet을 사용 하면 사용자가 항목에 지정 된 기본 작업을 수행할 수 있습니다.
 
 - The [System.Management.Automation.Provider.ItemCmdletProvider.ItemExists](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) and [System.Management.Automation.Provider.ItemCmdletProvider.ItemExistsDynamicParameters](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExistsDynamicParameters)메서드는 공급자가 다음을 `Test-Path` 지원하는 방법을 정의합니다. 이 cmdlet을 사용 하면 사용자가 경로의 모든 요소가 있는지 여부를 확인할 수 있습니다.
 
@@ -62,7 +64,7 @@ ms.locfileid: "87778242"
 
 - ContainerCmdletProvider 및 GetChildItemsDynamicParameters 메서드는 공급자가 공급자 cmdlet을 지 원하는 방법을 정의 합니다. [GetChildItems](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 및 [ContainerCmdletProvider..](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) `Get-ChildItem` 이 cmdlet을 사용 하 여 사용자는 부모 항목의 자식 항목을 검색할 수 있습니다.
 
-- ContainerCmdletProvider 및 [GetChildNamesDynamicParameters](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) 메서드는 [System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) `Get-ChildItem` `Name` 매개 변수가 지정 된 경우 공급자가 공급자 cmdlet을 지 원하는 방법을 정의 합니다. GetChildNames 및 ContainerCmdletProvider.
+- ContainerCmdletProvider 및 [GetChildNamesDynamicParameters](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) 메서드는 [](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) `Get-ChildItem` `Name` 매개 변수가 지정 된 경우 공급자가 공급자 cmdlet을 지 원하는 방법을 정의 합니다. GetChildNames 및 ContainerCmdletProvider.
 
 - [ContainerCmdletProvider. NewItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 및 ContainerCmdletProvider. n a m e. n e t [parameters](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItemDynamicParameters) 메서드는 공급자가 `New-Item` 공급자 cmdlet을 지 원하는 방법을 정의 합니다. 이 cmdlet을 사용 하면 사용자가 데이터 저장소에 새 항목을 만들 수 있습니다.
 
@@ -112,7 +114,7 @@ ms.locfileid: "87778242"
 ## <a name="property-enabled-providers"></a>속성 사용 공급자
 
 속성 사용 공급자를 사용 하면 사용자가 데이터 저장소에 있는 항목의 속성을 관리할 수 있습니다.
-속성 사용 공급자를 만들려면 공급자 클래스에서 [System.Management.Automation.Provider.IPropertyCmdletProvider](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider) and [System.Management.Automation.Provider.IDynamicPropertyCmdletProvider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider) 메서드를 구현해야 합니다. 대부분의 경우 공급자 cmdlet을 지원 하려면 Clear 속성 cmdlet에 대 한 메서드와 같이 PowerShell 엔진에서 cmdlet을 호출 하기 위해 호출 하는 메서드를 덮어써야 `ClearProperty` 하 고 필요에 따라 `ClearPropertyDynamicParameters` cmdlet에 동적 매개 변수를 추가 하는 등의 두 번째 메서드를 덮어쓸 수 있습니다.
+속성 사용 공급자를 만들려면 공급자 클래스에서 [System.Management.Automation.Provider.IPropertyCmdletProvider](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider) and [System.Management.Automation.Provider.IDynamicPropertyCmdletProvider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider) 메서드를 구현해야 합니다. 대부분의 경우 공급자 cmdlet을 지원 하려면 cmdlet을 호출 하기 위해 PowerShell 엔진이 호출 하는 메서드 (예: `ClearProperty` Clear-Property cmdlet에 대 한 메서드)를 덮어써야 하며, 선택적으로 `ClearPropertyDynamicParameters` cmdlet에 동적 매개 변수를 추가 하는 등의 두 번째 메서드를 덮어쓸 수 있습니다.
 
 **System.object** 는 특정 공급자 cmdlet을 구현 하기 위해 다음 메서드를 정의 합니다.
 
@@ -134,7 +136,7 @@ ms.locfileid: "87778242"
 
 - RenameProperty 및 IDynamicPropertyCmdletProvider RenamePropertyDynamicParameters 메서드는 공급자가 cmdlet을 지 원하는 방법을 정의 합니다.. [IDynamicPropertyCmdletProvider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RenameProperty) . [.](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RenamePropertyDynamicParameters) `Rename-ItemProperty` 이 cmdlet을 사용 하면 사용자가 속성의 이름을 변경할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers)
 

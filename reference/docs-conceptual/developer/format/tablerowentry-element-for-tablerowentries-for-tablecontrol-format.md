@@ -1,12 +1,14 @@
 ---
-title: TableRowEntries의 TableControl 요소에 대 한 TableRowEntry 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 83076ae5b2c48992ce5e621c65fc9937efb68b87
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: TableControl의 TableRowEntries에 대한 TableRowEntry 요소(형식)
+description: TableControl의 TableRowEntries에 대한 TableRowEntry 요소(형식)
+ms.openlocfilehash: 60d64b7c14b40e87825ada36e19f52a66fe8b6cb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787413"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659766"
 ---
 # <a name="tablerowentry-element-for-tablerowentries-for-tablecontrol-format"></a>TableControl의 TableRowEntries에 대한 TableRowEntry 요소(형식)
 

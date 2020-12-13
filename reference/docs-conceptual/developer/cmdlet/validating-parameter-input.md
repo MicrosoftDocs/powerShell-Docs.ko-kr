@@ -1,16 +1,14 @@
 ---
-title: 매개 변수 입력 유효성 검사 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- parameters, validation rules
-- validation, examples
-- validation
-ms.openlocfilehash: e12c715cfa24edfff958b12be1f3517b2f545256
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 매개 변수 입력 유효성 검사
+description: 매개 변수 입력 유효성 검사
+ms.openlocfilehash: a97b5c670e8c36463a85bbef1506f6311bdd5ec3
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783996"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660404"
 ---
 # <a name="validating-parameter-input"></a>매개 변수 입력 유효성 검사
 
@@ -54,4 +52,4 @@ PowerShell은 다음 특성을 기반으로 유효성 검사 규칙을 적용 �
 
 [매개 변수 입력 유효성을 검사하는 방법](./how-to-validate-parameter-input.md)
 
-[Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)
+[Writing a Windows PowerShell Cmdlet](./writing-a-windows-powershell-cmdlet.md)(Windows PowerShell Cmdlet 작성)

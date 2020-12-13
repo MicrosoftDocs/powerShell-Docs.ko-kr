@@ -4,10 +4,10 @@ ms.topic: reference
 title: Cmdlet 도움말 항목에 메모를 추가하는 방법
 description: Cmdlet 도움말 항목에 메모를 추가하는 방법
 ms.openlocfilehash: 61363c26ab0172277d1332ed1e9de080d8da200c
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92659558"
 ---
 # <a name="how-to-add-notes-to-a-cmdlet-help-topic"></a>Cmdlet 도움말 항목에 메모를 추가하는 방법

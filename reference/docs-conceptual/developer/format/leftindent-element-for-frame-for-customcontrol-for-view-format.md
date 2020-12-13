@@ -1,12 +1,14 @@
 ---
-title: CustomControl for Frame의 왼쪽 들여쓰기 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: c11002f92a35ca34a7d2c6aa26924d846076b001
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 CustomControl의 Frame에 대한 LeftIndent 요소(형식)
+description: View에 대한 CustomControl의 Frame에 대한 LeftIndent 요소(형식)
+ms.openlocfilehash: d3253544c3b4c7f9214222010bfab519564b64fd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783571"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660040"
 ---
 # <a name="leftindent-element-for-frame-for-customcontrol-for-view-format"></a>View에 대한 CustomControl의 Frame에 대한 LeftIndent 요소(형식)
 

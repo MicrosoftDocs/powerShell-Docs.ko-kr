@@ -1,12 +1,14 @@
 ---
-title: 구성에 대 한 컨트롤의 CustomItem에 대 한 텍스트 요소 (형식) | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d9f9687f9fb47f2085b25899193dda85b8fa068b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Configuration에 대한 Controls의 CustomItem에 대한 Text 요소(형식)
+description: Configuration에 대한 Controls의 CustomItem에 대한 Text 요소(형식)
+ms.openlocfilehash: 9ea70ade8e86d8278ee95bd4d93dfa5ba9d8160b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787396"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664713"
 ---
 # <a name="text-element-for-customitem-for-controls-for-configuration-format"></a>Configuration에 대한 Controls의 CustomItem에 대한 Text 요소(형식)
 

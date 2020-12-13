@@ -1,12 +1,14 @@
 ---
-title: Windows PowerShell01 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 6e799f35c0c5e3820c6471b49c8b0d8c47b1c6b2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell01 샘플
+description: Windows PowerShell01 샘플
+ms.openlocfilehash: 70ae67bfc2da9d3cc085ecb42de9cef4b163418d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771943"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657375"
 ---
 # <a name="windows-powershell01-sample"></a>Windows PowerShell01 샘플
 
@@ -20,13 +22,13 @@ ms.locfileid: "87771943"
 
 이 샘플은 다음을 보여 줍니다.
 
-- System.Management.Automation.Runspaces.Initialsessionstate를 설정 하 여 언어를 제한 [합니다. Languagemode](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) 속성입니다.
+- System.Management.Automation.Runspaces.Initialsessionstate를 설정 하 여 언어를 제한 [ 합니다. Languagemode](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.LanguageMode) 속성입니다.
 
 - Runspace를 사용 하 여 초기 세션 상태에 별칭을 추가 하는 중입니다. [Sessionstatealiasentry? Displayproperty = Fullname](/dotnet/api/System.Management.Automation.Runspaces.SessionStateAliasEntry) 개체입니다.
 
 - 명령을 비공개로 표시 합니다.
 
-- System.Management.Automation.Runspaces.Initialsessionstate를 사용 하 여 초기 세션 상태에서 공급자를 제거 [합니다. Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) 속성입니다.
+- System.Management.Automation.Runspaces.Initialsessionstate를 사용 하 여 초기 세션 상태에서 공급자를 제거 [ 합니다. Providers](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Providers) 속성입니다.
 
 - [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Commands) 속성을 사용 하 여 초기 세션 상태에서 명령을 제거 합니다.
 

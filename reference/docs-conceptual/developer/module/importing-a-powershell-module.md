@@ -1,23 +1,25 @@
 ---
-title: PowerShell 모듈 가져오기 | Microsoft Docs
 ms.date: 02/03/2020
-ms.openlocfilehash: 8cd1938d0a7b49b4a594753d8ce5ebe60625025d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: PowerShell 모듈 가져오기
+description: PowerShell 모듈 가져오기
+ms.openlocfilehash: 688509c0943a9a0289e75b80543f278e16cfedfe
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784880"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658785"
 ---
 # <a name="importing-a-powershell-module"></a>PowerShell 모듈 가져오기
 
 시스템에 모듈을 설치한 후에는 모듈을 가져올 수 있습니다. 가져오기는 사용자가 PowerShell 세션에서 해당 모듈에 액세스할 수 있도록 모듈을 활성 메모리에 로드 하는 프로세스입니다. PowerShell 2.0에서는 [import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet에 대 한 호출을 사용 하 여 새로 설치 된 PowerShell 모듈을 가져올 수 있습니다. PowerShell 3.0에서 PowerShell은 모듈의 함수 또는 cmdlet 중 하나를 사용자가 호출 하는 경우 모듈을 암시적으로 가져올 수 있습니다. 두 버전 모두 PowerShell에서 찾을 수 있는 위치에 모듈을 설치 한다고 가정 합니다. 자세한 내용은 [PowerShell 모듈 설치](./installing-a-powershell-module.md)를 참조 하세요.
 모듈 매니페스트를 사용 하 여 내보낼 모듈 부분을 제한할 수 있으며 호출 매개 변수를 사용 하 여 `Import-Module` 가져올 파트를 제한할 수 있습니다.
 
-## <a name="importing-a-snap-in-powershell-10"></a>스냅인 가져오기 (PowerShell 1.0)
+## <a name="importing-a-snap-in-powershell-10"></a>Snap-In 가져오기 (PowerShell 1.0)
 
 PowerShell 1.0에 모듈이 없습니다. 대신 스냅인을 등록 하 고 사용 해야 합니다. 그러나이 시점에서 모듈을 설치 하 고 가져오는 것이 일반적 이므로이 기술은 사용 하지 않는 것이 좋습니다. 자세한 내용은 [Windows PowerShell 스냅인을 만드는 방법](../cmdlet/how-to-create-a-windows-powershell-snap-in.md)을 참조 하십시오.
 
-## <a name="importing-a-module-with-import-module-powershell-20"></a>Import-module을 사용 하 여 모듈 가져오기 (PowerShell 2.0)
+## <a name="importing-a-module-with-import-module-powershell-20"></a>Import-Module를 사용 하 여 모듈 가져오기 (PowerShell 2.0)
 
 PowerShell 2.0은 적절 하 게 명명 된 [import-module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet을 사용 하 여 모듈을 가져옵니다. 이 cmdlet을 실행 하면 Windows PowerShell은 변수에 지정 된 디렉터리에서 지정 된 모듈을 검색 합니다 `PSModulePath` . 지정 된 디렉터리가 있으면 Windows PowerShell은 모듈 매니페스트 파일 (. psd1), 스크립트 모듈 파일 (. .psm1), 이진 모듈 파일 (.dll) 순서로 파일을 검색 합니다. 검색에 디렉터리를 추가 하는 방법에 대 한 자세한 내용은 [PSModulePath 설치 경로 수정](./modifying-the-psmodulepath-installation-path.md)을 참조 하세요.
 다음 코드에서는 모듈을 가져오는 방법을 설명 합니다.
@@ -32,7 +34,7 @@ MyModule이에 있는 것으로 가정 하면 `PSModulePath` PowerShell은 myMod
 Import-Module -Name C:\myRandomDirectory\myModule -Verbose
 ```
 
-매개 변수를 사용 하 여 `-Verbose` 모듈에서 내보내지는 항목 및 활성 메모리로 가져오는 항목을 식별할 수도 있습니다. 내보내기와 가져오기는 모두 사용자에 게 노출 되는 항목을 제한 합니다. 차이점은 표시 여부를 제어 하는 사용자입니다. 기본적으로 내보내기는 모듈 내의 코드에 의해 제어 됩니다. 이와 대조적으로 가져오기는 호출에 의해 제어 됩니다 `Import-Module` . 자세한 내용은 아래의 **가져오는 구성원 제한**을 참조 하세요.
+매개 변수를 사용 하 여 `-Verbose` 모듈에서 내보내지는 항목 및 활성 메모리로 가져오는 항목을 식별할 수도 있습니다. 내보내기와 가져오기는 모두 사용자에 게 노출 되는 항목을 제한 합니다. 차이점은 표시 여부를 제어 하는 사용자입니다. 기본적으로 내보내기는 모듈 내의 코드에 의해 제어 됩니다. 이와 대조적으로 가져오기는 호출에 의해 제어 됩니다 `Import-Module` . 자세한 내용은 아래의 **가져오는 구성원 제한** 을 참조 하세요.
 
 ## <a name="implicitly-importing-a-module-powershell-30"></a>암시적으로 모듈 가져오기 (PowerShell 3.0)
 

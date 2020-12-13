@@ -1,12 +1,14 @@
 ---
-title: Cmdlet 도움말 항목에 구문을 추가하는 방법
 ms.date: 09/12/2016
-ms.openlocfilehash: 3457341a577b283bf3da5dc010de9bbbb36b78d2
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Cmdlet 도움말 항목에 구문을 추가하는 방법
+description: Cmdlet 도움말 항목에 구문을 추가하는 방법
+ms.openlocfilehash: bcc037d22051c162cd0f70702da17afe7ed9c01a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893053"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659071"
 ---
 # <a name="how-to-add-syntax-to-a-cmdlet-help-topic"></a>Cmdlet 도움말 항목에 구문을 추가하는 방법
 
@@ -52,7 +54,7 @@ Cmdlet 도움말 파일의 구문 다이어그램에 대 한 XML의 코딩을 �
    ```
 
 1. Cmdlet의 모든 매개 변수를 나열 합니다. `-`각 매개 변수 이름 앞에 하이픈 () (ASCII 45)을 입력 합니다.
-   매개 변수를 매개 변수 집합으로 구분 합니다. 일부 cmdlet에는 하나의 매개 변수 집합만 있을 수 있습니다. 이 예제에서 Get-help cmdlet은 두 개의 매개 변수 집합을 포함 합니다.
+   매개 변수를 매개 변수 집합으로 구분 합니다. 일부 cmdlet에는 하나의 매개 변수 집합만 있을 수 있습니다. 이 예에서 Get-Tech cmdlet에는 두 개의 매개 변수 집합이 있습니다.
 
    ```
    SYNTAX
@@ -83,7 +85,7 @@ Cmdlet 도움말 파일의 구문 다이어그램에 대 한 XML의 코딩을 �
 
    System.string의 **문자열과 system.string** 의 경우 **int** **와 같이** 의미를 명확 하 게 하는 형식으로 **축약 합니다.**
 
-   열거의 모든 값 (예: `-type` **기본** 또는 **고급**으로 설정 될 수 있는 이전 예제의 매개 변수)을 나열 합니다.
+   열거의 모든 값 (예: `-type` **기본** 또는 **고급** 으로 설정 될 수 있는 이전 예제의 매개 변수)을 나열 합니다.
 
    이전 예제와 같은 스위치 매개 변수는 `-list` 값을 포함 하지 않습니다.
 

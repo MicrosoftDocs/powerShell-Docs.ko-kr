@@ -1,12 +1,14 @@
 ---
-title: FirstLineIndent 요소 (형식)에 대 한 컨트롤의 프레임 Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: d3927be2cdce24b65b4d94dfb17ae57a1b47270c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: View에 대한 Controls의 Frame에 대한 FirstLineIndent 요소(형식)
+description: View에 대한 Controls의 Frame에 대한 FirstLineIndent 요소(형식)
+ms.openlocfilehash: 425cd9ccafb2cbe36f238177fc73923da048f924
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773524"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660146"
 ---
 # <a name="firstlineindent-element-for-frame-for-controls-for-view-format"></a>View에 대한 Controls의 Frame에 대한 FirstLineIndent 요소(형식)
 

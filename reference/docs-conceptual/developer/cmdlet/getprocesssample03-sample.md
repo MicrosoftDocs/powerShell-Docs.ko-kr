@@ -1,12 +1,14 @@
 ---
-title: GetProcessSample03 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 09df93792ab611e167279bc35755d8d6c28e7cf3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GetProcessSample03 샘플
+description: GetProcessSample03 샘플
+ms.openlocfilehash: 7827247238f3dad2018b55e396b73d1fa434eb97
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784217"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660726"
 ---
 # <a name="getprocesssample03-sample"></a>GetProcessSample03 샘플
 
@@ -18,7 +20,7 @@ ms.locfileid: "87784217"
 
 2. 솔루션 (.sln) 파일의 아이콘을 두 번 클릭 합니다. 그러면 Visual Studio에서 샘플 프로젝트가 열립니다.
 
-3. **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.
+3. **빌드** 메뉴에서 **솔루션 빌드** 를 선택합니다.
 
     샘플에 대 한 라이브러리는 기본 \bin 또는 \bin\debug 폴더에 빌드됩니다.
 
@@ -60,7 +62,7 @@ ms.locfileid: "87784217"
 
 ## <a name="example"></a>예제
 
-이 샘플에서는 `Name` 파이프라인의 입력을 허용 하는 매개 변수를 포함 하는 Get Proc cmdlet의 구현을 보여 줍니다.
+이 샘플에서는 `Name` 파이프라인의 입력을 허용 하는 매개 변수를 포함 하는 Get-Proc cmdlet의 구현을 보여 줍니다.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands
@@ -133,6 +135,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)](./writing-a-windows-powershell-cmdlet.md)

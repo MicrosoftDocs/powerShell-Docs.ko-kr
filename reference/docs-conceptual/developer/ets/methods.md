@@ -1,12 +1,14 @@
 ---
-title: 확장 유형 시스템 클래스 메서드
 ms.date: 07/09/2020
-ms.openlocfilehash: bd03b873893f8aa9cb92eda33538c1703ead9773
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 확장 유형 시스템 클래스 메서드
+description: 확장 유형 시스템 클래스 메서드
+ms.openlocfilehash: b53604a36e0a0c3587f345262e8f274e3a2c4859
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786240"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660386"
 ---
 # <a name="ets-class-methods"></a>메서드 클래스 메서드
 
@@ -19,10 +21,10 @@ ms.locfileid: "87786240"
 
 코드 메서드는 CLR 언어로 정의 된 확장 멤버입니다. 기본 개체에 정의 된 메서드와 비슷한 기능을 제공 합니다. 그러나 코드 메서드를 **PSObject** 개체에 동적으로 추가할 수 있습니다. 코드 메서드를 사용할 수 있으려면 개발자가 속성을 CLR 언어로 작성 하 고 컴파일한 후 결과 어셈블리를 제공 해야 합니다. 이 어셈블리는 코드 메서드가 필요한 runspace에서 사용할 수 있어야 합니다. 코드 메서드 구현은 스레드로부터 안전 해야 합니다. 이러한 메서드에 대 한 액세스는 다음 공용 메서드 및 속성을 제공 하는 [Pscodemethod](/dotnet/api/system.management.automation.pscodemethod) 개체를 통해 수행 됩니다.
 
-- `PSCodeMethod.Copy`메서드: **Pscodemethod** 개체의 정확한 복사본을 만듭니다.
-- `PSCodeMethod.Invoke(System.Object[])`메서드: 내부 코드 메서드를 호출 합니다.
-- `PSCodeMethod.ToString`메서드: **Pscodemethod** 개체를 문자열로 변환 합니다.
-- `PSCodeMethod.CodeReference`property: 코드 메서드의 기반이 되는 기본 메서드를 가져옵니다.
+- `PSCodeMethod.Copy` 메서드: **Pscodemethod** 개체의 정확한 복사본을 만듭니다.
+- `PSCodeMethod.Invoke(System.Object[])` 메서드: 내부 코드 메서드를 호출 합니다.
+- `PSCodeMethod.ToString` 메서드: **Pscodemethod** 개체를 문자열로 변환 합니다.
+- `PSCodeMethod.CodeReference` property: 코드 메서드의 기반이 되는 기본 메서드를 가져옵니다.
 - **Psmemberinfo. IsInstance** 속성: 멤버의 원본을 나타내는 **부울** 값을 가져옵니다.
 - **Pscodemethod** 속성:이 메서드를 코드 메서드로 식별 하는 **PSMemberTypes** 열거형 상수를 가져옵니다.
 - **PSMemberInfo.Name** property: 내부 코드 메서드의 이름을 가져옵니다.
@@ -34,9 +36,9 @@ ms.locfileid: "87786240"
 
 PowerShell 메서드는 기본 개체에 정의 되거나 어댑터를 통해 액세스할 수 있는 CLR 메서드입니다. 이러한 메서드에 대 한 액세스는 다음 공용 메서드 및 속성을 제공 하는 **Psmethod** 개체를 통해 수행 됩니다.
 
-- `PSMethod.Copy`메서드: **Psmethod** 개체의 정확한 복사본을 만듭니다.
-- `PSMethod.Invoke(System.Object[])`메서드: 기본 메서드를 호출 합니다.
-- `PSMethod.ToString`메서드: **Psmethod** 개체를 문자열로 변환 합니다.
+- `PSMethod.Copy` 메서드: **Psmethod** 개체의 정확한 복사본을 만듭니다.
+- `PSMethod.Invoke(System.Object[])` 메서드: 기본 메서드를 호출 합니다.
+- `PSMethod.ToString` 메서드: **Psmethod** 개체를 문자열로 변환 합니다.
 - **Psmemberinfo. IsInstance** 속성: 멤버의 원본을 나타내는 **부울** 값을 가져옵니다.
 - **MemberType** 속성:이 메서드를 PowerShell 메서드로 식별 하는 **PSMemberTypes** 열거형 상수를 가져옵니다.
 - **PSMemberInfo.Name** property: 기본 메서드의 이름을 가져옵니다.
@@ -48,9 +50,9 @@ PowerShell 메서드는 기본 개체에 정의 되거나 어댑터를 통해 �
 
 스크립트 메서드는 PowerShell 언어로 정의 된 확장 멤버입니다. 기본 개체에 정의 된 메서드와 비슷한 기능을 제공 합니다. 그러나 스크립트 메서드를 **PSObject** 개체에 동적으로 추가할 수 있습니다. 이러한 메서드에 대 한 액세스는 다음 공용 메서드 및 속성을 제공 하는 [PSScriptMethod](/dotnet/api/system.management.automation.psscriptmethod) 개체를 통해 수행 됩니다.
 
-- `PSScriptMethod.Copy`method: **PSScriptMethod** 개체의 정확한 복사본을 만듭니다.
-- `PSScriptMethod.Invoke(System.Object[])`메서드: 기본 스크립트 메서드를 호출 합니다.
-- `PSScriptMethod.ToString`method: **PSScriptMethod** 개체를 문자열로 변환 합니다.
+- `PSScriptMethod.Copy` method: **PSScriptMethod** 개체의 정확한 복사본을 만듭니다.
+- `PSScriptMethod.Invoke(System.Object[])` 메서드: 기본 스크립트 메서드를 호출 합니다.
+- `PSScriptMethod.ToString` method: **PSScriptMethod** 개체를 문자열로 변환 합니다.
 - **Psmemberinfo. IsInstance** 속성: 멤버의 원본을 나타내는 **부울** 값을 가져옵니다.
 - **PSScriptMethod. MemberType** 속성:이 메서드를 스크립트 메서드로 식별 하는 **ScriptMethod** 열거형 상수를 가져옵니다.
 - **PSMemberInfo.Name** property: 내부 코드 메서드의 이름을 가져옵니다.

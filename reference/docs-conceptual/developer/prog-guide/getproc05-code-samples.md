@@ -1,12 +1,14 @@
 ---
-title: GetProc05 코드 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 66758028bc964912495d636af90947101dd37923
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GetProc05 코드 샘플
+description: GetProc05 코드 샘플
+ms.openlocfilehash: 1280048aeec35512f1e6061bdf58919d83a461cd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778729"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92661845"
 ---
 # <a name="getproc05-code-samples"></a>GetProc05 코드 샘플
 
