@@ -1,30 +1,32 @@
 ---
-title: Host03 샘플 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: cba6e82c86da581b676adfebe3409e9555b63c84
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Host03 샘플
+description: Host03 샘플
+ms.openlocfilehash: 8fcdb294f6bf2bea6a7204bd91b003f5789565c3
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783299"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355445"
 ---
-# <a name="host03-sample"></a><span data-ttu-id="4697f-102">Host03 샘플</span><span class="sxs-lookup"><span data-stu-id="4697f-102">Host03 Sample</span></span>
+# <a name="host03-sample"></a><span data-ttu-id="3c39f-103">Host03 샘플</span><span class="sxs-lookup"><span data-stu-id="3c39f-103">Host03 Sample</span></span>
 
-<span data-ttu-id="4697f-103">이 샘플에서는 명령줄에서 명령을 읽고 명령을 실행 한 다음 결과를 콘솔에 표시 하는 대화형 콘솔 기반 호스트 응용 프로그램을 빌드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4697f-103">This sample shows how to build an interactive console-based host application that reads commands from the command line, executes the commands, and then displays the results to the console.</span></span>
+<span data-ttu-id="3c39f-104">이 샘플에서는 명령줄에서 명령을 읽고 명령을 실행 한 다음 결과를 콘솔에 표시 하는 대화형 콘솔 기반 호스트 응용 프로그램을 빌드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3c39f-104">This sample shows how to build an interactive console-based host application that reads commands from the command line, executes the commands, and then displays the results to the console.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="4697f-104">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4697f-104">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="3c39f-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3c39f-105">Requirements</span></span>
 
- <span data-ttu-id="4697f-105">이 샘플에는 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="4697f-105">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="3c39f-106">이 샘플에는 Windows PowerShell 2.0이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="3c39f-106">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="4697f-106">데모</span><span class="sxs-lookup"><span data-stu-id="4697f-106">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="3c39f-107">데모</span><span class="sxs-lookup"><span data-stu-id="3c39f-107">Demonstrates</span></span>
 
-- <span data-ttu-id="4697f-107">[PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스, Pshostuserinterface 클래스 및 클래스에서 파생 되는 클래스의 사용자 지정 호스트를 만들고 있습니다. [이 클래스는](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) [System.Management.Automation.Host.Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 클래스와 같은 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="4697f-107">Creating a custom host whose classes derive from the [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) class, the [System.Management.Automation.Host.Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) class, and the [System.Management.Automation.Host.Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) class.</span></span>
+- <span data-ttu-id="3c39f-108">[PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스, PSHostUserInterface 클래스 및 클래스에서 파생 되는 클래스의 사용자 지정 호스트를 만들고 있습니다. [이 클래스는](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) [](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 클래스와 같은 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="3c39f-108">Creating a custom host whose classes derive from the [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) class, the [System.Management.Automation.Host.PSHostUserInterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) class, and the [System.Management.Automation.Host.PSHostRawUserInterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) class.</span></span>
 
-- <span data-ttu-id="4697f-108">이러한 호스트 클래스를 사용 하 여 대화형 Windows PowerShell 셸을 빌드하는 콘솔 응용 프로그램 빌드</span><span class="sxs-lookup"><span data-stu-id="4697f-108">Building a console application that uses these host classes to build an interactive Windows PowerShell shell.</span></span>
+- <span data-ttu-id="3c39f-109">이러한 호스트 클래스를 사용 하 여 대화형 Windows PowerShell 셸을 빌드하는 콘솔 응용 프로그램 빌드</span><span class="sxs-lookup"><span data-stu-id="3c39f-109">Building a console application that uses these host classes to build an interactive Windows PowerShell shell.</span></span>
 
-## <a name="example"></a><span data-ttu-id="4697f-109">예제</span><span class="sxs-lookup"><span data-stu-id="4697f-109">Example</span></span>
+## <a name="example-1"></a><span data-ttu-id="3c39f-110">예 1</span><span class="sxs-lookup"><span data-stu-id="3c39f-110">Example 1</span></span>
 
- <span data-ttu-id="4697f-110">이 예제에서는 사용자가 명령줄에서 명령을 입력 하 고 해당 명령을 처리 한 다음 결과를 출력 합니다.</span><span class="sxs-lookup"><span data-stu-id="4697f-110">This example allows the user to enter commands at a command line, processes those commands, and then prints out the results.</span></span>
+<span data-ttu-id="3c39f-111">이 예제에서는 사용자가 명령줄에서 명령을 입력 하 고 해당 명령을 처리 한 다음 결과를 출력 합니다.</span><span class="sxs-lookup"><span data-stu-id="3c39f-111">This example allows the user to enter commands at a command line, processes those commands, and then prints out the results.</span></span>
 
 ```csharp
 // Copyright (c) 2006 Microsoft Corporation. All rights reserved.
@@ -310,9 +312,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a><span data-ttu-id="4697f-111">예제</span><span class="sxs-lookup"><span data-stu-id="4697f-111">Example</span></span>
+## <a name="example-2"></a><span data-ttu-id="3c39f-112">예제 2</span><span class="sxs-lookup"><span data-stu-id="3c39f-112">Example 2</span></span>
 
- <span data-ttu-id="4697f-112">다음 코드는이 호스트 응용 프로그램에서 사용 하는 [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스의 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="4697f-112">The following code is the implementation of the [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) class that is used by this host application.</span></span> <span data-ttu-id="4697f-113">구현 되지 않은 요소는 예외를 throw 하거나 아무 것도 반환 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4697f-113">Those elements that are not implemented throw an exception or return nothing.</span></span>
+<span data-ttu-id="3c39f-113">다음 코드는이 호스트 응용 프로그램에서 사용 하는 [PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) 클래스의 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="3c39f-113">The following code is the implementation of the [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) class that is used by this host application.</span></span> <span data-ttu-id="3c39f-114">구현 되지 않은 요소는 예외를 throw 하거나 아무 것도 반환 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3c39f-114">Those elements that are not implemented throw an exception or return nothing.</span></span>
 
 ```csharp
 // Copyright (c) 2006 Microsoft Corporation. All rights reserved.
@@ -551,9 +553,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a><span data-ttu-id="4697f-114">예제</span><span class="sxs-lookup"><span data-stu-id="4697f-114">Example</span></span>
+## <a name="example-3"></a><span data-ttu-id="3c39f-115">예제 3</span><span class="sxs-lookup"><span data-stu-id="3c39f-115">Example 3</span></span>
 
- <span data-ttu-id="4697f-115">다음 코드는이 호스트 응용 프로그램에서 사용 하는 [Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 클래스의 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="4697f-115">The following code is the implementation of the [System.Management.Automation.Host.Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) class that is used by this host application.</span></span>
+<span data-ttu-id="3c39f-116">다음 코드는이 호스트 응용 프로그램에서 사용 하는 [PSHostUserInterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) 클래스의 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="3c39f-116">The following code is the implementation of the [System.Management.Automation.Host.PSHostUserInterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) class that is used by this host application.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -956,9 +958,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a><span data-ttu-id="4697f-116">예제</span><span class="sxs-lookup"><span data-stu-id="4697f-116">Example</span></span>
+## <a name="example-4"></a><span data-ttu-id="3c39f-117">예제 4</span><span class="sxs-lookup"><span data-stu-id="3c39f-117">Example 4</span></span>
 
- <span data-ttu-id="4697f-117">다음 코드는이 호스트 응용 프로그램에서 사용 하는 [system.web](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) 클래스의 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="4697f-117">The following code is the implementation of the [System.Management.Automation.Host.Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) class that is used by this host application.</span></span> <span data-ttu-id="4697f-118">구현 되지 않은 요소는 예외를 throw 하거나 아무 것도 반환 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4697f-118">Those elements that are not implemented throw an exception or return nothing.</span></span>
+<span data-ttu-id="3c39f-118">다음 코드는이 호스트 응용 프로그램에서 사용 하는 [system.web](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) 클래스의 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="3c39f-118">The following code is the implementation of the [System.Management.Automation.Host.PSHostRawUserInterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) class that is used by this host application.</span></span> <span data-ttu-id="3c39f-119">구현 되지 않은 요소는 예외를 throw 하거나 아무 것도 반환 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3c39f-119">Those elements that are not implemented throw an exception or return nothing.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -1168,10 +1170,10 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="4697f-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4697f-119">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3c39f-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3c39f-120">See Also</span></span>
 
- [<span data-ttu-id="4697f-120">PSHost입니다.</span><span class="sxs-lookup"><span data-stu-id="4697f-120">System.Management.Automation.Host.PSHost</span></span>](/dotnet/api/System.Management.Automation.Host.PSHost)
+ [<span data-ttu-id="3c39f-121">PSHost입니다.</span><span class="sxs-lookup"><span data-stu-id="3c39f-121">System.Management.Automation.Host.PSHost</span></span>](/dotnet/api/System.Management.Automation.Host.PSHost)
 
- [<span data-ttu-id="4697f-121">Pshostuserinterface입니다.</span><span class="sxs-lookup"><span data-stu-id="4697f-121">System.Management.Automation.Host.Pshostuserinterface</span></span>](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface)
+ [<span data-ttu-id="3c39f-122">Pshostuserinterface입니다.</span><span class="sxs-lookup"><span data-stu-id="3c39f-122">System.Management.Automation.Host.Pshostuserinterface</span></span>](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface)
 
- [<span data-ttu-id="4697f-122">System.object..</span><span class="sxs-lookup"><span data-stu-id="4697f-122">System.Management.Automation.Host.Pshostrawuserinterface</span></span>](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface)
+ [<span data-ttu-id="3c39f-123">System.object..</span><span class="sxs-lookup"><span data-stu-id="3c39f-123">System.Management.Automation.Host.Pshostrawuserinterface</span></span>](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface)

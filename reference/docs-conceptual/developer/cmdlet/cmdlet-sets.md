@@ -1,32 +1,34 @@
 ---
-title: Cmdlet 집합 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 9595c9ca09148de05c69d60a2ede5688c3db61b0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet 집합
+description: Cmdlet 집합
+ms.openlocfilehash: b4bcb6548f9d64a8cc5e3fc3a66c671a5566001d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774816"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668238"
 ---
-# <a name="cmdlet-sets"></a><span data-ttu-id="a80a1-102">Cmdlet 집합</span><span class="sxs-lookup"><span data-stu-id="a80a1-102">Cmdlet Sets</span></span>
+# <a name="cmdlet-sets"></a><span data-ttu-id="bb5a5-103">Cmdlet 집합</span><span class="sxs-lookup"><span data-stu-id="bb5a5-103">Cmdlet Sets</span></span>
 
-<span data-ttu-id="a80a1-103">Cmdlet을 디자인할 때 동일한 데이터에 대해 여러 작업을 수행 해야 하는 경우가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a80a1-103">When you design your cmdlets, you might encounter cases in which you need to perform several actions on the same piece of data.</span></span> <span data-ttu-id="a80a1-104">예를 들어 데이터를 가져오거나 설정 하거나 프로세스를 시작 및 중지 해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a80a1-104">For example, you might need to get and set data or start and stop a process.</span></span> <span data-ttu-id="a80a1-105">각 작업을 수행 하는 별도의 cmdlet을 만들어야 하지만, cmdlet 디자인은 개별 cmdlet에 대 한 클래스가 파생 되는 기본 클래스를 포함 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a80a1-105">Although you will need to create separate cmdlets to perform each action, your cmdlet design should include a base class from which the classes for the individual cmdlets are derived.</span></span>
+<span data-ttu-id="bb5a5-104">Cmdlet을 디자인할 때 동일한 데이터에 대해 여러 작업을 수행 해야 하는 경우가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bb5a5-104">When you design your cmdlets, you might encounter cases in which you need to perform several actions on the same piece of data.</span></span> <span data-ttu-id="bb5a5-105">예를 들어 데이터를 가져오거나 설정 하거나 프로세스를 시작 및 중지 해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bb5a5-105">For example, you might need to get and set data or start and stop a process.</span></span> <span data-ttu-id="bb5a5-106">각 작업을 수행 하는 별도의 cmdlet을 만들어야 하지만, cmdlet 디자인은 개별 cmdlet에 대 한 클래스가 파생 되는 기본 클래스를 포함 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb5a5-106">Although you will need to create separate cmdlets to perform each action, your cmdlet design should include a base class from which the classes for the individual cmdlets are derived.</span></span>
 
-<span data-ttu-id="a80a1-106">기본 클래스를 구현할 때는 다음 사항을 염두에 두어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a80a1-106">Keep the following things in mind when implementing a base class.</span></span>
+<span data-ttu-id="bb5a5-107">기본 클래스를 구현할 때는 다음 사항을 염두에 두어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb5a5-107">Keep the following things in mind when implementing a base class.</span></span>
 
-- <span data-ttu-id="a80a1-107">기본 클래스의 모든 파생 된 cmdlet에서 사용 하는 일반 매개 변수를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="a80a1-107">Declare any common parameters used by all the derived cmdlets in the base class.</span></span>
+- <span data-ttu-id="bb5a5-108">기본 클래스의 모든 파생 된 cmdlet에서 사용 하는 일반 매개 변수를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb5a5-108">Declare any common parameters used by all the derived cmdlets in the base class.</span></span>
 
-- <span data-ttu-id="a80a1-108">Cmdlet 관련 매개 변수를 적절 한 cmdlet 클래스에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="a80a1-108">Add cmdlet-specific parameters to the appropriate cmdlet class.</span></span>
+- <span data-ttu-id="bb5a5-109">Cmdlet 관련 매개 변수를 적절 한 cmdlet 클래스에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb5a5-109">Add cmdlet-specific parameters to the appropriate cmdlet class.</span></span>
 
-- <span data-ttu-id="a80a1-109">기본 클래스에서 적절 한 입력 처리 메서드를 재정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="a80a1-109">Override the appropriate input processing method in the base class.</span></span>
+- <span data-ttu-id="bb5a5-110">기본 클래스에서 적절 한 입력 처리 메서드를 재정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb5a5-110">Override the appropriate input processing method in the base class.</span></span>
 
-- <span data-ttu-id="a80a1-110">모든 cmdlet 클래스에서 [system.object](/dotnet/api/System.Management.Automation.CmdletAttribute) 특성을 선언 하지만 기본 클래스에는 선언 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a80a1-110">Declare the [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) attribute on all cmdlet classes, but do not declare it on the base class.</span></span>
+- <span data-ttu-id="bb5a5-111">모든 cmdlet 클래스에서 [system.object](/dotnet/api/System.Management.Automation.CmdletAttribute) 특성을 선언 하지만 기본 클래스에는 선언 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="bb5a5-111">Declare the [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) attribute on all cmdlet classes, but do not declare it on the base class.</span></span>
 
-- <span data-ttu-id="a80a1-111">이름 및 설명이 cmdlet 집합을 반영 하는 [add-pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn) 또는 [Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) 클래스를 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="a80a1-111">Implement a [System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn) or [System.Management.Automation.Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) class whose name and description reflects the set of cmdlets.</span></span>
+- <span data-ttu-id="bb5a5-112">이름 및 설명이 cmdlet 집합을 반영 하는 [add-pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn) 또는 [Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) 클래스를 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb5a5-112">Implement a [System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn) or [System.Management.Automation.Custompssnapin](/dotnet/api/System.Management.Automation.CustomPSSnapIn) class whose name and description reflects the set of cmdlets.</span></span>
 
-## <a name="example"></a><span data-ttu-id="a80a1-112">예제</span><span class="sxs-lookup"><span data-stu-id="a80a1-112">Example</span></span>
+## <a name="example"></a><span data-ttu-id="bb5a5-113">예제</span><span class="sxs-lookup"><span data-stu-id="bb5a5-113">Example</span></span>
 
-<span data-ttu-id="a80a1-113">다음 예제에서는 동일한 기본 클래스에서 파생 되는 동일한 기본 클래스에서 파생 되는 기본 클래스를 구현 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a80a1-113">The following example shows the implementation of a base class that is used by Get-Proc and Stop-Proc cmdlet that derive from the same base class.</span></span>
+<span data-ttu-id="bb5a5-114">다음 예제에서는 동일한 기본 클래스에서 파생 되는 Get-Proc 및 Stop-Proc cmdlet에 사용 되는 기본 클래스의 구현을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bb5a5-114">The following example shows the implementation of a base class that is used by Get-Proc and Stop-Proc cmdlet that derive from the same base class.</span></span>
 
 ```csharp
 using System;
@@ -163,6 +165,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="a80a1-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a80a1-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bb5a5-115">관련 항목</span><span class="sxs-lookup"><span data-stu-id="bb5a5-115">See Also</span></span>
 
-[<span data-ttu-id="a80a1-115">Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="a80a1-115">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
+[<span data-ttu-id="bb5a5-116">Writing a Windows PowerShell Cmdlet(Windows PowerShell Cmdlet 작성)</span><span class="sxs-lookup"><span data-stu-id="bb5a5-116">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
