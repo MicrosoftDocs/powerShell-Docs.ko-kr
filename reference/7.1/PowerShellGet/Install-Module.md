@@ -7,12 +7,12 @@ ms.date: 08/03/2020
 online version: https://docs.microsoft.com/powershell/module/powershellget/install-module?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-Module
-ms.openlocfilehash: e2e4dc34fb84a54fb92cc4c809c84d67beafe576
-ms.sourcegitcommit: 4fc8cf397cb725ae973751d1d5d542f34f0db2d7
+ms.openlocfilehash: 463853778b6f2892ae36d55dcd4d886727b1dd51
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "93219090"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892490"
 ---
 # Install-Module
 
@@ -352,7 +352,7 @@ Accept wildcard characters: False
 
 `$env:ProgramFiles\PowerShell\Modules`
 
-**CurrentUser** 는 컴퓨터의 현재 사용자만 액세스할 수 있는 위치에 모듈을 설치 합니다. 다음은 그 예입니다. 
+**CurrentUser** 는 컴퓨터의 현재 사용자만 액세스할 수 있는 위치에 모듈을 설치 합니다. 예를 들어:
 
 `$home\Documents\PowerShell\Modules`
 
@@ -436,11 +436,18 @@ Accept wildcard characters: False
 
 `Install-Module` windows 7 또는 windows 2008 R2 이상 릴리스에서 PowerShell 5.0 이상 버전에서 실행 됩니다.
 
+> [!IMPORTANT]
+> 2020 4 월부터 PowerShell 갤러리는 더 이상 TLS (Transport Layer Security) 버전 1.0 및 1.1을 지원 하지 않습니다. TLS 1.2 이상을 사용 하지 않는 경우 PowerShell 갤러리에 액세스 하려고 하면 오류가 표시 됩니다. 다음 명령을 사용 하 여 TLS 1.2을 사용 하는지 확인 합니다.
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 자세한 내용은 PowerShell 블로그의 [공지](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 를 참조 하세요.
+
 보안 모범 사례로, cmdlet 또는 함수를 처음 실행 하기 전에 모듈의 코드를 평가 합니다. 악성 코드가 포함 된 모듈 실행을 방지 하기 위해 설치 후 설치 된 모듈을 자동으로 가져오지 않습니다.
 
 **이름** 매개 변수로 지정 된 모듈 이름이 리포지토리에 없으면에서 `Install-Module` 오류를 반환 합니다.
 
-여러 모듈을 설치 하려면 **Name** 매개 변수를 사용 하 고 쉼표로 구분 된 모듈 이름 배열을 지정 합니다. 여러 모듈 이름을 지정 하는 경우 **MinimumVersion** , **MaximumVersion** 또는 **RequiredVersion** 을 사용할 수 없습니다. `Find-Module` 파이프라인에서로 전송할 수 있는 **PSRepositoryItemInfo** 개체를 만듭니다 `Install-Module` . 파이프라인은 단일 명령으로 설치할 여러 모듈을 지정 하는 또 다른 방법입니다.
+여러 모듈을 설치 하려면 **Name** 매개 변수를 사용 하 고 쉼표로 구분 된 모듈 이름 배열을 지정 합니다. 여러 모듈 이름을 지정 하는 경우 **MinimumVersion**, **MaximumVersion** 또는 **RequiredVersion** 을 사용할 수 없습니다. `Find-Module` 파이프라인에서로 전송할 수 있는 **PSRepositoryItemInfo** 개체를 만듭니다 `Install-Module` . 파이프라인은 단일 명령으로 설치할 여러 모듈을 지정 하는 또 다른 방법입니다.
 
 기본적으로 **AllUsers** 의 범위에 대 한 모듈은에 설치 됩니다 `$env:ProgramFiles\PowerShell\Modules` . PowerShell DSC (필요한 상태 구성) 리소스를 설치할 때 기본적으로 혼동을 방지 합니다.
 

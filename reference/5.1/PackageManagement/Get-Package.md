@@ -7,12 +7,12 @@ ms.date: 05/22/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/get-package?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Package
-ms.openlocfilehash: aad8b6f033674c65b4cc56708e09e5320bb046dd
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: bc6ba83a6f0d585e166b1bdc419c8b9c7148e47c
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213345"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892885"
 ---
 # Get-Package
 
@@ -29,7 +29,7 @@ Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <S
  [-AdditionalArguments <String[]>] [<CommonParameters>]
 ```
 
-### 프로그램
+### Programs
 
 ```
 Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <String>]
@@ -120,7 +120,7 @@ Name                  Version      Source                                     Pr
 PackageManagement     1.3.1        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-`Get-Package`**name** 매개 변수를 사용 하 여 패키지 이름 **PackageManagement** 를 지정 합니다. **ProviderName** 매개 변수는 공급자 ( **PowerShellGet** )를 지정 합니다. **필수 버전** 매개 변수는 설치 된 버전을 지정 합니다.
+`Get-Package`**name** 매개 변수를 사용 하 여 패키지 이름 **PackageManagement** 를 지정 합니다. **ProviderName** 매개 변수는 공급자 ( **PowerShellGet**)를 지정 합니다. **필수 버전** 매개 변수는 설치 된 버전을 지정 합니다.
 
 ### 예 5: 패키지 제거
 
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 
 ### -ForceBootstrap
 
-PackageManagement에서 `Get-Package` 패키지 **PackageManagement** 공급자를 자동으로 설치 하도록 지정 합니다.
+PackageManagement에서 `Get-Package` 패키지  공급자를 자동으로 설치 하도록 지정 합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -503,6 +503,13 @@ Accept wildcard characters: False
 ## 참고
 
 명령에 패키지 공급자를 포함 하면 cmdlet에서 동적 매개 변수를 사용할 수 있습니다. 동적 매개 변수는 패키지 공급자에만 적용 됩니다. `Get-Help`Cmdlet은 cmdlet의 매개 변수 집합을 나열 하 고 공급자의 매개 변수 집합을 포함 합니다. 예를 들어,에는, `Get-Package` 및를 포함 하는 **PowerShellGet** 매개 변수 집합이 있습니다 `-NoPathUpdate` `AllowClobber` `SkipPublisherCheck` .
+
+> [!IMPORTANT]
+> 2020 4 월부터 PowerShell 갤러리는 더 이상 TLS (Transport Layer Security) 버전 1.0 및 1.1을 지원 하지 않습니다. TLS 1.2 이상을 사용 하지 않는 경우 PowerShell 갤러리에 액세스 하려고 하면 오류가 표시 됩니다. 다음 명령을 사용 하 여 TLS 1.2을 사용 하는지 확인 합니다.
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 자세한 내용은 PowerShell 블로그의 [공지](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 를 참조 하세요.
 
 ## 관련 링크
 

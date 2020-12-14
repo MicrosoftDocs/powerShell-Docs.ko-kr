@@ -7,12 +7,12 @@ ms.date: 08/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-date?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Date
-ms.openlocfilehash: f550d352ca6e400307feba9ec16cea4632603b62
-ms.sourcegitcommit: ea9270bacee7dd1b9df2519384de277576357ce2
+ms.openlocfilehash: cbf87c2a2d6ab0f08e514ba971a622ea9f1904aa
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "93219721"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95514938"
 ---
 # Get-Date
 
@@ -59,7 +59,7 @@ Tuesday, June 25, 2019 14:53:32
 
 ### 예제 2: 현재 날짜 및 시간의 요소 가져오기
 
-이 예제에서는를 사용 하 여 `Get-Date` 날짜 또는 시간 요소를 가져오는 방법을 보여 줍니다. 매개 변수는 **Date** , **Time** 또는 **DateTime** 인수를 사용 합니다.
+이 예제에서는를 사용 하 여 `Get-Date` 날짜 또는 시간 요소를 가져오는 방법을 보여 줍니다. 매개 변수는 **Date**, **Time** 또는 **DateTime** 인수를 사용 합니다.
 
 ```powershell
 Get-Date -DisplayHint Date
@@ -140,7 +140,7 @@ Tuesday 06/25/2019 16:19 -07
 366
 ```
 
-`Get-Date` 는 세 개의 매개 변수를 사용 하 여 **년** , **월** , **일** 을 지정 합니다. 명령은 **DayofYear** 속성을 통해 결과가 계산 되도록 괄호를 사용 하 여 래핑됩니다.
+`Get-Date` 는 세 개의 매개 변수를 사용 하 여 **년**, **월**, **일** 을 지정 합니다. 명령은 **DayofYear** 속성을 통해 결과가 계산 되도록 괄호를 사용 하 여 래핑됩니다.
 
 ### 예 6: 일광 절약 시간제에 따라 날짜가 조정 되었는지 확인
 
@@ -246,9 +246,9 @@ Accept wildcard characters: False
 
 허용 되는 값은 다음과 같습니다.
 
-- **날짜** : 날짜만 표시 합니다.
-- **Time** : 시간만 표시 합니다.
-- **DateTime** : 날짜와 시간을 표시 합니다.
+- **날짜**: 날짜만 표시 합니다.
+- **Time**: 시간만 표시 합니다.
+- **DateTime**: 날짜와 시간을 표시 합니다.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.DisplayHintType
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 
 PowerShell 5.0부터 다음 추가 형식을 **Format** 매개 변수에 대 한 값으로 사용할 수 있습니다.
 
-- **Filedate**. 현재 날짜를 현지 시간으로 표현 하는 파일 또는 경로입니다. 형식은 `yyyyMMdd` (4 자리 연도, 2 자리 월 및 2 자리 일을 사용 하는 대/소문자 구분)입니다. 다음은 그 예입니다. 
+- **Filedate**. 현재 날짜를 현지 시간으로 표현 하는 파일 또는 경로입니다. 형식은 `yyyyMMdd` (4 자리 연도, 2 자리 월 및 2 자리 일을 사용 하는 대/소문자 구분)입니다. 예를 들어:
   20190627.
 
 - **Filedateuniversal**. 현재 날짜를 UTC (universal time)로 표현 하는 파일 또는 경로에 대 한 친숙 한 표현입니다. 형식은입니다 `yyyyMMddZ` . 여기에는 4 자리 연도, 2 자리 월, 2 자리 날짜 및 문자를 UTC 표시기로 사용 하 여 대/소문자를 구분 합니다 `Z` . 예: 20190627Z
@@ -421,7 +421,7 @@ Accept wildcard characters: False
 
 ### 파이프라인 입력
 
-`Get-Date` 파이프라인 입력을 허용 합니다. 예들 들어 `Get-ChildItem | Get-Date`입니다.
+`Get-Date` 파이프라인 입력을 허용 합니다. 예: `Get-ChildItem | Get-Date`.
 
 ## 출력
 
@@ -434,13 +434,16 @@ Accept wildcard characters: False
 메서드는 `(Get-Date).ToString()` **DateTime** 개체를 **문자열** 개체로 변환 합니다.
 
 개체의 속성 및 메서드를 표시 하려면 개체를 파이프라인에서로 보냅니다 `Get-Member` .
-예들 들어 `Get-Date | Get-Member`입니다.
+예: `Get-Date | Get-Member`.
 
 ## 참고
 
 **DateTime** 개체는 시스템 로캘의 자세한 날짜 및 자세한 시간 형식입니다.
 
 유효한 **Uformat 지정 자가** 다음 표에 표시 됩니다.
+
+> [!IMPORTANT]
+> 새 버전의 PowerShell에 추가 **Uformat 지정** 자가 추가 됩니다. 예를 들어 `%F` 은 powershell 6.2에 추가 되었으므로 Windows powershell 5.1 또는 이전 버전에서는 사용할 수 없습니다. 여러 버전의 PowerShell에서 실행 되도록 설계 된 스크립트에서 **Uformat** 지정자를 사용 하는 경우이 점을 염두에 두어야 합니다.
 
 | 형식 지정자 |                                 의미                     |         예제          |
 | ---- | ----------------------------------------------------------------------- | ------------------------ |
@@ -452,7 +455,7 @@ Accept wildcard characters: False
 | `%c` | 날짜 및 시간-약식                                             | 6 월 27 08:44:18 2019 |
 | `%D` | Mm/dd/yy 형식의 날짜                                                 | 06/27/19                 |
 | `%d` | 월의 날짜-2 자리                                             | 05                       |
-| `%e` | 뒤에 공백이 오는 월의 일입니다.                            | \<space\>5               |
+| `%e` | 월의 날짜-한 자리로 된 경우 공백을 앞에 옵니다.           | \<space\>5               |
 | `%G` | ' Y '와 동일                                                             |                          |
 | `%g` | ' Y '와 동일                                                             |                          |
 | `%H` | 24 시간 형식의 시간                                                  | 17                       |

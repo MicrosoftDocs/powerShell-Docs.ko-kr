@@ -6,12 +6,12 @@ ms.date: 1/11/2019
 online version: https://docs.microsoft.com/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Classes_and_DSC
-ms.openlocfilehash: b66129aa8479013e6397c3e60798a5d2b1929f6b
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: a838b36f11495ad63676a3bb15741c5d17ee6eba
+ms.sourcegitcommit: cc72c40315fd2981d3009b335accbfa52d57640c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93223034"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96349866"
 ---
 # <a name="about-classes-and-desired-state-configuration"></a>클래스 및 필요한 상태 구성 정보
 
@@ -188,7 +188,7 @@ class FileResource
         $present = $true
 
         $item = Get-ChildItem -LiteralPath $location -ea Ignore
-        if ($item -eq $null)
+        if ($null -eq $item)
         {
             $present = $false
         }
@@ -231,150 +231,6 @@ class FileResource
         if(Test-Path -LiteralPath $this.Path -PathType Container)
         {
             throw "Path $($this.Path) is a directory path"
-        }
-
-        Write-Verbose -Message "Copying $this.SourcePath to $this.Path"
-
-        #DSC engine catches and reports any error that occurs
-        Copy-Item -Path $this.SourcePath -Destination $this.Path -Force
-    }
-}
-# This module defines a class for a DSC "FileResource" provider.
-
-enum Ensure
-{
-    Absent
-    Present
-}
-
-<# This resource manages the file in a specific path.
-[DscResource()] indicates the class is a DSC resource
-#>
-
-[DscResource()]
-class FileResource{
-
-    <# This is a key property
-        [DscResourceKey()] also means the property is required.
-        It is guaranteed to be set, other properties may not
-        be set if the configuration did not specify values.
-    #>
-    [DscResourceKey()]
-    [string]$Path
-
-    <#
-        [DscResourceMandatory()] means the property is required.
-        It is guaranteed to be set, other properties may not be set
-        if the configuration did not specify values.
-    #>
-    [DscResourceMandatory()]
-    [Ensure] $Ensure
-
-    <#
-        [DscResourceMandatory()] means the property is required.
-    #>
-    [DscResourceMandatory()]
-    [string] $SourcePath
-
-    [DscResource
-
-    <#
-        This method replaces the Set-TargetResource DSC script function.
-        It sets the resource to the desired state.
-    #>
-    [void] Set()
-    {
-        $fileExists = Test-Path -path $this.Path -PathType Leaf
-        if($this.ensure -eq [Ensure]::Present)
-        {
-            if(-not $fileExists)
-            {
-                $this.CopyFile()
-            }
-        }
-        else
-        {
-            if($fileExists)
-            {
-                Write-Verbose -Message "Deleting the file $this.Path"
-                Remove-Item -LiteralPath $this.Path
-            }
-        }
-    }
-
-    <#
-
-        This method replaces the Test-TargetResource function.
-        It should return True or False, showing whether the resource
-        is in a desired state.
-    #>
-
-    [bool] Test()
-    {
-        if(Test-Path -path $this.Path -PathType Container)
-        {
-            throw "Path '$this.Path' is a directory path."
-        }
-
-        $fileExists = Test-Path -path $this.Path -PathType Leaf
-
-        if($this.ensure -eq [Ensure]::Present)
-        {
-            return $fileExists
-        }
-
-        return (-not $fileExists)
-    }
-
-    <#
-        This method replaces the Get-TargetResource function.
-        The implementation should use the keys to find appropriate
-        resources. This method returns an instance of this class with the
-        updated key properties.
-    #>
-
-    [FileResource] Get()
-    {
-        $file = Get-item $this.Path
-        return $this
-    }
-
-    <#
-        Helper method to copy file from source to path.
-        Because this resource provider run under system,
-        Only the Administrators and system have full
-        access to the new created directory and file
-    #>
-    CopyFile()
-    {
-        if(Test-Path -path $this.SourcePath -PathType Container)
-        {
-            throw "SourcePath '$this.SourcePath' is a directory path"
-        }
-
-        if( -not (Test-Path -path $this.SourcePath -PathType Leaf))
-        {
-            throw "SourcePath '$this.SourcePath' is not found."
-        }
-
-        [System.IO.FileInfo]
-        $destFileInfo = new-object System.IO.FileInfo($this.Path)
-
-        if (-not $destFileInfo.Directory.Exists)
-        {
-            $FullName = $destFileInfo.Directory.FullName
-            $Message = "Creating directory $FullName"
-
-            Write-Verbose -Message $Message
-
-            #use CreateDirectory instead of New-Item to avoid lines
-            # to handle the non-terminating error
-            [System.IO.Directory]::CreateDirectory($FullName)
-        }
-
-        if(Test-Path -path $this.Path -PathType Container)
-        {
-            throw "Path '$this.Path' is a directory path"
         }
 
         Write-Verbose -Message "Copying $this.SourcePath to $this.Path"

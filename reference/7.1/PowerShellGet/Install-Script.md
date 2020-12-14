@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/powershellget/install-script?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-Script
-ms.openlocfilehash: 2be7545829ddbbb7ddad798acb82f83c0feb3db1
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: a5fa4388f149c2c1017454a6384d63807fccfc8a
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93215690"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892405"
 ---
 # Install-Script
 
@@ -42,7 +42,7 @@ Install-Script [-InputObject] <PSObject[]> [-Scope <String>] [-NoPathUpdate] [-P
 
 `Install-Script`Cmdlet은 리포지토리에서 스크립트 페이로드를 획득 하 고 페이로드가 유효한 PowerShell 스크립트 인지 확인 하 고 스크립트 파일을 지정 된 설치 위치에 복사 합니다.
 
-에 대해 작동 하는 기본 리포지토리는 `Install-Script` ,, 및 cmdlet을 통해 구성할 수 `Register-PSRepository` `Set-PSRepository` `Unregister-PSRepository` `Get-PSRepository` 있습니다. 여러 리포지토리에 대해 작업 하는 경우는 `Install-Script` 오류 없이 첫 번째 리포지토리에서 지정 된 검색 조건 **(Name** , **MinimumVersion** 또는 **MaximumVersion** )과 일치 하는 첫 번째 스크립트를 설치 합니다.
+에 대해 작동 하는 기본 리포지토리는 `Install-Script` ,, 및 cmdlet을 통해 구성할 수 `Register-PSRepository` `Set-PSRepository` `Unregister-PSRepository` `Get-PSRepository` 있습니다. 여러 리포지토리에 대해 작업 하는 경우는 `Install-Script` 오류 없이 첫 번째 리포지토리에서 지정 된 검색 조건 **(Name**, **MinimumVersion** 또는 **MaximumVersion**)과 일치 하는 첫 번째 스크립트를 설치 합니다.
 
 ## 예제
 
@@ -500,6 +500,13 @@ Accept wildcard characters: False
 
 ## 참고
 
+> [!IMPORTANT]
+> 2020 4 월부터 PowerShell 갤러리는 더 이상 TLS (Transport Layer Security) 버전 1.0 및 1.1을 지원 하지 않습니다. TLS 1.2 이상을 사용 하지 않는 경우 PowerShell 갤러리에 액세스 하려고 하면 오류가 표시 됩니다. 다음 명령을 사용 하 여 TLS 1.2을 사용 하는지 확인 합니다.
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 자세한 내용은 PowerShell 블로그의 [공지](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 를 참조 하세요.
+
 ## 관련 링크
 
 [Find-Script](Find-Script.md)
@@ -511,4 +518,3 @@ Accept wildcard characters: False
 [Uninstall-Script](Uninstall-Script.md)
 
 [Update-Script](Update-Script.md)
-

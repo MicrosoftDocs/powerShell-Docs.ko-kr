@@ -7,12 +7,12 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/save-package?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-Package
-ms.openlocfilehash: c381de5b3c3d9aab701ed1ff9a78b3c9e0f65b3b
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: f756c294c9a40170a94f9a35b8909cf164616bea
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93215777"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891737"
 ---
 # Save-Package
 
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 
 ### -ForceBootstrap
 
-PackageManagement가 `Save-Package` 지정 **PackageManagement** 된 패키지에 대 한 패키지 공급자를 자동으로 설치 하도록 지정 합니다.
+PackageManagement가 `Save-Package` 지정  된 패키지에 대 한 패키지 공급자를 자동으로 설치 하도록 지정 합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -720,6 +720,13 @@ Accept wildcard characters: False
 
 ## 참고
 
+> [!IMPORTANT]
+> 2020 4 월부터 PowerShell 갤러리는 더 이상 TLS (Transport Layer Security) 버전 1.0 및 1.1을 지원 하지 않습니다. TLS 1.2 이상을 사용 하지 않는 경우 PowerShell 갤러리에 액세스 하려고 하면 오류가 표시 됩니다. 다음 명령을 사용 하 여 TLS 1.2을 사용 하는지 확인 합니다.
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 자세한 내용은 PowerShell 블로그의 [공지](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 를 참조 하세요.
+
 ## 관련 링크
 
 [about_PackageManagement](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
@@ -731,4 +738,3 @@ Accept wildcard characters: False
 [Save-Package](Save-Package.md)
 
 [Uninstall-Package](Uninstall-Package.md)
-

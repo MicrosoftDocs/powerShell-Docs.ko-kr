@@ -3,12 +3,12 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,리소스,갤러리,설정
 title: 구성에 매개 변수 추가
 description: 사용자 입력에 따라 더 동적인 구성을 허용하도록 DSC 구성을 매개 변수화할 수 있습니다.
-ms.openlocfilehash: aea230d34994a7b20076559c44990abe554d5395
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 72f3cf9efb5d99170e71992bed86a20a57132250
+ms.sourcegitcommit: 62282bb9c36fea3b4290b9263c1cd8e9ac216e29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92656812"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96470335"
 ---
 # <a name="add-parameters-to-a-configuration"></a>구성에 매개 변수 추가
 
@@ -210,7 +210,7 @@ Configuration TestConfig
         $State="Running",
 
         [String]
-        $ComputerName="localhost",
+        $ComputerName="localhost"
     )
 
     # It is best practice to explicitly import any required resources or modules.

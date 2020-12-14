@@ -6,12 +6,12 @@ ms.date: 11/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Operators
-ms.openlocfilehash: 736ca53ff4992ea430ec89ad1795dcf278b0da41
-ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
+ms.openlocfilehash: 88369b1ccf3157e56dd5266784d8ca16e55b1f8f
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94483131"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892524"
 ---
 # <a name="about-operators"></a>연산자 정보
 
@@ -85,11 +85,11 @@ PowerShell은 값을 조작 하는 데 도움이 되는 여러 유형의 연산�
 
 #### <a name="grouping-operator--"></a>그룹화 연산자 `( )`
 
-다른 언어와 마찬가지로에서는 `(...)` 식의 연산자 우선 순위를 재정의 합니다. `(1 + 2) / 3`
+다른 언어와 마찬가지로에서는 `(...)` 식의 연산자 우선 순위를 재정의 합니다. 예: `(1 + 2) / 3`
 
 그러나 PowerShell에는 추가 동작이 있습니다.
 
-- `(...)`_명령의_ 출력이 식에 참여할 수 있도록 합니다. 예를 들면 다음과 같습니다.
+- `(...)`_명령의_ 출력이 식에 참여할 수 있도록 합니다. 예를 들어:
 
   ```powershell
   PS> (Get-Item *.txt).Count -gt 10
@@ -542,9 +542,9 @@ ${a}?[0]
 > [!NOTE]
 > PowerShell을 사용하면 `?`를 변수 이름에 포함할 수 있으므로 이러한 연산자를 사용하려면 변수 이름의 공식적인 사양이 필요합니다. 따라서 `{}`를 `${a}`와 같이 변수 이름 주위에 사용하거나 `?`이 변수 이름의 일부인 경우(`${a?}`)에 사용해야 합니다.
 >
-> 의 변수 이름 구문은 하위 `${<name>}` 식 연산자와 혼동 해서는 안 됩니다 `$()` . 자세한 내용은 [about_Variables](about_Variables.md#Variable-names-that-include-special-characters)의 변수 이름 섹션을 참조 하세요.
+> 의 변수 이름 구문은 하위 `${<name>}` 식 연산자와 혼동 해서는 안 됩니다 `$()` . 자세한 내용은 [about_Variables](about_Variables.md#variable-names-that-include-special-characters)의 변수 이름 섹션을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [about_arithmetic_operators](about_Arithmetic_Operators.md)
 

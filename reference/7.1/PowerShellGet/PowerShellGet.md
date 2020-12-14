@@ -8,18 +8,25 @@ Module Name: PowerShellGet
 ms.date: 06/09/2017
 schema: 2.0.0
 title: PowerShellGet
-ms.openlocfilehash: 87d4b62b866e0b477668ab4f4a5ec426d9a0df76
-ms.sourcegitcommit: 9d95532afe81c235c8094eae28ab84b2f77f8c48
+ms.openlocfilehash: 577dc9a56da98d975b777e6cd48ecdcaafd3128d
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "93220378"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892372"
 ---
 # PowerShellGet 모듈
 
 ## 설명
 
 PowerShellGet은 모듈, DSC 리소스, 역할 기능 및 스크립트와 같은 PowerShell 아티팩트를 검색, 설치, 업데이트 및 게시 하기 위한 명령이 포함 된 모듈입니다.
+
+> [!IMPORTANT]
+> 2020 4 월부터 PowerShell 갤러리는 더 이상 TLS (Transport Layer Security) 버전 1.0 및 1.1을 지원 하지 않습니다. TLS 1.2 이상을 사용 하지 않는 경우 PowerShell 갤러리에 액세스 하려고 하면 오류가 표시 됩니다. 다음 명령을 사용 하 여 TLS 1.2을 사용 하는지 확인 합니다.
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 자세한 내용은 PowerShell 블로그의 [공지](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 를 참조 하세요.
 
 ## PowerShellGet cmdlet
 
@@ -97,4 +104,3 @@ PowerShell 리포지토리를 등록 합니다.
 
 ### [Update-ScriptFileInfo](Update-ScriptFileInfo.md)
 스크립트에 대 한 정보를 업데이트 합니다.
-
