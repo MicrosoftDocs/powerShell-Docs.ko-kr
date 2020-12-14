@@ -1,23 +1,22 @@
 ---
 external help file: System.Management.Automation.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 5/15/2019
+ms.date: 12/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-module?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Module
-ms.openlocfilehash: 63f7bb9b9ed411fa9a440974e19b63d572481d8d
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: 1f06d1e7114a84ea89097167b188ded605f81aa0
+ms.sourcegitcommit: 7b376314e7640c39a53aac9f0db8bb935514a960
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94390952"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96564540"
 ---
 # Get-Module
 
 ## 개요
-현재 세션으로 가져왔거나 가져올 수 있는 모듈을 검색합니다.
+현재 세션에서 가져온 모듈 또는 PSModulePath에서 가져올 수 있는 모듈을 나열 합니다.
 
 ## SYNTAX
 
@@ -51,19 +50,18 @@ Get-Module [[-Name] <String[]>] [-FullyQualifiedName <ModuleSpecification[]>] [-
 
 ## 설명
 
-`Get-Module`Cmdlet은 powershell 세션으로 가져오거나 가져올 수 있는 powershell 모듈을 가져옵니다. 을 반환 하는 module 개체는 `Get-Module` 모듈에 대 한 중요 한 정보를 포함 합니다. 모듈 개체를 및 cmdlet과 같은 다른 cmdlet으로 파이프 할 수도 있습니다 `Import-Module` `Remove-Module` .
+`Get-Module`Cmdlet은 powershell 세션으로 가져오거나 가져올 수 있는 powershell 모듈을 나열 합니다. 매개 변수가 없는 경우 `Get-Module` 현재 세션으로 가져온 모듈을 가져옵니다. **ListAvailable** 매개 변수는 PSModulePath 환경 변수 ()에 지정 된 경로에서 가져올 수 있는 모듈을 나열 하는 데 사용 됩니다 `$env:PSModulePath` .
 
-매개 변수가 없는 경우 `Get-Module` 현재 세션으로 가져온 모듈을 가져옵니다. 설치 된 모듈을 모두 가져오려면 **ListAvailable** 매개 변수를 지정 합니다.
+을 반환 하는 module 개체는 `Get-Module` 모듈에 대 한 중요 한 정보를 포함 합니다. 모듈 개체를 및 cmdlet과 같은 다른 cmdlet으로 파이프 할 수도 있습니다 `Import-Module` `Remove-Module` .
 
-`Get-Module` 모듈을 가져오지만 가져오지는 않습니다. Windows PowerShell 3.0부터 모듈의 명령을 사용할 때 모듈을 자동으로 가져오지만, `Get-Module` 자동 가져오기를 트리거하지 않는 명령이 있습니다. Cmdlet을 사용 하 여 모듈을 세션으로 가져올 수도 있습니다 `Import-Module` .
+`Get-Module` 모듈을 나열 하지만 가져오지는 않습니다. Windows PowerShell 3.0부터 모듈의 명령을 사용할 때 모듈을 자동으로 가져오지만, `Get-Module` 자동 가져오기를 트리거하지 않는 명령이 있습니다. Cmdlet을 사용 하 여 모듈을 세션으로 가져올 수도 있습니다 `Import-Module` .
 
 Windows PowerShell 3.0 부터는 원격 세션에서 모듈을 가져온 다음 로컬 세션으로 가져올 수 있습니다. 이 전략은 PowerShell의 암시적 원격 기능을 사용 하며 cmdlet을 사용 하는 것과 같습니다 `Import-PSSession` . 다른 세션에서 가져온 모듈에서 명령을 사용 하면 명령이 원격 세션에서 암시적으로 실행 됩니다. 이 기능을 사용 하면 로컬 세션에서 원격 컴퓨터를 관리할 수 있습니다.
 
-또한 Windows PowerShell 3.0부터 및를 사용 하 여 cmdlet `Get-Module` `Import-Module` 이 CDXML (CMDLET 정의 XML) 파일에 정의 되어 있는 CIM (CIM(Common Information Model)) 모듈을 가져오고 가져올 수 있습니다. 이 기능을 사용 하면 c + +로 작성 된 코드 어셈블리와 같이 관리 되지 않는 코드 어셈블리에 구현 된 cmdlet을 사용할 수 있습니다.
+또한 Windows PowerShell 3.0부터 및를 사용 `Get-Module` `Import-Module` 하 여 CIM (CIM(Common Information Model)) 모듈을 가져오고 가져올 수 있습니다. CIM 모듈은 CDXML (Cmdlet 정의 XML) 파일에 cmdlet을 정의 합니다. 이 기능을 사용 하면 c + +로 작성 된 코드 어셈블리와 같이 관리 되지 않는 코드 어셈블리에 구현 된 cmdlet을 사용할 수 있습니다.
 
-이러한 새로운 기능을 사용 하 여 `Get-Module` 및 `Import-Module` Cmdlet은 Windows 운영 체제를 실행 하는 컴퓨터와 다른 운영 체제를 실행 하는 컴퓨터를 포함 하는 이기종 기업을 관리 하기 위한 기본 도구가 됩니다.
-
-PowerShell 및 PowerShell 원격을 사용 하는 Windows 운영 체제를 실행 하는 원격 컴퓨터를 관리 하려면 원격 컴퓨터에 **pssession** 을 만든 다음의 **pssession** 매개 변수를 사용 `Get-Module` 하 여 **pssession** 에서 PowerShell 모듈을 가져옵니다. 모듈을 가져온 다음 현재 세션에서 가져온 명령을 사용 하면 명령이 원격 컴퓨터의 **PSSession** 에서 암시적으로 실행 됩니다. 이 전략을 사용하여 원격 컴퓨터를 관리할 수 있습니다.
+암시적 원격은 PowerShell 원격을 사용 하도록 설정 된 원격 컴퓨터를 관리 하는 데 사용할 수 있습니다.
+원격 컴퓨터에 **pssession** 을 만든 다음의 **pssession** 매개 변수를 사용 `Get-Module` 하 여 원격 세션의 PowerShell 모듈을 가져옵니다. 원격 세션에서 모듈을 가져오면 가져온 명령이 원격 컴퓨터의 세션에서 실행 됩니다.
 
 유사한 전략을 사용 하 여 PowerShell 원격을 사용 하지 않는 컴퓨터를 관리할 수 있습니다.
 여기에는 Windows 운영 체제를 실행 하지 않는 컴퓨터와 PowerShell이 있지만 PowerShell 원격을 사용 하도록 설정 하지 않은 컴퓨터가 포함 됩니다.
@@ -166,7 +164,7 @@ Version
 
 이러한 속성을 사용하여 모듈 개체의 형식을 지정하고 필터링할 수 있습니다. 속성에 대 한 자세한 내용은 [Psmoduleinfo 속성](/dotnet/api/system.management.automation.psmoduleinfo)을 참조 하세요.
 
-출력에는 Windows PowerShell 3.0에 도입 된 새 속성 (예: Author 및 **CompanyName** ) **이** 포함 됩니다.
+출력에는 Windows PowerShell 3.0에 도입 된 새 속성 (예: Author 및 **CompanyName**) **이** 포함 됩니다.
 
 ### 예제 6: 이름별로 모든 모듈 그룹화
 
@@ -455,7 +453,7 @@ Accept wildcard characters: True
 
 이 매개 변수에 허용되는 값은 다음과 같습니다.
 
-- 바탕 화면
+- 데스크톱
 - 코어
 
 Get-Module cmdlet은 지정 된 값에 대 한 **Psmoduleinfo** 개체의 **CompatiblePSEditions** 속성을 확인 하 고 해당 속성이 설정 된 모듈만 반환 합니다.
@@ -479,7 +477,7 @@ Accept wildcard characters: False
 
 ### -PSSession
 
-지정 된 사용자 관리 PowerShell 세션 ( **PSSession** )에서 모듈을 가져옵니다. 세션을 포함 하는 변수, 세션을 가져오는 명령 (예: 명령) `Get-PSSession` 또는 세션을 만드는 명령 (예: 명령)을 입력 합니다 `New-PSSession` .
+지정 된 사용자 관리 PowerShell 세션 (**PSSession**)에서 모듈을 가져옵니다. 세션을 포함 하는 변수, 세션을 가져오는 명령 (예: 명령) `Get-PSSession` 또는 세션을 만드는 명령 (예: 명령)을 입력 합니다 `New-PSSession` .
 
 세션이 원격 컴퓨터에 연결 된 경우 **ListAvailable** 매개 변수를 지정 해야 합니다.
 
@@ -562,24 +560,25 @@ Accept wildcard characters: False
 
 ## 참고
 
-- Windows PowerShell 3.0부터 PowerShell에 포함 된 핵심 명령이 모듈에 패키지 됩니다. **Add-pssnapin** (스냅인) 인 **Microsoft. PowerShell** 은 예외입니다. 기본적으로 **Microsoft.PowerShell.Core** 스냅인만 세션에 추가됩니다.
-모듈은 처음 사용할 때 자동으로 가져오며 cmdlet을 사용 하 여 가져올 수 있습니다 `Import-Module` .
-- Windows PowerShell 3.0 부터는 PowerShell과 함께 설치 되는 핵심 명령이 모듈에 패키지 됩니다. Windows PowerShell 2.0 및 이후 버전의 PowerShell에서 이전 스타일의 세션을 만드는 호스트 프로그램에서 핵심 명령은 스냅인 ( **PSSnapins** )으로 패키지 됩니다. 예외는 항상 스냅인 인 **Microsoft. PowerShell. Core** 입니다. 또한 cmdlet에서 시작한 것과 같은 원격 세션 `New-PSSession` 은 핵심 스냅인을 포함 하는 이전 스타일의 세션입니다.
+- Windows PowerShell 3.0부터 PowerShell에 포함 된 핵심 명령이 모듈에 패키지 됩니다. **Add-pssnapin**(스냅인) 인 **Microsoft. PowerShell** 은 예외입니다. 기본적으로 **Microsoft.PowerShell.Core** 스냅인만 세션에 추가됩니다. 모듈은 처음 사용할 때 자동으로 가져오며 cmdlet을 사용 하 여 가져올 수 있습니다 `Import-Module` .
+
+- Windows PowerShell 2.0 및 이후 버전의 PowerShell에서 이전 스타일의 세션을 만드는 호스트 프로그램에서 핵심 명령은 스냅인 (**PSSnapins**)으로 패키지 됩니다. 예외는 항상 스냅인 인 **Microsoft. PowerShell. Core** 입니다. 또한 cmdlet에서 시작한 것과 같은 원격 세션 `New-PSSession` 은 핵심 스냅인을 포함 하는 이전 스타일의 세션입니다.
 
   핵심 모듈과 함께 최신 스타일의 세션을 만드는 **initialsessionstate.createdefault2** 메서드에 대 한 자세한 내용은 [initialsessionstate.createdefault2 메서드](/dotnet/api/system.management.automation.runspaces.initialsessionstate.createdefault2)를 참조 하세요.
 
-- `Get-Module`**PSModulePath** 환경 변수 ($Env:P SModulePath)의 값에 저장 된 위치의 모듈만 가져옵니다. Cmdlet의 **Path** 매개 변수를 사용 하 여 `Import-Module` 다른 위치의 모듈을 가져올 수 있지만 cmdlet을 사용 하 여 가져올 수는 없습니다 `Get-Module` .
-- 또한 PowerShell 3.0 부터는를 `Get-Module` 가져오기 전에 모듈을 더 쉽게 학습할 수 있도록를 반환 하는 개체에 새 속성이 추가 되었습니다. 가져오기 전에 모든 속성이 채워집니다. 여기에는 모듈에서 내보내는 명령을 나열 하는 **ExportedCommands** , **ExportedCmdlets** 및 **ExportedFunctions** 속성이 포함 됩니다.
+- `Get-Module`**PSModulePath** 환경 변수 ($Env:P SModulePath)의 값에 저장 된 위치의 모듈만 가져옵니다. `Import-Module`Cmdlet은 다른 위치의 모듈을 가져올 수 있지만 cmdlet을 사용 하 여 모듈을 가져올 수는 없습니다 `Get-Module` .
+
+- 또한 PowerShell 3.0 부터는를 `Get-Module` 가져오기 전에 모듈을 더 쉽게 학습할 수 있도록를 반환 하는 개체에 새 속성이 추가 되었습니다. 가져오기 전에 모든 속성이 채워집니다. 여기에는 모듈에서 내보내는 명령을 나열 하는 **ExportedCommands**, **ExportedCmdlets** 및 **ExportedFunctions** 속성이 포함 됩니다.
+
 - **ListAvailable** 매개 변수는 올바른 형식의 모듈만 가져옵니다. 즉, 기본 이름이 모듈 폴더의 이름과 동일한 파일이 하나 이상 포함 된 폴더입니다. 기본 이름은 파일 이름 확장명이 없는 이름입니다. 이름이 다른 파일을 포함 하는 폴더는 모듈이 아니라 컨테이너로 간주 됩니다.
 
-  .Dll 파일로 구현 되었지만 모듈 폴더에 포함 되지 않은 모듈을 가져오려면 **ListAvailable** 및 **All** 매개 변수를 모두 지정 합니다.
+  DLL 파일로 구현 되었지만 모듈 폴더에 포함 되지 않은 모듈을 가져오려면 **ListAvailable** 및 **All** 매개 변수를 모두 지정 합니다.
 
 - CIM 세션 기능을 사용하려면 원격 컴퓨터에 WS-Management 원격 기능과 CIM(Common Information Model) 표준에 대한 Microsoft 구현인 WMI(Windows Management Instrumentation)가 설정되어 있어야 합니다. 또한 컴퓨터에 모듈 검색 WMI 공급자나 동일한 기본 기능을 갖춘 대체 WMI 공급자가 있어야 합니다.
 
   Windows 운영 체제를 실행 하지 않는 컴퓨터 및 PowerShell이 있지만 PowerShell 원격을 사용 하도록 설정 하지 않은 Windows 컴퓨터에서 CIM 세션 기능을 사용할 수 있습니다.
 
-  또한 CIM 매개 변수를 사용 하 여 PowerShell 원격을 사용 하도록 설정한 컴퓨터에서 CIM 모듈을 가져올 수 있습니다. 여기에는 로컬 컴퓨터가 포함 됩니다.
-로컬 컴퓨터에서 CIM 세션을 만드는 경우 PowerShell은 WMI 대신 DCOM을 사용 하 여 세션을 만듭니다.
+  또한 CIM 매개 변수를 사용 하 여 PowerShell 원격을 사용 하도록 설정한 컴퓨터에서 CIM 모듈을 가져올 수 있습니다. 여기에는 로컬 컴퓨터가 포함 됩니다. 로컬 컴퓨터에서 CIM 세션을 만드는 경우 PowerShell은 WMI 대신 DCOM을 사용 하 여 세션을 만듭니다.
 
 ## 관련 링크
 

@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 08/18/2020
+ms.date: 12/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-Csv
-ms.openlocfilehash: ad2b2a2b32fa1dfbf722ff0af25bfafaf57de84a
-ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
+ms.openlocfilehash: f920130ec8354b61b0bb3617e061520271df0eed
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "93219681"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913239"
 ---
 # Export-Csv
 
@@ -360,7 +359,7 @@ Accept wildcard characters: False
 PowerShell 6.2부터 **Encoding** 매개 변수를 사용 하 여 등록 된 코드 페이지의 숫자 id (예: `-Encoding 1251` ) 또는 등록 된 코드 페이지의 문자열 이름을 사용할 수도 있습니다 (예: `-Encoding "windows-1251"` ). 자세한 내용은 [인코딩에](/dotnet/api/system.text.encoding.codepage?view=netcore-2.2)대 한 .net 설명서를 참조 하세요.
 
 > [!NOTE]
-> **U t f-7** *은 더 이상 사용 하지 않는 것이 좋습니다. PowerShell 7.1에서는 `utf7` **인코딩** 매개 변수에 대해를 지정 하는 경우 경고가 기록 됩니다.
+> **U t f-7** _은 더 이상 사용 하지 않는 것이 좋습니다. PowerShell 7.1에서는 `utf7` _ *Encoding** 매개 변수에 대해를 지정 하는 경우 경고가 기록 됩니다.
 
 ```yaml
 Type: System.Text.Encoding
@@ -541,7 +540,7 @@ Accept wildcard characters: False
 
 ### -QuoteFields
 
-따옴표로 묶을 열의 이름을 지정 합니다. 이 매개 변수를 사용 하면 지정 된 열만 따옴표로 묶여 있습니다.
+따옴표로 묶을 열의 이름을 지정 합니다. 이 매개 변수를 사용 하면 지정 된 열만 따옴표로 묶여 있습니다. 이 매개 변수는 PowerShell 7.0에 추가 되었습니다.
 
 ```yaml
 Type: System.String[]
@@ -562,6 +561,8 @@ CSV 파일에서 따옴표를 사용 하는 경우를 지정 합니다. 가능�
 - 안 함-아무것도 인용 하지 않음
 - 항상 따옴표 모든 항목 (기본 동작)
 - AsNeeded-구분 문자를 포함 하는 견적 필드만
+
+이 매개 변수는 PowerShell 7.0에 추가 되었습니다.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.BaseCsvWritingCommand+QuoteKind
@@ -623,4 +624,3 @@ Cmdlet을 사용 `Import-Csv` 하 여 파일에 있는 CSV 문자열에서 개�
 [Import-Csv](Import-Csv.md)
 
 [Select-Object](Select-Object.md)
-

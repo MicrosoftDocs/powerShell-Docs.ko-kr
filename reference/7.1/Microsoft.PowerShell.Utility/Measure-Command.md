@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 01/24/2020
+ms.date: 12/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/measure-command?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Measure-Command
-ms.openlocfilehash: 0cf5ac4df506b5882dd2dbf87ce6ad05845e0c94
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 43958b376123202e152ceb2da3223cc2f22b0687
+ms.sourcegitcommit: 165d10405d9db3a68c417a239d3181378fd02b9b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212930"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96935904"
 ---
 # Measure-Command
 
@@ -93,7 +93,7 @@ TotalMilliseconds : 1140.9189
 ```powershell
 # Perform a simple operation to demonstrate the InputObject parameter
 # Note that no output is displayed.
-10, 20, 50 | Measure-Command -Expression { for ($i=0; $i -lt $_ i++) {$i} }
+10, 20, 50 | Measure-Command -Expression { for ($i=0; $i -lt $_; $i++) {$i} }
 ```
 
 ```Output

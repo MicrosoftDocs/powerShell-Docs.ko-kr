@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 1/7/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-csv?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertTo-Csv
-ms.openlocfilehash: 7d399661e4514c0a39ad00601d554c41c2897ff9
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: be590368539f396f0aac694e9565674393543f2c
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214137"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913205"
 ---
 # ConvertTo-Csv
 
@@ -190,6 +189,6 @@ CSV 문자열은 다음과 같이 출력 됩니다.
 
 [ConvertFrom-Csv](ConvertFrom-Csv.md)
 
-[Export-Csv](Export-Csv.md)
+[내보내기-Csv](Export-Csv.md)
 
 [Import-Csv](Import-Csv.md)

@@ -1,17 +1,16 @@
 ---
 description: PowerShell 모듈을 설치, 가져오기 및 사용 하는 방법을 설명 합니다.
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 09/15/2020
+ms.date: 12/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_modules?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Modules
-ms.openlocfilehash: 8e7f91ca54c0d464e50432a958f006943f4c6caa
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: aebebc3f41a091151fbbecd9925a4ebc063e678e
+ms.sourcegitcommit: 7b376314e7640c39a53aac9f0db8bb935514a960
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93224114"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96564605"
 ---
 # <a name="about-modules"></a>모듈 정보
 
@@ -20,7 +19,7 @@ PowerShell 모듈을 설치, 가져오기 및 사용 하는 방법을 설명 합
 
 ## <a name="long-description"></a>자세한 설명
 
-모듈은 cmdlet, 공급자, 함수, 워크플로, 변수, 별칭 등의 PowerShell 명령을 포함 하는 패키지입니다.
+모듈은 cmdlet, 공급자, 함수, 워크플로, 변수, 별칭 등의 PowerShell 멤버를 포함 하는 패키지입니다.
 
 명령을 작성하는 사용자는 모듈을 사용하여 자신의 명령을 구성하고 다른 사용자와 공유할 수 있습니다. 모듈을 받는 사용자는 모듈의 명령을 PowerShell 세션에 추가 하 고 기본 제공 명령과 같은 방법으로 사용할 수 있습니다.
 
@@ -28,13 +27,13 @@ PowerShell 모듈을 설치, 가져오기 및 사용 하는 방법을 설명 합
 
 ## <a name="what-is-a-module"></a>모듈 이란?
 
-모듈은 명령의 패키지입니다. 세션의 모든 cmdlet 및 공급자는 모듈 또는 스냅인에 의해 추가 됩니다.
+모듈은 cmdlet, 공급자, 함수, 워크플로, 변수, 별칭 등의 PowerShell 멤버를 포함 하는 패키지입니다. 이 패키지의 멤버는 PowerShell 스크립트, 컴파일된 DLL 또는 둘의 조합으로 구현 될 수 있습니다. 이러한 파일은 일반적으로 단일 디렉터리에 함께 그룹화 됩니다. 자세한 내용은 SDK 설명서에서 [Windows PowerShell 모듈 이해](/powershell/scripting/developer/module/understanding-a-windows-powershell-module) 를 참조 하세요.
 
 ## <a name="module-auto-loading"></a>모듈 자동 로드
 
 PowerShell 3.0부터 PowerShell은 설치 된 모듈에서 명령을 처음 실행할 때 자동으로 모듈을 가져옵니다. 이제는 설정 및 프로필 구성 없이도 모듈의 명령을 사용할 수 있으므로 컴퓨터에 모듈을 설치한 후에 모듈을 관리할 필요가 없습니다.
 
-또한 모듈의 명령이 보다 쉽게 찾을 수 있습니다. `Get-Command`이제 cmdlet은 아직 세션에 있지 않더라도 설치 된 모든 모듈의 모든 명령을 가져오므로 명령을 검색 하지 않고 사용할 수 있습니다.
+또한 모듈의 명령이 보다 쉽게 찾을 수 있습니다. `Get-Command`이제 cmdlet은 아직 세션에 있지 않더라도 설치 된 모든 모듈에서 모든 명령을 가져옵니다. 모듈을 먼저 가져올 필요 없이 명령을 찾아서 사용할 수 있습니다.
 
 다음의 각 예에서는를 포함 하는 CimCmdlets 모듈을 `Get-CimInstance` 세션으로 가져옵니다.
 
@@ -283,7 +282,7 @@ Linux 또는 MacOS에서 명령의 콜론 ( `:` )은 목록에서 앞에 나오�
 
 설정한 값은 현재 세션에만 적용됩니다. 변경 내용을 영구적으로 적용 하려면 PowerShell 프로필에 명령을 추가 하거나 제어판의 시스템을 사용 하 여 레지스트리에서 **PSModulePath** 환경 변수의 값을 변경 합니다.
 
-또한 변경 내용을 영구적으로 적용 하려면 SetEnvironmentVariable 클래스의 **SetEnvironmentVariable** 메서드를 사용 하 여 **PSModulePath** 환경 변수에 대 한 경로를 추가할 수 **있습니다.**
+또한 변경 내용을 영구적으로 적용 하려면 SetEnvironmentVariable 클래스의  메서드를 사용 하 여 **PSModulePath** 환경 변수에 대 한 경로를 추가할 수 **있습니다.**
 
 **PSModulePath** 변수에 대 한 자세한 내용은 [about_Environment_Variables](about_Environment_Variables.md)를 참조 하세요.
 
@@ -307,7 +306,7 @@ Linux 또는 MacOS에서 명령의 콜론 ( `:` )은 목록에서 앞에 나오�
 
 이름 충돌을 방지 하려면 cmdlet의 **NoClobber** 또는 **Prefix** 매개 변수를 사용 합니다 `Import-Module` . **Prefix** 매개 변수는 세션에서 고유 하도록 가져온 명령의 이름에 접두사를 추가 합니다. **NoClobber** 매개 변수는 세션의 기존 명령을 숨기 거 나 바꾸는 명령은 가져오지 않습니다.
 
-의 **Alias** , **Cmdlet** , **Function** 및 **Variable** 매개 변수를 사용 `Import-Module` 하 여 가져올 명령만 선택할 수 있으며, 세션에서 이름 충돌을 일으키는 명령을 제외할 수도 있습니다.
+의 **Alias**, **Cmdlet**, **Function** 및 **Variable** 매개 변수를 사용 `Import-Module` 하 여 가져올 명령만 선택할 수 있으며, 세션에서 이름 충돌을 일으키는 명령을 제외할 수도 있습니다.
 
 모듈 작성자는 모듈 매니페스트의 **Defaultcommandprefix** 속성을 사용 하 여 모든 명령 이름에 기본 접두사를 추가 함으로써 이름 충돌을 방지할 수 있습니다.
 **Prefix** 매개 변수 값은 **defaultcommandprefix** 값 보다 우선 합니다.

@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 06/09/2017
+ms.date: 12/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-clipboard?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Clipboard
-ms.openlocfilehash: f3230c247296d5fd907d580e719cbbbc560183a9
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: c1cf126e41a5e918afffbc41d30f957e650efdf5
+ms.sourcegitcommit: 7b376314e7640c39a53aac9f0db8bb935514a960
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214466"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96564505"
 ---
 # Set-Clipboard
 
@@ -59,10 +58,18 @@ Set-Clipboard -Value "This is a test string"
 
 ### 예제 2: 디렉터리의 내용을 클립보드에 복사
 
-이 명령은 지정 된 폴더의 내용을 클립보드에 복사 합니다.
+이 예에서는 지정 된 폴더의 내용을 클립보드에 복사 합니다.
 
 ```powershell
 Set-Clipboard -Path "C:\Staging\"
+```
+
+### 예제 3: 파일 내용을 클립보드에 복사
+
+이 예제에서는 파일 내용을 클립보드로 파이프 합니다. 이 예제에서는 GitHub와 같은 다른 응용 프로그램에 붙여 넣을 수 있도록 공용 ssh 키를 가져옵니다.
+
+```powershell
+Get-Content C:\Users\user1\.ssh\id_ed25519.pub | Set-Clipboard
 ```
 
 ## PARAMETERS

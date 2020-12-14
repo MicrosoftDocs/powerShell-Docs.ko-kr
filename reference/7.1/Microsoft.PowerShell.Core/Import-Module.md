@@ -1,18 +1,17 @@
 ---
 external help file: System.Management.Automation.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 04/08/2020
+ms.date: 12/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/import-module?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: 모듈 가져오기
-ms.openlocfilehash: 70453f50e727f89012a3e2077557bff7a81ff000
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: d041d63c7af185e62a902ebaa362809cddfb4659
+ms.sourcegitcommit: 7b376314e7640c39a53aac9f0db8bb935514a960
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217682"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96564581"
 ---
 # 모듈 가져오기
 
@@ -114,13 +113,13 @@ Import-Module [-Global] [-Prefix <String>] [-Function <String[]>] [-Cmdlet <Stri
 
 모듈은 PowerShell에서 사용할 수 있는 멤버를 포함 하는 패키지입니다. 멤버에는 cmdlet, 공급자, 스크립트, 함수, 변수, 기타 도구 및 파일이 포함 됩니다. 모듈을 가져온 후 세션에서 해당 모듈 멤버를 사용할 수 있습니다. 모듈에 대 한 자세한 내용은 [about_Modules](About/about_Modules.md)를 참조 하세요.
 
-기본적으로 `Import-Module` 은 모듈이 내보내는 모든 멤버를 가져오지만 **Alias** , **Function** , **Cmdlet** 및 **Variable** 매개 변수를 사용 하 여 가져올 멤버를 제한할 수 있습니다. **NoClobber** 매개 변수는 `Import-Module` 현재 세션의 멤버와 이름이 같은 멤버를 가져오지 못하게 합니다.
+기본적으로 `Import-Module` 은 모듈이 내보내는 모든 멤버를 가져오지만 **Alias**, **Function**, **Cmdlet** 및 **Variable** 매개 변수를 사용 하 여 가져올 멤버를 제한할 수 있습니다. **NoClobber** 매개 변수는 `Import-Module` 현재 세션의 멤버와 이름이 같은 멤버를 가져오지 못하게 합니다.
 
 `Import-Module` 현재 세션에만 모듈을 가져옵니다. 모든 새 세션으로 모듈을 가져오려면 `Import-Module` PowerShell 프로필에 명령을 추가 합니다. 프로필에 대한 자세한 내용은 [about_Profiles](About/about_Profiles.md)를 참조하세요.
 
-원격 컴퓨터에서 **PSSession** 을 만들어 PowerShell 원격을 사용 하도록 설정한 원격 Windows 컴퓨터를 관리할 수 있습니다. 그런 다음의 **PSSession** 매개 변수를 사용 `Import-Module` 하 여 원격 컴퓨터에 설치 된 모듈을 가져옵니다. 이제 현재 세션에서 가져온 명령을 사용할 수 있습니다. 명령은 원격 컴퓨터에서 암시적으로 실행 됩니다.
+원격 컴퓨터에서 **PSSession** 을 만들어 PowerShell 원격을 사용 하도록 설정한 원격 Windows 컴퓨터를 관리할 수 있습니다. 그런 다음의 **PSSession** 매개 변수를 사용 `Import-Module` 하 여 원격 컴퓨터에 설치 된 모듈을 가져옵니다. 현재 세션에서 가져온 명령을 사용 하면 명령이 원격 컴퓨터에서 암시적으로 실행 됩니다.
 
-Windows PowerShell 3.0부터를 사용 하 여 cmdlet `Import-Module` 이 CDXML (Cmdlet 정의 XML) 파일에 정의 되어 있는 CIM (CIM(Common Information Model)) 모듈을 가져올 수 있습니다. 이 기능을 사용하면 C++로 작성된 코드 어셈블리와 같은 비관리 코드 어셈블리에 구현된 cmdlet을 사용할 수 있습니다.
+Windows PowerShell 3.0부터를 사용 `Import-Module` 하 여 CIM (CIM(Common Information Model)) 모듈을 가져올 수 있습니다. CIM 모듈은 CDXML (Cmdlet 정의 XML) 파일에 cmdlet을 정의 합니다. 이 기능을 사용 하면 c + +로 작성 된 코드 어셈블리와 같이 관리 되지 않는 코드 어셈블리에 구현 된 cmdlet을 사용할 수 있습니다.
 
 Windows 운영 체제를 실행 하지 않는 컴퓨터를 포함 하 여 PowerShell 원격을 사용 하지 않는 원격 컴퓨터의 경우의 **CIMSession** 매개 변수를 사용 `Import-Module` 하 여 원격 컴퓨터에서 CIM 모듈을 가져올 수 있습니다. 가져온 명령은 원격 컴퓨터에서 암시적으로 실행 됩니다. **CIMSession** 은 원격 컴퓨터의 WMI(WINDOWS MANAGEMENT INSTRUMENTATION) (WMI)에 대 한 연결입니다.
 
@@ -172,11 +171,11 @@ VERBOSE: Exporting function 'Get-SpecDetails'.
 ```
 
 **Verbose** 매개 변수를 사용 하면 `Import-Module` 에서 모듈을 로드할 때 진행률을 보고 합니다.
-**Verbose** , **PassThru** 또는 **AsCustomObject** 매개 변수를 사용 하지 않으면에서 `Import-Module` 모듈을 가져올 때 출력이 생성 되지 않습니다.
+**Verbose**, **PassThru** 또는 **AsCustomObject** 매개 변수를 사용 하지 않으면에서 `Import-Module` 모듈을 가져올 때 출력이 생성 되지 않습니다.
 
 ### 예 5: 세션으로 가져온 모듈 멤버 제한
 
-이 예에서는 세션으로 가져오는 모듈 멤버와 세션에 대 한이 명령의 영향을 제한 하는 방법을 보여 줍니다. **함수** 매개 변수는 모듈에서 가져온 멤버를 제한 합니다. **별칭** , **변수** 및 **Cmdlet** 매개 변수를 사용 하 여 모듈이 가져오는 다른 멤버를 제한할 수도 있습니다.
+이 예에서는 세션으로 가져오는 모듈 멤버와 세션에 대 한이 명령의 영향을 제한 하는 방법을 보여 줍니다. **함수** 매개 변수는 모듈에서 가져온 멤버를 제한 합니다. **별칭**, **변수** 및 **Cmdlet** 매개 변수를 사용 하 여 모듈이 가져오는 다른 멤버를 제한할 수도 있습니다.
 
 `Get-Module`Cmdlet은 **psdiagnostics** 모듈을 나타내는 개체를 가져옵니다. **ExportedCmdlets** 속성은 모듈이 내보내는 모든 cmdlet을 나열 하지만 모두 가져오지는 않습니다.
 
@@ -250,7 +249,7 @@ Function        Stop-xTrace                            6.1.0.0    PSDiagnostics
 
 ### 예제 7: 사용자 지정 개체 가져오기 및 사용
 
-이 예제에서는 **import-module** 에서 반환 된 사용자 지정 개체를 가져오고 사용 하는 방법을 보여 줍니다.
+이 예제에서는에서 반환 하는 사용자 지정 개체를 가져오고 사용 하는 방법을 보여 줍니다 `Import-Module` .
 
 사용자 지정 개체에는 가져온 각각의 모듈 멤버를 나타내는 합성 멤버가 포함되어 있습니다. 예를 들어 모듈의 함수와 cmdlet은 사용자 지정 개체의 스크립트 메서드로 변환됩니다.
 
@@ -292,15 +291,15 @@ Show-Calendar ScriptMethod System.Object Show-Calendar();
 $a."Show-Calendar"()
 ```
 
-**AsCustomObject** 매개 변수를 사용 하 여 사용자 지정 개체를 요청 하 고 **PassThru** 매개 변수를 사용 하 여 개체를 반환 하는 **캘린더 표시** 스크립트 모듈을 가져옵니다. 결과 사용자 지정 개체는 변수에 저장 됩니다 `$a` .
+`Show-Calendar` **AsCustomObject** 매개 변수를 사용 하 여 스크립트 모듈을 가져와서 사용자 지정 개체를 요청 하 고 **PassThru** 매개 변수를 사용 하 여 개체를 반환 합니다. 결과 사용자 지정 개체는 변수에 저장 됩니다 `$a` .
 
-`$a`변수는 `Get-Member` 저장 된 개체의 속성 및 메서드를 표시 하기 위해 cmdlet으로 파이프 됩니다. 출력에는 **일정 표시** 스크립트 메서드가 표시 됩니다.
+`$a`변수는 `Get-Member` 저장 된 개체의 속성 및 메서드를 표시 하기 위해 cmdlet으로 파이프 됩니다. 출력은 스크립트 메서드를 보여 줍니다 `Show-Calendar` .
 
-**표시 일정** 스크립트 메서드를 호출 하려면 이름에 하이픈이 포함 되어 있으므로 메서드 이름을 따옴표로 묶어야 합니다.
+스크립트 메서드를 호출 하려면 `Show-Calendar` 이름에 하이픈이 포함 되므로 메서드 이름을 따옴표로 묶어야 합니다.
 
 ### 예 8: 모듈을 동일한 세션으로 다시 가져오기
 
-이 예제에서는 **Force** `Import-Module` 모듈을 동일한 세션으로 다시 가져오는 때의 Force 매개 변수를 사용 하는 방법을 보여 줍니다. **Force** 매개 변수는 로드 된 모듈을 제거한 다음 다시 가져옵니다.
+이 예제에서는  `Import-Module` 모듈을 동일한 세션으로 다시 가져오는 때의 Force 매개 변수를 사용 하는 방법을 보여 줍니다. **Force** 매개 변수는 로드 된 모듈을 제거한 다음 다시 가져옵니다.
 
 ```powershell
 Import-Module PSDiagnostics
@@ -455,7 +454,7 @@ Windows Remote Management (HTTP-In)                      WINRM-HTTP-In-TCP-PUBLI
 Windows Remote Management - Compatibility Mode (HTTP-In) WINRM-HTTP-Compat-In-TCP
 ```
 
-`New-PSSession` Server01 컴퓨터에 대 한 원격 세션 ( **PSSession** )을 만듭니다. **PSSession** 은 변수에 저장 됩니다 `$s` .
+`New-PSSession` Server01 컴퓨터에 대 한 원격 세션 (**PSSession**)을 만듭니다. **PSSession** 은 변수에 저장 됩니다 `$s` .
 
 `Get-Module` **PSSession** 매개 변수를 사용 하 여를 실행 하는 경우 **netsecurity** 모듈이 설치 되어 원격 컴퓨터에 사용 가능 하다는 것을 표시 합니다. 이 명령은 cmdlet을 사용 하 여 `Invoke-Command` `Get-Module` 원격 세션에서 명령을 실행 하는 것과 같습니다. 예: (`Invoke-Command $s {Get-Module -ListAvailable -Name NetSecurity`
 
@@ -821,6 +820,9 @@ Accept wildcard characters: False
 
 가능하면 항상 모듈 이름만 지정하세요. 파일 이름을 지정하는 경우 해당 파일에 구현된 멤버만 가져옵니다. 모듈에 다른 파일이 포함 되어 있으면 해당 파일을 가져오지 않으며 모듈의 중요 한 멤버가 누락 될 수 있습니다.
 
+> [!NOTE]
+> 스크립트 파일 ()은 모듈로 가져올 수 있지만 스크립트 `.ps1` 파일은 일반적으로 스크립트 모듈 파일 () 파일 처럼 구조화 되지 않습니다 `.psm1` . 스크립트 파일을 가져오면 모듈로 사용할 수 있다는 보장이 없습니다. 자세한 내용은 [about_Modules](about/about_Modules.md)를 참조 하세요.
+
 ```yaml
 Type: System.String[]
 Parameter Sets: Name, PSSession, CimSession, WinCompat
@@ -893,7 +895,7 @@ Accept wildcard characters: False
 
 ### -PSSession
 
-이 cmdlet이 모듈을 현재 세션으로 가져오는 PowerShell 사용자 관리 세션 ( **PSSession** )을 지정 합니다. **Pssession이** 포함 된 변수 또는 **pssession** 을 가져오는 명령 (예: 명령)을 입력 합니다 `Get-PSSession` .
+이 cmdlet이 모듈을 현재 세션으로 가져오는 PowerShell 사용자 관리 세션 (**PSSession**)을 지정 합니다. **Pssession이** 포함 된 변수 또는 **pssession** 을 가져오는 명령 (예: 명령)을 입력 합니다 `Get-PSSession` .
 
 다른 세션에서 현재 세션으로 모듈을 가져오면 로컬 모듈의 cmdlet을 사용할 때와 마찬가지로 현재 세션에서 해당 모듈의 cmdlet을 사용할 수 있습니다. 원격 cmdlet을 사용 하는 명령은 원격 세션에서 실행 되지만 원격 세부 정보는 PowerShell을 통해 백그라운드에서 관리 됩니다.
 
@@ -948,11 +950,11 @@ Accept wildcard characters: False
 - **전역**. 세션의 모든 명령에서 사용할 수 있습니다. **Global** 매개 변수를 사용하는 것과 동일합니다.
 - **로컬**. 현재 범위에서만 사용할 수 있습니다.
 
-기본적으로 `Import-Module` 명령 프롬프트, 스크립트 파일 또는 scriptblock에서 cmdlet을 호출 하면 모든 명령을 전역 세션 상태로 가져옵니다. **-Scope** 매개 변수를 **Local** 값과 함께 사용 하 여 모듈 콘텐츠를 스크립트 또는 scriptblock 범위로 가져올 수 있습니다.
+기본적으로 `Import-Module` 명령 프롬프트, 스크립트 파일 또는 scriptblock에서 cmdlet을 호출 하면 모든 명령을 전역 세션 상태로 가져옵니다. 매개 변수를 사용 `-Scope Local` 하 여 모듈 콘텐츠를 스크립트 또는 scriptblock 범위로 가져올 수 있습니다.
 
 다른 모듈에서 호출 되는 경우 `Import-Module` cmdlet은 중첩 모듈의 명령을 포함 하 여 모듈의 명령을 호출자의 세션 상태로 가져옵니다. 또는를 지정 하면 `-Scope Global` `-Global` 이 cmdlet이 모듈을 전역 세션 상태로 가져오므로 세션의 모든 명령에 사용할 수 있습니다.
 
-**Global** 매개 변수는 global 값을 사용 하는 **범위** 매개 변수와 같습니다.
+**Global** 매개 변수는 **Global** 값을 사용하는 **Scope** 매개 변수와 동일한 결과를 낳습니다.
 
 이 매개 변수는 Windows PowerShell 3.0에서 도입 되었습니다.
 
@@ -1056,19 +1058,17 @@ Accept wildcard characters: False
 
 - 모듈에서 가져온 명령에 대 한 형식 지정 데이터를 업데이트 하려면 cmdlet을 사용 `Update-FormatData` 합니다. `Update-FormatData` 는 모듈에서 가져온 세션의 명령에 대 한 형식 지정 데이터도 업데이트 합니다. 모듈에 대 한 형식 지정 파일이 변경 되 면 `Update-FormatData` 명령을 실행 하 여 가져온 명령에 대 한 형식 지정 데이터를 업데이트할 수 있습니다. 모듈을 다시 가져올 필요는 없습니다.
 
-- Windows PowerShell 3.0 부터는 PowerShell과 함께 설치 되는 핵심 명령이 모듈에 패키지 됩니다. Windows PowerShell 2.0 및 이후 버전의 PowerShell에서 이전 스타일의 세션을 만드는 호스트 프로그램에서 핵심 명령은 스냅인 ( **PSSnapins** )으로 패키지 됩니다. 예외는 항상 스냅인 인 **Microsoft. PowerShell. Core** 입니다. 또한 cmdlet에서 시작한 것과 같은 원격 세션 `New-PSSession` 은 핵심 스냅인을 포함 하는 이전 스타일의 세션입니다.
+- Windows PowerShell 3.0 부터는 PowerShell과 함께 설치 되는 핵심 명령이 모듈에 패키지 됩니다. Windows PowerShell 2.0 및 이후 버전의 PowerShell에서 이전 스타일의 세션을 만드는 호스트 프로그램에서 핵심 명령은 스냅인 (**PSSnapins**)으로 패키지 됩니다. 예외는 항상 스냅인 인 **Microsoft. PowerShell. Core** 입니다. 또한 cmdlet에서 시작한 것과 같은 원격 세션 `New-PSSession` 은 핵심 스냅인을 포함 하는 이전 스타일의 세션입니다.
 
   핵심 모듈과 함께 최신 스타일의 세션을 만드는 **initialsessionstate.createdefault2** 메서드에 대 한 자세한 내용은 [initialsessionstate.createdefault2 메서드](/dotnet/api/system.management.automation.runspaces.initialsessionstate.createdefault2)를 참조 하세요.
 
-- `Import-Module` 다른 세션에서 PowerShell 핵심 모듈을 가져올 수 없습니다. PowerShell 핵심 모듈의 이름은로 시작 `Microsoft.PowerShell` 합니다.
+- Windows PowerShell 2.0에서는 모듈을 가져올 때까지 **ExportedCmdlets** 및 **NestedModules** 속성 값과 같은 module 개체의 일부 속성 값이 채워지지 않았습니다.
 
-- Windows PowerShell 2.0에서 **ExportedCmdlets** 및 **NestedModules** 속성 값과 같은 module 개체의 일부 속성 값은 모듈을 가져올 때까지 채워지지 않으며 **PassThru** 매개 변수가 반환 하는 module 개체에서 사용할 수 없습니다. Windows PowerShell 3.0에서는 모든 모듈 속성 값이 채워집니다.
-
-- Windows PowerShell 3.0와 호환 되지 않는 혼합 모드 어셈블리를 포함 하는 모듈을 가져오려고 시도 하면에서 `Import-Module` 다음과 같은 오류 메시지를 반환 합니다.
+- Windows PowerShell 3.0 +와 호환 되지 않는 혼합 모드 어셈블리를 포함 하는 모듈을 가져오려고 시도 하면에서 `Import-Module` 다음과 같은 오류 메시지를 반환 합니다.
 
   > Import-Module: 혼합 모드 어셈블리는 런타임의 버전 ' v 2.0.50727 '에 대해 빌드 되었으며 추가 구성 정보 없이 4.0 런타임에 로드 될 수 없습니다.
 
-  이 오류는 Windows PowerShell 2.0 용으로 설계 된 모듈에 관리 되는 코드와 관리 되지 않는 코드 (예: c + + 및 c #)가 모두 포함 된 어셈블리 인 혼합 모듈 어셈블리가 하나 이상 있는 경우에 발생 합니다.
+  이 오류는 Windows PowerShell 2.0 용으로 설계 된 모듈에 혼합 모듈 어셈블리가 하나 이상 포함 되어 있을 때 발생 합니다. C + + 및 c #과 같은 관리 코드 및 관리 되지 않는 코드를 모두 포함 하는 혼합 모듈 어셈블리입니다.
 
   혼합 모드 어셈블리를 포함 하는 모듈을 가져오려면 다음 명령을 사용 하 여 Windows PowerShell 2.0을 시작한 후 명령을 다시 시도 하십시오 `Import-Module` .
 
@@ -1087,9 +1087,11 @@ Accept wildcard characters: False
   > [!NOTE]
   > `Get-Module` 현재 세션에 로드 된 모든 모듈을 표시 합니다. 여기에는 하위 항목 범위에서 로컬로 로드 된 모듈이 포함 됩니다. `Get-Command -Module modulename`현재 범위에서 로드 된 멤버를 확인 하는 데 사용 합니다.
 
-  모듈에 클래스 및 열거형 정의가 포함 된 경우에는 `using module` 스크립트 시작 부분에서를 사용 합니다. 이를 통해 클래스 및 열거형 정의를 포함 하는 스크립트를 가져옵니다. 자세한 내용은 [about_Using](About/about_Using.md)를 참조 하세요.
+  `Import-Module` 는 모듈에서 클래스 및 열거형 정의를 로드 하지 않습니다. `using module`스크립트의 시작 부분에 문을 사용 합니다. 클래스 및 열거형 정의를 포함 하 여 모듈을 가져옵니다. 자세한 내용은 [about_Using](About/about_Using.md)를 참조 하세요.
 
 ## 관련 링크
+
+[about_Modules](about/about_Modules.md)
 
 [Export-ModuleMember](Export-ModuleMember.md)
 
@@ -1100,4 +1102,3 @@ Accept wildcard characters: False
 [Remove-Module](Remove-Module.md)
 
 [about_PowerShell_Editions](About/about_PowerShell_Editions.md)
-

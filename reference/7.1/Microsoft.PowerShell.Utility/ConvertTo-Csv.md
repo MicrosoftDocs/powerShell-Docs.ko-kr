@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 1/7/2019
+ms.date: 12/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-csv?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertTo-Csv
-ms.openlocfilehash: e4cc40e7a9a5fdcd12b6a787607e4979ddbb3273
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 7ad8dc837bd843c2df48587ad809d9f65a4cf8a7
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93215905"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913222"
 ---
 # ConvertTo-Csv
 
@@ -21,7 +20,7 @@ ms.locfileid: "93215905"
 
 ## SYNTAX
 
-### 구분 기호
+### 구분 기호 (기본값)
 
 ```
 ConvertTo-Csv [-InputObject] <PSObject> [[-Delimiter] <Char>] [-IncludeTypeInformation]
@@ -205,7 +204,7 @@ Accept wildcard characters: False
 
 ### -QuoteFields
 
-따옴표로 묶을 열의 이름을 지정 합니다. 이 매개 변수를 사용 하는 경우 지정 된 열만 따옴표로 묶여 있습니다.
+따옴표로 묶을 열의 이름을 지정 합니다. 이 매개 변수를 사용 하는 경우 지정 된 열만 따옴표로 묶여 있습니다. 이 매개 변수는 PowerShell 7.0에 추가 되었습니다.
 
 ```yaml
 Type: System.String[]
@@ -226,6 +225,8 @@ CSV 파일에서 따옴표를 사용 하는 경우를 지정 합니다. 가능�
 - 안 함-아무것도 인용 하지 않음
 - 항상 따옴표 모든 항목 (기본 동작)
 - AsNeeded-구분 문자를 포함 하는 견적 필드만
+
+이 매개 변수는 PowerShell 7.0에 추가 되었습니다.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.BaseCsvWritingCommand+QuoteKind
@@ -273,7 +274,6 @@ PowerShell 6.0부터의 기본 동작은 `ConvertTo-CSV` CSV에 **#TYPE** 정보
 
 [ConvertFrom-Csv](ConvertFrom-Csv.md)
 
-[Export-Csv](Export-Csv.md)
+[내보내기-Csv](Export-Csv.md)
 
 [Import-Csv](Import-Csv.md)
-
