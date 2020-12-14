@@ -7,21 +7,21 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/find-package?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Package
-ms.openlocfilehash: 99e065ccdc8b450fa770e4d5f35fb04c747da063
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: f7c963b59a31b1b5edbf227e30415d6865cc14d7
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214690"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891069"
 ---
-# <span data-ttu-id="1f3c9-103">Find-Package</span><span class="sxs-lookup"><span data-stu-id="1f3c9-103">Find-Package</span></span>
+# <span data-ttu-id="8beb1-103">Find-Package</span><span class="sxs-lookup"><span data-stu-id="8beb1-103">Find-Package</span></span>
 
-## <span data-ttu-id="1f3c9-104">개요</span><span class="sxs-lookup"><span data-stu-id="1f3c9-104">SYNOPSIS</span></span>
-<span data-ttu-id="1f3c9-105">사용 가능한 패키지 소스에서 소프트웨어 패키지를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-105">Finds software packages in available package sources.</span></span>
+## <span data-ttu-id="8beb1-104">개요</span><span class="sxs-lookup"><span data-stu-id="8beb1-104">SYNOPSIS</span></span>
+<span data-ttu-id="8beb1-105">사용 가능한 패키지 소스에서 소프트웨어 패키지를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-105">Finds software packages in available package sources.</span></span>
 
-## <span data-ttu-id="1f3c9-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="1f3c9-106">SYNTAX</span></span>
+## <span data-ttu-id="8beb1-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="8beb1-106">SYNTAX</span></span>
 
-### <span data-ttu-id="1f3c9-107">NuGet</span><span class="sxs-lookup"><span data-stu-id="1f3c9-107">NuGet</span></span>
+### <span data-ttu-id="8beb1-107">NuGet</span><span class="sxs-lookup"><span data-stu-id="8beb1-107">NuGet</span></span>
 
 ```
 Find-Package [-IncludeDependencies] [-AllVersions] [-Source <String[]>] [-Credential <PSCredential>]
@@ -31,7 +31,7 @@ Find-Package [-IncludeDependencies] [-AllVersions] [-Source <String[]>] [-Creden
  [-FilterOnTag <String[]>] [-Contains <String>] [-AllowPrereleaseVersions] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="1f3c9-108">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="1f3c9-108">PowerShellGet</span></span>
+### <span data-ttu-id="8beb1-108">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="8beb1-108">PowerShellGet</span></span>
 
 ```
 Find-Package [-IncludeDependencies] [-AllVersions] [-Source <String[]>] [-Credential <PSCredential>]
@@ -44,15 +44,15 @@ Find-Package [-IncludeDependencies] [-AllVersions] [-Source <String[]>] [-Creden
  [<CommonParameters>]
 ```
 
-## <span data-ttu-id="1f3c9-109">설명</span><span class="sxs-lookup"><span data-stu-id="1f3c9-109">DESCRIPTION</span></span>
+## <span data-ttu-id="8beb1-109">설명</span><span class="sxs-lookup"><span data-stu-id="8beb1-109">DESCRIPTION</span></span>
 
-<span data-ttu-id="1f3c9-110">`Find-Package` 패키지 원본에서 사용할 수 있는 소프트웨어 패키지를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-110">`Find-Package` finds software packages that are available in package sources.</span></span> <span data-ttu-id="1f3c9-111">`Get-PackageProvider` 및 `Get-PackageSource` 공급자에 대 한 세부 정보를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-111">`Get-PackageProvider` and `Get-PackageSource` display details about your providers.</span></span>
+<span data-ttu-id="8beb1-110">`Find-Package` 패키지 원본에서 사용할 수 있는 소프트웨어 패키지를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-110">`Find-Package` finds software packages that are available in package sources.</span></span> <span data-ttu-id="8beb1-111">`Get-PackageProvider` 및 `Get-PackageSource` 공급자에 대 한 세부 정보를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-111">`Get-PackageProvider` and `Get-PackageSource` display details about your providers.</span></span>
 
-## <span data-ttu-id="1f3c9-112">예제</span><span class="sxs-lookup"><span data-stu-id="1f3c9-112">EXAMPLES</span></span>
+## <span data-ttu-id="8beb1-112">예제</span><span class="sxs-lookup"><span data-stu-id="8beb1-112">EXAMPLES</span></span>
 
-### <span data-ttu-id="1f3c9-113">예제 1: 패키지 공급자에서 사용 가능한 모든 패키지 찾기</span><span class="sxs-lookup"><span data-stu-id="1f3c9-113">Example 1: Find all available packages from a package provider</span></span>
+### <span data-ttu-id="8beb1-113">예제 1: 패키지 공급자에서 사용 가능한 모든 패키지 찾기</span><span class="sxs-lookup"><span data-stu-id="8beb1-113">Example 1: Find all available packages from a package provider</span></span>
 
-<span data-ttu-id="1f3c9-114">이 명령은 등록 된 갤러리에서 사용 가능한 모든 PowerShell 모듈 패키지를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-114">This command finds all available PowerShell module packages in a registered gallery.</span></span> <span data-ttu-id="1f3c9-115">`Get-PackageProvider`를 사용 하 여 공급자 이름을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-115">Use `Get-PackageProvider` to get the provider name.</span></span>
+<span data-ttu-id="8beb1-114">이 명령은 등록 된 갤러리에서 사용 가능한 모든 PowerShell 모듈 패키지를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-114">This command finds all available PowerShell module packages in a registered gallery.</span></span> <span data-ttu-id="8beb1-115">`Get-PackageProvider`를 사용 하 여 공급자 이름을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-115">Use `Get-PackageProvider` to get the provider name.</span></span>
 
 ```
 Find-Package -ProviderName NuGet
@@ -69,11 +69,11 @@ bootstrap          4.3.1     MyNuGet    Bootstrap framework in CSS. Includes fon
 NuGet.Core         2.14.0    MyNuGet    NuGet.Core is the core framework assembly for NuGet...
 ```
 
-<span data-ttu-id="1f3c9-116">`Find-Package`**provider 매개 변수** 를 사용 하 여 공급자 **NuGet** 을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-116">`Find-Package` uses the **Provider** parameter to specify the provider **NuGet** .</span></span>
+<span data-ttu-id="8beb1-116">`Find-Package`**provider 매개 변수** 를 사용 하 여 공급자 **NuGet** 을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-116">`Find-Package` uses the **Provider** parameter to specify the provider **NuGet**.</span></span>
 
-### <span data-ttu-id="1f3c9-117">예제 2: 패키지 원본에서 패키지 찾기</span><span class="sxs-lookup"><span data-stu-id="1f3c9-117">Example 2: Find a package from a package source</span></span>
+### <span data-ttu-id="8beb1-117">예제 2: 패키지 원본에서 패키지 찾기</span><span class="sxs-lookup"><span data-stu-id="8beb1-117">Example 2: Find a package from a package source</span></span>
 
-<span data-ttu-id="1f3c9-118">이 명령은 지정 된 패키지 원본에서 최신 버전의 패키지를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-118">This command finds the newest version of a package from a specified package source.</span></span> <span data-ttu-id="1f3c9-119">패키지 원본을 제공 하지 않으면에서 `Find-Package` 설치 된 각 패키지 공급자와 해당 패키지 원본을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-119">If a package source isn't provided, `Find-Package` searches each installed package provider and its package sources.</span></span> <span data-ttu-id="1f3c9-120">`Get-PackageSource`를 사용 하 여 원본 이름을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-120">Use `Get-PackageSource` to get the source name.</span></span>
+<span data-ttu-id="8beb1-118">이 명령은 지정 된 패키지 원본에서 최신 버전의 패키지를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-118">This command finds the newest version of a package from a specified package source.</span></span> <span data-ttu-id="8beb1-119">패키지 원본을 제공 하지 않으면에서 `Find-Package` 설치 된 각 패키지 공급자와 해당 패키지 원본을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-119">If a package source isn't provided, `Find-Package` searches each installed package provider and its package sources.</span></span> <span data-ttu-id="8beb1-120">`Get-PackageSource`를 사용 하 여 원본 이름을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-120">Use `Get-PackageSource` to get the source name.</span></span>
 
 ```
 Find-Package -Name NuGet.Core -Source MyNuGet
@@ -85,11 +85,11 @@ Name         Version   Source    Summary
 NuGet.Core   2.14.0    MyNuGet   NuGet.Core is the core framework assembly for NuGet...
 ```
 
-<span data-ttu-id="1f3c9-121">`Find-Package`**name** 매개 변수를 사용 하 여 **NuGet. Core** 패키지 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-121">`Find-Package` uses the **Name** parameter to specify the package name **NuGet.Core** .</span></span> <span data-ttu-id="1f3c9-122">**Source** 매개 변수는 **MyNuGet** 에서 패키지를 검색 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-122">The **Source** parameter specifies to search for the package in **MyNuGet** .</span></span>
+<span data-ttu-id="8beb1-121">`Find-Package`**name** 매개 변수를 사용 하 여 **NuGet. Core** 패키지 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-121">`Find-Package` uses the **Name** parameter to specify the package name **NuGet.Core**.</span></span> <span data-ttu-id="8beb1-122">**Source** 매개 변수는 **MyNuGet** 에서 패키지를 검색 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-122">The **Source** parameter specifies to search for the package in **MyNuGet**.</span></span>
 
-### <span data-ttu-id="1f3c9-123">예제 3: 패키지의 모든 버전 찾기</span><span class="sxs-lookup"><span data-stu-id="1f3c9-123">Example 3: Find all versions of a package</span></span>
+### <span data-ttu-id="8beb1-123">예제 3: 패키지의 모든 버전 찾기</span><span class="sxs-lookup"><span data-stu-id="8beb1-123">Example 3: Find all versions of a package</span></span>
 
-<span data-ttu-id="1f3c9-124">이 명령은 지정 된 공급자에서 사용 가능한 모든 패키지 버전을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-124">This command finds all available package versions from a specified provider.</span></span>
+<span data-ttu-id="8beb1-124">이 명령은 지정 된 공급자에서 사용 가능한 모든 패키지 버전을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-124">This command finds all available package versions from a specified provider.</span></span>
 
 ```
 Find-Package -Name NuGet.Core -Source MyNuGet -AllVersions
@@ -106,11 +106,11 @@ NuGet.Core    1.1.229.159      MyNuGet      NuGet.Core is the core framework ass
 Nuget.Core    1.0.1120.104     MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-<span data-ttu-id="1f3c9-125">`Find-Package`**Name** 매개 변수를 사용 하 여 **NuGet. Core** 패키지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-125">`Find-Package` uses the **Name** parameter to specify the package **NuGet.Core** .</span></span> <span data-ttu-id="1f3c9-126">**ProviderName** 매개 변수는 **MyNuGet** 에서 패키지를 검색 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-126">The **ProviderName** parameter specifies to search for the package in **MyNuGet** .</span></span> <span data-ttu-id="1f3c9-127">**Allversions)** 는 사용 가능한 모든 버전을 반환 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-127">**AllVersions** specifies that all available versions are returned.</span></span>
+<span data-ttu-id="8beb1-125">`Find-Package`**Name** 매개 변수를 사용 하 여 **NuGet. Core** 패키지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-125">`Find-Package` uses the **Name** parameter to specify the package **NuGet.Core**.</span></span> <span data-ttu-id="8beb1-126">**ProviderName** 매개 변수는 **MyNuGet** 에서 패키지를 검색 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-126">The **ProviderName** parameter specifies to search for the package in **MyNuGet**.</span></span> <span data-ttu-id="8beb1-127">**Allversions)** 는 사용 가능한 모든 버전을 반환 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-127">**AllVersions** specifies that all available versions are returned.</span></span>
 
-### <span data-ttu-id="1f3c9-128">예제 4: 특정 이름 및 버전의 패키지 찾기</span><span class="sxs-lookup"><span data-stu-id="1f3c9-128">Example 4: Find a package with a specific name and version</span></span>
+### <span data-ttu-id="8beb1-128">예제 4: 특정 이름 및 버전의 패키지 찾기</span><span class="sxs-lookup"><span data-stu-id="8beb1-128">Example 4: Find a package with a specific name and version</span></span>
 
-<span data-ttu-id="1f3c9-129">이 명령은 지정 된 공급자에서 특정 패키지 버전을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-129">This command finds a specific package version from a specified provider.</span></span>
+<span data-ttu-id="8beb1-129">이 명령은 지정 된 공급자에서 특정 패키지 버전을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-129">This command finds a specific package version from a specified provider.</span></span>
 
 ```
 Find-Package -Name NuGet.Core -ProviderName NuGet -RequiredVersion 2.9.0
@@ -122,11 +122,11 @@ Name          Version          Source       Summary
 NuGet.Core    2.9.0            MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-<span data-ttu-id="1f3c9-130">`Find-Package`**name** 매개 변수를 사용 하 여 **NuGet. Core** 패키지 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-130">`Find-Package` uses the **Name** parameter to specify the package name **NuGet.Core** .</span></span> <span data-ttu-id="1f3c9-131">**ProviderName** 매개 변수는 **NuGet** 에서 패키지를 검색 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-131">The **ProviderName** parameter specifies to search for the package in **NuGet** .</span></span> <span data-ttu-id="1f3c9-132">**RequiredVersion** 은 버전 **2.9.0** 반환 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-132">**RequiredVersion** specifies that only version **2.9.0** is returned.</span></span>
+<span data-ttu-id="8beb1-130">`Find-Package`**name** 매개 변수를 사용 하 여 **NuGet. Core** 패키지 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-130">`Find-Package` uses the **Name** parameter to specify the package name **NuGet.Core**.</span></span> <span data-ttu-id="8beb1-131">**ProviderName** 매개 변수는 **NuGet** 에서 패키지를 검색 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-131">The **ProviderName** parameter specifies to search for the package in **NuGet**.</span></span> <span data-ttu-id="8beb1-132">**RequiredVersion** 은 버전 **2.9.0** 반환 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-132">**RequiredVersion** specifies that only version **2.9.0** is returned.</span></span>
 
-### <span data-ttu-id="1f3c9-133">예 5: 버전 범위 내에서 패키지 찾기</span><span class="sxs-lookup"><span data-stu-id="1f3c9-133">Example 5: Find packages within a range of versions</span></span>
+### <span data-ttu-id="8beb1-133">예 5: 버전 범위 내에서 패키지 찾기</span><span class="sxs-lookup"><span data-stu-id="8beb1-133">Example 5: Find packages within a range of versions</span></span>
 
-<span data-ttu-id="1f3c9-134">이 명령은 지정 된 패키지에 대 한 버전 범위를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-134">This command finds a range of versions for a specified package.</span></span>
+<span data-ttu-id="8beb1-134">이 명령은 지정 된 패키지에 대 한 버전 범위를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-134">This command finds a range of versions for a specified package.</span></span>
 
 ```
 Find-Package -Name NuGet.Core -ProviderName NuGet -MinimumVersion 2.7.0 -MaximumVersion 2.9.0 -AllVersions
@@ -141,13 +141,13 @@ NuGet.Core    2.8.0            MyNuGet      NuGet.Core is the core framework ass
 NuGet.Core    2.7.0            MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-<span data-ttu-id="1f3c9-135">`Find-Package`**name** 매개 변수를 사용 하 여 **NuGet. Core** 패키지 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-135">`Find-Package` uses the **Name** parameter to specify the package name **NuGet.Core** .</span></span> <span data-ttu-id="1f3c9-136">**ProviderName** 매개 변수는 **NuGet** 에서 패키지를 검색 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-136">The **ProviderName** parameter specifies to search for the package in **NuGet** .</span></span> <span data-ttu-id="1f3c9-137">**MinimumVersion** 은 가장 낮은 버전의 **합니다** 를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-137">**MinimumVersion** specifies the lowest version **2.7.0** .</span></span> <span data-ttu-id="1f3c9-138">**MaximumVersion** 은 가장 높은 버전의 **2.9.0** 를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-138">**MaximumVersion** specifies the highest version **2.9.0** .</span></span>
-<span data-ttu-id="1f3c9-139">**Allversions)** 는 최소값과 최대값으로 지정 된 범위를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-139">**AllVersions** determines the range is returned as specified by the minimum and maximum.</span></span>
+<span data-ttu-id="8beb1-135">`Find-Package`**name** 매개 변수를 사용 하 여 **NuGet. Core** 패키지 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-135">`Find-Package` uses the **Name** parameter to specify the package name **NuGet.Core**.</span></span> <span data-ttu-id="8beb1-136">**ProviderName** 매개 변수는 **NuGet** 에서 패키지를 검색 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-136">The **ProviderName** parameter specifies to search for the package in **NuGet**.</span></span> <span data-ttu-id="8beb1-137">**MinimumVersion** 은 가장 낮은 버전의 **합니다** 를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-137">**MinimumVersion** specifies the lowest version **2.7.0**.</span></span> <span data-ttu-id="8beb1-138">**MaximumVersion** 은 가장 높은 버전의 **2.9.0** 를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-138">**MaximumVersion** specifies the highest version **2.9.0**.</span></span>
+<span data-ttu-id="8beb1-139">**Allversions)** 는 최소값과 최대값으로 지정 된 범위를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-139">**AllVersions** determines the range is returned as specified by the minimum and maximum.</span></span>
 
-### <span data-ttu-id="1f3c9-140">예제 6: 파일 시스템에서 패키지 찾기</span><span class="sxs-lookup"><span data-stu-id="1f3c9-140">Example 6: Find a package from a file system</span></span>
+### <span data-ttu-id="8beb1-140">예제 6: 파일 시스템에서 패키지 찾기</span><span class="sxs-lookup"><span data-stu-id="8beb1-140">Example 6: Find a package from a file system</span></span>
 
-<span data-ttu-id="1f3c9-141">이 명령은 `.nupkg` 로컬 컴퓨터에 저장 된 파일 확장명을 사용 하 여 패키지를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-141">This command finds packages with the file extension `.nupkg` that are stored on the local computer.</span></span>
-<span data-ttu-id="1f3c9-142">파일은 **NuGet** 과 같은 갤러리에서 다운로드 된 패키지입니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-142">The files are packages downloaded from a gallery such as the **NuGet** .</span></span>
+<span data-ttu-id="8beb1-141">이 명령은 `.nupkg` 로컬 컴퓨터에 저장 된 파일 확장명을 사용 하 여 패키지를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-141">This command finds packages with the file extension `.nupkg` that are stored on the local computer.</span></span>
+<span data-ttu-id="8beb1-142">파일은 **NuGet** 과 같은 갤러리에서 다운로드 된 패키지입니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-142">The files are packages downloaded from a gallery such as the **NuGet**.</span></span>
 
 ```
 PS> Find-Package -Source C:\LocalPkg
@@ -160,11 +160,11 @@ Microsoft.Web.Xdt    3.0.0      C:\LocalPkg\     Microsoft Xml Document Transfor
 NuGet.Core           2.14.0     C:\LocalPkg\     NuGet.Core is the core framework assembly...
 ```
 
-## <span data-ttu-id="1f3c9-143">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="1f3c9-143">PARAMETERS</span></span>
+## <span data-ttu-id="8beb1-143">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="8beb1-143">PARAMETERS</span></span>
 
-### <span data-ttu-id="1f3c9-144">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="1f3c9-144">-AcceptLicense</span></span>
+### <span data-ttu-id="8beb1-144">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="8beb1-144">-AcceptLicense</span></span>
 
-<span data-ttu-id="1f3c9-145">패키지에 필요한 경우 자동으로 사용권 계약에 동의 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-145">Automatically accepts a license agreement if the package requires it.</span></span>
+<span data-ttu-id="8beb1-145">패키지에 필요한 경우 자동으로 사용권 계약에 동의 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-145">Automatically accepts a license agreement if the package requires it.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -178,25 +178,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-146">-AllowPrereleaseVersions</span><span class="sxs-lookup"><span data-stu-id="1f3c9-146">-AllowPrereleaseVersions</span></span>
+### <span data-ttu-id="8beb1-146">-AllowPrereleaseVersions</span><span class="sxs-lookup"><span data-stu-id="8beb1-146">-AllowPrereleaseVersions</span></span>
 
-<span data-ttu-id="1f3c9-147">결과에서 시험판으로 표시 된 패키지를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-147">Includes packages marked as a prerelease in the results.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="1f3c9-148">-Allversions)</span><span class="sxs-lookup"><span data-stu-id="1f3c9-148">-AllVersions</span></span>
-
-<span data-ttu-id="1f3c9-149">에서 `Find-Package` 사용 가능한 패키지 버전을 모두 반환 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-149">Indicates that `Find-Package` returns all available versions of the package.</span></span> <span data-ttu-id="1f3c9-150">기본적으로는 `Find-Package` 사용 가능한 최신 버전만 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-150">By default, `Find-Package` only returns the newest available version.</span></span>
+<span data-ttu-id="8beb1-147">결과에서 시험판으로 표시 된 패키지를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-147">Includes packages marked as a prerelease in the results.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -210,9 +194,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-151">-Command</span><span class="sxs-lookup"><span data-stu-id="1f3c9-151">-Command</span></span>
+### <span data-ttu-id="8beb1-148">-Allversions)</span><span class="sxs-lookup"><span data-stu-id="8beb1-148">-AllVersions</span></span>
 
-<span data-ttu-id="1f3c9-152">에서 검색 하는 명령 배열을 지정 합니다 `Find-Package` .</span><span class="sxs-lookup"><span data-stu-id="1f3c9-152">Specifies an array of commands searched by `Find-Package`.</span></span>
+<span data-ttu-id="8beb1-149">에서 `Find-Package` 사용 가능한 패키지 버전을 모두 반환 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-149">Indicates that `Find-Package` returns all available versions of the package.</span></span> <span data-ttu-id="8beb1-150">기본적으로는 `Find-Package` 사용 가능한 최신 버전만 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-150">By default, `Find-Package` only returns the newest available version.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8beb1-151">-Command</span><span class="sxs-lookup"><span data-stu-id="8beb1-151">-Command</span></span>
+
+<span data-ttu-id="8beb1-152">에서 검색 하는 명령 배열을 지정 합니다 `Find-Package` .</span><span class="sxs-lookup"><span data-stu-id="8beb1-152">Specifies an array of commands searched by `Find-Package`.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -226,25 +226,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-153">-Smi-s</span><span class="sxs-lookup"><span data-stu-id="1f3c9-153">-ConfigFile</span></span>
+### <span data-ttu-id="8beb1-153">-Smi-s</span><span class="sxs-lookup"><span data-stu-id="8beb1-153">-ConfigFile</span></span>
 
-<span data-ttu-id="1f3c9-154">구성 파일을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-154">Specifies a configuration file.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: NuGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="1f3c9-155">-포함</span><span class="sxs-lookup"><span data-stu-id="1f3c9-155">-Contains</span></span>
-
-<span data-ttu-id="1f3c9-156">`Find-Package` 개체의 속성 값에 있는 항목이 지정 된 값과 정확히 일치 하는 경우 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-156">`Find-Package` gets objects if any item in the object's property values are an exact match for the specified value.</span></span>
+<span data-ttu-id="8beb1-154">구성 파일을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-154">Specifies a configuration file.</span></span>
 
 ```yaml
 Type: System.String
@@ -258,9 +242,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-157">-Credential</span><span class="sxs-lookup"><span data-stu-id="1f3c9-157">-Credential</span></span>
+### <span data-ttu-id="8beb1-155">-포함</span><span class="sxs-lookup"><span data-stu-id="8beb1-155">-Contains</span></span>
 
-<span data-ttu-id="1f3c9-158">패키지를 검색할 수 있는 권한이 있는 사용자 계정을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-158">Specifies a user account that has permission to search for packages.</span></span>
+<span data-ttu-id="8beb1-156">`Find-Package` 개체의 속성 값에 있는 항목이 지정 된 값과 정확히 일치 하는 경우 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-156">`Find-Package` gets objects if any item in the object's property values are an exact match for the specified value.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: NuGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8beb1-157">-Credential</span><span class="sxs-lookup"><span data-stu-id="8beb1-157">-Credential</span></span>
+
+<span data-ttu-id="8beb1-158">패키지를 검색할 수 있는 권한이 있는 사용자 계정을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-158">Specifies a user account that has permission to search for packages.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -274,9 +274,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-159">-Get-dscresource</span><span class="sxs-lookup"><span data-stu-id="1f3c9-159">-DscResource</span></span>
+### <span data-ttu-id="8beb1-159">-Get-dscresource</span><span class="sxs-lookup"><span data-stu-id="8beb1-159">-DscResource</span></span>
 
-<span data-ttu-id="1f3c9-160">이 cmdlet이 검색 하는 DSC (필요한 상태 구성) 리소스의 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-160">Specifies an array of Desired State Configuration (DSC) resources that this cmdlet searches.</span></span>
+<span data-ttu-id="8beb1-160">이 cmdlet이 검색 하는 DSC (필요한 상태 구성) 리소스의 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-160">Specifies an array of Desired State Configuration (DSC) resources that this cmdlet searches.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -290,9 +290,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-161">-Filter</span><span class="sxs-lookup"><span data-stu-id="1f3c9-161">-Filter</span></span>
+### <span data-ttu-id="8beb1-161">-Filter</span><span class="sxs-lookup"><span data-stu-id="8beb1-161">-Filter</span></span>
 
-<span data-ttu-id="1f3c9-162">**이름** 및 **설명** 속성에서 검색할 조건을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-162">Specifies terms to search for within the **Name** and **Description** properties.</span></span>
+<span data-ttu-id="8beb1-162">**이름** 및 **설명** 속성에서 검색할 조건을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-162">Specifies terms to search for within the **Name** and **Description** properties.</span></span>
 
 ```yaml
 Type: System.String
@@ -306,57 +306,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-163">-FilterOnTag</span><span class="sxs-lookup"><span data-stu-id="1f3c9-163">-FilterOnTag</span></span>
+### <span data-ttu-id="8beb1-163">-FilterOnTag</span><span class="sxs-lookup"><span data-stu-id="8beb1-163">-FilterOnTag</span></span>
 
-<span data-ttu-id="1f3c9-164">결과를 필터링 하는 태그를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-164">Specifies the tag that filters the results.</span></span> <span data-ttu-id="1f3c9-165">지정 된 태그를 포함 하지 않는 결과는 제외 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-165">Results that don't contain the specified tag are excluded.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: NuGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="1f3c9-166">-Force</span><span class="sxs-lookup"><span data-stu-id="1f3c9-166">-Force</span></span>
-
-<span data-ttu-id="1f3c9-167">사용자 확인을 요청하지 않고 명령을 강제 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-167">Forces the command to run without asking for user confirmation.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="1f3c9-168">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="1f3c9-168">-ForceBootstrap</span></span>
-
-<span data-ttu-id="1f3c9-169">PackageManagement에서 `Find-Package` 패키지 **PackageManagement** 공급자를 자동으로 설치 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-169">Indicates that `Find-Package` forces **PackageManagement** to automatically install the package provider.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="1f3c9-170">-헤더</span><span class="sxs-lookup"><span data-stu-id="1f3c9-170">-Headers</span></span>
-
-<span data-ttu-id="1f3c9-171">패키지에 대 한 헤더를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-171">Specifies the headers for the package.</span></span>
+<span data-ttu-id="8beb1-164">결과를 필터링 하는 태그를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-164">Specifies the tag that filters the results.</span></span> <span data-ttu-id="8beb1-165">지정 된 태그를 포함 하지 않는 결과는 제외 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-165">Results that don't contain the specified tag are excluded.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -370,9 +322,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-172">-IncludeDependencies</span><span class="sxs-lookup"><span data-stu-id="1f3c9-172">-IncludeDependencies</span></span>
+### <span data-ttu-id="8beb1-166">-Force</span><span class="sxs-lookup"><span data-stu-id="8beb1-166">-Force</span></span>
 
-<span data-ttu-id="1f3c9-173">이 cmdlet이 결과의 패키지 종속성을 포함 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-173">Indicates that this cmdlet includes package dependencies in the results.</span></span>
+<span data-ttu-id="8beb1-167">사용자 확인을 요청하지 않고 명령을 강제 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-167">Forces the command to run without asking for user confirmation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -386,17 +338,65 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-174">-포함</span><span class="sxs-lookup"><span data-stu-id="1f3c9-174">-Includes</span></span>
+### <span data-ttu-id="8beb1-168">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="8beb1-168">-ForceBootstrap</span></span>
 
-<span data-ttu-id="1f3c9-175">`Find-Package`에서 범주 내의 모든 패키지를 찾아야 하는지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-175">Specifies whether `Find-Package` should find all packages within a category.</span></span>
+<span data-ttu-id="8beb1-169">PackageManagement에서 `Find-Package` 패키지  공급자를 자동으로 설치 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-169">Indicates that `Find-Package` forces **PackageManagement** to automatically install the package provider.</span></span>
 
-<span data-ttu-id="1f3c9-176">허용 되는 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-176">The accepted values are as follows:</span></span>
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
-- <span data-ttu-id="1f3c9-177">cmdlet</span><span class="sxs-lookup"><span data-stu-id="1f3c9-177">Cmdlet</span></span>
-- <span data-ttu-id="1f3c9-178">DscResource</span><span class="sxs-lookup"><span data-stu-id="1f3c9-178">DscResource</span></span>
-- <span data-ttu-id="1f3c9-179">함수</span><span class="sxs-lookup"><span data-stu-id="1f3c9-179">Function</span></span>
-- <span data-ttu-id="1f3c9-180">RoleCapability</span><span class="sxs-lookup"><span data-stu-id="1f3c9-180">RoleCapability</span></span>
-- <span data-ttu-id="1f3c9-181">워크플로</span><span class="sxs-lookup"><span data-stu-id="1f3c9-181">Workflow</span></span>
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8beb1-170">-헤더</span><span class="sxs-lookup"><span data-stu-id="8beb1-170">-Headers</span></span>
+
+<span data-ttu-id="8beb1-171">패키지에 대 한 헤더를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-171">Specifies the headers for the package.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: NuGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8beb1-172">-IncludeDependencies</span><span class="sxs-lookup"><span data-stu-id="8beb1-172">-IncludeDependencies</span></span>
+
+<span data-ttu-id="8beb1-173">이 cmdlet이 결과의 패키지 종속성을 포함 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-173">Indicates that this cmdlet includes package dependencies in the results.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8beb1-174">-포함</span><span class="sxs-lookup"><span data-stu-id="8beb1-174">-Includes</span></span>
+
+<span data-ttu-id="8beb1-175">`Find-Package`에서 범주 내의 모든 패키지를 찾아야 하는지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-175">Specifies whether `Find-Package` should find all packages within a category.</span></span>
+
+<span data-ttu-id="8beb1-176">허용 되는 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-176">The accepted values are as follows:</span></span>
+
+- <span data-ttu-id="8beb1-177">Cmdlet</span><span class="sxs-lookup"><span data-stu-id="8beb1-177">Cmdlet</span></span>
+- <span data-ttu-id="8beb1-178">DscResource</span><span class="sxs-lookup"><span data-stu-id="8beb1-178">DscResource</span></span>
+- <span data-ttu-id="8beb1-179">함수</span><span class="sxs-lookup"><span data-stu-id="8beb1-179">Function</span></span>
+- <span data-ttu-id="8beb1-180">RoleCapability</span><span class="sxs-lookup"><span data-stu-id="8beb1-180">RoleCapability</span></span>
+- <span data-ttu-id="8beb1-181">워크플로</span><span class="sxs-lookup"><span data-stu-id="8beb1-181">Workflow</span></span>
 
 ```yaml
 Type: System.String[]
@@ -411,25 +411,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-182">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="1f3c9-182">-MaximumVersion</span></span>
+### <span data-ttu-id="8beb1-182">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="8beb1-182">-MaximumVersion</span></span>
 
-<span data-ttu-id="1f3c9-183">검색 하려는 최대 패키지 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-183">Specifies the maximum package version that you want to find.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="1f3c9-184">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="1f3c9-184">-MinimumVersion</span></span>
-
-<span data-ttu-id="1f3c9-185">찾으려는 최소 패키지 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-185">Specifies the minimum package version that you want to find.</span></span> <span data-ttu-id="1f3c9-186">더 높은 버전을 사용할 수 있는 경우 해당 버전이 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-186">If a higher version is available, that version is returned.</span></span>
+<span data-ttu-id="8beb1-183">검색 하려는 최대 패키지 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-183">Specifies the maximum package version that you want to find.</span></span>
 
 ```yaml
 Type: System.String
@@ -443,9 +427,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-187">-Name</span><span class="sxs-lookup"><span data-stu-id="1f3c9-187">-Name</span></span>
+### <span data-ttu-id="8beb1-184">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="8beb1-184">-MinimumVersion</span></span>
 
-<span data-ttu-id="1f3c9-188">하나 이상의 패키지 이름 또는 와일드 카드 문자를 포함 하는 패키지 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-188">Specifies one or more package names, or package names with wildcard characters.</span></span> <span data-ttu-id="1f3c9-189">여러 패키지 이름을 쉼표로 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-189">Separate multiple package names with commas.</span></span>
+<span data-ttu-id="8beb1-185">찾으려는 최소 패키지 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-185">Specifies the minimum package version that you want to find.</span></span> <span data-ttu-id="8beb1-186">더 높은 버전을 사용할 수 있는 경우 해당 버전이 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-186">If a higher version is available, that version is returned.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8beb1-187">-Name</span><span class="sxs-lookup"><span data-stu-id="8beb1-187">-Name</span></span>
+
+<span data-ttu-id="8beb1-188">하나 이상의 패키지 이름 또는 와일드 카드 문자를 포함 하는 패키지 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-188">Specifies one or more package names, or package names with wildcard characters.</span></span> <span data-ttu-id="8beb1-189">여러 패키지 이름을 쉼표로 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-189">Separate multiple package names with commas.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -459,9 +459,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="1f3c9-190">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="1f3c9-190">-PackageManagementProvider</span></span>
+### <span data-ttu-id="8beb1-190">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="8beb1-190">-PackageManagementProvider</span></span>
 
-<span data-ttu-id="1f3c9-191">패키지 관리 공급자의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-191">Specifies the name of a package management provider.</span></span>
+<span data-ttu-id="8beb1-191">패키지 관리 공급자의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-191">Specifies the name of a package management provider.</span></span>
 
 ```yaml
 Type: System.String
@@ -475,10 +475,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-192">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="1f3c9-192">-ProviderName</span></span>
+### <span data-ttu-id="8beb1-192">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="8beb1-192">-ProviderName</span></span>
 
-<span data-ttu-id="1f3c9-193">패키지 공급자 이름을 하나 이상 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-193">Specifies one or more package provider names.</span></span> <span data-ttu-id="1f3c9-194">여러 패키지 공급자 이름을 쉼표로 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-194">Separate multiple package provider names with commas.</span></span>
-<span data-ttu-id="1f3c9-195">사용 `Get-PackageProvider` 가능한 패키지 공급자 목록을 가져오는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-195">Use `Get-PackageProvider` to get a list of available package providers.</span></span>
+<span data-ttu-id="8beb1-193">패키지 공급자 이름을 하나 이상 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-193">Specifies one or more package provider names.</span></span> <span data-ttu-id="8beb1-194">여러 패키지 공급자 이름을 쉼표로 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-194">Separate multiple package provider names with commas.</span></span>
+<span data-ttu-id="8beb1-195">사용 `Get-PackageProvider` 가능한 패키지 공급자 목록을 가져오는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-195">Use `Get-PackageProvider` to get a list of available package providers.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -493,9 +493,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-196">-프록시</span><span class="sxs-lookup"><span data-stu-id="1f3c9-196">-Proxy</span></span>
+### <span data-ttu-id="8beb1-196">-프록시</span><span class="sxs-lookup"><span data-stu-id="8beb1-196">-Proxy</span></span>
 
-<span data-ttu-id="1f3c9-197">인터넷 리소스에 직접 연결 하는 대신 요청에 대 한 프록시 서버를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-197">Specifies a proxy server for the request, rather than a direct connection to the internet resource.</span></span>
+<span data-ttu-id="8beb1-197">인터넷 리소스에 직접 연결 하는 대신 요청에 대 한 프록시 서버를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-197">Specifies a proxy server for the request, rather than a direct connection to the internet resource.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -509,9 +509,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-198">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="1f3c9-198">-ProxyCredential</span></span>
+### <span data-ttu-id="8beb1-198">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="8beb1-198">-ProxyCredential</span></span>
 
-<span data-ttu-id="1f3c9-199">**Proxy** 매개 변수에 지정된 프록시 서버를 사용할 권한이 있는 사용자 계정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-199">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
+<span data-ttu-id="8beb1-199">**Proxy** 매개 변수에 지정된 프록시 서버를 사용할 권한이 있는 사용자 계정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-199">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -525,9 +525,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-200">-PublishLocation</span><span class="sxs-lookup"><span data-stu-id="1f3c9-200">-PublishLocation</span></span>
+### <span data-ttu-id="8beb1-200">-PublishLocation</span><span class="sxs-lookup"><span data-stu-id="8beb1-200">-PublishLocation</span></span>
 
-<span data-ttu-id="1f3c9-201">패키지를 게시할 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-201">Specifies a location for publishing the package.</span></span>
+<span data-ttu-id="8beb1-201">패키지를 게시할 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-201">Specifies a location for publishing the package.</span></span>
 
 ```yaml
 Type: System.String
@@ -541,9 +541,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-202">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="1f3c9-202">-RequiredVersion</span></span>
+### <span data-ttu-id="8beb1-202">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="8beb1-202">-RequiredVersion</span></span>
 
-<span data-ttu-id="1f3c9-203">찾으려는 정확한 패키지 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-203">Specifies an exact package version that you want to find.</span></span>
+<span data-ttu-id="8beb1-203">찾으려는 정확한 패키지 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-203">Specifies an exact package version that you want to find.</span></span>
 
 ```yaml
 Type: System.String
@@ -557,9 +557,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-204">-Find-rolecapability</span><span class="sxs-lookup"><span data-stu-id="1f3c9-204">-RoleCapability</span></span>
+### <span data-ttu-id="8beb1-204">-Find-rolecapability</span><span class="sxs-lookup"><span data-stu-id="8beb1-204">-RoleCapability</span></span>
 
-<span data-ttu-id="1f3c9-205">역할 기능의 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-205">Specifies an array of role capabilities.</span></span>
+<span data-ttu-id="8beb1-205">역할 기능의 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-205">Specifies an array of role capabilities.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -573,25 +573,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-206">-ScriptPublishLocation</span><span class="sxs-lookup"><span data-stu-id="1f3c9-206">-ScriptPublishLocation</span></span>
+### <span data-ttu-id="8beb1-206">-ScriptPublishLocation</span><span class="sxs-lookup"><span data-stu-id="8beb1-206">-ScriptPublishLocation</span></span>
 
-<span data-ttu-id="1f3c9-207">패키지에 대 한 스크립트 게시 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-207">Specifies a script publishing location for the package.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: PowerShellGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="1f3c9-208">-ScriptSourceLocation</span><span class="sxs-lookup"><span data-stu-id="1f3c9-208">-ScriptSourceLocation</span></span>
-
-<span data-ttu-id="1f3c9-209">스크립트 원본 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-209">Specifies a script source location.</span></span>
+<span data-ttu-id="8beb1-207">패키지에 대 한 스크립트 게시 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-207">Specifies a script publishing location for the package.</span></span>
 
 ```yaml
 Type: System.String
@@ -605,9 +589,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-210">-SkipValidate</span><span class="sxs-lookup"><span data-stu-id="1f3c9-210">-SkipValidate</span></span>
+### <span data-ttu-id="8beb1-208">-ScriptSourceLocation</span><span class="sxs-lookup"><span data-stu-id="8beb1-208">-ScriptSourceLocation</span></span>
 
-<span data-ttu-id="1f3c9-211">패키지 자격 증명 유효성 검사를 건너뛰는 스위치입니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-211">Switch that skips package credential validation.</span></span>
+<span data-ttu-id="8beb1-209">스크립트 원본 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-209">Specifies a script source location.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PowerShellGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8beb1-210">-SkipValidate</span><span class="sxs-lookup"><span data-stu-id="8beb1-210">-SkipValidate</span></span>
+
+<span data-ttu-id="8beb1-211">패키지 자격 증명 유효성 검사를 건너뛰는 스위치입니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-211">Switch that skips package credential validation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -621,9 +621,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-212">-Source</span><span class="sxs-lookup"><span data-stu-id="1f3c9-212">-Source</span></span>
+### <span data-ttu-id="8beb1-212">-Source</span><span class="sxs-lookup"><span data-stu-id="8beb1-212">-Source</span></span>
 
-<span data-ttu-id="1f3c9-213">패키지 소스를 하나 이상 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-213">Specifies one or more package sources.</span></span> <span data-ttu-id="1f3c9-214">사용 `Get-PackageSource` 가능한 패키지 원본 목록을 가져오는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-214">Use `Get-PackageSource` to get a list of available package sources.</span></span> <span data-ttu-id="1f3c9-215">파일 시스템 디렉터리를 다운로드 패키지의 원본으로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-215">A file system directory can be used as a source for download packages.</span></span>
+<span data-ttu-id="8beb1-213">패키지 소스를 하나 이상 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-213">Specifies one or more package sources.</span></span> <span data-ttu-id="8beb1-214">사용 `Get-PackageSource` 가능한 패키지 원본 목록을 가져오는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-214">Use `Get-PackageSource` to get a list of available package sources.</span></span> <span data-ttu-id="8beb1-215">파일 시스템 디렉터리를 다운로드 패키지의 원본으로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-215">A file system directory can be used as a source for download packages.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -637,9 +637,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-216">-Tag</span><span class="sxs-lookup"><span data-stu-id="1f3c9-216">-Tag</span></span>
+### <span data-ttu-id="8beb1-216">-Tag</span><span class="sxs-lookup"><span data-stu-id="8beb1-216">-Tag</span></span>
 
-<span data-ttu-id="1f3c9-217">패키지 메타 데이터에서 검색할 문자열을 하나 이상 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-217">Specifies one or more strings to search for in the package metadata.</span></span>
+<span data-ttu-id="8beb1-217">패키지 메타 데이터에서 검색할 문자열을 하나 이상 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-217">Specifies one or more strings to search for in the package metadata.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -653,9 +653,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-218">-Type</span><span class="sxs-lookup"><span data-stu-id="1f3c9-218">-Type</span></span>
+### <span data-ttu-id="8beb1-218">-Type</span><span class="sxs-lookup"><span data-stu-id="8beb1-218">-Type</span></span>
 
-<span data-ttu-id="1f3c9-219">모듈, 스크립트 또는 중 하나를 사용 하 여 패키지를 검색할지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-219">Specifies whether to search for packages with a module, a script, or either.</span></span>
+<span data-ttu-id="8beb1-219">모듈, 스크립트 또는 중 하나를 사용 하 여 패키지를 검색할지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-219">Specifies whether to search for packages with a module, a script, or either.</span></span>
 
 ```yaml
 Type: System.String
@@ -670,37 +670,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="1f3c9-220">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="1f3c9-220">CommonParameters</span></span>
+### <span data-ttu-id="8beb1-220">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="8beb1-220">CommonParameters</span></span>
 
-<span data-ttu-id="1f3c9-221">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-221">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="1f3c9-222">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-222">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="8beb1-221">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="8beb1-221">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="8beb1-222">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8beb1-222">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="1f3c9-223">입력</span><span class="sxs-lookup"><span data-stu-id="1f3c9-223">INPUTS</span></span>
+## <span data-ttu-id="8beb1-223">입력</span><span class="sxs-lookup"><span data-stu-id="8beb1-223">INPUTS</span></span>
 
-### <span data-ttu-id="1f3c9-224">없음</span><span class="sxs-lookup"><span data-stu-id="1f3c9-224">None</span></span>
+### <span data-ttu-id="8beb1-224">없음</span><span class="sxs-lookup"><span data-stu-id="8beb1-224">None</span></span>
 
-<span data-ttu-id="1f3c9-225">`Find-Package` 파이프라인의 입력을 허용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-225">`Find-Package` doesn't accept input from the pipeline.</span></span>
+<span data-ttu-id="8beb1-225">`Find-Package` 파이프라인의 입력을 허용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-225">`Find-Package` doesn't accept input from the pipeline.</span></span>
 
-## <span data-ttu-id="1f3c9-226">출력</span><span class="sxs-lookup"><span data-stu-id="1f3c9-226">OUTPUTS</span></span>
+## <span data-ttu-id="8beb1-226">출력</span><span class="sxs-lookup"><span data-stu-id="8beb1-226">OUTPUTS</span></span>
 
-### <span data-ttu-id="1f3c9-227">\Id []</span><span class="sxs-lookup"><span data-stu-id="1f3c9-227">SoftwareIdentify[]</span></span>
+### <span data-ttu-id="8beb1-227">\Id []</span><span class="sxs-lookup"><span data-stu-id="8beb1-227">SoftwareIdentify[]</span></span>
 
-<span data-ttu-id="1f3c9-228">`Find-Package`**\Id** 개체를 출력 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f3c9-228">`Find-Package` outputs a **SoftwareIdentity** object.</span></span>
+<span data-ttu-id="8beb1-228">`Find-Package`**\Id** 개체를 출력 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-228">`Find-Package` outputs a **SoftwareIdentity** object.</span></span>
 
-## <span data-ttu-id="1f3c9-229">참고</span><span class="sxs-lookup"><span data-stu-id="1f3c9-229">NOTES</span></span>
+## <span data-ttu-id="8beb1-229">참고</span><span class="sxs-lookup"><span data-stu-id="8beb1-229">NOTES</span></span>
 
-## <span data-ttu-id="1f3c9-230">관련 링크</span><span class="sxs-lookup"><span data-stu-id="1f3c9-230">RELATED LINKS</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="8beb1-230">2020 4 월부터 PowerShell 갤러리는 더 이상 TLS (Transport Layer Security) 버전 1.0 및 1.1을 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-230">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="8beb1-231">TLS 1.2 이상을 사용 하지 않는 경우 PowerShell 갤러리에 액세스 하려고 하면 오류가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-231">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="8beb1-232">다음 명령을 사용 하 여 TLS 1.2을 사용 하는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="8beb1-232">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="8beb1-233">자세한 내용은 PowerShell 블로그의 [공지](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="8beb1-233">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-[<span data-ttu-id="1f3c9-231">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="1f3c9-231">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
+## <span data-ttu-id="8beb1-234">관련 링크</span><span class="sxs-lookup"><span data-stu-id="8beb1-234">RELATED LINKS</span></span>
 
-[<span data-ttu-id="1f3c9-232">Get-Package</span><span class="sxs-lookup"><span data-stu-id="1f3c9-232">Get-Package</span></span>](Get-Package.md)
+[<span data-ttu-id="8beb1-235">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="8beb1-235">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
 
-[<span data-ttu-id="1f3c9-233">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="1f3c9-233">Get-PackageProvider</span></span>](Get-PackageProvider.md)
+[<span data-ttu-id="8beb1-236">Get-Package</span><span class="sxs-lookup"><span data-stu-id="8beb1-236">Get-Package</span></span>](Get-Package.md)
 
-[<span data-ttu-id="1f3c9-234">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="1f3c9-234">Get-PackageSource</span></span>](Get-PackageSource.md)
+[<span data-ttu-id="8beb1-237">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="8beb1-237">Get-PackageProvider</span></span>](Get-PackageProvider.md)
 
-[<span data-ttu-id="1f3c9-235">Install-Package</span><span class="sxs-lookup"><span data-stu-id="1f3c9-235">Install-Package</span></span>](Install-Package.md)
+[<span data-ttu-id="8beb1-238">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="8beb1-238">Get-PackageSource</span></span>](Get-PackageSource.md)
 
-[<span data-ttu-id="1f3c9-236">Save-Package</span><span class="sxs-lookup"><span data-stu-id="1f3c9-236">Save-Package</span></span>](Save-Package.md)
+[<span data-ttu-id="8beb1-239">Install-Package</span><span class="sxs-lookup"><span data-stu-id="8beb1-239">Install-Package</span></span>](Install-Package.md)
 
-[<span data-ttu-id="1f3c9-237">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="1f3c9-237">Uninstall-Package</span></span>](Uninstall-Package.md)
+[<span data-ttu-id="8beb1-240">Save-Package</span><span class="sxs-lookup"><span data-stu-id="8beb1-240">Save-Package</span></span>](Save-Package.md)
 
+[<span data-ttu-id="8beb1-241">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="8beb1-241">Uninstall-Package</span></span>](Uninstall-Package.md)

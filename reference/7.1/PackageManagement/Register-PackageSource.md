@@ -7,21 +7,21 @@ ms.date: 04/01/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/register-packagesource?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-PackageSource
-ms.openlocfilehash: 8b57540658a88fa56533c3f5c360273913c3543b
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: dfaccf285b8a53c1701919016509fd49eeee5da7
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93215778"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891052"
 ---
-# <span data-ttu-id="90642-103">Register-PackageSource</span><span class="sxs-lookup"><span data-stu-id="90642-103">Register-PackageSource</span></span>
+# <span data-ttu-id="dda72-103">Register-PackageSource</span><span class="sxs-lookup"><span data-stu-id="dda72-103">Register-PackageSource</span></span>
 
-## <span data-ttu-id="90642-104">개요</span><span class="sxs-lookup"><span data-stu-id="90642-104">SYNOPSIS</span></span>
-<span data-ttu-id="90642-105">지정 된 패키지 공급자에 대 한 패키지 소스를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-105">Adds a package source for a specified package provider.</span></span>
+## <span data-ttu-id="dda72-104">개요</span><span class="sxs-lookup"><span data-stu-id="dda72-104">SYNOPSIS</span></span>
+<span data-ttu-id="dda72-105">지정 된 패키지 공급자에 대 한 패키지 소스를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-105">Adds a package source for a specified package provider.</span></span>
 
-## <span data-ttu-id="90642-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="90642-106">SYNTAX</span></span>
+## <span data-ttu-id="dda72-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="dda72-106">SYNTAX</span></span>
 
-### <span data-ttu-id="90642-107">SourceBySearch</span><span class="sxs-lookup"><span data-stu-id="90642-107">SourceBySearch</span></span>
+### <span data-ttu-id="dda72-107">SourceBySearch</span><span class="sxs-lookup"><span data-stu-id="dda72-107">SourceBySearch</span></span>
 
 ```
 Register-PackageSource [-Proxy <Uri>] [-ProxyCredential <PSCredential>] [[-Name] <String>]
@@ -29,7 +29,7 @@ Register-PackageSource [-Proxy <Uri>] [-ProxyCredential <PSCredential>] [[-Name]
  [-Confirm] [-ProviderName <String>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="90642-108">NuGet</span><span class="sxs-lookup"><span data-stu-id="90642-108">NuGet</span></span>
+### <span data-ttu-id="dda72-108">NuGet</span><span class="sxs-lookup"><span data-stu-id="dda72-108">NuGet</span></span>
 
 ```
 Register-PackageSource [-Proxy <Uri>] [-ProxyCredential <PSCredential>] [[-Name] <String>]
@@ -37,7 +37,7 @@ Register-PackageSource [-Proxy <Uri>] [-ProxyCredential <PSCredential>] [[-Name]
  [-Confirm] [-ConfigFile <String>] [-SkipValidate] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="90642-109">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="90642-109">PowerShellGet</span></span>
+### <span data-ttu-id="dda72-109">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="dda72-109">PowerShellGet</span></span>
 
 ```
 Register-PackageSource [-Proxy <Uri>] [-ProxyCredential <PSCredential>] [[-Name] <String>]
@@ -46,15 +46,15 @@ Register-PackageSource [-Proxy <Uri>] [-ProxyCredential <PSCredential>] [[-Name]
  [-ScriptSourceLocation <String>] [-ScriptPublishLocation <String>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="90642-110">설명</span><span class="sxs-lookup"><span data-stu-id="90642-110">DESCRIPTION</span></span>
+## <span data-ttu-id="dda72-110">설명</span><span class="sxs-lookup"><span data-stu-id="dda72-110">DESCRIPTION</span></span>
 
-<span data-ttu-id="90642-111">`Register-PackageSource`Cmdlet은 지정 된 패키지 공급자에 대 한 패키지 소스를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-111">The `Register-PackageSource` cmdlet adds a package source for a specified package provider.</span></span> <span data-ttu-id="90642-112">패키지 원본은 항상 패키지 공급자에 의해 관리 됩니다.</span><span class="sxs-lookup"><span data-stu-id="90642-112">Package sources are always managed by a package provider.</span></span> <span data-ttu-id="90642-113">패키지 공급자가 패키지 원본을 추가 하거나 교체할 수 없는 경우 공급자는 오류 메시지를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-113">If the package provider cannot add or replace a package source, the provider generates an error message.</span></span>
+<span data-ttu-id="dda72-111">`Register-PackageSource`Cmdlet은 지정 된 패키지 공급자에 대 한 패키지 소스를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-111">The `Register-PackageSource` cmdlet adds a package source for a specified package provider.</span></span> <span data-ttu-id="dda72-112">패키지 원본은 항상 패키지 공급자에 의해 관리 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-112">Package sources are always managed by a package provider.</span></span> <span data-ttu-id="dda72-113">패키지 공급자가 패키지 원본을 추가 하거나 교체할 수 없는 경우 공급자는 오류 메시지를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-113">If the package provider cannot add or replace a package source, the provider generates an error message.</span></span>
 
-## <span data-ttu-id="90642-114">예제</span><span class="sxs-lookup"><span data-stu-id="90642-114">EXAMPLES</span></span>
+## <span data-ttu-id="dda72-114">예제</span><span class="sxs-lookup"><span data-stu-id="dda72-114">EXAMPLES</span></span>
 
-### <span data-ttu-id="90642-115">예제 1: NuGet 공급자에 대 한 패키지 소스 등록</span><span class="sxs-lookup"><span data-stu-id="90642-115">Example 1: Register a package source for the NuGet provider</span></span>
+### <span data-ttu-id="dda72-115">예제 1: NuGet 공급자에 대 한 패키지 소스 등록</span><span class="sxs-lookup"><span data-stu-id="dda72-115">Example 1: Register a package source for the NuGet provider</span></span>
 
-<span data-ttu-id="90642-116">이 명령은 **NuGet** 공급자의 웹 기반 위치인 패키지 소스를 등록 합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-116">This command registers a package source, a web-based location for the **NuGet** provider.</span></span> <span data-ttu-id="90642-117">기본적으로 원본은 신뢰할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="90642-117">By default, sources aren't trusted.</span></span> <span data-ttu-id="90642-118">패키지를 설치 하기 전에 원본을 신뢰할 수 있는지 확인 하는 메시지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="90642-118">You are prompted to confirm the source is trusted before packages are installed.</span></span> <span data-ttu-id="90642-119">기본값을 재정의 하려면 `-Trusted` 매개 변수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-119">To override the default, use the `-Trusted` parameter.</span></span>
+<span data-ttu-id="dda72-116">이 명령은 **NuGet** 공급자의 웹 기반 위치인 패키지 소스를 등록 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-116">This command registers a package source, a web-based location for the **NuGet** provider.</span></span> <span data-ttu-id="dda72-117">기본적으로 원본은 신뢰할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-117">By default, sources aren't trusted.</span></span> <span data-ttu-id="dda72-118">패키지를 설치 하기 전에 원본을 신뢰할 수 있는지 확인 하는 메시지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-118">You are prompted to confirm the source is trusted before packages are installed.</span></span> <span data-ttu-id="dda72-119">기본값을 재정의 하려면 `-Trusted` 매개 변수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-119">To override the default, use the `-Trusted` parameter.</span></span>
 
 ```powershell
 Register-PackageSource -Name MyNuGet -Location https://www.nuget.org/api/v2 -ProviderName NuGet
@@ -66,11 +66,11 @@ Name          ProviderName     IsTrusted  Location
 MyNuGet       NuGet            False      https://www.nuget.org/api/v2
 ```
 
-## <span data-ttu-id="90642-120">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="90642-120">PARAMETERS</span></span>
+## <span data-ttu-id="dda72-120">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="dda72-120">PARAMETERS</span></span>
 
-### <span data-ttu-id="90642-121">-Smi-s</span><span class="sxs-lookup"><span data-stu-id="90642-121">-ConfigFile</span></span>
+### <span data-ttu-id="dda72-121">-Smi-s</span><span class="sxs-lookup"><span data-stu-id="dda72-121">-ConfigFile</span></span>
 
-<span data-ttu-id="90642-122">구성 파일을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-122">Specifies a configuration file.</span></span>
+<span data-ttu-id="dda72-122">구성 파일을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-122">Specifies a configuration file.</span></span>
 
 ```yaml
 Type: System.String
@@ -84,9 +84,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="90642-123">-Credential</span><span class="sxs-lookup"><span data-stu-id="90642-123">-Credential</span></span>
+### <span data-ttu-id="dda72-123">-Credential</span><span class="sxs-lookup"><span data-stu-id="dda72-123">-Credential</span></span>
 
-<span data-ttu-id="90642-124">인증 된 위치에 액세스할 수 있는 권한을 가진 사용자 계정을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-124">Specifies a user account that has permission to access the authenticated location.</span></span>
+<span data-ttu-id="dda72-124">인증 된 위치에 액세스할 수 있는 권한을 가진 사용자 계정을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-124">Specifies a user account that has permission to access the authenticated location.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -100,25 +100,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="90642-125">-Force</span><span class="sxs-lookup"><span data-stu-id="90642-125">-Force</span></span>
+### <span data-ttu-id="dda72-125">-Force</span><span class="sxs-lookup"><span data-stu-id="dda72-125">-Force</span></span>
 
-<span data-ttu-id="90642-126">사용자 확인을 요청하지 않고 명령을 강제 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-126">Forces the command to run without asking for user confirmation.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="90642-127">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="90642-127">-ForceBootstrap</span></span>
-
-<span data-ttu-id="90642-128">이 cmdlet이 패키지 공급자를 자동으로 설치 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="90642-128">Indicates that this cmdlet automatically installs the package provider.</span></span>
+<span data-ttu-id="dda72-126">사용자 확인을 요청하지 않고 명령을 강제 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-126">Forces the command to run without asking for user confirmation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -132,9 +116,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="90642-129">-Location</span><span class="sxs-lookup"><span data-stu-id="90642-129">-Location</span></span>
+### <span data-ttu-id="dda72-127">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="dda72-127">-ForceBootstrap</span></span>
 
-<span data-ttu-id="90642-130">패키지 원본 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-130">Specifies the package source location.</span></span>
+<span data-ttu-id="dda72-128">이 cmdlet이 패키지 공급자를 자동으로 설치 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-128">Indicates that this cmdlet automatically installs the package provider.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="dda72-129">-Location</span><span class="sxs-lookup"><span data-stu-id="dda72-129">-Location</span></span>
+
+<span data-ttu-id="dda72-130">패키지 원본 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-130">Specifies the package source location.</span></span>
 
 ```yaml
 Type: System.String
@@ -148,9 +148,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="90642-131">-Name</span><span class="sxs-lookup"><span data-stu-id="90642-131">-Name</span></span>
+### <span data-ttu-id="dda72-131">-Name</span><span class="sxs-lookup"><span data-stu-id="dda72-131">-Name</span></span>
 
-<span data-ttu-id="90642-132">등록할 패키지 원본의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-132">Specifies the name of the package source to register.</span></span>
+<span data-ttu-id="dda72-132">등록할 패키지 원본의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-132">Specifies the name of the package source to register.</span></span>
 
 ```yaml
 Type: System.String
@@ -164,9 +164,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="90642-133">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="90642-133">-PackageManagementProvider</span></span>
+### <span data-ttu-id="dda72-133">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="dda72-133">-PackageManagementProvider</span></span>
 
-<span data-ttu-id="90642-134">패키지 관리 공급자를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-134">Specifies the Package Management provider.</span></span>
+<span data-ttu-id="dda72-134">패키지 관리 공급자를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-134">Specifies the Package Management provider.</span></span>
 
 ```yaml
 Type: System.String
@@ -180,9 +180,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="90642-135">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="90642-135">-ProviderName</span></span>
+### <span data-ttu-id="dda72-135">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="dda72-135">-ProviderName</span></span>
 
-<span data-ttu-id="90642-136">패키지 공급자의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-136">Specifies the package provider's name.</span></span>
+<span data-ttu-id="dda72-136">패키지 공급자의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-136">Specifies the package provider's name.</span></span>
 
 ```yaml
 Type: System.String
@@ -197,9 +197,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="90642-137">-프록시</span><span class="sxs-lookup"><span data-stu-id="90642-137">-Proxy</span></span>
+### <span data-ttu-id="dda72-137">-프록시</span><span class="sxs-lookup"><span data-stu-id="dda72-137">-Proxy</span></span>
 
-<span data-ttu-id="90642-138">인터넷 리소스에 직접 연결 하는 대신 요청에 대 한 프록시 서버를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-138">Specifies a proxy server for the request, rather than a direct connection to the internet resource.</span></span>
+<span data-ttu-id="dda72-138">인터넷 리소스에 직접 연결 하는 대신 요청에 대 한 프록시 서버를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-138">Specifies a proxy server for the request, rather than a direct connection to the internet resource.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -213,9 +213,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="90642-139">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="90642-139">-ProxyCredential</span></span>
+### <span data-ttu-id="dda72-139">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="dda72-139">-ProxyCredential</span></span>
 
-<span data-ttu-id="90642-140">**Proxy** 매개 변수에 지정된 프록시 서버를 사용할 권한이 있는 사용자 계정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-140">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
+<span data-ttu-id="dda72-140">**Proxy** 매개 변수에 지정된 프록시 서버를 사용할 권한이 있는 사용자 계정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-140">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -229,25 +229,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="90642-141">-PublishLocation</span><span class="sxs-lookup"><span data-stu-id="90642-141">-PublishLocation</span></span>
+### <span data-ttu-id="dda72-141">-PublishLocation</span><span class="sxs-lookup"><span data-stu-id="dda72-141">-PublishLocation</span></span>
 
-<span data-ttu-id="90642-142">게시 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-142">Specifies the publish location.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: PowerShellGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="90642-143">-ScriptPublishLocation</span><span class="sxs-lookup"><span data-stu-id="90642-143">-ScriptPublishLocation</span></span>
-
-<span data-ttu-id="90642-144">스크립트 게시 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-144">Specifies the script publish location.</span></span>
+<span data-ttu-id="dda72-142">게시 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-142">Specifies the publish location.</span></span>
 
 ```yaml
 Type: System.String
@@ -261,9 +245,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="90642-145">-ScriptSourceLocation</span><span class="sxs-lookup"><span data-stu-id="90642-145">-ScriptSourceLocation</span></span>
+### <span data-ttu-id="dda72-143">-ScriptPublishLocation</span><span class="sxs-lookup"><span data-stu-id="dda72-143">-ScriptPublishLocation</span></span>
 
-<span data-ttu-id="90642-146">스크립트 원본 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-146">Specifies the script source location.</span></span>
+<span data-ttu-id="dda72-144">스크립트 게시 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-144">Specifies the script publish location.</span></span>
 
 ```yaml
 Type: System.String
@@ -277,9 +261,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="90642-147">-SkipValidate</span><span class="sxs-lookup"><span data-stu-id="90642-147">-SkipValidate</span></span>
+### <span data-ttu-id="dda72-145">-ScriptSourceLocation</span><span class="sxs-lookup"><span data-stu-id="dda72-145">-ScriptSourceLocation</span></span>
 
-<span data-ttu-id="90642-148">패키지 원본에 대 한 자격 증명의 유효성 검사를 건너뛰는 스위치입니다.</span><span class="sxs-lookup"><span data-stu-id="90642-148">Switch that skips validating the credentials of a package source.</span></span>
+<span data-ttu-id="dda72-146">스크립트 원본 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-146">Specifies the script source location.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PowerShellGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="dda72-147">-SkipValidate</span><span class="sxs-lookup"><span data-stu-id="dda72-147">-SkipValidate</span></span>
+
+<span data-ttu-id="dda72-148">패키지 원본에 대 한 자격 증명의 유효성 검사를 건너뛰는 스위치입니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-148">Switch that skips validating the credentials of a package source.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -293,9 +293,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="90642-149">-신뢰할 수 있음</span><span class="sxs-lookup"><span data-stu-id="90642-149">-Trusted</span></span>
+### <span data-ttu-id="dda72-149">-신뢰할 수 있음</span><span class="sxs-lookup"><span data-stu-id="dda72-149">-Trusted</span></span>
 
-<span data-ttu-id="90642-150">패키지 원본을 신뢰할 수 있음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="90642-150">Indicates that the package source is trusted.</span></span>
+<span data-ttu-id="dda72-150">패키지 원본을 신뢰할 수 있음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-150">Indicates that the package source is trusted.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -309,9 +309,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="90642-151">-Confirm</span><span class="sxs-lookup"><span data-stu-id="90642-151">-Confirm</span></span>
+### <span data-ttu-id="dda72-151">-Confirm</span><span class="sxs-lookup"><span data-stu-id="dda72-151">-Confirm</span></span>
 
-<span data-ttu-id="90642-152">cmdlet을 실행하기 전에 확인을 요청합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-152">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="dda72-152">cmdlet을 실행하기 전에 확인을 요청합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-152">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -325,9 +325,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="90642-153">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="90642-153">-WhatIf</span></span>
+### <span data-ttu-id="dda72-153">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="dda72-153">-WhatIf</span></span>
 
-<span data-ttu-id="90642-154">cmdlet을 실행할 경우 발생하는 일을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="90642-154">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="90642-155">cmdlet은 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="90642-155">The cmdlet is not run.</span></span>
+<span data-ttu-id="dda72-154">cmdlet을 실행할 경우 발생하는 일을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-154">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="dda72-155">cmdlet은 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-155">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -341,23 +341,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="90642-156">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="90642-156">CommonParameters</span></span>
+### <span data-ttu-id="dda72-156">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="dda72-156">CommonParameters</span></span>
 
-<span data-ttu-id="90642-157">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="90642-157">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="90642-158">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="90642-158">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="dda72-157">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="dda72-157">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="dda72-158">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dda72-158">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="90642-159">입력</span><span class="sxs-lookup"><span data-stu-id="90642-159">INPUTS</span></span>
+## <span data-ttu-id="dda72-159">입력</span><span class="sxs-lookup"><span data-stu-id="dda72-159">INPUTS</span></span>
 
-## <span data-ttu-id="90642-160">출력</span><span class="sxs-lookup"><span data-stu-id="90642-160">OUTPUTS</span></span>
+## <span data-ttu-id="dda72-160">출력</span><span class="sxs-lookup"><span data-stu-id="dda72-160">OUTPUTS</span></span>
 
-## <span data-ttu-id="90642-161">참고</span><span class="sxs-lookup"><span data-stu-id="90642-161">NOTES</span></span>
+## <span data-ttu-id="dda72-161">참고</span><span class="sxs-lookup"><span data-stu-id="dda72-161">NOTES</span></span>
 
-## <span data-ttu-id="90642-162">관련 링크</span><span class="sxs-lookup"><span data-stu-id="90642-162">RELATED LINKS</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="dda72-162">2020 4 월부터 PowerShell 갤러리는 더 이상 TLS (Transport Layer Security) 버전 1.0 및 1.1을 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-162">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="dda72-163">TLS 1.2 이상을 사용 하지 않는 경우 PowerShell 갤러리에 액세스 하려고 하면 오류가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-163">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="dda72-164">다음 명령을 사용 하 여 TLS 1.2을 사용 하는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda72-164">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="dda72-165">자세한 내용은 PowerShell 블로그의 [공지](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="dda72-165">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-[<span data-ttu-id="90642-163">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="90642-163">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
+## <span data-ttu-id="dda72-166">관련 링크</span><span class="sxs-lookup"><span data-stu-id="dda72-166">RELATED LINKS</span></span>
 
-[<span data-ttu-id="90642-164">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="90642-164">Get-PackageSource</span></span>](Get-PackageSource.md)
+[<span data-ttu-id="dda72-167">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="dda72-167">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
 
-[<span data-ttu-id="90642-165">Set-PackageSource</span><span class="sxs-lookup"><span data-stu-id="90642-165">Set-PackageSource</span></span>](Set-PackageSource.md)
+[<span data-ttu-id="dda72-168">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="dda72-168">Get-PackageSource</span></span>](Get-PackageSource.md)
 
-[<span data-ttu-id="90642-166">Unregister-PackageSource</span><span class="sxs-lookup"><span data-stu-id="90642-166">Unregister-PackageSource</span></span>](Unregister-PackageSource.md)
+[<span data-ttu-id="dda72-169">Set-PackageSource</span><span class="sxs-lookup"><span data-stu-id="dda72-169">Set-PackageSource</span></span>](Set-PackageSource.md)
 
+[<span data-ttu-id="dda72-170">Unregister-PackageSource</span><span class="sxs-lookup"><span data-stu-id="dda72-170">Unregister-PackageSource</span></span>](Unregister-PackageSource.md)
