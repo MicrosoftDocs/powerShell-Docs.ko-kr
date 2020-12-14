@@ -7,12 +7,12 @@ ms.date: 10/03/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/publish-module?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Publish-Module
-ms.openlocfilehash: 50f873e6691ead7c220b6250458f4fdf8a90af22
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 602d160a4cc7fd4e8a806d2c3d2772ee5053535d
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93215234"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94889694"
 ---
 # Publish-Module
 
@@ -46,7 +46,7 @@ Publish-Module -Path <String> [-NuGetApiKey <String>] [-Repository <String>]
 
 이름으로 모듈을 지정 하면에서를 `Publish-Module` 실행 하 여 발견 되는 첫 번째 모듈을 게시 합니다 `Get-Module -ListAvailable <Name>` . 게시할 모듈의 최소 버전을 지정 하는 경우는 `Publish-Module` 지정한 최소 버전 보다 크거나 같은 버전으로 첫 번째 모듈을 게시 합니다.
 
-모듈을 게시하려면 모듈에 대한 갤러리 페이지에 표시되는 메타데이터가 필요합니다. 필수 메타데이터에는 모듈 이름, 버전, 설명, 만든 이 등이 포함됩니다. 대부분의 메타 데이터는 모듈 매니페스트에서 가져오므로 `Publish-Module` **Tag** , **ReleaseNote** , **IconUri** , **ProjectUri** 및 **LicenseUri** 와 같은 매개 변수는 NuGet 기반 갤러리의 필드와 일치 하므로 일부 메타 데이터는 매개 변수에서 지정 해야 합니다.
+모듈을 게시하려면 모듈에 대한 갤러리 페이지에 표시되는 메타데이터가 필요합니다. 필수 메타데이터에는 모듈 이름, 버전, 설명, 만든 이 등이 포함됩니다. 대부분의 메타 데이터는 모듈 매니페스트에서 가져오므로 `Publish-Module` **Tag**, **ReleaseNote**, **IconUri**, **ProjectUri** 및 **LicenseUri** 와 같은 매개 변수는 NuGet 기반 갤러리의 필드와 일치 하므로 일부 메타 데이터는 매개 변수에서 지정 해야 합니다.
 
 ## 예제
 
@@ -378,7 +378,14 @@ Accept wildcard characters: False
 
 `Publish-Module` powershell 3.0 이상 버전의 PowerShell, windows 7 또는 Windows 2008 R2 이상 버전에서 실행 됩니다.
 
-모듈을 게시하려면 모듈에 대한 갤러리 페이지에 표시되는 메타데이터가 필요합니다. 필수 메타데이터에는 모듈 이름, 버전, 설명, 만든 이 등이 포함됩니다. 대부분의 메타 데이터는 모듈 매니페스트에서 가져오므로 `Publish-Module` **Tag** , **ReleaseNote** , **IconUri** , **ProjectUri** 및 **LicenseUri** 와 같은 매개 변수에 일부 메타 데이터를 지정할 수 있습니다. 자세한 내용은 [POWERSHELL 갤러리 UI에 영향을 주는 패키지 매니페스트 값](/powershell/scripting/gallery/concepts/package-manifest-affecting-ui)을 참조 하세요.
+> [!IMPORTANT]
+> 2020 4 월부터 PowerShell 갤러리는 더 이상 TLS (Transport Layer Security) 버전 1.0 및 1.1을 지원 하지 않습니다. TLS 1.2 이상을 사용 하지 않는 경우 PowerShell 갤러리에 액세스 하려고 하면 오류가 표시 됩니다. 다음 명령을 사용 하 여 TLS 1.2을 사용 하는지 확인 합니다.
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 자세한 내용은 PowerShell 블로그의 [공지](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 를 참조 하세요.
+
+모듈을 게시하려면 모듈에 대한 갤러리 페이지에 표시되는 메타데이터가 필요합니다. 필수 메타데이터에는 모듈 이름, 버전, 설명, 만든 이 등이 포함됩니다. 대부분의 메타 데이터는 모듈 매니페스트에서 가져오므로 `Publish-Module` **Tag**, **ReleaseNote**, **IconUri**, **ProjectUri** 및 **LicenseUri** 와 같은 매개 변수에 일부 메타 데이터를 지정할 수 있습니다. 자세한 내용은 [POWERSHELL 갤러리 UI에 영향을 주는 패키지 매니페스트 값](/powershell/scripting/gallery/concepts/package-manifest-affecting-ui)을 참조 하세요.
 
 ## 관련 링크
 

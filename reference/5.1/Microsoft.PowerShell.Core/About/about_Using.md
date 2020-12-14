@@ -1,17 +1,16 @@
 ---
 description: 세션에 사용 되는 네임 스페이스를 지정할 수 있습니다.
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 01/29/2020
+ms.date: 11/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_using?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Using
-ms.openlocfilehash: ff6b43c3af1deddb5cb1b4c2e2c86a2cc2cac5d4
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: b48cd85e200f44cdf9fdf278de78e07a918386c8
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93224945"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891349"
 ---
 # <a name="about-using"></a>사용 정보
 
@@ -26,7 +25,7 @@ ms.locfileid: "93224945"
 
 `using`문은 `using:` 변수에 대 한 범위 한정자와 혼동 해서는 안 됩니다. 자세한 내용은 [about_Remote_Variables](about_Remote_Variables.md)를 참조 하세요.
 
-## <a name="syntax"></a>구문
+## <a name="namespace-syntax"></a>네임 스페이스 구문
 
 형식을 확인할 .NET 네임 스페이스를 지정 하려면 다음을 수행 합니다.
 
@@ -34,11 +33,32 @@ ms.locfileid: "93224945"
 using namespace <.NET-namespace>
 ```
 
+네임 스페이스를 지정 하면 약식 이름으로 형식을 쉽게 참조할 수 있습니다.
+
+## <a name="module-syntax"></a>모듈 구문
+
 PowerShell 모듈에서 클래스를 로드 하려면 다음을 수행 합니다.
 
 ```
 using module <module-name>
 ```
+
+의 값은 `<module-name>` 모듈 이름, 전체 모듈 사양 또는 모듈 파일에 대 한 경로일 수 있습니다.
+
+`<module-name>`가 경로인 경우 경로는 정규화 되거나 상대적일 수 있습니다. 상대 경로는 using 문을 포함 하는 스크립트를 기준으로 확인 됩니다.
+
+`<module-name>`이 이름 또는 모듈 지정 인 경우 PowerShell은 **PSModulePath** 에서 지정 된 모듈을 검색 합니다.
+
+모듈 사양은 다음과 같은 키를 포함 하는 해시 테이블입니다.
+
+- `ModuleName` - **필수** 모듈 이름을 지정 합니다.
+- `GUID` - **선택 사항** 모듈의 GUID를 지정 합니다.
+- 또한 아래 세 키 중 하나를 지정 **해야** 합니다. 이러한 키는 함께 사용할 수 없습니다.
+  - `ModuleVersion` -모듈의 허용 가능한 최소 버전을 지정 합니다.
+  - `RequiredVersion` -필요한 모듈의 정확한 버전을 지정 합니다.
+  - `MaximumVersion` -모듈의 허용 되는 최대 버전을 지정 합니다.
+
+## <a name="assembly-syntax"></a>어셈블리 구문
 
 .NET 어셈블리에서 형식을 미리 로드 하려면 다음을 수행 합니다.
 
@@ -46,8 +66,6 @@ using module <module-name>
 using assembly <.NET-assembly-path>
 using assembly <.NET-namespace>
 ```
-
-네임 스페이스를 지정 하면 약식 이름으로 형식을 쉽게 참조할 수 있습니다.
 
 어셈블리를 로드 하면 구문 분석 시 어셈블리의 .NET 형식이 스크립트에 미리 로드 됩니다. 이를 통해 미리 로드 된 어셈블리의 형식을 사용 하는 새 PowerShell 클래스를 만들 수 있습니다.
 

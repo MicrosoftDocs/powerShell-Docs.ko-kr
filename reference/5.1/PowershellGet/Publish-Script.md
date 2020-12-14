@@ -7,12 +7,12 @@ ms.date: 03/27/2020
 online version: https://docs.microsoft.com/powershell/module/powershellget/publish-script?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Publish-Script
-ms.openlocfilehash: 2b9bfccddcd44cb0a87a7d93ae014fda5770d8d4
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 6593148b493f15feb47af886681032aaf5d009e7
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93215233"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891093"
 ---
 # Publish-Script
 
@@ -121,7 +121,7 @@ Version    Name                 Type       Repository    Description
 1.0        Demo-Script          Script     LocalRepo1    my test script file description goes here
 ```
 
-`Test-ScriptFileInfo`Cmdlet은 유효성을 검사 `Demo-Script.ps1` 합니다. `Publish-Script`Cmdlet은 **LocalRepo1** 리포지토리에 스크립트를 게시 합니다. 마지막으로, `Find-Script`LocalRepo1 리포지토리에서를 검색 하는 데 사용 됩니다 `Demo-Script.ps1` . **LocalRepo1**
+`Test-ScriptFileInfo`Cmdlet은 유효성을 검사 `Demo-Script.ps1` 합니다. `Publish-Script`Cmdlet은 **LocalRepo1** 리포지토리에 스크립트를 게시 합니다. 마지막으로, `Find-Script`LocalRepo1 리포지토리에서를 검색 하는 데 사용 됩니다 `Demo-Script.ps1` . 
 
 ## PARAMETERS
 
@@ -266,6 +266,13 @@ Accept wildcard characters: False
 ### System.Object
 
 ## 참고
+
+> [!IMPORTANT]
+> 2020 4 월부터 PowerShell 갤러리는 더 이상 TLS (Transport Layer Security) 버전 1.0 및 1.1을 지원 하지 않습니다. TLS 1.2 이상을 사용 하지 않는 경우 PowerShell 갤러리에 액세스 하려고 하면 오류가 표시 됩니다. 다음 명령을 사용 하 여 TLS 1.2을 사용 하는지 확인 합니다.
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 자세한 내용은 PowerShell 블로그의 [공지](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 를 참조 하세요.
 
 ## 관련 링크
 

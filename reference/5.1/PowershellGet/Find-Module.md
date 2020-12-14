@@ -7,12 +7,12 @@ ms.date: 03/11/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-module?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Module
-ms.openlocfilehash: 8b17019932df5b2cad68a9ea382387451d1b22e1
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: b30e233eb9c4f4f9191ac6470f2821536dda6dc3
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213209"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94889830"
 ---
 # Find-Module
 
@@ -174,7 +174,7 @@ Version     Name                            Repository    Description
 3.1.0.0     xPowerShellExecutionPolicy      PSGallery     This DSC resource can change the user...
 ```
 
-`Find-Module`이 cmdlet은 **리포지토리** 매개 변수를 사용 하 여 리포지토리 ( **PSGallery** )를 검색 합니다.
+`Find-Module`이 cmdlet은 **리포지토리** 매개 변수를 사용 하 여 리포지토리 ( **PSGallery**)를 검색 합니다.
 **Include** 매개 변수는 매개 변수가 리포지토리에서 검색할 수 있는 기능인 **get-dscresource** 를 지정 합니다.
 
 ### 예 8: 필터를 사용 하 여 모듈 찾기
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 
 ### -Allversions)
 
-모든 버전의 모듈을 결과에 포함 하도록 지정 합니다. **Allversions)** 매개 변수는 **MinimumVersion** , **MaximumVersion** 또는 **RequiredVersion** 매개 변수와 함께 사용할 수 없습니다.
+모든 버전의 모듈을 결과에 포함 하도록 지정 합니다. **Allversions)** 매개 변수는 **MinimumVersion**, **MaximumVersion** 또는 **RequiredVersion** 매개 변수와 함께 사용할 수 없습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 
 는 특정 종류의 PowerShell 기능을 포함 하는 모듈만 반환 합니다. 예를 들어 **get-dscresource** 를 포함 하는 모듈만 찾을 수 있습니다. 이 매개 변수에 허용 되는 값은 다음과 같습니다.
 
-- cmdlet
+- Cmdlet
 - DscResource
 - 함수
 - RoleCapability
@@ -463,7 +463,7 @@ Accept wildcard characters: False
 
 ### -Tag
 
-태그의 배열을 지정 합니다. 예제 태그에는 **DesiredStateConfiguration** , **DSC** , **Dscresourcekit** 또는 **psmodule** 이 포함 됩니다.
+태그의 배열을 지정 합니다. 예제 태그에는 **DesiredStateConfiguration**, **DSC**, **Dscresourcekit** 또는 **psmodule** 이 포함 됩니다.
 
 ```yaml
 Type: System.String[]
@@ -491,7 +491,12 @@ Accept wildcard characters: False
 
 ## 참고
 
-이 cmdlet은 windows PowerShell의 windows PowerShell, Windows 7 또는 windows 2008 R2 이상 릴리스에서 PowerShell 5.0 이상 버전에서 실행 됩니다.
+> [!IMPORTANT]
+> 2020 4 월부터 PowerShell 갤러리는 더 이상 TLS (Transport Layer Security) 버전 1.0 및 1.1을 지원 하지 않습니다. TLS 1.2 이상을 사용 하지 않는 경우 PowerShell 갤러리에 액세스 하려고 하면 오류가 표시 됩니다. 다음 명령을 사용 하 여 TLS 1.2을 사용 하는지 확인 합니다.
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> 자세한 내용은 PowerShell 블로그의 [공지](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 를 참조 하세요.
 
 ## 관련 링크
 

@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 10/25/2019
+ms.date: 11/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-service?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Service
-ms.openlocfilehash: 0963e90f1f994a9bd6f3f61e80bf56eebff09384
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: 7ba9bf66295bcbc2d8f7b7f94007b3fb673882fb
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94343116"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890977"
 ---
 # New-Service
 
@@ -38,7 +37,7 @@ New-Service [-Name] <String> [-BinaryPathName] <String> [-DisplayName <String>] 
 ### 예제 1: 서비스 만들기
 
 ```powershell
-New-Service -Name "TestService" -BinaryPathName "C:\WINDOWS\System32\svchost.exe -k netsvcs"
+New-Service -Name "TestService" -BinaryPathName '"C:\WINDOWS\System32\svchost.exe -k netsvcs"'
 ```
 
 이 명령은 TestService 라는 서비스를 만듭니다.
@@ -48,7 +47,7 @@ New-Service -Name "TestService" -BinaryPathName "C:\WINDOWS\System32\svchost.exe
 ```powershell
 $params = @{
   Name = "TestService"
-  BinaryPathName = "C:\WINDOWS\System32\svchost.exe -k netsvcs"
+  BinaryPathName = '"C:\WINDOWS\System32\svchost.exe -k netsvcs"'
   DependsOn = "NetLogon"
   DisplayName = "Test Service"
   StartupType = "Manual"
@@ -83,7 +82,7 @@ Status    : OK
 ```powershell
 $SDDL = "D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;SU)"
 $params = @{
-  BinaryPathName = "C:\WINDOWS\System32\svchost.exe -k netsvcs"
+  BinaryPathName = '"C:\WINDOWS\System32\svchost.exe -k netsvcs"'
   DependsOn = "NetLogon"
   DisplayName "Test Service"
   StartupType = "Manual"
@@ -100,6 +99,12 @@ New-Service @params
 ### -BinaryPathName
 
 서비스의 실행 파일 경로를 지정 합니다. 이 매개 변수는 필수적 요소입니다.
+
+서비스 이진 파일의 정규화 된 경로입니다. 경로에 공백이 있는 경우 올바르게 해석 되도록 따옴표로 묶어야 합니다. 예를 들어는 `d:\my share\myservice.exe` 로 지정 해야 합니다 `'"d:\my share\myservice.exe"'` .
+
+경로에는 자동 시작 서비스의 인수도 포함 될 수도 있습니다. 예: `'"d:\myshare\myservice.exe arg1 arg2"'`. 이러한 인수는 서비스 진입점에 전달 됩니다.
+
+자세한 내용은 [CreateServiceW](/windows/win32/api/winsvc/nf-winsvc-createservicew) API의 **lpBinaryPathName** 매개 변수를 참조 하세요.
 
 ```yaml
 Type: System.String
