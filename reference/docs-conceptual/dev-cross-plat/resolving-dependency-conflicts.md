@@ -3,12 +3,12 @@ title: PowerShell 모듈 어셈블리 종속성 충돌 해결
 description: C#에서 이진 PowerShell 모듈을 작성하는 경우 다른 패키지나 라이브러리에 대한 종속성을 사용하여 기능을 제공하는 것이 자연스럽습니다.
 ms.date: 06/25/2020
 ms.custom: rjmholt
-ms.openlocfilehash: 536bcfd1ced536faccde0d6c5bc483cdaf31ce68
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.openlocfilehash: 93bb39bdd440c7f97c27aa81e68f68331569b69e
+ms.sourcegitcommit: 2fc6ee49a70bda4c59135136bd5cc7782836a124
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87775179"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810405"
 ---
 # <a name="resolving-powershell-module-assembly-dependency-conflicts"></a>PowerShell 모듈 어셈블리 종속성 충돌 해결
 
@@ -22,7 +22,7 @@ C#에서 이진 PowerShell 모듈을 작성하는 경우 다른 패키지나 라
 
 ## <a name="why-do-dependency-conflicts-occur"></a>종속성 충돌이 발생하는 이유는 무엇인가요?
 
-.NET에서는 동일한 어셈블리의 두 버전이 동일한 _어셈블리 로드 컨텍스트_에 로드될 때 종속성 충돌이 발생합니다. 해당 용어는 여러 .NET 플랫폼에서 조금씩 다른 의미로 사용되며 관련 내용은 [뒤에서](#powershell-and-net) 설명합니다. 해당 충돌은 버전이 지정된 종속성이 사용되는 모든 소프트웨어에서 발생하는 일반적인 문제입니다. 간단한 솔루션은 없고 많은 종속성 해결 프레임워크가 다양한 방법으로 문제를 해결하려고 시도하기 때문에 해당 상황을 “종속성 결함”이라고도 합니다.
+.NET에서는 동일한 어셈블리의 두 버전이 동일한 _어셈블리 로드 컨텍스트_ 에 로드될 때 종속성 충돌이 발생합니다. 해당 용어는 여러 .NET 플랫폼에서 조금씩 다른 의미로 사용되며 관련 내용은 [뒤에서](#powershell-and-net) 설명합니다. 해당 충돌은 버전이 지정된 종속성이 사용되는 모든 소프트웨어에서 발생하는 일반적인 문제입니다. 간단한 솔루션은 없고 많은 종속성 해결 프레임워크가 다양한 방법으로 문제를 해결하려고 시도하기 때문에 해당 상황을 “종속성 결함”이라고도 합니다.
 
 충돌 문제는 프로젝트가 의도적이든 직접적이든 동일한 종속성의 두 가지 버전에 종속되지 않는다는 사실로 인해 심각해집니다. 대신, 프로젝트는 동일한 종속성의 각기 다른 버전이 필요한 두 개 이상의 종속성을 가집니다.
 
@@ -305,7 +305,7 @@ PowerShell에서 해당 작업을 수행하는 방법에는 여러 가지가 있
 
 - PowerShell 원격 기능
 
-  사용할 수 있는 경우 PowerShell 원격은 명령을 out of process로 실행하는 유용한 방법일 수 있습니다. 원격을 사용하여 새 프로세스에서 새 **PSSession**을 만들고, PowerShell 원격을 통해 해당 명령을 호출한 다음, 충돌 종속성을 포함하는 다른 모듈에서 로컬로 결과를 사용할 수 있습니다.
+  사용할 수 있는 경우 PowerShell 원격은 명령을 out of process로 실행하는 유용한 방법일 수 있습니다. 원격을 사용하여 새 프로세스에서 새 **PSSession** 을 만들고, PowerShell 원격을 통해 해당 명령을 호출한 다음, 충돌 종속성을 포함하는 다른 모듈에서 로컬로 결과를 사용할 수 있습니다.
 
   예제는 다음과 같이 표시될 수 있습니다.
 
@@ -487,7 +487,7 @@ namespace AlcModule.Cmdlets
 }
 ```
 
-이때 **AlcModule**을 로드하고 `Test-AlcModule`을 실행하는 경우 기본 ALC가 `Alc.Engine.dll`을 로드하여 `EndProcessing()`을 실행하려고 시도하면 `FileNotFoundException`이 발생합니다. 해당 예외는 기본 ALC가 숨기려는 종속성을 찾을 수 없음을 의미하므로 정상입니다.
+이때 **AlcModule** 을 로드하고 `Test-AlcModule`을 실행하는 경우 기본 ALC가 `Alc.Engine.dll`을 로드하여 `EndProcessing()`을 실행하려고 시도하면 `FileNotFoundException`이 발생합니다. 해당 예외는 기본 ALC가 숨기려는 종속성을 찾을 수 없음을 의미하므로 정상입니다.
 
 이제 `AlcModule.Engine.dll`을 확인하는 방법을 알 수 있도록 `AlcModule.Cmdlets.dll`에 코드를 추가해야 합니다. 먼저 모듈의 `Dependencies` 디렉터리에서 어셈블리를 확인할 사용자 지정 ALC를 정의해야 합니다.
 
@@ -500,7 +500,7 @@ namespace AlcModule.Cmdlets
 
         public AlcModuleAssemblyLoadContext(string dependencyDirPath)
         {
-            _depdendencyDirPath = dependencyDirPath;
+            _dependencyDirPath = dependencyDirPath;
         }
 
         protected override Assembly Load(AssemblyName assemblyName)
@@ -509,7 +509,7 @@ namespace AlcModule.Cmdlets
             // looking for an assembly of the given name
             // in the configured dependency directory
             string assemblyPath = Path.Combine(
-                s_dependencyDirPath,
+                _dependencyDirPath,
                 $"{assemblyName.Name}.dll");
 
             // The ALC must use inherited methods to load assemblies
@@ -817,7 +817,7 @@ LoadFileModule/
   |  + CsvHelper.dll
 ```
 
-해당 구조가 준비되면 **LoadFileModule**은 이제 **CsvHelper**에 대한 종속성을 사용하여 다른 모듈과 함께 로드될 수 있습니다.
+해당 구조가 준비되면 **LoadFileModule** 은 이제 **CsvHelper** 에 대한 종속성을 사용하여 다른 모듈과 함께 로드될 수 있습니다.
 
 해당 처리기는 애플리케이션 도메인 전체에서 **모든** `AssemblyResolve` 이벤트에 적용되므로 다음과 같은 몇 가지 특정 디자인 항목을 선택해야 합니다.
 
