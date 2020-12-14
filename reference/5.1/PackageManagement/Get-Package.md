@@ -7,21 +7,21 @@ ms.date: 05/22/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/get-package?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Package
-ms.openlocfilehash: aad8b6f033674c65b4cc56708e09e5320bb046dd
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: bc6ba83a6f0d585e166b1bdc419c8b9c7148e47c
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213345"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892885"
 ---
-# <span data-ttu-id="d0c8b-103">Get-Package</span><span class="sxs-lookup"><span data-stu-id="d0c8b-103">Get-Package</span></span>
+# <span data-ttu-id="38259-103">Get-Package</span><span class="sxs-lookup"><span data-stu-id="38259-103">Get-Package</span></span>
 
-## <span data-ttu-id="d0c8b-104">개요</span><span class="sxs-lookup"><span data-stu-id="d0c8b-104">SYNOPSIS</span></span>
-<span data-ttu-id="d0c8b-105">**PackageManagement** 를 사용 하 여 설치 된 모든 소프트웨어 패키지 목록을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-105">Returns a list of all software packages that were installed with **PackageManagement** .</span></span>
+## <span data-ttu-id="38259-104">개요</span><span class="sxs-lookup"><span data-stu-id="38259-104">SYNOPSIS</span></span>
+<span data-ttu-id="38259-105">**PackageManagement** 를 사용 하 여 설치 된 모든 소프트웨어 패키지 목록을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-105">Returns a list of all software packages that were installed with **PackageManagement**.</span></span>
 
-## <span data-ttu-id="d0c8b-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="d0c8b-106">SYNTAX</span></span>
+## <span data-ttu-id="38259-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="38259-106">SYNTAX</span></span>
 
-### <span data-ttu-id="d0c8b-107">i</span><span class="sxs-lookup"><span data-stu-id="d0c8b-107">msi</span></span>
+### <span data-ttu-id="38259-107">i</span><span class="sxs-lookup"><span data-stu-id="38259-107">msi</span></span>
 
 ```
 Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <String>]
@@ -29,7 +29,7 @@ Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <S
  [-AdditionalArguments <String[]>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="d0c8b-108">프로그램</span><span class="sxs-lookup"><span data-stu-id="d0c8b-108">Programs</span></span>
+### <span data-ttu-id="38259-108">Programs</span><span class="sxs-lookup"><span data-stu-id="38259-108">Programs</span></span>
 
 ```
 Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <String>]
@@ -37,7 +37,7 @@ Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <S
  [-IncludeWindowsInstaller] [-IncludeSystemComponent] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="d0c8b-109">NuGet</span><span class="sxs-lookup"><span data-stu-id="d0c8b-109">NuGet</span></span>
+### <span data-ttu-id="38259-109">NuGet</span><span class="sxs-lookup"><span data-stu-id="38259-109">NuGet</span></span>
 
 ```
 Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <String>]
@@ -46,7 +46,7 @@ Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <S
  [<CommonParameters>]
 ```
 
-### <span data-ttu-id="d0c8b-110">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="d0c8b-110">PowerShellGet</span></span>
+### <span data-ttu-id="38259-110">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="38259-110">PowerShellGet</span></span>
 
 ```
 Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <String>]
@@ -56,15 +56,15 @@ Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <S
  [<CommonParameters>]
 ```
 
-## <span data-ttu-id="d0c8b-111">설명</span><span class="sxs-lookup"><span data-stu-id="d0c8b-111">DESCRIPTION</span></span>
+## <span data-ttu-id="38259-111">설명</span><span class="sxs-lookup"><span data-stu-id="38259-111">DESCRIPTION</span></span>
 
-<span data-ttu-id="d0c8b-112">`Get-Package`Cmdlet은 **PackageManagement** 를 사용 하 여 설치 된 로컬 컴퓨터의 모든 소프트웨어 패키지 목록을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-112">The `Get-Package` cmdlet returns a list of all software packages on the local computer that were installed with **PackageManagement** .</span></span> <span data-ttu-id="d0c8b-113">`Get-Package`또는 명령이 나 스크립트의 일부로 실행 하 여 원격 컴퓨터에서를 실행할 수 있습니다 `Invoke-Command` `Enter-PSSession` .</span><span class="sxs-lookup"><span data-stu-id="d0c8b-113">You can run `Get-Package` on remote computers by running it as part of an `Invoke-Command` or `Enter-PSSession` command or script.</span></span>
+<span data-ttu-id="38259-112">`Get-Package`Cmdlet은 **PackageManagement** 를 사용 하 여 설치 된 로컬 컴퓨터의 모든 소프트웨어 패키지 목록을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-112">The `Get-Package` cmdlet returns a list of all software packages on the local computer that were installed with **PackageManagement**.</span></span> <span data-ttu-id="38259-113">`Get-Package`또는 명령이 나 스크립트의 일부로 실행 하 여 원격 컴퓨터에서를 실행할 수 있습니다 `Invoke-Command` `Enter-PSSession` .</span><span class="sxs-lookup"><span data-stu-id="38259-113">You can run `Get-Package` on remote computers by running it as part of an `Invoke-Command` or `Enter-PSSession` command or script.</span></span>
 
-## <span data-ttu-id="d0c8b-114">예제</span><span class="sxs-lookup"><span data-stu-id="d0c8b-114">EXAMPLES</span></span>
+## <span data-ttu-id="38259-114">예제</span><span class="sxs-lookup"><span data-stu-id="38259-114">EXAMPLES</span></span>
 
-### <span data-ttu-id="d0c8b-115">예제 1: 설치 된 모든 패키지 가져오기</span><span class="sxs-lookup"><span data-stu-id="d0c8b-115">Example 1: Get all installed packages</span></span>
+### <span data-ttu-id="38259-115">예제 1: 설치 된 모든 패키지 가져오기</span><span class="sxs-lookup"><span data-stu-id="38259-115">Example 1: Get all installed packages</span></span>
 
-<span data-ttu-id="d0c8b-116">`Get-Package`Cmdlet은 로컬 컴퓨터에 설치 된 모든 패키지를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-116">The `Get-Package` cmdlet gets all packages that are installed on the local computer.</span></span>
+<span data-ttu-id="38259-116">`Get-Package`Cmdlet은 로컬 컴퓨터에 설치 된 모든 패키지를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="38259-116">The `Get-Package` cmdlet gets all packages that are installed on the local computer.</span></span>
 
 ```powershell
 Get-Package
@@ -76,19 +76,19 @@ Name           Version      Source                                     ProviderN
 posh-git       0.7.3        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-### <span data-ttu-id="d0c8b-117">예 2: 원격 컴퓨터에 설치 된 패키지 가져오기</span><span class="sxs-lookup"><span data-stu-id="d0c8b-117">Example 2: Get packages that are installed on a remote computer</span></span>
+### <span data-ttu-id="38259-117">예 2: 원격 컴퓨터에 설치 된 패키지 가져오기</span><span class="sxs-lookup"><span data-stu-id="38259-117">Example 2: Get packages that are installed on a remote computer</span></span>
 
-<span data-ttu-id="d0c8b-118">이 명령은 원격 컴퓨터에서 **PackageManagement** 에 의해 설치 된 패키지 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-118">This command gets a list of packages that were installed by **PackageManagement** on a remote computer.</span></span> <span data-ttu-id="d0c8b-119">이 명령은 지정 된 사용자의 암호를 제공 하 라는 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-119">This command prompts you to provide the specified user's password.</span></span>
+<span data-ttu-id="38259-118">이 명령은 원격 컴퓨터에서 **PackageManagement** 에 의해 설치 된 패키지 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="38259-118">This command gets a list of packages that were installed by **PackageManagement** on a remote computer.</span></span> <span data-ttu-id="38259-119">이 명령은 지정 된 사용자의 암호를 제공 하 라는 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-119">This command prompts you to provide the specified user's password.</span></span>
 
 ```
 PS> Invoke-Command -ComputerName Server01 -Credential CONTOSO\TestUser -ScriptBlock {Get-Package}
 ```
 
-<span data-ttu-id="d0c8b-120">`Invoke-Command`**ComputerName** 매개 변수를 사용 하 여 원격 컴퓨터 **Server01** 를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-120">`Invoke-Command` uses the **ComputerName** parameter to specify a remote computer, **Server01** .</span></span> <span data-ttu-id="d0c8b-121">**Credential** 매개 변수는 컴퓨터에서 명령을 실행할 수 있는 권한이 있는 도메인 및 사용자 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-121">The **Credential** parameter specifies a domain and user name with permissions to run commands on the computer.</span></span> <span data-ttu-id="d0c8b-122">**ScriptBlock** 매개 변수는 `Get-Package` 원격 컴퓨터에서 cmdlet을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-122">The **ScriptBlock** parameter runs the `Get-Package` cmdlet on the remote computer.</span></span>
+<span data-ttu-id="38259-120">`Invoke-Command`**ComputerName** 매개 변수를 사용 하 여 원격 컴퓨터 **Server01** 를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-120">`Invoke-Command` uses the **ComputerName** parameter to specify a remote computer, **Server01**.</span></span> <span data-ttu-id="38259-121">**Credential** 매개 변수는 컴퓨터에서 명령을 실행할 수 있는 권한이 있는 도메인 및 사용자 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-121">The **Credential** parameter specifies a domain and user name with permissions to run commands on the computer.</span></span> <span data-ttu-id="38259-122">**ScriptBlock** 매개 변수는 `Get-Package` 원격 컴퓨터에서 cmdlet을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-122">The **ScriptBlock** parameter runs the `Get-Package` cmdlet on the remote computer.</span></span>
 
-### <span data-ttu-id="d0c8b-123">예제 3: 지정 된 공급자에 대 한 패키지 가져오기</span><span class="sxs-lookup"><span data-stu-id="d0c8b-123">Example 3: Get packages for a specified provider</span></span>
+### <span data-ttu-id="38259-123">예제 3: 지정 된 공급자에 대 한 패키지 가져오기</span><span class="sxs-lookup"><span data-stu-id="38259-123">Example 3: Get packages for a specified provider</span></span>
 
-<span data-ttu-id="d0c8b-124">이 명령은 특정 공급자의 로컬 컴퓨터에 설치 된 소프트웨어 패키지를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-124">This command gets software packages installed on the local computer from a specific provider.</span></span>
+<span data-ttu-id="38259-124">이 명령은 특정 공급자의 로컬 컴퓨터에 설치 된 소프트웨어 패키지를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="38259-124">This command gets software packages installed on the local computer from a specific provider.</span></span>
 
 ```powershell
 Get-Package -ProviderName PowerShellGet -AllVersions
@@ -103,12 +103,12 @@ posh-git              0.7.3        https://www.powershellgallery.com/api/v2   Po
 PowerShellGet         2.0.1        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-<span data-ttu-id="d0c8b-125">`Get-Package`**ProviderName** 매개 변수를 사용 하 여 특정 공급자 **PowerShellGet** 을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-125">`Get-Package` uses the **ProviderName** parameter to specify a specific provider, **PowerShellGet** .</span></span>
-<span data-ttu-id="d0c8b-126">**모든** 버전 매개 변수는 설치 된 각 버전을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-126">The **All-Versions** parameter displays each version that is installed.</span></span>
+<span data-ttu-id="38259-125">`Get-Package`**ProviderName** 매개 변수를 사용 하 여 특정 공급자 **PowerShellGet** 을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-125">`Get-Package` uses the **ProviderName** parameter to specify a specific provider, **PowerShellGet**.</span></span>
+<span data-ttu-id="38259-126">**모든** 버전 매개 변수는 설치 된 각 버전을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-126">The **All-Versions** parameter displays each version that is installed.</span></span>
 
-### <span data-ttu-id="d0c8b-127">예제 4: 특정 패키지의 정확한 버전 가져오기</span><span class="sxs-lookup"><span data-stu-id="d0c8b-127">Example 4: Get an exact version of a specific package</span></span>
+### <span data-ttu-id="38259-127">예제 4: 특정 패키지의 정확한 버전 가져오기</span><span class="sxs-lookup"><span data-stu-id="38259-127">Example 4: Get an exact version of a specific package</span></span>
 
-<span data-ttu-id="d0c8b-128">이 명령은 설치 된 패키지의 특정 버전을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-128">This command gets a specific version of an installed package.</span></span> <span data-ttu-id="d0c8b-129">패키지의 여러 버전을 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-129">More than one version of a package can be installed.</span></span>
+<span data-ttu-id="38259-128">이 명령은 설치 된 패키지의 특정 버전을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="38259-128">This command gets a specific version of an installed package.</span></span> <span data-ttu-id="38259-129">패키지의 여러 버전을 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38259-129">More than one version of a package can be installed.</span></span>
 
 ```powershell
 Get-Package -Name PackageManagement -ProviderName PowerShellGet -RequiredVersion 1.3.1
@@ -120,39 +120,23 @@ Name                  Version      Source                                     Pr
 PackageManagement     1.3.1        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-<span data-ttu-id="d0c8b-130">`Get-Package`**name** 매개 변수를 사용 하 여 패키지 이름 **PackageManagement** 를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-130">`Get-Package` uses **Name** parameter to specify the package name, **PackageManagement** .</span></span> <span data-ttu-id="d0c8b-131">**ProviderName** 매개 변수는 공급자 ( **PowerShellGet** )를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-131">The **ProviderName** parameter specifies the provider, **PowerShellGet** .</span></span> <span data-ttu-id="d0c8b-132">**필수 버전** 매개 변수는 설치 된 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-132">The **Required-Version** parameter specifies an installed version.</span></span>
+<span data-ttu-id="38259-130">`Get-Package`**name** 매개 변수를 사용 하 여 패키지 이름 **PackageManagement** 를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-130">`Get-Package` uses **Name** parameter to specify the package name, **PackageManagement**.</span></span> <span data-ttu-id="38259-131">**ProviderName** 매개 변수는 공급자 ( **PowerShellGet**)를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-131">The **ProviderName** parameter specifies the provider, **PowerShellGet**.</span></span> <span data-ttu-id="38259-132">**필수 버전** 매개 변수는 설치 된 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-132">The **Required-Version** parameter specifies an installed version.</span></span>
 
-### <span data-ttu-id="d0c8b-133">예 5: 패키지 제거</span><span class="sxs-lookup"><span data-stu-id="d0c8b-133">Example 5: Uninstall a package</span></span>
+### <span data-ttu-id="38259-133">예 5: 패키지 제거</span><span class="sxs-lookup"><span data-stu-id="38259-133">Example 5: Uninstall a package</span></span>
 
-<span data-ttu-id="d0c8b-134">이 예에서는 패키지 정보를 가져온 다음 패키지를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-134">This example gets package information and then uninstalls the package.</span></span>
+<span data-ttu-id="38259-134">이 예에서는 패키지 정보를 가져온 다음 패키지를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-134">This example gets package information and then uninstalls the package.</span></span>
 
 ```powershell
 Get-Package -Name posh-git -RequiredVersion 0.7.3 | Uninstall-Package
 ```
 
-<span data-ttu-id="d0c8b-135">`Get-Package`**name** 매개 변수를 사용 하 여 **posh-git** 패키지 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-135">`Get-Package` uses the **Name** parameter to specify the package name, **posh-git** .</span></span> <span data-ttu-id="d0c8b-136">**RequiredVersion** 매개 변수는 패키지의 특정 버전입니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-136">The **RequiredVersion** parameter is a specific version of the package.</span></span> <span data-ttu-id="d0c8b-137">개체는 파이프라인에서 cmdlet으로 전송 됩니다 `Uninstall-Package` .</span><span class="sxs-lookup"><span data-stu-id="d0c8b-137">The object is sent down the pipeline to the `Uninstall-Package` cmdlet.</span></span> <span data-ttu-id="d0c8b-138">`Uninstall-Package` 패키지를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-138">`Uninstall-Package` removes the package.</span></span>
+<span data-ttu-id="38259-135">`Get-Package`**name** 매개 변수를 사용 하 여 **posh-git** 패키지 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-135">`Get-Package` uses the **Name** parameter to specify the package name, **posh-git**.</span></span> <span data-ttu-id="38259-136">**RequiredVersion** 매개 변수는 패키지의 특정 버전입니다.</span><span class="sxs-lookup"><span data-stu-id="38259-136">The **RequiredVersion** parameter is a specific version of the package.</span></span> <span data-ttu-id="38259-137">개체는 파이프라인에서 cmdlet으로 전송 됩니다 `Uninstall-Package` .</span><span class="sxs-lookup"><span data-stu-id="38259-137">The object is sent down the pipeline to the `Uninstall-Package` cmdlet.</span></span> <span data-ttu-id="38259-138">`Uninstall-Package` 패키지를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-138">`Uninstall-Package` removes the package.</span></span>
 
-## <span data-ttu-id="d0c8b-139">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="d0c8b-139">PARAMETERS</span></span>
+## <span data-ttu-id="38259-139">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="38259-139">PARAMETERS</span></span>
 
-### <span data-ttu-id="d0c8b-140">-AllowClobber</span><span class="sxs-lookup"><span data-stu-id="d0c8b-140">-AllowClobber</span></span>
+### <span data-ttu-id="38259-140">-AllowClobber</span><span class="sxs-lookup"><span data-stu-id="38259-140">-AllowClobber</span></span>
 
-<span data-ttu-id="d0c8b-141">기존 명령과의 충돌에 대 한 경고 메시지를 재정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-141">Overrides warning messages about conflicts with existing commands.</span></span> <span data-ttu-id="d0c8b-142">모듈에 의해 설치 되는 명령과 이름이 같은 기존 명령을 덮어씁니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-142">Overwrites existing commands that have the same name as commands being installed by a module.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: PowerShellGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="d0c8b-143">-AllowPrereleaseVersions</span><span class="sxs-lookup"><span data-stu-id="d0c8b-143">-AllowPrereleaseVersions</span></span>
-
-<span data-ttu-id="d0c8b-144">결과에서 시험판으로 표시 된 패키지를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-144">Includes packages marked as a prerelease in the results.</span></span>
+<span data-ttu-id="38259-141">기존 명령과의 충돌에 대 한 경고 메시지를 재정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-141">Overrides warning messages about conflicts with existing commands.</span></span> <span data-ttu-id="38259-142">모듈에 의해 설치 되는 명령과 이름이 같은 기존 명령을 덮어씁니다.</span><span class="sxs-lookup"><span data-stu-id="38259-142">Overwrites existing commands that have the same name as commands being installed by a module.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -166,9 +150,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-145">-Allversions)</span><span class="sxs-lookup"><span data-stu-id="d0c8b-145">-AllVersions</span></span>
+### <span data-ttu-id="38259-143">-AllowPrereleaseVersions</span><span class="sxs-lookup"><span data-stu-id="38259-143">-AllowPrereleaseVersions</span></span>
 
-<span data-ttu-id="d0c8b-146">에서 `Get-Package` 사용 가능한 패키지 버전을 모두 반환 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-146">Indicates that `Get-Package` returns all available versions of the package.</span></span> <span data-ttu-id="d0c8b-147">기본적으로는 `Get-Package` 사용 가능한 최신 버전만 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-147">By default, `Get-Package` only returns the newest available version.</span></span>
+<span data-ttu-id="38259-144">결과에서 시험판으로 표시 된 패키지를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-144">Includes packages marked as a prerelease in the results.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: PowerShellGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="38259-145">-Allversions)</span><span class="sxs-lookup"><span data-stu-id="38259-145">-AllVersions</span></span>
+
+<span data-ttu-id="38259-146">에서 `Get-Package` 사용 가능한 패키지 버전을 모두 반환 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="38259-146">Indicates that `Get-Package` returns all available versions of the package.</span></span> <span data-ttu-id="38259-147">기본적으로는 `Get-Package` 사용 가능한 최신 버전만 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-147">By default, `Get-Package` only returns the newest available version.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -182,9 +182,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-148">-Destination</span><span class="sxs-lookup"><span data-stu-id="d0c8b-148">-Destination</span></span>
+### <span data-ttu-id="38259-148">-Destination</span><span class="sxs-lookup"><span data-stu-id="38259-148">-Destination</span></span>
 
-<span data-ttu-id="d0c8b-149">압축을 푼 패키지 파일을 포함 하는 디렉터리의 경로를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-149">Specifies the path to a directory that contains extracted package files.</span></span>
+<span data-ttu-id="38259-149">압축을 푼 패키지 파일을 포함 하는 디렉터리의 경로를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-149">Specifies the path to a directory that contains extracted package files.</span></span>
 
 ```yaml
 Type: System.String
@@ -198,9 +198,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-150">-ExcludeVersion</span><span class="sxs-lookup"><span data-stu-id="d0c8b-150">-ExcludeVersion</span></span>
+### <span data-ttu-id="38259-150">-ExcludeVersion</span><span class="sxs-lookup"><span data-stu-id="38259-150">-ExcludeVersion</span></span>
 
-<span data-ttu-id="d0c8b-151">스위치를 전환 하 여 폴더 경로에서 버전 번호를 제외 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-151">Switch to exclude the version number in the folder path.</span></span>
+<span data-ttu-id="38259-151">스위치를 전환 하 여 폴더 경로에서 버전 번호를 제외 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-151">Switch to exclude the version number in the folder path.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -214,25 +214,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-152">-Force</span><span class="sxs-lookup"><span data-stu-id="d0c8b-152">-Force</span></span>
+### <span data-ttu-id="38259-152">-Force</span><span class="sxs-lookup"><span data-stu-id="38259-152">-Force</span></span>
 
-<span data-ttu-id="d0c8b-153">사용자 확인을 요청하지 않고 명령을 강제 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-153">Forces the command to run without asking for user confirmation.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="d0c8b-154">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="d0c8b-154">-ForceBootstrap</span></span>
-
-<span data-ttu-id="d0c8b-155">PackageManagement에서 `Get-Package` 패키지 **PackageManagement** 공급자를 자동으로 설치 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-155">Indicates that `Get-Package` forces **PackageManagement** to automatically install the package provider.</span></span>
+<span data-ttu-id="38259-153">사용자 확인을 요청하지 않고 명령을 강제 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-153">Forces the command to run without asking for user confirmation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -246,9 +230,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-156">-InstallUpdate</span><span class="sxs-lookup"><span data-stu-id="d0c8b-156">-InstallUpdate</span></span>
+### <span data-ttu-id="38259-154">-ForceBootstrap</span><span class="sxs-lookup"><span data-stu-id="38259-154">-ForceBootstrap</span></span>
 
-<span data-ttu-id="d0c8b-157">이 cmdlet이 업데이트를 설치 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-157">Indicates that this cmdlet installs updates.</span></span>
+<span data-ttu-id="38259-155">PackageManagement에서 `Get-Package` 패키지  공급자를 자동으로 설치 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-155">Indicates that `Get-Package` forces **PackageManagement** to automatically install the package provider.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="38259-156">-InstallUpdate</span><span class="sxs-lookup"><span data-stu-id="38259-156">-InstallUpdate</span></span>
+
+<span data-ttu-id="38259-157">이 cmdlet이 업데이트를 설치 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="38259-157">Indicates that this cmdlet installs updates.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -262,25 +262,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-158">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="d0c8b-158">-MaximumVersion</span></span>
+### <span data-ttu-id="38259-158">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="38259-158">-MaximumVersion</span></span>
 
-<span data-ttu-id="d0c8b-159">검색 하려는 최대 패키지 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-159">Specifies the maximum package version that you want to find.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="d0c8b-160">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="d0c8b-160">-MinimumVersion</span></span>
-
-<span data-ttu-id="d0c8b-161">찾으려는 최소 패키지 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-161">Specifies the minimum package version that you want to find.</span></span> <span data-ttu-id="d0c8b-162">더 높은 버전을 사용할 수 있는 경우 해당 버전이 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-162">If a higher version is available, that version is returned.</span></span>
+<span data-ttu-id="38259-159">검색 하려는 최대 패키지 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-159">Specifies the maximum package version that you want to find.</span></span>
 
 ```yaml
 Type: System.String
@@ -294,9 +278,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-163">-Name</span><span class="sxs-lookup"><span data-stu-id="d0c8b-163">-Name</span></span>
+### <span data-ttu-id="38259-160">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="38259-160">-MinimumVersion</span></span>
 
-<span data-ttu-id="d0c8b-164">하나 이상의 패키지 이름 또는 와일드 카드 문자를 포함 하는 패키지 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-164">Specifies one or more package names, or package names with wildcard characters.</span></span> <span data-ttu-id="d0c8b-165">여러 패키지 이름을 쉼표로 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-165">Separate multiple package names with commas.</span></span>
+<span data-ttu-id="38259-161">찾으려는 최소 패키지 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-161">Specifies the minimum package version that you want to find.</span></span> <span data-ttu-id="38259-162">더 높은 버전을 사용할 수 있는 경우 해당 버전이 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="38259-162">If a higher version is available, that version is returned.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="38259-163">-Name</span><span class="sxs-lookup"><span data-stu-id="38259-163">-Name</span></span>
+
+<span data-ttu-id="38259-164">하나 이상의 패키지 이름 또는 와일드 카드 문자를 포함 하는 패키지 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-164">Specifies one or more package names, or package names with wildcard characters.</span></span> <span data-ttu-id="38259-165">여러 패키지 이름을 쉼표로 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-165">Separate multiple package names with commas.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -310,9 +310,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="d0c8b-166">-NoPathUpdate</span><span class="sxs-lookup"><span data-stu-id="d0c8b-166">-NoPathUpdate</span></span>
+### <span data-ttu-id="38259-166">-NoPathUpdate</span><span class="sxs-lookup"><span data-stu-id="38259-166">-NoPathUpdate</span></span>
 
-<span data-ttu-id="d0c8b-167">**Nopathupdate** 는 cmdlet에만 적용 됩니다 `Install-Script` .</span><span class="sxs-lookup"><span data-stu-id="d0c8b-167">**NoPathUpdate** only applies to the `Install-Script` cmdlet.</span></span> <span data-ttu-id="d0c8b-168">**Nopathupdate** 는 공급자가 추가 하는 동적 매개 변수 이며에서 지원 되지 않습니다 `Get-Package` .</span><span class="sxs-lookup"><span data-stu-id="d0c8b-168">**NoPathUpdate** is a dynamic parameter added by the provider and isn't supported by `Get-Package`.</span></span>
+<span data-ttu-id="38259-167">**Nopathupdate** 는 cmdlet에만 적용 됩니다 `Install-Script` .</span><span class="sxs-lookup"><span data-stu-id="38259-167">**NoPathUpdate** only applies to the `Install-Script` cmdlet.</span></span> <span data-ttu-id="38259-168">**Nopathupdate** 는 공급자가 추가 하는 동적 매개 변수 이며에서 지원 되지 않습니다 `Get-Package` .</span><span class="sxs-lookup"><span data-stu-id="38259-168">**NoPathUpdate** is a dynamic parameter added by the provider and isn't supported by `Get-Package`.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -326,9 +326,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-169">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="d0c8b-169">-PackageManagementProvider</span></span>
+### <span data-ttu-id="38259-169">-PackageManagementProvider</span><span class="sxs-lookup"><span data-stu-id="38259-169">-PackageManagementProvider</span></span>
 
-<span data-ttu-id="d0c8b-170">패키지 관리 공급자의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-170">Specifies the name of a package management provider.</span></span>
+<span data-ttu-id="38259-170">패키지 관리 공급자의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-170">Specifies the name of a package management provider.</span></span>
 
 ```yaml
 Type: System.String
@@ -342,10 +342,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-171">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="d0c8b-171">-ProviderName</span></span>
+### <span data-ttu-id="38259-171">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="38259-171">-ProviderName</span></span>
 
-<span data-ttu-id="d0c8b-172">패키지 공급자 이름을 하나 이상 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-172">Specifies one or more package provider names.</span></span> <span data-ttu-id="d0c8b-173">여러 패키지 공급자 이름을 쉼표로 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-173">Separate multiple package provider names with commas.</span></span>
-<span data-ttu-id="d0c8b-174">사용 `Get-PackageProvider` 가능한 패키지 공급자 목록을 가져오는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-174">Use `Get-PackageProvider` to get a list of available package providers.</span></span>
+<span data-ttu-id="38259-172">패키지 공급자 이름을 하나 이상 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-172">Specifies one or more package provider names.</span></span> <span data-ttu-id="38259-173">여러 패키지 공급자 이름을 쉼표로 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-173">Separate multiple package provider names with commas.</span></span>
+<span data-ttu-id="38259-174">사용 `Get-PackageProvider` 가능한 패키지 공급자 목록을 가져오는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-174">Use `Get-PackageProvider` to get a list of available package providers.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -360,9 +360,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-175">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="d0c8b-175">-RequiredVersion</span></span>
+### <span data-ttu-id="38259-175">-RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="38259-175">-RequiredVersion</span></span>
 
-<span data-ttu-id="d0c8b-176">찾을 패키지의 정확한 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-176">Specifies the exact version of the package to find.</span></span>
+<span data-ttu-id="38259-176">찾을 패키지의 정확한 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-176">Specifies the exact version of the package to find.</span></span>
 
 ```yaml
 Type: System.String
@@ -376,9 +376,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-177">-범위</span><span class="sxs-lookup"><span data-stu-id="d0c8b-177">-Scope</span></span>
+### <span data-ttu-id="38259-177">-범위</span><span class="sxs-lookup"><span data-stu-id="38259-177">-Scope</span></span>
 
-<span data-ttu-id="d0c8b-178">패키지에 대 한 검색 범위를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-178">Specifies the search scope for the package.</span></span>
+<span data-ttu-id="38259-178">패키지에 대 한 검색 범위를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-178">Specifies the search scope for the package.</span></span>
 
 ```yaml
 Type: System.String
@@ -393,9 +393,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-179">-SkipDependencies</span><span class="sxs-lookup"><span data-stu-id="d0c8b-179">-SkipDependencies</span></span>
+### <span data-ttu-id="38259-179">-SkipDependencies</span><span class="sxs-lookup"><span data-stu-id="38259-179">-SkipDependencies</span></span>
 
-<span data-ttu-id="d0c8b-180">에서 패키지 종속성 찾기를 건너뛰도록 지정 하는 스위치입니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-180">Switch that specifies to skip finding any package dependencies.</span></span>
+<span data-ttu-id="38259-180">에서 패키지 종속성 찾기를 건너뛰도록 지정 하는 스위치입니다.</span><span class="sxs-lookup"><span data-stu-id="38259-180">Switch that specifies to skip finding any package dependencies.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -409,9 +409,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-181">-SkipPublisherCheck</span><span class="sxs-lookup"><span data-stu-id="d0c8b-181">-SkipPublisherCheck</span></span>
+### <span data-ttu-id="38259-181">-SkipPublisherCheck</span><span class="sxs-lookup"><span data-stu-id="38259-181">-SkipPublisherCheck</span></span>
 
-<span data-ttu-id="d0c8b-182">설치 된 버전 보다 최신 버전의 패키지 버전을 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-182">Allows you to get a package version that is newer than your installed version.</span></span> <span data-ttu-id="d0c8b-183">예를 들어 신뢰할 수 있는 게시자가 디지털 서명 하지만 새 버전은 디지털 서명 되지 않은 설치 된 패키지입니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-183">For example, an installed package that is digitally signed by a trusted publisher but a new version isn't digitally signed.</span></span>
+<span data-ttu-id="38259-182">설치 된 버전 보다 최신 버전의 패키지 버전을 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38259-182">Allows you to get a package version that is newer than your installed version.</span></span> <span data-ttu-id="38259-183">예를 들어 신뢰할 수 있는 게시자가 디지털 서명 하지만 새 버전은 디지털 서명 되지 않은 설치 된 패키지입니다.</span><span class="sxs-lookup"><span data-stu-id="38259-183">For example, an installed package that is digitally signed by a trusted publisher but a new version isn't digitally signed.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -425,9 +425,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-184">-Type</span><span class="sxs-lookup"><span data-stu-id="d0c8b-184">-Type</span></span>
+### <span data-ttu-id="38259-184">-Type</span><span class="sxs-lookup"><span data-stu-id="38259-184">-Type</span></span>
 
-<span data-ttu-id="d0c8b-185">모듈, 스크립트 또는 중 하나를 사용 하 여 패키지를 검색할지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-185">Specifies whether to search for packages with a module, a script, or either.</span></span>
+<span data-ttu-id="38259-185">모듈, 스크립트 또는 중 하나를 사용 하 여 패키지를 검색할지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-185">Specifies whether to search for packages with a module, a script, or either.</span></span>
 
 ```yaml
 Type: System.String
@@ -442,9 +442,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-186">-AdditionalArguments</span><span class="sxs-lookup"><span data-stu-id="d0c8b-186">-AdditionalArguments</span></span>
+### <span data-ttu-id="38259-186">-AdditionalArguments</span><span class="sxs-lookup"><span data-stu-id="38259-186">-AdditionalArguments</span></span>
 
-<span data-ttu-id="d0c8b-187">추가 인수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-187">Specifies additional arguments.</span></span>
+<span data-ttu-id="38259-187">추가 인수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-187">Specifies additional arguments.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -458,25 +458,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-188">-IncludeSystemComponent</span><span class="sxs-lookup"><span data-stu-id="d0c8b-188">-IncludeSystemComponent</span></span>
+### <span data-ttu-id="38259-188">-IncludeSystemComponent</span><span class="sxs-lookup"><span data-stu-id="38259-188">-IncludeSystemComponent</span></span>
 
-<span data-ttu-id="d0c8b-189">이 cmdlet이 결과의 시스템 구성 요소를 포함 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-189">Indicates that this cmdlet includes system components in the results.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: Programs
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="d0c8b-190">-IncludeWindowsInstaller</span><span class="sxs-lookup"><span data-stu-id="d0c8b-190">-IncludeWindowsInstaller</span></span>
-
-<span data-ttu-id="d0c8b-191">이 cmdlet이 결과에 Windows Installer를 포함 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-191">Indicates that this cmdlet includes the Windows Installer in the results.</span></span>
+<span data-ttu-id="38259-189">이 cmdlet이 결과의 시스템 구성 요소를 포함 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="38259-189">Indicates that this cmdlet includes system components in the results.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -490,38 +474,61 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d0c8b-192">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="d0c8b-192">CommonParameters</span></span>
+### <span data-ttu-id="38259-190">-IncludeWindowsInstaller</span><span class="sxs-lookup"><span data-stu-id="38259-190">-IncludeWindowsInstaller</span></span>
 
-<span data-ttu-id="d0c8b-193">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-193">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="d0c8b-194">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-194">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="38259-191">이 cmdlet이 결과에 Windows Installer를 포함 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="38259-191">Indicates that this cmdlet includes the Windows Installer in the results.</span></span>
 
-## <span data-ttu-id="d0c8b-195">입력</span><span class="sxs-lookup"><span data-stu-id="d0c8b-195">INPUTS</span></span>
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: Programs
+Aliases:
 
-## <span data-ttu-id="d0c8b-196">출력</span><span class="sxs-lookup"><span data-stu-id="d0c8b-196">OUTPUTS</span></span>
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
-### <span data-ttu-id="d0c8b-197">\Id []</span><span class="sxs-lookup"><span data-stu-id="d0c8b-197">SoftwareIdentity[]</span></span>
+### <span data-ttu-id="38259-192">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="38259-192">CommonParameters</span></span>
 
-## <span data-ttu-id="d0c8b-198">참고</span><span class="sxs-lookup"><span data-stu-id="d0c8b-198">NOTES</span></span>
+<span data-ttu-id="38259-193">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="38259-193">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="38259-194">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="38259-194">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-<span data-ttu-id="d0c8b-199">명령에 패키지 공급자를 포함 하면 cmdlet에서 동적 매개 변수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-199">Including a package provider in a command can make dynamic parameters available to a cmdlet.</span></span> <span data-ttu-id="d0c8b-200">동적 매개 변수는 패키지 공급자에만 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-200">Dynamic parameters are specific to a package provider.</span></span> <span data-ttu-id="d0c8b-201">`Get-Help`Cmdlet은 cmdlet의 매개 변수 집합을 나열 하 고 공급자의 매개 변수 집합을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0c8b-201">The `Get-Help` cmdlet lists a cmdlet's parameter sets and includes the provider's parameter set.</span></span> <span data-ttu-id="d0c8b-202">예를 들어,에는, `Get-Package` 및를 포함 하는 **PowerShellGet** 매개 변수 집합이 있습니다 `-NoPathUpdate` `AllowClobber` `SkipPublisherCheck` .</span><span class="sxs-lookup"><span data-stu-id="d0c8b-202">For example, `Get-Package` has the **PowerShellGet** parameter set that includes `-NoPathUpdate`, `AllowClobber`, and `SkipPublisherCheck`.</span></span>
+## <span data-ttu-id="38259-195">입력</span><span class="sxs-lookup"><span data-stu-id="38259-195">INPUTS</span></span>
 
-## <span data-ttu-id="d0c8b-203">관련 링크</span><span class="sxs-lookup"><span data-stu-id="d0c8b-203">RELATED LINKS</span></span>
+## <span data-ttu-id="38259-196">출력</span><span class="sxs-lookup"><span data-stu-id="38259-196">OUTPUTS</span></span>
 
-[<span data-ttu-id="d0c8b-204">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="d0c8b-204">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
+### <span data-ttu-id="38259-197">\Id []</span><span class="sxs-lookup"><span data-stu-id="38259-197">SoftwareIdentity[]</span></span>
 
-[<span data-ttu-id="d0c8b-205">Enter-PSSession</span><span class="sxs-lookup"><span data-stu-id="d0c8b-205">Enter-PSSession</span></span>](../Microsoft.PowerShell.Core/Enter-PSSession.md)
+## <span data-ttu-id="38259-198">참고</span><span class="sxs-lookup"><span data-stu-id="38259-198">NOTES</span></span>
 
-[<span data-ttu-id="d0c8b-206">Find-Package</span><span class="sxs-lookup"><span data-stu-id="d0c8b-206">Find-Package</span></span>](Find-Package.md)
+<span data-ttu-id="38259-199">명령에 패키지 공급자를 포함 하면 cmdlet에서 동적 매개 변수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38259-199">Including a package provider in a command can make dynamic parameters available to a cmdlet.</span></span> <span data-ttu-id="38259-200">동적 매개 변수는 패키지 공급자에만 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="38259-200">Dynamic parameters are specific to a package provider.</span></span> <span data-ttu-id="38259-201">`Get-Help`Cmdlet은 cmdlet의 매개 변수 집합을 나열 하 고 공급자의 매개 변수 집합을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-201">The `Get-Help` cmdlet lists a cmdlet's parameter sets and includes the provider's parameter set.</span></span> <span data-ttu-id="38259-202">예를 들어,에는, `Get-Package` 및를 포함 하는 **PowerShellGet** 매개 변수 집합이 있습니다 `-NoPathUpdate` `AllowClobber` `SkipPublisherCheck` .</span><span class="sxs-lookup"><span data-stu-id="38259-202">For example, `Get-Package` has the **PowerShellGet** parameter set that includes `-NoPathUpdate`, `AllowClobber`, and `SkipPublisherCheck`.</span></span>
 
-[<span data-ttu-id="d0c8b-207">Get-Help</span><span class="sxs-lookup"><span data-stu-id="d0c8b-207">Get-Help</span></span>](../Microsoft.PowerShell.Core/Get-Help.md)
+> [!IMPORTANT]
+> <span data-ttu-id="38259-203">2020 4 월부터 PowerShell 갤러리는 더 이상 TLS (Transport Layer Security) 버전 1.0 및 1.1을 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="38259-203">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="38259-204">TLS 1.2 이상을 사용 하지 않는 경우 PowerShell 갤러리에 액세스 하려고 하면 오류가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="38259-204">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="38259-205">다음 명령을 사용 하 여 TLS 1.2을 사용 하는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="38259-205">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="38259-206">자세한 내용은 PowerShell 블로그의 [공지](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="38259-206">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-[<span data-ttu-id="d0c8b-208">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="d0c8b-208">Get-PackageProvider</span></span>](Get-PackageProvider.md)
+## <span data-ttu-id="38259-207">관련 링크</span><span class="sxs-lookup"><span data-stu-id="38259-207">RELATED LINKS</span></span>
 
-[<span data-ttu-id="d0c8b-209">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="d0c8b-209">Get-PackageSource</span></span>](Get-PackageSource.md)
+[<span data-ttu-id="38259-208">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="38259-208">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
 
-[<span data-ttu-id="d0c8b-210">Install-Package</span><span class="sxs-lookup"><span data-stu-id="d0c8b-210">Install-Package</span></span>](Install-Package.md)
+[<span data-ttu-id="38259-209">Enter-PSSession</span><span class="sxs-lookup"><span data-stu-id="38259-209">Enter-PSSession</span></span>](../Microsoft.PowerShell.Core/Enter-PSSession.md)
 
-[<span data-ttu-id="d0c8b-211">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="d0c8b-211">Invoke-Command</span></span>](../Microsoft.PowerShell.Core/Invoke-Command.md)
+[<span data-ttu-id="38259-210">Find-Package</span><span class="sxs-lookup"><span data-stu-id="38259-210">Find-Package</span></span>](Find-Package.md)
 
-[<span data-ttu-id="d0c8b-212">Save-Package</span><span class="sxs-lookup"><span data-stu-id="d0c8b-212">Save-Package</span></span>](Save-Package.md)
+[<span data-ttu-id="38259-211">Get-Help</span><span class="sxs-lookup"><span data-stu-id="38259-211">Get-Help</span></span>](../Microsoft.PowerShell.Core/Get-Help.md)
 
-[<span data-ttu-id="d0c8b-213">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="d0c8b-213">Uninstall-Package</span></span>](Uninstall-Package.md)
+[<span data-ttu-id="38259-212">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="38259-212">Get-PackageProvider</span></span>](Get-PackageProvider.md)
+
+[<span data-ttu-id="38259-213">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="38259-213">Get-PackageSource</span></span>](Get-PackageSource.md)
+
+[<span data-ttu-id="38259-214">Install-Package</span><span class="sxs-lookup"><span data-stu-id="38259-214">Install-Package</span></span>](Install-Package.md)
+
+[<span data-ttu-id="38259-215">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="38259-215">Invoke-Command</span></span>](../Microsoft.PowerShell.Core/Invoke-Command.md)
+
+[<span data-ttu-id="38259-216">Save-Package</span><span class="sxs-lookup"><span data-stu-id="38259-216">Save-Package</span></span>](Save-Package.md)
+
+[<span data-ttu-id="38259-217">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="38259-217">Uninstall-Package</span></span>](Uninstall-Package.md)

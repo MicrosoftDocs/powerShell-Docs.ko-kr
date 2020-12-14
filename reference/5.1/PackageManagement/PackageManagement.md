@@ -8,56 +8,63 @@ Module Name: PackageManagement
 ms.date: 06/09/2017
 schema: 2.0.0
 title: PackageManagement
-ms.openlocfilehash: 7285f37020807b12c03b38a48cc2b72637940898
-ms.sourcegitcommit: 9d95532afe81c235c8094eae28ab84b2f77f8c48
+ms.openlocfilehash: 208545677771270ad8f2e9d76ba01046b07e86e2
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "93220233"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892783"
 ---
-# <span data-ttu-id="ef755-103">PackageManagement 모듈</span><span class="sxs-lookup"><span data-stu-id="ef755-103">PackageManagement Module</span></span>
+# <span data-ttu-id="efa15-103">PackageManagement 모듈</span><span class="sxs-lookup"><span data-stu-id="efa15-103">PackageManagement Module</span></span>
 
-## <span data-ttu-id="ef755-104">Description</span><span class="sxs-lookup"><span data-stu-id="ef755-104">Description</span></span>
+## <span data-ttu-id="efa15-104">설명</span><span class="sxs-lookup"><span data-stu-id="efa15-104">Description</span></span>
 
-<span data-ttu-id="ef755-105">이 항목에서는 패키지 관리 Cmdlet에 대 한 도움말 항목을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef755-105">This topic displays help topics for the Package Management Cmdlets.</span></span>
+<span data-ttu-id="efa15-105">이 항목에서는 패키지 관리 Cmdlet에 대 한 도움말 항목을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-105">This topic displays help topics for the Package Management Cmdlets.</span></span>
 
-## <span data-ttu-id="ef755-106">PackageManagement Cmdlet</span><span class="sxs-lookup"><span data-stu-id="ef755-106">PackageManagement Cmdlets</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="efa15-106">2020 4 월부터 PowerShell 갤러리는 더 이상 TLS (Transport Layer Security) 버전 1.0 및 1.1을 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-106">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="efa15-107">TLS 1.2 이상을 사용 하지 않는 경우 PowerShell 갤러리에 액세스 하려고 하면 오류가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-107">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="efa15-108">다음 명령을 사용 하 여 TLS 1.2을 사용 하는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-108">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="efa15-109">자세한 내용은 PowerShell 블로그의 [공지](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) 를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="efa15-109">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-### [<span data-ttu-id="ef755-107">Find-Package</span><span class="sxs-lookup"><span data-stu-id="ef755-107">Find-Package</span></span>](Find-Package.md)
-<span data-ttu-id="ef755-108">사용 가능한 패키지 소스에서 소프트웨어 패키지를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="ef755-108">Finds software packages in available package sources.</span></span>
+## <span data-ttu-id="efa15-110">PackageManagement Cmdlet</span><span class="sxs-lookup"><span data-stu-id="efa15-110">PackageManagement Cmdlets</span></span>
 
-### [<span data-ttu-id="ef755-109">Find-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="ef755-109">Find-PackageProvider</span></span>](Find-PackageProvider.md)
-<span data-ttu-id="ef755-110">설치에 사용할 수 있는 패키지 관리 패키지 공급자 목록을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef755-110">Returns a list of Package Management package providers available for installation.</span></span>
+### [<span data-ttu-id="efa15-111">Find-Package</span><span class="sxs-lookup"><span data-stu-id="efa15-111">Find-Package</span></span>](Find-Package.md)
+<span data-ttu-id="efa15-112">사용 가능한 패키지 소스에서 소프트웨어 패키지를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-112">Finds software packages in available package sources.</span></span>
 
-### [<span data-ttu-id="ef755-111">Get-Package</span><span class="sxs-lookup"><span data-stu-id="ef755-111">Get-Package</span></span>](Get-Package.md)
-<span data-ttu-id="ef755-112">**PackageManagement** 를 사용 하 여 설치 된 모든 소프트웨어 패키지 목록을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef755-112">Returns a list of all software packages that were installed with **PackageManagement** .</span></span>
+### [<span data-ttu-id="efa15-113">Find-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="efa15-113">Find-PackageProvider</span></span>](Find-PackageProvider.md)
+<span data-ttu-id="efa15-114">설치에 사용할 수 있는 패키지 관리 패키지 공급자 목록을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-114">Returns a list of Package Management package providers available for installation.</span></span>
 
-### [<span data-ttu-id="ef755-113">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="ef755-113">Get-PackageProvider</span></span>](Get-PackageProvider.md)
-<span data-ttu-id="ef755-114">패키지 관리에 연결 된 패키지 공급자의 목록을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef755-114">Returns a list of package providers that are connected to Package Management.</span></span>
+### [<span data-ttu-id="efa15-115">Get-Package</span><span class="sxs-lookup"><span data-stu-id="efa15-115">Get-Package</span></span>](Get-Package.md)
+<span data-ttu-id="efa15-116">**PackageManagement** 를 사용 하 여 설치 된 모든 소프트웨어 패키지 목록을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-116">Returns a list of all software packages that were installed with **PackageManagement**.</span></span>
 
-### [<span data-ttu-id="ef755-115">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="ef755-115">Get-PackageSource</span></span>](Get-PackageSource.md)
-<span data-ttu-id="ef755-116">패키지 공급자에 대해 등록 된 패키지 소스 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ef755-116">Gets a list of package sources that are registered for a package provider.</span></span>
+### [<span data-ttu-id="efa15-117">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="efa15-117">Get-PackageProvider</span></span>](Get-PackageProvider.md)
+<span data-ttu-id="efa15-118">패키지 관리에 연결 된 패키지 공급자의 목록을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-118">Returns a list of package providers that are connected to Package Management.</span></span>
 
-### [<span data-ttu-id="ef755-117">Import-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="ef755-117">Import-PackageProvider</span></span>](Import-PackageProvider.md)
-<span data-ttu-id="ef755-118">현재 세션에 패키지 관리 패키지 공급자를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef755-118">Adds Package Management package providers to the current session.</span></span>
+### [<span data-ttu-id="efa15-119">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="efa15-119">Get-PackageSource</span></span>](Get-PackageSource.md)
+<span data-ttu-id="efa15-120">패키지 공급자에 대해 등록 된 패키지 소스 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-120">Gets a list of package sources that are registered for a package provider.</span></span>
 
-### [<span data-ttu-id="ef755-119">Install-Package</span><span class="sxs-lookup"><span data-stu-id="ef755-119">Install-Package</span></span>](Install-Package.md)
-<span data-ttu-id="ef755-120">하나 이상의 소프트웨어 패키지를 설치 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef755-120">Installs one or more software packages.</span></span>
+### [<span data-ttu-id="efa15-121">Import-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="efa15-121">Import-PackageProvider</span></span>](Import-PackageProvider.md)
+<span data-ttu-id="efa15-122">현재 세션에 패키지 관리 패키지 공급자를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-122">Adds Package Management package providers to the current session.</span></span>
 
-### [<span data-ttu-id="ef755-121">Install-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="ef755-121">Install-PackageProvider</span></span>](Install-PackageProvider.md)
-<span data-ttu-id="ef755-122">하나 이상의 패키지 관리 패키지 공급자를 설치 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef755-122">Installs one or more Package Management package providers.</span></span>
+### [<span data-ttu-id="efa15-123">Install-Package</span><span class="sxs-lookup"><span data-stu-id="efa15-123">Install-Package</span></span>](Install-Package.md)
+<span data-ttu-id="efa15-124">하나 이상의 소프트웨어 패키지를 설치 합니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-124">Installs one or more software packages.</span></span>
 
-### [<span data-ttu-id="ef755-123">Register-PackageSource</span><span class="sxs-lookup"><span data-stu-id="ef755-123">Register-PackageSource</span></span>](Register-PackageSource.md)
-<span data-ttu-id="ef755-124">지정 된 패키지 공급자에 대 한 패키지 소스를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef755-124">Adds a package source for a specified package provider.</span></span>
+### [<span data-ttu-id="efa15-125">Install-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="efa15-125">Install-PackageProvider</span></span>](Install-PackageProvider.md)
+<span data-ttu-id="efa15-126">하나 이상의 패키지 관리 패키지 공급자를 설치 합니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-126">Installs one or more Package Management package providers.</span></span>
 
-### [<span data-ttu-id="ef755-125">Save-Package</span><span class="sxs-lookup"><span data-stu-id="ef755-125">Save-Package</span></span>](Save-Package.md)
-<span data-ttu-id="ef755-126">패키지를 설치 하지 않고 로컬 컴퓨터에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef755-126">Saves packages to the local computer without installing them.</span></span>
+### [<span data-ttu-id="efa15-127">Register-PackageSource</span><span class="sxs-lookup"><span data-stu-id="efa15-127">Register-PackageSource</span></span>](Register-PackageSource.md)
+<span data-ttu-id="efa15-128">지정 된 패키지 공급자에 대 한 패키지 소스를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-128">Adds a package source for a specified package provider.</span></span>
 
-### [<span data-ttu-id="ef755-127">Set-PackageSource</span><span class="sxs-lookup"><span data-stu-id="ef755-127">Set-PackageSource</span></span>](Set-PackageSource.md)
-<span data-ttu-id="ef755-128">지정 된 패키지 공급자에 대 한 패키지 원본을 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="ef755-128">Replaces a package source for a specified package provider.</span></span>
+### [<span data-ttu-id="efa15-129">Save-Package</span><span class="sxs-lookup"><span data-stu-id="efa15-129">Save-Package</span></span>](Save-Package.md)
+<span data-ttu-id="efa15-130">패키지를 설치 하지 않고 로컬 컴퓨터에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-130">Saves packages to the local computer without installing them.</span></span>
 
-### [<span data-ttu-id="ef755-129">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="ef755-129">Uninstall-Package</span></span>](Uninstall-Package.md)
-<span data-ttu-id="ef755-130">하나 이상의 소프트웨어 패키지를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef755-130">Uninstalls one or more software packages.</span></span>
+### [<span data-ttu-id="efa15-131">Set-PackageSource</span><span class="sxs-lookup"><span data-stu-id="efa15-131">Set-PackageSource</span></span>](Set-PackageSource.md)
+<span data-ttu-id="efa15-132">지정 된 패키지 공급자에 대 한 패키지 원본을 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-132">Replaces a package source for a specified package provider.</span></span>
 
-### [<span data-ttu-id="ef755-131">Unregister-PackageSource</span><span class="sxs-lookup"><span data-stu-id="ef755-131">Unregister-PackageSource</span></span>](Unregister-PackageSource.md)
-<span data-ttu-id="ef755-132">등록 된 패키지 소스를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef755-132">Removes a registered package source.</span></span>
+### [<span data-ttu-id="efa15-133">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="efa15-133">Uninstall-Package</span></span>](Uninstall-Package.md)
+<span data-ttu-id="efa15-134">하나 이상의 소프트웨어 패키지를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-134">Uninstalls one or more software packages.</span></span>
+
+### [<span data-ttu-id="efa15-135">Unregister-PackageSource</span><span class="sxs-lookup"><span data-stu-id="efa15-135">Unregister-PackageSource</span></span>](Unregister-PackageSource.md)
+<span data-ttu-id="efa15-136">등록 된 패키지 소스를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="efa15-136">Removes a registered package source.</span></span>
