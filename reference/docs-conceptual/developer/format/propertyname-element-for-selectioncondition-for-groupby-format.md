@@ -1,12 +1,14 @@
 ---
-title: GroupBy (형식)에 대 한 SelectionCondition의 PropertyName 요소 | Microsoft Docs
 ms.date: 09/13/2016
-ms.openlocfilehash: 8ada9a8ca7fbfdba5b2fea1881b2670c56a71d4f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GroupBy의 SelectionCondition에 대한 PropertyName 요소(형식)
+description: GroupBy의 SelectionCondition에 대한 PropertyName 요소(형식)
+ms.openlocfilehash: b89fead6185c88ca03956dc265135833696b91d7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773082"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665671"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-groupby-format"></a>GroupBy의 SelectionCondition에 대한 PropertyName 요소(형식)
 

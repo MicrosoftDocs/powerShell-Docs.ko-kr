@@ -1,12 +1,14 @@
 ---
-title: 온라인 도움말 지원
 ms.date: 09/13/2016
-ms.openlocfilehash: b2d8eae2137e0e564a9baf271962b8669dd5eac5
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 온라인 도움말 지원
+description: 온라인 도움말 지원
+ms.openlocfilehash: 0164b5e6c6c8d66a6ab2467a8adfb7efffe0fe17
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86892866"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645426"
 ---
 # <a name="supporting-online-help"></a>온라인 도움말 지원
 
@@ -18,7 +20,7 @@ PowerShell 3.0부터 `Get-Help` powershell 명령에 대 한 온라인 기능을
 
 PowerShell 3.0에서 업데이트할 수 있는 도움말을 사용 하 여 온라인 도움말에서 여전히 중요 한 역할을 합니다. 유연한 사용자 환경 외에도 온라인 도움말은 업데이트할 수 있는 도움말 항목을 다운로드 하는 데 사용할 수 없는 사용자를 위한 도움말을 제공 합니다.
 
-## <a name="how-get-help--online-works"></a>Get-help-Online 작동 방법
+## <a name="how-get-help--online-works"></a>Get-Help-온라인 작동 방법
 
 사용자가 명령에 대 한 온라인 도움말 항목을 찾을 수 있도록 명령에는 `Get-Help` 사용자의 기본 인터넷 브라우저에서 명령에 대 한 온라인 버전의 도움말 항목을 여는 온라인 매개 변수가 있습니다.
 
@@ -96,7 +98,7 @@ CIM 명령의 경우 CDXML 파일의 **Cmdletmetadata** 요소에 **HelpUri** �
 
 ### <a name="adding-a-helpuri-attribute-to-a-workflow"></a>워크플로에 HelpUri 특성 추가
 
-PowerShell 언어로 작성 된 워크플로의 경우를 추가 **합니다. **워크플로 코드에 대 한 ExternalHelp 주석 지시문입니다. 지시문의 값은 또는로 시작 하는 URI 여야 합니다 `http` `https` .
+PowerShell 언어로 작성 된 워크플로의 경우를 추가 **합니다.** 워크플로 코드에 대 한 ExternalHelp 주석 지시문입니다. 지시문의 값은 또는로 시작 하는 URI 여야 합니다 `http` `https` .
 
 > [!NOTE]
 > HelpUri 속성은 PowerShell의 XAML 기반 워크플로에 대해 지원 되지 않습니다.

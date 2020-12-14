@@ -1,12 +1,14 @@
 ---
-title: Windows PowerShell 콘텐츠 공급자 만들기
 ms.date: 09/13/2016
-ms.openlocfilehash: b4bc0c8d1f8ef9f85bd711fdc2770b54418bbf4a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 콘텐츠 공급자 만들기
+description: Windows PowerShell 콘텐츠 공급자 만들기
+ms.openlocfilehash: 7890f0ab8d1cc7f29bdc077b342bae950cfa7827
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779067"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645354"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Windows PowerShell 콘텐츠 공급자 만들기
 
@@ -90,7 +92,7 @@ public IContentReader GetContentReader(string path)
 
 - 기본적으로이 메서드의 재정의는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 가로 설정 된 경우를 제외 하 고 사용자 로부터 숨겨진 개체에 대 한 판독기를 검색 하면 안 됩니다. `true` 경로가 사용자 및 시스템에서 숨겨진 항목을 나타내는 경우 오류를 작성 해야 합니다 [. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 는로 설정 됩니다. `false`
 
-## <a name="attaching-dynamic-parameters-to-the-get-content-cmdlet"></a>Get Content Cmdlet에 동적 매개 변수 연결
+## <a name="attaching-dynamic-parameters-to-the-get-content-cmdlet"></a>Get-Content Cmdlet에 동적 매개 변수 연결
 
 Cmdlet에는 `Get-Content` 런타임에 동적으로 지정 되는 추가 매개 변수가 필요할 수 있습니다. 이러한 동적 매개 변수를 제공 하려면 Windows PowerShell 콘텐츠 공급자가 Icontentcmdletprovider. [Getcontentreaderdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters) 메서드를 구현 해야 합니다. 이 메서드는 지정 된 경로에서 항목에 대 한 동적 매개 변수를 검색 하 고 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환 합니다. Windows PowerShell 런타임은 반환 된 개체를 사용 하 여 cmdlet에 매개 변수를 추가 합니다.
 
@@ -107,7 +109,7 @@ public object GetContentReaderDynamicParameters(string path)
 
 ## <a name="retrieving-the-content-writer"></a>콘텐츠 기록기를 검색 하는 중
 
-항목에 콘텐츠를 쓰려면 공급자는 [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentwriter*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) `Set-Content` 및 cmdlet을 지원 하기 위해 Icontentcmdletprovider을 구현 해야 합니다 (). `Add-Content` 이 메서드는 지정 된 경로에 있는 항목에 대 한 콘텐츠 작성기를 반환 합니다.
+항목에 콘텐츠를 쓰려면 공급자는 [](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) `Set-Content` 및 cmdlet을 지원 하기 위해 Icontentcmdletprovider을 구현 해야 합니다 (). `Add-Content` 이 메서드는 지정 된 경로에 있는 항목에 대 한 콘텐츠 작성기를 반환 합니다.
 
 다음은이 메서드에 대 한 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) 의 구현입니다 (예를 들어,
 
@@ -142,7 +144,7 @@ public IContentWriter GetContentWriter(string path)
 
 - 기본적으로이 메서드의 재정의는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 를로 설정 하지 않으면 사용자에 게 표시 되지 않는 개체의 기록기를 검색 하지 않아야 합니다. `true` 경로가 사용자 및 시스템에서 숨겨진 항목을 나타내는 경우 오류를 작성 해야 합니다 [. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 는로 설정 됩니다. `false`
 
-## <a name="attaching-dynamic-parameters-to-the-add-content-and-set-content-cmdlets"></a>동적 매개 변수를 추가 내용 및 집합 내용 Cmdlet에 연결
+## <a name="attaching-dynamic-parameters-to-the-add-content-and-set-content-cmdlets"></a>Add-Content 및 Set-Content Cmdlet에 동적 매개 변수 연결
 
 `Add-Content`및 cmdlet에는 `Set-Content` 런타임에 추가 된 추가 동적 매개 변수가 필요할 수 있습니다. 이러한 동적 매개 변수를 제공 하려면 Windows PowerShell 콘텐츠 공급자가 이러한 매개 변수를 처리 하는 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters) 을 구현 해야 합니다. 이 메서드는 지정 된 경로에서 항목에 대 한 동적 매개 변수를 검색 하 고 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환 합니다. Windows PowerShell 런타임은 반환 된 개체를 사용 하 여 cmdlet에 매개 변수를 추가 합니다.
 
@@ -170,7 +172,7 @@ public IContentWriter GetContentWriter(string path)
 
   Icontentcmdletprovider를 호출한 후에는 [ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 가 반환 `true` 되 고, [Clearcontent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) 메서드는 system.object를 호출 해야 합니다. [shouldprocess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 호출 하는 메서드를 호출 해야 합니다. 이 메서드는 사용자에 게 작업을 계속 해야 하는지 여부를 확인 하기 위해 사용자에 게 메시지를 보냅니다. System.object를 호출 하면 잠재적으로 위험한 시스템 수정에 대 한 추가 검사를 수행할 수 있습니다 [.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)
 
-## <a name="attaching-dynamic-parameters-to-the-clear-content-cmdlet"></a>동적 매개 변수를 Clear Content Cmdlet에 연결
+## <a name="attaching-dynamic-parameters-to-the-clear-content-cmdlet"></a>Clear-Content Cmdlet에 동적 매개 변수 연결
 
 Cmdlet에는 `Clear-Content` 런타임에 추가 되는 추가 동적 매개 변수가 필요할 수 있습니다. 이러한 동적 매개 변수를 제공 하려면 Windows PowerShell 콘텐츠 공급자가 이러한 매개 변수를 처리 하는 [Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContentDynamicParameters) 을 구현 해야 합니다. 이 메서드는 지정 된 경로에서 항목에 대 한 매개 변수를 검색 합니다. 이 메서드는 지정 된 경로에서 항목에 대 한 동적 매개 변수를 검색 하 고 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환 합니다. Windows PowerShell 런타임은 반환 된 개체를 사용 하 여 cmdlet에 매개 변수를 추가 합니다.
 

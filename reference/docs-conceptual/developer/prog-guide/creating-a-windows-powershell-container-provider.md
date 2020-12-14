@@ -1,12 +1,14 @@
 ---
-title: Windows PowerShell 컨테이너 공급자 만들기
 ms.date: 09/13/2016
-ms.openlocfilehash: a5bcba425909eb98c010a1ea010cb02b995771f3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 컨테이너 공급자 만들기
+description: Windows PowerShell 컨테이너 공급자 만들기
+ms.openlocfilehash: 999bd69e3c16bfc0a74519986654ec15bbc0da6d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787209"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645356"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Windows PowerShell 컨테이너 공급자 만들기
 
@@ -122,7 +124,7 @@ protected override void GetChildItems(string path, bool recurse)
 
 - [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 을 구현 하는 것은 순환 링크가 있는 경우 무한 재귀를 방지 하는 것입니다. 이러한 조건을 반영 하려면 적절 한 종료 예외를 throw 해야 합니다.
 
-## <a name="attaching-dynamic-parameters-to-the-get-childitem-cmdlet"></a>Get ChildItem Cmdlet에 동적 매개 변수 연결
+## <a name="attaching-dynamic-parameters-to-the-get-childitem-cmdlet"></a>Get-ChildItem Cmdlet에 동적 매개 변수 연결
 
 경우에 따라 `Get-ChildItem` Containercmdletprovider. [Getchilditems *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) 를 호출 하는 cmdlet에는 런타임에 동적으로 지정 되는 추가 매개 변수가 필요 합니다. 이러한 동적 매개 변수를 제공 하려면 Windows PowerShell 컨테이너 공급자가 [Containercmdletprovider. Getchilditemsdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) 메서드를 구현 해야 합니다. 이 메서드는 지정 된 경로에서 항목에 대 한 동적 매개 변수를 검색 하 고 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환 합니다. Windows PowerShell 런타임은 반환 된 개체를 사용 하 여 cmdlet에 매개 변수를 추가 합니다 `Get-ChildItem` .
 
@@ -197,7 +199,7 @@ protected override void GetChildNames(string path,
 
 - [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) 을 구현 하는 것은 순환 링크가 있는 경우 무한 재귀를 방지 하는 것입니다. 이러한 조건을 반영 하려면 적절 한 종료 예외를 throw 해야 합니다.
 
-## <a name="attaching-dynamic-parameters-to-the-get-childitem-cmdlet-name"></a>동적 매개 변수를 Get ChildItem Cmdlet (이름)에 연결
+## <a name="attaching-dynamic-parameters-to-the-get-childitem-cmdlet-name"></a>동적 매개 변수를 Get-ChildItem Cmdlet (이름)에 연결
 
 Cmdlet에 `Get-ChildItem` 매개 변수를 사용 하는 경우 `Name` 런타임에 동적으로 지정 되는 추가 매개 변수가 필요 합니다. 이러한 동적 매개 변수를 제공 하려면 Windows PowerShell 컨테이너 공급자가 [Containercmdletprovider. Getchildnamesdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) 메서드를 구현 해야 합니다. 이 메서드는 지정 된 경로에서 항목에 대 한 동적 매개 변수를 검색 하 고 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환 합니다. Windows PowerShell 런타임은 반환 된 개체를 사용 하 여 cmdlet에 매개 변수를 추가 합니다 `Get-ChildItem` .
 
@@ -229,7 +231,7 @@ Cmdlet에 `Get-ChildItem` 매개 변수를 사용 하는 경우 `Name` 런타임
 
   Containercmdletprovider를 호출한 후에는 [ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 가 반환 `true` 되 고, [Renameitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) 메서드는 system.object를 호출 해야 합니다. [shouldprocess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 메서드를 호출 하는 메서드를 호출 해야 합니다. 이 메서드는 사용자에 게 확인 메시지를 보내 작업을 계속 해야 하는 경우 추가 피드백을 허용 하도록 메시지를 보냅니다. 공급자는 잠재적으로 위험한 시스템 수정에 대 한 추가 검사로 [계속 합니다.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)
 
-## <a name="attaching-dynamic-parameters-to-the-rename-item-cmdlet"></a>항목 이름 바꾸기 Cmdlet에 동적 매개 변수 연결
+## <a name="attaching-dynamic-parameters-to-the-rename-item-cmdlet"></a>Rename-Item Cmdlet에 동적 매개 변수 연결
 
 경우에 따라 cmdlet에는 `Rename-Item` 런타임에 동적으로 지정 되는 추가 매개 변수가 필요 합니다. 이러한 동적 매개 변수를 제공 하려면 Windows PowerShell 컨테이너 공급자가 [Containercmdletprovider. Renameitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItemDynamicParameters) 메서드를 구현 해야 합니다. 이 메서드는 지정 된 경로에서 항목에 대 한 매개 변수를 검색 하 고 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환 합니다. Windows PowerShell 런타임은 반환 된 개체를 사용 하 여 cmdlet에 매개 변수를 추가 합니다 `Rename-Item` .
 
@@ -275,7 +277,7 @@ protected override void NewItem( string path, string type, object newItemValue )
 
 - [Containercmdletprovider. Newitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) 메서드를 구현 하면 데이터 저장소를 변경 하기 전에를 호출 하 고 해당 반환 값을 확인 [해야 하는](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 경우를 들 수 있습니다. Containercmdletprovider를 호출한 후에는 [ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 가 true를 반환 하 고, [Newitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) [메서드는 잠재적](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 으로 위험한 시스템 수정에 대 한 추가 검사로 메서드를 호출 해야 하는 경우를 들 수 있습니다 (예를 들어).
 
-## <a name="attaching-dynamic-parameters-to-the-new-item-cmdlet"></a>새 항목 Cmdlet에 동적 매개 변수 연결
+## <a name="attaching-dynamic-parameters-to-the-new-item-cmdlet"></a>New-Item Cmdlet에 동적 매개 변수 연결
 
 경우에 따라 cmdlet에는 `New-Item` 런타임에 동적으로 지정 되는 추가 매개 변수가 필요 합니다. 이러한 동적 매개 변수를 제공 하려면 컨테이너 공급자가 Containercmdletprovider. n e t [parameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItemDynamicParameters) 메서드를 구현 해야 합니다. 이 메서드는 지정 된 경로에서 항목에 대 한 매개 변수를 검색 하 고 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환 합니다. Windows PowerShell 런타임은 반환 된 개체를 사용 하 여 cmdlet에 매개 변수를 추가 합니다 `New-Item` .
 
@@ -301,9 +303,9 @@ protected override void NewItem( string path, string type, object newItemValue )
 
 - [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 을 구현 하는 것은 순환 링크가 있는 경우 무한 재귀를 방지 하는 것입니다. 이러한 조건을 반영 하려면 적절 한 종료 예외를 throw 해야 합니다.
 
-- [Containercmdletprovider. Removeitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 메서드를 구현 하면 데이터 저장소를 변경 하기 전에를 호출 하 고 해당 반환 값을 확인 [해야 하는](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 경우를 들 수 있습니다. Containercmdletprovider에 대 한 호출 후에는 [ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 가 반환 됩니다. `true` [Removeitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 메서드는 잠재적으로 위험한 시스템 수정에 대 한 추가 검사로 서 메서드를 호출 해야 하 [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 는 경우를 들 수 있습니다.
+- [Containercmdletprovider. Removeitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 메서드를 구현 하면 데이터 저장소를 변경 하기 전에를 호출 하 고 해당 반환 값을 확인 [해야 하는](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 경우를 들 수 있습니다. Containercmdletprovider에 대 한 호출 후에는 [ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 가 반환 됩니다. `true` [Removeitem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) 메서드는 잠재적으로 위험한 시스템 수정에 대 한 추가 검사로 서 메서드를 호출 해야 하 [](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 는 경우를 들 수 있습니다.
 
-## <a name="attaching-dynamic-parameters-to-the-remove-item-cmdlet"></a>항목을 제거 하는 Cmdlet에 동적 매개 변수 연결
+## <a name="attaching-dynamic-parameters-to-the-remove-item-cmdlet"></a>Remove-Item Cmdlet에 동적 매개 변수 연결
 
 경우에 따라 cmdlet에는 `Remove-Item` 런타임에 동적으로 지정 되는 추가 매개 변수가 필요 합니다. 이러한 동적 매개 변수를 제공 하려면 컨테이너 공급자가 이러한 매개 변수를 처리 하는 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItemDynamicParameters) 을 구현 해야 합니다. 이 메서드는 지정 된 경로에서 항목에 대 한 동적 매개 변수를 검색 하 고 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환 합니다. Windows PowerShell 런타임은 반환 된 개체를 사용 하 여 cmdlet에 매개 변수를 추가 합니다 `Remove-Item` .
 
@@ -330,7 +332,7 @@ protected override bool HasChildItems( string path )
 
 Containercmdletprovider의 구현에는 다음 조건이 적용 될 수 있습니다. [*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.HasChildItems):
 
-- 컨테이너 공급자가 흥미로운 탑재 지점이 포함 된 루트를 노출 하는 경우 [System.Management.Automation.Provider.Containercmdletprovider.Haschilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.HasChildItems) `true` 경로에 대해 null 또는 빈 문자열이 전달 되 면 Containercmdletprovider의 구현이을 반환 해야 합니다.
+- 컨테이너 공급자가 흥미로운 탑재 지점이 포함 된 루트를 노출 하는 경우 [](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.HasChildItems) `true` 경로에 대해 null 또는 빈 문자열이 전달 되 면 Containercmdletprovider의 구현이을 반환 해야 합니다.
 
 ## <a name="copying-items"></a>항목 복사
 
@@ -350,9 +352,9 @@ Containercmdletprovider의 구현에는 다음 조건이 적용 될 수 있습�
 
 - [ContainerCmdletProvider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 를 구현 하는 것은 순환 링크가 있는 경우 무한 재귀를 방지 하는 것입니다. 이러한 조건을 반영 하려면 적절 한 종료 예외를 throw 해야 합니다.
 
-- [ContainerCmdletProvider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 메서드를 구현 하면 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 것도 가능 해야 합니다. ContainerCmdletProvider를 호출한 후에는 [ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 가 true를 반환 하 고, 잠재적으로 위험한 시스템 수정에 대 한 추가 확인으로 [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) [메서드를](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 호출 해야 하는 경우를 들 수 있습니다 (예를 들어) 합니다. 이러한 메서드를 호출 하는 방법에 대 한 자세한 내용은 [항목 이름 바꾸기](#renaming-items)를 참조 하세요.
+- [ContainerCmdletProvider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) 메서드를 구현 하면 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당 반환 값을 확인](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 하는 것도 가능 해야 합니다. ContainerCmdletProvider를 호출한 후에는 [ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 가 true를 반환 하 고, 잠재적으로 위험한 시스템 수정에 대 한 추가 확인으로 [](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) [메서드를](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 호출 해야 하는 경우를 들 수 있습니다 (예를 들어) 합니다. 이러한 메서드를 호출 하는 방법에 대 한 자세한 내용은 [항목 이름 바꾸기](#renaming-items)를 참조 하세요.
 
-## <a name="attaching-dynamic-parameters-to-the-copy-item-cmdlet"></a>복사 항목 Cmdlet에 동적 매개 변수 연결
+## <a name="attaching-dynamic-parameters-to-the-copy-item-cmdlet"></a>Copy-Item Cmdlet에 동적 매개 변수 연결
 
 경우에 따라 cmdlet에는 `Copy-Item` 런타임에 동적으로 지정 되는 추가 매개 변수가 필요 합니다. 이러한 동적 매개 변수를 제공 하려면 Windows PowerShell 컨테이너 공급자가 이러한 매개 변수를 처리 하는 [Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) 을 구현 해야 합니다. 이 메서드는 지정 된 경로에서 항목에 대 한 매개 변수를 검색 하 고 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환 합니다. Windows PowerShell 런타임은 반환 된 개체를 사용 하 여 cmdlet에 매개 변수를 추가 합니다 `Copy-Item` .
 

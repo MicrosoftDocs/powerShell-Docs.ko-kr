@@ -2,16 +2,16 @@
 description: PSReadLine은 PowerShell 콘솔에서 향상 된 명령줄 편집 환경을 제공 합니다.
 keywords: PowerShell
 Locale: en-US
-ms.date: 02/10/2020
+ms.date: 11/16/2020
 online version: https://docs.microsoft.com/powershell/module/psreadline/about/about_psreadline?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: PSReadLine 정보
-ms.openlocfilehash: ad6e85a30f866cb332c89a4c36f42231f511f5ae
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: 25fc3a9a814728057b1ebc7e721d3fba84ae72c2
+ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93224921"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94692312"
 ---
 # <a name="psreadline"></a>PSReadLine
 
@@ -34,6 +34,8 @@ PSReadLine 2.0은 PowerShell 콘솔에 대 한 강력한 명령줄 편집 환경
 - Bash 스타일 완성 (Cmd 모드에서는 선택 사항, Emacs 모드에서는 기본값)
 - Emacs yank/kill
 - PowerShell 토큰 기반 "word" 이동 및 중지
+
+PSReadLine에는 PowerShell 3.0 이상 및 콘솔 호스트가 필요 합니다. PowerShell ISE에서는 작동 하지 않습니다. Visual Studio Code 콘솔에서 작동 합니다.
 
 다음 함수는 **[PSConsoleReadLine]** 클래스에서 사용할 수 있습니다.
 
@@ -1285,10 +1287,6 @@ bool TryGetArgAsInt(System.Object arg, [ref] int numericArg,
 ```
 
 ## <a name="note"></a>참고
-
-### <a name="powershell-compatibility"></a>POWERSHELL 호환성
-
-PSReadLine에는 PowerShell 3.0 이상 및 콘솔 호스트가 필요 합니다. PowerShell ISE에서는 작동 하지 않습니다. Visual Studio Code 콘솔에서 작동 합니다.
 
 ### <a name="command-history"></a>명령 기록
 

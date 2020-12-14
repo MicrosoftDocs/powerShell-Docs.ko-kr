@@ -2,16 +2,16 @@
 description: PSReadLine은 PowerShell 콘솔에서 향상 된 명령줄 편집 환경을 제공 합니다.
 keywords: PowerShell
 Locale: en-US
-ms.date: 02/10/2020
+ms.date: 11/16/2020
 online version: https://docs.microsoft.com/powershell/module/psreadline/about/about_psreadline?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: PSReadLine 정보
-ms.openlocfilehash: 1188b8dc0b4099a7c1dcc472e3b02c2d4fa908bc
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 6d52bb04118914a9ccca5d3442a9d1915c1c2818
+ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93220809"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94692278"
 ---
 # <a name="psreadline"></a>PSReadLine
 
@@ -23,7 +23,7 @@ PSReadLine은 PowerShell 콘솔에서 향상 된 명령줄 편집 환경을 제�
 
 ## <a name="long-description"></a>자세한 설명
 
-PSReadLine 2.0은 PowerShell 콘솔에 대 한 강력한 명령줄 편집 환경을 제공 합니다. 이 콘솔은 다음과 같은 기능을 제공합니다.
+PSReadLine 2.1은 PowerShell 콘솔에 대 한 강력한 명령줄 편집 환경을 제공 합니다. 이 콘솔은 다음과 같은 기능을 제공합니다.
 
 - 명령줄의 구문 색 지정
 - 구문 오류를 시각적으로 표시 합니다.
@@ -34,11 +34,41 @@ PSReadLine 2.0은 PowerShell 콘솔에 대 한 강력한 명령줄 편집 환경
 - Bash 스타일 완성 (Cmd 모드에서는 선택 사항, Emacs 모드에서는 기본값)
 - Emacs yank/kill
 - PowerShell 토큰 기반 "word" 이동 및 중지
+- 예측 IntelliSense
 
-다음 함수는 **[PSConsoleReadLine]** 클래스에서 사용할 수 있습니다.
+PSReadLine에는 PowerShell 3.0 이상 및 콘솔 호스트가 필요 합니다. PowerShell ISE에서는 작동 하지 않습니다. Visual Studio Code 콘솔에서 작동 합니다.
+
+PSReadLine 2.1.0는 PowerShell 7.1과 함께 제공 되며, 지원 되는 모든 버전의 PowerShell에서 지원 됩니다. PowerShell 갤러리에서 설치할 수 있습니다.
+지원 되는 버전의 PowerShell에서 PSReadLine 2.1.0을 설치 하려면 다음 명령을 실행 합니다.
+
+```powershell
+Install-Module -Name PSReadLine -RequiredVersion 2.1.0
+```
 
 > [!NOTE]
 > PowerShell 7.0부터 PowerShell은 화면 판독기 프로그램이 검색 된 경우 Windows에서 PSReadLine 자동 로드를 건너뜁니다. 현재 PSReadLine은 화면 판독기에서 제대로 작동 하지 않습니다. Windows에서 PowerShell 7.0의 기본 렌더링 및 형식이 제대로 작동 합니다. 필요한 경우 모듈을 수동으로 로드할 수 있습니다.
+
+## <a name="predictive-intellisense"></a>예측 IntelliSense
+
+예측 IntelliSense는 사용자가 명령을 성공적으로 완료 하는 데 도움이 되는 탭 완성 이라는 개념에 추가 됩니다. 사용자가 사용자 기록과 추가 도메인 특정 플러그인의 일치 하는 예측에 따라 전체 명령을 검색, 편집 및 실행할 수 있습니다.
+
+### <a name="enable-predictive-intellisense"></a>예측 IntelliSense 사용
+
+예측 IntelliSense는 기본적으로 사용 되지 않습니다. 예측을 사용 하도록 설정 하려면 다음 명령을 실행 하기만 하면 됩니다.
+
+```powershell
+Set-PSReadLineOption -PredictionSource History
+```
+
+**PredictionSource** 매개 변수는 도메인 특정 요구 사항 및 사용자 지정 요구 사항에 대 한 플러그 인도 허용할 수 있습니다.
+
+예측 IntelliSense를 사용 하지 않도록 설정 하려면 다음을 실행 합니다.
+
+```powershell
+Set-PSReadLineOption -PredictionSource None
+```
+
+다음 함수는 **[PSConsoleReadLine]** 클래스에서 사용할 수 있습니다.
 
 ## <a name="basic-editing-functions"></a>기본 편집 함수
 
@@ -1104,6 +1134,24 @@ ShellNextWord를 사용 하 여 다음 단어를 포함 하도록 현재 선택 
 
 - Emacs `<Ctrl+@>`
 
+## <a name="predictive-intellisense-functions"></a>예측 IntelliSense 함수
+
+> [!NOTE]
+> 이러한 함수를 사용 하려면 예측 IntelliSense를 사용 하도록 설정 해야 합니다.
+
+### <a name="acceptnextwordsuggestion"></a>AcceptNextWordSuggestion
+
+예측 IntelliSense에서 인라인 제안의 다음 단어를 허용 합니다.
+이 함수 <kbd></kbd> + 는 다음 명령을 실행 하 여 Ctrl<kbd>F</kbd> 를 사용 하 여 바인딩할 수 있습니다.
+
+```powershell
+Set-PSReadLineKeyHandler -Chord "Ctrl+f" -Function ForwardWord
+```
+
+### <a name="acceptsuggestion"></a>AcceptSuggestion
+
+커서가 현재 줄의 끝에 있을 때 <kbd>오른쪽 화살표</kbd> 를 눌러 예측 IntelliSense의 현재 인라인 제안을 허용 합니다.
+
 ## <a name="search-functions"></a>검색 함수
 
 ### <a name="charactersearch"></a>CharacterSearch
@@ -1342,10 +1390,6 @@ bool TryGetArgAsInt(System.Object arg, [ref] int numericArg,
 
 ## <a name="note"></a>참고
 
-### <a name="powershell-compatibility"></a>POWERSHELL 호환성
-
-PSReadLine에는 PowerShell 3.0 이상 및 콘솔 호스트가 필요 합니다. PowerShell ISE에서는 작동 하지 않습니다. Visual Studio Code 콘솔에서 작동 합니다.
-
 ### <a name="command-history"></a>명령 기록
 
 PSReadLine은 명령줄에서 입력 한 모든 명령 및 데이터를 포함 하는 기록 파일을 유지 관리 합니다. 여기에는 암호를 비롯 한 중요 한 데이터가 포함 될 수 있습니다. 예를 들어 cmdlet을 사용 하는 경우 `ConvertTo-SecureString` 암호는 일반 텍스트로 기록 파일에 기록 됩니다. 기록 파일은 라는 파일입니다 `$($host.Name)_history.txt` . Windows 시스템에서 기록 파일은에 저장 됩니다 `$env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine` . Windows가 아닌 시스템에서 기록 파일은 또는에 저장 됩니다 `$env:XDG_DATA_HOME/powershell/PSReadLine` `$env:HOME/.local/share/powershell/PSReadLine` .
@@ -1359,4 +1403,3 @@ GitHub 페이지에서 끌어오기 요청을 제출 하거나 피드백을 제�
 ## <a name="see-also"></a>참고 항목
 
 PSReadLine은 GNU [readline](https://tiswww.case.edu/php/chet/readline/rltop.html) 라이브러리의 영향을 많이 받습니다.
-

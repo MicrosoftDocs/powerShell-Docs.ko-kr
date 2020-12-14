@@ -1,15 +1,14 @@
 ---
-title: Windows PowerShell 항목 공급자 만들기 | Microsoft Docs
 ms.date: 09/13/2016
-helpviewer_keywords:
-- item providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], item provider
-ms.openlocfilehash: b00af7d6fbb75b08027dc18ee6647472d23b83b7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell 항목 공급자 만들기
+description: Windows PowerShell 항목 공급자 만들기
+ms.openlocfilehash: f98ea90bf9ce7222076a91fb26dc42977c70bff2
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779045"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645183"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Windows PowerShell 항목 공급자 만들기
 
@@ -63,7 +62,7 @@ Windows PowerShell 항목 공급자는 System.object를 구현 하 여 전달 �
 
 - 이 메서드의 구현은 항목이 사용자에 게 표시 될 수 있도록 하는 항목에 대 한 모든 형태의 액세스를 처리 해야 합니다. 예를 들어, 사용자가 파일 시스템 공급자 (Windows PowerShell에서 제공)를 통해 파일에 대 한 쓰기 권한을가지고 있지만 읽기 액세스 권한이 없는 경우 파일은 여전히 존재 하 고 System.object를 반환 합니다. [Itemexists *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) 를 반환 `true` 합니다. 구현에서 부모 항목을 확인 하 여 자식 항목을 열거할 수 있는지 여부를 확인 해야 할 수 있습니다.
 
-## <a name="attaching-dynamic-parameters-to-the-test-path-cmdlet"></a>동적 매개 변수를 테스트 경로 Cmdlet에 연결
+## <a name="attaching-dynamic-parameters-to-the-test-path-cmdlet"></a>Test-Path Cmdlet에 동적 매개 변수 연결
 
 경우에 따라 `Test-Path` [system.object](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) 를 호출 하는 cmdlet에는 런타임에 동적으로 지정 되는 추가 매개 변수가 필요 합니다. 이러한 동적 매개 변수를 제공 하려면 Windows PowerShell 항목 공급자가 [Itemexistsdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExistsDynamicParameters) 메서드를 구현 해야 합니다. 이 메서드는 지정 된 경로에서 항목에 대 한 동적 매개 변수를 검색 하 고 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환 합니다. Windows PowerShell 런타임은 반환 된 개체를 사용 하 여 cmdlet에 매개 변수를 추가 합니다 `Test-Path` .
 
@@ -87,7 +86,7 @@ Windows PowerShell 항목 공급자는 System.object를 구현 하 여 전달 �
 
 - 기본적으로이 메서드를 재정의 하면 일반적으로 사용자에 게 표시 되는 개체를 검색 하면 안 됩니다 .이 경우에는 [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 를로 설정 해야 합니다. `true` 예를 들어 파일 시스템 공급자에 대 한 [Getitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) 메서드는 숨겨진 파일 또는 시스템 파일에 [대해 system.object를 호출 하기](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) 전에 [system.object를](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) 확인 하 고, 그렇지 않은 경우에는 system.object * 속성을 확인 하는 데 사용할 수 있습니다.
 
-## <a name="attaching-dynamic-parameters-to-the-get-item-cmdlet"></a>동적 매개 변수를 Get Item Cmdlet에 연결
+## <a name="attaching-dynamic-parameters-to-the-get-item-cmdlet"></a>Get-Item Cmdlet에 동적 매개 변수 연결
 
 경우에 따라 cmdlet에는 `Get-Item` 런타임에 동적으로 지정 되는 추가 매개 변수가 필요 합니다. 이러한 동적 매개 변수를 제공 하려면 Windows PowerShell 항목 공급자가 [system.web. Itemcmdletprovider *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItemDynamicParameters) 메서드를 구현 해야 합니다. 이 메서드는 지정 된 경로에서 항목에 대 한 동적 매개 변수를 검색 하 고 cmdlet 클래스 또는 [Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) 개체와 유사한 구문 분석 특성이 있는 속성 및 필드가 있는 개체를 반환 합니다. Windows PowerShell 런타임은 반환 된 개체를 사용 하 여 cmdlet에 매개 변수를 추가 합니다 `Get-Item` .
 
@@ -99,7 +98,7 @@ Windows PowerShell 항목 공급자는 System.object를 구현 하 여 전달 �
 
 항목을 설정 하려면 Windows PowerShell 항목 공급자가 cmdlet의 호출을 지원 하도록 [Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 메서드를 재정의 해야 합니다. `Set-Item` 이 메서드는 지정 된 경로에 있는 항목의 값을 설정 합니다.
 
-이 공급자는 [Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 메서드에 대 한 재정의를 제공 하지 않습니다 (예를 들어). 그러나 다음은이 메서드의 기본 구현입니다.
+이 공급자는  [Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 메서드에 대 한 재정의를 제공 하지 않습니다 (예를 들어). 그러나 다음은이 메서드의 기본 구현입니다.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidersetitem](Msh_samplestestcmdlets#testprovidersetitem)]  -->
 
@@ -113,7 +112,7 @@ Windows PowerShell 항목 공급자는 System.object를 구현 하 여 전달 �
 
 - [Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 메서드를 구현 하는 경우에는 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 반환 값이 있는지 확인 해야 합니다. 이 메서드는 데이터 저장소가 변경 될 때 (예: 파일 삭제) 작업 실행을 확인 하는 데 사용 됩니다. [System.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 메서드는 사용자에 게 변경할 리소스의 이름을 보냅니다. Windows PowerShell 런타임은 어떤 명령줄 설정이 나 표시 되어야 하는 기본 설정 변수를 고려 하 여 사용자에 게 변경할 수 있습니다.
 
-  Setitem * 메서드는 [system.object를 호출한](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 후에를 호출 하 여를 호출한 후에는 `true` [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 를 [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 호출 해야 합니다 .이 메서드를 호출 하는 경우에는 system.object를 호출 해야 합니다. 이 메서드는 사용자에 게 작업을 계속 해야 하는지 여부를 확인 하기 위해 사용자에 게 메시지를 보냅니다. System.object를 호출 하면 잠재적으로 위험한 시스템 수정에 대 한 추가 검사를 수행할 수 있습니다 [.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)
+  Setitem * 메서드는 [system.object를 호출한](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 후에를 호출 하 여를 호출한 후에는 `true` [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 를 [](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 호출 해야 합니다 .이 메서드를 호출 하는 경우에는 system.object를 호출 해야 합니다. 이 메서드는 사용자에 게 작업을 계속 해야 하는지 여부를 확인 하기 위해 사용자에 게 메시지를 보냅니다. System.object를 호출 하면 잠재적으로 위험한 시스템 수정에 대 한 추가 검사를 수행할 수 있습니다 [.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)
 
 ## <a name="retrieving-dynamic-parameters-for-setitem"></a>SetItem에 대 한 동적 매개 변수 검색
 
@@ -141,7 +140,7 @@ Windows PowerShell 항목 공급자는 System.object를 구현 하 여 전달 �
 
 - [Setitem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 메서드를 구현 하는 경우에는 데이터 저장소를 변경 하기 전에 해당 반환 값을 확인 [하 고 해당](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 반환 값이 있는지 확인 해야 합니다. 이 메서드는 데이터 저장소가 변경 될 때 (예: 파일 삭제) 작업 실행을 확인 하는 데 사용 됩니다. [System.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 는 Windows PowerShell 런타임을 사용 하 여 사용자에 게 변경할 리소스의 이름을 보내고, 표시 되는 항목을 결정 하는 데 필요한 명령줄 설정 또는 기본 변수를 처리 합니다.
 
-  Setitem * 메서드는 [system.object를 호출한](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 후에를 호출 하 여를 호출한 후에는 `true` [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 를 [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 호출 해야 합니다 .이 메서드를 호출 하는 경우에는 system.object를 호출 해야 합니다. 이 메서드는 사용자에 게 작업을 계속 해야 하는지 여부를 확인 하기 위해 사용자에 게 메시지를 보냅니다. System.object를 호출 하면 잠재적으로 위험한 시스템 수정에 대 한 추가 검사를 수행할 수 있습니다 [.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)
+  Setitem * 메서드는 [system.object를 호출한](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) 후에를 호출 하 여를 호출한 후에는 `true` [system.object](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) 를 [](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) 호출 해야 합니다 .이 메서드를 호출 하는 경우에는 system.object를 호출 해야 합니다. 이 메서드는 사용자에 게 작업을 계속 해야 하는지 여부를 확인 하기 위해 사용자에 게 메시지를 보냅니다. System.object를 호출 하면 잠재적으로 위험한 시스템 수정에 대 한 추가 검사를 수행할 수 있습니다 [.](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue)
 
 ## <a name="retrieve-dynamic-parameters-for-clearitem"></a>ClearItem에 대 한 동적 매개 변수 검색
 
