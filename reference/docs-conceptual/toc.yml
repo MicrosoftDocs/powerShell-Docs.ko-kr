@@ -126,7 +126,7 @@
           href: whats-new/what-s-new-in-powershell-71.md
         - name: PowerShell 7.0의 새로운 기능
           href: whats-new/what-s-new-in-powershell-70.md
-    - name: PowerShell Core 6.x의 새로운 기능
+    - name: PowerShell Core 6.x 릴리스 정보
       items:
         - name: PowerShell Core 6.2의 새로운 기능
           href: whats-new/what-s-new-in-powershell-core-62.md
@@ -590,8 +590,6 @@
           href: community/contributing/pull-requests.md
         - name: PowerShell-Docs 스타일 가이드
           href: community/contributing/powershell-style-guide.md
-        - name: cmdlet 참조 편집
-          href: community/contributing/editing-cmdlet-ref.md
         - name: 추가 리소스
           items:
             - name: 편집 검사 목록
