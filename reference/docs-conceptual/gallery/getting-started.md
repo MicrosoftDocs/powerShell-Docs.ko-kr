@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 title: PowerShell 갤러리 시작
 description: 이 문서에서는 PowerShell 갤러리 및 PowerShellGet cmdlet 사용을 시작하는 방법을 설명합니다.
-ms.openlocfilehash: 02d84c64e39245b2a16c03029982796a74301bd6
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: a5045e4ecee2eb8bc9aa373a6b8ec3a940b4de33
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661424"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913284"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>PowerShell 갤러리 시작
 
@@ -90,10 +90,14 @@ PowerShell 갤러리에서 설치한 모듈을 찾으려면 [Get-InstalledModule
 PowerShell 갤러리는 다음 호스트 이름을 사용합니다.
 
 - `psg-prod-eastus.azureedge.net` - CDN 호스트 이름
+- `az818661.vo.msecnd.net` - CDN 호스트 이름
 - `devopsgallerystorage.blob.core.windows.net` - 스토리지 계정 호스트 이름
 - `*.powershellgallery.com` - 웹 사이트
+- `go.microsoft.com` - 리디렉션 서비스
 
 이러한 호스트 이름은 네트워크 액세스를 제어하는 허용 목록에 추가해야 합니다.
+
+[!INCLUDE [TLS 1.2 Requirement](../../includes/tls-gallery.md)]
 
 [Find-DscResource]: /powershell/module/powershellget/Find-DscResource
 [Find-Module]: /powershell/module/powershellget/Find-Module

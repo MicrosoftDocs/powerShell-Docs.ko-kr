@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 12/01/2020
 title: 갤러리 관리자에게 문의
 description: 이 문서에서는 PowerShell 갤러리 관리자에게 문의하는 방법과 문의해야 하는 경우를 설명합니다.
-ms.openlocfilehash: 500fff8ccc8f595d92b66e79c64ebf5e66185313
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 6e3dccc44242e451fc6062aad6b8ae5a0ca54a9d
+ms.sourcegitcommit: 62282bb9c36fea3b4290b9263c1cd8e9ac216e29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661176"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96470369"
 ---
 # <a name="contact-gallery-administrators"></a>갤러리 관리자에게 문의
 
@@ -25,4 +25,4 @@ ms.locfileid: "92661176"
 
 1. cgadmin@microsoft.com으로 전자 메일을 보내 주시기 바랍니다.
 1. 패키지 남용을 신고하려면 왼쪽 패널의 패키지 정보 아래에서 신고하기 링크를 사용하세요.
-1. 갤러리와 관련된 다른 일반적인 질문은 [UserVoice](http://windowsserver.uservoice.com/forums/301869-powershell)에 제출하세요.
+1. 갤러리와 관련된 다른 일반적인 질문은 GitHub의 [PowerShell 갤러리 문제](https://github.com/PowerShell/PowerShellGallery/issues) 페이지에 질문을 제출하세요.

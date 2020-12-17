@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d94024926a8ff8c33df08b4a8b58e9f8b0430f9b
-ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
+ms.openlocfilehash: 61a70db9ae7a38d6731f1cefb011072c12d1e39a
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239884"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95514918"
 ---
 # <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 오픈 소스 준수 사항
 
@@ -34,9 +34,9 @@ ms.locfileid: "93239884"
 - `assets` - 설명서에 연결된 다운로드 가능한 파일이 포함되어 있습니다.
 - `reference` - [docs.microsoft.com]([https://docs.microsoft.com/powershell/scripting/)에 게시된 설명서가 포함되어 있습니다. 여기에는 참조 콘텐츠와 개념 콘텐츠가 모두 포함됩니다.
   - `5.1` - PowerShell 5.1에 대한 cmdlet 참조 및 정보 항목이 포함되어 있습니다.
-  - `6` - PowerShell 6에 대한 cmdlet 참조 및 정보 항목이 포함되어 있습니다.
   - `7.0` - PowerShell 7.0에 대한 cmdlet 참조 및 정보 항목이 포함되어 있습니다.
   - `7.1` - PowerShell 7.1에 대한 cmdlet 참조 및 정보 항목이 포함되어 있습니다.
+  - `7.2` - PowerShell 7.2(미리 보기)에 대한 cmdlet 참조 및 정보 항목이 포함되어 있습니다.
   - `bread` - 이동 경로 탐색에 사용되는 TOC가 포함되어 있습니다.
   - `docs-conceptual` - Docs 사이트에 게시된 개념 문서가 포함되어 있습니다. 일반적으로 폴더 구조는 TOC(목차)를 미러링합니다.
   - `mapping` - 빌드 시스템에서 사용되는 버전 매핑 구성이 포함되어 있습니다.

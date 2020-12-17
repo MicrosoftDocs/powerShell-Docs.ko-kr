@@ -2,12 +2,12 @@
 title: PowerShell 7 모듈 호환성
 ms.date: 02/03/2020
 description: 이 문서에는 다른 Microsoft 제품에 대한 Powershell 모듈이 게시된 PowerShell 7의 상태가 나열되어 있습니다.
-ms.openlocfilehash: f845b33881c93fa076d97adf101f4f3e006df73b
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: 718ba0f502a23bc2c2a9268d65d3b8129de0af49
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501629"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661378"
 ---
 # <a name="powershell-7-module-compatibility"></a>PowerShell 7 모듈 호환성
 
@@ -75,7 +75,7 @@ Windows 10에서는 Windows 관리 모듈이 **Windows 선택적 기능** 또는
 | AppBackgroundTask                  | 기본적으로 호환                  | Windows 10 1903 이상 버전                   |
 | AppLocker                          | 호환성 계층으로 테스트되지 않음    |                                    |
 | AppvClient                         | 호환성 계층으로 테스트되지 않음    |                                    |
-| Appx                               | 기본적으로 호환                  | Windows Server 1809 이상 버전<br>Windows 10 1809 이상 버전 |
+| Appx                               | 기본적으로 호환**                | Windows Server 1809 이상 버전<br>Windows 10 1809 이상 버전<br>** PowerShell 7.1과 함께 호환성 계층을 사용해야 합니다. |
 | AssignedAccess                     | 기본적으로 호환                  | Windows 10 1809 이상 버전                   |
 | BestPractices                      | 호환성 계층에서 지원되지 않음 |                                    |
 | BitLocker                          | 기본적으로 호환                  | BitLocker가 있는 Windows Server 1809 이상 버전<br>Windows 10 1809 이상 버전 |

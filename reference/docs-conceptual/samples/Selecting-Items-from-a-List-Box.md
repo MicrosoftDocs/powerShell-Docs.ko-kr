@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 목록 상자에서 항목 선택
 description: 이 문서에서는 Windows PowerShell의 .NET Framework 양식 작성 기능을 사용하여 목록 상자 컨트롤을 만드는 방법을 보여줍니다.
-ms.openlocfilehash: cfd6110a9cfcc3cea891d68d8ce7be5b332a949a
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: d6f881f0b92f294da105ae7df5e25e8c20ce5094
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501051"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391241"
 ---
 # <a name="selecting-items-from-a-list-box"></a>목록 상자에서 항목 선택
 
@@ -131,7 +131,7 @@ $label.Text = 'Please select a computer:'
 $form.Controls.Add($label)
 ```
 
-사용자가 레이블 텍스트에 설명된 정보를 입력할 수 있는 컨트롤(여기서는 목록 상자)을 추가합니다. 세부적인 제어를 위해 목록 상자 이외에 다른 여러 컨트롤을 추가할 수 있습니다. 자세한 내용은 MSDN에서 [System.Windows.Forms 네임스페이스](/dotnet/api/system.windows.forms)를 참조하세요.
+사용자가 레이블 텍스트에 설명된 정보를 입력할 수 있는 컨트롤(여기서는 목록 상자)을 추가합니다. 세부적인 제어를 위해 목록 상자 이외에 다른 여러 컨트롤을 추가할 수 있습니다. 자세한 내용은 [System.Windows.Forms 네임스페이스](/dotnet/api/system.windows.forms)를 참조하세요.
 
 ```powershell
 $listBox = New-Object System.Windows.Forms.ListBox
@@ -181,4 +181,4 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ## <a name="see-also"></a>참고 항목
 
 - [GitHub: Dave Wyatt's WinFormsExampleUpdates](https://github.com/dlwyatt/WinFormsExampleUpdates)(GitHub: Dave Wyatt의 WinFormsExampleUpdates)
-- [Windows PowerShell Tip of the Week: 목록 상자에서 항목 선택](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730949(v=technet.10))
+- [이번 주 Windows PowerShell 팁: 목록 상자에서 항목 선택](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730949(v=technet.10))

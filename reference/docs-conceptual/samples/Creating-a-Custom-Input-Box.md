@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 사용자 지정 입력란 만들기
 description: 이 문서에서는 Windows PowerShell의 .NET Framework 양식 작성 기능을 사용하여 사용자 지정 입력 상자를 만드는 방법을 보여줍니다.
-ms.openlocfilehash: 18fba743b169010936d2ea83dca4e95203664fe9
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: b7786706d2461c329da429c1bd4971d7dc874d6d
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92500558"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390085"
 ---
 # <a name="creating-a-custom-input-box"></a>사용자 지정 입력란 만들기
 
@@ -121,7 +121,7 @@ $label.Text = 'Please enter the information in the space below:'
 $form.Controls.Add($label)
 ```
 
-사용자가 레이블 텍스트에 설명된 정보를 입력할 수 있는 컨트롤(여기서는 텍스트 상자)을 추가합니다. 세부적인 제어를 위해 텍스트 상자 이외에 다른 여러 컨트롤을 추가할 수 있습니다. 자세한 내용은 MSDN에서 [System.Windows.Forms 네임스페이스](/dotnet/api/system.windows.forms)를 참조하세요.
+사용자가 레이블 텍스트에 설명된 정보를 입력할 수 있는 컨트롤(여기서는 텍스트 상자)을 추가합니다. 세부적인 제어를 위해 텍스트 상자 이외에 다른 여러 컨트롤을 추가할 수 있습니다. 자세한 내용은 [System.Windows.Forms 네임스페이스](/dotnet/api/system.windows.forms)를 참조하세요.
 
 ```powershell
 $textBox = New-Object System.Windows.Forms.TextBox

@@ -1,13 +1,13 @@
 ---
 title: Linux에 PowerShell 설치
 description: 다양한 Linux 배포에 PowerShell을 설치하는 방법에 대한 정보
-ms.date: 07/30/2020
-ms.openlocfilehash: f35366b5b1a0f54ce2c90d0e3cba59be7b9ce82c
-ms.sourcegitcommit: 2ca12827dc64198b4263e8873a45b9466f22a67c
+ms.date: 12/10/2020
+ms.openlocfilehash: 1bf96bc6bfb3f6544d8a4fd5b287dd6d659691ec
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92079798"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97069872"
 ---
 # <a name="installing-powershell-on-linux"></a>Linux에 PowerShell 설치
 
@@ -25,10 +25,21 @@ ms.locfileid: "92079798"
 [snap]: #snap-package
 [tar]: #binary-archives
 
-공식적으로 지원되는 릴리스
+<!-- TODO: Update for supported releases v7.0 & v7.1 -->
+
+PowerShell 7.1에 대해 공식적으로 지원되는 플랫폼 릴리스
+
+- Ubuntu 16.04/18.04/20.04(ARM64 포함)
+- Ubuntu 19.10(맞춤 패키지를 통해)
+- Debian 9/10
+- CentOS 및 RHEL 7/8
+- Fedora 30
+- Alpine 3.11+(ARM64 포함)
+
+PowerShell 7.0에 대해 공식적으로 지원되는 플랫폼 릴리스
 
 - Ubuntu 16.04
-- Ubuntu 18.04
+- Ubuntu 18.04 및 20.04
 - Debian 8
 - Debian 9
 - Debian 10
@@ -44,7 +55,7 @@ ms.locfileid: "92079798"
 커뮤니티에서 지원되는 릴리스
 
 - Ubuntu 18.10
-- Ubuntu 19.04
+- Ubuntu 19.10 및 20.10
 - Arch Linux
 - Kali
 - Raspbian(실험적)
@@ -54,13 +65,6 @@ ms.locfileid: "92079798"
 - 맞춤 패키지
 - 이진 아카이브
 - .NET 글로벌 도구
-
-현재 지원되지 않음
-
-- Ubuntu 20.04
-
-> [!NOTE]
-> PowerShell은 .NET에서 지원되는 배포만 지원할 수 있음 지원되는 배포 목록은 [.NET Core 릴리스 정보][distros]를 참조하세요. .NET에서 지원되는 배포가 여기에 나열되지 않은 경우 배포에 대한 지원을 추가하도록 요청할 수 있습니다. [배포 지원 요청][] 템플릿을 사용하여 요청을 제출하세요.
 
 ## <a name="ubuntu-1604"></a>Ubuntu 16.04
 
@@ -74,7 +78,7 @@ Linux용 PowerShell은 간편한 설치 및 업데이트를 위해 패키지 리
 # Update the list of packages
 sudo apt-get update
 # Install pre-requisite packages.
-sudo apt-get install -y wget apt-transport-https
+sudo apt-get install -y wget apt-transport-https software-properties-common
 # Download the Microsoft repository GPG keys
 wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
 # Register the Microsoft repository GPG keys
@@ -91,12 +95,12 @@ pwsh
 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>직접 다운로드를 통해 설치 - Ubuntu 16.04
 
-[릴리스][] 페이지의 Debian 패키지 `powershell-lts_7.0.3-1.ubuntu.16.04_amd64.deb`를 Ubuntu 컴퓨터에 다운로드합니다.
+[릴리스][] 페이지의 Debian 패키지 `powershell_7.1.0-1.ubuntu.16.04_amd64.deb`를 Ubuntu 컴퓨터에 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
 ```sh
-sudo dpkg -i powershell-lts_7.0.3-1.ubuntu.16.04_amd64.deb
+sudo dpkg -i powershell_7.1.0-1.ubuntu.16.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -121,7 +125,7 @@ Linux용 PowerShell은 간편한 설치 및 업데이트를 위해 패키지 리
 # Update the list of packages
 sudo apt-get update
 # Install pre-requisite packages.
-sudo apt-get install -y wget apt-transport-https
+sudo apt-get install -y wget apt-transport-https software-properties-common
 # Download the Microsoft repository GPG keys
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 # Register the Microsoft repository GPG keys
@@ -140,12 +144,12 @@ pwsh
 
 ### <a name="installation-via-direct-download---ubuntu-1804"></a>직접 다운로드를 통해 설치 - Ubuntu 18.04
 
-[릴리스][] 페이지의 Debian 패키지 `powershell-lts_7.0.3-1.ubuntu.18.04_amd64.deb`를 Ubuntu 컴퓨터에 다운로드합니다.
+[릴리스][] 페이지의 Debian 패키지 `powershell_7.1.0-1.ubuntu.18.04_amd64.deb`를 Ubuntu 컴퓨터에 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
 ```sh
-sudo dpkg -i powershell-lts_7.0.3-1.ubuntu.18.04_amd64.deb
+sudo dpkg -i powershell_7.1.0-1.ubuntu.18.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -158,6 +162,55 @@ sudo apt-get install -f
 sudo apt-get remove powershell
 ```
 
+## <a name="ubuntu-2004"></a>Ubuntu 20.04
+
+### <a name="installation-via-package-repository---ubuntu-2004"></a>패키지 리포지토리를 통해 설치 - Ubuntu 20.04
+
+Linux용 PowerShell은 간편한 설치 및 업데이트를 위해 패키지 리포지토리에 게시됩니다.
+
+기본 방법은 다음과 같습니다.
+
+```sh
+# Update the list of packages
+sudo apt-get update
+# Install pre-requisite packages.
+sudo apt-get install -y wget apt-transport-https software-properties-common
+# Download the Microsoft repository GPG keys
+wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
+# Register the Microsoft repository GPG keys
+sudo dpkg -i packages-microsoft-prod.deb
+# Update the list of products
+sudo apt-get update
+# Enable the "universe" repositories
+sudo add-apt-repository universe
+# Install PowerShell
+sudo apt-get install -y powershell
+# Start PowerShell
+pwsh
+```
+
+슈퍼 사용자로 Microsoft 리포지토리를 한 번 등록합니다. 등록 후에는 `sudo apt-get install powershell`을 사용하여 PowerShell을 업데이트할 수 있습니다.
+
+### <a name="installation-via-direct-download---ubuntu-2004"></a>직접 다운로드를 통해 설치 - Ubuntu 20.04
+
+[릴리스][] 페이지의 Debian 패키지 `powershell_7.1.0-1.ubuntu.20.04_amd64.deb`를 Ubuntu 컴퓨터에 다운로드합니다.
+
+그런 다음, 터미널에서 다음 명령을 실행합니다.
+
+```sh
+sudo dpkg -i powershell_7.1.0-1.ubuntu.20.04_amd64.deb
+sudo apt-get install -f
+```
+
+> [!NOTE]
+> `dpkg -i` 명령은 충족되지 않은 종속성으로 인해 실패합니다. 다음 명령인 `apt-get install -f`는 이러한 문제를 해결한 다음, PowerShell 패키지 구성을 완료합니다.
+
+### <a name="uninstallation---ubuntu-2004"></a>제거 - Ubuntu 20.04
+
+```sh
+sudo apt-get remove powershell
+```
+
 ## <a name="ubuntu-1810"></a>Ubuntu 18.10
 
 설치는 `snapd`를 통해 지원됩니다. 지침은 [맞춤 패키지][snap]를 참조하세요.
@@ -165,16 +218,12 @@ sudo apt-get remove powershell
 > [!NOTE]
 > Ubuntu 18.10은 [중간 릴리스](https://www.ubuntu.com/about/release-cycle)로서 [커뮤니티 지원이 됩니다](../powershell-support-lifecycle.md).
 
-## <a name="ubuntu-1904"></a>Ubuntu 19.04
+## <a name="ubuntu-1910-and-2010"></a>Ubuntu 19.10 및 20.10
 
 설치는 `snapd`를 통해 지원됩니다. 지침은 [맞춤 패키지][snap]를 참조하세요.
 
 > [!NOTE]
-> Ubuntu 19.04는 [중간 릴리스](https://www.ubuntu.com/about/release-cycle)로서 [커뮤니티 지원이 됩니다](../powershell-support-lifecycle.md).
-
-## <a name="ubuntu-2004"></a>Ubuntu 20.04
-
-Ubuntu 20.04는 LTS 릴리스입니다. PowerShell은 현재 이 버전을 지원하지 않습니다. 이 버전에 대한 지원은 PowerShell 7.1 릴리스에 대한 것으로 간주됩니다. Ubuntu 20.04에 대한 지원을 원하는 경우 이 [요청](https://github.com/PowerShell/PowerShell/issues/12626)에 찬성하세요.
+> Ubuntu 19.10은 [중간 릴리스](https://www.ubuntu.com/about/release-cycle)로서 [커뮤니티 지원이 됩니다](../powershell-support-lifecycle.md).
 
 ## <a name="debian-8"></a>Debian 8
 
@@ -240,12 +289,12 @@ pwsh
 
 ### <a name="installation-via-direct-download---debian-9"></a>직접 다운로드를 통해 설치 - Debian 9
 
-[릴리스][] 페이지의 Debian 패키지 `powershell-lts_7.0.3-1.debian.9_amd64.deb`를 Debian 컴퓨터에 다운로드합니다.
+[릴리스][] 페이지의 Debian 패키지 `powershell_7.1.0-1.debian.9_amd64.deb`를 Debian 컴퓨터에 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
 ```sh
-sudo dpkg -i powershell-lts_7.0.3-1.debian.9_amd64.deb
+sudo dpkg -i powershell_7.1.0-1.debian.9_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -285,7 +334,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---debian-10"></a>직접 다운로드를 통해 설치 - Debian 10
 
-[릴리스][] 페이지의 tar.gz 패키지 `powershell-7.0.3-linux-x64.tar.gz`를 Debian 컴퓨터에 다운로드합니다.
+[릴리스][] 페이지의 tar.gz 패키지 `powershell-7.1.0-linux-x64.tar.gz`를 Debian 컴퓨터에 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
@@ -307,7 +356,7 @@ sudo apt-get install -y \
         curl
 
 # Download the powershell '.tar.gz' archive
-curl -L  https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L  https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 sudo mkdir -p /opt/microsoft/powershell/7
@@ -332,7 +381,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---alpine-39-and-310"></a>직접 다운로드를 통해 설치 - Alpine 3.9 및 3.10
 
-[릴리스][] 페이지의 tar.gz 패키지 `powershell-7.0.3-linux-alpine-x64.tar.gz`를 Alpine 컴퓨터에 다운로드합니다.
+[릴리스][] 페이지의 tar.gz 패키지 `powershell-7.1.0-linux-alpine-x64.tar.gz`를 Alpine 컴퓨터에 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
@@ -357,7 +406,7 @@ sudo apk -X https://dl-cdn.alpinelinux.org/alpine/edge/main add --no-cache \
     lttng-ust
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 sudo mkdir -p /opt/microsoft/powershell/7
@@ -399,18 +448,18 @@ pwsh
 
 ### <a name="installation-via-direct-download---centos-7"></a>직접 다운로드를 통해 설치 - CentOS 7
 
-[CentOS 7][]에서 [릴리스][] 페이지의 RPM 패키지 `powershell-lts-7.0.3-1.rhel.7.x86_64.rpm`을 CentOS 컴퓨터로 다운로드합니다.
+[CentOS 7][]에서 [릴리스][] 페이지의 RPM 패키지 `powershell-7.1.0-1.rhel.7.x86_64.rpm`을 CentOS 컴퓨터로 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
 ```sh
-sudo yum install powershell-lts-7.0.3-1.rhel.7.x86_64.rpm
+sudo yum install powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 다운로드 없이 바로 RPM을 설치할 수 있습니다.
 
 ```sh
-sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-lts-7.0.3-1.rhel.7.x86_64.rpm
+sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---centos-7"></a>제거 - CentOS 7
@@ -442,18 +491,18 @@ pwsh
 
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>직접 다운로드를 통해 설치 - Red Hat Enterprise Linux(RHEL) 7
 
-[릴리스][] 페이지의 RPM 패키지 `powershell-lts-7.0.3-1.rhel.7.x86_64.rpm`을 Red Hat Enterprise Linux 컴퓨터로 다운로드합니다.
+[릴리스][] 페이지의 RPM 패키지 `powershell-7.1.0-1.rhel.7.x86_64.rpm`을 Red Hat Enterprise Linux 컴퓨터로 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
 ```sh
-sudo yum install powershell-lts-7.0.3-1.rhel.7.x86_64.rpm
+sudo yum install powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 다운로드 없이 바로 RPM을 설치할 수 있습니다.
 
 ```sh
-sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-lts-7.0.3-1.rhel.7.x86_64.rpm
+sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---red-hat-enterprise-linux-rhel-7"></a>제거 - Red Hat Enterprise Linux(RHEL) 7
@@ -471,7 +520,7 @@ sudo yum remove powershell
 zypper update && zypper --non-interactive install curl tar libicu52_1
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 mkdir -p /opt/microsoft/powershell/7
@@ -496,7 +545,7 @@ pwsh
 zypper update && zypper --non-interactive install curl tar gzip libopenssl1_0_0 libicu60_2
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 mkdir -p /opt/microsoft/powershell/7
@@ -554,20 +603,20 @@ pwsh
 
 ### <a name="installation-via-direct-download---fedora-28-29-and-30"></a>직접 다운로드를 통해 설치 - Fedora 28, 29 및 30
 
-[릴리스][] 페이지의 RPM 패키지 `powershell-7.0.3-1.rhel.7.x86_64.rpm`을 Fedora 컴퓨터에 다운로드합니다.
+[릴리스][] 페이지의 RPM 패키지 `powershell-7.1.0-1.rhel.7.x86_64.rpm`을 Fedora 컴퓨터에 다운로드합니다.
 
 그런 다음, 터미널에서 다음 명령을 실행합니다.
 
 ```sh
 sudo dnf install compat-openssl10
-sudo dnf install powershell-7.0.3-1.rhel.7.x86_64.rpm
+sudo dnf install powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 다운로드 없이 바로 RPM을 설치할 수 있습니다.
 
 ```sh
 sudo dnf install compat-openssl10
-sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-1.rhel.7.x86_64.rpm
+sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---fedora-28-29-and-30"></a>제거 - Fedora 28, 29 및 30
@@ -690,13 +739,13 @@ sudo apt-get install '^libssl1.0.[0-9]$' libunwind8 -y
 # Download and extract PowerShell
 
 # Grab the latest tar.gz
-wget https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-arm32.tar.gz
+wget https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-arm32.tar.gz
 
 # Make folder to put powershell
 mkdir ~/powershell
 
 # Unpack the tar.gz file
-tar -xvf ./powershell-7.0.3-linux-arm32.tar.gz -C ~/powershell
+tar -xvf ./powershell-7.1.0-linux-arm32.tar.gz -C ~/powershell
 
 # Start PowerShell
 ~/powershell/pwsh
@@ -776,7 +825,7 @@ PowerShell은 모든 Linux 배포를 위한 이식 가능한 이진 파일을 �
 
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.0.3/powershell-7.0.3-linux-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-x64.tar.gz
 
 # Create the target folder where powershell will be placed
 sudo mkdir -p /opt/microsoft/powershell/7
@@ -819,4 +868,4 @@ Microsoft는 이 문서의 설치 방법을 지원합니다. 다른 원본에서
 [릴리스]: https://github.com/PowerShell/PowerShell/releases/latest
 [xdg-bds]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
 [distros]: https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md#linux
-[배포 지원 요청]: https://github.com/PowerShell/PowerShell/issues/new?assignees=&labels=Distribution-Request&template=Distribution_Request.md&title=Distribution+Support+Request
+[Distribution Support Request]: https://github.com/PowerShell/PowerShell/issues/new?assignees=&labels=Distribution-Request&template=Distribution_Request.md&title=Distribution+Support+Request

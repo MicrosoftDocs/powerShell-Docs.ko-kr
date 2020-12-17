@@ -1,13 +1,13 @@
 ---
 title: PowerShell Core 지원 수명 주기
 description: PowerShell 지원을 제어하는 정책에 대해 자세히 설명합니다.
-ms.date: 03/09/2020
-ms.openlocfilehash: 1681df188d03a1115b13518fb88c21ebf79701d4
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.date: 11/11/2020
+ms.openlocfilehash: f2a1df0fabdfb624db666d240172930dc60f1bfe
+ms.sourcegitcommit: 2fc6ee49a70bda4c59135136bd5cc7782836a124
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501748"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810388"
 ---
 # <a name="powershell-support-lifecycle"></a>PowerShell 지원 수명 주기
 
@@ -29,24 +29,6 @@ PowerShell 7 릴리스에서 PowerShell은 [Microsoft 최신 수명 주기 정�
 > [!IMPORTANT]
 > 지원을 받으려면 최신 패치 업데이트가 설치되어 있어야 합니다. 예를 들어 PowerShell 7.0을 실행 중인데 7.0.1이 릴리스된 경우 지원을 받으려면 7.0.1로 업데이트해야 합니다.
 
-## <a name="lifecycle-of-powershell-core-6x"></a>PowerShell Core 6.x의 수명 주기
-
-PowerShell Core는 [Microsoft 최신 수명 주기 정책][modern]을 사용합니다. 이 지원 수명 주기는 고객이 항상 최신 버전을 사용할 수 있도록 합니다.
-
-PowerShell Core의 6.x 버전은 약 6개월 단위의 분기별로 업데이트되었습니다(예: 6.0, 6.1, 6.2 등). 그러나 PowerShell 7 릴리스에서는 더 이상 6.x의 부 버전 릴리스가 없습니다. PowerShell 6.2.x는 여전히 지원되며 계속해서 서비스 업데이트를 받습니다.
-
-> [!IMPORTANT]
-> 지원을 계속 받으려면 부 버전이 새로 릴리스될 때마다 6개월 이내에 업데이트해야 합니다.
-
-예를 들어 PowerShell Core 6.1이 2018년 7월 1일에 릴리스 되고, 계속해서 지원을 받고자 하는 경우 2019년 1월 1일까지 PowerShell Core 6.1로 업데이트해야 합니다.
-
-> [!IMPORTANT]
-> 지원을 계속 받으려면 새 패치가 릴리스될 때마다 30일 이내에 업데이트해야 합니다.
-
-예를 들어 PowerShell Core 6.1을 실행하고 있으며 6.1.3이 2019년 2월 19일에 릴리스된 경우 해당 릴리스가 지원을 유지하는 30일 후인 2019년 3월 21일까지 PowerShell Core 6.1.3으로 업데이트해야 합니다. 수정 사항이 필요한 경우, 다음 누적 업데이트에서 수정 사항이 릴리스됩니다.
-
-최신 수명 주기 정책에 따라 Microsoft는 해당 제품(즉, PowerShell Core)에 대한 지원을 중단하기 12개월 전에 고객 측에 공지해야 합니다.
-
 ## <a name="supported-platforms"></a>지원 플랫폼
 
 PowerShell Core의 플랫폼과 버전이 공식적으로 지원되는지 확인하려면 다음 표를 참조하세요.
@@ -55,55 +37,58 @@ PowerShell Core의 플랫폼과 버전이 공식적으로 지원되는지 확인
 
 `Experimental`로 나열되는 플랫폼은 공식적으로 지원되지는 않지만, 실험 및 피드백용으로 사용 가능합니다.
 
-| 플랫폼                                          |      6.2      |    7.0    |
-| ------------------------------------------------- | :-----------: | :-------: |
-| Windows 8.1 및 10                               |   지원됨   | 지원됨 |
-| Windows Server 2012 R2, 2016                      |   지원됨   | 지원됨 |
-| [Windows Server 반기 채널][semi-annual] |   지원됨   | 지원됨 |
-| Ubuntu 16.04 및 18.04                            |   지원됨   | 지원됨 |
-| Ubuntu 19.10(맞춤 패키지를 통해)                   |   커뮤니티   | 커뮤니티 |
-| Ubuntu 20.04(맞춤 패키지를 통해)                   |   커뮤니티   | 커뮤니티 |
-| Debian 9                                          |   지원됨   | 지원됨 |
-| Debian 10                                         | 지원되지 않음 | 지원됨 |
-| CentOS 7                                          |   지원됨   | 지원됨 |
-| CentOS 8                                          | 지원되지 않음 | 지원됨 |
-| Red Hat Enterprise Linux 7                        |   지원됨   | 지원됨 |
-| Red Hat Enterprise Linux 8                        | 지원되지 않음 | 지원됨 |
-| Fedora 30                                         | 지원되지 않음 | 지원됨 |
-| Alpine 3.8                                        |   참고 참조    | 참고 참조  |
-| Alpine 3.9 및 3.10                               | 지원되지 않음 | 참고 참조  |
-| macOS 10.12 이상                                      |   지원됨   | 지원됨 |
-| 아키텍처                                              |   커뮤니티   | 커뮤니티 |
-| Raspbian                                          |   커뮤니티   | 커뮤니티 |
-| Kali                                              |   커뮤니티   | 커뮤니티 |
-| AppImage(여러 Linux 플랫폼에서 사용)      |   커뮤니티   | 커뮤니티 |
-| [맞춤 패키지](https://snapcraft.io/powershell)   |   참고 참조    | 참고 참조  |
+<!-- TODO: update OS list -->
+
+|                     플랫폼                      |      7.0      |      7.1      |
+| ------------------------------------------------- | :-----------: | :-----------: |
+| Windows 8.1 및 10                               |   지원됨   |   지원됨   |
+| Windows Server 2012 R2, 2016, 2019                |   지원됨   |   지원됨   |
+| [Windows Server 반기 채널][semi-annual] |   지원됨   |   지원됨   |
+| Ubuntu 16.04, 18.04                               |   지원됨   |   지원됨   |
+| Ubuntu 20.04                                      | 지원되지 않음 |   지원됨   |
+| Ubuntu 19.10, 20.10(맞춤 패키지를 통해)            |   커뮤니티   |   지원됨   |
+| Debian 9                                          |   지원됨   |   지원됨   |
+| Debian 10                                         |   지원됨   |   지원됨   |
+| CentOS 7                                          |   지원됨   |   지원됨   |
+| CentOS 8                                          |   지원됨   |   지원됨   |
+| Red Hat Enterprise Linux 7                        |   지원됨   |   지원됨   |
+| Red Hat Enterprise Linux 8                        |   지원됨   |   지원됨   |
+| Fedora 31+                                        |   지원됨   | 지원되지 않음 |
+| Alpine 3.10                                       |   참고 1 참조  | 지원되지 않음 |
+| Alpine 3.11+                                      |   참고 1 참조  |   참고 1 참조  |
+| macOS 10.13 이상 버전                                      |   지원됨   |   지원됨   |
+| 아키텍처                                              |   커뮤니티   |   커뮤니티   |
+| Raspbian                                          |   커뮤니티   |   커뮤니티   |
+| Kali                                              |   커뮤니티   |   커뮤니티   |
+| AppImage(여러 Linux 플랫폼에서 사용)      |   커뮤니티   |   커뮤니티   |
+| [맞춤 패키지](https://snapcraft.io/powershell)   |   참고 2 참조  |   참고 참조    |
 
 > [!NOTE]
-> 맞춤 패키지는 패키지를 실행하고 있는 배포와 동일하게 지원됩니다.
-
-> [!NOTE]
-> CIM, PowerShell Remoting, DSC는 Alpine에서 지원되지 않습니다.
+> - 1 - CIM, PowerShell Remoting, DSC는 Alpine에서 지원되지 않습니다.
+> - 2 - 맞춤 패키지는 패키지를 실행하고 있는 배포와 동일하게 지원됩니다.
 
 ## <a name="powershell-releases-end-of-life"></a>PowerShell 릴리스 수명 종료
 
 [PowerShell의 수명 주기](#lifecycle-of-powershell-7)에 따라 다음 표에는 다양한 릴리스의 지원 중단 날짜가 나와 있습니다.
 
-| 버전 |    수명 종료     |
-| :-----: | ------------------ |
-|   7.0   | 2022년 12월 3일   |
-|   6.2   | 2020년 9월 4일  |
-|   6.1   | 2019년 9월 28일 |
-|   6.0   | 2019년 2월 13일  |
+| 버전 |          수명 종료           |
+| :-----: | ------------------------------ |
+|   7.1   | 2022년 2월 중순(예상) |
+|   7.0   | 2022년 12월 3일               |
+|   6.2   | 2020년 9월 4일              |
+|   6.1   | 2019년 9월 28일             |
+|   6.0   | 2019년 2월 13일              |
 
 > [!NOTE]
-> 이 문서는 PowerShell Core 6 및 PowerShell 7에 관한 지원 정보입니다. Windows PowerShell(1.0~5.1)은 Windows OS의 구성 요소입니다. 구성 요소는 부모 제품 또는 플랫폼과 동일한 지원을 받습니다. 자세한 내용은 [제품 및 서비스 수명 주기 정보](/lifecycle/products/)를 참조하세요.
+> 이 문서는 PowerShell Core에 관한 지원 정보입니다. Windows PowerShell(1.0~5.1)은 Windows OS의 구성 요소입니다. 구성 요소는 부모 제품 또는 플랫폼과 동일한 지원을 받습니다. 자세한 내용은 [제품 및 서비스 수명 주기 정보](/lifecycle/products/)를 참조하세요.
 
 ## <a name="unsupported-platforms"></a>지원되지 않는 플랫폼
 
 플랫폼 버전이 플랫폼 소유자가 정의한 수명 종료에 도달하면 PowerShell Core도 해당 플랫폼 버전의 지원 제공을 중단합니다. 이전에 릴리스된 패키지는 액세스가 필요한 고객이 계속 사용할 수는 있지만, 공식 지원 및 업데이트는 더 이상 제공되지 않습니다.
 
 그러므로 다음 버전의 지원을 배포 소유자가 종료했으며 더 이상 지원되지 않습니다.
+
+<!-- TODO: Update this table Jason-->
 
 |    플랫폼    | 버전 |                                                         수명 종료                                                          |
 | -------------- | :-----: | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -156,16 +141,17 @@ PowerShell은 [Windows에 대한 Microsoft 보안 서비스 기준][]을 따릅�
 
 다음 표에는 PowerShell의 주요 릴리스 일정이 포함되어 있습니다. 이 표는 기록 참조 목적으로 제공되는 것으로, 지원 수명 주기를 결정하는 데 사용하기 위한 것이 아닙니다.
 
-|       버전        | 출시 날짜 |                                                                     참고                                                                      |
-| -------------------- | :----------: | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| PowerShell 7.0(LTS) |   2020년 3월   | .NET Core 3.1(LTS) 기반                                                                                                                  |
-| PowerShell 6.0       |   2018년 1월   | .NET Core 2.1 기반 첫 번째 릴리스. Windows, Linux 및 macOS에 설치 가능.                                                              |
-| PowerShell 5.1       |   2016년 8월   | Windows 10 1주년 업데이트 및 Windows Server 2016에서 릴리스                                                                             |
-| PowerShell 5.0       |   2016년 2월   | WMF(Windows Management Framework) 5.0에서 릴리스                                                                                            |
-| PowerShell 4.0       |   2013년 10월   | Windows 8.1에서 Windows Server 2012 R2와 통합. Windows 7 SP1, Windows Server 2008 R2 SP1, 및 Windows Server 2012에 설치 가능. |
-| PowerShell 3.0       |   2012년 10월   | Windows 8에서 Windows Server 2012와 통합. Windows 7 SP1, Windows Server 2008 SP1, 및 Windows Server 2008 R2 SP1에 설치 가능.  |
-| PowerShell 2.0       |   2009년 7월   | Windows 7 및 Windows Server 2008 R2에서 통합. Windows XP SP3, Windows Server 2003 SP2, 및 Windows Vista SP1에 설치 가능.            |
-| PowerShell 1.0       |   2006년 11월   | Windows XP SP2, Windows Server 2003 SP1 및 Windows Vista에 설치 가능. Windows Server 2008의 선택적 구성 요소.                          |
+|         버전          | 출시 날짜 |                                                                     참고                                                                      |
+| ------------------------ | :----------: | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| PowerShell 7.1(현재) |   2020년 11월   | .NET Core 5.0(현재) 기반                                                                                                              |
+| PowerShell 7.0(LTS)     |   2020년 3월   | .NET Core 3.1(LTS) 기반                                                                                                                  |
+| PowerShell 6.0           |   2018년 1월   | .NET Core 2.1 기반 첫 번째 릴리스. Windows, Linux 및 macOS에 설치 가능.                                                              |
+| PowerShell 5.1           |   2016년 8월   | Windows 10 1주년 업데이트 및 Windows Server 2016에서 릴리스                                                                             |
+| PowerShell 5.0           |   2016년 2월   | WMF(Windows Management Framework) 5.0에서 릴리스                                                                                            |
+| PowerShell 4.0           |   2013년 10월   | Windows 8.1에서 Windows Server 2012 R2와 통합. Windows 7 SP1, Windows Server 2008 R2 SP1, 및 Windows Server 2012에 설치 가능. |
+| PowerShell 3.0           |   2012년 10월   | Windows 8에서 Windows Server 2012와 통합. Windows 7 SP1, Windows Server 2008 SP1, 및 Windows Server 2008 R2 SP1에 설치 가능.  |
+| PowerShell 2.0           |   2009년 7월   | Windows 7 및 Windows Server 2008 R2에서 통합. Windows XP SP3, Windows Server 2003 SP2, 및 Windows Vista SP1에 설치 가능.            |
+| PowerShell 1.0           |   2006년 11월   | Windows XP SP2, Windows Server 2003 SP1 및 Windows Vista에 설치 가능. Windows Server 2008의 선택적 구성 요소.                          |
 
 <!-- hyperlink references -->
 [유료 지원]: https://support.microsoft.com/hub/4343728/support-for-business

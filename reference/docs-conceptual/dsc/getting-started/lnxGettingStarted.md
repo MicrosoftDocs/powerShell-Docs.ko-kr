@@ -1,14 +1,14 @@
 ---
-ms.date: 06/12/2017
+ms.date: 11/20/2020
 keywords: dsc,powershell,configuration,setup
 title: Linux용 DSC(필요한 상태 구성) 시작
 description: 이 항목에서는 Linux용 PowerShell DSC(필요한 상태 구성) 사용 방법에 대해 설명합니다.
-ms.openlocfilehash: 826707654a297306c39d4dfcfd3941f56b7cf91d
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: df9cab07284a7d6fa199f5524a8719ea490192d0
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92651122"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95515003"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Linux용 DSC(필요한 상태 구성) 시작
 
@@ -24,7 +24,7 @@ DSC에 대한 일반적인 내용은 [Windows PowerShell 필요한 상태 구성
 - Oracle Linux 5, 6 및 7(x86/x64)
 - Red Hat Enterprise Linux Server 5, 6 및 7(x86/x64)
 - SUSE Linux Enterprise Server 10, 11 및 12(x86/x64)
-- Ubuntu Server 12.04 LTS, 14.04 LTS, 16.04 LTS(x86/x64)
+- Ubuntu Server 12.04 LTS, 14.04 LTS, 16.04 LTS, 18.04(x86/x64)
 
 ## <a name="installing-dsc-for-linux"></a>Linux용 DSC 설치
 
@@ -45,7 +45,7 @@ CentOS 7 x64 시스템에 OMI를 설치하려면 다음 명령을 실행합니�
 
 ### <a name="installing-dsc"></a>DSC 설치
 
-Linux용 DSC는 리포지토리의 [PowerShell-DSC-for-Linux](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-294) 리포지토리에서 다운로드할 수 있습니다.
+Linux용 DSC는 리포지토리의 [PowerShell-DSC-for-Linux](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-926) 리포지토리에서 다운로드할 수 있습니다.
 
 DSC를 설치하려면 Linux 시스템(.rpm 또는.deb)과 OpenSSL 버전(ssl_098 또는 ssl_100) 및 아키텍처(x64/x86)에 적절한 패키지를 설치합니다. RPM 패키지는 CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Oracle Linux에 적합합니다. DEB 패키지는 Debian GNU/Linux 및 Ubuntu 서버에 적합합니다. ssl_098 패키지는 OpenSSL 0.9.8이 설치된 컴퓨터에 적합하고, ssl_100 패키지는 OpenSSL 1.0이 설치된 컴퓨터에 적합합니다.
 

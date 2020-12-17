@@ -3,12 +3,12 @@ title: ShouldProcess에 대해 알고 싶은 모든 것
 description: ShouldProcess는 자주 간과되는 중요 기능입니다. WhatIf 및 Confirm 매개 변수를 사용하면 함수에 쉽게 추가할 수 있습니다.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 6bd4dbd5255203f2daf804163aa2a84d992d6697
-ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
+ms.openlocfilehash: 4f11ad84f5c89423fe56cfe438ed3cb1587ce59e
+ms.sourcegitcommit: be1df0bf757d734975a9aa021727608a396059ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86469738"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616049"
 ---
 # <a name="everything-you-wanted-to-know-about-shouldprocess"></a>ShouldProcess에 대해 알고 싶은 모든 것
 
@@ -128,7 +128,7 @@ What if: Performing the operation "Remove File" on target "C:\Temp\myfile1.txt".
 function Test-ShouldProcess {
     [CmdletBinding(SupportsShouldProcess)]
     param()
-    Remove-Item .\myfile1.txt -WhatIf:$WhatIf
+    Remove-Item .\myfile1.txt -WhatIf:$WhatIfPreference
 }
 ```
 
@@ -228,7 +228,7 @@ What if: MESSAGE
 
 ### <a name="shouldprocessreason"></a>ShouldProcessReason
 
-다른 오버로드보다 더 고급 기능인 네 번째 오버로드가 있습니다. 이 오버로드를 이용하면 `ShouldProcess`를 실행한 이유를 알 수 있습니다. 대신 `$WhatIf`가 `$true`인지 확인하면 되므로 이 내용은 참조용으로만 수록했습니다.
+다른 오버로드보다 더 고급 기능인 네 번째 오버로드가 있습니다. 이 오버로드를 이용하면 `ShouldProcess`를 실행한 이유를 알 수 있습니다. 대신 `$WhatIfPreference`가 `$true`인지 확인하면 되므로 이 내용은 참조용으로만 수록했습니다.
 
 ```powershell
 $reason = ''
@@ -428,7 +428,7 @@ Error: Test-ShouldProcess: A parameter cannot be found that matches parameter na
 Test-ShouldProcess -Confirm:$false
 ```
 
-이 작업을 수행해야 하며 `-Confirm:$false`가 `ShouldContinue`를 무시하지 않는다는 사실을 모르는 사람도 있습니다.
+이 작업을 수행해야 하며 `-Force`가 `ShouldContinue`를 무시하지 않는다는 사실을 모르는 사람도 있습니다.
 따라서 사용자의 안전을 위해 `-Force`를 구현해야 합니다. 이 전체 예제를 살펴보세요.
 
 ```powershell
@@ -441,7 +441,7 @@ function Test-ShouldProcess {
         [Switch]$Force
     )
 
-    if ($Force -and -not $Confirm){
+    if ($Force){
         $ConfirmPreference = 'None'
     }
 
@@ -451,7 +451,7 @@ function Test-ShouldProcess {
 }
 ```
 
-우리는 자체 `-Force` 스위치를 매개 변수로 추가하고, `CmdletBinding`에 `SupportsShouldProcess`를 추가할 때 사용할 수 있는 `$Confirm` 자동 매개 변수를 사용합니다.
+자체 `-Force` 스위치를 매개 변수로 추가합니다. `-Confirm` 매개 변수는 `CmdletBinding`에서 `SupportsShouldProcess`를 사용할 때 자동으로 추가됩니다.
 
 ```powershell
 [CmdletBinding(
@@ -466,15 +466,15 @@ param(
 여기서 `-Force`를 집중적으로 다룹니다.
 
 ```powershell
-if ($Force -and -not $Confirm){
+if ($Force){
     $ConfirmPreference = 'None'
 }
 ```
 
-사용자가 `-Force`를 지정한다면 우리는 사용자가 `-Confirm`도 지정할 때까지는 확인 메시지를 표시하지 않으려 합니다. 이렇게 하면 사용자는 변경 내용을 적용하면서도 여전히 변경 내용을 확인할 수 있습니다. 그러면 우리는 로컬 범위에 `$ConfirmPreference`를 설정하여 `ShouldProcess` 호출이 이를 발견하게 합니다.
+사용자가 `-Force`를 지정한다면 우리는 사용자가 `-Confirm`도 지정할 때까지는 확인 메시지를 표시하지 않으려 합니다. 이렇게 하면 사용자는 변경 내용을 적용하면서도 여전히 변경 내용을 확인할 수 있습니다. 그런 다음 로컬 범위에 `$ConfirmPreference`를 설정합니다. 이제 `-Force` 매개 변수를 사용하면 일시적으로 `$ConfirmPreference`가 없음으로 설정되고 확인 메시지가 비활성화됩니다.
 
 ```powershell
-if ($PSCmdlet.ShouldProcess('TARGET')){
+if ($Force -or $PSCmdlet.ShouldProcess('TARGET')){
         Write-Output "Some Action"
     }
 ```

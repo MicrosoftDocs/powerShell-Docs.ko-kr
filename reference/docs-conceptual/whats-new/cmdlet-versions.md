@@ -3,23 +3,18 @@ ms.date: 02/03/2020
 keywords: powershell,core
 title: 모듈 및 cmdlet의 릴리스 기록
 description: 이 문서에는 다양한 버전의 PowerShell에 포함된 모듈 및 cmdlet이 나열되어 있습니다.
-ms.openlocfilehash: 43ea0cde106e9f0aafe9c18726589f931724b35f
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: e79735e516c9aaa485c6513fb80de623014f06f5
+ms.sourcegitcommit: 2fc6ee49a70bda4c59135136bd5cc7782836a124
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94342861"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810354"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>모듈 및 cmdlet의 릴리스 기록
 
 이 문서에는 다양한 버전의 PowerShell에 포함된 모듈 및 cmdlet이 나열되어 있습니다. 릴리스 정보에 있는 내용에 대한 요약이 제공되며 자세한 내용은 다음 릴리스 정보에서 찾을 수 있습니다.
 
 - [PowerShell 7.0의 새로운 기능](what-s-new-in-powershell-70.md)
-- [PowerShell 6.2의 새로운 기능](what-s-new-in-powershell-core-62.md)
-- [PowerShell 6.1의 새로운 기능](what-s-new-in-powershell-core-61.md)
-- [PowerShell 6.0의 새로운 기능](what-s-new-in-powershell-core-60.md)
-- [PowerShell 6.0의 호환성이 손상되는 변경](breaking-changes-ps6.md)
-- [PowerShell 6.0의 알려진 문제](known-issues-ps6.md)
 
 진행 중인 작업입니다. 이 정보를 최신 상태로 유지할 수 있도록 도와주세요.
 
@@ -45,7 +40,8 @@ ms.locfileid: "94342861"
 | PSDesiredStateConfiguration               | &check; | &check; | &check; | &check; |              |
 | PSDiagnostics                             | &check; | &check; | &check; | &check; | Windows만 해당 |
 | PSReadline 1.x                            | &check; |         |         |         | Windows만 해당 |
-| PSReadline 2.x                            |         | &check; | &check; | &check; |              |
+| PSReadline 2.0                            |         | &check; | &check; |         |              |
+| PSReadline 2.1                            |         |         |         | &check; |              |
 | PSScheduledJob                            | &check; |         |         |         | Windows만 해당 |
 | PSWorkflow                                | &check; |         |         |         | Windows만 해당 |
 | PSWorkflowUtility                         | &check; |         |         |         | Windows만 해당 |

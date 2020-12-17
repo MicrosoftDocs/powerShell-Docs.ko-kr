@@ -2,12 +2,12 @@
 ms.date: 12/31/2019
 title: ISEOptions 개체
 description: ISEOptions 개체는 Windows PowerShell ISE에 대한 다양한 설정을 나타냅니다.
-ms.openlocfilehash: 4f790550796f40c7a2d4882cc0444fa7a55eeee9
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 9823a4a0ea32420d830735a0a61a6c03a6458fb7
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661025"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391513"
 ---
 # <a name="the-iseoptions-object"></a>ISEOptions 개체
 
@@ -492,7 +492,7 @@ $psISE.Options.UseEnterToSelectInConsolePaneIntellisense = $true
 
 Windows PowerShell ISE 3.0 이상에서 지원되며, 이전 버전에는 없습니다.
 
-커서가 키워드 있는 상태에서 <kbd>F1</kbd> 키를 누를 때 로컬로 설치된 도움말이나 온라인 TechNet 라이브러리 도움말이 나타나는지 여부를 지정합니다. `$true`로 설정된 경우, 팝업 창에 로컬로 설치된 도움말 콘텐츠가 표시됩니다. `Update-Help` 명령을 실행하여 도움말 파일을 설치할 수 있습니다. `$false`로 설정된 경우, 브라우저로 TechNet 라이브러리에 있는 페이지가 열립니다.
+커서가 키워드 있는 상태에서 <kbd>F1</kbd> 키를 누를 때 로컬로 설치된 도움말이 나타나는지 또는 온라인 도움말이 나타나는지 지정합니다. `$true`로 설정된 경우, 팝업 창에 로컬로 설치된 도움말 콘텐츠가 표시됩니다. `Update-Help` 명령을 실행하여 도움말 파일을 설치할 수 있습니다. `$false`로 설정된 경우 브라우저가 docs.microsoft.com의 페이지를 엽니다.
 
 ```powershell
 # Sets the option for the online help to be displayed.

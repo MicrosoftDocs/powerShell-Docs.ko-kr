@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 탭 확장 사용
 description: PowerShell에서 탭 확장 기능을 사용하는 방법을 설명합니다.
-ms.openlocfilehash: d3408aac8cc9325666082577a7b00bc3362bfca3
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: 658cdf5ddf78bbd6dd431c2170cd5ff643e6bf95
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92500048"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661344"
 ---
 # <a name="using-tab-expansion"></a>탭 확장 사용
 
@@ -20,6 +20,9 @@ ms.locfileid: "92500048"
 사용 가능한 선택 항목으로 파일 이름이나 경로를 채우려면 이름의 일부를 입력한 다음 <kbd>Tab</kbd> 키를 누릅니다. PowerShell은 첫 번째로 찾은 일치 항목으로 이름을 자동 확장합니다. <kbd>Tab</kbd> 키를 반복해서 누르면 사용 가능한 모든 선택 항목이 번갈아 표시됩니다.
 
 cmdlet 이름의 탭 확장은 약간 다릅니다. cmdlet 이름에 대해 탭 확장을 사용하려면 이름의 첫 번째 부분(즉, 동사) 전체와 하이픈을 차례로 입력합니다. 그러면 부분 일치를 위해 더 많은 이름을 채울 수 있습니다. 예를 들어 `get-co`를 입력한 다음, <kbd>Tab</kbd> 키를 누르면 PowerShell이 이를 자동으로 `Get-Command` cmdlet으로 확장합니다(이때 문자의 대/소문자도 표준 형식으로 변경됨). <kbd>Tab</kbd> 키를 다시 누르면, PowerShell은 일치하는 유일한 다른 cmdlet 이름인 `Get-Content`로 이 cmdlet을 대체합니다.
+
+> [!NOTE]
+> PowerShell 7.0부터 <kbd>Tab</kbd> 키가 축약된 cmdlet 및 함수도 확장합니다. 예를 들어 `i-psdf<tab>`는 `Import-PowerShellDataFile`를 반환합니다.
 
 탭 확장은 동일한 줄에서 반복해서 사용할 수 있습니다. 예를 들어 다음을 입력하여 `Get-Content` cmdlet의 이름에 대해 탭 확장을 사용할 수 있습니다.
 

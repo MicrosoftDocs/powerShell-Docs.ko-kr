@@ -2,16 +2,16 @@
 ms.date: 12/31/2019
 title: ISEFile 개체
 description: ISEFile 개체는 Windows PowerShell ISE의 파일을 나타냅니다.
-ms.openlocfilehash: 0de19c45bde7e5629d5721635150d3b0915aaa7d
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: b5ea70219787f254fe85d728518cbc4746c00250
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92662131"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391496"
 ---
 # <a name="the-isefile-object"></a>ISEFile 개체
 
-**ISEFile** 개체는 Windows PowerShell&reg; ISE(통합 스크립팅 환경)에 있는 파일을 나타내며, **Microsoft.PowerShell.Host.ISE.ISEFile** 클래스의 인스턴스입니다. 이 항목에는 멤버 메서드 및 멤버 속성이 나열됩니다. `$psISE.CurrentFile`과 PowerShell 탭의 파일 컬렉션에 있는 파일이 \*\***Microsoft.PowerShell.Host.ISE.ISEFile** 클래스의 전체 인스턴스입니다.
+**ISEFile** 개체는 Windows PowerShell ISE(통합 스크립팅 환경)에 있는 파일을 나타내며, **Microsoft.PowerShell.Host.ISE.ISEFile** 클래스의 인스턴스입니다. 이 항목에는 멤버 메서드 및 멤버 속성이 나열됩니다. `$psISE.CurrentFile`과 PowerShell 탭의 파일 컬렉션에 있는 파일이 \*\***Microsoft.PowerShell.Host.ISE.ISEFile** 클래스의 전체 인스턴스입니다.
 
 ## <a name="methods"></a>메서드
 
@@ -21,11 +21,11 @@ Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 
 파일을 디스크에 저장합니다.
 
-**\[saveEncoding\]** - 선택적 [System.Text.Encoding](https://msdn.microsoft.com/library/system.text.encoding.aspx). 저장된 파일에 사용할 선택적 문자 인코딩 매개 변수입니다. 기본값은 **UTF8** 입니다.
+`[saveEncoding]` - 선택적 [System.Text.Encoding](/dotnet/api/system.text.encoding) 저장된 파일에 사용할 선택적 문자 인코딩 매개 변수입니다. 기본값은 **UTF8** 입니다.
 
 ### <a name="exceptions"></a>예외
 
-- **System.IO.IOException** : 파일을 저장할 수 없습니다.
+- **System.IO.IOException**: 파일을 저장할 수 없습니다.
 
 ```powershell
 # Save the file using the default encoding (UTF8)
@@ -47,13 +47,13 @@ Windows PowerShell ISE 2.0 이상에서 지원됩니다.
 
 **filename** - 파일을 저장하는 데 사용할 이름입니다.
 
-**\[saveEncoding\]** - 선택적 [System.Text.Encoding](https://msdn.microsoft.com/library/system.text.encoding.aspx). 저장된 파일에 사용할 선택적 문자 인코딩 매개 변수입니다. 기본값은 **UTF8** 입니다.
+`[saveEncoding]` - 선택적 [System.Text.Encoding](/dotnet/api/system.text.encoding) 저장된 파일에 사용할 선택적 문자 인코딩 매개 변수입니다. 기본값은 **UTF8** 입니다.
 
 ### <a name="exceptions"></a>예외
 
-- **System.ArgumentNullException** : **filename** 매개 변수는 null입니다.
-- **System.ArgumentException** : **filename** 매개 변수는 비어 있습니다.
-- **System.IO.IOException** : 파일을 저장할 수 없습니다.
+- **System.ArgumentNullException**: **filename** 매개 변수는 null입니다.
+- **System.ArgumentException**: **filename** 매개 변수는 비어 있습니다.
+- **System.IO.IOException**: 파일을 저장할 수 없습니다.
 
 ```powershell
 # Save the file with a full path and name.

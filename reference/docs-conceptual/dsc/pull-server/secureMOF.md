@@ -3,12 +3,12 @@ ms.date: 07/06/2020
 keywords: dsc,powershell,configuration,setup
 title: MOF 파일 보안
 description: 이 문서에서는 대상 노드에서 MOF 파일이 암호화되었는지 확인하는 방법을 설명합니다.
-ms.openlocfilehash: e8b495a5c3c18dca5cde29cbbcf7d3f3cdab8f48
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: ca94a901468626e5644880574457d899a012d311
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92662789"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97090350"
 ---
 # <a name="securing-the-mof-file"></a>MOF 파일 보안
 
@@ -25,10 +25,10 @@ PowerShell 버전 5.0부터 전체 MOF 파일은 `Start-DSCConfiguration` cmdlet
 
 DSC 구성을 보호하는 데 사용되는 자격 증명을 적절히 암호화하려면 다음의 항목이 있어야 합니다.
 
-- **인증서를 발급하고 배포할 여러 가지 방법**. 이 항목 및 해당 예제에서는 Active Directory 인증 기관을 사용 중이라고 가정합니다. Active Directory 인증서 서비스에 대한 자세한 배경 정보를 알려면 [Active Directory 인증서 서비스 개요](https://technet.microsoft.com/library/hh831740.aspx) 및 [Windows Server 2008의 Active Directory 인증서 서비스](https://technet.microsoft.com/windowsserver/dd448615.aspx)를 참조하세요.
+- **인증서를 발급하고 배포할 여러 가지 방법**. 이 항목 및 해당 예제에서는 Active Directory 인증 기관을 사용 중이라고 가정합니다. Active Directory 인증서 서비스에 대한 자세한 배경 정보는 [Active Directory 인증서 서비스 개요](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11))를 참조하세요.
 - **대상 노드에 대한 관리 권한**.
-- **각 대상 노드에 해당 개인 저장소에 저장된 암호화 가능 인증서가 있습니다**. Windows PowerShell에서 저장소 경로는 Cert:\LocalMachine\My입니다. 이 항목의 예제에서는 [기본 인증서 템플릿](https://technet.microsoft.com/library/cc740061(v=WS.10).aspx)에 있는(다른 인증서 템플릿과 함께) "워크스테이션 인증" 템플릿을 사용합니다.
-- 이 구성을 대상 노드 외의 컴퓨터에서 실행하려는 경우 **인증서의 공개 키를 내보내고** , 구성을 실행할 컴퓨터로 가져옵니다. **퍼블릭** 키만 내보내도록 합니다. 프라이빗 키는 안전하게 보관하세요.
+- **각 대상 노드에 해당 개인 저장소에 저장된 암호화 가능 인증서가 있습니다**. Windows PowerShell에서 저장소 경로는 Cert:\LocalMachine\My입니다. 이 항목의 예제에서는 [기본 인증서 템플릿](/previous-versions/windows/it-pro/windows-server-2003/cc740061(v=ws.10))에 있는(다른 인증서 템플릿과 함께) "워크스테이션 인증" 템플릿을 사용합니다.
+- 이 구성을 대상 노드 외의 컴퓨터에서 실행하려는 경우 **인증서의 공개 키를 내보내고**, 구성을 실행할 컴퓨터로 가져옵니다. **퍼블릭** 키만 내보내도록 합니다. 프라이빗 키는 안전하게 보관하세요.
 
 > [!NOTE]
 > 암호화의 경우 스크립트 리소스에는 제한 사항이 있습니다. 자세한 내용은 [스크립트 리소스](../reference/resources/windows/scriptResource.md#known-limitations)를 참조하세요.
@@ -46,10 +46,10 @@ DSC 구성을 보호하는 데 사용되는 자격 증명을 적절히 암호화
 
 자격 증명 암호화를 적용하려면 DSC 구성을 작성하는 데 사용되는 컴퓨터에서 **신뢰할 수 있는**_대상 노드_ 에서 공개 키 인증서를 사용할 수 있어야 합니다. 이 공개 키 인증서를 DSC 자격 증명 암호화에 사용하려면 다음과 같은 특정 요구 사항을 충족해야 합니다.
 
-1. **키 사용** :
+1. **키 사용**:
    - 포함해야 함: 'KeyEncipherment' 및 'DataEncipherment'.
    - 포함하지 _않아야_ 함: 'Digital Signature'.
-1. **확장된 키 사용** :
+1. **확장된 키 사용**:
    - 포함해야 함: 문서 암호화(1.3.6.1.4.1.311.80.1).
    - 포함하지 _않아야_ 함: 클라이언트 인증(1.3.6.1.5.5.7.3.2) 및 서버 인증(1.3.6.1.5.5.7.3.1).
 1. 인증서에 대한 프라이빗 키를 *대상 노드_에서 사용할 수 있어야 합니다.
@@ -93,7 +93,7 @@ $cert | Export-Certificate -FilePath "$env:temp\DscPublicKey.cer" -Force
 > 대상 노드: Windows Server 2012 R2/Windows 8.1 이하 버전
 
 > [!WARNING]
-> Windows 10 및 Windows Server 2016 이전의 Windows 운영 체제에서는 `New-SelfSignedCertificate` cmdlet이 **Type** 매개 변수를 지원하지 않으므로, 이 운영 체제에서는 이 인증서를 만들기 위한 대체 방법이 필요합니다. 이 경우 `makecert.exe` 또는 `certutil.exe`를 사용해 인증서를 만들 수 있습니다. 대체 방법은 Microsoft 스크립트 센터에서 [New-SelfSignedCertificateEx.ps1](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) 스크립트를 다운로드한 후 이를 대신 사용해 인증서를 만드는 것입니다.
+> Windows 10 및 Windows Server 2016 이전의 Windows 운영 체제에서는 `New-SelfSignedCertificate` cmdlet이 **Type** 매개 변수를 지원하지 않으므로, 이 운영 체제에서는 이 인증서를 만들기 위한 대체 방법이 필요합니다. 이 경우 `makecert.exe` 또는 `certutil.exe`를 사용해 인증서를 만들 수 있습니다. 이 예제에서는 인증서를 만드는 대체 방법으로 Microsoft 스크립트 센터의 [New-SelfSignedCertificateEx.ps1](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) 스크립트를 사용합니다. 이 스크립트의 업데이트된 버전은 PowerShell 갤러리의 [PSPKI](https://www.powershellgallery.com/packages/PSPKI/) 모듈에서 사용할 수 있습니다.
 
 ```powershell
 # note: These steps need to be performed in an Administrator PowerShell session

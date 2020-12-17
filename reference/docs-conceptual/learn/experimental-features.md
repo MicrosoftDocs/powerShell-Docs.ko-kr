@@ -1,13 +1,13 @@
 ---
-ms.date: 10/15/2020
+ms.date: 11/11/2020
 title: PowerShell에서 실험적 기능 사용
 description: 현재 사용 가능한 실험적 기능과 사용 방법을 나열합니다.
-ms.openlocfilehash: e98b1222755f3d4ffbd432af6b01d56f63307bb2
-ms.sourcegitcommit: 108686b166672cc08817c637dd93eb1ad830511d
+ms.openlocfilehash: 4df3601cd38120fedecbbad8a3c63a95240c5f15
+ms.sourcegitcommit: fb1a4bc4b249afd3513663de2e1ba3025d63467e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92156578"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94625706"
 ---
 # <a name="using-experimental-features-in-powershell"></a>PowerShell에서 실험적 기능 사용
 
@@ -28,12 +28,12 @@ PowerShell의 실험적 기능 지원에서는 PowerShell 또는 PowerShell 모�
 | ---------------------------------------------------------- | :-----: | :-----: | :-----: |
 | PSTempDrive(PS 7.0 이상에서 일반)                        | &check; |         |         |
 | PSUseAbbreviationExpansion(PS 7.0 이상에서 일반)         | &check; |         |         |
+| PSNullConditionalOperators(PS 7.1 이상에서 주요 기능)         |         | &check; |         |
+| PSUnixFileStat(비 Windows 전용 - PS 7.1 이상에서 주요 기능)  |         | &check; |         |
 | PSCommandNotFoundSuggestion                                | &check; | &check; | &check; |
 | PSImplicitRemotingBatching                                 | &check; | &check; | &check; |
 | Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace |         | &check; | &check; |
 | PSDesiredStateConfiguration.InvokeDscResource              |         | &check; | &check; |
-| PSNullConditionalOperators(PS 7.1 이상에서 주요 기능)         |         | &check; |         |
-| PSUnixFileStat(Windows가 아닌 경우만 해당)                          |         | &check; | &check; |
 | PSNativePSPathResolution                                   |         |         | &check; |
 | PSCultureInvariantReplaceOperator                          |         |         | &check; |
 | PSNotApplyErrorActionToStderr                              |         |         | &check; |
@@ -195,7 +195,7 @@ PowerShell에서는 변수 이름의 일부로 `?`를 허용하므로 변수 이
 
 ## <a name="psunixfilestat"></a>PSUnixFileStat
 
-이 기능은 Unix와 비슷한 파일 목록을 사용할 수 있도록 파일 시스템 공급자의 출력에 Unix **stat** API의 데이터를 포함하는 새로운 동작을 제공합니다. 기본 Unix 형식 시스템의 일반 식 `stat(2)` API를 포함하는 **UnixStat**라는 파일 시스템 공급자에서 새 note 속성을 추가합니다.
+이 기능은 Unix와 비슷한 파일 목록을 사용할 수 있도록 파일 시스템 공급자의 출력에 Unix **stat** API의 데이터를 포함하는 새로운 동작을 제공합니다. 기본 Unix 형식 시스템의 일반 식 `stat(2)` API를 포함하는 **UnixStat** 라는 파일 시스템 공급자에서 새 note 속성을 추가합니다.
 
 `Get-ChildItem`의 출력은 다음과 비슷합니다.
 
@@ -212,6 +212,9 @@ drwxr-xr-x jimtru    staff         11/8/2019 10:37         896 tools
 -rw-r--r-- jimtru    staff         11/8/2019 10:37      112858 build.psm1
 -rw-r--r-- jimtru    staff         11/8/2019 10:37      201297 CHANGELOG.md
 ```
+
+> [!NOTE]
+> 이 기능은 실험적 단계를 벗어났으며 PowerShell 7.1 이상에서 주요 기능입니다.
 
 ## <a name="psuseabbreviationexpansion"></a>PSUseAbbreviationExpansion
 

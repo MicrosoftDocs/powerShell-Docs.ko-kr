@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 12/01/2020
 title: cmdlet 문제 해결
 description: 이 문서에서는 PowerShell 갤러리를 사용하여 오류를 해결하는 데 필요한 정보 및 단계를 제공합니다.
-ms.openlocfilehash: db9e58c185c6f3bca26ff3639af85fa2dba48909
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 980da8ea7b8a09513f33a9939d512c437b755d8d
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661060"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913321"
 ---
 # <a name="troubleshooting-cmdlets"></a>cmdlet 문제 해결
 
@@ -21,12 +21,15 @@ Launch new PowerShell Console
 Update-Module Azure -Verbose
 ```
 
-### <a name="required-network-endpoints"></a>필수 네트워크 엔드포인트
+## <a name="required-network-endpoints"></a>필수 네트워크 엔드포인트
 
 설치 및 업데이트 cmdlets에는 PowerShell 갤러리에서 사용하는 네트워크 엔드포인트로의 연결을 위해 인터넷 액세스가 필요합니다. 네트워크 액세스 정책에 따라 다음 엔드포인트로 연결할 수 있는지 확인하십시오.
 
-- oneget.org
-- go.microsoft.com
-- az818661.vo.msecnd.net
-- www.powershellgallery.com
-- devopsgallerystorage.blob.core.windows.net
+- `psg-prod-eastus.azureedge.net` - CDN 호스트 이름
+- `az818661.vo.msecnd.net` - CDN 호스트 이름
+- `devopsgallerystorage.blob.core.windows.net` - 스토리지 계정 호스트 이름
+- `*.powershellgallery.com` - 웹 사이트
+- `go.microsoft.com` - 리디렉션 서비스
+
+> [!NOTE]
+> PowerShell 갤러리와 상호 작용하는 cmdlet은 PowerShell 갤러리 서비스의 작동이 중단될 경우 예기치 않은 오류와 함께 실패할 수 있습니다. PowerShell 갤러리의 현재 상태를 확인하려면 GitHub에서 [PowerShell 갤러리 상태](https://github.com/PowerShell/PowerShellGallery/blob/master/psgallery_status.md) 페이지를 참조하세요.

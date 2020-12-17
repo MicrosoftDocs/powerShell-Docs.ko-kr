@@ -1,13 +1,13 @@
 ---
 title: Windows에 PowerShell 설치
 description: Windows에서 PowerShell을 설치하는 방법에 대한 정보
-ms.date: 10/30/2020
-ms.openlocfilehash: 825c9066d0a4e4734b9255514520b32f0876ecea
-ms.sourcegitcommit: 109ff625773389be56e98e994b7e56146f2b9d93
+ms.date: 11/11/2020
+ms.openlocfilehash: 039db904a315bd3ad3f4e1358d414c98c3a84be5
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93296381"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661429"
 ---
 # <a name="installing-powershell-on-windows"></a>Windows에 PowerShell 설치
 
@@ -30,8 +30,8 @@ Windows에서 PowerShell을 설치하려면 GitHub에서 [최신][] 패키지 �
 
 MSI 파일은 `PowerShell-<version>-win-<os-arch>.msi`과 비슷합니다. 다음은 그 예입니다. 
 
-- `PowerShell-7.0.3-win-x64.msi`
-- `PowerShell-7.0.3-win-x86.msi`
+- `PowerShell-7.1.0-win-x64.msi`
+- `PowerShell-7.1.0-win-x86.msi`
 
 다운로드가 완료되면 설치 프로그램을 두 번 클릭하고 지시를 따릅니다.
 
@@ -41,13 +41,14 @@ MSI 파일은 `PowerShell-<version>-win-<os-arch>.msi`과 비슷합니다. 다�
 - 시작 메뉴 또는 `$env:ProgramFiles\PowerShell\<version>\pwsh.exe`를 통해 PowerShell을 시작할 수 있습니다.
 
 > [!NOTE]
-> PowerShell 7은 새 디렉터리에 설치되고 Windows PowerShell 5.1과 함께 실행됩니다. PowerShell Core 6.x의 경우 PowerShell 7은 PowerShell Core 6.x를 제거하는 현재 위치 업그레이드입니다.
+> PowerShell 7.1은 새 디렉터리에 설치되고 Windows PowerShell 5.1과 함께 실행됩니다.
+> PowerShell 7.1은 PowerShell 6.x 또는 PowerShell 7.0을 대체하는 현재 위치 업그레이드입니다.
 >
-> - PowerShell 7은 `$env:ProgramFiles\PowerShell\7`에 설치됩니다.
+> - PowerShell 7.1은 `$env:ProgramFiles\PowerShell\7`에 설치됩니다.
 > - `$env:ProgramFiles\PowerShell\7` 폴더가 `$env:PATH`에 추가됩니다.
 > - `$env:ProgramFiles\PowerShell\6` 폴더가 삭제됩니다.
 >
-> PowerShell 6과 PowerShell 7을 함께 실행해야 하는 경우 [ZIP 설치](#zip) 방법을 사용하여 PowerShell 6을 다시 설치합니다.
+> PowerShell 7.1을 다른 버전과 나란히 실행해야 하는 경우 [ZIP install](#zip) 메서드를 사용하여 다른 버전을 다른 폴더에 설치합니다.
 
 ### <a name="administrative-install-from-the-command-line"></a>명령줄에서 관리 설치
 
@@ -60,7 +61,7 @@ MSI 파일은 `PowerShell-<version>-win-<os-arch>.msi`과 비슷합니다. 다�
 다음 예제에서는 PowerShell을 자동으로 설치할 때 모든 설치 옵션을 사용하도록 설정하는 방법을 보여 줍니다.
 
 ```powershell
-msiexec.exe /package PowerShell-7.0.3-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
+msiexec.exe /package PowerShell-7.1.0-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
 ```
 
 `Msiexec.exe`에 대한 명령줄 옵션의 전체 목록은 [명령줄 옵션](/windows/desktop/Msi/command-line-options)을 참조하세요.
@@ -78,29 +79,14 @@ PowerShell 7.1부터 MSI 패키지는 PowerShell의 설치 위치 및 버전을 
 
 관리자 및 개발자가 PowerShell 경로를 찾는 데 사용할 수 있습니다. `<GUID>` 값은 모든 미리 보기 및 부 버전 릴리스에서 동일합니다. `<GUID>` 값은 주 릴리스마다 변경됩니다.
 
-## <a name="installing-the-msix-package"></a><a id="msix" />MSIX 패키지 설치
-
-> [!NOTE]
-> MSIX 패키지는 현재 공식적으로 지원되지 않습니다. Microsoft는 내부 테스트 용도로만 이 패키지를 계속 빌드합니다.
-
-Windows 10 클라이언트에 MSIX 패키지를 수동으로 설치하려면 GitHub [릴리스][릴리스] 페이지에서 MSIX 패키지를 다운로드합니다. 설치하려는 릴리스의 **Assets** 섹션까지 아래로 스크롤합니다. Assets 섹션이 축소되어 있으면 클릭해서 확장합니다.
-
-MSIX 파일은 다음과 같습니다. `PowerShell-<version>-win-<os-arch>.msix`
-
-패키지를 설치하려면 `Add-AppxPackage` cmdlet을 사용해야 합니다.
-
-```powershell
-Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
-```
-
 ## <a name="installing-the-zip-package"></a><a id="zip" />ZIP 패키지 설치
 
 고급 배포 시나리오를 지원하기 위해 PowerShell 이진 ZIP 아카이브가 제공됩니다. [릴리스][릴리스] 페이지에서 다음 ZIP 보관 파일 중 하나를 다운로드합니다.
 
-- PowerShell-7.0.3-win-x64.zip
-- PowerShell-7.0.3-win-x86.zip
-- PowerShell-7.0.3-win-arm64.zip
-- PowerShell-7.0.3-win-arm32.zip
+- PowerShell-7.1.0-win-x64.zip
+- PowerShell-7.1.0-win-x86.zip
+- PowerShell-7.1.0-win-arm64.zip
+- PowerShell-7.1.0-win-arm32.zip
 
 파일을 다운로드하는 방법에 따라 `Unblock-File` cmdlet을 사용하여 파일의 차단을 해제해야 할 수도 있습니다. 원하는 위치에 콘텐츠의 압축을 풀고, 여기서 `pwsh.exe`를 실행합니다. MSI 패키지 설치와 달리 ZIP 보관 파일 설치는 필수 조건을 확인하지 않습니다. WSMan에서 원격 기능이 제대로 작동하도록 하려면 [필수 조건](#prerequisites)을 충족했는지 확인하세요.
 
@@ -239,7 +225,7 @@ dotnet 도구 설치 프로그램은 `$env:PATH` 환경 변수에 `$env:USERPROF
    ```Output
    Name               Id                           Version
    ---------------------------------------------------------------
-   PowerShell         Microsoft.PowerShell         7.0.3
+   PowerShell         Microsoft.PowerShell         7.1.0
    PowerShell-Preview Microsoft.PowerShell-Preview 7.1.0-preview.5
    ```
 
@@ -249,6 +235,39 @@ dotnet 도구 설치 프로그램은 `$env:PATH` 환경 변수에 `$env:USERPROF
    winget install --name PowerShell --exact
    winget install --name PowerShell-Preview --exact
    ```
+
+## <a name="installing-from-the-microsoft-store"></a><a id="msix" />Microsoft Store에서 설치
+
+PowerShell 7.1이 Microsoft Store에 게시되었습니다. 이 PowerShell 릴리스는 [Microsoft Store](https://www.microsoft.com/store/apps/9MZ1SNWT0N5D) 웹 사이트 또는 Windows의 Microsoft Store 애플리케이션에서 찾을 수 있습니다.
+
+Microsoft Store 패키지의 이점:
+
+- Windows 10에 바로 기본 제공되는 자동 업데이트
+- Intune 및 SCCM과 같은 기타 소프트웨어 배포 메커니즘과 통합
+
+제한 사항:
+
+MSIX 패키지는 일부 파일 시스템 및 레지스트리 위치에 대한 액세스를 가상화하는 애플리케이션 샌드박스에서 실행됩니다.
+
+- HKEY_CURRENT_USER 아래의 모든 레지스트리 변경 내용은 개인, 사용자별, 앱별 위치에 쓸 때 복사됩니다. 따라서 이러한 값은 다른 애플리케이션에서 사용할 수 없습니다.
+- `$PSHOME`에 저장된 시스템 수준 구성 설정은 수정할 수 없습니다. 여기에는 WSMAN 구성이 포함됩니다. 그러므로 원격 세션에서 PowerShell의 저장소 기반 설치에 연결할 수 없습니다. 사용자 수준 구성 및 SSH 원격 기능을 지원합니다.
+
+자세한 내용은 [Windows에서 패키지된 데스크톱 앱을 실행하는 방법 이해](/windows/msix/desktop/desktop-to-uwp-behind-the-scenes)를 참조하세요.
+
+### <a name="using-the-msix-package"></a>MSIX 패키지 사용
+
+> [!NOTE]
+> PowerShell의 미리 보기 빌드에는 MSIX 패키지가 포함됩니다. MSIX 패키지는 공식적으로 지원되지 않습니다. 이 패키지는 미리 보기 기간 동안 테스트 목적으로 빌드된 것입니다.
+
+Windows 10 클라이언트에 MSIX 패키지를 수동으로 설치하려면 GitHub [릴리스][릴리스] 페이지에서 MSIX 패키지를 다운로드합니다. 설치하려는 릴리스의 **Assets** 섹션까지 아래로 스크롤합니다. Assets 섹션이 축소되어 있으면 클릭해서 확장합니다.
+
+MSIX 파일은 다음과 같습니다. `PowerShell-<version>-win-<os-arch>.msix`
+
+패키지를 설치하려면 `Add-AppxPackage` cmdlet을 사용해야 합니다.
+
+```powershell
+Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
+```
 
 ## <a name="how-to-create-a-remoting-endpoint"></a>원격 엔드포인트를 만드는 방법
 

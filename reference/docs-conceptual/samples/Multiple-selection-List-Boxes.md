@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: 다중 선택 목록 상자
 description: 이 문서에서는 Windows PowerShell의 .NET Framework 양식 작성 기능을 사용하여 다중 선택 목록 상자 컨트롤을 만드는 방법을 보여줍니다.
-ms.openlocfilehash: e11d1f545f748e0503b92c02bc7a101d8014bd96
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: 2724188695f054d1115b385987cda8a578c102de
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92500286"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391530"
 ---
 # <a name="multiple-selection-list-boxes"></a>다중 선택 목록 상자
 
@@ -86,7 +86,8 @@ Form 클래스의 인스턴스를 만든 후 이 클래스의 세 속성에 값�
 
 - **Size.** 양식의 크기(픽셀)입니다. 이전 스크립트는 너비가 300픽셀이고 높이가 200픽셀인 양식을 만듭니다.
 
-- **StartingPosition.** 이전 스크립트에서는 이 선택적 속성이 **CenterScreen** 으로 설정되어 있습니다. 이 속성을 추가하지 않으면 양식을 열 때 위치가 자동으로 선택됩니다. **StartingPosition** 을 **CenterScreen** 으로 설정하면 로드할 때마다 화면 가운데 양식이 자동으로 표시됩니다.
+- **StartingPosition.** 이전 스크립트에서는 이 선택적 속성이 **CenterScreen** 으로 설정되어 있습니다.
+  이 속성을 추가하지 않으면 양식을 열 때 위치가 자동으로 선택됩니다. **StartingPosition** 을 **CenterScreen** 으로 설정하면 로드할 때마다 화면 가운데 양식이 자동으로 표시됩니다.
 
 ```powershell
 $form.Text = 'Data Entry Form'
@@ -128,7 +129,7 @@ $label.Text = 'Please make a selection from the list below:'
 $form.Controls.Add($label)
 ```
 
-사용자가 레이블 텍스트에 설명된 정보를 입력할 수 있는 컨트롤(여기서는 목록 상자)을 추가합니다. 세부적인 제어를 위해 텍스트 상자 이외에 다른 여러 컨트롤을 추가할 수 있습니다. 자세한 내용은 MSDN에서 [System.Windows.Forms 네임스페이스](https://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx)를 참조하세요.
+사용자가 레이블 텍스트에 설명된 정보를 입력할 수 있는 컨트롤(여기서는 목록 상자)을 추가합니다. 세부적인 제어를 위해 텍스트 상자 이외에 다른 여러 컨트롤을 추가할 수 있습니다. 자세한 내용은 [System.Windows.Forms 네임스페이스](/dotnet/api/system.windows.forms)를 참조하세요.
 
 ```powershell
 $listBox = New-Object System.Windows.Forms.Listbox
@@ -183,6 +184,6 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 ## <a name="see-also"></a>참고 항목
 
-- [주말 스크립터:  PowerShell GUI 예제 수정](https://go.microsoft.com/fwlink/?LinkId=506644)
+- [주말 스크립터: PowerShell GUI 예제 수정](https://devblogs.microsoft.com/scripting/weekend-scripter-fixing-powershell-gui-examples/)
 - [GitHub: Dave Wyatt's WinFormsExampleUpdates](https://github.com/dlwyatt/WinFormsExampleUpdates)(GitHub: Dave Wyatt의 WinFormsExampleUpdates)
-- [Windows PowerShell Tip of the Week: Multi-Select List Boxes - And More!](https://technet.microsoft.com/library/ff730950.aspx)(이 주의 Windows PowerShell 팁: 다중 선택 목록 상자 등)
+- [이번 주 Windows PowerShell 팁: 다중 선택 목록 상자 등](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730950(v=technet.10))

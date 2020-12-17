@@ -2,14 +2,14 @@
 ms.date: 01/02/2020
 title: Windows PowerShell ISE 탐색
 description: 이 문서에서는 Windows PowerShell ISE를 간략히 설명합니다.
-ms.topic: landing-page
+ms.topic: conceptual
 ms.custom: ISE-F1-page
-ms.openlocfilehash: 4ef3f471f11c2f1de818491a193fcf34201cb04a
-ms.sourcegitcommit: 109ff625773389be56e98e994b7e56146f2b9d93
+ms.openlocfilehash: 91161763c817972a62b4da1558a7ca119d8c8616
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93296358"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97090449"
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>Windows PowerShell ISE 탐색
 
@@ -17,7 +17,7 @@ Windows PowerShell ISE(통합 스크립팅 환경)를 사용하여 명령 및 �
 
 ## <a name="menu-bar"></a>메뉴 모음
 
-메뉴 모음에는 **파일** , **편집** , **보기** , **도구** , **디버그** , **추가 기능** 및 **도움말** 메뉴가 있습니다. 메뉴의 단추를 사용하여 Windows PowerShell ISE에서 스크립트를 작성 및 실행하고 명령을 실행하는 것과 관련된 작업을 수행할 수 있습니다. 또한 [ISE 개체 모델 계층 구조](object-model/The-ISE-Object-Model-Hierarchy.md)를 사용하는 스크립트를 실행하여 메뉴 모음에 [추가 기능 도구](object-model/The-ISEAddOnTool-Object.md)를 배치할 수 있습니다.
+메뉴 모음에는 **파일**, **편집**, **보기**, **도구**, **디버그**, **추가 기능** 및 **도움말** 메뉴가 있습니다. 메뉴의 단추를 사용하여 Windows PowerShell ISE에서 스크립트를 작성 및 실행하고 명령을 실행하는 것과 관련된 작업을 수행할 수 있습니다. 또한 [ISE 개체 모델 계층 구조](object-model/The-ISE-Object-Model-Hierarchy.md)를 사용하는 스크립트를 실행하여 메뉴 모음에 [추가 기능 도구](object-model/The-ISEAddOnTool-Object.md)를 배치할 수 있습니다.
 
 ## <a name="windows-powershell-tabs"></a>Windows PowerShell 탭
 
@@ -79,7 +79,8 @@ Windows PowerShell 탭은 Windows PowerShell 스크립트가 실행되는 환경
 
 ## <a name="help"></a>도움말
 
-Windows PowerShell ISE에 대한 도움말을 웹의 TechNet 라이브러리에서 확인할 수 있습니다. **도움말** 메뉴에서 **Windows PowerShell ISE 도움말** 을 클릭하거나 스크립트 창이나 콘솔 창에서 커서가 cmdlet 이름에 있는 경우를 제외하고 아무 곳에서나 <kbd>F1</kbd> 키를 누르면 도움말을 열 수 있습니다. **도움말** 메뉴에서 `Update-Help` cmdlet을 실행하여 cmdlet에 대한 모든 매개 변수를 표시하고 사용하기 쉬운 형태로 매개 변수를 입력할 수 있게 하여 명령 생성을 지원하는 명령 창을 표시할 수도 있습니다.
+Windows PowerShell ISE에 대한 도움말은 docs.microsoft.com에서 사용할 수 있습니다. **도움말** 메뉴에서 **Windows PowerShell ISE 도움말** 을 클릭하거나 스크립트 창이나 콘솔 창에서 커서가 cmdlet 이름에 있는 경우를 제외하고 아무 곳에서나 <kbd>F1</kbd> 키를 누르면 도움말을 열 수 있습니다.
+**도움말** 메뉴에서 `Update-Help` cmdlet을 실행하여 cmdlet에 대한 모든 매개 변수를 표시하고 사용하기 쉬운 형태로 매개 변수를 입력할 수 있게 하여 명령 생성을 지원하는 명령 창을 표시할 수도 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
