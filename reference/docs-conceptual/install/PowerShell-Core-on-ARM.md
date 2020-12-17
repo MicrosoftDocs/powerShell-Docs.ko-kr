@@ -1,22 +1,44 @@
 ---
 title: ARM에서 PowerShell Core 설치
-description: ARM 기반 시스템에서 PowerShell Core 설치
-ms.date: 10/30/2020
-ms.openlocfilehash: 843c90c1a00ba96eedbb7f86ce89f372c51f6880
-ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
+description: ARM 기반 시스템에 PowerShell Core 설치
+ms.date: 11/11/2020
+ms.openlocfilehash: 85a2cccb18341ffee8c81430bc8490e5d3e97b41
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93142772"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892075"
 ---
-# <a name="powershell-core-on-arm"></a><span data-ttu-id="97572-103">ARM에서 PowerShell Core</span><span class="sxs-lookup"><span data-stu-id="97572-103">PowerShell Core on ARM</span></span>
+# <a name="powershell-core-on-arm"></a><span data-ttu-id="4e895-103">ARM에서 PowerShell Core</span><span class="sxs-lookup"><span data-stu-id="4e895-103">PowerShell Core on Arm</span></span>
 
-<span data-ttu-id="97572-104">ARM 기반 PowerShell 지원은 [.NET Core 지원 OS 수명 주기 정책](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="97572-104">Support of PowerShell on ARM is based on the [.NET Core Supported OS Lifecycle Policy](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md).</span></span>
-<span data-ttu-id="97572-105">PowerShell은 이 정책에서 지원되는 플랫폼에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="97572-105">PowerShell is supported on the platform supported under this policy.</span></span>
+<span data-ttu-id="4e895-104">ARM 기반 PowerShell 지원은 **.NET Core 지원 OS 수명 주기 정책** 을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="4e895-104">Support of PowerShell on Arm is based on the **.NET Core Supported OS Lifecycle Policies**.</span></span>
 
-<span data-ttu-id="97572-106">설치 지침은 다음 문서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="97572-106">For installation instructions, see the following articles:</span></span>
+<span data-ttu-id="4e895-105">PowerShell 7.1은 [.NET Core 3.1 지원 OS 수명 주기 정책](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)을 기반으로 하며 다음 플랫폼을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="4e895-105">PowerShell 7.1 is based on the [.NET Core 3.1 Supported OS Lifecycle Policy](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) and supports the following platforms:</span></span>
 
-- [<span data-ttu-id="97572-107">ARM 기반 Windows 10</span><span class="sxs-lookup"><span data-stu-id="97572-107">Windows 10 on ARM</span></span>](installing-powershell-core-on-windows.md#installing-the-zip-package)
-- [<span data-ttu-id="97572-108">Windows 10 IoT Enterprise</span><span class="sxs-lookup"><span data-stu-id="97572-108">Windows 10 IoT Enterprise</span></span>](installing-powershell-core-on-windows.md#deploying-on-windows-10-iot-enterprise)
-- [<span data-ttu-id="97572-109">Windows 10 IoT Core</span><span class="sxs-lookup"><span data-stu-id="97572-109">Windows 10 IoT Core</span></span>](installing-powershell-core-on-windows.md#deploying-on-windows-10-iot-core)
-- [<span data-ttu-id="97572-110">Raspbian</span><span class="sxs-lookup"><span data-stu-id="97572-110">Raspbian</span></span>](installing-powershell-core-on-linux.md#raspbian)
+|         <span data-ttu-id="4e895-106">OS</span><span class="sxs-lookup"><span data-stu-id="4e895-106">OS</span></span>          |          <span data-ttu-id="4e895-107">버전</span><span class="sxs-lookup"><span data-stu-id="4e895-107">Version</span></span>           | <span data-ttu-id="4e895-108">아키텍처</span><span class="sxs-lookup"><span data-stu-id="4e895-108">Architectures</span></span> |          <span data-ttu-id="4e895-109">수명 주기</span><span class="sxs-lookup"><span data-stu-id="4e895-109">Lifecycle</span></span>           |
+| ------------------- | -------------------------- | ------------- | ---------------------------- |
+| <span data-ttu-id="4e895-110">Windows Nano Server</span><span class="sxs-lookup"><span data-stu-id="4e895-110">Windows Nano Server</span></span> | <span data-ttu-id="4e895-111">버전 1803+</span><span class="sxs-lookup"><span data-stu-id="4e895-111">Version 1803+</span></span>              | <span data-ttu-id="4e895-112">Arm32</span><span class="sxs-lookup"><span data-stu-id="4e895-112">Arm32</span></span>         | <span data-ttu-id="4e895-113">[Windows][Windows-lifecycle]</span><span class="sxs-lookup"><span data-stu-id="4e895-113">[Windows][Windows-lifecycle]</span></span> |
+| <span data-ttu-id="4e895-114">Alpine Linux</span><span class="sxs-lookup"><span data-stu-id="4e895-114">Alpine Linux</span></span>        | <span data-ttu-id="4e895-115">3.10+</span><span class="sxs-lookup"><span data-stu-id="4e895-115">3.10+</span></span>                      | <span data-ttu-id="4e895-116">Arm64</span><span class="sxs-lookup"><span data-stu-id="4e895-116">Arm64</span></span>         | <span data-ttu-id="4e895-117">[Alpine][Alpine-lifecycle]</span><span class="sxs-lookup"><span data-stu-id="4e895-117">[Alpine][Alpine-lifecycle]</span></span>   |
+| <span data-ttu-id="4e895-118">Debian</span><span class="sxs-lookup"><span data-stu-id="4e895-118">Debian</span></span>              | <span data-ttu-id="4e895-119">9+</span><span class="sxs-lookup"><span data-stu-id="4e895-119">9+</span></span>                         | <span data-ttu-id="4e895-120">Arm32, Arm64</span><span class="sxs-lookup"><span data-stu-id="4e895-120">Arm32, Arm64</span></span>  | <span data-ttu-id="4e895-121">[Debian][Debian-lifecycle]</span><span class="sxs-lookup"><span data-stu-id="4e895-121">[Debian][Debian-lifecycle]</span></span>   |
+| <span data-ttu-id="4e895-122">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="4e895-122">Ubuntu</span></span>              | <span data-ttu-id="4e895-123">20.10, 20.04, 18.04, 16.04</span><span class="sxs-lookup"><span data-stu-id="4e895-123">20.10, 20.04, 18.04, 16.04</span></span> | <span data-ttu-id="4e895-124">Arm32, Arm64</span><span class="sxs-lookup"><span data-stu-id="4e895-124">Arm32, Arm64</span></span>  | <span data-ttu-id="4e895-125">[Ubuntu][Ubuntu-lifecycle]</span><span class="sxs-lookup"><span data-stu-id="4e895-125">[Ubuntu][Ubuntu-lifecycle]</span></span>   |
+
+<span data-ttu-id="4e895-126">PowerShell 7.0은 [.NET Core 5.0 지원 OS 수명 주기 정책](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md)을 기반으로 하며 다음 플랫폼을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="4e895-126">PowerShell 7.0 is based on the [.NET Core 5.0 Supported OS Lifecycle Policy](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md) and supports the following platforms:</span></span>
+
+|        <span data-ttu-id="4e895-127">OS</span><span class="sxs-lookup"><span data-stu-id="4e895-127">OS</span></span>         |          <span data-ttu-id="4e895-128">버전</span><span class="sxs-lookup"><span data-stu-id="4e895-128">Version</span></span>           | <span data-ttu-id="4e895-129">아키텍처</span><span class="sxs-lookup"><span data-stu-id="4e895-129">Architectures</span></span> |          <span data-ttu-id="4e895-130">수명 주기</span><span class="sxs-lookup"><span data-stu-id="4e895-130">Lifecycle</span></span>           |
+| ----------------- | -------------------------- | ------------- | ---------------------------- |
+| <span data-ttu-id="4e895-131">Windows 10 클라이언트</span><span class="sxs-lookup"><span data-stu-id="4e895-131">Windows 10 Client</span></span> | <span data-ttu-id="4e895-132">버전 1607+</span><span class="sxs-lookup"><span data-stu-id="4e895-132">Version 1607+</span></span>              | <span data-ttu-id="4e895-133">Arm64</span><span class="sxs-lookup"><span data-stu-id="4e895-133">Arm64</span></span>         | <span data-ttu-id="4e895-134">[Windows][Windows-lifecycle]</span><span class="sxs-lookup"><span data-stu-id="4e895-134">[Windows][Windows-lifecycle]</span></span> |
+| <span data-ttu-id="4e895-135">Alpine Linux</span><span class="sxs-lookup"><span data-stu-id="4e895-135">Alpine Linux</span></span>      | <span data-ttu-id="4e895-136">3.11+</span><span class="sxs-lookup"><span data-stu-id="4e895-136">3.11+</span></span>                      | <span data-ttu-id="4e895-137">Arm64</span><span class="sxs-lookup"><span data-stu-id="4e895-137">Arm64</span></span>         | <span data-ttu-id="4e895-138">[Alpine][Alpine-lifecycle]</span><span class="sxs-lookup"><span data-stu-id="4e895-138">[Alpine][Alpine-lifecycle]</span></span>   |
+| <span data-ttu-id="4e895-139">Debian</span><span class="sxs-lookup"><span data-stu-id="4e895-139">Debian</span></span>            | <span data-ttu-id="4e895-140">9+</span><span class="sxs-lookup"><span data-stu-id="4e895-140">9+</span></span>                         | <span data-ttu-id="4e895-141">Arm32, Arm64</span><span class="sxs-lookup"><span data-stu-id="4e895-141">Arm32, Arm64</span></span>  | <span data-ttu-id="4e895-142">[Debian][Debian-lifecycle]</span><span class="sxs-lookup"><span data-stu-id="4e895-142">[Debian][Debian-lifecycle]</span></span>   |
+| <span data-ttu-id="4e895-143">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="4e895-143">Ubuntu</span></span>            | <span data-ttu-id="4e895-144">20.10, 20.04, 18.04, 16.04</span><span class="sxs-lookup"><span data-stu-id="4e895-144">20.10, 20.04, 18.04, 16.04</span></span> | <span data-ttu-id="4e895-145">Arm32, Arm64</span><span class="sxs-lookup"><span data-stu-id="4e895-145">Arm32, Arm64</span></span>  | <span data-ttu-id="4e895-146">[Ubuntu][Ubuntu-lifecycle]</span><span class="sxs-lookup"><span data-stu-id="4e895-146">[Ubuntu][Ubuntu-lifecycle]</span></span>   |
+
+[Windows-lifecycle]: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet
+[Alpine-lifecycle]: https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases
+[Debian-lifecycle]: https://wiki.debian.org/DebianReleases
+[Ubuntu-lifecycle]: https://wiki.ubuntu.com/Releases
+
+<span data-ttu-id="4e895-147">설치 지침은 다음 문서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4e895-147">For installation instructions, see the following articles:</span></span>
+
+- [<span data-ttu-id="4e895-148">ARM에서 Windows 10</span><span class="sxs-lookup"><span data-stu-id="4e895-148">Windows 10 on Arm</span></span>](installing-powershell-core-on-windows.md#installing-the-zip-package)
+- [<span data-ttu-id="4e895-149">Windows 10 IoT Enterprise</span><span class="sxs-lookup"><span data-stu-id="4e895-149">Windows 10 IoT Enterprise</span></span>](installing-powershell-core-on-windows.md#deploying-on-windows-10-iot-enterprise)
+- [<span data-ttu-id="4e895-150">Windows 10 IoT Core</span><span class="sxs-lookup"><span data-stu-id="4e895-150">Windows 10 IoT Core</span></span>](installing-powershell-core-on-windows.md#deploying-on-windows-10-iot-core)
+- [<span data-ttu-id="4e895-151">Raspbian</span><span class="sxs-lookup"><span data-stu-id="4e895-151">Raspbian</span></span>](installing-powershell-core-on-linux.md#raspbian)
