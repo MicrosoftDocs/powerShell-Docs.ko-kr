@@ -1,17 +1,16 @@
 ---
 description: PowerShell에 대 한 상태 정보를 저장 하는 변수에 대해 설명 합니다. 이러한 변수는 PowerShell에서 만들고 유지 관리 합니다.
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 08/14/2020
+ms.date: 12/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Automatic_Variables
-ms.openlocfilehash: 5ce9e61113da2c781f5774866e827663a7c7ced4
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 60ad0e40f7e392bf240ee76a5902123c45a282fd
+ms.sourcegitcommit: 1628fd2a1f50aec2f31ffb1c451a3ce77c08983c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93224161"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97577245"
 ---
 # <a name="about-automatic-variables"></a>자동 변수 정보
 
@@ -53,7 +52,7 @@ $? # $true
 네이티브 명령 (실행 파일)의 경우가 0 이면이 `$?` **True** 로 설정 되 `$LASTEXITCODE` 고,가 다른 값 이면 **False** 로 설정 됩니다 `$LASTEXITCODE` .
 
 > [!NOTE]
-> 괄호 안에 문을 포함 하는 PowerShell 7 까지는 `(...)` 부분식 구문 `$(...)` 또는 배열 식이 `@(...)` 항상 true로 다시 설정 `$?` 되므로가 **True** `(Write-Error)` `$?` **true** 로 표시 됩니다.
+> 괄호 안에 문을 포함 하는 PowerShell 7 까지는 `(...)` 부분식 구문 `$(...)` 또는 배열 식이 `@(...)` 항상 true로 다시 설정 `$?` 되므로가  `(Write-Error)` `$?` **true** 로 표시 됩니다.
 > 이는 PowerShell 7에서 변경 되었으므로 `$?` 항상 이러한 식에서 실행 된 마지막 명령의 실제 성공을 반영 합니다.
 
 ### <a name=""></a>$^
@@ -138,6 +137,12 @@ PowerShell에 대 한 현재 호스트 응용 프로그램을 나타내는 개�
 
 열거자는 루프 값을 검색 하 고 현재 루프 반복을 변경 하는 데 사용할 수 있는 속성 및 메서드를 포함 합니다. 자세한 내용은 [열거자 사용](#using-enumerators)을 참조 하세요.
 
+`$input`변수는 `-Command` `pwsh` 명령줄에서 호출 될 때 매개 변수에서 지정 하는 명령에도 사용할 수 있습니다. 다음 예제는 Windows 명령 셸에서 실행 됩니다.
+
+```CMD
+echo Hello | pwsh -Command """$input World!"""
+```
+
 ### <a name="iscoreclr"></a>$IsCoreCLR
 
 `$True`현재 세션이 CoreCLR (.Net Core 런타임)에서 실행 되는 경우를 포함 합니다. 그렇지 않으면 `$False` 를 포함 합니다.
@@ -171,11 +176,11 @@ PowerShell에 대 한 현재 호스트 응용 프로그램을 나타내는 개�
 
 현재 명령에 대 한 정보 (예: 이름, 매개 변수, 매개 변수 값) 및 명령이 시작, 호출 또는 호출 된 방법에 대 한 정보를 포함 합니다.
 
-`$MyInvocation` 는 스크립트, 함수 및 스크립트 블록에 대해서만 채워집니다. 현재 스크립트에서 반환 하는 정보 **System.Management.Automation.InvocationInfo** `$MyInvocation` (예: 스크립트의 경로 및 파일 이름 ( `$MyInvocation.MyCommand.Path` ) 또는 함수 이름 ( `$MyInvocation.MyCommand.Name` ))를 사용 하 여 현재 명령을 식별할 수 있습니다. 이는 현재 스크립트의 이름을 찾는 데 특히 유용 합니다.
+`$MyInvocation` 는 스크립트, 함수 및 스크립트 블록에 대해서만 채워집니다. 현재 스크립트에서 반환 하는 정보  `$MyInvocation` (예: 스크립트의 경로 및 파일 이름 ( `$MyInvocation.MyCommand.Path` ) 또는 함수 이름 ( `$MyInvocation.MyCommand.Name` ))를 사용 하 여 현재 명령을 식별할 수 있습니다. 이는 현재 스크립트의 이름을 찾는 데 특히 유용 합니다.
 
 PowerShell 3.0부터에는 `MyInvocation` 다음과 같은 새 속성이 있습니다.
 
-| 속성      | Description                                         |
+| 속성      | 설명                                         |
 | ------------- | --------------------------------------------------- |
 | **PSScriptRoot**  | 호출 된 스크립트에 대 한 전체 경로를 포함 합니다.   |
 |               | 현재 명령입니다. 이 속성의 값은입니다.  |
@@ -363,7 +368,7 @@ PowerShell 3.0부터 모든 스크립트에서 유효 합니다.
 
 현재 세션에서 실행 중인 PowerShell 버전에 대 한 세부 정보를 표시 하는 읽기 전용 해시 테이블을 포함 합니다. 테이블에는 다음 항목이 포함 되어 있습니다.
 
-| 속성                  | Description                                   |
+| 속성                  | 설명                                   |
 | ------------------------- | --------------------------------------------- |
 | **PSVersion**             | PowerShell 버전 번호                 |
 | **PSEdition**             | 이 속성의 값은  |
@@ -455,7 +460,7 @@ PowerShell 3.0부터 모든 스크립트에서 유효 합니다.
 
 **Current** 속성은 **MoveNext** 가 호출 될 때까지 계속 해 서 동일한 속성을 반환 합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="example-1-using-the-input-variable"></a>예제 1: $input 변수 사용
 
@@ -681,7 +686,7 @@ Reset Loop: 0
 다음 예제에서는 모든 열거자 개념을 보여 줍니다.
 
 > [!NOTE]
-> MoveNext 메서드 뒤에 문이 없더라도 설명 **된 사례가 어떻게** 실행 되지 않는지 확인 합니다 `break` . **MoveNext**
+> MoveNext 메서드 뒤에 문이 없더라도 설명 **된 사례가 어떻게** 실행 되지 않는지 확인 합니다 `break` . 
 
 ```powershell
 $values = "Start", "MoveNext", "NotEvaluated", "Reset", "End"
@@ -724,7 +729,7 @@ Default (Current): Start
 Default (Current): End
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [about_Functions](about_Functions.md)
 

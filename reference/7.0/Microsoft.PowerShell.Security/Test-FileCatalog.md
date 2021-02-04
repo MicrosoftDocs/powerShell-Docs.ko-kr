@@ -7,12 +7,12 @@ ms.date: 11/02/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/test-filecatalog?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-FileCatalog
-ms.openlocfilehash: 3219656c5c20372ac7fe999f4aafffa23b81be1a
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: 2c3b9938e778888c277403ab9bb6923caa24c68c
+ms.sourcegitcommit: 9a86cac80402d8193147058d4ba50e07b26059dd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94347026"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490604"
 ---
 # Test-FileCatalog
 
@@ -51,7 +51,7 @@ Valid
 ### 예제 2: 자세한 출력을 사용 하 여 파일 카탈로그 유효성 검사
 
 ```powershell
-Test-FileCatalog -CatalogFilePath \temp\Microsoft.PowerShell.Utility.cat -Path "$PSHome\Modules\Microsoft.PowerShell.Utility\"
+Test-FileCatalog -Detailed -CatalogFilePath \temp\Microsoft.PowerShell.Utility.cat -Path "$PSHome\Modules\Microsoft.PowerShell.Utility\"
 ```
 
 ```Output

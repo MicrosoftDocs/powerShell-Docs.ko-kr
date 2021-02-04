@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 04/07/2020
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/remove-item?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-Item
-ms.openlocfilehash: ddb3f8d1889887e01db8663e21cdb0323e6d4084
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 9b8d81c84a5dab8fa5f5e216c8c4eb5b5f6022b7
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93209802"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692848"
 ---
 # Remove-Item
 
@@ -85,7 +84,7 @@ Get-ChildItem * -Include *.csv -Recurse | Remove-Item
 
 ### 예 5: 재귀적으로 하위 키 삭제
 
-이 명령은 "OldApp" 레지스트리 키와 모든 하위 키 및 값을 삭제 합니다. 를 사용 `Remove-Item` 하 여 키를 제거 합니다. 경로를 지정 하지만 선택적 매개 변수 이름 ( **path** )은 생략 됩니다.
+이 명령은 "OldApp" 레지스트리 키와 모든 하위 키 및 값을 삭제 합니다. 를 사용 `Remove-Item` 하 여 키를 제거 합니다. 경로를 지정 하지만 선택적 매개 변수 이름 (**path**)은 생략 됩니다.
 
 **재귀** 매개 변수는 "oldapp" 키의 모든 내용을 재귀적으로 삭제 합니다. 키에 하위 키가 포함 되어 있고 **재귀** 매개 변수를 생략 하면 키의 내용을 삭제할 것인지를 확인 하는 메시지가 표시 됩니다.
 
@@ -174,7 +173,7 @@ At line:1 char:1
 
 ```
 
-**Stream** 매개 변수는 `Get-Item` 파일의 식별자 스트림을 가져옵니다 **.** `Copy-Script.ps1` `Remove-Item`**Stream** 매개 변수를 사용 하 여 파일의 **식별자** 스트림을 제거 합니다. 마지막으로, `Get-Item` cmdlet은 **영역 식별자** 스트림이 삭제 되었음을 보여 줍니다.
+**Stream** 매개 변수는 `Get-Item` `Zone.Identifier` 파일의 스트림을 가져옵니다 `Copy-Script.ps1` . `Remove-Item`**stream** 매개 변수를 사용 하 여 `Zone.Identifier` 파일의 스트림을 제거 합니다. 마지막으로이 `Get-Item` cmdlet은 스트림이 삭제 된 것을 보여 줍니다 `Zone.Identifier` .
 
 ## PARAMETERS
 
@@ -214,8 +213,7 @@ Accept wildcard characters: True
 
 ### -Filter
 
-**Path** 매개 변수를 한정 하는 필터를 지정 합니다. [FileSystem](../Microsoft.PowerShell.Core/About/about_FileSystem_Provider.md) 공급자는 필터 사용을 지 원하는 유일한 설치 된 PowerShell 공급자입니다. [About_Wildcards](../Microsoft.PowerShell.Core/About/about_Wildcards.md)에서 **FileSystem** 필터 언어의 구문을 찾을 수 있습니다.
-필터는 다른 매개 변수 보다 더 효율적입니다. cmdlet이 개체가 검색 된 후 개체를 필터링 하는 대신 개체를 가져올 때 해당 개체를 적용 하기 때문입니다.
+**Path** 매개 변수를 한정 하는 필터를 지정 합니다. [FileSystem](../Microsoft.PowerShell.Core/About/about_FileSystem_Provider.md) 공급자는 필터 사용을 지 원하는 유일한 설치 된 PowerShell 공급자입니다. [About_Wildcards](../Microsoft.PowerShell.Core/About/about_Wildcards.md)에서 **FileSystem** 필터 언어의 구문을 찾을 수 있습니다. 필터는 다른 매개 변수 보다 더 효율적입니다. cmdlet이 개체가 검색 된 후 개체를 필터링 하는 대신 개체를 가져올 때 해당 개체를 적용 하기 때문입니다.
 
 ```yaml
 Type: System.String
@@ -317,10 +315,14 @@ Accept wildcard characters: False
 
 ### -스트림
 
+> [!NOTE]
+> 이 매개 변수는 Windows 에서만 사용할 수 있습니다.
+
 **Stream** 매개 변수는 파일 시스템 공급자가에 추가 하는 동적 매개 변수입니다 `Remove-Item` .
 이 매개 변수는 파일 시스템 드라이브에만 작동합니다.
 
-`Remove-Item`를 사용 하 여 대체 데이터 스트림을 삭제할 수 있습니다. 하지만 인터넷에서 다운로드한 파일을 차단하는 보안 검사를 제거하는 것은 권장되는 방법이 아닙니다. 다운로드 한 파일이 안전한 지 확인 하려면 cmdlet을 사용 `Unblock-File` 합니다.
+를 사용 `Remove-Item` 하 여와 같은 대체 데이터 스트림을 삭제할 수 있습니다 `Zone.Identifier` .
+하지만 인터넷에서 다운로드한 파일을 차단하는 보안 검사를 제거하는 것은 권장되는 방법이 아닙니다. 다운로드 한 파일이 안전한 지 확인 하려면 cmdlet을 사용 `Unblock-File` 합니다.
 
 이 매개 변수는 Windows PowerShell 3.0에서 도입 되었습니다.
 
@@ -373,7 +375,8 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-이 cmdlet은,,,,,,,,, `-Debug` `-ErrorAction` `-ErrorVariable` `-InformationAction` `-InformationVariable` `-OutVariable` `-OutBuffer` `-PipelineVariable` `-Verbose` `-WarningAction` 및 `-WarningVariable` 등의 일반 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md)를 참조하세요.
+이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.
+
 
 ## 입력
 
@@ -383,7 +386,7 @@ Accept wildcard characters: False
 
 ## 출력
 
-### 없음
+### None
 
 이 cmdlet은 어떠한 출력도 반환되지 않습니다.
 

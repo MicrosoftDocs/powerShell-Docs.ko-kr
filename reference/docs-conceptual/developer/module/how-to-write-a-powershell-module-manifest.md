@@ -1,14 +1,14 @@
 ---
-ms.date: 10/16/2019
+ms.date: 01/04/2021
 ms.topic: reference
 title: PowerShell 모듈 매니페스트를 작성하는 방법
 description: PowerShell 모듈 매니페스트를 작성하는 방법
-ms.openlocfilehash: 42db71968ccac1cc3c1c05c5be2e72327e5e28d9
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 8c644391008cb97c1206f985f0f5eca9d7dfcc9e
+ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "92647703"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879374"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>PowerShell 모듈 매니페스트를 작성 하는 방법
 
@@ -63,7 +63,7 @@ PowerShell 모듈을 작성 한 후 모듈에 대 한 정보를 포함 하는 �
 |**CompanyName**<br /> 형식: `String`|`'Unknown'`|이 모듈의 회사 또는 공급 업체입니다. 값을 지정 하지 않으면는 `New-ModuleManifest` 기본값을 사용 합니다.<br /> 예: `CompanyName = 'Fabrikam'`|
 |**Copyright**<br /> 형식: `String`|`'(c) <Author>. All rights reserved.'`| 이 모듈에 대 한 Copyright 문입니다. 값을 지정 하지 않으면 `New-ModuleManifest` 는 현재 사용자를으로 사용 하 여 기본값을 사용 합니다 `<Author>` . 작성자를 지정 하려면 **author** 매개 변수를 사용 합니다. <br /> 예: `Copyright = '2019 AuthorName. All rights reserved.'`|
 |**설명**<br /> 형식: `String`|`<empty string>`|이 모듈에서 제공 하는 기능에 대 한 설명입니다.<br /> 예: `Description = 'This is the module's description.'`|
-|**PowerShellVersion**<br /> 형식: `Version`|`<empty string>`|이 모듈에 필요한 PowerShell 엔진의 최소 버전입니다. 유효한 값은 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6 및 7입니다.<br /> 예: `PowerShellVersion = '5.0'`|
+|**PowerShellVersion**<br /> 형식: `Version`|`<empty string>`|이 모듈에 필요한 PowerShell 엔진의 최소 버전입니다. 유효한 값은 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 6.1, 6.2, 7.0 및 7.1입니다.<br /> 예: `PowerShellVersion = '5.0'`|
 |**PowerShellHostName**<br /> 형식: `String`|`<empty string>`|이 모듈에 필요한 PowerShell 호스트의 이름입니다. 이 이름은 PowerShell에서 제공 됩니다. 프로그램에서 호스트 프로그램의 이름을 찾으려면를 입력 `$host.name` 합니다.<br /> 예: `PowerShellHostName = 'ConsoleHost'`|
 |**PowerShellHostVersion**<br /> 형식: `Version`|`<empty string>`|이 모듈에 필요한 PowerShell 호스트의 최소 버전입니다.<br /> 예: `PowerShellHostVersion = '2.0'`|
 |**DotNetFrameworkVersion**<br /> 형식: `Version`|`<empty string>`|이 모듈에 필요한 Microsoft .NET Framework의 최소 버전입니다. 이 필수 구성 요소는 powershell 데스크톱 버전에만 유효 합니다 (예: PowerShell 5.1).<br /> 예: `DotNetFrameworkVersion = '3.5'`|
@@ -232,7 +232,7 @@ PrivateData = @{
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [about_Comparison_Operators](/powershell/module/microsoft.powershell.core/about/about_comparison_operators)
 

@@ -1,16 +1,15 @@
 ---
 description: 명령줄 인터페이스를 사용 하는 방법을 설명 합니다 `pwsh` . 명령줄 매개 변수를 표시 하 고 구문을 설명 합니다.
-keywords: powershell,cmdlet
 ms.date: 10/05/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pwsh?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Pwsh
-ms.openlocfilehash: 2aa1c4ec033b8e7294c269b53c4fe20205a47d7f
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 25ccb20a4c19a9519bf9d2a518ef6187c2327323
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93223081"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692694"
 ---
 # <a name="about-pwsh"></a>Pwsh 정보
 
@@ -73,7 +72,7 @@ pwsh[.exe] -h | -Help | -? | /?
 
 명령을 사용 하 여 스크립트 파일이 종료 되 면 `exit` 프로세스 종료 코드는 명령에 사용 되는 숫자 인수로 설정 됩니다 `exit` . 정상적인 종료를 사용 하는 경우 종료 코드는 항상 `0` 입니다.
 
-와 마찬가지로 `-Command` , 스크립트 종료 오류가 발생할 때 종료 코드는로 설정 됩니다 `1` . 그러나와는 달리 `-Command` , <kbd>Ctrl</kbd>C를 사용 하 여 실행이 중단 되는 경우 - <kbd>C</kbd> 종료 코드는 `0` 입니다.
+와 마찬가지로 `-Command` , 스크립트 종료 오류가 발생할 때 종료 코드는로 설정 됩니다 `1` . 그러나와는 달리 `-Command` , <kbd>Ctrl</kbd>C를 사용 하 여 실행이 중단 되는 경우 - <kbd></kbd> 종료 코드는 `0` 입니다.
 
 ### <a name="-command---c"></a>-Command | -c
 
@@ -99,7 +98,7 @@ pwsh -Command "& {Get-WinEvent -LogName security}"
 
 기존 PowerShell 세션 내에서 호출 되는 경우 결과는 라이브 개체가 아니라 역직렬화 된 XML 개체로 부모 셸에 반환 됩니다. 다른 셸에서는 결과가 문자열로 반환 됩니다.
 
-**Command** 값이 이면 `-` 표준 입력에서 명령 텍스트를 읽습니다. 표준 입력으로 **Command** 매개 변수를 사용 하는 경우 표준 입력을 리디렉션해야 합니다. 다음은 그 예입니다. 
+**Command** 값이 이면 `-` 표준 입력에서 명령 텍스트를 읽습니다. 표준 입력으로 **Command** 매개 변수를 사용 하는 경우 표준 입력을 리디렉션해야 합니다. 예를 들면 다음과 같습니다.
 
 ```powershell
 @'
@@ -122,7 +121,7 @@ out
 
 프로세스 종료 코드는 스크립트 블록 내의 마지막 (실행 됨) 명령의 상태에 따라 결정 됩니다. 가 이거나가 인 경우 종료 코드는입니다 `0` `$?` `$true` `1` `$?` `$false` . 마지막 명령이 또는 이외의 종료 코드를 명시적으로 설정 하는 외부 프로그램 또는 PowerShell 스크립트인 경우 `0` `1` 해당 종료 코드는 `1` 프로세스 종료 코드의로 변환 됩니다. 특정 종료 코드를 유지 하려면 `exit $LASTEXITCODE` 명령 문자열 또는 스크립트 블록에를 추가 합니다.
 
-마찬가지로, 또는와 같은 스크립트 종료 (runspace 종료) 오류가 `throw` `-ErrorAction Stop` 발생 하거나 실행이 <kbd>Ctrl</kbd>C를 사용 하 여 중단 되 면 값 1이 반환 됩니다 - <kbd>C</kbd>.
+마찬가지로, 또는와 같은 스크립트 종료 (runspace 종료) 오류가 `throw` `-ErrorAction Stop` 발생 하거나 실행이 <kbd>Ctrl</kbd>C를 사용 하 여 중단 되 면 값 1이 반환 됩니다 - <kbd></kbd>.
 
 ### <a name="-configurationname---config"></a>-ConfigurationName | -config
 
@@ -136,7 +135,7 @@ PowerShell이 실행 되는 구성 끝점을 지정 합니다. 이는 기본 Pow
 
 이 매개 변수는 PowerShell 6.2에서 도입 되었습니다.
 
-다음은 그 예입니다. 
+예를 들면 다음과 같습니다.
 
 ```powershell
 # PowerShell instance 1
@@ -147,9 +146,9 @@ Enter-PSHostProcess -CustomPipeName mydebugpipe
 
 ### <a name="-encodedcommand---e---ec"></a>-EncodedCommand | -e | -ec
 
-명령의 b a s e 64로 인코드된 문자열 버전을 허용 합니다. 이 매개 변수를 사용 하 여 복잡 하 고 중첩 된 따옴표를 필요로 하는 명령을 PowerShell에 제출할 수 있습니다. Base64 표현은 u t f-16으로 인코딩된 문자열 이어야 합니다.
+명령의 b a s e 64로 인코드된 문자열 버전을 허용 합니다. 이 매개 변수를 사용 하 여 복잡 하 고 중첩 된 따옴표를 필요로 하는 명령을 PowerShell에 제출할 수 있습니다. Base64 표현은 u t f-UTF-16LE로 인코딩된 문자열 이어야 합니다.
 
-다음은 그 예입니다. 
+예를 들면 다음과 같습니다.
 
 ```powershell
 $command = 'dir "c:\program files" '

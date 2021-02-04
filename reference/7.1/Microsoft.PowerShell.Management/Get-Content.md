@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 08/19/2020
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-content?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Content
-ms.openlocfilehash: 0140691bc0b01fff803f0efdf81980c621e1150d
-ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
+ms.openlocfilehash: b6a8d0f68717849711a794c9482e03d4ea081e1d
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "93219665"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692654"
 ---
 # Get-Content
 
@@ -180,7 +179,7 @@ Added a stream named NewStream to Stream.txt
 ```
 
 **Stream** 매개 변수는 [FileSystem 공급자](../microsoft.powershell.core/about/about_filesystem_provider.md#stream-systemstring)의 동적 매개 변수입니다.
-기본적으로는 기본 `Get-Content` 또는 스트림에서 데이터만 검색 `$DATA` 합니다. **스트림은** 특성, 보안 설정 또는 기타 데이터와 같은 숨겨진 데이터를 저장 하는 데 사용할 수 있습니다.
+기본적으로는 `Get-Content` 기본 또는 스트림에서 데이터만 검색 `:$DATA` 합니다. **스트림은** 특성, 보안 설정 또는 기타 데이터와 같은 숨겨진 데이터를 저장 하는 데 사용할 수 있습니다. 자식 항목을 포함 하지 않고 디렉터리에 저장할 수도 있습니다.
 
 ### 예제 6: 원시 콘텐츠 가져오기
 
@@ -289,7 +288,7 @@ Accept wildcard characters: False
 
 파일이 나 다른 항목의 시작 부분에서 줄 수를 지정 합니다. 기본값은 -1(모든 줄)입니다.
 
-**TotalCount** 매개 변수 이름 또는 해당 별칭 ( **First** 또는 **Head** )을 사용할 수 있습니다.
+**TotalCount** 매개 변수 이름 또는 해당 별칭 ( **First** 또는 **Head**)을 사용할 수 있습니다.
 
 ```yaml
 Type: System.Int64
@@ -305,7 +304,7 @@ Accept wildcard characters: False
 
 ### -Tail
 
-파일이 나 다른 항목의 끝에서 줄 수를 지정 합니다. **Tail** 매개 변수 이름 또는 해당 별칭 ( **Last** )을 사용할 수 있습니다. 이 매개 변수는 PowerShell 3.0에서 도입 되었습니다.
+파일이 나 다른 항목의 끝에서 줄 수를 지정 합니다. **Tail** 매개 변수 이름 또는 해당 별칭 ( **Last**)을 사용할 수 있습니다. 이 매개 변수는 PowerShell 3.0에서 도입 되었습니다.
 
 ```yaml
 Type: System.Int32
@@ -492,7 +491,7 @@ Encoding은 **파일 시스템** 공급자가 cmdlet에 추가 하는 동적 매
 PowerShell 6.2부터 **Encoding** 매개 변수를 사용 하 여 등록 된 코드 페이지의 숫자 id (예: `-Encoding 1251` ) 또는 등록 된 코드 페이지의 문자열 이름을 사용할 수도 있습니다 (예: `-Encoding "windows-1251"` ). 자세한 내용은 [인코딩에](/dotnet/api/system.text.encoding.codepage?view=netcore-2.2)대 한 .net 설명서를 참조 하세요.
 
 > [!NOTE]
-> **U t f-7** *은 더 이상 사용 하지 않는 것이 좋습니다. PowerShell 7.1에서는 `utf7` **인코딩** 매개 변수에 대해를 지정 하는 경우 경고가 기록 됩니다.
+> **U t f-7** _은 더 이상 사용 하지 않는 것이 좋습니다. PowerShell 7.1에서는 `utf7` _ *Encoding** 매개 변수에 대해를 지정 하는 경우 경고가 기록 됩니다.
 
 ```yaml
 Type: System.Text.Encoding
@@ -508,6 +507,9 @@ Accept wildcard characters: False
 ```
 
 ### -스트림
+
+> [!NOTE]
+> 이 매개 변수는 Windows 에서만 사용할 수 있습니다.
 
 파일에서 지정된 대체 NTFS 파일 스트림의 내용을 가져옵니다. 스트림 이름을 입력합니다.
 와일드카드는 지원되지 않습니다.
@@ -547,7 +549,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-이 cmdlet은,,,,,,,,, `-Debug` `-ErrorAction` `-ErrorVariable` `-InformationAction` `-InformationVariable` `-OutVariable` `-OutBuffer` `-PipelineVariable` `-Verbose` `-WarningAction` 및 `-WarningVariable` 등의 일반 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md)를 참조하세요.
+이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.
 
 ## 입력
 
@@ -580,4 +582,3 @@ Accept wildcard characters: False
 [Get-PSProvider](Get-PSProvider.md)
 
 [Set-Content](Set-Content.md)
-

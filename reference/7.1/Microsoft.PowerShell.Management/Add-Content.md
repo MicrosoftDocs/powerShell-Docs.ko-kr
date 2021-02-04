@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 08/19/2020
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/add-content?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-Content
-ms.openlocfilehash: 3ae91d03e6882eeaf6743d11cfeed5d0ed1aae0c
-ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
+ms.openlocfilehash: ef44fefe68ef9674eb14ce494341bf04f477d55a
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "93219666"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97693005"
 ---
 # Add-Content
 
@@ -212,7 +211,7 @@ Encoding은 파일 시스템 공급자가 cmdlet에 추가 하는 동적 매개 
 PowerShell 6.2부터 **Encoding** 매개 변수를 사용 하 여 등록 된 코드 페이지의 숫자 id (예: `-Encoding 1251` ) 또는 등록 된 코드 페이지의 문자열 이름을 사용할 수도 있습니다 (예: `-Encoding "windows-1251"` ). 자세한 내용은 [인코딩에](/dotnet/api/system.text.encoding.codepage?view=netcore-2.2)대 한 .net 설명서를 참조 하세요.
 
 > [!NOTE]
-> **U t f-7** *은 더 이상 사용 하지 않는 것이 좋습니다. PowerShell 7.1에서는 `utf7` **인코딩** 매개 변수에 대해를 지정 하는 경우 경고가 기록 됩니다.
+> **U t f-7** _은 더 이상 사용 하지 않는 것이 좋습니다. PowerShell 7.1에서는 `utf7` _ *Encoding** 매개 변수에 대해를 지정 하는 경우 경고가 기록 됩니다.
 
 ```yaml
 Type: System.Text.Encoding
@@ -366,11 +365,14 @@ Accept wildcard characters: True
 
 ### -스트림
 
+> [!NOTE]
+> 이 매개 변수는 Windows 에서만 사용할 수 있습니다.
+
 콘텐츠에 대 한 대체 데이터 스트림을 지정 합니다. 스트림이 없는 경우이 cmdlet은이를 만듭니다. 와일드카드 문자는 지원되지 않습니다.
 
 **스트림은** 파일 시스템 공급자가에 추가 하는 동적 매개 변수입니다 `Add-Content` . 이 매개 변수는 파일 시스템 드라이브에만 작동합니다.
 
-Cmdlet을 사용 하 여 `Add-Content` 영역의 콘텐츠를 변경할 수 있습니다 **. 식별자** 대체 데이터 스트림입니다. 그러나이 방법은 인터넷에서 다운로드 된 파일을 차단 하는 보안 검사를 제거 하는 방법으로 권장 되지 않습니다. 다운로드 한 파일이 안전한 지 확인 하려면 cmdlet을 사용 `Unblock-File` 합니다.
+Cmdlet을 사용 하 여 `Add-Content` 와 같은 대체 데이터 스트림의 콘텐츠를 변경할 수 있습니다 `Zone.Identifier` . 그러나이 방법은 인터넷에서 다운로드 된 파일을 차단 하는 보안 검사를 제거 하는 방법으로 권장 되지 않습니다. 다운로드 한 파일이 안전한 지 확인 하려면 cmdlet을 사용 `Unblock-File` 합니다.
 
 이 매개 변수는 PowerShell 3.0에서 도입 되었습니다.
 
@@ -438,6 +440,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.
 
 ## 입력
@@ -473,4 +476,3 @@ Accept wildcard characters: False
 [New-Item](New-Item.md)
 
 [Set-Content](Set-Content.md)
-

@@ -1,17 +1,16 @@
 ---
 description: 필요한 요소 없이 스크립트가 실행 되지 않도록 합니다.
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 07/01/2019
+ms.date: 12/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_requires?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Requires
-ms.openlocfilehash: c6b10137ca58da93caff365a50b125929fd4d11a
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 73c225f493fb671b34925d0127cc0d5cff0ab33e
+ms.sourcegitcommit: 9a86cac80402d8193147058d4ba50e07b26059dd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93223745"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490587"
 ---
 # <a name="about-requires"></a>필요한 정보
 
@@ -25,7 +24,6 @@ ms.locfileid: "93223745"
 ### <a name="syntax"></a>구문
 
 ```
-#Requires -Assembly { <Path to .dll> | <.NET assembly specification> }
 #Requires -Version <N>[.<n>]
 #Requires -PSSnapin <PSSnapin-Name> [-Version <N>[.<n>]]
 #Requires -Modules { <Module-Name> | <Hashtable> }
@@ -58,9 +56,12 @@ Get-Module AzureRM.Netcore | Remove-Module
 
 #### <a name="-assembly-assembly-path--net-assembly-specification"></a>-어셈블리 \<Assembly path> |\<.NET assembly specification>
 
+> [!IMPORTANT]
+> `-Assembly`구문은 사용 되지 않습니다. 함수를 사용 하지 않습니다. 구문이 PowerShell 5.1에 추가 되었지만 지원 코드는 구현 되지 않았습니다. 구문은 이전 버전과의 호환성을 위해 계속 허용 됩니다.
+
 어셈블리 DLL 파일 또는 .NET 어셈블리 이름에 대 한 경로를 지정 합니다. **Assembly** 매개 변수는 PowerShell 5.0에서 도입 되었습니다. .NET 어셈블리에 대 한 자세한 내용은 [어셈블리 이름](/dotnet/standard/assembly/names)을 참조 하세요.
 
-다음은 그 예입니다. 
+예를 들면 다음과 같습니다.
 
 ```
 #Requires -Assembly path\to\foo.dll
@@ -75,7 +76,7 @@ Get-Module AzureRM.Netcore | Remove-Module
 
 스크립트에 필요한 PowerShell의 최소 버전을 지정 합니다. 주 버전 번호 및 부 버전 번호 (선택 사항)를 입력 합니다.
 
-다음은 그 예입니다. 
+예를 들면 다음과 같습니다.
 
 ```powershell
 #Requires -Version 6.0
@@ -85,7 +86,7 @@ Get-Module AzureRM.Netcore | Remove-Module
 
 스크립트에 필요한 PowerShell 스냅인을 지정 합니다. 스냅인 이름과 버전 번호 (선택 사항)를 입력 합니다.
 
-다음은 그 예입니다. 
+예를 들면 다음과 같습니다.
 
 ```powershell
 #Requires -PSSnapin DiskSnapin -Version 1.2
@@ -111,7 +112,7 @@ Get-Module AzureRM.Netcore | Remove-Module
 > `RequiredVersion` 는 Windows PowerShell 5.0에 추가 되었습니다.
 > `MaximumVersion` 는 Windows PowerShell 5.1에 추가 되었습니다.
 
-다음은 그 예입니다. 
+예를 들면 다음과 같습니다.
 
 `AzureRM.Netcore`(버전 `0.12.0` 이상)이 설치 되어 있어야 합니다.
 
@@ -161,7 +162,7 @@ Script     0.12.0  AzureRM.Netcore Core
 
 스크립트에 필요한 PowerShell 버전을 지정 합니다. 유효한 값은 PowerShell Core에 대 한 **Core** 및 Windows Powershell의 **데스크톱** 입니다.
 
-다음은 그 예입니다. 
+예를 들면 다음과 같습니다.
 
 ```powershell
 #Requires -PSEdition Core
@@ -172,7 +173,7 @@ Script     0.12.0  AzureRM.Netcore Core
 스크립트에 필요한 셸을 지정 합니다. 셸 ID를 입력 합니다. **ShellId** 매개 변수를 사용 하는 경우 **add-pssnapin** 매개 변수도 포함 해야 합니다.
 자동 변수를 쿼리하여 현재 **ShellId** 을 찾을 수 있습니다 `$ShellId` .
 
-다음은 그 예입니다. 
+예를 들면 다음과 같습니다.
 
 ```powershell
 #Requires -ShellId MyLocalShell -PSSnapin Microsoft.PowerShell.Core
@@ -207,7 +208,7 @@ Param
 ...
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [about_Automatic_Variables](about_Automatic_Variables.md)
 

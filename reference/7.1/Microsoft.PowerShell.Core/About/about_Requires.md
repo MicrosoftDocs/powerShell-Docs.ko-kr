@@ -1,17 +1,16 @@
 ---
 description: 필요한 요소 없이 스크립트가 실행 되지 않도록 합니다.
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 07/01/2019
+ms.date: 12/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_requires?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Requires
-ms.openlocfilehash: 5c4eb4e272f214ffe906fd1a3f1c127824183d4a
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: af7b557e399385589f3ddbbeb6b1f514c0f550f5
+ms.sourcegitcommit: 9a86cac80402d8193147058d4ba50e07b26059dd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93223945"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490495"
 ---
 # <a name="about-requires"></a>필요한 정보
 
@@ -25,7 +24,6 @@ ms.locfileid: "93223945"
 ### <a name="syntax"></a>구문
 
 ```
-#Requires -Assembly { <Path to .dll> | <.NET assembly specification> }
 #Requires -Version <N>[.<n>]
 #Requires -PSSnapin <PSSnapin-Name> [-Version <N>[.<n>]]
 #Requires -Modules { <Module-Name> | <Hashtable> }
@@ -57,6 +55,9 @@ Get-Module AzureRM.Netcore | Remove-Module
 ### <a name="parameters"></a>매개 변수
 
 #### <a name="-assembly-assembly-path--net-assembly-specification"></a>-어셈블리 \<Assembly path> |\<.NET assembly specification>
+
+> [!IMPORTANT]
+> `-Assembly`구문은 사용 되지 않습니다. 함수를 사용 하지 않습니다. 구문이 PowerShell 5.1에 추가 되었지만 지원 코드는 구현 되지 않았습니다. 구문은 이전 버전과의 호환성을 위해 계속 허용 됩니다.
 
 어셈블리 DLL 파일 또는 .NET 어셈블리 이름에 대 한 경로를 지정 합니다. **Assembly** 매개 변수는 PowerShell 5.0에서 도입 되었습니다. .NET 어셈블리에 대 한 자세한 내용은 [어셈블리 이름](/dotnet/standard/assembly/names)을 참조 하세요.
 
@@ -207,9 +208,8 @@ Param
 ...
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [about_Automatic_Variables](about_Automatic_Variables.md)
 
 [about_Language_Keywords](about_Language_Keywords.md)
-

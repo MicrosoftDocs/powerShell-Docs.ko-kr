@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 03/27/2020
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-item?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Item
-ms.openlocfilehash: d9c8d13f992e6631ff5982b4a33542c661991562
-ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
+ms.openlocfilehash: d034baf42f064149696f54a198dc97d7ee4e8fe7
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94661361"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97693080"
 ---
 # Get-Item
 
@@ -159,6 +159,9 @@ drwxr-xr-x  root  admin   12/20/2019 11:46   192   Users
 ## PARAMETERS
 
 ### -스트림
+
+> [!NOTE]
+> 이 매개 변수는 Windows 에서만 사용할 수 있습니다.
 
 파일에서 지정된 대체 NTFS 파일 스트림을 가져옵니다. 스트림 이름을 입력합니다. 와일드카드가 지원됩니다. 모든 스트림을 가져오려면 별표 ()를 사용 `*` 합니다. 이 매개 변수는 폴더에서 유효 하지 않습니다.
 

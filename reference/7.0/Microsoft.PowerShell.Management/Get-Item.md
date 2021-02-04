@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 03/27/2020
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-item?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Item
-ms.openlocfilehash: 07f8da5e6101b1d9bb1971b3c77b9747c0080a23
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: e848cc8c77e1d0dff6eb1f98d56c8ed37e44a653
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210481"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692820"
 ---
 # Get-Item
 
@@ -156,6 +156,9 @@ drwxr-xr-x  root  admin   12/20/2019 11:46   192   Users
 ## PARAMETERS
 
 ### -스트림
+
+> [!NOTE]
+> 이 매개 변수는 Windows 에서만 사용할 수 있습니다.
 
 파일에서 지정된 대체 NTFS 파일 스트림을 가져옵니다. 스트림 이름을 입력합니다. 와일드카드가 지원됩니다. 모든 스트림을 가져오려면 별표 ()를 사용 `*` 합니다. 이 매개 변수는 폴더에서 유효 하지 않습니다.
 
@@ -315,7 +318,7 @@ Accept wildcard characters: True
 항목의 내용을 재귀적으로 가져오려면를 사용 `Get-ChildItem` 합니다.
 
 레지스트리를 탐색 하려면이 cmdlet을 사용 하 여 레지스트리 키와 `Get-ItemProperty` 레지스트리 값 및 데이터를 가져옵니다. 레지스트리 값은 레지스트리 키의 속성으로 간주됩니다.
-  
+
 이 cmdlet은 모든 공급자가 제공 하는 데이터에 사용할 수 있습니다. 세션에서 사용할 수 있는 공급자를 나열 하려면을 입력 `Get-PsProvider` 합니다. 자세한 내용은 [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md)를 참조하세요.
 
 ## 관련 링크

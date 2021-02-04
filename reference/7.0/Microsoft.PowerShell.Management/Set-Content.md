@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 5/14/2019
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-content?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Content
-ms.openlocfilehash: f8072e9c93d368fd9ebe49459199d21480031275
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 2561d569fa773d279e1e54561d6005e3eef7f7e3
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210569"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692784"
 ---
 # Set-Content
 
@@ -340,11 +339,14 @@ Accept wildcard characters: True
 
 ### -스트림
 
+> [!NOTE]
+> 이 매개 변수는 Windows 에서만 사용할 수 있습니다.
+
 콘텐츠에 대 한 대체 데이터 스트림을 지정 합니다. 스트림이 없는 경우이 cmdlet은이를 만듭니다. 와일드카드 문자는 지원되지 않습니다.
 
 **스트림은** **파일 시스템** 공급자가에 추가 하는 동적 매개 변수입니다 `Set-Content` . 이 매개 변수는 파일 시스템 드라이브에만 작동합니다.
 
-Cmdlet을 사용 하 여 `Set-Content` 영역의 콘텐츠를 변경할 수 있습니다 **. 식별자** 대체 데이터 스트림입니다. 그러나이 방법은 인터넷에서 다운로드 된 파일을 차단 하는 보안 검사를 제거 하는 방법으로 권장 되지 않습니다. 다운로드 한 파일이 안전한 지 확인 하려면 cmdlet을 사용 `Unblock-File` 합니다.
+Cmdlet을 사용 `Set-Content` 하 여와 같은 대체 데이터 스트림의 내용을 만들거나 업데이트할 수 있습니다 `Zone.Identifier` . 그러나이 방법은 인터넷에서 다운로드 된 파일을 차단 하는 보안 검사를 제거 하는 방법으로 권장 되지 않습니다. 다운로드 한 파일이 안전한 지 확인 하려면 cmdlet을 사용 `Unblock-File` 합니다.
 
 이 매개 변수는 PowerShell 3.0에서 도입 되었습니다.
 
@@ -410,8 +412,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-이 cmdlet은,,,,,,,,, `-Debug` `-ErrorAction` `-ErrorVariable` `-InformationAction` `-InformationVariable` `-OutVariable` `-OutBuffer` `-PipelineVariable` `-Verbose` `-WarningAction` 및 `-WarningVariable` 등의 일반 매개 변수를 지원 합니다.
-자세한 내용은 [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md)를 참조하세요.
+이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.
 
 ## 입력
 

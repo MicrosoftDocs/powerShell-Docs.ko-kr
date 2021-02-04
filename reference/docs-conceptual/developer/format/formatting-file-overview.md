@@ -3,12 +3,12 @@ ms.date: 09/13/2016
 ms.topic: reference
 title: 형식 지정 파일 개요
 description: 형식 지정 파일 개요
-ms.openlocfilehash: b86119c304c895ec08ac67de693b3a052bc7a2a0
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 769a86d274ef3b35a322d76e2f03cb551d9204a1
+ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "92667830"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879139"
 ---
 # <a name="formatting-file-overview"></a>형식 지정 파일 개요
 
@@ -142,7 +142,7 @@ PowerShell에서는 이러한 서식 파일의 데이터를 사용 하 여 표�
           </TableColumnItems>
         </TableRowEntry>
       </TableRowEntries>
-    </TableControl)
+    </TableControl>
   </View>
 </ViewDefinitions>
 

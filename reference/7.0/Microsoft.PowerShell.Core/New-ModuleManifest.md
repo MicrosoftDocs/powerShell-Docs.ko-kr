@@ -7,12 +7,12 @@ ms.date: 11/02/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-modulemanifest?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ModuleManifest
-ms.openlocfilehash: 8177b1ed45f6d6cdabf13670e36be4fcbb55a77b
-ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
+ms.openlocfilehash: 9bb687aa7f497dbf2c07633abddf4e1a17a9622e
+ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239954"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879204"
 ---
 # New-ModuleManifest
 
@@ -225,7 +225,7 @@ $moduleSettings = @{
 New-ModuleManifest @moduleSettings
 ```
 
-이 예에서는 **Modulelist** , **RequiredModules** 및 **NestedModules** 매개 변수의 문자열 및 해시 테이블 형식을 사용 하는 방법을 보여 줍니다. 동일한 매개 변수 값에서 문자열과 해시 테이블을 결합할 수 있습니다.
+이 예에서는 **Modulelist**, **RequiredModules** 및 **NestedModules** 매개 변수의 문자열 및 해시 테이블 형식을 사용 하는 방법을 보여 줍니다. 동일한 매개 변수 값에서 문자열과 해시 테이블을 결합할 수 있습니다.
 
 ### 예제 4-업데이트할 수 있는 도움말을 지 원하는 매니페스트 만들기
 
@@ -746,7 +746,7 @@ Accept wildcard characters: False
 
 ### -PowerShellHostName
 
-모듈에 필요한 PowerShell 호스트 프로그램의 이름을 지정 합니다. 호스트 프로그램의 이름 (예: **Windows PowerShell ISE host** 또는 **ConsoleHost** )을 입력 합니다. 와일드 카드는 허용 되지 않습니다.
+모듈에 필요한 PowerShell 호스트 프로그램의 이름을 지정 합니다. 호스트 프로그램의 이름 (예: **Windows PowerShell ISE host** 또는 **ConsoleHost**)을 입력 합니다. 와일드 카드는 허용 되지 않습니다.
 
 호스트 프로그램의 이름을 찾으려면 프로그램에서을 입력 `$Host.Name` 합니다.
 
@@ -780,7 +780,7 @@ Accept wildcard characters: False
 
 ### -PowerShellVersion
 
-이 모듈에서 작동 하는 PowerShell의 최소 버전을 지정 합니다. 예를 들어 매개 변수의 값으로 1.0, 2.0 또는 3.0을 입력할 수 있습니다.
+이 모듈에서 작동 하는 PowerShell의 최소 버전을 지정 합니다. 예를 들어 매개 변수의 값으로 1.0, 2.0 또는 3.0을 입력할 수 있습니다. 이 파일은 X. X 형식 이어야 합니다. 예를 들어 제출 하는 경우 `5` PowerShell에서 오류를 throw 합니다.
 
 ```yaml
 Type: System.Version
@@ -1065,7 +1065,7 @@ Accept wildcard characters: False
 
 ## 입력
 
-### 없음
+### None
 
 이 cmdlet에는 입력을 파이프 할 수 없습니다.
 

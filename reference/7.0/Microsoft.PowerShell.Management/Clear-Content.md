@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 10/18/2018
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/clear-content?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-Content
-ms.openlocfilehash: 5a38fd45ff1f645df7004452b5a3c16c6f5cb74a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 9ffe7510745e92c6863cf08d143f89e214ae9133
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93211153"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692981"
 ---
 # Clear-Content
 
@@ -58,16 +57,13 @@ Clear-Content "..\SmpUsers\*\init.txt"
 Clear-Content -Path "*" -Filter "*.log" -Force
 ```
 
-이 명령은 읽기 전용 특성을 가진 파일을 포함하여 현재 디렉터리에서 파일 이름 확장명이 ".log"인 모든 파일의 내용을 삭제합니다.
-경로의 별표 ( \* )는 현재 디렉터리에 있는 모든 항목을 나타냅니다.
-**Force** 매개 변수는 명령이 읽기 전용 파일에 적용 되도록 합니다.
-필터를 사용 하 여 .log 파일 이름 확장명을 가진 파일에 대 한 명령을 제한 합니다. 경로에 .log를 지정 하는 대신 \* 작업을 더 빠르게 수행 합니다.
+이 명령은 읽기 전용 특성을 가진 파일을 포함하여 현재 디렉터리에서 파일 이름 확장명이 ".log"인 모든 파일의 내용을 삭제합니다. 경로의 별표 ( \* )는 현재 디렉터리에 있는 모든 항목을 나타냅니다. **Force** 매개 변수는 명령이 읽기 전용 파일에 적용 되도록 합니다. 필터를 사용 하 여 .log 파일 이름 확장명을 가진 파일에 대 한 명령을 제한 합니다. 경로에 .log를 지정 하는 대신 \* 작업을 더 빠르게 수행 합니다.
 
 ### 예제 3: 스트림에서 모든 데이터 지우기
 
 이 예에서는 cmdlet이 `Clear-Content` 스트림을 그대로 두고 대체 데이터 스트림에서 콘텐츠를 지우는 방법을 보여 줍니다.
 
-첫 번째 명령은 cmdlet을 사용 하 여 `Get-Content` 영역의 콘텐츠를 가져옵니다. Copy-Script.ps1 파일은 인터넷에서 다운로드 됩니다.
+첫 번째 명령은 cmdlet을 사용 하 여 `Get-Content` `Zone.Identifier` 인터넷에서 다운로드 된 Copy-Script.ps1 파일의 스트림 내용을 가져옵니다.
 
 두 번째 명령은 cmdlet을 사용 하 여 `Clear-Content` 콘텐츠를 지웁니다.
 
@@ -91,16 +87,15 @@ PS C:\>
 
 ### -스트림
 
-콘텐츠에 대 한 대체 데이터 스트림을 지정 합니다.
-스트림이 없는 경우이 cmdlet은이를 만듭니다.
-와일드카드 문자는 지원되지 않습니다.
+> [!NOTE]
+> 이 매개 변수는 Windows 에서만 사용할 수 있습니다.
+
+콘텐츠에 대 한 대체 데이터 스트림을 지정 합니다. 스트림이 없는 경우이 cmdlet은이를 만듭니다. 와일드카드 문자는 지원되지 않습니다.
 
 스트림은 파일 시스템 공급자가에 추가 하는 동적 매개 변수입니다 `Clear-Content` .
 이 매개 변수는 파일 시스템 드라이브에만 작동합니다.
 
-Cmdlet을 사용 하 여 `Clear-Content` 영역의 콘텐츠를 변경할 수 있습니다. 식별자 대체 데이터 스트림입니다.
-그러나이 방법은 인터넷에서 다운로드 된 파일을 차단 하는 보안 검사를 제거 하는 방법으로 권장 되지 않습니다.
-다운로드 한 파일이 안전한 지 확인 하려면 cmdlet을 사용 `Unblock-File` 합니다.
+Cmdlet을 사용 하 여 `Clear-Content` 와 같이 최소라 대체 데이터 스트림의 콘텐츠를 변경할 수 있습니다 `Zone.Identifier` . 그러나이 방법은 인터넷에서 다운로드 된 파일을 차단 하는 보안 검사를 제거 하는 방법으로 권장 되지 않습니다. 다운로드 한 파일이 안전한 지 확인 하려면 cmdlet을 사용 `Unblock-File` 합니다.
 
 ```yaml
 Type: System.String
@@ -133,10 +128,7 @@ Accept wildcard characters: False
 
 ### -제외
 
-이 cmdlet이 콘텐츠 경로에서 생략 하는 문자열을 문자열 배열로 지정 합니다.
-이 매개 변수 값은 **Path** 매개 변수를 한정합니다.
-경로 요소 또는 패턴(예: "*.txt")을 입력합니다.
-와일드카드가 지원됩니다.
+이 cmdlet이 콘텐츠 경로에서 생략 하는 문자열을 문자열 배열로 지정 합니다. 이 매개 변수 값은 **Path** 매개 변수를 한정합니다. 경로 요소 또는 패턴(예: "*.txt")을 입력합니다. 와일드카드가 지원됩니다.
 
 ```yaml
 Type: System.String[]
@@ -152,10 +144,7 @@ Accept wildcard characters: True
 
 ### -Filter
 
-공급자의 형식 또는 언어에 필터를 지정합니다.
-이 매개 변수 값은 **Path** 매개 변수를 한정합니다.
-와일드카드 사용을 포함한 필터 구문은 공급자에 따라 달라집니다.
-필터는 개체가 검색 된 후 개체를 검색 한 후 개체를 검색 하는 대신 개체를 검색할 때 필터를 적용 하기 때문에 다른 매개 변수 보다 더 효율적입니다.
+공급자의 형식 또는 언어에 필터를 지정합니다. 이 매개 변수 값은 **Path** 매개 변수를 한정합니다. 와일드카드 사용을 포함한 필터 구문은 공급자에 따라 달라집니다. 필터는 개체가 검색 된 후 개체를 검색 한 후 개체를 검색 하는 대신 개체를 검색할 때 필터를 적용 하기 때문에 다른 매개 변수 보다 더 효율적입니다.
 
 ```yaml
 Type: System.String
@@ -187,10 +176,7 @@ Accept wildcard characters: False
 
 ### -포함
 
-이 cmdlet이 지우는 콘텐츠를 문자열 배열로 지정 합니다.
-이 매개 변수 값은 **Path** 매개 변수를 한정합니다.
-경로 요소 또는 패턴(예: "*.txt")을 입력합니다.
-와일드카드가 지원됩니다.
+이 cmdlet이 지우는 콘텐츠를 문자열 배열로 지정 합니다. 이 매개 변수 값은 **Path** 매개 변수를 한정합니다. 경로 요소 또는 패턴(예: "*.txt")을 입력합니다. 와일드카드가 지원됩니다.
 
 ```yaml
 Type: System.String[]
@@ -206,11 +192,8 @@ Accept wildcard characters: True
 
 ### -LiteralPath
 
-내용을 삭제할 항목의 경로를 지정합니다.
-**Path** 매개 변수와 달리 **LiteralPath** 값은 입력한 대로 사용됩니다.
-어떠한 문자도 와일드카드로 해석되지 않습니다.
-이스케이프 문자가 포함된 경로는 작은따옴표로 묶으세요.
-작은따옴표는 모든 문자를 이스케이프 시퀀스로 해석 하지 않도록 PowerShell을 제공 합니다.
+내용을 삭제할 항목의 경로를 지정합니다. **Path** 매개 변수와 달리 **LiteralPath** 값은 입력한 대로 사용됩니다. 어떠한 문자도 와일드카드로 해석되지 않습니다.
+이스케이프 문자가 포함된 경로는 작은따옴표로 묶으세요. 작은따옴표는 모든 문자를 이스케이프 시퀀스로 해석 하지 않도록 PowerShell을 제공 합니다.
 
 ```yaml
 Type: System.String[]
@@ -226,12 +209,7 @@ Accept wildcard characters: False
 
 ### -Path
 
-내용을 삭제할 항목의 경로를 지정합니다.
-와일드카드가 지원됩니다.
-경로는 컨테이너가 아니라 항목의 경로여야 합니다.
-예를 들어 디렉터리의 경로가 아니라 하나 이상의 파일 경로를 지정해야 합니다.
-와일드카드가 지원됩니다.
-이 매개 변수는 필수이지만 매개 변수 이름("Path")은 선택 사항입니다.
+내용을 삭제할 항목의 경로를 지정합니다. 와일드카드가 지원됩니다. 경로는 컨테이너가 아니라 항목의 경로여야 합니다. 예를 들어 디렉터리의 경로가 아니라 하나 이상의 파일 경로를 지정해야 합니다. 와일드카드가 지원됩니다. 이 매개 변수는 필수이지만 매개 변수 이름("Path")은 선택 사항입니다.
 
 ```yaml
 Type: System.String[]
@@ -263,8 +241,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-cmdlet을 실행할 경우 발생하는 일을 표시합니다.
-cmdlet은 실행되지 않습니다.
+cmdlet을 실행할 경우 발생하는 일을 표시합니다. cmdlet은 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -280,24 +257,24 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-이 cmdlet은,,,,,,,,, `-Debug` `-ErrorAction` `-ErrorVariable` `-InformationAction` `-InformationVariable` `-OutVariable` `-OutBuffer` `-PipelineVariable` `-Verbose` `-WarningAction` 및 `-WarningVariable` 등의 일반 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md)를 참조하세요.
+이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.
+
 
 ## 입력
 
-### 없음
+### None
 
 개체를에 연결할 수 없습니다 `Clear-Content` .
 
 ## 출력
 
-### 없음
+### None
 
 이 cmdlet은 개체를 반환하지 않습니다.
 
 ## 참고
 
-`Clear-Content`PowerShell FileSystem 공급자 및 콘텐츠를 조작 하는 다른 공급자와 함께를 사용할 수 있습니다.
-PowerShell 인증서 또는 레지스트리 공급자에서 관리 하는 항목과 같이 콘텐츠로 간주 되지 않는 항목을 지우려면를 사용 `Clear-Item` 합니다.
+`Clear-Content`PowerShell FileSystem 공급자 및 콘텐츠를 조작 하는 다른 공급자와 함께를 사용할 수 있습니다. PowerShell 인증서 또는 레지스트리 공급자에서 관리 하는 항목과 같이 콘텐츠로 간주 되지 않는 항목을 지우려면를 사용 `Clear-Item` 합니다.
 
 `Clear-Content`Cmdlet은 모든 공급자가 제공 하는 데이터에 사용할 수 있습니다.
 세션에서 사용할 수 있는 공급자를 나열 하려면을 입력 `Get-PsProvider` 합니다.

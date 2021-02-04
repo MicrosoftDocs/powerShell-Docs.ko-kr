@@ -7,12 +7,12 @@ ms.date: 10/18/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-itemproperty?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ItemProperty
-ms.openlocfilehash: 969cb181758dc1ac40b9d8fca2c22fa97f87c693
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: cbd1229721650823d9780517934c40a2287f4227
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214457"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692662"
 ---
 # Set-ItemProperty
 
@@ -64,9 +64,9 @@ Set-ItemProperty -LiteralPath <String[]> -InputObject <PSObject> [-PassThru] [-F
 
 ### 예제 1: 파일의 속성 설정
 
-이 명령은 "final.doc" 파일의 **IsReadOnly** 속성 값을 "true"로 설정 합니다. **경로** 를 사용 하 여 파일을 지정 하 고, **이름을** 지정 하 여 속성의 이름을 지정 하 고, pazrameter **값** 을 사용 하 여 새 값을 지정 합니다.
+이 명령은 "final.doc" 파일의 **IsReadOnly** 속성 값을 "true"로 설정 합니다. **경로** 를 사용 하 여 파일을 지정 하 고, **이름을** 지정 하 여 속성의 이름을 지정 하 고, **value** 매개 변수를 사용 하 여 새 값을 지정 합니다.
 
-이 파일은 IsReadOnly **개체이** 고, 해당 속성 중 **IsReadOnly** 하나일 뿐입니다.
+이 파일은 IsReadOnly **개체이** 고, 해당 속성 중  하나일 뿐입니다.
 모든 속성을 보려면를 입력 `Get-Item C:\GroupFiles\final.doc | Get-Member -MemberType Property` 합니다.
 
 `$true`자동 변수는 "TRUE" 값을 나타냅니다.
@@ -336,14 +336,14 @@ Accept wildcard characters: False
 이 cmdlet이 추가 하는 속성의 유형을 지정 합니다.
 이 매개 변수에 허용되는 값은 다음과 같습니다.
 
-- **String** : null로 끝나는 문자열을 지정 합니다. **REG_SZ** 와 동일 합니다.
-- **ExpandString** : 값을 검색할 때 확장 되는 환경 변수에 대 한 확장 되지 않은 참조를 포함 하는 null로 끝나는 문자열을 지정 합니다. **REG_EXPAND_SZ** 와 동일 합니다.
-- **Binary** : 임의의 형식으로 된 이진 데이터를 지정 합니다. **REG_BINARY** 와 동일 합니다.
-- **DWord** : 32 비트 이진수를 지정 합니다. **REG_DWORD** 와 동일 합니다.
-- **다중 문자열** : 두 null 문자로 끝나는 null로 끝나는 문자열의 배열을 지정 합니다.
+- **String**: null로 끝나는 문자열을 지정 합니다. **REG_SZ** 와 동일 합니다.
+- **ExpandString**: 값을 검색할 때 확장 되는 환경 변수에 대 한 확장 되지 않은 참조를 포함 하는 null로 끝나는 문자열을 지정 합니다. **REG_EXPAND_SZ** 와 동일 합니다.
+- **Binary**: 임의의 형식으로 된 이진 데이터를 지정 합니다. **REG_BINARY** 와 동일 합니다.
+- **DWord**: 32 비트 이진수를 지정 합니다. **REG_DWORD** 와 동일 합니다.
+- **다중 문자열**: 두 null 문자로 끝나는 null로 끝나는 문자열의 배열을 지정 합니다.
   **REG_MULTI_SZ** 와 동일 합니다.
-- **Qword(64** : 64 비트 이진수를 지정 합니다. **REG_QWORD** 와 동일 합니다.
-- **Unknown** : **REG_RESOURCE_LIST** 와 같은 지원 되지 않는 레지스트리 데이터 형식을 나타냅니다.
+- **Qword(64**: 64 비트 이진수를 지정 합니다. **REG_QWORD** 와 동일 합니다.
+- **Unknown**: **REG_RESOURCE_LIST** 와 같은 지원 되지 않는 레지스트리 데이터 형식을 나타냅니다.
 
 ```yaml
 Type: RegistryValueKind

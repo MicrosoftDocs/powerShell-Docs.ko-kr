@@ -6,12 +6,12 @@ ms.date: 04/23/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_data_sections?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Data_Sections
-ms.openlocfilehash: a5eed0056fe572760415f62537b5a69942d819ae
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: bf86d8aeec1094205ace1a64fdf584f5be000313
+ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222121"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879221"
 ---
 # <a name="about-data-sections"></a>데이터 섹션 정보
 
@@ -44,8 +44,8 @@ Data 키워드가 필요 합니다. 대/소문자를 구분하지 않습니다. 
 - 모든 PowerShell 연산자 (제외) `-match`
 - `If`, `Else` 및 `ElseIf` 문
 - 자동 변수는,, `$PsCulture` `$PsUICulture` `$True` , `$False` 및입니다. `$Null`
-- 주석
-- 파이프라인
+- 설명
+- Pipelines
 - 세미콜론 ()으로 구분 된 문 `;`
 - 다음과 같은 리터럴입니다.
 
@@ -72,7 +72,7 @@ Data 키워드가 필요 합니다. 대/소문자를 구분하지 않습니다. 
 
 값은 `-SupportedCommand` 하나 이상의 cmdlet 또는 함수 이름의 쉼표로 구분 된 목록입니다.
 
-예를 들어 다음 데이터 섹션에는 `Format-XML` XML 파일의 데이터 형식을 지정 하는 사용자 작성 cmdlet이 포함 되어 있습니다.
+예를 들어 다음 데이터 섹션에는 `Format-Xml` XML 파일의 데이터 형식을 지정 하는 사용자 작성 cmdlet이 포함 되어 있습니다.
 
 ```powershell
 DATA -supportedCommand Format-Xml
@@ -105,7 +105,7 @@ $TextMsgs.Text001
 $TextMsgs.Text002
 ```
 
-또는 변수 이름을 데이터 섹션의 정의에 배치할 수 있습니다. 다음은 그 예입니다. 
+또는 변수 이름을 데이터 섹션의 정의에 배치할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```powershell
 DATA TextMsgs {
@@ -127,7 +127,7 @@ Text001                        Windows 7
 Text002                        Windows Server 2008 R2
 ```
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 단순 데이터 문자열.
 

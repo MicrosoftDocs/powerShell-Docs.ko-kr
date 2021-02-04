@@ -6,12 +6,12 @@ ms.date: 07/31/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Signing
-ms.openlocfilehash: 060a53d4d08700e541fb6bcd388ffb4167a271a3
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 147f591f48a63b538bb43f8cc05995240042a6af
+ms.sourcegitcommit: 021ea294327dec542ec040619dac0d2171397a90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222345"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97804173"
 ---
 # <a name="about-signing"></a>서명 정보
 
@@ -104,7 +104,7 @@ from trusted publishers.
 
 ## <a name="create-a-self-signed-certificate"></a>자체 서명된 인증서 만들기
 
-에서 자체 서명 된 인증서를 만들려면 `New-SelfSignedCertificate` PKI 모듈에서 cmdlet을 사용 합니다. 이 모듈은 PowerShell 3.0에 도입 되었으며 Windows 8 및 Windows Server 2012에 포함 되어 있습니다. 자세한 내용은 cmdlet에 대 한 도움말 항목을 참조 하세요 `New-SelfSignedCertificate` .
+자체 서명 된 인증서를 만들려면 `New-SelfSignedCertificate` PKI 모듈에서 cmdlet을 사용 합니다. 이 모듈은 PowerShell 3.0에 도입 되었으며 Windows 8 및 Windows Server 2012에 포함 되어 있습니다. 자세한 내용은 cmdlet에 대 한 도움말 항목을 참조 하세요 `New-SelfSignedCertificate` .
 
 이전 버전의 Windows에서 자체 서명 된 인증서를 만들려면 인증서 생성 도구를 사용 `MakeCert.exe` 합니다. 이 도구는 Microsoft .NET SDK (버전 1.1 이상) 및 Microsoft Windows SDK에 포함 되어 있습니다.
 
@@ -216,7 +216,7 @@ At line:1 char:15
 
 대부분의 서명 인증서는 1 년 동안만 유효 하므로 타임 스탬프 서버를 사용 하면 사용자가 스크립트를 사용 하 여 많은 연도를 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [about_Execution_Policies](about_Execution_Policies.md)
 
