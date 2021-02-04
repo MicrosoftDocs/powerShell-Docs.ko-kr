@@ -3,12 +3,12 @@ title: PSCustomObject에 대해 알고 싶은 모든 것
 description: PSCustomObject는 구조화된 데이터를 만드는 단순한 방법입니다.
 ms.date: 10/05/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: ccbdcdae5ad38f555233dffbed7e8a6ec2b0726b
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 8086541bf93b4d3f878c9a3f7ca4300dc452a80b
+ms.sourcegitcommit: 08c63095f54916013634d6703f2523779815f4b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "91772323"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99424472"
 ---
 # <a name="everything-you-wanted-to-know-about-pscustomobject"></a>PSCustomObject에 대해 알고 싶은 모든 것
 
@@ -74,7 +74,7 @@ $myObject = New-Object -TypeName PSObject -Property $myHashtable
 해시 테이블을 파일에 저장하는 가장 좋은 방법은 JSON으로 저장하는 것입니다. `[PSCustomObject]`로 다시 가져오면 됩니다.
 
 ```powershell
-$myObject | ConvertTo-Json -depth 1- | Set-Content -Path $Path
+$myObject | ConvertTo-Json -depth 1 | Set-Content -Path $Path
 $myObject = Get-Content -Path $Path | ConvertFrom-Json
 ```
 
@@ -87,7 +87,7 @@ $myObject = Get-Content -Path $Path | ConvertFrom-Json
 `Add-Member`를 사용하여 `PSCustomObject`에 새 속성을 추가할 수 있습니다.
 
 ```powershell
-$myObject | Add-Member -MemberType NoteProperty -Name `ID` -Value 'KevinMarquette'
+$myObject | Add-Member -MemberType NoteProperty -Name 'ID' -Value 'KevinMarquette'
 
 $myObject.ID
 ```

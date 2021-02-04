@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 09/03/2020
+ms.date: 01/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-WebRequest
-ms.openlocfilehash: bb23f2ed01573a3f67c19f45db495cd86ecefe0c
-ms.sourcegitcommit: 69b08b28ee2ef3168065672a23b9b6f0c578c95b
+ms.openlocfilehash: 036f5aef42b9413747f4e738bf748fda8bb2d2d2
+ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "93219866"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860789"
 ---
 # Invoke-WebRequest
 
@@ -143,7 +142,7 @@ $ProfileResponse
 
 ### 예제 3: 웹 페이지에서 링크 가져오기
 
-이 예제에서는 웹 페이지의 링크를 가져옵니다. Cmdlet을 사용 하 여 `Invoke-WebRequest` 웹 페이지 콘텐츠를 가져옵니다. 그런 다음 **Links** `BasicHtmlWebResponseObject` 를 반환 하는의 Links 속성과 `Invoke-WebRequest` 각 링크의 **Href** 속성을 사용 합니다.
+이 예제에서는 웹 페이지의 링크를 가져옵니다. Cmdlet을 사용 하 여 `Invoke-WebRequest` 웹 페이지 콘텐츠를 가져옵니다. 그런 다음  `BasicHtmlWebResponseObject` 를 반환 하는의 Links 속성과 `Invoke-WebRequest` 각 링크의 **Href** 속성을 사용 합니다.
 
 ```powershell
 (Invoke-WebRequest -Uri "https://aka.ms/pscore6-docs").Links.Href
@@ -227,7 +226,7 @@ $Result = Invoke-WebRequest -Uri $Uri -Method Post -Form $Form
 ```powershell
 try
 {
-    $Response = Invoke-WebRequest -Uri "www.microsoft.com/unkownhost" -ErrorAction Stop
+    $Response = Invoke-WebRequest -Uri "www.microsoft.com/unkownhost"
     # This will only execute if the Invoke-WebRequest is successful.
     $StatusCode = $Response.StatusCode
 }
@@ -242,7 +241,7 @@ $StatusCode
 404
 ```
 
-명령은 `Invoke-WebRequest` **Stop** 의 **erroraction** 으로를 호출 하 여 실패 한 `Invoke-WebRequest` 모든 요청에서 종료 오류를 강제로 throw 합니다. 종료 오류는 `catch` **예외** 개체에서 **StatusCode** 를 검색 하는 블록에 의해 catch 됩니다.
+종료 오류는 `catch` **예외** 개체에서 **StatusCode** 를 검색 하는 블록에 의해 catch 됩니다.
 
 ## PARAMETERS
 
@@ -269,15 +268,15 @@ Accept wildcard characters: False
 
 ### -인증
 
-요청에 사용할 명시적 인증 유형을 지정 합니다. 기본값은 **None** (없음)입니다.
+요청에 사용할 명시적 인증 유형을 지정 합니다. 기본값은 **None**(없음)입니다.
 **UseDefaultCredentials** 에는 **인증** 을 사용할 수 없습니다.
 
 사용 가능한 인증 옵션:
 
-- **None** : **인증이** 제공 되지 않은 경우의 기본 옵션입니다. 명시적 인증을 사용 하지 않습니다.
-- **기본** : **자격 증명이** 필요 합니다. 자격 증명은의 형식으로 RFC 7617 기본 인증 헤더에 전송 됩니다 `base64(user:password)` .
-- **전달자** : **토큰이** 필요 합니다. `Authorization: Bearer`제공 된 토큰을 사용 하 여 RFC 6750 헤더를 보냅니다. **OAuth** 에 대 한 별칭입니다.
-- **OAuth** : **토큰이** 필요 합니다. `Authorization: Bearer`제공 된 토큰을 사용 하 여 RFC 6750 헤더를 보냅니다. **전달자** 에 대 한 별칭입니다.
+- **None**: **인증이** 제공 되지 않은 경우의 기본 옵션입니다. 명시적 인증을 사용 하지 않습니다.
+- **기본**: **자격 증명이** 필요 합니다. 자격 증명은의 형식으로 RFC 7617 기본 인증 헤더에 전송 됩니다 `base64(user:password)` .
+- **전달자**: **토큰이** 필요 합니다. `Authorization: Bearer`제공 된 토큰을 사용 하 여 RFC 6750 헤더를 보냅니다. **OAuth** 에 대 한 별칭입니다.
+- **OAuth**: **토큰이** 필요 합니다. `Authorization: Bearer`제공 된 토큰을 사용 하 여 RFC 6750 헤더를 보냅니다. **전달자** 에 대 한 별칭입니다.
 
 **인증** 을 제공 하면 `Authorization` **헤더** 에 제공 되거나 **websession** 에 포함 된 모든 헤더가 재정의 됩니다.
 
@@ -305,7 +304,7 @@ Accept wildcard characters: False
 
 입력이 GET 요청이 고 본문이 `IDictionary` (일반적으로 해시 테이블) 이면 본문이 쿼리 매개 변수로 URI에 추가 됩니다. 다른 요청 유형 (예: POST)의 경우 본문은 표준 형식의 요청 본문 값으로 설정 됩니다 `name=value` .
 
-**Body** 매개 변수는 개체를 허용할 수도 있습니다 `System.Net.Http.MultipartFormDataContent` . 이렇게 하면 `multipart/form-data` 요청을 용이 하 게 합니다. **본문** 에 대해 **MultipartFormDataContent** 개체가 제공 되는 경우에는 **ContentType** , **헤더** 또는 **Websession** 매개 변수에 제공 된 모든 콘텐츠 관련 헤더가 **MultipartFormDataContent** 개체의 콘텐츠 헤더에 의해 재정의 됩니다. 이 기능은 PowerShell 6.0.0에서 추가 되었습니다.
+**Body** 매개 변수는 개체를 허용할 수도 있습니다 `System.Net.Http.MultipartFormDataContent` . 이렇게 하면 `multipart/form-data` 요청을 용이 하 게 합니다. **본문** 에 대해 **MultipartFormDataContent** 개체가 제공 되는 경우에는 **ContentType**, **헤더** 또는 **Websession** 매개 변수에 제공 된 모든 콘텐츠 관련 헤더가 **MultipartFormDataContent** 개체의 콘텐츠 헤더에 의해 재정의 됩니다. 이 기능은 PowerShell 6.0.0에서 추가 되었습니다.
 
 ```yaml
 Type: System.Object
@@ -560,7 +559,7 @@ Accept wildcard characters: False
 - DELETE
 - 가져오기
 - Head
-- 병합
+- Merge
 - 옵션
 - 패치
 - 게시
@@ -808,7 +807,7 @@ Cmdlet이 유효성 검사 없이 요청에 헤더를 추가 함을 나타냅니
 이 스위치는 표준을 준수 하지 않는 헤더 값이 필요한 사이트에 사용 해야 합니다.
 이 스위치를 지정 하면 해당 값을 선택 하지 않은 상태로 전달할 수 있도록 유효성 검사가 비활성화 됩니다. 지정 된 경우 모든 헤더는 유효성 검사 없이 추가 됩니다.
 
-이 스위치는 **ContentType** , **Headers** 및 **UserAgent** 매개 변수에 전달 된 값에 대 한 유효성 검사를 사용 하지 않도록 설정 합니다.
+이 스위치는 **ContentType**, **Headers** 및 **UserAgent** 매개 변수에 전달 된 값에 대 한 유효성 검사를 사용 하지 않도록 설정 합니다.
 
 이 기능은 PowerShell 6.0.0에서 추가 되었습니다.
 
@@ -934,7 +933,7 @@ Accept wildcard characters: False
 
 웹 요청이 전송 되는 인터넷 리소스의 URI (Uniform Resource Identifier)를 지정 합니다. URI를 입력합니다. 이 매개 변수는 HTTP 또는 HTTPS만 지원 합니다.
 
-이 매개 변수는 필수적 요소입니다. 매개 변수 이름 **Uri** 는 선택 사항입니다.
+이 매개 변수는 필수입니다. 매개 변수 이름 **Uri** 는 선택 사항입니다.
 
 ```yaml
 Type: System.Uri
@@ -1054,9 +1053,9 @@ PowerShell 6.0.0 부터는 `Invoke-WebRequest` 기본 구문 분석만 지원 �
 
 이 속성의 값은 플랫폼에 따라 결정 됩니다.
 
-- **Windows의 경우** : 환경 변수에서 프록시 구성을 읽습니다. 이러한 변수가 정의 되지 않은 경우 속성은 사용자의 프록시 설정에서 파생 됩니다.
-- **MacOS의 경우** : 환경 변수에서 프록시 구성을 읽습니다. 이러한 변수가 정의 되지 않은 경우 속성은 시스템의 프록시 설정에서 파생 됩니다.
-- **Linux** : 환경 변수에서 프록시 구성을 읽습니다. 이러한 변수가 정의 되지 않은 경우 속성은 모든 주소를 우회 하는 구성 되지 않은 인스턴스를 초기화 합니다.
+- **Windows의 경우**: 환경 변수에서 프록시 구성을 읽습니다. 이러한 변수가 정의 되지 않은 경우 속성은 사용자의 프록시 설정에서 파생 됩니다.
+- **MacOS의 경우**: 환경 변수에서 프록시 구성을 읽습니다. 이러한 변수가 정의 되지 않은 경우 속성은 시스템의 프록시 설정에서 파생 됩니다.
+- **Linux**: 환경 변수에서 프록시 구성을 읽습니다. 이러한 변수가 정의 되지 않은 경우 속성은 모든 주소를 우회 하는 구성 되지 않은 인스턴스를 초기화 합니다.
 
 `DefaultProxy`Windows 및 Unix 기반 플랫폼에서 초기화 하는 데 사용 되는 환경 변수는 다음과 같습니다.
 

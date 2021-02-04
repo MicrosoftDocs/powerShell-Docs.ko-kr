@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-variable?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Variable
-ms.openlocfilehash: c175fce3df41a3860a54ccb13a280955dce4a55c
-ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
+ms.openlocfilehash: c90a2f49c95333e45893e186d6e1f1da4b3fe41a
+ms.sourcegitcommit: 0f003644684422e425a59b7361121e05ac772e15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239894"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98771832"
 ---
 # Set-Variable
 
@@ -53,13 +53,13 @@ desc                           A description
 이 예에서는 시스템의 모든 프로세스가 포함 된 읽기 전용의 전역 변수를 만든 다음 변수의 모든 속성을 표시 합니다.
 
 ```powershell
-Set-Variable -Name "processes" -Value (Get-Process) -Option constant -Scope global -Description "All processes" -PassThru |
+Set-Variable -Name "processes" -Value (Get-Process) -Option Constant -Scope global -Description "All processes" -PassThru |
     Format-List -Property *
 ```
 
 이 명령은 cmdlet을 사용 하 여 `Set-Variable` 변수를 만듭니다. **PassThru** 매개 변수를 사용 하 여 새 변수를 나타내는 개체를 만든 다음 파이프라인 연산자 ()를 사용 하 여 `|` 개체를 cmdlet으로 전달 `Format-List` 합니다. 의 **Property** 매개 변수를 `Format-List` all () 값과 함께 사용 `*` 하 여 새로 만든 변수의 모든 속성을 표시 합니다.
 
-값은 `(Get-Process)` 변수에 저장 하기 전에 실행 되도록 괄호로 묶여 있습니다. 그렇지 않으면 변수는 " **Get Process** " 라는 단어를 포함 합니다.
+값은 `(Get-Process)` 변수에 저장 하기 전에 실행 되도록 괄호로 묶여 있습니다. 그렇지 않으면 변수는 "**Get Process**" 라는 단어를 포함 합니다.
 
 ### 예제 3: public 및 private 변수 이해
 
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 - 전역
 - 로컬
 - 스크립트
-- Private
+- 비공개
 - 현재 범위를 기준으로 하는 숫자 (0부터 범위 수까지, 여기서 0은 현재 범위이 고 1은 부모)입니다.
 
 Local이 기본값입니다.

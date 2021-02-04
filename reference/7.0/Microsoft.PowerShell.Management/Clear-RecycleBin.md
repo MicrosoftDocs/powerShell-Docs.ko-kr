@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 10/28/2019
+ms.date: 01/29/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/clear-recyclebin?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-RecycleBin
-ms.openlocfilehash: 4131232e7afb2e0a213bbe11f5da7ee3a0071a59
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: 4fde991ea99b46b96d0058334419ef4782a9adac
+ms.sourcegitcommit: 81558c2adb9d109946a027e5b96e4d24b3b13747
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94344306"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99098648"
 ---
 # Clear-RecycleBin
 
@@ -94,7 +93,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-사용자에 게 휴지통 선택을 취소 하기 위한 확인 메시지가 표시 되지 않도록 지정 합니다.
+사용자에 게 휴지통 선택을 취소 하기 위한 확인 메시지가 표시 되지 않도록 지정 합니다. **Force** 매개 변수도 **WhatIf** 및 **Confirm** 매개 변수를 재정의 합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -148,7 +147,7 @@ Accept wildcard characters: False
 
 ## 출력
 
-### 없음
+### None
 
 ## 참고
 

@@ -2,16 +2,16 @@
 description: 모든 cmdlet에 사용할 수 있는 매개 변수에 대해 설명 합니다.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 11/26/2019
+ms.date: 01/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_CommonParameters
-ms.openlocfilehash: 3c1a26754baf9bdfa2a9d6d3cf5a68ddb657c3bf
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: b9fef14aac6394c7aa26cd8054ad4bea159620fd
+ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222130"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860683"
 ---
 # <a name="about-commonparameters"></a>CommonParameters 정보
 
@@ -33,7 +33,7 @@ Common 매개 변수는 **Cmdletbinding** 특성 또는 **Parameter** 특성을 
 
 다음 목록에는 일반 매개 변수가 표시 됩니다. 해당 별칭은 괄호 안에 나열 됩니다.
 
-- **Debug** (db)
+- **Debug**(db)
 - **Erroraction** (ea)
 - **Errorvariable** (ev)
 - **Informationaction** (infa)
@@ -48,7 +48,7 @@ Common 매개 변수는 **Cmdletbinding** 특성 또는 **Parameter** 특성을 
 **동작** 매개 변수는 **actionpreference** 형식 값입니다.
 **Actionpreference** 는 다음 값이 포함 된 열거형입니다.
 
-| 속성             | 값 |
+| 이름             | 값 |
 |------------------|-------|
 | 일시 중지됨          | 5     |
 | 무시           | 4     |
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 
 비 대화형 모드에서 **Debug** 매개 변수는 현재 명령의 변수 값을 재정의 `$DebugPreference` 하 고의 값을 `$DebugPreference` **계속** 로 설정 합니다.
 
-`-Debug:$true` 와 동일한 효과가 `-Debug` 있습니다. `-Debug:$false`SilentlyContinue가 아닌 경우 (기본값) 디버깅 메시지를 표시 하지 않으려면를 사용 합니다 `$DebugPreference` . **SilentlyContinue**
+`-Debug:$true` 와 동일한 효과가 `-Debug` 있습니다. `-Debug:$false`SilentlyContinue가 아닌 경우 (기본값) 디버깅 메시지를 표시 하지 않으려면를 사용 합니다 `$DebugPreference` . 
 
 #### <a name="erroraction"></a>ErrorAction
 
@@ -294,6 +294,10 @@ $out
 #### <a name="pipelinevariable"></a>PipelineVariable
 
 **PipelineVariable** 은 파이프라인을 통해 흐르는 모든 명명 된 명령에 대해 현재 파이프라인 요소의 값을 변수로 저장 합니다.
+
+>[!NOTE]
+> 고급 함수에는 최대 3 개의 스크립트 블록 `begin` (, 및)이 있을 수 있습니다 `process` `end` . 고급 함수와 함께 **PipelineVariable** 매개 변수를 사용 하는 경우 함수가 실행 될 때 첫 번째 정의 된 스크립트 블록의 값만 변수에 할당 됩니다. 자세한 내용은 [고급 함수](./about_functions_advanced.md)를 참조 하세요.
+> PowerShell 7.2은이 동작을 수정 합니다.
 
 ```yaml
 Type: String
@@ -557,7 +561,7 @@ about_Common_Parameters
 
 [Write-Warning](xref:Microsoft.PowerShell.Utility.Write-Warning)
 
-[쓰기 오류](xref:Microsoft.PowerShell.Utility.Write-Error)
+[Write-Error](xref:Microsoft.PowerShell.Utility.Write-Error)
 
 [Write-Verbose](xref:Microsoft.PowerShell.Utility.Write-Verbose)
 

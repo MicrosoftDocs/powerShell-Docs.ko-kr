@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 05/20/2020
+ms.date: 02/02/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-random?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Random
-ms.openlocfilehash: 644663c8871233bae84288f83492b518405d14ff
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 842d4ea92f60a92fddcddea11bb8155c708ac192
+ms.sourcegitcommit: fa1a84c81e15f1ffac962110b0b4c850c1b173a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213034"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495962"
 ---
 # Get-Random
 
@@ -45,7 +44,14 @@ Get-Random [-SetSeed <Int32>] [-InputObject] <Object[]> [-Shuffle] [<CommonParam
 
 매개 변수 또는 입력을 사용 하지 않으면 `Get-Random` 명령에서 0 (영)과 **int32.maxvalue** (,) 사이의 임의로 선택 된 32 비트의 부호 없는 정수를 반환 `0x7FFFFFFF` `2,147,483,647` 합니다.
 
-의 매개 변수를 사용 하 여 `Get-Random` 초기값, 최소 및 최대 값, 전송 된 컬렉션에서 반환 된 개체 수 및 전체 컬렉션을 임의의 순서로 지정할 수 있습니다.
+기본적으로는 `Get-Random` [RandomNumberGenerator](/dotnet/api/system.security.cryptography.randomnumbergenerator) 클래스를 사용 하 여 암호화 보안 임의성을 생성 합니다.
+
+의 매개 변수를 사용 `Get-Random` 하 여 최소값과 최대값, 컬렉션에서 반환 되는 개체 수 또는 초기값을 지정할 수 있습니다.
+
+> [!CAUTION]
+> 초기값을 의도적으로 설정 하면 무작위로 반복 되는 동작이 발생 하지 않습니다. 명령을 포함 하는 스크립트를 디버깅 하거나 분석 하는 경우와 같이 동작을 재현 하려는 경우에만 사용 해야 합니다 `Get-Random` .
+>
+> 이 초기값은 `Get-Random` **setseed** 를 다시 사용 하거나 세션을 닫을 때까지 현재 명령 및 현재 세션의 모든 후속 명령에 사용 됩니다. 초기값을 기본값으로 다시 설정할 수 없습니다.
 
 ## 예제
 
@@ -208,7 +214,7 @@ $Sample = $Files | Get-Random -Count 50
 
 ### 예 11: 롤 박람회
 
-이 예제는 공평 하 게 1200 시간을 롤백하고 결과를 계산 합니다. 첫 번째 명령은 `For-EachObject` `Get-Random` 파이프 된 (1-6)에서에 대 한 호출을 반복 합니다. 결과는를 사용 하 여 값으로 그룹화 되 `Group-Object` 고가 있는 테이블로 형식이 지정 됩니다 `Select-Object` .
+이 예제는 공평 하 게 1200 시간을 롤백하고 결과를 계산 합니다. 첫 번째 명령은 `ForEach-Object` `Get-Random` 파이프 된 (1-6)에서에 대 한 호출을 반복 합니다. 결과는를 사용 하 여 값으로 그룹화 되 `Group-Object` 고가 있는 테이블로 형식이 지정 됩니다 `Select-Object` .
 
 ```powershell
 1..1200 | ForEach-Object {
@@ -332,9 +338,12 @@ Accept wildcard characters: False
 
 ### -SetSeed
 
-난수 생성기의 시드 값을 지정합니다. 이 초기값은 `Get-Random` **setseed** 를 다시 사용 하거나 세션을 닫을 때까지 현재 명령 및 현재 세션의 모든 후속 명령에 사용 됩니다. 초기값을 기본값으로 다시 설정할 수 없습니다.
+난수 생성기의 시드 값을 지정합니다. **Setseed** 를 사용 하는 경우 [cmdlet은 system.string 메서드를](/dotnet/api/system.random) 사용 하 여 암호화 되지 않은 의사 난수를 생성 합니다.
 
-**Setseed** 매개 변수는 필요 하지 않습니다. 기본적으로에서는 `Get-Random` [RandomNumberGenerator ()](/dotnet/api/system.security.cryptography.randomnumbergenerator) 메서드를 사용 하 여 초기값을 생성 합니다. **Setseed** 는 무작위 동작을 수행 하므로 명령을 포함 하는 스크립트를 디버깅 하거나 분석 하는 경우와 같이 일반적으로 동작을 재현 하려는 경우에만 사용 됩니다 `Get-Random` .
+> [!CAUTION]
+> 초기값을 설정 하면 불규칙 하지 않은 동작이 발생 합니다. 명령을 포함 하는 스크립트를 디버깅 하거나 분석 하는 경우와 같이 동작을 재현 하려는 경우에만 사용 해야 합니다 `Get-Random` .
+>
+> 이 초기값은 `Get-Random` **setseed** 를 다시 사용 하거나 세션을 닫을 때까지 현재 명령 및 현재 세션의 모든 후속 명령에 사용 됩니다. 초기값을 기본값으로 다시 설정할 수 없습니다.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -382,7 +391,7 @@ Accept wildcard characters: False
 
 ## 참고
 
-`Get-Random` 세션이 시작 될 때 시스템 시간 시계를 기준으로 각 세션에 대 한 기본 초기값을 설정 합니다.
+기본적으로는 `Get-Random` [RandomNumberGenerator](/dotnet/api/system.security.cryptography.randomnumbergenerator) 클래스를 사용 하 여 암호화 보안 임의성을 생성 합니다.
 
 `Get-Random` 는 항상 입력 값과 동일한 데이터 형식을 반환 하지 않습니다. 다음 표에서는 각 숫자 입력 형식에 대 한 출력 형식을 보여 줍니다.
 
@@ -405,3 +414,6 @@ PowerShell 7부터 **RandomListItemParameterSet** 매개 변수 집합의 **Inpu
 
 ## 관련 링크
 
+[RandomNumberGenerator ()](/dotnet/api/system.security.cryptography.randomnumbergenerator)
+
+[. 무작위](/dotnet/api/system.random)

@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 08/10/2020
+ms.date: 01/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-WebRequest
-ms.openlocfilehash: 25da6262e93be3e3749aabaf4950e2fbcd91ff5c
-ms.sourcegitcommit: 9a6b6714ded4edb5119f1b82a253608018ea6b98
+ms.openlocfilehash: f3545065d4879830a5051ef687f210c7fbd1251e
+ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "93219226"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860664"
 ---
 # Invoke-WebRequest
 
@@ -122,7 +121,7 @@ Cmdlet이 facebook에 로그인 한 후 `Invoke-WebRequest` 변수에 있는 웹
 ```powershell
 try
 {
-    $response = Invoke-WebRequest -Uri "www.microsoft.com/unkownhost" -ErrorAction Stop
+    $Response = Invoke-WebRequest -Uri "www.microsoft.com/unkownhost"
     # This will only execute if the Invoke-WebRequest is successful.
     $StatusCode = $Response.StatusCode
 }
@@ -137,7 +136,7 @@ $StatusCode
 404
 ```
 
-첫 번째 명령은 `Invoke-WebRequest` 실패 한 요청에 대해 종료 오류를 강제로 throw 하는 **Stop** 의 **erroraction** 을 사용 하 여를 호출 합니다 `Invoke-WebRequest` . 종료 오류는 `catch` **예외** 개체에서 **StatusCode** 를 검색 하는 블록에 의해 catch 됩니다.
+종료 오류는 `catch` **예외** 개체에서 **StatusCode** 를 검색 하는 블록에 의해 catch 됩니다.
 
 ## PARAMETERS
 
@@ -152,7 +151,7 @@ $StatusCode
 입력이 GET 요청이 고 본문이 **IDictionary** (일반적으로 해시 테이블) 이면 본문이 쿼리 매개 변수로 URI에 추가 됩니다. 다른 GET 요청의 경우 본문은 표준 형식의 요청 본문 값으로 설정 됩니다 `name=value` .
 
 본문이 폼 이거나 호출의 출력 인 경우 `Invoke-WebRequest` PowerShell은 양식 필드에 요청 콘텐츠를 설정 합니다.
-다음은 그 예입니다. 
+예를 들면 다음과 같습니다.
 
 `$r = Invoke-WebRequest https://website.com/login.aspx`
 `$r.Forms\[0\].Name = "MyName"`
@@ -328,7 +327,7 @@ Accept wildcard characters: False
 - DELETE
 - 가져오기
 - Head
-- 병합
+- Merge
 - 옵션
 - 패치
 - 게시
@@ -508,7 +507,7 @@ Accept wildcard characters: False
 
 웹 요청이 전송되는 인터넷 리소스의 URI(Uniform Resource Identifier)를 지정합니다. URI를 입력합니다. 이 매개 변수는 HTTP, HTTPS, FTP 및 FILE 값을 지원합니다.
 
-이 매개 변수는 필수적 요소입니다.
+이 매개 변수는 필수입니다.
 
 ```yaml
 Type: System.Uri

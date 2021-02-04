@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.ConsoleHost.dll-help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Host
-ms.date: 04/22/2020
+ms.date: 01/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.host/start-transcript?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-Transcript
-ms.openlocfilehash: c7e95988c385a32802c93f92216710746d268e5e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4f90dd8e3080d393e50fb8f48133c74909ec2b80
+ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93211938"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860748"
 ---
 # Start-Transcript
 
 ## 개요
 텍스트 파일에 대 한 PowerShell 세션의 전체 또는 일부에 대 한 레코드를 만듭니다.
 
-## SYNTAX
+## 구문
 
 ### ByPath (기본값)
 
@@ -50,6 +50,8 @@ Windows PowerShell 5.0부터 `Start-Transcript` 은 모든 기록의 생성 된 
 Cmdlet을 통해 생성 되는 파일에는 `Start-Transcript` 두 개 이상의 기록이 동시에 시작 될 때 잠재적으로 덮어쓰거나 중복 되지 않도록 이름에 임의의 문자가 포함 됩니다.
 또한 중앙 집중식 파일 공유에 저장 된 기록을 무단으로 검색할 수 없습니다.
 
+**추가** 매개 변수를 사용 하는 경우 대상 파일에 BOM (바이트 순서 표시)의 `Start-Transcript` 기본값은 `ASCII` 대상 파일에서 인코딩할 수 없는 경우입니다. 이 동작으로 인해 성적 증명서의 mulitbyte 문자가 잘못 인코딩 될 수 있습니다.
+
 ## 예제
 
 ### 예제 1: 기본 설정을 사용 하 여 기록 파일 시작
@@ -68,7 +70,7 @@ Start-Transcript -Path "C:\transcripts\transcript0.txt" -NoClobber
 
 이 명령은의 파일에서 기록을 시작 `Transcript0.txt` `C:\transcripts` 합니다. **NoClobber** 매개 변수를 사용 하기 때문에 명령은 기존 파일을 덮어쓰지 않도록 합니다. `Transcript0.txt`파일이 이미 있으면 명령이 실패 합니다.
 
-## PARAMETERS
+## 매개 변수
 
 ### -추가
 
@@ -225,7 +227,7 @@ Accept wildcard characters: False
 
 ## 입력
 
-### 없음
+### None
 
 이 cmdlet에 개체를 파이프할 수 없습니다.
 
