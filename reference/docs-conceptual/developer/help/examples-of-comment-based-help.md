@@ -1,14 +1,14 @@
 ---
-ms.date: 09/12/2016
+ms.date: 01/11/2021
 ms.topic: reference
 title: 설명 기반 도움말 예제
 description: 설명 기반 도움말 예제
-ms.openlocfilehash: 35fe9103a261483c56af629f620dbd6b3c642e68
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 237e65c59cc3b35f48b6d667c8fb297994b03638
+ms.sourcegitcommit: 4879b9cdfa3f03b04a07b84442dc1ca9ae0f6b46
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "92667643"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98105165"
 ---
 # <a name="examples-of-comment-based-help"></a>설명 기반 도움말 예제
 
@@ -46,15 +46,15 @@ function Add-Extension
         System.String. Add-Extension returns a string with the extension or file name.
 
         .EXAMPLE
-        C:\PS> extension -name "File"
+        PS> extension -name "File"
         File.txt
 
         .EXAMPLE
-        C:\PS> extension -name "File" -extension "doc"
+        PS> extension -name "File" -extension "doc"
         File.doc
 
         .EXAMPLE
-        C:\PS> extension "File" "doc"
+        PS> extension "File" "doc"
         File.doc
 
         .LINK
@@ -69,7 +69,7 @@ function Add-Extension
 다음 출력은 `Get-Help` 함수에 대 한 도움말을 표시 하는 명령의 결과를 보여 줍니다 `Add-Extension` .
 
 ```powershell
-C:\PS> get-help add-extension -full
+PS> Get-Help Add-Extension -full
 ```
 
 ```Output
@@ -118,17 +118,17 @@ C:\PS> get-help add-extension -full
 
             -------------------------- EXAMPLE 1 --------------------------
 
-            C:\PS> extension -name "File"
+            PS> extension -name "File"
             File.txt
 
             -------------------------- EXAMPLE 2 --------------------------
 
-            C:\PS> extension -name "File" -extension "doc"
+            PS> extension -name "File" -extension "doc"
             File.doc
 
             -------------------------- EXAMPLE 3 --------------------------
 
-            C:\PS> extension "File" "doc"
+            PS> extension "File" "doc"
             File.doc
 
         RELATED LINKS
@@ -166,13 +166,13 @@ Closing 문과 문 사이에 빈 줄을 확인 **#>** `Param` 합니다. 문이 
   None. Update-Month.ps1 does not generate any output.
 
   .EXAMPLE
-  C:\PS> .\Update-Month.ps1
+  PS> .\Update-Month.ps1
 
   .EXAMPLE
-  C:\PS> .\Update-Month.ps1 -inputpath C:\Data\January.csv
+  PS> .\Update-Month.ps1 -inputpath C:\Data\January.csv
 
   .EXAMPLE
-  C:\PS> .\Update-Month.ps1 -inputpath C:\Data\January.csv -outputPath C:\Reports\2009\January.csv
+  PS> .\Update-Month.ps1 -inputpath C:\Data\January.csv -outputPath C:\Reports\2009\January.csv
 #>
 
 param ([string]$InputPath, [string]$OutPutPath)
@@ -183,7 +183,7 @@ function Get-Data { }
 다음 명령은 스크립트 도움말을 가져옵니다. 스크립트가 Path 환경 변수에 나열 된 디렉터리에 있지 않기 때문에 스크립트 `Get-Help` 도움말을 가져오는 명령은 스크립트 경로를 지정 해야 합니다.
 
 ```powershell
-C:\PS> get-help c:\ps-test\update-month.ps1 -full
+PS> Get-Help c:\ps-test\update-month.ps1 -full
 ```
 
 ```Output
@@ -236,15 +236,15 @@ C:\PS> get-help c:\ps-test\update-month.ps1 -full
 
             -------------------------- EXAMPLE 1 --------------------------
 
-            C:\PS> .\Update-Month.ps1
+            PS> .\Update-Month.ps1
 
             -------------------------- EXAMPLE 2 --------------------------
 
-            C:\PS> .\Update-Month.ps1 -inputpath C:\Data\January.csv
+            PS> .\Update-Month.ps1 -inputpath C:\Data\January.csv
 
             -------------------------- EXAMPLE 3 --------------------------
 
-            C:\PS> .\Update-Month.ps1 -inputpath C:\Data\January.csv -outputPath
+            PS> .\Update-Month.ps1 -inputpath C:\Data\January.csv -outputPath
             C:\Reports\2009\January.csv
 
             RELATED LINKS
@@ -327,7 +327,7 @@ function help
 다음 명령은이 기능을 사용 합니다. 사용자가 `Get-Help` 함수에 대 한 명령을 입력 하면 `Help` 에서 `Get-Help` cmdlet에 대 한 도움말 항목을 표시 합니다 `Get-Help` .
 
 ```powershell
-C:\PS> get-help help
+PS> get-help help
 ```
 
 ```Output

@@ -1,17 +1,16 @@
 ---
 description: PowerShell에서 텍스트 파일로 출력을 리디렉션하는 방법에 대해 설명 합니다.
-keywords: PowerShell, cmdlet
 Locale: en-US
 ms.date: 10/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_redirection?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Redirection
-ms.openlocfilehash: 1a532aeacf6347023c95905c82aa1f221835a729
-ms.sourcegitcommit: 16883bb67e34b3915798070f60f974bf85160bd3
+ms.openlocfilehash: 85b719b7af11cce2396e7d62fcc638007b55c834
+ms.sourcegitcommit: b9826dcf402db8a2b6d3eab37edb82c6af113343
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "93224474"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040901"
 ---
 # <a name="about-redirection"></a>리디렉션 정보
 
@@ -54,7 +53,7 @@ PowerShell은 다음 출력 스트림의 리디렉션을 지원 합니다.
 
 PowerShell 리디렉션 연산자는 다음과 같습니다. 여기서은 `n` 스트림 번호를 나타냅니다. 스트림이 지정 되지 않은 경우 **성공** 스트림 ( `1` )이 기본값입니다.
 
-| 연산자 |                         설명                         | 구문 |
+| 연산자 |                         설명                         | Syntax |
 | -------- | ----------------------------------------------------------- | ------ |
 | `>`      | 지정 된 스트림을 파일에 보냅니다.                            | `n>`   |
 | `>>`     | 지정 된 스트림을 파일에 **추가** 합니다.                      | `n>>`  |
@@ -92,7 +91,7 @@ dir 'C:\', 'fakepath' 2>&1 > .\dir.log
    Write-Warning "hello"
    Write-Error "hello"
    Write-Output "hi"
-} 3>&1 2>&1 > P:\Temp\redirection.log
+} 3>&1 2>&1 > C:\Temp\redirection.log
 ```
 
 - `3>&1`**경고** 스트림을 **성공** 스트림으로 리디렉션합니다.
@@ -196,7 +195,7 @@ Inquire
 
 ### <a name="potential-confusion-with-comparison-operators"></a>비교 연산자와 혼동 될 수 있습니다.
 
-`>`연산자는 [보다 큼](about_Comparison_Operators.md#-gt) 비교 연산자와 혼동 하지 않습니다 (종종 `>` 다른 프로그래밍 언어에서로 표시 됨).
+`>`연산자는 [보다 큼](about_Comparison_Operators.md#-gt--ge--lt-and--le) 비교 연산자와 혼동 하지 않습니다 (종종 `>` 다른 프로그래밍 언어에서로 표시 됨).
 
 비교 되는 개체에 따라를 사용 하는 출력은 `>` 올바른 것으로 표시 될 수 있습니다 (36가 42 보다 크지 않기 때문).
 
@@ -222,22 +221,21 @@ PS> cat 42
 
 ```powershell
 PS> if (36 < 42) { "true" } else { "false" }
-At line:1 char:8
-+ if (36 < 42) { "true" } else { "false" }
-+        ~
-The '<' operator is reserved for future use.
-+ CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
-+ FullyQualifiedErrorId : RedirectionNotSupported
+ParserError:
+Line |
+   1 |  if (36 < 42) { "true" } else { "false" }
+     |         ~
+     | The '<' operator is reserved for future use.
 ```
 
-숫자 비교가 필요한 작업 인 경우에 `-lt` 는를 `-gt` 사용 해야 합니다. 참조: [ `-gt` 비교 연산자](about_Comparison_Operators.md#-gt)
+숫자 비교가 필요한 작업 인 경우에 `-lt` 는를 `-gt` 사용 해야 합니다. 자세한 내용은 `-gt` [about_Comparison_Operators](about_Comparison_Operators.md#-gt--ge--lt-and--le)의 연산자를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Out-File](xref:Microsoft.PowerShell.Utility.Out-File)
 - [Tee-Object](xref:Microsoft.PowerShell.Utility.Tee-Object)
 - [Write-Debug](xref:Microsoft.PowerShell.Utility.Write-Debug)
-- [쓰기 오류](xref:Microsoft.PowerShell.Utility.Write-Error)
+- [Write-Error](xref:Microsoft.PowerShell.Utility.Write-Error)
 - [Write-Host](xref:Microsoft.PowerShell.Utility.Write-Host)
 - [Write-Information](xref:Microsoft.PowerShell.Utility.Write-Information)
 - [Write-Output](xref:Microsoft.PowerShell.Utility.Write-Output)

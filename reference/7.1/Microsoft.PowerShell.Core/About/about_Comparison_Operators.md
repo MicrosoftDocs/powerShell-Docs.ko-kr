@@ -1,508 +1,391 @@
 ---
 description: PowerShell의 값을 비교 하는 연산자에 대해 설명 합니다.
 Locale: en-US
-ms.date: 12/10/2020
+ms.date: 01/20/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_comparison_operators
-ms.openlocfilehash: ea48d5928f71983f6d035f0e5e6074ce36754d80
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 0ef3c68d73ae3e1d2040b3654e4f8ba45565717a
+ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97090514"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98619910"
 ---
 # <a name="about-comparison-operators"></a>비교 연산자 정보
 
 ## <a name="short-description"></a>간단한 설명
-PowerShell의 값을 비교 하는 연산자에 대해 설명 합니다.
+
+PowerShell의 비교 연산자는 입력 값에 대해 두 값 또는 컬렉션의 필터 요소를 비교할 수 있습니다.
 
 ## <a name="long-description"></a>자세한 설명입니다.
 
-비교 연산자를 사용 하 여 값을 비교 하 고 지정 된 패턴과 일치 하는 값을 찾는 조건을 지정할 수 있습니다. 비교 연산자를 사용 하려면 이러한 값을 구분 하는 연산자와 비교할 값을 지정 합니다.
+비교 연산자를 사용 하 여 값을 비교 하거나 지정 된 패턴과 일치 하는 값을 찾을 수 있습니다. PowerShell에는 다음과 같은 비교 연산자가 포함 되어 있습니다.
 
-PowerShell에는 다음과 같은 비교 연산자가 포함 되어 있습니다.
+|    유형     |   연산자   |              비교 테스트              |
+| ----------- | ------------ | ----------------------------------------- |
+| 같음    | -eq          | equals                                    |
+|             | -ne          | 같지 않음                                |
+|             | -gt          | 보다 큼                              |
+|             | -ge          | 크거나 같음                     |
+|             | -lt          | 다음보다 작음                                 |
+|             | -le          | 작거나 같음                        |
+| Matching    | -like        | 문자열이 와일드 카드 패턴과 일치           |
+|             | -notlike     | 문자열이 와일드 카드 패턴과 일치 하지 않습니다.    |
+|             | -match       | 문자열이 regex 패턴과 일치 합니다.              |
+|             | -notmatch    | 문자열이 regex 패턴과 일치 하지 않습니다.       |
+| Replacement | -replace     | regex 패턴과 일치 하는 문자열을 바꿉니다. |
+| Containment | -contains    | 컬렉션에 값이 포함 되어 있습니다.               |
+|             | -notcontains | 컬렉션에 값이 포함 되어 있지 않습니다.       |
+|             | -in          | 값이 컬렉션에 있습니다.                  |
+|             | -notin       | 값이 컬렉션에 없습니다.              |
+| Type        | -is          | 두 개체의 형식이 동일 합니다.            |
+|             | -isnot       | 개체의 형식이 다릅니다.         |
 
-| 형식        | 연산자    | 설명                                 |
-| ----------- | ------------ | --------------------------------------------|
-| 같음    | -eq          | equals                                      |
-|             | -ne          | 같지 않음                                  |
-|             | -gt          | 보다 큼                                |
-|             | -ge          | 크거나 같음                       |
-|             | -lt          | 다음보다 작음                                   |
-|             | -le          | 작거나 같음                          |
-|             |              |                                             |
-| Matching    | -like        | 문자열이 와일드 카드와 일치할 경우 true를 반환 합니다.   |
-|             |              | pattern                                     |
-|             | -notlike     | 문자열이 일치 하지 않으면 true를 반환 합니다.     |
-|             |              | 와일드 카드 패턴                            |
-|             | -match       | 문자열이 regex와 일치 하면 true를 반환 합니다.      |
-|             |              | 되풀이 $matches에 일치 하는 문자열이 포함 되어 있습니다. |
-|             | -notmatch    | 문자열이 일치 하지 않으면 true를 반환 합니다.     |
-|             |              | regex 패턴; 일치 항목 포함 $matches   |
-|             |              | 문자열                                     |
-|             |              |                                             |
-| Containment | -contains    | 참조 값이 포함 된 경우 true를 반환 합니다. |
-|             |              | 컬렉션에서                             |
-|             | -notcontains | 참조 값이이 아닌 경우 true를 반환 합니다.       |
-|             |              | 컬렉션에 포함 되어 있습니다.                   |
-|             | -in          | 에 포함 된 테스트 값이 true를 반환 합니다. |
-|             |              | collection                                  |
-|             | -notin       | 테스트 값이 포함 되지 않은 경우 true를 반환 합니다.  |
-|             |              | 컬렉션에서                             |
-|             |              |                                             |
-| Replacement | -replace     | 문자열 패턴을 바꿉니다.                   |
-|             |              |                                             |
-| 형식        | -is          | 두 개체가 같을 경우 true를 반환 합니다.    |
-|             |              | 형식                                        |
-|             | -isnot       | 개체가 같지 않으면 true를 반환 합니다.|
-|             |              | 형식                                        |
+## <a name="common-features"></a>일반 기능
 
-기본적으로 모든 비교 연산자는 대/소문자를 구분 하지 않습니다. 대/소문자를 구분 하는 비교 연산자를 만들려면 연산자 이름 앞에을 붙입니다 `c` . 예를 들어 대/소문자를 구분 하는 버전 `-eq` 은 `-ceq` 입니다. 대/소문자를 구분 하지 않도록 명시적으로 지정 하려면 연산자 앞에을 붙입니다 `i` . 예를 들어의 명시적 대/소문자를 구분 하지 않는 버전은 `-eq` `-ieq` 입니다.
+기본적으로 모든 비교 연산자는 대/소문자를 구분 하지 않습니다. 대/소문자를 구분 하는 비교 연산자를 만들려면 뒤에를 추가 합니다 `c` `-` . 예를 들어 `-ceq` 은 대/소문자를 구분 하는 버전입니다 `-eq` . 대/소문자를 구분 하지 않도록 명시적으로 지정 하려면 앞에를 추가 `i` `-` 합니다. 예를 들어 `-ieq` 는의 명시적 대/소문자를 구분 하지 않는 버전입니다 `-eq` .
 
-연산자에 대 한 입력이 스칼라 값인 경우 비교 연산자는 부울 값을 반환 합니다. 입력이 값 컬렉션인 경우 비교 연산자는 일치 하는 값을 반환 합니다. 컬렉션에 일치 하는 항목이 없는 경우 비교 연산자는 빈 배열을 반환 합니다.
+연산자의 입력이 스칼라 값 이면 연산자는 **부울** 값을 반환 합니다. 입력이 컬렉션인 경우 연산자는 식의 오른쪽 값과 일치 하는 컬렉션의 요소를 반환 합니다.
+컬렉션에 일치 하는 항목이 없는 경우 비교 연산자는 빈 배열을 반환 합니다. 예를 들면 다음과 같습니다.
 
 ```powershell
-PS> (1, 2 -eq 3).GetType().FullName
-System.Object[]
+$a = (1, 2 -eq 3)
+$a.GetType().Name
+$a.Count
 ```
 
-예외는 포함 연산자, In 연산자 및 형식 연산자 이며 항상 **부울** 값을 반환 합니다.
+```output
+Object[]
+0
+```
 
-> [!NOTE]
-> 값을 비교 해야 하는 경우 `$null` `$null` 비교의 왼쪽에를 넣어야 합니다. `$null` **개체 []** 와 비교할 때 비교 개체가 배열 이기 때문에 결과가 **False** 입니다. 배열을와 비교할 때 `$null` 비교는 `$null` 배열에 저장 된 모든 값을 필터링 합니다. 예를 들어:
->
-> ```powershell
-> PS> $null -ne $null, "hello"
-> True
-> PS> $null, "hello" -ne $null
-> hello
-> ```
+몇 가지 예외도 있습니다.
+
+- 포함 및 형식 연산자는 항상 **부울** 값을 반환 합니다.
+- `-replace`연산자는 대체 결과를 반환 합니다.
+- `-match`또한 및 `-notmatch` 연산자는 `$Matches` 자동 변수를 채웁니다.
 
 ## <a name="equality-operators"></a>같음 연산자
 
-같음 연산자 ( `-eq` , `-ne` )는 하나 이상의 입력 값이 지정 된 패턴과 동일한 경우 TRUE 또는 일치 항목의 값을 반환 합니다. 전체 패턴이 전체 값과 일치 해야 합니다.
+### <a name="-eq-and--ne"></a>-eq 및 -ne
 
-예제:
-
-### <a name="-eq"></a>-eq
-
-설명:가와 같습니다. 에 동일한 값이 포함 된 경우
+왼쪽이 스칼라 인 경우 오른쪽이 정확 하 게 일치 하면 True를 반환 하 고, `-eq` 그렇지 않으면 False를 반환  `-eq` 합니다.  `-ne` 는 반대입니다. 양쪽이 일치할 경우 **false** 를 반환 합니다. 그렇지 않으면 `-ne` True를 반환 합니다.
 
 예제:
 
 ```powershell
-PS> 2 -eq 2
-True
+2 -eq 2                 # Output: True
+2 -eq 3                 # Output: False
+"abc" -eq "abc"         # Output: True
+"abc" -eq "abc", "def"  # Output: False
+"abc" -ne "def"         # Output: True
+"abc" -ne "abc"         # Output: False
+"abc" -ne "abc", "def"  # Output: True
+```
 
-PS> 2 -eq 3
+왼쪽이 컬렉션인 경우 `-eq` 오른쪽에 일치 하는 멤버를 반환 하는 반면는 해당 멤버를 `-ne` 필터링 합니다.
+
+예제:
+
+```powershell
+1,2,3 -eq 2             # Output: 2
+"abc", "def" -eq "abc"  # Output: abc
+"abc", "def" -ne "abc"  # Output: def
+```
+
+이러한 연산자는 컬렉션의 모든 요소를 처리 합니다. 예제:
+
+```powershell
+"zzz", "def", "zzz" -eq "zzz"
+```
+
+```output
+zzz
+zzz
+```
+
+같음 연산자는 스칼라 또는 컬렉션 뿐 아니라 모든 두 개체를 허용 합니다.
+그러나 비교 결과는 최종 사용자에 게 의미가 없을 수도 있습니다.
+다음 예제에서는이 문제를 보여 줍니다.
+
+```powershell
+class MyFileInfoSet {
+    [String]$File
+    [Int64]$Size
+}
+$a = [MyFileInfoSet]@{File = "C:\Windows\explorer.exe"; Size = 4651032}
+$b = [MyFileInfoSet]@{File = "C:\Windows\explorer.exe"; Size = 4651032}
+$a -eq $b
+```
+
+```Output
 False
+```
 
-PS> 1,2,3 -eq 2
+이 예제에서는 동일한 속성을 사용 하 여 두 개의 개체를 만들었습니다. 그러나 같음 테스트 결과는 서로 다른 개체 이기 때문에 **False** 입니다. 비교 가능한 클래스를 만들려면 클래스에서 [IEquatable \<T> ][2] 을 구현 해야 합니다. 다음 예제에서는 [IEquatable \<T>][2] 를 구현 하 고 **파일** 및 **크기** 의 두 속성을 포함 하는 **MyFileInfoSet** 클래스의 부분 구현을 보여 줍니다. `Equals()`두 **MyFileInfoSet** 개체의 파일 및 크기 속성이 같으면이 메서드는 True를 반환 합니다.
+
+```powershell
+class MyFileInfoSet : System.IEquatable[Object] {
+    [String]$File
+    [Int64]$Size
+
+    [bool] Equals([Object] $obj) {
+        return ($this.File -eq $obj.File) -and ($this.Size -eq $obj.Size)
+    }
+}
+$a = [MyFileInfoSet]@{File = "C:\Windows\explorer.exe"; Size = 4651032}
+$b = [MyFileInfoSet]@{File = "C:\Windows\explorer.exe"; Size = 4651032}
+$a -eq $b
+```
+
+```Output
+True
+```
+
+임의의 개체를 비교 하는 중요 한 예는 null 인지 여부를 확인 하는 것입니다. 하지만 변수가 인지 여부를 확인 해야 하는 경우 `$null` `$null` 같음 연산자의 왼쪽에를 넣어야 합니다. 오른쪽에 배치 하는 것은 원하는 작업을 수행 하지 않습니다.
+
+예를 `$a` 들어 다음과 같이 null 요소가 포함 된 배열을 사용할 수 있습니다.
+
+```powershell
+$a = 1, 2, $null, 4, $null, 6
+```
+
+다음 테스트는 `$a` null이 아닙니다.
+
+```powershell
+$null -ne $a
+```
+
+```output
+False
+```
+
+그러나 다음은에서 null 요소를 모두 제외 하는 것입니다 `$a` .
+
+```powershell
+$a -ne $null # Output: 1, 2, 4, 6
+```
+
+```output
+1
 2
-PS> "abc" -eq "abc"
-True
-
-PS> "abc" -eq "abc", "def"
-False
-
-PS> "abc", "def" -eq "abc"
-abc
+4
+6
 ```
 
-### <a name="-ne"></a>-ne
+### <a name="-gt--ge--lt-and--le"></a>-gt,-ge,-lt 및-le
 
-설명: 같지 않음 에 다른 값이 포함 된 경우
+`-gt`, `-ge` , `-lt` 및는 `-le` 매우 유사 하 게 동작 합니다. 두 측면이 모두 스칼라 인 경우 두 변의 비교 방식에 따라 **True** 또는 **False** 를 반환 합니다.
 
-예제:
+| 연산자 | 다음의 경우 True를 반환 합니다.                   |
+| -------- | -------------------------------------- |
+| -gt      | 왼쪽이 더 큽니다.          |
+| -ge      | 왼쪽이 크거나 같습니다. |
+| -lt      | 왼쪽이 더 작습니다.          |
+| -le      | 왼쪽이 작거나 같습니다. |
 
-```powershell
-PS> "abc" -ne "def"
-True
-
-PS> "abc" -ne "abc"
-False
-
-PS> "abc" -ne "abc", "def"
-True
-
-PS> "abc", "def" -ne "abc"
-def
-```
-
-### <a name="-gt"></a>-gt
-
-설명: 보다 큼
-
-예제:
+다음 예에서는 모든 문이 True를 반환 합니다.
 
 ```powershell
-PS> 8 -gt 6
-True
-
-PS> 7, 8, 9 -gt 8
-9
+8 -gt 6  # Output: True
+8 -ge 8  # Output: True
+6 -lt 8  # Output: True
+8 -le 8  # Output: True
 ```
 
 > [!NOTE]
-> `>`다른 많은 프로그래밍 언어의 보다 큼 연산자와 혼동 해서는 안 됩니다. PowerShell에서 `>` 는 리디렉션에 사용 됩니다. 자세한 내용은 [About_redirection](about_Redirection.md#potential-confusion-with-comparison-operators)를 참조 하세요.
+> 대부분의 프로그래밍 언어에서 보다 큼 연산자는 `>` 입니다. PowerShell에서이 문자는 리디렉션에 사용 됩니다. 자세한 내용은 [about_Redirection][3]를 참조 하세요.
 
-### <a name="-ge"></a>-ge
-
-설명: 크거나 같음.
+왼쪽이 컬렉션인 경우 이러한 연산자는 컬렉션의 각 멤버를 오른쪽과 비교 합니다. 논리에 따라 멤버를 유지 하거나 삭제 합니다.
 
 예제:
 
 ```powershell
-PS> 8 -ge 8
-True
+$a=5, 6, 7, 8, 9
 
-PS> 7, 8, 9 -ge 8
+Write-Output "Test collection:"
+$a
+
+Write-Output "`nMembers greater than 7"
+$a -gt 7
+
+Write-Output "`nMembers greater than or equal to 7"
+$a -ge 7
+
+Write-Output "`nMembers smaller than 7"
+$a -lt 7
+
+Write-Output "`nMembers smaller than or equal to 7"
+$a -le 7
+```
+
+```output
+Test collection:
+5
+6
+7
 8
 9
-```
 
-### <a name="-lt"></a>-lt
+Members greater than 7
+8
+9
 
-설명: 보다 작음
-
-예제:
-
-```powershell
-
-PS> 8 -lt 6
-False
-
-PS> 7, 8, 9 -lt 8
-7
-```
-
-### <a name="-le"></a>-le
-
-설명: 보다 작거나 같음입니다.
-
-예제:
-
-```powershell
-PS> 6 -le 8
-True
-
-PS> 7, 8, 9 -le 8
+Members greater than or equal to 7
 7
 8
+9
+
+Members smaller than 7
+5
+6
+
+Members smaller than or equal to 7
+5
+6
+7
 ```
+
+이러한 연산자는 [system.object][1]를 구현 하는 모든 클래스에서 작동 합니다.
+
+예제:
+
+```powershell
+# Date comparison
+[DateTime]'2001-11-12' -lt [DateTime]'2020-08-01' # True
+
+# Sorting order comparison
+'a' -lt 'z'           # True; 'a' comes before 'z'
+'macOS' -ilt 'MacOS'  # False
+'MacOS' -ilt 'macOS'  # False
+'macOS' -clt 'MacOS'  # True; 'm' comes before 'M'
+```
+
+다음 예제에서는 ' a ' 뒤에 정렬 되는 미국 QWERTY 키보드에 기호가 없음을 보여 줍니다. 연산자에 이러한 기호를 모두 포함 하는 집합을 공급 `-gt` 하 여 ' a '와 비교 합니다. 출력은 빈 배열입니다.
+
+```powershell
+$a=' ','`','~','!','@','#','$','%','^','&','*','(',')','_','+','-','=',
+   '{','}','[',']',':',';','"','''','\','|','/','?','.','>',',','<'
+$a -gt 'a'
+# Output: Nothing
+```
+
+연산자의 양쪽이 매우 비교할 수 없는 경우 이러한 연산자는 종료 되지 않는 오류를 발생 시킵니다.
 
 ## <a name="matching-operators"></a>일치 연산자
 
-Like 연산자 ( `-like` 및 `-notlike` )는 와일드 카드 식을 사용 하 여 지정 된 패턴과 일치 하거나 일치 하지 않는 요소를 찾습니다.
+일치 하는 연산자 ( `-like` , `-notlike` , `-match` 및 `-notmatch` )가 지정 된 패턴과 일치 하거나 일치 하지 않는 요소를 찾습니다. 및의 패턴 `-like` 은 `-notlike` , 및를 포함 하는 와일드 카드 식 이며 `*` `?` `[ ]` `-match` `-notmatch` 정규식 (Regex)을 받아들입니다.
 
 구문은 다음과 같습니다.
 
-```powershell
-<string[]> -like <wildcard-expression>
-<string[]> -notlike <wildcard-expression>
 ```
-
-일치 연산자 ( `-match` 및 `-notmatch` )가 정규식을 사용 하 여 지정 된 패턴과 일치 하거나 일치 하지 않는 요소를 찾습니다.
-
-`$Matches`연산자에 대 한 입력 (왼쪽 인수)이 단일 스칼라 개체인 경우 match 연산자는 자동 변수를 채웁니다. 입력이 스칼라 인 경우 `-match` 및 연산자는 `-notmatch` 부울 값을 반환 하 고 `$Matches` 자동 변수 값을 인수의 일치 하는 구성 요소로 설정 합니다.
-
-구문은 다음과 같습니다.
-
-```powershell
-<string[]> -match <regular-expression>
+<string[]> -like    <wildcard-expression>
+<string[]> -notlike <wildcard-expression>
+<string[]> -match    <regular-expression>
 <string[]> -notmatch <regular-expression>
 ```
 
-### <a name="-like"></a>-like
+이러한 연산자의 입력이 스칼라 값 이면 **부울** 값을 반환 합니다. 입력이 값 컬렉션인 경우 연산자는 일치 하는 멤버를 반환 합니다. 컬렉션에 일치 하는 항목이 없는 경우이 연산자는 빈 배열을 반환 합니다.
 
-설명: 와일드 카드 문자 ()를 사용 하 여 찾습니다 \* .
+### <a name="-like-and--notlike"></a>유사 및-notlike
 
-예제:
-
-```powershell
-PS> "PowerShell" -like "*shell"
-True
-
-PS> "PowerShell", "Server" -like "*shell"
-PowerShell
-```
-
-### <a name="-notlike"></a>-notlike
-
-설명: 와일드 카드 문자 ()를 사용 하 여 일치 하지 않습니다 \* .
+`-like` 및 `-notlike` 는 및와 유사 하 게 동작 `-eq` `-ne` 하지만 오른쪽은 [와일드 카드](about_Wildcards.md)를 포함 하는 문자열일 수 있습니다.
 
 예제:
 
 ```powershell
-PS> "PowerShell" -notlike "*shell"
-False
+"PowerShell" -like    "*shell"           # Output: True
+"PowerShell" -notlike "*shell"           # Output: False
+"PowerShell" -like    "Power?hell"       # Output: True
+"PowerShell" -notlike "Power?hell"       # Output: False
+"PowerShell" -like    "Power[p-w]hell"   # Output: True
+"PowerShell" -notlike "Power[p-w]hell"   # Output: False
 
-PS> "PowerShell", "Server" -notlike "*shell"
-Server
+"PowerShell", "Server" -like "*shell"    # Output: PowerShell
+"PowerShell", "Server" -notlike "*shell" # Output: Server
 ```
 
-### <a name="-match"></a>-match
+### <a name="-match-and--notmatch"></a>-match 및-notmatch
 
-설명: 정규식을 사용 하 여 문자열을 찾습니다. 입력이 스칼라 인 경우 자동 변수를 채웁니다 `$Matches` .
+`-match``-notmatch`정규식을 사용 하 여 왼쪽 값에서 패턴을 검색 합니다. 정규식은 전자 메일 주소, UNC 경로 또는 형식이 지정 된 전화 번호와 같은 복잡 한 패턴을 일치 시킬 수 있습니다. 오른쪽 문자열은 [정규식](about_Regular_Expressions.md) 규칙을 따라야 합니다.
 
-입력이 컬렉션인 경우 `-match` 및 `-notmatch` 연산자는 해당 컬렉션의 일치 하는 멤버를 반환 하지만이 연산자는 변수를 채우지 않습니다 `$Matches` .
-
-예를 들어 다음 명령은 연산자에 문자열 컬렉션을 전송 합니다 `-match` . `-match`연산자는 컬렉션에서 일치 하는 항목을 반환 합니다. 자동 변수를 채우지 않습니다 `$Matches` .
+스칼라 예제:
 
 ```powershell
-PS> "Sunday", "Monday", "Tuesday" -match "sun"
-Sunday
+# Partial match test, showing how differently -match and -like behave
+"PowerShell" -match 'shell'        # Output: True
+"PowerShell" -like  'shell'        # Output: False
 
-PS> $Matches
-PS>
+# Regex syntax test
+"PowerShell" -match    '^Power\w+' # Output: True
+'bag'        -notmatch 'b[iou]g'   # Output: True
 ```
 
-반면, 다음 명령은 단일 문자열을 운영자에 게 전송 합니다 `-match` . `-match`연산자는 부울 값을 반환 하 고 `$Matches` 자동 변수를 채웁니다. `$Matches`자동 변수는 **해시 테이블** 입니다. 그룹화 또는 캡처가 사용 되지 않으면 하나의 키만 채워집니다.
-`0`키는 일치 된 모든 텍스트를 나타냅니다. 정규식을 사용한 그룹화 및 캡처에 대 한 자세한 내용은 [about_Regular_Expressions](about_Regular_Expressions.md)를 참조 하세요.
+입력이 컬렉션인 경우 연산자는 해당 컬렉션의 일치 하는 멤버를 반환 합니다.
+
+컬렉션 예:
 
 ```powershell
-PS> "Sunday" -match "sun"
+"PowerShell", "Super PowerShell", "Power's hell" -match '^Power\w+'
+# Output: PowerShell
+
+"Rhell", "Chell", "Mel", "Smell", "Shell" -match "hell"
+# Output: Rhell, Chell, Shell
+
+"Bag", "Beg", "Big", "Bog", "Bug"  -match 'b[iou]g'
+#Output: Big, Bog, Bug
+
+"Bag", "Beg", "Big", "Bog", "Bug"  -notmatch 'b[iou]g'
+#Output: Bag, Beg
+```
+
+`-match` 및는 `-notmatch` regex 캡처 그룹을 지원 합니다. 실행 될 때마다 `$Matches` 자동 변수를 덮어씁니다. `<input>`이 컬렉션이 면 변수가입니다 `$Matches` `$null` . `$Matches` 는 항상 전체 일치 항목을 저장 하는 ' 0 ' 이라는 키가 있는 **해시 테이블** 입니다. 정규식에 캡처 그룹이 포함 된 경우에는 `$Matches` 각 그룹에 대 한 추가 키가 포함 됩니다.
+
+예제:
+
+```powershell
+$string = 'The last logged on user was CONTOSO\jsmith'
+$string -match 'was (?<domain>.+)\\(?<user>.+)'
+
+$Matches
+
+Write-Output "`nDomain name:"
+$Matches.domain
+
+Write-Output "`nUser name:"
+$Matches.user
+```
+
+```output
 True
-
-PS> $Matches
 
 Name                           Value
 ----                           -----
-0                              Sun
+domain                         CONTOSO
+user                           jsmith
+0                              was CONTOSO\jsmith
+
+Domain name:
+CONTOSO
+
+User name:
+jsmith
 ```
 
-해시 테이블에는 일치 하는 `$Matches` 패턴이 처음 나타나는 경우만 포함 됩니다.
-
-```powershell
-PS> "Banana" -match "na"
-True
-
-PS> $Matches
-
-Name                           Value
-----                           -----
-0                              na
-```
-
-> [!IMPORTANT]
-> `0`키가 **정수** 입니다. 모든 **Hashtable** 메서드를 사용 하 여 저장 된 값에 액세스할 수 있습니다.
->
-> ```powershell
-> PS> "Good Dog" -match "Dog"
-> True
->
-> PS> $Matches[0]
-> Dog
->
-> PS> $Matches.Item(0)
-> Dog
->
-> PS> $Matches.0
-> Dog
-> ```
-
-`-notmatch`연산자는 입력이 `$Matches` 스칼라 인 경우 자동 변수를 채우고 결과가 False 이면 일치 하는 항목을 검색 합니다.
-
-```powershell
-PS> "Sunday" -notmatch "rain"
-True
-
-PS> $matches
-PS>
-
-PS> "Sunday" -notmatch "day"
-False
-
-PS> $matches
-
-Name                           Value
-----                           -----
-0                              day
-```
-
-### <a name="-notmatch"></a>-notmatch
-
-설명:가 문자열과 일치 하지 않습니다. 정규식을 사용 합니다. 입력이 스칼라 인 경우 자동 변수를 채웁니다 `$Matches` .
-
-예제:
-
-```powershell
-PS> "Sunday" -notmatch "sun"
-False
-
-PS> $matches
-Name Value
----- -----
-0    sun
-
-PS> "Sunday", "Monday" -notmatch "sun"
-Monday
-```
-
-## <a name="containment-operators"></a>포함 연산자
-
-포함 연산자 ( `-contains` 및 `-notcontains` )는 같음 연산자와 유사 합니다. 그러나 포함 연산자는 입력이 컬렉션인 경우에도 항상 부울 값을 반환 합니다.
-
-또한 같음 연산자와 달리 포함 연산자는 첫 번째 일치 항목을 검색 하는 즉시 값을 반환 합니다. 같음 연산자는 모든 입력을 평가한 다음 컬렉션에서 일치 하는 항목을 모두 반환 합니다.
-
-### <a name="-contains"></a>-contains
-
-설명: 포함 연산자. 참조 값의 컬렉션에 단일 테스트 값이 포함 되어 있는지 여부를 나타냅니다. 항상 부울 값을 반환 합니다. 테스트 값이 하나 이상의 참조 값과 정확 하 게 일치 하는 경우에만 TRUE를 반환 합니다.
-
-테스트 값이 컬렉션인 경우 Contains 연산자는 참조 같음을 사용 합니다. 참조 값 중 하나가 테스트 값 개체의 동일한 인스턴스인 경우에만 TRUE를 반환 합니다.
-
-매우 큰 컬렉션에서 `-contains` 연산자는 같음 연산자 보다 더 빠른 결과를 반환 합니다.
-
-구문
-
-`<Reference-values> -contains <Test-value>`
-
-예제:
-
-```powershell
-PS> "abc", "def" -contains "def"
-True
-
-PS> "Windows", "PowerShell" -contains "Shell"
-False  #Not an exact match
-
-# Does the list of computers in $DomainServers include $ThisComputer?
-PS> $DomainServers -contains $thisComputer
-True
-
-PS> "abc", "def", "ghi" -contains "abc", "def"
-False
-
-PS> $a = "abc", "def"
-PS> "abc", "def", "ghi" -contains $a
-False
-PS> $a, "ghi" -contains $a
-True
-```
-
-### <a name="-notcontains"></a>-notcontains
-
-설명: 포함 연산자. 참조 값의 컬렉션에 단일 테스트 값이 포함 되어 있는지 여부를 나타냅니다. 항상 부울 값을 반환 합니다. 테스트 값이 하나 이상의 참조 값과 정확히 일치 하지 않는 경우 TRUE를 반환 합니다.
-
-테스트 값이 컬렉션인 경우 NotContains 연산자는 참조 같음을 사용 합니다.
-
-구문
-
-`<Reference-values> -notcontains <Test-value>`
-
-예제:
-
-```powershell
-PS> "Windows", "PowerShell" -notcontains "Shell"
-True  #Not an exact match
-
-# Get cmdlet parameters, but exclude common parameters
-function get-parms ($cmdlet)
-{
-    $Common = "Verbose", "Debug", "WarningAction", "WarningVariable",
-      "ErrorAction", "ErrorVariable", "OutVariable", "OutBuffer"
-
-    $allparms = (Get-Command $Cmdlet).parametersets |
-      foreach {$_.Parameters} |
-        foreach {$_.Name} | Sort-Object | Get-Unique
-
-    $allparms | where {$Common -notcontains $_ }
-}
-
-# Find unapproved verbs in the functions in my module
-PS> $ApprovedVerbs = Get-Verb | foreach {$_.verb}
-PS> $myVerbs = Get-Command -Module MyModule | foreach {$_.verb}
-PS> $myVerbs | where {$ApprovedVerbs -notcontains $_}
-ForEach
-Sort
-Tee
-Where
-```
-
-### <a name="-in"></a>-in
-
-설명: In 연산자 테스트 값이 참조 값의 컬렉션에 표시 되는지 여부를 나타냅니다. 항상 부울 값으로 반환 합니다. 테스트 값이 하나 이상의 참조 값과 정확 하 게 일치 하는 경우에만 TRUE를 반환 합니다.
-
-테스트 값이 컬렉션인 경우 In 연산자는 참조 같음을 사용 합니다.
-참조 값 중 하나가 테스트 값 개체의 동일한 인스턴스인 경우에만 TRUE를 반환 합니다.
-
-`-in`연산자는 PowerShell 3.0에서 도입 되었습니다.
-
-구문
-
-`<Test-value> -in <Reference-values>`
-
-예제:
-
-```powershell
-PS> "def" -in "abc", "def"
-True
-
-PS> "Shell" -in "Windows", "PowerShell"
-False  #Not an exact match
-
-PS> "Windows" -in "Windows", "PowerShell"
-True  #An exact match
-
-PS> "Windows", "PowerShell" -in "Windows", "PowerShell", "ServerManager"
-False  #Using reference equality
-
-PS> $a = "Windows", "PowerShell"
-PS> $a -in $a, "ServerManager"
-True  #Using reference equality
-
-# Does the list of computers in $DomainServers include $ThisComputer?
-PS> $thisComputer -in  $domainServers
-True
-```
-
-### <a name="-notin"></a>-notin
-
-Description: 테스트 값이 참조 값의 컬렉션에 나타나는지 여부를 알려 줍니다. 항상 부울 값을 반환 합니다. 테스트 값이 하나 이상의 참조 값과 정확히 일치 하지 않는 경우 TRUE를 반환 합니다.
-
-테스트 값이 컬렉션인 경우 In 연산자는 참조 같음을 사용 합니다.
-참조 값 중 하나가 테스트 값 개체의 동일한 인스턴스인 경우에만 TRUE를 반환 합니다.
-
-`-notin`연산자는 PowerShell 3.0에서 도입 되었습니다.
-
-구문
-
-`<Test-value> -notin <Reference-values>`
-
-예제:
-
-```powershell
-PS> "def" -notin "abc", "def"
-False
-
-PS> "ghi" -notin "abc", "def"
-True
-
-PS> "Shell" -notin "Windows", "PowerShell"
-True  #Not an exact match
-
-PS> "Windows" -notin "Windows", "PowerShell"
-False  #An exact match
-
-# Find unapproved verbs in the functions in my module
-PS> $ApprovedVerbs = Get-Verb | foreach {$_.verb}
-PS> $MyVerbs = Get-Command -Module MyModule | foreach {$_.verb}
-
-PS> $MyVerbs | where {$_ -notin $ApprovedVerbs}
-ForEach
-Sort
-Tee
-Where
-```
+자세한 내용은 [about_Regular_Expressions](about_Regular_Expressions.md)를 참조 하세요.
 
 ## <a name="replacement-operator"></a>대체 연산자
 
-`-replace`연산자의 구문은 다음과 같습니다.
+### <a name="replacement-with-regular-expressions"></a>정규식으로 대체
 
-`<input> -replace <original>, <substitute>`
+Like와 같이 `-match` 연산자는 정규식을 사용 하 여 `-replace` 지정 된 패턴을 찾습니다. 그러나와 `-match` 는 달리 일치 항목을 지정 된 다른 값으로 바꿉니다.
 
-`<original>`자리 표시자는 바꿀 문자와 일치 하는 정규식입니다. `<substitute>`자리 표시자는이를 대체 하는 리터럴 문자열입니다.
+구문
+
+```
+<input> -replace <regular-expression>, <substitute>
+```
 
 연산자는 정규식을 사용 하 여 값의 일부 또는 전체를 지정 된 값으로 바꿉니다. 파일 이름 바꾸기와 같은 많은 관리 작업에 대해 연산자를 사용할 수 있습니다. 예를 들어 다음 명령은 모든 파일의 파일 이름 확장명 `.txt` 을로 변경 합니다 `.log` .
 
@@ -510,67 +393,69 @@ Where
 Get-ChildItem *.txt | Rename-Item -NewName { $_.name -replace '\.txt$','.log' }
 ```
 
-### <a name="case-sensitive-matches"></a>대/소문자 구분 일치
-
 기본적으로 연산자는 `-replace` 대/소문자를 구분 하지 않습니다. 대/소문자를 구분 하려면를 사용 `-creplace` 합니다. 명시적으로 대/소문자를 구분 하지 않도록 하려면를 사용 `-ireplace` 합니다.
 
-다음 예제를 살펴보세요.
+예제:
 
 ```powershell
-PS> "book" -replace "B", "C"
-Cook
+"book" -ireplace "B", "C" # Case insensitive
+"book" -creplace "B", "C" # Case-sensitive; hence, nothing to replace
 ```
 
-```powershell
-PS> "book" -ireplace "B", "C"
+```Output
 Cook
-```
-
-```powershell
-PS> "book" -creplace "B", "C"
 book
 ```
 
-### <a name="substitutions-in-regular-expressions"></a>정규식의 대체
+### <a name="regular-expressions-substitutions"></a>정규식 대체
 
 또한 정규식을 사용 하 여 캡처링 그룹 및 대체를 사용 하 여 텍스트를 동적으로 바꿀 수 있습니다. `<substitute>`그룹 식별자 앞에 달러 기호 () 문자를 사용 하 여 문자열에서 캡처 그룹을 참조할 수 있습니다 `$` .
 
-캡처 그룹은 **번호** 또는 **이름** 으로 참조할 수 있습니다.
+다음 예에서는 `-replace` 연산자가 형식으로 사용자 이름을 받아 `DomainName\Username` 형식으로 변환 합니다 `Username@DomainName` .
 
-- **번호** 캡처링 그룹은 왼쪽에서 오른쪽으로 번호가 매겨집니다.
+```powershell
+$SearchExp = '^(?<Username>[\w-.]+)\\(?<DomainName>[\w-.]+)$'
+$ReplaceExp = '${Username}@${DomainName}'
 
-  ```powershell
-  PS> "John D. Smith" -replace "(\w+) (\w+)\. (\w+)", '$1.$2.$3@contoso.com'
-  John.D.Smith@contoso.com
-  ```
+'Contoso.local\John.Doe' -replace $SearchExp,$ReplaceExp
+```
 
-- 이름 **으로** 캡처링 그룹은 이름으로 참조할 수도 있습니다.
-
-  ```powershell
-  PS> "CONTOSO\Administrator" -replace '\w+\\(?<user>\w+)', 'FABRIKAM\${user}'
-  FABRIKAM\Administrator
-  ```
+```output
+John.Doe@Contoso.local
+```
 
 > [!WARNING]
-> 문자는 `$` 문자열 확장에 사용 되므로 리터럴 문자열을 사용 하거나 문자를 이스케이프 해야 합니다 `$` .
+> `$`이 문자에는 PowerShell 및 정규식에서 syntatic 역할이 있습니다.
 >
-> ```powershell
-> PS> 'Hello World' -replace '(\w+) \w+', "`$1 Universe"
-> Hello Universe
-> ```
->
-> 또한 `$` 문자가 대체에 사용 되므로 문자열의 모든 인스턴스를 이스케이프 해야 합니다.
->
-> ```powershell
-> PS> '5.72' -replace '(.+)', '$$$1'
-> $5.72
-> ```
+> - PowerShell에서 큰따옴표 사이에는 변수를 지정 하 고 하위 식 연산자로 작동 합니다.
+> - Regex 검색 문자열에서 줄의 끝을 나타냅니다.
+> - Regex 대체 문자열에서 캡처된 그룹을 나타냅니다. 정규식을 작은따옴표 사이에 배치 하거나 앞에 억음 () 문자를 삽입 해야 `` ` `` 합니다.
 
-자세히 알아보려면 정규식의 [about_Regular_Expressions](about_Regular_Expressions.md) 및 [대체](/dotnet/standard/base-types/substitutions-in-regular-expressions) 를 참조 하세요.
+예를 들면 다음과 같습니다.
+
+```powershell
+$1 = 'Goodbye'
+
+'Hello World' -replace '(\w+) \w+', "$1 Universe"
+# Output: Goodbye Universe
+
+'Hello World' -replace '(\w+) \w+', '$1 Universe'
+# Output: Hello Universe
+```
+
+`$$` Regex에서 리터럴을 나타냅니다 `$` . 대체 `$$` 문자열에서 결과 대체에 리터럴을 포함 하는 This `$` 입니다. 예를 들면 다음과 같습니다.
+
+```powershell
+'5.72' -replace '(.+)', '$ $1' # Output: $ 5.72
+'5.72' -replace '(.+)', '$$$1' # Output: $5.72
+'5.72' -replace '(.+)', '$$1'  # Output: $1
+```
+
+자세히 알아보려면 [정규식의][4] [about_Regular_Expressions](about_Regular_Expressions.md) 및 대체를 참조 하세요.
 
 ### <a name="substituting-in-a-collection"></a>컬렉션에서 대체
 
-`<input>` `-replace` 연산자가 컬렉션인 경우 PowerShell은 컬렉션의 모든 값에 대체를 적용 합니다. 예를 들어:
+`<input>` `-replace` 연산자가 컬렉션인 경우 PowerShell은 컬렉션의 모든 값에 대체를 적용 합니다. 예를 들면 다음과 같습니다.
 
 ```powershell
 "B1","B2","B3","B4","B5" -replace "B", 'a'
@@ -581,55 +466,121 @@ a4
 a5
 ```
 
-### <a name="scriptblock-substitutions"></a>ScriptBlock 대체
+### <a name="replacement-with-a-script-block"></a>스크립트 블록으로 바꾸기
 
-PowerShell 6부터 _대체_ 텍스트에 대 한 **ScriptBlock** 인수를 사용할 수 있습니다. **ScriptBlock** 은 _입력_ 문자열에서 찾은 각 일치 항목에 대해 실행 됩니다.
+PowerShell 6 이상에서 `-replace` 연산자는 대체를 수행 하는 스크립트 블록만 허용 합니다. 스크립트 블록은 모든 일치 항목에 대해 한 번씩 실행 됩니다.
 
-**ScriptBlock** 내에서 `$_` 자동 변수를 사용 하 여 현재 **system.text.regularexpressions.regex>** 개체를 참조 합니다. **Match** 개체를 사용 하면 대체 중인 현재 입력 텍스트 및 기타 유용한 정보에 액세스할 수 있습니다.
-
-이 예제에서는 세 개의 10 진수 시퀀스를 해당 하는 문자로 바꿉니다. **ScriptBlock** 은 교체 해야 하는 세 개의 10 진수 집합에 대해 실행 됩니다.
+구문
 
 ```powershell
-PS> "072101108108111" -replace "\d{3}", {[char][int]$_.Value}
+<String> -replace <regular-expression>, {<Script-block>}
+```
+
+스크립트 블록 내에서 `$_` 자동 변수를 사용 하 여 대체 되는 입력 텍스트 및 기타 유용한 정보에 액세스 합니다. 이 변수의 클래스 형식은 [system.text.regularexpressions.regex>][2]입니다.
+
+다음 예에서는 세 자리의 각 시퀀스를 해당 하는 문자로 바꿉니다. 스크립트 블록은 교체 해야 하는 3 자리 숫자의 각 집합에 대해 실행 됩니다.
+
+```powershell
+"072101108108111" -replace "\d{3}", {return [char][int]$_.Value}
+```
+
+```output
 Hello
+```
+
+## <a name="containment-operators"></a>포함 연산자
+
+포함 연산자 ( `-contains` , `-notcontains` , `-in` 및)는 `-notin` 입력이 컬렉션인 경우에도 항상 **부울** 값을 반환 한다는 점을 제외 하 고 같음 연산자와 유사 합니다. 이러한 연산자는 첫 번째 일치 항목을 검색 하는 즉시 비교를 중지 하는 반면 같음 연산자는 모든 입력 멤버를 평가 합니다. 매우 큰 컬렉션에서 이러한 연산자는 같음 연산자 보다 더 빠르게 반환 됩니다.
+
+구문
+
+```
+<Collection> -contains <Test-object>
+<Collection> -notcontains <Test-object>
+<Test-object> -in <Collection>
+<Test-object> -notin <Collection>
+```
+
+### <a name="-contains-and--notcontains"></a>-contains 및-notcontains
+
+이러한 연산자는 집합에 특정 요소가 포함 되는지 여부를 알려 줍니다. `-contains` 오른쪽 (테스트 개체)이 집합의 요소 중 하 나와 일치 하면 True를 반환 합니다. `-notcontains` 대신 False를 반환 합니다. 테스트 개체가 컬렉션인 경우 이러한 연산자는 참조 같음을 사용 합니다. 즉, 집합의 요소 중 하나가 테스트 개체의 동일한 인스턴스인지 여부를 확인 합니다.
+
+예제:
+
+```powershell
+"abc", "def" -contains "def"                  # Output: True
+"abc", "def" -notcontains "def"               # Output: False
+"Windows", "PowerShell" -contains "Shell"     # Output: False
+"Windows", "PowerShell" -notcontains "Shell"  # Output: True
+"abc", "def", "ghi" -contains "abc", "def"    # Output: False
+"abc", "def", "ghi" -notcontains "abc", "def" # Output: True
+```
+
+더 복잡 한 예제:
+
+```powershell
+$DomainServers = "ContosoDC1","ContosoDC2","ContosoFileServer","ContosoDNS",
+                 "ContosoDHCP","ContosoWSUS"
+$thisComputer  = "ContosoDC2"
+
+$DomainServers -contains $thisComputer
+# Output: True
+
+$a = "abc", "def"
+"abc", "def", "ghi" -contains $a # Output: False
+$a, "ghi" -contains $a           # Output: True
+```
+
+### <a name="-in-and--notin"></a>-in 및-notin
+
+`-in`및 연산자는 `notin` PowerShell 3에서 및 연산자의와 반대로 된 구문으로 도입 되었습니다 `contains` `-notcontain` . `-in`왼쪽  이 `<test-object>` 집합의 요소 중 하 나와 일치 하면 True를 반환 합니다. `-notin` 대신 **False** 를 반환 합니다. 테스트 개체가 집합인 경우 이러한 연산자는 참조 일치를 사용 하 여 집합의 요소 중 하나가 테스트 개체의 동일한 인스턴스인지 여부를 확인 합니다.
+
+다음 예에서는 및에 대 한 예제와 동일한 작업 `-contain` `-notcontain` 을 수행 하지만 `-in` 및 대신 및를 사용 하 여 작성 됩니다 `-notin` .
+
+```powershell
+"def" -in "abc", "def"                  # Output: True
+"def" -notin "abc", "def"               # Output: False
+"Shell" -in "Windows", "PowerShell"     # Output: False
+"Shell" -notin "Windows", "PowerShell"  # Output: True
+"abc", "def" -in "abc", "def", "ghi"    # Output: False
+"abc", "def" -notin "abc", "def", "ghi" # Output: True
+```
+
+더 복잡 한 예제:
+
+```powershell
+$DomainServers = "ContosoDC1","ContosoDC2","ContosoFileServer","ContosoDNS",
+                 "ContosoDHCP","ContosoWSUS"
+$thisComputer  = "ContosoDC2"
+
+$thisComputer -in $DomainServers
+# Output: True
+
+$a = "abc", "def"
+$a -in "abc", "def", "ghi" # Output: False
+$a -in $a, "ghi"           # Output: True
 ```
 
 ## <a name="type-comparison"></a>형식 비교
 
 형식 비교 연산자 ( `-is` 및 `-isnot` )는 개체가 특정 형식 인지 여부를 확인 하는 데 사용 됩니다.
 
-### <a name="-is"></a>-is
-
 구문
 
-`<object> -is <type reference>`
-
-예제:
-
 ```powershell
-PS> $a = 1
-PS> $b = "1"
-PS> $a -is [int]
-True
-PS> $a -is $b.GetType()
-False
+<object> -is <type-reference>
+<object> -isnot <type-reference>
 ```
 
-### <a name="-isnot"></a>-isnot
-
-구문
-
-`<object> -isnot <type reference>`
-
 예제:
 
 ```powershell
-PS> $a = 1
-PS> $b = "1"
-PS> $a -isnot $b.GetType()
-True
-PS> $b -isnot [int]
-True
+$a = 1
+$b = "1"
+$a -is [int]           # Output: True
+$a -is $b.GetType()    # Output: False
+$b -isnot [int]        # Output: True
+$a -isnot $b.GetType() # Output: True
 ```
 
 ## <a name="see-also"></a>참고 항목
@@ -640,3 +591,9 @@ True
 - [Compare-Object](xref:Microsoft.PowerShell.Utility.Compare-Object)
 - [Foreach-개체](xref:Microsoft.PowerShell.Core.ForEach-Object)
 - [Where-Object](xref:Microsoft.PowerShell.Core.Where-Object)
+
+[1]: /dotnet/api/system.icomparable
+[2]: /dotnet/api/system.iequatable-1
+[3]: /dotnet/api/system.text.regularexpressions.match
+[4]: about_Redirection.md#potential-confusion-with-comparison-operators
+[5]: /dotnet/standard/base-types/substitutions-in-regular-expressions

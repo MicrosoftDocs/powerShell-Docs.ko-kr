@@ -1,16 +1,16 @@
 ---
 description: 세션에 사용 되는 네임 스페이스를 지정할 수 있습니다.
 Locale: en-US
-ms.date: 11/18/2020
+ms.date: 01/19/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_using?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Using
-ms.openlocfilehash: b48cd85e200f44cdf9fdf278de78e07a918386c8
-ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
+ms.openlocfilehash: 2a02ff32b110d369c080dde695a8fc2369b1a5e2
+ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94891349"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98619893"
 ---
 # <a name="about-using"></a>사용 정보
 
@@ -21,7 +21,9 @@ ms.locfileid: "94891349"
 
 문을 사용 하 여 `using` 세션에서 사용 되는 네임 스페이스를 지정할 수 있습니다. 네임 스페이스를 추가 하면 .NET 클래스 및 멤버를 간단 하 게 사용할 수 있으며 스크립트 모듈 및 어셈블리에서 클래스를 가져올 수 있습니다.
 
-`using`문은 스크립트의 다른 문 앞에와 야 합니다.
+`using`문은 스크립트나 모듈의 다른 문 앞에와 야 합니다. 매개 변수를 포함 하 여 앞에 주석 처리가 제거 문을 사용할 수 없습니다.
+
+`using`문에는 변수가 포함 되지 않아야 합니다.
 
 `using`문은 `using:` 변수에 대 한 범위 한정자와 혼동 해서는 안 됩니다. 자세한 내용은 [about_Remote_Variables](about_Remote_Variables.md)를 참조 하세요.
 
@@ -58,6 +60,12 @@ using module <module-name>
   - `RequiredVersion` -필요한 모듈의 정확한 버전을 지정 합니다.
   - `MaximumVersion` -모듈의 허용 되는 최대 버전을 지정 합니다.
 
+`using module`문은 `ModuleToProcess` 스크립트 모듈 또는 이진 모듈의 루트 모듈 ()에서 클래스를 가져옵니다. 모듈에 대 한 점 소스인 스크립트에 정의 된 클래스 또는 중첩 된 모듈에 정의 된 클래스를 일관 되 게 가져오지 않습니다. 모듈 외부의 사용자가 사용할 수 있도록 하려는 클래스는 루트 모듈에서 정의 해야 합니다.
+
+스크립트 모듈을 개발 하는 동안 코드를 변경한 다음 `Import-Module` **Force** 매개 변수를 사용 하 여 새 버전의 모듈을 로드 하는 것이 일반적입니다. 이는 루트 모듈의 함수를 변경 하는 경우에만 작동 합니다. `Import-Module` 중첩 된 모듈을 다시 로드 하지 않습니다. 또한 업데이트 된 클래스를 로드 하는 방법은 없습니다.
+
+최신 버전을 실행 하 고 있는지 확인 하려면 cmdlet을 사용 하 여 모듈을 언로드해야 합니다 `Remove-Module` . `Remove-Module` 모듈에 정의 된 루트 모듈, 모든 중첩 된 모듈 및 클래스를 제거 합니다. 그런 다음 및 문을 사용 하 여 모듈과 클래스를 다시 로드할 수 있습니다 `Import-Module` `using module` .
+
 ## <a name="assembly-syntax"></a>어셈블리 구문
 
 .NET 어셈블리에서 형식을 미리 로드 하려면 다음을 수행 합니다.
@@ -77,7 +85,7 @@ Windows PowerShell 5.1에서는 경로 이름 또는 이름을 기준으로 어�
 
 ### <a name="example-1---add-namespaces-for-typename-resolution"></a>예제 1-typename 확인에 대 한 네임 스페이스 추가
 
-다음 스크립트는 "Hello World" 문자열에 대 한 암호화 해시를 가져옵니다.
+다음 스크립트는 "헬로 월드" 문자열에 대 한 암호화 해시를 가져옵니다.
 
 및에서 및의에 대 한 참조를 간소화 하는 방법을 확인 `using namespace System.Text` `using namespace System.IO` `[UnicodeEncoding]` `System.Text` `[Stream]` `[MemoryStream]` `System.IO` 합니다.
 

@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 09/29/2020
+ms.date: 01/20/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/out-string?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Out-String
-ms.openlocfilehash: 6bcda4d1796f2a2ccd61469523443f90ddde5e29
-ms.sourcegitcommit: c8d1ffeab215e74e87ea1b0af8cd606c1a6a80ab
+ms.openlocfilehash: c0a9557c0139af5abbe24fade07c0d018c6bffc0
+ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "93220121"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620033"
 ---
 # Out-String
 
 ## 개요
 입력 개체를 문자열로 출력 합니다.
 
-## SYNTAX
+## 구문
 
 ### 모두
 
@@ -27,7 +27,7 @@ ms.locfileid: "93220121"
 Out-String [-Stream] [-Width <Int32>] [-InputObject <PSObject>] [<CommonParameters>]
 ```
 
-## 설명
+## Description
 
 `Out-String`Cmdlet은 입력 개체를 문자열로 변환 합니다. 기본적으로는 `Out-String` 문자열을 누적 하 고이를 단일 문자열로 반환 하지만 **Stream** 매개 변수를 사용 하 여 한 `Out-String` 번에 한 줄씩 반환 하거나 문자열을 만들어 배열을 만들 수 있습니다. 이 cmdlet을 사용하면 개체를 편하게 조작할 수 없을 경우 기존 셸과 동일한 방식으로 문자열 출력을 검색하고 조작할 수 있습니다.
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -스트림
 
-Cmdlet이 입력 개체의 각 줄에 대해 별도의 문자열을 보내는 것을 나타냅니다. 기본적으로 각 개체의 문자열은 누적되어 하나의 문자열로 전송됩니다.
+기본적으로는 `Out-String` 빈 머리글이 나 후행 줄바꿈를 포함 하 여 콘솔에서 볼 수 있는 것 처럼 형식이 지정 된 단일 문자열을 출력 합니다. **Stream** 매개 변수는 `Out-String` 를 사용 하 여 각 줄을 하나씩 출력 합니다. 이에 대 한 유일한 예외는 여러 줄 문자열입니다. 이 경우는 `Out-String` 계속 해 서 문자열을 한 줄로 된 단일 문자열로 출력 합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

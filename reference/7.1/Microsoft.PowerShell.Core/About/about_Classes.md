@@ -1,17 +1,16 @@
 ---
 description: 클래스를 사용 하 여 사용자 고유의 사용자 지정 형식을 만드는 방법을 설명 합니다.
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 09/16/2020
+ms.date: 01/19/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_classes?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Classes
-ms.openlocfilehash: 99b72762469032cc24f21d957600b67d0a0db292
-ms.sourcegitcommit: 16d62a98449e3ddaf8d7c65bc1848ede1fd8a3e7
+ms.openlocfilehash: 0f4eb5c67b09cb3ce21f818582fbce3a8c629eec
+ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "93219977"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620217"
 ---
 # <a name="about-classes"></a>클래스 정보
 
@@ -768,13 +767,23 @@ class MyComparableBar : bar, System.IComparable
 
 `Import-Module` 및 `#requires` 문은 모듈에서 정의한 대로 모듈 함수, 별칭 및 변수만 가져옵니다. 클래스는 가져올 수 없습니다. `using module`문은 모듈에 정의 된 클래스를 가져옵니다. 모듈이 현재 세션에서 로드 되지 않으면 `using` 문이 실패 합니다. 문에 대 한 자세한 내용은 `using` [about_Using](about_Using.md)를 참조 하세요.
 
+`using module`문은 `ModuleToProcess` 스크립트 모듈 또는 이진 모듈의 루트 모듈 ()에서 클래스를 가져옵니다. 모듈에 대 한 점 소스인 스크립트에 정의 된 클래스 또는 중첩 된 모듈에 정의 된 클래스를 일관 되 게 가져오지 않습니다. 모듈 외부의 사용자가 사용할 수 있도록 하려는 클래스는 루트 모듈에서 정의 해야 합니다.
+
+## <a name="loading-newly-changed-code-during-development"></a>개발 하는 동안 새로 변경 된 코드 로드
+
+스크립트 모듈을 개발 하는 동안 코드를 변경한 다음 `Import-Module` **Force** 매개 변수를 사용 하 여 새 버전의 모듈을 로드 하는 것이 일반적입니다. 이는 루트 모듈의 함수를 변경 하는 경우에만 작동 합니다. `Import-Module` 중첩 된 모듈을 다시 로드 하지 않습니다. 또한 업데이트 된 클래스를 로드 하는 방법은 없습니다.
+
+최신 버전을 실행 하 고 있는지 확인 하려면 cmdlet을 사용 하 여 모듈을 언로드해야 합니다 `Remove-Module` . `Remove-Module` 모듈에 정의 된 루트 모듈, 모든 중첩 된 모듈 및 클래스를 제거 합니다. 그런 다음 및 문을 사용 하 여 모듈과 클래스를 다시 로드할 수 있습니다 `Import-Module` `using module` .
+
+또 다른 일반적인 개발 방법은 코드를 서로 다른 파일로 분리 하는 것입니다. 다른 모듈에 정의 된 클래스를 사용 하는 한 파일에 함수를 사용 하는 경우 문을 사용 하 여 `using module` 함수에 필요한 클래스 정의가 있는지 확인 해야 합니다.
+
 ## <a name="the-psreference-type-is-not-supported-with-class-members"></a>PSReference 형식은 클래스 멤버에서 지원 되지 않습니다.
 
-`[ref]`클래스 멤버와 함께 형식 캐스팅을 자동으로 사용 하면 오류가 발생 합니다. 매개 변수를 사용 하는 Api는 `[ref]` 클래스 멤버와 함께 사용할 수 없습니다. **Psreference** 는 COM 개체를 지원 하도록 설계 되었습니다. COM 개체에는의 값을 참조로 전달 해야 하는 경우가 있습니다.
+`[ref]`클래스 멤버와 함께 형식 캐스팅을 자동으로 사용 하면 오류가 발생 합니다. 매개 변수를 사용 하는 Api는 `[ref]` 클래스 멤버와 함께 사용할 수 없습니다. **Psreference** 클래스는 COM 개체를 지원 하도록 디자인 되었습니다. COM 개체에는의 값을 참조로 전달 해야 하는 경우가 있습니다.
 
 형식에 대 한 자세한 내용은 `[ref]` [Psreference 클래스](/dotnet/api/system.management.automation.psreference)를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [About_hidden](About_hidden.md)
 - [about_Enum](about_Enum.md)

@@ -7,12 +7,12 @@ ms.date: 08/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-date?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Date
-ms.openlocfilehash: cbf87c2a2d6ab0f08e514ba971a622ea9f1904aa
-ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
+ms.openlocfilehash: bb7f169e0c01c73bb4e834375f341bf795e37ce7
+ms.sourcegitcommit: f5986121386c81acddcf324eb0526d7d092bcc8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95514938"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98584667"
 ---
 # Get-Date
 
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 
 PowerShell 5.0부터 다음 추가 형식을 **Format** 매개 변수에 대 한 값으로 사용할 수 있습니다.
 
-- **Filedate**. 현재 날짜를 현지 시간으로 표현 하는 파일 또는 경로입니다. 형식은 `yyyyMMdd` (4 자리 연도, 2 자리 월 및 2 자리 일을 사용 하는 대/소문자 구분)입니다. 예를 들어:
+- **Filedate**. 현재 날짜를 현지 시간으로 표현 하는 파일 또는 경로입니다. 형식은 `yyyyMMdd` (4 자리 연도, 2 자리 월 및 2 자리 일을 사용 하는 대/소문자 구분)입니다. 예를 들면 다음과 같습니다.
   20190627.
 
 - **Filedateuniversal**. 현재 날짜를 UTC (universal time)로 표현 하는 파일 또는 경로에 대 한 친숙 한 표현입니다. 형식은입니다 `yyyyMMddZ` . 여기에는 4 자리 연도, 2 자리 월, 2 자리 날짜 및 문자를 UTC 표시기로 사용 하 여 대/소문자를 구분 합니다 `Z` . 예: 20190627Z
@@ -461,7 +461,7 @@ Accept wildcard characters: False
 | `%H` | 24 시간 형식의 시간                                                  | 17                       |
 | `%h` | ' B '와 동일                                                             |                          |
 | `%I` | 12 시간 형식의 시간                                                  | 05                       |
-| `%j` | 연간 일자                                                         | 1-366                    |
+| `%j` | 연간 일자 ( `0` PowerShell 6 이상에서 선행 수정이 포함 되지 않음) | 1-366                    |
 | `%k` | ' H '와 동일                                                             |                          |
 | `%l` | ' I '와 동일 (대문자 I)                                              | 05                       |
 | `%M` | 분                                                                 | 35                       |

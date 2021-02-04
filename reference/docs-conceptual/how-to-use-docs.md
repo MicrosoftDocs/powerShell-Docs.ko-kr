@@ -1,14 +1,15 @@
 ---
 ms.date: 07/29/2020
 keywords: powershell,cmdlet
+ms.topic: how-to
 title: PowerShell 설명서를 사용하는 방법
 description: 이 문서에서는 검색 필터링 및 버전 선택을 포함하여 이 사이트의 기능을 사용하는 방법을 설명합니다.
-ms.openlocfilehash: b7e036fce0abb12f6c1ab4c0092784321a41a916
-ms.sourcegitcommit: 2fc6ee49a70bda4c59135136bd5cc7782836a124
+ms.openlocfilehash: 4779e6e4b17c461d71e9d613d1184b9ce2e7ab7b
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94810303"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98216085"
 ---
 # <a name="how-to-use-the-powershell-documentation"></a>PowerShell 설명서를 사용하는 방법
 

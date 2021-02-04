@@ -1,14 +1,14 @@
 ---
-ms.date: 11/20/2020
+ms.date: 01/07/2021
 keywords: dsc,powershell,configuration,setup
 title: Linux용 DSC(필요한 상태 구성) 시작
 description: 이 항목에서는 Linux용 PowerShell DSC(필요한 상태 구성) 사용 방법에 대해 설명합니다.
-ms.openlocfilehash: df9cab07284a7d6fa199f5524a8719ea490192d0
-ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
+ms.openlocfilehash: 6f0dea956b16c0828964a10b43abbbc65879ea33
+ms.sourcegitcommit: b9826dcf402db8a2b6d3eab37edb82c6af113343
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95515003"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040925"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Linux용 DSC(필요한 상태 구성) 시작
 
@@ -109,15 +109,25 @@ $Node = "ostc-dsc-01"
 $Credential = Get-Credential -UserName "root" -Message "Enter Password:"
 
 #Ignore SSL certificate validation
-#$opt = New-CimSessionOption -UseSsl $true -SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true
+# $opt = New-CimSessionOption -UseSsl -SkipCACheck -SkipCNCheck -SkipRevocationCheck
 
 #Options for a trusted SSL certificate
-$opt = New-CimSessionOption -UseSsl $true
-$Sess=New-CimSession -Credential $credential -ComputerName $Node -Port 5986 -Authentication basic -SessionOption $opt -OperationTimeoutSec 90
+$opt = New-CimSessionOption -UseSsl
+
+$sessParams = @{
+    Credential = $credential
+    ComputerName = $Node
+    Port = 5986
+    Authentication = 'basic'
+    SessionOption = $opt
+    OperationTimeoutSec = 90
+}
+
+$Sess = New-CimSession @sessParams
 ```
 
 > [!NOTE]
-> "밀어넣기" 모드의 경우, 사용자 자격 증명은 Linux 컴퓨터 상의 루트 사용자여야 합니다. Linux용 DSC에는 SSL/TLS 연결만 지원되며, `New-CimSession`은 $true로 설정된 –UseSSL 매개 변수와 함께 사용해야 합니다. OMI(DSC용)에서 사용하는 SSL 인증서는 속성이 pemfile 및 keyfile인 `/etc/opt/omi/conf/omiserver.conf` 파일에 지정되어 있습니다. 이 인증서를 [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) cmdlet을 실행 중인 Windows 컴퓨터에서 신뢰하지 않을 때에는 CIMSession 옵션 `-SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true`을 사용하여 인증서 유효성 검사를 무시하도록 선택할 수 있습니다.
+> "밀어넣기" 모드의 경우, 사용자 자격 증명은 Linux 컴퓨터 상의 루트 사용자여야 합니다. Linux용 DSC에는 SSL/TLS 연결만 지원되며, `New-CimSession`은 $true로 설정된 –UseSSL 매개 변수와 함께 사용해야 합니다. OMI(DSC용)에서 사용하는 SSL 인증서는 속성이 pemfile 및 keyfile인 `/etc/opt/omi/conf/omiserver.conf` 파일에 지정되어 있습니다. 이 인증서를 [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) cmdlet을 실행 중인 Windows 컴퓨터에서 신뢰하지 않을 때에는 CIMSession 옵션 `-SkipCACheck -SkipCNCheck -SkipRevocationCheck`을 사용하여 인증서 유효성 검사를 무시하도록 선택할 수 있습니다.
 
 Linux 노드에 DSC 구성을 밀어 넣으려면 다음 명령을 실행합니다.
 
@@ -147,7 +157,7 @@ Linux용 DSC는 로컬 Linux 컴퓨터의 구성으로 작업하는 스크립트
 
   사용자 지정 DSC 리소스 모듈을 설치합니다. 모듈 공유 개체 라이브러리 및 스키마 MOF 파일을 포함하는 .zip 파일의 경로가 필요합니다.
 
- `# sudo ./InstallModule.py /tmp/cnx_Resource.zip`
+  `# sudo ./InstallModule.py /tmp/cnx_Resource.zip`
 
 - RemoveModule.py
 
