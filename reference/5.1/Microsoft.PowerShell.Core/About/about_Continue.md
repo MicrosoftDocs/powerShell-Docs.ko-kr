@@ -5,29 +5,29 @@ ms.date: 06/04/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_continue?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Continue
-ms.openlocfilehash: 51dfd85044d240f1d1429580d6eeb98c662d62c4
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: fc0b84829a96fc6ba2cafa0c24a7585cc9944fe8
+ms.sourcegitcommit: 0c31814bed14ff715dc7d4aace07cbdc6df2438e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93223578"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97614053"
 ---
-# <a name="about-continue"></a><span data-ttu-id="68a39-104">계속 정보</span><span class="sxs-lookup"><span data-stu-id="68a39-104">About Continue</span></span>
+# <a name="about-continue"></a><span data-ttu-id="249c4-104">계속 정보</span><span class="sxs-lookup"><span data-stu-id="249c4-104">About Continue</span></span>
 
-## <a name="short-description"></a><span data-ttu-id="68a39-105">간단한 설명</span><span class="sxs-lookup"><span data-stu-id="68a39-105">Short description</span></span>
+## <a name="short-description"></a><span data-ttu-id="249c4-105">간단한 설명</span><span class="sxs-lookup"><span data-stu-id="249c4-105">Short description</span></span>
 
-<span data-ttu-id="68a39-106">`continue`문이 프로그램 루프, `switch` 문 또는 문 맨 위에 프로그램 흐름을 즉시 반환 하는 방법에 대해 설명 합니다 `trap` .</span><span class="sxs-lookup"><span data-stu-id="68a39-106">Describes how the `continue` statement immediately returns the program flow to the top of a program loop, a `switch` statement, or a `trap` statement.</span></span>
+<span data-ttu-id="249c4-106">`continue`문이 프로그램 루프, `switch` 문 또는 문 맨 위에 프로그램 흐름을 즉시 반환 하는 방법에 대해 설명 합니다 `trap` .</span><span class="sxs-lookup"><span data-stu-id="249c4-106">Describes how the `continue` statement immediately returns the program flow to the top of a program loop, a `switch` statement, or a `trap` statement.</span></span>
 
-## <a name="long-description"></a><span data-ttu-id="68a39-107">자세한 설명입니다.</span><span class="sxs-lookup"><span data-stu-id="68a39-107">Long description</span></span>
+## <a name="long-description"></a><span data-ttu-id="249c4-107">자세한 설명입니다.</span><span class="sxs-lookup"><span data-stu-id="249c4-107">Long description</span></span>
 
-<span data-ttu-id="68a39-108">`continue`문은 완전히 종료 하는 대신 현재 제어 블록을 끝내는 방법을 제공 하지만 실행을 계속 합니다.</span><span class="sxs-lookup"><span data-stu-id="68a39-108">The `continue` statement provides a way to exit the current control block but continue execution, rather than exit completely.</span></span> <span data-ttu-id="68a39-109">문은 레이블을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="68a39-109">The statement supports labels.</span></span>
-<span data-ttu-id="68a39-110">레이블은 스크립트의 문에 할당 하는 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="68a39-110">A label is a name you assign to a statement in a script.</span></span>
+<span data-ttu-id="249c4-108">`continue`문은 완전히 종료 하는 대신 현재 제어 블록을 끝내는 방법을 제공 하지만 실행을 계속 합니다.</span><span class="sxs-lookup"><span data-stu-id="249c4-108">The `continue` statement provides a way to exit the current control block but continue execution, rather than exit completely.</span></span> <span data-ttu-id="249c4-109">문은 레이블을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="249c4-109">The statement supports labels.</span></span>
+<span data-ttu-id="249c4-110">레이블은 스크립트의 문에 할당 하는 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="249c4-110">A label is a name you assign to a statement in a script.</span></span>
 
-## <a name="using-continue-in-loops"></a><span data-ttu-id="68a39-111">루프에서 계속 사용</span><span class="sxs-lookup"><span data-stu-id="68a39-111">Using continue in loops</span></span>
+## <a name="using-continue-in-loops"></a><span data-ttu-id="249c4-111">루프에서 계속 사용</span><span class="sxs-lookup"><span data-stu-id="249c4-111">Using continue in loops</span></span>
 
-<span data-ttu-id="68a39-112">레이블 없는 `continue` 문은 즉시 프로그램 흐름을 `for` ,, `foreach` `do` 또는 문에 의해 제어 되는 가장 안쪽 루프의 맨 위로 반환 합니다 `while` .</span><span class="sxs-lookup"><span data-stu-id="68a39-112">An unlabeled `continue` statement immediately returns the program flow to the top of the innermost loop that is controlled by a `for`, `foreach`, `do`, or `while` statement.</span></span> <span data-ttu-id="68a39-113">루프의 현재 반복이 종료 되 고 루프는 다음 반복에서 계속 됩니다.</span><span class="sxs-lookup"><span data-stu-id="68a39-113">The current iteration of the loop is terminated and the loop continues with the next iteration.</span></span>
+<span data-ttu-id="249c4-112">레이블 없는 `continue` 문은 즉시 프로그램 흐름을 `for` ,, `foreach` `do` 또는 문에 의해 제어 되는 가장 안쪽 루프의 맨 위로 반환 합니다 `while` .</span><span class="sxs-lookup"><span data-stu-id="249c4-112">An unlabeled `continue` statement immediately returns the program flow to the top of the innermost loop that is controlled by a `for`, `foreach`, `do`, or `while` statement.</span></span> <span data-ttu-id="249c4-113">루프의 현재 반복이 종료 되 고 루프는 다음 반복에서 계속 됩니다.</span><span class="sxs-lookup"><span data-stu-id="249c4-113">The current iteration of the loop is terminated and the loop continues with the next iteration.</span></span>
 
-<span data-ttu-id="68a39-114">다음 예제에서 프로그램 흐름은 `while` `$ctr` 변수가 5와 같은 경우 루프의 맨 위로 돌아갑니다.</span><span class="sxs-lookup"><span data-stu-id="68a39-114">In the following example, program flow returns to the top of the `while` loop if the `$ctr` variable is equal to 5.</span></span> <span data-ttu-id="68a39-115">따라서 5를 제외 하 고 1과 10 사이의 모든 숫자가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="68a39-115">As a result, all the numbers between 1 and 10 are displayed except for 5:</span></span>
+<span data-ttu-id="249c4-114">다음 예제에서 프로그램 흐름은 `while` `$ctr` 변수가 5와 같은 경우 루프의 맨 위로 돌아갑니다.</span><span class="sxs-lookup"><span data-stu-id="249c4-114">In the following example, program flow returns to the top of the `while` loop if the `$ctr` variable is equal to 5.</span></span> <span data-ttu-id="249c4-115">따라서 5를 제외 하 고 1과 10 사이의 모든 숫자가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="249c4-115">As a result, all the numbers between 1 and 10 are displayed except for 5:</span></span>
 
 ```powershell
 while ($ctr -lt 10)
@@ -42,7 +42,7 @@ while ($ctr -lt 10)
 }
 ```
 
-<span data-ttu-id="68a39-116">루프를 사용 하는 경우 `for` 문에서 실행이 계속 되 고 `<Repeat>` 그 다음에 `<Condition>` 테스트가 수행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="68a39-116">When using a `for` loop, execution continues at the `<Repeat>` statement, followed by the `<Condition>` test.</span></span> <span data-ttu-id="68a39-117">아래 예제에서는가 키워드 다음에 감소 하는 경우 무한 루프가 발생 하지 않습니다 `$i` `continue` .</span><span class="sxs-lookup"><span data-stu-id="68a39-117">In the example below, an infinite loop will not occur because the decrement of `$i` occurs after the `continue` keyword.</span></span>
+<span data-ttu-id="249c4-116">루프를 사용 하는 경우 `for` 문에서 실행이 계속 되 고 `<Repeat>` 그 다음에 `<Condition>` 테스트가 수행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="249c4-116">When using a `for` loop, execution continues at the `<Repeat>` statement, followed by the `<Condition>` test.</span></span> <span data-ttu-id="249c4-117">아래 예제에서는가 키워드 다음에 감소 하는 경우 무한 루프가 발생 하지 않습니다 `$i` `continue` .</span><span class="sxs-lookup"><span data-stu-id="249c4-117">In the example below, an infinite loop will not occur because the decrement of `$i` occurs after the `continue` keyword.</span></span>
 
 ```powershell
 #   <Init>  <Condition> <Repeat>
@@ -58,11 +58,11 @@ for ($i = 0; $i -lt 10; $i++)
 }
 ```
 
-### <a name="using-a-labeled-continue-in-a-loop"></a><span data-ttu-id="68a39-118">루프에서 레이블이 지정 된 continue 사용</span><span class="sxs-lookup"><span data-stu-id="68a39-118">Using a labeled continue in a loop</span></span>
+### <a name="using-a-labeled-continue-in-a-loop"></a><span data-ttu-id="249c4-118">루프에서 레이블이 지정 된 continue 사용</span><span class="sxs-lookup"><span data-stu-id="249c4-118">Using a labeled continue in a loop</span></span>
 
-<span data-ttu-id="68a39-119">레이블이 지정 된 `continue` 문은 반복의 실행을 종료 하 고 대상으로 지정 된 포함 반복 또는 문 레이블로 제어를 전달 합니다 `switch` .</span><span class="sxs-lookup"><span data-stu-id="68a39-119">A labeled `continue` statement terminates execution of the iteration and transfers control to the targeted enclosing iteration or `switch` statement label.</span></span>
+<span data-ttu-id="249c4-119">레이블이 지정 된 `continue` 문은 반복의 실행을 종료 하 고 대상으로 지정 된 포함 반복 또는 문 레이블로 제어를 전달 합니다 `switch` .</span><span class="sxs-lookup"><span data-stu-id="249c4-119">A labeled `continue` statement terminates execution of the iteration and transfers control to the targeted enclosing iteration or `switch` statement label.</span></span>
 
-<span data-ttu-id="68a39-120">다음 예제에서는 `for` `$condition` 가 **True** 이 고에서 두 번째 루프를 사용 하 여 반복이 계속 되 면 가장 안쪽이 종료 됩니다 `for` `labelB` .</span><span class="sxs-lookup"><span data-stu-id="68a39-120">In the following example, the innermost `for` is terminated when `$condition` is **True** and iteration continues with the second `for` loop at `labelB`.</span></span>
+<span data-ttu-id="249c4-120">다음 예제에서는 `for` `$condition` 가 **True** 이 고에서 두 번째 루프를 사용 하 여 반복이 계속 되 면 가장 안쪽이 종료 됩니다 `for` `labelB` .</span><span class="sxs-lookup"><span data-stu-id="249c4-120">In the following example, the innermost `for` is terminated when `$condition` is **True** and iteration continues with the second `for` loop at `labelB`.</span></span>
 
 ```powershell
 :labelA for ($i = 1; $i -le 10; $i++) {
@@ -78,12 +78,12 @@ for ($i = 0; $i -lt 10; $i++)
 }
 ```
 
-## <a name="using-continue-in-a-switch-statement"></a><span data-ttu-id="68a39-121">Switch 문에서 continue 사용</span><span class="sxs-lookup"><span data-stu-id="68a39-121">Using continue in a switch statement</span></span>
+## <a name="using-continue-in-a-switch-statement"></a><span data-ttu-id="249c4-121">Switch 문에서 continue 사용</span><span class="sxs-lookup"><span data-stu-id="249c4-121">Using continue in a switch statement</span></span>
 
-<span data-ttu-id="68a39-122">`continue`내에서 레이블이 없는 문은 `switch` 현재 반복의 실행을 종료 하 `switch` 고 컨트롤을의 위쪽으로 전달 `switch` 하 여 다음 입력 항목을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="68a39-122">An unlabeled `continue` statement within a `switch` terminates execution of the current `switch` iteration and transfers control to the top of the `switch` to get the next input item.</span></span>
+<span data-ttu-id="249c4-122">`continue`내에서 레이블이 없는 문은 `switch` 현재 반복의 실행을 종료 하 `switch` 고 컨트롤을의 위쪽으로 전달 `switch` 하 여 다음 입력 항목을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="249c4-122">An unlabeled `continue` statement within a `switch` terminates execution of the current `switch` iteration and transfers control to the top of the `switch` to get the next input item.</span></span>
 
-<span data-ttu-id="68a39-123">단일 입력 항목이 있으면 `continue` 전체 `switch` 문을 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="68a39-123">When there is a single input item `continue` exits the entire `switch` statement.</span></span>
-<span data-ttu-id="68a39-124">`switch`입력이 컬렉션인 경우는 `switch` 컬렉션의 각 요소를 테스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="68a39-124">When the `switch` input is a collection, the `switch` tests each element of the collection.</span></span> <span data-ttu-id="68a39-125">는 `continue` 현재 반복을 종료 하 고는 `switch` 다음 요소를 계속 합니다.</span><span class="sxs-lookup"><span data-stu-id="68a39-125">The `continue` exits the current iteration and the `switch` continues with the next element.</span></span>
+<span data-ttu-id="249c4-123">단일 입력 항목이 있으면 `continue` 전체 `switch` 문을 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="249c4-123">When there is a single input item `continue` exits the entire `switch` statement.</span></span>
+<span data-ttu-id="249c4-124">`switch`입력이 컬렉션인 경우는 `switch` 컬렉션의 각 요소를 테스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="249c4-124">When the `switch` input is a collection, the `switch` tests each element of the collection.</span></span> <span data-ttu-id="249c4-125">는 `continue` 현재 반복을 종료 하 고는 `switch` 다음 요소를 계속 합니다.</span><span class="sxs-lookup"><span data-stu-id="249c4-125">The `continue` exits the current iteration and the `switch` continues with the next element.</span></span>
 
 ```powershell
 switch (1,2,3) {
@@ -97,28 +97,28 @@ switch (1,2,3) {
 3
 ```
 
-## <a name="using-continue-in-a-trap-statement"></a><span data-ttu-id="68a39-126">Trap 문에서 continue 사용</span><span class="sxs-lookup"><span data-stu-id="68a39-126">Using continue in a trap statement</span></span>
+## <a name="using-continue-in-a-trap-statement"></a><span data-ttu-id="249c4-126">Trap 문에서 continue 사용</span><span class="sxs-lookup"><span data-stu-id="249c4-126">Using continue in a trap statement</span></span>
 
-<span data-ttu-id="68a39-127">본문에서 실행 된 마지막 문이 `trap` 인 경우 `continue` 트랩 된 오류는 자동으로 무시 되 고 발생 한 원인이 되는 문 바로 다음의 문을 사용 하 여 실행이 계속 됩니다 `trap` .</span><span class="sxs-lookup"><span data-stu-id="68a39-127">If the final statement executed in the body a `trap` statement is `continue`, the trapped error is silently ignored and execution continues with the statement immediately following the one that caused `trap` to occur.</span></span>
+<span data-ttu-id="249c4-127">본문에서 실행 된 마지막 문이 `trap` 인 경우 `continue` 트랩 된 오류는 자동으로 무시 되 고 발생 한 원인이 되는 문 바로 다음의 문을 사용 하 여 실행이 계속 됩니다 `trap` .</span><span class="sxs-lookup"><span data-stu-id="249c4-127">If the final statement executed in the body a `trap` statement is `continue`, the trapped error is silently ignored and execution continues with the statement immediately following the one that caused `trap` to occur.</span></span>
 
-## <a name="do-not-use-continue-outside-of-a-loop-switch-or-trap"></a><span data-ttu-id="68a39-128">루프, 스위치 또는 트랩 외부에서 계속 사용 안 함</span><span class="sxs-lookup"><span data-stu-id="68a39-128">Do not use continue outside of a loop, switch, or trap</span></span>
+## <a name="do-not-use-continue-outside-of-a-loop-switch-or-trap"></a><span data-ttu-id="249c4-128">루프, 스위치 또는 트랩 외부에서 계속 사용 안 함</span><span class="sxs-lookup"><span data-stu-id="249c4-128">Do not use continue outside of a loop, switch, or trap</span></span>
 
-<span data-ttu-id="68a39-129">를 `continue` 직접 지 원하는 구문 외부에서 사용 하는 경우 (루프, `switch` , `trap` ) PowerShell에서 바깥쪽 구문에 대 한 _호출 스택을_ 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="68a39-129">When `continue` is used outside of a construct that directly supports it (loops, `switch`, `trap`), PowerShell looks _up the call stack_ for an enclosing construct.</span></span> <span data-ttu-id="68a39-130">바깥쪽 구문을 찾을 수 없는 경우 현재 runspace가 자동으로 종료 됩니다.</span><span class="sxs-lookup"><span data-stu-id="68a39-130">If it can't find an enclosing construct, the current runspace is quietly terminated.</span></span>
+<span data-ttu-id="249c4-129">를 `continue` 직접 지 원하는 구문 외부에서 사용 하는 경우 (루프, `switch` , `trap` ) PowerShell에서 바깥쪽 구문에 대 한 _호출 스택을_ 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="249c4-129">When `continue` is used outside of a construct that directly supports it (loops, `switch`, `trap`), PowerShell looks _up the call stack_ for an enclosing construct.</span></span> <span data-ttu-id="249c4-130">바깥쪽 구문을 찾을 수 없는 경우 현재 runspace가 자동으로 종료 됩니다.</span><span class="sxs-lookup"><span data-stu-id="249c4-130">If it can't find an enclosing construct, the current runspace is quietly terminated.</span></span>
 
-<span data-ttu-id="68a39-131">즉, 실수로이를 지 원하는 바깥쪽 구문 외부에서를 사용 하는 함수 및 스크립트는 `continue` 실수로 _호출자_ 를 종료할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="68a39-131">This means that functions and scripts that inadvertently use a `continue` outside of an enclosing construct that supports it, can inadvertently terminate their _callers_.</span></span>
+<span data-ttu-id="249c4-131">즉, 실수로이를 지 원하는 바깥쪽 구문 외부에서를 사용 하는 함수 및 스크립트는 `continue` 실수로 _호출자_ 를 종료할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="249c4-131">This means that functions and scripts that inadvertently use a `continue` outside of an enclosing construct that supports it, can inadvertently terminate their _callers_.</span></span>
 
-<span data-ttu-id="68a39-132">`continue`스크립트 블록 등의 파이프라인 내에서를 사용 하면 파이프라인을 `ForEach-Object` 종료할 뿐만 아니라 tt가 전체 runspace를 종료할 가능성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="68a39-132">Using `continue` inside a pipeline, such as a `ForEach-Object` script block, not only exits the pipeline, tt potentially terminates the entire runspace.</span></span>
+<span data-ttu-id="249c4-132">`continue`스크립트 블록과 같은 파이프라인 내에서를 사용 하면 `ForEach-Object` 파이프라인이 종료 될 뿐만 아니라 전체 runspace가 종료 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="249c4-132">Using `continue` inside a pipeline, such as a `ForEach-Object` script block, not only exits the pipeline, it potentially terminates the entire runspace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="68a39-133">참고 항목</span><span class="sxs-lookup"><span data-stu-id="68a39-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="249c4-133">참조</span><span class="sxs-lookup"><span data-stu-id="249c4-133">See also</span></span>
 
-[<span data-ttu-id="68a39-134">about_Break</span><span class="sxs-lookup"><span data-stu-id="68a39-134">about_Break</span></span>](about_Break.md)
+[<span data-ttu-id="249c4-134">about_Break</span><span class="sxs-lookup"><span data-stu-id="249c4-134">about_Break</span></span>](about_Break.md)
 
-[<span data-ttu-id="68a39-135">about_For</span><span class="sxs-lookup"><span data-stu-id="68a39-135">about_For</span></span>](about_For.md)
+[<span data-ttu-id="249c4-135">about_For</span><span class="sxs-lookup"><span data-stu-id="249c4-135">about_For</span></span>](about_For.md)
 
-[<span data-ttu-id="68a39-136">about_Comparison_Operators</span><span class="sxs-lookup"><span data-stu-id="68a39-136">about_Comparison_Operators</span></span>](about_Comparison_Operators.md)
+[<span data-ttu-id="249c4-136">about_Comparison_Operators</span><span class="sxs-lookup"><span data-stu-id="249c4-136">about_Comparison_Operators</span></span>](about_Comparison_Operators.md)
 
-[<span data-ttu-id="68a39-137">about_Throw</span><span class="sxs-lookup"><span data-stu-id="68a39-137">about_Throw</span></span>](about_Throw.md)
+[<span data-ttu-id="249c4-137">about_Throw</span><span class="sxs-lookup"><span data-stu-id="249c4-137">about_Throw</span></span>](about_Throw.md)
 
-[<span data-ttu-id="68a39-138">about_Trap</span><span class="sxs-lookup"><span data-stu-id="68a39-138">about_Trap</span></span>](about_Trap.md)
+[<span data-ttu-id="249c4-138">about_Trap</span><span class="sxs-lookup"><span data-stu-id="249c4-138">about_Trap</span></span>](about_Trap.md)
 
-[<span data-ttu-id="68a39-139">about_Try_Catch_Finally</span><span class="sxs-lookup"><span data-stu-id="68a39-139">about_Try_Catch_Finally</span></span>](about_Try_Catch_Finally.md)
+[<span data-ttu-id="249c4-139">about_Try_Catch_Finally</span><span class="sxs-lookup"><span data-stu-id="249c4-139">about_Try_Catch_Finally</span></span>](about_Try_Catch_Finally.md)
