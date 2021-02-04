@@ -1,41 +1,40 @@
 ---
 description: PowerShell에 대 한 상태 정보를 저장 하는 변수에 대해 설명 합니다. 이러한 변수는 PowerShell에서 만들고 유지 관리 합니다.
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 08/14/2020
+ms.date: 12/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Automatic_Variables
-ms.openlocfilehash: 5ce9e61113da2c781f5774866e827663a7c7ced4
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 60ad0e40f7e392bf240ee76a5902123c45a282fd
+ms.sourcegitcommit: 1628fd2a1f50aec2f31ffb1c451a3ce77c08983c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93224161"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97577245"
 ---
-# <a name="about-automatic-variables"></a><span data-ttu-id="07e17-105">자동 변수 정보</span><span class="sxs-lookup"><span data-stu-id="07e17-105">About Automatic Variables</span></span>
+# <a name="about-automatic-variables"></a><span data-ttu-id="b0617-104">자동 변수 정보</span><span class="sxs-lookup"><span data-stu-id="b0617-104">About Automatic Variables</span></span>
 
-## <a name="short-description"></a><span data-ttu-id="07e17-106">간단한 설명</span><span class="sxs-lookup"><span data-stu-id="07e17-106">Short description</span></span>
+## <a name="short-description"></a><span data-ttu-id="b0617-105">간단한 설명</span><span class="sxs-lookup"><span data-stu-id="b0617-105">Short description</span></span>
 
-<span data-ttu-id="07e17-107">PowerShell에 대 한 상태 정보를 저장 하는 변수에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-107">Describes variables that store state information for PowerShell.</span></span> <span data-ttu-id="07e17-108">이러한 변수는 PowerShell에서 만들고 유지 관리 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-108">These variables are created and maintained by PowerShell.</span></span>
+<span data-ttu-id="b0617-106">PowerShell에 대 한 상태 정보를 저장 하는 변수에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-106">Describes variables that store state information for PowerShell.</span></span> <span data-ttu-id="b0617-107">이러한 변수는 PowerShell에서 만들고 유지 관리 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-107">These variables are created and maintained by PowerShell.</span></span>
 
-## <a name="long-description"></a><span data-ttu-id="07e17-109">자세한 설명입니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-109">Long description</span></span>
+## <a name="long-description"></a><span data-ttu-id="b0617-108">자세한 설명입니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-108">Long description</span></span>
 
-<span data-ttu-id="07e17-110">개념적으로 이러한 변수는 읽기 전용으로 간주 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-110">Conceptually, these variables are considered to be read-only.</span></span> <span data-ttu-id="07e17-111">이전 버전과의 호환성을 위해 쓸 수 **있는** 경우에도 쓸 수 **없습니다** .</span><span class="sxs-lookup"><span data-stu-id="07e17-111">Even though they **can** be written to, for backward compatibility they **should not** be written to.</span></span>
+<span data-ttu-id="b0617-109">개념적으로 이러한 변수는 읽기 전용으로 간주 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-109">Conceptually, these variables are considered to be read-only.</span></span> <span data-ttu-id="b0617-110">이전 버전과의 호환성을 위해 쓸 수 **있는** 경우에도 쓸 수 **없습니다** .</span><span class="sxs-lookup"><span data-stu-id="b0617-110">Even though they **can** be written to, for backward compatibility they **should not** be written to.</span></span>
 
-<span data-ttu-id="07e17-112">PowerShell의 자동 변수 목록은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-112">Here is a list of the automatic variables in PowerShell:</span></span>
+<span data-ttu-id="b0617-111">PowerShell의 자동 변수 목록은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-111">Here is a list of the automatic variables in PowerShell:</span></span>
 
 ### <a name=""></a>$$
 
-<span data-ttu-id="07e17-113">세션에서 받은 마지막 줄의 마지막 토큰을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-113">Contains the last token in the last line received by the session.</span></span>
+<span data-ttu-id="b0617-112">세션에서 받은 마지막 줄의 마지막 토큰을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-112">Contains the last token in the last line received by the session.</span></span>
 
-### <a name=""></a><span data-ttu-id="07e17-114">$?</span><span class="sxs-lookup"><span data-stu-id="07e17-114">$?</span></span>
+### <a name=""></a><span data-ttu-id="b0617-113">$?</span><span class="sxs-lookup"><span data-stu-id="b0617-113">$?</span></span>
 
-<span data-ttu-id="07e17-115">마지막 명령의 실행 상태를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-115">Contains the execution status of the last command.</span></span> <span data-ttu-id="07e17-116">마지막 명령이 성공한 경우 **True** 를 포함 하 고 실패 하면 **False** 를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-116">It contains **True** if the last command succeeded and **False** if it failed.</span></span>
+<span data-ttu-id="b0617-114">마지막 명령의 실행 상태를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-114">Contains the execution status of the last command.</span></span> <span data-ttu-id="b0617-115">마지막 명령이 성공한 경우 **True** 를 포함 하 고 실패 하면 **False** 를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-115">It contains **True** if the last command succeeded and **False** if it failed.</span></span>
 
-<span data-ttu-id="07e17-117">파이프라인의 여러 단계에서 실행 되는 cmdlet 및 고급 함수 (예: 및 블록 둘 다)의 경우 `process` `end` 언제 든 지 또는를 호출 하는 것은 및와 같이 모두 `this.WriteError()` `$PSCmdlet.WriteError()` `$?` **False** 로 설정 됩니다 `this.ThrowTerminatingError()` `$PSCmdlet.ThrowTerminatingError()` .</span><span class="sxs-lookup"><span data-stu-id="07e17-117">For cmdlets and advanced functions that are run at multiple stages in a pipeline, for example in both `process` and `end` blocks, calling `this.WriteError()` or `$PSCmdlet.WriteError()` respectively at any point will set `$?` to **False** , as will `this.ThrowTerminatingError()` and `$PSCmdlet.ThrowTerminatingError()`.</span></span>
+<span data-ttu-id="b0617-116">파이프라인의 여러 단계에서 실행 되는 cmdlet 및 고급 함수 (예: 및 블록 둘 다)의 경우 `process` `end` 언제 든 지 또는를 호출 하는 것은 및와 같이 모두 `this.WriteError()` `$PSCmdlet.WriteError()` `$?` **False** 로 설정 됩니다 `this.ThrowTerminatingError()` `$PSCmdlet.ThrowTerminatingError()` .</span><span class="sxs-lookup"><span data-stu-id="b0617-116">For cmdlets and advanced functions that are run at multiple stages in a pipeline, for example in both `process` and `end` blocks, calling `this.WriteError()` or `$PSCmdlet.WriteError()` respectively at any point will set `$?` to **False**, as will `this.ThrowTerminatingError()` and `$PSCmdlet.ThrowTerminatingError()`.</span></span>
 
-<span data-ttu-id="07e17-118">`Write-Error`Cmdlet은 `$?` 실행 후에 항상 **false** 로 설정 되지만 `$?` 함수를 호출 하는 함수에 대해 **false** 로 설정 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-118">The `Write-Error` cmdlet always sets `$?` to **False** immediately after it is executed, but will not set `$?` to **False** for a function calling it:</span></span>
+<span data-ttu-id="b0617-117">`Write-Error`Cmdlet은 `$?` 실행 후에 항상 **false** 로 설정 되지만 `$?` 함수를 호출 하는 함수에 대해 **false** 로 설정 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-117">The `Write-Error` cmdlet always sets `$?` to **False** immediately after it is executed, but will not set `$?` to **False** for a function calling it:</span></span>
 
 ```powershell
 function Test-WriteError
@@ -48,162 +47,168 @@ Test-WriteError
 $? # $true
 ```
 
-<span data-ttu-id="07e17-119">후자의 경우에 `$PSCmdlet.WriteError()` 는 대신를 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-119">For the latter purpose, `$PSCmdlet.WriteError()` should be used instead.</span></span>
+<span data-ttu-id="b0617-118">후자의 경우에 `$PSCmdlet.WriteError()` 는 대신를 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-118">For the latter purpose, `$PSCmdlet.WriteError()` should be used instead.</span></span>
 
-<span data-ttu-id="07e17-120">네이티브 명령 (실행 파일)의 경우가 0 이면이 `$?` **True** 로 설정 되 `$LASTEXITCODE` 고,가 다른 값 이면 **False** 로 설정 됩니다 `$LASTEXITCODE` .</span><span class="sxs-lookup"><span data-stu-id="07e17-120">For native commands (executables), `$?` is set to **True** when `$LASTEXITCODE` is 0, and set to **False** when `$LASTEXITCODE` is any other value.</span></span>
+<span data-ttu-id="b0617-119">네이티브 명령 (실행 파일)의 경우가 0 이면이 `$?` **True** 로 설정 되 `$LASTEXITCODE` 고,가 다른 값 이면 **False** 로 설정 됩니다 `$LASTEXITCODE` .</span><span class="sxs-lookup"><span data-stu-id="b0617-119">For native commands (executables), `$?` is set to **True** when `$LASTEXITCODE` is 0, and set to **False** when `$LASTEXITCODE` is any other value.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="07e17-121">괄호 안에 문을 포함 하는 PowerShell 7 까지는 `(...)` 부분식 구문 `$(...)` 또는 배열 식이 `@(...)` 항상 true로 다시 설정 `$?` 되므로가 **True** `(Write-Error)` `$?` **true** 로 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-121">Until PowerShell 7, containing a statement within parentheses `(...)`, subexpression syntax `$(...)` or array expression `@(...)` always reset `$?` to **True** , so that `(Write-Error)` shows `$?` as **True**.</span></span>
-> <span data-ttu-id="07e17-122">이는 PowerShell 7에서 변경 되었으므로 `$?` 항상 이러한 식에서 실행 된 마지막 명령의 실제 성공을 반영 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-122">This has been changed in PowerShell 7, so that `$?` will always reflect the actual success of the last command run in these expressions.</span></span>
+> <span data-ttu-id="b0617-120">괄호 안에 문을 포함 하는 PowerShell 7 까지는 `(...)` 부분식 구문 `$(...)` 또는 배열 식이 `@(...)` 항상 true로 다시 설정 `$?` 되므로가  `(Write-Error)` `$?` **true** 로 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-120">Until PowerShell 7, containing a statement within parentheses `(...)`, subexpression syntax `$(...)` or array expression `@(...)` always reset `$?` to **True**, so that `(Write-Error)` shows `$?` as **True**.</span></span>
+> <span data-ttu-id="b0617-121">이는 PowerShell 7에서 변경 되었으므로 `$?` 항상 이러한 식에서 실행 된 마지막 명령의 실제 성공을 반영 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-121">This has been changed in PowerShell 7, so that `$?` will always reflect the actual success of the last command run in these expressions.</span></span>
 
 ### <a name=""></a>$^
 
-<span data-ttu-id="07e17-123">세션에서 받은 마지막 줄의 첫 번째 토큰을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-123">Contains the first token in the last line received by the session.</span></span>
+<span data-ttu-id="b0617-122">세션에서 받은 마지막 줄의 첫 번째 토큰을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-122">Contains the first token in the last line received by the session.</span></span>
 
-### <a name="_"></a><span data-ttu-id="07e17-124">$_</span><span class="sxs-lookup"><span data-stu-id="07e17-124">$_</span></span>
+### <a name="_"></a><span data-ttu-id="b0617-123">$_</span><span class="sxs-lookup"><span data-stu-id="b0617-123">$_</span></span>
 
-<span data-ttu-id="07e17-125">`$PSItem`와 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-125">Same as `$PSItem`.</span></span> <span data-ttu-id="07e17-126">파이프라인 개체의 현재 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-126">Contains the current object in the pipeline object.</span></span> <span data-ttu-id="07e17-127">파이프라인의 모든 개체 또는 선택한 개체에 대해 작업을 수행 하는 명령에서이 변수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-127">You can use this variable in commands that perform an action on every object or on selected objects in a pipeline.</span></span>
+<span data-ttu-id="b0617-124">`$PSItem`와 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-124">Same as `$PSItem`.</span></span> <span data-ttu-id="b0617-125">파이프라인 개체의 현재 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-125">Contains the current object in the pipeline object.</span></span> <span data-ttu-id="b0617-126">파이프라인의 모든 개체 또는 선택한 개체에 대해 작업을 수행 하는 명령에서이 변수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-126">You can use this variable in commands that perform an action on every object or on selected objects in a pipeline.</span></span>
 
-### <a name="args"></a><span data-ttu-id="07e17-128">$args</span><span class="sxs-lookup"><span data-stu-id="07e17-128">$args</span></span>
+### <a name="args"></a><span data-ttu-id="b0617-127">$args</span><span class="sxs-lookup"><span data-stu-id="b0617-127">$args</span></span>
 
-<span data-ttu-id="07e17-129">함수, 스크립트 또는 스크립트 블록에 전달 되는 선언 되지 않은 매개 변수에 대 한 값 배열을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-129">Contains an array of values for undeclared parameters that are passed to a function, script, or script block.</span></span> <span data-ttu-id="07e17-130">함수를 만들 때 키워드를 사용 `param` 하거나 함수 이름 뒤에 괄호 안에 쉼표로 구분 된 매개 변수 목록을 추가 하 여 매개 변수를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-130">When you create a function, you can declare the parameters by using the `param` keyword or by adding a comma-separated list of parameters in parentheses after the function name.</span></span>
+<span data-ttu-id="b0617-128">함수, 스크립트 또는 스크립트 블록에 전달 되는 선언 되지 않은 매개 변수에 대 한 값 배열을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-128">Contains an array of values for undeclared parameters that are passed to a function, script, or script block.</span></span> <span data-ttu-id="b0617-129">함수를 만들 때 키워드를 사용 `param` 하거나 함수 이름 뒤에 괄호 안에 쉼표로 구분 된 매개 변수 목록을 추가 하 여 매개 변수를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-129">When you create a function, you can declare the parameters by using the `param` keyword or by adding a comma-separated list of parameters in parentheses after the function name.</span></span>
 
-<span data-ttu-id="07e17-131">이벤트 동작에서 `$Args` 변수는 처리 중인 이벤트의 이벤트 인수를 나타내는 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-131">In an event action, the `$Args` variable contains objects that represent the event arguments of the event that is being processed.</span></span> <span data-ttu-id="07e17-132">이 변수는 `Action` 이벤트 등록 명령의 블록 내 에서만 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-132">This variable is populated only within the `Action` block of an event registration command.</span></span>
-<span data-ttu-id="07e17-133">이 변수의 값은를 반환 하는 **PSEventArgs** 개체의 **sourceargs** 속성 에서도 찾을 수 있습니다 `Get-Event` .</span><span class="sxs-lookup"><span data-stu-id="07e17-133">The value of this variable can also be found in the **SourceArgs** property of the **PSEventArgs** object that `Get-Event` returns.</span></span>
+<span data-ttu-id="b0617-130">이벤트 동작에서 `$Args` 변수는 처리 중인 이벤트의 이벤트 인수를 나타내는 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-130">In an event action, the `$Args` variable contains objects that represent the event arguments of the event that is being processed.</span></span> <span data-ttu-id="b0617-131">이 변수는 `Action` 이벤트 등록 명령의 블록 내 에서만 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-131">This variable is populated only within the `Action` block of an event registration command.</span></span>
+<span data-ttu-id="b0617-132">이 변수의 값은를 반환 하는 **PSEventArgs** 개체의 **sourceargs** 속성 에서도 찾을 수 있습니다 `Get-Event` .</span><span class="sxs-lookup"><span data-stu-id="b0617-132">The value of this variable can also be found in the **SourceArgs** property of the **PSEventArgs** object that `Get-Event` returns.</span></span>
 
-### <a name="consolefilename"></a><span data-ttu-id="07e17-134">$ConsoleFileName</span><span class="sxs-lookup"><span data-stu-id="07e17-134">$ConsoleFileName</span></span>
+### <a name="consolefilename"></a><span data-ttu-id="b0617-133">$ConsoleFileName</span><span class="sxs-lookup"><span data-stu-id="b0617-133">$ConsoleFileName</span></span>
 
-<span data-ttu-id="07e17-135">세션에서 가장 최근에 사용 된 콘솔 파일 ()의 경로를 포함 `.psc1` 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-135">Contains the path of the console file (`.psc1`) that was most recently used in the session.</span></span> <span data-ttu-id="07e17-136">이 변수는 **PSConsoleFile** 매개 변수를 사용 하 여 PowerShell을 시작 하거나 cmdlet을 사용 하 여 `Export-Console` 스냅인 이름을 콘솔 파일로 내보내는 경우에 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-136">This variable is populated when you start PowerShell with the **PSConsoleFile** parameter or when you use the `Export-Console` cmdlet to export snap-in names to a console file.</span></span>
+<span data-ttu-id="b0617-134">세션에서 가장 최근에 사용 된 콘솔 파일 ()의 경로를 포함 `.psc1` 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-134">Contains the path of the console file (`.psc1`) that was most recently used in the session.</span></span> <span data-ttu-id="b0617-135">이 변수는 **PSConsoleFile** 매개 변수를 사용 하 여 PowerShell을 시작 하거나 cmdlet을 사용 하 여 `Export-Console` 스냅인 이름을 콘솔 파일로 내보내는 경우에 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-135">This variable is populated when you start PowerShell with the **PSConsoleFile** parameter or when you use the `Export-Console` cmdlet to export snap-in names to a console file.</span></span>
 
-<span data-ttu-id="07e17-137">`Export-Console`매개 변수 없이 cmdlet을 사용 하는 경우 세션에서 가장 최근에 사용 된 콘솔 파일을 자동으로 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-137">When you use the `Export-Console` cmdlet without parameters, it automatically updates the console file that was most recently used in the session.</span></span> <span data-ttu-id="07e17-138">이 자동 변수를 사용 하 여 업데이트 되는 파일을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-138">You can use this automatic variable to determine which file will be updated.</span></span>
+<span data-ttu-id="b0617-136">`Export-Console`매개 변수 없이 cmdlet을 사용 하는 경우 세션에서 가장 최근에 사용 된 콘솔 파일을 자동으로 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-136">When you use the `Export-Console` cmdlet without parameters, it automatically updates the console file that was most recently used in the session.</span></span> <span data-ttu-id="b0617-137">이 자동 변수를 사용 하 여 업데이트 되는 파일을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-137">You can use this automatic variable to determine which file will be updated.</span></span>
 
-### <a name="error"></a><span data-ttu-id="07e17-139">$Error</span><span class="sxs-lookup"><span data-stu-id="07e17-139">$Error</span></span>
+### <a name="error"></a><span data-ttu-id="b0617-138">$Error</span><span class="sxs-lookup"><span data-stu-id="b0617-138">$Error</span></span>
 
-<span data-ttu-id="07e17-140">가장 최근의 오류를 나타내는 오류 개체의 배열을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-140">Contains an array of error objects that represent the most recent errors.</span></span>
-<span data-ttu-id="07e17-141">가장 최근의 오류는 배열의 첫 번째 오류 개체입니다 `$Error[0]` .</span><span class="sxs-lookup"><span data-stu-id="07e17-141">The most recent error is the first error object in the array `$Error[0]`.</span></span>
+<span data-ttu-id="b0617-139">가장 최근의 오류를 나타내는 오류 개체의 배열을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-139">Contains an array of error objects that represent the most recent errors.</span></span>
+<span data-ttu-id="b0617-140">가장 최근의 오류는 배열의 첫 번째 오류 개체입니다 `$Error[0]` .</span><span class="sxs-lookup"><span data-stu-id="b0617-140">The most recent error is the first error object in the array `$Error[0]`.</span></span>
 
-<span data-ttu-id="07e17-142">오류가 배열에 추가 되지 않도록 하려면 `$Error` **Ignore** 값에 **erroraction** 일반 매개 변수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-142">To prevent an error from being added to the `$Error` array, use the **ErrorAction** common parameter with a value of **Ignore**.</span></span> <span data-ttu-id="07e17-143">자세한 내용은 [about_CommonParameters](about_CommonParameters.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="07e17-143">For more information, see [about_CommonParameters](about_CommonParameters.md).</span></span>
+<span data-ttu-id="b0617-141">오류가 배열에 추가 되지 않도록 하려면 `$Error` **Ignore** 값에 **erroraction** 일반 매개 변수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-141">To prevent an error from being added to the `$Error` array, use the **ErrorAction** common parameter with a value of **Ignore**.</span></span> <span data-ttu-id="b0617-142">자세한 내용은 [about_CommonParameters](about_CommonParameters.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b0617-142">For more information, see [about_CommonParameters](about_CommonParameters.md).</span></span>
 
-### <a name="event"></a><span data-ttu-id="07e17-144">$Event</span><span class="sxs-lookup"><span data-stu-id="07e17-144">$Event</span></span>
+### <a name="event"></a><span data-ttu-id="b0617-143">$Event</span><span class="sxs-lookup"><span data-stu-id="b0617-143">$Event</span></span>
 
-<span data-ttu-id="07e17-145">처리 중인 이벤트를 나타내는 **PSEventArgs** 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-145">Contains a **PSEventArgs** object that represents the event that is being processed.</span></span> <span data-ttu-id="07e17-146">이 변수는 `Action` 와 같은 이벤트 등록 명령의 블록 내 에서만 채워집니다 `Register-ObjectEvent` .</span><span class="sxs-lookup"><span data-stu-id="07e17-146">This variable is populated only within the `Action` block of an event registration command, such as `Register-ObjectEvent`.</span></span> <span data-ttu-id="07e17-147">이 변수의 값은 cmdlet이 반환 하는 것과 동일한 개체입니다 `Get-Event` .</span><span class="sxs-lookup"><span data-stu-id="07e17-147">The value of this variable is the same object that the `Get-Event` cmdlet returns.</span></span> <span data-ttu-id="07e17-148">따라서 `Event` 와 같은 변수의 속성을 `$Event.TimeGenerated` 스크립트 블록에서 사용할 수 있습니다 `Action` .</span><span class="sxs-lookup"><span data-stu-id="07e17-148">Therefore, you can use the properties of the `Event` variable, such as `$Event.TimeGenerated`, in an `Action` script block.</span></span>
+<span data-ttu-id="b0617-144">처리 중인 이벤트를 나타내는 **PSEventArgs** 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-144">Contains a **PSEventArgs** object that represents the event that is being processed.</span></span> <span data-ttu-id="b0617-145">이 변수는 `Action` 와 같은 이벤트 등록 명령의 블록 내 에서만 채워집니다 `Register-ObjectEvent` .</span><span class="sxs-lookup"><span data-stu-id="b0617-145">This variable is populated only within the `Action` block of an event registration command, such as `Register-ObjectEvent`.</span></span> <span data-ttu-id="b0617-146">이 변수의 값은 cmdlet이 반환 하는 것과 동일한 개체입니다 `Get-Event` .</span><span class="sxs-lookup"><span data-stu-id="b0617-146">The value of this variable is the same object that the `Get-Event` cmdlet returns.</span></span> <span data-ttu-id="b0617-147">따라서 `Event` 와 같은 변수의 속성을 `$Event.TimeGenerated` 스크립트 블록에서 사용할 수 있습니다 `Action` .</span><span class="sxs-lookup"><span data-stu-id="b0617-147">Therefore, you can use the properties of the `Event` variable, such as `$Event.TimeGenerated`, in an `Action` script block.</span></span>
 
-### <a name="eventargs"></a><span data-ttu-id="07e17-149">$EventArgs</span><span class="sxs-lookup"><span data-stu-id="07e17-149">$EventArgs</span></span>
+### <a name="eventargs"></a><span data-ttu-id="b0617-148">$EventArgs</span><span class="sxs-lookup"><span data-stu-id="b0617-148">$EventArgs</span></span>
 
-<span data-ttu-id="07e17-150">처리 중인 이벤트의 **EventArgs** 에서 파생 되는 첫 번째 이벤트 인수를 나타내는 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-150">Contains an object that represents the first event argument that derives from **EventArgs** of the event that is being processed.</span></span> <span data-ttu-id="07e17-151">이 변수는 `Action` 이벤트 등록 명령의 블록 내 에서만 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-151">This variable is populated only within the `Action` block of an event registration command.</span></span>
-<span data-ttu-id="07e17-152">이 변수의 값은를 반환 하는 **PSEventArgs** 개체의 **sourceeventargs** 속성 에서도 찾을 수 있습니다 `Get-Event` .</span><span class="sxs-lookup"><span data-stu-id="07e17-152">The value of this variable can also be found in the **SourceEventArgs** property of the **PSEventArgs** object that `Get-Event` returns.</span></span>
+<span data-ttu-id="b0617-149">처리 중인 이벤트의 **EventArgs** 에서 파생 되는 첫 번째 이벤트 인수를 나타내는 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-149">Contains an object that represents the first event argument that derives from **EventArgs** of the event that is being processed.</span></span> <span data-ttu-id="b0617-150">이 변수는 `Action` 이벤트 등록 명령의 블록 내 에서만 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-150">This variable is populated only within the `Action` block of an event registration command.</span></span>
+<span data-ttu-id="b0617-151">이 변수의 값은를 반환 하는 **PSEventArgs** 개체의 **sourceeventargs** 속성 에서도 찾을 수 있습니다 `Get-Event` .</span><span class="sxs-lookup"><span data-stu-id="b0617-151">The value of this variable can also be found in the **SourceEventArgs** property of the **PSEventArgs** object that `Get-Event` returns.</span></span>
 
-### <a name="eventsubscriber"></a><span data-ttu-id="07e17-153">$EventSubscriber</span><span class="sxs-lookup"><span data-stu-id="07e17-153">$EventSubscriber</span></span>
+### <a name="eventsubscriber"></a><span data-ttu-id="b0617-152">$EventSubscriber</span><span class="sxs-lookup"><span data-stu-id="b0617-152">$EventSubscriber</span></span>
 
-<span data-ttu-id="07e17-154">처리 중인 이벤트의 이벤트 구독자를 나타내는 **PSEventSubscriber** 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-154">Contains a **PSEventSubscriber** object that represents the event subscriber of the event that is being processed.</span></span> <span data-ttu-id="07e17-155">이 변수는 `Action` 이벤트 등록 명령의 블록 내 에서만 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-155">This variable is populated only within the `Action` block of an event registration command.</span></span> <span data-ttu-id="07e17-156">이 변수의 값은 cmdlet이 반환 하는 것과 동일한 개체입니다 `Get-EventSubscriber` .</span><span class="sxs-lookup"><span data-stu-id="07e17-156">The value of this variable is the same object that the `Get-EventSubscriber` cmdlet returns.</span></span>
+<span data-ttu-id="b0617-153">처리 중인 이벤트의 이벤트 구독자를 나타내는 **PSEventSubscriber** 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-153">Contains a **PSEventSubscriber** object that represents the event subscriber of the event that is being processed.</span></span> <span data-ttu-id="b0617-154">이 변수는 `Action` 이벤트 등록 명령의 블록 내 에서만 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-154">This variable is populated only within the `Action` block of an event registration command.</span></span> <span data-ttu-id="b0617-155">이 변수의 값은 cmdlet이 반환 하는 것과 동일한 개체입니다 `Get-EventSubscriber` .</span><span class="sxs-lookup"><span data-stu-id="b0617-155">The value of this variable is the same object that the `Get-EventSubscriber` cmdlet returns.</span></span>
 
-### <a name="executioncontext"></a><span data-ttu-id="07e17-157">$ExecutionContext</span><span class="sxs-lookup"><span data-stu-id="07e17-157">$ExecutionContext</span></span>
+### <a name="executioncontext"></a><span data-ttu-id="b0617-156">$ExecutionContext</span><span class="sxs-lookup"><span data-stu-id="b0617-156">$ExecutionContext</span></span>
 
-<span data-ttu-id="07e17-158">PowerShell 호스트의 실행 컨텍스트를 나타내는 **EngineIntrinsics** 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-158">Contains an **EngineIntrinsics** object that represents the execution context of the PowerShell host.</span></span> <span data-ttu-id="07e17-159">이 변수를 사용 하 여 cmdlet에서 사용할 수 있는 실행 개체를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-159">You can use this variable to find the execution objects that are available to cmdlets.</span></span>
+<span data-ttu-id="b0617-157">PowerShell 호스트의 실행 컨텍스트를 나타내는 **EngineIntrinsics** 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-157">Contains an **EngineIntrinsics** object that represents the execution context of the PowerShell host.</span></span> <span data-ttu-id="b0617-158">이 변수를 사용 하 여 cmdlet에서 사용할 수 있는 실행 개체를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-158">You can use this variable to find the execution objects that are available to cmdlets.</span></span>
 
-### <a name="false"></a><span data-ttu-id="07e17-160">$false</span><span class="sxs-lookup"><span data-stu-id="07e17-160">$false</span></span>
+### <a name="false"></a><span data-ttu-id="b0617-159">$false</span><span class="sxs-lookup"><span data-stu-id="b0617-159">$false</span></span>
 
-<span data-ttu-id="07e17-161">**False** 를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-161">Contains **False**.</span></span> <span data-ttu-id="07e17-162">"False" 문자열을 사용 하는 대신이 변수를 사용 하 여 명령 및 스크립트에서 **False** 를 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-162">You can use this variable to represent **False** in commands and scripts instead of using the string "false".</span></span> <span data-ttu-id="07e17-163">문자열은 비어 있지 않은 문자열이 나 0이 아닌 정수로 변환 되는 경우 **True** 로 해석 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-163">The string can be interpreted as **True** if it's converted to a non-empty string or to a non-zero integer.</span></span>
+<span data-ttu-id="b0617-160">**False** 를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-160">Contains **False**.</span></span> <span data-ttu-id="b0617-161">"False" 문자열을 사용 하는 대신이 변수를 사용 하 여 명령 및 스크립트에서 **False** 를 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-161">You can use this variable to represent **False** in commands and scripts instead of using the string "false".</span></span> <span data-ttu-id="b0617-162">문자열은 비어 있지 않은 문자열이 나 0이 아닌 정수로 변환 되는 경우 **True** 로 해석 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-162">The string can be interpreted as **True** if it's converted to a non-empty string or to a non-zero integer.</span></span>
 
-### <a name="foreach"></a><span data-ttu-id="07e17-164">$foreach</span><span class="sxs-lookup"><span data-stu-id="07e17-164">$foreach</span></span>
+### <a name="foreach"></a><span data-ttu-id="b0617-163">$foreach</span><span class="sxs-lookup"><span data-stu-id="b0617-163">$foreach</span></span>
 
-<span data-ttu-id="07e17-165">[ForEach](about_ForEach.md) 루프의 결과 값이 아니라 열거자를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-165">Contains the enumerator (not the resulting values) of a [ForEach](about_ForEach.md) loop.</span></span> <span data-ttu-id="07e17-166">`$ForEach`변수는 루프가 실행 되는 동안에만 존재 합니다. `ForEach` 루프가 완료 된 후에는 삭제 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-166">The `$ForEach` variable exists only while the `ForEach` loop is running; it's deleted after the loop is completed.</span></span>
+<span data-ttu-id="b0617-164">[ForEach](about_ForEach.md) 루프의 결과 값이 아니라 열거자를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-164">Contains the enumerator (not the resulting values) of a [ForEach](about_ForEach.md) loop.</span></span> <span data-ttu-id="b0617-165">`$ForEach`변수는 루프가 실행 되는 동안에만 존재 합니다. `ForEach` 루프가 완료 된 후에는 삭제 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-165">The `$ForEach` variable exists only while the `ForEach` loop is running; it's deleted after the loop is completed.</span></span>
 
-<span data-ttu-id="07e17-167">열거자는 루프 값을 검색 하 고 현재 루프 반복을 변경 하는 데 사용할 수 있는 속성 및 메서드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-167">Enumerators contain properties and methods you can use to retrieve loop values and change the current loop iteration.</span></span> <span data-ttu-id="07e17-168">자세한 내용은 [열거자 사용](#using-enumerators)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="07e17-168">For more information, see [Using Enumerators](#using-enumerators).</span></span>
+<span data-ttu-id="b0617-166">열거자는 루프 값을 검색 하 고 현재 루프 반복을 변경 하는 데 사용할 수 있는 속성 및 메서드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-166">Enumerators contain properties and methods you can use to retrieve loop values and change the current loop iteration.</span></span> <span data-ttu-id="b0617-167">자세한 내용은 [열거자 사용](#using-enumerators)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="b0617-167">For more information, see [Using Enumerators](#using-enumerators).</span></span>
 
-### <a name="home"></a><span data-ttu-id="07e17-169">$HOME</span><span class="sxs-lookup"><span data-stu-id="07e17-169">$HOME</span></span>
+### <a name="home"></a><span data-ttu-id="b0617-168">$HOME</span><span class="sxs-lookup"><span data-stu-id="b0617-168">$HOME</span></span>
 
-<span data-ttu-id="07e17-170">사용자의 홈 디렉터리에 대 한 전체 경로를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-170">Contains the full path of the user's home directory.</span></span> <span data-ttu-id="07e17-171">이 변수는 `"$env:homedrive$env:homepath"` 일반적으로 Windows 환경 변수에 해당 합니다 `C:\Users\<UserName>` .</span><span class="sxs-lookup"><span data-stu-id="07e17-171">This variable is the equivalent of the `"$env:homedrive$env:homepath"` Windows environment variables, typically `C:\Users\<UserName>`.</span></span>
+<span data-ttu-id="b0617-169">사용자의 홈 디렉터리에 대 한 전체 경로를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-169">Contains the full path of the user's home directory.</span></span> <span data-ttu-id="b0617-170">이 변수는 `"$env:homedrive$env:homepath"` 일반적으로 Windows 환경 변수에 해당 합니다 `C:\Users\<UserName>` .</span><span class="sxs-lookup"><span data-stu-id="b0617-170">This variable is the equivalent of the `"$env:homedrive$env:homepath"` Windows environment variables, typically `C:\Users\<UserName>`.</span></span>
 
-### <a name="host"></a><span data-ttu-id="07e17-172">$Host</span><span class="sxs-lookup"><span data-stu-id="07e17-172">$Host</span></span>
+### <a name="host"></a><span data-ttu-id="b0617-171">$Host</span><span class="sxs-lookup"><span data-stu-id="b0617-171">$Host</span></span>
 
-<span data-ttu-id="07e17-173">PowerShell에 대 한 현재 호스트 응용 프로그램을 나타내는 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-173">Contains an object that represents the current host application for PowerShell.</span></span> <span data-ttu-id="07e17-174">이 변수를 사용 하 여 명령의 현재 호스트를 나타내거나 또는 등의 호스트 속성을 표시 하거나 변경할 수 있습니다 `$Host.version` `$Host.CurrentCulture` `$host.ui.rawui.setbackgroundcolor("Red")` .</span><span class="sxs-lookup"><span data-stu-id="07e17-174">You can use this variable to represent the current host in commands or to display or change the properties of the host, such as `$Host.version` or `$Host.CurrentCulture`, or `$host.ui.rawui.setbackgroundcolor("Red")`.</span></span>
+<span data-ttu-id="b0617-172">PowerShell에 대 한 현재 호스트 응용 프로그램을 나타내는 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-172">Contains an object that represents the current host application for PowerShell.</span></span> <span data-ttu-id="b0617-173">이 변수를 사용 하 여 명령의 현재 호스트를 나타내거나 또는 등의 호스트 속성을 표시 하거나 변경할 수 있습니다 `$Host.version` `$Host.CurrentCulture` `$host.ui.rawui.setbackgroundcolor("Red")` .</span><span class="sxs-lookup"><span data-stu-id="b0617-173">You can use this variable to represent the current host in commands or to display or change the properties of the host, such as `$Host.version` or `$Host.CurrentCulture`, or `$host.ui.rawui.setbackgroundcolor("Red")`.</span></span>
 
-### <a name="input"></a><span data-ttu-id="07e17-175">$input</span><span class="sxs-lookup"><span data-stu-id="07e17-175">$input</span></span>
+### <a name="input"></a><span data-ttu-id="b0617-174">$input</span><span class="sxs-lookup"><span data-stu-id="b0617-174">$input</span></span>
 
-<span data-ttu-id="07e17-176">함수에 전달 되는 모든 입력을 열거 하는 열거자를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-176">Contains an enumerator that enumerates all input that is passed to a function.</span></span> <span data-ttu-id="07e17-177">`$input`변수는 함수 및 스크립트 블록 (명명 되지 않은 함수) 에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-177">The `$input` variable is available only to functions and script blocks (which are unnamed functions).</span></span>
+<span data-ttu-id="b0617-175">함수에 전달 되는 모든 입력을 열거 하는 열거자를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-175">Contains an enumerator that enumerates all input that is passed to a function.</span></span> <span data-ttu-id="b0617-176">`$input`변수는 함수 및 스크립트 블록 (명명 되지 않은 함수) 에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-176">The `$input` variable is available only to functions and script blocks (which are unnamed functions).</span></span>
 
-- <span data-ttu-id="07e17-178">`Begin`, 또는 블록이 없는 함수에서 `Process` `End` `$input` 변수는 함수에 대 한 모든 입력의 컬렉션을 열거 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-178">In a function without a `Begin`, `Process`, or `End` block, the `$input` variable enumerates the collection of all input to the function.</span></span>
+- <span data-ttu-id="b0617-177">`Begin`, 또는 블록이 없는 함수에서 `Process` `End` `$input` 변수는 함수에 대 한 모든 입력의 컬렉션을 열거 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-177">In a function without a `Begin`, `Process`, or `End` block, the `$input` variable enumerates the collection of all input to the function.</span></span>
 
-- <span data-ttu-id="07e17-179">블록에서 `Begin` `$input` 변수에는 데이터가 포함 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-179">In the `Begin` block, the `$input` variable contains no data.</span></span>
+- <span data-ttu-id="b0617-178">블록에서 `Begin` `$input` 변수에는 데이터가 포함 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-178">In the `Begin` block, the `$input` variable contains no data.</span></span>
 
-- <span data-ttu-id="07e17-180">블록에서 `Process` `$input` 변수는 현재 파이프라인에 있는 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-180">In the `Process` block, the `$input` variable contains the object that is currently in the pipeline.</span></span>
+- <span data-ttu-id="b0617-179">블록에서 `Process` `$input` 변수는 현재 파이프라인에 있는 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-179">In the `Process` block, the `$input` variable contains the object that is currently in the pipeline.</span></span>
 
-- <span data-ttu-id="07e17-181">블록에서 `End` `$input` 변수는 함수에 대 한 모든 입력의 컬렉션을 열거 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-181">In the `End` block, the `$input` variable enumerates the collection of all input to the function.</span></span>
+- <span data-ttu-id="b0617-180">블록에서 `End` `$input` 변수는 함수에 대 한 모든 입력의 컬렉션을 열거 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-180">In the `End` block, the `$input` variable enumerates the collection of all input to the function.</span></span>
 
   > [!NOTE]
-  > <span data-ttu-id="07e17-182">`$input`동일한 함수 또는 스크립트 블록의 프로세스 블록과 끝 블록 내에서 변수를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-182">You cannot use the `$input` variable inside both the Process block and the End block in the same function or script block.</span></span>
+  > <span data-ttu-id="b0617-181">`$input`동일한 함수 또는 스크립트 블록의 프로세스 블록과 끝 블록 내에서 변수를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-181">You cannot use the `$input` variable inside both the Process block and the End block in the same function or script block.</span></span>
 
-<span data-ttu-id="07e17-183">`$input`는 열거자 이므로 해당 속성에 액세스 하면 `$input` 더 이상 사용할 수 없게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-183">Since `$input` is an enumerator, accessing any of it's properties causes `$input` to no longer be available.</span></span> <span data-ttu-id="07e17-184">`$input`다른 변수에 저장 하 여 속성을 다시 사용할 수 있습니다 `$input` .</span><span class="sxs-lookup"><span data-stu-id="07e17-184">You can store `$input` in another variable to reuse the `$input` properties.</span></span>
+<span data-ttu-id="b0617-182">`$input`는 열거자 이므로 해당 속성에 액세스 하면 `$input` 더 이상 사용할 수 없게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-182">Since `$input` is an enumerator, accessing any of it's properties causes `$input` to no longer be available.</span></span> <span data-ttu-id="b0617-183">`$input`다른 변수에 저장 하 여 속성을 다시 사용할 수 있습니다 `$input` .</span><span class="sxs-lookup"><span data-stu-id="b0617-183">You can store `$input` in another variable to reuse the `$input` properties.</span></span>
 
-<span data-ttu-id="07e17-185">열거자는 루프 값을 검색 하 고 현재 루프 반복을 변경 하는 데 사용할 수 있는 속성 및 메서드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-185">Enumerators contain properties and methods you can use to retrieve loop values and change the current loop iteration.</span></span> <span data-ttu-id="07e17-186">자세한 내용은 [열거자 사용](#using-enumerators)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="07e17-186">For more information, see [Using Enumerators](#using-enumerators).</span></span>
+<span data-ttu-id="b0617-184">열거자는 루프 값을 검색 하 고 현재 루프 반복을 변경 하는 데 사용할 수 있는 속성 및 메서드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-184">Enumerators contain properties and methods you can use to retrieve loop values and change the current loop iteration.</span></span> <span data-ttu-id="b0617-185">자세한 내용은 [열거자 사용](#using-enumerators)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="b0617-185">For more information, see [Using Enumerators](#using-enumerators).</span></span>
 
-### <a name="iscoreclr"></a><span data-ttu-id="07e17-187">$IsCoreCLR</span><span class="sxs-lookup"><span data-stu-id="07e17-187">$IsCoreCLR</span></span>
+<span data-ttu-id="b0617-186">`$input`변수는 `-Command` `pwsh` 명령줄에서 호출 될 때 매개 변수에서 지정 하는 명령에도 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-186">The `$input` variable is also available to the command specified by the `-Command` parameter of `pwsh` when invoked from the command line.</span></span> <span data-ttu-id="b0617-187">다음 예제는 Windows 명령 셸에서 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-187">The following example is run from the Windows Command shell.</span></span>
 
-<span data-ttu-id="07e17-188">`$True`현재 세션이 CoreCLR (.Net Core 런타임)에서 실행 되는 경우를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-188">Contains `$True` if the current session is running on the .NET Core Runtime (CoreCLR).</span></span> <span data-ttu-id="07e17-189">그렇지 않으면 `$False` 를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-189">Otherwise contains `$False`.</span></span>
+```CMD
+echo Hello | pwsh -Command """$input World!"""
+```
 
-### <a name="islinux"></a><span data-ttu-id="07e17-190">$IsLinux</span><span class="sxs-lookup"><span data-stu-id="07e17-190">$IsLinux</span></span>
+### <a name="iscoreclr"></a><span data-ttu-id="b0617-188">$IsCoreCLR</span><span class="sxs-lookup"><span data-stu-id="b0617-188">$IsCoreCLR</span></span>
 
-<span data-ttu-id="07e17-191">`$True`현재 세션이 Linux 운영 체제에서 실행 되 고 있는지 여부를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-191">Contains `$True` if the current session is running on a Linux operating system.</span></span>
-<span data-ttu-id="07e17-192">그렇지 않으면 `$False` 를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-192">Otherwise contains `$False`.</span></span>
+<span data-ttu-id="b0617-189">`$True`현재 세션이 CoreCLR (.Net Core 런타임)에서 실행 되는 경우를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-189">Contains `$True` if the current session is running on the .NET Core Runtime (CoreCLR).</span></span> <span data-ttu-id="b0617-190">그렇지 않으면 `$False` 를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-190">Otherwise contains `$False`.</span></span>
 
-### <a name="ismacos"></a><span data-ttu-id="07e17-193">$IsMacOS</span><span class="sxs-lookup"><span data-stu-id="07e17-193">$IsMacOS</span></span>
+### <a name="islinux"></a><span data-ttu-id="b0617-191">$IsLinux</span><span class="sxs-lookup"><span data-stu-id="b0617-191">$IsLinux</span></span>
 
-<span data-ttu-id="07e17-194">`$True`현재 세션이 MacOS 운영 체제에서 실행 되 고 있는지 여부를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-194">Contains `$True` if the current session is running on a MacOS operating system.</span></span>
-<span data-ttu-id="07e17-195">그렇지 않으면 `$False` 를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-195">Otherwise contains `$False`.</span></span>
+<span data-ttu-id="b0617-192">`$True`현재 세션이 Linux 운영 체제에서 실행 되 고 있는지 여부를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-192">Contains `$True` if the current session is running on a Linux operating system.</span></span>
+<span data-ttu-id="b0617-193">그렇지 않으면 `$False` 를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-193">Otherwise contains `$False`.</span></span>
 
-### <a name="iswindows"></a><span data-ttu-id="07e17-196">$IsWindows</span><span class="sxs-lookup"><span data-stu-id="07e17-196">$IsWindows</span></span>
+### <a name="ismacos"></a><span data-ttu-id="b0617-194">$IsMacOS</span><span class="sxs-lookup"><span data-stu-id="b0617-194">$IsMacOS</span></span>
 
-<span data-ttu-id="07e17-197">`$TRUE`현재 세션이 Windows 운영 체제에서 실행 되 고 있는지 여부를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-197">Contains `$TRUE` if the current session is running on a Windows operating system.</span></span> <span data-ttu-id="07e17-198">그렇지 않으면 `$FALSE` 를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-198">Otherwise contains `$FALSE`.</span></span>
+<span data-ttu-id="b0617-195">`$True`현재 세션이 MacOS 운영 체제에서 실행 되 고 있는지 여부를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-195">Contains `$True` if the current session is running on a MacOS operating system.</span></span>
+<span data-ttu-id="b0617-196">그렇지 않으면 `$False` 를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-196">Otherwise contains `$False`.</span></span>
 
-### <a name="lastexitcode"></a><span data-ttu-id="07e17-199">$LastExitCode</span><span class="sxs-lookup"><span data-stu-id="07e17-199">$LastExitCode</span></span>
+### <a name="iswindows"></a><span data-ttu-id="b0617-197">$IsWindows</span><span class="sxs-lookup"><span data-stu-id="b0617-197">$IsWindows</span></span>
 
-<span data-ttu-id="07e17-200">실행 된 마지막 Windows 기반 프로그램의 종료 코드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-200">Contains the exit code of the last Windows-based program that was run.</span></span>
+<span data-ttu-id="b0617-198">`$TRUE`현재 세션이 Windows 운영 체제에서 실행 되 고 있는지 여부를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-198">Contains `$TRUE` if the current session is running on a Windows operating system.</span></span> <span data-ttu-id="b0617-199">그렇지 않으면 `$FALSE` 를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-199">Otherwise contains `$FALSE`.</span></span>
 
-### <a name="matches"></a><span data-ttu-id="07e17-201">$Matches</span><span class="sxs-lookup"><span data-stu-id="07e17-201">$Matches</span></span>
+### <a name="lastexitcode"></a><span data-ttu-id="b0617-200">$LastExitCode</span><span class="sxs-lookup"><span data-stu-id="b0617-200">$LastExitCode</span></span>
 
-<span data-ttu-id="07e17-202">`Matches`변수는 및 연산자와 함께 작동 `-match` `-notmatch` 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-202">The `Matches` variable works with the `-match` and `-notmatch` operators.</span></span>
-<span data-ttu-id="07e17-203">스칼라 입력을 or 연산자에 제출 `-match` 하 `-notmatch` 고 하나는 일치 항목을 검색 하는 경우 부울 값을 반환 하 고 `$Matches` 일치 하는 모든 문자열 값의 해시 테이블을 사용 하 여 자동 변수를 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-203">When you submit scalar input to the `-match` or `-notmatch` operator, and either one detects a match, they return a Boolean value and populate the `$Matches` automatic variable with a hash table of any string values that were matched.</span></span> <span data-ttu-id="07e17-204">연산자를 사용 하 여 `$Matches` 정규식을 사용 하는 경우에는 해시 테이블을 캡처로 채울 수도 있습니다 `-match` .</span><span class="sxs-lookup"><span data-stu-id="07e17-204">The `$Matches` hash table can also be populated with captures when you use regular expressions with the `-match` operator.</span></span>
+<span data-ttu-id="b0617-201">실행 된 마지막 Windows 기반 프로그램의 종료 코드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-201">Contains the exit code of the last Windows-based program that was run.</span></span>
 
-<span data-ttu-id="07e17-205">연산자에 대 한 자세한 내용은 `-match` [about_Comparison_Operators](about_comparison_operators.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="07e17-205">For more information about the `-match` operator, see [about_Comparison_Operators](about_comparison_operators.md).</span></span> <span data-ttu-id="07e17-206">정규식에 대 한 자세한 내용은 [about_Regular_Expressions](about_Regular_Expressions.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="07e17-206">For more information on regular expressions, see [about_Regular_Expressions](about_Regular_Expressions.md).</span></span>
+### <a name="matches"></a><span data-ttu-id="b0617-202">$Matches</span><span class="sxs-lookup"><span data-stu-id="b0617-202">$Matches</span></span>
 
-### <a name="myinvocation"></a><span data-ttu-id="07e17-207">$MyInvocation</span><span class="sxs-lookup"><span data-stu-id="07e17-207">$MyInvocation</span></span>
+<span data-ttu-id="b0617-203">`Matches`변수는 및 연산자와 함께 작동 `-match` `-notmatch` 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-203">The `Matches` variable works with the `-match` and `-notmatch` operators.</span></span>
+<span data-ttu-id="b0617-204">스칼라 입력을 or 연산자에 제출 `-match` 하 `-notmatch` 고 하나는 일치 항목을 검색 하는 경우 부울 값을 반환 하 고 `$Matches` 일치 하는 모든 문자열 값의 해시 테이블을 사용 하 여 자동 변수를 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-204">When you submit scalar input to the `-match` or `-notmatch` operator, and either one detects a match, they return a Boolean value and populate the `$Matches` automatic variable with a hash table of any string values that were matched.</span></span> <span data-ttu-id="b0617-205">연산자를 사용 하 여 `$Matches` 정규식을 사용 하는 경우에는 해시 테이블을 캡처로 채울 수도 있습니다 `-match` .</span><span class="sxs-lookup"><span data-stu-id="b0617-205">The `$Matches` hash table can also be populated with captures when you use regular expressions with the `-match` operator.</span></span>
 
-<span data-ttu-id="07e17-208">현재 명령에 대 한 정보 (예: 이름, 매개 변수, 매개 변수 값) 및 명령이 시작, 호출 또는 호출 된 방법에 대 한 정보를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-208">Contains information about the current command, such as the name, parameters, parameter values, and information about how the command was started, called, or invoked, such as the name of the script that called the current command.</span></span>
+<span data-ttu-id="b0617-206">연산자에 대 한 자세한 내용은 `-match` [about_Comparison_Operators](about_comparison_operators.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="b0617-206">For more information about the `-match` operator, see [about_Comparison_Operators](about_comparison_operators.md).</span></span> <span data-ttu-id="b0617-207">정규식에 대 한 자세한 내용은 [about_Regular_Expressions](about_Regular_Expressions.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="b0617-207">For more information on regular expressions, see [about_Regular_Expressions](about_Regular_Expressions.md).</span></span>
 
-<span data-ttu-id="07e17-209">`$MyInvocation` 는 스크립트, 함수 및 스크립트 블록에 대해서만 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-209">`$MyInvocation` is populated only for scripts, function, and script blocks.</span></span> <span data-ttu-id="07e17-210">현재 스크립트에서 반환 하는 정보 **System.Management.Automation.InvocationInfo** `$MyInvocation` (예: 스크립트의 경로 및 파일 이름 ( `$MyInvocation.MyCommand.Path` ) 또는 함수 이름 ( `$MyInvocation.MyCommand.Name` ))를 사용 하 여 현재 명령을 식별할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-210">You can use the information in the **System.Management.Automation.InvocationInfo** object that `$MyInvocation` returns in the current script, such as the path and file name of the script (`$MyInvocation.MyCommand.Path`) or the name of a function (`$MyInvocation.MyCommand.Name`) to identify the current command.</span></span> <span data-ttu-id="07e17-211">이는 현재 스크립트의 이름을 찾는 데 특히 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-211">This is particularly useful for finding the name of the current script.</span></span>
+### <a name="myinvocation"></a><span data-ttu-id="b0617-208">$MyInvocation</span><span class="sxs-lookup"><span data-stu-id="b0617-208">$MyInvocation</span></span>
 
-<span data-ttu-id="07e17-212">PowerShell 3.0부터에는 `MyInvocation` 다음과 같은 새 속성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-212">Beginning in PowerShell 3.0, `MyInvocation` has the following new properties.</span></span>
+<span data-ttu-id="b0617-209">현재 명령에 대 한 정보 (예: 이름, 매개 변수, 매개 변수 값) 및 명령이 시작, 호출 또는 호출 된 방법에 대 한 정보를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-209">Contains information about the current command, such as the name, parameters, parameter values, and information about how the command was started, called, or invoked, such as the name of the script that called the current command.</span></span>
 
-| <span data-ttu-id="07e17-213">속성</span><span class="sxs-lookup"><span data-stu-id="07e17-213">Property</span></span>      | <span data-ttu-id="07e17-214">Description</span><span class="sxs-lookup"><span data-stu-id="07e17-214">Description</span></span>                                         |
+<span data-ttu-id="b0617-210">`$MyInvocation` 는 스크립트, 함수 및 스크립트 블록에 대해서만 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-210">`$MyInvocation` is populated only for scripts, function, and script blocks.</span></span> <span data-ttu-id="b0617-211">현재 스크립트에서 반환 하는 정보  `$MyInvocation` (예: 스크립트의 경로 및 파일 이름 ( `$MyInvocation.MyCommand.Path` ) 또는 함수 이름 ( `$MyInvocation.MyCommand.Name` ))를 사용 하 여 현재 명령을 식별할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-211">You can use the information in the **System.Management.Automation.InvocationInfo** object that `$MyInvocation` returns in the current script, such as the path and file name of the script (`$MyInvocation.MyCommand.Path`) or the name of a function (`$MyInvocation.MyCommand.Name`) to identify the current command.</span></span> <span data-ttu-id="b0617-212">이는 현재 스크립트의 이름을 찾는 데 특히 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-212">This is particularly useful for finding the name of the current script.</span></span>
+
+<span data-ttu-id="b0617-213">PowerShell 3.0부터에는 `MyInvocation` 다음과 같은 새 속성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-213">Beginning in PowerShell 3.0, `MyInvocation` has the following new properties.</span></span>
+
+| <span data-ttu-id="b0617-214">속성</span><span class="sxs-lookup"><span data-stu-id="b0617-214">Property</span></span>      | <span data-ttu-id="b0617-215">설명</span><span class="sxs-lookup"><span data-stu-id="b0617-215">Description</span></span>                                         |
 | ------------- | --------------------------------------------------- |
-| <span data-ttu-id="07e17-215">**PSScriptRoot**</span><span class="sxs-lookup"><span data-stu-id="07e17-215">**PSScriptRoot**</span></span>  | <span data-ttu-id="07e17-216">호출 된 스크립트에 대 한 전체 경로를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-216">Contains the full path to the script that invoked</span></span>   |
-|               | <span data-ttu-id="07e17-217">현재 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-217">the current command.</span></span> <span data-ttu-id="07e17-218">이 속성의 값은입니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-218">The value of this property is</span></span>  |
-|               | <span data-ttu-id="07e17-219">호출자가 스크립트인 경우에만 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-219">populated only when the caller is a script.</span></span>         |
-| <span data-ttu-id="07e17-220">**PSCommandPath**</span><span class="sxs-lookup"><span data-stu-id="07e17-220">**PSCommandPath**</span></span> | <span data-ttu-id="07e17-221">스크립트의 전체 경로 및 파일 이름을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-221">Contains the full path and file name of the script</span></span>  |
-|               | <span data-ttu-id="07e17-222">현재 명령을 호출한입니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-222">that invoked the current command.</span></span> <span data-ttu-id="07e17-223">이의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-223">The value of this</span></span> |
-|               | <span data-ttu-id="07e17-224">호출자가 인 경우에만 속성이 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-224">property is populated only when the caller is a</span></span>     |
-|               | <span data-ttu-id="07e17-225">스크립트를 제출하고 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-225">script.</span></span>                                             |
+| <span data-ttu-id="b0617-216">**PSScriptRoot**</span><span class="sxs-lookup"><span data-stu-id="b0617-216">**PSScriptRoot**</span></span>  | <span data-ttu-id="b0617-217">호출 된 스크립트에 대 한 전체 경로를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-217">Contains the full path to the script that invoked</span></span>   |
+|               | <span data-ttu-id="b0617-218">현재 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-218">the current command.</span></span> <span data-ttu-id="b0617-219">이 속성의 값은입니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-219">The value of this property is</span></span>  |
+|               | <span data-ttu-id="b0617-220">호출자가 스크립트인 경우에만 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-220">populated only when the caller is a script.</span></span>         |
+| <span data-ttu-id="b0617-221">**PSCommandPath**</span><span class="sxs-lookup"><span data-stu-id="b0617-221">**PSCommandPath**</span></span> | <span data-ttu-id="b0617-222">스크립트의 전체 경로 및 파일 이름을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-222">Contains the full path and file name of the script</span></span>  |
+|               | <span data-ttu-id="b0617-223">현재 명령을 호출한입니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-223">that invoked the current command.</span></span> <span data-ttu-id="b0617-224">이의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-224">The value of this</span></span> |
+|               | <span data-ttu-id="b0617-225">호출자가 인 경우에만 속성이 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-225">property is populated only when the caller is a</span></span>     |
+|               | <span data-ttu-id="b0617-226">스크립트를 제출하고 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-226">script.</span></span>                                             |
 
-<span data-ttu-id="07e17-226">`$PSScriptRoot`및 `$PSCommandPath` 자동 변수와 달리 자동 변수의 **Psscriptroot** 및 **psscriptroot** 속성은 `$MyInvocation` 현재 스크립트가 아니라 호출자 또는 호출 스크립트에 대 한 정보를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-226">Unlike the `$PSScriptRoot` and `$PSCommandPath` automatic variables, the **PSScriptRoot** and **PSCommandPath** properties of the `$MyInvocation` automatic variable contain information about the invoker or calling script, not the current script.</span></span>
+<span data-ttu-id="b0617-227">`$PSScriptRoot`및 `$PSCommandPath` 자동 변수와 달리 자동 변수의 **Psscriptroot** 및 **psscriptroot** 속성은 `$MyInvocation` 현재 스크립트가 아니라 호출자 또는 호출 스크립트에 대 한 정보를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-227">Unlike the `$PSScriptRoot` and `$PSCommandPath` automatic variables, the **PSScriptRoot** and **PSCommandPath** properties of the `$MyInvocation` automatic variable contain information about the invoker or calling script, not the current script.</span></span>
 
-### <a name="nestedpromptlevel"></a><span data-ttu-id="07e17-227">$NestedPromptLevel</span><span class="sxs-lookup"><span data-stu-id="07e17-227">$NestedPromptLevel</span></span>
+### <a name="nestedpromptlevel"></a><span data-ttu-id="b0617-228">$NestedPromptLevel</span><span class="sxs-lookup"><span data-stu-id="b0617-228">$NestedPromptLevel</span></span>
 
-<span data-ttu-id="07e17-228">현재 프롬프트 수준을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-228">Contains the current prompt level.</span></span> <span data-ttu-id="07e17-229">값 0은 원래 프롬프트 수준을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-229">A value of 0 indicates the original prompt level.</span></span> <span data-ttu-id="07e17-230">중첩 된 수준을 입력 하면 값이 증가 하 고 종료 될 때 감소 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-230">The value is incremented when you enter a nested level and decremented when you exit it.</span></span>
+<span data-ttu-id="b0617-229">현재 프롬프트 수준을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-229">Contains the current prompt level.</span></span> <span data-ttu-id="b0617-230">값 0은 원래 프롬프트 수준을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-230">A value of 0 indicates the original prompt level.</span></span> <span data-ttu-id="b0617-231">중첩 된 수준을 입력 하면 값이 증가 하 고 종료 될 때 감소 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-231">The value is incremented when you enter a nested level and decremented when you exit it.</span></span>
 
-<span data-ttu-id="07e17-231">예를 들어, 메서드를 사용할 때 PowerShell에서 중첩 된 명령 프롬프트를 표시 합니다 `$Host.EnterNestedPrompt` .</span><span class="sxs-lookup"><span data-stu-id="07e17-231">For example, PowerShell presents a nested command prompt when you use the `$Host.EnterNestedPrompt` method.</span></span> <span data-ttu-id="07e17-232">Powershell은 PowerShell 디버거의 중단점에 도달 하는 경우에도 중첩 된 명령 프롬프트를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-232">PowerShell also presents a nested command prompt when you reach a breakpoint in the PowerShell debugger.</span></span>
+<span data-ttu-id="b0617-232">예를 들어, 메서드를 사용할 때 PowerShell에서 중첩 된 명령 프롬프트를 표시 합니다 `$Host.EnterNestedPrompt` .</span><span class="sxs-lookup"><span data-stu-id="b0617-232">For example, PowerShell presents a nested command prompt when you use the `$Host.EnterNestedPrompt` method.</span></span> <span data-ttu-id="b0617-233">Powershell은 PowerShell 디버거의 중단점에 도달 하는 경우에도 중첩 된 명령 프롬프트를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-233">PowerShell also presents a nested command prompt when you reach a breakpoint in the PowerShell debugger.</span></span>
 
-<span data-ttu-id="07e17-233">중첩 된 프롬프트를 입력 하면 PowerShell에서 현재 명령을 일시 중지 하 고, 실행 컨텍스트를 저장 하 고, 변수 값을 증가 시킵니다 `$NestedPromptLevel` .</span><span class="sxs-lookup"><span data-stu-id="07e17-233">When you enter a nested prompt, PowerShell pauses the current command, saves the execution context, and increments the value of the `$NestedPromptLevel` variable.</span></span> <span data-ttu-id="07e17-234">추가 중첩 된 명령 프롬프트 (최대 128 수준)를 만들거나 원래 명령 프롬프트로 돌아가려면 명령을 완료 하거나를 입력 `exit` 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-234">To create additional nested command prompts (up to 128 levels) or to return to the original command prompt, complete the command, or type `exit`.</span></span>
+<span data-ttu-id="b0617-234">중첩 된 프롬프트를 입력 하면 PowerShell에서 현재 명령을 일시 중지 하 고, 실행 컨텍스트를 저장 하 고, 변수 값을 증가 시킵니다 `$NestedPromptLevel` .</span><span class="sxs-lookup"><span data-stu-id="b0617-234">When you enter a nested prompt, PowerShell pauses the current command, saves the execution context, and increments the value of the `$NestedPromptLevel` variable.</span></span> <span data-ttu-id="b0617-235">추가 중첩 된 명령 프롬프트 (최대 128 수준)를 만들거나 원래 명령 프롬프트로 돌아가려면 명령을 완료 하거나를 입력 `exit` 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-235">To create additional nested command prompts (up to 128 levels) or to return to the original command prompt, complete the command, or type `exit`.</span></span>
 
-<span data-ttu-id="07e17-235">`$NestedPromptLevel`변수를 사용 하면 프롬프트 수준을 추적할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-235">The `$NestedPromptLevel` variable helps you track the prompt level.</span></span> <span data-ttu-id="07e17-236">이 값을 포함 하는 대체 PowerShell 명령 프롬프트를 만들어 항상 표시 되도록 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-236">You can create an alternative PowerShell command prompt that includes this value so that it's always visible.</span></span>
+<span data-ttu-id="b0617-236">`$NestedPromptLevel`변수를 사용 하면 프롬프트 수준을 추적할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-236">The `$NestedPromptLevel` variable helps you track the prompt level.</span></span> <span data-ttu-id="b0617-237">이 값을 포함 하는 대체 PowerShell 명령 프롬프트를 만들어 항상 표시 되도록 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-237">You can create an alternative PowerShell command prompt that includes this value so that it's always visible.</span></span>
 
-### <a name="null"></a><span data-ttu-id="07e17-237">$null</span><span class="sxs-lookup"><span data-stu-id="07e17-237">$null</span></span>
+### <a name="null"></a><span data-ttu-id="b0617-238">$null</span><span class="sxs-lookup"><span data-stu-id="b0617-238">$null</span></span>
 
-<span data-ttu-id="07e17-238">`$null`**null** 또는 빈 값을 포함 하는 자동 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-238">`$null` is an automatic variable that contains a **null** or empty value.</span></span> <span data-ttu-id="07e17-239">이 변수를 사용 하 여 명령 및 스크립트에 없거나 정의 되지 않은 값을 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-239">You can use this variable to represent an absent or undefined value in commands and scripts.</span></span>
+<span data-ttu-id="b0617-239">`$null`**null** 또는 빈 값을 포함 하는 자동 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-239">`$null` is an automatic variable that contains a **null** or empty value.</span></span> <span data-ttu-id="b0617-240">이 변수를 사용 하 여 명령 및 스크립트에 없거나 정의 되지 않은 값을 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-240">You can use this variable to represent an absent or undefined value in commands and scripts.</span></span>
 
-<span data-ttu-id="07e17-240">PowerShell `$null` 은 값, 즉 명시적 자리 표시자로 개체를 처리 하므로를 사용 `$null` 하 여 일련의 값에서 빈 값을 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-240">PowerShell treats `$null` as an object with a value, that is, as an explicit placeholder, so you can use `$null` to represent an empty value in a series of values.</span></span>
+<span data-ttu-id="b0617-241">PowerShell `$null` 은 값, 즉 명시적 자리 표시자로 개체를 처리 하므로를 사용 `$null` 하 여 일련의 값에서 빈 값을 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-241">PowerShell treats `$null` as an object with a value, that is, as an explicit placeholder, so you can use `$null` to represent an empty value in a series of values.</span></span>
 
-<span data-ttu-id="07e17-241">예를 들어 `$null` 가 컬렉션에 포함 되어 있으면 개체 중 하나로 계산 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-241">For example, when `$null` is included in a collection, it's counted as one of the objects.</span></span>
+<span data-ttu-id="b0617-242">예를 들어 `$null` 가 컬렉션에 포함 되어 있으면 개체 중 하나로 계산 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-242">For example, when `$null` is included in a collection, it's counted as one of the objects.</span></span>
 
 ```powershell
 $a = "one", $null, "three"
@@ -214,7 +219,7 @@ $a.count
 3
 ```
 
-<span data-ttu-id="07e17-242">변수를 cmdlet에 파이프 하는 경우 `$null` `ForEach-Object` `$null` 다른 개체의 경우와 마찬가지로에 대 한 값을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-242">If you pipe the `$null` variable to the `ForEach-Object` cmdlet, it generates a value for `$null`, just as it does for the other objects</span></span>
+<span data-ttu-id="b0617-243">변수를 cmdlet에 파이프 하는 경우 `$null` `ForEach-Object` `$null` 다른 개체의 경우와 마찬가지로에 대 한 값을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-243">If you pipe the `$null` variable to the `ForEach-Object` cmdlet, it generates a value for `$null`, just as it does for the other objects</span></span>
 
 ```powershell
 "one", $null, "three" | ForEach-Object { "Hello " + $_}
@@ -226,9 +231,9 @@ Hello
 Hello three
 ```
 
-<span data-ttu-id="07e17-243">따라서 `$null` 를 사용 하 여 **매개 변수 값을 의미 하지 않습니다**.</span><span class="sxs-lookup"><span data-stu-id="07e17-243">As a result, you can't use `$null` to mean **no parameter value**.</span></span> <span data-ttu-id="07e17-244">의 매개 변수 값이 `$null` 기본 매개 변수 값을 재정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-244">A parameter value of `$null` overrides the default parameter value.</span></span>
+<span data-ttu-id="b0617-244">따라서 `$null` 를 사용 하 여 **매개 변수 값을 의미 하지 않습니다**.</span><span class="sxs-lookup"><span data-stu-id="b0617-244">As a result, you can't use `$null` to mean **no parameter value**.</span></span> <span data-ttu-id="b0617-245">의 매개 변수 값이 `$null` 기본 매개 변수 값을 재정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-245">A parameter value of `$null` overrides the default parameter value.</span></span>
 
-<span data-ttu-id="07e17-245">그러나 PowerShell은 변수를 자리 표시자로 처리 하기 때문에 `$null` 다음과 같은 스크립트에서 사용할 수 있습니다 .이 변수는 무시 되는 경우 작동 하지 `$null` 않습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-245">However, because PowerShell treats the `$null` variable as a placeholder, you can use it in scripts like the following one, which wouldn't work if `$null` were ignored.</span></span>
+<span data-ttu-id="b0617-246">그러나 PowerShell은 변수를 자리 표시자로 처리 하기 때문에 `$null` 다음과 같은 스크립트에서 사용할 수 있습니다 .이 변수는 무시 되는 경우 작동 하지 `$null` 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-246">However, because PowerShell treats the `$null` variable as a placeholder, you can use it in scripts like the following one, which wouldn't work if `$null` were ignored.</span></span>
 
 ```powershell
 $calendar = @($null, $null, "Meeting", $null, $null, "Team Lunch", $null)
@@ -251,35 +256,35 @@ Appointment on Tuesday: Meeting
 Appointment on Friday: Team lunch
 ```
 
-### <a name="pid"></a><span data-ttu-id="07e17-246">$PID</span><span class="sxs-lookup"><span data-stu-id="07e17-246">$PID</span></span>
+### <a name="pid"></a><span data-ttu-id="b0617-247">$PID</span><span class="sxs-lookup"><span data-stu-id="b0617-247">$PID</span></span>
 
-<span data-ttu-id="07e17-247">현재 PowerShell 세션을 호스트 하는 프로세스의 PID (프로세스 식별자)를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-247">Contains the process identifier (PID) of the process that is hosting the current PowerShell session.</span></span>
+<span data-ttu-id="b0617-248">현재 PowerShell 세션을 호스트 하는 프로세스의 PID (프로세스 식별자)를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-248">Contains the process identifier (PID) of the process that is hosting the current PowerShell session.</span></span>
 
-### <a name="profile"></a><span data-ttu-id="07e17-248">$PROFILE</span><span class="sxs-lookup"><span data-stu-id="07e17-248">$PROFILE</span></span>
+### <a name="profile"></a><span data-ttu-id="b0617-249">$PROFILE</span><span class="sxs-lookup"><span data-stu-id="b0617-249">$PROFILE</span></span>
 
-<span data-ttu-id="07e17-249">현재 사용자와 현재 호스트 응용 프로그램에 대 한 PowerShell 프로필의 전체 경로를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-249">Contains the full path of the PowerShell profile for the current user and the current host application.</span></span> <span data-ttu-id="07e17-250">이 변수를 사용 하 여 명령에 프로필을 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-250">You can use this variable to represent the profile in commands.</span></span> <span data-ttu-id="07e17-251">예를 들어 명령에 사용 하 여 프로필이 생성 되었는지 여부를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-251">For example, you can use it in a command to determine whether a profile has been created:</span></span>
+<span data-ttu-id="b0617-250">현재 사용자와 현재 호스트 응용 프로그램에 대 한 PowerShell 프로필의 전체 경로를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-250">Contains the full path of the PowerShell profile for the current user and the current host application.</span></span> <span data-ttu-id="b0617-251">이 변수를 사용 하 여 명령에 프로필을 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-251">You can use this variable to represent the profile in commands.</span></span> <span data-ttu-id="b0617-252">예를 들어 명령에 사용 하 여 프로필이 생성 되었는지 여부를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-252">For example, you can use it in a command to determine whether a profile has been created:</span></span>
 
 ```powershell
 Test-Path $PROFILE
 ```
 
-<span data-ttu-id="07e17-252">또는 명령에서 사용 하 여 프로필을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-252">Or, you can use it in a command to create a profile:</span></span>
+<span data-ttu-id="b0617-253">또는 명령에서 사용 하 여 프로필을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-253">Or, you can use it in a command to create a profile:</span></span>
 
 ```powershell
 New-Item -ItemType file -Path $PROFILE -Force
 ```
 
-<span data-ttu-id="07e17-253">명령에서이를 사용 하 여 **notepad.exe** 에서 프로필을 열 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-253">You can use it in a command to open the profile in **notepad.exe** :</span></span>
+<span data-ttu-id="b0617-254">명령에서이를 사용 하 여 **notepad.exe** 에서 프로필을 열 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-254">You can use it in a command to open the profile in **notepad.exe**:</span></span>
 
 ```powershell
 notepad.exe $PROFILE
 ```
 
-### <a name="psboundparameters"></a><span data-ttu-id="07e17-254">$PSBoundParameters</span><span class="sxs-lookup"><span data-stu-id="07e17-254">$PSBoundParameters</span></span>
+### <a name="psboundparameters"></a><span data-ttu-id="b0617-255">$PSBoundParameters</span><span class="sxs-lookup"><span data-stu-id="b0617-255">$PSBoundParameters</span></span>
 
-<span data-ttu-id="07e17-255">스크립트나 함수 및 현재 값에 전달 되는 매개 변수의 사전을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-255">Contains a dictionary of the parameters that are passed to a script or function and their current values.</span></span> <span data-ttu-id="07e17-256">이 변수에는 스크립트나 함수와 같은 매개 변수가 선언 된 범위에만 있는 값이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-256">This variable has a value only in a scope where parameters are declared, such as a script or function.</span></span> <span data-ttu-id="07e17-257">매개 변수의 현재 값을 표시 하거나 변경 하거나 매개 변수 값을 다른 스크립트나 함수에 전달 하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-257">You can use it to display or change the current values of parameters or to pass parameter values to another script or function.</span></span>
+<span data-ttu-id="b0617-256">스크립트나 함수 및 현재 값에 전달 되는 매개 변수의 사전을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-256">Contains a dictionary of the parameters that are passed to a script or function and their current values.</span></span> <span data-ttu-id="b0617-257">이 변수에는 스크립트나 함수와 같은 매개 변수가 선언 된 범위에만 있는 값이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-257">This variable has a value only in a scope where parameters are declared, such as a script or function.</span></span> <span data-ttu-id="b0617-258">매개 변수의 현재 값을 표시 하거나 변경 하거나 매개 변수 값을 다른 스크립트나 함수에 전달 하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-258">You can use it to display or change the current values of parameters or to pass parameter values to another script or function.</span></span>
 
-<span data-ttu-id="07e17-258">이 예제에서 **Test2** 함수는를 `$PSBoundParameters` **Test1** 함수에 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-258">In this example, the **Test2** function passes the `$PSBoundParameters` to the **Test1** function.</span></span> <span data-ttu-id="07e17-259">는 `$PSBoundParameters` **키** 와 **값** 의 형식으로 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-259">The `$PSBoundParameters` are displayed in the format of **Key** and **Value**.</span></span>
+<span data-ttu-id="b0617-259">이 예제에서 **Test2** 함수는를 `$PSBoundParameters` **Test1** 함수에 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-259">In this example, the **Test2** function passes the `$PSBoundParameters` to the **Test1** function.</span></span> <span data-ttu-id="b0617-260">는 `$PSBoundParameters` **키** 와 **값** 의 형식으로 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-260">The `$PSBoundParameters` are displayed in the format of **Key** and **Value**.</span></span>
 
 ```powershell
 function Test1 {
@@ -308,134 +313,134 @@ a     Power
 b     Shell
 ```
 
-### <a name="pscmdlet"></a><span data-ttu-id="07e17-260">$PSCmdlet</span><span class="sxs-lookup"><span data-stu-id="07e17-260">$PSCmdlet</span></span>
+### <a name="pscmdlet"></a><span data-ttu-id="b0617-261">$PSCmdlet</span><span class="sxs-lookup"><span data-stu-id="b0617-261">$PSCmdlet</span></span>
 
-<span data-ttu-id="07e17-261">실행 되는 cmdlet 또는 고급 함수를 나타내는 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-261">Contains an object that represents the cmdlet or advanced function that's being run.</span></span>
+<span data-ttu-id="b0617-262">실행 되는 cmdlet 또는 고급 함수를 나타내는 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-262">Contains an object that represents the cmdlet or advanced function that's being run.</span></span>
 
-<span data-ttu-id="07e17-262">Cmdlet 또는 함수 코드에서 개체의 속성 및 메서드를 사용 하 여 사용 조건에 응답할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-262">You can use the properties and methods of the object in your cmdlet or function code to respond to the conditions of use.</span></span> <span data-ttu-id="07e17-263">예를 들어 **ParameterSetName** 속성은 사용 중인 매개 변수 집합의 이름을 포함 하 고, **Shouldprocess** 메서드는 **WhatIf** 및 **Confirm** 매개 변수를 cmdlet에 동적으로 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-263">For example, the **ParameterSetName** property contains the name of the parameter set that's being used, and the **ShouldProcess** method adds the **WhatIf** and **Confirm** parameters to the cmdlet dynamically.</span></span>
+<span data-ttu-id="b0617-263">Cmdlet 또는 함수 코드에서 개체의 속성 및 메서드를 사용 하 여 사용 조건에 응답할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-263">You can use the properties and methods of the object in your cmdlet or function code to respond to the conditions of use.</span></span> <span data-ttu-id="b0617-264">예를 들어 **ParameterSetName** 속성은 사용 중인 매개 변수 집합의 이름을 포함 하 고, **Shouldprocess** 메서드는 **WhatIf** 및 **Confirm** 매개 변수를 cmdlet에 동적으로 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-264">For example, the **ParameterSetName** property contains the name of the parameter set that's being used, and the **ShouldProcess** method adds the **WhatIf** and **Confirm** parameters to the cmdlet dynamically.</span></span>
 
-<span data-ttu-id="07e17-264">자동 변수에 대 한 자세한 내용은 `$PSCmdlet` [about_Functions_CmdletBindingAttribute](about_Functions_CmdletBindingAttribute.md) 및 [about_Functions_Advanced](about_Functions_Advanced.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="07e17-264">For more information about the `$PSCmdlet` automatic variable, see [about_Functions_CmdletBindingAttribute](about_Functions_CmdletBindingAttribute.md) and [about_Functions_Advanced](about_Functions_Advanced.md).</span></span>
+<span data-ttu-id="b0617-265">자동 변수에 대 한 자세한 내용은 `$PSCmdlet` [about_Functions_CmdletBindingAttribute](about_Functions_CmdletBindingAttribute.md) 및 [about_Functions_Advanced](about_Functions_Advanced.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="b0617-265">For more information about the `$PSCmdlet` automatic variable, see [about_Functions_CmdletBindingAttribute](about_Functions_CmdletBindingAttribute.md) and [about_Functions_Advanced](about_Functions_Advanced.md).</span></span>
 
-### <a name="pscommandpath"></a><span data-ttu-id="07e17-265">$PSCommandPath</span><span class="sxs-lookup"><span data-stu-id="07e17-265">$PSCommandPath</span></span>
+### <a name="pscommandpath"></a><span data-ttu-id="b0617-266">$PSCommandPath</span><span class="sxs-lookup"><span data-stu-id="b0617-266">$PSCommandPath</span></span>
 
-<span data-ttu-id="07e17-266">실행 되는 스크립트의 전체 경로 및 파일 이름을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-266">Contains the full path and file name of the script that's being run.</span></span> <span data-ttu-id="07e17-267">이 변수는 모든 스크립트에서 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-267">This variable is valid in all scripts.</span></span>
+<span data-ttu-id="b0617-267">실행 되는 스크립트의 전체 경로 및 파일 이름을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-267">Contains the full path and file name of the script that's being run.</span></span> <span data-ttu-id="b0617-268">이 변수는 모든 스크립트에서 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-268">This variable is valid in all scripts.</span></span>
 
-### <a name="psculture"></a><span data-ttu-id="07e17-268">$PSCulture</span><span class="sxs-lookup"><span data-stu-id="07e17-268">$PSCulture</span></span>
+### <a name="psculture"></a><span data-ttu-id="b0617-269">$PSCulture</span><span class="sxs-lookup"><span data-stu-id="b0617-269">$PSCulture</span></span>
 
-<span data-ttu-id="07e17-269">PowerShell 7부터 `$PSCulture` 현재 powershell runspace (세션)의 문화권을 반영 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-269">Beginning in PowerShell 7, `$PSCulture` reflects the culture of the current PowerShell runspace (session).</span></span> <span data-ttu-id="07e17-270">PowerShell runspace에서 문화권이 변경 되 면 `$PSCulture` 해당 runspace의 값이 업데이트 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-270">If the culture is changed in a PowerShell runspace, the `$PSCulture` value for that runspace is updated.</span></span>
+<span data-ttu-id="b0617-270">PowerShell 7부터 `$PSCulture` 현재 powershell runspace (세션)의 문화권을 반영 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-270">Beginning in PowerShell 7, `$PSCulture` reflects the culture of the current PowerShell runspace (session).</span></span> <span data-ttu-id="b0617-271">PowerShell runspace에서 문화권이 변경 되 면 `$PSCulture` 해당 runspace의 값이 업데이트 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-271">If the culture is changed in a PowerShell runspace, the `$PSCulture` value for that runspace is updated.</span></span>
 
-<span data-ttu-id="07e17-271">문화권에 따라 숫자, 통화 및 날짜와 같은 항목의 표시 형식이 결정 되 고,이는 **system.object** 개체에 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-271">The culture determines the display format of items such as numbers, currency, and dates, and is stored in a **System.Globalization.CultureInfo** object.</span></span> <span data-ttu-id="07e17-272">`Get-Culture`를 사용 하 여 컴퓨터의 문화권을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-272">Use `Get-Culture` to display the computer's culture.</span></span> <span data-ttu-id="07e17-273">`$PSCulture`**이름** 속성의 값을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-273">`$PSCulture` contains the **Name** property's value.</span></span>
+<span data-ttu-id="b0617-272">문화권에 따라 숫자, 통화 및 날짜와 같은 항목의 표시 형식이 결정 되 고,이는 **system.object** 개체에 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-272">The culture determines the display format of items such as numbers, currency, and dates, and is stored in a **System.Globalization.CultureInfo** object.</span></span> <span data-ttu-id="b0617-273">`Get-Culture`를 사용 하 여 컴퓨터의 문화권을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-273">Use `Get-Culture` to display the computer's culture.</span></span> <span data-ttu-id="b0617-274">`$PSCulture`**이름** 속성의 값을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-274">`$PSCulture` contains the **Name** property's value.</span></span>
 
-### <a name="psdebugcontext"></a><span data-ttu-id="07e17-274">$PSDebugContext</span><span class="sxs-lookup"><span data-stu-id="07e17-274">$PSDebugContext</span></span>
+### <a name="psdebugcontext"></a><span data-ttu-id="b0617-275">$PSDebugContext</span><span class="sxs-lookup"><span data-stu-id="b0617-275">$PSDebugContext</span></span>
 
-<span data-ttu-id="07e17-275">디버깅 하는 동안이 변수는 디버깅 환경에 대 한 정보를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-275">While debugging, this variable contains information about the debugging environment.</span></span> <span data-ttu-id="07e17-276">그렇지 않으면 **null** 값이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-276">Otherwise, it contains a **null** value.</span></span> <span data-ttu-id="07e17-277">따라서 디버거에서 컨트롤을 사용할 수 있는지 여부를 나타내는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-277">As a result, you can use it to indicate whether the debugger has control.</span></span> <span data-ttu-id="07e17-278">채워진 경우 **중단점과** **InvocationInfo** 속성을 포함 하는 **psdebugcontext** 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-278">When populated, it contains a **PsDebugContext** object that has **Breakpoints** and **InvocationInfo** properties.</span></span> <span data-ttu-id="07e17-279">**InvocationInfo** 속성은 **Location** 속성을 포함 하 여 몇 가지 유용한 속성을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-279">The **InvocationInfo** property has several useful properties, including the **Location** property.</span></span> <span data-ttu-id="07e17-280">**Location** 속성은 디버깅 중인 스크립트의 경로를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-280">The **Location** property indicates the path of the script that is being debugged.</span></span>
+<span data-ttu-id="b0617-276">디버깅 하는 동안이 변수는 디버깅 환경에 대 한 정보를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-276">While debugging, this variable contains information about the debugging environment.</span></span> <span data-ttu-id="b0617-277">그렇지 않으면 **null** 값이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-277">Otherwise, it contains a **null** value.</span></span> <span data-ttu-id="b0617-278">따라서 디버거에서 컨트롤을 사용할 수 있는지 여부를 나타내는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-278">As a result, you can use it to indicate whether the debugger has control.</span></span> <span data-ttu-id="b0617-279">채워진 경우 **중단점과** **InvocationInfo** 속성을 포함 하는 **psdebugcontext** 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-279">When populated, it contains a **PsDebugContext** object that has **Breakpoints** and **InvocationInfo** properties.</span></span> <span data-ttu-id="b0617-280">**InvocationInfo** 속성은 **Location** 속성을 포함 하 여 몇 가지 유용한 속성을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-280">The **InvocationInfo** property has several useful properties, including the **Location** property.</span></span> <span data-ttu-id="b0617-281">**Location** 속성은 디버깅 중인 스크립트의 경로를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-281">The **Location** property indicates the path of the script that is being debugged.</span></span>
 
-### <a name="pshome"></a><span data-ttu-id="07e17-281">$PSHOME</span><span class="sxs-lookup"><span data-stu-id="07e17-281">$PSHOME</span></span>
+### <a name="pshome"></a><span data-ttu-id="b0617-282">$PSHOME</span><span class="sxs-lookup"><span data-stu-id="b0617-282">$PSHOME</span></span>
 
-<span data-ttu-id="07e17-282">일반적으로 Windows 시스템에서 PowerShell에 대 한 설치 디렉터리의 전체 경로를 포함 합니다 `$env:windir\System32\PowerShell\v1.0` .</span><span class="sxs-lookup"><span data-stu-id="07e17-282">Contains the full path of the installation directory for PowerShell, typically, `$env:windir\System32\PowerShell\v1.0` in Windows systems.</span></span> <span data-ttu-id="07e17-283">PowerShell 파일의 경로에이 변수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-283">You can use this variable in the paths of PowerShell files.</span></span> <span data-ttu-id="07e17-284">예를 들어 다음 명령은 단어 **변수에** 대 한 개념 도움말 항목을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-284">For example, the following command searches the conceptual Help topics for the word **variable** :</span></span>
+<span data-ttu-id="b0617-283">일반적으로 Windows 시스템에서 PowerShell에 대 한 설치 디렉터리의 전체 경로를 포함 합니다 `$env:windir\System32\PowerShell\v1.0` .</span><span class="sxs-lookup"><span data-stu-id="b0617-283">Contains the full path of the installation directory for PowerShell, typically, `$env:windir\System32\PowerShell\v1.0` in Windows systems.</span></span> <span data-ttu-id="b0617-284">PowerShell 파일의 경로에이 변수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-284">You can use this variable in the paths of PowerShell files.</span></span> <span data-ttu-id="b0617-285">예를 들어 다음 명령은 단어 **변수에** 대 한 개념 도움말 항목을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-285">For example, the following command searches the conceptual Help topics for the word **variable**:</span></span>
 
 ```powershell
 Select-String -Pattern Variable -Path $pshome\*.txt
 ```
 
-### <a name="psitem"></a><span data-ttu-id="07e17-285">$PSItem</span><span class="sxs-lookup"><span data-stu-id="07e17-285">$PSItem</span></span>
+### <a name="psitem"></a><span data-ttu-id="b0617-286">$PSItem</span><span class="sxs-lookup"><span data-stu-id="b0617-286">$PSItem</span></span>
 
-<span data-ttu-id="07e17-286">`$_`와 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-286">Same as `$_`.</span></span> <span data-ttu-id="07e17-287">파이프라인 개체의 현재 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-287">Contains the current object in the pipeline object.</span></span> <span data-ttu-id="07e17-288">파이프라인의 모든 개체 또는 선택한 개체에 대해 작업을 수행 하는 명령에서이 변수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-288">You can use this variable in commands that perform an action on every object or on selected objects in a pipeline.</span></span>
+<span data-ttu-id="b0617-287">`$_`와 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-287">Same as `$_`.</span></span> <span data-ttu-id="b0617-288">파이프라인 개체의 현재 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-288">Contains the current object in the pipeline object.</span></span> <span data-ttu-id="b0617-289">파이프라인의 모든 개체 또는 선택한 개체에 대해 작업을 수행 하는 명령에서이 변수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-289">You can use this variable in commands that perform an action on every object or on selected objects in a pipeline.</span></span>
 
-### <a name="psscriptroot"></a><span data-ttu-id="07e17-289">$PSScriptRoot</span><span class="sxs-lookup"><span data-stu-id="07e17-289">$PSScriptRoot</span></span>
+### <a name="psscriptroot"></a><span data-ttu-id="b0617-290">$PSScriptRoot</span><span class="sxs-lookup"><span data-stu-id="b0617-290">$PSScriptRoot</span></span>
 
-<span data-ttu-id="07e17-290">스크립트가 실행 되는 디렉터리를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-290">Contains the directory from which a script is being run.</span></span>
+<span data-ttu-id="b0617-291">스크립트가 실행 되는 디렉터리를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-291">Contains the directory from which a script is being run.</span></span>
 
-<span data-ttu-id="07e17-291">PowerShell 2.0에서이 변수는 스크립트 모듈 () 에서만 사용할 수 `.psm1` 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-291">In PowerShell 2.0, this variable is valid only in script modules (`.psm1`).</span></span>
-<span data-ttu-id="07e17-292">PowerShell 3.0부터 모든 스크립트에서 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-292">Beginning in PowerShell 3.0, it's valid in all scripts.</span></span>
+<span data-ttu-id="b0617-292">PowerShell 2.0에서이 변수는 스크립트 모듈 () 에서만 사용할 수 `.psm1` 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-292">In PowerShell 2.0, this variable is valid only in script modules (`.psm1`).</span></span>
+<span data-ttu-id="b0617-293">PowerShell 3.0부터 모든 스크립트에서 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-293">Beginning in PowerShell 3.0, it's valid in all scripts.</span></span>
 
-### <a name="pssenderinfo"></a><span data-ttu-id="07e17-293">$PSSenderInfo</span><span class="sxs-lookup"><span data-stu-id="07e17-293">$PSSenderInfo</span></span>
+### <a name="pssenderinfo"></a><span data-ttu-id="b0617-294">$PSSenderInfo</span><span class="sxs-lookup"><span data-stu-id="b0617-294">$PSSenderInfo</span></span>
 
-<span data-ttu-id="07e17-294">사용자 id 및 원래 컴퓨터의 표준 시간대를 포함 하 여 PSSession을 시작한 사용자에 대 한 정보를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-294">Contains information about the user who started the PSSession, including the user identity and the time zone of the originating computer.</span></span> <span data-ttu-id="07e17-295">이 변수는 PSSessions 에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-295">This variable is available only in PSSessions.</span></span>
+<span data-ttu-id="b0617-295">사용자 id 및 원래 컴퓨터의 표준 시간대를 포함 하 여 PSSession을 시작한 사용자에 대 한 정보를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-295">Contains information about the user who started the PSSession, including the user identity and the time zone of the originating computer.</span></span> <span data-ttu-id="b0617-296">이 변수는 PSSessions 에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-296">This variable is available only in PSSessions.</span></span>
 
-<span data-ttu-id="07e17-296">`$PSSenderInfo`변수에는 기본적으로 원래 세션의만 포함 하는 사용자 구성 속성인 **applicationarguments** 가 포함 됩니다 `$PSVersionTable` .</span><span class="sxs-lookup"><span data-stu-id="07e17-296">The `$PSSenderInfo` variable includes a user-configurable property, **ApplicationArguments** , that by default, contains only the `$PSVersionTable` from the originating session.</span></span> <span data-ttu-id="07e17-297">**Applicationarguments** 속성에 데이터를 추가 하려면 Cmdlet의 **applicationarguments** 매개 변수를 사용 합니다 `New-PSSessionOption` .</span><span class="sxs-lookup"><span data-stu-id="07e17-297">To add data to the **ApplicationArguments** property, use the **ApplicationArguments** parameter of the `New-PSSessionOption` cmdlet.</span></span>
+<span data-ttu-id="b0617-297">`$PSSenderInfo`변수에는 기본적으로 원래 세션의만 포함 하는 사용자 구성 속성인 **applicationarguments** 가 포함 됩니다 `$PSVersionTable` .</span><span class="sxs-lookup"><span data-stu-id="b0617-297">The `$PSSenderInfo` variable includes a user-configurable property, **ApplicationArguments**, that by default, contains only the `$PSVersionTable` from the originating session.</span></span> <span data-ttu-id="b0617-298">**Applicationarguments** 속성에 데이터를 추가 하려면 Cmdlet의 **applicationarguments** 매개 변수를 사용 합니다 `New-PSSessionOption` .</span><span class="sxs-lookup"><span data-stu-id="b0617-298">To add data to the **ApplicationArguments** property, use the **ApplicationArguments** parameter of the `New-PSSessionOption` cmdlet.</span></span>
 
-### <a name="psuiculture"></a><span data-ttu-id="07e17-298">$PSUICulture</span><span class="sxs-lookup"><span data-stu-id="07e17-298">$PSUICulture</span></span>
+### <a name="psuiculture"></a><span data-ttu-id="b0617-299">$PSUICulture</span><span class="sxs-lookup"><span data-stu-id="b0617-299">$PSUICulture</span></span>
 
-<span data-ttu-id="07e17-299">운영 체제에서 현재 사용 중인 UI (사용자 인터페이스) 문화권의 이름을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-299">Contains the name of the user interface (UI) culture that's currently in use in the operating system.</span></span> <span data-ttu-id="07e17-300">UI 문화권에 따라 메뉴, 메시지 등의 사용자 인터페이스 요소에 사용되는 텍스트 문자열이 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-300">The UI culture determines which text strings are used for user interface elements, such as menus and messages.</span></span> <span data-ttu-id="07e17-301">시스템의 **System.Globalization.CultureInfo.CurrentUICulture.Name** 속성 값입니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-301">This is the value of the **System.Globalization.CultureInfo.CurrentUICulture.Name** property of the system.</span></span> <span data-ttu-id="07e17-302">시스템에 대 한 **시스템 세계화 CultureInfo** 개체를 가져오려면 cmdlet을 사용 합니다 `Get-UICulture` .</span><span class="sxs-lookup"><span data-stu-id="07e17-302">To get the **System.Globalization.CultureInfo** object for the system, use the `Get-UICulture` cmdlet.</span></span>
+<span data-ttu-id="b0617-300">운영 체제에서 현재 사용 중인 UI (사용자 인터페이스) 문화권의 이름을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-300">Contains the name of the user interface (UI) culture that's currently in use in the operating system.</span></span> <span data-ttu-id="b0617-301">UI 문화권에 따라 메뉴, 메시지 등의 사용자 인터페이스 요소에 사용되는 텍스트 문자열이 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-301">The UI culture determines which text strings are used for user interface elements, such as menus and messages.</span></span> <span data-ttu-id="b0617-302">시스템의 **System.Globalization.CultureInfo.CurrentUICulture.Name** 속성 값입니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-302">This is the value of the **System.Globalization.CultureInfo.CurrentUICulture.Name** property of the system.</span></span> <span data-ttu-id="b0617-303">시스템에 대 한 **시스템 세계화 CultureInfo** 개체를 가져오려면 cmdlet을 사용 합니다 `Get-UICulture` .</span><span class="sxs-lookup"><span data-stu-id="b0617-303">To get the **System.Globalization.CultureInfo** object for the system, use the `Get-UICulture` cmdlet.</span></span>
 
-### <a name="psversiontable"></a><span data-ttu-id="07e17-303">$PSVersionTable</span><span class="sxs-lookup"><span data-stu-id="07e17-303">$PSVersionTable</span></span>
+### <a name="psversiontable"></a><span data-ttu-id="b0617-304">$PSVersionTable</span><span class="sxs-lookup"><span data-stu-id="b0617-304">$PSVersionTable</span></span>
 
-<span data-ttu-id="07e17-304">현재 세션에서 실행 중인 PowerShell 버전에 대 한 세부 정보를 표시 하는 읽기 전용 해시 테이블을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-304">Contains a read-only hash table that displays details about the version of PowerShell that is running in the current session.</span></span> <span data-ttu-id="07e17-305">테이블에는 다음 항목이 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-305">The table includes the following items:</span></span>
+<span data-ttu-id="b0617-305">현재 세션에서 실행 중인 PowerShell 버전에 대 한 세부 정보를 표시 하는 읽기 전용 해시 테이블을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-305">Contains a read-only hash table that displays details about the version of PowerShell that is running in the current session.</span></span> <span data-ttu-id="b0617-306">테이블에는 다음 항목이 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-306">The table includes the following items:</span></span>
 
-| <span data-ttu-id="07e17-306">속성</span><span class="sxs-lookup"><span data-stu-id="07e17-306">Property</span></span>                  | <span data-ttu-id="07e17-307">Description</span><span class="sxs-lookup"><span data-stu-id="07e17-307">Description</span></span>                                   |
+| <span data-ttu-id="b0617-307">속성</span><span class="sxs-lookup"><span data-stu-id="b0617-307">Property</span></span>                  | <span data-ttu-id="b0617-308">설명</span><span class="sxs-lookup"><span data-stu-id="b0617-308">Description</span></span>                                   |
 | ------------------------- | --------------------------------------------- |
-| <span data-ttu-id="07e17-308">**PSVersion**</span><span class="sxs-lookup"><span data-stu-id="07e17-308">**PSVersion**</span></span>             | <span data-ttu-id="07e17-309">PowerShell 버전 번호</span><span class="sxs-lookup"><span data-stu-id="07e17-309">The PowerShell version number</span></span>                 |
-| <span data-ttu-id="07e17-310">**PSEdition**</span><span class="sxs-lookup"><span data-stu-id="07e17-310">**PSEdition**</span></span>             | <span data-ttu-id="07e17-311">이 속성의 값은</span><span class="sxs-lookup"><span data-stu-id="07e17-311">This property has the value of 'Desktop' for</span></span>  |
-|                           | <span data-ttu-id="07e17-312">Powershell 4 이상 및 PowerShell</span><span class="sxs-lookup"><span data-stu-id="07e17-312">PowerShell 4 and below as well as PowerShell</span></span>  |
-|                           | <span data-ttu-id="07e17-313">모든 기능을 갖춘 Windows 버전에서 5.1.</span><span class="sxs-lookup"><span data-stu-id="07e17-313">5.1 on full-featured Windows editions.</span></span>        |
-|                           | <span data-ttu-id="07e17-314">이 속성의 값은</span><span class="sxs-lookup"><span data-stu-id="07e17-314">This property has the value of 'Core' for</span></span>     |
-|                           | <span data-ttu-id="07e17-315">Powershell 6 이상 (PowerShell)</span><span class="sxs-lookup"><span data-stu-id="07e17-315">PowerShell 6 and above as well as PowerShell</span></span>  |
-|                           | <span data-ttu-id="07e17-316">버전 축소 버전의 PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="07e17-316">PowerShell 5.1 on reduced-footprint editions</span></span>  |
-|                           | <span data-ttu-id="07e17-317">Windows Nano Server 또는 Windows IoT와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-317">like Windows Nano Server or Windows IoT.</span></span>      |
-| <span data-ttu-id="07e17-318">**GitCommitId**</span><span class="sxs-lookup"><span data-stu-id="07e17-318">**GitCommitId**</span></span>           | <span data-ttu-id="07e17-319">GitHub에서 원본 파일의 커밋 Id</span><span class="sxs-lookup"><span data-stu-id="07e17-319">The commit Id of the source files, in GitHub,</span></span> |
-| <span data-ttu-id="07e17-320">**OS**</span><span class="sxs-lookup"><span data-stu-id="07e17-320">**OS**</span></span>                    | <span data-ttu-id="07e17-321">운영 체제에 대 한 설명입니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-321">Description of the operating system that</span></span>      |
-|                           | <span data-ttu-id="07e17-322">PowerShell이에서 실행 중입니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-322">PowerShell is running on.</span></span>                     |
-| <span data-ttu-id="07e17-323">**플랫폼**</span><span class="sxs-lookup"><span data-stu-id="07e17-323">**Platform**</span></span>              | <span data-ttu-id="07e17-324">운영 체제에서 실행 중인 플랫폼</span><span class="sxs-lookup"><span data-stu-id="07e17-324">Platform that the operating system is running</span></span> |
-|                           | <span data-ttu-id="07e17-325">켜짐:</span><span class="sxs-lookup"><span data-stu-id="07e17-325">on.</span></span> <span data-ttu-id="07e17-326">Linux 및 macOS의 값은 **Unix** 입니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-326">The value on Linux and macOS is **Unix**.</span></span> |
-|                           | <span data-ttu-id="07e17-327">`$IsMacOs` 및 `$IsLinux`를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-327">See `$IsMacOs` and `$IsLinux`.</span></span>                |
-| <span data-ttu-id="07e17-328">**PSCompatibleVersions**</span><span class="sxs-lookup"><span data-stu-id="07e17-328">**PSCompatibleVersions**</span></span>  | <span data-ttu-id="07e17-329">호환 되는 PowerShell 버전</span><span class="sxs-lookup"><span data-stu-id="07e17-329">Versions of PowerShell that are compatible</span></span>    |
-|                           | <span data-ttu-id="07e17-330">현재 버전 사용</span><span class="sxs-lookup"><span data-stu-id="07e17-330">with the current version</span></span>                      |
-| <span data-ttu-id="07e17-331">**PSRemotingProtocolVersion**</span><span class="sxs-lookup"><span data-stu-id="07e17-331">**PSRemotingProtocolVersion**</span></span> | <span data-ttu-id="07e17-332">PowerShell 원격의 버전</span><span class="sxs-lookup"><span data-stu-id="07e17-332">The version of the PowerShell remote</span></span>      |
-|                           | <span data-ttu-id="07e17-333">관리 프로토콜.</span><span class="sxs-lookup"><span data-stu-id="07e17-333">management protocol.</span></span>                          |
-| <span data-ttu-id="07e17-334">**SerializationVersion**</span><span class="sxs-lookup"><span data-stu-id="07e17-334">**SerializationVersion**</span></span>  | <span data-ttu-id="07e17-335">Serialization 메서드의 버전입니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-335">The version of the serialization method</span></span>       |
-| <span data-ttu-id="07e17-336">**WSManStackVersion**</span><span class="sxs-lookup"><span data-stu-id="07e17-336">**WSManStackVersion**</span></span>     | <span data-ttu-id="07e17-337">WS-Management 스택의 버전 번호</span><span class="sxs-lookup"><span data-stu-id="07e17-337">The version number of the WS-Management stack</span></span> |
+| <span data-ttu-id="b0617-309">**PSVersion**</span><span class="sxs-lookup"><span data-stu-id="b0617-309">**PSVersion**</span></span>             | <span data-ttu-id="b0617-310">PowerShell 버전 번호</span><span class="sxs-lookup"><span data-stu-id="b0617-310">The PowerShell version number</span></span>                 |
+| <span data-ttu-id="b0617-311">**PSEdition**</span><span class="sxs-lookup"><span data-stu-id="b0617-311">**PSEdition**</span></span>             | <span data-ttu-id="b0617-312">이 속성의 값은</span><span class="sxs-lookup"><span data-stu-id="b0617-312">This property has the value of 'Desktop' for</span></span>  |
+|                           | <span data-ttu-id="b0617-313">Powershell 4 이상 및 PowerShell</span><span class="sxs-lookup"><span data-stu-id="b0617-313">PowerShell 4 and below as well as PowerShell</span></span>  |
+|                           | <span data-ttu-id="b0617-314">모든 기능을 갖춘 Windows 버전에서 5.1.</span><span class="sxs-lookup"><span data-stu-id="b0617-314">5.1 on full-featured Windows editions.</span></span>        |
+|                           | <span data-ttu-id="b0617-315">이 속성의 값은</span><span class="sxs-lookup"><span data-stu-id="b0617-315">This property has the value of 'Core' for</span></span>     |
+|                           | <span data-ttu-id="b0617-316">Powershell 6 이상 (PowerShell)</span><span class="sxs-lookup"><span data-stu-id="b0617-316">PowerShell 6 and above as well as PowerShell</span></span>  |
+|                           | <span data-ttu-id="b0617-317">버전 축소 버전의 PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="b0617-317">PowerShell 5.1 on reduced-footprint editions</span></span>  |
+|                           | <span data-ttu-id="b0617-318">Windows Nano Server 또는 Windows IoT와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-318">like Windows Nano Server or Windows IoT.</span></span>      |
+| <span data-ttu-id="b0617-319">**GitCommitId**</span><span class="sxs-lookup"><span data-stu-id="b0617-319">**GitCommitId**</span></span>           | <span data-ttu-id="b0617-320">GitHub에서 원본 파일의 커밋 Id</span><span class="sxs-lookup"><span data-stu-id="b0617-320">The commit Id of the source files, in GitHub,</span></span> |
+| <span data-ttu-id="b0617-321">**OS**</span><span class="sxs-lookup"><span data-stu-id="b0617-321">**OS**</span></span>                    | <span data-ttu-id="b0617-322">운영 체제에 대 한 설명입니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-322">Description of the operating system that</span></span>      |
+|                           | <span data-ttu-id="b0617-323">PowerShell이에서 실행 중입니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-323">PowerShell is running on.</span></span>                     |
+| <span data-ttu-id="b0617-324">**플랫폼**</span><span class="sxs-lookup"><span data-stu-id="b0617-324">**Platform**</span></span>              | <span data-ttu-id="b0617-325">운영 체제에서 실행 중인 플랫폼</span><span class="sxs-lookup"><span data-stu-id="b0617-325">Platform that the operating system is running</span></span> |
+|                           | <span data-ttu-id="b0617-326">켜짐:</span><span class="sxs-lookup"><span data-stu-id="b0617-326">on.</span></span> <span data-ttu-id="b0617-327">Linux 및 macOS의 값은 **Unix** 입니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-327">The value on Linux and macOS is **Unix**.</span></span> |
+|                           | <span data-ttu-id="b0617-328">`$IsMacOs` 및 `$IsLinux`를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-328">See `$IsMacOs` and `$IsLinux`.</span></span>                |
+| <span data-ttu-id="b0617-329">**PSCompatibleVersions**</span><span class="sxs-lookup"><span data-stu-id="b0617-329">**PSCompatibleVersions**</span></span>  | <span data-ttu-id="b0617-330">호환 되는 PowerShell 버전</span><span class="sxs-lookup"><span data-stu-id="b0617-330">Versions of PowerShell that are compatible</span></span>    |
+|                           | <span data-ttu-id="b0617-331">현재 버전 사용</span><span class="sxs-lookup"><span data-stu-id="b0617-331">with the current version</span></span>                      |
+| <span data-ttu-id="b0617-332">**PSRemotingProtocolVersion**</span><span class="sxs-lookup"><span data-stu-id="b0617-332">**PSRemotingProtocolVersion**</span></span> | <span data-ttu-id="b0617-333">PowerShell 원격의 버전</span><span class="sxs-lookup"><span data-stu-id="b0617-333">The version of the PowerShell remote</span></span>      |
+|                           | <span data-ttu-id="b0617-334">관리 프로토콜.</span><span class="sxs-lookup"><span data-stu-id="b0617-334">management protocol.</span></span>                          |
+| <span data-ttu-id="b0617-335">**SerializationVersion**</span><span class="sxs-lookup"><span data-stu-id="b0617-335">**SerializationVersion**</span></span>  | <span data-ttu-id="b0617-336">Serialization 메서드의 버전입니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-336">The version of the serialization method</span></span>       |
+| <span data-ttu-id="b0617-337">**WSManStackVersion**</span><span class="sxs-lookup"><span data-stu-id="b0617-337">**WSManStackVersion**</span></span>     | <span data-ttu-id="b0617-338">WS-Management 스택의 버전 번호</span><span class="sxs-lookup"><span data-stu-id="b0617-338">The version number of the WS-Management stack</span></span> |
 
-### <a name="pwd"></a><span data-ttu-id="07e17-338">$PWD</span><span class="sxs-lookup"><span data-stu-id="07e17-338">$PWD</span></span>
+### <a name="pwd"></a><span data-ttu-id="b0617-339">$PWD</span><span class="sxs-lookup"><span data-stu-id="b0617-339">$PWD</span></span>
 
-<span data-ttu-id="07e17-339">현재 디렉터리의 전체 경로를 나타내는 path 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-339">Contains a path object that represents the full path of the current directory.</span></span>
+<span data-ttu-id="b0617-340">현재 디렉터리의 전체 경로를 나타내는 path 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-340">Contains a path object that represents the full path of the current directory.</span></span>
 
-### <a name="sender"></a><span data-ttu-id="07e17-340">$Sender</span><span class="sxs-lookup"><span data-stu-id="07e17-340">$Sender</span></span>
+### <a name="sender"></a><span data-ttu-id="b0617-341">$Sender</span><span class="sxs-lookup"><span data-stu-id="b0617-341">$Sender</span></span>
 
-<span data-ttu-id="07e17-341">이 이벤트를 생성 한 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-341">Contains the object that generated this event.</span></span> <span data-ttu-id="07e17-342">이 변수는 이벤트 등록 명령의 작업 블록 내 에서만 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-342">This variable is populated only within the Action block of an event registration command.</span></span> <span data-ttu-id="07e17-343">이 변수의 값은를 반환 하는 **PSEventArgs** 개체의 Sender 속성 에서도 찾을 수 있습니다 `Get-Event` .</span><span class="sxs-lookup"><span data-stu-id="07e17-343">The value of this variable can also be found in the Sender property of the **PSEventArgs** object that `Get-Event` returns.</span></span>
+<span data-ttu-id="b0617-342">이 이벤트를 생성 한 개체를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-342">Contains the object that generated this event.</span></span> <span data-ttu-id="b0617-343">이 변수는 이벤트 등록 명령의 작업 블록 내 에서만 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-343">This variable is populated only within the Action block of an event registration command.</span></span> <span data-ttu-id="b0617-344">이 변수의 값은를 반환 하는 **PSEventArgs** 개체의 Sender 속성 에서도 찾을 수 있습니다 `Get-Event` .</span><span class="sxs-lookup"><span data-stu-id="b0617-344">The value of this variable can also be found in the Sender property of the **PSEventArgs** object that `Get-Event` returns.</span></span>
 
-### <a name="shellid"></a><span data-ttu-id="07e17-344">$ShellId</span><span class="sxs-lookup"><span data-stu-id="07e17-344">$ShellId</span></span>
+### <a name="shellid"></a><span data-ttu-id="b0617-345">$ShellId</span><span class="sxs-lookup"><span data-stu-id="b0617-345">$ShellId</span></span>
 
-<span data-ttu-id="07e17-345">현재 셸의 식별자를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-345">Contains the identifier of the current shell.</span></span>
+<span data-ttu-id="b0617-346">현재 셸의 식별자를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-346">Contains the identifier of the current shell.</span></span>
 
-### <a name="stacktrace"></a><span data-ttu-id="07e17-346">$StackTrace</span><span class="sxs-lookup"><span data-stu-id="07e17-346">$StackTrace</span></span>
+### <a name="stacktrace"></a><span data-ttu-id="b0617-347">$StackTrace</span><span class="sxs-lookup"><span data-stu-id="b0617-347">$StackTrace</span></span>
 
-<span data-ttu-id="07e17-347">가장 최근의 오류에 대 한 스택 추적을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-347">Contains a stack trace for the most recent error.</span></span>
+<span data-ttu-id="b0617-348">가장 최근의 오류에 대 한 스택 추적을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-348">Contains a stack trace for the most recent error.</span></span>
 
-### <a name="switch"></a><span data-ttu-id="07e17-348">$switch</span><span class="sxs-lookup"><span data-stu-id="07e17-348">$switch</span></span>
+### <a name="switch"></a><span data-ttu-id="b0617-349">$switch</span><span class="sxs-lookup"><span data-stu-id="b0617-349">$switch</span></span>
 
-<span data-ttu-id="07e17-349">문의 결과 값이 아닌 열거자를 포함 `Switch` 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-349">Contains the enumerator not the resulting values of a `Switch` statement.</span></span> <span data-ttu-id="07e17-350">`$switch`변수는 문이 실행 되는 동안에만 존재 `Switch` 하며 `switch` 문이 실행을 완료 하면 삭제 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-350">The `$switch` variable exists only while the `Switch` statement is running; it's deleted when the `switch` statement completes execution.</span></span> <span data-ttu-id="07e17-351">자세한 내용은 [about_Switch](about_Switch.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="07e17-351">For more information, see [about_Switch](about_Switch.md).</span></span>
+<span data-ttu-id="b0617-350">문의 결과 값이 아닌 열거자를 포함 `Switch` 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-350">Contains the enumerator not the resulting values of a `Switch` statement.</span></span> <span data-ttu-id="b0617-351">`$switch`변수는 문이 실행 되는 동안에만 존재 `Switch` 하며 `switch` 문이 실행을 완료 하면 삭제 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-351">The `$switch` variable exists only while the `Switch` statement is running; it's deleted when the `switch` statement completes execution.</span></span> <span data-ttu-id="b0617-352">자세한 내용은 [about_Switch](about_Switch.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="b0617-352">For more information, see [about_Switch](about_Switch.md).</span></span>
 
-<span data-ttu-id="07e17-352">열거자는 루프 값을 검색 하 고 현재 루프 반복을 변경 하는 데 사용할 수 있는 속성 및 메서드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-352">Enumerators contain properties and methods you can use to retrieve loop values and change the current loop iteration.</span></span> <span data-ttu-id="07e17-353">자세한 내용은 [열거자 사용](#using-enumerators)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="07e17-353">For more information, see [Using Enumerators](#using-enumerators).</span></span>
+<span data-ttu-id="b0617-353">열거자는 루프 값을 검색 하 고 현재 루프 반복을 변경 하는 데 사용할 수 있는 속성 및 메서드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-353">Enumerators contain properties and methods you can use to retrieve loop values and change the current loop iteration.</span></span> <span data-ttu-id="b0617-354">자세한 내용은 [열거자 사용](#using-enumerators)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="b0617-354">For more information, see [Using Enumerators](#using-enumerators).</span></span>
 
-### <a name="this"></a><span data-ttu-id="07e17-354">$this</span><span class="sxs-lookup"><span data-stu-id="07e17-354">$this</span></span>
+### <a name="this"></a><span data-ttu-id="b0617-355">$this</span><span class="sxs-lookup"><span data-stu-id="b0617-355">$this</span></span>
 
-<span data-ttu-id="07e17-355">스크립트 속성이 나 스크립트 메서드를 정의 하는 스크립트 블록에서 변수는 `$this` 확장 중인 개체를 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-355">In a script block that defines a script property or script method, the `$this` variable refers to the object that is being extended.</span></span>
+<span data-ttu-id="b0617-356">스크립트 속성이 나 스크립트 메서드를 정의 하는 스크립트 블록에서 변수는 `$this` 확장 중인 개체를 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-356">In a script block that defines a script property or script method, the `$this` variable refers to the object that is being extended.</span></span>
 
-<span data-ttu-id="07e17-356">사용자 지정 클래스에서 변수는 클래스 `$this` 에 정의 된 속성 및 메서드에 대 한 액세스를 허용 하는 클래스 개체 자체를 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-356">In a custom class, the `$this` variable refers to the class object itself allowing access to properties and methods defined in the class.</span></span>
+<span data-ttu-id="b0617-357">사용자 지정 클래스에서 변수는 클래스 `$this` 에 정의 된 속성 및 메서드에 대 한 액세스를 허용 하는 클래스 개체 자체를 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-357">In a custom class, the `$this` variable refers to the class object itself allowing access to properties and methods defined in the class.</span></span>
 
-### <a name="true"></a><span data-ttu-id="07e17-357">$true</span><span class="sxs-lookup"><span data-stu-id="07e17-357">$true</span></span>
+### <a name="true"></a><span data-ttu-id="b0617-358">$true</span><span class="sxs-lookup"><span data-stu-id="b0617-358">$true</span></span>
 
-<span data-ttu-id="07e17-358">**True** 를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-358">Contains **True**.</span></span> <span data-ttu-id="07e17-359">이 변수를 사용 하 여 명령 및 스크립트에서 **True** 를 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-359">You can use this variable to represent **True** in commands and scripts.</span></span>
+<span data-ttu-id="b0617-359">**True** 를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-359">Contains **True**.</span></span> <span data-ttu-id="b0617-360">이 변수를 사용 하 여 명령 및 스크립트에서 **True** 를 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-360">You can use this variable to represent **True** in commands and scripts.</span></span>
 
-## <a name="using-enumerators"></a><span data-ttu-id="07e17-360">열거자 사용</span><span class="sxs-lookup"><span data-stu-id="07e17-360">Using Enumerators</span></span>
+## <a name="using-enumerators"></a><span data-ttu-id="b0617-361">열거자 사용</span><span class="sxs-lookup"><span data-stu-id="b0617-361">Using Enumerators</span></span>
 
-<span data-ttu-id="07e17-361">`$input`, `$foreach` 및 변수는 `$switch` 포함 하는 코드 블록에서 처리 하는 값을 반복 하는 데 사용 되는 모든 열거자입니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-361">The `$input`, `$foreach`, and `$switch` variables are all enumerators used to iterate through the values processed by their containing code block.</span></span>
+<span data-ttu-id="b0617-362">`$input`, `$foreach` 및 변수는 `$switch` 포함 하는 코드 블록에서 처리 하는 값을 반복 하는 데 사용 되는 모든 열거자입니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-362">The `$input`, `$foreach`, and `$switch` variables are all enumerators used to iterate through the values processed by their containing code block.</span></span>
 
-<span data-ttu-id="07e17-362">열거자는 반복을 이동 또는 다시 설정 하거나 반복 값을 검색 하는 데 사용할 수 있는 속성 및 메서드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-362">An enumerator contains properties and methods you can use to advance or reset iteration, or retrieve iteration values.</span></span> <span data-ttu-id="07e17-363">열거자를 직접 조작 하는 것은 모범 사례로 간주 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-363">Directly manipulating enumerators isn't considered best practice.</span></span>
+<span data-ttu-id="b0617-363">열거자는 반복을 이동 또는 다시 설정 하거나 반복 값을 검색 하는 데 사용할 수 있는 속성 및 메서드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-363">An enumerator contains properties and methods you can use to advance or reset iteration, or retrieve iteration values.</span></span> <span data-ttu-id="b0617-364">열거자를 직접 조작 하는 것은 모범 사례로 간주 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-364">Directly manipulating enumerators isn't considered best practice.</span></span>
 
-- <span data-ttu-id="07e17-364">루프 내에서 흐름 제어 키워드를 [중단](about_Break.md) 하 고 [계속](about_Continue.md) 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-364">Within loops, flow control keywords [break](about_Break.md) and [continue](about_Continue.md) should be preferred.</span></span>
-- <span data-ttu-id="07e17-365">파이프라인 입력을 허용 하는 함수 내에서 **ValueFromPipeline** 또는 **ValueFromPipelineByPropertyName** 특성과 함께 매개 변수를 사용 하는 것이 가장 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-365">Within functions that accept pipeline input, it's best practice to use Parameters with the **ValueFromPipeline** or **ValueFromPipelineByPropertyName** attributes.</span></span>
+- <span data-ttu-id="b0617-365">루프 내에서 흐름 제어 키워드를 [중단](about_Break.md) 하 고 [계속](about_Continue.md) 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-365">Within loops, flow control keywords [break](about_Break.md) and [continue](about_Continue.md) should be preferred.</span></span>
+- <span data-ttu-id="b0617-366">파이프라인 입력을 허용 하는 함수 내에서 **ValueFromPipeline** 또는 **ValueFromPipelineByPropertyName** 특성과 함께 매개 변수를 사용 하는 것이 가장 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-366">Within functions that accept pipeline input, it's best practice to use Parameters with the **ValueFromPipeline** or **ValueFromPipelineByPropertyName** attributes.</span></span>
 
-  <span data-ttu-id="07e17-366">자세한 내용은 [about_Functions_Advanced_Parameters](about_Functions_Advanced_Parameters.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="07e17-366">For more information, see [about_Functions_Advanced_Parameters](about_Functions_Advanced_Parameters.md).</span></span>
+  <span data-ttu-id="b0617-367">자세한 내용은 [about_Functions_Advanced_Parameters](about_Functions_Advanced_Parameters.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="b0617-367">For more information, see [about_Functions_Advanced_Parameters](about_Functions_Advanced_Parameters.md).</span></span>
 
-### <a name="movenext"></a><span data-ttu-id="07e17-367">MoveNext</span><span class="sxs-lookup"><span data-stu-id="07e17-367">MoveNext</span></span>
+### <a name="movenext"></a><span data-ttu-id="b0617-368">MoveNext</span><span class="sxs-lookup"><span data-stu-id="b0617-368">MoveNext</span></span>
 
-<span data-ttu-id="07e17-368">[MoveNext](/dotnet/api/system.collections.ienumerator.movenext) 메서드는 열거자를 컬렉션의 다음 요소로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-368">The [MoveNext](/dotnet/api/system.collections.ienumerator.movenext) method advances the enumerator to the next element of the collection.</span></span> <span data-ttu-id="07e17-369">**MoveNext** 는 열거자가 성공적으로 진행 되었으면 **True** 를 반환 하 고, 컬렉션의 끝을 지난 경우 **False** 를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-369">**MoveNext** returns **True** if the enumerator was successfully advanced, **False** if the enumerator has passed the end of the collection.</span></span>
+<span data-ttu-id="b0617-369">[MoveNext](/dotnet/api/system.collections.ienumerator.movenext) 메서드는 열거자를 컬렉션의 다음 요소로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-369">The [MoveNext](/dotnet/api/system.collections.ienumerator.movenext) method advances the enumerator to the next element of the collection.</span></span> <span data-ttu-id="b0617-370">**MoveNext** 는 열거자가 성공적으로 진행 되었으면 **True** 를 반환 하 고, 컬렉션의 끝을 지난 경우 **False** 를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-370">**MoveNext** returns **True** if the enumerator was successfully advanced, **False** if the enumerator has passed the end of the collection.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="07e17-370">**MoveNext** 에서 반환 된 **부울** 값은 출력 스트림으로 전송 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-370">The **Boolean** value returned my **MoveNext** is sent to the output stream.</span></span>
-> <span data-ttu-id="07e17-371">출력을 typecasting으로 표시 하지 `[void]` 않거나 [Null](xref:Microsoft.PowerShell.Core.Out-Null)로 파이프 하 여 출력을 표시 하지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-371">You can suppress the output by typecasting it to `[void]` or piping it to [Out-Null](xref:Microsoft.PowerShell.Core.Out-Null).</span></span>
+> <span data-ttu-id="b0617-371">**MoveNext** 에서 반환 된 **부울** 값은 출력 스트림으로 전송 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-371">The **Boolean** value returned my **MoveNext** is sent to the output stream.</span></span>
+> <span data-ttu-id="b0617-372">출력을 typecasting으로 표시 하지 `[void]` 않거나 [Null](xref:Microsoft.PowerShell.Core.Out-Null)로 파이프 하 여 출력을 표시 하지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-372">You can suppress the output by typecasting it to `[void]` or piping it to [Out-Null](xref:Microsoft.PowerShell.Core.Out-Null).</span></span>
 >
 > ```powershell
 > $input.MoveNext() | Out-Null
@@ -445,21 +450,21 @@ Select-String -Pattern Variable -Path $pshome\*.txt
 > [void]$input.MoveNext()
 > ```
 
-### <a name="reset"></a><span data-ttu-id="07e17-372">다시 설정</span><span class="sxs-lookup"><span data-stu-id="07e17-372">Reset</span></span>
+### <a name="reset"></a><span data-ttu-id="b0617-373">다시 설정</span><span class="sxs-lookup"><span data-stu-id="b0617-373">Reset</span></span>
 
-<span data-ttu-id="07e17-373">[Reset](/dotnet/api/system.collections.ienumerator.reset) 메서드는 컬렉션의 첫 번째 요소 **앞** 의 초기 위치로 열거자를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-373">The [Reset](/dotnet/api/system.collections.ienumerator.reset) method sets the enumerator to its initial position, which is **before** the first element in the collection.</span></span>
+<span data-ttu-id="b0617-374">[Reset](/dotnet/api/system.collections.ienumerator.reset) 메서드는 컬렉션의 첫 번째 요소 **앞** 의 초기 위치로 열거자를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-374">The [Reset](/dotnet/api/system.collections.ienumerator.reset) method sets the enumerator to its initial position, which is **before** the first element in the collection.</span></span>
 
-### <a name="current"></a><span data-ttu-id="07e17-374">현재</span><span class="sxs-lookup"><span data-stu-id="07e17-374">Current</span></span>
+### <a name="current"></a><span data-ttu-id="b0617-375">현재</span><span class="sxs-lookup"><span data-stu-id="b0617-375">Current</span></span>
 
-<span data-ttu-id="07e17-375">[Current](/dotnet/api/system.collections.ienumerator.current) 속성은 컬렉션 또는 파이프라인에서 열거자의 현재 위치에 있는 요소를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-375">The [Current](/dotnet/api/system.collections.ienumerator.current) property gets the element in the collection, or pipeline, at the current position of the enumerator.</span></span>
+<span data-ttu-id="b0617-376">[Current](/dotnet/api/system.collections.ienumerator.current) 속성은 컬렉션 또는 파이프라인에서 열거자의 현재 위치에 있는 요소를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-376">The [Current](/dotnet/api/system.collections.ienumerator.current) property gets the element in the collection, or pipeline, at the current position of the enumerator.</span></span>
 
-<span data-ttu-id="07e17-376">**Current** 속성은 **MoveNext** 가 호출 될 때까지 계속 해 서 동일한 속성을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-376">The **Current** property continues to return the same property until **MoveNext** is called.</span></span>
+<span data-ttu-id="b0617-377">**Current** 속성은 **MoveNext** 가 호출 될 때까지 계속 해 서 동일한 속성을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-377">The **Current** property continues to return the same property until **MoveNext** is called.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="07e17-377">예</span><span class="sxs-lookup"><span data-stu-id="07e17-377">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="b0617-378">예제</span><span class="sxs-lookup"><span data-stu-id="b0617-378">Examples</span></span>
 
-### <a name="example-1-using-the-input-variable"></a><span data-ttu-id="07e17-378">예제 1: $input 변수 사용</span><span class="sxs-lookup"><span data-stu-id="07e17-378">Example 1: Using the $input variable</span></span>
+### <a name="example-1-using-the-input-variable"></a><span data-ttu-id="b0617-379">예제 1: $input 변수 사용</span><span class="sxs-lookup"><span data-stu-id="b0617-379">Example 1: Using the $input variable</span></span>
 
-<span data-ttu-id="07e17-379">다음 예제에서 변수에 액세스 하면 `$input` 다음 번에 프로세스 블록이 실행 될 때까지 변수가 지워집니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-379">In the following example, accessing the `$input` variable clears the variable until the next time the process block executes.</span></span> <span data-ttu-id="07e17-380">**Reset** 메서드를 사용 하 여 `$input` 변수를 현재 파이프라인 값으로 다시 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-380">Using the **Reset** method resets the `$input` variable to the current pipeline value.</span></span>
+<span data-ttu-id="b0617-380">다음 예제에서 변수에 액세스 하면 `$input` 다음 번에 프로세스 블록이 실행 될 때까지 변수가 지워집니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-380">In the following example, accessing the `$input` variable clears the variable until the next time the process block executes.</span></span> <span data-ttu-id="b0617-381">**Reset** 메서드를 사용 하 여 `$input` 변수를 현재 파이프라인 값으로 다시 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-381">Using the **Reset** method resets the `$input` variable to the current pipeline value.</span></span>
 
 ```powershell
 function Test
@@ -494,7 +499,7 @@ Iteration: 1
     After Reset: two
 ```
 
-<span data-ttu-id="07e17-381">액세스 하지 않더라도 프로세스 블록에서 자동으로 변수를 이동 `$input` 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-381">The process block automatically advances the `$input` variable even if you don't access it.</span></span>
+<span data-ttu-id="b0617-382">액세스 하지 않더라도 프로세스 블록에서 자동으로 변수를 이동 `$input` 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-382">The process block automatically advances the `$input` variable even if you don't access it.</span></span>
 
 ```powershell
 $skip = $true
@@ -531,15 +536,15 @@ Iteration: 1
     Input: two
 ```
 
-### <a name="example-2-using-input-outside-the-process-block"></a><span data-ttu-id="07e17-382">예제 2: 프로세스 블록 외부에서 $input 사용</span><span class="sxs-lookup"><span data-stu-id="07e17-382">Example 2: Using $input outside the process block</span></span>
+### <a name="example-2-using-input-outside-the-process-block"></a><span data-ttu-id="b0617-383">예제 2: 프로세스 블록 외부에서 $input 사용</span><span class="sxs-lookup"><span data-stu-id="b0617-383">Example 2: Using $input outside the process block</span></span>
 
-<span data-ttu-id="07e17-383">프로세스 블록 외부에서 변수는 `$input` 함수로 파이프 된 모든 값을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-383">Outside of the process block the `$input` variable represents all the values piped into the function.</span></span>
+<span data-ttu-id="b0617-384">프로세스 블록 외부에서 변수는 `$input` 함수로 파이프 된 모든 값을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-384">Outside of the process block the `$input` variable represents all the values piped into the function.</span></span>
 
-- <span data-ttu-id="07e17-384">변수에 액세스 하면 `$input` 모든 값이 지워집니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-384">Accessing the `$input` variable clears all values.</span></span>
-- <span data-ttu-id="07e17-385">**Reset** 메서드는 전체 컬렉션을 다시 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-385">The **Reset** method resets the entire collection.</span></span>
-- <span data-ttu-id="07e17-386">**현재** 속성은 채워지지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-386">The **Current** property is never populated.</span></span>
-- <span data-ttu-id="07e17-387">컬렉션을 고급으로 사용할 수 없으므로 **MoveNext** 메서드에서 false를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-387">The **MoveNext** method returns false because the collection can't be advanced.</span></span>
-  - <span data-ttu-id="07e17-388">**MoveNext** 를 호출 하면 `$input` 변수가 지워집니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-388">Calling **MoveNext** clears out the `$input` variable.</span></span>
+- <span data-ttu-id="b0617-385">변수에 액세스 하면 `$input` 모든 값이 지워집니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-385">Accessing the `$input` variable clears all values.</span></span>
+- <span data-ttu-id="b0617-386">**Reset** 메서드는 전체 컬렉션을 다시 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-386">The **Reset** method resets the entire collection.</span></span>
+- <span data-ttu-id="b0617-387">**현재** 속성은 채워지지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-387">The **Current** property is never populated.</span></span>
+- <span data-ttu-id="b0617-388">컬렉션을 고급으로 사용할 수 없으므로 **MoveNext** 메서드에서 false를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-388">The **MoveNext** method returns false because the collection can't be advanced.</span></span>
+  - <span data-ttu-id="b0617-389">**MoveNext** 를 호출 하면 `$input` 변수가 지워집니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-389">Calling **MoveNext** clears out the `$input` variable.</span></span>
 
 ```powershell
 Function All
@@ -562,11 +567,11 @@ After Reset: one two three
 After MoveNext:
 ```
 
-### <a name="example-3-using-the-inputcurrent-property"></a><span data-ttu-id="07e17-389">예 3: $input 사용 Current 속성</span><span class="sxs-lookup"><span data-stu-id="07e17-389">Example 3: Using the $input.Current property</span></span>
+### <a name="example-3-using-the-inputcurrent-property"></a><span data-ttu-id="b0617-390">예 3: $input 사용 Current 속성</span><span class="sxs-lookup"><span data-stu-id="b0617-390">Example 3: Using the $input.Current property</span></span>
 
-<span data-ttu-id="07e17-390">**현재** 속성을 사용 하 여 **Reset** 메서드를 사용 하지 않고 현재 파이프라인 값에 여러 번 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-390">By using the **Current** property, the current pipeline value can be accessed multiple times without using the **Reset** method.</span></span> <span data-ttu-id="07e17-391">프로세스 블록은 **MoveNext** 메서드를 자동으로 호출 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-391">The process block doesn't automatically call the **MoveNext** method.</span></span>
+<span data-ttu-id="b0617-391">**현재** 속성을 사용 하 여 **Reset** 메서드를 사용 하지 않고 현재 파이프라인 값에 여러 번 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-391">By using the **Current** property, the current pipeline value can be accessed multiple times without using the **Reset** method.</span></span> <span data-ttu-id="b0617-392">프로세스 블록은 **MoveNext** 메서드를 자동으로 호출 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-392">The process block doesn't automatically call the **MoveNext** method.</span></span>
 
-<span data-ttu-id="07e17-392">**MoveNext** 를 명시적으로 호출 하지 않으면 **현재** 속성이 채워지지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-392">The **Current** property will never be populated unless you explicitly call **MoveNext**.</span></span> <span data-ttu-id="07e17-393">**현재** 속성은 해당 값을 지우지 않고 프로세스 블록 내에서 여러 번 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-393">The **Current** property can be accessed multiple times inside the process block without clearing its value.</span></span>
+<span data-ttu-id="b0617-393">**MoveNext** 를 명시적으로 호출 하지 않으면 **현재** 속성이 채워지지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-393">The **Current** property will never be populated unless you explicitly call **MoveNext**.</span></span> <span data-ttu-id="b0617-394">**현재** 속성은 해당 값을 지우지 않고 프로세스 블록 내에서 여러 번 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-394">The **Current** property can be accessed multiple times inside the process block without clearing its value.</span></span>
 
 ```powershell
 function Current
@@ -601,16 +606,16 @@ Iteration: 1
     Access Again: two
 ```
 
-### <a name="example-4-using-the-foreach-variable"></a><span data-ttu-id="07e17-394">예제 4: $foreach 변수 사용</span><span class="sxs-lookup"><span data-stu-id="07e17-394">Example 4: Using the $foreach variable</span></span>
+### <a name="example-4-using-the-foreach-variable"></a><span data-ttu-id="b0617-395">예제 4: $foreach 변수 사용</span><span class="sxs-lookup"><span data-stu-id="b0617-395">Example 4: Using the $foreach variable</span></span>
 
-<span data-ttu-id="07e17-395">변수와 달리 `$input` `$foreach` 변수는 항상 직접 액세스할 때 컬렉션의 모든 항목을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-395">Unlike the `$input` variable, the `$foreach` variable always represents all items in the collection when accessed directly.</span></span> <span data-ttu-id="07e17-396">**현재 속성을** 사용 하 여 현재 컬렉션 요소에 액세스 하 고, **Reset** 및 **MoveNext** 메서드를 사용 하 여 해당 값을 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-396">Use the **Current** property to access the current collection element, and the **Reset** and **MoveNext** methods to change its value.</span></span>
+<span data-ttu-id="b0617-396">변수와 달리 `$input` `$foreach` 변수는 항상 직접 액세스할 때 컬렉션의 모든 항목을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-396">Unlike the `$input` variable, the `$foreach` variable always represents all items in the collection when accessed directly.</span></span> <span data-ttu-id="b0617-397">**현재 속성을** 사용 하 여 현재 컬렉션 요소에 액세스 하 고, **Reset** 및 **MoveNext** 메서드를 사용 하 여 해당 값을 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-397">Use the **Current** property to access the current collection element, and the **Reset** and **MoveNext** methods to change its value.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="07e17-397">루프의 각 반복 `foreach` 은 **MoveNext** 메서드를 자동으로 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-397">Each iteration of the `foreach` loop will automatically call the **MoveNext** method.</span></span>
+> <span data-ttu-id="b0617-398">루프의 각 반복 `foreach` 은 **MoveNext** 메서드를 자동으로 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-398">Each iteration of the `foreach` loop will automatically call the **MoveNext** method.</span></span>
 
-<span data-ttu-id="07e17-398">다음 루프는 두 번만 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-398">The following loop only executes twice.</span></span> <span data-ttu-id="07e17-399">두 번째 반복에서는 반복이 완료 되기 전에 컬렉션이 세 번째 요소로 이동 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-399">In the second iteration, the collection is moved to the third element before the iteration is complete.</span></span> <span data-ttu-id="07e17-400">두 번째 반복 후에는 반복할 값이 더 이상 없으며 루프가 종료 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-400">After the second iteration, there are now no more values to iterate, and the loop terminates.</span></span>
+<span data-ttu-id="b0617-399">다음 루프는 두 번만 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-399">The following loop only executes twice.</span></span> <span data-ttu-id="b0617-400">두 번째 반복에서는 반복이 완료 되기 전에 컬렉션이 세 번째 요소로 이동 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-400">In the second iteration, the collection is moved to the third element before the iteration is complete.</span></span> <span data-ttu-id="b0617-401">두 번째 반복 후에는 반복할 값이 더 이상 없으며 루프가 종료 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-401">After the second iteration, there are now no more values to iterate, and the loop terminates.</span></span>
 
-<span data-ttu-id="07e17-401">**MoveNext** 속성은 컬렉션을 반복 하도록 선택한 변수에 영향을 주지 않습니다 ( `$Num` ).</span><span class="sxs-lookup"><span data-stu-id="07e17-401">The **MoveNext** property doesn't affect the variable chosen to iterate through the collection (`$Num`).</span></span>
+<span data-ttu-id="b0617-402">**MoveNext** 속성은 컬렉션을 반복 하도록 선택한 변수에 영향을 주지 않습니다 ( `$Num` ).</span><span class="sxs-lookup"><span data-stu-id="b0617-402">The **MoveNext** property doesn't affect the variable chosen to iterate through the collection (`$Num`).</span></span>
 
 ```powershell
 $i = 0
@@ -643,10 +648,10 @@ After MoveNext (Current): three
 Num has not changed: two
 ```
 
-<span data-ttu-id="07e17-402">**Reset** 메서드를 사용 하 여 컬렉션의 현재 요소를 다시 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-402">Using the **Reset** method resets the current element in the collection.</span></span> <span data-ttu-id="07e17-403">다음 예제에서는 **Reset** 메서드가 호출 되기 때문에 처음 두 요소를 **두 번** 반복 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-403">The following example loops through the first two elements **twice** because the **Reset** method is called.</span></span> <span data-ttu-id="07e17-404">처음 두 루프 후에 `if` 문이 실패 하 고 루프는 세 요소를 모두 정상적으로 반복 합니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-404">After the first two loops, the `if` statement fails and the loop iterates through all three elements normally.</span></span>
+<span data-ttu-id="b0617-403">**Reset** 메서드를 사용 하 여 컬렉션의 현재 요소를 다시 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-403">Using the **Reset** method resets the current element in the collection.</span></span> <span data-ttu-id="b0617-404">다음 예제에서는 **Reset** 메서드가 호출 되기 때문에 처음 두 요소를 **두 번** 반복 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-404">The following example loops through the first two elements **twice** because the **Reset** method is called.</span></span> <span data-ttu-id="b0617-405">처음 두 루프 후에 `if` 문이 실패 하 고 루프는 세 요소를 모두 정상적으로 반복 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-405">After the first two loops, the `if` statement fails and the loop iterates through all three elements normally.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="07e17-405">이 경우 무한 루프가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-405">This could result in an infinite loop.</span></span>
+> <span data-ttu-id="b0617-406">이 경우 무한 루프가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-406">This could result in an infinite loop.</span></span>
 
 ```powershell
 $stopLoop = 0
@@ -675,13 +680,13 @@ Reset Loop: 0
                 Current: three
 ```
 
-### <a name="example-5-using-the-switch-variable"></a><span data-ttu-id="07e17-406">예 5: $switch 변수 사용</span><span class="sxs-lookup"><span data-stu-id="07e17-406">Example 5: Using the $switch variable</span></span>
+### <a name="example-5-using-the-switch-variable"></a><span data-ttu-id="b0617-407">예 5: $switch 변수 사용</span><span class="sxs-lookup"><span data-stu-id="b0617-407">Example 5: Using the $switch variable</span></span>
 
-<span data-ttu-id="07e17-407">`$switch`변수에는 변수와 정확히 동일한 규칙이 있습니다 `$foreach` .</span><span class="sxs-lookup"><span data-stu-id="07e17-407">The `$switch` variable has the exact same rules as the `$foreach` variable.</span></span>
-<span data-ttu-id="07e17-408">다음 예제에서는 모든 열거자 개념을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="07e17-408">The following example demonstrates all the enumerator concepts.</span></span>
+<span data-ttu-id="b0617-408">`$switch`변수에는 변수와 정확히 동일한 규칙이 있습니다 `$foreach` .</span><span class="sxs-lookup"><span data-stu-id="b0617-408">The `$switch` variable has the exact same rules as the `$foreach` variable.</span></span>
+<span data-ttu-id="b0617-409">다음 예제에서는 모든 열거자 개념을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b0617-409">The following example demonstrates all the enumerator concepts.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="07e17-409">MoveNext 메서드 뒤에 문이 없더라도 설명 **된 사례가 어떻게** 실행 되지 않는지 확인 합니다 `break` . **MoveNext**</span><span class="sxs-lookup"><span data-stu-id="07e17-409">Note how the **NotEvaluated** case is never executed, even though there's no `break` statement after the **MoveNext** method.</span></span>
+> <span data-ttu-id="b0617-410">MoveNext 메서드 뒤에 문이 없더라도 설명 **된 사례가 어떻게** 실행 되지 않는지 확인 합니다 `break` . </span><span class="sxs-lookup"><span data-stu-id="b0617-410">Note how the **NotEvaluated** case is never executed, even though there's no `break` statement after the **MoveNext** method.</span></span>
 
 ```powershell
 $values = "Start", "MoveNext", "NotEvaluated", "Reset", "End"
@@ -724,25 +729,25 @@ Default (Current): Start
 Default (Current): End
 ```
 
-## <a name="see-also"></a><span data-ttu-id="07e17-410">참고 항목</span><span class="sxs-lookup"><span data-stu-id="07e17-410">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0617-411">참조</span><span class="sxs-lookup"><span data-stu-id="b0617-411">See also</span></span>
 
-[<span data-ttu-id="07e17-411">about_Functions</span><span class="sxs-lookup"><span data-stu-id="07e17-411">about_Functions</span></span>](about_Functions.md)
+[<span data-ttu-id="b0617-412">about_Functions</span><span class="sxs-lookup"><span data-stu-id="b0617-412">about_Functions</span></span>](about_Functions.md)
 
-[<span data-ttu-id="07e17-412">about_Functions_Advanced</span><span class="sxs-lookup"><span data-stu-id="07e17-412">about_Functions_Advanced</span></span>](about_Functions_Advanced.md)
+[<span data-ttu-id="b0617-413">about_Functions_Advanced</span><span class="sxs-lookup"><span data-stu-id="b0617-413">about_Functions_Advanced</span></span>](about_Functions_Advanced.md)
 
-[<span data-ttu-id="07e17-413">about_Functions_Advanced_Methods</span><span class="sxs-lookup"><span data-stu-id="07e17-413">about_Functions_Advanced_Methods</span></span>](about_Functions_Advanced_Methods.md)
+[<span data-ttu-id="b0617-414">about_Functions_Advanced_Methods</span><span class="sxs-lookup"><span data-stu-id="b0617-414">about_Functions_Advanced_Methods</span></span>](about_Functions_Advanced_Methods.md)
 
-[<span data-ttu-id="07e17-414">about_Functions_Advanced_Parameters</span><span class="sxs-lookup"><span data-stu-id="07e17-414">about_Functions_Advanced_Parameters</span></span>](about_Functions_Advanced_Parameters.md)
+[<span data-ttu-id="b0617-415">about_Functions_Advanced_Parameters</span><span class="sxs-lookup"><span data-stu-id="b0617-415">about_Functions_Advanced_Parameters</span></span>](about_Functions_Advanced_Parameters.md)
 
-[<span data-ttu-id="07e17-415">about_Functions_OutputTypeAttribute</span><span class="sxs-lookup"><span data-stu-id="07e17-415">about_Functions_OutputTypeAttribute</span></span>](about_Functions_OutputTypeAttribute.md)
+[<span data-ttu-id="b0617-416">about_Functions_OutputTypeAttribute</span><span class="sxs-lookup"><span data-stu-id="b0617-416">about_Functions_OutputTypeAttribute</span></span>](about_Functions_OutputTypeAttribute.md)
 
-[<span data-ttu-id="07e17-416">about_Functions_CmdletBindingAttribute</span><span class="sxs-lookup"><span data-stu-id="07e17-416">about_Functions_CmdletBindingAttribute</span></span>](about_Functions_CmdletBindingAttribute.md)
+[<span data-ttu-id="b0617-417">about_Functions_CmdletBindingAttribute</span><span class="sxs-lookup"><span data-stu-id="b0617-417">about_Functions_CmdletBindingAttribute</span></span>](about_Functions_CmdletBindingAttribute.md)
 
-[<span data-ttu-id="07e17-417">about_Hash_Tables</span><span class="sxs-lookup"><span data-stu-id="07e17-417">about_Hash_Tables</span></span>](about_Hash_Tables.md)
+[<span data-ttu-id="b0617-418">about_Hash_Tables</span><span class="sxs-lookup"><span data-stu-id="b0617-418">about_Hash_Tables</span></span>](about_Hash_Tables.md)
 
-[<span data-ttu-id="07e17-418">about_Preference_Variables</span><span class="sxs-lookup"><span data-stu-id="07e17-418">about_Preference_Variables</span></span>](about_Preference_Variables.md)
+[<span data-ttu-id="b0617-419">about_Preference_Variables</span><span class="sxs-lookup"><span data-stu-id="b0617-419">about_Preference_Variables</span></span>](about_Preference_Variables.md)
 
-[<span data-ttu-id="07e17-419">about_Splatting</span><span class="sxs-lookup"><span data-stu-id="07e17-419">about_Splatting</span></span>](about_Splatting.md)
+[<span data-ttu-id="b0617-420">about_Splatting</span><span class="sxs-lookup"><span data-stu-id="b0617-420">about_Splatting</span></span>](about_Splatting.md)
 
-[<span data-ttu-id="07e17-420">about_Variables</span><span class="sxs-lookup"><span data-stu-id="07e17-420">about_Variables</span></span>](about_Variables.md)
+[<span data-ttu-id="b0617-421">about_Variables</span><span class="sxs-lookup"><span data-stu-id="b0617-421">about_Variables</span></span>](about_Variables.md)
 
