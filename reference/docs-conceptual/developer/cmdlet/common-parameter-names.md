@@ -3,23 +3,30 @@ ms.date: 09/13/2016
 ms.topic: reference
 title: 일반 매개 변수 이름
 description: 일반 매개 변수 이름
-ms.openlocfilehash: cf39dd3b04660076718336857d79d55c3784ccd1
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 506aab290abdb97a6e26c340ac4bd0051244f54b
+ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "92668221"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860882"
 ---
 # <a name="common-parameter-names"></a>일반 매개 변수 이름
 
-이 항목에서 설명 하는 매개 변수는 *일반 매개 변수* 라고 합니다. 이러한 cmdlet은 Windows PowerShell 런타임에 의해 cmdlet에 추가 되며 cmdlet으로 선언할 수 없습니다.
+이 항목에서 설명 하는 매개 변수는 **일반 매개 변수** 라고 합니다. 이러한 cmdlet은 Windows PowerShell 런타임에 의해 cmdlet에 추가 되며 cmdlet으로 선언할 수 없습니다.
 
 > [!NOTE]
 > 이러한 매개 변수는 공급자 cmdlet에 추가 되 고 특성을 사용 하 여 데코레이팅된 함수에도 추가 됩니다 `CmdletBinding` .
 
 ## <a name="general-common-parameters"></a>일반 일반 매개 변수
 
-다음 매개 변수는 모든 cmdlet에 추가 되며 cmdlet이 실행 될 때마다 액세스할 수 있습니다. 이러한 매개 변수는 [Commonparameters](/dotnet/api/System.Management.Automation.Internal.CommonParameters) 클래스에 의해 정의 됩니다.
+다음 매개 변수는 모든 cmdlet에 추가 되며 cmdlet이 실행 될 때마다 액세스할 수 있습니다.
+이러한 매개 변수는 [Commonparameters](/dotnet/api/System.Management.Automation.Internal.CommonParameters) 클래스에 의해 정의 됩니다.
+
+### <a name="confirm-alias-cf"></a>확인 (별칭: cf)
+
+데이터 형식: SwitchParameter
+
+이 매개 변수는 cmdlet에서 사용자에 게 계속할지 묻는 메시지를 표시할지 여부를 지정 합니다.
 
 ### <a name="debug-alias-db"></a>디버그 (별칭: db)
 
@@ -37,13 +44,7 @@ ms.locfileid: "92668221"
 
 데이터 형식: 문자열
 
-이 매개 변수는 오류가 발생 하는 경우 개체를 저장할 변수를 지정 합니다. 이 변수에 추가 하려면 변수를 지우고 설정 하는 대신 +*varname* 을 사용 합니다.
-
-### <a name="outvariable-alias-ov"></a>OutVariable (별칭: ov-es)
-
-데이터 형식: 문자열
-
-이 매개 변수는 cmdlet에 의해 생성 된 모든 출력 개체를 저장할 변수를 지정 합니다. 이 변수에 추가 하려면 변수를 지우고 설정 하는 대신 +*varname* 을 사용 합니다.
+이 매개 변수는 오류가 발생 하는 경우 개체를 저장할 변수를 지정 합니다. 이 변수에 추가 하려면 변수를 지우고 설정 하는 대신 +_varname_ 을 사용 합니다.
 
 ### <a name="outbuffer-alias-ob"></a>OutBuffer (별칭: ob)
 
@@ -51,7 +52,20 @@ ms.locfileid: "92668221"
 
 이 매개 변수는 개체를 파이프라인으로 전달 하기 전에 출력 버퍼에 저장할 개체의 수를 정의 합니다. 기본적으로 개체는 즉시 파이프라인으로 전달 됩니다.
 
-### <a name="verbose-alias-vb"></a>Verbose (별칭: vb)
+### <a name="outvariable-alias-ov"></a>OutVariable (별칭: ov-es)
+
+데이터 형식: 문자열
+
+이 매개 변수는 cmdlet에 의해 생성 된 모든 출력 개체를 저장할 변수를 지정 합니다.
+이 변수에 추가 하려면 변수를 지우고 설정 하는 대신 +_varname_ 을 사용 합니다.
+
+### <a name="pipelinevariable-alias-pv"></a>PipelineVariable (별칭: pv)
+
+데이터 형식: 문자열
+
+이 매개 변수는 파이프라인을 통해 흐르는 모든 명명 된 명령의 변수로 현재 파이프라인 요소의 값을 저장 합니다.
+
+## <a name="verbose-alias-vb"></a>Verbose (별칭: vb)
 
 데이터 형식: SwitchParameter
 
@@ -67,17 +81,12 @@ ms.locfileid: "92668221"
 
 데이터 형식: 문자열
 
-이 매개 변수는 경고 메시지를 저장할 수 있는 변수를 지정 합니다. 이 변수에 추가 하려면 변수를 지우고 설정 하는 대신 +*varname* 을 사용 합니다.
+이 매개 변수는 경고 메시지를 저장할 수 있는 변수를 지정 합니다. 이 변수에 추가 하려면 변수를 지우고 설정 하는 대신 +_varname_ 을 사용 합니다.
 
 ## <a name="risk-mitigation-parameters"></a>Risk-Mitigation 매개 변수
 
-다음 매개 변수는 작업을 수행 하기 전에 확인을 요청 하는 cmdlet에 추가 됩니다. 확인 요청에 대 한 자세한 내용은 [확인 요청](./requesting-confirmation-from-cmdlets.md)을 참조 하세요. 이러한 매개 변수는 [Shouldprocessparameters](/dotnet/api/System.Management.Automation.Internal.ShouldProcessParameters) 클래스에 의해 정의 됩니다.
-
-### <a name="confirm-alias-cf"></a>확인 (별칭: cf)
-
-데이터 형식: SwitchParameter
-
-이 매개 변수는 cmdlet에서 사용자에 게 계속할지 묻는 메시지를 표시할지 여부를 지정 합니다.
+다음 매개 변수는 작업을 수행 하기 전에 확인을 요청 하는 cmdlet에 추가 됩니다. 확인 요청에 대 한 자세한 내용은 [확인 요청](./requesting-confirmation-from-cmdlets.md)을 참조 하세요.
+이러한 매개 변수는 [Shouldprocessparameters](/dotnet/api/System.Management.Automation.Internal.ShouldProcessParameters) 클래스에 의해 정의 됩니다.
 
 ### <a name="whatif-alias-wi"></a>WhatIf (별칭: wi)
 
@@ -87,7 +96,7 @@ ms.locfileid: "92668221"
 
 ## <a name="transaction-parameters"></a>트랜잭션 매개 변수
 
-다음 매개 변수는 트랜잭션을 지 원하는 cmdlet에 추가 됩니다. 이러한 매개 변수는 [system.object](/dotnet/api/System.Management.Automation.Internal.TransactionParameters) 를 통해 정의 됩니다.
+다음 매개 변수는 트랜잭션을 지 원하는 cmdlet에 추가 됩니다. 이러한 매개 변수는 [system.object](/dotnet/api/System.Management.Automation.Internal.TransactionParameters) 를 통해 정의 됩니다. 트랜잭션 지원은 powershell 3.0에서 도입 되었으며 PowerShell 6.0에서 중단 되었습니다.
 
 ### <a name="usetransaction-alias-usetx"></a>UseTransaction (별칭: usetx)
 

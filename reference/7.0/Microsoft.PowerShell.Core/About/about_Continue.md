@@ -5,12 +5,12 @@ ms.date: 06/04/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_continue?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Continue
-ms.openlocfilehash: 4d76212307d79adf1292dd9a788772fdd94e5ff4
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 96758fb110ec1496ebbc073cdacfd3dcc15ae486
+ms.sourcegitcommit: 0c31814bed14ff715dc7d4aace07cbdc6df2438e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93220737"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97614084"
 ---
 # <a name="about-continue"></a>계속 정보
 
@@ -107,9 +107,9 @@ switch (1,2,3) {
 
 즉, 실수로이를 지 원하는 바깥쪽 구문 외부에서를 사용 하는 함수 및 스크립트는 `continue` 실수로 _호출자_ 를 종료할 수 있습니다.
 
-`continue`스크립트 블록 등의 파이프라인 내에서를 사용 하면 파이프라인을 `ForEach-Object` 종료할 뿐만 아니라 tt가 전체 runspace를 종료할 가능성이 있습니다.
+`continue`스크립트 블록과 같은 파이프라인 내에서를 사용 하면 `ForEach-Object` 파이프라인이 종료 될 뿐만 아니라 전체 runspace가 종료 될 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [about_Break](about_Break.md)
 

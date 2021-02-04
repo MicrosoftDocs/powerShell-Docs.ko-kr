@@ -1,13 +1,13 @@
 ---
 description: 고급 함수에서 매개 변수 집합을 정의 하 고 사용 하는 방법을 설명 합니다.
 title: about_Parameter_Sets
-ms.date: 02/11/2020
-ms.openlocfilehash: e6f7d006551bdeee11b68951f96f3fa2251e73e3
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.date: 01/05/2021
+ms.openlocfilehash: 876f6336dd344412b514ea22d413a97a98c9cd02
+ms.sourcegitcommit: eb7ad1850550032880f5529b4e4281514cba1673
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93223977"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97917827"
 ---
 # <a name="about-parameter-sets"></a>매개 변수 집합 정보
 
@@ -22,7 +22,7 @@ PowerShell은 매개 변수 집합을 사용 하 여 다양 한 시나리오에 
 
 모든 매개 변수 집합에는 다음 요구 사항이 적용 됩니다.
 
-- 각 매개 변수 집합에는 하나 이상의 고유 매개 변수가 있어야 합니다. 가능 하면이 매개 변수를 필수 매개 변수로 설정 합니다.
+- 각 매개 변수 집합은 고유한 매개 변수 조합을 포함 해야 합니다. 가능 하면 고유한 매개 변수 중 하나 이상이 필수 매개 변수 여야 합니다.
 
 - 여러 위치 매개 변수를 포함 하는 매개 변수 집합은 각 매개 변수에 대해 고유한 위치를 정의 해야 합니다. 두 위치 매개 변수는 같은 위치를 지정할 수 없습니다.
 
@@ -138,7 +138,7 @@ function Measure-Lines {
 }
 ```
 
-각 매개 변수 집합은 고유한 매개 변수 또는 고유한 매개 변수 조합을 포함 해야 합니다. `Path`및 `PathAll` 매개 변수 집합은 매우 유사 하지만 **All** 매개 변수는 `PathAll` 매개 변수 집합에 대해 고유 합니다. `LiteralPath`및 매개 변수 집합에도 마찬가지입니다 `LiteralPathAll` . `PathAll`및 매개 변수 집합에 모두 `LiteralPathAll` 매개 변수가 있는 경우에도 **Path** 및 **LiteralPath** 매개 변수는이를 구분 합니다. **All**
+각 매개 변수 집합은 고유한 매개 변수 또는 고유한 매개 변수 조합을 포함 해야 합니다. `Path`및 `PathAll` 매개 변수 집합은 매우 유사 하지만 **All** 매개 변수는 `PathAll` 매개 변수 집합에 대해 고유 합니다. `LiteralPath`및 매개 변수 집합에도 마찬가지입니다 `LiteralPathAll` . `PathAll`및 매개 변수 집합에 모두 `LiteralPathAll` 매개 변수가 있는 경우에도 **Path** 및 **LiteralPath** 매개 변수는이를 구분 합니다. 
 
 사용은 `Get-Command -Syntax` 각 매개 변수 집합의 구문을 보여 줍니다. 그러나 매개 변수 집합의 이름은 표시 되지 않습니다. 다음 예에서는 각 매개 변수 집합에 사용할 수 있는 매개 변수를 보여 줍니다.
 
