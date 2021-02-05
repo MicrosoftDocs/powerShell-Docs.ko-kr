@@ -85,7 +85,7 @@
           items:
             - name: 개요
               href: learn/remoting/jea/overview.md
-            - name: 사전 요구 사항
+            - name: 필수 구성 요소
               href: learn/remoting/jea/prerequisites.md
             - name: 역할 기능
               href: learn/remoting/jea/role-capabilities.md
@@ -570,14 +570,10 @@
       href: community/hall-of-fame.md
     - name: Docs의 새로운 기능
       items:
-        - name: 2020-Q4
-          href: community/2020-Q4.md
-        - name: 2020-Q3
-          href: community/2020-Q3.md
-        - name: 2020-Q2
-          href: community/2020-Q2.md
-        - name: 2020-Q1
-          href: community/2020-Q1.md
+        - name: 2021년 업데이트
+          href: community/2021-updates.md
+        - name: 2020년 업데이트
+          href: community/2020-updates.md
     - name: 기여자 가이드
       items:
         - name: 개요
@@ -775,7 +771,7 @@
         - name: GDPR 규정 준수
           href: gallery/how-to/getting-support/gdpr-dsr-policy.md
     - name: 갤러리 FAQ
-      href: gallery/faqs.md
+      href: gallery/faqs.yml
 - name: 스크립팅 및 개발
   items:
     - name: Visual Studio Code
