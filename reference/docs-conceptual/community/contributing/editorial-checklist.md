@@ -4,10 +4,10 @@ description: PowerShell 설명서를 편집하기 위한 규칙의 요약된 목
 ms.date: 03/05/2020
 ms.topic: conceptual
 ms.openlocfilehash: b5baf7366239084779d34e23f218e5e6222ed1a3
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "81624740"
 ---
 # <a name="editors-checklist"></a>편집자 검사 목록
@@ -42,7 +42,7 @@ ms.locfileid: "81624740"
   - 굵게 - 별표 `**` 사용
 - 기울임꼴 - 밑줄 `_` 사용
   - 의미 체계 태그가 아니라 강조 표시에만 사용
-- 100열에서 줄 바꿈(또는 **about_Topics**의 경우 80열)
+- 100열에서 줄 바꿈(또는 **about_Topics** 의 경우 80열)
 - 하드 탭 없음 - 공백만 사용
 - 줄에 후행 공백 없음
 

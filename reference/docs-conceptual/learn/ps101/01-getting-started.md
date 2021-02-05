@@ -2,15 +2,14 @@
 title: PowerShell 시작
 description: 신규 사용자에게 PowerShell을 찾고 실행하는 방법을 알려줍니다.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: e8938a5d36cd1c9c5a74eed1c22cd5d0e1a91966
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
-ms.translationtype: HT
+ms.openlocfilehash: 8b9fee222347970df4e35f9ba0841232952a292d
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786750"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99599326"
 ---
 # <a name="chapter-1---getting-started-with-powershell"></a>1장 - PowerShell 시작
 
@@ -27,7 +26,7 @@ ms.locfileid: "87786750"
 
 ## <a name="where-do-i-find-powershell"></a>PowerShell은 어디서 찾을 수 있나요?
 
-Windows 10에서 PowerShell을 찾는 가장 쉬운 방법은 그림 1-1처럼 검색 창에 **PowerShell**를 입력하는 것입니다.
+Windows 10에서 PowerShell을 찾는 가장 쉬운 방법은 그림 1-1처럼 검색 창에 **PowerShell** 를 입력하는 것입니다.
 
 ![그림 1-1 - 시작 메뉴에서 PowerShell 검색](media/figure1-1.png)
 
@@ -64,7 +63,7 @@ At line:1 char:29
 이 문제를 해결 방법은 PowerShell을 로컬 관리자인 도메인 사용자로 실행하는 것입니다.
 필자는 두 번째 도메인 사용자 계정을 이 방법으로 구성합니다. 최소 권한 원칙에 따라 이 계정은 도메인 관리자가 아니거나 도메인에서 승격된 권한을 가져야 합니다.
 
-PowerShell을 닫습니다. PowerShell 콘솔을 다시 실행합니다. 이번에는 **Windows PowerShell** 바로 가기를 마우스 오른쪽 단추로 클릭하고 그림 1-5처럼 **관리자 권한으로 실행**을 선택합니다.
+PowerShell을 닫습니다. PowerShell 콘솔을 다시 실행합니다. 이번에는 **Windows PowerShell** 바로 가기를 마우스 오른쪽 단추로 클릭하고 그림 1-5처럼 **관리자 권한으로 실행** 을 선택합니다.
 
 ![그림 1-5 - 상황에 맞는 메뉴 - 관리자 권한으로 실행](media/figure1-5.png)
 
@@ -141,7 +140,7 @@ Get-ExecutionPolicy
 Restricted
 ```
 
-실행 정책을 **제한됨**으로 설정하면 PowerShell 스크립트를 실행할 수 없습니다. 이것은 모든 Windows 클라이언트 운영 체제의 기본 설정입니다. 문제를 확인하고 싶다면 다음 코드를 `Stop-TimeService.ps1`이라는 `.ps1` 파일로 저장하세요.
+실행 정책을 **제한됨** 으로 설정하면 PowerShell 스크립트를 실행할 수 없습니다. 이것은 모든 Windows 클라이언트 운영 체제의 기본 설정입니다. 문제를 확인하고 싶다면 다음 코드를 `Stop-TimeService.ps1`이라는 `.ps1` 파일로 저장하세요.
 
 ```powershell
 Get-Service -Name W32Time | Stop-Service -PassThru
@@ -182,7 +181,7 @@ at http://go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the exec
 
 실행 정책을 변경할 때 표시되는 경고를 반드시 읽어 보세요. [about_Execution_Policies][] 도움말 항목을 확인해 정책 보안 변경이 보안에 미치는 영향을 알아보는 것도 도움이 됩니다.
 
-이제 실행 정책이 **RemoteSigned**로 설정되었으므로 `Stop-TimeService.ps1` 스크립트가 오류 없이 실행됩니다.
+이제 실행 정책이 **RemoteSigned** 로 설정되었으므로 `Stop-TimeService.ps1` 스크립트가 오류 없이 실행됩니다.
 
 ```powershell
 .\Stop-TimeService.ps1

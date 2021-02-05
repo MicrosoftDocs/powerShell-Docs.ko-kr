@@ -2,15 +2,14 @@
 title: 개체 검색, 속성 및 메서드
 description: 개체, 속성, 메서드를 이해하고 사용하기 위해 개발자까지 될 필요는 없습니다.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 5ab972755afeba0d94bf6c2debaf84ec84cd9244
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
-ms.translationtype: HT
+ms.openlocfilehash: f226221da7dd3b663f54cf23439dd7f945ed3a2a
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438074"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99599557"
 ---
 # <a name="chapter-3---discovering-objects-properties-and-methods"></a>3장 - 개체, 속성 및 메서드 검색
 
@@ -47,7 +46,7 @@ Status   Name               DisplayName
 Running  w32time            Windows Time
 ```
 
-이전 결과 집합에 표시된 것처럼 **Status**, **Name** 및 **DisplayName**이 속성의 예입니다. **Status** 속성의 값은 `Running`이고, **Name** 속성의 값은 `w32time`이고, **DisplayName**의 값은 `Windows Time`입니다.
+이전 결과 집합에 표시된 것처럼 **Status**, **Name** 및 **DisplayName** 이 속성의 예입니다. **Status** 속성의 값은 `Running`이고, **Name** 속성의 값은 `w32time`이고, **DisplayName** 의 값은 `Windows Time`입니다.
 
 이제 동일한 명령을 `Get-Member`로 파이프하겠습니다.
 
@@ -95,7 +94,7 @@ Status                    Property      System.ServiceProcess.ServiceControllerS
 ToString                  ScriptMethod  System.Object ToString();
 ```
 
-이전 예제에서 결과의 첫 번째 줄에는 매우 중요한 정보 하나가 포함되어 있습니다. **TypeName**은 반환된 개체의 형식을 알려줍니다. 이 예제에서는 **System.ServiceProcess.ServiceController** 개체가 반환되었습니다. 이 개체는 흔히 마지막 마침표 바로 뒷부분인 **TypeName**으로 축약됩니다. 이 예제에서는 **ServiceController**입니다.
+이전 예제에서 결과의 첫 번째 줄에는 매우 중요한 정보 하나가 포함되어 있습니다. **TypeName** 은 반환된 개체의 형식을 알려줍니다. 이 예제에서는 **System.ServiceProcess.ServiceController** 개체가 반환되었습니다. 이 개체는 흔히 마지막 마침표 바로 뒷부분인 **TypeName** 으로 축약됩니다. 이 예제에서는 **ServiceController** 입니다.
 
 명령이 생성하는 개체 형식을 알고 있으면 이 정보를 사용하여 해당 형식의 개체를 입력으로 사용하는 명령을 찾을 수 있습니다.
 
@@ -171,7 +170,7 @@ CanShutdown         : True
 CanStop             : True
 ```
 
-이전 예제에서 `Can*`은 **Property** 매개 변수에 대한 값 중 하나로 사용되어 `Can`으로 시작하는 모든 속성을 반환합니다. 여기에는 **CanPauseAndContinue**, **CanShutdown**, **CanStop**이 포함됩니다.
+이전 예제에서 `Can*`은 **Property** 매개 변수에 대한 값 중 하나로 사용되어 `Can`으로 시작하는 모든 속성을 반환합니다. 여기에는 **CanPauseAndContinue**, **CanShutdown**, **CanStop** 이 포함됩니다.
 
 ### <a name="methods"></a>메서드
 
@@ -698,7 +697,7 @@ UserPrincipalName      : miker@mikefrobbins.com
 - [about_Objects][]
 - [about_Properties][]
 - [about_Methods][]
-- [항목을 시작하거나 중지하는 PowerShell Cmdlet이 없나요? Get Cmdlet에서 메서드를 확인하는 것을 잊지 마세요.][use-methods]
+- [항목을 시작 하거나 중지 하는 PowerShell Cmdlet이 없습니다. Get Cmdlet에서 메서드를 확인 하는 것을 잊지 마세요.][use-methods]
 
 <!-- link references -->
 [Windows용 RSAT]: https://support.microsoft.com/help/2693643

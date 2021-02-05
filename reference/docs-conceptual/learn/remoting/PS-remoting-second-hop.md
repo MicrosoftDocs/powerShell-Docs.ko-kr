@@ -4,10 +4,10 @@ keywords: powershell,cmdlet
 title: PowerShell 원격에서 두 번째 홉 만들기
 description: 이 문서에서는 보안 관련 사항 및 권장 사항을 포함하여 PowerShell 원격에 대한 두 번째 홉 인증을 구성하는 다양한 방법을 설명합니다.
 ms.openlocfilehash: 905b27b4e6c612249c945a741bbe0d2ba9ae28aa
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92501374"
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>PowerShell 원격에서 두 번째 홉 만들기
@@ -34,7 +34,7 @@ ms.locfileid: "92501374"
 ## <a name="credssp"></a>CredSSP
 
 인증에 [Credential Security Support Provider (CredSSP)][credssp](CredSSP(자격 증명 보안 지원 공급자))를 사용할 수 있습니다.
-CredSSP는 원격 서버( _ServerB_ )에 자격 증명을 캐시하므로, 이를 사용하면 자격 증명 도난 공격을 받을 수 있습니다. 원격 컴퓨터의 보안이 손상되면 공격자가 사용자의 자격 증명에 액세스할 수 있습니다. 기본적으로 CredSSP는 클라이언트 및 서버 컴퓨터 모두에서 사용하지 않도록 설정됩니다. 가장 신뢰할 수 있는 환경에서만 CredSSP를 사용하도록 설정해야 합니다. 예를 들어 도메인 컨트롤러는 매우 신뢰할 수 있으므로 도메인 관리자는 도메인 컨트롤러에 연결합니다.
+CredSSP는 원격 서버(_ServerB_)에 자격 증명을 캐시하므로, 이를 사용하면 자격 증명 도난 공격을 받을 수 있습니다. 원격 컴퓨터의 보안이 손상되면 공격자가 사용자의 자격 증명에 액세스할 수 있습니다. 기본적으로 CredSSP는 클라이언트 및 서버 컴퓨터 모두에서 사용하지 않도록 설정됩니다. 가장 신뢰할 수 있는 환경에서만 CredSSP를 사용하도록 설정해야 합니다. 예를 들어 도메인 컨트롤러는 매우 신뢰할 수 있으므로 도메인 관리자는 도메인 컨트롤러에 연결합니다.
 
 PowerShell 원격에 CredSSP 사용 시의 보안 우려 사항에 대한 자세한 내용은 [Accidental Sabotage: Beware of CredSSP][beware](고의적 파괴: CredSSP 조심)를 참조하세요.
 
@@ -65,7 +65,7 @@ PowerShell 원격에 대해 CredSSP를 사용하도록 설정하고 사용하는
 
 - WinRM에 대한 두 번째 홉을 지원하지 않습니다.
 - 구성하려면 도메인 관리자 액세스 권한이 필요합니다.
-- 원격 서버( _ServerB_ )의 Active Directory 개체에 대해 구성해야 합니다.
+- 원격 서버(_ServerB_)의 Active Directory 개체에 대해 구성해야 합니다.
 - 도메인 하나로 제한됩니다. 도메인 또는 포리스트를 벗어날 수 없습니다.
 - 개체 및 SPN(서비스 사용자 이름)을 업데이트할 수 있는 권한이 필요합니다.
 - _ServerB_ 는 사용자 개입 없이 사용자를 대신하여 _ServerC_ 로 Kerberos 티켓을 가져올 수 있습니다.
@@ -241,7 +241,7 @@ JEA에 대한 자세한 내용은 [Just Enough Administration](/powershell/scrip
 **단점**
 
 - WMF 5.0 이상이 필요합니다.
-- 모든 중간 서버( _ServerB_ )에 대한 구성이 필요합니다.
+- 모든 중간 서버(_ServerB_)에 대한 구성이 필요합니다.
 
 ## <a name="pssessionconfiguration-using-runas"></a>RunAs를 사용한 PSSessionConfiguration
 
@@ -255,7 +255,7 @@ _ServerB_ 에 대한 세션 구성을 만들고 해당 **RunAsCredential** 매�
 
 **단점**
 
-- 모든 중간 서버( _ServerB_ )에 대해 **PSSessionConfiguration** 및 **RunAs** 를 구성해야 합니다.
+- 모든 중간 서버(_ServerB_)에 대해 **PSSessionConfiguration** 및 **RunAs** 를 구성해야 합니다.
 - 도메인 **RunAs** 계정을 사용할 경우 암호를 유지 관리해야 합니다.
 
 ## <a name="pass-credentials-inside-an-invoke-command-script-block"></a>Invoke-Command 스크립트 블록 내에 자격 증명 전달

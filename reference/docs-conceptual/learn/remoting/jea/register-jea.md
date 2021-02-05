@@ -4,10 +4,10 @@ keywords: jea,powershell,security
 title: JEA 구성 등록
 description: 시스템에 JEA 엔드포인트를 등록하면 사용자 및 자동화 엔진에서 엔드포인트를 사용할 수 있게 됩니다.
 ms.openlocfilehash: 6e7f8cdc1e7a666bddaa42034d70fcbcf55c1972
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92499912"
 ---
 # <a name="registering-jea-configurations"></a>JEA 구성 등록

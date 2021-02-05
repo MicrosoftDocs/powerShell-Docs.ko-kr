@@ -5,10 +5,10 @@ ms.date: 02/14/2020
 description: PowerShell 관련 아트워크 및 포스터 다운로드
 title: PowerShell 디지털 아트
 ms.openlocfilehash: efc246af2ae946c10d4ce9d759bd42d041663e98
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "91980158"
 ---
 # <a name="powershell-digital-art"></a>PowerShell 디지털 아트

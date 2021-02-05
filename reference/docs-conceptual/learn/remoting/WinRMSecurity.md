@@ -4,10 +4,10 @@ keywords: powershell,cmdlet
 title: WinRM을 사용하는 PowerShell Remoting의 보안 고려 사항
 description: 이 문서에서는 PowerShell 원격을 사용할 때의 보안 문제, 권장 사항, 모범 사례 등을 설명합니다.
 ms.openlocfilehash: 48167bd297905883b3d75caf9a07d06e6a9fc467
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92501476"
 ---
 # <a name="security-considerations-for-powershell-remoting-using-winrm"></a>WinRM을 사용하는 PowerShell Remoting의 보안 고려 사항

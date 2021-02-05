@@ -4,10 +4,10 @@ keywords: jea,powershell,security
 title: JEA에 대한 감사 및 보고
 description: 감사를 통해 올바른 사용자에게 JEA 엔드포인트에 대한 액세스 권한이 있는지와 할당된 해당 역할이 여전히 적절한지를 평가할 수 있습니다.
 ms.openlocfilehash: 2140d6b756ae38d82e4943c373e8a75beea30e28
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92500014"
 ---
 # <a name="auditing-and-reporting-on-jea"></a>JEA에 대한 감사 및 보고
@@ -138,4 +138,4 @@ Running  Dns                DNS Server
 
 ## <a name="see-also"></a>추가 정보
 
-[보안에 관한 *PowerShell ♥ the Blue Team* (PowerShell ♥ Blue Team) 블로그 게시물](https://devblogs.microsoft.com/powershell/powershell-the-blue-team/)
+[보안에 관한 *PowerShell ♥ the Blue Team*(PowerShell ♥ Blue Team) 블로그 게시물](https://devblogs.microsoft.com/powershell/powershell-the-blue-team/)
