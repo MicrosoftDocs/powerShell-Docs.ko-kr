@@ -3,12 +3,12 @@ ms.date: 07/23/2020
 keywords: dsc,powershell,configuration,setup
 title: DSC 리소스
 description: DSC 리소스는 DSC 구성을 위한 구성 요소를 제공합니다. 리소스는 구성할 수 있는 속성(스키마)을 노출하고, LCM이 구성 적용에 사용하는 PowerShell 스크립트 함수를 포함합니다.
-ms.openlocfilehash: 1634db84deff8de3b33c941ad738dc21cf3017ac
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 33268c68638bb581e0b2235a53aee9d186dff6be
+ms.sourcegitcommit: 0f003644684422e425a59b7361121e05ac772e15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92658449"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98771795"
 ---
 # <a name="dsc-resources"></a>DSC 리소스
 

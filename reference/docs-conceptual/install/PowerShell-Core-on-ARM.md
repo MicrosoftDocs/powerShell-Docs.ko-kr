@@ -2,18 +2,18 @@
 title: ARM에서 PowerShell Core 설치
 description: ARM 기반 시스템에 PowerShell Core 설치
 ms.date: 11/11/2020
-ms.openlocfilehash: 85a2cccb18341ffee8c81430bc8490e5d3e97b41
-ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
+ms.openlocfilehash: 1477b99767c19d24f8540714942f63c8347550e9
+ms.sourcegitcommit: ef25c8bc95df12697725958c9814f0e187cfc683
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94892075"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98130142"
 ---
 # <a name="powershell-core-on-arm"></a>ARM에서 PowerShell Core
 
 ARM 기반 PowerShell 지원은 **.NET Core 지원 OS 수명 주기 정책** 을 기반으로 합니다.
 
-PowerShell 7.1은 [.NET Core 3.1 지원 OS 수명 주기 정책](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)을 기반으로 하며 다음 플랫폼을 지원합니다.
+PowerShell 7.0은 [.NET Core 3.1 지원 OS 수명 주기 정책](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)을 기반으로 하며 다음 플랫폼을 지원합니다.
 
 |         OS          |          버전           | 아키텍처 |          수명 주기           |
 | ------------------- | -------------------------- | ------------- | ---------------------------- |
@@ -22,11 +22,11 @@ PowerShell 7.1은 [.NET Core 3.1 지원 OS 수명 주기 정책](https://github.
 | Debian              | 9+                         | Arm32, Arm64  | [Debian][Debian-lifecycle]   |
 | Ubuntu              | 20.10, 20.04, 18.04, 16.04 | Arm32, Arm64  | [Ubuntu][Ubuntu-lifecycle]   |
 
-PowerShell 7.0은 [.NET Core 5.0 지원 OS 수명 주기 정책](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md)을 기반으로 하며 다음 플랫폼을 지원합니다.
+PowerShell 7.1은 [.NET 5.0 지원 OS 수명 주기 정책](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md)을 기반으로 하며 다음 플랫폼을 지원합니다.
 
 |        OS         |          버전           | 아키텍처 |          수명 주기           |
 | ----------------- | -------------------------- | ------------- | ---------------------------- |
-| Windows 10 클라이언트 | 버전 1607+              | Arm64         | [Windows][Windows-lifecycle] |
+| Windows 10 클라이언트 | 버전 1709+              | Arm64         | [Windows][Windows-lifecycle] |
 | Alpine Linux      | 3.11+                      | Arm64         | [Alpine][Alpine-lifecycle]   |
 | Debian            | 9+                         | Arm32, Arm64  | [Debian][Debian-lifecycle]   |
 | Ubuntu            | 20.10, 20.04, 18.04, 16.04 | Arm32, Arm64  | [Ubuntu][Ubuntu-lifecycle]   |

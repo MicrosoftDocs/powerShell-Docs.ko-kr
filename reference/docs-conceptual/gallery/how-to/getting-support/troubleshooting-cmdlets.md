@@ -1,13 +1,13 @@
 ---
-ms.date: 12/01/2020
+ms.date: 01/25/2021
 title: cmdlet 문제 해결
 description: 이 문서에서는 PowerShell 갤러리를 사용하여 오류를 해결하는 데 필요한 정보 및 단계를 제공합니다.
-ms.openlocfilehash: 980da8ea7b8a09513f33a9939d512c437b755d8d
-ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
+ms.openlocfilehash: 8139147683b655b5f8532c3068387db6df12a98f
+ms.sourcegitcommit: 0f003644684422e425a59b7361121e05ac772e15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96913321"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98771807"
 ---
 # <a name="troubleshooting-cmdlets"></a>cmdlet 문제 해결
 
@@ -30,6 +30,7 @@ Update-Module Azure -Verbose
 - `devopsgallerystorage.blob.core.windows.net` - 스토리지 계정 호스트 이름
 - `*.powershellgallery.com` - 웹 사이트
 - `go.microsoft.com` - 리디렉션 서비스
+- `onegetcdn.azureedge.net` - `PowerShellGet/PackageManagement`의 NuGet 공급자 부트스트랩
 
 > [!NOTE]
 > PowerShell 갤러리와 상호 작용하는 cmdlet은 PowerShell 갤러리 서비스의 작동이 중단될 경우 예기치 않은 오류와 함께 실패할 수 있습니다. PowerShell 갤러리의 현재 상태를 확인하려면 GitHub에서 [PowerShell 갤러리 상태](https://github.com/PowerShell/PowerShellGallery/blob/master/psgallery_status.md) 페이지를 참조하세요.
