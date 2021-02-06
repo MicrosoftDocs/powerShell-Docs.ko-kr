@@ -1,20 +1,20 @@
 ---
 title: PowerShell 설명서에 기여하기
 description: 이 문서에서는 PowerShell 설명서에 참여하는 데 필요한 단계를 간략하게 설명합니다.
-ms.date: 03/05/2020
+ms.date: 12/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: 255b74a75b8412ed509f6da930eb722d54233711
-ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
-ms.translationtype: HT
+ms.openlocfilehash: 9fbdafa023eac80340437f30d2d6925a1a4ed3cb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93354408"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "99602036"
 ---
 # <a name="contributing-to-powershell-documentation"></a>PowerShell 설명서에 기여하기
 
 PowerShell을 지원해 주셔서 감사합니다!
 
-기여자 가이드는 Microsoft에서 설명서를 만드는 데 사용하는 도구와 프로세스를 설명하는 문서 모음입니다. 이러한 가이드 중 일부는 [docs.microsoft.com][docs]에 게시된 모든 문서 집합의 일반적인 정보를 다루며, 일부 가이드는 PowerShell 설명서 작성 방법과 관련되어 있습니다.
+참가자 가이드는 Microsoft에서 설명서를 만드는 데 사용 하는 도구와 프로세스를 설명 하는 문서 모음입니다. 이러한 가이드 중 일부는 [docs.microsoft.com][docs]에 게시된 모든 문서 집합의 일반적인 정보를 다루며, 일부 가이드는 PowerShell 설명서 작성 방법과 관련되어 있습니다.
 
 일반 문서는 Microsoft의 통합 [기여자 가이드][contribute]에서 확인할 수 있습니다. PowerShell 관련 가이드는 여기에서 확인하세요.
 
@@ -24,11 +24,12 @@ PowerShell을 지원해 주셔서 감사합니다!
 
 - [문제 제출][file-an-issue]은 Microsoft가 설명서의 문제와 공백을 식별하는 데 도움이 됩니다. 때로는 문제 해결이 어렵고 더 많은 조사와 연구가 필요할 수 있습니다. 이 경우 문제 프로세스를 통해 문제에 관해 대화하고 만족스러운 해결책을 찾을 수 있습니다.
 
-- 새로운 콘텐츠를 제출하거나 기존 문서를 변경하는 프로세스에는 더욱 긴밀한 참여가 필요합니다. 다음 정보에는 설명서에 콘텐츠를 제출하기 위한 도구, 프로세스, 표준이 간략하게 설명되어 있습니다.
+- 콘텐츠를 추가 하거나 변경 하기 위해 [끌어오기 요청을 제출](pull-requests.md) 하는 과정은 더 복잡 합니다.
+  다음 정보에는 설명서에 콘텐츠를 제출하기 위한 도구, 프로세스, 표준이 간략하게 설명되어 있습니다.
 
 ## <a name="prepare-to-make-a-contribution"></a>기여 준비
 
-설명서에 기여하려면 GitHub 계정이 필요합니다. 기여를 위한 도구를 획득하고 기여 프로세스를 이해하려면 다음 검사 목록을 활용하세요.
+설명서에 기여하려면 GitHub 계정이 필요합니다. 다음 검사 목록을 사용 하 여 기여를 수행 하는 데 필요한 도구를 설치 하 고 구성 합니다.
 
 1. [GitHub에 등록](/contribute/get-started-setup-github)
 1. [Git 및 Markdown 도구 설치](/contribute/get-started-setup-tools)
@@ -66,7 +67,6 @@ docs.microsoft.com에 게시되는 모든 리포지토리는 [Microsoft 오픈 �
 - [문서 작성 시작하기](get-started-writing.md)
 - [끌어오기 요청 제출하기](pull-requests.md)
 - [PowerShell-Docs 스타일 가이드](powershell-style-guide.md)
-- [cmdlet 참조 편집하기](editing-cmdlet-ref.md)
 
 추가 리소스
 

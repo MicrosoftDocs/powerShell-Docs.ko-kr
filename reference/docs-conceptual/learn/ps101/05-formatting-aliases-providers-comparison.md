@@ -1,16 +1,15 @@
 ---
 title: 서식 지정, 별칭, 공급자 및 비교
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
 description: 이 챕터에서는 출력 형식 지정, 명령 별칭, 공급자 및 비교 작업의 개념을 소개합니다.
-ms.openlocfilehash: efe70d2d220f8451e781603b6000c3553dda910c
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.openlocfilehash: 5573ca58601af0c6af15736b772a9792d8d77a79
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501612"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99602223"
 ---
 # <a name="chapter-5---formatting-aliases-providers-comparison"></a>5장 - 서식 지정, 별칭, 공급자 및 비교
 
