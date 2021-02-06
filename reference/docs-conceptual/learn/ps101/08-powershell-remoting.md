@@ -2,15 +2,14 @@
 title: PowerShell 원격 기능
 description: 다양한 방법으로 PowerShell의 원격 컴퓨터에 대한 명령을 실행할 수 있습니다.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: ee83af41b53b254dd3dd993931333edac2f44f5a
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
-ms.translationtype: HT
+ms.openlocfilehash: 0e467a41282b261c56a89578dbc841725f59a6e0
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438214"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99601039"
 ---
 # <a name="chapter-8---powershell-remoting"></a>8장 - PowerShell 원격 기능
 

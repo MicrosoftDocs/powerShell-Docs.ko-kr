@@ -2,15 +2,14 @@
 title: WMI 작업
 description: PowerShell은 처음부터 WMI 작업을 위한 cmdlet을 제공했습니다.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 243685efa1f976ddb46a0d0efc4ed0635844606d
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
-ms.translationtype: HT
+ms.openlocfilehash: 119bb3381ee55c70340da89d1c0690d84b3e70d2
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438294"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99601040"
 ---
 # <a name="chapter-7---working-with-wmi"></a>7장 - WMI 작업
 
@@ -179,7 +178,7 @@ At line:1 char:1
 
 많은 사람들이 PowerShell을 사용할 때 보안을 걱정하지만 PowerShell에서는 GUI와 완전히 같은 권한을 사용할 수 있습니다. 권한이 많지도 않고 적지도 않죠. 이전 예제에는 PowerShell을 실행하는 사용자에게 DC01 서버에서 WMI 정보를 쿼리할 수 있는 권한이 없다는 문제가 있습니다. `Get-CimInstance`에는 **Credential** 매개 변수가 없기 때문에 도메인 관리자로 PowerShell을 다시 시작할 수 있습니다. 하지만 장담하건대 이것은 좋은 방법이 아닙니다. PowerShell에서의 모든 실행이 도메인 관리자로 실행되기 때문입니다. 이 경우 상황에 따라 보안이 위험해질 수도 있습니다.
 
-필자는 최소 권한 원칙에 따라, 명령에 **Credential** 매개 변수가 있다면 이 변수를 이용해 각 명령의 권한을 도메인 관리자 계정으로 승격합니다. `Get-CimInstance`에는 **Credential** 매개 변수가 없으니 이런 상황에서는 먼저 **CimSession**을 만들어야 합니다. 그런 다음 컴퓨터 이름 대신 **CimSession**을 이용해 원격 컴퓨터에서 WMI를 쿼리합니다.
+필자는 최소 권한 원칙에 따라, 명령에 **Credential** 매개 변수가 있다면 이 변수를 이용해 각 명령의 권한을 도메인 관리자 계정으로 승격합니다. `Get-CimInstance`에는 **Credential** 매개 변수가 없으니 이런 상황에서는 먼저 **CimSession** 을 만들어야 합니다. 그런 다음 컴퓨터 이름 대신 **CimSession** 을 이용해 원격 컴퓨터에서 WMI를 쿼리합니다.
 
 ```powershell
 $CimSession = New-CimSession -ComputerName dc01 -Credential (Get-Credential)
@@ -247,7 +246,7 @@ Credential
 
 필자에게는 Windows Server 2008(R2 이외)을 실행하는 SQL03라는 서버가 있습니다. PowerShell이 기본적으로 설치되지 않는 최신 Windows Server 운영 체제입니다.
 
-DCOM을 사용하여 SQL03에 대한 **CimSession**을 만듭니다.
+DCOM을 사용하여 SQL03에 대한 **CimSession** 을 만듭니다.
 
 ```powershell
 $CimSession = New-CimSession -ComputerName sql03 -SessionOption $DCOM -Credential $Cred
@@ -270,7 +269,7 @@ Version           : VRTUAL - 4001628
 PSComputerName    : sql03
 ```
 
-`Get-CimSession` cmdlet은 **CimSessions**가 현재 연결되어 있는 대상과 사용 중인 프로토콜을 확인하는 용도로 사용합니다.
+`Get-CimSession` cmdlet은 **CimSessions** 가 현재 연결되어 있는 대상과 사용 중인 프로토콜을 확인하는 용도로 사용합니다.
 
 ```powershell
 Get-CimSession

@@ -2,15 +2,14 @@
 title: 흐름 제어
 description: PowerShell은 스크립트에서 루프를 만들고, 결정을 내리고, 코드 흐름을 논리적으로 제어하는 방법을 제공합니다.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 4f0d7b7f5f3c12bb9475af5aed42b2d32cfbc14d
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
-ms.translationtype: HT
+ms.openlocfilehash: 74595f8c6a5d4a49b05e72dd6bde1441fd2b464e
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84437994"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99600616"
 ---
 # <a name="chapter-6---flow-control"></a>6장 - 흐름 제어
 

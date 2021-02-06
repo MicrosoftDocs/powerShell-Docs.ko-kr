@@ -1,22 +1,22 @@
 ---
 title: 끌어오기 요청 관리 방법
 description: 이 문서에서는 PowerShell-Docs 팀이 끌어오기 요청을 관리하는 방법을 설명합니다.
-ms.date: 03/05/2020
+ms.date: 12/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: af5280e91aa3744b6172dc3555df6989cb0ce1a2
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
-ms.translationtype: HT
+ms.openlocfilehash: 7050db6ad30963d0a75b2a083daace494d703027
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158176"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "99601038"
 ---
 # <a name="managing-pull-requests"></a>끌어오기 요청 관리
 
-이 문서에서는 Microsoft가 PowerShell-Docs 리포지토리에서 끌어오기 요청을 관리하는 방법을 설명합니다. 이 문서는 PowerShell-Docs 팀 구성원을 위한 작업 보조 도구이며, 일반 기여자에게 프로세스의 투명도를 공개하기 위해 게시되었습니다.
+이 문서에서는 Microsoft가 PowerShell-Docs 리포지토리에서 끌어오기 요청을 관리하는 방법을 설명합니다. 이 문서는 PowerShell-Docs 팀 구성원을 위한 작업 보조 도구이며, 공용 참가자에 대 한 프로세스 투명도를 제공 하기 위해 여기에 게시 됩니다.
 
 ## <a name="best-practices"></a>모범 사례
 
-- PR을 제출하는 사람은 피어 검토 없이 PR을 병합해서는 안됩니다.
+- PR을 제출 하는 사람은 피어 검토 없이 PR을 병합 해서는 안 됩니다.
 - PR을 제출할 때 피어 검토자를 할당합니다. 조기에 할당하면 검토자가 편집 설명을 사용하여 더 빨리 응답할 수 있습니다.
 - 설명을 사용하여 변경의 특성 또는 요청하는 검토의 유형을 설명합니다. 검토자를 @mention해야 합니다. 예를 들어 변경 내용이 사소하고 전체 기술 검토가 필요하지 않은 경우 주석에서 설명하세요.
 
@@ -43,7 +43,7 @@ ms.locfileid: "86158176"
 - 미리 보기 렌더링 확인
 - 메타데이터(ms.date, remove ms.assetid)를 확인하고 필수 필드가 입력되었는지 확인
 - Markdown 정확성 검증
-  - 특정 콘텐츠를 서식 지정하기 위한 스타일 가이드를 참조
+  - 대상별 서식 지정 규칙에 대 한 스타일 가이드를 참조 하세요.
 - 다음과 같이 예제를 다시 구성
   - 소개 문장
   - 코드 및 출력
@@ -60,7 +60,7 @@ ms.locfileid: "86158176"
 
 ## <a name="branch-merge-process"></a>분기 병합 프로세스
 
-스테이징 분기는 라이브로 병합되어야 하는 유일한 분기입니다. 단기 (작업) 분기의 병합은 제거해야 합니다.
+`staging`분기는로 병합 되는 유일한 분기입니다 `live` . 단기 (작업) 분기의 병합은 제거해야 합니다.
 
 | *Merge from/to*  | *release-branch* | *staging*        | *live*      |
 | ---------------- |:----------------:|:----------------:|:-----------:|
@@ -97,9 +97,9 @@ PR을 병합하면 대상 분기의 HEAD가 변경됩니다. 이전 HEAD를 기�
 
 ## <a name="publishing-to-live"></a>라이브에 게시
 
-정기적으로 `staging` 분기에 누적된 변경 내용을 라이브 웹 사이트에 게시해야 합니다. 이렇게 하려면 `staging` 분기를 `live` 분기에 병합해야 합니다.
+정기적으로 `staging` 분기에 누적된 변경 내용을 라이브 웹 사이트에 게시해야 합니다.
 
-- 매주 한 번 이상 `staging` 분기를 `live`에 병합해야 합니다.
+- 분기는 매일 `staging` `live` 오후 3 시 PST에 병합 됩니다.
 - `staging` 분기는 모든 주요 변경 후에 `live`에 병합되어야 합니다.
   - 50개 이상 파일에 대한 변경
   - 릴리스 분기를 병합한 후
