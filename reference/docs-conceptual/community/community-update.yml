@@ -8,12 +8,12 @@ metadata:
   author: sdwheeler
   ms.author: sewhee
   ms.date: 10/31/2020
-  ms.openlocfilehash: 51beb8af6cad6c7cd8163216915f42b3e9f173fe
-  ms.sourcegitcommit: 0942a6de384f4a1c624e89b1889434a30d22f4d6
-  ms.translationtype: HT
+  ms.openlocfilehash: 2b8f9241ba3ae300b79ebdbf9a29560342f0356c
+  ms.sourcegitcommit: fa1a84c81e15f1ffac962110b0b4c850c1b173a0
+  ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/01/2020
-  ms.locfileid: "93143283"
+  ms.lasthandoff: 02/03/2021
+  ms.locfileid: "99602428"
 landingContent:
 - title: 참여하기
   linkLists:
@@ -45,14 +45,10 @@ landingContent:
   linkLists:
   - linkListType: whats-new
     links:
-    - text: 2020-Q4
-      url: ./2020-Q4.md
-    - text: 2020-Q3
-      url: ./2020-Q3.md
-    - text: 2020-Q2
-      url: ./2020-Q2.md
-    - text: 2020-Q1
-      url: ./2020-Q1.md
+    - text: 2021년 업데이트
+      url: ./2021-updates.md
+    - text: 2020년 업데이트
+      url: ./2020-updates.md
     - text: 기여자 명예의 전당
       url: hall-of-fame.md
 - title: 커뮤니티 리소스
