@@ -1,14 +1,14 @@
 ---
 title: PowerShell-Docs 문제를 제출하는 방법
 description: 이 문서에서는 PowerShell 설명서에 대한 피드백을 제공하는 방법을 설명합니다.
-ms.date: 03/05/2020
+ms.date: 12/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: fa2c74d55cdcd779646c50d58f7705f7a4c33542
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
-ms.translationtype: HT
+ms.openlocfilehash: a044f77d3529817ec063d4a26fc9d10cdfe873aa
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79060298"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "99601234"
 ---
 # <a name="how-to-file-a-powershell-docs-issue"></a>PowerShell-Docs 문제를 제출하는 방법
 
@@ -21,10 +21,11 @@ ms.locfileid: "79060298"
 
 피드백 컨트롤에 대한 자세한 설명은 이 [기능][feedback]을 발표하는 Docs 팀 블로그를 참조하세요.
 
-`docs.microsoft.com`의 페이지는 대부분 맨 아래에 두 개의 피드백 단추가 표시됩니다. 하나는 제품 피드백 링크이고 다른 하나는 설명서 피드백 링크입니다. 설명서 피드백을 입력하려면 GitHub 계정이 필요합니다. 이 단추를 클릭하면 GitHub에서 해당 사용자가 인증되고 피드백을 입력할 수 있는 간단한 양식이 표시됩니다. 양식을 제출하면 피드백 컨트롤이 새 GitHub 문제를 만들어 현재 문서에 연결합니다.
+`docs.microsoft.com`의 페이지는 대부분 맨 아래에 두 개의 피드백 단추가 표시됩니다. 하나는 제품 피드백 링크이고 다른 하나는 설명서 피드백 링크입니다. 설명서 피드백을 입력하려면 GitHub 계정이 필요합니다. 이 단추를 클릭 하면 GitHub로 이동 하 여 미리 채워져 있는 문제 템플릿을 표시 합니다.
+사용자 의견을 입력 하 고 양식을 제출 합니다.
 
 > [!NOTE]
-> 이는 지원 채널이 아니며 설명서에 대한 확인 질문을 하거나 오류 및 누락을 보고하는 방법입니다. 기술 지원이 필요한 경우 [커뮤니티 리소스](../community-support.md)를 참조하세요.
+> 이는 지원 채널이 아니며 설명서에 대해 명확 하 게 질문 하 고 오류 및 누락을 보고 하는 방법입니다. 기술 지원이 필요한 경우 [커뮤니티 리소스](../community-support.md)를 참조하세요.
 
 ## <a name="filing-issues-on-github"></a>GitHub 문제 제출
 

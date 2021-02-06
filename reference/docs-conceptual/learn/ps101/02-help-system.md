@@ -2,15 +2,14 @@
 title: 도움말 시스템
 description: PowerShell을 제대로 활용하려면 도움말 시스템을 숙지해야 합니다.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 98876cf324b367fd5bb3c3462cb90ea6d7c7d5b9
-ms.sourcegitcommit: 0942a6de384f4a1c624e89b1889434a30d22f4d6
-ms.translationtype: HT
+ms.openlocfilehash: cfb12f57b7bb6c514f4e19a93dfe9c77245bd977
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "93143317"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99601235"
 ---
 # <a name="chapter-2---the-help-system"></a>2장 - 도움말 시스템
 
@@ -434,7 +433,7 @@ Cmdlet          Wait-Process                                       3.1.0.0    Mi
 
 `Get-Command`를 실행하는 이전 예제에서는 **Noun** 매개 변수를 사용하고 `Process`를 **Noun** 매개 변수의 값으로 지정했습니다. `Get-Command` cmdlet 사용 방법을 모른다면 어떻게 해야 할까요? `Get-Help`를 사용하면 `Get-Command` 관련 도움말 항목을 표시할 수 있습니다.
 
-**Name** , **Noun** , **Verb** 매개 변수는 와일드카드를 허용합니다. 다음 예제에서는 **Name** 매개 변수와 함께 사용하는 와일드카드를 보여줍니다.
+**Name**, **Noun**, **Verb** 매개 변수는 와일드카드를 허용합니다. 다음 예제에서는 **Name** 매개 변수와 함께 사용하는 와일드카드를 보여줍니다.
 
 ```Output
 Get-Command -Name *service*
@@ -485,10 +484,8 @@ Update-Help
 
 ```Output
 Update-Help : Failed to update Help for the module(s) 'BitsTransfer' with UI culture(s)
-{en-US} : The value of the HelpInfoUri key in the module manifest must resolve to a
-container or root URL on a website where the help files are stored. The HelpInfoUri
-'https://technet.microsoft.com/en-us/library/dd819413.aspx' does not resolve to a
-container.
+{en-US} : Unable to retrieve the HelpInfo XML file for UI culture en-US. Make sure the HelpInfoUri
+property in the module manifest is valid or check your network connection and then try the command again.
 At line:1 char:1
 + Update-Help
 +

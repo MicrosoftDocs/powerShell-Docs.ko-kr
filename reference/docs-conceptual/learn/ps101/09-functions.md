@@ -2,15 +2,14 @@
 title: Functions
 description: PowerShell 함수를 사용하면 스크립트에서 다시 사용할 수 있는 도구를 만들 수 있습니다.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 9554c0b4d3932b7371201f7b08c8b9d26a567f5e
-ms.sourcegitcommit: e85e56d6614cbd30e01965a5cf03fb3f5ca78103
-ms.translationtype: HT
+ms.openlocfilehash: e4734b556a78f67c54152dad93eada536dd1c928
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94589137"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99601236"
 ---
 # <a name="chapter-9---functions"></a>9장 - 함수
 
@@ -285,6 +284,8 @@ Machine                     0
 ```
 
 또한 매개 변수 이름에 기본 cmdlet과 동일한 대/소문자를 사용하는 것이 좋습니다. `computername`이 아니라 `ComputerName`을 사용합니다. 이렇게 하면 함수는 기본 cmdlet과 비슷하게 표시됩니다. 이미 PowerShell에 익숙한 사람이라면 매우 편안하게 느낄 것입니다.
+
+`param`문을 사용 하 여 하나 이상의 매개 변수를 정의할 수 있습니다. 매개 변수 정의는 쉼표 ()로 구분 됩니다 `,` . 자세한 내용은 [about_Functions_Advanced_Parameters][]를 참조 하세요.
 
 ## <a name="advanced-functions"></a>고급 함수
 
