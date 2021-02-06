@@ -2,15 +2,14 @@
 title: 스크립트 모듈
 description: 스크립트 모듈은 여러 스크립트와 함수를 재사용 가능한 도구로 패키징할 수 있는 간편한 방법입니다.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 661ba725764e1f31df628f6c5f2d58d760656e37
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
-ms.translationtype: HT
+ms.openlocfilehash: c557c071bc202a4216a77e7e5ae0bd73b4bc014b
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438284"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99605204"
 ---
 # <a name="chapter-10---script-modules"></a>10장 - 스크립트 모듈
 
@@ -259,7 +258,7 @@ C:\Program Files (x86)\Microsoft SQL Server\130\Tools\PowerShell\Modules\
 ## <a name="module-manifests"></a>모듈 매니페스트
 
 모든 모듈에는 모듈 매니페스트가 있어야 합니다. 모듈 매니페스트에는 모듈 관련 메타데이터가 포함됩니다.
-모듈 매니페스트 파일의 파일 확장명은 `.PSD1`입니다. 파일 확장명이 `.PSD1`이지만 모듈 매니페스트가 아닌 파일도 있습니다. 모듈 매니페스트 파일은 DSC 구성의 환경 부분을 저장하는 등의 작업에도 사용할 수 있습니다. `New-ModuleManifest`는 모듈 매니페스트를 만드는 데 사용합니다. **Path**는 유일한 필수 값입니다. 그러나 **RootModule**이 지정되지 않으면 모듈은 작동하지 않습니다. 모듈을 PowerShellGet을 이용해 NuGet 리포지토리에 업로드하기로 했다면 **Author**와 **Description**을 지정하는 것이 좋습니다. 해당 시나리오에 필요한 값이기 때문입니다.
+모듈 매니페스트 파일의 파일 확장명은 `.PSD1`입니다. 파일 확장명이 `.PSD1`이지만 모듈 매니페스트가 아닌 파일도 있습니다. 모듈 매니페스트 파일은 DSC 구성의 환경 부분을 저장하는 등의 작업에도 사용할 수 있습니다. `New-ModuleManifest`는 모듈 매니페스트를 만드는 데 사용합니다. **Path** 는 유일한 필수 값입니다. 그러나 **RootModule** 이 지정되지 않으면 모듈은 작동하지 않습니다. 모듈을 PowerShellGet을 이용해 NuGet 리포지토리에 업로드하기로 했다면 **Author** 와 **Description** 을 지정하는 것이 좋습니다. 해당 시나리오에 필요한 값이기 때문입니다.
 
 매니페스트가 없는 모듈의 버전은 0.0입니다. 모듈에 매니페스트가 없다는 확실한 증거입니다.
 

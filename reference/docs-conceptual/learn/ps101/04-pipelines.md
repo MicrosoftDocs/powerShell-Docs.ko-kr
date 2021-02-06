@@ -2,15 +2,14 @@
 title: 원라이너 및 파이프라인
 description: PowerShell 원라이너는 단일 작업을 수행하기 위해 여러 명령을 포함하는 하나의 연속 파이프라인입니다.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: b8fd45e5e5dc408754ebac015757ef4241428978
-ms.sourcegitcommit: 109f132360e8adbbdaf5dbc42a270be73d9dfa9b
-ms.translationtype: HT
+ms.openlocfilehash: 1483ec6b76d17c3dd081356ecff85a929fc43e2c
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84633348"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99605468"
 ---
 # <a name="chapter-4---one-liners-and-the-pipeline"></a>4장 - 원라이너 및 파이프라인
 
@@ -23,7 +22,7 @@ PowerShell을 처음 배우기 시작했을 때 필자는 PowerShell 원라이�
 
 ## <a name="one-liners"></a>원라이너
 
-PowerShell 원라이너는 하나의 연속 파이프라인이며 반드시 한 줄로 작성된 명령이 아닙니다. 한 줄로 작성된 명령이 모두 원라이너는 아닙니다.
+PowerShell one-liner는 하나의 연속 파이프라인 이며 반드시 하나의 물리적 줄에 있는 명령이 아닙니다. 한 줄로 작성된 명령이 모두 원라이너는 아닙니다.
 
 다음 명령은 여러 줄로 작성되었지만 하나의 연속 파이프라인이므로 PowerShell 원라이너입니다. 한 줄로 작성할 수는 있었지만 파이프 기호에서 줄 바꿈을 선택한 것입니다. 파이프 기호는 PowerShell에서 자연 줄 바꿈이 허용되는 문자 중 하나입니다.
 
@@ -363,9 +362,9 @@ help Stop-Service -Full
 ...
 ```
 
-다시 한 번, 이전 결과 집합에는 도움말의 관련 부분만 표시했습니다. **DisplayName** 매개 변수는 파이프라인 입력을 허용하지 않고, **InputObject** 매개 변수는 **ServiceController** 개체에 **값 기준**으로 파이프라인 입력을 허용하고, **Name** 매개 변수는 **문자열** 개체에 **값 기준**으로 파이프라인 입력을 허용합니다. 또한 **속성 이름 기준**으로도 파이프라인 입력을 허용합니다.
+다시 한 번, 이전 결과 집합에는 도움말의 관련 부분만 표시했습니다. **DisplayName** 매개 변수는 파이프라인 입력을 허용하지 않고, **InputObject** 매개 변수는 **ServiceController** 개체에 **값 기준** 으로 파이프라인 입력을 허용하고, **Name** 매개 변수는 **문자열** 개체에 **값 기준** 으로 파이프라인 입력을 허용합니다. 또한 **속성 이름 기준** 으로도 파이프라인 입력을 허용합니다.
 
-매개 변수가 속성 이름 기준 및 값 기준 모두에서 파이프라인 입력을 허용하는 경우 항상 **값 기준**을 먼저 시도합니다. **값 기준**이 실패하면 **속성 이름 기준**을 시도합니다. **값 기준**은 약간 오해의 소지가 있습니다. 필자는 **형식 기준**으로 부르는 것을 선호합니다. 즉 **ServiceController** 개체 형식을 생성하는 명령 결과를 `Stop-Service`로 파이프하면 이 명령은 해당 입력을 **InputObject** 매개 변수에 바인딩합니다. 그러나 **문자열** 출력을 생성하는 명령의 결과를 `Stop-Service`로 파이프하면 이 명령은 **Name** 매개 변수에 바인딩합니다. **ServiceController** 또는 **문자열** 개체를 생성하지 않지만 **Name**이라는 속성을 포함하는 출력을 생성하는 명령의 결과를 `Stop-Service`에 파이프하면 이 명령은 **Name** 속성을 `Stop-Service`의 **Name** 매개 변수에 바인딩합니다.
+매개 변수가 속성 이름 기준 및 값 기준 모두에서 파이프라인 입력을 허용하는 경우 항상 **값 기준** 을 먼저 시도합니다. **값 기준** 이 실패하면 **속성 이름 기준** 을 시도합니다. **값 기준** 은 약간 오해의 소지가 있습니다. 필자는 **형식 기준** 으로 부르는 것을 선호합니다. 즉 **ServiceController** 개체 형식을 생성하는 명령 결과를 `Stop-Service`로 파이프하면 이 명령은 해당 입력을 **InputObject** 매개 변수에 바인딩합니다. 그러나 **문자열** 출력을 생성하는 명령의 결과를 `Stop-Service`로 파이프하면 이 명령은 **Name** 매개 변수에 바인딩합니다. **ServiceController** 또는 **문자열** 개체를 생성하지 않지만 **Name** 이라는 속성을 포함하는 출력을 생성하는 명령의 결과를 `Stop-Service`에 파이프하면 이 명령은 **Name** 속성을 `Stop-Service`의 **Name** 매개 변수에 바인딩합니다.
 
 `Get-Service` 명령이 생성하는 출력 형식을 결정합니다.
 
@@ -395,7 +394,7 @@ Get-Service -Name w32time | Stop-Service
    TypeName: System.String
 ```
 
-앞서 설명한 것처럼 문자열을 `Stop-Service`로 파이프하면 **값 기준**으로 `Stop-Service`의 **Name** 매개 변수에 바인딩됩니다. `w32time`을 `Stop-Service`로 파이프하여 이를 테스트합니다.
+앞서 설명한 것처럼 문자열을 `Stop-Service`로 파이프하면 **값 기준** 으로 `Stop-Service`의 **Name** 매개 변수에 바인딩됩니다. `w32time`을 `Stop-Service`로 파이프하여 이를 테스트합니다.
 
 ```powershell
 'w32time' | Stop-Service
@@ -411,7 +410,7 @@ $CustomObject = [pscustomobject]@{
  }
 ```
 
-**CustomObject** 변수의 내용은 **PSCustomObject** 개체 형식이며 **Name**이라는 속성을 포함합니다.
+**CustomObject** 변수의 내용은 **PSCustomObject** 개체 형식이며 **Name** 이라는 속성을 포함합니다.
 
 ```powershell
 $CustomObject | Get-Member
@@ -432,9 +431,9 @@ Name        NoteProperty string Name=w32time
 `$CustomObject` 변수를 따옴표로 묶는 경우 큰따옴표를 사용하는 것이 좋습니다.
 그렇지 않고 작은따옴표를 사용하는 경우 변수에 포함된 값 대신 리터럴 문자열 `$CustomObject`가 `Get-Member`로 파이프됩니다.
 
-`$CustomObject`의 내용을 `Stop-Service` cmdlet으로 파이프하면 **Name** 매개 변수에 바인딩되기는 하지만, 이번에는 **값 기준**이 아니라 **속성 이름 기준**으로 바인딩됩니다. `$CustomObject`의 내용이 **Name**이라는 속성을 가진 개체이기 때문입니다.
+`$CustomObject`의 내용을 `Stop-Service` cmdlet으로 파이프하면 **Name** 매개 변수에 바인딩되기는 하지만, 이번에는 **값 기준** 이 아니라 **속성 이름 기준** 으로 바인딩됩니다. `$CustomObject`의 내용이 **Name** 이라는 속성을 가진 개체이기 때문입니다.
 
-이 예제에서는 **Service**와 같은 다른 속성 이름을 사용하여 다른 사용자 지정 개체를 만듭니다.
+이 예제에서는 **Service** 와 같은 다른 속성 이름을 사용하여 다른 사용자 지정 개체를 만듭니다.
 
 ```powershell
 $CustomObject = [pscustomobject]@{
@@ -442,7 +441,7 @@ $CustomObject = [pscustomobject]@{
 }
 ```
 
-`$CustomObject`를 `Stop-Service`로 파이프하려고 하면 오류가 생성됩니다. 이 명령은 **ServiceController** 또는 **문자열** 개체를 생성하지 않고 **Name**이라는 속성을 포함하지 않기 때문입니다.
+`$CustomObject`를 `Stop-Service`로 파이프하려고 하면 오류가 생성됩니다. 이 명령은 **ServiceController** 또는 **문자열** 개체를 생성하지 않고 **Name** 이라는 속성을 포함하지 않기 때문입니다.
 
 ```powershell
 $CustomObject | Stop-Service
@@ -467,7 +466,7 @@ $CustomObject |
     Stop-Service
 ```
 
-이 예제에서는 `Select-Object`를 사용하여 **Service** 속성의 이름을 **Name**이라는 속성으로 변경했습니다.
+이 예제에서는 `Select-Object`를 사용하여 **Service** 속성의 이름을 **Name** 이라는 속성으로 변경했습니다.
 
 이 예제의 구문은 처음에 약간 복잡한 것처럼 보일 수 있습니다. 경험상 코드를 복사하여 붙여넣는 방법으로는 구문을 배울 수 없습니다. 시간을 들여 코드를 입력해야 합니다. 몇 번이면 자연스러워지게 됩니다. 한 화면에 예제 코드를 표시하고 다른 화면에서 코드를 입력할 수 있으므로 여러 모니터를 사용하면 매우 유용합니다.
 
@@ -537,7 +536,7 @@ PowerShell 갤러리는 신뢰할 수 없는 리포지토리이므로 모듈 설
 
 ## <a name="finding-pipeline-input-the-easy-way"></a>간편하게 파이프라인 찾기
 
-MrToolkit 모듈은 `Get-MrPipelineInput`이라는 함수를 포함합니다. 이 cmdlet을 사용하여 파이프라인 입력을 허용하는 명령 매개 변수, 허용하는 개체 형식, 파이프라인 입력을 **값 기준** 또는 **속성 이름 기준**으로 허용할지 여부를 간편하게 결정할 수 있습니다.
+MrToolkit 모듈은 `Get-MrPipelineInput`이라는 함수를 포함합니다. 이 cmdlet을 사용하여 파이프라인 입력을 허용하는 명령 매개 변수, 허용하는 개체 형식, 파이프라인 입력을 **값 기준** 또는 **속성 이름 기준** 으로 허용할지 여부를 간편하게 결정할 수 있습니다.
 
 ```powershell
 Get-MrPipelineInput -Name Stop-Service
