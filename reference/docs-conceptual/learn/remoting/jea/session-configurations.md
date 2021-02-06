@@ -4,10 +4,10 @@ keywords: jea,powershell,security
 title: JEA 세션 구성
 description: 세션 구성은 JEA 엔드포인트를 사용할 수 있는 사용자 및 해당 사용자가 액세스할 수 있는 역할을 정의합니다.
 ms.openlocfilehash: b616d5bf260bbdfe89b6422fd4a8b4866f7fdc67
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92501561"
 ---
 # <a name="jea-session-configurations"></a>JEA 세션 구성
@@ -158,11 +158,11 @@ RoleDefinitions = @{
 
 ### <a name="role-capability-search-order"></a>역할 기능 검색 순서
 
-위의 예제에 표시된 것처럼 역할 기능은 역할 기능 파일의 기본 이름으로 참조됩니다. 파일의 기본 이름은 확장명이 없는 파일 이름입니다. 시스템에서 동일한 이름의 여러 역할 기능을 사용할 수 있는 경우 PowerShell은 암시적 검색 순서를 사용하여 유효 역할 기능 파일을 선택합니다. JEA는 이름이 같은 모든 역할 기능 파일에 대한 액세스 권한을 부여하지 **않습니다** .
+위의 예제에 표시된 것처럼 역할 기능은 역할 기능 파일의 기본 이름으로 참조됩니다. 파일의 기본 이름은 확장명이 없는 파일 이름입니다. 시스템에서 동일한 이름의 여러 역할 기능을 사용할 수 있는 경우 PowerShell은 암시적 검색 순서를 사용하여 유효 역할 기능 파일을 선택합니다. JEA는 이름이 같은 모든 역할 기능 파일에 대한 액세스 권한을 부여하지 **않습니다**.
 
 JEA에서는 `$env:PSModulePath` 환경 변수를 사용하여 역할 기능 파일을 검색할 경로를 확인합니다. JEA는 이러한 경로 각각에서 "RoleCapabilities" 하위 폴더가 포함된 유효한 PowerShell 모듈을 찾습니다. 모듈을 가져오는 경우와 마찬가지로, JEA는 같은 이름의 사용자 지정 역할 기능보다 Windows와 함께 제공되는 역할 기능을 선호합니다.
 
-명명에 관한 다른 모든 충돌의 경우는 Windows에서 디렉터리의 파일을 열거하는 순서에 따라 우선순위가 결정됩니다. 순서는 알파벳순으로 보장되지는 않습니다. 지정된 이름과 일치하는 첫 번째 역할 기능으로 검색된 것이 연결 사용자에게 사용됩니다. 역할 기능 검색 순서가 결정적이지 않으므로 역할 기능에는 고유한 파일 이름이 있는 것이 **좋습니다** .
+명명에 관한 다른 모든 충돌의 경우는 Windows에서 디렉터리의 파일을 열거하는 순서에 따라 우선순위가 결정됩니다. 순서는 알파벳순으로 보장되지는 않습니다. 지정된 이름과 일치하는 첫 번째 역할 기능으로 검색된 것이 연결 사용자에게 사용됩니다. 역할 기능 검색 순서가 결정적이지 않으므로 역할 기능에는 고유한 파일 이름이 있는 것이 **좋습니다**.
 
 ### <a name="conditional-access-rules"></a>조건부 액세스 규칙
 

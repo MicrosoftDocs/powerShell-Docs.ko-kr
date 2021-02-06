@@ -4,19 +4,19 @@ keywords: jea,powershell,security
 title: JEA(Just Enough Administration) 개요
 description: JEA는 PowerShell에서 관리하는 모든 항목에 대한 위임된 관리를 가능하게 하는 보안 기술입니다.
 ms.openlocfilehash: cc1c49960e274b58635c1ca4e6769a54c3c7ded6
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92501714"
 ---
 # <a name="just-enough-administration"></a>Just Enough Administration
 
 JEA(Just Enough Administration)는 PowerShell에서 관리하는 모든 항목에 대한 위임된 관리를 가능하게 하는 보안 기술입니다. JEA를 사용하면 다음이 가능합니다.
 
-- **머신의 관리자 수 감소** : 일반 사용자를 대신하여 권한 있는 작업을 수행하는 가상 계정 또는 그룹 관리 서비스 계정을 사용합니다.
-- **사용자가 수행할 수 있는 작업 제한** : 사용자가 실행할 수 있는 cmdlet, 함수 및 외부 명령을 지정합니다.
-- **사용자가 수행하고 있는 작업을 보다 효과적으로 이해** : 사용자가 해당 세션 중에 실행한 명령을 정확하게 보여 주는 기록 및 로그를 사용합니다.
+- **머신의 관리자 수 감소**: 일반 사용자를 대신하여 권한 있는 작업을 수행하는 가상 계정 또는 그룹 관리 서비스 계정을 사용합니다.
+- **사용자가 수행할 수 있는 작업 제한**: 사용자가 실행할 수 있는 cmdlet, 함수 및 외부 명령을 지정합니다.
+- **사용자가 수행하고 있는 작업을 보다 효과적으로 이해**: 사용자가 해당 세션 중에 실행한 명령을 정확하게 보여 주는 기록 및 로그를 사용합니다.
 
 **JEA가 중요한 이유는 무엇인가요?**
 

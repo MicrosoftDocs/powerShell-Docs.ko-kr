@@ -4,10 +4,10 @@ keywords: jea,powershell,security
 title: JEA 필수 조건
 description: 이 문서에서는 JEA 사용을 시작하기 위해 충족해야 하는 필수 조건을 설명합니다.
 ms.openlocfilehash: 5cc70a06887a2d0a840cc83117f865d3148056e1
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92501731"
 ---
 # <a name="prerequisites"></a>사전 요구 사항
@@ -47,7 +47,7 @@ JEA는 PowerShell 5.0 이상에서 사용할 수 있습니다. 전체 기능을 
 | Windows 8, 8.1          | WMF 5.1이 있는 경우 전체 기능                      |
 | Windows 7               | WMF 5.1에서 축소된 기능<sup>1</sup>       |
 
-- <sup>1</sup> Windows Server 2008 R2 또는 Windows 7에서 그룹 관리 서비스 계정을 사용하도록 JEA를 구성할 수 없습니다. 가상 계정 및 기타 JEA 기능이 *지원됩니다* .
+- <sup>1</sup> Windows Server 2008 R2 또는 Windows 7에서 그룹 관리 서비스 계정을 사용하도록 JEA를 구성할 수 없습니다. 가상 계정 및 기타 JEA 기능이 *지원됩니다*.
 
 - <sup>2</sup> 다음 JEA 기능은 Windows 10 버전 1511 및 1603에서 지원되지 않습니다.
 
