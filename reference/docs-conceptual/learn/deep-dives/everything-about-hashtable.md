@@ -3,12 +3,12 @@ title: 해시 테이블에 대해 알고 싶은 모든 것
 description: 해시 테이블은 PowerShell에서 대단히 중요하기 때문에 확실하게 이해해야 합니다.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 1539cf6444cab718c1108384c640193d66c85daf
-ms.sourcegitcommit: 0c31814bed14ff715dc7d4aace07cbdc6df2438e
+ms.openlocfilehash: e386e2aa2f7b85bee4bf622fd9251ef7642cf16a
+ms.sourcegitcommit: 57e577097085dc621bd797ef4a7e2854ea7d4e29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "93354425"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "97980504"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>해시 테이블에 대해 알고 싶은 모든 것
 
@@ -925,8 +925,7 @@ Orig: [copy]
 
 ### <a name="deep-copies"></a>전체 복사본
 
-이 문서를 작성하는 지금 해시 테이블의 전체 복사본을 만드는(그리고 이것을 해시 테이블로 유지하는) 방법보다 좋은 방법을 알지 못합니다. 그런 방법은 다른 누군가가 작성할 것입니다.
-이 방법을 이용하면 작업을 빠르게 수행하는 있습니다.
+해시 테이블의 전체 복사본을 만들고 이를 해시 테이블로 유지하는 방법에는 두 가지가 있습니다. 다음은 PowerShell을 사용하여 전체 복사본을 재귀적으로 만드는 함수입니다.
 
 ```powershell
 function Get-DeepClone
@@ -952,6 +951,21 @@ function Get-DeepClone
 ```
 
 다른 참조 형식이나 배열을 처리하지는 않지만 좋은 출발점이 될 것입니다.
+
+또 다른 방법은 .Net을 사용하여 다음 함수와 같이 **CliXml** 을 사용하여 역직렬화하는 것입니다.
+
+```powershell
+function Get-DeepClone
+{
+    param(
+        $InputObject
+    )
+    $TempCliXmlString = [System.Management.Automation.PSSerializer]::Serialize($obj, [int32]::MaxValue)
+    return [System.Management.Automation.PSSerializer]::Deserialize($TempCliXmlString)
+}
+```
+
+매우 큰 해시 테이블의 경우 역직렬화 함수는 스케일 아웃 시 더 빠릅니다. 그러나 이 방법을 사용할 경우 몇 가지 사항을 고려해야 합니다. **CliXml** 을 사용하기 때문에 메모리 집약적이며 거대한 해시 테이블을 복제하는 경우 문제가 될 수 있습니다. **CliXml** 의 또 다른 제한 사항은 깊이가 48로 제한된다는 것입니다. 하나의 해시 테이블에 중첩된 해시 테이블의 48개 레이어가 있는 경우, 복제가 실패하고 해시 테이블이 출력되지 않습니다.
 
 ## <a name="anything-else"></a>다른 내용을 알고 싶으신가요?
 

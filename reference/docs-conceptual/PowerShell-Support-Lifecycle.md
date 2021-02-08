@@ -2,12 +2,12 @@
 title: PowerShell Core 지원 수명 주기
 description: PowerShell 지원을 제어하는 정책에 대해 자세히 설명합니다.
 ms.date: 11/11/2020
-ms.openlocfilehash: f2a1df0fabdfb624db666d240172930dc60f1bfe
-ms.sourcegitcommit: 2fc6ee49a70bda4c59135136bd5cc7782836a124
+ms.openlocfilehash: 0803dda070c66b4c1d803171ecdb7029a096517b
+ms.sourcegitcommit: 4879b9cdfa3f03b04a07b84442dc1ca9ae0f6b46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94810388"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98105182"
 ---
 # <a name="powershell-support-lifecycle"></a>PowerShell 지원 수명 주기
 
@@ -143,11 +143,13 @@ PowerShell은 [Windows에 대한 Microsoft 보안 서비스 기준][]을 따릅�
 
 |         버전          | 출시 날짜 |                                                                     참고                                                                      |
 | ------------------------ | :----------: | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| PowerShell 7.1(현재) |   2020년 11월   | .NET Core 5.0(현재) 기반                                                                                                              |
-| PowerShell 7.0(LTS)     |   2020년 3월   | .NET Core 3.1(LTS) 기반                                                                                                                  |
-| PowerShell 6.0           |   2018년 1월   | .NET Core 2.1 기반 첫 번째 릴리스. Windows, Linux 및 macOS에 설치 가능.                                                              |
-| PowerShell 5.1           |   2016년 8월   | Windows 10 1주년 업데이트 및 Windows Server 2016에서 릴리스                                                                             |
-| PowerShell 5.0           |   2016년 2월   | WMF(Windows Management Framework) 5.0에서 릴리스                                                                                            |
+| PowerShell 7.1(현재) |   2020년 11월   | .NET Core 5.0(현재) 기반.                                                                                                             |
+| PowerShell 7.0(LTS)     |   2020년 3월   | .NET Core 3.1(LTS) 기반.                                                                                                                 |
+| PowerShell 6.2           |   2019년 3월   |                                                                                                                                               |
+| PowerShell 6.1           |   2018년 9월   | .NET Core 2.1 기반.                                                                                                                       |
+| PowerShell 6.0           |   2018년 1월   | .NET Core 2.0 기반 첫 번째 릴리스. Windows, Linux 및 macOS에 설치 가능.                                                              |
+| PowerShell 5.1           |   2016년 8월   | Windows 10 1주년 업데이트 및 Windows Server 2016에서 릴리스.                                                                            |
+| PowerShell 5.0           |   2016년 2월   | WMF(Windows Management Framework) 5.0에서 릴리스.                                                                                           |
 | PowerShell 4.0           |   2013년 10월   | Windows 8.1에서 Windows Server 2012 R2와 통합. Windows 7 SP1, Windows Server 2008 R2 SP1, 및 Windows Server 2012에 설치 가능. |
 | PowerShell 3.0           |   2012년 10월   | Windows 8에서 Windows Server 2012와 통합. Windows 7 SP1, Windows Server 2008 SP1, 및 Windows Server 2008 R2 SP1에 설치 가능.  |
 | PowerShell 2.0           |   2009년 7월   | Windows 7 및 Windows Server 2008 R2에서 통합. Windows XP SP3, Windows Server 2003 SP2, 및 Windows Vista SP1에 설치 가능.            |

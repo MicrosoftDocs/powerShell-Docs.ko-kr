@@ -1,13 +1,13 @@
 ---
 title: Windows에 PowerShell 설치
 description: Windows에서 PowerShell을 설치하는 방법에 대한 정보
-ms.date: 11/11/2020
-ms.openlocfilehash: 039db904a315bd3ad3f4e1358d414c98c3a84be5
-ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
+ms.date: 02/02/2021
+ms.openlocfilehash: befc5ff156cb7c3843d89e394e903778682ba28e
+ms.sourcegitcommit: 40b6d8e9b6d791ac69e2ff85224e900b21552bc1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94661429"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536493"
 ---
 # <a name="installing-powershell-on-windows"></a>Windows에 PowerShell 설치
 
@@ -24,14 +24,14 @@ WSMan을 통한 PowerShell 원격 기능을 사용하려면 다음 전제 조건
 
 ## <a name="download-the-installer-package"></a>설치 프로그램 패키지 다운로드
 
-Windows에서 PowerShell을 설치하려면 GitHub에서 [최신][] 패키지 설치를 다운로드합니다. [릴리스][] 페이지에서 최신 미리 보기 버전을 찾을 수도 있습니다. 릴리스 페이지의 **Assets** 섹션이 나올 때까지 아래로 스크롤합니다. **Assets** 섹션이 축소되어 있으면 클릭하여 확장합니다.
+Windows에서 PowerShell을 설치하려면 GitHub에서 [최신][] 패키지 설치를 다운로드합니다. 최신 [미리 보기][] 버전을 찾을 수도 있습니다. 릴리스 페이지의 **Assets** 섹션이 나올 때까지 아래로 스크롤합니다. **Assets** 섹션이 축소되어 있으면 클릭하여 확장합니다.
 
 ## <a name="installing-the-msi-package"></a><a id="msi" />MSI 패키지 설치
 
 MSI 파일은 `PowerShell-<version>-win-<os-arch>.msi`과 비슷합니다. 다음은 그 예입니다. 
 
-- `PowerShell-7.1.0-win-x64.msi`
-- `PowerShell-7.1.0-win-x86.msi`
+- `PowerShell-7.1.1-win-x64.msi`
+- `PowerShell-7.1.1-win-x86.msi`
 
 다운로드가 완료되면 설치 프로그램을 두 번 클릭하고 지시를 따릅니다.
 
@@ -55,13 +55,14 @@ MSI 파일은 `PowerShell-<version>-win-<os-arch>.msi`과 비슷합니다. 다�
 명령줄에서 MSI 패키지를 설치할 수 있으므로 관리자는 사용자 상호 작용 없이 패키지를 배포할 수 있습니다. MSI 패키지에는 다음과 같은 설치 옵션 제어 속성이 포함되어 있습니다.
 
 - **ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL** - 이 속성은 Windows 탐색기의 컨택스트 메뉴에 **Open PowerShell** 항목을 추가하는 옵션을 제어합니다.
+- **ADD_FILE_CONTEXT_MENU_RUNPOWERSHELL** - 이 속성은 Windows 탐색기의 상황에 맞는 메뉴에 **PowerShell에서 실행** 항목을 추가하는 옵션을 제어합니다.
 - **ENABLE_PSREMOTING** - 이 속성은 설치 중 PowerShell 원격 조정을 사용하는 옵션을 제어합니다.
 - **REGISTER_MANIFEST** - 이 속성은 Windows 이벤트 로깅 매니페스트를 등록하는 옵션을 제어합니다.
 
 다음 예제에서는 PowerShell을 자동으로 설치할 때 모든 설치 옵션을 사용하도록 설정하는 방법을 보여 줍니다.
 
 ```powershell
-msiexec.exe /package PowerShell-7.1.0-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
+msiexec.exe /package PowerShell-7.1.1-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
 ```
 
 `Msiexec.exe`에 대한 명령줄 옵션의 전체 목록은 [명령줄 옵션](/windows/desktop/Msi/command-line-options)을 참조하세요.
@@ -83,10 +84,10 @@ PowerShell 7.1부터 MSI 패키지는 PowerShell의 설치 위치 및 버전을 
 
 고급 배포 시나리오를 지원하기 위해 PowerShell 이진 ZIP 아카이브가 제공됩니다. [릴리스][릴리스] 페이지에서 다음 ZIP 보관 파일 중 하나를 다운로드합니다.
 
-- PowerShell-7.1.0-win-x64.zip
-- PowerShell-7.1.0-win-x86.zip
-- PowerShell-7.1.0-win-arm64.zip
-- PowerShell-7.1.0-win-arm32.zip
+- PowerShell-7.1.1-win-x64.zip
+- PowerShell-7.1.1-win-x86.zip
+- PowerShell-7.1.1-win-arm64.zip
+- PowerShell-7.1.1-win-arm32.zip
 
 파일을 다운로드하는 방법에 따라 `Unblock-File` cmdlet을 사용하여 파일의 차단을 해제해야 할 수도 있습니다. 원하는 위치에 콘텐츠의 압축을 풀고, 여기서 `pwsh.exe`를 실행합니다. MSI 패키지 설치와 달리 ZIP 보관 파일 설치는 필수 조건을 확인하지 않습니다. WSMan에서 원격 기능이 제대로 작동하도록 하려면 [필수 조건](#prerequisites)을 충족했는지 확인하세요.
 
@@ -225,8 +226,8 @@ dotnet 도구 설치 프로그램은 `$env:PATH` 환경 변수에 `$env:USERPROF
    ```Output
    Name               Id                           Version
    ---------------------------------------------------------------
-   PowerShell         Microsoft.PowerShell         7.1.0
-   PowerShell-Preview Microsoft.PowerShell-Preview 7.1.0-preview.5
+   PowerShell         Microsoft.PowerShell         7.1.1
+   PowerShell-Preview Microsoft.PowerShell-Preview 7.1.1-preview.5
    ```
 
 1. `--exact` 매개 변수를 사용하여 특정 버전의 PowerShell 설치
@@ -286,8 +287,8 @@ Microsoft는 이 문서의 설치 방법을 지원합니다. 다른 원본에서
 
 <!-- link references -->
 
-[릴리스]: https://github.com/PowerShell/PowerShell/releases
-[최신]: https://github.com/PowerShell/PowerShell/releases/latest
+[미리 보기]: https://aka.ms/powershell-release?tag=preview
+[최신]: https://aka.ms/powershell-release?tag=stable
 [ssh-remoting]: ../learn/remoting/SSH-Remoting-in-PowerShell-Core.md
 [wsman-remoting]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md
 [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
