@@ -5,12 +5,12 @@ ms.date: 12/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Automatic_Variables
-ms.openlocfilehash: 60ad0e40f7e392bf240ee76a5902123c45a282fd
-ms.sourcegitcommit: 1628fd2a1f50aec2f31ffb1c451a3ce77c08983c
+ms.openlocfilehash: 8a2410dd2adcc1679ab203293b4c4e712b960278
+ms.sourcegitcommit: 3a1d80e27438976101f216b8c3d623c61b868db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577245"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99975144"
 ---
 # <a name="about-automatic-variables"></a>자동 변수 정보
 
@@ -67,7 +67,7 @@ $? # $true
 
 함수, 스크립트 또는 스크립트 블록에 전달 되는 선언 되지 않은 매개 변수에 대 한 값 배열을 포함 합니다. 함수를 만들 때 키워드를 사용 `param` 하거나 함수 이름 뒤에 괄호 안에 쉼표로 구분 된 매개 변수 목록을 추가 하 여 매개 변수를 선언할 수 있습니다.
 
-이벤트 동작에서 `$Args` 변수는 처리 중인 이벤트의 이벤트 인수를 나타내는 개체를 포함 합니다. 이 변수는 `Action` 이벤트 등록 명령의 블록 내 에서만 채워집니다.
+이벤트 동작에서 `$args` 변수는 처리 중인 이벤트의 이벤트 인수를 나타내는 개체를 포함 합니다. 이 변수는 `Action` 이벤트 등록 명령의 블록 내 에서만 채워집니다.
 이 변수의 값은를 반환 하는 **PSEventArgs** 개체의 **sourceargs** 속성 에서도 찾을 수 있습니다 `Get-Event` .
 
 ### <a name="consolefilename"></a>$ConsoleFileName
@@ -180,7 +180,7 @@ echo Hello | pwsh -Command """$input World!"""
 
 PowerShell 3.0부터에는 `MyInvocation` 다음과 같은 새 속성이 있습니다.
 
-| 속성      | 설명                                         |
+| 속성      | Description                                         |
 | ------------- | --------------------------------------------------- |
 | **PSScriptRoot**  | 호출 된 스크립트에 대 한 전체 경로를 포함 합니다.   |
 |               | 현재 명령입니다. 이 속성의 값은입니다.  |
@@ -368,7 +368,7 @@ PowerShell 3.0부터 모든 스크립트에서 유효 합니다.
 
 현재 세션에서 실행 중인 PowerShell 버전에 대 한 세부 정보를 표시 하는 읽기 전용 해시 테이블을 포함 합니다. 테이블에는 다음 항목이 포함 되어 있습니다.
 
-| 속성                  | 설명                                   |
+| 속성                  | Description                                   |
 | ------------------------- | --------------------------------------------- |
 | **PSVersion**             | PowerShell 버전 번호                 |
 | **PSEdition**             | 이 속성의 값은  |
@@ -460,7 +460,7 @@ PowerShell 3.0부터 모든 스크립트에서 유효 합니다.
 
 **Current** 속성은 **MoveNext** 가 호출 될 때까지 계속 해 서 동일한 속성을 반환 합니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 ### <a name="example-1-using-the-input-variable"></a>예제 1: $input 변수 사용
 
@@ -729,7 +729,7 @@ Default (Current): Start
 Default (Current): End
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [about_Functions](about_Functions.md)
 

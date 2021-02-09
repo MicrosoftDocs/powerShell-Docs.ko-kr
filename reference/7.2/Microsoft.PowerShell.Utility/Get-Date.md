@@ -6,12 +6,12 @@ ms.date: 08/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Date
-ms.openlocfilehash: 8c0a1b7a14f5dfa071a85808f5d7dfba4d06048e
-ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
+ms.openlocfilehash: 6f5c76faafa2c68a6d9dfc604238c514489aa717
+ms.sourcegitcommit: 3a1d80e27438976101f216b8c3d623c61b868db8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "99599580"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99975059"
 ---
 # Get-Date
 
@@ -215,7 +215,7 @@ d-----         6/27/2019    07:59                2019-06-27T07.59.24.4603750-07.
 
 ### 예 9: Unix 타임 스탬프 변환
 
-이 예에서는 Unix 시간 (1970-01-01 0:00:00 이후의 초 수로 나타냄)을 DateTime으로 변환 합니다.
+이 예에서는 Unix 시간(1970-01-01 0:00:00 이후의 초로 표시됨)을 DateTime으로 변환합니다.
 
 ```powershell
 Get-Date -UnixTimeSeconds 1577836800
@@ -348,7 +348,7 @@ Accept wildcard characters: False
 
 PowerShell 5.0부터 다음 추가 형식을 **Format** 매개 변수에 대 한 값으로 사용할 수 있습니다.
 
-- **Filedate**. 현재 날짜를 현지 시간으로 표현 하는 파일 또는 경로입니다. 형식은 `yyyyMMdd` (4 자리 연도, 2 자리 월 및 2 자리 일을 사용 하는 대/소문자 구분)입니다. 다음은 그 예입니다. 
+- **Filedate**. 현재 날짜를 현지 시간으로 표현 하는 파일 또는 경로입니다. 형식은 `yyyyMMdd` (4 자리 연도, 2 자리 월 및 2 자리 일을 사용 하는 대/소문자 구분)입니다. 예를 들어:
   20190627.
 
 - **Filedateuniversal**. 현재 날짜를 UTC (universal time)로 표현 하는 파일 또는 경로에 대 한 친숙 한 표현입니다. 형식은입니다 `yyyyMMddZ` . 여기에는 4 자리 연도, 2 자리 월, 2 자리 날짜 및 문자를 UTC 표시기로 사용 하 여 대/소문자를 구분 합니다 `Z` . 예: 20190627Z
@@ -513,7 +513,7 @@ Accept wildcard characters: False
 
 ### 파이프라인 입력
 
-`Get-Date` 파이프라인 입력을 허용 합니다. 예를 들어 `Get-ChildItem | Get-Date`입니다.
+`Get-Date` 파이프라인 입력을 허용 합니다. 예들 들어 `Get-ChildItem | Get-Date`입니다.
 
 ## 출력
 
@@ -526,7 +526,7 @@ Accept wildcard characters: False
 메서드는 `(Get-Date).ToString()` **DateTime** 개체를 **문자열** 개체로 변환 합니다.
 
 개체의 속성 및 메서드를 표시 하려면 개체를 파이프라인에서로 보냅니다 `Get-Member` .
-예를 들어 `Get-Date | Get-Member`입니다.
+예들 들어 `Get-Date | Get-Member`입니다.
 
 ## 참고
 
@@ -565,9 +565,9 @@ Accept wildcard characters: False
 | `%t` | 가로 탭 문자                                                |                          |
 | `%T` | 24 시간 형식의 시간                                                  | 17:45:52                 |
 | `%U` | ' W '와 동일                                                             |                          |
-| `%u` | 요일-번호                                                | 일요일 = 0               |
+| `%u` | 요일 (1-7)                                           | 월요일 = 1, 일요일 = 7   |
 | `%V` | 연간 주                                                        | 01-53                    |
-| `%w` | ' U '와 동일                                                             |                          |
+| `%w` | 요일 (0-6)                                           | 일요일 = 0, 토요일 = 6 |
 | `%W` | 연간 주                                                        | 00-52                    |
 | `%X` | ' T '와 동일                                                             |                          |
 | `%x` | 로캘의 표준 형식 날짜                                      | 영어 (미국)의 경우 06/27/19  |
