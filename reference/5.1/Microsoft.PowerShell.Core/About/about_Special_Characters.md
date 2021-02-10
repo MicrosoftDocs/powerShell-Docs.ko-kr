@@ -2,16 +2,16 @@
 description: PowerShell에서 시퀀스의 다음 문자를 해석 하는 방법을 제어 하는 특수 문자 시퀀스에 대해 설명 합니다.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 04/04/2020
+ms.date: 02/08/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_special_characters?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Special_Characters
-ms.openlocfilehash: 875a1c3c63e759151c3c64b5396312b030955cb7
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 7e0ea9298dd85627c08298917464cb005f4f37ff
+ms.sourcegitcommit: 364c3fe46b2069b810107d840be59fe519ea7b4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222521"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100100736"
 ---
 # <a name="about-special-characters"></a>특수 문자 정보
 
@@ -129,13 +129,28 @@ Column1         Column2         Column3
 
 ## <a name="vertical-tab-v"></a>세로 탭 (' v)
 
-가로 탭 ( `` `v `` ) 문자는 다음 세로 탭 정지로 이동 하 고 해당 지점에서 나머지 출력을 씁니다. 이는 기본 Windows 콘솔에는 영향을 주지 않습니다.
+세로 탭 ( `` `v `` ) 문자는 다음 세로 탭 정지로 이동 하 고 해당 지점에서 나머지 출력을 씁니다. 세로 탭의 렌더링은 장치 및 터미널에 종속 됩니다.
 
 ```powershell
 Write-Host "There is a vertical tab`vbetween the words."
 ```
 
-다음 예제에서는 프린터 또는 다른 콘솔 호스트에서 얻을 수 있는 출력을 보여 줍니다.
+다음 예에서는 몇 가지 일반적인 환경에서 세로 탭의 렌더링 된 출력을 보여 줍니다.
+
+Windows 콘솔 호스트 응용 프로그램은 ( `` `v `` )를 추가 간격이 추가 되지 않은 특수 문자로 해석 합니다.
+
+```Output
+There is a vertical tab♂between the words.
+```
+
+[Windows 터미널](https://www.microsoft.com/p/windows-terminal/9n0dx20hk701) 에서는 세로 탭 문자를 캐리지 리턴 및 줄 바꿈으로 렌더링 합니다. 출력의 나머지 부분은 다음 줄의 시작 부분에 인쇄 됩니다.
+
+```Output
+There is a vertical tab
+between the words.
+```
+
+프린터 또는 unix 기반 콘솔에서 세로 탭 문자는 다음 줄로 이동 하 여 해당 지점에 나머지 출력을 씁니다.
 
 ```Output
 There is a vertical tab
@@ -160,7 +175,7 @@ PowerShell에서 다음 문자열을로 보냅니다 `Icacls` .
 X:\VMS /grant Dom\HVAdmin:(CI)(OI)F
 ```
 
-다음은 다른 예제입니다. **Sho워 gs** 함수는 전달 된 값을 출력 합니다. 이 예제에서는 라는 변수를 `$HOME` 함수에 두 번 전달 합니다.
+또는 다음과 같은 예도 있습니다. **Sho워 gs** 함수는 전달 된 값을 출력 합니다. 이 예제에서는 라는 변수를 `$HOME` 함수에 두 번 전달 합니다.
 
 ```powershell
 function showArgs {
