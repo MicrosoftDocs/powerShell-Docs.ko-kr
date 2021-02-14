@@ -3,12 +3,12 @@ ms.date: 09/13/2016
 ms.topic: reference
 title: Parameter 특성 선언
 description: Parameter 특성 선언
-ms.openlocfilehash: bab48a94cb4b1e8501fb79c2f3ef71393fa2ee68
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 24a49406b1493a7f8c23bca798ddb3e73a901111
+ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "92650348"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100500232"
 ---
 # <a name="parameter-attribute-declaration"></a>Parameter 특성 선언
 
@@ -59,7 +59,7 @@ Parameter 특성은 cmdlet 클래스의 공용 속성을 cmdlet 매개 변수로
 
   - 위치 매개 변수를 두 개 이상 포함 하는 매개 변수 집합은 동일 하지 않습니다.
 
-  - 매개 변수 집합에서 하나의 매개 변수만 선언 해야 `ValueFromPipeline = true` 합니다. 여러 매개 변수에서를 정의할 수 있습니다 `ValueFromPipelineByPropertyName = true` .
+  - 매개 변수 집합에서 하나의 매개 변수만 선언 해야 `ValueFromPipeline = true` 합니다.
 
   - 여러 매개 변수에서를 정의할 수 있습니다 `ValueFromPipelineByPropertyName = true` .
 

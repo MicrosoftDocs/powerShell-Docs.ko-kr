@@ -5,12 +5,12 @@ ms.date: 11/23/2020
 online version: https://docs.microsoft.com/powershell/module/psreadline/about/about_psreadline?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: PSReadLine 정보
-ms.openlocfilehash: 4836abfec465ba7cdfb6800c1e60104fba19ce08
-ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
+ms.openlocfilehash: b0c5950b2af6a866d0ffcfdd6ce7ad92a1763778
+ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "99600623"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100500215"
 ---
 # <a name="psreadline"></a>PSReadLine
 
@@ -918,19 +918,39 @@ PSReadLine에서 기록을 지웁니다. PowerShell 기록에는 영향을 주�
 
 - Vi 삽입 모드: `<Shift+Tab>`
 
-## <a name="miscellaneous-functions"></a>기타 함수
+## <a name="prediction-functions"></a>예측 함수
 
 ### <a name="acceptnextsuggestionword"></a>AcceptNextSuggestionWord
 
-인라인 또는 선택한 제안의 다음 단어를 적용 합니다.
+`InlineView`예측에 대 한 보기 스타일로를 사용 하는 경우 인라인 제안의 다음 단어를 그대로 사용 합니다.
 
 - 함수가 바인딩 해제 되었습니다.
 
 ### <a name="acceptsuggestion"></a>AcceptSuggestion
 
-현재 인라인 또는 선택한 제안에 동의 합니다.
+`InlineView`예측에 대 한 보기 스타일로를 사용 하는 경우 현재 인라인 제안을 적용 합니다.
 
 - 함수가 바인딩 해제 되었습니다.
+
+### <a name="nextsuggestion"></a>NextSuggestion
+
+`ListView`예측에 대 한 보기 스타일로를 사용 하는 경우 목록에서 다음 제안으로 이동 합니다.
+
+- 함수가 바인딩 해제 되었습니다.
+
+### <a name="previoussuggestion"></a>PreviousSuggestion
+
+`ListView`예측에 대 한 보기 스타일로을 사용 하는 경우 목록에서 이전 제안으로 이동 합니다.
+
+- 함수가 바인딩 해제 되었습니다.
+
+### <a name="switchpredictionview"></a>SwitchPredictionView
+
+및 간의 예측에 대 한 뷰 스타일을 전환 합니다 `InlineView` `ListView` .
+
+- 입력 `<F2>`
+
+## <a name="miscellaneous-functions"></a>기타 함수
 
 ### <a name="capturescreen"></a>CaptureScreen
 
@@ -1007,6 +1027,15 @@ PSReadLine에서 기록을 지웁니다. PowerShell 기록에는 영향을 주�
 
 - 함수가 바인딩 해제 되었습니다.
 
+### <a name="showcommandhelp"></a>ShowCommandHelp
+
+**Microsoft. PowerShell** 호출기를 사용 하 여 대체 화면 버퍼에 대 한 전체 cmdlet 도움말 보기를 제공 합니다.
+
+- 입력 `<F1>`
+- Emacs `<F1>`
+- Vi 삽입 모드: `<F1>`
+- Vi 명령 모드: `<F1>`
+
 ### <a name="showkeybindings"></a>ShowKeyBindings 바인딩
 
 모든 바인딩된 키를 표시 합니다.
@@ -1014,6 +1043,15 @@ PSReadLine에서 기록을 지웁니다. PowerShell 기록에는 영향을 주�
 - 입력 `<Ctrl+Alt+?>`
 - Emacs `<Ctrl+Alt+?>`
 - Vi 삽입 모드: `<Ctrl+Alt+?>`
+
+### <a name="showparameterhelp"></a>ShowParameterHelp
+
+는와 같이 현재 명령줄 아래에 표시 하 여 매개 변수에 대 한 동적 도움말을 제공 `MenuComplete` 합니다.
+
+- 입력 `<Alt+h>`
+- Emacs `<Alt+h>`
+- Vi 삽입 모드: `<Alt+h>`
+- Vi 명령 모드: `<Alt+h>`
 
 ### <a name="vicommandmode"></a>ViCommandMode
 

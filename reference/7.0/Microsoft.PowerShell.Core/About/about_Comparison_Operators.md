@@ -5,12 +5,12 @@ ms.date: 01/20/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_comparison_operators
-ms.openlocfilehash: a89ab612a7f0fe518f97a4d037956df14546740d
-ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
+ms.openlocfilehash: 179798b490855cd463e2348acaf1292f042ba173
+ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98620118"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100500162"
 ---
 # <a name="about-comparison-operators"></a>비교 연산자 정보
 
@@ -24,7 +24,7 @@ PowerShell의 비교 연산자는 입력 값에 대해 두 값 또는 컬렉션�
 
 |    유형     |   연산자   |              비교 테스트              |
 | ----------- | ------------ | ----------------------------------------- |
-| 같음    | -eq          | equals                                    |
+| 등호    | -eq          | equals                                    |
 |             | -ne          | 같지 않음                                |
 |             | -gt          | 보다 큼                              |
 |             | -ge          | 크거나 같음                     |
@@ -34,12 +34,12 @@ PowerShell의 비교 연산자는 입력 값에 대해 두 값 또는 컬렉션�
 |             | -notlike     | 문자열이 와일드 카드 패턴과 일치 하지 않습니다.    |
 |             | -match       | 문자열이 regex 패턴과 일치 합니다.              |
 |             | -notmatch    | 문자열이 regex 패턴과 일치 하지 않습니다.       |
-| Replacement | -replace     | regex 패턴과 일치 하는 문자열을 바꿉니다. |
+| 대체 기능 | -replace     | regex 패턴과 일치 하는 문자열을 바꿉니다. |
 | Containment | -contains    | 컬렉션에 값이 포함 되어 있습니다.               |
 |             | -notcontains | 컬렉션에 값이 포함 되어 있지 않습니다.       |
 |             | -in          | 값이 컬렉션에 있습니다.                  |
 |             | -notin       | 값이 컬렉션에 없습니다.              |
-| Type        | -is          | 두 개체의 형식이 동일 합니다.            |
+| 형식        | -is          | 두 개체의 형식이 동일 합니다.            |
 |             | -isnot       | 개체의 형식이 다릅니다.         |
 
 ## <a name="common-features"></a>일반 기능
@@ -249,7 +249,7 @@ Members smaller than or equal to 7
 
 이러한 연산자는 [system.object][1]를 구현 하는 모든 클래스에서 작동 합니다.
 
-예제:
+예:
 
 ```powershell
 # Date comparison
@@ -395,7 +395,7 @@ Get-ChildItem *.txt | Rename-Item -NewName { $_.name -replace '\.txt$','.log' }
 
 기본적으로 연산자는 `-replace` 대/소문자를 구분 하지 않습니다. 대/소문자를 구분 하려면를 사용 `-creplace` 합니다. 명시적으로 대/소문자를 구분 하지 않도록 하려면를 사용 `-ireplace` 합니다.
 
-예제:
+예:
 
 ```powershell
 "book" -ireplace "B", "C" # Case insensitive
@@ -414,7 +414,7 @@ book
 다음 예에서는 `-replace` 연산자가 형식으로 사용자 이름을 받아 `DomainName\Username` 형식으로 변환 합니다 `Username@DomainName` .
 
 ```powershell
-$SearchExp = '^(?<Username>[\w-.]+)\\(?<DomainName>[\w-.]+)$'
+$SearchExp = '^(?<DomainName>[\w-.]+)\\(?<Username>[\w-.]+)$'
 $ReplaceExp = '${Username}@${DomainName}'
 
 'Contoso.local\John.Doe' -replace $SearchExp,$ReplaceExp
@@ -505,7 +505,7 @@ Hello
 
 이러한 연산자는 집합에 특정 요소가 포함 되는지 여부를 알려 줍니다. `-contains` 오른쪽 (테스트 개체)이 집합의 요소 중 하 나와 일치 하면 True를 반환 합니다. `-notcontains` 대신 False를 반환 합니다. 테스트 개체가 컬렉션인 경우 이러한 연산자는 참조 같음을 사용 합니다. 즉, 집합의 요소 중 하나가 테스트 개체의 동일한 인스턴스인지 여부를 확인 합니다.
 
-예제:
+예:
 
 ```powershell
 "abc", "def" -contains "def"                  # Output: True
