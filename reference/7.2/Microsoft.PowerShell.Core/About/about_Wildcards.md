@@ -1,16 +1,16 @@
 ---
 description: PowerShell에서 와일드 카드 문자를 사용 하는 방법을 설명 합니다.
 Locale: en-US
-ms.date: 03/28/2019
+ms.date: 02/13/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_wildcards?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Wildcards
-ms.openlocfilehash: b5f13fdbfbc24e19e5ad0b1cd6ecc1b99f68914f
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 40620e54bb889d683192b346f3ba1c139895e4d0
+ms.sourcegitcommit: 9777152e026c47ba8d319593051416054cb62246
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99603285"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100529977"
 ---
 # <a name="about-wildcards"></a>와일드 카드 정보
 
@@ -20,13 +20,17 @@ PowerShell에서 와일드 카드 문자를 사용 하는 방법을 설명 합�
 
 ## <a name="long-description"></a>자세한 설명
 
-와일드 카드 문자는 하나 이상의 문자를 나타냅니다. 이를 사용 하 여 명령에서 단어 패턴을 만들 수 있습니다. 예를 들어 파일 이름 확장명을 사용 하 여 디렉터리의 모든 파일을 가져오려면 `C:\Techdocs` `.ppt` 다음을 입력 합니다.
+와일드 카드 문자는 하나 이상의 문자를 나타냅니다. 이를 사용 하 여 명령에서 단어 패턴을 만들 수 있습니다. 와일드 카드 식은 연산자와 함께 사용 `-like` 되거나 와일드 카드를 허용 하는 모든 매개 변수와 함께 사용 됩니다.
+
+예를 들어 `C:\Techdocs` 파일 이름 확장명을 사용 하 여 디렉터리의 모든 파일을 일치 시키려면 `.ppt` 다음과 같이 입력 합니다.
 
 ```powershell
 Get-ChildItem C:\Techdocs\*.ppt
 ```
 
 이 경우 별표 ( `*` ) 와일드 카드 문자는 파일 이름 확장명 앞에 나타나는 모든 문자를 나타냅니다 `.ppt` .
+
+와일드 카드 식은 정규식 보다 간단 합니다. 자세한 내용은 [about_Regular_Expressions](./about_Regular_Expressions.md)를 참조 하세요.
 
 PowerShell은 다음 와일드 카드 문자를 지원 합니다.
 

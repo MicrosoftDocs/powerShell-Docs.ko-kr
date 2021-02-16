@@ -7,12 +7,12 @@ ms.date: 08/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-html?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertTo-Html
-ms.openlocfilehash: 27a1d2994dee46b9e5bfd54132ff4a665330c2b4
-ms.sourcegitcommit: 9a6b6714ded4edb5119f1b82a253608018ea6b98
+ms.openlocfilehash: 1eade078765f93713da1f665e3ad6f062a1826d9
+ms.sourcegitcommit: 9777152e026c47ba8d319593051416054cb62246
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "93219417"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100529943"
 ---
 # ConvertTo-Html
 
@@ -69,7 +69,7 @@ Invoke-Item aliases.htm
 ### 예제 3: PowerShell 이벤트를 표시 하는 웹 페이지 만들기
 
 ```powershell
-`Get-EventLog` -LogName "Windows PowerShell" | ConvertTo-Html | Out-File pslog.htm
+Get-EventLog -LogName "Windows PowerShell" | ConvertTo-Html | Out-File pslog.htm
 ```
 
 이 명령은 `pslog.htm` 로컬 컴퓨터의 Windows PowerShell 이벤트 로그에 이벤트를 표시 하는 이라는 HTML 페이지를 만듭니다.
@@ -153,7 +153,7 @@ Get-EventLog -Log "Windows PowerShell" | ConvertTo-Html -Property id, level, tas
 
 파이프라인 연산자 ()를 사용 하 여 `|` 이벤트를 cmdlet으로 보내면이 `ConvertTo-Html` cmdlet이 이벤트를 HTML 형식으로 변환 합니다.
 
-`ConvertTo-Html`이 명령은 **Property** 매개 변수를 사용 하 여 이벤트의 **ID** , **Level** 및 **Task** 속성만 선택 합니다.
+`ConvertTo-Html`이 명령은 **Property** 매개 변수를 사용 하 여 이벤트의 **ID**, **Level** 및 **Task** 속성만 선택 합니다.
 
 ### 예 9: 지정 된 서비스를 표시 하는 웹 페이지 만들기
 
@@ -170,7 +170,7 @@ Get-Service A* |
 Invoke-Item Services.htm
 ```
 
-이 명령은로 시작 하는 컴퓨터의 서비스를 표시 하는 웹 페이지를 만들고 엽니다. 의 **Title** , **Body** , **precontent** 및 **postcontent** 매개 변수를 사용 하 여 `ConvertTo-Html` 출력을 사용자 지정 합니다.
+이 명령은로 시작 하는 컴퓨터의 서비스를 표시 하는 웹 페이지를 만들고 엽니다. 의 **Title**, **Body**, **precontent** 및 **postcontent** 매개 변수를 사용 하 여 `ConvertTo-Html` 출력을 사용자 지정 합니다.
 
 명령의 첫 번째 부분에서는 cmdlet을 사용 하 여 `Get-Service` 로 시작 하는 컴퓨터의 서비스를 가져옵니다. 이 명령은 파이프라인 연산자 ()를 사용 하 여 `|` 결과를 cmdlet으로 보냅니다 `ConvertTo-Html` . 또한이 명령은 cmdlet을 사용 하 여 `Out-File` 출력을 Services.htm 파일로 보냅니다.
 
