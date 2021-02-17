@@ -2,12 +2,12 @@
 title: MacOS에 PowerShell 설치
 description: macOS에서 PowerShell을 설치하는 방법에 대한 정보
 ms.date: 02/02/2021
-ms.openlocfilehash: 8132d88f4104696c5580a44b26247a24643f1b5b
-ms.sourcegitcommit: 40b6d8e9b6d791ac69e2ff85224e900b21552bc1
+ms.openlocfilehash: 3ae1fe0eb29b4d826221a2c11db19bc18c3efba7
+ms.sourcegitcommit: 4f1c2fe700b8a0544c59e371eb7cfbc6d852b185
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99536544"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100563211"
 ---
 # <a name="installing-powershell-on-macos"></a>MacOS에 PowerShell 설치
 
@@ -112,12 +112,12 @@ brew upgrade powershell
 
 ## <a name="installation-via-direct-download"></a>직접 다운로드를 통해 설치
 
-[릴리스][] 페이지의 PKG 패키지 `powershell-7.1.1-osx-x64.pkg`를 macOS 컴퓨터로 다운로드합니다.
+[릴리스][] 페이지의 PKG 패키지 `powershell-7.1.2-osx-x64.pkg`를 macOS 컴퓨터로 다운로드합니다.
 
 파일을 두 번 클릭하고 메시지를 따르거나 터미널에서 설치할 수 있습니다.
 
 ```sh
-sudo installer -pkg powershell-7.1.1-osx-x64.pkg -target /
+sudo installer -pkg powershell-7.1.2-osx-x64.pkg -target /
 ```
 
 [OpenSSL](#installing-dependencies)을 설치합니다. OpenSSL은 PowerShell 원격 기능 및 CIM 작업에 필요합니다.
@@ -144,19 +144,19 @@ dotnet 도구 설치 프로그램은 `PATH` 환경 변수에 `~/.dotnet/tools`�
 
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.1.1/powershell-7.1.1-osx-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.1.2/powershell-7.1.2-osx-x64.tar.gz
 
 # Create the target folder where powershell will be placed
-sudo mkdir -p /usr/local/microsoft/powershell/7.1.1
+sudo mkdir -p /usr/local/microsoft/powershell/7.1.2
 
 # Expand powershell to the target folder
-sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/7.1.1
+sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/7.1.2
 
 # Set execute permissions
-sudo chmod +x /usr/local/microsoft/powershell/7.1.1/pwsh
+sudo chmod +x /usr/local/microsoft/powershell/7.1.2/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /usr/local/microsoft/powershell/7.1.1/pwsh /usr/local/bin/pwsh
+sudo ln -s /usr/local/microsoft/powershell/7.1.2/pwsh /usr/local/bin/pwsh
 ```
 
 ## <a name="installing-dependencies"></a>종속성 설치
@@ -204,7 +204,7 @@ sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 
 ## <a name="paths"></a>경로
 
-- `$PSHOME`은 `/usr/local/microsoft/powershell/7.1.1/`입니다.
+- `$PSHOME`은 `/usr/local/microsoft/powershell/7.1.2/`입니다.
 - 사용자 프로필은 `~/.config/powershell/profile.ps1`에서 읽습니다.
 - 기본 프로필은 `$PSHOME/profile.ps1`에서 읽습니다.
 - 사용자 프로필은 `~/.local/share/powershell/Modules`에서 읽습니다.
@@ -216,7 +216,7 @@ sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 
 PowerShell은 macOS의 [XDG 기본 디렉터리 사양][xdg-bds]을 따릅니다.
 
-macOS는 BSD에서 파생된 운영체제이므로 `/opt` 대신 `/usr/local`이 접두사로 사용됩니다. 따라서 `$PSHOME`은 `/usr/local/microsoft/powershell/7.1.1/`이며 기호화된 링크는 `/usr/local/bin/pwsh`에 있습니다.
+macOS는 BSD에서 파생된 운영체제이므로 `/opt` 대신 `/usr/local`이 접두사로 사용됩니다. 따라서 `$PSHOME`은 `/usr/local/microsoft/powershell/7.1.2/`이며 기호화된 링크는 `/usr/local/bin/pwsh`에 있습니다.
 
 ## <a name="installation-support"></a>설치 지원
 

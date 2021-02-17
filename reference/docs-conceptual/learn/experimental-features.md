@@ -2,12 +2,12 @@
 ms.date: 12/14/2020
 title: PowerShell에서 실험적 기능 사용
 description: 현재 사용 가능한 실험적 기능과 사용 방법을 나열합니다.
-ms.openlocfilehash: be02829c27ff5d8babaf173d2ee7ebbfc7614773
-ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
+ms.openlocfilehash: 556ae8d877b670b119b7b5b958a52488aad16241
+ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97879357"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100500126"
 ---
 # <a name="using-experimental-features-in-powershell"></a>PowerShell에서 실험적 기능 사용
 
@@ -38,6 +38,7 @@ PowerShell의 실험적 기능 지원에서는 PowerShell 또는 PowerShell 모�
 | PSCultureInvariantReplaceOperator                          |         |         | &check; | &check; |
 | PSNotApplyErrorActionToStderr                              |         |         | &check; | &check; |
 | PSSubsystemPluginModel                                     |         |         | &check; | &check; |
+| PSAnsiProgress                                             |         |         |         | &check; |
 | PSAnsiRendering                                            |         |         |         | &check; |
 
 ## <a name="microsoftpowershellutilitypsmanagebreakpointsinrunspace"></a>Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace
@@ -116,6 +117,24 @@ Underline Off   Property   string UnderlinedOff {get;set;}
 - `StringDecorated Substring(int contentLength)` 메서드는 인덱스 0에서 시작하여 ANSI 이스케이스 시퀀스가 포함되지 않는 콘텐츠 길이까지 substring을 반환합니다. 이 메서드는 문자열을 자르고 인쇄 가능한 공간을 차지하지 않는 ANSI 이스케이프 시퀀스를 유지하기 위해 테이블 서식 지정에 필요합니다.
 - `string ToString()` 메서드는 동일하게 유지하고 문자열의 일반 텍스트 버전을 반환합니다.
 - `string ToString(bool Ansi)` 메서드는 `Ansi` 매개 변수가 true인 경우 원시 ANSI 포함 문자열을 반환합니다. 아니면, ANSI 이스케이프 시퀀스가 제거된 일반 텍스트 버전이 반환됩니다.
+
+## <a name="psansiprogress"></a>PSAnsiProgress
+
+이 실험은 PowerShell 7.2에서 추가되었습니다. 이 기능을 통해 `$PSStyle.Progress` 멤버를 추가하고 진행률 보기 표시줄 렌더링을 제어할 수 있습니다.
+
+- `$PSStyle.Progress.Style` - 렌더링 스타일을 설정하는 ANSI 문자열입니다.
+- `$PSStyle.Progress.MaxWidth` - 보기의 최대 너비를 설정합니다. 콘솔 너비를 `0`으로 설정합니다.
+  기본값은 `120`입니다.
+- `$PSStyle.Progress.View` - `Minimal` 및 `Classic` 값을 포함하는 열거형입니다. `Classic`은 변경 내용이 없는 기존 렌더링입니다. `Minimal`은 최소한의 단일 줄 렌더링입니다. 기본값은 `Minimal`입니다.
+
+다음 예에서는 렌더링 스타일을 최소 진행률 표시줄로 업데이트합니다.
+
+```powershell
+$PSStyle.Progress.View.Minimal
+```
+
+> [!NOTE]
+> 이 기능을 사용하려면 실험적 기능인 **PSAnsiRendering** 을 사용하도록 설정되어 있어야 합니다.
 
 ## <a name="pscommandnotfoundsuggestion"></a>PSCommandNotFoundSuggestion
 

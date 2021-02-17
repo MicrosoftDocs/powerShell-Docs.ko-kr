@@ -3,12 +3,12 @@ ms.date: 01/04/2021
 ms.topic: reference
 title: PowerShell 모듈 매니페스트를 작성하는 방법
 description: PowerShell 모듈 매니페스트를 작성하는 방법
-ms.openlocfilehash: 8c644391008cb97c1206f985f0f5eca9d7dfcc9e
-ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
+ms.openlocfilehash: 0270b9b3745b7ffd187f2089414ea7759515d96b
+ms.sourcegitcommit: 4f1c2fe700b8a0544c59e371eb7cfbc6d852b185
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97879374"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100563314"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>PowerShell 모듈 매니페스트를 작성 하는 방법
 
@@ -54,10 +54,10 @@ PowerShell 모듈을 작성 한 후 모듈에 대 한 정보를 포함 하는 �
 
 다음 표에서는 모듈 매니페스트에 포함할 수 있는 요소에 대해 설명 합니다.
 
-|요소|기본값|설명|
+|요소|기본값|Description|
 |-------------|-------------|-----------------|
 |**RootModule**<br /> 형식: `String`|`<empty string>`|이 매니페스트와 연결 된 스크립트 모듈 또는 이진 모듈 파일입니다. 이전 버전의 PowerShell에서는이 요소를 **ModuleToProcess** 합니다.<br /> 루트 모듈에 사용할 수 있는 형식은 **매니페스트** 모듈, 스크립트 모듈 이름 ( `.psm1` ) 또는 이진 모듈 (또는)의 이름을 만드는 비어 있을 수 있습니다 `.exe` `.dll` . `.psd1`이 요소에 모듈 매니페스트 () 또는 스크립트 파일 ()의 이름을 배치 `.ps1` 하면 오류가 발생 합니다. <br /> 예: `RootModule = 'ScriptModule.psm1'`|
-|**ModuleVersion**<br /> 형식: `Version`|`'0.0.1'`|이 모듈의 버전 번호입니다. 값을 지정 하지 않으면는 `New-ModuleManifest`   기본값을 사용 합니다. 문자열은 예를 들어 형식으로 변환할 수 있어야 합니다 `Version` `#.#.#.#.#` . `Import-Module` 이름에 일치 하는 **$PSModulePath** 에서 찾은 첫 번째 모듈을 로드 하 고, 적어도 **ModuleVersion** 을 **MinimumVersion** 매개 변수로 포함 합니다. 특정 버전을 가져오려면 `Import-Module` cmdlet의 **RequiredVersion** 매개 변수를 사용 합니다.<br /> 예: `ModuleVersion = '1.0'`|
+|**ModuleVersion**<br /> 형식: `Version`|`'0.0.1'`|이 모듈의 버전 번호입니다. 값을 지정 하지 않으면는 `New-ModuleManifest`   기본값을 사용 합니다. 문자열은 예를 들어 형식으로 변환할 수 있어야 합니다 `Version` `#.#.#.#` . `Import-Module` 이름에 일치 하는 **$PSModulePath** 에서 찾은 첫 번째 모듈을 로드 하 고, 적어도 **ModuleVersion** 을 **MinimumVersion** 매개 변수로 포함 합니다. 특정 버전을 가져오려면 `Import-Module` cmdlet의 **RequiredVersion** 매개 변수를 사용 합니다.<br /> 예: `ModuleVersion = '1.0'`|
 |**GUID**<br /> 형식: `GUID`|`'<GUID>'`|이 모듈을 고유 하 게 식별 하는 데 사용 되는 ID입니다. 값을 지정 하지 않으면 `New-ModuleManifest` 경로도는 값을 지정 합니다. 현재는 **GUID** 로 모듈을 가져올 수 없습니다. <br /> 예: `GUID = 'cfc45206-1e49-459d-a8ad-5b571ef94857'`|
 |**작성자**<br /> 형식: `String`|`'<Current user>'`|이 모듈의 작성자입니다. 값을 지정 하지 않으면는 `New-ModuleManifest` 현재 사용자를 사용 합니다. <br /> 예: `Author = 'AuthorNameHere'`|
 |**CompanyName**<br /> 형식: `String`|`'Unknown'`|이 모듈의 회사 또는 공급 업체입니다. 값을 지정 하지 않으면는 `New-ModuleManifest` 기본값을 사용 합니다.<br /> 예: `CompanyName = 'Fabrikam'`|

@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.PSReadLine2.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: PSReadline
-ms.date: 12/07/2018
+ms.date: 02/16/2021
 online version: https://docs.microsoft.com/powershell/module/psreadline/set-psreadlinekeyhandler?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-PSReadLineKeyHandler
-ms.openlocfilehash: 8eefd819b59cf8d0050484c6aad3058bc6e7753a
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: 220b38f51afab619a57473be27b1139b878eb7e9
+ms.sourcegitcommit: 4f1c2fe700b8a0544c59e371eb7cfbc6d852b185
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93224898"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100563223"
 ---
 # Set-PSReadLineKeyHandler
 
@@ -28,7 +28,7 @@ Set-PSReadLineKeyHandler [-ScriptBlock] <ScriptBlock> [-BriefDescription <String
  [-Description <String>] [-Chord] <String[]> [-ViMode <ViMode>] [<CommonParameters>]
 ```
 
-### 함수
+### 기능
 
 ```
 Set-PSReadLineKeyHandler [-Chord] <String[]> [-ViMode <ViMode>] [-Function] <String>
@@ -84,6 +84,9 @@ Accept wildcard characters: False
 함수 또는 스크립트 블록에 바인딩할 키 또는 키 시퀀스입니다. 단일 바인딩을 지정 하려면 단일 문자열을 사용 합니다. 바인딩이 키 시퀀스 인 경우 다음 예제와 같이 키를 쉼표로 구분 합니다.
 
 `Ctrl+X,Ctrl+L`
+
+> [!NOTE]
+> PSReadLine 2.0.0을 기반으로 하는 **현** 매개 변수는 **대/소문자를 구분** 합니다. 즉, `Ctrl+X` 와 `Ctrl+x` 는 서로 다른 바인딩을 만듭니다.
 
 이 매개 변수는 문자열 배열을 허용 합니다. 각 문자열은 단일 바인딩의 키 시퀀스가 아닌 별도의 바인딩입니다.
 
@@ -153,7 +156,7 @@ Accept wildcard characters: False
 
 유효한 값은 다음과 같습니다.
 
-- 삽입
+- Insert
 - 명령
 
 ```yaml
@@ -174,13 +177,13 @@ Accept wildcard characters: False
 
 ## 입력
 
-### 없음
+### None
 
 이 cmdlet에 개체를 파이프할 수 없습니다.
 
 ## 출력
 
-### 없음
+### None
 
 이 cmdlet은 어떠한 출력도 생성하지 않습니다.
 
