@@ -9,12 +9,12 @@ metadata:
   author: sdwheeler
   ms.author: sewhee
   ms.date: 09/04/2019
-  ms.openlocfilehash: 14d9c28093ec91351048819e719ab80d5dd9c501
-  ms.sourcegitcommit: a073c7db07d765ab45f52345ab98c7660582bc98
+  ms.openlocfilehash: f469ddb8179b1b2c937478e776fb0383c22357e1
+  ms.sourcegitcommit: 14f45157bb60db7ef4c321c1a525c836698cafa9
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 07/29/2020
-  ms.locfileid: "87377514"
+  ms.lasthandoff: 02/18/2021
+  ms.locfileid: "101101290"
 highlightedContent:
   items:
   - title: 개요
@@ -139,18 +139,18 @@ additionalContent:
   - title: PowerShell 팀
     summary: PowerShell 팀과 통신
     items:
-    - title: 공식 PowerShell 블로그
+    - title: PowerShell 팀 블로그
       summary: 공식 뉴스 및 공지
       url: https://devblogs.microsoft.com/powershell/
+    - title: PowerShell 커뮤니티 블로그
+      summary: PowerShell을 학습하고 인사이트를 공유하는 커뮤니티를 위한 장소
+      url: https://devblogs.microsoft.com/powershell-community/
     - title: PowerShell 팀 Twitter
       summary: PowerShell 뉴스 한 번에 280문자
       url: https://twitter.com/PowerShell_Team
-    - title: PowerShell UserVoice
-      summary: Windows PowerShell에서 버그에 대한 장소
-      url: https://windowsserver.uservoice.com/forums/301869-powershell
     - title: GitHub 문제
       summary: 현재 릴리스에서 버그를 위한 장소
       url: https://github.com/powershell/powershell/issues
-    - title: 스크립팅 이용자 여러분, 블로그
-      summary: PowerShell에 대해 알아보고 자동화의 사례를 공유 하는 장소
-      url: https://devblogs.microsoft.com/scripting/
+    - title: PowerShell UserVoice
+      summary: Windows PowerShell에서 버그에 대한 장소
+      url: https://windowsserver.uservoice.com/forums/301869-powershell
