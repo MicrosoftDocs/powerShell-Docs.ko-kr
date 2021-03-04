@@ -2,14 +2,14 @@
 title: PowerShell Docs의 새로운 기능 2020년 4분기
 description: PowerShell 설명서 변경 내용 목록 2020년 4분기
 ms.date: 01/05/2021
-ms.openlocfilehash: 823338560adbfecd6e17ad6b2e82681f5db35405
-ms.sourcegitcommit: fa1a84c81e15f1ffac962110b0b4c850c1b173a0
+ms.openlocfilehash: 2ac4a2e23ebed7cf1d371c29ceada661bc9a9bc3
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99600869"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685549"
 ---
-# <a name="whats-new-in-powershell-docs-for-2020-q4"></a>PowerShell Docs의 새로운 기능 2020년 4분기
+# <a name="whats-new-in-powershell-docs-for-2020"></a>2020에 대 한 PowerShell 문서의 새로운 기능
 
 이 문서에서는 이전 달에 발생한 문서에 대한 주요 변경 내용을 나열하고 커뮤니티 기여에 대한 감사를 전합니다.
 
@@ -19,7 +19,7 @@ ms.locfileid: "99600869"
 [contrib]: contributing/overview.md
 <!-- --------------- -->
 
-## <a name="2020-december-highlights"></a>2020-12 월 하이라이트
+## <a name="2020-december"></a>2020-12 월
 
 - 업데이트 된 참여자 가이드
   - `&preserve_view=true`하이퍼링크에 대 한 쿼리 매개 변수 문서화
@@ -49,7 +49,7 @@ ms.locfileid: "99600869"
 | Cwilson-dataselfcom |            |       5       |
 | bobbybatatina       |            |       2       |
 
-## <a name="2020-november-highlights"></a>2020-11 월 강조 표시
+## <a name="2020-november"></a>2020-11 월
 
 - PowerShell 7.1 GA 릴리스
   - PowerShell 7.1의 새로운 기능
@@ -96,7 +96,7 @@ ms.locfileid: "99600869"
 | stephenrgentry  |            |       2       |
 | Vixb1122        |            |       2       |
 
-## <a name="2020-october-highlights"></a>2020년 10월 주요 사항
+## <a name="2020-october"></a>2020-10 월
 
 - 새 문서
   - [about_Character_Encoding](/powershell/module/microsoft.powershell.core/about/about_character_encoding)
@@ -129,7 +129,7 @@ ms.locfileid: "99600869"
 | mklement0    |            |       3       |
 | Abdullah0820 |            |       2       |
 
-## <a name="2020-september-highlights"></a>2020년 9월 주요 사항
+## <a name="2020-september"></a>2020-9 월
 
 - 설명서 유지 관리
   - 7\.1-미리 보기 콘텐츠 업데이트
@@ -160,7 +160,7 @@ ms.locfileid: "99600869"
 | mklement0        |            |      13       |
 | setpeetrike      |            |       2       |
 
-## <a name="2020-august-highlights"></a>2020년 8월 주요 사항
+## <a name="2020-august"></a>2020-8 월
 
 - 새로운 PowerShell 설명서
   - [About_Calculated_Properties](/powershell/module/microsoft.powershell.core/about/about_calculated_properties)
@@ -190,7 +190,7 @@ ms.locfileid: "99600869"
 | joshSi           |     1      |               |
 | kmoad            |     1      |               |
 
-## <a name="2020-july-highlights"></a>2020년 7월 주요 사항
+## <a name="2020-july"></a>2020-7 월
 
 - 새로운 PowerShell 설명서
   - 이전 [ETS 문서](/powershell/scripting/developer/ets/overview)가 복원됨 - 7개 문서가 추가됨
@@ -227,7 +227,7 @@ ms.locfileid: "99600869"
 | sharpninja     |            |       2       |
 | XuHeng1021     |            |       2       |
 
-## <a name="2020-june-highlights"></a>2020년 6월 주요 사항
+## <a name="2020-june"></a>2020-6 월
 
 - 새로운 PowerShell 설명서
   - Mike F. Robbins가 제공한 새 [PowerShell 101](../learn/ps101/00-introduction.md) 콘텐츠를 게시함
@@ -269,7 +269,7 @@ ms.locfileid: "99600869"
 | mklement0     |            |       2       |
 | Sagatboy33    |            |       4       |
 
-## <a name="2020-may-highlights"></a>2020년 5월 주요 사항
+## <a name="2020-may"></a>2020-5 월
 
 - 새로운 PowerShell 설명서
   - 커뮤니티 기여자 Kevin Marquette의 콘텐츠가 포함된 새 [심층 조사](../learn/deep-dives/overview.md) 섹션이 생성되었습니다
@@ -322,7 +322,7 @@ ms.locfileid: "99600869"
 | JustinGrote    |            |       2       |
 | peetrike       |            |       2       |
 
-## <a name="2020-april-highlights"></a>2020년 4월 주요 내용
+## <a name="2020-april"></a>2020-4 월
 
 - 새로운 문서
   - PowerShell 설명서
@@ -370,7 +370,7 @@ ms.locfileid: "99600869"
 
 ## <a name="2020-march"></a>2020년 3월
 
-### <a name="highlights"></a>주요 사항
+###
 
 - 새로운 문서
   - PowerShell Docs 커뮤니티 페이지
@@ -409,7 +409,7 @@ ms.locfileid: "99600869"
 
 ## <a name="2020-february"></a>2020년 2월
 
-### <a name="highlights"></a>주요 사항
+###
 
 - 새로운 문서
   - [about_Parameter_Sets](/powershell/module/microsoft.powershell.core/about/about_parameter_sets)
@@ -435,7 +435,7 @@ ms.locfileid: "99600869"
 
 ## <a name="2020-january"></a>2020년 1월
 
-### <a name="highlights"></a>주요 사항
+###
 
 - 새로운 문서
   - [about_Windows_PowerShell_Compatibility](/powershell/module/microsoft.powershell.core/about/about_Windows_PowerShell_Compatibility)

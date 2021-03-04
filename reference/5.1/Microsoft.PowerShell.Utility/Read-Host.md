@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 06/09/2017
+ms.date: 03/02/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/read-host?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Read-Host
-ms.openlocfilehash: 9017d2352f1d2735f21343f4c1194c5e97ce2848
-ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
+ms.openlocfilehash: 83ddac1e157f26d6a437716e9ae95e258aa1eecb
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "93217929"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685849"
 ---
 # Read-Host
 
@@ -28,6 +28,9 @@ Read-Host [[-Prompt] <Object>] [-AsSecureString] [<CommonParameters>]
 ## 설명
 
 `Read-Host`Cmdlet은 콘솔에서 입력 줄을 읽습니다. 이 cmdlet을 사용하여 사용자에게 입력하라는 메시지를 표시할 수 있습니다. 입력을 보안 문자열로 저장할 수 있으므로 이 cmdlet을 사용하여 암호 등의 보안 데이터와 공유 데이터를 입력하라는 메시지를 사용자에게 표시할 수 있습니다.
+
+> [!NOTE]
+> `Read-Host` 는 사용자의 입력으로 수락할 수 있는 8190 자로 제한 됩니다.
 
 ## 예제
 
@@ -51,7 +54,7 @@ $pwd_secure_string = Read-Host "Enter a Password" -AsSecureString
 
 ### -AsSecureString
 
-Cmdlet이 `*` 사용자가 입력으로 입력 하는 문자 대신 별표 ()를 표시 함을 나타냅니다. 이 매개 변수를 사용 하는 경우 cmdlet의 출력은 `Read-Host` **SecureString** 개체 ( **system.web** )입니다.
+Cmdlet이 `*` 사용자가 입력으로 입력 하는 문자 대신 별표 ()를 표시 함을 나타냅니다. 이 매개 변수를 사용 하는 경우 cmdlet의 출력은 `Read-Host` **SecureString** 개체 (**system.web**)입니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -67,10 +70,7 @@ Accept wildcard characters: False
 
 ### -Prompt
 
-프롬프트 텍스트를 지정합니다.
-문자열을 입력합니다.
-문자열에 공백이 포함되어 있으면 따옴표로 묶습니다.
-PowerShell은 입력 한 텍스트에 콜론 ()을 추가 `:` 합니다.
+프롬프트 텍스트를 지정합니다. 문자열을 입력합니다. 문자열에 공백이 포함되어 있으면 따옴표로 묶습니다. PowerShell은 입력 한 텍스트에 콜론 ()을 추가 `:` 합니다.
 
 ```yaml
 Type: System.Object

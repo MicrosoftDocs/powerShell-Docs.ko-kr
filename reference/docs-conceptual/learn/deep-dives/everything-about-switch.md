@@ -1,14 +1,14 @@
 ---
 title: Switch 문에 대해 알고 싶은 모든 것
 description: PowerShell의 switch 문은 다른 언어에서 찾을 수 없는 기능을 제공합니다.
-ms.date: 05/23/2020
+ms.date: 03/01/2021
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: c2e77aa5fb36d04fec1bc86f751291205120c729
-ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
+ms.openlocfilehash: f6baa624285557452a2b95150b2c4de1ab274f27
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93355122"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101686001"
 ---
 # <a name="everything-you-ever-wanted-to-know-about-the-switch-statement"></a>Switch 문에 대해 알고 싶은 모든 것
 
@@ -169,7 +169,7 @@ Configure SQL
 
 ## <a name="parameters"></a>매개 변수
 
-PowerShell `switch`의 고유한 기능은 다양한 [switch 매개 변수][]로 작동 방식을 변경하는 것입니다.
+PowerShell `switch`의 고유한 기능은 다양한 switch 매개 변수로 작동 방식을 변경하는 것입니다.
 
 ### <a name="-casesensitive"></a>-CaseSensitive
 
@@ -738,6 +738,5 @@ Switch 문은 겉으로 보기엔 간단하지만 대부분의 사용자는 사�
 [powershellexplained.com]: https://powershellexplained.com/
 [@KevinMarquette]: https://twitter.com/KevinMarquette
 [switch]: /powershell/module/microsoft.powershell.core/about/about_switch
-[switch 매개 변수]: https://www.powershellmagazine.com/2013/12/20/using-powershell-switch-vs-boolean-parameters-in-sma-runbooks/
 [정규식을 사용하는 다양한 방법]: https://powershellexplained.com/2017-07-31-Powershell-regex-regular-expression
 [해시 테이블]: everything-about-hashtable.md

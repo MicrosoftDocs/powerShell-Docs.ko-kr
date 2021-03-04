@@ -7,12 +7,12 @@ ms.date: 04/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-authenticodesignature?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-AuthenticodeSignature
-ms.openlocfilehash: 910897ae1e41b2e4bd082977ac2904388f924769
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: cf19973acf799b25b8b598fad70f84943f958e1d
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214274"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685890"
 ---
 # Get-AuthenticodeSignature
 
@@ -41,7 +41,9 @@ Get-AuthenticodeSignature -SourcePathOrExtension <String[]> -Content <Byte[]> [<
 
 ## 설명
 
-`Get-AuthenticodeSignature`Cmdlet은 파일 또는 파일 콘텐츠의 Authenticode 서명에 대 한 정보를 바이트 배열로 가져옵니다. 파일이 서명되지 않은 경우 정보는 검색되지만 필드가 비어 있게 됩니다.
+`Get-AuthenticodeSignature`Cmdlet은 파일 또는 파일 콘텐츠의 Authenticode 서명에 대 한 정보를 바이트 배열로 가져옵니다.
+서명 된 서명 및 Windows 카탈로그 파일이 모두 서명 된 경우 Windows 카탈로그 서명이 사용 됩니다.
+파일이 서명되지 않은 경우 정보는 검색되지만 필드가 비어 있게 됩니다.
 
 ## 예제
 

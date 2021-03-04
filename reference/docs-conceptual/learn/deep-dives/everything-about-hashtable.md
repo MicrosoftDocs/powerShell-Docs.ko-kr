@@ -3,12 +3,12 @@ title: 해시 테이블에 대해 알고 싶은 모든 것
 description: 해시 테이블은 PowerShell에서 대단히 중요하기 때문에 확실하게 이해해야 합니다.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: e386e2aa2f7b85bee4bf622fd9251ef7642cf16a
-ms.sourcegitcommit: 57e577097085dc621bd797ef4a7e2854ea7d4e29
+ms.openlocfilehash: a471c0fe2c48820d6c1d152e2850b1e431d28f23
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "97980504"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101686062"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>해시 테이블에 대해 알고 싶은 모든 것
 
@@ -360,7 +360,7 @@ $property = @{
 
 ```powershell
 $drives = Get-PSDrive | Where Used
-$drives | Select-Object -Properties name, $property
+$drives | Select-Object -Property name, $property
 
 Name     totalSpaceGB
 ----     ------------
@@ -370,7 +370,7 @@ C    238.472652435303
 변수에 배치했지만 인라인으로 쉽게 정의할 수 있으며 정의 중에 `name`을 `n`으로, `expression`을 `e`로 줄일 수 있습니다.
 
 ```powershell
-$drives | Select-Object -properties name, @{n='totalSpaceGB';e={($_.used + $_.free) / 1GB}}
+$drives | Select-Object -property name, @{n='totalSpaceGB';e={($_.used + $_.free) / 1GB}}
 ```
 
 개인적으로 명령이 길어지는 것을 좋아하지 않으며, 제가 관여하지 않는 일부 잘못된 동작을 승격하곤 합니다. 스크립트에서 이 방법을 사용하는 대신 원하는 필드와 속성을 모두 사용하여 새 해시 테이블이나 `pscustomobject`를 만드는 방법을 선호합니다. 하지만 이 작업은 수행하는 코드는 아주 많으니 이 방법을 알려드리고 싶었습니다. `pscustomobject` 생성 방법은 나중에 말씀드리겠습니다.

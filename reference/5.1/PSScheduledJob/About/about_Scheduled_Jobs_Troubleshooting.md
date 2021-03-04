@@ -6,12 +6,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/psscheduledjob/about/about_scheduled_jobs_troubleshooting?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Scheduled_Jobs_Troubleshooting
-ms.openlocfilehash: 924205edb9d44724cfef201d84baa304ecde67ad
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: aac2133cee4abdd7e50e7b433104b9578d74b0a8
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93221921"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685878"
 ---
 # <a name="about-scheduled-jobs-troubleshooting"></a>예약 된 작업에 대 한 문제 해결
 
@@ -56,7 +56,7 @@ Id     Name         PSJobTypeName   State         HasMoreData     Location
 50     ProcessJob   PSScheduledJob  Completed     False           localhost
 ```
 
-`Get-Job`Cmdlet은 **processjob** 개체를 파이프라인 아래로 보냅니다. `Format-Table`Cmdlet은 예약 된 작업 인스턴스의 **Name** , **ID** 및 **psbegintime** 속성을 테이블에 표시 합니다.
+`Get-Job`Cmdlet은 **processjob** 개체를 파이프라인 아래로 보냅니다. `Format-Table`Cmdlet은 예약 된 작업 인스턴스의 **Name**, **ID** 및 **psbegintime** 속성을 테이블에 표시 합니다.
 
 ```powershell
 Get-Job ProcessJob | Format-Table -Property Name, ID, PSBeginTime -Auto
@@ -332,7 +332,7 @@ Id Enabled
 Cmdlet을 사용 `Get-ScheduledJobOption` 하 여 작업 옵션 및 해당 값을 검사 합니다.
 
 ```powershell
-Get-ScheduledJob -Name ProcessJob
+Get-ScheduledJobOption -Name ProcessJob
 ```
 
 ```Output

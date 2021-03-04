@@ -5,12 +5,12 @@ ms.date: 11/23/2020
 online version: https://docs.microsoft.com/powershell/module/psreadline/about/about_psreadline?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: PSReadLine 정보
-ms.openlocfilehash: b0c5950b2af6a866d0ffcfdd6ce7ad92a1763778
-ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
+ms.openlocfilehash: ddc88dda3514e4279b6d91b023e26da88f645af7
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100500215"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685220"
 ---
 # <a name="psreadline"></a>PSReadLine
 
@@ -114,13 +114,19 @@ Set-PSReadLineOption -PredictionSource None
 - Vi 삽입 모드: `<Backspace>`
 - Vi 명령 모드: `<X>` , `<d,h>`
 
+### <a name="backwarddeleteinput"></a>BackwardDeleteInput
+
+Like BackwardKillInput-점에서 입력 시작 부분 까지의 텍스트를 삭제 하지만 삭제 된 텍스트는 kill 링에 삽입 하지 않습니다.
+
+- 입력 `<Ctrl+Home>`
+- Vi 삽입 모드: `<Ctrl+u>` , `<Ctrl+Home>`
+- Vi 명령 모드: `<Ctrl+u>` , `<Ctrl+Home>`
+
 ### <a name="backwarddeleteline"></a>BackwardDeleteLine
 
 Like BackwardKillLine-점에서 줄의 시작 부분으로 텍스트를 삭제 하지만 삭제 된 텍스트는 kill 링에 삽입 하지 않습니다.
 
-- 입력 `<Ctrl+Home>`
-- Vi 삽입 모드: `<Ctrl+u>` , `<Ctrl+Home>`
-- Vi 명령 모드: `<Ctrl+u>` , `<Ctrl+Home>` , `<d,0>`
+- Vi 명령 모드: `<d,0>`
 
 ### <a name="backwarddeleteword"></a>BackwardDeleteWord
 
@@ -128,11 +134,17 @@ Like BackwardKillLine-점에서 줄의 시작 부분으로 텍스트를 삭제 �
 
 - Vi 명령 모드: `<Ctrl+w>` , `<d,b>`
 
-### <a name="backwardkillline"></a>BackwardKillLine
+### <a name="backwardkillinput"></a>BackwardKillInput
 
-커서에 대 한 입력의 시작 부분에서 입력을 지웁니다. 지워진 텍스트는 kill 링에 배치 됩니다.
+입력의 시작 부분부터 커서 까지의 텍스트를 지웁니다. 지워진 텍스트는 kill 링에 배치 됩니다.
 
 - Emacs: `<Ctrl+u>` , `<Ctrl+x,Backspace>`
+
+### <a name="backwardkillline"></a>BackwardKillLine
+
+현재 논리 줄의 시작 부분부터 커서 까지의 텍스트를 지웁니다. 지워진 텍스트는 kill 링에 배치 됩니다.
+
+- 함수가 바인딩 해제 되었습니다.
 
 ### <a name="backwardkillword"></a>BackwardKillWord
 
@@ -243,13 +255,19 @@ Like BackwardKillLine-점에서 줄의 시작 부분으로 텍스트를 삭제 �
 
 - Vi 명령 모드: `<d,w>`
 
-### <a name="forwarddeleteline"></a>ForwardDeleteLine
+### <a name="forwarddeleteinput"></a>ForwardDeleteInput
 
-Like ForwardKillLine-포인트에서 줄 끝 까지의 텍스트를 삭제 하지만 삭제 된 텍스트는 kill 링에 삽입 하지 않습니다.
+Like KillLine-포인트에서 입력 끝 까지의 텍스트를 삭제 하지만 삭제 된 텍스트는 kill 링에 삽입 하지 않습니다.
 
 - 입력 `<Ctrl+End>`
 - Vi 삽입 모드: `<Ctrl+End>`
 - Vi 명령 모드: `<Ctrl+End>`
+
+### <a name="forwarddeleteline"></a>ForwardDeleteLine
+
+점에서 현재 논리 줄 끝까지 텍스트를 삭제 하지만 삭제 된 텍스트는 kill 링에 삽입 하지 않습니다.
+
+- 함수가 바인딩 해제 되었습니다.
 
 ### <a name="insertlineabove"></a>InsertLineAbove
 
@@ -1029,7 +1047,9 @@ PSReadLine에서 기록을 지웁니다. PowerShell 기록에는 영향을 주�
 
 ### <a name="showcommandhelp"></a>ShowCommandHelp
 
-**Microsoft. PowerShell** 호출기를 사용 하 여 대체 화면 버퍼에 대 한 전체 cmdlet 도움말 보기를 제공 합니다.
+전체 cmdlet 도움말의 뷰를 제공 합니다. 커서가 완전히 확장 된 매개 변수의 끝에 있을 때 키를 누르면 `<F1>` 해당 매개 변수 위치에 도움말 표시 위치가 표시 됩니다.
+
+도움말은 **Microsoft. PowerShell** 호출기를 사용 하 여 대체 화면 버퍼에 표시 됩니다. 페이저를 종료 하면 원래 화면에서 원래 커서 위치로 돌아갑니다. 이 호출기는 [Windows 터미널](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701)과 같은 최신 터미널 응용 프로그램 에서만 작동 합니다.
 
 - 입력 `<F1>`
 - Emacs `<F1>`
@@ -1046,7 +1066,7 @@ PSReadLine에서 기록을 지웁니다. PowerShell 기록에는 영향을 주�
 
 ### <a name="showparameterhelp"></a>ShowParameterHelp
 
-는와 같이 현재 명령줄 아래에 표시 하 여 매개 변수에 대 한 동적 도움말을 제공 `MenuComplete` 합니다.
+는와 같이 현재 명령줄 아래에 표시 하 여 매개 변수에 대 한 동적 도움말을 제공 `MenuComplete` 합니다. 키를 누를 때 커서는 완전히 확장 된 매개 변수 이름의 끝에 있어야 합니다 `<Alt+h>` .
 
 - 입력 `<Alt+h>`
 - Emacs `<Alt+h>`
@@ -1125,6 +1145,15 @@ $Env: 편집기 또는 $env: 시각적 개체에 지정 된 텍스트 편집기�
 
 - 입력 `<Shift+Ctrl+LeftArrow>`
 - Emacs `<Alt+B>`
+
+### <a name="selectcommandargument"></a>SelectCommandArgument
+
+명령 인수를 시각적으로 선택 합니다. 인수 선택은 스크립트 블록 내에서 범위가 지정 됩니다. 커서 위치에 따라 가장 안쪽의 스크립트 블록에서 쿼리의 가장 바깥쪽 많은 스크립트 블록으로 검색 하 고 스크립트 블록 범위에서 인수를 찾으면 중지 합니다.
+
+이 함수는 DigitArgument를 적용 합니다. 긍정 또는 음수 인수 값을 현재 선택 된 인수에서 앞으로 또는 뒤로 오프셋 하거나, 인수를 선택 하지 않은 경우 현재 커서 위치에서 해당 값으로 처리 합니다.
+
+- 입력 `<Alt+a>`
+- Emacs `<Alt+a>`
 
 ### <a name="selectforwardchar"></a>SelectForwardChar
 
@@ -1430,7 +1459,7 @@ bool TryGetArgAsInt(System.Object arg, [ref] int numericArg,
   [ref]$numericArg, 1)
 ```
 
-## <a name="notes"></a>참고
+## <a name="notes"></a>메모
 
 ### <a name="command-history"></a>명령 기록
 

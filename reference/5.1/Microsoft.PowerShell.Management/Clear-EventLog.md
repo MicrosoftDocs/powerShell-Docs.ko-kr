@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/clear-eventlog?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-EventLog
-ms.openlocfilehash: 695a13d4fbbf60caadeed994c1aa9c36432be917
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: af1c808b22a812700857e756136fd570fa0acc35
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93215562"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685907"
 ---
 # Clear-EventLog
 
@@ -27,11 +27,9 @@ Clear-EventLog [-LogName] <String[]> [[-ComputerName] <String[]>] [-WhatIf] [-Co
 
 ## 설명
 
-`Clear-EventLog`Cmdlet은 로컬 컴퓨터 또는 원격 컴퓨터의 지정 된 이벤트 로그에서 모든 항목을 삭제 합니다.
-를 사용 하려면 `Clear-EventLog` 영향을 받는 컴퓨터에서 Administrators 그룹의 구성원 이어야 합니다.
+`Clear-EventLog`Cmdlet은 로컬 컴퓨터 또는 원격 컴퓨터의 지정 된 이벤트 로그에서 모든 항목을 삭제 합니다. 를 사용 하려면 `Clear-EventLog` 영향을 받는 컴퓨터에서 Administrators 그룹의 구성원 이어야 합니다.
 
-**Eventlog** 명사를 포함 하는 Cmdlet (eventlog cmdlet)은 클래식 이벤트 로그 에서만 작동 합니다.
-Windows Vista 이상 버전의 windows 이벤트 로그 기술을 사용 하는 로그에서 이벤트를 가져오려면 Get-WinEvent cmdlet을 사용 합니다.
+**Eventlog** 명사를 포함 하는 Cmdlet (eventlog cmdlet)은 클래식 이벤트 로그 에서만 작동 합니다. Windows Vista 이상 버전의 windows 이벤트 로그 기술을 사용 하는 로그에서 이벤트를 가져오려면 Get-WinEvent cmdlet을 사용 합니다.
 
 ## 예제
 
@@ -96,14 +94,11 @@ Max(K) Retain OverflowAction        Entries Log
 
 ### -ComputerName
 
-원격 컴퓨터를 지정합니다.
-기본값은 로컬 컴퓨터입니다.
+원격 컴퓨터를 지정합니다. 기본값은 로컬 컴퓨터입니다.
 
-원격 컴퓨터의 NetBIOS 이름, IP(인터넷 프로토콜) 주소 또는 정규화된 도메인 이름을 입력하세요.
-로컬 컴퓨터를 지정하려면 컴퓨터 이름, 점(.) 또는 "localhost"를 입력합니다.
+원격 컴퓨터의 NetBIOS 이름, IP(인터넷 프로토콜) 주소 또는 정규화된 도메인 이름을 입력하세요. 로컬 컴퓨터를 지정하려면 컴퓨터 이름, 점(.) 또는 "localhost"를 입력합니다.
 
-이 매개 변수는 Windows PowerShell 원격 기능을 사용하지 않습니다.
-**ComputerName** `Get-EventLog` 컴퓨터가 원격 명령을 실행 하도록 구성 되지 않은 경우에도의 ComputerName 매개 변수를 사용할 수 있습니다.
+이 매개 변수는 Windows PowerShell 원격 기능을 사용하지 않습니다.  `Get-EventLog` 컴퓨터가 원격 명령을 실행 하도록 구성 되지 않은 경우에도의 ComputerName 매개 변수를 사용할 수 있습니다.
 
 ```yaml
 Type: System.String[]
@@ -119,10 +114,10 @@ Accept wildcard characters: False
 
 ### -LogName
 
-이벤트 로그를 지정합니다.
-하나 이상 이벤트 로그의 로그 이름(Log 표시 이름이 아닌 Log 속성의 값)을 쉼표로 구분하여 입력합니다.
-와일드카드 문자는 사용할 수 없습니다.
-이 매개 변수는 필수적 요소입니다.
+이벤트 로그를 지정합니다. 하나 이상의 이벤트 로그에 대 한 로그 이름 ( **Logdisplayname** 이 아닌 **log** 속성 값)을 쉼표로 구분 하 여 입력 합니다. 와일드카드 문자는 사용할 수 없습니다. 이 매개 변수는 필수적 요소입니다.
+
+> [!IMPORTANT]
+> 이 매개 변수는 속성 이름별로 파이프라인의 값을 허용 합니다. 그러나이 작업을 수행 하지 못하게 하는 버그가 있습니다. 매개 변수를 직접 사용 하 여 값을 전달 해야 합니다.
 
 ```yaml
 Type: System.String[]

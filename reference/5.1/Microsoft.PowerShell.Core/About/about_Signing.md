@@ -6,12 +6,12 @@ ms.date: 07/31/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Signing
-ms.openlocfilehash: 8eada7e85b6f970a5ba4c6e1714ee598cf768706
-ms.sourcegitcommit: 021ea294327dec542ec040619dac0d2171397a90
+ms.openlocfilehash: dc882b4f62a9c08458d9c54ac2defcaad8c7809c
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97804149"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685975"
 ---
 # <a name="about-signing"></a>서명 정보
 
@@ -216,7 +216,7 @@ At line:1 char:15
 
 대부분의 서명 인증서는 1 년 동안만 유효 하므로 타임 스탬프 서버를 사용 하면 사용자가 스크립트를 사용 하 여 많은 연도를 사용할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [about_Execution_Policies](about_Execution_Policies.md)
 

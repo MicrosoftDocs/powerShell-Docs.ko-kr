@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 09/08/2020
+ms.date: 02/18/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ForEach-Object
-ms.openlocfilehash: c54efeb79f4129b55e078a1ccf9d46afc2e754ab
-ms.sourcegitcommit: fb9bafd041e3615b9dc9fb77c9245581b705cd02
+ms.openlocfilehash: 584ca877cedfe1494f8386af75f9f1911a5b8f15
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725173"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685643"
 ---
 # ForEach-Object
 
@@ -42,7 +42,7 @@ ForEach-Object [-InputObject <PSObject>] -Parallel <ScriptBlock> [-ThrottleLimit
  [-TimeoutSeconds <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## 설명
+## Description
 
 `ForEach-Object`Cmdlet은 입력 개체 컬렉션의 각 항목에 대해 작업을 수행 합니다. 입력 개체를 cmdlet으로 파이프 하거나 **InputObject** 매개 변수를 사용 하 여 지정할 수 있습니다.
 
@@ -383,6 +383,44 @@ Output: 5
 
 `Output: 3` 해당 반복에 대 한 병렬 scriptblock이 종료 되었기 때문에 작성 되지 않습니다.
 
+### 예제 17: 중첩 된 병렬 스크립트 ScriptBlockSet에 변수 전달
+
+범위가 지정 된 scriptblock 외부에서 변수를 만들고 키워드를 사용 하 여 `Foreach-Object -Parallel` scriptblock 내에서 사용할 수 있습니다 `$using` .
+
+```powershell
+$test1 = 'TestA'
+1..2 | Foreach-Object -Parallel {
+    $using:test1
+}
+```
+
+```Output
+TestA
+TestA
+```
+
+```powershell
+# You CANNOT create a variable inside a scoped scriptblock
+# to be used in a nested foreach parallel scriptblock.
+$test1 = 'TestA'
+1..2 | Foreach-Object -Parallel {
+    $using:test1
+    $test2 = 'TestB'
+    1..2 | Foreach-Object -Parallel {
+        $using:test2
+    }
+}
+```
+
+```Output
+Line |
+   2 |  1..2 | Foreach-Object -Parallel {
+     |         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | The value of the using variable '$using:test2' cannot be retrieved because it has not been set in the local session.
+```
+
+중첩 된 scriptblock은 변수에 액세스할 수 없으며 `$test2` 오류가 발생 합니다.
+
 ## 매개 변수
 
 ### -ArgumentList
@@ -631,13 +669,13 @@ Accept wildcard characters: False
 
 이 cmdlet은 입력에 의해 결정 되는 개체를 반환 합니다.
 
-## 참고
+## 메모
 
 - 이 cmdlet은 foreach 문과 `ForEach-Object` 매우  유사 하 게 작동 합니다. 단, **foreach** 문에는 입력을 파이프 하지 않아도 됩니다. **Foreach** 문에 대 한 자세한 내용은 [about_Foreach](./About/about_Foreach.md)를 참조 하세요.
 
 - PowerShell 4.0부터 `Where` `ForEach` 컬렉션과 함께 사용 하기 위해 메서드가 추가 되었습니다. 이러한 새 메서드에 대 한 자세한 내용은 여기를 참조 하세요 [about_arrays](./About/about_Arrays.md)
 
-- `ForEach-Object -Parallel`매개 변수 집합은 PowerShell의 내부 API를 사용 하 여 각 스크립트 블록을 실행 합니다. 이는 `ForEach-Object` 순차적 처리를 통해 정상적으로 실행 하는 것 보다 훨씬 더 많은 오버 헤드가 발생 합니다. 병렬로 실행 하는 오버 헤드가 스크립트 블록에서 수행 하는 작업에 비해 작은 경우 **병렬** 를 사용 하는 것이 중요 합니다. 예를 들면 다음과 같습니다.
+- `ForEach-Object -Parallel`매개 변수 집합은 PowerShell의 내부 API를 사용 하 여 각 스크립트 블록을 실행 합니다. 이는 `ForEach-Object` 순차적 처리를 통해 정상적으로 실행 하는 것 보다 훨씬 더 많은 오버 헤드가 발생 합니다. 병렬로 실행 하는 오버 헤드가 스크립트 블록에서 수행 하는 작업에 비해 작은 경우 **병렬** 를 사용 하는 것이 중요 합니다. 다음은 그 예입니다. 
 
   - 다중 코어 컴퓨터에서 계산 집약적인 스크립트
   - 결과를 기다리거나 파일 작업을 수행 하는 데 시간을 소비 하는 스크립트
