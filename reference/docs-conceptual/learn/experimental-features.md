@@ -2,12 +2,12 @@
 ms.date: 12/14/2020
 title: PowerShell에서 실험적 기능 사용
 description: 현재 사용 가능한 실험적 기능과 사용 방법을 나열합니다.
-ms.openlocfilehash: 556ae8d877b670b119b7b5b958a52488aad16241
-ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
+ms.openlocfilehash: f97cea1dff4030da22be1efbe3cd5cbb7a9f3527
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100500126"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685278"
 ---
 # <a name="using-experimental-features-in-powershell"></a>PowerShell에서 실험적 기능 사용
 
@@ -73,27 +73,37 @@ $breakpoint = Get-PSBreakPoint -Runspace $runspace
 이 실험은 PowerShell 7.2에서 추가되었습니다. 이 기능을 사용하면 PowerShell 엔진이 텍스트를 출력하고 `$PSStyle` 자동 변수를 추가하여 문자열 출력의 ANSI 렌더링을 제어하는 방법을 변경할 수 있습니다.
 
 ```powershell
-PS> $PSStyle
+PS> $PSStyle | Get-Member
 
-Name            MemberType Definition
-----            ---------- ----------
-Reset           Property   string AttributesOff {get;set;}
-Background      Property   System.Management.Automation.PSStyle+BackgroundColor Background {get;set;}
-Blink           Property   string Blink {get;set;}
-BlinkOff        Property   string BlinkOff {get;set;}
-Bold            Property   string Bold {get;set;}
-BoldOff         Property   string BoldOff {get;set;}
-Foreground      Property   System.Management.Automation.PSStyle+ForegroundColor Foreground {get;set;}
-Formatting      Property   System.Management.Automation.PSStyle+FormattingData Formatting {get;set;}
-Hidden          Property   string Hidden {get;set;}
-HiddenOff       Property   string HiddenOff {get;set;}
-OutputRendering Property   System.Management.Automation.OutputRendering OutputRendering {get;set;}
-Reverse         Property   string Reverse {get;set;}
-ReverseOff      Property   string ReverseOff {get;set;}
-Italic          Property   string Standout {get;set;}
-ItalicOff       Property   string StandoutOff {get;set;}
-Underline       Property   string Underlined {get;set;}
-Underline Off   Property   string UnderlinedOff {get;set;}
+   TypeName: System.Management.Automation.PSStyle
+
+Name             MemberType Definition
+----             ---------- ----------
+Equals           Method     bool Equals(System.Object obj)
+FormatHyperlink  Method     string FormatHyperlink(string text, uri link)
+GetHashCode      Method     int GetHashCode()
+GetType          Method     type GetType()
+ToString         Method     string ToString()
+Background       Property   System.Management.Automation.PSStyle+BackgroundColor Background {get;}
+Blink            Property   string Blink {get;}
+BlinkOff         Property   string BlinkOff {get;}
+Bold             Property   string Bold {get;}
+BoldOff          Property   string BoldOff {get;}
+Foreground       Property   System.Management.Automation.PSStyle+ForegroundColor Foreground {get;}
+Formatting       Property   System.Management.Automation.PSStyle+FormattingData Formatting {get;}
+Hidden           Property   string Hidden {get;}
+HiddenOff        Property   string HiddenOff {get;}
+Italic           Property   string Italic {get;}
+ItalicOff        Property   string ItalicOff {get;}
+OutputRendering  Property   System.Management.Automation.OutputRendering OutputRendering {get;set;}
+Progress         Property   System.Management.Automation.PSStyle+ProgressConfiguration Progress {get;}
+Reset            Property   string Reset {get;}
+Reverse          Property   string Reverse {get;}
+ReverseOff       Property   string ReverseOff {get;}
+Strikethrough    Property   string Strikethrough {get;}
+StrikethroughOff Property   string StrikethroughOff {get;}
+Underline        Property   string Underline {get;}
+UnderlineOff     Property   string UnderlineOff {get;}
 ```
 
 기본 멤버는 이름에 매핑되는 ANSI 이스케이프 시퀀스의 문자열을 반환합니다. 사용자 지정을 허용하도록 값을 설정할 수 있습니다.
@@ -117,6 +127,8 @@ Underline Off   Property   string UnderlinedOff {get;set;}
 - `StringDecorated Substring(int contentLength)` 메서드는 인덱스 0에서 시작하여 ANSI 이스케이스 시퀀스가 포함되지 않는 콘텐츠 길이까지 substring을 반환합니다. 이 메서드는 문자열을 자르고 인쇄 가능한 공간을 차지하지 않는 ANSI 이스케이프 시퀀스를 유지하기 위해 테이블 서식 지정에 필요합니다.
 - `string ToString()` 메서드는 동일하게 유지하고 문자열의 일반 텍스트 버전을 반환합니다.
 - `string ToString(bool Ansi)` 메서드는 `Ansi` 매개 변수가 true인 경우 원시 ANSI 포함 문자열을 반환합니다. 아니면, ANSI 이스케이프 시퀀스가 제거된 일반 텍스트 버전이 반환됩니다.
+
+`FormatHyperlink(string text, uri link)`는 하이퍼링크를 데코레이트하는 데 사용되는 ANSI 이스케이프 시퀀스가 포함된 문자열을 반환합니다. [Windows 터미널](https://www.microsoft.com/p/windows-terminal/9n0dx20hk701) 같은 일부 터미널 호스트는 터미널에서 렌더링된 텍스트를 클릭할 수 있도록 만드는 이 태그를 지원합니다.
 
 ## <a name="psansiprogress"></a>PSAnsiProgress
 

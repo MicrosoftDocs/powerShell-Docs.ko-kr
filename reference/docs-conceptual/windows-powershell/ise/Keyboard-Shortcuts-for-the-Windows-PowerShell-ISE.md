@@ -2,12 +2,12 @@
 ms.date: 01/02/2020
 title: Windows PowerShell ISE 바로 가기 키
 description: 이 문서는 PowerShell ISE에서 사용되는 바로 가기 키 목록입니다.
-ms.openlocfilehash: 690997524ab90d7581bb03c802f189d1a4b79d3f
-ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
+ms.openlocfilehash: 6a55bb2e6046fbda1c8b7b83345138f294009ac8
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100500196"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685948"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Windows PowerShell ISE 바로 가기 키
 
@@ -20,6 +20,7 @@ ms.locfileid: "100500196"
 |              작업              |              바로 가기 키               |                                                                                                                                           사용 위치                                                                                                                                           |
 | -------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **도움말**                         | <kbd>F1</kbd>                                 | 스크립트 창 **중요:** <kbd>F1</kbd> 도움말을 docs.microsoft.com 또는 다운로드한 도움말에서 가져오도록 지정할 수 있습니다(`Update-Help` 참조). 선택하려면 **도구**, **옵션** 을 차례로 클릭하고 **일반 설정** 탭에서 **온라인 콘텐츠 대신 로컬 도움말 콘텐츠 사용** 을 설정하거나 선택 취소합니다. |
+| **모두 선택**                   | <kbd>Ctrl</kbd>+<kbd>A</kbd>                  | 스크립트 창                                                                                                                                                                                                                                                                                |
 | **Copy**                         | <kbd>Ctrl</kbd>+<kbd>C</kbd>                  | 스크립트 창, 명령 창, 출력 창                                                                                                                                                                                                                                                     |
 | **잘라내기**                          | <kbd>Ctrl</kbd>+<kbd>X</kbd>                  | 스크립트 창, 명령 창                                                                                                                                                                                                                                                                  |
 | **개요 확장 또는 축소** | <kbd>Ctrl</kbd>+<kbd>M</kbd>                  | 스크립트 창                                                                                                                                                                                                                                                                                |
@@ -36,6 +37,9 @@ ms.locfileid: "100500196"
 | **모두 선택**                   | <kbd>Ctrl</kbd>+<kbd>A</kbd>                  | 스크립트 창, 명령 창, 출력 창                                                                                                                                                                                                                                                     |
 | **코드 조각 표시**                | <kbd>Ctrl</kbd>+<kbd>J</kbd>                  | 스크립트 창, 명령 창                                                                                                                                                                                                                                                                  |
 | **실행 취소**                         | <kbd>Ctrl</kbd>+<kbd>Z</kbd>                  | 스크립트 창, 명령 창                                                                                                                                                                                                                                                                  |
+| **Intellisense 도움말 표시**       | <kbd>CTRL</kbd>+<kbd>스페이스</kbd>              | 스크립트 창                                                                                                                                                                                                                                                                                |
+| **왼쪽 단어 삭제**          | <kbd>CTRL</kbd>+<kbd>백스페이스</kbd>          | 스크립트 창                                                                                                                                                                                                                                                                                |
+| **오른쪽 단어 삭제**         | <kbd>CTRL</kbd>+<kbd>Delete</kbd>             | 스크립트 창                                                                                                                                                                                                                                                                                |
 
 ## <a name="keyboard-shortcuts-for-running-scripts"></a>스크립트 실행 바로 가기 키
 
