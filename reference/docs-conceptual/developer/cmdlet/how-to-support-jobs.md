@@ -1,14 +1,14 @@
 ---
-ms.date: 09/13/2016
+ms.date: 03/09/2021
 ms.topic: reference
 title: 작업을 지원하는 방법
 description: 작업을 지원하는 방법
-ms.openlocfilehash: d755093e941aa660032f8d283cb43ba5eeec8c4b
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 1528f5d934605caa4009688845a6caa7b95b86a3
+ms.sourcegitcommit: e679533f966f4e97cddae24531a22436da13610c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "92666980"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102532121"
 ---
 # <a name="how-to-support-jobs"></a>작업을 지원하는 방법
 
@@ -32,7 +32,7 @@ ms.locfileid: "92666980"
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06AsJobParam](msh_samplesGetProc06#GetProc06AsJobParam)]  -->
 
-2. [System.object](/dotnet/api/System.Management.Automation.Job) 클래스에서 파생 되는 개체를 만듭니다. 이 개체는 사용자 지정 작업 개체 이거나 Windows PowerShell에서 제공 하는 작업 개체 (예: [Pseventjob](/dotnet/api/System.Management.Automation.PSEventJob) 개체) 중 하나일 수 있습니다.
+1. [System.object](/dotnet/api/System.Management.Automation.Job) 클래스에서 파생 되는 개체를 만듭니다. 이 개체는 사용자 지정 작업 개체 이거나 Windows PowerShell에서 제공 하는 작업 개체 (예: [Pseventjob](/dotnet/api/System.Management.Automation.PSEventJob) 개체) 중 하나일 수 있습니다.
 
     다음 예제에서는 사용자 지정 작업 개체를 보여 줍니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "92666980"
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06JobObject](msh_samplesGetProc06#GetProc06JobObject)]  -->
 
-3. 레코드 처리 방법에서 `if` 문을 추가 하 여 cmdlet을 작업으로 실행할지 여부를 검색 합니다. 다음 코드는 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 사용 합니다.
+1. 레코드 처리 방법에서 `if` 문을 추가 하 여 cmdlet을 작업으로 실행할지 여부를 검색 합니다. 다음 코드는 [ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) 메서드를 사용 합니다.
 
     ```csharp
     protected override void ProcessRecord()
@@ -69,7 +69,7 @@ ms.locfileid: "92666980"
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06ProcessRecord](msh_samplesGetProc06#GetProc06ProcessRecord)]  -->
 
-4. 사용자 지정 작업 개체의 경우 작업 클래스를 구현 합니다.
+1. 사용자 지정 작업 개체의 경우 작업 클래스를 구현 합니다.
 
     ```csharp
     private class SampleJob : Job
@@ -126,7 +126,7 @@ ms.locfileid: "92666980"
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06JobClass](msh_samplesGetProc06#GetProc06JobClass)]  -->
 
-5. Cmdlet에서 작업을 수행 하는 경우 [WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드를 호출 하 여 프로세스 개체를 파이프라인으로 반환 합니다. 작업이 작업으로 수행 되는 경우 자식 작업을 작업에 추가 합니다.
+1. Cmdlet에서 작업을 수행 하는 경우 [WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) 메서드를 호출 하 여 프로세스 개체를 파이프라인으로 반환 합니다. 작업이 작업으로 수행 되는 경우 자식 작업을 작업에 추가 합니다.
 
     ```csharp
     void DoProcessLogic(bool asJob)
@@ -209,6 +209,7 @@ namespace Microsoft.Samples.PowerShell.Commands
     /// Specify the AsJob parameter. This parameter indicates
     /// whether the cmdlet should retrieve the processes internally
     /// or return a Job object that retrieves the processes.
+    /// </summary>
     [Parameter()]
     public SwitchParameter AsJob
     {
