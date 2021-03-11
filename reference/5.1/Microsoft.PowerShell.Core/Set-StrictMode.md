@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 04/09/2020
+ms.date: 03/10/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/set-strictmode?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-StrictMode
-ms.openlocfilehash: e44cad2bab6c81de67cdd0902af5172438efa19e
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: 32fd07174bacb7d0b99361916574f6b672052d1b
+ms.sourcegitcommit: 925819a5ad5799650c14944bd3e50fb309a7e6c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94388504"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102771429"
 ---
 # Set-StrictMode
 
@@ -227,7 +227,7 @@ strict 모드에서 오류를 발생시키는 조건을 지정합니다. 이 매
   - 개체의 존재 하지 않는 속성에 대 한 참조를 금지 합니다.
   - 메서드를 호출 하는 구문을 사용 하는 함수 호출을 금지 합니다.
   - 범위를 벗어났거나 확인할 수가 없는 배열 인덱스를 금지 합니다.
-- 최신
+- 가장 늦은 날짜
   - 사용 가능한 최신 버전을 선택 합니다. 최신 버전은 가장 엄격 합니다. 새 버전이 PowerShell에 추가 되는 경우에도 스크립트에서 사용 가능한 가장 엄격한 버전을 사용 하는지 확인 하려면이 값을 사용 합니다.
 
 > [!CAUTION]
@@ -262,6 +262,8 @@ Accept wildcard characters: False
 이 cmdlet은 어떠한 출력도 반환되지 않습니다.
 
 ## 참고
+
+`Set-StrictMode` **Version** 매개 변수는 보다 큰 값 `3.0` 을 허용 하지만, 현재 보다 높은 항목에 대해 정의 된 추가 규칙은 없습니다 `3.0` .
 
 `Set-StrictMode` 는 설정 된 범위와 해당 하위 범위에만 적용 됩니다. PowerShell의 범위에 대 한 자세한 내용은 [about_Scopes](about/about_Scopes.md)를 참조 하세요.
 

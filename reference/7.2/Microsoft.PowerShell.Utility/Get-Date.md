@@ -6,12 +6,12 @@ ms.date: 08/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Date
-ms.openlocfilehash: 6f5c76faafa2c68a6d9dfc604238c514489aa717
-ms.sourcegitcommit: 3a1d80e27438976101f216b8c3d623c61b868db8
+ms.openlocfilehash: bb3c3686310440d9f75d36ca1c83fb60066f5d6a
+ms.sourcegitcommit: 925819a5ad5799650c14944bd3e50fb309a7e6c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "99975059"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102771499"
 ---
 # Get-Date
 
@@ -348,7 +348,7 @@ Accept wildcard characters: False
 
 PowerShell 5.0부터 다음 추가 형식을 **Format** 매개 변수에 대 한 값으로 사용할 수 있습니다.
 
-- **Filedate**. 현재 날짜를 현지 시간으로 표현 하는 파일 또는 경로입니다. 형식은 `yyyyMMdd` (4 자리 연도, 2 자리 월 및 2 자리 일을 사용 하는 대/소문자 구분)입니다. 예를 들어:
+- **Filedate**. 현재 날짜를 현지 시간으로 표현 하는 파일 또는 경로입니다. 형식은 `yyyyMMdd` (4 자리 연도, 2 자리 월 및 2 자리 일을 사용 하는 대/소문자 구분)입니다. 예를 들면 다음과 같습니다.
   20190627.
 
 - **Filedateuniversal**. 현재 날짜를 UTC (universal time)로 표현 하는 파일 또는 경로에 대 한 친숙 한 표현입니다. 형식은입니다 `yyyyMMddZ` . 여기에는 4 자리 연도, 2 자리 월, 2 자리 날짜 및 문자를 UTC 표시기로 사용 하 여 대/소문자를 구분 합니다 `Z` . 예: 20190627Z
@@ -544,10 +544,10 @@ Accept wildcard characters: False
 | `%c` | 날짜 및 시간-약식                                             | 6 월 27 08:44:18 2019 |
 | `%D` | Mm/dd/yy 형식의 날짜                                                 | 06/27/19                 |
 | `%d` | 월의 날짜-2 자리                                             | 05                       |
-| `%e` | 월의 날짜-한 자리로 된 경우 공백을 앞에 옵니다.           | \<space\>5               |
+| `%e` | 월의 날짜-한 자리로 된 경우 공백을 앞에 옵니다.           | \<space\>5                |
 | `%F` | YYYY-mm-dd 형식의 날짜 (% Y-% m-% d) (ISO 8601 날짜 형식) | 2019-06-27               |
-| `%G` | ' Y '와 동일                                                             |                          |
-| `%g` | ' Y '와 동일                                                             |                          |
+| `%G` | ISO 주 날짜 연도 (목요일의 목요일을 포함 하는 연도)               |                          |
+| `%g` | ' G '-2 자리                                                  |                          |
 | `%H` | 24 시간 형식의 시간                                                  | 17                       |
 | `%h` | ' B '와 동일                                                             |                          |
 | `%I` | 12 시간 형식의 시간                                                  | 05                       |
