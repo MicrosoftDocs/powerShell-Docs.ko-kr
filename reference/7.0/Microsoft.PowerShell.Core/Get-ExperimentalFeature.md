@@ -1,16 +1,17 @@
 ---
 external help file: System.Management.Automation.dll-Help.xml
+Locale: en-US
 Module Name: Microsoft.PowerShell.Core
 ms.date: 03/01/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-experimentalfeature?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ExperimentalFeature
-ms.openlocfilehash: 18a7163a2f67c22013fb607c3b90f3c350a0d797
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 22e1b21f304129d6912557a5dbc825bc4e6202a1
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93216170"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103193927"
 ---
 # Get-ExperimentalFeature
 

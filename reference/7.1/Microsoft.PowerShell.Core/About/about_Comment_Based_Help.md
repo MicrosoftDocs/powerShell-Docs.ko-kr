@@ -1,16 +1,16 @@
 ---
 description: 함수 및 스크립트에 대 한 주석 기반 도움말 항목을 작성 하는 방법에 대해 설명 합니다.
-keywords: powershell,cmdlet
+Locale: en-US
 ms.date: 06/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Comment_Based_Help
-ms.openlocfilehash: 386ed8e1c28904c484261aa91d11ce028632cd16
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: 6dfc735e02e7155d70d5db05753c4abfc54149f8
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94391275"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195940"
 ---
 # <a name="about-comment-based-help"></a>주석 기반 도움말 정보
 
@@ -21,7 +21,7 @@ ms.locfileid: "94391275"
 
 특수 도움말 주석 키워드를 사용 하 여 함수 및 스크립트에 대 한 주석 기반 도움말 항목을 작성할 수 있습니다.
 
-[Get-help](xref:Microsoft.PowerShell.Core.Get-Help) CMDLET은 XML 파일에서 생성 된 cmdlet 도움말 항목을 표시 하는 것과 동일한 형식으로 주석 기반 도움말을 표시 합니다. 사용자는 `Get-Help` **자세히** , **전체** , **예** 및 **온라인** 등의 모든 매개 변수를 사용 하 여 주석 기반 도움말의 내용을 표시할 수 있습니다.
+[Get-help](xref:Microsoft.PowerShell.Core.Get-Help) CMDLET은 XML 파일에서 생성 된 cmdlet 도움말 항목을 표시 하는 것과 동일한 형식으로 주석 기반 도움말을 표시 합니다. 사용자는 `Get-Help` **자세히**, **전체**, **예** 및 **온라인** 등의 모든 매개 변수를 사용 하 여 주석 기반 도움말의 내용을 표시할 수 있습니다.
 
 함수 및 스크립트에 대 한 XML 기반 도움말 파일을 작성할 수도 있습니다. Cmdlet을 사용 하 여 `Get-Help` 함수 또는 스크립트에 대 한 XML 기반 도움말 파일을 찾으려면 키워드를 사용 `.ExternalHelp` 합니다. 이 키워드가 없으면 `Get-Help` 함수 또는 스크립트에 대 한 XML 기반 도움말 항목을 찾을 수 없습니다.
 
@@ -307,7 +307,7 @@ Cmdlet 도움말 XML 기반 도움말 파일 형식에 대 한 자세한 내용�
 
 ### <a name="parameter-attribute-table"></a>Parameter 특성 표
 
-`Get-Help` 의 **Full** 또는 **parameter** 매개 변수를 사용할 때 표시 되는 매개 변수 특성의 테이블을 생성 합니다 `Get-Help` . **필수** , **위치** 및 **기본** 값 특성의 값은 함수 또는 스크립트 구문에서 가져옵니다.
+`Get-Help` 의 **Full** 또는 **parameter** 매개 변수를 사용할 때 표시 되는 매개 변수 특성의 테이블을 생성 합니다 `Get-Help` . **필수**, **위치** 및 **기본** 값 특성의 값은 함수 또는 스크립트 구문에서 가져옵니다.
 
 함수 또는 스크립트에서 정의 된 경우에도 기본값 및 **와일드 카드 문자 허용** 값은 매개 변수 특성 테이블에 나타나지 않습니다. 사용자를 돕기 위해 매개 변수 설명에이 정보를 제공 합니다.
 
@@ -315,7 +315,7 @@ Cmdlet 도움말 XML 기반 도움말 파일 형식에 대 한 자세한 내용�
 
 도움말 항목의 **설명** 섹션은 함수 또는 스크립트 이름에서 자동으로 생성 됩니다. 콘텐츠를 변경 하거나 영향을 줄 수는 없습니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 ### <a name="comment-based-help-for-a-function"></a>함수에 대 한 주석 기반 도움말
 
@@ -743,7 +743,7 @@ Displays information about PowerShell cmdlets and concepts.
 ...
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [about_Functions](about_Functions.md)
 

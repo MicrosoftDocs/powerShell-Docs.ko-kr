@@ -1,13 +1,15 @@
 ---
 description: 고급 함수에서 매개 변수 집합을 정의 하 고 사용 하는 방법을 설명 합니다.
+Locale: en-US
 ms.date: 02/11/2020
 title: about_Parameter_Sets
-ms.openlocfilehash: 405ef1c70b49f703f17a9e76f899a9643cc065bc
-ms.sourcegitcommit: eb7ad1850550032880f5529b4e4281514cba1673
+schema: 2.0.0
+ms.openlocfilehash: 9a954c1fd328e45618e95bfa67a234945327d8e8
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "99599750"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103194607"
 ---
 # <a name="about-parameter-sets"></a>매개 변수 집합 정보
 
@@ -46,7 +48,7 @@ PowerShell은 명령에 제공 된 정보를 기반으로 사용할 매개 변�
 
 매개 변수 집합 이름이 할당 되지 않은 매개 변수는 모든 매개 변수 집합에 속합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제 함수는 텍스트 파일의 숫자 줄, 문자 및 단어 수를 계산 합니다. 매개 변수를 사용 하 여 반환할 값과 측정 하려는 파일을 지정할 수 있습니다. 다음 네 가지 매개 변수 집합이 정의 되어 있습니다.
 

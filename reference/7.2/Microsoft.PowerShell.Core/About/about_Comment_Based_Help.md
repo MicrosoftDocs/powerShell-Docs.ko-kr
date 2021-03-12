@@ -1,15 +1,16 @@
 ---
 description: 함수 및 스크립트에 대 한 주석 기반 도움말 항목을 작성 하는 방법에 대해 설명 합니다.
+Locale: en-US
 ms.date: 06/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Comment_Based_Help
-ms.openlocfilehash: 055f2358a8e9d3868c9fd1024be1f6adf5520356
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: b676870c5d8879700b84339f9f0b74a18b079692
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99599753"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195707"
 ---
 # <a name="about-comment-based-help"></a>주석 기반 도움말 정보
 
@@ -37,7 +38,7 @@ ms.locfileid: "99599753"
 # <help content>
 ```
 
-or
+또는
 
 ```
 <#
@@ -99,7 +100,7 @@ function Get-Function
 }
 ```
 
-or
+또는
 
 ```powershell
 <#
@@ -292,7 +293,7 @@ Cmdlet 도움말 XML 기반 도움말 파일 형식에 대 한 자세한 내용�
 
 함수 도움말 항목의 **name** 섹션은 함수 구문의 함수 이름에서 가져옵니다. 스크립트 파일 이름에서 스크립트 도움말 항목의 **이름을** 가져옵니다. 이름 또는 해당 대문자 표시를 변경 하려면 함수 구문이 나 스크립트 파일 이름을 변경 합니다.
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>구문
 
 도움말 항목의 **구문** 섹션은 함수 또는 스크립트 구문에서 생성 됩니다. 도움말 항목 구문 (예: .NET 형식의 매개 변수)에 세부 정보를 추가 하려면 구문에 세부 정보를 추가 합니다. 매개 변수 형식을 지정 하지 않으면 **개체** 형식이 기본값으로 삽입 됩니다.
 

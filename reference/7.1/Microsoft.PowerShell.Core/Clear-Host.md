@@ -2,17 +2,17 @@
 external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
-Module Name: ''
+Module Name: Microsoft.PowerShell.Core
 ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/clear-host?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-Host
-ms.openlocfilehash: 452e0e66cf6db746469247bf68552960517f6c32
-ms.sourcegitcommit: 2e497178126b2b33a169ff04c31e251e0b59e89b
+ms.openlocfilehash: 7f1481c34c22d3fdface82828b6c3afbbbd6fce0
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "93209273"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103193879"
 ---
 # Clear-Host
 
@@ -81,13 +81,13 @@ PS C:>
 
 ## 입력
 
-### 없음
+### None
 
 입력을로 파이프 할 수 없습니다 `Clear-Host` .
 
 ## 출력
 
-### 없음
+### None
 
 `Clear-Host` 출력을 생성 하지 않습니다.
 

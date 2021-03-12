@@ -8,16 +8,16 @@ Module Name: PSReadLine
 ms.date: 12/07/2018
 schema: 2.0.0
 title: PSReadLine
-ms.openlocfilehash: cdc94f7e061d3f0209fae76b0955dc7359d4da6a
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: 2b6cea15c9e171d7afd791995ad7d17b56083fe1
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93224722"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103194488"
 ---
 # PSReadLine 모듈
 
-## Description
+## 설명
 
 PSReadLine 모듈에는 PowerShell에서 명령줄 편집 환경을 사용자 지정할 수 있는 cmdlet이 포함 되어 있습니다. 이러한 문서는 PSReadLine v 2.0 문서입니다. 이 버전은 PowerShell v6 및 Windows 10 10 월 2018 업데이트 (빌드 1809)에서 제공 됩니다.
 

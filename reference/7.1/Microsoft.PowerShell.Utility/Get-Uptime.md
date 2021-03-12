@@ -1,16 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
+Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 06/27/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-uptime?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Uptime
-ms.openlocfilehash: d06dbc66d9674b59df4d75f8ae333d4fe24aa7eb
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 225172868e0a011d89974a399e372515f531ac3d
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213017"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103196270"
 ---
 # Get-Uptime
 
@@ -93,7 +94,7 @@ Accept wildcard characters: False
 
 ## 입력
 
-### 없음
+### None
 
 ## 출력
 

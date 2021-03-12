@@ -1,16 +1,16 @@
 ---
 description: PowerShell 프로필을 만들고 사용 하는 방법을 설명 합니다.
-keywords: powershell,cmdlet
+Locale: en-US
 ms.date: 11/30/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Profiles
-ms.openlocfilehash: c807d32b1e1cf1558f662e0b7edad276102aba36
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 61458b60767f2bd51342546b74eb408433b8d29a
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222930"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195961"
 ---
 # <a name="about-profiles"></a>프로필 정보
 
@@ -33,7 +33,7 @@ PowerShell은 여러 프로필 파일을 지원 합니다. 또한 PowerShell 호
 
 예를 들어 PowerShell 콘솔은 다음과 같은 기본 프로필 파일을 지원 합니다. 프로필은 우선 순위에 따라 나열 됩니다. 첫 번째 프로필은 우선 순위가 가장 높습니다.
 
-|Description               | 경로                                          |
+|설명               | 경로                                          |
 |--------------------------|-----------------------------------------------|
 |모든 사용자, 모든 호스트      |$PSHOME \\Profile.ps1                           |
 |모든 사용자, 현재 호스트   |$PSHOME \\Microsoft.PowerShell_profile.ps1      |
@@ -47,7 +47,7 @@ PowerShell은 여러 프로필 파일을 지원 합니다. 또한 PowerShell 호
 
 또한 PowerShell을 호스트 하는 다른 프로그램은 자신의 프로필을 지원할 수 있습니다. 예를 들어 Visual Studio Code는 다음과 같은 호스트 특정 프로필을 지원 합니다.
 
-|Description               | 경로                                     |
+|설명               | 경로                                     |
 |--------------------------|------------------------------------------|
 |모든 사용자, 현재 호스트   |$PSHOME \\Microsoft.VSCode_profile.ps1|
 |현재 사용자, 현재 호스트|$Home \\ [My] 문서 \\ PowerShell\\<br>Microsoft.VSCode_profile.ps1|
@@ -64,7 +64,7 @@ PowerShell 도움말에서 "CurrentUser, Current Host" 프로필은 가장 흔�
 
 예를 들어 `$PROFILE` 변수는 Windows PowerShell 콘솔에서 다음 값을 갖습니다.
 
-|Description                |속성                              |
+|설명                |Name                              |
 |---------------------------|----------------------------------|
 |현재 사용자, 현재 호스트 |`$PROFILE`                        |
 |현재 사용자, 현재 호스트 |`$PROFILE.CurrentUserCurrentHost` |
@@ -210,7 +210,7 @@ PowerShell 프롬프트에 대 한 자세한 내용은 [about_Prompts](about_Pro
 
 시작 하려면 PowerShell을 시작할 수 있는 프로그램 (예: Cmd.exe 또는 PowerShell)을 엽니다. Windows에서 실행 대화 상자를 사용할 수도 있습니다.
 
-형식:
+유형:
 
 ```
 PowerShell -NoProfile

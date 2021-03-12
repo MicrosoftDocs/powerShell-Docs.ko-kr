@@ -1,15 +1,16 @@
 ---
 description: 명령줄 인터페이스를 사용 하는 방법을 설명 합니다 `pwsh` . 명령줄 매개 변수를 표시 하 고 구문을 설명 합니다.
+Locale: en-US
 ms.date: 10/05/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pwsh?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Pwsh
-ms.openlocfilehash: b31563dd7058d85eb76f34c61d9bff5558a786b0
-ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
+ms.openlocfilehash: eae22efa9302826d3e1303dd933d8ea114123ab9
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "99602803"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195997"
 ---
 # <a name="about-pwsh"></a>Pwsh 정보
 
@@ -98,7 +99,7 @@ pwsh -Command "& {Get-WinEvent -LogName security}"
 
 기존 PowerShell 세션 내에서 호출 되는 경우 결과는 라이브 개체가 아니라 역직렬화 된 XML 개체로 부모 셸에 반환 됩니다. 다른 셸에서는 결과가 문자열로 반환 됩니다.
 
-**Command** 값이 이면 `-` 표준 입력에서 명령 텍스트를 읽습니다. 표준 입력으로 **Command** 매개 변수를 사용 하는 경우 표준 입력을 리디렉션해야 합니다. 다음은 그 예입니다. 
+**Command** 값이 이면 `-` 표준 입력에서 명령 텍스트를 읽습니다. 표준 입력으로 **Command** 매개 변수를 사용 하는 경우 표준 입력을 리디렉션해야 합니다. 예를 들면 다음과 같습니다.
 
 ```powershell
 @'
@@ -135,7 +136,7 @@ PowerShell이 실행 되는 구성 끝점을 지정 합니다. 이는 기본 Pow
 
 이 매개 변수는 PowerShell 6.2에서 도입 되었습니다.
 
-다음은 그 예입니다. 
+예를 들면 다음과 같습니다.
 
 ```powershell
 # PowerShell instance 1
@@ -148,7 +149,7 @@ Enter-PSHostProcess -CustomPipeName mydebugpipe
 
 명령의 b a s e 64로 인코드된 문자열 버전을 허용 합니다. 이 매개 변수를 사용 하 여 복잡 하 고 중첩 된 따옴표를 필요로 하는 명령을 PowerShell에 제출할 수 있습니다. Base64 표현은 u t f-UTF-16LE로 인코딩된 문자열 이어야 합니다.
 
-다음은 그 예입니다. 
+예를 들면 다음과 같습니다.
 
 ```powershell
 $command = 'dir "c:\program files" '

@@ -2,15 +2,15 @@
 description: 종료 오류를 생성하는 Throw 키워드에 대해 설명합니다.
 Locale: en-US
 ms.date: 12/01/2017
-online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_throw?view=powershell-7&WT.mc_id=ps-gethelp
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_throw?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Throw
-ms.openlocfilehash: 2984e0a9e5f470594dd1e5987b69b92f91ce4913
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: bef005f47583523f69a8b25651eb0ee5bfc5b224
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99602833"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195841"
 ---
 # <a name="about-throw"></a>Throw 정보
 
@@ -25,7 +25,7 @@ Throw 키워드는 종료 오류를 발생 시킵니다. Throw 키워드를 사�
 
 Throw 키워드는 사용자 메시지 문자열 또는 오류를 발생 시킨 개체와 같은 모든 개체를 throw 할 수 있습니다.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>구문
 
 Throw 키워드의 구문은 다음과 같습니다.
 

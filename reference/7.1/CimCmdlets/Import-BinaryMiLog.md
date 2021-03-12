@@ -4,15 +4,15 @@ keywords: powershell,cmdlet
 Locale: en-US
 Module Name: CimCmdlets
 ms.date: 02/20/2019
-online version: https://docs.microsoft.com/powershell/module/cimcmdlets/import-binarymilog?WT.mc_id=ps-gethelp
+online version: https://docs.microsoft.com/powershell/module/cimcmdlets/import-binarymilog?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-BinaryMiLog
-ms.openlocfilehash: ce5dd31170bc47edaa04ca3c31deab62dc4ec354
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: ce777eff8b41fe6bde3c8e00050ec9db87174265
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93225042"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195877"
 ---
 # Import-BinaryMiLog
 
@@ -60,7 +60,7 @@ Accept wildcard characters: True
 
 ## 입력
 
-### 없음
+### None
 
 ## 출력
 

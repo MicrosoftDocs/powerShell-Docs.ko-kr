@@ -1,15 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
+Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 01/30/2020
-online version: https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-MarkdownOption?view=powershell-7.x.0&WT.mc_id=ps-gethelp
+online version: https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-MarkdownOption?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
-ms.openlocfilehash: 775b11db79b9ca8290864b757e5cd1a0615f89e4
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+title: Get-MarkdownOption
+ms.openlocfilehash: 0da0c869216fd2a044fe03faad25e3de6f3fb8fd
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99599944"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195698"
 ---
 # Get-MarkdownOption
 
@@ -61,7 +63,7 @@ EmphasisItalics : [36m
 
 ## 입력
 
-### 없음
+### None
 
 ## 출력
 

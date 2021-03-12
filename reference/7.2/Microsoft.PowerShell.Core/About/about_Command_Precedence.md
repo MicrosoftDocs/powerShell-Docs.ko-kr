@@ -1,15 +1,16 @@
 ---
 description: PowerShell에서 실행할 명령을 결정 하는 방법에 대해 설명 합니다.
+Locale: en-US
 ms.date: 02/13/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_command_precedence?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Command_Precedence
-ms.openlocfilehash: 0b1ad7dc0fae9c6c0ec16929b3d538e5db4aea55
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 8b8a27a47c454b59b5dd4bb2d6e8a8cc3cec78c8
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99602821"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103196251"
 ---
 # <a name="about-command-precedence"></a>명령 우선 순위 정보
 
@@ -214,7 +215,7 @@ Call 연산자는 자식 범위에서 문자열과 스크립트 블록을 실행
 &(Get-Command -Name Map -CommandType Function)
 ```
 
-or
+또는
 
 ```powershell
 &(dir Function:\map)

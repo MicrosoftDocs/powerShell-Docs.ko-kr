@@ -1,15 +1,16 @@
 ---
 description: 명령줄 인터페이스를 사용 하는 방법을 설명 합니다 `pwsh` . 명령줄 매개 변수를 표시 하 고 구문을 설명 합니다.
+Locale: en-US
 ms.date: 10/05/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pwsh?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Pwsh
-ms.openlocfilehash: 6f6e7ea66aa04eaeea2b9da7c07864180210131c
-ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
+ms.openlocfilehash: a3420af2f46c7946d6282ca639117e4104d2bd17
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97692999"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195949"
 ---
 # <a name="about-pwsh"></a>Pwsh 정보
 
@@ -239,7 +240,7 @@ PowerShell을 SSH 하위 시스템으로 실행 하기 위해 sshd_config에 사
 
 ### <a name="-sta"></a>-STA
 
-단일 스레드 아파트를 사용 하 여 PowerShell을 시작 합니다. 이것이 기본값입니다. 이 스위치는 Windows 에서만 사용할 수 있습니다.
+단일 스레드 아파트를 사용 하 여 PowerShell을 시작 합니다. 기본값입니다. 이 스위치는 Windows 에서만 사용할 수 있습니다.
 
 ### <a name="-version---v"></a>-Version | -v
 

@@ -1,16 +1,17 @@
 ---
 external help file: PSDiagnostics-help.xml
+Locale: en-US
 Module Name: PSDiagnostics
 ms.date: 11/27/2018
 online version: https://docs.microsoft.com/powershell/module/psdiagnostics/disable-pstrace?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-PSTrace
-ms.openlocfilehash: fc58e0bcfdd0b4ee7c7ee383b44f7d7f428c34c0
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 50d4118c5805a59d291d8dd17f467e7b47d34b46
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213562"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103194514"
 ---
 # Disable-PSTrace
 
@@ -59,7 +60,7 @@ Accept wildcard characters: False
 
 ## 입력
 
-### 없음
+### None
 
 ## 출력
 

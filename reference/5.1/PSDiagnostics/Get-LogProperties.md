@@ -1,16 +1,17 @@
 ---
 external help file: PSDiagnostics-help.xml
+Locale: en-US
 Module Name: PSDiagnostics
 ms.date: 11/27/2018
 online version: https://docs.microsoft.com/powershell/module/psdiagnostics/get-logproperties?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-LogProperties
-ms.openlocfilehash: 0f675c2b0bf2b7e5ebfe3a1677f5bc194e8fe844
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 447d8a07c6e5d6ba4f47685819907937c75711db
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213530"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103193980"
 ---
 # Get-LogProperties
 

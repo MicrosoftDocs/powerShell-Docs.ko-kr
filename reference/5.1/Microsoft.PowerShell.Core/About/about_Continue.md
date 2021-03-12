@@ -1,16 +1,16 @@
 ---
 description: '`continue`문이 프로그램 루프, `switch` 문 또는 문 맨 위에 프로그램 흐름을 즉시 반환 하는 방법에 대해 설명 합니다 `trap` .'
-keywords: powershell,cmdlet
+Locale: en-US
 ms.date: 06/04/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_continue?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Continue
-ms.openlocfilehash: fc0b84829a96fc6ba2cafa0c24a7585cc9944fe8
-ms.sourcegitcommit: 0c31814bed14ff715dc7d4aace07cbdc6df2438e
+ms.openlocfilehash: 5ae27fab299690e1fc2f85cbcdb3aeae9ab2721a
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97614053"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103194210"
 ---
 # <a name="about-continue"></a>계속 정보
 
@@ -109,7 +109,7 @@ switch (1,2,3) {
 
 `continue`스크립트 블록과 같은 파이프라인 내에서를 사용 하면 `ForEach-Object` 파이프라인이 종료 될 뿐만 아니라 전체 runspace가 종료 될 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [about_Break](about_Break.md)
 
