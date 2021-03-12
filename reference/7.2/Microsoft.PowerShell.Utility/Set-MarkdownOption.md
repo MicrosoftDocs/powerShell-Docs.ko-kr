@@ -1,15 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
+Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 01/30/2020
-online version: https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Set-MarkdownOption?view=powershell-7.x.0&WT.mc_id=ps-gethelp
+online version: https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Set-MarkdownOption?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
-ms.openlocfilehash: 73f08cd40c243a1b1a4bfc93ecbfe7dc1facb00a
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+title: Set-MarkdownOption
+ms.openlocfilehash: b8353bf6eb9669676d72f533bffb25748e4e2827
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99602689"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195223"
 ---
 # Set-MarkdownOption
 

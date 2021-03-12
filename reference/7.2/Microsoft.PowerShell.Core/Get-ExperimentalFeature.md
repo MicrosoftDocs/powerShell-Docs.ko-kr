@@ -1,16 +1,17 @@
 ---
 external help file: System.Management.Automation.dll-Help.xml
+Locale: en-US
 Module Name: Microsoft.PowerShell.Core
 ms.date: 01/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-experimentalfeature?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ExperimentalFeature
-ms.openlocfilehash: aad634bb0a917d418aa9c7fa295a53fda280b8a3
-ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
+ms.openlocfilehash: 2b6bbc6e3e0c535d777509a545edfe10fed7d727
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "99599752"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103194939"
 ---
 # Get-ExperimentalFeature
 
@@ -30,7 +31,7 @@ Get-ExperimentalFeature [[-Name] <String[]>] [<CommonParameters>]
 
 ## 예제
 
-### 예제 1
+### 예 1
 
 현재 등록 된 실험적 기능 목록과 현재 상태를 가져옵니다.
 

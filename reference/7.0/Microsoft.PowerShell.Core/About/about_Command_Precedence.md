@@ -1,16 +1,16 @@
 ---
 description: PowerShell에서 실행할 명령을 결정 하는 방법에 대해 설명 합니다.
-keywords: powershell,cmdlet
+Locale: en-US
 ms.date: 02/13/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_command_precedence?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Command_Precedence
-ms.openlocfilehash: 19545a8e456d83e447873535746cdf4efccd80bb
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: ee5d2dfcd8e7353950bec27a320bf3e0f76281c7
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93220746"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195061"
 ---
 # <a name="about-command-precedence"></a>명령 우선 순위 정보
 
@@ -99,7 +99,7 @@ PowerShell에서 와일드 카드를 사용 하는 방법에 대 한 자세한 �
 
   1. Alias
   2. 함수
-  3. cmdlet
+  3. Cmdlet
   4. 외부 실행 파일 (프로그램 및 비 PowerShell 스크립트)
 
 따라서 "help"를 입력 하는 경우 PowerShell은 먼저 라는 이름의 별칭을 찾은 다음 라는 함수를 찾은 `help` 다음 `Help` 마지막으로 이라는 cmdlet을 찾습니다 `Help` . 찾은 첫 번째 항목을 실행 `help` 합니다.
@@ -205,7 +205,7 @@ Microsoft.PowerShell.Utility
 
 #### <a name="call-operator"></a>Call 연산자
 
-또한 연산자를 사용 `Call` `&` 하 여 숨겨진 명령을 [get childitem](xref:Microsoft.PowerShell.Management.Get-ChildItem) (별칭은 "Dir") 또는 import-module과 결합 하 여 실행할 수 있습니다 `Get-Command` . [Get-Module](xref:Microsoft.PowerShell.Core.Get-Module)
+또한 연산자를 사용 `Call` `&` 하 여 숨겨진 명령을 [get childitem](xref:Microsoft.PowerShell.Management.Get-ChildItem) (별칭은 "Dir") 또는 import-module과 결합 하 여 실행할 수 있습니다 `Get-Command` . [](xref:Microsoft.PowerShell.Core.Get-Module)
 
 Call 연산자는 자식 범위에서 문자열과 스크립트 블록을 실행 합니다. 자세한 내용은 [about_Operators](about_Operators.md)를 참조 하세요.
 

@@ -1,16 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
+Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 12/12/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/join-string?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Join-String
-ms.openlocfilehash: 8f4dc173ff95476c4e2cb91e24d30afdd8a31697
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 34af5c0f4df5f280233ce96132473ed28ae99ee9
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212937"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195290"
 ---
 # Join-String
 

@@ -1,16 +1,17 @@
 ---
 external help file: System.Management.Automation.dll-Help.xml
+Locale: en-US
 Module Name: Microsoft.PowerShell.Core
 ms.date: 03/06/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/disable-experimentalfeature?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-ExperimentalFeature
-ms.openlocfilehash: 3260b3d8333e8a79fdf603c372d1e3e50aa0dabc
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 2e20db5d35c2bee98ba4ded0bd13aa672d79ea70
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217777"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195499"
 ---
 # Disable-ExperimentalFeature
 
@@ -127,7 +128,7 @@ Cmdlet에서 ExperimentalFeature의 파이프 인스턴스 `Get-ExperimentalFeat
 
 ## 출력
 
-### 없음
+### None
 
 이 cmdlet은 어떠한 출력도 반환되지 않습니다.
 

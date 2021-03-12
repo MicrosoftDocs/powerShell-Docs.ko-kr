@@ -9,12 +9,12 @@ metadata:
   author: sdwheeler
   ms.author: sewhee
   ms.date: 09/04/2019
-  ms.openlocfilehash: f469ddb8179b1b2c937478e776fb0383c22357e1
-  ms.sourcegitcommit: 14f45157bb60db7ef4c321c1a525c836698cafa9
+  ms.openlocfilehash: 04137a2b523af0707da2c0930ce4aa65815cec7f
+  ms.sourcegitcommit: 925819a5ad5799650c14944bd3e50fb309a7e6c4
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/18/2021
-  ms.locfileid: "101101290"
+  ms.lasthandoff: 03/11/2021
+  ms.locfileid: "102771527"
 highlightedContent:
   items:
   - title: 개요
@@ -131,6 +131,9 @@ tools:
   - title: PowerShell 충동
     imageSrc: ./media/index/discord.svg
     url: https://aka.ms/psdiscord
+  - title: Spiceworks
+    imageSrc: ./media/index/Spiceworks_48px_color.png
+    url: https://community.spiceworks.com/programming/powershell
   - title: 디지털 아트
     imageSrc: /media/hubs/powershell/i_digital-art.svg
     url: /powershell/scripting/community/digital-art
