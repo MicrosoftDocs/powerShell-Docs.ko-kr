@@ -2,41 +2,41 @@
 external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
-Module Name: ''
+Module Name: Microsoft.PowerShell.Core
 ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/clear-host?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-Host
-ms.openlocfilehash: d4fd2908f5577765d4f453589c5ac325723e2e3a
-ms.sourcegitcommit: 2e497178126b2b33a169ff04c31e251e0b59e89b
+ms.openlocfilehash: 592ae387737981c5b6510399d732b9037437257f
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "93209144"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103194815"
 ---
-# <span data-ttu-id="9b686-103">Clear-Host</span><span class="sxs-lookup"><span data-stu-id="9b686-103">Clear-Host</span></span>
+# <span data-ttu-id="46387-103">Clear-Host</span><span class="sxs-lookup"><span data-stu-id="46387-103">Clear-Host</span></span>
 
-## <span data-ttu-id="9b686-104">개요</span><span class="sxs-lookup"><span data-stu-id="9b686-104">SYNOPSIS</span></span>
+## <span data-ttu-id="46387-104">개요</span><span class="sxs-lookup"><span data-stu-id="46387-104">SYNOPSIS</span></span>
 
-<span data-ttu-id="9b686-105">호스트 프로그램의 표시를 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="9b686-105">Clears the display in the host program.</span></span>
+<span data-ttu-id="46387-105">호스트 프로그램의 표시를 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="46387-105">Clears the display in the host program.</span></span>
 
-## <span data-ttu-id="9b686-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="9b686-106">SYNTAX</span></span>
+## <span data-ttu-id="46387-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="46387-106">SYNTAX</span></span>
 
 ```
 Clear-Host [<CommonParameters>]
 ```
 
-## <span data-ttu-id="9b686-107">설명</span><span class="sxs-lookup"><span data-stu-id="9b686-107">DESCRIPTION</span></span>
+## <span data-ttu-id="46387-107">설명</span><span class="sxs-lookup"><span data-stu-id="46387-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="9b686-108">`Clear-Host`함수는 누적 되었을 수 있는 명령 및 출력을 포함 하 여 현재 디스플레이에서 모든 텍스트를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="9b686-108">The `Clear-Host` function removes all text from the current display, including commands and output that might have accumulated.</span></span> <span data-ttu-id="9b686-109">완료되면 명령 프롬프트가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="9b686-109">When complete, it displays the command prompt.</span></span> <span data-ttu-id="9b686-110">함수 이름 또는 해당 별칭인를 사용할 수 있습니다 `cls` .</span><span class="sxs-lookup"><span data-stu-id="9b686-110">You can use the function name or its alias, `cls`.</span></span>
+<span data-ttu-id="46387-108">`Clear-Host`함수는 누적 되었을 수 있는 명령 및 출력을 포함 하 여 현재 디스플레이에서 모든 텍스트를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="46387-108">The `Clear-Host` function removes all text from the current display, including commands and output that might have accumulated.</span></span> <span data-ttu-id="46387-109">완료되면 명령 프롬프트가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="46387-109">When complete, it displays the command prompt.</span></span> <span data-ttu-id="46387-110">함수 이름 또는 해당 별칭인를 사용할 수 있습니다 `cls` .</span><span class="sxs-lookup"><span data-stu-id="46387-110">You can use the function name or its alias, `cls`.</span></span>
 
-<span data-ttu-id="9b686-111">`Clear-Host` 현재 표시에만 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9b686-111">`Clear-Host` affects only the current display.</span></span> <span data-ttu-id="9b686-112">세션에서 저장된 결과를 삭제하지 않으며 어떤 항목도 제거하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9b686-112">It does not delete saved results or remove any items from the session.</span></span> <span data-ttu-id="9b686-113">세션별 항목(예: 변수 및 함수)은 이 함수의 영향을 받지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9b686-113">Session-specific items, such as variables and functions, are not affected by this function.</span></span>
+<span data-ttu-id="46387-111">`Clear-Host` 현재 표시에만 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="46387-111">`Clear-Host` affects only the current display.</span></span> <span data-ttu-id="46387-112">세션에서 저장된 결과를 삭제하지 않으며 어떤 항목도 제거하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="46387-112">It does not delete saved results or remove any items from the session.</span></span> <span data-ttu-id="46387-113">세션별 항목(예: 변수 및 함수)은 이 함수의 영향을 받지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="46387-113">Session-specific items, such as variables and functions, are not affected by this function.</span></span>
 
-<span data-ttu-id="9b686-114">`Clear-Host`함수의 동작은 호스트 프로그램에 의해 결정 되므로 `Clear-Host` 호스트 프로그램 마다 다르게 작동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b686-114">Because the behavior of the `Clear-Host` function is determined by the host program, `Clear-Host` might work differently in different host programs.</span></span>
+<span data-ttu-id="46387-114">`Clear-Host`함수의 동작은 호스트 프로그램에 의해 결정 되므로 `Clear-Host` 호스트 프로그램 마다 다르게 작동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="46387-114">Because the behavior of the `Clear-Host` function is determined by the host program, `Clear-Host` might work differently in different host programs.</span></span>
 
-## <span data-ttu-id="9b686-115">예제</span><span class="sxs-lookup"><span data-stu-id="9b686-115">EXAMPLES</span></span>
+## <span data-ttu-id="46387-115">예제</span><span class="sxs-lookup"><span data-stu-id="46387-115">EXAMPLES</span></span>
 
-### <span data-ttu-id="9b686-116">예 1</span><span class="sxs-lookup"><span data-stu-id="9b686-116">Example 1</span></span>
+### <span data-ttu-id="46387-116">예 1</span><span class="sxs-lookup"><span data-stu-id="46387-116">Example 1</span></span>
 
 ```
 # Before
@@ -72,35 +72,35 @@ PS C:\> cls
 PS C:>
 ```
 
-<span data-ttu-id="9b686-117">이 명령은의 별칭을 사용 하 여 `cls` `Clear-Host` 현재 표시를 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="9b686-117">This command uses the `cls` alias of `Clear-Host` to clear the current display.</span></span>
+<span data-ttu-id="46387-117">이 명령은의 별칭을 사용 하 여 `cls` `Clear-Host` 현재 표시를 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="46387-117">This command uses the `cls` alias of `Clear-Host` to clear the current display.</span></span>
 
-## <span data-ttu-id="9b686-118">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="9b686-118">PARAMETERS</span></span>
+## <span data-ttu-id="46387-118">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="46387-118">PARAMETERS</span></span>
 
-### <span data-ttu-id="9b686-119">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="9b686-119">CommonParameters</span></span>
-<span data-ttu-id="9b686-120">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="9b686-120">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="9b686-121">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9b686-121">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="46387-119">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="46387-119">CommonParameters</span></span>
+<span data-ttu-id="46387-120">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="46387-120">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="46387-121">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="46387-121">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="9b686-122">입력</span><span class="sxs-lookup"><span data-stu-id="9b686-122">INPUTS</span></span>
+## <span data-ttu-id="46387-122">입력</span><span class="sxs-lookup"><span data-stu-id="46387-122">INPUTS</span></span>
 
-### <span data-ttu-id="9b686-123">없음</span><span class="sxs-lookup"><span data-stu-id="9b686-123">None</span></span>
+### <span data-ttu-id="46387-123">None</span><span class="sxs-lookup"><span data-stu-id="46387-123">None</span></span>
 
-<span data-ttu-id="9b686-124">입력을로 파이프 할 수 없습니다 `Clear-Host` .</span><span class="sxs-lookup"><span data-stu-id="9b686-124">You cannot pipe input to `Clear-Host`.</span></span>
+<span data-ttu-id="46387-124">입력을로 파이프 할 수 없습니다 `Clear-Host` .</span><span class="sxs-lookup"><span data-stu-id="46387-124">You cannot pipe input to `Clear-Host`.</span></span>
 
-## <span data-ttu-id="9b686-125">출력</span><span class="sxs-lookup"><span data-stu-id="9b686-125">OUTPUTS</span></span>
+## <span data-ttu-id="46387-125">출력</span><span class="sxs-lookup"><span data-stu-id="46387-125">OUTPUTS</span></span>
 
-### <span data-ttu-id="9b686-126">없음</span><span class="sxs-lookup"><span data-stu-id="9b686-126">None</span></span>
+### <span data-ttu-id="46387-126">None</span><span class="sxs-lookup"><span data-stu-id="46387-126">None</span></span>
 
-<span data-ttu-id="9b686-127">`Clear-Host` 출력을 생성 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9b686-127">`Clear-Host` does not generate any output</span></span>
+<span data-ttu-id="46387-127">`Clear-Host` 출력을 생성 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="46387-127">`Clear-Host` does not generate any output</span></span>
 
-## <span data-ttu-id="9b686-128">참고</span><span class="sxs-lookup"><span data-stu-id="9b686-128">NOTES</span></span>
+## <span data-ttu-id="46387-128">참고</span><span class="sxs-lookup"><span data-stu-id="46387-128">NOTES</span></span>
 
-<span data-ttu-id="9b686-129">`Clear-Host` 는 고급 함수가 아닌 간단한 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="9b686-129">`Clear-Host` is a simple function, not an advanced function.</span></span> <span data-ttu-id="9b686-130">따라서 **디버그** 와 같은 일반 매개 변수를 명령에서 사용할 수 없습니다 `Clear-Host` .</span><span class="sxs-lookup"><span data-stu-id="9b686-130">As such, you cannot use common parameters, such as **Debug** , in a `Clear-Host` command.</span></span>
+<span data-ttu-id="46387-129">`Clear-Host` 는 고급 함수가 아닌 간단한 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="46387-129">`Clear-Host` is a simple function, not an advanced function.</span></span> <span data-ttu-id="46387-130">따라서 **디버그** 와 같은 일반 매개 변수를 명령에서 사용할 수 없습니다 `Clear-Host` .</span><span class="sxs-lookup"><span data-stu-id="46387-130">As such, you cannot use common parameters, such as **Debug**, in a `Clear-Host` command.</span></span>
 
-## <span data-ttu-id="9b686-131">관련 링크</span><span class="sxs-lookup"><span data-stu-id="9b686-131">RELATED LINKS</span></span>
+## <span data-ttu-id="46387-131">관련 링크</span><span class="sxs-lookup"><span data-stu-id="46387-131">RELATED LINKS</span></span>
 
-[<span data-ttu-id="9b686-132">Get-Host</span><span class="sxs-lookup"><span data-stu-id="9b686-132">Get-Host</span></span>](../Microsoft.PowerShell.Utility/Get-Host.md)
+[<span data-ttu-id="46387-132">Get-Host</span><span class="sxs-lookup"><span data-stu-id="46387-132">Get-Host</span></span>](../Microsoft.PowerShell.Utility/Get-Host.md)
 
-[<span data-ttu-id="9b686-133">Out-Host</span><span class="sxs-lookup"><span data-stu-id="9b686-133">Out-Host</span></span>](Out-Host.md)
+[<span data-ttu-id="46387-133">Out-Host</span><span class="sxs-lookup"><span data-stu-id="46387-133">Out-Host</span></span>](Out-Host.md)
 
-[<span data-ttu-id="9b686-134">Read-Host</span><span class="sxs-lookup"><span data-stu-id="9b686-134">Read-Host</span></span>](../Microsoft.PowerShell.Utility/Read-Host.md)
+[<span data-ttu-id="46387-134">Read-Host</span><span class="sxs-lookup"><span data-stu-id="46387-134">Read-Host</span></span>](../Microsoft.PowerShell.Utility/Read-Host.md)
 
-[<span data-ttu-id="9b686-135">Write-Host</span><span class="sxs-lookup"><span data-stu-id="9b686-135">Write-Host</span></span>](../Microsoft.PowerShell.Utility/Write-Host.md)
+[<span data-ttu-id="46387-135">Write-Host</span><span class="sxs-lookup"><span data-stu-id="46387-135">Write-Host</span></span>](../Microsoft.PowerShell.Utility/Write-Host.md)

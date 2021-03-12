@@ -1,45 +1,46 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
+Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 06/27/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-uptime?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Uptime
-ms.openlocfilehash: a04be33767c9e0435de9693fbd5e07d66705b5d1
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: df4091609f403a58749a6821044d768089cdc03c
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93211457"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103194561"
 ---
-# <span data-ttu-id="e6684-102">Get-Uptime</span><span class="sxs-lookup"><span data-stu-id="e6684-102">Get-Uptime</span></span>
+# <span data-ttu-id="b48ac-102">Get-Uptime</span><span class="sxs-lookup"><span data-stu-id="b48ac-102">Get-Uptime</span></span>
 
-## <span data-ttu-id="e6684-103">개요</span><span class="sxs-lookup"><span data-stu-id="e6684-103">SYNOPSIS</span></span>
-<span data-ttu-id="e6684-104">마지막 부팅 이후 **TimeSpan** 을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="e6684-104">Get the **TimeSpan** since last boot.</span></span>
+## <span data-ttu-id="b48ac-103">개요</span><span class="sxs-lookup"><span data-stu-id="b48ac-103">SYNOPSIS</span></span>
+<span data-ttu-id="b48ac-104">마지막 부팅 이후 **TimeSpan** 을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="b48ac-104">Get the **TimeSpan** since last boot.</span></span>
 
-## <span data-ttu-id="e6684-105">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="e6684-105">SYNTAX</span></span>
+## <span data-ttu-id="b48ac-105">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="b48ac-105">SYNTAX</span></span>
 
-### <span data-ttu-id="e6684-106">Timespan (기본값)</span><span class="sxs-lookup"><span data-stu-id="e6684-106">Timespan (Default)</span></span>
+### <span data-ttu-id="b48ac-106">Timespan (기본값)</span><span class="sxs-lookup"><span data-stu-id="b48ac-106">Timespan (Default)</span></span>
 
 ```
 Get-Uptime [<CommonParameters>]
 ```
 
-### <span data-ttu-id="e6684-107">이후</span><span class="sxs-lookup"><span data-stu-id="e6684-107">Since</span></span>
+### <span data-ttu-id="b48ac-107">이후</span><span class="sxs-lookup"><span data-stu-id="b48ac-107">Since</span></span>
 
 ```
 Get-Uptime [-Since] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="e6684-108">설명</span><span class="sxs-lookup"><span data-stu-id="e6684-108">DESCRIPTION</span></span>
+## <span data-ttu-id="b48ac-108">설명</span><span class="sxs-lookup"><span data-stu-id="b48ac-108">DESCRIPTION</span></span>
 
-<span data-ttu-id="e6684-109">이 cmdlet은 운영 체제의 마지막 부팅 이후 경과 된 시간을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6684-109">This cmdlet returns the time elapsed since the last boot of the operating system.</span></span>
+<span data-ttu-id="b48ac-109">이 cmdlet은 운영 체제의 마지막 부팅 이후 경과 된 시간을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="b48ac-109">This cmdlet returns the time elapsed since the last boot of the operating system.</span></span>
 
-<span data-ttu-id="e6684-110">`Get-Uptime`Cmdlet은 PowerShell 6.0에서 도입 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e6684-110">The `Get-Uptime` cmdlet was introduced in PowerShell 6.0.</span></span>
+<span data-ttu-id="b48ac-110">`Get-Uptime`Cmdlet은 PowerShell 6.0에서 도입 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="b48ac-110">The `Get-Uptime` cmdlet was introduced in PowerShell 6.0.</span></span>
 
-## <span data-ttu-id="e6684-111">예제</span><span class="sxs-lookup"><span data-stu-id="e6684-111">EXAMPLES</span></span>
+## <span data-ttu-id="b48ac-111">예제</span><span class="sxs-lookup"><span data-stu-id="b48ac-111">EXAMPLES</span></span>
 
-### <span data-ttu-id="e6684-112">예제 1-마지막 부팅 이후 시간 표시</span><span class="sxs-lookup"><span data-stu-id="e6684-112">Example 1 - Show time since last boot</span></span>
+### <span data-ttu-id="b48ac-112">예제 1-마지막 부팅 이후 시간 표시</span><span class="sxs-lookup"><span data-stu-id="b48ac-112">Example 1 - Show time since last boot</span></span>
 
 ```powershell
 Get-Uptime
@@ -59,7 +60,7 @@ TotalSeconds      : 778185
 TotalMilliseconds : 778185000
 ```
 
-### <span data-ttu-id="e6684-113">예 2-마지막 부팅 시간 표시</span><span class="sxs-lookup"><span data-stu-id="e6684-113">Example 2 - Show the time of the last boot</span></span>
+### <span data-ttu-id="b48ac-113">예 2-마지막 부팅 시간 표시</span><span class="sxs-lookup"><span data-stu-id="b48ac-113">Example 2 - Show the time of the last boot</span></span>
 
 ```powershell
 Get-Uptime -Since
@@ -69,11 +70,11 @@ Get-Uptime -Since
 Tuesday, June 18, 2019 2:34:56 PM
 ```
 
-## <span data-ttu-id="e6684-114">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="e6684-114">PARAMETERS</span></span>
+## <span data-ttu-id="b48ac-114">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="b48ac-114">PARAMETERS</span></span>
 
-### <span data-ttu-id="e6684-115">-이후</span><span class="sxs-lookup"><span data-stu-id="e6684-115">-Since</span></span>
+### <span data-ttu-id="b48ac-115">-이후</span><span class="sxs-lookup"><span data-stu-id="b48ac-115">-Since</span></span>
 
-<span data-ttu-id="e6684-116">Cmdlet이 운영 체제가 마지막으로 부팅 된 시간을 나타내는 **DateTime** 개체를 반환 하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6684-116">Cause the cmdlet to return a **DateTime** object representing the last time that the operating system was booted.</span></span>
+<span data-ttu-id="b48ac-116">Cmdlet이 운영 체제가 마지막으로 부팅 된 시간을 나타내는 **DateTime** 개체를 반환 하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="b48ac-116">Cause the cmdlet to return a **DateTime** object representing the last time that the operating system was booted.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -87,33 +88,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="e6684-117">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="e6684-117">CommonParameters</span></span>
+### <span data-ttu-id="b48ac-117">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="b48ac-117">CommonParameters</span></span>
 
-<span data-ttu-id="e6684-118">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="e6684-118">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="e6684-119">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e6684-119">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="b48ac-118">이 cmdlet 일반 매개 변수를 지원합니다. -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="b48ac-118">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="b48ac-119">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b48ac-119">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="e6684-120">입력</span><span class="sxs-lookup"><span data-stu-id="e6684-120">INPUTS</span></span>
+## <span data-ttu-id="b48ac-120">입력</span><span class="sxs-lookup"><span data-stu-id="b48ac-120">INPUTS</span></span>
 
-### <span data-ttu-id="e6684-121">없음</span><span class="sxs-lookup"><span data-stu-id="e6684-121">None</span></span>
+### <span data-ttu-id="b48ac-121">None</span><span class="sxs-lookup"><span data-stu-id="b48ac-121">None</span></span>
 
-## <span data-ttu-id="e6684-122">출력</span><span class="sxs-lookup"><span data-stu-id="e6684-122">OUTPUTS</span></span>
+## <span data-ttu-id="b48ac-122">출력</span><span class="sxs-lookup"><span data-stu-id="b48ac-122">OUTPUTS</span></span>
 
-### <span data-ttu-id="e6684-123">System.TimeSpan</span><span class="sxs-lookup"><span data-stu-id="e6684-123">System.TimeSpan</span></span>
+### <span data-ttu-id="b48ac-123">System.TimeSpan</span><span class="sxs-lookup"><span data-stu-id="b48ac-123">System.TimeSpan</span></span>
 
-<span data-ttu-id="e6684-124">이는 매개 변수를 사용 하지 않는 경우의 기본 반환 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="e6684-124">This is the default return type when no parameters are used.</span></span>
+<span data-ttu-id="b48ac-124">이는 매개 변수를 사용 하지 않는 경우의 기본 반환 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="b48ac-124">This is the default return type when no parameters are used.</span></span>
 
-### <span data-ttu-id="e6684-125">System.DateTime</span><span class="sxs-lookup"><span data-stu-id="e6684-125">System.DateTime</span></span>
+### <span data-ttu-id="b48ac-125">System.DateTime</span><span class="sxs-lookup"><span data-stu-id="b48ac-125">System.DateTime</span></span>
 
-<span data-ttu-id="e6684-126">이 형식은 **이후** 매개 변수를 사용할 때 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e6684-126">This type is returned when using the **Since** parameter.</span></span>
+<span data-ttu-id="b48ac-126">이 형식은 **이후** 매개 변수를 사용할 때 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b48ac-126">This type is returned when using the **Since** parameter.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e6684-127">Windows 빠른 시작을 사용 하는 경우 Windows에서는 **Lastbootuptime 시간** 에 저장 된 값을 업데이트 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e6684-127">If Windows fast startup is enabled, Windows does not update the value stored in **LastBootUpTime**.</span></span> <span data-ttu-id="e6684-128">빠른 시작을 사용 하지 않도록 설정 하려면 다음 명령을 실행 `Powercfg -h off` 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6684-128">To disable fast startup, run the following command: `Powercfg -h off`.</span></span>
+> <span data-ttu-id="b48ac-127">Windows 빠른 시작을 사용 하는 경우 Windows에서는 **Lastbootuptime 시간** 에 저장 된 값을 업데이트 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b48ac-127">If Windows fast startup is enabled, Windows does not update the value stored in **LastBootUpTime**.</span></span> <span data-ttu-id="b48ac-128">빠른 시작을 사용 하지 않도록 설정 하려면 다음 명령을 실행 `Powercfg -h off` 합니다.</span><span class="sxs-lookup"><span data-stu-id="b48ac-128">To disable fast startup, run the following command: `Powercfg -h off`.</span></span>
 >
-> <span data-ttu-id="e6684-129">Windows 빠른 시작에 대 한 자세한 내용은 절전 모드에서 절전 모드에서 [빠른 시작을 구별](/windows-hardware/drivers/kernel/distinguishing-fast-startup-from-wake-from-hibernation)하는 방법을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="e6684-129">For more information about Windows fast startup, see [Distinguishing Fast Startup from Wake-from-Hibernation](/windows-hardware/drivers/kernel/distinguishing-fast-startup-from-wake-from-hibernation).</span></span>
+> <span data-ttu-id="b48ac-129">Windows 빠른 시작에 대 한 자세한 내용은 절전 모드에서 절전 모드에서 [빠른 시작을 구별](/windows-hardware/drivers/kernel/distinguishing-fast-startup-from-wake-from-hibernation)하는 방법을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="b48ac-129">For more information about Windows fast startup, see [Distinguishing Fast Startup from Wake-from-Hibernation](/windows-hardware/drivers/kernel/distinguishing-fast-startup-from-wake-from-hibernation).</span></span>
 
-## <span data-ttu-id="e6684-130">참고</span><span class="sxs-lookup"><span data-stu-id="e6684-130">NOTES</span></span>
+## <span data-ttu-id="b48ac-130">참고</span><span class="sxs-lookup"><span data-stu-id="b48ac-130">NOTES</span></span>
 
-<span data-ttu-id="e6684-131">Windows에서 반환 되는 값은 WMI에 있는 **Win32_OperatingSystem** 클래스의 **lastbootuptime 시간** 속성과 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6684-131">On Windows, the value returned is the same as the **LastBootUpTime** property of the **Win32_OperatingSystem** class in WMI.</span></span>
+<span data-ttu-id="b48ac-131">Windows에서 반환 되는 값은 WMI에 있는 **Win32_OperatingSystem** 클래스의 **lastbootuptime 시간** 속성과 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="b48ac-131">On Windows, the value returned is the same as the **LastBootUpTime** property of the **Win32_OperatingSystem** class in WMI.</span></span>
 
-## <span data-ttu-id="e6684-132">관련 링크</span><span class="sxs-lookup"><span data-stu-id="e6684-132">RELATED LINKS</span></span>
+## <span data-ttu-id="b48ac-132">관련 링크</span><span class="sxs-lookup"><span data-stu-id="b48ac-132">RELATED LINKS</span></span>
 
-[<span data-ttu-id="e6684-133">Win32_OperatingSystem</span><span class="sxs-lookup"><span data-stu-id="e6684-133">Win32_OperatingSystem</span></span>](/windows/win32/cimwin32prov/win32-operatingsystem#properties)
+[<span data-ttu-id="b48ac-133">Win32_OperatingSystem</span><span class="sxs-lookup"><span data-stu-id="b48ac-133">Win32_OperatingSystem</span></span>](/windows/win32/cimwin32prov/win32-operatingsystem#properties)
