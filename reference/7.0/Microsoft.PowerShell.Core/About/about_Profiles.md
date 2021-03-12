@@ -1,100 +1,100 @@
 ---
 description: PowerShell 프로필을 만들고 사용 하는 방법을 설명 합니다.
-keywords: powershell,cmdlet
+Locale: en-US
 ms.date: 11/30/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Profiles
-ms.openlocfilehash: 3fb6a67e160281f60f20c187bf37c6920a506705
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 3fe32a83ad1a63d64d293559c79f1465828d0a0a
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93220658"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195001"
 ---
-# <a name="about-profiles"></a><span data-ttu-id="c0241-104">프로필 정보</span><span class="sxs-lookup"><span data-stu-id="c0241-104">About Profiles</span></span>
+# <a name="about-profiles"></a><span data-ttu-id="99383-103">프로필 정보</span><span class="sxs-lookup"><span data-stu-id="99383-103">About Profiles</span></span>
 
-## <a name="short-description"></a><span data-ttu-id="c0241-105">간단한 설명</span><span class="sxs-lookup"><span data-stu-id="c0241-105">Short Description</span></span>
-<span data-ttu-id="c0241-106">PowerShell 프로필을 만들고 사용 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-106">Describes how to create and use a PowerShell profile.</span></span>
+## <a name="short-description"></a><span data-ttu-id="99383-104">간단한 설명</span><span class="sxs-lookup"><span data-stu-id="99383-104">Short Description</span></span>
+<span data-ttu-id="99383-105">PowerShell 프로필을 만들고 사용 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-105">Describes how to create and use a PowerShell profile.</span></span>
 
-## <a name="long-description"></a><span data-ttu-id="c0241-107">자세한 설명</span><span class="sxs-lookup"><span data-stu-id="c0241-107">Long Description</span></span>
+## <a name="long-description"></a><span data-ttu-id="99383-106">자세한 설명</span><span class="sxs-lookup"><span data-stu-id="99383-106">Long Description</span></span>
 
-<span data-ttu-id="c0241-108">PowerShell 프로필을 만들어 환경을 사용자 지정하고 시작하는 모든 PowerShell 세션에 세션별 요소를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-108">You can create a PowerShell profile to customize your environment and to add session-specific elements to every PowerShell session that you start.</span></span>
+<span data-ttu-id="99383-107">PowerShell 프로필을 만들어 환경을 사용자 지정하고 시작하는 모든 PowerShell 세션에 세션별 요소를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-107">You can create a PowerShell profile to customize your environment and to add session-specific elements to every PowerShell session that you start.</span></span>
 
-<span data-ttu-id="c0241-109">PowerShell 프로필은 PowerShell이 시작될 때 실행되는 스크립트입니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-109">A PowerShell profile is a script that runs when PowerShell starts.</span></span> <span data-ttu-id="c0241-110">프로필을 로그온 스크립트로 사용 하 여 환경을 사용자 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-110">You can use the profile as a logon script to customize the environment.</span></span> <span data-ttu-id="c0241-111">명령, 별칭, 함수, 변수, 스냅인, 모듈 및 PowerShell 드라이브를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-111">You can add commands, aliases, functions, variables, snap-ins, modules, and PowerShell drives.</span></span> <span data-ttu-id="c0241-112">또한 다른 세션 관련 요소를 프로필에 추가 하 여 해당 요소를 가져오거나 다시 만들지 않고도 모든 세션에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-112">You can also add other session-specific elements to your profile so they are available in every session without having to import or re-create them.</span></span>
+<span data-ttu-id="99383-108">PowerShell 프로필은 PowerShell이 시작될 때 실행되는 스크립트입니다.</span><span class="sxs-lookup"><span data-stu-id="99383-108">A PowerShell profile is a script that runs when PowerShell starts.</span></span> <span data-ttu-id="99383-109">프로필을 로그온 스크립트로 사용 하 여 환경을 사용자 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-109">You can use the profile as a logon script to customize the environment.</span></span> <span data-ttu-id="99383-110">명령, 별칭, 함수, 변수, 스냅인, 모듈 및 PowerShell 드라이브를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-110">You can add commands, aliases, functions, variables, snap-ins, modules, and PowerShell drives.</span></span> <span data-ttu-id="99383-111">또한 다른 세션 관련 요소를 프로필에 추가 하 여 해당 요소를 가져오거나 다시 만들지 않고도 모든 세션에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-111">You can also add other session-specific elements to your profile so they are available in every session without having to import or re-create them.</span></span>
 
-<span data-ttu-id="c0241-113">PowerShell은 사용자 및 호스트 프로그램에 대해 여러 프로필을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-113">PowerShell supports several profiles for users and host programs.</span></span> <span data-ttu-id="c0241-114">그러나 프로필을 만들지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-114">However, it does not create the profiles for you.</span></span> <span data-ttu-id="c0241-115">이 항목에서는 프로필에 대해 설명 하 고 컴퓨터에서 프로필을 만들고 유지 관리 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-115">This topic describes the profiles, and it describes how to create and maintain profiles on your computer.</span></span>
+<span data-ttu-id="99383-112">PowerShell은 사용자 및 호스트 프로그램에 대해 여러 프로필을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-112">PowerShell supports several profiles for users and host programs.</span></span> <span data-ttu-id="99383-113">그러나 프로필을 만들지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-113">However, it does not create the profiles for you.</span></span> <span data-ttu-id="99383-114">이 항목에서는 프로필에 대해 설명 하 고 컴퓨터에서 프로필을 만들고 유지 관리 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-114">This topic describes the profiles, and it describes how to create and maintain profiles on your computer.</span></span>
 
-<span data-ttu-id="c0241-116">PowerShell 콘솔 (PowerShell.exe)의 **Noprofile** 매개 변수를 사용 하 여 프로필 없이 powershell을 시작 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-116">It explains how to use the **NoProfile** parameter of the PowerShell console (PowerShell.exe) to start PowerShell without any profiles.</span></span> <span data-ttu-id="c0241-117">또한 프로필에 대 한 PowerShell 실행 정책의 영향을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-117">And, it explains the effect of the PowerShell execution policy on profiles.</span></span>
+<span data-ttu-id="99383-115">PowerShell 콘솔 (PowerShell.exe)의 **Noprofile** 매개 변수를 사용 하 여 프로필 없이 powershell을 시작 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-115">It explains how to use the **NoProfile** parameter of the PowerShell console (PowerShell.exe) to start PowerShell without any profiles.</span></span> <span data-ttu-id="99383-116">또한 프로필에 대 한 PowerShell 실행 정책의 영향을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-116">And, it explains the effect of the PowerShell execution policy on profiles.</span></span>
 
-## <a name="the-profile-files"></a><span data-ttu-id="c0241-118">프로필 파일</span><span class="sxs-lookup"><span data-stu-id="c0241-118">The Profile Files</span></span>
+## <a name="the-profile-files"></a><span data-ttu-id="99383-117">프로필 파일</span><span class="sxs-lookup"><span data-stu-id="99383-117">The Profile Files</span></span>
 
-<span data-ttu-id="c0241-119">PowerShell은 여러 프로필 파일을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-119">PowerShell supports several profile files.</span></span> <span data-ttu-id="c0241-120">또한 PowerShell 호스트 프로그램은 고유한 호스트 특정 프로필을 지원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-120">Also, PowerShell host programs can support their own host-specific profiles.</span></span>
+<span data-ttu-id="99383-118">PowerShell은 여러 프로필 파일을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-118">PowerShell supports several profile files.</span></span> <span data-ttu-id="99383-119">또한 PowerShell 호스트 프로그램은 고유한 호스트 특정 프로필을 지원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-119">Also, PowerShell host programs can support their own host-specific profiles.</span></span>
 
-<span data-ttu-id="c0241-121">예를 들어 PowerShell 콘솔은 다음과 같은 기본 프로필 파일을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-121">For example, the PowerShell console supports the following basic profile files.</span></span> <span data-ttu-id="c0241-122">프로필은 우선 순위에 따라 나열 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-122">The profiles are listed in precedence order.</span></span> <span data-ttu-id="c0241-123">첫 번째 프로필은 우선 순위가 가장 높습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-123">The first profile has the highest precedence.</span></span>
+<span data-ttu-id="99383-120">예를 들어 PowerShell 콘솔은 다음과 같은 기본 프로필 파일을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-120">For example, the PowerShell console supports the following basic profile files.</span></span> <span data-ttu-id="99383-121">프로필은 우선 순위에 따라 나열 됩니다.</span><span class="sxs-lookup"><span data-stu-id="99383-121">The profiles are listed in precedence order.</span></span> <span data-ttu-id="99383-122">첫 번째 프로필은 우선 순위가 가장 높습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-122">The first profile has the highest precedence.</span></span>
 
-|<span data-ttu-id="c0241-124">Description</span><span class="sxs-lookup"><span data-stu-id="c0241-124">Description</span></span>               | <span data-ttu-id="c0241-125">경로</span><span class="sxs-lookup"><span data-stu-id="c0241-125">Path</span></span>                                          |
+|<span data-ttu-id="99383-123">설명</span><span class="sxs-lookup"><span data-stu-id="99383-123">Description</span></span>               | <span data-ttu-id="99383-124">경로</span><span class="sxs-lookup"><span data-stu-id="99383-124">Path</span></span>                                          |
 |--------------------------|-----------------------------------------------|
-|<span data-ttu-id="c0241-126">모든 사용자, 모든 호스트</span><span class="sxs-lookup"><span data-stu-id="c0241-126">All Users, All Hosts</span></span>      |<span data-ttu-id="c0241-127">$PSHOME \\Profile.ps1</span><span class="sxs-lookup"><span data-stu-id="c0241-127">$PSHOME\\Profile.ps1</span></span>                           |
-|<span data-ttu-id="c0241-128">모든 사용자, 현재 호스트</span><span class="sxs-lookup"><span data-stu-id="c0241-128">All Users, Current Host</span></span>   |<span data-ttu-id="c0241-129">$PSHOME \\Microsoft.PowerShell_profile.ps1</span><span class="sxs-lookup"><span data-stu-id="c0241-129">$PSHOME\\Microsoft.PowerShell_profile.ps1</span></span>      |
-|<span data-ttu-id="c0241-130">현재 사용자, 모든 호스트</span><span class="sxs-lookup"><span data-stu-id="c0241-130">Current User, All Hosts</span></span>   |<span data-ttu-id="c0241-131">$Home \\ [My] 문서 \\ PowerShell \\Profile.ps1</span><span class="sxs-lookup"><span data-stu-id="c0241-131">$Home\\[My ]Documents\\PowerShell\\Profile.ps1</span></span> |
-|<span data-ttu-id="c0241-132">현재 사용자, 현재 호스트</span><span class="sxs-lookup"><span data-stu-id="c0241-132">Current user, Current Host</span></span>|<span data-ttu-id="c0241-133">$Home \\ [My] 문서 \\ PowerShell</span><span class="sxs-lookup"><span data-stu-id="c0241-133">$Home\\[My ]Documents\\PowerShell</span></span>\\<br><span data-ttu-id="c0241-134">Microsoft.PowerShell_profile.ps1</span><span class="sxs-lookup"><span data-stu-id="c0241-134">Microsoft.PowerShell_profile.ps1</span></span> |
+|<span data-ttu-id="99383-125">모든 사용자, 모든 호스트</span><span class="sxs-lookup"><span data-stu-id="99383-125">All Users, All Hosts</span></span>      |<span data-ttu-id="99383-126">$PSHOME \\Profile.ps1</span><span class="sxs-lookup"><span data-stu-id="99383-126">$PSHOME\\Profile.ps1</span></span>                           |
+|<span data-ttu-id="99383-127">모든 사용자, 현재 호스트</span><span class="sxs-lookup"><span data-stu-id="99383-127">All Users, Current Host</span></span>   |<span data-ttu-id="99383-128">$PSHOME \\Microsoft.PowerShell_profile.ps1</span><span class="sxs-lookup"><span data-stu-id="99383-128">$PSHOME\\Microsoft.PowerShell_profile.ps1</span></span>      |
+|<span data-ttu-id="99383-129">현재 사용자, 모든 호스트</span><span class="sxs-lookup"><span data-stu-id="99383-129">Current User, All Hosts</span></span>   |<span data-ttu-id="99383-130">$Home \\ [My] 문서 \\ PowerShell \\Profile.ps1</span><span class="sxs-lookup"><span data-stu-id="99383-130">$Home\\[My ]Documents\\PowerShell\\Profile.ps1</span></span> |
+|<span data-ttu-id="99383-131">현재 사용자, 현재 호스트</span><span class="sxs-lookup"><span data-stu-id="99383-131">Current user, Current Host</span></span>|<span data-ttu-id="99383-132">$Home \\ [My] 문서 \\ PowerShell</span><span class="sxs-lookup"><span data-stu-id="99383-132">$Home\\[My ]Documents\\PowerShell</span></span>\\<br><span data-ttu-id="99383-133">Microsoft.PowerShell_profile.ps1</span><span class="sxs-lookup"><span data-stu-id="99383-133">Microsoft.PowerShell_profile.ps1</span></span> |
 
-<span data-ttu-id="c0241-135">프로필 경로에는 다음 변수가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-135">The profile paths include the following variables:</span></span>
+<span data-ttu-id="99383-134">프로필 경로에는 다음 변수가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="99383-134">The profile paths include the following variables:</span></span>
 
-- <span data-ttu-id="c0241-136">`$PSHOME`PowerShell의 설치 디렉터리를 저장 하는 변수</span><span class="sxs-lookup"><span data-stu-id="c0241-136">The `$PSHOME` variable, which stores the installation directory for PowerShell</span></span>
-- <span data-ttu-id="c0241-137">`$Home`현재 사용자의 홈 디렉터리를 저장 하는 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-137">The `$Home` variable, which stores the current user's home directory</span></span>
+- <span data-ttu-id="99383-135">`$PSHOME`PowerShell의 설치 디렉터리를 저장 하는 변수</span><span class="sxs-lookup"><span data-stu-id="99383-135">The `$PSHOME` variable, which stores the installation directory for PowerShell</span></span>
+- <span data-ttu-id="99383-136">`$Home`현재 사용자의 홈 디렉터리를 저장 하는 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="99383-136">The `$Home` variable, which stores the current user's home directory</span></span>
 
-<span data-ttu-id="c0241-138">또한 PowerShell을 호스트 하는 다른 프로그램은 자신의 프로필을 지원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-138">In addition, other programs that host PowerShell can support their own profiles.</span></span> <span data-ttu-id="c0241-139">예를 들어 Visual Studio Code는 다음과 같은 호스트 특정 프로필을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-139">For example, Visual Studio Code supports the following host-specific profiles.</span></span>
+<span data-ttu-id="99383-137">또한 PowerShell을 호스트 하는 다른 프로그램은 자신의 프로필을 지원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-137">In addition, other programs that host PowerShell can support their own profiles.</span></span> <span data-ttu-id="99383-138">예를 들어 Visual Studio Code는 다음과 같은 호스트 특정 프로필을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-138">For example, Visual Studio Code supports the following host-specific profiles.</span></span>
 
-|<span data-ttu-id="c0241-140">Description</span><span class="sxs-lookup"><span data-stu-id="c0241-140">Description</span></span>               | <span data-ttu-id="c0241-141">경로</span><span class="sxs-lookup"><span data-stu-id="c0241-141">Path</span></span>                                     |
+|<span data-ttu-id="99383-139">설명</span><span class="sxs-lookup"><span data-stu-id="99383-139">Description</span></span>               | <span data-ttu-id="99383-140">경로</span><span class="sxs-lookup"><span data-stu-id="99383-140">Path</span></span>                                     |
 |--------------------------|------------------------------------------|
-|<span data-ttu-id="c0241-142">모든 사용자, 현재 호스트</span><span class="sxs-lookup"><span data-stu-id="c0241-142">All users, Current Host</span></span>   |<span data-ttu-id="c0241-143">$PSHOME \\Microsoft.VSCode_profile.ps1</span><span class="sxs-lookup"><span data-stu-id="c0241-143">$PSHOME\\Microsoft.VSCode_profile.ps1</span></span>|
-|<span data-ttu-id="c0241-144">현재 사용자, 현재 호스트</span><span class="sxs-lookup"><span data-stu-id="c0241-144">Current user, Current Host</span></span>|<span data-ttu-id="c0241-145">$Home \\ [My] 문서 \\ PowerShell</span><span class="sxs-lookup"><span data-stu-id="c0241-145">$Home\\[My ]Documents\\PowerShell</span></span>\\<br><span data-ttu-id="c0241-146">Microsoft.VSCode_profile.ps1</span><span class="sxs-lookup"><span data-stu-id="c0241-146">Microsoft.VSCode_profile.ps1</span></span>|
+|<span data-ttu-id="99383-141">모든 사용자, 현재 호스트</span><span class="sxs-lookup"><span data-stu-id="99383-141">All users, Current Host</span></span>   |<span data-ttu-id="99383-142">$PSHOME \\Microsoft.VSCode_profile.ps1</span><span class="sxs-lookup"><span data-stu-id="99383-142">$PSHOME\\Microsoft.VSCode_profile.ps1</span></span>|
+|<span data-ttu-id="99383-143">현재 사용자, 현재 호스트</span><span class="sxs-lookup"><span data-stu-id="99383-143">Current user, Current Host</span></span>|<span data-ttu-id="99383-144">$Home \\ [My] 문서 \\ PowerShell</span><span class="sxs-lookup"><span data-stu-id="99383-144">$Home\\[My ]Documents\\PowerShell</span></span>\\<br><span data-ttu-id="99383-145">Microsoft.VSCode_profile.ps1</span><span class="sxs-lookup"><span data-stu-id="99383-145">Microsoft.VSCode_profile.ps1</span></span>|
 
-<span data-ttu-id="c0241-147">PowerShell 도움말에서 "CurrentUser, Current Host" 프로필은 가장 흔히 "PowerShell 프로필" 이라고 하는 프로필입니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-147">In PowerShell Help, the "CurrentUser, Current Host" profile is the profile most often referred to as "your PowerShell profile".</span></span>
+<span data-ttu-id="99383-146">PowerShell 도움말에서 "CurrentUser, Current Host" 프로필은 가장 흔히 "PowerShell 프로필" 이라고 하는 프로필입니다.</span><span class="sxs-lookup"><span data-stu-id="99383-146">In PowerShell Help, the "CurrentUser, Current Host" profile is the profile most often referred to as "your PowerShell profile".</span></span>
 
-## <a name="the-profile-variable"></a><span data-ttu-id="c0241-148">$PROFILE 변수</span><span class="sxs-lookup"><span data-stu-id="c0241-148">The $PROFILE variable</span></span>
+## <a name="the-profile-variable"></a><span data-ttu-id="99383-147">$PROFILE 변수</span><span class="sxs-lookup"><span data-stu-id="99383-147">The $PROFILE variable</span></span>
 
-<span data-ttu-id="c0241-149">`$PROFILE`자동 변수는 현재 세션에서 사용할 수 있는 PowerShell 프로필에 대 한 경로를 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-149">The `$PROFILE` automatic variable stores the paths to the PowerShell profiles that are available in the current session.</span></span>
+<span data-ttu-id="99383-148">`$PROFILE`자동 변수는 현재 세션에서 사용할 수 있는 PowerShell 프로필에 대 한 경로를 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-148">The `$PROFILE` automatic variable stores the paths to the PowerShell profiles that are available in the current session.</span></span>
 
-<span data-ttu-id="c0241-150">프로필 경로를 보려면 변수 값을 표시 `$PROFILE` 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-150">To view a profile path, display the value of the `$PROFILE` variable.</span></span> <span data-ttu-id="c0241-151">`$PROFILE`명령에서 변수를 사용 하 여 경로를 나타낼 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-151">You can also use the `$PROFILE` variable in a command to represent a path.</span></span>
+<span data-ttu-id="99383-149">프로필 경로를 보려면 변수 값을 표시 `$PROFILE` 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-149">To view a profile path, display the value of the `$PROFILE` variable.</span></span> <span data-ttu-id="99383-150">`$PROFILE`명령에서 변수를 사용 하 여 경로를 나타낼 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-150">You can also use the `$PROFILE` variable in a command to represent a path.</span></span>
 
-<span data-ttu-id="c0241-152">`$PROFILE`변수는 "현재 사용자, 현재 호스트" 프로필에 대 한 경로를 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-152">The `$PROFILE` variable stores the path to the "Current User, Current Host" profile.</span></span> <span data-ttu-id="c0241-153">다른 프로필은 변수의 메모 속성에 저장 됩니다 `$PROFILE` .</span><span class="sxs-lookup"><span data-stu-id="c0241-153">The other profiles are saved in note properties of the `$PROFILE` variable.</span></span>
+<span data-ttu-id="99383-151">`$PROFILE`변수는 "현재 사용자, 현재 호스트" 프로필에 대 한 경로를 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-151">The `$PROFILE` variable stores the path to the "Current User, Current Host" profile.</span></span> <span data-ttu-id="99383-152">다른 프로필은 변수의 메모 속성에 저장 됩니다 `$PROFILE` .</span><span class="sxs-lookup"><span data-stu-id="99383-152">The other profiles are saved in note properties of the `$PROFILE` variable.</span></span>
 
-<span data-ttu-id="c0241-154">예를 들어 `$PROFILE` 변수는 Windows PowerShell 콘솔에서 다음 값을 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-154">For example, the `$PROFILE` variable has the following values in the Windows PowerShell console.</span></span>
+<span data-ttu-id="99383-153">예를 들어 `$PROFILE` 변수는 Windows PowerShell 콘솔에서 다음 값을 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-153">For example, the `$PROFILE` variable has the following values in the Windows PowerShell console.</span></span>
 
-|<span data-ttu-id="c0241-155">Description</span><span class="sxs-lookup"><span data-stu-id="c0241-155">Description</span></span>                |<span data-ttu-id="c0241-156">속성</span><span class="sxs-lookup"><span data-stu-id="c0241-156">Name</span></span>                              |
+|<span data-ttu-id="99383-154">설명</span><span class="sxs-lookup"><span data-stu-id="99383-154">Description</span></span>                |<span data-ttu-id="99383-155">Name</span><span class="sxs-lookup"><span data-stu-id="99383-155">Name</span></span>                              |
 |---------------------------|----------------------------------|
-|<span data-ttu-id="c0241-157">현재 사용자, 현재 호스트</span><span class="sxs-lookup"><span data-stu-id="c0241-157">Current User, Current Host</span></span> |`$PROFILE`                        |
-|<span data-ttu-id="c0241-158">현재 사용자, 현재 호스트</span><span class="sxs-lookup"><span data-stu-id="c0241-158">Current User, Current Host</span></span> |`$PROFILE.CurrentUserCurrentHost` |
-|<span data-ttu-id="c0241-159">현재 사용자, 모든 호스트</span><span class="sxs-lookup"><span data-stu-id="c0241-159">Current User, All Hosts</span></span>    |`$PROFILE.CurrentUserAllHosts`    |
-|<span data-ttu-id="c0241-160">모든 사용자, 현재 호스트</span><span class="sxs-lookup"><span data-stu-id="c0241-160">All Users, Current Host</span></span>    |`$PROFILE.AllUsersCurrentHost`    |
-|<span data-ttu-id="c0241-161">모든 사용자, 모든 호스트</span><span class="sxs-lookup"><span data-stu-id="c0241-161">All Users, All Hosts</span></span>       |`$PROFILE.AllUsersAllHosts`       |
+|<span data-ttu-id="99383-156">현재 사용자, 현재 호스트</span><span class="sxs-lookup"><span data-stu-id="99383-156">Current User, Current Host</span></span> |`$PROFILE`                        |
+|<span data-ttu-id="99383-157">현재 사용자, 현재 호스트</span><span class="sxs-lookup"><span data-stu-id="99383-157">Current User, Current Host</span></span> |`$PROFILE.CurrentUserCurrentHost` |
+|<span data-ttu-id="99383-158">현재 사용자, 모든 호스트</span><span class="sxs-lookup"><span data-stu-id="99383-158">Current User, All Hosts</span></span>    |`$PROFILE.CurrentUserAllHosts`    |
+|<span data-ttu-id="99383-159">모든 사용자, 현재 호스트</span><span class="sxs-lookup"><span data-stu-id="99383-159">All Users, Current Host</span></span>    |`$PROFILE.AllUsersCurrentHost`    |
+|<span data-ttu-id="99383-160">모든 사용자, 모든 호스트</span><span class="sxs-lookup"><span data-stu-id="99383-160">All Users, All Hosts</span></span>       |`$PROFILE.AllUsersAllHosts`       |
 
-<span data-ttu-id="c0241-162">변수의 값이 `$PROFILE` 각 사용자와 각 호스트 응용 프로그램에 대해 변경 되기 때문에 사용 하는 각 PowerShell 호스트 응용 프로그램에 프로필 변수의 값을 표시 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-162">Because the values of the `$PROFILE` variable change for each user and in each host application, ensure that you display the values of the profile variables in each PowerShell host application that you use.</span></span>
+<span data-ttu-id="99383-161">변수의 값이 `$PROFILE` 각 사용자와 각 호스트 응용 프로그램에 대해 변경 되기 때문에 사용 하는 각 PowerShell 호스트 응용 프로그램에 프로필 변수의 값을 표시 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-161">Because the values of the `$PROFILE` variable change for each user and in each host application, ensure that you display the values of the profile variables in each PowerShell host application that you use.</span></span>
 
-<span data-ttu-id="c0241-163">변수의 현재 값을 확인 하려면 `$PROFILE` 다음을 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-163">To see the current values of the `$PROFILE` variable, type:</span></span>
+<span data-ttu-id="99383-162">변수의 현재 값을 확인 하려면 `$PROFILE` 다음을 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-162">To see the current values of the `$PROFILE` variable, type:</span></span>
 
 ```powershell
 $PROFILE | Get-Member -Type NoteProperty
 ```
 
-<span data-ttu-id="c0241-164">`$PROFILE`많은 명령에서 변수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-164">You can use the `$PROFILE` variable in many commands.</span></span> <span data-ttu-id="c0241-165">예를 들어 다음 명령은 메모장에서 "현재 사용자, 현재 호스트" 프로필을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-165">For example, the following command opens the "Current User, Current Host" profile in Notepad:</span></span>
+<span data-ttu-id="99383-163">`$PROFILE`많은 명령에서 변수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-163">You can use the `$PROFILE` variable in many commands.</span></span> <span data-ttu-id="99383-164">예를 들어 다음 명령은 메모장에서 "현재 사용자, 현재 호스트" 프로필을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="99383-164">For example, the following command opens the "Current User, Current Host" profile in Notepad:</span></span>
 
 ```powershell
 notepad $PROFILE
 ```
 
-<span data-ttu-id="c0241-166">다음 명령은 로컬 컴퓨터에서 "모든 사용자, 모든 호스트" 프로필을 만들었는지 여부를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-166">The following command determines whether an "All Users, All Hosts" profile has been created on the local computer:</span></span>
+<span data-ttu-id="99383-165">다음 명령은 로컬 컴퓨터에서 "모든 사용자, 모든 호스트" 프로필을 만들었는지 여부를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-165">The following command determines whether an "All Users, All Hosts" profile has been created on the local computer:</span></span>
 
 ```powershell
 Test-Path -Path $PROFILE.AllUsersAllHosts
 ```
 
-## <a name="how-to-create-a-profile"></a><span data-ttu-id="c0241-167">프로필을 만드는 방법</span><span class="sxs-lookup"><span data-stu-id="c0241-167">How to create a profile</span></span>
+## <a name="how-to-create-a-profile"></a><span data-ttu-id="99383-166">프로필을 만드는 방법</span><span class="sxs-lookup"><span data-stu-id="99383-166">How to create a profile</span></span>
 
-<span data-ttu-id="c0241-168">PowerShell 프로필을 만들려면 다음 명령 형식을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-168">To create a PowerShell profile, use the following command format:</span></span>
+<span data-ttu-id="99383-167">PowerShell 프로필을 만들려면 다음 명령 형식을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-167">To create a PowerShell profile, use the following command format:</span></span>
 
 ```powershell
 if (!(Test-Path -Path <profile-name>)) {
@@ -102,7 +102,7 @@ if (!(Test-Path -Path <profile-name>)) {
 }
 ```
 
-<span data-ttu-id="c0241-169">예를 들어 현재 PowerShell 호스트 응용 프로그램에서 현재 사용자에 대 한 프로필을 만들려면 다음 명령을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-169">For example, to create a profile for the current user in the current PowerShell host application, use the following command:</span></span>
+<span data-ttu-id="99383-168">예를 들어 현재 PowerShell 호스트 응용 프로그램에서 현재 사용자에 대 한 프로필을 만들려면 다음 명령을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-168">For example, to create a profile for the current user in the current PowerShell host application, use the following command:</span></span>
 
 ```powershell
 if (!(Test-Path -Path $PROFILE)) {
@@ -110,66 +110,66 @@ if (!(Test-Path -Path $PROFILE)) {
 }
 ```
 
-<span data-ttu-id="c0241-170">이 명령에서 `If` 문은 기존 프로필을 덮어쓰는 것을 방지 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-170">In this command, the `If` statement prevents you from overwriting an existing profile.</span></span> <span data-ttu-id="c0241-171">자리 표시자의 값을 \<profile-path\> 만들려는 프로필 파일의 경로로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-171">Replace the value of the \<profile-path\> placeholder with the path to the profile file that you want to create.</span></span>
+<span data-ttu-id="99383-169">이 명령에서 `If` 문은 기존 프로필을 덮어쓰는 것을 방지 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-169">In this command, the `If` statement prevents you from overwriting an existing profile.</span></span> <span data-ttu-id="99383-170">자리 표시자의 값을 \<profile-path\> 만들려는 프로필 파일의 경로로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="99383-170">Replace the value of the \<profile-path\> placeholder with the path to the profile file that you want to create.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="c0241-172">Windows Vista 및 이후 버전의 Windows에서 "모든 사용자" 프로필을 만들려면 **관리자 권한으로 실행** 옵션을 사용 하 여 PowerShell을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-172">To create "All Users" profiles in Windows Vista and later versions of Windows, start PowerShell with the **Run as administrator** option.</span></span>
+> <span data-ttu-id="99383-171">Windows Vista 및 이후 버전의 Windows에서 "모든 사용자" 프로필을 만들려면 **관리자 권한으로 실행** 옵션을 사용 하 여 PowerShell을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-171">To create "All Users" profiles in Windows Vista and later versions of Windows, start PowerShell with the **Run as administrator** option.</span></span>
 
-## <a name="how-to-edit-a-profile"></a><span data-ttu-id="c0241-173">프로필을 편집 하는 방법</span><span class="sxs-lookup"><span data-stu-id="c0241-173">How to edit a profile</span></span>
+## <a name="how-to-edit-a-profile"></a><span data-ttu-id="99383-172">프로필을 편집 하는 방법</span><span class="sxs-lookup"><span data-stu-id="99383-172">How to edit a profile</span></span>
 
-<span data-ttu-id="c0241-174">메모장과 같은 텍스트 편집기에서 PowerShell 프로필을 열 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-174">You can open any PowerShell profile in a text editor, such as Notepad.</span></span>
+<span data-ttu-id="99383-173">메모장과 같은 텍스트 편집기에서 PowerShell 프로필을 열 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-173">You can open any PowerShell profile in a text editor, such as Notepad.</span></span>
 
-<span data-ttu-id="c0241-175">메모장의 현재 PowerShell 호스트 응용 프로그램에서 현재 사용자의 프로필을 열려면 다음을 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-175">To open the profile of the current user in the current PowerShell host application in Notepad, type:</span></span>
+<span data-ttu-id="99383-174">메모장의 현재 PowerShell 호스트 응용 프로그램에서 현재 사용자의 프로필을 열려면 다음을 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-174">To open the profile of the current user in the current PowerShell host application in Notepad, type:</span></span>
 
 ```powershell
 notepad $PROFILE
 ```
 
-<span data-ttu-id="c0241-176">다른 프로필을 열려면 프로필 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-176">To open other profiles, specify the profile name.</span></span> <span data-ttu-id="c0241-177">예를 들어 모든 호스트 응용 프로그램의 모든 사용자에 대 한 프로필을 열려면 다음을 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-177">For example, to open the profile for all the users of all the host applications, type:</span></span>
+<span data-ttu-id="99383-175">다른 프로필을 열려면 프로필 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-175">To open other profiles, specify the profile name.</span></span> <span data-ttu-id="99383-176">예를 들어 모든 호스트 응용 프로그램의 모든 사용자에 대 한 프로필을 열려면 다음을 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-176">For example, to open the profile for all the users of all the host applications, type:</span></span>
 
 ```powershell
 notepad $PROFILE.AllUsersAllHosts
 ```
 
-<span data-ttu-id="c0241-178">변경 내용을 적용 하려면 프로필 파일을 저장 한 다음 PowerShell을 다시 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-178">To apply the changes, save the profile file, and then restart PowerShell.</span></span>
+<span data-ttu-id="99383-177">변경 내용을 적용 하려면 프로필 파일을 저장 한 다음 PowerShell을 다시 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-177">To apply the changes, save the profile file, and then restart PowerShell.</span></span>
 
-## <a name="how-to-choose-a-profile"></a><span data-ttu-id="c0241-179">프로필을 선택 하는 방법</span><span class="sxs-lookup"><span data-stu-id="c0241-179">How to choose a profile</span></span>
+## <a name="how-to-choose-a-profile"></a><span data-ttu-id="99383-178">프로필을 선택 하는 방법</span><span class="sxs-lookup"><span data-stu-id="99383-178">How to choose a profile</span></span>
 
-<span data-ttu-id="c0241-180">여러 호스트 응용 프로그램을 사용 하는 경우 모든 호스트 응용 프로그램에서 사용 하는 항목을 프로필에 저장 `$PROFILE.CurrentUserAllHosts` 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-180">If you use multiple host applications, put the items that you use in all the host applications into your `$PROFILE.CurrentUserAllHosts` profile.</span></span> <span data-ttu-id="c0241-181">호스트 응용 프로그램에 대 한 배경색을 설정 하는 명령 (예: 호스트 응용 프로그램에 해당 하는 프로필)에서 호스트 응용 프로그램과 관련 된 항목을 배치 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-181">Put items that are specific to a host application, such as a command that sets the background color for a host application, in a profile that is specific to that host application.</span></span>
+<span data-ttu-id="99383-179">여러 호스트 응용 프로그램을 사용 하는 경우 모든 호스트 응용 프로그램에서 사용 하는 항목을 프로필에 저장 `$PROFILE.CurrentUserAllHosts` 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-179">If you use multiple host applications, put the items that you use in all the host applications into your `$PROFILE.CurrentUserAllHosts` profile.</span></span> <span data-ttu-id="99383-180">호스트 응용 프로그램에 대 한 배경색을 설정 하는 명령 (예: 호스트 응용 프로그램에 해당 하는 프로필)에서 호스트 응용 프로그램과 관련 된 항목을 배치 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-180">Put items that are specific to a host application, such as a command that sets the background color for a host application, in a profile that is specific to that host application.</span></span>
 
-<span data-ttu-id="c0241-182">여러 사용자를 위해 PowerShell을 사용자 지정 하는 관리자의 경우 다음 지침을 따르세요.</span><span class="sxs-lookup"><span data-stu-id="c0241-182">If you are an administrator who is customizing PowerShell for many users, follow these guidelines:</span></span>
+<span data-ttu-id="99383-181">여러 사용자를 위해 PowerShell을 사용자 지정 하는 관리자의 경우 다음 지침을 따르세요.</span><span class="sxs-lookup"><span data-stu-id="99383-181">If you are an administrator who is customizing PowerShell for many users, follow these guidelines:</span></span>
 
-- <span data-ttu-id="c0241-183">프로필에 공통 항목 저장 `$PROFILE.AllUsersAllHosts`</span><span class="sxs-lookup"><span data-stu-id="c0241-183">Store the common items in the `$PROFILE.AllUsersAllHosts` profile</span></span>
-- <span data-ttu-id="c0241-184">호스트 응용 프로그램과 관련 된 프로필의 호스트 응용 프로그램과 관련 된 항목을 저장 `$PROFILE.AllUsersCurrentHost` 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-184">Store items that are specific to a host application in `$PROFILE.AllUsersCurrentHost` profiles that are specific to the host application</span></span>
-- <span data-ttu-id="c0241-185">특정 사용자에 대 한 항목을 사용자 특정 프로필에 저장</span><span class="sxs-lookup"><span data-stu-id="c0241-185">Store items for particular users in the user-specific profiles</span></span>
+- <span data-ttu-id="99383-182">프로필에 공통 항목 저장 `$PROFILE.AllUsersAllHosts`</span><span class="sxs-lookup"><span data-stu-id="99383-182">Store the common items in the `$PROFILE.AllUsersAllHosts` profile</span></span>
+- <span data-ttu-id="99383-183">호스트 응용 프로그램과 관련 된 프로필의 호스트 응용 프로그램과 관련 된 항목을 저장 `$PROFILE.AllUsersCurrentHost` 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-183">Store items that are specific to a host application in `$PROFILE.AllUsersCurrentHost` profiles that are specific to the host application</span></span>
+- <span data-ttu-id="99383-184">특정 사용자에 대 한 항목을 사용자 특정 프로필에 저장</span><span class="sxs-lookup"><span data-stu-id="99383-184">Store items for particular users in the user-specific profiles</span></span>
 
-<span data-ttu-id="c0241-186">PowerShell 프로필의 특별 한 구현에 대해서는 호스트 응용 프로그램 설명서를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c0241-186">Be sure to check the host application documentation for any special implementation of PowerShell profiles.</span></span>
+<span data-ttu-id="99383-185">PowerShell 프로필의 특별 한 구현에 대해서는 호스트 응용 프로그램 설명서를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="99383-185">Be sure to check the host application documentation for any special implementation of PowerShell profiles.</span></span>
 
-## <a name="how-to-use-a-profile"></a><span data-ttu-id="c0241-187">프로필을 사용 하는 방법</span><span class="sxs-lookup"><span data-stu-id="c0241-187">How to use a profile</span></span>
+## <a name="how-to-use-a-profile"></a><span data-ttu-id="99383-186">프로필을 사용 하는 방법</span><span class="sxs-lookup"><span data-stu-id="99383-186">How to use a profile</span></span>
 
-<span data-ttu-id="c0241-188">PowerShell에서 만드는 대부분의 항목과 대부분의 명령은 현재 세션에만 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-188">Many of the items that you create in PowerShell and most commands that you run affect only the current session.</span></span> <span data-ttu-id="c0241-189">세션을 종료 하면 항목이 삭제 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-189">When you end the session, the items are deleted.</span></span>
+<span data-ttu-id="99383-187">PowerShell에서 만드는 대부분의 항목과 대부분의 명령은 현재 세션에만 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="99383-187">Many of the items that you create in PowerShell and most commands that you run affect only the current session.</span></span> <span data-ttu-id="99383-188">세션을 종료 하면 항목이 삭제 됩니다.</span><span class="sxs-lookup"><span data-stu-id="99383-188">When you end the session, the items are deleted.</span></span>
 
-<span data-ttu-id="c0241-190">세션 관련 명령 및 항목에는 변수, 기본 설정 변수, 별칭, 함수, 명령 ( [set-executionpolicy](xref:Microsoft.PowerShell.Security.Set-ExecutionPolicy)제외) 및 세션에 추가 하는 PowerShell 모듈이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-190">The session-specific commands and items include variables, preference variables, aliases, functions, commands (except for [Set-ExecutionPolicy](xref:Microsoft.PowerShell.Security.Set-ExecutionPolicy)), and PowerShell modules that you add to the session.</span></span>
+<span data-ttu-id="99383-189">세션 관련 명령 및 항목에는 변수, 기본 설정 변수, 별칭, 함수, 명령 ( [set-executionpolicy](xref:Microsoft.PowerShell.Security.Set-ExecutionPolicy)제외) 및 세션에 추가 하는 PowerShell 모듈이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="99383-189">The session-specific commands and items include variables, preference variables, aliases, functions, commands (except for [Set-ExecutionPolicy](xref:Microsoft.PowerShell.Security.Set-ExecutionPolicy)), and PowerShell modules that you add to the session.</span></span>
 
-<span data-ttu-id="c0241-191">이러한 항목을 저장 하 고 이후의 모든 세션에서 사용할 수 있게 하려면 PowerShell 프로필에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-191">To save these items and make them available in all future sessions, add them to a PowerShell profile.</span></span>
+<span data-ttu-id="99383-190">이러한 항목을 저장 하 고 이후의 모든 세션에서 사용할 수 있게 하려면 PowerShell 프로필에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-190">To save these items and make them available in all future sessions, add them to a PowerShell profile.</span></span>
 
-<span data-ttu-id="c0241-192">프로필의 또 다른 일반적인 용도는 자주 사용 하는 함수, 별칭 및 변수를 저장 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-192">Another common use for profiles is to save frequently-used functions, aliases, and variables.</span></span> <span data-ttu-id="c0241-193">프로필에 항목을 저장 하는 경우 해당 항목을 다시 만들지 않고 해당 세션에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-193">When you save the items in a profile, you can use them in any applicable session without recreating them.</span></span>
+<span data-ttu-id="99383-191">프로필의 또 다른 일반적인 용도는 자주 사용 하는 함수, 별칭 및 변수를 저장 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="99383-191">Another common use for profiles is to save frequently-used functions, aliases, and variables.</span></span> <span data-ttu-id="99383-192">프로필에 항목을 저장 하는 경우 해당 항목을 다시 만들지 않고 해당 세션에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-192">When you save the items in a profile, you can use them in any applicable session without recreating them.</span></span>
 
-## <a name="how-to-start-a-profile"></a><span data-ttu-id="c0241-194">프로필을 시작 하는 방법</span><span class="sxs-lookup"><span data-stu-id="c0241-194">How to start a profile</span></span>
+## <a name="how-to-start-a-profile"></a><span data-ttu-id="99383-193">프로필을 시작 하는 방법</span><span class="sxs-lookup"><span data-stu-id="99383-193">How to start a profile</span></span>
 
-<span data-ttu-id="c0241-195">프로필 파일을 열면 비어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-195">When you open the profile file, it is blank.</span></span> <span data-ttu-id="c0241-196">그러나 자주 사용 하는 변수, 별칭 및 명령으로 채울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-196">However, you can fill it with the variables, aliases, and commands that you use frequently.</span></span>
+<span data-ttu-id="99383-194">프로필 파일을 열면 비어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-194">When you open the profile file, it is blank.</span></span> <span data-ttu-id="99383-195">그러나 자주 사용 하는 변수, 별칭 및 명령으로 채울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-195">However, you can fill it with the variables, aliases, and commands that you use frequently.</span></span>
 
-<span data-ttu-id="c0241-197">다음은 시작 하기 위한 몇 가지 제안 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-197">Here are a few suggestions to get you started.</span></span>
+<span data-ttu-id="99383-196">다음은 시작 하기 위한 몇 가지 제안 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="99383-196">Here are a few suggestions to get you started.</span></span>
 
-### <a name="add-commands-that-make-it-easy-to-open-your-profile"></a><span data-ttu-id="c0241-198">프로필을 쉽게 열 수 있도록 하는 명령 추가</span><span class="sxs-lookup"><span data-stu-id="c0241-198">Add commands that make it easy to open your profile</span></span>
+### <a name="add-commands-that-make-it-easy-to-open-your-profile"></a><span data-ttu-id="99383-197">프로필을 쉽게 열 수 있도록 하는 명령 추가</span><span class="sxs-lookup"><span data-stu-id="99383-197">Add commands that make it easy to open your profile</span></span>
 
-<span data-ttu-id="c0241-199">"현재 사용자, 현재 호스트" 프로필 이외의 프로필을 사용 하는 경우 특히 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-199">This is especially useful if you use a profile other than the "Current User, Current Host" profile.</span></span> <span data-ttu-id="c0241-200">예를 들어 다음 명령을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-200">For example, add the following command:</span></span>
+<span data-ttu-id="99383-198">"현재 사용자, 현재 호스트" 프로필 이외의 프로필을 사용 하는 경우 특히 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-198">This is especially useful if you use a profile other than the "Current User, Current Host" profile.</span></span> <span data-ttu-id="99383-199">예를 들어 다음 명령을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-199">For example, add the following command:</span></span>
 
 ```powershell
 function Pro {notepad $PROFILE.CurrentUserAllHosts}
 ```
 
-### <a name="add-a-function-that-lists-the-aliases-for-any-cmdlet"></a><span data-ttu-id="c0241-201">모든 cmdlet에 대 한 별칭을 나열 하는 함수를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-201">Add a function that lists the aliases for any cmdlet</span></span>
+### <a name="add-a-function-that-lists-the-aliases-for-any-cmdlet"></a><span data-ttu-id="99383-200">모든 cmdlet에 대 한 별칭을 나열 하는 함수를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-200">Add a function that lists the aliases for any cmdlet</span></span>
 
 ```powershell
 function Get-CmdletAlias ($cmdletname) {
@@ -179,7 +179,7 @@ function Get-CmdletAlias ($cmdletname) {
 }
 ```
 
-### <a name="customize-your-console"></a><span data-ttu-id="c0241-202">콘솔 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="c0241-202">Customize your console</span></span>
+### <a name="customize-your-console"></a><span data-ttu-id="99383-201">콘솔 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="99383-201">Customize your console</span></span>
 
 ```powershell
 function Color-Console {
@@ -193,7 +193,7 @@ function Color-Console {
 Color-Console
 ```
 
-### <a name="add-a-customized-powershell-prompt"></a><span data-ttu-id="c0241-203">사용자 지정 된 PowerShell 프롬프트 추가</span><span class="sxs-lookup"><span data-stu-id="c0241-203">Add a customized PowerShell prompt</span></span>
+### <a name="add-a-customized-powershell-prompt"></a><span data-ttu-id="99383-202">사용자 지정 된 PowerShell 프롬프트 추가</span><span class="sxs-lookup"><span data-stu-id="99383-202">Add a customized PowerShell prompt</span></span>
 
 ```powershell
 function Prompt
@@ -202,45 +202,45 @@ $env:COMPUTERNAME + "\" + (Get-Location) + "> "
 }
 ```
 
-<span data-ttu-id="c0241-204">PowerShell 프롬프트에 대 한 자세한 내용은 [about_Prompts](about_Prompts.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c0241-204">For more information about the PowerShell prompt, see [about_Prompts](about_Prompts.md).</span></span>
+<span data-ttu-id="99383-203">PowerShell 프롬프트에 대 한 자세한 내용은 [about_Prompts](about_Prompts.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="99383-203">For more information about the PowerShell prompt, see [about_Prompts](about_Prompts.md).</span></span>
 
-## <a name="the-noprofile-parameter"></a><span data-ttu-id="c0241-205">NoProfile 매개 변수</span><span class="sxs-lookup"><span data-stu-id="c0241-205">The NoProfile parameter</span></span>
+## <a name="the-noprofile-parameter"></a><span data-ttu-id="99383-204">NoProfile 매개 변수</span><span class="sxs-lookup"><span data-stu-id="99383-204">The NoProfile parameter</span></span>
 
-<span data-ttu-id="c0241-206">프로필 없이 PowerShell을 시작 하려면 PowerShell을 시작 하는 프로그램인 **PowerShell.exe** 의 **noprofile** 매개 변수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-206">To start PowerShell without profiles, use the **NoProfile** parameter of **PowerShell.exe** , the program that starts PowerShell.</span></span>
+<span data-ttu-id="99383-205">프로필 없이 PowerShell을 시작 하려면 PowerShell을 시작 하는 프로그램인 **PowerShell.exe** 의 **noprofile** 매개 변수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-205">To start PowerShell without profiles, use the **NoProfile** parameter of **PowerShell.exe**, the program that starts PowerShell.</span></span>
 
-<span data-ttu-id="c0241-207">시작 하려면 PowerShell을 시작할 수 있는 프로그램 (예: Cmd.exe 또는 PowerShell)을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-207">To begin, open a program that can start PowerShell, such as Cmd.exe or PowerShell itself.</span></span> <span data-ttu-id="c0241-208">Windows에서 실행 대화 상자를 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-208">You can also use the Run dialog box in Windows.</span></span>
+<span data-ttu-id="99383-206">시작 하려면 PowerShell을 시작할 수 있는 프로그램 (예: Cmd.exe 또는 PowerShell)을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="99383-206">To begin, open a program that can start PowerShell, such as Cmd.exe or PowerShell itself.</span></span> <span data-ttu-id="99383-207">Windows에서 실행 대화 상자를 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-207">You can also use the Run dialog box in Windows.</span></span>
 
-<span data-ttu-id="c0241-209">형식:</span><span class="sxs-lookup"><span data-stu-id="c0241-209">Type:</span></span>
+<span data-ttu-id="99383-208">유형:</span><span class="sxs-lookup"><span data-stu-id="99383-208">Type:</span></span>
 
 ```
 PowerShell -NoProfile
 ```
 
-<span data-ttu-id="c0241-210">PowerShell.exe 매개 변수의 전체 목록을 보려면 다음을 입력 하십시오.</span><span class="sxs-lookup"><span data-stu-id="c0241-210">For a complete list of the parameters of PowerShell.exe, type:</span></span>
+<span data-ttu-id="99383-209">PowerShell.exe 매개 변수의 전체 목록을 보려면 다음을 입력 하십시오.</span><span class="sxs-lookup"><span data-stu-id="99383-209">For a complete list of the parameters of PowerShell.exe, type:</span></span>
 
 ```
 PowerShell -?
 ```
 
-## <a name="profiles-and-execution-policy"></a><span data-ttu-id="c0241-211">프로필 및 실행 정책</span><span class="sxs-lookup"><span data-stu-id="c0241-211">Profiles and Execution Policy</span></span>
+## <a name="profiles-and-execution-policy"></a><span data-ttu-id="99383-210">프로필 및 실행 정책</span><span class="sxs-lookup"><span data-stu-id="99383-210">Profiles and Execution Policy</span></span>
 
-<span data-ttu-id="c0241-212">PowerShell 실행 정책은 프로필을 포함 하 여 스크립트를 실행 하 고 구성 파일을 로드할 수 있는지 여부를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-212">The PowerShell execution policy determines, in part, whether you can run scripts and load configuration files, including the profiles.</span></span> <span data-ttu-id="c0241-213">**제한** 된 실행 정책이 기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-213">The **Restricted** execution policy is the default.</span></span> <span data-ttu-id="c0241-214">프로필을 포함 하 여 모든 스크립트가 실행 되지 않도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-214">It prevents all scripts from running, including the profiles.</span></span> <span data-ttu-id="c0241-215">"제한 됨" 정책을 사용 하는 경우 프로필이 실행 되지 않으며 해당 콘텐츠가 적용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-215">If you use the "Restricted" policy, the profile does not run, and its contents are not applied.</span></span>
+<span data-ttu-id="99383-211">PowerShell 실행 정책은 프로필을 포함 하 여 스크립트를 실행 하 고 구성 파일을 로드할 수 있는지 여부를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-211">The PowerShell execution policy determines, in part, whether you can run scripts and load configuration files, including the profiles.</span></span> <span data-ttu-id="99383-212">**제한** 된 실행 정책이 기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="99383-212">The **Restricted** execution policy is the default.</span></span> <span data-ttu-id="99383-213">프로필을 포함 하 여 모든 스크립트가 실행 되지 않도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-213">It prevents all scripts from running, including the profiles.</span></span> <span data-ttu-id="99383-214">"제한 됨" 정책을 사용 하는 경우 프로필이 실행 되지 않으며 해당 콘텐츠가 적용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-214">If you use the "Restricted" policy, the profile does not run, and its contents are not applied.</span></span>
 
-<span data-ttu-id="c0241-216">`Set-ExecutionPolicy`명령은 실행 정책을 설정 하 고 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-216">A `Set-ExecutionPolicy` command sets and changes your execution policy.</span></span> <span data-ttu-id="c0241-217">이 값은 레지스트리에 저장 되기 때문에 모든 PowerShell 세션에서 적용 되는 몇 가지 명령 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-217">It is one of the few commands that applies in all PowerShell sessions because the value is saved in the registry.</span></span> <span data-ttu-id="c0241-218">콘솔을 열 때 설정할 필요는 없으며, `Set-ExecutionPolicy` 프로필에 명령을 저장할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-218">You do not have to set it when you open the console, and you do not have to store a `Set-ExecutionPolicy` command in your profile.</span></span>
+<span data-ttu-id="99383-215">`Set-ExecutionPolicy`명령은 실행 정책을 설정 하 고 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-215">A `Set-ExecutionPolicy` command sets and changes your execution policy.</span></span> <span data-ttu-id="99383-216">이 값은 레지스트리에 저장 되기 때문에 모든 PowerShell 세션에서 적용 되는 몇 가지 명령 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="99383-216">It is one of the few commands that applies in all PowerShell sessions because the value is saved in the registry.</span></span> <span data-ttu-id="99383-217">콘솔을 열 때 설정할 필요는 없으며, `Set-ExecutionPolicy` 프로필에 명령을 저장할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-217">You do not have to set it when you open the console, and you do not have to store a `Set-ExecutionPolicy` command in your profile.</span></span>
 
-## <a name="profiles-and-remote-sessions"></a><span data-ttu-id="c0241-219">프로필 및 원격 세션</span><span class="sxs-lookup"><span data-stu-id="c0241-219">Profiles and remote sessions</span></span>
+## <a name="profiles-and-remote-sessions"></a><span data-ttu-id="99383-218">프로필 및 원격 세션</span><span class="sxs-lookup"><span data-stu-id="99383-218">Profiles and remote sessions</span></span>
 
-<span data-ttu-id="c0241-220">PowerShell 프로필은 원격 세션에서 자동으로 실행 되지 않으므로 프로필이 추가 하는 명령이 원격 세션에 존재 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-220">PowerShell profiles are not run automatically in remote sessions, so the commands that the profiles add are not present in the remote session.</span></span> <span data-ttu-id="c0241-221">또한 `$PROFILE` 자동 변수는 원격 세션에서 채워지지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-221">In addition, the `$PROFILE` automatic variable is not populated in remote sessions.</span></span>
+<span data-ttu-id="99383-219">PowerShell 프로필은 원격 세션에서 자동으로 실행 되지 않으므로 프로필이 추가 하는 명령이 원격 세션에 존재 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-219">PowerShell profiles are not run automatically in remote sessions, so the commands that the profiles add are not present in the remote session.</span></span> <span data-ttu-id="99383-220">또한 `$PROFILE` 자동 변수는 원격 세션에서 채워지지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="99383-220">In addition, the `$PROFILE` automatic variable is not populated in remote sessions.</span></span>
 
-<span data-ttu-id="c0241-222">세션에서 프로필을 실행 하려면 [Invoke Command](xref:Microsoft.PowerShell.Core.Invoke-Command) cmdlet을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-222">To run a profile in a session, use the [Invoke-Command](xref:Microsoft.PowerShell.Core.Invoke-Command) cmdlet.</span></span>
+<span data-ttu-id="99383-221">세션에서 프로필을 실행 하려면 [Invoke Command](xref:Microsoft.PowerShell.Core.Invoke-Command) cmdlet을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-221">To run a profile in a session, use the [Invoke-Command](xref:Microsoft.PowerShell.Core.Invoke-Command) cmdlet.</span></span>
 
-<span data-ttu-id="c0241-223">예를 들어 다음 명령은의 세션에서 로컬 컴퓨터의 "현재 사용자, 현재 호스트" 프로필을 실행 합니다 `$s` .</span><span class="sxs-lookup"><span data-stu-id="c0241-223">For example, the following command runs the "Current user, Current Host" profile from the local computer in the session in `$s`.</span></span>
+<span data-ttu-id="99383-222">예를 들어 다음 명령은의 세션에서 로컬 컴퓨터의 "현재 사용자, 현재 호스트" 프로필을 실행 합니다 `$s` .</span><span class="sxs-lookup"><span data-stu-id="99383-222">For example, the following command runs the "Current user, Current Host" profile from the local computer in the session in `$s`.</span></span>
 
 ```powershell
 Invoke-Command -Session $s -FilePath $PROFILE
 ```
 
-<span data-ttu-id="c0241-224">다음 명령은의 세션에 있는 원격 컴퓨터에서 "현재 사용자, 현재 호스트" 프로필을 실행 합니다 `$s` .</span><span class="sxs-lookup"><span data-stu-id="c0241-224">The following command runs the "Current user, Current Host" profile from the remote computer in the session in `$s`.</span></span> <span data-ttu-id="c0241-225">`$PROFILE`변수가 채워지지 않으므로 명령은 프로필에 대 한 명시적 경로를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-225">Because the `$PROFILE` variable is not populated, the command uses the explicit path to the profile.</span></span> <span data-ttu-id="c0241-226">사용자의 범위가 아니라 원격 컴퓨터의 현재 범위에서 프로필이 실행 되도록 점 소싱 연산자를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0241-226">We use dot sourcing operator so that the profile executes in the current scope on the remote computer and not in its own scope.</span></span>
+<span data-ttu-id="99383-223">다음 명령은의 세션에 있는 원격 컴퓨터에서 "현재 사용자, 현재 호스트" 프로필을 실행 합니다 `$s` .</span><span class="sxs-lookup"><span data-stu-id="99383-223">The following command runs the "Current user, Current Host" profile from the remote computer in the session in `$s`.</span></span> <span data-ttu-id="99383-224">`$PROFILE`변수가 채워지지 않으므로 명령은 프로필에 대 한 명시적 경로를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-224">Because the `$PROFILE` variable is not populated, the command uses the explicit path to the profile.</span></span> <span data-ttu-id="99383-225">사용자의 범위가 아니라 원격 컴퓨터의 현재 범위에서 프로필이 실행 되도록 점 소싱 연산자를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="99383-225">We use dot sourcing operator so that the profile executes in the current scope on the remote computer and not in its own scope.</span></span>
 
 ```powershell
 Invoke-Command -Session $s -ScriptBlock {
@@ -248,22 +248,22 @@ Invoke-Command -Session $s -ScriptBlock {
 }
 ```
 
-<span data-ttu-id="c0241-227">이 명령을 실행 한 후 프로필을 세션에 추가 하는 명령은에서 사용할 수 있습니다 `$s` .</span><span class="sxs-lookup"><span data-stu-id="c0241-227">After running this command, the commands that the profile adds to the session are available in `$s`.</span></span>
+<span data-ttu-id="99383-226">이 명령을 실행 한 후 프로필을 세션에 추가 하는 명령은에서 사용할 수 있습니다 `$s` .</span><span class="sxs-lookup"><span data-stu-id="99383-226">After running this command, the commands that the profile adds to the session are available in `$s`.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c0241-228">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c0241-228">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="99383-227">참고 항목</span><span class="sxs-lookup"><span data-stu-id="99383-227">See Also</span></span>
 
-[<span data-ttu-id="c0241-229">about_Automatic_Variables</span><span class="sxs-lookup"><span data-stu-id="c0241-229">about_Automatic_Variables</span></span>](about_Automatic_Variables.md)
+[<span data-ttu-id="99383-228">about_Automatic_Variables</span><span class="sxs-lookup"><span data-stu-id="99383-228">about_Automatic_Variables</span></span>](about_Automatic_Variables.md)
 
-[<span data-ttu-id="c0241-230">about_Functions</span><span class="sxs-lookup"><span data-stu-id="c0241-230">about_Functions</span></span>](about_Functions.md)
+[<span data-ttu-id="99383-229">about_Functions</span><span class="sxs-lookup"><span data-stu-id="99383-229">about_Functions</span></span>](about_Functions.md)
 
-[<span data-ttu-id="c0241-231">about_Prompts</span><span class="sxs-lookup"><span data-stu-id="c0241-231">about_Prompts</span></span>](about_Prompts.md)
+[<span data-ttu-id="99383-230">about_Prompts</span><span class="sxs-lookup"><span data-stu-id="99383-230">about_Prompts</span></span>](about_Prompts.md)
 
-[<span data-ttu-id="c0241-232">about_Execution_Policies</span><span class="sxs-lookup"><span data-stu-id="c0241-232">about_Execution_Policies</span></span>](about_Execution_Policies.md)
+[<span data-ttu-id="99383-231">about_Execution_Policies</span><span class="sxs-lookup"><span data-stu-id="99383-231">about_Execution_Policies</span></span>](about_Execution_Policies.md)
 
-[<span data-ttu-id="c0241-233">about_Signing</span><span class="sxs-lookup"><span data-stu-id="c0241-233">about_Signing</span></span>](about_Signing.md)
+[<span data-ttu-id="99383-232">about_Signing</span><span class="sxs-lookup"><span data-stu-id="99383-232">about_Signing</span></span>](about_Signing.md)
 
-[<span data-ttu-id="c0241-234">about_Remote</span><span class="sxs-lookup"><span data-stu-id="c0241-234">about_Remote</span></span>](about_Remote.md)
+[<span data-ttu-id="99383-233">about_Remote</span><span class="sxs-lookup"><span data-stu-id="99383-233">about_Remote</span></span>](about_Remote.md)
 
-[<span data-ttu-id="c0241-235">about_Scopes</span><span class="sxs-lookup"><span data-stu-id="c0241-235">about_Scopes</span></span>](about_Scopes.md)
+[<span data-ttu-id="99383-234">about_Scopes</span><span class="sxs-lookup"><span data-stu-id="99383-234">about_Scopes</span></span>](about_Scopes.md)
 
-[<span data-ttu-id="c0241-236">Set-ExecutionPolicy</span><span class="sxs-lookup"><span data-stu-id="c0241-236">Set-ExecutionPolicy</span></span>](xref:Microsoft.PowerShell.Security.Set-ExecutionPolicy)
+[<span data-ttu-id="99383-235">Set-ExecutionPolicy</span><span class="sxs-lookup"><span data-stu-id="99383-235">Set-ExecutionPolicy</span></span>](xref:Microsoft.PowerShell.Security.Set-ExecutionPolicy)
