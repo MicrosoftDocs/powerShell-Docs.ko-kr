@@ -1,17 +1,16 @@
 ---
 description: 항목 컬렉션을 저장 하도록 디자인 된 데이터 구조인 배열에 대해 설명 합니다.
-keywords: powershell,cmdlet
 Locale: en-US
 ms.date: 08/26/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_arrays?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_arrays
-ms.openlocfilehash: 2283c36d899c3ea743f6c379dc686ec583d7a36c
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 2febf96d49003263cbcfd3f605db60b6c1d2437b
+ms.sourcegitcommit: 2560a122fe3a85ea762c3af6f1cba9e237512b2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93220994"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103412934"
 ---
 # <a name="about-arrays"></a>배열 정보
 
@@ -52,13 +51,13 @@ $C = 5..8
 
 따라서에는 `$C` 5, 6, 7 및 8의 네 가지 값이 포함 됩니다.
 
-데이터 형식을 지정 하지 않으면 PowerShell에서 각 배열을 개체 배열 ( **system.object []** )로 만듭니다. 배열의 데이터 형식을 확인 하려면 **GetType ()** 메서드를 사용 합니다. 예를 들어 배열의 데이터 형식을 확인 하려면 다음을 `$A` 입력 합니다.
+데이터 형식을 지정 하지 않으면 PowerShell에서 각 배열을 개체 배열 (**system.object []**)로 만듭니다. 배열의 데이터 형식을 확인 하려면 **GetType ()** 메서드를 사용 합니다. 예를 들어 배열의 데이터 형식을 확인 하려면 다음을 `$A` 입력 합니다.
 
 ```powershell
 $A.GetType()
 ```
 
-특정 형식의 값만 포함할 수 있는 강력한 형식의 배열을 만들려면 변수를 **문자열 []** , **long []** 또는 **int32 []** 와 같은 배열 형식으로 캐스팅 합니다. 배열을 캐스팅 하려면 변수 이름 앞에 대괄호로 묶은 배열 형식을 사용 합니다. 예를 `$ia` 들어 4 개의 정수 (1500, 2230, 3350 및 4000)가 포함 된 32 비트 정수 배열을 만들려면 다음을 입력 합니다.
+특정 형식의 값만 포함할 수 있는 강력한 형식의 배열을 만들려면 변수를 **문자열 []**, **long []** 또는 **int32 []** 와 같은 배열 형식으로 캐스팅 합니다. 배열을 캐스팅 하려면 변수 이름 앞에 대괄호로 묶은 배열 형식을 사용 합니다. 예를 `$ia` 들어 4 개의 정수 (1500, 2230, 3350 및 4000)가 포함 된 32 비트 정수 배열을 만들려면 다음을 입력 합니다.
 
 ```powershell
 [int32[]]$ia = 1500,2230,3350,4000
@@ -82,7 +81,7 @@ Microsoft .NET 프레임 워크에서 지원 되는 형식으로 캐스팅 된 �
 @( ... )
 ```
 
-배열 연산자를 사용 하 여 0 개 또는 한 개의 개체로 이루어진 배열을 만들 수 있습니다. 다음은 그 예입니다. 
+배열 연산자를 사용 하 여 0 개 또는 한 개의 개체로 이루어진 배열을 만들 수 있습니다. 예를 들어:
 
 ```powershell
 $a = @("Hello World")
@@ -102,7 +101,7 @@ $b.Count
 0
 ```
 
-Array 연산자는 개체를 가져올 때 스크립트에 유용 하지만, 얻을 수 있는 개체의 수를 알 수 없습니다. 다음은 그 예입니다. 
+Array 연산자는 개체를 가져올 때 스크립트에 유용 하지만, 얻을 수 있는 개체의 수를 알 수 없습니다. 예를 들어:
 
 ```powershell
 $p = @(Get-Process Notepad)
@@ -321,7 +320,7 @@ $a.Length
 
 ### <a name="rank"></a>순위
 
-배열의 차원 수를 반환합니다. PowerShell의 대부분 배열에는 하나의 차원만 있습니다. 다차원 배열을 작성 한다고 생각 하는 경우에도 다음 예제와 같습니다.
+배열의 차원 수를 반환합니다. PowerShell의 대부분 배열에는 하나의 차원만 있습니다. 다음 예제와 같이 다차원 배열을 작성 한다고 생각 하는 경우에도 마찬가지입니다.
 
 ```powershell
 $a = @(
@@ -330,23 +329,72 @@ $a = @(
   @(Get-Process)
 )
 
-[int]$r = $a.Rank
-"`$a rank: $r"
+"`$a rank: $($a.Rank)"
+"`$a length: $($a.Length)"
+"`$a length: $($a.Length)"
+"Process `$a[2][1]: $($a[2][1].ProcessName)"
 ```
+
+이 예제에서는 다른 배열을 포함 하는 1 차원 배열을 만듭니다. 이를 _가변 배열_ 라고도 합니다. **Rank** 속성은 1 차원 임을 입증 했습니다. 가변 배열의 항목에 액세스 하려면 인덱스가 별도의 대괄호 ()에 있어야 합니다 `[]` .
 
 ```Output
 $a rank: 1
+$a length: 3
+$a[2] length: 348
+Process $a[2][1]: AcroRd32
 ```
 
-다음 예제에서는 .Net Framework를 사용 하 여 진정한 다차원 배열을 만드는 방법을 보여 줍니다.
+다차원 배열은 [행 중심 순서로](https://wikipedia.org/wiki/Row-_and_column-major_order)저장 됩니다. 다음 예제에서는 진정한 다차원 배열을 만드는 방법을 보여 줍니다.
 
 ```powershell
-[int[,]]$rank2 = [int[,]]::new(5,5)
+[string[,]]$rank2 = [string[,]]::New(3,2)
 $rank2.rank
+$rank2.Length
+$rank2[0,0] = 'a'
+$rank2[0,1] = 'b'
+$rank2[1,0] = 'c'
+$rank2[1,1] = 'd'
+$rank2[2,0] = 'e'
+$rank2[2,1] = 'f'
+$rank2[1,1]
 ```
 
 ```Output
 2
+6
+d
+```
+
+다차원 배열의 항목에 액세스 하려면 `,` 단일 대괄호 집합 () 내에서 쉼표 ()를 사용 하 여 인덱스를 분리 합니다 `[]` .
+
+다차원 배열에 대 한 일부 작업 (예: 복제 및 연결)에는 배열을 평면화 해야 합니다. 평면화 하면 배열을 제한 되지 않는 형식의 1 차원 배열로 변환 합니다. 결과 배열은 모든 요소를 행 중심 순서로 가져옵니다. 다음 예제를 참조하세요.
+
+```powershell
+$a = "red",$true
+$b = (New-Object 'int[,]' 2,2)
+$b[0,0] = 10
+$b[0,1] = 20
+$b[1,0] = 30
+$b[1,1] = 40
+$c = $a + $b
+$a.GetType().Name
+$b.GetType().Name
+$c.GetType().Name
+$c
+```
+
+출력은 `$c` 가에서 시작 하는 항목을 포함 하는 1 차원 배열 임을 보여 줍니다 `$a` `$b` .
+
+```output
+Object[]
+Int32[,]
+Object[]
+red
+True
+10
+20
+30
+40
 ```
 
 ## <a name="methods-of-arrays"></a>배열의 메서드
@@ -606,7 +654,7 @@ localhost
 > [!NOTE]
 > 및는 모두 `Until` `SkipUntil` 항목의 일괄 처리를 테스트 하지 않고 온-프레미스로 작동 합니다.
 >
-> `Until`첫 번째 패스 **앞** 에 있는 _pass_ 항목을 반환 합니다.
+> `Until`첫 번째 패스 **앞** 에 있는 항목을 반환 합니다.
 >
 > `SkipUntil`첫 번째 전달 항목을 포함 하 여 첫 번째 _패스_ **이후의** 모든 항목을 반환 합니다.
 
@@ -754,7 +802,7 @@ $a[-1]
 ## <a name="indexing-support-for-systemtuple-objects"></a>System.string 개체에 대 한 인덱싱 지원
 
 PowerShell 6.1에는 배열과 유사한 **튜플** 개체의 인덱싱된 액세스에 대 한 지원이 추가 되었습니다.
-다음은 그 예입니다. 
+예를 들어:
 
 ```powershell
 PS> $tuple = [Tuple]::Create(1, 'test')
@@ -773,7 +821,7 @@ test
 
 자세한 내용은 [system.object](/dotnet/api/system.tuple)를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [about_assignment_operators](about_Assignment_Operators.md)
 - [about_Hash_Tables](about_Hash_Tables.md)

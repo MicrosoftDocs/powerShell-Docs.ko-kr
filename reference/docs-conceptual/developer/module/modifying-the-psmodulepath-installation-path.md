@@ -1,14 +1,14 @@
 ---
-ms.date: 09/13/2016
+ms.date: 03/12/2021
 ms.topic: reference
 title: PSModulePath 설치 경로 수정
 description: PSModulePath 설치 경로 수정
-ms.openlocfilehash: b802492bf9b49e8165e296817e3f80b9ae8265a6
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 1bea1e8ed20f55352cc9b4270e95cf7f0f7e2faa
+ms.sourcegitcommit: 2560a122fe3a85ea762c3af6f1cba9e237512b2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "92661941"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103412897"
 ---
 # <a name="modifying-the-psmodulepath-installation-path"></a>PSModulePath 설치 경로 수정
 
@@ -47,9 +47,12 @@ PowerShell이 시작 되 면 `PSModulePath` 는 `$HOME\Documents\PowerShell\Modu
 
   ```
 
+`PSModulePath`구성 파일에서 값을 설정할 수도 있습니다 `powershell.config.json` . 자세한 내용은 [about_PowerShell_Config](/powershell/module/microsoft.powershell.core/about/about_powershell_config#psmodulepath)를 참조 하세요.
+
 ## <a name="to-remove-locations-from-the-psmodulepath"></a>PSModulePath에서 위치를 제거 하려면
 
-유사한 메서드를 사용 하 여 변수에서 경로를 제거할 수 있습니다. 예를 들어 `$env:PSModulePath = $env:PSModulePath -replace "$([System.IO.Path]::PathSeparator)c:\\ModulePath"` 는 현재 세션에서 **C:\modulepath** 경로를 제거 합니다.
+유사한 메서드를 사용 하 여 변수에서 경로를 제거할 수 있습니다. 예를 들면 다음과 같습니다. `$env:PSModulePath = $env:PSModulePath -replace "$([System.IO.Path]::PathSeparator)c:\\ModulePath"`
+는 현재 세션에서 **C:\modulepath** 경로를 제거 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

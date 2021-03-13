@@ -1,17 +1,16 @@
 ---
-description: 레지스트리 구성을 대체 하는 PowerShell Core에 대 한 구성 파일입니다.
-keywords: PowerShell
+description: PowerShell에 대 한 구성 파일로, 레지스트리 구성을 대체 합니다.
 Locale: en-US
-ms.date: 11/02/2018
+ms.date: 03/12/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_powershell_config?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_PowerShell_Config
-ms.openlocfilehash: 88e2f5fc5eaaf3ffffd5ceb3df0632866eee705e
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 1ba0472e52ff6fc810a0b357fb7fa60c008d0de2
+ms.sourcegitcommit: 2560a122fe3a85ea762c3af6f1cba9e237512b2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93223089"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103412947"
 ---
 # <a name="about-powershell-config"></a>PowerShell 구성 정보
 
@@ -23,11 +22,7 @@ ms.locfileid: "93223089"
 이 `powershell.config.json` 파일에는 PowerShell Core에 대 한 구성 설정이 포함 되어 있습니다. PowerShell은 시작할 때이 구성을 로드 합니다. 설정은 런타임에 수정할 수도 있습니다. 이전에는 이러한 설정이 PowerShell 용 Windows 레지스트리에 저장 되었지만 이제 macOS 및 Linux에서 구성을 사용 하기 위해 파일에 포함 되어 있습니다.
 
 > [!WARNING]
-> 파일에 `powershell.config.json` 잘못 된 JSON이 포함 된 경우 PowerShell은 대화형 세션을 시작할 수 없습니다.
-> 이 경우 구성 파일을 수정 해야 합니다.
-
-> [!NOTE]
-> 구성 파일의 인식할 수 없는 키 또는 잘못 된 값은 자동으로 무시 됩니다.
+> 구성 파일의 인식할 수 없는 키 또는 잘못 된 값은 자동으로 무시 됩니다. 파일에 `powershell.config.json` 잘못 된 JSON이 포함 되어 있으면 PowerShell에서 대화형 세션을 시작할 수 없습니다. 이 경우 구성 파일을 수정 해야 합니다.
 
 ### <a name="allusers-shared-configuration"></a>AllUsers (공유) 구성
 
@@ -61,9 +56,7 @@ CurrentUser 구성의 경우 **currentuser** 실행 정책을 설정 합니다.
 
 위치:
 
-- `<shell-id>` 현재 PowerShell 호스트의 ID를 참조 합니다.
-  일반적인 PowerShell Core의 경우 `Microsoft.PowerShell` 입니다.
-  PowerShell 세션에서를 사용 하 여 검색할 수 있습니다 `$ShellId` .
+- `<shell-id>` 현재 PowerShell 호스트의 ID를 참조 합니다. 일반적인 PowerShell Core의 경우 `Microsoft.PowerShell` 입니다. PowerShell 세션에서를 사용 하 여 검색할 수 있습니다 `$ShellId` .
 - `<execution-policy>` 가 유효한 실행 정책 이름을 참조 하는 경우
 
 다음 예에서는 PowerShell의 실행 정책을로 설정 합니다 `RemoteSigned` .
@@ -78,15 +71,14 @@ Windows에서는 및의에서 해당 하는 레지스트리 키를 찾을 수 �
 
 ### <a name="psmodulepath"></a>PSModulePath
 
-이 PowerShell 세션에 대해 PSModulePath 구성 요소를 재정의 합니다. 현재 사용자에 대 한 구성 인 경우 CurrentUser 모듈 경로를 설정 합니다. 모든 사용자 용으로 구성 된 경우에는 AllUser 모듈 경로를 설정 합니다.
+`PSModulePath`이 PowerShell 세션의 설정을 재정의 합니다. 현재 사용자에 대 한 구성 인 경우 **CurrentUser** 모듈 경로를 설정 합니다. 모든 사용자 용으로 구성 된 경우는 **AllUsers** 모듈 경로를 설정 합니다.
 
 > [!WARNING]
-> 여기에서 AllUsers 또는 CurrentUser 모듈 경로를 구성 해도 PowerShellGet 모듈에 대 한 범위가 지정 된 설치 위치 (예: [Install-module)](/powershell/module/powershellget/install-module)는 변경 되지 않습니다.
-> 이러한 cmdlet은 항상 *기본* 모듈 경로를 사용 합니다.
+> 여기에서 **AllUsers** 또는 **CurrentUser** 모듈 경로를 구성 해도 PowerShellGet cmdlet에 대 한 범위 지정 설치 위치 [(예: Install-module)](/powershell/module/powershellget/install-module)는 변경 되지 않습니다. 이러한 cmdlet은 항상 _기본_ 모듈 경로를 사용 합니다.
 
-값을 설정 하지 않으면 해당 모듈 경로 구성 요소의 기본값이 사용 됩니다. 이러한 기본값에 대 한 자세한 내용은 [about_Modules](./about_Modules.md#module-and-dsc-resource-locations-and-psmodulepath) 를 참조 하세요.
+값을 설정 하지 않으면 PowerShell은 해당 모듈 경로 설정에 기본값을 사용 합니다. 이러한 기본값에 대 한 자세한 내용은 [about_Modules](./about_Modules.md#module-and-dsc-resource-locations-and-psmodulepath)를 참조 하세요.
 
-이 설정을 사용 하면 CMD에서 허용 하는 것과 `%` 같은 방식으로 환경 변수를 문자 간에 포함 하 여 사용할 수 있습니다 `"%HOME%\Documents\PowerShell\Modules"` . 이 구문은 Linux 및 macOS에도 적용 됩니다. 예제는 아래를 참조 하세요.
+이 설정을 사용 하면 `%` `"%HOME%\Documents\PowerShell\Modules"` CMD에서 허용 하는 것과 같은 방식으로 환경 변수를 문자 간에 포함 하 여 사용할 수 있습니다. 이 구문은 Linux 및 macOS에도 적용 됩니다. 예제는 아래를 참조 하세요.
 
 ```Schema
 "PSModulePath": "<ps-module-path>"
@@ -96,7 +88,7 @@ Windows에서는 및의에서 해당 하는 레지스트리 키를 찾을 수 �
 
 - `<ps-module-path>` 는 모듈 디렉터리의 절대 경로입니다. 모든 사용자 구성에서는 AllUsers 공유 모듈 디렉터리입니다. 현재 사용자 구성의 경우 CurrentUser 모듈 디렉터리입니다.
 
-이 예제에서는 Windows 환경에 대 한 PSModulePath 구성을 보여 줍니다.
+이 예제에서는 `PSModulePath` Windows 환경에 대 한 구성을 보여 줍니다.
 
 ```json
 {
@@ -104,7 +96,7 @@ Windows에서는 및의에서 해당 하는 레지스트리 키를 찾을 수 �
 }
 ```
 
-이 예제에서는 macOS 또는 Linux 환경에 대 한 PSModulePath 구성을 보여 줍니다.
+이 예제에서는 `PSModulePath` macOS 또는 Linux 환경에 대 한 구성을 보여 줍니다.
 
 ```json
 {
@@ -112,7 +104,7 @@ Windows에서는 및의에서 해당 하는 레지스트리 키를 찾을 수 �
 }
 ```
 
-이 예제에서는 PSModulePath 구성에 환경 변수를 포함 하는 방법을 보여 줍니다. `HOME`환경 변수와 `/` 디렉터리 구분 기호를 사용 하면 Windows, macos 및 Linux에서 작동 합니다.
+이 예제에서는 구성에 환경 변수를 포함 하는 방법을 보여 줍니다 `PSModulePath` . `HOME`환경 변수와 `/` 디렉터리 구분 기호를 사용 하면 Windows, macos 및 Linux에서 작동 합니다.
 
 ```json
 {
@@ -120,7 +112,7 @@ Windows에서는 및의에서 해당 하는 레지스트리 키를 찾을 수 �
 }
 ```
 
-이 예제에서는 macOS 및 Linux 에서만 작동 하는 PSModulePath 구성에 환경 변수를 포함 하는 방법을 보여 줍니다.
+이 예제에서는 `PSModulePath` macOS 및 Linux 에서만 작동 하는 구성에 환경 변수를 포함 하는 방법을 보여 줍니다.
 
 ```json
 {
@@ -129,14 +121,12 @@ Windows에서는 및의에서 해당 하는 레지스트리 키를 찾을 수 �
 ```
 
 > [!NOTE]
-> PowerShell 변수는 PSModulePath 구성에 포함 될 수 없습니다.
-> Linux 및 macOS에 대 한 PSModulePath 구성은 대/소문자를 구분 합니다. PSModulePath 구성에서는 플랫폼에 대해 올바른 디렉터리 구분 기호를 사용 해야 합니다. MacOS 및 Linux에서이는를 의미 `/` 합니다. Windows에서는 `/` 및가 모두 `\` 작동 합니다.
+> PowerShell 변수는 구성에 포함 될 수 없습니다 `PSModulePath` .
+> `PSModulePath` Linux 및 macOS의 구성은 대/소문자를 구분 합니다. `PSModulePath`구성에서 플랫폼에 대 한 올바른 디렉터리 구분 기호를 사용 해야 합니다. MacOS 및 Linux에서이는를 의미 `/` 합니다. Windows에서는 `/` 및가 모두 `\` 작동 합니다.
 
 ### <a name="experimentalfeatures"></a>ExperimentalFeatures
 
-PowerShell에서 사용할 수 있는 실험적 기능의 이름입니다.
-기본적으로는 실험적 기능을 사용할 수 없습니다.
-기본값은 빈 배열입니다.
+PowerShell에서 사용할 수 있는 실험적 기능의 이름입니다. 기본적으로는 실험적 기능을 사용할 수 없습니다. 기본값은 빈 배열입니다.
 
 ```Schema
 "ExperimentalFeatures": ["<experimental-feature-name>", ...]
@@ -157,7 +147,7 @@ PowerShell에서 사용할 수 있는 실험적 기능의 이름입니다.
 }
 ```
 
-실험적 기능에 대 한 자세한 내용은 [POWERSHELL RFC 29][RFC0029]를 참조 하세요.
+실험적 기능에 대 한 자세한 내용은 [실험적 기능 사용](/powershell/scripting/learn/experimental-features)을 참조 하세요.
 
 ## <a name="non-windows-logging-configuration"></a>비 Windows 로깅 구성
 
@@ -206,9 +196,9 @@ PowerShell에서 기록해 야 하는 최소 심각도 수준을 지정 합니�
 
 위치:
 
-- `<log-level>` 다음 중 하나입니다.
-  - Always
-  - 중요
+- `<log-level>`는 다음 중 하나입니다.
+  - 항상
+  - 위험
   - 오류
   - 경고
   - 정보 제공
@@ -242,11 +232,11 @@ PowerShell에서 기록해 야 하는 최소 심각도 수준을 지정 합니�
 
 위치:
 
-- `<log-channel>` 다음 중 하나입니다.
+- `<log-channel>`는 다음 중 하나입니다.
   - 운영-PowerShell 작업에 대 한 기본 정보를 기록 합니다.
   - 분석-자세한 진단 정보를 기록 합니다.
 
-기본값은 **작동** 입니다. 두 채널을 모두 사용 하려면 두 값을 쉼표로 구분 된 단일 문자열로 포함 합니다. 다음은 그 예입니다. 
+기본값은 **작동** 입니다. 두 채널을 모두 사용 하려면 두 값을 쉼표로 구분 된 단일 문자열로 포함 합니다. 예를 들어:
 
 ```json
 {
@@ -267,7 +257,7 @@ PowerShell에서 기록해 야 하는 최소 심각도 수준을 지정 합니�
 
 위치:
 
-- `<log-keyword>` 다음 중 하나입니다.
+- `<log-keyword>`는 다음 중 하나입니다.
   - Runspace-runspace 관리
   - 파이프라인 파이프라인 작업
   - 프로토콜-통신 프로토콜 처리 (예: PSRP)
@@ -279,8 +269,7 @@ PowerShell에서 기록해 야 하는 최소 심각도 수준을 지정 합니�
   - ManagedPlugin-WSMan 플러그 인
 
 > [!NOTE]
-> PowerShell의 알려진 부분에서 특정 동작을 진단 하려고 하지 않는 한이 값을 설정 하지 않으면 일반적으로이 값을 설정 하지 않는 것이 좋습니다.
-> 이 값을 변경 하면 기록 되는 정보의 양만 줄어듭니다.
+> PowerShell의 알려진 부분에서 특정 동작을 진단 하려고 하지 않는 한이 값을 설정 하지 않으면 일반적으로이 값을 설정 하지 않는 것이 좋습니다. 이 값을 변경 하면 기록 되는 정보의 양만 줄어듭니다.
 
 이 예에서는 로그를 runspace 작업, 파이프라인 논리 및 cmdlet 사용으로 제한 합니다. 다른 모든 로깅은 생략 됩니다.
 
@@ -345,10 +334,8 @@ PowerShell에서 기록해 야 하는 최소 심각도 수준을 지정 합니�
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [실행 정책 정보](./about_Execution_Policies.md)
 
 [자동 변수 정보](./about_Automatic_Variables.md)
-
-[RFC0029]: https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0029-Support-Experimental-Features.md
