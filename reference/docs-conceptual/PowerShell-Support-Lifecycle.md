@@ -2,12 +2,12 @@
 title: PowerShell Core 지원 수명 주기
 description: PowerShell 지원을 제어하는 정책에 대해 자세히 설명합니다.
 ms.date: 11/11/2020
-ms.openlocfilehash: 0803dda070c66b4c1d803171ecdb7029a096517b
-ms.sourcegitcommit: 4879b9cdfa3f03b04a07b84442dc1ca9ae0f6b46
+ms.openlocfilehash: a11c4df1f105364307b8a99ffe9b0cc7e9c29122
+ms.sourcegitcommit: 925819a5ad5799650c14944bd3e50fb309a7e6c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98105182"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102771480"
 ---
 # <a name="powershell-support-lifecycle"></a>PowerShell 지원 수명 주기
 
@@ -131,11 +131,15 @@ PowerShell 7은 Windows PowerShell용으로 작성 된 기존 PowerShell 모듈�
 PowerShell은 [Windows에 대한 Microsoft 보안 서비스 기준][]을 따릅니다.
 아래 표에서는 서비스 조건을 충족하는 기능과 그렇지 않은 기능을 간략하게 설명합니다.
 
-| 기능                          | Type             |
-|----------------------------------|------------------|
-| 실행 정책                 | 심층 방어 |
-| 시스템 잠금 - AppLocker 사용 | 심층 방어 |
-| 시스템 잠금 - WDAC 사용      | 보안 기능 |
+|                  기능                   |       Type       |
+| ------------------------------------------ | ---------------- |
+| 실행 정책                           | 심층 방어 |
+| 시스템 잠금 - AppLocker 사용           | 심층 방어 |
+| 제한된 언어 모드 - AppLocker 사용 | 심층 방어 |
+| 시스템 잠금 - WDAC 사용                | 보안 기능 |
+| 제한된 언어 모드 - WDAC 사용      | 보안 기능 |
+
+AppLocker 및 WDAC(Windows Defender Application Control)에 대한 자세한 내용은 [Windows용 애플리케이션 제어](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)를 참조하세요.
 
 ## <a name="release-history"></a>릴리스 기록
 
