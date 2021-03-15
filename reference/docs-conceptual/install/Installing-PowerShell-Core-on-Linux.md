@@ -2,12 +2,12 @@
 title: Linux에 PowerShell 설치
 description: 다양한 Linux 배포에 PowerShell을 설치하는 방법에 대한 정보
 ms.date: 02/02/2021
-ms.openlocfilehash: 1e7fabdc94ba70a91eb5c6425893bc5af640e584
-ms.sourcegitcommit: 4f1c2fe700b8a0544c59e371eb7cfbc6d852b185
+ms.openlocfilehash: ab075a3570695f5a58b7e7fbf968243a4ff45929
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100563308"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195274"
 ---
 # <a name="installing-powershell-on-linux"></a>Linux에 PowerShell 설치
 
@@ -711,6 +711,15 @@ pwsh
 apt -y remove powershell
 ```
 
+## <a name="support-for-arm-processors"></a>ARM 프로세서에 대한 지원
+
+PowerShell은 일부 Linux 배포에 설치할 수 있습니다. PowerShell은 ARM의 .NET 지원에 따라 달라집니다. PowerShell은 다음 배포에서 지원됩니다.
+
+- Alpine Linux v3.11+ - .NET은 ARM64를 지원하지만 지금은 PowerShell에 대해 설치 가능한 패키지가 없습니다.
+- Raspbian - 아래 설치 지침 참조
+- Debian v9+ - [이진 보관](#binary-archives) 설치 방법을 사용하여 ARM32 및 ARM64를 지원합니다.
+- Ubuntu 20.10, 20.04, 18.04, 16.04 - [이진 보관](#binary-archives) 설치 방법을 사용하여 ARM32 및 ARM64를 지원합니다.
+
 ## <a name="raspbian"></a>Raspbian
 
 > [!NOTE]
@@ -821,6 +830,12 @@ PowerShell은 모든 Linux 배포를 위한 이식 가능한 이진 파일을 �
 
 ### <a name="installation---binary-archives"></a>설치 - 이진 아카이브
 
+다음 예제에서는 x64 이진 보관을 설치하는 단계를 보여 줍니다. 플랫폼의 프로세서 유형과 일치하는 올바른 이진 보관을 선택해야 합니다.
+
+- powershell-7.1.2-linux-arm32.tar.gz
+- powershell-7.1.2-linux-arm64.tar.gz
+- powershell-7.1.2-linux-x64.tar.gz
+
 #### <a name="linux"></a>Linux
 
 ```sh
@@ -851,7 +866,7 @@ sudo rm -rf /usr/bin/pwsh /opt/microsoft/powershell
 - `$PSHOME`은 `/opt/microsoft/powershell/7/`입니다.
 - 사용자 프로필은 `~/.config/powershell/profile.ps1`에서 읽습니다.
 - 기본 프로필은 `$PSHOME/profile.ps1`에서 읽습니다.
-- 사용자 프로필은 `~/.local/share/powershell/Modules`에서 읽습니다.
+- 사용자 모듈은 `~/.local/share/powershell/Modules`에서 읽습니다.
 - 공유 모듈은 `/usr/local/share/powershell/Modules`에서 읽습니다.
 - 기본 모듈은 `$PSHOME/Modules`에서 읽습니다.
 - PSReadLine 기록은 `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`에 기록됩니다.

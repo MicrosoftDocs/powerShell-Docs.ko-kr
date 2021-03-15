@@ -2,12 +2,12 @@
 ms.date: 06/09/2017
 title: PowerShell 갤러리 UI에 영향을 주는 패키지 매니페스트 값
 description: 이 문서에서는 PowerShell 갤러리에서 사용하는 모듈 매니페스트의 값에 대해 설명합니다.
-ms.openlocfilehash: c59f65e72874a8a4ef946c954e1e8f12aad62b29
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 28dd707034f84fa752aba55b5ccc5bcbedff0d94
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92664138"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103196235"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>PowerShell 갤러리 UI에 영향을 주는 패키지 매니페스트 값
 
@@ -77,7 +77,7 @@ PowerShell 갤러리 및 PowerShellGet cmdlet이 고유하게 처리하는 태�
 | --- | --- |
 | Azure |  |
 | DSC | DesiredStateConfiguration은 그다지 적합하지 않습니다. 너무 깁니다. |
-| ResourceManager | ARM은 프로세서 그룹을 설명하는 데 사용되며, Azure Resource Manager에 대해 사용해서는 안 됩니다. |
+| ResourceManager | “ARM”은 프로세서 그룹을 설명하는 데 사용되며, Azure Resource Manager의 뜻으로 사용해서는 안 됩니다. |
 | DSCResourceKit |  |
 | SQL |  |
 | AWS |  |

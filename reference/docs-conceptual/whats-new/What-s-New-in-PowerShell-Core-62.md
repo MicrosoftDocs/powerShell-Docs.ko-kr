@@ -2,12 +2,12 @@
 title: PowerShell Core 6.2의 새로운 기능
 description: PowerShell Core 6.2에서 릴리스된 새로운 기능 및 변경 내용
 ms.date: 03/28/2019
-ms.openlocfilehash: 98dd97b064e11509bf97e68e0a312e6b34b5d2bc
-ms.sourcegitcommit: f9d855dd73b916559a22e337672dea3fbb11c634
+ms.openlocfilehash: 068f345ee5174bceade2b85183646ede9ead1949
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96833813"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195585"
 ---
 # <a name="whats-new-in-powershell-core-62"></a>PowerShell Core 6.2의 새로운 기능
 
@@ -27,7 +27,7 @@ PowerShell Core 6.2 릴리스에서는 성능 향상, 버그 수정 및 품질�
 Enable-ExperimentalFeature -Name PSCommandNotFoundSuggestion
 ```
 
-#### <a name="example"></a>예제
+#### <a name="example"></a>예
 
 이 예제에서는 철자가 틀린 cmdlet 이름이 가능성이 가장 높은 제안부터 가장 낮은 제안까지 여러 제안에 유사 일치됩니다.
 
@@ -68,7 +68,7 @@ Enable-ExperimentalFeature -Name PSTempDrive
 
 다른 운영 체제에서 PowerShell Core를 사용하는 경우 임시 디렉터리를 찾는 환경 변수가 Windows, macOS 및 Linux에서 서로 다른지 살펴보겠습니다. 이 기능을 통해 사용 중인 운영 체제의 임시 디렉터리에 자동으로 매핑되는 `Temp:`라는 [PSDrive][]를 가져옵니다.
 
-#### <a name="example"></a>예제
+#### <a name="example"></a>예
 
 ```powershell
 PS> "Hello World!" > Temp:/hello.txt
@@ -86,7 +86,7 @@ PowerShell cmdlet에는 설명이 포함된 명사가 있어야 합니다. 이�
 Enable-ExperimentalFeature -Name PSUseAbbreviationExpansion
 ```
 
-#### <a name="example"></a>예제
+#### <a name="example"></a>예
 
 ```powershell
 PS> i-arsavsf
@@ -121,7 +121,7 @@ PS> Import-AzRecoveryServicesAsrVaultSettingsFile
 
 ## <a name="known-issues"></a>알려진 문제
 
-- Windows IOT ARM 플랫폼의 원격 처리에는 모듈 로드 문제가 있습니다. (#8053) 참조
+- Windows IOT ARM 기반 플랫폼의 원격 처리에는 모듈 로드 문제가 있습니다. (#8053) 참조
 
 ## <a name="general-updates-and-fixes"></a>일반 업데이트 및 수정
 
@@ -174,7 +174,7 @@ PS> Import-AzRecoveryServicesAsrVaultSettingsFile
 - logman.exe를 사용할 수 있는 경우 **PSDiagnostics** 에서 모든 cmdlet 공개(#8366)
 - `non-Windows` 플랫폼의 `New-PSDrive`에서 **Persist** 매개 변수 제거(#8291)(@lukexjeremy에게 감사드립니다!)
 - `cd +` 지원 추가(#7206)(@bergmeister에게 감사드립니다!)
-- \- 및 +라는 폴더에서 `Set-Location -LiteralPath`를 작동할 수 있음(#8089)
+- - 및 +라는 폴더에서 `Set-Location -LiteralPath`를 작동할 수 있음(#8089)
 - 비어 있거나 `$null` 경로 값이 제공된 경우 `Test-Path`에서 `$false`를 반환함(#8080)(@vexx32에게 감사드립니다!)
 - 경로가 공급자와 일치하지 않는 경우에도 동적 매개 변수를 반환할 수 있음(#7957)
 - Unix 플랫폼에서 `Get-PSHostProcessInfo` 및 `Enter-PSHostProcess` 지원(#8232)

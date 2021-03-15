@@ -85,7 +85,7 @@
           items:
             - name: 개요
               href: learn/remoting/jea/overview.md
-            - name: 필수 구성 요소
+            - name: 사전 요구 사항
               href: learn/remoting/jea/prerequisites.md
             - name: 역할 기능
               href: learn/remoting/jea/role-capabilities.md
