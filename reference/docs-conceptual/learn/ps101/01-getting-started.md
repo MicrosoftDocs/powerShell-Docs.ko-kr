@@ -4,12 +4,12 @@ description: 신규 사용자에게 PowerShell을 찾고 실행하는 방법을 
 ms.date: 06/02/2020
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 8b9fee222347970df4e35f9ba0841232952a292d
-ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.openlocfilehash: cc634eb1732947dca953d7d91baedf8052edf718
+ms.sourcegitcommit: 080c8b05a1242348c365fe1684457e873325f11e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "99599326"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103483477"
 ---
 # <a name="chapter-1---getting-started-with-powershell"></a>1장 - PowerShell 시작
 
@@ -61,7 +61,7 @@ At line:1 char:29
 ```
 
 이 문제를 해결 방법은 PowerShell을 로컬 관리자인 도메인 사용자로 실행하는 것입니다.
-필자는 두 번째 도메인 사용자 계정을 이 방법으로 구성합니다. 최소 권한 원칙에 따라 이 계정은 도메인 관리자가 아니거나 도메인에서 승격된 권한을 가져야 합니다.
+필자는 두 번째 도메인 사용자 계정을 이 방법으로 구성합니다. 최소 권한의 원칙을 사용 하 여이 계정은 도메인 관리자가 아니거나 도메인에 상승 된 권한이 있어야 합니다.
 
 PowerShell을 닫습니다. PowerShell 콘솔을 다시 실행합니다. 이번에는 **Windows PowerShell** 바로 가기를 마우스 오른쪽 단추로 클릭하고 그림 1-5처럼 **관리자 권한으로 실행** 을 선택합니다.
 

@@ -1,16 +1,16 @@
 ---
 description: PowerShell의 값을 비교 하는 연산자에 대해 설명 합니다.
 Locale: en-US
-ms.date: 02/19/2021
+ms.date: 03/15/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_comparison_operators
-ms.openlocfilehash: bab5ec020a51584572d1a3e4e3731bcf9bee6732
-ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
+ms.openlocfilehash: 22afede9795338270e75ba3561e35ef65af4a79b
+ms.sourcegitcommit: 080c8b05a1242348c365fe1684457e873325f11e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101685987"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103483421"
 ---
 # <a name="about-comparison-operators"></a>비교 연산자 정보
 
@@ -39,7 +39,7 @@ PowerShell의 비교 연산자는 입력 값에 대해 두 값 또는 컬렉션�
 |             | -notcontains | 컬렉션에 값이 포함 되어 있지 않습니다.       |
 |             | -in          | 값이 컬렉션에 있습니다.                  |
 |             | -notin       | 값이 컬렉션에 없습니다.              |
-| Type        | -is          | 두 개체의 형식이 동일 합니다.            |
+| 유형        | -is          | 두 개체의 형식이 동일 합니다.            |
 |             | -isnot       | 개체의 형식이 다릅니다.         |
 
 ## <a name="common-features"></a>일반 기능
@@ -47,7 +47,7 @@ PowerShell의 비교 연산자는 입력 값에 대해 두 값 또는 컬렉션�
 기본적으로 모든 비교 연산자는 대/소문자를 구분 하지 않습니다. 대/소문자를 구분 하는 비교 연산자를 만들려면 뒤에를 추가 합니다 `c` `-` . 예를 들어 `-ceq` 은 대/소문자를 구분 하는 버전입니다 `-eq` . 대/소문자를 구분 하지 않도록 명시적으로 지정 하려면 앞에를 추가 `i` `-` 합니다. 예를 들어 `-ieq` 는의 명시적 대/소문자를 구분 하지 않는 버전입니다 `-eq` .
 
 연산자의 입력이 스칼라 값 이면 연산자는 **부울** 값을 반환 합니다. 입력이 컬렉션인 경우 연산자는 식의 오른쪽 값과 일치 하는 컬렉션의 요소를 반환 합니다.
-컬렉션에 일치 하는 항목이 없는 경우 비교 연산자는 빈 배열을 반환 합니다. 다음은 그 예입니다. 
+컬렉션에 일치 하는 항목이 없는 경우 비교 연산자는 빈 배열을 반환 합니다. 예를 들면 다음과 같습니다.
 
 ```powershell
 $a = (1, 2 -eq 3)
@@ -64,7 +64,7 @@ Object[]
 
 - 포함 및 형식 연산자는 항상 **부울** 값을 반환 합니다.
 - `-replace`연산자는 대체 결과를 반환 합니다.
-- `-match`또한 및 `-notmatch` 연산자는 `$Matches` 자동 변수를 채웁니다.
+- `-match` `-notmatch` 또한 `$Matches` 식의 왼쪽이 컬렉션인 경우를 제외 하 고 및 연산자는 자동 변수를 채웁니다.
 
 ## <a name="equality-operators"></a>같음 연산자
 
@@ -249,7 +249,7 @@ Members smaller than or equal to 7
 
 이러한 연산자는 [system.object][1]를 구현 하는 모든 클래스에서 작동 합니다.
 
-예:
+예제:
 
 ```powershell
 # Date comparison
@@ -322,7 +322,7 @@ $a -gt 'a'
 'bag'        -notmatch 'b[iou]g'   # Output: True
 ```
 
-입력이 컬렉션인 경우 연산자는 해당 컬렉션의 일치 하는 멤버를 반환 합니다.
+입력이 컬렉션인 경우 연산자는 해당 컬렉션의 일치 하는 멤버를 반환 하 고 `$Matches` 자동 변수는 `$null` 입니다.
 
 컬렉션 예:
 
@@ -395,7 +395,7 @@ Get-ChildItem *.txt | Rename-Item -NewName { $_.name -replace '\.txt$','.log' }
 
 기본적으로 연산자는 `-replace` 대/소문자를 구분 하지 않습니다. 대/소문자를 구분 하려면를 사용 `-creplace` 합니다. 명시적으로 대/소문자를 구분 하지 않도록 하려면를 사용 `-ireplace` 합니다.
 
-예:
+예제:
 
 ```powershell
 "book" -ireplace "B", "C" # Case insensitive
@@ -431,7 +431,7 @@ John.Doe@Contoso.local
 > - Regex 검색 문자열에서 줄의 끝을 나타냅니다.
 > - Regex 대체 문자열에서 캡처된 그룹을 나타냅니다. 정규식을 작은따옴표 사이에 배치 하거나 앞에 억음 () 문자를 삽입 해야 `` ` `` 합니다.
 
-다음은 그 예입니다. 
+예를 들면 다음과 같습니다.
 
 ```powershell
 $1 = 'Goodbye'
@@ -443,7 +443,7 @@ $1 = 'Goodbye'
 # Output: Hello Universe
 ```
 
-`$$` Regex에서 리터럴을 나타냅니다 `$` . 대체 `$$` 문자열에서 결과 대체에 리터럴을 포함 하는 This `$` 입니다. 다음은 그 예입니다. 
+`$$` Regex에서 리터럴을 나타냅니다 `$` . 대체 `$$` 문자열에서 결과 대체에 리터럴을 포함 하는 This `$` 입니다. 예를 들면 다음과 같습니다.
 
 ```powershell
 '5.72' -replace '(.+)', '$ $1' # Output: $ 5.72
@@ -455,7 +455,7 @@ $1 = 'Goodbye'
 
 ### <a name="substituting-in-a-collection"></a>컬렉션에서 대체
 
-`<input>` `-replace` 연산자가 컬렉션인 경우 PowerShell은 컬렉션의 모든 값에 대체를 적용 합니다. 다음은 그 예입니다. 
+`<input>` `-replace` 연산자가 컬렉션인 경우 PowerShell은 컬렉션의 모든 값에 대체를 적용 합니다. 예를 들면 다음과 같습니다.
 
 ```powershell
 "B1","B2","B3","B4","B5" -replace "B", 'a'
@@ -505,7 +505,7 @@ Hello
 
 이러한 연산자는 집합에 특정 요소가 포함 되는지 여부를 알려 줍니다. `-contains` 오른쪽 (테스트 개체)이 집합의 요소 중 하 나와 일치 하면 True를 반환 합니다. `-notcontains` 대신 False를 반환 합니다. 테스트 개체가 컬렉션인 경우 이러한 연산자는 참조 같음을 사용 합니다. 즉, 집합의 요소 중 하나가 테스트 개체의 동일한 인스턴스인지 여부를 확인 합니다.
 
-예:
+예제:
 
 ```powershell
 "abc", "def" -contains "def"                  # Output: True
